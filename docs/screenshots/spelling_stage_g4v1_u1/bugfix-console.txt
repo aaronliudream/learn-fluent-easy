@@ -1,0 +1,5 @@
+[caseA] Q1 typed 'CLASSROOM' : 第 1 / 16 题 -> 第 2 / 16 题 (pass=true)
+[reach] now 第 7 / 16 题 (expect 第 7) cells=["","","","","","","","","","","","",""]
+[apostrophe] Q7 typed "teacher's desk" : 第 7 / 16 题 -> 第 8 / 16 题 (pass=true)
+[reach] now 第 14 / 16 题 (expect 第 14)
+[caseB] Q14 typed 'tv' (target TV) : 第 14 / 16 题 -> 第 14 / 16 题 (pass=false)

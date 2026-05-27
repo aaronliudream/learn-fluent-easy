@@ -1,0 +1,5 @@
+[01] cells empty=""
+[02] cells="cla"
+[pre-enter] cells="classroom"
+[03] score="24分" rexXp=24 boss=true cells="classroom"
+[04] prog="第 2 / 16 题"

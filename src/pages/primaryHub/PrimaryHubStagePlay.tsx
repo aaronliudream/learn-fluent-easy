@@ -15,6 +15,8 @@ import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingStage";
 import HubSpeakSpeedControl from "@/components/primaryHub/HubSpeakSpeedControl";
 import SentenceLessonStage from "@/components/primaryHub/SentenceLessonStage";
+import SpellingStage from "@/components/primaryHub/SpellingStage";
+import type { GradeKey } from "@/lib/primaryHub/spellingStageConfig";
 import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
@@ -726,173 +728,6 @@ function SentenceStage({
   );
 }
 
-function WriteStage({
-  vocabulary,
-  grade,
-  onFinish,
-  onCorrect,
-  onWrong,
-  onProgress,
-}: {
-  vocabulary: VocabItem[];
-  grade: number;
-  onFinish: () => void;
-  onCorrect: () => void;
-  onWrong: (m: { q: string; opts: string[]; answer: number; point: string }) => void;
-  onProgress?: (percent: number) => void;
-}) {
-  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const [correct, setCorrect] = useState<Set<number>>(() => new Set());
-  const [values, setValues] = useState<Record<number, string>>({});
-  const [feedbacks, setFeedbacks] = useState<Record<number, React.ReactNode>>({});
-  const [disabled, setDisabled] = useState<Set<number>>(() => new Set());
-  const [retrying, setRetrying] = useState<Set<number>>(() => new Set());
-
-  useEffect(() => {
-    prefetchHubVocabulary(
-      vocabulary.map((v) => v.en),
-      grade,
-      0.85,
-    );
-  }, [grade, vocabulary]);
-
-  useEffect(() => {
-    if (vocabulary.length > 0) {
-      requestAnimationFrame(() => inputRefs.current[0]?.focus());
-    }
-  }, [vocabulary.length]);
-
-  const focusNextUnanswered = useCallback(
-    (afterIndex: number, answered: Set<number>) => {
-      for (let j = afterIndex + 1; j < vocabulary.length; j++) {
-        if (!answered.has(j)) {
-          requestAnimationFrame(() => inputRefs.current[j]?.focus());
-          return;
-        }
-      }
-    },
-    [vocabulary.length],
-  );
-
-  const check = (i: number, answer: string) => {
-    if (disabled.has(i)) return;
-    const userAnswer = (values[i] ?? "").trim().toLowerCase();
-    const correctAnswer = answer.toLowerCase();
-    if (userAnswer === "") {
-      setFeedbacks((prev) => ({ ...prev, [i]: "⚠️ 请输入英文" }));
-      return;
-    }
-    if (userAnswer === correctAnswer) {
-      setFeedbacks((prev) => ({
-        ...prev,
-        [i]: <span className="font-semibold text-[#3B6D11]">✅ 完全正确！</span>,
-      }));
-      setDisabled((prev) => new Set(prev).add(i));
-      setRetrying((prev) => {
-        const next = new Set(prev);
-        next.delete(i);
-        return next;
-      });
-      setCorrect((prev) => {
-        const next = new Set(prev).add(i);
-        focusNextUnanswered(i, next);
-        return next;
-      });
-      onCorrect();
-      hubSpeak(answer, 0.85, grade);
-    } else {
-      setFeedbacks((prev) => ({
-        ...prev,
-        [i]: (
-          <span className="text-[#A32D2D]">
-            ❌ 正确答案：<strong>{answer}</strong> — 请重新输入
-          </span>
-        ),
-      }));
-      setValues((prev) => ({ ...prev, [i]: "" }));
-      setRetrying((prev) => new Set(prev).add(i));
-      onWrong({
-        q: `默写：${vocabulary[i].cn}`,
-        opts: [answer],
-        answer: 0,
-        point: "单词拼写",
-      });
-      hubSpeak(answer, 0.7, grade);
-      requestAnimationFrame(() => inputRefs.current[i]?.focus());
-    }
-  };
-
-  const done = correct.size === vocabulary.length;
-
-  useEffect(() => {
-    if (!vocabulary.length || !onProgress) return;
-    onProgress((correct.size / vocabulary.length) * 100);
-  }, [correct.size, vocabulary.length, onProgress]);
-
-  return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-sm">✏️ 看中文输入英文</div>
-      <div className="mb-3 text-xs text-[#888780]">💡 点击 🔊 可以听发音帮助记忆</div>
-      {vocabulary.map((v, i) => (
-        <div key={v.en} className="mb-4 border-b border-[#F4F0E6] pb-4 last:border-0">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="text-2xl">{v.emoji}</span>
-            <span className="flex-1 text-sm font-semibold">{v.cn}</span>
-            <button
-              type="button"
-              className="grid size-7 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(v.en, 0.7, grade)}
-            >
-              🔊
-            </button>
-          </div>
-          <div className="flex gap-2">
-            <input
-              ref={(el) => {
-                inputRefs.current[i] = el;
-              }}
-              type="text"
-              value={values[i] ?? ""}
-              disabled={disabled.has(i)}
-              placeholder={retrying.has(i) ? "请重新输入正确拼写..." : "输入英文..."}
-              autoComplete="off"
-              className={`flex-1 rounded-xl border-2 px-3 py-2 text-sm outline-none ${
-                disabled.has(i)
-                  ? "border-[#97C459] bg-[#EAF3DE]"
-                  : retrying.has(i)
-                    ? "border-[#E24B4A] bg-[#FFF5F5] focus:border-[#E24B4A]"
-                    : "border-[#EEEAE0] bg-white focus:border-[#FF6B35]"
-              }`}
-              onChange={(e) => setValues((prev) => ({ ...prev, [i]: e.target.value }))}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  e.preventDefault();
-                  check(i, v.en);
-                }
-              }}
-            />
-            <button
-              type="button"
-              disabled={disabled.has(i)}
-              className="rounded-xl bg-[#FF6B35] px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
-              onClick={() => check(i, v.en)}
-            >
-              检查
-            </button>
-          </div>
-          {feedbacks[i] && <div className="mt-1.5 min-h-[14px] text-xs">{feedbacks[i]}</div>}
-        </div>
-      ))}
-      <div className="rounded-xl bg-[#E6F1FB] p-2.5 text-center text-sm text-[#185FA5]">
-        已答对：<span className="font-semibold">{correct.size}</span> / {vocabulary.length}
-      </div>
-      <PrimaryButton disabled={!done} onClick={onFinish}>
-        {done ? "✓ 默写完成！进入下一关 →" : "完成默写再继续"}
-      </PrimaryButton>
-    </div>
-  );
-}
-
 function FinalQuizStage({
   questions,
   unitId,
@@ -986,7 +821,7 @@ function FinalQuizStage({
 }
 
 export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplete, onBack }: Props) {
-  const { grade, state, setState, addMistake, completeStage, updateStageProgress, updateVocabViewed } =
+  const { grade, userId, state, setState, addMistake, completeStage, updateStageProgress, updateVocabViewed } =
     usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
@@ -1144,8 +979,11 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
         );
       case "write":
         return (
-          <WriteStage
+          <SpellingStage
             vocabulary={unit.vocabulary}
+            gradeKey={`g${grade}` as GradeKey}
+            unitId={unitId}
+            userId={userId}
             grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}

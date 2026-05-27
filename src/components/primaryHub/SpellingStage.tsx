@@ -284,8 +284,8 @@ export default function SpellingStage({
     if (phase !== "typing") return;
     let ch = raw.slice(-1);
     if (ch === "’") ch = "'"; // curly → straight
-    if (/[a-zA-Z]/.test(ch)) ch = ch.toLowerCase();
-    if (!/[a-z']/.test(ch)) return; // letters + apostrophe only
+    if (!/[a-z']/i.test(ch)) return; // letters (any case) + apostrophe
+    // keep the kid's keystroke as-typed (judging is case-insensitive; display stays honest)
     const c = cursor;
     if (c < 0) return;
     setValues((prev) => {
@@ -325,7 +325,7 @@ export default function SpellingStage({
     if (c < 0) return;
     setValues((prev) => {
       const n = [...prev];
-      n[c] = target[c].toLowerCase();
+      n[c] = target[c]; // original case (hint reveals the real letter)
       return n;
     });
     setStatuses((prev) => {
@@ -349,7 +349,7 @@ export default function SpellingStage({
     const guess = values.join("").toLowerCase();
     const answer = target.toLowerCase();
     const letterPositions = target.split("").map((_, i) => i).filter(letterIdx);
-    const correctCount = letterPositions.filter((i) => values[i] === answer[i]).length;
+    const correctCount = letterPositions.filter((i) => (values[i] || "").toLowerCase() === answer[i]).length;
 
     if (guess === answer) {
       // ---- CORRECT ----
@@ -410,13 +410,13 @@ export default function SpellingStage({
         prev.map((st, i) => {
           if (!letterIdx(i)) return "correct";
           if (st === "hint" || st === "correct") return st;
-          if (values[i] === answer[i]) return "correct"; // lock the right letters (keep)
+          if ((values[i] || "").toLowerCase() === answer[i]) return "correct"; // lock the right letters (keep)
           return "wrong";
         }),
       );
       // clear the wrong letters after a brief red flash
       after(450, () => {
-        setValues((prev) => prev.map((v, i) => (statuses[i] === "hint" || (letterIdx(i) && v === answer[i]) ? v : letterIdx(i) ? "" : v)));
+        setValues((prev) => prev.map((v, i) => (statuses[i] === "hint" || (letterIdx(i) && (v || "").toLowerCase() === answer[i]) ? v : letterIdx(i) ? "" : v)));
         setStatuses((prev) => prev.map((st, i) => (!letterIdx(i) ? "correct" : st === "wrong" ? "empty" : st)));
         requestAnimationFrame(() => inputRef.current?.focus());
       });
@@ -575,9 +575,9 @@ export default function SpellingStage({
                 <span
                   key={i}
                   style={{ width: slotW, height: slotH, fontSize: slotFont }}
-                  className={`relative grid place-items-center rounded-md border-2 font-bold uppercase ${slotColor(statuses[i], i === cursor)}`}
+                  className={`relative grid place-items-center rounded-md border-2 font-bold ${slotColor(statuses[i], i === cursor)}`}
                 >
-                  {values[i]}
+                  {statuses[i] === "correct" || statuses[i] === "hint" ? ch : values[i]}
                   {i === cursor && statuses[i] === "empty" && (
                     <span
                       className="absolute bottom-1 bg-[#FF6B35]"
@@ -608,7 +608,7 @@ export default function SpellingStage({
           )}
 
           {toast && (
-            <div className="pointer-events-none absolute bottom-2 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap rounded-lg bg-[#2C2C2A]/85 px-3 py-1.5 text-xs text-white">
+            <div className="pointer-events-none absolute left-1/2 top-1 z-40 -translate-x-1/2 whitespace-nowrap rounded-lg bg-[#2C2C2A]/85 px-3 py-1.5 text-xs text-white">
               🔇 {toast}
             </div>
           )}

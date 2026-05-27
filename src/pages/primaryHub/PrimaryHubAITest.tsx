@@ -26,10 +26,19 @@ export default function PrimaryHubAITest() {
       }
     });
     const picked = shuffleArray([...errorQs, ...shuffleArray(learnedQs).slice(0, 4)]).slice(0, 10);
-    return picked.map((q, i) => ({
-      ...q,
-      dim: q.dim || AI_DIMENSIONS[i % AI_DIMENSIONS.length].key,
-    }));
+    return picked.map((q, i) => {
+      // Shuffle each question's options + recompute the answer index, so the correct
+      // choice isn't pinned to a fixed position (kids can't memorize "always pick A").
+      // Runs once in the useState initializer → stable for the whole test, no mid-answer reshuffle.
+      const correctOpt = q.opts[q.answer];
+      const opts = shuffleArray([...q.opts]);
+      return {
+        ...q,
+        opts,
+        answer: opts.indexOf(correctOpt),
+        dim: q.dim || AI_DIMENSIONS[i % AI_DIMENSIONS.length].key,
+      };
+    });
   });
 
   const [index, setIndex] = useState(0);

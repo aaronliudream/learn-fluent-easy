@@ -141,3 +141,45 @@ export function nextReviewDelayMs(wrongCount: number): number {
   if (wrongCount === 2) return 2 * 60 * 1000;
   return 60 * 1000;
 }
+
+// ---- In-stage progress (resume the current question after leaving mid-stage) ----
+// Scoped per user + unit, like the wrong pool. Only the question index is restored;
+// per-run game state (score/combo/shields) intentionally resets each entry.
+export type SpellingProgress = {
+  /** Index of the question the kid was on when they left. */
+  currentIdx: number;
+  /** Queue length at save time — lets us detect a changed pool on resume. */
+  totalQuestions: number;
+  lastSavedAt: number;
+};
+
+export const spellingProgressKey = (scope: string, unitId: string) =>
+  `spelling_progress_${scope}_${unitId}`;
+
+export function loadSpellingProgress(scope: string, unitId: string): SpellingProgress | null {
+  try {
+    const raw = localStorage.getItem(spellingProgressKey(scope, unitId));
+    if (!raw) return null;
+    const p = JSON.parse(raw) as SpellingProgress;
+    if (typeof p?.currentIdx !== "number" || typeof p?.totalQuestions !== "number") return null;
+    return p;
+  } catch {
+    return null;
+  }
+}
+
+export function saveSpellingProgress(scope: string, unitId: string, p: SpellingProgress): void {
+  try {
+    localStorage.setItem(spellingProgressKey(scope, unitId), JSON.stringify(p));
+  } catch {
+    // ignore storage errors
+  }
+}
+
+export function clearSpellingProgress(scope: string, unitId: string): void {
+  try {
+    localStorage.removeItem(spellingProgressKey(scope, unitId));
+  } catch {
+    // ignore storage errors
+  }
+}

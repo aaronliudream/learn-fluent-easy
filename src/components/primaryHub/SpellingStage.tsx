@@ -17,6 +17,9 @@ import {
   saveWrongPool,
   nextReviewDelayMs,
   type WrongPool,
+  loadSpellingProgress,
+  saveSpellingProgress,
+  clearSpellingProgress,
 } from "@/lib/primaryHub/spellingStageConfig";
 
 type Props = {
@@ -126,6 +129,22 @@ export default function SpellingStage({
   const total = queue.length;
   const [qi, setQi] = useState(0);
   const current = queue[qi];
+
+  // ---- Resume position from a mid-stage exit (read once; intro offers a choice) ----
+  const savedProgress = useMemo(() => loadSpellingProgress(scope, unitId), [scope, unitId]);
+  // Offer "continue" only when the saved spot is a real mid-stage position in the
+  // current queue. currentIdx >= total means the kid finished last time (or the pool
+  // shrank past that point) → not resumable; <= 0 means they hadn't progressed.
+  const resumeIdx = savedProgress && savedProgress.currentIdx > 0 && savedProgress.currentIdx < total
+    ? savedProgress.currentIdx
+    : 0;
+  const completedLastTime = !!savedProgress && total > 0 && savedProgress.currentIdx >= total;
+
+  // Drop a stale "finished/overrun" record so it doesn't linger across sessions.
+  useEffect(() => {
+    if (completedLastTime) clearSpellingProgress(scope, unitId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [completedLastTime]);
   const target = (current?.word.en ?? "").replace(/’/g, "'"); // normalize curly → straight apostrophe
 
   // ---- Per-question letter-slot state ----
@@ -168,8 +187,8 @@ export default function SpellingStage({
   const dueCount = queue.filter((q) => q.isReview).length;
 
   // The start tap is the user gesture that unlocks audio (Chrome autoplay policy),
-  // so the first question's auto-play works.
-  const handleStart = async () => {
+  // so the first question's auto-play works. startIdx lets the kid resume mid-stage.
+  const handleStart = async (startIdx = 0) => {
     try {
       const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
       if (Ctx) {
@@ -188,7 +207,14 @@ export default function SpellingStage({
     } catch {
       /* ignore */
     }
+    if (startIdx > 0) setQi(startIdx);
     setStarted(true);
+  };
+
+  // "从头再来" — wipe the saved position (NOT the wrong pool or Rex XP) and start at 0.
+  const handleRestart = async () => {
+    clearSpellingProgress(scope, unitId);
+    await handleStart(0);
   };
 
   const bumpRexXp = useCallback(
@@ -278,6 +304,15 @@ export default function SpellingStage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qi, total]);
 
+  // Persist the current question index after the kid is playing, so leaving mid-stage
+  // (close tab, called away) resumes here next time. Fires on every advance; wrong
+  // answers don't change qi (same word), so nothing to save there. Cleared on finish.
+  useEffect(() => {
+    if (!started || phase === "done" || total <= 0) return;
+    saveSpellingProgress(scope, unitId, { currentIdx: qi, totalQuestions: total, lastSavedAt: Date.now() });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [qi, started]);
+
   // A slot needs typing (letter or apostrophe); space/hyphen are auto-filled.
   const letterIdx = (i: number) => !isAutoChar(target[i]);
   const cursor = values.findIndex((v, i) => letterIdx(i) && v === "");
@@ -314,10 +349,11 @@ export default function SpellingStage({
     setConfetti(null);
     if (qi + 1 >= total) {
       setPhase("done");
+      clearSpellingProgress(scope, unitId); // finished — no position to resume
     } else {
       setQi((i) => i + 1);
     }
-  }, [qi, total]);
+  }, [qi, total, scope, unitId]);
 
   const handleType = (raw: string) => {
     if (phase !== "typing") return;
@@ -511,13 +547,32 @@ export default function SpellingStage({
             Lv.{rexStage + 1} · {REX_STAGE_META[rexStage].label} · 经验 {rexXp}
           </div>
         )}
-        <button
-          type="button"
-          onClick={handleStart}
-          className="mx-auto mt-6 block w-[220px] rounded-2xl bg-[#FF6B35] px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-[#E55A28]"
-        >
-          ▶️ 开始挑战
-        </button>
+        {resumeIdx > 0 ? (
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <button
+              type="button"
+              onClick={() => handleStart(resumeIdx)}
+              className="block w-[240px] rounded-2xl bg-[#FF6B35] px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-[#E55A28]"
+            >
+              ▶️ 继续上次 第 {resumeIdx + 1} / {total} 题
+            </button>
+            <button
+              type="button"
+              onClick={handleRestart}
+              className="block w-[240px] rounded-2xl border-2 border-[#EEEAE0] bg-white px-6 py-2.5 text-sm font-semibold text-[#888780] transition hover:bg-[#F4F0E6]"
+            >
+              ↻ 从头再来
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => handleStart(0)}
+            className="mx-auto mt-6 block w-[220px] rounded-2xl bg-[#FF6B35] px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-[#E55A28]"
+          >
+            {completedLastTime ? "🔄 再次挑战" : "▶️ 开始挑战"}
+          </button>
+        )}
         <div className="mt-4 text-xs text-[#888780]">
           共 {total} 题
           {dueCount > 0 && <span className="ml-2 rounded-full bg-[#FAEEDA] px-2 py-0.5 font-semibold text-[#854F0B]">📖 {dueCount} 个错词复习</span>}

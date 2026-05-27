@@ -13,7 +13,10 @@ export default function PrimaryHubAITest() {
   const base = `/primary/hub/${grade}`;
 
   const [questions] = useState(() => {
-    const errorQs = state.mistakes.filter((m) => m.opts && m.opts.length > 1).slice(0, 6);
+    // Exclude listening mistakes (they carry an `audio` field): the AI test has no
+    // audio playback, so without sound the only way to "read" them was the answer
+    // leaking into the prompt — drop them rather than show an unanswerable question.
+    const errorQs = state.mistakes.filter((m) => m.opts && m.opts.length > 1 && !m.audio).slice(0, 6);
     const learnedQs: QuizQuestion[] = [];
     Object.keys(state.units).forEach((unitId) => {
       const us = state.units[unitId];

@@ -16,7 +16,9 @@ import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingSta
 import HubSpeakSpeedControl from "@/components/primaryHub/HubSpeakSpeedControl";
 import SentenceLessonStage from "@/components/primaryHub/SentenceLessonStage";
 import SpellingStage from "@/components/primaryHub/SpellingStage";
+import ListenWordStage from "@/components/primaryHub/ListenWordStage";
 import type { GradeKey } from "@/lib/primaryHub/spellingStageConfig";
+import { getListenWordConfig } from "@/lib/primaryHub/listenWordStageConfig";
 import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
@@ -878,18 +880,19 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
 
   const listenWordQuestions = useMemo(() => {
     if (!unit) return [];
+    const count = getListenWordConfig(`g${grade}` as GradeKey).questionCount;
     const shuffled = shuffleArray([...unit.vocabulary]);
-    return shuffled.slice(0, 6).map((target) => {
+    return shuffled.slice(0, count).map((target) => {
       const distractors = shuffleArray(unit.vocabulary.filter((v) => v.en !== target.en)).slice(0, 3);
       const allOpts = shuffleArray([target, ...distractors]);
       return {
         audio: target.en,
-        opts: allOpts.map((o) => o.en),
+        opts: allOpts.map((o) => ({ en: o.en, cn: o.cn })),
         answer: allOpts.findIndex((o) => o.en === target.en),
         point: "听力",
       };
     });
-  }, [unit]);
+  }, [unit, grade]);
 
   const listenSentQuestions = useMemo(() => {
     if (!unit) return [];
@@ -922,11 +925,11 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
         );
       case "listenWord":
         return (
-          <ListenMcStage
-            title="听音辨词"
-            instruction="🎧 听一听，是哪个单词？"
+          <ListenWordStage
             questions={listenWordQuestions}
+            gradeKey={`g${grade}` as GradeKey}
             grade={grade}
+            userId={userId}
             unitId={unitId}
             onFinish={handleFinish}
             onCorrect={addStar}
@@ -935,7 +938,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             onWrong={(q) =>
               addMistake({
                 q: `听音选词：${q.audio}`,
-                opts: q.opts,
+                opts: q.opts.map((o) => o.en),
                 answer: q.answer,
                 point: "听力",
                 audio: q.audio,

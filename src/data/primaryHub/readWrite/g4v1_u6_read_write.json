@@ -7,13 +7,13 @@
   "questions": [
     {
       "type": "fill_choice",
-      "sentence": "My mum and dad are my ___.",
+      "sentence": "My ___ are great. They take me to the park on weekends.",
       "hint_zh": "父母",
-      "correctSentence": "My mum and dad are my parents.",
+      "correctSentence": "My parents are great. They take me to the park on weekends.",
       "options": [
-        { "text": "cousin", "correct": false },
+        { "text": "cousins", "correct": false },
         { "text": "parents", "correct": true },
-        { "text": "uncle", "correct": false }
+        { "text": "uncles", "correct": false }
       ]
     },
     {

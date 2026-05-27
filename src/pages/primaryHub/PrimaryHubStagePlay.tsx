@@ -994,8 +994,30 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
 
   const finalQuizQuestions = useMemo(() => {
     if (!unit) return [];
-    return shuffleArray([...unit.quizQuestions]);
+    // Shuffle question order AND each question's options, so the correct answer
+    // isn't pinned to a fixed position (kids can't pattern-match "always pick A").
+    // useMemo keeps the layout stable for the life of the stage.
+    return shuffleArray([...unit.quizQuestions]).map((q) => {
+      const correctOpt = q.opts[q.answer];
+      const opts = shuffleArray([...q.opts]);
+      return { ...q, opts, answer: opts.indexOf(correctOpt) };
+    });
   }, [unit]);
+
+  // Read/write training answers live in static JSON in a fixed slot, and the stage
+  // renders them in order — so a kid can memorize positions across replays. Shuffle
+  // both question order and each question's options (the `correct` flag rides along,
+  // so no index recompute is needed). useMemo keeps it stable for the stage's life.
+  const readWriteConfigShuffled = useMemo(() => {
+    if (!readWriteConfig) return null;
+    return {
+      ...readWriteConfig,
+      questions: shuffleArray([...readWriteConfig.questions]).map((q) => ({
+        ...q,
+        options: shuffleArray([...q.options]),
+      })),
+    };
+  }, [readWriteConfig]);
 
   if (!unit || !stage) return null;
 
@@ -1113,12 +1135,12 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
           />
         );
       case "readWrite":
-        return readWriteConfig ? (
+        return readWriteConfigShuffled ? (
           <ReadWriteTrainingStage
-            config={readWriteConfig}
+            config={readWriteConfigShuffled}
             onFinish={handleFinish}
             onAwardPoints={addStar}
-            initialQIdx={stepFromSavedPercent(savedStagePercent, readWriteConfig.questions.length)}
+            initialQIdx={stepFromSavedPercent(savedStagePercent, readWriteConfigShuffled.questions.length)}
             onProgress={reportStageProgress}
           />
         ) : (

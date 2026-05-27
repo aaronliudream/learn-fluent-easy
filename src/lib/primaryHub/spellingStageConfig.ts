@@ -95,6 +95,8 @@ export type WrongEntry = {
   lastWrongAt: number;
   nextReviewAt: number;
   masteredCount: number;
+  /** How it last entered the pool — distinguishes a wrong attempt from a (taught) skip. */
+  lastOutcome?: "wrong" | "skipped";
 };
 export type WrongPool = Record<string, WrongEntry>;
 

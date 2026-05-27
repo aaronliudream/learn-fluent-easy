@@ -271,13 +271,14 @@ export default function SpellingStage({
   const cursor = values.findIndex((v, i) => letterIdx(i) && v === "");
 
   const recordWrongPool = useCallback(
-    (en: string, opts: { incrementWrong: boolean }) => {
+    (en: string, opts: { incrementWrong: boolean; outcome: "wrong" | "skipped" }) => {
       const pool: WrongPool = loadWrongPool(unitId);
       const now = Date.now();
       const e = pool[en] ?? { wrongCount: 0, lastWrongAt: 0, nextReviewAt: 0, masteredCount: 0 };
       if (opts.incrementWrong) e.wrongCount += 1;
       e.lastWrongAt = now;
       e.masteredCount = 0;
+      e.lastOutcome = opts.outcome;
       e.nextReviewAt = now + nextReviewDelayMs(e.wrongCount);
       pool[en] = e;
       saveWrongPool(unitId, pool);
@@ -362,11 +363,18 @@ export default function SpellingStage({
     setGameScore((s) => Math.max(0, s - 2));
   };
 
+  // Teaching mode: reveal the answer in yellow, say it once, no XP change, re-queue for review.
   const skip = () => {
     if (phase !== "typing" || !current) return;
-    recordWrongPool(current.word.en, { incrementWrong: true });
-    setCombo(0);
-    advance();
+    setPhase("resolved");
+    setValues(target.split(""));
+    setStatuses(target.split("").map((c) => (isAutoChar(c) ? "correct" : "hint")));
+    playWord(target);
+    setBanner("📖 记住啦！下次再来");
+    after(1400, () => setBanner(null));
+    recordWrongPool(current.word.en, { incrementWrong: true, outcome: "skipped" });
+    setCombo(0); // neutral on XP, but the streak still breaks
+    after(1500, advance);
   };
 
   const check = () => {
@@ -452,7 +460,7 @@ export default function SpellingStage({
       after(1000, () => setRexMood("happy"));
       bumpRexXp(-8);
       onWrong({ q: `拼写：${current.word.cn}`, opts: [target], answer: 0, point: "单词拼写" });
-      recordWrongPool(current.word.en, { incrementWrong: true });
+      recordWrongPool(current.word.en, { incrementWrong: true, outcome: "wrong" });
 
       const ratio = letterPositions.length ? correctCount / letterPositions.length : 0;
 
@@ -590,6 +598,11 @@ export default function SpellingStage({
       >
         {flash && <div className="pointer-events-none absolute inset-0 z-20 rounded-2xl bg-[#FFD64B]/40" style={{ animation: "spell-pop .45s" }} />}
         {confetti && <Confetti kind={confetti} />}
+        {banner && (
+          <div className="pointer-events-none absolute left-1/2 top-2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#2C2C2A]/88 px-4 py-1.5 text-sm font-bold text-white">
+            {banner}
+          </div>
+        )}
 
         {current.isBoss && (
           <div className="mb-2 inline-block rounded-full bg-[#BA7517] px-2 py-0.5 text-xs font-bold text-white">👑 BOSS WORD</div>

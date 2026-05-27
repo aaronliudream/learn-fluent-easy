@@ -804,11 +804,6 @@ function FinalQuizStage({
         <span className="text-[#888780]">
           第 {idx + 1} / {questions.length} 题
         </span>
-        {q.point && (
-          <span className="rounded-lg bg-[#FFE9AD] px-2 py-0.5 text-[11px] font-semibold text-[#854F0B]">
-            {q.point}
-          </span>
-        )}
       </div>
       <div className="mb-4 text-base font-semibold leading-relaxed">{q.q}</div>
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />

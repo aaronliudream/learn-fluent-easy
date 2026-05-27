@@ -2549,14 +2549,14 @@
               },
               {
                 "id": 607,
-                "q": "My ____ drives a taxi every day.",
+                "q": "My uncle drives a taxi. He's a ___.",
                 "opts": [
-                  "doctor",
                   "driver",
                   "farmer",
-                  "cook"
+                  "doctor",
+                  "drivers"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
@@ -2601,14 +2601,14 @@
               },
               {
                 "id": 611,
-                "q": "My ____ works on a farm. He grows vegetables.",
+                "q": "My uncle works on a farm. He grows vegetables. He's a ___.",
                 "opts": [
-                  "doctor",
                   "farmer",
-                  "nurse",
-                  "cook"
+                  "driver",
+                  "cook",
+                  "farmers"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               }

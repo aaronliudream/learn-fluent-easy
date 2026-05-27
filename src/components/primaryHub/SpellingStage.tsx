@@ -148,6 +148,7 @@ export default function SpellingStage({
   const [flash, setFlash] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const [started, setStarted] = useState(false); // intro screen until the kid taps 开始挑战 (unlocks audio)
   const timers = useRef<number[]>([]);
 
   const after = (ms: number, fn: () => void) => {
@@ -158,6 +159,31 @@ export default function SpellingStage({
 
   const rexStage = rexStageFromXp(rexXp, gradeKey);
   const rexPct = rexStageProgress(rexXp, gradeKey);
+  const dueCount = queue.filter((q) => q.isReview).length;
+
+  // The start tap is the user gesture that unlocks audio (Chrome autoplay policy),
+  // so the first question's auto-play works.
+  const handleStart = async () => {
+    try {
+      const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (Ctx) {
+        const ctx = new Ctx();
+        await ctx.resume();
+      }
+    } catch {
+      /* ignore */
+    }
+    try {
+      const silent = new Audio(
+        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=",
+      );
+      silent.volume = 0;
+      await silent.play().catch(() => {});
+    } catch {
+      /* ignore */
+    }
+    setStarted(true);
+  };
 
   const bumpRexXp = useCallback(
     (delta: number) => {
@@ -223,7 +249,7 @@ export default function SpellingStage({
   }, []);
 
   useEffect(() => {
-    if (!current) return;
+    if (!started || !current) return; // no audio before the start gesture (Chrome autoplay policy)
     initSlots(target);
     setPhase("typing");
     setPopup(null);
@@ -233,7 +259,7 @@ export default function SpellingStage({
     }, 250);
     timers.current.push(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [qi, total]);
+  }, [qi, total, started]);
 
   useEffect(() => {
     if (onProgress && total) onProgress(Math.min(99, Math.round((qi / total) * 100)));
@@ -444,6 +470,32 @@ export default function SpellingStage({
   };
 
   const focusInput = () => inputRef.current?.focus();
+
+  // ---------- INTRO (start gesture unlocks audio) ----------
+  if (!started) {
+    return (
+      <div className="mx-auto max-w-[480px] rounded-2xl border-2 border-[#EEEAE0] bg-[#FFF8F0] p-8 text-center shadow-sm">
+        <div className="text-[80px] leading-none">{useRex ? REX_STAGE_META[rexStage].emoji : "✏️"}</div>
+        <div className="mt-2 text-lg font-bold text-[#2C2C2A]">{useRex ? "Rex 在等你！" : "拼写挑战"}</div>
+        {useRex && (
+          <div className="mt-1 text-sm text-[#854F0B]">
+            Lv.{rexStage + 1} · {REX_STAGE_META[rexStage].label} · 经验 {rexXp}
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={handleStart}
+          className="mx-auto mt-6 block w-[220px] rounded-2xl bg-[#FF6B35] px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-[#E55A28]"
+        >
+          ▶️ 开始挑战
+        </button>
+        <div className="mt-4 text-xs text-[#888780]">
+          共 {total} 题
+          {dueCount > 0 && <span className="ml-2 rounded-full bg-[#FAEEDA] px-2 py-0.5 font-semibold text-[#854F0B]">📖 {dueCount} 个错词复习</span>}
+        </div>
+      </div>
+    );
+  }
 
   // ---------- DONE ----------
   if (phase === "done") {

@@ -40,6 +40,8 @@ import { getCompletableStageIndices } from "./stageCompletable";
 
 type Ctx = {
   grade: PrimaryHubGrade;
+  /** Current signed-in user id (null = guest). For user-scoped local storage keys. */
+  userId: string | null;
   state: PrimaryHubPersist;
   setState: React.Dispatch<React.SetStateAction<PrimaryHubPersist>>;
   cloudHydrating: boolean;
@@ -65,6 +67,7 @@ export function PrimaryHubProvider({
   const [guestMergePending, setGuestMergePending] = useState(false);
   const [guestMergeBusy, setGuestMergeBusy] = useState(false);
   const userIdRef = useRef<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
   const localSnapshotRef = useRef<Partial<Record<PrimaryHubGrade, PrimaryHubPersist>>>({});
 
   const commit = useCallback((next: PrimaryHubPersist) => {
@@ -112,6 +115,7 @@ export function PrimaryHubProvider({
     const hydrate = async (userId: string | null) => {
       const prevUserId = userIdRef.current;
       userIdRef.current = userId;
+      setUserId(userId);
 
       if (!userId) {
         cancelPrimaryHubCloudPush();
@@ -302,6 +306,7 @@ export function PrimaryHubProvider({
   const value = useMemo(
     () => ({
       grade,
+      userId,
       state,
       setState,
       cloudHydrating,
@@ -314,6 +319,7 @@ export function PrimaryHubProvider({
     }),
     [
       grade,
+      userId,
       state,
       cloudHydrating,
       guestMergePending,

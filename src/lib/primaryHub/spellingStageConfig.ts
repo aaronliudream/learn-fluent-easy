@@ -68,12 +68,28 @@ export function rexStageProgress(xp: number, gradeKey: GradeKey): number {
   return Math.max(0, Math.min(1, (xp - cur) / (next - cur)));
 }
 
-// ---- Rex XP persistence (one Rex per grade; survives across units/sessions) ----
-export const rexXpKey = (gradeKey: GradeKey) => `spelling_rex_xp_${gradeKey}`;
-
-export function loadRexXp(gradeKey: GradeKey): number {
+// ---- Storage scope: per signed-in user; guests get a stable per-device anon id ----
+// Keeps Rex XP / wrong pools private to the account, not shared across users on one device.
+export function getStorageScope(userId: string | null | undefined): string {
+  if (userId) return userId;
   try {
-    const raw = localStorage.getItem(rexXpKey(gradeKey));
+    let anon = localStorage.getItem("spelling_anon_id");
+    if (!anon) {
+      anon = `anon_${Math.random().toString(36).slice(2)}${Date.now().toString(36)}`;
+      localStorage.setItem("spelling_anon_id", anon);
+    }
+    return anon;
+  } catch {
+    return "anon";
+  }
+}
+
+// ---- Rex XP persistence (one Rex per grade, per user; survives across units/sessions) ----
+export const rexXpKey = (scope: string, gradeKey: GradeKey) => `spelling_rex_xp_${scope}_${gradeKey}`;
+
+export function loadRexXp(scope: string, gradeKey: GradeKey): number {
+  try {
+    const raw = localStorage.getItem(rexXpKey(scope, gradeKey));
     const n = raw ? parseInt(raw, 10) : 0;
     return Number.isFinite(n) && n >= 0 ? n : 0;
   } catch {
@@ -81,9 +97,9 @@ export function loadRexXp(gradeKey: GradeKey): number {
   }
 }
 
-export function saveRexXp(gradeKey: GradeKey, xp: number): void {
+export function saveRexXp(scope: string, gradeKey: GradeKey, xp: number): void {
   try {
-    localStorage.setItem(rexXpKey(gradeKey), String(Math.max(0, Math.round(xp))));
+    localStorage.setItem(rexXpKey(scope, gradeKey), String(Math.max(0, Math.round(xp))));
   } catch {
     // ignore storage errors
   }
@@ -100,20 +116,20 @@ export type WrongEntry = {
 };
 export type WrongPool = Record<string, WrongEntry>;
 
-export const wrongPoolKey = (unitId: string) => `spelling_wrongs_${unitId}`;
+export const wrongPoolKey = (scope: string, unitId: string) => `spelling_wrongs_${scope}_${unitId}`;
 
-export function loadWrongPool(unitId: string): WrongPool {
+export function loadWrongPool(scope: string, unitId: string): WrongPool {
   try {
-    const raw = localStorage.getItem(wrongPoolKey(unitId));
+    const raw = localStorage.getItem(wrongPoolKey(scope, unitId));
     return raw ? (JSON.parse(raw) as WrongPool) : {};
   } catch {
     return {};
   }
 }
 
-export function saveWrongPool(unitId: string, pool: WrongPool): void {
+export function saveWrongPool(scope: string, unitId: string, pool: WrongPool): void {
   try {
-    localStorage.setItem(wrongPoolKey(unitId), JSON.stringify(pool));
+    localStorage.setItem(wrongPoolKey(scope, unitId), JSON.stringify(pool));
   } catch {
     // ignore storage errors
   }

@@ -821,7 +821,7 @@ function FinalQuizStage({
 }
 
 export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplete, onBack }: Props) {
-  const { grade, state, setState, addMistake, completeStage, updateStageProgress, updateVocabViewed } =
+  const { grade, userId, state, setState, addMistake, completeStage, updateStageProgress, updateVocabViewed } =
     usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
@@ -983,6 +983,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             vocabulary={unit.vocabulary}
             gradeKey={`g${grade}` as GradeKey}
             unitId={unitId}
+            userId={userId}
             grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}

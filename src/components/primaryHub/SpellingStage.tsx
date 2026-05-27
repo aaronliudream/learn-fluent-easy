@@ -7,6 +7,7 @@ import {
   type GradeKey,
   getGradeConfig,
   isBossWord,
+  getStorageScope,
   loadRexXp,
   saveRexXp,
   rexStageFromXp,
@@ -22,6 +23,8 @@ type Props = {
   vocabulary: VocabItem[];
   gradeKey: GradeKey;
   unitId: string;
+  /** Signed-in user id (null = guest); scopes Rex XP + wrong pool to the account. */
+  userId?: string | null;
   grade: number;
   onFinish: () => void;
   onCorrect: () => void;
@@ -80,6 +83,7 @@ export default function SpellingStage({
   vocabulary,
   gradeKey,
   unitId,
+  userId,
   grade,
   onFinish,
   onCorrect,
@@ -91,11 +95,12 @@ export default function SpellingStage({
   const useRex = features?.rexEnabled ?? cfg.useRex;
   const useBoss = features?.bossEnabled ?? true;
   const useTreasure = features?.bonusBoxEnabled ?? true;
+  const scope = useMemo(() => getStorageScope(userId), [userId]); // user-scoped storage (not device-shared)
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   // ---- Build the question queue once: due review words first, then the rest. ----
   const queue = useMemo<QueueItem[]>(() => {
-    const pool = loadWrongPool(unitId);
+    const pool = loadWrongPool(scope, unitId);
     const now = Date.now();
     const byEn = new Map(vocabulary.map((v) => [v.en, v]));
     const due: VocabItem[] = [];
@@ -116,7 +121,7 @@ export default function SpellingStage({
       };
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vocabulary, unitId, gradeKey]);
+  }, [vocabulary, unitId, gradeKey, scope]);
 
   const total = queue.length;
   const [qi, setQi] = useState(0);
@@ -138,7 +143,7 @@ export default function SpellingStage({
   const [combo, setCombo] = useState(0);
   const [shields, setShields] = useState(0);
   const [bestCombo, setBestCombo] = useState(0);
-  const [rexXp, setRexXp] = useState(() => (useRex ? loadRexXp(gradeKey) : 0));
+  const [rexXp, setRexXp] = useState(() => (useRex ? loadRexXp(getStorageScope(userId), gradeKey) : 0));
   const [rexMood, setRexMood] = useState<"happy" | "sad">("happy");
   const [phase, setPhase] = useState<"typing" | "resolved" | "done">("typing");
   const [popup, setPopup] = useState<{ text: string; tone: "good" | "close" | "boss" | "bonus" | "combo" } | null>(null);
@@ -148,6 +153,7 @@ export default function SpellingStage({
   const [flash, setFlash] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const [scoreFx, setScoreFx] = useState<string | null>(null); // floating ±N near the 关分 counter
   const [started, setStarted] = useState(false); // intro screen until the kid taps 开始挑战 (unlocks audio)
   const timers = useRef<number[]>([]);
 
@@ -198,12 +204,12 @@ export default function SpellingStage({
           after(450, () => setFlash(false));
           after(1600, () => setBanner(null));
         }
-        saveRexXp(gradeKey, nextXp);
+        saveRexXp(scope, gradeKey, nextXp);
         return nextXp;
       });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [gradeKey, useRex],
+    [gradeKey, useRex, scope],
   );
 
   // ---- Speech: ElevenLabs (kid voice, content-addressed cache → no repeat cost),
@@ -248,6 +254,12 @@ export default function SpellingStage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Reload Rex XP if the storage scope resolves/changes after mount (e.g. auth lands late).
+  useEffect(() => {
+    if (useRex) setRexXp(loadRexXp(scope, gradeKey));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scope]);
+
   useEffect(() => {
     if (!started || !current) return; // no audio before the start gesture (Chrome autoplay policy)
     initSlots(target);
@@ -272,7 +284,7 @@ export default function SpellingStage({
 
   const recordWrongPool = useCallback(
     (en: string, opts: { incrementWrong: boolean; outcome: "wrong" | "skipped" }) => {
-      const pool: WrongPool = loadWrongPool(unitId);
+      const pool: WrongPool = loadWrongPool(scope, unitId);
       const now = Date.now();
       const e = pool[en] ?? { wrongCount: 0, lastWrongAt: 0, nextReviewAt: 0, masteredCount: 0 };
       if (opts.incrementWrong) e.wrongCount += 1;
@@ -281,21 +293,21 @@ export default function SpellingStage({
       e.lastOutcome = opts.outcome;
       e.nextReviewAt = now + nextReviewDelayMs(e.wrongCount);
       pool[en] = e;
-      saveWrongPool(unitId, pool);
+      saveWrongPool(scope, unitId, pool);
     },
-    [unitId],
+    [scope, unitId],
   );
 
   const markReviewCorrect = useCallback(
     (en: string) => {
-      const pool = loadWrongPool(unitId);
+      const pool = loadWrongPool(scope, unitId);
       const e = pool[en];
       if (!e) return;
       e.masteredCount += 1;
       if (e.masteredCount >= 3) delete pool[en];
-      saveWrongPool(unitId, pool);
+      saveWrongPool(scope, unitId, pool);
     },
-    [unitId],
+    [scope, unitId],
   );
 
   const advance = useCallback(() => {
@@ -309,20 +321,27 @@ export default function SpellingStage({
 
   const handleType = (raw: string) => {
     if (phase !== "typing") return;
-    let ch = raw.slice(-1);
-    if (ch === "’") ch = "'"; // curly → straight
-    if (!/[a-z']/i.test(ch)) return; // letters (any case) + apostrophe
-    // keep the kid's keystroke as-typed (judging is case-insensitive; display stays honest)
-    const c = cursor;
-    if (c < 0) return;
+    // accept letters (any case, kept as-typed) + apostrophe; normalize curly apostrophe.
+    const incoming = [...raw].map((c) => (c === "’" ? "'" : c)).filter((c) => /[a-z']/i.test(c));
+    if (!incoming.length) return;
+    // fill the next empty typeable slots in order — handle bursts in one update so no drops.
     setValues((prev) => {
       const next = [...prev];
-      next[c] = ch;
+      let k = 0;
+      for (let i = 0; i < next.length && k < incoming.length; i++) {
+        if (!letterIdx(i) || next[i] !== "") continue;
+        next[i] = incoming[k++];
+      }
       return next;
     });
     setStatuses((prev) => {
       const next = [...prev];
-      next[c] = "typed";
+      let k = 0;
+      for (let i = 0; i < next.length && k < incoming.length; i++) {
+        if (!letterIdx(i) || next[i] !== "empty") continue;
+        next[i] = "typed";
+        k++;
+      }
       return next;
     });
   };
@@ -361,6 +380,8 @@ export default function SpellingStage({
       return n;
     });
     setGameScore((s) => Math.max(0, s - 2));
+    setScoreFx("-2");
+    after(900, () => setScoreFx(null));
   };
 
   // Teaching mode: reveal the answer in yellow, say it once, no XP change, re-queue for review.
@@ -574,7 +595,14 @@ export default function SpellingStage({
           <div className="text-xs font-semibold text-[#854F0B]">拼写挑战</div>
         )}
         <div className="flex items-center gap-2 text-xs font-bold">
-          <span className="text-[#FF6B35]">{gameScore}分</span>
+          <span className="relative text-[#FF6B35]">
+            {gameScore} 关分
+            {scoreFx && (
+              <span className="absolute -top-4 right-0 text-[#E24B4A]" style={{ animation: "spell-pop .9s forwards" }}>
+                {scoreFx}
+              </span>
+            )}
+          </span>
           {combo > 1 && <span className="rounded-full bg-[#FFE9AD] px-1.5 py-0.5 text-[#854F0B]">🔥×{combo}</span>}
           <span title="连击护盾">{"🛡️".repeat(shields) || "·"}</span>
         </div>
@@ -678,16 +706,21 @@ export default function SpellingStage({
             </div>
           )}
 
+          {/* uncontrolled: clear after each input so fast typing never drops keystrokes */}
           <input
             ref={inputRef}
             type="text"
-            value=""
+            defaultValue=""
             autoComplete="off"
             autoCapitalize="off"
             autoCorrect="off"
             spellCheck={false}
             style={{ position: "absolute", left: -9999, opacity: 0 }}
-            onChange={(e) => handleType(e.target.value)}
+            onChange={(e) => {
+              const v = e.target.value;
+              e.target.value = "";
+              if (v) handleType(v);
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter") { e.preventDefault(); check(); }
               else if (e.key === "Backspace") { e.preventDefault(); handleBackspace(); }
@@ -697,7 +730,7 @@ export default function SpellingStage({
 
         {/* actions */}
         <div className="mt-5 flex items-center justify-center gap-2">
-          <button type="button" onClick={(e) => { e.stopPropagation(); useHint(); }} className="rounded-xl border-2 border-[#EF9F27] bg-[#FAEEDA] px-3 py-2 text-xs font-semibold text-[#854F0B]">💡 提示 (扣 2 分)</button>
+          <button type="button" onClick={(e) => { e.stopPropagation(); useHint(); }} className="rounded-xl border-2 border-[#EF9F27] bg-[#FAEEDA] px-3 py-2 text-xs font-semibold text-[#854F0B]">💡 提示 (-2 关分)</button>
           <button
             type="button"
             onClick={(e) => { e.stopPropagation(); check(); }}

@@ -1,0 +1,4 @@
+[Bug2] cells before enter="classroom" (expect classroom)
+[Bug2] after ONE Enter: 第 1 / 16 题 -> 第 2 / 16 题 (expect 第2 = single-enter advance)
+[Bug1] spelling keys=["spelling_anon_id","spelling_rex_xp_anon_r7f2ssijwqmpnh108z_g4"] (rex key must be scoped, no bare spelling_rex_xp_g4)
+[Bug4] hintBtn="💡 提示 (-2 关分)" scoreLabel="24 关分" minusTwoVisible=true

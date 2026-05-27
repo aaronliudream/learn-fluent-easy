@@ -753,9 +753,18 @@ function FinalQuizStage({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
+  // Synchronous guard against double-advance: a held Enter (key repeat) or a
+  // double-click/tap on 下一题 fires next() twice before React commits the
+  // answered=false re-render, jumping idx by 2 and skipping a question.
+  const advancingRef = useRef(false);
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
+
+  // Release the advance lock once the new question is on screen.
+  useEffect(() => {
+    advancingRef.current = false;
+  }, [idx]);
 
   useEffect(() => {
     if (!questions.length || !onProgress) return;
@@ -781,6 +790,8 @@ function FinalQuizStage({
   };
 
   const next = () => {
+    if (advancingRef.current) return;
+    advancingRef.current = true;
     if (isLast) {
       onFinish();
       return;

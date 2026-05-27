@@ -200,6 +200,12 @@ function VocabStage({
   const [activeGroup, setActiveGroup] = useState<1 | 2 | 3 | 4>(1);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set(initialVocabViewed ?? []));
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
+  // Category-switch guidance: toast + the pending auto-switch / toast-dismiss timers.
+  const [switchToast, setSwitchToast] = useState<string | null>(null);
+  const autoSwitchTimer = useRef<number | null>(null);
+  const toastTimer = useRef<number | null>(null);
+  const autoAdvancedFrom = useRef<Set<number>>(new Set()); // tabs we've already auto-advanced from
+  const autoSwitchInited = useRef(false);
 
   useEffect(() => {
     if (initialVocabViewed?.length) {
@@ -215,7 +221,10 @@ function VocabStage({
     onVocabViewedChange?.([...viewed].sort((a, b) => a - b));
   }, [viewed, onVocabViewedChange]);
 
-  const groups = getVocabGroups({ vocabulary, vocabGroups });
+  const groups = useMemo(
+    () => getVocabGroups({ vocabulary, vocabGroups }),
+    [vocabulary, vocabGroups],
+  );
   const activeGroupDef = groups?.find((g) => g.id === activeGroup) ?? null;
   const activeItems = activeGroupDef?.items ?? vocabulary;
   const activeOffset = activeGroupDef?.offset ?? 0;
@@ -302,8 +311,72 @@ function VocabStage({
   const groupViewedCount = (group: NonNullable<typeof groups>[number]) =>
     group.items.reduce((n, _item, i) => (viewed.has(group.offset + i) ? n + 1 : n), 0);
 
+  const groupComplete = (group: NonNullable<typeof groups>[number]) =>
+    groupViewedCount(group) >= group.items.length;
+
+  // All tabs (word categories + optional phonics) the kid must clear, in tab order.
+  // A tab is incomplete if its cards aren't all viewed (or, for phonics, not finished).
+  const guidanceTabs: { id: 1 | 2 | 3 | 4; label: string; complete: boolean }[] = [
+    ...(groups ?? []).map((g) => ({ id: g.id, label: g.label, complete: groupComplete(g) })),
+    ...(phonics ? [{ id: 4 as const, label: "自然拼读", complete: !!phonicsDone }] : []),
+  ];
+  const activeTab = guidanceTabs.find((t) => t.id === activeGroup) ?? null;
+  // The next entry the kid still needs to open — the target for both the red dot
+  // guidance and the auto-switch.
+  const nextIncompleteOther = guidanceTabs.find((t) => t.id !== activeGroup && !t.complete) ?? null;
+  // Cards still unviewed in the *current* word category (0 for the phonics tab).
+  const activeWordGroup = activeGroup !== 4 ? (groups?.find((g) => g.id === activeGroup) ?? null) : null;
+  const activeWordRemaining = activeWordGroup
+    ? activeWordGroup.items.length - groupViewedCount(activeWordGroup)
+    : 0;
+
+  // When the active tab is finished, nudge the kid onward: after a 1.5s "done" beat,
+  // auto-switch to the next incomplete tab and toast it. Cancelled if they switch
+  // tabs themselves (activeGroup change tears down this effect). Tabs already
+  // complete on entry are suppressed so we don't auto-switch the moment they land.
+  useEffect(() => {
+    if (!groups) return;
+    if (!autoSwitchInited.current) {
+      autoSwitchInited.current = true;
+      guidanceTabs.forEach((t) => t.complete && autoAdvancedFrom.current.add(t.id));
+      return;
+    }
+    if (canFinish) return; // everything done — let the finish button take over
+    if (!activeTab?.complete || autoAdvancedFrom.current.has(activeGroup)) return;
+    if (!nextIncompleteOther) return;
+    autoAdvancedFrom.current.add(activeGroup);
+    const fromLabel = activeTab.label;
+    const target = nextIncompleteOther;
+    autoSwitchTimer.current = window.setTimeout(() => {
+      setActiveGroup(target.id);
+      setSwitchToast(`✓ ${fromLabel}完成！自动切换到「${target.label}」`);
+      if (toastTimer.current) window.clearTimeout(toastTimer.current);
+      toastTimer.current = window.setTimeout(() => setSwitchToast(null), 2000);
+    }, 1500);
+    return () => {
+      if (autoSwitchTimer.current) {
+        window.clearTimeout(autoSwitchTimer.current);
+        autoSwitchTimer.current = null;
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeGroup, viewed, phonicsDone, canFinish, groups]);
+
+  useEffect(
+    () => () => {
+      if (autoSwitchTimer.current) window.clearTimeout(autoSwitchTimer.current);
+      if (toastTimer.current) window.clearTimeout(toastTimer.current);
+    },
+    [],
+  );
+
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
+    <div className="relative rounded-2xl bg-white p-4 shadow-sm">
+      {switchToast && (
+        <div className="pointer-events-none fixed left-1/2 top-20 z-50 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#2C2C2A] px-4 py-2 text-sm font-bold text-white shadow-lg">
+          {switchToast}
+        </div>
+      )}
       <div className="mb-2 text-base font-semibold">
         📖 {groups ? `认识 ${vocabulary.length} 个单词` : "认识单词"}
       </div>
@@ -314,26 +387,32 @@ function VocabStage({
               key={g.id}
               type="button"
               onClick={() => setActiveGroup(g.id)}
-              className={`min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
+              className={`relative min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition-colors duration-300 ${
                 activeGroup === g.id
                   ? "bg-[#FF6B35] text-white"
                   : "bg-[#F4F0E6] text-[#888780]"
               }`}
             >
               {g.label} ({groupViewedCount(g)}/{g.items.length})
+              {activeGroup !== g.id && !groupComplete(g) && (
+                <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-[#E24B4A]" aria-hidden />
+              )}
             </button>
           ))}
           {phonics && (
             <button
               type="button"
               onClick={() => setActiveGroup(4)}
-              className={`min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
+              className={`relative min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition-colors duration-300 ${
                 activeGroup === 4
                   ? "bg-[#FF6B35] text-white"
                   : "bg-[#F4F0E6] text-[#888780]"
               }`}
             >
               🔤 自然拼读 ({phonicsTabLabel})
+              {activeGroup !== 4 && !phonicsDone && (
+                <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-[#E24B4A]" aria-hidden />
+              )}
             </button>
           )}
         </div>
@@ -450,17 +529,25 @@ function VocabStage({
       )}
       <div className="mt-3 text-center text-[14px] text-[#888780]">
         已查看：{viewed.size} / {requiredViewed}
-        {groups && !allViewed && ` · 还需 ${remainingViewed} 张，请切换其他单词标签`}
-        {groups && allViewed && phonics && !phonicsDone && " · 请完成「自然拼读」标签"}
+        {groups && activeWordRemaining > 0 && ` · 本类还需 ${activeWordRemaining} 张`}
+        {groups && activeWordRemaining === 0 && nextIncompleteOther && ` · 请点击上方「${nextIncompleteOther.label}」继续`}
       </div>
       <PrimaryButton disabled={!canFinish} onClick={onFinish}>
         {canFinish
           ? "✓ 进入下一关 →"
-          : !allViewed && remainingViewed > 0
-            ? `还需查看 ${remainingViewed} 张卡片（共 ${requiredViewed} 张）`
-            : phonics && !phonicsDone
-              ? "请先完成「自然拼读」三个步骤"
-              : "查看完所有卡片再继续"}
+          : !groups || activeWordRemaining > 0
+            ? remainingViewed > 0
+              ? `还需查看 ${remainingViewed} 张卡片（共 ${requiredViewed} 张）`
+              : phonics && !phonicsDone
+                ? "请先完成「自然拼读」三个步骤"
+                : "查看完所有卡片再继续"
+            : nextIncompleteOther
+              ? nextIncompleteOther.id === 4
+                ? "📌 单词已看完，请点击上方「自然拼读」继续"
+                : `📌 还需查看 ${remainingViewed} 张，请点击上方「${nextIncompleteOther.label}」继续`
+              : phonics && !phonicsDone
+                ? "请先完成「自然拼读」三个步骤"
+                : "查看完所有卡片再继续"}
       </PrimaryButton>
     </div>
   );

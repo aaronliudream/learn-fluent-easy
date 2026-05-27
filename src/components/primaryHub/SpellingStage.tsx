@@ -684,7 +684,7 @@ export default function SpellingStage({
 
         {/* actions */}
         <div className="mt-5 flex items-center justify-center gap-2">
-          <button type="button" onClick={(e) => { e.stopPropagation(); useHint(); }} className="rounded-xl border-2 border-[#EF9F27] bg-[#FAEEDA] px-3 py-2 text-xs font-semibold text-[#854F0B]">💡 提示 (-2)</button>
+          <button type="button" onClick={(e) => { e.stopPropagation(); useHint(); }} className="rounded-xl border-2 border-[#EF9F27] bg-[#FAEEDA] px-3 py-2 text-xs font-semibold text-[#854F0B]">💡 提示 (扣 2 分)</button>
           <button
             type="button"
             onClick={(e) => { e.stopPropagation(); check(); }}

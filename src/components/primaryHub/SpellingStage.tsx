@@ -682,7 +682,7 @@ export default function SpellingStage({
         {flash && <div className="pointer-events-none absolute inset-0 z-20 rounded-2xl bg-[#FFD64B]/40" style={{ animation: "spell-pop .45s" }} />}
         {confetti && <Confetti kind={confetti} />}
         {banner && (
-          <div className="pointer-events-none absolute left-1/2 top-2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#2C2C2A]/88 px-4 py-1.5 text-sm font-bold text-white">
+          <div className="pointer-events-none absolute left-1/2 top-2 z-40 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#2C2C2A] px-4 py-1.5 text-sm font-bold text-white">
             {banner}
           </div>
         )}

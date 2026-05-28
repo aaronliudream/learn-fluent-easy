@@ -319,3 +319,6 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
     </div>
   );
 }
+
+/** 暴露给 strengthen 训练页 (#72a) — 行为零改, 仅可见性扩散。 */
+export { PlayCard as OddOneOutPlayCard };

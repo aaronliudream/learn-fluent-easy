@@ -134,12 +134,10 @@ export default function PrimaryHubFinalChallenge() {
             })}
           </div>
 
-          {/* 紫色强化训练 CTA — Phase 1 占位 */}
+          {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a) */}
           <button
             type="button"
-            onClick={() => {
-              alert("🎯 强化训练即将上线! AI 会根据你的错题出针对性新题。");
-            }}
+            onClick={() => navigate(`${base}/final-challenge/strengthen`)}
             className="fc-btn-press fc-shadow-purple"
             style={{
               marginTop: 16,

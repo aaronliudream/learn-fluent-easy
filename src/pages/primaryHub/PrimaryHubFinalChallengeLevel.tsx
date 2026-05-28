@@ -21,16 +21,21 @@ const PicMatchSentenceLevel = lazy(
       "@/components/primaryHub/finalChallenge/levels/PicMatchSentenceLevel"
     ),
 );
+const PicMatchWordLevel = lazy(
+  () =>
+    import("@/components/primaryHub/finalChallenge/levels/PicMatchWordLevel"),
+);
 
 /**
  * 题型 → 具体关卡组件的映射。
- * Phase 1 只接入了 picture_match_sentence (关 1);
- * 其余题型在 #71e~i 接入前 fallback 到占位。
+ * Phase 1 已接入 picture_match_sentence (关 1) + picture_match_word (关 2);
+ * 其余题型在 #71f~i 接入前 fallback 到占位。
  */
 const LEVEL_COMPONENT_MAP: Partial<
   Record<FinalChallengeQuestionType, React.ComponentType>
 > = {
   picture_match_sentence: PicMatchSentenceLevel,
+  picture_match_word: PicMatchWordLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {

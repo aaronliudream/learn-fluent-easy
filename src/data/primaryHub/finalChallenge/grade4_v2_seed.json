@@ -27,11 +27,11 @@
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "📚",
     "options": [
-      "This is the library.",
       "This is the art room.",
+      "This is the library.",
       "This is the music room."
     ],
-    "answer": 0,
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -45,11 +45,11 @@
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🐄",
     "options": [
-      "They are cows.",
       "They are horses.",
-      "They are sheep."
+      "They are sheep.",
+      "They are cows."
     ],
-    "answer": 0,
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -63,11 +63,11 @@
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🕐",
     "options": [
-      "It's one o'clock.",
       "It's two o'clock.",
+      "It's one o'clock.",
       "It's three o'clock."
     ],
-    "answer": 0,
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -81,11 +81,11 @@
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🧥",
     "options": [
-      "It's a coat.",
       "It's a jacket.",
-      "It's a sweater."
+      "It's a sweater.",
+      "It's a coat."
     ],
-    "answer": 0,
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -99,8 +99,8 @@
     "grammar_point": ["noun_vocab"],
     "prompt": "看图,选出对应的单词。",
     "emoji": "👕",
-    "options": ["shirt", "shorts", "skirt"],
-    "answer": 0,
+    "options": ["shorts", "shirt", "skirt"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -113,8 +113,8 @@
     "grammar_point": ["noun_vocab"],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🥕",
-    "options": ["carrot", "tomato", "potato"],
-    "answer": 0,
+    "options": ["tomato", "potato", "carrot"],
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -141,8 +141,8 @@
     "grammar_point": ["irregular_plural", "noun_vocab"],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🐑",
-    "options": ["sheep", "ship", "sheeps"],
-    "answer": 0,
+    "options": ["ship", "sheeps", "sheep"],
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -155,8 +155,8 @@
     "grammar_point": ["noun_plural", "noun_vocab"],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🧦",
-    "options": ["socks", "shoes", "shorts"],
-    "answer": 0,
+    "options": ["shoes", "socks", "shorts"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -170,8 +170,8 @@
     "grammar_point": ["listening_discrimination"],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "sunny",
-    "options": ["sunny", "funny", "snowy"],
-    "answer": 0,
+    "options": ["funny", "snowy", "sunny"],
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -198,8 +198,8 @@
     "grammar_point": ["listening_discrimination"],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "shirt",
-    "options": ["shirt", "short", "skirt"],
-    "answer": 0,
+    "options": ["short", "shirt", "skirt"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -212,8 +212,8 @@
     "grammar_point": ["listening_discrimination", "homophone"],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "four",
-    "options": ["four", "for", "floor"],
-    "answer": 0,
+    "options": ["for", "floor", "four"],
+    "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -329,8 +329,8 @@
     "vocab_domain": ["clothing", "vegetables"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["shirt", "scarf", "tomato"],
-    "answer": 2,
+    "options": ["tomato", "shirt", "scarf"],
+    "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -342,8 +342,8 @@
     "vocab_domain": ["weather", "school_places"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["sunny", "windy", "library"],
-    "answer": 2,
+    "options": ["sunny", "library", "windy"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
@@ -355,8 +355,8 @@
     "vocab_domain": ["numbers", "food"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["one", "seven", "apple"],
-    "answer": 2,
+    "options": ["apple", "one", "seven"],
+    "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },

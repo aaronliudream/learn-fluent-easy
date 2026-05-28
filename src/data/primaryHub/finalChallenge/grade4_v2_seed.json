@@ -1,0 +1,136 @@
+[
+  {
+    "id": "fc_g4v2_q001",
+    "type": "picture_match_sentence",
+    "unitId": "g4v2_u3",
+    "difficulty": "easy",
+    "vocab_domain": ["clothing"],
+    "grammar_point": ["this_is_demonstrative", "present_simple_be"],
+    "prompt": "看图,选出与图片相符的句子。",
+    "emoji": "🧣",
+    "options": [
+      "I like my scarf.",
+      "Look at the green beans.",
+      "This is our art room."
+    ],
+    "answer": 0,
+    "source": "manual",
+    "source_ref": "占位题 · 风格参照 B 套 第 VII 题",
+    "note": "考察:服饰词 scarf + 一般现在时 + I like 句型。干扰项 1 是同类配句题但物品错(食物),干扰项 2 是介绍场所句型。"
+  },
+  {
+    "id": "fc_g4v2_q002",
+    "type": "picture_match_word",
+    "unitId": "g4v2_u5",
+    "difficulty": "easy",
+    "vocab_domain": ["farm_animals"],
+    "grammar_point": ["noun_plural"],
+    "prompt": "看图,选出对应的单词。",
+    "emoji": "🐑🐑🐑",
+    "options": [
+      "sheep",
+      "sheeps",
+      "ships"
+    ],
+    "answer": 0,
+    "source": "manual",
+    "source_ref": "占位题 · 风格参照 A 套 第 IX 题 + 真题陷阱",
+    "note": "考察:不规则复数(sheep 单复同形)+ 音近词陷阱(sheep vs ships)。干扰项 1 是规则复数误加 -s,2 是音近异义词。"
+  },
+  {
+    "id": "fc_g4v2_q003",
+    "type": "listen_and_choose_word",
+    "unitId": "g4v2_u4",
+    "difficulty": "easy",
+    "vocab_domain": ["weather"],
+    "grammar_point": ["phonics_minimal_pair"],
+    "prompt": "听音频,选择你听到的单词。",
+    "audio": "sunny",
+    "options": [
+      "sunny",
+      "snowy",
+      "windy"
+    ],
+    "answer": 0,
+    "source": "manual",
+    "source_ref": "占位题 · 风格参照 B 套 第 I 题",
+    "note": "考察:天气词汇 + 音节辨析。干扰项 1 同首音 s- 不同元音,干扰项 2 完全不同天气词作宽距离干扰。"
+  },
+  {
+    "id": "fc_g4v2_q004",
+    "type": "listen_and_judge_picture",
+    "unitId": "g4v2_u4",
+    "difficulty": "easy",
+    "vocab_domain": ["weather"],
+    "grammar_point": ["present_simple_be", "it_is_weather"],
+    "prompt": "看图,听音频,判断是否相符。",
+    "emoji": "☀️",
+    "audio": "It is a rainy day.",
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
+    "answer": 1,
+    "source": "manual",
+    "source_ref": "占位题 · 风格参照 A 套 第 II 题",
+    "note": "考察:天气表达 It is + 形容词 + 假相符(图是晴天但音频说下雨)。属于 F 题,典型的「只改一个属性」干扰策略。"
+  },
+  {
+    "id": "fc_g4v2_q005",
+    "type": "odd_one_out",
+    "unitId": "g4v2_u5",
+    "difficulty": "medium",
+    "vocab_domain": ["food", "farm_animals"],
+    "grammar_point": ["semantic_category"],
+    "prompt": "选出与其他两个不属于同一类的单词。",
+    "options": [
+      "cats",
+      "cows",
+      "carrots"
+    ],
+    "answer": 2,
+    "source": "manual",
+    "source_ref": "占位题 · 完全复刻 B 套 第 29 题",
+    "note": "考察:语义场分类(动物 vs 蔬菜)+ 复数 -s 形式都对齐(三个都以 -s 结尾,排除了 POS 陷阱)。这是真题原型题,孩子学会这道后能识别同类陷阱。"
+  },
+  {
+    "id": "fc_g4v2_q006",
+    "type": "reading_judge_TF",
+    "unitId": "g4v2_u6",
+    "difficulty": "medium",
+    "vocab_domain": ["family", "clothing", "weather"],
+    "grammar_point": ["present_simple", "reading_comprehension"],
+    "prompt": "读短文,判断下列陈述的真假。",
+    "passage": "Hi! I am Mike. Today is my mum's birthday. It is fine and warm. We have a big party at home. My dad wears a blue suit. My mum wears a red dress. She looks beautiful. My sister wears a yellow skirt. I wear my new white shirt. We eat a big cake. Everyone is happy.",
+    "subQuestions": [
+      {
+        "stem": "Today is Mike's birthday.",
+        "options": ["T (相符)", "F (不相符)"],
+        "answer": 1
+      },
+      {
+        "stem": "Mum wears a red dress.",
+        "options": ["T (相符)", "F (不相符)"],
+        "answer": 0
+      },
+      {
+        "stem": "Mike's sister wears a blue skirt.",
+        "options": ["T (相符)", "F (不相符)"],
+        "answer": 1
+      },
+      {
+        "stem": "It is fine and warm today.",
+        "options": ["T (相符)", "F (不相符)"],
+        "answer": 0
+      },
+      {
+        "stem": "Everyone is happy at the party.",
+        "options": ["T (相符)", "F (不相符)"],
+        "answer": 0
+      }
+    ],
+    "source": "manual",
+    "source_ref": "占位题 · 风格参照 C 套 第 IX-(A) 题",
+    "note": "阅读判断题:5 道子题,3 T + 2 F。F 题用「主语张冠李戴」+「颜色错配」两个真题常用策略。短文涵盖 family / clothing / weather 三个 vocab_domain,适合 Phase 2 AI 出题学习。"
+  }
+]

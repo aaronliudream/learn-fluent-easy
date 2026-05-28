@@ -458,7 +458,16 @@ function VocabStage({
             >
               {!isFlipped ? (
                 <>
-                  <div className="text-2xl">{v.emoji}</div>
+                  {v.image ? (
+                    <img
+                      src={v.image}
+                      alt={v.en}
+                      className="mx-auto h-28 w-28 object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="text-2xl">{v.emoji}</div>
+                  )}
                   <div
                     className="mt-1 text-[20px] font-semibold leading-tight"
                     onClick={(e) => {
@@ -491,7 +500,16 @@ function VocabStage({
                 </>
               ) : (
                 <>
-                  <div className="text-2xl">{v.emoji}</div>
+                  {v.image ? (
+                    <img
+                      src={v.image}
+                      alt={v.en}
+                      className="mx-auto h-28 w-28 object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="text-2xl">{v.emoji}</div>
+                  )}
                   <div className="mt-1 text-[20px] font-bold text-[#FF6B35]">{v.cn}</div>
                   <div
                     className="mt-1 text-[14px] text-[#888780]"

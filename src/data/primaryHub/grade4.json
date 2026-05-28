@@ -19,6 +19,7 @@
                 "en": "classroom",
                 "cn": "教室",
                 "emoji": "🏫",
+                "image": "/images/primary/g4v1_u1/classroom.png",
                 "phonetic": "/ˈklɑːsruːm/",
                 "page": 5,
                 "type": "core"
@@ -27,6 +28,7 @@
                 "en": "window",
                 "cn": "窗户",
                 "emoji": "🪟",
+                "image": "/images/primary/g4v1_u1/window.png",
                 "phonetic": "/ˈwɪndəʊ/",
                 "page": 5,
                 "type": "core"
@@ -35,6 +37,7 @@
                 "en": "blackboard",
                 "cn": "黑板",
                 "emoji": "⬛",
+                "image": "/images/primary/g4v1_u1/blackboard.png",
                 "phonetic": "/ˈblækbɔːd/",
                 "page": 5,
                 "type": "core"
@@ -43,6 +46,7 @@
                 "en": "light",
                 "cn": "电灯",
                 "emoji": "💡",
+                "image": "/images/primary/g4v1_u1/light.png",
                 "phonetic": "/laɪt/",
                 "page": 5,
                 "type": "core"
@@ -51,6 +55,7 @@
                 "en": "picture",
                 "cn": "图画",
                 "emoji": "🖼️",
+                "image": "/images/primary/g4v1_u1/picture.png",
                 "phonetic": "/ˈpɪktʃə(r)/",
                 "page": 5,
                 "type": "core"
@@ -59,6 +64,7 @@
                 "en": "door",
                 "cn": "门",
                 "emoji": "🚪",
+                "image": "/images/primary/g4v1_u1/door.png",
                 "phonetic": "/dɔː(r)/",
                 "page": 5,
                 "type": "core"
@@ -67,6 +73,7 @@
                 "en": "teacher's desk",
                 "cn": "讲台",
                 "emoji": "🧑‍🏫",
+                "image": "/images/primary/g4v1_u1/teachers_desk.png",
                 "phonetic": "/ˈtiːtʃəz desk/",
                 "page": 8,
                 "type": "core"
@@ -75,6 +82,7 @@
                 "en": "computer",
                 "cn": "计算机",
                 "emoji": "💻",
+                "image": "/images/primary/g4v1_u1/computer.png",
                 "phonetic": "/kəmˈpjuːtə(r)/",
                 "page": 8,
                 "type": "core"
@@ -83,6 +91,7 @@
                 "en": "fan",
                 "cn": "风扇",
                 "emoji": "🌀",
+                "image": "/images/primary/g4v1_u1/fan.png",
                 "phonetic": "/fæn/",
                 "page": 8,
                 "type": "core"
@@ -91,6 +100,7 @@
                 "en": "wall",
                 "cn": "墙壁",
                 "emoji": "🧱",
+                "image": "/images/primary/g4v1_u1/wall.png",
                 "phonetic": "/wɔːl/",
                 "page": 8,
                 "type": "core"
@@ -99,6 +109,7 @@
                 "en": "floor",
                 "cn": "地板",
                 "emoji": "🟫",
+                "image": "/images/primary/g4v1_u1/floor.png",
                 "phonetic": "/flɔː(r)/",
                 "page": 8,
                 "type": "core"
@@ -107,6 +118,7 @@
                 "en": "really",
                 "cn": "真的",
                 "emoji": "😮",
+                "image": "/images/primary/g4v1_u1/really.png",
                 "phonetic": "/ˈrɪəli/",
                 "page": 4,
                 "type": "extended"
@@ -115,6 +127,7 @@
                 "en": "near",
                 "cn": "在……旁边",
                 "emoji": "📍",
+                "image": "/images/primary/g4v1_u1/near.png",
                 "phonetic": "/nɪə(r)/",
                 "page": 4,
                 "type": "extended"
@@ -123,6 +136,7 @@
                 "en": "TV",
                 "cn": "电视",
                 "emoji": "📺",
+                "image": "/images/primary/g4v1_u1/tv.png",
                 "phonetic": "/ˌtiː ˈviː/",
                 "page": 5,
                 "type": "extended"
@@ -131,6 +145,7 @@
                 "en": "clean",
                 "cn": "打扫",
                 "emoji": "🧹",
+                "image": "/images/primary/g4v1_u1/clean.png",
                 "phonetic": "/kliːn/",
                 "page": 7,
                 "type": "extended"
@@ -139,6 +154,7 @@
                 "en": "help",
                 "cn": "帮助",
                 "emoji": "🤝",
+                "image": "/images/primary/g4v1_u1/help.png",
                 "phonetic": "/help/",
                 "page": 7,
                 "type": "extended"

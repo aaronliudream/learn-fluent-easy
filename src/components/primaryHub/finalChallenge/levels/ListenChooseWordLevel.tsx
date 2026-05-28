@@ -183,11 +183,22 @@ function PlayCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, q.audio]);
 
+  const wrongInfoFor = (picked: number) => ({
+    questionId: q.id,
+    questionType: q.type,
+    stem: q.prompt + ` (听: ${q.audio})`,
+    userText: q.options[picked],
+    correctText: q.options[correctIdx],
+    vocab_domain: q.vocab_domain,
+    grammar_point: q.grammar_point,
+  });
+
   // 1-3 数字键选项。
   useMcKeyboard({
     optionCount: q.options.length,
     answered,
-    onPick: (i) => pick(i, i === correctIdx),
+    onPick: (i) =>
+      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
     enabled: true,
   });
 
@@ -403,7 +414,9 @@ function PlayCard({
               key={i}
               type="button"
               disabled={answered}
-              onClick={() => pick(i, isThisCorrect)}
+              onClick={() =>
+                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
+              }
               className={extraClass}
               style={{
                 position: "relative",

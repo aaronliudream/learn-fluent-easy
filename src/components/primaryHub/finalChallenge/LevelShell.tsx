@@ -16,9 +16,26 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { saveLevelProgress } from "@/lib/primaryHub/finalChallenge/progress";
+import { recordMistake } from "@/lib/primaryHub/finalChallenge/mistakes";
+import type { FinalChallengeQuestionType } from "@/lib/primaryHub/finalChallenge/types";
 import RexMascot from "@/components/primaryHub/finalChallenge/RexMascot";
 
 export type LevelPhase = "intro" | "play" | "done";
+
+/**
+ * 答错时由各关卡传给 shell 的题目信息 (用于 done 屏列表 + 错题入库)。
+ * 各关只在 isCorrect=false 时构造并传入。
+ */
+export interface LevelShellWrongInfo {
+  questionId: string;
+  questionType: FinalChallengeQuestionType;
+  stem: string;
+  userText: string;
+  correctText: string;
+  /** Phase 2 AI 出题标签 (从题目继承,非空)。 */
+  vocab_domain: string[];
+  grammar_point: string[];
+}
 
 /** play 渲染器从 shell 拿到的 API。 */
 export interface LevelShellPlayApi {
@@ -33,8 +50,14 @@ export interface LevelShellPlayApi {
   /**
    * 调用以提交一次选择。shell 处理对错计数 + 自动推进。
    * isCorrect 由题型自己判定 (单选用 optIdx===q.answer, T/F 用同理)。
+   * 第三参 wrongInfo: isCorrect=false 时由各关构造传入,shell 用它做错题
+   *   入库 + done 屏错题列表展示;isCorrect=true 时可不传。
    */
-  pick: (optIdx: number, isCorrect: boolean) => void;
+  pick: (
+    optIdx: number,
+    isCorrect: boolean,
+    wrongInfo?: LevelShellWrongInfo,
+  ) => void;
 }
 
 export interface LevelShellProps {
@@ -93,6 +116,8 @@ export default function LevelShell({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  // 本场答错列表 (供 done 屏回顾;每条已同步落到 LS mistakes 入库)。
+  const [wrongList, setWrongList] = useState<LevelShellWrongInfo[]>([]);
 
   // ---- 定时器管理 (与 ListenWordStage 同款) ----
   const timers = useRef<number[]>([]);
@@ -115,15 +140,32 @@ export default function LevelShell({
   }, [isLast]);
 
   const pick = useCallback<LevelShellPlayApi["pick"]>(
-    (optIdx, isCorrect) => {
+    (optIdx, isCorrect, wrongInfo) => {
       if (answered) return; // 守门: 防止重复点击
       setAnswered(true);
       setPicked(optIdx);
-      if (isCorrect) setCorrectCount((c) => c + 1);
+      if (isCorrect) {
+        setCorrectCount((c) => c + 1);
+      } else if (wrongInfo) {
+        // 1) 落地到 LS mistakes (Phase 2 AI 出题输入)
+        recordMistake(userId, grade, {
+          questionId: wrongInfo.questionId,
+          questionType: wrongInfo.questionType,
+          levelId,
+          stem: wrongInfo.stem,
+          userText: wrongInfo.userText,
+          correctText: wrongInfo.correctText,
+          vocab_domain: wrongInfo.vocab_domain,
+          grammar_point: wrongInfo.grammar_point,
+          attemptedAt: Date.now(),
+        });
+        // 2) 累加到本场 wrongList,done 屏供孩子/家长回顾
+        setWrongList((prev) => [...prev, wrongInfo]);
+      }
       after(ADVANCE_MS, advance);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [answered, advance],
+    [answered, advance, userId, grade, levelId],
   );
 
   // ---- done 落地: 算星 + 写 LS (TODO: 错题入库由 #71j 统一做) ----
@@ -284,12 +326,95 @@ export default function LevelShell({
             ))}
           </div>
         </div>
+        {/* 本关错题列表 (有错才显示) */}
+        {wrongList.length > 0 && (
+          <div
+            style={{
+              marginTop: 28,
+              width: "100%",
+              maxWidth: 420,
+              padding: "14px 16px",
+              borderRadius: "var(--fc-radius)",
+              background: "rgba(255, 136, 85, 0.08)",
+              border: "1.5px solid var(--fc-soft-warn)",
+              textAlign: "left",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 13,
+                fontWeight: 800,
+                color: "var(--fc-soft-warn)",
+                marginBottom: 10,
+                letterSpacing: 0.4,
+              }}
+            >
+              📝 本关错题回顾 ({wrongList.length} 道)
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {wrongList.map((w, i) => (
+                <div
+                  key={i}
+                  style={{
+                    fontSize: 13,
+                    lineHeight: 1.5,
+                    color: "var(--fc-ink-soft)",
+                  }}
+                >
+                  <div
+                    style={{
+                      color: "var(--fc-ink)",
+                      fontWeight: 600,
+                      marginBottom: 2,
+                    }}
+                  >
+                    {i + 1}. {w.stem}
+                  </div>
+                  <div style={{ fontSize: 12 }}>
+                    你选了:{" "}
+                    <span style={{ color: "var(--fc-soft-warn)", fontWeight: 600 }}>
+                      {w.userText}
+                    </span>{" "}
+                    · 正确:{" "}
+                    <span style={{ color: "var(--fc-green-dark)", fontWeight: 600 }}>
+                      {w.correctText}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 紫色强化训练 CTA — Phase 1 占位,Phase 2 接 AI */}
+        <button
+          type="button"
+          onClick={() => {
+            alert("🎯 强化训练即将上线! AI 会根据你的错题出针对性新题。");
+          }}
+          className="fc-btn-press fc-shadow-purple"
+          style={{
+            marginTop: wrongList.length > 0 ? 20 : 40,
+            padding: "13px 28px",
+            borderRadius: "var(--fc-radius-pill)",
+            background: "var(--fc-purple)",
+            color: "white",
+            fontWeight: 800,
+            fontSize: 15,
+            border: "none",
+            cursor: "pointer",
+            fontFamily: "var(--fc-font-display)",
+          }}
+        >
+          🎯 来一波强化训练
+        </button>
+
         <button
           type="button"
           onClick={backToMap}
           className="fc-btn-press fc-shadow-orange"
           style={{
-            marginTop: 40,
+            marginTop: 14,
             padding: "14px 48px",
             borderRadius: "var(--fc-radius-pill)",
             background: "var(--fc-primary)",

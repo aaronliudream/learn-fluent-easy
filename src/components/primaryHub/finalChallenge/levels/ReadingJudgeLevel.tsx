@@ -64,6 +64,10 @@ export default function ReadingJudgeLevel() {
       total={subTotal}
       renderPlay={(api) => (
         <PlayCard
+          parentId={q.id}
+          parentType={q.type}
+          vocab_domain={q.vocab_domain}
+          grammar_point={q.grammar_point}
           passage={q.passage}
           sub={q.subQuestions[api.idx]}
           api={api}
@@ -74,10 +78,18 @@ export default function ReadingJudgeLevel() {
 }
 
 function PlayCard({
+  parentId,
+  parentType,
+  vocab_domain,
+  grammar_point,
   passage,
   sub,
   api,
 }: {
+  parentId: string;
+  parentType: Q["type"];
+  vocab_domain: string[];
+  grammar_point: string[];
   passage: string;
   sub: FCSubQuestion;
   api: LevelShellPlayApi;
@@ -86,11 +98,24 @@ function PlayCard({
   const correctIdx = sub.answer;
   const isCorrect = answered && picked === correctIdx;
 
+  // 答错 wrongInfo: 阅读题用子题 stem + 父题继承的 vocab/grammar 标签。
+  // questionId 用 `${parentId}_sub${idx}` 区分同一短文下的不同子题。
+  const wrongInfoFor = (picked: number) => ({
+    questionId: `${parentId}_sub${idx}`,
+    questionType: parentType,
+    stem: sub.stem,
+    userText: sub.options[picked],
+    correctText: sub.options[correctIdx],
+    vocab_domain,
+    grammar_point,
+  });
+
   // 1 = 相符, 2 = 不相符
   useMcKeyboard({
     optionCount: 2,
     answered,
-    onPick: (i) => pick(i, i === correctIdx),
+    onPick: (i) =>
+      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
     enabled: true,
   });
 
@@ -264,7 +289,9 @@ function PlayCard({
               key={i}
               type="button"
               disabled={answered}
-              onClick={() => pick(i, isThisCorrect)}
+              onClick={() =>
+                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
+              }
               className={extraClass}
               style={{
                 position: "relative",

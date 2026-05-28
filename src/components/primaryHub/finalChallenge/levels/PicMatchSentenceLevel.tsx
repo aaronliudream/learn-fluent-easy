@@ -62,11 +62,23 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
   const isCorrect = answered && picked === correctIdx;
   const isWrong = answered && picked !== null && picked !== correctIdx;
 
+  // 答错时打包 wrongInfo 给 shell 入库 + done 屏回顾。
+  const wrongInfoFor = (picked: number) => ({
+    questionId: q.id,
+    questionType: q.type,
+    stem: q.prompt,
+    userText: q.options[picked],
+    correctText: q.options[correctIdx],
+    vocab_domain: q.vocab_domain,
+    grammar_point: q.grammar_point,
+  });
+
   // 1-3 键盘挑选项。
   useMcKeyboard({
     optionCount: q.options.length,
     answered,
-    onPick: (i) => pick(i, i === correctIdx),
+    onPick: (i) =>
+      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
     enabled: true,
   });
 
@@ -198,7 +210,9 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
               key={i}
               type="button"
               disabled={answered}
-              onClick={() => pick(i, isThisCorrect)}
+              onClick={() =>
+                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
+              }
               className={extraClass}
               style={{
                 position: "relative",

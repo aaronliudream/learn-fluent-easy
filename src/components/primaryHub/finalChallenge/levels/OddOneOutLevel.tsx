@@ -57,10 +57,21 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
   const correctIdx = q.answer;
   const isCorrect = answered && picked === correctIdx;
 
+  const wrongInfoFor = (picked: number) => ({
+    questionId: q.id,
+    questionType: q.type,
+    stem: q.prompt,
+    userText: q.options[picked],
+    correctText: q.options[correctIdx],
+    vocab_domain: q.vocab_domain,
+    grammar_point: q.grammar_point,
+  });
+
   useMcKeyboard({
     optionCount: q.options.length,
     answered,
-    onPick: (i) => pick(i, i === correctIdx),
+    onPick: (i) =>
+      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
     enabled: true,
   });
 
@@ -215,7 +226,9 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
               key={i}
               type="button"
               disabled={answered}
-              onClick={() => pick(i, isThisCorrect)}
+              onClick={() =>
+                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
+              }
               className={extraClass}
               style={{
                 position: "relative",

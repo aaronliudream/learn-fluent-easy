@@ -180,11 +180,22 @@ function PlayCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, q.audio]);
 
+  const wrongInfoFor = (picked: number) => ({
+    questionId: q.id,
+    questionType: q.type,
+    stem: q.prompt + ` (听: "${q.audio}", 图: ${q.emoji})`,
+    userText: q.options[picked],
+    correctText: q.options[correctIdx],
+    vocab_domain: q.vocab_domain,
+    grammar_point: q.grammar_point,
+  });
+
   // 1 = 相符, 2 = 不相符 (optionCount=2)。
   useMcKeyboard({
     optionCount: 2,
     answered,
-    onPick: (i) => pick(i, i === correctIdx),
+    onPick: (i) =>
+      pick(i, i === correctIdx, i === correctIdx ? undefined : wrongInfoFor(i)),
     enabled: true,
   });
 
@@ -403,7 +414,9 @@ function PlayCard({
               key={i}
               type="button"
               disabled={answered}
-              onClick={() => pick(i, isThisCorrect)}
+              onClick={() =>
+                pick(i, isThisCorrect, isThisCorrect ? undefined : wrongInfoFor(i))
+              }
               className={extraClass}
               style={{
                 position: "relative",

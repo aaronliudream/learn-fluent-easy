@@ -1037,6 +1037,13 @@ All colors MUST be HSL.
 }
 .fc-pulse-glow-purple { animation: fc-pulse-glow-purple 2.5s ease-in-out infinite; }
 
+/* 蓝色脉冲(听音辨词的播放按钮 #71f) */
+@keyframes fc-pulse-glow-blue {
+  0%, 100% { box-shadow: 0 0 0 0    rgba(77, 184, 255, 0.45); }
+  50%      { box-shadow: 0 0 24px 12px rgba(77, 184, 255, 0.25); }
+}
+.fc-pulse-glow-blue { animation: fc-pulse-glow-blue 1.8s ease-in-out infinite; }
+
 /* ---------- 粒子/装饰元素 ---------- */
 
 @keyframes fc-confetti {
@@ -1137,6 +1144,7 @@ All colors MUST be HSL.
   .fc-wiggle-loop,
   .fc-pulse-glow,
   .fc-pulse-glow-purple,
+  .fc-pulse-glow-blue,
   .fc-float,
   .fc-sparkle,
   .fc-breathing,

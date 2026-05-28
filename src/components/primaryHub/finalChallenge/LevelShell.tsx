@@ -52,6 +52,12 @@ export interface LevelShellProps {
    * #71j 之后可统一覆盖。
    */
   computeStars?: (correct: number, total: number) => number;
+  /**
+   * 可选: 用户点「开始挑战」时在用户手势链路内同步触发的钩子。
+   * 用于音频解锁等需要 user gesture 的副作用 (Chrome autoplay policy)。
+   * 若返回 Promise, shell 会 await 后才切到 play 阶段。
+   */
+  onBeforeStart?: () => void | Promise<void>;
   /** play 阶段视觉; 由具体题型实现。 */
   renderPlay: (api: LevelShellPlayApi) => React.ReactNode;
 }
@@ -75,6 +81,7 @@ export default function LevelShell({
   introMood = "encouraging",
   total,
   computeStars = DEFAULT_STARS,
+  onBeforeStart,
   renderPlay,
 }: LevelShellProps) {
   const { grade, userId } = usePrimaryHub();
@@ -172,7 +179,17 @@ export default function LevelShell({
           </p>
           <button
             type="button"
-            onClick={() => setPhase("play")}
+            onClick={async () => {
+              // 在用户手势链路内同步触发 (如音频解锁)。失败也继续 (永远不卡住孩子)。
+              if (onBeforeStart) {
+                try {
+                  await onBeforeStart();
+                } catch (e) {
+                  console.warn("[LevelShell] onBeforeStart failed:", e);
+                }
+              }
+              setPhase("play");
+            }}
             className="fc-btn-press fc-shadow-orange"
             style={{
               marginTop: 16,

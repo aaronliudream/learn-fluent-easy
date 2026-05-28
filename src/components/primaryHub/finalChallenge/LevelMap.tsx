@@ -1,27 +1,19 @@
 /**
- * 关卡地图 — 蜿蜒小径 + 10 个关卡节点
+ * 关卡地图 — 插画背景 + 10 个关卡节点（绝对定位百分比）
  *
- * 集成位置:src/components/primaryHub/finalChallenge/LevelMap.tsx
- *
- * 设计:
- *   - SVG path 蜿蜒连接 10 个关卡
- *   - 关卡节点支持 3 种状态:locked / current / completed
- *   - 当前推荐关有呼吸动画
- *   - 完成关显示星数
- *
- * 使用示例:
- *   <LevelMap levels={[
- *     { id: 1, name: "看图选句", state: "completed", stars: 3 },
- *     { id: 2, name: "看图选词", state: "completed", stars: 2 },
- *     { id: 3, name: "听音辨词", state: "current" },
- *     { id: 4, name: "听句判断", state: "locked" },
- *     // ... 共 10 关
- *   ]}
- *   onLevelClick={(id) => navigate(`/level/${id}`)}
- *   />
+ * 设计思路:
+ *   - 背景图由 AI 生成的插画提供 (草地 + S 形小路 + 树丛 + 终点旗帜)
+ *     图片本身已经画好云、太阳、虚线路径,组件里不再用 SVG 重画
+ *   - 节点用 absolute + 百分比定位,无论容器多宽都能贴在小路上
+ *   - 三态视觉:
+ *       completed → 彩色实心 + 顶部星数
+ *       current   → 彩色实心 + 数字 + 呼吸光圈
+ *       locked    → 灰色 + 🔒
+ *   - 节点外圈白描边 + drop-shadow,压在插画上不糊
  */
 
 import React from "react";
+import bgUrl from "@/assets/finalChallenge/level-map-bg.png";
 
 export type LevelState = "locked" | "current" | "completed";
 
@@ -29,7 +21,8 @@ export interface LevelData {
   id: number;
   name: string;
   state: LevelState;
-  stars?: number; // 0-3
+  /** 0-3 颗星 (completed 时显示) */
+  stars?: number;
 }
 
 interface LevelMapProps {
@@ -38,21 +31,24 @@ interface LevelMapProps {
   className?: string;
 }
 
-/* 10 个关卡节点的位置(viewBox: 100 x 200,从下往上画) */
-const NODE_POSITIONS = [
-  { x: 20, y: 185 }, // 关 1(地图底部 / 起点)
-  { x: 70, y: 165 },
-  { x: 25, y: 140 },
-  { x: 75, y: 115 },
-  { x: 30, y: 90 },
-  { x: 65, y: 70 },
-  { x: 20, y: 55 },
-  { x: 75, y: 38 },
-  { x: 35, y: 22 },
-  { x: 60, y: 10 }, // 关 10(地图顶部 / 终点)
+/**
+ * 10 个关卡在插画上的中心点位置 (左上为 0,0 / 右下为 100,100)。
+ * 沿 S 形小路从底部关 1 到顶部关 10。如需微调,只动这一组数字。
+ */
+const NODE_POSITIONS: ReadonlyArray<{ x: number; y: number }> = [
+  { x: 52, y: 92 }, // 关 1 (底部起点)
+  { x: 62, y: 83 }, // 关 2
+  { x: 48, y: 74 }, // 关 3
+  { x: 38, y: 66 }, // 关 4
+  { x: 46, y: 57 }, // 关 5
+  { x: 56, y: 49 }, // 关 6
+  { x: 50, y: 40 }, // 关 7
+  { x: 42, y: 32 }, // 关 8
+  { x: 48, y: 24 }, // 关 9
+  { x: 51, y: 16 }, // 关 10 (终点旗帜下方)
 ];
 
-/* 每关一个不同的主题颜色(让地图有"段位旅程"感) */
+/** 每关一个主题色 (让地图有"段位旅程"感)。locked 用统一灰色覆盖。 */
 const NODE_COLORS = [
   "#6BD968", // 1 绿
   "#4DB8FF", // 2 蓝
@@ -66,24 +62,7 @@ const NODE_COLORS = [
   "#FFC93C", // 10 终点黄
 ];
 
-/* 计算蜿蜒路径(贝塞尔连接所有节点) */
-function buildPath(): string {
-  const pts = NODE_POSITIONS;
-  let d = `M ${pts[0].x} ${pts[0].y}`;
-  for (let i = 1; i < pts.length; i++) {
-    const prev = pts[i - 1];
-    const curr = pts[i];
-    // 简单 S 曲线:控制点在两点之间垂直方向偏移
-    const cx1 = prev.x;
-    const cy1 = (prev.y + curr.y) / 2;
-    const cx2 = curr.x;
-    const cy2 = (prev.y + curr.y) / 2;
-    d += ` C ${cx1} ${cy1}, ${cx2} ${cy2}, ${curr.x} ${curr.y}`;
-  }
-  return d;
-}
-
-const PATH_D = buildPath();
+const NODE_DIAMETER = 44; // px;白描边后视觉直径,够大不会糊在插画上
 
 export default function LevelMap({
   levels,
@@ -102,161 +81,131 @@ export default function LevelMap({
 
   return (
     <div
-      className={`relative w-full ${className}`}
+      className={`relative mx-auto ${className}`}
       style={{
-        background: "linear-gradient(180deg, #E0F2FE 0%, #FEF3C7 60%, #DBEAFE 100%)",
+        maxWidth: 480,
+        aspectRatio: "9 / 16",
+        backgroundImage: `url(${bgUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         borderRadius: "var(--fc-radius-lg)",
-        padding: "16px",
         overflow: "hidden",
       }}
     >
-      {/* 装饰:云朵 */}
-      <div className="absolute pointer-events-none" style={{ inset: 0 }}>
-        <div
-          className="absolute fc-float"
-          style={{
-            top: "10%",
-            left: "10%",
-            width: 60,
-            height: 24,
-            background: "white",
-            borderRadius: "9999px",
-            opacity: 0.7,
-            animationDelay: "0s",
-          }}
-        />
-        <div
-          className="absolute fc-float"
-          style={{
-            top: "5%",
-            right: "15%",
-            width: 80,
-            height: 28,
-            background: "white",
-            borderRadius: "9999px",
-            opacity: 0.6,
-            animationDelay: "1s",
-          }}
-        />
-        {/* 太阳 */}
-        <div
-          className="absolute fc-sparkle"
-          style={{
-            top: "12%",
-            right: "8%",
-            width: 40,
-            height: 40,
-            background: "radial-gradient(circle, #FFC93C 0%, #FFA51A 70%, transparent 80%)",
-            borderRadius: "9999px",
-            opacity: 1,
-          }}
-        />
-      </div>
+      {/* 10 个关卡节点 */}
+      {items.map((level, idx) => {
+        const pos = NODE_POSITIONS[idx];
+        const isLocked = level.state === "locked";
+        const isCurrent = level.state === "current";
+        const isCompleted = level.state === "completed";
+        const baseColor = isLocked ? "#A8A199" : NODE_COLORS[idx];
+        const interactive = !isLocked;
 
-      <svg
-        viewBox="0 0 100 200"
-        preserveAspectRatio="xMidYMid meet"
-        className="w-full relative"
-        style={{ aspectRatio: "100/200", maxHeight: "70vh" }}
-      >
-        {/* 蜿蜒小径(底色) */}
-        <path
-          d={PATH_D}
-          fill="none"
-          stroke="#FFF8E7"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeDasharray="0 0"
-          opacity="0.8"
-        />
-        {/* 蜿蜒小径(虚线纹理) */}
-        <path
-          d={PATH_D}
-          fill="none"
-          stroke="#D4A574"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeDasharray="3 3"
-          opacity="0.6"
-        />
-
-        {/* 10 个关卡节点 */}
-        {items.map((level, idx) => {
-          const pos = NODE_POSITIONS[idx];
-          const isLocked = level.state === "locked";
-          const isCurrent = level.state === "current";
-          const isCompleted = level.state === "completed";
-          const baseColor = isLocked ? "#C5BFB3" : NODE_COLORS[idx];
-
-          return (
-            <g
-              key={level.id}
-              transform={`translate(${pos.x}, ${pos.y})`}
-              style={{ cursor: isLocked ? "not-allowed" : "pointer" }}
-              onClick={() => !isLocked && onLevelClick?.(level.id)}
-            >
-              {/* 当前推荐:呼吸光圈 */}
-              {isCurrent && (
-                <circle r="9" fill={baseColor} opacity="0.3" className="fc-breathing" />
-              )}
-
-              {/* 节点主体 */}
-              <circle
-                r="6"
-                fill={baseColor}
-                stroke="white"
-                strokeWidth="1.2"
+        return (
+          <button
+            key={level.id}
+            type="button"
+            disabled={isLocked}
+            onClick={() => interactive && onLevelClick?.(level.id)}
+            aria-label={`${isLocked ? "未解锁:" : ""} 关 ${level.id} ${level.name}`}
+            style={{
+              position: "absolute",
+              left: `${pos.x}%`,
+              top: `${pos.y}%`,
+              transform: "translate(-50%, -50%)",
+              width: NODE_DIAMETER,
+              height: NODE_DIAMETER,
+              padding: 0,
+              border: "none",
+              background: "transparent",
+              cursor: interactive ? "pointer" : "not-allowed",
+            }}
+          >
+            {/* 呼吸光圈 (current 才有) */}
+            {isCurrent && (
+              <span
+                className="fc-breathing"
+                aria-hidden
                 style={{
-                  filter: isLocked
-                    ? "none"
-                    : `drop-shadow(0 1.5px 0 rgba(0,0,0,0.2))`,
+                  position: "absolute",
+                  inset: -6,
+                  borderRadius: "50%",
+                  background: baseColor,
+                  opacity: 0.28,
+                  pointerEvents: "none",
                 }}
               />
+            )}
 
-              {/* 关卡编号 */}
-              <text
-                textAnchor="middle"
-                dominantBaseline="central"
-                fontSize="6"
-                fontWeight="900"
-                fill="white"
-                style={{ pointerEvents: "none", fontFamily: "Fredoka, sans-serif" }}
+            {/* 节点主体 (白描边 + 投影,确保压在插画上立体可读) */}
+            <span
+              style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: "50%",
+                background: baseColor,
+                border: "3px solid white",
+                boxShadow:
+                  "0 2px 0 rgba(0,0,0,0.18), 0 6px 12px rgba(0,0,0,0.25)",
+                display: "grid",
+                placeItems: "center",
+                fontFamily: "var(--fc-font-display)",
+                fontWeight: 900,
+                fontSize: 18,
+                color: "white",
+                textShadow: "0 1px 2px rgba(0,0,0,0.25)",
+                userSelect: "none",
+              }}
+            >
+              {isLocked ? "🔒" : level.id}
+            </span>
+
+            {/* completed 关的星数 (节点上方) */}
+            {isCompleted && typeof level.stars === "number" && level.stars > 0 && (
+              <span
+                aria-hidden
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  bottom: "calc(100% + 2px)",
+                  transform: "translateX(-50%)",
+                  fontSize: 12,
+                  color: "#FFC93C",
+                  textShadow: "0 1px 2px rgba(0,0,0,0.4)",
+                  lineHeight: 1,
+                  whiteSpace: "nowrap",
+                  pointerEvents: "none",
+                }}
               >
-                {isLocked ? "🔒" : level.id}
-              </text>
+                {"★".repeat(level.stars)}
+              </span>
+            )}
+          </button>
+        );
+      })}
 
-              {/* 完成关的星数(右上角) */}
-              {isCompleted && typeof level.stars === "number" && (
-                <text
-                  x="8"
-                  y="-5"
-                  fontSize="3.5"
-                  fill="#FFC93C"
-                  style={{
-                    filter: "drop-shadow(0 0 2px rgba(255, 201, 60, 0.6))",
-                  }}
-                >
-                  {"★".repeat(level.stars)}
-                </text>
-              )}
-            </g>
-          );
-        })}
-      </svg>
-
-      {/* 当前关名提示(底部) */}
+      {/* 当前关名提示 (底部居中药丸) */}
       {(() => {
         const current = items.find((l) => l.state === "current");
         if (!current) return null;
         return (
           <div
-            className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full fc-fade-in-up"
+            className="fc-fade-in-up"
             style={{
+              position: "absolute",
+              left: "50%",
+              bottom: 12,
+              transform: "translateX(-50%)",
+              padding: "8px 16px",
+              borderRadius: 9999,
               background: "white",
               boxShadow: "var(--fc-shadow-card)",
               fontWeight: 800,
               fontSize: 13,
               color: "var(--fc-ink)",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
             }}
           >
             👉 关 {current.id}:{current.name}

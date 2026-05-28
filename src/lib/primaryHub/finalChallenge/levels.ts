@@ -1,0 +1,46 @@
+/**
+ * 《英语闯关》关卡配置 — 单一真相源
+ *
+ * 菜单页 (PrimaryHubFinalChallenge) 与关卡分发器 (PrimaryHubFinalChallengeLevel)
+ * 共用这一份配置:
+ *   - 菜单页用它生成 10 关地图节点 + 决定 locked/current/completed
+ *   - 分发器用 type 字段查 LEVEL_COMPONENT_MAP 找到具体题型组件
+ *
+ * 加新题型 (#71e ~ #71i) 只改这里 + 在分发器的 LEVEL_COMPONENT_MAP 加一行。
+ */
+
+import type { LevelConfig } from "./progress";
+import type { FinalChallengeQuestionType } from "./types";
+
+/**
+ * 关 1–6 对应 Phase 1 的 6 个题型 (#71b 的 FinalChallengeQuestionType);
+ * 关 7–10 留作 Phase 3,type=null 时菜单上锁定显示"敬请期待"。
+ */
+export const LEVEL_CONFIGS: LevelConfig[] = [
+  { id: 1, name: "看图选句", type: "picture_match_sentence" },
+  { id: 2, name: "看图选词", type: "picture_match_word" },
+  { id: 3, name: "听音辨词", type: "listen_and_choose_word" },
+  { id: 4, name: "听句判断", type: "listen_and_judge_picture" },
+  { id: 5, name: "找不同类词", type: "odd_one_out" },
+  { id: 6, name: "阅读理解", type: "reading_judge_TF" },
+  { id: 7, name: "敬请期待", type: null },
+  { id: 8, name: "敬请期待", type: null },
+  { id: 9, name: "敬请期待", type: null },
+  { id: 10, name: "敬请期待", type: null },
+];
+
+/** 6 关 × 3 星上限 = 18 (菜单页段位档位算法用)。 */
+export const MAX_STARS =
+  LEVEL_CONFIGS.filter((c) => c.type !== null).length * 3;
+
+/** 按 levelId 查关卡配置。 */
+export function findLevelConfig(levelId: number): LevelConfig | null {
+  return LEVEL_CONFIGS.find((c) => c.id === levelId) ?? null;
+}
+
+/** type 字段缩窄到 FinalChallengeQuestionType (null 表示占位关)。 */
+export function getLevelQuestionType(
+  cfg: LevelConfig,
+): FinalChallengeQuestionType | null {
+  return cfg.type as FinalChallengeQuestionType | null;
+}

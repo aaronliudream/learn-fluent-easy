@@ -1147,3 +1147,11 @@ All colors MUST be HSL.
     animation: none;
   }
 }
+
+/* ---------- 一次性绿色脉冲（picked 正确项,答对反馈） ---------- */
+@keyframes fc-pulse-correct {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0    rgba(107, 217, 104, 0.7); }
+  50%  { transform: scale(1.03); box-shadow: 0 0 0 14px rgba(107, 217, 104, 0);   }
+  100% { transform: scale(1);    box-shadow: 0 0 0 0    rgba(107, 217, 104, 0);   }
+}
+.fc-pulse-correct { animation: fc-pulse-correct 600ms ease-out 1; }

@@ -41,10 +41,14 @@ const OddOneOutLevel = lazy(
   () =>
     import("@/components/primaryHub/finalChallenge/levels/OddOneOutLevel"),
 );
+const ReadingJudgeLevel = lazy(
+  () =>
+    import("@/components/primaryHub/finalChallenge/levels/ReadingJudgeLevel"),
+);
 
 /**
- * 题型 → 具体关卡组件的映射。
- * Phase 1 已接入关 1~5; 关 6 待 #71i 接入,接入前 fallback 到占位。
+ * 题型 → 具体关卡组件的映射。Phase 1 全部 6 关已接入。
+ * (reading_choose_answer 留给 Phase 3,本 Phase 不接入。)
  */
 const LEVEL_COMPONENT_MAP: Partial<
   Record<FinalChallengeQuestionType, React.ComponentType>
@@ -54,6 +58,7 @@ const LEVEL_COMPONENT_MAP: Partial<
   listen_and_choose_word: ListenChooseWordLevel,
   listen_and_judge_picture: ListenJudgePictureLevel,
   odd_one_out: OddOneOutLevel,
+  reading_judge_TF: ReadingJudgeLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {

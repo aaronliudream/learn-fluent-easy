@@ -31,10 +31,16 @@ const ListenChooseWordLevel = lazy(
       "@/components/primaryHub/finalChallenge/levels/ListenChooseWordLevel"
     ),
 );
+const ListenJudgePictureLevel = lazy(
+  () =>
+    import(
+      "@/components/primaryHub/finalChallenge/levels/ListenJudgePictureLevel"
+    ),
+);
 
 /**
  * 题型 → 具体关卡组件的映射。
- * Phase 1 已接入关 1~3; 关 4~6 待 #71g~i 接入,接入前 fallback 到占位。
+ * Phase 1 已接入关 1~4; 关 5~6 待 #71h~i 接入,接入前 fallback 到占位。
  */
 const LEVEL_COMPONENT_MAP: Partial<
   Record<FinalChallengeQuestionType, React.ComponentType>
@@ -42,6 +48,7 @@ const LEVEL_COMPONENT_MAP: Partial<
   picture_match_sentence: PicMatchSentenceLevel,
   picture_match_word: PicMatchWordLevel,
   listen_and_choose_word: ListenChooseWordLevel,
+  listen_and_judge_picture: ListenJudgePictureLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {

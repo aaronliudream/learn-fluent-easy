@@ -106,6 +106,89 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* ============================================================
+     * 《英语闯关》Final Challenge — design tokens
+     * 并入自 migration-package/final-challenge-tokens.css (:root 段)
+     * 与 primaryHub 现有暖橙板对齐；fc-* 前缀避免命名冲突
+     * ============================================================ */
+
+    /* ===== 主色（与 primaryHub 现有暖橙板对齐） ===== */
+    --fc-primary:           #FF6B35;
+    --fc-primary-dark:      #E55A2B;
+    --fc-primary-light:     #FFB088;
+    --fc-primary-bg:        #FFF8F0;
+
+    /* ===== 英语闯关特有点缀色 ===== */
+    --fc-purple:            #9B6BFF;
+    --fc-purple-dark:       #7C50E0;
+    --fc-purple-light:      #C5A8FF;
+    --fc-purple-bg:         #F4EEFF;
+
+    --fc-green:             #6BD968;
+    --fc-green-dark:        #3FB23C;
+    --fc-green-light:       #A8E8A6;
+    --fc-green-bg:          #EDFBEC;
+
+    /* ===== 辅色 ===== */
+    --fc-yellow:            #FFC93C;
+    --fc-yellow-dark:       #E5A91E;
+    --fc-blue:              #4DB8FF;
+    --fc-blue-dark:         #2E97DD;
+    --fc-pink:              #FF6B9D;
+
+    /* ===== 中性色 ===== */
+    --fc-ink:               #2A2620;
+    --fc-ink-soft:          #5C5248;
+    --fc-ink-mute:          #8A8278;
+    --fc-paper:             #FFF8E7;
+    --fc-paper-warm:        #FFEFC9;
+    --fc-border-soft:       rgba(42, 38, 32, 0.08);
+    --fc-border-medium:     rgba(42, 38, 32, 0.15);
+
+    /* ===== 段位色（铜→银→金→彩虹） ===== */
+    --fc-rank-bronze:       #B8763A;
+    --fc-rank-bronze-light: #E0A064;
+    --fc-rank-silver:       #B8C5D0;
+    --fc-rank-silver-light: #DDE5EC;
+    --fc-rank-gold:         #FFA51A;
+    --fc-rank-gold-light:   #FFD86B;
+
+    /* ===== 错误/温柔提示（不用红色） ===== */
+    --fc-soft-warn:         #FF8855;
+
+    /* ===== 阴影（game-shadow 按压感 - 3D 立体感） ===== */
+    --fc-shadow-game-orange:
+      0 4px 0 0 #C04A1D,
+      0 6px 20px -4px rgba(192, 74, 29, 0.3);
+    --fc-shadow-game-purple:
+      0 4px 0 0 #5A38B0,
+      0 6px 20px -4px rgba(90, 56, 176, 0.3);
+    --fc-shadow-game-green:
+      0 4px 0 0 #2D8A2A,
+      0 6px 20px -4px rgba(45, 138, 42, 0.3);
+    --fc-shadow-game-yellow:
+      0 4px 0 0 #B8851A,
+      0 6px 20px -4px rgba(184, 133, 26, 0.3);
+    --fc-shadow-game-blue:
+      0 4px 0 0 #1C6CAA,
+      0 6px 20px -4px rgba(28, 108, 170, 0.3);
+
+    /* 卡片层叠柔阴影 */
+    --fc-shadow-card:
+      0 4px 0 rgba(42, 38, 32, 0.08),
+      0 6px 14px rgba(42, 38, 32, 0.06);
+
+    /* ===== 圆角 ===== */
+    --fc-radius-sm:         8px;
+    --fc-radius:            14px;
+    --fc-radius-lg:         20px;
+    --fc-radius-xl:         28px;
+    --fc-radius-pill:       9999px;
+
+    /* ===== 字体（Fredoka/Nunito 项目未加载，回退到 PingFang/system） ===== */
+    --fc-font-display:      'Fredoka', 'PingFang SC', sans-serif;
+    --fc-font-body:         'Nunito', 'PingFang SC', system-ui, sans-serif;
   }
 
   .dark {
@@ -828,4 +911,239 @@ All colors MUST be HSL.
   font-size: 18px;
   font-weight: 500;
   color: hsl(var(--exam-ink-soft));
+}
+
+/* ============================================================
+ * 《英语闯关》Final Challenge 专属 token / animations
+ * 并入自 migration-package/final-challenge-{tokens,animations}.css
+ * (与 SpellingStage / ListenWordStage 等已有动画并列共存)
+ * ============================================================ */
+
+/* ---------- 工具类: 游戏按压感按钮 + 段位/卡片阴影 ---------- */
+
+.fc-btn-press {
+  transition: transform 100ms ease-out, box-shadow 100ms ease-out;
+}
+.fc-btn-press:active {
+  transform: translateY(4px);
+  box-shadow: none !important;
+}
+
+.fc-shadow-orange { box-shadow: var(--fc-shadow-game-orange); }
+.fc-shadow-purple { box-shadow: var(--fc-shadow-game-purple); }
+.fc-shadow-green  { box-shadow: var(--fc-shadow-game-green); }
+.fc-shadow-yellow { box-shadow: var(--fc-shadow-game-yellow); }
+.fc-shadow-blue   { box-shadow: var(--fc-shadow-game-blue); }
+.fc-shadow-card   { box-shadow: var(--fc-shadow-card); }
+
+/* 段位彩虹渐变 */
+.fc-rank-rainbow {
+  background: linear-gradient(90deg,
+    #FF6B9D, #FFC93C, #6BD968, #4DB8FF, #9B6BFF);
+}
+
+/* 段位金色发光描边 */
+.fc-rank-gold-glow {
+  background: linear-gradient(135deg, #FFD86B, #FFA51A 60%, #E85D1A);
+  box-shadow:
+    inset 0 -6px 10px rgba(232, 93, 26, 0.4),
+    inset 0 6px 10px rgba(255, 255, 255, 0.5),
+    0 8px 24px rgba(255, 165, 26, 0.4);
+}
+
+/* ---------- Rex 心情动画 ---------- */
+
+@keyframes fc-rex-happy {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes fc-rex-excited {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(-5deg); }
+  75% { transform: translateY(-10px) rotate(5deg); }
+}
+@keyframes fc-rex-thinking {
+  0%, 100% { transform: rotate(0deg); }
+  25%, 75% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+}
+@keyframes fc-rex-encouraging {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes fc-rex-celebrating {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  25% { transform: translateY(-15px) scale(1.1) rotate(-10deg); }
+  75% { transform: translateY(-15px) scale(1.1) rotate(10deg); }
+}
+@keyframes fc-rex-sad {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+.fc-rex-happy        { animation: fc-rex-happy 2s ease-in-out infinite; }
+.fc-rex-excited      { animation: fc-rex-excited 0.5s ease-in-out infinite; }
+.fc-rex-thinking     { animation: fc-rex-thinking 3s ease-in-out infinite; }
+.fc-rex-encouraging  { animation: fc-rex-encouraging 1.5s ease-in-out infinite; }
+.fc-rex-celebrating  { animation: fc-rex-celebrating 0.6s ease-in-out infinite; }
+.fc-rex-sad          { animation: fc-rex-sad 2s ease-in-out infinite; }
+
+/* Rex 周围装饰元素 */
+@keyframes fc-tear-drop {
+  0% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+.fc-tear-drop { animation: fc-tear-drop 1.5s ease-in-out infinite; }
+
+@keyframes fc-sweat-drop {
+  0% { opacity: 0; transform: translateY(-5px); }
+  50% { opacity: 1; transform: translateY(5px); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+.fc-sweat-drop { animation: fc-sweat-drop 2s ease-in-out infinite; }
+
+@keyframes fc-celebrate-star {
+  0% { opacity: 0; transform: translateY(0) scale(0); }
+  50% { opacity: 1; transform: translateY(-15px) scale(1); }
+  100% { opacity: 0; transform: translateY(-20px) scale(0); }
+}
+.fc-celebrate-star { animation: fc-celebrate-star 1s ease-out infinite; }
+
+/* ---------- 反馈动画 ---------- */
+
+@keyframes fc-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.fc-bounce-soft { animation: fc-bounce-soft 1s ease-in-out infinite; }
+
+@keyframes fc-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+.fc-wiggle      { animation: fc-wiggle 0.5s ease-in-out; }
+.fc-wiggle-loop { animation: fc-wiggle 0.5s ease-in-out infinite; }
+
+@keyframes fc-pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 107, 53, 0.2); }
+}
+.fc-pulse-glow { animation: fc-pulse-glow 2s ease-in-out infinite; }
+
+@keyframes fc-pulse-glow-purple {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(155, 107, 255, 0.4); }
+  50% { box-shadow: 0 0 24px 12px rgba(155, 107, 255, 0.25); }
+}
+.fc-pulse-glow-purple { animation: fc-pulse-glow-purple 2.5s ease-in-out infinite; }
+
+/* ---------- 粒子/装饰元素 ---------- */
+
+@keyframes fc-confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+.fc-confetti { animation: fc-confetti 2s ease-out forwards; }
+
+@keyframes fc-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.fc-float { animation: fc-float 3s ease-in-out infinite; }
+
+@keyframes fc-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+.fc-sparkle { animation: fc-sparkle 1.5s ease-in-out infinite; }
+
+/* ---------- 关卡 / 段位 / 徽章 ---------- */
+
+@keyframes fc-medal-unlock {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  60% { transform: scale(1.2) rotate(20deg); opacity: 1; }
+  80% { transform: scale(0.9) rotate(-10deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.fc-medal-unlock { animation: fc-medal-unlock 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+@keyframes fc-star-pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.fc-star-pop { animation: fc-star-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+/* 配合 inline style: animation-delay 错开 0.2s/0.4s 实现"依次"点亮 */
+
+@keyframes fc-breathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.6);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 12px rgba(255, 107, 53, 0);
+  }
+}
+.fc-breathing { animation: fc-breathing 2s ease-in-out infinite; }
+
+@keyframes fc-aura-expand {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.fc-aura-expand { animation: fc-aura-expand 2s ease-out infinite; }
+
+/* ---------- 进入/退出 ---------- */
+
+@keyframes fc-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.fc-slide-up { animation: fc-slide-up 0.4s ease-out forwards; }
+
+@keyframes fc-spring-in {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.fc-spring-in { animation: fc-spring-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+@keyframes fc-fade-in-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.fc-fade-in-up { animation: fc-fade-in-up 0.3s ease-out forwards; }
+
+/* ---------- 屏幕震动（连击 5 / Boss 倒下） ---------- */
+
+@keyframes fc-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+.fc-shake { animation: fc-shake 0.3s ease-in-out; }
+
+/* ---------- 减少动效偏好（无障碍 + 节能） ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-rex-happy,
+  .fc-rex-excited,
+  .fc-rex-thinking,
+  .fc-rex-encouraging,
+  .fc-rex-celebrating,
+  .fc-rex-sad,
+  .fc-bounce-soft,
+  .fc-wiggle-loop,
+  .fc-pulse-glow,
+  .fc-pulse-glow-purple,
+  .fc-float,
+  .fc-sparkle,
+  .fc-breathing,
+  .fc-aura-expand,
+  .fc-tear-drop,
+  .fc-sweat-drop,
+  .fc-celebrate-star {
+    animation: none;
+  }
 }

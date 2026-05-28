@@ -6,6 +6,8 @@ export type VocabItem = {
   en: string;
   cn: string;
   emoji: string;
+  /** Optional illustration. When present, UI prefers this over emoji. Path is web-absolute (e.g. /images/primary/g4v1_u1/classroom.png). */
+  image?: string;
   phonetic?: string;
   icon?: string;
   highlight?: string;

@@ -692,7 +692,16 @@ export default function SpellingStage({
         )}
 
         <div className="flex flex-col items-center">
-          <div className="text-[58px] leading-none">{current.word.emoji}</div>
+          {current.word.image ? (
+            <img
+              src={current.word.image}
+              alt={current.word.en}
+              className="h-36 w-36 object-contain"
+              loading="lazy"
+            />
+          ) : (
+            <div className="text-[58px] leading-none">{current.word.emoji}</div>
+          )}
           <button
             type="button"
             disabled={speaking}

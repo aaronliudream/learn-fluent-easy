@@ -81,6 +81,7 @@ const PrimaryHubAITest = lazy(() => import("./pages/primaryHub/PrimaryHubAITest.
 const PrimaryHubAIHistory = lazy(() => import("./pages/primaryHub/PrimaryHubAIHistory.tsx"));
 const PrimaryHubFinalChallenge = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallenge.tsx"));
 const PrimaryHubFinalChallengeLevel = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeLevel.tsx"));
+const PrimaryHubFinalChallengeStrengthen = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeStrengthen.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
@@ -310,6 +311,7 @@ const App = () => (
             <Route path="aihistory" element={<PrimaryHubAIHistory />} />
             <Route path="final-challenge" element={<PrimaryHubFinalChallenge />} />
             <Route path="final-challenge/level/:levelId" element={<PrimaryHubFinalChallengeLevel />} />
+            <Route path="final-challenge/strengthen" element={<PrimaryHubFinalChallengeStrengthen />} />
           </Route>
           <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />

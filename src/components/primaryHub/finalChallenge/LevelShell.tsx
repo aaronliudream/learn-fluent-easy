@@ -61,7 +61,17 @@ export interface LevelShellPlayApi {
 }
 
 export interface LevelShellProps {
+  /**
+   * 关卡 id。strengthen 模式下作为占位符使用 (不写入 levelProgress),
+   * 建议传 0 或随便一个数。
+   */
   levelId: number;
+  /**
+   * 模式: "level" (默认) = 关卡, 落地 progress + 显示 done 屏的「强化训练」CTA;
+   * "strengthen" = AI 强化训练, **不写 levelProgress**, **不显示** done 屏的递归
+   * 强化训练 CTA (避免无限循环)。
+   */
+  mode?: "level" | "strengthen";
   /** 关卡名 (展示在 intro / done 屏顶部)。 */
   levelName: string;
   /** intro 屏副标题; 默认 "准备好了吗?"。 */
@@ -99,6 +109,7 @@ const ADVANCE_MS = 1500;
 
 export default function LevelShell({
   levelId,
+  mode = "level",
   levelName,
   introHint = "准备好了吗?",
   introMood = "encouraging",
@@ -168,9 +179,10 @@ export default function LevelShell({
     [answered, advance, userId, grade, levelId],
   );
 
-  // ---- done 落地: 算星 + 写 LS (TODO: 错题入库由 #71j 统一做) ----
+  // ---- done 落地: 算星 + 写 LS (strengthen 模式不写 levelProgress) ----
   useEffect(() => {
     if (phase !== "done") return;
+    if (mode === "strengthen") return; // 强化训练不写关卡进度
     const stars = computeStars(correctCount, total);
     saveLevelProgress(userId, grade, {
       levelId,
@@ -386,28 +398,30 @@ export default function LevelShell({
           </div>
         )}
 
-        {/* 紫色强化训练 CTA — Phase 1 占位,Phase 2 接 AI */}
-        <button
-          type="button"
-          onClick={() => {
-            alert("🎯 强化训练即将上线! AI 会根据你的错题出针对性新题。");
-          }}
-          className="fc-btn-press fc-shadow-purple"
-          style={{
-            marginTop: wrongList.length > 0 ? 20 : 40,
-            padding: "13px 28px",
-            borderRadius: "var(--fc-radius-pill)",
-            background: "var(--fc-purple)",
-            color: "white",
-            fontWeight: 800,
-            fontSize: 15,
-            border: "none",
-            cursor: "pointer",
-            fontFamily: "var(--fc-font-display)",
-          }}
-        >
-          🎯 来一波强化训练
-        </button>
+        {/* 紫色强化训练 CTA — strengthen 模式下隐藏(避免循环) */}
+        {mode === "level" && (
+          <button
+            type="button"
+            onClick={() =>
+              navigate(`/primary/hub/${grade}/final-challenge/strengthen`)
+            }
+            className="fc-btn-press fc-shadow-purple"
+            style={{
+              marginTop: wrongList.length > 0 ? 20 : 40,
+              padding: "13px 28px",
+              borderRadius: "var(--fc-radius-pill)",
+              background: "var(--fc-purple)",
+              color: "white",
+              fontWeight: 800,
+              fontSize: 15,
+              border: "none",
+              cursor: "pointer",
+              fontFamily: "var(--fc-font-display)",
+            }}
+          >
+            🎯 来一波强化训练
+          </button>
+        )}
 
         <button
           type="button"

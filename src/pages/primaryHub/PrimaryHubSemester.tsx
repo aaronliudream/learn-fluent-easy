@@ -3,6 +3,7 @@ import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findSemester, getGradeCourse, isUnitListed } from "@/lib/primaryHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/primaryHub/progress";
 import { savePersist } from "@/lib/primaryHub/storage";
+import FinalChallengeEntryCard from "@/components/primaryHub/finalChallenge/FinalChallengeEntryCard";
 
 export default function PrimaryHubSemester() {
   const { semId } = useParams<{ semId: string }>();
@@ -93,6 +94,7 @@ export default function PrimaryHubSemester() {
             </button>
           );
         })}
+        <FinalChallengeEntryCard />
       </div>
     </>
   );

@@ -16,24 +16,8 @@ import {
   computeLevelStates,
   getTotalStars,
   getRankTier,
-  type LevelConfig,
 } from "@/lib/primaryHub/finalChallenge/progress";
-
-/** Phase 1：前 6 关对应 #71b 6 个题型，关 7–10 留作 Phase 3。 */
-const LEVEL_CONFIGS: LevelConfig[] = [
-  { id: 1, name: "看图选句", type: "picture_match_sentence" },
-  { id: 2, name: "看图选词", type: "picture_match_word" },
-  { id: 3, name: "听音辨词", type: "listen_and_choose_word" },
-  { id: 4, name: "听句判断", type: "listen_and_judge_picture" },
-  { id: 5, name: "找不同类词", type: "odd_one_out" },
-  { id: 6, name: "阅读理解", type: "reading_judge_TF" },
-  { id: 7, name: "敬请期待", type: null },
-  { id: 8, name: "敬请期待", type: null },
-  { id: 9, name: "敬请期待", type: null },
-  { id: 10, name: "敬请期待", type: null },
-];
-
-const MAX_STARS = LEVEL_CONFIGS.filter((c) => c.type !== null).length * 3; // 18
+import { LEVEL_CONFIGS, MAX_STARS } from "@/lib/primaryHub/finalChallenge/levels";
 
 const RANK_LABEL: Record<RankTier, string> = {
   bronze: "闯关学徒",

@@ -12,6 +12,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
+import { unlockAudioSync } from "@/lib/speak";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
@@ -220,6 +221,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
         introHint="Rex 按你的错题考点出了 5 道针对性强化题, 准备好了吗?"
         introMood="excited"
         total={questions.length}
+        onBeforeStart={unlockAudioSync}   // iOS 音频解锁: 给 sharedAudio 一个 gesture-triggered play(), 保证混合题型里第一道是听力时也能响 (backlog #2 follow-up audit)
         renderPlay={renderPlay}
       />
       {/* "再来一轮"由 LevelShell 的 done 屏不直接管, 这里全局监听 done 进入后插一个按钮的

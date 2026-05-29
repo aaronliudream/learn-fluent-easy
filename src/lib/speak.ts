@@ -305,7 +305,7 @@ const getSharedAudio = () => {
 // once the network fetch resolves we just swap the src on the SAME element
 // and call play() again — the gesture has already been "consumed" by the
 // first play(), so the second call works without a fresh user tap.
-const unlockAudioSync = (): HTMLAudioElement | null => {
+export const unlockAudioSync = (): HTMLAudioElement | null => {
   const audio = getSharedAudio();
   if (!audio) return null;
   try {

@@ -1,6 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toHubTtsText } from "@/lib/primaryHub/speech";
-import { speakKid, stopSpeaking, prefetchTTSBatchKid } from "@/lib/speak";
+import {
+  speakKid,
+  stopSpeaking,
+  prefetchTTSBatchKid,
+  unlockAudioSync,
+} from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import type { GradeKey } from "@/lib/primaryHub/spellingStageConfig";
@@ -103,7 +108,14 @@ export default function ListenWordStage({
 
   // The start tap is the user gesture that unlocks audio (Chrome autoplay policy),
   // so the first question's auto-play works.
+  //
+  // iOS Safari 修 (backlog #2): 关键是 unlockAudioSync() 必须在所有 await 之前
+  // 同步执行 — 它给 speak.ts 单例的 sharedAudio 一个 gesture-triggered play(),
+  // 后续 speakKid → speak → unlockAudioSync 复用同一元素就不会被静默拦截.
+  // 原先用 new Audio(SILENT_WAV) 解锁的是 throwaway 元素, sharedAudio 一直没
+  // 在手势栈内被 play 过, iOS 250ms 后 auto-play 必拦截 = 听音辨词没声.
   const handleStart = async () => {
+    unlockAudioSync();
     try {
       const Ctx =
         window.AudioContext ||
@@ -112,15 +124,6 @@ export default function ListenWordStage({
         const ctx = new Ctx();
         await ctx.resume();
       }
-    } catch {
-      /* ignore */
-    }
-    try {
-      const silent = new Audio(
-        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=",
-      );
-      silent.volume = 0;
-      await silent.play().catch(() => {});
     } catch {
       /* ignore */
     }

@@ -229,17 +229,20 @@ export default function PrimaryHubUnitGamified() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span
-            aria-hidden
+          {/* PR_3.6: 概览卡左侧 3D 学校图 (透明 PNG, 替代 unit.emoji) */}
+          <img
+            src="/primary/images/primary/g4v1_u1/school.png"
+            alt=""
+            width={84}
+            height={84}
             style={{
-              fontSize: 38,
-              lineHeight: 1,
+              width: 84,
+              height: 84,
+              objectFit: "contain",
               flex: "0 0 auto",
-              filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))",
+              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.12))",
             }}
-          >
-            {unit.emoji}
-          </span>
+          />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div
               style={{
@@ -573,13 +576,13 @@ function PathRow({
         ) : null}
       </div>
 
-      {/* 中 — 关卡名 */}
+      {/* 中 — 关卡名 (PR_3.6: 字号 14→18, weight 700→800) */}
       <div
         style={{
           flex: 1,
           minWidth: 0,
-          fontSize: 14,
-          fontWeight: 700,
+          fontSize: 18,
+          fontWeight: 800,
           color: nameColor,
           fontFamily: "var(--fc-font-display)",
           whiteSpace: "nowrap",
@@ -628,13 +631,6 @@ const TIER_LABELS: Record<RankTier, string> = {
   rainbow: "🌈 彩虹奖",
 };
 
-const TIER_TROPHY_COLOR: Record<RankTier, string> = {
-  bronze: "var(--fc-rank-bronze)",
-  silver: "var(--fc-rank-silver)",
-  gold: "var(--fc-rank-gold)",
-  rainbow: "#FF6B9D", // pink 强调彩虹档
-};
-
 function FinalChallengeCard({
   bossState,
   bossTier,
@@ -661,112 +657,141 @@ function FinalChallengeCard({
     buttonText = "再玩一次 🔁";
   }
 
-  // 段位仅状态 C 显示 (Aaron 决策 ii)
-  const trophyColor = bossState === "C" ? TIER_TROPHY_COLOR[bossTier] : "white";
-  const trophyOpacity = bossState === "A" ? 0.85 : 1;
-
+  // PR_3.6 v2: 左右两栏布局 (左 文字竖排 + 右 trophy 视觉),
+  // 文案 / 状态逻辑 / 段位条件渲染 完全不动.
   return (
     <div
+      data-final-card="1"
       style={{
-        padding: "18px 16px",
+        padding: "16px",
         borderRadius: "var(--fc-radius-xl)",
         background:
           "linear-gradient(135deg, var(--fc-yellow) 0%, var(--fc-primary) 100%)",
         border: "2px solid var(--fc-primary-dark)",
         boxShadow: "var(--fc-shadow-game-yellow)",
-        textAlign: "center",
         color: "white",
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
       }}
     >
-      {/* Trophy 主视觉 */}
-      <div
-        className={bossState === "C" ? "fc-medal-unlock" : ""}
-        style={{
-          display: "inline-grid",
-          placeItems: "center",
-          width: 72,
-          height: 72,
-          borderRadius: "50%",
-          background: "rgba(255, 255, 255, 0.22)",
-          marginBottom: 4,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-        }}
-      >
-        <Trophy
-          size={44}
-          color={trophyColor}
-          strokeWidth={2.2}
-          fill={bossState === "C" ? trophyColor : "transparent"}
-          style={{ opacity: trophyOpacity }}
-          aria-label="trophy"
-        />
-      </div>
-
-      <h2
-        style={{
-          marginTop: 4,
-          fontSize: 18,
-          fontWeight: 800,
-          fontFamily: "var(--fc-font-display)",
-          textShadow: "0 1px 2px rgba(0,0,0,0.15)",
-        }}
-      >
-        最终挑战
-      </h2>
-
+      {/* 左栏 — 文字, 左对齐, 竖排 */}
       <div
         style={{
-          marginTop: 6,
-          fontSize: 12,
-          opacity: 0.95,
-          fontWeight: 600,
-          lineHeight: 1.4,
+          flex: 1,
+          minWidth: 0,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: 4,
         }}
       >
-        {metaText}
-      </div>
-
-      {/* 段位标 — 仅状态 C 显示 */}
-      {bossState === "C" && (
+        {/* FINAL 小标签 */}
         <div
           style={{
-            marginTop: 8,
-            display: "inline-block",
-            padding: "4px 12px",
-            borderRadius: "var(--fc-radius-pill)",
-            background: "rgba(255, 255, 255, 0.25)",
-            fontSize: 12,
+            fontSize: 10,
             fontWeight: 800,
-            letterSpacing: 0.5,
+            letterSpacing: 2.4,
+            color: "rgba(255, 255, 255, 0.85)",
+            textShadow: "0 1px 1px rgba(0,0,0,0.15)",
           }}
         >
-          {TIER_LABELS[bossTier]}
+          FINAL
         </div>
-      )}
 
-      <button
-        type="button"
-        onClick={onPlay}
-        className="fc-btn-press fc-shadow-orange"
+        {/* 标题 */}
+        <h2
+          style={{
+            margin: 0,
+            fontSize: 20,
+            fontWeight: 800,
+            fontFamily: "var(--fc-font-display)",
+            textShadow: "0 1px 2px rgba(0,0,0,0.15)",
+            lineHeight: 1.1,
+          }}
+        >
+          最终挑战
+        </h2>
+
+        {/* meta */}
+        <div
+          style={{
+            marginTop: 2,
+            fontSize: 12,
+            opacity: 0.95,
+            fontWeight: 600,
+            lineHeight: 1.4,
+            textAlign: "left",
+          }}
+        >
+          {metaText}
+        </div>
+
+        {/* 段位标 — 仅状态 C 显示 */}
+        {bossState === "C" && (
+          <div
+            style={{
+              marginTop: 4,
+              padding: "3px 10px",
+              borderRadius: "var(--fc-radius-pill)",
+              background: "rgba(255, 255, 255, 0.25)",
+              fontSize: 12,
+              fontWeight: 800,
+              letterSpacing: 0.5,
+            }}
+          >
+            {TIER_LABELS[bossTier]}
+          </div>
+        )}
+
+        {/* button — 左对齐, 不再 margin auto */}
+        <button
+          type="button"
+          onClick={onPlay}
+          className="fc-btn-press fc-shadow-orange"
+          style={{
+            marginTop: 8,
+            padding: "8px 22px",
+            borderRadius: "var(--fc-radius-pill)",
+            background: "white",
+            color: "var(--fc-primary-dark)",
+            fontWeight: 800,
+            fontSize: 14,
+            border: "none",
+            cursor: "pointer",
+            fontFamily: "var(--fc-font-display)",
+          }}
+          data-boss-state={bossState}
+        >
+          {buttonText}
+        </button>
+      </div>
+
+      {/* 右栏 — Trophy 视觉, 占右侧 ~38% 宽, 垂直居中 */}
+      <div
         style={{
-          marginTop: 14,
-          padding: "10px 28px",
-          borderRadius: "var(--fc-radius-pill)",
-          background: "white",
-          color: "var(--fc-primary-dark)",
-          fontWeight: 800,
-          fontSize: 14,
-          border: "none",
-          cursor: "pointer",
-          fontFamily: "var(--fc-font-display)",
-          display: "block",
-          marginLeft: "auto",
-          marginRight: "auto",
+          flex: "0 0 38%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-        data-boss-state={bossState}
       >
-        {buttonText}
-      </button>
+        <img
+          src="/primary/images/primary/g4v1_u1/trophy.png"
+          alt="奖杯"
+          width={132}
+          height={132}
+          className={bossState === "C" ? "fc-medal-unlock" : ""}
+          style={{
+            width: "100%",
+            maxWidth: 132,
+            height: "auto",
+            objectFit: "contain",
+            filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
+            opacity: bossState === "A" ? 0.92 : 1,
+          }}
+        />
+      </div>
     </div>
   );
 }

@@ -72,7 +72,7 @@ const GaokaoHubAIHistory = lazy(() => import("./pages/gaokaoHub/GaokaoHubAIHisto
 const PrimaryHubHome = lazy(() => import("./pages/primaryHub/PrimaryHubHome.tsx"));
 const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.tsx"));
 const PrimaryHubSemester = lazy(() => import("./pages/primaryHub/PrimaryHubSemester.tsx"));
-const PrimaryHubUnit = lazy(() => import("./pages/primaryHub/PrimaryHubUnit.tsx"));
+const PrimaryHubUnitDispatch = lazy(() => import("./pages/primaryHub/PrimaryHubUnitDispatch.tsx"));
 const PrimaryHubStage = lazy(() => import("./pages/primaryHub/PrimaryHubStage.tsx"));
 const PrimaryHubPhonicsRoute = lazy(() => import("./pages/primaryHub/PrimaryHubPhonicsRoute.tsx"));
 const PrimaryHubMistakes = lazy(() => import("./pages/primaryHub/PrimaryHubMistakes.tsx"));
@@ -299,7 +299,7 @@ const App = () => (
             <Route index element={<PrimaryHubHome />} />
             <Route path="course" element={<PrimaryHubCourse />} />
             <Route path="semester/:semId" element={<PrimaryHubSemester />} />
-            <Route path="semester/:semId/unit/:unitId" element={<PrimaryHubUnit />} />
+            <Route path="semester/:semId/unit/:unitId" element={<PrimaryHubUnitDispatch />} />
             <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<PrimaryHubStage />} />
             <Route
               path="semester/:semId/unit/:unitId/stage/:stageIdx/phonics"

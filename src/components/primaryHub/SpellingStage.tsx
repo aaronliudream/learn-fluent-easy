@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { VocabItem } from "@/lib/primaryHub/types";
 import { toHubTtsText } from "@/lib/primaryHub/speech";
-import { speakKid, stopSpeaking, prefetchTTSBatchKid } from "@/lib/speak";
+import {
+  speakKid,
+  stopSpeaking,
+  prefetchTTSBatchKid,
+  unlockAudioSync,
+} from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import {
   type GradeKey,
@@ -188,22 +193,18 @@ export default function SpellingStage({
 
   // The start tap is the user gesture that unlocks audio (Chrome autoplay policy),
   // so the first question's auto-play works. startIdx lets the kid resume mid-stage.
+  //
+  // iOS Safari 修 (backlog #2 step 2): unlockAudioSync() 必须在所有 await 之前
+  // 同步执行 — 给 speak.ts 单例 sharedAudio 一个 gesture-triggered play(),
+  // 后续 speakKid 复用同一元素就不会被静默拦截.
   const handleStart = async (startIdx = 0) => {
+    unlockAudioSync();
     try {
       const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
       if (Ctx) {
         const ctx = new Ctx();
         await ctx.resume();
       }
-    } catch {
-      /* ignore */
-    }
-    try {
-      const silent = new Audio(
-        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=",
-      );
-      silent.volume = 0;
-      await silent.play().catch(() => {});
     } catch {
       /* ignore */
     }

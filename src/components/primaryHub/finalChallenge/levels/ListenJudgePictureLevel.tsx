@@ -25,6 +25,7 @@ import {
   speakKid,
   stopSpeaking,
   prefetchTTSBatchKid,
+  unlockAudioSync,
 } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
@@ -36,11 +37,11 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 
 type Q = Extract<FCQuestion, { type: "listen_and_judge_picture" }>;
 
-/** 与 #71f 同款静音 wav (用户手势内一次性解锁音频)。 */
-const SILENT_WAV =
-  "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
-
+// iOS Safari 修 (backlog #2 step 2): 改用 speak.ts 单例 sharedAudio 解锁,
+// 不再用 throwaway new Audio(SILENT_WAV) — 后者在 iOS 上跟 speakKid 用的不是
+// 同一元素,sharedAudio 没在手势栈内被 play 过,250ms auto-play 会被静默拦截.
 async function unlockAudio(): Promise<void> {
+  unlockAudioSync();
   try {
     const Ctx =
       window.AudioContext ||
@@ -50,13 +51,6 @@ async function unlockAudio(): Promise<void> {
       const ctx = new Ctx();
       await ctx.resume();
     }
-  } catch {
-    /* ignore */
-  }
-  try {
-    const silent = new Audio(SILENT_WAV);
-    silent.volume = 0;
-    await silent.play().catch(() => {});
   } catch {
     /* ignore */
   }

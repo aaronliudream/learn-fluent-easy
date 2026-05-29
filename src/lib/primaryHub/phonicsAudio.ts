@@ -1,4 +1,5 @@
 import { hubSpeak } from "@/lib/primaryHub/speech";
+import { unlockAudioSync } from "@/lib/speak";
 
 let current: HTMLAudioElement | null = null;
 
@@ -8,6 +9,10 @@ export function playPhonicsAudio(
   fallbackText: string,
   grade: number,
 ): void {
+  // iOS 音频解锁 (backlog #2 follow-up audit): 在 user-gesture 同步栈里先给
+  // speak.ts 的 sharedAudio 一个 play() 解锁. 这样即使下面 CDN 加载失败,
+  // .catch 异步走 hubSpeak fallback 时 sharedAudio 已经就绪, iOS 不会拦截.
+  unlockAudioSync();
   if (current) {
     current.pause();
     current = null;

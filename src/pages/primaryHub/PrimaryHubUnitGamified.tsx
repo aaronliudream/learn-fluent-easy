@@ -1,51 +1,43 @@
 /**
- * 单元详情页 — 游戏化版 (Unit Gamified PR_2 布局)
+ * 单元详情页 — 游戏化版 (Unit Gamified PR_3 真测打磨)
  *
  * 路由白名单 unit (GAMIFIED_UNIT_IDS) 走这个组件, 其余继续走老的
  * PrimaryHubUnit.tsx (老文件 0 改动).
  *
- * 布局 (上到下):
- *   1. 顶部概览卡   — RexMascot + 标题 + 进度环 + 总星
- *   2. 焦点卡       — 第一个未完成 stage, 放大 + fc-pulse-glow-purple
- *   3. 闯关路径     — 非 boss 的 7 个 stage 节点, 垂直交错
- *   4. 已完成折叠   — 默认收起, 点 ▼ 展开
- *   5. Boss 终点    — RankBadge 4 档 (a1 完成度门控)
+ * 布局 (上到下, PR_3 真测后调整):
+ *   1. 顶部概览卡  — 大 emoji + 标题 + 单行 stats (无 Rex, #3 去重)
+ *   2. 焦点卡      — RexMascot sm + 第一个未完成 stage, fc-pulse-glow-purple
+ *   3. 闯关路径    — 7 个非 boss 节点紧凑垂直, 36px 节点 (#1 + #4 手机一屏)
+ *   4. Boss 终点   — RankBadge 4 档, 文案严格按 bossCompleted (#6 BUG 修)
  *
- * 设计决策:
- *   - 所有 stage 节点可点 (沿用老组件行为, 不强制线性解锁)
- *   - 路径 current 节点只显示橙色 ring, 不发光 (b1: 只焦点卡发光)
- *   - 已完成小卡只显示 ✓ (星级在概览卡总星显示)
- *   - 进度算法借鉴 finalChallenge progress.ts 思路, 数据走单元页自己的
- *     PrimaryHubPersist (两套不通用 — 决策3 现实约束)
+ * PR_3 真测反馈处理:
+ *   #1 + #4 (手机一屏 + 路径占空间) → 整体紧凑化, 节点 54→36, offset ±32→±4
+ *   #3 (Rex 重复)                   → 概览卡 Rex 去掉, 改大 emoji 占位
+ *   #5 (已完成折叠区冗余)            → 整段删除 (路径上 ✓ 已表达, 不留计数提示)
+ *   #6 (Boss 状态判定错)              → 严格 bossCompleted = idx in completedSet; 文案
+ *                                       未通关用 "完成 N/M · 段位 X" (不用 percent 派生)
  *
  * 设计 token: 全在 src/index.css 全局 (--fc-*), 不引新 css 文件.
  */
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
-import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
+import { getUnitProgress } from "@/lib/primaryHub/progress";
 import { isReadWriteComingSoon } from "@/lib/primaryHub/stageCompletable";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import RexMascot, { type RexMood } from "@/components/primaryHub/finalChallenge/RexMascot";
 import RankBadge, { type RankTier } from "@/components/primaryHub/finalChallenge/RankBadge";
 import type { StageDef, UnitState, UnitDef } from "@/lib/primaryHub/types";
 
-/* ---------- 进度 → 视觉映射 (a1 完成度门控 / Rex 心情) ---------- */
+/* ---------- 进度 → 视觉映射 (a1 完成度门控) ---------- */
 
 function unitBossTier(percent: number): RankTier {
   if (percent >= 100) return "rainbow";
   if (percent >= 75) return "gold";
   if (percent >= 40) return "silver";
   return "bronze";
-}
-
-function overviewRexMood(percent: number): RexMood {
-  if (percent >= 100) return "celebrating";
-  if (percent >= 51) return "excited";
-  if (percent >= 1) return "encouraging";
-  return "thinking";
 }
 
 function focusRexMood(percent: number, allDone: boolean): RexMood {
@@ -84,7 +76,6 @@ export default function PrimaryHubUnitGamified() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
   const { grade, state } = usePrimaryHub();
   const nav = useNavigate();
-  const [completedOpen, setCompletedOpen] = useState(false);
 
   const unit = unitId ? findUnit(unitId) : null;
   const us = unitId ? readUnitState(state, unitId) : null;
@@ -114,7 +105,10 @@ export default function PrimaryHubUnitGamified() {
   const allDone = focusIdx === null;
   const stars = us?.stars ?? 0;
   const completedSet = new Set(us?.completedStages ?? []);
-  const bossDone = bossIdx >= 0 && completedSet.has(bossIdx);
+  // #6 BUG 修: bossCompleted 只看 boss 索引是否在 completedSet,
+  // 严禁用 percent 等间接指标推导 (percent 可能因 partial stageProgress
+  // 而四舍五入到 100, 但 boss 尚未真正完成).
+  const bossCompleted: boolean = bossIdx >= 0 && completedSet.has(bossIdx);
   const bossTier = unitBossTier(p.percent);
 
   // 非 boss 的可玩 stages → 路径节点 (boss 单独显示)
@@ -122,8 +116,6 @@ export default function PrimaryHubUnitGamified() {
     .map((stage, idx) => ({ stage, idx }))
     .filter(({ idx }) => idx !== bossIdx);
 
-  // 已完成 stages (用于折叠区, 不含 boss — boss 在 Boss section)
-  const doneStages = pathStages.filter(({ idx }) => completedSet.has(idx));
   const goToStage = (idx: number) =>
     nav(`${base}/semester/${semId}/unit/${unitId}/stage/${idx}`);
 
@@ -134,8 +126,8 @@ export default function PrimaryHubUnitGamified() {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 10,
-          padding: "12px 16px",
+          gap: 8,
+          padding: "8px 14px",
           background: "rgba(255, 255, 255, 0.7)",
           borderBottom: "1px solid var(--fc-border-soft)",
         }}
@@ -146,25 +138,26 @@ export default function PrimaryHubUnitGamified() {
           style={{
             background: "transparent",
             border: "none",
-            fontSize: 22,
+            fontSize: 20,
             cursor: "pointer",
             color: "var(--fc-ink)",
+            padding: "2px 4px",
           }}
           aria-label="back"
         >
           ←
         </button>
-        <div style={{ fontSize: 14, fontWeight: 700, color: "var(--fc-ink-soft)" }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--fc-ink-soft)" }}>
           Unit {unit.num} · {unit.cn}
         </div>
       </div>
 
-      {/* ===== 1. 顶部概览卡 ===== */}
+      {/* ===== 1. 概览卡 (无 Rex, 大 emoji + 单行 stats — #1 #3) ===== */}
       <section
         className="fc-spring-in"
         style={{
-          margin: "16px 16px 0",
-          padding: "18px 16px",
+          margin: "10px 12px 0",
+          padding: "12px 14px",
           borderRadius: "var(--fc-radius-xl)",
           background:
             "linear-gradient(135deg, var(--fc-primary-bg) 0%, var(--fc-purple-bg) 100%)",
@@ -172,31 +165,44 @@ export default function PrimaryHubUnitGamified() {
           boxShadow: "var(--fc-shadow-card)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ flex: "0 0 auto" }}>
-            <RexMascot mood={overviewRexMood(p.percent)} size="md" showMessage={false} />
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span
+            aria-hidden
+            style={{
+              fontSize: 38,
+              lineHeight: 1,
+              flex: "0 0 auto",
+              filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))",
+            }}
+          >
+            {unit.emoji}
+          </span>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div
               style={{
-                fontSize: 21,
+                fontSize: 18,
                 fontWeight: 800,
                 color: "var(--fc-ink)",
                 fontFamily: "var(--fc-font-display)",
-                lineHeight: 1.2,
+                lineHeight: 1.15,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
-              {unit.emoji} {unit.title}
+              {unit.title}
             </div>
             <div
               style={{
-                marginTop: 4,
-                fontSize: 12,
-                color: "var(--fc-ink-mute)",
+                marginTop: 3,
+                fontSize: 11,
+                color: "var(--fc-ink-soft)",
                 fontWeight: 600,
               }}
             >
-              {allDone ? "🎉 已通关!" : `进度 ${p.completed}/${p.total}`}
+              {allDone
+                ? "🎉 已通关!"
+                : `完成 ${p.completed}/${p.total} · ⭐ ${stars} · ${p.percent}%`}
             </div>
           </div>
         </div>
@@ -204,8 +210,8 @@ export default function PrimaryHubUnitGamified() {
         {/* 进度条 */}
         <div
           style={{
-            marginTop: 14,
-            height: 8,
+            marginTop: 8,
+            height: 6,
             borderRadius: "var(--fc-radius-pill)",
             overflow: "hidden",
             background: "rgba(42, 38, 32, 0.08)",
@@ -215,30 +221,15 @@ export default function PrimaryHubUnitGamified() {
             style={{
               height: "100%",
               width: `${p.percent}%`,
-              background: "linear-gradient(90deg, var(--fc-primary) 0%, var(--fc-yellow) 100%)",
+              background:
+                "linear-gradient(90deg, var(--fc-primary) 0%, var(--fc-yellow) 100%)",
               transition: "width 400ms ease-out",
             }}
           />
         </div>
-
-        {/* 数据带 */}
-        <div
-          style={{
-            marginTop: 12,
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: 8,
-            fontSize: 12,
-            color: "var(--fc-ink-soft)",
-          }}
-        >
-          <Stat label="完成" value={`${p.completed}/${p.total}`} />
-          <Stat label="总星" value={`⭐ ${stars}`} />
-          <Stat label="进度" value={`${p.percent}%`} />
-        </div>
       </section>
 
-      {/* ===== 2. 焦点卡 ===== */}
+      {/* ===== 2. 焦点卡 (Rex sm 紧凑 — #3 仅焦点卡保留 Rex) ===== */}
       <FocusCard
         unit={unit}
         focusIdx={focusIdx}
@@ -248,118 +239,57 @@ export default function PrimaryHubUnitGamified() {
         onPlay={(idx) => goToStage(idx)}
       />
 
-      {/* ===== 3. 闯关路径 (非 boss 节点) ===== */}
-      <section style={{ padding: "8px 24px 0" }}>
+      {/* ===== 3. 闯关路径 (紧凑垂直 — #1 #4 手机一屏) ===== */}
+      <section style={{ padding: "8px 16px 0" }}>
         <h3
           style={{
-            margin: "0 0 12px",
-            fontSize: 13,
+            margin: "0 0 6px",
+            fontSize: 11,
             fontWeight: 700,
             color: "var(--fc-ink-mute)",
             textAlign: "center",
-            letterSpacing: 1,
+            letterSpacing: 1.2,
           }}
         >
           ✨ 闯关路径
         </h3>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 2,
+          }}
+        >
           {pathStages.map(({ stage, idx }, i) => {
             const done = completedSet.has(idx);
             const isFocus = idx === focusIdx;
             const comingSoon = isReadWriteComingSoon(unitId, idx, stage);
-            const offset = i % 2 === 0 ? -32 : 32; // 交错布局
+            // 微错位 (±4) — 留点游戏感但不占空间
+            const offset = i % 2 === 0 ? -4 : 4;
             return (
-              <div key={stage.id} style={{ width: "100%" }}>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <PathNode
-                    stage={stage}
-                    done={done}
-                    isFocus={isFocus}
-                    comingSoon={comingSoon}
-                    offset={offset}
-                    onClick={() => !comingSoon && goToStage(idx)}
-                  />
-                </div>
-                {i < pathStages.length - 1 && <Connector />}
-              </div>
+              <PathNode
+                key={stage.id}
+                stage={stage}
+                done={done}
+                isFocus={isFocus}
+                comingSoon={comingSoon}
+                offset={offset}
+                onClick={() => !comingSoon && goToStage(idx)}
+              />
             );
           })}
         </div>
       </section>
 
-      {/* ===== 4. 已完成折叠区 (决策3: 默认收起) ===== */}
-      {doneStages.length > 0 && (
-        <section style={{ padding: "20px 16px 0" }}>
-          <button
-            type="button"
-            onClick={() => setCompletedOpen((v) => !v)}
-            className="fc-btn-press"
-            style={{
-              width: "100%",
-              padding: "10px 14px",
-              borderRadius: "var(--fc-radius)",
-              border: "1px solid var(--fc-border-soft)",
-              background: "var(--fc-green-bg)",
-              color: "var(--fc-green-dark)",
-              fontWeight: 700,
-              fontSize: 13,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              cursor: "pointer",
-            }}
-            aria-expanded={completedOpen}
-          >
-            <span>✓ 已完成 {doneStages.length} 个</span>
-            <span
-              style={{
-                fontSize: 12,
-                transition: "transform 200ms ease",
-                transform: completedOpen ? "rotate(180deg)" : "rotate(0deg)",
-              }}
-            >
-              ▼
-            </span>
-          </button>
-          {completedOpen && (
-            <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 6 }}>
-              {doneStages.map(({ stage, idx }) => (
-                <button
-                  key={stage.id}
-                  type="button"
-                  onClick={() => goToStage(idx)}
-                  className="fc-btn-press"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    width: "100%",
-                    padding: "8px 12px",
-                    borderRadius: "var(--fc-radius-sm)",
-                    background: "white",
-                    border: "1px solid var(--fc-green-light)",
-                    fontSize: 13,
-                    color: "var(--fc-ink-soft)",
-                    cursor: "pointer",
-                    textAlign: "left",
-                  }}
-                >
-                  <span style={{ fontSize: 16 }}>{stage.icon}</span>
-                  <span style={{ flex: 1, fontWeight: 600 }}>{stage.title}</span>
-                  <span style={{ color: "var(--fc-green-dark)", fontWeight: 800 }}>✓</span>
-                </button>
-              ))}
-            </div>
-          )}
-        </section>
-      )}
+      {/* (PR_3 #5: 已完成折叠区已删除. 路径上 ✓ 已表达, 不留计数提示.) */}
 
-      {/* ===== 5. Boss 终点 (RankBadge 4 档 a1) ===== */}
+      {/* ===== 4. Boss 终点 (RankBadge 4 档, 严格 bossCompleted — #6) ===== */}
       {bossIdx >= 0 && (
-        <section style={{ padding: "24px 16px 60px" }}>
+        <section style={{ padding: "18px 16px 60px" }}>
           <div
             style={{
-              padding: "20px 16px",
+              padding: "16px 14px",
               borderRadius: "var(--fc-radius-xl)",
               background:
                 "linear-gradient(135deg, var(--fc-yellow) 0%, var(--fc-primary) 100%)",
@@ -370,15 +300,15 @@ export default function PrimaryHubUnitGamified() {
             }}
           >
             <div
-              className={bossDone ? "fc-medal-unlock" : ""}
+              className={bossCompleted ? "fc-medal-unlock" : ""}
               style={{ display: "inline-block" }}
             >
-              <RankBadge tier={bossTier} size="lg" unlock={bossDone} />
+              <RankBadge tier={bossTier} size="md" unlock={bossCompleted} />
             </div>
             <h2
               style={{
-                marginTop: 12,
-                fontSize: 18,
+                marginTop: 8,
+                fontSize: 16,
                 fontWeight: 800,
                 fontFamily: "var(--fc-font-display)",
                 textShadow: "0 1px 2px rgba(0,0,0,0.15)",
@@ -389,35 +319,35 @@ export default function PrimaryHubUnitGamified() {
             <div
               style={{
                 marginTop: 4,
-                fontSize: 12,
+                fontSize: 11,
                 opacity: 0.95,
                 fontWeight: 600,
               }}
             >
-              {bossDone
-                ? `已通关 · 当前段位 ${bossTierLabel(bossTier)}`
-                : p.percent === 0
+              {bossCompleted
+                ? `已通关 · 段位 ${bossTierLabel(bossTier)}`
+                : p.completed === 0
                   ? "先做完前面几关再挑战"
-                  : `进度 ${p.percent}% · 段位 ${bossTierLabel(bossTier)}`}
+                  : `完成 ${p.completed}/${p.total} · 段位 ${bossTierLabel(bossTier)}`}
             </div>
             <button
               type="button"
               onClick={() => goToStage(bossIdx)}
               className="fc-btn-press fc-shadow-orange"
               style={{
-                marginTop: 16,
-                padding: "12px 30px",
+                marginTop: 12,
+                padding: "10px 26px",
                 borderRadius: "var(--fc-radius-pill)",
                 background: "white",
                 color: "var(--fc-primary-dark)",
                 fontWeight: 800,
-                fontSize: 15,
+                fontSize: 14,
                 border: "none",
                 cursor: "pointer",
                 fontFamily: "var(--fc-font-display)",
               }}
             >
-              {bossDone ? "🔁 再战 Boss" : "⚔️ 挑战 Boss"}
+              {bossCompleted ? "🔁 再战 Boss" : "⚔️ 挑战 Boss"}
             </button>
           </div>
         </section>
@@ -427,22 +357,6 @@ export default function PrimaryHubUnitGamified() {
 }
 
 /* ============ 子组件 ============ */
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div
-      style={{
-        background: "rgba(255, 255, 255, 0.6)",
-        borderRadius: "var(--fc-radius-sm)",
-        padding: "6px 8px",
-        textAlign: "center",
-      }}
-    >
-      <div style={{ fontWeight: 800, color: "var(--fc-ink)", fontSize: 13 }}>{value}</div>
-      <div style={{ fontSize: 10, color: "var(--fc-ink-mute)", marginTop: 2 }}>{label}</div>
-    </div>
-  );
-}
 
 function FocusCard({
   unit,
@@ -459,13 +373,13 @@ function FocusCard({
   percent: number;
   onPlay: (idx: number) => void;
 }) {
-  // 全完成: 庆祝卡 (无点击)
+  // 全完成: 庆祝卡 (无点击, Rex 庆祝)
   if (allDone) {
     return (
-      <section style={{ padding: "20px 16px 0" }}>
+      <section style={{ padding: "12px 12px 0" }}>
         <div
           style={{
-            padding: "20px 16px",
+            padding: "14px 16px",
             borderRadius: "var(--fc-radius-xl)",
             background:
               "linear-gradient(135deg, var(--fc-green-bg) 0%, var(--fc-yellow) 100%)",
@@ -473,11 +387,11 @@ function FocusCard({
             textAlign: "center",
           }}
         >
-          <RexMascot mood="celebrating" size="lg" showMessage={false} />
+          <RexMascot mood="celebrating" size="md" showMessage={false} />
           <div
             style={{
-              marginTop: 10,
-              fontSize: 18,
+              marginTop: 6,
+              fontSize: 16,
               fontWeight: 800,
               color: "var(--fc-ink)",
               fontFamily: "var(--fc-font-display)",
@@ -496,14 +410,14 @@ function FocusCard({
   const isBossFocus = focusIdx === bossIdx;
 
   return (
-    <section style={{ padding: "20px 16px 0" }}>
+    <section style={{ padding: "10px 12px 0" }}>
       <button
         type="button"
         onClick={() => onPlay(focusIdx)}
         className="fc-btn-press fc-pulse-glow-purple"
         style={{
           width: "100%",
-          padding: "18px 16px",
+          padding: "10px 14px",
           borderRadius: "var(--fc-radius-xl)",
           border: "2px solid var(--fc-purple)",
           background:
@@ -512,47 +426,53 @@ function FocusCard({
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
-          gap: 14,
+          gap: 10,
           boxShadow: "var(--fc-shadow-card)",
         }}
       >
         <div style={{ flex: "0 0 auto" }}>
-          <RexMascot mood={focusRexMood(percent, false)} size="md" showMessage={false} />
+          <RexMascot mood={focusRexMood(percent, false)} size="sm" showMessage={false} />
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div
             style={{
-              fontSize: 11,
+              fontSize: 10,
               fontWeight: 700,
               color: "var(--fc-purple-dark)",
               letterSpacing: 1.2,
-              marginBottom: 2,
+              marginBottom: 1,
             }}
           >
             {isBossFocus ? "🎯 准备挑战 BOSS" : "🎯 继续学"}
           </div>
           <div
             style={{
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: 800,
               color: "var(--fc-ink)",
               fontFamily: "var(--fc-font-display)",
-              lineHeight: 1.2,
+              lineHeight: 1.15,
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {focusStage.icon} {focusStage.title}
           </div>
           <div
             style={{
-              marginTop: 4,
-              fontSize: 12,
+              marginTop: 2,
+              fontSize: 11,
               color: "var(--fc-ink-soft)",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {focusStage.subtitle} · {focusStage.time}
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "var(--fc-purple)" }}>▸</div>
+        <div style={{ fontSize: 20, color: "var(--fc-purple)" }}>▸</div>
       </button>
     </section>
   );
@@ -588,7 +508,7 @@ function PathNode({
     iconColor = "white";
   } else if (isFocus) {
     bg = "var(--fc-primary-bg)";
-    border = "3px solid var(--fc-primary)";
+    border = "2.5px solid var(--fc-primary)";
     iconColor = "var(--fc-primary-dark)";
   }
 
@@ -602,25 +522,27 @@ function PathNode({
         transform: `translateX(${offset}px)`,
         display: "flex",
         alignItems: "center",
-        gap: 10,
-        padding: 0,
+        gap: 8,
+        padding: "1px 0",
         background: "transparent",
         border: "none",
         cursor: comingSoon ? "not-allowed" : "pointer",
         opacity,
+        width: "100%",
+        maxWidth: 280,
       }}
       aria-label={stage.title}
     >
       <div
         style={{
-          width: 54,
-          height: 54,
+          width: 36,
+          height: 36,
           borderRadius: "50%",
           background: bg,
           border,
           display: "grid",
           placeItems: "center",
-          fontSize: 24,
+          fontSize: 16,
           color: iconColor,
           flex: "0 0 auto",
           boxShadow: done || isFocus ? "var(--fc-shadow-card)" : "none",
@@ -638,38 +560,13 @@ function PathNode({
               ? "var(--fc-primary-dark)"
               : "var(--fc-ink-mute)",
           whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
         }}
       >
         {stage.title}
       </div>
     </button>
-  );
-}
-
-function Connector() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 3,
-        padding: "2px 0",
-      }}
-      aria-hidden
-    >
-      {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          style={{
-            width: 4,
-            height: 4,
-            borderRadius: "50%",
-            background: "var(--fc-border-medium)",
-          }}
-        />
-      ))}
-    </div>
   );
 }
 

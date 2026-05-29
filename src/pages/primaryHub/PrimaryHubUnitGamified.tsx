@@ -1,51 +1,61 @@
 /**
- * 单元详情页 — 游戏化版 (Unit Gamified PR_2 布局)
+ * 单元详情页 — 游戏化版 (Unit Gamified PR_3.5 视觉打磨)
  *
  * 路由白名单 unit (GAMIFIED_UNIT_IDS) 走这个组件, 其余继续走老的
  * PrimaryHubUnit.tsx (老文件 0 改动).
  *
  * 布局 (上到下):
- *   1. 顶部概览卡   — RexMascot + 标题 + 进度环 + 总星
- *   2. 焦点卡       — 第一个未完成 stage, 放大 + fc-pulse-glow-purple
- *   3. 闯关路径     — 非 boss 的 7 个 stage 节点, 垂直交错
- *   4. 已完成折叠   — 默认收起, 点 ▼ 展开
- *   5. Boss 终点    — RankBadge 4 档 (a1 完成度门控)
+ *   1. 顶部概览卡    — 大 emoji + 标题 + 单行 stats + 进度条
+ *   2. 焦点卡        — RexMascot sm + 第一个未完成 stage
+ *   3. 闯关路径      — 竖排单列, 7 个 stage 行 [圆节点 | 名 | lucide 类型图标]
+ *                      节点状态: 完成绿勾 / 当前 focusIdx 橙环 / 未做灰 (二态来源)
+ *                      节点间用 dashed 短虚线连接 (CSS, 无资源)
+ *   4. 最终挑战卡    — Trophy 主视觉 + 三态文案 (面向四年级口语化)
+ *                      奖牌段位**仅在 bossCompleted 时**显示
  *
- * 设计决策:
- *   - 所有 stage 节点可点 (沿用老组件行为, 不强制线性解锁)
- *   - 路径 current 节点只显示橙色 ring, 不发光 (b1: 只焦点卡发光)
- *   - 已完成小卡只显示 ✓ (星级在概览卡总星显示)
- *   - 进度算法借鉴 finalChallenge progress.ts 思路, 数据走单元页自己的
- *     PrimaryHubPersist (两套不通用 — 决策3 现实约束)
+ * PR_3.5 改动重点 (视觉打磨, 不动数据):
+ *   - lucide-react 图标按 stage.type 映射 (8 类型 exhaustive)
+ *   - PathNode 重写: 三列布局 [circle | name | type-icon], 无横向 offset
+ *   - 节点间虚线 connector
+ *   - Boss 三态文案派生自 nonBossPlayable / nonBossDone / bossCompleted
+ *     不引新字段, 全用现有 completedSet + pathStages 算
+ *   - "单元 Boss" → "最终挑战"
+ *   - Trophy 替代 RankBadge 主视觉, 段位仅状态 C 显示
  *
- * 设计 token: 全在 src/index.css 全局 (--fc-*), 不引新 css 文件.
+ * 硬约束守住: 单文件改动; PrimaryHubUnit.tsx 0 byte; 不动 storage /
+ *   UnitState schema / progress 算法 / stage 跳转链路; 不引新依赖
+ *   (lucide-react 已在 package.json:64); 不引新 css 文件; stash@{0} 不碰.
  */
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {
+  BookOpen,
+  Check,
+  Ear,
+  Headphones,
+  MessageCircle,
+  Pencil,
+  Puzzle,
+  Trophy,
+  Type as TypeIcon,
+} from "lucide-react";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
-import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
+import { getUnitProgress } from "@/lib/primaryHub/progress";
 import { isReadWriteComingSoon } from "@/lib/primaryHub/stageCompletable";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import RexMascot, { type RexMood } from "@/components/primaryHub/finalChallenge/RexMascot";
-import RankBadge, { type RankTier } from "@/components/primaryHub/finalChallenge/RankBadge";
+import type { RankTier } from "@/components/primaryHub/finalChallenge/RankBadge";
 import type { StageDef, UnitState, UnitDef } from "@/lib/primaryHub/types";
 
-/* ---------- 进度 → 视觉映射 (a1 完成度门控 / Rex 心情) ---------- */
+/* ---------- 进度 → 视觉映射 (tier 仅 Boss 完成时使用) ---------- */
 
 function unitBossTier(percent: number): RankTier {
   if (percent >= 100) return "rainbow";
   if (percent >= 75) return "gold";
   if (percent >= 40) return "silver";
   return "bronze";
-}
-
-function overviewRexMood(percent: number): RexMood {
-  if (percent >= 100) return "celebrating";
-  if (percent >= 51) return "excited";
-  if (percent >= 1) return "encouraging";
-  return "thinking";
 }
 
 function focusRexMood(percent: number, allDone: boolean): RexMood {
@@ -70,6 +80,31 @@ function findFocusStageIdx(
   return null;
 }
 
+/* ---------- stage.type → lucide 图标 (8 类型 exhaustive) ---------- */
+
+type LucideIconComponent = typeof BookOpen;
+
+function stageTypeToIcon(type: StageDef["type"]): LucideIconComponent {
+  switch (type) {
+    case "vocab":
+      return BookOpen;
+    case "listenWord":
+      return Headphones;
+    case "match":
+      return Puzzle;
+    case "sentence":
+      return MessageCircle;
+    case "write":
+      return Pencil;
+    case "listenSent":
+      return Ear;
+    case "readWrite":
+      return TypeIcon;
+    case "finalQuiz":
+      return Trophy;
+  }
+}
+
 /* ---------- 公共样式 ---------- */
 
 const SHELL_BG: React.CSSProperties = {
@@ -78,13 +113,16 @@ const SHELL_BG: React.CSSProperties = {
     "linear-gradient(180deg, var(--fc-paper) 0%, var(--fc-paper-warm) 100%)",
 };
 
+// 路径行内边距 + 节点大小 — connector 对齐用 (圆心 = padding-left + radius)
+const PATH_ROW_PADDING_LEFT = 14;
+const PATH_NODE_DIAMETER = 36;
+
 /* ---------- 主组件 ---------- */
 
 export default function PrimaryHubUnitGamified() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
   const { grade, state } = usePrimaryHub();
   const nav = useNavigate();
-  const [completedOpen, setCompletedOpen] = useState(false);
 
   const unit = unitId ? findUnit(unitId) : null;
   const us = unitId ? readUnitState(state, unitId) : null;
@@ -114,16 +152,31 @@ export default function PrimaryHubUnitGamified() {
   const allDone = focusIdx === null;
   const stars = us?.stars ?? 0;
   const completedSet = new Set(us?.completedStages ?? []);
-  const bossDone = bossIdx >= 0 && completedSet.has(bossIdx);
-  const bossTier = unitBossTier(p.percent);
+  // bossCompleted: 单一可信源 (只看 boss idx 是否在 completedSet)
+  const bossCompleted: boolean = bossIdx >= 0 && completedSet.has(bossIdx);
+  const bossTier: RankTier = unitBossTier(p.percent);
 
-  // 非 boss 的可玩 stages → 路径节点 (boss 单独显示)
+  // 非 boss 的可玩 stages → 路径节点
   const pathStages = unit.stages
     .map((stage, idx) => ({ stage, idx }))
     .filter(({ idx }) => idx !== bossIdx);
 
-  // 已完成 stages (用于折叠区, 不含 boss — boss 在 Boss section)
-  const doneStages = pathStages.filter(({ idx }) => completedSet.has(idx));
+  // Boss 三态派生 (只用 completedSet + 可玩 prereqs, 不引新字段)
+  const playablePathStages = pathStages.filter(
+    ({ stage, idx }) => !isReadWriteComingSoon(unitId, idx, stage),
+  );
+  const nonBossPlayable = playablePathStages.length;
+  const nonBossDone = playablePathStages.filter(({ idx }) =>
+    completedSet.has(idx),
+  ).length;
+  const prereqsAllDone = nonBossPlayable === 0 || nonBossDone >= nonBossPlayable;
+  const bossState: "A" | "B" | "C" = bossCompleted
+    ? "C"
+    : prereqsAllDone
+      ? "B"
+      : "A";
+  const prereqsRemaining = Math.max(0, nonBossPlayable - nonBossDone);
+
   const goToStage = (idx: number) =>
     nav(`${base}/semester/${semId}/unit/${unitId}/stage/${idx}`);
 
@@ -134,8 +187,8 @@ export default function PrimaryHubUnitGamified() {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 10,
-          padding: "12px 16px",
+          gap: 8,
+          padding: "8px 14px",
           background: "rgba(255, 255, 255, 0.7)",
           borderBottom: "1px solid var(--fc-border-soft)",
         }}
@@ -146,25 +199,28 @@ export default function PrimaryHubUnitGamified() {
           style={{
             background: "transparent",
             border: "none",
-            fontSize: 22,
+            fontSize: 20,
             cursor: "pointer",
             color: "var(--fc-ink)",
+            padding: "2px 4px",
           }}
           aria-label="back"
         >
           ←
         </button>
-        <div style={{ fontSize: 14, fontWeight: 700, color: "var(--fc-ink-soft)" }}>
+        <div
+          style={{ fontSize: 13, fontWeight: 700, color: "var(--fc-ink-soft)" }}
+        >
           Unit {unit.num} · {unit.cn}
         </div>
       </div>
 
-      {/* ===== 1. 顶部概览卡 ===== */}
+      {/* ===== 1. 概览卡 ===== */}
       <section
         className="fc-spring-in"
         style={{
-          margin: "16px 16px 0",
-          padding: "18px 16px",
+          margin: "10px 12px 0",
+          padding: "12px 14px",
           borderRadius: "var(--fc-radius-xl)",
           background:
             "linear-gradient(135deg, var(--fc-primary-bg) 0%, var(--fc-purple-bg) 100%)",
@@ -172,31 +228,44 @@ export default function PrimaryHubUnitGamified() {
           boxShadow: "var(--fc-shadow-card)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ flex: "0 0 auto" }}>
-            <RexMascot mood={overviewRexMood(p.percent)} size="md" showMessage={false} />
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span
+            aria-hidden
+            style={{
+              fontSize: 38,
+              lineHeight: 1,
+              flex: "0 0 auto",
+              filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))",
+            }}
+          >
+            {unit.emoji}
+          </span>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div
               style={{
-                fontSize: 21,
+                fontSize: 18,
                 fontWeight: 800,
                 color: "var(--fc-ink)",
                 fontFamily: "var(--fc-font-display)",
-                lineHeight: 1.2,
+                lineHeight: 1.15,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
-              {unit.emoji} {unit.title}
+              {unit.title}
             </div>
             <div
               style={{
-                marginTop: 4,
-                fontSize: 12,
-                color: "var(--fc-ink-mute)",
+                marginTop: 3,
+                fontSize: 11,
+                color: "var(--fc-ink-soft)",
                 fontWeight: 600,
               }}
             >
-              {allDone ? "🎉 已通关!" : `进度 ${p.completed}/${p.total}`}
+              {allDone
+                ? "🎉 已通关!"
+                : `完成 ${p.completed}/${p.total} · ⭐ ${stars} · ${p.percent}%`}
             </div>
           </div>
         </div>
@@ -204,8 +273,8 @@ export default function PrimaryHubUnitGamified() {
         {/* 进度条 */}
         <div
           style={{
-            marginTop: 14,
-            height: 8,
+            marginTop: 8,
+            height: 6,
             borderRadius: "var(--fc-radius-pill)",
             overflow: "hidden",
             background: "rgba(42, 38, 32, 0.08)",
@@ -215,26 +284,11 @@ export default function PrimaryHubUnitGamified() {
             style={{
               height: "100%",
               width: `${p.percent}%`,
-              background: "linear-gradient(90deg, var(--fc-primary) 0%, var(--fc-yellow) 100%)",
+              background:
+                "linear-gradient(90deg, var(--fc-primary) 0%, var(--fc-yellow) 100%)",
               transition: "width 400ms ease-out",
             }}
           />
-        </div>
-
-        {/* 数据带 */}
-        <div
-          style={{
-            marginTop: 12,
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: 8,
-            fontSize: 12,
-            color: "var(--fc-ink-soft)",
-          }}
-        >
-          <Stat label="完成" value={`${p.completed}/${p.total}`} />
-          <Stat label="总星" value={`⭐ ${stars}`} />
-          <Stat label="进度" value={`${p.percent}%`} />
         </div>
       </section>
 
@@ -248,178 +302,57 @@ export default function PrimaryHubUnitGamified() {
         onPlay={(idx) => goToStage(idx)}
       />
 
-      {/* ===== 3. 闯关路径 (非 boss 节点) ===== */}
-      <section style={{ padding: "8px 24px 0" }}>
+      {/* ===== 3. 闯关路径 (单列 + 虚线连接) ===== */}
+      <section style={{ padding: "12px 16px 0" }}>
         <h3
           style={{
-            margin: "0 0 12px",
-            fontSize: 13,
+            margin: "0 0 8px",
+            fontSize: 11,
             fontWeight: 700,
             color: "var(--fc-ink-mute)",
             textAlign: "center",
-            letterSpacing: 1,
+            letterSpacing: 1.2,
           }}
         >
           ✨ 闯关路径
         </h3>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+        <div
+          style={{
+            background: "rgba(255, 255, 255, 0.55)",
+            borderRadius: "var(--fc-radius-xl)",
+            border: "1px solid var(--fc-border-soft)",
+            padding: "8px 0",
+          }}
+        >
           {pathStages.map(({ stage, idx }, i) => {
             const done = completedSet.has(idx);
             const isFocus = idx === focusIdx;
             const comingSoon = isReadWriteComingSoon(unitId, idx, stage);
-            const offset = i % 2 === 0 ? -32 : 32; // 交错布局
             return (
-              <div key={stage.id} style={{ width: "100%" }}>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <PathNode
-                    stage={stage}
-                    done={done}
-                    isFocus={isFocus}
-                    comingSoon={comingSoon}
-                    offset={offset}
-                    onClick={() => !comingSoon && goToStage(idx)}
-                  />
-                </div>
-                {i < pathStages.length - 1 && <Connector />}
-              </div>
+              <Fragment key={stage.id}>
+                <PathRow
+                  stage={stage}
+                  done={done}
+                  isFocus={isFocus}
+                  comingSoon={comingSoon}
+                  onClick={() => !comingSoon && goToStage(idx)}
+                />
+                {i < pathStages.length - 1 && <PathConnector />}
+              </Fragment>
             );
           })}
         </div>
       </section>
 
-      {/* ===== 4. 已完成折叠区 (决策3: 默认收起) ===== */}
-      {doneStages.length > 0 && (
-        <section style={{ padding: "20px 16px 0" }}>
-          <button
-            type="button"
-            onClick={() => setCompletedOpen((v) => !v)}
-            className="fc-btn-press"
-            style={{
-              width: "100%",
-              padding: "10px 14px",
-              borderRadius: "var(--fc-radius)",
-              border: "1px solid var(--fc-border-soft)",
-              background: "var(--fc-green-bg)",
-              color: "var(--fc-green-dark)",
-              fontWeight: 700,
-              fontSize: 13,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              cursor: "pointer",
-            }}
-            aria-expanded={completedOpen}
-          >
-            <span>✓ 已完成 {doneStages.length} 个</span>
-            <span
-              style={{
-                fontSize: 12,
-                transition: "transform 200ms ease",
-                transform: completedOpen ? "rotate(180deg)" : "rotate(0deg)",
-              }}
-            >
-              ▼
-            </span>
-          </button>
-          {completedOpen && (
-            <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 6 }}>
-              {doneStages.map(({ stage, idx }) => (
-                <button
-                  key={stage.id}
-                  type="button"
-                  onClick={() => goToStage(idx)}
-                  className="fc-btn-press"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    width: "100%",
-                    padding: "8px 12px",
-                    borderRadius: "var(--fc-radius-sm)",
-                    background: "white",
-                    border: "1px solid var(--fc-green-light)",
-                    fontSize: 13,
-                    color: "var(--fc-ink-soft)",
-                    cursor: "pointer",
-                    textAlign: "left",
-                  }}
-                >
-                  <span style={{ fontSize: 16 }}>{stage.icon}</span>
-                  <span style={{ flex: 1, fontWeight: 600 }}>{stage.title}</span>
-                  <span style={{ color: "var(--fc-green-dark)", fontWeight: 800 }}>✓</span>
-                </button>
-              ))}
-            </div>
-          )}
-        </section>
-      )}
-
-      {/* ===== 5. Boss 终点 (RankBadge 4 档 a1) ===== */}
+      {/* ===== 4. 最终挑战卡 (Trophy 主视觉 + 三态文案) ===== */}
       {bossIdx >= 0 && (
-        <section style={{ padding: "24px 16px 60px" }}>
-          <div
-            style={{
-              padding: "20px 16px",
-              borderRadius: "var(--fc-radius-xl)",
-              background:
-                "linear-gradient(135deg, var(--fc-yellow) 0%, var(--fc-primary) 100%)",
-              border: "2px solid var(--fc-primary-dark)",
-              boxShadow: "var(--fc-shadow-game-yellow)",
-              textAlign: "center",
-              color: "white",
-            }}
-          >
-            <div
-              className={bossDone ? "fc-medal-unlock" : ""}
-              style={{ display: "inline-block" }}
-            >
-              <RankBadge tier={bossTier} size="lg" unlock={bossDone} />
-            </div>
-            <h2
-              style={{
-                marginTop: 12,
-                fontSize: 18,
-                fontWeight: 800,
-                fontFamily: "var(--fc-font-display)",
-                textShadow: "0 1px 2px rgba(0,0,0,0.15)",
-              }}
-            >
-              🏆 单元 Boss · 最终通关
-            </h2>
-            <div
-              style={{
-                marginTop: 4,
-                fontSize: 12,
-                opacity: 0.95,
-                fontWeight: 600,
-              }}
-            >
-              {bossDone
-                ? `已通关 · 当前段位 ${bossTierLabel(bossTier)}`
-                : p.percent === 0
-                  ? "先做完前面几关再挑战"
-                  : `进度 ${p.percent}% · 段位 ${bossTierLabel(bossTier)}`}
-            </div>
-            <button
-              type="button"
-              onClick={() => goToStage(bossIdx)}
-              className="fc-btn-press fc-shadow-orange"
-              style={{
-                marginTop: 16,
-                padding: "12px 30px",
-                borderRadius: "var(--fc-radius-pill)",
-                background: "white",
-                color: "var(--fc-primary-dark)",
-                fontWeight: 800,
-                fontSize: 15,
-                border: "none",
-                cursor: "pointer",
-                fontFamily: "var(--fc-font-display)",
-              }}
-            >
-              {bossDone ? "🔁 再战 Boss" : "⚔️ 挑战 Boss"}
-            </button>
-          </div>
+        <section style={{ padding: "18px 16px 60px" }}>
+          <FinalChallengeCard
+            bossState={bossState}
+            bossTier={bossTier}
+            prereqsRemaining={prereqsRemaining}
+            onPlay={() => goToStage(bossIdx)}
+          />
         </section>
       )}
     </div>
@@ -427,22 +360,6 @@ export default function PrimaryHubUnitGamified() {
 }
 
 /* ============ 子组件 ============ */
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div
-      style={{
-        background: "rgba(255, 255, 255, 0.6)",
-        borderRadius: "var(--fc-radius-sm)",
-        padding: "6px 8px",
-        textAlign: "center",
-      }}
-    >
-      <div style={{ fontWeight: 800, color: "var(--fc-ink)", fontSize: 13 }}>{value}</div>
-      <div style={{ fontSize: 10, color: "var(--fc-ink-mute)", marginTop: 2 }}>{label}</div>
-    </div>
-  );
-}
 
 function FocusCard({
   unit,
@@ -459,13 +376,13 @@ function FocusCard({
   percent: number;
   onPlay: (idx: number) => void;
 }) {
-  // 全完成: 庆祝卡 (无点击)
+  // 全完成: 庆祝卡 (无点击, Rex 庆祝)
   if (allDone) {
     return (
-      <section style={{ padding: "20px 16px 0" }}>
+      <section style={{ padding: "12px 12px 0" }}>
         <div
           style={{
-            padding: "20px 16px",
+            padding: "14px 16px",
             borderRadius: "var(--fc-radius-xl)",
             background:
               "linear-gradient(135deg, var(--fc-green-bg) 0%, var(--fc-yellow) 100%)",
@@ -473,11 +390,11 @@ function FocusCard({
             textAlign: "center",
           }}
         >
-          <RexMascot mood="celebrating" size="lg" showMessage={false} />
+          <RexMascot mood="celebrating" size="md" showMessage={false} />
           <div
             style={{
-              marginTop: 10,
-              fontSize: 18,
+              marginTop: 6,
+              fontSize: 16,
               fontWeight: 800,
               color: "var(--fc-ink)",
               fontFamily: "var(--fc-font-display)",
@@ -490,20 +407,19 @@ function FocusCard({
     );
   }
 
-  // 焦点 stage 信息
   if (focusIdx === null) return null;
   const focusStage = unit.stages[focusIdx];
   const isBossFocus = focusIdx === bossIdx;
 
   return (
-    <section style={{ padding: "20px 16px 0" }}>
+    <section style={{ padding: "10px 12px 0" }}>
       <button
         type="button"
         onClick={() => onPlay(focusIdx)}
         className="fc-btn-press fc-pulse-glow-purple"
         style={{
           width: "100%",
-          padding: "18px 16px",
+          padding: "10px 14px",
           borderRadius: "var(--fc-radius-xl)",
           border: "2px solid var(--fc-purple)",
           background:
@@ -512,84 +428,102 @@ function FocusCard({
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
-          gap: 14,
+          gap: 10,
           boxShadow: "var(--fc-shadow-card)",
         }}
       >
         <div style={{ flex: "0 0 auto" }}>
-          <RexMascot mood={focusRexMood(percent, false)} size="md" showMessage={false} />
+          <RexMascot
+            mood={focusRexMood(percent, false)}
+            size="sm"
+            showMessage={false}
+          />
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div
             style={{
-              fontSize: 11,
+              fontSize: 10,
               fontWeight: 700,
               color: "var(--fc-purple-dark)",
               letterSpacing: 1.2,
-              marginBottom: 2,
+              marginBottom: 1,
             }}
           >
-            {isBossFocus ? "🎯 准备挑战 BOSS" : "🎯 继续学"}
+            {isBossFocus ? "🎯 准备最终挑战" : "🎯 继续学"}
           </div>
           <div
             style={{
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: 800,
               color: "var(--fc-ink)",
               fontFamily: "var(--fc-font-display)",
-              lineHeight: 1.2,
+              lineHeight: 1.15,
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {focusStage.icon} {focusStage.title}
           </div>
           <div
             style={{
-              marginTop: 4,
-              fontSize: 12,
+              marginTop: 2,
+              fontSize: 11,
               color: "var(--fc-ink-soft)",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {focusStage.subtitle} · {focusStage.time}
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "var(--fc-purple)" }}>▸</div>
+        <div style={{ fontSize: 20, color: "var(--fc-purple)" }}>▸</div>
       </button>
     </section>
   );
 }
 
-function PathNode({
+function PathRow({
   stage,
   done,
   isFocus,
   comingSoon,
-  offset,
   onClick,
 }: {
   stage: StageDef;
   done: boolean;
   isFocus: boolean;
   comingSoon: boolean;
-  offset: number;
   onClick: () => void;
 }) {
-  // 三态视觉
-  let bg = "white";
-  let border = "2px solid var(--fc-border-medium)";
-  let iconColor = "var(--fc-ink-mute)";
-  let opacity = 1;
+  const TypeIconComp = stageTypeToIcon(stage.type);
+
+  // 三态视觉 (二态数据来源 + focusIdx 派生第三态)
+  let circleBg: string;
+  let circleBorder: string;
+  let nameColor: string;
+  let typeIconColor: string;
   if (comingSoon) {
-    bg = "var(--fc-paper)";
-    border = "2px dashed var(--fc-border-medium)";
-    opacity = 0.7;
+    circleBg = "var(--fc-paper)";
+    circleBorder = "2px dashed var(--fc-border-medium)";
+    nameColor = "var(--fc-ink-mute)";
+    typeIconColor = "var(--fc-ink-mute)";
   } else if (done) {
-    bg = "var(--fc-green)";
-    border = "2px solid var(--fc-green-dark)";
-    iconColor = "white";
+    circleBg = "var(--fc-green)";
+    circleBorder = "2px solid var(--fc-green-dark)";
+    nameColor = "var(--fc-green-dark)";
+    typeIconColor = "var(--fc-green-dark)";
   } else if (isFocus) {
-    bg = "var(--fc-primary-bg)";
-    border = "3px solid var(--fc-primary)";
-    iconColor = "var(--fc-primary-dark)";
+    circleBg = "white";
+    circleBorder = "2.5px solid var(--fc-primary)";
+    nameColor = "var(--fc-primary-dark)";
+    typeIconColor = "var(--fc-primary)";
+  } else {
+    circleBg = "white";
+    circleBorder = "2px solid var(--fc-border-medium)";
+    nameColor = "var(--fc-ink-soft)";
+    typeIconColor = "var(--fc-ink-mute)";
   }
 
   return (
@@ -599,80 +533,240 @@ function PathNode({
       disabled={comingSoon}
       className={comingSoon ? "" : "fc-btn-press"}
       style={{
-        transform: `translateX(${offset}px)`,
         display: "flex",
         alignItems: "center",
-        gap: 10,
-        padding: 0,
+        gap: 12,
+        padding: `8px ${PATH_ROW_PADDING_LEFT}px`,
+        width: "100%",
         background: "transparent",
         border: "none",
         cursor: comingSoon ? "not-allowed" : "pointer",
-        opacity,
+        opacity: comingSoon ? 0.7 : 1,
+        textAlign: "left",
       }}
       aria-label={stage.title}
+      data-stage-type={stage.type}
+      data-state={
+        comingSoon ? "comingSoon" : done ? "done" : isFocus ? "focus" : "todo"
+      }
     >
+      {/* 左 — 圆节点 (done=绿勾 / focus=橙环空心 / todo=灰空心) */}
       <div
         style={{
-          width: 54,
-          height: 54,
+          width: PATH_NODE_DIAMETER,
+          height: PATH_NODE_DIAMETER,
           borderRadius: "50%",
-          background: bg,
-          border,
+          background: circleBg,
+          border: circleBorder,
           display: "grid",
           placeItems: "center",
-          fontSize: 24,
-          color: iconColor,
           flex: "0 0 auto",
           boxShadow: done || isFocus ? "var(--fc-shadow-card)" : "none",
         }}
       >
-        {done ? "✓" : comingSoon ? "🚧" : stage.icon}
+        {done ? (
+          <Check size={20} color="white" strokeWidth={3} aria-hidden />
+        ) : comingSoon ? (
+          <span style={{ fontSize: 14 }} aria-hidden>
+            🚧
+          </span>
+        ) : null}
       </div>
+
+      {/* 中 — 关卡名 */}
       <div
         style={{
-          fontSize: 12,
+          flex: 1,
+          minWidth: 0,
+          fontSize: 14,
           fontWeight: 700,
-          color: done
-            ? "var(--fc-green-dark)"
-            : isFocus
-              ? "var(--fc-primary-dark)"
-              : "var(--fc-ink-mute)",
+          color: nameColor,
+          fontFamily: "var(--fc-font-display)",
           whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
         }}
       >
         {stage.title}
       </div>
+
+      {/* 右 — 类型 lucide 图标 */}
+      <TypeIconComp
+        size={20}
+        color={typeIconColor}
+        strokeWidth={done || isFocus ? 2.5 : 2}
+        aria-hidden
+      />
     </button>
   );
 }
 
-function Connector() {
+/**
+ * 节点间虚线连接器 — 全 CSS, 无资源.
+ * marginLeft 让虚线对齐圆心: PATH_ROW_PADDING_LEFT + PATH_NODE_DIAMETER/2 - 1
+ */
+function PathConnector() {
   return (
     <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 3,
-        padding: "2px 0",
-      }}
       aria-hidden
-    >
-      {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          style={{
-            width: 4,
-            height: 4,
-            borderRadius: "50%",
-            background: "var(--fc-border-medium)",
-          }}
-        />
-      ))}
-    </div>
+      style={{
+        marginLeft: PATH_ROW_PADDING_LEFT + PATH_NODE_DIAMETER / 2 - 1,
+        height: 8,
+        width: 0,
+        borderLeft: "2px dashed var(--fc-border-medium)",
+      }}
+    />
   );
 }
 
-function bossTierLabel(t: RankTier): string {
-  return t === "rainbow" ? "彩虹" : t === "gold" ? "金" : t === "silver" ? "银" : "铜";
+/* ---------- 最终挑战卡 (Trophy + 三态) ---------- */
+
+const TIER_LABELS: Record<RankTier, string> = {
+  bronze: "🥉 铜牌",
+  silver: "🥈 银牌",
+  gold: "🥇 金牌",
+  rainbow: "🌈 彩虹奖",
+};
+
+const TIER_TROPHY_COLOR: Record<RankTier, string> = {
+  bronze: "var(--fc-rank-bronze)",
+  silver: "var(--fc-rank-silver)",
+  gold: "var(--fc-rank-gold)",
+  rainbow: "#FF6B9D", // pink 强调彩虹档
+};
+
+function FinalChallengeCard({
+  bossState,
+  bossTier,
+  prereqsRemaining,
+  onPlay,
+}: {
+  bossState: "A" | "B" | "C";
+  bossTier: RankTier;
+  prereqsRemaining: number;
+  onPlay: () => void;
+}) {
+  // 三态文案 (面向四年级口语化, Aaron 待 review)
+  let metaText: string;
+  let buttonText: string;
+  if (bossState === "A") {
+    // State A 不锁 (尊重可跳关) — 按钮和 B/C 共用 onPlay 直接进 boss stage
+    metaText = `还有 ${prereqsRemaining} 关没闯过 — 也可以直接来挑战哦!`;
+    buttonText = "直接挑战 ▸";
+  } else if (bossState === "B") {
+    metaText = "前面都做完啦 — 准备好挑战了吗?";
+    buttonText = "开始挑战 ⚔️";
+  } else {
+    metaText = "全部通关,太厉害了!🎉";
+    buttonText = "再玩一次 🔁";
+  }
+
+  // 段位仅状态 C 显示 (Aaron 决策 ii)
+  const trophyColor = bossState === "C" ? TIER_TROPHY_COLOR[bossTier] : "white";
+  const trophyOpacity = bossState === "A" ? 0.85 : 1;
+
+  return (
+    <div
+      style={{
+        padding: "18px 16px",
+        borderRadius: "var(--fc-radius-xl)",
+        background:
+          "linear-gradient(135deg, var(--fc-yellow) 0%, var(--fc-primary) 100%)",
+        border: "2px solid var(--fc-primary-dark)",
+        boxShadow: "var(--fc-shadow-game-yellow)",
+        textAlign: "center",
+        color: "white",
+      }}
+    >
+      {/* Trophy 主视觉 */}
+      <div
+        className={bossState === "C" ? "fc-medal-unlock" : ""}
+        style={{
+          display: "inline-grid",
+          placeItems: "center",
+          width: 72,
+          height: 72,
+          borderRadius: "50%",
+          background: "rgba(255, 255, 255, 0.22)",
+          marginBottom: 4,
+          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+        }}
+      >
+        <Trophy
+          size={44}
+          color={trophyColor}
+          strokeWidth={2.2}
+          fill={bossState === "C" ? trophyColor : "transparent"}
+          style={{ opacity: trophyOpacity }}
+          aria-label="trophy"
+        />
+      </div>
+
+      <h2
+        style={{
+          marginTop: 4,
+          fontSize: 18,
+          fontWeight: 800,
+          fontFamily: "var(--fc-font-display)",
+          textShadow: "0 1px 2px rgba(0,0,0,0.15)",
+        }}
+      >
+        最终挑战
+      </h2>
+
+      <div
+        style={{
+          marginTop: 6,
+          fontSize: 12,
+          opacity: 0.95,
+          fontWeight: 600,
+          lineHeight: 1.4,
+        }}
+      >
+        {metaText}
+      </div>
+
+      {/* 段位标 — 仅状态 C 显示 */}
+      {bossState === "C" && (
+        <div
+          style={{
+            marginTop: 8,
+            display: "inline-block",
+            padding: "4px 12px",
+            borderRadius: "var(--fc-radius-pill)",
+            background: "rgba(255, 255, 255, 0.25)",
+            fontSize: 12,
+            fontWeight: 800,
+            letterSpacing: 0.5,
+          }}
+        >
+          {TIER_LABELS[bossTier]}
+        </div>
+      )}
+
+      <button
+        type="button"
+        onClick={onPlay}
+        className="fc-btn-press fc-shadow-orange"
+        style={{
+          marginTop: 14,
+          padding: "10px 28px",
+          borderRadius: "var(--fc-radius-pill)",
+          background: "white",
+          color: "var(--fc-primary-dark)",
+          fontWeight: 800,
+          fontSize: 14,
+          border: "none",
+          cursor: "pointer",
+          fontFamily: "var(--fc-font-display)",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+        data-boss-state={bossState}
+      >
+        {buttonText}
+      </button>
+    </div>
+  );
 }

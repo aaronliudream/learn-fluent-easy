@@ -106,9 +106,6 @@ const DEFAULT_STARS = (correct: number, total: number) => {
   return 0;
 };
 
-/** 答完后自动推进延时;孩子也可点「下一题」提前走。 */
-const ADVANCE_MS = 4000;
-
 export default function LevelShell({
   levelId,
   mode = "level",
@@ -132,24 +129,10 @@ export default function LevelShell({
   // 本场答错列表 (供 done 屏回顾;每条已同步落到 LS mistakes 入库)。
   const [wrongList, setWrongList] = useState<LevelShellWrongInfo[]>([]);
 
-  // ---- 定时器管理 (与 ListenWordStage 同款) ----
-  const timers = useRef<number[]>([]);
-  const autoAdvanceTimer = useRef<number | null>(null);
-  const after = (ms: number, fn: () => void) => {
-    const id = window.setTimeout(fn, ms);
-    timers.current.push(id);
-    return id;
-  };
-  useEffect(() => () => timers.current.forEach((t) => window.clearTimeout(t)), []);
-
   const isLast = idx >= total - 1;
 
+  // 答完不自动跳:只能由用户点「下一题 →」手动推进(给孩子复盘时间 + 给后台 AI 出题留余地)。
   const advance = useCallback(() => {
-    // 清掉待触发的自动跳,避免「手动点下一题 + 4 秒自动」各跳一次 → 跳两题
-    if (autoAdvanceTimer.current !== null) {
-      window.clearTimeout(autoAdvanceTimer.current);
-      autoAdvanceTimer.current = null;
-    }
     if (isLast) {
       setPhase("done");
     } else {
@@ -182,7 +165,7 @@ export default function LevelShell({
         // 2) 累加到本场 wrongList,done 屏供孩子/家长回顾
         setWrongList((prev) => [...prev, wrongInfo]);
       }
-      autoAdvanceTimer.current = after(ADVANCE_MS, advance);
+      // 不再自动跳:答完停在当前题,等用户点「下一题 →」
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [answered, advance, userId, grade, levelId],
@@ -541,7 +524,7 @@ export default function LevelShell({
       {/* 题目视觉 (由题型实现) */}
       {renderPlay({ idx, total, answered, picked, pick, advance })}
 
-      {/* 答完后:手动「下一题」(不点则 ADVANCE_MS 后自动跳) */}
+      {/* 答完后:手动「下一题」(唯一进入下一题的方式,无自动跳) */}
       {answered && (
         <div style={{ textAlign: "center", marginTop: 20 }}>
           <button

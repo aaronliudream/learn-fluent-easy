@@ -40,7 +40,8 @@ interface Msg {role: Role;content: string;}
 const HIDE_ON = [
 /^\/auth/,
 /^\/talk/,
-/^\/placement/];
+/^\/placement/,
+/^\/primary(\/|$)/];
 
 
 export default function GlobalAIAssistant() {

@@ -479,6 +479,41 @@ function PlayCard({
         })}
       </div>
 
+      {/* 答完显示英文原文 + 再听(让孩子看到刚才听的是什么) */}
+      {answered && (
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: 16,
+            padding: "10px 16px",
+            background: "var(--fc-surface-soft, #f5f5f5)",
+            borderRadius: 12,
+            fontSize: 18,
+            fontWeight: 700,
+            color: "var(--fc-ink)",
+          }}
+        >
+          🔊 原文:{q.audio}
+          <button
+            type="button"
+            onClick={() => void playWord(q.audio)}
+            style={{
+              marginLeft: 10,
+              padding: "4px 12px",
+              borderRadius: 999,
+              border: "none",
+              background: "var(--fc-primary)",
+              color: "white",
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: "pointer",
+            }}
+          >
+            再听
+          </button>
+        </div>
+      )}
+
       {/* 左下角 Rex */}
       <div
         style={{

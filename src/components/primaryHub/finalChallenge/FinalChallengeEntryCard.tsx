@@ -18,7 +18,12 @@ import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getGradeCourse } from "@/lib/primaryHub/courseData";
 import RexMascot from "@/components/primaryHub/finalChallenge/RexMascot";
 
-export default function FinalChallengeEntryCard() {
+export default function FinalChallengeEntryCard({
+  volume = "v2",
+}: {
+  /** 教材册别：v1=上册、v2=下册。决定闯关取哪套题（写入 sessionStorage）。 */
+  volume?: "v1" | "v2";
+}) {
   const { grade } = usePrimaryHub();
   const navigate = useNavigate();
   const course = getGradeCourse(grade);
@@ -26,7 +31,10 @@ export default function FinalChallengeEntryCard() {
   return (
     <button
       type="button"
-      onClick={() => navigate(`/primary/hub/${grade}/final-challenge`)}
+      onClick={() => {
+        sessionStorage.setItem("fc:volume", volume);
+        navigate(`/primary/hub/${grade}/final-challenge`); // URL 不变
+      }}
       className="fc-btn-press"
       style={{
         display: "block",
@@ -81,7 +89,7 @@ export default function FinalChallengeEntryCard() {
               lineHeight: 1.25,
             }}
           >
-            《英语闯关》{course.name}最终关
+            《英语闯关》{course.name}{volume === "v1" ? "上册" : "下册"}最终关
           </div>
           <div
             style={{

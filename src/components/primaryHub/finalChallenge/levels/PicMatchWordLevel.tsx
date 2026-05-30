@@ -23,9 +23,11 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 type Q = Extract<FCQuestion, { type: "picture_match_word" }>;
 
 export default function PicMatchWordLevel() {
+  // 读不到 → 默认 v2，安全。
+  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_word", 5),
-    [],
+    () => getQuestionsByType("picture_match_word", 5, vol),
+    [vol],
   );
 
   if (questions.length === 0) {

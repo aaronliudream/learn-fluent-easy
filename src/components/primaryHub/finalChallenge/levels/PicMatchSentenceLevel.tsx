@@ -22,10 +22,12 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 type Q = Extract<FCQuestion, { type: "picture_match_sentence" }>;
 
 export default function PicMatchSentenceLevel() {
+  // 读不到 → 默认 v2，安全。
+  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   // 抓 5 道题; seed 不够时 getQuestionsByType 会按现有池子返回少于 5 道。
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_sentence", 5),
-    [],
+    () => getQuestionsByType("picture_match_sentence", 5, vol),
+    [vol],
   );
 
   // 题库空时给个友好提示 (Phase 1 占位题保证至少 1 道)。

@@ -31,10 +31,12 @@ import type {
 type Q = Extract<FCQuestion, { type: "reading_judge_TF" }>;
 
 export default function ReadingJudgeLevel() {
+  // 读不到 → 默认 v2，安全。
+  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   // 1 篇 passage / 一次游玩 (将来 seed 多篇时每次随机 1 篇)。
   const questions = useMemo(
-    () => getQuestionsByType("reading_judge_TF", 1),
-    [],
+    () => getQuestionsByType("reading_judge_TF", 1, vol),
+    [vol],
   );
 
   if (questions.length === 0 || questions[0].subQuestions.length === 0) {

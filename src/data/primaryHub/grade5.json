@@ -17,42 +17,50 @@
               {
                 "en": "old",
                 "cn": "老的",
-                "emoji": "📘"
+                "emoji": "👴",
+                "phonetic": "/əʊld/"
               },
               {
                 "en": "young",
                 "cn": "年轻的",
-                "emoji": "📘"
+                "emoji": "🧒",
+                "phonetic": "/jʌŋ/"
               },
               {
                 "en": "funny",
                 "cn": "滑稽的",
-                "emoji": "📘"
+                "emoji": "😄",
+                "phonetic": "/ˈfʌni/"
               },
               {
                 "en": "kind",
                 "cn": "体贴的",
-                "emoji": "📘"
+                "emoji": "😇",
+                "phonetic": "/kaɪnd/"
               },
               {
                 "en": "strict",
                 "cn": "要求严格的",
-                "emoji": "📘"
+                "emoji": "😠",
+                "phonetic": "/strɪkt/"
               },
               {
                 "en": "polite",
                 "cn": "有礼貌的",
-                "emoji": "📘"
+                "emoji": "🙇",
+                "phonetic": "/pəˈlaɪt/"
               },
               {
                 "en": "hard-working",
                 "cn": "工作努力的",
-                "emoji": "📘"
+                "emoji": "💪",
+                "phonetic": "/ˌhɑːdˈwɜːkɪŋ/"
               },
               {
                 "en": "helpful",
                 "cn": "有用的",
-                "emoji": "📘"
+                "emoji": "🤝",
+                "phonetic": "/ˈhelpfl/"
               }
             ],
             "dialogues": [
@@ -345,42 +353,50 @@
               {
                 "en": "Monday",
                 "cn": "星期一",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈmʌndeɪ/"
               },
               {
                 "en": "Tuesday",
                 "cn": "星期二",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈtjuːzdeɪ/"
               },
               {
                 "en": "Wednesday",
                 "cn": "星期三",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈwenzdeɪ/"
               },
               {
                 "en": "Thursday",
                 "cn": "星期四",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈθɜːzdeɪ/"
               },
               {
                 "en": "Friday",
                 "cn": "星期五",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈfraɪdeɪ/"
               },
               {
                 "en": "Saturday",
                 "cn": "星期六",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈsætədeɪ/"
               },
               {
                 "en": "Sunday",
                 "cn": "星期日",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈsʌndeɪ/"
               },
               {
                 "en": "weekend",
                 "cn": "周末",
-                "emoji": "📘"
+                "emoji": "📆",
+                "phonetic": "/ˌwiːkˈend/"
               }
             ],
             "dialogues": [
@@ -685,42 +701,50 @@
               {
                 "en": "sandwich",
                 "cn": "三明治",
-                "emoji": "📘"
+                "emoji": "🥪",
+                "phonetic": "/ˈsænwɪdʒ/"
               },
               {
                 "en": "salad",
                 "cn": "蔬菜沙拉",
-                "emoji": "📘"
+                "emoji": "🥗",
+                "phonetic": "/ˈsæləd/"
               },
               {
                 "en": "hamburger",
                 "cn": "汉堡包",
-                "emoji": "📘"
+                "emoji": "🍔",
+                "phonetic": "/ˈhæmbɜːɡə/"
               },
               {
                 "en": "ice cream",
                 "cn": "冰激凌",
-                "emoji": "📘"
+                "emoji": "🍦",
+                "phonetic": "/ˈaɪs kriːm/"
               },
               {
                 "en": "tea",
                 "cn": "茶",
-                "emoji": "📘"
+                "emoji": "🍵",
+                "phonetic": "/tiː/"
               },
               {
                 "en": "fresh",
                 "cn": "新鲜的",
-                "emoji": "📘"
+                "emoji": "🥬",
+                "phonetic": "/freʃ/"
               },
               {
                 "en": "healthy",
                 "cn": "健康的",
-                "emoji": "📘"
+                "emoji": "💚",
+                "phonetic": "/ˈhelθi/"
               },
               {
                 "en": "delicious",
                 "cn": "美味的",
-                "emoji": "📘"
+                "emoji": "😋",
+                "phonetic": "/dɪˈlɪʃəs/"
               }
             ],
             "dialogues": [
@@ -1025,42 +1049,47 @@
               {
                 "en": "sing",
                 "cn": "唱",
-                "emoji": "🎵"
+                "emoji": "🎤",
+                "phonetic": "/sɪŋ/"
               },
               {
                 "en": "song",
                 "cn": "歌曲",
-                "emoji": "🎵"
+                "emoji": "🎵",
+                "phonetic": "/sɒŋ/"
               },
               {
                 "en": "sing English songs",
                 "cn": "唱英文歌曲",
-                "emoji": "🎵"
+                "emoji": "🎶"
               },
               {
                 "en": "play the pipa",
                 "cn": "弹琵琶",
-                "emoji": "📘"
+                "emoji": "🪕"
               },
               {
                 "en": "kung fu",
                 "cn": "功夫",
-                "emoji": "📘"
+                "emoji": "🥋",
+                "phonetic": "/ˌkʌŋ ˈfuː/"
               },
               {
                 "en": "do kung fu",
                 "cn": "练武术",
-                "emoji": "📘"
+                "emoji": "🥋"
               },
               {
                 "en": "dance",
                 "cn": "跳舞",
-                "emoji": "📘"
+                "emoji": "💃",
+                "phonetic": "/dɑːns/"
               },
               {
                 "en": "draw",
                 "cn": "画",
-                "emoji": "📘"
+                "emoji": "🎨",
+                "phonetic": "/drɔː/"
               }
             ],
             "dialogues": [
@@ -1353,42 +1382,49 @@
               {
                 "en": "clock",
                 "cn": "时钟",
-                "emoji": "⏰"
+                "emoji": "🕐",
+                "phonetic": "/klɒk/"
               },
               {
                 "en": "plant",
                 "cn": "植物",
-                "emoji": "📘"
+                "emoji": "🌱",
+                "phonetic": "/plɑːnt/"
               },
               {
                 "en": "bottle",
                 "cn": "瓶子",
-                "emoji": "📘"
+                "emoji": "🍼",
+                "phonetic": "/ˈbɒtl/"
               },
               {
                 "en": "water bottle",
                 "cn": "水瓶",
-                "emoji": "🍎"
+                "emoji": "🍶",
+                "phonetic": "/ˈwɔːtə bɒtl/"
               },
               {
                 "en": "bike",
                 "cn": "自行车",
-                "emoji": "🚌"
+                "emoji": "🚲",
+                "phonetic": "/baɪk/"
               },
               {
                 "en": "photo",
                 "cn": "照片",
-                "emoji": "📘"
+                "emoji": "📷",
+                "phonetic": "/ˈfəʊtəʊ/"
               },
               {
                 "en": "front",
                 "cn": "正面",
-                "emoji": "📘"
+                "emoji": "⬆️",
+                "phonetic": "/frʌnt/"
               },
               {
                 "en": "in front of",
                 "cn": "在⋯⋯前面",
-                "emoji": "📘"
+                "emoji": "↔️"
               }
             ],
             "dialogues": [
@@ -1681,42 +1717,50 @@
               {
                 "en": "forest",
                 "cn": "森林",
-                "emoji": "📘"
+                "emoji": "🌲",
+                "phonetic": "/ˈfɒrɪst/"
               },
               {
                 "en": "river",
                 "cn": "河",
-                "emoji": "📘"
+                "emoji": "🏞️",
+                "phonetic": "/ˈrɪvə/"
               },
               {
                 "en": "lake",
                 "cn": "湖",
-                "emoji": "📘"
+                "emoji": "🏞️",
+                "phonetic": "/leɪk/"
               },
               {
                 "en": "mountain",
                 "cn": "高山",
-                "emoji": "📘"
+                "emoji": "⛰️",
+                "phonetic": "/ˈmaʊntən/"
               },
               {
                 "en": "hill",
                 "cn": "山丘",
-                "emoji": "📘"
+                "emoji": "⛰️",
+                "phonetic": "/hɪl/"
               },
               {
                 "en": "tree",
                 "cn": "树",
-                "emoji": "📘"
+                "emoji": "🌳",
+                "phonetic": "/triː/"
               },
               {
                 "en": "bridge",
                 "cn": "桥",
-                "emoji": "📘"
+                "emoji": "🌉",
+                "phonetic": "/brɪdʒ/"
               },
               {
                 "en": "building",
                 "cn": "建筑物",
-                "emoji": "📘"
+                "emoji": "🏢",
+                "phonetic": "/ˈbɪldɪŋ/"
               }
             ],
             "dialogues": [
@@ -2015,42 +2059,43 @@
               {
                 "en": "eat breakfast",
                 "cn": "吃早饭",
-                "emoji": "🍎"
+                "emoji": "🍳"
               },
               {
                 "en": "have … class",
                 "cn": "上⋯⋯课",
-                "emoji": "📘"
+                "emoji": "🏫"
               },
               {
                 "en": "play sports",
                 "cn": "进行体育运动",
-                "emoji": "📘"
+                "emoji": "⚽"
               },
               {
                 "en": "exercise",
                 "cn": "活动",
-                "emoji": "📘"
+                "emoji": "🏃",
+                "phonetic": "/ˈeksəsaɪz/"
               },
               {
                 "en": "do morning exercises",
                 "cn": "做早操",
-                "emoji": "📘"
+                "emoji": "🤸"
               },
               {
                 "en": "eat dinner",
                 "cn": "吃晚饭",
-                "emoji": "🍎"
+                "emoji": "🍽️"
               },
               {
                 "en": "clean my room",
                 "cn": "打扫我的房间",
-                "emoji": "🏠"
+                "emoji": "🧹"
               },
               {
                 "en": "go for a walk",
                 "cn": "散步",
-                "emoji": "📘"
+                "emoji": "🚶"
               }
             ],
             "dialogues": [
@@ -2343,42 +2388,49 @@
               {
                 "en": "spring",
                 "cn": "春天",
-                "emoji": "📘"
+                "emoji": "🌸",
+                "phonetic": "/sprɪŋ/"
               },
               {
                 "en": "summer",
                 "cn": "夏天",
-                "emoji": "📘"
+                "emoji": "☀️",
+                "phonetic": "/ˈsʌmə/"
               },
               {
                 "en": "autumn",
                 "cn": "秋天",
-                "emoji": "📘"
+                "emoji": "🍂",
+                "phonetic": "/ˈɔːtəm/"
               },
               {
                 "en": "winter",
                 "cn": "冬天",
-                "emoji": "📘"
+                "emoji": "❄️",
+                "phonetic": "/ˈwɪntə/"
               },
               {
                 "en": "season",
                 "cn": "季节",
-                "emoji": "📘"
+                "emoji": "🍂",
+                "phonetic": "/ˈsiːzn/"
               },
               {
                 "en": "picnic",
                 "cn": "野餐",
-                "emoji": "📘"
+                "emoji": "🧺",
+                "phonetic": "/ˈpɪknɪk/"
               },
               {
                 "en": "go on a picnic",
                 "cn": "去野餐",
-                "emoji": "📘"
+                "emoji": "🧺"
               },
               {
                 "en": "pick",
                 "cn": "摘",
-                "emoji": "📘"
+                "emoji": "🤏",
+                "phonetic": "/pɪk/"
               }
             ],
             "dialogues": [
@@ -2671,42 +2723,50 @@
               {
                 "en": "January",
                 "cn": "一月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈdʒænjuəri/"
               },
               {
                 "en": "February",
                 "cn": "二月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈfebruəri/"
               },
               {
                 "en": "March",
                 "cn": "三月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/mɑːtʃ/"
               },
               {
                 "en": "April",
                 "cn": "四月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈeɪprəl/"
               },
               {
                 "en": "May",
                 "cn": "五月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/meɪ/"
               },
               {
                 "en": "June",
                 "cn": "六月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/dʒuːn/"
               },
               {
                 "en": "July",
                 "cn": "七月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/dʒuˈlaɪ/"
               },
               {
                 "en": "August",
                 "cn": "八月",
-                "emoji": "📘"
+                "emoji": "📅",
+                "phonetic": "/ˈɔːɡəst/"
               }
             ],
             "dialogues": [
@@ -2999,42 +3059,50 @@
               {
                 "en": "first",
                 "cn": "第一",
-                "emoji": "📘"
+                "emoji": "🥇",
+                "phonetic": "/fɜːst/"
               },
               {
                 "en": "second",
                 "cn": "第二",
-                "emoji": "📘"
+                "emoji": "🥈",
+                "phonetic": "/ˈsekənd/"
               },
               {
                 "en": "third",
                 "cn": "第三",
-                "emoji": "📘"
+                "emoji": "🥉",
+                "phonetic": "/θɜːd/"
               },
               {
                 "en": "fourth",
                 "cn": "第四",
-                "emoji": "📘"
+                "emoji": "4️⃣",
+                "phonetic": "/fɔːθ/"
               },
               {
                 "en": "fifth",
                 "cn": "第五",
-                "emoji": "📘"
+                "emoji": "5️⃣",
+                "phonetic": "/fɪfθ/"
               },
               {
                 "en": "twelfth",
                 "cn": "第十二",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/twelfθ/"
               },
               {
                 "en": "twentieth",
                 "cn": "第二十",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˈtwentiəθ/"
               },
               {
                 "en": "twenty-first",
                 "cn": "第二十一",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌtwentiˈfɜːst/"
               }
             ],
             "dialogues": [
@@ -3339,42 +3407,50 @@
               {
                 "en": "mine",
                 "cn": "我的",
-                "emoji": "📘"
+                "emoji": "🙋",
+                "phonetic": "/maɪn/"
               },
               {
                 "en": "yours",
                 "cn": "你的",
-                "emoji": "📘"
+                "emoji": "🫵",
+                "phonetic": "/jɔːz/"
               },
               {
                 "en": "his",
                 "cn": "他的",
-                "emoji": "📘"
+                "emoji": "👦",
+                "phonetic": "/hɪz/"
               },
               {
                 "en": "hers",
                 "cn": "她的",
-                "emoji": "📘"
+                "emoji": "👧",
+                "phonetic": "/hɜːz/"
               },
               {
                 "en": "theirs",
                 "cn": "他们的",
-                "emoji": "📘"
+                "emoji": "👨‍👩‍👧‍👦",
+                "phonetic": "/ðeəz/"
               },
               {
                 "en": "ours",
                 "cn": "我们的",
-                "emoji": "📘"
+                "emoji": "👨‍👩‍👧",
+                "phonetic": "/ˈaʊəz/"
               },
               {
                 "en": "climbing",
                 "cn": "攀登",
-                "emoji": "📘"
+                "emoji": "🧗",
+                "phonetic": "/ˈklaɪmɪŋ/"
               },
               {
                 "en": "eating",
                 "cn": "吃",
-                "emoji": "📘"
+                "emoji": "😋",
+                "phonetic": "/ˈiːtɪŋ/"
               }
             ],
             "dialogues": [
@@ -3667,42 +3743,43 @@
               {
                 "en": "doing morning exercises",
                 "cn": "做早操",
-                "emoji": "📘"
+                "emoji": "🤸"
               },
               {
                 "en": "having … class",
                 "cn": "上……课",
-                "emoji": "📘"
+                "emoji": "🏫"
               },
               {
                 "en": "eating lunch",
                 "cn": "吃午饭",
-                "emoji": "📘"
+                "emoji": "🍱"
               },
               {
                 "en": "reading a book",
                 "cn": "看书",
-                "emoji": "📚"
+                "emoji": "📖"
               },
               {
                 "en": "listening to music",
                 "cn": "听音乐",
-                "emoji": "🎵"
+                "emoji": "🎧"
               },
               {
                 "en": "keep",
                 "cn": "保持某种状态",
-                "emoji": "📘"
+                "emoji": "🤲",
+                "phonetic": "/kiːp/"
               },
               {
                 "en": "keep to the right",
                 "cn": "靠右",
-                "emoji": "📘"
+                "emoji": "➡️"
               },
               {
                 "en": "keep your desk clean",
                 "cn": "保持你 的课桌干净",
-                "emoji": "📘"
+                "emoji": "🧹"
               }
             ],
             "dialogues": [

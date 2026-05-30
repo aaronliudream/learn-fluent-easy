@@ -118,6 +118,8 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
             src={q.image}
             alt=""
             style={{
+              display: "block",
+              margin: "0 auto",
               width: 160,
               height: 160,
               objectFit: "contain",

@@ -58,6 +58,8 @@ export interface LevelShellPlayApi {
     isCorrect: boolean,
     wrongInfo?: LevelShellWrongInfo,
   ) => void;
+  /** 手动推进到下一题(答完后「下一题」按钮用)。 */
+  advance: () => void;
 }
 
 export interface LevelShellProps {
@@ -104,8 +106,8 @@ const DEFAULT_STARS = (correct: number, total: number) => {
   return 0;
 };
 
-/** 自动推进延时 (与 SpellingStage / ListenWordStage 节奏一致)。 */
-const ADVANCE_MS = 1500;
+/** 答完后自动推进延时;孩子也可点「下一题」提前走。 */
+const ADVANCE_MS = 4000;
 
 export default function LevelShell({
   levelId,
@@ -132,15 +134,22 @@ export default function LevelShell({
 
   // ---- 定时器管理 (与 ListenWordStage 同款) ----
   const timers = useRef<number[]>([]);
+  const autoAdvanceTimer = useRef<number | null>(null);
   const after = (ms: number, fn: () => void) => {
     const id = window.setTimeout(fn, ms);
     timers.current.push(id);
+    return id;
   };
   useEffect(() => () => timers.current.forEach((t) => window.clearTimeout(t)), []);
 
   const isLast = idx >= total - 1;
 
   const advance = useCallback(() => {
+    // 清掉待触发的自动跳,避免「手动点下一题 + 4 秒自动」各跳一次 → 跳两题
+    if (autoAdvanceTimer.current !== null) {
+      window.clearTimeout(autoAdvanceTimer.current);
+      autoAdvanceTimer.current = null;
+    }
     if (isLast) {
       setPhase("done");
     } else {
@@ -173,7 +182,7 @@ export default function LevelShell({
         // 2) 累加到本场 wrongList,done 屏供孩子/家长回顾
         setWrongList((prev) => [...prev, wrongInfo]);
       }
-      after(ADVANCE_MS, advance);
+      autoAdvanceTimer.current = after(ADVANCE_MS, advance);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [answered, advance, userId, grade, levelId],
@@ -530,7 +539,31 @@ export default function LevelShell({
       </div>
 
       {/* 题目视觉 (由题型实现) */}
-      {renderPlay({ idx, total, answered, picked, pick })}
+      {renderPlay({ idx, total, answered, picked, pick, advance })}
+
+      {/* 答完后:手动「下一题」(不点则 ADVANCE_MS 后自动跳) */}
+      {answered && (
+        <div style={{ textAlign: "center", marginTop: 20 }}>
+          <button
+            type="button"
+            onClick={advance}
+            className="fc-btn-press"
+            style={{
+              padding: "12px 40px",
+              borderRadius: "var(--fc-radius-pill)",
+              background: "var(--fc-primary)",
+              color: "white",
+              fontWeight: 800,
+              fontSize: 17,
+              border: "none",
+              cursor: "pointer",
+              fontFamily: "var(--fc-font-display)",
+            }}
+          >
+            {isLast ? "完成 →" : "下一题 →"}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

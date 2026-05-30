@@ -17,42 +17,50 @@
               {
                 "en": "science",
                 "cn": "科学",
-                "emoji": "📘"
+                "emoji": "🔬",
+                "phonetic": "/ˈsaɪəns/"
               },
               {
                 "en": "museum",
                 "cn": "博物馆",
-                "emoji": "📘"
+                "emoji": "🏛️",
+                "phonetic": "/mjuˈziːəm/"
               },
               {
                 "en": "post office",
                 "cn": "邮局",
-                "emoji": "📘"
+                "emoji": "🏤",
+                "phonetic": "/ˈpəʊst ɒfɪs/"
               },
               {
                 "en": "bookstore",
                 "cn": "书店",
-                "emoji": "📘"
+                "emoji": "📚",
+                "phonetic": "/ˈbʊkstɔː/"
               },
               {
                 "en": "cinema",
                 "cn": "电影院",
-                "emoji": "📘"
+                "emoji": "🎬",
+                "phonetic": "/ˈsɪnəmə/"
               },
               {
                 "en": "hospital",
                 "cn": "医院",
-                "emoji": "📘"
+                "emoji": "🏥",
+                "phonetic": "/ˈhɒspɪtl/"
               },
               {
                 "en": "crossing",
                 "cn": "十字路口",
-                "emoji": "📘"
+                "emoji": "🚦",
+                "phonetic": "/ˈkrɒsɪŋ/"
               },
               {
                 "en": "turn",
                 "cn": "转弯",
-                "emoji": "📘"
+                "emoji": "↩️",
+                "phonetic": "/tɜːn/"
               }
             ],
             "dialogues": [
@@ -345,42 +353,50 @@
               {
                 "en": "on foot",
                 "cn": "步行",
-                "emoji": "📘"
+                "emoji": "🚶",
+                "phonetic": "/ɒn ˈfʊt/"
               },
               {
                 "en": "by",
                 "cn": "乘",
-                "emoji": "📘"
+                "emoji": "🚗",
+                "phonetic": "/baɪ/"
               },
               {
                 "en": "bus",
                 "cn": "公共汽车",
-                "emoji": "🚌"
+                "emoji": "🚌",
+                "phonetic": "/bʌs/"
               },
               {
                 "en": "plane",
                 "cn": "飞机",
-                "emoji": "🚌"
+                "emoji": "✈️",
+                "phonetic": "/pleɪn/"
               },
               {
                 "en": "taxi",
                 "cn": "出租汽车",
-                "emoji": "📘"
+                "emoji": "🚕",
+                "phonetic": "/ˈtæksi/"
               },
               {
                 "en": "ship",
                 "cn": "船",
-                "emoji": "🚌"
+                "emoji": "🚢",
+                "phonetic": "/ʃɪp/"
               },
               {
                 "en": "subway",
                 "cn": "地铁",
-                "emoji": "📘"
+                "emoji": "🚇",
+                "phonetic": "/ˈsʌbweɪ/"
               },
               {
                 "en": "train",
                 "cn": "火车",
-                "emoji": "🚌"
+                "emoji": "🚆",
+                "phonetic": "/treɪn/"
               }
             ],
             "dialogues": [
@@ -673,42 +689,48 @@
               {
                 "en": "visit",
                 "cn": "拜访",
-                "emoji": "📘"
+                "emoji": "🚪",
+                "phonetic": "/ˈvɪzɪt/"
               },
               {
                 "en": "film",
                 "cn": "电影",
-                "emoji": "📘"
+                "emoji": "🎬",
+                "phonetic": "/fɪlm/"
               },
               {
                 "en": "see a film",
                 "cn": "看电影",
-                "emoji": "📘"
+                "emoji": "🎬"
               },
               {
                 "en": "trip",
                 "cn": "旅行",
-                "emoji": "📘"
+                "emoji": "🧳",
+                "phonetic": "/trɪp/"
               },
               {
                 "en": "take a trip",
                 "cn": "去旅行",
-                "emoji": "📘"
+                "emoji": "🧳"
               },
               {
                 "en": "supermarket",
                 "cn": "超市",
-                "emoji": "📘"
+                "emoji": "🛒",
+                "phonetic": "/ˈsuːpəmɑːkɪt/"
               },
               {
                 "en": "evening",
                 "cn": "晚上",
-                "emoji": "📘"
+                "emoji": "🌆",
+                "phonetic": "/ˈiːvnɪŋ/"
               },
               {
                 "en": "tonight",
                 "cn": "在今晚",
-                "emoji": "📘"
+                "emoji": "🌙",
+                "phonetic": "/təˈnaɪt/"
               }
             ],
             "dialogues": [
@@ -1013,42 +1035,50 @@
               {
                 "en": "studies",
                 "cn": "学习",
-                "emoji": "📘"
+                "emoji": "📚",
+                "phonetic": "/ˈstʌdiz/"
               },
               {
                 "en": "puzzle",
                 "cn": "谜",
-                "emoji": "📘"
+                "emoji": "🧩",
+                "phonetic": "/ˈpʌzl/"
               },
               {
                 "en": "hiking",
                 "cn": "远足",
-                "emoji": "📘"
+                "emoji": "🥾",
+                "phonetic": "/ˈhaɪkɪŋ/"
               },
               {
                 "en": "pen pal",
                 "cn": "笔友",
-                "emoji": "📘"
+                "emoji": "✉️",
+                "phonetic": "/ˈpen pæl/"
               },
               {
                 "en": "hobby",
                 "cn": "业余爱好",
-                "emoji": "📘"
+                "emoji": "🎨",
+                "phonetic": "/ˈhɒbi/"
               },
               {
                 "en": "jasmine",
                 "cn": "茉莉",
-                "emoji": "📘"
+                "emoji": "🌼",
+                "phonetic": "/ˈdʒæzmɪn/"
               },
               {
                 "en": "idea",
                 "cn": "想法",
-                "emoji": "📘"
+                "emoji": "💡",
+                "phonetic": "/aɪˈdɪə/"
               },
               {
                 "en": "Canberra",
                 "cn": "堪培拉",
-                "emoji": "📘"
+                "emoji": "🏛️",
+                "phonetic": "/ˈkænbərə/"
               }
             ],
             "dialogues": [
@@ -1341,42 +1371,50 @@
               {
                 "en": "factory",
                 "cn": "工厂",
-                "emoji": "📘"
+                "emoji": "🏭",
+                "phonetic": "/ˈfæktri/"
               },
               {
                 "en": "worker",
                 "cn": "工人",
-                "emoji": "📘"
+                "emoji": "👷",
+                "phonetic": "/ˈwɜːkə/"
               },
               {
                 "en": "postman",
                 "cn": "邮递员",
-                "emoji": "📘"
+                "emoji": "📮",
+                "phonetic": "/ˈpəʊstmən/"
               },
               {
                 "en": "businessman",
                 "cn": "商人",
-                "emoji": "📘"
+                "emoji": "💼",
+                "phonetic": "/ˈbɪznəsmæn/"
               },
               {
                 "en": "police officer",
                 "cn": "警察",
-                "emoji": "📘"
+                "emoji": "👮",
+                "phonetic": "/pəˈliːs ˈɒfɪsə/"
               },
               {
                 "en": "fisherman",
                 "cn": "渔民",
-                "emoji": "📘"
+                "emoji": "🎣",
+                "phonetic": "/ˈfɪʃəmən/"
               },
               {
                 "en": "scientist",
                 "cn": "科学家",
-                "emoji": "📘"
+                "emoji": "👨‍🔬",
+                "phonetic": "/ˈsaɪəntɪst/"
               },
               {
                 "en": "pilot",
                 "cn": "飞行员",
-                "emoji": "📘"
+                "emoji": "👨‍✈️",
+                "phonetic": "/ˈpaɪlət/"
               }
             ],
             "dialogues": [
@@ -1669,42 +1707,49 @@
               {
                 "en": "angry",
                 "cn": "生气的",
-                "emoji": "📘"
+                "emoji": "😠",
+                "phonetic": "/ˈæŋɡri/"
               },
               {
                 "en": "afraid",
                 "cn": "害怕",
-                "emoji": "📘"
+                "emoji": "😨",
+                "phonetic": "/əˈfreɪd/"
               },
               {
                 "en": "sad",
                 "cn": "难过的",
-                "emoji": "📘"
+                "emoji": "😢",
+                "phonetic": "/sæd/"
               },
               {
                 "en": "worried",
                 "cn": "担心的",
-                "emoji": "📘"
+                "emoji": "😟",
+                "phonetic": "/ˈwʌrid/"
               },
               {
                 "en": "happy",
                 "cn": "高兴的",
-                "emoji": "📘"
+                "emoji": "😀",
+                "phonetic": "/ˈhæpi/"
               },
               {
                 "en": "see a doctor",
                 "cn": "看病",
-                "emoji": "📘"
+                "emoji": "🩺"
               },
               {
                 "en": "wear",
                 "cn": "穿",
-                "emoji": "📘"
+                "emoji": "👕",
+                "phonetic": "/weə/"
               },
               {
                 "en": "more",
                 "cn": "更多的",
-                "emoji": "📘"
+                "emoji": "➕",
+                "phonetic": "/mɔː/"
               }
             ],
             "dialogues": [
@@ -2003,42 +2048,50 @@
               {
                 "en": "younger",
                 "cn": "更年轻的",
-                "emoji": "📘"
+                "emoji": "🧒",
+                "phonetic": "/ˈjʌŋɡə/"
               },
               {
                 "en": "older",
                 "cn": "更年长的",
-                "emoji": "📘"
+                "emoji": "👴",
+                "phonetic": "/ˈəʊldə/"
               },
               {
                 "en": "taller",
                 "cn": "更高的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ˈtɔːlə/"
               },
               {
                 "en": "shorter",
                 "cn": "更矮的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ˈʃɔːtə/"
               },
               {
                 "en": "longer",
                 "cn": "更长的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ˈlɒŋɡə/"
               },
               {
                 "en": "thinner",
                 "cn": "更瘦的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ˈθɪnə/"
               },
               {
                 "en": "heavier",
                 "cn": "更重的",
-                "emoji": "📘"
+                "emoji": "🏋️",
+                "phonetic": "/ˈheviə/"
               },
               {
                 "en": "bigger",
                 "cn": "更大的",
-                "emoji": "📘"
+                "emoji": "🔺",
+                "phonetic": "/ˈbɪɡə/"
               }
             ],
             "dialogues": [
@@ -2331,42 +2384,49 @@
               {
                 "en": "cleaned",
                 "cn": "打扫",
-                "emoji": "📘"
+                "emoji": "🧹",
+                "phonetic": "/kliːnd/"
               },
               {
                 "en": "stayed",
                 "cn": "停留",
-                "emoji": "📘"
+                "emoji": "🏠",
+                "phonetic": "/steɪd/"
               },
               {
                 "en": "washed",
                 "cn": "洗",
-                "emoji": "📘"
+                "emoji": "🧼",
+                "phonetic": "/wɒʃt/"
               },
               {
                 "en": "watched",
                 "cn": "看",
-                "emoji": "📘"
+                "emoji": "👀",
+                "phonetic": "/wɒtʃt/"
               },
               {
                 "en": "had",
                 "cn": "患病",
-                "emoji": "📘"
+                "emoji": "🤒",
+                "phonetic": "/hæd/"
               },
               {
                 "en": "had a cold",
                 "cn": "感冒",
-                "emoji": "☀️"
+                "emoji": "🤧"
               },
               {
                 "en": "slept",
                 "cn": "睡觉",
-                "emoji": "📘"
+                "emoji": "😴",
+                "phonetic": "/slept/"
               },
               {
                 "en": "read",
                 "cn": "读",
-                "emoji": "📚"
+                "emoji": "📖",
+                "phonetic": "/riːd/"
               }
             ],
             "dialogues": [
@@ -2671,42 +2731,48 @@
               {
                 "en": "went",
                 "cn": "去",
-                "emoji": "📘"
+                "emoji": "🚶",
+                "phonetic": "/went/"
               },
               {
                 "en": "camp",
                 "cn": "野营",
-                "emoji": "📘"
+                "emoji": "⛺",
+                "phonetic": "/kæmp/"
               },
               {
                 "en": "went camping",
                 "cn": "野营",
-                "emoji": "📘"
+                "emoji": "⛺"
               },
               {
                 "en": "fish",
                 "cn": "钓鱼",
-                "emoji": "📘"
+                "emoji": "🐟",
+                "phonetic": "/fɪʃ/"
               },
               {
                 "en": "went fishing",
                 "cn": "去钓鱼",
-                "emoji": "📘"
+                "emoji": "🎣"
               },
               {
                 "en": "rode",
                 "cn": "骑（马",
-                "emoji": "📘"
+                "emoji": "🐎",
+                "phonetic": "/rəʊd/"
               },
               {
                 "en": "hurt",
                 "cn": "受伤",
-                "emoji": "📘"
+                "emoji": "🤕",
+                "phonetic": "/hɜːt/"
               },
               {
                 "en": "ate",
                 "cn": "吃",
-                "emoji": "📘"
+                "emoji": "🍽️",
+                "phonetic": "/et/"
               }
             ],
             "dialogues": [
@@ -2999,42 +3065,49 @@
               {
                 "en": "dining hall",
                 "cn": "饭厅",
-                "emoji": "📘"
+                "emoji": "🍽️",
+                "phonetic": "/ˈdaɪnɪŋ hɔːl/"
               },
               {
                 "en": "grass",
                 "cn": "草坪",
-                "emoji": "📘"
+                "emoji": "🌱",
+                "phonetic": "/ɡrɑːs/"
               },
               {
                 "en": "gym",
                 "cn": "体育馆",
-                "emoji": "📘"
+                "emoji": "🏋️",
+                "phonetic": "/dʒɪm/"
               },
               {
                 "en": "ago",
                 "cn": "以前",
-                "emoji": "📘"
+                "emoji": "⏪",
+                "phonetic": "/əˈɡəʊ/"
               },
               {
                 "en": "cycling",
                 "cn": "骑自行车运动",
-                "emoji": "📘"
+                "emoji": "🚴",
+                "phonetic": "/ˈsaɪklɪŋ/"
               },
               {
                 "en": "go cycling",
                 "cn": "去骑自行车",
-                "emoji": "📘"
+                "emoji": "🚴"
               },
               {
                 "en": "ice-skate",
                 "cn": "滑冰",
-                "emoji": "📘"
+                "emoji": "⛸️",
+                "phonetic": "/ˈaɪs skeɪt/"
               },
               {
                 "en": "badminton",
                 "cn": "羽毛球运动",
-                "emoji": "📘"
+                "emoji": "🏸",
+                "phonetic": "/ˈbædmɪntən/"
               }
             ],
             "dialogues": [

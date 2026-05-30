@@ -17,42 +17,50 @@
               {
                 "en": "ruler",
                 "cn": "尺子",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ˈruːlə/"
               },
               {
                 "en": "pencil",
                 "cn": "铅笔",
-                "emoji": "📘"
+                "emoji": "✏️",
+                "phonetic": "/ˈpensl/"
               },
               {
                 "en": "eraser",
                 "cn": "橡皮",
-                "emoji": "📘"
+                "emoji": "🧽",
+                "phonetic": "/ɪˈreɪzə/"
               },
               {
                 "en": "crayon",
                 "cn": "蜡笔",
-                "emoji": "📘"
+                "emoji": "🖍️",
+                "phonetic": "/ˈkreɪən/"
               },
               {
                 "en": "bag",
                 "cn": "包",
-                "emoji": "📘"
+                "emoji": "🎒",
+                "phonetic": "/bæɡ/"
               },
               {
                 "en": "pen",
                 "cn": "钢笔",
-                "emoji": "📘"
+                "emoji": "🖊️",
+                "phonetic": "/pen/"
               },
               {
                 "en": "pencil box",
                 "cn": "铅笔盒",
-                "emoji": "📘"
+                "emoji": "🖊️",
+                "phonetic": "/ˈpensl bɒks/"
               },
               {
                 "en": "book",
                 "cn": "书",
-                "emoji": "📚"
+                "emoji": "📖",
+                "phonetic": "/bʊk/"
               }
             ],
             "dialogues": [
@@ -375,42 +383,50 @@
               {
                 "en": "red",
                 "cn": "红色",
-                "emoji": "🎨"
+                "emoji": "🔴",
+                "phonetic": "/red/"
               },
               {
                 "en": "green",
                 "cn": "绿色",
-                "emoji": "🎨"
+                "emoji": "🟢",
+                "phonetic": "/ɡriːn/"
               },
               {
                 "en": "yellow",
                 "cn": "黄色",
-                "emoji": "🎨"
+                "emoji": "🟡",
+                "phonetic": "/ˈjeləʊ/"
               },
               {
                 "en": "blue",
                 "cn": "蓝色",
-                "emoji": "🎨"
+                "emoji": "🔵",
+                "phonetic": "/bluː/"
               },
               {
                 "en": "black",
                 "cn": "黑色",
-                "emoji": "📘"
+                "emoji": "⚫",
+                "phonetic": "/blæk/"
               },
               {
                 "en": "brown",
                 "cn": "棕色",
-                "emoji": "📘"
+                "emoji": "🟤",
+                "phonetic": "/braʊn/"
               },
               {
                 "en": "white",
                 "cn": "白色",
-                "emoji": "📘"
+                "emoji": "⚪",
+                "phonetic": "/waɪt/"
               },
               {
                 "en": "orange",
                 "cn": "橙色",
-                "emoji": "📘"
+                "emoji": "🟠",
+                "phonetic": "/ˈɒrɪndʒ/"
               }
             ],
             "dialogues": [
@@ -743,42 +759,50 @@
               {
                 "en": "face",
                 "cn": "脸",
-                "emoji": "📘"
+                "emoji": "😊",
+                "phonetic": "/feɪs/"
               },
               {
                 "en": "ear",
                 "cn": "耳朵",
-                "emoji": "📘"
+                "emoji": "👂",
+                "phonetic": "/ɪə/"
               },
               {
                 "en": "eye",
                 "cn": "眼睛",
-                "emoji": "📘"
+                "emoji": "👁️",
+                "phonetic": "/aɪ/"
               },
               {
                 "en": "nose",
                 "cn": "鼻子",
-                "emoji": "📘"
+                "emoji": "👃",
+                "phonetic": "/nəʊz/"
               },
               {
                 "en": "mouth",
                 "cn": "嘴",
-                "emoji": "📘"
+                "emoji": "👄",
+                "phonetic": "/maʊθ/"
               },
               {
                 "en": "arm",
                 "cn": "胳膊",
-                "emoji": "📘"
+                "emoji": "💪",
+                "phonetic": "/ɑːm/"
               },
               {
                 "en": "hand",
                 "cn": "手",
-                "emoji": "📘"
+                "emoji": "✋",
+                "phonetic": "/hænd/"
               },
               {
                 "en": "head",
                 "cn": "头",
-                "emoji": "📘"
+                "emoji": "👤",
+                "phonetic": "/hed/"
               }
             ],
             "dialogues": [
@@ -1071,42 +1095,50 @@
               {
                 "en": "duck",
                 "cn": "鸭子",
-                "emoji": "🐾"
+                "emoji": "🦆",
+                "phonetic": "/dʌk/"
               },
               {
                 "en": "pig",
                 "cn": "猪",
-                "emoji": "🐾"
+                "emoji": "🐷",
+                "phonetic": "/pɪɡ/"
               },
               {
                 "en": "cat",
                 "cn": "猫",
-                "emoji": "🐾"
+                "emoji": "🐱",
+                "phonetic": "/kæt/"
               },
               {
                 "en": "bear",
                 "cn": "熊",
-                "emoji": "🐾"
+                "emoji": "🐻",
+                "phonetic": "/beə/"
               },
               {
                 "en": "dog",
                 "cn": "狗",
-                "emoji": "🐾"
+                "emoji": "🐶",
+                "phonetic": "/dɒɡ/"
               },
               {
                 "en": "elephant",
                 "cn": "大象",
-                "emoji": "📘"
+                "emoji": "🐘",
+                "phonetic": "/ˈelɪfənt/"
               },
               {
                 "en": "monkey",
                 "cn": "猴子",
-                "emoji": "📘"
+                "emoji": "🐒",
+                "phonetic": "/ˈmʌŋki/"
               },
               {
                 "en": "bird",
                 "cn": "鸟",
-                "emoji": "📘"
+                "emoji": "🐦",
+                "phonetic": "/bɜːd/"
               }
             ],
             "dialogues": [
@@ -1399,42 +1431,50 @@
               {
                 "en": "bread",
                 "cn": "面包",
-                "emoji": "🍎"
+                "emoji": "🍞",
+                "phonetic": "/bred/"
               },
               {
                 "en": "juice",
                 "cn": "果汁",
-                "emoji": "🍎"
+                "emoji": "🧃",
+                "phonetic": "/dʒuːs/"
               },
               {
                 "en": "egg",
                 "cn": "蛋",
-                "emoji": "📘"
+                "emoji": "🥚",
+                "phonetic": "/eɡ/"
               },
               {
                 "en": "milk",
                 "cn": "牛奶",
-                "emoji": "🍎"
+                "emoji": "🥛",
+                "phonetic": "/mɪlk/"
               },
               {
                 "en": "water",
                 "cn": "水",
-                "emoji": "🍎"
+                "emoji": "💧",
+                "phonetic": "/ˈwɔːtə/"
               },
               {
                 "en": "cake",
                 "cn": "蛋糕",
-                "emoji": "📘"
+                "emoji": "🎂",
+                "phonetic": "/keɪk/"
               },
               {
                 "en": "fish",
                 "cn": "鱼肉",
-                "emoji": "📘"
+                "emoji": "🐟",
+                "phonetic": "/fɪʃ/"
               },
               {
                 "en": "rice",
                 "cn": "米饭",
-                "emoji": "📘"
+                "emoji": "🍚",
+                "phonetic": "/raɪs/"
               }
             ],
             "dialogues": [
@@ -1729,42 +1769,50 @@
               {
                 "en": "one",
                 "cn": "一",
-                "emoji": "📘"
+                "emoji": "1️⃣",
+                "phonetic": "/wʌn/"
               },
               {
                 "en": "two",
                 "cn": "二",
-                "emoji": "📘"
+                "emoji": "2️⃣",
+                "phonetic": "/tuː/"
               },
               {
                 "en": "three",
                 "cn": "三",
-                "emoji": "📘"
+                "emoji": "3️⃣",
+                "phonetic": "/θriː/"
               },
               {
                 "en": "four",
                 "cn": "四",
-                "emoji": "📘"
+                "emoji": "4️⃣",
+                "phonetic": "/fɔː/"
               },
               {
                 "en": "five",
                 "cn": "五",
-                "emoji": "📘"
+                "emoji": "5️⃣",
+                "phonetic": "/faɪv/"
               },
               {
                 "en": "six",
                 "cn": "六",
-                "emoji": "📘"
+                "emoji": "6️⃣",
+                "phonetic": "/sɪks/"
               },
               {
                 "en": "seven",
                 "cn": "七",
-                "emoji": "📘"
+                "emoji": "7️⃣",
+                "phonetic": "/ˈsevn/"
               },
               {
                 "en": "eight",
                 "cn": "八",
-                "emoji": "📘"
+                "emoji": "8️⃣",
+                "phonetic": "/eɪt/"
               }
             ],
             "dialogues": [
@@ -2063,42 +2111,50 @@
               {
                 "en": "UK",
                 "cn": "英国",
-                "emoji": "📘"
+                "emoji": "🇬🇧",
+                "phonetic": "/ˌjuːˈkeɪ/"
               },
               {
                 "en": "Canada",
                 "cn": "加拿大",
-                "emoji": "📘"
+                "emoji": "🇨🇦",
+                "phonetic": "/ˈkænədə/"
               },
               {
                 "en": "USA",
                 "cn": "美国",
-                "emoji": "📘"
+                "emoji": "🇺🇸",
+                "phonetic": "/ˌjuːesˈeɪ/"
               },
               {
                 "en": "China",
                 "cn": "中国",
-                "emoji": "📘"
+                "emoji": "🇨🇳",
+                "phonetic": "/ˈtʃaɪnə/"
               },
               {
                 "en": "she",
                 "cn": "她",
-                "emoji": "📘"
+                "emoji": "👧",
+                "phonetic": "/ʃiː/"
               },
               {
                 "en": "student",
                 "cn": "学生",
-                "emoji": "🏫"
+                "emoji": "🧑‍🎓",
+                "phonetic": "/ˈstjuːdnt/"
               },
               {
                 "en": "pupil",
                 "cn": "学生",
-                "emoji": "📘"
+                "emoji": "🧑‍🎓",
+                "phonetic": "/ˈpjuːpl/"
               },
               {
                 "en": "he",
                 "cn": "他",
-                "emoji": "📘"
+                "emoji": "👦",
+                "phonetic": "/hiː/"
               }
             ],
             "dialogues": [
@@ -2391,42 +2447,50 @@
               {
                 "en": "father",
                 "cn": "父亲",
-                "emoji": "👨‍👩‍👧"
+                "emoji": "👨",
+                "phonetic": "/ˈfɑːðə/"
               },
               {
                 "en": "dad",
                 "cn": "爸爸",
-                "emoji": "👨‍👩‍👧"
+                "emoji": "👨",
+                "phonetic": "/dæd/"
               },
               {
                 "en": "man",
                 "cn": "男人",
-                "emoji": "📘"
+                "emoji": "👨",
+                "phonetic": "/mæn/"
               },
               {
                 "en": "woman",
                 "cn": "女人",
-                "emoji": "📘"
+                "emoji": "👩",
+                "phonetic": "/ˈwʊmən/"
               },
               {
                 "en": "mother",
                 "cn": "母亲",
-                "emoji": "👨‍👩‍👧"
+                "emoji": "👩",
+                "phonetic": "/ˈmʌðə/"
               },
               {
                 "en": "sister",
                 "cn": "姐",
-                "emoji": "📘"
+                "emoji": "👧",
+                "phonetic": "/ˈsɪstə/"
               },
               {
                 "en": "brother",
                 "cn": "兄",
-                "emoji": "📘"
+                "emoji": "👦",
+                "phonetic": "/ˈbrʌðə/"
               },
               {
                 "en": "grandmother",
                 "cn": "祖母",
-                "emoji": "📘"
+                "emoji": "👵",
+                "phonetic": "/ˈɡrænmʌðə/"
               }
             ],
             "dialogues": [
@@ -2719,42 +2783,50 @@
               {
                 "en": "thin",
                 "cn": "瘦的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/θɪn/"
               },
               {
                 "en": "fat",
                 "cn": "胖的",
-                "emoji": "📘"
+                "emoji": "🐷",
+                "phonetic": "/fæt/"
               },
               {
                 "en": "tall",
                 "cn": "高的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/tɔːl/"
               },
               {
                 "en": "short",
                 "cn": "矮的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/ʃɔːt/"
               },
               {
                 "en": "long",
                 "cn": "长的",
-                "emoji": "📘"
+                "emoji": "📏",
+                "phonetic": "/lɒŋ/"
               },
               {
                 "en": "small",
                 "cn": "小的",
-                "emoji": "📘"
+                "emoji": "🐜",
+                "phonetic": "/smɔːl/"
               },
               {
                 "en": "big",
                 "cn": "大的",
-                "emoji": "📘"
+                "emoji": "🐘",
+                "phonetic": "/bɪɡ/"
               },
               {
                 "en": "giraffe",
                 "cn": "长颈鹿",
-                "emoji": "📘"
+                "emoji": "🦒",
+                "phonetic": "/dʒəˈrɑːf/"
               }
             ],
             "dialogues": [
@@ -3047,42 +3119,50 @@
               {
                 "en": "on",
                 "cn": "在⋯⋯上",
-                "emoji": "📘"
+                "emoji": "🔛",
+                "phonetic": "/ɒn/"
               },
               {
                 "en": "in",
                 "cn": "在⋯⋯里",
-                "emoji": "📘"
+                "emoji": "📥",
+                "phonetic": "/ɪn/"
               },
               {
                 "en": "under",
                 "cn": "在⋯⋯下面",
-                "emoji": "📘"
+                "emoji": "⬇️",
+                "phonetic": "/ˈʌndə/"
               },
               {
                 "en": "chair",
                 "cn": "椅子",
-                "emoji": "📘"
+                "emoji": "🪑",
+                "phonetic": "/tʃeə/"
               },
               {
                 "en": "desk",
                 "cn": "书桌",
-                "emoji": "📘"
+                "emoji": "📝",
+                "phonetic": "/desk/"
               },
               {
                 "en": "cap",
                 "cn": "帽子",
-                "emoji": "📘"
+                "emoji": "🧢",
+                "phonetic": "/kæp/"
               },
               {
                 "en": "ball",
                 "cn": "球",
-                "emoji": "📘"
+                "emoji": "⚽",
+                "phonetic": "/bɔːl/"
               },
               {
                 "en": "car",
                 "cn": "小汽车",
-                "emoji": "🚌"
+                "emoji": "🚗",
+                "phonetic": "/kɑː/"
               }
             ],
             "dialogues": [
@@ -3375,42 +3455,50 @@
               {
                 "en": "pear",
                 "cn": "梨",
-                "emoji": "📘"
+                "emoji": "🍐",
+                "phonetic": "/peə/"
               },
               {
                 "en": "apple",
                 "cn": "苹果",
-                "emoji": "🍎"
+                "emoji": "🍎",
+                "phonetic": "/ˈæpl/"
               },
               {
                 "en": "orange",
                 "cn": "橙子",
-                "emoji": "📘"
+                "emoji": "🟠",
+                "phonetic": "/ˈɒrɪndʒ/"
               },
               {
                 "en": "banana",
                 "cn": "香蕉",
-                "emoji": "📘"
+                "emoji": "🍌",
+                "phonetic": "/bəˈnɑːnə/"
               },
               {
                 "en": "watermelon",
                 "cn": "西瓜",
-                "emoji": "📘"
+                "emoji": "🍉",
+                "phonetic": "/ˈwɔːtəmelən/"
               },
               {
                 "en": "strawberry",
                 "cn": "草莓",
-                "emoji": "📘"
+                "emoji": "🍓",
+                "phonetic": "/ˈstrɔːbəri/"
               },
               {
                 "en": "grape",
                 "cn": "葡萄",
-                "emoji": "📘"
+                "emoji": "🍇",
+                "phonetic": "/ɡreɪp/"
               },
               {
                 "en": "buy",
                 "cn": "买",
-                "emoji": "📘"
+                "emoji": "🛒",
+                "phonetic": "/baɪ/"
               }
             ],
             "dialogues": [
@@ -3715,42 +3803,50 @@
               {
                 "en": "eleven",
                 "cn": "十一",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ɪˈlevn/"
               },
               {
                 "en": "twelve",
                 "cn": "十二",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/twelv/"
               },
               {
                 "en": "thirteen",
                 "cn": "十三",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌθɜːˈtiːn/"
               },
               {
                 "en": "fourteen",
                 "cn": "十四",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌfɔːˈtiːn/"
               },
               {
                 "en": "fifteen",
                 "cn": "十五",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌfɪfˈtiːn/"
               },
               {
                 "en": "sixteen",
                 "cn": "十六",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌsɪksˈtiːn/"
               },
               {
                 "en": "seventeen",
                 "cn": "十七",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌsevnˈtiːn/"
               },
               {
                 "en": "eighteen",
                 "cn": "十八",
-                "emoji": "📘"
+                "emoji": "🔢",
+                "phonetic": "/ˌeɪˈtiːn/"
               }
             ],
             "dialogues": [

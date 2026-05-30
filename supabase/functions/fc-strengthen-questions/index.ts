@@ -375,9 +375,6 @@ ${sample || "(无具体样本, 仅按标签出题)"}
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: userPrompt },
           ],
-          // 关掉 gemini-2.5-flash 默认的 thinking:出 5 道选择题不需要深度推理,
-          // 关后首字时间显著缩短(出题更快)。若题质量下降可退回 "low"。
-          reasoning_effort: "none",
           response_format: { type: "json_object" },
         }),
       },

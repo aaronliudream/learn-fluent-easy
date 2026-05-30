@@ -312,8 +312,8 @@
     "vocab_domain": ["family_members", "family_jobs"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["uncle", "aunt", "driver"],
-    "answer": 2,
+    "options": ["driver", "uncle", "aunt"],
+    "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
   },
@@ -325,8 +325,8 @@
     "vocab_domain": ["school_things"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["pencil", "eraser", "soup"],
-    "answer": 2,
+    "options": ["pencil", "soup", "eraser"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
   },
@@ -351,8 +351,8 @@
     "vocab_domain": ["food_tableware"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["fork", "knife", "uncle"],
-    "answer": 2,
+    "options": ["uncle", "fork", "knife"],
+    "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
   },
@@ -364,8 +364,8 @@
     "vocab_domain": ["appearance_personality"],
     "grammar_point": ["categorization"],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["tall", "thin", "candy"],
-    "answer": 2,
+    "options": ["tall", "candy", "thin"],
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
   },

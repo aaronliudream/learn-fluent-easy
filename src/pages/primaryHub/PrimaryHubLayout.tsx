@@ -51,7 +51,7 @@ export default function PrimaryHubLayout() {
   return (
     <PrimaryHubProvider grade={grade}>
       <div className="primary-hub-root mx-auto max-w-lg">
-        <Outlet />
+        <Outlet key={grade} />
         <BottomNav grade={grade} />
       </div>
     </PrimaryHubProvider>

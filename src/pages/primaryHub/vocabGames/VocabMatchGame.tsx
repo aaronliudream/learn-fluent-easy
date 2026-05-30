@@ -23,7 +23,7 @@ export default function VocabMatchGame() {
 
   const begin = () => {
     unlockAudioSync(); // iOS:必须在点击同步事件里解锁
-    prefetchHubVocabulary(words.map((w) => w.en), 4);
+    prefetchHubVocabulary(words.map((w) => w.en), grade);
     setStarted(true);
   };
 

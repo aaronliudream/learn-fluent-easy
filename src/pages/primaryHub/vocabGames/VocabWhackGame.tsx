@@ -11,7 +11,7 @@ import { Intro } from "./VocabMatchGame";
 
 const ROUND = 10;
 const HOLES = 6;
-const PER_Q_MS = 5000;
+const PER_Q_MS = 8000; // 每题限时（毫秒）。想更宽松/更紧张就改这个数。
 
 /** 6 个地洞的英文:1 个目标 + 5 个干扰,打乱。 */
 function buildHoles(target: GameWord, pool: GameWord[]): string[] {
@@ -36,9 +36,12 @@ export default function VocabWhackGame() {
   const [idx, setIdx] = useState(0);
   const [hits, setHits] = useState(0);
   const [answered, setAnswered] = useState(false);
-  const [flash, setFlash] = useState<"hit" | "miss" | null>(null);
+  const [flash, setFlash] = useState<"hit" | "miss" | "timeout" | null>(null);
+  const [flashAt, setFlashAt] = useState<number | null>(null);
+  const [remainMs, setRemainMs] = useState(PER_Q_MS);
   const [done, setDone] = useState(false);
   const timer = useRef<number | null>(null);
+  const tick = useRef<number | null>(null);
 
   const cur = prompts[idx];
   const holes = useMemo(() => (cur ? buildHoles(cur, pool) : []), [cur, pool]);
@@ -49,9 +52,16 @@ export default function VocabWhackGame() {
       timer.current = null;
     }
   };
+  const clearTick = () => {
+    if (tick.current !== null) {
+      window.clearInterval(tick.current);
+      tick.current = null;
+    }
+  };
 
   const advance = useCallback(() => {
     clearT();
+    clearTick();
     if (idx >= prompts.length - 1) {
       stopSpeaking();
       setDone(true);
@@ -60,37 +70,58 @@ export default function VocabWhackGame() {
     }
   }, [idx, prompts.length]);
 
-  // 每题:播报目标英文 + 限时
+  // 每题:播报目标英文 + 限时 + 倒计时条
   useEffect(() => {
     if (!started || done || !cur) return;
     setAnswered(false);
-    hubSpeak(cur.en, 0.85, 4);
+    setRemainMs(PER_Q_MS);
+    hubSpeak(cur.en, 0.85, grade);
+    clearTick();
+    tick.current = window.setInterval(() => {
+      setRemainMs((m) => Math.max(0, m - 100));
+    }, 100);
     timer.current = window.setTimeout(() => {
+      clearTick();
       setAnswered(true);
-      recordResult(cur.id, false); // 超时算错
-      setFlash("miss");
+      setRemainMs(0);
+      // 超时不计错:只揭示正确答案(⏰),不 recordResult、不扣掌握度
+      setFlashAt(holes.indexOf(cur.en));
+      setFlash("timeout");
       window.setTimeout(() => {
         setFlash(null);
+        setFlashAt(null);
         advance();
-      }, 650);
+      }, 800);
     }, PER_Q_MS);
-    return clearT;
+    return () => {
+      clearT();
+      clearTick();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, started, round]);
 
-  useEffect(() => () => stopSpeaking(), []);
+  useEffect(
+    () => () => {
+      stopSpeaking();
+      clearTick();
+    },
+    [],
+  );
 
-  const whack = (en: string) => {
+  const whack = (en: string, i: number) => {
     if (answered || !cur || done) return;
     setAnswered(true);
     clearT();
+    clearTick();
     const correct = en === cur.en;
     recordResult(cur.id, correct);
     if (correct) setHits((h) => h + 1);
+    setFlashAt(i);
     setFlash(correct ? "hit" : "miss");
     window.setTimeout(
       () => {
         setFlash(null);
+        setFlashAt(null);
         advance();
       },
       correct ? 450 : 650,
@@ -99,7 +130,10 @@ export default function VocabWhackGame() {
 
   const begin = () => {
     unlockAudioSync();
-    prefetchHubVocabulary(prompts.map((w) => w.en), 4);
+    prefetchHubVocabulary(
+      prompts.map((w) => w.en),
+      grade,
+    );
     setStarted(true);
   };
   const again = () => {
@@ -115,7 +149,7 @@ export default function VocabWhackGame() {
       <Intro
         title="打地鼠"
         emoji="🔨"
-        hint="看屏幕上方的中文,听发音,敲中顶着对应英文单词的地鼠。每题 5 秒!"
+        hint="看屏幕上方的中文,听发音,敲中顶着对应英文单词的地鼠。注意上方倒计时条!"
         onStart={begin}
         onBack={() => navigate(`${base}/vocab-games`)}
       />
@@ -143,13 +177,21 @@ export default function VocabWhackGame() {
           {cur?.cn}
           <button
             type="button"
-            onClick={() => cur && hubSpeak(cur.en, 0.85, 4)}
+            onClick={() => cur && hubSpeak(cur.en, 0.85, grade)}
             className="rounded-full bg-white/25 px-2 py-1 text-base"
             aria-label="再听"
           >
             🔊
           </button>
         </div>
+      </div>
+
+      {/* 倒计时条 */}
+      <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/20">
+        <div
+          className="h-full rounded-full bg-white/85 transition-[width] duration-100 ease-linear"
+          style={{ width: `${(remainMs / PER_Q_MS) * 100}%` }}
+        />
       </div>
 
       {/* 地洞 */}
@@ -159,22 +201,21 @@ export default function VocabWhackGame() {
             key={`${round}-${idx}-${i}`}
             type="button"
             disabled={answered}
-            onClick={() => whack(en)}
-            className="fc-fade-in-up grid aspect-square place-items-center rounded-2xl bg-[#3a2415] p-2 shadow-inner active:scale-90 disabled:opacity-70"
+            onClick={() => whack(en, i)}
+            className="fc-fade-in-up relative grid aspect-square place-items-center rounded-2xl bg-[#3a2415] p-2 shadow-inner active:scale-90 disabled:opacity-70"
             style={{ animationDelay: `${i * 60}ms` }}
           >
             <span className="rounded-lg bg-[#caa472] px-2 py-1 text-center text-sm font-bold leading-tight text-[#3a2415]">
               {en}
             </span>
+            {flash && flashAt === i && (
+              <span className="pointer-events-none absolute inset-0 grid place-items-center text-5xl">
+                {flash === "hit" ? "💥" : flash === "timeout" ? "⏰" : "😵"}
+              </span>
+            )}
           </button>
         ))}
       </div>
-
-      {flash && (
-        <div className="pointer-events-none absolute inset-0 grid place-items-center text-7xl">
-          {flash === "hit" ? "💥" : "😵"}
-        </div>
-      )}
 
       {done && (
         <GameResult

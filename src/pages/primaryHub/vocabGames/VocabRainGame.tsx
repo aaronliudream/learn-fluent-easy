@@ -72,7 +72,7 @@ export default function VocabRainGame() {
     setAnswered(false);
     setDrop(0);
     const raf = requestAnimationFrame(() => setDrop(88));
-    hubSpeak(cur.en, 0.85, 4);
+    hubSpeak(cur.en, 0.85, grade);
     landTimer.current = window.setTimeout(() => {
       // 落地未答中 → miss
       setAnswered(true);
@@ -128,7 +128,7 @@ export default function VocabRainGame() {
 
   const begin = () => {
     unlockAudioSync();
-    prefetchHubVocabulary(words.map((w) => w.en), 4);
+    prefetchHubVocabulary(words.map((w) => w.en), grade);
     setStarted(true);
   };
   const again = () => {

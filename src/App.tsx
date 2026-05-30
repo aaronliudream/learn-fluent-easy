@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useRef, lazy, Suspense } from "react";
+import type { ReactNode } from "react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -240,6 +241,15 @@ const OAuthReturnRedirect = () => {
   return null;
 };
 
+// 《英语闯关》目前只有四年级内容（题库/AI 强化均为四年级）。
+// 非四年级的深链一律挡回该年级首页，避免 3/5/6 做到四年级题。
+// 等将来 3/5/6 配齐各自闯关种子 + 边缘函数按年级出题后再放开。
+function FinalChallengeGrade4Only({ children }: { children: ReactNode }) {
+  const { grade } = useParams<{ grade: string }>();
+  if (grade !== "4") return <Navigate to={`/primary/hub/${grade ?? "4"}`} replace />;
+  return <>{children}</>;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <I18nProvider>
@@ -315,9 +325,30 @@ const App = () => (
             <Route path="profile" element={<PrimaryHubProfile />} />
             <Route path="aitest" element={<PrimaryHubAITest />} />
             <Route path="aihistory" element={<PrimaryHubAIHistory />} />
-            <Route path="final-challenge" element={<PrimaryHubFinalChallenge />} />
-            <Route path="final-challenge/level/:levelId" element={<PrimaryHubFinalChallengeLevel />} />
-            <Route path="final-challenge/strengthen" element={<PrimaryHubFinalChallengeStrengthen />} />
+            <Route
+              path="final-challenge"
+              element={
+                <FinalChallengeGrade4Only>
+                  <PrimaryHubFinalChallenge />
+                </FinalChallengeGrade4Only>
+              }
+            />
+            <Route
+              path="final-challenge/level/:levelId"
+              element={
+                <FinalChallengeGrade4Only>
+                  <PrimaryHubFinalChallengeLevel />
+                </FinalChallengeGrade4Only>
+              }
+            />
+            <Route
+              path="final-challenge/strengthen"
+              element={
+                <FinalChallengeGrade4Only>
+                  <PrimaryHubFinalChallengeStrengthen />
+                </FinalChallengeGrade4Only>
+              }
+            />
             <Route path="vocab-games" element={<VocabGamesHome />} />
             <Route path="vocab-games/match" element={<VocabMatchGame />} />
             <Route path="vocab-games/rain" element={<VocabRainGame />} />

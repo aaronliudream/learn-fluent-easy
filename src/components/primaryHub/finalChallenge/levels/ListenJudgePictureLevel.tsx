@@ -250,6 +250,8 @@ function PlayCard({
             src={q.image}
             alt=""
             style={{
+              display: "block",
+              margin: "0 auto",
               width: 150,
               height: 150,
               objectFit: "contain",

@@ -14,6 +14,8 @@
 import { useMemo } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
+import { usePrimaryHub } from "@/lib/primaryHub/context";
+import { speakKid } from "@/lib/speak";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
@@ -23,6 +25,7 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 type Q = Extract<FCQuestion, { type: "picture_match_word" }>;
 
 export default function PicMatchWordLevel() {
+  const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const questions = useMemo(
@@ -52,12 +55,12 @@ export default function PicMatchWordLevel() {
       introHint="看一看图,从 3 个单词里选出对应的那个。"
       introMood="encouraging"
       total={questions.length}
-      renderPlay={(api) => <PlayCard q={questions[api.idx]} api={api} />}
+      renderPlay={(api) => <PlayCard q={questions[api.idx]} api={api} grade={grade} />}
     />
   );
 }
 
-function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
+function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: number }) {
   const { answered, picked, pick } = api;
   const correctIdx = q.answer;
   const isCorrect = answered && picked === correctIdx;
@@ -91,7 +94,7 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
 
   return (
     <div>
-      {/* 题干指令 */}
+      {/* 题干指令:本题型是「听词/读词 → 选图」,故文案覆盖为听词选图 */}
       <p
         style={{
           textAlign: "center",
@@ -100,10 +103,10 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
           marginBottom: 8,
         }}
       >
-        {q.prompt}
+        听一听,选出对应的图片
       </p>
 
-      {/* 大 emoji + 答对时撒星 */}
+      {/* 题干:显示要找的英文单词 + 朗读 (替代 emoji,避免题干图与选项图撞脸);答对时撒星 */}
       <div
         style={{
           position: "relative",
@@ -111,17 +114,37 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
           padding: "16px 0 24px",
         }}
       >
-        <span
+        <div
           style={{
-            display: "inline-block",
-            fontSize: 110,
-            lineHeight: 1,
-            filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
+            fontSize: 40,
+            fontWeight: 900,
+            color: "var(--fc-ink)",
+            letterSpacing: 0.5,
           }}
-          aria-hidden
         >
-          {q.emoji}
-        </span>
+          {q.options[q.answer]}
+        </div>
+        <button
+          type="button"
+          onClick={() => void speakKid(q.options[q.answer], { grade })}
+          className="fc-btn-press"
+          style={{
+            marginTop: 10,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+            padding: "6px 16px",
+            borderRadius: 999,
+            border: "none",
+            background: "var(--fc-primary)",
+            color: "white",
+            fontSize: 14,
+            fontWeight: 700,
+            cursor: "pointer",
+          }}
+        >
+          🔊 听一听
+        </button>
         {isCorrect && (
           <>
             <span

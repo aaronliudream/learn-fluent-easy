@@ -113,17 +113,39 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
           padding: "16px 0 24px",
         }}
       >
-        <span
-          style={{
-            display: "inline-block",
-            fontSize: 110,
-            lineHeight: 1,
-            filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
-          }}
-          aria-hidden
-        >
-          {q.emoji}
-        </span>
+        {q.image ? (
+          <img
+            src={q.image}
+            alt=""
+            style={{
+              width: 160,
+              height: 160,
+              objectFit: "contain",
+              filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
+            }}
+            onError={(e) => {
+              // 图加载失败 → 回退 emoji
+              const el = e.currentTarget;
+              const fb = document.createElement("span");
+              fb.textContent = q.emoji ?? "";
+              fb.style.fontSize = "110px";
+              fb.style.lineHeight = "1";
+              el.replaceWith(fb);
+            }}
+          />
+        ) : (
+          <span
+            style={{
+              display: "inline-block",
+              fontSize: 110,
+              lineHeight: 1,
+              filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
+            }}
+            aria-hidden
+          >
+            {q.emoji}
+          </span>
+        )}
         {isCorrect && (
           <>
             <span

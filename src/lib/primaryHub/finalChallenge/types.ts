@@ -58,6 +58,8 @@ export type FCQuestion =
   | (FCQuestionBase & {
       type: "picture_match_sentence";
       emoji: string;
+      /** 题干插画路径；缺省时回退 emoji。 */
+      image?: string;
       options: string[];
       answer: number;
     })
@@ -66,6 +68,8 @@ export type FCQuestion =
       type: "picture_match_word";
       emoji: string;
       options: string[];
+      /** 选项插画路径，与 options 一一对应；缺省时回退文字。 */
+      optionImages?: string[];
       answer: number;
     })
   /** 关 3：听音辨词。`audio` 为 TTS 文本。 */
@@ -79,6 +83,8 @@ export type FCQuestion =
   | (FCQuestionBase & {
       type: "listen_and_judge_picture";
       emoji: string;
+      /** 被判断的插画路径；缺省时回退 emoji。 */
+      image?: string;
       audio: string;
       options: string[];
       answer: number;

@@ -245,17 +245,39 @@ function PlayCard({
           padding: "12px 0 4px",
         }}
       >
-        <span
-          style={{
-            display: "inline-block",
-            fontSize: 96,
-            lineHeight: 1,
-            filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
-          }}
-          aria-hidden
-        >
-          {q.emoji}
-        </span>
+        {q.image ? (
+          <img
+            src={q.image}
+            alt=""
+            style={{
+              width: 150,
+              height: 150,
+              objectFit: "contain",
+              filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
+            }}
+            onError={(e) => {
+              // 图加载失败 → 回退 emoji
+              const el = e.currentTarget;
+              const fb = document.createElement("span");
+              fb.textContent = q.emoji ?? "";
+              fb.style.fontSize = "96px";
+              fb.style.lineHeight = "1";
+              el.replaceWith(fb);
+            }}
+          />
+        ) : (
+          <span
+            style={{
+              display: "inline-block",
+              fontSize: 96,
+              lineHeight: 1,
+              filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
+            }}
+            aria-hidden
+          >
+            {q.emoji}
+          </span>
+        )}
         {isCorrect && (
           <>
             <span

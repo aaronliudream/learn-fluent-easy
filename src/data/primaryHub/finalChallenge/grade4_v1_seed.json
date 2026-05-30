@@ -4,26 +4,36 @@
     "type": "picture_match_sentence",
     "unitId": "g4v1_u1",
     "difficulty": "easy",
-    "vocab_domain": ["classroom_furniture"],
-    "grammar_point": ["there_is_are"],
-    "prompt": "看图,选出与图片相符的句子。",
-    "emoji": "🖼️",
-    "options": [
-      "The picture is on the wall.",
-      "The fan is on the wall.",
-      "The light is on the door."
+    "vocab_domain": [
+      "classroom_furniture"
     ],
-    "answer": 0,
+    "grammar_point": [
+      "there_is_are"
+    ],
+    "prompt": "看图,选出与图片相符的句子。",
+    "emoji": "🪟",
+    "options": [
+      "This is a door.",
+      "This is a window.",
+      "This is a blackboard."
+    ],
+    "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/window.png"
   },
   {
     "id": "fc_g4v1_seed_02",
     "type": "picture_match_sentence",
     "unitId": "g4v1_u2",
     "difficulty": "easy",
-    "vocab_domain": ["school_things"],
-    "grammar_point": ["there_is_are", "what_is_in"],
+    "vocab_domain": [
+      "school_things"
+    ],
+    "grammar_point": [
+      "there_is_are",
+      "what_is_in"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🎒",
     "options": [
@@ -33,33 +43,43 @@
     ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/schoolbag.png"
   },
   {
     "id": "fc_g4v1_seed_03",
     "type": "picture_match_sentence",
-    "unitId": "g4v1_u3",
-    "difficulty": "medium",
-    "vocab_domain": ["appearance_personality"],
-    "grammar_point": ["he_she_is", "has_have"],
+    "unitId": "g4v1_u4",
+    "difficulty": "easy",
+    "vocab_domain": [
+      "rooms_prepositions"
+    ],
+    "grammar_point": [
+      "this_is_demonstrative"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
-    "emoji": "👦",
+    "emoji": "🛏️",
     "options": [
-      "He is short and strong.",
-      "He has long hair.",
-      "He is tall and thin."
+      "This is the kitchen.",
+      "This is the bathroom.",
+      "This is the bedroom."
     ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/bedroom.png"
   },
   {
     "id": "fc_g4v1_seed_04",
     "type": "picture_match_sentence",
     "unitId": "g4v1_u5",
     "difficulty": "easy",
-    "vocab_domain": ["food_tableware"],
-    "grammar_point": ["id_like"],
+    "vocab_domain": [
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "id_like"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🍜",
     "options": [
@@ -69,106 +89,185 @@
     ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/noodles.png"
   },
   {
     "id": "fc_g4v1_seed_05",
     "type": "picture_match_sentence",
     "unitId": "g4v1_u6",
     "difficulty": "medium",
-    "vocab_domain": ["family_jobs"],
-    "grammar_point": ["he_she_is_a_job"],
-    "prompt": "看图,选出与图片相符的句子。",
-    "emoji": "👩‍⚕️",
-    "options": [
-      "She is a teacher.",
-      "She is a doctor.",
-      "She is a nurse."
+    "vocab_domain": [
+      "family_jobs"
     ],
-    "answer": 2,
+    "grammar_point": [
+      "he_she_is_a_job"
+    ],
+    "prompt": "看图,选出与图片相符的句子。",
+    "emoji": "👨‍🌾",
+    "options": [
+      "He is a farmer.",
+      "He is a driver.",
+      "He is a cook."
+    ],
+    "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/farmer.png"
   },
   {
     "id": "fc_g4v1_seed_06",
     "type": "picture_match_word",
     "unitId": "g4v1_u1",
     "difficulty": "easy",
-    "vocab_domain": ["classroom_furniture"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "classroom_furniture"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "📺",
-    "options": ["window", "blackboard", "TV"],
+    "options": [
+      "window",
+      "blackboard",
+      "TV"
+    ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/window.png",
+      "/primary/finalChallenge_images/blackboard.png",
+      "/primary/finalChallenge_images/tv.png"
+    ]
   },
   {
     "id": "fc_g4v1_seed_07",
     "type": "picture_match_word",
     "unitId": "g4v1_u2",
     "difficulty": "easy",
-    "vocab_domain": ["school_things"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "school_things"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "✏️",
-    "options": ["ruler", "pencil", "eraser"],
+    "options": [
+      "ruler",
+      "pencil",
+      "eraser"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/ruler.png",
+      "/primary/finalChallenge_images/pencil.png",
+      "/primary/finalChallenge_images/eraser.png"
+    ]
   },
   {
     "id": "fc_g4v1_seed_08",
     "type": "picture_match_word",
     "unitId": "g4v1_u4",
     "difficulty": "medium",
-    "vocab_domain": ["rooms_prepositions"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "rooms_prepositions"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
-    "emoji": "🛏️",
-    "options": ["bathroom", "bedroom", "kitchen"],
-    "answer": 1,
+    "emoji": "🛋️",
+    "options": [
+      "bathroom",
+      "bedroom",
+      "living room"
+    ],
+    "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/bathroom.png",
+      "/primary/finalChallenge_images/bedroom.png",
+      "/primary/finalChallenge_images/livingroom.png"
+    ]
   },
   {
     "id": "fc_g4v1_seed_09",
     "type": "picture_match_word",
     "unitId": "g4v1_u5",
     "difficulty": "easy",
-    "vocab_domain": ["food_tableware"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🥢",
-    "options": ["fork", "knife", "chopsticks"],
+    "options": [
+      "fork",
+      "knife",
+      "chopsticks"
+    ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/fork.png",
+      "/primary/finalChallenge_images/knife.png",
+      "/primary/finalChallenge_images/chopsticks.png"
+    ]
   },
   {
     "id": "fc_g4v1_seed_10",
     "type": "picture_match_word",
     "unitId": "g4v1_u6",
     "difficulty": "medium",
-    "vocab_domain": ["family_jobs"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "family_jobs"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🚜",
-    "options": ["driver", "farmer", "cook"],
+    "options": [
+      "driver",
+      "farmer",
+      "cook"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/driver.png",
+      "/primary/finalChallenge_images/farmer.png",
+      "/primary/finalChallenge_images/cook.png"
+    ]
   },
   {
     "id": "fc_g4v1_seed_11",
     "type": "listen_and_choose_word",
     "unitId": "g4v1_u6",
     "difficulty": "easy",
-    "vocab_domain": ["family_members"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "family_members"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "uncle",
-    "options": ["uncle", "aunt", "cousin"],
+    "options": [
+      "uncle",
+      "aunt",
+      "cousin"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -178,11 +277,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v1_u3",
     "difficulty": "medium",
-    "vocab_domain": ["appearance_personality"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "appearance_personality"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "cute",
-    "options": ["cook", "cute", "clean"],
+    "options": [
+      "cook",
+      "cute",
+      "clean"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -192,11 +299,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v1_u4",
     "difficulty": "medium",
-    "vocab_domain": ["rooms_prepositions"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "rooms_prepositions"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "bedroom",
-    "options": ["bathroom", "bedroom", "living room"],
+    "options": [
+      "bathroom",
+      "bedroom",
+      "living room"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -206,11 +321,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v1_u2",
     "difficulty": "easy",
-    "vocab_domain": ["school_things"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "school_things"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "candies",
-    "options": ["cousin", "computer", "candies"],
+    "options": [
+      "cousin",
+      "computer",
+      "candies"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -220,11 +343,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v1_u5",
     "difficulty": "easy",
-    "vocab_domain": ["food_tableware"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "soup",
-    "options": ["soup", "spoon", "shop"],
+    "options": [
+      "soup",
+      "spoon",
+      "shop"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -234,85 +365,139 @@
     "type": "listen_and_judge_picture",
     "unitId": "g4v1_u1",
     "difficulty": "easy",
-    "vocab_domain": ["classroom_furniture"],
-    "grammar_point": ["prepositions", "listening_judge"],
+    "vocab_domain": [
+      "classroom_furniture"
+    ],
+    "grammar_point": [
+      "this_is",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
-    "emoji": "🚪",
-    "audio": "The fan is near the door.",
-    "options": ["T (相符)", "F (不相符)"],
+    "emoji": "📺",
+    "audio": "This is a TV.",
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/tv.png"
   },
   {
     "id": "fc_g4v1_seed_17",
     "type": "listen_and_judge_picture",
     "unitId": "g4v1_u6",
     "difficulty": "medium",
-    "vocab_domain": ["family_jobs"],
-    "grammar_point": ["he_she_is_a_job", "listening_judge"],
+    "vocab_domain": [
+      "family_jobs"
+    ],
+    "grammar_point": [
+      "he_she_is_a_job",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "👨‍🌾",
     "audio": "He is a farmer.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/farmer.png"
   },
   {
     "id": "fc_g4v1_seed_18",
     "type": "listen_and_judge_picture",
     "unitId": "g4v1_u5",
     "difficulty": "easy",
-    "vocab_domain": ["food_tableware"],
-    "grammar_point": ["id_like", "listening_judge"],
+    "vocab_domain": [
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "id_like",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
-    "emoji": "🥩",
+    "emoji": "🍚",
     "audio": "I'd like some soup.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/rice.png"
   },
   {
     "id": "fc_g4v1_seed_19",
     "type": "listen_and_judge_picture",
     "unitId": "g4v1_u4",
     "difficulty": "medium",
-    "vocab_domain": ["rooms_prepositions"],
-    "grammar_point": ["where_are", "listening_judge"],
+    "vocab_domain": [
+      "rooms_prepositions"
+    ],
+    "grammar_point": [
+      "this_is",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
-    "emoji": "🛋️",
-    "audio": "They are in the living room.",
-    "options": ["T (相符)", "F (不相符)"],
+    "emoji": "🛁",
+    "audio": "This is the bathroom.",
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/bathroom.png"
   },
   {
     "id": "fc_g4v1_seed_20",
     "type": "listen_and_judge_picture",
-    "unitId": "g4v1_u3",
-    "difficulty": "medium",
-    "vocab_domain": ["appearance_personality"],
-    "grammar_point": ["he_she_is", "listening_judge"],
+    "unitId": "g4v1_u2",
+    "difficulty": "easy",
+    "vocab_domain": [
+      "school_things"
+    ],
+    "grammar_point": [
+      "this_is",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
-    "emoji": "💪",
-    "audio": "He is tall and strong.",
-    "options": ["T (相符)", "F (不相符)"],
-    "answer": 0,
+    "emoji": "📕",
+    "audio": "This is a ruler.",
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
+    "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级上册真题"
+    "source_ref": "改编自四年级上册真题",
+    "image": "/primary/finalChallenge_images/book.png"
   },
   {
     "id": "fc_g4v1_seed_21",
     "type": "odd_one_out",
     "unitId": "g4v1_u6",
     "difficulty": "easy",
-    "vocab_domain": ["family_members", "family_jobs"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "family_members",
+      "family_jobs"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["driver", "uncle", "aunt"],
+    "options": [
+      "driver",
+      "uncle",
+      "aunt"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -322,10 +507,18 @@
     "type": "odd_one_out",
     "unitId": "g4v1_u2",
     "difficulty": "easy",
-    "vocab_domain": ["school_things"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "school_things"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["pencil", "soup", "eraser"],
+    "options": [
+      "pencil",
+      "soup",
+      "eraser"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -335,10 +528,18 @@
     "type": "odd_one_out",
     "unitId": "g4v1_u4",
     "difficulty": "medium",
-    "vocab_domain": ["rooms_prepositions"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "rooms_prepositions"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["bedroom", "kitchen", "farmer"],
+    "options": [
+      "bedroom",
+      "kitchen",
+      "farmer"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -348,10 +549,18 @@
     "type": "odd_one_out",
     "unitId": "g4v1_u5",
     "difficulty": "medium",
-    "vocab_domain": ["food_tableware"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["uncle", "fork", "knife"],
+    "options": [
+      "uncle",
+      "fork",
+      "knife"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -361,10 +570,18 @@
     "type": "odd_one_out",
     "unitId": "g4v1_u3",
     "difficulty": "medium",
-    "vocab_domain": ["appearance_personality"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "appearance_personality"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["tall", "candy", "thin"],
+    "options": [
+      "tall",
+      "candy",
+      "thin"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级上册真题"
@@ -374,34 +591,56 @@
     "type": "reading_judge_TF",
     "unitId": "g4v1_u6",
     "difficulty": "medium",
-    "vocab_domain": ["family_members", "family_jobs", "rooms_prepositions", "food_tableware"],
-    "grammar_point": ["reading_comprehension"],
+    "vocab_domain": [
+      "family_members",
+      "family_jobs",
+      "rooms_prepositions",
+      "food_tableware"
+    ],
+    "grammar_point": [
+      "reading_comprehension"
+    ],
     "prompt": "读短文,判断下列陈述的真假。",
     "passage": "Hello, I'm Sam. There are four people in my family. This is my mother. She is in the kitchen now. She is a cook. My father is in the living room. He is tall and strong. He is a driver. We have some chicken and rice for dinner.",
     "subQuestions": [
       {
         "stem": "There are five people in Sam's family.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 1
       },
       {
         "stem": "Sam's mother is a cook.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       },
       {
         "stem": "Sam's father is in the kitchen.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 1
       },
       {
         "stem": "Sam's father is a driver.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       },
       {
         "stem": "They have some chicken and rice for dinner.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       }
     ],

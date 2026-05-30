@@ -49,7 +49,7 @@ export default function VocabGamesHome() {
           <div className="h-full rounded-full bg-white transition-all" style={{ width: `${p.percent}%` }} />
         </div>
         <div className="mt-2 text-xs opacity-90">
-          已学过 {p.seen} 词 · 在任何游戏里学会的词，所有游戏都会少出 💪
+          已学过 {p.seen} 词 · 每个词答对 2 次就算掌握，越练越牢 💪
         </div>
       </div>
 

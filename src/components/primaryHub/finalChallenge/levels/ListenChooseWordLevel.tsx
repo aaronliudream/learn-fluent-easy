@@ -138,7 +138,8 @@ function PlayCard({
             }
             done();
           });
-        const safety = window.setTimeout(done, 2500);
+        // safety 仅防 loading 永久卡死,不应短到把正常(含 CDN 加载)的播放截断 → 6s。
+        const safety = window.setTimeout(done, 6000);
         timers.current.push(safety);
       });
     },
@@ -153,6 +154,7 @@ function PlayCard({
         const id = window.setTimeout(r, 300);
         timers.current.push(id);
       });
+      stopSpeaking(); // 掐掉第一遍任何残留(即使被 safety 提前 resolve),再播第二遍,防重叠
       await playWord(word);
     },
     [playWord],

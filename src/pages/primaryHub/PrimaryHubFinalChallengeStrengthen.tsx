@@ -23,6 +23,7 @@ import {
   type StrengthenError,
 } from "@/lib/primaryHub/finalChallenge/strengthen";
 import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
+import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
 
 // 5 个 PlayCard (按 type 路由, 排除 reading_judge_TF)
 import { PicMatchSentencePlayCard } from "@/components/primaryHub/finalChallenge/levels/PicMatchSentenceLevel";
@@ -38,6 +39,16 @@ interface ErrorState {
   message: string;
 }
 
+/** 从已有种子题里挑一道"纯文本听力题"作为开场热身(0 生成等待)。
+ *  优先 listen_and_choose_word(听音辨词,最简单、无歧义);随机取一道避免每次都一样。 */
+function pickSeedWarmupQuestion(): FCQuestion | null {
+  const pool = getQuestionsByType("listen_and_choose_word");
+  if (!pool || pool.length === 0) return null;
+  const q = pool[Math.floor(Math.random() * pool.length)];
+  // 独立 id 前缀,避免与 AI 题 id 撞
+  return { ...q, id: `seed_warmup_${q.id}` } as FCQuestion;
+}
+
 export default function PrimaryHubFinalChallengeStrengthen() {
   const { grade, userId } = usePrimaryHub();
   const navigate = useNavigate();
@@ -49,27 +60,51 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const [phase, setPhase] = useState<Phase>("loading");
   const [questions, setQuestions] = useState<FCQuestion[]>([]);
   const [error, setError] = useState<ErrorState | null>(null);
+  // 进度条/isLast 用的预期总题数;先乐观按 5(1 热身 + 4 针对),AI 回来后settle 成实际数。
+  const [expectedTotal, setExpectedTotal] = useState(5);
+  // 后台生成失败但种子题在玩 → 轻提示,不打断。
+  const [bgError, setBgError] = useState<string | null>(null);
   // 用 nonce 触发"再来一轮" — 把 effect 重跑
   const [reloadNonce, setReloadNonce] = useState(0);
 
-  // 拉题
+  // 拉题:第一题用现成种子题秒出,4 道针对题后台生成、回来追加(消除 Gemini 等待)
   useEffect(() => {
     let cancelled = false;
-    setPhase("loading");
     setError(null);
-    setQuestions([]);
+    setBgError(null);
 
+    // 1) 立刻放一道种子热身题,马上进入 playing(0 等待);取不到才退回 loading
+    const seedQ = pickSeedWarmupQuestion();
+    setQuestions(seedQ ? [seedQ] : []);
+    setExpectedTotal(5);
+    setPhase(seedQ ? "playing" : "loading");
+
+    // 2) 后台生成针对性的题(有种子题则只要 4 道,补在后面;没有则要 5 道兜底)
     (async () => {
       const result: StrengthenResult | StrengthenError =
-        await fetchStrengthenQuestions(userId, grade, 5);
+        await fetchStrengthenQuestions(userId, grade, seedQ ? 4 : 5);
       if (cancelled) return;
       if (!result.ok) {
-        setError({ kind: result.kind, message: result.message });
-        setPhase("error");
+        if (seedQ) {
+          // 种子题在玩:不打断,提示一下并把本轮收尾在第 1 题
+          setBgError(result.message);
+          setExpectedTotal(1);
+        } else {
+          setError({ kind: result.kind, message: result.message });
+          setPhase("error");
+        }
         return;
       }
-      setQuestions(result.questions);
-      setPhase("playing");
+      // 追加到种子题后面;按 audio/id 去重,避免与种子题重复
+      const base = seedQ ? [seedQ] : [];
+      const seen = new Set(base.map((q) => ("audio" in q ? q.audio : q.id)));
+      const fresh = result.questions.filter(
+        (q) => !seen.has("audio" in q ? q.audio : q.id),
+      );
+      const next = [...base, ...fresh];
+      setQuestions(next);
+      setExpectedTotal(next.length);
+      if (!seedQ) setPhase("playing");
     })();
 
     return () => {
@@ -91,7 +126,25 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const renderPlay = useCallback(
     (api: LevelShellPlayApi) => {
       const q = questions[api.idx];
-      if (!q) return null;
+      // 后台题还没到(用户答得快):给轻量 loading 兜底,不白屏;到了自动渲染。
+      if (!q) {
+        return (
+          <div style={{ padding: 48, textAlign: "center", color: "var(--fc-ink-soft)" }}>
+            <div
+              className="fc-pulse-glow-purple"
+              style={{
+                margin: "0 auto 14px",
+                width: 14,
+                height: 14,
+                borderRadius: "50%",
+                background: "var(--fc-purple)",
+              }}
+              aria-label="loading"
+            />
+            马上来下一题…
+          </div>
+        );
+      }
       switch (q.type) {
         case "picture_match_sentence":
           return <PicMatchSentencePlayCard q={q} api={api} />;
@@ -230,10 +283,31 @@ export default function PrimaryHubFinalChallengeStrengthen() {
         levelName="AI 强化训练"
         introHint="Rex 按你的错题考点出了 5 道针对性强化题, 准备好了吗?"
         introMood="excited"
-        total={questions.length}
+        total={expectedTotal}             // 预期总数(种子题秒出时 questions 只有 1,用 expectedTotal 让进度/收尾正确)
         onBeforeStart={unlockAudioSync}   // iOS 音频解锁: 给 sharedAudio 一个 gesture-triggered play(), 保证混合题型里第一道是听力时也能响 (backlog #2 follow-up audit)
         renderPlay={renderPlay}
       />
+      {/* 后台生成失败但种子题在玩:顶部轻提示,不打断当前题 */}
+      {bgError && (
+        <div
+          style={{
+            position: "fixed",
+            top: 8,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 50,
+            background: "var(--fc-soft-warn)",
+            color: "white",
+            padding: "6px 14px",
+            borderRadius: 999,
+            fontSize: 12,
+            fontWeight: 700,
+            boxShadow: "var(--fc-shadow-card)",
+          }}
+        >
+          后续题加载失败,做完可「再来一轮」
+        </div>
+      )}
       {/* "再来一轮"由 LevelShell 的 done 屏不直接管, 这里全局监听 done 进入后插一个按钮的
         做法会很笨;改用更简单的方式: 在 done 屏返回按钮旁边由用户走"返回地图 → 再次进入 strengthen"
         循环, 已足够 MVP. */}

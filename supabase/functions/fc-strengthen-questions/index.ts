@@ -91,17 +91,16 @@ function validateQuestion(q: any, idx: number): { ok: true; q: GeneratedQuestion
   if (["listen_and_choose_word", "listen_and_choose_answer", "listen_and_judge_picture"].includes(q.type)) {
     if (typeof q.audio !== "string" || !q.audio) return { ok: false, reason: `[${idx}] missing audio` };
   }
-  // 听句选答:audio 是完整句子/问句,options 至少 3 个完整答语句子
-  if (q.type === "listen_and_choose_answer" && q.options.length < 3) {
-    return { ok: false, reason: `[${idx}] listen_and_choose_answer needs >=3 options` };
-  }
-  // 观测(不硬拦截,避免误杀):yes/no 疑问句问 "your",却用 his/hers 第三人称物主应答
-  //  = 高风险逻辑错(如 "Are these your pants?" → "No, they are his.")。主要靠 prompt 治理,这里只记录。
-  if (q.type === "listen_and_choose_answer" && typeof q.audio === "string") {
-    const a = q.audio.trim();
-    const ans = (q.options?.[q.answer] || "").toLowerCase();
-    if (/^(are|is|do|does|can)\b/i.test(a) && /\byour\b/i.test(a) && /\b(his|hers)\b/.test(ans)) {
-      console.warn(`[${idx}] risky listen_and_choose_answer: yes/no 问 "your" 却答 his/hers → "${a}" => "${q.options[q.answer]}"`);
+  // 听句选答:audio 必须是完整问句,options 至少 3 个完整答语句子
+  if (q.type === "listen_and_choose_answer") {
+    const a = String(q.audio || "").trim();
+    if (!a) return { ok: false, reason: `[${idx}] listen_and_choose_answer missing audio` };
+    if (q.options.length < 3) return { ok: false, reason: `[${idx}] listen_and_choose_answer needs >=3 options` };
+    // 硬禁 yes/no 一般疑问句:AI 反复在这类题配错/错判答案(如 "Are these your socks?")。
+    // 只放行 wh- 特殊疑问句。被拦的题会从结果里剔除。
+    const yesNoStart = /^(are|is|am|do|does|did|can|could|will|would|have|has|was|were|shall|should|may|might)\b/i;
+    if (yesNoStart.test(a)) {
+      return { ok: false, reason: `[${idx}] listen_and_choose_answer 是 yes/no 疑问句(硬禁): "${a}"` };
     }
   }
   // T/F 类必须正好 2 个固定 options
@@ -146,7 +145,7 @@ const SEED_FEW_SHOT = [
     vocab_domain: ["jobs"],
     grammar_point: ["wh_question_answer"],
     prompt: "听一听,选出正确的回答。",
-    // 优先 wh- 特殊疑问句,应答最稳;尽量避免 yes/no 一般疑问句
+    // 听句选答只用 wh- 特殊疑问句;严格禁止 yes/no 一般疑问句(schema 也会硬拦)
     audio: "What's his job?",
     options: ["He is a farmer.", "It's a book.", "Yes, I am."],
     answer: 0,
@@ -271,15 +270,12 @@ ${GRADE4_WORDS.join(", ")}
 - 所有英文单词必须来自上面的白名单。
 
 【listen_and_choose_answer 专项规则 — 违反则该题作废】
-- audio 优先用特殊疑问句(wh- 开头): What's his job? / Where is the cat? /
-  What colour is it? / Whose bag is this? / How much is it? / What time is it?
-- **尽量避免 yes/no 一般疑问句**(Are these...? / Is this...? / Do you...?):这类应答易出错。
-  如确需出, 正确答案必须严格用以下模式之一, 且语法完全正确:
-    · "Yes, they are." / "No, they aren't."(对应 Are these...?)
-    · "Yes, it is." / "No, it isn't."(对应 Is this...?)
-    · 问 your 时用 "Yes, they're mine." / "No, they aren't." / "No, they're not mine."
-  **禁止**用 "they are his/hers" 这类第三人称物主去回答"问你的(your)"的问题
-  (反例: "Are these your pants?" 答 "No, they are his." 是错的)。
+- **严格禁止** audio 为 yes/no 一般疑问句(不得以 Are/Is/Am/Do/Does/Did/Can/Could/
+  Will/Would/Have/Has/Was/Were/Shall/Should/May/Might 开头)。这类应答 AI 反复配错,已硬性拦截。
+- audio **必须**是 wh- 特殊疑问句,以下列之一开头: What / Where / Whose / Which / Who /
+  When / How / What colour / What time / How much / How many / How old。
+  例: What's his job? / Where is the cat? / Whose coat is this? / What colour is it? /
+  How much is it? / What time is it?
 - 答语必须完整、自然、语法正确的英语口语。
 - 三个 options 有且仅有一个能正确回答 audio; 另两个是语义或语法上明显不对的干扰项(但仍通顺)。
 - 正确答案与问句严格逻辑对应: 问 job 答职业、问 where 答地点、问 whose 答物主、

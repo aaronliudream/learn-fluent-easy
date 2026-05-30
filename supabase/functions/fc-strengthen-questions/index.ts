@@ -35,10 +35,11 @@ function rateLimitOk(key: string): boolean {
 }
 
 // ---------- Types (本函数自包含, 与前端 FCQuestion 对齐) ----------
+// AI 强化只出"纯文本/听力类"题型(都不需要图片,AI 能完整生成)。
+// 看图题 (picture_match_word/sentence) 已移除:AI 给不了图 → 畸形题根源。
 type FCType =
-  | "picture_match_sentence"
-  | "picture_match_word"
   | "listen_and_choose_word"
+  | "listen_and_choose_answer"
   | "listen_and_judge_picture"
   | "odd_one_out";
 
@@ -62,9 +63,8 @@ interface GeneratedQuestion {
 function validateQuestion(q: any, idx: number): { ok: true; q: GeneratedQuestion } | { ok: false; reason: string } {
   if (!q || typeof q !== "object") return { ok: false, reason: `[${idx}] not object` };
   const allowedTypes: FCType[] = [
-    "picture_match_sentence",
-    "picture_match_word",
     "listen_and_choose_word",
+    "listen_and_choose_answer",
     "listen_and_judge_picture",
     "odd_one_out",
   ];
@@ -85,11 +85,15 @@ function validateQuestion(q: any, idx: number): { ok: true; q: GeneratedQuestion
     return { ok: false, reason: `[${idx}] answer out of range` };
 
   // type-specific required fields
-  if (["picture_match_sentence", "picture_match_word", "listen_and_judge_picture"].includes(q.type)) {
+  if (q.type === "listen_and_judge_picture") {
     if (typeof q.emoji !== "string" || !q.emoji) return { ok: false, reason: `[${idx}] missing emoji` };
   }
-  if (["listen_and_choose_word", "listen_and_judge_picture"].includes(q.type)) {
+  if (["listen_and_choose_word", "listen_and_choose_answer", "listen_and_judge_picture"].includes(q.type)) {
     if (typeof q.audio !== "string" || !q.audio) return { ok: false, reason: `[${idx}] missing audio` };
+  }
+  // 听句选答:audio 是完整句子/问句,options 至少 3 个完整答语句子
+  if (q.type === "listen_and_choose_answer" && q.options.length < 3) {
+    return { ok: false, reason: `[${idx}] listen_and_choose_answer needs >=3 options` };
   }
   // T/F 类必须正好 2 个固定 options
   if (q.type === "listen_and_judge_picture") {
@@ -127,26 +131,15 @@ function shuffleAnswerPositions(questions: GeneratedQuestion[]): void {
 // ---------- Seed examples (few-shot, embedded in source) ----------
 const SEED_FEW_SHOT = [
   {
-    type: "picture_match_sentence",
-    unitId: "g4v2_u3",
+    type: "listen_and_choose_answer",
+    unitId: "g4v1_u3",
     difficulty: "easy",
-    vocab_domain: ["weather"],
-    grammar_point: ["it_is_weather"],
-    prompt: "看图,选出与图片相符的句子。",
-    emoji: "🌧️",
-    options: ["It's rainy today.", "It's sunny today.", "It's snowy today."],
+    vocab_domain: ["jobs"],
+    grammar_point: ["wh_question_answer"],
+    prompt: "听一听,选出正确的回答。",
+    audio: "What's his job?",
+    options: ["He is a farmer.", "It's a book.", "Yes, I am."],
     answer: 0,
-  },
-  {
-    type: "picture_match_word",
-    unitId: "g4v2_u5",
-    difficulty: "medium",
-    vocab_domain: ["clothing"],
-    grammar_point: ["noun_vocab"],
-    prompt: "看图,选出对应的单词。",
-    emoji: "👕",
-    options: ["shorts", "shirt", "skirt"],
-    answer: 1,
   },
   {
     type: "listen_and_choose_word",
@@ -183,8 +176,32 @@ const SEED_FEW_SHOT = [
   },
 ];
 
+// ---------- 四年级词汇白名单 (人教版上下册 168 词, 来自 src/data/primaryHub/grade4.json) ----------
+const GRADE4_WORDS = [
+  "animal", "art room", "aunt", "baby brother", "bathroom", "be careful", "bed", "bedroom",
+  "beef", "blackboard", "bowl", "breakfast", "candy", "carrot", "cheap", "chicken",
+  "Chinese book", "chopsticks", "class", "classroom", "clean", "clothes", "cloudy", "coat",
+  "cold", "come on", "computer", "computer room", "cook", "cool", "cousin", "cow", "cute",
+  "degree", "dinner", "doctor", "dollar", "door", "dress", "driver", "eat", "eighty",
+  "English book", "English class", "expensive", "fan", "farm", "farmer", "first floor",
+  "floor", "fork", "forty", "fridge", "friendly", "garden", "get up", "glasses", "glove",
+  "go home", "go to bed", "go to school", "goat", "green beans", "hair", "hat", "help",
+  "hen", "her", "his", "homework", "horse", "hot", "how about", "how much", "hurry up",
+  "jacket", "just", "just a minute", "key", "kid", "kitchen", "knife", "library", "light",
+  "living room", "lost", "lunch", "maths book", "mine", "more", "music class", "music room",
+  "near", "New York", "next to", "nice", "noodles", "notebook", "now", "nurse", "o'clock",
+  "of course", "outside", "over", "pack", "pants", "parents", "PE class", "phone", "picture",
+  "playground", "potato", "pretty", "quiet", "rainy", "really", "ruler", "sale", "scarf",
+  "schoolbag", "second floor", "sheep", "shirt", "shoe", "shorts", "sister", "size", "skirt",
+  "snowy", "so much", "sock", "sofa", "soup", "spoon", "storybook", "strong", "study",
+  "sunglasses", "sunny", "sweater", "table", "teacher's desk", "teachers' office", "these",
+  "thirty", "those", "tiger", "tomato", "too", "toy", "try on", "TV", "umbrella", "uncle",
+  "us", "vegetable", "wait", "wall", "warm", "water", "way", "weather", "whose", "window",
+  "windy", "wow", "yours", "yum",
+];
+
 // ---------- System prompt ----------
-const SYSTEM_PROMPT = `你是人教版小学四年级下册英语强化训练命题专家。基于学生错题考点,生成 5 道针对性强化练习题。
+const SYSTEM_PROMPT = `你是人教版小学四年级(上下册)英语强化训练命题专家。基于学生错题考点,生成 5 道针对性强化练习题。
 
 【输出格式】
 严格只输出 JSON, 不要 markdown 代码块。结构:
@@ -192,21 +209,20 @@ const SYSTEM_PROMPT = `你是人教版小学四年级下册英语强化训练命
 
 每个 question 对象必填字段:
 - id (string, 形如 "fc_ai_<random>")
-- type (string, 严格 5 选 1):
-  · "picture_match_sentence"  (看图选句, 需 emoji + 3 options)
-  · "picture_match_word"      (看图选词, 需 emoji + 3 options)
-  · "listen_and_choose_word"  (听音辨词, 需 audio + 3 options)
+- type (string, 严格 4 选 1, 都不需要图片):
+  · "listen_and_choose_word"  (听音辨词, 需 audio=单词 + 3 个文本单词 options)
+  · "listen_and_choose_answer"(听句选答, 需 audio=完整问句/句子 + 3 个完整答语句子 options, 只有一个能正确回答 audio)
   · "listen_and_judge_picture"(听句判图, 需 emoji + audio + options 固定 ["T (相符)","F (不相符)"])
-  · "odd_one_out"             (找不同类, 需 3 options)
-- unitId (string, 严格 6 选 1): "g4v2_u1"~"g4v2_u6"
+  · "odd_one_out"             (找不同类, 需 3 个文本单词 options)
+- unitId (string): "g4v1_u1"~"g4v1_u6" 或 "g4v2_u1"~"g4v2_u6"
 - difficulty: "easy" | "medium" | "hard"
 - vocab_domain (string[], 非空, 用蛇形小写)
 - grammar_point (string[], 非空, 用蛇形小写)
 - prompt (string, 中文题干指令)
 - options (string[], 长度 2-4)
 - answer (number, 0-based index 指向正确选项)
-- emoji (string, 仅看图/听句判图题; 单一清晰 emoji)
-- audio (string, 仅听音/听句判图题; 要朗读的英文文本)
+- emoji (string, 仅 listen_and_judge_picture 题; 单一清晰 emoji)
+- audio (string, 所有 listen_* 题必填; 要朗读的英文文本/句子)
 
 【硬约束】
 1. 题考点必须对准用户错题的 vocab_domain / grammar_point 标签
@@ -220,6 +236,18 @@ const SYSTEM_PROMPT = `你是人教版小学四年级下册英语强化训练命
 8. 听力题 audio 字段就是要朗读的英文 (可以是单词或完整句子)
 9. T/F 题 (listen_and_judge_picture) 的 options 严格用
    ["T (相符)", "F (不相符)"], 别改文案; answer ∈ {0, 1}
+
+【词汇范围 — 白名单, 只能用下列四年级词汇, 不得出现表外单词】
+(尤其禁止 pilot、bookcase、nurse 之外的职业词、desk、chair 等表外词)
+${GRADE4_WORDS.join(", ")}
+
+【禁止题型 / 内容 — 违反则该题作废】
+- 禁止"外貌/身材对比"题(tall / short / strong / thin 等),这类无法用图或 emoji 准确表达。
+- 禁止任何需要"看图"才能作答的题(本训练不提供图片)。
+- 题型只能在 listen_and_choose_word / listen_and_choose_answer / listen_and_judge_picture / odd_one_out 中选。
+- listen_and_choose_answer 的 audio 必须是完整问句或句子, options 必须是完整答语句子,
+  且三个选项里只有一个在语义/语法上能正确回答 audio。
+- 所有英文单词必须来自上面的白名单。
 
 【few-shot 样例】(参考风格 + schema, 不要照抄)
 ${JSON.stringify(SEED_FEW_SHOT, null, 2)}`;

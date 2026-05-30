@@ -64,6 +64,7 @@ export function getQuestionTypeCounts(
     picture_match_sentence: 0,
     picture_match_word: 0,
     listen_and_choose_word: 0,
+    listen_and_choose_answer: 0,
     listen_and_judge_picture: 0,
     odd_one_out: 0,
     reading_judge_TF: 0,

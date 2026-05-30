@@ -13,6 +13,8 @@ export default function PrimaryHubSemester() {
   const course = getGradeCourse(grade);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/primary/hub/${grade}`;
+  // semId 形如 grade4_volume1 / grade4_volume2 —— 上册取 v1 题库，下册默认 v2。
+  const vol = semId?.includes("volume1") ? "v1" : "v2";
 
   if (!sem || !semId) {
     return <div className="p-6 text-center">课程未找到</div>;
@@ -94,7 +96,7 @@ export default function PrimaryHubSemester() {
             </button>
           );
         })}
-        <FinalChallengeEntryCard />
+        <FinalChallengeEntryCard volume={vol} />
       </div>
     </>
   );

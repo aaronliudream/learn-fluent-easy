@@ -20,9 +20,11 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 type Q = Extract<FCQuestion, { type: "odd_one_out" }>;
 
 export default function OddOneOutLevel() {
+  // 读不到 → 默认 v2，安全。
+  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const questions = useMemo(
-    () => getQuestionsByType("odd_one_out", 5),
-    [],
+    () => getQuestionsByType("odd_one_out", 5, vol),
+    [vol],
   );
 
   if (questions.length === 0) {

@@ -4,8 +4,12 @@
     "type": "picture_match_sentence",
     "unitId": "g4v2_u3",
     "difficulty": "easy",
-    "vocab_domain": ["weather"],
-    "grammar_point": ["it_is_weather"],
+    "vocab_domain": [
+      "weather"
+    ],
+    "grammar_point": [
+      "it_is_weather"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🌧️",
     "options": [
@@ -15,15 +19,20 @@
     ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/rainy.png"
   },
   {
     "id": "fc_g4v2_seed_02",
     "type": "picture_match_sentence",
     "unitId": "g4v2_u1",
     "difficulty": "easy",
-    "vocab_domain": ["school_places"],
-    "grammar_point": ["this_is_demonstrative"],
+    "vocab_domain": [
+      "school_places"
+    ],
+    "grammar_point": [
+      "this_is_demonstrative"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "📚",
     "options": [
@@ -33,15 +42,21 @@
     ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/library.png"
   },
   {
     "id": "fc_g4v2_seed_03",
     "type": "picture_match_sentence",
     "unitId": "g4v2_u4",
     "difficulty": "medium",
-    "vocab_domain": ["farm_animals"],
-    "grammar_point": ["they_are_plural", "subject_verb_agreement"],
+    "vocab_domain": [
+      "farm_animals"
+    ],
+    "grammar_point": [
+      "they_are_plural",
+      "subject_verb_agreement"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🐄",
     "options": [
@@ -51,15 +66,20 @@
     ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/cows.png"
   },
   {
     "id": "fc_g4v2_seed_04",
     "type": "picture_match_sentence",
     "unitId": "g4v2_u2",
     "difficulty": "easy",
-    "vocab_domain": ["time"],
-    "grammar_point": ["time_oclock"],
+    "vocab_domain": [
+      "time"
+    ],
+    "grammar_point": [
+      "time_oclock"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🕐",
     "options": [
@@ -69,15 +89,20 @@
     ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/clock1.png"
   },
   {
     "id": "fc_g4v2_seed_05",
     "type": "picture_match_sentence",
     "unitId": "g4v2_u5",
     "difficulty": "medium",
-    "vocab_domain": ["clothing"],
-    "grammar_point": ["it_is_a_noun"],
+    "vocab_domain": [
+      "clothing"
+    ],
+    "grammar_point": [
+      "it_is_a_noun"
+    ],
     "prompt": "看图,选出与图片相符的句子。",
     "emoji": "🧥",
     "options": [
@@ -87,90 +112,165 @@
     ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/coat.png"
   },
-
   {
     "id": "fc_g4v2_seed_06",
     "type": "picture_match_word",
     "unitId": "g4v2_u5",
     "difficulty": "medium",
-    "vocab_domain": ["clothing"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "clothing"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "👕",
-    "options": ["shorts", "shirt", "skirt"],
+    "options": [
+      "shorts",
+      "shirt",
+      "skirt"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/shorts.png",
+      "/primary/finalChallenge_images/shirt.png",
+      "/primary/finalChallenge_images/skirt.png"
+    ]
   },
   {
     "id": "fc_g4v2_seed_07",
     "type": "picture_match_word",
     "unitId": "g4v2_u4",
     "difficulty": "easy",
-    "vocab_domain": ["vegetables", "farm_food"],
-    "grammar_point": ["noun_vocab"],
+    "vocab_domain": [
+      "vegetables",
+      "farm_food"
+    ],
+    "grammar_point": [
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🥕",
-    "options": ["tomato", "potato", "carrot"],
+    "options": [
+      "tomato",
+      "potato",
+      "carrot"
+    ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/tomato.png",
+      "/primary/finalChallenge_images/potato.png",
+      "/primary/finalChallenge_images/carrot.png"
+    ]
   },
   {
     "id": "fc_g4v2_seed_08",
     "type": "picture_match_word",
     "unitId": "g4v2_u3",
     "difficulty": "easy",
-    "vocab_domain": ["weather"],
-    "grammar_point": ["adjective_vocab"],
+    "vocab_domain": [
+      "weather"
+    ],
+    "grammar_point": [
+      "adjective_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "☀️",
-    "options": ["sunny", "snowy", "cloudy"],
+    "options": [
+      "sunny",
+      "snowy",
+      "cloudy"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/sunny.png",
+      "/primary/finalChallenge_images/snowy.png",
+      "/primary/finalChallenge_images/cloudy.png"
+    ]
   },
   {
     "id": "fc_g4v2_seed_09",
     "type": "picture_match_word",
     "unitId": "g4v2_u4",
     "difficulty": "hard",
-    "vocab_domain": ["farm_animals"],
-    "grammar_point": ["irregular_plural", "noun_vocab"],
+    "vocab_domain": [
+      "farm_animals"
+    ],
+    "grammar_point": [
+      "irregular_plural",
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🐑",
-    "options": ["ship", "sheeps", "sheep"],
+    "options": [
+      "ship",
+      "sleep",
+      "sheep"
+    ],
     "answer": 2,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/ship.png",
+      "/primary/finalChallenge_images/sleep.png",
+      "/primary/finalChallenge_images/sheep.png"
+    ]
   },
   {
     "id": "fc_g4v2_seed_10",
     "type": "picture_match_word",
     "unitId": "g4v2_u5",
     "difficulty": "medium",
-    "vocab_domain": ["clothing"],
-    "grammar_point": ["noun_plural", "noun_vocab"],
+    "vocab_domain": [
+      "clothing"
+    ],
+    "grammar_point": [
+      "noun_plural",
+      "noun_vocab"
+    ],
     "prompt": "看图,选出对应的单词。",
     "emoji": "🧦",
-    "options": ["shoes", "socks", "shorts"],
+    "options": [
+      "shoes",
+      "socks",
+      "shorts"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "optionImages": [
+      "/primary/finalChallenge_images/shoes.png",
+      "/primary/finalChallenge_images/socks.png",
+      "/primary/finalChallenge_images/shorts.png"
+    ]
   },
-
   {
     "id": "fc_g4v2_seed_11",
     "type": "listen_and_choose_word",
     "unitId": "g4v2_u3",
     "difficulty": "easy",
-    "vocab_domain": ["weather"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "weather"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "sunny",
-    "options": ["funny", "snowy", "sunny"],
+    "options": [
+      "funny",
+      "snowy",
+      "sunny"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -180,11 +280,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v2_u4",
     "difficulty": "medium",
-    "vocab_domain": ["farm_animals"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "farm_animals"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "horse",
-    "options": ["horse", "house", "cow"],
+    "options": [
+      "horse",
+      "house",
+      "cow"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -194,11 +302,19 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v2_u5",
     "difficulty": "hard",
-    "vocab_domain": ["clothing"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "clothing"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "shirt",
-    "options": ["short", "shirt", "skirt"],
+    "options": [
+      "short",
+      "shirt",
+      "skirt"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -208,11 +324,20 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v2_u2",
     "difficulty": "medium",
-    "vocab_domain": ["numbers"],
-    "grammar_point": ["listening_discrimination", "homophone"],
+    "vocab_domain": [
+      "numbers"
+    ],
+    "grammar_point": [
+      "listening_discrimination",
+      "homophone"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "four",
-    "options": ["for", "floor", "four"],
+    "options": [
+      "for",
+      "floor",
+      "four"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -222,101 +347,161 @@
     "type": "listen_and_choose_word",
     "unitId": "g4v2_u2",
     "difficulty": "hard",
-    "vocab_domain": ["numbers", "time"],
-    "grammar_point": ["listening_discrimination"],
+    "vocab_domain": [
+      "numbers",
+      "time"
+    ],
+    "grammar_point": [
+      "listening_discrimination"
+    ],
     "prompt": "听音频,选择你听到的单词。",
     "audio": "thirty",
-    "options": ["thirty", "thirteen", "thirsty"],
+    "options": [
+      "thirty",
+      "thirteen",
+      "thirsty"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
-
   {
     "id": "fc_g4v2_seed_16",
     "type": "listen_and_judge_picture",
     "unitId": "g4v2_u3",
     "difficulty": "easy",
-    "vocab_domain": ["weather"],
-    "grammar_point": ["it_is_weather", "listening_judge"],
+    "vocab_domain": [
+      "weather"
+    ],
+    "grammar_point": [
+      "it_is_weather",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "☀️",
     "audio": "It is a rainy day.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/sunny.png"
   },
   {
     "id": "fc_g4v2_seed_17",
     "type": "listen_and_judge_picture",
     "unitId": "g4v2_u2",
     "difficulty": "easy",
-    "vocab_domain": ["time"],
-    "grammar_point": ["time_oclock", "listening_judge"],
+    "vocab_domain": [
+      "time"
+    ],
+    "grammar_point": [
+      "time_oclock",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "🕓",
     "audio": "It's four o'clock.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/clock4.png"
   },
   {
     "id": "fc_g4v2_seed_18",
     "type": "listen_and_judge_picture",
     "unitId": "g4v2_u4",
     "difficulty": "medium",
-    "vocab_domain": ["farm_animals"],
-    "grammar_point": ["listening_judge"],
+    "vocab_domain": [
+      "farm_animals"
+    ],
+    "grammar_point": [
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "🐄",
     "audio": "Look at the sheep.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/cows.png"
   },
   {
     "id": "fc_g4v2_seed_19",
     "type": "listen_and_judge_picture",
     "unitId": "g4v2_u5",
     "difficulty": "medium",
-    "vocab_domain": ["clothing"],
-    "grammar_point": ["present_continuous", "listening_judge"],
+    "vocab_domain": [
+      "clothing"
+    ],
+    "grammar_point": [
+      "present_continuous",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "👗",
     "audio": "She is wearing a dress.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 0,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/dress.png"
   },
   {
     "id": "fc_g4v2_seed_20",
     "type": "listen_and_judge_picture",
     "unitId": "g4v2_u1",
     "difficulty": "medium",
-    "vocab_domain": ["school_places"],
-    "grammar_point": ["this_is_demonstrative", "listening_judge"],
+    "vocab_domain": [
+      "school_places"
+    ],
+    "grammar_point": [
+      "this_is_demonstrative",
+      "listening_judge"
+    ],
     "prompt": "看图,听音频,判断是否相符。",
     "emoji": "🏫",
     "audio": "This is the playground.",
-    "options": ["T (相符)", "F (不相符)"],
+    "options": [
+      "T (相符)",
+      "F (不相符)"
+    ],
     "answer": 1,
     "source": "real_exam",
-    "source_ref": "改编自四年级下册真题"
+    "source_ref": "改编自四年级下册真题",
+    "image": "/primary/finalChallenge_images/playground.png"
   },
-
   {
     "id": "fc_g4v2_seed_21",
     "type": "odd_one_out",
     "unitId": "g4v2_u4",
     "difficulty": "easy",
-    "vocab_domain": ["farm_animals", "vegetables"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "farm_animals",
+      "vegetables"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["cat", "cow", "carrot"],
+    "options": [
+      "cat",
+      "cow",
+      "carrot"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -326,10 +511,19 @@
     "type": "odd_one_out",
     "unitId": "g4v2_u5",
     "difficulty": "easy",
-    "vocab_domain": ["clothing", "vegetables"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "clothing",
+      "vegetables"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["tomato", "shirt", "scarf"],
+    "options": [
+      "tomato",
+      "shirt",
+      "scarf"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -339,10 +533,19 @@
     "type": "odd_one_out",
     "unitId": "g4v2_u3",
     "difficulty": "medium",
-    "vocab_domain": ["weather", "school_places"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "weather",
+      "school_places"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["sunny", "library", "windy"],
+    "options": [
+      "sunny",
+      "library",
+      "windy"
+    ],
     "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -352,10 +555,19 @@
     "type": "odd_one_out",
     "unitId": "g4v2_u2",
     "difficulty": "easy",
-    "vocab_domain": ["numbers", "food"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "numbers",
+      "food"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["apple", "one", "seven"],
+    "options": [
+      "apple",
+      "one",
+      "seven"
+    ],
     "answer": 0,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
@@ -365,48 +577,78 @@
     "type": "odd_one_out",
     "unitId": "g4v2_u4",
     "difficulty": "medium",
-    "vocab_domain": ["farm_animals", "clothing"],
-    "grammar_point": ["categorization"],
+    "vocab_domain": [
+      "farm_animals",
+      "clothing"
+    ],
+    "grammar_point": [
+      "categorization"
+    ],
     "prompt": "选出与其他两个不属于同一类的单词。",
-    "options": ["horse", "sheep", "jacket"],
+    "options": [
+      "horse",
+      "sheep",
+      "jacket"
+    ],
     "answer": 2,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题"
   },
-
   {
     "id": "fc_g4v2_seed_26",
     "type": "reading_judge_TF",
     "unitId": "g4v2_u4",
     "difficulty": "medium",
-    "vocab_domain": ["weather", "farm_animals", "clothing", "time"],
-    "grammar_point": ["reading_comprehension"],
+    "vocab_domain": [
+      "weather",
+      "farm_animals",
+      "clothing",
+      "time"
+    ],
+    "grammar_point": [
+      "reading_comprehension"
+    ],
     "prompt": "读短文,判断下列陈述的真假。",
     "passage": "Hello! I'm Lily. Today is Saturday. The weather is sunny and warm. I'm at the farm with my father. There are many cows and sheep here. I'm wearing my new red dress. I like the farm very much.",
     "subQuestions": [
       {
         "stem": "Today is Sunday.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 1
       },
       {
         "stem": "The weather is sunny.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       },
       {
         "stem": "Lily is at the farm.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       },
       {
         "stem": "There are horses at the farm.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 1
       },
       {
         "stem": "Lily's dress is red.",
-        "options": ["T (相符)", "F (不相符)"],
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
         "answer": 0
       }
     ],

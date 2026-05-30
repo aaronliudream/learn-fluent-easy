@@ -267,22 +267,47 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
                 {String.fromCharCode(65 + i)}
               </span>
 
-              {/* 单词 */}
-              <span
-                style={{
-                  fontFamily: "var(--fc-font-body)",
-                  fontWeight: 800,
-                  fontSize: 22,
-                  lineHeight: 1.1,
-                  textAlign: "center",
-                  // 长单词缩字号避免溢出
-                  ...(opt.length > 8 ? { fontSize: 18 } : null),
-                  ...(opt.length > 11 ? { fontSize: 16 } : null),
-                  wordBreak: "break-word",
-                }}
-              >
-                {opt}
-              </span>
+              {/* 选项图;无图或加载失败回退单词文字 */}
+              {q.optionImages?.[i] ? (
+                <img
+                  src={q.optionImages[i]}
+                  alt={opt}
+                  style={{
+                    width: "100%",
+                    aspectRatio: "1",
+                    objectFit: "contain",
+                    pointerEvents: "none",
+                  }}
+                  onError={(e) => {
+                    // 图加载失败 → 回退文字
+                    const el = e.currentTarget;
+                    const s = document.createElement("span");
+                    s.textContent = opt;
+                    s.style.fontFamily = "var(--fc-font-body)";
+                    s.style.fontWeight = "800";
+                    s.style.fontSize = opt.length > 11 ? "16px" : opt.length > 8 ? "18px" : "22px";
+                    s.style.textAlign = "center";
+                    s.style.wordBreak = "break-word";
+                    el.replaceWith(s);
+                  }}
+                />
+              ) : (
+                <span
+                  style={{
+                    fontFamily: "var(--fc-font-body)",
+                    fontWeight: 800,
+                    fontSize: 22,
+                    lineHeight: 1.1,
+                    textAlign: "center",
+                    // 长单词缩字号避免溢出
+                    ...(opt.length > 8 ? { fontSize: 18 } : null),
+                    ...(opt.length > 11 ? { fontSize: 16 } : null),
+                    wordBreak: "break-word",
+                  }}
+                >
+                  {opt}
+                </span>
+              )}
 
               {/* 结果图标 */}
               {answered && isThisCorrect && (

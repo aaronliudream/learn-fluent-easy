@@ -15,6 +15,7 @@ const GAMES: Array<{
   { key: "rain", emoji: "🌧️", name: "单词雨", desc: "听音抢答接住单词", from: "#5BA8FF", to: "#378ADD" },
   { key: "whack", emoji: "🔨", name: "打地鼠", desc: "看中文敲对的词", from: "#7C5CFF", to: "#B45EFF" },
   { key: "spell", emoji: "🔤", name: "拼字接龙", desc: "动手拼出单词", from: "#3FB23C", to: "#6BD968" },
+  { key: "bubble", emoji: "🫧", name: "听音泡泡", desc: "听发音，戳破正确的泡泡", from: "#9B6BFF", to: "#6A8BFF" },
 ];
 
 export default function VocabGamesHome() {
@@ -59,9 +60,14 @@ export default function VocabGamesHome() {
             key={g.key}
             type="button"
             onClick={() => navigate(`${base}/vocab-games/${g.key}`)}
-            className="rounded-2xl p-4 text-left text-white shadow-sm transition active:scale-95"
+            className="relative rounded-2xl p-4 text-left text-white shadow-sm transition active:scale-95"
             style={{ background: `linear-gradient(135deg, ${g.from}, ${g.to})` }}
           >
+            {g.key === "bubble" && (
+              <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-extrabold text-[#7C5CFF]">
+                NEW
+              </span>
+            )}
             <div className="text-3xl">{g.emoji}</div>
             <div className="mt-2 text-base font-bold">{g.name}</div>
             <div className="text-xs opacity-90">{g.desc}</div>

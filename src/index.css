@@ -1131,6 +1131,18 @@ All colors MUST be HSL.
 }
 .fc-shake { animation: fc-shake 0.3s ease-in-out; }
 
+/* 听音泡泡:轻微上浮漂移(各泡泡用 inline animation-duration/delay 错开) */
+@keyframes vg-bubble-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+.vg-bubble-float { animation: vg-bubble-float 3.5s ease-in-out infinite; }
+@keyframes vg-bubble-pop {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.vg-bubble-pop { animation: vg-bubble-pop 0.35s ease-out forwards; }
+
 /* ---------- 减少动效偏好（无障碍 + 节能） ---------- */
 
 @media (prefers-reduced-motion: reduce) {

@@ -23,6 +23,7 @@ import {
   speakKid,
   stopSpeaking,
   prefetchTTSBatchKid,
+  unlockAudioSync,
 } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
@@ -36,29 +37,11 @@ type Q = Extract<FCQuestion, { type: "listen_and_choose_word" }>;
 
 /** 一次性 base64 静音 wav (来自 ListenWordStage),用于在用户手势内"踢"
  *  浏览器的 audio 自动播放白名单。 */
-const SILENT_WAV =
-  "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
-
-async function unlockAudio(): Promise<void> {
-  try {
-    const Ctx =
-      window.AudioContext ||
-      (window as unknown as { webkitAudioContext?: typeof AudioContext })
-        .webkitAudioContext;
-    if (Ctx) {
-      const ctx = new Ctx();
-      await ctx.resume();
-    }
-  } catch {
-    /* ignore */
-  }
-  try {
-    const silent = new Audio(SILENT_WAV);
-    silent.volume = 0;
-    await silent.play().catch(() => {});
-  } catch {
-    /* ignore */
-  }
+// iOS 解锁:同步调 unlockAudioSync(在用户手势栈内给共享音频元素 play()+resume)。
+// 不可用 async/await ctx.resume()/silent.play():iOS Safari 上可能不 resolve,
+// 既卡住后续状态切换,又因脱离手势栈而解锁失效。
+function unlockAudio(): void {
+  unlockAudioSync();
 }
 
 export default function ListenChooseWordLevel() {

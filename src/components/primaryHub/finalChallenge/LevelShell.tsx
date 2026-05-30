@@ -233,14 +233,13 @@ export default function LevelShell({
           </p>
           <button
             type="button"
-            onClick={async () => {
-              // 在用户手势链路内同步触发 (如音频解锁)。失败也继续 (永远不卡住孩子)。
-              if (onBeforeStart) {
-                try {
-                  await onBeforeStart();
-                } catch (e) {
-                  console.warn("[LevelShell] onBeforeStart failed:", e);
-                }
+            onClick={() => {
+              // 解锁是"触发即可"的副作用,在用户手势栈内同步发生 —— 不 await,
+              // 避免任何 onBeforeStart 卡住导致进不去 play(iOS「点了没反应」)。
+              try {
+                onBeforeStart?.();
+              } catch (e) {
+                console.warn("[LevelShell] onBeforeStart failed:", e);
               }
               setPhase("play");
             }}

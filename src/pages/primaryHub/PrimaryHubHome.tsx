@@ -10,11 +10,15 @@ import {
 import { findUnit, getGradeCourse, isUnitListed, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import { AITestCard } from "@/components/primaryHub/AITestCard";
+import { getAllGrade4Words } from "@/lib/primaryHub/vocabGames/words";
+import { getProgress } from "@/lib/primaryHub/vocabGames/srs";
 
 export default function PrimaryHubHome() {
   const { grade, state } = usePrimaryHub();
   const nav = useNavigate();
   const course = getGradeCourse(grade);
+  // 词汇游戏入口仅四年级显示(其他年级暂无词库,避免空数据)
+  const vocabP = grade === 4 ? getProgress(getAllGrade4Words()) : null;
   const gradeP = getGradeProgress(state, grade);
   const [v1Id, v2Id] = semesterIdsForGrade(grade);
   const semV1 = getSemesterProgress(state, v1Id);
@@ -135,6 +139,28 @@ export default function PrimaryHubHome() {
             );
           })}
         </section>
+
+        {grade === 4 && vocabP && (
+          <section className="mb-4">
+            <button
+              type="button"
+              onClick={() => nav(`${base}/vocab-games`)}
+              className="w-full rounded-2xl bg-gradient-to-br from-[#B45EFF] to-[#7C5CFF] p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🎮</span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold">四年级词汇 · 玩游戏记单词</div>
+                  <div className="text-xs opacity-90">配对 · 单词雨 · 打地鼠 · 拼字接龙</div>
+                </div>
+                <span className="text-sm font-semibold">{vocabP.percent}%</span>
+              </div>
+              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/30">
+                <div className="h-full bg-white" style={{ width: `${vocabP.percent}%` }} />
+              </div>
+            </button>
+          </section>
+        )}
 
         <section>
           <div className="mb-2 px-1 text-base font-semibold">📊 学习统计</div>

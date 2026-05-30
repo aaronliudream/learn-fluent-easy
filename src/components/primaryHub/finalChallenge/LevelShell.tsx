@@ -423,6 +423,31 @@ export default function LevelShell({
           </button>
         )}
 
+        {/* 继续下一关 — 仅 level 模式且非最后一关(6 关为真实关卡,7-10 占位) */}
+        {mode === "level" && levelId < 6 && (
+          <button
+            type="button"
+            onClick={() =>
+              navigate(`/primary/hub/${grade}/final-challenge/level/${levelId + 1}`)
+            }
+            className="fc-btn-press fc-shadow-green"
+            style={{
+              marginTop: 14,
+              padding: "14px 48px",
+              borderRadius: "var(--fc-radius-pill)",
+              background: "var(--fc-green)",
+              color: "white",
+              fontWeight: 800,
+              fontSize: 18,
+              border: "none",
+              cursor: "pointer",
+              fontFamily: "var(--fc-font-display)",
+            }}
+          >
+            继续下一关 →
+          </button>
+        )}
+
         <button
           type="button"
           onClick={backToMap}

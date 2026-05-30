@@ -82,6 +82,12 @@ const PrimaryHubAIHistory = lazy(() => import("./pages/primaryHub/PrimaryHubAIHi
 const PrimaryHubFinalChallenge = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallenge.tsx"));
 const PrimaryHubFinalChallengeLevel = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeLevel.tsx"));
 const PrimaryHubFinalChallengeStrengthen = lazy(() => import("./pages/primaryHub/PrimaryHubFinalChallengeStrengthen.tsx"));
+const VocabGamesHome = lazy(() => import("./pages/primaryHub/vocabGames/VocabGamesHome.tsx"));
+const VocabMatchGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabMatchGame.tsx"));
+const VocabRainGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabRainGame.tsx"));
+const VocabWhackGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabWhackGame.tsx"));
+const VocabSpellGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabSpellGame.tsx"));
+const VocabBubbleGame = lazy(() => import("./pages/primaryHub/vocabGames/VocabBubbleGame.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
@@ -312,6 +318,12 @@ const App = () => (
             <Route path="final-challenge" element={<PrimaryHubFinalChallenge />} />
             <Route path="final-challenge/level/:levelId" element={<PrimaryHubFinalChallengeLevel />} />
             <Route path="final-challenge/strengthen" element={<PrimaryHubFinalChallengeStrengthen />} />
+            <Route path="vocab-games" element={<VocabGamesHome />} />
+            <Route path="vocab-games/match" element={<VocabMatchGame />} />
+            <Route path="vocab-games/rain" element={<VocabRainGame />} />
+            <Route path="vocab-games/whack" element={<VocabWhackGame />} />
+            <Route path="vocab-games/spell" element={<VocabSpellGame />} />
+            <Route path="vocab-games/bubble" element={<VocabBubbleGame />} />
           </Route>
           <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />

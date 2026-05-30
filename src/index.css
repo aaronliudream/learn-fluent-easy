@@ -1131,6 +1131,27 @@ All colors MUST be HSL.
 }
 .fc-shake { animation: fc-shake 0.3s ease-in-out; }
 
+/* 听音泡泡:上浮 + 轻微左右摆动(纯 transform;各泡泡用 inline duration/delay 错开,避免同步) */
+@keyframes vg-bubble-float {
+  0%   { transform: translate(0, 0) rotate(-3deg); }
+  25%  { transform: translate(6px, -7px) rotate(2deg); }
+  50%  { transform: translate(0, -13px) rotate(3deg); }
+  75%  { transform: translate(-6px, -7px) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(-3deg); }
+}
+.vg-bubble-float { animation: vg-bubble-float 4s ease-in-out infinite; }
+@keyframes vg-bubble-pop {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+.vg-bubble-pop { animation: vg-bubble-pop 0.35s ease-out forwards; }
+/* 戳破时迸出的小星星(方向由 inline --dx/--dy 给) */
+@keyframes vg-star-fly {
+  0%   { transform: translate(0, 0) scale(0.6); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.1); opacity: 0; }
+}
+.vg-star-fly { animation: vg-star-fly 0.6s ease-out forwards; }
+
 /* ---------- 减少动效偏好（无障碍 + 节能） ---------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1151,7 +1172,9 @@ All colors MUST be HSL.
   .fc-aura-expand,
   .fc-tear-drop,
   .fc-sweat-drop,
-  .fc-celebrate-star {
+  .fc-celebrate-star,
+  .vg-bubble-float,
+  .vg-star-fly {
     animation: none;
   }
 }

@@ -26,7 +26,7 @@ export default function VocabSpellGame() {
   const { grade } = usePrimaryHub();
   const navigate = useNavigate();
   const base = `/primary/hub/${grade}`;
-  const pool = useMemo(() => getArcadePool(), []);
+  const pool = useMemo(() => getArcadePool(grade), [grade]);
 
   const [round, setRound] = useState(0);
   const [started, setStarted] = useState(false);

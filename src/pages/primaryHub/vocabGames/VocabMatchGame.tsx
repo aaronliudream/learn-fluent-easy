@@ -19,7 +19,7 @@ export default function VocabMatchGame() {
   const [started, setStarted] = useState(false);
   const [done, setDone] = useState(false);
 
-  const words = useMemo(() => selectWords(getMatchPool(), ROUND), [round]);
+  const words = useMemo(() => selectWords(getMatchPool(grade), ROUND), [round, grade]);
 
   const begin = () => {
     unlockAudioSync(); // iOS:必须在点击同步事件里解锁
@@ -57,7 +57,7 @@ export default function VocabMatchGame() {
       <WordMatchingGame
         key={round}
         vocabulary={words.map((w) => ({ en: w.en, cn: w.cn, emoji: w.emoji }))}
-        grade={4}
+        grade={grade}
         onFinish={finish}
       />
       {done && (

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { getAllGrade4Words } from "@/lib/primaryHub/vocabGames/words";
+import { getGradeCourse } from "@/lib/primaryHub/courseData";
+import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
 import { getProgress } from "@/lib/primaryHub/vocabGames/srs";
 
 const GAMES: Array<{
@@ -23,7 +24,7 @@ export default function VocabGamesHome() {
   const navigate = useNavigate();
   const base = `/primary/hub/${grade}`;
   // 路由切换会重挂本页 → 每次进入都重新读进度,从游戏返回即刷新。
-  const p = getProgress(getAllGrade4Words());
+  const p = getProgress(getWordsForGrade(grade));
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FFF7EE] to-[#F4EFE6] px-4 pb-24 pt-4">
@@ -32,7 +33,7 @@ export default function VocabGamesHome() {
         <button type="button" onClick={() => navigate(base)} className="text-xl" aria-label="返回">
           ←
         </button>
-        <div className="text-lg font-bold text-[#2b2b2b]">四年级词汇</div>
+        <div className="text-lg font-bold text-[#2b2b2b]">{getGradeCourse(grade).name}词汇</div>
         <div className="ml-auto rounded-full bg-white px-3 py-1 text-sm font-bold text-[#FF6B35] shadow-sm">
           ⭐ {p.mastered}
         </div>

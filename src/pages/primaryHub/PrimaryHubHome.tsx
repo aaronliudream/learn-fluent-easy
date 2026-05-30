@@ -10,15 +10,15 @@ import {
 import { findUnit, getGradeCourse, isUnitListed, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import { AITestCard } from "@/components/primaryHub/AITestCard";
-import { getAllGrade4Words } from "@/lib/primaryHub/vocabGames/words";
+import { getWordsForGrade } from "@/lib/primaryHub/vocabGames/words";
 import { getProgress } from "@/lib/primaryHub/vocabGames/srs";
 
 export default function PrimaryHubHome() {
   const { grade, state } = usePrimaryHub();
   const nav = useNavigate();
   const course = getGradeCourse(grade);
-  // 词汇游戏入口仅四年级显示(其他年级暂无词库,避免空数据)
-  const vocabP = grade === 4 ? getProgress(getAllGrade4Words()) : null;
+  // 词汇游戏入口对 3/4/5/6 全年级开放(词源按年级走)
+  const vocabP = getProgress(getWordsForGrade(grade));
   const gradeP = getGradeProgress(state, grade);
   const [v1Id, v2Id] = semesterIdsForGrade(grade);
   const semV1 = getSemesterProgress(state, v1Id);
@@ -140,7 +140,7 @@ export default function PrimaryHubHome() {
           })}
         </section>
 
-        {grade === 4 && vocabP && (
+        {vocabP && (
           <section className="mb-4">
             <button
               type="button"
@@ -150,7 +150,7 @@ export default function PrimaryHubHome() {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🎮</span>
                 <div className="min-w-0 flex-1">
-                  <div className="font-semibold">四年级词汇 · 玩游戏记单词</div>
+                  <div className="font-semibold">{course.name}词汇 · 玩游戏记单词</div>
                   <div className="text-xs opacity-90">配对 · 单词雨 · 打地鼠 · 拼字接龙</div>
                 </div>
                 <span className="text-sm font-semibold">{vocabP.percent}%</span>

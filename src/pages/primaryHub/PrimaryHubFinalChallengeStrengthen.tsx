@@ -12,7 +12,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { unlockAudioSync } from "@/lib/speak";
+import { unlockAudioSync, prefetchTTSBatchKid } from "@/lib/speak";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
@@ -76,6 +76,16 @@ export default function PrimaryHubFinalChallengeStrengthen() {
       cancelled = true;
     };
   }, [userId, grade, reloadNonce]);
+
+  // 题目就绪后预热所有听力题的 TTS:strengthen 直接渲染 PlayCard,绕过了关卡组件的
+  // 批量预热,导致每道 AI 新句子首次播放需现场生成(延迟/结巴)。这里提前 warm 缓存。
+  useEffect(() => {
+    if (questions.length === 0) return;
+    const audios = questions
+      .map((q) => ("audio" in q ? q.audio : undefined))
+      .filter((a): a is string => typeof a === "string" && a.length > 0);
+    if (audios.length > 0) prefetchTTSBatchKid(audios, { grade });
+  }, [questions, grade]);
 
   // 按 type 路由到对应 PlayCard
   const renderPlay = useCallback(

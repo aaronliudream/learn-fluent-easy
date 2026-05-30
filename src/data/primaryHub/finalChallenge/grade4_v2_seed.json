@@ -213,16 +213,16 @@
     "emoji": "🐑",
     "options": [
       "ship",
-      "sleep",
-      "sheep"
+      "sheep",
+      "shoes"
     ],
-    "answer": 2,
+    "answer": 1,
     "source": "real_exam",
     "source_ref": "改编自四年级下册真题",
     "optionImages": [
       "/primary/finalChallenge_images/ship.png",
-      "/primary/finalChallenge_images/sleep.png",
-      "/primary/finalChallenge_images/sheep.png"
+      "/primary/finalChallenge_images/sheep.png",
+      "/primary/finalChallenge_images/shoes.png"
     ]
   },
   {

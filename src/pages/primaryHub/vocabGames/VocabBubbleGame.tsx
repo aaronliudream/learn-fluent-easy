@@ -116,7 +116,7 @@ export default function VocabBubbleGame() {
     setWrongKey(null);
     setHintOn(false);
     setBurst(null);
-    hubSpeak(cur.en, 0.85, 4);
+    hubSpeak(cur.en, 0.85, grade);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, started, round]);
 
@@ -164,7 +164,7 @@ export default function VocabBubbleGame() {
   const begin = () => {
     unlockAudioSync(); // iOS:TTS 通道解锁(同步)
     audioCtx(); // 同一手势里创建/恢复 Web Audio 上下文
-    prefetchHubVocabulary(words.map((w) => w.en), 4);
+    prefetchHubVocabulary(words.map((w) => w.en), grade);
     setStarted(true);
   };
   const again = () => {
@@ -208,7 +208,7 @@ export default function VocabBubbleGame() {
         <div className="text-xs opacity-80">听发音,戳出这个单词</div>
         <button
           type="button"
-          onClick={() => cur && hubSpeak(cur.en, 0.85, 4)}
+          onClick={() => cur && hubSpeak(cur.en, 0.85, grade)}
           className="mt-1 rounded-full bg-white/20 px-5 py-2 text-base font-bold"
         >
           🔊 再听一次

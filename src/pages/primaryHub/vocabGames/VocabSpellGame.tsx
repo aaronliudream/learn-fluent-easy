@@ -49,7 +49,7 @@ export default function VocabSpellGame() {
     setBuild([]);
     setHintUsed(false);
     setWrong(false);
-    hubSpeak(cur.en, 0.85, 4);
+    hubSpeak(cur.en, 0.85, grade);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, started, round]);
 
@@ -107,7 +107,7 @@ export default function VocabSpellGame() {
 
   const begin = () => {
     unlockAudioSync();
-    prefetchHubVocabulary(words.map((w) => w.en), 4);
+    prefetchHubVocabulary(words.map((w) => w.en), grade);
     setStarted(true);
   };
   const again = () => {
@@ -149,7 +149,7 @@ export default function VocabSpellGame() {
         <div className="mt-2 text-2xl font-extrabold">{cur?.cn}</div>
         <button
           type="button"
-          onClick={() => cur && hubSpeak(cur.en, 0.85, 4)}
+          onClick={() => cur && hubSpeak(cur.en, 0.85, grade)}
           className="mt-2 rounded-full bg-white/25 px-3 py-1 text-sm font-bold"
         >
           🔊 听一听

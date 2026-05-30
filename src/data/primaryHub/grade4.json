@@ -77,7 +77,8 @@
                 "emoji": "💻",
                 "phonetic": "/kəmˈpjuːtə(r)/",
                 "page": 8,
-                "type": "core"
+                "type": "core",
+                "image": "/primary/wordcard_images/fc_word_computer.png"
               },
               {
                 "en": "fan",
@@ -109,7 +110,8 @@
                 "emoji": "😮",
                 "phonetic": "/ˈrɪəli/",
                 "page": 4,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_really.png"
               },
               {
                 "en": "near",
@@ -117,7 +119,8 @@
                 "emoji": "📍",
                 "phonetic": "/nɪə(r)/",
                 "page": 4,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_near.png"
               },
               {
                 "en": "TV",
@@ -652,7 +655,8 @@
                 "emoji": "😮",
                 "phonetic": "/waʊ/",
                 "page": 14,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_wow.png"
               },
               {
                 "en": "lost",
@@ -676,7 +680,8 @@
                 "emoji": "🥰",
                 "phonetic": "/kjuːt/",
                 "page": 19,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_cute.png"
               }
             ],
             "vocabGroups": [
@@ -1109,17 +1114,20 @@
               {
                 "en": "strong",
                 "cn": "强壮的",
-                "emoji": "💪"
+                "emoji": "💪",
+                "image": "/primary/wordcard_images/fc_word_strong.png"
               },
               {
                 "en": "friendly",
                 "cn": "友好的",
-                "emoji": "😊"
+                "emoji": "😊",
+                "image": "/primary/wordcard_images/fc_word_friendly.png"
               },
               {
                 "en": "quiet",
                 "cn": "安静的",
-                "emoji": "🤫"
+                "emoji": "🤫",
+                "image": "/primary/wordcard_images/fc_word_quiet.png"
               },
               {
                 "en": "hair",
@@ -2739,7 +2747,8 @@
                 "phonetic": "/nekst tu/",
                 "icon": "arrow-right",
                 "page": 4,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_nextto.png"
               },
               {
                 "en": "homework",
@@ -2825,7 +2834,8 @@
                 "icon": "device-desktop",
                 "highlight": "er",
                 "page": 6,
-                "type": "phonics"
+                "type": "phonics",
+                "image": "/primary/wordcard_images/fc_word_computer.png"
               },
               {
                 "en": "ruler",
@@ -3333,7 +3343,8 @@
                 "emoji": "✅",
                 "phonetic": "/ˈəʊvə(r)/",
                 "page": 14,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_over.png"
               },
               {
                 "en": "kid",
@@ -3365,7 +3376,8 @@
                 "emoji": "👏",
                 "phonetic": "/kʌm ɒn/",
                 "page": 15,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_comeon.png"
               },
               {
                 "en": "just a minute",
@@ -3373,7 +3385,8 @@
                 "emoji": "⏳",
                 "phonetic": "/dʒʌst ə ˈmɪnɪt/",
                 "page": 15,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_justaminute.png"
               }
             ],
             "vocabGroups": [
@@ -4957,7 +4970,8 @@
                 "emoji": "🙋",
                 "phonetic": "/maɪn/",
                 "page": 51,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_mine.png"
               },
               {
                 "en": "pack",
@@ -5474,7 +5488,8 @@
                 "emoji": "✅",
                 "phonetic": "/əv kɔːs/",
                 "page": 58,
-                "type": "extended"
+                "type": "extended",
+                "image": "/primary/wordcard_images/fc_word_ofcourse.png"
               },
               {
                 "en": "too",

@@ -6,6 +6,8 @@ export type VocabItem = {
   en: string;
   cn: string;
   emoji: string;
+  /** 单词卡插画路径；缺省时回退 emoji。 */
+  image?: string;
   phonetic?: string;
   icon?: string;
   highlight?: string;

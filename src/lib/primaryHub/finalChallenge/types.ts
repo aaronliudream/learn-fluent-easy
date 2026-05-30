@@ -39,6 +39,7 @@ export type FinalChallengeQuestionType =
   | "picture_match_sentence"
   | "picture_match_word"
   | "listen_and_choose_word"
+  | "listen_and_choose_answer"
   | "listen_and_judge_picture"
   | "odd_one_out"
   | "reading_judge_TF"
@@ -75,6 +76,14 @@ export type FCQuestion =
   /** 关 3：听音辨词。`audio` 为 TTS 文本。 */
   | (FCQuestionBase & {
       type: "listen_and_choose_word";
+      audio: string;
+      options: string[];
+      answer: number;
+    })
+  /** AI 强化：听一个句子/问句，从文本选项里选对应答语/匹配项。
+   *  `audio` 为被朗读的句子，`options` 为完整答语句子。 */
+  | (FCQuestionBase & {
+      type: "listen_and_choose_answer";
       audio: string;
       options: string[];
       answer: number;

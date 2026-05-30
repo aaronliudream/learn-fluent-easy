@@ -26,8 +26,8 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 
 // 5 个 PlayCard (按 type 路由, 排除 reading_judge_TF)
 import { PicMatchSentencePlayCard } from "@/components/primaryHub/finalChallenge/levels/PicMatchSentenceLevel";
-import { PicMatchWordPlayCard } from "@/components/primaryHub/finalChallenge/levels/PicMatchWordLevel";
 import { ListenChooseWordPlayCard } from "@/components/primaryHub/finalChallenge/levels/ListenChooseWordLevel";
+import { ListenChooseAnswerPlayCard } from "@/components/primaryHub/finalChallenge/levels/ListenChooseAnswerLevel";
 import { ListenJudgePicturePlayCard } from "@/components/primaryHub/finalChallenge/levels/ListenJudgePictureLevel";
 import { OddOneOutPlayCard } from "@/components/primaryHub/finalChallenge/levels/OddOneOutLevel";
 
@@ -85,10 +85,10 @@ export default function PrimaryHubFinalChallengeStrengthen() {
       switch (q.type) {
         case "picture_match_sentence":
           return <PicMatchSentencePlayCard q={q} api={api} />;
-        case "picture_match_word":
-          return <PicMatchWordPlayCard q={q} api={api} />;
         case "listen_and_choose_word":
           return <ListenChooseWordPlayCard q={q} api={api} grade={grade} />;
+        case "listen_and_choose_answer":
+          return <ListenChooseAnswerPlayCard q={q} api={api} grade={grade} />;
         case "listen_and_judge_picture":
           return <ListenJudgePicturePlayCard q={q} api={api} grade={grade} />;
         case "odd_one_out":

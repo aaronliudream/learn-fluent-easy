@@ -25,6 +25,7 @@ import {
   speakKid,
   stopSpeaking,
   prefetchTTSBatchKid,
+  unlockAudioSync,
 } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
@@ -36,30 +37,11 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 
 type Q = Extract<FCQuestion, { type: "listen_and_judge_picture" }>;
 
-/** 与 #71f 同款静音 wav (用户手势内一次性解锁音频)。 */
-const SILENT_WAV =
-  "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
-
-async function unlockAudio(): Promise<void> {
-  try {
-    const Ctx =
-      window.AudioContext ||
-      (window as unknown as { webkitAudioContext?: typeof AudioContext })
-        .webkitAudioContext;
-    if (Ctx) {
-      const ctx = new Ctx();
-      await ctx.resume();
-    }
-  } catch {
-    /* ignore */
-  }
-  try {
-    const silent = new Audio(SILENT_WAV);
-    silent.volume = 0;
-    await silent.play().catch(() => {});
-  } catch {
-    /* ignore */
-  }
+// iOS 解锁:同步调 unlockAudioSync(在用户手势栈内给共享音频元素 play()+resume)。
+// 不可用 async/await ctx.resume()/silent.play():iOS Safari 上可能不 resolve,
+// 既卡住后续状态切换,又因脱离手势栈而解锁失效。
+function unlockAudio(): void {
+  unlockAudioSync();
 }
 
 export default function ListenJudgePictureLevel() {

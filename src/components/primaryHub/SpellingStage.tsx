@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { VocabItem } from "@/lib/primaryHub/types";
 import { toHubTtsText } from "@/lib/primaryHub/speech";
-import { speakKid, stopSpeaking, prefetchTTSBatchKid } from "@/lib/speak";
+import { speakKid, stopSpeaking, prefetchTTSBatchKid, unlockAudioSync } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import {
   type GradeKey,
@@ -188,33 +188,16 @@ export default function SpellingStage({
 
   // The start tap is the user gesture that unlocks audio (Chrome autoplay policy),
   // so the first question's auto-play works. startIdx lets the kid resume mid-stage.
-  const handleStart = async (startIdx = 0) => {
-    try {
-      const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-      if (Ctx) {
-        const ctx = new Ctx();
-        await ctx.resume();
-      }
-    } catch {
-      /* ignore */
-    }
-    try {
-      const silent = new Audio(
-        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=",
-      );
-      silent.volume = 0;
-      await silent.play().catch(() => {});
-    } catch {
-      /* ignore */
-    }
+  const handleStart = (startIdx = 0) => {
+    unlockAudioSync(); // iOS 解锁:同步,必须在任何 await 前,且在用户手势栈内
     if (startIdx > 0) setQi(startIdx);
     setStarted(true);
   };
 
   // "从头再来" — wipe the saved position (NOT the wrong pool or Rex XP) and start at 0.
-  const handleRestart = async () => {
+  const handleRestart = () => {
     clearSpellingProgress(scope, unitId);
-    await handleStart(0);
+    handleStart(0);
   };
 
   const bumpRexXp = useCallback(

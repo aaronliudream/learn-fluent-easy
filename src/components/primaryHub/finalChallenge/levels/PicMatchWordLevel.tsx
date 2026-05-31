@@ -13,7 +13,7 @@
 
 import { useMemo } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
-import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
+import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { speakKid } from "@/lib/speak";
 import LevelShell, {
@@ -30,7 +30,7 @@ export default function PicMatchWordLevel() {
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_word", 5, vol, gr),
+    () => getQuestionsByType("picture_match_word", getDrawCount(gr), vol, gr),
     [vol, gr],
   );
 

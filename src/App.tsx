@@ -243,7 +243,7 @@ const OAuthReturnRedirect = () => {
 
 // 有闯关种子的年级（地图/关卡可进）。AI 强化训练目前仅四年级。
 // 没种子的年级深链一律挡回该年级首页,避免做到别年级题。
-const FC_GRADES_WITH_SEEDS = new Set(["3", "4", "5"]);
+const FC_GRADES_WITH_SEEDS = new Set(["3", "4", "5", "6"]);
 function FinalChallengeGuard({
   allow,
   children,

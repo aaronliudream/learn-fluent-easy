@@ -96,7 +96,7 @@ export default function PrimaryHubSemester() {
             </button>
           );
         })}
-        {(grade === 3 || grade === 4 || grade === 5) && <FinalChallengeEntryCard volume={vol} />}
+        {(grade === 3 || grade === 4 || grade === 5 || grade === 6) && <FinalChallengeEntryCard volume={vol} />}
       </div>
     </>
   );

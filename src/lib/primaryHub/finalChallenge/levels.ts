@@ -33,9 +33,31 @@ export const LEVEL_CONFIGS: LevelConfig[] = [
 export const MAX_STARS =
   LEVEL_CONFIGS.filter((c) => c.type !== null).length * 3;
 
-/** 按 levelId 查关卡配置。 */
-export function findLevelConfig(levelId: number): LevelConfig | null {
-  return LEVEL_CONFIGS.find((c) => c.id === levelId) ?? null;
+/**
+ * 按年级返回关卡配置。
+ * 六年级独有第 7 关「情景答语」(dialogue_response)；其余年级第 7 关仍是
+ * "敬请期待" 占位关 (低年级种子里没有 dialogue_response,加了会空关)。
+ */
+export function getLevelConfigs(grade: number): LevelConfig[] {
+  if (grade === 6) {
+    return LEVEL_CONFIGS.map((c) =>
+      c.id === 7 ? { id: 7, name: "情景答语", type: "dialogue_response" } : c,
+    );
+  }
+  return LEVEL_CONFIGS;
+}
+
+/** 某年级的星数上限（可玩关 × 3）。 */
+export function getMaxStars(grade: number): number {
+  return getLevelConfigs(grade).filter((c) => c.type !== null).length * 3;
+}
+
+/** 按 levelId 查关卡配置（按年级,六年级含第 7 关）。 */
+export function findLevelConfig(
+  levelId: number,
+  grade: number,
+): LevelConfig | null {
+  return getLevelConfigs(grade).find((c) => c.id === levelId) ?? null;
 }
 
 /** type 字段缩窄到 FinalChallengeQuestionType (null 表示占位关)。 */

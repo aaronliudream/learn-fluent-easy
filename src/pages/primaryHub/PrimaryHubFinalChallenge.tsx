@@ -17,7 +17,7 @@ import {
   getTotalStars,
   getRankTier,
 } from "@/lib/primaryHub/finalChallenge/progress";
-import { LEVEL_CONFIGS, MAX_STARS } from "@/lib/primaryHub/finalChallenge/levels";
+import { getLevelConfigs, getMaxStars } from "@/lib/primaryHub/finalChallenge/levels";
 
 const RANK_LABEL: Record<RankTier, string> = {
   bronze: "闯关学徒",
@@ -36,12 +36,18 @@ export default function PrimaryHubFinalChallenge() {
     () => loadAllLevelProgress(userId, grade),
     [userId, grade],
   );
-  const levels = useMemo(() => computeLevelStates(LEVEL_CONFIGS, progress), [progress]);
-  const totalStars = getTotalStars(progress, LEVEL_CONFIGS);
+  // 关卡配置按年级取（六年级含第 7 关「情景答语」）。
+  const levelConfigs = useMemo(() => getLevelConfigs(grade), [grade]);
+  const maxStars = getMaxStars(grade);
+  const levels = useMemo(
+    () => computeLevelStates(levelConfigs, progress),
+    [levelConfigs, progress],
+  );
+  const totalStars = getTotalStars(progress, levelConfigs);
   const tier = getRankTier(totalStars);
 
-  // 全 6 关都拿到至少 1 星 → 通关大成就 (头部升级为庆祝 banner)
-  const playableLevels = LEVEL_CONFIGS.filter((c) => c.type !== null);
+  // 全部可玩关都拿到至少 1 星 → 通关大成就 (头部升级为庆祝 banner)
+  const playableLevels = levelConfigs.filter((c) => c.type !== null);
   const allCleared = playableLevels.every((c) => (progress[c.id]?.stars ?? 0) > 0);
 
   return (
@@ -79,7 +85,7 @@ export default function PrimaryHubFinalChallenge() {
               fontFamily: "var(--fc-font-display)",
             }}
           >
-            🎉 全 6 关通关!{RANK_LABEL[tier]}
+            🎉 全 {playableLevels.length} 关通关!{RANK_LABEL[tier]}
           </h1>
           <div
             style={{
@@ -93,7 +99,7 @@ export default function PrimaryHubFinalChallenge() {
             <span style={{ fontWeight: 800, color: "var(--fc-primary)" }}>
               {totalStars}
             </span>{" "}
-            / {MAX_STARS}
+            / {maxStars}
           </div>
 
           {/* 6 关战绩 mini-matrix */}
@@ -134,8 +140,8 @@ export default function PrimaryHubFinalChallenge() {
             })}
           </div>
 
-          {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a)。仅四年级:AI 强化目前只支持四年级。 */}
-          {[3, 4, 5].includes(grade) && (
+          {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a)。 */}
+          {[3, 4, 5, 6].includes(grade) && (
             <button
               type="button"
               onClick={() => navigate(`${base}/final-challenge/strengthen`)}
@@ -180,7 +186,7 @@ export default function PrimaryHubFinalChallenge() {
                 <span style={{ fontWeight: 800, color: "var(--fc-primary)" }}>
                   {totalStars}
                 </span>{" "}
-                / {MAX_STARS}
+                / {maxStars}
               </div>
             </div>
           </div>

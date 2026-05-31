@@ -10,7 +10,7 @@
 
 import { useMemo } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
-import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
+import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
@@ -24,7 +24,7 @@ export default function OddOneOutLevel() {
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("odd_one_out", 5, vol, gr),
+    () => getQuestionsByType("odd_one_out", getDrawCount(gr), vol, gr),
     [vol, gr],
   );
 

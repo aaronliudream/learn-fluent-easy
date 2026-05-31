@@ -1,19 +1,13 @@
 /**
- * 关 3 — 听音辨词 (listen_and_choose_word)
+ * 关 7 — 情景答语 (dialogue_response) — 仅六年级
  *
- * 第一个带音频的关卡。复用 #71d 的 <LevelShell> 三段式骨架,在 play 阶段
- * 新增:
- *   - 130px 蓝色大圆按钮,点击播放英文单词
- *   - "读两遍": 点一次自动连读两遍 (中间 300ms 停顿)
- *   - 每题展示后 250ms 自动 playTwice
- *   - 空格键重播 (1-3 数字键选项)
- *   - 播放中: fc-pulse-glow-blue 光圈 + 🔈 图标 + 按钮 disabled 防双击
+ * 以「听句选答」(ListenChooseAnswerLevel) 为模板:听 audio(问句) → 从 3 个
+ * 答语里选最合适的回答。差异:
+ *   - 问句本身常驻屏上 (q.prompt),孩子既能听也能读 ("情景答语" 题型约定)
+ *   - audio 是问句、options 是完整答语句子,选项竖排左对齐
+ *   - 六年级每关抽 7 道 (getDrawCount)
  *
- * 音频解锁:
- *   通过 LevelShell 的 onBeforeStart 钩子,在用户点「开始挑战」时同步
- *   触发 (AudioContext.resume + silent.play),满足 Chrome autoplay policy。
- *
- * TTS 走项目现有 speakKid (@/lib/speak),ElevenLabs 失败时 webSpeech 兜底。
+ * 音频解锁用同步 unlockAudioSync(iOS 安全),朗读走 speakKid。
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -26,31 +20,30 @@ import {
   unlockAudioSync,
 } from "@/lib/speak";
 import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
-import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
+import {
+  getQuestionsByType,
+  getDrawCount,
+} from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
 import RexMascot from "@/components/primaryHub/finalChallenge/RexMascot";
 import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 
-type Q = Extract<FCQuestion, { type: "listen_and_choose_word" }>;
+type Q = Extract<FCQuestion, { type: "dialogue_response" }>;
 
-/** 一次性 base64 静音 wav (来自 ListenWordStage),用于在用户手势内"踢"
- *  浏览器的 audio 自动播放白名单。 */
 // iOS 解锁:同步调 unlockAudioSync(在用户手势栈内给共享音频元素 play()+resume)。
-// 不可用 async/await ctx.resume()/silent.play():iOS Safari 上可能不 resolve,
-// 既卡住后续状态切换,又因脱离手势栈而解锁失效。
 function unlockAudio(): void {
   unlockAudioSync();
 }
 
-export default function ListenChooseWordLevel() {
+export default function DialogueResponseLevel() {
   const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_choose_word", getDrawCount(gr), vol, gr),
+    () => getQuestionsByType("dialogue_response", getDrawCount(gr), vol, gr),
     [vol, gr],
   );
 
@@ -80,9 +73,9 @@ export default function ListenChooseWordLevel() {
 
   return (
     <LevelShell
-      levelId={3}
-      levelName="听音辨词"
-      introHint="听一听单词,从 3 个选项里选出听到的那个。每个单词会自动读两遍。"
+      levelId={7}
+      levelName="情景答语"
+      introHint="听一句问话,从 3 个答语里选出最合适的回答。问句会自动读两遍,也写在屏上。"
       introMood="encouraging"
       total={questions.length}
       onBeforeStart={unlockAudio}
@@ -116,11 +109,10 @@ function PlayCard({
     [],
   );
 
-  // 单次播放: speakKid Promise resolve = 播完,fallback 到 WebSpeech;
-  // 2.5s 安全 fallback 防止 loading 卡死 (照 ListenWordStage 模式)。
+  // 单次播放: speakKid Promise resolve = 播完,fallback 到 WebSpeech。
   const playWord = useCallback(
-    (word: string): Promise<void> => {
-      if (!word) return Promise.resolve();
+    (text: string): Promise<void> => {
+      if (!text) return Promise.resolve();
       stopSpeaking();
       setSpeaking(true);
       return new Promise<void>((resolve) => {
@@ -131,11 +123,11 @@ function PlayCard({
           setSpeaking(false);
           resolve();
         };
-        speakKid(word, { grade })
+        speakKid(text, { grade })
           .then(done)
           .catch(() => {
             if (isWebSpeechSupported()) {
-              void speakWebSpeech(word, 0.85);
+              void speakWebSpeech(text, 0.85);
             }
             done();
           });
@@ -149,14 +141,14 @@ function PlayCard({
 
   // 读两遍:首遍完 → 300ms 停顿 → 二遍。
   const playTwice = useCallback(
-    async (word: string) => {
-      await playWord(word);
+    async (text: string) => {
+      await playWord(text);
       await new Promise<void>((r) => {
         const id = window.setTimeout(r, 300);
         timers.current.push(id);
       });
       stopSpeaking(); // 掐掉第一遍任何残留(即使被 safety 提前 resolve),再播第二遍,防重叠
-      await playWord(word);
+      await playWord(text);
     },
     [playWord],
   );
@@ -174,7 +166,7 @@ function PlayCard({
   const wrongInfoFor = (picked: number) => ({
     questionId: q.id,
     questionType: q.type,
-    stem: q.prompt + ` (听: ${q.audio})`,
+    stem: q.prompt,
     userText: q.options[picked],
     correctText: q.options[correctIdx],
     vocab_domain: q.vocab_domain,
@@ -195,7 +187,6 @@ function PlayCard({
     const handler = (e: KeyboardEvent) => {
       if (e.code !== "Space") return;
       if (answered) return;
-      // 不抢输入框焦点
       const t = e.target as HTMLElement | null;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable))
         return;
@@ -208,7 +199,7 @@ function PlayCard({
 
   const rexMood = !answered ? "thinking" : isCorrect ? "excited" : "encouraging";
   const rexMessage = !answered
-    ? "竖起耳朵"
+    ? "听问句,选答语"
     : isCorrect
       ? "✨ Nice!"
       : "差一点点！";
@@ -224,7 +215,7 @@ function PlayCard({
           marginBottom: 16,
         }}
       >
-        {q.prompt}
+        听问句,选出最合适的回答。
       </p>
 
       {/* 大圆播放按钮 */}
@@ -238,16 +229,12 @@ function PlayCard({
       >
         <button
           type="button"
-          aria-label="播放单词,自动读两遍"
+          aria-label="播放问句,自动读两遍"
           onClick={() => {
             if (!speaking) void playTwice(q.audio);
           }}
           disabled={speaking}
-          className={
-            speaking
-              ? "fc-pulse-glow-blue"
-              : "fc-btn-press fc-shadow-blue"
-          }
+          className={speaking ? "fc-pulse-glow-blue" : "fc-btn-press fc-shadow-blue"}
           style={{
             width: 130,
             height: 130,
@@ -295,50 +282,28 @@ function PlayCard({
         </div>
       </div>
 
-      {/* 撒星 (答对时) */}
-      {isCorrect && (
-        <div
-          style={{
-            position: "relative",
-            height: 0,
-            textAlign: "center",
-            marginTop: -20,
-            pointerEvents: "none",
-          }}
-          aria-hidden
-        >
-          <span
-            className="fc-celebrate-star"
-            style={{ position: "absolute", top: -80, left: "30%", fontSize: 22 }}
-          >
-            ✨
-          </span>
-          <span
-            className="fc-celebrate-star"
-            style={{
-              position: "absolute",
-              top: -70,
-              right: "32%",
-              fontSize: 26,
-              animationDelay: "0.15s",
-            }}
-          >
-            ⭐
-          </span>
-          <span
-            className="fc-celebrate-star"
-            style={{
-              position: "absolute",
-              top: -40,
-              left: "48%",
-              fontSize: 20,
-              animationDelay: "0.3s",
-            }}
-          >
-            ✨
-          </span>
-        </div>
-      )}
+      {/* 屏上常驻问句 (情景答语:听 + 读双通道) */}
+      <div
+        style={{
+          margin: "16px auto 0",
+          maxWidth: 420,
+          padding: "12px 18px",
+          background: "var(--fc-blue-bg, #eaf3ff)",
+          borderRadius: "var(--fc-radius)",
+          border: "2px solid var(--fc-blue)",
+          textAlign: "center",
+          fontFamily: "var(--fc-font-body)",
+          fontWeight: 800,
+          fontSize: 19,
+          lineHeight: 1.3,
+          color: "var(--fc-ink)",
+        }}
+      >
+        <span aria-hidden style={{ marginRight: 6 }}>
+          💬
+        </span>
+        {q.prompt}
+      </div>
 
       {/* 反馈横条 */}
       {answered && (
@@ -357,11 +322,11 @@ function PlayCard({
         </div>
       )}
 
-      {/* 3 张单词卡片 (横排,沿用 #71e 布局) */}
+      {/* 答语选项 (竖排,句子较长,左对齐) */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: `repeat(${q.options.length}, 1fr)`,
+          display: "flex",
+          flexDirection: "column",
           gap: 12,
           marginTop: answered ? 0 : 24,
         }}
@@ -409,16 +374,16 @@ function PlayCard({
               style={{
                 position: "relative",
                 display: "flex",
-                flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "center",
-                gap: 8,
-                minHeight: 96,
-                padding: "16px 8px",
+                gap: 12,
+                width: "100%",
+                minHeight: 56,
+                padding: "14px 16px 14px 14px",
                 borderRadius: "var(--fc-radius)",
                 background: bg,
                 border: `2px solid ${border}`,
                 color: textColor,
+                textAlign: "left",
                 cursor: answered ? "default" : "pointer",
                 opacity,
                 transition: "background 200ms, border-color 200ms, opacity 200ms",
@@ -426,13 +391,11 @@ function PlayCard({
             >
               <span
                 style={{
-                  position: "absolute",
-                  top: 6,
-                  left: 8,
+                  flex: "0 0 auto",
                   display: "grid",
                   placeItems: "center",
-                  width: 22,
-                  height: 22,
+                  width: 24,
+                  height: 24,
                   borderRadius: "50%",
                   background: letterBg,
                   color: letterColor,
@@ -447,13 +410,11 @@ function PlayCard({
               </span>
               <span
                 style={{
+                  flex: 1,
                   fontFamily: "var(--fc-font-body)",
-                  fontWeight: 800,
-                  fontSize: 22,
-                  lineHeight: 1.1,
-                  textAlign: "center",
-                  ...(opt.length > 8 ? { fontSize: 18 } : null),
-                  ...(opt.length > 11 ? { fontSize: 16 } : null),
+                  fontWeight: 700,
+                  fontSize: 17,
+                  lineHeight: 1.3,
                   wordBreak: "break-word",
                 }}
               >
@@ -461,7 +422,7 @@ function PlayCard({
               </span>
               {answered && isThisCorrect && (
                 <span
-                  style={{ fontSize: 18, color: "var(--fc-green-dark)", lineHeight: 1 }}
+                  style={{ fontSize: 18, color: "var(--fc-green-dark)", lineHeight: 1, flex: "0 0 auto" }}
                   aria-hidden
                 >
                   ✓
@@ -469,7 +430,7 @@ function PlayCard({
               )}
               {answered && isThisPicked && !isThisCorrect && (
                 <span
-                  style={{ fontSize: 18, color: "var(--fc-soft-warn)", lineHeight: 1 }}
+                  style={{ fontSize: 18, color: "var(--fc-soft-warn)", lineHeight: 1, flex: "0 0 auto" }}
                   aria-hidden
                 >
                   ✗
@@ -480,7 +441,7 @@ function PlayCard({
         })}
       </div>
 
-      {/* 答完显示英文原文 + 再听(让孩子看到刚才听的是什么) */}
+      {/* 答完显示问句原文 + 再听 */}
       {answered && (
         <div
           style={{
@@ -494,7 +455,7 @@ function PlayCard({
             color: "var(--fc-ink)",
           }}
         >
-          🔊 原文:{q.audio}
+          🔊 问句:{q.audio}
           <button
             type="button"
             onClick={() => void playWord(q.audio)}
@@ -531,5 +492,5 @@ function PlayCard({
   );
 }
 
-/** 暴露给 strengthen 训练页 (#72a) — 行为零改, 仅可见性扩散。 */
-export { PlayCard as ListenChooseWordPlayCard };
+/** 暴露给 strengthen 训练页 — 按 type 路由用(预留)。 */
+export { PlayCard as DialogueResponsePlayCard };

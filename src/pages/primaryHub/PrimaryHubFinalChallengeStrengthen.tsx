@@ -39,15 +39,30 @@ interface ErrorState {
   message: string;
 }
 
-/** 从已有种子题里挑一道"纯文本听力题"作为开场热身(0 生成等待)。
- *  优先 listen_and_choose_word(听音辨词,最简单、无歧义);随机取一道避免每次都一样。 */
-function pickSeedWarmupQuestion(grade: number): FCQuestion | null {
+// 垫场题用的题型(都无需配图、strengthen 里渲染干净):听音辨词 / 找不同 / 听句判图
+const SEED_WARMUP_TYPES = [
+  "listen_and_choose_word",
+  "odd_one_out",
+  "listen_and_judge_picture",
+] as const;
+
+/** 从本地大题库挑 n 道"垫场热身题"(0 生成等待),跨题型、按当前年级+册别随机。
+ *  作用:孩子先做这几道,后台 AI 针对题趁机生成完,接上时几乎无等待。 */
+function pickSeedWarmupQuestions(grade: number, n: number): FCQuestion[] {
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const pool = getQuestionsByType("listen_and_choose_word", 99, vol, grade);
-  if (!pool || pool.length === 0) return null;
-  const q = pool[Math.floor(Math.random() * pool.length)];
-  // 独立 id 前缀,避免与 AI 题 id 撞
-  return { ...q, id: `seed_warmup_${q.id}` } as FCQuestion;
+  const picked: FCQuestion[] = [];
+  const usedIds = new Set<string>();
+  for (let i = 0; picked.length < n && i < SEED_WARMUP_TYPES.length * 4; i++) {
+    const type = SEED_WARMUP_TYPES[i % SEED_WARMUP_TYPES.length];
+    const pool = getQuestionsByType(type, 99, vol, grade);
+    if (!pool || pool.length === 0) continue;
+    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const q = shuffled.find((x) => !usedIds.has(x.id));
+    if (!q) continue;
+    usedIds.add(q.id);
+    picked.push({ ...q, id: `seed_warmup_${q.id}` } as FCQuestion);
+  }
+  return picked;
 }
 
 export default function PrimaryHubFinalChallengeStrengthen() {
@@ -81,24 +96,27 @@ export default function PrimaryHubFinalChallengeStrengthen() {
       return;
     }
 
-    // 1) 立刻放一道种子热身题,马上进入 playing(0 等待);取不到才退回 loading
-    const seedQ = pickSeedWarmupQuestion(grade);
-    setQuestions(seedQ ? [seedQ] : []);
-    setExpectedTotal(5);
-    setPhase(seedQ ? "playing" : "loading");
+    const TOTAL = 8; // 每轮强化训练目标总题数
 
-    // 2) 后台生成针对性的题(有种子题则只要 4 道,补在后面;没有则要 5 道兜底)
+    // 1) 立刻放 3 道本地垫场题(跨题型、秒出),马上进入 playing(0 等待)
+    const seedQs = pickSeedWarmupQuestions(grade, 3);
+    setQuestions(seedQs);
+    setExpectedTotal(TOTAL);
+    setPhase(seedQs.length > 0 ? "playing" : "loading");
+
+    // 2) 后台生成针对性 AI 题补足到 8 道(多取 1 道做缓冲,合并时截到 8)
     (async () => {
+      const aiCount = Math.max(1, TOTAL - seedQs.length + 1);
       const result: StrengthenResult | StrengthenError | "timeout" =
         await Promise.race([
-          fetchStrengthenQuestions(userId, grade, seedQ ? 4 : 5),
+          fetchStrengthenQuestions(userId, grade, aiCount),
           new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 45000)),
         ]);
       if (cancelled) return;
       if (result === "timeout") {
-        if (seedQ) {
-          setBgError("AI 出题有点慢,做完这道可以再点一次「强化训练」。");
-          setExpectedTotal(1);
+        if (seedQs.length > 0) {
+          setBgError("AI 出题有点慢,先做这几道,做完可以再点一次「强化训练」。");
+          setExpectedTotal(seedQs.length);
         } else {
           setError({ kind: "ai_failed", message: "AI 出题超时了,请稍后重试。" });
           setPhase("error");
@@ -106,26 +124,25 @@ export default function PrimaryHubFinalChallengeStrengthen() {
         return;
       }
       if (!result.ok) {
-        if (seedQ) {
-          // 种子题在玩:不打断,提示一下并把本轮收尾在第 1 题
+        if (seedQs.length > 0) {
           setBgError(result.message);
-          setExpectedTotal(1);
+          setExpectedTotal(seedQs.length);
         } else {
           setError({ kind: result.kind, message: result.message });
           setPhase("error");
         }
         return;
       }
-      // 追加到种子题后面;按 audio/id 去重,避免与种子题重复
-      const base = seedQ ? [seedQ] : [];
+      // 追加 AI 题到垫场题后面;按 audio/id 去重,合并后截到 TOTAL 道
+      const base = seedQs;
       const seen = new Set(base.map((q) => ("audio" in q ? q.audio : q.id)));
       const fresh = result.questions.filter(
         (q) => !seen.has("audio" in q ? q.audio : q.id),
       );
-      const next = [...base, ...fresh];
+      const next = [...base, ...fresh].slice(0, TOTAL);
       setQuestions(next);
       setExpectedTotal(next.length);
-      if (!seedQ) setPhase("playing");
+      if (seedQs.length === 0) setPhase("playing");
     })();
 
     return () => {

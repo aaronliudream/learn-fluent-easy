@@ -241,12 +241,20 @@ const OAuthReturnRedirect = () => {
   return null;
 };
 
-// 《英语闯关》目前只有四年级内容（题库/AI 强化均为四年级）。
-// 非四年级的深链一律挡回该年级首页，避免 3/5/6 做到四年级题。
-// 等将来 3/5/6 配齐各自闯关种子 + 边缘函数按年级出题后再放开。
-function FinalChallengeGrade4Only({ children }: { children: ReactNode }) {
+// 有闯关种子的年级（地图/关卡可进）。AI 强化训练目前仅四年级。
+// 没种子的年级深链一律挡回该年级首页,避免做到别年级题。
+const FC_GRADES_WITH_SEEDS = new Set(["3", "4"]);
+function FinalChallengeGuard({
+  allow,
+  children,
+}: {
+  allow: Set<string>;
+  children: ReactNode;
+}) {
   const { grade } = useParams<{ grade: string }>();
-  if (grade !== "4") return <Navigate to={`/primary/hub/${grade ?? "4"}`} replace />;
+  if (!allow.has(grade ?? "")) {
+    return <Navigate to={`/primary/hub/${grade ?? "4"}`} replace />;
+  }
   return <>{children}</>;
 }
 
@@ -328,25 +336,25 @@ const App = () => (
             <Route
               path="final-challenge"
               element={
-                <FinalChallengeGrade4Only>
+                <FinalChallengeGuard allow={FC_GRADES_WITH_SEEDS}>
                   <PrimaryHubFinalChallenge />
-                </FinalChallengeGrade4Only>
+                </FinalChallengeGuard>
               }
             />
             <Route
               path="final-challenge/level/:levelId"
               element={
-                <FinalChallengeGrade4Only>
+                <FinalChallengeGuard allow={FC_GRADES_WITH_SEEDS}>
                   <PrimaryHubFinalChallengeLevel />
-                </FinalChallengeGrade4Only>
+                </FinalChallengeGuard>
               }
             />
             <Route
               path="final-challenge/strengthen"
               element={
-                <FinalChallengeGrade4Only>
+                <FinalChallengeGuard allow={new Set(["4"])}>
                   <PrimaryHubFinalChallengeStrengthen />
-                </FinalChallengeGrade4Only>
+                </FinalChallengeGuard>
               }
             />
             <Route path="vocab-games" element={<VocabGamesHome />} />

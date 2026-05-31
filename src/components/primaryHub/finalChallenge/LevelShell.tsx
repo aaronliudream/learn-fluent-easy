@@ -128,6 +128,8 @@ export default function LevelShell({
   const [correctCount, setCorrectCount] = useState(0);
   // 本场答错列表 (供 done 屏回顾;每条已同步落到 LS mistakes 入库)。
   const [wrongList, setWrongList] = useState<LevelShellWrongInfo[]>([]);
+  // 答题区根节点 ref：每换一题把它滚到屏幕中上部 (移动端选项不再要往下够手)。
+  const playRef = useRef<HTMLDivElement>(null);
 
   const isLast = idx >= total - 1;
 
@@ -185,6 +187,13 @@ export default function LevelShell({
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
+
+  // 每进入一道新题(或刚进 play 阶段)把答题区滚到中上部。只依赖 idx/phase，
+  // 不在选答/重渲染时触发，避免选完答案后页面乱跳。
+  useEffect(() => {
+    if (phase !== "play") return;
+    playRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [idx, phase]);
 
   // ============ INTRO ============
   if (phase === "intro") {
@@ -521,8 +530,11 @@ export default function LevelShell({
         </span>
       </div>
 
-      {/* 题目视觉 (由题型实现) */}
-      {renderPlay({ idx, total, answered, picked, pick, advance })}
+      {/* 题目视觉 (由题型实现)。ref + scroll-margin-top：换题时滚到中上部，
+          留出顶部进度条的高度不被盖住。 */}
+      <div ref={playRef} style={{ scrollMarginTop: 64 }}>
+        {renderPlay({ idx, total, answered, picked, pick, advance })}
+      </div>
 
       {/* 答完后:手动「下一题」(唯一进入下一题的方式,无自动跳) */}
       {answered && (

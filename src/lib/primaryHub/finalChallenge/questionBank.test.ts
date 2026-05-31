@@ -92,6 +92,36 @@ describe("finalChallenge questionBank", () => {
     }
   });
 
+  it("shuffles options across draws but answer always points at the correct option", () => {
+    // 原始题库里每道选择题的正确选项文本(打散前)。
+    const correctById = new Map<string, string>();
+    for (const q of all) {
+      if (q.type === "reading_judge_TF" || q.type === "reading_choose_answer") continue;
+      correctById.set(q.id, q.options[q.answer]);
+    }
+    const firstOptionSeen = new Map<string, Set<string>>();
+    for (let t = 0; t < 40; t++) {
+      for (const q of getQuestionsByType("picture_match_sentence", 5)) {
+        // 不变式:无论怎么打散,answer 指向的永远是原来的正确文本。
+        expect(q.options[q.answer]).toBe(correctById.get(q.id));
+        const set = firstOptionSeen.get(q.id) ?? new Set<string>();
+        set.add(q.options[0]);
+        firstOptionSeen.set(q.id, set);
+      }
+    }
+    // 反"答案总在第一个":至少有一道题的首选项在多次抽取中出现过不止一种。
+    expect([...firstOptionSeen.values()].some((s) => s.size > 1)).toBe(true);
+  });
+
+  it("never reorders fixed T/F options (listen_and_judge_picture)", () => {
+    for (let t = 0; t < 20; t++) {
+      for (const q of getQuestionsByType("listen_and_judge_picture", 5)) {
+        expect(q.options[0]).toMatch(/^T/);
+        expect(q.options[1]).toMatch(/^F/);
+      }
+    }
+  });
+
   it("getQuestionById returns null for an unknown id", () => {
     expect(getQuestionById("does-not-exist")).toBeNull();
   });

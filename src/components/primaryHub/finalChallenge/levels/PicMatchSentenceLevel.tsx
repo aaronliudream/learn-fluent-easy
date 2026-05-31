@@ -10,7 +10,7 @@
  * 错题记录: TODO #71j 统一做。
  */
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
@@ -64,6 +64,9 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
   const correctIdx = q.answer;
   const isCorrect = answered && picked === correctIdx;
   const isWrong = answered && picked !== null && picked !== correctIdx;
+  // 图加载失败 → 回退 emoji。记下"失败的那张 src",换题后 q.image 变了、
+  // 条件自然复位(无需 effect),不再用 replaceWith 直接改 DOM(会让 React 节点树失步)。
+  const [failedImg, setFailedImg] = useState<string | null>(null);
 
   // 答错时打包 wrongInfo 给 shell 入库 + done 屏回顾。
   const wrongInfoFor = (picked: number) => ({
@@ -114,8 +117,10 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
           padding: "16px 0 24px",
         }}
       >
-        {q.image ? (
+        {q.image && failedImg !== q.image ? (
           <img
+            // key 绑定到本题图片:换题时挂全新 img,绝不残留上一题已解码的旧图。
+            key={q.id}
             src={q.image}
             alt=""
             style={{
@@ -126,15 +131,7 @@ function PlayCard({ q, api }: { q: Q; api: LevelShellPlayApi }) {
               objectFit: "contain",
               filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
             }}
-            onError={(e) => {
-              // 图加载失败 → 回退 emoji
-              const el = e.currentTarget;
-              const fb = document.createElement("span");
-              fb.textContent = q.emoji ?? "";
-              fb.style.fontSize = "110px";
-              fb.style.lineHeight = "1";
-              el.replaceWith(fb);
-            }}
+            onError={() => setFailedImg(q.image ?? null)}
           />
         ) : (
           <span

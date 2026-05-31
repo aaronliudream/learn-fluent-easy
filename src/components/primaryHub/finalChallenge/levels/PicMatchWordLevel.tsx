@@ -11,7 +11,7 @@
  * 错题入库 TODO #71j 统一做。
  */
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
@@ -67,6 +67,8 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
   const isCorrect = answered && picked === correctIdx;
   const hasOptionImages =
     Array.isArray(q.optionImages) && q.optionImages.length === q.options.length;
+  // 选项图加载失败 → 回退文字。按 src 记录失败项;换题后 src 变了不再命中,自然复位。
+  const [failedSrcs, setFailedSrcs] = useState<Set<string>>(new Set());
 
   // 答错时打包 wrongInfo 给 shell 入库 + done 屏回顾。
   const wrongInfoFor = (picked: number) => ({
@@ -302,8 +304,10 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
               </span>
 
               {/* 选项图;无图或加载失败回退单词文字 */}
-              {q.optionImages?.[i] ? (
+              {q.optionImages?.[i] && !failedSrcs.has(q.optionImages[i]) ? (
                 <img
+                  // key 绑定到该选项图 src:换题时挂全新 img,绝不残留上一题的旧图。
+                  key={q.optionImages[i]}
                   src={q.optionImages[i]}
                   alt={opt}
                   style={{
@@ -312,17 +316,14 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
                     objectFit: "contain",
                     pointerEvents: "none",
                   }}
-                  onError={(e) => {
-                    // 图加载失败 → 回退文字
-                    const el = e.currentTarget;
-                    const s = document.createElement("span");
-                    s.textContent = opt;
-                    s.style.fontFamily = "var(--fc-font-body)";
-                    s.style.fontWeight = "800";
-                    s.style.fontSize = opt.length > 11 ? "16px" : opt.length > 8 ? "18px" : "22px";
-                    s.style.textAlign = "center";
-                    s.style.wordBreak = "break-word";
-                    el.replaceWith(s);
+                  onError={() => {
+                    const src = q.optionImages![i];
+                    setFailedSrcs((prev) => {
+                      if (prev.has(src)) return prev;
+                      const next = new Set(prev);
+                      next.add(src);
+                      return next;
+                    });
                   }}
                 />
               ) : (

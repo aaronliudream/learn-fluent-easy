@@ -83,6 +83,103 @@ function shuffleQuestionOptions<T extends FCQuestion>(q: T): T {
   return { ...q, options, answer };
 }
 
+/**
+ * 一道题是否参与"答案位置配额"：三选一(options 长度=3) 且不是固定 T/F。
+ * (T/F 听句判图、无 options 的阅读题都不参与,保持现状。)
+ */
+function participatesInQuota(q: FCQuestion): boolean {
+  return (
+    "options" in q &&
+    Array.isArray(q.options) &&
+    q.options.length === 3 &&
+    !isFixedTFOptions(q.options)
+  );
+}
+
+/**
+ * 为 M 道参与配额的题(按显示顺序)生成"正确答案位置序列",满足:
+ *   - 每个位置(0/1/2)出现次数 ≤ ⌊M/2⌋ (扎堆约束)
+ *   - 相邻两题位置不相同 (连续约束)
+ * 随机贪心 + 重试;极少数无解时兜底(放宽相邻、仅保配额),避免死循环。
+ */
+function assignAnswerPositions(M: number, P = 3, attempts = 200): number[] {
+  const cap = Math.floor(M / 2);
+  for (let t = 0; t < attempts; t++) {
+    const seq: number[] = [];
+    const counts = new Array(P).fill(0);
+    let ok = true;
+    for (let i = 0; i < M; i++) {
+      const cands: number[] = [];
+      for (let p = 0; p < P; p++) {
+        if (counts[p] < cap && (i === 0 || p !== seq[i - 1])) cands.push(p);
+      }
+      if (cands.length === 0) {
+        ok = false;
+        break;
+      }
+      const p = cands[Math.floor(Math.random() * cands.length)];
+      seq.push(p);
+      counts[p]++;
+    }
+    if (ok) return seq;
+  }
+  // 兜底:放宽相邻约束、仅保配额。
+  const seq: number[] = [];
+  const counts = new Array(P).fill(0);
+  const cap2 = Math.floor(M / 2);
+  for (let i = 0; i < M; i++) {
+    let best = 0;
+    let bestc = Infinity;
+    for (let p = 0; p < P; p++) {
+      if (counts[p] < cap2 && counts[p] < bestc) {
+        best = p;
+        bestc = counts[p];
+      }
+    }
+    seq.push(best);
+    counts[best]++;
+  }
+  return seq;
+}
+
+/** 把正确选项放到指定位置 pos,另两个干扰项随机填到剩余两格;answer = pos。 */
+function placeAnswerAt<T extends FCQuestion>(q: T, pos: number): T {
+  if (!("options" in q) || !Array.isArray(q.options)) return q;
+  const correct = q.answer;
+  const distractors = q.options
+    .map((_, i) => i)
+    .filter((i) => i !== correct);
+  for (let i = distractors.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [distractors[i], distractors[j]] = [distractors[j], distractors[i]];
+  }
+  const order = new Array<number>(q.options.length);
+  order[pos] = correct;
+  let d = 0;
+  for (let p = 0; p < order.length; p++) {
+    if (p === pos) continue;
+    order[p] = distractors[d++];
+  }
+  const options = order.map((i) => q.options[i]);
+  return { ...q, options, answer: pos };
+}
+
+/**
+ * 对抽出的一组题做"协调式"打散:参与配额的三选一题(按显示顺序)统一分配
+ * 答案位置(不扎堆、相邻不重复),其余题(T/F / 阅读)走原有的逐题打散(对它们是 no-op)。
+ */
+function applyAnswerQuota<T extends FCQuestion>(questions: T[]): T[] {
+  const partIdx = questions
+    .map((_, i) => i)
+    .filter((i) => participatesInQuota(questions[i]));
+  const seq = partIdx.length > 0 ? assignAnswerPositions(partIdx.length) : [];
+  const posByIndex = new Map<number, number>();
+  partIdx.forEach((qi, k) => posByIndex.set(qi, seq[k]));
+  return questions.map((q, i) =>
+    posByIndex.has(i) ? placeAnswerAt(q, posByIndex.get(i)!) : shuffleQuestionOptions(q),
+  );
+}
+
 /** 返回题库全部题目（只读引用）。 */
 export function getAllQuestions(
   volume: FCVolume = DEFAULT_VOLUME,
@@ -110,12 +207,11 @@ export function getQuestionsByType<T extends FinalChallengeQuestionType>(
   if (vocabFilter) {
     pool = pool.filter((q) => q.vocab_domain.includes(vocabFilter));
   }
-  // 抽 N 道后，渲染前对每道题的 options 做一次打散（answer 同步重映射）。
+  // 抽 N 道后，渲染前对选项做打散。三选一题型走"协调式配额"分配答案位置
+  // (不扎堆某字母、相邻不重复),T/F / 阅读题原样不动。
   // 调用方在 useMemo 里只算一次，停留期间选项稳定，不会跳动。
-  return [...pool]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, count)
-    .map(shuffleQuestionOptions);
+  const drawn = [...pool].sort(() => Math.random() - 0.5).slice(0, count);
+  return applyAnswerQuota(drawn);
 }
 
 /** 按 id 精确取题。未命中返回 null。 */

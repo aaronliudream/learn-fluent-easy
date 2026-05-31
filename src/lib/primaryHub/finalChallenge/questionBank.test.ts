@@ -113,6 +113,37 @@ describe("finalChallenge questionBank", () => {
     expect([...firstOptionSeen.values()].some((s) => s.size > 1)).toBe(true);
   });
 
+  it("answer-position quota: ≤⌊N/2⌋ per slot, no adjacent repeat, answer stays correct (1000 draws)", () => {
+    // 原始正确文本(用于校验 answer 仍指向正确项)。
+    const correctById = new Map<string, string>();
+    for (const q of getAllQuestions("v1", 6)) {
+      if (q.type === "reading_judge_TF" || q.type === "reading_choose_answer") continue;
+      correctById.set(q.id, q.options[q.answer]);
+    }
+    for (const N of [7, 5]) {
+      const cap = Math.floor(N / 2); // 7→3, 5→2
+      for (let t = 0; t < 1000; t++) {
+        const drawn = getQuestionsByType("picture_match_sentence", N, "v1", 6);
+        expect(drawn.length).toBe(N);
+        const pos = drawn.map((q) => q.answer);
+        // 配额:每个位置出现次数 ≤ cap
+        const counts = [0, 0, 0];
+        for (const p of pos) counts[p]++;
+        for (let p = 0; p < 3; p++) {
+          expect(counts[p], `N=${N} slot ${p} count ${counts[p]} > cap ${cap}`).toBeLessThanOrEqual(cap);
+        }
+        // 相邻不重复
+        for (let i = 1; i < pos.length; i++) {
+          expect(pos[i], `N=${N} adjacent repeat at ${i}`).not.toBe(pos[i - 1]);
+        }
+        // answer 仍指向原正确选项文本
+        for (const q of drawn) {
+          expect(q.options[q.answer]).toBe(correctById.get(q.id));
+        }
+      }
+    }
+  });
+
   it("never reorders fixed T/F options (listen_and_judge_picture)", () => {
     for (let t = 0; t < 20; t++) {
       for (const q of getQuestionsByType("listen_and_judge_picture", 5)) {

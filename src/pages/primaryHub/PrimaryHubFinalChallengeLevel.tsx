@@ -63,6 +63,12 @@ const SentenceTransformLevel = lazy(
       "@/components/primaryHub/finalChallenge/levels/SentenceTransformLevel"
     ),
 );
+const SentenceOrderingLevel = lazy(
+  () =>
+    import(
+      "@/components/primaryHub/finalChallenge/levels/SentenceOrderingLevel"
+    ),
+);
 
 /**
  * 题型 → 具体关卡组件的映射。Phase 1 全部 6 关已接入。
@@ -80,6 +86,7 @@ const LEVEL_COMPONENT_MAP: Partial<
   dialogue_response: DialogueResponseLevel,
   fill_in_choose: FillInChooseLevel,
   sentence_transform: SentenceTransformLevel,
+  sentence_ordering: SentenceOrderingLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {

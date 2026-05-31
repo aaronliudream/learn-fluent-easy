@@ -40,12 +40,12 @@ function unlockAudio(): void {
 
 export default function FillInChooseLevel() {
   const { grade } = usePrimaryHub();
-  // 读不到 → 默认 v2，安全。
+  // 年级用路由年级(可靠,不再因 sessionStorage 缺失而误取四年级);
+  // 册别 v1/v2 仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("fill_in_choose", getDrawCount(gr), vol, gr),
-    [vol, gr],
+    () => getQuestionsByType("fill_in_choose", getDrawCount(grade), vol, grade),
+    [vol, grade],
   );
 
   // 进入关卡时预热完整句 TTS:选对后正音可立即出声,不现场卡顿。

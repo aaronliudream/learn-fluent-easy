@@ -12,6 +12,7 @@
 
 import { useMemo, useState } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
+import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
   type LevelShellPlayApi,
@@ -22,13 +23,14 @@ import type { FCQuestion } from "@/lib/primaryHub/finalChallenge/types";
 type Q = Extract<FCQuestion, { type: "picture_match_sentence" }>;
 
 export default function PicMatchSentenceLevel() {
-  // 读不到 → 默认 v2，安全。
+  const { grade } = usePrimaryHub();
+  // 年级用路由年级(可靠,不再因 sessionStorage 缺失而误取四年级);
+  // 册别 v1/v2 仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   // 每关抽题数按年级取(六年级 7、其余 5); seed 不够时按现有池子返回更少。
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_sentence", getDrawCount(gr), vol, gr),
-    [vol, gr],
+    () => getQuestionsByType("picture_match_sentence", getDrawCount(grade), vol, grade),
+    [vol, grade],
   );
 
   // 题库空时给个友好提示 (Phase 1 占位题保证至少 1 道)。

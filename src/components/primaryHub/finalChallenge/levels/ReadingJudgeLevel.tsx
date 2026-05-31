@@ -18,6 +18,7 @@
 
 import { useMemo } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
+import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
   type LevelShellPlayApi,
@@ -31,13 +32,14 @@ import type {
 type Q = Extract<FCQuestion, { type: "reading_judge_TF" }>;
 
 export default function ReadingJudgeLevel() {
-  // 读不到 → 默认 v2，安全。
+  const { grade } = usePrimaryHub();
+  // 年级用路由年级(可靠,不再因 sessionStorage 缺失而误取四年级);
+  // 册别 v1/v2 仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   // 1 篇 passage / 一次游玩 (将来 seed 多篇时每次随机 1 篇)。
   const questions = useMemo(
-    () => getQuestionsByType("reading_judge_TF", 1, vol, gr),
-    [vol, gr],
+    () => getQuestionsByType("reading_judge_TF", 1, vol, grade),
+    [vol, grade],
   );
 
   if (questions.length === 0 || questions[0].subQuestions.length === 0) {

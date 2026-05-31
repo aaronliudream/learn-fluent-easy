@@ -26,12 +26,12 @@ type Q = Extract<FCQuestion, { type: "picture_match_word" }>;
 
 export default function PicMatchWordLevel() {
   const { grade } = usePrimaryHub();
-  // 读不到 → 默认 v2，安全。
+  // 年级用路由年级(可靠,不再因 sessionStorage 缺失而误取四年级);
+  // 册别 v1/v2 仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_word", getDrawCount(gr), vol, gr),
-    [vol, gr],
+    () => getQuestionsByType("picture_match_word", getDrawCount(grade), vol, grade),
+    [vol, grade],
   );
 
   if (questions.length === 0) {

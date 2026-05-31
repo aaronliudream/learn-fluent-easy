@@ -37,11 +37,11 @@ function unlockAudio(): void {
 
 export default function ListenChooseAnswerLevel() {
   const { grade } = usePrimaryHub();
-  // 读不到 → 默认 v2，安全。
+  // 年级用路由年级(可靠,不再默认四年级);册别仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_choose_answer", 5, vol),
-    [vol],
+    () => getQuestionsByType("listen_and_choose_answer", 5, vol, grade),
+    [vol, grade],
   );
 
   // 进入关卡时一次性预热所有题的 TTS 缓存。

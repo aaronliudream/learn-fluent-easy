@@ -135,7 +135,7 @@ export default function PrimaryHubFinalChallenge() {
           </div>
 
           {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a)。仅四年级:AI 强化目前只支持四年级。 */}
-          {grade === 4 && (
+          {[3, 4, 5].includes(grade) && (
             <button
               type="button"
               onClick={() => navigate(`${base}/final-challenge/strengthen`)}

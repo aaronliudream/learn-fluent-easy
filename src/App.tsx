@@ -352,7 +352,7 @@ const App = () => (
             <Route
               path="final-challenge/strengthen"
               element={
-                <FinalChallengeGuard allow={new Set(["4"])}>
+                <FinalChallengeGuard allow={FC_GRADES_WITH_SEEDS}>
                   <PrimaryHubFinalChallengeStrengthen />
                 </FinalChallengeGuard>
               }

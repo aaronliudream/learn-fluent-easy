@@ -390,7 +390,7 @@ export default function LevelShell({
         )}
 
         {/* 紫色强化训练 CTA — strengthen 模式下隐藏(避免循环);AI 强化目前仅四年级 */}
-        {mode === "level" && grade === 4 && (
+        {mode === "level" && [3, 4, 5].includes(grade) && (
           <button
             type="button"
             onClick={() =>

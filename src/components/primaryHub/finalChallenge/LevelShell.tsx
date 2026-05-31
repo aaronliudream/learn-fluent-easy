@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { saveLevelProgress } from "@/lib/primaryHub/finalChallenge/progress";
 import { recordMistake } from "@/lib/primaryHub/finalChallenge/mistakes";
+import { setResume, clearResume } from "@/lib/primaryHub/finalChallenge/resume";
 import type { FinalChallengeQuestionType } from "@/lib/primaryHub/finalChallenge/types";
 import RexMascot from "@/components/primaryHub/finalChallenge/RexMascot";
 
@@ -133,6 +134,15 @@ export default function LevelShell({
 
   const isLast = idx >= total - 1;
 
+  // 进入闯关关卡 → 写一条"未完成"轻记录,供全局「继续闯关」悬浮球跳回。
+  // 仅关卡模式记录;强化训练 (strengthen) 不纳入。册别读 sessionStorage(入口卡写入),
+  // 读不到默认 v2(与各关抽题口径一致)。
+  useEffect(() => {
+    if (mode !== "level") return;
+    const volume = sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2";
+    void setResume({ grade, volume, levelId, levelName, ts: Date.now() });
+  }, [mode, grade, levelId, levelName]);
+
   // 答完不自动跳:只能由用户点「下一题 →」手动推进(给孩子复盘时间 + 给后台 AI 出题留余地)。
   const advance = useCallback(() => {
     if (isLast) {
@@ -177,6 +187,8 @@ export default function LevelShell({
   useEffect(() => {
     if (phase !== "done") return;
     if (mode === "strengthen") return; // 强化训练不写关卡进度
+    // 做到完成页 = 这一关不再"未完成" → 清掉「继续闯关」轻记录。
+    void clearResume();
     const stars = computeStars(correctCount, total);
     saveLevelProgress(userId, grade, {
       levelId,

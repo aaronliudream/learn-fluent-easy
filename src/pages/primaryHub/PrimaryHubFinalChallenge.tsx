@@ -23,12 +23,26 @@ import {
   getQuestionsByType,
 } from "@/lib/primaryHub/finalChallenge/questionBank";
 import type { FinalChallengeQuestionType } from "@/lib/primaryHub/finalChallenge/types";
+import levelMapBg from "@/assets/finalChallenge/level-map-bg.png";
 
 const RANK_LABEL: Record<RankTier, string> = {
   bronze: "闯关学徒",
   silver: "闯关勇士",
   gold: "闯关高手",
   rainbow: "闯关大师",
+};
+
+/** 年级中文名（标题用）。映射范围外回退到数字,保证任何年级都不再写死"四年级"。 */
+const GRADE_CN: Record<number, string> = { 3: "三", 4: "四", 5: "五", 6: "六" };
+const gradeLabel = (grade: number) => `${GRADE_CN[grade] ?? grade}年级`;
+
+/** 关卡地图整块的背景：底层 level-map-bg 插画 + 上层柔和暖色 scrim(保证标题/卡片清晰可读)。 */
+const MAP_BG: React.CSSProperties = {
+  backgroundColor: "var(--fc-paper)",
+  backgroundImage: `linear-gradient(180deg, rgba(255,248,231,0.74) 0%, rgba(255,239,201,0.82) 100%), url(${levelMapBg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center top",
+  backgroundRepeat: "no-repeat",
 };
 
 export default function PrimaryHubFinalChallenge() {
@@ -79,7 +93,7 @@ export default function PrimaryHubFinalChallenge() {
       style={{
         minHeight: "100vh",
         padding: "20px 16px 80px",
-        background: "linear-gradient(180deg, var(--fc-paper) 0%, var(--fc-paper-warm) 100%)",
+        ...MAP_BG,
       }}
     >
       {/* 顶部总览 — 通关后切换为庆祝 banner */}
@@ -190,7 +204,7 @@ export default function PrimaryHubFinalChallenge() {
       ) : (
         <header style={{ textAlign: "center", marginBottom: 20 }}>
           <h1 style={{ fontSize: 24, fontWeight: 800, color: "var(--fc-ink)", marginBottom: 14 }}>
-            《英语闯关》四年级最终关
+            《英语闯关》{gradeLabel(grade)}最终关
           </h1>
           <div
             style={{

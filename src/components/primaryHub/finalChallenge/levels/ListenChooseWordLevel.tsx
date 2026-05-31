@@ -64,12 +64,12 @@ export default function ListenChooseWordLevel({
   vocabFilter,
 }: ListenChooseWordLevelProps = {}) {
   const { grade } = usePrimaryHub();
-  // 读不到 → 默认 v2，安全。
+  // 年级用路由年级(可靠,不再因 sessionStorage 缺失而误取四年级);
+  // 册别 v1/v2 仅 sessionStorage 有(入口卡写入),读不到默认 v2。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
-  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_choose_word", getDrawCount(gr), vol, gr, vocabFilter),
-    [vol, gr, vocabFilter],
+    () => getQuestionsByType("listen_and_choose_word", getDrawCount(grade), vol, grade, vocabFilter),
+    [vol, grade, vocabFilter],
   );
 
   // 进入关卡时一次性预热所有题的 TTS 缓存。

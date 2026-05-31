@@ -153,6 +153,7 @@ const GrammarMastery = lazy(() => import("./pages/GrammarMastery.tsx"));
 const Me = lazy(() => import("./pages/Me.tsx"));
 const Cet = lazy(() => import("./pages/Cet.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
+import ResumeFab from "@/components/ResumeFab";
 import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
 import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
@@ -462,6 +463,7 @@ const App = () => (
         </RouteErrorBoundary>
         </div>
         <BottomTabBar />
+        <ResumeFab />
         {/* FeedbackWidget temporarily hidden per user request — re-enable when needed. */}
         {/* <FeedbackWidgetGate /> */}
         <InstallPrompt />

@@ -45,7 +45,8 @@ export type FinalChallengeQuestionType =
   | "reading_judge_TF"
   | "reading_choose_answer"
   | "dialogue_response"
-  | "fill_in_choose";
+  | "fill_in_choose"
+  | "sentence_transform";
 
 /** 阅读类题目内部的子题。 */
 export interface FCSubQuestion {
@@ -133,6 +134,13 @@ export type FCQuestion =
   | (FCQuestionBase & {
       type: "fill_in_choose";
       audio: string;
+      options: string[];
+      answer: number;
+    })
+  /** 关 9（仅六年级）：句型转换·选择式。`prompt` 为原句 + 括号里的转换要求
+   *  （划线部分用引号标），`options` 为 3 个改写句，`answer` 为正确改写。无 audio（读题判断，不朗读）。 */
+  | (FCQuestionBase & {
+      type: "sentence_transform";
       options: string[];
       answer: number;
     });

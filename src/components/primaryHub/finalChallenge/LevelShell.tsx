@@ -389,8 +389,8 @@ export default function LevelShell({
           </div>
         )}
 
-        {/* 紫色强化训练 CTA — strengthen 模式下隐藏(避免循环) */}
-        {mode === "level" && (
+        {/* 紫色强化训练 CTA — strengthen 模式下隐藏(避免循环);AI 强化目前仅四年级 */}
+        {mode === "level" && grade === 4 && (
           <button
             type="button"
             onClick={() =>

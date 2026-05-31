@@ -65,6 +65,8 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
   const { answered, picked, pick } = api;
   const correctIdx = q.answer;
   const isCorrect = answered && picked === correctIdx;
+  const hasOptionImages =
+    Array.isArray(q.optionImages) && q.optionImages.length === q.options.length;
 
   // 答错时打包 wrongInfo 给 shell 入库 + done 屏回顾。
   const wrongInfoFor = (picked: number) => ({
@@ -104,7 +106,7 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
           marginBottom: 8,
         }}
       >
-        听一听,选出对应的图片
+        {hasOptionImages ? "听一听,选出对应的图片" : "看图,选出对应的单词"}
       </p>
 
       {/* 题干:显示要找的英文单词 + 朗读 (替代 emoji,避免题干图与选项图撞脸);答对时撒星 */}
@@ -115,37 +117,45 @@ function PlayCard({ q, api, grade }: { q: Q; api: LevelShellPlayApi; grade: numb
           padding: "16px 0 24px",
         }}
       >
-        <div
-          style={{
-            fontSize: 40,
-            fontWeight: 900,
-            color: "var(--fc-ink)",
-            letterSpacing: 0.5,
-          }}
-        >
-          {q.options[q.answer]}
-        </div>
-        <button
-          type="button"
-          onClick={() => void speakKid(q.options[q.answer], { grade })}
-          className="fc-btn-press"
-          style={{
-            marginTop: 10,
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            padding: "6px 16px",
-            borderRadius: 999,
-            border: "none",
-            background: "var(--fc-primary)",
-            color: "white",
-            fontSize: 14,
-            fontWeight: 700,
-            cursor: "pointer",
-          }}
-        >
-          🔊 听一听
-        </button>
+        {hasOptionImages ? (
+          <>
+            <div
+              style={{
+                fontSize: 40,
+                fontWeight: 900,
+                color: "var(--fc-ink)",
+                letterSpacing: 0.5,
+              }}
+            >
+              {q.options[q.answer]}
+            </div>
+            <button
+              type="button"
+              onClick={() => void speakKid(q.options[q.answer], { grade })}
+              className="fc-btn-press"
+              style={{
+                marginTop: 10,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "6px 16px",
+                borderRadius: 999,
+                border: "none",
+                background: "var(--fc-primary)",
+                color: "white",
+                fontSize: 14,
+                fontWeight: 700,
+                cursor: "pointer",
+              }}
+            >
+              🔊 听一听
+            </button>
+          </>
+        ) : (
+          <div style={{ fontSize: 72, lineHeight: 1 }} aria-label="题目图片">
+            {q.emoji}
+          </div>
+        )}
         {isCorrect && (
           <>
             <span

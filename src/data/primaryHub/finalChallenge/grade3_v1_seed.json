@@ -1,33 +1,627 @@
 [
-  { "id": "fc_g3v1_01", "type": "picture_match_sentence", "unitId": "g3v1_u5", "difficulty": "easy", "vocab_domain": ["food"], "grammar_point": ["id_like"], "prompt": "看图，选出与图片相符的句子。", "emoji": "🍞", "image": "/primary/finalChallenge_images/bread.png", "options": ["I'd like some bread.", "I'd like some rice.", "I'd like some cake."], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_02", "type": "picture_match_sentence", "unitId": "g3v1_u4", "difficulty": "easy", "vocab_domain": ["animals"], "grammar_point": ["its_a"], "prompt": "看图，选出与图片相符的句子。", "emoji": "🐱", "image": "/primary/finalChallenge_images/cat.png", "options": ["It's a dog.", "It's a cat.", "It's a bird."], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_03", "type": "picture_match_sentence", "unitId": "g3v1_u2", "difficulty": "easy", "vocab_domain": ["colours"], "grammar_point": ["its_colour"], "prompt": "看图，选出与图片相符的句子。", "emoji": "🔴", "options": ["It's blue.", "It's red.", "It's yellow."], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_04", "type": "picture_match_sentence", "unitId": "g3v1_u3", "difficulty": "medium", "vocab_domain": ["body"], "grammar_point": ["look_at_my"], "prompt": "看图，选出与图片相符的句子。", "emoji": "👁️", "image": "/primary/finalChallenge_images/eye.png", "options": ["Look at my nose.", "Look at my eye.", "Look at my ear."], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_05", "type": "picture_match_sentence", "unitId": "g3v1_u6", "difficulty": "medium", "vocab_domain": ["birthday"], "grammar_point": ["greetings"], "prompt": "看图，选出与图片相符的句子。", "emoji": "🎂", "options": ["How old are you?", "Happy birthday!", "Good morning!"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-
-  { "id": "fc_g3v1_06", "type": "picture_match_word", "unitId": "g3v1_u1", "difficulty": "easy", "vocab_domain": ["stationery"], "grammar_point": ["noun_vocab"], "prompt": "看图，选出对应的单词。", "emoji": "✏️", "image": "/primary/finalChallenge_images/pencil.png", "options": ["pen", "pencil", "ruler"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_07", "type": "picture_match_word", "unitId": "g3v1_u4", "difficulty": "easy", "vocab_domain": ["animals"], "grammar_point": ["noun_vocab"], "prompt": "看图，选出对应的单词。", "emoji": "🐘", "image": "/primary/finalChallenge_images/elephant.png", "options": ["monkey", "elephant", "bear"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_08", "type": "picture_match_word", "unitId": "g3v1_u5", "difficulty": "easy", "vocab_domain": ["food"], "grammar_point": ["noun_vocab"], "prompt": "看图，选出对应的单词。", "emoji": "🥛", "options": ["juice", "milk", "water"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_09", "type": "picture_match_word", "unitId": "g3v1_u3", "difficulty": "medium", "vocab_domain": ["body"], "grammar_point": ["noun_vocab"], "prompt": "看图，选出对应的单词。", "emoji": "👃", "image": "/primary/finalChallenge_images/nose.png", "options": ["nose", "mouth", "ear"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_10", "type": "picture_match_word", "unitId": "g3v1_u2", "difficulty": "medium", "vocab_domain": ["colours"], "grammar_point": ["noun_vocab"], "prompt": "看图，选出对应的单词。", "emoji": "🟢", "options": ["brown", "green", "black"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-
-  { "id": "fc_g3v1_11", "type": "listen_and_choose_word", "unitId": "g3v1_u1", "difficulty": "easy", "vocab_domain": ["stationery"], "grammar_point": ["listening_discrimination"], "prompt": "听音频，选择你听到的单词。", "audio": "ruler", "options": ["ruler", "rice", "red"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_12", "type": "listen_and_choose_word", "unitId": "g3v1_u5", "difficulty": "easy", "vocab_domain": ["food"], "grammar_point": ["listening_discrimination"], "prompt": "听音频，选择你听到的单词。", "audio": "bread", "options": ["bread", "bear", "bird"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_13", "type": "listen_and_choose_word", "unitId": "g3v1_u3", "difficulty": "medium", "vocab_domain": ["body"], "grammar_point": ["listening_discrimination"], "prompt": "听音频，选择你听到的单词。", "audio": "eye", "options": ["ear", "eye", "egg"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_14", "type": "listen_and_choose_word", "unitId": "g3v1_u6", "difficulty": "medium", "vocab_domain": ["numbers"], "grammar_point": ["listening_discrimination"], "prompt": "听音频，选择你听到的单词。", "audio": "four", "options": ["five", "four", "fish"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_15", "type": "listen_and_choose_word", "unitId": "g3v1_u4", "difficulty": "hard", "vocab_domain": ["animals"], "grammar_point": ["listening_discrimination"], "prompt": "听音频，选择你听到的单词。", "audio": "cat", "options": ["cake", "cat", "crayon"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-
-  { "id": "fc_g3v1_16", "type": "listen_and_judge_picture", "unitId": "g3v1_u4", "difficulty": "easy", "vocab_domain": ["animals"], "grammar_point": ["its_a", "listening_judge"], "prompt": "看图，听音频，判断是否相符。", "emoji": "🐷", "image": "/primary/finalChallenge_images/pig.png", "audio": "It's a pig.", "options": ["T (相符)", "F (不相符)"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_17", "type": "listen_and_judge_picture", "unitId": "g3v1_u4", "difficulty": "easy", "vocab_domain": ["animals"], "grammar_point": ["its_a", "listening_judge"], "prompt": "看图，听音频，判断是否相符。", "emoji": "🦆", "image": "/primary/finalChallenge_images/duck.png", "audio": "It's a duck.", "options": ["T (相符)", "F (不相符)"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_18", "type": "listen_and_judge_picture", "unitId": "g3v1_u2", "difficulty": "medium", "vocab_domain": ["colours"], "grammar_point": ["its_colour", "listening_judge"], "prompt": "看图，听音频，判断是否相符。", "emoji": "⚫", "audio": "It's white.", "options": ["T (相符)", "F (不相符)"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_19", "type": "listen_and_judge_picture", "unitId": "g3v1_u3", "difficulty": "medium", "vocab_domain": ["body"], "grammar_point": ["this_is", "listening_judge"], "prompt": "看图，听音频，判断是否相符。", "emoji": "✋", "image": "/primary/finalChallenge_images/hand.png", "audio": "This is my head.", "options": ["T (相符)", "F (不相符)"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_20", "type": "listen_and_judge_picture", "unitId": "g3v1_u5", "difficulty": "medium", "vocab_domain": ["food"], "grammar_point": ["id_like", "listening_judge"], "prompt": "看图，听音频，判断是否相符。", "emoji": "🐟", "image": "/primary/finalChallenge_images/fish.png", "audio": "I'd like some fish.", "options": ["T (相符)", "F (不相符)"], "answer": 0, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-
-  { "id": "fc_g3v1_21", "type": "odd_one_out", "unitId": "g3v1_u4", "difficulty": "easy", "vocab_domain": ["animals", "stationery"], "grammar_point": ["categorization"], "prompt": "选出与其他两个不属于同一类的单词。", "options": ["cat", "dog", "pen"], "answer": 2, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_22", "type": "odd_one_out", "unitId": "g3v1_u2", "difficulty": "easy", "vocab_domain": ["colours", "food"], "grammar_point": ["categorization"], "prompt": "选出与其他两个不属于同一类的单词。", "options": ["red", "milk", "blue"], "answer": 1, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_23", "type": "odd_one_out", "unitId": "g3v1_u5", "difficulty": "medium", "vocab_domain": ["food", "body"], "grammar_point": ["categorization"], "prompt": "选出与其他两个不属于同一类的单词。", "options": ["bread", "cake", "ear"], "answer": 2, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_24", "type": "odd_one_out", "unitId": "g3v1_u3", "difficulty": "medium", "vocab_domain": ["body", "animals"], "grammar_point": ["categorization"], "prompt": "选出与其他两个不属于同一类的单词。", "options": ["eye", "nose", "monkey"], "answer": 2, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-  { "id": "fc_g3v1_25", "type": "odd_one_out", "unitId": "g3v1_u1", "difficulty": "hard", "vocab_domain": ["stationery", "colours"], "grammar_point": ["categorization"], "prompt": "选出与其他两个不属于同一类的单词。", "options": ["ruler", "pencil", "yellow"], "answer": 2, "source": "real_exam", "source_ref": "改编自三年级上册期末卷" },
-
-  { "id": "fc_g3v1_26", "type": "reading_judge_TF", "unitId": "g3v1_u5", "difficulty": "medium", "vocab_domain": ["colours", "animals", "food", "numbers"], "grammar_point": ["reading_comprehension"], "prompt": "读短文，判断下列陈述的真假。", "passage": "Hello! I'm Sam. I'm a happy boy. I have a cat. It's black and white. I like my cat. I'd like some bread and milk for breakfast. I have two pens and three rulers. Red is my favourite colour.", "subQuestions": [ { "stem": "Sam has a cat.", "options": ["T (相符)", "F (不相符)"], "answer": 0 }, { "stem": "The cat is brown.", "options": ["T (相符)", "F (不相符)"], "answer": 1 }, { "stem": "Sam would like some bread and milk.", "options": ["T (相符)", "F (不相符)"], "answer": 0 }, { "stem": "Sam has three pens.", "options": ["T (相符)", "F (不相符)"], "answer": 1 }, { "stem": "Sam's favourite colour is red.", "options": ["T (相符)", "F (不相符)"], "answer": 0 } ], "source": "real_exam", "source_ref": "改编自三年级上册期末卷" }
+ {
+  "id": "fc_g3v1_01",
+  "type": "picture_match_sentence",
+  "unitId": "g3v1_u5",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "food"
+  ],
+  "grammar_point": [
+   "id_like"
+  ],
+  "prompt": "看图，选出与图片相符的句子。",
+  "emoji": "🍚",
+  "image": "/primary/finalChallenge_images/rice.png",
+  "options": [
+   "I'd like some rice.",
+   "I'd like some bread.",
+   "I'd like some cake."
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_02",
+  "type": "picture_match_sentence",
+  "unitId": "g3v1_u4",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "animals"
+  ],
+  "grammar_point": [
+   "its_a"
+  ],
+  "prompt": "看图，选出与图片相符的句子。",
+  "emoji": "🐱",
+  "image": "/primary/finalChallenge_images/cat.png",
+  "options": [
+   "It's a dog.",
+   "It's a cat.",
+   "It's a bird."
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_03",
+  "type": "picture_match_sentence",
+  "unitId": "g3v1_u2",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "colours"
+  ],
+  "grammar_point": [
+   "its_colour"
+  ],
+  "prompt": "看图，选出与图片相符的句子。",
+  "emoji": "🔴",
+  "options": [
+   "It's blue.",
+   "It's red.",
+   "It's yellow."
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_04",
+  "type": "picture_match_sentence",
+  "unitId": "g3v1_u3",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "body"
+  ],
+  "grammar_point": [
+   "look_at_my"
+  ],
+  "prompt": "看图，选出与图片相符的句子。",
+  "emoji": "👁️",
+  "image": "/primary/finalChallenge_images/eye.png",
+  "options": [
+   "Look at my nose.",
+   "Look at my eye.",
+   "Look at my ear."
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_05",
+  "type": "picture_match_sentence",
+  "unitId": "g3v1_u6",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "birthday"
+  ],
+  "grammar_point": [
+   "greetings"
+  ],
+  "prompt": "看图，选出与图片相符的句子。",
+  "emoji": "🎂",
+  "options": [
+   "How old are you?",
+   "Happy birthday!",
+   "Good morning!"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_06",
+  "type": "picture_match_word",
+  "unitId": "g3v1_u1",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "stationery"
+  ],
+  "grammar_point": [
+   "noun_vocab"
+  ],
+  "prompt": "看图，选出对应的单词。",
+  "emoji": "✏️",
+  "image": "/primary/finalChallenge_images/pencil.png",
+  "options": [
+   "pen",
+   "pencil",
+   "ruler"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_07",
+  "type": "picture_match_word",
+  "unitId": "g3v1_u4",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "animals"
+  ],
+  "grammar_point": [
+   "noun_vocab"
+  ],
+  "prompt": "看图，选出对应的单词。",
+  "emoji": "🐘",
+  "image": "/primary/finalChallenge_images/elephant.png",
+  "options": [
+   "monkey",
+   "elephant",
+   "bear"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_08",
+  "type": "picture_match_word",
+  "unitId": "g3v1_u5",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "food"
+  ],
+  "grammar_point": [
+   "noun_vocab"
+  ],
+  "prompt": "看图，选出对应的单词。",
+  "emoji": "🥛",
+  "options": [
+   "juice",
+   "milk",
+   "water"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_09",
+  "type": "picture_match_word",
+  "unitId": "g3v1_u3",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "body"
+  ],
+  "grammar_point": [
+   "noun_vocab"
+  ],
+  "prompt": "看图，选出对应的单词。",
+  "emoji": "👃",
+  "image": "/primary/finalChallenge_images/nose.png",
+  "options": [
+   "nose",
+   "mouth",
+   "ear"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_10",
+  "type": "picture_match_word",
+  "unitId": "g3v1_u2",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "colours"
+  ],
+  "grammar_point": [
+   "noun_vocab"
+  ],
+  "prompt": "看图，选出对应的单词。",
+  "emoji": "🟢",
+  "options": [
+   "brown",
+   "green",
+   "black"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_11",
+  "type": "listen_and_choose_word",
+  "unitId": "g3v1_u1",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "stationery"
+  ],
+  "grammar_point": [
+   "listening_discrimination"
+  ],
+  "prompt": "听音频，选择你听到的单词。",
+  "audio": "ruler",
+  "options": [
+   "ruler",
+   "rice",
+   "red"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_12",
+  "type": "listen_and_choose_word",
+  "unitId": "g3v1_u5",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "food"
+  ],
+  "grammar_point": [
+   "listening_discrimination"
+  ],
+  "prompt": "听音频，选择你听到的单词。",
+  "audio": "bread",
+  "options": [
+   "bread",
+   "bear",
+   "bird"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_13",
+  "type": "listen_and_choose_word",
+  "unitId": "g3v1_u3",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "body"
+  ],
+  "grammar_point": [
+   "listening_discrimination"
+  ],
+  "prompt": "听音频，选择你听到的单词。",
+  "audio": "eye",
+  "options": [
+   "ear",
+   "eye",
+   "egg"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_14",
+  "type": "listen_and_choose_word",
+  "unitId": "g3v1_u6",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "numbers"
+  ],
+  "grammar_point": [
+   "listening_discrimination"
+  ],
+  "prompt": "听音频，选择你听到的单词。",
+  "audio": "four",
+  "options": [
+   "five",
+   "four",
+   "fish"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_15",
+  "type": "listen_and_choose_word",
+  "unitId": "g3v1_u4",
+  "difficulty": "hard",
+  "vocab_domain": [
+   "animals"
+  ],
+  "grammar_point": [
+   "listening_discrimination"
+  ],
+  "prompt": "听音频，选择你听到的单词。",
+  "audio": "cat",
+  "options": [
+   "cake",
+   "cat",
+   "crayon"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_16",
+  "type": "listen_and_judge_picture",
+  "unitId": "g3v1_u4",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "animals"
+  ],
+  "grammar_point": [
+   "its_a",
+   "listening_judge"
+  ],
+  "prompt": "看图，听音频，判断是否相符。",
+  "emoji": "🐷",
+  "image": "/primary/finalChallenge_images/pig.png",
+  "audio": "It's a pig.",
+  "options": [
+   "T (相符)",
+   "F (不相符)"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_17",
+  "type": "listen_and_judge_picture",
+  "unitId": "g3v1_u4",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "animals"
+  ],
+  "grammar_point": [
+   "its_a",
+   "listening_judge"
+  ],
+  "prompt": "看图，听音频，判断是否相符。",
+  "emoji": "🦆",
+  "image": "/primary/finalChallenge_images/duck.png",
+  "audio": "It's a duck.",
+  "options": [
+   "T (相符)",
+   "F (不相符)"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_18",
+  "type": "listen_and_judge_picture",
+  "unitId": "g3v1_u2",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "colours"
+  ],
+  "grammar_point": [
+   "its_colour",
+   "listening_judge"
+  ],
+  "prompt": "看图，听音频，判断是否相符。",
+  "emoji": "⚫",
+  "audio": "It's white.",
+  "options": [
+   "T (相符)",
+   "F (不相符)"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_19",
+  "type": "listen_and_judge_picture",
+  "unitId": "g3v1_u3",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "body"
+  ],
+  "grammar_point": [
+   "this_is",
+   "listening_judge"
+  ],
+  "prompt": "看图，听音频，判断是否相符。",
+  "emoji": "✋",
+  "audio": "This is my head.",
+  "options": [
+   "T (相符)",
+   "F (不相符)"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_20",
+  "type": "listen_and_judge_picture",
+  "unitId": "g3v1_u5",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "food"
+  ],
+  "grammar_point": [
+   "id_like",
+   "listening_judge"
+  ],
+  "prompt": "看图，听音频，判断是否相符。",
+  "emoji": "🐟",
+  "image": "/primary/finalChallenge_images/fish.png",
+  "audio": "I'd like some fish.",
+  "options": [
+   "T (相符)",
+   "F (不相符)"
+  ],
+  "answer": 0,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_21",
+  "type": "odd_one_out",
+  "unitId": "g3v1_u4",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "animals",
+   "stationery"
+  ],
+  "grammar_point": [
+   "categorization"
+  ],
+  "prompt": "选出与其他两个不属于同一类的单词。",
+  "options": [
+   "cat",
+   "dog",
+   "pen"
+  ],
+  "answer": 2,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_22",
+  "type": "odd_one_out",
+  "unitId": "g3v1_u2",
+  "difficulty": "easy",
+  "vocab_domain": [
+   "colours",
+   "food"
+  ],
+  "grammar_point": [
+   "categorization"
+  ],
+  "prompt": "选出与其他两个不属于同一类的单词。",
+  "options": [
+   "red",
+   "milk",
+   "blue"
+  ],
+  "answer": 1,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_23",
+  "type": "odd_one_out",
+  "unitId": "g3v1_u5",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "food",
+   "body"
+  ],
+  "grammar_point": [
+   "categorization"
+  ],
+  "prompt": "选出与其他两个不属于同一类的单词。",
+  "options": [
+   "bread",
+   "cake",
+   "ear"
+  ],
+  "answer": 2,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_24",
+  "type": "odd_one_out",
+  "unitId": "g3v1_u3",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "body",
+   "animals"
+  ],
+  "grammar_point": [
+   "categorization"
+  ],
+  "prompt": "选出与其他两个不属于同一类的单词。",
+  "options": [
+   "eye",
+   "nose",
+   "monkey"
+  ],
+  "answer": 2,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_25",
+  "type": "odd_one_out",
+  "unitId": "g3v1_u1",
+  "difficulty": "hard",
+  "vocab_domain": [
+   "stationery",
+   "colours"
+  ],
+  "grammar_point": [
+   "categorization"
+  ],
+  "prompt": "选出与其他两个不属于同一类的单词。",
+  "options": [
+   "ruler",
+   "pencil",
+   "yellow"
+  ],
+  "answer": 2,
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ },
+ {
+  "id": "fc_g3v1_26",
+  "type": "reading_judge_TF",
+  "unitId": "g3v1_u5",
+  "difficulty": "medium",
+  "vocab_domain": [
+   "colours",
+   "animals",
+   "food",
+   "numbers"
+  ],
+  "grammar_point": [
+   "reading_comprehension"
+  ],
+  "prompt": "读短文，判断下列陈述的真假。",
+  "passage": "Hello! I'm Sam. I'm a happy boy. I have a cat. It's black and white. I like my cat. I'd like some bread and milk for breakfast. I have two pens and three rulers. Red is my favourite colour.",
+  "subQuestions": [
+   {
+    "stem": "Sam has a cat.",
+    "options": [
+     "T (相符)",
+     "F (不相符)"
+    ],
+    "answer": 0
+   },
+   {
+    "stem": "The cat is brown.",
+    "options": [
+     "T (相符)",
+     "F (不相符)"
+    ],
+    "answer": 1
+   },
+   {
+    "stem": "Sam would like some bread and milk.",
+    "options": [
+     "T (相符)",
+     "F (不相符)"
+    ],
+    "answer": 0
+   },
+   {
+    "stem": "Sam has three pens.",
+    "options": [
+     "T (相符)",
+     "F (不相符)"
+    ],
+    "answer": 1
+   },
+   {
+    "stem": "Sam's favourite colour is red.",
+    "options": [
+     "T (相符)",
+     "F (不相符)"
+    ],
+    "answer": 0
+   }
+  ],
+  "source": "real_exam",
+  "source_ref": "改编自三年级上册期末卷"
+ }
 ]

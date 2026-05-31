@@ -106,6 +106,8 @@ function PlayCard({
   const isCorrect = answered && picked === correctIdx;
 
   const [speaking, setSpeaking] = useState(false);
+  // 图加载失败 → 回退 emoji。记下失败的 src,换题后 q.image 变了条件自然复位。
+  const [failedImg, setFailedImg] = useState<string | null>(null);
   const timers = useRef<number[]>([]);
   useEffect(
     () => () => {
@@ -230,8 +232,10 @@ function PlayCard({
           padding: "12px 0 4px",
         }}
       >
-        {q.image ? (
+        {q.image && failedImg !== q.image ? (
           <img
+            // key 绑定到本题图片:换题时挂全新 img,绝不残留上一题已解码的旧图。
+            key={q.id}
             src={q.image}
             alt=""
             style={{
@@ -242,15 +246,7 @@ function PlayCard({
               objectFit: "contain",
               filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.15))",
             }}
-            onError={(e) => {
-              // 图加载失败 → 回退 emoji
-              const el = e.currentTarget;
-              const fb = document.createElement("span");
-              fb.textContent = q.emoji ?? "";
-              fb.style.fontSize = "96px";
-              fb.style.lineHeight = "1";
-              el.replaceWith(fb);
-            }}
+            onError={() => setFailedImg(q.image ?? null)}
           />
         ) : (
           <span

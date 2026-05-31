@@ -80,6 +80,9 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const [expectedTotal, setExpectedTotal] = useState(5);
   // 后台生成失败但种子题在玩 → 轻提示,不打断。
   const [bgError, setBgError] = useState<string | null>(null);
+  // AI 生成是否已"落定"(成功/失败/超时都算)。用于:孩子答得比 AI 出题快、停在
+  // 还没到的题位时,若生成已落定且不会再有题,就直接收尾,绝不永久卡在"马上来下一题"。
+  const [settled, setSettled] = useState(false);
   // 用 nonce 触发"再来一轮" — 把 effect 重跑
   const [reloadNonce, setReloadNonce] = useState(0);
 
@@ -88,6 +91,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
     let cancelled = false;
     setError(null);
     setBgError(null);
+    setSettled(false);
 
     // 没登录:强化训练需要账号(错题/出题按用户),直接提示,不卡死。
     if (!userId) {
@@ -110,9 +114,11 @@ export default function PrimaryHubFinalChallengeStrengthen() {
       const result: StrengthenResult | StrengthenError | "timeout" =
         await Promise.race([
           fetchStrengthenQuestions(userId, grade, aiCount),
-          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 45000)),
+          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 20000)),
         ]);
       if (cancelled) return;
+      // 走到这里 = 生成已落定(成功/失败/超时),之后不会再有新题进来。
+      setSettled(true);
       if (result === "timeout") {
         if (seedQs.length > 0) {
           setBgError("AI 出题有点慢,先做这几道,做完可以再点一次「强化训练」。");
@@ -164,8 +170,10 @@ export default function PrimaryHubFinalChallengeStrengthen() {
   const renderPlay = useCallback(
     (api: LevelShellPlayApi) => {
       const q = questions[api.idx];
-      // 后台题还没到(用户答得快):给轻量 loading 兜底,不白屏;到了自动渲染。
       if (!q) {
+        // 生成已落定却还没题 → 不会再有了,直接收尾到 done,绝不永久卡住。
+        if (settled) return <FinishWhenNoMore api={api} />;
+        // 后台题还没到(用户答得快):给轻量 loading 兜底,不白屏;到了自动渲染。
         return (
           <div style={{ padding: 48, textAlign: "center", color: "var(--fc-ink-soft)" }}>
             <div
@@ -203,7 +211,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
           );
       }
     },
-    [questions, grade],
+    [questions, grade, settled],
   );
 
   // ============ LOADING ============
@@ -350,6 +358,24 @@ export default function PrimaryHubFinalChallengeStrengthen() {
         做法会很笨;改用更简单的方式: 在 done 屏返回按钮旁边由用户走"返回地图 → 再次进入 strengthen"
         循环, 已足够 MVP. */}
     </>
+  );
+}
+
+/**
+ * 生成已落定但当前题位没有题(孩子答得比 AI 快、AI 又没出/超时/失败)。
+ * 此时再没有新题会进来,挂载即收尾到 done —— 避免永久卡在"马上来下一题"。
+ * (此分支仅在 settled 时渲染,所以 expectedTotal 已 settle 成实际题数,
+ *  api.advance() 命中 isLast → 进入 done。)
+ */
+function FinishWhenNoMore({ api }: { api: LevelShellPlayApi }) {
+  useEffect(() => {
+    api.advance();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <div style={{ padding: 48, textAlign: "center", color: "var(--fc-ink-soft)" }}>
+      本轮就到这儿啦,正在收尾…
+    </div>
   );
 }
 

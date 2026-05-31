@@ -13,6 +13,8 @@ import seedG3V1 from "@/data/primaryHub/finalChallenge/grade3_v1_seed.json";
 import seedG3V2 from "@/data/primaryHub/finalChallenge/grade3_v2_seed.json";
 import seedG5V1 from "@/data/primaryHub/finalChallenge/grade5_v1_seed.json";
 import seedG5V2 from "@/data/primaryHub/finalChallenge/grade5_v2_seed.json";
+import seedG6V1 from "@/data/primaryHub/finalChallenge/grade6_v1_seed.json";
+import seedG6V2 from "@/data/primaryHub/finalChallenge/grade6_v2_seed.json";
 import type {
   FCQuestion,
   FinalChallengeQuestionType,
@@ -29,7 +31,15 @@ const BANKS: Record<string, readonly FCQuestion[]> = {
   "3:v2": seedG3V2 as unknown as readonly FCQuestion[],
   "5:v1": seedG5V1 as unknown as readonly FCQuestion[],
   "5:v2": seedG5V2 as unknown as readonly FCQuestion[],
+  "6:v1": seedG6V1 as unknown as readonly FCQuestion[],
+  "6:v2": seedG6V2 as unknown as readonly FCQuestion[],
 };
+
+/** 每关抽题数：六年级每关 7 道（题量更足），其余年级 5 道。
+ *  阅读关固定 1 篇 passage（含多道子题），不走此值。 */
+export function getDrawCount(grade: number): number {
+  return grade === 6 ? 7 : 5;
+}
 
 /** 默认 v2 —— 保证所有现有调用方（下册）行为完全不变。 */
 const DEFAULT_VOLUME: FCVolume = "v2";
@@ -92,6 +102,7 @@ export function getQuestionTypeCounts(
     odd_one_out: 0,
     reading_judge_TF: 0,
     reading_choose_answer: 0,
+    dialogue_response: 0,
   };
   for (const q of bankFor(grade, volume)) counts[q.type] += 1;
   return counts;

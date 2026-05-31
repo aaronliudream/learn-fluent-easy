@@ -45,6 +45,12 @@ const ReadingJudgeLevel = lazy(
   () =>
     import("@/components/primaryHub/finalChallenge/levels/ReadingJudgeLevel"),
 );
+const DialogueResponseLevel = lazy(
+  () =>
+    import(
+      "@/components/primaryHub/finalChallenge/levels/DialogueResponseLevel"
+    ),
+);
 
 /**
  * 题型 → 具体关卡组件的映射。Phase 1 全部 6 关已接入。
@@ -59,12 +65,14 @@ const LEVEL_COMPONENT_MAP: Partial<
   listen_and_judge_picture: ListenJudgePictureLevel,
   odd_one_out: OddOneOutLevel,
   reading_judge_TF: ReadingJudgeLevel,
+  dialogue_response: DialogueResponseLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {
   const { levelId } = useParams<{ levelId: string }>();
+  const { grade } = usePrimaryHub();
   const id = Number(levelId);
-  const cfg = Number.isFinite(id) ? findLevelConfig(id) : null;
+  const cfg = Number.isFinite(id) ? findLevelConfig(id, grade) : null;
 
   if (!cfg) return <PlaceholderPage title="关卡未找到" />;
   if (cfg.type === null) {

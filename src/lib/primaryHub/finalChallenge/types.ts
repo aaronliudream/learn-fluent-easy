@@ -43,7 +43,8 @@ export type FinalChallengeQuestionType =
   | "listen_and_judge_picture"
   | "odd_one_out"
   | "reading_judge_TF"
-  | "reading_choose_answer";
+  | "reading_choose_answer"
+  | "dialogue_response";
 
 /** 阅读类题目内部的子题。 */
 export interface FCSubQuestion {
@@ -116,6 +117,15 @@ export type FCQuestion =
       type: "reading_choose_answer";
       passage: string;
       subQuestions: FCSubQuestion[];
+    })
+  /** 关 7（仅六年级）：情景答语匹配。听/读一句问话 → 三选一选最合适的应答。
+   *  形状同 listen_and_choose_answer：`audio` 为被朗读的问句，`prompt` 同时
+   *  作为屏上显示的问句文字，`options` 为完整答语句子。 */
+  | (FCQuestionBase & {
+      type: "dialogue_response";
+      audio: string;
+      options: string[];
+      answer: number;
     });
 
 /** 向后兼容/语义化别名：在非 Phase 1 业务里读起来更清楚。 */

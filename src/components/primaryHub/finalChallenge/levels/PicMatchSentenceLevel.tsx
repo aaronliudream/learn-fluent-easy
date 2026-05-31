@@ -12,7 +12,7 @@
 
 import { useMemo } from "react";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
-import { getQuestionsByType } from "@/lib/primaryHub/finalChallenge/questionBank";
+import { getQuestionsByType, getDrawCount } from "@/lib/primaryHub/finalChallenge/questionBank";
 import LevelShell, {
   type LevelShellPlayApi,
 } from "@/components/primaryHub/finalChallenge/LevelShell";
@@ -25,9 +25,9 @@ export default function PicMatchSentenceLevel() {
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
-  // 抓 5 道题; seed 不够时 getQuestionsByType 会按现有池子返回少于 5 道。
+  // 每关抽题数按年级取(六年级 7、其余 5); seed 不够时按现有池子返回更少。
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_sentence", 5, vol, gr),
+    () => getQuestionsByType("picture_match_sentence", getDrawCount(gr), vol, gr),
     [vol, gr],
   );
 

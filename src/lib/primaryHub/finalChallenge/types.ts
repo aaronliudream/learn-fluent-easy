@@ -46,7 +46,8 @@ export type FinalChallengeQuestionType =
   | "reading_choose_answer"
   | "dialogue_response"
   | "fill_in_choose"
-  | "sentence_transform";
+  | "sentence_transform"
+  | "sentence_ordering";
 
 /** 阅读类题目内部的子题。 */
 export interface FCSubQuestion {
@@ -143,6 +144,15 @@ export type FCQuestion =
       type: "sentence_transform";
       options: string[];
       answer: number;
+    })
+  /** 关 10（仅六年级）：连词成句·点击式。点词块依次上屏组句。
+   *  `tokens` 为打乱的词块,`answer` 为正确顺序的词块数组(**string[],不是 number**),
+   *  `display` 为完整正确句(判对后显示+朗读)。无 options。 */
+  | (FCQuestionBase & {
+      type: "sentence_ordering";
+      tokens: string[];
+      answer: string[];
+      display: string;
     });
 
 /** 向后兼容/语义化别名：在非 Phase 1 业务里读起来更清楚。 */

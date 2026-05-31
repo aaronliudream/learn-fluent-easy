@@ -60,6 +60,11 @@ export function getLevelConfigs(
   cfgs = cfgs.map((c) =>
     c.id === 9 ? { id: 9, name: "句型转换", type: "sentence_transform" } : c,
   );
+  // 第 10 关「连词成句」(占位关 id=10 原本 type=null,六年级替换为 sentence_ordering);
+  // 六上六下都有 sentence_ordering 数据(各 16),空关过滤不会隐藏;低年级无此题型自动隐藏。
+  cfgs = cfgs.map((c) =>
+    c.id === 10 ? { id: 10, name: "连词成句", type: "sentence_ordering" } : c,
+  );
   if (volume === "v2") {
     cfgs = cfgs.map((c) => {
       if (c.id === 2)

@@ -117,7 +117,8 @@ describe("finalChallenge questionBank", () => {
     // 原始正确文本(用于校验 answer 仍指向正确项)。
     const correctById = new Map<string, string>();
     for (const q of getAllQuestions("v1", 6)) {
-      if (q.type === "reading_judge_TF" || q.type === "reading_choose_answer") continue;
+      // 跳过无 options 的题(阅读 / 连词成句),它们不参与选项配额。
+      if (!("options" in q) || !Array.isArray(q.options)) continue;
       correctById.set(q.id, q.options[q.answer]);
     }
     for (const N of [7, 5]) {
@@ -175,6 +176,32 @@ describe("finalChallenge questionBank", () => {
         expect(q.audio).not.toContain("___"); // audio 是填好的完整句
         expect(q.answer).toBeGreaterThanOrEqual(0);
         expect(q.answer).toBeLessThan(q.options.length);
+      }
+    }
+  });
+
+  it("grade 6 sentence_ordering draws keep tokens/answer(string[])/display intact (quota no-op)", () => {
+    for (const vol of ["v1", "v2"] as const) {
+      const byId = new Map(
+        getAllQuestions(vol, 6)
+          .filter((q) => q.type === "sentence_ordering")
+          .map((q) => [q.id, q]),
+      );
+      for (let t = 0; t < 50; t++) {
+        const drawn = getQuestionsByType("sentence_ordering", 7, vol, 6);
+        expect(drawn.length).toBe(7);
+        for (const q of drawn) {
+          // answer 是 string[](不是 number),没有 options,不被选项配额/打散改动。
+          expect(Array.isArray(q.answer)).toBe(true);
+          expect("options" in q).toBe(false);
+          expect(Array.isArray(q.tokens)).toBe(true);
+          expect(typeof q.display).toBe("string");
+          // tokens/answer 与种子完全一致(逐位),且 answer 是 tokens 的一个排列。
+          const orig = byId.get(q.id)!;
+          expect(q.tokens).toEqual(orig.tokens);
+          expect(q.answer).toEqual(orig.answer);
+          expect([...q.tokens].sort()).toEqual([...q.answer].sort());
+        }
       }
     }
   });

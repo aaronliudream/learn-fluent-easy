@@ -240,6 +240,7 @@ export function getQuestionTypeCounts(
     dialogue_response: 0,
     fill_in_choose: 0,
     sentence_transform: 0,
+    sentence_ordering: 0,
   };
   for (const q of bankFor(grade, volume)) counts[q.type] += 1;
   return counts;

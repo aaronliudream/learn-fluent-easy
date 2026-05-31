@@ -54,6 +54,35 @@ function bankFor(grade: number, volume: FCVolume): readonly FCQuestion[] {
   );
 }
 
+/** 固定 T/F 选项对（听句判图 / 阅读判断）顺序是约定，不可打乱。 */
+function isFixedTFOptions(options: readonly string[]): boolean {
+  return (
+    options.length === 2 &&
+    options[0].startsWith("T") &&
+    options[1].startsWith("F")
+  );
+}
+
+/**
+ * 渲染前把一道选择题的 options 随机打散（Fisher–Yates），并把 answer 同步
+ * 重映射到打散后的新下标 —— 根治"正确答案总在第一个"。返回新对象，不改原种子。
+ * 例外（原样返回，保持现状）：
+ *   - 无顶层 options 的阅读题（reading_judge_TF / reading_choose_answer）；
+ *   - 固定 T/F 选项的题（listen_and_judge_picture）。
+ */
+function shuffleQuestionOptions<T extends FCQuestion>(q: T): T {
+  if (!("options" in q) || !Array.isArray(q.options)) return q;
+  if (isFixedTFOptions(q.options)) return q;
+  const order = q.options.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  const options = order.map((i) => q.options[i]);
+  const answer = order.indexOf(q.answer);
+  return { ...q, options, answer };
+}
+
 /** 返回题库全部题目（只读引用）。 */
 export function getAllQuestions(
   volume: FCVolume = DEFAULT_VOLUME,
@@ -76,7 +105,12 @@ export function getQuestionsByType<T extends FinalChallengeQuestionType>(
   const pool = bankFor(grade, volume).filter(
     (q): q is Extract<FCQuestion, { type: T }> => q.type === type,
   );
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count);
+  // 抽 N 道后，渲染前对每道题的 options 做一次打散（answer 同步重映射）。
+  // 调用方在 useMemo 里只算一次，停留期间选项稳定，不会跳动。
+  return [...pool]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, count)
+    .map(shuffleQuestionOptions);
 }
 
 /** 按 id 精确取题。未命中返回 null。 */

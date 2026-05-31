@@ -142,6 +142,7 @@ export function getQuestionTypeCounts(
     reading_judge_TF: 0,
     reading_choose_answer: 0,
     dialogue_response: 0,
+    fill_in_choose: 0,
   };
   for (const q of bankFor(grade, volume)) counts[q.type] += 1;
   return counts;

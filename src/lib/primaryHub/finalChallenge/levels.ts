@@ -40,6 +40,8 @@ export const MAX_STARS =
  * - 六下(v2)没有「看图选词」数据,但 listen_and_choose_word 同时含比较级/过去式
  *   两类:把第 2、3 关拆成「听词·比较级」「听词·过去式」(按 vocab 天然互斥),
  *   填满 7 关。其它年级/六上(v1)不受影响。
+ * - 六年级第 8 关「选词填空」(fill_in_choose),六上六下都有 18 道。
+ *   低年级没有这些题型,会被菜单"空关过滤"自动隐藏。
  */
 export function getLevelConfigs(
   grade: number,
@@ -48,6 +50,10 @@ export function getLevelConfigs(
   if (grade !== 6) return LEVEL_CONFIGS;
   let cfgs: LevelConfig[] = LEVEL_CONFIGS.map((c) =>
     c.id === 7 ? { id: 7, name: "情景答语", type: "dialogue_response" } : c,
+  );
+  // 第 8 关「选词填空」(占位关 id=8 原本 type=null,六年级替换为 fill_in_choose)。
+  cfgs = cfgs.map((c) =>
+    c.id === 8 ? { id: 8, name: "选词填空", type: "fill_in_choose" } : c,
   );
   if (volume === "v2") {
     cfgs = cfgs.map((c) => {
@@ -85,4 +91,28 @@ export function getLevelQuestionType(
   cfg: LevelConfig,
 ): FinalChallengeQuestionType | null {
   return cfg.type as FinalChallengeQuestionType | null;
+}
+
+/**
+ * 关卡题型 → emoji 图标 (新版大卡片菜单用)。
+ * 按"题型/内容"取,而非按关序号,确保图标和该关实际做的事一致。
+ * 末两项 sentence_transform / sentence_ordering 是第 9/10 关预留,
+ * 本轮无数据(被空关过滤隐藏),加关即自动亮。
+ */
+export const LEVEL_TYPE_ICON: Record<string, string> = {
+  picture_match_sentence: "💬",
+  picture_match_word: "🖼️",
+  listen_and_choose_word: "🎧",
+  listen_and_judge_picture: "✅",
+  odd_one_out: "🔍",
+  reading_judge_TF: "📖",
+  dialogue_response: "🗨️",
+  fill_in_choose: "✏️",
+  sentence_transform: "🔄",
+  sentence_ordering: "🧩",
+};
+
+/** 取某关的图标 emoji;未知/占位关回退到 🎯。 */
+export function iconForLevel(cfg: LevelConfig): string {
+  return (cfg.type ? LEVEL_TYPE_ICON[cfg.type] : undefined) ?? "🎯";
 }

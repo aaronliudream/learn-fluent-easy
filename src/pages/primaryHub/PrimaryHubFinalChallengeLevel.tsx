@@ -51,6 +51,12 @@ const DialogueResponseLevel = lazy(
       "@/components/primaryHub/finalChallenge/levels/DialogueResponseLevel"
     ),
 );
+const FillInChooseLevel = lazy(
+  () =>
+    import(
+      "@/components/primaryHub/finalChallenge/levels/FillInChooseLevel"
+    ),
+);
 
 /**
  * 题型 → 具体关卡组件的映射。Phase 1 全部 6 关已接入。
@@ -66,6 +72,7 @@ const LEVEL_COMPONENT_MAP: Partial<
   odd_one_out: OddOneOutLevel,
   reading_judge_TF: ReadingJudgeLevel,
   dialogue_response: DialogueResponseLevel,
+  fill_in_choose: FillInChooseLevel,
 };
 
 export default function PrimaryHubFinalChallengeLevel() {

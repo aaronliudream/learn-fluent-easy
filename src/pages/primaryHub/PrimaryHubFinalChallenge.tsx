@@ -9,7 +9,7 @@
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import LevelMap from "@/components/primaryHub/finalChallenge/LevelMap";
+import LevelCards from "@/components/primaryHub/finalChallenge/LevelCards";
 import RankBadge, { type RankTier } from "@/components/primaryHub/finalChallenge/RankBadge";
 import {
   loadAllLevelProgress,
@@ -17,7 +17,7 @@ import {
   getTotalStars,
   getRankTier,
 } from "@/lib/primaryHub/finalChallenge/progress";
-import { getLevelConfigs } from "@/lib/primaryHub/finalChallenge/levels";
+import { getLevelConfigs, iconForLevel } from "@/lib/primaryHub/finalChallenge/levels";
 import {
   getQuestionTypeCounts,
   getQuestionsByType,
@@ -43,13 +43,13 @@ export default function PrimaryHubFinalChallenge() {
   );
   // 册别决定关卡配置（六下把听词拆比较级/过去式）。读不到 → v2,安全。
   const vol = sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2";
-  // 关卡配置按 (年级+册别) 取（六年级含第 7 关「情景答语」）。
-  // 通用兜底：把"该册该题型没有题"的可玩关过滤掉，任何册别都不出现空关；
-  // 占位关 (type===null,敬请期待) 保留。
+  // 关卡配置按 (年级+册别) 取（六年级含第 7、8 关）。
+  // 通用兜底：只保留"该册该题型有题"的可玩关；占位关 (type===null,敬请期待)
+  // 与无数据的关一律不显示（大卡片菜单不再画空关）。
   const levelConfigs = useMemo(() => {
     const counts = getQuestionTypeCounts(vol, grade);
     return getLevelConfigs(grade, vol).filter((c) => {
-      if (c.type === null) return true;
+      if (c.type === null) return false;
       const t = c.type as FinalChallengeQuestionType;
       if (c.vocabFilter) {
         return getQuestionsByType(t, 1, vol, grade, c.vocabFilter).length > 0;
@@ -58,7 +58,11 @@ export default function PrimaryHubFinalChallenge() {
     });
   }, [grade, vol]);
   const levels = useMemo(
-    () => computeLevelStates(levelConfigs, progress),
+    () =>
+      computeLevelStates(levelConfigs, progress).map((ld, i) => ({
+        ...ld,
+        icon: iconForLevel(levelConfigs[i]),
+      })),
     [levelConfigs, progress],
   );
   const totalStars = getTotalStars(progress, levelConfigs);
@@ -213,8 +217,8 @@ export default function PrimaryHubFinalChallenge() {
         </header>
       )}
 
-      {/* 关卡地图 */}
-      <LevelMap
+      {/* 关卡入口 — 大卡片 */}
+      <LevelCards
         levels={levels}
         onLevelClick={(id) =>
           navigate(`${base}/final-challenge/level/${id}`)

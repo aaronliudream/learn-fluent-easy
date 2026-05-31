@@ -134,6 +134,20 @@ describe("finalChallenge questionBank", () => {
     expect(past.some((q) => compIds.has(q.id))).toBe(false);
   });
 
+  it("grade 6 fill_in_choose draws have a blanked prompt and a full audio sentence", () => {
+    for (const vol of ["v1", "v2"] as const) {
+      const drawn = getQuestionsByType("fill_in_choose", 7, vol, 6);
+      expect(drawn.length).toBe(7);
+      for (const q of drawn) {
+        expect(q.prompt).toContain("___"); // 屏显挖空句
+        expect(typeof q.audio).toBe("string");
+        expect(q.audio).not.toContain("___"); // audio 是填好的完整句
+        expect(q.answer).toBeGreaterThanOrEqual(0);
+        expect(q.answer).toBeLessThan(q.options.length);
+      }
+    }
+  });
+
   it("getQuestionById returns null for an unknown id", () => {
     expect(getQuestionById("does-not-exist")).toBeNull();
   });

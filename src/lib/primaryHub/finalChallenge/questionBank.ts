@@ -11,6 +11,8 @@ import seedV1 from "@/data/primaryHub/finalChallenge/grade4_v1_seed.json";
 import seedV2 from "@/data/primaryHub/finalChallenge/grade4_v2_seed.json";
 import seedG3V1 from "@/data/primaryHub/finalChallenge/grade3_v1_seed.json";
 import seedG3V2 from "@/data/primaryHub/finalChallenge/grade3_v2_seed.json";
+import seedG5V1 from "@/data/primaryHub/finalChallenge/grade5_v1_seed.json";
+import seedG5V2 from "@/data/primaryHub/finalChallenge/grade5_v2_seed.json";
 import type {
   FCQuestion,
   FinalChallengeQuestionType,
@@ -25,6 +27,8 @@ const BANKS: Record<string, readonly FCQuestion[]> = {
   "4:v2": seedV2 as unknown as readonly FCQuestion[],
   "3:v1": seedG3V1 as unknown as readonly FCQuestion[],
   "3:v2": seedG3V2 as unknown as readonly FCQuestion[],
+  "5:v1": seedG5V1 as unknown as readonly FCQuestion[],
+  "5:v2": seedG5V2 as unknown as readonly FCQuestion[],
 };
 
 /** 默认 v2 —— 保证所有现有调用方（下册）行为完全不变。 */

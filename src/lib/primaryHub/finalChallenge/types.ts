@@ -44,7 +44,8 @@ export type FinalChallengeQuestionType =
   | "odd_one_out"
   | "reading_judge_TF"
   | "reading_choose_answer"
-  | "dialogue_response";
+  | "dialogue_response"
+  | "fill_in_choose";
 
 /** 阅读类题目内部的子题。 */
 export interface FCSubQuestion {
@@ -123,6 +124,14 @@ export type FCQuestion =
    *  作为屏上显示的问句文字，`options` 为完整答语句子。 */
   | (FCQuestionBase & {
       type: "dialogue_response";
+      audio: string;
+      options: string[];
+      answer: number;
+    })
+  /** 关 8（仅六年级）：选词填空。`prompt` 为含 `___` 挖空的句子（屏显），
+   *  `options` 为候选词/词组，`audio` 为填好后的完整正确句（选对后朗读正音）。 */
+  | (FCQuestionBase & {
+      type: "fill_in_choose";
       audio: string;
       options: string[];
       answer: number;

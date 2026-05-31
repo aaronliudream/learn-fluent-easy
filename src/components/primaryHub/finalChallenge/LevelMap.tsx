@@ -23,6 +23,8 @@ export interface LevelData {
   state: LevelState;
   /** 0-3 颗星 (completed 时显示) */
   stars?: number;
+  /** 关卡图标 emoji (新版大卡片菜单用,按题型取)。 */
+  icon?: string;
 }
 
 interface LevelMapProps {

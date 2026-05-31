@@ -34,30 +34,50 @@ export const MAX_STARS =
   LEVEL_CONFIGS.filter((c) => c.type !== null).length * 3;
 
 /**
- * 按年级返回关卡配置。
- * 六年级独有第 7 关「情景答语」(dialogue_response)；其余年级第 7 关仍是
- * "敬请期待" 占位关 (低年级种子里没有 dialogue_response,加了会空关)。
+ * 按年级 + 册别返回关卡配置。
+ * - 六年级独有第 7 关「情景答语」(dialogue_response)；其余年级第 7 关仍是
+ *   "敬请期待" 占位关 (低年级种子里没有 dialogue_response,加了会空关)。
+ * - 六下(v2)没有「看图选词」数据,但 listen_and_choose_word 同时含比较级/过去式
+ *   两类:把第 2、3 关拆成「听词·比较级」「听词·过去式」(按 vocab 天然互斥),
+ *   填满 7 关。其它年级/六上(v1)不受影响。
  */
-export function getLevelConfigs(grade: number): LevelConfig[] {
-  if (grade === 6) {
-    return LEVEL_CONFIGS.map((c) =>
-      c.id === 7 ? { id: 7, name: "情景答语", type: "dialogue_response" } : c,
-    );
+export function getLevelConfigs(
+  grade: number,
+  volume?: "v1" | "v2",
+): LevelConfig[] {
+  if (grade !== 6) return LEVEL_CONFIGS;
+  let cfgs: LevelConfig[] = LEVEL_CONFIGS.map((c) =>
+    c.id === 7 ? { id: 7, name: "情景答语", type: "dialogue_response" } : c,
+  );
+  if (volume === "v2") {
+    cfgs = cfgs.map((c) => {
+      if (c.id === 2)
+        return {
+          id: 2,
+          name: "听词·比较级",
+          type: "listen_and_choose_word",
+          vocabFilter: "comparative",
+        };
+      if (c.id === 3)
+        return {
+          id: 3,
+          name: "听词·过去式",
+          type: "listen_and_choose_word",
+          vocabFilter: "past",
+        };
+      return c;
+    });
   }
-  return LEVEL_CONFIGS;
+  return cfgs;
 }
 
-/** 某年级的星数上限（可玩关 × 3）。 */
-export function getMaxStars(grade: number): number {
-  return getLevelConfigs(grade).filter((c) => c.type !== null).length * 3;
-}
-
-/** 按 levelId 查关卡配置（按年级,六年级含第 7 关）。 */
+/** 按 levelId 查关卡配置（按年级 + 册别）。 */
 export function findLevelConfig(
   levelId: number,
   grade: number,
+  volume?: "v1" | "v2",
 ): LevelConfig | null {
-  return getLevelConfigs(grade).find((c) => c.id === levelId) ?? null;
+  return getLevelConfigs(grade, volume).find((c) => c.id === levelId) ?? null;
 }
 
 /** type 字段缩窄到 FinalChallengeQuestionType (null 表示占位关)。 */

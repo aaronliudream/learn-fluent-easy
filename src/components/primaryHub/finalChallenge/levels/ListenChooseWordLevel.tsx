@@ -44,14 +44,32 @@ function unlockAudio(): void {
   unlockAudioSync();
 }
 
-export default function ListenChooseWordLevel() {
+/**
+ * 关卡配置可由分发器按 (年级+册别) 注入，用于"同题型按词义域拆关"等场景
+ * (如六下把听音辨词拆成「听词·比较级」「听词·过去式」)。不传则保持原行为:
+ * 第 3 关「听音辨词」、不按 vocab 过滤。
+ */
+export interface ListenChooseWordLevelProps {
+  levelId?: number;
+  levelName?: string;
+  introHint?: string;
+  /** 题目 vocab_domain 须包含此值才入选。 */
+  vocabFilter?: string;
+}
+
+export default function ListenChooseWordLevel({
+  levelId = 3,
+  levelName = "听音辨词",
+  introHint = "听一听单词,从 3 个选项里选出听到的那个。每个单词会自动读两遍。",
+  vocabFilter,
+}: ListenChooseWordLevelProps = {}) {
   const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
   const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_choose_word", getDrawCount(gr), vol, gr),
-    [vol, gr],
+    () => getQuestionsByType("listen_and_choose_word", getDrawCount(gr), vol, gr, vocabFilter),
+    [vol, gr, vocabFilter],
   );
 
   // 进入关卡时一次性预热所有题的 TTS 缓存。
@@ -80,9 +98,9 @@ export default function ListenChooseWordLevel() {
 
   return (
     <LevelShell
-      levelId={3}
-      levelName="听音辨词"
-      introHint="听一听单词,从 3 个选项里选出听到的那个。每个单词会自动读两遍。"
+      levelId={levelId}
+      levelName={levelName}
+      introHint={introHint}
       introMood="encouraging"
       total={questions.length}
       onBeforeStart={unlockAudio}

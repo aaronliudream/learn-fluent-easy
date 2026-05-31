@@ -101,10 +101,15 @@ export function getQuestionsByType<T extends FinalChallengeQuestionType>(
   count: number = 5,
   volume: FCVolume = DEFAULT_VOLUME,
   grade: number = DEFAULT_GRADE,
+  /** 可选：题目的 vocab_domain 须包含此值才入选（如六下听词关按比较级/过去式拆分）。 */
+  vocabFilter?: string,
 ): Extract<FCQuestion, { type: T }>[] {
-  const pool = bankFor(grade, volume).filter(
+  let pool = bankFor(grade, volume).filter(
     (q): q is Extract<FCQuestion, { type: T }> => q.type === type,
   );
+  if (vocabFilter) {
+    pool = pool.filter((q) => q.vocab_domain.includes(vocabFilter));
+  }
   // 抽 N 道后，渲染前对每道题的 options 做一次打散（answer 同步重映射）。
   // 调用方在 useMemo 里只算一次，停留期间选项稳定，不会跳动。
   return [...pool]

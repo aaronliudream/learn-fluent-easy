@@ -71,8 +71,10 @@ const LEVEL_COMPONENT_MAP: Partial<
 export default function PrimaryHubFinalChallengeLevel() {
   const { levelId } = useParams<{ levelId: string }>();
   const { grade } = usePrimaryHub();
+  // 册别决定关卡配置(六下把听词拆比较级/过去式)。读不到 → v2,安全。
+  const vol = sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2";
   const id = Number(levelId);
-  const cfg = Number.isFinite(id) ? findLevelConfig(id, grade) : null;
+  const cfg = Number.isFinite(id) ? findLevelConfig(id, grade, vol) : null;
 
   if (!cfg) return <PlaceholderPage title="关卡未找到" />;
   if (cfg.type === null) {
@@ -83,6 +85,27 @@ export default function PrimaryHubFinalChallengeLevel() {
   if (!Component) {
     return (
       <PlaceholderPage title={`关 ${cfg.id}:${cfg.name}`} subtitle="开发中…" />
+    );
+  }
+
+  // 带 vocab 过滤的听词关(六下第 2/3 关):把配置注入参数化的 ListenChooseWordLevel,
+  // 保证 levelId/关名/词义域过滤都对(进度按真实 levelId 落地,不串号)。
+  if (cfg.type === "listen_and_choose_word" && cfg.vocabFilter) {
+    return (
+      <Suspense fallback={<PlaceholderPage title={cfg.name} subtitle="加载中…" />}>
+        <ListenChooseWordLevel
+          levelId={cfg.id}
+          levelName={cfg.name}
+          introHint={
+            cfg.vocabFilter === "comparative"
+              ? "听一听单词,从 3 个选项里选出听到的那个。这一关都是比较级(taller、heavier…)。"
+              : cfg.vocabFilter === "past"
+                ? "听一听单词,从 3 个选项里选出听到的那个。这一关都是过去式(went、ate…)。"
+                : undefined
+          }
+          vocabFilter={cfg.vocabFilter}
+        />
+      </Suspense>
     );
   }
 

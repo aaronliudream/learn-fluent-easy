@@ -114,7 +114,7 @@ export default function PrimaryHubFinalChallengeStrengthen() {
       const result: StrengthenResult | StrengthenError | "timeout" =
         await Promise.race([
           fetchStrengthenQuestions(userId, grade, aiCount),
-          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 45000)),
+          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 20000)),
         ]);
       if (cancelled) return;
       // 走到这里 = 生成已落定(成功/失败/超时),之后不会再有新题进来。

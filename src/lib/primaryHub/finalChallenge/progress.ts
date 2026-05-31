@@ -70,6 +70,11 @@ export interface LevelConfig {
   id: number;
   name: string;
   type: string | null;
+  /**
+   * 可选：把该关题目再按 vocab_domain 过滤（题目的 vocab_domain 须包含此值）。
+   * 用于同一题型按词义域拆成多关，例如六下把「听音辨词」拆成比较级/过去式两关。
+   */
+  vocabFilter?: string;
 }
 
 /**

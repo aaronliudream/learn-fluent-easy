@@ -17,7 +17,12 @@ import {
   getTotalStars,
   getRankTier,
 } from "@/lib/primaryHub/finalChallenge/progress";
-import { getLevelConfigs, getMaxStars } from "@/lib/primaryHub/finalChallenge/levels";
+import { getLevelConfigs } from "@/lib/primaryHub/finalChallenge/levels";
+import {
+  getQuestionTypeCounts,
+  getQuestionsByType,
+} from "@/lib/primaryHub/finalChallenge/questionBank";
+import type { FinalChallengeQuestionType } from "@/lib/primaryHub/finalChallenge/types";
 
 const RANK_LABEL: Record<RankTier, string> = {
   bronze: "闯关学徒",
@@ -36,9 +41,22 @@ export default function PrimaryHubFinalChallenge() {
     () => loadAllLevelProgress(userId, grade),
     [userId, grade],
   );
-  // 关卡配置按年级取（六年级含第 7 关「情景答语」）。
-  const levelConfigs = useMemo(() => getLevelConfigs(grade), [grade]);
-  const maxStars = getMaxStars(grade);
+  // 册别决定关卡配置（六下把听词拆比较级/过去式）。读不到 → v2,安全。
+  const vol = sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2";
+  // 关卡配置按 (年级+册别) 取（六年级含第 7 关「情景答语」）。
+  // 通用兜底：把"该册该题型没有题"的可玩关过滤掉，任何册别都不出现空关；
+  // 占位关 (type===null,敬请期待) 保留。
+  const levelConfigs = useMemo(() => {
+    const counts = getQuestionTypeCounts(vol, grade);
+    return getLevelConfigs(grade, vol).filter((c) => {
+      if (c.type === null) return true;
+      const t = c.type as FinalChallengeQuestionType;
+      if (c.vocabFilter) {
+        return getQuestionsByType(t, 1, vol, grade, c.vocabFilter).length > 0;
+      }
+      return (counts[t] ?? 0) > 0;
+    });
+  }, [grade, vol]);
   const levels = useMemo(
     () => computeLevelStates(levelConfigs, progress),
     [levelConfigs, progress],
@@ -48,6 +66,8 @@ export default function PrimaryHubFinalChallenge() {
 
   // 全部可玩关都拿到至少 1 星 → 通关大成就 (头部升级为庆祝 banner)
   const playableLevels = levelConfigs.filter((c) => c.type !== null);
+  // 星数上限按"实际有数据的可玩关"算（过滤空关后更准）。
+  const maxStars = playableLevels.length * 3;
   const allCleared = playableLevels.every((c) => (progress[c.id]?.stars ?? 0) > 0);
 
   return (

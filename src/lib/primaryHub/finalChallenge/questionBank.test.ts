@@ -122,6 +122,18 @@ describe("finalChallenge questionBank", () => {
     }
   });
 
+  it("vocabFilter narrows getQuestionsByType, and v2 comparative/past lcw pools are disjoint", () => {
+    const comp = getQuestionsByType("listen_and_choose_word", 99, "v2", 6, "comparative");
+    const past = getQuestionsByType("listen_and_choose_word", 99, "v2", 6, "past");
+    expect(comp.length).toBeGreaterThanOrEqual(7); // 第2关抽 7,池子要够
+    expect(past.length).toBeGreaterThanOrEqual(7); // 第3关抽 7
+    for (const q of comp) expect(q.vocab_domain).toContain("comparative");
+    for (const q of past) expect(q.vocab_domain).toContain("past");
+    // 六下「听词·比较级」与「听词·过去式」两关 id 不重叠 → 真机不会雷同。
+    const compIds = new Set(comp.map((q) => q.id));
+    expect(past.some((q) => compIds.has(q.id))).toBe(false);
+  });
+
   it("getQuestionById returns null for an unknown id", () => {
     expect(getQuestionById("does-not-exist")).toBeNull();
   });

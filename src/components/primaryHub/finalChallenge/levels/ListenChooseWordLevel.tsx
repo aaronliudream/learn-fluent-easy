@@ -48,9 +48,10 @@ export default function ListenChooseWordLevel() {
   const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
+  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_choose_word", 5, vol),
-    [vol],
+    () => getQuestionsByType("listen_and_choose_word", 5, vol, gr),
+    [vol, gr],
   );
 
   // 进入关卡时一次性预热所有题的 TTS 缓存。

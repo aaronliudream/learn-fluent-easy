@@ -28,9 +28,10 @@ export default function PicMatchWordLevel() {
   const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
+  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("picture_match_word", 5, vol),
-    [vol],
+    () => getQuestionsByType("picture_match_word", 5, vol, gr),
+    [vol, gr],
   );
 
   if (questions.length === 0) {

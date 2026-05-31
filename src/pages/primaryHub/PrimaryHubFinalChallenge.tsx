@@ -134,26 +134,28 @@ export default function PrimaryHubFinalChallenge() {
             })}
           </div>
 
-          {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a) */}
-          <button
-            type="button"
-            onClick={() => navigate(`${base}/final-challenge/strengthen`)}
-            className="fc-btn-press fc-shadow-purple"
-            style={{
-              marginTop: 16,
-              padding: "12px 24px",
-              borderRadius: "var(--fc-radius-pill)",
-              background: "var(--fc-purple)",
-              color: "white",
-              fontWeight: 800,
-              fontSize: 14,
-              border: "none",
-              cursor: "pointer",
-              fontFamily: "var(--fc-font-display)",
-            }}
-          >
-            🎯 来一波强化训练
-          </button>
+          {/* 紫色强化训练 CTA — Phase 2 已接 AI (PR #72a)。仅四年级:AI 强化目前只支持四年级。 */}
+          {grade === 4 && (
+            <button
+              type="button"
+              onClick={() => navigate(`${base}/final-challenge/strengthen`)}
+              className="fc-btn-press fc-shadow-purple"
+              style={{
+                marginTop: 16,
+                padding: "12px 24px",
+                borderRadius: "var(--fc-radius-pill)",
+                background: "var(--fc-purple)",
+                color: "white",
+                fontWeight: 800,
+                fontSize: 14,
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "var(--fc-font-display)",
+              }}
+            >
+              🎯 来一波强化训练
+            </button>
+          )}
         </header>
       ) : (
         <header style={{ textAlign: "center", marginBottom: 20 }}>

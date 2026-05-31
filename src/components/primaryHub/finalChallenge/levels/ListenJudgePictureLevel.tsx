@@ -48,9 +48,10 @@ export default function ListenJudgePictureLevel() {
   const { grade } = usePrimaryHub();
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
+  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("listen_and_judge_picture", 5, vol),
-    [vol],
+    () => getQuestionsByType("listen_and_judge_picture", 5, vol, gr),
+    [vol, gr],
   );
 
   useEffect(() => {

@@ -22,9 +22,10 @@ type Q = Extract<FCQuestion, { type: "odd_one_out" }>;
 export default function OddOneOutLevel() {
   // 读不到 → 默认 v2，安全。
   const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
+  const gr = Number(sessionStorage.getItem("fc:grade")) || 4;
   const questions = useMemo(
-    () => getQuestionsByType("odd_one_out", 5, vol),
-    [vol],
+    () => getQuestionsByType("odd_one_out", 5, vol, gr),
+    [vol, gr],
   );
 
   if (questions.length === 0) {

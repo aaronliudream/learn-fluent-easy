@@ -33,6 +33,7 @@ export default function FinalChallengeEntryCard({
       type="button"
       onClick={() => {
         sessionStorage.setItem("fc:volume", volume);
+        sessionStorage.setItem("fc:grade", String(grade)); // 闯关取题按本年级
         navigate(`/primary/hub/${grade}/final-challenge`); // URL 不变
       }}
       className="fc-btn-press"

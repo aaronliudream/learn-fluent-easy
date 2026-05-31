@@ -41,8 +41,9 @@ interface ErrorState {
 
 /** 从已有种子题里挑一道"纯文本听力题"作为开场热身(0 生成等待)。
  *  优先 listen_and_choose_word(听音辨词,最简单、无歧义);随机取一道避免每次都一样。 */
-function pickSeedWarmupQuestion(): FCQuestion | null {
-  const pool = getQuestionsByType("listen_and_choose_word");
+function pickSeedWarmupQuestion(grade: number): FCQuestion | null {
+  const vol = (sessionStorage.getItem("fc:volume") === "v1" ? "v1" : "v2") as "v1" | "v2";
+  const pool = getQuestionsByType("listen_and_choose_word", 99, vol, grade);
   if (!pool || pool.length === 0) return null;
   const q = pool[Math.floor(Math.random() * pool.length)];
   // 独立 id 前缀,避免与 AI 题 id 撞
@@ -73,17 +74,37 @@ export default function PrimaryHubFinalChallengeStrengthen() {
     setError(null);
     setBgError(null);
 
+    // 没登录:强化训练需要账号(错题/出题按用户),直接提示,不卡死。
+    if (!userId) {
+      setError({ kind: "ai_failed", message: "请先登录后再使用强化训练。" });
+      setPhase("error");
+      return;
+    }
+
     // 1) 立刻放一道种子热身题,马上进入 playing(0 等待);取不到才退回 loading
-    const seedQ = pickSeedWarmupQuestion();
+    const seedQ = pickSeedWarmupQuestion(grade);
     setQuestions(seedQ ? [seedQ] : []);
     setExpectedTotal(5);
     setPhase(seedQ ? "playing" : "loading");
 
     // 2) 后台生成针对性的题(有种子题则只要 4 道,补在后面;没有则要 5 道兜底)
     (async () => {
-      const result: StrengthenResult | StrengthenError =
-        await fetchStrengthenQuestions(userId, grade, seedQ ? 4 : 5);
+      const result: StrengthenResult | StrengthenError | "timeout" =
+        await Promise.race([
+          fetchStrengthenQuestions(userId, grade, seedQ ? 4 : 5),
+          new Promise<"timeout">((r) => setTimeout(() => r("timeout"), 45000)),
+        ]);
       if (cancelled) return;
+      if (result === "timeout") {
+        if (seedQ) {
+          setBgError("AI 出题有点慢,做完这道可以再点一次「强化训练」。");
+          setExpectedTotal(1);
+        } else {
+          setError({ kind: "ai_failed", message: "AI 出题超时了,请稍后重试。" });
+          setPhase("error");
+        }
+        return;
+      }
       if (!result.ok) {
         if (seedQ) {
           // 种子题在玩:不打断,提示一下并把本轮收尾在第 1 题

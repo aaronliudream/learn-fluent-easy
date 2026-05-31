@@ -18,9 +18,10 @@ describe("finalChallenge level configs (grade + volume aware)", () => {
     expect(cfgs.find((c) => c.id === 3)?.type).toBe("listen_and_choose_word");
     expect(cfgs.find((c) => c.id === 7)?.type).toBe("dialogue_response");
     expect(cfgs.find((c) => c.id === 8)?.type).toBe("fill_in_choose");
+    expect(cfgs.find((c) => c.id === 9)?.type).toBe("sentence_transform");
   });
 
-  it("grade 6 v2 splits listening into 比较级(关2)/过去式(关3), 8 levels playable incl 选词填空", () => {
+  it("grade 6 v2 splits listening into 比较级(关2)/过去式(关3), 9 levels playable incl 选词填空/句型转换", () => {
     const cfgs = getLevelConfigs(6, "v2");
     const l2 = cfgs.find((c) => c.id === 2);
     const l3 = cfgs.find((c) => c.id === 3);
@@ -29,10 +30,11 @@ describe("finalChallenge level configs (grade + volume aware)", () => {
     expect(l3?.type).toBe("listen_and_choose_word");
     expect(l3?.vocabFilter).toBe("past");
     expect(cfgs.find((c) => c.id === 8)?.type).toBe("fill_in_choose");
+    expect(cfgs.find((c) => c.id === 9)?.type).toBe("sentence_transform");
     // 第 2 关不再是看图选词(v2 没有该题型数据)。
     expect(cfgs.some((c) => c.type === "picture_match_word")).toBe(false);
-    // 8 个可玩关(type !== null)：1-8。
-    expect(cfgs.filter((c) => c.type !== null).length).toBe(8);
+    // 9 个可玩关(type !== null)：1-9。
+    expect(cfgs.filter((c) => c.type !== null).length).toBe(9);
   });
 
   it("findLevelConfig resolves the volume-specific config", () => {
@@ -45,6 +47,7 @@ describe("finalChallenge level configs (grade + volume aware)", () => {
     expect(iconForLevel({ id: 8, name: "选词填空", type: "fill_in_choose" })).toBe("✏️");
     expect(iconForLevel({ id: 7, name: "情景答语", type: "dialogue_response" })).toBe("🗨️");
     expect(iconForLevel({ id: 3, name: "听音辨词", type: "listen_and_choose_word" })).toBe("🎧");
-    expect(iconForLevel({ id: 9, name: "敬请期待", type: null })).toBe("🎯");
+    expect(iconForLevel({ id: 9, name: "句型转换", type: "sentence_transform" })).toBe("🔄");
+    expect(iconForLevel({ id: 10, name: "敬请期待", type: null })).toBe("🎯");
   });
 });

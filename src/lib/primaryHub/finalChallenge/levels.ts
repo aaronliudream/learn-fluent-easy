@@ -55,6 +55,11 @@ export function getLevelConfigs(
   cfgs = cfgs.map((c) =>
     c.id === 8 ? { id: 8, name: "选词填空", type: "fill_in_choose" } : c,
   );
+  // 第 9 关「句型转换」(占位关 id=9 原本 type=null,六年级替换为 sentence_transform);
+  // 六上六下都有 sentence_transform 数据(16/18),空关过滤不会隐藏;低年级无此题型自动隐藏。
+  cfgs = cfgs.map((c) =>
+    c.id === 9 ? { id: 9, name: "句型转换", type: "sentence_transform" } : c,
+  );
   if (volume === "v2") {
     cfgs = cfgs.map((c) => {
       if (c.id === 2)

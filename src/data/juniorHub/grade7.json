@@ -278,11 +278,72 @@
             "title": "You and Me",
             "cn": "自我介绍与交友",
             "emoji": "🧑‍🤝‍🧑",
-            "available": false,
+            "available": true,
             "bigQuestion": "How do we make new friends?",
             "pronunciation": "/iː/ /ɪ/ /e/ /æ/ + 缩写",
-            "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "contentStatus": "REAL_已填真题",
+            "vocabulary": [
+              {
+                "en": "name",
+                "cn": "名字",
+                "emoji": "🪪"
+              },
+              {
+                "en": "friend",
+                "cn": "朋友",
+                "emoji": "🧑‍🤝‍🧑"
+              },
+              {
+                "en": "student",
+                "cn": "学生",
+                "emoji": "🎒"
+              },
+              {
+                "en": "class",
+                "cn": "班级",
+                "emoji": "🏫"
+              },
+              {
+                "en": "grade",
+                "cn": "年级",
+                "emoji": "📊"
+              },
+              {
+                "en": "meet",
+                "cn": "遇见;认识",
+                "emoji": "🤝"
+              },
+              {
+                "en": "nice",
+                "cn": "友好的;美好的",
+                "emoji": "😊"
+              },
+              {
+                "en": "England",
+                "cn": "英格兰;英国",
+                "emoji": "🇬🇧"
+              },
+              {
+                "en": "China",
+                "cn": "中国",
+                "emoji": "🇨🇳"
+              },
+              {
+                "en": "year",
+                "cn": "岁;年",
+                "emoji": "🎂"
+              },
+              {
+                "en": "parents",
+                "cn": "父母",
+                "emoji": "👨‍👩‍👧"
+              },
+              {
+                "en": "classmate",
+                "cn": "同班同学",
+                "emoji": "👫"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -352,11 +413,337 @@
             ],
             "grammarTitle": "be动词 + 主格代词",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "I ___ a student in Grade 7.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "be动词:I + am",
+                "dim": "grammar"
+              },
+              {
+                "q": "My name ___ Tom.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 1,
+                "point": "be动词:单数主语 + is",
+                "dim": "grammar"
+              },
+              {
+                "q": "You ___ my good friend.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 2,
+                "point": "be动词:you + are",
+                "dim": "grammar"
+              },
+              {
+                "q": "Lily and Lucy ___ from England.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 2,
+                "point": "be动词:复数主语 + are",
+                "dim": "grammar"
+              },
+              {
+                "q": "This is Tom. ___ is twelve years old.",
+                "opts": [
+                  "He",
+                  "She",
+                  "It"
+                ],
+                "answer": 0,
+                "point": "主格代词:男生 → He",
+                "dim": "grammar"
+              },
+              {
+                "q": "This is Lily. ___ is my classmate.",
+                "opts": [
+                  "He",
+                  "She",
+                  "We"
+                ],
+                "answer": 1,
+                "point": "主格代词:女生 → She",
+                "dim": "grammar"
+              },
+              {
+                "q": "Tom and I are friends. ___ are in the same class.",
+                "opts": [
+                  "They",
+                  "We",
+                  "You"
+                ],
+                "answer": 1,
+                "point": "主格代词:Tom and I → We",
+                "dim": "grammar"
+              },
+              {
+                "q": "Look at the dog. ___ is very nice.",
+                "opts": [
+                  "He",
+                  "She",
+                  "It"
+                ],
+                "answer": 2,
+                "point": "主格代词:动物/物 → It",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My New Friend\n\nMy name is Alice. I'm twelve years old. I'm from China, but now I live in Beijing with my family. I am a student in Class 3, Grade 7.\n\nI have a new friend. His name is Eric. He is from the U.S.A. He is in Class 3, too. Eric is a nice boy. He likes China very much. He can speak a little Chinese, and he often helps me with my English.\n\nEvery morning, Eric goes to school by bike. He always wears a blue jacket and black pants. He likes playing basketball after school. His favorite food is dumplings. On weekends, he often plays computer games or reads books at home.\n\nI'm happy to have a good friend like him.",
+              "passageCn": "阅读理解·My New Friend(我的新朋友):Alice 来自中国,现住北京;她的新朋友 Eric 来自美国,喜欢中国、会说一点中文、常帮她学英语;Eric 骑车上学、爱打篮球、最爱饺子、周末玩电脑或看书。",
+              "questions": [
+                {
+                  "q": "Where is Alice from?",
+                  "opts": [
+                    "England",
+                    "China",
+                    "The U.S.A.",
+                    "Canada"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解 (I'm from China)",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Where does Alice live now?",
+                  "opts": [
+                    "In London",
+                    "In New York",
+                    "In Beijing",
+                    "In Shanghai"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解 (now I live in Beijing)",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does Eric do after school?",
+                  "opts": [
+                    "He plays football.",
+                    "He plays basketball.",
+                    "He reads books at school.",
+                    "He helps Alice with Chinese."
+                  ],
+                  "answer": 1,
+                  "point": "细节理解 (playing basketball after school)",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What color is Eric's jacket?",
+                  "opts": [
+                    "Black",
+                    "White",
+                    "Blue",
+                    "Green"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解 (a blue jacket)",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does Eric often do on weekends?",
+                  "opts": [
+                    "He goes swimming.",
+                    "He plays basketball.",
+                    "He plays computer games or reads books.",
+                    "He goes to the park."
+                  ],
+                  "answer": 2,
+                  "point": "细节理解 (weekends: plays computer games or reads books)",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": null,
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My Good Friend (1): Hello! My name ___ Lily.",
+                "opts": [
+                  "is",
+                  "am",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "be动词与主语一致 (My name + is)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (2): I have a good friend. ___ name is Tom.",
+                "opts": [
+                  "She",
+                  "Her",
+                  "His"
+                ],
+                "answer": 2,
+                "point": "形容词性物主代词 (Tom→His)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (3): He ___ twelve years old.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词与主语一致 (He + is)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (4): He ___ from England.",
+                "opts": [
+                  "come",
+                  "comes",
+                  "coming"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (He comes from)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (5): now he ___ in China with his parents.",
+                "opts": [
+                  "live",
+                  "lives",
+                  "living"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (He lives)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (6): Every morning, Tom ___ to school at seven o'clock.",
+                "opts": [
+                  "go",
+                  "goes",
+                  "going"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (Tom goes)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (7): he often ___ rice for lunch.",
+                "opts": [
+                  "eat",
+                  "eats",
+                  "eating"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (he eats)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (8): he usually ___ basketball with his classmates.",
+                "opts": [
+                  "play",
+                  "plays",
+                  "playing"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (he plays)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (9): He ___ TV in the evening.",
+                "opts": [
+                  "watch",
+                  "watches",
+                  "watching"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (He watches)",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Good Friend (10): he always ___ his homework first.",
+                "opts": [
+                  "do",
+                  "does",
+                  "doing"
+                ],
+                "answer": 1,
+                "point": "一般现在时三单 (he does)",
+                "dim": "grammar"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Hello! My name is Tom. I am twelve years old.",
+                "opts": [
+                  "His name is Tom.",
+                  "His name is Tim.",
+                  "His name is Tony.",
+                  "His name is Sam."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I am a student in Class Three, Grade Seven.",
+                "opts": [
+                  "Class Two, Grade Seven",
+                  "Class Three, Grade Seven",
+                  "Class Three, Grade Six",
+                  "Class Four, Grade Seven"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "My good friend Lily is from England.",
+                "opts": [
+                  "Lily is from China.",
+                  "Lily is from America.",
+                  "Lily is from England.",
+                  "Lily is from Canada."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "She is thirteen years old.",
+                "opts": [
+                  "She is twelve.",
+                  "She is thirteen.",
+                  "She is fourteen.",
+                  "She is eleven."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Nice to meet you! Welcome to our class.",
+                "opts": [
+                  "Goodbye!",
+                  "Thank you!",
+                  "Nice to meet you!",
+                  "See you!"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Tom and I are good friends. We are in the same class.",
+                "opts": [
+                  "They are in the same class.",
+                  "We are in the same class.",
+                  "They are in different classes.",
+                  "We are in different grades."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g7v1_u5",

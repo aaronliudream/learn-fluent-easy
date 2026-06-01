@@ -8,14 +8,29 @@ import { toast } from "sonner";
 import StarRating from "@/components/StarRating";
 import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
 import ModuleStageTests from "@/components/ModuleStageTests";
+import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
+
+/** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
+function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
+  if (!grade) return "all";
+  const db = Number(grade) >= 7 ? Number(grade) : Number(grade) + 6;
+  return db === 7 ? "g7" : db === 8 ? "g8" : db === 9 ? "g9" : "all";
+}
 
 type R = {id: string;title: string;topic: string | null;word_count: number | null;difficulty: number;grade: number;};
 
 export default function JuniorReading() {
-  const [params] = useSearchParams();
+  const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
   const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
   const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
+  const onGrade = (key: JuniorGradeKey) => {
+    const { dbGrade } = juniorGradeParams(key);
+    const next = new URLSearchParams(params);
+    if (dbGrade != null) next.set("grade", String(dbGrade));
+    else next.delete("grade");
+    setParams(next, { replace: true });
+  };
   const [items, setItems] = useState<R[]>([]);
   const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
   const [showMastered, setShowMastered] = useState(false);
@@ -99,6 +114,8 @@ export default function JuniorReading() {
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold"><T>📖 初中阅读训练</T></h1>
       <p className="mt-1 text-sm text-muted-foreground"><T>闯关式阅读 · ≥80% 解锁下一篇 · 100% 升一星 · 5⭐ 永久掌握</T></p>
+
+      <JuniorGradeFilter value={gradeKeyFromParam(grade)} onChange={onGrade} className="mt-4" />
 
       {grade &&
       <ModuleStageTests

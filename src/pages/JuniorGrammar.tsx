@@ -17,6 +17,14 @@ import {
   type JuniorGrammarErrorReason } from
 "@/lib/juniorGrammarFsrs";
 import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
+import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
+
+/** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
+function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
+  if (!grade) return "all";
+  const db = Number(grade) >= 7 ? Number(grade) : Number(grade) + 6;
+  return db === 7 ? "g7" : db === 8 ? "g8" : db === 9 ? "g9" : "all";
+}
 
 type Cat = {id: string;name_cn: string;emoji: string;sort_order: number;};
 type Pt = {
@@ -30,10 +38,17 @@ type Pt = {
 };
 
 export default function JuniorGrammar() {
-  const [params] = useSearchParams();
+  const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
   const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
   const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
+  const onGrade = (key: JuniorGradeKey) => {
+    const { dbGrade } = juniorGradeParams(key);
+    const next = new URLSearchParams(params);
+    if (dbGrade != null) next.set("grade", String(dbGrade));
+    else next.delete("grade");
+    setParams(next, { replace: true });
+  };
   const [cats, setCats] = useState<Cat[]>([]);
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Record<string, JuniorGrammarMastery>>({});
@@ -196,6 +211,8 @@ export default function JuniorGrammar() {
           </button>
         </div>
       </div>
+
+      <JuniorGradeFilter value={gradeKeyFromParam(grade)} onChange={onGrade} className="mb-4" />
 
       {grade &&
       <ModuleStageTests

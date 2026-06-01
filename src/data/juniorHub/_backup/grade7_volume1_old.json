@@ -1,0 +1,4857 @@
+{
+  "name": "上册",
+  "available": true,
+  "units": [
+    {
+      "id": "g7v1_u1",
+      "num": 1,
+      "unitKey": "SU1",
+      "book": "7A",
+      "title": "Good morning!",
+      "cn": "早上好",
+      "emoji": "🌅",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "afternoon",
+          "cn": "下午",
+          "emoji": "📘"
+        },
+        {
+          "en": "Alice",
+          "cn": "艾丽斯",
+          "emoji": "📘"
+        },
+        {
+          "en": "am",
+          "cn": "是",
+          "emoji": "📘"
+        },
+        {
+          "en": "are",
+          "cn": "是",
+          "emoji": "📘"
+        },
+        {
+          "en": "BBC",
+          "cn": "英国广播公司",
+          "emoji": "📘"
+        },
+        {
+          "en": "Bob",
+          "cn": "鲍勃",
+          "emoji": "📘"
+        },
+        {
+          "en": "CD",
+          "cn": "光盘",
+          "emoji": "📘"
+        },
+        {
+          "en": "Cindy",
+          "cn": "辛迪",
+          "emoji": "📘"
+        },
+        {
+          "en": "Dale",
+          "cn": "戴尔",
+          "emoji": "📘"
+        },
+        {
+          "en": "Eric",
+          "cn": "埃里克",
+          "emoji": "📘"
+        },
+        {
+          "en": "evening",
+          "cn": "晚上",
+          "emoji": "📘"
+        },
+        {
+          "en": "fine",
+          "cn": "健康的",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know afternoon?",
+              "cn": "你知道下午吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and Alice too.",
+              "cn": "知道，还有艾丽斯。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about Good morning!.",
+              "cn": "太好了！我们来聊聊Good morning!。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "问候与 be 动词",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "问候与 be 动词",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：问候与 be 动词。下列哪项与「afternoon」词义最接近？",
+          "opts": [
+            "戴尔",
+            "英国广播公司",
+            "下午",
+            "是"
+          ],
+          "answer": 2,
+          "point": "问候与 be 动词",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「艾丽斯」",
+          "opts": [
+            "are",
+            "Dale",
+            "Alice",
+            "CD"
+          ],
+          "answer": 2,
+          "point": "问候与 be 动词",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "Good morning! Good afternoon! Good evening! Good morning! Good afternoon! Good evening! How are you? How are you? How are you? I‛m ﬁ ne, thanks. I‛m ﬁ ne, thanks. I‛m ﬁ ne, thanks. How are you? How are you? How are you? I‛m OK. I‛m OK. I‛m OK.",
+        "passageCn": "本单元阅读材料（Good morning!）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only listening",
+              "A different topic",
+              "Good morning!",
+              "Only grammar"
+            ],
+            "answer": 2,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Good morning!",
+              "Sports only",
+              "Math class",
+              "Cooking"
+            ],
+            "answer": 0,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「afternoon」 mean in Chinese?",
+            "opts": [
+              "鲍勃",
+              "英国广播公司",
+              "下午",
+              "光盘"
+            ],
+            "answer": 2,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write the names of the children on page S1. Then write the names in",
+        "promptCn": "请完成本单元「Good morning!」的写作任务。",
+        "sampleWords": [
+          "afternoon",
+          "Alice",
+          "am",
+          "are",
+          "BBC",
+          "Bob"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「afternoon」的意思是？",
+          "opts": [
+            "戴尔",
+            "艾丽斯",
+            "英国广播公司",
+            "下午"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Alice」的意思是？",
+          "opts": [
+            "下午",
+            "健康的",
+            "艾丽斯",
+            "戴尔"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「am」的意思是？",
+          "opts": [
+            "戴尔",
+            "光盘",
+            "是",
+            "下午"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「are」的意思是？",
+          "opts": [
+            "是",
+            "鲍勃",
+            "光盘",
+            "晚上"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「BBC」的意思是？",
+          "opts": [
+            "艾丽斯",
+            "英国广播公司",
+            "下午",
+            "戴尔"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Bob」的意思是？",
+          "opts": [
+            "是",
+            "鲍勃",
+            "英国广播公司",
+            "健康的"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「CD」的意思是？",
+          "opts": [
+            "是",
+            "艾丽斯",
+            "晚上",
+            "光盘"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Cindy」的意思是？",
+          "opts": [
+            "鲍勃",
+            "健康的",
+            "辛迪",
+            "是"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「下午」？",
+          "opts": [
+            "CD",
+            "Cindy",
+            "afternoon",
+            "am"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「早上好」的核心词是？",
+          "opts": [
+            "Bob",
+            "afternoon",
+            "school",
+            "Alice"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "How are you?",
+          "opts": [
+            "How are you?",
+            "afternoon",
+            "Alice",
+            "am"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "What’s this in English?",
+          "opts": [
+            "What’s this in English?",
+            "afternoon",
+            "Alice",
+            "am"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u2",
+      "num": 2,
+      "unitKey": "SU2",
+      "book": "7A",
+      "title": "What's this in English?",
+      "cn": "这个用英语怎么说",
+      "emoji": "📖",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "cup",
+          "cn": "杯子",
+          "emoji": "📘"
+        },
+        {
+          "en": "English",
+          "cn": "英语",
+          "emoji": "📘"
+        },
+        {
+          "en": "in",
+          "cn": "（表示使用语言、材料等）；用；以",
+          "emoji": "📘"
+        },
+        {
+          "en": "is",
+          "cn": "是",
+          "emoji": "📘"
+        },
+        {
+          "en": "it",
+          "cn": "它",
+          "emoji": "📘"
+        },
+        {
+          "en": "jacket",
+          "cn": "夹克衫",
+          "emoji": "📘"
+        },
+        {
+          "en": "key",
+          "cn": "钥匙",
+          "emoji": "📘"
+        },
+        {
+          "en": "kg",
+          "cn": "千克",
+          "emoji": "📘"
+        },
+        {
+          "en": "map",
+          "cn": "地图",
+          "emoji": "📘"
+        },
+        {
+          "en": "NBA",
+          "cn": "全国篮球协会",
+          "emoji": "📘"
+        },
+        {
+          "en": "orange",
+          "cn": "橙子",
+          "emoji": "📘"
+        },
+        {
+          "en": "pen",
+          "cn": "笔",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know cup?",
+              "cn": "你知道杯子吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and English too.",
+              "cn": "知道，还有英语。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about What's this in English?.",
+              "cn": "太好了！我们来聊聊What's this in English?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "指示代词 this/that",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "指示代词 this/that",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：指示代词 this/that。下列哪项与「cup」词义最接近？",
+          "opts": [
+            "英语",
+            "夹克衫",
+            "杯子",
+            "千克"
+          ],
+          "answer": 2,
+          "point": "指示代词 this/that",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「英语」",
+          "opts": [
+            "cup",
+            "map",
+            "jacket",
+            "English"
+          ],
+          "answer": 3,
+          "point": "指示代词 this/that",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "Girl 1: What’s that in English? Girl 2: It’s a ruler. Girl 1: Spell it, please. Girl 2: R-U-L-E-R.",
+        "passageCn": "本单元阅读材料（What's this in English?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only listening",
+              "What's this in English?",
+              "Only grammar",
+              "A different topic"
+            ],
+            "answer": 1,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Cooking",
+              "Math class",
+              "Sports only",
+              "What's this in English?"
+            ],
+            "answer": 3,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「cup」 mean in Chinese?",
+            "opts": [
+              "是",
+              "杯子",
+              "英语",
+              "地图"
+            ],
+            "answer": 1,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"What's this in English?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「What's this in English?」，使用本单元词汇。",
+        "sampleWords": [
+          "cup",
+          "English",
+          "in",
+          "is",
+          "it",
+          "jacket"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「cup」的意思是？",
+          "opts": [
+            "是",
+            "杯子",
+            "夹克衫",
+            "橙子"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「English」的意思是？",
+          "opts": [
+            "（表示使用语言、材料等）；用；以",
+            "夹克衫",
+            "英语",
+            "全国篮球协会"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「in」的意思是？",
+          "opts": [
+            "千克",
+            "英语",
+            "（表示使用语言、材料等）；用；以",
+            "笔"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「is」的意思是？",
+          "opts": [
+            "笔",
+            "钥匙",
+            "千克",
+            "是"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「it」的意思是？",
+          "opts": [
+            "全国篮球协会",
+            "杯子",
+            "笔",
+            "它"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「jacket」的意思是？",
+          "opts": [
+            "钥匙",
+            "是",
+            "杯子",
+            "夹克衫"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「key」的意思是？",
+          "opts": [
+            "英语",
+            "是",
+            "橙子",
+            "钥匙"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「kg」的意思是？",
+          "opts": [
+            "千克",
+            "夹克衫",
+            "是",
+            "杯子"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「杯子」？",
+          "opts": [
+            "kg",
+            "in",
+            "cup",
+            "pen"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「这个用英语怎么说」的核心词是？",
+          "opts": [
+            "teacher",
+            "it",
+            "cup",
+            "jacket"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "What’s this in English?",
+          "opts": [
+            "What’s this in English?",
+            "cup",
+            "English",
+            "in"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "What’s that in English?",
+          "opts": [
+            "What’s that in English?",
+            "cup",
+            "English",
+            "in"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "What’s that?",
+          "opts": [
+            "What’s that?",
+            "cup",
+            "English",
+            "in"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u3",
+      "num": 3,
+      "unitKey": "SU3",
+      "book": "7A",
+      "title": "What color is it?",
+      "cn": "它是什么颜色",
+      "emoji": "🎨",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "black",
+          "cn": "黑色",
+          "emoji": "📘"
+        },
+        {
+          "en": "blue",
+          "cn": "蓝色",
+          "emoji": "📘"
+        },
+        {
+          "en": "brown",
+          "cn": "棕色",
+          "emoji": "📘"
+        },
+        {
+          "en": "can",
+          "cn": "能",
+          "emoji": "📘"
+        },
+        {
+          "en": "CCTV",
+          "cn": "中国中央电视台",
+          "emoji": "📘"
+        },
+        {
+          "en": "color",
+          "cn": "颜色",
+          "emoji": "📘"
+        },
+        {
+          "en": "green",
+          "cn": "绿色",
+          "emoji": "📘"
+        },
+        {
+          "en": "my",
+          "cn": "我的",
+          "emoji": "📘"
+        },
+        {
+          "en": "now",
+          "cn": "现在",
+          "emoji": "📘"
+        },
+        {
+          "en": "purple",
+          "cn": "紫色",
+          "emoji": "📘"
+        },
+        {
+          "en": "red",
+          "cn": "红色",
+          "emoji": "📘"
+        },
+        {
+          "en": "say",
+          "cn": "说",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know black?",
+              "cn": "你知道黑色吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and blue too.",
+              "cn": "知道，还有蓝色。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about What color is it?.",
+              "cn": "太好了！我们来聊聊What color is it?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "颜色与 what color",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "颜色与 what color",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：颜色与 what color。下列哪项与「black」词义最接近？",
+          "opts": [
+            "绿色",
+            "黑色",
+            "红色",
+            "说"
+          ],
+          "answer": 1,
+          "point": "颜色与 what color",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「蓝色」",
+          "opts": [
+            "color",
+            "brown",
+            "blue",
+            "purple"
+          ],
+          "answer": 2,
+          "point": "颜色与 what color",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "U in blue. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U.",
+        "passageCn": "本单元阅读材料（What color is it?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only grammar",
+              "What color is it?",
+              "A different topic",
+              "Only listening"
+            ],
+            "answer": 1,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Cooking",
+              "What color is it?",
+              "Sports only",
+              "Math class"
+            ],
+            "answer": 1,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「black」 mean in Chinese?",
+            "opts": [
+              "棕色",
+              "黑色",
+              "紫色",
+              "绿色"
+            ],
+            "answer": 1,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Find the lett ers from A to Z. Write the small lett er next to each big lett er.",
+        "promptCn": "请完成本单元「What color is it?」的写作任务。",
+        "sampleWords": [
+          "black",
+          "blue",
+          "brown",
+          "can",
+          "CCTV",
+          "color"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「black」的意思是？",
+          "opts": [
+            "绿色",
+            "颜色",
+            "棕色",
+            "黑色"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「blue」的意思是？",
+          "opts": [
+            "红色",
+            "蓝色",
+            "说",
+            "黑色"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「brown」的意思是？",
+          "opts": [
+            "棕色",
+            "绿色",
+            "中国中央电视台",
+            "蓝色"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「can」的意思是？",
+          "opts": [
+            "棕色",
+            "红色",
+            "颜色",
+            "能"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「CCTV」的意思是？",
+          "opts": [
+            "中国中央电视台",
+            "绿色",
+            "紫色",
+            "颜色"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「color」的意思是？",
+          "opts": [
+            "颜色",
+            "蓝色",
+            "紫色",
+            "说"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「green」的意思是？",
+          "opts": [
+            "中国中央电视台",
+            "说",
+            "绿色",
+            "颜色"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「my」的意思是？",
+          "opts": [
+            "颜色",
+            "黑色",
+            "棕色",
+            "我的"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「黑色」？",
+          "opts": [
+            "now",
+            "black",
+            "say",
+            "can"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「它是什么颜色」的核心词是？",
+          "opts": [
+            "red",
+            "black",
+            "say",
+            "can"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "black",
+          "opts": [
+            "black",
+            "blue",
+            "brown",
+            "can"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "blue",
+          "opts": [
+            "blue",
+            "black",
+            "brown",
+            "can"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "brown",
+          "opts": [
+            "brown",
+            "black",
+            "blue",
+            "can"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "can",
+          "opts": [
+            "can",
+            "black",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "CCTV",
+          "opts": [
+            "CCTV",
+            "black",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "color",
+          "opts": [
+            "color",
+            "black",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "green",
+          "opts": [
+            "green",
+            "black",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "my",
+          "opts": [
+            "my",
+            "black",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u4",
+      "num": 4,
+      "unitKey": "U1",
+      "book": "7A",
+      "title": "My name's Gina.",
+      "cn": "我叫吉娜",
+      "emoji": "👋",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "Alan",
+          "cn": "艾伦",
+          "emoji": "📘"
+        },
+        {
+          "en": "and",
+          "cn": "和",
+          "emoji": "📘"
+        },
+        {
+          "en": "Brown",
+          "cn": "布朗",
+          "emoji": "📘"
+        },
+        {
+          "en": "China",
+          "cn": "中国",
+          "emoji": "📘"
+        },
+        {
+          "en": "eight",
+          "cn": "八",
+          "emoji": "📘"
+        },
+        {
+          "en": "first",
+          "cn": "第一",
+          "emoji": "📘"
+        },
+        {
+          "en": "five",
+          "cn": "五",
+          "emoji": "📘"
+        },
+        {
+          "en": "four",
+          "cn": "四",
+          "emoji": "📘"
+        },
+        {
+          "en": "friend",
+          "cn": "朋友",
+          "emoji": "📘"
+        },
+        {
+          "en": "Gina",
+          "cn": "吉娜",
+          "emoji": "📘"
+        },
+        {
+          "en": "Green",
+          "cn": "格林",
+          "emoji": "📘"
+        },
+        {
+          "en": "he",
+          "cn": "他",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know Alan?",
+              "cn": "你知道艾伦吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and and too.",
+              "cn": "知道，还有和。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about My name's Gina..",
+              "cn": "太好了！我们来聊聊My name's Gina.。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "be 动词与自我介绍",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "be 动词与自我介绍",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：be 动词与自我介绍。下列哪项与「Alan」词义最接近？",
+          "opts": [
+            "艾伦",
+            "五",
+            "第一",
+            "格林"
+          ],
+          "answer": 0,
+          "point": "be 动词与自我介绍",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「和」",
+          "opts": [
+            "Brown",
+            "China",
+            "and",
+            "friend"
+          ],
+          "answer": 2,
+          "point": "be 动词与自我介绍",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "Bob: Excuse me, are you Eric? Eric: Yes, I am. Are you Mike? Bob: No, I’m not. I’m Bob. Nice to meet you. Eric: Nice to meet you, too.",
+        "passageCn": "本单元阅读材料（My name's Gina.）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "My name's Gina.",
+              "A different topic",
+              "Only grammar",
+              "Only listening"
+            ],
+            "answer": 0,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Cooking",
+              "Math class",
+              "My name's Gina.",
+              "Sports only"
+            ],
+            "answer": 2,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「Alan」 mean in Chinese?",
+            "opts": [
+              "格林",
+              "五",
+              "八",
+              "艾伦"
+            ],
+            "answer": 3,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"My name's Gina.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「My name's Gina.」，使用本单元词汇。",
+        "sampleWords": [
+          "Alan",
+          "and",
+          "Brown",
+          "China",
+          "eight",
+          "first"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「Alan」的意思是？",
+          "opts": [
+            "吉娜",
+            "四",
+            "朋友",
+            "艾伦"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「and」的意思是？",
+          "opts": [
+            "朋友",
+            "吉娜",
+            "五",
+            "和"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Brown」的意思是？",
+          "opts": [
+            "布朗",
+            "第一",
+            "艾伦",
+            "中国"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「China」的意思是？",
+          "opts": [
+            "和",
+            "中国",
+            "他",
+            "吉娜"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「eight」的意思是？",
+          "opts": [
+            "艾伦",
+            "四",
+            "中国",
+            "八"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「first」的意思是？",
+          "opts": [
+            "艾伦",
+            "五",
+            "布朗",
+            "第一"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「five」的意思是？",
+          "opts": [
+            "五",
+            "艾伦",
+            "和",
+            "他"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「four」的意思是？",
+          "opts": [
+            "朋友",
+            "五",
+            "四",
+            "吉娜"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「艾伦」？",
+          "opts": [
+            "friend",
+            "eight",
+            "Alan",
+            "four"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「我叫吉娜」的核心词是？",
+          "opts": [
+            "eight",
+            "Alan",
+            "five",
+            "Brown"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "What’s your telephone number, Alan?",
+          "opts": [
+            "What’s your telephone number, Alan?",
+            "Alan",
+            "and",
+            "Brown"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "What’s your phone number, Tom?",
+          "opts": [
+            "What’s your phone number, Tom?",
+            "Alan",
+            "and",
+            "Brown"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u5",
+      "num": 5,
+      "unitKey": "U2",
+      "book": "7A",
+      "title": "This is my sister.",
+      "cn": "这是我的姐姐",
+      "emoji": "👨‍👩‍👧",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "aunt",
+          "cn": "姑母",
+          "emoji": "📘"
+        },
+        {
+          "en": "brother",
+          "cn": "兄",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "en": "bye",
+          "cn": "再见",
+          "emoji": "📘"
+        },
+        {
+          "en": "cousin",
+          "cn": "堂兄（弟、姊",
+          "emoji": "📘"
+        },
+        {
+          "en": "dad",
+          "cn": "爸爸",
+          "emoji": "📘"
+        },
+        {
+          "en": "daughter",
+          "cn": "女儿",
+          "emoji": "📘"
+        },
+        {
+          "en": "day",
+          "cn": "一天",
+          "emoji": "📘"
+        },
+        {
+          "en": "dog",
+          "cn": "狗",
+          "emoji": "🐾"
+        },
+        {
+          "en": "family",
+          "cn": "家",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "en": "father",
+          "cn": "父亲",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "en": "girl",
+          "cn": "女孩",
+          "emoji": "📘"
+        },
+        {
+          "en": "grandfather",
+          "cn": "祖父",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know aunt?",
+              "cn": "你知道姑母吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and brother too.",
+              "cn": "知道，还有兄。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about This is my sister..",
+              "cn": "太好了！我们来聊聊This is my sister.。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "指示代词与名词所有格",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "指示代词与名词所有格",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：指示代词与名词所有格。下列哪项与「aunt」词义最接近？",
+          "opts": [
+            "再见",
+            "姑母",
+            "爸爸",
+            "堂兄（弟、姊"
+          ],
+          "answer": 1,
+          "point": "指示代词与名词所有格",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「兄」",
+          "opts": [
+            "day",
+            "father",
+            "brother",
+            "dog"
+          ],
+          "answer": 2,
+          "point": "指示代词与名词所有格",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "This unit is about This is my sister.. In this lesson we learn words like aunt, brother, bye, cousin, dad, daughter. Students practice reading and using these words in sentences about 这是我的姐姐.",
+        "passageCn": "本单元主题是「这是我的姐姐」。我们学习 aunt, brother, bye, cousin, dad, daughter 等词汇，并在句子中运用。",
+        "questions": [
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Sports only",
+              "Cooking",
+              "This is my sister.",
+              "Math class"
+            ],
+            "answer": 2,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「aunt」 mean in Chinese?",
+            "opts": [
+              "堂兄（弟、姊",
+              "家",
+              "父亲",
+              "姑母"
+            ],
+            "answer": 3,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"This is my sister.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「This is my sister.」，使用本单元词汇。",
+        "sampleWords": [
+          "aunt",
+          "brother",
+          "bye",
+          "cousin",
+          "dad",
+          "daughter"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「aunt」的意思是？",
+          "opts": [
+            "狗",
+            "父亲",
+            "姑母",
+            "再见"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「brother」的意思是？",
+          "opts": [
+            "女孩",
+            "爸爸",
+            "堂兄（弟、姊",
+            "兄"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bye」的意思是？",
+          "opts": [
+            "再见",
+            "女孩",
+            "狗",
+            "兄"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「cousin」的意思是？",
+          "opts": [
+            "女孩",
+            "女儿",
+            "姑母",
+            "堂兄（弟、姊"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「dad」的意思是？",
+          "opts": [
+            "父亲",
+            "家",
+            "爸爸",
+            "再见"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「daughter」的意思是？",
+          "opts": [
+            "女儿",
+            "堂兄（弟、姊",
+            "爸爸",
+            "女孩"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「day」的意思是？",
+          "opts": [
+            "狗",
+            "女儿",
+            "祖父",
+            "一天"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「dog」的意思是？",
+          "opts": [
+            "一天",
+            "狗",
+            "兄",
+            "姑母"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「姑母」？",
+          "opts": [
+            "bye",
+            "daughter",
+            "day",
+            "aunt"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「这是我的姐姐」的核心词是？",
+          "opts": [
+            "bye",
+            "aunt",
+            "brother",
+            "day"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "aunt",
+          "opts": [
+            "aunt",
+            "brother",
+            "bye",
+            "cousin"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "brother",
+          "opts": [
+            "brother",
+            "aunt",
+            "bye",
+            "cousin"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "bye",
+          "opts": [
+            "bye",
+            "aunt",
+            "brother",
+            "cousin"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "cousin",
+          "opts": [
+            "cousin",
+            "aunt",
+            "brother",
+            "bye"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "dad",
+          "opts": [
+            "dad",
+            "aunt",
+            "brother",
+            "bye"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "daughter",
+          "opts": [
+            "daughter",
+            "aunt",
+            "brother",
+            "bye"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "day",
+          "opts": [
+            "day",
+            "aunt",
+            "brother",
+            "bye"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "dog",
+          "opts": [
+            "dog",
+            "aunt",
+            "brother",
+            "bye"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u6",
+      "num": 6,
+      "unitKey": "U3",
+      "book": "7A",
+      "title": "Is this your pencil?",
+      "cn": "这是你的铅笔吗",
+      "emoji": "✏️",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "about",
+          "cn": "关于",
+          "emoji": "📘"
+        },
+        {
+          "en": "Anna",
+          "cn": "安娜",
+          "emoji": "📘"
+        },
+        {
+          "en": "ask",
+          "cn": "请求",
+          "emoji": "📘"
+        },
+        {
+          "en": "at",
+          "cn": "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）",
+          "emoji": "📘"
+        },
+        {
+          "en": "bag",
+          "cn": "袋",
+          "emoji": "📘"
+        },
+        {
+          "en": "baseball",
+          "cn": "棒球",
+          "emoji": "📘"
+        },
+        {
+          "en": "book",
+          "cn": "书",
+          "emoji": "📚"
+        },
+        {
+          "en": "box",
+          "cn": "箱",
+          "emoji": "📘"
+        },
+        {
+          "en": "call",
+          "cn": "（给",
+          "emoji": "📘"
+        },
+        {
+          "en": "card",
+          "cn": "卡片",
+          "emoji": "📘"
+        },
+        {
+          "en": "classroom",
+          "cn": "教室",
+          "emoji": "🏫"
+        },
+        {
+          "en": "computer",
+          "cn": "计算机",
+          "emoji": "🤖"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know about?",
+              "cn": "你知道关于吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and Anna too.",
+              "cn": "知道，还有安娜。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about Is this your pencil?.",
+              "cn": "太好了！我们来聊聊Is this your pencil?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "一般疑问句 Is this...?",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "一般疑问句 Is this...?",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：一般疑问句 Is this...?。下列哪项与「about」词义最接近？",
+          "opts": [
+            "请求",
+            "关于",
+            "棒球",
+            "书"
+          ],
+          "answer": 1,
+          "point": "一般疑问句 Is this...?",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「安娜」",
+          "opts": [
+            "baseball",
+            "card",
+            "ask",
+            "Anna"
+          ],
+          "answer": 3,
+          "point": "一般疑问句 Is this...?",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "This unit is about Is this your pencil?. In this lesson we learn words like about, Anna, ask, at, bag, baseball. Students practice reading and using these words in sentences about 这是你的铅笔吗.",
+        "passageCn": "本单元主题是「这是你的铅笔吗」。我们学习 about, Anna, ask, at, bag, baseball 等词汇，并在句子中运用。",
+        "questions": [
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Math class",
+              "Sports only",
+              "Cooking",
+              "Is this your pencil?"
+            ],
+            "answer": 3,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「about」 mean in Chinese?",
+            "opts": [
+              "安娜",
+              "（给",
+              "计算机",
+              "关于"
+            ],
+            "answer": 3,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Is this your pencil?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Is this your pencil?」，使用本单元词汇。",
+        "sampleWords": [
+          "about",
+          "Anna",
+          "ask",
+          "at",
+          "bag",
+          "baseball"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「about」的意思是？",
+          "opts": [
+            "（给",
+            "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）",
+            "教室",
+            "关于"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Anna」的意思是？",
+          "opts": [
+            "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）",
+            "计算机",
+            "安娜",
+            "教室"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「ask」的意思是？",
+          "opts": [
+            "计算机",
+            "请求",
+            "关于",
+            "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「at」的意思是？",
+          "opts": [
+            "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）",
+            "书",
+            "箱",
+            "安娜"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bag」的意思是？",
+          "opts": [
+            "书",
+            "关于",
+            "袋",
+            "教室"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「baseball」的意思是？",
+          "opts": [
+            "计算机",
+            "棒球",
+            "卡片",
+            "（提供电话号码等时使用）；按照；根据；在（某处、某时间；或时刻）"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「book」的意思是？",
+          "opts": [
+            "棒球",
+            "（给",
+            "教室",
+            "书"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「box」的意思是？",
+          "opts": [
+            "箱",
+            "安娜",
+            "卡片",
+            "关于"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「关于」？",
+          "opts": [
+            "book",
+            "Anna",
+            "baseball",
+            "about"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「这是你的铅笔吗」的核心词是？",
+          "opts": [
+            "card",
+            "about",
+            "classroom",
+            "at"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "Is this your pencil?",
+          "opts": [
+            "Is this your pencil?",
+            "about",
+            "Anna",
+            "ask"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u7",
+      "num": 7,
+      "unitKey": "U4",
+      "book": "7A",
+      "title": "Where's my schoolbag?",
+      "cn": "我的书包在哪里",
+      "emoji": "🎒",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "always",
+          "cn": "总是",
+          "emoji": "📘"
+        },
+        {
+          "en": "bed",
+          "cn": "床",
+          "emoji": "📘"
+        },
+        {
+          "en": "bookcase",
+          "cn": "书架",
+          "emoji": "📘"
+        },
+        {
+          "en": "but",
+          "cn": "但是",
+          "emoji": "📘"
+        },
+        {
+          "en": "chair",
+          "cn": "椅子",
+          "emoji": "📘"
+        },
+        {
+          "en": "clock",
+          "cn": "时钟",
+          "emoji": "⏰"
+        },
+        {
+          "en": "come",
+          "cn": "来",
+          "emoji": "📘"
+        },
+        {
+          "en": "desk",
+          "cn": "书桌",
+          "emoji": "📘"
+        },
+        {
+          "en": "everywhere",
+          "cn": "处处",
+          "emoji": "📘"
+        },
+        {
+          "en": "hat",
+          "cn": "帽子",
+          "emoji": "📘"
+        },
+        {
+          "en": "head",
+          "cn": "头",
+          "emoji": "📘"
+        },
+        {
+          "en": "know",
+          "cn": "知道",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know always?",
+              "cn": "你知道总是吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and bed too.",
+              "cn": "知道，还有床。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about Where's my schoolbag?.",
+              "cn": "太好了！我们来聊聊Where's my schoolbag?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "Where 问句与介词",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "Where 问句与介词",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：Where 问句与介词。下列哪项与「always」词义最接近？",
+          "opts": [
+            "椅子",
+            "但是",
+            "来",
+            "总是"
+          ],
+          "answer": 3,
+          "point": "Where 问句与介词",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「床」",
+          "opts": [
+            "bookcase",
+            "bed",
+            "always",
+            "know"
+          ],
+          "answer": 1,
+          "point": "Where 问句与介词",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "Mom: Hello. Tom: Hi, Mom. Could you bring some things to school for me? Mom: OK. Tom: I need my English books ... Mom: English books? Where are your English books? Tom: Hmm, they’re on the chair ... Oh, no, they’re under the radio. Mom: OK. Tom: And I need my ruler. It’s on the bed. And my notebook. Mom: Where’s your notebook? Tom: Uh, I don’t know. Oh ... it’s under the model plane in the bookcase. And Frank’s tape. He needs it. Mom: Where’s his tape? Tom: Oh, it’s in the tape player. Mom: OK. Meet you at one at your school. Tom: Thanks, Mom!",
+        "passageCn": "本单元阅读材料（Where's my schoolbag?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Where's my schoolbag?",
+              "A different topic",
+              "Only listening",
+              "Only grammar"
+            ],
+            "answer": 0,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Math class",
+              "Cooking",
+              "Sports only",
+              "Where's my schoolbag?"
+            ],
+            "answer": 3,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「always」 mean in Chinese?",
+            "opts": [
+              "总是",
+              "椅子",
+              "知道",
+              "书架"
+            ],
+            "answer": 0,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Where's my schoolbag?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Where's my schoolbag?」，使用本单元词汇。",
+        "sampleWords": [
+          "always",
+          "bed",
+          "bookcase",
+          "but",
+          "chair",
+          "clock"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「always」的意思是？",
+          "opts": [
+            "知道",
+            "书桌",
+            "总是",
+            "但是"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bed」的意思是？",
+          "opts": [
+            "处处",
+            "时钟",
+            "床",
+            "总是"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bookcase」的意思是？",
+          "opts": [
+            "知道",
+            "头",
+            "书架",
+            "椅子"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「but」的意思是？",
+          "opts": [
+            "帽子",
+            "床",
+            "处处",
+            "但是"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「chair」的意思是？",
+          "opts": [
+            "书桌",
+            "椅子",
+            "书架",
+            "床"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「clock」的意思是？",
+          "opts": [
+            "时钟",
+            "但是",
+            "书桌",
+            "来"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「come」的意思是？",
+          "opts": [
+            "来",
+            "书架",
+            "但是",
+            "椅子"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「desk」的意思是？",
+          "opts": [
+            "时钟",
+            "总是",
+            "书桌",
+            "知道"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「总是」？",
+          "opts": [
+            "chair",
+            "always",
+            "clock",
+            "bed"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「我的书包在哪里」的核心词是？",
+          "opts": [
+            "chair",
+            "school",
+            "always",
+            "apple"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "Where are my books?",
+          "opts": [
+            "Where are my books?",
+            "always",
+            "bed",
+            "bookcase"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "How about my pencil box?",
+          "opts": [
+            "How about my pencil box?",
+            "always",
+            "bed",
+            "bookcase"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u8",
+      "num": 8,
+      "unitKey": "U5",
+      "book": "7A",
+      "title": "Do you have a soccer ball?",
+      "cn": "你有足球吗",
+      "emoji": "⚽",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "afer",
+          "cn": "在",
+          "emoji": "📘"
+        },
+        {
+          "en": "ball",
+          "cn": "球",
+          "emoji": "📘"
+        },
+        {
+          "en": "basketball",
+          "cn": "篮球",
+          "emoji": "⚽"
+        },
+        {
+          "en": "bat",
+          "cn": "球棒",
+          "emoji": "📘"
+        },
+        {
+          "en": "Bill",
+          "cn": "比尔",
+          "emoji": "📘"
+        },
+        {
+          "en": "boring",
+          "cn": "没趣的",
+          "emoji": "📘"
+        },
+        {
+          "en": "class",
+          "cn": "班级",
+          "emoji": "📘"
+        },
+        {
+          "en": "classmate",
+          "cn": "同班同学",
+          "emoji": "📘"
+        },
+        {
+          "en": "difficult",
+          "cn": "困难的",
+          "emoji": "📘"
+        },
+        {
+          "en": "do",
+          "cn": "（第三人称单数形式",
+          "emoji": "📘"
+        },
+        {
+          "en": "does",
+          "cn": "）",
+          "emoji": "📘"
+        },
+        {
+          "en": "easy",
+          "cn": "容易的",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know afer?",
+              "cn": "你知道在吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and ball too.",
+              "cn": "知道，还有球。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about Do you have a soccer ball?.",
+              "cn": "太好了！我们来聊聊Do you have a soccer ball?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "Do you have...? 一般疑问句",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "Do you have...? 一般疑问句",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：Do you have...? 一般疑问句。下列哪项与「afer」词义最接近？",
+          "opts": [
+            "同班同学",
+            "（第三人称单数形式",
+            "在",
+            "）"
+          ],
+          "answer": 2,
+          "point": "Do you have...? 一般疑问句",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「球」",
+          "opts": [
+            "ball",
+            "bat",
+            "does",
+            "Bill"
+          ],
+          "answer": 0,
+          "point": "Do you have...? 一般疑问句",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "A: Do you have a baseball? B: Yes, I do. (= Yes, I have a baseball.)",
+        "passageCn": "本单元阅读材料（Do you have a soccer ball?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Do you have a soccer ball?",
+              "Only listening",
+              "Only grammar",
+              "A different topic"
+            ],
+            "answer": 0,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Do you have a soccer ball?",
+              "Math class",
+              "Sports only",
+              "Cooking"
+            ],
+            "answer": 0,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「afer」 mean in Chinese?",
+            "opts": [
+              "困难的",
+              "在",
+              "篮球",
+              "没趣的"
+            ],
+            "answer": 1,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Do you have a soccer ball?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Do you have a soccer ball?」，使用本单元词汇。",
+        "sampleWords": [
+          "afer",
+          "ball",
+          "basketball",
+          "bat",
+          "Bill",
+          "boring"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「afer」的意思是？",
+          "opts": [
+            "困难的",
+            "（第三人称单数形式",
+            "没趣的",
+            "在"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「ball」的意思是？",
+          "opts": [
+            "困难的",
+            "在",
+            "比尔",
+            "球"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「basketball」的意思是？",
+          "opts": [
+            "）",
+            "在",
+            "容易的",
+            "篮球"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bat」的意思是？",
+          "opts": [
+            "篮球",
+            "没趣的",
+            "（第三人称单数形式",
+            "球棒"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Bill」的意思是？",
+          "opts": [
+            "）",
+            "困难的",
+            "比尔",
+            "（第三人称单数形式"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「boring」的意思是？",
+          "opts": [
+            "没趣的",
+            "同班同学",
+            "（第三人称单数形式",
+            "困难的"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「class」的意思是？",
+          "opts": [
+            "比尔",
+            "班级",
+            "同班同学",
+            "篮球"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「classmate」的意思是？",
+          "opts": [
+            "容易的",
+            "）",
+            "篮球",
+            "同班同学"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「在」？",
+          "opts": [
+            "afer",
+            "bat",
+            "basketball",
+            "difficult"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「你有足球吗」的核心词是？",
+          "opts": [
+            "school",
+            "afer",
+            "classmate",
+            "Bill"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "Do you have a soccer ball?",
+          "opts": [
+            "Do you have a soccer ball?",
+            "afer",
+            "ball",
+            "basketball"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Do you have a baseball? B: Yes, I do. (= Yes, I have a baseball.)",
+          "opts": [
+            "Do you have a baseball? B: Yes, I do. (= Yes, I have a baseball.)",
+            "afer",
+            "ball",
+            "basketball"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u9",
+      "num": 9,
+      "unitKey": "U6",
+      "book": "7A",
+      "title": "Do you like bananas?",
+      "cn": "你喜欢香蕉吗",
+      "emoji": "🍌",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "apple",
+          "cn": "苹果",
+          "emoji": "🍎"
+        },
+        {
+          "en": "banana",
+          "cn": "香蕉",
+          "emoji": "🍎"
+        },
+        {
+          "en": "be",
+          "cn": "变成",
+          "emoji": "📘"
+        },
+        {
+          "en": "birthday",
+          "cn": "生日",
+          "emoji": "📘"
+        },
+        {
+          "en": "bread",
+          "cn": "面包",
+          "emoji": "🍎"
+        },
+        {
+          "en": "breakfast",
+          "cn": "早餐",
+          "emoji": "📘"
+        },
+        {
+          "en": "burger",
+          "cn": "汉堡包",
+          "emoji": "📘"
+        },
+        {
+          "en": "carrot",
+          "cn": "胡萝卜",
+          "emoji": "📘"
+        },
+        {
+          "en": "chicken",
+          "cn": "鸡肉",
+          "emoji": "📘"
+        },
+        {
+          "en": "dinner",
+          "cn": "（中午或晚上吃的）；正餐",
+          "emoji": "📘"
+        },
+        {
+          "en": "eat",
+          "cn": "吃",
+          "emoji": "🍎"
+        },
+        {
+          "en": "egg",
+          "cn": "蛋",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know apple?",
+              "cn": "你知道苹果吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and banana too.",
+              "cn": "知道，还有香蕉。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about Do you like bananas?.",
+              "cn": "太好了！我们来聊聊Do you like bananas?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "Do you like...? 与可数名词",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "Do you like...? 与可数名词",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：Do you like...? 与可数名词。下列哪项与「apple」词义最接近？",
+          "opts": [
+            "苹果",
+            "汉堡包",
+            "香蕉",
+            "胡萝卜"
+          ],
+          "answer": 0,
+          "point": "Do you like...? 与可数名词",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「香蕉」",
+          "opts": [
+            "eat",
+            "egg",
+            "banana",
+            "dinner"
+          ],
+          "answer": 2,
+          "point": "Do you like...? 与可数名词",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "1. I like fruit, but I (don’t / doesn’t) like vegetables. 2. She (like / likes) bread, but she (doesn’t / don’t) like salad. 3. He (like / likes) bananas, but he (don’t / doesn’t) like oranges. 4. We (likes / like) hamburgers, but we don’t (like / likes) chicken. 5. Th ey (likes / like) pears, but they (don’t / doesn’t) like strawberries.",
+        "passageCn": "本单元阅读材料（Do you like bananas?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only listening",
+              "Do you like bananas?",
+              "Only grammar",
+              "A different topic"
+            ],
+            "answer": 1,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Sports only",
+              "Cooking",
+              "Do you like bananas?",
+              "Math class"
+            ],
+            "answer": 2,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「apple」 mean in Chinese?",
+            "opts": [
+              "（中午或晚上吃的）；正餐",
+              "苹果",
+              "吃",
+              "汉堡包"
+            ],
+            "answer": 1,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Do you like bananas?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Do you like bananas?」，使用本单元词汇。",
+        "sampleWords": [
+          "apple",
+          "banana",
+          "be",
+          "birthday",
+          "bread",
+          "breakfast"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「apple」的意思是？",
+          "opts": [
+            "生日",
+            "苹果",
+            "（中午或晚上吃的）；正餐",
+            "香蕉"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「banana」的意思是？",
+          "opts": [
+            "蛋",
+            "香蕉",
+            "苹果",
+            "变成"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「be」的意思是？",
+          "opts": [
+            "胡萝卜",
+            "变成",
+            "吃",
+            "面包"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「birthday」的意思是？",
+          "opts": [
+            "蛋",
+            "生日",
+            "吃",
+            "早餐"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「bread」的意思是？",
+          "opts": [
+            "胡萝卜",
+            "面包",
+            "吃",
+            "早餐"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「breakfast」的意思是？",
+          "opts": [
+            "生日",
+            "汉堡包",
+            "胡萝卜",
+            "早餐"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「burger」的意思是？",
+          "opts": [
+            "吃",
+            "汉堡包",
+            "变成",
+            "（中午或晚上吃的）；正餐"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「carrot」的意思是？",
+          "opts": [
+            "面包",
+            "胡萝卜",
+            "香蕉",
+            "早餐"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「苹果」？",
+          "opts": [
+            "birthday",
+            "egg",
+            "breakfast",
+            "apple"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「你喜欢香蕉吗」的核心词是？",
+          "opts": [
+            "apple",
+            "eat",
+            "carrot",
+            "school"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "Do you like salad?",
+          "opts": [
+            "Do you like salad?",
+            "apple",
+            "banana",
+            "be"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Do they like pears?",
+          "opts": [
+            "Do they like pears?",
+            "apple",
+            "banana",
+            "be"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Does she like tomatoes?",
+          "opts": [
+            "Does she like tomatoes?",
+            "apple",
+            "banana",
+            "be"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u10",
+      "num": 10,
+      "unitKey": "U7",
+      "book": "7A",
+      "title": "How much are these socks?",
+      "cn": "这些袜子多少钱",
+      "emoji": "🧦",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "all",
+          "cn": "所有的",
+          "emoji": "📘"
+        },
+        {
+          "en": "big",
+          "cn": "大的",
+          "emoji": "📘"
+        },
+        {
+          "en": "boy",
+          "cn": "男孩",
+          "emoji": "📘"
+        },
+        {
+          "en": "buy",
+          "cn": "购买",
+          "emoji": "📘"
+        },
+        {
+          "en": "clothes",
+          "cn": "(",
+          "emoji": "📘"
+        },
+        {
+          "en": "dollar",
+          "cn": "元（美国",
+          "emoji": "📘"
+        },
+        {
+          "en": "eighteen",
+          "cn": "十八",
+          "emoji": "📘"
+        },
+        {
+          "en": "eleven",
+          "cn": "十一",
+          "emoji": "📘"
+        },
+        {
+          "en": "fifteen",
+          "cn": "十五",
+          "emoji": "📘"
+        },
+        {
+          "en": "long",
+          "cn": "长的",
+          "emoji": "📘"
+        },
+        {
+          "en": "look",
+          "cn": "看",
+          "emoji": "📘"
+        },
+        {
+          "en": "Mr.",
+          "cn": "（用于男子的姓氏或",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know all?",
+              "cn": "你知道所有的吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and big too.",
+              "cn": "知道，还有大的。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about How much are these socks?.",
+              "cn": "太好了！我们来聊聊How much are these socks?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "How much 与价格",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "How much 与价格",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：How much 与价格。下列哪项与「all」词义最接近？",
+          "opts": [
+            "十五",
+            "所有的",
+            "大的",
+            "看"
+          ],
+          "answer": 1,
+          "point": "How much 与价格",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「大的」",
+          "opts": [
+            "boy",
+            "big",
+            "buy",
+            "look"
+          ],
+          "answer": 1,
+          "point": "How much 与价格",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "This unit is about How much are these socks?. In this lesson we learn words like all, big, boy, buy, clothes, dollar. Students practice reading and using these words in sentences about 这些袜子多少钱.",
+        "passageCn": "本单元主题是「这些袜子多少钱」。我们学习 all, big, boy, buy, clothes, dollar 等词汇，并在句子中运用。",
+        "questions": [
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "How much are these socks?",
+              "Sports only",
+              "Cooking",
+              "Math class"
+            ],
+            "answer": 0,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「all」 mean in Chinese?",
+            "opts": [
+              "元（美国",
+              "所有的",
+              "十八",
+              "男孩"
+            ],
+            "answer": 1,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"How much are these socks?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「How much are these socks?」，使用本单元词汇。",
+        "sampleWords": [
+          "all",
+          "big",
+          "boy",
+          "buy",
+          "clothes",
+          "dollar"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「all」的意思是？",
+          "opts": [
+            "十五",
+            "长的",
+            "看",
+            "所有的"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「big」的意思是？",
+          "opts": [
+            "大的",
+            "男孩",
+            "长的",
+            "看"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「boy」的意思是？",
+          "opts": [
+            "购买",
+            "长的",
+            "看",
+            "男孩"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「buy」的意思是？",
+          "opts": [
+            "看",
+            "男孩",
+            "购买",
+            "长的"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「clothes」的意思是？",
+          "opts": [
+            "十五",
+            "所有的",
+            "购买",
+            "("
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「dollar」的意思是？",
+          "opts": [
+            "长的",
+            "大的",
+            "看",
+            "元（美国"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「eighteen」的意思是？",
+          "opts": [
+            "元（美国",
+            "大的",
+            "男孩",
+            "十八"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「eleven」的意思是？",
+          "opts": [
+            "十五",
+            "购买",
+            "所有的",
+            "十一"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「所有的」？",
+          "opts": [
+            "all",
+            "big",
+            "eleven",
+            "clothes"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「这些袜子多少钱」的核心词是？",
+          "opts": [
+            "big",
+            "clothes",
+            "fifteen",
+            "all"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "How much are these socks?",
+          "opts": [
+            "How much are these socks?",
+            "all",
+            "big",
+            "boy"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u11",
+      "num": 11,
+      "unitKey": "U8",
+      "book": "7A",
+      "title": "When is your birthday?",
+      "cn": "你的生日是什么时候",
+      "emoji": "🎂",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "April",
+          "cn": "四月",
+          "emoji": "📘"
+        },
+        {
+          "en": "art",
+          "cn": "艺术",
+          "emoji": "📘"
+        },
+        {
+          "en": "August",
+          "cn": "八月",
+          "emoji": "📘"
+        },
+        {
+          "en": "busy",
+          "cn": "忙碌的",
+          "emoji": "📘"
+        },
+        {
+          "en": "dear",
+          "cn": "亲爱的",
+          "emoji": "📘"
+        },
+        {
+          "en": "December",
+          "cn": "十二月",
+          "emoji": "📘"
+        },
+        {
+          "en": "eighth",
+          "cn": "第八",
+          "emoji": "📘"
+        },
+        {
+          "en": "February",
+          "cn": "二月",
+          "emoji": "📘"
+        },
+        {
+          "en": "festival",
+          "cn": "（音乐、戏剧等",
+          "emoji": "📘"
+        },
+        {
+          "en": "fifth",
+          "cn": "第五",
+          "emoji": "📘"
+        },
+        {
+          "en": "first",
+          "cn": "第一",
+          "emoji": "📘"
+        },
+        {
+          "en": "happy",
+          "cn": "愉快的",
+          "emoji": "📘"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Section A",
+          "lines": [
+            {
+              "role": "A",
+              "text": "Do you know April?",
+              "cn": "你知道四月吗？"
+            },
+            {
+              "role": "B",
+              "text": "Yes, and art too.",
+              "cn": "知道，还有艺术。"
+            },
+            {
+              "role": "A",
+              "text": "Great! Let's talk about When is your birthday?.",
+              "cn": "太好了！我们来聊聊When is your birthday?。"
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "When 问句与序数词",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "When 问句与序数词",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：When 问句与序数词。下列哪项与「April」词义最接近？",
+          "opts": [
+            "八月",
+            "四月",
+            "第八",
+            "忙碌的"
+          ],
+          "answer": 1,
+          "point": "When 问句与序数词",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「艺术」",
+          "opts": [
+            "busy",
+            "art",
+            "fifth",
+            "dear"
+          ],
+          "answer": 1,
+          "point": "When 问句与序数词",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "John: Hey, Sally. Can I ask you some questions? Sally: Sure, John. John: When is your birthday party? Sally: My birthday party is on October 5th. John: OK, and when is the basketball game? Sally: The basketball game? Oh, it’s on October 2nd. John: Good. And, umm, how about the school trip? Sally: The school trip is on September 26th and 27th. John: And when is the English test? Sally: Oh, that’s on Friday, September 29th. John: OK. Thank you!",
+        "passageCn": "本单元阅读材料（When is your birthday?）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only listening",
+              "When is your birthday?",
+              "A different topic",
+              "Only grammar"
+            ],
+            "answer": 1,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Cooking",
+              "Sports only",
+              "When is your birthday?",
+              "Math class"
+            ],
+            "answer": 2,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「April」 mean in Chinese?",
+            "opts": [
+              "四月",
+              "八月",
+              "艺术",
+              "十二月"
+            ],
+            "answer": 0,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"When is your birthday?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「When is your birthday?」，使用本单元词汇。",
+        "sampleWords": [
+          "April",
+          "art",
+          "August",
+          "busy",
+          "dear",
+          "December"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「April」的意思是？",
+          "opts": [
+            "四月",
+            "第五",
+            "（音乐、戏剧等",
+            "二月"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「art」的意思是？",
+          "opts": [
+            "第八",
+            "八月",
+            "艺术",
+            "十二月"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「August」的意思是？",
+          "opts": [
+            "（音乐、戏剧等",
+            "艺术",
+            "二月",
+            "八月"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「busy」的意思是？",
+          "opts": [
+            "（音乐、戏剧等",
+            "八月",
+            "愉快的",
+            "忙碌的"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「dear」的意思是？",
+          "opts": [
+            "愉快的",
+            "第八",
+            "亲爱的",
+            "二月"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「December」的意思是？",
+          "opts": [
+            "亲爱的",
+            "十二月",
+            "二月",
+            "（音乐、戏剧等"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「eighth」的意思是？",
+          "opts": [
+            "二月",
+            "第八",
+            "四月",
+            "艺术"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「February」的意思是？",
+          "opts": [
+            "第五",
+            "第一",
+            "（音乐、戏剧等",
+            "二月"
+          ],
+          "answer": 3,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「四月」？",
+          "opts": [
+            "dear",
+            "festival",
+            "April",
+            "December"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「你的生日是什么时候」的核心词是？",
+          "opts": [
+            "April",
+            "first",
+            "apple",
+            "December"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "When is your birthday, Linda?",
+          "opts": [
+            "When is your birthday, Linda?",
+            "April",
+            "art",
+            "August"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "When is your birthday, Mary?",
+          "opts": [
+            "When is your birthday, Mary?",
+            "April",
+            "art",
+            "August"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "When is your birthday, Mike?",
+          "opts": [
+            "When is your birthday, Mike?",
+            "April",
+            "art",
+            "August"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "g7v1_u12",
+      "num": 12,
+      "unitKey": "U9",
+      "book": "7A",
+      "title": "My favorite subject is science.",
+      "cn": "我最喜欢的科目是科学",
+      "emoji": "🔬",
+      "available": true,
+      "vocabulary": [
+        {
+          "en": "A.M.",
+          "cn": "上午",
+          "emoji": "📘"
+        },
+        {
+          "en": "because",
+          "cn": "因为",
+          "emoji": "📘"
+        },
+        {
+          "en": "Chinese",
+          "cn": "语文",
+          "emoji": "📘"
+        },
+        {
+          "en": "cool",
+          "cn": "妙极的",
+          "emoji": "📘"
+        },
+        {
+          "en": "favorite",
+          "cn": "特别喜爱的",
+          "emoji": "📘"
+        },
+        {
+          "en": "finish",
+          "cn": "完成",
+          "emoji": "📘"
+        },
+        {
+          "en": "free",
+          "cn": "空闲的",
+          "emoji": "📘"
+        },
+        {
+          "en": "Friday",
+          "cn": "星期五",
+          "emoji": "📘"
+        },
+        {
+          "en": "from",
+          "cn": "（表示",
+          "emoji": "📘"
+        },
+        {
+          "en": "geography",
+          "cn": "地理",
+          "emoji": "📘"
+        },
+        {
+          "en": "history",
+          "cn": "历史",
+          "emoji": "📘"
+        },
+        {
+          "en": "hour",
+          "cn": "小时",
+          "emoji": "⏰"
+        }
+      ],
+      "dialogues": [
+        {
+          "title": "Conversation",
+          "lines": [
+            {
+              "role": "B",
+              "text": "Be cause it’s interesting.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "Be cause it’s fun.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "Yes, I do.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "No, she doesn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Is this your pencil? B: Yes, it is./No, it isn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you have a soccer ball? B: Yes, I do./No, I don’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Does she like tomatoes? B: Yes, she does./No, she doesn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you like salad? B: Yes, I really like it.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you have a tennis ball, Jane? B: Sorry, I don’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "What’s your name? B: My name’s Alan.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "What’s your favorite subject? B: My favorite subject is P.E.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Who’re they? B: They’re my grandparents.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Who’s your P.E. teacher? B: Mr. Hu.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Where are my books? B: They’re on the sofa.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "When is your birthday, Linda? B: It’s on May 2nd.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "When is Sally’s birthday party? B: It’s on October 5th.",
+              "cn": ""
+            }
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "id": "s1",
+          "title": "核心词汇",
+          "subtitle": "12个教材词汇",
+          "icon": "📚",
+          "type": "vocab",
+          "time": "8分钟"
+        },
+        {
+          "id": "s2",
+          "title": "听音辨词",
+          "subtitle": "听力辨词",
+          "icon": "🎧",
+          "type": "listenWord",
+          "time": "6分钟"
+        },
+        {
+          "id": "s3",
+          "title": "词义配对",
+          "subtitle": "巩固记忆",
+          "icon": "🎮",
+          "type": "match",
+          "time": "5分钟"
+        },
+        {
+          "id": "s4",
+          "title": "语法专项",
+          "subtitle": "Why 问句与 because",
+          "icon": "🧩",
+          "type": "grammar",
+          "time": "12分钟"
+        },
+        {
+          "id": "s5",
+          "title": "课文阅读",
+          "subtitle": "阅读理解",
+          "icon": "📖",
+          "type": "reading",
+          "time": "8分钟"
+        },
+        {
+          "id": "s6",
+          "title": "听力短文",
+          "subtitle": "听音答题",
+          "icon": "👂",
+          "type": "listening",
+          "time": "8分钟"
+        },
+        {
+          "id": "s7",
+          "title": "写作练习",
+          "subtitle": "本单元句型",
+          "icon": "✍️",
+          "type": "writing",
+          "time": "10分钟"
+        },
+        {
+          "id": "s8",
+          "title": "单元通关",
+          "subtitle": "综合检测",
+          "icon": "🏆",
+          "type": "finalQuiz",
+          "time": "12分钟"
+        }
+      ],
+      "grammarTitle": "Why 问句与 because",
+      "grammarCode": null,
+      "grammarQuiz": [
+        {
+          "q": "本单元语法重点：Why 问句与 because。下列哪项与「A.M.」词义最接近？",
+          "opts": [
+            "语文",
+            "上午",
+            "特别喜爱的",
+            "因为"
+          ],
+          "answer": 1,
+          "point": "Why 问句与 because",
+          "dim": "grammar"
+        },
+        {
+          "q": "选择正确的英文：「因为」",
+          "opts": [
+            "because",
+            "from",
+            "history",
+            "geography"
+          ],
+          "answer": 0,
+          "point": "Why 问句与 because",
+          "dim": "grammar"
+        }
+      ],
+      "reading": {
+        "passage": "A: What’s your name? B: My name’s Alan. A: What’s your favorite subject? B: My favorite subject is P.E. A: Who’re they? B: They’re my grandparents. A: Who’s your P.E. teacher? B: Mr. Hu. A: Where are my books? B: They’re on the sofa. A: When is your birthday, Linda? B: It’s on May 2nd. A: When is Sally’s birthday party? B: It’s on October 5th. A: When is the class? B: On Monday and Wednesday. A: Why do you like P.E.? B: Because it’s fun. A: How much is this T-shirt? B: It’s seven dollars. A: How old are you? B: I’m thirteen.",
+        "passageCn": "本单元阅读材料（My favorite subject is science.）",
+        "questions": [
+          {
+            "q": "According to the passage, this unit is mainly about:",
+            "opts": [
+              "Only listening",
+              "Only grammar",
+              "My favorite subject is science.",
+              "A different topic"
+            ],
+            "answer": 2,
+            "point": "课文理解",
+            "dim": "reading"
+          },
+          {
+            "q": "What is this unit mainly about?",
+            "opts": [
+              "Sports only",
+              "My favorite subject is science.",
+              "Cooking",
+              "Math class"
+            ],
+            "answer": 1,
+            "point": "阅读主旨",
+            "dim": "reading"
+          },
+          {
+            "q": "What does 「A.M.」 mean in Chinese?",
+            "opts": [
+              "小时",
+              "妙极的",
+              "语文",
+              "上午"
+            ],
+            "answer": 3,
+            "point": "词汇理解",
+            "dim": "reading"
+          }
+        ]
+      },
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"My favorite subject is science.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「My favorite subject is science.」，使用本单元词汇。",
+        "sampleWords": [
+          "A.M.",
+          "because",
+          "Chinese",
+          "cool",
+          "favorite",
+          "finish"
+        ]
+      },
+      "quizQuestions": [
+        {
+          "q": "「A.M.」的意思是？",
+          "opts": [
+            "小时",
+            "上午",
+            "完成",
+            "历史"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「because」的意思是？",
+          "opts": [
+            "因为",
+            "完成",
+            "妙极的",
+            "空闲的"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Chinese」的意思是？",
+          "opts": [
+            "空闲的",
+            "历史",
+            "语文",
+            "（表示"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「cool」的意思是？",
+          "opts": [
+            "妙极的",
+            "星期五",
+            "地理",
+            "特别喜爱的"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「favorite」的意思是？",
+          "opts": [
+            "语文",
+            "完成",
+            "特别喜爱的",
+            "小时"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「finish」的意思是？",
+          "opts": [
+            "完成",
+            "因为",
+            "地理",
+            "上午"
+          ],
+          "answer": 0,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「free」的意思是？",
+          "opts": [
+            "特别喜爱的",
+            "空闲的",
+            "完成",
+            "历史"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "「Friday」的意思是？",
+          "opts": [
+            "因为",
+            "空闲的",
+            "星期五",
+            "上午"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "哪个单词表示「上午」？",
+          "opts": [
+            "favorite",
+            "cool",
+            "A.M.",
+            "Chinese"
+          ],
+          "answer": 2,
+          "point": "词汇",
+          "dim": "vocab"
+        },
+        {
+          "q": "本单元「我最喜欢的科目是科学」的核心词是？",
+          "opts": [
+            "cool",
+            "A.M.",
+            "school",
+            "Friday"
+          ],
+          "answer": 1,
+          "point": "词汇",
+          "dim": "vocab"
+        }
+      ],
+      "listeningQuestions": [
+        {
+          "audio": "Be cause it’s interesting.",
+          "opts": [
+            "Be cause it’s interesting.",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Be cause it’s fun.",
+          "opts": [
+            "Be cause it’s fun.",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Yes, I do.",
+          "opts": [
+            "Yes, I do.",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "No, she doesn’t.",
+          "opts": [
+            "No, she doesn’t.",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Is this your pencil?",
+          "opts": [
+            "Is this your pencil?",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "How much is that white bag?",
+          "opts": [
+            "How much is that white bag?",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Are those your parents?",
+          "opts": [
+            "Are those your parents?",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        },
+        {
+          "audio": "Do I like oranges?",
+          "opts": [
+            "Do I like oranges?",
+            "A.M.",
+            "because",
+            "Chinese"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,6 @@ import MemoryMatch from "@/components/MemoryMatch";
 import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { toast } from "sonner";
-import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
@@ -317,15 +316,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
           <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
         )}
       </button>
-
-      {/* ⭐ 彻底掌握 5 步走 */}
-      <VocabMasteryPath
-        stage="junior"
-        totalWords={words.length}
-        vocabIds={words.map((w) => w.id)}
-        onPickMode={(m) => onPick(m as Exclude<Mode, null>)}
-        onBrowse={() => onPickGroup(0)} />
-      
 
       <VocabMasteryOverview
         total={total}

@@ -132,7 +132,17 @@ export default function Junior() {
       <div className="relative z-10 mx-auto -mt-8 max-w-4xl px-4 pb-8 sm:px-6 lg:px-8">
         <JuniorGradeFilter value={grade} onChange={setGrade} className="mb-8" />
 
-        <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
+        <JuniorModuleCard
+          title="课堂同步"
+          subtitle={classroomSubtitle}
+          description={classroomDescription}
+          icon="classroom"
+          progress={classroom.loading ? 0 : classroom.percent}
+          to={classroomTo}
+          className="min-h-[192px]"
+        />
+
+        <div className="mt-5 grid grid-cols-2 gap-5 lg:grid-cols-3">
           {MODULES.map((module) => (
             <JuniorModuleCard
               key={module.id}
@@ -145,16 +155,6 @@ export default function Junior() {
             />
           ))}
         </div>
-
-        <JuniorModuleCard
-          title="课堂同步"
-          subtitle={classroomSubtitle}
-          description={classroomDescription}
-          icon="classroom"
-          progress={classroom.loading ? 0 : classroom.percent}
-          to={classroomTo}
-          className="mt-5 min-h-[192px]"
-        />
 
         <footer className="mt-12 border-t border-border pt-8 text-center">
           <p className="text-sm italic text-muted-foreground font-['Noto_Serif_SC',serif]">

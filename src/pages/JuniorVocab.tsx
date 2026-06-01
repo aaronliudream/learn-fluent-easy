@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
 
 type Vocab = {
@@ -238,7 +239,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
       {/* 🚀 引导通关入口（5 步走 + FSRS） */}
       <button
-        onClick={() => onPick("guided")}
+        onClick={() => { unlockAudioSync(); onPick("guided"); }}
         className="mb-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700">
         
         <div className="flex items-center gap-3">

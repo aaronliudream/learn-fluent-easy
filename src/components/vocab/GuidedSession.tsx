@@ -9,7 +9,7 @@ import { T } from "@/i18n/T"; /**
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Check, Loader2, Trophy, Volume2, X, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { speak } from "@/lib/speak";
+import { speak, speakKid, stopSpeaking } from "@/lib/speak";
 import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
 import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
 import { awardCoins } from "@/lib/coins";
@@ -254,8 +254,10 @@ export default function GuidedSession({
       <StepRunner
         card={active}
         pool={cards.map((c) => c.v)}
-        onAnswer={handleAnswer} />
-      
+        onAnswer={handleAnswer}
+        junior={trackJuniorMastery}
+        grade={grade} />
+
     </main>);
 
 }
@@ -292,15 +294,13 @@ function StepBadge({ step }: {step: GuideStep;}) {
 function StepRunner({
   card,
   pool,
-  onAnswer
-
-
-
-
-}: {card: CardState;pool: GuidedVocab[];onAnswer: (correct: boolean) => void;}) {
+  onAnswer,
+  junior,
+  grade
+}: {card: CardState;pool: GuidedVocab[];onAnswer: (correct: boolean) => void;junior?: boolean;grade?: number;}) {
   const { v, step } = card;
   if (step === 0) return <FlashcardStep v={v} onNext={() => onAnswer(true)} />;
-  if (step === 1) return <En2CnStep v={v} pool={pool} onAnswer={onAnswer} />;
+  if (step === 1) return <En2CnStep v={v} pool={pool} onAnswer={onAnswer} junior={junior} grade={grade} />;
   if (step === 2) return <Cn2EnStep v={v} pool={pool} onAnswer={onAnswer} />;
   if (step === 3) return <SpellStep v={v} onAnswer={onAnswer} />;
   if (step === 4) return <ClozeStep v={v} onAnswer={onAnswer} />;
@@ -347,24 +347,36 @@ function ChoiceCard({
   options,
   correct,
   onAnswer,
-  audio
-
-
-
-
-
-
-
-}: {prompt: string;subPrompt?: string;options: string[];correct: string;onAnswer: (isCorrect: boolean) => void;audio?: () => void;}) {
+  audio,
+  juniorManualNext
+}: {prompt: string;subPrompt?: string;options: string[];correct: string;onAnswer: (isCorrect: boolean) => void;audio?: () => void;juniorManualNext?: boolean;}) {
   const [picked, setPicked] = useState<string | null>(null);
+  const nextTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const answered = useRef(false);
   // Reset when prompt changes
-  useEffect(() => {setPicked(null);}, [prompt]);
+  useEffect(() => {
+    setPicked(null);
+    answered.current = false;
+    if (nextTimer.current) {clearTimeout(nextTimer.current);nextTimer.current = null;}
+  }, [prompt]);
+  useEffect(() => () => {if (nextTimer.current) clearTimeout(nextTimer.current);}, []);
+
+  function finish(ok: boolean) {
+    if (answered.current) return;
+    answered.current = true;
+    onAnswer(ok);
+  }
 
   function pick(opt: string) {
     if (picked) return;
     setPicked(opt);
     const ok = opt === correct;
-    setTimeout(() => onAnswer(ok), ok ? 500 : 1100);
+    // junior 答对:不秒跳,显示「下一个」按钮 + 2s 兜底自动跳。其余(高考 / junior答错)维持原节奏。
+    if (juniorManualNext && ok) {
+      nextTimer.current = setTimeout(() => finish(true), 2000);
+      return;
+    }
+    setTimeout(() => finish(ok), ok ? 500 : 1100);
   }
 
   return (
@@ -410,14 +422,29 @@ function ChoiceCard({
 
         })}
       </div>
+      {juniorManualNext && picked && picked === correct &&
+      <div className="mt-4 flex justify-end">
+          <button
+          onClick={() => {if (nextTimer.current) clearTimeout(nextTimer.current);finish(true);}}
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+            <T>下一个</T> →
+          </button>
+        </div>
+      }
     </section>);
 
 }
 
-function En2CnStep({ v, pool, onAnswer }: {v: GuidedVocab;pool: GuidedVocab[];onAnswer: (c: boolean) => void;}) {
+function En2CnStep({ v, pool, onAnswer, junior, grade }: {v: GuidedVocab;pool: GuidedVocab[];onAnswer: (c: boolean) => void;junior?: boolean;grade?: number;}) {
   const opts = useMemo(() => {
     const distractors = pickDistractors(pool, v.id, 3).map((d) => d.meaning_cn);
     return shuffle([v.meaning_cn, ...distractors]);
+  }, [v.id]);
+  // junior: 进词自动读一遍(童声慢速);卸载时停掉,避免退出后还在响。
+  useEffect(() => {
+    if (!junior) return;
+    speakKid(v.word.split("/")[0], { grade, speed: 0.85 }).catch(() => {});
+    return () => stopSpeaking();
   }, [v.id]);
   return (
     <ChoiceCard
@@ -426,7 +453,8 @@ function En2CnStep({ v, pool, onAnswer }: {v: GuidedVocab;pool: GuidedVocab[];on
       options={opts}
       correct={v.meaning_cn}
       onAnswer={onAnswer}
-      audio={() => speak(v.word.split("/")[0]).catch(() => {})} />);
+      audio={() => (junior ? speakKid(v.word.split("/")[0], { grade, speed: 0.85 }) : speak(v.word.split("/")[0])).catch(() => {})}
+      juniorManualNext={junior} />);
 
 
 }

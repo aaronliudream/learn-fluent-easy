@@ -25,7 +25,7 @@ import {
 // so the global floating one would overlap.
 const HIDE_ON = [
 /^\/$/, // home — LandingPage / BrandHubNav render it inline
-/^\/kids/, /^\/junior/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages
+/^\/kids/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages (junior 移除:它没有内联头,改用全局浮动头显示登录态)
 /^\/auth/, /^\/talk/, /^\/placement/];
 
 

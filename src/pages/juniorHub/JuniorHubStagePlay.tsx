@@ -802,6 +802,22 @@ function WritingStage({ unit, onFinish }: { unit: UnitDef; onFinish: () => void 
   );
 }
 
+/**
+ * 空数据关卡统一兜底:在分发层(switch)挂载题目组件之前判空,空数据时渲染本兜底而非
+ * 挂载 ListenMcStage / FinalQuizStage(它们对空题目数组会在 q.opts 处白屏)。
+ * 判空放在组件外、不进组件内部 early-return,避免踩 React hooks 规则。
+ */
+function EmptyStageNotice({ onContinue }: { onContinue: () => void }) {
+  return (
+    <div className="rounded-2xl bg-white p-4 text-center text-sm">
+      本关内容正在完善中,敬请期待
+      <PrimaryButton onClick={onContinue} className="mt-4">
+        继续
+      </PrimaryButton>
+    </div>
+  );
+}
+
 export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBack }: Props) {
   const { grade, state, setState, addMistake, completeStage } = useJuniorHub();
   const unit = findUnit(unitId);
@@ -867,6 +883,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
       case "vocab":
         return <VocabStage vocabulary={unit.vocabulary} grade={grade} onFinish={handleFinish} />;
       case "listenWord":
+        // 数据源 unit.vocabulary 现场生成;空 vocab → 0 题 → 走兜底,不挂载 ListenMcStage。
+        if (listenWordQuestions.length === 0)
+          return <EmptyStageNotice onContinue={handleFinish} />;
         return (
           <ListenMcStage
             title="听音辨词"
@@ -898,6 +917,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "grammar":
+        // 数据源 unit.grammarQuiz;空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
+        if (unit.grammarQuiz.length === 0)
+          return <EmptyStageNotice onContinue={handleFinish} />;
         return <GrammarStage unit={unit} grade={grade} onFinish={handleFinish} />;
       case "reading":
         return (
@@ -917,6 +939,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "listening":
+        // 数据源 unit.listeningQuestions;空时走兜底,不挂载 ListenMcStage。
+        if (listenSentQuestions.length === 0)
+          return <EmptyStageNotice onContinue={handleFinish} />;
         return (
           <ListenMcStage
             title="听力短文"
@@ -941,6 +966,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
       case "writing":
         return <WritingStage unit={unit} onFinish={handleFinish} />;
       case "finalQuiz":
+        // 数据源 unit.quizQuestions;空时走兜底,不挂载 FinalQuizStage。
+        if (finalQuizQuestions.length === 0)
+          return <EmptyStageNotice onContinue={handleFinish} />;
         return (
           <FinalQuizStage
             questions={finalQuizQuestions}

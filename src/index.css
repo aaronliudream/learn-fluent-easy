@@ -1186,3 +1186,10 @@ All colors MUST be HSL.
   100% { transform: scale(1);    box-shadow: 0 0 0 0    rgba(107, 217, 104, 0);   }
 }
 .fc-pulse-correct { animation: fc-pulse-correct 600ms ease-out 1; }
+
+/* ---------- 白字压浅色/亮色背景的强化阴影(深投影 + 细描边) ---------- */
+@layer utilities {
+  .text-shadow-strong {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 0 1px rgba(0, 0, 0, 0.7);
+  }
+}

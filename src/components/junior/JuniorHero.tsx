@@ -24,16 +24,16 @@ export function JuniorHero() {
         </BackLink>
 
         <div>
-          <p className="font-display mb-3 text-sm italic tracking-[0.2em] text-rose-200/95">
+          <p className="font-display mb-3 text-sm italic tracking-[0.2em] text-rose-200/95 text-shadow-strong">
             Junior High English
           </p>
-          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl font-['Noto_Serif_SC',serif]">
+          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl font-['Noto_Serif_SC',serif] text-shadow-strong">
             <T>初中英语专区</T>
           </h1>
-          <p className="mt-4 max-w-lg text-base text-white/85 font-['Noto_Serif_SC',serif]">
+          <p className="mt-4 max-w-lg text-base text-white/85 font-['Noto_Serif_SC',serif] text-shadow-strong">
             <T>用世界名画开启你的英语学习之旅</T>
           </p>
-          <p className="mt-8 text-xs text-white/40 font-['Noto_Serif_SC',serif]">背景：莫奈《睡莲》</p>
+          <p className="mt-8 text-xs text-white/40 font-['Noto_Serif_SC',serif] text-shadow-strong">背景：莫奈《睡莲》</p>
         </div>
       </div>
     </section>

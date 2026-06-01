@@ -58,18 +58,18 @@ export function StageModuleCard({
 
         <div className="space-y-3">
           <div>
-            <h3 className="text-2xl font-semibold tracking-tight drop-shadow-md font-['Noto_Serif_SC',serif]">
+            <h3 className="text-2xl font-semibold tracking-tight text-shadow-strong font-['Noto_Serif_SC',serif]">
               {title}
             </h3>
-            <p className="mt-1 text-sm font-medium opacity-95 font-['Noto_Serif_SC',serif]">{subtitle}</p>
+            <p className="mt-1 text-sm font-medium opacity-95 font-['Noto_Serif_SC',serif] text-shadow-strong">{subtitle}</p>
           </div>
 
-          <p className="line-clamp-2 text-xs leading-relaxed opacity-90">{description}</p>
+          <p className="line-clamp-2 text-xs leading-relaxed opacity-90 text-shadow-strong">{description}</p>
 
           <div className="pt-2">
             <div className="mb-1.5 flex items-center justify-between">
-              <span className="text-[10px] font-medium opacity-90 font-['Noto_Serif_SC',serif]">学习进度</span>
-              <span className="font-display text-sm font-bold num">{pct}%</span>
+              <span className="text-[10px] font-medium opacity-90 font-['Noto_Serif_SC',serif] text-shadow-strong">学习进度</span>
+              <span className="font-display text-sm font-bold num text-shadow-strong">{pct}%</span>
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-black/15 backdrop-blur-sm">
               <div

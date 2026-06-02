@@ -224,7 +224,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={`/junior/g/${grade}`} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> {zh ? `返回初${grade}` : `Back to ${levelName}`}
+        <ArrowLeft className="size-4" /> {zh ? "返回初中专区" : "Back to Junior"}
       </BackLink>
 
       <div className="mb-5">

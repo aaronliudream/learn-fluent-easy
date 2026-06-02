@@ -1,4 +1,4 @@
-import { T } from "@/i18n/T";import { Link, useParams } from "react-router-dom";
+import { T } from "@/i18n/T";import { Link, Navigate, useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Sparkles, BookOpen, Target, Headphones, PenLine } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
@@ -10,6 +10,10 @@ const GRADE_META: Record<string, {title: string;emoji: string;gradient: string;t
 };
 
 export default function JuniorGrade() {
+  // 年级中转页隐藏:整页重定向到名画首页 /junior(恢复时删掉下面这一行即可,组件其余代码保留)
+  return <Navigate to="/junior" replace />;
+
+  // eslint-disable-next-line no-unreachable
   const { grade } = useParams<{grade: string;}>();
   const g = grade ?? "1";
   const meta = GRADE_META[g] ?? GRADE_META["1"];

@@ -180,7 +180,7 @@ export default function JuniorGrammar() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}
+        <ArrowLeft className="size-4" /> 返回初中专区
       </BackLink>
       <div className="mb-6 flex items-end justify-between gap-3">
         <div>

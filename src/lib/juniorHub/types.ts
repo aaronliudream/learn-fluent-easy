@@ -25,10 +25,25 @@ export type ReadingBlock = {
   questions: QuizQuestion[];
 };
 
+export type WritingCard = {
+  key: string;
+  labelCn: string;
+  hint?: string;
+  default?: string;
+  options?: string[];
+};
+
 export type WritingBlock = {
   prompt: string;
   promptCn: string;
   sampleWords: string[];
+  // ↓ 可选「四屏写作」字段;旧单元无这些字段时组件自动回退到简易文本框。
+  topic?: string;
+  opener?: string;
+  cards?: WritingCard[];
+  templates?: { l1: string[]; l2: string[]; l3: string[] };
+  connectors?: string[];
+  minWords?: number;
 };
 
 export type StageDef = {

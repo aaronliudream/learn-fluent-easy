@@ -43,7 +43,7 @@ export type StageOverview = {
 /** Module totals (seed corpus size). Keep in sync with DB seed counts. */
 const TOTALS: Record<Stage, Record<ModuleKey, number>> = {
   primary: { vocab: 846, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
-  junior:  { vocab: 2373, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
+  junior:  { vocab: 2179, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
   gaokao:  { vocab: 2000, reading: 21, listening: 20, writing: 14, grammar: 21, cloze: 21, lesson: 0 },
 };
 

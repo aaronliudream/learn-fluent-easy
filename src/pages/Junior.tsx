@@ -132,6 +132,7 @@ export default function Junior() {
       <div className="relative z-10 mx-auto -mt-8 max-w-4xl px-4 pb-8 sm:px-6 lg:px-8">
         <JuniorGradeFilter value={grade} onChange={setGrade} className="mb-8" />
 
+        {/* 课堂同步入口暂时隐藏(保留代码/路由/数据,可恢复) — 见 JuniorGrade.tsx 同步隐藏
         <JuniorModuleCard
           title="课堂同步"
           subtitle={classroomSubtitle}
@@ -141,6 +142,7 @@ export default function Junior() {
           to={classroomTo}
           className="min-h-[192px]"
         />
+        */}
 
         <div className="mt-5 grid grid-cols-2 gap-5 lg:grid-cols-3">
           {MODULES.map((module) => (

@@ -53,6 +53,7 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
+      {/* 课堂同步入口暂时隐藏(保留代码/路由/数据,可恢复) — 见 Junior.tsx 同步隐藏
       <Link
         to={`/junior/hub/${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 p-5 text-white shadow-tile transition hover:-translate-y-0.5"
@@ -68,6 +69,7 @@ export default function JuniorGrade() {
         </div>
         <span className="relative rounded-full bg-white/25 px-3 py-1 text-xs font-bold backdrop-blur-sm"><T>▶ 进入</T></span>
       </Link>
+      */}
       <Link
         to={`/junior/vocab?grade=${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-500 via-indigo-500 to-blue-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-18px_rgba(91,43,201,0.6)]">

@@ -90,7 +90,60 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "Say Hello",
+              "prompt": "Greet people and introduce yourself in a few sentences. Use 'I am' and 'This is'.",
+              "promptCn": "向大家问好并做自我介绍，写几句话。用 'I am…' 和 'This is…'。",
+              "opener": "Hello! Good morning!",
+              "sampleWords": [
+                "hello",
+                "name",
+                "friend",
+                "meet",
+                "nice"
+              ],
+              "cards": [
+                {
+                  "key": "name",
+                  "labelCn": "我的英文名",
+                  "hint": "如 Tom"
+                },
+                {
+                  "key": "from",
+                  "labelCn": "我来自哪里",
+                  "hint": "如 China"
+                },
+                {
+                  "key": "friendName",
+                  "labelCn": "一位朋友的名字",
+                  "hint": "如 Alice"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Hello! I am {name}.",
+                  "I am from {from}.",
+                  "This is my friend, {friendName}.",
+                  "Nice to meet you!"
+                ],
+                "l2": [
+                  "Hello! Good morning! I am {name}.",
+                  "I am from {from}, and I am a student.",
+                  "This is my friend, {friendName}.",
+                  "Nice to meet you all!"
+                ],
+                "l3": [
+                  "Hello, everyone! Good morning! My name is {name}.",
+                  "I am from {from}, and I am very happy to be here.",
+                  "This is my good friend, {friendName}, and we are in the same class.",
+                  "Nice to meet you all!"
+                ]
+              },
+              "connectors": [
+                "and"
+              ],
+              "minWords": 20
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -178,7 +231,67 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "What's in My Schoolbag",
+              "prompt": "Describe what is in your schoolbag. Use 'This is', 'I have' and colours.",
+              "promptCn": "介绍你书包里有什么。用 'This is…'、'I have…' 和颜色词。",
+              "opener": "This is my schoolbag.",
+              "sampleWords": [
+                "schoolbag",
+                "ruler",
+                "book",
+                "pen",
+                "tidy",
+                "colour"
+              ],
+              "cards": [
+                {
+                  "key": "item1",
+                  "labelCn": "物品1",
+                  "hint": "如 ruler"
+                },
+                {
+                  "key": "item2",
+                  "labelCn": "物品2",
+                  "hint": "如 book"
+                },
+                {
+                  "key": "item3",
+                  "labelCn": "物品3",
+                  "hint": "如 pen"
+                },
+                {
+                  "key": "color",
+                  "labelCn": "item1 的颜色",
+                  "hint": "如 blue"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "This is my schoolbag.",
+                  "I have a {item1} and a {item2}.",
+                  "I have a {item3}, too.",
+                  "My {item1} is {color}."
+                ],
+                "l2": [
+                  "This is my schoolbag. It is not big.",
+                  "I have a {item1}, a {item2}, and a {item3}.",
+                  "My {item1} is {color}.",
+                  "I always keep my things tidy."
+                ],
+                "l3": [
+                  "This is my schoolbag, and it is always tidy.",
+                  "I have a {item1}, a {item2}, and a {item3} in it.",
+                  "My {item1} is {color}, and I like it very much.",
+                  "I think it is important to keep our things tidy."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 25
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -266,7 +379,66 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "Welcome to My Home",
+              "prompt": "Welcome someone to your home and describe a fun place. Use 'There is' and 'I can'.",
+              "promptCn": "欢迎别人来你家，介绍一个有趣的地方。用 'There is…' 和 'I can…'。",
+              "opener": "Welcome to my home!",
+              "sampleWords": [
+                "welcome",
+                "yard",
+                "tree",
+                "flower",
+                "fun"
+              ],
+              "cards": [
+                {
+                  "key": "place",
+                  "labelCn": "一个地点",
+                  "hint": "如 yard"
+                },
+                {
+                  "key": "thing1",
+                  "labelCn": "看到的东西1",
+                  "hint": "如 tree"
+                },
+                {
+                  "key": "thing2",
+                  "labelCn": "看到的东西2",
+                  "hint": "如 flower"
+                },
+                {
+                  "key": "activity",
+                  "labelCn": "在这里能做的事",
+                  "hint": "如 play"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Welcome to my home!",
+                  "This is my {place}.",
+                  "There is a {thing1} and a {thing2}.",
+                  "I can {activity} here. It is fun!"
+                ],
+                "l2": [
+                  "Welcome to my home! This is my {place}.",
+                  "There is a {thing1} and a {thing2} here.",
+                  "I can {activity} in the {place}.",
+                  "It is a fun place."
+                ],
+                "l3": [
+                  "Welcome to my home! Let me show you my {place}.",
+                  "There is a {thing1} and a {thing2} here, and they are very nice.",
+                  "I often {activity} in the {place} with my friends.",
+                  "It is my favourite place because it is so much fun."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 25
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -908,7 +1080,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My Family",
+              "prompt": "Introduce your family. Use the present tense and 's possessive (e.g. my father's).",
+              "promptCn": "介绍你的家庭。用一般现在时和名词所有格 's（如 my father's…）。",
+              "opener": "I love my family.",
+              "sampleWords": [
+                "family",
+                "parents",
+                "father",
+                "mother",
+                "work"
+              ],
+              "cards": [
+                {
+                  "key": "count",
+                  "labelCn": "家里几口人",
+                  "hint": "如 four"
+                },
+                {
+                  "key": "dadJob",
+                  "labelCn": "爸爸的工作",
+                  "hint": "如 doctor"
+                },
+                {
+                  "key": "momJob",
+                  "labelCn": "妈妈的工作",
+                  "hint": "如 teacher"
+                },
+                {
+                  "key": "myHobby",
+                  "labelCn": "我喜欢做的事",
+                  "hint": "如 playing soccer"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I love my family.",
+                  "There are {count} people in my family.",
+                  "My father is a {dadJob}.",
+                  "My mother is a {momJob}.",
+                  "I like {myHobby}."
+                ],
+                "l2": [
+                  "I love my family. There are {count} people in it.",
+                  "My father is a {dadJob}, and my mother is a {momJob}.",
+                  "My father's work is busy, but he is kind.",
+                  "I like {myHobby} on weekends."
+                ],
+                "l3": [
+                  "I love my family very much. There are {count} people in my family.",
+                  "My father is a {dadJob} and my mother is a {momJob}, and they both work hard.",
+                  "My father's job and my mother's job are different, but we are happy together.",
+                  "As for me, I like {myHobby}, and my family always supports me."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "because"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -996,7 +1229,71 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My School",
+              "prompt": "Describe your school. Use 'There is/are' and place prepositions.",
+              "promptCn": "介绍你的学校。用 'There is/are…' 和方位介词。",
+              "opener": "This is my school.",
+              "sampleWords": [
+                "school",
+                "library",
+                "playground",
+                "classroom",
+                "floor"
+              ],
+              "cards": [
+                {
+                  "key": "place1",
+                  "labelCn": "场所1",
+                  "hint": "如 library"
+                },
+                {
+                  "key": "place2",
+                  "labelCn": "场所2",
+                  "hint": "如 playground"
+                },
+                {
+                  "key": "place3",
+                  "labelCn": "场所3",
+                  "hint": "如 dining hall"
+                },
+                {
+                  "key": "fav",
+                  "labelCn": "最喜欢的地方",
+                  "hint": "如 library"
+                },
+                {
+                  "key": "where",
+                  "labelCn": "它在哪",
+                  "hint": "如 on the second floor"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "This is my school.",
+                  "There is a {place1} and a {place2}.",
+                  "There is a {place3}, too.",
+                  "My favourite place is the {fav}."
+                ],
+                "l2": [
+                  "This is my school. It is big and clean.",
+                  "There is a {place1}, a {place2}, and a {place3}.",
+                  "The {fav} is {where}.",
+                  "I like my school very much."
+                ],
+                "l3": [
+                  "This is my school, and it is big and beautiful.",
+                  "There is a {place1}, a {place2}, and a {place3} in it.",
+                  "My favourite place is the {fav}, and it is {where}.",
+                  "I am happy at school because there are so many things to do."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -1084,7 +1381,68 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My Favourite Subject",
+              "prompt": "Talk about your favourite subject. Use and / but / because.",
+              "promptCn": "聊聊你最喜欢的科目。用 and / but / because。",
+              "opener": "I have many subjects at school.",
+              "sampleWords": [
+                "subject",
+                "favourite",
+                "interesting",
+                "because",
+                "teacher"
+              ],
+              "cards": [
+                {
+                  "key": "fav",
+                  "labelCn": "最喜欢的科目",
+                  "hint": "如 English"
+                },
+                {
+                  "key": "reason",
+                  "labelCn": "喜欢的原因(形容词)",
+                  "hint": "如 interesting"
+                },
+                {
+                  "key": "hard",
+                  "labelCn": "不太喜欢的科目",
+                  "hint": "如 math"
+                },
+                {
+                  "key": "teacher",
+                  "labelCn": "这科老师怎么样",
+                  "hint": "如 kind"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I have many subjects at school.",
+                  "My favourite subject is {fav}.",
+                  "I like it because it is {reason}.",
+                  "I don't like {hard} very much."
+                ],
+                "l2": [
+                  "I have many subjects at school, and I like most of them.",
+                  "My favourite subject is {fav} because it is {reason}.",
+                  "I don't like {hard}, but I still try my best.",
+                  "My {fav} teacher is {teacher}."
+                ],
+                "l3": [
+                  "I have many subjects at school, and they are all useful.",
+                  "My favourite subject is {fav} because it is {reason} and fun.",
+                  "I am not good at {hard}, but I never give up.",
+                  "My {fav} teacher is very {teacher}, so the class is great."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "because",
+                "so"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -1172,7 +1530,67 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "A Club I Want to Join",
+              "prompt": "Talk about a club you want to join. Use the modal verb 'can'.",
+              "promptCn": "说说你想加入的社团。用情态动词 can。",
+              "opener": "There are many clubs at my school.",
+              "sampleWords": [
+                "club",
+                "join",
+                "can",
+                "sing",
+                "draw"
+              ],
+              "cards": [
+                {
+                  "key": "club",
+                  "labelCn": "想加入的社团",
+                  "hint": "如 music club"
+                },
+                {
+                  "key": "can1",
+                  "labelCn": "我会做的事",
+                  "hint": "如 sing"
+                },
+                {
+                  "key": "cannot",
+                  "labelCn": "我还不会的事",
+                  "hint": "如 dance"
+                },
+                {
+                  "key": "want",
+                  "labelCn": "想学会的",
+                  "hint": "如 the guitar"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "There are many clubs at my school.",
+                  "I want to join the {club}.",
+                  "I can {can1}.",
+                  "I can't {cannot}, but I want to learn."
+                ],
+                "l2": [
+                  "There are many clubs at my school, and they are fun.",
+                  "I want to join the {club} because I can {can1}.",
+                  "I can't {cannot} now, but I can learn it there.",
+                  "I think the club can help me a lot."
+                ],
+                "l3": [
+                  "There are many clubs at my school, and I like them very much.",
+                  "I want to join the {club} because I can {can1} very well.",
+                  "I can't {cannot} yet, but I can practice and learn {want} in the club.",
+                  "I think we can make new friends and have fun in clubs."
+                ]
+              },
+              "connectors": [
+                "and",
+                "but",
+                "because"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -1260,7 +1678,73 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My Day",
+              "prompt": "Describe your daily routine. Use times (at 7 o'clock) and present tense.",
+              "promptCn": "描述你的一天作息。用时间表达（at 7 o'clock）和一般现在时。",
+              "opener": "Let me tell you about my day.",
+              "sampleWords": [
+                "morning",
+                "get up",
+                "lunch",
+                "homework",
+                "bed"
+              ],
+              "cards": [
+                {
+                  "key": "getUp",
+                  "labelCn": "起床时间",
+                  "hint": "如 6:30"
+                },
+                {
+                  "key": "school",
+                  "labelCn": "上学/到校时间",
+                  "hint": "如 7:30"
+                },
+                {
+                  "key": "lunch",
+                  "labelCn": "午饭时间",
+                  "hint": "如 12:00"
+                },
+                {
+                  "key": "bed",
+                  "labelCn": "睡觉时间",
+                  "hint": "如 9:30"
+                },
+                {
+                  "key": "afterSchool",
+                  "labelCn": "放学后做的事",
+                  "hint": "如 play basketball"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "Let me tell you about my day.",
+                  "I get up at {getUp}.",
+                  "I go to school at {school}.",
+                  "I have lunch at {lunch}.",
+                  "I go to bed at {bed}."
+                ],
+                "l2": [
+                  "Let me tell you about my day. It is busy but fun.",
+                  "I get up at {getUp} and go to school at {school}.",
+                  "I have lunch at {lunch} with my friends.",
+                  "After school, I {afterSchool}, and I go to bed at {bed}."
+                ],
+                "l3": [
+                  "Let me tell you about my day, and it is well planned.",
+                  "I get up early at {getUp} and go to school at {school}.",
+                  "I have lunch at {lunch}, and then I study hard in the afternoon.",
+                  "After school, I usually {afterSchool}, and I go to bed at {bed} so I can have a good rest."
+                ]
+              },
+              "connectors": [
+                "and",
+                "then",
+                "so"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           },
@@ -1348,7 +1832,71 @@
             "grammarCode": null,
             "grammarQuiz": [],
             "reading": null,
-            "writing": null,
+            "writing": {
+              "topic": "My Birthday",
+              "prompt": "Talk about your birthday. Use ordinal dates (e.g. the 12th of May).",
+              "promptCn": "聊聊你的生日。用序数词日期（如 the 12th of May）。",
+              "opener": "I want to tell you about my birthday.",
+              "sampleWords": [
+                "birthday",
+                "month",
+                "celebrate",
+                "party",
+                "gift"
+              ],
+              "cards": [
+                {
+                  "key": "month",
+                  "labelCn": "几月",
+                  "hint": "如 May"
+                },
+                {
+                  "key": "day",
+                  "labelCn": "几号(序数词)",
+                  "hint": "如 12th"
+                },
+                {
+                  "key": "activity",
+                  "labelCn": "生日做的事",
+                  "hint": "如 have a party"
+                },
+                {
+                  "key": "withWho",
+                  "labelCn": "和谁一起",
+                  "hint": "如 my family"
+                },
+                {
+                  "key": "gift",
+                  "labelCn": "想要的礼物",
+                  "hint": "如 book"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I want to tell you about my birthday.",
+                  "My birthday is on {month} {day}.",
+                  "I like to {activity} on my birthday.",
+                  "I want a {gift}."
+                ],
+                "l2": [
+                  "I want to tell you about my birthday. It is my favourite day.",
+                  "My birthday is on {month} {day}.",
+                  "On my birthday, I {activity} with {withWho}.",
+                  "I really want a {gift} this year."
+                ],
+                "l3": [
+                  "I want to tell you about my birthday, the happiest day for me.",
+                  "My birthday is on the {day} of {month}.",
+                  "On my birthday, I usually {activity} with {withWho}, and we have a lot of fun.",
+                  "I hope I can get a {gift} this year because I really like it."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [],
             "listeningQuestions": []
           }

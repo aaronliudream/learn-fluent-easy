@@ -53,7 +53,7 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
-      {/* 课堂同步入口暂时隐藏(保留代码/路由/数据,可恢复) — 见 Junior.tsx 同步隐藏
+      {/* 课堂同步入口在年级页隐藏(保留代码/路由/数据,可恢复);/junior 顶层页的大卡仍保留
       <Link
         to={`/junior/hub/${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 p-5 text-white shadow-tile transition hover:-translate-y-0.5"

@@ -6223,5 +6223,635 @@
     "source": "real_exam",
     "source_ref": "七下期末·套7词汇B5 child→children",
     "id": "fc_g7v2_voc_050"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",
+    "prompt": "Cindy must get to school before ____ in the morning.",
+    "options": [
+      "7:30",
+      "8:00",
+      "7:00"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_071",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",
+    "prompt": "Students must wear the school ____ every day.",
+    "options": [
+      "shoes",
+      "uniform",
+      "hats"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_072",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",
+    "prompt": "They can't bring ____ players to school.",
+    "options": [
+      "video",
+      "game",
+      "music"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_073",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",
+    "prompt": "They can't ____ in the hallways.",
+    "options": [
+      "run",
+      "sing",
+      "eat"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_074",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone. I am Cindy. I want to tell you about my school rules. First, we must arrive at school before 7:30 in the morning. Don't be late. Second, we must wear our school uniform every day. Third, we can't bring music players to school. Fourth, we can't run in the hallways. It's dangerous. We must be quiet in the library. I think these rules are strict, but they are good for us.",
+    "prompt": "Cindy thinks the rules are ____ but good.",
+    "options": [
+      "boring",
+      "strict",
+      "easy"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_075",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",
+    "prompt": "David went for a school trip to the Blue Mountain last ____.",
+    "options": [
+      "Monday",
+      "Saturday",
+      "Sunday"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_076",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",
+    "prompt": "They met at the school gate at ____ a.m.",
+    "options": [
+      "8:00",
+      "9:00",
+      "7:00"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_077",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",
+    "prompt": "It took them ____ hours to reach the top.",
+    "options": [
+      "one",
+      "two",
+      "three"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_078",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",
+    "prompt": "They ate ____ and drank juice at noon.",
+    "options": [
+      "noodles",
+      "hamburgers",
+      "sandwiches"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_079",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm David. Last Sunday, my class went for a school trip to the Blue Mountain. We met at the school gate at 8:00 in the morning and took the bus there. The weather was sunny and cool. First, we climbed the mountain. It took us two hours to reach the top. We saw many beautiful flowers along the way. At noon, we had a picnic. We ate sandwiches and drank juice. In the afternoon, we played some music and danced. We took a lot of photos. We returned home at 4:30 p.m. We were tired but very happy.",
+    "prompt": "They got back home at ____ in the afternoon.",
+    "options": [
+      "4:30",
+      "5:30",
+      "3:30"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_080",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",
+    "prompt": "Sunshine Restaurant has ____ kinds of meat for noodles.",
+    "options": [
+      "two",
+      "three",
+      "four"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_081",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",
+    "prompt": "Customers can choose a small, ____, or large bowl.",
+    "options": [
+      "big",
+      "huge",
+      "medium"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_082",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",
+    "prompt": "The dessert includes strawberry ____ and apple juice.",
+    "options": [
+      "ice-cream",
+      "pie",
+      "cake"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_083",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",
+    "prompt": "Today's special food is tomato and egg ____.",
+    "options": [
+      "noodles",
+      "rice",
+      "soup"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_084",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Restaurant! We have many kinds of delicious food. For noodles, we have beef, mutton, and chicken. You can choose a small, medium, or large bowl. We also have great desserts, like strawberry ice-cream and apple juice. Today, our special food is tomato and egg rice. It costs only twelve yuan. We are open from 10:00 a.m. to 9:30 p.m. every day. Come and enjoy your lunch or dinner here!",
+    "prompt": "The restaurant closes at ____ p.m. every day.",
+    "options": [
+      "10:00",
+      "9:00",
+      "9:30"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_085",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",
+    "prompt": "The main dishes include chicken rice, beef pizza, and potato ____.",
+    "options": [
+      "soup",
+      "salad",
+      "cake"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_086",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",
+    "prompt": "The popular dessert is chocolate ____.",
+    "options": [
+      "cake",
+      "ice-cream",
+      "milk"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_087",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",
+    "prompt": "The fresh fruit drink they serve is ____ juice.",
+    "options": [
+      "mango",
+      "apple",
+      "orange"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_088",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",
+    "prompt": "Today's special offer is the large chicken pizza for ____ yuan.",
+    "options": [
+      "fifteen",
+      "fifty",
+      "fourteen"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_089",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Grand Hotel Restaurant! We have a special lunch menu today. For our main dishes, we have chicken rice, beef pizza, and potato soup. Our popular dessert is chocolate ice-cream. We also have fresh orange juice. Today, our special offer is the large chicken pizza, which costs only fifteen yuan. We open at 11:00 a.m. and close at 9:00 p.m. every day. We hope you have a great dining experience here!",
+    "prompt": "The restaurant closes at ____ p.m. every day.",
+    "options": [
+      "8:00",
+      "9:00",
+      "9:30"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_090",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",
+    "prompt": "Tim's father likes mutton pizza with ____.",
+    "options": [
+      "cheese",
+      "eggs",
+      "onions"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_091",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",
+    "prompt": "Tim's mother prefers a ____ bowl of tomato and cabbage noodles.",
+    "options": [
+      "large",
+      "small",
+      "medium"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_092",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",
+    "prompt": "Tim's favorite food is chicken burgers and ____ fries.",
+    "options": [
+      "sweet",
+      "french",
+      "potato"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_093",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",
+    "prompt": "Tim's family goes to the restaurant on ____ evening.",
+    "options": [
+      "Saturday",
+      "Sunday",
+      "Friday"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_094",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, I'm Tim. I want to tell you about my family's favorite food. My father loves spicy food, so his favorite is mutton pizza with onions. My mother doesn't eat meat. She likes healthy food, so she always orders a large bowl of tomato and cabbage noodles. As for me, I love chicken burgers and french fries. We often go to a small restaurant near our home on Friday evening. The restaurant opens at 11:00 in the morning and closes at 10:00 at night. The food there is cheap and delicious!",
+    "prompt": "The restaurant closes at ____ p.m.",
+    "options": [
+      "10:00",
+      "11:00",
+      "9:00"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_095",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",
+    "prompt": "Sunshine Cafe has ____ kinds of sandwiches.",
+    "options": [
+      "two",
+      "three",
+      "four"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_096",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",
+    "prompt": "Customers can choose a small or ____ size sandwich.",
+    "options": [
+      "huge",
+      "medium",
+      "large"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_097",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",
+    "prompt": "The sweet treats include strawberry cake and chocolate ____.",
+    "options": [
+      "ice-cream",
+      "milk",
+      "pie"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_098",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",
+    "prompt": "Today's special drink is fresh ____ juice.",
+    "options": [
+      "orange",
+      "mango",
+      "apple"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_099",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Sunshine Cafe! We have some great food choices for you today. For sandwiches, we have chicken, beef, and egg. You can choose a small or large size. We also have wonderful sweet treats, like strawberry cake and chocolate ice-cream. Today, our special drink is fresh mango juice. A large glass costs only eight yuan. We are open from 9:30 a.m. to 10:00 p.m. every day. Come and have a good time here with your friends!",
+    "prompt": "The cafe opens at ____ in the morning.",
+    "options": [
+      "10:00",
+      "9:00",
+      "9:30"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_100",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6·听短文Q20"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",
+    "prompt": "Tasty Food House has chicken pizza and beef ____ as main dishes.",
+    "options": [
+      "burgers",
+      "noodles",
+      "soup"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_101",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7·听短文Q16"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",
+    "prompt": "The ice-cream has two flavors: strawberry and ____.",
+    "options": [
+      "vanilla",
+      "chocolate",
+      "mango"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_102",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7·听短文Q17"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",
+    "prompt": "The cold fruit drink they serve is ____ juice.",
+    "options": [
+      "mango",
+      "orange",
+      "apple"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_103",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7·听短文Q18"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",
+    "prompt": "Today's special offer costs ____ yuan.",
+    "options": [
+      "eighteen",
+      "eight",
+      "eighty"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_104",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7·听短文Q19"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to Tasty Food House! Let me tell you about our special lunch deals today. For main dishes, we have beef burgers, chicken pizza, and tomato soup. Our ice-cream has two flavors: strawberry and chocolate. We also have cold apple juice. Today, our special offer is a large beef pizza with extra cheese. It costs only eighteen yuan. We are open from 11:00 a.m. to 9:00 p.m. from Monday to Sunday. Please come and enjoy your meal here!",
+    "prompt": "The restaurant stays open until ____ p.m. every day.",
+    "options": [
+      "8:00",
+      "9:00",
+      "9:30"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_105",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7·听短文Q20"
   }
 ]

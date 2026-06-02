@@ -14,7 +14,7 @@ import { countGaokaoVocabPool, fetchGaokaoVocabPool, GAOKAO_VOCAB_POOL_FALLBACK 
 
 /** Fallback if Supabase vocab pool is unreachable. */
 export const GAOKAO_VOCAB_FALLBACK = GAOKAO_VOCAB_POOL_FALLBACK;
-export const JUNIOR_VOCAB_FALLBACK = 2373;
+export const JUNIOR_VOCAB_FALLBACK = 2179;
 
 export type CorpusStage = "junior" | "senior";
 

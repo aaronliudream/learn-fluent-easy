@@ -80,23 +80,11 @@
       }
     </script>
 
-    <!-- Brand fonts: serif display for titles, system sans for body.
-         Reduced weights (700 only for SC, 500/700 for Fraunces) and display=swap for fast first paint. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fottntyhwolbsdvkwriq.supabase.co" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
+    <!-- Fonts: rely on system font stacks (already defined as fallbacks in index.css).
+         Removed Google Fonts entirely — fonts.googleapis.com / fonts.gstatic.com are
+         blocked in mainland China and their requests hang until timeout there.
+         Preconnect to the Supabase API origin to shave one cross-border round trip. -->
+    <link rel="preconnect" href="https://degqpiiddkxcuzwombwp.supabase.co" crossorigin />
 </head>
 
   <body>

@@ -569,7 +569,86 @@
                 }
               ]
             },
-            "writing": null,
+            "writing": {
+              "topic": "Introduce a New Friend",
+              "prompt": "Introduce a new friend in 5+ sentences. Use be-verbs and subject pronouns (he/she). Include the name, where the friend is from, age, class and grade.",
+              "promptCn": "介绍一位新朋友，写 5 句以上。用 be 动词和主格代词(he/she)，说清名字、来自哪里、年龄、班级和年级。",
+              "opener": "I have a new friend.",
+              "sampleWords": [
+                "name",
+                "friend",
+                "student",
+                "class",
+                "grade",
+                "nice",
+                "meet"
+              ],
+              "cards": [
+                {
+                  "key": "name",
+                  "labelCn": "朋友的英文名",
+                  "hint": "如 Alice"
+                },
+                {
+                  "key": "subj",
+                  "labelCn": "他 / 她",
+                  "options": [
+                    "He",
+                    "She"
+                  ]
+                },
+                {
+                  "key": "from",
+                  "labelCn": "来自哪里",
+                  "hint": "如 England / China"
+                },
+                {
+                  "key": "age",
+                  "labelCn": "年龄（数字）",
+                  "hint": "如 13"
+                },
+                {
+                  "key": "class",
+                  "labelCn": "几班",
+                  "hint": "如 Class 2"
+                },
+                {
+                  "key": "grade",
+                  "labelCn": "几年级",
+                  "hint": "如 Grade 7"
+                }
+              ],
+              "templates": {
+                "l1": [
+                  "I have a new friend.",
+                  "{Poss} name is {name}.",
+                  "{Subj} is from {from}.",
+                  "{Subj} is {age} years old.",
+                  "{Subj} is a student in {class}, {grade}."
+                ],
+                "l2": [
+                  "I have a new friend.",
+                  "{Poss} name is {name}, and {subj} is from {from}.",
+                  "{Subj} is {age} years old.",
+                  "{Subj} is a student in {class}, {grade}.",
+                  "{Subj} is very nice, and we are good friends."
+                ],
+                "l3": [
+                  "I have a new friend, and {subj} is my classmate.",
+                  "{Poss} name is {name}, and {subj} is from {from}.",
+                  "{Subj} is {age} years old and a student in {class}, {grade}.",
+                  "{Subj} is very nice, and {Poss} parents are nice too.",
+                  "I am very happy because we often meet and study together."
+                ]
+              },
+              "connectors": [
+                "and",
+                "because",
+                "so",
+                "but"
+              ],
+              "minWords": 35
+            },
             "quizQuestions": [
               {
                 "q": "完形·My Good Friend (1): Hello! My name ___ Lily.",

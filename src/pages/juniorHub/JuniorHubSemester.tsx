@@ -3,6 +3,7 @@ import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/juniorHub/progress";
 import { savePersist } from "@/lib/juniorHub/storage";
+import JuniorFinalChallengeEntryCard from "@/components/juniorHub/finalChallenge/JuniorFinalChallengeEntryCard";
 
 export default function JuniorHubSemester() {
   const { semId } = useParams<{ semId: string }>();
@@ -93,6 +94,13 @@ export default function JuniorHubSemester() {
             </button>
           );
         })}
+
+        {/* 综合挑战入口:仅七年级有题库;上册=期中(v1)、下册=期末(v2),按本学期册别展示对应一张。 */}
+        {grade === 7 && (
+          <JuniorFinalChallengeEntryCard
+            volume={semId.endsWith("volume2") ? "v2" : "v1"}
+          />
+        )}
       </div>
     </>
   );

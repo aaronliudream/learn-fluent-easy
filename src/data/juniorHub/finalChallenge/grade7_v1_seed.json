@@ -1,0 +1,3151 @@
+[
+  {
+    "type": "fill_in_choose",
+    "prompt": "Look! There is ___ eraser and ___ ruler on the desk.",
+    "options": [
+      "a; an",
+      "an; a",
+      "a; a",
+      "an; an"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_001",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q14"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Is this your jacket, Dale? — No, it's not ___. It's ___ jacket.",
+    "options": [
+      "my; Eric",
+      "mine; Eric's",
+      "me; Eric's",
+      "mine; Eric"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_002",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q15"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My mother's brother is my ___.",
+    "options": [
+      "uncle",
+      "aunt",
+      "brother",
+      "cousin"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_003",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q16"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ do you spell your name, please? — J-A-C-K.",
+    "options": [
+      "What",
+      "Who",
+      "How",
+      "Where"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_004",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q17"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Let's play tennis after school. — That ___ good.",
+    "options": [
+      "looks",
+      "sounds",
+      "sees",
+      "listens"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_005",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q18"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Where ___ my keys? — Look! They ___ under the bed.",
+    "options": [
+      "is; is",
+      "are; is",
+      "is; are",
+      "are; are"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_006",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q19"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I like history ___ it is very interesting.",
+    "options": [
+      "but",
+      "so",
+      "because",
+      "or"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_007",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q20"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Please ___ the dictionary to school tomorrow. I need it.",
+    "options": [
+      "bring",
+      "take",
+      "lose",
+      "find"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_008",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We must ___ our classroom clean and tidy every day.",
+    "options": [
+      "make",
+      "help",
+      "keep",
+      "thank"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_009",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Thank you for helping me with my English. — ___.",
+    "options": [
+      "You're welcome",
+      "Never mind",
+      "See you",
+      "That's right"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_010",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "This is ___ useful book. You can find ___ information about school clubs in it.",
+    "options": [
+      "a; an",
+      "an; a",
+      "a; /",
+      "an; /"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_011",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q14"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Who are those girls over there? — They are my classmates. ___ names are Mary and Cindy.",
+    "options": [
+      "Their",
+      "They",
+      "Our",
+      "Them"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_012",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q15"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My father's mother is my ___.",
+    "options": [
+      "aunt",
+      "grandmother",
+      "sister",
+      "cousin"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_013",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q16"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ is your favorite teacher? — Miss Li. She teaches us math and she is very patient.",
+    "options": [
+      "What",
+      "Where",
+      "Who",
+      "Why"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_014",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q17"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The green sweater is too small for me. Can you show me a bigger ___?",
+    "options": [
+      "one",
+      "ones",
+      "it",
+      "that"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_015",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q18"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Where is my baseball? — Oh, look! It's ___ the floor, ___ the desk.",
+    "options": [
+      "on; under",
+      "under; on",
+      "in; under",
+      "under; in"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_016",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q19"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I don't like geography because I think it's a bit ___.",
+    "options": [
+      "interesting",
+      "relaxing",
+      "boring",
+      "fun"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_017",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q20"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Let's go to the food festival this afternoon. — ___! I want to try some ice cream.",
+    "options": [
+      "Thank you",
+      "Sounds great",
+      "I'm sorry",
+      "You're welcome"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_018",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We should eat more vegetables and fruit to ___ healthy.",
+    "options": [
+      "look",
+      "keep",
+      "see",
+      "lose"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_019",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Have a good day at school, Alice! — ___.",
+    "options": [
+      "You too",
+      "Never mind",
+      "Fine, thanks",
+      "I'm fine"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_020",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Is that ___ old phone on the desk? — Yes, it is. It's ___ useful tool for my grandparents.",
+    "options": [
+      "an; a",
+      "a; an",
+      "an; an",
+      "a; a"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_021",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q14"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The blue schoolbag is mine. ___ is the green one on the chair?",
+    "options": [
+      "Who",
+      "Whose",
+      "What",
+      "Where"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_022",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q15"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My father's sister is my ___.",
+    "options": [
+      "uncle",
+      "cousin",
+      "aunt",
+      "sister"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_023",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q16"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ do you usually have lunch? — At 12:10 in the school dining hall.",
+    "options": [
+      "What time",
+      "Why",
+      "How",
+      "Where"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_024",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q17"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "This pair of trousers ___ very nice, but they ___ too long for me.",
+    "options": [
+      "is; is",
+      "are; are",
+      "is; are",
+      "are; is"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_025",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q18"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Let's watch a soccer match on TV tonight. — No, that sounds ___. Let's play computer games instead.",
+    "options": [
+      "interesting",
+      "boring",
+      "fun",
+      "relaxing"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_026",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q19"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "December is the ___ month of a year.",
+    "options": [
+      "first",
+      "tenth",
+      "eleventh",
+      "twelfth"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_027",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q20"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I love salad because it is ___ food. It helps me stay strong.",
+    "options": [
+      "healthy",
+      "bad",
+      "heavy",
+      "cheap"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_028",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Thank you for showing me around your new school. — ___.",
+    "options": [
+      "Never mind",
+      "My pleasure",
+      "That's right",
+      "See you"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_029",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Please ___ your homework to the classroom tomorrow morning, boys and girls.",
+    "options": [
+      "bring",
+      "take",
+      "find",
+      "lose"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_030",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Do you see ___ map on the wall? — Yes. It's ___ useful map of China.",
+    "options": [
+      "a; an",
+      "an; a",
+      "the; a",
+      "a; /"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_031",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q14"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These baseball bats are not ours. They belong to ___.",
+    "options": [
+      "they",
+      "them",
+      "their",
+      "theirs"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_032",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q15"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My mother's father is my ___.",
+    "options": [
+      "grandfather",
+      "grandmother",
+      "uncle",
+      "brother"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_033",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q16"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ is your white cap? — Oh, it's under the bed.",
+    "options": [
+      "What",
+      "Who",
+      "Where",
+      "How"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_034",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q17"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Let's play computer games this afternoon. — No, that sounds ___. I want to do sports.",
+    "options": [
+      "fun",
+      "boring",
+      "interesting",
+      "relaxing"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_035",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q18"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How much ___ this pair of trousers? — ___ thirty dollars.",
+    "options": [
+      "is; It's",
+      "are; They're",
+      "is; They're",
+      "are; It's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_036",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q19"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "September is the ___ month of a year.",
+    "options": [
+      "eighth",
+      "ninth",
+      "tenth",
+      "first"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_037",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q20"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I don't want to eat burgers because they are not ___ food.",
+    "options": [
+      "healthy",
+      "bad",
+      "right",
+      "easy"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_038",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Thank you for helping me find my keys. — ___.",
+    "options": [
+      "You're welcome",
+      "Never mind",
+      "See you",
+      "That's right"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_039",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Please ___ this note to your father when you go home.",
+    "options": [
+      "bring",
+      "take",
+      "lose",
+      "look"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_grammar"
+    ],
+    "id": "fc_g7v1_fic_040",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I love my school, and I have a very busy but ___ life here.",
+    "options": [
+      "boring",
+      "happy",
+      "sad",
+      "difficult"
+    ],
+    "answer": 1,
+    "audio": "I love my school, and I have a very busy but happy life here.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_001",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "After a good ___, I go to school with my friend, Lin Tao.",
+    "options": [
+      "dinner",
+      "lunch",
+      "breakfast",
+      "food"
+    ],
+    "answer": 2,
+    "audio": "After a good breakfast, I go to school with my friend, Lin Tao.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_002",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My favorite ___ is science.",
+    "options": [
+      "sport",
+      "subject",
+      "color",
+      "day"
+    ],
+    "answer": 1,
+    "audio": "My favorite subject is science.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_003",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "At 12:00, we have ___ in the school dining hall.",
+    "options": [
+      "breakfast",
+      "lunch",
+      "dinner",
+      "fruit"
+    ],
+    "answer": 1,
+    "audio": "At 12:00, we have lunch in the school dining hall.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_004",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The food there is very ___.",
+    "options": [
+      "bad",
+      "short",
+      "healthy",
+      "heavy"
+    ],
+    "answer": 2,
+    "audio": "The food there is very healthy.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_005",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I like ___ basketball, but Lin Tao doesn't.",
+    "options": [
+      "playing",
+      "watching",
+      "buying",
+      "making"
+    ],
+    "answer": 0,
+    "audio": "I like playing basketball, but Lin Tao doesn't.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_006",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He has three soccer ___.",
+    "options": [
+      "bats",
+      "shoes",
+      "hats",
+      "balls"
+    ],
+    "answer": 3,
+    "audio": "He has three soccer balls.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_007",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I usually go to bed ___ 9:30.",
+    "options": [
+      "on",
+      "at",
+      "in",
+      "for"
+    ],
+    "answer": 1,
+    "audio": "I usually go to bed at 9:30.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_008",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Today I want to tell you about my school ___ in China.",
+    "options": [
+      "life",
+      "club",
+      "family",
+      "game"
+    ],
+    "answer": 0,
+    "audio": "Today I want to tell you about my school life in China.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_009",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We have many ___, such as Chinese, math, English, and history.",
+    "options": [
+      "habits",
+      "subjects",
+      "sports",
+      "clothes"
+    ],
+    "answer": 1,
+    "audio": "We have many subjects, such as Chinese, math, English, and history.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_010",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is difficult ___ my teacher makes it very interesting.",
+    "options": [
+      "but",
+      "so",
+      "or",
+      "because"
+    ],
+    "answer": 0,
+    "audio": "It is difficult but my teacher makes it very interesting.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_011",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "For lunch, I often have rice, fish, and some ___.",
+    "options": [
+      "milk",
+      "bread",
+      "vegetables",
+      "ice cream"
+    ],
+    "answer": 2,
+    "audio": "For lunch, I often have rice, fish, and some vegetables.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_012",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We have two classes, and then it is time for ___.",
+    "options": [
+      "homework",
+      "classes",
+      "sports",
+      "music"
+    ],
+    "answer": 2,
+    "audio": "We have two classes, and then it is time for sports.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_013",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We often play soccer on the school ___.",
+    "options": [
+      "library",
+      "playground",
+      "classroom",
+      "office"
+    ],
+    "answer": 1,
+    "audio": "We often play soccer on the school playground.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_014",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Tom has four soccer balls, and he plays really ___.",
+    "options": [
+      "well",
+      "good",
+      "bad",
+      "fine"
+    ],
+    "answer": 0,
+    "audio": "Tom has four soccer balls, and he plays really well.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_015",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I usually go home and finish my homework ___ dinner.",
+    "options": [
+      "at",
+      "for",
+      "before",
+      "on"
+    ],
+    "answer": 2,
+    "audio": "I usually go home and finish my homework before dinner.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_016",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Today is ___ birthday.",
+    "options": [
+      "her",
+      "my",
+      "his",
+      "your"
+    ],
+    "answer": 2,
+    "audio": "Today is his birthday.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_017",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She wants to buy something ___ for dinner.",
+    "options": [
+      "delicious",
+      "boring",
+      "bad",
+      "difficult"
+    ],
+    "answer": 0,
+    "audio": "She wants to buy something delicious for dinner.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_018",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Eric's father goes to the ___ store to buy a new jacket for Eric.",
+    "options": [
+      "book",
+      "clothes",
+      "sports",
+      "food"
+    ],
+    "answer": 1,
+    "audio": "Eric's father goes to the clothes store to buy a new jacket for Eric.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_019",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Eric likes sports, and his favorite ___ is blue.",
+    "options": [
+      "subject",
+      "color",
+      "sport",
+      "food"
+    ],
+    "answer": 1,
+    "audio": "Eric likes sports, and his favorite color is blue.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_020",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The party ___ at 6:30 p.m.",
+    "options": [
+      "starts",
+      "finishes",
+      "loses",
+      "meets"
+    ],
+    "answer": 0,
+    "audio": "The party starts at 6:30 p.m.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_021",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Eric is very ___ to see them.",
+    "options": [
+      "sad",
+      "sorry",
+      "happy",
+      "tired"
+    ],
+    "answer": 2,
+    "audio": "Eric is very happy to see them.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_022",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Eric can play the guitar, so he ___ some music for his friends.",
+    "options": [
+      "plays",
+      "watches",
+      "makes",
+      "buys"
+    ],
+    "answer": 0,
+    "audio": "Eric can play the guitar, so he plays some music for his friends.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_023",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "They all have a ___ time at the party.",
+    "options": [
+      "short",
+      "heavy",
+      "great",
+      "wrong"
+    ],
+    "answer": 2,
+    "audio": "They all have a great time at the party.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_024",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Her name is ___ Linda.",
+    "options": [
+      "/",
+      "a",
+      "an",
+      "the"
+    ],
+    "answer": 0,
+    "audio": "Her name is / Linda.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_025",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She is very nice and all our classmates ___ her.",
+    "options": [
+      "thank",
+      "look",
+      "love",
+      "find"
+    ],
+    "answer": 2,
+    "audio": "She is very nice and all our classmates love her.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_026",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Her favorite subject is ___ because she likes drawing pictures.",
+    "options": [
+      "art",
+      "history",
+      "science",
+      "music"
+    ],
+    "answer": 0,
+    "audio": "Her favorite subject is art because she likes drawing pictures.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_027",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She doesn't like math because she thinks it is ___.",
+    "options": [
+      "difficult",
+      "fun",
+      "interesting",
+      "happy"
+    ],
+    "answer": 0,
+    "audio": "She doesn't like math because she thinks it is difficult.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_028",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空27 [审错:源键happy→difficult]"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Her favorite fruit is ___.",
+    "options": [
+      "salad",
+      "milk",
+      "banana",
+      "rice"
+    ],
+    "answer": 2,
+    "audio": "Her favorite fruit is banana.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_029",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空28 [审错:源键salad→banana(水果)]"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She has three tennis ___ and a lot of tennis balls.",
+    "options": [
+      "bats",
+      "rackets",
+      "shoes",
+      "hats"
+    ],
+    "answer": 1,
+    "audio": "She has three tennis rackets and a lot of tennis balls.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_030",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She plays tennis very ___.",
+    "options": [
+      "well",
+      "good",
+      "bad",
+      "fine"
+    ],
+    "answer": 0,
+    "audio": "She plays tennis very well.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_031",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We often help ___ with our lessons on the phone.",
+    "options": [
+      "each other",
+      "us",
+      "them",
+      "you"
+    ],
+    "answer": 0,
+    "audio": "We often help each other with our lessons on the phone.",
+    "vocab_domain": [
+      "midterm_cloze"
+    ],
+    "id": "fc_g7v1_clz_032",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4完形空31"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I'm Mike. What's your name? Hi, Mike. My name is Jenny. Nice to meet you.",
+    "prompt": "What is the girl's name?",
+    "options": [
+      "Mike",
+      "Jenny",
+      "Mary"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_001",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q1(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Is this blue schoolbag yours, Tom? No, mine is black. The blue one belongs to Peter.",
+    "prompt": "What color is Tom's schoolbag?",
+    "options": [
+      "Blue",
+      "Black",
+      "Red"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_002",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q2(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Do you like playing basketball, Linda? No, I don't. It's difficult. I like playing tennis.",
+    "prompt": "What sport does Linda like?",
+    "options": [
+      "Basketball",
+      "Football",
+      "Tennis"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_003",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q3(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Your room is very clean, David. Where is your computer? It's on my desk, next to the books.",
+    "prompt": "Where is David's computer?",
+    "options": [
+      "On the desk",
+      "On the bed",
+      "Under the chair"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_004",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q4(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Who is the woman in the photo, Alice? She is my father's sister. Her name is Helen.",
+    "prompt": "Who is Helen?",
+    "options": [
+      "Alice's mother",
+      "Alice's aunt",
+      "Alice's grandmother"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_005",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q5(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Sarah. Is that your family photo? Yes, it is, Dale. Look! These are my grandparents. Who is the boy next to you? Is he your brother? No, he is my cousin. His name is Paul. He loves sports. What sports does he play? He plays ping-pong every afternoon. He has five ping-pong bats.",
+    "prompt": "Who is the boy in the photo?",
+    "options": [
+      "Sarah's brother",
+      "Sarah's cousin",
+      "Sarah's classmate"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_006",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q6(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Sarah. Is that your family photo? Yes, it is, Dale. Look! These are my grandparents. Who is the boy next to you? Is he your brother? No, he is my cousin. His name is Paul. He loves sports. What sports does he play? He plays ping-pong every afternoon. He has five ping-pong bats.",
+    "prompt": "What sport does Paul play every afternoon?",
+    "options": [
+      "Ping-pong",
+      "Basketball",
+      "Soccer"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_007",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q7(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Sarah. Is that your family photo? Yes, it is, Dale. Look! These are my grandparents. Who is the boy next to you? Is he your brother? No, he is my cousin. His name is Paul. He loves sports. What sports does he play? He plays ping-pong every afternoon. He has five ping-pong bats.",
+    "prompt": "How many ping-pong bats does Paul have?",
+    "options": [
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_008",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q8(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone! I am Wang Lin. I am twelve years old. I am a student in Class 3, Grade 7. I have a good friend at school. His English name is Jack. He comes from the UK. Jack and I love our school life. Our favorite day is Wednesday because we have an art class. Jack can draw very well. After school, we often play soccer together on the playground.",
+    "prompt": "How old is Wang Lin?",
+    "options": [
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_009",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q9(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone! I am Wang Lin. I am twelve years old. I am a student in Class 3, Grade 7. I have a good friend at school. His English name is Jack. He comes from the UK. Jack and I love our school life. Our favorite day is Wednesday because we have an art class. Jack can draw very well. After school, we often play soccer together on the playground.",
+    "prompt": "What class is Wang Lin in?",
+    "options": [
+      "Class 3",
+      "Class 7",
+      "Class 12"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_010",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q10(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone! I am Wang Lin. I am twelve years old. I am a student in Class 3, Grade 7. I have a good friend at school. His English name is Jack. He comes from the UK. Jack and I love our school life. Our favorite day is Wednesday because we have an art class. Jack can draw very well. After school, we often play soccer together on the playground.",
+    "prompt": "Where is Jack from?",
+    "options": [
+      "China",
+      "The US",
+      "The UK"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_011",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q11(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone! I am Wang Lin. I am twelve years old. I am a student in Class 3, Grade 7. I have a good friend at school. His English name is Jack. He comes from the UK. Jack and I love our school life. Our favorite day is Wednesday because we have an art class. Jack can draw very well. After school, we often play soccer together on the playground.",
+    "prompt": "Why do they like Wednesday?",
+    "options": [
+      "They have a sports game.",
+      "They have an art class.",
+      "They don't have homework."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_012",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q12(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, everyone! I am Wang Lin. I am twelve years old. I am a student in Class 3, Grade 7. I have a good friend at school. His English name is Jack. He comes from the UK. Jack and I love our school life. Our favorite day is Wednesday because we have an art class. Jack can draw very well. After school, we often play soccer together on the playground.",
+    "prompt": "What do they do after school?",
+    "options": [
+      "Play soccer",
+      "Draw pictures",
+      "Do homework"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_013",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1听力Q13(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, Frank. Is this green eraser yours? No, it isn't. My eraser is yellow. Ask Grace, please.",
+    "prompt": "What color is Frank's eraser?",
+    "options": [
+      "Green",
+      "Yellow",
+      "Blue"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_014",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q1(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Good morning, Helen. Do you know where my keys are? Look, Bob! They are right there under your schoolbag.",
+    "prompt": "Where are Bob's keys?",
+    "options": [
+      "On the schoolbag",
+      "In the schoolbag",
+      "Under the schoolbag"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_015",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q2(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What a nice cap, Eric! Is it new? Thanks! It's a birthday gift from my uncle. He bought it last week.",
+    "prompt": "Who gave Eric the cap?",
+    "options": [
+      "His father",
+      "His uncle",
+      "His friend"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_016",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q3(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Let's go and play volleyball, Cindy. I'd love to, but I don't have a volleyball. Let's play soccer instead.",
+    "prompt": "What sport will they play?",
+    "options": [
+      "Volleyball",
+      "Soccer",
+      "Basketball"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_017",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q4(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Dale. Is your cousin's birthday in October? No. My sister's birthday is in October. My cousin's birthday is in December.",
+    "prompt": "When is Dale's cousin's birthday?",
+    "options": [
+      "In October",
+      "In November",
+      "In December"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_018",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q5(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Tony! Your new jacket looks very cool. Is it expensive? Hi, Gina. No, it isn't. It was on sale at the clothes store. It was only 15 dollars. Wow, that's a good price! Did you buy anything else? Yes, I also bought a pair of black sports shoes for my brother, Sam. Does Sam like sports? Yes, he plays basketball every Tuesday and Friday.",
+    "prompt": "How much is Tony's new jacket?",
+    "options": [
+      "15 dollars",
+      "50 dollars",
+      "55 dollars"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_019",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q6(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Tony! Your new jacket looks very cool. Is it expensive? Hi, Gina. No, it isn't. It was on sale at the clothes store. It was only 15 dollars. Wow, that's a good price! Did you buy anything else? Yes, I also bought a pair of black sports shoes for my brother, Sam. Does Sam like sports? Yes, he plays basketball every Tuesday and Friday.",
+    "prompt": "Who did Tony buy the black sports shoes for?",
+    "options": [
+      "His father",
+      "His cousin",
+      "His brother"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_020",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q7(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Tony! Your new jacket looks very cool. Is it expensive? Hi, Gina. No, it isn't. It was on sale at the clothes store. It was only 15 dollars. Wow, that's a good price! Did you buy anything else? Yes, I also bought a pair of black sports shoes for my brother, Sam. Does Sam like sports? Yes, he plays basketball every Tuesday and Friday.",
+    "prompt": "On what days does Sam play basketball?",
+    "options": [
+      "Tuesday and Thursday",
+      "Tuesday and Friday",
+      "Wednesday and Friday"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_021",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q8(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",
+    "prompt": "What color is Anna's desk?",
+    "options": [
+      "White",
+      "Blue",
+      "Brown"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_022",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q9(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",
+    "prompt": "How many storybooks are on the desk?",
+    "options": [
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_023",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q10(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",
+    "prompt": "Where is Anna's schoolbag?",
+    "options": [
+      "Under the bed",
+      "On the desk",
+      "On the chair"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_024",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q11(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",
+    "prompt": "Who or what is Mimi?",
+    "options": [
+      "Anna's sister",
+      "Anna's pet cat",
+      "Anna's toy bear"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_025",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q12(pass) [审错:toy bear→pet cat]"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Welcome to my home! My name is Anna and this is my bedroom. It is small but very tidy. You can see a big white desk next to the window. On the desk, there is a computer, a clock, and three storybooks. My schoolbag is hanging on the back of the chair. I have a pet cat named Mimi. She is sleeping on my bed right now. My favorite hobby is playing the guitar, and you can find my guitar behind the bedroom door.",
+    "prompt": "Where can you find Anna's guitar?",
+    "options": [
+      "Next to the window",
+      "On the bed",
+      "Behind the door"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_026",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2听力Q13(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, is this white T-shirt yours, Linda? No, it isn't. Mine is red. That white one belongs to Mary.",
+    "prompt": "What color is Linda's T-shirt?",
+    "options": [
+      "White",
+      "Red",
+      "Blue"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_027",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q1(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "When is your birthday, Tom? Is it in July? No, my birthday is on August 12th. July is my sister's birthday month.",
+    "prompt": "When is Tom's birthday?",
+    "options": [
+      "July 12th",
+      "August 12th",
+      "August 20th"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_028",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q2(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Your new watch looks very nice, Grace. Where did you get it? Thanks! It's a gift from my grandmother for the new school year.",
+    "prompt": "Who gave Grace the watch?",
+    "options": [
+      "Her mother",
+      "Her grandmother",
+      "Her teacher"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_029",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q3(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Let's go to the school library to read some books, Peter. Good idea, but I have a soccer game now. How about we go there tomorrow?",
+    "prompt": "What is Peter going to do now?",
+    "options": [
+      "Go to the library",
+      "Buy a book",
+      "Play soccer"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_030",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q4(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Do you have a big family, Alice? Yes. I live with my parents, my brother, and my two uncles.",
+    "prompt": "How many brothers does Alice have?",
+    "options": [
+      "One",
+      "Two",
+      "Three"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_031",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q5(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. Do you want to go to the new clothes store with me this weekend? Hi, Paul. I'd love to! I need to buy a skirt for our school party. Great! The store is having a big sale. All sweaters are 20 dollars, and skirts are only 15 dollars. Wow! That is very cheap. I will take a blue one. What do you want to buy, Paul? I want to buy a black cap to go with my sports shoes.",
+    "prompt": "Why does Jane want to go to the clothes store?",
+    "options": [
+      "To buy a sweater",
+      "To buy a skirt",
+      "To buy a cap"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_032",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q6(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. Do you want to go to the new clothes store with me this weekend? Hi, Paul. I'd love to! I need to buy a skirt for our school party. Great! The store is having a big sale. All sweaters are 20 dollars, and skirts are only 15 dollars. Wow! That is very cheap. I will take a blue one. What do you want to buy, Paul? I want to buy a black cap to go with my sports shoes.",
+    "prompt": "How much is a skirt at the store?",
+    "options": [
+      "15 dollars",
+      "20 dollars",
+      "35 dollars"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_033",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q7(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. Do you want to go to the new clothes store with me this weekend? Hi, Paul. I'd love to! I need to buy a skirt for our school party. Great! The store is having a big sale. All sweaters are 20 dollars, and skirts are only 15 dollars. Wow! That is very cheap. I will take a blue one. What do you want to buy, Paul? I want to buy a black cap to go with my sports shoes.",
+    "prompt": "What color cap does Paul want to buy?",
+    "options": [
+      "Blue",
+      "White",
+      "Black"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_034",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q8(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am David. Today is my favorite day, Thursday. We have an interesting schedule today. In the morning, our first class is history. My history teacher, Mr. Smith, is very funny. Then we have math and English. At noon, I eat lunch with my friends. I like healthy food, so I have salad, chicken, and a banana. In the afternoon, we only have one music class. I can play the guitar very well. After school, I usually play basketball with my classmates on the playground.",
+    "prompt": "What day is it today?",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_035",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q9(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am David. Today is my favorite day, Thursday. We have an interesting schedule today. In the morning, our first class is history. My history teacher, Mr. Smith, is very funny. Then we have math and English. At noon, I eat lunch with my friends. I like healthy food, so I have salad, chicken, and a banana. In the afternoon, we only have one music class. I can play the guitar very well. After school, I usually play basketball with my classmates on the playground.",
+    "prompt": "Who is Mr. Smith?",
+    "options": [
+      "David's history teacher",
+      "David's math teacher",
+      "David's English teacher"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_036",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q10(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am David. Today is my favorite day, Thursday. We have an interesting schedule today. In the morning, our first class is history. My history teacher, Mr. Smith, is very funny. Then we have math and English. At noon, I eat lunch with my friends. I like healthy food, so I have salad, chicken, and a banana. In the afternoon, we only have one music class. I can play the guitar very well. After school, I usually play basketball with my classmates on the playground.",
+    "prompt": "What fruit does David eat for lunch?",
+    "options": [
+      "An apple",
+      "A banana",
+      "An orange"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_037",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q11(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am David. Today is my favorite day, Thursday. We have an interesting schedule today. In the morning, our first class is history. My history teacher, Mr. Smith, is very funny. Then we have math and English. At noon, I eat lunch with my friends. I like healthy food, so I have salad, chicken, and a banana. In the afternoon, we only have one music class. I can play the guitar very well. After school, I usually play basketball with my classmates on the playground.",
+    "prompt": "What instrument can David play well?",
+    "options": [
+      "The piano",
+      "The violin",
+      "The guitar"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_038",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q12(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am David. Today is my favorite day, Thursday. We have an interesting schedule today. In the morning, our first class is history. My history teacher, Mr. Smith, is very funny. Then we have math and English. At noon, I eat lunch with my friends. I like healthy food, so I have salad, chicken, and a banana. In the afternoon, we only have one music class. I can play the guitar very well. After school, I usually play basketball with my classmates on the playground.",
+    "prompt": "What does David do after school?",
+    "options": [
+      "He plays basketball.",
+      "He watches TV.",
+      "He goes to the library."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_039",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3听力Q13(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Is this your blue jacket, Eric? No, it isn't. My jacket is brown. The blue one is Tom's.",
+    "prompt": "What color is Eric's jacket?",
+    "options": [
+      "Blue",
+      "Brown",
+      "Black"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_040",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q1(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Where is my English dictionary, Mom? Is it on my desk? No, look! It is on the sofa, next to your schoolbag.",
+    "prompt": "Where is the English dictionary?",
+    "options": [
+      "On the desk",
+      "In the schoolbag",
+      "On the sofa"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_041",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q2(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Let's go to the fruit store after school, Dale. Good idea. I want to buy some apples and bananas.",
+    "prompt": "What does Dale want to buy?",
+    "options": [
+      "Apples and bananas",
+      "Strawberries and oranges",
+      "Chicken and salad"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_042",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q3(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Do you have any plans for Sunday morning, Grace? Yes, I always clean my room first, and then I play tennis with my cousin.",
+    "prompt": "What does Grace do first on Sunday morning?",
+    "options": [
+      "Plays tennis",
+      "Cleans her room",
+      "Does her homework"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_043",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q4(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Your brother looks very cool, Jack. Is he a student in Grade 7? No, he is fourteen years old. He is a student in Grade 9.",
+    "prompt": "How old is Jack's brother?",
+    "options": [
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_044",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q5(short)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Frank! What's your favorite subject this semester? Hi, Alice. I like history best. I think it is very interesting. What about you? I like music because I love playing the piano. Who is your history teacher? Mr. Davis. He is very kind and funny. His class is on Tuesday and Friday mornings. Oh, I see. My music class is on Friday afternoon.",
+    "prompt": "What subject does Frank like best?",
+    "options": [
+      "Music",
+      "History",
+      "Science"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_045",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q6(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Frank! What's your favorite subject this semester? Hi, Alice. I like history best. I think it is very interesting. What about you? I like music because I love playing the piano. Who is your history teacher? Mr. Davis. He is very kind and funny. His class is on Tuesday and Friday mornings. Oh, I see. My music class is on Friday afternoon.",
+    "prompt": "Why does Alice like music?",
+    "options": [
+      "Because her teacher is funny.",
+      "Because she likes playing the piano.",
+      "Because the class is relaxing."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_046",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q7(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Frank! What's your favorite subject this semester? Hi, Alice. I like history best. I think it is very interesting. What about you? I like music because I love playing the piano. Who is your history teacher? Mr. Davis. He is very kind and funny. His class is on Tuesday and Friday mornings. Oh, I see. My music class is on Friday afternoon.",
+    "prompt": "When is Frank's history class?",
+    "options": [
+      "Tuesday and Friday mornings",
+      "Tuesday and Thursday afternoons",
+      "Wednesday and Friday mornings"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_047",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q8(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am Peter. I have a very happy family. There are four people in my family: my parents, my little sister, and me. My father is a sports teacher, and he has ten soccer balls. He often plays soccer with me on weekends. My mother works in a big library. She loves reading books, and she often helps me with my English homework. My little sister is only four years old. She has a white pet dog named Lucky. We all love our home very much.",
+    "prompt": "How many people are there in Peter's family?",
+    "options": [
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_048",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q9(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am Peter. I have a very happy family. There are four people in my family: my parents, my little sister, and me. My father is a sports teacher, and he has ten soccer balls. He often plays soccer with me on weekends. My mother works in a big library. She loves reading books, and she often helps me with my English homework. My little sister is only four years old. She has a white pet dog named Lucky. We all love our home very much.",
+    "prompt": "What does Peter's father do?",
+    "options": [
+      "An English teacher",
+      "A sports teacher",
+      "A librarian"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_049",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q10(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am Peter. I have a very happy family. There are four people in my family: my parents, my little sister, and me. My father is a sports teacher, and he has ten soccer balls. He often plays soccer with me on weekends. My mother works in a big library. She loves reading books, and she often helps me with my English homework. My little sister is only four years old. She has a white pet dog named Lucky. We all love our home very much.",
+    "prompt": "How many soccer balls does Peter's father have?",
+    "options": [
+      "Five",
+      "Eight",
+      "Ten"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_050",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q11(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am Peter. I have a very happy family. There are four people in my family: my parents, my little sister, and me. My father is a sports teacher, and he has ten soccer balls. He often plays soccer with me on weekends. My mother works in a big library. She loves reading books, and she often helps me with my English homework. My little sister is only four years old. She has a white pet dog named Lucky. We all love our home very much.",
+    "prompt": "Where does Peter's mother work?",
+    "options": [
+      "In a hospital",
+      "In a library",
+      "In a school"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_051",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q12(pass)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, I am Peter. I have a very happy family. There are four people in my family: my parents, my little sister, and me. My father is a sports teacher, and he has ten soccer balls. He often plays soccer with me on weekends. My mother works in a big library. She loves reading books, and she often helps me with my English homework. My little sister is only four years old. She has a white pet dog named Lucky. We all love our home very much.",
+    "prompt": "What color is the pet dog, Lucky?",
+    "options": [
+      "White",
+      "Black",
+      "Brown"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_052",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4听力Q13(pass)"
+  },
+  {
+    "id": "fc_g7v1_read_001",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "My name is Emma. I have a big family. The two old people in the photo are my grandparents. They are very kind and live in a beautiful farmhouse. My father is an English teacher. He is tall and wears glasses. My mother is a nurse. She works in a hospital and cooks delicious food for us every day. I have a brother, Toby, and a sister, Lily. Toby is fourteen. He loves playing computer games and watching soccer matches. Lily is only five. She loves playing with her teddy bear. We also have a pet dog named Coco. It is white and very cute.",
+    "subQuestions": [
+      {
+        "stem": "Emma's mother is a nurse.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Emma's father is a math teacher.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Toby is fourteen years old.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Coco is a black dog.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Emma's grandparents live in a farmhouse.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "family"
+    ],
+    "source": "real_exam",
+    "source_ref": "七上期中·套1阅读PassageB改写[源键Q36 fourteen=14已订正]"
+  },
+  {
+    "id": "fc_g7v1_read_002",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "My name is Linda. My father is a big fan of sports. He loves basketball very much, and his favorite player is Yao Ming. He has a collection of six basketballs in our study. On weekends, he always watches games on TV. My mother doesn't like sports. She loves clothes and shopping. Her favorite color is purple, so she has many purple skirts and sweaters. I have a little brother, Timmy, who is only seven years old. He loves sweet food, especially strawberries and chocolate ice cream. My mother only allows him to have ice cream on weekends. As for me, I love reading books. I have a big bookcase full of novels and science books.",
+    "subQuestions": [
+      {
+        "stem": "Linda's father has six basketballs.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Linda's mother's favorite color is red.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Timmy can eat chocolate ice cream only on weekends.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Linda loves playing basketball.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Linda loves reading books.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "family",
+      "hobby"
+    ],
+    "source": "real_exam",
+    "source_ref": "七上期中·套2阅读PassageB改写"
+  },
+  {
+    "id": "fc_g7v1_read_003",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Hello, everyone! I am Mary, a student in Grade 7. We have classes from Monday to Friday. Every morning, I go to school at 7:30. We have four classes in the morning. My favorite morning class is English. Our English teacher is from the US. She often plays English games with us, so her class is always fun. We have lunch at 12:00 in the school dining hall. After lunch, we can read books in the library or talk under the trees. Afternoon classes start at 2:00. On Tuesday and Thursday afternoons, we have sports classes. I love playing volleyball because it is very relaxing. School finishes at 4:30 p.m.",
+    "subQuestions": [
+      {
+        "stem": "Mary goes to school at 7:30 every morning.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Mary's English teacher is from the UK.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Mary has sports classes on Tuesday and Thursday afternoons.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Mary likes volleyball because it is relaxing.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "School finishes at 2:00 p.m.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "school"
+    ],
+    "source": "real_exam",
+    "source_ref": "七上期中·套3阅读PassageB改写"
+  },
+  {
+    "id": "fc_g7v1_read_004",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "My name is Eric. I love sports very much. Under my bed, there is a big box. I keep my soccer balls and basketballs in it. I have three soccer balls and two basketballs. My father bought them for me. I play soccer with my classmates every Tuesday afternoon after school. On my desk, you can see two blue ping-pong bats. I like playing ping-pong with my grandfather, who can play it very well and teaches me a lot on weekends. Behind my door, there is a yellow sports bag. My sister, Cindy, doesn't like sports at all. She loves music and has an expensive piano in her room, which she plays every evening.",
+    "subQuestions": [
+      {
+        "stem": "Eric keeps his balls in a box under his bed.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Eric's ping-pong bats are red.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Eric plays ping-pong with his grandfather on weekends.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Eric's sister Cindy loves playing soccer.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Cindy plays the piano every evening.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "sports"
+    ],
+    "source": "real_exam",
+    "source_ref": "七上期中·套4阅读PassageB改写"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These are my ___  (brother). They are both students.",
+    "options": [
+      "brothers",
+      "brother",
+      "brother's",
+      "brothers'"
+    ],
+    "answer": 0,
+    "audio": "These are my brothers",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_001",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1词形1 brother→brothers"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Let's ___  (have) some apples and strawberries.",
+    "options": [
+      "have",
+      "has",
+      "having",
+      "had"
+    ],
+    "answer": 0,
+    "audio": "Let's have",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_002",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1词形2 have原形"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "This is not her skirt. ___  (she) is yellow.",
+    "options": [
+      "Hers",
+      "She",
+      "Her",
+      "She's"
+    ],
+    "answer": 0,
+    "audio": "This is not her skirt. Hers",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_003",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1词形3 she→Hers"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "English is very useful. We must learn it ___  (well).",
+    "options": [
+      "well",
+      "good",
+      "best",
+      "better"
+    ],
+    "answer": 0,
+    "audio": "English is very useful. We must learn it well",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_004",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1词形4 well"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Doing sports every day helps us stay ___  (health).",
+    "options": [
+      "healthy",
+      "health",
+      "healthily",
+      "healths"
+    ],
+    "answer": 0,
+    "audio": "Doing sports every day helps us stay healthy",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_005",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1词形5 health→healthy"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "This pair of trousers ___  (be) forty dollars.",
+    "options": [
+      "is",
+      "are",
+      "be",
+      "am"
+    ],
+    "answer": 0,
+    "audio": "This pair of trousers is",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_006",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2词形1 pair→is"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My cousin always ___  (watch) sports games on TV on Saturdays.",
+    "options": [
+      "watches",
+      "watch",
+      "watching",
+      "watched"
+    ],
+    "answer": 0,
+    "audio": "My cousin always watches",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_007",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2词形2 watch→watches"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These black keys are not mine. They are ___  (he).",
+    "options": [
+      "his",
+      "he",
+      "him",
+      "he's"
+    ],
+    "answer": 0,
+    "audio": "These black keys are not mine. They are his",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_008",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2词形3 he→his"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Eating too much ice cream is bad for our ___  (health).",
+    "options": [
+      "health",
+      "healthy",
+      "healthily",
+      "healths"
+    ],
+    "answer": 0,
+    "audio": "Eating too much ice cream is bad for our health",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_009",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2词形4 health名词"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are three ___  (library) in our city.",
+    "options": [
+      "libraries",
+      "librarys",
+      "library",
+      "library's"
+    ],
+    "answer": 0,
+    "audio": "There are three libraries",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_010",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2词形5 library→libraries"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "March is the ___  (three) month of a year.",
+    "options": [
+      "third",
+      "three",
+      "threeth",
+      "thirds"
+    ],
+    "answer": 0,
+    "audio": "March is the third",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_011",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3词形1 three→third"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My father ___  (have) an old watch, but it still works well.",
+    "options": [
+      "has",
+      "have",
+      "having",
+      "haves"
+    ],
+    "answer": 0,
+    "audio": "My father has",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_012",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3词形2 have→has"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These books are not mine. They belong to the ___  (girl) over there.",
+    "options": [
+      "girls",
+      "girl",
+      "girl's",
+      "girls'"
+    ],
+    "answer": 0,
+    "audio": "These books are not mine. They belong to the girls",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_013",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3词形3 girl→girls"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Playing basketball after school is very ___  (relax).",
+    "options": [
+      "relaxing",
+      "relax",
+      "relaxed",
+      "relaxes"
+    ],
+    "answer": 0,
+    "audio": "Playing basketball after school is very relaxing",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_014",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3词形4 relax→relaxing"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Can you give me two ___  (tomato), please? I want to make salad.",
+    "options": [
+      "tomatoes",
+      "tomatos",
+      "tomato",
+      "tomato's"
+    ],
+    "answer": 0,
+    "audio": "Can you give me two tomatoes",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_015",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3词形5 tomato→tomatoes"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "June is the ___  (six) month of a year.",
+    "options": [
+      "sixth",
+      "six",
+      "sixs",
+      "sixern"
+    ],
+    "answer": 0,
+    "audio": "June is the sixth",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_016",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4词形1 six→sixth"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My mother always ___  (go) shopping on Sunday mornings.",
+    "options": [
+      "goes",
+      "go",
+      "going",
+      "gos"
+    ],
+    "answer": 0,
+    "audio": "My mother always goes",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_017",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4词形2 go→goes"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These black sports shoes are not mine. They are ___  (she).",
+    "options": [
+      "hers",
+      "she",
+      "her",
+      "she's"
+    ],
+    "answer": 0,
+    "audio": "These black sports shoes are not mine. They are hers",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_018",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4词形3 she→hers"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Bananas and apples are ___  (health) food.",
+    "options": [
+      "healthy",
+      "health",
+      "healthily",
+      "healths"
+    ],
+    "answer": 0,
+    "audio": "Bananas and apples are healthy",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_019",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4词形4 health→healthy"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Look! There are five ___  (box) under the desk.",
+    "options": [
+      "boxes",
+      "boxs",
+      "box",
+      "box's"
+    ],
+    "answer": 0,
+    "audio": "Look! There are five boxes",
+    "vocab_domain": [
+      "midterm_wordform"
+    ],
+    "id": "fc_g7v1_wf_020",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4词形5 box→boxes"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "This is a pencil box.（改为复数句）",
+    "options": [
+      "These are pencil boxes.",
+      "These is pencil boxes.",
+      "These are pencil box.",
+      "This are pencil boxes."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_001",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1句型转换1(复数)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "The baseball is under the chair.（对划线部分提问）",
+    "options": [
+      "Where is the baseball?",
+      "What is the baseball?",
+      "Where are the baseball?",
+      "How is the baseball?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_002",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1句型转换2(提问)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Do you have a ping-pong bat?（作否定简答）",
+    "options": [
+      "No, I don't.",
+      "No, I do.",
+      "No, I am not.",
+      "No, I doesn't."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_003",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1句型转换3(否定简答)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "She likes history.（改为否定句）",
+    "options": [
+      "She doesn't like history.",
+      "She don't like history.",
+      "She doesn't likes history.",
+      "She not like history."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_004",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1句型转换4(否定句)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "That is a yellow orange.（改为复数句）",
+    "options": [
+      "Those are yellow oranges.",
+      "Those is yellow oranges.",
+      "Those are yellow orange.",
+      "That are yellow oranges."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_005",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2句型转换1(复数)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Her favorite subject is history.（对划线部分提问）",
+    "options": [
+      "What is her favorite subject?",
+      "Which is her favorite subject?",
+      "What are her favorite subject?",
+      "How is her favorite subject?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_006",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2句型转换2(提问)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Do they like playing computer games?（作肯定简答）",
+    "options": [
+      "Yes, they do.",
+      "Yes, they are.",
+      "Yes, they like.",
+      "Yes, they does."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_007",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2句型转换3(肯定简答)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Lin Tao has a new tennis racket.（改为否定句）",
+    "options": [
+      "Lin Tao doesn't have a new tennis racket.",
+      "Lin Tao don't have a new tennis racket.",
+      "Lin Tao doesn't has a new tennis racket.",
+      "Lin Tao not have a new tennis racket."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_008",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2句型转换4(否定句)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "This is a red strawberry.（改为复数句）",
+    "options": [
+      "These are red strawberries.",
+      "These is red strawberries.",
+      "These are red strawberry.",
+      "This are red strawberries."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_009",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3句型转换1(复数)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "His birthday is on October 15th.（对划线部分提问）",
+    "options": [
+      "When is his birthday?",
+      "What is his birthday?",
+      "Where is his birthday?",
+      "How is his birthday?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_010",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3句型转换2(提问)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Does your sister like history?（作否定简答）",
+    "options": [
+      "No, she doesn't.",
+      "No, she don't.",
+      "No, she isn't.",
+      "No, she not."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_011",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3句型转换3(否定简答)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "They have some baseball bats.（改为否定句）",
+    "options": [
+      "They don't have any baseball bats.",
+      "They don't have some baseball bats.",
+      "They doesn't have any baseball bats.",
+      "They not have any baseball bats."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_012",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3句型转换4(否定句)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "This is a blue schoolbag.（改为复数句）",
+    "options": [
+      "These are blue schoolbags.",
+      "These is blue schoolbags.",
+      "These are blue schoolbag.",
+      "This are blue schoolbags."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_013",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4句型转换1(复数)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "His computer is on the desk.（对划线部分提问）",
+    "options": [
+      "Where is his computer?",
+      "What is his computer?",
+      "Where are his computer?",
+      "How is his computer?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_014",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4句型转换2(提问)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "Does your friend have a ping-pong bat?（作肯定简答）",
+    "options": [
+      "Yes, he does.",
+      "Yes, he do.",
+      "Yes, he is.",
+      "Yes, he has."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_015",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4句型转换3(肯定简答)"
+  },
+  {
+    "type": "sentence_transform",
+    "prompt": "He likes playing tennis.（改为否定句）",
+    "options": [
+      "He doesn't like playing tennis.",
+      "He don't like playing tennis.",
+      "He doesn't likes playing tennis.",
+      "He not like playing tennis."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_transform"
+    ],
+    "id": "fc_g7v1_st_016",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4句型转换4(否定句)"
+  }
+]

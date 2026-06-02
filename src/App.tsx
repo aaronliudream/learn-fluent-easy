@@ -60,6 +60,8 @@ const JuniorHubMistakes = lazy(() => import("./pages/juniorHub/JuniorHubMistakes
 const JuniorHubProfile = lazy(() => import("./pages/juniorHub/JuniorHubProfile.tsx"));
 const JuniorHubAITest = lazy(() => import("./pages/juniorHub/JuniorHubAITest.tsx"));
 const JuniorHubAIHistory = lazy(() => import("./pages/juniorHub/JuniorHubAIHistory.tsx"));
+const JuniorHubFinalChallenge = lazy(() => import("./pages/juniorHub/JuniorHubFinalChallenge.tsx"));
+const JuniorHubFinalChallengeLevel = lazy(() => import("./pages/juniorHub/JuniorHubFinalChallengeLevel.tsx"));
 const GaokaoHubLayout = lazy(() => import("./pages/gaokaoHub/GaokaoHubLayout.tsx"));
 const GaokaoHubHome = lazy(() => import("./pages/gaokaoHub/GaokaoHubHome.tsx"));
 const GaokaoHubCourse = lazy(() => import("./pages/gaokaoHub/GaokaoHubCourse.tsx"));
@@ -192,7 +194,8 @@ const FloatingPetGate = () => {
     pathname.startsWith("/auth") ||
     pathname.startsWith("/talk") ||      // 全屏语音对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
-    pathname.startsWith("/primary/hub") ||
+    pathname.startsWith("/primary") ||   // 小学专区(首页+hub)统一隐藏彩虹鲸
+    pathname.startsWith("/junior") ||    // 初中专区统一隐藏彩虹鲸
     pathname.startsWith("/placement");   // 评测专注模式
   if (hide) return null;
   return <FloatingPet />;
@@ -255,6 +258,16 @@ function FinalChallengeGuard({
   const { grade } = useParams<{ grade: string }>();
   if (!allow.has(grade ?? "")) {
     return <Navigate to={`/primary/hub/${grade ?? "4"}`} replace />;
+  }
+  return <>{children}</>;
+}
+
+// 初中综合挑战目前只有七年级种子(期中 v1 / 期末 v2)。其余年级深链挡回该年级首页。
+const JR_FC_GRADES_WITH_SEEDS = new Set(["7"]);
+function JuniorFinalChallengeGuard({ children }: { children: ReactNode }) {
+  const { grade } = useParams<{ grade: string }>();
+  if (!JR_FC_GRADES_WITH_SEEDS.has(grade ?? "")) {
+    return <Navigate to={`/junior/hub/${grade ?? "7"}`} replace />;
   }
   return <>{children}</>;
 }
@@ -379,6 +392,22 @@ const App = () => (
             <Route path="profile" element={<JuniorHubProfile />} />
             <Route path="aitest" element={<JuniorHubAITest />} />
             <Route path="aihistory" element={<JuniorHubAIHistory />} />
+            <Route
+              path="final-challenge"
+              element={
+                <JuniorFinalChallengeGuard>
+                  <JuniorHubFinalChallenge />
+                </JuniorFinalChallengeGuard>
+              }
+            />
+            <Route
+              path="final-challenge/level/:levelId"
+              element={
+                <JuniorFinalChallengeGuard>
+                  <JuniorHubFinalChallengeLevel />
+                </JuniorFinalChallengeGuard>
+              }
+            />
           </Route>
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
           <Route path="/junior/g/:grade" element={<ChineseOnlyRoute><JuniorGrade /></ChineseOnlyRoute>} />

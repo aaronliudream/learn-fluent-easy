@@ -1,0 +1,6227 @@
+[
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Can you play ___ violin? — No, I can't. But I can play ___ basketball.",
+    "options": [
+      "/, /",
+      "the, the",
+      "the, /",
+      "/, the"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_001",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like giraffes? — Because they are beautiful and have ___ necks.",
+    "options": [
+      "short",
+      "long",
+      "small",
+      "scary"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_002",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Look! Some boys ___ soccer on the playground.",
+    "options": [
+      "plays",
+      "playing",
+      "is playing",
+      "are playing"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_003",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ there any milk in the fridge? — Yes, there is some.",
+    "options": [
+      "Is",
+      "Are",
+      "Be",
+      "Was"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_004",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q24 [审错:源键Was→Is]"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Don't ___ in class, Tom! Listen to the teacher carefully. — Sorry, Mr. Green.",
+    "options": [
+      "sleep",
+      "sleeping",
+      "to sleep",
+      "slept"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_005",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How do you usually get to school? — I usually ___ the subway.",
+    "options": [
+      "sit",
+      "ride",
+      "take",
+      "drive"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_006",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The post office is ___ the library and the hospital.",
+    "options": [
+      "between",
+      "across",
+      "down",
+      "behind"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_007",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How ___ your school trip last week? — It was wonderful. We had a good time.",
+    "options": [
+      "is",
+      "was",
+      "are",
+      "were"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_008",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My mother ___ any shopping yesterday afternoon. She stayed at home.",
+    "options": [
+      "didn't do",
+      "doesn't do",
+      "didn't did",
+      "don't do"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_009",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— It's raining heavily outside. — Yes, the ___ is terrible today. We have to stay indoors.",
+    "options": [
+      "time",
+      "rule",
+      "weather",
+      "food"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_010",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your father do? — He is ___ actor. He can play ___ guitar very well.",
+    "options": [
+      "a; the",
+      "an; /",
+      "an; the",
+      "a; /"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_011",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Can you help me ___ the house, Eric? — Sure, Mom. I'll sweep the floor right away.",
+    "options": [
+      "clean",
+      "cleaning",
+      "to cleaning",
+      "cleaned"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_012",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Listen! The girl next door ___ a beautiful song.",
+    "options": [
+      "sings",
+      "is singing",
+      "sing",
+      "sang"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_013",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How does your father go to work? — He usually ___ his car, but sometimes he walks.",
+    "options": [
+      "takes",
+      "rides",
+      "drives",
+      "flies"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_014",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Please ___ talk loudly in the reading room. — Sorry, I will keep quiet.",
+    "options": [
+      "doesn't",
+      "don't",
+      "not",
+      "can't"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_015",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There ___ a supermarket and two restaurants across from our school.",
+    "options": [
+      "is",
+      "are",
+      "be",
+      "was"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_016",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like pandas so much? — Because they are ___ interesting and cute.",
+    "options": [
+      "kind of",
+      "a kind of",
+      "kinds of",
+      "all kinds of"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_017",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How ___ your summer vacation in Hainan? — It was wonderful! The beaches were great.",
+    "options": [
+      "is",
+      "was",
+      "are",
+      "were"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_018",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My sister didn't ___ up early this morning, so she missed the school bus.",
+    "options": [
+      "woke",
+      "wake",
+      "waking",
+      "wakes"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_019",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— ___ is the weather like in New York today? — It's snowing heavily.",
+    "options": [
+      "How",
+      "Why",
+      "When",
+      "What"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_020",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What would you like? — I'd like a bowl of noodles with ___ egg and some ___ beef.",
+    "options": [
+      "an; /",
+      "a; the",
+      "an; a",
+      "a; /"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_021",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your history teacher look like? — He is tall and he ___ short straight hair.",
+    "options": [
+      "is",
+      "has",
+      "looks",
+      "wears"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_022",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There is a clean park ___ our school. We often play basketball there.",
+    "options": [
+      "between",
+      "under",
+      "down",
+      "in front of"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_023",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How is the weather in Moscow now? — It's ___ heavily. Everything is white.",
+    "options": [
+      "rain",
+      "raining",
+      "snowed",
+      "snowing"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_024",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Did you go to the beach last weekend? — No, I didn't. I ___ at home and studied for my exams.",
+    "options": [
+      "stay",
+      "stayed",
+      "am staying",
+      "will stay"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_025",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What size bowl of noodles would you like, small or large? — I'm very hungry, so I'd like a ___ one.",
+    "options": [
+      "small",
+      "medium",
+      "large",
+      "thin"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_026",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like monkeys? — Because they are very clever and make people ___.",
+    "options": [
+      "laugh",
+      "to laugh",
+      "laughing",
+      "laughed"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_027",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Walk ___ Bridge Street and you can find the library on your left.",
+    "options": [
+      "across",
+      "along",
+      "over",
+      "past"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_028",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How was your school trip yesterday? — It was ___. It rained all day and we couldn't see anything.",
+    "options": [
+      "wonderful",
+      "exciting",
+      "terrible",
+      "interesting"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_029",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Would you like to play computer games with me? — ___, I have to finish my homework first.",
+    "options": [
+      "Yes, please",
+      "I'd love to, but",
+      "No problem",
+      "That's a good idea"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_030",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What would you like to have? — I'd like a pizza with ___ onion and some ___ cheese.",
+    "options": [
+      "an; /",
+      "a; the",
+      "an; a",
+      "a; /"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_031",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your new English teacher look like? — She is of medium height and she ___ long straight hair.",
+    "options": [
+      "is",
+      "has",
+      "looks",
+      "wears"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_032",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There is a quiet park ___ the library and the supermarket.",
+    "options": [
+      "between",
+      "under",
+      "down",
+      "in front of"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_033",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How is the weather in London right now? — It's ___ heavily. People are holding umbrellas.",
+    "options": [
+      "rain",
+      "raining",
+      "snowed",
+      "snowing"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_034",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Did you go to the science museum last Saturday? — No, I didn't. I ___ at home and cleaned my room.",
+    "options": [
+      "stay",
+      "stayed",
+      "am staying",
+      "will stay"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_035",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What size bowl of soup would you like, small or large? — I am not very hungry, so I'd like a ___ one.",
+    "options": [
+      "small",
+      "medium",
+      "large",
+      "heavy"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_036",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Walk ___ Bridge Street and you will see the post office on your right.",
+    "options": [
+      "across",
+      "along",
+      "over",
+      "past"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_037",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How was your school trip yesterday? — It was ___. We lost our way and it rained all day.",
+    "options": [
+      "wonderful",
+      "exciting",
+      "terrible",
+      "interesting"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_038",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Would you like to play basketball with me this afternoon? — ___, I have to prepare for my math test.",
+    "options": [
+      "Yes, please",
+      "I'd love to, but",
+      "No problem",
+      "That's a good idea"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_039",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What would you like to order? — I'd like a bowl of noodles with ___ onion and some ___ pork.",
+    "options": [
+      "a; /",
+      "an; a",
+      "an; /",
+      "a; the"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_040",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your new math teacher look like? — He is tall and he ___ short curly hair.",
+    "options": [
+      "is",
+      "has",
+      "looks",
+      "wears"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_041",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The post office is ___ the bank and the supermarket.",
+    "options": [
+      "between",
+      "next",
+      "across",
+      "front"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_042",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How is the weather in Sydney right now? — It's ___ heavily. The streets are wet.",
+    "options": [
+      "rain",
+      "raining",
+      "snowed",
+      "snowing"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_043",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Did you visit your uncle last night? — No, I didn't. I ___ a book at home.",
+    "options": [
+      "read",
+      "am reading",
+      "will read",
+      "reads"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_044",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What size bowl of soup would you like? — I'm not very hungry, so a ___ one is fine.",
+    "options": [
+      "large",
+      "small",
+      "heavy",
+      "tall"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_045",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like koalas? — Because they are very cute and make people ___.",
+    "options": [
+      "smile",
+      "to smile",
+      "smiling",
+      "smiled"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_046",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Go ___ this road and you can see the library on your right side.",
+    "options": [
+      "across",
+      "along",
+      "over",
+      "past"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_047",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How was your school trip yesterday? — It was ___. We lost our keys and it rained all day.",
+    "options": [
+      "wonderful",
+      "exciting",
+      "terrible",
+      "interesting"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_048",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Would you like to watch a movie with me tonight? — ___, but I have to finish my homework first.",
+    "options": [
+      "Yes, please",
+      "I'd love to",
+      "No problem",
+      "That's a good idea"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_049",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What would you like to eat? — I'd like a pizza with ___ onion and some ___ chicken.",
+    "options": [
+      "a; the",
+      "an; /",
+      "an; a",
+      "a; /"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_050",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your new English teacher look like? — She is of medium height and she ___ long straight hair.",
+    "options": [
+      "is",
+      "looks",
+      "wears",
+      "has"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_051",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The library is across from the post office, right ___ the hotel and the bank.",
+    "options": [
+      "down",
+      "behind",
+      "between",
+      "in front of"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_052",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How is the weather in London right now? — It's ___ heavily. People are walking fast with umbrellas.",
+    "options": [
+      "rain",
+      "raining",
+      "snowed",
+      "snowing"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_053",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Did you go to the countryside last Saturday? — No, I didn't. I ___ at home and cleaned my bedroom.",
+    "options": [
+      "stay",
+      "stayed",
+      "am staying",
+      "will stay"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_054",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What size bowl of beef soup would you like? — I am very hungry, so please give me a ___ one.",
+    "options": [
+      "small",
+      "thin",
+      "large",
+      "heavy"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_055",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like monkeys? — Because they are very clever and always make people ___.",
+    "options": [
+      "laugh",
+      "to laugh",
+      "laughing",
+      "laughed"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_056",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Walk ___ Bridge Street and you will find the supermarket on your right.",
+    "options": [
+      "across",
+      "along",
+      "over",
+      "past"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_057",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How was your school trip yesterday? — It was ___. We lost our way and it rained all afternoon.",
+    "options": [
+      "wonderful",
+      "exciting",
+      "terrible",
+      "interesting"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_058",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Would you like to play computer games with me? — ___, but I must study for my English test first.",
+    "options": [
+      "Yes, please",
+      "I'd love to",
+      "No problem",
+      "That's a good idea"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_059",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What would you like to have for lunch? — I'd like a burger with ___ onion and some ___ orange juice.",
+    "options": [
+      "a; the",
+      "an; /",
+      "an; a",
+      "a; /"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_060",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q21"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What does your new best friend look like? — He is tall and he ___ short straight black hair.",
+    "options": [
+      "is",
+      "wears",
+      "looks",
+      "has"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_061",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q22"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The new library is right ___ the big supermarket and the central park.",
+    "options": [
+      "between",
+      "next",
+      "behind",
+      "across"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_062",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q23"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How is the weather in Beijing now? — Look outside! It's ___ heavily. Kids are making a snowman.",
+    "options": [
+      "rain",
+      "raining",
+      "snowed",
+      "snowing"
+    ],
+    "answer": 3,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_063",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q24"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Did you visit the history museum last Sunday? — No, I didn't. I ___ at home and prepared for my English test.",
+    "options": [
+      "stay",
+      "stayed",
+      "am staying",
+      "will stay"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_064",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q25"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— What size bowl of noodles would you like? — I'm not very hungry, so a ___ one is enough for me.",
+    "options": [
+      "large",
+      "medium",
+      "small",
+      "heavy"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_065",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q26"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Why do you like monkeys so much? — Because they are very smart and their actions always make people ___.",
+    "options": [
+      "laugh",
+      "to laugh",
+      "laughing",
+      "laughed"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_066",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q27"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Walk ___ Bridge Street and you will find the commercial bank on your left.",
+    "options": [
+      "across",
+      "along",
+      "over",
+      "past"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_067",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q28"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— How was your vacation in Hainan last month? — It was ___. We swam in the blue sea and ate great food every day.",
+    "options": [
+      "terrible",
+      "boring",
+      "wonderful",
+      "difficult"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_068",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q29"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "— Would you like to play chess with me this afternoon? — ___, but I must help my mother clean the house first.",
+    "options": [
+      "Yes, please",
+      "I'd love to",
+      "No problem",
+      "That's a good idea"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_grammar"
+    ],
+    "id": "fc_g7v2_fic_069",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7单选Q30"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The weather was sunny and ___.",
+    "options": [
+      "windy",
+      "warm",
+      "rainy",
+      "cold"
+    ],
+    "answer": 1,
+    "audio": "The weather was sunny and warm.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_001",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It ___ us about one hour to get there by car.",
+    "options": [
+      "took",
+      "spent",
+      "cost",
+      "paid"
+    ],
+    "answer": 0,
+    "audio": "It took us about one hour to get there by car.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_002",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "First, a farmer showed us ___ the farm.",
+    "options": [
+      "at",
+      "off",
+      "around",
+      "for"
+    ],
+    "answer": 2,
+    "audio": "First, a farmer showed us around the farm.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_003",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was my ___ time to do that, so I was a little nervous, but it was very exciting!",
+    "options": [
+      "first",
+      "second",
+      "third",
+      "last"
+    ],
+    "answer": 0,
+    "audio": "It was my first time to do that, so I was a little nervous, but it was very exciting!",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_004",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My brother, Mike, ___ a horse with the farmer's help.",
+    "options": [
+      "bought",
+      "rode",
+      "fed",
+      "washed"
+    ],
+    "answer": 1,
+    "audio": "My brother, Mike, rode a horse with the farmer's help.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_005",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We ate some fresh ___ and bread.",
+    "options": [
+      "meat",
+      "fruit",
+      "fish",
+      "ice-cream"
+    ],
+    "answer": 1,
+    "audio": "We ate some fresh fruit and bread.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_006",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We ___ some red apples and put them into our baskets.",
+    "options": [
+      "cut",
+      "picked",
+      "lost",
+      "sold"
+    ],
+    "answer": 1,
+    "audio": "We picked some red apples and put them into our baskets.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_007",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We were all very ___, but we were extremely happy.",
+    "options": [
+      "tired",
+      "lazy",
+      "busy",
+      "hungry"
+    ],
+    "answer": 0,
+    "audio": "We were all very tired, but we were extremely happy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_008",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was a really ___ school trip.",
+    "options": [
+      "boring",
+      "bad",
+      "interesting",
+      "difficult"
+    ],
+    "answer": 2,
+    "audio": "It was a really interesting school trip.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_009",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I hope I can ___ there again in the future.",
+    "options": [
+      "live",
+      "work",
+      "go",
+      "study"
+    ],
+    "answer": 2,
+    "audio": "I hope I can go there again in the future.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_010",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Suddenly, he saw a young boy ___ on a bench.",
+    "options": [
+      "standing",
+      "sitting",
+      "running",
+      "jumping"
+    ],
+    "answer": 1,
+    "audio": "Suddenly, he saw a young boy sitting on a bench.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_011",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The old man walked ___ to him and sat down.",
+    "options": [
+      "up",
+      "over",
+      "away",
+      "back"
+    ],
+    "answer": 1,
+    "audio": "The old man walked over to him and sat down.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_012",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "\"What's wrong, my young friend?\" asked the old man ___.",
+    "options": [
+      "angrily",
+      "quickly",
+      "kindly",
+      "easily"
+    ],
+    "answer": 2,
+    "audio": "\"What's wrong, my young friend?\" asked the old man kindly.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_013",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I came to the park with my parents this afternoon, but I can't ___ them now.",
+    "options": [
+      "find",
+      "look",
+      "help",
+      "love"
+    ],
+    "answer": 0,
+    "audio": "I came to the park with my parents this afternoon, but I can't find them now.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_014",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Do you ___ your parents' phone number?\" The boy shook his head and said, \"No, I forgot.",
+    "options": [
+      "remember",
+      "forget",
+      "lose",
+      "want"
+    ],
+    "answer": 0,
+    "audio": "Do you remember your parents' phone number?\" The boy shook his head and said, \"No, I forgot.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_015",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "But I know my home is near a big ___.",
+    "options": [
+      "market",
+      "library",
+      "bank",
+      "hospital"
+    ],
+    "answer": 1,
+    "audio": "But I know my home is near a big library.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_016",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was only two blocks ___ from the park.",
+    "options": [
+      "around",
+      "away",
+      "along",
+      "down"
+    ],
+    "answer": 1,
+    "audio": "It was only two blocks away from the park.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_017",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Let's go there and find someone to help you.\" They ___ out of the park together.",
+    "options": [
+      "walked",
+      "drove",
+      "flew",
+      "swam"
+    ],
+    "answer": 0,
+    "audio": "Let's go there and find someone to help you.\" They walked out of the park together.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_018",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The boy was so happy because his parents ___ talking to the policeman!",
+    "options": [
+      "are",
+      "is",
+      "were",
+      "was"
+    ],
+    "answer": 2,
+    "audio": "The boy was so happy because his parents were talking to the policeman!",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_019",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The boy smiled and said ___ to the old man.",
+    "options": [
+      "goodbye",
+      "sorry",
+      "hello",
+      "please"
+    ],
+    "answer": 0,
+    "audio": "The boy smiled and said goodbye to the old man.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_020",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He is of medium ___ and he has big blue eyes.",
+    "options": [
+      "height",
+      "build",
+      "hair",
+      "age"
+    ],
+    "answer": 0,
+    "audio": "He is of medium height and he has big blue eyes.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_021",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He always ___ a white T-shirt and blue jeans.",
+    "options": [
+      "puts on",
+      "cuts",
+      "wears",
+      "buys"
+    ],
+    "answer": 2,
+    "audio": "He always wears a white T-shirt and blue jeans.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_022",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Last Saturday was Peter's ___ birthday.",
+    "options": [
+      "thirteen",
+      "thirteenth",
+      "three",
+      "third"
+    ],
+    "answer": 1,
+    "audio": "Last Saturday was Peter's thirteenth birthday.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_023",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is ___ a quiet street, across from a big park.",
+    "options": [
+      "on",
+      "at",
+      "next",
+      "between"
+    ],
+    "answer": 0,
+    "audio": "It is on a quiet street, across from a big park.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_024",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "When we arrived, Peter's mother was ___ a large chocolate cake in the kitchen.",
+    "options": [
+      "making",
+      "eating",
+      "washing",
+      "drinking"
+    ],
+    "answer": 0,
+    "audio": "When we arrived, Peter's mother was making a large chocolate cake in the kitchen.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_025",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter was very ___.",
+    "options": [
+      "tired",
+      "angry",
+      "sad",
+      "happy"
+    ],
+    "answer": 3,
+    "audio": "Peter was very happy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_026",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter's father showed us some old ___ of Peter when he was a baby.",
+    "options": [
+      "books",
+      "photos",
+      "clothes",
+      "animals"
+    ],
+    "answer": 1,
+    "audio": "Peter's father showed us some old photos of Peter when he was a baby.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_027",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We all ___ happily.",
+    "options": [
+      "cried",
+      "slept",
+      "laughed",
+      "worked"
+    ],
+    "answer": 2,
+    "audio": "We all laughed happily.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_028",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter's mother also made some strawberry juice ___ us.",
+    "options": [
+      "for",
+      "with",
+      "to",
+      "about"
+    ],
+    "answer": 0,
+    "audio": "Peter's mother also made some strawberry juice for us.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_029",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We had a ___ time at Peter's birthday party.",
+    "options": [
+      "boring",
+      "hard",
+      "great",
+      "bad"
+    ],
+    "answer": 2,
+    "audio": "We had a great time at Peter's birthday party.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_030",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He is of medium ___ and he has big brown eyes.",
+    "options": [
+      "height",
+      "build",
+      "hair",
+      "age"
+    ],
+    "answer": 0,
+    "audio": "He is of medium height and he has big brown eyes.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_031",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He always ___ a black jacket and blue jeans.",
+    "options": [
+      "puts on",
+      "cuts",
+      "wears",
+      "buys"
+    ],
+    "answer": 2,
+    "audio": "He always wears a black jacket and blue jeans.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_032",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Last Saturday was Tom's ___ birthday.",
+    "options": [
+      "thirteen",
+      "thirteenth",
+      "three",
+      "third"
+    ],
+    "answer": 1,
+    "audio": "Last Saturday was Tom's thirteenth birthday.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_033",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is ___ a quiet street, across from a big hospital.",
+    "options": [
+      "on",
+      "at",
+      "next",
+      "between"
+    ],
+    "answer": 0,
+    "audio": "It is on a quiet street, across from a big hospital.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_034",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "When we arrived, Tom's mother was ___ a large strawberry cake in the kitchen.",
+    "options": [
+      "making",
+      "eating",
+      "washing",
+      "drinking"
+    ],
+    "answer": 0,
+    "audio": "When we arrived, Tom's mother was making a large strawberry cake in the kitchen.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_035",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Tom was very ___.",
+    "options": [
+      "tired",
+      "angry",
+      "sad",
+      "happy"
+    ],
+    "answer": 3,
+    "audio": "Tom was very happy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_036",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Tom's father showed us some old ___ of Tom when he was a little baby.",
+    "options": [
+      "books",
+      "photos",
+      "clothes",
+      "animals"
+    ],
+    "answer": 1,
+    "audio": "Tom's father showed us some old photos of Tom when he was a little baby.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_037",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We all ___ happily.",
+    "options": [
+      "cried",
+      "slept",
+      "laughed",
+      "worked"
+    ],
+    "answer": 2,
+    "audio": "We all laughed happily.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_038",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Tom's mother also made some fresh orange juice ___ us.",
+    "options": [
+      "for",
+      "with",
+      "to",
+      "about"
+    ],
+    "answer": 0,
+    "audio": "Tom's mother also made some fresh orange juice for us.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_039",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We had a ___ time at Tom's birthday party.",
+    "options": [
+      "boring",
+      "hard",
+      "great",
+      "bad"
+    ],
+    "answer": 2,
+    "audio": "We had a great time at Tom's birthday party.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_040",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The weather was cool and ___, which was perfect for an outdoor trip.",
+    "options": [
+      "rainy",
+      "sunny",
+      "snowy",
+      "windy"
+    ],
+    "answer": 1,
+    "audio": "The weather was cool and sunny, which was perfect for an outdoor trip.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_041",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We went there ___ school bus.",
+    "options": [
+      "by",
+      "on",
+      "take",
+      "in"
+    ],
+    "answer": 0,
+    "audio": "We went there by school bus.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_042",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "They were very tall and had ___ necks.",
+    "options": [
+      "short",
+      "long",
+      "small",
+      "scary"
+    ],
+    "answer": 1,
+    "audio": "They were very tall and had long necks.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_043",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Some of them were eating bamboo, while ___ were sleeping on the ground.",
+    "options": [
+      "other",
+      "the other",
+      "others",
+      "another"
+    ],
+    "answer": 2,
+    "audio": "Some of them were eating bamboo, while others were sleeping on the ground.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_044",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Everyone took out their cameras and took a lot of ___.",
+    "options": [
+      "photos",
+      "books",
+      "food",
+      "animals"
+    ],
+    "answer": 0,
+    "audio": "Everyone took out their cameras and took a lot of photos.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_045",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We ate the food we brought from home, like sandwiches, cakes and ___.",
+    "options": [
+      "soup",
+      "water",
+      "fruit",
+      "ice-cream"
+    ],
+    "answer": 2,
+    "audio": "We ate the food we brought from home, like sandwiches, cakes and fruit.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_046",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The monkeys were the ___ animals in the park.",
+    "options": [
+      "laziest",
+      "scariest",
+      "smartest",
+      "largest"
+    ],
+    "answer": 2,
+    "audio": "The monkeys were the smartest animals in the park.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_047",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "They were jumping up and down, and some even did funny things to make us ___.",
+    "options": [
+      "laugh",
+      "cry",
+      "sleep",
+      "work"
+    ],
+    "answer": 0,
+    "audio": "They were jumping up and down, and some even did funny things to make us laugh.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_048",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We felt a little ___ after walking for a long time, but we were extremely happy.",
+    "options": [
+      "lazy",
+      "tired",
+      "busy",
+      "hungry"
+    ],
+    "answer": 1,
+    "audio": "We felt a little tired after walking for a long time, but we were extremely happy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_049",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was truly an ___ school trip.",
+    "options": [
+      "boring",
+      "bad",
+      "interesting",
+      "difficult"
+    ],
+    "answer": 2,
+    "audio": "It was truly an interesting school trip.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_050",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He is of medium ___ and he has short curly brown hair.",
+    "options": [
+      "height",
+      "build",
+      "hair",
+      "age"
+    ],
+    "answer": 0,
+    "audio": "He is of medium height and he has short curly brown hair.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_051",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He always ___ a black jacket and blue jeans.",
+    "options": [
+      "puts on",
+      "cuts",
+      "wears",
+      "buys"
+    ],
+    "answer": 2,
+    "audio": "He always wears a black jacket and blue jeans.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_052",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Last Saturday was Peter's ___ birthday.",
+    "options": [
+      "thirteen",
+      "thirteenth",
+      "three",
+      "third"
+    ],
+    "answer": 1,
+    "audio": "Last Saturday was Peter's thirteenth birthday.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_053",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is ___ a quiet street, across from a big city park.",
+    "options": [
+      "on",
+      "at",
+      "next",
+      "between"
+    ],
+    "answer": 0,
+    "audio": "It is on a quiet street, across from a big city park.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_054",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "When we arrived, Peter's mother was ___ a large strawberry cake in the kitchen.",
+    "options": [
+      "making",
+      "eating",
+      "washing",
+      "drinking"
+    ],
+    "answer": 0,
+    "audio": "When we arrived, Peter's mother was making a large strawberry cake in the kitchen.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_055",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter was very ___.",
+    "options": [
+      "tired",
+      "angry",
+      "sad",
+      "happy"
+    ],
+    "answer": 3,
+    "audio": "Peter was very happy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_056",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter's father showed us some old ___ of Peter when he was a little baby.",
+    "options": [
+      "books",
+      "photos",
+      "clothes",
+      "animals"
+    ],
+    "answer": 1,
+    "audio": "Peter's father showed us some old photos of Peter when he was a little baby.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_057",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We all ___ happily.",
+    "options": [
+      "cried",
+      "slept",
+      "laughed",
+      "worked"
+    ],
+    "answer": 2,
+    "audio": "We all laughed happily.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_058",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Peter's mother also made some fresh orange juice ___ us.",
+    "options": [
+      "for",
+      "with",
+      "to",
+      "about"
+    ],
+    "answer": 0,
+    "audio": "Peter's mother also made some fresh orange juice for us.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_059",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We had a ___ time at Peter's birthday party.",
+    "options": [
+      "boring",
+      "hard",
+      "great",
+      "bad"
+    ],
+    "answer": 2,
+    "audio": "We had a great time at Peter's birthday party.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_060",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6完形空40"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The weather was cool and ___, which was perfect for taking a school trip.",
+    "options": [
+      "rainy",
+      "sunny",
+      "snowy",
+      "windy"
+    ],
+    "answer": 1,
+    "audio": "The weather was cool and sunny, which was perfect for taking a school trip.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_061",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空31"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We went there ___ school bus together.",
+    "options": [
+      "by",
+      "on",
+      "take",
+      "in"
+    ],
+    "answer": 0,
+    "audio": "We went there by school bus together.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_062",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空32"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "First, a guide showed us ___ the robot hall.",
+    "options": [
+      "at",
+      "off",
+      "around",
+      "for"
+    ],
+    "answer": 2,
+    "audio": "First, a guide showed us around the robot hall.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_063",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空33"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Some of them could play chess, while ___ could dance to music.",
+    "options": [
+      "other",
+      "the other",
+      "others",
+      "another"
+    ],
+    "answer": 2,
+    "audio": "Some of them could play chess, while others could dance to music.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_064",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空34"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I took out my camera and took many ___.",
+    "options": [
+      "photos",
+      "books",
+      "food",
+      "toys"
+    ],
+    "answer": 0,
+    "audio": "I took out my camera and took many photos.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_065",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空35"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We ate the food we brought from home, like sandwiches, bread and some ___.",
+    "options": [
+      "soup",
+      "water",
+      "fruit",
+      "ice-cream"
+    ],
+    "answer": 2,
+    "audio": "We ate the food we brought from home, like sandwiches, bread and some fruit.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_066",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空36"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was so ___ that nobody wanted to leave.",
+    "options": [
+      "boring",
+      "bad",
+      "interesting",
+      "difficult"
+    ],
+    "answer": 2,
+    "audio": "It was so interesting that nobody wanted to leave.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_067",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空37"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We felt a little ___ because we walked a lot, but our hearts were full of joy.",
+    "options": [
+      "lazy",
+      "tired",
+      "busy",
+      "hungry"
+    ],
+    "answer": 1,
+    "audio": "We felt a little tired because we walked a lot, but our hearts were full of joy.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_068",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空38"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was truly an ___ school trip.",
+    "options": [
+      "unforgettable",
+      "terrible",
+      "bad",
+      "boring"
+    ],
+    "answer": 0,
+    "audio": "It was truly an unforgettable school trip.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_069",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空39"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I hope I can ___ there again in the future.",
+    "options": [
+      "live",
+      "work",
+      "go",
+      "study"
+    ],
+    "answer": 2,
+    "audio": "I hope I can go there again in the future.",
+    "vocab_domain": [
+      "final_cloze"
+    ],
+    "id": "fc_g7v2_clz_070",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7完形空40"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "you",
+      "what",
+      "can",
+      "do",
+      "club",
+      "for",
+      "our"
+    ],
+    "answer": [
+      "What",
+      "can",
+      "you",
+      "do",
+      "for",
+      "our",
+      "club?"
+    ],
+    "display": "What can you do for our club?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_001",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1连词成句1"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "is",
+      "cleaning",
+      "now",
+      "his",
+      "Tony",
+      "room"
+    ],
+    "answer": [
+      "Tony",
+      "is",
+      "cleaning",
+      "his",
+      "room",
+      "now."
+    ],
+    "display": "Tony is cleaning his room now.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_002",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1连词成句2"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "run",
+      "don't",
+      "hallways",
+      "in",
+      "the"
+    ],
+    "answer": [
+      "Don't",
+      "run",
+      "in",
+      "the",
+      "hallways!"
+    ],
+    "display": "Don't run in the hallways!",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_003",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1连词成句3"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "an",
+      "elephant",
+      "Africa",
+      "from",
+      "is",
+      "this"
+    ],
+    "answer": [
+      "This",
+      "is",
+      "an",
+      "elephant",
+      "from",
+      "Africa."
+    ],
+    "display": "This is an elephant from Africa.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_004",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1连词成句4"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "did",
+      "where",
+      "go",
+      "you",
+      "on",
+      "vacation"
+    ],
+    "answer": [
+      "Where",
+      "did",
+      "you",
+      "go",
+      "on",
+      "vacation?"
+    ],
+    "display": "Where did you go on vacation?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_005",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1连词成句5"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "do",
+      "how",
+      "you",
+      "get",
+      "school",
+      "to"
+    ],
+    "answer": [
+      "How",
+      "do",
+      "you",
+      "get",
+      "to",
+      "school?"
+    ],
+    "display": "How do you get to school?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_006",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2连词成句1"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "can",
+      "she",
+      "chess",
+      "play",
+      "well",
+      "very"
+    ],
+    "answer": [
+      "She",
+      "can",
+      "play",
+      "chess",
+      "very",
+      "well."
+    ],
+    "display": "She can play chess very well.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_007",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2连词成句2"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "there",
+      "a",
+      "hospital",
+      "is",
+      "near",
+      "here"
+    ],
+    "answer": [
+      "Is",
+      "there",
+      "a",
+      "hospital",
+      "near",
+      "here?"
+    ],
+    "display": "Is there a hospital near here?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_008",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2连词成句4"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "we",
+      "to",
+      "went",
+      "zoo",
+      "the",
+      "yesterday"
+    ],
+    "answer": [
+      "We",
+      "went",
+      "to",
+      "the",
+      "zoo",
+      "yesterday."
+    ],
+    "display": "We went to the zoo yesterday.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_009",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2连词成句5"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "kind",
+      "of",
+      "what",
+      "would",
+      "pizza",
+      "you",
+      "like"
+    ],
+    "answer": [
+      "What",
+      "kind",
+      "of",
+      "pizza",
+      "would",
+      "you",
+      "like?"
+    ],
+    "display": "What kind of pizza would you like?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_010",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3连词成句1"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "has",
+      "she",
+      "big",
+      "eyes",
+      "beautiful",
+      "and"
+    ],
+    "answer": [
+      "She",
+      "has",
+      "big",
+      "and",
+      "beautiful",
+      "eyes."
+    ],
+    "display": "She has big and beautiful eyes. / She has beautiful and big eyes.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_011",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3连词成句2"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "a",
+      "bank",
+      "is",
+      "there",
+      "near",
+      "house",
+      "your"
+    ],
+    "answer": [
+      "Is",
+      "there",
+      "a",
+      "bank",
+      "near",
+      "your",
+      "house?"
+    ],
+    "display": "Is there a bank near your house?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_012",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3连词成句3"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "how",
+      "the",
+      "weather",
+      "was",
+      "yesterday"
+    ],
+    "answer": [
+      "How",
+      "was",
+      "the",
+      "weather",
+      "yesterday?"
+    ],
+    "display": "How was the weather yesterday?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_013",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3连词成句4"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "played",
+      "they",
+      "chess",
+      "the",
+      "under",
+      "tree"
+    ],
+    "answer": [
+      "They",
+      "played",
+      "chess",
+      "under",
+      "the",
+      "tree."
+    ],
+    "display": "They played chess under the tree.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_014",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3连词成句5"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "kind",
+      "of",
+      "what",
+      "would",
+      "soup",
+      "you",
+      "like"
+    ],
+    "answer": [
+      "What",
+      "kind",
+      "of",
+      "soup",
+      "would",
+      "you",
+      "like?"
+    ],
+    "display": "What kind of soup would you like?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_015",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5连词成句1"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "has",
+      "my",
+      "straight",
+      "hair",
+      "sister",
+      "long"
+    ],
+    "answer": [
+      "My",
+      "sister",
+      "has",
+      "long",
+      "straight",
+      "hair."
+    ],
+    "display": "My sister has long straight hair.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_016",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5连词成句2"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "a",
+      "pay",
+      "there",
+      "phone",
+      "is",
+      "near",
+      "bank",
+      "the"
+    ],
+    "answer": [
+      "Is",
+      "there",
+      "a",
+      "pay",
+      "phone",
+      "near",
+      "the",
+      "bank?"
+    ],
+    "display": "Is there a pay phone near the bank?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_017",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5连词成句3"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "how",
+      "the",
+      "weather",
+      "was",
+      "in",
+      "New York"
+    ],
+    "answer": [
+      "How",
+      "was",
+      "the",
+      "weather",
+      "in",
+      "New York?"
+    ],
+    "display": "How was the weather in New York?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_018",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5连词成句4"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "went",
+      "we",
+      "to",
+      "countryside",
+      "the",
+      "last",
+      "weekend"
+    ],
+    "answer": [
+      "We",
+      "went",
+      "to",
+      "the",
+      "countryside",
+      "last",
+      "weekend."
+    ],
+    "display": "We went to the countryside last weekend.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_019",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5连词成句5"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "kind",
+      "of",
+      "what",
+      "food",
+      "would",
+      "you",
+      "like"
+    ],
+    "answer": [
+      "What",
+      "kind",
+      "of",
+      "food",
+      "would",
+      "you",
+      "like?"
+    ],
+    "display": "What kind of food would you like?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_020",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7连词成句1"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "has",
+      "my",
+      "straight",
+      "hair",
+      "mother",
+      "long"
+    ],
+    "answer": [
+      "My",
+      "mother",
+      "has",
+      "long",
+      "straight",
+      "hair."
+    ],
+    "display": "My mother has long straight hair.",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_021",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7连词成句2"
+  },
+  {
+    "type": "sentence_ordering",
+    "prompt": "连词成句：",
+    "tokens": [
+      "how",
+      "the",
+      "weather",
+      "was",
+      "in",
+      "London"
+    ],
+    "answer": [
+      "How",
+      "was",
+      "the",
+      "weather",
+      "in",
+      "London?"
+    ],
+    "display": "How was the weather in London?",
+    "vocab_domain": [
+      "final_sentence"
+    ],
+    "id": "fc_g7v2_so_022",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7连词成句4"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "My sister can play the guitar very well.",
+    "options": [
+      "🎸",
+      "🎹",
+      "🥁"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_001",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Look! The children are swimming in the pool.",
+    "options": [
+      "🚴",
+      "🏊",
+      "🏃"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_002",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Don't eat in the classroom, please.",
+    "options": [
+      "🍔❌",
+      "📖❌",
+      "🏃❌"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_003",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I saw some cute pandas at the zoo yesterday.",
+    "options": [
+      "🦁",
+      "🦒",
+      "🐼"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_004",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Go straight and turn left at the first crossing.",
+    "options": [
+      "↩️",
+      "↪️",
+      "⬆️"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_005",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What are you doing, Linda? I'm watching TV, dad. What about you? I'm cooking soup in the kitchen.",
+    "prompt": "What is Linda's dad doing?",
+    "options": [
+      "Watching TV.",
+      "Cooking soup.",
+      "Cleaning the room."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_001",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Can you play chess, Mary? No, I can't. But I can play basketball.",
+    "prompt": "What can Mary do?",
+    "options": [
+      "Play chess.",
+      "Play basketball.",
+      "Play soccer."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_002",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Why do you like koalas, Jenny? Because they are very cute and interesting.",
+    "prompt": "Why does Jenny like koalas?",
+    "options": [
+      "Because they are cute.",
+      "Because they are scary.",
+      "Because they are clever."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_003",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Where is the library, please? It's across from the bank, next to the supermarket.",
+    "prompt": "Where is the library?",
+    "options": [
+      "Next to the bank.",
+      "Behind the supermarket.",
+      "Across from the bank."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_004",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "How was your weekend, Alice? It was great! I visited my grandparents in the countryside.",
+    "prompt": "How was Alice's weekend?",
+    "options": [
+      "Great.",
+      "Terrible.",
+      "Boring."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_005",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",
+    "prompt": "What did Helen do on Saturday morning?",
+    "options": [
+      "She watched TV.",
+      "She did her homework.",
+      "She played badminton."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_006",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",
+    "prompt": "Who did Helen play badminton with?",
+    "options": [
+      "Her classmate.",
+      "Her brother.",
+      "Her cousin."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_007",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",
+    "prompt": "What did Helen's family eat on Sunday?",
+    "options": [
+      "Chicken noodles.",
+      "Beef soup.",
+      "Mutton rice."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_008",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",
+    "prompt": "Where did Helen eat on Sunday?",
+    "options": [
+      "At home.",
+      "In a restaurant.",
+      "In the park."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_009",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Helen. Did you have a busy weekend? Yes, I did, Tom. On Saturday morning, I cleaned my room and did my homework. What did you do on Saturday afternoon? I went to the park and played badminton with my cousin. Did you do anything fun on Sunday? Yes. My family went to a nice restaurant. We ate delicious chicken noodles. How about you? I just stayed at home and read a book.",
+    "prompt": "What did Tom do on his weekend?",
+    "options": [
+      "He visited his friends.",
+      "He played sports.",
+      "He read a book at home."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_010",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Steve usually goes to school by bike.",
+    "options": [
+      "🚌",
+      "🚴",
+      "🚶"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_006",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "It's raining heavily in Beijing right now.",
+    "options": [
+      "☀️",
+      "❄️",
+      "🌧️"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_007",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "My grandmother loves to feed the chickens on the farm.",
+    "options": [
+      "🐔",
+      "🐄",
+      "🐎"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_008",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Please listen to the teacher carefully in class.",
+    "options": [
+      "😴",
+      "👂",
+      "🗣️"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_009",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "They had a wonderful campfire party last night.",
+    "options": [
+      "⛺🔥",
+      "🏖️🌊",
+      "🏞️ climb"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_010",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What time do you usually get up on school days, Susan? I usually get up at six thirty, but today I got up at seven o'clock.",
+    "prompt": "What time does Susan usually get up?",
+    "options": [
+      "At 6:30.",
+      "At 7:00.",
+      "At 7:30."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_011",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Where are you going, Lily? I'm going to the commercial bank. I need to get some money.",
+    "prompt": "Where is Lily going?",
+    "options": [
+      "To the library.",
+      "To the bank.",
+      "To the supermarket."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_012",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Is your mother watching TV in the living room? No, she isn't. She is washing the dishes in the kitchen.",
+    "prompt": "What is the girl's mother doing?",
+    "options": [
+      "Watching TV.",
+      "Cooking dinner.",
+      "Washing dishes."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_013",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Did you see any lions at the zoo, Amy? No, I didn't. But I saw some scary tigers.",
+    "prompt": "What animals did Amy see?",
+    "options": [
+      "Lions.",
+      "Tigers.",
+      "Pandas."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_014",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "How is the weather in Toronto today, Mary? It's very windy and cold.",
+    "prompt": "What is the weather like in Toronto?",
+    "options": [
+      "Sunny and hot.",
+      "Windy and cold.",
+      "Rainy and warm."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_015",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",
+    "prompt": "Why did Jane stay at home yesterday afternoon?",
+    "options": [
+      "Because she was tired.",
+      "Because she had a cold.",
+      "Because she had too much homework."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_016",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",
+    "prompt": "What did Mike do at the school sports club?",
+    "options": [
+      "He played basketball.",
+      "He played soccer.",
+      "He went swimming."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_017",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",
+    "prompt": "What day is it today?",
+    "options": [
+      "Thursday.",
+      "Friday.",
+      "Saturday."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_018",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",
+    "prompt": "Where does Jane plan to go tomorrow?",
+    "options": [
+      "To the zoo.",
+      "To the park.",
+      "To the history museum."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_019",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Jane. I didn't see you at the school sports club yesterday afternoon. Hi, Mike. I stayed at home because I had a cold. Oh, I'm sorry to hear that. Are you feeling better now? Yes, much better. Thank you. What did you do at the club? We practiced playing basketball. It was fun. Hey, tomorrow is Saturday. Do you have any plans? Well, if the weather is fine, my parents will take me to the history museum. That sounds interesting. I hope you have a good time.",
+    "prompt": "Who will Jane go with?",
+    "options": [
+      "Her friends.",
+      "Her parents.",
+      "Her classmates."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_020",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "My uncle is tall and he has short curly hair.",
+    "options": [
+      "👨‍🦱 (Short curly)",
+      "👨 (Short straight)",
+      "🧔 (Long hair & beard)"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_011",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I'd like a large bowl of beef soup, please.",
+    "options": [
+      "🥣🥩",
+      "🥣🥬",
+      "🥟"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_012",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "It's cloudy and cool in London today.",
+    "options": [
+      "☀️",
+      "☁️",
+      "❄️"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_013",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "They went to the beach and played volleyball last Saturday.",
+    "options": [
+      "⛰️",
+      "🏖️🏐",
+      "🏛️"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_014",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "You can see a big supermarket next to the post office.",
+    "options": [
+      "🏪🏥",
+      "🏣🏪",
+      "🏪🏦"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_015",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What would you like to eat, Tina? I'd like some mutton and cabbage noodles.",
+    "prompt": "What kind of noodles would Tina like?",
+    "options": [
+      "Beef noodles.",
+      "Mutton noodles.",
+      "Chicken noodles."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_021",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Who is that girl over there, Anna? Oh, that's my new classmate, Lucy. She is of medium height and wears glasses.",
+    "prompt": "What does Lucy look like?",
+    "options": [
+      "She is tall.",
+      "She has long hair.",
+      "She wears glasses."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_022",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Where did you go last weekend, Lily? I went to the countryside with my uncle. We went fishing by the river.",
+    "prompt": "What did Lily do last weekend?",
+    "options": [
+      "She went swimming.",
+      "She went fishing.",
+      "She visited a museum."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_023",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, is there a pay phone near here? Yes, walk down this street and turn right. It's behind the hotel.",
+    "prompt": "Where is the pay phone?",
+    "options": [
+      "Behind the hotel.",
+      "Next to the bank.",
+      "Across from the hotel."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_024",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Why do you like elephants, Sarah? Because they are very smart and they can help people carry things.",
+    "prompt": "Why does Sarah like elephants?",
+    "options": [
+      "Because they are cute.",
+      "Because they are heavy.",
+      "Because they are smart."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_025",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",
+    "prompt": "Who did Mary go to Beijing with?",
+    "options": [
+      "Her friends.",
+      "Her classmates.",
+      "Her parents."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_026",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",
+    "prompt": "How was the weather in Beijing?",
+    "options": [
+      "Hot and sunny.",
+      "Cool and cloudy.",
+      "Rainy and cold."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_027",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",
+    "prompt": "What did Mary do on the first day?",
+    "options": [
+      "She climbed the Great Wall.",
+      "She visited the Palace Museum.",
+      "She went shopping."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_028",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",
+    "prompt": "What delicious food did Mary eat?",
+    "options": [
+      "Beijing Duck.",
+      "Beef noodles.",
+      "Chicken rice."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_029",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary. How was your dragon boat festival vacation? It was excellent, Jack! I went to Beijing with my parents. Really? How was the weather there? It was hot but sunny. We enjoyed it very much. What did you do there? On the first day, we visited the Palace Museum and took a lot of photos. On the second day, we climbed the Great Wall. Wow, that sounds exciting. Did you eat any delicious food? Yes, we had Beijing Duck in a very famous restaurant. It was great!",
+    "prompt": "How did Mary feel about her vacation?",
+    "options": [
+      "Boring.",
+      "Terrible.",
+      "Excellent."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_030",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Look! The girl is taking photos of the flowers.",
+    "options": [
+      "📸",
+      "🎨",
+      "📖"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_016",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I'd like a large pizza with onions and cheese.",
+    "options": [
+      "🍕🧅",
+      "🥩🍟",
+      "🥣🥬"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_017",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "It's snowing heavily in Harbin today.",
+    "options": [
+      "🌧️",
+      "☀️",
+      "❄️"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_018",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "The boy fell off his bike and hurt his leg yesterday.",
+    "options": [
+      "🚴‍♂️💥",
+      "🏊‍♂️",
+      "🏃‍♂️"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_019",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Go along this street and the library is across from the post office.",
+    "options": [
+      "🏣🏪",
+      "📖🏣 (Across)",
+      "🏦🏥"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_020",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What would you like to order, Lily? I'd like a medium bowl of beef and tomato noodles, please.",
+    "prompt": "What size bowl of noodles does Lily want?",
+    "options": [
+      "Small.",
+      "Medium.",
+      "Large."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_031",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Who is that tall boy with short curly hair, Susan? Oh, that's my cousin, David. He is a very smart student.",
+    "prompt": "What does David look like?",
+    "options": [
+      "He is short.",
+      "He has long straight hair.",
+      "He has short curly hair."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_032",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Did you go to the beach on your vacation, Jane? No, I didn't. I visited my grandparents on their farm and fed the sheep.",
+    "prompt": "Where did Jane go on her vacation?",
+    "options": [
+      "To the beach.",
+      "To a farm.",
+      "To a museum."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_033",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, how can I get to the police station? Just go straight and turn left at the first crossing. It's next to the hotel.",
+    "prompt": "Where is the police station?",
+    "options": [
+      "Across from the hotel.",
+      "Next to the hotel.",
+      "Behind the bank."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_034",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Why do you think lions are scary, Mary? Because they have sharp teeth and run very fast.",
+    "prompt": "Why does Mary think lions are scary?",
+    "options": [
+      "Because they are lazy.",
+      "Because they run fast and have sharp teeth.",
+      "Because they look ugly."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_035",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",
+    "prompt": "Who did Alice go to Hangzhou with?",
+    "options": [
+      "Her friends.",
+      "Her classmates.",
+      "Her parents."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_036",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",
+    "prompt": "How was the weather in Hangzhou?",
+    "options": [
+      "Hot and sunny.",
+      "Warm and rainy.",
+      "Cool and windy."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_037",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",
+    "prompt": "What did Alice do on the first day?",
+    "options": [
+      "She took a boat trip on the lake.",
+      "She climbed a high mountain.",
+      "She bought some souvenirs."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_038",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",
+    "prompt": "What local food did Alice eat?",
+    "options": [
+      "Beijing Duck.",
+      "West Lake Fish.",
+      "Beef noodles."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_039",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hello, Alice! Long time no see. How was your dragon boat festival vacation? Hi, Eric! It was fantastic. I went to Hangzhou with my parents. Wow! How was the weather there? It was warm and a little rainy, but the West Lake looked very beautiful in the rain. What did you do on the first day? We took a boat trip on the lake and saw many beautiful lotus flowers. Did you eat any local food? Yes, we had West Lake Fish in a famous restaurant. It tasted delicious!",
+    "prompt": "How did Alice feel about her vacation?",
+    "options": [
+      "Boring.",
+      "Fantastic.",
+      "Terrible."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_040",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套4听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "The kids are making a snowman outside because it's snowing.",
+    "options": [
+      "🌧️",
+      "☀️",
+      "☃️"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_021",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I went to the farm and milked a cow last weekend.",
+    "options": [
+      "🐄",
+      "🐎",
+      "🐷"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_022",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Turn left at the first crossing, and you will see the post office.",
+    "options": [
+      "↩️",
+      "↪️",
+      "⬆️"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_023",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I'd like a large bowl of tomato and egg soup.",
+    "options": [
+      "🥣🍅🥚",
+      "🥣🥩",
+      "🥟"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_024",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "My brother is tall and he has short straight hair.",
+    "options": [
+      "👨‍🦱 (Curly)",
+      "👨 (Straight)",
+      "🧔 (Beard)"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_025",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What would you like to eat, Grace? I'd like a small bowl of beef noodles, please.",
+    "prompt": "What kind of noodles does Grace want?",
+    "options": [
+      "Chicken noodles.",
+      "Mutton noodles.",
+      "Beef noodles."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_041",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Where is your sister, Helen? Is she watching TV? No, she is practicing the guitar in her bedroom.",
+    "prompt": "What is Helen's sister doing right now?",
+    "options": [
+      "Watching TV.",
+      "Playing the guitar.",
+      "Doing her homework."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_042",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Did you see any pandas at the zoo yesterday, Sally? No, I didn't. But I saw some clever monkeys.",
+    "prompt": "What animals did Sally see yesterday?",
+    "options": [
+      "Pandas.",
+      "Monkeys.",
+      "Giraffes."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_043",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, is there a hospital near here? Yes, go along this street. It's next to the city park, across from the bank.",
+    "prompt": "Where is the hospital?",
+    "options": [
+      "Next to the park.",
+      "Behind the bank.",
+      "In front of the school."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_044",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "How was your school trip to the history museum, Amy? It was boring. It was too crowded and we couldn't see anything.",
+    "prompt": "What did Amy think of her school trip?",
+    "options": [
+      "Wonderful.",
+      "Exciting.",
+      "Boring."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_045",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",
+    "prompt": "Who did Betty go to the countryside with?",
+    "options": [
+      "Her parents.",
+      "Her classmates.",
+      "Her grandparents."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_046",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",
+    "prompt": "How was the weather in the countryside?",
+    "options": [
+      "Sunny and warm.",
+      "Cloudy and cool.",
+      "Rainy and windy."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_047",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",
+    "prompt": "What fruit did Betty pick in the morning?",
+    "options": [
+      "Apples.",
+      "Strawberries.",
+      "Oranges."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_048",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",
+    "prompt": "What did Betty do in the afternoon?",
+    "options": [
+      "She went fishing.",
+      "She rode a horse.",
+      "She swam in the river."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_049",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Betty! Did you stay at home last weekend? No, I didn't, Paul. I went to the countryside with my grandparents. Wow! How was the weather there? It was sunny and warm. We spent the whole day outdoors. What did you do on the farm? In the morning, I fed the chickens and picked some fresh strawberries. In the afternoon, we went fishing by a small river. That sounds amazing! Did you cook the fish? Yes! My grandmother cooked fish soup for dinner. It tasted wonderful!",
+    "prompt": "What did Betty have for dinner?",
+    "options": [
+      "Chicken rice.",
+      "Fish soup.",
+      "Beef noodles."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_050",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "The young man has a long beard and wears a black hat.",
+    "options": [
+      "🧔🎩",
+      "👦",
+      "👨‍🦱"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_026",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "I'd like a medium order of dumplings with cabbage and pork, please.",
+    "options": [
+      "🍕",
+      "🥟🥬🥩",
+      "🥣"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_027",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "It's a sunny and hot day, so many people are buying ice-cream.",
+    "options": [
+      "❄️",
+      "🌧️",
+      "☀️🍦"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_028",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "We visited an old history museum and saw some cool things yesterday.",
+    "options": [
+      "🏛️",
+      "🏖️",
+      "⛰️"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_029",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "The hospital is between the library and the big supermarket.",
+    "options": [
+      "🏣🏥🏪",
+      "📖🏥🏪 (Between)",
+      "🏦🏥🏣"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_030",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What would you like to drink, Sarah? I'd like a large glass of orange juice. What about you? Just a cup of green tea for me.",
+    "prompt": "What would Sarah like to drink?",
+    "options": [
+      "Orange juice.",
+      "Green tea.",
+      "Apple juice."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_051",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Is that your brother over there, Mary? The one with short straight hair? No, my brother is the tall boy with short curly hair and big eyes.",
+    "prompt": "What does Mary's brother look like?",
+    "options": [
+      "He has short straight hair.",
+      "He is short.",
+      "He has short curly hair and big eyes."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_052",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Did you stay at home and do your homework last night, Linda? No, my parents took me to a theater. We watched an interesting scary movie.",
+    "prompt": "What did Linda do last night?",
+    "options": [
+      "She did her homework.",
+      "She watched a movie.",
+      "She cleaned her room."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_053",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, is there a post office near here? Yes. Walk down this street and turn right. It's behind the bank.",
+    "prompt": "Where is the post office?",
+    "options": [
+      "Next to the bank.",
+      "Behind the bank.",
+      "Across from the hotel."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_054",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Why do you like monkeys so much, Tony? Because they are very clever and their actions make people laugh.",
+    "prompt": "Why does Tony like monkeys?",
+    "options": [
+      "Because they are cute.",
+      "Because they are lazy.",
+      "Because they are clever and funny."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_055",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",
+    "prompt": "Who did Susan go to Qingdao with?",
+    "options": [
+      "Her classmates.",
+      "Her friends.",
+      "Her family."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_056",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",
+    "prompt": "How did Susan's family get to Qingdao?",
+    "options": [
+      "By plane.",
+      "By high-speed train.",
+      "By car."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_057",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",
+    "prompt": "How was the weather in Qingdao?",
+    "options": [
+      "Cool and windy.",
+      "Hot and sunny.",
+      "Rainy and warm."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_058",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",
+    "prompt": "What did Susan do on the beach?",
+    "options": [
+      "She swam in the sea.",
+      "She collected shells and took photos.",
+      "She played volleyball."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_059",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Susan! How was your Dragon Boat Festival holiday? Oh, it was excellent, David! My family went to Qingdao for a trip. Wow! Did you go by train or by plane? We took the high-speed train there. It was very fast and clean. How was the weather there? It was cool and windy, which was perfect for walking on the beach. What did you do on the beach? We collected beautiful shells and took a lot of photos. In the evening, we ate delicious fresh seafood in a restaurant.",
+    "prompt": "What did they eat for dinner?",
+    "options": [
+      "Chicken rice.",
+      "Beef noodles.",
+      "Fresh seafood."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_060",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套6听力Q15(long)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Tony usually gets up at six fifteen on school days.",
+    "options": [
+      "⏰ 6:15",
+      "⏰ 6:50",
+      "⏰ 7:15"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_031",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力第一节Q1(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Miss Green is a beautiful woman with long straight hair.",
+    "options": [
+      "👩‍🦱 (Curly)",
+      "👩 (Long straight)",
+      "👱‍♀️ (Short hair)"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_032",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力第一节Q2(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "My family ordered a large pizza with beef and tomatoes last night.",
+    "options": [
+      "🍕🥩🍅",
+      "🥣🥬",
+      "🥟"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_033",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力第一节Q3(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "Look! Some people are flying kites in the park because it's windy.",
+    "options": [
+      "🌧️",
+      "☀️",
+      "🪁💨"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_034",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力第一节Q4(emoji选图)"
+  },
+  {
+    "type": "listen_and_choose_word",
+    "audio": "We went to the beach and collected beautiful shells on vacation.",
+    "options": [
+      "⛰️",
+      "🏖️🐚",
+      "🏛️"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening_pic"
+    ],
+    "id": "fc_g7v2_lcw_035",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力第一节Q5(emoji选图)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What time do you usually eat dinner, Lily? I usually have dinner at seven o'clock, but on Fridays I have it at seven thirty.",
+    "prompt": "What time does Lily usually have dinner on school days?",
+    "options": [
+      "At 7:00.",
+      "At 7:30.",
+      "At 8:00."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_061",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q6(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Who is your best friend, Susan? The boy wearing glasses? No, my best friend is Jack. He is heavy and has short curly hair.",
+    "prompt": "What does Susan's best friend Jack look like?",
+    "options": [
+      "He wears glasses.",
+      "He is thin.",
+      "He is heavy with short curly hair."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_062",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q7(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What would you like to eat, Grace? I'd like a medium bowl of chicken and cabbage noodles, please.",
+    "prompt": "What kind of noodles does Grace want?",
+    "options": [
+      "Beef noodles.",
+      "Chicken noodles.",
+      "Mutton noodles."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_063",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q8(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Did you go to the zoo yesterday, Tom? No, I didn't. It rained all day, so I stayed at home and listened to music.",
+    "prompt": "What did Tom do yesterday?",
+    "options": [
+      "He went to the zoo.",
+      "He listened to music at home.",
+      "He played computer games."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_064",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q9(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Excuse me, where is the science museum? Go straight along this street and turn left. It's across from the library.",
+    "prompt": "Where is the science museum?",
+    "options": [
+      "Across from the library.",
+      "Next to the bank.",
+      "Behind the hotel."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_065",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q10(conv)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",
+    "prompt": "Who did Mary go to the countryside with?",
+    "options": [
+      "Her parents.",
+      "Her cousin.",
+      "Her friends."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_066",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q11(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",
+    "prompt": "How was the weather in the countryside?",
+    "options": [
+      "Rainy and cold.",
+      "Hot and windy.",
+      "Sunny and cool."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_067",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q12(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",
+    "prompt": "What did Mary do for the first time?",
+    "options": [
+      "Fed chickens.",
+      "Rode a horse.",
+      "Picked apples."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_068",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q13(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",
+    "prompt": "What fruit did they pick in the afternoon?",
+    "options": [
+      "Strawberries.",
+      "Oranges.",
+      "Apples."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_069",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q14(long)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Hi, Mary! Did you have a good time last weekend? Yes, I did, Eric! I went to the countryside with my cousin, Bill. Really? How was the weather there? It was sunny and cool. It was wonderful for a school trip. What did you do on the farm? In the morning, we fed some chickens and rode a horse. It was my first time to ride a horse! Wow! That sounds exciting. What did you do in the afternoon? We picked some fresh apples in the orchard and took many beautiful photos. Did you stay there for dinner? No, we came back home at 5:30 p.m.",
+    "prompt": "What time did they come back home?",
+    "options": [
+      "At 4:30 p.m.",
+      "At 5:30 p.m.",
+      "At 6:30 p.m."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "final_listening"
+    ],
+    "id": "fc_g7v2_dia_070",
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7听力Q15(long)"
+  },
+  {
+    "id": "fc_g7v2_read_001",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Many people like traveling. In London, England, people often take the red double-decker buses or the Underground (subway). The Underground in London is very old but very fast. In Venice, Italy, there are no cars or buses. The \"streets\" are made of water, and people move around in boats called gondolas. It is a very quiet and beautiful city. In Bangkok, Thailand, the traffic is often very busy. Many people take a tuk-tuk, a small three-wheeled vehicle with a loud engine that can move quickly through busy streets. In Beijing, China, more and more people take the subway or share bikes, because it is cheap and eco-friendly.",
+    "subQuestions": [
+      {
+        "stem": "The Underground in London is old but fast.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "People in Venice move around by bus.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "A tuk-tuk is a small three-wheeled vehicle.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Sharing bikes is popular in Beijing because it is cheap and eco-friendly.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "There are many cars and buses in Venice.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "transport"
+    ],
+    "source": "real_exam",
+    "source_ref": "七下期末·套1阅读B篇改写"
+  },
+  {
+    "id": "fc_g7v2_read_002",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Do you know how animals spend the winter? Different animals have different ways to stay warm and safe during the cold months. Many birds don't like the cold winter. In autumn, they fly away to the warm south, where they can find a lot of food. When spring comes and it gets warm, they fly back to the north. This is called migration. Some animals like bears and squirrels choose to sleep through the whole winter. This is called hibernation. Before winter comes, they eat a large amount of food to get fat. During the winter, they stay inside their warm caves or holes and sleep.",
+    "subQuestions": [
+      {
+        "stem": "Many birds fly to the warm south in autumn.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Birds flying south for winter is called hibernation.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Bears and squirrels sleep through the whole winter.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Before winter, hibernating animals eat a lot to get fat.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Birds never come back to the north.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "animals"
+    ],
+    "source": "real_exam",
+    "source_ref": "七下期末·套2阅读B篇改写"
+  },
+  {
+    "id": "fc_g7v2_read_003",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Last month, my school organized a special activity called \"Be a Volunteer for a Day\". Students from Grade 7 went to different places in the city to help others. My group of fifteen students went to the Sunshine Nursing Home. We got there at 9:00 in the morning. The elderly people there were very happy to see us. First, we helped them clean their rooms; we swept the floors and washed the windows. Then we sat down and talked with them, and they told us many interesting stories about their past lives. Next, some students gave performances. Tina played the violin and others sang songs. The old people were very glad and thanked us a lot.",
+    "subQuestions": [
+      {
+        "stem": "The students went to a nursing home to help the elderly.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "There were fifteen students in the group.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "They arrived at the nursing home at 3:00 in the afternoon.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Tina played the violin for the old people.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The elderly people were unhappy to see the students.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "volunteer"
+    ],
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6阅读B篇改写(去重留1)"
+  },
+  {
+    "id": "fc_g7v2_read_004",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Last Saturday, my city held a special activity called \"Green Earth Day\". The goal was to tell people how to protect our environment. My group of ten classmates went to the central park. We arrived there at 8:30 a.m. The park was beautiful, but there was a lot of rubbish on the grass and under the trees, like plastic bottles, paper bags and food boxes. First, we put on gloves and started to pick up the litter. We separated the rubbish into different bags for recycling. It took us about three hours to finish cleaning the whole park. We were tired but very proud of our work.",
+    "subQuestions": [
+      {
+        "stem": "The goal of Green Earth Day was to protect the environment.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The group arrived at the central park at 8:30 a.m.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "They put on gloves before picking up the litter.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "It took them about one hour to clean the park.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "They separated the rubbish for recycling.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "environment"
+    ],
+    "source": "real_exam",
+    "source_ref": "七下期末·套5阅读B篇改写"
+  },
+  {
+    "id": "fc_g7v2_read_005",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Last Saturday, my school organized a special environmental volunteer activity called \"Clean the Beach\". More than twenty students from Grade 7 joined this meaningful work. My group went to the Golden Beach. We arrived there by bus at 8:30 in the morning. The weather was cool and windy. The sea looked beautiful, but there was a lot of rubbish on the sand left by visitors, like plastic bags, juice bottles and paper cups. First, we put on gloves and took out large trash bags. We walked along the beach and picked up the litter carefully. We separated the plastic bottles from other rubbish so they could be recycled.",
+    "subQuestions": [
+      {
+        "stem": "More than twenty students joined the \"Clean the Beach\" activity.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The group went to the Golden Beach by bus.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The weather that day was hot and sunny.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "They separated the plastic bottles for recycling.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The students arrived at the beach at 8:30 in the morning.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ],
+    "vocab_domain": [
+      "reading",
+      "environment"
+    ],
+    "source": "real_exam",
+    "source_ref": "七下期末·套7阅读B篇改写"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are many ___ (银行) on this street.",
+    "options": [
+      "banks",
+      "bank",
+      "bankes",
+      "banks'"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇A1 银行",
+    "id": "fc_g7v2_voc_001"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Keep ___ (安静的), please! The baby is sleeping.",
+    "options": [
+      "quiet",
+      "quite",
+      "quietly",
+      "quietness"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇A2 安静的",
+    "id": "fc_g7v2_voc_002"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My cousin wants to study ___ (计算机) science in college.",
+    "options": [
+      "computer",
+      "computers",
+      "computing",
+      "compute"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇A3 计算机",
+    "id": "fc_g7v2_voc_003"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It's too hot today. Let's buy some ___ (冰激凌).",
+    "options": [
+      "ice-cream",
+      "ice-creams",
+      "icecream",
+      "ice cream's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇A4 冰激凌",
+    "id": "fc_g7v2_voc_004"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We ___ (买) a lot of gifts for our friends last week.",
+    "options": [
+      "bought",
+      "buy",
+      "buyed",
+      "buying"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇A5 买(过去式)",
+    "id": "fc_g7v2_voc_005"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Listen! Who ___ (sing) in the next room?",
+    "options": [
+      "is singing",
+      "sings",
+      "sing",
+      "sang"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇B1 sing现在进行",
+    "id": "fc_g7v2_voc_006"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He went to the library and ___ (read) a history book yesterday.",
+    "options": [
+      "read",
+      "reads",
+      "reading",
+      "readed"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇B2 read过去式",
+    "id": "fc_g7v2_voc_007"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Elephants are very smart and they can walk on ___ (they) tiptoes.",
+    "options": [
+      "their",
+      "they",
+      "them",
+      "theirs"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇B3 they→their",
+    "id": "fc_g7v2_voc_008"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It's easy ___ (find) the park if you have a map.",
+    "options": [
+      "to find",
+      "find",
+      "finding",
+      "found"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇B4 find不定式",
+    "id": "fc_g7v2_voc_009"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "July is usually the ___ (hot) month of the year.",
+    "options": [
+      "hottest",
+      "hot",
+      "hotter",
+      "hotest"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套1词汇B5 hot最高级",
+    "id": "fc_g7v2_voc_010"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Linda always goes to the ___ (图书馆) to read books on weekends.",
+    "options": [
+      "library",
+      "libraries",
+      "librery",
+      "library's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇A1 图书馆",
+    "id": "fc_g7v2_voc_011"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The elephant is one of the largest land ___ (动物) in the world.",
+    "options": [
+      "animals",
+      "animal",
+      "animales",
+      "animal's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇A2 动物(复数)",
+    "id": "fc_g7v2_voc_012"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Wash your ___ (手) before you have meals, please.",
+    "options": [
+      "hands",
+      "hand",
+      "handes",
+      "hand's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇A3 手(复数)",
+    "id": "fc_g7v2_voc_013"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was cloudy yesterday, but today is ___ (晴朗的).",
+    "options": [
+      "sunny",
+      "sun",
+      "sunshine",
+      "suny"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇A4 晴朗的",
+    "id": "fc_g7v2_voc_014"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We had a great time and took many ___ (照片) on the farm.",
+    "options": [
+      "photos",
+      "photo",
+      "photoes",
+      "photo's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇A5 照片(复数)",
+    "id": "fc_g7v2_voc_015"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Look! They ___ (dance) happily under the tree.",
+    "options": [
+      "are dancing",
+      "dance",
+      "dances",
+      "danced"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇B1 dance现在进行",
+    "id": "fc_g7v2_voc_016"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He ___ (buy) a beautiful gift for his mother last night.",
+    "options": [
+      "bought",
+      "buys",
+      "buy",
+      "buying"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇B2 buy过去式",
+    "id": "fc_g7v2_voc_017"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is important for us ___ (learn) English well.",
+    "options": [
+      "to learn",
+      "learn",
+      "learning",
+      "learned"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇B3 learn不定式",
+    "id": "fc_g7v2_voc_018"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These rules are strict, but they are good for ___ (we).",
+    "options": [
+      "us",
+      "we",
+      "our",
+      "ours"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇B4 we→us",
+    "id": "fc_g7v2_voc_019"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are thirty ___ (child) playing games on the playground.",
+    "options": [
+      "children",
+      "childs",
+      "child",
+      "childes"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套2词汇B5 child→children",
+    "id": "fc_g7v2_voc_020"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Walk ___ (一直地) along this street and you'll see the bank.",
+    "options": [
+      "straight",
+      "strait",
+      "straightly",
+      "straigt"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇A1 一直地(去重)",
+    "id": "fc_g7v2_voc_021"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Would you like a ___ (小的) bowl of noodles?",
+    "options": [
+      "small",
+      "smaller",
+      "smallest",
+      "smal"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇A2 小的(去重)",
+    "id": "fc_g7v2_voc_022"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Go ___ (穿过) the park and the library is on your right.",
+    "options": [
+      "through",
+      "throught",
+      "thru",
+      "threw"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇A3 穿过(去重)",
+    "id": "fc_g7v2_voc_023"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is very ___ (寒冷的) in Harbin in winter.",
+    "options": [
+      "cold",
+      "colder",
+      "coldest",
+      "cool"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇A4 寒冷的(去重)",
+    "id": "fc_g7v2_voc_024"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My uncle and his friends are all ___ (演员).",
+    "options": [
+      "actors",
+      "actor",
+      "acters",
+      "actor's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇A5 演员(复数)(去重)",
+    "id": "fc_g7v2_voc_025"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "What would you like ___ (order), sir?",
+    "options": [
+      "to order",
+      "order",
+      "ordering",
+      "ordered"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇B1 order不定式(去重)",
+    "id": "fc_g7v2_voc_026"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Look! The sun ___ (shine) brightly in the sky now.",
+    "options": [
+      "is shining",
+      "shines",
+      "shine",
+      "shone"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇B2 shine现在进行(去重)",
+    "id": "fc_g7v2_voc_027"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "They ___ (visit) the Great Wall last summer.",
+    "options": [
+      "visited",
+      "visit",
+      "visits",
+      "visiting"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇B3 visit过去式(去重)",
+    "id": "fc_g7v2_voc_028"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "She enjoys ___ (read) storybooks in her free time.",
+    "options": [
+      "reading",
+      "read",
+      "reads",
+      "to read"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇B4 read动名词(去重)",
+    "id": "fc_g7v2_voc_029"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are many ___ (teacher) in our school.",
+    "options": [
+      "teachers",
+      "teacher",
+      "teacheres",
+      "teacher's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套3/4/6词汇B5 teacher复数(去重)",
+    "id": "fc_g7v2_voc_030"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Turn left at the first ___ (十字路口) and you'll find the shop.",
+    "options": [
+      "crossing",
+      "cross",
+      "crossings",
+      "crossroad"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇A1 十字路口",
+    "id": "fc_g7v2_voc_031"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My little brother has ___ (短的) hair.",
+    "options": [
+      "short",
+      "shorter",
+      "shortest",
+      "shot"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇A2 短的",
+    "id": "fc_g7v2_voc_032"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I'd like a bowl of ___ (牛肉) soup, please.",
+    "options": [
+      "beef",
+      "beefs",
+      "beaf",
+      "beef's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇A3 牛肉",
+    "id": "fc_g7v2_voc_033"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It was rainy yesterday, but it is ___ (晴朗的) today.",
+    "options": [
+      "sunny",
+      "sun",
+      "sunshine",
+      "suny"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇A4 晴朗的",
+    "id": "fc_g7v2_voc_034"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We took many beautiful ___ (照片) during the trip.",
+    "options": [
+      "photos",
+      "photo",
+      "photoes",
+      "photo's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇A5 照片(复数)",
+    "id": "fc_g7v2_voc_035"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Listen! Who ___ (sing) in the music room?",
+    "options": [
+      "is singing",
+      "sings",
+      "sing",
+      "sang"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇B1 sing现在进行",
+    "id": "fc_g7v2_voc_036"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My father ___ (buy) a new car last month.",
+    "options": [
+      "bought",
+      "buys",
+      "buy",
+      "buying"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇B2 buy过去式",
+    "id": "fc_g7v2_voc_037"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It's important for students ___ (keep) the classroom clean.",
+    "options": [
+      "to keep",
+      "keep",
+      "keeping",
+      "kept"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇B3 keep不定式",
+    "id": "fc_g7v2_voc_038"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "These gifts are for ___ (we). Thank you so much!",
+    "options": [
+      "us",
+      "we",
+      "our",
+      "ours"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇B4 we→us",
+    "id": "fc_g7v2_voc_039"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are many ___ (child) playing in the park.",
+    "options": [
+      "children",
+      "childs",
+      "child",
+      "childes"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套5词汇B5 child→children",
+    "id": "fc_g7v2_voc_040"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "The new ___ (银行) is next to the supermarket.",
+    "options": [
+      "bank",
+      "banks",
+      "bankes",
+      "bank's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇A1 银行",
+    "id": "fc_g7v2_voc_041"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "My sister has ___ (短的) hair, not long hair.",
+    "options": [
+      "short",
+      "shorter",
+      "shortest",
+      "shot"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇A2 短的",
+    "id": "fc_g7v2_voc_042"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "I'd like a hamburger and some ___ (牛肉) soup.",
+    "options": [
+      "beef",
+      "beefs",
+      "beaf",
+      "beef's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇A3 牛肉",
+    "id": "fc_g7v2_voc_043"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It's a ___ (晴朗的) day, perfect for a picnic.",
+    "options": [
+      "sunny",
+      "sun",
+      "sunshine",
+      "suny"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇A4 晴朗的",
+    "id": "fc_g7v2_voc_044"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "We took a lot of ___ (照片) at the beach.",
+    "options": [
+      "photos",
+      "photo",
+      "photoes",
+      "photo's"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇A5 照片(复数)",
+    "id": "fc_g7v2_voc_045"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "Listen! Who ___ (sing) in the next room?",
+    "options": [
+      "is singing",
+      "sings",
+      "sing",
+      "sang"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇B1 sing现在进行",
+    "id": "fc_g7v2_voc_046"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "He ___ (buy) some fruit at the market this morning.",
+    "options": [
+      "bought",
+      "buys",
+      "buy",
+      "buying"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇B2 buy过去式",
+    "id": "fc_g7v2_voc_047"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "It is necessary for us ___ (learn) from each other.",
+    "options": [
+      "to learn",
+      "learn",
+      "learning",
+      "learned"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇B3 learn不定式",
+    "id": "fc_g7v2_voc_048"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "This present is for ___ (we). How nice!",
+    "options": [
+      "us",
+      "we",
+      "our",
+      "ours"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇B4 we→us",
+    "id": "fc_g7v2_voc_049"
+  },
+  {
+    "type": "fill_in_choose",
+    "prompt": "There are over twenty ___ (child) in the classroom.",
+    "options": [
+      "children",
+      "childs",
+      "child",
+      "childes"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "final_vocab"
+    ],
+    "unitId": "g7v2_final",
+    "source": "real_exam",
+    "source_ref": "七下期末·套7词汇B5 child→children",
+    "id": "fc_g7v2_voc_050"
+  }
+]

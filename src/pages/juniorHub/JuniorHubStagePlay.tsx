@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
 import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
@@ -6,6 +6,7 @@ import { hubSpeak } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
+import WritingStudio from "@/components/juniorHub/WritingStudio";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { Link } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
@@ -783,25 +784,6 @@ function ReadingStage({
   );
 }
 
-function WritingStage({ unit, onFinish }: { unit: UnitDef; onFinish: () => void }) {
-  const w = unit.writing;
-  return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-lg font-bold">✍️ 写作练习</div>
-      <p className="mb-2 text-sm">{w?.promptCn}</p>
-      <p className="mb-3 text-xs text-[#888780]">{w?.prompt}</p>
-      {w?.sampleWords?.length ? (
-        <p className="mb-3 text-xs">建议用词：{w.sampleWords.join(", ")}</p>
-      ) : null}
-      <textarea
-        className="mb-3 min-h-[120px] w-full rounded-xl border border-[#EEEAE0] p-3 text-sm"
-        placeholder="在这里写下你的英文句子…"
-      />
-      <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>
-    </div>
-  );
-}
-
 /**
  * 空数据关卡统一兜底:在分发层(switch)挂载题目组件之前判空,空数据时渲染本兜底而非
  * 挂载 ListenMcStage / FinalQuizStage(它们对空题目数组会在 q.opts 处白屏)。
@@ -964,7 +946,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "writing":
-        return <WritingStage unit={unit} onFinish={handleFinish} />;
+        return <WritingStudio unit={unit} onFinish={handleFinish} />;
       case "finalQuiz":
         // 数据源 unit.quizQuestions;空时走兜底,不挂载 FinalQuizStage。
         if (finalQuizQuestions.length === 0)

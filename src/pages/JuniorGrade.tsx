@@ -1,4 +1,4 @@
-import { T } from "@/i18n/T";import { Link, useParams } from "react-router-dom";
+import { T } from "@/i18n/T";import { Link, Navigate, useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Sparkles, BookOpen, Target, Headphones, PenLine } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
@@ -10,6 +10,10 @@ const GRADE_META: Record<string, {title: string;emoji: string;gradient: string;t
 };
 
 export default function JuniorGrade() {
+  // 年级中转页隐藏:整页重定向到名画首页 /junior(恢复时删掉下面这一行即可,组件其余代码保留)
+  return <Navigate to="/junior" replace />;
+
+  // eslint-disable-next-line no-unreachable
   const { grade } = useParams<{grade: string;}>();
   const g = grade ?? "1";
   const meta = GRADE_META[g] ?? GRADE_META["1"];
@@ -53,6 +57,7 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
+      {/* 课堂同步入口在年级页隐藏(保留代码/路由/数据,可恢复);/junior 顶层页的大卡仍保留
       <Link
         to={`/junior/hub/${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 p-5 text-white shadow-tile transition hover:-translate-y-0.5"
@@ -68,6 +73,7 @@ export default function JuniorGrade() {
         </div>
         <span className="relative rounded-full bg-white/25 px-3 py-1 text-xs font-bold backdrop-blur-sm"><T>▶ 进入</T></span>
       </Link>
+      */}
       <Link
         to={`/junior/vocab?grade=${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-500 via-indigo-500 to-blue-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-18px_rgba(91,43,201,0.6)]">

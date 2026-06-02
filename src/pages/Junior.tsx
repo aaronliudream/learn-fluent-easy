@@ -155,12 +155,6 @@ export default function Junior() {
             />
           ))}
         </div>
-
-        <footer className="mt-12 border-t border-border pt-8 text-center">
-          <p className="text-sm italic text-muted-foreground font-['Noto_Serif_SC',serif]">
-            <T>更多城市真题陆续上线（上海 · 北京 · 广州 ...）</T>
-          </p>
-        </footer>
       </div>
     </main>
   );

@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 import "@/lib/primaryHub/styles";
 
 // 名画美育体系(与初中专区统一)。图片在 src/assets/painting/primary/(单数 painting)。
-import composition8 from "@/assets/painting/primary/composition8.jpg";
-import starryNight from "@/assets/painting/primary/starry_night.jpg";
-import almondBlossom from "@/assets/painting/primary/almond_blossom.jpg";
-import qianliJiangshan from "@/assets/painting/primary/qianli_jiangshan.jpg";
-import montmartre from "@/assets/painting/primary/montmartre.jpg";
-import bedroom from "@/assets/painting/primary/bedroom.jpg";
+import composition8 from "@/assets/painting/primary/composition8.webp";
+import starryNight from "@/assets/painting/primary/starry_night.webp";
+import almondBlossom from "@/assets/painting/primary/almond_blossom.webp";
+import qianliJiangshan from "@/assets/painting/primary/qianli_jiangshan.webp";
+import montmartre from "@/assets/painting/primary/montmartre.webp";
+import bedroom from "@/assets/painting/primary/bedroom.webp";
 
 const GRADES: Array<{
   id: PrimaryHubGrade;

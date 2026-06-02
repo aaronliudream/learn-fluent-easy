@@ -14,11 +14,77 @@
             "title": "Starter 1 Hello!",
             "cn": "问候",
             "emoji": "👋",
-            "available": false,
+            "available": true,
             "bigQuestion": "How do you greet people?",
             "pronunciation": "26 字母",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "unit",
+                "cn": "单元",
+                "emoji": "📋"
+              },
+              {
+                "en": "starter",
+                "cn": "起始；过渡单元",
+                "emoji": "🚦"
+              },
+              {
+                "en": "section",
+                "cn": "部分；地区",
+                "emoji": "📑"
+              },
+              {
+                "en": "greet",
+                "cn": "招呼；问候",
+                "emoji": "👋"
+              },
+              {
+                "en": "each",
+                "cn": "每个；各自",
+                "emoji": "☝️"
+              },
+              {
+                "en": "other",
+                "cn": "别的；其他的",
+                "emoji": "🙋"
+              },
+              {
+                "en": "each other",
+                "cn": "互相；彼此",
+                "emoji": "🤝"
+              },
+              {
+                "en": "oh",
+                "cn": "哦；啊",
+                "emoji": "😮"
+              },
+              {
+                "en": "everyone",
+                "cn": "每人；所有人",
+                "emoji": "👥"
+              },
+              {
+                "en": "start",
+                "cn": "开始；着手",
+                "emoji": "🏁"
+              },
+              {
+                "en": "conversation",
+                "cn": "谈话；交谈",
+                "emoji": "💬"
+              },
+              {
+                "en": "spell",
+                "cn": "拼写",
+                "emoji": "🔤"
+              },
+              {
+                "en": "bell",
+                "cn": "铃(声)；钟(声)",
+                "emoji": "🔔"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -88,8 +154,140 @@
             ],
             "grammarTitle": "(Starter,无正式语法)",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "___ morning! Nice to meet you.",
+                "opts": [
+                  "Good",
+                  "Well",
+                  "Fine"
+                ],
+                "answer": 0,
+                "point": "问候语 Good morning",
+                "dim": "grammar"
+              },
+              {
+                "q": "Hello! ___ name is Lin Tao.",
+                "opts": [
+                  "My",
+                  "I",
+                  "Me"
+                ],
+                "answer": 0,
+                "point": "形容词性物主代词 my",
+                "dim": "grammar"
+              },
+              {
+                "q": "This ___ my friend, Mike.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词·三单 is",
+                "dim": "grammar"
+              },
+              {
+                "q": "Can you ___ your name, please?",
+                "opts": [
+                  "spell",
+                  "spells",
+                  "spelling"
+                ],
+                "answer": 0,
+                "point": "实义动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "Nice to meet ___.",
+                "opts": [
+                  "you",
+                  "your",
+                  "yours"
+                ],
+                "answer": 0,
+                "point": "宾格 you",
+                "dim": "grammar"
+              },
+              {
+                "q": "— How do you do? — ___",
+                "opts": [
+                  "How do you do?",
+                  "I am fine.",
+                  "Yes, I do."
+                ],
+                "answer": 0,
+                "point": "问候应答",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Good Morning!\n\nHello! I am Lin Tao. Good morning! This is my friend, Mike. He is from England. We are in the same class. Every morning we greet each other at school. We say 'Good morning!' and 'Nice to meet you!' Our class starts at eight. We are very happy at school.",
+              "passageCn": "你好！我是林涛。早上好！这是我的朋友 Mike。他来自英格兰。我们在同一个班。每天早上我们在学校互相问候，说\"早上好！\"\"很高兴见到你！\"我们八点开始上课。我们在学校很开心。",
+              "questions": [
+                {
+                  "q": "Who is Lin Tao's friend?",
+                  "opts": [
+                    "Mike",
+                    "Tom",
+                    "Sam",
+                    "Bob"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Where is Mike from?",
+                  "opts": [
+                    "China",
+                    "England",
+                    "Canada",
+                    "the US"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "When does their class start?",
+                  "opts": [
+                    "At seven",
+                    "At eight",
+                    "At nine",
+                    "At ten"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What do they say in the morning?",
+                  "opts": [
+                    "Goodbye",
+                    "Good morning",
+                    "Good night",
+                    "See you"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How do they feel at school?",
+                  "opts": [
+                    "Sad",
+                    "Tired",
+                    "Happy",
+                    "Angry"
+                  ],
+                  "answer": 2,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "Say Hello",
               "prompt": "Greet people and introduce yourself in a few sentences. Use 'I am' and 'This is'.",
@@ -144,8 +342,158 @@
               ],
               "minWords": 20
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·At School (1): Good morning! I ___ Lin Tao.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "be动词 I am",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·At School (2): This ___ my friend.",
+                "opts": [
+                  "is",
+                  "am",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "be动词三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·At School (3): ___ name is Mike.",
+                "opts": [
+                  "His",
+                  "He",
+                  "Him"
+                ],
+                "answer": 0,
+                "point": "物主代词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·At School (4): Nice to meet ___.",
+                "opts": [
+                  "you",
+                  "your",
+                  "yours"
+                ],
+                "answer": 0,
+                "point": "宾格",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·At School (5): We ___ in the same class.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: To say hello in the morning, we say '___ morning'.",
+                "opts": [
+                  "Good",
+                  "Nice",
+                  "Fine"
+                ],
+                "answer": 0,
+                "point": "问候语",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: 'Each ___' means 互相.",
+                "opts": [
+                  "other",
+                  "one",
+                  "time"
+                ],
+                "answer": 0,
+                "point": "短语 each other",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: Lin Tao and Mike greet each other ___.",
+                "opts": [
+                  "every morning",
+                  "every night",
+                  "once a week"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Good morning! My name is Lin Tao.",
+                "opts": [
+                  "His name is Lin Tao.",
+                  "His name is Mike.",
+                  "His name is Tom.",
+                  "His name is Bob."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is my friend. He is from England.",
+                "opts": [
+                  "His friend is from China.",
+                  "His friend is from England.",
+                  "His friend is from the US.",
+                  "He has no friend."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Nice to meet you!",
+                "opts": [
+                  "A greeting when you meet someone.",
+                  "Saying goodbye.",
+                  "Asking a question.",
+                  "Saying thank you."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Can you spell your name? Y-A-N-G.",
+                "opts": [
+                  "She asks him to spell his name.",
+                  "She asks his age.",
+                  "She asks where he is from.",
+                  "She says goodbye."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "We are in the same class.",
+                "opts": [
+                  "They are in the same class.",
+                  "They are in different classes.",
+                  "They are not students.",
+                  "They are teachers."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Our class starts at eight.",
+                "opts": [
+                  "Class starts at eight.",
+                  "Class starts at nine.",
+                  "Class starts at seven.",
+                  "Class starts at ten."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u2",
@@ -155,11 +503,42 @@
             "title": "Starter 2 Keep Tidy!",
             "cn": "物品",
             "emoji": "🎒",
-            "available": false,
+            "available": true,
             "bigQuestion": "What do you have?",
             "pronunciation": "a,e,i,o,u (1)",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "bottle",
+                "cn": "瓶子",
+                "emoji": "🍾"
+              },
+              {
+                "en": "eraser",
+                "cn": "橡皮",
+                "emoji": "🩹"
+              },
+              {
+                "en": "key",
+                "cn": "钥匙；关键",
+                "emoji": "🔑"
+              },
+              {
+                "en": "thing",
+                "cn": "东西；事情",
+                "emoji": "📦"
+              },
+              {
+                "en": "need",
+                "cn": "需要",
+                "emoji": "🙏"
+              },
+              {
+                "en": "You're welcome.",
+                "cn": "别客气；不用谢",
+                "emoji": "🙆"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -229,8 +608,140 @@
             ],
             "grammarTitle": "(Starter,无正式语法)",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "What's this? It's ___ eraser.",
+                "opts": [
+                  "an",
+                  "a",
+                  "the"
+                ],
+                "answer": 0,
+                "point": "冠词 an+元音",
+                "dim": "grammar"
+              },
+              {
+                "q": "What's that? It's ___ key.",
+                "opts": [
+                  "a",
+                  "an",
+                  "the"
+                ],
+                "answer": 0,
+                "point": "冠词 a+辅音",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Is this your bottle? — No, it ___.",
+                "opts": [
+                  "isn't",
+                  "aren't",
+                  "don't"
+                ],
+                "answer": 0,
+                "point": "be动词否定",
+                "dim": "grammar"
+              },
+              {
+                "q": "These ___ my books.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "What ___ is your schoolbag? It's blue.",
+                "opts": [
+                  "colour",
+                  "colours",
+                  "color's"
+                ],
+                "answer": 0,
+                "point": "特殊疑问 what colour",
+                "dim": "grammar"
+              },
+              {
+                "q": "I have two ___.",
+                "opts": [
+                  "keys",
+                  "key",
+                  "keyes"
+                ],
+                "answer": 0,
+                "point": "名词复数",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My Schoolbag\n\nThis is my schoolbag. It is blue. Look! There is a book, an eraser, a key and a bottle in it. The eraser is white and the bottle is green. I always keep my things tidy. 'Is this your key, Tom?' 'No, it isn't. My key is black.' I am a tidy student.",
+              "passageCn": "这是我的书包，蓝色的。看！里面有一本书、一块橡皮、一把钥匙和一个瓶子。橡皮是白色的，瓶子是绿色的。我总是把东西放整齐。\"这是你的钥匙吗，Tom？\"\"不，不是。我的钥匙是黑色的。\"我是个爱整洁的学生。",
+              "questions": [
+                {
+                  "q": "What colour is the schoolbag?",
+                  "opts": [
+                    "Blue",
+                    "Green",
+                    "White",
+                    "Black"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is white?",
+                  "opts": [
+                    "The book",
+                    "The eraser",
+                    "The bottle",
+                    "The key"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Is the key Tom's?",
+                  "opts": [
+                    "Yes, it is.",
+                    "No, it isn't.",
+                    "We don't know.",
+                    "It is broken."
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What colour is Tom's key?",
+                  "opts": [
+                    "Blue",
+                    "White",
+                    "Black",
+                    "Green"
+                  ],
+                  "answer": 2,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "The student is ___.",
+                  "opts": [
+                    "tidy",
+                    "lazy",
+                    "tired",
+                    "late"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "What's in My Schoolbag",
               "prompt": "Describe what is in your schoolbag. Use 'This is', 'I have' and colours.",
@@ -292,8 +803,158 @@
               ],
               "minWords": 25
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My Things (1): What's this? It's ___ eraser.",
+                "opts": [
+                  "an",
+                  "a",
+                  "the"
+                ],
+                "answer": 0,
+                "point": "冠词 an",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Things (2): It ___ my key.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Things (3): The bottle ___ green.",
+                "opts": [
+                  "is",
+                  "are",
+                  "be"
+                ],
+                "answer": 0,
+                "point": "be动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Things (4): These ___ my books.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Things (5): Is this ___ schoolbag? Yes.",
+                "opts": [
+                  "your",
+                  "you",
+                  "yours"
+                ],
+                "answer": 0,
+                "point": "物主代词",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: We write with a pen and clean it with an ___.",
+                "opts": [
+                  "eraser",
+                  "apple",
+                  "key"
+                ],
+                "answer": 0,
+                "point": "文具词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: 'Keep ___' means 保持整洁.",
+                "opts": [
+                  "tidy",
+                  "fun",
+                  "dark"
+                ],
+                "answer": 0,
+                "point": "短语",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: Tom's key is ___.",
+                "opts": [
+                  "black",
+                  "white",
+                  "blue"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "My schoolbag is blue.",
+                "opts": [
+                  "The schoolbag is blue.",
+                  "The schoolbag is green.",
+                  "The schoolbag is red.",
+                  "The schoolbag is black."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "There is an eraser and a key in my bag.",
+                "opts": [
+                  "There is an eraser and a key.",
+                  "There is a book only.",
+                  "The bag is empty.",
+                  "There is a bottle only."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Is this your key? No, it isn't.",
+                "opts": [
+                  "The key is his.",
+                  "The key is not his.",
+                  "He has no key.",
+                  "The key is lost."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "My bottle is green.",
+                "opts": [
+                  "The bottle is green.",
+                  "The bottle is blue.",
+                  "The bottle is white.",
+                  "The bottle is black."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I keep my things tidy.",
+                "opts": [
+                  "He is tidy.",
+                  "He is messy.",
+                  "He is late.",
+                  "He is sad."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "These books are mine.",
+                "opts": [
+                  "The books are his.",
+                  "The books are hers.",
+                  "The books are lost.",
+                  "The books are new."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u3",
@@ -303,11 +964,57 @@
             "title": "Starter 3 Welcome!",
             "cn": "认识周围",
             "emoji": "🏡",
-            "available": false,
+            "available": true,
             "bigQuestion": "What is fun in a yard?",
             "pronunciation": "a,e,i,o,u (2)",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "fun",
+                "cn": "乐趣；有趣的",
+                "emoji": "🎉"
+              },
+              {
+                "en": "yard",
+                "cn": "院子；园圃",
+                "emoji": "🏡"
+              },
+              {
+                "en": "carrot",
+                "cn": "胡萝卜",
+                "emoji": "🥕"
+              },
+              {
+                "en": "goose",
+                "cn": "鹅",
+                "emoji": "🦢"
+              },
+              {
+                "en": "count",
+                "cn": "数数",
+                "emoji": "🔢"
+              },
+              {
+                "en": "another",
+                "cn": "另一；又一",
+                "emoji": "➕"
+              },
+              {
+                "en": "else",
+                "cn": "其他的；别的",
+                "emoji": "❓"
+              },
+              {
+                "en": "circle",
+                "cn": "圈出；圆圈",
+                "emoji": "⭕"
+              },
+              {
+                "en": "look at",
+                "cn": "看；瞧",
+                "emoji": "👀"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -377,8 +1084,140 @@
             ],
             "grammarTitle": "(Starter,无正式语法)",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "There ___ a tree in my yard.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be 单数",
+                "dim": "grammar"
+              },
+              {
+                "q": "There ___ two geese under the tree.",
+                "opts": [
+                  "are",
+                  "is",
+                  "be"
+                ],
+                "answer": 0,
+                "point": "there be 复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ many flowers can you count?",
+                "opts": [
+                  "How",
+                  "What",
+                  "Where"
+                ],
+                "answer": 0,
+                "point": "特殊疑问 how many",
+                "dim": "grammar"
+              },
+              {
+                "q": "Look ___ the beautiful flowers!",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "短语 look at",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ is a carrot in the basket.",
+                "opts": [
+                  "There",
+                  "It",
+                  "This"
+                ],
+                "answer": 0,
+                "point": "there be 句型",
+                "dim": "grammar"
+              },
+              {
+                "q": "Welcome ___ my home!",
+                "opts": [
+                  "to",
+                  "at",
+                  "in"
+                ],
+                "answer": 0,
+                "point": "介词 welcome to",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Welcome to My Yard\n\nWelcome to my home! This is my yard. It is big and nice. There is a tall tree in the middle. Under the tree, there are two geese. There is also a carrot in a basket. Look at the flowers! I can count ten flowers. My yard is a fun place. Come and look at it with me!",
+              "passageCn": "欢迎来我家！这是我的院子，又大又漂亮。中间有一棵高高的树。树下有两只鹅，还有一个篮子里放着一根胡萝卜。看这些花！我能数出十朵。我的院子是个有趣的地方。来和我一起看看吧！",
+              "questions": [
+                {
+                  "q": "What is in the middle of the yard?",
+                  "opts": [
+                    "A tree",
+                    "A goose",
+                    "A flower",
+                    "A basket"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How many geese are there?",
+                  "opts": [
+                    "One",
+                    "Two",
+                    "Three",
+                    "Ten"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How many flowers can the writer count?",
+                  "opts": [
+                    "Five",
+                    "Eight",
+                    "Ten",
+                    "Twelve"
+                  ],
+                  "answer": 2,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Where is the carrot?",
+                  "opts": [
+                    "On the tree",
+                    "In a basket",
+                    "Under a goose",
+                    "In the house"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How is the yard?",
+                  "opts": [
+                    "A fun place",
+                    "A small room",
+                    "A dark place",
+                    "An empty place"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "Welcome to My Home",
               "prompt": "Welcome someone to your home and describe a fun place. Use 'There is' and 'I can'.",
@@ -439,8 +1278,158 @@
               ],
               "minWords": 25
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My Yard (1): There ___ a tree in the yard.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be 单数",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Yard (2): There ___ two geese.",
+                "opts": [
+                  "are",
+                  "is",
+                  "be"
+                ],
+                "answer": 0,
+                "point": "there be 复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Yard (3): ___ at the flowers!",
+                "opts": [
+                  "Look",
+                  "Looks",
+                  "Looking"
+                ],
+                "answer": 0,
+                "point": "祈使句",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Yard (4): I can ___ ten flowers.",
+                "opts": [
+                  "count",
+                  "counts",
+                  "counting"
+                ],
+                "answer": 0,
+                "point": "can+原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Yard (5): Welcome ___ my home.",
+                "opts": [
+                  "to",
+                  "at",
+                  "in"
+                ],
+                "answer": 0,
+                "point": "介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: A baby goose grows into a ___.",
+                "opts": [
+                  "goose",
+                  "carrot",
+                  "yard"
+                ],
+                "answer": 0,
+                "point": "名词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: 'Look ___' means 看；瞧.",
+                "opts": [
+                  "at",
+                  "in",
+                  "up"
+                ],
+                "answer": 0,
+                "point": "短语 look at",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: The tree is ___ the middle of the yard.",
+                "opts": [
+                  "in",
+                  "on",
+                  "under"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "There is a big tree in my yard.",
+                "opts": [
+                  "There is a tree in the yard.",
+                  "There is no tree.",
+                  "The yard is empty.",
+                  "There is a house."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "There are two geese under the tree.",
+                "opts": [
+                  "There are two geese.",
+                  "There is one goose.",
+                  "There are three geese.",
+                  "There are no geese."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I can count ten flowers.",
+                "opts": [
+                  "Ten flowers.",
+                  "Two flowers.",
+                  "Five flowers.",
+                  "No flowers."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Welcome to my home!",
+                "opts": [
+                  "A welcome.",
+                  "A goodbye.",
+                  "A question.",
+                  "A thank-you."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Look at the carrot in the basket.",
+                "opts": [
+                  "A carrot is in the basket.",
+                  "A goose is in the basket.",
+                  "A flower is in the basket.",
+                  "The basket is empty."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My yard is a fun place.",
+                "opts": [
+                  "The yard is fun.",
+                  "The yard is boring.",
+                  "The yard is small.",
+                  "The yard is dark."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u4",
@@ -456,64 +1445,154 @@
             "contentStatus": "REAL_已填真题",
             "vocabulary": [
               {
-                "en": "name",
-                "cn": "名字",
-                "emoji": "🪪"
-              },
-              {
-                "en": "friend",
-                "cn": "朋友",
-                "emoji": "🧑‍🤝‍🧑"
-              },
-              {
-                "en": "student",
-                "cn": "学生",
-                "emoji": "🎒"
-              },
-              {
-                "en": "class",
-                "cn": "班级",
-                "emoji": "🏫"
-              },
-              {
-                "en": "grade",
-                "cn": "年级",
-                "emoji": "📊"
-              },
-              {
-                "en": "meet",
-                "cn": "遇见;认识",
+                "en": "make friends",
+                "cn": "交朋友",
                 "emoji": "🤝"
               },
               {
-                "en": "nice",
-                "cn": "友好的;美好的",
-                "emoji": "😊"
+                "en": "get to know",
+                "cn": "认识；了解",
+                "emoji": "🔍"
               },
               {
-                "en": "England",
-                "cn": "英格兰;英国",
-                "emoji": "🇬🇧"
+                "en": "full",
+                "cn": "完整的；满的",
+                "emoji": "🔋"
               },
               {
-                "en": "China",
-                "cn": "中国",
-                "emoji": "🇨🇳"
+                "en": "full name",
+                "cn": "全名",
+                "emoji": "🪪"
               },
               {
-                "en": "year",
-                "cn": "岁;年",
-                "emoji": "🎂"
+                "en": "grade",
+                "cn": "年级；等级",
+                "emoji": "🎓"
               },
               {
-                "en": "parents",
-                "cn": "父母",
-                "emoji": "👨‍👩‍👧"
+                "en": "last name",
+                "cn": "姓氏",
+                "emoji": "🏷️"
               },
               {
                 "en": "classmate",
                 "cn": "同班同学",
-                "emoji": "👫"
+                "emoji": "🧑‍🤝‍🧑"
+              },
+              {
+                "en": "class teacher",
+                "cn": "班主任",
+                "emoji": "👩‍🏫"
+              },
+              {
+                "en": "first name",
+                "cn": "名字",
+                "emoji": "🪪"
+              },
+              {
+                "en": "mistake",
+                "cn": "错误；失误",
+                "emoji": "❌"
+              },
+              {
+                "en": "country",
+                "cn": "国家",
+                "emoji": "🌍"
+              },
+              {
+                "en": "same",
+                "cn": "相同的",
+                "emoji": "🟰"
+              },
+              {
+                "en": "twin",
+                "cn": "双胞胎之一",
+                "emoji": "👯"
+              },
+              {
+                "en": "both",
+                "cn": "两个都",
+                "emoji": "✌️"
+              },
+              {
+                "en": "band",
+                "cn": "乐队",
+                "emoji": "🎸"
+              },
+              {
+                "en": "pot",
+                "cn": "锅",
+                "emoji": "🍲"
+              },
+              {
+                "en": "a lot",
+                "cn": "很；非常",
+                "emoji": "💯"
+              },
+              {
+                "en": "tofu",
+                "cn": "豆腐",
+                "emoji": "🧈"
+              },
+              {
+                "en": "parrot",
+                "cn": "鹦鹉",
+                "emoji": "🦜"
+              },
+              {
+                "en": "guitar",
+                "cn": "吉他",
+                "emoji": "🎸"
+              },
+              {
+                "en": "tennis",
+                "cn": "网球",
+                "emoji": "🎾"
+              },
+              {
+                "en": "page",
+                "cn": "页",
+                "emoji": "📄"
+              },
+              {
+                "en": "even",
+                "cn": "甚至；连",
+                "emoji": "➕"
+              },
+              {
+                "en": "hey",
+                "cn": "嘿",
+                "emoji": "🙋"
+              },
+              {
+                "en": "play the guitar",
+                "cn": "弹吉他",
+                "emoji": "🎸"
+              },
+              {
+                "en": "would",
+                "cn": "想；将会",
+                "emoji": "💭"
+              },
+              {
+                "en": "would like to",
+                "cn": "愿意；喜欢",
+                "emoji": "💝"
+              },
+              {
+                "en": "information",
+                "cn": "信息；消息",
+                "emoji": "ℹ️"
+              },
+              {
+                "en": "hobby",
+                "cn": "业余爱好",
+                "emoji": "🎨"
+              },
+              {
+                "en": "re",
+                "cn": "关于；事由",
+                "emoji": "✉️"
               }
             ],
             "dialogues": [],
@@ -1004,11 +2083,167 @@
             "title": "We're Family!",
             "cn": "家庭",
             "emoji": "👨‍👩‍👧‍👦",
-            "available": false,
+            "available": true,
             "bigQuestion": "What does family mean to you?",
             "pronunciation": "/ɜː/ /ə/ /ʌ/ /ɑː/ + 词重音(1)",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "mean",
+                "cn": "意思是；打算",
+                "emoji": "💡"
+              },
+              {
+                "en": "husband",
+                "cn": "丈夫",
+                "emoji": "🤵"
+              },
+              {
+                "en": "bat",
+                "cn": "球棒；球拍",
+                "emoji": "🏏"
+              },
+              {
+                "en": "ping-pong bat",
+                "cn": "乒乓球拍",
+                "emoji": "🏓"
+              },
+              {
+                "en": "play ping-pong",
+                "cn": "打乒乓球",
+                "emoji": "🏓"
+              },
+              {
+                "en": "together",
+                "cn": "在一起；共同",
+                "emoji": "👨‍👩‍👧"
+              },
+              {
+                "en": "every day",
+                "cn": "每天",
+                "emoji": "📅"
+              },
+              {
+                "en": "fishing rod",
+                "cn": "钓竿",
+                "emoji": "🎣"
+              },
+              {
+                "en": "spend",
+                "cn": "花(时间、钱)",
+                "emoji": "💸"
+              },
+              {
+                "en": "a lot of",
+                "cn": "大量；许多",
+                "emoji": "📚"
+              },
+              {
+                "en": "really",
+                "cn": "真正地；确实",
+                "emoji": "❗"
+              },
+              {
+                "en": "member",
+                "cn": "成员；会员",
+                "emoji": "🧑"
+              },
+              {
+                "en": "activity",
+                "cn": "活动",
+                "emoji": "🎯"
+              },
+              {
+                "en": "chess",
+                "cn": "国际象棋",
+                "emoji": "♟️"
+              },
+              {
+                "en": "Chinese chess",
+                "cn": "中国象棋",
+                "emoji": "♟️"
+              },
+              {
+                "en": "grandparent",
+                "cn": "(外)祖父母",
+                "emoji": "👴"
+              },
+              {
+                "en": "funny",
+                "cn": "好笑的；奇怪的",
+                "emoji": "😄"
+              },
+              {
+                "en": "laugh",
+                "cn": "笑；笑声",
+                "emoji": "😆"
+              },
+              {
+                "en": "different",
+                "cn": "不同的",
+                "emoji": "🔀"
+              },
+              {
+                "en": "violin",
+                "cn": "小提琴",
+                "emoji": "🎻"
+              },
+              {
+                "en": "have fun",
+                "cn": "玩得高兴",
+                "emoji": "🎉"
+              },
+              {
+                "en": "hat",
+                "cn": "帽子",
+                "emoji": "🎩"
+              },
+              {
+                "en": "handsome",
+                "cn": "英俊的",
+                "emoji": "😎"
+              },
+              {
+                "en": "knee",
+                "cn": "膝盖",
+                "emoji": "🦵"
+              },
+              {
+                "en": "at night",
+                "cn": "在夜晚",
+                "emoji": "🌙"
+              },
+              {
+                "en": "in the middle",
+                "cn": "在中间",
+                "emoji": "🎯"
+              },
+              {
+                "en": "grandchild",
+                "cn": "(外)孙子/孙女",
+                "emoji": "👶"
+              },
+              {
+                "en": "son",
+                "cn": "儿子",
+                "emoji": "👦"
+              },
+              {
+                "en": "hike",
+                "cn": "远足；徒步",
+                "emoji": "🥾"
+              },
+              {
+                "en": "go hiking",
+                "cn": "去远足",
+                "emoji": "🥾"
+              },
+              {
+                "en": "next to",
+                "cn": "紧邻；在旁边",
+                "emoji": "↔️"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1078,8 +2313,162 @@
             ],
             "grammarTitle": "一般现在时(do)+ 名词所有格 's",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "My father ___ to work by bike every day.",
+                "opts": [
+                  "goes",
+                  "go",
+                  "going"
+                ],
+                "answer": 0,
+                "point": "一般现在时·三单 go→goes",
+                "dim": "grammar"
+              },
+              {
+                "q": "This is my ___ bike. He lets me ride it.",
+                "opts": [
+                  "brother's",
+                  "brothers",
+                  "brother"
+                ],
+                "answer": 0,
+                "point": "名词所有格 's",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ___ chess together on weekends.",
+                "opts": [
+                  "play",
+                  "plays",
+                  "playing"
+                ],
+                "answer": 0,
+                "point": "一般现在时·主语 we",
+                "dim": "grammar"
+              },
+              {
+                "q": "She ___ the violin very well.",
+                "opts": [
+                  "plays",
+                  "play",
+                  "is play"
+                ],
+                "answer": 0,
+                "point": "一般现在时·三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ your brother like sports?",
+                "opts": [
+                  "Does",
+                  "Do",
+                  "Is"
+                ],
+                "answer": 0,
+                "point": "一般现在时疑问·does",
+                "dim": "grammar"
+              },
+              {
+                "q": "These are my ___ books. They are twins.",
+                "opts": [
+                  "sisters'",
+                  "sister's",
+                  "sisters"
+                ],
+                "answer": 0,
+                "point": "复数名词所有格 s'",
+                "dim": "grammar"
+              },
+              {
+                "q": "My grandparents ___ in the countryside.",
+                "opts": [
+                  "live",
+                  "lives",
+                  "living"
+                ],
+                "answer": 0,
+                "point": "一般现在时·复数主语",
+                "dim": "grammar"
+              },
+              {
+                "q": "Tom ___ have a fishing rod, so I lend him mine.",
+                "opts": [
+                  "doesn't",
+                  "don't",
+                  "isn't"
+                ],
+                "answer": 0,
+                "point": "一般现在时否定·doesn't",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My Happy Family\n\nHi, I'm Jack. There are five people in my family: my grandparents, my parents and me. My father is a teacher, and my mother is a doctor. On weekends, we often do activities together. My father and I play chess, and my mother likes hiking. My grandfather can play the violin, so we sing and laugh in the evening. We always have fun together. I love my family very much.",
+              "passageCn": "我的幸福家庭\n\n嗨，我是 Jack。我家有五口人：祖父母、父母和我。我爸爸是老师，妈妈是医生。周末我们常常一起活动：我和爸爸下棋，妈妈喜欢远足。爷爷会拉小提琴，所以晚上我们一起唱歌欢笑。我们总是在一起很开心。我非常爱我的家。",
+              "questions": [
+                {
+                  "q": "How many people are there in Jack's family?",
+                  "opts": [
+                    "Four",
+                    "Five",
+                    "Six",
+                    "Seven"
+                  ],
+                  "answer": 1,
+                  "point": "细节·five people",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does Jack's mother do?",
+                  "opts": [
+                    "A teacher",
+                    "A doctor",
+                    "A nurse",
+                    "A singer"
+                  ],
+                  "answer": 1,
+                  "point": "细节·mother is a doctor",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What do Jack and his father do together?",
+                  "opts": [
+                    "Play chess",
+                    "Play ping-pong",
+                    "Go hiking",
+                    "Sing songs"
+                  ],
+                  "answer": 0,
+                  "point": "细节·play chess",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Who can play the violin?",
+                  "opts": [
+                    "Jack",
+                    "His father",
+                    "His grandfather",
+                    "His mother"
+                  ],
+                  "answer": 2,
+                  "point": "细节·grandfather",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How does Jack feel about his family?",
+                  "opts": [
+                    "He loves it.",
+                    "He is bored.",
+                    "He is sad.",
+                    "He doesn't care."
+                  ],
+                  "answer": 0,
+                  "point": "主旨·I love my family",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "My Family",
               "prompt": "Introduce your family. Use the present tense and 's possessive (e.g. my father's).",
@@ -1142,8 +2531,180 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My Family (1): There ___ five people in my family.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be 复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Family (2): My father ___ a teacher.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词·三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Family (3): My mother ___ in a hospital.",
+                "opts": [
+                  "works",
+                  "work",
+                  "working"
+                ],
+                "answer": 0,
+                "point": "一般现在时·三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Family (4): On weekends, we ___ activities together.",
+                "opts": [
+                  "do",
+                  "does",
+                  "doing"
+                ],
+                "answer": 0,
+                "point": "一般现在时·we",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Family (5): This is my ___ violin.",
+                "opts": [
+                  "grandfather's",
+                  "grandfather",
+                  "grandfathers"
+                ],
+                "answer": 0,
+                "point": "名词所有格 's",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Family (6): My brother and I ___ chess.",
+                "opts": [
+                  "play",
+                  "plays",
+                  "plaies"
+                ],
+                "answer": 0,
+                "point": "一般现在时·复数主语",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇·家庭: My father's father is my ___.",
+                "opts": [
+                  "grandfather",
+                  "uncle",
+                  "son"
+                ],
+                "answer": 0,
+                "point": "家庭称谓",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇·家庭: My parents' son is my ___ (if not me).",
+                "opts": [
+                  "brother",
+                  "sister",
+                  "cousin"
+                ],
+                "answer": 0,
+                "point": "家庭称谓",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: We often ___ fun when we are together.",
+                "opts": [
+                  "have",
+                  "make",
+                  "do"
+                ],
+                "answer": 0,
+                "point": "have fun 搭配",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: From the passage, the family is ___.",
+                "opts": [
+                  "happy",
+                  "unhappy",
+                  "busy and tired"
+                ],
+                "answer": 0,
+                "point": "主旨理解",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "My grandparents live with us, so we are a big and happy family.",
+                "opts": [
+                  "He lives alone.",
+                  "His grandparents live with him.",
+                  "He has a small family.",
+                  "He lives with friends."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "My father plays chess with me every weekend.",
+                "opts": [
+                  "Father plays chess with him.",
+                  "Father plays ping-pong.",
+                  "Father reads books.",
+                  "Father goes hiking."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My mother is a doctor. She works in a hospital.",
+                "opts": [
+                  "Mother is a teacher.",
+                  "Mother is a doctor.",
+                  "Mother is a singer.",
+                  "Mother is a nurse."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "My grandfather can play the violin very well.",
+                "opts": [
+                  "Grandfather plays the guitar.",
+                  "Grandfather plays the drum.",
+                  "Grandfather plays the violin.",
+                  "Grandfather sings."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "On weekends, my family often does activities together.",
+                "opts": [
+                  "They stay apart.",
+                  "They do activities together.",
+                  "They watch TV alone.",
+                  "They go to school."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "I have a twin brother. We look the same.",
+                "opts": [
+                  "He has a twin brother.",
+                  "He has a twin sister.",
+                  "He is the only child.",
+                  "He has three brothers."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u6",
@@ -1153,11 +2714,222 @@
             "title": "My School",
             "cn": "学校",
             "emoji": "🏫",
-            "available": false,
+            "available": true,
             "bigQuestion": "What do you like about your school?",
             "pronunciation": "元音 + 词重音(2)",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "hall",
+                "cn": "礼堂；大厅",
+                "emoji": "🏛️"
+              },
+              {
+                "en": "dining hall",
+                "cn": "餐厅",
+                "emoji": "🍽️"
+              },
+              {
+                "en": "in front of",
+                "cn": "在……前面",
+                "emoji": "⬆️"
+              },
+              {
+                "en": "building",
+                "cn": "建筑物；房子",
+                "emoji": "🏢"
+              },
+              {
+                "en": "across",
+                "cn": "穿过；横过",
+                "emoji": "↔️"
+              },
+              {
+                "en": "across from",
+                "cn": "在……对面",
+                "emoji": "🔁"
+              },
+              {
+                "en": "centre",
+                "cn": "中心；中央",
+                "emoji": "🎯"
+              },
+              {
+                "en": "gym",
+                "cn": "体育馆；健身房",
+                "emoji": "🏋️"
+              },
+              {
+                "en": "field",
+                "cn": "场地；田地",
+                "emoji": "🌾"
+              },
+              {
+                "en": "sports field",
+                "cn": "运动场",
+                "emoji": "🏟️"
+              },
+              {
+                "en": "office",
+                "cn": "办公室",
+                "emoji": "🏢"
+              },
+              {
+                "en": "large",
+                "cn": "大的；大号的",
+                "emoji": "🔵"
+              },
+              {
+                "en": "special",
+                "cn": "特别的",
+                "emoji": "⭐"
+              },
+              {
+                "en": "smart",
+                "cn": "智能的；聪明的",
+                "emoji": "🧠"
+              },
+              {
+                "en": "whiteboard",
+                "cn": "白板",
+                "emoji": "🪧"
+              },
+              {
+                "en": "put up",
+                "cn": "张贴；搭建",
+                "emoji": "📌"
+              },
+              {
+                "en": "important",
+                "cn": "重要的",
+                "emoji": "❗"
+              },
+              {
+                "en": "notice",
+                "cn": "通知；注意到",
+                "emoji": "📢"
+              },
+              {
+                "en": "locker",
+                "cn": "寄物柜",
+                "emoji": "🔐"
+              },
+              {
+                "en": "drawer",
+                "cn": "抽屉",
+                "emoji": "🗄️"
+              },
+              {
+                "en": "at the back of",
+                "cn": "在……后面",
+                "emoji": "⬇️"
+              },
+              {
+                "en": "corner",
+                "cn": "角；街角",
+                "emoji": "📐"
+              },
+              {
+                "en": "bookcase",
+                "cn": "书橱；书柜",
+                "emoji": "📚"
+              },
+              {
+                "en": "screen",
+                "cn": "屏幕；银幕",
+                "emoji": "🖥️"
+              },
+              {
+                "en": "at school",
+                "cn": "在学校",
+                "emoji": "🏫"
+              },
+              {
+                "en": "different from",
+                "cn": "与……不一样",
+                "emoji": "🔀"
+              },
+              {
+                "en": "modern",
+                "cn": "现代的",
+                "emoji": "🏙️"
+              },
+              {
+                "en": "do exercises",
+                "cn": "做体操",
+                "emoji": "🤸"
+              },
+              {
+                "en": "amazing",
+                "cn": "令人惊奇的",
+                "emoji": "🤩"
+              },
+              {
+                "en": "raise",
+                "cn": "使升高；提高",
+                "emoji": "⬆️"
+              },
+              {
+                "en": "flag",
+                "cn": "旗；旗帜",
+                "emoji": "🚩"
+              },
+              {
+                "en": "most",
+                "cn": "大多数；最",
+                "emoji": "🔝"
+              },
+              {
+                "en": "change",
+                "cn": "改变；变化",
+                "emoji": "🔄"
+              },
+              {
+                "en": "seat",
+                "cn": "座位",
+                "emoji": "💺"
+              },
+              {
+                "en": "delicious",
+                "cn": "美味的",
+                "emoji": "😋"
+              },
+              {
+                "en": "How about...?",
+                "cn": "……怎么样？",
+                "emoji": "🤔"
+              },
+              {
+                "en": "yours",
+                "cn": "你的(东西)",
+                "emoji": "🫵"
+              },
+              {
+                "en": "send",
+                "cn": "发送；邮寄",
+                "emoji": "📮"
+              },
+              {
+                "en": "similar",
+                "cn": "类似的",
+                "emoji": "♊"
+              },
+              {
+                "en": "similar to",
+                "cn": "类似于",
+                "emoji": "♊"
+              },
+              {
+                "en": "sound",
+                "cn": "听起来；声音",
+                "emoji": "🔊"
+              },
+              {
+                "en": "bye for now",
+                "cn": "再见",
+                "emoji": "👋"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1227,8 +2999,162 @@
             ],
             "grammarTitle": "there be + 方位介词",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "There ___ a library in our school.",
+                "opts": [
+                  "is",
+                  "are",
+                  "be"
+                ],
+                "answer": 0,
+                "point": "there be 单数",
+                "dim": "grammar"
+              },
+              {
+                "q": "There ___ two gyms near the playground.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be 复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "The office is ___ the second floor.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "介词 on the floor",
+                "dim": "grammar"
+              },
+              {
+                "q": "The library is ___ to the dining hall.",
+                "opts": [
+                  "next",
+                  "near",
+                  "beside"
+                ],
+                "answer": 0,
+                "point": "短语 next to",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ are the science labs?",
+                "opts": [
+                  "Where",
+                  "What",
+                  "How"
+                ],
+                "answer": 0,
+                "point": "特殊疑问 where",
+                "dim": "grammar"
+              },
+              {
+                "q": "In ___ of the building, there is a playground.",
+                "opts": [
+                  "front",
+                  "back",
+                  "middle"
+                ],
+                "answer": 0,
+                "point": "短语 in front of",
+                "dim": "grammar"
+              },
+              {
+                "q": "The bookcase is ___ the wall.",
+                "opts": [
+                  "against",
+                  "on",
+                  "of"
+                ],
+                "answer": 1,
+                "point": "方位 on",
+                "dim": "grammar"
+              },
+              {
+                "q": "There ___ a screen and two whiteboards in the room.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be 就近一致",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My School\n\nThis is my school. It is big and beautiful. There is a library next to the dining hall, and it is on the second floor. In front of the teaching building, there is a large playground. We do morning exercises and raise the flag there. There is also a gym behind the office. I think my school is amazing, and I love it very much.",
+              "passageCn": "这是我的学校，又大又漂亮。餐厅旁边有一个图书馆，在二楼。教学楼前面有一个大操场，我们在那里做早操、升旗。办公室后面还有一个体育馆。我觉得我的学校很棒，我非常喜欢它。",
+              "questions": [
+                {
+                  "q": "Where is the library?",
+                  "opts": [
+                    "Next to the dining hall",
+                    "Behind the office",
+                    "In the gym",
+                    "Under the playground"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Which floor is the library on?",
+                  "opts": [
+                    "The first floor",
+                    "The second floor",
+                    "The third floor",
+                    "The fourth floor"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What do students do on the playground?",
+                  "opts": [
+                    "Morning exercises and raise the flag",
+                    "Eat lunch",
+                    "Read books",
+                    "Sleep"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Where is the gym?",
+                  "opts": [
+                    "Behind the office",
+                    "In front of the building",
+                    "Next to the library",
+                    "On the roof"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How does the writer feel about the school?",
+                  "opts": [
+                    "Loves it",
+                    "Hates it",
+                    "Is bored",
+                    "Is afraid"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "My School",
               "prompt": "Describe your school. Use 'There is/are' and place prepositions.",
@@ -1294,8 +3220,158 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My School (1): There ___ a big library.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "there be",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My School (2): It is ___ the second floor.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My School (3): The gym is ___ the office.",
+                "opts": [
+                  "behind",
+                  "of",
+                  "to"
+                ],
+                "answer": 0,
+                "point": "方位介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My School (4): In front ___ the building is a playground.",
+                "opts": [
+                  "of",
+                  "on",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "短语 in front of",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My School (5): We ___ morning exercises every day.",
+                "opts": [
+                  "do",
+                  "does",
+                  "doing"
+                ],
+                "answer": 0,
+                "point": "一般现在时",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: We borrow and read books in the ___.",
+                "opts": [
+                  "library",
+                  "gym",
+                  "office"
+                ],
+                "answer": 0,
+                "point": "场所词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: We eat lunch in the ___.",
+                "opts": [
+                  "dining hall",
+                  "library",
+                  "lab"
+                ],
+                "answer": 0,
+                "point": "场所词",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: The library is ___ the dining hall.",
+                "opts": [
+                  "next to",
+                  "behind",
+                  "far from"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "There is a big library in our school.",
+                "opts": [
+                  "There is a library.",
+                  "There is no library.",
+                  "The school has no building.",
+                  "There is a gym only."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The office is on the second floor.",
+                "opts": [
+                  "The office is on the second floor.",
+                  "The office is on the first floor.",
+                  "The office is on the third floor.",
+                  "There is no office."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "In front of the building, there is a playground.",
+                "opts": [
+                  "The playground is in front of the building.",
+                  "The playground is behind the building.",
+                  "There is no playground.",
+                  "The playground is inside."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "We raise the flag on the playground every morning.",
+                "opts": [
+                  "They raise the flag on the playground.",
+                  "They raise the flag in the gym.",
+                  "They never raise the flag.",
+                  "They raise it at night."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The gym is behind the office.",
+                "opts": [
+                  "The gym is behind the office.",
+                  "The gym is in front of the office.",
+                  "The gym is next to the library.",
+                  "There is no gym."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My school is amazing and clean.",
+                "opts": [
+                  "The school is amazing.",
+                  "The school is dirty.",
+                  "The school is small.",
+                  "The school is old."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u7",
@@ -1305,11 +3381,167 @@
             "title": "My Favourite Subject",
             "cn": "学科",
             "emoji": "📚",
-            "available": false,
+            "available": true,
             "bigQuestion": "Why do we learn different subjects?",
             "pronunciation": "双元音 + 连读",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "biology",
+                "cn": "生物学",
+                "emoji": "🧬"
+              },
+              {
+                "en": "IT",
+                "cn": "信息技术",
+                "emoji": "💻"
+              },
+              {
+                "en": "geography",
+                "cn": "地理(学)",
+                "emoji": "🗺️"
+              },
+              {
+                "en": "history",
+                "cn": "历史；历史课",
+                "emoji": "📜"
+              },
+              {
+                "en": "boring",
+                "cn": "乏味的",
+                "emoji": "😴"
+              },
+              {
+                "en": "useful",
+                "cn": "有用的",
+                "emoji": "🛠️"
+              },
+              {
+                "en": "exciting",
+                "cn": "令人激动的",
+                "emoji": "🤩"
+              },
+              {
+                "en": "past",
+                "cn": "过去；过去的",
+                "emoji": "⏮️"
+              },
+              {
+                "en": "good with",
+                "cn": "善于应付……的",
+                "emoji": "👍"
+              },
+              {
+                "en": "number",
+                "cn": "数字；号码",
+                "emoji": "🔢"
+              },
+              {
+                "en": "help sb with",
+                "cn": "帮助某人做某事",
+                "emoji": "🆘"
+              },
+              {
+                "en": "reason",
+                "cn": "原因；理由",
+                "emoji": "❓"
+              },
+              {
+                "en": "listen to",
+                "cn": "听；倾听",
+                "emoji": "👂"
+              },
+              {
+                "en": "good at",
+                "cn": "擅长",
+                "emoji": "🏆"
+              },
+              {
+                "en": "remember",
+                "cn": "记住；记得",
+                "emoji": "🧠"
+              },
+              {
+                "en": "as",
+                "cn": "如同；作为；当……时",
+                "emoji": "🔗"
+              },
+              {
+                "en": "AM",
+                "cn": "上午",
+                "emoji": "🌅"
+              },
+              {
+                "en": "PM",
+                "cn": "下午；午后",
+                "emoji": "🌆"
+              },
+              {
+                "en": "French",
+                "cn": "法语",
+                "emoji": "🇫🇷"
+              },
+              {
+                "en": "excellent",
+                "cn": "优秀的；极好的",
+                "emoji": "🌟"
+              },
+              {
+                "en": "instrument",
+                "cn": "器械；乐器",
+                "emoji": "🎺"
+              },
+              {
+                "en": "singer",
+                "cn": "歌手",
+                "emoji": "🎤"
+              },
+              {
+                "en": "future",
+                "cn": "将来；未来",
+                "emoji": "🔮"
+              },
+              {
+                "en": "in the future",
+                "cn": "将来；未来",
+                "emoji": "🔮"
+              },
+              {
+                "en": "term",
+                "cn": "学期",
+                "emoji": "📆"
+              },
+              {
+                "en": "work out",
+                "cn": "计算出；解决",
+                "emoji": "🧮"
+              },
+              {
+                "en": "problem",
+                "cn": "难题；困难",
+                "emoji": "⚠️"
+              },
+              {
+                "en": "in class",
+                "cn": "在课堂上",
+                "emoji": "🏫"
+              },
+              {
+                "en": "magic",
+                "cn": "魔法；有魔力的",
+                "emoji": "✨"
+              },
+              {
+                "en": "life",
+                "cn": "生活；生命",
+                "emoji": "🌱"
+              },
+              {
+                "en": "scientist",
+                "cn": "科学家",
+                "emoji": "🔬"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1379,8 +3611,162 @@
             ],
             "grammarTitle": "连词 and / but / because",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "I like English ___ it is useful.",
+                "opts": [
+                  "because",
+                  "but",
+                  "or"
+                ],
+                "answer": 0,
+                "point": "连词 because",
+                "dim": "grammar"
+              },
+              {
+                "q": "Maths is difficult, ___ I still like it.",
+                "opts": [
+                  "but",
+                  "because",
+                  "so"
+                ],
+                "answer": 0,
+                "point": "连词 but",
+                "dim": "grammar"
+              },
+              {
+                "q": "I have history ___ geography on Monday.",
+                "opts": [
+                  "and",
+                  "but",
+                  "because"
+                ],
+                "answer": 0,
+                "point": "连词 and",
+                "dim": "grammar"
+              },
+              {
+                "q": "I don't like PE ___ I am not good at sports.",
+                "opts": [
+                  "because",
+                  "and",
+                  "but"
+                ],
+                "answer": 0,
+                "point": "连词 because",
+                "dim": "grammar"
+              },
+              {
+                "q": "She is good ___ drawing.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "短语 good at",
+                "dim": "grammar"
+              },
+              {
+                "q": "My teacher is kind, ___ her class is great.",
+                "opts": [
+                  "so",
+                  "but",
+                  "or"
+                ],
+                "answer": 0,
+                "point": "连词 so",
+                "dim": "grammar"
+              },
+              {
+                "q": "English is ___ useful ___ interesting.",
+                "opts": [
+                  "both; and",
+                  "either; and",
+                  "not; but"
+                ],
+                "answer": 0,
+                "point": "both...and",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Why do you like art? — ___ I can draw.",
+                "opts": [
+                  "Because",
+                  "So",
+                  "But"
+                ],
+                "answer": 0,
+                "point": "because 答 why",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My Favourite Subject\n\nI am Anna. I have many subjects at school, such as Chinese, maths, English and history. My favourite subject is English because it is useful and fun. I don't like maths very much because it is difficult, but I still work hard at it. My English teacher is kind, so her class is always great. I want to learn English well in the future.",
+              "passageCn": "我是 Anna。我在学校学很多科目，比如语文、数学、英语和历史。我最喜欢的科目是英语，因为它有用又有趣。我不太喜欢数学，因为它很难，但我仍然努力学。我的英语老师很和蔼，所以她的课总是很棒。我想将来把英语学好。",
+              "questions": [
+                {
+                  "q": "What is Anna's favourite subject?",
+                  "opts": [
+                    "Chinese",
+                    "Maths",
+                    "English",
+                    "History"
+                  ],
+                  "answer": 2,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why does she like it?",
+                  "opts": [
+                    "It is useful and fun",
+                    "It is easy",
+                    "It is short",
+                    "The teacher is strict"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Which subject is difficult for her?",
+                  "opts": [
+                    "English",
+                    "Maths",
+                    "History",
+                    "Art"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is her English teacher like?",
+                  "opts": [
+                    "Kind",
+                    "Strict",
+                    "Boring",
+                    "Lazy"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does Anna want to do in the future?",
+                  "opts": [
+                    "Learn English well",
+                    "Stop studying",
+                    "Be a doctor",
+                    "Play sports"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "My Favourite Subject",
               "prompt": "Talk about your favourite subject. Use and / but / because.",
@@ -1443,8 +3829,158 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·Subjects (1): My favourite subject ___ English.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "be动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Subjects (2): I like it ___ it is useful.",
+                "opts": [
+                  "because",
+                  "but",
+                  "and"
+                ],
+                "answer": 0,
+                "point": "连词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Subjects (3): Maths is hard, ___ I work hard.",
+                "opts": [
+                  "but",
+                  "because",
+                  "so"
+                ],
+                "answer": 0,
+                "point": "连词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Subjects (4): I have history ___ geography today.",
+                "opts": [
+                  "and",
+                  "but",
+                  "or"
+                ],
+                "answer": 0,
+                "point": "连词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Subjects (5): I am good ___ English.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "短语 good at",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: We study plants and animals in ___.",
+                "opts": [
+                  "biology",
+                  "history",
+                  "music"
+                ],
+                "answer": 0,
+                "point": "学科词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: ___ is the study of the past.",
+                "opts": [
+                  "History",
+                  "Maths",
+                  "Art"
+                ],
+                "answer": 0,
+                "point": "学科词",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: Anna thinks maths is ___.",
+                "opts": [
+                  "difficult",
+                  "easy",
+                  "fun"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "My favourite subject is English.",
+                "opts": [
+                  "She likes English best.",
+                  "She likes maths best.",
+                  "She likes art best.",
+                  "She likes PE best."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I like English because it is useful.",
+                "opts": [
+                  "English is useful.",
+                  "English is boring.",
+                  "English is difficult.",
+                  "She hates English."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Maths is difficult, but I still work hard.",
+                "opts": [
+                  "She works hard at maths.",
+                  "She gives up maths.",
+                  "She loves maths.",
+                  "She skips maths."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My English teacher is very kind.",
+                "opts": [
+                  "The teacher is kind.",
+                  "The teacher is strict.",
+                  "The teacher is funny.",
+                  "The teacher is late."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I have Chinese, maths and history on Monday.",
+                "opts": [
+                  "Three subjects on Monday.",
+                  "One subject on Monday.",
+                  "No subjects on Monday.",
+                  "Five subjects on Monday."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I want to learn English well in the future.",
+                "opts": [
+                  "She wants to learn English well.",
+                  "She wants to stop learning.",
+                  "She wants to teach.",
+                  "She is afraid of English."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u8",
@@ -1454,11 +3990,177 @@
             "title": "Fun Clubs",
             "cn": "社团",
             "emoji": "🎨",
-            "available": false,
+            "available": true,
             "bigQuestion": "Why do we join school clubs?",
             "pronunciation": "辅音 + 不完全爆破",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "club",
+                "cn": "俱乐部；社团",
+                "emoji": "🎭"
+              },
+              {
+                "en": "join",
+                "cn": "参加；加入",
+                "emoji": "➕"
+              },
+              {
+                "en": "choose",
+                "cn": "选择；挑选",
+                "emoji": "✅"
+              },
+              {
+                "en": "drama",
+                "cn": "戏剧；戏剧表演",
+                "emoji": "🎭"
+              },
+              {
+                "en": "play Chinese chess",
+                "cn": "下中国象棋",
+                "emoji": "♟️"
+              },
+              {
+                "en": "feeling",
+                "cn": "感觉；情感",
+                "emoji": "💗"
+              },
+              {
+                "en": "news",
+                "cn": "消息；新闻",
+                "emoji": "📰"
+              },
+              {
+                "en": "musical",
+                "cn": "音乐的；有音乐天赋的",
+                "emoji": "🎼"
+              },
+              {
+                "en": "musical instrument",
+                "cn": "乐器",
+                "emoji": "🎺"
+              },
+              {
+                "en": "exactly",
+                "cn": "正是如此；准确地",
+                "emoji": "🎯"
+              },
+              {
+                "en": "drum",
+                "cn": "鼓",
+                "emoji": "🥁"
+              },
+              {
+                "en": "ability",
+                "cn": "能力；才能",
+                "emoji": "💪"
+              },
+              {
+                "en": "paint",
+                "cn": "用颜料画；油漆",
+                "emoji": "🎨"
+              },
+              {
+                "en": "climb",
+                "cn": "攀登；爬",
+                "emoji": "🧗"
+              },
+              {
+                "en": "more",
+                "cn": "更多(的)",
+                "emoji": "➕"
+              },
+              {
+                "en": "act",
+                "cn": "扮演；行动",
+                "emoji": "🎬"
+              },
+              {
+                "en": "act out",
+                "cn": "表演",
+                "emoji": "🎭"
+              },
+              {
+                "en": "at home",
+                "cn": "在家里",
+                "emoji": "🏠"
+              },
+              {
+                "en": "interested",
+                "cn": "感兴趣的",
+                "emoji": "🤓"
+              },
+              {
+                "en": "interested in",
+                "cn": "对……感兴趣",
+                "emoji": "🤓"
+              },
+              {
+                "en": "nature",
+                "cn": "自然界；大自然",
+                "emoji": "🌿"
+              },
+              {
+                "en": "beef",
+                "cn": "牛肉",
+                "emoji": "🥩"
+              },
+              {
+                "en": "soon",
+                "cn": "不久；很快",
+                "emoji": "⏩"
+              },
+              {
+                "en": "than",
+                "cn": "比",
+                "emoji": "⚖️"
+              },
+              {
+                "en": "more than",
+                "cn": "多于",
+                "emoji": "➕"
+              },
+              {
+                "en": "mind",
+                "cn": "头脑；心思",
+                "emoji": "🧠"
+              },
+              {
+                "en": "fall",
+                "cn": "进入；掉落；(美式)秋天",
+                "emoji": "🍂"
+              },
+              {
+                "en": "fall in love with",
+                "cn": "爱上……",
+                "emoji": "💘"
+              },
+              {
+                "en": "take photos",
+                "cn": "拍照",
+                "emoji": "📸"
+              },
+              {
+                "en": "collect",
+                "cn": "收集；采集",
+                "emoji": "🗃️"
+              },
+              {
+                "en": "insect",
+                "cn": "昆虫",
+                "emoji": "🐛"
+              },
+              {
+                "en": "discover",
+                "cn": "发现；发觉",
+                "emoji": "🔎"
+              },
+              {
+                "en": "wildlife",
+                "cn": "野生动物",
+                "emoji": "🦌"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1528,8 +4230,162 @@
             ],
             "grammarTitle": "情态动词 can(能力)",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "I ___ play the guitar, but I can't sing.",
+                "opts": [
+                  "can",
+                  "cans",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "情态动词 can",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ you swim?",
+                "opts": [
+                  "Can",
+                  "Do",
+                  "Are"
+                ],
+                "answer": 0,
+                "point": "can 一般疑问",
+                "dim": "grammar"
+              },
+              {
+                "q": "He can ___ very well.",
+                "opts": [
+                  "dance",
+                  "dances",
+                  "dancing"
+                ],
+                "answer": 0,
+                "point": "can+动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ___ run in the library.",
+                "opts": [
+                  "can't",
+                  "aren't",
+                  "don't can"
+                ],
+                "answer": 0,
+                "point": "can 否定",
+                "dim": "grammar"
+              },
+              {
+                "q": "She can play chess, ___ she can't play tennis.",
+                "opts": [
+                  "but",
+                  "and",
+                  "because"
+                ],
+                "answer": 0,
+                "point": "连词 but",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Can you draw? — Yes, I ___.",
+                "opts": [
+                  "can",
+                  "do",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "can 简答",
+                "dim": "grammar"
+              },
+              {
+                "q": "Tom can ___ a club and make new friends.",
+                "opts": [
+                  "join",
+                  "joins",
+                  "joining"
+                ],
+                "answer": 0,
+                "point": "can+原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "What ___ you do in the music club?",
+                "opts": [
+                  "can",
+                  "are",
+                  "do can"
+                ],
+                "answer": 0,
+                "point": "can 特殊疑问",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Fun Clubs\n\nThere are many clubs at my school. I want to join the music club because I can sing and play the guitar. My friend Sam can't sing, but he can dance very well, so he wants to join the dance club. In the art club, students can paint and draw. Clubs are really fun. We can make new friends and learn new things there.",
+              "passageCn": "我们学校有很多社团。我想加入音乐社，因为我会唱歌、弹吉他。我的朋友 Sam 不会唱歌，但他舞跳得很好，所以他想加入舞蹈社。在美术社，学生可以画画。社团真有趣，我们能在那里交新朋友、学新东西。",
+              "questions": [
+                {
+                  "q": "Which club does the writer want to join?",
+                  "opts": [
+                    "The music club",
+                    "The dance club",
+                    "The art club",
+                    "The chess club"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why does the writer want to join it?",
+                  "opts": [
+                    "Can sing and play guitar",
+                    "Can dance",
+                    "Can paint",
+                    "Can swim"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can Sam do well?",
+                  "opts": [
+                    "Dance",
+                    "Sing",
+                    "Paint",
+                    "Swim"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can students do in the art club?",
+                  "opts": [
+                    "Paint and draw",
+                    "Sing",
+                    "Dance",
+                    "Play chess"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can clubs help us do?",
+                  "opts": [
+                    "Make friends and learn",
+                    "Do homework",
+                    "Sleep",
+                    "Eat"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "A Club I Want to Join",
               "prompt": "Talk about a club you want to join. Use the modal verb 'can'.",
@@ -1591,8 +4447,158 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·Clubs (1): I ___ play the guitar.",
+                "opts": [
+                  "can",
+                  "cans",
+                  "am"
+                ],
+                "answer": 0,
+                "point": "情态动词 can",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Clubs (2): I want ___ join the music club.",
+                "opts": [
+                  "to",
+                  "/",
+                  "for"
+                ],
+                "answer": 0,
+                "point": "want to do",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Clubs (3): Sam can't sing, ___ he can dance.",
+                "opts": [
+                  "but",
+                  "because",
+                  "so"
+                ],
+                "answer": 0,
+                "point": "连词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Clubs (4): ___ you draw? Yes, a little.",
+                "opts": [
+                  "Can",
+                  "Do",
+                  "Are"
+                ],
+                "answer": 0,
+                "point": "can 疑问",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Clubs (5): We can ___ new friends in clubs.",
+                "opts": [
+                  "make",
+                  "do",
+                  "take"
+                ],
+                "answer": 0,
+                "point": "make friends 搭配",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: People who like acting can join the ___ club.",
+                "opts": [
+                  "drama",
+                  "music",
+                  "chess"
+                ],
+                "answer": 0,
+                "point": "社团词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: You hit a ___ with sticks in a band.",
+                "opts": [
+                  "drum",
+                  "guitar",
+                  "violin"
+                ],
+                "answer": 0,
+                "point": "乐器词",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: Sam wants to join the ___ club.",
+                "opts": [
+                  "dance",
+                  "music",
+                  "art"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "I can sing and play the guitar.",
+                "opts": [
+                  "He can sing and play guitar.",
+                  "He can't sing.",
+                  "He can only dance.",
+                  "He can swim."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Sam can't sing, but he can dance.",
+                "opts": [
+                  "Sam can dance.",
+                  "Sam can sing.",
+                  "Sam can't do anything.",
+                  "Sam can paint."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I want to join the music club.",
+                "opts": [
+                  "He wants the music club.",
+                  "He wants the dance club.",
+                  "He wants the art club.",
+                  "He wants no club."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "In the art club, students can paint.",
+                "opts": [
+                  "Students paint in the art club.",
+                  "Students sing in the art club.",
+                  "Students dance in the art club.",
+                  "The art club is closed."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Can you play chess? Yes, I can.",
+                "opts": [
+                  "He can play chess.",
+                  "He can't play chess.",
+                  "He plays tennis.",
+                  "He hates chess."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Clubs help us make new friends.",
+                "opts": [
+                  "Clubs help make friends.",
+                  "Clubs are boring.",
+                  "Clubs cost money.",
+                  "Clubs have no members."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u9",
@@ -1602,11 +4608,202 @@
             "title": "A Day in the Life",
             "cn": "作息",
             "emoji": "⏰",
-            "available": false,
+            "available": true,
             "bigQuestion": "How can you make good use of your time?",
             "pronunciation": "辅音 + 句重音",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "make use of",
+                "cn": "使用；利用",
+                "emoji": "♻️"
+              },
+              {
+                "en": "quarter",
+                "cn": "一刻钟；四等份之一",
+                "emoji": "🕐"
+              },
+              {
+                "en": "shower",
+                "cn": "淋浴；淋浴器",
+                "emoji": "🚿"
+              },
+              {
+                "en": "take a shower",
+                "cn": "淋浴",
+                "emoji": "🚿"
+              },
+              {
+                "en": "get dressed",
+                "cn": "穿衣服",
+                "emoji": "👕"
+              },
+              {
+                "en": "brush",
+                "cn": "(用刷子)刷；刷子",
+                "emoji": "🪥"
+              },
+              {
+                "en": "tooth",
+                "cn": "牙齿",
+                "emoji": "🦷"
+              },
+              {
+                "en": "duty",
+                "cn": "值班；职责",
+                "emoji": "📋"
+              },
+              {
+                "en": "on duty",
+                "cn": "值班",
+                "emoji": "📋"
+              },
+              {
+                "en": "usually",
+                "cn": "通常；一般地",
+                "emoji": "🔁"
+              },
+              {
+                "en": "get up",
+                "cn": "起床",
+                "emoji": "🌅"
+              },
+              {
+                "en": "reporter",
+                "cn": "记者",
+                "emoji": "🎙️"
+              },
+              {
+                "en": "around",
+                "cn": "大约；到处",
+                "emoji": "🔄"
+              },
+              {
+                "en": "homework",
+                "cn": "家庭作业",
+                "emoji": "📝"
+              },
+              {
+                "en": "go to bed",
+                "cn": "上床睡觉",
+                "emoji": "🛏️"
+              },
+              {
+                "en": "saying",
+                "cn": "谚语；格言",
+                "emoji": "💬"
+              },
+              {
+                "en": "rise",
+                "cn": "起床；升起；增长",
+                "emoji": "📈"
+              },
+              {
+                "en": "stay",
+                "cn": "停留；待",
+                "emoji": "🧍"
+              },
+              {
+                "en": "routine",
+                "cn": "常规",
+                "emoji": "🔁"
+              },
+              {
+                "en": "restaurant",
+                "cn": "餐馆；餐厅",
+                "emoji": "🍴"
+              },
+              {
+                "en": "housework",
+                "cn": "家务劳动",
+                "emoji": "🧹"
+              },
+              {
+                "en": "while",
+                "cn": "一段时间；当……的时候",
+                "emoji": "⏳"
+              },
+              {
+                "en": "weekend",
+                "cn": "周末",
+                "emoji": "📅"
+              },
+              {
+                "en": "at weekends",
+                "cn": "在周末",
+                "emoji": "📅"
+              },
+              {
+                "en": "daily",
+                "cn": "每日的；日常的",
+                "emoji": "☀️"
+              },
+              {
+                "en": "only",
+                "cn": "只；仅",
+                "emoji": "1️⃣"
+              },
+              {
+                "en": "break",
+                "cn": "休息；(使)破碎",
+                "emoji": "☕"
+              },
+              {
+                "en": "finish",
+                "cn": "结束；完成",
+                "emoji": "🏁"
+              },
+              {
+                "en": "hockey",
+                "cn": "曲棍球",
+                "emoji": "🏑"
+              },
+              {
+                "en": "ice hockey",
+                "cn": "冰球运动",
+                "emoji": "🏒"
+              },
+              {
+                "en": "already",
+                "cn": "已经；早已",
+                "emoji": "✔️"
+              },
+              {
+                "en": "dark",
+                "cn": "昏暗的；深色的",
+                "emoji": "🌑"
+              },
+              {
+                "en": "outside",
+                "cn": "在外面；外面的",
+                "emoji": "🌳"
+              },
+              {
+                "en": "part",
+                "cn": "部分",
+                "emoji": "🧩"
+              },
+              {
+                "en": "everyday",
+                "cn": "每天的；日常的",
+                "emoji": "📆"
+              },
+              {
+                "en": "prepare",
+                "cn": "把……预备好；准备",
+                "emoji": "🍳"
+              },
+              {
+                "en": "prepare sth for",
+                "cn": "为……把某物准备好",
+                "emoji": "🍳"
+              },
+              {
+                "en": "home economics",
+                "cn": "家政学",
+                "emoji": "🏠"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1676,8 +4873,162 @@
             ],
             "grammarTitle": "时间表达 + wh-疑问",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "I get up ___ six thirty.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词 at+点钟",
+                "dim": "grammar"
+              },
+              {
+                "q": "What time ___ you go to school?",
+                "opts": [
+                  "do",
+                  "does",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "一般现在时疑问 do",
+                "dim": "grammar"
+              },
+              {
+                "q": "She ___ breakfast at seven.",
+                "opts": [
+                  "has",
+                  "have",
+                  "haves"
+                ],
+                "answer": 0,
+                "point": "一般现在时三单 have→has",
+                "dim": "grammar"
+              },
+              {
+                "q": "He goes to bed ___ ten o'clock.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词 at",
+                "dim": "grammar"
+              },
+              {
+                "q": "I do my homework ___ the evening.",
+                "opts": [
+                  "in",
+                  "at",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词 in the evening",
+                "dim": "grammar"
+              },
+              {
+                "q": "When ___ he get home?",
+                "opts": [
+                  "does",
+                  "do",
+                  "is"
+                ],
+                "answer": 0,
+                "point": "一般现在时疑问 does",
+                "dim": "grammar"
+              },
+              {
+                "q": "My classes start ___ Monday morning.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "时间介词 on+具体早晨",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ___ to school from Monday to Friday.",
+                "opts": [
+                  "go",
+                  "goes",
+                  "going"
+                ],
+                "answer": 0,
+                "point": "一般现在时复数主语",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My Day\n\nI am a student. On school days, I get up at six thirty. I have breakfast at seven and go to school at seven thirty. I have four classes in the morning. I have lunch at twelve in the school dining hall. In the afternoon, I have two classes. After school, I play basketball with my friends. I do my homework in the evening and go to bed at ten. My day is busy but happy.",
+              "passageCn": "我是一名学生。上学日我六点半起床，七点吃早饭，七点半去上学。上午有四节课。中午十二点在学校餐厅吃午饭。下午有两节课。放学后我和朋友打篮球。晚上做作业，十点睡觉。我的一天忙碌但开心。",
+              "questions": [
+                {
+                  "q": "When does the writer get up?",
+                  "opts": [
+                    "At six",
+                    "At six thirty",
+                    "At seven",
+                    "At seven thirty"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How many classes are there in the morning?",
+                  "opts": [
+                    "Two",
+                    "Three",
+                    "Four",
+                    "Five"
+                  ],
+                  "answer": 2,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Where does the writer have lunch?",
+                  "opts": [
+                    "At home",
+                    "In the school dining hall",
+                    "In a restaurant",
+                    "On the playground"
+                  ],
+                  "answer": 1,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the writer do after school?",
+                  "opts": [
+                    "Plays basketball",
+                    "Watches TV",
+                    "Goes shopping",
+                    "Sleeps"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How is the writer's day?",
+                  "opts": [
+                    "Busy but happy",
+                    "Boring",
+                    "Free and easy",
+                    "Sad"
+                  ],
+                  "answer": 0,
+                  "point": "主旨",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "My Day",
               "prompt": "Describe your daily routine. Use times (at 7 o'clock) and present tense.",
@@ -1745,8 +5096,158 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·My Day (1): I get up ___ six thirty.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Day (2): I ___ breakfast at seven.",
+                "opts": [
+                  "have",
+                  "has",
+                  "having"
+                ],
+                "answer": 0,
+                "point": "一般现在时",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Day (3): What time ___ you go to school?",
+                "opts": [
+                  "do",
+                  "does",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "疑问句",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Day (4): I do my homework ___ the evening.",
+                "opts": [
+                  "in",
+                  "at",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·My Day (5): I go to bed ___ ten o'clock.",
+                "opts": [
+                  "at",
+                  "in",
+                  "on"
+                ],
+                "answer": 0,
+                "point": "时间介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: In the morning I brush my ___.",
+                "opts": [
+                  "teeth",
+                  "tooth's",
+                  "tooths"
+                ],
+                "answer": 0,
+                "point": "名词复数 tooth→teeth",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: 'Get ___' means 起床.",
+                "opts": [
+                  "up",
+                  "on",
+                  "off"
+                ],
+                "answer": 0,
+                "point": "短语 get up",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: The writer has lunch at ___.",
+                "opts": [
+                  "twelve",
+                  "seven",
+                  "ten"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "I get up at six thirty every day.",
+                "opts": [
+                  "He gets up at six thirty.",
+                  "He gets up at seven.",
+                  "He gets up at six.",
+                  "He gets up at eight."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I have breakfast at seven.",
+                "opts": [
+                  "Breakfast at seven.",
+                  "Breakfast at eight.",
+                  "Breakfast at six.",
+                  "No breakfast."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I have four classes in the morning.",
+                "opts": [
+                  "Four morning classes.",
+                  "Two morning classes.",
+                  "Six morning classes.",
+                  "No classes."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "After school, I play basketball.",
+                "opts": [
+                  "He plays basketball after school.",
+                  "He watches TV.",
+                  "He goes home and sleeps.",
+                  "He does nothing."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I go to bed at ten.",
+                "opts": [
+                  "Bed at ten.",
+                  "Bed at nine.",
+                  "Bed at eleven.",
+                  "Bed at eight."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My day is busy but happy.",
+                "opts": [
+                  "His day is busy but happy.",
+                  "His day is boring.",
+                  "His day is free.",
+                  "His day is sad."
+                ],
+                "answer": 0
+              }
+            ]
           },
           {
             "id": "g7v1_u10",
@@ -1756,11 +5257,192 @@
             "title": "Happy Birthday!",
             "cn": "生日",
             "emoji": "🎂",
-            "available": false,
+            "available": true,
             "bigQuestion": "Why do we celebrate birthdays?",
             "pronunciation": "辅音 + 语调",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "celebrate",
+                "cn": "庆祝；庆贺",
+                "emoji": "🎉"
+              },
+              {
+                "en": "surprise",
+                "cn": "惊奇；使感到意外",
+                "emoji": "🎁"
+              },
+              {
+                "en": "something",
+                "cn": "某事；某物",
+                "emoji": "❔"
+              },
+              {
+                "en": "sale",
+                "cn": "出售；销售",
+                "emoji": "🏷️"
+              },
+              {
+                "en": "kilo",
+                "cn": "千克；公斤",
+                "emoji": "⚖️"
+              },
+              {
+                "en": "yogurt",
+                "cn": "酸奶",
+                "emoji": "🥛"
+              },
+              {
+                "en": "total",
+                "cn": "总数；合计；总的",
+                "emoji": "➕"
+              },
+              {
+                "en": "price",
+                "cn": "价格",
+                "emoji": "💲"
+              },
+              {
+                "en": "balloon",
+                "cn": "气球",
+                "emoji": "🎈"
+              },
+              {
+                "en": "chocolate",
+                "cn": "巧克力",
+                "emoji": "🍫"
+              },
+              {
+                "en": "pizza",
+                "cn": "比萨饼",
+                "emoji": "🍕"
+              },
+              {
+                "en": "list",
+                "cn": "名单；清单",
+                "emoji": "📝"
+              },
+              {
+                "en": "own",
+                "cn": "自己的；本人的",
+                "emoji": "🙋"
+              },
+              {
+                "en": "example",
+                "cn": "例子；范例",
+                "emoji": "📌"
+              },
+              {
+                "en": "for example",
+                "cn": "例如",
+                "emoji": "📌"
+              },
+              {
+                "en": "language",
+                "cn": "语言",
+                "emoji": "🗣️"
+              },
+              {
+                "en": "international",
+                "cn": "国际的",
+                "emoji": "🌐"
+              },
+              {
+                "en": "mark",
+                "cn": "做记号；纪念；打分",
+                "emoji": "✔️"
+              },
+              {
+                "en": "national",
+                "cn": "国家的；民族的",
+                "emoji": "🏳️"
+              },
+              {
+                "en": "found",
+                "cn": "创建；创立",
+                "emoji": "🏗️"
+              },
+              {
+                "en": "meaningful",
+                "cn": "重要的；重大的",
+                "emoji": "💡"
+              },
+              {
+                "en": "make a wish",
+                "cn": "许愿",
+                "emoji": "🌠"
+              },
+              {
+                "en": "celebration",
+                "cn": "庆典；庆祝(活动)",
+                "emoji": "🎊"
+              },
+              {
+                "en": "post",
+                "cn": "帖子；邮政；发布",
+                "emoji": "📮"
+              },
+              {
+                "en": "contact",
+                "cn": "联系；联络",
+                "emoji": "📞"
+              },
+              {
+                "en": "symbol",
+                "cn": "象征；符号",
+                "emoji": "🔣"
+              },
+              {
+                "en": "take a photo",
+                "cn": "拍照",
+                "emoji": "📷"
+              },
+              {
+                "en": "village",
+                "cn": "村庄；村镇",
+                "emoji": "🏘️"
+              },
+              {
+                "en": "grow",
+                "cn": "成长；长大；增长",
+                "emoji": "🌱"
+              },
+              {
+                "en": "blow",
+                "cn": "吹；刮",
+                "emoji": "🌬️"
+              },
+              {
+                "en": "blow out",
+                "cn": "吹灭",
+                "emoji": "🕯️"
+              },
+              {
+                "en": "enjoy",
+                "cn": "享受……的乐趣；喜欢",
+                "emoji": "😊"
+              },
+              {
+                "en": "height",
+                "cn": "身高；高度",
+                "emoji": "📏"
+              },
+              {
+                "en": "later",
+                "cn": "以后(的)；后来(的)",
+                "emoji": "⏭️"
+              },
+              {
+                "en": "next time",
+                "cn": "下次",
+                "emoji": "➡️"
+              },
+              {
+                "en": "whom",
+                "cn": "谁；什么人",
+                "emoji": "❓"
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1830,8 +5512,162 @@
             ],
             "grammarTitle": "序数词 + wh-疑问复习",
             "grammarCode": null,
-            "grammarQuiz": [],
-            "reading": null,
+            "grammarQuiz": [
+              {
+                "q": "My birthday is ___ October 1st.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "日期介词 on",
+                "dim": "grammar"
+              },
+              {
+                "q": "September is the ___ month of the year.",
+                "opts": [
+                  "ninth",
+                  "nine",
+                  "ninth's"
+                ],
+                "answer": 0,
+                "point": "序数词 ninth",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ is your birthday?",
+                "opts": [
+                  "When",
+                  "What",
+                  "Where"
+                ],
+                "answer": 0,
+                "point": "特殊疑问 when",
+                "dim": "grammar"
+              },
+              {
+                "q": "Today is the ___ of June.",
+                "opts": [
+                  "first",
+                  "one",
+                  "oneth"
+                ],
+                "answer": 0,
+                "point": "序数词 first",
+                "dim": "grammar"
+              },
+              {
+                "q": "Children's Day is ___ June 1st.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "日期介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "December is the ___ month.",
+                "opts": [
+                  "twelfth",
+                  "twelve",
+                  "twelvth"
+                ],
+                "answer": 0,
+                "point": "序数词 twelfth",
+                "dim": "grammar"
+              },
+              {
+                "q": "My party starts ___ three o'clock.",
+                "opts": [
+                  "at",
+                  "on",
+                  "in"
+                ],
+                "answer": 0,
+                "point": "时间介词 at",
+                "dim": "grammar"
+              },
+              {
+                "q": "How ___ are you? I'm thirteen.",
+                "opts": [
+                  "old",
+                  "much",
+                  "many"
+                ],
+                "answer": 0,
+                "point": "How old 年龄",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "My Birthday\n\nMy birthday is on October 1st. It is also our National Day. Every year, my family has a party for me. We eat a big cake and I make a wish. My friends give me nice gifts. This year, I want a new bike. My grandmother makes noodles for me, because in China, long noodles mean a long and happy life. I am always very happy on my birthday.",
+              "passageCn": "我的生日在 10 月 1 日，也是国庆节。每年家人都为我办派对。我们吃大蛋糕，我许愿。朋友们送我漂亮的礼物。今年我想要一辆新自行车。奶奶给我做面条，因为在中国，长长的面条寓意长寿幸福。我生日时总是很开心。",
+              "questions": [
+                {
+                  "q": "When is the writer's birthday?",
+                  "opts": [
+                    "October 1st",
+                    "September 1st",
+                    "June 1st",
+                    "December 1st"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the writer do with the cake?",
+                  "opts": [
+                    "Makes a wish",
+                    "Throws it",
+                    "Sells it",
+                    "Hides it"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the writer want this year?",
+                  "opts": [
+                    "A new bike",
+                    "A new phone",
+                    "A book",
+                    "A dog"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Who makes noodles for the writer?",
+                  "opts": [
+                    "Grandmother",
+                    "Father",
+                    "Teacher",
+                    "Friend"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What do long noodles mean in China?",
+                  "opts": [
+                    "A long and happy life",
+                    "Good luck in exams",
+                    "A new house",
+                    "Bad luck"
+                  ],
+                  "answer": 0,
+                  "point": "细节",
+                  "dim": "reading"
+                }
+              ]
+            },
             "writing": {
               "topic": "My Birthday",
               "prompt": "Talk about your birthday. Use ordinal dates (e.g. the 12th of May).",
@@ -1897,8 +5733,158 @@
               ],
               "minWords": 35
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "完形·Birthday (1): My birthday is ___ October 1st.",
+                "opts": [
+                  "on",
+                  "in",
+                  "at"
+                ],
+                "answer": 0,
+                "point": "日期介词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Birthday (2): It is the ___ month, October.",
+                "opts": [
+                  "tenth",
+                  "ten",
+                  "tenth's"
+                ],
+                "answer": 0,
+                "point": "序数词",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Birthday (3): My family ___ a party for me.",
+                "opts": [
+                  "has",
+                  "have",
+                  "having"
+                ],
+                "answer": 0,
+                "point": "一般现在时三单",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Birthday (4): I make a ___ before eating the cake.",
+                "opts": [
+                  "wish",
+                  "wash",
+                  "watch"
+                ],
+                "answer": 0,
+                "point": "词汇 make a wish",
+                "dim": "grammar"
+              },
+              {
+                "q": "完形·Birthday (5): ___ is your birthday? In May.",
+                "opts": [
+                  "When",
+                  "Where",
+                  "What"
+                ],
+                "answer": 0,
+                "point": "特殊疑问",
+                "dim": "grammar"
+              },
+              {
+                "q": "词汇: We light and blow out the ___ on a cake.",
+                "opts": [
+                  "candles",
+                  "balloons",
+                  "gifts"
+                ],
+                "answer": 0,
+                "point": "生日词",
+                "dim": "vocab"
+              },
+              {
+                "q": "词汇: 'Make a ___' means 许愿.",
+                "opts": [
+                  "wish",
+                  "cake",
+                  "party"
+                ],
+                "answer": 0,
+                "point": "短语",
+                "dim": "vocab"
+              },
+              {
+                "q": "阅读: Long noodles mean a long ___ in China.",
+                "opts": [
+                  "life",
+                  "day",
+                  "year"
+                ],
+                "answer": 0,
+                "point": "细节",
+                "dim": "reading"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "My birthday is on October 1st.",
+                "opts": [
+                  "Birthday on October 1st.",
+                  "Birthday on September 1st.",
+                  "Birthday on June 1st.",
+                  "Birthday on May 1st."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My family has a party for me every year.",
+                "opts": [
+                  "A party every year.",
+                  "No party.",
+                  "A party once.",
+                  "A party at school."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I make a wish before I eat the cake.",
+                "opts": [
+                  "He makes a wish.",
+                  "He sings a song.",
+                  "He sleeps.",
+                  "He cries."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This year I want a new bike.",
+                "opts": [
+                  "He wants a bike.",
+                  "He wants a phone.",
+                  "He wants a book.",
+                  "He wants nothing."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My grandmother makes noodles for my birthday.",
+                "opts": [
+                  "Grandmother makes noodles.",
+                  "Mother makes a cake.",
+                  "Father buys a gift.",
+                  "No one cooks."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I am very happy on my birthday.",
+                "opts": [
+                  "He is happy.",
+                  "He is sad.",
+                  "He is tired.",
+                  "He is angry."
+                ],
+                "answer": 0
+              }
+            ]
           }
         ]
       },

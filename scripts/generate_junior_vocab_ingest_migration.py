@@ -11,7 +11,7 @@ CSV_PATH = ROOT / "docs" / "vocab" / "junior_merged.csv"
 OUT_MIGRATION = ROOT / "supabase" / "migrations" / "20260517120000_junior_vocab_pep_ingest.sql"
 OUT_ROLLBACK = ROOT / "supabase" / "migrations" / "20260517120000_junior_vocab_pep_ingest_rollback.sql"
 NS = uuid.UUID("a3f2c8e1-4b9d-4e7a-9c1d-8f6e5d4c3b2a")  # stable namespace for word_id → uuid
-EXPECTED_ROWS = 2373
+EXPECTED_ROWS = 2144
 
 HEADER = """\
 -- Junior PEP vocabulary ingest (Scheme A: backup → clear → reload)
@@ -53,6 +53,7 @@ def main() -> None:
             source_type,
             source_page,
             confidence,
+            phonetic,
         ) = row
         grade = int(grade_s)
         rank_by_grade[grade] += 1
@@ -66,6 +67,7 @@ def main() -> None:
             f"{grade}, "
             f"{sql_str(word)}, "
             f"{sql_str(pos) if pos else 'NULL'}, "
+            f"{sql_str(phonetic) if phonetic else 'NULL'}, "
             f"{sql_str(meaning_cn)}, "
             f"{sql_str(stage)}, "
             f"{sql_str(volume)}, "
@@ -81,7 +83,7 @@ def main() -> None:
     insert_blocks: list[str] = []
     chunk_size = 100
     cols = (
-        "id, word_id, grade, word, pos, meaning_cn, stage, volume, unit, "
+        "id, word_id, grade, word, pos, phonetic, meaning_cn, stage, volume, unit, "
         "source_type, source_page, confidence, freq_rank"
     )
     for i in range(0, len(value_rows), chunk_size):
@@ -93,6 +95,7 @@ def main() -> None:
             "  grade = EXCLUDED.grade,\n"
             "  word = EXCLUDED.word,\n"
             "  pos = EXCLUDED.pos,\n"
+            "  phonetic = EXCLUDED.phonetic,\n"
             "  meaning_cn = EXCLUDED.meaning_cn,\n"
             "  stage = EXCLUDED.stage,\n"
             "  volume = EXCLUDED.volume,\n"
@@ -144,7 +147,7 @@ END $do$;
 
 -- ---------------------------------------------------------------------------
 -- 2. Backup (overwrite previous backup — single rollback snapshot)
--- Re-running this migration re-backs up, clears, and reloads the same 2373 rows
+-- Re-running this migration re-backs up, clears, and reloads the full corpus
 -- (outcome-idempotent). See _junior_vocab_pep_ingest_meta for last apply time.
 -- ---------------------------------------------------------------------------
 DROP TABLE IF EXISTS public._junior_vocab_backup_pep;

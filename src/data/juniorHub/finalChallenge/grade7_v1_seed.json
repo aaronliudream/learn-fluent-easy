@@ -3147,5 +3147,347 @@
     "unitId": "g7v1_mid",
     "source": "real_exam",
     "source_ref": "七上期中·套4句型转换4(否定句)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Good morning, Alice! ... I am looking for my English book. I can't find it.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "What are you looking for?",
+      "How old are you?",
+      "What's your name?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_053",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1·补全对话Q51(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "I am looking for my English book. ... No, it isn't on my desk.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Do you like English?",
+      "Is it on your desk?",
+      "Where is your chair?"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_054",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1·补全对话Q52(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Is that book under your chair? Oh, yes! ____ Thank you so much!",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "It's not mine.",
+      "I don't know.",
+      "Here it is!"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_055",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1·补全对话Q53(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Do you have time this afternoon? ____ That sounds great! I love tennis.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Let's play tennis together.",
+      "Let's go home now.",
+      "Let's read some books."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_056",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1·补全对话Q54(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Let's meet at the school gate at 4:30 p.m. OK, ____! See you!",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "thank you",
+      "see you then",
+      "good morning"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_057",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套1·补全对话Q55(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Good afternoon, sir. Can I help you? Yes, please. ____ What color do you like?",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "I want some noodles.",
+      "I need a new book.",
+      "I want to buy a sweater."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_058",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2·补全对话Q51(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "I like blue. ____ Yes, here is a blue one. It's very warm.",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "Do you have a blue one?",
+      "Where is the door?",
+      "How are you today?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_059",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2·补全对话Q52(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "It looks nice. ____ It is 45 dollars.",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "Can I help you?",
+      "How much is it?",
+      "What color is it?"
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_060",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2·补全对话Q53(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Green is also good. I like it. ____ Sure. Here is your sweater and the change.",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "I don't like it.",
+      "See you later.",
+      "I'll take it."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_061",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套2·补全对话Q54(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "What's your favorite sport? ____ I think it is very fun.",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "My favorite sport is basketball.",
+      "I like reading books.",
+      "I don't like sports."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_062",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3·补全对话Q51(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Do you have a basketball? Yes, ____ I have two basketballs.",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "I can't.",
+      "I do.",
+      "I don't."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_063",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3·补全对话Q52(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Great! ____ this afternoon? That sounds good! But where shall we play?",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Do you like apples",
+      "What time is it",
+      "Shall we play basketball"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_064",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3·补全对话Q53(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "But where shall we play? ____ It is very big.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Let's play on the playground.",
+      "Let's play in the classroom.",
+      "Let's go to the library."
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_065",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3·补全对话Q54(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "How about 4:40 p.m. after our last class? ____ See you then!",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "No, thanks.",
+      "That sounds good.",
+      "Sorry, I can't."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_066",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套3·补全对话Q55(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Good morning, Lin Tao! ... I am looking for my keys. I can't open my locker.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "How are you?",
+      "What's your name?",
+      "What are you looking for?"
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_067",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4·补全对话Q51(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "I am looking for my keys. ... No, they aren't in my schoolbag.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Are they in your schoolbag?",
+      "Do you like soccer?",
+      "Where is your locker?"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_068",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4·补全对话Q52(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Are those keys on the teacher's desk? Oh, yes! ____ Thank you very much!",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "They aren't mine.",
+      "Here they are!",
+      "I'm sorry."
+    ],
+    "answer": 1,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_069",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4·补全对话Q53(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Are you free this afternoon? ____ That sounds great! I love soccer.",
+    "prompt": "选出 A 在空白处最恰当的一句。",
+    "options": [
+      "Let's do homework.",
+      "Let's go home.",
+      "Let's play soccer together."
+    ],
+    "answer": 2,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_070",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4·补全对话Q54(选答语·改编)"
+  },
+  {
+    "type": "dialogue_response",
+    "audio": "Let's meet on the playground at 4:30 p.m. OK, ____! See you!",
+    "prompt": "选出 B 在空白处最恰当的一句。",
+    "options": [
+      "see you",
+      "thank you",
+      "good morning"
+    ],
+    "answer": 0,
+    "vocab_domain": [
+      "midterm_listening"
+    ],
+    "id": "fc_g7v1_dia_071",
+    "unitId": "g7v1_mid",
+    "source": "real_exam",
+    "source_ref": "七上期中·套4·补全对话Q55(选答语·改编)"
   }
 ]

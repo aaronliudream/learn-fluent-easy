@@ -156,16 +156,7 @@
             "grammarCode": null,
             "grammarQuiz": [
               {
-                "q": "___ morning! Nice to meet you.",
-                "opts": [
-                  "Good",
-                  "Well",
-                  "Fine"
-                ],
-                "answer": 0,
-                "point": "问候语 Good morning",
-                "dim": "grammar"
-              },
+                
               {
                 "q": "Hello! ___ name is Lin Tao.",
                 "opts": [

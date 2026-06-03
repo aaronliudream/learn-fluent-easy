@@ -252,15 +252,15 @@
                   "dim": "reading"
                 },
                 {
-                  "q": "What do they say in the morning?",
+                  "q": "What does \"greet each other\" most probably mean?",
                   "opts": [
-                    "Goodbye",
-                    "Good morning",
-                    "Good night",
-                    "See you"
+                    "say hello to each other",
+                    "say goodbye to each other",
+                    "argue with each other",
+                    "wait for each other"
                   ],
-                  "answer": 1,
-                  "point": "细节",
+                  "answer": 0,
+                  "point": "词义猜测",
                   "dim": "reading"
                 },
                 {

@@ -755,6 +755,7 @@ function ReadingStage({
   onFinish: () => void;
   onWrong: (q: QuizQuestion) => void;
 }) {
+  const [showCn, setShowCn] = useState(false);
   const reading = unit.reading;
   if (!reading?.questions.length) {
     return (
@@ -769,8 +770,23 @@ function ReadingStage({
   return (
     <div>
       <div className="mb-4 rounded-xl bg-[#F0F4FF] p-3 text-sm leading-relaxed">
-        <p className="mb-2">{reading.passage}</p>
-        <p className="text-[#5C5751]">{reading.passageCn}</p>
+        <p>{reading.passage}</p>
+        {reading.passageCn && (
+          <>
+            {showCn && (
+              <p className="mt-2 border-t border-[#D8E2F5] pt-2 text-[#5C5751]">
+                {reading.passageCn}
+              </p>
+            )}
+            <button
+              type="button"
+              onClick={() => setShowCn((v) => !v)}
+              className="mt-2 text-xs font-medium text-[#185FA5]"
+            >
+              {showCn ? "隐藏中文翻译 ▴" : "显示中文翻译 ▾"}
+            </button>
+          </>
+        )}
       </div>
       <FinalQuizStage
         questions={shuffleArray(reading.questions).slice(0, 6)}

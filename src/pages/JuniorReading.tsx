@@ -40,7 +40,18 @@ export default function JuniorReading() {
     const dbGrade = grade ? gradeMap[grade] ?? Number(grade) : null;
     let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").order("grade").order("difficulty", { ascending: true }).order("created_at", { ascending: true });
     if (dbGrade) q = q.eq("grade", dbGrade);
-    q.then(({ data }) => setItems((data ?? []) as R[]));
+    q.then(({ data }) => {
+      // 排序：年级 → 册别(上册先, 下册后) → 难度 → 词数。
+      // 册别从标题判断：含"七下/八下/九下"为下册(排后)；其余(含"七上"和无前缀基础篇)为上册(排前)。
+      const vol = (t: string) => (/[七八九]下/.test(t) ? 1 : 0);
+      const rows = ((data ?? []) as R[]).slice().sort((a, b) =>
+        (a.grade - b.grade) ||
+        (vol(a.title) - vol(b.title)) ||
+        (a.difficulty - b.difficulty) ||
+        ((a.word_count ?? 9999) - (b.word_count ?? 9999))
+      );
+      setItems(rows);
+    });
     loadMastery("junior_reading").then(setMastery);
   }, [grade]);
 

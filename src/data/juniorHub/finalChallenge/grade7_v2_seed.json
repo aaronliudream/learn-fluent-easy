@@ -6853,5 +6853,293 @@
     "unitId": "g7v2_final",
     "source": "real_exam",
     "source_ref": "七下期末·套7·听短文Q20"
+  },
+  {
+    "id": "fc_g7v2_read_006",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Pandas are one of the most popular animals in the world. They live in the mountains of southwest China. Pandas are black and white, and they look cute and friendly. They spend about twelve hours a day eating bamboo. A baby panda is very small when it is born, but it grows quickly. Pandas are good at climbing trees. Today, pandas are in danger because they are losing their homes, so people around the world are working hard to save them.",
+    "subQuestions": [
+      {
+        "stem": "Pandas live in the mountains of southwest China.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Pandas are red and white.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Pandas eat bamboo for about twelve hours a day.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Pandas are bad at climbing trees.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "People are working hard to save pandas.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v2_read_007",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "It is a rainy Sunday afternoon, and the Green family is staying at home. Mr Green is reading a newspaper in the living room. Mrs Green is cooking noodles in the kitchen. Their son, Peter, is playing computer games in his room, and their daughter, Anna, is doing her homework. Outside, it is raining hard and the wind is blowing. 'What bad weather!' says Mr Green. 'Let's watch a movie together later,' says Mrs Green. Everyone thinks it is a good idea.",
+    "subQuestions": [
+      {
+        "stem": "It is a sunny afternoon.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Mr Green is reading a newspaper.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Mrs Green is cooking noodles.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Anna is playing computer games.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "The family plans to watch a movie later.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v2_read_008",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Students go to school in different ways. Tom lives near his school, so he walks there every day, and it takes him about ten minutes. Mary lives far away, so she takes the bus, and the ride is about half an hour. Jack rides his bike to school because it is fast and good for his health. Some students who live very far take the subway. In big cities, more and more people choose the subway because it is cheap and never gets stuck in traffic.",
+    "subQuestions": [
+      {
+        "stem": "Tom walks to school every day.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "It takes Tom about half an hour to get to school.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Mary takes the bus to school.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Jack thinks riding a bike is good for his health.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The subway often gets stuck in traffic.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v2_read_009",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Lin Tao is having dinner at a restaurant with his family. The waiter brings the menu. Lin Tao would like some beef noodles and a glass of orange juice. His father orders dumplings and a bowl of soup. His mother doesn't want any meat, so she orders a vegetable salad. For dessert, they all share a big fruit cake. The food is delicious, and the family enjoys the meal. Lin Tao says, 'Thank you, I'm full now!'",
+    "subQuestions": [
+      {
+        "stem": "Lin Tao is having dinner at home.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Lin Tao orders beef noodles.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Lin Tao's mother orders a lot of meat.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "They share a fruit cake for dessert.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Lin Tao is full after the meal.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v2_read_010",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Sunshine School Club Day is coming, and students can join different clubs to show their abilities. Kate can sing and dance very well, so she wants to join the music and dance club. Mike can't sing, but he can play basketball and swim, so he chooses the sports club. Linda is good at drawing, and she can also speak French, so she joins the art club and the language club. Joining a club is a great way to learn new things and make new friends.",
+    "subQuestions": [
+      {
+        "stem": "Kate can sing and dance very well.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Mike joins the music club.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Linda is good at drawing.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Linda can speak French.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Joining a club helps students make new friends.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v2_read_011",
+    "type": "reading_judge_TF",
+    "unitId": "g7v2_final",
+    "passage": "Last weekend, our class had a school trip to the science museum. We went there by bus in the morning. At the museum, we saw many interesting things about space and robots, and our teacher told us a lot about the stars and the moon. At noon, we had a picnic in the park near the museum. In the afternoon, we watched a short film about animals. Everyone had a great time. It was a wonderful and educational day, and I hope we can go there again.",
+    "subQuestions": [
+      {
+        "stem": "The class went to the science museum last weekend.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "They went there by train.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "They had a picnic in the park.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "In the afternoon, they watched a film about space.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Everyone had a great time.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
   }
 ]

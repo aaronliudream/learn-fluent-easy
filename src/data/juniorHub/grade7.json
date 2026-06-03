@@ -344,7 +344,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·At School (1): Good morning! I ___ Lin Tao.",
+                "q": "Good morning! I ___ Lin Tao.",
                 "opts": [
                   "am",
                   "is",
@@ -355,7 +355,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·At School (2): This ___ my friend.",
+                "q": "This ___ my friend.",
                 "opts": [
                   "is",
                   "am",
@@ -366,7 +366,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·At School (3): ___ name is Mike.",
+                "q": "___ name is Mike.",
                 "opts": [
                   "His",
                   "He",
@@ -377,7 +377,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·At School (4): Nice to meet ___.",
+                "q": "Nice to meet ___.",
                 "opts": [
                   "you",
                   "your",
@@ -388,7 +388,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·At School (5): We ___ in the same class.",
+                "q": "We ___ in the same class.",
                 "opts": [
                   "are",
                   "is",
@@ -399,7 +399,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: To say hello in the morning, we say '___ morning'.",
+                "q": "To say hello in the morning, we say '___ morning'.",
                 "opts": [
                   "Good",
                   "Nice",
@@ -410,7 +410,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: 'Each ___' means 互相.",
+                "q": "'Each ___' means 互相.",
                 "opts": [
                   "other",
                   "one",
@@ -421,7 +421,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: Lin Tao and Mike greet each other ___.",
+                "q": "Lin Tao and Mike greet each other ___.",
                 "opts": [
                   "every morning",
                   "every night",
@@ -805,7 +805,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My Things (1): What's this? It's ___ eraser.",
+                "q": "What's this? It's ___ eraser.",
                 "opts": [
                   "an",
                   "a",
@@ -816,7 +816,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Things (2): It ___ my key.",
+                "q": "It ___ my key.",
                 "opts": [
                   "is",
                   "are",
@@ -827,7 +827,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Things (3): The bottle ___ green.",
+                "q": "The bottle ___ green.",
                 "opts": [
                   "is",
                   "are",
@@ -838,7 +838,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Things (4): These ___ my books.",
+                "q": "These ___ my books.",
                 "opts": [
                   "are",
                   "is",
@@ -849,7 +849,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Things (5): Is this ___ schoolbag? Yes.",
+                "q": "Is this ___ schoolbag? Yes.",
                 "opts": [
                   "your",
                   "you",
@@ -860,7 +860,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: We write with a pen and clean it with an ___.",
+                "q": "We write with a pen and clean it with an ___.",
                 "opts": [
                   "eraser",
                   "apple",
@@ -871,7 +871,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: 'Keep ___' means 保持整洁.",
+                "q": "'Keep ___' means 保持整洁.",
                 "opts": [
                   "tidy",
                   "fun",
@@ -882,7 +882,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: Tom's key is ___.",
+                "q": "Tom's key is ___.",
                 "opts": [
                   "black",
                   "white",
@@ -1280,7 +1280,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My Yard (1): There ___ a tree in the yard.",
+                "q": "There ___ a tree in the yard.",
                 "opts": [
                   "is",
                   "are",
@@ -1291,7 +1291,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Yard (2): There ___ two geese.",
+                "q": "There ___ two geese.",
                 "opts": [
                   "are",
                   "is",
@@ -1302,7 +1302,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Yard (3): ___ at the flowers!",
+                "q": "___ at the flowers!",
                 "opts": [
                   "Look",
                   "Looks",
@@ -1313,7 +1313,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Yard (4): I can ___ ten flowers.",
+                "q": "I can ___ ten flowers.",
                 "opts": [
                   "count",
                   "counts",
@@ -1324,7 +1324,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Yard (5): Welcome ___ my home.",
+                "q": "Welcome ___ my home.",
                 "opts": [
                   "to",
                   "at",
@@ -1335,7 +1335,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: A baby goose grows into a ___.",
+                "q": "A baby goose grows into a ___.",
                 "opts": [
                   "goose",
                   "carrot",
@@ -1346,7 +1346,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: 'Look ___' means 看；瞧.",
+                "q": "'Look ___' means 看；瞧.",
                 "opts": [
                   "at",
                   "in",
@@ -1357,7 +1357,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: The tree is ___ the middle of the yard.",
+                "q": "The tree is ___ the middle of the yard.",
                 "opts": [
                   "in",
                   "on",
@@ -1902,7 +1902,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My Good Friend (1): Hello! My name ___ Lily.",
+                "q": "Hello! My name ___ Lily.",
                 "opts": [
                   "is",
                   "am",
@@ -1913,7 +1913,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (2): I have a good friend. ___ name is Tom.",
+                "q": "I have a good friend. ___ name is Tom.",
                 "opts": [
                   "She",
                   "Her",
@@ -1924,7 +1924,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (3): He ___ twelve years old.",
+                "q": "He ___ twelve years old.",
                 "opts": [
                   "is",
                   "are",
@@ -1935,7 +1935,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (4): He ___ from England.",
+                "q": "He ___ from England.",
                 "opts": [
                   "come",
                   "comes",
@@ -1946,7 +1946,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (5): now he ___ in China with his parents.",
+                "q": "now he ___ in China with his parents.",
                 "opts": [
                   "live",
                   "lives",
@@ -1957,7 +1957,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (6): Every morning, Tom ___ to school at seven o'clock.",
+                "q": "Every morning, Tom ___ to school at seven o'clock.",
                 "opts": [
                   "go",
                   "goes",
@@ -1968,7 +1968,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (7): he often ___ rice for lunch.",
+                "q": "he often ___ rice for lunch.",
                 "opts": [
                   "eat",
                   "eats",
@@ -1979,7 +1979,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (8): he usually ___ basketball with his classmates.",
+                "q": "he usually ___ basketball with his classmates.",
                 "opts": [
                   "play",
                   "plays",
@@ -1990,7 +1990,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (9): He ___ TV in the evening.",
+                "q": "He ___ TV in the evening.",
                 "opts": [
                   "watch",
                   "watches",
@@ -2001,7 +2001,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Good Friend (10): he always ___ his homework first.",
+                "q": "he always ___ his homework first.",
                 "opts": [
                   "do",
                   "does",
@@ -2533,7 +2533,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My Family (1): There ___ five people in my family.",
+                "q": "There ___ five people in my family.",
                 "opts": [
                   "are",
                   "is",
@@ -2544,7 +2544,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Family (2): My father ___ a teacher.",
+                "q": "My father ___ a teacher.",
                 "opts": [
                   "is",
                   "are",
@@ -2555,7 +2555,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Family (3): My mother ___ in a hospital.",
+                "q": "My mother ___ in a hospital.",
                 "opts": [
                   "works",
                   "work",
@@ -2566,7 +2566,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Family (4): On weekends, we ___ activities together.",
+                "q": "On weekends, we ___ activities together.",
                 "opts": [
                   "do",
                   "does",
@@ -2577,7 +2577,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Family (5): This is my ___ violin.",
+                "q": "This is my ___ violin.",
                 "opts": [
                   "grandfather's",
                   "grandfather",
@@ -2588,7 +2588,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Family (6): My brother and I ___ chess.",
+                "q": "My brother and I ___ chess.",
                 "opts": [
                   "play",
                   "plays",
@@ -2599,7 +2599,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇·家庭: My father's father is my ___.",
+                "q": "My father's father is my ___.",
                 "opts": [
                   "grandfather",
                   "uncle",
@@ -2610,7 +2610,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇·家庭: My parents' son is my ___ (if not me).",
+                "q": "My parents' son is my ___ (if not me).",
                 "opts": [
                   "brother",
                   "sister",
@@ -2621,7 +2621,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: We often ___ fun when we are together.",
+                "q": "We often ___ fun when we are together.",
                 "opts": [
                   "have",
                   "make",
@@ -2632,7 +2632,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: From the passage, the family is ___.",
+                "q": "From the passage, the family is ___.",
                 "opts": [
                   "happy",
                   "unhappy",
@@ -3222,7 +3222,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My School (1): There ___ a big library.",
+                "q": "There ___ a big library.",
                 "opts": [
                   "is",
                   "are",
@@ -3233,7 +3233,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My School (2): It is ___ the second floor.",
+                "q": "It is ___ the second floor.",
                 "opts": [
                   "on",
                   "in",
@@ -3244,7 +3244,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My School (3): The gym is ___ the office.",
+                "q": "The gym is ___ the office.",
                 "opts": [
                   "behind",
                   "of",
@@ -3255,7 +3255,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My School (4): In front ___ the building is a playground.",
+                "q": "In front ___ the building is a playground.",
                 "opts": [
                   "of",
                   "on",
@@ -3266,7 +3266,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My School (5): We ___ morning exercises every day.",
+                "q": "We ___ morning exercises every day.",
                 "opts": [
                   "do",
                   "does",
@@ -3277,7 +3277,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: We borrow and read books in the ___.",
+                "q": "We borrow and read books in the ___.",
                 "opts": [
                   "library",
                   "gym",
@@ -3288,7 +3288,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: We eat lunch in the ___.",
+                "q": "We eat lunch in the ___.",
                 "opts": [
                   "dining hall",
                   "library",
@@ -3299,7 +3299,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: The library is ___ the dining hall.",
+                "q": "The library is ___ the dining hall.",
                 "opts": [
                   "next to",
                   "behind",
@@ -3831,7 +3831,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·Subjects (1): My favourite subject ___ English.",
+                "q": "My favourite subject ___ English.",
                 "opts": [
                   "is",
                   "are",
@@ -3842,7 +3842,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Subjects (2): I like it ___ it is useful.",
+                "q": "I like it ___ it is useful.",
                 "opts": [
                   "because",
                   "but",
@@ -3853,7 +3853,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Subjects (3): Maths is hard, ___ I work hard.",
+                "q": "Maths is hard, ___ I work hard.",
                 "opts": [
                   "but",
                   "because",
@@ -3864,7 +3864,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Subjects (4): I have history ___ geography today.",
+                "q": "I have history ___ geography today.",
                 "opts": [
                   "and",
                   "but",
@@ -3875,7 +3875,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Subjects (5): I am good ___ English.",
+                "q": "I am good ___ English.",
                 "opts": [
                   "at",
                   "in",
@@ -3886,7 +3886,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: We study plants and animals in ___.",
+                "q": "We study plants and animals in ___.",
                 "opts": [
                   "biology",
                   "history",
@@ -3897,7 +3897,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: ___ is the study of the past.",
+                "q": "___ is the study of the past.",
                 "opts": [
                   "History",
                   "Maths",
@@ -3908,7 +3908,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: Anna thinks maths is ___.",
+                "q": "Anna thinks maths is ___.",
                 "opts": [
                   "difficult",
                   "easy",
@@ -4449,7 +4449,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·Clubs (1): I ___ play the guitar.",
+                "q": "I ___ play the guitar.",
                 "opts": [
                   "can",
                   "cans",
@@ -4460,7 +4460,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Clubs (2): I want ___ join the music club.",
+                "q": "I want ___ join the music club.",
                 "opts": [
                   "to",
                   "/",
@@ -4471,7 +4471,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Clubs (3): Sam can't sing, ___ he can dance.",
+                "q": "Sam can't sing, ___ he can dance.",
                 "opts": [
                   "but",
                   "because",
@@ -4482,7 +4482,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Clubs (4): ___ you draw? Yes, a little.",
+                "q": "___ you draw? Yes, a little.",
                 "opts": [
                   "Can",
                   "Do",
@@ -4493,7 +4493,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Clubs (5): We can ___ new friends in clubs.",
+                "q": "We can ___ new friends in clubs.",
                 "opts": [
                   "make",
                   "do",
@@ -4504,7 +4504,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: People who like acting can join the ___ club.",
+                "q": "People who like acting can join the ___ club.",
                 "opts": [
                   "drama",
                   "music",
@@ -4515,7 +4515,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: You hit a ___ with sticks in a band.",
+                "q": "You hit a ___ with sticks in a band.",
                 "opts": [
                   "drum",
                   "guitar",
@@ -4526,7 +4526,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: Sam wants to join the ___ club.",
+                "q": "Sam wants to join the ___ club.",
                 "opts": [
                   "dance",
                   "music",
@@ -5098,7 +5098,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·My Day (1): I get up ___ six thirty.",
+                "q": "I get up ___ six thirty.",
                 "opts": [
                   "at",
                   "in",
@@ -5109,7 +5109,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Day (2): I ___ breakfast at seven.",
+                "q": "I ___ breakfast at seven.",
                 "opts": [
                   "have",
                   "has",
@@ -5120,7 +5120,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Day (3): What time ___ you go to school?",
+                "q": "What time ___ you go to school?",
                 "opts": [
                   "do",
                   "does",
@@ -5131,7 +5131,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Day (4): I do my homework ___ the evening.",
+                "q": "I do my homework ___ the evening.",
                 "opts": [
                   "in",
                   "at",
@@ -5142,7 +5142,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·My Day (5): I go to bed ___ ten o'clock.",
+                "q": "I go to bed ___ ten o'clock.",
                 "opts": [
                   "at",
                   "in",
@@ -5153,7 +5153,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: In the morning I brush my ___.",
+                "q": "In the morning I brush my ___.",
                 "opts": [
                   "teeth",
                   "tooth's",
@@ -5164,7 +5164,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: 'Get ___' means 起床.",
+                "q": "'Get ___' means 起床.",
                 "opts": [
                   "up",
                   "on",
@@ -5175,7 +5175,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: The writer has lunch at ___.",
+                "q": "The writer has lunch at ___.",
                 "opts": [
                   "twelve",
                   "seven",
@@ -5735,7 +5735,7 @@
             },
             "quizQuestions": [
               {
-                "q": "完形·Birthday (1): My birthday is ___ October 1st.",
+                "q": "My birthday is ___ October 1st.",
                 "opts": [
                   "on",
                   "in",
@@ -5746,7 +5746,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Birthday (2): It is the ___ month, October.",
+                "q": "It is the ___ month, October.",
                 "opts": [
                   "tenth",
                   "ten",
@@ -5757,7 +5757,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Birthday (3): My family ___ a party for me.",
+                "q": "My family ___ a party for me.",
                 "opts": [
                   "has",
                   "have",
@@ -5768,7 +5768,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Birthday (4): I make a ___ before eating the cake.",
+                "q": "I make a ___ before eating the cake.",
                 "opts": [
                   "wish",
                   "wash",
@@ -5779,7 +5779,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "完形·Birthday (5): ___ is your birthday? In May.",
+                "q": "___ is your birthday? In May.",
                 "opts": [
                   "When",
                   "Where",
@@ -5790,7 +5790,7 @@
                 "dim": "grammar"
               },
               {
-                "q": "词汇: We light and blow out the ___ on a cake.",
+                "q": "We light and blow out the ___ on a cake.",
                 "opts": [
                   "candles",
                   "balloons",
@@ -5801,7 +5801,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "词汇: 'Make a ___' means 许愿.",
+                "q": "'Make a ___' means 许愿.",
                 "opts": [
                   "wish",
                   "cake",
@@ -5812,7 +5812,7 @@
                 "dim": "vocab"
               },
               {
-                "q": "阅读: Long noodles mean a long ___ in China.",
+                "q": "Long noodles mean a long ___ in China.",
                 "opts": [
                   "life",
                   "day",

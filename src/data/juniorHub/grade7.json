@@ -2393,67 +2393,67 @@
               }
             ],
             "reading": {
-              "passage": "My Happy Family\n\nHi, I'm Jack. There are five people in my family: my grandparents, my parents and me. My father is a teacher, and my mother is a doctor. On weekends, we often do activities together. My father and I play chess, and my mother likes hiking. My grandfather can play the violin, so we sing and laugh in the evening. We always have fun together. I love my family very much.",
-              "passageCn": "我的幸福家庭\n\n嗨，我是 Jack。我家有五口人：祖父母、父母和我。我爸爸是老师，妈妈是医生。周末我们常常一起活动：我和爸爸下棋，妈妈喜欢远足。爷爷会拉小提琴，所以晚上我们一起唱歌欢笑。我们总是在一起很开心。我非常爱我的家。",
+              "passage": "My Family\n\nMy name is Mike. I am twelve. Here are two photos. In the first photo, you can see a man and a woman. They are my parents. My father is forty. He is an English teacher. My mother is thirty-eight. She doesn't work. She stays at home. In the second photo, there are three children. The boy is me. The two girls are my sisters, Mary and Jenny. Mary is fourteen. Jenny is eight. We are students. I love my sisters and parents.",
+              "passageCn": "我的家庭\n\n我叫 Mike，十二岁。这里有两张照片。第一张里有一位男士和一位女士，他们是我的父母。爸爸 40 岁，是英语老师；妈妈 38 岁，不工作，待在家里。第二张里有三个孩子：男孩是我，两个女孩是我的姐妹 Mary 和 Jenny。Mary 14 岁，Jenny 8 岁，我们都是学生。我爱我的姐妹和父母。",
               "questions": [
                 {
-                  "q": "How many people are there in Jack's family?",
+                  "q": "How old is Mike's father?",
                   "opts": [
-                    "Four",
-                    "Five",
-                    "Six",
-                    "Seven"
+                    "12",
+                    "14",
+                    "38",
+                    "40"
                   ],
-                  "answer": 1,
-                  "point": "细节·five people",
+                  "answer": 3,
+                  "point": "细节·forty",
                   "dim": "reading"
                 },
                 {
-                  "q": "What does Jack's mother do?",
+                  "q": "What does Mike's mother do?",
                   "opts": [
-                    "A teacher",
-                    "A doctor",
-                    "A nurse",
-                    "A singer"
-                  ],
-                  "answer": 1,
-                  "point": "细节·mother is a doctor",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What do Jack and his father do together?",
-                  "opts": [
-                    "Play chess",
-                    "Play ping-pong",
-                    "Go hiking",
-                    "Sing songs"
-                  ],
-                  "answer": 0,
-                  "point": "细节·play chess",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Who can play the violin?",
-                  "opts": [
-                    "Jack",
-                    "His father",
-                    "His grandfather",
-                    "His mother"
+                    "A teacher.",
+                    "A doctor.",
+                    "She stays at home.",
+                    "A nurse."
                   ],
                   "answer": 2,
-                  "point": "细节·grandfather",
+                  "point": "细节·stays at home",
                   "dim": "reading"
                 },
                 {
-                  "q": "How does Jack feel about his family?",
+                  "q": "How many people are there in Mike's family?",
                   "opts": [
-                    "He loves it.",
-                    "He is bored.",
-                    "He is sad.",
-                    "He doesn't care."
+                    "Three",
+                    "Four",
+                    "Five",
+                    "Six"
                   ],
-                  "answer": 0,
-                  "point": "主旨·I love my family",
+                  "answer": 2,
+                  "point": "细节·parents+Mike+2 sisters=5",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Mary is Mike's ___.",
+                  "opts": [
+                    "brother",
+                    "sister",
+                    "mother",
+                    "cousin"
+                  ],
+                  "answer": 1,
+                  "point": "细节·sister",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Which of the following is TRUE?",
+                  "opts": [
+                    "Mike has two brothers.",
+                    "Mike's father is a Chinese teacher.",
+                    "Jenny is 8 years old.",
+                    "There are 3 photos."
+                  ],
+                  "answer": 2,
+                  "point": "主旨判断·Jenny is 8",
                   "dim": "reading"
                 }
               ]
@@ -2522,114 +2522,100 @@
             },
             "quizQuestions": [
               {
-                "q": "There ___ five people in my family.",
+                "q": "This is a photo ___ my family. Those are my parents.",
                 "opts": [
-                  "are",
-                  "is",
-                  "am"
+                  "of",
+                  "at",
+                  "in",
+                  "to"
                 ],
                 "answer": 0,
-                "point": "there be 复数",
+                "point": "介词 of(所属)",
                 "dim": "grammar"
               },
               {
-                "q": "My father ___ a teacher.",
+                "q": "— Is that your uncle? — Yes, he is my ___ brother.",
                 "opts": [
-                  "is",
-                  "are",
-                  "am"
+                  "mother",
+                  "mother's",
+                  "father",
+                  "fathers"
                 ],
-                "answer": 0,
-                "point": "be动词·三单",
+                "answer": 1,
+                "point": "名词所有格 mother's",
                 "dim": "grammar"
               },
               {
-                "q": "My mother ___ in a hospital.",
+                "q": "Look! These are my ___. They are my uncle's sons.",
                 "opts": [
-                  "works",
-                  "work",
-                  "working"
-                ],
-                "answer": 0,
-                "point": "一般现在时·三单",
-                "dim": "grammar"
-              },
-              {
-                "q": "On weekends, we ___ activities together.",
-                "opts": [
-                  "do",
-                  "does",
-                  "doing"
-                ],
-                "answer": 0,
-                "point": "一般现在时·we",
-                "dim": "grammar"
-              },
-              {
-                "q": "This is my ___ violin.",
-                "opts": [
-                  "grandfather's",
-                  "grandfather",
-                  "grandfathers"
-                ],
-                "answer": 0,
-                "point": "名词所有格 's",
-                "dim": "grammar"
-              },
-              {
-                "q": "My brother and I ___ chess.",
-                "opts": [
-                  "play",
-                  "plays",
-                  "plaies"
-                ],
-                "answer": 0,
-                "point": "一般现在时·复数主语",
-                "dim": "grammar"
-              },
-              {
-                "q": "My father's father is my ___.",
-                "opts": [
-                  "grandfather",
-                  "uncle",
-                  "son"
-                ],
-                "answer": 0,
-                "point": "家庭称谓",
-                "dim": "vocab"
-              },
-              {
-                "q": "My parents' son is my ___ (if not me).",
-                "opts": [
-                  "brother",
+                  "cousin",
+                  "cousins",
                   "sister",
-                  "cousin"
+                  "brothers"
                 ],
-                "answer": 0,
-                "point": "家庭称谓",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "名词复数 cousins",
+                "dim": "grammar"
               },
               {
-                "q": "We often ___ fun when we are together.",
+                "q": "— Who is the girl? — She is ___ sister. ___ name is Lily.",
                 "opts": [
-                  "have",
-                  "make",
-                  "do"
+                  "I; She",
+                  "my; Her",
+                  "mine; His",
+                  "my; She"
                 ],
-                "answer": 0,
-                "point": "have fun 搭配",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "物主代词 my/Her",
+                "dim": "grammar"
               },
               {
-                "q": "From the passage, the family is ___.",
+                "q": "My grandfather ___ a big farm, and we ___ many sheep there.",
                 "opts": [
-                  "happy",
-                  "unhappy",
-                  "busy and tired"
+                  "have; has",
+                  "has; have",
+                  "has; has",
+                  "have; have"
+                ],
+                "answer": 1,
+                "point": "主谓一致 has/have",
+                "dim": "grammar"
+              },
+              {
+                "q": "— ___ your parents like sports? — Yes, they often play tennis.",
+                "opts": [
+                  "Does",
+                  "Is",
+                  "Do",
+                  "Are"
+                ],
+                "answer": 2,
+                "point": "一般现在时疑问·Do",
+                "dim": "grammar"
+              },
+              {
+                "q": "Jeff and Tony are brothers. This is ___ room. They both love it.",
+                "opts": [
+                  "Jeff and Tony",
+                  "Jeff's and Tony's",
+                  "Jeff and Tony's",
+                  "Jeffs and Tonys"
+                ],
+                "answer": 2,
+                "point": "共同所有格(末名词加's)",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Your family photo looks very nice! — ___.",
+                "opts": [
+                  "Thank you",
+                  "You're right",
+                  "No, it isn't",
+                  "That's OK"
                 ],
                 "answer": 0,
-                "point": "主旨理解",
-                "dim": "reading"
+                "point": "交际用语·应答称赞",
+                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -3699,67 +3685,43 @@
               }
             ],
             "reading": {
-              "passage": "My Favourite Subject\n\nI am Anna. I have many subjects at school, such as Chinese, maths, English and history. My favourite subject is English because it is useful and fun. I don't like maths very much because it is difficult, but I still work hard at it. My English teacher is kind, so her class is always great. I want to learn English well in the future.",
-              "passageCn": "我是 Anna。我在学校学很多科目，比如语文、数学、英语和历史。我最喜欢的科目是英语，因为它有用又有趣。我不太喜欢数学，因为它很难，但我仍然努力学。我的英语老师很和蔼，所以她的课总是很棒。我想将来把英语学好。",
+              "passage": "My Favourite Subject\n\nJack: My favourite subject is P.E. I think it is exciting. I play basketball with my classmates every afternoon. I want to be a sports star in the future.\nLinda: I like English best. Our English teacher, Miss Miller, is from the UK. She helps us a lot. I think learning English is useful for travelling.\nPeter: Science is my favourite. I have it on Tuesday and Thursday. It is difficult but very cool. I want to build robots one day.",
+              "passageCn": "我最喜欢的科目\n\nJack：我最喜欢体育，觉得它很刺激。我每天下午和同学打篮球，将来想成为体育明星。\nLinda：我最喜欢英语。我们的英语老师 Miss Miller 来自英国，帮了我们很多。我觉得学英语对旅行很有用。\nPeter：我最喜欢科学，周二和周四有这门课。它很难但很酷，我将来想造机器人。",
               "questions": [
                 {
-                  "q": "What is Anna's favourite subject?",
+                  "q": "Why does Jack like P.E.?",
                   "opts": [
-                    "Chinese",
-                    "Maths",
-                    "English",
-                    "History"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Why does she like it?",
-                  "opts": [
-                    "It is useful and fun",
-                    "It is easy",
-                    "It is short",
-                    "The teacher is strict"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Which subject is difficult for her?",
-                  "opts": [
-                    "English",
-                    "Maths",
-                    "History",
-                    "Art"
+                    "It is useful.",
+                    "It is exciting.",
+                    "It is easy.",
+                    "It is relaxing."
                   ],
                   "answer": 1,
-                  "point": "细节",
+                  "point": "细节·exciting",
                   "dim": "reading"
                 },
                 {
-                  "q": "What is her English teacher like?",
+                  "q": "Where is Linda's English teacher from?",
                   "opts": [
-                    "Kind",
-                    "Strict",
-                    "Boring",
-                    "Lazy"
+                    "China",
+                    "America",
+                    "The UK",
+                    "Canada"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 2,
+                  "point": "细节·from the UK",
                   "dim": "reading"
                 },
                 {
-                  "q": "What does Anna want to do in the future?",
+                  "q": "Which subject does Peter think is difficult but cool?",
                   "opts": [
-                    "Learn English well",
-                    "Stop studying",
-                    "Be a doctor",
-                    "Play sports"
+                    "Math",
+                    "Art",
+                    "History",
+                    "Science"
                   ],
-                  "answer": 0,
-                  "point": "主旨",
+                  "answer": 3,
+                  "point": "细节·Science",
                   "dim": "reading"
                 }
               ]
@@ -3828,92 +3790,100 @@
             },
             "quizQuestions": [
               {
-                "q": "My favourite subject ___ English.",
+                "q": "— ___ do you like history so much? — Because I want to know about the past.",
                 "opts": [
-                  "is",
-                  "are",
-                  "am"
+                  "What",
+                  "When",
+                  "Why",
+                  "Who"
                 ],
-                "answer": 0,
-                "point": "be动词",
+                "answer": 2,
+                "point": "疑问词 Why(答 Because)",
                 "dim": "grammar"
               },
               {
-                "q": "I like it ___ it is useful.",
+                "q": "I am very busy ___ weekdays, but I have some free time ___ the weekend.",
                 "opts": [
-                  "because",
-                  "but",
-                  "and"
+                  "on; on",
+                  "in; at",
+                  "at; in",
+                  "on; in"
                 ],
                 "answer": 0,
-                "point": "连词",
+                "point": "时间介词 on weekdays/on the weekend",
                 "dim": "grammar"
               },
               {
-                "q": "Maths is hard, ___ I work hard.",
+                "q": "Playing the violin is not easy. I think music is a bit ___ for beginners.",
                 "opts": [
-                  "but",
+                  "relaxing",
+                  "difficult",
+                  "boring",
+                  "favourite"
+                ],
+                "answer": 1,
+                "point": "形容词·difficult",
+                "dim": "vocab"
+              },
+              {
+                "q": "Mr. Jenkins always tells us jokes in class. His lessons are never ___.",
+                "opts": [
+                  "interesting",
+                  "useful",
+                  "boring",
+                  "exciting"
+                ],
+                "answer": 2,
+                "point": "形容词·boring",
+                "dim": "vocab"
+              },
+              {
+                "q": "Mr. Li is our music teacher. We all like ___ very much.",
+                "opts": [
+                  "he",
+                  "him",
+                  "his",
+                  "himself"
+                ],
+                "answer": 1,
+                "point": "宾格代词 him",
+                "dim": "grammar"
+              },
+              {
+                "q": "English is hard for me, ___ I practise speaking it every day.",
+                "opts": [
                   "because",
+                  "or",
+                  "but",
                   "so"
                 ],
-                "answer": 0,
-                "point": "连词",
+                "answer": 2,
+                "point": "连词 but(转折)",
                 "dim": "grammar"
               },
               {
-                "q": "I have history ___ geography today.",
+                "q": "— ___ do you have math? — We have it on Monday and Wednesday.",
                 "opts": [
-                  "and",
-                  "but",
-                  "or"
+                  "Why",
+                  "When",
+                  "Who",
+                  "Where"
                 ],
-                "answer": 0,
-                "point": "连词",
+                "answer": 1,
+                "point": "疑问词 When",
                 "dim": "grammar"
               },
               {
-                "q": "I am good ___ English.",
+                "q": "— ___ is your P.E. teacher? — Mr. Wang. He is great.",
                 "opts": [
-                  "at",
-                  "in",
-                  "on"
+                  "What",
+                  "Who",
+                  "When",
+                  "Why"
                 ],
-                "answer": 0,
-                "point": "短语 good at",
+                "answer": 1,
+                "point": "疑问词 Who",
                 "dim": "grammar"
-              },
-              {
-                "q": "We study plants and animals in ___.",
-                "opts": [
-                  "biology",
-                  "history",
-                  "music"
-                ],
-                "answer": 0,
-                "point": "学科词",
-                "dim": "vocab"
-              },
-              {
-                "q": "___ is the study of the past.",
-                "opts": [
-                  "History",
-                  "Maths",
-                  "Art"
-                ],
-                "answer": 0,
-                "point": "学科词",
-                "dim": "vocab"
-              },
-              {
-                "q": "Anna thinks maths is ___.",
-                "opts": [
-                  "difficult",
-                  "easy",
-                  "fun"
-                ],
-                "answer": 0,
-                "point": "细节",
-                "dim": "reading"
               }
             ],
             "listeningQuestions": [
@@ -4318,67 +4288,67 @@
               }
             ],
             "reading": {
-              "passage": "Fun Clubs\n\nThere are many clubs at my school. I want to join the music club because I can sing and play the guitar. My friend Sam can't sing, but he can dance very well, so he wants to join the dance club. In the art club, students can paint and draw. Clubs are really fun. We can make new friends and learn new things there.",
-              "passageCn": "我们学校有很多社团。我想加入音乐社，因为我会唱歌、弹吉他。我的朋友 Sam 不会唱歌，但他舞跳得很好，所以他想加入舞蹈社。在美术社，学生可以画画。社团真有趣，我们能在那里交新朋友、学新东西。",
+              "passage": "Welcome to Our School Clubs!\n\nArt Club — Activity: Painting, drawing, and making crafts. Time: Tuesday 3:30 p.m. - 4:30 p.m. Place: Art Room 101.\nChess Club — Activity: Learn chess strategies and play matches. Time: Wednesday 4:00 p.m. - 5:00 p.m. Place: Room 204.\nNature Club — Activity: Plant flowers and explore the school garden. Time: Friday 3:30 p.m. - 5:00 p.m. Place: School Garden.",
+              "passageCn": "欢迎加入我们的校园社团！\n\n美术社——活动：绘画、画画、做手工。时间：周二 3:30–4:30。地点：美术室 101。\n象棋社——活动：学习棋谱、对弈。时间：周三 4:00–5:00。地点：204 室。\n自然社——活动：种花、探索校园花园。时间：周五 3:30–5:00。地点：校园花园。",
               "questions": [
                 {
-                  "q": "Which club does the writer want to join?",
+                  "q": "Which club meets on Wednesdays?",
                   "opts": [
-                    "The music club",
-                    "The dance club",
-                    "The art club",
-                    "The chess club"
+                    "Art Club",
+                    "Chess Club",
+                    "Nature Club",
+                    "Science Club"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 1,
+                  "point": "细节·Chess Club",
                   "dim": "reading"
                 },
                 {
-                  "q": "Why does the writer want to join it?",
+                  "q": "How long does the Nature Club meet every Friday?",
                   "opts": [
-                    "Can sing and play guitar",
-                    "Can dance",
-                    "Can paint",
-                    "Can swim"
+                    "1 hour",
+                    "1.5 hours",
+                    "2 hours",
+                    "2.5 hours"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 1,
+                  "point": "计算·3:30–5:00=1.5h",
                   "dim": "reading"
                 },
                 {
-                  "q": "What can Sam do well?",
+                  "q": "Where does the Art Club meet?",
                   "opts": [
-                    "Dance",
-                    "Sing",
-                    "Paint",
-                    "Swim"
+                    "In Room 101",
+                    "In Room 204",
+                    "In the garden",
+                    "In the library"
                   ],
                   "answer": 0,
-                  "point": "细节",
+                  "point": "细节·Art Room 101",
                   "dim": "reading"
                 },
                 {
-                  "q": "What can students do in the art club?",
+                  "q": "If Tony likes plants and trees, he should join the ___.",
                   "opts": [
-                    "Paint and draw",
-                    "Sing",
-                    "Dance",
-                    "Play chess"
+                    "Art Club",
+                    "Chess Club",
+                    "Nature Club",
+                    "Music Club"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 2,
+                  "point": "推断·Nature Club",
                   "dim": "reading"
                 },
                 {
-                  "q": "What can clubs help us do?",
+                  "q": "Which statement is TRUE according to the poster?",
                   "opts": [
-                    "Make friends and learn",
-                    "Do homework",
-                    "Sleep",
-                    "Eat"
+                    "The Chess Club meets in the garden.",
+                    "The Art Club ends at 5:00 p.m.",
+                    "All three clubs start at the same time.",
+                    "You can make crafts in the Art Club."
                   ],
-                  "answer": 0,
-                  "point": "主旨",
+                  "answer": 3,
+                  "point": "判断·make crafts in Art Club",
                   "dim": "reading"
                 }
               ]
@@ -4446,92 +4416,100 @@
             },
             "quizQuestions": [
               {
-                "q": "I ___ play the guitar.",
+                "q": "I want to join the ___ Club because I love playing basketball.",
                 "opts": [
-                  "can",
-                  "cans",
-                  "am"
+                  "Art",
+                  "Sports",
+                  "Chess",
+                  "Science"
+                ],
+                "answer": 1,
+                "point": "语义·Sports Club",
+                "dim": "vocab"
+              },
+              {
+                "q": "— Can you ___ the guitar? — No, but I can dance.",
+                "opts": [
+                  "play",
+                  "play the",
+                  "playing",
+                  "playing the"
                 ],
                 "answer": 0,
-                "point": "情态动词 can",
+                "point": "can+动词原形(play the guitar)",
                 "dim": "grammar"
               },
               {
-                "q": "I want ___ join the music club.",
+                "q": "Our school has ___ interesting clubs. You can choose one.",
                 "opts": [
-                  "to",
-                  "/",
-                  "for"
+                  "much",
+                  "many",
+                  "any",
+                  "a little"
                 ],
-                "answer": 0,
-                "point": "want to do",
+                "answer": 1,
+                "point": "many+可数复数",
                 "dim": "grammar"
               },
               {
-                "q": "Sam can't sing, ___ he can dance.",
+                "q": "Join us ___ show your talent to the whole school!",
                 "opts": [
                   "but",
-                  "because",
-                  "so"
+                  "so",
+                  "and",
+                  "because"
                 ],
-                "answer": 0,
-                "point": "连词",
+                "answer": 2,
+                "point": "连词 and",
                 "dim": "grammar"
               },
               {
-                "q": "___ you draw? Yes, a little.",
+                "q": "I like acting, so I want to join the ___ Club.",
                 "opts": [
-                  "Can",
-                  "Do",
-                  "Are"
+                  "Drama",
+                  "Math",
+                  "Nature",
+                  "Robot"
                 ],
                 "answer": 0,
-                "point": "can 疑问",
-                "dim": "grammar"
-              },
-              {
-                "q": "We can ___ new friends in clubs.",
-                "opts": [
-                  "make",
-                  "do",
-                  "take"
-                ],
-                "answer": 0,
-                "point": "make friends 搭配",
-                "dim": "grammar"
-              },
-              {
-                "q": "People who like acting can join the ___ club.",
-                "opts": [
-                  "drama",
-                  "music",
-                  "chess"
-                ],
-                "answer": 0,
-                "point": "社团词",
+                "point": "语义·Drama Club",
                 "dim": "vocab"
               },
               {
-                "q": "You hit a ___ with sticks in a band.",
+                "q": "Playing chess is great fun. It teaches us ___ think carefully.",
                 "opts": [
-                  "drum",
-                  "guitar",
-                  "violin"
+                  "for",
+                  "to",
+                  "at",
+                  "about"
                 ],
-                "answer": 0,
-                "point": "乐器词",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "不定式 to do",
+                "dim": "grammar"
               },
               {
-                "q": "Sam wants to join the ___ club.",
+                "q": "— Do you have ___ hobbies? — Yes, I like collecting old stamps.",
                 "opts": [
-                  "dance",
-                  "music",
-                  "art"
+                  "some",
+                  "any",
+                  "much",
+                  "a little"
                 ],
-                "answer": 0,
-                "point": "细节",
-                "dim": "reading"
+                "answer": 1,
+                "point": "any 用于疑问句",
+                "dim": "grammar"
+              },
+              {
+                "q": "This club is very ___. All the members feel ___ in it.",
+                "opts": [
+                  "interesting; interesting",
+                  "interested; interested",
+                  "interesting; interested",
+                  "interested; interesting"
+                ],
+                "answer": 2,
+                "point": "-ing 修饰物 / -ed 修饰人",
+                "dim": "grammar"
               }
             ],
             "listeningQuestions": [

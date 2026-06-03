@@ -142,7 +142,7 @@ function StageShell({
 }) {
   return (
     <>
-      <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
+      <div className="mt-2 flex items-center gap-3 border-y border-[#EEEAE0] bg-white px-4 py-3.5">
         <button type="button" onClick={onBack} className="text-xl">
           ←
         </button>
@@ -894,6 +894,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           <WordMatchingGame
             vocabulary={unit.vocabulary}
             grade={grade}
+            batchSize={8}
             onFinish={handleFinish}
             onMatch={addStar}
           />

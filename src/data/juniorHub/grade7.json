@@ -156,8 +156,6 @@
             "grammarCode": null,
             "grammarQuiz": [
               {
-                
-              {
                 "q": "Hello! ___ name is Lin Tao.",
                 "opts": [
                   "My",
@@ -3081,67 +3079,67 @@
               }
             ],
             "reading": {
-              "passage": "My School\n\nThis is my school. It is big and beautiful. There is a library next to the dining hall, and it is on the second floor. In front of the teaching building, there is a large playground. We do morning exercises and raise the flag there. There is also a gym behind the office. I think my school is amazing, and I love it very much.",
-              "passageCn": "这是我的学校，又大又漂亮。餐厅旁边有一个图书馆，在二楼。教学楼前面有一个大操场，我们在那里做早操、升旗。办公室后面还有一个体育馆。我觉得我的学校很棒，我非常喜欢它。",
+              "passage": "My New School\n\nMy name is Amy. I am an exchange (交换的) student from the UK. This is my first week at Sunshine Middle School. Let me tell you about my new school campus (校园)! The school is quite large. In the middle of the school is a beautiful garden. There are many trees, flowers, and comfortable benches where we can sit and talk. In front of the garden is the classroom building. My classroom is on the first floor, which is very convenient (方便的). Behind the garden is the huge sports field. We play football there after 4:30 p.m. On the left side of the campus, there is a dining hall. The food here is different from English food, but it tastes very good! On the right side, there is a modern building with a library on the first floor and a computer room on the second floor. I love my new school!",
+              "passageCn": "我的新学校\n\n我叫 Amy，是来自英国的交换生(exchange student)，这是我在阳光中学的第一周。校园很大：正中是一个漂亮的花园，有树、花和长椅。花园前面是教学楼，我的教室在一楼，很方便。花园后面是大操场，我们 4:30 之后在那里踢球。校园左边是餐厅，饭菜和英国的不一样但很好吃。右边是一栋现代建筑，一楼是图书馆、二楼是电脑室。我爱我的新学校！",
               "questions": [
                 {
-                  "q": "Where is the library?",
+                  "q": "Where is the beautiful garden?",
                   "opts": [
-                    "Next to the dining hall",
-                    "Behind the office",
-                    "In the gym",
-                    "Under the playground"
+                    "Behind the sports field.",
+                    "In front of the dining hall.",
+                    "In the middle of the school.",
+                    "On the second floor."
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 2,
+                  "point": "细节·in the middle",
                   "dim": "reading"
                 },
                 {
-                  "q": "Which floor is the library on?",
+                  "q": "What does the word \"benches\" mean in Chinese?",
                   "opts": [
-                    "The first floor",
-                    "The second floor",
-                    "The third floor",
-                    "The fourth floor"
+                    "黑板",
+                    "长椅",
+                    "窗户",
+                    "讲台"
                   ],
                   "answer": 1,
-                  "point": "细节",
+                  "point": "词义猜测·benches",
                   "dim": "reading"
                 },
                 {
-                  "q": "What do students do on the playground?",
+                  "q": "Amy's classroom is on the ___.",
                   "opts": [
-                    "Morning exercises and raise the flag",
-                    "Eat lunch",
-                    "Read books",
-                    "Sleep"
+                    "first floor",
+                    "second floor",
+                    "third floor",
+                    "fourth floor"
                   ],
                   "answer": 0,
-                  "point": "细节",
+                  "point": "细节·first floor",
                   "dim": "reading"
                 },
                 {
-                  "q": "Where is the gym?",
+                  "q": "Where is the computer room?",
                   "opts": [
-                    "Behind the office",
-                    "In front of the building",
-                    "Next to the library",
-                    "On the roof"
+                    "On the first floor of the modern building.",
+                    "On the second floor of the modern building.",
+                    "Next to the dining hall.",
+                    "Behind the classroom building."
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 1,
+                  "point": "细节·second floor",
                   "dim": "reading"
                 },
                 {
-                  "q": "How does the writer feel about the school?",
+                  "q": "Which of the following is TRUE?",
                   "opts": [
-                    "Loves it",
-                    "Hates it",
-                    "Is bored",
-                    "Is afraid"
+                    "Amy doesn't like the school food.",
+                    "Amy plays football in the morning.",
+                    "The library is on the first floor.",
+                    "The school is very small."
                   ],
-                  "answer": 0,
-                  "point": "主旨",
+                  "answer": 2,
+                  "point": "主旨判断·library first floor",
                   "dim": "reading"
                 }
               ]
@@ -3213,91 +3211,99 @@
             },
             "quizQuestions": [
               {
-                "q": "There ___ a big library.",
+                "q": "There ___ a library and two computer rooms in our school.",
                 "opts": [
+                  "am",
                   "is",
                   "are",
-                  "am"
+                  "be"
                 ],
-                "answer": 0,
-                "point": "there be",
+                "answer": 1,
+                "point": "there be 就近原则·a library(单数)",
                 "dim": "grammar"
               },
               {
-                "q": "It is ___ the second floor.",
+                "q": "— Where is the dining hall? — It's ___ the first floor.",
                 "opts": [
                   "on",
                   "in",
-                  "at"
-                ],
-                "answer": 0,
-                "point": "介词",
-                "dim": "grammar"
-              },
-              {
-                "q": "The gym is ___ the office.",
-                "opts": [
-                  "behind",
-                  "of",
+                  "at",
                   "to"
                 ],
                 "answer": 0,
-                "point": "方位介词",
+                "point": "介词 on the floor",
                 "dim": "grammar"
               },
               {
-                "q": "In front ___ the building is a playground.",
+                "q": "Is this ___ office? — Yes, it's for all the English teachers.",
                 "opts": [
-                  "of",
-                  "on",
-                  "at"
+                  "teacher",
+                  "teachers",
+                  "teacher's",
+                  "teachers'"
                 ],
-                "answer": 0,
-                "point": "短语 in front of",
+                "answer": 3,
+                "point": "复数名词所有格 teachers'",
                 "dim": "grammar"
               },
               {
-                "q": "We ___ morning exercises every day.",
+                "q": "— It's on ___ floor, next to the art room.",
                 "opts": [
-                  "do",
-                  "does",
-                  "doing"
+                  "first",
+                  "the first",
+                  "one",
+                  "the one"
                 ],
-                "answer": 0,
-                "point": "一般现在时",
+                "answer": 1,
+                "point": "序数词+the floor",
                 "dim": "grammar"
               },
               {
-                "q": "We borrow and read books in the ___.",
+                "q": "There ___ three computer rooms and a big library in the new building.",
                 "opts": [
-                  "library",
-                  "gym",
-                  "office"
+                  "am",
+                  "is",
+                  "are",
+                  "be"
                 ],
-                "answer": 0,
-                "point": "场所词",
+                "answer": 2,
+                "point": "there be 就近原则·three computer rooms(复数)",
+                "dim": "grammar"
+              },
+              {
+                "q": "Our classroom is very ___. There is no dirt on the floor.",
+                "opts": [
+                  "large",
+                  "small",
+                  "clean",
+                  "old"
+                ],
+                "answer": 2,
+                "point": "词义·clean",
                 "dim": "vocab"
               },
               {
-                "q": "We eat lunch in the ___.",
+                "q": "We usually ___ our national flag on Monday morning.",
                 "opts": [
-                  "dining hall",
-                  "library",
-                  "lab"
+                  "show",
+                  "raise",
+                  "change",
+                  "choose"
                 ],
-                "answer": 0,
-                "point": "场所词",
+                "answer": 1,
+                "point": "搭配·raise the flag",
                 "dim": "vocab"
               },
               {
-                "q": "The library is ___ the dining hall.",
+                "q": "Where is the computer room in Amy's school?",
                 "opts": [
-                  "next to",
-                  "behind",
-                  "far from"
+                  "On the first floor of the modern building.",
+                  "On the second floor of the modern building.",
+                  "Next to the dining hall.",
+                  "Behind the classroom building."
                 ],
-                "answer": 0,
-                "point": "细节",
+                "answer": 1,
+                "point": "阅读细节·呼应短文",
                 "dim": "reading"
               }
             ],

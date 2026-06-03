@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
 import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
@@ -763,7 +763,6 @@ function ReadingStage({
     <div>
       <div className="mb-4 rounded-xl bg-[#F0F4FF] p-3 text-sm leading-relaxed">
         <p className="mb-2">{reading.passage}</p>
-        <p className="text-[#5C5751]">{reading.passageCn}</p>
       </div>
       <FinalQuizStage
         questions={shuffleArray(reading.questions).slice(0, 6)}

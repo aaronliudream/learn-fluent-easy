@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
+import AdminRoute from "@/components/AdminRoute";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
 import { saveRedirectPath, consumeRedirectPath } from "@/lib/authRedirect";
@@ -98,6 +99,7 @@ const JuniorGrade = lazy(() => import("./pages/JuniorGrade.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
 const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
+const JuniorGrammarKpQuiz = lazy(() => import("./pages/JuniorGrammarKpQuiz.tsx"));
 const JuniorGrammarMastery = lazy(() => import("./pages/JuniorGrammarMastery.tsx"));
 const JuniorGrammarLab = lazy(() => import("./pages/JuniorGrammarLab.tsx"));
 const JuniorGrammarRevenge = lazy(() => import("./pages/JuniorGrammarRevenge.tsx"));
@@ -382,6 +384,8 @@ const App = () => (
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
+          {/* 🔒 临时锁定(开发中):初中 /junior 与 高中 /senior→/gaokao 全部子路由,仅管理员可访问;非 admin 重定向回首页 */}
+          <Route element={<AdminRoute />}>
           <Route path="/junior/hub/:grade" element={<ChineseOnlyRoute><JuniorHubLayout /></ChineseOnlyRoute>}>
             <Route index element={<JuniorHubHome />} />
             <Route path="course" element={<JuniorHubCourse />} />
@@ -417,6 +421,7 @@ const App = () => (
           <Route path="/junior/grammar/:id" element={<ChineseOnlyRoute><JuniorGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar-lab/:id" element={<ChineseOnlyRoute><JuniorGrammarLab /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar/:id/mastery" element={<ChineseOnlyRoute><JuniorGrammarMastery /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar/:id/practice" element={<ChineseOnlyRoute><JuniorGrammarKpQuiz /></ChineseOnlyRoute>} />
           <Route path="/junior/reading" element={<ChineseOnlyRoute><JuniorReading /></ChineseOnlyRoute>} />
           <Route path="/junior/reading/:id" element={<ChineseOnlyRoute><JuniorReadingPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
@@ -463,6 +468,8 @@ const App = () => (
           <Route path="/gaokao/listening/:id" element={<ChineseOnlyRoute><GaokaoListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
+          </Route>
+          {/* 🔒 end admin-only(初中/高中)*/}
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
@@ -483,7 +490,7 @@ const App = () => (
           <Route path="/me" element={<Me />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}
           <Route path="/kids" element={<Navigate to="/primary" replace />} />
-          <Route path="/senior" element={<Navigate to="/gaokao" replace />} />
+          <Route path="/senior" element={<AdminRoute><Navigate to="/gaokao" replace /></AdminRoute>} />
           <Route path="/cet" element={<Cet />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

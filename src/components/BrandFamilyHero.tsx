@@ -1,5 +1,9 @@
 import { T } from "@/i18n/T";import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Construction } from "lucide-react";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
+
+/** 临时锁定(开发中):这两个入口仅管理员可见,与路由守卫 AdminRoute 对应。 */
+const ADMIN_ONLY_ROUTES = new Set(["/junior", "/senior"]);
 
 /**
  * 母品牌 Big Moon English 主页 4 子品牌入口卡片.
@@ -72,10 +76,13 @@ function StatusPill({ status }: {status: Status;}) {
 }
 
 export default function BrandFamilyHero() {
+  const { isAdmin } = useIsAdmin();
+  // 加载中或非 admin:隐藏初中/高中入口(避免向非管理员闪现);仅确认 admin 后才显示。
+  const brands = BRANDS.filter((b) => (ADMIN_ONLY_ROUTES.has(b.to) ? isAdmin : true));
   return (
     <section aria-labelledby="brand-family-heading" className="mb-10">
       <div className="grid gap-4 md:grid-cols-2">
-        {BRANDS.map((b) =>
+        {brands.map((b) =>
         <Link
           key={b.to}
           to={b.to}

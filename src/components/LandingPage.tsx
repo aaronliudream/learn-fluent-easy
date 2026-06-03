@@ -27,8 +27,12 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type SyntheticEvent } from "react";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
+
+/** 临时锁定(开发中):指向初中/高中的入口仅管理员可见,与路由守卫 AdminRoute 一致。 */
+const ADMIN_ONLY_HREFS = new Set(["/junior", "/gaokao", "/senior"]);
 
 const NAV_LINKS = [
   { href: "/kids", label: "小学" as const },
@@ -305,6 +309,10 @@ function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { isAdmin } = useIsAdmin();
+  // 加载中或非 admin:隐藏初中/高中入口(避免向非管理员闪现);仅确认 admin 后才显示。
+  const navLinks = NAV_LINKS.filter((n) => (ADMIN_ONLY_HREFS.has(n.href) ? isAdmin : true));
+  const courseCards = COURSE_CARDS.filter((c) => (ADMIN_ONLY_HREFS.has(c.to) ? isAdmin : true));
 
   return (
     <main className="landing-page min-h-dvh bg-[#f4f6f9] font-sans text-slate-900 antialiased">
@@ -327,7 +335,7 @@ export default function LandingPage() {
             </Link>
 
             <div className="hidden flex-1 items-center justify-center gap-5 lg:flex lg:gap-7">
-              {NAV_LINKS.map((n) => (
+              {navLinks.map((n) => (
                 <NavLink key={n.href} href={n.href} label={n.label} />
               ))}
             </div>
@@ -365,7 +373,7 @@ export default function LandingPage() {
                 </button>
               </div>
               <div className="flex flex-col gap-3">
-                {NAV_LINKS.map((n) => (
+                {navLinks.map((n) => (
                   <NavLink
                     key={n.href}
                     href={n.href}
@@ -445,7 +453,7 @@ export default function LandingPage() {
       <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-10 md:py-12">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:grid-cols-[1.2fr_0.85fr] md:gap-7 md:px-6 lg:gap-9">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {COURSE_CARDS.map((c) => (
+            {courseCards.map((c) => (
               <CourseCard key={c.to} c={c} />
             ))}
           </div>

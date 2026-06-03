@@ -4939,67 +4939,40 @@
               }
             ],
             "reading": {
-              "passage": "My Day\n\nI am a student. On school days, I get up at six thirty. I have breakfast at seven and go to school at seven thirty. I have four classes in the morning. I have lunch at twelve in the school dining hall. In the afternoon, I have two classes. After school, I play basketball with my friends. I do my homework in the evening and go to bed at ten. My day is busy but happy.",
-              "passageCn": "我是一名学生。上学日我六点半起床，七点吃早饭，七点半去上学。上午有四节课。中午十二点在学校餐厅吃午饭。下午有两节课。放学后我和朋友打篮球。晚上做作业，十点睡觉。我的一天忙碌但开心。",
+              "passage": "School Life in Seoul\n\nHello, I am Min-jun from Seoul, South Korea. School life here is very busy. I go to school by subway at 7:40 AM. We have four classes in the morning and three classes in the afternoon. My favourite subject is PE because I love playing sports with my classmates. School finishes at 4:30 PM, but my day does not end there. I go to a special evening school called a hagwon (课外补习班) to study English and maths until 8:00 PM. I finally get home around 8:30 PM and eat dinner with my parents.",
+              "passageCn": "首尔的校园生活\n\n我叫 Min-jun，来自韩国首尔。这里的校园生活很忙。我早上 7:40 坐地铁上学，上午四节课、下午三节课。我最喜欢体育，因为爱和同学一起运动。学校 4:30 放学，但我的一天还没结束——我还要去一所叫 hagwon(课外补习班)的晚间学校学英语和数学，到晚上 8:00。大约 8:30 到家，和父母一起吃晚饭。",
               "questions": [
                 {
-                  "q": "When does the writer get up?",
+                  "q": "How does Min-jun go to school?",
                   "opts": [
-                    "At six",
-                    "At six thirty",
-                    "At seven",
-                    "At seven thirty"
+                    "By bus.",
+                    "By subway.",
+                    "On foot."
                   ],
                   "answer": 1,
-                  "point": "细节",
+                  "point": "细节·by subway",
                   "dim": "reading"
                 },
                 {
-                  "q": "How many classes are there in the morning?",
+                  "q": "How many classes does Min-jun have at school in total each day?",
                   "opts": [
-                    "Two",
-                    "Three",
-                    "Four",
-                    "Five"
+                    "Four classes.",
+                    "Three classes.",
+                    "Seven classes."
                   ],
                   "answer": 2,
-                  "point": "细节",
+                  "point": "计算·4+3=7",
                   "dim": "reading"
                 },
                 {
-                  "q": "Where does the writer have lunch?",
+                  "q": "What does Min-jun do until 8:00 PM?",
                   "opts": [
-                    "At home",
-                    "In the school dining hall",
-                    "In a restaurant",
-                    "On the playground"
+                    "He plays sports in PE class.",
+                    "He studies at an evening school.",
+                    "He eats dinner with his parents."
                   ],
                   "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does the writer do after school?",
-                  "opts": [
-                    "Plays basketball",
-                    "Watches TV",
-                    "Goes shopping",
-                    "Sleeps"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How is the writer's day?",
-                  "opts": [
-                    "Busy but happy",
-                    "Boring",
-                    "Free and easy",
-                    "Sad"
-                  ],
-                  "answer": 0,
-                  "point": "主旨",
+                  "point": "细节·hagwon",
                   "dim": "reading"
                 }
               ]
@@ -5073,92 +5046,92 @@
             },
             "quizQuestions": [
               {
-                "q": "I get up ___ six thirty.",
-                "opts": [
-                  "at",
-                  "in",
-                  "on"
-                ],
-                "answer": 0,
-                "point": "时间介词",
-                "dim": "grammar"
-              },
-              {
-                "q": "I ___ breakfast at seven.",
-                "opts": [
-                  "have",
-                  "has",
-                  "having"
-                ],
-                "answer": 0,
-                "point": "一般现在时",
-                "dim": "grammar"
-              },
-              {
-                "q": "What time ___ you go to school?",
-                "opts": [
-                  "do",
-                  "does",
-                  "are"
-                ],
-                "answer": 0,
-                "point": "疑问句",
-                "dim": "grammar"
-              },
-              {
-                "q": "I do my homework ___ the evening.",
+                "q": "My brother always plays soccer ___ Tuesday afternoons.",
                 "opts": [
                   "in",
-                  "at",
-                  "on"
-                ],
-                "answer": 0,
-                "point": "时间介词",
-                "dim": "grammar"
-              },
-              {
-                "q": "I go to bed ___ ten o'clock.",
-                "opts": [
-                  "at",
-                  "in",
-                  "on"
-                ],
-                "answer": 0,
-                "point": "时间介词",
-                "dim": "grammar"
-              },
-              {
-                "q": "In the morning I brush my ___.",
-                "opts": [
-                  "teeth",
-                  "tooth's",
-                  "tooths"
-                ],
-                "answer": 0,
-                "point": "名词复数 tooth→teeth",
-                "dim": "vocab"
-              },
-              {
-                "q": "'Get ___' means 起床.",
-                "opts": [
-                  "up",
                   "on",
-                  "off"
+                  "at"
                 ],
-                "answer": 0,
-                "point": "短语 get up",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "时间介词 on+具体的上下午",
+                "dim": "grammar"
               },
               {
-                "q": "The writer has lunch at ___.",
+                "q": "Our first class starts ___ 8:00 AM every morning.",
                 "opts": [
-                  "twelve",
-                  "seven",
-                  "ten"
+                  "on",
+                  "at",
+                  "in"
+                ],
+                "answer": 1,
+                "point": "时间介词 at+点钟",
+                "dim": "grammar"
+              },
+              {
+                "q": "My grandmother often goes for a walk in the park ___ the morning.",
+                "opts": [
+                  "on",
+                  "at",
+                  "in"
+                ],
+                "answer": 2,
+                "point": "时间介词 in the morning",
+                "dim": "grammar"
+              },
+              {
+                "q": "— ___ do you have lunch? — At around 12:15 PM in the dining hall.",
+                "opts": [
+                  "Where",
+                  "What time",
+                  "How"
+                ],
+                "answer": 1,
+                "point": "疑问词 What time",
+                "dim": "grammar"
+              },
+              {
+                "q": "— ___ do you go to the library? — Twice a week.",
+                "opts": [
+                  "How often",
+                  "How long",
+                  "What time"
                 ],
                 "answer": 0,
-                "point": "细节",
-                "dim": "reading"
+                "point": "疑问词 How often",
+                "dim": "grammar"
+              },
+              {
+                "q": "Mary ___ her teeth before she goes to bed every night.",
+                "opts": [
+                  "brush",
+                  "brushing",
+                  "brushes"
+                ],
+                "answer": 2,
+                "point": "一般现在时三单 brushes",
+                "dim": "grammar"
+              },
+              {
+                "q": "My brother ___ his room on weekdays because he is too busy.",
+                "opts": [
+                  "don't clean",
+                  "doesn't cleans",
+                  "doesn't clean"
+                ],
+                "answer": 2,
+                "point": "三单否定 doesn't+原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "She always enjoys ___ books in the school library.",
+                "opts": [
+                  "read",
+                  "reading",
+                  "to read"
+                ],
+                "answer": 1,
+                "point": "enjoy doing sth",
+                "dim": "grammar"
               }
             ],
             "listeningQuestions": [
@@ -5578,67 +5551,67 @@
               }
             ],
             "reading": {
-              "passage": "My Birthday\n\nMy birthday is on October 1st. It is also our National Day. Every year, my family has a party for me. We eat a big cake and I make a wish. My friends give me nice gifts. This year, I want a new bike. My grandmother makes noodles for me, because in China, long noodles mean a long and happy life. I am always very happy on my birthday.",
-              "passageCn": "我的生日在 10 月 1 日，也是国庆节。每年家人都为我办派对。我们吃大蛋糕，我许愿。朋友们送我漂亮的礼物。今年我想要一辆新自行车。奶奶给我做面条，因为在中国，长长的面条寓意长寿幸福。我生日时总是很开心。",
+              "passage": "My Birthday\n\nHello! My name is David. Today is June 1st. It is Children's Day, and it is also my 13th birthday. My parents are giving me a big party tonight. Many of my friends are coming. My friend Tom gives me a book about basketball. My friend Lucy gives me a blue pen. My mother makes a big strawberry cake for me. There are thirteen candles on it. My father gives me a pair of cool running shoes. I am very happy today.",
+              "passageCn": "我的生日\n\n你好！我叫 David。今天是 6 月 1 日，是儿童节，也是我的 13 岁生日。今晚父母为我办一个大派对，很多朋友会来。朋友 Tom 送我一本关于篮球的书，Lucy 送我一支蓝色钢笔。妈妈给我做了一个大草莓蛋糕，上面有 13 根蜡烛。爸爸送我一双很酷的跑鞋。今天我非常开心。",
               "questions": [
                 {
-                  "q": "When is the writer's birthday?",
+                  "q": "David's birthday is on ___.",
                   "opts": [
-                    "October 1st",
-                    "September 1st",
-                    "June 1st",
-                    "December 1st"
+                    "Children's Day",
+                    "Teachers' Day",
+                    "New Year's Day",
+                    "Christmas Day"
                   ],
                   "answer": 0,
-                  "point": "细节",
+                  "point": "细节·Children's Day",
                   "dim": "reading"
                 },
                 {
-                  "q": "What does the writer do with the cake?",
+                  "q": "How old is David today?",
                   "opts": [
-                    "Makes a wish",
-                    "Throws it",
-                    "Sells it",
-                    "Hides it"
+                    "11",
+                    "12",
+                    "13",
+                    "14"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 2,
+                  "point": "细节·13th birthday",
                   "dim": "reading"
                 },
                 {
-                  "q": "What does the writer want this year?",
+                  "q": "What does Tom give David?",
                   "opts": [
-                    "A new bike",
-                    "A new phone",
+                    "A blue pen",
                     "A book",
-                    "A dog"
+                    "A cake",
+                    "Running shoes"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 1,
+                  "point": "细节·a book",
                   "dim": "reading"
                 },
                 {
-                  "q": "Who makes noodles for the writer?",
+                  "q": "What kind of cake does David's mother make?",
                   "opts": [
-                    "Grandmother",
-                    "Father",
-                    "Teacher",
-                    "Friend"
+                    "Chocolate cake",
+                    "Banana cake",
+                    "Apple cake",
+                    "Strawberry cake"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 3,
+                  "point": "细节·strawberry cake",
                   "dim": "reading"
                 },
                 {
-                  "q": "What do long noodles mean in China?",
+                  "q": "How many candles are there on the cake?",
                   "opts": [
-                    "A long and happy life",
-                    "Good luck in exams",
-                    "A new house",
-                    "Bad luck"
+                    "1",
+                    "3",
+                    "12",
+                    "13"
                   ],
-                  "answer": 0,
-                  "point": "细节",
+                  "answer": 3,
+                  "point": "细节·thirteen candles",
                   "dim": "reading"
                 }
               ]
@@ -5710,92 +5683,100 @@
             },
             "quizQuestions": [
               {
-                "q": "My birthday is ___ October 1st.",
+                "q": "My mother's birthday is ___ May.",
                 "opts": [
                   "on",
                   "in",
-                  "at"
+                  "at",
+                  "to"
                 ],
-                "answer": 0,
-                "point": "日期介词",
+                "answer": 1,
+                "point": "月份介词 in",
                 "dim": "grammar"
               },
               {
-                "q": "It is the ___ month, October.",
+                "q": "December is the ___ month of a year.",
                 "opts": [
                   "tenth",
-                  "ten",
-                  "tenth's"
+                  "eleventh",
+                  "twelfth",
+                  "twelfeth"
                 ],
-                "answer": 0,
-                "point": "序数词",
+                "answer": 2,
+                "point": "序数词 twelfth",
                 "dim": "grammar"
               },
               {
-                "q": "My family ___ a party for me.",
+                "q": "We have a school trip ___ October 15th.",
                 "opts": [
-                  "has",
-                  "have",
-                  "having"
+                  "on",
+                  "in",
+                  "at",
+                  "for"
                 ],
                 "answer": 0,
-                "point": "一般现在时三单",
+                "point": "具体日期用 on",
                 "dim": "grammar"
               },
               {
-                "q": "I make a ___ before eating the cake.",
+                "q": "— ___ is the baseball game? — It's next Monday.",
                 "opts": [
-                  "wish",
-                  "wash",
-                  "watch"
-                ],
-                "answer": 0,
-                "point": "词汇 make a wish",
-                "dim": "grammar"
-              },
-              {
-                "q": "___ is your birthday? In May.",
-                "opts": [
-                  "When",
                   "Where",
-                  "What"
+                  "When",
+                  "How",
+                  "Who"
                 ],
-                "answer": 0,
-                "point": "特殊疑问",
+                "answer": 1,
+                "point": "疑问词 When",
                 "dim": "grammar"
               },
               {
-                "q": "We light and blow out the ___ on a cake.",
+                "q": "Happy birthday ___ you, Alice!",
                 "opts": [
-                  "candles",
-                  "balloons",
-                  "gifts"
+                  "for",
+                  "to",
+                  "with",
+                  "at"
                 ],
-                "answer": 0,
-                "point": "生日词",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "搭配 Happy birthday to",
+                "dim": "grammar"
               },
               {
-                "q": "'Make a ___' means 许愿.",
+                "q": "My uncle is thirty ___ old this year.",
                 "opts": [
-                  "wish",
-                  "cake",
-                  "party"
+                  "year",
+                  "years",
+                  "age",
+                  "old"
                 ],
-                "answer": 0,
-                "point": "短语",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "…years old",
+                "dim": "grammar"
               },
               {
-                "q": "Long noodles mean a long ___ in China.",
+                "q": "— Let's ___ some fruit for the party. — Good idea.",
                 "opts": [
-                  "life",
-                  "day",
-                  "year"
+                  "buy",
+                  "buys",
+                  "buying",
+                  "to buy"
                 ],
                 "answer": 0,
-                "point": "细节",
-                "dim": "reading"
+                "point": "Let's+动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "This is my ___ birthday. I'm a teenager now!",
+                "opts": [
+                  "thirteen",
+                  "thirteenth",
+                  "thirtheenth",
+                  "third"
+                ],
+                "answer": 1,
+                "point": "序数词 thirteenth",
+                "dim": "grammar"
               }
             ],
             "listeningQuestions": [

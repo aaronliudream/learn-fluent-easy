@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { JuniorKpPracticeSection } from "@/components/junior/JuniorKpPracticeSection";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
 
@@ -325,6 +326,14 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         dueCount={dueCount}
         avgStability={avgStability}
         loading={!loadedMastery}
+      />
+
+      {/* 按考点抽题 · 词汇与交际(vocab_comm,从语法页迁来) */}
+      <JuniorKpPracticeSection
+        categoryCodes={["vocab_comm"]}
+        gradeNum={gradeNum}
+        title="🔤 按考点抽题 · 词汇与交际"
+        subtitle="词汇辨析等考点,AI 按考点出题。"
       />
 
       {/* 辅助训练（提到清单上方，移动端不必滑到底） */}

@@ -43,6 +43,7 @@ export default function JuniorGrammarKpQuiz() {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [catCode, setCatCode] = useState<string | null>(null); // 分类 code,用于 BackLink 分流
 
   useEffect(() => {
     if (!id) return;
@@ -71,7 +72,9 @@ export default function JuniorGrammarKpQuiz() {
         .eq("id", (p as Point).category_id)
         .maybeSingle();
       if (cancelled) return;
-      if (cat && PASSAGE_CATEGORIES.has((cat as { code: string }).code)) {
+      const code = (cat as { code: string } | null)?.code ?? null;
+      setCatCode(code);
+      if (code && PASSAGE_CATEGORIES.has(code)) {
         setBlocked(true);
         setLoading(false);
         return;
@@ -94,6 +97,14 @@ export default function JuniorGrammarKpQuiz() {
   }, [id]);
 
   const cur = questions[idx];
+
+  // BackLink 按考点 category 分流:语法→/junior/grammar、阅读/完形→/junior/reading、词汇与交际→/junior/vocab
+  const back = (() => {
+    const grade = point?.grade ? `?grade=${point.grade}` : "";
+    if (catCode === "vocab_comm") return { to: `/junior/vocab${grade}`, label: "返回词汇练习" };
+    if (catCode === "reading" || catCode === "cloze") return { to: `/junior/reading${grade}`, label: "返回阅读训练" };
+    return { to: `/junior/grammar${grade}`, label: "返回语法专项" };
+  })();
 
   const onPick = async (letter: string) => {
     if (picked || !cur || !point) return;
@@ -129,10 +140,10 @@ export default function JuniorGrammarKpQuiz() {
   const Shell = ({ children }: { children: React.ReactNode }) => (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <BackLink
-        to="/junior/grammar"
+        to={back.to}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> 返回语法专项
+        <ArrowLeft className="size-4" /> {back.label}
       </BackLink>
       {children}
     </main>

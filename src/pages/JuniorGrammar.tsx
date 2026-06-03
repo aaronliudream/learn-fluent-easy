@@ -68,12 +68,12 @@ export default function JuniorGrammar() {
     (async () => {
       setLoading(true);
       const [c, p, all] = await Promise.all([
-      // 语法学习页:仅排除需音频的 听力;保留语法(tense/clause/verb/other)、「词汇与交际」、
-      // 「完形填空」与「阅读理解」(完形/阅读原文已自包含在题干,可做按考点抽题)。仅过滤展示。
+      // 语法专项页只显示语法分类(tense/clause/verb/other);阅读/完形/词汇与交际/听力 全部排除
+      // —— 它们的「按考点抽题」入口已分别归到 /junior/reading、/junior/vocab。仅过滤展示,不动数据。
       supabase.
       from("junior_grammar_categories").
       select("*").
-      not("code", "in", "(listening)").
+      not("code", "in", "(listening,reading,cloze,vocab_comm)").
       order("sort_order"),
       supabase.
       from("junior_grammar_points").
@@ -527,7 +527,7 @@ export default function JuniorGrammar() {
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
                       </Link>
                       <Link
-                        to={`/junior/grammar/${p.id}/practice`}
+                        to={`/junior/kp/${p.id}/practice`}
                         className="mt-1 flex items-center justify-center gap-1 rounded-lg border border-dashed border-primary/40 px-2 py-1.5 text-[11px] font-bold text-primary transition hover:bg-primary/5"
                       >
                         <Sparkles className="size-3" /> <T>按考点抽题练习</T>

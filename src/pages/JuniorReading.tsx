@@ -38,14 +38,14 @@ export default function JuniorReading() {
   useEffect(() => {
     const gradeMap: Record<string, number> = { "1": 7, "2": 8, "3": 9 };
     const dbGrade = grade ? gradeMap[grade] ?? Number(grade) : null;
-    let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").order("grade").order("created_at", { ascending: true });
+    let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").order("grade").order("difficulty", { ascending: true }).order("created_at", { ascending: true });
     if (dbGrade) q = q.eq("grade", dbGrade);
     q.then(({ data }) => setItems((data ?? []) as R[]));
     loadMastery("junior_reading").then(setMastery);
   }, [grade]);
 
   // 三组：活跃/复习/已掌握
-  const { active, dueReview, mastered } = useMemo(() => {
+  const { dueReview, mastered } = useMemo(() => {
     const a: R[] = [],d: R[] = [],m: R[] = [];
     for (const r of items) {
       const row = mastery[r.id];
@@ -66,6 +66,16 @@ export default function JuniorReading() {
     }
     return set;
   }, [items, mastery]);
+
+  // 按难度顺序，"当前闯关"= 第一篇还没通过(best_pct < 80%)的文章；都通过则为 null
+  const current = useMemo(() => {
+    for (const r of items) {
+      const row = mastery[r.id];
+      if (!row || row.best_pct < PASS_PCT) return r;
+    }
+    return null;
+  }, [items, mastery]);
+  const totalPassed = items.filter((r) => {const row = mastery[r.id];return row && row.best_pct >= PASS_PCT;}).length;
 
   const renderRow = (r: R) => {
     const row = mastery[r.id];
@@ -138,10 +148,25 @@ export default function JuniorReading() {
         </section>
       }
 
-      {/* 学习中 */}
-      <div className="mt-5 grid gap-2">
+      {/* 当前闯关：按难度，一次只显示一篇 */}
+      <div className="mt-5">
         {items.length === 0 && <p className="text-sm text-muted-foreground"><T>暂无文章，敬请期待</T></p>}
-        {active.map(renderRow)}
+        {items.length > 0 && (
+          <div className="mb-2 flex items-center justify-between">
+            <h2 className="text-sm font-extrabold text-foreground"><T>🎯 当前闯关</T></h2>
+            <span className="text-[11px] text-muted-foreground tabular-nums">{totalPassed}/{items.length} <T>已通过</T></span>
+          </div>
+        )}
+        {current ? (
+          <>
+            <div className="grid gap-2">{renderRow(current)}</div>
+            <p className="mt-2 text-[11px] text-muted-foreground"><T>完成本篇并达到 ≥80%，自动解锁下一篇（按难度由易到难）。</T></p>
+          </>
+        ) : items.length > 0 && dueReview.length === 0 ? (
+          <div className="rounded-2xl border-2 border-emerald-400/40 bg-emerald-500/5 p-4 text-center text-sm font-bold text-emerald-700 dark:text-emerald-400">
+            <T>🎉 本年级的阅读都通过啦！可在下方复习或挑战其他年级。</T>
+          </div>
+        ) : null}
       </div>
 
       {/* 已掌握折叠 */}

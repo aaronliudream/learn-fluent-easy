@@ -68,15 +68,24 @@ export default function JuniorGrammar() {
     (async () => {
       setLoading(true);
       const [c, p, all] = await Promise.all([
-      supabase.from("junior_grammar_categories").select("*").order("sort_order"),
+      // 语法学习页:排除需原文的非语法分类(听力/阅读/完形);保留语法(tense/clause/verb/other)
+      // 与「词汇与交际」(纯选择题,可做按考点抽题)。仅过滤展示,不动 junior_grammar_points 数据。
+      supabase.
+      from("junior_grammar_categories").
+      select("*").
+      not("code", "in", "(listening,reading,cloze)").
+      order("sort_order"),
       supabase.
       from("junior_grammar_points").
       select("id,category_id,title,cefr,grade,summary,content_depth").
       order("sort_order"),
       loadJuniorGrammarMasteryAll()]
       );
-      setCats((c.data ?? []) as Cat[]);
-      const allPts = (p.data ?? []) as Pt[];
+      const catRows = (c.data ?? []) as Cat[];
+      setCats(catRows);
+      // 点也按保留的语法分类过滤,非语法分类的题点不出现在统计/推荐/到期等任何位置。
+      const grammarCatIds = new Set(catRows.map((x) => x.id));
+      const allPts = ((p.data ?? []) as Pt[]).filter((x) => grammarCatIds.has(x.category_id));
       setPts(grade ? allPts.filter((x) => x.grade === Number(grade)) : allPts);
       const map: Record<string, JuniorGrammarMastery> = {};
       for (const r of all) map[r.item_id] = r;
@@ -516,6 +525,12 @@ export default function JuniorGrammar() {
                           </span>
                         </span>
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
+                      </Link>
+                      <Link
+                        to={`/junior/grammar/${p.id}/practice`}
+                        className="mt-1 flex items-center justify-center gap-1 rounded-lg border border-dashed border-primary/40 px-2 py-1.5 text-[11px] font-bold text-primary transition hover:bg-primary/5"
+                      >
+                        <Sparkles className="size-3" /> <T>按考点抽题练习</T>
                       </Link>
                     </li>);
 

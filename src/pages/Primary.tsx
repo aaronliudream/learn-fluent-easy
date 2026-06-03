@@ -59,7 +59,8 @@ export default function Primary() {
       />
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-white/85" />
 
-      <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
+      {/* 容器基准对齐初中 /junior:max-w-[1080px] + px-[22px],两页 100% 缩放下内容宽度一致 */}
+      <div className="mx-auto max-w-[1080px] px-[22px] py-6">
         <BackLink
           to="/#courses"
           className="mb-6 inline-flex items-center gap-1 text-sm text-[#888780] transition-colors hover:text-[#2C2C2A]"

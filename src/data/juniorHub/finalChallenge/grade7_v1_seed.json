@@ -3489,5 +3489,293 @@
     "unitId": "g7v1_mid",
     "source": "real_exam",
     "source_ref": "七上期中·套4·补全对话Q55(选答语·改编)"
+  },
+  {
+    "id": "fc_g7v1_read_005",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Welcome to Sunshine Middle School! It is a big and modern school. There are two teaching buildings, a large library and a new gym. The library is on the second floor of the first building. In front of the buildings, there is a big playground, and students do morning exercises there every day. There is also a small garden behind the dining hall. Many students like to read in the garden after lunch. The school is clean and beautiful, and the teachers are very kind.",
+    "subQuestions": [
+      {
+        "stem": "Sunshine Middle School is a small and old school.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "The library is on the second floor.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Students do morning exercises on the playground.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The garden is in front of the dining hall.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "The teachers are very kind.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v1_read_006",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Tom is a Grade 7 student. He has many subjects this term, such as Chinese, English, maths, history and biology. His favourite subject is biology because he loves animals and plants. He thinks maths is difficult, but he works hard at it. He doesn't like history very much because there are too many dates to remember. Tom is good at English, and he often helps his classmates with it. He wants to be a scientist in the future.",
+    "subQuestions": [
+      {
+        "stem": "Tom is in Grade 7.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Tom's favourite subject is history.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Tom thinks maths is easy.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Tom often helps his classmates with English.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Tom wants to be a scientist.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v1_read_007",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Hello, I'm Lucy. There are four people in my family: my parents, my brother and me. My father is a doctor and works in a hospital. My mother is a music teacher, and she can play the piano very well. My brother Jack is ten years old, and he likes playing basketball after school. On weekends, we often go hiking together in the mountains. We always have a lot of fun. I love my family very much.",
+    "subQuestions": [
+      {
+        "stem": "There are five people in Lucy's family.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Lucy's father is a doctor.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Lucy's mother can play the piano.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Jack likes playing basketball.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "They go swimming together on weekends.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v1_read_008",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Sara is a busy student. On school days, she gets up at six thirty in the morning. She has breakfast at seven and goes to school by bike. Her first class starts at eight. She has lunch at school at twelve. In the afternoon, she has two classes and a sports activity. After school, she does her homework and then helps her mother cook dinner. She goes to bed at ten. She thinks her life is busy but happy.",
+    "subQuestions": [
+      {
+        "stem": "Sara gets up at six thirty.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Sara goes to school by bus.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Sara has lunch at home.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Sara helps her mother cook dinner.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Sara goes to bed at ten.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v1_read_009",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "Our school has many clubs, and the music club is very popular. In the club, students can sing songs and play different instruments like the guitar, the drum and the violin. Lily can't sing well, but she can play the violin beautifully, so she joins the music club. Her friend Ben likes drawing, so he joins the art club. In the art club, students can paint pictures and learn about famous artists. Clubs are a great way to make new friends and learn new skills.",
+    "subQuestions": [
+      {
+        "stem": "The music club is very popular.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Lily can sing very well.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Lily plays the violin in the music club.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Ben joins the music club.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "Clubs help students make new friends.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "fc_g7v1_read_010",
+    "type": "reading_judge_TF",
+    "unitId": "g7v1_mid",
+    "passage": "In China, birthdays are special days. On my last birthday, my family had a party for me at home. My mother made a big chocolate cake, and I blew out the candles and made a wish. My grandmother cooked long noodles, because in China long noodles mean a long life. My friends came and gave me nice gifts, and I got a new bike from my parents. We ate, sang and played games together. It was one of the happiest days of the year.",
+    "subQuestions": [
+      {
+        "stem": "The birthday party was at a restaurant.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "The writer blew out the candles and made a wish.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "Long noodles mean a long life in China.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      },
+      {
+        "stem": "The writer got a new phone from the parents.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 1
+      },
+      {
+        "stem": "It was one of the happiest days of the year.",
+        "options": [
+          "T (相符)",
+          "F (不相符)"
+        ],
+        "answer": 0
+      }
+    ]
   }
 ]

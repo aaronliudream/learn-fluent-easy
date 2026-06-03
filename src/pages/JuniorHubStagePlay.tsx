@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { shuffleArray, useJuniorHub } from "@/lib/juniorHub/context";
 import { getUnitState, savePersist } from "@/lib/juniorHub/storage";
@@ -6,7 +6,6 @@ import { hubSpeak } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
-import WritingStudio from "@/components/juniorHub/WritingStudio";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { Link } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
@@ -711,19 +710,13 @@ function GrammarStage({
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-lg font-bold">🧩 {unit.grammarTitle}</div>
-      <p className="mb-4 text-sm text-[#5C5751]">
-        本关使用五关语法测：选择题 → 填空 → 改错 → 句型转换 → 造句/写作，达标后解锁下一关。
-      </p>
-      {masteryPath ? (
+      {masteryPath && (
         <Link
           to={masteryPath}
           className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
         >
           进入语法五关测试 →
         </Link>
-      ) : (
-        <p className="mb-3 text-sm text-amber-700">本单元语法题在下方完成（教材同步版）。</p>
       )}
       <FinalQuizStage
         questions={shuffleArray([...unit.grammarQuiz]).slice(0, 6)}
@@ -780,6 +773,25 @@ function ReadingStage({
         onCorrect={() => {}}
         onWrong={onWrong}
       />
+    </div>
+  );
+}
+
+function WritingStage({ unit, onFinish }: { unit: UnitDef; onFinish: () => void }) {
+  const w = unit.writing;
+  return (
+    <div className="rounded-2xl bg-white p-4 shadow-sm">
+      <div className="mb-2 text-lg font-bold">✍️ 写作练习</div>
+      <p className="mb-2 text-sm">{w?.promptCn}</p>
+      <p className="mb-3 text-xs text-[#888780]">{w?.prompt}</p>
+      {w?.sampleWords?.length ? (
+        <p className="mb-3 text-xs">建议用词：{w.sampleWords.join(", ")}</p>
+      ) : null}
+      <textarea
+        className="mb-3 min-h-[120px] w-full rounded-xl border border-[#EEEAE0] p-3 text-sm"
+        placeholder="在这里写下你的英文句子…"
+      />
+      <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>
     </div>
   );
 }
@@ -894,7 +906,6 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           <WordMatchingGame
             vocabulary={unit.vocabulary}
             grade={grade}
-            batchSize={8}
             onFinish={handleFinish}
             onMatch={addStar}
           />
@@ -947,7 +958,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "writing":
-        return <WritingStudio unit={unit} onFinish={handleFinish} />;
+        return <WritingStage unit={unit} onFinish={handleFinish} />;
       case "finalQuiz":
         // 数据源 unit.quizQuestions;空时走兜底,不挂载 FinalQuizStage。
         if (finalQuizQuestions.length === 0)

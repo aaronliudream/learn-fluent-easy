@@ -19,6 +19,13 @@ function shuffleArray<T>(arr: T[]): T[] {
   return out;
 }
 
+function chunk<T>(arr: T[], size: number): T[][] {
+  if (!size || size <= 0) return [arr];
+  const out: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out.length ? out : [[]];
+}
+
 export type WordMatchingGameProps = {
   vocabulary: WordMatchVocab[];
   /** Primary grades 1–6 use speakKid via hubSpeak. */
@@ -28,6 +35,8 @@ export type WordMatchingGameProps = {
   onProgressChange?: (percent: number) => void;
   finishLabel?: string;
   finishDisabledLabel?: string;
+  /** 若提供,则把词表按每组 batchSize 个分批配对(做完一组询问是否继续)。不提供=不分组(原行为)。 */
+  batchSize?: number;
 };
 
 export default function WordMatchingGame({
@@ -38,16 +47,35 @@ export default function WordMatchingGame({
   onProgressChange,
   finishLabel = "✓ 太棒了！进入下一关 →",
   finishDisabledLabel = "完成所有配对再继续",
+  batchSize,
 }: WordMatchingGameProps) {
   const totalPairs = vocabulary.length;
+
+  // 先整体打乱,再按 batchSize 切组(不传则单组=原行为)
+  const batches = useMemo<WordMatchVocab[][]>(
+    () => chunk(shuffleArray(vocabulary), batchSize ?? vocabulary.length),
+    [vocabulary, batchSize],
+  );
+
+  const [batchIdx, setBatchIdx] = useState(0);
+  const currentBatch = batches[batchIdx] ?? [];
+  const batchTotal = currentBatch.length;
+  const batchCount = batches.length;
+  const isBatched = batchCount > 1;
+  const hasNextBatch = batchIdx < batchCount - 1;
+  const matchedBeforeBatch = useMemo(
+    () => batches.slice(0, batchIdx).reduce((n, b) => n + b.length, 0),
+    [batches, batchIdx],
+  );
+
   const cards = useMemo<MatchCard[]>(() => {
     const all: MatchCard[] = [];
-    for (const v of vocabulary) {
+    for (const v of currentBatch) {
       all.push({ key: `${v.en}-en`, pairId: v.en, text: v.en, side: "en" });
       all.push({ key: `${v.en}-cn`, pairId: v.en, text: v.cn, side: "cn" });
     }
     return shuffleArray(all);
-  }, [vocabulary]);
+  }, [currentBatch]);
 
   const [matchedPairs, setMatchedPairs] = useState<Set<string>>(() => new Set());
   const [picked, setPicked] = useState<MatchCard | null>(null);
@@ -57,10 +85,21 @@ export default function WordMatchingGame({
   const [bestCombo, setBestCombo] = useState(0);
   const [lockInput, setLockInput] = useState(false);
 
-  const matchedCount = matchedPairs.size;
-  const remaining = totalPairs - matchedCount;
-  const done = matchedCount === totalPairs;
-  const progressPct = totalPairs > 0 ? (matchedCount / totalPairs) * 100 : 0;
+  // 切换到下一组时重置本组状态(errors/bestCombo 作为整关统计保留)
+  useEffect(() => {
+    setMatchedPairs(new Set());
+    setPicked(null);
+    setWrongKeys(new Set());
+    setCombo(0);
+    setLockInput(false);
+  }, [batchIdx]);
+
+  const batchMatched = matchedPairs.size;
+  const overallMatched = matchedBeforeBatch + batchMatched;
+  const remainingAll = totalPairs - overallMatched;
+  const batchDone = batchTotal > 0 && batchMatched === batchTotal;
+  const lastBatchDone = batchDone && !hasNextBatch;
+  const progressPct = totalPairs > 0 ? (overallMatched / totalPairs) * 100 : 0;
 
   useEffect(() => {
     onProgressChange?.(progressPct);
@@ -115,9 +154,16 @@ export default function WordMatchingGame({
     <div className="rounded-2xl bg-white p-4 shadow-sm">
       <div className="mb-3">
         <div className="mb-1.5 flex items-center justify-between text-sm font-semibold tabular-nums">
-          <span className="text-[#888780]">配对进度</span>
+          <span className="text-[#888780]">
+            配对进度
+            {isBatched && (
+              <span className="ml-1 text-[#B0AEA6]">
+                · 第 {batchIdx + 1}/{batchCount} 组
+              </span>
+            )}
+          </span>
           <span className="text-[#185FA5]">
-            {matchedCount}/{totalPairs}
+            {overallMatched}/{totalPairs}
           </span>
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-[#F4F0E6]">
@@ -128,58 +174,89 @@ export default function WordMatchingGame({
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
-        {visibleCards.map((card) => {
-          const isPicked = picked?.key === card.key;
-          const isWrong = wrongKeys.has(card.key);
-          const isEn = card.side === "en";
-
-          return (
+      {batchDone && hasNextBatch ? (
+        // 本组完成 → 询问是否继续剩余的词
+        <div className="rounded-xl bg-[#F3FAEC] px-4 py-8 text-center">
+          <div className="text-3xl">🎉</div>
+          <p className="mt-2 text-base font-bold text-[#2C2C2A]">
+            本组 {batchTotal} 个词全部配对完成！
+          </p>
+          <p className="mt-1 text-sm text-[#888780]">
+            还剩 <strong className="text-[#E0623F]">{remainingAll}</strong> 个词，要不要再来一组？
+          </p>
+          <div className="mt-5 flex flex-col gap-2">
             <button
-              key={card.key}
               type="button"
-              disabled={lockInput}
-              onClick={() => pickCard(card)}
-              className={`match-pair-card relative min-h-[72px] rounded-xl border-2 px-2 py-2.5 text-center text-sm font-semibold leading-snug transition-all duration-300 ease-out ${
-                isEn
-                  ? "border-[#B8D4EF] bg-[#E6F1FB] text-[#185FA5]"
-                  : "border-[#F0C4D4] bg-[#FBEAF0] text-[#C41E3A]"
-              } ${isPicked ? "match-pair-card--picked scale-[1.03] shadow-md" : ""} ${
-                isWrong ? "match-pair-card--wrong" : ""
-              }`}
+              onClick={() => setBatchIdx((i) => i + 1)}
+              className="w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#E55A28]"
             >
-              <span
-                className={`absolute right-1.5 top-1 rounded px-1 py-px text-[9px] font-bold leading-none ${
-                  isEn ? "bg-[#378ADD]/15 text-[#185FA5]" : "bg-[#D4537E]/15 text-[#C41E3A]"
-                }`}
-              >
-                {isEn ? "EN" : "中"}
-              </span>
-              <span className="flex min-h-[44px] items-center justify-center break-words px-1 pt-3">
-                {card.text}
-              </span>
+              再来一组 →（剩 {remainingAll} 个）
             </button>
-          );
-        })}
-      </div>
+            <button
+              type="button"
+              onClick={onFinish}
+              className="w-full rounded-xl border-2 border-[#E7E2D6] bg-white px-4 py-2.5 text-sm font-semibold text-[#888780] transition hover:bg-[#FAF7F0]"
+            >
+              先到这儿，完成本关 →
+            </button>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
+            {visibleCards.map((card) => {
+              const isPicked = picked?.key === card.key;
+              const isWrong = wrongKeys.has(card.key);
+              const isEn = card.side === "en";
 
-      <div className="mt-3 rounded-xl bg-[#FFF8F0] px-3 py-2.5 text-center text-xs text-[#888780] tabular-nums sm:text-sm">
-        剩余 <strong className="text-[#2C2C2A]">{remaining}</strong> 对 · 错误{" "}
-        <strong className="text-[#E0623F]">{errors}</strong> · 最佳连击{" "}
-        <strong className="text-[#378ADD]">{bestCombo}</strong>
-        {combo > 1 && (
-          <span className="ml-1 font-semibold text-[#6FA92A]">🔥 {combo} 连击</span>
-        )}
-      </div>
+              return (
+                <button
+                  key={card.key}
+                  type="button"
+                  disabled={lockInput}
+                  onClick={() => pickCard(card)}
+                  className={`match-pair-card relative min-h-[72px] rounded-xl border-2 px-2 py-2.5 text-center text-sm font-semibold leading-snug transition-all duration-300 ease-out ${
+                    isEn
+                      ? "border-[#B8D4EF] bg-[#E6F1FB] text-[#185FA5]"
+                      : "border-[#F0C4D4] bg-[#FBEAF0] text-[#C41E3A]"
+                  } ${isPicked ? "match-pair-card--picked scale-[1.03] shadow-md" : ""} ${
+                    isWrong ? "match-pair-card--wrong" : ""
+                  }`}
+                >
+                  <span
+                    className={`absolute right-1.5 top-1 rounded px-1 py-px text-[9px] font-bold leading-none ${
+                      isEn ? "bg-[#378ADD]/15 text-[#185FA5]" : "bg-[#D4537E]/15 text-[#C41E3A]"
+                    }`}
+                  >
+                    {isEn ? "EN" : "中"}
+                  </span>
+                  <span className="flex min-h-[44px] items-center justify-center break-words px-1 pt-3">
+                    {card.text}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
 
-      <button
-        type="button"
-        disabled={!done}
-        onClick={onFinish}
-        className="mt-4 w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#E55A28] disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {done ? finishLabel : finishDisabledLabel}
-      </button>
+          <div className="mt-3 rounded-xl bg-[#FFF8F0] px-3 py-2.5 text-center text-xs text-[#888780] tabular-nums sm:text-sm">
+            本组剩余 <strong className="text-[#2C2C2A]">{batchTotal - batchMatched}</strong> 对 · 错误{" "}
+            <strong className="text-[#E0623F]">{errors}</strong> · 最佳连击{" "}
+            <strong className="text-[#378ADD]">{bestCombo}</strong>
+            {combo > 1 && (
+              <span className="ml-1 font-semibold text-[#6FA92A]">🔥 {combo} 连击</span>
+            )}
+          </div>
+
+          <button
+            type="button"
+            disabled={!lastBatchDone}
+            onClick={onFinish}
+            className="mt-4 w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#E55A28] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {lastBatchDone ? finishLabel : finishDisabledLabel}
+          </button>
+        </>
+      )}
     </div>
   );
 }

@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
  * - 读 ai_generated_questions:.eq("kp_id", junior_grammar_points.id[UUID]) + used_count<5 + limit。
  * - 不补题:generate-question-for-kp 只认 v_gaokao_all_knowledge_points(高考),初中 kp 会 404,
  *   故按 Aaron 要求暂不调用补题,只用库里现有题;没有就提示待灌题。
- * - 仅接 纯选择题 考点(语法 tense/clause/verb/other + 词汇与交际 vocab_comm + 完形 cloze);
- *   完形短文已自包含在 stem 里(方案A),故放行;听力/阅读(需独立原文)仍拦下提示。
+ * - 接 自包含 考点(语法 tense/clause/verb/other + 词汇与交际 vocab_comm + 完形 cloze + 阅读 reading);
+ *   完形/阅读原文已用方案A塞进 stem,故放行;仅听力(需音频)仍拦下提示。
  * - 答题写一行 ai_question_attempts(question_id/kp_id/selected_answer/is_correct/year_band),
  *   user_id 走列默认 auth.uid()。
  */
@@ -30,7 +30,7 @@ type AGQ = {
 };
 type Point = { id: string; code: string; title: string; grade: number; category_id: string };
 
-const PASSAGE_CATEGORIES = new Set(["listening", "reading"]); // 需独立原文,暂不接;cloze 完形短文已塞进 stem(方案A),放行
+const PASSAGE_CATEGORIES = new Set(["listening"]); // 仅听力暂不接(需音频);阅读/完形已用方案A把原文塞进 stem,放行
 const LETTERS = ["A", "B", "C", "D"] as const;
 const QUESTION_LIMIT = 20;
 
@@ -161,7 +161,7 @@ export default function JuniorGrammarKpQuiz() {
       <Shell>
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <h3 className="text-lg font-extrabold">「{point.title}」暂未开放抽题</h3>
-          <p className="mt-2 text-sm text-muted-foreground">听力 / 阅读类考点需要配套原文,稍后接入。</p>
+          <p className="mt-2 text-sm text-muted-foreground">听力类考点需要配套音频,稍后接入。</p>
         </div>
       </Shell>
     );

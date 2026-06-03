@@ -68,12 +68,12 @@ export default function JuniorGrammar() {
     (async () => {
       setLoading(true);
       const [c, p, all] = await Promise.all([
-      // 语法学习页:排除需原文的非语法分类(听力/阅读/完形);保留语法(tense/clause/verb/other)
-      // 与「词汇与交际」(纯选择题,可做按考点抽题)。仅过滤展示,不动 junior_grammar_points 数据。
+      // 语法学习页:仅排除需独立原文的 听力/阅读;保留语法(tense/clause/verb/other)、
+      // 「词汇与交际」与「完形填空」(完形短文已自包含在题干,可做按考点抽题)。仅过滤展示。
       supabase.
       from("junior_grammar_categories").
       select("*").
-      not("code", "in", "(listening,reading,cloze)").
+      not("code", "in", "(listening,reading)").
       order("sort_order"),
       supabase.
       from("junior_grammar_points").

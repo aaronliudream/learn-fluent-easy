@@ -4,8 +4,6 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useMasteryOverview } from "@/hooks/useMasteryOverview";
 import { useJuniorClassroomSync } from "@/hooks/useJuniorClassroomSync";
-import { GrowthCenterCard } from "@/components/mastery/GrowthCenterCard";
-import { useJuniorStageProgress } from "@/hooks/useJuniorStageProgress";
 import { useStreakStats } from "@/hooks/useStreakStats";
 import {
   GRADE_LABELS,
@@ -80,8 +78,7 @@ export default function Junior() {
   const [totalMinutes, setTotalMinutes] = useState<number | null>(null); // get_user_total_minutes() 累计分钟
 
   const overview = useMasteryOverview("junior");        // 学科卡进度 + 已掌握单词 + 完成课程%
-  const classroom = useJuniorClassroomSync(grade);       // 课堂同步「项已掌握」文案
-  const stage = useJuniorStageProgress(grade);           // 课堂同步「节完成」环形
+  const classroom = useJuniorClassroomSync(grade);       // 课堂同步掌握度(项已掌握 + 百分比)
   const { stats: streak } = useStreakStats(userId);      // 连续学习天数
 
   useEffect(() => {
@@ -178,7 +175,7 @@ export default function Junior() {
       ? `人教版同步 · 词汇/语法/阅读/听力/写作 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
       : `${GRADE_LABELS[grade]}人教版同步 · 每单元 8 关 · 10% 进度 AI 小测 · ${classroom.mastered}/${classroom.total} 项已掌握`;
 
-  const ringPct = stage.percent; // 真实节完成 %(stage_tests ÷ stage_test_attempts.passed)
+  const ringPct = classroom.percent; // 掌握度 %（classroom.mastered ÷ classroom.total，五模块+阶段测试）
 
   return (
     <div
@@ -348,7 +345,7 @@ export default function Junior() {
               </Link>
             </div>
 
-            {/* 环形:真实节完成 %(stage_tests ÷ stage_test_attempts.passed) */}
+            {/* 环形:掌握度 %(classroom.mastered ÷ classroom.total) */}
             <div className="flex flex-col items-center gap-2">
               <div
                 className="grid size-[120px] place-items-center rounded-full"
@@ -358,7 +355,7 @@ export default function Junior() {
                   <span className={`text-3xl ${DISPLAY}`}>{ringPct}%</span>
                 </div>
               </div>
-              <div className="text-[11.5px] text-[#aebfd6]">已完成 {stage.completed} / {stage.total} 节</div>
+              <div className="text-[11.5px] text-[#aebfd6]">已掌握 {classroom.mastered} / {classroom.total} 项</div>
             </div>
           </div>
         </section>

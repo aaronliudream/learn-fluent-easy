@@ -4,6 +4,7 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useMasteryOverview } from "@/hooks/useMasteryOverview";
 import { useJuniorClassroomSync } from "@/hooks/useJuniorClassroomSync";
+import { GrowthCenterCard } from "@/components/mastery/GrowthCenterCard";
 import { useJuniorStageProgress } from "@/hooks/useJuniorStageProgress";
 import { useStreakStats } from "@/hooks/useStreakStats";
 import {
@@ -322,6 +323,7 @@ export default function Junior() {
         </section>
 
         {/* ===== 课堂同步 banner ===== */}
+        <GrowthCenterCard scopeType="stage" scopeId="junior" ringLabel="初中总掌握度" />
         <section className="relative my-[22px] overflow-hidden rounded-2xl text-white" style={{ boxShadow: SHADOW }}>
           <img
             src={IMG("banner-sync")}

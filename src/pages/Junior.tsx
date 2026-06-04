@@ -322,8 +322,7 @@ export default function Junior() {
           <StatCard icon="🔥" iconBg="#d6792b" label="连续学习" value={streakDays} unit="天" />
         </section>
 
-        {/* ===== 课堂同步 banner ===== */}
-        <GrowthCenterCard scopeType="stage" scopeId="junior" ringLabel="初中总掌握度" />
+        {/* ===== 课堂同步 banner ===== */}        
         <section className="relative my-[22px] overflow-hidden rounded-2xl text-white" style={{ boxShadow: SHADOW }}>
           <img
             src={IMG("banner-sync")}

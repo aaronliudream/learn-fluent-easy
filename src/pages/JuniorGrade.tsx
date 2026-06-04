@@ -1,8 +1,9 @@
-import { GrowthCenterCard } from "@/components/mastery/GrowthCenterCard";
 import { T } from "@/i18n/T";import { Link, Navigate, useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Sparkles, BookOpen, Target, Headphones, PenLine } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
+import { useJuniorClassroomSync } from "@/hooks/useJuniorClassroomSync";
+import { type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
 
 const GRADE_META: Record<string, {title: string;emoji: string;gradient: string;tag: string;}> = {
   "1": { title: "初一 · Grade 7", emoji: "🌱", gradient: "from-emerald-500 to-teal-500", tag: "JUNIOR · G1" },
@@ -20,6 +21,9 @@ export default function JuniorGrade() {
   const meta = GRADE_META[g] ?? GRADE_META["1"];
   // URL uses 1/2/3 (初一/初二/初三) but DB stores 7/8/9 (Grade 7/8/9).
   const dbGrade = g === "1" ? 7 : g === "2" ? 8 : g === "3" ? 9 : Number(g);
+  // 与首页同口径:用 useJuniorClassroomSync 取该年级真实掌握度(g7/g8/g9)
+  const gradeKey = (`g${dbGrade}`) as JuniorGradeKey;
+  const classroom = useJuniorClassroomSync(gradeKey);
 
   const SECTIONS = [
   {
@@ -58,14 +62,19 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
-      {/* 成长中心卡：按年级自动取掌握度（初一→7 / 初二→8 / 初三→9） */}
-      <div className="mb-3">
-        <GrowthCenterCard
-          scopeType="grade"
-          scopeId={String(dbGrade)}
-          ringLabel={`${gradeCn}掌握度`}
-        />
-      </div>
+      {/* 掌握度卡 —— 与首页同口径(useJuniorClassroomSync 真实数据，按年级 g7/g8/g9) */}
+      <section className="mb-3 flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 p-5 text-white shadow-tile">
+        <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-white/25 text-2xl font-extrabold backdrop-blur-sm">
+          {classroom.loading ? "…" : `${classroom.percent}%`}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">MASTERY</div>
+          <div className="text-lg font-extrabold leading-tight">{gradeCn}掌握度</div>
+          <div className="mt-0.5 text-xs opacity-90">
+            已掌握 {classroom.mastered} / {classroom.total} 项 · 词汇/语法/阅读/听力/写作
+          </div>
+        </div>
+      </section>
 
       {/* 课堂同步入口在年级页隐藏(保留代码/路由/数据,可恢复);/junior 顶层页的大卡仍保留
       <Link

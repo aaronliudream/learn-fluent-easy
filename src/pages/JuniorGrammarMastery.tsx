@@ -1,4 +1,5 @@
 ﻿import { useEffect, useMemo, useState } from "react";
+import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Lock, Check, Sparkles, RotateCw, Trophy } from "lucide-react";
@@ -265,7 +266,7 @@ export default function JuniorGrammarMastery() {
     if (answered || activeQuestionIdx === null || !activeQ) return;
     setAnswered(true);
     const isOk = result.kind === "correct" || result.kind === "acceptable";
-
+    void recordSkillAttemptsForQuestion(activeQ.id, isOk);
     setState((s) => {
       const prev = s[currentLevel];
       const newAsked = prev.asked.includes(activeQuestionIdx)

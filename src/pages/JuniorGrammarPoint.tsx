@@ -1,4 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
+import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
@@ -186,6 +187,7 @@ export default function JuniorGrammarPoint() {
     setResults((prev) => ({ ...prev, [q.id]: result }));
 
     const isPositive = result.kind === "correct" || result.kind === "acceptable";
+    void recordSkillAttemptsForQuestion(q.id, isPositive);
     if (isPositive) {
       const next = streak + 1;
       setStreak(next);

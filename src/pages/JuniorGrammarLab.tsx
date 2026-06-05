@@ -1,4 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
+import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -577,6 +578,7 @@ function UniversalExamRunner({ questions, label, onDone, onMistake, onCorrect }:
     if (answered) return;
     setAnswered(true);
     const isOk = result.kind === "correct" || result.kind === "acceptable";
+    void recordSkillAttemptsForQuestion(q.id, isOk);
     if (isOk) {
       setCorrectCount((c) => c + 1);
       onCorrect();

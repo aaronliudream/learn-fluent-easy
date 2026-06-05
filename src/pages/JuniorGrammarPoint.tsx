@@ -1,4 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
+import { SkillMasteryPanel } from "@/components/grammar/SkillMasteryPanel";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
@@ -284,6 +285,7 @@ export default function JuniorGrammarPoint() {
 
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
+      <SkillMasteryPanel pointCode={pt.code} />
 
       {/* Stage breadcrumb */}
       {showStageNav &&

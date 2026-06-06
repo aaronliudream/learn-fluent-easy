@@ -41,3 +41,11 @@ scripts/suzhou-extract/
 scripts/suzhou_2022_images/
 scripts/2022-suzhou-exam.docx
 scripts/2022-suzhou-exam.zip
+
+# Ad-hoc dev artifacts: temporary probe/verify/screenshot scripts and captures.
+# (Legit scripts use other prefixes, e.g. build-/generate-/collect-; not shadowed.)
+scripts/probe-*.mjs
+scripts/verify-*.mjs
+scripts/shot-*.mjs
+scripts/check-*.mjs
+scripts/*.png

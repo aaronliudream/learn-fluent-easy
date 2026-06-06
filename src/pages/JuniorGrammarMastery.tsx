@@ -228,6 +228,7 @@ export default function JuniorGrammarMastery() {
         questionType: activeQ.question_type || "mcq",
         isCorrect: isOk,
         latencyMs: result.latencyMs,
+        questionId: activeQ.id,
         errorReason:
           result.kind === "wrong"
             ? (result.errorReason as JuniorGrammarErrorReason | undefined)

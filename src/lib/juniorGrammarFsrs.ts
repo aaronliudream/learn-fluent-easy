@@ -26,6 +26,7 @@ export type JuniorGrammarMatrix = {
   types?: Record<string, { c: number; w: number }>;
   recent?: number[];
   errors?: Record<string, number>;
+  wrongQ?: string[];
 };
 
 export type JuniorGrammarMastery = {
@@ -110,6 +111,7 @@ export async function recordJuniorGrammarAttempt(opts: {
   isCorrect: boolean;
   latencyMs?: number;
   errorReason?: JuniorGrammarErrorReason;
+  questionId?: string;
 }): Promise<{ newLevel: number; intervalDays: number; justMastered: boolean } | null> {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -147,6 +149,14 @@ export async function recordJuniorGrammarAttempt(opts: {
 
   if (!opts.isCorrect && opts.errorReason) {
     matrix.errors[opts.errorReason] = (matrix.errors[opts.errorReason] || 0) + 1;
+  }
+
+  // 答错时把 question_id 记进 wrongQ(去重 + 保留最近 60)。
+  // 只加不删:答对不移除,删除权交给 Step 2 的 Revenge 答对流程
+  // (recordJuniorGrammarAttempt 被 mastery/未来 Revenge 共用,本阶段无法区分上下文)。
+  if (opts.questionId && !opts.isCorrect) {
+    const wrongQ = [...(matrix.wrongQ ?? []), opts.questionId];
+    matrix.wrongQ = [...new Set(wrongQ)].slice(-60);
   }
 
   const correctCount = (prev?.correct_count ?? 0) + (opts.isCorrect ? 1 : 0);

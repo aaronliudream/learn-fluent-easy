@@ -193,18 +193,29 @@ export default function JuniorGrammarMastery() {
       }
       const resolved = pointRes.data as Pt | null;
       const pointId = resolved?.id ?? id;
+      const Q_SELECT =
+        "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
       const qRes = await supabase
         .from("junior_grammar_questions")
-        .select(
-          "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order",
-        )
+        .select(Q_SELECT)
         .eq("point_id", pointId)
         .gte("sort_order", 9000)
         .lte("sort_order", 9199)
         .order("difficulty", { ascending: true })
         .order("sort_order");
       setPt(resolved);
-      const allQs = (qRes.data ?? []) as GrammarQuestion[];
+      let allQs = (qRes.data ?? []) as unknown as GrammarQuestion[];
+      // Fallback: some points have no curated 9000-9199 mastery set yet.
+      // Use the point's full question bank so the page isn't empty.
+      if (allQs.length === 0) {
+        const fb = await supabase
+          .from("junior_grammar_questions")
+          .select(Q_SELECT)
+          .eq("point_id", pointId)
+          .order("difficulty", { ascending: true })
+          .order("sort_order");
+        allQs = (fb.data ?? []) as unknown as GrammarQuestion[];
+      }
       const buckets: Record<LevelKey, GrammarQuestion[]> = {
         mcq: [], fill: [], correction: [], transform: [], translation: [],
       };
@@ -225,7 +236,7 @@ export default function JuniorGrammarMastery() {
     const ls = state[currentLevel];
     const pool = byType[cfg.key];
     if (!pool || pool.length === 0) {
-      // No questions in this bucket — auto-complete this level so the user can move on.
+      // No questions in this bucket — skip this level so the user can move on.
       if (ls.status !== "completed") {
         setState((s) => ({
           ...s,
@@ -234,6 +245,12 @@ export default function JuniorGrammarMastery() {
             ? { [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" } }
             : {}),
         }));
+      }
+      // Move the view off the empty level — otherwise it sticks on "加载题目中...".
+      if (currentLevel < LEVELS.length) {
+        setCurrentLevel((lv) => (lv === currentLevel ? lv + 1 : lv));
+      } else {
+        setShowCelebration(true);
       }
       return;
     }

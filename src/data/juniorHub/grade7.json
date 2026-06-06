@@ -1643,6 +1643,7 @@
             ],
             "grammarTitle": "be动词 + 主格代词",
             "grammarCode": "g7-t04",
+            "grammarCodes": ["g7-t04", "g7-t02", "g7-t01", "g7-t08"],
             "grammarQuiz": [
               {
                 "q": "I ___ a student in Grade 7.",

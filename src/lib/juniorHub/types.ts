@@ -77,6 +77,8 @@ export type UnitDef = {
   stages: StageDef[];
   grammarTitle: string;
   grammarCode: string | null;
+  /** 多语法点「综合测试」用;有此字段(>=1)则该单元语法关走合并抽题测试。 */
+  grammarCodes?: string[];
   grammarQuiz: QuizQuestion[];
   reading: ReadingBlock | null;
   writing: WritingBlock | null;

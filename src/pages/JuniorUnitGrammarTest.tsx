@@ -1,0 +1,334 @@
+import { useEffect, useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
+import BackLink from "@/components/BackLink";
+import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
+import {
+  GrammarQuestionCard,
+  type AnswerResult,
+} from "@/components/grammar/GrammarQuestionCard";
+import {
+  recordJuniorGrammarAttempt,
+  loadJuniorGrammarMasteryAll,
+  type JuniorGrammarErrorReason,
+} from "@/lib/juniorGrammarFsrs";
+import {
+  resolveUnitPoints,
+  loadUnitPool,
+  pickQuestions,
+  computeUnitMastery,
+  type UnitPoint,
+  type UnitQuestion,
+} from "@/lib/juniorUnitGrammar";
+import { findUnit } from "@/lib/juniorHub/courseData";
+import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
+import { awardForCorrect, notifyWrong } from "@/lib/coins";
+import { fireEmojiConfetti } from "@/lib/feedback";
+import { T } from "@/i18n/T";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   单元语法综合测试 —— 多语法点合并抽题(每点保底1道)+ 随机抽 8 道。
+   - 每答一题 recordJuniorGrammarAttempt({pointId: 该题真实归属点}) → 和专区/错题复习同步。
+   - 结果页(阈值方案丙):① 本次各点对错(即时) ② 长期掌握 X/4(读 mastery_level≥3)。
+   ────────────────────────────────────────────────────────────────────────── */
+
+const MASTERY_THRESHOLD = 3; // mastery_level ≥ 3(熟练)记为「已掌握」
+
+type Result = {
+  perPoint: { id: string; title: string; correct: number; total: number }[];
+  mastered: number;
+  total: number;
+  unmasteredTitles: string[];
+};
+
+export default function JuniorUnitGrammarTest() {
+  const { grade, unitId } = useParams<{ grade: string; unitId: string }>();
+  const unit = unitId ? findUnit(unitId) : null;
+
+  const [points, setPoints] = useState<UnitPoint[]>([]);
+  const [pool, setPool] = useState<UnitQuestion[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const [idx, setIdx] = useState(0);
+  const [answered, setAnswered] = useState(false);
+  const [answers, setAnswers] = useState<Record<number, boolean>>({}); // 每题(单次)对错
+  const [result, setResult] = useState<Result | null>(null);
+
+  // ─── 解析语法点 + 合并池 + 抽 8 道 ───
+  useEffect(() => {
+    const codes = unit?.grammarCodes ?? [];
+    if (!codes.length) {
+      setLoading(false);
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      const pts = await resolveUnitPoints(codes);
+      const merged = await loadUnitPool(pts);
+      const picked = pickQuestions(merged, pts, 8);
+      if (cancelled) return;
+      setPoints(pts);
+      setPool(picked);
+      setLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const activeQ = idx < pool.length ? pool[idx] : null;
+
+  const handleAnswered = (res: AnswerResult) => {
+    if (answered || !activeQ) return;
+    setAnswered(true);
+    const isOk = res.kind === "correct" || res.kind === "acceptable";
+    setAnswers((prev) => ({ ...prev, [idx]: isOk }));
+
+    void recordSkillAttemptsForQuestion(activeQ.id, isOk);
+    if (isOk) {
+      awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", res.latencyMs);
+    } else {
+      notifyWrong();
+    }
+    // 每题归到它真正的 point 写库 → 自动和专区掌握度/错题复习同步
+    recordJuniorGrammarAttempt({
+      pointId: activeQ.pointId,
+      questionType: activeQ.question_type || "mcq",
+      isCorrect: isOk,
+      latencyMs: res.latencyMs,
+      questionId: activeQ.id,
+      errorReason:
+        res.kind === "wrong"
+          ? (res.errorReason as JuniorGrammarErrorReason | undefined)
+          : undefined,
+    });
+  };
+
+  const handleNext = async () => {
+    const isLast = idx >= pool.length - 1;
+    if (!isLast) {
+      setIdx((i) => i + 1);
+      setAnswered(false);
+      return;
+    }
+    // ── 最后一题 → 结算 ──
+    // ① 本次各点对错(用最新 answers,含当前题)
+    const tally = new Map<string, { id: string; title: string; correct: number; total: number }>();
+    for (const p of points) tally.set(p.id, { id: p.id, title: p.title, correct: 0, total: 0 });
+    pool.forEach((q, i) => {
+      const ok = answers[i];
+      if (ok === undefined) return;
+      const e = tally.get(q.pointId);
+      if (e) {
+        e.total++;
+        if (ok) e.correct++;
+      }
+    });
+    // ② 长期掌握 X/4(读 DB)
+    const rows = await loadJuniorGrammarMasteryAll();
+    const um = computeUnitMastery(points, rows, MASTERY_THRESHOLD);
+    setResult({
+      perPoint: [...tally.values()],
+      mastered: um.mastered,
+      total: um.total,
+      unmasteredTitles: um.unmasteredTitles,
+    });
+    if (um.mastered === um.total && um.total > 0) {
+      fireEmojiConfetti({ vibrate: true, count: 60 });
+    }
+  };
+
+  const restart = () => {
+    setIdx(0);
+    setAnswered(false);
+    setAnswers({});
+    setResult(null);
+    // 重新抽一套
+    const codes = unit?.grammarCodes ?? [];
+    if (codes.length) {
+      setLoading(true);
+      (async () => {
+        const pts = await resolveUnitPoints(codes);
+        const merged = await loadUnitPool(pts);
+        setPoints(pts);
+        setPool(pickQuestions(merged, pts, 8));
+        setLoading(false);
+      })();
+    }
+  };
+
+  const backTo = grade ? `/junior/hub/${grade}` : "/junior";
+
+  const answeredCount = useMemo(() => Object.keys(answers).length, [answers]);
+  const correctSoFar = useMemo(
+    () => Object.values(answers).filter(Boolean).length,
+    [answers],
+  );
+
+  // ─── 渲染 ───
+  if (!unit || !(unit.grammarCodes && unit.grammarCodes.length > 0)) {
+    return (
+      <main className="playful-shell mx-auto grid min-h-screen max-w-3xl place-items-center px-5 py-10">
+        <div className="playful-card w-full max-w-md px-6 py-8 text-center">
+          <p className="text-lg font-extrabold text-foreground"><T>本单元未配置综合测试</T></p>
+          <BackLink
+            to={backTo}
+            className="playful-btn playful-btn-cyan mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-sky-400 px-6 py-2.5 text-sm text-white"
+          >
+            <ArrowLeft className="size-4" /> <T>返回单元</T>
+          </BackLink>
+        </div>
+      </main>
+    );
+  }
+
+  if (loading) {
+    return (
+      <main className="playful-shell grid min-h-screen place-items-center">
+        <div className="playful-card px-8 py-6 text-center">
+          <RotateCw className="mx-auto size-8 animate-spin text-pink-400" />
+          <p className="mt-3 text-sm font-bold text-muted-foreground"><T>正在合成题目...</T></p>
+        </div>
+      </main>
+    );
+  }
+
+  if (result) {
+    return <CompletionScreen result={result} backTo={backTo} onRestart={restart} />;
+  }
+
+  return (
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
+      <BackLink
+        to={backTo}
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+      >
+        <ArrowLeft className="size-4" /> <T>返回单元</T>
+      </BackLink>
+
+      <header className="playful-card relative overflow-hidden p-5">
+        <span className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-pink-200/40 blur-2xl" />
+        <h1 className="relative text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
+          {unit.title} · 语法综合测试
+        </h1>
+        <p className="relative mt-1.5 text-sm text-[#5C5751] dark:text-muted-foreground">
+          <T>本单元 {points.length} 个语法点混合抽题,成绩计入你的掌握度。</T>
+        </p>
+      </header>
+
+      {/* 进度条 */}
+      <div className="flex items-center justify-between rounded-2xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-cyan-50 px-4 py-3 dark:border-pink-900/50 dark:from-pink-950/30 dark:to-cyan-950/20">
+        <span className="text-sm font-extrabold text-[#2C2C2A] dark:text-foreground">
+          第 {Math.min(idx + 1, pool.length)} / {pool.length} 题
+        </span>
+        <div className="text-sm font-bold tabular-nums">
+          <span className="text-[#5C5751] dark:text-muted-foreground">本次答对 </span>
+          <span className="text-emerald-600 dark:text-emerald-400">{correctSoFar}/{answeredCount}</span>
+        </div>
+      </div>
+
+      {activeQ && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs px-1">
+            <span className="rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 font-bold text-pink-600 dark:from-pink-950/50 dark:to-cyan-950/50 dark:text-pink-300">
+              {activeQ.pointTitle}
+            </span>
+          </div>
+          <GrammarQuestionCard
+            key={activeQ.id}
+            question={activeQ}
+            index={idx}
+            onAnswered={handleAnswered}
+          />
+          {answered && (
+            <div className="flex items-center justify-end pt-1">
+              <button
+                onClick={handleNext}
+                className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"
+              >
+                {idx >= pool.length - 1 ? "查看结果 →" : "下一题 →"}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </main>
+  );
+}
+
+/* ─────────────── 结算页:本次表现 + 长期掌握 X/4 ─────────────── */
+function CompletionScreen({
+  result,
+  backTo,
+  onRestart,
+}: {
+  result: Result;
+  backTo: string;
+  onRestart: () => void;
+}) {
+  const allMastered = result.total > 0 && result.mastered === result.total;
+  const sessionCorrect = result.perPoint.reduce((s, p) => s + p.correct, 0);
+  const sessionTotal = result.perPoint.reduce((s, p) => s + p.total, 0);
+
+  return (
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6">
+      <section className="relative overflow-hidden rounded-[2rem] border-2 border-pink-200/80 bg-gradient-to-br from-pink-100 via-white to-cyan-100 p-8 text-center space-y-3 dark:border-pink-900/50 dark:from-pink-950/40 dark:via-background dark:to-cyan-950/40">
+        <div className="relative mx-auto grid size-20 place-items-center rounded-full bg-gradient-to-br from-pink-400 to-cyan-400 text-4xl shadow-lg spark-bob">
+          {allMastered ? "👑" : "💪"}
+        </div>
+        <h1 className="relative text-2xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent sm:text-3xl">
+          {allMastered ? "本单元语法全部掌握!" : "综合测试完成"}
+        </h1>
+        <div className="relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/15 to-cyan-500/15 px-4 py-1.5 text-sm font-bold text-pink-700 dark:text-pink-300">
+          <Trophy className="size-4" />
+          本次答对 {sessionCorrect}/{sessionTotal} · 长期掌握 {result.mastered}/{result.total} 个点
+        </div>
+      </section>
+
+      {/* ① 本次各点表现 */}
+      <section className="playful-card p-5 space-y-3">
+        <h2 className="text-base font-extrabold text-[#2C2C2A] dark:text-foreground">本次各点表现</h2>
+        <div className="space-y-2">
+          {result.perPoint.map((p) => (
+            <div key={p.id} className="flex items-center justify-between rounded-xl bg-muted/40 px-3 py-2 text-sm">
+              <span className="font-bold text-[#2C2C2A] dark:text-foreground">{p.title}</span>
+              <span className={p.total === 0 ? "text-muted-foreground" : p.correct === p.total ? "font-bold text-emerald-600" : "font-bold text-amber-600"}>
+                {p.total === 0 ? "本次未抽到" : `答对 ${p.correct}/${p.total}`}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ② 长期掌握 */}
+      <section className="playful-card p-5 space-y-2">
+        <h2 className="text-base font-extrabold text-[#2C2C2A] dark:text-foreground">
+          长期掌握 {result.mastered}/{result.total} 个语法点
+        </h2>
+        {result.unmasteredTitles.length > 0 ? (
+          <p className="text-sm text-[#5C5751] dark:text-muted-foreground">
+            还需掌握:{result.unmasteredTitles.join("、")}
+          </p>
+        ) : (
+          <p className="text-sm text-emerald-600 dark:text-emerald-400">这 4 个语法点都达到熟练以上,继续保持!</p>
+        )}
+        <p className="text-xs text-muted-foreground">（达到「熟练」需多次练习稳定正确,单次测试通常不足以点亮，多练几次就会涨。）</p>
+      </section>
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <button
+          onClick={onRestart}
+          className="playful-btn inline-flex items-center gap-1.5 bg-gradient-to-r from-pink-500 to-rose-400 px-5 py-2.5 text-sm text-white"
+        >
+          <RotateCw className="size-4" /> <T>再做一套</T>
+        </button>
+        <BackLink
+          to={backTo}
+          className="playful-btn inline-flex items-center gap-1.5 border border-border bg-card px-5 py-2.5 text-sm text-foreground"
+        >
+          <T>返回单元</T>
+        </BackLink>
+      </div>
+    </main>
+  );
+}

@@ -708,6 +708,31 @@ function GrammarStage({
   const pointId = useGrammarPointId(unit.grammarCode);
   const masteryPath = pointId ? `/junior/grammar/${pointId}/mastery` : null;
 
+  // 多语法点单元：走「综合测试」(合并抽题 + 按点算 Unit 掌握度)。
+  if (unit.grammarCodes && unit.grammarCodes.length > 0) {
+    const testPath = `/junior/unit-grammar/${grade}/${unit.id}`;
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <p className="mb-3 text-sm text-[#5C5751]">
+          本单元语法综合测试：{unit.grammarCodes.length} 个语法点混合抽题，成绩计入你的掌握度。
+        </p>
+        <Link
+          to={testPath}
+          className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
+        >
+          进入综合测试 →
+        </Link>
+        <button
+          type="button"
+          onClick={onFinish}
+          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
+        >
+          已完成，标记本关通过
+        </button>
+      </div>
+    );
+  }
+
   // 接了考点的单元：只走真题题库的语法测试，不再铺写死的 grammarQuiz 水题。
   if (masteryPath) {
     return (

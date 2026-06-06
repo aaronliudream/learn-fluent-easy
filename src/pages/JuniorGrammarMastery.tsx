@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
@@ -16,55 +16,41 @@ import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Single-level MCQ Mastery Test (per grammar point)
+   Single-level MCQ Mastery Test —— 按「不重复题」双指标计分
 
-   Each level tests ONE question type. Levels unlock progressively based on
-   mastery thresholds. Wrong answers are spaced-retried later in the same
-   level. Locks open in order; you can't skip ahead.
+   - firstResult[idx] : 该题「首次」对错(只写一次,重做不覆盖)
+   - finalResult[idx] : 该题「最近一次」对错(每次覆盖)
+   - 不重复题数 uniqueCount = Object.keys(firstResult).length(不是作答次数、不是题库总数)
+   - 掌握度       = finalResult 中 true 数 / uniqueCount(先错后对计「对」)
+   - 首次正确率   = firstResult 中 true 数 / uniqueCount(等级/通过判定用它)
 
-   ── Adaptive difficulty ──
-   Each level tracks a `targetDifficulty` 1 (easy) → 2 (med) → 3 (hard).
-     • Starts at 2.
-     • Correct answer → target++ (capped at 3).
-     • Wrong answer   → target-- (floored at 1), and the question is re-queued
-       2 positions later for a spaced retry.
-   Next-question pick prefers a question whose difficulty matches the current
-   target; falls back to the nearest available difficulty in the same bucket.
+   结束条件(任一):
+     ① 首次正确率 ≥ 75% 且已答够 effectiveMin(避免 1 题就 100% 退出)
+     ② uniqueCount ≥ effectiveMax(= min(maxQ, 可用 MCQ 去重题数))
+     ③ 无新题可出
+   达结束即清空 re-queue、直接进结算页。结算三值(掌握度/首次正确率/是否通过)
+   在「同一作答函数作用域内用本地变量算好」后落进 completionData,结算页只读不重算。
 
-   Question source: junior_grammar_questions, sort_order 9000-9199
-     • 9000-9099 = original gold-standard 12 (per point)
-     • 9100-9199 = adaptive expansion bank (varied difficulties)
+   题源:junior_grammar_questions(9000-9199 精选;空则回退完整题库),仅取 question_type='mcq'。
    ────────────────────────────────────────────────────────────────────────── */
 
-type LevelKey = "mcq" | "fill" | "correction" | "transform" | "translation";
-type LevelStatus = "locked" | "active" | "completed";
-
 type LevelConfig = {
-  id: number;
-  key: LevelKey;
   name: string;
   emoji: string;
-  skillFocus: string;
   skillFocusCn: string;
   minQ: number;
   maxQ: number;
-  /** Fraction 0..1; how many of `minQ` must be correct to unlock the next level. */
   threshold: number;
 };
 
-// Thresholds tuned to the current 12-question gold-standard bank
-// (4 mcq / 3 fill / 2 correction / 2 transform / 1 translation per point).
-// Once more questions are authored (target 21–33 per point), raise these
-// to 80/80/75/75 per the spec.
-// 单关 MCQ:只保留选择题,按难度 易→中→难 顺序出题(题库已按 difficulty 升序取回)。
-const LEVELS: LevelConfig[] = [
-  {
-    id: 1, key: "mcq", name: "选择题", emoji: "🎯",
-    skillFocus: "Choose the correct form.",
-    skillFocusCn: "选出正确的用法。",
-    minQ: 4, maxQ: 8, threshold: 0.75,
-  },
-];
+const LEVEL: LevelConfig = {
+  name: "选择题",
+  emoji: "🎯",
+  skillFocusCn: "选出正确的用法。",
+  minQ: 4,
+  maxQ: 8,
+  threshold: 0.75,
+};
 
 type Pt = {
   id: string;
@@ -79,69 +65,47 @@ type Pt = {
 
 type Difficulty = 1 | 2 | 3;
 
-type LevelState = {
-  asked: number[]; // indices of questions already shown
-  correct: number;
-  answered: number;
-  retryQueue: number[]; // indices to re-ask (spaced retry)
-  status: LevelStatus;
+type CompletionData = {
+  uniqueCount: number;
+  masteryPct: number; // 掌握度
+  firstPct: number; // 首次正确率
+  shouldPass: boolean; // 首次正确率 ≥ 75%
+  neededMore: number; // <75% 时:距离通过还差几题
 };
 
-function makeInitialState(): Record<number, LevelState> {
-  return Object.fromEntries(
-    LEVELS.map((l) => [
-      l.id,
-      {
-        asked: [],
-        correct: 0,
-        answered: 0,
-        retryQueue: [],
-        status: l.id === 1 ? "active" : "locked",
-      } as LevelState,
-    ]),
-  );
-}
+const Q_SELECT =
+  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
 
-/** 下一题:pool 已按 difficulty 升序取回,取第一道未做过的(易→中→难顺序)。 */
-function pickNextSequential(pool: GrammarQuestion[], asked: number[]): number | null {
-  for (let i = 0; i < pool.length; i++) if (!asked.includes(i)) return i;
-  return null;
-}
-
-/** 通关判定 —— 兜底:需答题数不超过该点实际题数(poolLen),薄点也能正常通关。 */
-function isMastered(state: LevelState, cfg: LevelConfig, poolLen: number): boolean {
-  const need = Math.min(cfg.minQ, poolLen);
-  if (state.answered < need) return false;
-  if (state.retryQueue.length > 0) return false; // can't master with pending retries
-  if (state.answered === 0) return false;
-  return state.correct / state.answered >= cfg.threshold;
-}
-
-function maxedOut(state: LevelState, cfg: LevelConfig, poolLen: number): boolean {
-  const cap = Math.min(cfg.maxQ, poolLen);
-  return state.answered >= cap && !isMastered(state, cfg, poolLen);
+/** 等级文案(按首次正确率分档)。 */
+function tierInfo(firstPct: number): { emoji: string; big: string; pass: boolean } {
+  if (firstPct >= 100) return { emoji: "🎉", big: "完全掌握！", pass: true };
+  if (firstPct >= 90) return { emoji: "🌟", big: "已掌握", pass: true };
+  if (firstPct >= 80) return { emoji: "👍", big: "熟练掌握，继续巩固", pass: true };
+  if (firstPct >= 75) return { emoji: "💪", big: "通过挑战！基础已建立，再练一练", pass: true };
+  return { emoji: "📚", big: "继续学习，再练一练", pass: false };
 }
 
 export default function JuniorGrammarMastery() {
   const { id } = useParams<{ id: string }>();
   const [pt, setPt] = useState<Pt | null>(null);
-  const [byType, setByType] = useState<Record<LevelKey, GrammarQuestion[]>>({
-    mcq: [], fill: [], correction: [], transform: [], translation: [],
-  });
+  const [pool, setPool] = useState<GrammarQuestion[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentLevel, setCurrentLevel] = useState(1);
-  const [state, setState] = useState<Record<number, LevelState>>(() => makeInitialState());
-  const [activeQuestionIdx, setActiveQuestionIdx] = useState<number | null>(null);
-  const [answered, setAnswered] = useState(false);
-  const [showCelebration, setShowCelebration] = useState(false);
 
-  // ─── Fetch grammar point + gold-standard questions ───
+  const [firstResult, setFirstResult] = useState<Record<number, boolean>>({});
+  const [finalResult, setFinalResult] = useState<Record<number, boolean>>({});
+  const [retryQueue, setRetryQueue] = useState<number[]>([]);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
+  const [answered, setAnswered] = useState(false);
+  const [completion, setCompletion] = useState<CompletionData | null>(null);
+  const [viewResult, setViewResult] = useState(false);
+
+  // ─── Fetch grammar point + MCQ pool(难度升序) ───
   useEffect(() => {
     if (!id) return;
+    let cancelled = false;
     (async () => {
       setLoading(true);
-      const pointSelect =
-        "id,title,code,cefr,grade,hook_line,hook_line_cn,mnemonic" as const;
+      const pointSelect = "id,title,code,cefr,grade,hook_line,hook_line_cn,mnemonic" as const;
       let pointRes = await supabase
         .from("junior_grammar_points")
         .select(pointSelect)
@@ -156,8 +120,6 @@ export default function JuniorGrammarMastery() {
       }
       const resolved = pointRes.data as Pt | null;
       const pointId = resolved?.id ?? id;
-      const Q_SELECT =
-        "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
       const qRes = await supabase
         .from("junior_grammar_questions")
         .select(Q_SELECT)
@@ -166,10 +128,7 @@ export default function JuniorGrammarMastery() {
         .lte("sort_order", 9199)
         .order("difficulty", { ascending: true })
         .order("sort_order");
-      setPt(resolved);
       let allQs = (qRes.data ?? []) as unknown as GrammarQuestion[];
-      // Fallback: some points have no curated 9000-9199 mastery set yet.
-      // Use the point's full question bank so the page isn't empty.
       if (allQs.length === 0) {
         const fb = await supabase
           .from("junior_grammar_questions")
@@ -179,103 +138,84 @@ export default function JuniorGrammarMastery() {
           .order("sort_order");
         allQs = (fb.data ?? []) as unknown as GrammarQuestion[];
       }
-      const buckets: Record<LevelKey, GrammarQuestion[]> = {
-        mcq: [], fill: [], correction: [], transform: [], translation: [],
-      };
-      for (const q of allQs) {
-        const t = (q.question_type || "mcq") as LevelKey;
-        if (buckets[t]) buckets[t].push(q);
-      }
-      setByType(buckets);
+      if (cancelled) return;
+      setPt(resolved);
+      setPool(allQs.filter((q) => (q.question_type || "mcq") === "mcq"));
       setLoading(false);
     })();
+    return () => {
+      cancelled = true;
+    };
   }, [id]);
 
-  // ─── Pick the next question for the current level ───
-  useEffect(() => {
-    if (loading || showCelebration) return;
-    const cfg = LEVELS.find((l) => l.id === currentLevel);
-    if (!cfg) return;
-    const ls = state[currentLevel];
-    const pool = byType[cfg.key];
-    if (!pool || pool.length === 0) {
-      // No questions in this bucket — skip this level so the user can move on.
-      if (ls.status !== "completed") {
-        setState((s) => ({
-          ...s,
-          [currentLevel]: { ...s[currentLevel], status: "completed" },
-          ...(currentLevel < LEVELS.length
-            ? { [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" } }
-            : {}),
-        }));
-      }
-      // Move the view off the empty level — otherwise it sticks on "加载题目中...".
-      if (currentLevel < LEVELS.length) {
-        setCurrentLevel((lv) => (lv === currentLevel ? lv + 1 : lv));
-      } else {
-        setShowCelebration(true);
-      }
-      return;
-    }
-    // 已有“有效”的当前题(下标在 pool 范围内)→ 保留;
-    // 若下标越界(残留的旧关下标等)→ 不早返回,继续往下重新挑题,避免卡「加载题目中…」。
-    if (activeQuestionIdx !== null && activeQuestionIdx < pool.length) return;
-    // Prefer retry queue (spaced retry of wrong answers)
-    if (ls.retryQueue.length > 0 && ls.retryQueue[0] < pool.length) {
-      setActiveQuestionIdx(ls.retryQueue[0]);
-      return;
-    }
-    // 按难度升序取下一道未做的题(易→中→难)
-    const next = pickNextSequential(pool, ls.asked);
-    if (next !== null) {
-      setActiveQuestionIdx(next);
-      return;
-    }
-    // Exhausted pool — if not mastered yet, loop back to the first question
-    if (!isMastered(ls, cfg, pool.length) && pool.length > 0) {
-      setActiveQuestionIdx(0); // replay from start
-    }
-  }, [loading, currentLevel, state, byType, activeQuestionIdx, showCelebration]);
+  // ─── 派生量(不另存 state) ───
+  const availableQuestionCount = pool.length;
+  const effectiveMax = Math.min(LEVEL.maxQ, availableQuestionCount);
+  const effectiveMin = Math.min(LEVEL.minQ, availableQuestionCount);
+  const uniqueCount = Object.keys(firstResult).length;
+  const masteredCount = Object.values(finalResult).filter(Boolean).length;
+  const firstCorrectCount = Object.values(firstResult).filter(Boolean).length;
 
-  // ─── Handle an answer ───
-  const cfg = useMemo(() => LEVELS.find((l) => l.id === currentLevel)!, [currentLevel]);
-  const pool = byType[cfg.key];
-  // 越界保险:下标必须落在 pool 范围内,否则视为无效(由 pick effect 重新挑题)。
-  const activeQ =
-    activeQuestionIdx !== null && pool && activeQuestionIdx < pool.length
-      ? pool[activeQuestionIdx]
-      : null;
-  const lvlState = state[currentLevel];
+  // ─── 挑下一题 ───
+  useEffect(() => {
+    if (loading || completion) return;
+    if (pool.length === 0) return;
+    // 当前题有效(下标在范围内)→ 保留
+    if (activeIdx !== null && activeIdx < pool.length) return;
+    // 重排队列(先错后对)
+    if (retryQueue.length > 0 && retryQueue[0] < pool.length) {
+      setActiveIdx(retryQueue[0]);
+      return;
+    }
+    // 下一道「未首答」的新题(易→难)
+    for (let i = 0; i < pool.length; i++) {
+      if (!(i in firstResult)) {
+        setActiveIdx(i);
+        return;
+      }
+    }
+    setActiveIdx(null);
+  }, [loading, completion, pool, firstResult, retryQueue, activeIdx]);
+
+  const activeQ = activeIdx !== null && activeIdx < pool.length ? pool[activeIdx] : null;
 
   const handleAnswered = (result: AnswerResult) => {
-    if (answered || activeQuestionIdx === null || !activeQ) return;
+    if (answered || activeIdx === null || !activeQ) return;
     setAnswered(true);
+    const idx = activeIdx;
     const isOk = result.kind === "correct" || result.kind === "acceptable";
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
-    setState((s) => {
-      const prev = s[currentLevel];
-      const newAsked = prev.asked.includes(activeQuestionIdx)
-        ? prev.asked
-        : [...prev.asked, activeQuestionIdx];
-      // Pull this idx out of the retry queue if it was there
-      const newRetry = prev.retryQueue.filter((i) => i !== activeQuestionIdx);
-      // Wrong → re-queue this question for a later spaced retry (after 2 others)
-      const updatedRetry = isOk
-        ? newRetry
-        : [...newRetry.slice(0, 2), activeQuestionIdx, ...newRetry.slice(2)];
-      return {
-        ...s,
-        [currentLevel]: {
-          ...prev,
-          asked: newAsked,
-          correct: prev.correct + (isOk ? 1 : 0),
-          answered: prev.answered + 1,
-          retryQueue: updatedRetry,
-        },
-      };
-    });
 
-    // Coins + FSRS + feedback
+    // ── 含「本次作答」的即时结果,全用本地变量算,绝不 setState 后立刻读 state ──
+    const isFirst = !(idx in firstResult);
+    const nextFirst = isFirst ? { ...firstResult, [idx]: isOk } : firstResult;
+    const nextFinal = { ...finalResult, [idx]: isOk };
+    const withoutIdx = retryQueue.filter((i) => i !== idx);
+    const nextRetry = isOk ? withoutIdx : [...withoutIdx.slice(0, 2), idx, ...withoutIdx.slice(2)];
+
+    const uCount = Object.keys(nextFirst).length;
+    const firstCorr = Object.values(nextFirst).filter(Boolean).length;
+    const finalCorr = Object.values(nextFinal).filter(Boolean).length;
+    const fRate = uCount > 0 ? firstCorr / uCount : 0;
+    const hasNew = pool.some((_, i) => !(i in nextFirst));
+
+    const passedEarly = fRate >= LEVEL.threshold && uCount >= effectiveMin;
+    const end = passedEarly || uCount >= effectiveMax || !hasNew;
+
+    setFirstResult(nextFirst);
+    setFinalResult(nextFinal);
+    setRetryQueue(end ? [] : nextRetry); // 结束即清空 re-queue,不刷完队列
+
+    if (end) {
+      const masteryPct = uCount > 0 ? Math.round((finalCorr / uCount) * 100) : 0;
+      const firstPct = uCount > 0 ? Math.round((firstCorr / uCount) * 100) : 0;
+      const shouldPass = fRate >= LEVEL.threshold;
+      const passLine = Math.ceil(effectiveMax * LEVEL.threshold); // 通过线题数
+      const neededMore = Math.max(0, passLine - firstCorr);
+      setCompletion({ uniqueCount: uCount, masteryPct, firstPct, shouldPass, neededMore });
+      if (shouldPass) fireEmojiConfetti({ vibrate: true, count: 60 });
+    }
+
     if (isOk) {
       awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", result.latencyMs);
     } else {
@@ -284,7 +224,7 @@ export default function JuniorGrammarMastery() {
     if (pt?.id) {
       recordJuniorGrammarAttempt({
         pointId: pt.id,
-        questionType: activeQ.question_type || cfg.key,
+        questionType: activeQ.question_type || "mcq",
         isCorrect: isOk,
         latencyMs: result.latencyMs,
         errorReason:
@@ -296,50 +236,22 @@ export default function JuniorGrammarMastery() {
   };
 
   const handleNext = () => {
-    if (!cfg) return;
-    const poolLen = byType[cfg.key]?.length ?? 0;
+    if (completion) {
+      setViewResult(true); // 已结束 → 看结算页
+      return;
+    }
     setAnswered(false);
-    setActiveQuestionIdx(null);
+    setActiveIdx(null);
+  };
 
-    // Check mastery after the answer is in state — use a microtask to read fresh state.
-    setTimeout(() => {
-      setState((s) => {
-        const ls = s[currentLevel];
-        const mastered = isMastered(ls, cfg, poolLen);
-        const maxed = maxedOut(ls, cfg, poolLen);
-        if (mastered) {
-          // Unlock next level (or finish)
-          if (currentLevel >= LEVELS.length) {
-            setShowCelebration(true);
-            fireEmojiConfetti({ vibrate: true, count: 80 });
-            return {
-              ...s,
-              [currentLevel]: { ...ls, status: "completed" },
-            };
-          }
-          fireEmojiConfetti({ vibrate: false, count: 24 });
-          setCurrentLevel(currentLevel + 1);
-          return {
-            ...s,
-            [currentLevel]: { ...ls, status: "completed" },
-            [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" },
-          };
-        }
-        if (maxed && ls.retryQueue.length === 0) {
-          // Hit max but didn't master and nothing to retry — gentle progression
-          // (let them move on; UI shows incomplete badge)
-          if (currentLevel < LEVELS.length) {
-            setCurrentLevel(currentLevel + 1);
-            return {
-              ...s,
-              [currentLevel]: { ...ls, status: "completed" },
-              [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" },
-            };
-          }
-        }
-        return s;
-      });
-    }, 0);
+  const restart = () => {
+    setFirstResult({});
+    setFinalResult({});
+    setRetryQueue([]);
+    setActiveIdx(null);
+    setAnswered(false);
+    setCompletion(null);
+    setViewResult(false);
   };
 
   if (loading) {
@@ -378,14 +290,8 @@ export default function JuniorGrammarMastery() {
     );
   }
 
-  if (showCelebration) {
-    return <CompletionScreen pt={pt} state={state} onRestart={() => {
-      setState(makeInitialState());
-      setCurrentLevel(1);
-      setShowCelebration(false);
-      setActiveQuestionIdx(null);
-      setAnswered(false);
-    }} />;
+  if (viewResult && completion) {
+    return <CompletionScreen pt={pt} data={completion} onRestart={restart} />;
   }
 
   const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
@@ -410,14 +316,17 @@ export default function JuniorGrammarMastery() {
         </p>
       </header>
 
-      {/* 进度条:单关选择题(横向一条) */}
+      {/* 进度条:掌握度 + 首次正确率(实时,按不重复题) */}
       <div className="flex items-center justify-between rounded-2xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-cyan-50 px-4 py-3 dark:border-pink-900/50 dark:from-pink-950/30 dark:to-cyan-950/20">
         <div className="flex items-center gap-2">
-          <span className="grid size-9 place-items-center rounded-xl bg-white text-lg shadow-sm dark:bg-background">{cfg.emoji}</span>
-          <span className="text-sm font-extrabold text-[#2C2C2A] dark:text-foreground">{cfg.name}</span>
+          <span className="grid size-9 place-items-center rounded-xl bg-white text-lg shadow-sm dark:bg-background">{LEVEL.emoji}</span>
+          <span className="text-sm font-extrabold text-[#2C2C2A] dark:text-foreground">{LEVEL.name}</span>
         </div>
-        <div className="text-sm font-bold tabular-nums text-pink-600 dark:text-pink-300">
-          已答 {lvlState.answered} · <span className="text-emerald-600 dark:text-emerald-400">答对 {lvlState.correct}</span>
+        <div className="text-sm font-bold tabular-nums">
+          <span className="text-[#5C5751] dark:text-muted-foreground">掌握度 </span>
+          <span className="text-emerald-600 dark:text-emerald-400">{masteredCount}/{uniqueCount}</span>
+          <span className="text-[#5C5751] dark:text-muted-foreground"> · 首次正确 </span>
+          <span className="text-pink-600 dark:text-pink-300">{firstCorrectCount}/{uniqueCount}</span>
         </div>
       </div>
 
@@ -426,115 +335,112 @@ export default function JuniorGrammarMastery() {
         <div className="space-y-3">
           <div className="flex items-center justify-between text-xs px-1">
             <span className="rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 font-bold text-pink-600 dark:from-pink-950/50 dark:to-cyan-950/50 dark:text-pink-300">
-              {cfg.name}
+              {LEVEL.name}
             </span>
-            <div className="flex items-center gap-2">
-              {(() => {
-                const d = (activeQ.difficulty ?? 2) as Difficulty;
-                const meta = d === 1
-                  ? { cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
-                  : d === 3
-                  ? { cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
-                  : { cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
-                return (
-                  <span className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}>{meta.cn}</span>
-                );
-              })()}
-              <span className="text-muted-foreground tabular-nums">第 {lvlState.answered + 1} 题</span>
-            </div>
+            {(() => {
+              const d = (activeQ.difficulty ?? 2) as Difficulty;
+              const meta = d === 1
+                ? { cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
+                : d === 3
+                ? { cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
+                : { cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
+              return <span className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}>{meta.cn}</span>;
+            })()}
           </div>
           <GrammarQuestionCard
             key={activeQ.id}
             question={activeQ}
-            index={lvlState.answered}
+            index={uniqueCount}
             onAnswered={handleAnswered}
           />
           {answered && (
             <div className="flex items-center justify-between gap-3 pt-1">
               <div className="text-xs font-bold text-[#5C5751] dark:text-foreground">
-                {cfg.skillFocusCn}
+                {LEVEL.skillFocusCn}
               </div>
               <button
                 onClick={handleNext}
                 className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"
               >
-                {isMastered(lvlState, cfg, pool?.length ?? 0) ? "完成 🎉" : "下一题 →"}
+                {completion ? "查看结果 →" : "下一题 →"}
               </button>
             </div>
           )}
         </div>
+      ) : pool.length === 0 ? (
+        <div className="playful-card p-8 text-center">
+          <p className="text-sm text-muted-foreground"><T>该考点暂无选择题。</T></p>
+        </div>
       ) : (
-        <div className="playful-card p-8 text-center space-y-2">
+        <div className="playful-card p-8 text-center">
           <p className="text-sm text-muted-foreground"><T>加载题目中...</T></p>
         </div>
       )}
 
       {/* ─── 通关条件(浅底条) ─── */}
       <div className="rounded-xl bg-muted/50 px-3 py-2 text-center text-xs text-[#5C5751] dark:text-muted-foreground">
-        通关条件：至少答 {Math.min(cfg.minQ, pool?.length ?? 0)} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}% · 答错的题会稍后重做
+        通关条件：首次正确率 ≥ {Math.round(LEVEL.threshold * 100)}% · 答错的题可重做(巩固掌握度，不计入首次正确率)
       </div>
     </main>
   );
 }
 
-/* ─────────────── Completion Screen ─────────────── */
+/* ─────────────── Completion Screen(只读 completionData,不重算) ─────────────── */
 function CompletionScreen({
   pt,
-  state,
+  data,
   onRestart,
 }: {
   pt: Pt;
-  state: Record<number, LevelState>;
+  data: CompletionData;
   onRestart: () => void;
 }) {
-  const totalAnswered = Object.values(state).reduce((a, s) => a + s.answered, 0);
-  const totalCorrect = Object.values(state).reduce((a, s) => a + s.correct, 0);
-  const pct = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
-  const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
+  const tier = tierInfo(data.firstPct);
+  const backToList = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
+  const backToHub = pt.grade ? `/junior/hub/${pt.grade}` : "/junior";
+  const sub = tier.pass
+    ? "继续巩固会更棒！"
+    : data.neededMore > 0
+    ? `距离通过还差 ${data.neededMore} 题`
+    : "再学习一遍会更好。";
 
   return (
     <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center">
       <section className="relative overflow-hidden rounded-[2rem] border-2 border-pink-200/80 bg-gradient-to-br from-pink-100 via-white to-cyan-100 p-8 space-y-3 dark:border-pink-900/50 dark:from-pink-950/40 dark:via-background dark:to-cyan-950/40">
-        <div className="relative mx-auto grid size-20 place-items-center rounded-full bg-gradient-to-br from-pink-400 to-cyan-400 text-white shadow-lg spark-bob">
-          <Trophy className="size-10" />
+        <div className="relative mx-auto grid size-20 place-items-center rounded-full bg-gradient-to-br from-pink-400 to-cyan-400 text-4xl shadow-lg spark-bob">
+          {tier.emoji}
         </div>
-        <h1 className="relative text-3xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
-          <T>通关成功！</T>
+        <h1 className="relative text-2xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent sm:text-3xl">
+          {tier.big}
         </h1>
-        <p className="relative text-base text-muted-foreground">
-          <T>你已经掌握了</T> <span className="font-bold text-foreground">{pt.title}</span>
-        </p>
+        <p className="relative text-base text-[#5C5751] dark:text-muted-foreground">{sub}</p>
         <div className="relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/15 to-cyan-500/15 px-4 py-1.5 text-sm font-bold text-pink-700 dark:text-pink-300">
           <Trophy className="size-4" />
-          <T>总正确率</T> {pct}% · {totalCorrect} / {totalAnswered}
+          掌握度 {data.masteryPct}% · 首次正确率 {data.firstPct}%
         </div>
       </section>
 
-      <div className="grid grid-cols-1 gap-2">
-        {LEVELS.map((l) => {
-          const s = state[l.id];
-          return (
-            <div key={l.id} className="playful-card p-3 space-y-1">
-              <div className="text-xl">{l.emoji}</div>
-              <div className="text-[10px] font-bold">{l.name}</div>
-              <div className="text-[10px] tabular-nums text-muted-foreground">{s.correct} / {s.answered}</div>
-            </div>
-          );
-        })}
-      </div>
-
       <div className="flex flex-wrap items-center justify-center gap-3">
-        <button
-          onClick={onRestart}
-          className="playful-btn inline-flex items-center gap-1.5 bg-gradient-to-r from-pink-500 to-rose-400 px-5 py-2.5 text-sm text-white"
-        >
-          <RotateCw className="size-4" /> <T>再做一遍</T>
-        </button>
+        {tier.pass ? (
+          <BackLink
+            to={backToList}
+            className="playful-btn playful-btn-cyan inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2.5 text-sm text-white"
+          >
+            <T>继续学习</T>
+          </BackLink>
+        ) : (
+          <button
+            onClick={onRestart}
+            className="playful-btn inline-flex items-center gap-1.5 bg-gradient-to-r from-pink-500 to-rose-400 px-5 py-2.5 text-sm text-white"
+          >
+            <RotateCw className="size-4" /> <T>再做一遍</T>
+          </button>
+        )}
         <BackLink
-          to={backTo}
-          className="playful-btn playful-btn-cyan inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2.5 text-sm text-white"
+          to={backToHub}
+          className="playful-btn inline-flex items-center gap-1.5 border border-border bg-card px-5 py-2.5 text-sm text-foreground"
         >
-          <T>返回考点列表</T>
+          <T>返回单元</T>
         </BackLink>
       </div>
     </main>

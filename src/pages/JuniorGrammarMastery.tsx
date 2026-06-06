@@ -78,10 +78,11 @@ const Q_SELECT =
 
 /** 等级文案(按首次正确率分档)。 */
 function tierInfo(firstPct: number): { emoji: string; big: string; pass: boolean } {
-  if (firstPct >= 100) return { emoji: "🎉", big: "完全掌握！", pass: true };
-  if (firstPct >= 90) return { emoji: "🌟", big: "已掌握", pass: true };
-  if (firstPct >= 80) return { emoji: "👍", big: "熟练掌握，继续巩固", pass: true };
-  if (firstPct >= 75) return { emoji: "💪", big: "通过挑战！基础已建立，再练一练", pass: true };
+  // 文案限定「本次」,不用「掌握」做长期断言(掌握靠覆盖+稳定+时间验证)。
+  if (firstPct >= 100) return { emoji: "🎉", big: "本次全对，表现优秀！", pass: true };
+  if (firstPct >= 90) return { emoji: "🌟", big: "本次表现很棒！", pass: true };
+  if (firstPct >= 80) return { emoji: "👍", big: "本次不错，继续巩固", pass: true };
+  if (firstPct >= 75) return { emoji: "💪", big: "通过！基础已建立，再练一练", pass: true };
   return { emoji: "📚", big: "继续学习，再练一练", pass: false };
 }
 
@@ -399,7 +400,7 @@ function CompletionScreen({
   const backToList = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
   const backToHub = pt.grade ? `/junior/hub/${pt.grade}` : "/junior";
   const sub = tier.pass
-    ? "继续巩固会更棒！"
+    ? "本次测试表现不错，继续巩固会更棒"
     : data.neededMore > 0
     ? `距离通过还差 ${data.neededMore} 题`
     : "再学习一遍会更好。";

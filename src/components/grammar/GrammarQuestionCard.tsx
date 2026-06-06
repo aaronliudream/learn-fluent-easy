@@ -330,7 +330,7 @@ export function GrammarQuestionCard({
       )}
 
       {isLegacyMcq && !hasDistractors && (
-        <div className="relative grid gap-2.5">
+        <div className="relative grid grid-cols-2 gap-2.5">
           {CHOICE_LETTERS.map((L) => {
             const txt = (q as Record<string, unknown>)[`option_${L.toLowerCase()}`] as string | null;
             if (txt == null) return null;

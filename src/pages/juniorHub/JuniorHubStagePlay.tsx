@@ -708,16 +708,31 @@ function GrammarStage({
   const pointId = useGrammarPointId(unit.grammarCode);
   const masteryPath = pointId ? `/junior/grammar/${pointId}/mastery` : null;
 
-  return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
-      {masteryPath && (
+  // 接了考点的单元：只走真题题库的语法测试，不再铺写死的 grammarQuiz 水题。
+  if (masteryPath) {
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <p className="mb-3 text-sm text-[#5C5751]">本单元语法用真题题库测练，成绩计入你的掌握度。</p>
         <Link
           to={masteryPath}
           className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
         >
-          进入语法五关测试 →
+          进入语法测试 →
         </Link>
-      )}
+        <button
+          type="button"
+          onClick={onFinish}
+          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
+        >
+          已完成，标记本关通过
+        </button>
+      </div>
+    );
+  }
+
+  // 未接考点的单元（如 Starter）保留内联兜底测验。
+  return (
+    <div className="rounded-2xl bg-white p-4 shadow-sm">
       <FinalQuizStage
         questions={shuffleArray([...unit.grammarQuiz]).slice(0, 6)}
         unitId={unit.id}
@@ -726,15 +741,6 @@ function GrammarStage({
         onCorrect={() => {}}
         onWrong={() => {}}
       />
-      {masteryPath && (
-        <button
-          type="button"
-          onClick={onFinish}
-          className="mt-3 w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
-        >
-          已完成语法五关，标记本关通过
-        </button>
-      )}
     </div>
   );
 }

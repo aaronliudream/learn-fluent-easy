@@ -2,7 +2,7 @@
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Lock, Check, Sparkles, RotateCw, Trophy } from "lucide-react";
+import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import {
@@ -16,7 +16,7 @@ import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Adaptive 5-Level Mastery Test (per grammar point)
+   Single-level MCQ Mastery Test (per grammar point)
 
    Each level tests ONE question type. Levels unlock progressively based on
    mastery thresholds. Wrong answers are spaced-retried later in the same
@@ -56,36 +56,13 @@ type LevelConfig = {
 // (4 mcq / 3 fill / 2 correction / 2 transform / 1 translation per point).
 // Once more questions are authored (target 21–33 per point), raise these
 // to 80/80/75/75 per the spec.
+// 单关 MCQ:只保留选择题,按难度 易→中→难 顺序出题(题库已按 difficulty 升序取回)。
 const LEVELS: LevelConfig[] = [
   {
     id: 1, key: "mcq", name: "选择题", emoji: "🎯",
-    skillFocus: "Recognition · Can you identify the correct form?",
-    skillFocusCn: "识别能力 · 你能识别出正确的形式吗？",
+    skillFocus: "Choose the correct form.",
+    skillFocusCn: "选出正确的用法。",
     minQ: 4, maxQ: 8, threshold: 0.75,
-  },
-  {
-    id: 2, key: "fill", name: "填空题", emoji: "✏️",
-    skillFocus: "Recall · Can you produce the right form from memory?",
-    skillFocusCn: "回忆能力 · 你能凭记忆写出正确形式吗？",
-    minQ: 3, maxQ: 6, threshold: 0.67,
-  },
-  {
-    id: 3, key: "correction", name: "改错题", emoji: "🔧",
-    skillFocus: "Debugging · Can you spot and fix an error?",
-    skillFocusCn: "纠错能力 · 你能发现并改正错误吗？",
-    minQ: 2, maxQ: 4, threshold: 0.5,
-  },
-  {
-    id: 4, key: "transform", name: "句型转换", emoji: "🔄",
-    skillFocus: "Manipulation · Can you rewrite the sentence correctly?",
-    skillFocusCn: "转换能力 · 你能正确地改写句子吗？",
-    minQ: 2, maxQ: 4, threshold: 0.5,
-  },
-  {
-    id: 5, key: "translation", name: "造句 / 写作", emoji: "✍️",
-    skillFocus: "Production · Can you build the sentence from Chinese?",
-    skillFocusCn: "产出能力 · 你能根据中文造出整句吗？",
-    minQ: 1, maxQ: 3, threshold: 1.0,
   },
 ];
 
@@ -108,7 +85,6 @@ type LevelState = {
   answered: number;
   retryQueue: number[]; // indices to re-ask (spaced retry)
   status: LevelStatus;
-  targetDifficulty: Difficulty; // adaptive: starts at 2, ±1 on each result
 };
 
 function makeInitialState(): Record<number, LevelState> {
@@ -121,42 +97,29 @@ function makeInitialState(): Record<number, LevelState> {
         answered: 0,
         retryQueue: [],
         status: l.id === 1 ? "active" : "locked",
-        targetDifficulty: 2 as Difficulty,
       } as LevelState,
     ]),
   );
 }
 
-/**
- * Pick the next question index from `pool`, preferring:
- *   1. Unasked questions matching `targetDifficulty`,
- *   2. Unasked questions at the nearest difficulty (|d - target| ascending),
- *   3. Any unasked question.
- * Returns null when every question in the pool has already been asked.
- */
-function pickByTargetDifficulty(
-  pool: GrammarQuestion[],
-  asked: number[],
-  targetDifficulty: Difficulty,
-): number | null {
-  const unaskedIdx = pool.map((_, i) => i).filter((i) => !asked.includes(i));
-  if (unaskedIdx.length === 0) return null;
-  const exact = unaskedIdx.filter((i) => (pool[i].difficulty ?? 2) === targetDifficulty);
-  if (exact.length > 0) return exact[0];
-  // nearest by absolute difficulty distance
-  return unaskedIdx
-    .map((i) => ({ i, d: Math.abs((pool[i].difficulty ?? 2) - targetDifficulty) }))
-    .sort((a, b) => a.d - b.d)[0].i;
+/** 下一题:pool 已按 difficulty 升序取回,取第一道未做过的(易→中→难顺序)。 */
+function pickNextSequential(pool: GrammarQuestion[], asked: number[]): number | null {
+  for (let i = 0; i < pool.length; i++) if (!asked.includes(i)) return i;
+  return null;
 }
 
-function isMastered(state: LevelState, cfg: LevelConfig): boolean {
-  if (state.answered < cfg.minQ) return false;
+/** 通关判定 —— 兜底:需答题数不超过该点实际题数(poolLen),薄点也能正常通关。 */
+function isMastered(state: LevelState, cfg: LevelConfig, poolLen: number): boolean {
+  const need = Math.min(cfg.minQ, poolLen);
+  if (state.answered < need) return false;
   if (state.retryQueue.length > 0) return false; // can't master with pending retries
+  if (state.answered === 0) return false;
   return state.correct / state.answered >= cfg.threshold;
 }
 
-function maxedOut(state: LevelState, cfg: LevelConfig): boolean {
-  return state.answered >= cfg.maxQ && !isMastered(state, cfg);
+function maxedOut(state: LevelState, cfg: LevelConfig, poolLen: number): boolean {
+  const cap = Math.min(cfg.maxQ, poolLen);
+  return state.answered >= cap && !isMastered(state, cfg, poolLen);
 }
 
 export default function JuniorGrammarMastery() {
@@ -254,21 +217,22 @@ export default function JuniorGrammarMastery() {
       }
       return;
     }
-    // Already have a queued question? leave it.
-    if (activeQuestionIdx !== null) return;
+    // 已有“有效”的当前题(下标在 pool 范围内)→ 保留;
+    // 若下标越界(残留的旧关下标等)→ 不早返回,继续往下重新挑题,避免卡「加载题目中…」。
+    if (activeQuestionIdx !== null && activeQuestionIdx < pool.length) return;
     // Prefer retry queue (spaced retry of wrong answers)
-    if (ls.retryQueue.length > 0) {
+    if (ls.retryQueue.length > 0 && ls.retryQueue[0] < pool.length) {
       setActiveQuestionIdx(ls.retryQueue[0]);
       return;
     }
-    // Adaptive pick: prefer a question at the current target difficulty.
-    const next = pickByTargetDifficulty(pool, ls.asked, ls.targetDifficulty);
+    // 按难度升序取下一道未做的题(易→中→难)
+    const next = pickNextSequential(pool, ls.asked);
     if (next !== null) {
       setActiveQuestionIdx(next);
       return;
     }
     // Exhausted pool — if not mastered yet, loop back to the first question
-    if (!isMastered(ls, cfg) && pool.length > 0) {
+    if (!isMastered(ls, cfg, pool.length) && pool.length > 0) {
       setActiveQuestionIdx(0); // replay from start
     }
   }, [loading, currentLevel, state, byType, activeQuestionIdx, showCelebration]);
@@ -276,7 +240,11 @@ export default function JuniorGrammarMastery() {
   // ─── Handle an answer ───
   const cfg = useMemo(() => LEVELS.find((l) => l.id === currentLevel)!, [currentLevel]);
   const pool = byType[cfg.key];
-  const activeQ = activeQuestionIdx !== null && pool ? pool[activeQuestionIdx] : null;
+  // 越界保险:下标必须落在 pool 范围内,否则视为无效(由 pick effect 重新挑题)。
+  const activeQ =
+    activeQuestionIdx !== null && pool && activeQuestionIdx < pool.length
+      ? pool[activeQuestionIdx]
+      : null;
   const lvlState = state[currentLevel];
 
   const handleAnswered = (result: AnswerResult) => {
@@ -295,12 +263,6 @@ export default function JuniorGrammarMastery() {
       const updatedRetry = isOk
         ? newRetry
         : [...newRetry.slice(0, 2), activeQuestionIdx, ...newRetry.slice(2)];
-      // Adaptive difficulty: correct → harder; wrong → easier (clamped 1..3)
-      const nextTarget = (
-        isOk
-          ? Math.min(3, prev.targetDifficulty + 1)
-          : Math.max(1, prev.targetDifficulty - 1)
-      ) as Difficulty;
       return {
         ...s,
         [currentLevel]: {
@@ -309,7 +271,6 @@ export default function JuniorGrammarMastery() {
           correct: prev.correct + (isOk ? 1 : 0),
           answered: prev.answered + 1,
           retryQueue: updatedRetry,
-          targetDifficulty: nextTarget,
         },
       };
     });
@@ -336,6 +297,7 @@ export default function JuniorGrammarMastery() {
 
   const handleNext = () => {
     if (!cfg) return;
+    const poolLen = byType[cfg.key]?.length ?? 0;
     setAnswered(false);
     setActiveQuestionIdx(null);
 
@@ -343,8 +305,8 @@ export default function JuniorGrammarMastery() {
     setTimeout(() => {
       setState((s) => {
         const ls = s[currentLevel];
-        const mastered = isMastered(ls, cfg);
-        const maxed = maxedOut(ls, cfg);
+        const mastered = isMastered(ls, cfg, poolLen);
+        const maxed = maxedOut(ls, cfg, poolLen);
         if (mastered) {
           // Unlock next level (or finish)
           if (currentLevel >= LEVELS.length) {
@@ -440,51 +402,23 @@ export default function JuniorGrammarMastery() {
       <header className="playful-card relative overflow-hidden p-5">
         <span className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-pink-200/40 blur-2xl" />
         <span className="pointer-events-none absolute -bottom-4 -left-4 size-20 rounded-full bg-cyan-200/40 blur-2xl" />
-        <div className="relative inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 text-xs font-bold text-pink-600 dark:from-pink-950/60 dark:to-cyan-950/60 dark:text-pink-300">
-          <Sparkles className="size-3" /> {pt.code ?? "G8"} · {pt.cefr ?? "B1"}
-        </div>
-        <h1 className="relative mt-2 text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
+        <h1 className="relative text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
           {pt.title}
         </h1>
-        <p className="relative mt-1 text-xs text-muted-foreground">
-          <T>自适应学习 · 答对才能进阶！</T>
+        <p className="relative mt-1.5 text-sm text-[#5C5751] dark:text-muted-foreground">
+          <T>用选择题检验你对这个语法点的掌握 —— 答对就巩固。</T>
         </p>
       </header>
 
-      <div className="grid grid-cols-5 gap-2">
-        {LEVELS.map((l) => {
-          const s = state[l.id];
-          const isActive = l.id === currentLevel && s.status === "active";
-          const isCompleted = s.status === "completed";
-          const isLocked = s.status === "locked";
-          return (
-            <div
-              key={l.id}
-              className={cn(
-                "rounded-2xl border-2 p-3 flex flex-col items-center gap-1.5 transition",
-                isActive && "border-pink-400 bg-gradient-to-br from-pink-50 to-cyan-50 dark:from-pink-950/40 dark:to-cyan-950/30 ring-2 ring-pink-300/40",
-                isCompleted && "border-cyan-300 bg-cyan-50/60 dark:bg-cyan-950/20",
-                isLocked && "border-muted bg-muted/30 opacity-60",
-              )}
-            >
-              <div className="relative grid size-10 place-items-center rounded-xl bg-white dark:bg-background shadow-sm">
-                {isLocked ? <Lock className="size-4 text-muted-foreground" /> : <span className="text-xl">{l.emoji}</span>}
-                {isCompleted && (
-                  <span className="absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-emerald-500 text-white text-[10px]">
-                    <Check className="size-3" />
-                  </span>
-                )}
-              </div>
-              <div className="text-[10px] font-bold text-muted-foreground">Level {l.id}</div>
-              <div className="text-[11px] font-bold leading-tight text-center">{l.name}</div>
-              {isActive && (
-                <div className="text-[9px] tabular-nums text-pink-600 dark:text-pink-300">
-                  {s.correct} / {s.answered} ✓
-                </div>
-              )}
-            </div>
-          );
-        })}
+      {/* 进度条:单关选择题(横向一条) */}
+      <div className="flex items-center justify-between rounded-2xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-cyan-50 px-4 py-3 dark:border-pink-900/50 dark:from-pink-950/30 dark:to-cyan-950/20">
+        <div className="flex items-center gap-2">
+          <span className="grid size-9 place-items-center rounded-xl bg-white text-lg shadow-sm dark:bg-background">{cfg.emoji}</span>
+          <span className="text-sm font-extrabold text-[#2C2C2A] dark:text-foreground">{cfg.name}</span>
+        </div>
+        <div className="text-sm font-bold tabular-nums text-pink-600 dark:text-pink-300">
+          已答 {lvlState.answered} · <span className="text-emerald-600 dark:text-emerald-400">答对 {lvlState.correct}</span>
+        </div>
       </div>
 
       {/* ─── Active question card ─── */}
@@ -492,28 +426,21 @@ export default function JuniorGrammarMastery() {
         <div className="space-y-3">
           <div className="flex items-center justify-between text-xs px-1">
             <span className="rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 font-bold text-pink-600 dark:from-pink-950/50 dark:to-cyan-950/50 dark:text-pink-300">
-              <T>Level</T> {cfg.id} · {cfg.name}
+              {cfg.name}
             </span>
             <div className="flex items-center gap-2">
               {(() => {
                 const d = (activeQ.difficulty ?? 2) as Difficulty;
                 const meta = d === 1
-                  ? { label: "易", cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
+                  ? { cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
                   : d === 3
-                  ? { label: "难", cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
-                  : { label: "中", cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
+                  ? { cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
+                  : { cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
                 return (
-                  <span
-                    title="adaptive difficulty — 答对会升级，答错会下调"
-                    className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}
-                  >
-                    {meta.cn}
-                  </span>
+                  <span className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}>{meta.cn}</span>
                 );
               })()}
-              <span className="text-muted-foreground tabular-nums">
-                {lvlState.answered + 1} · {cfg.minQ}–{cfg.maxQ} <T>题</T>
-              </span>
+              <span className="text-muted-foreground tabular-nums">第 {lvlState.answered + 1} 题</span>
             </div>
           </div>
           <GrammarQuestionCard
@@ -524,22 +451,14 @@ export default function JuniorGrammarMastery() {
           />
           {answered && (
             <div className="flex items-center justify-between gap-3 pt-1">
-              <div className="text-xs text-muted-foreground">
-                <span className="font-bold text-foreground">{cfg.skillFocusCn}</span>
-                <br />
-                {cfg.skillFocus}
+              <div className="text-xs font-bold text-[#5C5751] dark:text-foreground">
+                {cfg.skillFocusCn}
               </div>
               <button
                 onClick={handleNext}
                 className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"
               >
-                {(() => {
-                  const ls = lvlState;
-                  if (isMastered(ls, cfg)) {
-                    return currentLevel >= LEVELS.length ? "完成 🎉" : "进入 Level " + (currentLevel + 1) + " →";
-                  }
-                  return "下一题 →";
-                })()}
+                {isMastered(lvlState, cfg, pool?.length ?? 0) ? "完成 🎉" : "下一题 →"}
               </button>
             </div>
           )}
@@ -550,16 +469,9 @@ export default function JuniorGrammarMastery() {
         </div>
       )}
 
-      {/* ─── Mastery hint (low-key) ─── */}
-      <div className="text-[11px] text-center text-muted-foreground space-y-0.5">
-        <div>
-          <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
-          {" · "}
-          <T>答错的题会稍后重做</T>
-        </div>
-        <div className="text-[10px] opacity-80">
-          <T>智能调节：答对升级（易 → 中 → 难），答错降级（难 → 中 → 易）</T>
-        </div>
+      {/* ─── 通关条件(浅底条) ─── */}
+      <div className="rounded-xl bg-muted/50 px-3 py-2 text-center text-xs text-[#5C5751] dark:text-muted-foreground">
+        通关条件：至少答 {Math.min(cfg.minQ, pool?.length ?? 0)} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}% · 答错的题会稍后重做
       </div>
     </main>
   );
@@ -598,7 +510,7 @@ function CompletionScreen({
         </div>
       </section>
 
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-1 gap-2">
         {LEVELS.map((l) => {
           const s = state[l.id];
           return (

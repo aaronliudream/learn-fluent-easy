@@ -42,7 +42,7 @@ const GRADES: { id: JuniorGradeKey; label: string }[] = [
 /** 6 张学科卡 — 背景图 + 路由 + 对应 mastery 模块 key */
 const CARDS = [
   { key: "vocab", img: "card-vocab", tag: "词汇 · 基础积累", title: "词汇", sub: "核心词汇 · 5 种游戏", moduleKey: "vocab", to: (q: string) => `/junior/vocab${q}` },
-  { key: "grammar", img: "card-grammar", tag: "语法 · 规则应用", title: "语法", sub: "中考语法专项", moduleKey: "grammar", to: (q: string) => `/junior/grammar${q}` },
+  { key: "grammar", img: "card-grammar", tag: "语法 · 规则应用", title: "语法", sub: "初中语法专项", moduleKey: "grammar", to: (q: string) => `/junior/grammar${q}` },
   { key: "reading", img: "card-reading", tag: "阅读 · 理解提升", title: "阅读", sub: "阅读理解训练", moduleKey: "reading", to: (q: string) => `/junior/reading${q}` },
   { key: "listening", img: "card-listening", tag: "听力 · 听说提升", title: "听力", sub: "听力短文训练", moduleKey: "listening", to: (q: string) => `/junior/listening${q}` },
   { key: "writing", img: "card-writing", tag: "写作 · 表达输出", title: "写作", sub: "中考写作训练", moduleKey: "writing", to: (q: string) => `/junior/writing${q}` },

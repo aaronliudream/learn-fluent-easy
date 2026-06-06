@@ -29,7 +29,7 @@ export default function JuniorGrade() {
   {
     to: `/junior/grammar?grade=${dbGrade}`,
     icon: BookOpen,
-    title: "中考语法专项",
+    title: "初中语法专项",
     desc: "时态 · 从句 · 非谓语 · 中考考点直击",
     gradient: "from-emerald-500 via-teal-500 to-cyan-500"
   },

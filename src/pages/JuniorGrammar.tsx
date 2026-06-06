@@ -141,6 +141,18 @@ export default function JuniorGrammar() {
     };
   }, [pts, mastery]);
 
+  // ⚔️ 错题复习题数 = 到期 point 的 wrongQ 总和(DB 口径,与 loadDueRevengeItems 一致;复用已加载 mastery,零新增查询)
+  const dueRevengeCount = useMemo(() => {
+    const now = Date.now();
+    let n = 0;
+    for (const p of pts) {
+      const ms = mastery[p.id];
+      if (ms?.due_at && new Date(ms.due_at).getTime() <= now)
+        n += ms.mastery_matrix?.wrongQ?.length ?? 0;
+    }
+    return n;
+  }, [pts, mastery]);
+
   // ─── Due list (top 3) ───
   const dueList = useMemo(() => {
     const arr: {p: Pt;ms: JuniorGrammarMastery;}[] = [];
@@ -194,7 +206,7 @@ export default function JuniorGrammar() {
       <div className="mb-6 flex items-end justify-between gap-3">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>
-          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>中考语法专项</T></h1>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>初中语法专项</T></h1>
           <p className="mt-1 text-sm text-muted-foreground"><T>按 CEFR 分级 · 间隔复习 · AI 智能批改</T></p>
         </div>
         <div className="inline-flex shrink-0 rounded-xl border bg-card p-1 text-xs">
@@ -379,6 +391,20 @@ export default function JuniorGrammar() {
             </div>
           </div>
         </section>
+      )}
+
+      {/* ⚔️ 错题复习入口(DB wrongQ;仅到期点有错题时显示) */}
+      {view === "list" && dueRevengeCount > 0 && (
+        <Link
+          to="/junior/grammar/revenge"
+          className="mb-6 flex items-center gap-3 rounded-2xl border border-rose-300/60 dark:border-rose-800/60 bg-gradient-to-r from-rose-600 to-orange-500 p-4 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/20 text-2xl">⚔️</span>
+          <div className="flex-1 min-w-0">
+            <div className="text-base font-extrabold leading-tight"><T>错题复习</T></div>
+            <div className="text-xs opacity-90">{dueRevengeCount} <T>题待复习 · 改对清空弱点</T></div>
+          </div>
+          <ChevronRight className="size-5 shrink-0" />
+        </Link>
       )}
 
       {/* ===== 错因分布 (list view only) =====

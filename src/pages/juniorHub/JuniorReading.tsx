@@ -22,8 +22,7 @@ type R = {id: string;title: string;topic: string | null;word_count: number | nul
 export default function JuniorReading() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
-  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
-  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
+  const backTo = "/junior";
   const onGrade = (key: JuniorGradeKey) => {
     const { dbGrade } = juniorGradeParams(key);
     const next = new URLSearchParams(params);

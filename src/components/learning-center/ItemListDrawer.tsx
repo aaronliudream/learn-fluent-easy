@@ -57,7 +57,7 @@ function fmtRel(iso: string | null): string {
 
 function trainRoute(stage: StageKey, module: string, grade?: number): string {
   if (stage === "primary") return grade ? `/primary/hub/${grade}` : `/primary`;
-  if (stage === "junior") return grade ? `/junior/g/${grade}` : `/junior`;
+  if (stage === "junior") return `/junior`;
   if (module === "vocab") return `/gaokao/vocab${grade ? `?grade=${grade - 9}` : ""}`;
   if (module === "grammar") return `/gaokao/grammar`;
   if (module === "reading") return `/gaokao/reading`;

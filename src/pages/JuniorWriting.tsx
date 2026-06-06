@@ -10,8 +10,7 @@ type P = {id: string;topic: string;prompt_cn: string;grade: number;min_words: nu
 export default function JuniorWriting() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
-  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
+  const backTo = "/junior";
   const [items, setItems] = useState<P[]>([]);
   useEffect(() => {
     let q: any = (supabase as any).from("junior_writing_prompts").

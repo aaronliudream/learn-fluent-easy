@@ -168,7 +168,7 @@ export function rankWeakPoints(
   return pts
     .map((point) => {
       const ms = mastery[point.id];
-      const mistakeCount = loadLabMistakesForPoint(point.id).length;
+      const mistakeCount = ms?.mastery_matrix?.wrongQ?.length ?? 0;
       const wrongCount = ms?.wrong_count ?? 0;
       const isDue = !!(ms?.due_at && new Date(ms.due_at).getTime() <= now);
       const lvl = ms?.mastery_level ?? 0;

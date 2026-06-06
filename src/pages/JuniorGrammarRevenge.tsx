@@ -4,21 +4,21 @@ import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { GrammarRevengeRunner } from "@/components/grammar/GrammarRevengeRunner";
+import { GrammarRevengeRunner, type RevengeItem } from "@/components/grammar/GrammarRevengeRunner";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import {
   JUNIOR_ERROR_REASON_LABELS,
   loadJuniorGrammarMasteryAll,
+  loadDueRevengeItems,
+  removeFromWrongQ,
   type JuniorGrammarErrorReason,
 } from "@/lib/juniorGrammarFsrs";
 import {
-  clearRevengeForPoint,
-  collectRevengeMistakes,
   dominantErrorReason,
   rankWeakPoints,
 } from "@/lib/juniorGrammarRevenge";
-import { hasLabContent, juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
+import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
 import { cn } from "@/lib/utils";
 
 type Pt = {
@@ -61,12 +61,6 @@ export default function JuniorGrammarRevenge() {
     return map;
   }, [mastery]);
 
-  const pointTitles = useMemo(() => {
-    const t: Record<string, string> = {};
-    for (const p of pts) t[p.id] = p.title;
-    return t;
-  }, [pts]);
-
   const dominantByPoint = useMemo(() => {
     const d: Record<string, JuniorGrammarErrorReason | null> = {};
     for (const p of pts) {
@@ -75,16 +69,17 @@ export default function JuniorGrammarRevenge() {
     return d;
   }, [pts, masteryMap]);
 
-  const revengeItems = useMemo(
-    () =>
-      collectRevengeMistakes({
-        pointId: pointFilter || undefined,
-        reason: reasonFilter || undefined,
-        pointTitles,
-        dominantByPoint,
-      }),
-    [pointFilter, reasonFilter, pointTitles, dominantByPoint],
-  );
+  const [revengeItems, setRevengeItems] = useState<RevengeItem[]>([]);
+  useEffect(() => {
+    (async () => {
+      const items = await loadDueRevengeItems({ pointId: pointFilter || undefined });
+      // 错因筛选沿用 point 级 dominant error(与原逻辑一致)
+      const filtered = reasonFilter
+        ? items.filter((it) => dominantByPoint[it.pointId] === reasonFilter)
+        : items;
+      setRevengeItems(filtered);
+    })();
+  }, [pointFilter, reasonFilter, dominantByPoint]);
 
   const weakPoints = useMemo(() => rankWeakPoints(pts, masteryMap).slice(0, 8), [pts, masteryMap]);
 
@@ -153,8 +148,8 @@ export default function JuniorGrammarRevenge() {
               <li key={w.point.id} className="flex items-center gap-2">
                 <Link
                   to={
-                    w.mistakeCount > 0 && hasLabContent(w.point)
-                      ? `/junior/grammar-lab/${w.point.id}?revenge=1`
+                    w.mistakeCount > 0
+                      ? `/junior/grammar/revenge?point=${w.point.id}`
                       : juniorGrammarPlayPath(w.point.id, w.point)
                   }
                   className="flex flex-1 min-w-0 items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-sm hover:bg-muted/60">
@@ -182,13 +177,16 @@ export default function JuniorGrammarRevenge() {
 
         <GrammarRevengeRunner
           items={revengeItems}
-          onCorrect={() => { awardForCorrect(1, "junior_grammar_revenge").catch(() => {}); }}
+          onCorrect={(item) => {
+            awardForCorrect(1, "junior_grammar_revenge").catch(() => {});
+            if (item?.pointId && item?.questionId)
+              removeFromWrongQ(item.pointId, item.questionId).catch(() => {});
+          }}
           onDone={(correct, total) => {
             setScore({ correct, total });
             setDone(true);
             if (total > 0 && correct === total) {
               fireEmojiConfetti({ emojis: ["⚔️", "🏆"] });
-              if (pointFilter) clearRevengeForPoint(pointFilter);
             }
           }}
           emptyHint={

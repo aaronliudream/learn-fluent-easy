@@ -7,6 +7,7 @@ import type { LabMistake } from "@/lib/juniorGrammarRevenge";
 export type RevengeItem = LabMistake & {
   pointId?: string;
   pointTitle?: string;
+  questionId?: string;
 };
 
 function normalize(s: string) {
@@ -34,7 +35,7 @@ function fuzzyMatch(input: string, target: string): boolean {
 type Props = {
   items: RevengeItem[];
   onDone: (correct: number, total: number) => void;
-  onCorrect?: () => void;
+  onCorrect?: (item: RevengeItem) => void;
   emptyHint?: string;
 };
 
@@ -70,7 +71,7 @@ export function GrammarRevengeRunner({ items, onDone, onCorrect, emptyHint }: Pr
     setResult(ok ? "ok" : "ng");
     if (ok) {
       setCorrect((c) => c + 1);
-      onCorrect?.();
+      onCorrect?.(m);
     }
   };
   const next = () => {

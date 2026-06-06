@@ -105,6 +105,89 @@ export async function loadJuniorGrammarMasteryAll(): Promise<JuniorGrammarMaster
   return (data ?? []) as unknown as JuniorGrammarMastery[];
 }
 
+export type DueRevengeItem = {
+  pointId: string;
+  pointTitle: string;
+  questionId: string;
+  phase: string;
+  stem: string;
+  picked: string;
+  correct: string;
+  why?: string;
+};
+
+/**
+ * Revenge 取数(DB 唯一源):找所有 due 的 grammar point → 收集其 mastery_matrix.wrongQ
+ * → 批量反查 junior_grammar_questions 拿题面 → 组装 Runner 用的填空错题。
+ * due 仍按 point 级 due_at(与 rankWeakPoints 同口径),绝不让 wrongQ 自己单独调度。
+ * correct 取「答案文本」:legacy MCQ 把 A-D 字母映射成 option_<letter>;否则 correct_answer 即文本。
+ * picked DB 没存 → 留空;why = explanation。
+ */
+export async function loadDueRevengeItems(
+  opts?: { pointId?: string },
+): Promise<DueRevengeItem[]> {
+  const rows = await loadJuniorGrammarMasteryAll();
+  const now = Date.now();
+  const dueRows = rows.filter((r) => {
+    if (opts?.pointId && r.item_id !== opts.pointId) return false;
+    if ((r.mastery_matrix?.wrongQ ?? []).length === 0) return false;
+    return !!(r.due_at && new Date(r.due_at).getTime() <= now);
+  });
+  if (!dueRows.length) return [];
+
+  const ids = [...new Set(dueRows.flatMap((r) => r.mastery_matrix?.wrongQ ?? []))];
+  const pointIds = [...new Set(dueRows.map((r) => r.item_id))];
+  const [qRes, pRes] = await Promise.all([
+    supabase
+      .from("junior_grammar_questions")
+      .select("id,point_id,stem,correct_answer,option_a,option_b,option_c,option_d,explanation")
+      .in("id", ids),
+    supabase.from("junior_grammar_points").select("id,title").in("id", pointIds),
+  ]);
+  const titleByPoint = new Map(
+    ((pRes.data ?? []) as { id: string; title: string }[]).map((p) => [p.id, p.title]),
+  );
+
+  const out: DueRevengeItem[] = [];
+  for (const q of (qRes.data ?? []) as Array<Record<string, string | null>>) {
+    const letter = (q.correct_answer ?? "").trim().toUpperCase();
+    const correct = /^[A-D]$/.test(letter)
+      ? q[`option_${letter.toLowerCase()}`] ?? q.correct_answer ?? ""
+      : q.correct_answer ?? "";
+    if (!correct || !q.id || !q.point_id) continue; // 无可判分答案文本 → 跳过(保险)
+    out.push({
+      pointId: q.point_id,
+      pointTitle: titleByPoint.get(q.point_id) ?? q.point_id,
+      questionId: q.id,
+      phase: "复习",
+      stem: q.stem ?? "",
+      picked: "",
+      correct,
+      why: q.explanation ?? undefined,
+    });
+  }
+  return out;
+}
+
+/**
+ * Revenge 答对某题 → 从该 point 的 mastery_matrix.wrongQ 移除该 question_id 并写回。
+ * 答对即删(wrongQ 是「待复习池」,不是 FSRS 历史)。只动 wrongQ,不碰 due_at/level/FSRS。
+ */
+export async function removeFromWrongQ(
+  pointId: string,
+  questionId: string,
+): Promise<void> {
+  const prev = await loadJuniorGrammarMastery(pointId);
+  if (!prev?.id) return;
+  const matrix: JuniorGrammarMatrix = prev.mastery_matrix
+    ? JSON.parse(JSON.stringify(prev.mastery_matrix))
+    : {};
+  const next = (matrix.wrongQ ?? []).filter((id) => id !== questionId);
+  if (next.length === (matrix.wrongQ?.length ?? 0)) return; // 无变化不写
+  matrix.wrongQ = next;
+  await supabase.from("junior_user_mastery").update({ mastery_matrix: matrix }).eq("id", prev.id);
+}
+
 export async function recordJuniorGrammarAttempt(opts: {
   pointId: string;
   questionType: string;

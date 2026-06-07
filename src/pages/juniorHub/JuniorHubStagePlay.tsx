@@ -7,7 +7,7 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -771,6 +771,34 @@ function GrammarStage({
   );
 }
 
+/** Hub 显示层清理 DB 题卷标题:去「七上/七下」「Unit\d+」「(X卷)」→ 只留主题;撞名保留卷别区分。不改 DB。 */
+function cleanStageTitle(t: string): string {
+  const s = (t || "")
+    .replace(/七[上下]/g, "")
+    .replace(/Unit\s*\d+/gi, "")
+    .replace(/[（(][^)）]*[)）]/g, "")
+    .replace(/\s+/g, "")
+    .replace(/^[·\-—、:：]+|[·\-—、:：]+$/g, "")
+    .trim();
+  return s || t;
+}
+function volMark(t: string): string {
+  const m = (t || "").match(/[（(]\s*([^)）]+?)\s*[)）]/);
+  return m ? m[1].trim() : "";
+}
+function buildDisplayTitles(
+  rows: { id: string; title: string }[],
+): { id: string; title: string; display: string }[] {
+  const base = rows.map((r) => ({ ...r, b: cleanStageTitle(r.title), v: volMark(r.title) }));
+  const counts: Record<string, number> = {};
+  base.forEach((r) => (counts[r.b] = (counts[r.b] || 0) + 1));
+  return base.map((r) => ({
+    id: r.id,
+    title: r.title,
+    display: counts[r.b] > 1 && r.v ? `${r.b}·${r.v}` : r.b,
+  }));
+}
+
 function ReadingStage({
   unit,
   grade,
@@ -810,28 +838,22 @@ function ReadingStage({
 
   // ① 有 DB 内容:渲染专区 play 的 Link 列表 + 标记本关通过(同 GrammarStage 模式)
   if (dbRows.length > 0) {
+    const displayRows = buildDisplayTitles(dbRows);
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
         <p className="mb-3 text-sm text-[#5C5751]">
-          本单元阅读（真题库 {dbRows.length} 篇），成绩计入你的阅读掌握度。
+          本单元阅读（真题库 {dbRows.length} 篇），点开做完即记为本关通过，成绩计入你的阅读掌握度。
         </p>
-        {dbRows.map((r) => (
+        {displayRows.map((r) => (
           <Link
             key={r.id}
             to={`/junior/reading/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
             className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white"
           >
-            <span className="truncate">{r.title}</span>
+            <span className="truncate">{r.display}</span>
             <span className="ml-2 shrink-0">→</span>
           </Link>
         ))}
-        <button
-          type="button"
-          onClick={onFinish}
-          className="mt-1 w-full rounded-xl border border-amber-200 py-2 text-sm text-amber-600"
-        >
-          已完成，标记本关通过
-        </button>
       </div>
     );
   }
@@ -908,28 +930,22 @@ function ListeningStage({
 
   // ① 有 DB 内容:渲染专区 play 的 Link 列表(带 returnTo 回单元关)+ 标记本关通过
   if (dbRows.length > 0) {
+    const displayRows = buildDisplayTitles(dbRows);
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
         <p className="mb-3 text-sm text-[#5C5751]">
-          本单元听力（真题库 {dbRows.length} 条），成绩计入你的听力掌握度。
+          本单元听力（真题库 {dbRows.length} 条），点开做完即记为本关通过，成绩计入你的听力掌握度。
         </p>
-        {dbRows.map((r) => (
+        {displayRows.map((r) => (
           <Link
             key={r.id}
             to={`/junior/listening/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
             className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 px-4 py-3 text-sm font-semibold text-white"
           >
-            <span className="truncate">{r.title}</span>
+            <span className="truncate">{r.display}</span>
             <span className="ml-2 shrink-0">→</span>
           </Link>
         ))}
-        <button
-          type="button"
-          onClick={onFinish}
-          className="mt-1 w-full rounded-xl border border-sky-200 py-2 text-sm text-sky-600"
-        >
-          已完成，标记本关通过
-        </button>
       </div>
     );
   }
@@ -1016,6 +1032,16 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     const needAi = completeStage(unitId, stageIdx);
     onComplete(needAi);
   }, [completeStage, onComplete, stageIdx, unitId]);
+
+  // 从专区 play 页做完后带 ?done=1 返回 → 标记本关通过(替代旧"标记本关通过"按钮)。ref 防重。
+  const [hubSearch] = useSearchParams();
+  const doneHandledRef = useRef(false);
+  useEffect(() => {
+    if (hubSearch.get("done") === "1" && !doneHandledRef.current) {
+      doneHandledRef.current = true;
+      handleFinish();
+    }
+  }, [hubSearch, handleFinish]);
 
   const listenWordQuestions = useMemo(() => {
     if (!unit) return [];

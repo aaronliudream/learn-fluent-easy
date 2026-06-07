@@ -124,6 +124,28 @@ export default function JuniorListeningPlay() {
 
   if (!e) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
+  // 从 Hub 单元关进入(returnTo):全部答完→极简完成态 + 返回单元(带 ?done=1 标记本关通过)。
+  // 复用上方已有的 allAnswered(line 36,兼顾 picks+fills)。
+  if (returnTo && allAnswered) {
+    const lisCorrect = e.questions.filter((q, i) => (picks[i] ?? fills[i]) != null && checkAnswer(q, (picks[i] ?? fills[i]) as string)).length;
+    return (
+      <main className="grid min-h-screen place-items-center px-6 text-center">
+        <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
+          <div className="text-4xl">✅</div>
+          <p className="mt-3 text-lg font-extrabold text-foreground">
+            <T>完成！答对</T> {lisCorrect} / {e.questions.length} <T>题</T>
+          </p>
+          <Link
+            to={`${returnTo}?done=1`}
+            className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 py-3 text-sm font-semibold text-white"
+          >
+            <T>返回单元</T> →
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
       <BackLink to={returnTo ?? (e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening")} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T></BackLink>

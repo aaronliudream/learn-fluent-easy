@@ -212,6 +212,25 @@ export default function JuniorReadingPlay() {
 
   // === ③ 诊断 / ④ 对话 阶段（提交后才进入） ===
   if (phase === "diagnosis" || phase === "dialogue") {
+    // 从 Hub 单元关进入(returnTo):做完→极简完成态,不进诊断/推荐/对话页。
+    if (returnTo) {
+      return (
+        <main className="grid min-h-screen place-items-center px-6 text-center">
+          <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
+            <div className="text-4xl">✅</div>
+            <p className="mt-3 text-lg font-extrabold text-foreground">
+              <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
+            </p>
+            <Link
+              to={`${returnTo}?done=1`}
+              className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
+            >
+              <T>返回单元</T> →
+            </Link>
+          </div>
+        </main>
+      );
+    }
     const wrongIdx: number[] = r.questions
       .map((q, i) => (picks[i] !== q.answer ? i + 1 : null))
       .filter((x): x is number => x !== null);

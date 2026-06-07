@@ -865,6 +865,90 @@ function ReadingStage({
   );
 }
 
+function ListeningStage({
+  unit,
+  grade,
+  inlineQuestions,
+  onFinish,
+  onCorrect,
+  onWrong,
+}: {
+  unit: UnitDef;
+  grade: number;
+  inlineQuestions: ListeningQuestion[];
+  onFinish: () => void;
+  onCorrect: () => void;
+  onWrong: (q: ListeningQuestion) => void;
+}) {
+  // 有 DB 内容(已回填 volume/unit)→ Link 到听力专区 play(写 junior_listening_attempts)+ 回单元关;
+  // 无 DB 内容(grade8/9/Starter,volume/unit 为 NULL)→ 回退原内联 ListenMcStage,行为不变。
+  const [dbRows, setDbRows] = useState<{ id: string; title: string }[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    supabase
+      .from("junior_listening_exercises")
+      .select("id,title")
+      .eq("grade", grade)
+      .eq("volume", unit.book)
+      .eq("unit", unit.unitKey)
+      .order("difficulty", { ascending: true })
+      .then(({ data }) => {
+        if (!cancelled) setDbRows((data ?? []) as { id: string; title: string }[]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  if (dbRows === null) {
+    return (
+      <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>
+    );
+  }
+
+  // ① 有 DB 内容:渲染专区 play 的 Link 列表(带 returnTo 回单元关)+ 标记本关通过
+  if (dbRows.length > 0) {
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <p className="mb-3 text-sm text-[#5C5751]">
+          本单元听力（真题库 {dbRows.length} 条），成绩计入你的听力掌握度。
+        </p>
+        {dbRows.map((r) => (
+          <Link
+            key={r.id}
+            to={`/junior/listening/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
+            className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 px-4 py-3 text-sm font-semibold text-white"
+          >
+            <span className="truncate">{r.title}</span>
+            <span className="ml-2 shrink-0">→</span>
+          </Link>
+        ))}
+        <button
+          type="button"
+          onClick={onFinish}
+          className="mt-1 w-full rounded-xl border border-sky-200 py-2 text-sm text-sky-600"
+        >
+          已完成，标记本关通过
+        </button>
+      </div>
+    );
+  }
+
+  // ② 无 DB 内容 → 回退原内联 ListenMcStage(其他单元/Starter,零变化)
+  if (inlineQuestions.length === 0) return <EmptyStageNotice onContinue={onFinish} />;
+  return (
+    <ListenMcStage
+      title="听力短文"
+      instruction="🎧 听一听，选正确答案"
+      questions={inlineQuestions}
+      grade={grade}
+      onFinish={onFinish}
+      onCorrect={onCorrect}
+      onWrong={onWrong}
+    />
+  );
+}
+
 function WritingStage({ unit, onFinish }: { unit: UnitDef; onFinish: () => void }) {
   const w = unit.writing;
   return (
@@ -1022,15 +1106,12 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "listening":
-        // 数据源 unit.listeningQuestions;空时走兜底,不挂载 ListenMcStage。
-        if (listenSentQuestions.length === 0)
-          return <EmptyStageNotice onContinue={handleFinish} />;
+        // 有 DB(volume/unit)→ Link 专区 play + returnTo 回单元关;无则回退内联 ListenMcStage。
         return (
-          <ListenMcStage
-            title="听力短文"
-            instruction="🎧 听一听，选正确答案"
-            questions={listenSentQuestions as ListeningQuestion[]}
+          <ListeningStage
+            unit={unit}
             grade={grade}
+            inlineQuestions={listenSentQuestions as ListeningQuestion[]}
             onFinish={handleFinish}
             onCorrect={addStar}
             onWrong={(q) =>

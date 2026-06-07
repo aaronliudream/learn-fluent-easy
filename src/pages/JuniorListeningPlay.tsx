@@ -1,6 +1,6 @@
 import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,9 @@ type E = {id: string;title: string;transcript: string;translation_cn: string | n
 
 export default function JuniorListeningPlay() {
   const { id } = useParams<{id: string;}>();
+  // 从单元Hub听力关进入时带 ?returnTo=<hub关URL>;有则返回出口回 Hub关(而非听力专区列表)。
+  const [searchParams] = useSearchParams();
+  const returnTo = searchParams.get("returnTo");
   const [e, setE] = useState<E | null>(null);
   const [picks, setPicks] = useState<Record<number, string>>({});
   const [fills, setFills] = useState<Record<number, string>>({});
@@ -123,7 +126,7 @@ export default function JuniorListeningPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to={e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening"} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
+      <BackLink to={returnTo ?? (e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening")} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T></BackLink>
       <div className="flex items-start justify-between gap-3">
         <h1 className="text-grad-title text-2xl font-extrabold">{e.title}</h1>
         <ShareButton
@@ -222,7 +225,7 @@ export default function JuniorListeningPlay() {
         })}
       </div>
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <BackLink to={e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening"} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回听力列表</T></BackLink>
+        <BackLink to={returnTo ?? (e?.grade ? `/junior/listening?grade=${e.grade}` : "/junior/listening")} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回听力列表"}</T></BackLink>
         <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
         <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🐾 宠物</T></Link>
       </div>

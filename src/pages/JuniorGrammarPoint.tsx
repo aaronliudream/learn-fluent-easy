@@ -158,10 +158,10 @@ export default function JuniorGrammarPoint() {
     }
     if (!pt) return ["practice", "reflect"];
     const stages: Stage[] = [];
-    if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0) stages.push("lesson");
-    if (Array.isArray(pt.immersion_cards) && pt.immersion_cards.length > 0) stages.push("immersion");
-    // 已拆知识点的考点:用上方「知识点掌握度」的专项练习取代旧的整考点「练一练」,
-    // 隐藏 practice;reflect(复盘)依赖 practice 作答,一并隐藏(避免空白复盘页)。
+    // 已拆知识点的考点:整页改用上方「知识点掌握度」的专项练习,
+    // 隐藏全部旧阶段(讲解/沉浸/练一练/复盘),详情页只留顶部知识点块。
+    if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0 && !hasKp) stages.push("lesson");
+    if (Array.isArray(pt.immersion_cards) && pt.immersion_cards.length > 0 && !hasKp) stages.push("immersion");
     if (qs.length > 0 && !hasKp) stages.push("practice");
     if (!hasKp) stages.push("reflect");
     return stages;
@@ -341,7 +341,10 @@ export default function JuniorGrammarPoint() {
       }
 
       {/* ═══ Stage content ═══ */}
+      {/* 仅渲染"当前 stage 确实在 availableStages 里"的内容:已拆kp考点 availableStages=[],
+          stage 仍默认 'lesson' 但不在表里 → 整段不渲染,详情页只剩顶部知识点块。 */}
       <div className="mt-5">
+        {availableStages.includes(stage) && (<>
         {/* Stage 1: Teacher lesson */}
         {stage === "lesson" && pt.teacher_script && pt.teacher_script.length > 0 &&
         <TeacherLessonPlayer
@@ -461,6 +464,7 @@ export default function JuniorGrammarPoint() {
           }}
         />
         }
+        </>)}
       </div>
 
       {/* Tutor chat */}

@@ -74,7 +74,7 @@ type CompletionData = {
 };
 
 const Q_SELECT =
-  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
+  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order,kp_id";
 
 /** 等级文案(按首次正确率分档)。 */
 function tierInfo(firstPct: number): { emoji: string; big: string; pass: boolean } {
@@ -229,6 +229,7 @@ export default function JuniorGrammarMastery() {
         isCorrect: isOk,
         latencyMs: result.latencyMs,
         questionId: activeQ.id,
+        kpId: (activeQ as { kp_id?: string | null }).kp_id ?? undefined,
         errorReason:
           result.kind === "wrong"
             ? (result.errorReason as JuniorGrammarErrorReason | undefined)

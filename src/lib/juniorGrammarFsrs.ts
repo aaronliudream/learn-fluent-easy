@@ -27,7 +27,15 @@ export type JuniorGrammarMatrix = {
   recent?: number[];
   errors?: Record<string, number>;
   wrongQ?: string[];
+  // 知识点层(item_type='grammar_kp' 行专用,不影响考点行):
+  streak?: number; // 连对计数,答对+1/答错清零
+  reviewsPassed?: number; // Learned 后通过的「到期复习」次数
+  learnedAt?: string; // 首次达 Learned 的时间
 };
+
+/** 知识点掌握门槛:连对 N 道 → Learned;Learned 后通过 M 次到期复习 → Mastered。 */
+export const KP_LEARNED_STREAK = 5;
+export const KP_MASTERED_REVIEWS = 2;
 
 export type JuniorGrammarMastery = {
   id?: string;
@@ -195,6 +203,7 @@ export async function recordJuniorGrammarAttempt(opts: {
   latencyMs?: number;
   errorReason?: JuniorGrammarErrorReason;
   questionId?: string;
+  kpId?: string; // 该题所属知识点(junior_knowledge_points.id);传入则额外维护 grammar_kp 行
 }): Promise<{ newLevel: number; intervalDays: number; justMastered: boolean } | null> {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -289,11 +298,88 @@ export async function recordJuniorGrammarAttempt(opts: {
     });
   }
 
+  // 知识点层(可选):同一次作答额外记到该题所属知识点行,不影响上面的考点行。
+  if (opts.kpId) {
+    await applyKpAttempt(user.id, opts.kpId, opts.isCorrect, now, grade);
+  }
+
   return {
     newLevel,
     intervalDays: fsrs.intervalDays,
     justMastered: !!reachedMasterAt && !prev?.reached_master_at,
   };
+}
+
+/**
+ * 知识点连对/掌握(item_type='grammar_kp')。复用同一 fsrsSchedule(不改 FSRS 算法)。
+ * - streak:答对+1 / 答错清零
+ * - streak ≥ KP_LEARNED_STREAK 且 level<1 → level=1(Learned),记 learnedAt
+ * - level≥1 且答对且当次是「到期复习」(now ≥ due_at) → reviewsPassed+1;≥KP_MASTERED_REVIEWS → level=2(Mastered)
+ * - 已 Learned 后答错:streak 清零,但 level 不回退(保留 Learned)
+ */
+async function applyKpAttempt(
+  userId: string,
+  kpId: string,
+  isCorrect: boolean,
+  now: Date,
+  grade: number,
+): Promise<void> {
+  const { data } = await supabase
+    .from("junior_user_mastery")
+    .select("*")
+    .eq("user_id", userId)
+    .eq("item_type", "grammar_kp")
+    .eq("item_id", kpId)
+    .maybeSingle();
+  const prev = data as unknown as JuniorGrammarMastery | null;
+
+  const matrix: JuniorGrammarMatrix = prev?.mastery_matrix
+    ? JSON.parse(JSON.stringify(prev.mastery_matrix))
+    : {};
+  const wasDue = !!(prev?.due_at && new Date(prev.due_at).getTime() <= now.getTime());
+  const streak = isCorrect ? (matrix.streak ?? 0) + 1 : 0;
+  let level = prev?.mastery_level ?? 0;
+  let reviewsPassed = matrix.reviewsPassed ?? 0;
+
+  if (level < 1 && streak >= KP_LEARNED_STREAK) {
+    level = 1;
+    matrix.learnedAt = now.toISOString();
+  }
+  if (level >= 1 && isCorrect && wasDue) {
+    reviewsPassed += 1;
+    if (reviewsPassed >= KP_MASTERED_REVIEWS) level = 2;
+  }
+  matrix.streak = streak;
+  matrix.reviewsPassed = reviewsPassed;
+
+  const prevState: FsrsState | null = prev
+    ? { difficulty: prev.difficulty ?? 5.0, stability: prev.stability ?? 0, lastReviewIso: prev.last_seen_at }
+    : null;
+  const fsrs = fsrsSchedule(prevState, grade, now);
+
+  const payload = {
+    correct_count: (prev?.correct_count ?? 0) + (isCorrect ? 1 : 0),
+    wrong_count: (prev?.wrong_count ?? 0) + (isCorrect ? 0 : 1),
+    mastery_level: level,
+    stability: fsrs.stability,
+    difficulty: fsrs.difficulty,
+    last_seen_at: now.toISOString(),
+    due_at: fsrs.dueAt.toISOString(),
+    next_review_at: fsrs.dueAt.toISOString(),
+    last_result: isCorrect ? "correct" : "wrong",
+    mastery_matrix: matrix,
+  };
+
+  if (prev?.id) {
+    await supabase.from("junior_user_mastery").update(payload).eq("id", prev.id);
+  } else {
+    await supabase.from("junior_user_mastery").insert({
+      user_id: userId,
+      item_type: "grammar_kp",
+      item_id: kpId,
+      ...payload,
+    });
+  }
 }
 
 export function aggregateJuniorGrammarErrors(

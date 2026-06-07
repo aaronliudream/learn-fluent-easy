@@ -15,6 +15,7 @@ import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { recordJuniorGrammarAttempt, JUNIOR_LEVEL_META, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
+import { computePointKpMastery, KP_LEARNED_STREAK, type PerKp } from "@/lib/juniorKnowledgePoint";
 import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
@@ -286,6 +287,7 @@ export default function JuniorGrammarPoint() {
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
       <SkillMasteryPanel pointCode={pt.code} />
+      <KnowledgePointProgress pointId={pt.id} />
 
       {/* Stage breadcrumb */}
       {showStageNav &&
@@ -471,7 +473,64 @@ export default function JuniorGrammarPoint() {
         trigger="daily_quota_exhausted"
         used={paywall.used}
         limit={paywall.limit} />
-      
+
     </main>);
 
+}
+
+/** 知识点进度区块:考点掌握度(已Mastered/总) + 每个知识点状态(未学/⊙Learned/✓Mastered)+ 连对X/5。 */
+function KnowledgePointProgress({ pointId }: { pointId: string }) {
+  const [data, setData] = useState<{ mastered: number; total: number; pct: number; perKp: PerKp[] } | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    computePointKpMastery(pointId).then((d) => {
+      if (!cancelled) setData(d);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [pointId]);
+
+  if (!data || data.total === 0) return null; // 该考点未拆知识点 → 不显示(向后兼容)
+
+  const badge = (state: PerKp["state"]) =>
+    state === "Mastered"
+      ? { icon: "✓", cls: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300", label: "Mastered" }
+      : state === "Learned"
+      ? { icon: "⊙", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300", label: "Learned" }
+      : { icon: "○", cls: "bg-muted text-muted-foreground", label: "未学" };
+
+  return (
+    <section className="mt-4 rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 p-4 dark:border-indigo-900/50 dark:from-indigo-950/30 dark:to-violet-950/20">
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-sm font-extrabold text-[#2C2C2A] dark:text-foreground">
+          <T>📌 知识点掌握度</T>
+        </h2>
+        <div className="text-sm font-bold tabular-nums">
+          <span className="text-indigo-600 dark:text-indigo-300">{data.mastered}/{data.total}</span>
+          <span className="text-[#5C5751] dark:text-muted-foreground"> 个知识点 · </span>
+          <span className="text-indigo-600 dark:text-indigo-300">{data.pct}%</span>
+        </div>
+      </div>
+      <ul className="space-y-1.5">
+        {data.perKp.map(({ kp, state, streak }) => {
+          const b = badge(state);
+          return (
+            <li key={kp.id} className="flex items-center justify-between rounded-xl bg-white/70 px-3 py-2 text-sm dark:bg-background/40">
+              <span className="font-medium text-[#2C2C2A] dark:text-foreground">{kp.title}</span>
+              <span className="flex items-center gap-2">
+                {state !== "Mastered" && (
+                  <span className="text-xs tabular-nums text-muted-foreground">连对 {Math.min(streak, KP_LEARNED_STREAK)}/{KP_LEARNED_STREAK}</span>
+                )}
+                <span className={cn("inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-bold", b.cls)}>
+                  {b.icon} {b.label}
+                </span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
 }

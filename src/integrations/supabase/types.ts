@@ -3308,6 +3308,7 @@ export type Database = {
           explanation: string | null
           grammar_topic: string | null
           id: string
+          kp_id: string | null
           natural_note: string | null
           option_a: string | null
           option_b: string | null
@@ -3328,6 +3329,7 @@ export type Database = {
           explanation?: string | null
           grammar_topic?: string | null
           id?: string
+          kp_id?: string | null
           natural_note?: string | null
           option_a?: string | null
           option_b?: string | null
@@ -3348,6 +3350,7 @@ export type Database = {
           explanation?: string | null
           grammar_topic?: string | null
           id?: string
+          kp_id?: string | null
           natural_note?: string | null
           option_a?: string | null
           option_b?: string | null
@@ -3362,6 +3365,54 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "junior_grammar_questions_point_id_fkey"
+            columns: ["point_id"]
+            isOneToOne: false
+            referencedRelation: "junior_grammar_points"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "junior_grammar_questions_kp_id_fkey"
+            columns: ["kp_id"]
+            isOneToOne: false
+            referencedRelation: "junior_knowledge_points"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      junior_knowledge_points: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          point_id: string
+          sort_order: number
+          summary: string | null
+          target_count: number
+          title: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          point_id: string
+          sort_order?: number
+          summary?: string | null
+          target_count?: number
+          title: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          point_id?: string
+          sort_order?: number
+          summary?: string | null
+          target_count?: number
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_knowledge_points_point_id_fkey"
             columns: ["point_id"]
             isOneToOne: false
             referencedRelation: "junior_grammar_points"

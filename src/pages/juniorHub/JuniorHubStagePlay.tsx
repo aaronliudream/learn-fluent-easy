@@ -9,6 +9,7 @@ import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { Link } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
+import { supabase } from "@/integrations/supabase/client";
 
 type Props = {
   unitId: string;
@@ -772,13 +773,70 @@ function GrammarStage({
 
 function ReadingStage({
   unit,
+  grade,
   onFinish,
   onWrong,
 }: {
   unit: UnitDef;
+  grade: number;
   onFinish: () => void;
   onWrong: (q: QuizQuestion) => void;
 }) {
+  // 有 DB 内容(已回填 volume/unit 的单元)→ Link 到阅读专区 play(写 mastery_progress);
+  // 无 DB 内容(grade8/9/Starter,volume/unit 为 NULL)→ 回退原内联逻辑,行为不变。
+  const [dbRows, setDbRows] = useState<{ id: string; title: string }[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    supabase
+      .from("junior_reading")
+      .select("id,title")
+      .eq("grade", grade)
+      .eq("volume", unit.book)
+      .eq("unit", unit.unitKey)
+      .order("difficulty", { ascending: true })
+      .then(({ data }) => {
+        if (!cancelled) setDbRows((data ?? []) as { id: string; title: string }[]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  if (dbRows === null) {
+    return (
+      <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>
+    );
+  }
+
+  // ① 有 DB 内容:渲染专区 play 的 Link 列表 + 标记本关通过(同 GrammarStage 模式)
+  if (dbRows.length > 0) {
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <p className="mb-3 text-sm text-[#5C5751]">
+          本单元阅读（真题库 {dbRows.length} 篇），成绩计入你的阅读掌握度。
+        </p>
+        {dbRows.map((r) => (
+          <Link
+            key={r.id}
+            to={`/junior/reading/${r.id}`}
+            className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white"
+          >
+            <span className="truncate">{r.title}</span>
+            <span className="ml-2 shrink-0">→</span>
+          </Link>
+        ))}
+        <button
+          type="button"
+          onClick={onFinish}
+          className="mt-1 w-full rounded-xl border border-amber-200 py-2 text-sm text-amber-600"
+        >
+          已完成，标记本关通过
+        </button>
+      </div>
+    );
+  }
+
+  // ② 无 DB 内容 → 回退原内联逻辑(其他单元/Starter,零变化)
   const reading = unit.reading;
   if (!reading?.questions.length) {
     return (
@@ -949,6 +1007,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
         return (
           <ReadingStage
             unit={unit}
+            grade={grade}
             onFinish={handleFinish}
             onWrong={(q) =>
               addMistake({

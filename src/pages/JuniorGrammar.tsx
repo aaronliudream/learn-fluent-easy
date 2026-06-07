@@ -17,6 +17,7 @@ import {
   type JuniorGrammarErrorReason } from
 "@/lib/juniorGrammarFsrs";
 import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
+import { loadPointsWithKp } from "@/lib/juniorKnowledgePoint";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
@@ -51,6 +52,7 @@ export default function JuniorGrammar() {
   const [cats, setCats] = useState<Cat[]>([]);
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Record<string, JuniorGrammarMastery>>({});
+  const [kpPoints, setKpPoints] = useState<Set<string>>(new Set()); // 已拆知识点的考点 id
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"list" | "map">(() => {
     if (typeof window === "undefined") return "list";
@@ -66,7 +68,7 @@ export default function JuniorGrammar() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const [c, p, all] = await Promise.all([
+      const [c, p, all, kpset] = await Promise.all([
       // 语法专项页只显示语法分类(tense/clause/verb/other);阅读/完形/词汇与交际/听力 全部排除
       // —— 它们的「按考点抽题」入口已分别归到 /junior/reading、/junior/vocab。仅过滤展示,不动数据。
       supabase.
@@ -78,8 +80,10 @@ export default function JuniorGrammar() {
       from("junior_grammar_points").
       select("id,category_id,title,cefr,grade,summary,content_depth").
       order("sort_order"),
-      loadJuniorGrammarMasteryAll()]
+      loadJuniorGrammarMasteryAll(),
+      loadPointsWithKp()]
       );
+      setKpPoints(kpset);
       const catRows = (c.data ?? []) as Cat[];
       setCats(catRows);
       // 点也按保留的语法分类过滤,非语法分类的题点不出现在统计/推荐/到期等任何位置。
@@ -265,7 +269,7 @@ export default function JuniorGrammar() {
           return (
             <section className="mb-5">
               <Link
-                to={juniorGrammarPlayPath(top.p.id, top.p)}
+                to={juniorGrammarPlayPath(top.p.id, top.p, { hasKp: kpPoints.has(top.p.id) })}
                 className="block rounded-2xl border border-rose-300/60 dark:border-rose-800/60 bg-gradient-to-br from-rose-50 via-card to-rose-50/40 dark:from-rose-950/30 dark:via-card dark:to-rose-950/10 p-5 hover:shadow-md transition group">
                 <div className="flex items-center gap-4">
                   <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-rose-500/15 text-2xl">🔥</div>
@@ -297,7 +301,7 @@ export default function JuniorGrammar() {
           return (
             <section className="mb-5">
               <Link
-                to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)}
+                to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point, { hasKp: kpPoints.has(recommendNext.point.id) })}
                 className="block rounded-2xl border border-emerald-300/60 dark:border-emerald-800/60 bg-gradient-to-br from-emerald-50 via-card to-emerald-50/40 dark:from-emerald-950/30 dark:via-card dark:to-emerald-950/10 p-5 hover:shadow-md transition group">
                 <div className="flex items-center gap-4">
                   <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-emerald-500/15 text-2xl">
@@ -518,7 +522,7 @@ export default function JuniorGrammar() {
                   const hasRichContent = (p.content_depth ?? 0) >= 1;
                   // Gold-standard points → single CTA to adaptive mastery test (no duplicate Lab button).
                   // Legacy points → keep the old lesson page link (no Lab button — Lab now requires gold content).
-                  const playPath = juniorGrammarPlayPath(p.id, p);
+                  const playPath = juniorGrammarPlayPath(p.id, p, { hasKp: kpPoints.has(p.id) });
                   return (
                     <li key={p.id}>
                       <Link
@@ -551,12 +555,15 @@ export default function JuniorGrammar() {
                         </span>
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
                       </Link>
+                      {/* 已拆知识点的考点(走详情页知识点练习)隐藏这个旧的"按考点抽题"入口,避免双入口误导。 */}
+                      {!kpPoints.has(p.id) && (
                       <Link
                         to={`/junior/kp/${p.id}/practice`}
                         className="mt-1 flex items-center justify-center gap-1 rounded-lg border border-dashed border-primary/40 px-2 py-1.5 text-[11px] font-bold text-primary transition hover:bg-primary/5"
                       >
                         <Sparkles className="size-3" /> <T>按考点抽题练习</T>
                       </Link>
+                      )}
                     </li>);
 
                 })}

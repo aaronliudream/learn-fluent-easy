@@ -20,9 +20,11 @@ export function hasLabContent(p: Pick<JuniorPointNav, "content_depth"> | null | 
 export function juniorGrammarPlayPath(
   pointId: string,
   p?: Pick<JuniorPointNav, "content_depth"> | null,
-  opts?: { classic?: boolean },
+  opts?: { classic?: boolean; hasKp?: boolean },
 ): string {
   if (opts?.classic) return `/junior/grammar/${pointId}?classic=1`;
+  // 已拆知识点的考点 → 进详情页(知识点掌握度 + 练习入口),不漏斗去旧整考点 mastery。
+  if (opts?.hasKp) return `/junior/grammar/${pointId}`;
   // Gold-standard points (content_depth >= 1) → adaptive 5-level mastery test.
   // Legacy multi-phase Lab still accessible via /junior/grammar-lab/<id>?legacy=1.
   if (p && hasLabContent(p)) return `/junior/grammar/${pointId}/mastery`;

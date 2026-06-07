@@ -19,6 +19,7 @@ import {
   rankWeakPoints,
 } from "@/lib/juniorGrammarRevenge";
 import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
+import { loadPointsWithKp } from "@/lib/juniorKnowledgePoint";
 import { cn } from "@/lib/utils";
 
 type Pt = {
@@ -35,6 +36,7 @@ export default function JuniorGrammarRevenge() {
 
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Awaited<ReturnType<typeof loadJuniorGrammarMasteryAll>>>([]);
+  const [kpPoints, setKpPoints] = useState<Set<string>>(new Set()); // 已拆知识点的考点 id
   const [loading, setLoading] = useState(true);
   const [done, setDone] = useState(false);
   const [score, setScore] = useState<{ correct: number; total: number } | null>(null);
@@ -42,15 +44,17 @@ export default function JuniorGrammarRevenge() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const [p, m] = await Promise.all([
+      const [p, m, kpset] = await Promise.all([
         supabase
           .from("junior_grammar_points")
           .select("id,title,content_depth,grade")
           .order("sort_order"),
         loadJuniorGrammarMasteryAll(),
+        loadPointsWithKp(),
       ]);
       setPts((p.data ?? []) as Pt[]);
       setMastery(m);
+      setKpPoints(kpset);
       setLoading(false);
     })();
   }, []);
@@ -150,7 +154,7 @@ export default function JuniorGrammarRevenge() {
                   to={
                     w.mistakeCount > 0
                       ? `/junior/grammar/revenge?point=${w.point.id}`
-                      : juniorGrammarPlayPath(w.point.id, w.point)
+                      : juniorGrammarPlayPath(w.point.id, w.point, { hasKp: kpPoints.has(w.point.id) })
                   }
                   className="flex flex-1 min-w-0 items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-sm hover:bg-muted/60">
                   <span className="truncate font-medium">{w.point.title}</span>

@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadJuniorGrammarMasteryAll, recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { juniorGrammarPlayPath, pickNextLabPoint, type JuniorPointNav } from "@/lib/juniorGrammarNav";
+import { pointHasKp } from "@/lib/juniorKnowledgePoint";
 import { clearRevengeForPoint, enqueueLabMistake } from "@/lib/juniorGrammarRevenge";
 import { GrammarRevengeRunner } from "@/components/grammar/GrammarRevengeRunner";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
@@ -1032,6 +1033,14 @@ function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPass
 
 
 }: {state: LabState;mistakes: Mistake[];onReplay: () => void;onRevenge?: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;nextPointTitle?: string | null;grammarHref?: string;}) {
+  // 下一关考点若已拆知识点 → 进详情页(而非旧整考点 mastery)。
+  const [nextHasKp, setNextHasKp] = useState(false);
+  useEffect(() => {
+    if (!nextPointId) return;
+    let cancelled = false;
+    pointHasKp(nextPointId).then((v) => { if (!cancelled) setNextHasKp(v); });
+    return () => { cancelled = true; };
+  }, [nextPointId]);
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
@@ -1087,7 +1096,7 @@ function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPass
         }
         <button type="button" onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> <T>再来一次</T></button>
         {bossPassed && nextPointId &&
-        <Link to={juniorGrammarPlayPath(nextPointId, { id: nextPointId, title: nextPointTitle ?? "", content_depth: 1 })} className="btn-primary inline-flex items-center gap-2">
+        <Link to={juniorGrammarPlayPath(nextPointId, { id: nextPointId, title: nextPointTitle ?? "", content_depth: 1 }, { hasKp: nextHasKp })} className="btn-primary inline-flex items-center gap-2">
             <T>下一关</T>{nextPointTitle ? ` · ${nextPointTitle}` : ""}
             <ArrowRight size={16} />
           </Link>

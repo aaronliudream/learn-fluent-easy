@@ -15,7 +15,7 @@ import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { recordJuniorGrammarAttempt, JUNIOR_LEVEL_META, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
-import { computePointKpMastery, KP_LEARNED_STREAK, type PerKp } from "@/lib/juniorKnowledgePoint";
+import { computePointKpMastery, pointHasKp, KP_LEARNED_STREAK, type PerKp } from "@/lib/juniorKnowledgePoint";
 import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
@@ -90,6 +90,23 @@ export default function JuniorGrammarPoint() {
   const [groupStreak, setGroupStreak] = useState<Streak>({ consecutive_count: 0, challenge_unlocked: false });
   const groupRecordedRef = useRef(false);
 
+  // 该考点是否已拆知识点 → 已拆则停在详情页(看知识点掌握度+练习入口),不漏斗去旧 mastery。
+  const [hasKp, setHasKp] = useState(false);
+  const [kpChecked, setKpChecked] = useState(false);
+  useEffect(() => {
+    if (!id) return;
+    let cancelled = false;
+    pointHasKp(id).then((v) => {
+      if (!cancelled) {
+        setHasKp(v);
+        setKpChecked(true);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
   // Fetch grammar point + questions
   useEffect(() => {
     if (!id) return;
@@ -123,11 +140,11 @@ export default function JuniorGrammarPoint() {
 
   // Rich points default to Lab (闯关); ?classic=1 or ?quick=1 keeps this page.
   useEffect(() => {
-    if (!id || loading || isClassic || isChallenge || isQuick) return;
-    if (pt && hasLabContent(pt)) {
+    if (!id || loading || isClassic || isChallenge || isQuick || !kpChecked) return;
+    if (pt && hasLabContent(pt) && !hasKp) {
       nav(juniorGrammarPlayPath(id, pt), { replace: true });
     }
-  }, [id, loading, pt, isClassic, isChallenge, isQuick, nav]);
+  }, [id, loading, pt, isClassic, isChallenge, isQuick, nav, kpChecked, hasKp]);
 
   // Determine which stages have data → auto-skip empty ones.
   // ?quick=1 (测试模式) forces practice-only: skip lesson + immersion entirely.
@@ -286,8 +303,9 @@ export default function JuniorGrammarPoint() {
 
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
-      <SkillMasteryPanel pointCode={pt.code} />
+      {/* 知识点掌握度放在最顶部(标题正下方),进页第一眼可见练习入口。 */}
       <KnowledgePointProgress pointId={pt.id} />
+      <SkillMasteryPanel pointCode={pt.code} />
 
       {/* Stage breadcrumb */}
       {showStageNav &&

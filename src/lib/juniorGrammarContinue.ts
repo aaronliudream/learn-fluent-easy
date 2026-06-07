@@ -8,6 +8,7 @@ import {
   type JuniorPointNav,
 } from "@/lib/juniorGrammarNav";
 import { countPendingRevengeMistakes } from "@/lib/juniorGrammarRevenge";
+import { pointHasKp } from "@/lib/juniorKnowledgePoint";
 
 type Pt = JuniorPointNav & { category_id?: string | null };
 
@@ -58,10 +59,11 @@ export async function fetchJuniorGrammarContinue(): Promise<ContinuePick> {
   if (target) {
     const ms = mastery[target.id];
     const isDue = !!(ms?.due_at && new Date(ms.due_at).getTime() <= Date.now());
+    const targetHasKp = await pointHasKp(target.id);
     return {
       module: "grammar",
       kind: isDue ? "due" : "new",
-      to: juniorGrammarPlayPath(target.id, target),
+      to: juniorGrammarPlayPath(target.id, target, { hasKp: targetHasKp }),
       title: isDue ? `🎮 语法复习 · ${target.title}` : `🎮 今日语法冒险 · ${target.title}`,
       subtitle: isDue ? "到期考点 · 闯关巩固" : "约 8 分钟 · 钩子 → Boss",
     };

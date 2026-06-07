@@ -132,3 +132,19 @@ export function streakFromRows(kpId: string, rows: JuniorGrammarMastery[]): numb
   const row = rows.find((r) => r.item_id === kpId);
   return kpStreak(row);
 }
+
+/** 所有「已拆知识点」的考点 id 集合(地图/列表/错题页预加载用)。 */
+export async function loadPointsWithKp(): Promise<Set<string>> {
+  const { data } = await supabase.from("junior_knowledge_points").select("point_id");
+  return new Set(((data ?? []) as { point_id: string }[]).map((r) => r.point_id));
+}
+
+/** 单个考点是否已拆知识点(详情页/单点判断用)。 */
+export async function pointHasKp(pointId: string): Promise<boolean> {
+  const { data } = await supabase
+    .from("junior_knowledge_points")
+    .select("id")
+    .eq("point_id", pointId)
+    .limit(1);
+  return (data?.length ?? 0) > 0;
+}

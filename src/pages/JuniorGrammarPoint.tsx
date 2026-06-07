@@ -307,7 +307,9 @@ export default function JuniorGrammarPoint() {
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
       {/* 知识点掌握度放在最顶部(标题正下方),进页第一眼可见练习入口。 */}
       <KnowledgePointProgress pointId={pt.id} />
-      <SkillMasteryPanel pointCode={pt.code} />
+      {/* 已拆知识点的考点:顶部已有「知识点掌握度」,隐藏这套旧的 junior_skills 技能进度条
+          (数据不同源会打架,且含宾格/名物/所有格等本单元未纳入的维度)。其他考点保留。 */}
+      {!hasKp && <SkillMasteryPanel pointCode={pt.code} />}
 
       {/* Stage breadcrumb */}
       {showStageNav &&

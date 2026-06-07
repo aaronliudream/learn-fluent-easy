@@ -160,10 +160,12 @@ export default function JuniorGrammarPoint() {
     const stages: Stage[] = [];
     if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0) stages.push("lesson");
     if (Array.isArray(pt.immersion_cards) && pt.immersion_cards.length > 0) stages.push("immersion");
-    if (qs.length > 0) stages.push("practice");
-    stages.push("reflect");
+    // 已拆知识点的考点:用上方「知识点掌握度」的专项练习取代旧的整考点「练一练」,
+    // 隐藏 practice;reflect(复盘)依赖 practice 作答,一并隐藏(避免空白复盘页)。
+    if (qs.length > 0 && !hasKp) stages.push("practice");
+    if (!hasKp) stages.push("reflect");
     return stages;
-  }, [pt, qs, isQuick]);
+  }, [pt, qs, isQuick, hasKp]);
 
   // Set initial stage to first available
   useEffect(() => {

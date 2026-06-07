@@ -3,7 +3,7 @@ import { SkillMasteryPanel } from "@/components/grammar/SkillMasteryPanel";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { hasLabContent, juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -526,6 +526,12 @@ function KnowledgePointProgress({ pointId }: { pointId: string }) {
                 <span className={cn("inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-bold", b.cls)}>
                   {b.icon} {b.label}
                 </span>
+                <Link
+                  to={`/junior/grammar/kp/${kp.id}`}
+                  className="rounded-full bg-indigo-600 px-2.5 py-0.5 text-xs font-bold text-white transition hover:bg-indigo-700"
+                >
+                  {state === "Mastered" ? "复习 →" : state === "Learned" ? "巩固 →" : "练习 →"}
+                </Link>
               </span>
             </li>
           );

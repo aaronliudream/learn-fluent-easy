@@ -3,6 +3,7 @@ import {
   KP_LEARNED_STREAK,
   type JuniorGrammarMastery,
 } from "@/lib/juniorGrammarFsrs";
+import type { GrammarQuestion } from "@/components/grammar/GrammarQuestionCard";
 
 /**
  * 知识点(knowledge point)层掌握度 —— 单一数据源:
@@ -100,4 +101,34 @@ export async function computeUnitKpMastery(
   ]);
   const { mastered, total, pct } = aggregate(catalog, rows);
   return { mastered, total, pct };
+}
+
+/** 单个知识点元信息(知识点练习页用)。 */
+export async function loadKp(kpId: string): Promise<KpCatalogItem | null> {
+  const { data } = await supabase
+    .from("junior_knowledge_points")
+    .select("id,point_id,code,title,sort_order,target_count")
+    .eq("id", kpId)
+    .maybeSingle();
+  return (data as KpCatalogItem) ?? null;
+}
+
+const KP_Q_SELECT =
+  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
+
+/** 该知识点的 MCQ 题池(只取 question_type='mcq')。 */
+export async function loadKpMcqPool(kpId: string): Promise<GrammarQuestion[]> {
+  const { data } = await supabase
+    .from("junior_grammar_questions")
+    .select(KP_Q_SELECT)
+    .eq("kp_id", kpId)
+    .eq("question_type", "mcq")
+    .order("sort_order");
+  return (data ?? []) as unknown as GrammarQuestion[];
+}
+
+/** 当前用户某知识点的连对数(初始化练习页本地计数用)。 */
+export function streakFromRows(kpId: string, rows: JuniorGrammarMastery[]): number {
+  const row = rows.find((r) => r.item_id === kpId);
+  return kpStreak(row);
 }

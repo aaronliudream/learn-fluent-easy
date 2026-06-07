@@ -1,6 +1,6 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Lock, Clock, ShieldCheck, RotateCcw, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -32,6 +32,9 @@ type ListItem = {id: string;title: string;};
 export default function JuniorReadingPlay() {
   const { id } = useParams<{id: string;}>();
   const nav = useNavigate();
+  // 来源:从单元Hub阅读关进入时带 ?returnTo=<hub关URL>;有则所有返回出口回 Hub关(而非阅读专区列表)。
+  const [searchParams] = useSearchParams();
+  const returnTo = searchParams.get("returnTo");
   const [r, setR] = useState<R | null>(null);
   const [list, setList] = useState<ListItem[]>([]);
   const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
@@ -194,6 +197,7 @@ export default function JuniorReadingPlay() {
   // 检查当前篇是否被允许进入：上一篇 best_pct ≥ PASS_PCT
   useEffect(() => {
     if (!r || !list.length || !userId) return;
+    if (returnTo) return; // 从 Hub 单元关进入:本单元 3 篇自由进入,不套用专区"上一篇 80%"解锁
     const idx = list.findIndex((x) => x.id === r.id);
     if (idx <= 0) return;
     const prev = list[idx - 1];
@@ -282,9 +286,9 @@ export default function JuniorReadingPlay() {
                     weakestPointKey: "reading",
                     weakestPointCn: wrongIdx.length > 0 ? "细节定位" : "阅读理解",
                     topicLabel: r.title,
-                    onWeakClick: () => nav("/junior/reading"),
-                    onMockClick: () => nav("/junior/reading"),
-                    onMicroLessonClick: () => nav("/junior/reading"),
+                    onWeakClick: () => nav(returnTo ?? "/junior/reading"),
+                    onMockClick: () => nav(returnTo ?? "/junior/reading"),
+                    onMicroLessonClick: () => nav(returnTo ?? "/junior/reading"),
                   })}
                 />
               </div>
@@ -332,6 +336,7 @@ export default function JuniorReadingPlay() {
   const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;
   const perfect = currentRow?.stars && currentRow.stars >= 1;
   const goNext = () => {
+    if (returnTo) {nav(returnTo);return;} // 从 Hub 来:做完回单元关,不跨篇
     if (!nextItem) return;
     if (!passed) {toast.error("本篇得分需 ≥80% 才能进入下一篇");return;}
     nav(`/junior/reading/${nextItem.id}`);
@@ -420,8 +425,8 @@ export default function JuniorReadingPlay() {
       <ExamContainer max="7xl">
         {/* Top bar */}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3 pb-4 border-b exam-divider">
-          <BackLink to={r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
-            <ArrowLeft className="size-4" /> <T>返回</T>
+          <BackLink to={returnTo ?? (r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading")} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
+            <ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回"}</T>
           </BackLink>
           <div className="flex items-center gap-3">
             <ExamProgress
@@ -484,7 +489,11 @@ export default function JuniorReadingPlay() {
                       <RotateCcw className="size-4" /> <T>重做本篇</T>
                     </button>
                 }
-                  {nextItem &&
+                  {returnTo ?
+                <button onClick={() => nav(returnTo)} className="exam-btn exam-btn-primary flex-1">
+                      <T>返回单元</T> <ChevronRight className="size-4" />
+                    </button> :
+                  nextItem &&
                 <button onClick={goNext} disabled={!unlocked} className="exam-btn exam-btn-primary flex-1">
                       {unlocked ? <><T>下一篇</T> <ChevronRight className="size-4" /></> : <><Lock className="size-4" /> <T>解锁后进入下一篇</T></>}
                     </button>
@@ -497,7 +506,7 @@ export default function JuniorReadingPlay() {
         </div>
 
         <div className="mt-10 pt-6 border-t exam-divider flex flex-wrap items-center justify-center gap-2">
-          <Link to={r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"} className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>返回阅读列表</T></Link>
+          <Link to={returnTo ?? (r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading")} className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回阅读列表"}</T></Link>
           <Link to="/junior" className="exam-btn exam-btn-ghost"><T>初中首页</T></Link>
           <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
         </div>

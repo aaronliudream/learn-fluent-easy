@@ -818,7 +818,7 @@ function ReadingStage({
         {dbRows.map((r) => (
           <Link
             key={r.id}
-            to={`/junior/reading/${r.id}`}
+            to={`/junior/reading/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
             className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white"
           >
             <span className="truncate">{r.title}</span>

@@ -78,15 +78,16 @@ function aggregate(catalog: KpCatalogItem[], rows: JuniorGrammarMastery[]) {
     return { kp, state: kpState(row), streak: kpStreak(row) };
   });
   const total = catalog.length;
-  const mastered = perKp.filter((p) => p.state === "Mastered").length;
+  const mastered = perKp.filter((p) => p.state === "Mastered").length; // level≥2
+  const learned = perKp.filter((p) => p.state !== "未学").length; // level≥1(含Mastered=已学会)
   const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
-  return { mastered, total, pct, perKp };
+  return { mastered, learned, total, pct, perKp };
 }
 
 /** 考点层掌握度:已 Mastered 知识点 / 该考点知识点总数。 */
 export async function computePointKpMastery(
   pointId: string,
-): Promise<{ mastered: number; total: number; pct: number; perKp: PerKp[] }> {
+): Promise<{ mastered: number; learned: number; total: number; pct: number; perKp: PerKp[] }> {
   const [catalog, rows] = await Promise.all([loadKpCatalog(pointId), loadKpMastery()]);
   return aggregate(catalog, rows);
 }
@@ -94,13 +95,13 @@ export async function computePointKpMastery(
 /** Unit 层掌握度:该 Unit 所有考点的知识点聚合(本轮暂不接入 UI,口径备用)。 */
 export async function computeUnitKpMastery(
   pointIds: string[],
-): Promise<{ mastered: number; total: number; pct: number }> {
+): Promise<{ mastered: number; learned: number; total: number; pct: number }> {
   const [catalog, rows] = await Promise.all([
     loadKpCatalogForPoints(pointIds),
     loadKpMastery(),
   ]);
-  const { mastered, total, pct } = aggregate(catalog, rows);
-  return { mastered, total, pct };
+  const { mastered, learned, total, pct } = aggregate(catalog, rows);
+  return { mastered, learned, total, pct };
 }
 
 /** 单个知识点元信息(知识点练习页用)。 */

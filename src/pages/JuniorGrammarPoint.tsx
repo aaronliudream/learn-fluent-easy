@@ -506,7 +506,7 @@ export default function JuniorGrammarPoint() {
 
 /** 知识点进度区块:考点掌握度(已Mastered/总) + 每个知识点状态(未学/⊙Learned/✓Mastered)+ 连对X/5。 */
 function KnowledgePointProgress({ pointId }: { pointId: string }) {
-  const [data, setData] = useState<{ mastered: number; total: number; pct: number; perKp: PerKp[] } | null>(null);
+  const [data, setData] = useState<{ mastered: number; learned: number; total: number; pct: number; perKp: PerKp[] } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -534,9 +534,9 @@ function KnowledgePointProgress({ pointId }: { pointId: string }) {
           <T>📌 知识点掌握度</T>
         </h2>
         <div className="text-sm font-bold tabular-nums">
-          <span className="text-indigo-600 dark:text-indigo-300">{data.mastered}/{data.total}</span>
-          <span className="text-[#5C5751] dark:text-muted-foreground"> 个知识点 · </span>
-          <span className="text-indigo-600 dark:text-indigo-300">{data.pct}%</span>
+          <span className="text-amber-600 dark:text-amber-300">已学会 {data.learned}/{data.total}</span>
+          <span className="text-[#5C5751] dark:text-muted-foreground"> · </span>
+          <span className="text-emerald-600 dark:text-emerald-300">已掌握 {data.mastered}/{data.total}</span>
         </div>
       </div>
       <ul className="space-y-1.5">

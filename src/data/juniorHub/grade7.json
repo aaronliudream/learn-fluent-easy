@@ -5361,8 +5361,9 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "序数词 + wh-疑问复习",
+            "grammarTitle": "日期序数 + how much购物",
             "grammarCode": "g7-t10",
+            "grammarCodes": ["g7-t10", "g7-t22"],
             "grammarQuiz": [
               {
                 "q": "My birthday is ___ October 1st.",

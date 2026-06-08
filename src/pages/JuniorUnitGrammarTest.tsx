@@ -91,8 +91,10 @@ export default function JuniorUnitGrammarTest() {
       notifyWrong();
     }
     // 每题归到它真正的 point 写库 → 自动和专区掌握度/错题复习同步
+    // 题带 kp_id 时一并回写知识点层(grammar_kp 行),与专区 kp 练习同源;无 kp_id 则只写 point 层(向后兼容)。
     recordJuniorGrammarAttempt({
       pointId: activeQ.pointId,
+      kpId: activeQ.kp_id ?? undefined,
       questionType: activeQ.question_type || "mcq",
       isCorrect: isOk,
       latencyMs: res.latencyMs,

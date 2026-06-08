@@ -15,10 +15,10 @@ import type { JuniorGrammarMastery } from "@/lib/juniorGrammarFsrs";
 export type UnitPoint = { id: string; code: string; title: string };
 
 /** 合并池里的题:在 GrammarQuestion 基础上带上它真正归属的 point 标签。 */
-export type UnitQuestion = GrammarQuestion & { pointId: string; pointTitle: string };
+export type UnitQuestion = GrammarQuestion & { pointId: string; pointTitle: string; kp_id?: string | null };
 
 const Q_SELECT =
-  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order";
+  "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order,kp_id";
 
 /** Fisher–Yates 洗牌(不改原数组)。 */
 function shuffle<T>(arr: T[]): T[] {
@@ -44,7 +44,7 @@ export async function resolveUnitPoints(codes: string[]): Promise<UnitPoint[]> {
 /** 取单个 point 的 MCQ 题(先精选区 9000-9199,空则回退完整题库),并打上 point 标签。 */
 async function loadPointMcq(point: UnitPoint): Promise<UnitQuestion[]> {
   const tag = (rows: unknown[]) =>
-    (rows as GrammarQuestion[])
+    (rows as (GrammarQuestion & { kp_id?: string | null })[])
       .filter((q) => (q.question_type || "mcq") === "mcq")
       .map((q) => ({ ...q, pointId: point.id, pointTitle: point.title }));
 

@@ -10,6 +10,8 @@ import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
 import { supabase } from "@/integrations/supabase/client";
+import { cn } from "@/lib/utils";
+import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
 
 type Props = {
   unitId: string;
@@ -777,6 +779,7 @@ function cleanStageTitle(t: string): string {
     .replace(/七[上下]/g, "")
     .replace(/Unit\s*\d+/gi, "")
     .replace(/[（(][^)）]*[)）]/g, "")
+    .replace(/阅读/g, "")
     .replace(/\s+/g, "")
     .replace(/^[·\-—、:：]+|[·\-—、:：]+$/g, "")
     .trim();
@@ -799,36 +802,58 @@ function buildDisplayTitles(
   }));
 }
 
+type JrRow = { id: string; title: string; word_count: number | null; difficulty: number | null };
+
 function ReadingStage({
   unit,
   grade,
   onFinish,
   onWrong,
+  markComplete,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
   onWrong: (q: QuizQuestion) => void;
+  markComplete: () => void;
 }) {
-  // 有 DB 内容(已回填 volume/unit 的单元)→ Link 到阅读专区 play(写 mastery_progress);
-  // 无 DB 内容(grade8/9/Starter,volume/unit 为 NULL)→ 回退原内联逻辑,行为不变。
-  const [dbRows, setDbRows] = useState<{ id: string; title: string }[] | null>(null);
+  // 有 DB 内容(已回填 volume/unit 的单元)→ 卡片列表(状态/词数/难度/成绩)+ 做过≥1篇标记本关通过;
+  // 无 DB 内容(grade8/9/Starter)→ 回退原内联逻辑,行为不变。可复用:任何单元有对应 DB 阅读即此样式。
+  const [dbRows, setDbRows] = useState<JrRow[] | null>(null);
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
+  const markedRef = useRef(false);
+
   useEffect(() => {
     let cancelled = false;
-    supabase
-      .from("junior_reading")
-      .select("id,title")
-      .eq("grade", grade)
-      .eq("volume", unit.book)
-      .eq("unit", unit.unitKey)
-      .order("difficulty", { ascending: true })
-      .then(({ data }) => {
-        if (!cancelled) setDbRows((data ?? []) as { id: string; title: string }[]);
-      });
+    (async () => {
+      const [res, m] = await Promise.all([
+        supabase
+          .from("junior_reading")
+          .select("id,title,word_count,difficulty")
+          .eq("grade", grade)
+          .eq("volume", unit.book)
+          .eq("unit", unit.unitKey)
+          .order("difficulty", { ascending: true }),
+        loadMastery("junior_reading"),
+      ]);
+      if (cancelled) return;
+      setDbRows((res.data ?? []) as JrRow[]);
+      setMastery(m);
+    })();
     return () => {
       cancelled = true;
     };
   }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  // 做过≥1篇 → 只标记本关通过(不跳总览、幂等);停留在卡片列表。
+  useEffect(() => {
+    if (!dbRows || dbRows.length === 0) return;
+    const tried = dbRows.filter((r) => !!mastery[r.id]).length;
+    if (tried >= 1 && !markedRef.current) {
+      markedRef.current = true;
+      markComplete();
+    }
+  }, [dbRows, mastery]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (dbRows === null) {
     return (
@@ -836,24 +861,108 @@ function ReadingStage({
     );
   }
 
-  // ① 有 DB 内容:渲染专区 play 的 Link 列表 + 标记本关通过(同 GrammarStage 模式)
+  // ① 有 DB 内容:卡片列表(状态 ✓/▶/○ + 词数 + 难度★ + 最高分 + 操作)
   if (dbRows.length > 0) {
-    const displayRows = buildDisplayTitles(dbRows);
+    const disp = buildDisplayTitles(dbRows);
+    const cards = dbRows.map((r) => {
+      const row = mastery[r.id];
+      const best = row?.best_pct ?? null;
+      const status: "done" | "progress" | "new" =
+        !row ? "new" : best != null && best >= 80 ? "done" : "progress";
+      return {
+        id: r.id,
+        word_count: r.word_count,
+        difficulty: Math.max(1, r.difficulty ?? 1),
+        display: disp.find((d) => d.id === r.id)?.display ?? r.title,
+        best,
+        status,
+      };
+    });
+    const total = cards.length;
+    const tried = cards.filter((c) => c.status !== "new").length;
+    const pct = total ? Math.round((tried / total) * 100) : 0;
+    const rec =
+      cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
+    const enc = encodeURIComponent(window.location.pathname);
+    const diffColor = (d: number) =>
+      d >= 3 ? "text-rose-500" : d === 2 ? "text-amber-500" : "text-emerald-500";
+
     return (
-      <div className="rounded-2xl bg-white p-4 shadow-sm">
-        <p className="mb-3 text-sm text-[#5C5751]">
-          本单元阅读（真题库 {dbRows.length} 篇），点开做完即记为本关通过，成绩计入你的阅读掌握度。
-        </p>
-        {displayRows.map((r) => (
-          <Link
-            key={r.id}
-            to={`/junior/reading/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
-            className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white"
-          >
-            <span className="truncate">{r.display}</span>
-            <span className="ml-2 shrink-0">→</span>
-          </Link>
-        ))}
+      <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">
+        {/* 本关进度条 */}
+        <div className="mb-1 flex items-center justify-between text-xs font-bold text-[#2C2C2A] dark:text-foreground">
+          <span>📖 本关进度</span>
+          <span className="tabular-nums">{tried}/{total} 篇 · {pct}%</span>
+        </div>
+        <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all"
+            style={{ width: `${pct}%` }}
+          />
+        </div>
+        <p className="mb-3 text-xs text-[#5C5751] dark:text-muted-foreground">选一篇开始 · 做过会标记 · 可反复练</p>
+
+        {/* 卡片列表 */}
+        <div className="space-y-2">
+          {cards.map((c) => (
+            <Link
+              key={c.id}
+              to={`/junior/reading/${c.id}?returnTo=${enc}`}
+              className="flex items-center gap-3 rounded-2xl border border-[#EEEAE0] bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:shadow active:scale-[0.99] dark:border-border dark:bg-background/40"
+            >
+              <span
+                className={cn(
+                  "grid size-8 shrink-0 place-items-center rounded-full text-sm font-bold",
+                  c.status === "done"
+                    ? "bg-emerald-500/15 text-emerald-600"
+                    : c.status === "progress"
+                    ? "bg-amber-500/15 text-amber-600"
+                    : "bg-muted text-muted-foreground",
+                )}
+              >
+                {c.status === "done" ? "✓" : c.status === "progress" ? "▶" : "○"}
+              </span>
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-bold text-[#2C2C2A] dark:text-foreground">
+                  {c.display}
+                </div>
+                <div className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
+                  <span>{c.word_count ?? "?"} 词</span>
+                  <span className={diffColor(c.difficulty)}>{"★".repeat(c.difficulty)}</span>
+                  {c.status === "done" && (
+                    <span className="font-bold text-emerald-600">最高 {c.best}%</span>
+                  )}
+                  {c.status === "progress" && (
+                    <span className="font-bold text-amber-600">最高 {c.best}%</span>
+                  )}
+                </div>
+              </div>
+              <span
+                className={cn(
+                  "shrink-0 rounded-full px-3 py-1 text-xs font-bold text-white",
+                  c.status === "done"
+                    ? "bg-emerald-600"
+                    : c.status === "progress"
+                    ? "bg-amber-500"
+                    : "bg-indigo-600",
+                )}
+              >
+                {c.status === "done" ? "复习" : c.status === "progress" ? "继续" : "开始"}
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        {/* 建议下一篇 */}
+        {rec ? (
+          <div className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-300">
+            👉 建议下一篇：{rec.display}
+          </div>
+        ) : (
+          <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
+            🎉 本关全部完成，可随时复习
+          </div>
+        )}
       </div>
     );
   }
@@ -1118,6 +1227,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           <ReadingStage
             unit={unit}
             grade={grade}
+            markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
             onWrong={(q) =>
               addMistake({

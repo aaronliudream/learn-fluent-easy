@@ -221,7 +221,7 @@ export default function JuniorReadingPlay() {
               <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
             </p>
             <Link
-              to={`${returnTo}?done=1`}
+              to={returnTo}
               className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
             >
               <T>返回单元</T> →

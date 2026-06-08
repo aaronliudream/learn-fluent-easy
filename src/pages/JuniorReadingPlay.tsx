@@ -14,7 +14,6 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
-import { ExamStepper } from "@/components/exam/ExamStepper";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
 import {
   DiagnosisTable,
@@ -342,11 +341,6 @@ export default function JuniorReadingPlay() {
             />
           )}
         </ExamContainer>
-        <ExamStepper
-          current={phase}
-          reachable={["test", "diagnosis", "dialogue"]}
-          onJump={(s) => setPhase(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
-        />
       </ExamPaper>
     );
   }
@@ -530,11 +524,6 @@ export default function JuniorReadingPlay() {
           <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
         </div>
       </ExamContainer>
-      <ExamStepper
-        current="test"
-        reachable={submitted ? ["test", "diagnosis", "dialogue"] : ["test"]}
-        onJump={(s) => setPhase(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
-      />
     </ExamPaper>);
 
 }

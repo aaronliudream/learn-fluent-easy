@@ -41,7 +41,8 @@ const HIDE_ON = [
 /^\/auth/,
 /^\/talk/,
 /^\/placement/,
-/^\/primary(\/|$)/];
+/^\/primary(\/|$)/,
+/^\/junior(\/|$)/];
 
 
 export default function GlobalAIAssistant() {

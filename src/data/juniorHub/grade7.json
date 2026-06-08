@@ -2293,6 +2293,7 @@
             ],
             "grammarTitle": "一般现在时(do)+ 名词所有格 's",
             "grammarCode": "g7-t05",
+            "grammarCodes": ["g7-t05", "g7-t23"],
             "grammarQuiz": [
               {
                 "q": "My father ___ to work by bike every day.",

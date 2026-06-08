@@ -780,6 +780,7 @@ function cleanStageTitle(t: string): string {
     .replace(/Unit\s*\d+/gi, "")
     .replace(/[（(][^)）]*[)）]/g, "")
     .replace(/阅读/g, "")
+    .replace(/听力/g, "")
     .replace(/\s+/g, "")
     .replace(/^[·\-—、:：]+|[·\-—、:：]+$/g, "")
     .trim();
@@ -1000,6 +1001,7 @@ function ListeningStage({
   unit,
   grade,
   inlineQuestions,
+  markComplete,
   onFinish,
   onCorrect,
   onWrong,
@@ -1007,29 +1009,53 @@ function ListeningStage({
   unit: UnitDef;
   grade: number;
   inlineQuestions: ListeningQuestion[];
+  markComplete: () => void;
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (q: ListeningQuestion) => void;
 }) {
-  // 有 DB 内容(已回填 volume/unit)→ Link 到听力专区 play(写 junior_listening_attempts)+ 回单元关;
+  // 有 DB 内容(已回填 volume/unit)→ 卡片列表(状态/题数/最高分)+ 做过≥1条标记本关通过(镜像阅读);
   // 无 DB 内容(grade8/9/Starter,volume/unit 为 NULL)→ 回退原内联 ListenMcStage,行为不变。
-  const [dbRows, setDbRows] = useState<{ id: string; title: string }[] | null>(null);
+  const [dbRows, setDbRows] = useState<{ id: string; title: string; qCount: number }[] | null>(null);
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
+  const markedRef = useRef(false);
+
   useEffect(() => {
     let cancelled = false;
-    supabase
-      .from("junior_listening_exercises")
-      .select("id,title")
-      .eq("grade", grade)
-      .eq("volume", unit.book)
-      .eq("unit", unit.unitKey)
-      .order("difficulty", { ascending: true })
-      .then(({ data }) => {
-        if (!cancelled) setDbRows((data ?? []) as { id: string; title: string }[]);
-      });
+    (async () => {
+      const [res, m] = await Promise.all([
+        supabase
+          .from("junior_listening_exercises")
+          .select("id,title,questions")
+          .eq("grade", grade)
+          .eq("volume", unit.book)
+          .eq("unit", unit.unitKey)
+          .order("difficulty", { ascending: true }),
+        loadMastery("junior_listening"),
+      ]);
+      if (cancelled) return;
+      const rows = ((res.data ?? []) as { id: string; title: string; questions: unknown }[]).map((r) => ({
+        id: r.id,
+        title: r.title,
+        qCount: Array.isArray(r.questions) ? r.questions.length : 0,
+      }));
+      setDbRows(rows);
+      setMastery(m);
+    })();
     return () => {
       cancelled = true;
     };
   }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  // 做过≥1条 → 只标记本关通过(不跳总览、幂等);停留卡片列表(同阅读)。
+  useEffect(() => {
+    if (!dbRows || dbRows.length === 0) return;
+    const tried = dbRows.filter((r) => !!mastery[r.id]).length;
+    if (tried >= 1 && !markedRef.current) {
+      markedRef.current = true;
+      markComplete();
+    }
+  }, [dbRows, mastery]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (dbRows === null) {
     return (
@@ -1037,24 +1063,104 @@ function ListeningStage({
     );
   }
 
-  // ① 有 DB 内容:渲染专区 play 的 Link 列表(带 returnTo 回单元关)+ 标记本关通过
+  // ① 有 DB 内容:卡片列表(状态 ✓/▶/○ + 题数 + 最高分 + 操作);难度★省略(听力全★1,无梯度)
   if (dbRows.length > 0) {
-    const displayRows = buildDisplayTitles(dbRows);
+    const disp = buildDisplayTitles(dbRows);
+    const cards = dbRows.map((r) => {
+      const row = mastery[r.id];
+      const best = row?.best_pct ?? null;
+      const status: "done" | "progress" | "new" =
+        !row ? "new" : best != null && best >= 80 ? "done" : "progress";
+      return {
+        id: r.id,
+        qCount: r.qCount,
+        display: disp.find((d) => d.id === r.id)?.display ?? r.title,
+        best,
+        status,
+      };
+    });
+    const total = cards.length;
+    const tried = cards.filter((c) => c.status !== "new").length;
+    const pct = total ? Math.round((tried / total) * 100) : 0;
+    const rec =
+      cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
+    const enc = encodeURIComponent(window.location.pathname);
+
     return (
-      <div className="rounded-2xl bg-white p-4 shadow-sm">
-        <p className="mb-3 text-sm text-[#5C5751]">
-          本单元听力（真题库 {dbRows.length} 条），点开做完即记为本关通过，成绩计入你的听力掌握度。
-        </p>
-        {displayRows.map((r) => (
-          <Link
-            key={r.id}
-            to={`/junior/listening/${r.id}?returnTo=${encodeURIComponent(window.location.pathname)}`}
-            className="mb-2 flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 px-4 py-3 text-sm font-semibold text-white"
-          >
-            <span className="truncate">{r.display}</span>
-            <span className="ml-2 shrink-0">→</span>
-          </Link>
-        ))}
+      <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">
+        {/* 本关进度条 */}
+        <div className="mb-1 flex items-center justify-between text-xs font-bold text-[#2C2C2A] dark:text-foreground">
+          <span>🎧 本关进度</span>
+          <span className="tabular-nums">{tried}/{total} 条 · {pct}%</span>
+        </div>
+        <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-blue-500 transition-all"
+            style={{ width: `${pct}%` }}
+          />
+        </div>
+        <p className="mb-3 text-xs text-[#5C5751] dark:text-muted-foreground">选一条开始 · 做过会标记 · 可反复练</p>
+
+        {/* 卡片列表 */}
+        <div className="space-y-2">
+          {cards.map((c) => (
+            <Link
+              key={c.id}
+              to={`/junior/listening/${c.id}?returnTo=${enc}`}
+              className="flex items-center gap-3 rounded-2xl border border-[#EEEAE0] bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:shadow active:scale-[0.99] dark:border-border dark:bg-background/40"
+            >
+              <span
+                className={cn(
+                  "grid size-8 shrink-0 place-items-center rounded-full text-sm font-bold",
+                  c.status === "done"
+                    ? "bg-emerald-500/15 text-emerald-600"
+                    : c.status === "progress"
+                    ? "bg-amber-500/15 text-amber-600"
+                    : "bg-muted text-muted-foreground",
+                )}
+              >
+                {c.status === "done" ? "✓" : c.status === "progress" ? "▶" : "○"}
+              </span>
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-bold text-[#2C2C2A] dark:text-foreground">
+                  {c.display}
+                </div>
+                <div className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
+                  <span>{c.qCount} 题</span>
+                  {c.status === "done" && (
+                    <span className="font-bold text-emerald-600">最高 {c.best}%</span>
+                  )}
+                  {c.status === "progress" && (
+                    <span className="font-bold text-amber-600">最高 {c.best}%</span>
+                  )}
+                </div>
+              </div>
+              <span
+                className={cn(
+                  "shrink-0 rounded-full px-3 py-1 text-xs font-bold text-white",
+                  c.status === "done"
+                    ? "bg-emerald-600"
+                    : c.status === "progress"
+                    ? "bg-amber-500"
+                    : "bg-indigo-600",
+                )}
+              >
+                {c.status === "done" ? "复习" : c.status === "progress" ? "继续" : "开始"}
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        {/* 建议下一条 */}
+        {rec ? (
+          <div className="mt-3 rounded-xl bg-sky-50 px-3 py-2 text-xs font-bold text-sky-700 dark:bg-sky-950/30 dark:text-sky-300">
+            👉 建议下一条：{rec.display}
+          </div>
+        ) : (
+          <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
+            🎉 本关全部完成，可随时复习
+          </div>
+        )}
       </div>
     );
   }
@@ -1248,6 +1354,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             unit={unit}
             grade={grade}
             inlineQuestions={listenSentQuestions as ListeningQuestion[]}
+            markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
             onCorrect={addStar}
             onWrong={(q) =>

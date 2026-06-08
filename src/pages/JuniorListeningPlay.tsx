@@ -11,6 +11,7 @@ import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { recordMastery } from "@/lib/masteryProgress";
 
 type Q = {type?: "choice" | "fill" | "judge";q: string;options: string[];answer: string;explanation?: string;};
 type E = {id: string;title: string;transcript: string;translation_cn: string | null;questions: Q[];key_vocab: {word: string;cn: string;}[];audio_url: string | null;kind?: string | null;grade?: number | null;};
@@ -64,6 +65,20 @@ export default function JuniorListeningPlay() {
     } :
     null
   );
+
+  // 全部答完 → 写一行 per-exercise 掌握度(mastery_progress, module="junior_listening")
+  // 供单元听力关卡片显示状态/最高分(镜像阅读)。once-guard 防重复写;returnTo 与专区直接进入都写。
+  const masteryWrittenRef = useRef(false);
+  useEffect(() => {
+    if (!e || !id || !allAnswered || masteryWrittenRef.current) return;
+    masteryWrittenRef.current = true;
+    const correct = e.questions.filter((q, i) => {
+      const v = picks[i] ?? fills[i];
+      return v != null && checkAnswer(q, v as string);
+    }).length;
+    const pct = Math.round((correct / e.questions.length) * 100);
+    recordMastery({ module: "junior_listening", itemId: id, pct }).catch(() => {});
+  }, [e, id, allAnswered]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!id) return;
@@ -136,7 +151,7 @@ export default function JuniorListeningPlay() {
             <T>完成！答对</T> {lisCorrect} / {e.questions.length} <T>题</T>
           </p>
           <Link
-            to={`${returnTo}?done=1`}
+            to={returnTo}
             className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 py-3 text-sm font-semibold text-white"
           >
             <T>返回单元</T> →

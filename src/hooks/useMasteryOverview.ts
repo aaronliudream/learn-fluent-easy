@@ -298,6 +298,20 @@ export function useMasteryOverview(stage: Stage): StageOverview {
           else if (lvl >= 1) grammar.learned += 1;
           if ((r as any).next_review_at && new Date((r as any).next_review_at).getTime() <= Date.now()) grammar.due += 1;
         }
+      } else if (stage === "junior") {
+        // junior 语法掌握度写在 junior_user_mastery(item_type='grammar_point');只数考点层,
+        // 不数 'grammar_kp' 行(否则与 point 重复计数)。due 用 due_at(非 gaokao 的 next_review_at)。
+        const { data: jm } = await supabase
+          .from("junior_user_mastery")
+          .select("mastery_level,due_at")
+          .eq("user_id", user.id)
+          .eq("item_type", "grammar_point");
+        for (const r of jm ?? []) {
+          const lvl = (r as any).mastery_level ?? 0;
+          if (lvl >= 3) grammar.mastered += 1;
+          else if (lvl >= 1) grammar.learned += 1;
+          if ((r as any).due_at && new Date((r as any).due_at).getTime() <= Date.now()) grammar.due += 1;
+        }
       }
       grammar.percent = grammar.total ? Math.round((grammar.mastered / grammar.total) * 100) : 0;
 

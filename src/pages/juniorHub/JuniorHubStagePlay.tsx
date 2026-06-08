@@ -1324,8 +1324,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "grammar":
-        // 数据源 unit.grammarQuiz;空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
-        if (unit.grammarQuiz.length === 0)
+        // 数据源 unit.grammarQuiz(内联水题);空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
+        // 例外:有 grammarCodes 的单元走 JuniorUnitGrammarTest 从 DB 按 point 抽题,不依赖 grammarQuiz,放行进 GrammarStage。
+        if (unit.grammarQuiz.length === 0 && !(unit.grammarCodes && unit.grammarCodes.length > 0))
           return <EmptyStageNotice onContinue={handleFinish} />;
         return <GrammarStage unit={unit} grade={grade} onFinish={handleFinish} />;
       case "reading":

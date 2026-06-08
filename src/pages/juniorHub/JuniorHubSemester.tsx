@@ -1,6 +1,7 @@
 ﻿import { useNavigate, useParams } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { findSemester, getGradeCourse } from "@/lib/juniorHub/courseData";
+import { unitLabel } from "./JuniorHubUnit";
 import { getSemesterProgress, getUnitProgress } from "@/lib/juniorHub/progress";
 import { savePersist } from "@/lib/juniorHub/storage";
 import JuniorFinalChallengeEntryCard from "@/components/juniorHub/finalChallenge/JuniorFinalChallengeEntryCard";
@@ -74,7 +75,7 @@ export default function JuniorHubSemester() {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{unit.emoji}</span>
                 <div className="min-w-0 flex-1 text-left">
-                  <div className="text-[11px] font-bold uppercase text-[#888780]">Unit {unit.num}</div>
+                  <div className="text-[11px] font-bold uppercase text-[#888780]">{unitLabel(unit)}</div>
                   <div className="font-bold">
                     {unit.title} · {unit.cn}
                   </div>

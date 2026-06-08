@@ -4,6 +4,16 @@ import { findUnit } from "@/lib/juniorHub/courseData";
 import { getUnitProgress } from "@/lib/juniorHub/progress";
 import { getUnitState } from "@/lib/juniorHub/storage";
 
+/**
+ * 单元显示名(纯展示层):按课本真实结构,从 unitKey 推导单元号——
+ * SU1→"Starter Unit 1"、U1→"Unit 1"。不用连续的 num(否则 Starter 占位会让真 Unit1 显示成 Unit4)。
+ * 仅用于显示;unitKey/book/DB unit 值不变(数据键一致绑定)。
+ */
+export function unitLabel(unit: { unitKey: string }): string {
+  const n = (unit.unitKey || "").match(/(\d+)/)?.[1] ?? "";
+  return /^su/i.test(unit.unitKey || "") ? `Starter Unit ${n}` : `Unit ${n}`;
+}
+
 export default function JuniorHubUnit() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
   const { grade, state } = useJuniorHub();
@@ -24,12 +34,12 @@ export default function JuniorHubUnit() {
           ←
         </button>
         <div className="text-lg font-bold">
-          Unit {unit.num} {unit.title}
+          {unitLabel(unit)} {unit.title}
         </div>
       </div>
       <div className="bg-gradient-to-br from-[#FF6B35] to-[#FFB627] px-5 py-5 text-white">
         <div className="text-xs opacity-90">
-          Unit {unit.num} · {unit.cn}
+          {unitLabel(unit)} · {unit.cn}
         </div>
         <div className="text-2xl font-bold">
           {unit.emoji} {unit.title}

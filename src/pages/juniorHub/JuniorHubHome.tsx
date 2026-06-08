@@ -8,6 +8,7 @@ import {
   getUnitProgress,
 } from "@/lib/juniorHub/progress";
 import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/juniorHub/courseData";
+import { unitLabel } from "./JuniorHubUnit";
 import { getUnitState } from "@/lib/juniorHub/storage";
 import { AITestCard } from "@/components/juniorHub/AITestCard";
 
@@ -80,7 +81,7 @@ export default function JuniorHubHome() {
               className="w-full rounded-2xl bg-gradient-to-br from-[#378ADD] to-[#5DAEEE] p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5"
             >
               <div className="text-xs opacity-90">
-                {currentUnit.title} · 第 {nextStageIdx + 1} 关
+                {unitLabel(currentUnit)} {currentUnit.title} · 第 {nextStageIdx + 1} 关
               </div>
               <div className="text-lg font-semibold">
                 {nextStage.icon} {nextStage.title}

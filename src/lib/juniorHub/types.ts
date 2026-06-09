@@ -79,6 +79,8 @@ export type UnitDef = {
   grammarCode: string | null;
   /** 多语法点「综合测试」用;有此字段(>=1)则该单元语法关走合并抽题测试。 */
   grammarCodes?: string[];
+  /** 单知识点专项:配 kp 的 code(如 g7-t16-adj)则语法关只练该 kp(优先于 grammarCode/grammarCodes)。 */
+  grammarKpCode?: string;
   grammarQuiz: QuizQuestion[];
   reading: ReadingBlock | null;
   writing: WritingBlock | null;

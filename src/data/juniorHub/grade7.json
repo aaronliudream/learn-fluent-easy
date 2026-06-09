@@ -5983,6 +5983,7 @@
             ],
             "grammarTitle": "描述动物 + why…because + 形容词",
             "grammarCode": "g7-t16",
+            "grammarKpCode": "g7-t16-adj",
             "grammarQuiz": [
               {
                 "q": "— Why do you like pandas? — ___ they are cute.",

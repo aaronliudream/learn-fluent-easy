@@ -9,6 +9,7 @@ import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
+import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
@@ -710,6 +711,31 @@ function GrammarStage({
 }) {
   const pointId = useGrammarPointId(unit.grammarCode);
   const masteryPath = pointId ? `/junior/grammar/${pointId}/mastery` : null;
+  const kpPracticeId = useKnowledgePointId(unit.grammarKpCode);
+
+  // 单知识点专项：配了 grammarKpCode 的单元只练该 kp(优先于综合测/单点闯关)。
+  if (unit.grammarKpCode && kpPracticeId) {
+    const returnTo = encodeURIComponent(window.location.pathname);
+    const kpPath = `/junior/grammar/kp/${kpPracticeId}?returnTo=${returnTo}`;
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <p className="mb-3 text-sm text-[#5C5751]">本单元语法专项练习：连续答对即点亮掌握度，成绩计入你的语法掌握。</p>
+        <Link
+          to={kpPath}
+          className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
+        >
+          进入专项练习 →
+        </Link>
+        <button
+          type="button"
+          onClick={onFinish}
+          className="w-full rounded-xl border border-indigo-200 py-2 text-sm text-indigo-600"
+        >
+          已完成，标记本关通过
+        </button>
+      </div>
+    );
+  }
 
   // 多语法点单元：走「综合测试」(合并抽题 + 按点算 Unit 掌握度)。
   if (unit.grammarCodes && unit.grammarCodes.length > 0) {
@@ -1326,7 +1352,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
       case "grammar":
         // 数据源 unit.grammarQuiz(内联水题);空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
         // 例外:有 grammarCodes 的单元走 JuniorUnitGrammarTest 从 DB 按 point 抽题,不依赖 grammarQuiz,放行进 GrammarStage。
-        if (unit.grammarQuiz.length === 0 && !(unit.grammarCodes && unit.grammarCodes.length > 0))
+        if (unit.grammarQuiz.length === 0 && !(unit.grammarCodes && unit.grammarCodes.length > 0) && !unit.grammarKpCode)
           return <EmptyStageNotice onContinue={handleFinish} />;
         return <GrammarStage unit={unit} grade={grade} onFinish={handleFinish} />;
       case "reading":

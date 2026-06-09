@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,6 +45,9 @@ function shuffle<T>(arr: T[]): T[] {
 export default function JuniorKpPractice() {
   const { kpId } = useParams<{ kpId: string }>();
   const nav = useNavigate();
+  // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>;有则返回出口回单元关(而非语法专区)。
+  const [searchParams] = useSearchParams();
+  const returnTo = searchParams.get("returnTo");
 
   const [kp, setKp] = useState<KpCatalogItem | null>(null);
   const [pool, setPool] = useState<GrammarQuestion[]>([]);
@@ -144,7 +147,7 @@ export default function JuniorKpPractice() {
     });
   };
 
-  const backTo = kp ? `/junior/grammar/${kp.point_id}` : "/junior/grammar";
+  const backTo = returnTo || (kp ? `/junior/grammar/${kp.point_id}` : "/junior/grammar");
   const filled = Math.min(streak, KP_LEARNED_STREAK);
 
   if (loading) {
@@ -163,8 +166,8 @@ export default function JuniorKpPractice() {
       <main className="playful-shell mx-auto grid min-h-screen max-w-3xl place-items-center px-5 py-10">
         <div className="playful-card w-full max-w-md px-6 py-8 text-center">
           <p className="text-lg font-extrabold text-foreground"><T>知识点不存在</T></p>
-          <BackLink to="/junior/grammar" className="playful-btn playful-btn-cyan mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-sky-400 px-6 py-2.5 text-sm text-white">
-            <ArrowLeft className="size-4" /> <T>返回考点列表</T>
+          <BackLink to={returnTo || "/junior/grammar"} className="playful-btn playful-btn-cyan mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-sky-400 px-6 py-2.5 text-sm text-white">
+            <ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回考点列表"}</T>
           </BackLink>
         </div>
       </main>

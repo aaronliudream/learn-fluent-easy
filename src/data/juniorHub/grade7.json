@@ -7259,7 +7259,7 @@
               }
             ],
             "grammarTitle": "频度副词 + How often",
-            "grammarCode": "g7-t16",
+            "grammarCodes": ["g7-t24"],
             "grammarQuiz": [
               {
                 "q": "— How often do you exercise? — ___ a week, on Saturday and Sunday.",

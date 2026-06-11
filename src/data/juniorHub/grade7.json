@@ -6628,7 +6628,7 @@
               }
             ],
             "grammarTitle": "祈使句 + have to / must / can't",
-            "grammarCode": "g7-t12",
+            "grammarCodes": ["g7-t12", "g7-t25"],
             "grammarQuiz": [
               {
                 "q": "At school, you ___ wear a uniform every day.",

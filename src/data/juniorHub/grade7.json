@@ -5957,6 +5957,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -6603,6 +6611,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -7231,6 +7247,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -7925,6 +7949,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -8538,6 +8570,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -9174,6 +9214,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -10439,6 +10487,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {

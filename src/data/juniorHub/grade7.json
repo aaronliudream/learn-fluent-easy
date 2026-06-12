@@ -1734,72 +1734,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "My New Friend\n\nMy name is Alice. I'm twelve years old. I'm from China, but now I live in Beijing with my family. I am a student in Class 3, Grade 7.\n\nI have a new friend. His name is Eric. He is from the U.S.A. He is in Class 3, too. Eric is a nice boy. He likes China very much. He can speak a little Chinese, and he often helps me with my English.\n\nEvery morning, Eric goes to school by bike. He always wears a blue jacket and black pants. He likes playing basketball after school. His favorite food is dumplings. On weekends, he often plays computer games or reads books at home.\n\nI'm happy to have a good friend like him.",
-              "passageCn": "阅读理解·My New Friend(我的新朋友):Alice 来自中国,现住北京;她的新朋友 Eric 来自美国,喜欢中国、会说一点中文、常帮她学英语;Eric 骑车上学、爱打篮球、最爱饺子、周末玩电脑或看书。",
-              "questions": [
-                {
-                  "q": "Where is Alice from?",
-                  "opts": [
-                    "England",
-                    "China",
-                    "The U.S.A.",
-                    "Canada"
-                  ],
-                  "answer": 1,
-                  "point": "细节理解 (I'm from China)",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Where does Alice live now?",
-                  "opts": [
-                    "In London",
-                    "In New York",
-                    "In Beijing",
-                    "In Shanghai"
-                  ],
-                  "answer": 2,
-                  "point": "细节理解 (now I live in Beijing)",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Eric do after school?",
-                  "opts": [
-                    "He plays football.",
-                    "He plays basketball.",
-                    "He reads books at school.",
-                    "He helps Alice with Chinese."
-                  ],
-                  "answer": 1,
-                  "point": "细节理解 (playing basketball after school)",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What color is Eric's jacket?",
-                  "opts": [
-                    "Black",
-                    "White",
-                    "Blue",
-                    "Green"
-                  ],
-                  "answer": 2,
-                  "point": "细节理解 (a blue jacket)",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Eric often do on weekends?",
-                  "opts": [
-                    "He goes swimming.",
-                    "He plays basketball.",
-                    "He plays computer games or reads books.",
-                    "He goes to the park."
-                  ],
-                  "answer": 2,
-                  "point": "细节理解 (weekends: plays computer games or reads books)",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "Introduce a New Friend",
               "prompt": "Introduce a new friend in 5+ sentences. Use be-verbs and subject pronouns (he/she). Include the name, where the friend is from, age, class and grade.",
@@ -2384,72 +2319,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "My Family\n\nMy name is Mike. I am twelve. Here are two photos. In the first photo, you can see a man and a woman. They are my parents. My father is forty. He is an English teacher. My mother is thirty-eight. She doesn't work. She stays at home. In the second photo, there are three children. The boy is me. The two girls are my sisters, Mary and Jenny. Mary is fourteen. Jenny is eight. We are students. I love my sisters and parents.",
-              "passageCn": "我的家庭\n\n我叫 Mike，十二岁。这里有两张照片。第一张里有一位男士和一位女士，他们是我的父母。爸爸 40 岁，是英语老师；妈妈 38 岁，不工作，待在家里。第二张里有三个孩子：男孩是我，两个女孩是我的姐妹 Mary 和 Jenny。Mary 14 岁，Jenny 8 岁，我们都是学生。我爱我的姐妹和父母。",
-              "questions": [
-                {
-                  "q": "How old is Mike's father?",
-                  "opts": [
-                    "12",
-                    "14",
-                    "38",
-                    "40"
-                  ],
-                  "answer": 3,
-                  "point": "细节·forty",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Mike's mother do?",
-                  "opts": [
-                    "A teacher.",
-                    "A doctor.",
-                    "She stays at home.",
-                    "A nurse."
-                  ],
-                  "answer": 2,
-                  "point": "细节·stays at home",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How many people are there in Mike's family?",
-                  "opts": [
-                    "Three",
-                    "Four",
-                    "Five",
-                    "Six"
-                  ],
-                  "answer": 2,
-                  "point": "细节·parents+Mike+2 sisters=5",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Mary is Mike's ___.",
-                  "opts": [
-                    "brother",
-                    "sister",
-                    "mother",
-                    "cousin"
-                  ],
-                  "answer": 1,
-                  "point": "细节·sister",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Which of the following is TRUE?",
-                  "opts": [
-                    "Mike has two brothers.",
-                    "Mike's father is a Chinese teacher.",
-                    "Jenny is 8 years old.",
-                    "There are 3 photos."
-                  ],
-                  "answer": 2,
-                  "point": "主旨判断·Jenny is 8",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Family",
               "prompt": "Introduce your family. Use the present tense and 's possessive (e.g. my father's).",
@@ -3056,72 +2926,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "My New School\n\nMy name is Amy. I am an exchange (交换的) student from the UK. This is my first week at Sunshine Middle School. Let me tell you about my new school campus (校园)! The school is quite large. In the middle of the school is a beautiful garden. There are many trees, flowers, and comfortable benches where we can sit and talk. In front of the garden is the classroom building. My classroom is on the first floor, which is very convenient (方便的). Behind the garden is the huge sports field. We play football there after 4:30 p.m. On the left side of the campus, there is a dining hall. The food here is different from English food, but it tastes very good! On the right side, there is a modern building with a library on the first floor and a computer room on the second floor. I love my new school!",
-              "passageCn": "我的新学校\n\n我叫 Amy，是来自英国的交换生(exchange student)，这是我在阳光中学的第一周。校园很大：正中是一个漂亮的花园，有树、花和长椅。花园前面是教学楼，我的教室在一楼，很方便。花园后面是大操场，我们 4:30 之后在那里踢球。校园左边是餐厅，饭菜和英国的不一样但很好吃。右边是一栋现代建筑，一楼是图书馆、二楼是电脑室。我爱我的新学校！",
-              "questions": [
-                {
-                  "q": "Where is the beautiful garden?",
-                  "opts": [
-                    "Behind the sports field.",
-                    "In front of the dining hall.",
-                    "In the middle of the school.",
-                    "On the second floor."
-                  ],
-                  "answer": 2,
-                  "point": "细节·in the middle",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does the word \"benches\" mean in Chinese?",
-                  "opts": [
-                    "黑板",
-                    "长椅",
-                    "窗户",
-                    "讲台"
-                  ],
-                  "answer": 1,
-                  "point": "词义猜测·benches",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Amy's classroom is on the ___.",
-                  "opts": [
-                    "first floor",
-                    "second floor",
-                    "third floor",
-                    "fourth floor"
-                  ],
-                  "answer": 0,
-                  "point": "细节·first floor",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Where is the computer room?",
-                  "opts": [
-                    "On the first floor of the modern building.",
-                    "On the second floor of the modern building.",
-                    "Next to the dining hall.",
-                    "Behind the classroom building."
-                  ],
-                  "answer": 1,
-                  "point": "细节·second floor",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Which of the following is TRUE?",
-                  "opts": [
-                    "Amy doesn't like the school food.",
-                    "Amy plays football in the morning.",
-                    "The library is on the first floor.",
-                    "The school is very small."
-                  ],
-                  "answer": 2,
-                  "point": "主旨判断·library first floor",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My School",
               "prompt": "Describe your school. Use 'There is/are' and place prepositions.",
@@ -3676,48 +3481,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "My Favourite Subject\n\nJack: My favourite subject is P.E. I think it is exciting. I play basketball with my classmates every afternoon. I want to be a sports star in the future.\nLinda: I like English best. Our English teacher, Miss Miller, is from the UK. She helps us a lot. I think learning English is useful for travelling.\nPeter: Science is my favourite. I have it on Tuesday and Thursday. It is difficult but very cool. I want to build robots one day.",
-              "passageCn": "我最喜欢的科目\n\nJack：我最喜欢体育，觉得它很刺激。我每天下午和同学打篮球，将来想成为体育明星。\nLinda：我最喜欢英语。我们的英语老师 Miss Miller 来自英国，帮了我们很多。我觉得学英语对旅行很有用。\nPeter：我最喜欢科学，周二和周四有这门课。它很难但很酷，我将来想造机器人。",
-              "questions": [
-                {
-                  "q": "Why does Jack like P.E.?",
-                  "opts": [
-                    "It is useful.",
-                    "It is exciting.",
-                    "It is easy.",
-                    "It is relaxing."
-                  ],
-                  "answer": 1,
-                  "point": "细节·exciting",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Where is Linda's English teacher from?",
-                  "opts": [
-                    "China",
-                    "America",
-                    "The UK",
-                    "Canada"
-                  ],
-                  "answer": 2,
-                  "point": "细节·from the UK",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Which subject does Peter think is difficult but cool?",
-                  "opts": [
-                    "Math",
-                    "Art",
-                    "History",
-                    "Science"
-                  ],
-                  "answer": 3,
-                  "point": "细节·Science",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Favourite Subject",
               "prompt": "Talk about your favourite subject. Use and / but / because.",
@@ -4279,72 +4043,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "Welcome to Our School Clubs!\n\nArt Club — Activity: Painting, drawing, and making crafts. Time: Tuesday 3:30 p.m. - 4:30 p.m. Place: Art Room 101.\nChess Club — Activity: Learn chess strategies and play matches. Time: Wednesday 4:00 p.m. - 5:00 p.m. Place: Room 204.\nNature Club — Activity: Plant flowers and explore the school garden. Time: Friday 3:30 p.m. - 5:00 p.m. Place: School Garden.",
-              "passageCn": "欢迎加入我们的校园社团！\n\n美术社——活动：绘画、画画、做手工。时间：周二 3:30–4:30。地点：美术室 101。\n象棋社——活动：学习棋谱、对弈。时间：周三 4:00–5:00。地点：204 室。\n自然社——活动：种花、探索校园花园。时间：周五 3:30–5:00。地点：校园花园。",
-              "questions": [
-                {
-                  "q": "Which club meets on Wednesdays?",
-                  "opts": [
-                    "Art Club",
-                    "Chess Club",
-                    "Nature Club",
-                    "Science Club"
-                  ],
-                  "answer": 1,
-                  "point": "细节·Chess Club",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How long does the Nature Club meet every Friday?",
-                  "opts": [
-                    "1 hour",
-                    "1.5 hours",
-                    "2 hours",
-                    "2.5 hours"
-                  ],
-                  "answer": 1,
-                  "point": "计算·3:30–5:00=1.5h",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Where does the Art Club meet?",
-                  "opts": [
-                    "In Room 101",
-                    "In Room 204",
-                    "In the garden",
-                    "In the library"
-                  ],
-                  "answer": 0,
-                  "point": "细节·Art Room 101",
-                  "dim": "reading"
-                },
-                {
-                  "q": "If Tony likes plants and trees, he should join the ___.",
-                  "opts": [
-                    "Art Club",
-                    "Chess Club",
-                    "Nature Club",
-                    "Music Club"
-                  ],
-                  "answer": 2,
-                  "point": "推断·Nature Club",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Which statement is TRUE according to the poster?",
-                  "opts": [
-                    "The Chess Club meets in the garden.",
-                    "The Art Club ends at 5:00 p.m.",
-                    "All three clubs start at the same time.",
-                    "You can make crafts in the Art Club."
-                  ],
-                  "answer": 3,
-                  "point": "判断·make crafts in Art Club",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "A Club I Want to Join",
               "prompt": "Talk about a club you want to join. Use the modal verb 'can'.",
@@ -4842,45 +4541,7 @@
             "grammarCode": "",
             "grammarCodes": ["g7-t21"],
             "grammarQuiz": [],
-            "reading": {
-              "passage": "School Life in Seoul\n\nHello, I am Min-jun from Seoul, South Korea. School life here is very busy. I go to school by subway at 7:40 AM. We have four classes in the morning and three classes in the afternoon. My favourite subject is PE because I love playing sports with my classmates. School finishes at 4:30 PM, but my day does not end there. I go to a special evening school called a hagwon (课外补习班) to study English and maths until 8:00 PM. I finally get home around 8:30 PM and eat dinner with my parents.",
-              "passageCn": "首尔的校园生活\n\n我叫 Min-jun，来自韩国首尔。这里的校园生活很忙。我早上 7:40 坐地铁上学，上午四节课、下午三节课。我最喜欢体育，因为爱和同学一起运动。学校 4:30 放学，但我的一天还没结束——我还要去一所叫 hagwon(课外补习班)的晚间学校学英语和数学，到晚上 8:00。大约 8:30 到家，和父母一起吃晚饭。",
-              "questions": [
-                {
-                  "q": "How does Min-jun go to school?",
-                  "opts": [
-                    "By bus.",
-                    "By subway.",
-                    "On foot."
-                  ],
-                  "answer": 1,
-                  "point": "细节·by subway",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How many classes does Min-jun have at school in total each day?",
-                  "opts": [
-                    "Four classes.",
-                    "Three classes.",
-                    "Seven classes."
-                  ],
-                  "answer": 2,
-                  "point": "计算·4+3=7",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Min-jun do until 8:00 PM?",
-                  "opts": [
-                    "He plays sports in PE class.",
-                    "He studies at an evening school.",
-                    "He eats dinner with his parents."
-                  ],
-                  "answer": 1,
-                  "point": "细节·hagwon",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Day",
               "prompt": "Describe your daily routine. Use times (at 7 o'clock) and present tense.",
@@ -5455,72 +5116,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "My Birthday\n\nHello! My name is David. Today is June 1st. It is Children's Day, and it is also my 13th birthday. My parents are giving me a big party tonight. Many of my friends are coming. My friend Tom gives me a book about basketball. My friend Lucy gives me a blue pen. My mother makes a big strawberry cake for me. There are thirteen candles on it. My father gives me a pair of cool running shoes. I am very happy today.",
-              "passageCn": "我的生日\n\n你好！我叫 David。今天是 6 月 1 日，是儿童节，也是我的 13 岁生日。今晚父母为我办一个大派对，很多朋友会来。朋友 Tom 送我一本关于篮球的书，Lucy 送我一支蓝色钢笔。妈妈给我做了一个大草莓蛋糕，上面有 13 根蜡烛。爸爸送我一双很酷的跑鞋。今天我非常开心。",
-              "questions": [
-                {
-                  "q": "David's birthday is on ___.",
-                  "opts": [
-                    "Children's Day",
-                    "Teachers' Day",
-                    "New Year's Day",
-                    "Christmas Day"
-                  ],
-                  "answer": 0,
-                  "point": "细节·Children's Day",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How old is David today?",
-                  "opts": [
-                    "11",
-                    "12",
-                    "13",
-                    "14"
-                  ],
-                  "answer": 2,
-                  "point": "细节·13th birthday",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Tom give David?",
-                  "opts": [
-                    "A blue pen",
-                    "A book",
-                    "A cake",
-                    "Running shoes"
-                  ],
-                  "answer": 1,
-                  "point": "细节·a book",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What kind of cake does David's mother make?",
-                  "opts": [
-                    "Chocolate cake",
-                    "Banana cake",
-                    "Apple cake",
-                    "Strawberry cake"
-                  ],
-                  "answer": 3,
-                  "point": "细节·strawberry cake",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How many candles are there on the cake?",
-                  "opts": [
-                    "1",
-                    "3",
-                    "12",
-                    "13"
-                  ],
-                  "answer": 3,
-                  "point": "细节·thirteen candles",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Birthday",
               "prompt": "Talk about your birthday. Use ordinal dates (e.g. the 12th of May).",
@@ -6082,72 +5678,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "What Am I?\n\nHello! I am a big animal from Africa. I am grey and I have very big ears. My nose is very long, and we call it a trunk. I like to eat leaves and grass. I am very clever and friendly. I live in a big family with my mother and sisters. Many people like me because I can help them carry heavy things. However, some people hurt us for our beautiful tusks. I hope everyone can protect us. What am I? I am an elephant!",
-              "passageCn": "我是什么？\n\n你好！我是一种来自非洲的大型动物。我是灰色的，有一双很大的耳朵。我的鼻子很长，我们叫它\"象鼻\"。我喜欢吃树叶和草。我很聪明、很friendly。我和妈妈、姐妹们住在一个大家庭里。很多人喜欢我，因为我能帮他们搬运重物。可是，有些人为了我们漂亮的象牙而伤害我们。我希望大家都能保护我们。我是什么？我是大象！",
-              "questions": [
-                {
-                  "q": "What colour is the elephant?",
-                  "opts": [
-                    "Black",
-                    "White",
-                    "Grey",
-                    "Brown"
-                  ],
-                  "answer": 2,
-                  "point": "细节·I am grey",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does the elephant like to eat?",
-                  "opts": [
-                    "Meat and fish",
-                    "Leaves and grass",
-                    "Fruits and milk",
-                    "Bread and rice"
-                  ],
-                  "answer": 1,
-                  "point": "细节·leaves and grass",
-                  "dim": "reading"
-                },
-                {
-                  "q": "The word \"trunk\" in the passage means ___.",
-                  "opts": [
-                    "象牙",
-                    "象鼻",
-                    "尾巴",
-                    "身体"
-                  ],
-                  "answer": 1,
-                  "point": "词义猜测·My nose is very long",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Why do many people like elephants?",
-                  "opts": [
-                    "Because they are dangerous",
-                    "Because they can carry heavy things",
-                    "Because they live in Africa",
-                    "Because they have small ears"
-                  ],
-                  "answer": 1,
-                  "point": "细节·carry heavy things",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Why does the writer write the last sentence?",
-                  "opts": [
-                    "To ask people to buy tusks",
-                    "To show how big elephants are",
-                    "To tell people to protect elephants",
-                    "To describe the elephant's family"
-                  ],
-                  "answer": 2,
-                  "point": "主旨意图·protect us",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Favourite Animal",
               "prompt": "Write about your favourite animal: what it looks like and why you like it. Use 'because' and adjectives.",
@@ -6735,72 +6266,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "School Rules\n\nEvery school has rules. At Green Middle School, students must wear a school uniform every day, and they have to arrive before eight o'clock. In class, students can't use mobile phones, and they must listen to the teacher. They can't eat or run in the hallways. Students should keep the classroom clean and never litter. They must be polite and respect their teachers and classmates. Good rules help everyone study well and stay safe.",
-              "passageCn": "每所学校都有规则。在格林中学，学生每天必须穿校服，而且要在八点前到校。课上学生不能用手机，必须听老师讲。不能在走廊里吃东西或奔跑。学生应保持教室整洁、绝不乱扔垃圾。他们必须有礼貌，尊重老师和同学。好的规则帮助大家好好学习、保证安全。",
-              "questions": [
-                {
-                  "q": "What must students wear every day?",
-                  "opts": [
-                    "A school uniform",
-                    "A coat",
-                    "A hat",
-                    "Sports shoes"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "When do students have to arrive?",
-                  "opts": [
-                    "Before nine o'clock",
-                    "Before eight o'clock",
-                    "Before seven o'clock",
-                    "Any time"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What can't students do in class?",
-                  "opts": [
-                    "Listen to the teacher",
-                    "Read books",
-                    "Use mobile phones",
-                    "Write notes"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How should students treat teachers?",
-                  "opts": [
-                    "Laugh at them",
-                    "Argue with them",
-                    "Ignore them",
-                    "Be polite and respect them"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the passage mainly about?",
-                  "opts": [
-                    "School trips",
-                    "School rules",
-                    "School food",
-                    "School clubs"
-                  ],
-                  "answer": 1,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "School Rules",
               "prompt": "Write three or four rules for your school. Use 'must', 'have to', 'can't' and 'Don't…'.",
@@ -7374,72 +6840,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "How I Keep Fit\n\nMy name is Mike, and I want to keep fit. I exercise almost every day. In the morning, I always run for thirty minutes. I usually play baseball with my friends after school. On weekends, I sometimes go swimming or jump rope. I hardly ever eat junk food, and I never drink cola. I think eating well and exercising often are the best ways to keep fit. How often do you exercise?",
-              "passageCn": "我叫 Mike，我想保持健康。我几乎每天都锻炼。早上我总是跑步三十分钟。放学后我通常和朋友打棒球。周末我有时去游泳或跳绳。我几乎不吃垃圾食品，也从不喝可乐。我认为吃得好、常锻炼是保持健康的最好方法。你多久锻炼一次呢？",
-              "questions": [
-                {
-                  "q": "How often does Mike run in the morning?",
-                  "opts": [
-                    "Hardly ever",
-                    "Always",
-                    "Never",
-                    "Once a month"
-                  ],
-                  "answer": 1,
-                  "point": "频度细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Mike usually do after school?",
-                  "opts": [
-                    "Sleep",
-                    "Go swimming",
-                    "Jump rope",
-                    "Play baseball"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How often does Mike eat junk food?",
-                  "opts": [
-                    "Every day",
-                    "Twice a day",
-                    "Always",
-                    "Hardly ever"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does Mike never drink?",
-                  "opts": [
-                    "Juice",
-                    "Milk",
-                    "Cola",
-                    "Water"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the best way to keep fit, in Mike's opinion?",
-                  "opts": [
-                    "Sleep all day",
-                    "Eat junk food",
-                    "Watch TV",
-                    "Eat well and exercise often"
-                  ],
-                  "answer": 3,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "How I Keep Fit",
               "prompt": "Write about how you keep fit. Use frequency words: always, usually, often, sometimes, hardly ever, never.",
@@ -8073,72 +7474,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "Eating Well\n\nLucy wants to eat well and stay healthy. For breakfast, she has an egg, some bread and a glass of milk. She doesn't drink coffee. For lunch, she likes rice with some vegetables and a little meat. She eats a lot of fruit, like apples and watermelon. She thinks too much sugar is bad for her teeth, so she hardly ever eats cookies or chocolate. 'Eat well and you will feel well,' Lucy always says.",
-              "passageCn": "Lucy 想吃得健康。早餐她吃一个鸡蛋、一些面包，喝一杯牛奶，不喝咖啡。午餐她喜欢米饭配一些蔬菜和一点点肉。她吃很多水果，比如苹果和西瓜。她认为糖太多对牙齿不好，所以几乎不吃饼干或巧克力。Lucy 常说：\"吃得好，才会感觉好。\"",
-              "questions": [
-                {
-                  "q": "What does Lucy drink for breakfast?",
-                  "opts": [
-                    "Juice",
-                    "Cola",
-                    "Coffee",
-                    "Milk"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Does Lucy drink coffee?",
-                  "opts": [
-                    "Only at lunch.",
-                    "Yes, she does.",
-                    "Every morning.",
-                    "No, she doesn't."
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What fruit does Lucy eat?",
-                  "opts": [
-                    "Apples and watermelon",
-                    "No fruit",
-                    "Onions",
-                    "Only bananas"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "Why does Lucy hardly eat cookies?",
-                  "opts": [
-                    "They are expensive",
-                    "She has no time",
-                    "She doesn't like them",
-                    "Too much sugar is bad for teeth"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the main idea?",
-                  "opts": [
-                    "Drink coffee",
-                    "Sleep more",
-                    "Buy fruit",
-                    "Eat well to feel well"
-                  ],
-                  "answer": 3,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "My Healthy Eating",
               "prompt": "Write about what you eat to stay healthy. Use 'I would like', countable/uncountable nouns.",
@@ -8697,72 +8033,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "A Special Moment\n\nIt is the Dragon Boat Festival today, and my family is very busy. My mother is making zongzi in the kitchen. My father is cleaning the boat by the river. My sister is holding a small flag and singing happily. I am watching the dragon boat race with my friends. The boats are moving very fast, and everyone is shouting, 'Come on!' What an exciting moment! I love this festival very much.",
-              "passageCn": "今天是端午节，我家很忙。妈妈在厨房包粽子。爸爸在河边擦船。妹妹举着小旗子开心地唱歌。我和朋友在看龙舟比赛。船开得飞快，大家都在喊\"加油！\"多么激动人心的时刻！我非常喜欢这个节日。",
-              "questions": [
-                {
-                  "q": "What festival is it today?",
-                  "opts": [
-                    "The Dragon Boat Festival",
-                    "National Day",
-                    "The Spring Festival",
-                    "Mid-Autumn Festival"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the mother doing?",
-                  "opts": [
-                    "Watching the race",
-                    "Making zongzi",
-                    "Singing",
-                    "Cleaning the boat"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the father doing?",
-                  "opts": [
-                    "Making zongzi",
-                    "Cleaning the boat",
-                    "Holding a flag",
-                    "Sleeping"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is the writer doing?",
-                  "opts": [
-                    "Singing",
-                    "Watching the dragon boat race",
-                    "Cooking",
-                    "Cleaning"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How does the writer feel?",
-                  "opts": [
-                    "Sad",
-                    "Tired",
-                    "Bored",
-                    "Excited and happy"
-                  ],
-                  "answer": 3,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "What We Are Doing Now",
               "prompt": "Describe what your family or friends are doing right now. Use the present continuous (be + doing).",
@@ -9341,72 +8612,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "Weather Around China\n\nChina is a big country, so the weather is different in different places. Today in Beijing, in the north, it is cold and windy. In Harbin, it is snowing heavily, and the temperature is very low. In the south, in Guangzhou, it is warm and sunny. In Sichuan, in the west, it is raining, and people are carrying umbrellas. What's the weather like in your city? Wherever you are, remember to dress for the weather!",
-              "passageCn": "中国很大，所以各地天气不同。今天北京（北方）又冷又有风。哈尔滨在下大雪，气温很低。南方的广州温暖晴朗。西部的四川在下雨，人们打着伞。你所在城市的天气怎么样？无论你在哪里，记得根据天气穿衣！",
-              "questions": [
-                {
-                  "q": "What is the weather like in Beijing today?",
-                  "opts": [
-                    "Rainy",
-                    "Cold and windy",
-                    "Warm and sunny",
-                    "Snowy"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is happening in Harbin?",
-                  "opts": [
-                    "It is sunny",
-                    "It is snowing heavily",
-                    "It is dry",
-                    "It is warm"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How is the weather in Guangzhou?",
-                  "opts": [
-                    "Cold and windy",
-                    "Stormy",
-                    "Warm and sunny",
-                    "Snowy"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What are people doing in Sichuan?",
-                  "opts": [
-                    "Swimming",
-                    "Skiing",
-                    "Wearing sunglasses",
-                    "Carrying umbrellas"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What advice does the writer give?",
-                  "opts": [
-                    "Stay in bed",
-                    "Never go out",
-                    "Dress for the weather",
-                    "Always carry an umbrella"
-                  ],
-                  "answer": 2,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "The Weather Today",
               "prompt": "Describe today's weather and what people are doing. Use 'It is …' and the present continuous.",
@@ -9975,72 +9181,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "A School Trip\n\nLast Friday, our class had a wonderful school trip. We went to the Science Museum by bus. In the morning, we saw many amazing machines and robots, and our teacher told us about space and the stars. At noon, we ate our lunch in the park and took a lot of photos. In the afternoon, we planted some small trees near the museum. I realized that we should protect our planet. It was really a day to remember!",
-              "passageCn": "上周五，我们班有一次很棒的校外活动。我们坐公交车去了科技馆。上午我们看到许多神奇的机器和机器人，老师还给我们讲了太空和星星。中午我们在公园吃午饭、拍了很多照片。下午我们在科技馆附近种了一些小树。我意识到我们应该保护我们的星球。那真是难忘的一天！",
-              "questions": [
-                {
-                  "q": "When did the class have the trip?",
-                  "opts": [
-                    "Last Friday",
-                    "Last Sunday",
-                    "Next week",
-                    "Yesterday"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How did they go to the museum?",
-                  "opts": [
-                    "By bike",
-                    "On foot",
-                    "By bus",
-                    "By train"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What did they do in the afternoon?",
-                  "opts": [
-                    "Saw robots",
-                    "Took photos",
-                    "Ate lunch",
-                    "Planted small trees"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What did the writer realize?",
-                  "opts": [
-                    "Museums are boring",
-                    "Trips are tiring",
-                    "Robots are scary",
-                    "We should protect our planet"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How did the writer feel about the day?",
-                  "opts": [
-                    "It was a day to remember",
-                    "It was bad",
-                    "It was too short",
-                    "It was boring"
-                  ],
-                  "answer": 0,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "A Day to Remember",
               "prompt": "Write about a day you remember (a trip or special day). Use the past tense (went, saw, had, took).",
@@ -10614,72 +9755,7 @@
                 "dim": "grammar"
               }
             ],
-            "reading": {
-              "passage": "The Wise Old Man\n\nOnce upon a time, there was a poor but wise old man in a small village. One day, a greedy emperor came to him and asked, 'How can I become happy?' The old man said, 'Help your people, and do not tell lies.' The emperor was angry and went away. But later, he remembered the words. He began to help the poor and treat people well. Soon, everyone in the country loved him. From that day on, the emperor was truly happy.",
-              "passageCn": "很久以前，一个小村庄里住着一位贫穷却睿智的老人。一天，一个贪婪的皇帝来问他：\"我怎样才能快乐？\"老人说：\"帮助你的人民，不要说谎。\"皇帝很生气，走了。但后来他记起了这些话。他开始帮助穷人、善待他人。很快，全国的人都爱戴他。从那天起，皇帝真正快乐了。",
-              "questions": [
-                {
-                  "q": "What was the old man like?",
-                  "opts": [
-                    "Poor but wise",
-                    "Young and silly",
-                    "Strong and rude",
-                    "Rich and greedy"
-                  ],
-                  "answer": 0,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What did the emperor ask the old man?",
-                  "opts": [
-                    "How to win a war",
-                    "How to fight",
-                    "How to become happy",
-                    "Where to find gold"
-                  ],
-                  "answer": 2,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What was the old man's advice?",
-                  "opts": [
-                    "Build a big house",
-                    "Help people and don't tell lies",
-                    "Buy more gold",
-                    "Travel the world"
-                  ],
-                  "answer": 1,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What did the emperor do later?",
-                  "opts": [
-                    "Started a war",
-                    "Told more lies",
-                    "Left the country",
-                    "Helped the poor"
-                  ],
-                  "answer": 3,
-                  "point": "细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "How did the story end?",
-                  "opts": [
-                    "The emperor was truly happy",
-                    "The emperor was sad",
-                    "The old man left",
-                    "The village was lost"
-                  ],
-                  "answer": 0,
-                  "point": "主旨",
-                  "dim": "reading"
-                }
-              ]
-            },
+            "reading": null,
             "writing": {
               "topic": "A Short Story",
               "prompt": "Write a very short story in the past tense. Begin with 'Once upon a time…'.",

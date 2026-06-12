@@ -57,6 +57,7 @@ export type StageDef = {
     | "match"
     | "grammar"
     | "reading"
+    | "cloze"
     | "listening"
     | "writing"
     | "finalQuiz";

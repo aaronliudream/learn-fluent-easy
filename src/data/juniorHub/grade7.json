@@ -9803,6 +9803,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",

@@ -106,6 +106,7 @@ const JuniorGrammarLab = lazy(() => import("./pages/JuniorGrammarLab.tsx"));
 const JuniorGrammarRevenge = lazy(() => import("./pages/JuniorGrammarRevenge.tsx"));
 const JuniorReading = lazy(() => import("./pages/JuniorReading.tsx"));
 const JuniorReadingPlay = lazy(() => import("./pages/JuniorReadingPlay.tsx"));
+const JuniorClozePlay = lazy(() => import("./pages/JuniorClozePlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
 const JuniorWriting = lazy(() => import("./pages/JuniorWriting.tsx"));
@@ -426,6 +427,7 @@ const App = () => (
           <Route path="/junior/kp/:id/practice" element={<ChineseOnlyRoute><JuniorGrammarKpQuiz /></ChineseOnlyRoute>} />
           <Route path="/junior/reading" element={<ChineseOnlyRoute><JuniorReading /></ChineseOnlyRoute>} />
           <Route path="/junior/reading/:id" element={<ChineseOnlyRoute><JuniorReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/junior/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
           <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/writing" element={<ChineseOnlyRoute><JuniorWriting /></ChineseOnlyRoute>} />

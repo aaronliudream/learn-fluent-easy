@@ -1023,6 +1023,120 @@ function ReadingStage({
   );
 }
 
+// 完形填空关:读 junior_cloze 取本单元完形 → 卡片列表 → 跳 /junior/cloze/:id?returnTo;
+// 做过 ≥1 篇 markComplete 本关通过。无 DB 完形 → 空兜底(其它单元/未灌数据时)。
+function ClozeStage({
+  unit,
+  grade,
+  onFinish,
+  markComplete,
+}: {
+  unit: UnitDef;
+  grade: number;
+  onFinish: () => void;
+  markComplete: () => void;
+}) {
+  const [dbRows, setDbRows] = useState<JrRow[] | null>(null);
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
+  const markedRef = useRef(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const [res, m] = await Promise.all([
+        supabase
+          .from("junior_cloze")
+          .select("id,title,word_count,difficulty")
+          .eq("grade", grade)
+          .eq("volume", unit.book)
+          .eq("unit", unit.unitKey)
+          .order("sort_order", { ascending: true }),
+        loadMastery("junior_cloze"),
+      ]);
+      if (cancelled) return;
+      setDbRows((res.data ?? []) as JrRow[]);
+      setMastery(m);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  useEffect(() => {
+    if (!dbRows || dbRows.length === 0) return;
+    const tried = dbRows.filter((r) => !!mastery[r.id]).length;
+    if (tried >= 1 && !markedRef.current) {
+      markedRef.current = true;
+      markComplete();
+    }
+  }, [dbRows, mastery]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (dbRows === null) {
+    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
+  }
+  if (dbRows.length === 0) {
+    return <EmptyStageNotice onContinue={onFinish} />;
+  }
+
+  const disp = buildDisplayTitles(dbRows);
+  const cards = dbRows.map((r) => {
+    const row = mastery[r.id];
+    const best = row?.best_pct ?? null;
+    const status: "done" | "progress" | "new" = !row ? "new" : best != null && best >= 80 ? "done" : "progress";
+    return { id: r.id, word_count: r.word_count, difficulty: Math.max(1, r.difficulty ?? 1), display: disp.find((d) => d.id === r.id)?.display ?? r.title, best, status };
+  });
+  const total = cards.length;
+  const tried = cards.filter((c) => c.status !== "new").length;
+  const pct = total ? Math.round((tried / total) * 100) : 0;
+  const rec = cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
+  const enc = encodeURIComponent(window.location.pathname);
+  const diffColor = (d: number) => (d >= 3 ? "text-rose-500" : d === 2 ? "text-amber-500" : "text-emerald-500");
+
+  return (
+    <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">
+      <div className="mb-1 flex items-center justify-between text-xs font-bold text-[#2C2C2A] dark:text-foreground">
+        <span>📝 本关进度</span>
+        <span className="tabular-nums">{tried}/{total} 篇 · {pct}%</span>
+      </div>
+      <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
+        <div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all" style={{ width: `${pct}%` }} />
+      </div>
+      <p className="mb-3 text-xs text-[#5C5751] dark:text-muted-foreground">选一篇完形开始 · 做过会标记 · 可反复练</p>
+
+      <div className="space-y-2">
+        {cards.map((c) => (
+          <Link
+            key={c.id}
+            to={`/junior/cloze/${c.id}?returnTo=${enc}`}
+            className="flex items-center gap-3 rounded-2xl border border-[#EEEAE0] bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:shadow active:scale-[0.99] dark:border-border dark:bg-background/40"
+          >
+            <span className={cn("grid size-8 shrink-0 place-items-center rounded-full text-sm font-bold", c.status === "done" ? "bg-emerald-500/15 text-emerald-600" : c.status === "progress" ? "bg-amber-500/15 text-amber-600" : "bg-muted text-muted-foreground")}>
+              {c.status === "done" ? "✓" : c.status === "progress" ? "▶" : "○"}
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-sm font-bold text-[#2C2C2A] dark:text-foreground">{c.display}</div>
+              <div className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
+                <span>{c.word_count ?? "?"} 词</span>
+                <span className={diffColor(c.difficulty)}>{"★".repeat(c.difficulty)}</span>
+                {(c.status === "done" || c.status === "progress") && <span className={cn("font-bold", c.status === "done" ? "text-emerald-600" : "text-amber-600")}>最高 {c.best}%</span>}
+              </div>
+            </div>
+            <span className={cn("shrink-0 rounded-full px-3 py-1 text-xs font-bold text-white", c.status === "done" ? "bg-emerald-600" : c.status === "progress" ? "bg-amber-500" : "bg-indigo-600")}>
+              {c.status === "done" ? "复习" : c.status === "progress" ? "继续" : "开始"}
+            </span>
+          </Link>
+        ))}
+      </div>
+
+      {rec ? (
+        <div className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-amber-700 dark:bg-amber-950/30 dark:text-amber-300">👉 建议下一篇：{rec.display}</div>
+      ) : (
+        <div className="mt-3 rounded-xl bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">🎉 本关全部完成，可随时复习</div>
+      )}
+    </div>
+  );
+}
+
 function ListeningStage({
   unit,
   grade,
@@ -1372,6 +1486,16 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 unitTitle: unit.title,
               })
             }
+          />
+        );
+      case "cloze":
+        // 完形关:读 junior_cloze 取本单元完形 → 卡片列表 → /junior/cloze/:id?returnTo。无数据走空兜底。
+        return (
+          <ClozeStage
+            unit={unit}
+            grade={grade}
+            markComplete={() => completeStage(unitId, stageIdx)}
+            onFinish={handleFinish}
           />
         );
       case "listening":

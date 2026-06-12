@@ -1078,12 +1078,16 @@ function ClozeStage({
     return <EmptyStageNotice onContinue={onFinish} />;
   }
 
-  const disp = buildDisplayTitles(dbRows);
+  // 完形标题取冒号后的英文部分(保留单词间空格;不用 buildDisplayTitles——它会去掉英文空格)。
+  const clozeDisplay = (t: string) => {
+    const p = (t || "").split(/[:：]/);
+    return ((p.length > 1 ? p.slice(1).join(":") : t).trim() || t);
+  };
   const cards = dbRows.map((r) => {
     const row = mastery[r.id];
     const best = row?.best_pct ?? null;
     const status: "done" | "progress" | "new" = !row ? "new" : best != null && best >= 80 ? "done" : "progress";
-    return { id: r.id, word_count: r.word_count, difficulty: Math.max(1, r.difficulty ?? 1), display: disp.find((d) => d.id === r.id)?.display ?? r.title, best, status };
+    return { id: r.id, word_count: r.word_count, difficulty: Math.max(1, r.difficulty ?? 1), display: clozeDisplay(r.title), best, status };
   });
   const total = cards.length;
   const tried = cards.filter((c) => c.status !== "new").length;

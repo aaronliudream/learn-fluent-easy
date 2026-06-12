@@ -152,11 +152,11 @@ export default function JuniorClozePlay() {
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-start">
           <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto exam-passage-scroll">
             <article className="exam-card p-6 sm:p-8">
-              <div className="exam-eyebrow mb-2">
+              <div className="exam-eyebrow mb-3">
                 <T>Passage 短文（含编号空格）</T>
               </div>
-              <div className="exam-passage-title">{c.title}</div>
-              <div className="exam-passage whitespace-pre-wrap leading-8">{c.body}</div>
+              {/* 顶部大标题已显示篇名,此处不再重复;正文调大字号+行距便于阅读。 */}
+              <div className="exam-passage whitespace-pre-wrap text-[17px] leading-[1.9]">{c.body}</div>
             </article>
           </div>
           <div>

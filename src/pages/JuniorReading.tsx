@@ -9,7 +9,6 @@ import StarRating from "@/components/StarRating";
 import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
-import { JuniorKpPracticeSection } from "@/components/junior/JuniorKpPracticeSection";
 
 /** 从 ?grade= 参数(可能是 1/2/3 或 7/8/9)推出筛选条 chip 的当前值。 */
 function gradeKeyFromParam(grade: string | null): JuniorGradeKey {
@@ -24,7 +23,6 @@ export default function JuniorReading() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade");
   const backTo = "/junior";
-  const kpGradeNum = grade ? (({ "1": 7, "2": 8, "3": 9 } as Record<string, number>)[grade] ?? Number(grade)) : null;
   const onGrade = (key: JuniorGradeKey) => {
     const { dbGrade } = juniorGradeParams(key);
     const next = new URLSearchParams(params);
@@ -197,13 +195,6 @@ export default function JuniorReading() {
         💡 <b><T>解锁规则</T></b><T>：≥80% 通过解锁下一篇 · 100% 升一星 · 答错立刻显示答案</T><br />
         🔁 <b><T>遗忘曲线</T></b><T>：1天 → 3天 → 7天 → 14天 → 30天，逐级提醒复习</T>
       </div>
-
-      <JuniorKpPracticeSection
-        categoryCodes={["reading", "cloze"]}
-        gradeNum={kpGradeNum}
-        title="📚 按考点抽题 · 阅读理解 / 完形填空"
-        subtitle="AI 按考点出题,短文已含在题中,可直接练。"
-      />
     </main>);
 
 }

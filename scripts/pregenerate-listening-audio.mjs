@@ -47,15 +47,18 @@ async function synth(text) {
 }
 
 const ALL = process.argv.includes('--all');
+// 册:--volume=7A / 7B / 8A …(默认 7B)。grade 从册首位数字推断。
+const VOLUME = (process.argv.find(a => a.startsWith('--volume='))?.split('=')[1]) || '7B';
+const GRADE = Number(VOLUME[0]) || 7;
 
-// 拉 7B 且 audio_url IS NULL(增量)
+// 拉目标册且 audio_url IS NULL(增量)
 const { data: rows, error } = await sb
   .from('junior_listening_exercises')
   .select('id,unit,title,difficulty,transcript,audio_url')
-  .eq('grade', 7).eq('volume', '7B').is('audio_url', null)
+  .eq('grade', GRADE).eq('volume', VOLUME).is('audio_url', null)
   .order('unit').order('difficulty');
 if (error) { console.log('拉取失败:', error.message); process.exit(1); }
-console.log(`7B 待预生成(audio_url IS NULL): ${rows.length} 条`);
+console.log(`${VOLUME} 待预生成(audio_url IS NULL): ${rows.length} 条`);
 
 if (!ALL) {
   // ── 验证模式:只跑 U8 The Fox 1 条 ──
@@ -74,7 +77,7 @@ if (!ALL) {
 
 // ── 全量模式:合成所有 + 生成 UPDATE SQL(audio_url = edge 返回的 CF URL 原样) ──
 let sql = '-- ============================================================\n';
-sql += `-- 关7听力音频预生成回填 audio_url(7B); voice=${VOICE} speed=${SPEED}; 填 edge 返回的 CF URL\n`;
+sql += `-- 关7听力音频预生成回填 audio_url(${VOLUME}); voice=${VOICE} speed=${SPEED}; 填 edge 返回的 CF URL\n`;
 sql += '-- 幂等:仅 audio_url IS NULL 才更新\n';
 sql += '-- ============================================================\n\n';
 let ok = 0, fail = 0;
@@ -88,9 +91,10 @@ for (const row of rows) {
   console.log(`  ✓ ${row.unit} "${row.title}" → ${fillUrl}`);
   await sleep(THROTTLE_MS);
 }
-sql += '-- 校验(单独跑): 7B 已填 audio_url 的条数\n';
-sql += "SELECT unit, count(*) FROM junior_listening_exercises WHERE grade=7 AND volume='7B' AND audio_url IS NOT NULL GROUP BY unit ORDER BY unit;\n";
-sql += '-- END OF FILE listening-audio-url-7b.sql\n';
-writeFileSync('scripts/listening-audio-url-7b.sql', sql);
-console.log(`\n完成: 成功 ${ok} / 失败 ${fail} | 已生成 scripts/listening-audio-url-7b.sql`);
+sql += `-- 校验(单独跑): ${VOLUME} 已填 audio_url 的条数\n`;
+sql += `SELECT unit, count(*) FROM junior_listening_exercises WHERE grade=${GRADE} AND volume='${VOLUME}' AND audio_url IS NOT NULL GROUP BY unit ORDER BY unit;\n`;
+sql += `-- END OF FILE listening-audio-url-${VOLUME.toLowerCase()}.sql\n`;
+const outFile = `scripts/listening-audio-url-${VOLUME.toLowerCase()}.sql`;
+writeFileSync(outFile, sql);
+console.log(`\n完成: 成功 ${ok} / 失败 ${fail} | 已生成 ${outFile}`);
 process.exit(0);

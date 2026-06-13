@@ -4,7 +4,7 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { speak } from "@/lib/speak";
+import { speak, speakFromUrl, stopSpeaking } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
@@ -89,12 +89,17 @@ export default function JuniorListeningPlay() {
 
   const playAudio = () => {
     if (!e) return;
+    // 走 speakFromUrl(被 speak.ts 的 currentAudio 追踪):再点自动停旧→不叠加;
+    // 路由切换时全局 StopAudioOnRouteChange 的 stopSpeaking() 能停掉它(裸 new Audio 停不掉)。
     if (e.audio_url) {
-      const a = new Audio(e.audio_url);a.play().catch(() => speak(e.transcript));
+      speakFromUrl(e.audio_url);
     } else {
       speak(e.transcript);
     }
   };
+
+  // 卸载时停音频(双保险:覆盖 SPA 同路径切换等全局 StopAudioOnRouteChange 漏掉的边角)。
+  useEffect(() => () => stopSpeaking(), []);
 
   const pick = async (idx: number, letter: string) => {
     if (picks[idx]) return;
@@ -134,6 +139,13 @@ export default function JuniorListeningPlay() {
       const correct = e.questions.filter((q, i) => updated[i] && checkAnswer(q, updated[i])).length;
       const pct = Math.round(correct / e.questions.length * 100);
       setTimeout(() => celebrateScore(pct), 400);
+    } else if (e && idx + 1 < e.questions.length) {
+      // 答完非最后一题 → 滚到下一题(延时让 ✓/✗ 反馈先渲染、给学生一拍看对错)。
+      setTimeout(() => {
+        document
+          .querySelector(`[data-qidx="${idx + 1}"]`)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 450);
     }
   };
 
@@ -208,7 +220,7 @@ export default function JuniorListeningPlay() {
           const picked = picks[i];
           const qType = q.type || "choice";
           return (
-            <section key={i} className="rounded-2xl border bg-card p-4">
+            <section key={i} data-qidx={i} className="rounded-2xl border bg-card p-4">
               <div className="text-sm font-bold flex items-start gap-2">
                 <span>{i + 1}.</span>
                 <span className="flex-1">{q.q}</span>

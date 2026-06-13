@@ -1236,7 +1236,12 @@ function ListeningStage({
 
   // ① 有 DB 内容:卡片列表(状态 ✓/▶/○ + 题数 + 最高分 + 操作);难度★省略(听力全★1,无梯度)
   if (dbRows.length > 0) {
-    const disp = buildDisplayTitles(dbRows);
+    // 标题取中点 · 后部分,保留英文空格(不用 buildDisplayTitles——它经 cleanStageTitle 会删英文词间空格)。
+    // 旧库"…听力·短对话(C卷)"→"短对话(C卷)"(含卷号区分同单元多条);新库"…听力·The Fox and the Grapes"→保留空格。
+    const listeningDisplay = (t: string) => {
+      const p = (t || "").split("·");
+      return ((p.length > 1 ? p.slice(1).join("·") : t).trim() || t);
+    };
     const cards = dbRows.map((r) => {
       const row = mastery[r.id];
       const best = row?.best_pct ?? null;
@@ -1245,7 +1250,7 @@ function ListeningStage({
       return {
         id: r.id,
         qCount: r.qCount,
-        display: disp.find((d) => d.id === r.id)?.display ?? r.title,
+        display: listeningDisplay(r.title),
         best,
         status,
       };

@@ -1242,6 +1242,12 @@ function ListeningStage({
       const p = (t || "").split("·");
       return ((p.length > 1 ? p.slice(1).join("·") : t).trim() || t);
     };
+    // 新库标题格式"…听力·中文 English":首个空格前为中文(主行),其后为英文(副行)。
+    // 无空格(旧标题/纯中文)则全部当主行、副行空。
+    const splitTitle = (d: string) => {
+      const i = d.indexOf(" ");
+      return i < 0 ? { zh: d, en: "" } : { zh: d.slice(0, i), en: d.slice(i + 1) };
+    };
     const cards = dbRows.map((r) => {
       const row = mastery[r.id];
       const best = row?.best_pct ?? null;
@@ -1298,9 +1304,21 @@ function ListeningStage({
                 {c.status === "done" ? "✓" : c.status === "progress" ? "▶" : "○"}
               </span>
               <div className="min-w-0 flex-1">
-                <div className="truncate text-sm font-bold text-[#2C2C2A] dark:text-foreground">
-                  {c.display}
-                </div>
+                {(() => {
+                  const { zh, en } = splitTitle(c.display);
+                  return (
+                    <>
+                      <div className="text-sm font-bold leading-snug text-[#2C2C2A] dark:text-foreground">
+                        {zh}
+                      </div>
+                      {en && (
+                        <div className="text-[11px] font-medium leading-snug text-[#8A857D] dark:text-muted-foreground">
+                          {en}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
                 <div className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
                   <span>{c.qCount} 题</span>
                   {c.status === "done" && (

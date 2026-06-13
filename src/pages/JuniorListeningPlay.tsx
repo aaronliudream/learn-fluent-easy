@@ -240,16 +240,29 @@ export default function JuniorListeningPlay() {
                   const isWrong = picked === L && L !== q.answer;
                   return (
                     <button key={L} disabled={!!picked} onClick={() => pick(i, L)}
-                    className={cn("rounded-xl border-2 px-3 py-2 text-left text-sm transition",
+                    className={cn("flex items-center rounded-xl border-2 px-3 py-2 text-left text-sm transition",
                     !picked && "border-border hover:border-sky-400",
                     isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
                     isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
                     picked && !isAns && !isWrong && "opacity-60")}>
-                      <span className="mr-2 font-extrabold">{L}.</span>{opt}
+                      <span className="mr-2 font-extrabold">{L}.</span>
+                      <span className="flex-1">{opt}</span>
+                      {isAns && <span className="ml-2 shrink-0 text-base font-extrabold text-emerald-600">✓</span>}
+                      {isWrong && <span className="ml-2 shrink-0 text-base font-extrabold text-rose-600">✗</span>}
                     </button>);
 
                 })}
               </div>
+              }
+              {picked && qType !== "fill" &&
+              <div className={cn("mt-3 rounded-lg px-3 py-2 text-sm font-bold",
+                checkAnswer(q, picked)
+                  ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
+                  : "bg-amber-50 text-amber-700 dark:bg-amber-950/30 dark:text-amber-300")}>
+                  {checkAnswer(q, picked)
+                  ? "✨ 答对了！"
+                  : `💡 正确答案：${q.answer}. ${q.options[["A", "B", "C", "D"].indexOf(q.answer)] ?? ""}`}
+                </div>
               }
               {picked && qType === "fill" &&
               <div className={cn("mt-2 text-xs font-bold", checkAnswer(q, picked) ? "text-emerald-600" : "text-rose-600")}>

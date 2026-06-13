@@ -15,6 +15,11 @@ import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
 import { buildFinalQuiz, type FinalQuizItem } from "@/lib/juniorFinalQuiz";
 import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
+import { awardCoins } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { celebrateScore } from "@/lib/feedback";
+import { toast } from "sonner";
 
 type Props = {
   unitId: string;
@@ -1346,21 +1351,190 @@ function ListeningStage({
   );
 }
 
-function WritingStage({ unit, onFinish }: { unit: UnitDef; onFinish: () => void }) {
+type WritingResult = {
+  score: number;
+  overall: string;
+  mistakes: { original: string; corrected: string; explanation: string }[];
+  suggestions: string[];
+  improved: string;
+};
+
+/** 单元写作关合成 prompt_id(无FK,稳定可复现):按 book+unitKey 派生 uuid,用于 attempts 存档/掌握度。 */
+function writingPromptId(unit: UnitDef): string {
+  const key = `${unit.book}-${unit.unitKey}`;
+  let h = 0;
+  for (let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0;
+  const hex = h.toString(16).padStart(8, "0");
+  return `a7717b00-0000-4000-8000-0000${hex}`;
+}
+
+function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number; onFinish: () => void }) {
   const w = unit.writing;
+  // ⚠️ 第一步:真写作(AI批改)只接 7B U1 验证;其余单元/年级保持原"水关"逻辑不变。
+  const realWriting = unit.book === "7B" && unit.unitKey === "U1";
+  // hooks 必须无条件先执行(放在任何 early-return 之前)。
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<WritingResult | null>(null);
+  const minWords = w?.minWords ?? 40;
+  const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+
+  // ── 原水关(非 7B U1):行为零变化 ──
+  if (!realWriting) {
+    return (
+      <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <div className="mb-2 text-lg font-bold">✍️ 写作练习</div>
+        <p className="mb-2 text-sm">{w?.promptCn}</p>
+        <p className="mb-3 text-xs text-[#888780]">{w?.prompt}</p>
+        {w?.sampleWords?.length ? (
+          <p className="mb-3 text-xs">建议用词：{w.sampleWords.join(", ")}</p>
+        ) : null}
+        <textarea
+          className="mb-3 min-h-[120px] w-full rounded-xl border border-[#EEEAE0] p-3 text-sm"
+          placeholder="在这里写下你的英文句子…"
+        />
+        <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>
+      </div>
+    );
+  }
+
+  // ── 真写作关(7B U1):textarea → check-writing 批改 → 反馈 + 存档 + 奖励;提交即过关 ──
+  const submit = async () => {
+    if (loading) return;
+    if (wordCount < minWords) {
+      toast.error(`再写一点吧，至少 ${minWords} 词`); // 词数不够温和提示,不报错不阻塞
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("check-writing", {
+        body: {
+          prompt: w?.prompt ?? "",
+          promptCn: w?.promptCn ?? "",
+          sample: "",
+          text,
+          lessonTitle: w?.topic ?? unit.title,
+          targetLanguage: "Chinese",
+        },
+      });
+      if (error) throw error;
+      const r = data as WritingResult;
+      setResult(r);
+      const { data: u } = await supabase.auth.getUser();
+      if (u?.user) {
+        await supabase.from("junior_writing_attempts").insert({
+          user_id: u.user.id,
+          prompt_id: writingPromptId(unit),
+          text,
+          word_count: wordCount,
+          overall_score: Math.round(r.score),
+          feedback_cn: r.overall,
+          corrections: r.mistakes ?? [],
+          highlights: r.suggestions ?? [],
+        });
+      }
+      // 低分也奖励(鼓励),分数越高奖励越多。
+      const reward = Math.max(5, Math.min(30, Math.round((r.score ?? 0) / 5)));
+      await awardCoins(reward, "junior_writing");
+      await bumpPetSkill("writer_pen", 1);
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade,
+        module: "writing",
+        item_type: "essay",
+        item_id: writingPromptId(unit),
+        item_label: w?.topic ?? unit.title,
+        is_correct: true, // 提交即记为完成(写作不卡分)
+        context: { score: Math.round(r.score ?? 0), word_count: wordCount },
+      }).catch(() => {});
+      celebrateScore(Math.round(r.score ?? 0));
+    } catch (e) {
+      toast.error((e as Error)?.message || "批改失败，请稍后再试");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
+    <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">
       <div className="mb-2 text-lg font-bold">✍️ 写作练习</div>
-      <p className="mb-2 text-sm">{w?.promptCn}</p>
-      <p className="mb-3 text-xs text-[#888780]">{w?.prompt}</p>
+      <p className="mb-1 text-sm">{w?.promptCn}</p>
+      <p className="mb-2 text-xs text-[#888780]">{w?.prompt}</p>
       {w?.sampleWords?.length ? (
-        <p className="mb-3 text-xs">建议用词：{w.sampleWords.join(", ")}</p>
+        <p className="mb-3 text-xs text-[#888780]">建议用词：{w.sampleWords.join(", ")}</p>
       ) : null}
+
       <textarea
-        className="mb-3 min-h-[120px] w-full rounded-xl border border-[#EEEAE0] p-3 text-sm"
-        placeholder="在这里写下你的英文句子…"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={10}
+        placeholder={`请用英语写作（建议 ${minWords} 词以上）…`}
+        className="mb-2 min-h-[140px] w-full rounded-xl border border-[#EEEAE0] p-3 text-sm leading-relaxed"
       />
-      <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>
+      <div className="mb-3 flex items-center justify-between text-xs text-[#888780]">
+        <span>{wordCount} 词 · 目标 {minWords}+ 词</span>
+        {!result && (
+          <button
+            disabled={loading}
+            onClick={submit}
+            className="rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 px-5 py-2 text-sm font-extrabold text-white shadow disabled:opacity-60"
+          >
+            {loading ? "AI 批改中…" : "✨ 提交 AI 批改"}
+          </button>
+        )}
+      </div>
+      {/* 低调兜底:check-writing 偶发故障/超时时,孩子写了却卡住 → 可跳过(不存档/不奖励)。主路径仍是写+提交+看反馈。 */}
+      {!result && !loading && (
+        <div className="mb-2 text-right">
+          <button
+            onClick={onFinish}
+            className="text-[11px] text-[#B5B0A8] underline-offset-2 hover:underline"
+          >
+            遇到问题？跳过本关
+          </button>
+        </div>
+      )}
+
+      {result && (
+        <div className="space-y-3">
+          <div className="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-600 p-4 text-white">
+            <div className="text-xs uppercase tracking-wider opacity-80">AI 综合评分</div>
+            <div className="mt-1 text-3xl font-black">
+              {Math.round(result.score ?? 0)} <span className="text-sm font-bold opacity-80">/ 100</span>
+            </div>
+            <p className="mt-1 text-sm leading-relaxed">{result.overall}</p>
+          </div>
+          {result.mistakes?.length > 0 && (
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="text-sm font-extrabold">✏️ 修改建议（{result.mistakes.length}）</div>
+              <ul className="mt-2 space-y-2 text-xs">
+                {result.mistakes.map((m, i) => (
+                  <li key={i} className="rounded-lg bg-muted/50 p-2">
+                    <div className="text-rose-500 line-through">{m.original}</div>
+                    <div className="font-bold text-emerald-600">{m.corrected}</div>
+                    <div className="mt-1 text-muted-foreground">{m.explanation}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {result.suggestions?.length > 0 && (
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="text-sm font-extrabold">💡 提升建议</div>
+              <ul className="mt-2 list-inside list-disc space-y-1 text-xs text-muted-foreground">
+                {result.suggestions.map((s, i) => <li key={i}>{s}</li>)}
+              </ul>
+            </div>
+          )}
+          {result.improved && (
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="text-sm font-extrabold">⭐ AI 改写范文</div>
+              <div className="mt-2 whitespace-pre-wrap text-sm leading-relaxed">{result.improved}</div>
+            </div>
+          )}
+          <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>
+        </div>
+      )}
     </div>
   );
 }
@@ -1573,7 +1747,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "writing":
-        return <WritingStage unit={unit} onFinish={handleFinish} />;
+        return <WritingStage unit={unit} grade={grade} onFinish={handleFinish} />;
       case "finalQuiz": {
         // 自适应单元(本期仅7B U1):加载中显示提示;失败/空池 finalAdaptive=null → 回退内联。
         if (adaptiveFinalUnit && finalAdaptive === undefined)

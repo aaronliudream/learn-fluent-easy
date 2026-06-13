@@ -1307,16 +1307,14 @@ function ListeningStage({
                 {(() => {
                   const { zh, en } = splitTitle(c.display);
                   return (
-                    <>
-                      <div className="text-sm font-bold leading-snug text-[#2C2C2A] dark:text-foreground">
-                        {zh}
-                      </div>
+                    <div className="truncate text-sm font-bold leading-snug text-[#2C2C2A] dark:text-foreground">
+                      {zh}
                       {en && (
-                        <div className="text-[11px] font-medium leading-snug text-[#8A857D] dark:text-muted-foreground">
+                        <span className="ml-1.5 font-medium text-[#8A857D] dark:text-muted-foreground">
                           {en}
-                        </div>
+                        </span>
                       )}
-                    </>
+                    </div>
                   );
                 })()}
                 <div className="mt-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">

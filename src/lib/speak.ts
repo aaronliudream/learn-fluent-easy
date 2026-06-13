@@ -1,6 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
 import { loadSettings } from "@/lib/voice";
+import { cleanForTTS } from "@/lib/ttsClean";
 
 let lastSpoken = "";
 let speakToken = 0;
@@ -200,7 +201,9 @@ function normalizeForHash(voiceId: string, speed: number, accent: string | undef
 
 async function predictCdnUrl(text: string, voiceId: string, speed: number, accent?: string): Promise<string> {
   const { voice, safeSpeed, accentUpper } = normalizeForHash(voiceId, speed, accent);
-  const safeText = String(text).slice(0, 4000);
+  // Strip dialogue speaker labels so the predicted hash matches what fetchTTS
+  // sends (both clean identically). No-op for label-free text → hash unchanged.
+  const safeText = cleanForTTS(String(text)).slice(0, 4000);
   // Hash key MUST mirror the edge function's `keyInput` exactly so the CDN
   // probe finds previously-synthesized audio.
   const provider = voice.startsWith("el:") ? "elevenlabs" : "openai";
@@ -386,6 +389,10 @@ const SUPABASE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tts`;
 const SUPABASE_ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
 
 const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: string): Promise<string | null> => {
+  // Strip dialogue speaker labels before hashing + sending. Idempotent + no-op
+  // for label-free text, so the content-addressed cache key is unchanged for
+  // everything except dialogue transcripts (which now synthesize clean audio).
+  text = cleanForTTS(text);
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${text}`;
   const cached = audioCache.get(cacheKey);
   if (cached) return cached;

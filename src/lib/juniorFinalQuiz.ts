@@ -55,7 +55,21 @@ function diffOf(q: UnitQuestion): 1 | 2 | 3 {
 }
 
 /**
+ * 解析"前言 key":去掉结尾"(所以)答案是 **X**。"那句,剩余前言相同 → 视为同模板。
+ * 用于抽题去重(同前言尽量只抽1道,防 finalQuiz 里解析雷同扎堆)。
+ * - 无解析 → 用 id 当 key(不与他人去重)。
+ * - 已重写成具体解析的题(结尾无加粗答案句)→ 整段当 key,各题不同,自然不互相去重。
+ */
+function preambleKey(q: UnitQuestion): string {
+  const s = String(q.explanation || "").trim();
+  if (!s) return "__" + q.id;
+  const cut = s.replace(/(所以)?答案(是|为)\s*\*\*[^*]+\*\*\s*[。.]?\s*$/, "").trim();
+  return cut || s;
+}
+
+/**
  * 语法抽题:避错题 → 每 point 保底 1 道(弱kp优先) → 按难度配额补足 → 难→中→易降级兜底。
+ * 叠加"前言去重":同一前言模板尽量只抽 1 道(软约束);若去重后凑不满 n,放宽允许同前言补足。
  */
 function pickGrammar(
   pool: UnitQuestion[],
@@ -83,36 +97,43 @@ function pickGrammar(
 
   const picked: UnitQuestion[] = [];
   const used = new Set<string>();
+  const usedPre = new Set<string>(); // 已用前言 key
   const take = (q: UnitQuestion) => {
     picked.push(q);
     used.add(q.id);
+    usedPre.add(preambleKey(q));
   };
+  // dedup=true:跳过"前言已用"的题(软去重);dedup=false:放宽,只看是否已选。
+  const free = (q: UnitQuestion, dedup: boolean) =>
+    !used.has(q.id) && (!dedup || !usedPre.has(preambleKey(q)));
 
-  // ① 每 point 保底 1 道(弱kp优先),保覆盖。
+  // ① 每 point 保底 1 道(弱kp优先);先软去重,取不到再放宽。
   for (const p of points) {
     if (picked.length >= n) break;
-    const cand = weakFirst(avail.filter((q) => q.pointId === p.id && !used.has(q.id)));
+    let cand = weakFirst(avail.filter((q) => q.pointId === p.id && free(q, true)));
+    if (!cand.length) cand = weakFirst(avail.filter((q) => q.pointId === p.id && free(q, false)));
     if (cand.length) take(cand[0]);
   }
 
-  // ② 按难度配额补足(先扣掉保底已占用的难度)。
+  // ② 按难度配额补足(先扣掉保底已占用的难度);软去重。
   const want: Record<1 | 2 | 3, number> = { ...quota };
   for (const q of picked) want[diffOf(q)] = Math.max(0, want[diffOf(q)] - 1);
   for (const d of [1, 2, 3] as const) {
     for (const q of buckets[d]) {
       if (want[d] <= 0 || picked.length >= n) break;
-      if (used.has(q.id)) continue;
+      if (!free(q, true)) continue;
       take(q);
       want[d]--;
     }
   }
 
-  // ③ 降级兜底:仍不足 n → 难→中→易借补凑满。
-  if (picked.length < n) {
+  // ③ 降级兜底凑满 n:先难→中→易+软去重补;仍不足再整体放宽(允许同前言),保证够 n。
+  for (const dedup of [true, false] as const) {
+    if (picked.length >= n) break;
     for (const d of [3, 2, 1] as const) {
       for (const q of buckets[d]) {
         if (picked.length >= n) break;
-        if (used.has(q.id)) continue;
+        if (!free(q, dedup)) continue;
         take(q);
       }
     }

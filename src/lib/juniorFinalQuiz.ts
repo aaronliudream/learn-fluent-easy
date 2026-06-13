@@ -8,6 +8,7 @@ import {
 import { loadJuniorGrammarMasteryAll } from "./juniorGrammarFsrs";
 import { loadKpMastery } from "./juniorKnowledgePoint";
 import { shuffleArray } from "./juniorHub/context";
+import { supabase } from "@/integrations/supabase/client";
 import type { UnitDef } from "./juniorHub/types";
 import type { QuizQuestion } from "./juniorHub/types";
 
@@ -162,8 +163,8 @@ function grammarItem(q: UnitQuestion): FinalQuizItem {
   };
 }
 
-/** 听力 3 题:内联单句题,题干提示 + audio 供 TTS 播放。 */
-function listeningItems(unit: UnitDef): FinalQuizItem[] {
+/** 听力 3 题(内联回退):单句题,题干提示 + audio 供 TTS 播放。 */
+function inlineListening(unit: UnitDef): FinalQuizItem[] {
   return shuffleArray([...unit.listeningQuestions])
     .slice(0, LISTENING_N)
     .map((lq) => ({
@@ -175,6 +176,85 @@ function listeningItems(unit: UnitDef): FinalQuizItem[] {
       point: "听力",
       dim: "listening" as const,
     }));
+}
+
+const LETTER_TO_IDX: Record<string, number> = { A: 0, B: 1, C: 2, D: 3 };
+
+type ListeningRow = {
+  difficulty: number;
+  kind: string;
+  audio_text: string;
+  question: string;
+  options: unknown;
+  answer: string;
+  explanation: string | null;
+};
+
+/** DB 行 → FinalQuizItem(answer 字母→下标;options jsonb→数组)。 */
+function dbListeningItem(r: ListeningRow): FinalQuizItem {
+  const opts = Array.isArray(r.options) ? (r.options as string[]) : [];
+  const idx = LETTER_TO_IDX[String(r.answer).trim().toUpperCase()] ?? 0;
+  return {
+    kind: "listening",
+    q: r.question,
+    opts,
+    answer: idx >= 0 && idx < opts.length ? idx : 0,
+    audio: r.audio_text,
+    explanation: r.explanation || undefined,
+    point: "听力",
+    dim: "listening",
+  };
+}
+
+/**
+ * 从 junior_listening_items 抽 3 题:难度 1/2/3 各 1(易中难搭配);某档缺则从其余补。
+ * 返回少于 LISTENING_N 时(题库不足)由调用层回退内联。
+ */
+async function loadListeningItems(grade: number, volume: string, unit: string): Promise<FinalQuizItem[]> {
+  const { data } = await supabase
+    .from("junior_listening_items")
+    .select("difficulty,kind,audio_text,question,options,answer,explanation")
+    .eq("grade", grade)
+    .eq("volume", volume)
+    .eq("unit", unit);
+  const rows = (data ?? []) as ListeningRow[];
+  if (!rows.length) return [];
+  const byD: Record<number, ListeningRow[]> = { 1: [], 2: [], 3: [] };
+  for (const r of rows) (byD[r.difficulty] ?? (byD[r.difficulty] = [])).push(r);
+  const picked: ListeningRow[] = [];
+  const used = new Set<ListeningRow>();
+  // ① 易中难各取 1
+  for (const d of [1, 2, 3]) {
+    const arr = shuffleArray(byD[d] ?? []);
+    if (arr.length) {
+      picked.push(arr[0]);
+      used.add(arr[0]);
+    }
+  }
+  // ② 不足 3 → 从剩余补足
+  if (picked.length < LISTENING_N) {
+    for (const r of shuffleArray(rows)) {
+      if (picked.length >= LISTENING_N) break;
+      if (!used.has(r)) {
+        picked.push(r);
+        used.add(r);
+      }
+    }
+  }
+  return shuffleArray(picked).slice(0, LISTENING_N).map(dbListeningItem);
+}
+
+/**
+ * 听力 3 题来源:⚠️第一步只接 7B U1 从 junior_listening_items 抽;其余单元走内联回退。
+ * DB 取到 < 3 题(题库不足)也回退内联,保证够 3 题、不破坏别的单元。
+ */
+async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
+  if (unit.book === "7B" && unit.unitKey === "U1") {
+    const grade = parseInt(unit.book, 10) || 7; // '7B' → 7
+    const fromDb = await loadListeningItems(grade, unit.book, unit.unitKey);
+    if (fromDb.length >= LISTENING_N) return fromDb;
+  }
+  return inlineListening(unit);
 }
 
 /** 词汇 2 题:从本单元词表生成 英↔中 MCQ(交替方向),3 个同单元干扰项。 */
@@ -239,6 +319,7 @@ export async function buildFinalQuiz(unit: UnitDef): Promise<FinalQuizItem[] | n
   const grammar = pickGrammar(pool, points, quota, weakKp, wrongQ, GRAMMAR_N).map(grammarItem);
   if (!grammar.length) return null;
 
-  const items = [...grammar, ...listeningItems(unit), ...vocabItems(unit)].map(shuffleOpts);
+  const listening = await listeningItemsForUnit(unit);
+  const items = [...grammar, ...listening, ...vocabItems(unit)].map(shuffleOpts);
   return shuffleArray(items);
 }

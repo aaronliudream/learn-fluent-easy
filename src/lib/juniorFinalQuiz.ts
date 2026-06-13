@@ -245,11 +245,11 @@ async function loadListeningItems(grade: number, volume: string, unit: string): 
 }
 
 /**
- * 听力 3 题来源:⚠️第一步只接 7B U1 从 junior_listening_items 抽;其余单元走内联回退。
+ * 听力 3 题来源:7B 全 8 单元从 junior_listening_items 抽(题库已全覆盖);其余年级走内联回退。
  * DB 取到 < 3 题(题库不足)也回退内联,保证够 3 题、不破坏别的单元。
  */
 async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
-  if (unit.book === "7B" && unit.unitKey === "U1") {
+  if (unit.book === "7B") {
     const grade = parseInt(unit.book, 10) || 7; // '7B' → 7
     const fromDb = await loadListeningItems(grade, unit.book, unit.unitKey);
     if (fromDb.length >= LISTENING_N) return fromDb;

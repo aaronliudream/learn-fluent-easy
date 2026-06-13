@@ -1449,9 +1449,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     return shuffleArray([...unit.quizQuestions]).slice(0, 10);
   }, [unit]);
 
-  // ⚠️ 第一步:自适应单元综合测验只接 7B U1 验证全链路;其余单元仍走内联 quizQuestions。
-  // 验证通过后把这里扩成 7B 全 8 单元(改判断条件即可)。
-  const adaptiveFinalUnit = !!unit && unit.book === "7B" && unit.unitKey === "U1";
+  // 自适应单元综合测验:7B 全 8 单元(语法/听力/词汇均有数据)。
+  // 其余年级(7A/Starter/8/9, book≠'7B')仍走内联 quizQuestions;空池/失败也回退内联。
+  const adaptiveFinalUnit = !!unit && unit.book === "7B";
   // undefined = 加载中;null = 用内联回退;数组 = 自适应题目。
   const [finalAdaptive, setFinalAdaptive] = useState<FinalQuizItem[] | null | undefined>(undefined);
   useEffect(() => {

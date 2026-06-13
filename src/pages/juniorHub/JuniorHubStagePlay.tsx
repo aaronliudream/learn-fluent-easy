@@ -1370,8 +1370,8 @@ function writingPromptId(unit: UnitDef): string {
 
 function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number; onFinish: () => void }) {
   const w = unit.writing;
-  // ⚠️ 第一步:真写作(AI批改)只接 7B U1 验证;其余单元/年级保持原"水关"逻辑不变。
-  const realWriting = unit.book === "7B" && unit.unitKey === "U1";
+  // 真写作(AI批改):7B 全 8 单元(内联 writing prompt 均就绪);其余年级(7A/Starter/8/9)走原"水关"逻辑不变。
+  const realWriting = unit.book === "7B";
   // hooks 必须无条件先执行(放在任何 early-return 之前)。
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);

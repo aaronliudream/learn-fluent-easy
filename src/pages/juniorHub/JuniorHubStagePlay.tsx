@@ -13,6 +13,8 @@ import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
+import { buildFinalQuiz, type FinalQuizItem } from "@/lib/juniorFinalQuiz";
+import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 
 type Props = {
   unitId: string;
@@ -621,16 +623,20 @@ function FinalQuizStage({
   questions,
   unitId,
   unitTitle,
+  grade,
   onFinish,
   onCorrect,
   onWrong,
+  onAnswered,
 }: {
-  questions: QuizQuestion[];
+  questions: FinalQuizItem[];
   unitId: string;
   unitTitle: string;
+  grade?: number;
   onFinish: () => void;
   onCorrect: () => void;
-  onWrong: (q: QuizQuestion) => void;
+  onWrong: (q: FinalQuizItem) => void;
+  onAnswered?: (q: FinalQuizItem, isCorrect: boolean) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
@@ -645,14 +651,21 @@ function FinalQuizStage({
     setAnswered(true);
     setPicked(optIdx);
     const isCorrect = optIdx === q.answer;
+    onAnswered?.(q, isCorrect);
     if (isCorrect) {
       onCorrect();
-      setFeedback(<div className="feedback-box success">✨ 答对了！</div>);
+      setFeedback(
+        <div className="feedback-box success">
+          ✨ 答对了！
+          {q.explanation && <div className="mt-1 text-xs font-normal text-[#5C5751]">{q.explanation}</div>}
+        </div>,
+      );
     } else {
-      onWrong({ ...q, unitId, unitTitle });
+      onWrong({ ...q, unitTitle });
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
+          {q.explanation && <div className="mt-1 text-xs font-normal text-[#5C5751]">{q.explanation}</div>}
         </div>,
       );
     }
@@ -689,6 +702,15 @@ function FinalQuizStage({
         )}
       </div>
       <div className="mb-4 text-base font-semibold leading-relaxed">{q.q}</div>
+      {q.kind === "listening" && q.audio && (
+        <button
+          type="button"
+          onClick={() => hubSpeak(q.audio!, 0.8, grade)}
+          className="mb-4 inline-flex items-center gap-2 rounded-xl bg-[#FFE9AD] px-4 py-2 text-sm font-bold text-[#854F0B] active:scale-95"
+        >
+          🔊 播放句子
+        </button>
+      )}
       <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />
       {feedback}
       {answered && (
@@ -1427,6 +1449,31 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     return shuffleArray([...unit.quizQuestions]).slice(0, 10);
   }, [unit]);
 
+  // ⚠️ 第一步:自适应单元综合测验只接 7B U1 验证全链路;其余单元仍走内联 quizQuestions。
+  // 验证通过后把这里扩成 7B 全 8 单元(改判断条件即可)。
+  const adaptiveFinalUnit = !!unit && unit.book === "7B" && unit.unitKey === "U1";
+  // undefined = 加载中;null = 用内联回退;数组 = 自适应题目。
+  const [finalAdaptive, setFinalAdaptive] = useState<FinalQuizItem[] | null | undefined>(undefined);
+  useEffect(() => {
+    if (!unit || stage?.type !== "finalQuiz" || !adaptiveFinalUnit) {
+      setFinalAdaptive(null); // 非自适应单元/非本关 → 直接走内联回退
+      return;
+    }
+    let cancelled = false;
+    setFinalAdaptive(undefined);
+    buildFinalQuiz(unit)
+      .then((items) => {
+        if (!cancelled) setFinalAdaptive(items); // items 为 null(空池)时也回退内联
+      })
+      .catch((e) => {
+        console.error("[finalQuiz] buildFinalQuiz", e);
+        if (!cancelled) setFinalAdaptive(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [unit, stage?.type, adaptiveFinalUnit]);
+
   if (!unit || !stage) return null;
 
   const stageBody = (() => {
@@ -1527,17 +1574,41 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
         );
       case "writing":
         return <WritingStage unit={unit} onFinish={handleFinish} />;
-      case "finalQuiz":
-        // 数据源 unit.quizQuestions;空时走兜底,不挂载 FinalQuizStage。
-        if (finalQuizQuestions.length === 0)
+      case "finalQuiz": {
+        // 自适应单元(本期仅7B U1):加载中显示提示;失败/空池 finalAdaptive=null → 回退内联。
+        if (adaptiveFinalUnit && finalAdaptive === undefined)
+          return (
+            <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">
+              正在为你组卷…
+            </div>
+          );
+        // finalAdaptive 为数组用自适应,否则回退内联 quizQuestions。
+        const finalItems: FinalQuizItem[] =
+          finalAdaptive && finalAdaptive.length > 0
+            ? finalAdaptive
+            : (finalQuizQuestions as FinalQuizItem[]);
+        if (finalItems.length === 0)
           return <EmptyStageNotice onContinue={handleFinish} />;
         return (
           <FinalQuizStage
-            questions={finalQuizQuestions}
+            questions={finalItems}
             unitId={unitId}
             unitTitle={unit.title}
+            grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
+            onAnswered={(item, isCorrect) => {
+              // 语法题写 junior_user_mastery(和语法专区/错题复习同步);听力/词汇不写。
+              if (item.kind === "grammar" && item.pointId) {
+                recordJuniorGrammarAttempt({
+                  pointId: item.pointId,
+                  kpId: item.kpId ?? undefined,
+                  questionId: item.questionId,
+                  questionType: "mcq",
+                  isCorrect,
+                }).catch(() => {});
+              }
+            }}
             onWrong={(q) =>
               addMistake({
                 q: q.q,
@@ -1550,6 +1621,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             }
           />
         );
+      }
       default:
         return null;
     }

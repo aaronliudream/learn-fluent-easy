@@ -1357,6 +1357,7 @@ type WritingResult = {
   mistakes: { original: string; corrected: string; explanation: string }[];
   suggestions: string[];
   improved: string;
+  model_essay?: string; // 独立优秀范文(向后兼容:旧后端无此字段则为空)
 };
 
 /** 单元写作关合成 prompt_id(无FK,稳定可复现):按 book+unitKey 派生 uuid,用于 attempts 存档/掌握度。 */
@@ -1528,8 +1529,19 @@ function WritingStage({ unit, grade, onFinish }: { unit: UnitDef; grade: number;
           )}
           {result.improved && (
             <div className="rounded-2xl border bg-card p-3">
-              <div className="text-sm font-extrabold">⭐ AI 改写范文</div>
+              <div className="text-sm font-extrabold">⭐ AI 改写范文（你这篇修好的样子）</div>
               <div className="mt-2 whitespace-pre-wrap text-sm leading-relaxed">{result.improved}</div>
+            </div>
+          )}
+          {result.model_essay && (
+            <div className="rounded-2xl border border-sky-200 bg-sky-50 p-3 dark:border-sky-900/40 dark:bg-sky-950/20">
+              <div className="text-sm font-extrabold text-sky-700 dark:text-sky-300">📖 优秀范文（参考）</div>
+              <p className="mt-1 text-[11px] text-sky-700/80 dark:text-sky-400/80">
+                这是一篇同题目的参考范文，学学里面的表达和句式，下次试着用上 💪
+              </p>
+              <div className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-sky-950 dark:text-sky-100">
+                {result.model_essay}
+              </div>
             </div>
           )}
           <PrimaryButton onClick={onFinish}>完成写作关 →</PrimaryButton>

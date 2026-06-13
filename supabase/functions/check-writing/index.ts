@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
     const feedbackLanguage = targetLanguage || "Chinese";
     const system = `You are a patient, professional English teacher. Give feedback in ${feedbackLanguage}, with a friendly and encouraging tone. Keep original/corrected/improved English text in English. Strictly return only the JSON Schema result, with no extra text.`;
 
-    const userMsg = `Lesson topic: ${lessonTitle ?? "(not provided)"}\nWriting prompt (English): ${prompt}\nPrompt helper text: ${promptCn ?? ""}\nReference sample: ${sample ?? "(none)"}\n\nStudent English writing:\n"""\n${text}\n"""\n\nTasks:\n1. Give an overall score from 0-100 (score).\n2. Give one overall comment in ${feedbackLanguage} (overall).\n3. List concrete mistakes (mistakes). Each item includes original and corrected in English, and explanation in ${feedbackLanguage}.\n4. Give 2-3 suggestions in ${feedbackLanguage}.\n5. Provide a polished full version in English (improved).\nIf there are no obvious mistakes, mistakes can be an empty array.`;
+    const userMsg = `Lesson topic: ${lessonTitle ?? "(not provided)"}\nWriting prompt (English): ${prompt}\nPrompt helper text: ${promptCn ?? ""}\nReference sample: ${sample ?? "(none)"}\n\nStudent English writing:\n"""\n${text}\n"""\n\nTasks:\n1. Give an overall score from 0-100 (score).\n2. Give one overall comment in ${feedbackLanguage} (overall).\n3. List concrete mistakes (mistakes). Each item includes original and corrected in English, and explanation in ${feedbackLanguage}.\n4. Give 2-3 suggestions in ${feedbackLanguage}.\n5. Provide a polished full version of THE STUDENT'S OWN text in English (improved) — keep the student's ideas and structure, just fix errors and smooth the wording.\n6. Provide a model essay (model_essay) for this topic — an excellent piece written INDEPENDENTLY for the prompt, NOT based on the student's text. Requirements for model_essay:\n   - Level: a strong junior high school student (around CEFR A2-B1). Do NOT write at university or native-adult level — keep it imitable.\n   - "A step up they can reach": slightly above the student, with richer sentence patterns and more idiomatic expression, but still easy for a junior high student to learn from and imitate.\n   - Cover the prompt's key points, and naturally use the target grammar/vocabulary of this lesson (see lesson topic).\n   - Moderate length appropriate for a junior high composition (do not make it too long).\n   - Tone: this is a reference for imitation and encouragement, not for comparison.\nIf there are no obvious mistakes, mistakes can be an empty array.`;
 
     const tool = {
       type: "function",
@@ -66,8 +66,9 @@ Deno.serve(async (req) => {
             },
             suggestions: { type: "array", items: { type: "string" } },
             improved: { type: "string" },
+            model_essay: { type: "string" },
           },
-          required: ["score", "overall", "mistakes", "suggestions", "improved"],
+          required: ["score", "overall", "mistakes", "suggestions", "improved", "model_essay"],
           additionalProperties: false,
         },
       },

@@ -194,7 +194,7 @@ function VocabStage({
   useEffect(() => {
     prefetchTTSBatchKid(
       vocabulary.map((v) => v.en),
-      { grade },
+      { grade, speed: 0.85 },
     );
   }, [grade, vocabulary]);
 
@@ -357,7 +357,7 @@ function ListenMcStage({
   useEffect(() => {
     prefetchTTSBatchKid(
       questions.map((item) => item.audio),
-      { grade },
+      { grade, speed: 0.8 },
     );
   }, [grade, questions]);
 

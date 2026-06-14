@@ -22,6 +22,7 @@ import {
 "@/lib/vocabMastery";
 import type { MasteryMatrix } from "@/lib/masteryScore";
 import { juniorKindFromQuizKind, recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { canonSpelling } from "@/lib/spellingVariants";
 
 export interface GuidedVocab {
   id: string;
@@ -490,7 +491,7 @@ function SpellStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => vo
 
   function submit() {
     if (checked !== null || !input.trim()) return;
-    const ok = input.trim().toLowerCase() === target.toLowerCase();
+    const ok = canonSpelling(input) === canonSpelling(target);
     setChecked(ok);
     setTimeout(() => onAnswer(ok), ok ? 600 : 1300);
   }
@@ -565,7 +566,9 @@ function ClozeStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => vo
 
   function submit() {
     if (checked !== null || !input.trim()) return;
-    const ok = input.trim().toLowerCase() === answer.toLowerCase();
+    // 放宽:命中例句变形(answer)或原形(target)任一即算对,叠英美变体容错
+    const got = canonSpelling(input);
+    const ok = got === canonSpelling(answer) || got === canonSpelling(target);
     setChecked(ok);
     setTimeout(() => onAnswer(ok), ok ? 700 : 1500);
   }

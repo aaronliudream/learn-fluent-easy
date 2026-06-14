@@ -187,7 +187,7 @@ export default function JuniorVocab() {
       />
     );
   }
-  if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
+  if (mode === "bento") return <WordBento pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;

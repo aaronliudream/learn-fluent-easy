@@ -39,7 +39,8 @@ export function useJuniorVocabMastery(gradeNum: number): JuniorVocabMasteryState
       setLoading(true);
       const { data: { user } } = await supabase.auth.getUser();
       if (cancelled) return;
-      if (!user) {
+      if (!user || !gradeNum) {
+        // 未登录,或调用方未启用(如高考便当不传 grade)→ 不查表
         setAuthed(false);
         setConsec(new Map());
         setLoading(false);

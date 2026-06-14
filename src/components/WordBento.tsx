@@ -6,6 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { awardCoins, unlockBadge, BADGE_CATALOG, type BadgeDef } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import GameLeaderboard from "@/components/GameLeaderboard";
+import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { useJuniorVocabMastery, MASTER_STREAK } from "@/hooks/useJuniorVocabMastery";
 
 /* ============================================================
    Word Bento 单词便当
@@ -94,11 +96,26 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
 
 export default function WordBento({
   pool,
-  onExit
+  onExit,
+  gradeNum
+}: {pool: Vocab[];onExit: () => void;gradeNum?: number;}) {
+  // 掌握度(便当 bento 连对2次=掌握,独立)。仅初中传 gradeNum 时启用;高考不传=原样。
+  const juniorEnabled = typeof gradeNum === "number" && gradeNum > 0;
+  const { authed, consec } = useJuniorVocabMastery(gradeNum ?? 0);
+  const usableAll = useMemo(() => pool.filter((v) => v.word && v.meaning_cn), [pool]);
+  const total = usableAll.length;
+  const [localBento, setLocalBento] = useState<Map<string, number>>(new Map());
+  useEffect(() => {
+    if (!juniorEnabled) return;
+    const m = new Map<string, number>();
+    consec.forEach((c, id) => { if (c.bento) m.set(id, c.bento); });
+    setLocalBento(m);
+  }, [juniorEnabled, consec]);
+  const masteredCount = juniorEnabled
+    ? usableAll.reduce((n, v) => n + (((localBento.get(v.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0)
+    : 0;
+  const [batchStartMastered, setBatchStartMastered] = useState(0);
 
-
-
-}: {pool: Vocab[];onExit: () => void;}) {
   const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
 
   // Game state
@@ -141,7 +158,16 @@ export default function WordBento({
         synth.speak(warm);
       }
     } catch {/* ignore */}
-    const sequence = shuffle(usable).slice(0, TOTAL_PAIRS);
+    let sequence: Vocab[];
+    if (juniorEnabled) {
+      // 优先未掌握(bento_consec<2),不足用已掌握补满
+      const unmastered = usable.filter((v) => (localBento.get(v.id) ?? 0) < MASTER_STREAK);
+      const mastered = usable.filter((v) => (localBento.get(v.id) ?? 0) >= MASTER_STREAK);
+      sequence = [...shuffle(unmastered), ...shuffle(mastered)].slice(0, TOTAL_PAIRS);
+      setBatchStartMastered(usable.reduce((n, v) => n + (((localBento.get(v.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0));
+    } else {
+      sequence = shuffle(usable).slice(0, TOTAL_PAIRS);
+    }
     const initialPairs = sequence.slice(0, VISIBLE_PAIRS);
     const remainder = sequence.slice(VISIBLE_PAIRS);
     const initialCards = shuffle(initialPairs.flatMap(makeCardsFromVocab));
@@ -201,6 +227,15 @@ export default function WordBento({
       const gained = Math.round(BASE_POINT * comboMultiplier(newCombo));
       setScore((s) => s + gained);
       setPicked(null);
+      // 掌握度:配对成功 = 该词答对一次,bento_consec +1(便当无单词级"答错",故不清零)
+      if (juniorEnabled && gradeNum) {
+        setLocalBento((prev) => {
+          const m = new Map(prev);
+          m.set(card.pairId, (prev.get(card.pairId) ?? 0) + 1);
+          return m;
+        });
+        void recordJuniorWordMastery({ wordId: card.pairId, grade: gradeNum, kind: "bento", isCorrect: true });
+      }
 
       // After 350ms, replace the two matched cards with a new pair from the queue (or remove if queue empty)
       setTimeout(() => {
@@ -383,6 +418,12 @@ export default function WordBento({
               </div>
             </div>
             <div className="mt-3 text-sm text-muted-foreground"><T>准确率</T> {accuracy}%</div>
+            {juniorEnabled && authed &&
+            <p className="mt-2 text-sm font-bold text-emerald-600">本轮又掌握 {Math.max(0, masteredCount - batchStartMastered)} 个 · 还剩 {Math.max(0, total - masteredCount)} / {total}</p>
+            }
+            {juniorEnabled && authed && total - masteredCount === 0 &&
+            <p className="mt-1 text-sm font-bold text-amber-600">🎉 全部 {total} 词已掌握一遍！</p>
+            }
 
             {(mistakes === 0 || elapsed < 60_000) &&
             <div className="mt-4 flex flex-wrap justify-center gap-2">
@@ -440,13 +481,29 @@ export default function WordBento({
         </div>
       </div>
 
+      {/* 掌握进度(初中,登录) */}
+      {juniorEnabled && authed &&
+      <div className="mb-2">
+          <div className="mb-1 flex items-center justify-between text-[11px] font-bold text-muted-foreground">
+            <span>本游戏已掌握 {masteredCount} / {total}</span>
+            <span>还剩 {Math.max(0, total - masteredCount)}</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all" style={{ width: `${total ? Math.round(masteredCount / total * 100) : 0}%` }} />
+          </div>
+        </div>
+      }
+      {juniorEnabled && !authed &&
+      <div className="mb-2 rounded-lg border border-border/60 bg-muted/40 px-3 py-1.5 text-center text-[11px] text-muted-foreground">登录后可追踪掌握进度（连对 2 次掌握 · 已掌握的词不再重复出）</div>
+      }
+
       {/* Progress */}
       <div className="mb-3 flex items-center gap-2 text-xs text-muted-foreground">
         <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-muted">
           <div
             className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all duration-300"
             style={{ width: `${matchedPairs.size / TOTAL_PAIRS * 100}%` }} />
-          
+
         </div>
         <span className="tabular-nums">{matchedPairs.size}/{TOTAL_PAIRS}</span>
       </div>

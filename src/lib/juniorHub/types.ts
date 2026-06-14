@@ -1,6 +1,11 @@
 export type JuniorHubGrade = 7 | 8 | 9;
 
-export type VocabItem = { en: string; cn: string; emoji: string };
+export type VocabItem = {
+  en: string;
+  cn: string;
+  emoji?: string;
+  chunks?: { en: string; cn: string }[];
+};
 
 export type QuizQuestion = {
   q: string;

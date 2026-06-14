@@ -1431,147 +1431,508 @@
               {
                 "en": "make friends",
                 "cn": "交朋友",
-                "emoji": "🤝"
+                "chunks": [
+                  {
+                    "en": "make friends with him",
+                    "cn": "和他交朋友"
+                  },
+                  {
+                    "en": "make new friends",
+                    "cn": "结交新朋友"
+                  },
+                  {
+                    "en": "I want to make friends.",
+                    "cn": "我想交朋友。"
+                  }
+                ]
               },
               {
                 "en": "get to know",
                 "cn": "认识；了解",
-                "emoji": "🔍"
+                "chunks": [
+                  {
+                    "en": "get to know each other",
+                    "cn": "互相了解"
+                  },
+                  {
+                    "en": "get to know my classmates",
+                    "cn": "了解我的同学"
+                  },
+                  {
+                    "en": "I want to get to know you.",
+                    "cn": "我想了解你。"
+                  }
+                ]
               },
               {
                 "en": "full",
                 "cn": "完整的；满的",
-                "emoji": "🔋"
+                "chunks": [
+                  {
+                    "en": "my full name",
+                    "cn": "我的全名"
+                  },
+                  {
+                    "en": "a full sentence",
+                    "cn": "完整的句子"
+                  },
+                  {
+                    "en": "a full answer",
+                    "cn": "完整的回答"
+                  }
+                ]
               },
               {
                 "en": "full name",
                 "cn": "全名",
-                "emoji": "🪪"
+                "chunks": [
+                  {
+                    "en": "What's your full name?",
+                    "cn": "你的全名是什么?"
+                  },
+                  {
+                    "en": "My full name is Li Hua.",
+                    "cn": "我的全名叫李华。"
+                  },
+                  {
+                    "en": "write your full name",
+                    "cn": "写下你的全名"
+                  }
+                ]
               },
               {
                 "en": "grade",
                 "cn": "年级；等级",
-                "emoji": "🎓"
+                "chunks": [
+                  {
+                    "en": "in Grade Seven",
+                    "cn": "在七年级"
+                  },
+                  {
+                    "en": "What grade are you in?",
+                    "cn": "你在几年级?"
+                  },
+                  {
+                    "en": "I'm in Grade 7.",
+                    "cn": "我读七年级。"
+                  }
+                ]
               },
               {
                 "en": "last name",
                 "cn": "姓氏",
-                "emoji": "🏷️"
+                "chunks": [
+                  {
+                    "en": "What's your last name?",
+                    "cn": "你姓什么?"
+                  },
+                  {
+                    "en": "My last name is Wang.",
+                    "cn": "我姓王。"
+                  }
+                ]
               },
               {
                 "en": "classmate",
                 "cn": "同班同学",
-                "emoji": "🧑‍🤝‍🧑"
+                "chunks": [
+                  {
+                    "en": "my classmate",
+                    "cn": "我的同学"
+                  },
+                  {
+                    "en": "a new classmate",
+                    "cn": "一位新同学"
+                  },
+                  {
+                    "en": "He is my classmate.",
+                    "cn": "他是我同学。"
+                  }
+                ]
               },
               {
                 "en": "class teacher",
                 "cn": "班主任",
-                "emoji": "👩‍🏫"
+                "chunks": [
+                  {
+                    "en": "my class teacher",
+                    "cn": "我的班主任"
+                  },
+                  {
+                    "en": "Mr. Li is our class teacher.",
+                    "cn": "李老师是我们班主任。"
+                  }
+                ]
               },
               {
                 "en": "first name",
                 "cn": "名字",
-                "emoji": "🪪"
+                "chunks": [
+                  {
+                    "en": "What's your first name?",
+                    "cn": "你叫什么名字?"
+                  },
+                  {
+                    "en": "My first name is Tom.",
+                    "cn": "我名字叫汤姆。"
+                  }
+                ]
               },
               {
                 "en": "mistake",
                 "cn": "错误；失误",
-                "emoji": "❌"
+                "chunks": [
+                  {
+                    "en": "make a mistake",
+                    "cn": "犯错误"
+                  },
+                  {
+                    "en": "a small mistake",
+                    "cn": "一个小错误"
+                  },
+                  {
+                    "en": "Don't worry about mistakes.",
+                    "cn": "别担心犯错。"
+                  }
+                ]
               },
               {
                 "en": "country",
                 "cn": "国家",
-                "emoji": "🌍"
+                "chunks": [
+                  {
+                    "en": "which country",
+                    "cn": "哪个国家"
+                  },
+                  {
+                    "en": "What country are you from?",
+                    "cn": "你来自哪国?"
+                  },
+                  {
+                    "en": "my country",
+                    "cn": "我的国家"
+                  }
+                ]
               },
               {
                 "en": "same",
                 "cn": "相同的",
-                "emoji": "🟰"
+                "chunks": [
+                  {
+                    "en": "the same class",
+                    "cn": "同一个班"
+                  },
+                  {
+                    "en": "We are in the same grade.",
+                    "cn": "我们同年级。"
+                  },
+                  {
+                    "en": "the same as me",
+                    "cn": "和我一样"
+                  }
+                ]
               },
               {
                 "en": "twin",
                 "cn": "双胞胎之一",
-                "emoji": "👯"
+                "chunks": [
+                  {
+                    "en": "twin sister",
+                    "cn": "双胞胎姐妹"
+                  },
+                  {
+                    "en": "twin brother",
+                    "cn": "双胞胎兄弟"
+                  },
+                  {
+                    "en": "They are twins.",
+                    "cn": "他们是双胞胎。"
+                  }
+                ]
               },
               {
                 "en": "both",
                 "cn": "两个都",
-                "emoji": "✌️"
+                "chunks": [
+                  {
+                    "en": "both of us",
+                    "cn": "我们俩"
+                  },
+                  {
+                    "en": "We are both students.",
+                    "cn": "我们俩都是学生。"
+                  },
+                  {
+                    "en": "both boys",
+                    "cn": "两个男孩都"
+                  }
+                ]
               },
               {
                 "en": "band",
                 "cn": "乐队",
-                "emoji": "🎸"
+                "chunks": [
+                  {
+                    "en": "a school band",
+                    "cn": "校乐队"
+                  },
+                  {
+                    "en": "join a band",
+                    "cn": "加入乐队"
+                  },
+                  {
+                    "en": "my favourite band",
+                    "cn": "我最爱的乐队"
+                  }
+                ]
               },
               {
-                "en": "pot",
-                "cn": "锅",
-                "emoji": "🍲"
+                "en": "age",
+                "cn": "年龄",
+                "chunks": [
+                  {
+                    "en": "my age",
+                    "cn": "我的年龄"
+                  },
+                  {
+                    "en": "at the age of twelve",
+                    "cn": "在十二岁"
+                  },
+                  {
+                    "en": "We are the same age.",
+                    "cn": "我们同岁。"
+                  }
+                ]
               },
               {
                 "en": "a lot",
                 "cn": "很；非常",
-                "emoji": "💯"
+                "chunks": [
+                  {
+                    "en": "a lot of friends",
+                    "cn": "很多朋友"
+                  },
+                  {
+                    "en": "thanks a lot",
+                    "cn": "多谢"
+                  },
+                  {
+                    "en": "like it a lot",
+                    "cn": "非常喜欢"
+                  }
+                ]
               },
               {
-                "en": "tofu",
-                "cn": "豆腐",
-                "emoji": "🧈"
+                "en": "pet",
+                "cn": "宠物",
+                "chunks": [
+                  {
+                    "en": "my pet",
+                    "cn": "我的宠物"
+                  },
+                  {
+                    "en": "a pet parrot",
+                    "cn": "一只宠物鹦鹉"
+                  },
+                  {
+                    "en": "Do you have a pet?",
+                    "cn": "你养宠物吗?"
+                  }
+                ]
               },
               {
                 "en": "parrot",
                 "cn": "鹦鹉",
-                "emoji": "🦜"
+                "chunks": [
+                  {
+                    "en": "a green parrot",
+                    "cn": "一只绿鹦鹉"
+                  },
+                  {
+                    "en": "have a parrot",
+                    "cn": "养鹦鹉"
+                  },
+                  {
+                    "en": "My parrot can talk.",
+                    "cn": "我的鹦鹉会说话。"
+                  }
+                ]
               },
               {
                 "en": "guitar",
                 "cn": "吉他",
-                "emoji": "🎸"
+                "chunks": [
+                  {
+                    "en": "play the guitar",
+                    "cn": "弹吉他"
+                  },
+                  {
+                    "en": "a new guitar",
+                    "cn": "一把新吉他"
+                  },
+                  {
+                    "en": "I have a guitar.",
+                    "cn": "我有吉他。"
+                  }
+                ]
               },
               {
                 "en": "tennis",
                 "cn": "网球",
-                "emoji": "🎾"
+                "chunks": [
+                  {
+                    "en": "play tennis",
+                    "cn": "打网球"
+                  },
+                  {
+                    "en": "a tennis ball",
+                    "cn": "一个网球"
+                  },
+                  {
+                    "en": "I like tennis.",
+                    "cn": "我喜欢网球。"
+                  }
+                ]
               },
               {
                 "en": "page",
                 "cn": "页",
-                "emoji": "📄"
+                "chunks": [
+                  {
+                    "en": "on page ten",
+                    "cn": "在第十页"
+                  },
+                  {
+                    "en": "the first page",
+                    "cn": "第一页"
+                  },
+                  {
+                    "en": "open to page five",
+                    "cn": "翻到第五页"
+                  }
+                ]
               },
               {
                 "en": "even",
                 "cn": "甚至；连",
-                "emoji": "➕"
+                "chunks": [
+                  {
+                    "en": "even better",
+                    "cn": "甚至更好"
+                  },
+                  {
+                    "en": "He can even sing.",
+                    "cn": "他甚至会唱歌。"
+                  },
+                  {
+                    "en": "even me",
+                    "cn": "甚至连我"
+                  }
+                ]
               },
               {
                 "en": "hey",
                 "cn": "嘿",
-                "emoji": "🙋"
+                "chunks": [
+                  {
+                    "en": "Hey, how are you?",
+                    "cn": "嘿,你好吗?"
+                  },
+                  {
+                    "en": "Hey, look!",
+                    "cn": "嘿,看!"
+                  },
+                  {
+                    "en": "Hey, this is Tom.",
+                    "cn": "嘿,这是汤姆。"
+                  }
+                ]
               },
               {
                 "en": "play the guitar",
                 "cn": "弹吉他",
-                "emoji": "🎸"
+                "chunks": [
+                  {
+                    "en": "play the guitar well",
+                    "cn": "吉他弹得好"
+                  },
+                  {
+                    "en": "learn to play the guitar",
+                    "cn": "学弹吉他"
+                  },
+                  {
+                    "en": "I can play the guitar.",
+                    "cn": "我会弹吉他。"
+                  }
+                ]
               },
               {
                 "en": "would",
                 "cn": "想；将会",
-                "emoji": "💭"
+                "chunks": [
+                  {
+                    "en": "I would like a book.",
+                    "cn": "我想要本书。"
+                  },
+                  {
+                    "en": "Would you like some tea?",
+                    "cn": "喝点茶吗?"
+                  }
+                ]
               },
               {
                 "en": "would like to",
                 "cn": "愿意；喜欢",
-                "emoji": "💝"
+                "chunks": [
+                  {
+                    "en": "I would like to be your friend.",
+                    "cn": "我想做你朋友。"
+                  },
+                  {
+                    "en": "Would you like to come?",
+                    "cn": "你想来吗?"
+                  },
+                  {
+                    "en": "would like to know",
+                    "cn": "想知道"
+                  }
+                ]
               },
               {
                 "en": "information",
                 "cn": "信息；消息",
-                "emoji": "ℹ️"
+                "chunks": [
+                  {
+                    "en": "some information",
+                    "cn": "一些信息"
+                  },
+                  {
+                    "en": "your information",
+                    "cn": "你的信息"
+                  },
+                  {
+                    "en": "much information",
+                    "cn": "很多信息"
+                  }
+                ]
               },
               {
                 "en": "hobby",
                 "cn": "业余爱好",
-                "emoji": "🎨"
+                "chunks": [
+                  {
+                    "en": "my hobby",
+                    "cn": "我的爱好"
+                  },
+                  {
+                    "en": "What's your hobby?",
+                    "cn": "你爱好是什么?"
+                  },
+                  {
+                    "en": "have a hobby",
+                    "cn": "有个爱好"
+                  }
+                ]
               }
             ],
             "dialogues": [],

@@ -238,7 +238,7 @@ function VocabStage({
             >
               {!isFlipped ? (
                 <>
-                  <div className="text-2xl">{v.emoji}</div>
+                  {v.emoji && <div className="text-2xl">{v.emoji}</div>}
                   <div className="mt-1 text-sm font-semibold">{v.en}</div>
                   <span
                     role="button"
@@ -260,9 +260,39 @@ function VocabStage({
                 </>
               ) : (
                 <>
-                  <div className="text-2xl">{v.emoji}</div>
+                  {v.emoji && <div className="text-2xl">{v.emoji}</div>}
                   <div className="mt-1 text-sm font-bold text-[#FF6B35]">{v.cn}</div>
                   <div className="mt-1 text-xs text-[#888780]">{v.en}</div>
+                  {v.chunks && v.chunks.length > 0 && (
+                    <div className="mt-2 space-y-1">
+                      {v.chunks.map((c, ci) => (
+                        <div
+                          key={ci}
+                          className="flex items-center gap-1 rounded-lg bg-[#F2F6FF] px-2 py-1 text-left"
+                        >
+                          <span className="text-xs font-medium text-[#185FA5]">{c.en}</span>
+                          <span className="text-[10px] text-[#888780]">{c.cn}</span>
+                          <span
+                            role="button"
+                            tabIndex={0}
+                            className="ml-auto cursor-pointer text-xs"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              speakWord(c.en);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.stopPropagation();
+                                speakWord(c.en);
+                              }
+                            }}
+                          >
+                            🔊
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <span
                     role="button"
                     tabIndex={0}
@@ -567,7 +597,7 @@ function WriteStage({
       {vocabulary.map((v, i) => (
         <div key={v.en} className="mb-4 border-b border-[#F4F0E6] pb-4 last:border-0">
           <div className="mb-2 flex items-center gap-2">
-            <span className="text-2xl">{v.emoji}</span>
+            {v.emoji && <span className="text-2xl">{v.emoji}</span>}
             <span className="flex-1 text-sm font-semibold">{v.cn}</span>
             <button
               type="button"

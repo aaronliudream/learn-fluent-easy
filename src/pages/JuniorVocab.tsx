@@ -1,4 +1,4 @@
-import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
@@ -20,6 +20,7 @@ import { toast } from "sonner";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { useJuniorVocabMastery, MASTER_STREAK } from "@/hooks/useJuniorVocabMastery";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
 
@@ -517,10 +518,51 @@ function shuffle<T>(arr: T[]): T[] {
 function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
-  const queue = useMemo(() => shuffle(pool).slice(0, 20), [pool]);
+  const BATCH = 20;
+
+  // 掌握度(智能选义 quiz 连对2次=掌握,独立);登录加载,游客为空。
+  const { loading: masteryLoading, authed, consec } = useJuniorVocabMastery(gradeNum);
+  const valid = useMemo(() => pool.filter((w) => w.word && meaningForUi(w, zh)), [pool, zh]);
+  const total = valid.length;
+
+  // 本会话本地连对(镜像 DB,答题即时刷新进度)
+  const [localQuiz, setLocalQuiz] = useState<Map<string, number>>(new Map());
+  const [seeded, setSeeded] = useState(false);
+  useEffect(() => {
+    if (masteryLoading) return;
+    const m = new Map<string, number>();
+    consec.forEach((c, id) => { if (c.quiz) m.set(id, c.quiz); });
+    setLocalQuiz(m);
+    setSeeded(true);
+  }, [masteryLoading, consec]);
+
+  const masteredCount = useMemo(
+    () => valid.reduce((n, w) => n + (((localQuiz.get(w.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0),
+    [valid, localQuiz],
+  );
+
+  const buildBatch = useCallback((mastery: Map<string, number>): Vocab[] => {
+    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
+    if (unmastered.length >= BATCH) return shuffle(unmastered).slice(0, BATCH);
+    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
+    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
+  }, [valid]);
+
+  const [queue, setQueue] = useState<Vocab[]>([]);
+  const [batchStartMastered, setBatchStartMastered] = useState(0);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const startedRef = useRef(false);
+
+  // 首批:掌握度就绪后只构建一次(优先未掌握词)
+  useEffect(() => {
+    if (!seeded || startedRef.current || valid.length === 0) return;
+    startedRef.current = true;
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localQuiz));
+  }, [seeded, valid.length, buildBatch, localQuiz, masteredCount]);
+
   const cur = queue[idx];
 
   const options = useMemo(() => {
@@ -531,7 +573,25 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     return shuffle([meaningForUi(cur, zh), ...distractors]);
   }, [cur, pool, zh]);
 
-  if (!cur && queue.length === 0) {
+  const nextRound = () => {
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localQuiz));
+    setIdx(0);
+    setPicked(null);
+    setScore({ correct: 0, total: 0 });
+  };
+
+  if (masteryLoading || !seeded) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (valid.length === 0) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -542,7 +602,17 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
 
   }
 
-  if (idx >= queue.length && queue.length > 0) {
+  if (queue.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (queue.length > 0 && idx >= queue.length) {
     const pct = Math.round(score.correct / Math.max(1, score.total) * 100);
     if (typeof window !== "undefined" && !(queue as any).__rewarded) {
       (queue as any).__rewarded = true;
@@ -550,19 +620,28 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
       awardCoins(bonus, "junior_vocab_finish").catch(() => {});
       celebrateScore(pct);
     }
+    const justMastered = Math.max(0, masteredCount - batchStartMastered);
+    const remaining = Math.max(0, total - masteredCount);
+    const allMastered = authed && remaining === 0;
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
           <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? zh ? "🌟 太棒了！" : "🌟 Great work!" : pct >= 70 ? zh ? "👍 不错！" : "👍 Nice job!" : zh ? "💪 继续加油！" : "💪 Keep going!"}</h3>
           <p className="mt-1 text-sm text-muted-foreground">{zh ? `答对 ${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
+          {authed && (
+            <p className="mt-1 text-sm font-bold text-emerald-600">{zh ? `本轮又掌握 ${justMastered} 个 · 还剩 ${remaining} / ${total}` : `+${justMastered} mastered · ${remaining} / ${total} left`}</p>
+          )}
+          {allMastered && (
+            <p className="mt-2 text-sm font-bold text-amber-600">{zh ? `🎉 全部 ${total} 词已掌握一遍！` : `🎉 All ${total} words mastered!`}</p>
+          )}
           <div className="mt-4 flex justify-center gap-3">
             <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
             <button
-              onClick={() => {(queue as any).__rewarded = false;setIdx(0);setPicked(null);setScore({ correct: 0, total: 0 });}}
+              onClick={nextRound}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">
-              
-              <RotateCw className="size-4" /> {zh ? "再来一组" : "Try another set"}
+
+              <RotateCw className="size-4" /> {allMastered ? zh ? "再复习一组" : "Review again" : zh ? "继续下一轮" : "Next round"}
             </button>
           </div>
         </div>
@@ -574,6 +653,12 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     if (picked) return;
     setPicked(m);
     const correct = m === meaningForUi(cur, zh);
+    // 本地连对镜像:答对 +1 / 答错清零(进度即时刷新,与 DB 写入一致)
+    setLocalQuiz((prev) => {
+      const next = new Map(prev);
+      next.set(cur.id, correct ? (prev.get(cur.id) ?? 0) + 1 : 0);
+      return next;
+    });
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});else
@@ -620,6 +705,21 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
+      {authed ? (
+        <div className="mb-4">
+          <div className="mb-1 flex items-center justify-between text-xs font-bold text-muted-foreground">
+            <span>{zh ? `本游戏已掌握 ${masteredCount} / ${total}` : `Mastered ${masteredCount} / ${total}`}</span>
+            <span>{zh ? `还剩 ${Math.max(0, total - masteredCount)}` : `${Math.max(0, total - masteredCount)} left`}</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all" style={{ width: `${total ? Math.round((masteredCount / total) * 100) : 0}%` }} />
+          </div>
+        </div>
+      ) : (
+        <div className="mb-4 rounded-xl border border-border/60 bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">
+          {zh ? "登录后可追踪掌握进度（连对 2 次掌握 · 已掌握的词不再重复出）" : "Log in to track mastery progress"}
+        </div>
+      )}
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span>{zh ? `第 ${idx + 1} / ${queue.length} 题` : `Question ${idx + 1} / ${queue.length}`}</span>

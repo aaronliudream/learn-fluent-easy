@@ -6,17 +6,23 @@ import { supabase } from "@/integrations/supabase/client";
 import { nextSrsState } from "@/lib/masteryFsrs";
 import { toast } from "sonner";
 
-export type JuniorMasteryKind = "quiz" | "listen" | "spell" | "match" | "cloze";
+export type JuniorMasteryKind = "quiz" | "listen" | "spell" | "match" | "cloze" | "bento";
 
-const KIND_FIELDS: Record<
-  JuniorMasteryKind,
-  { correct: "quiz_correct" | "listen_correct" | "spell_correct" | "match_correct" | "cloze_correct"; wrong: "quiz_wrong" | "listen_wrong" | "spell_wrong" | "match_wrong" | "cloze_wrong" }
-> = {
+const KIND_FIELDS: Record<JuniorMasteryKind, { correct: string; wrong: string }> = {
   quiz: { correct: "quiz_correct", wrong: "quiz_wrong" },
   listen: { correct: "listen_correct", wrong: "listen_wrong" },
   spell: { correct: "spell_correct", wrong: "spell_wrong" },
   match: { correct: "match_correct", wrong: "match_wrong" },
   cloze: { correct: "cloze_correct", wrong: "cloze_wrong" },
+  bento: { correct: "bento_correct", wrong: "bento_wrong" },
+};
+
+/** 连对计数列(独立 per 游戏,掌握=连对2次)。listen/cloze 无 consec 列。 */
+const CONSEC_FIELD: Partial<Record<JuniorMasteryKind, string>> = {
+  quiz: "quiz_consec",
+  match: "match_consec",
+  spell: "spell_consec",
+  bento: "bento_consec",
 };
 
 export function reportJuniorMasteryError(context: string, err: unknown, zh = true): void {
@@ -46,7 +52,7 @@ export async function recordJuniorWordMastery(opts: {
   const { data: existing, error: readErr } = await supabase
     .from("junior_word_mastery")
     .select(
-      "id,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,cloze_correct,cloze_wrong,mastery_level,ease,interval_days,due_at",
+      "id,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,cloze_correct,cloze_wrong,bento_correct,bento_wrong,quiz_consec,match_consec,spell_consec,bento_consec,mastery_level,ease,interval_days,due_at",
     )
     .eq("user_id", user.id)
     .eq("word_id", opts.wordId)
@@ -81,6 +87,12 @@ export async function recordJuniorWordMastery(opts: {
     match_wrong: existing?.match_wrong ?? 0,
     cloze_correct: existing?.cloze_correct ?? 0,
     cloze_wrong: existing?.cloze_wrong ?? 0,
+    bento_correct: (existing as Record<string, number> | null)?.bento_correct ?? 0,
+    bento_wrong: (existing as Record<string, number> | null)?.bento_wrong ?? 0,
+    quiz_consec: (existing as Record<string, number> | null)?.quiz_consec ?? 0,
+    match_consec: (existing as Record<string, number> | null)?.match_consec ?? 0,
+    spell_consec: (existing as Record<string, number> | null)?.spell_consec ?? 0,
+    bento_consec: (existing as Record<string, number> | null)?.bento_consec ?? 0,
     [fields.correct]: ((existing as Record<string, number> | null)?.[fields.correct] ?? 0) + c,
     [fields.wrong]: ((existing as Record<string, number> | null)?.[fields.wrong] ?? 0) + w,
     mastery_level: Math.min(
@@ -92,6 +104,14 @@ export async function recordJuniorWordMastery(opts: {
     due_at: srs.due_at,
     last_seen_at: new Date().toISOString(),
   };
+
+  // 连对:答对该游戏 +1,答错清零(独立 per 游戏;listen/cloze 无 consec 列,跳过)。
+  const consecField = CONSEC_FIELD[opts.kind];
+  if (consecField) {
+    payload[consecField] = opts.isCorrect
+      ? ((existing as Record<string, number> | null)?.[consecField] ?? 0) + 1
+      : 0;
+  }
 
   const { error: writeErr } = existing
     ? await supabase.from("junior_word_mastery").update(payload).eq("id", existing.id)

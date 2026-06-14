@@ -12,7 +12,6 @@ import { awardCoins, notifyWrong } from "@/lib/coins";
 import { celebrateScore } from "@/lib/feedback";
 import { cn } from "@/lib/utils";
 import WordBento from "@/components/WordBento";
-import WordQuest from "@/components/WordQuest";
 import MemoryMatch from "@/components/MemoryMatch";
 import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
@@ -38,7 +37,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "match" | "dict" | "srs" | "guided";
+type Mode = null | "classic" | "bento" | "match" | "dict" | "srs" | "guided";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -189,7 +188,6 @@ export default function JuniorVocab() {
     );
   }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
-  if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
@@ -213,7 +211,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   const games: {mode: Exclude<Mode, null>;icon: any;title: string;desc: string;gradient: string;badge?: string;}[] = [
   { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
   { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
-  { mode: "quest", icon: Trophy, title: zh ? "单词任务" : "Word Quest", desc: zh ? "每日 3 词 · 多关卡彻底掌握一个词" : "3 words a day · multi-stage mastery", gradient: "from-amber-500 to-yellow-500" },
   { mode: "match", icon: Music, title: zh ? "记忆翻牌" : "Memory Match", desc: zh ? "图音中英匹配 · 经典训练法" : "Match words and meanings · classic drill", gradient: "from-sky-500 to-blue-500" },
   { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" }];
 
@@ -356,7 +353,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       {/* 辅助训练（提到清单上方，移动端不必滑到底） */}
       <div className="mb-3 mt-2 flex items-end justify-between">
         <h2 className="text-base font-extrabold">{zh ? "辅助训练" : "Practice games"}</h2>
-        <span className="text-[11px] text-muted-foreground">{zh ? "6 种游戏 · 全部接入复习曲线" : "6 games · all connected to the review curve"}</span>
+        <span className="text-[11px] text-muted-foreground">{zh ? "4 种游戏 · 全部接入复习曲线" : "4 games · all connected to the review curve"}</span>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {

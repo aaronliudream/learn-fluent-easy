@@ -8688,192 +8688,686 @@
               {
                 "en": "rule",
                 "cn": "规则；规章",
-                "emoji": "📏"
+                "chunks": [
+                  {
+                    "en": "follow the rules",
+                    "cn": "遵守规则"
+                  },
+                  {
+                    "en": "break the rules",
+                    "cn": "违反规则"
+                  },
+                  {
+                    "en": "school rules",
+                    "cn": "校规"
+                  }
+                ]
               },
               {
                 "en": "order",
                 "cn": "秩序；命令 v. 点菜；命令",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "in order",
+                    "cn": "井然有序"
+                  },
+                  {
+                    "en": "order some food",
+                    "cn": "点些吃的"
+                  },
+                  {
+                    "en": "give an order",
+                    "cn": "下命令"
+                  }
+                ]
               },
               {
                 "en": "follow",
                 "cn": "遵循；跟随",
-                "emoji": "➡️"
+                "chunks": [
+                  {
+                    "en": "follow the rules",
+                    "cn": "遵守规则"
+                  },
+                  {
+                    "en": "follow me",
+                    "cn": "跟着我"
+                  },
+                  {
+                    "en": "follow the teacher",
+                    "cn": "跟随老师"
+                  }
+                ]
               },
               {
                 "en": "arrive",
                 "cn": "到达",
-                "emoji": "🛬"
+                "chunks": [
+                  {
+                    "en": "arrive at school",
+                    "cn": "到校"
+                  },
+                  {
+                    "en": "arrive on time",
+                    "cn": "准时到达"
+                  },
+                  {
+                    "en": "arrive home",
+                    "cn": "到家"
+                  }
+                ]
               },
               {
                 "en": "uniform",
                 "cn": "校服；制服",
-                "emoji": "👔"
+                "chunks": [
+                  {
+                    "en": "wear a uniform",
+                    "cn": "穿校服"
+                  },
+                  {
+                    "en": "a school uniform",
+                    "cn": "一套校服"
+                  },
+                  {
+                    "en": "in uniform",
+                    "cn": "穿着制服"
+                  }
+                ]
               },
               {
                 "en": "litter",
                 "cn": "乱扔 n. 垃圾",
-                "emoji": "🗑️"
+                "chunks": [
+                  {
+                    "en": "drop litter",
+                    "cn": "乱扔垃圾"
+                  },
+                  {
+                    "en": "pick up litter",
+                    "cn": "捡垃圾"
+                  },
+                  {
+                    "en": "Don't litter.",
+                    "cn": "别乱扔垃圾。"
+                  }
+                ]
               },
               {
                 "en": "polite",
                 "cn": "有礼貌的",
-                "emoji": "🙏"
+                "chunks": [
+                  {
+                    "en": "be polite",
+                    "cn": "有礼貌"
+                  },
+                  {
+                    "en": "a polite boy",
+                    "cn": "一个有礼貌的男孩"
+                  },
+                  {
+                    "en": "polite to others",
+                    "cn": "对别人有礼貌"
+                  }
+                ]
               },
               {
                 "en": "treat",
                 "cn": "对待；招待；治疗 n. 款待",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "treat people well",
+                    "cn": "善待他人"
+                  },
+                  {
+                    "en": "a special treat",
+                    "cn": "特别的款待"
+                  },
+                  {
+                    "en": "treat him kindly",
+                    "cn": "友善地对待他"
+                  }
+                ]
               },
               {
                 "en": "respect",
                 "cn": "尊敬",
-                "emoji": "🤝"
+                "chunks": [
+                  {
+                    "en": "respect others",
+                    "cn": "尊重他人"
+                  },
+                  {
+                    "en": "respect your parents",
+                    "cn": "尊敬父母"
+                  },
+                  {
+                    "en": "show respect",
+                    "cn": "表示尊敬"
+                  }
+                ]
               },
               {
                 "en": "if",
                 "cn": "如果",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "if you like",
+                    "cn": "如果你愿意"
+                  },
+                  {
+                    "en": "if it rains",
+                    "cn": "如果下雨"
+                  },
+                  {
+                    "en": "Ask me if you don't know.",
+                    "cn": "不懂就问我。"
+                  }
+                ]
               },
               {
                 "en": "jacket",
                 "cn": "夹克衫；短上衣",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "a blue jacket",
+                    "cn": "一件蓝夹克"
+                  },
+                  {
+                    "en": "wear a jacket",
+                    "cn": "穿夹克"
+                  },
+                  {
+                    "en": "take off the jacket",
+                    "cn": "脱掉夹克"
+                  }
+                ]
               },
               {
                 "en": "everything",
                 "cn": "每件事；一切",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "Everything is ready.",
+                    "cn": "一切就绪。"
+                  },
+                  {
+                    "en": "everything here",
+                    "cn": "这里的一切"
+                  },
+                  {
+                    "en": "know everything",
+                    "cn": "什么都知道"
+                  }
+                ]
               },
               {
                 "en": "lend",
                 "cn": "借给；借出",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "lend me a pen",
+                    "cn": "借我一支笔"
+                  },
+                  {
+                    "en": "lend a hand",
+                    "cn": "帮个忙"
+                  },
+                  {
+                    "en": "Can you lend it to me?",
+                    "cn": "你能借给我吗?"
+                  }
+                ]
               },
               {
                 "en": "sweet",
                 "cn": "糖果 adj. 甜的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "a sweet apple",
+                    "cn": "一个甜苹果"
+                  },
+                  {
+                    "en": "eat sweets",
+                    "cn": "吃糖"
+                  },
+                  {
+                    "en": "sweet and kind",
+                    "cn": "甜美又善良"
+                  }
+                ]
               },
               {
                 "en": "snack",
                 "cn": "点心；小吃",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "eat a snack",
+                    "cn": "吃点心"
+                  },
+                  {
+                    "en": "a healthy snack",
+                    "cn": "健康零食"
+                  },
+                  {
+                    "en": "buy snacks",
+                    "cn": "买零食"
+                  }
+                ]
               },
               {
                 "en": "mobile",
                 "cn": "可移动的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "a mobile phone",
+                    "cn": "一部手机"
+                  },
+                  {
+                    "en": "use a mobile",
+                    "cn": "用手机"
+                  },
+                  {
+                    "en": "turn off the mobile",
+                    "cn": "关掉手机"
+                  }
+                ]
               },
               {
                 "en": "feed",
                 "cn": "喂养；饲养",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "feed the cat",
+                    "cn": "喂猫"
+                  },
+                  {
+                    "en": "feed the animals",
+                    "cn": "喂动物"
+                  },
+                  {
+                    "en": "feed the baby",
+                    "cn": "喂孩子"
+                  }
+                ]
               },
               {
                 "en": "leave",
                 "cn": "离开；留下",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "leave school",
+                    "cn": "离开学校"
+                  },
+                  {
+                    "en": "leave home",
+                    "cn": "离开家"
+                  },
+                  {
+                    "en": "leave it here",
+                    "cn": "把它留在这儿"
+                  }
+                ]
               },
               {
                 "en": "absent",
                 "cn": "缺席的；不在的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "be absent",
+                    "cn": "缺席"
+                  },
+                  {
+                    "en": "absent from school",
+                    "cn": "没去上学"
+                  },
+                  {
+                    "en": "absent today",
+                    "cn": "今天缺席"
+                  }
+                ]
               },
               {
                 "en": "quietly",
                 "cn": "轻声地； 安静地",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "speak quietly",
+                    "cn": "轻声说话"
+                  },
+                  {
+                    "en": "sit quietly",
+                    "cn": "安静地坐着"
+                  },
+                  {
+                    "en": "walk quietly",
+                    "cn": "轻轻地走"
+                  }
+                ]
               },
               {
                 "en": "belt",
                 "cn": "安全带；腰带；皮带",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "wear a seat belt",
+                    "cn": "系安全带"
+                  },
+                  {
+                    "en": "a seat belt",
+                    "cn": "一条安全带"
+                  },
+                  {
+                    "en": "put on the belt",
+                    "cn": "系上腰带"
+                  }
+                ]
               },
               {
                 "en": "noise",
                 "cn": "声音；噪声",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "make noise",
+                    "cn": "制造噪音"
+                  },
+                  {
+                    "en": "a loud noise",
+                    "cn": "很大的噪音"
+                  },
+                  {
+                    "en": "Don't make noise.",
+                    "cn": "别吵。"
+                  }
+                ]
               },
               {
                 "en": "unhappy",
                 "cn": "不快乐的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "feel unhappy",
+                    "cn": "感到不开心"
+                  },
+                  {
+                    "en": "an unhappy face",
+                    "cn": "不开心的表情"
+                  },
+                  {
+                    "en": "unhappy about it",
+                    "cn": "对此不高兴"
+                  }
+                ]
               },
               {
                 "en": "either",
                 "cn": "也（用于否定词组后）",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "I don't like it either.",
+                    "cn": "我也不喜欢。"
+                  },
+                  {
+                    "en": "me either",
+                    "cn": "我也不"
+                  },
+                  {
+                    "en": "not now either",
+                    "cn": "现在也不行"
+                  }
+                ]
               },
               {
                 "en": "practise",
                 "cn": "训练；练习",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "practise English",
+                    "cn": "练习英语"
+                  },
+                  {
+                    "en": "practise every day",
+                    "cn": "每天练习"
+                  },
+                  {
+                    "en": "practise the piano",
+                    "cn": "练钢琴"
+                  }
+                ]
               },
               {
                 "en": "hang",
                 "cn": "悬挂",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "hang up the coat",
+                    "cn": "挂起外套"
+                  },
+                  {
+                    "en": "hang on the wall",
+                    "cn": "挂在墙上"
+                  },
+                  {
+                    "en": "hang it here",
+                    "cn": "把它挂这儿"
+                  }
+                ]
               },
               {
                 "en": "weekday",
                 "cn": "工作日 （星期一至星期五的任何一天）",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "on weekdays",
+                    "cn": "在工作日"
+                  },
+                  {
+                    "en": "every weekday",
+                    "cn": "每个工作日"
+                  },
+                  {
+                    "en": "a busy weekday",
+                    "cn": "忙碌的工作日"
+                  }
+                ]
               },
               {
                 "en": "awful",
                 "cn": "糟糕的；讨厌的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "an awful day",
+                    "cn": "糟糕的一天"
+                  },
+                  {
+                    "en": "taste awful",
+                    "cn": "味道很糟"
+                  },
+                  {
+                    "en": "feel awful",
+                    "cn": "感觉很糟"
+                  }
+                ]
               },
               {
                 "en": "become",
                 "cn": "变成；成为",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "become a teacher",
+                    "cn": "成为老师"
+                  },
+                  {
+                    "en": "become better",
+                    "cn": "变得更好"
+                  },
+                  {
+                    "en": "become friends",
+                    "cn": "成为朋友"
+                  }
+                ]
               },
               {
                 "en": "better",
                 "cn": "较好的 adv. 较好地",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "feel better",
+                    "cn": "感觉好些"
+                  },
+                  {
+                    "en": "better than before",
+                    "cn": "比以前好"
+                  },
+                  {
+                    "en": "do better",
+                    "cn": "做得更好"
+                  }
+                ]
               },
               {
                 "en": "person",
                 "cn": "人",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "a kind person",
+                    "cn": "一个善良的人"
+                  },
+                  {
+                    "en": "a young person",
+                    "cn": "一个年轻人"
+                  },
+                  {
+                    "en": "the right person",
+                    "cn": "合适的人"
+                  }
+                ]
               },
               {
                 "en": "focus",
                 "cn": "集中（注意力、 精力等）；聚焦",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "focus on study",
+                    "cn": "专注学习"
+                  },
+                  {
+                    "en": "lose focus",
+                    "cn": "走神"
+                  },
+                  {
+                    "en": "focus your mind",
+                    "cn": "集中注意力"
+                  }
+                ]
               },
               {
                 "en": "build",
                 "cn": "创建；建造",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "build a house",
+                    "cn": "建房子"
+                  },
+                  {
+                    "en": "build a team",
+                    "cn": "组建团队"
+                  },
+                  {
+                    "en": "build it together",
+                    "cn": "一起建造"
+                  }
+                ]
               },
               {
                 "en": "spirit",
                 "cn": "精神；情绪",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "team spirit",
+                    "cn": "团队精神"
+                  },
+                  {
+                    "en": "in good spirits",
+                    "cn": "心情好"
+                  },
+                  {
+                    "en": "a strong spirit",
+                    "cn": "坚强的精神"
+                  }
+                ]
               },
               {
                 "en": "relax",
                 "cn": "放松；休息",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "relax at home",
+                    "cn": "在家放松"
+                  },
+                  {
+                    "en": "relax yourself",
+                    "cn": "放松自己"
+                  },
+                  {
+                    "en": "sit back and relax",
+                    "cn": "坐下来放松"
+                  }
+                ]
               },
               {
                 "en": "advice",
                 "cn": "建议；意见",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "good advice",
+                    "cn": "好建议"
+                  },
+                  {
+                    "en": "give advice",
+                    "cn": "提建议"
+                  },
+                  {
+                    "en": "ask for advice",
+                    "cn": "征求意见"
+                  }
+                ]
               },
               {
                 "en": "understand",
                 "cn": "理解；领会",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "understand the rules",
+                    "cn": "理解规则"
+                  },
+                  {
+                    "en": "I understand.",
+                    "cn": "我明白了。"
+                  },
+                  {
+                    "en": "easy to understand",
+                    "cn": "容易理解"
+                  }
+                ]
               },
               {
                 "en": "untidy",
                 "cn": "不整洁的",
-                "emoji": "📋"
+                "chunks": [
+                  {
+                    "en": "an untidy room",
+                    "cn": "凌乱的房间"
+                  },
+                  {
+                    "en": "look untidy",
+                    "cn": "看起来乱"
+                  },
+                  {
+                    "en": "untidy hair",
+                    "cn": "凌乱的头发"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -9275,182 +9769,650 @@
               {
                 "en": "fit",
                 "cn": "健康的；健壮的 v. 适合",
-                "emoji": "💪"
+                "chunks": [
+                  {
+                    "en": "keep fit",
+                    "cn": "保持健康"
+                  },
+                  {
+                    "en": "stay fit",
+                    "cn": "保持健壮"
+                  },
+                  {
+                    "en": "fit and healthy",
+                    "cn": "健康强壮"
+                  }
+                ]
               },
               {
                 "en": "baseball",
                 "cn": "棒球（运动）",
-                "emoji": "⚾"
+                "chunks": [
+                  {
+                    "en": "play baseball",
+                    "cn": "打棒球"
+                  },
+                  {
+                    "en": "a baseball game",
+                    "cn": "一场棒球赛"
+                  },
+                  {
+                    "en": "a baseball cap",
+                    "cn": "一顶棒球帽"
+                  }
+                ]
               },
               {
                 "en": "glove",
                 "cn": "（手指分开的）手套",
-                "emoji": "🧤"
+                "chunks": [
+                  {
+                    "en": "a pair of gloves",
+                    "cn": "一副手套"
+                  },
+                  {
+                    "en": "wear gloves",
+                    "cn": "戴手套"
+                  },
+                  {
+                    "en": "baseball gloves",
+                    "cn": "棒球手套"
+                  }
+                ]
               },
               {
                 "en": "rope",
                 "cn": "绳子；粗绳",
-                "emoji": "🪢"
+                "chunks": [
+                  {
+                    "en": "jump rope",
+                    "cn": "跳绳"
+                  },
+                  {
+                    "en": "a long rope",
+                    "cn": "一条长绳"
+                  },
+                  {
+                    "en": "pull the rope",
+                    "cn": "拉绳子"
+                  }
+                ]
               },
               {
                 "en": "hardly",
                 "cn": "几乎不； 几乎没有",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "hardly ever",
+                    "cn": "几乎从不"
+                  },
+                  {
+                    "en": "hardly know him",
+                    "cn": "几乎不认识他"
+                  },
+                  {
+                    "en": "can hardly wait",
+                    "cn": "几乎等不及"
+                  }
+                ]
               },
               {
                 "en": "ever",
                 "cn": "在任何时候； 从来；曾经",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "hardly ever",
+                    "cn": "几乎从不"
+                  },
+                  {
+                    "en": "Have you ever been there?",
+                    "cn": "你去过那儿吗?"
+                  },
+                  {
+                    "en": "the best ever",
+                    "cn": "史上最好"
+                  }
+                ]
               },
               {
                 "en": "once",
                 "cn": "一次；曾经 conj. 一旦",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "once a week",
+                    "cn": "每周一次"
+                  },
+                  {
+                    "en": "once a day",
+                    "cn": "每天一次"
+                  },
+                  {
+                    "en": "once upon a time",
+                    "cn": "从前"
+                  }
+                ]
               },
               {
                 "en": "mine",
                 "cn": "我的（所有物）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "It's mine.",
+                    "cn": "这是我的。"
+                  },
+                  {
+                    "en": "a friend of mine",
+                    "cn": "我的一个朋友"
+                  },
+                  {
+                    "en": "Mine is here.",
+                    "cn": "我的在这儿。"
+                  }
+                ]
               },
               {
                 "en": "hers",
                 "cn": "她的（所有物）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "It's hers.",
+                    "cn": "这是她的。"
+                  },
+                  {
+                    "en": "The book is hers.",
+                    "cn": "这本书是她的。"
+                  },
+                  {
+                    "en": "a friend of hers",
+                    "cn": "她的一个朋友"
+                  }
+                ]
               },
               {
                 "en": "maybe",
                 "cn": "也许；大概",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "Maybe you're right.",
+                    "cn": "也许你对。"
+                  },
+                  {
+                    "en": "maybe later",
+                    "cn": "也许待会儿"
+                  },
+                  {
+                    "en": "Maybe so.",
+                    "cn": "也许吧。"
+                  }
+                ]
               },
               {
                 "en": "practice",
                 "cn": "练习；实践",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "do some practice",
+                    "cn": "做些练习"
+                  },
+                  {
+                    "en": "football practice",
+                    "cn": "足球训练"
+                  },
+                  {
+                    "en": "need more practice",
+                    "cn": "需要多练"
+                  }
+                ]
               },
               {
                 "en": "perfect",
                 "cn": "完美的；极好的",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a perfect day",
+                    "cn": "完美的一天"
+                  },
+                  {
+                    "en": "Practice makes perfect.",
+                    "cn": "熟能生巧。"
+                  },
+                  {
+                    "en": "perfect for me",
+                    "cn": "对我很合适"
+                  }
+                ]
               },
               {
                 "en": "seldom",
                 "cn": "很少；不常",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "seldom go out",
+                    "cn": "很少出门"
+                  },
+                  {
+                    "en": "seldom late",
+                    "cn": "很少迟到"
+                  },
+                  {
+                    "en": "I seldom watch TV.",
+                    "cn": "我很少看电视。"
+                  }
+                ]
               },
               {
                 "en": "badminton",
                 "cn": "羽毛球运动",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "play badminton",
+                    "cn": "打羽毛球"
+                  },
+                  {
+                    "en": "a badminton match",
+                    "cn": "一场羽毛球赛"
+                  },
+                  {
+                    "en": "good at badminton",
+                    "cn": "擅长羽毛球"
+                  }
+                ]
               },
               {
                 "en": "double",
                 "cn": "双打（doubles）； adj. 成双的；两倍的 两倍",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a double room",
+                    "cn": "一间双人房"
+                  },
+                  {
+                    "en": "double the price",
+                    "cn": "两倍价钱"
+                  },
+                  {
+                    "en": "play doubles",
+                    "cn": "打双打"
+                  }
+                ]
               },
               {
                 "en": "volleyball",
                 "cn": "排球（运动）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "play volleyball",
+                    "cn": "打排球"
+                  },
+                  {
+                    "en": "a volleyball team",
+                    "cn": "一支排球队"
+                  },
+                  {
+                    "en": "a volleyball match",
+                    "cn": "一场排球赛"
+                  }
+                ]
               },
               {
                 "en": "theirs",
                 "cn": "他们的，她们的， 它们的（所有物）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "It's theirs.",
+                    "cn": "这是他们的。"
+                  },
+                  {
+                    "en": "The ball is theirs.",
+                    "cn": "球是他们的。"
+                  },
+                  {
+                    "en": "a classmate of theirs",
+                    "cn": "他们的一位同学"
+                  }
+                ]
               },
               {
                 "en": "ours",
                 "cn": "我们的（所有物）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "It's ours.",
+                    "cn": "这是我们的。"
+                  },
+                  {
+                    "en": "The win is ours.",
+                    "cn": "胜利属于我们。"
+                  },
+                  {
+                    "en": "This room is ours.",
+                    "cn": "这间屋是我们的。"
+                  }
+                ]
               },
               {
                 "en": "jog",
                 "cn": "慢跑",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "jog every morning",
+                    "cn": "每天早晨慢跑"
+                  },
+                  {
+                    "en": "go for a jog",
+                    "cn": "去慢跑"
+                  },
+                  {
+                    "en": "jog in the park",
+                    "cn": "在公园慢跑"
+                  }
+                ]
               },
               {
                 "en": "few",
                 "cn": "（表示否定的）很少的；",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a few friends",
+                    "cn": "几个朋友"
+                  },
+                  {
+                    "en": "few people",
+                    "cn": "很少人"
+                  },
+                  {
+                    "en": "quite a few",
+                    "cn": "相当多"
+                  }
+                ]
               },
               {
                 "en": "excuse",
                 "cn": "原谅；宽恕",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "Excuse me.",
+                    "cn": "打扰一下。"
+                  },
+                  {
+                    "en": "make an excuse",
+                    "cn": "找借口"
+                  },
+                  {
+                    "en": "a good excuse",
+                    "cn": "一个好借口"
+                  }
+                ]
               },
               {
                 "en": "just",
                 "cn": "只是；正好",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "just now",
+                    "cn": "刚才"
+                  },
+                  {
+                    "en": "just a moment",
+                    "cn": "稍等"
+                  },
+                  {
+                    "en": "just for fun",
+                    "cn": "只是为了好玩"
+                  }
+                ]
               },
               {
                 "en": "T-shirt",
                 "cn": "T恤衫",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a white T-shirt",
+                    "cn": "一件白T恤"
+                  },
+                  {
+                    "en": "wear a T-shirt",
+                    "cn": "穿T恤"
+                  },
+                  {
+                    "en": "a new T-shirt",
+                    "cn": "一件新T恤"
+                  }
+                ]
               },
               {
                 "en": "belong",
                 "cn": "应在（某处）",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "belong to me",
+                    "cn": "属于我"
+                  },
+                  {
+                    "en": "Where does it belong?",
+                    "cn": "它该放哪儿?"
+                  },
+                  {
+                    "en": "belong here",
+                    "cn": "属于这里"
+                  }
+                ]
               },
               {
                 "en": "working",
                 "cn": "工作的",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a working day",
+                    "cn": "工作日"
+                  },
+                  {
+                    "en": "keep working",
+                    "cn": "继续工作"
+                  },
+                  {
+                    "en": "working hard",
+                    "cn": "努力工作"
+                  }
+                ]
               },
               {
                 "en": "energy",
                 "cn": "精力；能量",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "full of energy",
+                    "cn": "充满活力"
+                  },
+                  {
+                    "en": "save energy",
+                    "cn": "节约能源"
+                  },
+                  {
+                    "en": "lots of energy",
+                    "cn": "很多精力"
+                  }
+                ]
               },
               {
                 "en": "group",
                 "cn": "组；群",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "in a group",
+                    "cn": "在小组里"
+                  },
+                  {
+                    "en": "a group of students",
+                    "cn": "一群学生"
+                  },
+                  {
+                    "en": "work in groups",
+                    "cn": "分组活动"
+                  }
+                ]
               },
               {
                 "en": "encourage",
                 "cn": "鼓励；激励",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "encourage me",
+                    "cn": "鼓励我"
+                  },
+                  {
+                    "en": "encourage students",
+                    "cn": "鼓励学生"
+                  },
+                  {
+                    "en": "encourage each other",
+                    "cn": "互相鼓励"
+                  }
+                ]
               },
               {
                 "en": "succeed",
                 "cn": "成功；达到目标",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "work hard and succeed",
+                    "cn": "努力就能成功"
+                  },
+                  {
+                    "en": "succeed in the end",
+                    "cn": "最终成功"
+                  },
+                  {
+                    "en": "want to succeed",
+                    "cn": "想要成功"
+                  }
+                ]
               },
               {
                 "en": "goal",
                 "cn": "目标；目的",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "reach a goal",
+                    "cn": "达到目标"
+                  },
+                  {
+                    "en": "score a goal",
+                    "cn": "进一球"
+                  },
+                  {
+                    "en": "set a goal",
+                    "cn": "定个目标"
+                  }
+                ]
               },
               {
                 "en": "app",
                 "cn": "(= application /ˌæplɪˈkeɪʃn/) n. 应用程序",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "use an app",
+                    "cn": "用一个应用"
+                  },
+                  {
+                    "en": "download an app",
+                    "cn": "下载应用"
+                  },
+                  {
+                    "en": "a sports app",
+                    "cn": "一个运动应用"
+                  }
+                ]
               },
               {
                 "en": "progress",
                 "cn": "进步；进展",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "make progress",
+                    "cn": "取得进步"
+                  },
+                  {
+                    "en": "great progress",
+                    "cn": "很大进步"
+                  },
+                  {
+                    "en": "progress in English",
+                    "cn": "英语进步"
+                  }
+                ]
               },
               {
                 "en": "match",
                 "cn": "比赛；竞赛",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "win the match",
+                    "cn": "赢得比赛"
+                  },
+                  {
+                    "en": "a football match",
+                    "cn": "一场足球赛"
+                  },
+                  {
+                    "en": "watch a match",
+                    "cn": "看比赛"
+                  }
+                ]
               },
               {
                 "en": "team",
                 "cn": "队；组",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a school team",
+                    "cn": "校队"
+                  },
+                  {
+                    "en": "join the team",
+                    "cn": "加入球队"
+                  },
+                  {
+                    "en": "our team",
+                    "cn": "我们队"
+                  }
+                ]
               },
               {
                 "en": "lose",
                 "cn": "输掉；丢失",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "lose the game",
+                    "cn": "输掉比赛"
+                  },
+                  {
+                    "en": "lose weight",
+                    "cn": "减重"
+                  },
+                  {
+                    "en": "Don't lose it.",
+                    "cn": "别弄丢了。"
+                  }
+                ]
               },
               {
                 "en": "teenager",
                 "cn": "青少年",
-                "emoji": "🏃"
+                "chunks": [
+                  {
+                    "en": "a young teenager",
+                    "cn": "一个小青少年"
+                  },
+                  {
+                    "en": "most teenagers",
+                    "cn": "大多数青少年"
+                  },
+                  {
+                    "en": "as a teenager",
+                    "cn": "在青少年时期"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -9851,242 +10813,866 @@
               {
                 "en": "watermelon",
                 "cn": "西瓜",
-                "emoji": "🍉"
+                "chunks": [
+                  {
+                    "en": "a big watermelon",
+                    "cn": "一个大西瓜"
+                  },
+                  {
+                    "en": "eat watermelon",
+                    "cn": "吃西瓜"
+                  },
+                  {
+                    "en": "a slice of watermelon",
+                    "cn": "一块西瓜"
+                  }
+                ]
               },
               {
                 "en": "cabbage",
                 "cn": "卷心菜",
-                "emoji": "🥬"
+                "chunks": [
+                  {
+                    "en": "a cabbage",
+                    "cn": "一棵卷心菜"
+                  },
+                  {
+                    "en": "cook cabbage",
+                    "cn": "炒卷心菜"
+                  },
+                  {
+                    "en": "fresh cabbage",
+                    "cn": "新鲜卷心菜"
+                  }
+                ]
               },
               {
                 "en": "mutton",
                 "cn": "羊肉",
-                "emoji": "🍖"
+                "chunks": [
+                  {
+                    "en": "eat mutton",
+                    "cn": "吃羊肉"
+                  },
+                  {
+                    "en": "mutton soup",
+                    "cn": "羊肉汤"
+                  },
+                  {
+                    "en": "some mutton",
+                    "cn": "一些羊肉"
+                  }
+                ]
               },
               {
                 "en": "cookie",
                 "cn": "曲奇饼",
-                "emoji": "🍪"
+                "chunks": [
+                  {
+                    "en": "a sweet cookie",
+                    "cn": "一块甜饼干"
+                  },
+                  {
+                    "en": "eat cookies",
+                    "cn": "吃曲奇"
+                  },
+                  {
+                    "en": "make cookies",
+                    "cn": "做曲奇"
+                  }
+                ]
               },
               {
                 "en": "onion",
                 "cn": "洋葱；葱头",
-                "emoji": "🧅"
+                "chunks": [
+                  {
+                    "en": "cut an onion",
+                    "cn": "切洋葱"
+                  },
+                  {
+                    "en": "an onion",
+                    "cn": "一个洋葱"
+                  },
+                  {
+                    "en": "fried onions",
+                    "cn": "炒洋葱"
+                  }
+                ]
               },
               {
                 "en": "dumpling",
                 "cn": "饺子",
-                "emoji": "🥟"
+                "chunks": [
+                  {
+                    "en": "eat dumplings",
+                    "cn": "吃饺子"
+                  },
+                  {
+                    "en": "make dumplings",
+                    "cn": "包饺子"
+                  },
+                  {
+                    "en": "pork dumplings",
+                    "cn": "猪肉饺子"
+                  }
+                ]
               },
               {
                 "en": "coffee",
                 "cn": "咖啡",
-                "emoji": "☕"
+                "chunks": [
+                  {
+                    "en": "a cup of coffee",
+                    "cn": "一杯咖啡"
+                  },
+                  {
+                    "en": "drink coffee",
+                    "cn": "喝咖啡"
+                  },
+                  {
+                    "en": "black coffee",
+                    "cn": "黑咖啡"
+                  }
+                ]
               },
               {
                 "en": "bean",
                 "cn": "豆",
-                "emoji": "🫘"
+                "chunks": [
+                  {
+                    "en": "green beans",
+                    "cn": "青豆"
+                  },
+                  {
+                    "en": "cook beans",
+                    "cn": "煮豆子"
+                  },
+                  {
+                    "en": "a bag of beans",
+                    "cn": "一袋豆子"
+                  }
+                ]
               },
               {
                 "en": "chip",
                 "cn": "炸薯条",
-                "emoji": "🍟"
+                "chunks": [
+                  {
+                    "en": "eat chips",
+                    "cn": "吃薯条"
+                  },
+                  {
+                    "en": "fish and chips",
+                    "cn": "炸鱼薯条"
+                  },
+                  {
+                    "en": "a bag of chips",
+                    "cn": "一袋薯条"
+                  }
+                ]
               },
               {
                 "en": "salad",
                 "cn": "沙拉；色拉",
-                "emoji": "🥗"
+                "chunks": [
+                  {
+                    "en": "a fruit salad",
+                    "cn": "一份水果沙拉"
+                  },
+                  {
+                    "en": "make a salad",
+                    "cn": "做沙拉"
+                  },
+                  {
+                    "en": "eat salad",
+                    "cn": "吃沙拉"
+                  }
+                ]
               },
               {
                 "en": "porridge",
                 "cn": "粥；麦片粥",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a bowl of porridge",
+                    "cn": "一碗粥"
+                  },
+                  {
+                    "en": "eat porridge",
+                    "cn": "喝粥"
+                  },
+                  {
+                    "en": "hot porridge",
+                    "cn": "热粥"
+                  }
+                ]
               },
               {
                 "en": "waiter",
                 "cn": "（男）服务员",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "ask the waiter",
+                    "cn": "问服务员"
+                  },
+                  {
+                    "en": "a busy waiter",
+                    "cn": "一个忙碌的服务员"
+                  },
+                  {
+                    "en": "call the waiter",
+                    "cn": "叫服务员"
+                  }
+                ]
               },
               {
                 "en": "taste",
                 "cn": "有……味道；尝 n. 味道",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "taste good",
+                    "cn": "味道好"
+                  },
+                  {
+                    "en": "have a taste",
+                    "cn": "尝一尝"
+                  },
+                  {
+                    "en": "taste sweet",
+                    "cn": "尝起来甜"
+                  }
+                ]
               },
               {
                 "en": "anything",
                 "cn": "某事物； 任何事物",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "anything to eat",
+                    "cn": "任何吃的"
+                  },
+                  {
+                    "en": "Is there anything?",
+                    "cn": "有什么吗?"
+                  },
+                  {
+                    "en": "anything else",
+                    "cn": "别的什么"
+                  }
+                ]
               },
               {
                 "en": "dish",
                 "cn": "一道菜；盘子",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a tasty dish",
+                    "cn": "一道美味的菜"
+                  },
+                  {
+                    "en": "wash the dishes",
+                    "cn": "洗碗"
+                  },
+                  {
+                    "en": "my favourite dish",
+                    "cn": "我最爱的菜"
+                  }
+                ]
               },
               {
                 "en": "choice",
                 "cn": "选择",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a good choice",
+                    "cn": "一个好选择"
+                  },
+                  {
+                    "en": "make a choice",
+                    "cn": "做出选择"
+                  },
+                  {
+                    "en": "no choice",
+                    "cn": "没得选"
+                  }
+                ]
               },
               {
                 "en": "meal",
                 "cn": "一餐所吃的食物；一餐",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a big meal",
+                    "cn": "一顿大餐"
+                  },
+                  {
+                    "en": "three meals a day",
+                    "cn": "一日三餐"
+                  },
+                  {
+                    "en": "cook a meal",
+                    "cn": "做一顿饭"
+                  }
+                ]
               },
               {
                 "en": "pork",
                 "cn": "猪肉",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "eat pork",
+                    "cn": "吃猪肉"
+                  },
+                  {
+                    "en": "pork and rice",
+                    "cn": "猪肉盖饭"
+                  },
+                  {
+                    "en": "some pork",
+                    "cn": "一些猪肉"
+                  }
+                ]
               },
               {
                 "en": "strawberry",
                 "cn": "草莓",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a sweet strawberry",
+                    "cn": "一颗甜草莓"
+                  },
+                  {
+                    "en": "eat strawberries",
+                    "cn": "吃草莓"
+                  },
+                  {
+                    "en": "strawberry cake",
+                    "cn": "草莓蛋糕"
+                  }
+                ]
               },
               {
                 "en": "menu",
                 "cn": "菜单",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "read the menu",
+                    "cn": "看菜单"
+                  },
+                  {
+                    "en": "on the menu",
+                    "cn": "在菜单上"
+                  },
+                  {
+                    "en": "Here's the menu.",
+                    "cn": "这是菜单。"
+                  }
+                ]
               },
               {
                 "en": "customer",
                 "cn": "顾客",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a happy customer",
+                    "cn": "一位满意的顾客"
+                  },
+                  {
+                    "en": "serve the customer",
+                    "cn": "服务顾客"
+                  },
+                  {
+                    "en": "many customers",
+                    "cn": "很多顾客"
+                  }
+                ]
               },
               {
                 "en": "serve",
                 "cn": "提供；服务",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "serve food",
+                    "cn": "上菜"
+                  },
+                  {
+                    "en": "serve customers",
+                    "cn": "服务顾客"
+                  },
+                  {
+                    "en": "ready to serve",
+                    "cn": "准备上菜"
+                  }
+                ]
               },
               {
                 "en": "waitress",
                 "cn": "女服务员",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "ask the waitress",
+                    "cn": "问女服务员"
+                  },
+                  {
+                    "en": "a kind waitress",
+                    "cn": "一位友好的女服务员"
+                  },
+                  {
+                    "en": "call the waitress",
+                    "cn": "叫女服务员"
+                  }
+                ]
               },
               {
                 "en": "sir",
                 "cn": "先生",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "Yes, sir.",
+                    "cn": "是的,先生。"
+                  },
+                  {
+                    "en": "Thank you, sir.",
+                    "cn": "谢谢,先生。"
+                  },
+                  {
+                    "en": "This way, sir.",
+                    "cn": "这边请,先生。"
+                  }
+                ]
               },
               {
                 "en": "bill",
                 "cn": "账单；钞票",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "pay the bill",
+                    "cn": "付账"
+                  },
+                  {
+                    "en": "the bill, please",
+                    "cn": "请结账"
+                  },
+                  {
+                    "en": "a big bill",
+                    "cn": "一大笔账单"
+                  }
+                ]
               },
               {
                 "en": "instead",
                 "cn": "反而；代替",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "tea instead of coffee",
+                    "cn": "用茶代替咖啡"
+                  },
+                  {
+                    "en": "go instead",
+                    "cn": "代替去"
+                  },
+                  {
+                    "en": "eat fruit instead",
+                    "cn": "改吃水果"
+                  }
+                ]
               },
               {
                 "en": "pear",
                 "cn": "梨",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a sweet pear",
+                    "cn": "一个甜梨"
+                  },
+                  {
+                    "en": "eat a pear",
+                    "cn": "吃梨"
+                  },
+                  {
+                    "en": "green pears",
+                    "cn": "青梨"
+                  }
+                ]
               },
               {
                 "en": "sugar",
                 "cn": "糖",
-                "emoji": "🍬"
+                "chunks": [
+                  {
+                    "en": "too much sugar",
+                    "cn": "太多糖"
+                  },
+                  {
+                    "en": "add sugar",
+                    "cn": "加糖"
+                  },
+                  {
+                    "en": "no sugar",
+                    "cn": "不加糖"
+                  }
+                ]
               },
               {
                 "en": "newsletter",
                 "cn": "内部通讯； 简讯",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "read the newsletter",
+                    "cn": "读简讯"
+                  },
+                  {
+                    "en": "a school newsletter",
+                    "cn": "校园简讯"
+                  },
+                  {
+                    "en": "write a newsletter",
+                    "cn": "写简讯"
+                  }
+                ]
               },
               {
                 "en": "improve",
                 "cn": "改进；改善",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "improve your health",
+                    "cn": "改善健康"
+                  },
+                  {
+                    "en": "improve quickly",
+                    "cn": "快速进步"
+                  },
+                  {
+                    "en": "improve English",
+                    "cn": "提高英语"
+                  }
+                ]
               },
               {
                 "en": "habit",
                 "cn": "习惯",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a good habit",
+                    "cn": "一个好习惯"
+                  },
+                  {
+                    "en": "eating habits",
+                    "cn": "饮食习惯"
+                  },
+                  {
+                    "en": "a bad habit",
+                    "cn": "一个坏习惯"
+                  }
+                ]
               },
               {
                 "en": "salt",
                 "cn": "盐",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "too much salt",
+                    "cn": "太多盐"
+                  },
+                  {
+                    "en": "add salt",
+                    "cn": "加盐"
+                  },
+                  {
+                    "en": "a little salt",
+                    "cn": "少许盐"
+                  }
+                ]
               },
               {
                 "en": "fat",
                 "cn": "脂肪 adj. 肥胖的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "too much fat",
+                    "cn": "太多脂肪"
+                  },
+                  {
+                    "en": "low in fat",
+                    "cn": "低脂"
+                  },
+                  {
+                    "en": "a fat cat",
+                    "cn": "一只胖猫"
+                  }
+                ]
               },
               {
                 "en": "weight",
                 "cn": "体重；重量",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "lose weight",
+                    "cn": "减重"
+                  },
+                  {
+                    "en": "put on weight",
+                    "cn": "增重"
+                  },
+                  {
+                    "en": "a healthy weight",
+                    "cn": "健康体重"
+                  }
+                ]
               },
               {
                 "en": "hamburger",
                 "cn": "汉堡包",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "eat a hamburger",
+                    "cn": "吃汉堡"
+                  },
+                  {
+                    "en": "a big hamburger",
+                    "cn": "一个大汉堡"
+                  },
+                  {
+                    "en": "order a hamburger",
+                    "cn": "点一个汉堡"
+                  }
+                ]
               },
               {
                 "en": "cause",
                 "cn": "造成；导致",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "cause problems",
+                    "cn": "引起问题"
+                  },
+                  {
+                    "en": "the cause of it",
+                    "cn": "它的起因"
+                  },
+                  {
+                    "en": "cause illness",
+                    "cn": "导致生病"
+                  }
+                ]
               },
               {
                 "en": "heart",
                 "cn": "心脏；中心",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a healthy heart",
+                    "cn": "一颗健康的心脏"
+                  },
+                  {
+                    "en": "good for the heart",
+                    "cn": "对心脏好"
+                  },
+                  {
+                    "en": "in my heart",
+                    "cn": "在我心里"
+                  }
+                ]
               },
               {
                 "en": "balanced",
                 "cn": "均衡的； 平衡的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a balanced diet",
+                    "cn": "均衡的饮食"
+                  },
+                  {
+                    "en": "eat a balanced meal",
+                    "cn": "吃得均衡"
+                  },
+                  {
+                    "en": "keep balanced",
+                    "cn": "保持平衡"
+                  }
+                ]
               },
               {
                 "en": "sleepy",
                 "cn": "困倦的；想睡的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "feel sleepy",
+                    "cn": "感到困"
+                  },
+                  {
+                    "en": "a sleepy child",
+                    "cn": "一个困倦的孩子"
+                  },
+                  {
+                    "en": "look sleepy",
+                    "cn": "看起来想睡"
+                  }
+                ]
               },
               {
                 "en": "away",
                 "cn": "离开；在别处",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "far away",
+                    "cn": "很远"
+                  },
+                  {
+                    "en": "go away",
+                    "cn": "走开"
+                  },
+                  {
+                    "en": "put it away",
+                    "cn": "把它收起来"
+                  }
+                ]
               },
               {
                 "en": "poor",
                 "cn": "不好的； 贫穷的；可怜的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "poor health",
+                    "cn": "健康不佳"
+                  },
+                  {
+                    "en": "a poor family",
+                    "cn": "一个贫穷的家庭"
+                  },
+                  {
+                    "en": "poor little dog",
+                    "cn": "可怜的小狗"
+                  }
+                ]
               },
               {
                 "en": "result",
                 "cn": "后果；结果",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a good result",
+                    "cn": "一个好结果"
+                  },
+                  {
+                    "en": "as a result",
+                    "cn": "结果"
+                  },
+                  {
+                    "en": "the test result",
+                    "cn": "考试结果"
+                  }
+                ]
               },
               {
                 "en": "article",
                 "cn": "文章；冠词",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "read an article",
+                    "cn": "读一篇文章"
+                  },
+                  {
+                    "en": "write an article",
+                    "cn": "写文章"
+                  },
+                  {
+                    "en": "an article about food",
+                    "cn": "一篇关于食物的文章"
+                  }
+                ]
               },
               {
                 "en": "common",
                 "cn": "共同的； 普遍的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a common problem",
+                    "cn": "一个常见问题"
+                  },
+                  {
+                    "en": "in common",
+                    "cn": "共同"
+                  },
+                  {
+                    "en": "very common",
+                    "cn": "很常见"
+                  }
+                ]
               },
               {
                 "en": "among",
                 "cn": "在……中； ……之一",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "among friends",
+                    "cn": "在朋友之间"
+                  },
+                  {
+                    "en": "popular among kids",
+                    "cn": "在孩子中很流行"
+                  },
+                  {
+                    "en": "among them",
+                    "cn": "在他们当中"
+                  }
+                ]
               },
               {
                 "en": "soft",
                 "cn": "柔和的；柔软的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "a soft pillow",
+                    "cn": "一个软枕头"
+                  },
+                  {
+                    "en": "soft and warm",
+                    "cn": "又软又暖"
+                  },
+                  {
+                    "en": "a soft voice",
+                    "cn": "柔和的嗓音"
+                  }
+                ]
               },
               {
                 "en": "enough",
                 "cn": "足够的；充足的 adv. 足够地；充分地 pron. 足够；充分",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "enough food",
+                    "cn": "足够的食物"
+                  },
+                  {
+                    "en": "good enough",
+                    "cn": "足够好"
+                  },
+                  {
+                    "en": "not enough",
+                    "cn": "不够"
+                  }
+                ]
               },
               {
                 "en": "thirsty",
                 "cn": "渴的",
-                "emoji": "🍽️"
+                "chunks": [
+                  {
+                    "en": "feel thirsty",
+                    "cn": "感到口渴"
+                  },
+                  {
+                    "en": "a thirsty dog",
+                    "cn": "一只口渴的狗"
+                  },
+                  {
+                    "en": "very thirsty",
+                    "cn": "很渴"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -10487,167 +12073,596 @@
               {
                 "en": "ride",
                 "cn": "骑 n. 旅程",
-                "emoji": "🚴"
+                "chunks": [
+                  {
+                    "en": "ride a bike",
+                    "cn": "骑自行车"
+                  },
+                  {
+                    "en": "a bus ride",
+                    "cn": "一趟公交"
+                  },
+                  {
+                    "en": "go for a ride",
+                    "cn": "去兜风"
+                  }
+                ]
               },
               {
                 "en": "moment",
                 "cn": "某个时刻； 片刻；瞬间",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "at the moment",
+                    "cn": "此刻"
+                  },
+                  {
+                    "en": "wait a moment",
+                    "cn": "稍等"
+                  },
+                  {
+                    "en": "a great moment",
+                    "cn": "一个美好的时刻"
+                  }
+                ]
               },
               {
                 "en": "dragon",
                 "cn": "龙",
-                "emoji": "🐉"
+                "chunks": [
+                  {
+                    "en": "a dragon boat",
+                    "cn": "一条龙舟"
+                  },
+                  {
+                    "en": "the dragon dance",
+                    "cn": "舞龙"
+                  },
+                  {
+                    "en": "a big dragon",
+                    "cn": "一条大龙"
+                  }
+                ]
               },
               {
                 "en": "festival",
                 "cn": "节日",
-                "emoji": "🎏"
+                "chunks": [
+                  {
+                    "en": "the Spring Festival",
+                    "cn": "春节"
+                  },
+                  {
+                    "en": "a music festival",
+                    "cn": "音乐节"
+                  },
+                  {
+                    "en": "enjoy the festival",
+                    "cn": "享受节日"
+                  }
+                ]
               },
               {
                 "en": "hold",
                 "cn": "拿着；抓住",
-                "emoji": "✊"
+                "chunks": [
+                  {
+                    "en": "hold my hand",
+                    "cn": "握着我的手"
+                  },
+                  {
+                    "en": "hold a party",
+                    "cn": "举办聚会"
+                  },
+                  {
+                    "en": "hold it tight",
+                    "cn": "抓紧它"
+                  }
+                ]
               },
               {
                 "en": "voice",
                 "cn": "嗓音；声音",
-                "emoji": "🗣️"
+                "chunks": [
+                  {
+                    "en": "a loud voice",
+                    "cn": "大嗓门"
+                  },
+                  {
+                    "en": "in a low voice",
+                    "cn": "低声地"
+                  },
+                  {
+                    "en": "a sweet voice",
+                    "cn": "甜美的嗓音"
+                  }
+                ]
               },
               {
                 "en": "race",
                 "cn": "比赛；竞赛",
-                "emoji": "🏁"
+                "chunks": [
+                  {
+                    "en": "win the race",
+                    "cn": "赢得比赛"
+                  },
+                  {
+                    "en": "a running race",
+                    "cn": "一场赛跑"
+                  },
+                  {
+                    "en": "a boat race",
+                    "cn": "划船比赛"
+                  }
+                ]
               },
               {
                 "en": "somebody",
                 "cn": "某人；有人",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "somebody else",
+                    "cn": "别人"
+                  },
+                  {
+                    "en": "ask somebody",
+                    "cn": "问某人"
+                  },
+                  {
+                    "en": "Somebody is here.",
+                    "cn": "有人在这儿。"
+                  }
+                ]
               },
               {
                 "en": "could",
                 "cn": "modal v. 能；可以",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "Could you help me?",
+                    "cn": "你能帮我吗?"
+                  },
+                  {
+                    "en": "could swim",
+                    "cn": "会游泳"
+                  },
+                  {
+                    "en": "I could not see.",
+                    "cn": "我看不见。"
+                  }
+                ]
               },
               {
                 "en": "message",
                 "cn": "消息；信息",
-                "emoji": "✉️"
+                "chunks": [
+                  {
+                    "en": "send a message",
+                    "cn": "发消息"
+                  },
+                  {
+                    "en": "leave a message",
+                    "cn": "留言"
+                  },
+                  {
+                    "en": "read the message",
+                    "cn": "看消息"
+                  }
+                ]
               },
               {
                 "en": "kick",
                 "cn": "踢；踹",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "kick the ball",
+                    "cn": "踢球"
+                  },
+                  {
+                    "en": "kick hard",
+                    "cn": "用力踢"
+                  },
+                  {
+                    "en": "kick it away",
+                    "cn": "把它踢开"
+                  }
+                ]
               },
               {
                 "en": "online",
                 "cn": "在线的",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "shop online",
+                    "cn": "网上购物"
+                  },
+                  {
+                    "en": "go online",
+                    "cn": "上网"
+                  },
+                  {
+                    "en": "an online game",
+                    "cn": "一个网络游戏"
+                  }
+                ]
               },
               {
                 "en": "exam",
                 "cn": "(= examination /ɪɡˌzæmɪˈneɪʃən/) n. 考试",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "take an exam",
+                    "cn": "参加考试"
+                  },
+                  {
+                    "en": "pass the exam",
+                    "cn": "通过考试"
+                  },
+                  {
+                    "en": "an English exam",
+                    "cn": "英语考试"
+                  }
+                ]
               },
               {
                 "en": "hope",
                 "cn": "希望",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "I hope so.",
+                    "cn": "我希望如此。"
+                  },
+                  {
+                    "en": "hope to win",
+                    "cn": "希望获胜"
+                  },
+                  {
+                    "en": "hope for the best",
+                    "cn": "抱最好的希望"
+                  }
+                ]
               },
               {
                 "en": "forward",
                 "cn": "向前",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "look forward to it",
+                    "cn": "期待它"
+                  },
+                  {
+                    "en": "step forward",
+                    "cn": "向前一步"
+                  },
+                  {
+                    "en": "move forward",
+                    "cn": "向前移动"
+                  }
+                ]
               },
               {
                 "en": "skate",
                 "cn": "滑冰",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "skate on ice",
+                    "cn": "在冰上滑"
+                  },
+                  {
+                    "en": "go skating",
+                    "cn": "去滑冰"
+                  },
+                  {
+                    "en": "learn to skate",
+                    "cn": "学滑冰"
+                  }
+                ]
               },
               {
                 "en": "happen",
                 "cn": "发生",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "What happened?",
+                    "cn": "发生了什么?"
+                  },
+                  {
+                    "en": "happen to me",
+                    "cn": "发生在我身上"
+                  },
+                  {
+                    "en": "It happens.",
+                    "cn": "这很常见。"
+                  }
+                ]
               },
               {
                 "en": "rush",
                 "cn": "冲；奔",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "rush to school",
+                    "cn": "赶去学校"
+                  },
+                  {
+                    "en": "in a rush",
+                    "cn": "匆忙"
+                  },
+                  {
+                    "en": "Don't rush.",
+                    "cn": "别急。"
+                  }
+                ]
               },
               {
                 "en": "shine",
                 "cn": "发光；照耀 n. 光亮",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "The sun shines.",
+                    "cn": "阳光照耀。"
+                  },
+                  {
+                    "en": "shine brightly",
+                    "cn": "闪闪发光"
+                  },
+                  {
+                    "en": "let it shine",
+                    "cn": "让它发光"
+                  }
+                ]
               },
               {
                 "en": "brightly",
                 "cn": "明亮地",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "shine brightly",
+                    "cn": "明亮地照耀"
+                  },
+                  {
+                    "en": "smile brightly",
+                    "cn": "灿烂地笑"
+                  },
+                  {
+                    "en": "lit brightly",
+                    "cn": "亮堂堂"
+                  }
+                ]
               },
               {
                 "en": "colourful",
                 "cn": "色彩鲜艳的",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "a colourful picture",
+                    "cn": "一幅彩色的画"
+                  },
+                  {
+                    "en": "colourful clothes",
+                    "cn": "色彩鲜艳的衣服"
+                  },
+                  {
+                    "en": "bright and colourful",
+                    "cn": "明亮多彩"
+                  }
+                ]
               },
               {
                 "en": "slowly",
                 "cn": "缓慢地",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "walk slowly",
+                    "cn": "慢慢走"
+                  },
+                  {
+                    "en": "speak slowly",
+                    "cn": "慢慢说"
+                  },
+                  {
+                    "en": "slowly but surely",
+                    "cn": "稳步地"
+                  }
+                ]
               },
               {
                 "en": "such",
                 "cn": "这样的；那样的 pron. 这样（那样）的人或事物",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "such a nice day",
+                    "cn": "多好的一天"
+                  },
+                  {
+                    "en": "such fun",
+                    "cn": "真有趣"
+                  },
+                  {
+                    "en": "such things",
+                    "cn": "这样的事"
+                  }
+                ]
               },
               {
                 "en": "painting",
                 "cn": "绘画作品； 绘画；油画",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "a beautiful painting",
+                    "cn": "一幅美丽的画"
+                  },
+                  {
+                    "en": "a famous painting",
+                    "cn": "一幅名画"
+                  },
+                  {
+                    "en": "like painting",
+                    "cn": "喜欢绘画"
+                  }
+                ]
               },
               {
                 "en": "market",
                 "cn": "市场",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "go to the market",
+                    "cn": "去市场"
+                  },
+                  {
+                    "en": "a busy market",
+                    "cn": "一个热闹的市场"
+                  },
+                  {
+                    "en": "a fruit market",
+                    "cn": "水果市场"
+                  }
+                ]
               },
               {
                 "en": "side",
                 "cn": "边；侧",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "by my side",
+                    "cn": "在我身边"
+                  },
+                  {
+                    "en": "the other side",
+                    "cn": "另一边"
+                  },
+                  {
+                    "en": "side by side",
+                    "cn": "并肩"
+                  }
+                ]
               },
               {
                 "en": "bright",
                 "cn": "鲜艳的；明亮的； 聪明的",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "a bright colour",
+                    "cn": "明亮的颜色"
+                  },
+                  {
+                    "en": "a bright boy",
+                    "cn": "一个聪明的男孩"
+                  },
+                  {
+                    "en": "bright sunshine",
+                    "cn": "灿烂的阳光"
+                  }
+                ]
               },
               {
                 "en": "drop",
                 "cn": "运送；落下 n. 滴；下降",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "drop the ball",
+                    "cn": "掉球"
+                  },
+                  {
+                    "en": "a drop of water",
+                    "cn": "一滴水"
+                  },
+                  {
+                    "en": "drop by drop",
+                    "cn": "一滴一滴"
+                  }
+                ]
               },
               {
                 "en": "passenger",
                 "cn": "乘客",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "a passenger on the bus",
+                    "cn": "公交上的乘客"
+                  },
+                  {
+                    "en": "many passengers",
+                    "cn": "许多乘客"
+                  },
+                  {
+                    "en": "help the passenger",
+                    "cn": "帮助乘客"
+                  }
+                ]
               },
               {
                 "en": "central",
                 "cn": "中心的；中央的",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "central park",
+                    "cn": "中央公园"
+                  },
+                  {
+                    "en": "the central area",
+                    "cn": "中心区域"
+                  },
+                  {
+                    "en": "central China",
+                    "cn": "华中"
+                  }
+                ]
               },
               {
                 "en": "explain",
                 "cn": "解释；说明",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "explain the rule",
+                    "cn": "解释规则"
+                  },
+                  {
+                    "en": "explain to me",
+                    "cn": "向我解释"
+                  },
+                  {
+                    "en": "explain why",
+                    "cn": "解释原因"
+                  }
+                ]
               },
               {
                 "en": "tour",
                 "cn": "旅行；旅游",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "a city tour",
+                    "cn": "城市游"
+                  },
+                  {
+                    "en": "go on a tour",
+                    "cn": "去旅游"
+                  },
+                  {
+                    "en": "a tour guide",
+                    "cn": "导游"
+                  }
+                ]
               },
               {
                 "en": "drive",
                 "cn": "开车；驾驶",
-                "emoji": "⏳"
+                "chunks": [
+                  {
+                    "en": "drive a car",
+                    "cn": "开车"
+                  },
+                  {
+                    "en": "drive to work",
+                    "cn": "开车上班"
+                  },
+                  {
+                    "en": "learn to drive",
+                    "cn": "学开车"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -11046,187 +13061,668 @@
               {
                 "en": "dry",
                 "cn": "干的；干旱的",
-                "emoji": "🌵"
+                "chunks": [
+                  {
+                    "en": "dry weather",
+                    "cn": "干燥的天气"
+                  },
+                  {
+                    "en": "a dry day",
+                    "cn": "干燥的一天"
+                  },
+                  {
+                    "en": "dry your hands",
+                    "cn": "擦干手"
+                  }
+                ]
               },
               {
                 "en": "lightning",
                 "cn": "闪电",
-                "emoji": "⚡"
+                "chunks": [
+                  {
+                    "en": "thunder and lightning",
+                    "cn": "电闪雷鸣"
+                  },
+                  {
+                    "en": "a flash of lightning",
+                    "cn": "一道闪电"
+                  },
+                  {
+                    "en": "lightning in the sky",
+                    "cn": "天上的闪电"
+                  }
+                ]
               },
               {
                 "en": "stormy",
                 "cn": "有暴风雨（或暴风雪）的",
-                "emoji": "⛈️"
+                "chunks": [
+                  {
+                    "en": "a stormy night",
+                    "cn": "一个暴风雨之夜"
+                  },
+                  {
+                    "en": "stormy weather",
+                    "cn": "暴风雨天气"
+                  },
+                  {
+                    "en": "stormy and wet",
+                    "cn": "又有暴风雨又潮湿"
+                  }
+                ]
               },
               {
                 "en": "north",
                 "cn": "北部；北；北方",
-                "emoji": "⬆️"
+                "chunks": [
+                  {
+                    "en": "in the north",
+                    "cn": "在北方"
+                  },
+                  {
+                    "en": "the north wind",
+                    "cn": "北风"
+                  },
+                  {
+                    "en": "go north",
+                    "cn": "向北走"
+                  }
+                ]
               },
               {
                 "en": "west",
                 "cn": "西部；西；西方",
-                "emoji": "⬅️"
+                "chunks": [
+                  {
+                    "en": "in the west",
+                    "cn": "在西方"
+                  },
+                  {
+                    "en": "the west coast",
+                    "cn": "西海岸"
+                  },
+                  {
+                    "en": "go west",
+                    "cn": "向西走"
+                  }
+                ]
               },
               {
                 "en": "south",
                 "cn": "南部；南；南方",
-                "emoji": "⬇️"
+                "chunks": [
+                  {
+                    "en": "in the south",
+                    "cn": "在南方"
+                  },
+                  {
+                    "en": "the south of China",
+                    "cn": "中国南部"
+                  },
+                  {
+                    "en": "go south",
+                    "cn": "向南走"
+                  }
+                ]
               },
               {
                 "en": "east",
                 "cn": "东部；东；东方",
-                "emoji": "➡️"
+                "chunks": [
+                  {
+                    "en": "in the east",
+                    "cn": "在东方"
+                  },
+                  {
+                    "en": "the east wind",
+                    "cn": "东风"
+                  },
+                  {
+                    "en": "go east",
+                    "cn": "向东走"
+                  }
+                ]
               },
               {
                 "en": "lucky",
                 "cn": "运气好的； 带来好运的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a lucky day",
+                    "cn": "幸运的一天"
+                  },
+                  {
+                    "en": "feel lucky",
+                    "cn": "感到幸运"
+                  },
+                  {
+                    "en": "lucky for me",
+                    "cn": "对我来说很幸运"
+                  }
+                ]
               },
               {
                 "en": "temperature",
                 "cn": "温度",
-                "emoji": "🌡️"
+                "chunks": [
+                  {
+                    "en": "a high temperature",
+                    "cn": "高温"
+                  },
+                  {
+                    "en": "the temperature drops",
+                    "cn": "气温下降"
+                  },
+                  {
+                    "en": "take one's temperature",
+                    "cn": "量体温"
+                  }
+                ]
               },
               {
                 "en": "heavily",
                 "cn": "大量地；沉重地",
-                "emoji": "🌧️"
+                "chunks": [
+                  {
+                    "en": "rain heavily",
+                    "cn": "下大雨"
+                  },
+                  {
+                    "en": "snow heavily",
+                    "cn": "下大雪"
+                  },
+                  {
+                    "en": "sleep heavily",
+                    "cn": "睡得很沉"
+                  }
+                ]
               },
               {
                 "en": "snowy",
                 "cn": "下雪的；雪白的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a snowy day",
+                    "cn": "下雪天"
+                  },
+                  {
+                    "en": "snowy mountains",
+                    "cn": "雪山"
+                  },
+                  {
+                    "en": "cold and snowy",
+                    "cn": "又冷又下雪"
+                  }
+                ]
               },
               {
                 "en": "high",
                 "cn": "高",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a high mountain",
+                    "cn": "一座高山"
+                  },
+                  {
+                    "en": "jump high",
+                    "cn": "跳得高"
+                  },
+                  {
+                    "en": "high in the sky",
+                    "cn": "在高空"
+                  }
+                ]
               },
               {
                 "en": "freezing",
                 "cn": "极冷的；冰冻的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "freezing cold",
+                    "cn": "冷得刺骨"
+                  },
+                  {
+                    "en": "a freezing day",
+                    "cn": "极冷的一天"
+                  },
+                  {
+                    "en": "It's freezing.",
+                    "cn": "冷死了。"
+                  }
+                ]
               },
               {
                 "en": "tourist",
                 "cn": "旅行者；观光客",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a foreign tourist",
+                    "cn": "一位外国游客"
+                  },
+                  {
+                    "en": "many tourists",
+                    "cn": "许多游客"
+                  },
+                  {
+                    "en": "a tourist city",
+                    "cn": "旅游城市"
+                  }
+                ]
               },
               {
                 "en": "cloud",
                 "cn": "云；云彩",
-                "emoji": "☁️"
+                "chunks": [
+                  {
+                    "en": "a white cloud",
+                    "cn": "一朵白云"
+                  },
+                  {
+                    "en": "clouds in the sky",
+                    "cn": "天上的云"
+                  },
+                  {
+                    "en": "dark clouds",
+                    "cn": "乌云"
+                  }
+                ]
               },
               {
                 "en": "magical",
                 "cn": "魔法的；神奇的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a magical place",
+                    "cn": "一个神奇的地方"
+                  },
+                  {
+                    "en": "a magical moment",
+                    "cn": "神奇的一刻"
+                  },
+                  {
+                    "en": "magical and fun",
+                    "cn": "神奇又有趣"
+                  }
+                ]
               },
               {
                 "en": "rock",
                 "cn": "岩石",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a big rock",
+                    "cn": "一块大石头"
+                  },
+                  {
+                    "en": "sit on a rock",
+                    "cn": "坐在岩石上"
+                  },
+                  {
+                    "en": "rocks and stones",
+                    "cn": "岩石"
+                  }
+                ]
               },
               {
                 "en": "rest",
                 "cn": "休息；剩余部分",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "have a rest",
+                    "cn": "休息一下"
+                  },
+                  {
+                    "en": "rest at home",
+                    "cn": "在家休息"
+                  },
+                  {
+                    "en": "need some rest",
+                    "cn": "需要休息"
+                  }
+                ]
               },
               {
                 "en": "area",
                 "cn": "场地；地区",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a large area",
+                    "cn": "一片大区域"
+                  },
+                  {
+                    "en": "in this area",
+                    "cn": "在这个地区"
+                  },
+                  {
+                    "en": "a play area",
+                    "cn": "一个游乐区"
+                  }
+                ]
               },
               {
                 "en": "although",
                 "cn": "虽然；尽管",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "Although it rained, we went.",
+                    "cn": "虽然下雨,我们还是去了。"
+                  },
+                  {
+                    "en": "although tired",
+                    "cn": "虽然累"
+                  },
+                  {
+                    "en": "although it's hard",
+                    "cn": "尽管很难"
+                  }
+                ]
               },
               {
                 "en": "still",
                 "cn": "还；仍然",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "still here",
+                    "cn": "还在这儿"
+                  },
+                  {
+                    "en": "still raining",
+                    "cn": "还在下雨"
+                  },
+                  {
+                    "en": "I still like it.",
+                    "cn": "我还是喜欢它。"
+                  }
+                ]
               },
               {
                 "en": "experience",
                 "cn": "经历；经验 v. 经历",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a great experience",
+                    "cn": "一次很棒的经历"
+                  },
+                  {
+                    "en": "life experience",
+                    "cn": "生活经验"
+                  },
+                  {
+                    "en": "experience it",
+                    "cn": "体验它"
+                  }
+                ]
               },
               {
                 "en": "through",
                 "cn": "穿过；凭借",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "walk through the park",
+                    "cn": "穿过公园"
+                  },
+                  {
+                    "en": "through the door",
+                    "cn": "穿过门"
+                  },
+                  {
+                    "en": "go through",
+                    "cn": "通过"
+                  }
+                ]
               },
               {
                 "en": "glad",
                 "cn": "高兴的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "glad to see you",
+                    "cn": "很高兴见到你"
+                  },
+                  {
+                    "en": "feel glad",
+                    "cn": "感到高兴"
+                  },
+                  {
+                    "en": "glad to help",
+                    "cn": "乐意帮忙"
+                  }
+                ]
               },
               {
                 "en": "grey",
                 "cn": "(AmE gray /ɡreɪ/) adj. 灰色的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a grey sky",
+                    "cn": "灰色的天空"
+                  },
+                  {
+                    "en": "grey clouds",
+                    "cn": "灰云"
+                  },
+                  {
+                    "en": "grey hair",
+                    "cn": "灰白头发"
+                  }
+                ]
               },
               {
                 "en": "fog",
                 "cn": "雾",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "thick fog",
+                    "cn": "浓雾"
+                  },
+                  {
+                    "en": "in the fog",
+                    "cn": "在雾中"
+                  },
+                  {
+                    "en": "morning fog",
+                    "cn": "晨雾"
+                  }
+                ]
               },
               {
                 "en": "ground",
                 "cn": "地面",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "on the ground",
+                    "cn": "在地上"
+                  },
+                  {
+                    "en": "sit on the ground",
+                    "cn": "坐在地上"
+                  },
+                  {
+                    "en": "wet ground",
+                    "cn": "湿地面"
+                  }
+                ]
               },
               {
                 "en": "wet",
                 "cn": "湿的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "wet clothes",
+                    "cn": "湿衣服"
+                  },
+                  {
+                    "en": "get wet",
+                    "cn": "淋湿"
+                  },
+                  {
+                    "en": "a wet day",
+                    "cn": "潮湿的一天"
+                  }
+                ]
               },
               {
                 "en": "tiring",
                 "cn": "令人疲倦的； 累人的",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a tiring day",
+                    "cn": "累人的一天"
+                  },
+                  {
+                    "en": "tiring work",
+                    "cn": "累人的活"
+                  },
+                  {
+                    "en": "long and tiring",
+                    "cn": "又长又累"
+                  }
+                ]
               },
               {
                 "en": "seem",
                 "cn": "似乎；好像",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "seem happy",
+                    "cn": "看起来开心"
+                  },
+                  {
+                    "en": "It seems good.",
+                    "cn": "似乎不错。"
+                  },
+                  {
+                    "en": "seem tired",
+                    "cn": "显得疲倦"
+                  }
+                ]
               },
               {
                 "en": "description",
                 "cn": "描述；说明",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a short description",
+                    "cn": "简短的描述"
+                  },
+                  {
+                    "en": "give a description",
+                    "cn": "描述一下"
+                  },
+                  {
+                    "en": "a clear description",
+                    "cn": "清晰的说明"
+                  }
+                ]
               },
               {
                 "en": "mountain",
                 "cn": "山；高山",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "climb a mountain",
+                    "cn": "爬山"
+                  },
+                  {
+                    "en": "a high mountain",
+                    "cn": "一座高山"
+                  },
+                  {
+                    "en": "mountain air",
+                    "cn": "山间空气"
+                  }
+                ]
               },
               {
                 "en": "end",
                 "cn": "末尾；结束",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "at the end",
+                    "cn": "在末尾"
+                  },
+                  {
+                    "en": "the end of the day",
+                    "cn": "一天的结束"
+                  },
+                  {
+                    "en": "in the end",
+                    "cn": "最后"
+                  }
+                ]
               },
               {
                 "en": "storm",
                 "cn": "暴风雨；暴风雪",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "a big storm",
+                    "cn": "一场大暴风雨"
+                  },
+                  {
+                    "en": "before the storm",
+                    "cn": "暴风雨前"
+                  },
+                  {
+                    "en": "A storm is coming.",
+                    "cn": "暴风雨要来了。"
+                  }
+                ]
               },
               {
                 "en": "pour",
                 "cn": "倾倒；倒出",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "pour water",
+                    "cn": "倒水"
+                  },
+                  {
+                    "en": "It's pouring.",
+                    "cn": "下倾盆大雨。"
+                  },
+                  {
+                    "en": "pour out",
+                    "cn": "倒出来"
+                  }
+                ]
               },
               {
                 "en": "wind",
                 "cn": "风",
-                "emoji": "🌬️"
+                "chunks": [
+                  {
+                    "en": "a strong wind",
+                    "cn": "一阵强风"
+                  },
+                  {
+                    "en": "the cold wind",
+                    "cn": "冷风"
+                  },
+                  {
+                    "en": "wind and rain",
+                    "cn": "风雨"
+                  }
+                ]
               },
               {
                 "en": "shout",
                 "cn": "喊叫；呼唤",
-                "emoji": "🌤️"
+                "chunks": [
+                  {
+                    "en": "shout loudly",
+                    "cn": "大声喊"
+                  },
+                  {
+                    "en": "shout at me",
+                    "cn": "冲我喊"
+                  },
+                  {
+                    "en": "shout for help",
+                    "cn": "呼救"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -11625,177 +14121,632 @@
               {
                 "en": "museum",
                 "cn": "博物馆",
-                "emoji": "🏛️"
+                "chunks": [
+                  {
+                    "en": "visit a museum",
+                    "cn": "参观博物馆"
+                  },
+                  {
+                    "en": "a science museum",
+                    "cn": "科学博物馆"
+                  },
+                  {
+                    "en": "go to the museum",
+                    "cn": "去博物馆"
+                  }
+                ]
               },
               {
                 "en": "trip",
                 "cn": "旅行",
-                "emoji": "🧳"
+                "chunks": [
+                  {
+                    "en": "a school trip",
+                    "cn": "一次学校郊游"
+                  },
+                  {
+                    "en": "go on a trip",
+                    "cn": "去旅行"
+                  },
+                  {
+                    "en": "a day trip",
+                    "cn": "一日游"
+                  }
+                ]
               },
               {
                 "en": "plant",
                 "cn": "工厂",
-                "emoji": "🌱"
+                "chunks": [
+                  {
+                    "en": "a car plant",
+                    "cn": "一家汽车厂"
+                  },
+                  {
+                    "en": "a power plant",
+                    "cn": "一座发电厂"
+                  },
+                  {
+                    "en": "work in a plant",
+                    "cn": "在工厂工作"
+                  }
+                ]
               },
               {
                 "en": "into",
                 "cn": "到……里面； 进入",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "walk into the room",
+                    "cn": "走进房间"
+                  },
+                  {
+                    "en": "get into the car",
+                    "cn": "上车"
+                  },
+                  {
+                    "en": "look into it",
+                    "cn": "调查它"
+                  }
+                ]
               },
               {
                 "en": "screen",
                 "cn": "滤网；隔板；屏障",
-                "emoji": "🖥️"
+                "chunks": [
+                  {
+                    "en": "a phone screen",
+                    "cn": "手机屏幕"
+                  },
+                  {
+                    "en": "on the screen",
+                    "cn": "在屏幕上"
+                  },
+                  {
+                    "en": "a big screen",
+                    "cn": "一块大屏幕"
+                  }
+                ]
               },
               {
                 "en": "piece",
                 "cn": "片；块",
-                "emoji": "🧩"
+                "chunks": [
+                  {
+                    "en": "a piece of paper",
+                    "cn": "一张纸"
+                  },
+                  {
+                    "en": "a piece of cake",
+                    "cn": "一块蛋糕"
+                  },
+                  {
+                    "en": "in pieces",
+                    "cn": "碎成片"
+                  }
+                ]
               },
               {
                 "en": "waste",
                 "cn": "废弃物 v. 浪费",
-                "emoji": "🗑️"
+                "chunks": [
+                  {
+                    "en": "waste time",
+                    "cn": "浪费时间"
+                  },
+                  {
+                    "en": "a waste of money",
+                    "cn": "浪费钱"
+                  },
+                  {
+                    "en": "Don't waste food.",
+                    "cn": "别浪费食物。"
+                  }
+                ]
               },
               {
                 "en": "machine",
                 "cn": "机器",
-                "emoji": "⚙️"
+                "chunks": [
+                  {
+                    "en": "a washing machine",
+                    "cn": "一台洗衣机"
+                  },
+                  {
+                    "en": "use the machine",
+                    "cn": "用机器"
+                  },
+                  {
+                    "en": "a coffee machine",
+                    "cn": "咖啡机"
+                  }
+                ]
               },
               {
                 "en": "step",
                 "cn": "步骤；脚步",
-                "emoji": "👣"
+                "chunks": [
+                  {
+                    "en": "the first step",
+                    "cn": "第一步"
+                  },
+                  {
+                    "en": "step by step",
+                    "cn": "一步步"
+                  },
+                  {
+                    "en": "take a step",
+                    "cn": "迈一步"
+                  }
+                ]
               },
               {
                 "en": "realize",
                 "cn": "(= realise) v. 认识到；实现",
-                "emoji": "💡"
+                "chunks": [
+                  {
+                    "en": "I realize now.",
+                    "cn": "我现在明白了。"
+                  },
+                  {
+                    "en": "realize a dream",
+                    "cn": "实现梦想"
+                  },
+                  {
+                    "en": "suddenly realize",
+                    "cn": "突然意识到"
+                  }
+                ]
               },
               {
                 "en": "inside",
                 "cn": "在……里面",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "inside the box",
+                    "cn": "在盒子里"
+                  },
+                  {
+                    "en": "stay inside",
+                    "cn": "待在里面"
+                  },
+                  {
+                    "en": "look inside",
+                    "cn": "往里看"
+                  }
+                ]
               },
               {
                 "en": "theatre",
                 "cn": "戏院；剧场； 电影院",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "go to the theatre",
+                    "cn": "去剧院"
+                  },
+                  {
+                    "en": "a film theatre",
+                    "cn": "电影院"
+                  },
+                  {
+                    "en": "in the theatre",
+                    "cn": "在剧院里"
+                  }
+                ]
               },
               {
                 "en": "factory",
                 "cn": "工厂",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "work in a factory",
+                    "cn": "在工厂工作"
+                  },
+                  {
+                    "en": "a car factory",
+                    "cn": "汽车厂"
+                  },
+                  {
+                    "en": "a big factory",
+                    "cn": "一座大工厂"
+                  }
+                ]
               },
               {
                 "en": "terrible",
                 "cn": "糟糕的",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a terrible day",
+                    "cn": "糟糕的一天"
+                  },
+                  {
+                    "en": "feel terrible",
+                    "cn": "感觉很糟"
+                  },
+                  {
+                    "en": "terrible weather",
+                    "cn": "恶劣天气"
+                  }
+                ]
               },
               {
                 "en": "actor",
                 "cn": "演员",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a famous actor",
+                    "cn": "一位著名演员"
+                  },
+                  {
+                    "en": "a film actor",
+                    "cn": "电影演员"
+                  },
+                  {
+                    "en": "become an actor",
+                    "cn": "成为演员"
+                  }
+                ]
               },
               {
                 "en": "gun",
                 "cn": "枪",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a toy gun",
+                    "cn": "一把玩具枪"
+                  },
+                  {
+                    "en": "hold a gun",
+                    "cn": "拿着枪"
+                  },
+                  {
+                    "en": "an old gun",
+                    "cn": "一把旧枪"
+                  }
+                ]
               },
               {
                 "en": "along",
                 "cn": "沿着；顺着",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "walk along the road",
+                    "cn": "沿路走"
+                  },
+                  {
+                    "en": "along the river",
+                    "cn": "沿河"
+                  },
+                  {
+                    "en": "come along",
+                    "cn": "一起来"
+                  }
+                ]
               },
               {
                 "en": "road",
                 "cn": "道路",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a busy road",
+                    "cn": "一条繁忙的路"
+                  },
+                  {
+                    "en": "cross the road",
+                    "cn": "过马路"
+                  },
+                  {
+                    "en": "along the road",
+                    "cn": "沿着路"
+                  }
+                ]
               },
               {
                 "en": "create",
                 "cn": "创造",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "create a story",
+                    "cn": "创作一个故事"
+                  },
+                  {
+                    "en": "create art",
+                    "cn": "创作艺术"
+                  },
+                  {
+                    "en": "create something new",
+                    "cn": "创造新东西"
+                  }
+                ]
               },
               {
                 "en": "record",
                 "cn": "记录 /ˈrekɔːd/ n. 记录",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a world record",
+                    "cn": "一项世界纪录"
+                  },
+                  {
+                    "en": "break a record",
+                    "cn": "打破纪录"
+                  },
+                  {
+                    "en": "keep a record",
+                    "cn": "做记录"
+                  }
+                ]
               },
               {
                 "en": "thought",
                 "cn": "想法",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a good thought",
+                    "cn": "一个好想法"
+                  },
+                  {
+                    "en": "share a thought",
+                    "cn": "分享想法"
+                  },
+                  {
+                    "en": "deep in thought",
+                    "cn": "陷入沉思"
+                  }
+                ]
               },
               {
                 "en": "skill",
                 "cn": "技能",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a useful skill",
+                    "cn": "一项有用的技能"
+                  },
+                  {
+                    "en": "learn a skill",
+                    "cn": "学一门技能"
+                  },
+                  {
+                    "en": "cooking skills",
+                    "cn": "烹饪技巧"
+                  }
+                ]
               },
               {
                 "en": "explore",
                 "cn": "探索",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "explore the world",
+                    "cn": "探索世界"
+                  },
+                  {
+                    "en": "explore a cave",
+                    "cn": "探索洞穴"
+                  },
+                  {
+                    "en": "love to explore",
+                    "cn": "喜欢探索"
+                  }
+                ]
               },
               {
                 "en": "tent",
                 "cn": "帐篷",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "put up a tent",
+                    "cn": "搭帐篷"
+                  },
+                  {
+                    "en": "sleep in a tent",
+                    "cn": "在帐篷里睡"
+                  },
+                  {
+                    "en": "a big tent",
+                    "cn": "一顶大帐篷"
+                  }
+                ]
               },
               {
                 "en": "cucumber",
                 "cn": "黄瓜",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a fresh cucumber",
+                    "cn": "一根新鲜黄瓜"
+                  },
+                  {
+                    "en": "cut a cucumber",
+                    "cn": "切黄瓜"
+                  },
+                  {
+                    "en": "cucumber salad",
+                    "cn": "黄瓜沙拉"
+                  }
+                ]
               },
               {
                 "en": "straight",
                 "cn": "直接；立即； 笔直地 adj. 直的",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "go straight",
+                    "cn": "直走"
+                  },
+                  {
+                    "en": "a straight line",
+                    "cn": "一条直线"
+                  },
+                  {
+                    "en": "sit up straight",
+                    "cn": "坐直"
+                  }
+                ]
               },
               {
                 "en": "fill",
                 "cn": "装满；盛满",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "fill the cup",
+                    "cn": "倒满杯子"
+                  },
+                  {
+                    "en": "fill it with water",
+                    "cn": "装满水"
+                  },
+                  {
+                    "en": "fill in the blank",
+                    "cn": "填空"
+                  }
+                ]
               },
               {
                 "en": "basket",
                 "cn": "篮子；筐",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a fruit basket",
+                    "cn": "一个水果篮"
+                  },
+                  {
+                    "en": "fill the basket",
+                    "cn": "装满篮子"
+                  },
+                  {
+                    "en": "a big basket",
+                    "cn": "一个大篮子"
+                  }
+                ]
               },
               {
                 "en": "teach",
                 "cn": "(taught /tɔːt/) 教",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "teach English",
+                    "cn": "教英语"
+                  },
+                  {
+                    "en": "teach me",
+                    "cn": "教我"
+                  },
+                  {
+                    "en": "teach a lesson",
+                    "cn": "上一课"
+                  }
+                ]
               },
               {
                 "en": "leaf",
                 "cn": "(pl. leaves /liːvz/) 叶；叶子",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "a green leaf",
+                    "cn": "一片绿叶"
+                  },
+                  {
+                    "en": "fallen leaves",
+                    "cn": "落叶"
+                  },
+                  {
+                    "en": "leaves on the tree",
+                    "cn": "树上的叶子"
+                  }
+                ]
               },
               {
                 "en": "finally",
                 "cn": "终于",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "finally arrive",
+                    "cn": "终于到达"
+                  },
+                  {
+                    "en": "finally done",
+                    "cn": "终于完成"
+                  },
+                  {
+                    "en": "Finally, we won.",
+                    "cn": "最后我们赢了。"
+                  }
+                ]
               },
               {
                 "en": "fresh",
                 "cn": "新鲜的",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "fresh air",
+                    "cn": "新鲜空气"
+                  },
+                  {
+                    "en": "fresh fruit",
+                    "cn": "新鲜水果"
+                  },
+                  {
+                    "en": "fresh and clean",
+                    "cn": "新鲜干净"
+                  }
+                ]
               },
               {
                 "en": "certainly",
                 "cn": "肯定；当然",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "Certainly!",
+                    "cn": "当然!"
+                  },
+                  {
+                    "en": "certainly true",
+                    "cn": "当然是真的"
+                  },
+                  {
+                    "en": "will certainly come",
+                    "cn": "一定会来"
+                  }
+                ]
               },
               {
                 "en": "diary",
                 "cn": "日记；日记本",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "keep a diary",
+                    "cn": "写日记"
+                  },
+                  {
+                    "en": "in my diary",
+                    "cn": "在我的日记里"
+                  },
+                  {
+                    "en": "write a diary",
+                    "cn": "记日记"
+                  }
+                ]
               },
               {
                 "en": "agree",
                 "cn": "赞成；同意",
-                "emoji": "📸"
+                "chunks": [
+                  {
+                    "en": "I agree.",
+                    "cn": "我同意。"
+                  },
+                  {
+                    "en": "agree with you",
+                    "cn": "同意你"
+                  },
+                  {
+                    "en": "agree to go",
+                    "cn": "同意去"
+                  }
+                ]
               }
             ],
             "dialogues": [],
@@ -12199,177 +15150,632 @@
               {
                 "en": "upon",
                 "cn": "在……上",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "once upon a time",
+                    "cn": "从前"
+                  },
+                  {
+                    "en": "upon the hill",
+                    "cn": "在山上"
+                  },
+                  {
+                    "en": "depend upon",
+                    "cn": "依靠"
+                  }
+                ]
               },
               {
                 "en": "hunter",
                 "cn": "猎人；搜寻者",
-                "emoji": "🏹"
+                "chunks": [
+                  {
+                    "en": "a brave hunter",
+                    "cn": "一位勇敢的猎人"
+                  },
+                  {
+                    "en": "a young hunter",
+                    "cn": "一位年轻的猎人"
+                  },
+                  {
+                    "en": "the hunter's dog",
+                    "cn": "猎人的狗"
+                  }
+                ]
               },
               {
                 "en": "promise",
                 "cn": "承诺；保证 n. 承诺；诺言",
-                "emoji": "🤞"
+                "chunks": [
+                  {
+                    "en": "make a promise",
+                    "cn": "许下承诺"
+                  },
+                  {
+                    "en": "keep a promise",
+                    "cn": "守信"
+                  },
+                  {
+                    "en": "I promise.",
+                    "cn": "我保证。"
+                  }
+                ]
               },
               {
                 "en": "war",
                 "cn": "战争",
-                "emoji": "⚔️"
+                "chunks": [
+                  {
+                    "en": "a long war",
+                    "cn": "一场漫长的战争"
+                  },
+                  {
+                    "en": "stop the war",
+                    "cn": "停战"
+                  },
+                  {
+                    "en": "before the war",
+                    "cn": "战前"
+                  }
+                ]
               },
               {
                 "en": "neighbour",
                 "cn": "邻居",
-                "emoji": "🏠"
+                "chunks": [
+                  {
+                    "en": "a kind neighbour",
+                    "cn": "一位友善的邻居"
+                  },
+                  {
+                    "en": "my neighbour",
+                    "cn": "我的邻居"
+                  },
+                  {
+                    "en": "next-door neighbour",
+                    "cn": "隔壁邻居"
+                  }
+                ]
               },
               {
                 "en": "wise",
                 "cn": "明智的；高明的",
-                "emoji": "🦉"
+                "chunks": [
+                  {
+                    "en": "a wise man",
+                    "cn": "一位智者"
+                  },
+                  {
+                    "en": "a wise choice",
+                    "cn": "明智的选择"
+                  },
+                  {
+                    "en": "wise and kind",
+                    "cn": "睿智善良"
+                  }
+                ]
               },
               {
                 "en": "emperor",
                 "cn": "皇帝",
-                "emoji": "👑"
+                "chunks": [
+                  {
+                    "en": "the old emperor",
+                    "cn": "老皇帝"
+                  },
+                  {
+                    "en": "a great emperor",
+                    "cn": "一位伟大的皇帝"
+                  },
+                  {
+                    "en": "the emperor's new clothes",
+                    "cn": "皇帝的新装"
+                  }
+                ]
               },
               {
                 "en": "lie",
                 "cn": "撒谎 n. 谎言",
-                "emoji": "🤥"
+                "chunks": [
+                  {
+                    "en": "tell a lie",
+                    "cn": "撒谎"
+                  },
+                  {
+                    "en": "Don't lie.",
+                    "cn": "别说谎。"
+                  },
+                  {
+                    "en": "a white lie",
+                    "cn": "善意的谎言"
+                  }
+                ]
               },
               {
                 "en": "silly",
                 "cn": "愚蠢的；傻的",
-                "emoji": "😜"
+                "chunks": [
+                  {
+                    "en": "a silly mistake",
+                    "cn": "一个愚蠢的错误"
+                  },
+                  {
+                    "en": "so silly",
+                    "cn": "太傻了"
+                  },
+                  {
+                    "en": "a silly idea",
+                    "cn": "一个蠢主意"
+                  }
+                ]
               },
               {
                 "en": "decide",
                 "cn": "决定",
-                "emoji": "✅"
+                "chunks": [
+                  {
+                    "en": "decide to go",
+                    "cn": "决定去"
+                  },
+                  {
+                    "en": "hard to decide",
+                    "cn": "难以决定"
+                  },
+                  {
+                    "en": "decide quickly",
+                    "cn": "快速决定"
+                  }
+                ]
               },
               {
                 "en": "praise",
                 "cn": "赞美；表扬",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "praise the boy",
+                    "cn": "表扬男孩"
+                  },
+                  {
+                    "en": "full of praise",
+                    "cn": "充满赞美"
+                  },
+                  {
+                    "en": "win praise",
+                    "cn": "赢得赞扬"
+                  }
+                ]
               },
               {
                 "en": "afraid",
                 "cn": "害怕的；担心的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "be afraid of dogs",
+                    "cn": "怕狗"
+                  },
+                  {
+                    "en": "afraid to ask",
+                    "cn": "不敢问"
+                  },
+                  {
+                    "en": "Don't be afraid.",
+                    "cn": "别害怕。"
+                  }
+                ]
               },
               {
                 "en": "suddenly",
                 "cn": "突然地； 出乎意料地",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "suddenly stop",
+                    "cn": "突然停下"
+                  },
+                  {
+                    "en": "It happened suddenly.",
+                    "cn": "事情突然发生。"
+                  },
+                  {
+                    "en": "suddenly cry",
+                    "cn": "突然哭起来"
+                  }
+                ]
               },
               {
                 "en": "truth",
                 "cn": "真相；事实",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "tell the truth",
+                    "cn": "说实话"
+                  },
+                  {
+                    "en": "the whole truth",
+                    "cn": "全部真相"
+                  },
+                  {
+                    "en": "know the truth",
+                    "cn": "知道真相"
+                  }
+                ]
               },
               {
                 "en": "true",
                 "cn": "符合事实的；真正的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a true story",
+                    "cn": "一个真实的故事"
+                  },
+                  {
+                    "en": "come true",
+                    "cn": "实现"
+                  },
+                  {
+                    "en": "It's true.",
+                    "cn": "这是真的。"
+                  }
+                ]
               },
               {
                 "en": "hate",
                 "cn": "不喜欢；厌恶；讨厌",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "hate lies",
+                    "cn": "讨厌谎言"
+                  },
+                  {
+                    "en": "I hate it.",
+                    "cn": "我讨厌它。"
+                  },
+                  {
+                    "en": "hate to wait",
+                    "cn": "讨厌等待"
+                  }
+                ]
               },
               {
                 "en": "king",
                 "cn": "君主；国王",
-                "emoji": "🤴"
+                "chunks": [
+                  {
+                    "en": "a great king",
+                    "cn": "一位伟大的国王"
+                  },
+                  {
+                    "en": "the king's son",
+                    "cn": "国王的儿子"
+                  },
+                  {
+                    "en": "a kind king",
+                    "cn": "一位仁慈的国王"
+                  }
+                ]
               },
               {
                 "en": "artist",
                 "cn": "美术家；艺术家",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a famous artist",
+                    "cn": "一位著名的艺术家"
+                  },
+                  {
+                    "en": "a young artist",
+                    "cn": "一位年轻的艺术家"
+                  },
+                  {
+                    "en": "become an artist",
+                    "cn": "成为艺术家"
+                  }
+                ]
               },
               {
                 "en": "quickly",
                 "cn": "快速地；很快",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "run quickly",
+                    "cn": "快跑"
+                  },
+                  {
+                    "en": "quickly finish",
+                    "cn": "快速完成"
+                  },
+                  {
+                    "en": "answer quickly",
+                    "cn": "快速回答"
+                  }
+                ]
               },
               {
                 "en": "smile",
                 "cn": "微笑 n. 微笑；笑容",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a big smile",
+                    "cn": "灿烂的微笑"
+                  },
+                  {
+                    "en": "smile at me",
+                    "cn": "朝我微笑"
+                  },
+                  {
+                    "en": "with a smile",
+                    "cn": "面带微笑"
+                  }
+                ]
               },
               {
                 "en": "ugly",
                 "cn": "丑陋的；难看的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "an ugly duck",
+                    "cn": "一只丑小鸭"
+                  },
+                  {
+                    "en": "look ugly",
+                    "cn": "看起来丑"
+                  },
+                  {
+                    "en": "ugly but kind",
+                    "cn": "丑却善良"
+                  }
+                ]
               },
               {
                 "en": "real",
                 "cn": "真的；真正的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a real friend",
+                    "cn": "一个真正的朋友"
+                  },
+                  {
+                    "en": "in real life",
+                    "cn": "在现实生活中"
+                  },
+                  {
+                    "en": "Is it real?",
+                    "cn": "这是真的吗?"
+                  }
+                ]
               },
               {
                 "en": "search",
                 "cn": "寻找；搜寻",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "search for food",
+                    "cn": "寻找食物"
+                  },
+                  {
+                    "en": "in search of",
+                    "cn": "寻找"
+                  },
+                  {
+                    "en": "search everywhere",
+                    "cn": "到处找"
+                  }
+                ]
               },
               {
                 "en": "hen",
                 "cn": "母鸡",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a fat hen",
+                    "cn": "一只肥母鸡"
+                  },
+                  {
+                    "en": "The hen lays eggs.",
+                    "cn": "母鸡下蛋。"
+                  },
+                  {
+                    "en": "feed the hen",
+                    "cn": "喂母鸡"
+                  }
+                ]
               },
               {
                 "en": "hopefully",
                 "cn": "有希望地",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "Hopefully, it works.",
+                    "cn": "但愿能行。"
+                  },
+                  {
+                    "en": "wait hopefully",
+                    "cn": "满怀希望地等"
+                  },
+                  {
+                    "en": "Hopefully soon.",
+                    "cn": "希望快了。"
+                  }
+                ]
               },
               {
                 "en": "lay",
                 "cn": "(laid /leɪd/) 下（蛋）； 放置；搁",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "lay an egg",
+                    "cn": "下蛋"
+                  },
+                  {
+                    "en": "lay it down",
+                    "cn": "把它放下"
+                  },
+                  {
+                    "en": "lay on the table",
+                    "cn": "放在桌上"
+                  }
+                ]
               },
               {
                 "en": "size",
                 "cn": "大小；尺寸",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "the right size",
+                    "cn": "合适的尺码"
+                  },
+                  {
+                    "en": "What size?",
+                    "cn": "什么尺寸?"
+                  },
+                  {
+                    "en": "a big size",
+                    "cn": "大号"
+                  }
+                ]
               },
               {
                 "en": "fishing",
                 "cn": "钓鱼；捕鱼",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "go fishing",
+                    "cn": "去钓鱼"
+                  },
+                  {
+                    "en": "a fishing trip",
+                    "cn": "钓鱼之旅"
+                  },
+                  {
+                    "en": "love fishing",
+                    "cn": "喜欢钓鱼"
+                  }
+                ]
               },
               {
                 "en": "die",
                 "cn": "死亡；消失",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "die young",
+                    "cn": "早逝"
+                  },
+                  {
+                    "en": "The plant died.",
+                    "cn": "那株植物死了。"
+                  },
+                  {
+                    "en": "never die",
+                    "cn": "永不消亡"
+                  }
+                ]
               },
               {
                 "en": "someone",
                 "cn": "某人；有人",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "someone new",
+                    "cn": "新来的人"
+                  },
+                  {
+                    "en": "ask someone",
+                    "cn": "问个人"
+                  },
+                  {
+                    "en": "Someone is calling.",
+                    "cn": "有人在叫。"
+                  }
+                ]
               },
               {
                 "en": "set",
                 "cn": "使处于某种状况；使开始",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "set a goal",
+                    "cn": "设定目标"
+                  },
+                  {
+                    "en": "The sun sets.",
+                    "cn": "太阳落山。"
+                  },
+                  {
+                    "en": "set the table",
+                    "cn": "摆放餐具"
+                  }
+                ]
               },
               {
                 "en": "rich",
                 "cn": "富有的；富含……的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a rich man",
+                    "cn": "一个富人"
+                  },
+                  {
+                    "en": "get rich",
+                    "cn": "变富"
+                  },
+                  {
+                    "en": "rich in vitamins",
+                    "cn": "富含维生素"
+                  }
+                ]
               },
               {
                 "en": "powerful",
                 "cn": "强大的； 有影响力的",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "a powerful king",
+                    "cn": "一位强大的国王"
+                  },
+                  {
+                    "en": "a powerful country",
+                    "cn": "一个强国"
+                  },
+                  {
+                    "en": "powerful and wise",
+                    "cn": "强大睿智"
+                  }
+                ]
               },
               {
                 "en": "anyone",
                 "cn": "任何人； 某个人",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "anyone here",
+                    "cn": "这里有人吗"
+                  },
+                  {
+                    "en": "ask anyone",
+                    "cn": "问任何人"
+                  },
+                  {
+                    "en": "Anyone can do it.",
+                    "cn": "谁都能做。"
+                  }
+                ]
               },
               {
                 "en": "himself",
                 "cn": "他自己； 他本人",
-                "emoji": "📖"
+                "chunks": [
+                  {
+                    "en": "by himself",
+                    "cn": "他自己"
+                  },
+                  {
+                    "en": "do it himself",
+                    "cn": "他自己做"
+                  },
+                  {
+                    "en": "He hurt himself.",
+                    "cn": "他伤了自己。"
+                  }
+                ]
               }
             ],
             "dialogues": [],

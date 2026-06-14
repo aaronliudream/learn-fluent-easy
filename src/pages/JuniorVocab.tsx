@@ -4,7 +4,7 @@ import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { recordCohortAttempt } from "@/lib/cohortProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
@@ -1052,6 +1052,8 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
   const cur = queue[idx];
 
   useEffect(() => {if (cur) speak(cur.word);}, [cur?.id]);
+  // 预取整批音频(与 speak 同 voice/speed key)→ 后续每词秒播,消除发音延迟
+  useEffect(() => { if (queue.length) prefetchTTSBatch(queue.map((w) => w.word)); }, [queue]);
   useEffect(() => {
     const t = setTimeout(() => inputRef.current?.focus(), 100);
     return () => clearTimeout(t);

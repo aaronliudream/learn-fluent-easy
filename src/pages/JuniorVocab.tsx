@@ -2,7 +2,7 @@ import { T } from "@/i18n/T";import { useCallback, useEffect, useMemo, useRef, u
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Brain, Headphones, Music, Keyboard, BookOpen, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { recordAttempt } from "@/lib/gaokaoMastery";
@@ -37,7 +37,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "match" | "dict" | "srs" | "guided";
+type Mode = null | "classic" | "bento" | "match" | "dict" | "context" | "srs" | "guided";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -190,6 +190,7 @@ export default function JuniorVocab() {
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
+  if (mode === "context") return <ContextQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
 
   if (groupIdx >= 0 && groupIdx < groups.length) {
@@ -212,7 +213,8 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
   { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
   { mode: "match", icon: Music, title: zh ? "记忆翻牌" : "Memory Match", desc: zh ? "图音中英匹配 · 经典训练法" : "Match words and meanings · classic drill", gradient: "from-sky-500 to-blue-500" },
-  { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" }];
+  { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" },
+  { mode: "context", icon: BookOpen, title: zh ? "单词情景闯关" : "Context Quiz", desc: zh ? "读句子选最合适的词 · 语境运用" : "Read the sentence, pick the best word", gradient: "from-amber-500 to-orange-500" }];
 
 
   useEffect(() => {
@@ -353,7 +355,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       {/* 辅助训练（提到清单上方，移动端不必滑到底） */}
       <div className="mb-3 mt-2 flex items-end justify-between">
         <h2 className="text-base font-extrabold">{zh ? "辅助训练" : "Practice games"}</h2>
-        <span className="text-[11px] text-muted-foreground">{zh ? "4 种游戏 · 全部接入复习曲线" : "4 games · all connected to the review curve"}</span>
+        <span className="text-[11px] text-muted-foreground">{zh ? "5 种游戏 · 全部接入复习曲线" : "5 games · all connected to the review curve"}</span>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {
@@ -787,6 +789,251 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
         </div>
         <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
           <Sparkles className="size-3" /> {zh ? "答题数据已自动接入智能复习系统" : "Answers automatically feed the smart review system"}
+        </div>
+      </div>
+    </main>);
+
+}
+
+/* -------------------- CONTEXT QUIZ 单词情景闯关 --------------------
+   读句子(挖空)4 选 1。题库 context_questions(DB);掌握记在 word 原形上(context_consec)。 */
+type CtxQ = { id: string; word: string; sentence: string; options: string[]; answer: string };
+
+function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
+  const BATCH = 10;
+
+  const { loading: masteryLoading, authed, consec } = useJuniorVocabMastery(gradeNum);
+
+  // 题库(DB)
+  const [questions, setQuestions] = useState<CtxQ[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase
+        .from("context_questions")
+        .select("id,word,sentence,options,answer")
+        .eq("grade", gradeNum)
+        .limit(2000);
+      if (cancelled) return;
+      const qs = (data ?? [])
+        .map((r: any) => ({
+          id: String(r.id), word: String(r.word), sentence: String(r.sentence),
+          options: Array.isArray(r.options) ? r.options.map(String) : [],
+          answer: String(r.answer),
+        }))
+        .filter((q) => q.options.length >= 2 && q.sentence && q.word);
+      setQuestions(qs);
+    })();
+    return () => { cancelled = true; };
+  }, [gradeNum]);
+
+  // word 原形(小写)→ junior_vocab id(记掌握用)
+  const idByWord = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const v of pool) if (v.word) m.set(v.word.trim().toLowerCase(), v.id);
+    return m;
+  }, [pool]);
+
+  // 题按 wid 分组(仅保留能映射到词表的题);universe = 有题的词
+  const { byWid, universeWids } = useMemo(() => {
+    const byWid = new Map<string, CtxQ[]>();
+    for (const q of questions ?? []) {
+      const wid = idByWord.get(q.word.trim().toLowerCase());
+      if (!wid) continue;
+      if (!byWid.has(wid)) byWid.set(wid, []);
+      byWid.get(wid)!.push(q);
+    }
+    return { byWid, universeWids: [...byWid.keys()] };
+  }, [questions, idByWord]);
+  const total = universeWids.length;
+
+  // 本地连对(wid → context_consec)
+  const [localCtx, setLocalCtx] = useState<Map<string, number>>(new Map());
+  const [seeded, setSeeded] = useState(false);
+  useEffect(() => {
+    if (masteryLoading || questions === null) return;
+    const m = new Map<string, number>();
+    consec.forEach((c, id) => { if (c.context) m.set(id, c.context); });
+    setLocalCtx(m);
+    setSeeded(true);
+  }, [masteryLoading, questions, consec]);
+
+  const masteredCount = useMemo(
+    () => universeWids.reduce((n, wid) => n + (((localCtx.get(wid) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0),
+    [universeWids, localCtx],
+  );
+
+  const buildBatch = useCallback((mastery: Map<string, number>): CtxQ[] => {
+    const unmastered = universeWids.filter((wid) => (mastery.get(wid) ?? 0) < MASTER_STREAK);
+    const mastered = universeWids.filter((wid) => (mastery.get(wid) ?? 0) >= MASTER_STREAK);
+    const picked = shuffle(unmastered).slice(0, BATCH);
+    if (picked.length < BATCH) picked.push(...shuffle(mastered).slice(0, BATCH - picked.length));
+    // 每个词随机取一题(同一词可能有多句)
+    return picked.map((wid) => { const qs = byWid.get(wid)!; return qs[Math.floor(Math.random() * qs.length)]; });
+  }, [universeWids, byWid]);
+
+  const [queue, setQueue] = useState<CtxQ[]>([]);
+  const [batchStartMastered, setBatchStartMastered] = useState(0);
+  const [idx, setIdx] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    if (!seeded || startedRef.current || universeWids.length === 0) return;
+    startedRef.current = true;
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localCtx));
+  }, [seeded, universeWids.length, buildBatch, localCtx, masteredCount]);
+
+  const cur = queue[idx];
+  const shownOptions = useMemo(() => (cur ? shuffle(cur.options) : []), [cur]);
+
+  const nextRound = () => {
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localCtx));
+    setIdx(0);
+    setPicked(null);
+    setScore({ correct: 0, total: 0 });
+  };
+
+  const onPickAns = async (opt: string) => {
+    if (picked || !cur) return;
+    setPicked(opt);
+    const correct = opt === cur.answer;
+    speak(cur.answer);
+    const wid = idByWord.get(cur.word.trim().toLowerCase());
+    if (wid) {
+      setLocalCtx((prev) => { const m = new Map(prev); m.set(wid, correct ? (prev.get(wid) ?? 0) + 1 : 0); return m; });
+    }
+    setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+    if (correct) awardCoins(2, "junior_vocab_context").catch(() => {}); else notifyWrong();
+    if (wid) void recordJuniorWordMastery({ wordId: wid, grade: gradeNum, kind: "context", isCorrect: correct });
+    setTimeout(() => { setPicked(null); setIdx((i) => i + 1); }, 1100);
+  };
+
+  if (masteryLoading || questions === null || !seeded) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (universeWids.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}
+        </button>
+        <p className="text-sm text-muted-foreground">{zh ? "暂无情景题" : "No context questions yet"}</p>
+      </main>);
+
+  }
+
+  if (queue.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (queue.length > 0 && idx >= queue.length) {
+    const pct = Math.round(score.correct / Math.max(1, score.total) * 100);
+    if (typeof window !== "undefined" && !(queue as any).__rewarded) {
+      (queue as any).__rewarded = true;
+      awardCoins(pct === 100 ? 20 : 5, "junior_vocab_finish").catch(() => {});
+      celebrateScore(pct);
+    }
+    const justMastered = Math.max(0, masteredCount - batchStartMastered);
+    const remaining = Math.max(0, total - masteredCount);
+    const allMastered = authed && remaining === 0;
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
+        <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
+          <Trophy className="mx-auto size-12 text-amber-500" />
+          <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? zh ? "🌟 太棒了！" : "🌟 Great work!" : pct >= 70 ? zh ? "👍 不错！" : "👍 Nice job!" : zh ? "💪 继续加油！" : "💪 Keep going!"}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `答对 ${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
+          {authed && (
+            <p className="mt-1 text-sm font-bold text-emerald-600">{zh ? `本轮又掌握 ${justMastered} 个 · 还剩 ${remaining} / ${total}` : `+${justMastered} mastered · ${remaining} / ${total} left`}</p>
+          )}
+          {allMastered && (
+            <p className="mt-2 text-sm font-bold text-amber-600">{zh ? `🎉 全部 ${total} 词已掌握一遍！` : `🎉 All ${total} words mastered!`}</p>
+          )}
+          <div className="mt-4 flex justify-center gap-3">
+            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
+            <button onClick={nextRound} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">
+              <RotateCw className="size-4" /> {allMastered ? zh ? "再复习一组" : "Review again" : zh ? "继续下一轮" : "Next round"}
+            </button>
+          </div>
+        </div>
+      </main>);
+
+  }
+
+  return (
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
+      </button>
+      {authed ? (
+        <div className="mb-4">
+          <div className="mb-1 flex items-center justify-between text-xs font-bold text-muted-foreground">
+            <span>{zh ? `本游戏已掌握 ${masteredCount} / ${total}` : `Mastered ${masteredCount} / ${total}`}</span>
+            <span>{zh ? `还剩 ${Math.max(0, total - masteredCount)}` : `${Math.max(0, total - masteredCount)} left`}</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all" style={{ width: `${total ? Math.round((masteredCount / total) * 100) : 0}%` }} />
+          </div>
+        </div>
+      ) : (
+        <div className="mb-4 rounded-xl border border-border/60 bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">
+          {zh ? "登录后可追踪掌握进度（连对 2 次掌握 · 已掌握的词不再重复出）" : "Log in to track mastery progress"}
+        </div>
+      )}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between text-xs text-muted-foreground">
+          <span>{zh ? `第 ${idx + 1} / ${queue.length} 题` : `Question ${idx + 1} / ${queue.length}`}</span>
+          <span className="font-bold">✅ {score.correct} / {score.total}</span>
+        </div>
+        <div className="rounded-3xl border border-border/60 bg-card p-6">
+          <div className="text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{zh ? "读句子,选最合适的词" : "Pick the best word for the sentence"}</div>
+          <p className="mt-3 text-base leading-relaxed text-foreground">{cur.sentence}</p>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {shownOptions.map((opt) => {
+            const isCorrect = opt === cur.answer;
+            const showRight = picked && isCorrect;
+            const showWrong = picked === opt && !isCorrect;
+            return (
+              <button
+                key={opt}
+                onClick={() => onPickAns(opt)}
+                disabled={!!picked}
+                className={cn(
+                  "flex items-center justify-between rounded-2xl border-2 p-4 text-left text-base font-bold transition",
+                  showRight && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
+                  showWrong && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40",
+                  !picked && "border-border bg-card hover:border-primary/40",
+                  picked && !showRight && !showWrong && "opacity-60"
+                )}>
+
+                <span>{opt}</span>
+                {showRight && <Check className="size-5" />}
+                {showWrong && <X className="size-5" />}
+              </button>);
+
+          })}
+        </div>
+        <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
+          <Sparkles className="size-3" /> {zh ? "连对 2 次即掌握该词,自动接入复习" : "Master a word with 2 correct in a row"}
         </div>
       </div>
     </main>);

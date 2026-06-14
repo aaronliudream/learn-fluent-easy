@@ -4,13 +4,14 @@ import { supabase } from "@/integrations/supabase/client";
 /** 掌握门槛:某游戏某词连续答对达到此值 = 该游戏掌握(独立 per 游戏)。 */
 export const MASTER_STREAK = 2;
 
-export type VocabGameKind = "quiz" | "match" | "spell" | "bento";
+export type VocabGameKind = "quiz" | "match" | "spell" | "bento" | "context";
 
 export interface WordConsec {
   quiz: number;
   match: number;
   spell: number;
   bento: number;
+  context: number;
 }
 
 export interface JuniorVocabMasteryState {
@@ -52,7 +53,7 @@ export function useJuniorVocabMastery(gradeNum: number): JuniorVocabMasteryState
       for (let from = 0; from < 5000; from += PAGE) {
         const { data, error } = await supabase
           .from("junior_word_mastery")
-          .select("word_id,quiz_consec,match_consec,spell_consec,bento_consec")
+          .select("word_id,quiz_consec,match_consec,spell_consec,bento_consec,context_consec")
           .eq("user_id", user.id)
           .eq("grade", gradeNum)
           .range(from, from + PAGE - 1);
@@ -63,6 +64,7 @@ export function useJuniorVocabMastery(gradeNum: number): JuniorVocabMasteryState
             match: Number(r.match_consec ?? 0),
             spell: Number(r.spell_consec ?? 0),
             bento: Number(r.bento_consec ?? 0),
+            context: Number(r.context_consec ?? 0),
           });
         }
         if (data.length < PAGE) break;

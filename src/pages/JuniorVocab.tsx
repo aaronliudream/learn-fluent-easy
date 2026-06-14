@@ -46,6 +46,34 @@ const gradeLabel = (grade: number, zh: boolean) => zh ? `初${grade}` : `Grade $
 const meaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_cn : word.meaning_en || word.meaning_cn;
 const secondaryMeaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_en : word.meaning_cn;
 
+/**
+ * 拼写规范化:把英式↔美式变体归一,判分时两侧都规范化后比较 → 变体都算对。
+ * -our/-re 用对照表(避免 four→for / are→aer 误伤);-ise/-ize 用安全后缀规则。
+ */
+const SPELLING_CANON: Record<string, string> = {
+  colour: "color", colours: "colors", coloured: "colored", colourful: "colorful",
+  favour: "favor", favourite: "favorite", favourites: "favorites",
+  neighbour: "neighbor", neighbours: "neighbors", neighbourhood: "neighborhood",
+  flavour: "flavor", honour: "honor", humour: "humor", labour: "labor",
+  behaviour: "behavior", harbour: "harbor", rumour: "rumor",
+  centre: "center", theatre: "theater", metre: "meter", litre: "liter",
+  fibre: "fiber", kilometre: "kilometer",
+  grey: "gray", practise: "practice", programme: "program", defence: "defense",
+  travelling: "traveling", traveller: "traveler", cancelled: "canceled",
+  jewellery: "jewelry", pyjamas: "pajamas", catalogue: "catalog", dialogue: "dialog",
+  tyre: "tire", plough: "plow", mum: "mom", maths: "math",
+};
+function canonSpelling(s: string): string {
+  const w = (s || "").trim().toLowerCase();
+  if (SPELLING_CANON[w]) return SPELLING_CANON[w];
+  // 英式 -ise/-isation → 美式 -ize/-ization(两侧同样处理,变体即可互通)
+  return w
+    .replace(/isation$/, "ization")
+    .replace(/ising$/, "izing")
+    .replace(/ised$/, "ized")
+    .replace(/ise$/, "ize");
+}
+
 export default function JuniorVocab() {
   const [params, setParams] = useSearchParams();
   const { lang } = useI18n();
@@ -976,12 +1004,54 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
 function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
-  const queue = useMemo(() => shuffle(pool.filter((v) => v.word && !/[\/\s]/.test(v.word))).slice(0, 15), [pool]);
+  const BATCH = 15;
+
+  // 掌握度(听写 spell 连对2次=掌握,独立);登录加载,游客为空。
+  const { loading: masteryLoading, authed, consec } = useJuniorVocabMastery(gradeNum);
+  // 听写只测单个可拼写的词(排除含空格/斜杠的词组)
+  const valid = useMemo(() => pool.filter((v) => v.word && !/[\/\s]/.test(v.word) && meaningForUi(v, zh)), [pool, zh]);
+  const total = valid.length;
+
+  // 本会话本地连对(镜像 DB,答对+1/答错清零,即时刷新进度)
+  const [localSpell, setLocalSpell] = useState<Map<string, number>>(new Map());
+  const [seeded, setSeeded] = useState(false);
+  useEffect(() => {
+    if (masteryLoading) return;
+    const m = new Map<string, number>();
+    consec.forEach((c, id) => { if (c.spell) m.set(id, c.spell); });
+    setLocalSpell(m);
+    setSeeded(true);
+  }, [masteryLoading, consec]);
+
+  const masteredCount = useMemo(
+    () => valid.reduce((n, w) => n + (((localSpell.get(w.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0),
+    [valid, localSpell],
+  );
+
+  const buildBatch = useCallback((mastery: Map<string, number>): Vocab[] => {
+    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
+    if (unmastered.length >= BATCH) return shuffle(unmastered).slice(0, BATCH);
+    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
+    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
+  }, [valid]);
+
+  const [queue, setQueue] = useState<Vocab[]>([]);
+  const [batchStartMastered, setBatchStartMastered] = useState(0);
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
   const [feedback, setFeedback] = useState<"" | "right" | "wrong">("");
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const inputRef = useRef<HTMLInputElement>(null);
+  const startedRef = useRef(false);
+
+  // 首批:掌握度就绪后只构建一次(优先未掌握词)
+  useEffect(() => {
+    if (!seeded || startedRef.current || valid.length === 0) return;
+    startedRef.current = true;
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localSpell));
+  }, [seeded, valid.length, buildBatch, localSpell, masteredCount]);
+
   const cur = queue[idx];
 
   useEffect(() => {if (cur) speak(cur.word);}, [cur?.id]);
@@ -990,21 +1060,64 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
     return () => clearTimeout(t);
   }, [idx]);
 
-  if (!cur && queue.length === 0) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
+  const nextRound = () => {
+    setBatchStartMastered(masteredCount);
+    setQueue(buildBatch(localSpell));
+    setIdx(0);
+    setInput("");
+    setFeedback("");
+    setScore({ correct: 0, total: 0 });
+  };
 
-  if (idx >= queue.length && queue.length > 0) {
+  if (masteryLoading || !seeded) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (valid.length === 0) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
+
+  if (queue.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (queue.length > 0 && idx >= queue.length) {
     const pct = Math.round(score.correct / Math.max(1, score.total) * 100);
     if (typeof window !== "undefined" && !(queue as any).__rewarded) {
       (queue as any).__rewarded = true;
       celebrateScore(pct);
     }
+    const justMastered = Math.max(0, masteredCount - batchStartMastered);
+    const remaining = Math.max(0, total - masteredCount);
+    const allMastered = authed && remaining === 0;
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Headphones className="mx-auto size-12 text-primary" />
           <h3 className="mt-2 text-xl font-extrabold">{zh ? "听写完成" : "Dictation complete"}</h3>
           <p className="mt-1 text-sm text-muted-foreground">{zh ? `${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回中心" : "Back to center"}</button>
+          {authed && (
+            <p className="mt-1 text-sm font-bold text-emerald-600">{zh ? `本轮又掌握 ${justMastered} 个 · 还剩 ${remaining} / ${total}` : `+${justMastered} mastered · ${remaining} / ${total} left`}</p>
+          )}
+          {allMastered && (
+            <p className="mt-2 text-sm font-bold text-amber-600">{zh ? `🎉 全部 ${total} 词已掌握一遍！` : `🎉 All ${total} words mastered!`}</p>
+          )}
+          <div className="mt-4 flex justify-center gap-3">
+            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
+            <button onClick={nextRound} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">
+              <RotateCw className="size-4" /> {allMastered ? zh ? "再复习一组" : "Review again" : zh ? "继续下一轮" : "Next round"}
+            </button>
+          </div>
         </div>
       </main>);
 
@@ -1012,8 +1125,14 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
 
   const submit = async () => {
     if (feedback) return;
-    const ok = input.trim().toLowerCase() === cur.word.trim().toLowerCase();
+    const ok = canonSpelling(input) === canonSpelling(cur.word);
     setFeedback(ok ? "right" : "wrong");
+    // 本地连对镜像:答对 +1 / 答错清零
+    setLocalSpell((prev) => {
+      const next = new Map(prev);
+      next.set(cur.id, ok ? (prev.get(cur.id) ?? 0) + 1 : 0);
+      return next;
+    });
     setScore((s) => ({ correct: s.correct + (ok ? 1 : 0), total: s.total + 1 }));
     if (ok) awardCoins(3, "junior_vocab_dict").catch(() => {});else
     notifyWrong();
@@ -1059,6 +1178,21 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
+      {authed ? (
+        <div className="mb-4">
+          <div className="mb-1 flex items-center justify-between text-xs font-bold text-muted-foreground">
+            <span>{zh ? `本游戏已掌握 ${masteredCount} / ${total}` : `Mastered ${masteredCount} / ${total}`}</span>
+            <span>{zh ? `还剩 ${Math.max(0, total - masteredCount)}` : `${Math.max(0, total - masteredCount)} left`}</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all" style={{ width: `${total ? Math.round((masteredCount / total) * 100) : 0}%` }} />
+          </div>
+        </div>
+      ) : (
+        <div className="mb-4 rounded-xl border border-border/60 bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">
+          {zh ? "登录后可追踪掌握进度（连对 2 次掌握 · 已掌握的词不再重复出）" : "Log in to track mastery progress"}
+        </div>
+      )}
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span>{zh ? `第 ${idx + 1} / ${queue.length}` : `${idx + 1} / ${queue.length}`}</span>

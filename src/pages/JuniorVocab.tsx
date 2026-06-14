@@ -1210,6 +1210,11 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
       )}
       <h2 className="text-xl font-extrabold">🃏 {zh ? "记忆翻牌" : "Memory Match"}</h2>
       <p className="mt-1 text-xs text-muted-foreground">{zh ? `配对 ${sample.length} 对单词与中文 · 已配对 ${matched.size}/${sample.length} · 步数 ${moves}` : `Match ${sample.length} word pairs · matched ${matched.size}/${sample.length} · moves ${moves}`}</p>
+      <p className="mt-1 flex items-center gap-3 text-[11px] text-muted-foreground">
+        <span className="flex items-center gap-1"><span className="inline-block size-2.5 rounded-sm bg-gradient-to-br from-sky-500 to-blue-600" /> {zh ? "蓝 = 英文" : "Blue = English"}</span>
+        <span className="flex items-center gap-1"><span className="inline-block size-2.5 rounded-sm bg-gradient-to-br from-amber-500 to-orange-600" /> {zh ? "橙 = 中文" : "Orange = Chinese"}</span>
+        <span className="flex items-center gap-1"><span className="inline-block size-2.5 rounded-sm bg-emerald-400" /> {zh ? "绿 = 已配对" : "Green = matched"}</span>
+      </p>
 
       {done ?
       <div className="mt-6 rounded-3xl border border-border/60 bg-card p-8 text-center">
@@ -1233,6 +1238,8 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
       <div className="mt-4 grid grid-cols-4 gap-2">
           {cards.map((c) => {
           const isOpen = opened.includes(c.key) || matched.has(c.pairId);
+          // 英文卡=蓝色系、中文卡=橙色系（盖着时也分色+标 EN/中），方便区分、避免瞎点同类卡
+          const isEn = c.side === "en";
           return (
             <button
               key={c.key}
@@ -1240,11 +1247,15 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
               className={cn(
                 "aspect-[3/4] rounded-xl border-2 p-2 text-center text-xs font-bold transition",
                 matched.has(c.pairId) ? "border-emerald-400 bg-emerald-50 text-emerald-700 opacity-70 dark:bg-emerald-950/40" :
-                isOpen ? "border-primary bg-primary/10 text-foreground" :
-                "border-border bg-gradient-to-br from-violet-500 to-indigo-600 text-transparent hover:from-violet-400 hover:to-indigo-500"
+                isOpen ? (isEn
+                  ? "border-sky-400 bg-sky-50 text-sky-700 dark:bg-sky-950/40"
+                  : "border-amber-400 bg-amber-50 text-amber-700 dark:bg-amber-950/40") :
+                isEn
+                  ? "border-border bg-gradient-to-br from-sky-500 to-blue-600 text-white/90 hover:from-sky-400 hover:to-blue-500"
+                  : "border-border bg-gradient-to-br from-amber-500 to-orange-600 text-white/90 hover:from-amber-400 hover:to-orange-500"
               )}>
 
-                {isOpen ? c.text : "?"}
+                {isOpen ? c.text : (isEn ? "EN" : "中")}
               </button>);
 
         })}

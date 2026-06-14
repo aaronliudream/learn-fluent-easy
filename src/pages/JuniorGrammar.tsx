@@ -589,24 +589,6 @@ export default function JuniorGrammar() {
         <span>👑 <T>掌握</T> ≥85% · 21d</span>
       </div>
 
-      {/* ===== 选学专题 · 虚拟语气 (relegated to footer banner) ===== */}
-      <a
-        href="/grammar-lab/subjunctive"
-        className="mt-4 flex items-center gap-3 rounded-xl border bg-gradient-to-r from-amber-500/5 via-card to-primary/5 px-4 py-3 hover:shadow-sm transition group">
-        <span className="text-xl shrink-0">🎯</span>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 flex-wrap text-[10px] font-bold uppercase tracking-widest">
-            <span className="text-amber-700 dark:text-amber-300 bg-amber-500/15 px-1.5 py-0.5 rounded">
-              <T>选学专题</T>
-            </span>
-            <span className="text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-1.5 py-0.5 rounded">
-              <T>中考 + 高考衔接</T>
-            </span>
-          </div>
-          <div className="font-bold text-sm mt-1 truncate"><T>虚拟语气全攻克 · 9 关</T></div>
-        </div>
-        <ChevronRight className="size-4 text-muted-foreground group-hover:text-primary transition" />
-      </a>
       </>)}
     </main>);
 

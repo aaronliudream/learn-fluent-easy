@@ -2,7 +2,7 @@ import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } fro
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { recordAttempt } from "@/lib/gaokaoMastery";
@@ -13,7 +13,6 @@ import { celebrateScore } from "@/lib/feedback";
 import { cn } from "@/lib/utils";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
-import WordDuel from "@/components/WordDuel";
 import MemoryMatch from "@/components/MemoryMatch";
 import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
@@ -21,7 +20,6 @@ import { toast } from "sonner";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
-import { JuniorKpPracticeSection } from "@/components/junior/JuniorKpPracticeSection";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
 
@@ -39,7 +37,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs" | "guided";
+type Mode = null | "classic" | "bento" | "quest" | "match" | "dict" | "srs" | "guided";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -163,7 +161,6 @@ export default function JuniorVocab() {
   }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
-  if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
@@ -188,7 +185,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
   { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
   { mode: "quest", icon: Trophy, title: zh ? "单词任务" : "Word Quest", desc: zh ? "每日 3 词 · 多关卡彻底掌握一个词" : "3 words a day · multi-stage mastery", gradient: "from-amber-500 to-yellow-500" },
-  { mode: "duel", icon: Zap, title: zh ? "单词对决" : "Word Duel", desc: zh ? "60 秒高速答题 · 拼连击拿高分" : "60-second speed round · build combos", gradient: "from-fuchsia-500 to-pink-500" },
   { mode: "match", icon: Music, title: zh ? "记忆翻牌" : "Memory Match", desc: zh ? "图音中英匹配 · 经典训练法" : "Match words and meanings · classic drill", gradient: "from-sky-500 to-blue-500" },
   { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" }];
 
@@ -326,14 +322,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         dueCount={dueCount}
         avgStability={avgStability}
         loading={!loadedMastery}
-      />
-
-      {/* 按考点抽题 · 词汇与交际(vocab_comm,从语法页迁来) */}
-      <JuniorKpPracticeSection
-        categoryCodes={["vocab_comm"]}
-        gradeNum={gradeNum}
-        title="🔤 按考点抽题 · 词汇与交际"
-        subtitle="词汇辨析等考点,AI 按考点出题。"
       />
 
       {/* 辅助训练（提到清单上方，移动端不必滑到底） */}

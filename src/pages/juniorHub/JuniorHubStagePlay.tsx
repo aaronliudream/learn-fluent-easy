@@ -1751,6 +1751,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             grade={grade}
             onFinish={handleFinish}
             onMatch={addStar}
+            batchSize={8}
           />
         );
       case "grammar":

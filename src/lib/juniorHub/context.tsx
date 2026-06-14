@@ -2,13 +2,27 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { findUnit } from "./courseData";
 import { getUnitProgress, shouldTriggerUnitAITest } from "./progress";
-import { getUnitState, loadPersist, savePersist } from "./storage";
+import {
+  getUnitState,
+  loadPersist,
+  registerJuniorHubCloudSync,
+  savePersist,
+} from "./storage";
+import {
+  cancelJuniorHubCloudPush,
+  flushJuniorHubCloudPush,
+  hydrateJuniorHubFromCloud,
+  scheduleJuniorHubCloudPush,
+} from "./hubCloudSync";
 import type { JuniorHubGrade, JuniorHubPersist, Mistake } from "./types";
 
 type Ctx = {
@@ -24,6 +38,64 @@ const JuniorHubContext = createContext<Ctx | null>(null);
 
 export function JuniorHubProvider({ grade, children }: { grade: JuniorHubGrade; children: ReactNode }) {
   const [state, setState] = useState<JuniorHubPersist>(() => loadPersist(grade));
+  const userIdRef = useRef<string | null>(null);
+
+  // Bridge: any savePersist (from any call site) schedules a debounced cloud
+  // push when signed in. Registered for this grade's provider lifetime.
+  useEffect(() => {
+    registerJuniorHubCloudSync((g, s) => {
+      if (userIdRef.current && g === grade) {
+        scheduleJuniorHubCloudPush(userIdRef.current, g, s);
+      }
+    });
+    return () => registerJuniorHubCloudSync(null);
+  }, [grade]);
+
+  // Cloud hydrate: on sign-in pull cloud + union-merge with local (auto-merge,
+  // no prompt); on sign-out flush pending push and fall back to local only.
+  useEffect(() => {
+    let cancelled = false;
+
+    const hydrate = async (userId: string | null) => {
+      const prevUserId = userIdRef.current;
+      userIdRef.current = userId;
+
+      if (!userId) {
+        cancelJuniorHubCloudPush();
+        setState(loadPersist(grade));
+        return;
+      }
+
+      if (prevUserId !== userId) setState(loadPersist(grade));
+
+      try {
+        const merged = await hydrateJuniorHubFromCloud(userId, grade);
+        if (!cancelled) setState(merged);
+      } catch (err) {
+        console.warn("[juniorHub cloud] hydrate failed", err);
+      }
+    };
+
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      void hydrate(session?.user?.id ?? null);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_OUT") {
+        void flushJuniorHubCloudPush().finally(() => hydrate(null));
+        return;
+      }
+      if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+        void flushJuniorHubCloudPush().finally(() => hydrate(session?.user?.id ?? null));
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      subscription.unsubscribe();
+      void flushJuniorHubCloudPush();
+    };
+  }, [grade]);
 
   const persist = useCallback(() => {
     savePersist(grade, state);

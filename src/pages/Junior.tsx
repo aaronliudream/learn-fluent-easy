@@ -12,6 +12,8 @@ import {
 } from "@/components/junior/JuniorGradeFilter";
 import { listExams } from "@/data/exams";
 import { isReviewUnlocked } from "@/lib/suzhouExamProgress";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
+import JuniorComingSoon from "@/components/junior/JuniorComingSoon";
 
 const LS_KEY = "junior:gradeFilter";
 
@@ -164,6 +166,10 @@ export default function Junior() {
 
   const gradeLabel = grade === "all" ? "初一至初三" : GRADE_LABELS[grade];
 
+  // 初二/初三整理中:非管理员选这两个年级 → 占位(年级 tab 仍可见,可切回初一)。
+  const { isAdmin } = useIsAdmin();
+  const restricted = (grade === "g8" || grade === "g9") && !isAdmin;
+
   const classroomTo =
     grade === "g8" ? "/junior/hub/8" : grade === "g9" ? "/junior/hub/9" : "/junior/hub/7";
 
@@ -305,6 +311,10 @@ export default function Junior() {
           </div>
         </section>
 
+        {restricted ? (
+          <JuniorComingSoon gradeLabel={gradeLabel} />
+        ) : (
+        <>
         {/* ===== 统计卡条(4 格) ===== */}
         <section className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
           <StatCard
@@ -406,6 +416,8 @@ export default function Junior() {
             );
           })}
         </section>
+        </>
+        )}
         {/* 【已删除】底部功能条:AI智能学习 / 名画主题学习 / 学情分析报告 / 家长监督模式 / 了解更多 */}
 
         <footer className="border-t py-6 text-center text-xs" style={{ borderColor: C.line, color: "#9a937f" }}>

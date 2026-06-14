@@ -1,9 +1,15 @@
 ﻿import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { Loader2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { JuniorHubProvider } from "@/lib/juniorHub/context";
 import "@/lib/juniorHub/styles";
 import { resolveJuniorHubGrade } from "@/lib/juniorHub/resolveGrade";
+import { isJuniorGradeOpen } from "@/lib/juniorHub/access";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
+import JuniorComingSoon from "@/components/junior/JuniorComingSoon";
 import type { JuniorHubGrade } from "@/lib/juniorHub/types";
+
+const GRADE_LABEL: Record<number, string> = { 8: "初二", 9: "初三" };
 
 function BottomNav({ grade }: { grade: JuniorHubGrade }) {
   const loc = useLocation();
@@ -43,6 +49,19 @@ function BottomNav({ grade }: { grade: JuniorHubGrade }) {
 export default function JuniorHubLayout() {
   const { grade: g } = useParams<{ grade: string }>();
   const grade = resolveJuniorHubGrade(g);
+  const { isAdmin, loading } = useIsAdmin();
+
+  // 初二/初三整理中:非管理员拦截(覆盖闯关 hub 及全部子路由),防直链访问。
+  if (!isJuniorGradeOpen(grade)) {
+    if (loading) {
+      return (
+        <div className="flex min-h-screen items-center justify-center text-muted-foreground">
+          <Loader2 className="size-6 animate-spin" />
+        </div>
+      );
+    }
+    if (!isAdmin) return <JuniorComingSoon gradeLabel={GRADE_LABEL[grade]} />;
+  }
 
   return (
     <JuniorHubProvider grade={grade}>

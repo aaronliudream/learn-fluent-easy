@@ -9,6 +9,7 @@ import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
 import AdminRoute from "@/components/AdminRoute";
+import JuniorGradeQueryGate from "@/components/junior/JuniorGradeQueryGate";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
 import { saveRedirectPath, consumeRedirectPath } from "@/lib/authRedirect";
@@ -386,8 +387,7 @@ const App = () => (
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
-          {/* 🔒 临时锁定(开发中):初中 /junior 与 高中 /senior→/gaokao 全部子路由,仅管理员可访问;非 admin 重定向回首页 */}
-          <Route element={<AdminRoute />}>
+          {/* 初中 /junior 开放:初一可用;初二/初三由 grade 守卫(JuniorHubLayout 内 + JuniorGradeQueryGate),仅管理员可进 */}
           <Route path="/junior/hub/:grade" element={<ChineseOnlyRoute><JuniorHubLayout /></ChineseOnlyRoute>}>
             <Route index element={<JuniorHubHome />} />
             <Route path="course" element={<JuniorHubCourse />} />
@@ -415,6 +415,7 @@ const App = () => (
               }
             />
           </Route>
+          <Route element={<JuniorGradeQueryGate />}>
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
           <Route path="/junior/vocab" element={<ChineseOnlyRoute><JuniorVocab /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar" element={<ChineseOnlyRoute><JuniorGrammar /></ChineseOnlyRoute>} />
@@ -437,6 +438,9 @@ const App = () => (
           <Route path="/junior/suzhou/:examId/mode" element={<ChineseOnlyRoute><SuzhouExamModeSelect /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/:examId" element={<ChineseOnlyRoute><SuzhouExamPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/report/:reportId" element={<ChineseOnlyRoute><SuzhouExamReportView /></ChineseOnlyRoute>} />
+          </Route>
+          {/* 🔒 临时锁定(开发中):高中 /gaokao + /senior 仅管理员可访问;非 admin 重定向回首页 */}
+          <Route element={<AdminRoute />}>
           <Route path="/gaokao/hub/:grade" element={<ChineseOnlyRoute><GaokaoHubLayout /></ChineseOnlyRoute>}>
             <Route index element={<GaokaoHubHome />} />
             <Route path="course" element={<GaokaoHubCourse />} />
@@ -473,7 +477,7 @@ const App = () => (
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           </Route>
-          {/* 🔒 end admin-only(初中/高中)*/}
+          {/* 🔒 end admin-only(高中)*/}
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />

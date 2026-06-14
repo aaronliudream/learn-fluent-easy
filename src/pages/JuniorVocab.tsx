@@ -531,7 +531,7 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     return shuffle([meaningForUi(cur, zh), ...distractors]);
   }, [cur, pool, zh]);
 
-  if (!cur) {
+  if (!cur && queue.length === 0) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -542,7 +542,7 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
 
   }
 
-  if (idx >= queue.length) {
+  if (idx >= queue.length && queue.length > 0) {
     const pct = Math.round(score.correct / Math.max(1, score.total) * 100);
     if (typeof window !== "undefined" && !(queue as any).__rewarded) {
       (queue as any).__rewarded = true;
@@ -777,9 +777,9 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
     return () => clearTimeout(t);
   }, [idx]);
 
-  if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
+  if (!cur && queue.length === 0) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
 
-  if (idx >= queue.length) {
+  if (idx >= queue.length && queue.length > 0) {
     const pct = Math.round(score.correct / Math.max(1, score.total) * 100);
     if (typeof window !== "undefined" && !(queue as any).__rewarded) {
       (queue as any).__rewarded = true;

@@ -80,7 +80,7 @@ export default function VocabMasteryOverview({
           </h3>
         </div>
         <span className="text-[10px] text-muted-foreground">
-          {zh ? "FSRS 遗忘曲线 · 多维评判" : "FSRS review curve · multi-signal scoring"}
+          {zh ? "综合掌握度 · 跨游戏累计" : "Overall mastery · cumulative across games"}
         </span>
       </div>
       <div className="mt-3 flex items-end gap-2">

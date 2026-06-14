@@ -811,6 +811,13 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     return m;
   }, [pool]);
 
+  // word 原形(小写)→ 中文释义(答题后展示)
+  const meaningByWord = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const v of pool) if (v.word) m.set(v.word.trim().toLowerCase(), v.meaning_cn);
+    return m;
+  }, [pool]);
+
   // 题按 wid 分组(仅保留能映射到词表的题);universe = 有题的词
   const { byWid, universeWids } = useMemo(() => {
     const byWid = new Map<string, CtxQ[]>();
@@ -876,6 +883,14 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     setScore({ correct: 0, total: 0 });
   };
 
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const advance = () => {
+    if (advanceTimer.current) { clearTimeout(advanceTimer.current); advanceTimer.current = null; }
+    setPicked(null);
+    setIdx((i) => i + 1);
+  };
+  useEffect(() => () => { if (advanceTimer.current) clearTimeout(advanceTimer.current); }, []);
+
   const onPickAns = async (opt: string) => {
     if (picked || !cur) return;
     setPicked(opt);
@@ -888,7 +903,8 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     if (correct) awardCoins(2, "junior_vocab_context").catch(() => {}); else notifyWrong();
     if (wid) void recordJuniorWordMastery({ wordId: wid, grade: gradeNum, kind: "context", isCorrect: correct });
-    setTimeout(() => { setPicked(null); setIdx((i) => i + 1); }, 1100);
+    // 不立即跳:停留看反馈+释义,5 秒后自动进入(或点「下一个」)
+    advanceTimer.current = setTimeout(advance, 5000);
   };
 
   if (masteryLoading || questions === null || !seeded) {
@@ -1009,9 +1025,24 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
 
           })}
         </div>
-        <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
-          <Sparkles className="size-3" /> {zh ? "连对 2 次即掌握该词,自动接入复习" : "Master a word with 2 correct in a row"}
-        </div>
+        {picked &&
+          <div className="rounded-2xl border border-emerald-300 bg-emerald-50/60 p-4 dark:border-emerald-800 dark:bg-emerald-950/30">
+            <p className="text-sm font-bold text-emerald-800 dark:text-emerald-200">
+              {zh ? "正确答案:" : "Answer: "}{cur.answer}
+              {meaningByWord.get(cur.word.trim().toLowerCase()) &&
+                <span className="ml-1 font-normal text-muted-foreground">— {meaningByWord.get(cur.word.trim().toLowerCase())}</span>
+              }
+            </p>
+            <button onClick={advance} className="mt-3 w-full rounded-2xl bg-primary py-3 text-sm font-bold text-primary-foreground">
+              {zh ? "下一个 →" : "Next →"}
+            </button>
+          </div>
+        }
+        {!picked &&
+          <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
+            <Sparkles className="size-3" /> {zh ? "连对 2 次即掌握该词,自动接入复习" : "Master a word with 2 correct in a row"}
+          </div>
+        }
       </div>
     </main>);
 

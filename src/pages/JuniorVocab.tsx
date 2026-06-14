@@ -774,20 +774,58 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const PAIRS = 8;
-  const initial = useMemo(() => {
-    const sample = shuffle(pool.filter((v) => v.word && meaningForUi(v, zh))).slice(0, PAIRS);
-    const cards = sample.flatMap((v, i) => [
-    { key: `${i}-en`, pairId: v.id, side: "en" as const, text: v.word },
-    { key: `${i}-meaning`, pairId: v.id, side: "meaning" as const, text: meaningForUi(v, zh) }]
-    );
-    return shuffle(cards);
-  }, [pool, zh]);
 
-  const [cards] = useState(initial);
+  // 掌握度(记忆翻牌 match 连对2次=掌握,独立);登录加载,游客为空。
+  const { loading: masteryLoading, authed, consec } = useJuniorVocabMastery(gradeNum);
+  const valid = useMemo(() => pool.filter((v) => v.word && meaningForUi(v, zh)), [pool, zh]);
+  const total = valid.length;
+
+  // 本会话本地连对(镜像 DB,配对成功即时刷新进度)
+  const [localMatch, setLocalMatch] = useState<Map<string, number>>(new Map());
+  const [seeded, setSeeded] = useState(false);
+  useEffect(() => {
+    if (masteryLoading) return;
+    const m = new Map<string, number>();
+    consec.forEach((c, id) => { if (c.match) m.set(id, c.match); });
+    setLocalMatch(m);
+    setSeeded(true);
+  }, [masteryLoading, consec]);
+
+  const masteredCount = useMemo(
+    () => valid.reduce((n, w) => n + (((localMatch.get(w.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0),
+    [valid, localMatch],
+  );
+
+  const buildSample = useCallback((mastery: Map<string, number>): Vocab[] => {
+    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
+    if (unmastered.length >= PAIRS) return shuffle(unmastered).slice(0, PAIRS);
+    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
+    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, PAIRS - unmastered.length)];
+  }, [valid]);
+
+  const [sample, setSample] = useState<Vocab[]>([]);
+  const [batchStartMastered, setBatchStartMastered] = useState(0);
   const [opened, setOpened] = useState<string[]>([]);
   const [matched, setMatched] = useState<Set<string>>(new Set());
   const [moves, setMoves] = useState(0);
   const lock = useRef(false);
+  const startedRef = useRef(false);
+
+  // 首批:掌握度就绪后只构建一次(优先未掌握词)
+  useEffect(() => {
+    if (!seeded || startedRef.current || valid.length === 0) return;
+    startedRef.current = true;
+    setBatchStartMastered(masteredCount);
+    setSample(buildSample(localMatch));
+  }, [seeded, valid.length, buildSample, localMatch, masteredCount]);
+
+  const cards = useMemo(() => {
+    const cs = sample.flatMap((v, i) => [
+      { key: `${i}-en`, pairId: v.id, side: "en" as const, text: v.word },
+      { key: `${i}-meaning`, pairId: v.id, side: "meaning" as const, text: meaningForUi(v, zh) },
+    ]);
+    return shuffle(cs);
+  }, [sample, zh]);
 
   const onClick = (key: string, pairId: string) => {
     if (lock.current || matched.has(pairId) || opened.includes(key)) return;
@@ -801,6 +839,12 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
         setOpened([]);
         speak(cards.find((c) => c.pairId === a.pairId && c.side === "en")!.text);
         awardCoins(3, "junior_match").catch((e) => logJuniorVocabSideEffect("awardCoins", e));
+        // 本地连对镜像:配对成功 +1(记忆翻牌只在成功时计,不清零)
+        setLocalMatch((prev) => {
+          const nm = new Map(prev);
+          nm.set(a.pairId, (prev.get(a.pairId) ?? 0) + 1);
+          return nm;
+        });
         void recordJuniorWordMastery({
           wordId: a.pairId,
           grade: gradeNum,
@@ -817,22 +861,91 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
     }
   };
 
-  const done = matched.size === PAIRS;
+  const nextRound = () => {
+    setBatchStartMastered(masteredCount);
+    setSample(buildSample(localMatch));
+    setOpened([]);
+    setMatched(new Set());
+    setMoves(0);
+    lock.current = false;
+  };
+
+  if (masteryLoading || !seeded) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  if (valid.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}
+        </button>
+        <p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p>
+      </main>);
+
+  }
+
+  if (sample.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="flex items-center justify-center py-20 text-muted-foreground">
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
+        </div>
+      </main>);
+
+  }
+
+  const done = matched.size === sample.length;
+  const justMastered = Math.max(0, masteredCount - batchStartMastered);
+  const remaining = Math.max(0, total - masteredCount);
+  const allMastered = authed && remaining === 0;
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
+      {authed ? (
+        <div className="mb-4">
+          <div className="mb-1 flex items-center justify-between text-xs font-bold text-muted-foreground">
+            <span>{zh ? `本游戏已掌握 ${masteredCount} / ${total}` : `Mastered ${masteredCount} / ${total}`}</span>
+            <span>{zh ? `还剩 ${remaining}` : `${remaining} left`}</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all" style={{ width: `${total ? Math.round((masteredCount / total) * 100) : 0}%` }} />
+          </div>
+        </div>
+      ) : (
+        <div className="mb-4 rounded-xl border border-border/60 bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">
+          {zh ? "登录后可追踪掌握进度（连对 2 次掌握 · 已掌握的词不再重复出）" : "Log in to track mastery progress"}
+        </div>
+      )}
       <h2 className="text-xl font-extrabold">🃏 {zh ? "记忆翻牌" : "Memory Match"}</h2>
-      <p className="mt-1 text-xs text-muted-foreground">{zh ? `配对 ${PAIRS} 对单词与中文 · 已配对 ${matched.size}/${PAIRS} · 步数 ${moves}` : `Match ${PAIRS} word pairs · matched ${matched.size}/${PAIRS} · moves ${moves}`}</p>
+      <p className="mt-1 text-xs text-muted-foreground">{zh ? `配对 ${sample.length} 对单词与中文 · 已配对 ${matched.size}/${sample.length} · 步数 ${moves}` : `Match ${sample.length} word pairs · matched ${matched.size}/${sample.length} · moves ${moves}`}</p>
 
       {done ?
       <div className="mt-6 rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
           <h3 className="mt-2 text-xl font-extrabold">{zh ? "完美通关！" : "Perfect clear!"}</h3>
           <p className="mt-1 text-sm text-muted-foreground">{zh ? `用了 ${moves} 步` : `${moves} moves`}</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回" : "Back"}</button>
+          {authed && (
+            <p className="mt-1 text-sm font-bold text-emerald-600">{zh ? `本轮又掌握 ${justMastered} 个 · 还剩 ${remaining} / ${total}` : `+${justMastered} mastered · ${remaining} / ${total} left`}</p>
+          )}
+          {allMastered && (
+            <p className="mt-2 text-sm font-bold text-amber-600">{zh ? `🎉 全部 ${total} 词已掌握一遍！` : `🎉 All ${total} words mastered!`}</p>
+          )}
+          <div className="mt-4 flex justify-center gap-3">
+            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
+            <button onClick={nextRound} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">
+              <RotateCw className="size-4" /> {allMastered ? zh ? "再复习一组" : "Review again" : zh ? "继续下一轮" : "Next round"}
+            </button>
+          </div>
         </div> :
 
       <div className="mt-4 grid grid-cols-4 gap-2">
@@ -848,7 +961,7 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
                 isOpen ? "border-primary bg-primary/10 text-foreground" :
                 "border-border bg-gradient-to-br from-violet-500 to-indigo-600 text-transparent hover:from-violet-400 hover:to-indigo-500"
               )}>
-              
+
                 {isOpen ? c.text : "?"}
               </button>);
 

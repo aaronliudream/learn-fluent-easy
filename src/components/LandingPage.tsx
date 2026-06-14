@@ -27,12 +27,11 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type SyntheticEvent } from "react";
-import { useIsAdmin } from "@/hooks/useIsAdmin";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
 
-/** 临时锁定(开发中):指向初中/高中的入口仅管理员可见,与路由守卫 AdminRoute 一致。 */
-const ADMIN_ONLY_HREFS = new Set(["/junior", "/gaokao", "/senior"]);
+/** 整理中(开发中):高中入口可见但不可点。初中已开放(初一可用,初二/初三在内部整理中)。 */
+const SOON_HREFS = new Set(["/gaokao", "/senior"]);
 
 const NAV_LINKS = [
   { href: "/kids", label: "小学" as const },
@@ -236,6 +235,14 @@ function NavLink({
 }) {
   const isHash = href.startsWith("#");
   const className = "text-[13px] font-medium text-white/90 transition hover:text-[#e5b567]";
+  if (SOON_HREFS.has(href)) {
+    return (
+      <span className="cursor-not-allowed text-[13px] font-medium text-white/40" title="整理中">
+        <T>{label}</T>
+        <span className="ml-1 text-[9px] opacity-80">整理中</span>
+      </span>
+    );
+  }
   if (isHash) {
     return (
       <a href={href} className={className} onClick={onNavigate}>
@@ -266,10 +273,14 @@ function AvatarImg({ src, alt }: { src: string; alt: string }) {
 
 function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
   const Icon = c.icon;
-  return (
-    <Link
-      to={c.to}
-      className="group relative flex min-h-[168px] flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)]">
+  const soon = SOON_HREFS.has(c.to);
+  const cls =
+    "group relative flex min-h-[168px] flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition" +
+    (soon
+      ? " cursor-not-allowed"
+      : " hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)]");
+  const inner = (
+    <>
       <img
         src={c.image}
         alt={c.university}
@@ -298,21 +309,35 @@ function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
           <span className="inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 text-[10px] font-semibold text-white/90">
             {c.tag}
           </span>
-          <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#fcd98a] group-hover:gap-1.5">
-            <T>去学习</T> <ArrowRight className="size-3.5 shrink-0" />
-          </span>
+          {soon ? (
+            <span className="mt-1 inline-flex w-fit items-center gap-1 rounded-md bg-black/30 px-2 py-0.5 text-xs font-bold text-white/80">
+              <T>整理中</T>
+            </span>
+          ) : (
+            <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#fcd98a] group-hover:gap-1.5">
+              <T>去学习</T> <ArrowRight className="size-3.5 shrink-0" />
+            </span>
+          )}
         </div>
       </div>
+    </>
+  );
+  return soon ? (
+    <div aria-disabled="true" className={cls}>
+      {inner}
+    </div>
+  ) : (
+    <Link to={c.to} className={cls}>
+      {inner}
     </Link>
   );
 }
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { isAdmin } = useIsAdmin();
-  // 加载中或非 admin:隐藏初中/高中入口(避免向非管理员闪现);仅确认 admin 后才显示。
-  const navLinks = NAV_LINKS.filter((n) => (ADMIN_ONLY_HREFS.has(n.href) ? isAdmin : true));
-  const courseCards = COURSE_CARDS.filter((c) => (ADMIN_ONLY_HREFS.has(c.to) ? isAdmin : true));
+  // 初中开放;高中(/gaokao、/senior)整理中不可点。全部入口都展示。
+  const navLinks = NAV_LINKS;
+  const courseCards = COURSE_CARDS;
 
   return (
     <main className="landing-page min-h-dvh bg-[#f4f6f9] font-sans text-slate-900 antialiased">

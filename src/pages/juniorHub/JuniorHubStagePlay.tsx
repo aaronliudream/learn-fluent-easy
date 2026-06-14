@@ -268,14 +268,16 @@ function VocabStage({
                       {v.chunks.map((c, ci) => (
                         <div
                           key={ci}
-                          className="flex items-center gap-1 rounded-lg bg-[#F2F6FF] px-2 py-1 text-left"
+                          className="flex items-start gap-1 rounded-lg bg-[#F2F6FF] px-2 py-1 text-left"
                         >
-                          <span className="text-xs font-medium text-[#185FA5]">{c.en}</span>
-                          <span className="text-[10px] text-[#888780]">{c.cn}</span>
+                          <div className="min-w-0 flex-1">
+                            <div className="text-xs font-semibold text-[#185FA5]">{c.en}</div>
+                            <div className="mt-0.5 text-[10px] text-[#888780]">{c.cn}</div>
+                          </div>
                           <span
                             role="button"
                             tabIndex={0}
-                            className="ml-auto cursor-pointer text-xs"
+                            className="shrink-0 cursor-pointer text-xs"
                             onClick={(e) => {
                               e.stopPropagation();
                               speakWord(c.en);

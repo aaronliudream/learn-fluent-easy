@@ -517,16 +517,6 @@ export function GrammarQuestionCard({
           </div>
         )}
 
-      {isLocked && onAskTutor && (
-        <div className="relative mt-4">
-          <button
-            onClick={onAskTutor}
-            className="playful-btn inline-flex items-center gap-1.5 border-2 border-pink-200 bg-white px-4 py-2 text-xs font-bold text-pink-600 hover:bg-pink-50 dark:border-pink-800 dark:bg-card dark:text-pink-300"
-          >
-            <T>💬 问小月 / Ask Luna</T>
-          </button>
-        </div>
-      )}
     </section>
   );
 }

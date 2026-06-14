@@ -203,14 +203,6 @@ export default function GaokaoMistakes() {
                         <Trash2 className="size-3.5" /> <T>删除</T>
                       </button>
                     </div>
-                    <div className="pt-1">
-                      <button
-                    onClick={() => setTutorFor(m)}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10">
-                    
-                        <MessageCircleQuestion className="size-3.5" /> <T>问小月 / Ask Luna</T>
-                      </button>
-                    </div>
                   </div>
               }
               </div>);

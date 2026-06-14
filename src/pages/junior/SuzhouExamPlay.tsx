@@ -713,13 +713,6 @@ export default function SuzhouExamPlay() {
             {canAsk && (
               <>
                 <FavoriteButton examId={exam.id} examTitle={exam.title} question={q} />
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-50"
-                  onClick={() => openTutor(q)}>
-                  <Sparkles className="size-3.5" />
-                  <T>问 AI 讲解</T>
-                </button>
               </>
             )}
           </div>
@@ -756,13 +749,6 @@ export default function SuzhouExamPlay() {
           {canAsk && (
             <>
               <FavoriteButton examId={exam.id} examTitle={exam.title} question={q} />
-              <button
-                type="button"
-                className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-50"
-                onClick={() => openTutor(q)}>
-                <Sparkles className="size-3.5" />
-                <T>问 AI</T>
-              </button>
             </>
           )}
         </div>

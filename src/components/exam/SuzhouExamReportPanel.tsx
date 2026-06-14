@@ -121,10 +121,6 @@ export function SuzhouExamReportPanel({
       )}
 
       <div className="flex flex-col gap-3 sm:flex-row">
-        <button type="button" className="exam-btn exam-btn-primary h-11 flex-1" onClick={onAskAI}>
-          <Sparkles className="size-4" />
-          <T>和小月复盘这次考试</T>
-        </button>
         <button
           type="button"
           className="exam-btn exam-btn-ghost h-11 flex-1"

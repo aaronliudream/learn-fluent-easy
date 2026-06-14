@@ -581,12 +581,6 @@ export function PhraseQuiz({
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setTutorOpen(true)}
-              className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-            >
-              <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
-            </button>
-            <button
               onClick={next}
               className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-primary-foreground transition hover:opacity-90"
             >

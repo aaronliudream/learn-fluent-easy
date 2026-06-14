@@ -48,8 +48,8 @@ const HIDE_ON = [
 export default function GlobalAIAssistant() {
   const { pathname } = useLocation();
   const { state, open, setOpen } = useAIAssistant();
-  const hide = HIDE_ON.some((r) => r.test(pathname));
-  if (hide) return null;
+  // 小月仅在首页(招生问答)显示;所有学习页不再出现浮动入口。
+  if (pathname !== "/") return null;
   return (
     <>
       <FloatingButton onClick={() => setOpen(true)} unlocked={state.unlocked} />

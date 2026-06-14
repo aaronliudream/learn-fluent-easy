@@ -800,26 +800,6 @@ const Lesson = () => {
                       );
                     })}
                   </div>
-                  {picked !== undefined && (
-                    <div className="mt-3">
-                      <button
-                        onClick={() => setTutorReq({
-                          refId: `lesson-${levelId}-${unitId}-${lessonId}-vocab-${q.idx}`,
-                          snapshot: {
-                            type: "vocab_quiz",
-                            word: q.word,
-                            options: q.options,
-                            correct_index: q.answer,
-                            user_index: picked,
-                            is_correct: picked === q.answer,
-                          },
-                        })}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-                      >
-                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
-                      </button>
-                    </div>
-                  )}
                 </div>
               );
             })}
@@ -1041,27 +1021,6 @@ const Lesson = () => {
                       )}
                     </div>
                   )}
-                  {picked && (
-                    <div className="mt-2">
-                      <button
-                        onClick={() => setTutorReq({
-                          refId: `lesson-${levelId}-${unitId}-${lessonId}-fill-${i}`,
-                          snapshot: {
-                            type: "fill_blank",
-                            sentence: f.sentence,
-                            options: f.options,
-                            correct_answer: f.answer,
-                            user_answer: picked,
-                            is_correct: correct,
-                            translation: f.cn,
-                          },
-                        })}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-                      >
-                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
-                      </button>
-                    </div>
-                  )}
                 </div>
               );
             })}
@@ -1115,27 +1074,6 @@ const Lesson = () => {
                     <p className="mt-3 rounded-lg bg-primary/5 p-3 text-xs text-primary">
                       💡 {nativeText(q.explain)}
                     </p>
-                  )}
-                  {reveal && (
-                    <div className="mt-3">
-                      <button
-                        onClick={() => setTutorReq({
-                          refId: `lesson-${levelId}-${unitId}-${lessonId}-quiz-${i}`,
-                          snapshot: {
-                            type: "quiz",
-                            question: q.q,
-                            options: q.options,
-                            correct_index: q.answer,
-                            user_index: picked,
-                            is_correct: picked === q.answer,
-                            explain: q.explain,
-                          },
-                        })}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-                      >
-                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
-                      </button>
-                    </div>
                   )}
                 </div>
               );

@@ -1080,7 +1080,6 @@ function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPass
               <div className="text-sm"><span className="ink-dim"><T>你的答：</T></span><span className="text-rose">{m.picked}</span></div>
               <div className="text-sm"><span className="ink-dim"><T>正确：</T></span><span className="text-mint font-mono">{m.correct}</span></div>
               {m.why && <div className="text-xs ink-dim"><ReactMarkdown>{m.why}</ReactMarkdown></div>}
-              <button onClick={() => onAskTutor(m)} className="btn-ghost text-xs"><T>🤖 问 AI 老师</T></button>
             </div>
         )}
         </div>

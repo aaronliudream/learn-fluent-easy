@@ -420,12 +420,6 @@ function MistakeCard({
           </span>
           <div className="flex gap-2">
             <button
-              onClick={onAskTutor}
-              className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">
-              
-              <MessageCircleQuestion className="size-3" /> <T>问小月</T>
-            </button>
-            <button
               onClick={onAskAI}
               className="inline-flex items-center gap-1 rounded-full bg-violet-100 px-3 py-1 font-semibold text-violet-700 hover:bg-violet-200 dark:bg-violet-500/20 dark:text-violet-300">
               

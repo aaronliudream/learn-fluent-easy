@@ -960,18 +960,6 @@ export default function GaokaoReadingArticle() {
                       </div>
                       <div className="mb-3 text-xs leading-relaxed text-foreground/85 line-clamp-2">{q.stem}</div>
                       <div className="flex flex-wrap items-center gap-2">
-                        <button
-                          onClick={() => {
-                            setTutorPrefill(
-                              `第 ${idx} 题：${q.stem}\n我选了 ${userAns || "（未答）"}，正确答案是 ${q.correct_answer}。请用中文一步步带我回原文找证据，并解释我的思路哪里出错了。`,
-                            );
-                            setStage("dialogue");
-                          }}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary hover:bg-primary/20"
-                        >
-                          <Sparkles className="size-3.5" />
-                          <T>问小月这道题</T>
-                        </button>
                         <PracticeBooster
                           module="gaokao_reading_article"
                           sourceQuestionId={q.id}

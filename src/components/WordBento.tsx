@@ -160,11 +160,12 @@ export default function WordBento({
     } catch {/* ignore */}
     let sequence: Vocab[];
     if (juniorEnabled) {
-      // 优先未掌握(bento_consec<2),不足用已掌握补满
-      const unmastered = usable.filter((v) => (localBento.get(v.id) ?? 0) < MASTER_STREAK);
-      const mastered = usable.filter((v) => (localBento.get(v.id) ?? 0) >= MASTER_STREAK);
-      sequence = [...shuffle(unmastered), ...shuffle(mastered)].slice(0, TOTAL_PAIRS);
-      setBatchStartMastered(usable.reduce((n, v) => n + (((localBento.get(v.id) ?? 0) >= MASTER_STREAK) ? 1 : 0), 0));
+      // 优先未掌握(bento_consec<2);差一次就掌握的(consec 高)排最前 → 下一轮再现凑齐连对2次
+      const pri = (v: Vocab) => localBento.get(v.id) ?? 0;
+      const unmastered = shuffle(usable.filter((v) => pri(v) < MASTER_STREAK)).sort((a, b) => pri(b) - pri(a));
+      const mastered = usable.filter((v) => pri(v) >= MASTER_STREAK);
+      sequence = [...unmastered, ...shuffle(mastered)].slice(0, TOTAL_PAIRS);
+      setBatchStartMastered(usable.reduce((n, v) => n + ((pri(v) >= MASTER_STREAK) ? 1 : 0), 0));
     } else {
       sequence = shuffle(usable).slice(0, TOTAL_PAIRS);
     }

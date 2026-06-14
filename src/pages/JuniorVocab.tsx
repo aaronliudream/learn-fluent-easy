@@ -542,10 +542,12 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
   );
 
   const buildBatch = useCallback((mastery: Map<string, number>): Vocab[] => {
-    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
-    if (unmastered.length >= BATCH) return shuffle(unmastered).slice(0, BATCH);
-    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
-    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
+    const pri = (w: Vocab) => mastery.get(w.id) ?? 0;
+    // 差一次就掌握的(consec 高)优先出,确保下一轮再现 → 能凑齐连对2次
+    const unmastered = shuffle(valid.filter((w) => pri(w) < MASTER_STREAK)).sort((a, b) => pri(b) - pri(a));
+    if (unmastered.length >= BATCH) return unmastered.slice(0, BATCH);
+    const mastered = valid.filter((w) => pri(w) >= MASTER_STREAK);
+    return [...unmastered, ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
   }, [valid]);
 
   const [queue, setQueue] = useState<Vocab[]>([]);
@@ -839,9 +841,11 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
   );
 
   const buildBatch = useCallback((mastery: Map<string, number>): CtxQ[] => {
-    const unmastered = universeWids.filter((wid) => (mastery.get(wid) ?? 0) < MASTER_STREAK);
-    const mastered = universeWids.filter((wid) => (mastery.get(wid) ?? 0) >= MASTER_STREAK);
-    const picked = shuffle(unmastered).slice(0, BATCH);
+    const pri = (wid: string) => mastery.get(wid) ?? 0;
+    // 差一次就掌握的(consec 高)优先出
+    const unmastered = shuffle(universeWids.filter((wid) => pri(wid) < MASTER_STREAK)).sort((a, b) => pri(b) - pri(a));
+    const mastered = universeWids.filter((wid) => pri(wid) >= MASTER_STREAK);
+    const picked = unmastered.slice(0, BATCH);
     if (picked.length < BATCH) picked.push(...shuffle(mastered).slice(0, BATCH - picked.length));
     // 每个词随机取一题(同一词可能有多句)
     return picked.map((wid) => { const qs = byWid.get(wid)!; return qs[Math.floor(Math.random() * qs.length)]; });
@@ -1042,10 +1046,12 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
   );
 
   const buildSample = useCallback((mastery: Map<string, number>): Vocab[] => {
-    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
-    if (unmastered.length >= PAIRS) return shuffle(unmastered).slice(0, PAIRS);
-    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
-    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, PAIRS - unmastered.length)];
+    const pri = (w: Vocab) => mastery.get(w.id) ?? 0;
+    // 差一次就掌握的(consec 高)优先出
+    const unmastered = shuffle(valid.filter((w) => pri(w) < MASTER_STREAK)).sort((a, b) => pri(b) - pri(a));
+    if (unmastered.length >= PAIRS) return unmastered.slice(0, PAIRS);
+    const mastered = valid.filter((w) => pri(w) >= MASTER_STREAK);
+    return [...unmastered, ...shuffle(mastered).slice(0, PAIRS - unmastered.length)];
   }, [valid]);
 
   const [sample, setSample] = useState<Vocab[]>([]);
@@ -1246,10 +1252,12 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
   );
 
   const buildBatch = useCallback((mastery: Map<string, number>): Vocab[] => {
-    const unmastered = valid.filter((w) => (mastery.get(w.id) ?? 0) < MASTER_STREAK);
-    if (unmastered.length >= BATCH) return shuffle(unmastered).slice(0, BATCH);
-    const mastered = valid.filter((w) => (mastery.get(w.id) ?? 0) >= MASTER_STREAK);
-    return [...shuffle(unmastered), ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
+    const pri = (w: Vocab) => mastery.get(w.id) ?? 0;
+    // 差一次就掌握的(consec 高)优先出,确保下一轮再现 → 能凑齐连对2次
+    const unmastered = shuffle(valid.filter((w) => pri(w) < MASTER_STREAK)).sort((a, b) => pri(b) - pri(a));
+    if (unmastered.length >= BATCH) return unmastered.slice(0, BATCH);
+    const mastered = valid.filter((w) => pri(w) >= MASTER_STREAK);
+    return [...unmastered, ...shuffle(mastered).slice(0, BATCH - unmastered.length)];
   }, [valid]);
 
   const [queue, setQueue] = useState<Vocab[]>([]);

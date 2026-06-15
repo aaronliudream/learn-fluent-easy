@@ -3478,7 +3478,11 @@
               }
             ],
             "grammarTitle": "be going to 与不定式作宾语",
-            "grammarCode": "g8a-u6-TODO",
+            "grammarCode": "g8.30",
+            "grammarCodes": [
+              "g8.30",
+              "g8.13"
+            ],
             "grammarQuiz": [
               {
                 "q": "I ___ study computer science next year.",

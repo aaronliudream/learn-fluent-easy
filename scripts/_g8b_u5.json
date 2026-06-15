@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"earthquake","cn":"地震","chunks":[{"en":"a strong earthquake","cn":"一场强烈的地震"},{"en":"feel the earthquake","cn":"感觉到地震"},{"en":"after the earthquake","cn":"地震之后"}]},
+  {"en":"typhoon","cn":"台风","chunks":[{"en":"a powerful typhoon","cn":"一场强台风"},{"en":"during the typhoon","cn":"在台风期间"},{"en":"the typhoon hit the city","cn":"台风袭击了城市"}]},
+  {"en":"flood","cn":"水灾；洪水","chunks":[{"en":"a serious flood","cn":"一场严重的洪水"},{"en":"flood the streets","cn":"淹没街道"},{"en":"escape the flood","cn":"逃离洪水"}]},
+  {"en":"drought","cn":"旱灾；干旱","chunks":[{"en":"a long drought","cn":"长时间的干旱"},{"en":"suffer from drought","cn":"遭受旱灾"},{"en":"during the drought","cn":"在干旱期间"}]},
+  {"en":"warn","cn":"警告；提醒注意","chunks":[{"en":"warn people of danger","cn":"提醒人们注意危险"},{"en":"warn us to stay inside","cn":"警告我们待在室内"},{"en":"warn about the storm","cn":"对风暴发出警告"}]},
+  {"en":"tsunami","cn":"海啸","chunks":[{"en":"a huge tsunami","cn":"一场巨大的海啸"},{"en":"a tsunami warning","cn":"海啸预警"},{"en":"run from the tsunami","cn":"逃离海啸"}]},
+  {"en":"wave","cn":"波浪；挥手","chunks":[{"en":"a high wave","cn":"一个巨浪"},{"en":"waves hit the shore","cn":"海浪拍打岸边"},{"en":"wave goodbye","cn":"挥手告别"}]},
+  {"en":"roof","cn":"屋顶；顶部","chunks":[{"en":"on the roof","cn":"在屋顶上"},{"en":"climb onto the roof","cn":"爬上屋顶"},{"en":"the roof came off","cn":"屋顶被掀掉了"}]},
+  {"en":"report","cn":"报道；汇报","chunks":[{"en":"a weather report","cn":"一份天气预报"},{"en":"report the news","cn":"报道新闻"},{"en":"according to the report","cn":"根据报道"}]},
+  {"en":"supply","cn":"供应（量）；补给品","chunks":[{"en":"food supplies","cn":"食物补给"},{"en":"run out of supplies","cn":"用完补给品"},{"en":"supply clean water","cn":"供应干净的水"}]},
+  {"en":"rescue","cn":"救援；营救","chunks":[{"en":"a rescue team","cn":"一支救援队"},{"en":"rescue the people","cn":"营救人们"},{"en":"come to the rescue","cn":"前来救援"}]},
+  {"en":"scream","cn":"尖叫","chunks":[{"en":"scream in fear","cn":"害怕地尖叫"},{"en":"scream for help","cn":"尖叫求救"},{"en":"a loud scream","cn":"一声响亮的尖叫"}]}
+ ],
+ "reading":{
+  "passage":"Last summer, a terrible typhoon hit our small town near the sea. I was doing my homework when the wind suddenly became very strong. While my father was closing the windows, the lights went off. We were sitting in the dark when we heard a loud noise. Part of our roof came off! My mother was crying, but my father stayed calm. He warned us to stay away from the windows. While the storm was beating against the house, we listened to the radio for news. The report said the typhoon was slowing down. By morning, the rain had stopped. Our neighbours were cleaning the streets when the rescue team arrived with food and water. We were lucky to be safe.",
+  "passageCn":"去年夏天，一场可怕的台风袭击了我们海边的小镇。当风突然变得很强时，我正在做作业。当我父亲正在关窗户的时候，灯灭了。我们正坐在黑暗中，这时听到一声巨响。我们家的一部分屋顶被掀掉了！我妈妈在哭，但我爸爸保持镇定。他提醒我们远离窗户。当暴风雨拍打着房子时，我们听收音机里的新闻。报道说台风正在减弱。到了早晨，雨停了。当救援队带着食物和水到来时，我们的邻居们正在清理街道。我们很幸运能平安无事。",
+  "questions":[
+   {"q":"What was the writer doing when the wind became strong?","opts":["Doing homework","Closing the windows","Cleaning the streets","Listening to the radio"],"answer":0,"point":"细节理解","dim":"reading"},
+   {"q":"Why did the family listen to the radio?","opts":["To enjoy music","To get news about the typhoon","To call the rescue team","To warn the neighbours"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn about the writer's father?","opts":["He was crying loudly","He ran away from home","He stayed calm and kept the family safe","He was hurt by the roof"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"I ___ in bed when the earthquake happened.","opts":["sleep","am sleeping","was sleeping","slept"],"answer":2,"point":"过去进行时(was doing)","dim":"grammar"},
+  {"q":"While we ___ dinner, the lights suddenly went off.","opts":["were having","have","are having","had"],"answer":0,"point":"while + 过去进行时","dim":"grammar"},
+  {"q":"What ___ you doing when the typhoon hit the town?","opts":["are","was","do","were"],"answer":3,"point":"过去进行时疑问句(were)","dim":"grammar"},
+  {"q":"The children ___ playing outside when it started to rain heavily.","opts":["was","were","are","is"],"answer":1,"point":"主谓一致(were doing)","dim":"grammar"},
+  {"q":"My mother was cooking ___ the flood reached our house.","opts":["when","because","so","if"],"answer":0,"point":"when引导时间状语","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I was walking home when the storm started.","opts":["The storm began while he was walking home.","He stayed at home during the storm.","He started walking after the storm.","He walked home to watch the storm."],"answer":0},
+  {"audio":"The radio warned people to leave before the tsunami came.","opts":["People were told to leave before the tsunami.","The tsunami came after everyone left safely.","The radio said the tsunami was not coming.","People came to listen to the radio."],"answer":0},
+  {"audio":"While my sister was sleeping, the earthquake woke her up.","opts":["Her sister could not fall asleep.","The earthquake woke her sister while she slept.","Her sister woke up before the earthquake.","Her sister was reading during the earthquake."],"answer":1},
+  {"audio":"The rescue team brought food and water to the village.","opts":["The village had plenty of food already.","The team took food away from the village.","The rescue team gave the village food and water.","The team came to take photos of the village."],"answer":2},
+  {"audio":"Part of the roof came off during the strong typhoon.","opts":["The typhoon was very weak that day.","Someone painted the roof during the typhoon.","The roof was made stronger by the typhoon.","The typhoon damaged part of the roof."],"answer":3},
+  {"audio":"We were hiding under the table when the building shook.","opts":["We hid under the table as the building shook.","We were standing by the window safely.","We ran outside before the building shook.","We were sleeping when the building shook."],"answer":0}
+ ],
+ "quizQuestions":[
+  {"q":"「earthquake」的意思是？","opts":["台风","地震","洪水","干旱"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「rescue」的意思是？","opts":["救援；营救","警告","尖叫","报道"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「drought」的意思是？","opts":["海啸","屋顶","旱灾；干旱","波浪"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「warn」的意思是？","opts":["供应","挥手","清理","警告；提醒注意"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"They ___ watching TV when the news about the flood came on.","opts":["were","was","are","is"],"answer":0,"point":"过去进行时(were doing)","dim":"grammar"},
+  {"q":"「tsunami」的意思是？","opts":["雷声","海啸","龙卷风","暴风雪"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"She was running to school ___ it suddenly began to thunder.","opts":["before","after","when","unless"],"answer":2,"point":"when引导时间状语","dim":"grammar"},
+  {"q":"I ___ cooking dinner when the power went off.","opts":["am","do","have","was"],"answer":3,"point":"过去进行时(was doing)","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"A Day I Will Never Forget",
+  "prompt":"Write a short story about a day with bad weather or a natural disaster. Tell what you were doing when it happened, what you saw and how you felt. Use the past continuous tense (was/were doing) with 'when' and 'while'.",
+  "promptCn":"写一个关于恶劣天气或自然灾害的小故事。讲一讲灾害发生时你正在做什么、你看到了什么以及你的感受。请使用过去进行时（was/were doing），并配合 when 和 while。",
+  "opener":"It was a normal afternoon, and I was ... when suddenly ...",
+  "sampleWords":["typhoon","flood","warn","roof","scream","rescue","report","wave"],
+  "cards":[
+   {"key":"happen","labelCn":"发生了什么","hint":"如 A strong typhoon hit our town while I was ..."},
+   {"key":"did","labelCn":"你做了什么","hint":"如 We were hiding under the table when ..."},
+   {"key":"end","labelCn":"结果如何","hint":"如 The rescue team came and we were safe."}
+  ],
+  "templates":{
+   "l1":["It was a normal day, and I was playing at home.","Suddenly the sky turned dark and the wind became strong.","A heavy rainstorm hit our town all of a sudden. {happen}","I felt a little scared. {did}"],
+   "l2":["I was doing my homework when the storm started. {happen}","While my mother was closing the windows, the lights went off.","We were sitting in the dark, and we could hear loud thunder. {did}","The radio warned everyone to stay inside. {end}"],
+   "l3":["I was reading a book when the earthquake suddenly began to shake the house. {happen}","While we were running outside, part of the roof came off and people started to scream. {did}","We were hiding in a safe place when the rescue team finally arrived with food and water. {end}","Thankfully, everyone was safe, and I will never forget that frightening day."]
+  },
+  "connectors":["when","while","suddenly","all of a sudden","as a result","thankfully"],
+  "minWords":40
+ }
+}

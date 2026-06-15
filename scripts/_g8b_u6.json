@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"custom","cn":"习俗","chunks":[{"en":"a local custom","cn":"一种当地习俗"},{"en":"follow the custom","cn":"遵循习俗"},{"en":"an old custom","cn":"一个古老的习俗"}]},
+  {"en":"tradition","cn":"传统","chunks":[{"en":"a family tradition","cn":"一个家庭传统"},{"en":"keep a tradition","cn":"保持传统"},{"en":"by tradition","cn":"按照传统"}]},
+  {"en":"manner","cn":"方式；(pl.)礼仪","chunks":[{"en":"table manners","cn":"餐桌礼仪"},{"en":"good manners","cn":"良好的礼仪"},{"en":"in a polite manner","cn":"以礼貌的方式"}]},
+  {"en":"proper","cn":"恰当的；正确的","chunks":[{"en":"the proper way","cn":"恰当的方式"},{"en":"proper behaviour","cn":"得体的行为"},{"en":"proper manners","cn":"恰当的礼仪"}]},
+  {"en":"formal","cn":"正式的","chunks":[{"en":"a formal dinner","cn":"一顿正式的晚餐"},{"en":"formal clothes","cn":"正式的衣服"},{"en":"a formal occasion","cn":"正式的场合"}]},
+  {"en":"occasion","cn":"场合；重大活动","chunks":[{"en":"a special occasion","cn":"一个特殊场合"},{"en":"on this occasion","cn":"在这个场合"},{"en":"a happy occasion","cn":"快乐的场合"}]},
+  {"en":"greet","cn":"问候；迎接","chunks":[{"en":"greet a guest","cn":"问候客人"},{"en":"greet each other","cn":"互相问候"},{"en":"greet with a smile","cn":"微笑着问候"}]},
+  {"en":"bow","cn":"鞠躬","chunks":[{"en":"bow to someone","cn":"向某人鞠躬"},{"en":"a polite bow","cn":"一个礼貌的鞠躬"},{"en":"bow your head","cn":"低头鞠躬"}]},
+  {"en":"rude","cn":"粗鲁的","chunks":[{"en":"a rude question","cn":"一个无礼的问题"},{"en":"be rude to others","cn":"对别人粗鲁"},{"en":"sound rude","cn":"听起来无礼"}]},
+  {"en":"impression","cn":"印象","chunks":[{"en":"a good impression","cn":"好印象"},{"en":"make an impression","cn":"留下印象"},{"en":"a first impression","cn":"第一印象"}]},
+  {"en":"receive","cn":"收到；接待","chunks":[{"en":"receive a gift","cn":"收到一份礼物"},{"en":"receive guests","cn":"接待客人"},{"en":"receive a letter","cn":"收到一封信"}]},
+  {"en":"private","cn":"私人的","chunks":[{"en":"a private question","cn":"一个私人问题"},{"en":"private matters","cn":"私事"},{"en":"keep it private","cn":"保密"}]}
+ ],
+ "reading":{
+  "passage":"People around the world greet each other in different ways. In Japan, people often bow as soon as they meet, while in France friends may kiss on the cheek. Table manners are different too. In China, it is proper to use serving chopsticks, and you should not put your elbows on the table. In some countries the custom is so strict that you must never start eating unless the host begins first. When you receive food, it is polite to say thank you at once. These customs may seem confusing, but they are so important that learning them helps you make a good impression. Unless you respect local traditions, you may seem rude without knowing it. As soon as you understand other cultures, communicating with people becomes much easier.",
+  "passageCn":"世界各地的人们用不同的方式互相问候。在日本，人们一见面常常鞠躬，而在法国，朋友们可能会亲吻脸颊。餐桌礼仪也各不相同。在中国，使用公筷是恰当的，而且你不应该把胳膊肘放在桌上。在一些国家，习俗如此严格，以至于除非主人先开始，否则你绝不能动筷。当你收到食物时，立刻说声谢谢是礼貌的。这些习俗也许看起来令人困惑，但它们如此重要，以至于学会它们能帮你留下好印象。除非你尊重当地传统，否则你可能会在不知不觉中显得粗鲁。一旦你理解了其他文化，与人交流就会变得容易得多。",
+  "questions":[
+   {"q":"In Japan, what do people often do as soon as they meet?","opts":["They bow.","They kiss on the cheek.","They put elbows on the table.","They start eating first."],"answer":0,"point":"细节理解","dim":"reading"},
+   {"q":"According to the passage, why is learning customs important?","opts":["Because food tastes better.","Because it helps you make a good impression.","Because hosts pay you money.","Because chopsticks are cheap."],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What can we infer from the passage?","opts":["All cultures share the same manners.","Respecting traditions makes communication harder.","Without understanding cultures you may seem rude unintentionally.","Table manners do not matter anywhere."],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"The custom was ___ strange ___ the visitor did not know what to do.","opts":["so; that","such; that","too; to","as; as"],"answer":0,"point":"so...that 结果状语从句","dim":"grammar"},
+  {"q":"You should not start eating ___ the host begins first.","opts":["unless","because","although","since"],"answer":0,"point":"unless 条件状语从句","dim":"grammar"},
+  {"q":"___ the guests arrived, the host greeted them warmly.","opts":["As soon as","Unless","So that","Although"],"answer":0,"point":"as soon as 时间状语从句","dim":"grammar"},
+  {"q":"The meal was ___ delicious ___ everyone wanted more.","opts":["so; that","very; that","too; to","such; as"],"answer":0,"point":"so + adj + that","dim":"grammar"},
+  {"q":"___ you respect local traditions, people may think you are rude.","opts":["Unless","As soon as","So that","While"],"answer":0,"point":"unless 表示否定条件","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"In Japan, people usually bow as soon as they meet.","opts":["Japanese people bow right after meeting.","Japanese people shake hands before meeting.","Japanese people never greet each other.","Japanese people kiss on the cheek."],"answer":0},
+  {"audio":"Unless you say thank you, the host may think you are impolite.","opts":["You must say thank you, or the host may feel you are impolite.","The host will always think you are polite.","Saying thank you is not necessary.","The host never cares about manners."],"answer":0},
+  {"audio":"It is rude to put your elbows on the table while eating.","opts":["Elbows make food taste better.","Putting elbows on the table is bad manners.","You should put elbows on the table.","Tables need elbows."],"answer":1},
+  {"audio":"As soon as you receive a gift, it is polite to thank the giver.","opts":["Gifts should always be refused.","Thanking the giver is rude.","You should thank the giver right after receiving a gift.","You should open the gift and say nothing."],"answer":2},
+  {"audio":"The custom was so strict that nobody started eating before the host.","opts":["Everyone ate before the host.","There was no custom at the dinner.","The host ate last on purpose.","The strict custom stopped people eating before the host."],"answer":3},
+  {"audio":"In France, friends often kiss on the cheek to greet each other.","opts":["French friends greet by kissing the cheek.","French friends greet by bowing deeply.","French friends never greet friends.","French friends greet by shaking hands only."],"answer":0}
+ ],
+ "quizQuestions":[
+  {"q":"「custom」的意思是？","opts":["习俗","拳头","脸颊","叉子"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「proper」的意思是？","opts":["粗鲁的","恰当的；正确的","困惑的","私人的"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「impression」的意思是？","opts":["传统","场合","印象","礼仪"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「rude」的意思是？","opts":["私人的","收到","正式的","粗鲁的"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"The dinner was ___ formal ___ everyone wore nice clothes.","opts":["so; that","too; to","such; that","as; as"],"answer":0,"point":"so...that","dim":"grammar"},
+  {"q":"___ you greet the elders first, they may feel you are impolite.","opts":["As soon as","Unless","So that","Because"],"answer":1,"point":"unless","dim":"grammar"},
+  {"q":"「greet」的意思是？","opts":["问候；迎接","摩擦","传统","令人困惑的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"___ the guests sat down, the host served the main dish.","opts":["Unless","So that","As soon as","Although"],"answer":2,"point":"as soon as","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"Advice on Chinese Table Manners",
+  "prompt":"Your foreign friend will have dinner with a Chinese family. Write an email of at least 40 words giving advice on Chinese customs and table manners. Use so...that, unless, and as soon as at least once each.",
+  "promptCn":"你的外国朋友将和一个中国家庭共进晚餐。写一封不少于40词的邮件，就中国习俗和餐桌礼仪给出建议。至少各用一次 so...that、unless 和 as soon as。",
+  "opener":"Dear Sam, I'm glad you will have dinner with a Chinese family. Here is some advice on our customs.",
+  "sampleWords":["custom","manner","proper","greet","rude","impression","receive","tradition"],
+  "cards":[
+   {"key":"greeting","labelCn":"问候","hint":"如 As soon as you arrive, greet the elders first."},
+   {"key":"table","labelCn":"餐桌礼仪","hint":"如 It is proper to use serving chopsticks."},
+   {"key":"respect","labelCn":"尊重习俗","hint":"如 Unless you follow the custom, you may seem rude."}
+  ],
+  "templates":{
+   "l1":["As soon as you arrive, please {greeting} the elders politely.","At a Chinese table, good {table} are very important.","Unless you show {respect}, people may feel uncomfortable.","These customs are so useful that they help you make a good impression."],
+   "l2":["As soon as you arrive, you should greet the older people first.","It is proper to use serving chopsticks and keep your elbows off the table.","Unless you respect these traditions, you may seem rude.","Chinese manners are so meaningful that learning them leaves a good impression."],
+   "l3":["As soon as you walk into the home, please greet the elders first and smile.","When you sit down, use serving chopsticks and never start eating unless the host begins.","Unless you take time to understand these customs, you might seem rude by accident.","These manners may seem confusing at first, but they are so important that following them helps you get along well."]
+  },
+  "connectors":["First of all","Besides","Also","What's more","Finally","In a word"],
+  "minWords":40
+ }
+}

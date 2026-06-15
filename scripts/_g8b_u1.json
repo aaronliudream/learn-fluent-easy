@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"express","cn":"表达；表示","chunks":[{"en":"express your feelings","cn":"表达你的感受"},{"en":"express yourself through art","cn":"通过艺术表达自己"},{"en":"a way to express ideas","cn":"一种表达想法的方式"}]},
+  {"en":"scared","cn":"害怕的；惊慌的","chunks":[{"en":"feel scared","cn":"感到害怕"},{"en":"scared of falling","cn":"害怕摔倒"},{"en":"too scared to try","cn":"太害怕而不敢尝试"}]},
+  {"en":"fear","cn":"害怕；担忧","chunks":[{"en":"get over your fear","cn":"克服你的恐惧"},{"en":"a fear of water","cn":"对水的恐惧"},{"en":"face your fear","cn":"面对你的恐惧"}]},
+  {"en":"single","cn":"单个的；单身的","chunks":[{"en":"a single stroke","cn":"一个笔画"},{"en":"every single day","cn":"每一天"},{"en":"a single coin","cn":"一枚硬币"}]},
+  {"en":"return","cn":"回来；归还","chunks":[{"en":"in return","cn":"作为回报"},{"en":"return home","cn":"返回家"},{"en":"return the book","cn":"归还书"}]},
+  {"en":"manage","cn":"完成（困难的事）；管理","chunks":[{"en":"manage to finish","cn":"设法完成"},{"en":"manage your time","cn":"管理你的时间"},{"en":"manage the stress","cn":"应对压力"}]},
+  {"en":"push","cn":"鞭策；推","chunks":[{"en":"push yourself","cn":"鞭策自己"},{"en":"push the door","cn":"推门"},{"en":"give it a push","cn":"推一下"}]},
+  {"en":"chat","cn":"闲聊","chunks":[{"en":"chat with friends","cn":"和朋友闲聊"},{"en":"have a chat","cn":"聊一聊"},{"en":"chat online","cn":"在线聊天"}]},
+  {"en":"outing","cn":"出外游玩；远足","chunks":[{"en":"go on an outing","cn":"出外游玩"},{"en":"a family outing","cn":"一次家庭出游"},{"en":"plan an outing","cn":"计划一次远足"}]},
+  {"en":"reduce","cn":"减少","chunks":[{"en":"reduce stress","cn":"减少压力"},{"en":"reduce the time","cn":"减少时间"},{"en":"help to reduce","cn":"有助于减少"}]},
+  {"en":"stress","cn":"精神压力；紧张","chunks":[{"en":"feel stress","cn":"感到压力"},{"en":"deal with stress","cn":"应对压力"},{"en":"reduce stress","cn":"减少压力"}]},
+  {"en":"allow","cn":"使……成为可能；允许","chunks":[{"en":"allow you to relax","cn":"让你放松"},{"en":"allow me to try","cn":"允许我尝试"},{"en":"allow more time","cn":"留出更多时间"}]}
+ ],
+ "reading":{
+  "passage":"Everyone needs free time to relax. After a long day at school, I like to do something to forget my stress. Some students play sports to stay strong, while others chat with friends to feel happy. My friend Maya takes up calligraphy to express her feelings. At first, she felt scared and wanted to give up, but her teacher told her to keep trying. Now she can manage a single stroke perfectly! I often go on an outing with my family on weekends to enjoy nature. These activities allow us to rest our minds and reduce stress. Hobbies are not a waste of time. They give us energy to study better and help us become happier people.",
+  "passageCn":"每个人都需要空闲时间来放松。在学校度过漫长的一天后，我喜欢做点什么来忘掉压力。一些学生通过运动来保持强壮，而另一些学生则和朋友闲聊来感到快乐。我的朋友马娅学习书法来表达她的感受。起初，她感到害怕，想要放弃，但她的老师告诉她要坚持尝试。现在她能完美地完成一个笔画了！我周末经常和家人出外游玩，享受大自然。这些活动让我们放松心情，减少压力。爱好不是浪费时间。它们给我们能量去更好地学习，并帮助我们成为更快乐的人。",
+  "questions":[
+   {"q":"Why does Maya take up calligraphy?","opts":["To make money","To express her feelings","To win a prize","To meet new friends"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What did Maya's teacher tell her to do when she felt scared?","opts":["To keep trying","To give up","To take a rest","To change hobbies"],"answer":0,"point":"细节理解","dim":"reading"},
+   {"q":"What is the writer's main idea about hobbies?","opts":["Hobbies waste our study time","Hobbies are only for weekends","Hobbies help us relax and become happier","Hobbies are difficult to learn"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"My mother asked me ___ the room before dinner.","opts":["clean","to clean","cleaning","cleaned"],"answer":1,"point":"不定式作宾补 ask sb to do","dim":"grammar"},
+  {"q":"I do yoga every morning ___ my stress.","opts":["reduce","reduced","to reduce","reducing"],"answer":2,"point":"不定式作状语表目的","dim":"grammar"},
+  {"q":"The teacher told us ___ afraid of making mistakes.","opts":["not be","not to be","to not be","being not"],"answer":1,"point":"不定式否定式作宾补","dim":"grammar"},
+  {"q":"Many students go on outings ___ themselves after exams.","opts":["enjoy","to enjoy","enjoying","enjoys"],"answer":1,"point":"不定式作状语表目的","dim":"grammar"},
+  {"q":"His coach pushed him ___ harder to get over his fear.","opts":["practise","practising","to practise","practised"],"answer":2,"point":"不定式作宾补 push sb to do","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I take up calligraphy to express my feelings.","opts":["He learns calligraphy to show his feelings.","He gives up calligraphy because it is hard.","He teaches calligraphy to earn money.","He hates calligraphy and feels bored."],"answer":0},
+  {"audio":"My dad asked me to chat with him after dinner.","opts":["My dad cooked dinner alone.","My dad asked me to talk with him after dinner.","My dad went out after dinner.","My dad told me to study after dinner."],"answer":1},
+  {"audio":"We go on an outing every weekend to relax.","opts":["We stay at home every weekend.","We study hard every weekend.","We take a trip each weekend to relax.","We play sports indoors every weekend."],"answer":2},
+  {"audio":"At first I was scared, but I didn't give up.","opts":["I was happy and kept going.","I felt bored and stopped.","I was never scared at all.","I felt afraid but I kept on."],"answer":3},
+  {"audio":"Doing yoga helps me reduce stress.","opts":["Yoga helps me feel less stressed.","Yoga makes me feel more tired.","Yoga is a waste of my time.","Yoga makes my stress worse."],"answer":0},
+  {"audio":"My teacher told me not to be afraid of failure.","opts":["My teacher said I should fear failure.","My teacher told me not to fear failure.","My teacher asked me to stop trying.","My teacher said failure is good for me."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「reduce」的意思是？","opts":["增加","减少","表达","管理"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「scared」的意思是？","opts":["害怕的","开心的","勇敢的","累的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"She paints pictures ___ herself when she feels stressed.","opts":["express","to express","expressing","expressed"],"answer":1,"point":"不定式作状语","dim":"grammar"},
+  {"q":"「outing」的意思是？","opts":["压力","出外游玩","硬币","建议"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"The instructor asked the new students ___ their fears.","opts":["face","faces","to face","facing"],"answer":2,"point":"不定式作宾补","dim":"grammar"},
+  {"q":"「allow」的意思是？","opts":["减少","使成为可能；允许","放弃","归还"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"My parents told me ___ too much time on games.","opts":["not spend","to not spend","not to spend","don't spend"],"answer":2,"point":"不定式否定式作宾补","dim":"grammar"},
+  {"q":"「manage」在 \"manage to finish\" 中的意思是？","opts":["设法完成","管理金钱","放弃","开始"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Favourite Free-time Activity",
+  "prompt":"Write about your favourite free-time activity. Explain what you do to relax and why this hobby is important to you. Use infinitives (to do) to show your reasons and purposes.",
+  "promptCn":"写一写你最喜欢的课余活动。说明你做什么来放松，以及为什么这个爱好对你很重要。用不定式（to do）来表达你的原因和目的。",
+  "opener":"In my free time, I like to",
+  "sampleWords":["express","reduce","stress","manage","scared","chat","outing","fear"],
+  "cards":[
+   {"key":"what","labelCn":"做什么活动","hint":"如 I like to do calligraphy / play sports"},
+   {"key":"why","labelCn":"为什么做（目的）","hint":"如 I do it to reduce my stress"},
+   {"key":"feel","labelCn":"它给你的感受","hint":"如 It allows me to relax and feel happy"}
+  ],
+  "templates":{
+   "l1":["In my free time, I like to {what}.","I do it to {why}.","It allows me to {feel}.","I think this hobby is important to me."],
+   "l2":["In my free time, I like to {what} to relax.","I started it because I wanted to {why}.","At first I felt scared, but I didn't give up.","Now this activity allows me to {feel}."],
+   "l3":["After a busy week at school, I like to {what} to forget my stress.","I take up this hobby to {why} and to express myself.","Though I once felt scared, my teacher told me to keep trying.","This activity allows me to {feel}, and it helps me become a happier person."]
+  },
+  "connectors":["because","so","but","and","to","first of all"],
+  "minWords":40
+ }
+}

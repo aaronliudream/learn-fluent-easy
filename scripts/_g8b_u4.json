@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"wonder","cn":"奇观；惊叹","chunks":[{"en":"a natural wonder","cn":"自然奇观"},{"en":"the wonders of nature","cn":"大自然的奇观"},{"en":"one of the great wonders","cn":"伟大奇观之一"}]},
+  {"en":"desert","cn":"沙漠；荒原","chunks":[{"en":"a huge desert","cn":"一片巨大的沙漠"},{"en":"cross the desert","cn":"穿越沙漠"},{"en":"the largest desert","cn":"最大的沙漠"}]},
+  {"en":"surface","cn":"表面；表层","chunks":[{"en":"the surface of the water","cn":"水面"},{"en":"come to the surface","cn":"浮上表面"},{"en":"a smooth surface","cn":"光滑的表面"}]},
+  {"en":"depth","cn":"深（度）；纵深","chunks":[{"en":"the depth of the sea","cn":"海洋的深度"},{"en":"at a great depth","cn":"在很深的地方"},{"en":"measure the depth","cn":"测量深度"}]},
+  {"en":"distance","cn":"距离；遥远","chunks":[{"en":"a long distance","cn":"很长的距离"},{"en":"in the distance","cn":"在远处"},{"en":"the distance between them","cn":"它们之间的距离"}]},
+  {"en":"survive","cn":"生存；存活","chunks":[{"en":"survive in the wild","cn":"在野外生存"},{"en":"survive the cold winter","cn":"熬过寒冬"},{"en":"hard to survive","cn":"难以生存"}]},
+  {"en":"coast","cn":"海岸；海滨","chunks":[{"en":"along the coast","cn":"沿着海岸"},{"en":"the east coast","cn":"东海岸"},{"en":"off the coast","cn":"在海岸附近"}]},
+  {"en":"cliff","cn":"悬崖；峭壁","chunks":[{"en":"a steep cliff","cn":"陡峭的悬崖"},{"en":"climb the cliff","cn":"攀登悬崖"},{"en":"at the edge of the cliff","cn":"在悬崖边缘"}]},
+  {"en":"waterfall","cn":"瀑布","chunks":[{"en":"a high waterfall","cn":"高高的瀑布"},{"en":"the highest waterfall","cn":"最高的瀑布"},{"en":"the sound of the waterfall","cn":"瀑布的声音"}]},
+  {"en":"natural","cn":"自然的；天然的","chunks":[{"en":"natural beauty","cn":"自然之美"},{"en":"a natural wonder","cn":"自然奇观"},{"en":"natural resources","cn":"自然资源"}]},
+  {"en":"attract","cn":"吸引；招引","chunks":[{"en":"attract tourists","cn":"吸引游客"},{"en":"attract attention","cn":"吸引注意"},{"en":"attract visitors","cn":"吸引参观者"}]},
+  {"en":"include","cn":"包含；包括","chunks":[{"en":"include many places","cn":"包括许多地方"},{"en":"the price includes meals","cn":"价格包含餐食"},{"en":"include some animals","cn":"包括一些动物"}]}
+ ],
+ "reading":{
+  "passage":"Mount Qomolangma is the highest mountain in the world. It stands 8,848 metres above sea level, which is far higher than any other mountain on Earth. Every year, it attracts climbers from all over the world. Climbing it is much harder and more dangerous than climbing other mountains. The weather there is the most changeable of all, and the temperature can drop to forty degrees below zero. The higher climbers go, the colder and more difficult it becomes. To survive, they must be the most determined and best-prepared people. Although the journey is risky, many explorers still believe that reaching the top of this great natural wonder is the most exciting experience of a lifetime.",
+  "passageCn":"珠穆朗玛峰是世界上最高的山。它高出海平面8848米，远比地球上任何其他山都高。每年它都吸引着来自世界各地的登山者。攀登它比攀登其他山更艰难、更危险。那里的天气是所有地方中最多变的，气温能降到零下四十度。登山者爬得越高，天气就越冷、越艰难。为了生存，他们必须是最有决心、准备最充分的人。尽管旅程充满危险，许多探险者仍然相信，登上这座伟大的自然奇观之巅是一生中最激动人心的经历。",
+  "questions":[
+   {"q":"How high is Mount Qomolangma above sea level?","opts":["848 metres","4,848 metres","8,848 metres","18,848 metres"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"According to the passage, climbing Mount Qomolangma is ___ climbing other mountains.","opts":["easier than","much harder than","as safe as","less dangerous than"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What can we infer about the climbers from the passage?","opts":["They are not well prepared","They give up easily","They are very determined people","They climb only in summer"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"Mount Qomolangma is ___ mountain in the world.","opts":["high","higher","the highest","highest"],"answer":2,"point":"形容词最高级","dim":"grammar"},
+  {"q":"The Dead Sea is much ___ than the sea around it.","opts":["salty","saltier","saltiest","the saltiest"],"answer":1,"point":"形容词比较级","dim":"grammar"},
+  {"q":"The desert covers about nine ___ square kilometres.","opts":["million","millions","million of","of million"],"answer":0,"point":"大数表达（million不加s）","dim":"grammar"},
+  {"q":"The ___ climbers go, the colder it becomes.","opts":["high","highest","higher","more high"],"answer":2,"point":"the+比较级…the+比较级","dim":"grammar"},
+  {"q":"The waterfall is nine ___ and seventy-nine metres high.","opts":["hundreds","hundred","hundreds of","of hundred"],"answer":1,"point":"大数表达（hundred不加s）","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"Mount Qomolangma is 8,848 metres high, the tallest mountain on Earth.","opts":["The mountain is the highest in the world.","The mountain is only 848 metres high.","The mountain is the lowest on Earth.","The mountain has no snow."],"answer":0},
+  {"audio":"The river is much longer than I expected, stretching for thousands of kilometres.","opts":["The river is very short.","The river is longer than expected.","The river has dried up.","The river is the same length as before."],"answer":1},
+  {"audio":"To survive in the desert, travellers need plenty of water.","opts":["Travellers don't need water in the desert.","Deserts have lots of rivers.","Water is important for surviving in the desert.","The desert is easy to cross."],"answer":2},
+  {"audio":"This waterfall attracts more tourists than any other place in the area.","opts":["Few people visit the waterfall.","The waterfall is closed to tourists.","The area has no waterfalls.","The waterfall is the most popular spot in the area."],"answer":3},
+  {"audio":"The coast here is famous for its beautiful natural scenery.","opts":["The coast is known for its natural beauty.","The coast is dirty and ugly.","There is no coast here.","The coast is far from any sea."],"answer":0},
+  {"audio":"Climbing the cliff was the most dangerous part of our whole trip.","opts":["The cliff was the safest place.","Climbing the cliff was the most dangerous part.","They didn't climb any cliff.","The trip had no danger at all."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「wonder」的意思是？","opts":["奇观；惊叹","沙漠","海岸","距离"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「survive」的意思是？","opts":["吸引","生存；存活","包含","测量"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「coast」的意思是？","opts":["悬崖","瀑布","海岸；海滨","表面"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「attract」的意思是？","opts":["生存","包含","自然的","吸引；招引"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"The Nile is one of ___ rivers in the world.","opts":["the longest","longer","long","longests"],"answer":0,"point":"形容词最高级","dim":"grammar"},
+  {"q":"The lake is over one ___ metres deep.","opts":["thousands","thousand","thousand of","thousands of"],"answer":1,"point":"大数表达（thousand不加s）","dim":"grammar"},
+  {"q":"Today the weather is ___ than yesterday.","opts":["changeable","more changeable","most changeable","the most changeable"],"answer":1,"point":"形容词比较级","dim":"grammar"},
+  {"q":"「depth」的意思是？","opts":["深（度）；纵深","肩膀","梯子","度数"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"A Natural Wonder I Want to Visit",
+  "prompt":"Write a short advertisement (at least 40 words) describing a natural wonder. Use comparatives and superlatives and at least one large number to make it attractive to tourists.",
+  "promptCn":"写一则简短的广告（至少40词），描述一处自然奇观。使用比较级和最高级，以及至少一个大数字，让它对游客更有吸引力。",
+  "opener":"Come and visit one of the greatest natural wonders in the world!",
+  "sampleWords":["wonder","natural","attract","distance","survive","coast","waterfall","include"],
+  "cards":[
+   {"key":"name","labelCn":"名称与位置","hint":"如 Mount Qomolangma, in the south of China"},
+   {"key":"feature","labelCn":"特点（比较级/最高级+大数字）","hint":"如 the highest mountain, 8,848 metres above sea level"},
+   {"key":"invite","labelCn":"邀请游客","hint":"如 It attracts millions of visitors; come and see it!"}
+  ],
+  "templates":{
+   "l1":["This is {name}.","It is a famous natural wonder.","It is {feature}.","Please come and visit it. {invite}"],
+   "l2":["Welcome to {name}, one of the greatest wonders of nature.","It is {feature}, far more beautiful than many other places.","Every year it attracts thousands of travellers from all over the world.","{invite} You will never forget it!"],
+   "l3":["Are you looking for the most amazing place on Earth? Visit {name}!","As {feature}, it is higher and more wonderful than anywhere else you know.","Standing there, you will feel how great and powerful nature can be.","{invite} It will be the most exciting journey of your lifetime!"]
+  },
+  "connectors":["because","so","and","but","although","more...than","the most","one of the"],
+  "minWords":40
+ }
+}

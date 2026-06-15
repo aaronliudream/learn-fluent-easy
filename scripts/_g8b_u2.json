@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"sore","cn":"疼痛的；酸痛的","chunks":[{"en":"a sore throat","cn":"喉咙痛"},{"en":"sore muscles","cn":"酸痛的肌肉"},{"en":"feel sore","cn":"感到疼痛"}]},
+  {"en":"throat","cn":"喉咙","chunks":[{"en":"a dry throat","cn":"干燥的喉咙"},{"en":"clear my throat","cn":"清清嗓子"},{"en":"a pain in my throat","cn":"喉咙疼"}]},
+  {"en":"fever","cn":"发烧","chunks":[{"en":"have a fever","cn":"发烧"},{"en":"a high fever","cn":"高烧"},{"en":"run a fever","cn":"发烧"}]},
+  {"en":"headache","cn":"头痛","chunks":[{"en":"have a headache","cn":"头痛"},{"en":"a bad headache","cn":"剧烈的头痛"},{"en":"a terrible headache","cn":"严重的头痛"}]},
+  {"en":"suffer","cn":"受苦；遭受","chunks":[{"en":"suffer from a cold","cn":"患感冒"},{"en":"suffer a lot","cn":"遭受很多痛苦"},{"en":"suffer in silence","cn":"默默忍受"}]},
+  {"en":"avoid","cn":"避免；防止","chunks":[{"en":"avoid junk food","cn":"避免吃垃圾食品"},{"en":"avoid getting sick","cn":"避免生病"},{"en":"avoid the danger","cn":"避开危险"}]},
+  {"en":"medicine","cn":"药；医学","chunks":[{"en":"take medicine","cn":"吃药"},{"en":"some cold medicine","cn":"一些感冒药"},{"en":"study medicine","cn":"学医"}]},
+  {"en":"illness","cn":"疾病","chunks":[{"en":"a serious illness","cn":"重病"},{"en":"recover from an illness","cn":"病愈"},{"en":"prevent illness","cn":"预防疾病"}]},
+  {"en":"injury","cn":"伤害；损伤","chunks":[{"en":"a head injury","cn":"头部受伤"},{"en":"a serious injury","cn":"严重的伤"},{"en":"avoid injury","cn":"避免受伤"}]},
+  {"en":"pain","cn":"疼痛；痛苦","chunks":[{"en":"feel pain","cn":"感到疼痛"},{"en":"a sharp pain","cn":"剧痛"},{"en":"stomach pain","cn":"胃痛"}]},
+  {"en":"safety","cn":"安全","chunks":[{"en":"road safety","cn":"道路安全"},{"en":"for your safety","cn":"为了你的安全"},{"en":"food safety","cn":"食品安全"}]},
+  {"en":"patient","cn":"病人；有耐心的","chunks":[{"en":"a young patient","cn":"一个年轻的病人"},{"en":"be patient with","cn":"对……有耐心"},{"en":"a patient teacher","cn":"有耐心的老师"}]}
+ ],
+ "reading":{
+  "passage":"Last Sunday, Tom wanted to cook dinner by himself. He turned on the stove, but he was careless and burned his hand. The pain was terrible, so he ran to put his hand under cold water. His sister Lucy heard him and came quickly. \"You should not panic,\" she said calmly. \"You could put some clean ice on it.\" Lucy reminded herself to stay calm and helped Tom. Soon the pain was less. \"Thank you,\" Tom said. \"I should be more careful next time. I should learn some first aid to protect myself.\" Lucy smiled. \"We can learn it together. Knowing how to take care of ourselves keeps us safe at home.\"",
+  "passageCn":"上周日，汤姆想自己做晚饭。他打开了炉子，但他很粗心，烫伤了手。疼痛非常厉害，于是他跑去把手放到冷水下面。他的姐姐露西听到声音，很快跑了过来。“你不应该惊慌，”她平静地说，“你可以放一些干净的冰在上面。”露西提醒自己保持冷静，帮助了汤姆。很快疼痛减轻了。“谢谢你，”汤姆说，“下次我应该更小心。我应该学一些急救知识来保护自己。”露西笑了。“我们可以一起学。学会照顾我们自己能让我们在家里更安全。”",
+  "questions":[
+   {"q":"How did Tom hurt himself?","opts":["He fell down the stairs","He burned his hand on the stove","He cut his finger with a knife","He caught a bad cold"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What did Lucy advise Tom to do first?","opts":["To take some medicine","To panic and shout for help","To stay calm and not panic","To go to the hospital at once"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn from the passage?","opts":["Knowing first aid helps us take care of ourselves","Cooking dinner is always dangerous","Cold water makes burns worse","Tom never wants to cook again"],"answer":0,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"You have a fever. You ___ see a doctor right away.","opts":["should","shouldn't","aren't","didn't"],"answer":0,"point":"should 表建议","dim":"grammar"},
+  {"q":"If you feel tired, you ___ take a short rest.","opts":["couldn't","could","wasn't","mustn't"],"answer":1,"point":"could 表建议","dim":"grammar"},
+  {"q":"The little boy hurt ___ while he was playing football.","opts":["herself","myself","himself","themselves"],"answer":2,"point":"反身代词 himself","dim":"grammar"},
+  {"q":"We should learn to take care of ___ and stay healthy.","opts":["yourself","ourselves","himself","herself"],"answer":1,"point":"反身代词 ourselves","dim":"grammar"},
+  {"q":"You shouldn't ___ junk food if you want to be healthy.","opts":["to eat","ate","eat","eating"],"answer":2,"point":"shouldn't+动词原形","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I have a sore throat and a high fever, so I should see a doctor.","opts":["He feels sick and plans to see a doctor.","He is very healthy today.","He wants to play basketball.","He is too busy to rest."],"answer":0},
+  {"audio":"You should drink more warm water and take some medicine for your cold.","opts":["The advice is to eat more ice cream.","The advice is to drink warm water and take medicine.","The advice is to go swimming.","The advice is to stay up late."],"answer":1},
+  {"audio":"Be careful with the knife, or you could cut yourself.","opts":["The knife is a toy.","You could hurt yourself with the knife.","The knife is broken.","You should throw the knife away."],"answer":1},
+  {"audio":"If you feel a pain in your stomach, you could lie down and rest.","opts":["You should run faster.","Stomach pain is good for you.","You could lie down and rest.","You must eat more food."],"answer":2},
+  {"audio":"We learned some first aid so we can take care of ourselves at home.","opts":["First aid is useless.","They never stay at home.","Learning first aid helps them care for themselves.","They want to become doctors."],"answer":2},
+  {"audio":"To stay healthy, you should exercise often and avoid junk food.","opts":["Eat junk food every day.","Never do any exercise.","Sleep all day long.","Exercise often and stay away from junk food."],"answer":3}
+ ],
+ "quizQuestions":[
+  {"q":"「sore」的意思是？","opts":["健康的","疼痛的；酸痛的","快乐的","安全的"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「avoid」的意思是？","opts":["避免；防止","邀请","到达","允许"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「injury」的意思是？","opts":["旅程","伤害；损伤","正义","工具"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「patient」作名词时的意思是？","opts":["医生","护士","病人","药片"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"You ___ go to bed early when you have a cold.","opts":["aren't","didn't","weren't","should"],"answer":3,"point":"should 表建议","dim":"grammar"},
+  {"q":"She made the cake by ___.","opts":["herself","himself","themselves","yourself"],"answer":0,"point":"反身代词 herself","dim":"grammar"},
+  {"q":"「medicine」的意思是？","opts":["药；医学","菜单","机器","金属"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"You ___ try some hot tea for your sore throat.","opts":["could","couldn't","weren't","didn't"],"answer":0,"point":"could 表建议","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"How to Stay Healthy",
+  "prompt":"Your friend often feels tired and gets sick. Write a short passage to give him some health advice. Use 'should' and 'could' to make suggestions.",
+  "promptCn":"你的朋友经常感到疲惫并且容易生病。写一段短文给他一些保持健康的建议，用 should 和 could 提出建议。",
+  "opener":"To stay healthy, you should take good care of yourself.",
+  "sampleWords":["healthy","should","could","avoid","medicine","fever","illness","yourself"],
+  "cards":[
+   {"key":"food","labelCn":"饮食建议","hint":"如 you should eat more fruit"},
+   {"key":"rest","labelCn":"作息建议","hint":"如 you could go to bed early"},
+   {"key":"exercise","labelCn":"运动建议","hint":"如 you should exercise every day"}
+  ],
+  "templates":{
+   "l1":["To stay healthy, you should take care of yourself.","About {food}, you should eat more fruit and vegetables.","About {rest}, you could go to bed early every night.","About {exercise}, you should exercise often to stay strong."],
+   "l2":["Everyone wants to stay healthy, so we must take care of ourselves.","For your {food}, you should eat healthy food and avoid junk food.","For your {rest}, you could get enough sleep and not stay up late.","For your {exercise}, you should do sports often so you won't get sick easily."],
+   "l3":["Staying healthy is important, and we should learn to take care of ourselves.","First, for your {food}, you should eat more fruit and avoid too much junk food.","Second, for your {rest}, you could go to bed early so your body can rest well.","Finally, for your {exercise}, you should exercise every day; what's more, this helps you avoid illness."]
+  },
+  "connectors":["First","Second","Finally","What's more","so","because"],
+  "minWords":40
+ }
+}

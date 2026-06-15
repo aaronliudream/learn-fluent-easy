@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"volunteer","cn":"志愿者；自愿做","chunks":[{"en":"a young volunteer","cn":"一名年轻志愿者"},{"en":"volunteer at a shelter","cn":"在庇护所做志愿者"},{"en":"work as a volunteer","cn":"做志愿工作"}]},
+  {"en":"charity","cn":"慈善机构；慈善事业","chunks":[{"en":"a local charity","cn":"一家本地慈善机构"},{"en":"give money to charity","cn":"给慈善机构捐钱"},{"en":"a charity event","cn":"一场慈善活动"}]},
+  {"en":"donate","cn":"捐赠；赠送","chunks":[{"en":"donate clothes","cn":"捐赠衣物"},{"en":"donate money to","cn":"向……捐钱"},{"en":"donate blood","cn":"献血"}]},
+  {"en":"donation","cn":"捐赠物；捐赠","chunks":[{"en":"make a donation","cn":"进行捐赠"},{"en":"collect donations","cn":"收集捐赠物"},{"en":"a kind donation","cn":"一份善意的捐赠"}]},
+  {"en":"provide","cn":"提供；给予","chunks":[{"en":"provide food","cn":"提供食物"},{"en":"provide help for","cn":"为……提供帮助"},{"en":"provide shelter","cn":"提供居所"}]},
+  {"en":"shelter","cn":"庇护所；居所","chunks":[{"en":"an animal shelter","cn":"动物庇护所"},{"en":"build a shelter","cn":"建造庇护所"},{"en":"find shelter","cn":"找到居所"}]},
+  {"en":"elderly","cn":"年纪较大的；上了年纪的","chunks":[{"en":"the elderly","cn":"老人"},{"en":"an elderly lady","cn":"一位年长的女士"},{"en":"help the elderly","cn":"帮助老人"}]},
+  {"en":"active","cn":"活跃的；积极的","chunks":[{"en":"stay active","cn":"保持活跃"},{"en":"an active member","cn":"一名活跃的成员"},{"en":"be active in","cn":"积极参与"}]},
+  {"en":"effort","cn":"努力；艰难的尝试","chunks":[{"en":"make an effort","cn":"做出努力"},{"en":"with great effort","cn":"费很大力气"},{"en":"put in effort","cn":"付出努力"}]},
+  {"en":"willing","cn":"乐意的；愿意的","chunks":[{"en":"be willing to help","cn":"乐意帮忙"},{"en":"a willing helper","cn":"一名乐意帮忙的人"},{"en":"willing to share","cn":"乐于分享"}]},
+  {"en":"value","cn":"重要作用；价值","chunks":[{"en":"the value of teamwork","cn":"团队合作的价值"},{"en":"learn the value of","cn":"懂得……的价值"},{"en":"of great value","cn":"很有价值"}]},
+  {"en":"successful","cn":"成功的；有成就的","chunks":[{"en":"a successful event","cn":"一场成功的活动"},{"en":"be successful in","cn":"在……方面成功"},{"en":"a successful volunteer","cn":"一名成功的志愿者"}]}
+ ],
+ "reading":{
+  "passage":"My name is Lily, and I have been a volunteer at a local charity since 2020. For three years, I have helped the elderly in a nursing home near my school. Every weekend, my team and I provide food and warm clothes for them. We have also donated many books to children in need. Helping others has not always been easy. I have been very busy since I joined the group, but it is worth it. I have learned the value of teamwork, and I have made many new friends. Most of all, I have understood why we should help others. A small effort can make a real difference. I am still willing to do more, and I will never stop.",
+  "passageCn":"我叫莉莉，自2020年以来我一直是一家本地慈善机构的志愿者。三年来，我一直在学校附近的一家养老院帮助老人。每个周末，我和我的团队为他们提供食物和暖和的衣服。我们还向有需要的孩子们捐赠了许多书。帮助别人并不总是容易。自从加入这个团队以来，我一直很忙，但这是值得的。我懂得了团队合作的价值，也结交了许多新朋友。最重要的是，我明白了我们为什么应该帮助别人。一点小小的努力就能带来真正的改变。我仍然愿意做得更多，我永远不会停下来。",
+  "questions":[
+   {"q":"How long has Lily helped the elderly in the nursing home?","opts":["Since 2020","For three years","For one weekend","Since last month"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What does Lily's team do for the elderly every weekend?","opts":["Teach them English","Provide food and warm clothes","Build a new shelter","Collect old cans"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn about Lily from the passage?","opts":["She finds volunteering useless","She wants to give up soon","She thinks her effort is worth it","She has never made new friends"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"My sister ___ at the animal shelter since last summer.","opts":["work","works","has worked","is working"],"answer":2,"point":"现在完成时 since","dim":"grammar"},
+  {"q":"They ___ money to the charity ___ three years.","opts":["donated; since","have donated; for","donate; for","has donated; since"],"answer":1,"point":"现在完成时 for","dim":"grammar"},
+  {"q":"Choose the correct sentence.","opts":["He has been a volunteer since 2019.","He has been a volunteer for 2019.","He is a volunteer since 2019.","He was a volunteer for 2019."],"answer":0,"point":"since 与时间点","dim":"grammar"},
+  {"q":"We ___ the elderly ___ we joined the group last year.","opts":["help; for","have helped; since","helped; since","are helping; for"],"answer":1,"point":"since 引导从句","dim":"grammar"},
+  {"q":"How long ___ you ___ in this nursing home?","opts":["did; work","have; worked","do; work","are; working"],"answer":1,"point":"How long 提问现在完成时","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I have been a volunteer at the nursing home for two years.","opts":["The speaker has volunteered at the nursing home for two years.","The speaker will start volunteering in two years.","The speaker volunteered only once two years ago.","The speaker dislikes the nursing home."],"answer":0},
+  {"audio":"We have donated many clothes to the children in need since spring.","opts":["They have given clothes to children in need since spring.","They bought new clothes in spring.","They received clothes from the children.","They plan to donate clothes next spring."],"answer":0},
+  {"audio":"My brother has helped the elderly every weekend since he was twelve.","opts":["The brother stopped helping when he was twelve.","The brother has helped the elderly every weekend since age twelve.","The brother helps the elderly only on holidays.","The brother is twelve years old now."],"answer":1},
+  {"audio":"Our charity has provided food for poor families for five years.","opts":["The charity sold food to families.","The charity will provide food in five years.","The charity has provided food for poor families for five years.","The charity closed five years ago."],"answer":2},
+  {"audio":"She has been active in our volunteer group since last October.","opts":["She left the group last October.","She has been active in the group since last October.","She joined the group ten years ago.","She is not interested in the group."],"answer":1},
+  {"audio":"I am willing to make an effort to help others in my community.","opts":["I refuse to help others.","I am willing to make an effort to help others.","I have already stopped helping.","I only help my family."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「donate」的意思是？","opts":["捐赠","参观","提供住所","报名"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「shelter」的意思是？","opts":["军队","庇护所；居所","笼子","观众"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「elderly」的意思是？","opts":["年轻的","成功的","年纪较大的","实用的"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「make an effort」的意思是？","opts":["有作用","分发","报名","做出努力"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"They have run the charity ___ 2018.","opts":["since","for","in","at"],"answer":0,"point":"语法 since","dim":"grammar"},
+  {"q":"I have lived here ___ ten years.","opts":["since","ago","for","in"],"answer":2,"point":"语法 for","dim":"grammar"},
+  {"q":"「willing」的意思是？","opts":["乐意的；愿意的","活跃的","成功的","实用的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"Choose the correct present perfect sentence.","opts":["He provides food since May.","He has provided food since May.","He provided food for May.","He is providing food since May."],"answer":1,"point":"语法 现在完成时","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"Joining a Volunteer Group",
+  "prompt":"Write an application email to join the 'Make a Difference' volunteer group. Use the present perfect tense with since/for to talk about what you have done to help others. Explain why you want to join and what you are willing to do.",
+  "promptCn":"写一封申请邮件，申请加入“有所作为”志愿者团队。用现在完成时（since/for）谈谈你为帮助别人做过的事，说明你为什么想加入，以及你愿意做什么。",
+  "opener":"Dear Sir or Madam, I am writing to apply to join your 'Make a Difference' volunteer group.",
+  "sampleWords":["volunteer","charity","donate","provide","elderly","effort","willing","successful"],
+  "cards":[
+   {"key":"experience","labelCn":"我的经历","hint":"如 I have helped the elderly since 2022."},
+   {"key":"reason","labelCn":"加入原因","hint":"如 I have learned the value of helping others."},
+   {"key":"offer","labelCn":"我愿意做的","hint":"如 I am willing to provide food and donate books."}
+  ],
+  "templates":{
+   "l1":["I have been a volunteer for two years. {experience}","I have helped the elderly since 2022.","I have donated clothes to people in need. {reason}","My friends and I have provided food for them. {offer}"],
+   "l2":["I want to join because I care about my community. {reason}","I have learned the value of teamwork since then.","Helping others has made me very happy. {experience}","I believe a small effort can make a big difference. {offer}"],
+   "l3":["I am willing to provide food and donate books. {offer}","I have been active in charity events for years. {experience}","I will work hard to make our group successful. {reason}","I hope you will give me a chance to help."]
+  },
+  "connectors":["since","for","because","most of all","also"],
+  "minWords":40
+ }
+}

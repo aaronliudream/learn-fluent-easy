@@ -30,8 +30,8 @@
 | 3 | Growing Up | How do we deal with our emotions? | 连词 although/until/so that | 朋友间矛盾对话 | 少年与队友的烦恼 | 写感谢信 | 分享并解决烦恼 | 情绪褒贬形容词;反义词;How+adj/adv |
 | 4 | The Wonders of Nature | How do we connect with nature? | 比较级/最高级复习;大数字 | 地理知识竞赛;深海研究员问答 | 珠峰上的中国成就 | 写自然奇观广告 | 自然奇观海报 | (重建时提取) |
 | 5 | Nature's Temper | How do natural disasters affect our lives? | 过去进行时 | 自然灾害经历对话;台风街访 + 天气预报 | 女孩海啸救人的故事 | 写恶劣天气的故事 | 接龙故事 | 自然灾害搭配;复合词 |
-| 6 | A Good Read | Why should we read great books? | 连词 so…that / unless / as soon as | 书籍类型对话;读书报告 | 《秘密花园》梗概 | 写读书报告 | 阅读日志 | 前缀 un-/in-/im-;形容词 -ing/-ed |
-| 7 | Crossing Cultures | How do we communicate with people from different cultures? | 现在完成时(already/yet/never/ever/just) | 各国问候对话;印度习俗对话 | 法式派对礼仪邮件 | 写中国习俗建议邮件 | 对比两国习俗 | 形容词后缀;一词多词性 |
+| 6 | Crossing Cultures | How do we communicate with people from different cultures? | 连词 so…that / unless / as soon as | 各国问候对话;印度习俗对话 | 法式派对礼仪邮件 | 写中国习俗建议邮件 | 对比两国习俗 | 形容词后缀;一词多词性 |
+| 7 | A Good Read | Why should we read great books? | 现在完成时(already/yet/never/ever/just) | 书籍类型对话;读书报告 | 《秘密花园》梗概 | 写读书报告 | 阅读日志 | 前缀 un-/in-/im-;形容词 -ing/-ed |
 | 8 | Making a Difference | Why should we help others? | 现在完成时(since/for) | 志愿者访谈;志愿活动对话 | 蓝天救援志愿者演讲 | 写申请邮件 | 组建志愿小组 | 志愿服务相关词与短语 |
 
 ## 与 app 现状的差异(重建要点)

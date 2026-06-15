@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"adventure","cn":"冒险；冒险经历","chunks":[{"en":"an exciting adventure","cn":"一次刺激的冒险"},{"en":"go on an adventure","cn":"去冒险"},{"en":"an adventure story","cn":"一个冒险故事"}]},
+  {"en":"fantasy","cn":"幻想作品；幻想","chunks":[{"en":"a fantasy novel","cn":"一部幻想小说"},{"en":"full of fantasy","cn":"充满幻想"},{"en":"live in a fantasy","cn":"活在幻想中"}]},
+  {"en":"mystery","cn":"悬疑小说；神秘的事物","chunks":[{"en":"a mystery story","cn":"一个悬疑故事"},{"en":"solve the mystery","cn":"解开谜团"},{"en":"a deep mystery","cn":"一个深奥的谜"}]},
+  {"en":"fiction","cn":"小说","chunks":[{"en":"science fiction","cn":"科幻小说"},{"en":"read fiction","cn":"读小说"},{"en":"a work of fiction","cn":"一部小说作品"}]},
+  {"en":"detective","cn":"侦探","chunks":[{"en":"a famous detective","cn":"一位著名侦探"},{"en":"a detective story","cn":"一个侦探故事"},{"en":"the clever detective","cn":"那位聪明的侦探"}]},
+  {"en":"recommend","cn":"推荐；建议","chunks":[{"en":"recommend a book","cn":"推荐一本书"},{"en":"strongly recommend","cn":"强烈推荐"},{"en":"recommend it to you","cn":"把它推荐给你"}]},
+  {"en":"recently","cn":"最近；不久前","chunks":[{"en":"until recently","cn":"直到最近"},{"en":"read it recently","cn":"最近读了它"},{"en":"recently published","cn":"最近出版的"}]},
+  {"en":"consider","cn":"认为；仔细考虑","chunks":[{"en":"consider it carefully","cn":"仔细考虑它"},{"en":"consider as the best","cn":"视为最好的"},{"en":"consider reading it","cn":"考虑读它"}]},
+  {"en":"inspire","cn":"激励；鼓舞","chunks":[{"en":"inspire readers","cn":"激励读者"},{"en":"inspire me to write","cn":"激励我写作"},{"en":"a story that inspires","cn":"一个鼓舞人心的故事"}]},
+  {"en":"summary","cn":"总结；概要","chunks":[{"en":"write a summary","cn":"写一篇概要"},{"en":"a short summary","cn":"一个简短的总结"},{"en":"in summary","cn":"总之"}]},
+  {"en":"effect","cn":"影响；结果","chunks":[{"en":"a great effect","cn":"巨大的影响"},{"en":"have an effect on","cn":"对……有影响"},{"en":"the effect of reading","cn":"阅读的影响"}]},
+  {"en":"introduction","cn":"介绍；序言","chunks":[{"en":"a short introduction","cn":"一段简短的介绍"},{"en":"read the introduction","cn":"读序言"},{"en":"an introduction to the book","cn":"对这本书的介绍"}]}
+ ],
+ "reading":{
+  "passage":"Have you ever read a really good book? I have just finished Journey to the West, and it has already become my favourite story. I have never read such an exciting adventure before. The characters are brave, and the writer has created a magic world full of fantasy. My teacher recommended it to me last month, and I have read it three times since then! Many famous writers have inspired readers for hundreds of years. Have you found a book that you love yet? If you haven't started reading for fun, please try today. A good book can change the way you think, and it has a deep effect on your life.",
+  "passageCn":"你读过一本真正的好书吗？我刚刚读完《西游记》，它已经成了我最喜欢的故事。我以前从没读过这么精彩的冒险故事。书中的人物很勇敢，作者创造了一个充满幻想的奇妙世界。上个月我的老师把它推荐给我，从那以后我已经读了三遍！许多著名作家几百年来一直激励着读者。你已经找到一本你喜欢的书了吗？如果你还没有开始为了乐趣而阅读，请今天就试试吧。一本好书能改变你的思维方式，它对你的人生有着深远的影响。",
+  "questions":[
+   {"q":"What book has the writer just finished?","opts":["A mystery novel","Journey to the West","A detective story","A science fiction book"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"How many times has the writer read the book?","opts":["Once","Twice","Three times","Four times"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"What can we infer about the writer's attitude to reading?","opts":["Reading is boring","Reading wastes time","Reading is valuable and can change people","Reading is only for school"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"I ___ already ___ that mystery novel, so you can borrow it.","opts":["have / finished","has / finished","am / finishing","did / finish"],"answer":0,"point":"现在完成时 already","dim":"grammar"},
+  {"q":"Have you read this fantasy book ___? — No, not ___.","opts":["already / already","yet / yet","ever / never","just / just"],"answer":1,"point":"现在完成时 yet","dim":"grammar"},
+  {"q":"She has ___ read such an exciting adventure story before; it is all new to her.","opts":["ever","already","never","yet"],"answer":2,"point":"现在完成时 never","dim":"grammar"},
+  {"q":"Have you ___ met a real detective in your life?","opts":["yet","ever","already","just"],"answer":1,"point":"现在完成时 ever","dim":"grammar"},
+  {"q":"The teacher has ___ recommended a new book to us; we will read it now.","opts":["yet","never","just","ever"],"answer":2,"point":"现在完成时 just","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I have just finished reading a detective story.","opts":["The speaker has only recently completed a detective story.","The speaker will read a detective story tomorrow.","The speaker hates detective stories.","The speaker is writing a detective story."],"answer":0},
+  {"audio":"Have you read the new fantasy novel yet?","opts":["The speaker is asking if you have already read the fantasy novel.","The speaker has finished the fantasy novel.","The speaker dislikes fantasy novels.","The speaker is writing a fantasy novel."],"answer":0},
+  {"audio":"My friend has never read a mystery book before.","opts":["The friend reads mystery books every day.","The friend has not read a mystery book at any time before.","The friend wrote a mystery book.","The friend dislikes the speaker."],"answer":1},
+  {"audio":"Our teacher has already recommended three books to us.","opts":["The teacher will recommend books next week.","The teacher refuses to recommend books.","The teacher has suggested three books to the class.","The teacher is reading three books now."],"answer":2},
+  {"audio":"This adventure story has inspired me to write my own.","opts":["The story bored the speaker completely.","The speaker has never read the story.","The story made the speaker want to write a story too.","The speaker forgot the story."],"answer":2},
+  {"audio":"Have you ever met a famous writer?","opts":["The writer is very famous now.","The speaker met a writer yesterday.","The speaker is a famous writer.","The speaker is asking about your past experience of meeting a writer."],"answer":3}
+ ],
+ "quizQuestions":[
+  {"q":"「adventure」的意思是？","opts":["幻想作品","冒险；冒险经历","侦探","序言"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「recommend」的意思是？","opts":["推荐；建议","总结","怀疑","惩罚"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"I have ___ read this book; I know the ending already.","opts":["yet","never","already","ever"],"answer":2,"point":"现在完成时 already","dim":"grammar"},
+  {"q":"「mystery」的意思是？","opts":["小说","悬疑小说；神秘的事物","读者","王国"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"Have you finished the summary ___?","opts":["yet","just","already","never"],"answer":0,"point":"现在完成时 yet","dim":"grammar"},
+  {"q":"「inspire」的意思是？","opts":["破坏","惩罚","激励；鼓舞","怀疑"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"This is the best fiction I have ___ read.","opts":["yet","ever","already","just"],"answer":1,"point":"现在完成时 ever","dim":"grammar"},
+  {"q":"「effect」的意思是？","opts":["影响；结果","介绍","侦探","幻想"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"Recommend a Good Book to a Friend",
+  "prompt":"Write an email to a friend recommending a book you have read. Use the present perfect tense (have/has done) with already, yet, never, ever and just to share your experience.",
+  "promptCn":"给朋友写一封电子邮件，推荐一本你读过的书。运用现在完成时（have/has done）以及 already、yet、never、ever、just 来分享你的阅读体验。",
+  "opener":"Dear Lily, I have just finished a wonderful book, and I really want to recommend it to you.",
+  "sampleWords":["adventure","fantasy","mystery","recommend","inspire","recently","summary","effect"],
+  "cards":[
+   {"key":"book","labelCn":"书名与类型","hint":"如 I have just read an adventure / fantasy book called ..."},
+   {"key":"feeling","labelCn":"你的感受","hint":"如 I have never read such an exciting story."},
+   {"key":"advice","labelCn":"给朋友的建议","hint":"如 Have you read it yet? You should try it."}
+  ],
+  "templates":{
+   "l1":["I have just finished a great {book}.","It is an adventure full of fantasy.","I have never enjoyed a book so much. {feeling}","Have you read it yet? {advice}"],
+   "l2":["I have recently read a book and want to share my {feeling}.","The story has already inspired me a lot.","I have never met such brave characters before.","It has had a deep effect on me. {advice}"],
+   "l3":["My {advice} is simple: please read this amazing {book} soon.","The writer has created a world of mystery and fantasy.","I have read it three times, and I still love it. {feeling}","Have you ever found a book that changed your mind?"]
+  },
+  "connectors":["already","yet","never","ever","just","because","so"],
+  "minWords":40
+ }
+}

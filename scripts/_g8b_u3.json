@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"emotion","cn":"情绪；情感","chunks":[{"en":"control your emotion","cn":"控制你的情绪"},{"en":"a strong emotion","cn":"强烈的情感"},{"en":"show your emotion","cn":"表露你的情感"}]},
+  {"en":"upset","cn":"难过的；沮丧的","chunks":[{"en":"feel upset","cn":"感到难过"},{"en":"get upset easily","cn":"容易沮丧"},{"en":"be upset about it","cn":"为此而难过"}]},
+  {"en":"lonely","cn":"孤独的；寂寞的","chunks":[{"en":"feel lonely","cn":"感到孤独"},{"en":"a lonely boy","cn":"一个孤独的男孩"},{"en":"lonely at school","cn":"在学校很孤独"}]},
+  {"en":"advise","cn":"建议；劝告","chunks":[{"en":"advise you to rest","cn":"建议你休息"},{"en":"advise against it","cn":"劝告不要那样做"},{"en":"advise a friend","cn":"给朋友提建议"}]},
+  {"en":"control","cn":"控制","chunks":[{"en":"control your anger","cn":"控制你的怒火"},{"en":"lose control","cn":"失去控制"},{"en":"in control","cn":"掌控之中"}]},
+  {"en":"anger","cn":"怒火","chunks":[{"en":"feel anger","cn":"感到愤怒"},{"en":"hide your anger","cn":"隐藏你的怒火"},{"en":"full of anger","cn":"充满怒火"}]},
+  {"en":"forgive","cn":"原谅；宽恕","chunks":[{"en":"forgive a friend","cn":"原谅朋友"},{"en":"forgive me","cn":"原谅我"},{"en":"hard to forgive","cn":"难以原谅"}]},
+  {"en":"pressure","cn":"压力","chunks":[{"en":"under pressure","cn":"在压力之下"},{"en":"too much pressure","cn":"太大压力"},{"en":"deal with pressure","cn":"应对压力"}]},
+  {"en":"proud","cn":"骄傲的；自豪的","chunks":[{"en":"be proud of you","cn":"为你感到骄傲"},{"en":"feel proud","cn":"感到自豪"},{"en":"a proud moment","cn":"自豪的时刻"}]},
+  {"en":"joyful","cn":"高兴的；令人愉快的","chunks":[{"en":"a joyful day","cn":"愉快的一天"},{"en":"feel joyful","cn":"感到高兴"},{"en":"joyful news","cn":"令人愉快的消息"}]},
+  {"en":"thankful","cn":"感谢的；感激的","chunks":[{"en":"be thankful for help","cn":"为帮助而感激"},{"en":"feel thankful","cn":"心怀感激"},{"en":"thankful to you","cn":"感激你"}]},
+  {"en":"relaxed","cn":"放松的；镇定的","chunks":[{"en":"feel relaxed","cn":"感到放松"},{"en":"stay relaxed","cn":"保持镇定"},{"en":"a relaxed mood","cn":"放松的心情"}]}
+ ],
+ "reading":{
+  "passage":"Last month I felt very upset because I had a big fight with my best friend, Lily. Although we had been close for years, I said some hurtful words to her on purpose, and she stopped talking to me. For days I felt lonely and full of anger. I did not say sorry until my mother advised me to put myself in Lily's shoes. So that I could clear the air, I wrote her a long letter to apologize. I told her how thankful I was for our friendship. Although I was nervous, I gave it to her the next morning. She read it and smiled. Now we are close again, and I feel relaxed and joyful. I learned that we must control our anger so that we do not hurt the people we love.",
+  "passageCn":"上个月我很难过，因为我和我最好的朋友莉莉大吵了一架。虽然我们多年来一直很亲密，但我故意对她说了一些伤人的话，她便不再和我说话了。有好几天我感到孤独，满心怒火。直到妈妈劝我设身处地为莉莉着想，我才道歉。为了尽释前嫌，我给她写了一封长信道歉。我告诉她我多么感激我们的友谊。虽然我很紧张，但第二天早上我还是把信给了她。她读完后笑了。现在我们又亲密如初，我感到放松又快乐。我明白了，我们必须控制怒火，以免伤害我们所爱的人。",
+  "questions":[
+   {"q":"Why did Lily stop talking to the writer?","opts":["The writer moved to a new city","The writer said hurtful words to her on purpose","The writer forgot her birthday","The writer copied her homework"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What finally made the writer decide to apologize?","opts":["Lily wrote to the writer first","The teacher punished the writer","The mother advised the writer to put herself in Lily's shoes","The writer won an award"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"What lesson did the writer learn from this experience?","opts":["We should control our anger so that we do not hurt people we love","We should never make new friends","Friends are not important","Writing letters is a waste of time"],"answer":0,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"___ I was very tired, I kept practising for the match.","opts":["Although","Until","So that","Because"],"answer":0,"point":"although 表让步","dim":"grammar"},
+  {"q":"I did not feel better ___ my friend forgave me.","opts":["although","until","so that","unless"],"answer":1,"point":"until 表直到","dim":"grammar"},
+  {"q":"She spoke slowly and clearly ___ everyone could understand her.","opts":["although","until","so that","but"],"answer":2,"point":"so that 表目的","dim":"grammar"},
+  {"q":"___ he felt upset, he did not show his emotion to others.","opts":["So that","Until","Although","If"],"answer":2,"point":"although 表让步","dim":"grammar"},
+  {"q":"Please wait here ___ I come back.","opts":["so that","although","until","because"],"answer":2,"point":"until 表直到","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"Although I felt lonely at my new school, I tried hard to make new friends.","opts":["She made friends even though she felt lonely.","She refused to talk to anyone at school.","She decided to leave her new school.","She has many friends and never feels lonely."],"answer":0},
+  {"audio":"I did not calm down until I took a few deep breaths.","opts":["She calmed down only after taking deep breaths.","She never managed to calm down.","She calmed down before the problem started.","She took deep breaths but stayed angry."],"answer":0},
+  {"audio":"My mother advised me to write a letter so that I could clear the air with my friend.","opts":["Her mother told her to start a fight.","She wrote a letter to make up with her friend.","She refused to listen to her mother.","She wrote a letter to her teacher about homework."],"answer":1},
+  {"audio":"Although the team lost the game, the coach was still proud of us.","opts":["The coach was angry that the team lost.","The coach was proud even though the team lost.","The team won the game easily.","The coach left the team after the game."],"answer":1},
+  {"audio":"I kept the secret until I could no longer control my emotions.","opts":["She told the secret right away.","She never had any secret to keep.","She kept the secret until her emotions became too strong.","She forgot the secret completely."],"answer":2},
+  {"audio":"He spoke to me kindly so that I would not feel so upset.","opts":["He shouted at me to make me angry.","He ignored me when I was sad.","He laughed at my problem.","He was kind to me to help me feel less upset."],"answer":3}
+ ],
+ "quizQuestions":[
+  {"q":"「upset」的意思是？","opts":["难过的；沮丧的","骄傲的","放松的","孤独的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「forgive」的意思是？","opts":["控制","建议","原谅；宽恕","进入"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「pressure」的意思是？","opts":["怒火","压力","情绪","奖品"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「thankful」的意思是？","opts":["孤独的","刻薄的","正常的","感谢的；感激的"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"___ it rained hard, we still finished the game.","opts":["Although","Until","So that","Before"],"answer":0,"point":"although 用法","dim":"grammar"},
+  {"q":"He turned off his phone ___ he could study quietly.","opts":["until","although","so that","but"],"answer":2,"point":"so that 用法","dim":"grammar"},
+  {"q":"「control」的意思是？","opts":["重复","控制","道歉","表现"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"I won't give up ___ I reach my goal.","opts":["so that","although","because","until"],"answer":3,"point":"until 用法","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"How I Dealt With a Bad Feeling",
+  "prompt":"Write a short passage about a time you felt upset, lonely or under pressure. Explain what happened and how you dealt with the feeling. Use although, until and so that at least once each.",
+  "promptCn":"写一篇短文，讲述你曾经感到难过、孤独或有压力的一次经历。说明发生了什么，以及你是如何应对这种情绪的。请至少各用一次 although、until 和 so that。",
+  "opener":"Last week, I felt really upset because",
+  "sampleWords":["upset","lonely","anger","control","forgive","pressure","thankful","relaxed"],
+  "cards":[
+   {"key":"feeling","labelCn":"我的感受","hint":"如 I felt upset and lonely because..."},
+   {"key":"action","labelCn":"我做了什么","hint":"如 I talked to my mother so that I could feel better"},
+   {"key":"result","labelCn":"结果如何","hint":"如 Although it was hard, I felt relaxed in the end"}
+  ],
+  "templates":{
+   "l1":["Last week, I felt very upset because I had a problem with my friend.","Although I wanted to talk to her, I was too shy.","I felt lonely until my mother gave me good advice.","I learned to control my anger so that I would not say hurtful words."],
+   "l2":["At first I was full of anger and could not calm down.","Although the pressure was great, I tried to look on the bright side.","I did not feel better until I took a few deep breaths.","I wrote my friend a letter so that we could clear the air."],
+   "l3":["Although I was nervous, I decided to forgive my friend.","I waited until she was ready to talk to me again.","I spoke to her kindly so that she would understand my feelings.","Now I feel relaxed and thankful, and we are close friends again."]
+  },
+  "connectors":["although","until","so that","because","and"],
+  "minWords":40
+ }
+}

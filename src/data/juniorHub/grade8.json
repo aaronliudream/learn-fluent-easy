@@ -11,99 +11,20 @@
             "num": 1,
             "unitKey": "U1",
             "book": "8A",
-            "title": "Where did you go on vacation?",
-            "cn": "你去哪里度假了",
+            "title": "Happy Holiday",
+            "cn": "快乐假期",
             "emoji": "🏖️",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "activity",
-                "cn": "活动",
-                "emoji": "📘"
-              },
-              {
-                "en": "anyone",
-                "cn": "任何人",
-                "emoji": "📘"
-              },
-              {
-                "en": "anywhere",
-                "cn": "在任何地方",
-                "emoji": "📘"
-              },
-              {
-                "en": "as",
-                "cn": "像",
-                "emoji": "📘"
-              },
-              {
-                "en": "below",
-                "cn": "在",
-                "emoji": "📘"
-              },
-              {
-                "en": "bicycle",
-                "cn": "自行车",
-                "emoji": "📘"
-              },
-              {
-                "en": "bird",
-                "cn": "鸟",
-                "emoji": "📘"
-              },
-              {
-                "en": "bored",
-                "cn": "厌倦的",
-                "emoji": "📘"
-              },
-              {
-                "en": "building",
-                "cn": "建筑物",
-                "emoji": "📘"
-              },
-              {
-                "en": "decide",
-                "cn": "决定",
-                "emoji": "📘"
-              },
-              {
-                "en": "diary",
-                "cn": "日记",
-                "emoji": "📘"
-              },
-              {
-                "en": "dislike",
-                "cn": "不喜爱",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know activity?",
-                    "cn": "你知道活动吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and anyone too.",
-                    "cn": "知道，还有任何人。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about Where did you go on vacation?.",
-                    "cn": "太好了！我们来聊聊Where did you go on vacation?。"
-                  }
-                ]
-              }
-            ],
+            "available": false,
+            "bigQuestion": "What makes a great holiday?",
+            "pronunciation": "/iː/ /ɪ/ /i/ /e/ /æ/;节奏 rhythm",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -127,7 +48,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "一般过去时",
+                "subtitle": "不定代词与一般过去时",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -165,371 +86,51 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "一般过去时",
-            "grammarCode": "g8.01",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：一般过去时。下列哪项与「activity」词义最接近？",
-                "opts": [
-                  "自行车",
-                  "厌倦的",
-                  "在",
-                  "活动"
-                ],
-                "answer": 3,
-                "point": "一般过去时",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「任何人」",
-                "opts": [
-                  "as",
-                  "bicycle",
-                  "diary",
-                  "anyone"
-                ],
-                "answer": 3,
-                "point": "一般过去时",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "不定代词与一般过去时",
+            "grammarCode": "g8a-u1-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "And how were the people? Were they friendly? Lisa: Yeah, they were really friendly. My parents have some friends there, and we had dinner at their house.",
-              "passageCn": "本单元阅读材料（Where did you go on vacation?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "A different topic",
-                    "Where did you go on vacation?",
-                    "Only listening",
-                    "Only grammar"
-                  ],
-                  "answer": 1,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Where did you go on vacation?",
-                    "Math class",
-                    "Cooking",
-                    "Sports only"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「activity」 mean in Chinese?",
-                  "opts": [
-                    "厌倦的",
-                    "在任何地方",
-                    "建筑物",
-                    "活动"
-                  ],
-                  "answer": 3,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"Where did you go on vacation?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「Where did you go on vacation?」，使用本单元词汇。",
-              "sampleWords": [
-                "activity",
-                "anyone",
-                "anywhere",
-                "as",
-                "below",
-                "bicycle"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「activity」的意思是？",
-                "opts": [
-                  "在任何地方",
-                  "像",
-                  "在",
-                  "活动"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「anyone」的意思是？",
-                "opts": [
-                  "建筑物",
-                  "任何人",
-                  "在",
-                  "日记"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「anywhere」的意思是？",
-                "opts": [
-                  "在任何地方",
-                  "厌倦的",
-                  "自行车",
-                  "活动"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「as」的意思是？",
-                "opts": [
-                  "建筑物",
-                  "任何人",
-                  "像",
-                  "自行车"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「below」的意思是？",
-                "opts": [
-                  "活动",
-                  "在",
-                  "不喜爱",
-                  "自行车"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bicycle」的意思是？",
-                "opts": [
-                  "自行车",
-                  "像",
-                  "日记",
-                  "在"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bird」的意思是？",
-                "opts": [
-                  "鸟",
-                  "自行车",
-                  "厌倦的",
-                  "日记"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bored」的意思是？",
-                "opts": [
-                  "厌倦的",
-                  "鸟",
-                  "建筑物",
-                  "在"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「活动」？",
-                "opts": [
-                  "bicycle",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你去哪里度假了」的核心词是？",
-                "opts": [
-                  "building",
-                  "apple",
-                  "activity",
-                  "diary"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "Where did you go, Xiang Hua?",
-                "opts": [
-                  "Where did you go, Xiang Hua?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "What did you do on vacation, Sally?",
-                "opts": [
-                  "What did you do on vacation, Sally?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Where did you go on vacation, Grace?",
-                "opts": [
-                  "Where did you go on vacation, Grace?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Where did you go on vacation, Kevin?",
-                "opts": [
-                  "Where did you go on vacation, Kevin?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How was the food?",
-                "opts": [
-                  "How was the food?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How were the stores?",
-                "opts": [
-                  "How were the stores?",
-                  "activity",
-                  "anyone",
-                  "anywhere"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u2",
             "num": 2,
             "unitKey": "U2",
             "book": "8A",
-            "title": "How often do you exercise?",
-            "cn": "你多久锻炼一次",
-            "emoji": "🏃",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "almost",
-                "cn": "几乎",
-                "emoji": "📘"
-              },
-              {
-                "en": "although",
-                "cn": "虽然",
-                "emoji": "📘"
-              },
-              {
-                "en": "American Teenager",
-                "cn": "美国青少年",
-                "emoji": "📘"
-              },
-              {
-                "en": "body",
-                "cn": "身体",
-                "emoji": "📘"
-              },
-              {
-                "en": "Claire",
-                "cn": "克莱尔",
-                "emoji": "📘"
-              },
-              {
-                "en": "coﬀee",
-                "cn": "咖啡",
-                "emoji": "📘"
-              },
-              {
-                "en": "dentist",
-                "cn": "牙科医生",
-                "emoji": "📘"
-              },
-              {
-                "en": "die",
-                "cn": "消失",
-                "emoji": "📘"
-              },
-              {
-                "en": "ever",
-                "cn": "在任何时候",
-                "emoji": "📘"
-              },
-              {
-                "en": "full",
-                "cn": "忙的",
-                "emoji": "📘"
-              },
-              {
-                "en": "hardly",
-                "cn": "几乎不",
-                "emoji": "📘"
-              },
-              {
-                "en": "health",
-                "cn": "健康",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know almost?",
-                    "cn": "你知道几乎吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and although too.",
-                    "cn": "知道，还有虽然。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about How often do you exercise?.",
-                    "cn": "太好了！我们来聊聊How often do you exercise?。"
-                  }
-                ]
-              }
-            ],
+            "title": "Home Sweet Home",
+            "cn": "温馨的家",
+            "emoji": "🏠",
+            "available": false,
+            "bigQuestion": "What does home mean to you?",
+            "pronunciation": "/ɔː/ /ɒ/ /uː/ /ʊ/ /ɑː/ /ʌ/;意群停顿",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -553,7 +154,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "频度副词与 How often",
+                "subtitle": "Can/Could 礼貌请求与许可",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -591,321 +192,51 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "频度副词与 How often",
-            "grammarCode": "g8.07",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：频度副词与 How often。下列哪项与「almost」词义最接近？",
-                "opts": [
-                  "牙科医生",
-                  "几乎",
-                  "咖啡",
-                  "消失"
-                ],
-                "answer": 1,
-                "point": "频度副词与 How often",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「虽然」",
-                "opts": [
-                  "coﬀee",
-                  "body",
-                  "American Teenager",
-                  "although"
-                ],
-                "answer": 3,
-                "point": "频度副词与 How often",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "Can/Could 礼貌请求与许可",
+            "grammarCode": "g8a-u2-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "I don’t want to go to bed, although it’s past midnight. (= It’s past midnight, but I",
-              "passageCn": "本单元阅读材料（How often do you exercise?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "Only grammar",
-                    "How often do you exercise?",
-                    "A different topic",
-                    "Only listening"
-                  ],
-                  "answer": 1,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "How often do you exercise?",
-                    "Math class",
-                    "Cooking",
-                    "Sports only"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「almost」 mean in Chinese?",
-                  "opts": [
-                    "克莱尔",
-                    "几乎",
-                    "美国青少年",
-                    "虽然"
-                  ],
-                  "answer": 1,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"How often do you exercise?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「How often do you exercise?」，使用本单元词汇。",
-              "sampleWords": [
-                "almost",
-                "although",
-                "American Teenager",
-                "body",
-                "Claire",
-                "coﬀee"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「almost」的意思是？",
-                "opts": [
-                  "克莱尔",
-                  "牙科医生",
-                  "几乎",
-                  "消失"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「although」的意思是？",
-                "opts": [
-                  "咖啡",
-                  "健康",
-                  "虽然",
-                  "牙科医生"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「American Teenager」的意思是？",
-                "opts": [
-                  "几乎不",
-                  "身体",
-                  "美国青少年",
-                  "在任何时候"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「body」的意思是？",
-                "opts": [
-                  "身体",
-                  "虽然",
-                  "克莱尔",
-                  "牙科医生"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Claire」的意思是？",
-                "opts": [
-                  "克莱尔",
-                  "几乎不",
-                  "忙的",
-                  "几乎"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「coﬀee」的意思是？",
-                "opts": [
-                  "克莱尔",
-                  "美国青少年",
-                  "咖啡",
-                  "牙科医生"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「dentist」的意思是？",
-                "opts": [
-                  "克莱尔",
-                  "牙科医生",
-                  "咖啡",
-                  "健康"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「die」的意思是？",
-                "opts": [
-                  "虽然",
-                  "消失",
-                  "克莱尔",
-                  "咖啡"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「几乎」？",
-                "opts": [
-                  "Claire",
-                  "ever",
-                  "dentist",
-                  "almost"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你多久锻炼一次」的核心词是？",
-                "opts": [
-                  "almost",
-                  "although",
-                  "full",
-                  "health"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "How often do you exercise?",
-                "opts": [
-                  "How often do you exercise?",
-                  "almost",
-                  "although",
-                  "This is American Teenager."
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u3",
             "num": 3,
             "unitKey": "U3",
             "book": "8A",
-            "title": "I'm more outgoing than my sister.",
-            "cn": "我比我姐姐外向",
-            "emoji": "😊",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "arm",
-                "cn": "手臂",
-                "emoji": "📘"
-              },
-              {
-                "en": "beter",
-                "cn": "较好的",
-                "emoji": "📘"
-              },
-              {
-                "en": "both",
-                "cn": "两个",
-                "emoji": "📘"
-              },
-              {
-                "en": "break",
-                "cn": "破",
-                "emoji": "📘"
-              },
-              {
-                "en": "care",
-                "cn": "在意",
-                "emoji": "📘"
-              },
-              {
-                "en": "clearly",
-                "cn": "清楚地",
-                "emoji": "📘"
-              },
-              {
-                "en": "competition",
-                "cn": "",
-                "emoji": "📘"
-              },
-              {
-                "en": "fact",
-                "cn": "现实",
-                "emoji": "📘"
-              },
-              {
-                "en": "fantastic",
-                "cn": "极好的",
-                "emoji": "📘"
-              },
-              {
-                "en": "grade",
-                "cn": "成绩等级",
-                "emoji": "📘"
-              },
-              {
-                "en": "hand",
-                "cn": "手",
-                "emoji": "📘"
-              },
-              {
-                "en": "hard-working",
-                "cn": "工作努力的",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know arm?",
-                    "cn": "你知道手臂吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and beter too.",
-                    "cn": "知道，还有较好的。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about I'm more outgoing than my sister..",
-                    "cn": "太好了！我们来聊聊I'm more outgoing than my sister.。"
-                  }
-                ]
-              }
-            ],
+            "title": "Same or Different?",
+            "cn": "相同还是不同",
+            "emoji": "🆚",
+            "available": false,
+            "bigQuestion": "How do we compare with each other?",
+            "pronunciation": "/ɜː/ /ə/;语调",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -968,390 +299,50 @@
               }
             ],
             "grammarTitle": "形容词比较级",
-            "grammarCode": "g8.04",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：形容词比较级。下列哪项与「arm」词义最接近？",
-                "opts": [
-                  "",
-                  "工作努力的",
-                  "手",
-                  "手臂"
-                ],
-                "answer": 3,
-                "point": "形容词比较级",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「较好的」",
-                "opts": [
-                  "beter",
-                  "care",
-                  "clearly",
-                  "grade"
-                ],
-                "answer": 0,
-                "point": "形容词比较级",
-                "dim": "grammar"
-              }
-            ],
+            "grammarCode": "g8a-u3-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "In a basketball or soccer game, it’s important for the players to play together and",
-              "passageCn": "本单元阅读材料（I'm more outgoing than my sister.）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "I'm more outgoing than my sister.",
-                    "Only grammar",
-                    "A different topic",
-                    "Only listening"
-                  ],
-                  "answer": 0,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "I'm more outgoing than my sister.",
-                    "Math class",
-                    "Cooking",
-                    "Sports only"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「arm」 mean in Chinese?",
-                  "opts": [
-                    "较好的",
-                    "手臂",
-                    "",
-                    "两个"
-                  ],
-                  "answer": 1,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"I'm more outgoing than my sister.\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「I'm more outgoing than my sister.」，使用本单元词汇。",
-              "sampleWords": [
-                "arm",
-                "beter",
-                "both",
-                "break",
-                "care",
-                "clearly"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「arm」的意思是？",
-                "opts": [
-                  "清楚地",
-                  "极好的",
-                  "手",
-                  "手臂"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「beter」的意思是？",
-                "opts": [
-                  "极好的",
-                  "在意",
-                  "手臂",
-                  "较好的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「both」的意思是？",
-                "opts": [
-                  "两个",
-                  "在意",
-                  "工作努力的",
-                  "极好的"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「break」的意思是？",
-                "opts": [
-                  "手臂",
-                  "较好的",
-                  "破",
-                  ""
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「care」的意思是？",
-                "opts": [
-                  "清楚地",
-                  "工作努力的",
-                  "在意",
-                  "手臂"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「clearly」的意思是？",
-                "opts": [
-                  "手",
-                  "成绩等级",
-                  "清楚地",
-                  "手臂"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「competition」的意思是？",
-                "opts": [
-                  "工作努力的",
-                  "手臂",
-                  "",
-                  "清楚地"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「fact」的意思是？",
-                "opts": [
-                  "现实",
-                  "清楚地",
-                  "两个",
-                  "手"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「手臂」？",
-                "opts": [
-                  "hand",
-                  "arm",
-                  "fact",
-                  "beter"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我比我姐姐外向」的核心词是？",
-                "opts": [
-                  "teacher",
-                  "apple",
-                  "beter",
-                  "arm"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "arm",
-                "opts": [
-                  "arm",
-                  "beter",
-                  "both",
-                  "break"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "beter",
-                "opts": [
-                  "beter",
-                  "arm",
-                  "both",
-                  "break"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "both",
-                "opts": [
-                  "both",
-                  "arm",
-                  "beter",
-                  "break"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "break",
-                "opts": [
-                  "break",
-                  "arm",
-                  "beter",
-                  "both"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "care",
-                "opts": [
-                  "care",
-                  "arm",
-                  "beter",
-                  "both"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "clearly",
-                "opts": [
-                  "clearly",
-                  "arm",
-                  "beter",
-                  "both"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "competition",
-                "opts": [
-                  "competition",
-                  "arm",
-                  "beter",
-                  "both"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "fact",
-                "opts": [
-                  "fact",
-                  "arm",
-                  "beter",
-                  "both"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u4",
             "num": 4,
             "unitKey": "U4",
             "book": "8A",
-            "title": "What's the best movie theater?",
-            "cn": "哪家电影院最好",
-            "emoji": "🎬",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "act",
-                "cn": "扮演",
-                "emoji": "📘"
-              },
-              {
-                "en": "American Idol",
-                "cn": "美国偶像",
-                "emoji": "📘"
-              },
-              {
-                "en": "beautifully",
-                "cn": "美好地",
-                "emoji": "📘"
-              },
-              {
-                "en": "carefully",
-                "cn": "细致地",
-                "emoji": "📘"
-              },
-              {
-                "en": "cheaply",
-                "cn": "便宜地",
-                "emoji": "📘"
-              },
-              {
-                "en": "choose",
-                "cn": "选择",
-                "emoji": "📘"
-              },
-              {
-                "en": "close",
-                "cn": "（在空间、时间上）；接近",
-                "emoji": "📘"
-              },
-              {
-                "en": "comfortable",
-                "cn": "使人舒服的",
-                "emoji": "📘"
-              },
-              {
-                "en": "comfortably",
-                "cn": "舒服地",
-                "emoji": "📘"
-              },
-              {
-                "en": "creative",
-                "cn": "有创造力的",
-                "emoji": "📘"
-              },
-              {
-                "en": "crowded",
-                "cn": "人多的",
-                "emoji": "📘"
-              },
-              {
-                "en": "Danny",
-                "cn": "丹尼",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know act?",
-                    "cn": "你知道扮演吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and American Idol too.",
-                    "cn": "知道，还有美国偶像。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about What's the best movie theater?.",
-                    "cn": "太好了！我们来聊聊What's the best movie theater?。"
-                  }
-                ]
-              }
-            ],
+            "title": "Amazing Plants and Animals",
+            "cn": "神奇的动植物",
+            "emoji": "🌱",
+            "available": false,
+            "bigQuestion": "What makes plants and animals amazing?",
+            "pronunciation": "双元音 + 辅音连缀;句子重音",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -1414,390 +405,50 @@
               }
             ],
             "grammarTitle": "形容词最高级",
-            "grammarCode": "g8.09",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：形容词最高级。下列哪项与「act」词义最接近？",
-                "opts": [
-                  "（在空间、时间上）；接近",
-                  "丹尼",
-                  "扮演",
-                  "选择"
-                ],
-                "answer": 2,
-                "point": "形容词最高级",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「美国偶像」",
-                "opts": [
-                  "creative",
-                  "American Idol",
-                  "choose",
-                  "close"
-                ],
-                "answer": 1,
-                "point": "形容词最高级",
-                "dim": "grammar"
-              }
-            ],
+            "grammarCode": "g8a-u4-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "Girl 1: Wasn’t that a great talent show? Girl 2: Yeah! Girl 1: Who did you think was the best act? Girl 2: Oh, I thought Eliza was the best. She’s an excellent piano player. Girl 1: Yeah, she’s great. And I thought Steve and his dog were the funniest. Girl 2: Me, too! I couldn’t stop laughing! And how about Vera? Wasn’t she creative? Girl 1: Yeah, I’d say she was the most creative act! I don’t know many people who can play the guitar upside down! Girl 2: Who did you think was the worst? Girl 1: Oh, Dennis! He was terrible! He kept dropping the balls! Girl 2: I know! Girl 1: What did you think of The Math Teachers? Girl 2: Well, they were the loudest for sure!",
-              "passageCn": "本单元阅读材料（What's the best movie theater?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "A different topic",
-                    "Only grammar",
-                    "What's the best movie theater?",
-                    "Only listening"
-                  ],
-                  "answer": 2,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "What's the best movie theater?",
-                    "Math class",
-                    "Sports only",
-                    "Cooking"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「act」 mean in Chinese?",
-                  "opts": [
-                    "美国偶像",
-                    "丹尼",
-                    "扮演",
-                    "有创造力的"
-                  ],
-                  "answer": 2,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"What's the best movie theater?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「What's the best movie theater?」，使用本单元词汇。",
-              "sampleWords": [
-                "act",
-                "American Idol",
-                "beautifully",
-                "carefully",
-                "cheaply",
-                "choose"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「act」的意思是？",
-                "opts": [
-                  "丹尼",
-                  "美国偶像",
-                  "扮演",
-                  "有创造力的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「American Idol」的意思是？",
-                "opts": [
-                  "扮演",
-                  "（在空间、时间上）；接近",
-                  "丹尼",
-                  "美国偶像"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「beautifully」的意思是？",
-                "opts": [
-                  "美好地",
-                  "扮演",
-                  "美国偶像",
-                  "选择"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「carefully」的意思是？",
-                "opts": [
-                  "舒服地",
-                  "便宜地",
-                  "细致地",
-                  "选择"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cheaply」的意思是？",
-                "opts": [
-                  "使人舒服的",
-                  "美好地",
-                  "有创造力的",
-                  "便宜地"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「choose」的意思是？",
-                "opts": [
-                  "有创造力的",
-                  "选择",
-                  "扮演",
-                  "人多的"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「close」的意思是？",
-                "opts": [
-                  "便宜地",
-                  "（在空间、时间上）；接近",
-                  "美国偶像",
-                  "人多的"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「comfortable」的意思是？",
-                "opts": [
-                  "细致地",
-                  "美国偶像",
-                  "使人舒服的",
-                  "扮演"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「扮演」？",
-                "opts": [
-                  "act",
-                  "crowded",
-                  "creative",
-                  "cheaply"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「哪家电影院最好」的核心词是？",
-                "opts": [
-                  "act",
-                  "close",
-                  "crowded",
-                  "teacher"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "act",
-                "opts": [
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully",
-                  "carefully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Listen: American Idol.",
-                "opts": [
-                  "Listen: American Idol.",
-                  "act",
-                  "beautifully",
-                  "carefully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "beautifully",
-                "opts": [
-                  "beautifully",
-                  "act",
-                  "Listen: American Idol.",
-                  "carefully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "carefully",
-                "opts": [
-                  "carefully",
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "cheaply",
-                "opts": [
-                  "cheaply",
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "choose",
-                "opts": [
-                  "choose",
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "close",
-                "opts": [
-                  "close",
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "comfortable",
-                "opts": [
-                  "comfortable",
-                  "act",
-                  "Listen: American Idol.",
-                  "beautifully"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u5",
             "num": 5,
             "unitKey": "U5",
             "book": "8A",
-            "title": "Do you want to watch a game show?",
-            "cn": "你想看游戏节目吗",
-            "emoji": "📺",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "action",
-                "cn": "行动",
-                "emoji": "📘"
-              },
-              {
-                "en": "appear",
-                "cn": "出现",
-                "emoji": "📘"
-              },
-              {
-                "en": "army",
-                "cn": "陆军",
-                "emoji": "📘"
-              },
-              {
-                "en": "become",
-                "cn": "（",
-                "emoji": "📘"
-              },
-              {
-                "en": "cartoon",
-                "cn": "动画片",
-                "emoji": "📘"
-              },
-              {
-                "en": "character",
-                "cn": "人物",
-                "emoji": "📘"
-              },
-              {
-                "en": "comedy",
-                "cn": "喜剧",
-                "emoji": "📘"
-              },
-              {
-                "en": "common",
-                "cn": "普通的",
-                "emoji": "📘"
-              },
-              {
-                "en": "culture",
-                "cn": "文化",
-                "emoji": "📘"
-              },
-              {
-                "en": "discussion",
-                "cn": "讨论",
-                "emoji": "📘"
-              },
-              {
-                "en": "educational",
-                "cn": "教育的",
-                "emoji": "📘"
-              },
-              {
-                "en": "expect",
-                "cn": "预料",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know action?",
-                    "cn": "你知道行动吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and appear too.",
-                    "cn": "知道，还有出现。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about Do you want to watch a game show?.",
-                    "cn": "太好了！我们来聊聊Do you want to watch a game show?。"
-                  }
-                ]
-              }
-            ],
+            "title": "What a Delicious Meal!",
+            "cn": "多么美味的一餐",
+            "emoji": "🍽️",
+            "available": false,
+            "bigQuestion": "Why do we learn to cook?",
+            "pronunciation": "/əʊ/ /aʊ/ /ɪə/ /eə/ /ʊə/ + 连缀;语调停顿",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -1821,7 +472,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "动名词与邀请",
+                "subtitle": "感叹句与可数/不可数名词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -1859,321 +510,51 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "动名词与邀请",
-            "grammarCode": "g8.12",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：动名词与邀请。下列哪项与「action」词义最接近？",
-                "opts": [
-                  "喜剧",
-                  "讨论",
-                  "行动",
-                  "动画片"
-                ],
-                "answer": 2,
-                "point": "动名词与邀请",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「出现」",
-                "opts": [
-                  "appear",
-                  "expect",
-                  "educational",
-                  "cartoon"
-                ],
-                "answer": 0,
-                "point": "动名词与邀请",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "感叹句与可数/不可数名词",
+            "grammarCode": "g8a-u5-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "John: What do you want to do today, Mary? Mary: I want to watch a movie. Are there any good movies showing right now? John: Hmm, let me look in the newspaper ... How about something exciting, like an action movie or a scary movie? Mary: Oh no, I think those movies are so meaningless. John: Well, most of the movies on right now are action movies or scary movies. Mary: Oh, maybe we should stay at home and watch TV then. I want to watch something relaxing, like a game show or a sitcom. John: Hmm. I don’t really like those kinds of TV shows. I think they’re boring. I like to watch talk shows. They’re more enjoyable. Mary: OK, I like talk shows, too. I think they’re wonderful. I like to find out what different people think about a subject. John: OK, great. There’s a talk show at 4:00 p.m. Let’s watch that one.",
-              "passageCn": "本单元阅读材料（Do you want to watch a game show?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "Only listening",
-                    "Do you want to watch a game show?",
-                    "Only grammar",
-                    "A different topic"
-                  ],
-                  "answer": 1,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Do you want to watch a game show?",
-                    "Cooking",
-                    "Math class",
-                    "Sports only"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「action」 mean in Chinese?",
-                  "opts": [
-                    "行动",
-                    "（",
-                    "教育的",
-                    "人物"
-                  ],
-                  "answer": 0,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"Do you want to watch a game show?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「Do you want to watch a game show?」，使用本单元词汇。",
-              "sampleWords": [
-                "action",
-                "appear",
-                "army",
-                "become",
-                "cartoon",
-                "character"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「action」的意思是？",
-                "opts": [
-                  "行动",
-                  "人物",
-                  "教育的",
-                  "（"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「appear」的意思是？",
-                "opts": [
-                  "陆军",
-                  "动画片",
-                  "出现",
-                  "文化"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「army」的意思是？",
-                "opts": [
-                  "讨论",
-                  "普通的",
-                  "人物",
-                  "陆军"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「become」的意思是？",
-                "opts": [
-                  "普通的",
-                  "（",
-                  "动画片",
-                  "喜剧"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cartoon」的意思是？",
-                "opts": [
-                  "预料",
-                  "动画片",
-                  "人物",
-                  "教育的"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「character」的意思是？",
-                "opts": [
-                  "讨论",
-                  "出现",
-                  "人物",
-                  "教育的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「comedy」的意思是？",
-                "opts": [
-                  "喜剧",
-                  "普通的",
-                  "（",
-                  "行动"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「common」的意思是？",
-                "opts": [
-                  "陆军",
-                  "出现",
-                  "预料",
-                  "普通的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「行动」？",
-                "opts": [
-                  "action",
-                  "become",
-                  "common",
-                  "appear"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你想看游戏节目吗」的核心词是？",
-                "opts": [
-                  "character",
-                  "become",
-                  "action",
-                  "cartoon"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "Do you want to join me?",
-                "opts": [
-                  "Do you want to join me?",
-                  "action",
-                  "appear",
-                  "army"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u6",
             "num": 6,
             "unitKey": "U6",
             "book": "8A",
-            "title": "I'm going to study computer science.",
-            "cn": "我打算学计算机",
-            "emoji": "💻",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "able",
-                "cn": "能够",
-                "emoji": "📘"
-              },
-              {
-                "en": "Andy",
-                "cn": "安迪",
-                "emoji": "📘"
-              },
-              {
-                "en": "article",
-                "cn": "文章",
-                "emoji": "📘"
-              },
-              {
-                "en": "beginning",
-                "cn": "开头",
-                "emoji": "📘"
-              },
-              {
-                "en": "college",
-                "cn": "学院",
-                "emoji": "📘"
-              },
-              {
-                "en": "cook",
-                "cn": "厨师",
-                "emoji": "📘"
-              },
-              {
-                "en": "discuss",
-                "cn": "讨论",
-                "emoji": "📘"
-              },
-              {
-                "en": "doctor",
-                "cn": "医生",
-                "emoji": "📘"
-              },
-              {
-                "en": "driver",
-                "cn": "驾驶员",
-                "emoji": "📘"
-              },
-              {
-                "en": "education",
-                "cn": "教育",
-                "emoji": "📘"
-              },
-              {
-                "en": "engineer",
-                "cn": "工程师",
-                "emoji": "📘"
-              },
-              {
-                "en": "foreign",
-                "cn": "外国的",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know able?",
-                    "cn": "你知道能够吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and Andy too.",
-                    "cn": "知道，还有安迪。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about I'm going to study computer science..",
-                    "cn": "太好了！我们来聊聊I'm going to study computer science.。"
-                  }
-                ]
-              }
-            ],
+            "title": "When Tomorrow Comes",
+            "cn": "当明天来临",
+            "emoji": "🔮",
+            "available": false,
+            "bigQuestion": "What will the future look like?",
+            "pronunciation": "/h/ /w/ /θ/ /ð/ /k/ /kw/ /ʃ/ /ʒ/;弱读",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -2197,7 +578,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "be going to 表计划",
+                "subtitle": "be going to 与不定式作宾语",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -2235,341 +616,51 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "be going to 表计划",
-            "grammarCode": "g8.03",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：be going to 表计划。下列哪项与「able」词义最接近？",
-                "opts": [
-                  "开头",
-                  "驾驶员",
-                  "能够",
-                  "医生"
-                ],
-                "answer": 2,
-                "point": "be going to 表计划",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「安迪」",
-                "opts": [
-                  "driver",
-                  "article",
-                  "Andy",
-                  "college"
-                ],
-                "answer": 2,
-                "point": "be going to 表计划",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "be going to 与不定式作宾语",
+            "grammarCode": "g8a-u6-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "Kim: Did you make a New Year’s resolution this year, Lucy? Lucy: Yes, Kim, I did. Kim: What are you going to do? Lucy: I’m going to learn to play the piano. Kim: Cool. How are you going to do that? Lucy: I’m going to take piano lessons. How about you? Kim: Well, my New Year’s resolution is to get good grades. Lucy: How are you going to do that? Kim: I’m going to study hard and of course do my homework every day. Lucy: That sounds good! How about you, Mike? Did you make a resolution? Mike: I sure did. I’m going to make the soccer team. Lucy: How are you going to do that? Mike: I’m going to practice really hard, and this summer, I’m going to go to a soccer camp. I can play soccer every day there.",
-              "passageCn": "本单元阅读材料（I'm going to study computer science.）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "A different topic",
-                    "Only grammar",
-                    "I'm going to study computer science.",
-                    "Only listening"
-                  ],
-                  "answer": 2,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "I'm going to study computer science.",
-                    "Cooking",
-                    "Math class",
-                    "Sports only"
-                  ],
-                  "answer": 0,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「able」 mean in Chinese?",
-                  "opts": [
-                    "厨师",
-                    "教育",
-                    "学院",
-                    "能够"
-                  ],
-                  "answer": 3,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"I'm going to study computer science.\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「I'm going to study computer science.」，使用本单元词汇。",
-              "sampleWords": [
-                "able",
-                "Andy",
-                "article",
-                "beginning",
-                "college",
-                "cook"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「able」的意思是？",
-                "opts": [
-                  "安迪",
-                  "外国的",
-                  "能够",
-                  "文章"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Andy」的意思是？",
-                "opts": [
-                  "讨论",
-                  "外国的",
-                  "学院",
-                  "安迪"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「article」的意思是？",
-                "opts": [
-                  "讨论",
-                  "文章",
-                  "安迪",
-                  "厨师"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「beginning」的意思是？",
-                "opts": [
-                  "文章",
-                  "开头",
-                  "讨论",
-                  "能够"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「college」的意思是？",
-                "opts": [
-                  "学院",
-                  "医生",
-                  "教育",
-                  "文章"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cook」的意思是？",
-                "opts": [
-                  "文章",
-                  "厨师",
-                  "工程师",
-                  "学院"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「discuss」的意思是？",
-                "opts": [
-                  "讨论",
-                  "医生",
-                  "驾驶员",
-                  "安迪"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「doctor」的意思是？",
-                "opts": [
-                  "教育",
-                  "驾驶员",
-                  "医生",
-                  "安迪"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「能够」？",
-                "opts": [
-                  "discuss",
-                  "Andy",
-                  "able",
-                  "driver"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我打算学计算机」的核心词是？",
-                "opts": [
-                  "driver",
-                  "able",
-                  "teacher",
-                  "Andy"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "How are you going to do that?",
-                "opts": [
-                  "How are you going to do that?",
-                  "able",
-                  "Andy",
-                  "article"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Are you going to move to Beijing?",
-                "opts": [
-                  "Are you going to move to Beijing?",
-                  "able",
-                  "Andy",
-                  "article"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "When are you going to start?",
-                "opts": [
-                  "When are you going to start?",
-                  "able",
-                  "Andy",
-                  "article"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u7",
             "num": 7,
             "unitKey": "U7",
             "book": "8A",
-            "title": "Will people have robots?",
-            "cn": "人们会有机器人吗",
-            "emoji": "🤖",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "agree",
-                "cn": "同意",
-                "emoji": "📘"
-              },
-              {
-                "en": "already",
-                "cn": "已经",
-                "emoji": "📘"
-              },
-              {
-                "en": "apartment",
-                "cn": "公寓套房",
-                "emoji": "📘"
-              },
-              {
-                "en": "astronaut",
-                "cn": "宇航员",
-                "emoji": "📘"
-              },
-              {
-                "en": "believe",
-                "cn": "相信",
-                "emoji": "📘"
-              },
-              {
-                "en": "build",
-                "cn": "建筑",
-                "emoji": "📘"
-              },
-              {
-                "en": "dangerous",
-                "cn": "有危险的",
-                "emoji": "📘"
-              },
-              {
-                "en": "disagree",
-                "cn": "不同意",
-                "emoji": "📘"
-              },
-              {
-                "en": "during",
-                "cn": "在",
-                "emoji": "📘"
-              },
-              {
-                "en": "earth",
-                "cn": "地球",
-                "emoji": "📘"
-              },
-              {
-                "en": "environment",
-                "cn": "环境",
-                "emoji": "📘"
-              },
-              {
-                "en": "even",
-                "cn": "甚至",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know agree?",
-                    "cn": "你知道同意吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and already too.",
-                    "cn": "知道，还有已经。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about Will people have robots?.",
-                    "cn": "太好了！我们来聊聊Will people have robots?。"
-                  }
-                ]
-              }
-            ],
+            "title": "Plan for Yourself",
+            "cn": "为自己制订计划",
+            "emoji": "📅",
+            "available": false,
+            "bigQuestion": "Why do we need plans?",
+            "pronunciation": "/n/ /ŋ/ /tʃ/ /dʒ/ /f/ /r/;语调",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -2593,7 +684,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "will 表将来",
+                "subtitle": "一般将来时 will",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -2631,321 +722,51 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "will 表将来",
-            "grammarCode": "g8.03",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：will 表将来。下列哪项与「agree」词义最接近？",
-                "opts": [
-                  "有危险的",
-                  "同意",
-                  "相信",
-                  "不同意"
-                ],
-                "answer": 1,
-                "point": "will 表将来",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「已经」",
-                "opts": [
-                  "dangerous",
-                  "build",
-                  "believe",
-                  "already"
-                ],
-                "answer": 3,
-                "point": "will 表将来",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "一般将来时 will",
+            "grammarCode": "g8a-u7-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "Boy 1: Do you think people will have robots in their homes in 100 years? Boy 2: Yes, I do. I saw a robot on TV, and it cleaned the kitchen. Boy 1: Well, I don’t think people will use money. Boy 2: Do you think everything will be free? Boy 1: Yeah, probably. Boy 2: I think there will be only one country. Boy 1: Only one country in the world? Will there be world peace? Boy 2: I hope so. Boy 1: I think kids won’t go to school. They’ll study at home on computers. Boy 2: Oh, I disagree. Boy 1: You do? Boy 2: Yeah, there will always be schools.",
-              "passageCn": "本单元阅读材料（Will people have robots?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "Will people have robots?",
-                    "Only grammar",
-                    "A different topic",
-                    "Only listening"
-                  ],
-                  "answer": 0,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Sports only",
-                    "Cooking",
-                    "Math class",
-                    "Will people have robots?"
-                  ],
-                  "answer": 3,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「agree」 mean in Chinese?",
-                  "opts": [
-                    "环境",
-                    "同意",
-                    "有危险的",
-                    "公寓套房"
-                  ],
-                  "answer": 1,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"Will people have robots?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「Will people have robots?」，使用本单元词汇。",
-              "sampleWords": [
-                "agree",
-                "already",
-                "apartment",
-                "astronaut",
-                "believe",
-                "build"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「agree」的意思是？",
-                "opts": [
-                  "不同意",
-                  "同意",
-                  "相信",
-                  "有危险的"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「already」的意思是？",
-                "opts": [
-                  "建筑",
-                  "相信",
-                  "已经",
-                  "甚至"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「apartment」的意思是？",
-                "opts": [
-                  "在",
-                  "建筑",
-                  "公寓套房",
-                  "环境"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「astronaut」的意思是？",
-                "opts": [
-                  "同意",
-                  "宇航员",
-                  "公寓套房",
-                  "相信"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「believe」的意思是？",
-                "opts": [
-                  "宇航员",
-                  "相信",
-                  "已经",
-                  "地球"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「build」的意思是？",
-                "opts": [
-                  "同意",
-                  "在",
-                  "建筑",
-                  "地球"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「dangerous」的意思是？",
-                "opts": [
-                  "在",
-                  "公寓套房",
-                  "有危险的",
-                  "不同意"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「disagree」的意思是？",
-                "opts": [
-                  "地球",
-                  "同意",
-                  "环境",
-                  "不同意"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「同意」？",
-                "opts": [
-                  "during",
-                  "agree",
-                  "even",
-                  "astronaut"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「人们会有机器人吗」的核心词是？",
-                "opts": [
-                  "believe",
-                  "agree",
-                  "apartment",
-                  "astronaut"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "How did you get to school?",
-                "opts": [
-                  "How did you get to school?",
-                  "agree",
-                  "already",
-                  "apartment"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           },
           {
             "id": "g8v1_u8",
             "num": 8,
             "unitKey": "U8",
             "book": "8A",
-            "title": "How do you make a banana milk shake?",
-            "cn": "怎么做香蕉奶昔",
-            "emoji": "🥤",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "add",
-                "cn": "增加",
-                "emoji": "📘"
-              },
-              {
-                "en": "autumn",
-                "cn": "秋天",
-                "emoji": "📘"
-              },
-              {
-                "en": "blender",
-                "cn": "食物搅拌器",
-                "emoji": "📘"
-              },
-              {
-                "en": "buter",
-                "cn": "黄油",
-                "emoji": "📘"
-              },
-              {
-                "en": "celebrate",
-                "cn": "庆祝",
-                "emoji": "📘"
-              },
-              {
-                "en": "cheese",
-                "cn": "干酪",
-                "emoji": "📘"
-              },
-              {
-                "en": "corn",
-                "cn": "玉米",
-                "emoji": "📘"
-              },
-              {
-                "en": "cover",
-                "cn": "遮盖",
-                "emoji": "📘"
-              },
-              {
-                "en": "dig",
-                "cn": "掘",
-                "emoji": "📘"
-              },
-              {
-                "en": "fill",
-                "cn": "充满",
-                "emoji": "📘"
-              },
-              {
-                "en": "finally",
-                "cn": "最后",
-                "emoji": "📘"
-              },
-              {
-                "en": "gravy",
-                "cn": "肉汁",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know add?",
-                    "cn": "你知道增加吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and autumn too.",
-                    "cn": "知道，还有秋天。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about How do you make a banana milk shake?.",
-                    "cn": "太好了！我们来聊聊How do you make a banana milk shake?。"
-                  }
-                ]
-              }
-            ],
+            "title": "Let's Communicate!",
+            "cn": "让我们沟通",
+            "emoji": "💬",
+            "available": false,
+            "bigQuestion": "What makes good communication?",
+            "pronunciation": "辅音连缀收尾;发音复习",
+            "contentStatus": "TODO_待真题填充",
+            "vocabulary": [],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "教材核心词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -2969,7 +790,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "祈使句与可数/不可数",
+                "subtitle": "零条件句与第一条件句",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -3007,1072 +828,31 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "祈使句与可数/不可数",
-            "grammarCode": null,
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：祈使句与可数/不可数。下列哪项与「add」词义最接近？",
-                "opts": [
-                  "庆祝",
-                  "增加",
-                  "秋天",
-                  "掘"
-                ],
-                "answer": 1,
-                "point": "祈使句与可数/不可数",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「秋天」",
-                "opts": [
-                  "cover",
-                  "fill",
-                  "cheese",
-                  "autumn"
-                ],
-                "answer": 3,
-                "point": "祈使句与可数/不可数",
-                "dim": "grammar"
-              }
-            ],
+            "grammarTitle": "零条件句与第一条件句",
+            "grammarCode": "g8a-u8-TODO",
+            "grammarQuiz": [],
             "reading": {
-              "passage": "Girl 2: OK. Do you have bananas? Girl 1: Yes, I do. How many bananas do we need? Girl 2: We need three bananas. Girl 1: That sounds about right. What else? Girl 2: Watermelon. Girl 1: How many watermelons? Girl 2: Oh, only one small watermelon. And we need some honey. Girl 1: How much honey do we need? Girl 2: Let’s see. Two spoons. Girl 1: Right. What else? Girl 2: Apples. Girl 1: How many apples do we need? Girl 2: Two should be enough. And yogurt. Girl 1: How much yogurt do we need? Girl 2: A cup. Now what else do we need? Oh, do you have any oranges? Girl 1: I think so. How many oranges do we need? Girl 2: Only one. This is going to taste great!",
-              "passageCn": "本单元阅读材料（How do you make a banana milk shake?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "How do you make a banana milk shake?",
-                    "Only grammar",
-                    "Only listening",
-                    "A different topic"
-                  ],
-                  "answer": 0,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Sports only",
-                    "Cooking",
-                    "Math class",
-                    "How do you make a banana milk shake?"
-                  ],
-                  "answer": 3,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「add」 mean in Chinese?",
-                  "opts": [
-                    "增加",
-                    "最后",
-                    "黄油",
-                    "干酪"
-                  ],
-                  "answer": 0,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
+              "passage": "",
+              "passageCn": "",
+              "questions": []
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"How do you make a banana milk shake?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「How do you make a banana milk shake?」，使用本单元词汇。",
-              "sampleWords": [
-                "add",
-                "autumn",
-                "blender",
-                "buter",
-                "celebrate",
-                "cheese"
-              ]
+              "topic": "",
+              "prompt": "",
+              "promptCn": "",
+              "opener": "",
+              "sampleWords": [],
+              "cards": [],
+              "templates": {
+                "l1": [],
+                "l2": [],
+                "l3": []
+              },
+              "connectors": [],
+              "minWords": 0
             },
-            "quizQuestions": [
-              {
-                "q": "「add」的意思是？",
-                "opts": [
-                  "掘",
-                  "肉汁",
-                  "增加",
-                  "最后"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「autumn」的意思是？",
-                "opts": [
-                  "秋天",
-                  "黄油",
-                  "食物搅拌器",
-                  "玉米"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「blender」的意思是？",
-                "opts": [
-                  "玉米",
-                  "充满",
-                  "食物搅拌器",
-                  "肉汁"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「buter」的意思是？",
-                "opts": [
-                  "黄油",
-                  "秋天",
-                  "庆祝",
-                  "遮盖"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「celebrate」的意思是？",
-                "opts": [
-                  "庆祝",
-                  "增加",
-                  "秋天",
-                  "遮盖"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cheese」的意思是？",
-                "opts": [
-                  "干酪",
-                  "玉米",
-                  "充满",
-                  "庆祝"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「corn」的意思是？",
-                "opts": [
-                  "玉米",
-                  "肉汁",
-                  "食物搅拌器",
-                  "秋天"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cover」的意思是？",
-                "opts": [
-                  "遮盖",
-                  "秋天",
-                  "增加",
-                  "掘"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「增加」？",
-                "opts": [
-                  "cover",
-                  "cheese",
-                  "add",
-                  "buter"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「怎么做香蕉奶昔」的核心词是？",
-                "opts": [
-                  "blender",
-                  "teacher",
-                  "school",
-                  "add"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "How do you make a cheese sandwich?",
-                "opts": [
-                  "How do you make a cheese sandwich?",
-                  "add",
-                  "autumn",
-                  "blender"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How much butter?",
-                "opts": [
-                  "How much butter?",
-                  "add",
-                  "autumn",
-                  "blender"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How many tomatoes?",
-                "opts": [
-                  "How many tomatoes?",
-                  "add",
-                  "autumn",
-                  "blender"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How much cheese?",
-                "opts": [
-                  "How much cheese?",
-                  "add",
-                  "autumn",
-                  "blender"
-                ],
-                "answer": 0
-              }
-            ]
-          },
-          {
-            "id": "g8v1_u9",
-            "num": 9,
-            "unitKey": "U9",
-            "book": "8A",
-            "title": "Can you come to my party?",
-            "cn": "你能来我的派对吗",
-            "emoji": "🎉",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "accept",
-                "cn": "接受",
-                "emoji": "📘"
-              },
-              {
-                "en": "available",
-                "cn": "有空的",
-                "emoji": "📘"
-              },
-              {
-                "en": "calendar",
-                "cn": "日历",
-                "emoji": "📘"
-              },
-              {
-                "en": "catch",
-                "cn": "及时赶上",
-                "emoji": "📘"
-              },
-              {
-                "en": "concert",
-                "cn": "音乐会",
-                "emoji": "📘"
-              },
-              {
-                "en": "daytime",
-                "cn": "白天",
-                "emoji": "📘"
-              },
-              {
-                "en": "delete",
-                "cn": "删除",
-                "emoji": "📘"
-              },
-              {
-                "en": "event",
-                "cn": "大事",
-                "emoji": "📘"
-              },
-              {
-                "en": "exam",
-                "cn": "考试",
-                "emoji": "📘"
-              },
-              {
-                "en": "flu",
-                "cn": "流行性感冒",
-                "emoji": "📘"
-              },
-              {
-                "en": "forward",
-                "cn": "转寄",
-                "emoji": "📘"
-              },
-              {
-                "en": "glad",
-                "cn": "高兴",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know accept?",
-                    "cn": "你知道接受吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and available too.",
-                    "cn": "知道，还有有空的。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about Can you come to my party?.",
-                    "cn": "太好了！我们来聊聊Can you come to my party?。"
-                  }
-                ]
-              }
-            ],
-            "stages": [
-              {
-                "id": "s1",
-                "title": "核心词汇",
-                "subtitle": "12个教材词汇",
-                "icon": "📚",
-                "type": "vocab",
-                "time": "8分钟"
-              },
-              {
-                "id": "s2",
-                "title": "听音辨词",
-                "subtitle": "听力辨词",
-                "icon": "🎧",
-                "type": "listenWord",
-                "time": "6分钟"
-              },
-              {
-                "id": "s3",
-                "title": "词义配对",
-                "subtitle": "巩固记忆",
-                "icon": "🎮",
-                "type": "match",
-                "time": "5分钟"
-              },
-              {
-                "id": "s4",
-                "title": "语法专项",
-                "subtitle": "邀请与建议",
-                "icon": "🧩",
-                "type": "grammar",
-                "time": "12分钟"
-              },
-              {
-                "id": "s5",
-                "title": "课文阅读",
-                "subtitle": "阅读理解",
-                "icon": "📖",
-                "type": "reading",
-                "time": "8分钟"
-              },
-              {
-                "id": "s6",
-                "title": "听力短文",
-                "subtitle": "听音答题",
-                "icon": "👂",
-                "type": "listening",
-                "time": "8分钟"
-              },
-              {
-                "id": "s7",
-                "title": "写作练习",
-                "subtitle": "本单元句型",
-                "icon": "✍️",
-                "type": "writing",
-                "time": "10分钟"
-              },
-              {
-                "id": "s8",
-                "title": "单元通关",
-                "subtitle": "综合检测",
-                "icon": "🏆",
-                "type": "finalQuiz",
-                "time": "12分钟"
-              }
-            ],
-            "grammarTitle": "邀请与建议",
-            "grammarCode": "g8.16",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：邀请与建议。下列哪项与「accept」词义最接近？",
-                "opts": [
-                  "转寄",
-                  "日历",
-                  "接受",
-                  "考试"
-                ],
-                "answer": 2,
-                "point": "邀请与建议",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「有空的」",
-                "opts": [
-                  "concert",
-                  "exam",
-                  "delete",
-                  "available"
-                ],
-                "answer": 3,
-                "point": "邀请与建议",
-                "dim": "grammar"
-              }
-            ],
-            "reading": {
-              "passage": "Andy: Hi, Vince? Vince: Yeah, hi, Andy! Andy: Vince, can you play tennis with me? Vince: Uh, when? Andy: Today. Vince: Uh, no, sorry, I can’t. I have to go to the doctor and study for a test today. Andy: How about tomorrow? Vince: Sorry, tomorrow I have to play soccer and I have a piano lesson. Andy: Oh. Well, what are you doing the day after tomorrow? Vince: I may have to look after my little sister. Andy: Oh, I see. Vince: I’m sorry, Andy. I’m really busy this week!",
-              "passageCn": "本单元阅读材料（Can you come to my party?）",
-              "questions": [
-                {
-                  "q": "According to the passage, this unit is mainly about:",
-                  "opts": [
-                    "Only listening",
-                    "A different topic",
-                    "Only grammar",
-                    "Can you come to my party?"
-                  ],
-                  "answer": 3,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Math class",
-                    "Can you come to my party?",
-                    "Cooking",
-                    "Sports only"
-                  ],
-                  "answer": 1,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「accept」 mean in Chinese?",
-                  "opts": [
-                    "白天",
-                    "删除",
-                    "接受",
-                    "高兴"
-                  ],
-                  "answer": 2,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
-            },
-            "writing": {
-              "prompt": "Write 4-6 sentences about \"Can you come to my party?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「Can you come to my party?」，使用本单元词汇。",
-              "sampleWords": [
-                "accept",
-                "available",
-                "calendar",
-                "catch",
-                "concert",
-                "daytime"
-              ]
-            },
-            "quizQuestions": [
-              {
-                "q": "「accept」的意思是？",
-                "opts": [
-                  "删除",
-                  "日历",
-                  "有空的",
-                  "接受"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「available」的意思是？",
-                "opts": [
-                  "日历",
-                  "高兴",
-                  "及时赶上",
-                  "有空的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「calendar」的意思是？",
-                "opts": [
-                  "日历",
-                  "大事",
-                  "音乐会",
-                  "删除"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「catch」的意思是？",
-                "opts": [
-                  "音乐会",
-                  "白天",
-                  "接受",
-                  "及时赶上"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「concert」的意思是？",
-                "opts": [
-                  "音乐会",
-                  "及时赶上",
-                  "接受",
-                  "大事"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「daytime」的意思是？",
-                "opts": [
-                  "有空的",
-                  "删除",
-                  "转寄",
-                  "白天"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「delete」的意思是？",
-                "opts": [
-                  "音乐会",
-                  "流行性感冒",
-                  "及时赶上",
-                  "删除"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「event」的意思是？",
-                "opts": [
-                  "日历",
-                  "大事",
-                  "接受",
-                  "删除"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「接受」？",
-                "opts": [
-                  "calendar",
-                  "accept",
-                  "catch",
-                  "daytime"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你能来我的派对吗」的核心词是？",
-                "opts": [
-                  "accept",
-                  "exam",
-                  "event",
-                  "teacher"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "Can you come to my party?",
-                "opts": [
-                  "Can you come to my party?",
-                  "accept",
-                  "available",
-                  "calendar"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "When is it?",
-                "opts": [
-                  "When is it?",
-                  "accept",
-                  "available",
-                  "calendar"
-                ],
-                "answer": 0
-              }
-            ]
-          },
-          {
-            "id": "g8v1_u10",
-            "num": 10,
-            "unitKey": "U10",
-            "book": "8A",
-            "title": "If you go to the party, you'll have a great time!",
-            "cn": "如果你去派对会玩得很开心",
-            "emoji": "🎊",
-            "available": true,
-            "vocabulary": [
-              {
-                "en": "advice",
-                "cn": "劝告",
-                "emoji": "📘"
-              },
-              {
-                "en": "advise",
-                "cn": "劝告",
-                "emoji": "📘"
-              },
-              {
-                "en": "agent",
-                "cn": "代理人",
-                "emoji": "📘"
-              },
-              {
-                "en": "angry",
-                "cn": "发怒的",
-                "emoji": "📘"
-              },
-              {
-                "en": "Ben",
-                "cn": "本",
-                "emoji": "📘"
-              },
-              {
-                "en": "careful",
-                "cn": "小心的",
-                "emoji": "📘"
-              },
-              {
-                "en": "careless",
-                "cn": "粗心的",
-                "emoji": "📘"
-              },
-              {
-                "en": "certainly",
-                "cn": "无疑",
-                "emoji": "📘"
-              },
-              {
-                "en": "chocolate",
-                "cn": "巧克力",
-                "emoji": "📘"
-              },
-              {
-                "en": "else",
-                "cn": "别的",
-                "emoji": "📘"
-              },
-              {
-                "en": "experience",
-                "cn": "",
-                "emoji": "📘"
-              },
-              {
-                "en": "expert",
-                "cn": "专家",
-                "emoji": "📘"
-              }
-            ],
-            "dialogues": [
-              {
-                "title": "Section A",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Do you know advice?",
-                    "cn": "你知道劝告吗？"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Yes, and advise too.",
-                    "cn": "知道，还有劝告。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "Great! Let's talk about If you go to the party, you'll have a great time!.",
-                    "cn": "太好了！我们来聊聊If you go to the party, you'll have a great time!。"
-                  }
-                ]
-              }
-            ],
-            "stages": [
-              {
-                "id": "s1",
-                "title": "核心词汇",
-                "subtitle": "12个教材词汇",
-                "icon": "📚",
-                "type": "vocab",
-                "time": "8分钟"
-              },
-              {
-                "id": "s2",
-                "title": "听音辨词",
-                "subtitle": "听力辨词",
-                "icon": "🎧",
-                "type": "listenWord",
-                "time": "6分钟"
-              },
-              {
-                "id": "s3",
-                "title": "词义配对",
-                "subtitle": "巩固记忆",
-                "icon": "🎮",
-                "type": "match",
-                "time": "5分钟"
-              },
-              {
-                "id": "s4",
-                "title": "语法专项",
-                "subtitle": "if 条件状语从句",
-                "icon": "🧩",
-                "type": "grammar",
-                "time": "12分钟"
-              },
-              {
-                "id": "s5",
-                "title": "课文阅读",
-                "subtitle": "阅读理解",
-                "icon": "📖",
-                "type": "reading",
-                "time": "8分钟"
-              },
-              {
-                "id": "s6",
-                "title": "听力短文",
-                "subtitle": "听音答题",
-                "icon": "👂",
-                "type": "listening",
-                "time": "8分钟"
-              },
-              {
-                "id": "s7",
-                "title": "写作练习",
-                "subtitle": "本单元句型",
-                "icon": "✍️",
-                "type": "writing",
-                "time": "10分钟"
-              },
-              {
-                "id": "s8",
-                "title": "单元通关",
-                "subtitle": "综合检测",
-                "icon": "🏆",
-                "type": "finalQuiz",
-                "time": "12分钟"
-              }
-            ],
-            "grammarTitle": "if 条件状语从句",
-            "grammarCode": "g8.17",
-            "grammarQuiz": [
-              {
-                "q": "本单元语法重点：if 条件状语从句。下列哪项与「advice」词义最接近？",
-                "opts": [
-                  "粗心的",
-                  "专家",
-                  "代理人",
-                  "劝告"
-                ],
-                "answer": 3,
-                "point": "if 条件状语从句",
-                "dim": "grammar"
-              },
-              {
-                "q": "选择正确的英文：「劝告」",
-                "opts": [
-                  "advise",
-                  "expert",
-                  "angry",
-                  "Ben"
-                ],
-                "answer": 0,
-                "point": "if 条件状语从句",
-                "dim": "grammar"
-              }
-            ],
-            "reading": {
-              "passage": "This unit is about If you go to the party, you'll have a great time!. In this lesson we learn words like advice, advise, agent, angry, Ben, careful. Students practice reading and using these words in sentences about 如果你去派对会玩得很开心.",
-              "passageCn": "本单元主题是「如果你去派对会玩得很开心」。我们学习 advice, advise, agent, angry, Ben, careful 等词汇，并在句子中运用。",
-              "questions": [
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Cooking",
-                    "Math class",
-                    "If you go to the party, you'll have a great time!",
-                    "Sports only"
-                  ],
-                  "answer": 2,
-                  "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「advice」 mean in Chinese?",
-                  "opts": [
-                    "发怒的",
-                    "劝告",
-                    "别的",
-                    "小心的"
-                  ],
-                  "answer": 1,
-                  "point": "词汇理解",
-                  "dim": "reading"
-                }
-              ]
-            },
-            "writing": {
-              "prompt": "Write 4-6 sentences about \"If you go to the party, you'll have a great time!\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「If you go to the party, you'll have a great time!」，使用本单元词汇。",
-              "sampleWords": [
-                "advice",
-                "advise",
-                "agent",
-                "angry",
-                "Ben",
-                "careful"
-              ]
-            },
-            "quizQuestions": [
-              {
-                "q": "「advice」的意思是？",
-                "opts": [
-                  "发怒的",
-                  "小心的",
-                  "巧克力",
-                  "劝告"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「advise」的意思是？",
-                "opts": [
-                  "代理人",
-                  "劝告",
-                  "发怒的",
-                  "本"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「agent」的意思是？",
-                "opts": [
-                  "巧克力",
-                  "劝告",
-                  "代理人",
-                  "小心的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「angry」的意思是？",
-                "opts": [
-                  "发怒的",
-                  "别的",
-                  "小心的",
-                  "无疑"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Ben」的意思是？",
-                "opts": [
-                  "劝告",
-                  "本",
-                  "别的",
-                  "专家"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「careful」的意思是？",
-                "opts": [
-                  "小心的",
-                  "劝告",
-                  "无疑",
-                  "代理人"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「careless」的意思是？",
-                "opts": [
-                  "劝告",
-                  "发怒的",
-                  "无疑",
-                  "粗心的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「certainly」的意思是？",
-                "opts": [
-                  "无疑",
-                  "发怒的",
-                  "粗心的",
-                  ""
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「劝告」？",
-                "opts": [
-                  "Ben",
-                  "experience",
-                  "expert",
-                  "advice"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「如果你去派对会玩得很开心」的核心词是？",
-                "opts": [
-                  "advice",
-                  "chocolate",
-                  "school",
-                  "certainly"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              }
-            ],
-            "listeningQuestions": [
-              {
-                "audio": "advice",
-                "opts": [
-                  "advice",
-                  "advise",
-                  "agent",
-                  "angry"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "advise",
-                "opts": [
-                  "advise",
-                  "advice",
-                  "agent",
-                  "angry"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "agent",
-                "opts": [
-                  "agent",
-                  "advice",
-                  "advise",
-                  "angry"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "angry",
-                "opts": [
-                  "angry",
-                  "advice",
-                  "advise",
-                  "agent"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Ben",
-                "opts": [
-                  "Ben",
-                  "advice",
-                  "advise",
-                  "agent"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "careful",
-                "opts": [
-                  "careful",
-                  "advice",
-                  "advise",
-                  "agent"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "careless",
-                "opts": [
-                  "careless",
-                  "advice",
-                  "advise",
-                  "agent"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "certainly",
-                "opts": [
-                  "certainly",
-                  "advice",
-                  "advise",
-                  "agent"
-                ],
-                "answer": 0
-              }
-            ]
+            "quizQuestions": [],
+            "listeningQuestions": []
           }
         ]
       },

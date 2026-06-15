@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"prediction","cn":"预测；预言","chunks":[{"en":"make a prediction","cn":"做出预测"},{"en":"a correct prediction","cn":"一个正确的预测"},{"en":"weather prediction","cn":"天气预测"}]},
+  {"en":"positive","cn":"乐观的；积极的","chunks":[{"en":"a positive attitude","cn":"积极的态度"},{"en":"stay positive","cn":"保持乐观"},{"en":"positive about life","cn":"对生活乐观"}]},
+  {"en":"develop","cn":"增强；发展","chunks":[{"en":"develop a skill","cn":"培养一项技能"},{"en":"develop good habits","cn":"养成好习惯"},{"en":"develop my talent","cn":"发展我的才能"}]},
+  {"en":"challenge","cn":"挑战","chunks":[{"en":"face a challenge","cn":"面对挑战"},{"en":"a big challenge","cn":"一个巨大的挑战"},{"en":"take on a challenge","cn":"接受挑战"}]},
+  {"en":"task","cn":"任务；工作","chunks":[{"en":"finish the task","cn":"完成任务"},{"en":"a difficult task","cn":"一项艰巨的任务"},{"en":"a daily task","cn":"日常任务"}]},
+  {"en":"quality","cn":"素质；品质","chunks":[{"en":"a good quality","cn":"一种好品质"},{"en":"improve the quality","cn":"提高质量"},{"en":"quality of life","cn":"生活质量"}]},
+  {"en":"valuable","cn":"宝贵的；很有用的","chunks":[{"en":"valuable advice","cn":"宝贵的建议"},{"en":"a valuable lesson","cn":"宝贵的一课"},{"en":"valuable time","cn":"宝贵的时间"}]},
+  {"en":"accept","cn":"接受","chunks":[{"en":"accept the truth","cn":"接受事实"},{"en":"accept help","cn":"接受帮助"},{"en":"accept a challenge","cn":"接受挑战"}]},
+  {"en":"creative","cn":"有创造力的","chunks":[{"en":"a creative idea","cn":"一个有创意的主意"},{"en":"be creative","cn":"有创造力"},{"en":"creative thinking","cn":"创造性思维"}]},
+  {"en":"depend","cn":"取决于；依靠","chunks":[{"en":"depend on yourself","cn":"依靠你自己"},{"en":"depend on hard work","cn":"取决于努力"},{"en":"it depends","cn":"那要看情况"}]},
+  {"en":"expert","cn":"专家；行家","chunks":[{"en":"become an expert","cn":"成为专家"},{"en":"a maths expert","cn":"数学专家"},{"en":"ask an expert","cn":"请教专家"}]},
+  {"en":"achieve","cn":"（经过努力）达到；完成","chunks":[{"en":"achieve a goal","cn":"达成目标"},{"en":"achieve your dream","cn":"实现你的梦想"},{"en":"achieve more","cn":"取得更多成就"}]}
+ ],
+ "reading":{
+  "passage":"A new school year is starting, and I have made a plan for myself. This year, I will work harder than before. My biggest goal is to develop a good study habit, so I will read for thirty minutes every evening. I know it will be a real challenge, but I will stay positive and never give up. I will also learn to play the guitar, because I want to be more creative. My parents say success depends on hard work, not luck. I believe this is valuable advice. I will not waste my time. If I keep my plan, I think I will become a better person by the end of the year.",
+  "passageCn":"新学年开始了，我为自己制订了一个计划。今年，我会比以前更努力。我最大的目标是养成良好的学习习惯，所以我每天晚上会读书三十分钟。我知道这会是一个真正的挑战，但我会保持乐观，绝不放弃。我还会学弹吉他，因为我想更有创造力。我父母说成功取决于努力，而不是运气。我认为这是宝贵的建议。我不会浪费时间。如果我坚持我的计划，我想到年底我会成为一个更好的人。",
+  "questions":[
+   {"q":"What is the writer's biggest goal this year?","opts":["To play computer games","To develop a good study habit","To travel around the world","To make more money"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why will the writer learn the guitar?","opts":["Because the teacher asks her to","Because she wants to be more creative","Because her friends play it","Because it is easy"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn from the passage?","opts":["The writer thinks success comes from luck","The writer will give up when it is hard","The writer believes hard work matters most","The writer has no plan for the year"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"I ___ work harder next term.","opts":["am","will","was","did"],"answer":1,"point":"will 表将来","dim":"grammar"},
+  {"q":"She ___ visit her grandparents this weekend.","opts":["will","wills","willing","is will"],"answer":0,"point":"will 后接动词原形","dim":"grammar"},
+  {"q":"We ___ give up our dream.","opts":["will","will not","are not","do not"],"answer":1,"point":"will 否定形式","dim":"grammar"},
+  {"q":"___ you help me with my plan tomorrow?","opts":["Do","Are","Will","Did"],"answer":2,"point":"will 一般疑问句","dim":"grammar"},
+  {"q":"They will ___ to the new school next year.","opts":["went","going","goes","go"],"answer":3,"point":"will 后接动词原形","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I will set a clear goal for myself this year.","opts":["He plans to set a goal for the year.","He has no goals at all.","He set a goal last year.","He will forget his goal."],"answer":0},
+  {"audio":"My plan is to read English every morning.","opts":["She reads English at night.","She plans to read English every morning.","She never reads English.","She reads Chinese in the morning."],"answer":1},
+  {"audio":"It will be a big challenge, but I will not give up.","opts":["She thinks it is easy.","She has already given up.","She will keep trying though it is hard.","She will give up soon."],"answer":2},
+  {"audio":"I will develop the habit of doing sports every day.","opts":["He hates doing sports.","He stopped doing sports.","He does sports once a year.","He will exercise every day."],"answer":3},
+  {"audio":"Success depends on hard work, not luck.","opts":["Hard work leads to success.","Luck is the only key.","Success needs no effort.","Working hard is useless."],"answer":0},
+  {"audio":"I will learn to play the guitar to be more creative.","opts":["She can already play very well.","She wants to be more creative.","She will sell her guitar.","She dislikes music."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「prediction」的意思是？","opts":["计划","预测；预言","任务","挑战"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「valuable」的意思是？","opts":["宝贵的","廉价的","危险的","简单的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「depend」的意思是？","opts":["浪费","取决于；依靠","结束","离开"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"Choose the correct future sentence:","opts":["I will worked hard.","I will to work hard.","I will work hard.","I willing work hard."],"answer":2,"point":"will 用法","dim":"grammar"},
+  {"q":"「challenge」的意思是？","opts":["运气","休息","机会","挑战"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"Tomorrow we ___ start a new plan.","opts":["will","are","do","were"],"answer":0,"point":"will 表将来","dim":"grammar"},
+  {"q":"「positive」的意思是？","opts":["消极的","乐观的；积极的","懒惰的","害怕的"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"Which word means 有创造力的?","opts":["lazy","quiet","creative","tired"],"answer":2,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Plans for This Year",
+  "prompt":"Write about your plans and resolutions for this year. Use 'will' to talk about what you are going to do. Include a goal, how you will reach it, and a challenge you may face.",
+  "promptCn":"写一写你今年的计划和决心。用 will 谈谈你将要做的事，包括一个目标、你将如何实现它，以及你可能面对的挑战。",
+  "opener":"A new year is starting, so I have made some plans for myself.",
+  "sampleWords":["prediction","goal","develop","challenge","positive","valuable","depend","creative"],
+  "cards":[
+   {"key":"goal","labelCn":"我的目标","hint":"如 My goal is to develop a good habit."},
+   {"key":"action","labelCn":"我将怎么做","hint":"如 I will read English every day."},
+   {"key":"challenge","labelCn":"困难与态度","hint":"如 It will be a challenge, but I will stay positive."}
+  ],
+  "templates":{
+   "l1":["My main {goal} is to do better at school.","I {action} study harder this year.","This {challenge} will not be easy for me.","But I will keep a positive attitude every day."],
+   "l2":["My biggest {goal} is to develop a useful skill.","To reach it, I {action} practise for an hour each day.","The {challenge} is that I sometimes feel lazy.","However, I will not give up, because success depends on hard work."],
+   "l3":["This year my {goal} is to become a more creative and confident person.","I {action} read books, learn the guitar and try new things.","The real {challenge} is keeping my plan when I am busy or tired.","Even so, I will stay positive, because I believe this valuable habit will change my future."]
+  },
+  "connectors":["first","then","because","but","so","finally"],
+  "minWords":40
+ }
+}

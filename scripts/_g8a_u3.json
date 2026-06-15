@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"compare","cn":"比较；对比","chunks":[{"en":"compare with him","cn":"与他比较"},{"en":"compare the two","cn":"比较这两者"},{"en":"hard to compare","cn":"难以比较"}]},
+  {"en":"shy","cn":"害羞的","chunks":[{"en":"a shy boy","cn":"一个害羞的男孩"},{"en":"too shy to talk","cn":"害羞得不敢说话"},{"en":"feel shy","cn":"感到害羞"}]},
+  {"en":"outgoing","cn":"外向的","chunks":[{"en":"an outgoing girl","cn":"一个外向的女孩"},{"en":"more outgoing","cn":"更外向"},{"en":"so outgoing","cn":"如此外向"}]},
+  {"en":"hard-working","cn":"勤奋的","chunks":[{"en":"a hard-working student","cn":"一个勤奋的学生"},{"en":"as hard-working as","cn":"和……一样勤奋"},{"en":"very hard-working","cn":"非常勤奋"}]},
+  {"en":"serious","cn":"严肃的；严重的","chunks":[{"en":"a serious face","cn":"严肃的表情"},{"en":"more serious","cn":"更严肃"},{"en":"look serious","cn":"看起来严肃"}]},
+  {"en":"appearance","cn":"外表；露面","chunks":[{"en":"a smart appearance","cn":"整洁的外表"},{"en":"similar in appearance","cn":"外表相似"},{"en":"care about appearance","cn":"在意外表"}]},
+  {"en":"personality","cn":"性格；品质","chunks":[{"en":"a great personality","cn":"很好的性格"},{"en":"different personalities","cn":"不同的性格"},{"en":"a warm personality","cn":"温暖的性格"}]},
+  {"en":"slim","cn":"苗条的；薄的","chunks":[{"en":"a slim girl","cn":"一个苗条的女孩"},{"en":"slimmer than me","cn":"比我苗条"},{"en":"stay slim","cn":"保持苗条"}]},
+  {"en":"alike","cn":"相像的；相似地","chunks":[{"en":"look alike","cn":"看起来相像"},{"en":"think alike","cn":"想法相似"},{"en":"very much alike","cn":"非常相像"}]},
+  {"en":"difference","cn":"差异","chunks":[{"en":"a big difference","cn":"很大的差异"},{"en":"tell the difference","cn":"分辨差异"},{"en":"differences between us","cn":"我们之间的差异"}]},
+  {"en":"similarity","cn":"相似之处","chunks":[{"en":"a clear similarity","cn":"明显的相似之处"},{"en":"find similarities","cn":"找到相似之处"},{"en":"share similarities","cn":"有相似之处"}]},
+  {"en":"friendship","cn":"友谊；友情","chunks":[{"en":"a true friendship","cn":"真正的友谊"},{"en":"build a friendship","cn":"建立友谊"},{"en":"a long friendship","cn":"长久的友谊"}]}
+ ],
+ "reading":{
+  "passage":"Lily and Ann are good friends, but they are very different. Lily is taller and slimmer than Ann, and she is more outgoing too. She loves to talk and make new friends. Ann is quieter and shyer, but she is just as hard-working as Lily. In fact, Ann gets better grades because she studies harder. Their personalities are not alike, yet they have a lot in common. Both girls enjoy music and sports. They believe these differences make their friendship stronger and more interesting. \"My best friend is not the same as me,\" Lily says, \"but that is the best part. She is as important to me as my own family.\"",
+  "passageCn":"莉莉和安是好朋友，但她们非常不同。莉莉比安更高更苗条，也更外向。她喜欢交谈、结交新朋友。安更安静、更害羞，但她和莉莉一样勤奋。事实上，安成绩更好，因为她学习更用功。她们的性格并不相像，但她们有很多共同点。两个女孩都喜欢音乐和运动。她们相信这些差异让她们的友谊更牢固、更有趣。“我最好的朋友和我不一样，”莉莉说，“但那正是最棒的部分。她对我而言就像我自己的家人一样重要。”",
+  "questions":[
+   {"q":"How is Lily different from Ann in appearance?","opts":["She is shorter and heavier","She is taller and slimmer","She is quieter","She is younger"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why does Ann get better grades?","opts":["She is more outgoing","She is taller","She studies harder","She has more friends"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn about their friendship?","opts":["Their differences make it stronger","They never argue","They are exactly alike","They share no interests"],"answer":0,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"My brother is ___ than me.","opts":["tall","taller","tallest","more tall"],"answer":1,"point":"比较级-er","dim":"grammar"},
+  {"q":"Ann is ___ outgoing than Lily.","opts":["more","much","very","most"],"answer":0,"point":"more+多音节形容词","dim":"grammar"},
+  {"q":"Tom runs as ___ as Jack.","opts":["faster","fastest","fast","more fast"],"answer":2,"point":"as...as用原级","dim":"grammar"},
+  {"q":"This book is ___ interesting than that one.","opts":["more","much","as","very"],"answer":0,"point":"more+多音节形容词","dim":"grammar"},
+  {"q":"She is not ___ tall as her sister.","opts":["so","more","very","much"],"answer":0,"point":"not as/so...as","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"My sister is more outgoing than me.","opts":["His sister is more outgoing than him","His sister is shyer than him","He is more outgoing than his sister","They are equally shy"],"answer":0},
+  {"audio":"Tom is as hard-working as Jack.","opts":["Tom is lazier than Jack","Tom works as hard as Jack","Jack works harder than Tom","Tom never works"],"answer":1},
+  {"audio":"Lily is taller and slimmer than Ann.","opts":["Ann is taller than Lily","Lily and Ann are the same height","Lily is shorter than Ann","Lily is taller and slimmer than Ann"],"answer":3},
+  {"audio":"We have a lot in common.","opts":["We share many things","We have nothing alike","We never meet","We argue a lot"],"answer":0},
+  {"audio":"My best friend is shyer than I am.","opts":["I am shyer than my friend","My friend is more outgoing","My friend is shyer than me","We are both outgoing"],"answer":2},
+  {"audio":"Their personalities are quite different.","opts":["They have the same personality","Their characters are not the same","They look alike","They are twins"],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「outgoing」的意思是？","opts":["害羞的","外向的","懒惰的","严肃的"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「similarity」的意思是？","opts":["差异","友谊","相似之处","外表"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"He is ___ than his classmates.","opts":["hard-working","more hard-working","hardest-working","as hard-working"],"answer":1,"point":"比较级","dim":"grammar"},
+  {"q":"「appearance」的意思是？","opts":["性格","外表；露面","友谊","差异"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"Anna is just ___ smart ___ her brother.","opts":["more...than","as...as","so...that","too...to"],"answer":1,"point":"as...as","dim":"grammar"},
+  {"q":"「slim」的意思是？","opts":["苗条的","勤奋的","严肃的","外向的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"This problem is ___ serious than that one.","opts":["very","much","more","as"],"answer":2,"point":"more比较级","dim":"grammar"},
+  {"q":"「friendship」的意思是？","opts":["相似之处","友谊；友情","性格","外表"],"answer":1,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Friend and Me",
+  "prompt":"Write about you and your best friend. Use comparatives (-er / more) and 'as ... as' to compare your appearance, personality, and interests.",
+  "promptCn":"写一写你和你最好的朋友。用比较级（-er / more）和'as ... as'来比较你们的外表、性格和兴趣爱好。",
+  "opener":"My best friend and I are alike in some ways, but different in others.",
+  "sampleWords":["outgoing","shy","hard-working","slim","appearance","personality","similarity","friendship"],
+  "cards":[
+   {"key":"appearance","labelCn":"外表","hint":"如 taller, slimmer"},
+   {"key":"personality","labelCn":"性格","hint":"如 more outgoing, shyer"},
+   {"key":"interests","labelCn":"兴趣","hint":"如 as ... as in sports"}
+  ],
+  "templates":{
+   "l1":["My best friend and I have a similar {appearance}.","He is a little taller than me.","We both have a friendly {personality}.","We share the same {interests}."],
+   "l2":["In {appearance}, my friend is taller and slimmer than me.","His {personality} is more outgoing than mine, but I am quieter.","In our {interests}, I am as keen on sports as he is.","These small differences make our friendship fun."],
+   "l3":["When it comes to {appearance}, my friend is taller and slimmer than I am, though we look alike to others.","Our {personality} types are not the same: he is more outgoing, while I am shyer and more serious.","Yet in our {interests} we match well, because I love music as much as he does.","I believe these similarities and differences make our friendship stronger."]
+  },
+  "connectors":["but","however","as ... as","more ... than","both"],
+  "minWords":40
+ }
+}

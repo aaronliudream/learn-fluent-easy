@@ -309,24 +309,24 @@
               {
                 "q": "I didn't go ___ special during the holiday.",
                 "opts": [
-                  "anywhere",
-                  "somewhere",
                   "everywhere",
+                  "somewhere",
+                  "anywhere",
                   "nowhere"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "不定代词(否定句用 anywhere)",
                 "dim": "grammar"
               },
               {
                 "q": "We ___ to an ancient town last summer.",
                 "opts": [
-                  "went",
+                  "going",
                   "go",
                   "goes",
-                  "going"
+                  "went"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "一般过去时",
                 "dim": "grammar"
               },
@@ -345,24 +345,24 @@
               {
                 "q": "Did you meet ___ interesting on your trip?",
                 "opts": [
-                  "anyone",
                   "someone",
+                  "anyone",
                   "no one",
                   "everyone"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "不定代词(疑问句用 anyone)",
                 "dim": "grammar"
               },
               {
                 "q": "There was ___ to do, so we stayed in the hotel.",
                 "opts": [
-                  "nothing",
-                  "anything",
                   "everything",
+                  "anything",
+                  "nothing",
                   "somewhere"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "不定代词 nothing",
                 "dim": "grammar"
               }
@@ -374,36 +374,36 @@
                 {
                   "q": "Where did the writer go on vacation?",
                   "opts": [
-                    "An ancient town in the south of China",
                     "A big modern city",
+                    "An ancient town in the south of China",
                     "A faraway island",
                     "His grandparents' home"
                   ],
-                  "answer": 0,
+                  "answer": 1,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
                   "q": "How did they get around in the town?",
                   "opts": [
-                    "They walked everywhere",
-                    "By car",
                     "By bus",
+                    "By car",
+                    "They walked everywhere",
                     "By boat"
                   ],
-                  "answer": 0,
+                  "answer": 2,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
                   "q": "Why did the writer take lots of photos?",
                   "opts": [
-                    "To remind himself of the special trip",
+                    "Because he was bored",
                     "To sell them",
                     "To send to the guide",
-                    "Because he was bored"
+                    "To remind himself of the special trip"
                   ],
-                  "answer": 0,
+                  "answer": 3,
                   "point": "推理判断",
                   "dim": "reading"
                 }
@@ -474,12 +474,12 @@
               {
                 "q": "「vacation」的意思是？",
                 "opts": [
-                  "假期",
+                  "风景",
                   "车站",
                   "导游",
-                  "风景"
+                  "假期"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -498,36 +498,36 @@
               {
                 "q": "「landscape」的意思是？",
                 "opts": [
-                  "风景",
                   "旅馆",
+                  "风景",
                   "彩虹",
                   "广场"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "选出过去式：We ___ to the mountains last week.",
                 "opts": [
-                  "went",
-                  "go",
                   "goes",
+                  "go",
+                  "went",
                   "gone"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "一般过去时",
                 "dim": "grammar"
               },
               {
                 "q": "I didn't see ___ on the empty street.",
                 "opts": [
-                  "anyone",
+                  "no one",
                   "someone",
                   "everyone",
-                  "no one"
+                  "anyone"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "不定代词",
                 "dim": "grammar"
               },
@@ -546,24 +546,24 @@
               {
                 "q": "___ special happened — it was a normal day.",
                 "opts": [
-                  "Nothing",
                   "Anything",
+                  "Nothing",
                   "Everywhere",
                   "Someone"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "不定代词",
                 "dim": "grammar"
               },
               {
                 "q": "「comfortable」的意思是？",
                 "opts": [
-                  "舒适的",
-                  "乏味的",
                   "古老的",
+                  "乏味的",
+                  "舒适的",
                   "空闲的"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -572,32 +572,32 @@
               {
                 "audio": "I went to Mount Huangshan with my family.",
                 "opts": [
-                  "He went to the mountains.",
                   "He went to the beach.",
+                  "He went to the mountains.",
                   "He stayed at home.",
                   "He went to school."
                 ],
-                "answer": 0
+                "answer": 1
               },
               {
                 "audio": "The landscape there was amazing.",
                 "opts": [
-                  "The scenery was beautiful.",
-                  "The food was bad.",
                   "It was raining all day.",
+                  "The food was bad.",
+                  "The scenery was beautiful.",
                   "He felt bored."
                 ],
-                "answer": 0
+                "answer": 2
               },
               {
                 "audio": "I didn't go anywhere special this holiday.",
                 "opts": [
-                  "She stayed around home.",
+                  "She climbed a mountain.",
                   "She went abroad.",
                   "She visited a palace.",
-                  "She climbed a mountain."
+                  "She stayed around home."
                 ],
-                "answer": 0
+                "answer": 3
               },
               {
                 "audio": "We stayed in a comfortable hotel for three days.",
@@ -612,22 +612,22 @@
               {
                 "audio": "A guide showed us around the old town.",
                 "opts": [
-                  "A guide led their tour.",
                   "They got lost.",
+                  "A guide led their tour.",
                   "They drove a car.",
                   "They read a map."
                 ],
-                "answer": 0
+                "answer": 1
               },
               {
                 "audio": "I took many photos to remember the trip.",
                 "opts": [
-                  "She took lots of photos.",
-                  "She bought postcards.",
                   "She wrote a long diary.",
+                  "She bought postcards.",
+                  "She took lots of photos.",
                   "She forgot her camera."
                 ],
-                "answer": 0
+                "answer": 2
               }
             ]
           },
@@ -639,11 +639,228 @@
             "title": "Home Sweet Home",
             "cn": "温馨的家",
             "emoji": "🏠",
-            "available": false,
+            "available": true,
             "bigQuestion": "What does home mean to you?",
             "pronunciation": "/ɔː/ /ɒ/ /uː/ /ʊ/ /ɑː/ /ʌ/;意群停顿",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "bedroom",
+                "cn": "卧室",
+                "chunks": [
+                  {
+                    "en": "a tidy bedroom",
+                    "cn": "整洁的卧室"
+                  },
+                  {
+                    "en": "clean my bedroom",
+                    "cn": "打扫我的卧室"
+                  },
+                  {
+                    "en": "share a bedroom",
+                    "cn": "合住一间卧室"
+                  }
+                ]
+              },
+              {
+                "en": "living room",
+                "cn": "客厅",
+                "chunks": [
+                  {
+                    "en": "sit in the living room",
+                    "cn": "坐在客厅里"
+                  },
+                  {
+                    "en": "a cosy living room",
+                    "cn": "舒适的客厅"
+                  },
+                  {
+                    "en": "decorate the living room",
+                    "cn": "装饰客厅"
+                  }
+                ]
+              },
+              {
+                "en": "balcony",
+                "cn": "阳台",
+                "chunks": [
+                  {
+                    "en": "on the balcony",
+                    "cn": "在阳台上"
+                  },
+                  {
+                    "en": "a small balcony",
+                    "cn": "一个小阳台"
+                  },
+                  {
+                    "en": "water plants on the balcony",
+                    "cn": "在阳台上浇花"
+                  }
+                ]
+              },
+              {
+                "en": "apartment",
+                "cn": "公寓套房",
+                "chunks": [
+                  {
+                    "en": "a new apartment",
+                    "cn": "一套新公寓"
+                  },
+                  {
+                    "en": "move into the apartment",
+                    "cn": "搬进公寓"
+                  },
+                  {
+                    "en": "live in an apartment",
+                    "cn": "住在公寓里"
+                  }
+                ]
+              },
+              {
+                "en": "pack",
+                "cn": "打包；收拾",
+                "chunks": [
+                  {
+                    "en": "pack a bag",
+                    "cn": "收拾一个包"
+                  },
+                  {
+                    "en": "pack up the boxes",
+                    "cn": "把箱子打包"
+                  },
+                  {
+                    "en": "pack my clothes",
+                    "cn": "收拾我的衣服"
+                  }
+                ]
+              },
+              {
+                "en": "sort",
+                "cn": "把……分类；整理",
+                "chunks": [
+                  {
+                    "en": "sort the books",
+                    "cn": "整理书籍"
+                  },
+                  {
+                    "en": "sort out the room",
+                    "cn": "整理房间"
+                  },
+                  {
+                    "en": "sort old toys",
+                    "cn": "分类旧玩具"
+                  }
+                ]
+              },
+              {
+                "en": "invite",
+                "cn": "邀请",
+                "chunks": [
+                  {
+                    "en": "invite friends home",
+                    "cn": "邀请朋友回家"
+                  },
+                  {
+                    "en": "invite her to dinner",
+                    "cn": "邀请她吃晚饭"
+                  },
+                  {
+                    "en": "invite the neighbours",
+                    "cn": "邀请邻居"
+                  }
+                ]
+              },
+              {
+                "en": "borrow",
+                "cn": "借",
+                "chunks": [
+                  {
+                    "en": "borrow a book",
+                    "cn": "借一本书"
+                  },
+                  {
+                    "en": "borrow money",
+                    "cn": "借钱"
+                  },
+                  {
+                    "en": "borrow it from him",
+                    "cn": "向他借"
+                  }
+                ]
+              },
+              {
+                "en": "decorate",
+                "cn": "装饰；装潢",
+                "chunks": [
+                  {
+                    "en": "decorate the wall",
+                    "cn": "装饰墙面"
+                  },
+                  {
+                    "en": "decorate with posters",
+                    "cn": "用海报装饰"
+                  },
+                  {
+                    "en": "decorate the house",
+                    "cn": "装饰房子"
+                  }
+                ]
+              },
+              {
+                "en": "poster",
+                "cn": "海报",
+                "chunks": [
+                  {
+                    "en": "put up a poster",
+                    "cn": "贴一张海报"
+                  },
+                  {
+                    "en": "a colourful poster",
+                    "cn": "一张彩色海报"
+                  },
+                  {
+                    "en": "a movie poster",
+                    "cn": "一张电影海报"
+                  }
+                ]
+              },
+              {
+                "en": "add",
+                "cn": "添加；加",
+                "chunks": [
+                  {
+                    "en": "add some colour",
+                    "cn": "加点颜色"
+                  },
+                  {
+                    "en": "add sugar to tea",
+                    "cn": "往茶里加糖"
+                  },
+                  {
+                    "en": "add a few photos",
+                    "cn": "加几张照片"
+                  }
+                ]
+              },
+              {
+                "en": "plate",
+                "cn": "盘子；碟子",
+                "chunks": [
+                  {
+                    "en": "a clean plate",
+                    "cn": "一个干净的盘子"
+                  },
+                  {
+                    "en": "wash the plates",
+                    "cn": "洗盘子"
+                  },
+                  {
+                    "en": "a plate of biscuits",
+                    "cn": "一盘饼干"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -713,29 +930,332 @@
             ],
             "grammarTitle": "Can/Could 礼貌请求与许可",
             "grammarCode": "g8a-u2-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "\"___ you pass me the glue, please?\" — Sure, here you are.",
+                "opts": [
+                  "Must",
+                  "Could",
+                  "Should",
+                  "Need"
+                ],
+                "answer": 1,
+                "point": "Could 礼貌请求",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"Can I borrow your scissors?\" — \"Yes, ___.\"",
+                "opts": [
+                  "you can",
+                  "you must",
+                  "you need",
+                  "you should"
+                ],
+                "answer": 0,
+                "point": "Can 许可应答",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"Could I ___ a poster on the wall?\" Mum said it was fine.",
+                "opts": [
+                  "putting",
+                  "to put",
+                  "put",
+                  "puts"
+                ],
+                "answer": 2,
+                "point": "情态动词后接动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "Choose the most polite way to ask a stranger for help.",
+                "opts": [
+                  "Give me a hand!",
+                  "Could you help me, please?",
+                  "You help me now.",
+                  "Help me!"
+                ],
+                "answer": 1,
+                "point": "Could 比 Can 更礼貌",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"Can I water the plants?\" — \"No, you ___. They were watered already.\"",
+                "opts": [
+                  "can't",
+                  "must",
+                  "need",
+                  "do"
+                ],
+                "answer": 0,
+                "point": "Can 否定许可",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "My family just moved into a new apartment, and we are making it our home. \"Could you help me pack these books?\" Mum asked me on the first morning. I sorted them and put them on the shelf. \"Can I decorate my bedroom?\" I asked. \"Of course you can,\" she said with a smile. I put up a big poster and added some photos to the wall. My little sister wanted to help too. \"Could I water the plants on the balcony?\" she asked. Mum nodded. In the evening, we invited our new neighbours to dinner. \"Can I borrow some plates?\" Mum asked them kindly. Soon our living room was full of warm voices. Home is not just a place. Home is the people we love.",
+              "passageCn": "我们一家刚刚搬进一套新公寓，正在把它变成我们的家。第一天早上，妈妈问我：“你能帮我把这些书打包吗？”我把书整理好放到书架上。我问：“我可以装饰我的卧室吗？”她笑着说：“当然可以。”我贴了一张大海报，又往墙上加了一些照片。我的小妹妹也想帮忙。她问：“我可以给阳台上的植物浇水吗？”妈妈点了点头。傍晚，我们邀请了新邻居来吃晚饭。妈妈客气地问他们：“我可以借几个盘子吗？”很快，我们的客厅里就充满了温暖的话语。家不只是一个地方，家是我们所爱的人。",
+              "questions": [
+                {
+                  "q": "Why did the family move?",
+                  "opts": [
+                    "They moved into a new apartment.",
+                    "They went on a holiday.",
+                    "They visited their grandparents.",
+                    "They sold their old books."
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What did the writer do to decorate the bedroom?",
+                  "opts": [
+                    "Washed the plates.",
+                    "Put up a poster and added photos.",
+                    "Watered the plants.",
+                    "Cooked dinner."
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the writer mainly want to say at the end?",
+                  "opts": [
+                    "A new apartment is expensive.",
+                    "Decorating a room is hard work.",
+                    "Home is about the people we love.",
+                    "Neighbours should share plates."
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "Home Sweet Home",
+              "prompt": "Write about how you help at home and how you make your home nice. Use Can/Could to ask for permission or help politely.",
+              "promptCn": "写一写你在家里如何帮忙以及如何把家布置得温馨。请用 Can/Could 来礼貌地请求帮助或许可。",
+              "opener": "My home is a sweet place, and I always try to help.",
+              "sampleWords": [
+                "bedroom",
+                "living room",
+                "balcony",
+                "decorate",
+                "poster",
+                "invite",
+                "borrow",
+                "pack"
+              ],
+              "cards": [
+                {
+                  "key": "help",
+                  "labelCn": "你做的家务",
+                  "hint": "如 pack up books, sort old toys"
+                },
+                {
+                  "key": "decorate",
+                  "labelCn": "你怎样布置房间",
+                  "hint": "如 put up a poster, add some photos"
+                },
+                {
+                  "key": "ask",
+                  "labelCn": "礼貌请求帮助",
+                  "hint": "如 Could you help me...?"
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "I often {help} at home.",
+                  "I like my {decorate}.",
+                  "\"Could you help me?\" I ask.",
+                  "My home is sweet."
+                ],
+                "l2": [
+                  "After school, I usually {help} to make my home tidy.",
+                  "I love to {decorate} my room to make it nice.",
+                  "I always say, \"{ask}\" when I need help.",
+                  "I feel happy and warm at home."
+                ],
+                "l3": [
+                  "When I get home, I {help} so that everyone can relax in a clean house.",
+                  "To make my bedroom cosy, I {decorate} it with the things I love.",
+                  "I ask politely, \"{ask}\", because good manners matter at home.",
+                  "For me, home is not just a place but the people I love."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "then",
+                "after that",
+                "finally",
+                "because",
+                "so"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「balcony」的意思是？",
+                "opts": [
+                  "卧室",
+                  "阳台",
+                  "客厅",
+                  "公寓"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「invite」的意思是？",
+                "opts": [
+                  "邀请",
+                  "整理",
+                  "借",
+                  "打包"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "\"___ I use your glue for a minute?\" — Of course.",
+                "opts": [
+                  "Could",
+                  "Will",
+                  "Shall",
+                  "Would"
+                ],
+                "answer": 0,
+                "point": "Could 礼貌请求",
+                "dim": "grammar"
+              },
+              {
+                "q": "「decorate」的意思是？",
+                "opts": [
+                  "借",
+                  "分类",
+                  "装饰",
+                  "添加"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「borrow」的意思是？",
+                "opts": [
+                  "邀请",
+                  "装饰",
+                  "打包",
+                  "借"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "\"Can you ___ me a hand with the cleaning?\"",
+                "opts": [
+                  "give",
+                  "gives",
+                  "giving",
+                  "to give"
+                ],
+                "answer": 0,
+                "point": "情态动词后接动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "「sort」的意思是？",
+                "opts": [
+                  "公寓",
+                  "盘子",
+                  "把……分类",
+                  "海报"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "\"Could I ___ the plants?\" — Yes, please do.",
+                "opts": [
+                  "watered",
+                  "to water",
+                  "watering",
+                  "water"
+                ],
+                "answer": 3,
+                "point": "情态动词后接动词原形",
+                "dim": "grammar"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Could you help me pack up these boxes, please?",
+                "opts": [
+                  "He is asking for help to pack boxes.",
+                  "He is buying new boxes.",
+                  "He is throwing the boxes away.",
+                  "He is counting the boxes."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Can I decorate my bedroom with these posters?",
+                "opts": [
+                  "She wants to sell the posters.",
+                  "She is asking permission to decorate her bedroom.",
+                  "She is cleaning the posters.",
+                  "She is reading the posters."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "We invited our new neighbours to dinner last night.",
+                "opts": [
+                  "The neighbours moved away.",
+                  "They cooked dinner alone.",
+                  "They asked the neighbours to come for dinner.",
+                  "The dinner was cancelled."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Could I borrow a few plates for the party?",
+                "opts": [
+                  "He is washing the plates.",
+                  "He is buying plates.",
+                  "He is breaking the plates.",
+                  "He is asking to borrow some plates."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Can you put the books on the balcony, please?",
+                "opts": [
+                  "He wants the books put on the balcony.",
+                  "He is reading on the balcony.",
+                  "He is painting the balcony.",
+                  "He is sleeping on the balcony."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Could you add some flowers to the living room?",
+                "opts": [
+                  "The living room is too small.",
+                  "She wants flowers added to the living room.",
+                  "She is moving out of the living room.",
+                  "She is cleaning the floor."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u3",
@@ -745,11 +1265,228 @@
             "title": "Same or Different?",
             "cn": "相同还是不同",
             "emoji": "🆚",
-            "available": false,
+            "available": true,
             "bigQuestion": "How do we compare with each other?",
             "pronunciation": "/ɜː/ /ə/;语调",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "compare",
+                "cn": "比较；对比",
+                "chunks": [
+                  {
+                    "en": "compare with him",
+                    "cn": "与他比较"
+                  },
+                  {
+                    "en": "compare the two",
+                    "cn": "比较这两者"
+                  },
+                  {
+                    "en": "hard to compare",
+                    "cn": "难以比较"
+                  }
+                ]
+              },
+              {
+                "en": "shy",
+                "cn": "害羞的",
+                "chunks": [
+                  {
+                    "en": "a shy boy",
+                    "cn": "一个害羞的男孩"
+                  },
+                  {
+                    "en": "too shy to talk",
+                    "cn": "害羞得不敢说话"
+                  },
+                  {
+                    "en": "feel shy",
+                    "cn": "感到害羞"
+                  }
+                ]
+              },
+              {
+                "en": "outgoing",
+                "cn": "外向的",
+                "chunks": [
+                  {
+                    "en": "an outgoing girl",
+                    "cn": "一个外向的女孩"
+                  },
+                  {
+                    "en": "more outgoing",
+                    "cn": "更外向"
+                  },
+                  {
+                    "en": "so outgoing",
+                    "cn": "如此外向"
+                  }
+                ]
+              },
+              {
+                "en": "hard-working",
+                "cn": "勤奋的",
+                "chunks": [
+                  {
+                    "en": "a hard-working student",
+                    "cn": "一个勤奋的学生"
+                  },
+                  {
+                    "en": "as hard-working as",
+                    "cn": "和……一样勤奋"
+                  },
+                  {
+                    "en": "very hard-working",
+                    "cn": "非常勤奋"
+                  }
+                ]
+              },
+              {
+                "en": "serious",
+                "cn": "严肃的；严重的",
+                "chunks": [
+                  {
+                    "en": "a serious face",
+                    "cn": "严肃的表情"
+                  },
+                  {
+                    "en": "more serious",
+                    "cn": "更严肃"
+                  },
+                  {
+                    "en": "look serious",
+                    "cn": "看起来严肃"
+                  }
+                ]
+              },
+              {
+                "en": "appearance",
+                "cn": "外表；露面",
+                "chunks": [
+                  {
+                    "en": "a smart appearance",
+                    "cn": "整洁的外表"
+                  },
+                  {
+                    "en": "similar in appearance",
+                    "cn": "外表相似"
+                  },
+                  {
+                    "en": "care about appearance",
+                    "cn": "在意外表"
+                  }
+                ]
+              },
+              {
+                "en": "personality",
+                "cn": "性格；品质",
+                "chunks": [
+                  {
+                    "en": "a great personality",
+                    "cn": "很好的性格"
+                  },
+                  {
+                    "en": "different personalities",
+                    "cn": "不同的性格"
+                  },
+                  {
+                    "en": "a warm personality",
+                    "cn": "温暖的性格"
+                  }
+                ]
+              },
+              {
+                "en": "slim",
+                "cn": "苗条的；薄的",
+                "chunks": [
+                  {
+                    "en": "a slim girl",
+                    "cn": "一个苗条的女孩"
+                  },
+                  {
+                    "en": "slimmer than me",
+                    "cn": "比我苗条"
+                  },
+                  {
+                    "en": "stay slim",
+                    "cn": "保持苗条"
+                  }
+                ]
+              },
+              {
+                "en": "alike",
+                "cn": "相像的；相似地",
+                "chunks": [
+                  {
+                    "en": "look alike",
+                    "cn": "看起来相像"
+                  },
+                  {
+                    "en": "think alike",
+                    "cn": "想法相似"
+                  },
+                  {
+                    "en": "very much alike",
+                    "cn": "非常相像"
+                  }
+                ]
+              },
+              {
+                "en": "difference",
+                "cn": "差异",
+                "chunks": [
+                  {
+                    "en": "a big difference",
+                    "cn": "很大的差异"
+                  },
+                  {
+                    "en": "tell the difference",
+                    "cn": "分辨差异"
+                  },
+                  {
+                    "en": "differences between us",
+                    "cn": "我们之间的差异"
+                  }
+                ]
+              },
+              {
+                "en": "similarity",
+                "cn": "相似之处",
+                "chunks": [
+                  {
+                    "en": "a clear similarity",
+                    "cn": "明显的相似之处"
+                  },
+                  {
+                    "en": "find similarities",
+                    "cn": "找到相似之处"
+                  },
+                  {
+                    "en": "share similarities",
+                    "cn": "有相似之处"
+                  }
+                ]
+              },
+              {
+                "en": "friendship",
+                "cn": "友谊；友情",
+                "chunks": [
+                  {
+                    "en": "a true friendship",
+                    "cn": "真正的友谊"
+                  },
+                  {
+                    "en": "build a friendship",
+                    "cn": "建立友谊"
+                  },
+                  {
+                    "en": "a long friendship",
+                    "cn": "长久的友谊"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -819,29 +1556,331 @@
             ],
             "grammarTitle": "形容词比较级",
             "grammarCode": "g8a-u3-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "My brother is ___ than me.",
+                "opts": [
+                  "tall",
+                  "taller",
+                  "tallest",
+                  "more tall"
+                ],
+                "answer": 1,
+                "point": "比较级-er",
+                "dim": "grammar"
+              },
+              {
+                "q": "Ann is ___ outgoing than Lily.",
+                "opts": [
+                  "more",
+                  "much",
+                  "very",
+                  "most"
+                ],
+                "answer": 0,
+                "point": "more+多音节形容词",
+                "dim": "grammar"
+              },
+              {
+                "q": "Tom runs as ___ as Jack.",
+                "opts": [
+                  "faster",
+                  "fastest",
+                  "fast",
+                  "more fast"
+                ],
+                "answer": 2,
+                "point": "as...as用原级",
+                "dim": "grammar"
+              },
+              {
+                "q": "This book is ___ interesting than that one.",
+                "opts": [
+                  "more",
+                  "much",
+                  "as",
+                  "very"
+                ],
+                "answer": 0,
+                "point": "more+多音节形容词",
+                "dim": "grammar"
+              },
+              {
+                "q": "She is not ___ tall as her sister.",
+                "opts": [
+                  "so",
+                  "more",
+                  "very",
+                  "much"
+                ],
+                "answer": 0,
+                "point": "not as/so...as",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "Lily and Ann are good friends, but they are very different. Lily is taller and slimmer than Ann, and she is more outgoing too. She loves to talk and make new friends. Ann is quieter and shyer, but she is just as hard-working as Lily. In fact, Ann gets better grades because she studies harder. Their personalities are not alike, yet they have a lot in common. Both girls enjoy music and sports. They believe these differences make their friendship stronger and more interesting. \"My best friend is not the same as me,\" Lily says, \"but that is the best part. She is as important to me as my own family.\"",
+              "passageCn": "莉莉和安是好朋友，但她们非常不同。莉莉比安更高更苗条，也更外向。她喜欢交谈、结交新朋友。安更安静、更害羞，但她和莉莉一样勤奋。事实上，安成绩更好，因为她学习更用功。她们的性格并不相像，但她们有很多共同点。两个女孩都喜欢音乐和运动。她们相信这些差异让她们的友谊更牢固、更有趣。“我最好的朋友和我不一样，”莉莉说，“但那正是最棒的部分。她对我而言就像我自己的家人一样重要。”",
+              "questions": [
+                {
+                  "q": "How is Lily different from Ann in appearance?",
+                  "opts": [
+                    "She is shorter and heavier",
+                    "She is taller and slimmer",
+                    "She is quieter",
+                    "She is younger"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why does Ann get better grades?",
+                  "opts": [
+                    "She is more outgoing",
+                    "She is taller",
+                    "She studies harder",
+                    "She has more friends"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we learn about their friendship?",
+                  "opts": [
+                    "Their differences make it stronger",
+                    "They never argue",
+                    "They are exactly alike",
+                    "They share no interests"
+                  ],
+                  "answer": 0,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "My Friend and Me",
+              "prompt": "Write about you and your best friend. Use comparatives (-er / more) and 'as ... as' to compare your appearance, personality, and interests.",
+              "promptCn": "写一写你和你最好的朋友。用比较级（-er / more）和'as ... as'来比较你们的外表、性格和兴趣爱好。",
+              "opener": "My best friend and I are alike in some ways, but different in others.",
+              "sampleWords": [
+                "outgoing",
+                "shy",
+                "hard-working",
+                "slim",
+                "appearance",
+                "personality",
+                "similarity",
+                "friendship"
+              ],
+              "cards": [
+                {
+                  "key": "appearance",
+                  "labelCn": "外表",
+                  "hint": "如 taller, slimmer"
+                },
+                {
+                  "key": "personality",
+                  "labelCn": "性格",
+                  "hint": "如 more outgoing, shyer"
+                },
+                {
+                  "key": "interests",
+                  "labelCn": "兴趣",
+                  "hint": "如 as ... as in sports"
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "My best friend and I have a similar {appearance}.",
+                  "He is a little taller than me.",
+                  "We both have a friendly {personality}.",
+                  "We share the same {interests}."
+                ],
+                "l2": [
+                  "In {appearance}, my friend is taller and slimmer than me.",
+                  "His {personality} is more outgoing than mine, but I am quieter.",
+                  "In our {interests}, I am as keen on sports as he is.",
+                  "These small differences make our friendship fun."
+                ],
+                "l3": [
+                  "When it comes to {appearance}, my friend is taller and slimmer than I am, though we look alike to others.",
+                  "Our {personality} types are not the same: he is more outgoing, while I am shyer and more serious.",
+                  "Yet in our {interests} we match well, because I love music as much as he does.",
+                  "I believe these similarities and differences make our friendship stronger."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "but",
+                "however",
+                "as ... as",
+                "more ... than",
+                "both"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「outgoing」的意思是？",
+                "opts": [
+                  "害羞的",
+                  "外向的",
+                  "懒惰的",
+                  "严肃的"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「similarity」的意思是？",
+                "opts": [
+                  "差异",
+                  "友谊",
+                  "相似之处",
+                  "外表"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "He is ___ than his classmates.",
+                "opts": [
+                  "hard-working",
+                  "more hard-working",
+                  "hardest-working",
+                  "as hard-working"
+                ],
+                "answer": 1,
+                "point": "比较级",
+                "dim": "grammar"
+              },
+              {
+                "q": "「appearance」的意思是？",
+                "opts": [
+                  "性格",
+                  "外表；露面",
+                  "友谊",
+                  "差异"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Anna is just ___ smart ___ her brother.",
+                "opts": [
+                  "more...than",
+                  "as...as",
+                  "so...that",
+                  "too...to"
+                ],
+                "answer": 1,
+                "point": "as...as",
+                "dim": "grammar"
+              },
+              {
+                "q": "「slim」的意思是？",
+                "opts": [
+                  "苗条的",
+                  "勤奋的",
+                  "严肃的",
+                  "外向的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "This problem is ___ serious than that one.",
+                "opts": [
+                  "very",
+                  "much",
+                  "more",
+                  "as"
+                ],
+                "answer": 2,
+                "point": "more比较级",
+                "dim": "grammar"
+              },
+              {
+                "q": "「friendship」的意思是？",
+                "opts": [
+                  "相似之处",
+                  "友谊；友情",
+                  "性格",
+                  "外表"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "My sister is more outgoing than me.",
+                "opts": [
+                  "His sister is more outgoing than him",
+                  "His sister is shyer than him",
+                  "He is more outgoing than his sister",
+                  "They are equally shy"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Tom is as hard-working as Jack.",
+                "opts": [
+                  "Tom is lazier than Jack",
+                  "Tom works as hard as Jack",
+                  "Jack works harder than Tom",
+                  "Tom never works"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Lily is taller and slimmer than Ann.",
+                "opts": [
+                  "Ann is taller than Lily",
+                  "Lily and Ann are the same height",
+                  "Lily is shorter than Ann",
+                  "Lily is taller and slimmer than Ann"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "We have a lot in common.",
+                "opts": [
+                  "We share many things",
+                  "We have nothing alike",
+                  "We never meet",
+                  "We argue a lot"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My best friend is shyer than I am.",
+                "opts": [
+                  "I am shyer than my friend",
+                  "My friend is more outgoing",
+                  "My friend is shyer than me",
+                  "We are both outgoing"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Their personalities are quite different.",
+                "opts": [
+                  "They have the same personality",
+                  "Their characters are not the same",
+                  "They look alike",
+                  "They are twins"
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u4",
@@ -851,11 +1890,228 @@
             "title": "Amazing Plants and Animals",
             "cn": "神奇的动植物",
             "emoji": "🌱",
-            "available": false,
+            "available": true,
             "bigQuestion": "What makes plants and animals amazing?",
             "pronunciation": "双元音 + 辅音连缀;句子重音",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "bamboo",
+                "cn": "竹；竹子",
+                "chunks": [
+                  {
+                    "en": "a bamboo forest",
+                    "cn": "一片竹林"
+                  },
+                  {
+                    "en": "grow bamboo",
+                    "cn": "种竹子"
+                  },
+                  {
+                    "en": "tall bamboo",
+                    "cn": "高高的竹子"
+                  }
+                ]
+              },
+              {
+                "en": "shoot",
+                "cn": "幼苗；嫩芽",
+                "chunks": [
+                  {
+                    "en": "a new shoot",
+                    "cn": "一棵新芽"
+                  },
+                  {
+                    "en": "green shoots",
+                    "cn": "绿色的嫩芽"
+                  },
+                  {
+                    "en": "the shoots appear",
+                    "cn": "嫩芽长出来"
+                  }
+                ]
+              },
+              {
+                "en": "butterfly",
+                "cn": "蝴蝶",
+                "chunks": [
+                  {
+                    "en": "a beautiful butterfly",
+                    "cn": "一只美丽的蝴蝶"
+                  },
+                  {
+                    "en": "butterfly wings",
+                    "cn": "蝴蝶的翅膀"
+                  },
+                  {
+                    "en": "catch a butterfly",
+                    "cn": "抓一只蝴蝶"
+                  }
+                ]
+              },
+              {
+                "en": "wing",
+                "cn": "翅膀；翼",
+                "chunks": [
+                  {
+                    "en": "open its wings",
+                    "cn": "张开翅膀"
+                  },
+                  {
+                    "en": "colourful wings",
+                    "cn": "彩色的翅膀"
+                  },
+                  {
+                    "en": "two wings",
+                    "cn": "两只翅膀"
+                  }
+                ]
+              },
+              {
+                "en": "frog",
+                "cn": "蛙；青蛙",
+                "chunks": [
+                  {
+                    "en": "a little frog",
+                    "cn": "一只小青蛙"
+                  },
+                  {
+                    "en": "a green frog",
+                    "cn": "一只绿青蛙"
+                  },
+                  {
+                    "en": "the frog jumps",
+                    "cn": "青蛙跳"
+                  }
+                ]
+              },
+              {
+                "en": "honey",
+                "cn": "蜂蜜",
+                "chunks": [
+                  {
+                    "en": "sweet honey",
+                    "cn": "甜甜的蜂蜜"
+                  },
+                  {
+                    "en": "make honey",
+                    "cn": "酿蜂蜜"
+                  },
+                  {
+                    "en": "a jar of honey",
+                    "cn": "一罐蜂蜜"
+                  }
+                ]
+              },
+              {
+                "en": "pollen",
+                "cn": "花粉",
+                "chunks": [
+                  {
+                    "en": "carry pollen",
+                    "cn": "携带花粉"
+                  },
+                  {
+                    "en": "collect pollen",
+                    "cn": "采集花粉"
+                  },
+                  {
+                    "en": "yellow pollen",
+                    "cn": "黄色的花粉"
+                  }
+                ]
+              },
+              {
+                "en": "planet",
+                "cn": "行星",
+                "chunks": [
+                  {
+                    "en": "our planet",
+                    "cn": "我们的星球"
+                  },
+                  {
+                    "en": "protect the planet",
+                    "cn": "保护地球"
+                  },
+                  {
+                    "en": "a green planet",
+                    "cn": "一个绿色星球"
+                  }
+                ]
+              },
+              {
+                "en": "ocean",
+                "cn": "大海；海洋",
+                "chunks": [
+                  {
+                    "en": "the deep ocean",
+                    "cn": "深海"
+                  },
+                  {
+                    "en": "the largest ocean",
+                    "cn": "最大的海洋"
+                  },
+                  {
+                    "en": "across the ocean",
+                    "cn": "横跨海洋"
+                  }
+                ]
+              },
+              {
+                "en": "mushroom",
+                "cn": "蘑菇；伞菌",
+                "chunks": [
+                  {
+                    "en": "a wild mushroom",
+                    "cn": "一朵野蘑菇"
+                  },
+                  {
+                    "en": "pick mushrooms",
+                    "cn": "采蘑菇"
+                  },
+                  {
+                    "en": "a small mushroom",
+                    "cn": "一朵小蘑菇"
+                  }
+                ]
+              },
+              {
+                "en": "tiny",
+                "cn": "极小的；微小的",
+                "chunks": [
+                  {
+                    "en": "a tiny insect",
+                    "cn": "一只极小的昆虫"
+                  },
+                  {
+                    "en": "tiny seeds",
+                    "cn": "微小的种子"
+                  },
+                  {
+                    "en": "very tiny",
+                    "cn": "非常小"
+                  }
+                ]
+              },
+              {
+                "en": "lively",
+                "cn": "精力充沛的；生机勃勃的",
+                "chunks": [
+                  {
+                    "en": "a lively animal",
+                    "cn": "一只活泼的动物"
+                  },
+                  {
+                    "en": "a lively forest",
+                    "cn": "生机勃勃的森林"
+                  },
+                  {
+                    "en": "look lively",
+                    "cn": "看起来生机勃勃"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -925,29 +2181,332 @@
             ],
             "grammarTitle": "形容词最高级",
             "grammarCode": "g8a-u4-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "The cheetah is ___ animal on land.",
+                "opts": [
+                  "fast",
+                  "faster",
+                  "the fastest",
+                  "most fast"
+                ],
+                "answer": 2,
+                "point": "最高级the+est形式",
+                "dim": "grammar"
+              },
+              {
+                "q": "This is ___ flower in the whole garden.",
+                "opts": [
+                  "the most beautiful",
+                  "the beautifulest",
+                  "more beautiful",
+                  "beautiful"
+                ],
+                "answer": 0,
+                "point": "多音节词most最高级",
+                "dim": "grammar"
+              },
+              {
+                "q": "Of all the plants here, bamboo grows ___.",
+                "opts": [
+                  "fast",
+                  "fastest",
+                  "faster",
+                  "the more fast"
+                ],
+                "answer": 1,
+                "point": "副词最高级",
+                "dim": "grammar"
+              },
+              {
+                "q": "The blue whale is ___ animal in the ocean.",
+                "opts": [
+                  "big",
+                  "bigger",
+                  "biggest",
+                  "the biggest"
+                ],
+                "answer": 3,
+                "point": "双写辅音+est",
+                "dim": "grammar"
+              },
+              {
+                "q": "Which sentence is correct?",
+                "opts": [
+                  "She is the happiest girl in class.",
+                  "She is the happyest girl in class.",
+                  "She is the most happy girl in class.",
+                  "She is happier girl in class."
+                ],
+                "answer": 0,
+                "point": "辅音+y变i加est",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "Bamboo is one of the most amazing plants on our planet. It is the fastest-growing plant in the world. On the warmest days, some bamboo can grow up to one metre taller in just twenty-four hours! That makes it grow faster than almost any other plant. Bamboo is also one of the most useful plants. People use it to make tools, houses and even paper. The strongest kinds of bamboo are harder than wood. Pandas think bamboo is the tastiest food of all, and they eat it every day. Bamboo stays green through the coldest winter, so many people believe it is the bravest plant in nature. It is truly one of the greatest gifts from the natural world.",
+              "passageCn": "竹子是我们星球上最神奇的植物之一。它是世界上生长最快的植物。在最温暖的日子里，有些竹子在短短二十四小时内能长高一米！这使它比几乎任何其他植物长得都快。竹子也是最有用的植物之一。人们用它来制作工具、房屋甚至纸张。最坚硬的竹子比木头还硬。熊猫认为竹子是所有食物中最美味的，它们每天都吃。竹子在最寒冷的冬天也保持翠绿，所以很多人相信它是大自然中最勇敢的植物。它真的是大自然最伟大的礼物之一。",
+              "questions": [
+                {
+                  "q": "According to the passage, what is bamboo in terms of growing speed?",
+                  "opts": [
+                    "The slowest-growing plant",
+                    "The fastest-growing plant in the world",
+                    "A plant that never grows",
+                    "The tallest tree on the planet"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why do many people believe bamboo is the bravest plant?",
+                  "opts": [
+                    "It stays green through the coldest winter",
+                    "It can fly in the wind",
+                    "It only grows in summer",
+                    "It is made of metal"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about pandas from the passage?",
+                  "opts": [
+                    "Pandas dislike bamboo",
+                    "Pandas rarely eat bamboo",
+                    "Pandas enjoy bamboo as their favourite food",
+                    "Pandas only eat wood"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "The Most Amazing Living Thing",
+              "prompt": "Write a short passage about a plant or animal you think is amazing. Use superlatives (the -est / the most ...) to describe why it is special.",
+              "promptCn": "写一篇短文，介绍一种你认为最神奇的植物或动物。用最高级（the -est / the most...）描述它为什么特别，比如最快的、最大的或最美丽的。",
+              "opener": "I think the most amazing living thing is...",
+              "sampleWords": [
+                "bamboo",
+                "butterfly",
+                "ocean",
+                "tiny",
+                "lively",
+                "planet",
+                "wing",
+                "honey"
+              ],
+              "cards": [
+                {
+                  "key": "what",
+                  "labelCn": "是什么",
+                  "hint": "如 the most amazing animal"
+                },
+                {
+                  "key": "why",
+                  "labelCn": "为什么神奇",
+                  "hint": "如 the fastest / the biggest"
+                },
+                {
+                  "key": "feeling",
+                  "labelCn": "你的感受",
+                  "hint": "如 I love it most"
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "I think the most amazing living thing is the {what}.",
+                  "It is one of the {why} things in nature.",
+                  "It lives near the ocean and looks very lively.",
+                  "I love this amazing living thing the most."
+                ],
+                "l2": [
+                  "The {what} is the most amazing living thing I know.",
+                  "Many people say it is the {why} of all.",
+                  "Its tiny wings or shoots make it really special.",
+                  "That is why I feel it is the greatest gift in nature."
+                ],
+                "l3": [
+                  "Of all living things on our planet, the {what} is the most amazing to me.",
+                  "It is famous for being the {why}, faster or bigger than the others.",
+                  "Whether in the forest or the ocean, it always looks lively and full of life.",
+                  "For this reason, I believe it is one of the greatest wonders of the natural world."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "also",
+                "because",
+                "so",
+                "for this reason",
+                "in fact"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「bamboo」的意思是？",
+                "opts": [
+                  "蘑菇",
+                  "蜂蜜",
+                  "竹子",
+                  "花粉"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tiny」的意思是？",
+                "opts": [
+                  "极小的",
+                  "巨大的",
+                  "勇敢的",
+                  "美味的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "The redwood is ___ tree in the forest.",
+                "opts": [
+                  "taller",
+                  "the tallest",
+                  "tall",
+                  "most tall"
+                ],
+                "answer": 1,
+                "point": "语法-最高级",
+                "dim": "grammar"
+              },
+              {
+                "q": "「pollen」的意思是？",
+                "opts": [
+                  "翅膀",
+                  "花粉",
+                  "海洋",
+                  "行星"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Among all the animals, the ant is one of ___ workers.",
+                "opts": [
+                  "the busiest",
+                  "busy",
+                  "busier",
+                  "the most busy"
+                ],
+                "answer": 0,
+                "point": "语法-最高级",
+                "dim": "grammar"
+              },
+              {
+                "q": "「ocean」的意思是？",
+                "opts": [
+                  "森林",
+                  "沙漠",
+                  "行星",
+                  "海洋"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "This is ___ interesting plant in the book.",
+                "opts": [
+                  "the more",
+                  "most",
+                  "the most",
+                  "more"
+                ],
+                "answer": 2,
+                "point": "语法-most最高级",
+                "dim": "grammar"
+              },
+              {
+                "q": "「lively」的意思是？",
+                "opts": [
+                  "失望的",
+                  "生机勃勃的",
+                  "折叠式的",
+                  "微小的"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "The cheetah is the fastest animal on land.",
+                "opts": [
+                  "The cheetah runs faster than any other land animal.",
+                  "The cheetah is the slowest land animal.",
+                  "The cheetah lives in the ocean.",
+                  "The cheetah cannot run at all."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Bamboo is one of the most useful plants in the world.",
+                "opts": [
+                  "Bamboo is useless to people.",
+                  "Bamboo is among the most useful plants.",
+                  "Bamboo only grows in water.",
+                  "Bamboo is the rarest plant."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Bees carry pollen from flower to flower.",
+                "opts": [
+                  "Bees never visit flowers.",
+                  "Bees eat the flowers completely.",
+                  "Bees move pollen between flowers.",
+                  "Bees sleep inside the honey."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "The blue whale is the biggest animal in the ocean.",
+                "opts": [
+                  "The blue whale is a tiny fish.",
+                  "The blue whale lives on land.",
+                  "The blue whale eats bamboo.",
+                  "No ocean animal is larger than the blue whale."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "This butterfly has the most colourful wings I have ever seen.",
+                "opts": [
+                  "The butterfly's wings are very colourful.",
+                  "The butterfly has no wings.",
+                  "The butterfly is grey and dull.",
+                  "The butterfly cannot fly."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The redwood is one of the tallest trees on the planet.",
+                "opts": [
+                  "The redwood is the shortest plant.",
+                  "The redwood is among the tallest trees.",
+                  "The redwood grows under the sea.",
+                  "The redwood has no leaves."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u5",
@@ -957,11 +2516,228 @@
             "title": "What a Delicious Meal!",
             "cn": "多么美味的一餐",
             "emoji": "🍽️",
-            "available": false,
+            "available": true,
             "bigQuestion": "Why do we learn to cook?",
             "pronunciation": "/əʊ/ /aʊ/ /ɪə/ /eə/ /ʊə/ + 连缀;语调停顿",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "pepper",
+                "cn": "胡椒粉；菜椒",
+                "chunks": [
+                  {
+                    "en": "black pepper",
+                    "cn": "黑胡椒粉"
+                  },
+                  {
+                    "en": "add some pepper",
+                    "cn": "加些胡椒粉"
+                  },
+                  {
+                    "en": "salt and pepper",
+                    "cn": "盐和胡椒"
+                  }
+                ]
+              },
+              {
+                "en": "mix",
+                "cn": "（使）混合；调配",
+                "chunks": [
+                  {
+                    "en": "mix the flour",
+                    "cn": "混合面粉"
+                  },
+                  {
+                    "en": "mix well",
+                    "cn": "充分混合"
+                  },
+                  {
+                    "en": "mix with water",
+                    "cn": "和水混合"
+                  }
+                ]
+              },
+              {
+                "en": "bake",
+                "cn": "烘焙",
+                "chunks": [
+                  {
+                    "en": "bake a cake",
+                    "cn": "烤蛋糕"
+                  },
+                  {
+                    "en": "bake bread",
+                    "cn": "烤面包"
+                  },
+                  {
+                    "en": "bake in the oven",
+                    "cn": "在烤箱里烘焙"
+                  }
+                ]
+              },
+              {
+                "en": "oven",
+                "cn": "烤箱；烤炉",
+                "chunks": [
+                  {
+                    "en": "hot oven",
+                    "cn": "高温烤箱"
+                  },
+                  {
+                    "en": "put in the oven",
+                    "cn": "放进烤箱"
+                  },
+                  {
+                    "en": "turn on the oven",
+                    "cn": "打开烤箱"
+                  }
+                ]
+              },
+              {
+                "en": "flour",
+                "cn": "面粉",
+                "chunks": [
+                  {
+                    "en": "a bag of flour",
+                    "cn": "一袋面粉"
+                  },
+                  {
+                    "en": "add the flour",
+                    "cn": "加入面粉"
+                  },
+                  {
+                    "en": "white flour",
+                    "cn": "白面粉"
+                  }
+                ]
+              },
+              {
+                "en": "boil",
+                "cn": "煮沸；烧开",
+                "chunks": [
+                  {
+                    "en": "boil the water",
+                    "cn": "把水烧开"
+                  },
+                  {
+                    "en": "boil an egg",
+                    "cn": "煮鸡蛋"
+                  },
+                  {
+                    "en": "boil for ten minutes",
+                    "cn": "煮十分钟"
+                  }
+                ]
+              },
+              {
+                "en": "butter",
+                "cn": "黄油",
+                "chunks": [
+                  {
+                    "en": "some butter",
+                    "cn": "一些黄油"
+                  },
+                  {
+                    "en": "melt the butter",
+                    "cn": "融化黄油"
+                  },
+                  {
+                    "en": "bread and butter",
+                    "cn": "黄油面包"
+                  }
+                ]
+              },
+              {
+                "en": "cheese",
+                "cn": "奶酪；干酪",
+                "chunks": [
+                  {
+                    "en": "a piece of cheese",
+                    "cn": "一块奶酪"
+                  },
+                  {
+                    "en": "add the cheese",
+                    "cn": "加入奶酪"
+                  },
+                  {
+                    "en": "cheese pizza",
+                    "cn": "奶酪披萨"
+                  }
+                ]
+              },
+              {
+                "en": "heat",
+                "cn": "加热；变热",
+                "chunks": [
+                  {
+                    "en": "heat the oil",
+                    "cn": "加热食用油"
+                  },
+                  {
+                    "en": "heat up the soup",
+                    "cn": "加热汤"
+                  },
+                  {
+                    "en": "low heat",
+                    "cn": "小火"
+                  }
+                ]
+              },
+              {
+                "en": "oil",
+                "cn": "食用油",
+                "chunks": [
+                  {
+                    "en": "some oil",
+                    "cn": "一些食用油"
+                  },
+                  {
+                    "en": "pour in the oil",
+                    "cn": "倒入食用油"
+                  },
+                  {
+                    "en": "hot oil",
+                    "cn": "热油"
+                  }
+                ]
+              },
+              {
+                "en": "ingredient",
+                "cn": "食材；成分",
+                "chunks": [
+                  {
+                    "en": "fresh ingredients",
+                    "cn": "新鲜食材"
+                  },
+                  {
+                    "en": "the main ingredient",
+                    "cn": "主要食材"
+                  },
+                  {
+                    "en": "mix the ingredients",
+                    "cn": "混合食材"
+                  }
+                ]
+              },
+              {
+                "en": "recipe",
+                "cn": "食谱；烹饪法",
+                "chunks": [
+                  {
+                    "en": "a simple recipe",
+                    "cn": "一个简单的食谱"
+                  },
+                  {
+                    "en": "follow the recipe",
+                    "cn": "按照食谱做"
+                  },
+                  {
+                    "en": "a secret recipe",
+                    "cn": "一个秘方"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1031,29 +2807,330 @@
             ],
             "grammarTitle": "感叹句与可数/不可数名词",
             "grammarCode": "g8a-u5-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "____ delicious meal it is!",
+                "opts": [
+                  "How",
+                  "What a",
+                  "What",
+                  "How a"
+                ],
+                "answer": 1,
+                "point": "感叹句 What a+形容词+可数名词",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ sweet the pie smells!",
+                "opts": [
+                  "What",
+                  "What a",
+                  "How",
+                  "How a"
+                ],
+                "answer": 2,
+                "point": "感叹句 How+形容词",
+                "dim": "grammar"
+              },
+              {
+                "q": "We need a little ____ to make the cake.",
+                "opts": [
+                  "flours",
+                  "flour",
+                  "flowers",
+                  "a flour"
+                ],
+                "answer": 1,
+                "point": "不可数名词不加 s",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ wonderful ingredients these are!",
+                "opts": [
+                  "How",
+                  "What a",
+                  "What",
+                  "How a"
+                ],
+                "answer": 2,
+                "point": "感叹句 What+形容词+可数名词复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "How many ____ do we need for the soup?",
+                "opts": [
+                  "pepper",
+                  "oil",
+                  "butter",
+                  "eggs"
+                ],
+                "answer": 3,
+                "point": "可数名词与 how many 搭配",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "What a wonderful smell came from the kitchen last Sunday! My grandma was making her famous pumpkin pie. \"Cooking is easy,\" she said. \"You just need a good recipe and fresh ingredients.\" First, she mixed flour and butter to make the crust. How soft it was! Then she added pumpkin, eggs and a little cinnamon. \"What a sweet smell!\" I cried. She poured the mixture into a pan and baked it in the hot oven. Twenty minutes later, the pie was ready. How delicious it looked! We ate it together and shared happy memories. \"What a perfect afternoon!\" Grandma smiled. Now I know why we learn to cook. Cooking brings a family closer and turns simple food into sweet love.",
+              "passageCn": "上周日，厨房里飘来多么美妙的香味啊！我奶奶正在做她那有名的南瓜派。“做饭很简单，”她说，“你只需要一份好食谱和新鲜的食材。”首先，她把面粉和黄油混合做派皮。它多软啊！然后她加入南瓜、鸡蛋和一点肉桂。“多甜的香味啊！”我喊道。她把混合物倒进烤盘，放进高温烤箱里烘焙。二十分钟后，派做好了。它看起来多美味啊！我们一起吃，分享着快乐的回忆。“多么完美的下午啊！”奶奶笑着说。现在我明白了我们为什么要学做饭。做饭让一家人更亲近，把简单的食物变成甜蜜的爱。",
+              "questions": [
+                {
+                  "q": "What did Grandma make?",
+                  "opts": [
+                    "Steamed fish",
+                    "Pumpkin pie",
+                    "Hot and sour soup",
+                    "Pancakes"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What did she use to make the crust?",
+                  "opts": [
+                    "Pumpkin and eggs",
+                    "Cheese and oil",
+                    "Flour and butter",
+                    "Rice and pepper"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why does the writer think we learn to cook?",
+                  "opts": [
+                    "To win prizes",
+                    "To save money",
+                    "To become famous",
+                    "To bring the family closer"
+                  ],
+                  "answer": 3,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "My Favorite Dish",
+              "prompt": "Write a short recipe to tell others how to make your favorite dish. Use exclamatory sentences (What.../How...) to show your feelings about the food and cooking.",
+              "promptCn": "写一份简短的食谱，告诉别人如何做你最喜欢的菜。用感叹句（What.../How...）来表达你对食物和烹饪的感受。",
+              "opener": "What a delicious dish my favorite food is! Let me show you how to make it.",
+              "sampleWords": [
+                "ingredient",
+                "mix",
+                "heat",
+                "oil",
+                "boil",
+                "recipe",
+                "oven",
+                "bake"
+              ],
+              "cards": [
+                {
+                  "key": "prepare",
+                  "labelCn": "准备食材",
+                  "hint": "如 First, get the ingredients ready"
+                },
+                {
+                  "key": "cook",
+                  "labelCn": "烹饪步骤",
+                  "hint": "如 Then heat the oil and mix..."
+                },
+                {
+                  "key": "feel",
+                  "labelCn": "表达感受",
+                  "hint": "如 What a tasty meal it is!"
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "What a delicious dish this is! {prepare}",
+                  "First, I get all the ingredients ready. {prepare}",
+                  "I need some flour, butter and oil. {cook}",
+                  "How easy it is to cook! {feel}"
+                ],
+                "l2": [
+                  "First, get the fresh ingredients ready, such as flour and butter. {prepare}",
+                  "Next, heat some oil in the pan and mix the ingredients well. {cook}",
+                  "Then put it into the hot oven and bake it for twenty minutes. {cook}",
+                  "How wonderful it smells! {feel}"
+                ],
+                "l3": [
+                  "My favorite dish is easy to make if you follow the recipe carefully. {prepare}",
+                  "First, get all the fresh ingredients ready, then heat the oil and mix the flour with butter. {cook}",
+                  "Next, pour the mixture into a pan and bake it in the hot oven until it turns golden. {cook}",
+                  "What a delicious meal it is! Now I know why we learn to cook. {feel}"
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "next",
+                "then",
+                "finally"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「ingredient」的意思是？",
+                "opts": [
+                  "食谱",
+                  "食材；成分",
+                  "烤箱",
+                  "碗"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「recipe」的意思是？",
+                "opts": [
+                  "回忆",
+                  "食谱；烹饪法",
+                  "胡椒粉",
+                  "奶酪"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bake」的意思是？",
+                "opts": [
+                  "切碎",
+                  "煮沸",
+                  "烘焙",
+                  "混合"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「flour」的意思是？",
+                "opts": [
+                  "花",
+                  "面粉",
+                  "食用油",
+                  "黄油"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "____ tasty the soup is! 选择正确的感叹词。",
+                "opts": [
+                  "What a",
+                  "What",
+                  "How",
+                  "How a"
+                ],
+                "answer": 2,
+                "point": "感叹句 How+形容词",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ nice recipe this is! 选择正确的感叹词。",
+                "opts": [
+                  "How",
+                  "What a",
+                  "What",
+                  "How a"
+                ],
+                "answer": 1,
+                "point": "感叹句 What a+可数名词",
+                "dim": "grammar"
+              },
+              {
+                "q": "Which word is uncountable? 哪个是不可数名词？",
+                "opts": [
+                  "egg",
+                  "bowl",
+                  "butter",
+                  "pan"
+                ],
+                "answer": 2,
+                "point": "可数/不可数名词",
+                "dim": "grammar"
+              },
+              {
+                "q": "「heat」的意思是？",
+                "opts": [
+                  "加热；变热",
+                  "出生",
+                  "岛",
+                  "梦想"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "First, heat some oil in the pan.",
+                "opts": [
+                  "You should heat oil in the pan first.",
+                  "You should add cold water first.",
+                  "You should turn off the oven first.",
+                  "You should wash the bowl first."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "What a delicious cake you baked!",
+                "opts": [
+                  "The cake tastes terrible.",
+                  "The cake you baked is very delicious.",
+                  "You bought the cake in a shop.",
+                  "The cake is too small."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Don't forget to mix the flour with butter.",
+                "opts": [
+                  "You should boil the flour.",
+                  "You should throw away the butter.",
+                  "You should mix the flour and butter together.",
+                  "You should freeze the flour."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "How easy this recipe is!",
+                "opts": [
+                  "The recipe is very hard.",
+                  "The recipe is lost.",
+                  "There is no recipe.",
+                  "The recipe is very easy."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "We need some cheese and a little pepper.",
+                "opts": [
+                  "We need cheese and a little pepper.",
+                  "We need only sugar.",
+                  "We need a lot of meat.",
+                  "We need no ingredients."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Put the pie into the hot oven for twenty minutes.",
+                "opts": [
+                  "Eat the pie right now.",
+                  "Bake the pie in the oven for twenty minutes.",
+                  "Put the pie in the fridge.",
+                  "Cut the pie into ten pieces."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u6",
@@ -1063,11 +3140,228 @@
             "title": "When Tomorrow Comes",
             "cn": "当明天来临",
             "emoji": "🔮",
-            "available": false,
+            "available": true,
             "bigQuestion": "What will the future look like?",
             "pronunciation": "/h/ /w/ /θ/ /ð/ /k/ /kw/ /ʃ/ /ʒ/;弱读",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "engineer",
+                "cn": "工程师；技师",
+                "chunks": [
+                  {
+                    "en": "a software engineer",
+                    "cn": "一名软件工程师"
+                  },
+                  {
+                    "en": "become an engineer",
+                    "cn": "成为一名工程师"
+                  },
+                  {
+                    "en": "work as an engineer",
+                    "cn": "当工程师"
+                  }
+                ]
+              },
+              {
+                "en": "fashion",
+                "cn": "时装业；时尚",
+                "chunks": [
+                  {
+                    "en": "the fashion industry",
+                    "cn": "时装业"
+                  },
+                  {
+                    "en": "in fashion",
+                    "cn": "流行的"
+                  },
+                  {
+                    "en": "a fashion show",
+                    "cn": "一场时装秀"
+                  }
+                ]
+              },
+              {
+                "en": "designer",
+                "cn": "设计师",
+                "chunks": [
+                  {
+                    "en": "a famous designer",
+                    "cn": "一位著名设计师"
+                  },
+                  {
+                    "en": "a fashion designer",
+                    "cn": "一名时装设计师"
+                  },
+                  {
+                    "en": "a game designer",
+                    "cn": "一名游戏设计师"
+                  }
+                ]
+              },
+              {
+                "en": "director",
+                "cn": "导演；主任；董事",
+                "chunks": [
+                  {
+                    "en": "a film director",
+                    "cn": "一名电影导演"
+                  },
+                  {
+                    "en": "a young director",
+                    "cn": "一位年轻导演"
+                  },
+                  {
+                    "en": "the company director",
+                    "cn": "公司董事"
+                  }
+                ]
+              },
+              {
+                "en": "musician",
+                "cn": "音乐家；乐师",
+                "chunks": [
+                  {
+                    "en": "a talented musician",
+                    "cn": "一位有才华的音乐家"
+                  },
+                  {
+                    "en": "a street musician",
+                    "cn": "街头音乐家"
+                  },
+                  {
+                    "en": "a great musician",
+                    "cn": "一位伟大的音乐家"
+                  }
+                ]
+              },
+              {
+                "en": "AI",
+                "cn": "人工智能",
+                "chunks": [
+                  {
+                    "en": "AI technology",
+                    "cn": "人工智能技术"
+                  },
+                  {
+                    "en": "use AI",
+                    "cn": "使用人工智能"
+                  },
+                  {
+                    "en": "AI robots",
+                    "cn": "人工智能机器人"
+                  }
+                ]
+              },
+              {
+                "en": "athlete",
+                "cn": "运动员",
+                "chunks": [
+                  {
+                    "en": "a top athlete",
+                    "cn": "一名顶尖运动员"
+                  },
+                  {
+                    "en": "a young athlete",
+                    "cn": "一名年轻运动员"
+                  },
+                  {
+                    "en": "train as an athlete",
+                    "cn": "作为运动员训练"
+                  }
+                ]
+              },
+              {
+                "en": "photographer",
+                "cn": "摄影师；拍照者",
+                "chunks": [
+                  {
+                    "en": "a famous photographer",
+                    "cn": "一位著名摄影师"
+                  },
+                  {
+                    "en": "become a photographer",
+                    "cn": "成为摄影师"
+                  },
+                  {
+                    "en": "a wildlife photographer",
+                    "cn": "一名野生动物摄影师"
+                  }
+                ]
+              },
+              {
+                "en": "painter",
+                "cn": "画家；油漆匠",
+                "chunks": [
+                  {
+                    "en": "a great painter",
+                    "cn": "一位伟大的画家"
+                  },
+                  {
+                    "en": "a famous painter",
+                    "cn": "一位著名画家"
+                  },
+                  {
+                    "en": "work as a painter",
+                    "cn": "当画家"
+                  }
+                ]
+              },
+              {
+                "en": "lawyer",
+                "cn": "律师",
+                "chunks": [
+                  {
+                    "en": "a good lawyer",
+                    "cn": "一位好律师"
+                  },
+                  {
+                    "en": "become a lawyer",
+                    "cn": "成为律师"
+                  },
+                  {
+                    "en": "a busy lawyer",
+                    "cn": "一位忙碌的律师"
+                  }
+                ]
+              },
+              {
+                "en": "achieve",
+                "cn": "（经过努力）达到；完成",
+                "chunks": [
+                  {
+                    "en": "achieve your dream",
+                    "cn": "实现你的梦想"
+                  },
+                  {
+                    "en": "achieve a goal",
+                    "cn": "达成目标"
+                  },
+                  {
+                    "en": "achieve success",
+                    "cn": "取得成功"
+                  }
+                ]
+              },
+              {
+                "en": "design",
+                "cn": "设计；计划",
+                "chunks": [
+                  {
+                    "en": "design a bridge",
+                    "cn": "设计一座桥"
+                  },
+                  {
+                    "en": "design clothes",
+                    "cn": "设计服装"
+                  },
+                  {
+                    "en": "design a robot",
+                    "cn": "设计一个机器人"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1137,29 +3431,331 @@
             ],
             "grammarTitle": "be going to 与不定式作宾语",
             "grammarCode": "g8a-u6-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "My brother ____ study computer science next year.",
+                "opts": [
+                  "is going to",
+                  "are going to",
+                  "going to",
+                  "goes to"
+                ],
+                "answer": 0,
+                "point": "be going to 表计划",
+                "dim": "grammar"
+              },
+              {
+                "q": "She has decided ____ a famous designer.",
+                "opts": [
+                  "become",
+                  "becoming",
+                  "to become",
+                  "becomes"
+                ],
+                "answer": 2,
+                "point": "不定式作宾语",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ they going to visit the AI museum tomorrow?",
+                "opts": [
+                  "Is",
+                  "Do",
+                  "Are",
+                  "Does"
+                ],
+                "answer": 2,
+                "point": "be going to 一般疑问句",
+                "dim": "grammar"
+              },
+              {
+                "q": "The young athlete wants ____ a gold medal in the future.",
+                "opts": [
+                  "win",
+                  "to win",
+                  "winning",
+                  "wins"
+                ],
+                "answer": 1,
+                "point": "不定式作宾语",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ____ buy any new robots this year; we have enough.",
+                "opts": [
+                  "are going to",
+                  "aren't going to",
+                  "is going to",
+                  "don't going to"
+                ],
+                "answer": 1,
+                "point": "be going to 否定句",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "What is the future going to look like? Many people want to know. In twenty years, AI is going to change the way we live and work. Robots are going to help us at home and in hospitals. Some old jobs are going to disappear, but many new ones are going to appear. Tom wants to be an engineer. He is going to design clever robots and smart bridges. His sister Lily hopes to become a fashion designer. She has decided to study hard and learn to draw well. \"I am going to work for myself one day,\" she says. Nobody knows exactly what is coming, but we can choose to dream big and try our best to achieve our goals.",
+              "passageCn": "未来会是什么样子？许多人都想知道。二十年后，人工智能将会改变我们生活和工作的方式。机器人将会在家里和医院里帮助我们。一些旧的工作将会消失，但许多新的工作将会出现。汤姆想成为一名工程师。他打算设计聪明的机器人和智能的桥梁。他的妹妹莉莉希望成为一名时装设计师。她已经决定努力学习并学着把画画好。她说：“总有一天我要为自己工作。”没有人确切知道未来会怎样，但我们可以选择敢于梦想，并尽最大努力去实现我们的目标。",
+              "questions": [
+                {
+                  "q": "What is AI going to do in twenty years according to the passage?",
+                  "opts": [
+                    "Make all jobs disappear",
+                    "Change the way we live and work",
+                    "Stop people from dreaming",
+                    "Replace every human worker"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does Tom want to be?",
+                  "opts": [
+                    "A fashion designer",
+                    "A musician",
+                    "An engineer",
+                    "A photographer"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we learn about Lily from the passage?",
+                  "opts": [
+                    "She has given up her dream",
+                    "She wants to work for a big company forever",
+                    "She is hard-working and has clear goals",
+                    "She is not interested in fashion"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "My Life in 20 Years",
+              "prompt": "What is your life going to look like in 20 years? Write about your future job, your home, and the world around you. Use 'be going to' for plans, and try some infinitives (want to / decide to / learn to do).",
+              "promptCn": "二十年后你的生活会是什么样？写一段短文，谈谈你未来的工作、你的家以及周围的世界。用 be going to 谈计划，并尽量用一些不定式（want to / decide to / learn to do）。",
+              "opener": "In twenty years, my life is going to be very different.",
+              "sampleWords": [
+                "engineer",
+                "designer",
+                "AI",
+                "achieve",
+                "design",
+                "athlete",
+                "musician",
+                "photographer"
+              ],
+              "cards": [
+                {
+                  "key": "job",
+                  "labelCn": "未来的工作",
+                  "hint": "如 I am going to be an engineer / designer"
+                },
+                {
+                  "key": "plan",
+                  "labelCn": "你的计划",
+                  "hint": "如 I want to learn to ... / I have decided to ..."
+                },
+                {
+                  "key": "world",
+                  "labelCn": "未来的世界",
+                  "hint": "如 AI and robots are going to help people"
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "In twenty years, I am going to be a/an {job}.",
+                  "I want to {plan} to reach my dream.",
+                  "AI and robots are going to change the {world}.",
+                  "I am going to try my best to achieve my goals."
+                ],
+                "l2": [
+                  "When I grow up, I am going to work as a/an {job} in a big city.",
+                  "Right now I have decided to {plan} every day.",
+                  "In the future, AI is going to help us in the {world}.",
+                  "I am going to learn to be confident and never give up."
+                ],
+                "l3": [
+                  "In twenty years, I am going to become a successful {job} and design amazing things.",
+                  "These days I want to {plan}, because I know it will help me later.",
+                  "I believe AI and robots are going to make the {world} smarter and safer.",
+                  "No matter what happens, I am going to keep on working hard to achieve my dreams."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "then",
+                "also",
+                "in the future",
+                "finally"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「engineer」的意思是？",
+                "opts": [
+                  "律师",
+                  "工程师",
+                  "音乐家",
+                  "画家"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「achieve」的意思是？",
+                "opts": [
+                  "（经过努力）达到；完成",
+                  "设计",
+                  "错过",
+                  "介绍"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「designer」的意思是？",
+                "opts": [
+                  "运动员",
+                  "导演",
+                  "设计师",
+                  "工程师"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "They are going to ____ a new robot for the show.",
+                "opts": [
+                  "designs",
+                  "designing",
+                  "designed",
+                  "design"
+                ],
+                "answer": 3,
+                "point": "be going to + 动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "「photographer」的意思是？",
+                "opts": [
+                  "摄影师",
+                  "律师",
+                  "音乐家",
+                  "导演"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "He learned ____ the piano when he was young.",
+                "opts": [
+                  "to play",
+                  "play",
+                  "playing",
+                  "plays"
+                ],
+                "answer": 0,
+                "point": "不定式作宾语",
+                "dim": "grammar"
+              },
+              {
+                "q": "「musician」的意思是？",
+                "opts": [
+                  "画家",
+                  "运动员",
+                  "音乐家",
+                  "律师"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "What ____ you going to be in the future?",
+                "opts": [
+                  "is",
+                  "do",
+                  "does",
+                  "are"
+                ],
+                "answer": 3,
+                "point": "be going to 特殊疑问句",
+                "dim": "grammar"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "I am going to be an engineer when I grow up.",
+                "opts": [
+                  "He plans to become an engineer in the future.",
+                  "He is already an engineer now.",
+                  "He wants to be a musician.",
+                  "He doesn't know what to do."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "In twenty years, robots are going to do most of the housework.",
+                "opts": [
+                  "People will do all the housework alone.",
+                  "Robots will do little work at home.",
+                  "Robots are going to help with most housework.",
+                  "Housework will disappear completely."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "My sister has decided to learn to take great photos.",
+                "opts": [
+                  "She wants to be a lawyer.",
+                  "She has decided to learn photography.",
+                  "She hates taking photos.",
+                  "She is going to stop studying."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "AI is going to change the way we study at school.",
+                "opts": [
+                  "School will close because of AI.",
+                  "Students will stop using AI.",
+                  "AI will not affect studying.",
+                  "AI is going to change how we study."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "I want to become a fashion designer and work for myself.",
+                "opts": [
+                  "She hopes to be a fashion designer and be her own boss.",
+                  "She wants to work for a big company.",
+                  "She is going to be an athlete.",
+                  "She has no dream at all."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "We are going to try our best to achieve our dreams.",
+                "opts": [
+                  "They have given up their dreams.",
+                  "They are going to work hard to reach their dreams.",
+                  "They never make any plans.",
+                  "They think dreams are useless."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u7",
@@ -1169,11 +3765,228 @@
             "title": "Plan for Yourself",
             "cn": "为自己制订计划",
             "emoji": "📅",
-            "available": false,
+            "available": true,
             "bigQuestion": "Why do we need plans?",
             "pronunciation": "/n/ /ŋ/ /tʃ/ /dʒ/ /f/ /r/;语调",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "prediction",
+                "cn": "预测；预言",
+                "chunks": [
+                  {
+                    "en": "make a prediction",
+                    "cn": "做出预测"
+                  },
+                  {
+                    "en": "a correct prediction",
+                    "cn": "一个正确的预测"
+                  },
+                  {
+                    "en": "weather prediction",
+                    "cn": "天气预测"
+                  }
+                ]
+              },
+              {
+                "en": "positive",
+                "cn": "乐观的；积极的",
+                "chunks": [
+                  {
+                    "en": "a positive attitude",
+                    "cn": "积极的态度"
+                  },
+                  {
+                    "en": "stay positive",
+                    "cn": "保持乐观"
+                  },
+                  {
+                    "en": "positive about life",
+                    "cn": "对生活乐观"
+                  }
+                ]
+              },
+              {
+                "en": "develop",
+                "cn": "增强；发展",
+                "chunks": [
+                  {
+                    "en": "develop a skill",
+                    "cn": "培养一项技能"
+                  },
+                  {
+                    "en": "develop good habits",
+                    "cn": "养成好习惯"
+                  },
+                  {
+                    "en": "develop my talent",
+                    "cn": "发展我的才能"
+                  }
+                ]
+              },
+              {
+                "en": "challenge",
+                "cn": "挑战",
+                "chunks": [
+                  {
+                    "en": "face a challenge",
+                    "cn": "面对挑战"
+                  },
+                  {
+                    "en": "a big challenge",
+                    "cn": "一个巨大的挑战"
+                  },
+                  {
+                    "en": "take on a challenge",
+                    "cn": "接受挑战"
+                  }
+                ]
+              },
+              {
+                "en": "task",
+                "cn": "任务；工作",
+                "chunks": [
+                  {
+                    "en": "finish the task",
+                    "cn": "完成任务"
+                  },
+                  {
+                    "en": "a difficult task",
+                    "cn": "一项艰巨的任务"
+                  },
+                  {
+                    "en": "a daily task",
+                    "cn": "日常任务"
+                  }
+                ]
+              },
+              {
+                "en": "quality",
+                "cn": "素质；品质",
+                "chunks": [
+                  {
+                    "en": "a good quality",
+                    "cn": "一种好品质"
+                  },
+                  {
+                    "en": "improve the quality",
+                    "cn": "提高质量"
+                  },
+                  {
+                    "en": "quality of life",
+                    "cn": "生活质量"
+                  }
+                ]
+              },
+              {
+                "en": "valuable",
+                "cn": "宝贵的；很有用的",
+                "chunks": [
+                  {
+                    "en": "valuable advice",
+                    "cn": "宝贵的建议"
+                  },
+                  {
+                    "en": "a valuable lesson",
+                    "cn": "宝贵的一课"
+                  },
+                  {
+                    "en": "valuable time",
+                    "cn": "宝贵的时间"
+                  }
+                ]
+              },
+              {
+                "en": "accept",
+                "cn": "接受",
+                "chunks": [
+                  {
+                    "en": "accept the truth",
+                    "cn": "接受事实"
+                  },
+                  {
+                    "en": "accept help",
+                    "cn": "接受帮助"
+                  },
+                  {
+                    "en": "accept a challenge",
+                    "cn": "接受挑战"
+                  }
+                ]
+              },
+              {
+                "en": "creative",
+                "cn": "有创造力的",
+                "chunks": [
+                  {
+                    "en": "a creative idea",
+                    "cn": "一个有创意的主意"
+                  },
+                  {
+                    "en": "be creative",
+                    "cn": "有创造力"
+                  },
+                  {
+                    "en": "creative thinking",
+                    "cn": "创造性思维"
+                  }
+                ]
+              },
+              {
+                "en": "depend",
+                "cn": "取决于；依靠",
+                "chunks": [
+                  {
+                    "en": "depend on yourself",
+                    "cn": "依靠你自己"
+                  },
+                  {
+                    "en": "depend on hard work",
+                    "cn": "取决于努力"
+                  },
+                  {
+                    "en": "it depends",
+                    "cn": "那要看情况"
+                  }
+                ]
+              },
+              {
+                "en": "expert",
+                "cn": "专家；行家",
+                "chunks": [
+                  {
+                    "en": "become an expert",
+                    "cn": "成为专家"
+                  },
+                  {
+                    "en": "a maths expert",
+                    "cn": "数学专家"
+                  },
+                  {
+                    "en": "ask an expert",
+                    "cn": "请教专家"
+                  }
+                ]
+              },
+              {
+                "en": "achieve",
+                "cn": "（经过努力）达到；完成",
+                "chunks": [
+                  {
+                    "en": "achieve a goal",
+                    "cn": "达成目标"
+                  },
+                  {
+                    "en": "achieve your dream",
+                    "cn": "实现你的梦想"
+                  },
+                  {
+                    "en": "achieve more",
+                    "cn": "取得更多成就"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1243,29 +4056,332 @@
             ],
             "grammarTitle": "一般将来时 will",
             "grammarCode": "g8a-u7-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "I ___ work harder next term.",
+                "opts": [
+                  "am",
+                  "will",
+                  "was",
+                  "did"
+                ],
+                "answer": 1,
+                "point": "will 表将来",
+                "dim": "grammar"
+              },
+              {
+                "q": "She ___ visit her grandparents this weekend.",
+                "opts": [
+                  "will",
+                  "wills",
+                  "willing",
+                  "is will"
+                ],
+                "answer": 0,
+                "point": "will 后接动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ___ give up our dream.",
+                "opts": [
+                  "will",
+                  "will not",
+                  "are not",
+                  "do not"
+                ],
+                "answer": 1,
+                "point": "will 否定形式",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ you help me with my plan tomorrow?",
+                "opts": [
+                  "Do",
+                  "Are",
+                  "Will",
+                  "Did"
+                ],
+                "answer": 2,
+                "point": "will 一般疑问句",
+                "dim": "grammar"
+              },
+              {
+                "q": "They will ___ to the new school next year.",
+                "opts": [
+                  "went",
+                  "going",
+                  "goes",
+                  "go"
+                ],
+                "answer": 3,
+                "point": "will 后接动词原形",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "A new school year is starting, and I have made a plan for myself. This year, I will work harder than before. My biggest goal is to develop a good study habit, so I will read for thirty minutes every evening. I know it will be a real challenge, but I will stay positive and never give up. I will also learn to play the guitar, because I want to be more creative. My parents say success depends on hard work, not luck. I believe this is valuable advice. I will not waste my time. If I keep my plan, I think I will become a better person by the end of the year.",
+              "passageCn": "新学年开始了，我为自己制订了一个计划。今年，我会比以前更努力。我最大的目标是养成良好的学习习惯，所以我每天晚上会读书三十分钟。我知道这会是一个真正的挑战，但我会保持乐观，绝不放弃。我还会学弹吉他，因为我想更有创造力。我父母说成功取决于努力，而不是运气。我认为这是宝贵的建议。我不会浪费时间。如果我坚持我的计划，我想到年底我会成为一个更好的人。",
+              "questions": [
+                {
+                  "q": "What is the writer's biggest goal this year?",
+                  "opts": [
+                    "To play computer games",
+                    "To develop a good study habit",
+                    "To travel around the world",
+                    "To make more money"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why will the writer learn the guitar?",
+                  "opts": [
+                    "Because the teacher asks her to",
+                    "Because she wants to be more creative",
+                    "Because her friends play it",
+                    "Because it is easy"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we learn from the passage?",
+                  "opts": [
+                    "The writer thinks success comes from luck",
+                    "The writer will give up when it is hard",
+                    "The writer believes hard work matters most",
+                    "The writer has no plan for the year"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "My Plans for This Year",
+              "prompt": "Write about your plans and resolutions for this year. Use 'will' to talk about what you are going to do. Include a goal, how you will reach it, and a challenge you may face.",
+              "promptCn": "写一写你今年的计划和决心。用 will 谈谈你将要做的事，包括一个目标、你将如何实现它，以及你可能面对的挑战。",
+              "opener": "A new year is starting, so I have made some plans for myself.",
+              "sampleWords": [
+                "prediction",
+                "goal",
+                "develop",
+                "challenge",
+                "positive",
+                "valuable",
+                "depend",
+                "creative"
+              ],
+              "cards": [
+                {
+                  "key": "goal",
+                  "labelCn": "我的目标",
+                  "hint": "如 My goal is to develop a good habit."
+                },
+                {
+                  "key": "action",
+                  "labelCn": "我将怎么做",
+                  "hint": "如 I will read English every day."
+                },
+                {
+                  "key": "challenge",
+                  "labelCn": "困难与态度",
+                  "hint": "如 It will be a challenge, but I will stay positive."
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "My main {goal} is to do better at school.",
+                  "I {action} study harder this year.",
+                  "This {challenge} will not be easy for me.",
+                  "But I will keep a positive attitude every day."
+                ],
+                "l2": [
+                  "My biggest {goal} is to develop a useful skill.",
+                  "To reach it, I {action} practise for an hour each day.",
+                  "The {challenge} is that I sometimes feel lazy.",
+                  "However, I will not give up, because success depends on hard work."
+                ],
+                "l3": [
+                  "This year my {goal} is to become a more creative and confident person.",
+                  "I {action} read books, learn the guitar and try new things.",
+                  "The real {challenge} is keeping my plan when I am busy or tired.",
+                  "Even so, I will stay positive, because I believe this valuable habit will change my future."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "then",
+                "because",
+                "but",
+                "so",
+                "finally"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「prediction」的意思是？",
+                "opts": [
+                  "计划",
+                  "预测；预言",
+                  "任务",
+                  "挑战"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「valuable」的意思是？",
+                "opts": [
+                  "宝贵的",
+                  "廉价的",
+                  "危险的",
+                  "简单的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「depend」的意思是？",
+                "opts": [
+                  "浪费",
+                  "取决于；依靠",
+                  "结束",
+                  "离开"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Choose the correct future sentence:",
+                "opts": [
+                  "I will worked hard.",
+                  "I will to work hard.",
+                  "I will work hard.",
+                  "I willing work hard."
+                ],
+                "answer": 2,
+                "point": "will 用法",
+                "dim": "grammar"
+              },
+              {
+                "q": "「challenge」的意思是？",
+                "opts": [
+                  "运气",
+                  "休息",
+                  "机会",
+                  "挑战"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Tomorrow we ___ start a new plan.",
+                "opts": [
+                  "will",
+                  "are",
+                  "do",
+                  "were"
+                ],
+                "answer": 0,
+                "point": "will 表将来",
+                "dim": "grammar"
+              },
+              {
+                "q": "「positive」的意思是？",
+                "opts": [
+                  "消极的",
+                  "乐观的；积极的",
+                  "懒惰的",
+                  "害怕的"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Which word means 有创造力的?",
+                "opts": [
+                  "lazy",
+                  "quiet",
+                  "creative",
+                  "tired"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "I will set a clear goal for myself this year.",
+                "opts": [
+                  "He plans to set a goal for the year.",
+                  "He has no goals at all.",
+                  "He set a goal last year.",
+                  "He will forget his goal."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "My plan is to read English every morning.",
+                "opts": [
+                  "She reads English at night.",
+                  "She plans to read English every morning.",
+                  "She never reads English.",
+                  "She reads Chinese in the morning."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "It will be a big challenge, but I will not give up.",
+                "opts": [
+                  "She thinks it is easy.",
+                  "She has already given up.",
+                  "She will keep trying though it is hard.",
+                  "She will give up soon."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "I will develop the habit of doing sports every day.",
+                "opts": [
+                  "He hates doing sports.",
+                  "He stopped doing sports.",
+                  "He does sports once a year.",
+                  "He will exercise every day."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Success depends on hard work, not luck.",
+                "opts": [
+                  "Hard work leads to success.",
+                  "Luck is the only key.",
+                  "Success needs no effort.",
+                  "Working hard is useless."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I will learn to play the guitar to be more creative.",
+                "opts": [
+                  "She can already play very well.",
+                  "She wants to be more creative.",
+                  "She will sell her guitar.",
+                  "She dislikes music."
+                ],
+                "answer": 1
+              }
+            ]
           },
           {
             "id": "g8v1_u8",
@@ -1275,11 +4391,228 @@
             "title": "Let's Communicate!",
             "cn": "让我们沟通",
             "emoji": "💬",
-            "available": false,
+            "available": true,
             "bigQuestion": "What makes good communication?",
             "pronunciation": "辅音连缀收尾;发音复习",
             "contentStatus": "TODO_待真题填充",
-            "vocabulary": [],
+            "vocabulary": [
+              {
+                "en": "communication",
+                "cn": "表达；交流",
+                "chunks": [
+                  {
+                    "en": "good communication",
+                    "cn": "良好的交流"
+                  },
+                  {
+                    "en": "face-to-face communication",
+                    "cn": "面对面交流"
+                  },
+                  {
+                    "en": "improve communication",
+                    "cn": "改善交流"
+                  }
+                ]
+              },
+              {
+                "en": "communicate",
+                "cn": "交流；沟通",
+                "chunks": [
+                  {
+                    "en": "communicate with others",
+                    "cn": "与他人交流"
+                  },
+                  {
+                    "en": "communicate clearly",
+                    "cn": "清楚地沟通"
+                  },
+                  {
+                    "en": "communicate online",
+                    "cn": "在线交流"
+                  }
+                ]
+              },
+              {
+                "en": "message",
+                "cn": "短信息；信息",
+                "chunks": [
+                  {
+                    "en": "a text message",
+                    "cn": "一条短信"
+                  },
+                  {
+                    "en": "send a message",
+                    "cn": "发送信息"
+                  },
+                  {
+                    "en": "get a message",
+                    "cn": "收到信息"
+                  }
+                ]
+              },
+              {
+                "en": "speaker",
+                "cn": "说话者；发言者",
+                "chunks": [
+                  {
+                    "en": "a good speaker",
+                    "cn": "一位优秀的发言者"
+                  },
+                  {
+                    "en": "a public speaker",
+                    "cn": "公开演讲者"
+                  },
+                  {
+                    "en": "listen to the speaker",
+                    "cn": "听发言者讲"
+                  }
+                ]
+              },
+              {
+                "en": "speech",
+                "cn": "演说；发言",
+                "chunks": [
+                  {
+                    "en": "give a speech",
+                    "cn": "做演讲"
+                  },
+                  {
+                    "en": "a short speech",
+                    "cn": "一段简短的演说"
+                  },
+                  {
+                    "en": "prepare a speech",
+                    "cn": "准备演讲"
+                  }
+                ]
+              },
+              {
+                "en": "argue",
+                "cn": "争论；争吵",
+                "chunks": [
+                  {
+                    "en": "argue with sb",
+                    "cn": "与某人争论"
+                  },
+                  {
+                    "en": "argue about money",
+                    "cn": "为钱争吵"
+                  },
+                  {
+                    "en": "stop arguing",
+                    "cn": "停止争吵"
+                  }
+                ]
+              },
+              {
+                "en": "listener",
+                "cn": "听者",
+                "chunks": [
+                  {
+                    "en": "a good listener",
+                    "cn": "一位好的倾听者"
+                  },
+                  {
+                    "en": "be a careful listener",
+                    "cn": "做认真的倾听者"
+                  },
+                  {
+                    "en": "become a listener",
+                    "cn": "成为倾听者"
+                  }
+                ]
+              },
+              {
+                "en": "attention",
+                "cn": "注意；关注",
+                "chunks": [
+                  {
+                    "en": "pay attention",
+                    "cn": "注意"
+                  },
+                  {
+                    "en": "pay attention to sb",
+                    "cn": "关注某人"
+                  },
+                  {
+                    "en": "need your attention",
+                    "cn": "需要你的关注"
+                  }
+                ]
+              },
+              {
+                "en": "sincere",
+                "cn": "真诚的；诚实的",
+                "chunks": [
+                  {
+                    "en": "a sincere smile",
+                    "cn": "真诚的微笑"
+                  },
+                  {
+                    "en": "sound sincere",
+                    "cn": "听起来真诚"
+                  },
+                  {
+                    "en": "be sincere with sb",
+                    "cn": "对某人真诚"
+                  }
+                ]
+              },
+              {
+                "en": "impolite",
+                "cn": "不礼貌的；粗鲁的",
+                "chunks": [
+                  {
+                    "en": "impolite words",
+                    "cn": "不礼貌的话"
+                  },
+                  {
+                    "en": "feel impolite",
+                    "cn": "觉得不礼貌"
+                  },
+                  {
+                    "en": "an impolite reply",
+                    "cn": "一个粗鲁的回复"
+                  }
+                ]
+              },
+              {
+                "en": "trust",
+                "cn": "信任；相信",
+                "chunks": [
+                  {
+                    "en": "trust your friends",
+                    "cn": "信任你的朋友"
+                  },
+                  {
+                    "en": "build trust",
+                    "cn": "建立信任"
+                  },
+                  {
+                    "en": "lose trust",
+                    "cn": "失去信任"
+                  }
+                ]
+              },
+              {
+                "en": "misunderstanding",
+                "cn": "误解；误会",
+                "chunks": [
+                  {
+                    "en": "a small misunderstanding",
+                    "cn": "一个小误会"
+                  },
+                  {
+                    "en": "cause a misunderstanding",
+                    "cn": "造成误解"
+                  },
+                  {
+                    "en": "clear up a misunderstanding",
+                    "cn": "消除误会"
+                  }
+                ]
+              }
+            ],
             "dialogues": [],
             "stages": [
               {
@@ -1349,29 +4682,332 @@
             ],
             "grammarTitle": "零条件句与第一条件句",
             "grammarCode": "g8a-u8-TODO",
-            "grammarQuiz": [],
+            "grammarQuiz": [
+              {
+                "q": "If you ____ to others carefully, you will understand them better.",
+                "opts": [
+                  "listen",
+                  "listened",
+                  "will listen",
+                  "listening"
+                ],
+                "answer": 0,
+                "point": "first conditional: if + 一般现在时",
+                "dim": "grammar"
+              },
+              {
+                "q": "If you keep looking at your phone, the speaker ____ you do not care.",
+                "opts": [
+                  "felt",
+                  "will feel",
+                  "feels",
+                  "feeling"
+                ],
+                "answer": 1,
+                "point": "first conditional: 主句用 will",
+                "dim": "grammar"
+              },
+              {
+                "q": "Water ____ if you heat it to 100°C.",
+                "opts": [
+                  "will boil",
+                  "boils",
+                  "boiled",
+                  "boiling"
+                ],
+                "answer": 1,
+                "point": "zero conditional: 客观事实用一般现在时",
+                "dim": "grammar"
+              },
+              {
+                "q": "If she ____ sincere, people will trust her.",
+                "opts": [
+                  "are",
+                  "is",
+                  "be",
+                  "will be"
+                ],
+                "answer": 1,
+                "point": "first conditional: if 从句主谓一致",
+                "dim": "grammar"
+              },
+              {
+                "q": "You will make new friends if you ____ to communicate every day.",
+                "opts": [
+                  "will try",
+                  "tried",
+                  "try",
+                  "trying"
+                ],
+                "answer": 2,
+                "point": "first conditional: if 从句用一般现在时",
+                "dim": "grammar"
+              }
+            ],
             "reading": {
-              "passage": "",
-              "passageCn": "",
-              "questions": []
+              "passage": "What makes good communication? First, you must be a good listener. If you really listen to others, you will understand them better. When someone is speaking, pay attention and do not look at your phone. If you keep looking at your phone, the speaker feels you do not care. Second, be sincere and polite. If you speak with a kind voice, people will trust you more. Body language is important too. If you smile, others feel comfortable around you. Online messages can be useful, but they often cause misunderstandings. If you only chat online, you may miss true feelings. So if you have something important to say, talk face to face. Good communication takes practice, but if you try every day, you will surely become better at it.",
+              "passageCn": "什么造就了良好的交流？首先，你必须做一个好的倾听者。如果你真正倾听别人，你就会更好地理解他们。当有人在说话时，要专心，不要看手机。如果你一直看手机，发言者会觉得你不在乎。其次，要真诚而有礼貌。如果你用友善的语气说话，人们会更加信任你。肢体语言也很重要。如果你微笑，别人和你在一起就会感到舒服。在线信息可能有用，但它们常常造成误解。如果你只在网上聊天，你可能会错过真实的感受。所以如果你有重要的话要说，就面对面交谈。良好的交流需要练习，但如果你每天都努力，你必定会变得更擅长它。",
+              "questions": [
+                {
+                  "q": "According to the passage, what should you do when someone is speaking?",
+                  "opts": [
+                    "Look at your phone",
+                    "Pay attention and not look at your phone",
+                    "Start arguing",
+                    "Leave the room"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Why is it better to talk face to face about important things?",
+                  "opts": [
+                    "Online messages are free",
+                    "Face-to-face talk is faster to type",
+                    "Online messages often cause misunderstandings",
+                    "Phones are not allowed"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is the writer's main idea about good communication?",
+                  "opts": [
+                    "It needs practice and effort every day",
+                    "It is easy and needs no effort",
+                    "It only happens online",
+                    "It is mainly about texting"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                }
+              ]
             },
             "writing": {
-              "topic": "",
-              "prompt": "",
-              "promptCn": "",
-              "opener": "",
-              "sampleWords": [],
-              "cards": [],
+              "topic": "Tips for Good Communication",
+              "prompt": "Write a short passage giving three tips on how to communicate well with others. Use conditional sentences (If you..., you will...) to explain what happens when people follow your tips.",
+              "promptCn": "写一篇短文，给出三条与他人良好沟通的建议。用条件句（If you..., you will...）来说明人们听从建议后会发生什么。",
+              "opener": "Good communication is important in our daily life. Here are some useful tips.",
+              "sampleWords": [
+                "communicate",
+                "listener",
+                "attention",
+                "sincere",
+                "trust",
+                "misunderstanding",
+                "speaker",
+                "argue"
+              ],
+              "cards": [
+                {
+                  "key": "listen",
+                  "labelCn": "做好的倾听者",
+                  "hint": "如 If you listen carefully, you will understand others."
+                },
+                {
+                  "key": "sincere",
+                  "labelCn": "真诚有礼貌",
+                  "hint": "如 If you are sincere, people will trust you."
+                },
+                {
+                  "key": "face",
+                  "labelCn": "重要的事面对面谈",
+                  "hint": "如 If you talk face to face, you will avoid misunderstandings."
+                }
+              ],
               "templates": {
-                "l1": [],
-                "l2": [],
-                "l3": []
+                "l1": [
+                  "First, be a good listener.",
+                  "If you {listen}, you will understand others.",
+                  "Second, be {sincere} and polite.",
+                  "Third, talk {face} about important things."
+                ],
+                "l2": [
+                  "First, be a careful listener and give people your attention.",
+                  "If you {listen}, others will feel respected.",
+                  "If you are {sincere}, people will trust you more.",
+                  "If you talk {face}, you will avoid many misunderstandings."
+                ],
+                "l3": [
+                  "Good communication starts with listening: {listen}.",
+                  "If you pay attention and stay {sincere}, people will trust and like you.",
+                  "Body language matters too, so smile and look at the speaker.",
+                  "Finally, for important things, {face}, because it shows you truly care."
+                ]
               },
-              "connectors": [],
-              "minWords": 0
+              "connectors": [
+                "first",
+                "second",
+                "third",
+                "also",
+                "if",
+                "so"
+              ],
+              "minWords": 40
             },
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "quizQuestions": [
+              {
+                "q": "「listener」的意思是？",
+                "opts": [
+                  "发言者",
+                  "听者",
+                  "陌生人",
+                  "教授"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「misunderstanding」的意思是？",
+                "opts": [
+                  "误解；误会",
+                  "交流",
+                  "信任",
+                  "机会"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sincere」的意思是？",
+                "opts": [
+                  "粗鲁的",
+                  "紧张的",
+                  "真诚的",
+                  "当地的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "\"pay attention to\" 的意思是？",
+                "opts": [
+                  "争论",
+                  "写信",
+                  "换话题",
+                  "注意；关注"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "If you ____ kindly, people will trust you.",
+                "opts": [
+                  "speak",
+                  "spoke",
+                  "will speak",
+                  "speaking"
+                ],
+                "answer": 0,
+                "point": "first conditional",
+                "dim": "grammar"
+              },
+              {
+                "q": "If the weather is hot, ice ____ quickly.",
+                "opts": [
+                  "will melt",
+                  "melts",
+                  "melted",
+                  "melting"
+                ],
+                "answer": 1,
+                "point": "zero conditional",
+                "dim": "grammar"
+              },
+              {
+                "q": "「impolite」的意思是？",
+                "opts": [
+                  "真诚的",
+                  "礼貌的",
+                  "不礼貌的；粗鲁的",
+                  "镇静的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "We ____ communicate better if we listen more.",
+                "opts": [
+                  "am",
+                  "is",
+                  "being",
+                  "will"
+                ],
+                "answer": 3,
+                "point": "first conditional: 主句 will",
+                "dim": "grammar"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "If you really listen to others, you will understand them better.",
+                "opts": [
+                  "Listening well helps you understand people more.",
+                  "Talking a lot makes you popular.",
+                  "You should never listen to others.",
+                  "Understanding people is impossible."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Please pay attention when the speaker is talking.",
+                "opts": [
+                  "You can ignore the speaker.",
+                  "You should focus when someone is speaking.",
+                  "The speaker is too loud.",
+                  "Stop the speaker from talking."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Online messages often cause misunderstandings.",
+                "opts": [
+                  "Online messages are always clear.",
+                  "Misunderstandings rarely happen online.",
+                  "Texting online can lead to confusion.",
+                  "Nobody uses online messages."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "If you smile, people will feel comfortable around you.",
+                "opts": [
+                  "Smiling makes people nervous.",
+                  "People dislike a smile.",
+                  "A smile changes nothing.",
+                  "A smile makes others feel at ease."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "It is better to talk face to face about important things.",
+                "opts": [
+                  "Important things are best discussed in person.",
+                  "You should only text important things.",
+                  "Face-to-face talk is useless.",
+                  "Never share important things."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "If you argue with your friend, you should make up later.",
+                "opts": [
+                  "Friends never argue.",
+                  "After an argument, you should make peace.",
+                  "You should keep arguing forever.",
+                  "Arguing is good for friendship."
+                ],
+                "answer": 1
+              }
+            ]
           }
         ]
       },

@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"engineer","cn":"工程师；技师","chunks":[{"en":"a software engineer","cn":"一名软件工程师"},{"en":"become an engineer","cn":"成为一名工程师"},{"en":"work as an engineer","cn":"当工程师"}]},
+  {"en":"fashion","cn":"时装业；时尚","chunks":[{"en":"the fashion industry","cn":"时装业"},{"en":"in fashion","cn":"流行的"},{"en":"a fashion show","cn":"一场时装秀"}]},
+  {"en":"designer","cn":"设计师","chunks":[{"en":"a famous designer","cn":"一位著名设计师"},{"en":"a fashion designer","cn":"一名时装设计师"},{"en":"a game designer","cn":"一名游戏设计师"}]},
+  {"en":"director","cn":"导演；主任；董事","chunks":[{"en":"a film director","cn":"一名电影导演"},{"en":"a young director","cn":"一位年轻导演"},{"en":"the company director","cn":"公司董事"}]},
+  {"en":"musician","cn":"音乐家；乐师","chunks":[{"en":"a talented musician","cn":"一位有才华的音乐家"},{"en":"a street musician","cn":"街头音乐家"},{"en":"a great musician","cn":"一位伟大的音乐家"}]},
+  {"en":"AI","cn":"人工智能","chunks":[{"en":"AI technology","cn":"人工智能技术"},{"en":"use AI","cn":"使用人工智能"},{"en":"AI robots","cn":"人工智能机器人"}]},
+  {"en":"athlete","cn":"运动员","chunks":[{"en":"a top athlete","cn":"一名顶尖运动员"},{"en":"a young athlete","cn":"一名年轻运动员"},{"en":"train as an athlete","cn":"作为运动员训练"}]},
+  {"en":"photographer","cn":"摄影师；拍照者","chunks":[{"en":"a famous photographer","cn":"一位著名摄影师"},{"en":"become a photographer","cn":"成为摄影师"},{"en":"a wildlife photographer","cn":"一名野生动物摄影师"}]},
+  {"en":"painter","cn":"画家；油漆匠","chunks":[{"en":"a great painter","cn":"一位伟大的画家"},{"en":"a famous painter","cn":"一位著名画家"},{"en":"work as a painter","cn":"当画家"}]},
+  {"en":"lawyer","cn":"律师","chunks":[{"en":"a good lawyer","cn":"一位好律师"},{"en":"become a lawyer","cn":"成为律师"},{"en":"a busy lawyer","cn":"一位忙碌的律师"}]},
+  {"en":"achieve","cn":"（经过努力）达到；完成","chunks":[{"en":"achieve your dream","cn":"实现你的梦想"},{"en":"achieve a goal","cn":"达成目标"},{"en":"achieve success","cn":"取得成功"}]},
+  {"en":"design","cn":"设计；计划","chunks":[{"en":"design a bridge","cn":"设计一座桥"},{"en":"design clothes","cn":"设计服装"},{"en":"design a robot","cn":"设计一个机器人"}]}
+ ],
+ "reading":{
+  "passage":"What is the future going to look like? Many people want to know. In twenty years, AI is going to change the way we live and work. Robots are going to help us at home and in hospitals. Some old jobs are going to disappear, but many new ones are going to appear. Tom wants to be an engineer. He is going to design clever robots and smart bridges. His sister Lily hopes to become a fashion designer. She has decided to study hard and learn to draw well. \"I am going to work for myself one day,\" she says. Nobody knows exactly what is coming, but we can choose to dream big and try our best to achieve our goals.",
+  "passageCn":"未来会是什么样子？许多人都想知道。二十年后，人工智能将会改变我们生活和工作的方式。机器人将会在家里和医院里帮助我们。一些旧的工作将会消失，但许多新的工作将会出现。汤姆想成为一名工程师。他打算设计聪明的机器人和智能的桥梁。他的妹妹莉莉希望成为一名时装设计师。她已经决定努力学习并学着把画画好。她说：“总有一天我要为自己工作。”没有人确切知道未来会怎样，但我们可以选择敢于梦想，并尽最大努力去实现我们的目标。",
+  "questions":[
+   {"q":"What is AI going to do in twenty years according to the passage?","opts":["Make all jobs disappear","Change the way we live and work","Stop people from dreaming","Replace every human worker"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What does Tom want to be?","opts":["A fashion designer","A musician","An engineer","A photographer"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn about Lily from the passage?","opts":["She has given up her dream","She wants to work for a big company forever","She is hard-working and has clear goals","She is not interested in fashion"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"My brother ____ study computer science next year.","opts":["is going to","are going to","going to","goes to"],"answer":0,"point":"be going to 表计划","dim":"grammar"},
+  {"q":"She has decided ____ a famous designer.","opts":["become","becoming","to become","becomes"],"answer":2,"point":"不定式作宾语","dim":"grammar"},
+  {"q":"____ they going to visit the AI museum tomorrow?","opts":["Is","Do","Are","Does"],"answer":2,"point":"be going to 一般疑问句","dim":"grammar"},
+  {"q":"The young athlete wants ____ a gold medal in the future.","opts":["win","to win","winning","wins"],"answer":1,"point":"不定式作宾语","dim":"grammar"},
+  {"q":"We ____ buy any new robots this year; we have enough.","opts":["are going to","aren't going to","is going to","don't going to"],"answer":1,"point":"be going to 否定句","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I am going to be an engineer when I grow up.","opts":["He plans to become an engineer in the future.","He is already an engineer now.","He wants to be a musician.","He doesn't know what to do."],"answer":0},
+  {"audio":"In twenty years, robots are going to do most of the housework.","opts":["People will do all the housework alone.","Robots will do little work at home.","Robots are going to help with most housework.","Housework will disappear completely."],"answer":2},
+  {"audio":"My sister has decided to learn to take great photos.","opts":["She wants to be a lawyer.","She has decided to learn photography.","She hates taking photos.","She is going to stop studying."],"answer":1},
+  {"audio":"AI is going to change the way we study at school.","opts":["School will close because of AI.","Students will stop using AI.","AI will not affect studying.","AI is going to change how we study."],"answer":3},
+  {"audio":"I want to become a fashion designer and work for myself.","opts":["She hopes to be a fashion designer and be her own boss.","She wants to work for a big company.","She is going to be an athlete.","She has no dream at all."],"answer":0},
+  {"audio":"We are going to try our best to achieve our dreams.","opts":["They have given up their dreams.","They are going to work hard to reach their dreams.","They never make any plans.","They think dreams are useless."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「engineer」的意思是？","opts":["律师","工程师","音乐家","画家"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「achieve」的意思是？","opts":["（经过努力）达到；完成","设计","错过","介绍"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「designer」的意思是？","opts":["运动员","导演","设计师","工程师"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"They are going to ____ a new robot for the show.","opts":["designs","designing","designed","design"],"answer":3,"point":"be going to + 动词原形","dim":"grammar"},
+  {"q":"「photographer」的意思是？","opts":["摄影师","律师","音乐家","导演"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"He learned ____ the piano when he was young.","opts":["to play","play","playing","plays"],"answer":0,"point":"不定式作宾语","dim":"grammar"},
+  {"q":"「musician」的意思是？","opts":["画家","运动员","音乐家","律师"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"What ____ you going to be in the future?","opts":["is","do","does","are"],"answer":3,"point":"be going to 特殊疑问句","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"My Life in 20 Years",
+  "prompt":"What is your life going to look like in 20 years? Write about your future job, your home, and the world around you. Use 'be going to' for plans, and try some infinitives (want to / decide to / learn to do).",
+  "promptCn":"二十年后你的生活会是什么样？写一段短文，谈谈你未来的工作、你的家以及周围的世界。用 be going to 谈计划，并尽量用一些不定式（want to / decide to / learn to do）。",
+  "opener":"In twenty years, my life is going to be very different.",
+  "sampleWords":["engineer","designer","AI","achieve","design","athlete","musician","photographer"],
+  "cards":[
+   {"key":"job","labelCn":"未来的工作","hint":"如 I am going to be an engineer / designer"},
+   {"key":"plan","labelCn":"你的计划","hint":"如 I want to learn to ... / I have decided to ..."},
+   {"key":"world","labelCn":"未来的世界","hint":"如 AI and robots are going to help people"}
+  ],
+  "templates":{
+   "l1":["In twenty years, I am going to be a/an {job}.","I want to {plan} to reach my dream.","AI and robots are going to change the {world}.","I am going to try my best to achieve my goals."],
+   "l2":["When I grow up, I am going to work as a/an {job} in a big city.","Right now I have decided to {plan} every day.","In the future, AI is going to help us in the {world}.","I am going to learn to be confident and never give up."],
+   "l3":["In twenty years, I am going to become a successful {job} and design amazing things.","These days I want to {plan}, because I know it will help me later.","I believe AI and robots are going to make the {world} smarter and safer.","No matter what happens, I am going to keep on working hard to achieve my dreams."]
+  },
+  "connectors":["first","then","also","in the future","finally"],
+  "minWords":40
+ }
+}

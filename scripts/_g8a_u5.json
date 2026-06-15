@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"pepper","cn":"胡椒粉；菜椒","chunks":[{"en":"black pepper","cn":"黑胡椒粉"},{"en":"add some pepper","cn":"加些胡椒粉"},{"en":"salt and pepper","cn":"盐和胡椒"}]},
+  {"en":"mix","cn":"（使）混合；调配","chunks":[{"en":"mix the flour","cn":"混合面粉"},{"en":"mix well","cn":"充分混合"},{"en":"mix with water","cn":"和水混合"}]},
+  {"en":"bake","cn":"烘焙","chunks":[{"en":"bake a cake","cn":"烤蛋糕"},{"en":"bake bread","cn":"烤面包"},{"en":"bake in the oven","cn":"在烤箱里烘焙"}]},
+  {"en":"oven","cn":"烤箱；烤炉","chunks":[{"en":"hot oven","cn":"高温烤箱"},{"en":"put in the oven","cn":"放进烤箱"},{"en":"turn on the oven","cn":"打开烤箱"}]},
+  {"en":"flour","cn":"面粉","chunks":[{"en":"a bag of flour","cn":"一袋面粉"},{"en":"add the flour","cn":"加入面粉"},{"en":"white flour","cn":"白面粉"}]},
+  {"en":"boil","cn":"煮沸；烧开","chunks":[{"en":"boil the water","cn":"把水烧开"},{"en":"boil an egg","cn":"煮鸡蛋"},{"en":"boil for ten minutes","cn":"煮十分钟"}]},
+  {"en":"butter","cn":"黄油","chunks":[{"en":"some butter","cn":"一些黄油"},{"en":"melt the butter","cn":"融化黄油"},{"en":"bread and butter","cn":"黄油面包"}]},
+  {"en":"cheese","cn":"奶酪；干酪","chunks":[{"en":"a piece of cheese","cn":"一块奶酪"},{"en":"add the cheese","cn":"加入奶酪"},{"en":"cheese pizza","cn":"奶酪披萨"}]},
+  {"en":"heat","cn":"加热；变热","chunks":[{"en":"heat the oil","cn":"加热食用油"},{"en":"heat up the soup","cn":"加热汤"},{"en":"low heat","cn":"小火"}]},
+  {"en":"oil","cn":"食用油","chunks":[{"en":"some oil","cn":"一些食用油"},{"en":"pour in the oil","cn":"倒入食用油"},{"en":"hot oil","cn":"热油"}]},
+  {"en":"ingredient","cn":"食材；成分","chunks":[{"en":"fresh ingredients","cn":"新鲜食材"},{"en":"the main ingredient","cn":"主要食材"},{"en":"mix the ingredients","cn":"混合食材"}]},
+  {"en":"recipe","cn":"食谱；烹饪法","chunks":[{"en":"a simple recipe","cn":"一个简单的食谱"},{"en":"follow the recipe","cn":"按照食谱做"},{"en":"a secret recipe","cn":"一个秘方"}]}
+ ],
+ "reading":{
+  "passage":"What a wonderful smell came from the kitchen last Sunday! My grandma was making her famous pumpkin pie. \"Cooking is easy,\" she said. \"You just need a good recipe and fresh ingredients.\" First, she mixed flour and butter to make the crust. How soft it was! Then she added pumpkin, eggs and a little cinnamon. \"What a sweet smell!\" I cried. She poured the mixture into a pan and baked it in the hot oven. Twenty minutes later, the pie was ready. How delicious it looked! We ate it together and shared happy memories. \"What a perfect afternoon!\" Grandma smiled. Now I know why we learn to cook. Cooking brings a family closer and turns simple food into sweet love.",
+  "passageCn":"上周日，厨房里飘来多么美妙的香味啊！我奶奶正在做她那有名的南瓜派。“做饭很简单，”她说，“你只需要一份好食谱和新鲜的食材。”首先，她把面粉和黄油混合做派皮。它多软啊！然后她加入南瓜、鸡蛋和一点肉桂。“多甜的香味啊！”我喊道。她把混合物倒进烤盘，放进高温烤箱里烘焙。二十分钟后，派做好了。它看起来多美味啊！我们一起吃，分享着快乐的回忆。“多么完美的下午啊！”奶奶笑着说。现在我明白了我们为什么要学做饭。做饭让一家人更亲近，把简单的食物变成甜蜜的爱。",
+  "questions":[
+   {"q":"What did Grandma make?","opts":["Steamed fish","Pumpkin pie","Hot and sour soup","Pancakes"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What did she use to make the crust?","opts":["Pumpkin and eggs","Cheese and oil","Flour and butter","Rice and pepper"],"answer":2,"point":"细节理解","dim":"reading"},
+   {"q":"Why does the writer think we learn to cook?","opts":["To win prizes","To save money","To become famous","To bring the family closer"],"answer":3,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"____ delicious meal it is!","opts":["How","What a","What","How a"],"answer":1,"point":"感叹句 What a+形容词+可数名词","dim":"grammar"},
+  {"q":"____ sweet the pie smells!","opts":["What","What a","How","How a"],"answer":2,"point":"感叹句 How+形容词","dim":"grammar"},
+  {"q":"We need a little ____ to make the cake.","opts":["flours","flour","flowers","a flour"],"answer":1,"point":"不可数名词不加 s","dim":"grammar"},
+  {"q":"____ wonderful ingredients these are!","opts":["How","What a","What","How a"],"answer":2,"point":"感叹句 What+形容词+可数名词复数","dim":"grammar"},
+  {"q":"How many ____ do we need for the soup?","opts":["pepper","oil","butter","eggs"],"answer":3,"point":"可数名词与 how many 搭配","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"First, heat some oil in the pan.","opts":["You should heat oil in the pan first.","You should add cold water first.","You should turn off the oven first.","You should wash the bowl first."],"answer":0},
+  {"audio":"What a delicious cake you baked!","opts":["The cake tastes terrible.","The cake you baked is very delicious.","You bought the cake in a shop.","The cake is too small."],"answer":1},
+  {"audio":"Don't forget to mix the flour with butter.","opts":["You should boil the flour.","You should throw away the butter.","You should mix the flour and butter together.","You should freeze the flour."],"answer":2},
+  {"audio":"How easy this recipe is!","opts":["The recipe is very hard.","The recipe is lost.","There is no recipe.","The recipe is very easy."],"answer":3},
+  {"audio":"We need some cheese and a little pepper.","opts":["We need cheese and a little pepper.","We need only sugar.","We need a lot of meat.","We need no ingredients."],"answer":0},
+  {"audio":"Put the pie into the hot oven for twenty minutes.","opts":["Eat the pie right now.","Bake the pie in the oven for twenty minutes.","Put the pie in the fridge.","Cut the pie into ten pieces."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「ingredient」的意思是？","opts":["食谱","食材；成分","烤箱","碗"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「recipe」的意思是？","opts":["回忆","食谱；烹饪法","胡椒粉","奶酪"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「bake」的意思是？","opts":["切碎","煮沸","烘焙","混合"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「flour」的意思是？","opts":["花","面粉","食用油","黄油"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"____ tasty the soup is! 选择正确的感叹词。","opts":["What a","What","How","How a"],"answer":2,"point":"感叹句 How+形容词","dim":"grammar"},
+  {"q":"____ nice recipe this is! 选择正确的感叹词。","opts":["How","What a","What","How a"],"answer":1,"point":"感叹句 What a+可数名词","dim":"grammar"},
+  {"q":"Which word is uncountable? 哪个是不可数名词？","opts":["egg","bowl","butter","pan"],"answer":2,"point":"可数/不可数名词","dim":"grammar"},
+  {"q":"「heat」的意思是？","opts":["加热；变热","出生","岛","梦想"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Favorite Dish",
+  "prompt":"Write a short recipe to tell others how to make your favorite dish. Use exclamatory sentences (What.../How...) to show your feelings about the food and cooking.",
+  "promptCn":"写一份简短的食谱，告诉别人如何做你最喜欢的菜。用感叹句（What.../How...）来表达你对食物和烹饪的感受。",
+  "opener":"What a delicious dish my favorite food is! Let me show you how to make it.",
+  "sampleWords":["ingredient","mix","heat","oil","boil","recipe","oven","bake"],
+  "cards":[
+   {"key":"prepare","labelCn":"准备食材","hint":"如 First, get the ingredients ready"},
+   {"key":"cook","labelCn":"烹饪步骤","hint":"如 Then heat the oil and mix..."},
+   {"key":"feel","labelCn":"表达感受","hint":"如 What a tasty meal it is!"}
+  ],
+  "templates":{
+   "l1":["What a delicious dish this is! {prepare}","First, I get all the ingredients ready. {prepare}","I need some flour, butter and oil. {cook}","How easy it is to cook! {feel}"],
+   "l2":["First, get the fresh ingredients ready, such as flour and butter. {prepare}","Next, heat some oil in the pan and mix the ingredients well. {cook}","Then put it into the hot oven and bake it for twenty minutes. {cook}","How wonderful it smells! {feel}"],
+   "l3":["My favorite dish is easy to make if you follow the recipe carefully. {prepare}","First, get all the fresh ingredients ready, then heat the oil and mix the flour with butter. {cook}","Next, pour the mixture into a pan and bake it in the hot oven until it turns golden. {cook}","What a delicious meal it is! Now I know why we learn to cook. {feel}"]
+  },
+  "connectors":["first","next","then","finally"],
+  "minWords":40
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"communication","cn":"表达；交流","chunks":[{"en":"good communication","cn":"良好的交流"},{"en":"face-to-face communication","cn":"面对面交流"},{"en":"improve communication","cn":"改善交流"}]},
+  {"en":"communicate","cn":"交流；沟通","chunks":[{"en":"communicate with others","cn":"与他人交流"},{"en":"communicate clearly","cn":"清楚地沟通"},{"en":"communicate online","cn":"在线交流"}]},
+  {"en":"message","cn":"短信息；信息","chunks":[{"en":"a text message","cn":"一条短信"},{"en":"send a message","cn":"发送信息"},{"en":"get a message","cn":"收到信息"}]},
+  {"en":"speaker","cn":"说话者；发言者","chunks":[{"en":"a good speaker","cn":"一位优秀的发言者"},{"en":"a public speaker","cn":"公开演讲者"},{"en":"listen to the speaker","cn":"听发言者讲"}]},
+  {"en":"speech","cn":"演说；发言","chunks":[{"en":"give a speech","cn":"做演讲"},{"en":"a short speech","cn":"一段简短的演说"},{"en":"prepare a speech","cn":"准备演讲"}]},
+  {"en":"argue","cn":"争论；争吵","chunks":[{"en":"argue with sb","cn":"与某人争论"},{"en":"argue about money","cn":"为钱争吵"},{"en":"stop arguing","cn":"停止争吵"}]},
+  {"en":"listener","cn":"听者","chunks":[{"en":"a good listener","cn":"一位好的倾听者"},{"en":"be a careful listener","cn":"做认真的倾听者"},{"en":"become a listener","cn":"成为倾听者"}]},
+  {"en":"attention","cn":"注意；关注","chunks":[{"en":"pay attention","cn":"注意"},{"en":"pay attention to sb","cn":"关注某人"},{"en":"need your attention","cn":"需要你的关注"}]},
+  {"en":"sincere","cn":"真诚的；诚实的","chunks":[{"en":"a sincere smile","cn":"真诚的微笑"},{"en":"sound sincere","cn":"听起来真诚"},{"en":"be sincere with sb","cn":"对某人真诚"}]},
+  {"en":"impolite","cn":"不礼貌的；粗鲁的","chunks":[{"en":"impolite words","cn":"不礼貌的话"},{"en":"feel impolite","cn":"觉得不礼貌"},{"en":"an impolite reply","cn":"一个粗鲁的回复"}]},
+  {"en":"trust","cn":"信任；相信","chunks":[{"en":"trust your friends","cn":"信任你的朋友"},{"en":"build trust","cn":"建立信任"},{"en":"lose trust","cn":"失去信任"}]},
+  {"en":"misunderstanding","cn":"误解；误会","chunks":[{"en":"a small misunderstanding","cn":"一个小误会"},{"en":"cause a misunderstanding","cn":"造成误解"},{"en":"clear up a misunderstanding","cn":"消除误会"}]}
+ ],
+ "reading":{
+  "passage":"What makes good communication? First, you must be a good listener. If you really listen to others, you will understand them better. When someone is speaking, pay attention and do not look at your phone. If you keep looking at your phone, the speaker feels you do not care. Second, be sincere and polite. If you speak with a kind voice, people will trust you more. Body language is important too. If you smile, others feel comfortable around you. Online messages can be useful, but they often cause misunderstandings. If you only chat online, you may miss true feelings. So if you have something important to say, talk face to face. Good communication takes practice, but if you try every day, you will surely become better at it.",
+  "passageCn":"什么造就了良好的交流？首先，你必须做一个好的倾听者。如果你真正倾听别人，你就会更好地理解他们。当有人在说话时，要专心，不要看手机。如果你一直看手机，发言者会觉得你不在乎。其次，要真诚而有礼貌。如果你用友善的语气说话，人们会更加信任你。肢体语言也很重要。如果你微笑，别人和你在一起就会感到舒服。在线信息可能有用，但它们常常造成误解。如果你只在网上聊天，你可能会错过真实的感受。所以如果你有重要的话要说，就面对面交谈。良好的交流需要练习，但如果你每天都努力，你必定会变得更擅长它。",
+  "questions":[
+   {"q":"According to the passage, what should you do when someone is speaking?","opts":["Look at your phone","Pay attention and not look at your phone","Start arguing","Leave the room"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why is it better to talk face to face about important things?","opts":["Online messages are free","Face-to-face talk is faster to type","Online messages often cause misunderstandings","Phones are not allowed"],"answer":2,"point":"推理判断","dim":"reading"},
+   {"q":"What is the writer's main idea about good communication?","opts":["It needs practice and effort every day","It is easy and needs no effort","It only happens online","It is mainly about texting"],"answer":0,"point":"细节理解","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"If you ____ to others carefully, you will understand them better.","opts":["listen","listened","will listen","listening"],"answer":0,"point":"first conditional: if + 一般现在时","dim":"grammar"},
+  {"q":"If you keep looking at your phone, the speaker ____ you do not care.","opts":["felt","will feel","feels","feeling"],"answer":1,"point":"first conditional: 主句用 will","dim":"grammar"},
+  {"q":"Water ____ if you heat it to 100°C.","opts":["will boil","boils","boiled","boiling"],"answer":1,"point":"zero conditional: 客观事实用一般现在时","dim":"grammar"},
+  {"q":"If she ____ sincere, people will trust her.","opts":["are","is","be","will be"],"answer":1,"point":"first conditional: if 从句主谓一致","dim":"grammar"},
+  {"q":"You will make new friends if you ____ to communicate every day.","opts":["will try","tried","try","trying"],"answer":2,"point":"first conditional: if 从句用一般现在时","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"If you really listen to others, you will understand them better.","opts":["Listening well helps you understand people more.","Talking a lot makes you popular.","You should never listen to others.","Understanding people is impossible."],"answer":0},
+  {"audio":"Please pay attention when the speaker is talking.","opts":["You can ignore the speaker.","You should focus when someone is speaking.","The speaker is too loud.","Stop the speaker from talking."],"answer":1},
+  {"audio":"Online messages often cause misunderstandings.","opts":["Online messages are always clear.","Misunderstandings rarely happen online.","Texting online can lead to confusion.","Nobody uses online messages."],"answer":2},
+  {"audio":"If you smile, people will feel comfortable around you.","opts":["Smiling makes people nervous.","People dislike a smile.","A smile changes nothing.","A smile makes others feel at ease."],"answer":3},
+  {"audio":"It is better to talk face to face about important things.","opts":["Important things are best discussed in person.","You should only text important things.","Face-to-face talk is useless.","Never share important things."],"answer":0},
+  {"audio":"If you argue with your friend, you should make up later.","opts":["Friends never argue.","After an argument, you should make peace.","You should keep arguing forever.","Arguing is good for friendship."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「listener」的意思是？","opts":["发言者","听者","陌生人","教授"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「misunderstanding」的意思是？","opts":["误解；误会","交流","信任","机会"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"「sincere」的意思是？","opts":["粗鲁的","紧张的","真诚的","当地的"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"\"pay attention to\" 的意思是？","opts":["争论","写信","换话题","注意；关注"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"If you ____ kindly, people will trust you.","opts":["speak","spoke","will speak","speaking"],"answer":0,"point":"first conditional","dim":"grammar"},
+  {"q":"If the weather is hot, ice ____ quickly.","opts":["will melt","melts","melted","melting"],"answer":1,"point":"zero conditional","dim":"grammar"},
+  {"q":"「impolite」的意思是？","opts":["真诚的","礼貌的","不礼貌的；粗鲁的","镇静的"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"We ____ communicate better if we listen more.","opts":["am","is","being","will"],"answer":3,"point":"first conditional: 主句 will","dim":"grammar"}
+ ],
+ "writing":{
+  "topic":"Tips for Good Communication",
+  "prompt":"Write a short passage giving three tips on how to communicate well with others. Use conditional sentences (If you..., you will...) to explain what happens when people follow your tips.",
+  "promptCn":"写一篇短文，给出三条与他人良好沟通的建议。用条件句（If you..., you will...）来说明人们听从建议后会发生什么。",
+  "opener":"Good communication is important in our daily life. Here are some useful tips.",
+  "sampleWords":["communicate","listener","attention","sincere","trust","misunderstanding","speaker","argue"],
+  "cards":[
+   {"key":"listen","labelCn":"做好的倾听者","hint":"如 If you listen carefully, you will understand others."},
+   {"key":"sincere","labelCn":"真诚有礼貌","hint":"如 If you are sincere, people will trust you."},
+   {"key":"face","labelCn":"重要的事面对面谈","hint":"如 If you talk face to face, you will avoid misunderstandings."}
+  ],
+  "templates":{
+   "l1":["First, be a good listener.","If you {listen}, you will understand others.","Second, be {sincere} and polite.","Third, talk {face} about important things."],
+   "l2":["First, be a careful listener and give people your attention.","If you {listen}, others will feel respected.","If you are {sincere}, people will trust you more.","If you talk {face}, you will avoid many misunderstandings."],
+   "l3":["Good communication starts with listening: {listen}.","If you pay attention and stay {sincere}, people will trust and like you.","Body language matters too, so smile and look at the speaker.","Finally, for important things, {face}, because it shows you truly care."]
+  },
+  "connectors":["first","second","third","also","if","so"],
+  "minWords":40
+ }
+}

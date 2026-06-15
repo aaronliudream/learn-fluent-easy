@@ -1,0 +1,69 @@
+{
+ "vocabulary":[
+  {"en":"bamboo","cn":"竹；竹子","chunks":[{"en":"a bamboo forest","cn":"一片竹林"},{"en":"grow bamboo","cn":"种竹子"},{"en":"tall bamboo","cn":"高高的竹子"}]},
+  {"en":"shoot","cn":"幼苗；嫩芽","chunks":[{"en":"a new shoot","cn":"一棵新芽"},{"en":"green shoots","cn":"绿色的嫩芽"},{"en":"the shoots appear","cn":"嫩芽长出来"}]},
+  {"en":"butterfly","cn":"蝴蝶","chunks":[{"en":"a beautiful butterfly","cn":"一只美丽的蝴蝶"},{"en":"butterfly wings","cn":"蝴蝶的翅膀"},{"en":"catch a butterfly","cn":"抓一只蝴蝶"}]},
+  {"en":"wing","cn":"翅膀；翼","chunks":[{"en":"open its wings","cn":"张开翅膀"},{"en":"colourful wings","cn":"彩色的翅膀"},{"en":"two wings","cn":"两只翅膀"}]},
+  {"en":"frog","cn":"蛙；青蛙","chunks":[{"en":"a little frog","cn":"一只小青蛙"},{"en":"a green frog","cn":"一只绿青蛙"},{"en":"the frog jumps","cn":"青蛙跳"}]},
+  {"en":"honey","cn":"蜂蜜","chunks":[{"en":"sweet honey","cn":"甜甜的蜂蜜"},{"en":"make honey","cn":"酿蜂蜜"},{"en":"a jar of honey","cn":"一罐蜂蜜"}]},
+  {"en":"pollen","cn":"花粉","chunks":[{"en":"carry pollen","cn":"携带花粉"},{"en":"collect pollen","cn":"采集花粉"},{"en":"yellow pollen","cn":"黄色的花粉"}]},
+  {"en":"planet","cn":"行星","chunks":[{"en":"our planet","cn":"我们的星球"},{"en":"protect the planet","cn":"保护地球"},{"en":"a green planet","cn":"一个绿色星球"}]},
+  {"en":"ocean","cn":"大海；海洋","chunks":[{"en":"the deep ocean","cn":"深海"},{"en":"the largest ocean","cn":"最大的海洋"},{"en":"across the ocean","cn":"横跨海洋"}]},
+  {"en":"mushroom","cn":"蘑菇；伞菌","chunks":[{"en":"a wild mushroom","cn":"一朵野蘑菇"},{"en":"pick mushrooms","cn":"采蘑菇"},{"en":"a small mushroom","cn":"一朵小蘑菇"}]},
+  {"en":"tiny","cn":"极小的；微小的","chunks":[{"en":"a tiny insect","cn":"一只极小的昆虫"},{"en":"tiny seeds","cn":"微小的种子"},{"en":"very tiny","cn":"非常小"}]},
+  {"en":"lively","cn":"精力充沛的；生机勃勃的","chunks":[{"en":"a lively animal","cn":"一只活泼的动物"},{"en":"a lively forest","cn":"生机勃勃的森林"},{"en":"look lively","cn":"看起来生机勃勃"}]}
+ ],
+ "reading":{
+  "passage":"Bamboo is one of the most amazing plants on our planet. It is the fastest-growing plant in the world. On the warmest days, some bamboo can grow up to one metre taller in just twenty-four hours! That makes it grow faster than almost any other plant. Bamboo is also one of the most useful plants. People use it to make tools, houses and even paper. The strongest kinds of bamboo are harder than wood. Pandas think bamboo is the tastiest food of all, and they eat it every day. Bamboo stays green through the coldest winter, so many people believe it is the bravest plant in nature. It is truly one of the greatest gifts from the natural world.",
+  "passageCn":"竹子是我们星球上最神奇的植物之一。它是世界上生长最快的植物。在最温暖的日子里，有些竹子在短短二十四小时内能长高一米！这使它比几乎任何其他植物长得都快。竹子也是最有用的植物之一。人们用它来制作工具、房屋甚至纸张。最坚硬的竹子比木头还硬。熊猫认为竹子是所有食物中最美味的，它们每天都吃。竹子在最寒冷的冬天也保持翠绿，所以很多人相信它是大自然中最勇敢的植物。它真的是大自然最伟大的礼物之一。",
+  "questions":[
+   {"q":"According to the passage, what is bamboo in terms of growing speed?","opts":["The slowest-growing plant","The fastest-growing plant in the world","A plant that never grows","The tallest tree on the planet"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why do many people believe bamboo is the bravest plant?","opts":["It stays green through the coldest winter","It can fly in the wind","It only grows in summer","It is made of metal"],"answer":0,"point":"细节理解","dim":"reading"},
+   {"q":"What can we infer about pandas from the passage?","opts":["Pandas dislike bamboo","Pandas rarely eat bamboo","Pandas enjoy bamboo as their favourite food","Pandas only eat wood"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"The cheetah is ___ animal on land.","opts":["fast","faster","the fastest","most fast"],"answer":2,"point":"最高级the+est形式","dim":"grammar"},
+  {"q":"This is ___ flower in the whole garden.","opts":["the most beautiful","the beautifulest","more beautiful","beautiful"],"answer":0,"point":"多音节词most最高级","dim":"grammar"},
+  {"q":"Of all the plants here, bamboo grows ___.","opts":["fast","fastest","faster","the more fast"],"answer":1,"point":"副词最高级","dim":"grammar"},
+  {"q":"The blue whale is ___ animal in the ocean.","opts":["big","bigger","biggest","the biggest"],"answer":3,"point":"双写辅音+est","dim":"grammar"},
+  {"q":"Which sentence is correct?","opts":["She is the happiest girl in class.","She is the happyest girl in class.","She is the most happy girl in class.","She is happier girl in class."],"answer":0,"point":"辅音+y变i加est","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"The cheetah is the fastest animal on land.","opts":["The cheetah runs faster than any other land animal.","The cheetah is the slowest land animal.","The cheetah lives in the ocean.","The cheetah cannot run at all."],"answer":0},
+  {"audio":"Bamboo is one of the most useful plants in the world.","opts":["Bamboo is useless to people.","Bamboo is among the most useful plants.","Bamboo only grows in water.","Bamboo is the rarest plant."],"answer":1},
+  {"audio":"Bees carry pollen from flower to flower.","opts":["Bees never visit flowers.","Bees eat the flowers completely.","Bees move pollen between flowers.","Bees sleep inside the honey."],"answer":2},
+  {"audio":"The blue whale is the biggest animal in the ocean.","opts":["The blue whale is a tiny fish.","The blue whale lives on land.","The blue whale eats bamboo.","No ocean animal is larger than the blue whale."],"answer":3},
+  {"audio":"This butterfly has the most colourful wings I have ever seen.","opts":["The butterfly's wings are very colourful.","The butterfly has no wings.","The butterfly is grey and dull.","The butterfly cannot fly."],"answer":0},
+  {"audio":"The redwood is one of the tallest trees on the planet.","opts":["The redwood is the shortest plant.","The redwood is among the tallest trees.","The redwood grows under the sea.","The redwood has no leaves."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「bamboo」的意思是？","opts":["蘑菇","蜂蜜","竹子","花粉"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"「tiny」的意思是？","opts":["极小的","巨大的","勇敢的","美味的"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"The redwood is ___ tree in the forest.","opts":["taller","the tallest","tall","most tall"],"answer":1,"point":"语法-最高级","dim":"grammar"},
+  {"q":"「pollen」的意思是？","opts":["翅膀","花粉","海洋","行星"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"Among all the animals, the ant is one of ___ workers.","opts":["the busiest","busy","busier","the most busy"],"answer":0,"point":"语法-最高级","dim":"grammar"},
+  {"q":"「ocean」的意思是？","opts":["森林","沙漠","行星","海洋"],"answer":3,"point":"词汇","dim":"vocab"},
+  {"q":"This is ___ interesting plant in the book.","opts":["the more","most","the most","more"],"answer":2,"point":"语法-most最高级","dim":"grammar"},
+  {"q":"「lively」的意思是？","opts":["失望的","生机勃勃的","折叠式的","微小的"],"answer":1,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"The Most Amazing Living Thing",
+  "prompt":"Write a short passage about a plant or animal you think is amazing. Use superlatives (the -est / the most ...) to describe why it is special.",
+  "promptCn":"写一篇短文，介绍一种你认为最神奇的植物或动物。用最高级（the -est / the most...）描述它为什么特别，比如最快的、最大的或最美丽的。",
+  "opener":"I think the most amazing living thing is...",
+  "sampleWords":["bamboo","butterfly","ocean","tiny","lively","planet","wing","honey"],
+  "cards":[
+   {"key":"what","labelCn":"是什么","hint":"如 the most amazing animal"},
+   {"key":"why","labelCn":"为什么神奇","hint":"如 the fastest / the biggest"},
+   {"key":"feeling","labelCn":"你的感受","hint":"如 I love it most"}
+  ],
+  "templates":{
+   "l1":["I think the most amazing living thing is the {what}.","It is one of the {why} things in nature.","It lives near the ocean and looks very lively.","I love this amazing living thing the most."],
+   "l2":["The {what} is the most amazing living thing I know.","Many people say it is the {why} of all.","Its tiny wings or shoots make it really special.","That is why I feel it is the greatest gift in nature."],
+   "l3":["Of all living things on our planet, the {what} is the most amazing to me.","It is famous for being the {why}, faster or bigger than the others.","Whether in the forest or the ocean, it always looks lively and full of life.","For this reason, I believe it is one of the greatest wonders of the natural world."]
+  },
+  "connectors":["first","also","because","so","for this reason","in fact"],
+  "minWords":40
+ }
+}

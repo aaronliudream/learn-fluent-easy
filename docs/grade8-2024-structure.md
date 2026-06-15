@@ -17,8 +17,8 @@
 | 3 | Same or Different? | How do we compare with each other? | 比较级 -(i)er/more;as…as | /ɜː/ /ə/;intonation | 异同对话 | 朋友异同的帖子 | 回帖谈朋友 | 看谁变化最大 | Words related to comparison |
 | 4 | Amazing Plants and Animals | What makes plants and animals amazing? | 最高级 -(i)est/most | 双元音 + 辅音连缀;sentence stress | 动植物对话 | 关于蜜蜂的科普文 | 改写蓝鲸文章 | 动植物海报 | 名词后缀 -ance/-(t)ion/-ness/-ity |
 | 5 | What a Delicious Meal! | Why do we learn to cook? | 感叹句;可数/不可数名词 | /əʊ/ /aʊ/ /ɪə/ /eə/ /ʊə/ + /st/ /sp/ /str/ | 做土豆泥对话 | 食物与记忆 | 写做菜的帖子 | 创作一道菜谱 | 食物烹饪词;量词;顺序副词 |
-| 6 | When Tomorrow Comes | What will the future look like? | be going to;不定式作宾语 | /h/ /w/ /θ/ /ð/ /k/ /kw/ /ʃ/ /ʒ/;weak forms | 未来预测对话 | 采访未来学家 | 写 20 年后的生活 | 画未来 | 职业词;more/less/fewer;反义词 |
-| 7 | Plan for Yourself | Why do we need plans? | 一般将来时 will | /n/ /ŋ/ /ŋk/ /tʃ/ /dʒ/ /f/ /r/;intonation | 理想职业对话 | 关于做计划的说明文 | 写新年决心 | 解决问题的计划 | (重建时提取) |
+| 6 | Plan for Yourself | Why do we need plans? | be going to;不定式作宾语 | /h/ /w/ /θ/ /ð/ /k/ /kw/ /ʃ/ /ʒ/;weak forms | 理想职业对话 | 关于做计划的说明文 | 写新年决心 | 解决问题的计划 | 决心/自我提高词 |
+| 7 | When Tomorrow Comes | What will the future look like? | 一般将来时 will + Shall we | /n/ /ŋ/ /ŋk/ /tʃ/ /dʒ/ /f/ /r/;intonation | 未来预测对话 | 采访未来学家(Dr Lu) | 写 20 年后的生活 | 画未来 | 未来科技/预测词;more/less/fewer;反义词 |
 | 8 | Let's Communicate! | What makes good communication? | 零条件句 / 第一条件句 | 辅音连缀收尾;发音复习 | 远近家人沟通对话 | 如何更好交谈的指南 | 写邀请信 | 接龙故事 | 沟通词;名词后缀 -er/-or/-th/-ment/-ship |
 
 ## 📗 八下(8B · 8 单元)

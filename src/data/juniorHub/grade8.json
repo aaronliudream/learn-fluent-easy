@@ -279,6 +279,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -901,6 +909,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -1530,6 +1546,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -2152,6 +2176,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -2781,6 +2813,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3137,191 +3177,47 @@
             "num": 6,
             "unitKey": "U6",
             "book": "8A",
-            "title": "When Tomorrow Comes",
-            "cn": "当明天来临",
-            "emoji": "🔮",
+            "title": "Plan for Yourself",
+            "cn": "为自己制订计划",
+            "emoji": "📅",
             "available": true,
-            "bigQuestion": "What will the future look like?",
+            "bigQuestion": "Why do we need plans?",
             "pronunciation": "/h/ /w/ /θ/ /ð/ /k/ /kw/ /ʃ/ /ʒ/;弱读",
             "contentStatus": "TODO_待真题填充",
             "vocabulary": [
               {
-                "en": "engineer",
-                "cn": "工程师；技师",
+                "en": "resolution",
+                "cn": "决定；决心",
                 "chunks": [
                   {
-                    "en": "a software engineer",
-                    "cn": "一名软件工程师"
+                    "en": "make a resolution",
+                    "cn": "下定决心"
                   },
                   {
-                    "en": "become an engineer",
-                    "cn": "成为一名工程师"
+                    "en": "a New Year's resolution",
+                    "cn": "新年决心"
                   },
                   {
-                    "en": "work as an engineer",
-                    "cn": "当工程师"
+                    "en": "keep my resolution",
+                    "cn": "坚持我的决心"
                   }
                 ]
               },
               {
-                "en": "fashion",
-                "cn": "时装业；时尚",
+                "en": "mini-goal",
+                "cn": "小目标",
                 "chunks": [
                   {
-                    "en": "the fashion industry",
-                    "cn": "时装业"
+                    "en": "set a mini-goal",
+                    "cn": "设定小目标"
                   },
                   {
-                    "en": "in fashion",
-                    "cn": "流行的"
+                    "en": "reach a mini-goal",
+                    "cn": "实现小目标"
                   },
                   {
-                    "en": "a fashion show",
-                    "cn": "一场时装秀"
-                  }
-                ]
-              },
-              {
-                "en": "designer",
-                "cn": "设计师",
-                "chunks": [
-                  {
-                    "en": "a famous designer",
-                    "cn": "一位著名设计师"
-                  },
-                  {
-                    "en": "a fashion designer",
-                    "cn": "一名时装设计师"
-                  },
-                  {
-                    "en": "a game designer",
-                    "cn": "一名游戏设计师"
-                  }
-                ]
-              },
-              {
-                "en": "director",
-                "cn": "导演；主任；董事",
-                "chunks": [
-                  {
-                    "en": "a film director",
-                    "cn": "一名电影导演"
-                  },
-                  {
-                    "en": "a young director",
-                    "cn": "一位年轻导演"
-                  },
-                  {
-                    "en": "the company director",
-                    "cn": "公司董事"
-                  }
-                ]
-              },
-              {
-                "en": "musician",
-                "cn": "音乐家；乐师",
-                "chunks": [
-                  {
-                    "en": "a talented musician",
-                    "cn": "一位有才华的音乐家"
-                  },
-                  {
-                    "en": "a street musician",
-                    "cn": "街头音乐家"
-                  },
-                  {
-                    "en": "a great musician",
-                    "cn": "一位伟大的音乐家"
-                  }
-                ]
-              },
-              {
-                "en": "AI",
-                "cn": "人工智能",
-                "chunks": [
-                  {
-                    "en": "AI technology",
-                    "cn": "人工智能技术"
-                  },
-                  {
-                    "en": "use AI",
-                    "cn": "使用人工智能"
-                  },
-                  {
-                    "en": "AI robots",
-                    "cn": "人工智能机器人"
-                  }
-                ]
-              },
-              {
-                "en": "athlete",
-                "cn": "运动员",
-                "chunks": [
-                  {
-                    "en": "a top athlete",
-                    "cn": "一名顶尖运动员"
-                  },
-                  {
-                    "en": "a young athlete",
-                    "cn": "一名年轻运动员"
-                  },
-                  {
-                    "en": "train as an athlete",
-                    "cn": "作为运动员训练"
-                  }
-                ]
-              },
-              {
-                "en": "photographer",
-                "cn": "摄影师；拍照者",
-                "chunks": [
-                  {
-                    "en": "a famous photographer",
-                    "cn": "一位著名摄影师"
-                  },
-                  {
-                    "en": "become a photographer",
-                    "cn": "成为摄影师"
-                  },
-                  {
-                    "en": "a wildlife photographer",
-                    "cn": "一名野生动物摄影师"
-                  }
-                ]
-              },
-              {
-                "en": "painter",
-                "cn": "画家；油漆匠",
-                "chunks": [
-                  {
-                    "en": "a great painter",
-                    "cn": "一位伟大的画家"
-                  },
-                  {
-                    "en": "a famous painter",
-                    "cn": "一位著名画家"
-                  },
-                  {
-                    "en": "work as a painter",
-                    "cn": "当画家"
-                  }
-                ]
-              },
-              {
-                "en": "lawyer",
-                "cn": "律师",
-                "chunks": [
-                  {
-                    "en": "a good lawyer",
-                    "cn": "一位好律师"
-                  },
-                  {
-                    "en": "become a lawyer",
-                    "cn": "成为律师"
-                  },
-                  {
-                    "en": "a busy lawyer",
-                    "cn": "一位忙碌的律师"
+                    "en": "one mini-goal a week",
+                    "cn": "一周一个小目标"
                   }
                 ]
               },
@@ -3330,16 +3226,106 @@
                 "cn": "（经过努力）达到；完成",
                 "chunks": [
                   {
-                    "en": "achieve your dream",
-                    "cn": "实现你的梦想"
-                  },
-                  {
                     "en": "achieve a goal",
                     "cn": "达成目标"
                   },
                   {
-                    "en": "achieve success",
-                    "cn": "取得成功"
+                    "en": "achieve your dream",
+                    "cn": "实现你的梦想"
+                  },
+                  {
+                    "en": "achieve more",
+                    "cn": "取得更多成就"
+                  }
+                ]
+              },
+              {
+                "en": "self-improvement",
+                "cn": "自我提高；自我改进",
+                "chunks": [
+                  {
+                    "en": "a plan for self-improvement",
+                    "cn": "自我提高的计划"
+                  },
+                  {
+                    "en": "work on self-improvement",
+                    "cn": "致力于自我提高"
+                  },
+                  {
+                    "en": "the way to self-improvement",
+                    "cn": "自我提高的途径"
+                  }
+                ]
+              },
+              {
+                "en": "confident",
+                "cn": "自信的；肯定的",
+                "chunks": [
+                  {
+                    "en": "feel confident",
+                    "cn": "感到自信"
+                  },
+                  {
+                    "en": "be confident about it",
+                    "cn": "对此有信心"
+                  },
+                  {
+                    "en": "a confident smile",
+                    "cn": "自信的微笑"
+                  }
+                ]
+              },
+              {
+                "en": "organized",
+                "cn": "有条理的；有组织的",
+                "chunks": [
+                  {
+                    "en": "stay organized",
+                    "cn": "保持有条理"
+                  },
+                  {
+                    "en": "an organized student",
+                    "cn": "一个有条理的学生"
+                  },
+                  {
+                    "en": "keep my room organized",
+                    "cn": "把房间收拾得井井有条"
+                  }
+                ]
+              },
+              {
+                "en": "take up",
+                "cn": "开始学；开始从事",
+                "chunks": [
+                  {
+                    "en": "take up a hobby",
+                    "cn": "开始一项爱好"
+                  },
+                  {
+                    "en": "take up photography",
+                    "cn": "开始学摄影"
+                  },
+                  {
+                    "en": "take up running",
+                    "cn": "开始跑步"
+                  }
+                ]
+              },
+              {
+                "en": "physical",
+                "cn": "身体的；物质的",
+                "chunks": [
+                  {
+                    "en": "physical health",
+                    "cn": "身体健康"
+                  },
+                  {
+                    "en": "physical exercise",
+                    "cn": "体育锻炼"
+                  },
+                  {
+                    "en": "a physical activity",
+                    "cn": "一项体育活动"
                   }
                 ]
               },
@@ -3352,12 +3338,66 @@
                     "cn": "设计一座桥"
                   },
                   {
-                    "en": "design clothes",
-                    "cn": "设计服装"
+                    "en": "design a plan",
+                    "cn": "制订计划"
                   },
                   {
-                    "en": "design a robot",
-                    "cn": "设计一个机器人"
+                    "en": "design clothes",
+                    "cn": "设计服装"
+                  }
+                ]
+              },
+              {
+                "en": "engineer",
+                "cn": "工程师；技师",
+                "chunks": [
+                  {
+                    "en": "become an engineer",
+                    "cn": "成为一名工程师"
+                  },
+                  {
+                    "en": "a software engineer",
+                    "cn": "一名软件工程师"
+                  },
+                  {
+                    "en": "work as an engineer",
+                    "cn": "当工程师"
+                  }
+                ]
+              },
+              {
+                "en": "designer",
+                "cn": "设计师",
+                "chunks": [
+                  {
+                    "en": "a fashion designer",
+                    "cn": "一名时装设计师"
+                  },
+                  {
+                    "en": "a game designer",
+                    "cn": "一名游戏设计师"
+                  },
+                  {
+                    "en": "become a designer",
+                    "cn": "成为设计师"
+                  }
+                ]
+              },
+              {
+                "en": "fail",
+                "cn": "未能（做到）；失败",
+                "chunks": [
+                  {
+                    "en": "fail the exam",
+                    "cn": "考试不及格"
+                  },
+                  {
+                    "en": "fail to finish",
+                    "cn": "未能完成"
+                  },
+                  {
+                    "en": "never give up after you fail",
+                    "cn": "失败后绝不放弃"
                   }
                 ]
               }
@@ -3405,6 +3445,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3433,31 +3481,31 @@
             "grammarCode": "g8a-u6-TODO",
             "grammarQuiz": [
               {
-                "q": "My brother ____ study computer science next year.",
+                "q": "I ___ study computer science next year.",
                 "opts": [
+                  "am going to",
                   "is going to",
                   "are going to",
-                  "going to",
-                  "goes to"
+                  "going to"
                 ],
                 "answer": 0,
                 "point": "be going to 表计划",
                 "dim": "grammar"
               },
               {
-                "q": "She has decided ____ a famous designer.",
+                "q": "She has decided ___ a new hobby this term.",
                 "opts": [
-                  "become",
-                  "becoming",
-                  "to become",
-                  "becomes"
+                  "take up",
+                  "taking up",
+                  "to take up",
+                  "takes up"
                 ],
                 "answer": 2,
-                "point": "不定式作宾语",
+                "point": "不定式作宾语 decide to do",
                 "dim": "grammar"
               },
               {
-                "q": "____ they going to visit the AI museum tomorrow?",
+                "q": "___ you going to make any resolutions this year?",
                 "opts": [
                   "Is",
                   "Do",
@@ -3469,19 +3517,19 @@
                 "dim": "grammar"
               },
               {
-                "q": "The young athlete wants ____ a gold medal in the future.",
+                "q": "I want ___ more confident when I speak English.",
                 "opts": [
-                  "win",
-                  "to win",
-                  "winning",
-                  "wins"
+                  "be",
+                  "to be",
+                  "being",
+                  "am"
                 ],
                 "answer": 1,
-                "point": "不定式作宾语",
+                "point": "不定式作宾语 want to do",
                 "dim": "grammar"
               },
               {
-                "q": "We ____ buy any new robots this year; we have enough.",
+                "q": "We ___ give up, even when we fail.",
                 "opts": [
                   "are going to",
                   "aren't going to",
@@ -3494,116 +3542,117 @@
               }
             ],
             "reading": {
-              "passage": "What is the future going to look like? Many people want to know. In twenty years, AI is going to change the way we live and work. Robots are going to help us at home and in hospitals. Some old jobs are going to disappear, but many new ones are going to appear. Tom wants to be an engineer. He is going to design clever robots and smart bridges. His sister Lily hopes to become a fashion designer. She has decided to study hard and learn to draw well. \"I am going to work for myself one day,\" she says. Nobody knows exactly what is coming, but we can choose to dream big and try our best to achieve our goals.",
-              "passageCn": "未来会是什么样子？许多人都想知道。二十年后，人工智能将会改变我们生活和工作的方式。机器人将会在家里和医院里帮助我们。一些旧的工作将会消失，但许多新的工作将会出现。汤姆想成为一名工程师。他打算设计聪明的机器人和智能的桥梁。他的妹妹莉莉希望成为一名时装设计师。她已经决定努力学习并学着把画画好。她说：“总有一天我要为自己工作。”没有人确切知道未来会怎样，但我们可以选择敢于梦想，并尽最大努力去实现我们的目标。",
+              "passage": "A new term is starting, so I am going to make some plans for myself. First, I have decided to improve my English. I am going to read one English story every week and learn ten new words a day. I know I will sometimes fail, but I am not going to give up. Second, I want to take up a new hobby. I am going to learn to play the guitar, because music helps me relax. I also plan to stay organized and keep my room tidy. My biggest dream is to become an engineer one day, so I am going to study science harder. These mini-goals are not easy, but I am sure I will achieve them if I keep on trying.",
+              "passageCn": "新学期开始了，所以我打算为自己制订一些计划。首先，我决定要提高我的英语。我打算每周读一个英语故事，每天学十个新单词。我知道有时会失败，但我不会放弃。其次，我想培养一个新爱好。我打算学弹吉他，因为音乐能帮我放松。我还计划保持有条理，把房间整理干净。我最大的梦想是有一天成为一名工程师，所以我打算更努力地学习科学。这些小目标并不容易，但只要我坚持下去，我相信我一定能实现它们。",
               "questions": [
                 {
-                  "q": "What is AI going to do in twenty years according to the passage?",
+                  "q": "What is the writer going to do to improve English?",
                   "opts": [
-                    "Make all jobs disappear",
-                    "Change the way we live and work",
-                    "Stop people from dreaming",
-                    "Replace every human worker"
+                    "Watch films only",
+                    "Read one English story a week and learn ten words a day",
+                    "Stop studying English",
+                    "Give up after failing"
                   ],
                   "answer": 1,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "What does Tom want to be?",
+                  "q": "Why does the writer want to learn the guitar?",
                   "opts": [
-                    "A fashion designer",
-                    "A musician",
-                    "An engineer",
-                    "A photographer"
+                    "Because music helps him relax",
+                    "Because the teacher asks him to",
+                    "Because it is easy",
+                    "Because his friends play it"
                   ],
-                  "answer": 2,
+                  "answer": 0,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "What can we learn about Lily from the passage?",
+                  "q": "What can we learn about the writer?",
                   "opts": [
-                    "She has given up her dream",
-                    "She wants to work for a big company forever",
-                    "She is hard-working and has clear goals",
-                    "She is not interested in fashion"
+                    "He gives up easily",
+                    "He has clear plans and keeps trying",
+                    "He has no dream",
+                    "He dislikes studying"
                   ],
-                  "answer": 2,
+                  "answer": 1,
                   "point": "推理判断",
                   "dim": "reading"
                 }
               ]
             },
             "writing": {
-              "topic": "My Life in 20 Years",
-              "prompt": "What is your life going to look like in 20 years? Write about your future job, your home, and the world around you. Use 'be going to' for plans, and try some infinitives (want to / decide to / learn to do).",
-              "promptCn": "二十年后你的生活会是什么样？写一段短文，谈谈你未来的工作、你的家以及周围的世界。用 be going to 谈计划，并尽量用一些不定式（want to / decide to / learn to do）。",
-              "opener": "In twenty years, my life is going to be very different.",
+              "topic": "My Plans for This Term",
+              "prompt": "A new term is starting. Write about the plans and resolutions you are going to make for yourself. Use 'be going to' and infinitives (decide to / want to / learn to do). Include your study goal, a new hobby, and your dream job.",
+              "promptCn": "新学期开始了。写一写你打算为自己制订的计划和决心。用 be going to 和不定式（decide to / want to / learn to do）。包括你的学习目标、一个新爱好和你的理想职业。",
+              "opener": "A new term is starting, so I am going to make some plans for myself.",
               "sampleWords": [
-                "engineer",
-                "designer",
-                "AI",
+                "resolution",
+                "mini-goal",
                 "achieve",
-                "design",
-                "athlete",
-                "musician",
-                "photographer"
+                "self-improvement",
+                "take up",
+                "confident",
+                "organized",
+                "engineer"
               ],
               "cards": [
                 {
-                  "key": "job",
-                  "labelCn": "未来的工作",
-                  "hint": "如 I am going to be an engineer / designer"
+                  "key": "study",
+                  "labelCn": "学习目标",
+                  "hint": "如 I am going to read more English."
                 },
                 {
-                  "key": "plan",
-                  "labelCn": "你的计划",
-                  "hint": "如 I want to learn to ... / I have decided to ..."
+                  "key": "hobby",
+                  "labelCn": "新爱好",
+                  "hint": "如 I want to take up the guitar."
                 },
                 {
-                  "key": "world",
-                  "labelCn": "未来的世界",
-                  "hint": "如 AI and robots are going to help people"
+                  "key": "dream",
+                  "labelCn": "理想职业",
+                  "hint": "如 I am going to be an engineer."
                 }
               ],
               "templates": {
                 "l1": [
-                  "In twenty years, I am going to be a/an {job}.",
-                  "I want to {plan} to reach my dream.",
-                  "AI and robots are going to change the {world}.",
-                  "I am going to try my best to achieve my goals."
+                  "A new term is starting, and I have some plans.",
+                  "For study, I am going to {study}.",
+                  "For fun, I want to {hobby}.",
+                  "My dream is to {dream}."
                 ],
                 "l2": [
-                  "When I grow up, I am going to work as a/an {job} in a big city.",
-                  "Right now I have decided to {plan} every day.",
-                  "In the future, AI is going to help us in the {world}.",
-                  "I am going to learn to be confident and never give up."
+                  "This term, I am going to make a few resolutions.",
+                  "First, I have decided to {study} to improve myself.",
+                  "Second, I want to {hobby} so that I can relax.",
+                  "My biggest mini-goal is to {dream}, so I am going to work hard."
                 ],
                 "l3": [
-                  "In twenty years, I am going to become a successful {job} and design amazing things.",
-                  "These days I want to {plan}, because I know it will help me later.",
-                  "I believe AI and robots are going to make the {world} smarter and safer.",
-                  "No matter what happens, I am going to keep on working hard to achieve my dreams."
+                  "A new term is starting, so I am going to set some mini-goals for self-improvement.",
+                  "For my study, I have decided to {study}, and I am not going to give up even if I fail.",
+                  "I also want to {hobby}, and I am going to stay organized and confident.",
+                  "In the end, my dream is to {dream}; as long as I keep on trying, I am sure I will achieve it."
                 ]
               },
               "connectors": [
                 "first",
-                "then",
+                "second",
                 "also",
-                "in the future",
-                "finally"
+                "because",
+                "so",
+                "as long as"
               ],
               "minWords": 40
             },
             "quizQuestions": [
               {
-                "q": "「engineer」的意思是？",
+                "q": "「resolution」的意思是？",
                 "opts": [
-                  "律师",
-                  "工程师",
-                  "音乐家",
-                  "画家"
+                  "预测",
+                  "决定；决心",
+                  "专家",
+                  "灾难"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -3613,28 +3662,16 @@
                 "q": "「achieve」的意思是？",
                 "opts": [
                   "（经过努力）达到；完成",
-                  "设计",
-                  "错过",
-                  "介绍"
+                  "失败",
+                  "取代",
+                  "出现"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「designer」的意思是？",
-                "opts": [
-                  "运动员",
-                  "导演",
-                  "设计师",
-                  "工程师"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "They are going to ____ a new robot for the show.",
+                "q": "They are going to ___ a robot for the science show.",
                 "opts": [
                   "designs",
                   "designing",
@@ -3646,19 +3683,19 @@
                 "dim": "grammar"
               },
               {
-                "q": "「photographer」的意思是？",
+                "q": "「self-improvement」的意思是？",
                 "opts": [
-                  "摄影师",
-                  "律师",
-                  "音乐家",
-                  "导演"
+                  "自我提高",
+                  "交通",
+                  "工业",
+                  "误会"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "He learned ____ the piano when he was young.",
+                "q": "He learned ___ the piano when he was young.",
                 "opts": [
                   "to play",
                   "play",
@@ -3670,19 +3707,19 @@
                 "dim": "grammar"
               },
               {
-                "q": "「musician」的意思是？",
+                "q": "「confident」的意思是？",
                 "opts": [
-                  "画家",
-                  "运动员",
-                  "音乐家",
-                  "律师"
+                  "失望的",
+                  "自信的",
+                  "懒惰的",
+                  "害怕的"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "What ____ you going to be in the future?",
+                "q": "What ___ you going to be in the future?",
                 "opts": [
                   "is",
                   "do",
@@ -3692,66 +3729,78 @@
                 "answer": 3,
                 "point": "be going to 特殊疑问句",
                 "dim": "grammar"
+              },
+              {
+                "q": "「take up」的意思是？",
+                "opts": [
+                  "开始学；开始从事",
+                  "放弃",
+                  "失败",
+                  "推迟"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "I am going to be an engineer when I grow up.",
+                "audio": "I am going to learn to play the guitar this year.",
                 "opts": [
-                  "He plans to become an engineer in the future.",
-                  "He is already an engineer now.",
-                  "He wants to be a musician.",
-                  "He doesn't know what to do."
+                  "He plans to learn the guitar this year.",
+                  "He already plays the guitar well.",
+                  "He wants to sell his guitar.",
+                  "He hates music."
                 ],
                 "answer": 0
               },
               {
-                "audio": "In twenty years, robots are going to do most of the housework.",
+                "audio": "She has decided to read one English book every week.",
                 "opts": [
-                  "People will do all the housework alone.",
-                  "Robots will do little work at home.",
-                  "Robots are going to help with most housework.",
-                  "Housework will disappear completely."
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "My sister has decided to learn to take great photos.",
-                "opts": [
-                  "She wants to be a lawyer.",
-                  "She has decided to learn photography.",
-                  "She hates taking photos.",
-                  "She is going to stop studying."
+                  "She will stop reading English.",
+                  "She plans to read one English book each week.",
+                  "She reads Chinese books only.",
+                  "She never reads."
                 ],
                 "answer": 1
               },
               {
-                "audio": "AI is going to change the way we study at school.",
+                "audio": "My mini-goal is to learn ten new words a day.",
                 "opts": [
-                  "School will close because of AI.",
-                  "Students will stop using AI.",
-                  "AI will not affect studying.",
-                  "AI is going to change how we study."
+                  "He learns no new words.",
+                  "He wants to forget words.",
+                  "His small goal is ten new words each day.",
+                  "He learns a hundred words a day."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "I want to become an engineer when I grow up.",
+                "opts": [
+                  "He is already an engineer.",
+                  "He wants to be a teacher.",
+                  "He has no dream job.",
+                  "He hopes to be an engineer in the future."
                 ],
                 "answer": 3
               },
               {
-                "audio": "I want to become a fashion designer and work for myself.",
+                "audio": "I am not going to give up, even if I fail.",
                 "opts": [
-                  "She hopes to be a fashion designer and be her own boss.",
-                  "She wants to work for a big company.",
-                  "She is going to be an athlete.",
-                  "She has no dream at all."
+                  "She will keep trying even after failing.",
+                  "She gives up easily.",
+                  "She never fails.",
+                  "She has already given up."
                 ],
                 "answer": 0
               },
               {
-                "audio": "We are going to try our best to achieve our dreams.",
+                "audio": "I am going to stay organized and keep my room tidy.",
                 "opts": [
-                  "They have given up their dreams.",
-                  "They are going to work hard to reach their dreams.",
-                  "They never make any plans.",
-                  "They think dreams are useless."
+                  "His room is always messy.",
+                  "He plans to be organized and keep his room tidy.",
+                  "He will never clean his room.",
+                  "He shares a room."
                 ],
                 "answer": 1
               }
@@ -3762,11 +3811,11 @@
             "num": 7,
             "unitKey": "U7",
             "book": "8A",
-            "title": "Plan for Yourself",
-            "cn": "为自己制订计划",
-            "emoji": "📅",
+            "title": "When Tomorrow Comes",
+            "cn": "当明天来临",
+            "emoji": "🔮",
             "available": true,
-            "bigQuestion": "Why do we need plans?",
+            "bigQuestion": "What will the future look like?",
             "pronunciation": "/n/ /ŋ/ /tʃ/ /dʒ/ /f/ /r/;语调",
             "contentStatus": "TODO_待真题填充",
             "vocabulary": [
@@ -3779,174 +3828,66 @@
                     "cn": "做出预测"
                   },
                   {
-                    "en": "a correct prediction",
-                    "cn": "一个正确的预测"
+                    "en": "a future prediction",
+                    "cn": "对未来的预测"
                   },
                   {
-                    "en": "weather prediction",
-                    "cn": "天气预测"
+                    "en": "my prediction about life",
+                    "cn": "我对生活的预测"
                   }
                 ]
               },
               {
-                "en": "positive",
-                "cn": "乐观的；积极的",
+                "en": "technology",
+                "cn": "科技；工艺",
                 "chunks": [
                   {
-                    "en": "a positive attitude",
-                    "cn": "积极的态度"
+                    "en": "modern technology",
+                    "cn": "现代科技"
                   },
                   {
-                    "en": "stay positive",
-                    "cn": "保持乐观"
+                    "en": "new technology",
+                    "cn": "新技术"
                   },
                   {
-                    "en": "positive about life",
-                    "cn": "对生活乐观"
+                    "en": "change with technology",
+                    "cn": "随科技而变"
                   }
                 ]
               },
               {
-                "en": "develop",
-                "cn": "增强；发展",
+                "en": "AI",
+                "cn": "人工智能",
                 "chunks": [
                   {
-                    "en": "develop a skill",
-                    "cn": "培养一项技能"
+                    "en": "AI technology",
+                    "cn": "人工智能技术"
                   },
                   {
-                    "en": "develop good habits",
-                    "cn": "养成好习惯"
+                    "en": "use AI",
+                    "cn": "使用人工智能"
                   },
                   {
-                    "en": "develop my talent",
-                    "cn": "发展我的才能"
+                    "en": "AI will help us",
+                    "cn": "人工智能会帮助我们"
                   }
                 ]
               },
               {
-                "en": "challenge",
-                "cn": "挑战",
+                "en": "robot",
+                "cn": "机器人",
                 "chunks": [
                   {
-                    "en": "face a challenge",
-                    "cn": "面对挑战"
+                    "en": "a service robot",
+                    "cn": "一个服务机器人"
                   },
                   {
-                    "en": "a big challenge",
-                    "cn": "一个巨大的挑战"
+                    "en": "robots will work",
+                    "cn": "机器人将会工作"
                   },
                   {
-                    "en": "take on a challenge",
-                    "cn": "接受挑战"
-                  }
-                ]
-              },
-              {
-                "en": "task",
-                "cn": "任务；工作",
-                "chunks": [
-                  {
-                    "en": "finish the task",
-                    "cn": "完成任务"
-                  },
-                  {
-                    "en": "a difficult task",
-                    "cn": "一项艰巨的任务"
-                  },
-                  {
-                    "en": "a daily task",
-                    "cn": "日常任务"
-                  }
-                ]
-              },
-              {
-                "en": "quality",
-                "cn": "素质；品质",
-                "chunks": [
-                  {
-                    "en": "a good quality",
-                    "cn": "一种好品质"
-                  },
-                  {
-                    "en": "improve the quality",
-                    "cn": "提高质量"
-                  },
-                  {
-                    "en": "quality of life",
-                    "cn": "生活质量"
-                  }
-                ]
-              },
-              {
-                "en": "valuable",
-                "cn": "宝贵的；很有用的",
-                "chunks": [
-                  {
-                    "en": "valuable advice",
-                    "cn": "宝贵的建议"
-                  },
-                  {
-                    "en": "a valuable lesson",
-                    "cn": "宝贵的一课"
-                  },
-                  {
-                    "en": "valuable time",
-                    "cn": "宝贵的时间"
-                  }
-                ]
-              },
-              {
-                "en": "accept",
-                "cn": "接受",
-                "chunks": [
-                  {
-                    "en": "accept the truth",
-                    "cn": "接受事实"
-                  },
-                  {
-                    "en": "accept help",
-                    "cn": "接受帮助"
-                  },
-                  {
-                    "en": "accept a challenge",
-                    "cn": "接受挑战"
-                  }
-                ]
-              },
-              {
-                "en": "creative",
-                "cn": "有创造力的",
-                "chunks": [
-                  {
-                    "en": "a creative idea",
-                    "cn": "一个有创意的主意"
-                  },
-                  {
-                    "en": "be creative",
-                    "cn": "有创造力"
-                  },
-                  {
-                    "en": "creative thinking",
-                    "cn": "创造性思维"
-                  }
-                ]
-              },
-              {
-                "en": "depend",
-                "cn": "取决于；依靠",
-                "chunks": [
-                  {
-                    "en": "depend on yourself",
-                    "cn": "依靠你自己"
-                  },
-                  {
-                    "en": "depend on hard work",
-                    "cn": "取决于努力"
-                  },
-                  {
-                    "en": "it depends",
-                    "cn": "那要看情况"
+                    "en": "build a robot",
+                    "cn": "制造机器人"
                   }
                 ]
               },
@@ -3955,12 +3896,12 @@
                 "cn": "专家；行家",
                 "chunks": [
                   {
-                    "en": "become an expert",
-                    "cn": "成为专家"
+                    "en": "an AI expert",
+                    "cn": "一位人工智能专家"
                   },
                   {
-                    "en": "a maths expert",
-                    "cn": "数学专家"
+                    "en": "a space expert",
+                    "cn": "一位太空专家"
                   },
                   {
                     "en": "ask an expert",
@@ -3969,20 +3910,128 @@
                 ]
               },
               {
-                "en": "achieve",
-                "cn": "（经过努力）达到；完成",
+                "en": "industry",
+                "cn": "行业；工业",
                 "chunks": [
                   {
-                    "en": "achieve a goal",
-                    "cn": "达成目标"
+                    "en": "the robotics industry",
+                    "cn": "机器人行业"
                   },
                   {
-                    "en": "achieve your dream",
-                    "cn": "实现你的梦想"
+                    "en": "a growing industry",
+                    "cn": "一个成长中的行业"
                   },
                   {
-                    "en": "achieve more",
-                    "cn": "取得更多成就"
+                    "en": "change the industry",
+                    "cn": "改变这个行业"
+                  }
+                ]
+              },
+              {
+                "en": "disaster",
+                "cn": "灾难；不幸",
+                "chunks": [
+                  {
+                    "en": "a natural disaster",
+                    "cn": "一场自然灾害"
+                  },
+                  {
+                    "en": "during a disaster",
+                    "cn": "在灾难期间"
+                  },
+                  {
+                    "en": "save lives in a disaster",
+                    "cn": "在灾难中救人"
+                  }
+                ]
+              },
+              {
+                "en": "emergency",
+                "cn": "突发事件；紧急情况",
+                "chunks": [
+                  {
+                    "en": "in an emergency",
+                    "cn": "在紧急情况下"
+                  },
+                  {
+                    "en": "an emergency call",
+                    "cn": "紧急呼叫"
+                  },
+                  {
+                    "en": "handle an emergency",
+                    "cn": "处理突发事件"
+                  }
+                ]
+              },
+              {
+                "en": "futurist",
+                "cn": "未来学家",
+                "chunks": [
+                  {
+                    "en": "a famous futurist",
+                    "cn": "一位著名的未来学家"
+                  },
+                  {
+                    "en": "the futurist said",
+                    "cn": "未来学家说"
+                  },
+                  {
+                    "en": "ask a futurist",
+                    "cn": "请教未来学家"
+                  }
+                ]
+              },
+              {
+                "en": "replace",
+                "cn": "代替；取代",
+                "chunks": [
+                  {
+                    "en": "replace humans",
+                    "cn": "取代人类"
+                  },
+                  {
+                    "en": "robots replace workers",
+                    "cn": "机器人取代工人"
+                  },
+                  {
+                    "en": "hard to replace",
+                    "cn": "难以取代"
+                  }
+                ]
+              },
+              {
+                "en": "efficient",
+                "cn": "效率高的；有功效的",
+                "chunks": [
+                  {
+                    "en": "an efficient system",
+                    "cn": "一个高效的系统"
+                  },
+                  {
+                    "en": "more efficient",
+                    "cn": "更高效"
+                  },
+                  {
+                    "en": "work in an efficient way",
+                    "cn": "以高效的方式工作"
+                  }
+                ]
+              },
+              {
+                "en": "influence",
+                "cn": "影响；对……起作用",
+                "chunks": [
+                  {
+                    "en": "influence the future",
+                    "cn": "影响未来"
+                  },
+                  {
+                    "en": "have an influence on",
+                    "cn": "对……有影响"
+                  },
+                  {
+                    "en": "a good influence",
+                    "cn": "好的影响"
                   }
                 ]
               }
@@ -4030,6 +4079,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -4058,101 +4115,101 @@
             "grammarCode": "g8a-u7-TODO",
             "grammarQuiz": [
               {
-                "q": "I ___ work harder next term.",
+                "q": "There ___ more robots in our homes in the future.",
                 "opts": [
-                  "am",
-                  "will",
+                  "will be",
+                  "is",
                   "was",
-                  "did"
-                ],
-                "answer": 1,
-                "point": "will 表将来",
-                "dim": "grammar"
-              },
-              {
-                "q": "She ___ visit her grandparents this weekend.",
-                "opts": [
-                  "will",
-                  "wills",
-                  "willing",
-                  "is will"
+                  "are being"
                 ],
                 "answer": 0,
-                "point": "will 后接动词原形",
+                "point": "一般将来时 there will be",
                 "dim": "grammar"
               },
               {
-                "q": "We ___ give up our dream.",
+                "q": "We ___ be able to travel to outer space one day.",
                 "opts": [
+                  "are",
+                  "were",
                   "will",
-                  "will not",
-                  "are not",
-                  "do not"
-                ],
-                "answer": 1,
-                "point": "will 否定形式",
-                "dim": "grammar"
-              },
-              {
-                "q": "___ you help me with my plan tomorrow?",
-                "opts": [
-                  "Do",
-                  "Are",
-                  "Will",
-                  "Did"
+                  "do"
                 ],
                 "answer": 2,
+                "point": "will + 动词原形",
+                "dim": "grammar"
+              },
+              {
+                "q": "There will be ___ pollution if we use clean energy.",
+                "opts": [
+                  "fewer",
+                  "less",
+                  "many",
+                  "more"
+                ],
+                "answer": 1,
+                "point": "less + 不可数名词",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ most people live in outer space? — No, they won't.",
+                "opts": [
+                  "Will",
+                  "Do",
+                  "Are",
+                  "Did"
+                ],
+                "answer": 0,
                 "point": "will 一般疑问句",
                 "dim": "grammar"
               },
               {
-                "q": "They will ___ to the new school next year.",
+                "q": "___ we go to see the new sci-fi film tonight? — I'd love to.",
                 "opts": [
-                  "went",
-                  "going",
-                  "goes",
-                  "go"
+                  "Shall",
+                  "Did",
+                  "Were",
+                  "Are"
                 ],
-                "answer": 3,
-                "point": "will 后接动词原形",
+                "answer": 0,
+                "point": "Shall we...? 提议",
                 "dim": "grammar"
               }
             ],
             "reading": {
-              "passage": "A new school year is starting, and I have made a plan for myself. This year, I will work harder than before. My biggest goal is to develop a good study habit, so I will read for thirty minutes every evening. I know it will be a real challenge, but I will stay positive and never give up. I will also learn to play the guitar, because I want to be more creative. My parents say success depends on hard work, not luck. I believe this is valuable advice. I will not waste my time. If I keep my plan, I think I will become a better person by the end of the year.",
-              "passageCn": "新学年开始了，我为自己制订了一个计划。今年，我会比以前更努力。我最大的目标是养成良好的学习习惯，所以我每天晚上会读书三十分钟。我知道这会是一个真正的挑战，但我会保持乐观，绝不放弃。我还会学弹吉他，因为我想更有创造力。我父母说成功取决于努力，而不是运气。我认为这是宝贵的建议。我不会浪费时间。如果我坚持我的计划，我想到年底我会成为一个更好的人。",
+              "passage": "What will the future look like? Many people make predictions about it. In 50 years, technology will change the way we live. Robots will work everywhere and do almost all our housework. They will also save lives when disasters and emergencies happen. Some jobs today will disappear, but there will be more challenging jobs, such as space pilots and AI experts. Will robots replace humans one day? Most futurists say no. Our creativity and emotional intelligence are important, and AI will not replace these things. There will be less pollution and fewer traffic accidents, because the transport system will be more efficient. How can we prepare for the future? Just accept change, keep learning, and work hard. Today's choices will influence your future.",
+              "passageCn": "未来会是什么样子？许多人都对它做出预测。50年后，科技将改变我们的生活方式。机器人将无处不在地工作，几乎包揽我们所有的家务。当灾难和紧急情况发生时，它们还会拯救生命。今天的一些工作会消失，但会出现更多有挑战性的工作，比如太空飞行员和人工智能专家。机器人有一天会取代人类吗？大多数未来学家说不会。我们的创造力和情感智能很重要，人工智能不会取代这些。污染会更少，交通事故也会更少，因为交通系统会更高效。我们该如何为未来做准备？只需接受变化，不断学习，努力工作。今天的选择将影响你的未来。",
               "questions": [
                 {
-                  "q": "What is the writer's biggest goal this year?",
+                  "q": "According to the passage, what will robots do in the future?",
                   "opts": [
-                    "To play computer games",
-                    "To develop a good study habit",
-                    "To travel around the world",
-                    "To make more money"
+                    "Replace all human feelings",
+                    "Do almost all our housework and help in disasters",
+                    "Stop all new jobs",
+                    "Make pollution worse"
                   ],
                   "answer": 1,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "Why will the writer learn the guitar?",
+                  "q": "Why won't robots fully replace humans?",
                   "opts": [
-                    "Because the teacher asks her to",
-                    "Because she wants to be more creative",
-                    "Because her friends play it",
-                    "Because it is easy"
+                    "Because robots are too expensive",
+                    "Because humans have creativity and emotional intelligence",
+                    "Because robots cannot move",
+                    "Because there are too few robots"
                   ],
                   "answer": 1,
                   "point": "细节理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "What can we learn from the passage?",
+                  "q": "What is the best advice to prepare for the future?",
                   "opts": [
-                    "The writer thinks success comes from luck",
-                    "The writer will give up when it is hard",
-                    "The writer believes hard work matters most",
-                    "The writer has no plan for the year"
+                    "Stop using technology",
+                    "Wait and do nothing",
+                    "Accept change and keep learning",
+                    "Avoid all new jobs"
                   ],
                   "answer": 2,
                   "point": "推理判断",
@@ -4161,64 +4218,64 @@
               ]
             },
             "writing": {
-              "topic": "My Plans for This Year",
-              "prompt": "Write about your plans and resolutions for this year. Use 'will' to talk about what you are going to do. Include a goal, how you will reach it, and a challenge you may face.",
-              "promptCn": "写一写你今年的计划和决心。用 will 谈谈你将要做的事，包括一个目标、你将如何实现它，以及你可能面对的挑战。",
-              "opener": "A new year is starting, so I have made some plans for myself.",
+              "topic": "My Life in 20 Years",
+              "prompt": "What will your life be like in 20 years? Write a short passage about your predictions for the future. Use the simple future tense (will). Talk about your job, where you will live, and your free time.",
+              "promptCn": "二十年后你的生活会是什么样？写一段短文，谈谈你对未来的预测。用一般将来时（will），谈谈你的工作、你将住在哪里以及你的休闲生活。",
+              "opener": "What will my life be like in 20 years? Here are a few of my predictions.",
               "sampleWords": [
                 "prediction",
-                "goal",
-                "develop",
-                "challenge",
-                "positive",
-                "valuable",
-                "depend",
-                "creative"
+                "technology",
+                "robot",
+                "AI",
+                "future",
+                "industry",
+                "efficient",
+                "influence"
               ],
               "cards": [
                 {
-                  "key": "goal",
-                  "labelCn": "我的目标",
-                  "hint": "如 My goal is to develop a good habit."
+                  "key": "job",
+                  "labelCn": "未来的工作",
+                  "hint": "如 I will become an artist / engineer"
                 },
                 {
-                  "key": "action",
-                  "labelCn": "我将怎么做",
-                  "hint": "如 I will read English every day."
+                  "key": "place",
+                  "labelCn": "住在哪里",
+                  "hint": "如 I will live in the countryside / a smart city"
                 },
                 {
-                  "key": "challenge",
-                  "labelCn": "困难与态度",
-                  "hint": "如 It will be a challenge, but I will stay positive."
+                  "key": "life",
+                  "labelCn": "科技与生活",
+                  "hint": "如 Robots will help us; there will be less pollution"
                 }
               ],
               "templates": {
                 "l1": [
-                  "My main {goal} is to do better at school.",
-                  "I {action} study harder this year.",
-                  "This {challenge} will not be easy for me.",
-                  "But I will keep a positive attitude every day."
+                  "What will my life be like in 20 years?",
+                  "I think I will be a/an {job}.",
+                  "I will live in {place}.",
+                  "Technology will make life better. {life}"
                 ],
                 "l2": [
-                  "My biggest {goal} is to develop a useful skill.",
-                  "To reach it, I {action} practise for an hour each day.",
-                  "The {challenge} is that I sometimes feel lazy.",
-                  "However, I will not give up, because success depends on hard work."
+                  "In 20 years, I will become a/an {job}, and I will work hard at it.",
+                  "I will live in {place}, close to the things I love.",
+                  "Robots and AI will help us every day, and there will be less pollution. {life}",
+                  "I believe these predictions will come true."
                 ],
                 "l3": [
-                  "This year my {goal} is to become a more creative and confident person.",
-                  "I {action} read books, learn the guitar and try new things.",
-                  "The real {challenge} is keeping my plan when I am busy or tired.",
-                  "Even so, I will stay positive, because I believe this valuable habit will change my future."
+                  "What will my life be like in 20 years? Here are my predictions.",
+                  "I will be a/an {job}, because I will keep learning and trying my best.",
+                  "I will live in {place}, where life will be peaceful and full of ideas.",
+                  "Technology will change everything: robots will do the housework, the transport system will be more efficient, and AI will help us solve problems. {life}"
                 ]
               },
               "connectors": [
                 "first",
                 "then",
-                "because",
-                "but",
-                "so",
-                "finally"
+                "also",
+                "in the future",
+                "I believe",
+                "as long as"
               ],
               "minWords": 40
             },
@@ -4226,158 +4283,158 @@
               {
                 "q": "「prediction」的意思是？",
                 "opts": [
-                  "计划",
+                  "污染",
                   "预测；预言",
-                  "任务",
-                  "挑战"
+                  "专家",
+                  "灾难"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「valuable」的意思是？",
+                "q": "「replace」的意思是？",
                 "opts": [
-                  "宝贵的",
-                  "廉价的",
-                  "危险的",
-                  "简单的"
+                  "代替；取代",
+                  "影响",
+                  "接受",
+                  "出现"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「depend」的意思是？",
+                "q": "There ___ be fewer cars in the city centre soon.",
                 "opts": [
-                  "浪费",
-                  "取决于；依靠",
-                  "结束",
-                  "离开"
+                  "are",
+                  "will",
+                  "were",
+                  "do"
+                ],
+                "answer": 1,
+                "point": "一般将来时 will",
+                "dim": "grammar"
+              },
+              {
+                "q": "「emergency」的意思是？",
+                "opts": [
+                  "行业",
+                  "专家",
+                  "突发事件；紧急情况",
+                  "科技"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "There will be ___ traffic accidents with smarter roads. (可数)",
+                "opts": [
+                  "less",
+                  "much",
+                  "fewer",
+                  "a little"
+                ],
+                "answer": 2,
+                "point": "fewer + 可数名词复数",
+                "dim": "grammar"
+              },
+              {
+                "q": "「futurist」的意思是？",
+                "opts": [
+                  "飞行员",
+                  "未来学家",
+                  "研究",
+                  "工业"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "Choose the correct future sentence:",
+                "q": "___ we meet outside the cinema at 7:15? — OK, see you then.",
                 "opts": [
-                  "I will worked hard.",
-                  "I will to work hard.",
-                  "I will work hard.",
-                  "I willing work hard."
-                ],
-                "answer": 2,
-                "point": "will 用法",
-                "dim": "grammar"
-              },
-              {
-                "q": "「challenge」的意思是？",
-                "opts": [
-                  "运气",
-                  "休息",
-                  "机会",
-                  "挑战"
+                  "Do",
+                  "Are",
+                  "Did",
+                  "Shall"
                 ],
                 "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "Tomorrow we ___ start a new plan.",
-                "opts": [
-                  "will",
-                  "are",
-                  "do",
-                  "were"
-                ],
-                "answer": 0,
-                "point": "will 表将来",
+                "point": "Shall we...?",
                 "dim": "grammar"
               },
               {
-                "q": "「positive」的意思是？",
+                "q": "「efficient」的意思是？",
                 "opts": [
-                  "消极的",
-                  "乐观的；积极的",
-                  "懒惰的",
-                  "害怕的"
+                  "效率高的",
+                  "失望的",
+                  "古老的",
+                  "空闲的"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "Which word means 有创造力的?",
-                "opts": [
-                  "lazy",
-                  "quiet",
-                  "creative",
-                  "tired"
-                ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "I will set a clear goal for myself this year.",
+                "audio": "In the future, robots will do almost all our housework.",
                 "opts": [
-                  "He plans to set a goal for the year.",
-                  "He has no goals at all.",
-                  "He set a goal last year.",
-                  "He will forget his goal."
+                  "Robots will take care of most housework.",
+                  "People will do all housework alone.",
+                  "Robots will never help at home.",
+                  "Housework will disappear."
                 ],
                 "answer": 0
               },
               {
-                "audio": "My plan is to read English every morning.",
+                "audio": "There will be fewer traffic accidents because the transport system will be more efficient.",
                 "opts": [
-                  "She reads English at night.",
-                  "She plans to read English every morning.",
-                  "She never reads English.",
-                  "She reads Chinese in the morning."
+                  "There will be more accidents.",
+                  "A better transport system will mean fewer accidents.",
+                  "The transport system will get worse.",
+                  "People will stop using transport."
                 ],
                 "answer": 1
               },
               {
-                "audio": "It will be a big challenge, but I will not give up.",
+                "audio": "Some jobs will disappear, but there will be new jobs like AI experts.",
                 "opts": [
-                  "She thinks it is easy.",
-                  "She has already given up.",
-                  "She will keep trying though it is hard.",
-                  "She will give up soon."
+                  "All jobs will stay the same.",
+                  "No new jobs will appear.",
+                  "Old jobs may go, and new jobs like AI experts will come.",
+                  "Everyone will be jobless."
                 ],
                 "answer": 2
               },
               {
-                "audio": "I will develop the habit of doing sports every day.",
+                "audio": "Will most people live in outer space in 100 years?",
                 "opts": [
-                  "He hates doing sports.",
-                  "He stopped doing sports.",
-                  "He does sports once a year.",
-                  "He will exercise every day."
+                  "People already live in space.",
+                  "Nobody will live in space.",
+                  "Space travel is impossible.",
+                  "The speaker is asking if most people will live in space."
                 ],
                 "answer": 3
               },
               {
-                "audio": "Success depends on hard work, not luck.",
+                "audio": "AI will not replace humans because we have creativity.",
                 "opts": [
-                  "Hard work leads to success.",
-                  "Luck is the only key.",
-                  "Success needs no effort.",
-                  "Working hard is useless."
+                  "Human creativity means AI won't fully replace us.",
+                  "AI will replace everyone soon.",
+                  "Humans have no creativity.",
+                  "AI hates humans."
                 ],
                 "answer": 0
               },
               {
-                "audio": "I will learn to play the guitar to be more creative.",
+                "audio": "Today's choices will influence your future.",
                 "opts": [
-                  "She can already play very well.",
-                  "She wants to be more creative.",
-                  "She will sell her guitar.",
-                  "She dislikes music."
+                  "The past cannot be changed.",
+                  "What you choose today will shape your future.",
+                  "The future has nothing to do with today.",
+                  "Choices do not matter."
                 ],
                 "answer": 1
               }
@@ -4653,6 +4710,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -5288,6 +5353,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -5911,6 +5984,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -6540,6 +6621,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -7162,6 +7251,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -7793,6 +7890,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -8416,6 +8521,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -9045,6 +9158,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -9669,6 +9790,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5b",
+                "title": "完形填空",
+                "subtitle": "语篇填空",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {

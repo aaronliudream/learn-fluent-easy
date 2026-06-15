@@ -1,0 +1,70 @@
+{
+ "_title":"Plan for Yourself",
+ "vocabulary":[
+  {"en":"resolution","cn":"决定；决心","chunks":[{"en":"make a resolution","cn":"下定决心"},{"en":"a New Year's resolution","cn":"新年决心"},{"en":"keep my resolution","cn":"坚持我的决心"}]},
+  {"en":"mini-goal","cn":"小目标","chunks":[{"en":"set a mini-goal","cn":"设定小目标"},{"en":"reach a mini-goal","cn":"实现小目标"},{"en":"one mini-goal a week","cn":"一周一个小目标"}]},
+  {"en":"achieve","cn":"（经过努力）达到；完成","chunks":[{"en":"achieve a goal","cn":"达成目标"},{"en":"achieve your dream","cn":"实现你的梦想"},{"en":"achieve more","cn":"取得更多成就"}]},
+  {"en":"self-improvement","cn":"自我提高；自我改进","chunks":[{"en":"a plan for self-improvement","cn":"自我提高的计划"},{"en":"work on self-improvement","cn":"致力于自我提高"},{"en":"the way to self-improvement","cn":"自我提高的途径"}]},
+  {"en":"confident","cn":"自信的；肯定的","chunks":[{"en":"feel confident","cn":"感到自信"},{"en":"be confident about it","cn":"对此有信心"},{"en":"a confident smile","cn":"自信的微笑"}]},
+  {"en":"organized","cn":"有条理的；有组织的","chunks":[{"en":"stay organized","cn":"保持有条理"},{"en":"an organized student","cn":"一个有条理的学生"},{"en":"keep my room organized","cn":"把房间收拾得井井有条"}]},
+  {"en":"take up","cn":"开始学；开始从事","chunks":[{"en":"take up a hobby","cn":"开始一项爱好"},{"en":"take up photography","cn":"开始学摄影"},{"en":"take up running","cn":"开始跑步"}]},
+  {"en":"physical","cn":"身体的；物质的","chunks":[{"en":"physical health","cn":"身体健康"},{"en":"physical exercise","cn":"体育锻炼"},{"en":"a physical activity","cn":"一项体育活动"}]},
+  {"en":"design","cn":"设计；计划","chunks":[{"en":"design a bridge","cn":"设计一座桥"},{"en":"design a plan","cn":"制订计划"},{"en":"design clothes","cn":"设计服装"}]},
+  {"en":"engineer","cn":"工程师；技师","chunks":[{"en":"become an engineer","cn":"成为一名工程师"},{"en":"a software engineer","cn":"一名软件工程师"},{"en":"work as an engineer","cn":"当工程师"}]},
+  {"en":"designer","cn":"设计师","chunks":[{"en":"a fashion designer","cn":"一名时装设计师"},{"en":"a game designer","cn":"一名游戏设计师"},{"en":"become a designer","cn":"成为设计师"}]},
+  {"en":"fail","cn":"未能（做到）；失败","chunks":[{"en":"fail the exam","cn":"考试不及格"},{"en":"fail to finish","cn":"未能完成"},{"en":"never give up after you fail","cn":"失败后绝不放弃"}]}
+ ],
+ "reading":{
+  "passage":"A new term is starting, so I am going to make some plans for myself. First, I have decided to improve my English. I am going to read one English story every week and learn ten new words a day. I know I will sometimes fail, but I am not going to give up. Second, I want to take up a new hobby. I am going to learn to play the guitar, because music helps me relax. I also plan to stay organized and keep my room tidy. My biggest dream is to become an engineer one day, so I am going to study science harder. These mini-goals are not easy, but I am sure I will achieve them if I keep on trying.",
+  "passageCn":"新学期开始了，所以我打算为自己制订一些计划。首先，我决定要提高我的英语。我打算每周读一个英语故事，每天学十个新单词。我知道有时会失败，但我不会放弃。其次，我想培养一个新爱好。我打算学弹吉他，因为音乐能帮我放松。我还计划保持有条理，把房间整理干净。我最大的梦想是有一天成为一名工程师，所以我打算更努力地学习科学。这些小目标并不容易，但只要我坚持下去，我相信我一定能实现它们。",
+  "questions":[
+   {"q":"What is the writer going to do to improve English?","opts":["Watch films only","Read one English story a week and learn ten words a day","Stop studying English","Give up after failing"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why does the writer want to learn the guitar?","opts":["Because music helps him relax","Because the teacher asks him to","Because it is easy","Because his friends play it"],"answer":0,"point":"细节理解","dim":"reading"},
+   {"q":"What can we learn about the writer?","opts":["He gives up easily","He has clear plans and keeps trying","He has no dream","He dislikes studying"],"answer":1,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"I ___ study computer science next year.","opts":["am going to","is going to","are going to","going to"],"answer":0,"point":"be going to 表计划","dim":"grammar"},
+  {"q":"She has decided ___ a new hobby this term.","opts":["take up","taking up","to take up","takes up"],"answer":2,"point":"不定式作宾语 decide to do","dim":"grammar"},
+  {"q":"___ you going to make any resolutions this year?","opts":["Is","Do","Are","Does"],"answer":2,"point":"be going to 一般疑问句","dim":"grammar"},
+  {"q":"I want ___ more confident when I speak English.","opts":["be","to be","being","am"],"answer":1,"point":"不定式作宾语 want to do","dim":"grammar"},
+  {"q":"We ___ give up, even when we fail.","opts":["are going to","aren't going to","is going to","don't going to"],"answer":1,"point":"be going to 否定句","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"I am going to learn to play the guitar this year.","opts":["He plans to learn the guitar this year.","He already plays the guitar well.","He wants to sell his guitar.","He hates music."],"answer":0},
+  {"audio":"She has decided to read one English book every week.","opts":["She will stop reading English.","She plans to read one English book each week.","She reads Chinese books only.","She never reads."],"answer":1},
+  {"audio":"My mini-goal is to learn ten new words a day.","opts":["He learns no new words.","He wants to forget words.","His small goal is ten new words each day.","He learns a hundred words a day."],"answer":2},
+  {"audio":"I want to become an engineer when I grow up.","opts":["He is already an engineer.","He wants to be a teacher.","He has no dream job.","He hopes to be an engineer in the future."],"answer":3},
+  {"audio":"I am not going to give up, even if I fail.","opts":["She will keep trying even after failing.","She gives up easily.","She never fails.","She has already given up."],"answer":0},
+  {"audio":"I am going to stay organized and keep my room tidy.","opts":["His room is always messy.","He plans to be organized and keep his room tidy.","He will never clean his room.","He shares a room."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「resolution」的意思是？","opts":["预测","决定；决心","专家","灾难"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「achieve」的意思是？","opts":["（经过努力）达到；完成","失败","取代","出现"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"They are going to ___ a robot for the science show.","opts":["designs","designing","designed","design"],"answer":3,"point":"be going to + 动词原形","dim":"grammar"},
+  {"q":"「self-improvement」的意思是？","opts":["自我提高","交通","工业","误会"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"He learned ___ the piano when he was young.","opts":["to play","play","playing","plays"],"answer":0,"point":"不定式作宾语","dim":"grammar"},
+  {"q":"「confident」的意思是？","opts":["失望的","自信的","懒惰的","害怕的"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"What ___ you going to be in the future?","opts":["is","do","does","are"],"answer":3,"point":"be going to 特殊疑问句","dim":"grammar"},
+  {"q":"「take up」的意思是？","opts":["开始学；开始从事","放弃","失败","推迟"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Plans for This Term",
+  "prompt":"A new term is starting. Write about the plans and resolutions you are going to make for yourself. Use 'be going to' and infinitives (decide to / want to / learn to do). Include your study goal, a new hobby, and your dream job.",
+  "promptCn":"新学期开始了。写一写你打算为自己制订的计划和决心。用 be going to 和不定式（decide to / want to / learn to do）。包括你的学习目标、一个新爱好和你的理想职业。",
+  "opener":"A new term is starting, so I am going to make some plans for myself.",
+  "sampleWords":["resolution","mini-goal","achieve","self-improvement","take up","confident","organized","engineer"],
+  "cards":[
+   {"key":"study","labelCn":"学习目标","hint":"如 I am going to read more English."},
+   {"key":"hobby","labelCn":"新爱好","hint":"如 I want to take up the guitar."},
+   {"key":"dream","labelCn":"理想职业","hint":"如 I am going to be an engineer."}
+  ],
+  "templates":{
+   "l1":["A new term is starting, and I have some plans.","For study, I am going to {study}.","For fun, I want to {hobby}.","My dream is to {dream}."],
+   "l2":["This term, I am going to make a few resolutions.","First, I have decided to {study} to improve myself.","Second, I want to {hobby} so that I can relax.","My biggest mini-goal is to {dream}, so I am going to work hard."],
+   "l3":["A new term is starting, so I am going to set some mini-goals for self-improvement.","For my study, I have decided to {study}, and I am not going to give up even if I fail.","I also want to {hobby}, and I am going to stay organized and confident.","In the end, my dream is to {dream}; as long as I keep on trying, I am sure I will achieve it."]
+  },
+  "connectors":["first","second","also","because","so","as long as"],
+  "minWords":40
+ }
+}

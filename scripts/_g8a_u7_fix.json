@@ -1,0 +1,70 @@
+{
+ "_title":"When Tomorrow Comes",
+ "vocabulary":[
+  {"en":"prediction","cn":"预测；预言","chunks":[{"en":"make a prediction","cn":"做出预测"},{"en":"a future prediction","cn":"对未来的预测"},{"en":"my prediction about life","cn":"我对生活的预测"}]},
+  {"en":"technology","cn":"科技；工艺","chunks":[{"en":"modern technology","cn":"现代科技"},{"en":"new technology","cn":"新技术"},{"en":"change with technology","cn":"随科技而变"}]},
+  {"en":"AI","cn":"人工智能","chunks":[{"en":"AI technology","cn":"人工智能技术"},{"en":"use AI","cn":"使用人工智能"},{"en":"AI will help us","cn":"人工智能会帮助我们"}]},
+  {"en":"robot","cn":"机器人","chunks":[{"en":"a service robot","cn":"一个服务机器人"},{"en":"robots will work","cn":"机器人将会工作"},{"en":"build a robot","cn":"制造机器人"}]},
+  {"en":"expert","cn":"专家；行家","chunks":[{"en":"an AI expert","cn":"一位人工智能专家"},{"en":"a space expert","cn":"一位太空专家"},{"en":"ask an expert","cn":"请教专家"}]},
+  {"en":"industry","cn":"行业；工业","chunks":[{"en":"the robotics industry","cn":"机器人行业"},{"en":"a growing industry","cn":"一个成长中的行业"},{"en":"change the industry","cn":"改变这个行业"}]},
+  {"en":"disaster","cn":"灾难；不幸","chunks":[{"en":"a natural disaster","cn":"一场自然灾害"},{"en":"during a disaster","cn":"在灾难期间"},{"en":"save lives in a disaster","cn":"在灾难中救人"}]},
+  {"en":"emergency","cn":"突发事件；紧急情况","chunks":[{"en":"in an emergency","cn":"在紧急情况下"},{"en":"an emergency call","cn":"紧急呼叫"},{"en":"handle an emergency","cn":"处理突发事件"}]},
+  {"en":"futurist","cn":"未来学家","chunks":[{"en":"a famous futurist","cn":"一位著名的未来学家"},{"en":"the futurist said","cn":"未来学家说"},{"en":"ask a futurist","cn":"请教未来学家"}]},
+  {"en":"replace","cn":"代替；取代","chunks":[{"en":"replace humans","cn":"取代人类"},{"en":"robots replace workers","cn":"机器人取代工人"},{"en":"hard to replace","cn":"难以取代"}]},
+  {"en":"efficient","cn":"效率高的；有功效的","chunks":[{"en":"an efficient system","cn":"一个高效的系统"},{"en":"more efficient","cn":"更高效"},{"en":"work in an efficient way","cn":"以高效的方式工作"}]},
+  {"en":"influence","cn":"影响；对……起作用","chunks":[{"en":"influence the future","cn":"影响未来"},{"en":"have an influence on","cn":"对……有影响"},{"en":"a good influence","cn":"好的影响"}]}
+ ],
+ "reading":{
+  "passage":"What will the future look like? Many people make predictions about it. In 50 years, technology will change the way we live. Robots will work everywhere and do almost all our housework. They will also save lives when disasters and emergencies happen. Some jobs today will disappear, but there will be more challenging jobs, such as space pilots and AI experts. Will robots replace humans one day? Most futurists say no. Our creativity and emotional intelligence are important, and AI will not replace these things. There will be less pollution and fewer traffic accidents, because the transport system will be more efficient. How can we prepare for the future? Just accept change, keep learning, and work hard. Today's choices will influence your future.",
+  "passageCn":"未来会是什么样子？许多人都对它做出预测。50年后，科技将改变我们的生活方式。机器人将无处不在地工作，几乎包揽我们所有的家务。当灾难和紧急情况发生时，它们还会拯救生命。今天的一些工作会消失，但会出现更多有挑战性的工作，比如太空飞行员和人工智能专家。机器人有一天会取代人类吗？大多数未来学家说不会。我们的创造力和情感智能很重要，人工智能不会取代这些。污染会更少，交通事故也会更少，因为交通系统会更高效。我们该如何为未来做准备？只需接受变化，不断学习，努力工作。今天的选择将影响你的未来。",
+  "questions":[
+   {"q":"According to the passage, what will robots do in the future?","opts":["Replace all human feelings","Do almost all our housework and help in disasters","Stop all new jobs","Make pollution worse"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"Why won't robots fully replace humans?","opts":["Because robots are too expensive","Because humans have creativity and emotional intelligence","Because robots cannot move","Because there are too few robots"],"answer":1,"point":"细节理解","dim":"reading"},
+   {"q":"What is the best advice to prepare for the future?","opts":["Stop using technology","Wait and do nothing","Accept change and keep learning","Avoid all new jobs"],"answer":2,"point":"推理判断","dim":"reading"}
+  ]
+ },
+ "grammarQuiz":[
+  {"q":"There ___ more robots in our homes in the future.","opts":["will be","is","was","are being"],"answer":0,"point":"一般将来时 there will be","dim":"grammar"},
+  {"q":"We ___ be able to travel to outer space one day.","opts":["are","were","will","do"],"answer":2,"point":"will + 动词原形","dim":"grammar"},
+  {"q":"There will be ___ pollution if we use clean energy.","opts":["fewer","less","many","more"],"answer":1,"point":"less + 不可数名词","dim":"grammar"},
+  {"q":"___ most people live in outer space? — No, they won't.","opts":["Will","Do","Are","Did"],"answer":0,"point":"will 一般疑问句","dim":"grammar"},
+  {"q":"___ we go to see the new sci-fi film tonight? — I'd love to.","opts":["Shall","Did","Were","Are"],"answer":0,"point":"Shall we...? 提议","dim":"grammar"}
+ ],
+ "listeningQuestions":[
+  {"audio":"In the future, robots will do almost all our housework.","opts":["Robots will take care of most housework.","People will do all housework alone.","Robots will never help at home.","Housework will disappear."],"answer":0},
+  {"audio":"There will be fewer traffic accidents because the transport system will be more efficient.","opts":["There will be more accidents.","A better transport system will mean fewer accidents.","The transport system will get worse.","People will stop using transport."],"answer":1},
+  {"audio":"Some jobs will disappear, but there will be new jobs like AI experts.","opts":["All jobs will stay the same.","No new jobs will appear.","Old jobs may go, and new jobs like AI experts will come.","Everyone will be jobless."],"answer":2},
+  {"audio":"Will most people live in outer space in 100 years?","opts":["People already live in space.","Nobody will live in space.","Space travel is impossible.","The speaker is asking if most people will live in space."],"answer":3},
+  {"audio":"AI will not replace humans because we have creativity.","opts":["Human creativity means AI won't fully replace us.","AI will replace everyone soon.","Humans have no creativity.","AI hates humans."],"answer":0},
+  {"audio":"Today's choices will influence your future.","opts":["The past cannot be changed.","What you choose today will shape your future.","The future has nothing to do with today.","Choices do not matter."],"answer":1}
+ ],
+ "quizQuestions":[
+  {"q":"「prediction」的意思是？","opts":["污染","预测；预言","专家","灾难"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"「replace」的意思是？","opts":["代替；取代","影响","接受","出现"],"answer":0,"point":"词汇","dim":"vocab"},
+  {"q":"There ___ be fewer cars in the city centre soon.","opts":["are","will","were","do"],"answer":1,"point":"一般将来时 will","dim":"grammar"},
+  {"q":"「emergency」的意思是？","opts":["行业","专家","突发事件；紧急情况","科技"],"answer":2,"point":"词汇","dim":"vocab"},
+  {"q":"There will be ___ traffic accidents with smarter roads. (可数)","opts":["less","much","fewer","a little"],"answer":2,"point":"fewer + 可数名词复数","dim":"grammar"},
+  {"q":"「futurist」的意思是？","opts":["飞行员","未来学家","研究","工业"],"answer":1,"point":"词汇","dim":"vocab"},
+  {"q":"___ we meet outside the cinema at 7:15? — OK, see you then.","opts":["Do","Are","Did","Shall"],"answer":3,"point":"Shall we...?","dim":"grammar"},
+  {"q":"「efficient」的意思是？","opts":["效率高的","失望的","古老的","空闲的"],"answer":0,"point":"词汇","dim":"vocab"}
+ ],
+ "writing":{
+  "topic":"My Life in 20 Years",
+  "prompt":"What will your life be like in 20 years? Write a short passage about your predictions for the future. Use the simple future tense (will). Talk about your job, where you will live, and your free time.",
+  "promptCn":"二十年后你的生活会是什么样？写一段短文，谈谈你对未来的预测。用一般将来时（will），谈谈你的工作、你将住在哪里以及你的休闲生活。",
+  "opener":"What will my life be like in 20 years? Here are a few of my predictions.",
+  "sampleWords":["prediction","technology","robot","AI","future","industry","efficient","influence"],
+  "cards":[
+   {"key":"job","labelCn":"未来的工作","hint":"如 I will become an artist / engineer"},
+   {"key":"place","labelCn":"住在哪里","hint":"如 I will live in the countryside / a smart city"},
+   {"key":"life","labelCn":"科技与生活","hint":"如 Robots will help us; there will be less pollution"}
+  ],
+  "templates":{
+   "l1":["What will my life be like in 20 years?","I think I will be a/an {job}.","I will live in {place}.","Technology will make life better. {life}"],
+   "l2":["In 20 years, I will become a/an {job}, and I will work hard at it.","I will live in {place}, close to the things I love.","Robots and AI will help us every day, and there will be less pollution. {life}","I believe these predictions will come true."],
+   "l3":["What will my life be like in 20 years? Here are my predictions.","I will be a/an {job}, because I will keep learning and trying my best.","I will live in {place}, where life will be peaceful and full of ideas.","Technology will change everything: robots will do the housework, the transport system will be more efficient, and AI will help us solve problems. {life}"]
+  },
+  "connectors":["first","then","also","in the future","I believe","as long as"],
+  "minWords":40
+ }
+}

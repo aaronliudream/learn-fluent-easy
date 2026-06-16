@@ -1539,7 +1539,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "形容词比较级",
+                "subtitle": "形容词比较级 + as...as 同级比较",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -1585,10 +1585,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "形容词比较级",
+            "grammarTitle": "形容词比较级 + as...as 同级比较",
             "grammarCode": "g8.04",
             "grammarCodes": [
-              "g8.04"
+              "g8.04",
+              "g8.36"
             ],
             "grammarQuiz": [
               {

@@ -312,7 +312,11 @@
               }
             ],
             "grammarTitle": "不定代词与一般过去时",
-            "grammarCode": "g8a-u1-TODO",
+            "grammarCode": "g8.06",
+            "grammarCodes": [
+              "g8.06",
+              "g8.01"
+            ],
             "grammarQuiz": [
               {
                 "q": "I didn't go ___ special during the holiday.",
@@ -1579,7 +1583,10 @@
               }
             ],
             "grammarTitle": "形容词比较级",
-            "grammarCode": "g8a-u3-TODO",
+            "grammarCode": "g8.04",
+            "grammarCodes": [
+              "g8.04"
+            ],
             "grammarQuiz": [
               {
                 "q": "My brother is ___ than me.",
@@ -2212,7 +2219,10 @@
               }
             ],
             "grammarTitle": "形容词最高级",
-            "grammarCode": "g8a-u4-TODO",
+            "grammarCode": "g8.09",
+            "grammarCodes": [
+              "g8.09"
+            ],
             "grammarQuiz": [
               {
                 "q": "The cheetah is ___ animal on land.",
@@ -4116,7 +4126,10 @@
               }
             ],
             "grammarTitle": "一般将来时 will",
-            "grammarCode": "g8a-u7-TODO",
+            "grammarCode": "g8.03",
+            "grammarCodes": [
+              "g8.03"
+            ],
             "grammarQuiz": [
               {
                 "q": "There ___ more robots in our homes in the future.",
@@ -4750,7 +4763,10 @@
               }
             ],
             "grammarTitle": "零条件句与第一条件句",
-            "grammarCode": "g8a-u8-TODO",
+            "grammarCode": "g8.17",
+            "grammarCodes": [
+              "g8.17"
+            ],
             "grammarQuiz": [
               {
                 "q": "If you ____ to others carefully, you will understand them better.",
@@ -5390,7 +5406,10 @@
               }
             ],
             "grammarTitle": "不定式作状语与宾补",
-            "grammarCode": "g8b-u1-TODO",
+            "grammarCode": "g8.11",
+            "grammarCodes": [
+              "g8.11"
+            ],
             "grammarQuiz": [
               {
                 "q": "My mother asked me ___ the room before dinner.",
@@ -6024,7 +6043,11 @@
               }
             ],
             "grammarTitle": "情态动词 should/could 建议;反身代词",
-            "grammarCode": "g8b-u2-TODO",
+            "grammarCode": "g8.18",
+            "grammarCodes": [
+              "g8.18",
+              "g8.14"
+            ],
             "grammarQuiz": [
               {
                 "q": "You have a fever. You ___ see a doctor right away.",
@@ -7291,7 +7314,11 @@
               }
             ],
             "grammarTitle": "比较级/最高级复习;大数字",
-            "grammarCode": "g8b-u4-TODO",
+            "grammarCode": "g8.04",
+            "grammarCodes": [
+              "g8.04",
+              "g8.09"
+            ],
             "grammarQuiz": [
               {
                 "q": "Mount Qomolangma is ___ mountain in the world.",
@@ -7927,7 +7954,10 @@
               }
             ],
             "grammarTitle": "过去进行时",
-            "grammarCode": "g8b-u5-TODO",
+            "grammarCode": "g8.22",
+            "grammarCodes": [
+              "g8.22"
+            ],
             "grammarQuiz": [
               {
                 "q": "I ___ in bed when the earthquake happened.",
@@ -9195,7 +9225,10 @@
               }
             ],
             "grammarTitle": "现在完成时(already/yet/never/ever/just)",
-            "grammarCode": "g8b-u7-TODO",
+            "grammarCode": "g8.24",
+            "grammarCodes": [
+              "g8.24"
+            ],
             "grammarQuiz": [
               {
                 "q": "I ___ already ___ that mystery novel, so you can borrow it.",
@@ -9830,7 +9863,11 @@
               }
             ],
             "grammarTitle": "现在完成时(since/for)",
-            "grammarCode": "g8b-u8-TODO",
+            "grammarCode": "g8.24",
+            "grammarCodes": [
+              "g8.24",
+              "g8.25"
+            ],
             "grammarQuiz": [
               {
                 "q": "My sister ___ at the animal shelter since last summer.",

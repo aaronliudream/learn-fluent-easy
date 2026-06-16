@@ -1984,20 +1984,20 @@
                 ]
               },
               {
-                "en": "wing",
-                "cn": "翅膀；翼",
+                "en": "importance",
+                "cn": "重要性",
                 "chunks": [
                   {
-                    "en": "open its wings",
-                    "cn": "张开翅膀"
+                    "en": "the importance of",
+                    "cn": "……的重要性"
                   },
                   {
-                    "en": "colourful wings",
-                    "cn": "彩色的翅膀"
+                    "en": "great importance",
+                    "cn": "极大的重要性"
                   },
                   {
-                    "en": "two wings",
-                    "cn": "两只翅膀"
+                    "en": "the importance of nature",
+                    "cn": "自然的重要性"
                   }
                 ]
               },
@@ -2092,20 +2092,20 @@
                 ]
               },
               {
-                "en": "mushroom",
-                "cn": "蘑菇；伞菌",
+                "en": "connection",
+                "cn": "联系；连接",
                 "chunks": [
                   {
-                    "en": "a wild mushroom",
-                    "cn": "一朵野蘑菇"
+                    "en": "a close connection",
+                    "cn": "密切的联系"
                   },
                   {
-                    "en": "pick mushrooms",
-                    "cn": "采蘑菇"
+                    "en": "the connection between",
+                    "cn": "……之间的联系"
                   },
                   {
-                    "en": "a small mushroom",
-                    "cn": "一朵小蘑菇"
+                    "en": "make a connection",
+                    "cn": "建立联系"
                   }
                 ]
               },
@@ -2175,7 +2175,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "形容词最高级",
+                "subtitle": "形容词最高级 + 名词后缀构词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -2221,10 +2221,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "形容词最高级",
+            "grammarTitle": "形容词最高级 + 名词后缀构词",
             "grammarCode": "g8.09",
             "grammarCodes": [
-              "g8.09"
+              "g8.09",
+              "g8.35"
             ],
             "grammarQuiz": [
               {

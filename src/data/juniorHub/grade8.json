@@ -4896,7 +4896,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "零条件句与第一条件句",
+                "subtitle": "if条件句(主将从现) + 名词后缀构词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -4942,10 +4942,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "零条件句与第一条件句",
+            "grammarTitle": "if条件句(主将从现) + 名词后缀构词",
             "grammarCode": "g8.17",
             "grammarCodes": [
-              "g8.17"
+              "g8.17",
+              "g8.38"
             ],
             "grammarQuiz": [
               {

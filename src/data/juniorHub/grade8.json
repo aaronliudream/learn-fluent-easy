@@ -418,6 +418,30 @@
                   "answer": 3,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "What did the writer like to eat most during the vacation?",
+                  "opts": [
+                    "Steamed fish",
+                    "Green mountains",
+                    "River water",
+                    "Old stories"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about how the writer felt during the trip?",
+                  "opts": [
+                    "He was often bored",
+                    "He was tired of walking",
+                    "He enjoyed it very much",
+                    "He missed his home"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
                 }
               ]
             },
@@ -1053,6 +1077,30 @@
                   ],
                   "answer": 2,
                   "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What did the writer's little sister want to do to help?",
+                  "opts": [
+                    "Pack the books",
+                    "Water the plants on the balcony",
+                    "Cook the dinner",
+                    "Put up the poster"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What did Mum ask the new neighbours when they came to dinner?",
+                  "opts": [
+                    "To bring some food",
+                    "To help pack the books",
+                    "To borrow some plates",
+                    "To decorate the room"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
                   "dim": "reading"
                 }
               ]
@@ -1692,6 +1740,30 @@
                   "answer": 0,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "What do both Lily and Ann enjoy?",
+                  "opts": [
+                    "Talking to strangers",
+                    "Music and sports",
+                    "Getting top grades",
+                    "Staying quiet"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about Lily's personality?",
+                  "opts": [
+                    "She is shy and quiet",
+                    "She is outgoing and friendly",
+                    "She studies harder than Ann",
+                    "She dislikes making friends"
+                  ],
+                  "answer": 1,
+                  "point": "推理判断",
+                  "dim": "reading"
                 }
               ]
             },
@@ -2328,6 +2400,30 @@
                   ],
                   "answer": 2,
                   "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage, what do people use bamboo to make?",
+                  "opts": [
+                    "Cars and trains",
+                    "Tools, houses and paper",
+                    "Glass and metal",
+                    "Clothes and shoes"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the passage say about the strongest kinds of bamboo?",
+                  "opts": [
+                    "They are softer than wood",
+                    "They are harder than wood",
+                    "They grow the slowest",
+                    "They turn brown in winter"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
                   "dim": "reading"
                 }
               ]
@@ -2967,6 +3063,30 @@
                   "answer": 3,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "What did Grandma add to the mixture after making the crust?",
+                  "opts": [
+                    "Pumpkin, eggs and a little cinnamon",
+                    "Flour and butter",
+                    "Sugar and milk",
+                    "Apples and honey"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How long did it take to bake the pie in the oven?",
+                  "opts": [
+                    "Ten minutes",
+                    "Twenty minutes",
+                    "Thirty minutes",
+                    "One hour"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
                 }
               ]
             },
@@ -3605,6 +3725,30 @@
                   "answer": 1,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "How many new words does the writer plan to learn each day?",
+                  "opts": [
+                    "Five",
+                    "Eight",
+                    "Ten",
+                    "Twenty"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is the writer's biggest dream according to the passage?",
+                  "opts": [
+                    "To become a musician",
+                    "To become an engineer",
+                    "To become a teacher",
+                    "To become a scientist's helper"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
                 }
               ]
             },
@@ -4090,7 +4234,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "一般将来时 will",
+                "subtitle": "一般将来时 will + 反义词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -4136,10 +4280,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "一般将来时 will",
+            "grammarTitle": "一般将来时 will + 反义词",
             "grammarCode": "g8.03",
             "grammarCodes": [
-              "g8.03"
+              "g8.03",
+              "g8.37"
             ],
             "grammarQuiz": [
               {
@@ -4238,6 +4383,30 @@
                     "Wait and do nothing",
                     "Accept change and keep learning",
                     "Avoid all new jobs"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage, what will happen to pollution and traffic accidents in the future?",
+                  "opts": [
+                    "There will be more of both",
+                    "Pollution will rise but accidents will fall",
+                    "There will be less pollution and fewer accidents",
+                    "Nothing will change"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about future jobs from the passage?",
+                  "opts": [
+                    "All today's jobs will stay the same",
+                    "No new jobs will appear",
+                    "Some old jobs will go, but new challenging ones will appear",
+                    "Robots will take every job from humans"
                   ],
                   "answer": 2,
                   "point": "推理判断",
@@ -4878,6 +5047,30 @@
                   ],
                   "answer": 0,
                   "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage, why might online messages be a problem?",
+                  "opts": [
+                    "They are too slow to send",
+                    "They often cause misunderstandings",
+                    "They cost too much money",
+                    "They are hard to read"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about good communication from the passage?",
+                  "opts": [
+                    "It comes naturally and needs no effort",
+                    "It can be improved through daily practice",
+                    "It only depends on speaking loudly",
+                    "It is mainly about chatting online"
+                  ],
+                  "answer": 1,
+                  "point": "推理判断",
                   "dim": "reading"
                 }
               ]
@@ -5522,6 +5715,30 @@
                   "answer": 2,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "What does Maya's teacher's advice show about her teacher?",
+                  "opts": [
+                    "The teacher gives up easily",
+                    "The teacher encourages students not to quit",
+                    "The teacher dislikes calligraphy",
+                    "The teacher only cares about sports"
+                  ],
+                  "answer": 1,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the writer often do with family on weekends?",
+                  "opts": [
+                    "Play sports at school",
+                    "Chat with friends online",
+                    "Go on an outing to enjoy nature",
+                    "Practise calligraphy"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
                 }
               ]
             },
@@ -6160,6 +6377,30 @@
                   "answer": 0,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "Why did Tom want to learn some first aid?",
+                  "opts": [
+                    "To cook better dinners",
+                    "To protect himself next time",
+                    "To teach Lucy how to cook",
+                    "To turn on the stove safely"
+                  ],
+                  "answer": 1,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What did Tom do right after he burned his hand?",
+                  "opts": [
+                    "He called a doctor",
+                    "He put clean ice on it",
+                    "He ran to put his hand under cold water",
+                    "He turned off the stove"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
                 }
               ]
             },
@@ -6797,6 +7038,30 @@
                   "answer": 0,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "How did the writer feel for days after the fight with Lily?",
+                  "opts": [
+                    "Relaxed and joyful",
+                    "Lonely and full of anger",
+                    "Proud and excited",
+                    "Calm and thankful"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 'put myself in Lily's shoes' most probably mean?",
+                  "opts": [
+                    "To wear Lily's shoes",
+                    "To understand things from Lily's side",
+                    "To buy Lily a present",
+                    "To wait for Lily to apologize first"
+                  ],
+                  "answer": 1,
+                  "point": "词义猜测",
+                  "dim": "reading"
                 }
               ]
             },
@@ -7432,6 +7697,30 @@
                     "They climb only in summer"
                   ],
                   "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "How cold can the temperature drop to on Mount Qomolangma?",
+                  "opts": [
+                    "Forty degrees below zero",
+                    "Eight degrees below zero",
+                    "Zero degrees",
+                    "Ten degrees above zero"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What happens as climbers go higher up the mountain?",
+                  "opts": [
+                    "It becomes warmer and easier",
+                    "It becomes colder and more difficult",
+                    "The weather becomes stable",
+                    "The air becomes thicker"
+                  ],
+                  "answer": 1,
                   "point": "推理判断",
                   "dim": "reading"
                 }
@@ -8073,6 +8362,30 @@
                   "answer": 2,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "What happened to the house during the typhoon?",
+                  "opts": [
+                    "A window was broken by a tree",
+                    "Part of the roof came off",
+                    "The walls fell down",
+                    "The front door was blown open"
+                  ],
+                  "answer": 1,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Who arrived with food and water in the morning?",
+                  "opts": [
+                    "The neighbours",
+                    "The radio station staff",
+                    "The rescue team",
+                    "The writer's father"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
                 }
               ]
             },
@@ -8708,6 +9021,30 @@
                     "Table manners do not matter anywhere."
                   ],
                   "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage, what is a proper table manner in China?",
+                  "opts": [
+                    "Using serving chopsticks",
+                    "Putting your elbows on the table",
+                    "Starting to eat before the host",
+                    "Refusing food when offered"
+                  ],
+                  "answer": 0,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does the passage suggest may happen if you do not respect local traditions?",
+                  "opts": [
+                    "You will make a good impression",
+                    "You may seem rude without knowing it",
+                    "You will learn customs faster",
+                    "You will be welcomed warmly"
+                  ],
+                  "answer": 1,
                   "point": "推理判断",
                   "dim": "reading"
                 }
@@ -9347,6 +9684,30 @@
                   "answer": 2,
                   "point": "推理判断",
                   "dim": "reading"
+                },
+                {
+                  "q": "Who recommended the book to the writer?",
+                  "opts": [
+                    "A famous writer",
+                    "The writer's friend",
+                    "The writer's teacher",
+                    "The writer's parent"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about the writer's opinion of Journey to the West?",
+                  "opts": [
+                    "It is boring and too long",
+                    "It is the most exciting adventure the writer has read",
+                    "It is only suitable for children",
+                    "It is hard to understand"
+                  ],
+                  "answer": 1,
+                  "point": "推理判断",
+                  "dim": "reading"
                 }
               ]
             },
@@ -9982,6 +10343,30 @@
                     "She wants to give up soon",
                     "She thinks her effort is worth it",
                     "She has never made new friends"
+                  ],
+                  "answer": 2,
+                  "point": "推理判断",
+                  "dim": "reading"
+                },
+                {
+                  "q": "Besides food and warm clothes, what else has Lily's team donated?",
+                  "opts": [
+                    "Toys to the elderly",
+                    "Money to the school",
+                    "Books to children in need",
+                    "Medicine to the nursing home"
+                  ],
+                  "answer": 2,
+                  "point": "细节理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What can we infer about Lily's attitude toward volunteering?",
+                  "opts": [
+                    "She wants to stop because it is too hard",
+                    "She thinks it is a waste of time",
+                    "She is determined to keep helping others",
+                    "She only does it for new friends"
                   ],
                   "answer": 2,
                   "point": "推理判断",

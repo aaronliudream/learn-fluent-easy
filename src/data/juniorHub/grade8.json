@@ -2861,7 +2861,8 @@
             "grammarTitle": "感叹句与可数/不可数名词",
             "grammarCode": "g8.31",
             "grammarCodes": [
-              "g8.31"
+              "g8.31",
+              "g8.34"
             ],
             "grammarQuiz": [
               {
@@ -2968,62 +2969,64 @@
               ]
             },
             "writing": {
-              "topic": "My Favorite Dish",
-              "prompt": "Write a short recipe to tell others how to make your favorite dish. Use exclamatory sentences (What.../How...) to show your feelings about the food and cooking.",
-              "promptCn": "写一份简短的食谱，告诉别人如何做你最喜欢的菜。用感叹句（What.../How...）来表达你对食物和烹饪的感受。",
-              "opener": "What a delicious dish my favorite food is! Let me show you how to make it.",
+              "topic": "My Favourite Dish",
+              "prompt": "Write a short recipe for your favourite dish. Describe the cooking steps in order using the sequence adverbs First, Next, Then, After that and Finally. Also use exclamatory sentences (What.../How...) to show your feelings about the food.",
+              "promptCn": "为你最喜欢的菜写一份简短食谱。用顺序副词 First / Next / Then / After that / Finally 按步骤描述做法，并用感叹句（What.../How...）表达你对这道菜的感受。",
+              "opener": "My favourite dish is ... . Here is how to make it.",
               "sampleWords": [
-                "ingredient",
-                "mix",
+                "first",
+                "next",
+                "then",
+                "finally",
+                "cut up",
                 "heat",
-                "oil",
                 "boil",
-                "recipe",
-                "oven",
-                "bake"
+                "add",
+                "mix"
               ],
               "cards": [
                 {
-                  "key": "prepare",
-                  "labelCn": "准备食材",
-                  "hint": "如 First, get the ingredients ready"
+                  "key": "dish",
+                  "labelCn": "菜名+喜欢的原因",
+                  "hint": "如 My favourite dish is ... because ..."
                 },
                 {
-                  "key": "cook",
-                  "labelCn": "烹饪步骤",
-                  "hint": "如 Then heat the oil and mix..."
+                  "key": "ingredients",
+                  "labelCn": "所需食材",
+                  "hint": "如 We need eggs, tomatoes, oil ..."
                 },
                 {
-                  "key": "feel",
-                  "labelCn": "表达感受",
-                  "hint": "如 What a tasty meal it is!"
+                  "key": "steps",
+                  "labelCn": "按顺序的做法",
+                  "hint": "如 First, ... Next, ... Finally, ..."
                 }
               ],
               "templates": {
                 "l1": [
-                  "What a delicious dish this is! {prepare}",
-                  "First, I get all the ingredients ready. {prepare}",
-                  "I need some flour, butter and oil. {cook}",
-                  "How easy it is to cook! {feel}"
+                  "My favourite dish is {dish}.",
+                  "We need {ingredients}.",
+                  "First, cut up the food. Then, heat the oil. {steps}",
+                  "What a tasty dish it is!"
                 ],
                 "l2": [
-                  "First, get the fresh ingredients ready, such as flour and butter. {prepare}",
-                  "Next, heat some oil in the pan and mix the ingredients well. {cook}",
-                  "Then put it into the hot oven and bake it for twenty minutes. {cook}",
-                  "How wonderful it smells! {feel}"
+                  "My favourite dish is {dish}, and it is easy to make.",
+                  "For the ingredients, we need {ingredients}.",
+                  "First, cut up the vegetables. Next, heat some oil and add them. Then, boil for a few minutes. {steps}",
+                  "How delicious it smells!"
                 ],
                 "l3": [
-                  "My favorite dish is easy to make if you follow the recipe carefully. {prepare}",
-                  "First, get all the fresh ingredients ready, then heat the oil and mix the flour with butter. {cook}",
-                  "Next, pour the mixture into a pan and bake it in the hot oven until it turns golden. {cook}",
-                  "What a delicious meal it is! Now I know why we learn to cook. {feel}"
+                  "My favourite dish is {dish}, because it brings my family together.",
+                  "First, get the ingredients ready: {ingredients}.",
+                  "Next, cut up everything and heat the oil in a pan. After that, add the food and mix well. Then, boil or bake until it is done. {steps}",
+                  "Finally, put it on a plate. What a wonderful meal it is!"
                 ]
               },
               "connectors": [
-                "first",
-                "next",
-                "then",
-                "finally"
+                "First",
+                "Next",
+                "Then",
+                "After that",
+                "Finally"
               ],
               "minWords": 40
             },

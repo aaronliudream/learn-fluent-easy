@@ -2856,7 +2856,10 @@
               }
             ],
             "grammarTitle": "感叹句与可数/不可数名词",
-            "grammarCode": "g8a-u5-TODO",
+            "grammarCode": "g8.31",
+            "grammarCodes": [
+              "g8.31"
+            ],
             "grammarQuiz": [
               {
                 "q": "____ delicious meal it is!",
@@ -6681,7 +6684,10 @@
               }
             ],
             "grammarTitle": "连词 although / until / so that",
-            "grammarCode": "g8b-u3-TODO",
+            "grammarCode": "g8.32",
+            "grammarCodes": [
+              "g8.32"
+            ],
             "grammarQuiz": [
               {
                 "q": "___ I was very tired, I kept practising for the match.",
@@ -8591,7 +8597,10 @@
               }
             ],
             "grammarTitle": "连词 so…that / unless / as soon as",
-            "grammarCode": "g8b-u6-TODO",
+            "grammarCode": "g8.33",
+            "grammarCodes": [
+              "g8.33"
+            ],
             "grammarQuiz": [
               {
                 "q": "The custom was ___ strange ___ the visitor did not know what to do.",

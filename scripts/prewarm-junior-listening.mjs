@@ -27,8 +27,8 @@ if (!URL || !KEY) { console.error("缺 VITE_SUPABASE_URL / KEY"); process.exit(1
 
 const TTS_URL = `${URL.replace(/\/$/, "")}/functions/v1/tts`;
 const VOICE_ID = "el:lily"; // KID_VOICE_ID,必须与 speakKid 一致
-const SPEED = 0.8;          // 通关听力 hubSpeak(audio,0.8) 的速率
-const CONCURRENCY = 6;
+const SPEED = 0.8;          // 通关听力 + 听音辨词 hubSpeak(...,0.8) 的速率
+const CONCURRENCY = 3;      // 降并发,避开 tts Edge Function 资源上限丢词(原 6 会 fail)
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}` };
 
 function uniq(arr) { return Array.from(new Set(arr.map((s) => (s || "").trim()).filter(Boolean))); }
@@ -43,6 +43,20 @@ function collectInline() {
   const root = JSON.parse(fs.readFileSync("src/data/juniorHub/grade8.json", "utf8"));
   const units = [...root.grade8.semesters.grade8_volume1.units, ...root.grade8.semesters.grade8_volume2.units];
   return uniq(units.flatMap((u) => (u.listeningQuestions || []).map((q) => q.audio)));
+}
+
+// 听音辨词(第2关)🔊 读的是 vocabulary 的 en;暖全部单词,首点即响、不再冷。
+function collectVocab() {
+  const out = [];
+  for (const file of ["grade7", "grade8"]) {
+    try {
+      const root = JSON.parse(fs.readFileSync(`src/data/juniorHub/${file}.json`, "utf8"));
+      const top = root[Object.keys(root)[0]];
+      const units = Object.values(top.semesters).flatMap((s) => s.units);
+      out.push(...units.flatMap((u) => (u.vocabulary || []).map((v) => v.en)));
+    } catch { /* 文件缺失则跳过 */ }
+  }
+  return uniq(out);
 }
 
 async function warmOne(text) {
@@ -77,12 +91,13 @@ async function runPool(texts) {
 }
 
 async function main() {
-  const want = process.argv[2] || "all";
+  const want = process.argv[2] || "all";  // all | db | inline | vocab
   let texts = [];
   if (want === "all" || want === "db") texts.push(...(await collectDb()));
   if (want === "all" || want === "inline") texts.push(...collectInline());
+  if (want === "all" || want === "vocab") texts.push(...collectVocab());
   texts = uniq(texts);
-  console.log(`初中听力预热: ${texts.length} 句 × voiceId=${VOICE_ID} speed=${SPEED}`);
+  console.log(`初中 TTS 预热: ${texts.length} 条 × voiceId=${VOICE_ID} speed=${SPEED} (含听力句+听音辨词单词)`);
   if (!texts.length) { console.log("无素材,退出"); return; }
   const r = await runPool(texts);
   console.log(`\n✅ 完成 — hit(已暖)=${r.hit} miss(新合成)=${r.miss} fail=${r.fail}`);

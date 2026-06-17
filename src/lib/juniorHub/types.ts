@@ -16,6 +16,7 @@ export type QuizQuestion = {
   audio?: string;
   unitTitle?: string;
   id?: number;
+  explanation?: string;
 };
 
 export type ListeningQuestion = {

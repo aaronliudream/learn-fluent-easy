@@ -517,7 +517,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**vacation** 意为\"假期\"，如 a summer vacation 暑假，go on vacation 去度假。"
               },
               {
                 "q": "「ancient」的意思是？",
@@ -529,7 +530,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**ancient** 意为\"古老的\"，常修饰名胜古迹，如 an ancient temple 古老的寺庙。"
               },
               {
                 "q": "「landscape」的意思是？",
@@ -541,7 +543,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**landscape** 意为\"风景；景色\"，多指自然景观，如 a beautiful landscape 美丽的风景。"
               },
               {
                 "q": "选出过去式：We ___ to the mountains last week.",
@@ -553,7 +556,8 @@
                 ],
                 "answer": 2,
                 "point": "一般过去时",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "一般过去时表过去发生的动作，last week 为过去时间标志，go 的过去式是 **went**，故选 went。"
               },
               {
                 "q": "I didn't see ___ on the empty street.",
@@ -565,7 +569,8 @@
                 ],
                 "answer": 3,
                 "point": "不定代词",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "否定句中表\"任何人\"用 anyone，I didn't see **anyone** 我没看见任何人；no one 不能再与 didn't 连用（双重否定）。"
               },
               {
                 "q": "「remind」的意思是？",
@@ -577,7 +582,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**remind** 意为\"提醒\"，常用 remind sb. of sth. 使某人想起某事。"
               },
               {
                 "q": "___ special happened — it was a normal day.",
@@ -589,7 +595,8 @@
                 ],
                 "answer": 1,
                 "point": "不定代词",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "句意\"没什么特别的事发生\"，主语表\"没有任何事\"用不定代词 **Nothing**，本身含否定。"
               },
               {
                 "q": "「comfortable」的意思是？",
@@ -601,7 +608,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**comfortable** 意为\"舒适的\"，如 a comfortable bed 舒适的床。"
               }
             ],
             "listeningQuestions": [
@@ -1178,7 +1186,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**balcony** 意为\"阳台\"，是房屋向外延伸的露天平台。"
               },
               {
                 "q": "「invite」的意思是？",
@@ -1190,7 +1199,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**invite** 意为\"邀请\"，常用 invite sb. to do sth. 邀请某人做某事。"
               },
               {
                 "q": "\"___ I use your glue for a minute?\" — Of course.",
@@ -1202,7 +1212,8 @@
                 ],
                 "answer": 0,
                 "point": "Could 礼貌请求",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "礼貌地请求许可用 **Could**\"我可以……吗\"，比 can 更委婉，故选 Could。"
               },
               {
                 "q": "「decorate」的意思是？",
@@ -1214,7 +1225,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**decorate** 意为\"装饰；装点\"，如 decorate the room 装饰房间。"
               },
               {
                 "q": "「borrow」的意思是？",
@@ -1226,7 +1238,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**borrow** 意为\"借（入）\"，borrow sth. from sb. 向某人借某物。"
               },
               {
                 "q": "\"Can you ___ me a hand with the cleaning?\"",
@@ -1238,7 +1251,8 @@
                 ],
                 "answer": 0,
                 "point": "情态动词后接动词原形",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "Can you 之后跟动词原形，give sb. a hand 帮某人一把，故选 **give**。"
               },
               {
                 "q": "「sort」的意思是？",
@@ -1250,7 +1264,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**sort** 意为\"把……分类；整理\"，如 sort the books 把书分类。"
               },
               {
                 "q": "\"Could I ___ the plants?\" — Yes, please do.",
@@ -1262,7 +1277,8 @@
                 ],
                 "answer": 3,
                 "point": "情态动词后接动词原形",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "Could I 之后接动词原形构成礼貌请求，**water** 在此作动词\"浇水\"，故选 water。"
               }
             ],
             "listeningQuestions": [
@@ -1839,7 +1855,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**outgoing** 意为\"外向的\"，形容人开朗爱社交，与 shy 害羞的相反。"
               },
               {
                 "q": "「similarity」的意思是？",
@@ -1851,7 +1868,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**similarity** 意为\"相似之处\"，由 similar 加后缀构成名词。"
               },
               {
                 "q": "He is ___ than his classmates.",
@@ -1863,7 +1881,8 @@
                 ],
                 "answer": 1,
                 "point": "比较级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "than 提示比较级，hard-working 是复合形容词，比较级用 **more hard-working**，故选之。"
               },
               {
                 "q": "「appearance」的意思是？",
@@ -1875,7 +1894,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**appearance** 意为\"外表；露面\"，由 appear 加后缀构成名词。"
               },
               {
                 "q": "Anna is just ___ smart ___ her brother.",
@@ -1887,7 +1907,8 @@
                 ],
                 "answer": 1,
                 "point": "as...as",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "表\"和……一样\"用同级比较 **as...as**，as smart as 和……一样聪明，故选 as...as。"
               },
               {
                 "q": "「slim」的意思是？",
@@ -1899,7 +1920,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**slim** 意为\"苗条的\"，形容身材纤细，如 a slim girl 苗条的女孩。"
               },
               {
                 "q": "This problem is ___ serious than that one.",
@@ -1911,7 +1933,8 @@
                 ],
                 "answer": 2,
                 "point": "more比较级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "than 提示比较级，serious 较长须用 **more** serious 构成比较级，故选 more。"
               },
               {
                 "q": "「friendship」的意思是？",
@@ -1923,7 +1946,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**friendship** 意为\"友谊；友情\"，由 friend 加后缀构成名词。"
               }
             ],
             "listeningQuestions": [
@@ -2501,7 +2525,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**bamboo** 意为\"竹子\"，是熊猫爱吃的植物，如 eat bamboo 吃竹子。"
               },
               {
                 "q": "「tiny」的意思是？",
@@ -2513,7 +2538,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**tiny** 意为\"极小的；微小的\"，比 small 更小，如 a tiny insect 极小的昆虫。"
               },
               {
                 "q": "The redwood is ___ tree in the forest.",
@@ -2525,7 +2551,8 @@
                 ],
                 "answer": 1,
                 "point": "语法-最高级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "in the forest 表范围用最高级，tall 的最高级是 **the tallest**，故选之。"
               },
               {
                 "q": "「pollen」的意思是？",
@@ -2537,7 +2564,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**pollen** 意为\"花粉\"，是花朵传播繁殖的微小颗粒。"
               },
               {
                 "q": "Among all the animals, the ant is one of ___ workers.",
@@ -2549,7 +2577,8 @@
                 ],
                 "answer": 0,
                 "point": "语法-最高级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "one of + 最高级 + 复数名词，busy 的最高级是 **the busiest**，故选之。"
               },
               {
                 "q": "「ocean」的意思是？",
@@ -2561,7 +2590,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**ocean** 意为\"海洋\"，如 the Pacific Ocean 太平洋。"
               },
               {
                 "q": "This is ___ interesting plant in the book.",
@@ -2573,7 +2603,8 @@
                 ],
                 "answer": 2,
                 "point": "语法-most最高级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "in the book 表范围用最高级，interesting 须用 **the most** 构成最高级，故选之。"
               },
               {
                 "q": "「lively」的意思是？",
@@ -2585,7 +2616,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**lively** 意为\"生机勃勃的；活泼的\"，如 a lively city 充满活力的城市。"
               }
             ],
             "listeningQuestions": [
@@ -3163,7 +3195,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**ingredient** 意为\"食材；成分\"，如 mix the ingredients 把食材混合在一起。"
               },
               {
                 "q": "「recipe」的意思是？",
@@ -3175,7 +3208,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**recipe** 意为\"食谱；烹饪法\"，follow a recipe 照着食谱做。"
               },
               {
                 "q": "「bake」的意思是？",
@@ -3187,7 +3221,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**bake** 意为\"烘焙\"，如 bake a cake 烤蛋糕，用烤箱来做。"
               },
               {
                 "q": "「flour」的意思是？",
@@ -3199,7 +3234,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**flour** 意为\"面粉\"，是不可数名词，做面包需要 some flour。"
               },
               {
                 "q": "____ tasty the soup is! 选择正确的感叹词。",
@@ -3211,7 +3247,8 @@
                 ],
                 "answer": 2,
                 "point": "感叹句 How+形容词",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "感叹 tasty 时 **tasty** 是形容词，感叹句用 **How** + 形容词 + 主谓，故选 How。"
               },
               {
                 "q": "____ nice recipe this is! 选择正确的感叹词。",
@@ -3223,7 +3260,8 @@
                 ],
                 "answer": 1,
                 "point": "感叹句 What a+可数名词",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**recipe** 是可数单数名词，感叹句用 **What a** + 形容词 + 可数名词单数，故选 What a。"
               },
               {
                 "q": "Which word is uncountable? 哪个是不可数名词？",
@@ -3235,7 +3273,8 @@
                 ],
                 "answer": 2,
                 "point": "可数/不可数名词",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**butter**（黄油）是不可数名词，不能加 a 或复数；egg/bowl/pan 均可数。"
               },
               {
                 "q": "「heat」的意思是？",
@@ -3247,7 +3286,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**heat** 意为\"加热；变热\"，如 heat the oil 把油加热。"
               }
             ],
             "listeningQuestions": [
@@ -3825,7 +3865,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**resolution** 意为\"决定；决心\"，如 make a resolution 下决心。"
               },
               {
                 "q": "「achieve」的意思是？",
@@ -3837,7 +3878,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**achieve** 意为\"(经过努力)达到；完成\"，achieve a goal 实现目标。"
               },
               {
                 "q": "They are going to ___ a robot for the science show.",
@@ -3849,7 +3891,8 @@
                 ],
                 "answer": 3,
                 "point": "be going to + 动词原形",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**be going to** 后接动词原形，故选 **design**。"
               },
               {
                 "q": "「self-improvement」的意思是？",
@@ -3861,7 +3904,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**self-improvement** 意为\"自我提高\"，self- 表\"自我\"。"
               },
               {
                 "q": "He learned ___ the piano when he was young.",
@@ -3873,7 +3917,8 @@
                 ],
                 "answer": 0,
                 "point": "不定式作宾语",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**learn to do sth** 学做某事，后接不定式，故选 **to play**。"
               },
               {
                 "q": "「confident」的意思是？",
@@ -3885,7 +3930,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**confident** 意为\"自信的\"，be confident about/in 对……有信心。"
               },
               {
                 "q": "What ___ you going to be in the future?",
@@ -3897,7 +3943,8 @@
                 ],
                 "answer": 3,
                 "point": "be going to 特殊疑问句",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "主语 you 与 be going to 搭配用 **are**，故 What are you going to be。"
               },
               {
                 "q": "「take up」的意思是？",
@@ -3909,7 +3956,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**take up** 意为\"开始学；开始从事\"，如 take up a hobby 培养爱好。"
               }
             ],
             "listeningQuestions": [
@@ -4487,7 +4535,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**prediction** 意为\"预测；预言\"，make a prediction 做出预测。"
               },
               {
                 "q": "「replace」的意思是？",
@@ -4499,7 +4548,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**replace** 意为\"代替；取代\"，replace A with B 用B代替A。"
               },
               {
                 "q": "There ___ be fewer cars in the city centre soon.",
@@ -4511,7 +4561,8 @@
                 ],
                 "answer": 1,
                 "point": "一般将来时 will",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "一般将来时 There **will** be，表\"将会有\"，故选 will。"
               },
               {
                 "q": "「emergency」的意思是？",
@@ -4523,7 +4574,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**emergency** 意为\"突发事件；紧急情况\"，in an emergency 在紧急情况下。"
               },
               {
                 "q": "There will be ___ traffic accidents with smarter roads. (可数)",
@@ -4535,7 +4587,8 @@
                 ],
                 "answer": 2,
                 "point": "fewer + 可数名词复数",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "accidents 是可数名词复数，修饰可数用 **fewer**(更少)，less 修饰不可数。"
               },
               {
                 "q": "「futurist」的意思是？",
@@ -4547,7 +4600,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**futurist** 意为\"未来学家\"，-ist 后缀表\"……家、专业人士\"。"
               },
               {
                 "q": "___ we meet outside the cinema at 7:15? — OK, see you then.",
@@ -4559,7 +4613,8 @@
                 ],
                 "answer": 3,
                 "point": "Shall we...?",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**Shall we...?** 用于提议\"我们……好吗\"，故选 Shall。"
               },
               {
                 "q": "「efficient」的意思是？",
@@ -4571,7 +4626,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**efficient** 意为\"效率高的\"，an efficient way 高效的方法。"
               }
             ],
             "listeningQuestions": [
@@ -5149,7 +5205,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**listener** 意为\"听者\"，listen + -er 后缀表\"做……的人\"。"
               },
               {
                 "q": "「misunderstanding」的意思是？",
@@ -5161,7 +5218,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**misunderstanding** 意为\"误解；误会\"，mis- 前缀表\"错误\"。"
               },
               {
                 "q": "「sincere」的意思是？",
@@ -5173,7 +5231,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**sincere** 意为\"真诚的\"，a sincere smile 真诚的微笑。"
               },
               {
                 "q": "\"pay attention to\" 的意思是？",
@@ -5185,7 +5244,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**pay attention to** 意为\"注意；关注\"，to 后接名词。"
               },
               {
                 "q": "If you ____ kindly, people will trust you.",
@@ -5197,7 +5257,8 @@
                 ],
                 "answer": 0,
                 "point": "first conditional",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "if 条件句\"主将从现\"，从句用一般现在时，主语 you 故选 **speak**。"
               },
               {
                 "q": "If the weather is hot, ice ____ quickly.",
@@ -5209,7 +5270,8 @@
                 ],
                 "answer": 1,
                 "point": "zero conditional",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "if 条件句从句用一般现在时，主语 ice 第三人称单数，故选 **melts**。"
               },
               {
                 "q": "「impolite」的意思是？",
@@ -5221,7 +5283,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**impolite** 意为\"不礼貌的；粗鲁的\"，im- 前缀表否定。"
               },
               {
                 "q": "We ____ communicate better if we listen more.",
@@ -5233,7 +5296,8 @@
                 ],
                 "answer": 3,
                 "point": "first conditional: 主句 will",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "if 条件句\"主将从现\"，主句用将来时 **will** + 动词原形，故选 will。"
               }
             ],
             "listeningQuestions": [
@@ -5692,7 +5756,8 @@
                   ],
                   "answer": 1,
                   "point": "细节理解",
-                  "dim": "reading"
+                  "dim": "reading",
+                  "explanation": "细节理解：文中 Maya **takes up calligraphy to express her feelings**，故选 To express her feelings。"
                 },
                 {
                   "q": "What did Maya's teacher tell her to do when she felt scared?",
@@ -5704,7 +5769,8 @@
                   ],
                   "answer": 0,
                   "point": "细节理解",
-                  "dim": "reading"
+                  "dim": "reading",
+                  "explanation": "细节理解：她害怕想放弃时，老师 **told her to keep trying**(叫她坚持试)，故选 To keep trying。"
                 },
                 {
                   "q": "What is the writer's main idea about hobbies?",
@@ -5716,7 +5782,8 @@
                   ],
                   "answer": 2,
                   "point": "推理判断",
-                  "dim": "reading"
+                  "dim": "reading",
+                  "explanation": "主旨题：末句 hobbies **give us energy to study better and help us become happier people**，故选 Hobbies help us relax and become happier。"
                 },
                 {
                   "q": "What does Maya's teacher's advice show about her teacher?",
@@ -5728,7 +5795,8 @@
                   ],
                   "answer": 1,
                   "point": "推理判断",
-                  "dim": "reading"
+                  "dim": "reading",
+                  "explanation": "推理判断：老师劝她 keep trying、别放弃，说明老师 **encourages students not to quit**(鼓励学生不要放弃)，故选该项。"
                 },
                 {
                   "q": "What does the writer often do with family on weekends?",
@@ -5740,7 +5808,8 @@
                   ],
                   "answer": 2,
                   "point": "细节理解",
-                  "dim": "reading"
+                  "dim": "reading",
+                  "explanation": "细节理解：I often **go on an outing with my family on weekends to enjoy nature**，故选 Go on an outing to enjoy nature。"
                 }
               ]
             },
@@ -5817,7 +5886,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**reduce** 意为\"减少\"，与 increase（增加）相对，如 reduce stress 减压。"
               },
               {
                 "q": "「scared」的意思是？",
@@ -5829,7 +5899,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**scared** 意为\"害怕的\"，常用 be scared of sth 害怕某物。"
               },
               {
                 "q": "She paints pictures ___ herself when she feels stressed.",
@@ -5841,7 +5912,8 @@
                 ],
                 "answer": 1,
                 "point": "不定式作状语",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "动词后接不定式作目的状语，**to express** 表\"为了表达\"，故选 to express。"
               },
               {
                 "q": "「outing」的意思是？",
@@ -5853,7 +5925,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**outing** 意为\"出外游玩\"，如 go on an outing 去郊游。"
               },
               {
                 "q": "The instructor asked the new students ___ their fears.",
@@ -5865,7 +5938,8 @@
                 ],
                 "answer": 2,
                 "point": "不定式作宾补",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "ask sb to do sth 结构，宾语后接不定式作宾补，故选 **to face**。"
               },
               {
                 "q": "「allow」的意思是？",
@@ -5877,7 +5951,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**allow** 意为\"使成为可能；允许\"，常用 allow sb to do sth。"
               },
               {
                 "q": "My parents told me ___ too much time on games.",
@@ -5889,7 +5964,8 @@
                 ],
                 "answer": 2,
                 "point": "不定式否定式作宾补",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "tell sb not to do sth，不定式否定式把 not 放在 to 前，故选 **not to spend**。"
               },
               {
                 "q": "「manage」在 \"manage to finish\" 中的意思是？",
@@ -5901,7 +5977,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**manage** 在 manage to do 中意为\"设法完成\"，强调克服困难做成某事。"
               }
             ],
             "listeningQuestions": [
@@ -6480,7 +6557,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**sore** 意为\"疼痛的；酸痛的\"，如 a sore throat 嗓子痛。"
               },
               {
                 "q": "「avoid」的意思是？",
@@ -6492,7 +6570,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**avoid** 意为\"避免；防止\"，后接动名词 avoid doing sth。"
               },
               {
                 "q": "「injury」的意思是？",
@@ -6504,7 +6583,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**injury** 意为\"伤害；损伤\"，名词，如 a sports injury 运动损伤。"
               },
               {
                 "q": "「patient」作名词时的意思是？",
@@ -6516,7 +6596,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**patient** 作名词意为\"病人\"，作形容词时意为\"有耐心的\"。"
               },
               {
                 "q": "You ___ go to bed early when you have a cold.",
@@ -6528,7 +6609,8 @@
                 ],
                 "answer": 3,
                 "point": "should 表建议",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "should 表建议\"应该\"，后接动词原形，故选 **should**。"
               },
               {
                 "q": "She made the cake by ___.",
@@ -6540,7 +6622,8 @@
                 ],
                 "answer": 0,
                 "point": "反身代词 herself",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "反身代词 by oneself 表\"独自\"，主语 She 对应 **herself**。"
               },
               {
                 "q": "「medicine」的意思是？",
@@ -6552,7 +6635,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**medicine** 意为\"药；医学\"，如 take medicine 吃药。"
               },
               {
                 "q": "You ___ try some hot tea for your sore throat.",
@@ -6564,7 +6648,8 @@
                 ],
                 "answer": 0,
                 "point": "could 表建议",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "could 表委婉建议\"可以试试\"，后接动词原形，故选 **could**。"
               }
             ],
             "listeningQuestions": [
@@ -7140,7 +7225,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**upset** 意为\"难过的；沮丧的\"，如 feel upset 感到沮丧。"
               },
               {
                 "q": "「forgive」的意思是？",
@@ -7152,7 +7238,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**forgive** 意为\"原谅；宽恕\"，如 forgive sb 原谅某人。"
               },
               {
                 "q": "「pressure」的意思是？",
@@ -7164,7 +7251,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**pressure** 意为\"压力\"，如 under pressure 在压力下。"
               },
               {
                 "q": "「thankful」的意思是？",
@@ -7176,7 +7264,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**thankful** 意为\"感谢的；感激的\"，由 thank + -ful 构成。"
               },
               {
                 "q": "___ it rained hard, we still finished the game.",
@@ -7188,7 +7277,8 @@
                 ],
                 "answer": 0,
                 "point": "although 用法",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**Although** 引导让步状语从句，表\"虽然\"，与后句\"仍然\"呼应。"
               },
               {
                 "q": "He turned off his phone ___ he could study quietly.",
@@ -7200,7 +7290,8 @@
                 ],
                 "answer": 2,
                 "point": "so that 用法",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**so that** 引导目的状语从句，表\"以便\"，故选 so that。"
               },
               {
                 "q": "「control」的意思是？",
@@ -7212,7 +7303,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**control** 意为\"控制\"，如 control one's anger 控制怒火。"
               },
               {
                 "q": "I won't give up ___ I reach my goal.",
@@ -7224,7 +7316,8 @@
                 ],
                 "answer": 3,
                 "point": "until 用法",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**until** 引导时间状语从句，表\"直到\"，与 won't give up 搭配\"直到达成才罢休\"。"
               }
             ],
             "listeningQuestions": [
@@ -7804,7 +7897,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**wonder** 意为\"奇观；惊叹\"，如 natural wonders 自然奇观。"
               },
               {
                 "q": "「survive」的意思是？",
@@ -7816,7 +7910,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**survive** 意为\"生存；存活\"，如 survive in the desert 在沙漠中生存。"
               },
               {
                 "q": "「coast」的意思是？",
@@ -7828,7 +7923,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**coast** 意为\"海岸；海滨\"，如 along the coast 沿海岸。"
               },
               {
                 "q": "「attract」的意思是？",
@@ -7840,7 +7936,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**attract** 意为\"吸引；招引\"，如 attract visitors 吸引游客。"
               },
               {
                 "q": "The Nile is one of ___ rivers in the world.",
@@ -7852,7 +7949,8 @@
                 ],
                 "answer": 0,
                 "point": "形容词最高级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "one of + 最高级 + 复数名词\"最…之一\"，故选 **the longest**。"
               },
               {
                 "q": "The lake is over one ___ metres deep.",
@@ -7864,7 +7962,8 @@
                 ],
                 "answer": 1,
                 "point": "大数表达（thousand不加s）",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "one/数词 + thousand 不加 s，故选 **thousand**（hundred/thousand 前有具体数时用单数）。"
               },
               {
                 "q": "Today the weather is ___ than yesterday.",
@@ -7876,7 +7975,8 @@
                 ],
                 "answer": 1,
                 "point": "形容词比较级",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "changeable 多音节形容词比较级加 more，故选 **more changeable**。"
               },
               {
                 "q": "「depth」的意思是？",
@@ -7888,7 +7988,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**depth** 意为\"深（度）；纵深\"，由 deep 加 -th 构成的名词。"
               }
             ],
             "listeningQuestions": [
@@ -8465,7 +8566,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**earthquake** 意为\"地震\"，属本单元自然灾害词，如 a big earthquake。"
               },
               {
                 "q": "「rescue」的意思是？",
@@ -8477,7 +8579,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**rescue** 意为\"救援；营救\"，如 a rescue team 救援队。"
               },
               {
                 "q": "「drought」的意思是？",
@@ -8489,7 +8592,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**drought** 意为\"旱灾；干旱\"，与 flood 洪水相对的自然灾害词。"
               },
               {
                 "q": "「warn」的意思是？",
@@ -8501,7 +8605,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**warn** 意为\"警告；提醒注意\"，常用 warn sb of/about sth。"
               },
               {
                 "q": "They ___ watching TV when the news about the flood came on.",
@@ -8513,7 +8618,8 @@
                 ],
                 "answer": 0,
                 "point": "过去进行时(were doing)",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "过去进行时 was/were doing，主语 They 为复数，故用 **were** watching。"
               },
               {
                 "q": "「tsunami」的意思是？",
@@ -8525,7 +8631,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**tsunami** 意为\"海啸\"，常由 earthquake 引发的海上灾害。"
               },
               {
                 "q": "She was running to school ___ it suddenly began to thunder.",
@@ -8537,7 +8644,8 @@
                 ],
                 "answer": 2,
                 "point": "when引导时间状语",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "过去进行时表正在进行的动作被另一短暂动作打断，用 **when** 引导突发动作(was running… when…)。"
               },
               {
                 "q": "I ___ cooking dinner when the power went off.",
@@ -8549,7 +8657,8 @@
                 ],
                 "answer": 3,
                 "point": "过去进行时(was doing)",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "过去进行时 was/were doing，主语 I 用 **was** cooking。"
               }
             ],
             "listeningQuestions": [
@@ -9126,7 +9235,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**custom** 意为\"习俗\"，如 local customs 当地风俗。"
               },
               {
                 "q": "「proper」的意思是？",
@@ -9138,7 +9248,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**proper** 意为\"恰当的；正确的\"，如 proper manners 得体的礼仪。"
               },
               {
                 "q": "「impression」的意思是？",
@@ -9150,7 +9261,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**impression** 意为\"印象\"，如 make a good impression 留下好印象。"
               },
               {
                 "q": "「rude」的意思是？",
@@ -9162,7 +9274,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**rude** 意为\"粗鲁的\"，与 polite 礼貌的相对。"
               },
               {
                 "q": "The dinner was ___ formal ___ everyone wore nice clothes.",
@@ -9174,7 +9287,8 @@
                 ],
                 "answer": 0,
                 "point": "so...that",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**so…that** \"如此……以至于\"，so + 形容词(formal)+ that 引导结果，故选 so; that。"
               },
               {
                 "q": "___ you greet the elders first, they may feel you are impolite.",
@@ -9186,7 +9300,8 @@
                 ],
                 "answer": 1,
                 "point": "unless",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**unless** \"除非；如果不\"=if not，表否定条件，故选 Unless。"
               },
               {
                 "q": "「greet」的意思是？",
@@ -9198,7 +9313,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**greet** 意为\"问候；迎接\"，如 greet the guests 迎接客人。"
               },
               {
                 "q": "___ the guests sat down, the host served the main dish.",
@@ -9210,7 +9326,8 @@
                 ],
                 "answer": 2,
                 "point": "as soon as",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "**as soon as** \"一……就……\"，引导时间状语，表两动作紧接发生，故选 As soon as。"
               }
             ],
             "listeningQuestions": [
@@ -9788,7 +9905,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**adventure** 意为\"冒险；冒险经历\"，如 an adventure story 冒险故事。"
               },
               {
                 "q": "「recommend」的意思是？",
@@ -9800,7 +9918,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**recommend** 意为\"推荐；建议\"，如 recommend a book to sb。"
               },
               {
                 "q": "I have ___ read this book; I know the ending already.",
@@ -9812,7 +9931,8 @@
                 ],
                 "answer": 2,
                 "point": "现在完成时 already",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时\"已经\"用 **already**，常置于句中，与 know the ending 呼应。"
               },
               {
                 "q": "「mystery」的意思是？",
@@ -9824,7 +9944,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**mystery** 意为\"悬疑小说；神秘的事物\"，如 solve the mystery 解开谜团。"
               },
               {
                 "q": "Have you finished the summary ___?",
@@ -9836,7 +9957,8 @@
                 ],
                 "answer": 0,
                 "point": "现在完成时 yet",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时疑问句句末\"还\"用 **yet**，Have you…yet? 是固定问法。"
               },
               {
                 "q": "「inspire」的意思是？",
@@ -9848,7 +9970,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**inspire** 意为\"激励；鼓舞\"，如 inspire sb to do sth。"
               },
               {
                 "q": "This is the best fiction I have ___ read.",
@@ -9860,7 +9983,8 @@
                 ],
                 "answer": 1,
                 "point": "现在完成时 ever",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时表\"曾经\"用 **ever**，常与最高级连用：the best…I have ever read。"
               },
               {
                 "q": "「effect」的意思是？",
@@ -9872,7 +9996,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**effect** 意为\"影响；结果\"，如 have an effect on 对……有影响。"
               }
             ],
             "listeningQuestions": [
@@ -10449,7 +10574,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**donate** 意为\"捐赠\"，如 donate money/food 捐钱/捐食物。"
               },
               {
                 "q": "「shelter」的意思是？",
@@ -10461,7 +10587,8 @@
                 ],
                 "answer": 1,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**shelter** 意为\"庇护所；居所\"，如 an animal shelter 动物收容所。"
               },
               {
                 "q": "「elderly」的意思是？",
@@ -10473,7 +10600,8 @@
                 ],
                 "answer": 2,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**elderly** 意为\"年纪较大的\"，如 the elderly 老年人。"
               },
               {
                 "q": "「make an effort」的意思是？",
@@ -10485,7 +10613,8 @@
                 ],
                 "answer": 3,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**make an effort** 意为\"做出努力\"，effort 努力，常说 make an effort to do sth。"
               },
               {
                 "q": "They have run the charity ___ 2018.",
@@ -10497,7 +10626,8 @@
                 ],
                 "answer": 0,
                 "point": "语法 since",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时中 **since** + 时间点(2018)，表\"自从……以来\"，故选 since。"
               },
               {
                 "q": "I have lived here ___ ten years.",
@@ -10509,7 +10639,8 @@
                 ],
                 "answer": 2,
                 "point": "语法 for",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时中 **for** + 时间段(ten years)，表\"持续一段时间\"，故选 for。"
               },
               {
                 "q": "「willing」的意思是？",
@@ -10521,7 +10652,8 @@
                 ],
                 "answer": 0,
                 "point": "词汇",
-                "dim": "vocab"
+                "dim": "vocab",
+                "explanation": "**willing** 意为\"乐意的；愿意的\"，如 be willing to do sth 乐意做某事。"
               },
               {
                 "q": "Choose the correct present perfect sentence.",
@@ -10533,7 +10665,8 @@
                 ],
                 "answer": 1,
                 "point": "语法 现在完成时",
-                "dim": "grammar"
+                "dim": "grammar",
+                "explanation": "现在完成时 have/has + 过去分词，且 since + 时间点，只有 **He has provided food since May.** 正确。"
               }
             ],
             "listeningQuestions": [

@@ -5,6 +5,8 @@ import { cleanForTTS } from "@/lib/ttsClean";
 
 let lastSpoken = "";
 let speakToken = 0;
+// 去抖:正在"冷合成"中的 cacheKey;同 key 重复请求不打断(让冷合成跑完自然出声)。
+let pendingColdKey: string | null = null;
 let sequenceId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudio: HTMLAudioElement | null = null;
@@ -540,6 +542,13 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
   if (!text) return Promise.resolve();
   const trimmed = text.trim();
   if (!trimmed) return Promise.resolve();
+  const settings = loadSettings();
+  const voiceId = opts?.voiceId || settings.voiceId;
+  const speed = opts?.speed ?? settings.speed;
+  const accent = opts?.accent;
+  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
+  // 去抖:同一冷合成进行中 → 不打断,直接返回(让进行中的合成跑完播放)。
+  if (pendingColdKey === cacheKey) return Promise.resolve();
   lastSpoken = trimmed;
   stopCurrent();
 
@@ -547,12 +556,6 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
   //    keeps us inside the user-gesture window.
   const audio = unlockAudioSync();
   const myToken = speakToken;
-  const settings = loadSettings();
-  const voiceId = opts?.voiceId || settings.voiceId;
-  const speed = opts?.speed ?? settings.speed;
-  const accent = opts?.accent;
-
-  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
 
   const useCachedUrl = (url: string): boolean => {
     if (isLegacyBadTtsKey(cacheKey) || !isValidOClockCacheEntry(cacheKey, url)) {
@@ -606,13 +609,22 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
     loadPersist().delete(cacheKey);
   }
 
-  // 3) Cache miss → fetch then play on the already-unlocked element.
+  // 3) Cache miss(冷)→ fetch then play。标记 pendingColdKey,合成期间重复点同词不打断。
   return (async () => {
-    const url = await fetchTTS(trimmed, voiceId, speed, accent);
-    if (url) await finishPlayback(url);
-    else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+    pendingColdKey = cacheKey;
+    try {
+      const url = await fetchTTS(trimmed, voiceId, speed, accent);
+      if (url) await finishPlayback(url);
+      else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+    } finally {
+      if (pendingColdKey === cacheKey) pendingColdKey = null;
+    }
   })();
 };
+
+/** 去抖辅助:某文本在该 voice/speed 下是否正处于冷合成中(供 hubSpeak 避免重复打断)。 */
+export const isSynthInFlight = (text: string, voiceId: string, speed: number, accent?: string): boolean =>
+  pendingColdKey === `${voiceId}|${speed}|${accent || ''}|${(text || '').trim()}`;
 
 // Speak a list of sentences one-by-one with a small pause between them.
 // This sounds far more natural than concatenating an entire paragraph and

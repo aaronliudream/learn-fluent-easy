@@ -27,7 +27,8 @@ if (!URL || !KEY) { console.error("缺 VITE_SUPABASE_URL / KEY"); process.exit(1
 
 const TTS_URL = `${URL.replace(/\/$/, "")}/functions/v1/tts`;
 const VOICE_ID = "el:lily"; // KID_VOICE_ID,必须与 speakKid 一致
-const SPEED = 0.8;          // 通关听力 + 听音辨词 hubSpeak(...,0.8) 的速率
+// 速率从第3个参数读,默认 0.8(听音辨词/通关听力);0.85=词汇卡 VocabStage;0.7=答错慢速按钮。
+const SPEED = parseFloat(process.argv[3]) || 0.8;
 const CONCURRENCY = 3;      // 降并发,避开 tts Edge Function 资源上限丢词(原 6 会 fail)
 const H = { apikey: KEY, Authorization: `Bearer ${KEY}` };
 

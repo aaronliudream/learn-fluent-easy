@@ -469,7 +469,7 @@ function ListenWordStage({
   grade: number;
   onFinish: () => void;
   onCorrect: (q: { wordId?: string }) => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; wordId?: string }) => void;
 }) {
   const [words, setWords] = useState<LWWord[] | null>(null);
   const [groupIdx, setGroupIdx] = useState(0);
@@ -1875,7 +1875,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
               addStar();
               if (q.wordId) void recordJuniorWordMastery({ wordId: q.wordId, grade, kind: "listen", isCorrect: true });
             }}
-            onWrong={(q) =>
+            onWrong={(q) => {
               addMistake({
                 q: `听音选词：${q.audio}`,
                 opts: q.opts,
@@ -1884,8 +1884,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
                 audio: q.audio,
                 unitId,
                 unitTitle: unit.title,
-              })
-            }
+              });
+              if (q.wordId) void recordJuniorWordMastery({ wordId: q.wordId, grade, kind: "listen", isCorrect: false });
+            }}
           />
         );
       case "match":

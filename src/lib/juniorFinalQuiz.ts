@@ -245,12 +245,12 @@ async function loadListeningItems(grade: number, volume: string, unit: string): 
 }
 
 /**
- * 听力 3 题来源:7B 全 8 单元从 junior_listening_items 抽(题库已全覆盖);其余年级走内联回退。
- * DB 取到 < 3 题(题库不足)也回退内联,保证够 3 题、不破坏别的单元。
+ * 听力 3 题来源:7B + 八年级(8A/8B)从 junior_listening_items 抽(难度 1/2/3 各 1·自适应);
+ * 题库未覆盖/不足 3 题的单元(如 8 年级尚未灌库的 15 单元)回退内联 6 条,保证够 3 题、不报错不白屏。
  */
 async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
-  if (unit.book === "7B") {
-    const grade = parseInt(unit.book, 10) || 7; // '7B' → 7
+  if (["7B", "8A", "8B"].includes(unit.book)) {
+    const grade = parseInt(unit.book, 10) || 7; // '7B'→7,'8A'/'8B'→8
     const fromDb = await loadListeningItems(grade, unit.book, unit.unitKey);
     if (fromDb.length >= LISTENING_N) return fromDb;
   }

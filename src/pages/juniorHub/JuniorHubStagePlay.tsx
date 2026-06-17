@@ -339,11 +339,11 @@ function ListenMcStage({
 }: {
   title: string;
   instruction: string;
-  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string }>;
+  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string } }>;
   grade: number;
   onFinish: () => void;
   onCorrect: () => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string } }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -369,7 +369,21 @@ function ListenMcStage({
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
       onCorrect();
-      setFeedback(<div className="feedback-box success">✨ {title.includes("句") ? "听力真棒！" : "听对了！"}</div>);
+      setFeedback(
+        <div className="feedback-box success">
+          ✨ {title.includes("句") ? "听力真棒！" : "听对了！"}
+          {q.cn && (
+            <div className="mt-2 rounded-lg bg-white/70 px-2.5 py-1.5 text-left text-xs leading-relaxed text-[#2C2C2A]">
+              <div>
+                <strong>{q.opts[q.answer]}</strong> = {q.cn}
+              </div>
+              {q.example && (
+                <div className="mt-0.5 text-[#5C5751]">📘 {q.example.en} — {q.example.cn}</div>
+              )}
+            </div>
+          )}
+        </div>,
+      );
     } else {
       onWrong(q);
       setFeedback(
@@ -1671,15 +1685,19 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
 
   const listenWordQuestions = useMemo(() => {
     if (!unit) return [];
-    const shuffled = shuffleArray([...unit.vocabulary]);
-    return shuffled.slice(0, 6).map((target) => {
-      const distractors = shuffleArray(unit.vocabulary.filter((v) => v.en !== target.en)).slice(0, 3);
+    const vocab = unit.vocabulary;
+    // 覆盖全部单词(每词1题);干扰项 5 个凑 6 选项,词数不足时 min 守卫。
+    const distractorCount = Math.min(5, Math.max(1, vocab.length - 1));
+    return shuffleArray([...vocab]).map((target) => {
+      const distractors = shuffleArray(vocab.filter((v) => v.en !== target.en)).slice(0, distractorCount);
       const allOpts = shuffleArray([target, ...distractors]);
       return {
         audio: target.en,
         opts: allOpts.map((o) => o.en),
         answer: allOpts.findIndex((o) => o.en === target.en),
         point: "听力",
+        cn: target.cn,
+        example: target.chunks?.[0],
       };
     });
   }, [unit]);

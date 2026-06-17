@@ -683,6 +683,12 @@ function FinalQuizStage({
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
 
+  // 进关即预热听力题的 audio_text(云端 TTS 冷合成 ~1-3s)→ 用户做到听力题时 MP3 已在缓存,点🔊瞬时。
+  useEffect(() => {
+    const audios = questions.map((item) => item.audio).filter((a): a is string => !!a);
+    if (audios.length) prefetchTTSBatchKid(audios, { grade, speed: 0.8 });
+  }, [grade, questions]);
+
   const handlePick = (optIdx: number) => {
     if (answered) return;
     setAnswered(true);

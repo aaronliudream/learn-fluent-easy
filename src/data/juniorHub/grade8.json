@@ -8314,7 +8314,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "过去进行时",
+                "subtitle": "过去进行时(when/while) + 自然灾害合成词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -8360,10 +8360,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "过去进行时",
+            "grammarTitle": "过去进行时(when/while) + 自然灾害合成词",
             "grammarCode": "g8.22",
             "grammarCodes": [
-              "g8.22"
+              "g8.22",
+              "g8.41"
             ],
             "grammarQuiz": [
               {
@@ -8983,7 +8984,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "连词 so…that / unless / as soon as",
+                "subtitle": "so…that/unless/as soon as + 否定前缀&ed/ing辨析",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -9029,10 +9030,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "连词 so…that / unless / as soon as",
+            "grammarTitle": "so…that/unless/as soon as + 否定前缀&ed/ing辨析",
             "grammarCode": "g8.33",
             "grammarCodes": [
-              "g8.33"
+              "g8.33",
+              "g8.42"
             ],
             "grammarQuiz": [
               {
@@ -9652,7 +9654,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "现在完成时(already/yet/never/ever/just)",
+                "subtitle": "现在完成时 + 形容词后缀",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -9698,10 +9700,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "现在完成时(already/yet/never/ever/just)",
+            "grammarTitle": "现在完成时 + 形容词后缀",
             "grammarCode": "g8.24",
             "grammarCodes": [
-              "g8.24"
+              "g8.24",
+              "g8.43"
             ],
             "grammarQuiz": [
               {
@@ -10322,7 +10325,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "现在完成时(since/for)",
+                "subtitle": "现在完成时(for/since) + 形近词辨析",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -10368,11 +10371,12 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "现在完成时(since/for)",
+            "grammarTitle": "现在完成时(for/since) + 形近词辨析",
             "grammarCode": "g8.24",
             "grammarCodes": [
               "g8.24",
-              "g8.25"
+              "g8.25",
+              "g8.44"
             ],
             "grammarQuiz": [
               {

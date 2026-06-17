@@ -13,6 +13,7 @@ import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
+import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
 import { buildFinalQuiz, type FinalQuizItem } from "@/lib/juniorFinalQuiz";
 import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { awardCoins } from "@/lib/coins";
@@ -339,11 +340,11 @@ function ListenMcStage({
 }: {
   title: string;
   instruction: string;
-  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string } }>;
+  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }>;
   grade: number;
   onFinish: () => void;
-  onCorrect: () => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string } }) => void;
+  onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -368,7 +369,7 @@ function ListenMcStage({
     const isCorrect = optIdx === q.answer;
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
-      onCorrect();
+      onCorrect(q);
       setFeedback(
         <div className="feedback-box success">
           ✨ {title.includes("句") ? "听力真棒！" : "听对了！"}
@@ -448,6 +449,144 @@ function ListenMcStage({
         </PrimaryButton>
       )}
     </div>
+  );
+}
+
+// 听音辨词(第2关):读 junior_vocab 全单元词(34-77),按 grade+volume+unit;
+// 一组 12 题,做完弹"还有 X 词,继续下一组吗";选对显示中文释义(+有例句则显);答对/答错写词汇掌握度(listen 通道)。
+// 无 DB 词(grade7/Starter 等)→ 回退 JSON unit.vocabulary(含 chunk 例句)。
+type LWWord = { wordId?: string; word: string; cn: string; example?: { en: string; cn: string } };
+const LW_GROUP = 12;
+
+function ListenWordStage({
+  unit,
+  grade,
+  onFinish,
+  onCorrect,
+  onWrong,
+}: {
+  unit: UnitDef;
+  grade: number;
+  onFinish: () => void;
+  onCorrect: (q: { wordId?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number }) => void;
+}) {
+  const [words, setWords] = useState<LWWord[] | null>(null);
+  const [groupIdx, setGroupIdx] = useState(0);
+  const [between, setBetween] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase
+        .from("junior_vocab")
+        .select("word_id,word,meaning_cn,example_en,example_cn")
+        .eq("grade", grade)
+        .eq("volume", unit.book)
+        .eq("unit", unit.unitKey);
+      if (cancelled) return;
+      const rows = (data ?? []) as Array<{
+        word_id: string;
+        word: string;
+        meaning_cn: string | null;
+        example_en: string | null;
+        example_cn: string | null;
+      }>;
+      const valid = rows.filter((r) => r.word && r.meaning_cn);
+      if (valid.length > 0) {
+        setWords(
+          valid.map((r) => ({
+            wordId: r.word_id,
+            word: r.word.trim(),
+            cn: r.meaning_cn as string,
+            example: r.example_en && r.example_cn ? { en: r.example_en, cn: r.example_cn } : undefined,
+          })),
+        );
+      } else {
+        // 回退:无 DB 词 → JSON unit.vocabulary(grade7/Starter)
+        setWords(unit.vocabulary.map((v) => ({ word: v.en, cn: v.cn, example: v.chunks?.[0] })));
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  const groups = useMemo(() => {
+    if (!words) return [];
+    const shuffled = shuffleArray([...words]);
+    const out: LWWord[][] = [];
+    for (let i = 0; i < shuffled.length; i += LW_GROUP) out.push(shuffled.slice(i, i + LW_GROUP));
+    return out;
+  }, [words]);
+
+  const groupQuestions = useMemo(() => {
+    if (!words || !groups[groupIdx]) return [];
+    const dCount = Math.min(3, Math.max(1, words.length - 1));
+    return groups[groupIdx].map((target) => {
+      const distractors = shuffleArray(words.filter((w) => w.word !== target.word)).slice(0, dCount);
+      const allOpts = shuffleArray([target, ...distractors]);
+      return {
+        audio: target.word,
+        opts: allOpts.map((o) => o.word),
+        answer: allOpts.findIndex((o) => o.word === target.word),
+        point: "听力",
+        cn: target.cn,
+        example: target.example,
+        wordId: target.wordId,
+      };
+    });
+  }, [words, groups, groupIdx]);
+
+  if (words === null)
+    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
+  if (groupQuestions.length === 0) return <EmptyStageNotice onContinue={onFinish} />;
+
+  const tested = Math.min(words.length, (groupIdx + 1) * LW_GROUP);
+  const remaining = words.length - tested;
+  const isLastGroup = groupIdx >= groups.length - 1;
+
+  if (between) {
+    return (
+      <div className="rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-card">
+        <div className="mb-2 text-lg font-bold text-[#2C2C2A] dark:text-foreground">本组完成 🎉</div>
+        <div className="mb-4 text-sm text-[#5C5751] dark:text-muted-foreground">
+          本单元还有 <strong>{remaining}</strong> 个词没测,继续测下一组吗?
+        </div>
+        <div className="flex justify-center gap-3">
+          <button
+            type="button"
+            className="rounded-xl bg-[#378ADD] px-5 py-2 text-sm font-bold text-white"
+            onClick={() => {
+              setGroupIdx((g) => g + 1);
+              setBetween(false);
+            }}
+          >
+            继续下一组 →
+          </button>
+          <button
+            type="button"
+            className="rounded-xl border-2 border-[#EEEAE0] px-5 py-2 text-sm font-bold text-[#5C5751] dark:border-border dark:text-muted-foreground"
+            onClick={onFinish}
+          >
+            先完成本关
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <ListenMcStage
+      key={groupIdx}
+      title="听音辨词"
+      instruction={`🎧 听一听,是哪个单词?(第 ${groupIdx + 1}/${groups.length} 组)`}
+      questions={groupQuestions}
+      grade={grade}
+      onFinish={() => (isLastGroup ? onFinish() : setBetween(true))}
+      onCorrect={(q) => onCorrect({ wordId: q?.wordId })}
+      onWrong={onWrong}
+    />
   );
 }
 
@@ -1683,25 +1822,6 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     }
   }, [hubSearch, handleFinish]);
 
-  const listenWordQuestions = useMemo(() => {
-    if (!unit) return [];
-    const vocab = unit.vocabulary;
-    // 覆盖全部单词(每词1题);标准 4 选项 = 1 正 + 3 干扰,词数不足时 min 守卫。
-    const distractorCount = Math.min(3, Math.max(1, vocab.length - 1));
-    return shuffleArray([...vocab]).map((target) => {
-      const distractors = shuffleArray(vocab.filter((v) => v.en !== target.en)).slice(0, distractorCount);
-      const allOpts = shuffleArray([target, ...distractors]);
-      return {
-        audio: target.en,
-        opts: allOpts.map((o) => o.en),
-        answer: allOpts.findIndex((o) => o.en === target.en),
-        point: "听力",
-        cn: target.cn,
-        example: target.chunks?.[0],
-      };
-    });
-  }, [unit]);
-
   const listenSentQuestions = useMemo(() => {
     if (!unit) return [];
     return shuffleArray([...unit.listeningQuestions]).slice(0, 6);
@@ -1745,17 +1865,16 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
       case "vocab":
         return <VocabStage vocabulary={unit.vocabulary} grade={grade} onFinish={handleFinish} />;
       case "listenWord":
-        // 数据源 unit.vocabulary 现场生成;空 vocab → 0 题 → 走兜底,不挂载 ListenMcStage。
-        if (listenWordQuestions.length === 0)
-          return <EmptyStageNotice onContinue={handleFinish} />;
+        // 数据源:junior_vocab 全单元词(分组12);无 DB 词回退 JSON。选对加星+写词汇掌握度(listen)。
         return (
-          <ListenMcStage
-            title="听音辨词"
-            instruction="🎧 听一听，是哪个单词？"
-            questions={listenWordQuestions}
+          <ListenWordStage
+            unit={unit}
             grade={grade}
             onFinish={handleFinish}
-            onCorrect={addStar}
+            onCorrect={(q) => {
+              addStar();
+              if (q.wordId) void recordJuniorWordMastery({ wordId: q.wordId, grade, kind: "listen", isCorrect: true });
+            }}
             onWrong={(q) =>
               addMistake({
                 q: `听音选词：${q.audio}`,

@@ -1686,8 +1686,8 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   const listenWordQuestions = useMemo(() => {
     if (!unit) return [];
     const vocab = unit.vocabulary;
-    // 覆盖全部单词(每词1题);干扰项 5 个凑 6 选项,词数不足时 min 守卫。
-    const distractorCount = Math.min(5, Math.max(1, vocab.length - 1));
+    // 覆盖全部单词(每词1题);标准 4 选项 = 1 正 + 3 干扰,词数不足时 min 守卫。
+    const distractorCount = Math.min(3, Math.max(1, vocab.length - 1));
     return shuffleArray([...vocab]).map((target) => {
       const distractors = shuffleArray(vocab.filter((v) => v.en !== target.en)).slice(0, distractorCount);
       const allOpts = shuffleArray([target, ...distractors]);

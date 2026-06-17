@@ -5564,7 +5564,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "不定式作状语与宾补",
+                "subtitle": "不定式(目的状语+宾补) + 课余活动动词搭配",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -5610,10 +5610,11 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "不定式作状语与宾补",
+            "grammarTitle": "不定式(目的状语+宾补) + 课余活动动词搭配",
             "grammarCode": "g8.11",
             "grammarCodes": [
-              "g8.11"
+              "g8.11",
+              "g8.39"
             ],
             "grammarQuiz": [
               {
@@ -6225,7 +6226,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "情态动词 should/could 建议;反身代词",
+                "subtitle": "should建议 + 反身代词 + 后缀-ache/-less构词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -6271,11 +6272,12 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "情态动词 should/could 建议;反身代词",
+            "grammarTitle": "should建议 + 反身代词 + 后缀-ache/-less构词",
             "grammarCode": "g8.18",
             "grammarCodes": [
               "g8.18",
-              "g8.14"
+              "g8.14",
+              "g8.40"
             ],
             "grammarQuiz": [
               {

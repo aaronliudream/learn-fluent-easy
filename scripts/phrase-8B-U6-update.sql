@@ -1,0 +1,67 @@
+-- 8B U6:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
+-- 前置:必须先跑 ALTER TABLE ... ADD COLUMN phrase_en text;
+
+UPDATE public.junior_vocab SET phrase_en = 'good table manners' WHERE word_id = 'jr-8B-U6-7001';
+UPDATE public.junior_vocab SET phrase_en = 'sit up straight' WHERE word_id = 'jr-8B-U6-7002';
+UPDATE public.junior_vocab SET phrase_en = 'keep off the grass' WHERE word_id = 'jr-8B-U6-7003';
+UPDATE public.junior_vocab SET phrase_en = 'use serving chopsticks' WHERE word_id = 'jr-8B-U6-7004';
+UPDATE public.junior_vocab SET phrase_en = 'be used to it' WHERE word_id = 'jr-8B-U6-7005';
+UPDATE public.junior_vocab SET phrase_en = 'hear from a friend' WHERE word_id = 'jr-8B-U6-7006';
+UPDATE public.junior_vocab SET phrase_en = 'say merci' WHERE word_id = 'jr-8B-U6-7007';
+UPDATE public.junior_vocab SET phrase_en = 'go a long way' WHERE word_id = 'jr-8B-U6-7008';
+UPDATE public.junior_vocab SET phrase_en = 'say au revoir' WHERE word_id = 'jr-8B-U6-7009';
+UPDATE public.junior_vocab SET phrase_en = 'get along well' WHERE word_id = 'jr-8B-U6-7010';
+UPDATE public.junior_vocab SET phrase_en = 'shake hands' WHERE word_id = 'jr-8B-U6-9001';
+UPDATE public.junior_vocab SET phrase_en = 'bow politely' WHERE word_id = 'jr-8B-U6-9002';
+UPDATE public.junior_vocab SET phrase_en = 'a fist bump' WHERE word_id = 'jr-8B-U6-9003';
+UPDATE public.junior_vocab SET phrase_en = 'make a fist' WHERE word_id = 'jr-8B-U6-9004';
+UPDATE public.junior_vocab SET phrase_en = 'a kiss on the cheek' WHERE word_id = 'jr-8B-U6-9005';
+UPDATE public.junior_vocab SET phrase_en = 'a rosy cheek' WHERE word_id = 'jr-8B-U6-9006';
+UPDATE public.junior_vocab SET phrase_en = 'a warm hug' WHERE word_id = 'jr-8B-U6-9007';
+UPDATE public.junior_vocab SET phrase_en = 'feel embarrassed' WHERE word_id = 'jr-8B-U6-9008';
+UPDATE public.junior_vocab SET phrase_en = 'feel confused' WHERE word_id = 'jr-8B-U6-9009';
+UPDATE public.junior_vocab SET phrase_en = 'a bowl of curry' WHERE word_id = 'jr-8B-U6-9010';
+UPDATE public.junior_vocab SET phrase_en = 'don''t be rude' WHERE word_id = 'jr-8B-U6-9011';
+UPDATE public.junior_vocab SET phrase_en = 'an uncommon name' WHERE word_id = 'jr-8B-U6-9012';
+UPDATE public.junior_vocab SET phrase_en = 'the palm of your hand' WHERE word_id = 'jr-8B-U6-9013';
+UPDATE public.junior_vocab SET phrase_en = 'say namaste' WHERE word_id = 'jr-8B-U6-9014';
+UPDATE public.junior_vocab SET phrase_en = 'a knife and fork' WHERE word_id = 'jr-8B-U6-9015';
+UPDATE public.junior_vocab SET phrase_en = 'Indian food' WHERE word_id = 'jr-8B-U6-9016';
+UPDATE public.junior_vocab SET phrase_en = 'good manners' WHERE word_id = 'jr-8B-U6-9017';
+UPDATE public.junior_vocab SET phrase_en = 'a confusing rule' WHERE word_id = 'jr-8B-U6-9018';
+UPDATE public.junior_vocab SET phrase_en = 'unless it rains' WHERE word_id = 'jr-8B-U6-9019';
+UPDATE public.junior_vocab SET phrase_en = 'the proper way' WHERE word_id = 'jr-8B-U6-9020';
+UPDATE public.junior_vocab SET phrase_en = 'elbow on the table' WHERE word_id = 'jr-8B-U6-9021';
+UPDATE public.junior_vocab SET phrase_en = 'a serving of rice' WHERE word_id = 'jr-8B-U6-9022';
+UPDATE public.junior_vocab SET phrase_en = 'a pair of chopsticks' WHERE word_id = 'jr-8B-U6-9023';
+UPDATE public.junior_vocab SET phrase_en = 'a surprising fact' WHERE word_id = 'jr-8B-U6-9024';
+UPDATE public.junior_vocab SET phrase_en = 'an embarrassing moment' WHERE word_id = 'jr-8B-U6-9025';
+UPDATE public.junior_vocab SET phrase_en = 'cultural differences' WHERE word_id = 'jr-8B-U6-9026';
+UPDATE public.junior_vocab SET phrase_en = 'a local custom' WHERE word_id = 'jr-8B-U6-9027';
+UPDATE public.junior_vocab SET phrase_en = 'a special occasion' WHERE word_id = 'jr-8B-U6-9028';
+UPDATE public.junior_vocab SET phrase_en = 'dress nicely' WHERE word_id = 'jr-8B-U6-9029';
+UPDATE public.junior_vocab SET phrase_en = 'a white blouse' WHERE word_id = 'jr-8B-U6-9030';
+UPDATE public.junior_vocab SET phrase_en = 'a private matter' WHERE word_id = 'jr-8B-U6-9031';
+UPDATE public.junior_vocab SET phrase_en = 'whether or not' WHERE word_id = 'jr-8B-U6-9032';
+UPDATE public.junior_vocab SET phrase_en = 'a married couple' WHERE word_id = 'jr-8B-U6-9033';
+UPDATE public.junior_vocab SET phrase_en = 'the correct answer' WHERE word_id = 'jr-8B-U6-9034';
+UPDATE public.junior_vocab SET phrase_en = 'an unsafe place' WHERE word_id = 'jr-8B-U6-9035';
+UPDATE public.junior_vocab SET phrase_en = 'improper behaviour' WHERE word_id = 'jr-8B-U6-9036';
+UPDATE public.junior_vocab SET phrase_en = 'blue jeans' WHERE word_id = 'jr-8B-U6-9037';
+UPDATE public.junior_vocab SET phrase_en = 'get married' WHERE word_id = 'jr-8B-U6-9038';
+UPDATE public.junior_vocab SET phrase_en = 'congratulate a friend' WHERE word_id = 'jr-8B-U6-9039';
+UPDATE public.junior_vocab SET phrase_en = 'Asian culture' WHERE word_id = 'jr-8B-U6-9040';
+UPDATE public.junior_vocab SET phrase_en = 'a family tradition' WHERE word_id = 'jr-8B-U6-9041';
+UPDATE public.junior_vocab SET phrase_en = 'firstly, say hello' WHERE word_id = 'jr-8B-U6-9042';
+UPDATE public.junior_vocab SET phrase_en = 'secondly, sit down' WHERE word_id = 'jr-8B-U6-9043';
+UPDATE public.junior_vocab SET phrase_en = 'thirdly, eat slowly' WHERE word_id = 'jr-8B-U6-9044';
+UPDATE public.junior_vocab SET phrase_en = 'spell it correctly' WHERE word_id = 'jr-8B-U6-9045';
+UPDATE public.junior_vocab SET phrase_en = 'receive a gift' WHERE word_id = 'jr-8B-U6-9046';
+UPDATE public.junior_vocab SET phrase_en = 'a polite sign-off' WHERE word_id = 'jr-8B-U6-9047';
+UPDATE public.junior_vocab SET phrase_en = 'the main idea' WHERE word_id = 'jr-8B-U6-9048';
+UPDATE public.junior_vocab SET phrase_en = 'true or false' WHERE word_id = 'jr-8B-U6-9049';
+UPDATE public.junior_vocab SET phrase_en = 'cheers, everyone' WHERE word_id = 'jr-8B-U6-9050';
+
+-- 校验:本单元已回填条数(应 = 60)
+SELECT count(*) FILTER (WHERE phrase_en IS NOT NULL) AS filled, count(*) AS total
+FROM public.junior_vocab WHERE grade = 8 AND volume = '8B' AND unit = 'U6';

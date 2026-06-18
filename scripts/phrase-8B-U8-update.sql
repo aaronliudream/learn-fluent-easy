@@ -1,0 +1,61 @@
+-- 8B U8:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
+-- 前置:必须先跑 ALTER TABLE ... ADD COLUMN phrase_en text;
+
+UPDATE public.junior_vocab SET phrase_en = 'a special visitor' WHERE word_id = 'jr-8B-U8-0001';
+UPDATE public.junior_vocab SET phrase_en = 'an elderly man' WHERE word_id = 'jr-8B-U8-0002';
+UPDATE public.junior_vocab SET phrase_en = 'a charity organization' WHERE word_id = 'jr-8B-U8-0003';
+UPDATE public.junior_vocab SET phrase_en = 'a football stadium' WHERE word_id = 'jr-8B-U8-0004';
+UPDATE public.junior_vocab SET phrase_en = 'provide food' WHERE word_id = 'jr-8B-U8-0005';
+UPDATE public.junior_vocab SET phrase_en = 'a can of soup' WHERE word_id = 'jr-8B-U8-0006';
+UPDATE public.junior_vocab SET phrase_en = 'a range of books' WHERE word_id = 'jr-8B-U8-0007';
+UPDATE public.junior_vocab SET phrase_en = 'a dog owner' WHERE word_id = 'jr-8B-U8-0008';
+UPDATE public.junior_vocab SET phrase_en = 'a bird cage' WHERE word_id = 'jr-8B-U8-0009';
+UPDATE public.junior_vocab SET phrase_en = 'a kind donation' WHERE word_id = 'jr-8B-U8-0010';
+UPDATE public.junior_vocab SET phrase_en = 'an animal shelter' WHERE word_id = 'jr-8B-U8-0011';
+UPDATE public.junior_vocab SET phrase_en = 'a friendly interviewer' WHERE word_id = 'jr-8B-U8-0012';
+UPDATE public.junior_vocab SET phrase_en = 'today''s youth' WHERE word_id = 'jr-8B-U8-0013';
+UPDATE public.junior_vocab SET phrase_en = 'stay active' WHERE word_id = 'jr-8B-U8-0014';
+UPDATE public.junior_vocab SET phrase_en = 'join the army' WHERE word_id = 'jr-8B-U8-0015';
+UPDATE public.junior_vocab SET phrase_en = 'a brave soldier' WHERE word_id = 'jr-8B-U8-0016';
+UPDATE public.junior_vocab SET phrase_en = 'a primary school' WHERE word_id = 'jr-8B-U8-0017';
+UPDATE public.junior_vocab SET phrase_en = 'give to charity' WHERE word_id = 'jr-8B-U8-0018';
+UPDATE public.junior_vocab SET phrase_en = 'a kind lady' WHERE word_id = 'jr-8B-U8-0019';
+UPDATE public.junior_vocab SET phrase_en = 'a kind gentleman' WHERE word_id = 'jr-8B-U8-0020';
+UPDATE public.junior_vocab SET phrase_en = 'a loud bark' WHERE word_id = 'jr-8B-U8-0021';
+UPDATE public.junior_vocab SET phrase_en = 'an adult ticket' WHERE word_id = 'jr-8B-U8-0022';
+UPDATE public.junior_vocab SET phrase_en = 'a missing dog' WHERE word_id = 'jr-8B-U8-0023';
+UPDATE public.junior_vocab SET phrase_en = 'practical help' WHERE word_id = 'jr-8B-U8-0024';
+UPDATE public.junior_vocab SET phrase_en = 'a life-saving skill' WHERE word_id = 'jr-8B-U8-0025';
+UPDATE public.junior_vocab SET phrase_en = 'good teamwork' WHERE word_id = 'jr-8B-U8-0026';
+UPDATE public.junior_vocab SET phrase_en = 'a successful event' WHERE word_id = 'jr-8B-U8-0027';
+UPDATE public.junior_vocab SET phrase_en = 'great value' WHERE word_id = 'jr-8B-U8-0028';
+UPDATE public.junior_vocab SET phrase_en = 'voluntary work' WHERE word_id = 'jr-8B-U8-0029';
+UPDATE public.junior_vocab SET phrase_en = 'an ordinary day' WHERE word_id = 'jr-8B-U8-0030';
+UPDATE public.junior_vocab SET phrase_en = 'worth a try' WHERE word_id = 'jr-8B-U8-0031';
+UPDATE public.junior_vocab SET phrase_en = 'a large audience' WHERE word_id = 'jr-8B-U8-0032';
+UPDATE public.junior_vocab SET phrase_en = 'willing to help' WHERE word_id = 'jr-8B-U8-0033';
+UPDATE public.junior_vocab SET phrase_en = 'completely free' WHERE word_id = 'jr-8B-U8-0034';
+UPDATE public.junior_vocab SET phrase_en = 'great success' WHERE word_id = 'jr-8B-U8-0035';
+UPDATE public.junior_vocab SET phrase_en = 'my elder sister' WHERE word_id = 'jr-8B-U8-0036';
+UPDATE public.junior_vocab SET phrase_en = 'donate books' WHERE word_id = 'jr-8B-U8-0037';
+UPDATE public.junior_vocab SET phrase_en = 'a coat pocket' WHERE word_id = 'jr-8B-U8-0038';
+UPDATE public.junior_vocab SET phrase_en = 'make an effort' WHERE word_id = 'jr-8B-U8-0039';
+UPDATE public.junior_vocab SET phrase_en = 'a familiar face' WHERE word_id = 'jr-8B-U8-0040';
+UPDATE public.junior_vocab SET phrase_en = 'and so on' WHERE word_id = 'jr-8B-U8-0041';
+UPDATE public.junior_vocab SET phrase_en = 'a special talent' WHERE word_id = 'jr-8B-U8-0042';
+UPDATE public.junior_vocab SET phrase_en = 'yes, madam' WHERE word_id = 'jr-8B-U8-0043';
+UPDATE public.junior_vocab SET phrase_en = 'a TV advertisement' WHERE word_id = 'jr-8B-U8-0044';
+UPDATE public.junior_vocab SET phrase_en = 'make a difference' WHERE word_id = 'jr-8B-U8-7001';
+UPDATE public.junior_vocab SET phrase_en = 'visit a nursing home' WHERE word_id = 'jr-8B-U8-7002';
+UPDATE public.junior_vocab SET phrase_en = 'come along with us' WHERE word_id = 'jr-8B-U8-7003';
+UPDATE public.junior_vocab SET phrase_en = 'sign up for a club' WHERE word_id = 'jr-8B-U8-7004';
+UPDATE public.junior_vocab SET phrase_en = 'ever since then' WHERE word_id = 'jr-8B-U8-7005';
+UPDATE public.junior_vocab SET phrase_en = 'most of all' WHERE word_id = 'jr-8B-U8-7006';
+UPDATE public.junior_vocab SET phrase_en = 'always on the go' WHERE word_id = 'jr-8B-U8-7007';
+UPDATE public.junior_vocab SET phrase_en = 'help those in need' WHERE word_id = 'jr-8B-U8-7008';
+UPDATE public.junior_vocab SET phrase_en = 'save pocket money' WHERE word_id = 'jr-8B-U8-7009';
+UPDATE public.junior_vocab SET phrase_en = 'hand out flyers' WHERE word_id = 'jr-8B-U8-7010';
+
+-- 校验:本单元已回填条数(应 = 54)
+SELECT count(*) FILTER (WHERE phrase_en IS NOT NULL) AS filled, count(*) AS total
+FROM public.junior_vocab WHERE grade = 8 AND volume = '8B' AND unit = 'U8';

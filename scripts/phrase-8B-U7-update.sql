@@ -1,0 +1,64 @@
+-- 8B U7:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
+-- 前置:必须先跑 ALTER TABLE ... ADD COLUMN phrase_en text;
+
+UPDATE public.junior_vocab SET phrase_en = 'an exciting adventure' WHERE word_id = 'jr-8B-U7-0001';
+UPDATE public.junior_vocab SET phrase_en = 'a fantasy story' WHERE word_id = 'jr-8B-U7-0002';
+UPDATE public.junior_vocab SET phrase_en = 'a mystery story' WHERE word_id = 'jr-8B-U7-0003';
+UPDATE public.junior_vocab SET phrase_en = 'science fiction' WHERE word_id = 'jr-8B-U7-0004';
+UPDATE public.junior_vocab SET phrase_en = 'a clever detective' WHERE word_id = 'jr-8B-U7-0005';
+UPDATE public.junior_vocab SET phrase_en = 'a friendly alien' WHERE word_id = 'jr-8B-U7-0006';
+UPDATE public.junior_vocab SET phrase_en = 'a fast attack' WHERE word_id = 'jr-8B-U7-0007';
+UPDATE public.junior_vocab SET phrase_en = 'a magic kingdom' WHERE word_id = 'jr-8B-U7-0008';
+UPDATE public.junior_vocab SET phrase_en = 'a historical novel' WHERE word_id = 'jr-8B-U7-0009';
+UPDATE public.junior_vocab SET phrase_en = 'the police force' WHERE word_id = 'jr-8B-U7-0010';
+UPDATE public.junior_vocab SET phrase_en = 'steal the ball' WHERE word_id = 'jr-8B-U7-0011';
+UPDATE public.junior_vocab SET phrase_en = 'punish bad behaviour' WHERE word_id = 'jr-8B-U7-0012';
+UPDATE public.junior_vocab SET phrase_en = 'a common idiom' WHERE word_id = 'jr-8B-U7-0013';
+UPDATE public.junior_vocab SET phrase_en = 'recently read' WHERE word_id = 'jr-8B-U7-0014';
+UPDATE public.junior_vocab SET phrase_en = 'a lost dog' WHERE word_id = 'jr-8B-U7-0015';
+UPDATE public.junior_vocab SET phrase_en = 'recommend a book' WHERE word_id = 'jr-8B-U7-0016';
+UPDATE public.junior_vocab SET phrase_en = 'modern society' WHERE word_id = 'jr-8B-U7-0017';
+UPDATE public.junior_vocab SET phrase_en = 'a literary work' WHERE word_id = 'jr-8B-U7-0018';
+UPDATE public.junior_vocab SET phrase_en = 'a strong base' WHERE word_id = 'jr-8B-U7-0019';
+UPDATE public.junior_vocab SET phrase_en = 'a short summary' WHERE word_id = 'jr-8B-U7-0020';
+UPDATE public.junior_vocab SET phrase_en = 'a spoiled child' WHERE word_id = 'jr-8B-U7-0021';
+UPDATE public.junior_vocab SET phrase_en = 'don''t be selfish' WHERE word_id = 'jr-8B-U7-0022';
+UPDATE public.junior_vocab SET phrase_en = 'a painful lesson' WHERE word_id = 'jr-8B-U7-0023';
+UPDATE public.junior_vocab SET phrase_en = 'lock the door' WHERE word_id = 'jr-8B-U7-0024';
+UPDATE public.junior_vocab SET phrase_en = 'unlock the phone' WHERE word_id = 'jr-8B-U7-0025';
+UPDATE public.junior_vocab SET phrase_en = 'a hidden treasure' WHERE word_id = 'jr-8B-U7-0026';
+UPDATE public.junior_vocab SET phrase_en = 'nobody knows' WHERE word_id = 'jr-8B-U7-0027';
+UPDATE public.junior_vocab SET phrase_en = 'therefore true' WHERE word_id = 'jr-8B-U7-0028';
+UPDATE public.junior_vocab SET phrase_en = 'a calm state' WHERE word_id = 'jr-8B-U7-0029';
+UPDATE public.junior_vocab SET phrase_en = 'a weak signal' WHERE word_id = 'jr-8B-U7-0030';
+UPDATE public.junior_vocab SET phrase_en = 'since last year' WHERE word_id = 'jr-8B-U7-0031';
+UPDATE public.junior_vocab SET phrase_en = 'smile secretly' WHERE word_id = 'jr-8B-U7-0032';
+UPDATE public.junior_vocab SET phrase_en = 'prove a point' WHERE word_id = 'jr-8B-U7-0033';
+UPDATE public.junior_vocab SET phrase_en = 'a slow build-up' WHERE word_id = 'jr-8B-U7-0034';
+UPDATE public.junior_vocab SET phrase_en = 'the story''s climax' WHERE word_id = 'jr-8B-U7-0035';
+UPDATE public.junior_vocab SET phrase_en = 'a special effect' WHERE word_id = 'jr-8B-U7-0036';
+UPDATE public.junior_vocab SET phrase_en = 'a helpful librarian' WHERE word_id = 'jr-8B-U7-0037';
+UPDATE public.junior_vocab SET phrase_en = 'consider the idea' WHERE word_id = 'jr-8B-U7-0038';
+UPDATE public.junior_vocab SET phrase_en = 'friend or enemy' WHERE word_id = 'jr-8B-U7-0039';
+UPDATE public.junior_vocab SET phrase_en = 'a naughty puppy' WHERE word_id = 'jr-8B-U7-0040';
+UPDATE public.junior_vocab SET phrase_en = 'a gentle voice' WHERE word_id = 'jr-8B-U7-0041';
+UPDATE public.junior_vocab SET phrase_en = 'defeat the other team' WHERE word_id = 'jr-8B-U7-0042';
+UPDATE public.junior_vocab SET phrase_en = 'basic skills' WHERE word_id = 'jr-8B-U7-0043';
+UPDATE public.junior_vocab SET phrase_en = 'a strong recommendation' WHERE word_id = 'jr-8B-U7-0044';
+UPDATE public.junior_vocab SET phrase_en = 'American English' WHERE word_id = 'jr-8B-U7-0045';
+UPDATE public.junior_vocab SET phrase_en = 'a dog''s bone' WHERE word_id = 'jr-8B-U7-0046';
+UPDATE public.junior_vocab SET phrase_en = 'no doubt' WHERE word_id = 'jr-8B-U7-0047';
+UPDATE public.junior_vocab SET phrase_en = 'inspire others' WHERE word_id = 'jr-8B-U7-0048';
+UPDATE public.junior_vocab SET phrase_en = 'destroy the sandcastle' WHERE word_id = 'jr-8B-U7-0049';
+UPDATE public.junior_vocab SET phrase_en = 'a short introduction' WHERE word_id = 'jr-8B-U7-0050';
+UPDATE public.junior_vocab SET phrase_en = 'a good read' WHERE word_id = 'jr-8B-U7-7001';
+UPDATE public.junior_vocab SET phrase_en = 'don''t get lost' WHERE word_id = 'jr-8B-U7-7002';
+UPDATE public.junior_vocab SET phrase_en = 'based on a story' WHERE word_id = 'jr-8B-U7-7003';
+UPDATE public.junior_vocab SET phrase_en = 'lock up the house' WHERE word_id = 'jr-8B-U7-7004';
+UPDATE public.junior_vocab SET phrase_en = 'get to your feet' WHERE word_id = 'jr-8B-U7-7005';
+UPDATE public.junior_vocab SET phrase_en = 'day by day' WHERE word_id = 'jr-8B-U7-7006';
+UPDATE public.junior_vocab SET phrase_en = 'just in time' WHERE word_id = 'jr-8B-U7-7007';
+
+-- 校验:本单元已回填条数(应 = 57)
+SELECT count(*) FILTER (WHERE phrase_en IS NOT NULL) AS filled, count(*) AS total
+FROM public.junior_vocab WHERE grade = 8 AND volume = '8B' AND unit = 'U7';

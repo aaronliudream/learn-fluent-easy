@@ -1,0 +1,60 @@
+-- 8B U5:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
+-- 前置:必须先跑 ALTER TABLE ... ADD COLUMN phrase_en text;
+
+UPDATE public.junior_vocab SET phrase_en = 'do the chores' WHERE word_id = 'jr-8B-U5-7001';
+UPDATE public.junior_vocab SET phrase_en = 'slow down a little' WHERE word_id = 'jr-8B-U5-7002';
+UPDATE public.junior_vocab SET phrase_en = 'come off easily' WHERE word_id = 'jr-8B-U5-7003';
+UPDATE public.junior_vocab SET phrase_en = 'make preparations' WHERE word_id = 'jr-8B-U5-7004';
+UPDATE public.junior_vocab SET phrase_en = 'a security guard' WHERE word_id = 'jr-8B-U5-7005';
+UPDATE public.junior_vocab SET phrase_en = 'as soon as possible' WHERE word_id = 'jr-8B-U5-7006';
+UPDATE public.junior_vocab SET phrase_en = 'keep your temper' WHERE word_id = 'jr-8B-U5-9001';
+UPDATE public.junior_vocab SET phrase_en = 'an earthquake drill' WHERE word_id = 'jr-8B-U5-9002';
+UPDATE public.junior_vocab SET phrase_en = 'prevent a wildfire' WHERE word_id = 'jr-8B-U5-9003';
+UPDATE public.junior_vocab SET phrase_en = 'a heavy snowstorm' WHERE word_id = 'jr-8B-U5-9004';
+UPDATE public.junior_vocab SET phrase_en = 'a long drought' WHERE word_id = 'jr-8B-U5-9005';
+UPDATE public.junior_vocab SET phrase_en = 'warn people early' WHERE word_id = 'jr-8B-U5-9006';
+UPDATE public.junior_vocab SET phrase_en = 'wave goodbye' WHERE word_id = 'jr-8B-U5-9007';
+UPDATE public.junior_vocab SET phrase_en = 'a tsunami warning' WHERE word_id = 'jr-8B-U5-9008';
+UPDATE public.junior_vocab SET phrase_en = 'a job interview' WHERE word_id = 'jr-8B-U5-9009';
+UPDATE public.junior_vocab SET phrase_en = 'a quiet neighbourhood' WHERE word_id = 'jr-8B-U5-9010';
+UPDATE public.junior_vocab SET phrase_en = 'on the roof' WHERE word_id = 'jr-8B-U5-9011';
+UPDATE public.junior_vocab SET phrase_en = 'nearly finished' WHERE word_id = 'jr-8B-U5-9012';
+UPDATE public.junior_vocab SET phrase_en = 'a weather report' WHERE word_id = 'jr-8B-U5-9013';
+UPDATE public.junior_vocab SET phrase_en = 'a lot of trouble' WHERE word_id = 'jr-8B-U5-9014';
+UPDATE public.junior_vocab SET phrase_en = 'a close relative' WHERE word_id = 'jr-8B-U5-9015';
+UPDATE public.junior_vocab SET phrase_en = 'a big truck' WHERE word_id = 'jr-8B-U5-9016';
+UPDATE public.junior_vocab SET phrase_en = 'food supply' WHERE word_id = 'jr-8B-U5-9017';
+UPDATE public.junior_vocab SET phrase_en = 'in preparation' WHERE word_id = 'jr-8B-U5-9018';
+UPDATE public.junior_vocab SET phrase_en = 'electric power' WHERE word_id = 'jr-8B-U5-9019';
+UPDATE public.junior_vocab SET phrase_en = 'sleep soundly' WHERE word_id = 'jr-8B-U5-9020';
+UPDATE public.junior_vocab SET phrase_en = 'a thick coat' WHERE word_id = 'jr-8B-U5-9021';
+UPDATE public.junior_vocab SET phrase_en = 'beat the drum' WHERE word_id = 'jr-8B-U5-9022';
+UPDATE public.junior_vocab SET phrase_en = 'hide and seek' WHERE word_id = 'jr-8B-U5-9023';
+UPDATE public.junior_vocab SET phrase_en = 'a tornado warning' WHERE word_id = 'jr-8B-U5-9024';
+UPDATE public.junior_vocab SET phrase_en = 'the worst storm' WHERE word_id = 'jr-8B-U5-9025';
+UPDATE public.junior_vocab SET phrase_en = 'a brave schoolgirl' WHERE word_id = 'jr-8B-U5-9026';
+UPDATE public.junior_vocab SET phrase_en = 'white froth' WHERE word_id = 'jr-8B-U5-9027';
+UPDATE public.junior_vocab SET phrase_en = 'unfortunately, it rained' WHERE word_id = 'jr-8B-U5-9028';
+UPDATE public.junior_vocab SET phrase_en = 'refuse to give up' WHERE word_id = 'jr-8B-U5-9029';
+UPDATE public.junior_vocab SET phrase_en = 'airport security' WHERE word_id = 'jr-8B-U5-9030';
+UPDATE public.junior_vocab SET phrase_en = 'guard the gate' WHERE word_id = 'jr-8B-U5-9031';
+UPDATE public.junior_vocab SET phrase_en = 'a nearby school' WHERE word_id = 'jr-8B-U5-9032';
+UPDATE public.junior_vocab SET phrase_en = 'scream with joy' WHERE word_id = 'jr-8B-U5-9033';
+UPDATE public.junior_vocab SET phrase_en = 'thankfully, all safe' WHERE word_id = 'jr-8B-U5-9034';
+UPDATE public.junior_vocab SET phrase_en = 'useful knowledge' WHERE word_id = 'jr-8B-U5-9035';
+UPDATE public.junior_vocab SET phrase_en = 'quick thinking' WHERE word_id = 'jr-8B-U5-9036';
+UPDATE public.junior_vocab SET phrase_en = 'a real hero' WHERE word_id = 'jr-8B-U5-9037';
+UPDATE public.junior_vocab SET phrase_en = 'a landslide warning' WHERE word_id = 'jr-8B-U5-9038';
+UPDATE public.junior_vocab SET phrase_en = 'safeguard our home' WHERE word_id = 'jr-8B-U5-9039';
+UPDATE public.junior_vocab SET phrase_en = 'rising floodwater' WHERE word_id = 'jr-8B-U5-9040';
+UPDATE public.junior_vocab SET phrase_en = 'more manpower' WHERE word_id = 'jr-8B-U5-9041';
+UPDATE public.junior_vocab SET phrase_en = 'a fast heartbeat' WHERE word_id = 'jr-8B-U5-9042';
+UPDATE public.junior_vocab SET phrase_en = 'a rescue team' WHERE word_id = 'jr-8B-U5-9043';
+UPDATE public.junior_vocab SET phrase_en = 'a summer heatwave' WHERE word_id = 'jr-8B-U5-9044';
+UPDATE public.junior_vocab SET phrase_en = 'southwestern China' WHERE word_id = 'jr-8B-U5-9045';
+UPDATE public.junior_vocab SET phrase_en = 'a brave firefighter' WHERE word_id = 'jr-8B-U5-9046';
+UPDATE public.junior_vocab SET phrase_en = 'a young volunteer' WHERE word_id = 'jr-8B-U5-9047';
+
+-- 校验:本单元已回填条数(应 = 53)
+SELECT count(*) FILTER (WHERE phrase_en IS NOT NULL) AS filled, count(*) AS total
+FROM public.junior_vocab WHERE grade = 8 AND volume = '8B' AND unit = 'U5';

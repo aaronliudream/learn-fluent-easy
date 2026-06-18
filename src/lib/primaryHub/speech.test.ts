@@ -17,6 +17,8 @@ vi.mock("@/lib/speak", () => ({
   speakKid: (...args: unknown[]) => speakKidMock(...args),
   stopSpeaking: vi.fn(),
   prefetchTTSBatchKid: vi.fn(),
+  isSynthInFlight: vi.fn(() => false),
+  KID_VOICE_ID: "el:lily",
 }));
 
 describe("toHubTtsText", () => {

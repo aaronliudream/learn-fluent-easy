@@ -100,12 +100,15 @@ function QuizOpts({
   picked,
   answered,
   onPick,
+  optsCn,
 }: {
   opts: string[];
   answer: number;
   picked: number | null;
   answered: boolean;
   onPick: (idx: number) => void;
+  /** 听音辨词:答完后每个选项跟一行中文释义(从 junior_vocab.meaning_cn 传入)。缺失则该项不显。 */
+  optsCn?: (string | null | undefined)[];
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -128,7 +131,12 @@ function QuizOpts({
             <span className="grid size-6 shrink-0 place-items-center rounded-lg bg-[#F4F0E6] text-xs font-bold text-[#888780]">
               {String.fromCharCode(65 + j)}
             </span>
-            <span>{opt}</span>
+            <span className="flex min-w-0 flex-col">
+              <span>{opt}</span>
+              {answered && optsCn?.[j] && (
+                <span className="mt-0.5 text-[11px] font-normal text-[#888780]">{optsCn[j]}</span>
+              )}
+            </span>
           </button>
         );
       })}
@@ -340,11 +348,11 @@ function ListenMcStage({
 }: {
   title: string;
   instruction: string;
-  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }>;
+  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }>;
   grade: number;
   onFinish: () => void;
-  onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }) => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -441,7 +449,7 @@ function ListenMcStage({
         </button>
         <div className="mt-2 text-xs text-[#185FA5]">可多次点击重复听</div>
       </div>
-      <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} />
+      <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} optsCn={q.optsCn} />
       {feedback}
       {answered && (
         <PrimaryButton onClick={next} className="mt-3">
@@ -531,6 +539,7 @@ function ListenWordStage({
       return {
         audio: target.word,
         opts: allOpts.map((o) => o.word),
+        optsCn: allOpts.map((o) => o.cn), // 选对后每个选项跟一行中文释义,一眼过 4 个词
         answer: allOpts.findIndex((o) => o.word === target.word),
         point: "听力",
         cn: target.cn,

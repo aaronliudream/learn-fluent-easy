@@ -35,11 +35,38 @@
 const SPEAKER_LABEL =
   /(^|[\r\n]+|[.?!]["'’)\]]?[ \t]+|\b\d{1,2}\.[ \t]+)([A-Z][a-zA-Z]{0,5}):[ \t]+(?=["'“‘A-Z])/g;
 
+/**
+ * Textbook abbreviations (sb / sth / sb's / etc.) must be SPOKEN as full words —
+ * TTS otherwise reads "sb" as the letters "S-B". Expansion happens ONLY on the way
+ * into TTS (cleanForTTS), so on-screen vocab still shows "take sb's breath away"
+ * while the audio says "take somebody's breath away".
+ *
+ * Order matters: possessives before bare forms. Every pattern is \b-guarded so it
+ * never touches letters inside real words (USB, myths, sketch, etching …).
+ * Map verified against a full scan of junior_vocab + grade7/8/9 vocab (forms found:
+ * sb, sb's, sth, do sth, one's, oneself, etc.). one's/oneself read fine → left as-is.
+ */
+const SPEECH_ABBREV: Array<[RegExp, string]> = [
+  [/\bsth['’]s\b/gi, "something's"],
+  [/\bsb['’]s\b/gi, "somebody's"],
+  [/\bsth\b/gi, "something"],
+  [/\bsb\b/gi, "somebody"],
+  [/\betc\b\.?/gi, "et cetera"],
+];
+
+export function expandSpeechAbbrev(text: string): string {
+  if (!text) return text;
+  let out = text;
+  for (const [re, rep] of SPEECH_ABBREV) out = out.replace(re, rep);
+  return out;
+}
+
 export function cleanForTTS(text: string): string {
   if (!text) return text;
   // Replace label with just its preserved boundary; run twice for back-to-back
   // turns that share a boundary char (idempotent, so a 2nd pass is safe/no-op).
   const once = text.replace(SPEAKER_LABEL, "$1");
   const twice = once.replace(SPEAKER_LABEL, "$1");
-  return twice;
+  // Expand textbook abbreviations so TTS speaks full words (display unaffected).
+  return expandSpeechAbbrev(twice);
 }

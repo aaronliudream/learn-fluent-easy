@@ -249,7 +249,7 @@ export function GrammarQuestionCard({
   };
 
   const playStem = () => {
-    if (q.stem) speak(q.stem, { accent: "US" }).catch(() => {});
+    if (q.stem) speak(q.stem.replace(/\\n/g, " "), { accent: "US" }).catch(() => {});
   };
 
   const lockedMcq = isLegacyMcq && !!picked;
@@ -284,7 +284,7 @@ export function GrammarQuestionCard({
       </div>
 
       <div className="relative text-sm font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground">
-        {q.stem}
+        {q.stem?.replace(/\\n/g, "\n")}
       </div>
 
       {hasDistractors && shuffledChoices && (

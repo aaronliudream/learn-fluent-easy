@@ -897,7 +897,7 @@ function FinalQuizStage({
           </span>
         )}
       </div>
-      <div className="mb-4 text-base font-semibold leading-relaxed">{q.q}</div>
+      <div className="mb-4 whitespace-pre-line text-base font-semibold leading-relaxed">{q.q?.replace(/\\n/g, "\n")}</div>
       {q.kind === "listening" && q.audio && (
         <button
           type="button"

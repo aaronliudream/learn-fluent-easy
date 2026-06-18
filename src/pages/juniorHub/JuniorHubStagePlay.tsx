@@ -480,13 +480,13 @@ function ListenWordStage({
     (async () => {
       const { data } = await supabase
         .from("junior_vocab")
-        .select("word_id,word,meaning_cn,example_en,example_cn")
+        .select("id,word,meaning_cn,example_en,example_cn")
         .eq("grade", grade)
         .eq("volume", unit.book)
         .eq("unit", unit.unitKey);
       if (cancelled) return;
       const rows = (data ?? []) as Array<{
-        word_id: string;
+        id: string;
         word: string;
         meaning_cn: string | null;
         example_en: string | null;
@@ -496,7 +496,9 @@ function ListenWordStage({
       if (valid.length > 0) {
         setWords(
           valid.map((r) => ({
-            wordId: r.word_id,
+            // junior_word_mastery.word_id 实际存 junior_vocab.id(uuid),与词汇游戏一致;
+            // 传 word_id(text "jr-8A-U2-..")会因 uuid 列类型不符而写入失败。
+            wordId: r.id,
             word: r.word.trim(),
             cn: r.meaning_cn as string,
             example: r.example_en && r.example_cn ? { en: r.example_en, cn: r.example_cn } : undefined,

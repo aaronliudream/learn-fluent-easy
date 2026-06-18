@@ -41,28 +41,29 @@ export async function resolveUnitPoints(codes: string[]): Promise<UnitPoint[]> {
   return codes.map((c) => byCode.get(c)).filter((p): p is UnitPoint => !!p);
 }
 
-/** 取单个 point 的 MCQ 题(先精选区 9000-9199,空则回退完整题库),并打上 point 标签。 */
+/**
+ * 取单个 point 的全部 MCQ 题(整个题库,非只精选区),并打上 point 标签。
+ * 之前只取精选区(9000-9199)每点仅 ~4 道 → 抽 8 题永远那几道、"每次一样"。
+ * 现服务"全库干净 4 选项 mcq"(过滤掉 nan/空选项的坏题 + 非 mcq 题型),
+ * 每点池子 16-50 道 → pickQuestions 随机抽 8 持续供新题。第4关/第9关共用,同时受益。
+ */
 async function loadPointMcq(point: UnitPoint): Promise<UnitQuestion[]> {
+  const optClean = (o: unknown) =>
+    o != null && String(o).trim() !== "" && String(o).trim().toLowerCase() !== "nan";
   const tag = (rows: unknown[]) =>
     (rows as (GrammarQuestion & { kp_id?: string | null })[])
-      .filter((q) => (q.question_type || "mcq") === "mcq")
+      .filter(
+        (q) =>
+          (q.question_type || "mcq") === "mcq" &&
+          [q.option_a, q.option_b, q.option_c, q.option_d].every(optClean),
+      )
       .map((q) => ({ ...q, pointId: point.id, pointTitle: point.title }));
 
-  const curated = await supabase
+  const full = await supabase
     .from("junior_grammar_questions")
     .select(Q_SELECT)
-    .eq("point_id", point.id)
-    .gte("sort_order", 9000)
-    .lte("sort_order", 9199);
-  let rows = (curated.data ?? []) as unknown[];
-  if (rows.length === 0) {
-    const full = await supabase
-      .from("junior_grammar_questions")
-      .select(Q_SELECT)
-      .eq("point_id", point.id);
-    rows = (full.data ?? []) as unknown[];
-  }
-  return tag(rows);
+    .eq("point_id", point.id);
+  return tag((full.data ?? []) as unknown[]);
 }
 
 /** 合并所有 point 的 MCQ 池(并行取)。 */

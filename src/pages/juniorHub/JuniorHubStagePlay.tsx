@@ -109,6 +109,8 @@ function QuizOpts({
   onPick: (idx: number) => void;
   /** 听音辨词:答完后每个选项跟一行中文释义(从 junior_vocab.meaning_cn 传入)。缺失则该项不显。 */
   optsCn?: (string | null | undefined)[];
+  /** 听音辨词:答完后再跟一行英文短语/语块(junior_vocab.phrase_en)。缺失则该行不显。 */
+  optsPhrase?: (string | null | undefined)[];
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -135,6 +137,9 @@ function QuizOpts({
               <span>{opt}</span>
               {answered && optsCn?.[j] && (
                 <span className="mt-0.5 text-[11px] font-normal text-[#888780]">{optsCn[j]}</span>
+              )}
+              {answered && optsPhrase?.[j] && (
+                <span className="text-[11px] font-normal italic text-[#185FA5]">{optsPhrase[j]}</span>
               )}
             </span>
           </button>
@@ -348,11 +353,11 @@ function ListenMcStage({
 }: {
   title: string;
   instruction: string;
-  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }>;
+  questions: Array<{ audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }>;
   grade: number;
   onFinish: () => void;
-  onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
-  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onCorrect: (q?: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
+  onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string; cn?: string; optsCn?: (string | null | undefined)[]; optsPhrase?: (string | null | undefined)[]; example?: { en: string; cn: string }; wordId?: string }) => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -449,7 +454,7 @@ function ListenMcStage({
         </button>
         <div className="mt-2 text-xs text-[#185FA5]">可多次点击重复听</div>
       </div>
-      <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} optsCn={q.optsCn} />
+      <QuizOpts opts={q.opts} answer={q.answer} picked={picked} answered={answered} onPick={handlePick} optsCn={q.optsCn} optsPhrase={q.optsPhrase} />
       {feedback}
       {answered && (
         <PrimaryButton onClick={next} className="mt-3">
@@ -463,7 +468,7 @@ function ListenMcStage({
 // 听音辨词(第2关):读 junior_vocab 全单元词(34-77),按 grade+volume+unit;
 // 一组 12 题,做完弹"还有 X 词,继续下一组吗";选对显示中文释义(+有例句则显);答对/答错写词汇掌握度(listen 通道)。
 // 无 DB 词(grade7/Starter 等)→ 回退 JSON unit.vocabulary(含 chunk 例句)。
-type LWWord = { wordId?: string; word: string; cn: string; example?: { en: string; cn: string } };
+type LWWord = { wordId?: string; word: string; cn: string; phrase?: string; example?: { en: string; cn: string } };
 const LW_GROUP = 12;
 
 function ListenWordStage({
@@ -488,7 +493,7 @@ function ListenWordStage({
     (async () => {
       const { data } = await supabase
         .from("junior_vocab")
-        .select("id,word,meaning_cn,example_en,example_cn")
+        .select("id,word,meaning_cn,phrase_en,example_en,example_cn")
         .eq("grade", grade)
         .eq("volume", unit.book)
         .eq("unit", unit.unitKey);
@@ -497,6 +502,7 @@ function ListenWordStage({
         id: string;
         word: string;
         meaning_cn: string | null;
+        phrase_en: string | null;
         example_en: string | null;
         example_cn: string | null;
       }>;
@@ -509,6 +515,7 @@ function ListenWordStage({
             wordId: r.id,
             word: r.word.trim(),
             cn: r.meaning_cn as string,
+            phrase: r.phrase_en?.trim() || undefined, // 英文短语/语块(新列),缺则不显
             example: r.example_en && r.example_cn ? { en: r.example_en, cn: r.example_cn } : undefined,
           })),
         );
@@ -540,6 +547,7 @@ function ListenWordStage({
         audio: target.word,
         opts: allOpts.map((o) => o.word),
         optsCn: allOpts.map((o) => o.cn), // 选对后每个选项跟一行中文释义,一眼过 4 个词
+        optsPhrase: allOpts.map((o) => o.phrase), // 再跟一行英文短语/语块(phrase_en)
         answer: allOpts.findIndex((o) => o.word === target.word),
         point: "听力",
         cn: target.cn,

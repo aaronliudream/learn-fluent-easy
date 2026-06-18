@@ -1,4 +1,4 @@
--- 8A U1 试点:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
+-- 8A U1:回填 junior_vocab.phrase_en(英文短语/语块)。幂等:按 word_id 精确 UPDATE,可重跑。
 -- 前置:必须先跑 ALTER TABLE ... ADD COLUMN phrase_en text;
 
 UPDATE public.junior_vocab SET phrase_en = 'an ancient town' WHERE word_id = 'jr-8A-U1-0001';

@@ -101,6 +101,7 @@ function QuizOpts({
   answered,
   onPick,
   optsCn,
+  optsPhrase,
 }: {
   opts: string[];
   answer: number;

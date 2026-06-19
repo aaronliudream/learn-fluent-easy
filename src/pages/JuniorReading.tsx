@@ -53,14 +53,14 @@ export default function JuniorReading() {
     loadMastery("junior_reading").then(setMastery);
   }, [grade]);
 
-  // 分组(决定上下顺序):待办(未做+做过未通过) 置顶 / 待复习 / 已完成(已通过+已掌握) 沉底。
+  // 分组(决定上下顺序):待办(未做+没通过+通过没满分) 置顶 / 待复习 / 已掌握(5⭐) 沉底。
   const { todo, dueReview, done } = useMemo(() => {
     const t: R[] = [],d: R[] = [],f: R[] = [];
     for (const r of items) {
       const st = statusOf(mastery[r.id]);
       if (st === "review_due") d.push(r);
-      else if (st === "passed" || st === "mastered") f.push(r); // 已通过/已掌握 → 沉底
-      else t.push(r); // new(未做) / tried(做过没通过) → 置顶
+      else if (st === "mastered") f.push(r); // 只 5⭐ 真正掌握 → 沉底
+      else t.push(r); // new(未做) / tried(没通过) / passed(通过但没满分,留着刷满分) → 置顶
     }
     return { todo: t, dueReview: d, done: f };
   }, [items, mastery]);
@@ -153,17 +153,17 @@ export default function JuniorReading() {
         {todo.length > 0 && <div className="grid gap-2">{todo.map(renderRow)}</div>}
         {items.length > 0 && todo.length === 0 && dueReview.length === 0 && (
           <div className="rounded-2xl border-2 border-emerald-400/40 bg-emerald-500/5 p-4 text-center text-sm font-bold text-emerald-700 dark:text-emerald-400">
-            <T>🎉 待办阅读都做完啦！已完成的在下方，可复习或挑战其他年级。</T>
+            <T>🎉 待办阅读都做完啦！已掌握的在下方，可复习或挑战其他年级。</T>
           </div>
         )}
       </div>
 
-      {/* 已完成(已通过+已掌握)折叠 → 沉到列表最底部 */}
+      {/* 已掌握(5⭐)折叠 → 沉到列表最底部;passed(通过没满分)仍留上半区待办 */}
       {done.length > 0 &&
       <section className="mt-6">
           <button onClick={() => setShowMastered((s) => !s)}
         className="flex w-full items-center justify-between rounded-2xl border-2 border-dashed border-emerald-400/50 bg-emerald-500/5 px-4 py-3 text-sm font-extrabold text-emerald-700 dark:text-emerald-400">
-            <span><T>✅ 已完成/已掌握</T> {done.length} <T>篇</T></span>
+            <span><T>✅ 已掌握</T> {done.length} <T>篇</T></span>
             <ChevronDown className={cn("size-4 transition", showMastered && "rotate-180")} />
           </button>
           {showMastered && <div className="mt-2 grid gap-2">{done.map(renderRow)}</div>}

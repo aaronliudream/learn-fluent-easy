@@ -38,6 +38,8 @@ export default function JuniorReadingPlay() {
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
+  // Hub 第5关入口(returnTo):做完显示极简"✅完成"中转卡,看到反馈后再回单元关;板块入口不用。
+  const [done, setDone] = useState(false);
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(
@@ -168,8 +170,10 @@ export default function JuniorReadingPlay() {
       toast.error(`本篇 ${pct}% · 可重做提升`);
     }
     celebrateScore(pct);
-    // 做完直接回:Hub入口回单元关,阅读板块回本年级总览(不再进结算诊断页)
-    nav(returnTo ?? (r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"));
+    // 写库已完成。Hub第5关入口:显示极简"✅完成"卡,用户点按钮再回单元关;
+    // 板块入口:直接回本年级总览(无中转)。
+    if (returnTo) { setDone(true); return; }
+    nav(r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading");
   };
 
   const retry = () => {
@@ -185,7 +189,25 @@ export default function JuniorReadingPlay() {
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
-  // 结算页(③诊断/④对话)已去掉:提交后在 handleSubmit 写库并直接 nav 回板块/单元,不再渲染诊断页。
+  // 结算页(③诊断表/推荐路径/对话)已去掉。Hub第5关入口保留极简"✅完成"中转卡(写库已在 handleSubmit 完成)。
+  if (done && returnTo) {
+    return (
+      <main className="grid min-h-screen place-items-center px-6 text-center">
+        <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
+          <div className="text-4xl">✅</div>
+          <p className="mt-3 text-lg font-extrabold text-foreground">
+            <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
+          </p>
+          <Link
+            to={returnTo}
+            className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
+          >
+            <T>返回单元</T> →
+          </Link>
+        </div>
+      </main>
+    );
+  }
 
   const currentRow = mastery[r.id];
   const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;

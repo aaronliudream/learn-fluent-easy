@@ -5,7 +5,7 @@ import { ArrowLeft, FileText, CheckCircle2, ChevronDown, Clock } from "lucide-re
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import StarRating from "@/components/StarRating";
-import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
+import { loadMastery, MasteryRow, statusOf, PASS_PCT } from "@/lib/masteryProgress";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { JuniorGradeFilter, juniorGradeParams, type JuniorGradeKey } from "@/components/junior/JuniorGradeFilter";
 
@@ -53,16 +53,16 @@ export default function JuniorReading() {
     loadMastery("junior_reading").then(setMastery);
   }, [grade]);
 
-  // 三组：活跃/复习/已掌握
-  const { active, dueReview, mastered } = useMemo(() => {
-    const a: R[] = [],d: R[] = [],m: R[] = [];
+  // 分组(决定上下顺序):待办(未做+做过未通过) 置顶 / 待复习 / 已完成(已通过+已掌握) 沉底。
+  const { todo, dueReview, done } = useMemo(() => {
+    const t: R[] = [],d: R[] = [],f: R[] = [];
     for (const r of items) {
-      const row = mastery[r.id];
-      if (row && row.stars >= 5 && !needsReview(row)) m.push(r);else
-      if (needsReview(row)) d.push(r);else
-      a.push(r);
+      const st = statusOf(mastery[r.id]);
+      if (st === "review_due") d.push(r);
+      else if (st === "passed" || st === "mastered") f.push(r); // 已通过/已掌握 → 沉底
+      else t.push(r); // new(未做) / tried(做过没通过) → 置顶
     }
-    return { active: a, dueReview: d, mastered: m };
+    return { todo: t, dueReview: d, done: f };
   }, [items, mastery]);
 
   const totalPassed = items.filter((r) => {const row = mastery[r.id];return row && row.best_pct >= PASS_PCT;}).length;
@@ -150,23 +150,23 @@ export default function JuniorReading() {
             <span className="text-[11px] text-muted-foreground tabular-nums">{totalPassed}/{items.length} <T>已通过</T></span>
           </div>
         )}
-        {active.length > 0 && <div className="grid gap-2">{active.map(renderRow)}</div>}
-        {items.length > 0 && active.length === 0 && dueReview.length === 0 && (
+        {todo.length > 0 && <div className="grid gap-2">{todo.map(renderRow)}</div>}
+        {items.length > 0 && todo.length === 0 && dueReview.length === 0 && (
           <div className="rounded-2xl border-2 border-emerald-400/40 bg-emerald-500/5 p-4 text-center text-sm font-bold text-emerald-700 dark:text-emerald-400">
-            <T>🎉 本年级的阅读都已完美掌握！可在下方复习或挑战其他年级。</T>
+            <T>🎉 待办阅读都做完啦！已完成的在下方，可复习或挑战其他年级。</T>
           </div>
         )}
       </div>
 
-      {/* 已掌握折叠 */}
-      {mastered.length > 0 &&
+      {/* 已完成(已通过+已掌握)折叠 → 沉到列表最底部 */}
+      {done.length > 0 &&
       <section className="mt-6">
           <button onClick={() => setShowMastered((s) => !s)}
         className="flex w-full items-center justify-between rounded-2xl border-2 border-dashed border-emerald-400/50 bg-emerald-500/5 px-4 py-3 text-sm font-extrabold text-emerald-700 dark:text-emerald-400">
-            <span><T>✅ 已完美掌握</T> {mastered.length} <T>篇</T></span>
+            <span><T>✅ 已完成/已掌握</T> {done.length} <T>篇</T></span>
             <ChevronDown className={cn("size-4 transition", showMastered && "rotate-180")} />
           </button>
-          {showMastered && <div className="mt-2 grid gap-2">{mastered.map(renderRow)}</div>}
+          {showMastered && <div className="mt-2 grid gap-2">{done.map(renderRow)}</div>}
         </section>
       }
 

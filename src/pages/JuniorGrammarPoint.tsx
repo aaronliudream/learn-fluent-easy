@@ -28,6 +28,16 @@ import {
   type Streak } from
 "@/lib/challengeMode";
 
+// Fisher-Yates 洗牌(不改原数组)— 语法板块普通模式随机抽题,新旧题等概率,不依赖 sort_order。
+function shuffle<T>(arr: T[]): T[] {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 /**
  * Junior grammar point — multi-stage data-driven learning flow.
  *
@@ -112,15 +122,15 @@ export default function JuniorGrammarPoint() {
     if (!id) return;
     (async () => {
       setLoading(true);
-      // 测试模式 (?quick=1) 限定金标准题库 (sort_order 9000-9099, 12 题, 五种题型齐全)。
-      // 普通模式按 sort_order 升序取前 sessionSize 题（兼容旧题库）。
+      // 测试模式 (?quick=1) 限定金标准题库 (sort_order 9000-9099, 12 题, 五种题型齐全,保持原样)。
+      // 普通模式只抽 question_type='mcq'(与单元第4关对齐,板块 UI 是选择题形态),整池随机洗牌取题。
       const baseQ = supabase.
         from("junior_grammar_questions").
         select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading").
         eq("point_id", id);
       const scopedQ = isQuick
         ? baseQ.gte("sort_order", 9000).lte("sort_order", 9099).order("sort_order")
-        : baseQ.order("sort_order");
+        : baseQ.eq("question_type", "mcq");
       const [a, b] = await Promise.all([
       supabase.
       from("junior_grammar_points").
@@ -130,10 +140,12 @@ export default function JuniorGrammarPoint() {
       scopedQ]
       );
       setPt(a.data as Pt);
-      // 测试模式抽 12 题（全套金标准）；其它模式遵守 sessionSize 上限
+      // 测试模式抽 12 题(全套金标准,按 sort_order 固定顺序);
+      // 普通/挑战模式从整池随机洗牌取 sessionSize 题,新旧题等概率,不再排在末尾抽不到。
       const allQs = (b.data ?? []) as GrammarQuestion[];
       const cap = isQuick ? 12 : sessionSize;
-      setQs(allQs.slice(0, cap));
+      const picked = isQuick ? allQs.slice(0, cap) : shuffle(allQs).slice(0, cap);
+      setQs(picked);
       setLoading(false);
     })();
   }, [id, sessionSize, isQuick]);

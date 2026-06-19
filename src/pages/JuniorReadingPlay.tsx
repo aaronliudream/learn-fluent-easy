@@ -14,15 +14,6 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
-import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
-import {
-  DiagnosisTable,
-  MistakeBookCallout,
-  NextStepCards,
-  inferTrap,
-  buildNextStepsFromResult,
-} from "@/components/exam/DiagnosisExtras";
-import { Sparkles, Eye, ArrowLeft as BackIcon } from "lucide-react";
 
 type Q = {q: string;options: string[];answer: string;explanation?: string;};
 type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
@@ -47,9 +38,6 @@ export default function JuniorReadingPlay() {
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
-  // 流程阶段：测试 → 诊断 → 对话
-  const [phase, setPhase] = useState<"test" | "diagnosis" | "dialogue">("test");
-  const [tutorPrefill, setTutorPrefill] = useState<string>("");
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(
@@ -161,28 +149,27 @@ export default function JuniorReadingPlay() {
   const handleSubmit = async () => {
     if (!r) return;
     if (!allAnswered) {toast.error("请先回答所有题目");return;}
+    if (!timeOk) {toast.warning(`还需阅读 ${minSec - elapsed} 秒`);return;} // 时长不足:不提交、不跳转
     setSubmitted(true);
-    setPhase("diagnosis");
     const pct = Math.round(correctCount / r.questions.length * 100);
-    if (timeOk) {
-      // 写入完成 + 掌握度
-      if (userId) {
-        await supabase.from("junior_reading_completions").
-        upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
-        const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
-        if (updated) setMastery((m) => ({ ...m, [r.id]: updated }));
-      }
-      if (pct === 100) {
-        await awardForBlock("junior_reading");
-      } else if (pct >= PASS_PCT) {
-        toast(`✅ 通过 · 100% 才算完美掌握`);
-      } else {
-        toast.error(`只有 ${pct}%，需 ≥${PASS_PCT}% 才能解锁下一篇`);
-      }
-      celebrateScore(pct);
-    } else {
-      toast.warning(`还需阅读 ${minSec - elapsed} 秒`);
+    // 结算页(③诊断/④对话)已去掉,但写库照常:完成+掌握度+复习排程经 recordMastery/completions 写入,
+    // 逐题错题在 pick() 已写(junior_reading_attempts + recordUnifiedAttempt)。板块靠这些统计进度/排序。
+    if (userId) {
+      await supabase.from("junior_reading_completions").
+      upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
+      const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
+      if (updated) setMastery((m) => ({ ...m, [r.id]: updated }));
     }
+    if (pct === 100) {
+      await awardForBlock("junior_reading");
+    } else if (pct >= PASS_PCT) {
+      toast(`✅ 通过 ${pct}% · 100% 才算完美掌握`);
+    } else {
+      toast.error(`本篇 ${pct}% · 可重做提升`);
+    }
+    celebrateScore(pct);
+    // 做完直接回:Hub入口回单元关,阅读板块回本年级总览(不再进结算诊断页)
+    nav(returnTo ?? (r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"));
   };
 
   const retry = () => {
@@ -198,141 +185,7 @@ export default function JuniorReadingPlay() {
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
-  // === ③ 诊断 / ④ 对话 阶段（提交后才进入） ===
-  if (phase === "diagnosis" || phase === "dialogue") {
-    // 从 Hub 单元关进入(returnTo):做完→极简完成态,不进诊断/推荐/对话页。
-    if (returnTo) {
-      return (
-        <main className="grid min-h-screen place-items-center px-6 text-center">
-          <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
-            <div className="text-4xl">✅</div>
-            <p className="mt-3 text-lg font-extrabold text-foreground">
-              <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
-            </p>
-            <Link
-              to={returnTo}
-              className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
-            >
-              <T>返回单元</T> →
-            </Link>
-          </div>
-        </main>
-      );
-    }
-    const wrongIdx: number[] = r.questions
-      .map((q, i) => (picks[i] !== q.answer ? i + 1 : null))
-      .filter((x): x is number => x !== null);
-    const snapshot = {
-      title: r.title,
-      passage_excerpt: r.body.slice(0, 1800),
-      vocab_notes: r.vocab_notes?.slice(0, 12),
-      questions: r.questions.map((q, i) => ({
-        index: i + 1,
-        stem: q.q,
-        options: q.options,
-        correct_answer: q.answer,
-        user_answer: picks[i],
-        is_correct: picks[i] === q.answer,
-        explanation: q.explanation,
-      })),
-    };
-    const starters = [
-      wrongIdx[0]
-        ? `第 ${wrongIdx[0]} 题我选了 ${picks[wrongIdx[0] - 1]}，为什么不对？`
-        : "帮我梳理一下这篇文章讲了什么",
-      "文章里哪句话是关键句？带我看看",
-      "下次遇到同类题，我应该怎么避坑？",
-    ];
-
-    return (
-      <ExamPaper className="pb-32">
-        <ExamContainer max="5xl">
-          <div className="mb-6 flex items-center justify-between gap-3 pb-4 border-b exam-divider">
-            <button onClick={() => setPhase("test")} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:text-[hsl(var(--exam-ink))]">
-              <BackIcon className="size-4" /> <T>返回题目</T>
-            </button>
-            <div className="exam-eyebrow">
-              {phase === "diagnosis" ? "③ 诊断" : "④ 对话"} · {correctCount}/{r.questions.length}
-            </div>
-          </div>
-
-          {phase === "diagnosis" ? (
-            <>
-              <header className="mb-6">
-                <div className="exam-eyebrow mb-2"><T>初中英语 · 阅读诊断</T></div>
-                <h1 className="exam-display text-[28px] leading-tight">{r.title}</h1>
-              </header>
-
-              <div className="mb-6">
-                <DiagnosisTable
-                  rows={r.questions.map((q, i) => ({
-                    index: i + 1,
-                    point: "阅读理解",
-                    isCorrect: picks[i] === q.answer,
-                    trap: picks[i] === q.answer ? null : inferTrap("reading"),
-                    cumulativeMastery: mastery[r.id]?.best_pct ?? null,
-                  }))}
-                />
-              </div>
-
-              <div className="mb-6">
-                <MistakeBookCallout
-                  mistakeCount={wrongIdx.length}
-                  onAskAI={() => {
-                    if (wrongIdx[0]) {
-                      setTutorPrefill(`我不明白第 ${wrongIdx[0]} 题为什么不选我那个，能带我看看吗？`);
-                    }
-                    setPhase("dialogue");
-                  }}
-                />
-              </div>
-
-              <div className="mb-8">
-                <NextStepCards
-                  cards={buildNextStepsFromResult({
-                    weakestPointKey: "reading",
-                    weakestPointCn: wrongIdx.length > 0 ? "细节定位" : "阅读理解",
-                    topicLabel: r.title,
-                    onWeakClick: () => nav(returnTo ?? "/junior/reading"),
-                    onMockClick: () => nav(returnTo ?? "/junior/reading"),
-                    onMicroLessonClick: () => nav(returnTo ?? "/junior/reading"),
-                  })}
-                />
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
-                <button
-                  className="exam-btn exam-btn-primary flex-1 h-12"
-                  onClick={() => { setTutorPrefill(""); setPhase("dialogue"); }}
-                >
-                  <Sparkles className="size-4" />
-                  <T>进入 ④ 对话 · 和译老师聊聊</T>
-                </button>
-                <button
-                  className="exam-btn exam-btn-ghost flex-1 h-12"
-                  onClick={() => setPhase("test")}
-                >
-                  <Eye className="size-4" />
-                  <T>回到题目看答案</T>
-                </button>
-              </div>
-            </>
-          ) : (
-            <InlineTutorChat
-              sessionKey={`junior-reading:${r.id}`}
-              context="junior_reading"
-              questionRef={r.id}
-              questionSnapshot={snapshot}
-              title="译老师"
-              subtitle="苏格拉底式 AI 主教 · 不会直接给答案，会引导你回原文找证据"
-              starters={starters}
-              prefill={tutorPrefill}
-            />
-          )}
-        </ExamContainer>
-      </ExamPaper>
-    );
-  }
+  // 结算页(③诊断/④对话)已去掉:提交后在 handleSubmit 写库并直接 nav 回板块/单元,不再渲染诊断页。
 
   const currentRow = mastery[r.id];
   const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;

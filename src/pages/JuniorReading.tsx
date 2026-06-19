@@ -77,6 +77,7 @@ export default function JuniorReading() {
       st === "review_due" ? "border-amber-400/60 bg-amber-500/5 hover:-translate-y-0.5" :
       "border-border bg-card hover:-translate-y-0.5 hover:border-emerald-300")}>
         <div className={cn("grid size-11 place-items-center rounded-xl text-white",
+        !row ? "bg-muted-foreground/30" :
         st === "mastered" ? "bg-gradient-to-br from-emerald-500 to-emerald-600" :
         st === "review_due" ? "bg-gradient-to-br from-amber-500 to-orange-500" :
         st === "passed" ? "bg-gradient-to-br from-sky-500 to-blue-500" :
@@ -93,9 +94,19 @@ export default function JuniorReading() {
           <div className="text-[11px] text-muted-foreground">
             G{r.grade} · {r.topic ?? "general"} · {r.word_count ?? "?"} <T>词 · 难度</T> {r.difficulty}
             {row && <span className="ml-1 font-bold"><T>· 最佳</T> {row.best_pct}%</span>}
+            {!row && <span className="ml-1"><T>· 未做</T></span>}
             {st === "review_due" && <span className="ml-1 text-amber-600 font-bold"><T>· 该复习了</T></span>}
             {st === "mastered" && <span className="ml-1 text-emerald-600 font-bold"><T>· 完美掌握 ⭐⭐⭐⭐⭐</T></span>}
           </div>
+          {row && st !== "mastered" && (
+            <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted" aria-hidden>
+              <div
+                className={cn("h-full rounded-full transition-all",
+                st === "review_due" ? "bg-gradient-to-r from-amber-400 to-orange-500" :
+                "bg-gradient-to-r from-sky-400 to-emerald-400")}
+                style={{ width: `${Math.max(6, row.best_pct)}%` }} />
+            </div>
+          )}
         </div>
       </Link>);
 

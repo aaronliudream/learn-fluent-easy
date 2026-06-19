@@ -359,7 +359,6 @@ export default function JuniorReadingPlay() {
     <div className="relative">
       <article className="exam-card p-6 sm:p-8 relative">
         <div className="exam-eyebrow mb-2"><T>Passage 阅读材料</T></div>
-        <div className="exam-passage-title">{r.title}</div>
         <div className="exam-passage whitespace-pre-wrap">{r.body}</div>
       </article>
       {r.vocab_notes?.length > 0 && (

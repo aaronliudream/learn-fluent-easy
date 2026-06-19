@@ -1045,7 +1045,7 @@ function cleanStageTitle(t: string): string {
     .replace(/[（(][^)）]*[)）]/g, "")
     .replace(/阅读/g, "")
     .replace(/听力/g, "")
-    .replace(/\s+/g, "")
+    .replace(/\s+/g, " ")
     .replace(/^[·\-—、:：]+|[·\-—、:：]+$/g, "")
     .trim();
   return s || t;

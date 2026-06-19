@@ -193,19 +193,8 @@ export default function JuniorReadingPlay() {
     startRef.current = Date.now();
   };
 
-  // 检查当前篇是否被允许进入：上一篇 best_pct ≥ PASS_PCT
-  useEffect(() => {
-    if (!r || !list.length || !userId) return;
-    if (returnTo) return; // 从 Hub 单元关进入:本单元 3 篇自由进入,不套用专区"上一篇 80%"解锁
-    const idx = list.findIndex((x) => x.id === r.id);
-    if (idx <= 0) return;
-    const prev = list[idx - 1];
-    const prevRow = mastery[prev.id];
-    if (!prevRow || prevRow.best_pct < PASS_PCT) {
-      toast.error("请先完成上一篇并通过 80% 才能阅读本篇");
-      nav(`/junior/reading/${prev.id}`, { replace: true });
-    }
-  }, [r, list, userId, mastery, nav]);
+  // 阅读板块 = 本年级总览,任意篇自由进入,不再套用"上一篇 80% 才解锁"。
+  // 掌握度/best_pct 照常记录(pick/handleSubmit),跨入口(第5关)共享不变。
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
@@ -351,8 +340,7 @@ export default function JuniorReadingPlay() {
   const goNext = () => {
     if (returnTo) {nav(returnTo);return;} // 从 Hub 来:做完回单元关,不跨篇
     if (!nextItem) return;
-    if (!passed) {toast.error("本篇得分需 ≥80% 才能进入下一篇");return;}
-    nav(`/junior/reading/${nextItem.id}`);
+    nav(`/junior/reading/${nextItem.id}`); // 自由进入,不再要求本篇 ≥80%
   };
 
   const passage = (
@@ -423,7 +411,7 @@ export default function JuniorReadingPlay() {
     </div>
   );
 
-  const unlocked = passed;
+  const unlocked = true; // 阅读板块自由模式:下一篇始终可进入(掌握度照常记录)
 
   const progressStates = r.questions.map((q, i) => {
     const p = picks[i];
@@ -492,7 +480,7 @@ export default function JuniorReadingPlay() {
                   </div> :
 
               <div className="exam-feedback exam-feedback-wrong">
-                    <T>❌ 仅</T> {correctCount}/{r.questions.length}<T>，需 ≥</T>{Math.ceil(r.questions.length * PASS_PCT / 100)} <T>题正确才能解锁</T>
+                    <T>❌ 仅</T> {correctCount}/{r.questions.length}<T>，答对 ≥</T>{Math.ceil(r.questions.length * PASS_PCT / 100)} <T>题算通过 · 可重做提升</T>
                   </div>
               }
                 <div className="flex gap-2">

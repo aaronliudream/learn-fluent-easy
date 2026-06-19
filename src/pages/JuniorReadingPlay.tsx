@@ -77,6 +77,12 @@ export default function JuniorReadingPlay() {
 
   useEffect(() => {
     if (!id) return;
+    // 切换到新文章(含「下一篇」):重置答题/完成态,避免带入上一篇的选择或完成卡。
+    setDone(false);
+    setSubmitted(false);
+    setPicks({});
+    setStreak(0);
+    setAttempt(1);
     (async () => {
       const { data } = await supabase.from("junior_reading").select("id,title,body,word_count,grade,questions,vocab_notes").eq("id", id).maybeSingle();
       setR(data as any);
@@ -101,6 +107,15 @@ export default function JuniorReadingPlay() {
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
   }, []);
+
+  // 板块入口完成后:停留 10 秒自动返回列表(期间用户可手动点「返回列表/下一篇」)。Hub入口不自动返回。
+  useEffect(() => {
+    if (!done || returnTo) return;
+    const t = setTimeout(() => {
+      nav(r?.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading");
+    }, 10000);
+    return () => clearTimeout(t);
+  }, [done, returnTo, r, nav]);
 
   const elapsed = Math.floor((now - startRef.current) / 1000);
   const timeOk = elapsed >= minSec;
@@ -170,10 +185,9 @@ export default function JuniorReadingPlay() {
       toast.error(`本篇 ${pct}% · 可重做提升`);
     }
     celebrateScore(pct);
-    // 写库已完成。Hub第5关入口:显示极简"✅完成"卡,用户点按钮再回单元关;
-    // 板块入口:直接回本年级总览(无中转)。
-    if (returnTo) { setDone(true); return; }
-    nav(r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading");
+    // 写库已完成。两种入口都先停在完成卡,不立即跳转:
+    // 板块入口=完成卡含「返回列表/下一篇」+10秒自动返回;Hub第5关入口=极简卡含「返回单元」。
+    setDone(true);
   };
 
   const retry = () => {
@@ -184,26 +198,73 @@ export default function JuniorReadingPlay() {
     startRef.current = Date.now();
   };
 
+  // 完成卡「下一篇」:就地重置答题/完成态再跳到下一篇,避免闪现上一篇完成卡。
+  const goNextArticle = () => {
+    if (!nextItem) return;
+    setDone(false);
+    setSubmitted(false);
+    setPicks({});
+    setStreak(0);
+    setAttempt(1);
+    startRef.current = Date.now();
+    nav(`/junior/reading/${nextItem.id}`);
+  };
+
   // 阅读板块 = 本年级总览,任意篇自由进入,不再套用"上一篇 80% 才解锁"。
   // 掌握度/best_pct 照常记录(pick/handleSubmit),跨入口(第5关)共享不变。
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
-  // 结算页(③诊断表/推荐路径/对话)已去掉。Hub第5关入口保留极简"✅完成"中转卡(写库已在 handleSubmit 完成)。
-  if (done && returnTo) {
+  // 结算页(③诊断表/推荐路径/对话)已去掉。做完都先停在完成卡,不立即跳转(写库已在 handleSubmit 完成)。
+  if (done) {
+    const pct = Math.round((correctCount / r.questions.length) * 100);
+    // Hub第5关入口:极简"✅完成"卡 → 返回单元(不自动返回,等用户点)。
+    if (returnTo) {
+      return (
+        <main className="grid min-h-screen place-items-center px-6 text-center">
+          <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
+            <div className="text-4xl">{pct === 100 ? "🌟" : "✅"}</div>
+            <p className="mt-3 text-lg font-extrabold text-foreground">
+              <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
+            </p>
+            <Link
+              to={returnTo}
+              className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
+            >
+              <T>返回单元</T> →
+            </Link>
+          </div>
+        </main>
+      );
+    }
+    // 阅读板块入口:完成卡含「下一篇/返回列表」,10 秒后自动返回列表。
     return (
       <main className="grid min-h-screen place-items-center px-6 text-center">
         <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm dark:bg-card">
-          <div className="text-4xl">✅</div>
+          <div className="text-4xl">{pct === 100 ? "🌟" : "✅"}</div>
           <p className="mt-3 text-lg font-extrabold text-foreground">
             <T>完成！答对</T> {correctCount} / {r.questions.length} <T>题</T>
           </p>
-          <Link
-            to={returnTo}
-            className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-sm font-semibold text-white"
-          >
-            <T>返回单元</T> →
-          </Link>
+          <p className="mt-1 text-sm font-bold text-muted-foreground">
+            {pct}%{pct === 100 ? <T> · 完美掌握 ⭐</T> : null}
+          </p>
+          <div className="mt-6 flex flex-col gap-2">
+            {nextItem && (
+              <button
+                onClick={goNextArticle}
+                className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-emerald-500 py-3 text-sm font-semibold text-white"
+              >
+                <T>下一篇</T> →
+              </button>
+            )}
+            <Link
+              to={r.grade ? `/junior/reading?grade=${r.grade}` : "/junior/reading"}
+              className="inline-flex w-full items-center justify-center rounded-xl border border-border py-3 text-sm font-semibold text-foreground"
+            >
+              <T>返回阅读列表</T>
+            </Link>
+          </div>
+          <p className="mt-4 text-[11px] text-muted-foreground"><T>10 秒后自动返回列表</T></p>
         </div>
       </main>
     );

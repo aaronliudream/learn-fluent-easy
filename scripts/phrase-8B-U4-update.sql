@@ -62,8 +62,9 @@ UPDATE public.junior_vocab SET phrase_en = 'one square kilometre' WHERE word_id 
 UPDATE public.junior_vocab SET phrase_en = 'above sea level' WHERE word_id = 'jr-8B-U4-7002';
 UPDATE public.junior_vocab SET phrase_en = 'at all costs' WHERE word_id = 'jr-8B-U4-7003';
 UPDATE public.junior_vocab SET phrase_en = 'one cubic metre' WHERE word_id = 'jr-8B-U4-7004';
+UPDATE public.junior_vocab SET phrase_en = 'the dinosaurs died out' WHERE word_id = 'jr-8B-U4-7005';
 UPDATE public.junior_vocab SET phrase_en = 'a coral reef' WHERE word_id = 'jr-8B-U4-7006';
 
--- 校验:本单元已回填条数(应 = 62)
+-- 校验:本单元已回填条数(应 = 63)
 SELECT count(*) FILTER (WHERE phrase_en IS NOT NULL) AS filled, count(*) AS total
 FROM public.junior_vocab WHERE grade = 8 AND volume = '8B' AND unit = 'U4';

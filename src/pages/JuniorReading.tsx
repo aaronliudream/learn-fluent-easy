@@ -53,14 +53,15 @@ export default function JuniorReading() {
     loadMastery("junior_reading").then(setMastery);
   }, [grade]);
 
-  // 分组(决定上下顺序):待办(未做+没通过+通过没满分) 置顶 / 待复习 / 已掌握(5⭐) 沉底。
+  // 分组(决定上下顺序):待办(未做+没全对) 置顶 / 待复习 / 已掌握(一次全对100%) 沉底。
+  // ⚠️ 阅读掌握标准 = best_pct>=100(一次全对即掌握),不用 star 阈值(语法/听力另有判定,别套用)。
   const { todo, dueReview, done } = useMemo(() => {
     const t: R[] = [],d: R[] = [],f: R[] = [];
     for (const r of items) {
-      const st = statusOf(mastery[r.id]);
-      if (st === "review_due") d.push(r);
-      else if (st === "mastered") f.push(r); // 只 5⭐ 真正掌握 → 沉底
-      else t.push(r); // new(未做) / tried(没通过) / passed(通过但没满分,留着刷满分) → 置顶
+      const row = mastery[r.id];
+      if ((row?.best_pct ?? 0) >= 100) f.push(r);         // 一次全对100% → 已掌握沉底
+      else if (statusOf(row) === "review_due") d.push(r);  // 待复习 → 顶部
+      else t.push(r);                                      // 未做 / 做了没全对 → 待办置顶(继续刷满分)
     }
     return { todo: t, dueReview: d, done: f };
   }, [items, mastery]);
@@ -70,20 +71,21 @@ export default function JuniorReading() {
   const renderRow = (r: R) => {
     const row = mastery[r.id];
     const st = statusOf(row);
+    const mastered = (row?.best_pct ?? 0) >= 100; // 阅读掌握=一次全对100%(不看 star)
     return (
       <Link key={r.id} to={`/junior/reading/${r.id}`}
       className={cn("flex items-center gap-3 rounded-2xl border-2 p-3 transition",
-      st === "mastered" ? "border-emerald-400/40 bg-emerald-500/5 hover:-translate-y-0.5" :
+      mastered ? "border-emerald-400/40 bg-emerald-500/5 hover:-translate-y-0.5" :
       st === "review_due" ? "border-amber-400/60 bg-amber-500/5 hover:-translate-y-0.5" :
       "border-border bg-card hover:-translate-y-0.5 hover:border-emerald-300")}>
         <div className={cn("grid size-11 place-items-center rounded-xl text-white",
         !row ? "bg-muted-foreground/30" :
-        st === "mastered" ? "bg-gradient-to-br from-emerald-500 to-emerald-600" :
+        mastered ? "bg-gradient-to-br from-emerald-500 to-emerald-600" :
         st === "review_due" ? "bg-gradient-to-br from-amber-500 to-orange-500" :
         st === "passed" ? "bg-gradient-to-br from-sky-500 to-blue-500" :
         st === "tried" ? "bg-gradient-to-br from-rose-500 to-pink-500" :
         "bg-gradient-to-br from-emerald-400 to-teal-500")}>
-          {st === "mastered" ? <CheckCircle2 className="size-5" /> :
+          {mastered ? <CheckCircle2 className="size-5" /> :
           st === "review_due" ? <Clock className="size-5" /> : <FileText className="size-5" />}
         </div>
         <div className="flex-1 min-w-0">
@@ -95,10 +97,10 @@ export default function JuniorReading() {
             G{r.grade} · {r.topic ?? "general"} · {r.word_count ?? "?"} <T>词 · 难度</T> {r.difficulty}
             {row && <span className="ml-1 font-bold"><T>· 最佳</T> {row.best_pct}%</span>}
             {!row && <span className="ml-1"><T>· 未做</T></span>}
-            {st === "review_due" && <span className="ml-1 text-amber-600 font-bold"><T>· 该复习了</T></span>}
-            {st === "mastered" && <span className="ml-1 text-emerald-600 font-bold"><T>· 完美掌握 ⭐⭐⭐⭐⭐</T></span>}
+            {!mastered && st === "review_due" && <span className="ml-1 text-amber-600 font-bold"><T>· 该复习了</T></span>}
+            {mastered && <span className="ml-1 text-emerald-600 font-bold"><T>· 已掌握 💯</T></span>}
           </div>
-          {row && st !== "mastered" && (
+          {row && !mastered && (
             <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted" aria-hidden>
               <div
                 className={cn("h-full rounded-full transition-all",
@@ -158,7 +160,7 @@ export default function JuniorReading() {
         )}
       </div>
 
-      {/* 已掌握(5⭐)折叠 → 沉到列表最底部;passed(通过没满分)仍留上半区待办 */}
+      {/* 已掌握(一次全对100%)折叠 → 沉到列表最底部;没全对(含80-99%)仍留上半区刷满分 */}
       {done.length > 0 &&
       <section className="mt-6">
           <button onClick={() => setShowMastered((s) => !s)}

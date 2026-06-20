@@ -903,8 +903,8 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     if (correct) awardCoins(2, "junior_vocab_context").catch(() => {}); else notifyWrong();
     if (wid) void recordJuniorWordMastery({ wordId: wid, grade: gradeNum, kind: "context", isCorrect: correct });
-    // 不立即跳:停留看反馈+释义,5 秒后自动进入(或点「下一个」)
-    advanceTimer.current = setTimeout(advance, 5000);
+    // 不立即跳:停留看反馈+释义,6 秒后自动进入(或点「下一个」手动进入)
+    advanceTimer.current = setTimeout(advance, 6000);
   };
 
   if (masteryLoading || questions === null || !seeded) {

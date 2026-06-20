@@ -192,21 +192,67 @@ function StageShell({
   );
 }
 
+// 核心词汇(第1关):优先读 junior_vocab DB 全单元词(grade+volume+unit),与听音辨词同源;
+// 无 DB 词(grade7/Starter 等 book 不在表内)→ 回退 JSON unit.vocabulary(含 chunk 例句)。
 function VocabStage({
-  vocabulary,
+  unit,
   grade,
   onFinish,
 }: {
-  vocabulary: VocabItem[];
+  unit: UnitDef;
   grade: number;
   onFinish: () => void;
 }) {
+  const [vocabulary, setVocabulary] = useState<VocabItem[] | null>(null);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
   const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
 
   useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase
+        .from("junior_vocab")
+        .select("word,meaning_cn,phrase_en,example_en,example_cn")
+        .eq("grade", grade)
+        .eq("volume", unit.book)
+        .eq("unit", unit.unitKey)
+        .order("freq_rank", { ascending: true, nullsFirst: false });
+      if (cancelled) return;
+      const rows = (data ?? []) as Array<{
+        word: string;
+        meaning_cn: string | null;
+        phrase_en: string | null;
+        example_en: string | null;
+        example_cn: string | null;
+      }>;
+      const valid = rows.filter((r) => r.word && r.meaning_cn);
+      if (valid.length > 0) {
+        setVocabulary(
+          valid.map((r) => ({
+            en: r.word.trim(),
+            cn: r.meaning_cn as string,
+            // 例句优先(en+cn 成对);无例句则用短语 phrase_en(无中文,cn 留空)
+            chunks:
+              r.example_en && r.example_cn
+                ? [{ en: r.example_en, cn: r.example_cn }]
+                : r.phrase_en
+                ? [{ en: r.phrase_en.trim(), cn: "" }]
+                : undefined,
+          })),
+        );
+      } else {
+        setVocabulary(unit.vocabulary); // 回退:无 DB 词 → JSON
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id, unit.book, unit.unitKey, grade]);
+
+  useEffect(() => {
+    if (!vocabulary) return;
     prefetchTTSBatchKid(
       vocabulary.map((v) => v.en),
       { grade, speed: 0.85 },
@@ -214,6 +260,7 @@ function VocabStage({
   }, [grade, vocabulary]);
 
   const toggleCard = (i: number) => {
+    if (!vocabulary) return;
     const v = vocabulary[i];
     const isFlipped = flipped.has(i);
     if (!isFlipped) {
@@ -228,6 +275,9 @@ function VocabStage({
       });
     }
   };
+
+  if (vocabulary === null)
+    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
 
   const allViewed = viewed.size === vocabulary.length;
 
@@ -1883,7 +1933,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   const stageBody = (() => {
     switch (stage.type) {
       case "vocab":
-        return <VocabStage vocabulary={unit.vocabulary} grade={grade} onFinish={handleFinish} />;
+        return <VocabStage unit={unit} grade={grade} onFinish={handleFinish} />;
       case "listenWord":
         // 数据源:junior_vocab 全单元词(分组12);无 DB 词回退 JSON。选对加星+写词汇掌握度(listen)。
         return (

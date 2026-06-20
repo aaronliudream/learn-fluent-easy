@@ -3433,11 +3433,8 @@
               }
             ],
             "grammarTitle": "一般现在时(do)+ 名词所有格 's",
-            "grammarCode": "g7-t05",
-            "grammarCodes": [
-              "g7-t05",
-              "g7-t23"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7u2.01", "g7u2.02", "g7u2.03"],
             "grammarQuiz": [
               {
                 "q": "My father ___ to work by bike every day.",
@@ -4422,7 +4419,8 @@
               }
             ],
             "grammarTitle": "there be + 方位介词",
-            "grammarCode": "g7-t06",
+            "grammarCode": null,
+            "grammarCodes": ["g7u3.01", "g7u3.02", "g7u3.03"],
             "grammarQuiz": [
               {
                 "q": "There ___ a library in our school.",

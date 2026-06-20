@@ -1,0 +1,20 @@
+[
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "This is ____ cat. It likes fish very much.", "options": ["Kate","Kate'","Kate's","Kates"], "answer_index": 2, "answer_text": "Kate's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "Those are ____ desks. They are new.", "options": ["Peter and Emma's","Peter and Emmas","Peter's and Emma's","Peter and Emma"], "answer_index": 0, "answer_text": "Peter and Emma's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "Are these ____ fishing rods?", "options": ["grandpa","grandpas'","grandpa's","grandpas"], "answer_index": 2, "answer_text": "grandpa's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "This is my ____ piano. She plays it well.", "options": ["mothers'","mother's","mother","mothers"], "answer_index": 1, "answer_text": "mother's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "Is this ____ pink hat?", "options": ["Lily's","Lilys'","Lilys","Lily"], "answer_index": 0, "answer_text": "Lily's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "①名词所有格 ('s)", "stem": "The red ping pong bat is my ____.", "options": ["grandpa","grandpas","grandpa'","grandpa's"], "answer_index": 3, "answer_text": "grandpa's", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "My dad ____ tennis every week.", "options": ["playes","plays","play","playing"], "answer_index": 1, "answer_text": "plays", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "She ____ me a story at night.", "options": ["reades","reads","read","reading"], "answer_index": 1, "answer_text": "reads", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "My grandpa ____ sport.", "options": ["lovees","loving","loves","love"], "answer_index": 2, "answer_text": "loves", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "He ____ a lot of time fishing.", "options": ["spending","spends","spendes","spend"], "answer_index": 1, "answer_text": "spends", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "Sam ____ chess very much.", "options": ["likes","like","liking","likees"], "answer_index": 0, "answer_text": "likes", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "②动词第三人称单数 (-s/-es)", "stem": "My mother ____ the piano very well.", "options": ["plays","play","playing","playes"], "answer_index": 0, "answer_text": "plays", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "____ you often play ping pong together?", "options": ["Are","Is","Does","Do"], "answer_index": 3, "answer_text": "Do", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "____ your father play any sport?", "options": ["Does","Do","Is","Are"], "answer_index": 0, "answer_text": "Does", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "He ____ play the piano.", "options": ["aren't","isn't","doesn't","don't"], "answer_index": 2, "answer_text": "doesn't", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "____ she read stories at night?", "options": ["Do","Does","Are","Is"], "answer_index": 1, "answer_text": "Does", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "No, he ____ play tennis with me.", "options": ["don't","isn't","aren't","doesn't"], "answer_index": 3, "answer_text": "doesn't", "explanation": "" },
+  { "volume": "7A", "unit": "U2", "point": "③一般现在时疑问句与否定句 (do/does)", "stem": "____ they have a dog?", "options": ["Is","Does","Do","Are"], "answer_index": 2, "answer_text": "Do", "explanation": "" }
+]

@@ -6104,7 +6104,8 @@
               }
             ],
             "grammarTitle": "情态动词 can(能力)",
-            "grammarCode": "g7-t11",
+            "grammarCode": null,
+            "grammarCodes": ["g7u5.01"],
             "grammarQuiz": [
               {
                 "q": "I ___ play the guitar, but I can't sing.",
@@ -7032,10 +7033,8 @@
               }
             ],
             "grammarTitle": "时间疑问 + 一般现在时表习惯",
-            "grammarCode": "",
-            "grammarCodes": [
-              "g7-t21"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7u6.01", "g7u6.02"],
             "grammarQuiz": [],
             "reading": null,
             "writing": {

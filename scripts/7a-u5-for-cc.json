@@ -1,0 +1,12 @@
+[
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "I ____ play the guitar. (能)", "options": ["am","can","can't","do"], "answer_index": 1, "answer_text": "can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "She ____ play the violin well. (能)", "options": ["can","is","can't","does"], "answer_index": 0, "answer_text": "can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "I ____ cook, but I love great food. (不能)", "options": ["can't","don't","am not","can"], "answer_index": 0, "answer_text": "can't", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "He ____ play the drums. (能)", "options": ["does","can't","is","can"], "answer_index": 3, "answer_text": "can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "I can play the guitar, but I ____ play any other instruments. (不能)", "options": ["can","don't","am not","can't"], "answer_index": 3, "answer_text": "can't", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "____ you play ping pong? — Yes, I can.", "options": ["Can","Is","Do","Are"], "answer_index": 0, "answer_text": "Can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "— Can she play the violin? — No, she ____.", "options": ["doesn't","isn't","can't","can"], "answer_index": 2, "answer_text": "can't", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "____ they play chess? — Yes, they can.", "options": ["Is","Do","Can","Are"], "answer_index": 2, "answer_text": "Can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "— Can you sing well? — Yes, I ____.", "options": ["am","can't","do","can"], "answer_index": 3, "answer_text": "can", "explanation": "" },
+  { "volume": "7A", "unit": "U5", "point": "情态动词 can 的用法 (肯定/否定/疑问)", "stem": "After 'can', we use the ____ form of the verb.", "options": ["base (原形)","past","-s form","-ing form"], "answer_index": 0, "answer_text": "base (原形)", "explanation": "" }
+]

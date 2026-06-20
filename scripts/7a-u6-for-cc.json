@@ -1,0 +1,14 @@
+[
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ do you usually get up? — At 6:30 a.m.", "options": ["Where","What","When","What time"], "answer_index": 3, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ does Tom usually go to bed? — At 9:30 p.m.", "options": ["When","What","Who","What time"], "answer_index": 3, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ do you have lunch? — At 12:00.", "options": ["What time","When","What","Where"], "answer_index": 0, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ is your maths class? — It's at 1:45 p.m.", "options": ["Who","When","What time","What"], "answer_index": 2, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ does school begin? — At 9:00.", "options": ["What","When","What time","Where"], "answer_index": 2, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "①What time 引导的特殊疑问句 (问具体时刻)", "stem": "— ____ do you walk to school? — At 7:40.", "options": ["What","When","Who","What time"], "answer_index": 3, "answer_text": "What time", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ do you do your homework? — In the evening.", "options": ["Where","What","What time","When"], "answer_index": 3, "answer_text": "When", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ do you visit your grandparents? — On weekends.", "options": ["Who","What","What time","When"], "answer_index": 3, "answer_text": "When", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ is the school trip? — It's next Monday.", "options": ["Where","When","What time","What"], "answer_index": 1, "answer_text": "When", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ does she exercise? — In the morning.", "options": ["When","Who","What","What time"], "answer_index": 0, "answer_text": "When", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ do they go to the music club? — On Monday afternoons.", "options": ["What time","What","Where","When"], "answer_index": 3, "answer_text": "When", "explanation": "" },
+  { "volume": "7A", "unit": "U6", "point": "②When 引导的特殊疑问句 (问哪天/什么时候)", "stem": "— ____ do you read with your parents? — After dinner.", "options": ["Who","When","What time","What"], "answer_index": 1, "answer_text": "When", "explanation": "" }
+]

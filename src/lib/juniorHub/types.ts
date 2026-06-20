@@ -111,6 +111,8 @@ export type UnitState = {
   stars: number;
   firstCompleteDate: string | null;
   lastAiTestAtProgress: number;
+  /** 核心词汇关已看到的最高组号(0-based)。纯浏览进度,不算掌握度;随 state 云同步。 */
+  vocabGroup?: number;
 };
 
 export type Mistake = QuizQuestion & {

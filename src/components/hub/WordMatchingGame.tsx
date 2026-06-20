@@ -30,13 +30,16 @@ export type WordMatchingGameProps = {
   vocabulary: WordMatchVocab[];
   /** Primary grades 1–6 use speakKid via hubSpeak. */
   grade?: number;
-  onMatch?: () => void;
+  /** 配对成功时回调,带该词英文(=pairId),供调用方记掌握度。 */
+  onMatch?: (en: string) => void;
   onFinish: () => void;
   onProgressChange?: (percent: number) => void;
   finishLabel?: string;
   finishDisabledLabel?: string;
   /** 若提供,则把词表按每组 batchSize 个分批配对(做完一组询问是否继续)。不提供=不分组(原行为)。 */
   batchSize?: number;
+  /** true=不整体打乱,保持传入顺序切组(用于"未掌握优先"已排好序的词表)。组内卡片仍乱序。 */
+  preserveOrder?: boolean;
 };
 
 export default function WordMatchingGame({
@@ -48,13 +51,14 @@ export default function WordMatchingGame({
   finishLabel = "✓ 太棒了！进入下一关 →",
   finishDisabledLabel = "完成所有配对再继续",
   batchSize,
+  preserveOrder,
 }: WordMatchingGameProps) {
   const totalPairs = vocabulary.length;
 
-  // 先整体打乱,再按 batchSize 切组(不传则单组=原行为)
+  // preserveOrder=true 保持传入顺序(未掌握优先);否则整体打乱。再按 batchSize 切组(不传=单组)。
   const batches = useMemo<WordMatchVocab[][]>(
-    () => chunk(shuffleArray(vocabulary), batchSize ?? vocabulary.length),
-    [vocabulary, batchSize],
+    () => chunk(preserveOrder ? vocabulary : shuffleArray(vocabulary), batchSize ?? vocabulary.length),
+    [vocabulary, batchSize, preserveOrder],
   );
 
   const [batchIdx, setBatchIdx] = useState(0);
@@ -129,7 +133,7 @@ export default function WordMatchingGame({
 
     if (picked.pairId === card.pairId) {
       setMatchedPairs((prev) => new Set(prev).add(card.pairId));
-      onMatch?.();
+      onMatch?.(card.pairId);
       setCombo((c) => {
         const next = c + 1;
         setBestCombo((b) => Math.max(b, next));

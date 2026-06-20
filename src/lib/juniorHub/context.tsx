@@ -154,9 +154,26 @@ export function JuniorHubProvider({ grade, children }: { grade: JuniorHubGrade; 
     [grade],
   );
 
+  // 核心词汇关:记"看到第几组"(取最大值,只进不退)。纯浏览进度,不写 junior_word_mastery;随 state 云同步。
+  const setVocabGroup = useCallback(
+    (unitId: string, groupIdx: number) => {
+      setState((prev) => {
+        const us = getUnitState(prev, unitId);
+        if ((us.vocabGroup ?? 0) >= groupIdx) return prev; // 不回退,无变化不触发写
+        const next = {
+          ...prev,
+          units: { ...prev.units, [unitId]: { ...us, vocabGroup: groupIdx } },
+        };
+        savePersist(grade, next);
+        return next;
+      });
+    },
+    [grade],
+  );
+
   const value = useMemo(
-    () => ({ grade, state, setState, persist, addMistake, completeStage }),
-    [grade, state, persist, addMistake, completeStage],
+    () => ({ grade, state, setState, persist, addMistake, completeStage, setVocabGroup }),
+    [grade, state, persist, addMistake, completeStage, setVocabGroup],
   );
 
   return <JuniorHubContext.Provider value={value}>{children}</JuniorHubContext.Provider>;

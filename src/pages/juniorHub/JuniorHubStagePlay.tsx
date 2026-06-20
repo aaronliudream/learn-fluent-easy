@@ -7,7 +7,7 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
-import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
+import { useUnitVocab, useRankedUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
 import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
@@ -206,8 +206,10 @@ function VocabStage({
   grade: number;
   onFinish: () => void;
 }) {
+  const { state, setVocabGroup } = useJuniorHub();
+  const savedGroup = getUnitState(state, unit.id).vocabGroup ?? 0;
   const words = useUnitVocab(unit, grade);
-  const [groupIdx, setGroupIdx] = useState(0);
+  const [groupIdx, setGroupIdx] = useState(savedGroup); // 跨设备续学:从上次看到的组开始
   const [between, setBetween] = useState(false);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
@@ -242,6 +244,16 @@ function VocabStage({
     for (let i = 0; i < words.length; i += VOCAB_GROUP) out.push(words.slice(i, i + VOCAB_GROUP));
     return out;
   }, [words]);
+
+  // 词表加载后:若续学的组号越界(词表变动)→ 夹到最后一组
+  useEffect(() => {
+    if (groups.length && groupIdx > groups.length - 1) setGroupIdx(groups.length - 1);
+  }, [groups.length, groupIdx]);
+
+  // 记"看到第几组"(只进不退,存 junior_hub_progress.state 云同步;不写掌握度)
+  useEffect(() => {
+    if (groups.length) setVocabGroup(unit.id, Math.min(groupIdx, groups.length - 1));
+  }, [groupIdx, groups.length, unit.id, setVocabGroup]);
 
   if (words === null)
     return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
@@ -313,9 +325,11 @@ function VocabStage({
         <span className="rounded-full bg-[#FF6B35] px-3 py-1 text-sm font-bold text-white">
           第 {groupIdx + 1} / {groups.length} 组
         </span>
-        <span className="text-xs text-[#888780]">共 {words.length} 词 · 本组 {currentGroup.length} 个</span>
+        <span className="text-xs text-[#888780]">
+          已学 {groupIdx + 1}/{groups.length} 组 · {Math.round(((groupIdx + 1) / groups.length) * 100)}%
+        </span>
       </div>
-      <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音(每组 {VOCAB_GROUP} 词)</div>
+      <div className="mb-3 text-xs text-[#888780]">💡 共 {words.length} 词 · 本组 {currentGroup.length} 个;点卡片看中文，点 🔊 听发音</div>
       <div className="grid grid-cols-2 gap-2">
         {currentGroup.map((v, i) => {
           const isFlipped = flipped.has(i);
@@ -424,8 +438,8 @@ function VocabStage({
   );
 }
 
-// 词义配对(match 关):从 DB 读全单元词(useUnitVocab,与核心词汇关同源),每组 12 词分批配对。
-// onMatch 仅加星,不写掌握度;分批由 WordMatchingGame 内置(batchSize)处理。
+// 词义配对(match 关):未掌握优先(match 通道:match_consec≥2 沉底,排序非过滤),每组 12 词分批。
+// 配对成功 → 加星(原行为)+ recordJuniorWordMastery(kind:"match",isCorrect:true);错配不记。
 function MatchStage({
   unit,
   grade,
@@ -437,17 +451,36 @@ function MatchStage({
   onFinish: () => void;
   onMatch: () => void;
 }) {
-  const words = useUnitVocab(unit, grade);
-  if (words === null)
+  const ranked = useRankedUnitVocab(unit, grade, "match");
+  const idByEn = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const w of ranked.words ?? []) if (w.id) m.set(w.en, w.id);
+    return m;
+  }, [ranked.words]);
+
+  if (ranked.words === null)
     return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
+
+  const handleMatch = (en: string) => {
+    onMatch(); // 加星(原行为)
+    const id = idByEn.get(en);
+    if (id) void recordJuniorWordMastery({ wordId: id, grade, kind: "match", isCorrect: true }); // 只记成功
+  };
+
   return (
-    <WordMatchingGame
-      vocabulary={words}
-      grade={grade}
-      onFinish={onFinish}
-      onMatch={onMatch}
-      batchSize={VOCAB_GROUP}
-    />
+    <div className="space-y-2">
+      <div className="text-center text-xs text-[#888780]">
+        已掌握 {ranked.masteredCount}/{ranked.total} 词(配对)
+      </div>
+      <WordMatchingGame
+        vocabulary={ranked.words}
+        grade={grade}
+        onFinish={onFinish}
+        onMatch={handleMatch}
+        batchSize={VOCAB_GROUP}
+        preserveOrder
+      />
+    </div>
   );
 }
 
@@ -605,56 +638,27 @@ function ListenWordStage({
   onCorrect: (q: { wordId?: string }) => void;
   onWrong: (q: { audio: string; opts: string[]; answer: number; wordId?: string }) => void;
 }) {
-  const [words, setWords] = useState<LWWord[] | null>(null);
+  // 未掌握优先排序(listen 通道:listen_correct≥2 沉底),排序非过滤——掌握词保留在后面的组。
+  const ranked = useRankedUnitVocab(unit, grade, "listen");
   const [groupIdx, setGroupIdx] = useState(0);
   const [between, setBetween] = useState(false);
 
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("junior_vocab")
-        .select("id,word,meaning_cn,phrase_en,example_en,example_cn")
-        .eq("grade", grade)
-        .eq("volume", unit.book)
-        .eq("unit", unit.unitKey);
-      if (cancelled) return;
-      const rows = (data ?? []) as Array<{
-        id: string;
-        word: string;
-        meaning_cn: string | null;
-        phrase_en: string | null;
-        example_en: string | null;
-        example_cn: string | null;
-      }>;
-      const valid = rows.filter((r) => r.word && r.meaning_cn);
-      if (valid.length > 0) {
-        setWords(
-          valid.map((r) => ({
-            // junior_word_mastery.word_id 实际存 junior_vocab.id(uuid),与词汇游戏一致;
-            // 传 word_id(text "jr-8A-U2-..")会因 uuid 列类型不符而写入失败。
-            wordId: r.id,
-            word: r.word.trim(),
-            cn: r.meaning_cn as string,
-            phrase: r.phrase_en?.trim() || undefined, // 英文短语/语块(新列),缺则不显
-            example: r.example_en && r.example_cn ? { en: r.example_en, cn: r.example_cn } : undefined,
-          })),
-        );
-      } else {
-        // 回退:无 DB 词 → JSON unit.vocabulary(grade7/Starter)
-        setWords(unit.vocabulary.map((v) => ({ word: v.en, cn: v.cn, example: v.chunks?.[0] })));
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [unit.id, unit.book, unit.unitKey, grade]);
+  const words = useMemo<LWWord[] | null>(() => {
+    if (!ranked.words) return null;
+    return ranked.words.map((v) => ({
+      wordId: v.id, // junior_word_mastery.word_id = junior_vocab.id(uuid)
+      word: v.en,
+      cn: v.cn,
+      phrase: v.phrase, // 英文短语/语块,缺则不显
+      example: v.example ?? v.chunks?.[0], // DB 例句优先;JSON 回退用 chunk
+    }));
+  }, [ranked.words]);
 
+  // 已按未掌握优先排好序,直接切组(不再 shuffle,保住"未掌握在前"的顺序)
   const groups = useMemo(() => {
     if (!words) return [];
-    const shuffled = shuffleArray([...words]);
     const out: LWWord[][] = [];
-    for (let i = 0; i < shuffled.length; i += LW_GROUP) out.push(shuffled.slice(i, i + LW_GROUP));
+    for (let i = 0; i < words.length; i += LW_GROUP) out.push(words.slice(i, i + LW_GROUP));
     return out;
   }, [words]);
 
@@ -720,7 +724,7 @@ function ListenWordStage({
     <ListenMcStage
       key={groupIdx}
       title="听音辨词"
-      instruction={`🎧 听一听,是哪个单词?(第 ${groupIdx + 1}/${groups.length} 组)`}
+      instruction={`🎧 听一听,是哪个单词?(第 ${groupIdx + 1}/${groups.length} 组 · 已掌握 ${ranked.masteredCount}/${ranked.total} 词)`}
       questions={groupQuestions}
       grade={grade}
       onFinish={() => (isLastGroup ? onFinish() : setBetween(true))}

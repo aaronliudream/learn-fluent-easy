@@ -303,7 +303,7 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "(Starter,无正式语法)",
+            "grammarTitle": "问候与 be 动词",
             "grammarCode": null,
             "grammarQuiz": [
               {
@@ -351,14 +351,102 @@
                 "dim": "grammar"
               },
               {
-                "q": "— How do you do? — ___",
+                "q": "___ I have your name, please?",
                 "opts": [
-                  "How do you do?",
-                  "I am fine.",
-                  "Yes, I do."
+                  "May",
+                  "Do",
+                  "Am"
                 ],
                 "answer": 0,
-                "point": "问候应答",
+                "point": "情态动词 May·礼貌请求",
+                "dim": "grammar"
+              },
+              {
+                "q": "— ___ is your name? — My name is Emma.",
+                "opts": [
+                  "How",
+                  "What",
+                  "Where"
+                ],
+                "answer": 1,
+                "point": "特殊疑问句 What·问姓名",
+                "dim": "grammar"
+              },
+              {
+                "q": "— ___ do you spell your name? — E-M-M-A.",
+                "opts": [
+                  "What",
+                  "Where",
+                  "How"
+                ],
+                "answer": 2,
+                "point": "特殊疑问句 How·问拼写",
+                "dim": "grammar"
+              },
+              {
+                "q": "I ___ Peter Brown.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 0,
+                "point": "be动词·第一人称 am",
+                "dim": "grammar"
+              },
+              {
+                "q": "We ___ in the same class.",
+                "opts": [
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "answer": 2,
+                "point": "be动词·复数 are",
+                "dim": "grammar"
+              },
+              {
+                "q": "— How ___ you? — I'm fine, thank you.",
+                "opts": [
+                  "am",
+                  "are",
+                  "is"
+                ],
+                "answer": 1,
+                "point": "be动词·疑问 are",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Where ___ Ms Gao? — She is in the classroom.",
+                "opts": [
+                  "are",
+                  "is",
+                  "am"
+                ],
+                "answer": 1,
+                "point": "be动词·疑问语序 is",
+                "dim": "grammar"
+              },
+              {
+                "q": "— Let's go to class. ___! — Bye!",
+                "opts": [
+                  "Goodbye",
+                  "Thanks",
+                  "Welcome"
+                ],
+                "answer": 0,
+                "point": "告别语 Goodbye/Bye",
+                "dim": "grammar"
+              },
+              {
+                "q": "___ is my friend, Mike.",
+                "opts": [
+                  "These",
+                  "This",
+                  "Those"
+                ],
+                "answer": 1,
+                "point": "指示代词 this",
                 "dim": "grammar"
               }
             ],

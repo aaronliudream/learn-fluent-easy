@@ -7,6 +7,7 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
+import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
 import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
@@ -192,8 +193,10 @@ function StageShell({
   );
 }
 
-// 核心词汇(第1关):优先读 junior_vocab DB 全单元词(grade+volume+unit),与听音辨词同源;
-// 无 DB 词(grade7/Starter 等 book 不在表内)→ 回退 JSON unit.vocabulary(含 chunk 例句)。
+// 核心词汇(第1关):从 junior_vocab DB 读全单元词(useUnitVocab,与听音辨词/词义配对同源),
+// 每组 12 词分组浏览(仿听音辨词:本组看完→"还有 X 词,继续下一组吗")。纯显示分组,不碰掌握度/进度。
+const VOCAB_GROUP = 12;
+
 function VocabStage({
   unit,
   grade,
@@ -203,65 +206,79 @@ function VocabStage({
   grade: number;
   onFinish: () => void;
 }) {
-  const [vocabulary, setVocabulary] = useState<VocabItem[] | null>(null);
+  const words = useUnitVocab(unit, grade);
+  const [groupIdx, setGroupIdx] = useState(0);
+  const [between, setBetween] = useState(false);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
   const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
 
+  // 进关预热整单元发音(分组浏览时下一组也已暖)
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("junior_vocab")
-        .select("word,meaning_cn,phrase_en,example_en,example_cn")
-        .eq("grade", grade)
-        .eq("volume", unit.book)
-        .eq("unit", unit.unitKey)
-        .order("freq_rank", { ascending: true, nullsFirst: false });
-      if (cancelled) return;
-      const rows = (data ?? []) as Array<{
-        word: string;
-        meaning_cn: string | null;
-        phrase_en: string | null;
-        example_en: string | null;
-        example_cn: string | null;
-      }>;
-      const valid = rows.filter((r) => r.word && r.meaning_cn);
-      if (valid.length > 0) {
-        setVocabulary(
-          valid.map((r) => ({
-            en: r.word.trim(),
-            cn: r.meaning_cn as string,
-            // 例句优先(en+cn 成对);无例句则用短语 phrase_en(无中文,cn 留空)
-            chunks:
-              r.example_en && r.example_cn
-                ? [{ en: r.example_en, cn: r.example_cn }]
-                : r.phrase_en
-                ? [{ en: r.phrase_en.trim(), cn: "" }]
-                : undefined,
-          })),
-        );
-      } else {
-        setVocabulary(unit.vocabulary); // 回退:无 DB 词 → JSON
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [unit.id, unit.book, unit.unitKey, grade]);
-
-  useEffect(() => {
-    if (!vocabulary) return;
+    if (!words) return;
     prefetchTTSBatchKid(
-      vocabulary.map((v) => v.en),
+      words.map((v) => v.en),
       { grade, speed: 0.85 },
     );
-  }, [grade, vocabulary]);
+  }, [grade, words]);
+
+  // 切组时重置本组浏览状态(纯显示,不动任何进度/掌握度)
+  useEffect(() => {
+    setViewed(new Set());
+    setFlipped(new Set());
+  }, [groupIdx]);
+
+  const groups = useMemo<VocabItem[][]>(() => {
+    if (!words) return [];
+    const out: VocabItem[][] = [];
+    for (let i = 0; i < words.length; i += VOCAB_GROUP) out.push(words.slice(i, i + VOCAB_GROUP));
+    return out;
+  }, [words]);
+
+  if (words === null)
+    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
+
+  const currentGroup = groups[groupIdx] ?? [];
+  const isLastGroup = groupIdx >= groups.length - 1;
+  const tested = Math.min(words.length, (groupIdx + 1) * VOCAB_GROUP);
+  const remaining = words.length - tested;
+  const allViewed = currentGroup.length > 0 && viewed.size === currentGroup.length;
+
+  // 本组完成中转卡(与听音辨词一致的交互)
+  if (between) {
+    return (
+      <div className="rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-card">
+        <div className="mb-2 text-lg font-bold text-[#2C2C2A] dark:text-foreground">本组完成 🎉</div>
+        <div className="mb-4 text-sm text-[#5C5751] dark:text-muted-foreground">
+          本单元还有 <strong>{remaining}</strong> 个词没看,继续看下一组吗?
+        </div>
+        <div className="flex justify-center gap-3">
+          <button
+            type="button"
+            className="rounded-xl bg-[#378ADD] px-5 py-2 text-sm font-bold text-white"
+            onClick={() => {
+              setGroupIdx((g) => g + 1);
+              setBetween(false);
+            }}
+          >
+            继续下一组 →
+          </button>
+          <button
+            type="button"
+            className="rounded-xl border-2 border-[#EEEAE0] px-5 py-2 text-sm font-bold text-[#5C5751] dark:border-border dark:text-muted-foreground"
+            onClick={onFinish}
+          >
+            先完成本关
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const toggleCard = (i: number) => {
-    if (!vocabulary) return;
-    const v = vocabulary[i];
+    const v = currentGroup[i];
+    if (!v) return;
     const isFlipped = flipped.has(i);
     if (!isFlipped) {
       setFlipped((prev) => new Set(prev).add(i));
@@ -276,21 +293,23 @@ function VocabStage({
     }
   };
 
-  if (vocabulary === null)
-    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
-
-  const allViewed = viewed.size === vocabulary.length;
+  const onPrimary = () => {
+    if (isLastGroup) onFinish();
+    else setBetween(true);
+  };
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-sm">📖 认识 {vocabulary.length} 个核心单词</div>
+      <div className="mb-2 text-sm">
+        📖 认识核心单词（第 {groupIdx + 1}/{groups.length} 组 · 本组 {currentGroup.length} 个）
+      </div>
       <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
       <div className="grid grid-cols-2 gap-2">
-        {vocabulary.map((v, i) => {
+        {currentGroup.map((v, i) => {
           const isFlipped = flipped.has(i);
           return (
             <div
-              key={v.en}
+              key={`${groupIdx}-${v.en}`}
               role="button"
               tabIndex={0}
               onClick={() => toggleCard(i)}
@@ -384,12 +403,39 @@ function VocabStage({
         })}
       </div>
       <div className="mt-3 text-center text-sm text-[#888780]">
-        已查看：{viewed.size} / {vocabulary.length}
+        已查看：{viewed.size} / {currentGroup.length}
       </div>
-      <PrimaryButton disabled={!allViewed} onClick={onFinish}>
-        {allViewed ? "✓ 进入下一关 →" : "查看完所有卡片再继续"}
+      <PrimaryButton disabled={!allViewed} onClick={onPrimary}>
+        {allViewed ? (isLastGroup ? "✓ 进入下一关 →" : "本组完成 →") : "查看完本组卡片再继续"}
       </PrimaryButton>
     </div>
+  );
+}
+
+// 词义配对(match 关):从 DB 读全单元词(useUnitVocab,与核心词汇关同源),每组 12 词分批配对。
+// onMatch 仅加星,不写掌握度;分批由 WordMatchingGame 内置(batchSize)处理。
+function MatchStage({
+  unit,
+  grade,
+  onFinish,
+  onMatch,
+}: {
+  unit: UnitDef;
+  grade: number;
+  onFinish: () => void;
+  onMatch: () => void;
+}) {
+  const words = useUnitVocab(unit, grade);
+  if (words === null)
+    return <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#5C5751]">加载中…</div>;
+  return (
+    <WordMatchingGame
+      vocabulary={words}
+      grade={grade}
+      onFinish={onFinish}
+      onMatch={onMatch}
+      batchSize={VOCAB_GROUP}
+    />
   );
 }
 
@@ -1960,15 +2006,8 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
           />
         );
       case "match":
-        return (
-          <WordMatchingGame
-            vocabulary={unit.vocabulary}
-            grade={grade}
-            onFinish={handleFinish}
-            onMatch={addStar}
-            batchSize={8}
-          />
-        );
+        // 词源改读 junior_vocab DB(完整 unit 词,与核心词汇关同源),每组 12 词分批。
+        return <MatchStage unit={unit} grade={grade} onFinish={handleFinish} onMatch={addStar} />;
       case "grammar":
         // 数据源 unit.grammarQuiz(内联水题);空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
         // 例外:有 grammarCodes 的单元走 JuniorUnitGrammarTest 从 DB 按 point 抽题,不依赖 grammarQuiz,放行进 GrammarStage。

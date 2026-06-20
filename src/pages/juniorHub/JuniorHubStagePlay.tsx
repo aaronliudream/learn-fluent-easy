@@ -211,8 +211,15 @@ function VocabStage({
   const [between, setBetween] = useState(false);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
+  const topRef = useRef<HTMLDivElement | null>(null);
 
   const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
+
+  // 切组 / 进中转卡时滚到顶部,让新内容(中转卡 / 下一组卡片)立即可见。
+  // 否则手机端用户停在底部点"本组完成"后,短中转卡在屏幕上方,看起来像"没反应"。
+  useEffect(() => {
+    if (between || groupIdx > 0) topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [between, groupIdx]);
 
   // 进关预热整单元发音(分组浏览时下一组也已暖)
   useEffect(() => {
@@ -248,8 +255,10 @@ function VocabStage({
   // 本组完成中转卡(与听音辨词一致的交互)
   if (between) {
     return (
-      <div className="rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-card">
-        <div className="mb-2 text-lg font-bold text-[#2C2C2A] dark:text-foreground">本组完成 🎉</div>
+      <div ref={topRef} className="rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-card">
+        <div className="mb-2 text-lg font-bold text-[#2C2C2A] dark:text-foreground">
+          第 {groupIdx + 1} / {groups.length} 组完成 🎉
+        </div>
         <div className="mb-4 text-sm text-[#5C5751] dark:text-muted-foreground">
           本单元还有 <strong>{remaining}</strong> 个词没看,继续看下一组吗?
         </div>
@@ -299,11 +308,14 @@ function VocabStage({
   };
 
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-sm">
-        📖 认识核心单词（第 {groupIdx + 1}/{groups.length} 组 · 本组 {currentGroup.length} 个）
+    <div ref={topRef} className="rounded-2xl bg-white p-4 shadow-sm">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <span className="rounded-full bg-[#FF6B35] px-3 py-1 text-sm font-bold text-white">
+          第 {groupIdx + 1} / {groups.length} 组
+        </span>
+        <span className="text-xs text-[#888780]">共 {words.length} 词 · 本组 {currentGroup.length} 个</span>
       </div>
-      <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
+      <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音(每组 {VOCAB_GROUP} 词)</div>
       <div className="grid grid-cols-2 gap-2">
         {currentGroup.map((v, i) => {
           const isFlipped = flipped.has(i);

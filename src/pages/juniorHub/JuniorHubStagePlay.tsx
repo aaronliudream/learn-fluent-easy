@@ -461,6 +461,7 @@ function ListenMcStage({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
+  const nextRef = useRef<HTMLDivElement | null>(null);
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
@@ -471,6 +472,15 @@ function ListenMcStage({
       { grade, speed: 0.8 },
     );
   }, [grade, questions]);
+
+  // 选完答案后,自动平滑滚动让"下一题"按钮露出(手机端按钮原在折叠下方,需手滑)。仅影响滚动,不碰答题/计分。
+  useEffect(() => {
+    if (!answered) return;
+    const t = setTimeout(() => {
+      nextRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 80);
+    return () => clearTimeout(t);
+  }, [answered]);
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -558,6 +568,8 @@ function ListenMcStage({
           {isLast ? "本关完成 →" : "下一题 →"}
         </PrimaryButton>
       )}
+      {/* 滚动锚点:选完答案后滚到此处让"下一题"按钮露出 */}
+      <div ref={nextRef} aria-hidden />
     </div>
   );
 }

@@ -13,9 +13,18 @@ const CAT = {
   '①Be动词肯定句+自我介绍 (I am / My name is / is / are)': 'tense',
   '③情态动词 May 的礼貌用法': 'verb',
   '①have 的用法 (have / has)': 'verb',
+  '①be动词的现在时 (am/is/are)': 'tense',
 };
 const catFor = pt => CAT[pt] || 'other';
-const unitNum = u => ({ SU1: 1, SU2: 2, SU3: 3 })[u] ?? 0;
+const gradeOf = vol => Number(String(vol)[0]);
+// 单元 → code 前缀:SU1→g7su1、U1→g7u1、(8A)U1→g8u1
+function unitCodePrefix(vol, unit) {
+  const g = gradeOf(vol);
+  const m = String(unit).match(/^(SU|U)(\d+)$/i);
+  if (!m) return `g${g}x${unit}`;
+  const pre = m[1].toUpperCase() === 'SU' ? 'su' : 'u';
+  return `g${g}${pre}${m[2]}`;
+}
 
 // 1) 聚合语法点:按出现顺序 distinct(volume,unit,point)
 const points = []; // {key, volume, unit, point, code, cat, sort}
@@ -28,7 +37,7 @@ for (const r of rows) {
   const un = r.unit;
   perUnitCount[un] = (perUnitCount[un] || 0) + 1;
   const idx = perUnitCount[un];
-  const code = `g7su${unitNum(un)}.${String(idx).padStart(2, '0')}`;
+  const code = `${unitCodePrefix(r.volume, un)}.${String(idx).padStart(2, '0')}`;
   const p = { key: k, volume: r.volume, unit: un, point: r.point, code, cat: catFor(r.point), sort: idx };
   seen.set(k, p);
   points.push(p);
@@ -75,9 +84,10 @@ for (const r of rows) {
   sql += `WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='${esc(code)}' AND q.stem='${esc(r.stem)}');\n`;
 }
 
-sql += `\n-- D. count 校验(应:语法点 ${points.length} / 题 ${rows.length})\n`;
-sql += `SELECT 'points' AS kind, count(*) FROM public.junior_grammar_points WHERE unit IS NOT NULL\n`;
-sql += `UNION ALL SELECT 'questions', count(*) FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.unit IS NOT NULL;\n`;
+const pairs = [...new Set(points.map(p => `('${esc(p.volume)}','${esc(p.unit)}')`))].join(', ');
+sql += `\n-- D. count 校验(本批,应:语法点 ${points.length} / 题 ${rows.length})\n`;
+sql += `SELECT 'points' AS kind, count(*) FROM public.junior_grammar_points WHERE (volume,unit) IN (${pairs})\n`;
+sql += `UNION ALL SELECT 'questions', count(*) FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE (p.volume,p.unit) IN (${pairs});\n`;
 
 writeFileSync(outFile, sql);
 console.log(`✅ 生成 ${outFile}`);

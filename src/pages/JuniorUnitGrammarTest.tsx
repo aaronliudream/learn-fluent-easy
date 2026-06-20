@@ -25,6 +25,7 @@ import { recordGrammarQuestionMastery } from "@/lib/juniorGrammarQuestionMastery
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
+import UnitGrammarGroupWalk from "@/components/grammar/UnitGrammarGroupWalk";
 
 /* ──────────────────────────────────────────────────────────────────────────
    单元语法综合测试 —— 多语法点合并抽题(每点保底1道)+ 随机抽 8 道。
@@ -195,6 +196,19 @@ export default function JuniorUnitGrammarTest() {
           <p className="mt-3 text-sm font-bold text-muted-foreground"><T>正在合成题目...</T></p>
         </div>
       </main>
+    );
+  }
+
+  // 新单元(g7su*/g7u*/g8u* 等小题库点):走「分组(组=语法点)」并从进入起显示「第N/共X组」;
+  // 老单元(旧 g7-t* 大题库)保持原混抽 8 题,避免一组上百题。
+  const grouped = !loading && points.length > 0 && points.every((p) => /^g\d+(su|u)\d+\./.test(p.code));
+  if (grouped) {
+    return (
+      <UnitGrammarGroupWalk
+        groups={points.map((p) => ({ pointId: p.id, title: p.title }))}
+        backTo={backTo}
+        unitLabel={`${unit?.title ?? ""} 语法`}
+      />
     );
   }
 

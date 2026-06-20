@@ -168,7 +168,7 @@ export default function Junior() {
 
   // 初二/初三整理中:非管理员选这两个年级 → 占位(年级 tab 仍可见,可切回初一)。
   const { isAdmin } = useIsAdmin();
-  const restricted = (grade === "g8" || grade === "g9") && !isAdmin;
+  const restricted = grade === "g9" && !isAdmin;
 
   const classroomTo =
     grade === "g8" ? "/junior/hub/8" : grade === "g9" ? "/junior/hub/9" : "/junior/hub/7";

@@ -21,6 +21,7 @@ import {
 } from "@/lib/juniorUnitGrammar";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
+import { recordGrammarQuestionMastery } from "@/lib/juniorGrammarQuestionMastery";
 import { awardForCorrect, notifyWrong } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { T } from "@/i18n/T";
@@ -85,6 +86,8 @@ export default function JuniorUnitGrammarTest() {
     setAnswers((prev) => ({ ...prev, [idx]: isOk }));
 
     void recordSkillAttemptsForQuestion(activeQ.id, isOk);
+    // 方案B:按题掌握度(累计答对2次=掌握),与语法页 L3 同表同步
+    void recordGrammarQuestionMastery(activeQ.id, isOk);
     if (isOk) {
       awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", res.latencyMs);
     } else {

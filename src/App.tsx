@@ -98,6 +98,9 @@ const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
+const JuniorGrammarUnits = lazy(() => import("./pages/JuniorGrammarUnits.tsx"));
+const JuniorGrammarUnitDetail = lazy(() => import("./pages/JuniorGrammarUnitDetail.tsx"));
+const JuniorGrammarPointTest = lazy(() => import("./pages/JuniorGrammarPointTest.tsx"));
 const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
 const JuniorGrammarKpQuiz = lazy(() => import("./pages/JuniorGrammarKpQuiz.tsx"));
 const JuniorGrammarMastery = lazy(() => import("./pages/JuniorGrammarMastery.tsx"));
@@ -418,7 +421,10 @@ const App = () => (
           <Route element={<JuniorGradeQueryGate />}>
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
           <Route path="/junior/vocab" element={<ChineseOnlyRoute><JuniorVocab /></ChineseOnlyRoute>} />
-          <Route path="/junior/grammar" element={<ChineseOnlyRoute><JuniorGrammar /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar" element={<ChineseOnlyRoute><JuniorGrammarUnits /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar/unit/:volume/:unit" element={<ChineseOnlyRoute><JuniorGrammarUnitDetail /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar/point/:pointId" element={<ChineseOnlyRoute><JuniorGrammarPointTest /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar-legacy" element={<ChineseOnlyRoute><JuniorGrammar /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar/revenge" element={<ChineseOnlyRoute><JuniorGrammarRevenge /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar/:id" element={<ChineseOnlyRoute><JuniorGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar-lab/:id" element={<ChineseOnlyRoute><JuniorGrammarLab /></ChineseOnlyRoute>} />

@@ -1,0 +1,20 @@
+[
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "I have art ____ geography today.", "options": ["and","or","but","because"], "answer_index": 0, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "Music is fun ____ we learn a lot of new songs.", "options": ["or","but","and","because"], "answer_index": 2, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "I like maths, ____ I like history too.", "options": ["but","or","and","because"], "answer_index": 2, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "She is kind, ____ she is beautiful.", "options": ["but","because","and","or"], "answer_index": 2, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "We study Chinese, ____ we study PE.", "options": ["or","but","and","because"], "answer_index": 2, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "①and (并列)", "stem": "My teacher is nice ____ helpful.", "options": ["but","or","because","and"], "answer_index": 3, "answer_text": "and", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "History is my favourite subject, ____ my sister doesn't like it.", "options": ["because","but","or","and"], "answer_index": 1, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "I like all the subjects, ____ maths is my favourite.", "options": ["but","or","because","and"], "answer_index": 0, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "It's interesting, ____ it's difficult for me.", "options": ["or","and","because","but"], "answer_index": 3, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "I want to go to the park, ____ it is raining.", "options": ["or","but","because","and"], "answer_index": 1, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "He is very smart, ____ he is not good at English.", "options": ["because","and","or","but"], "answer_index": 3, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "②but (转折)", "stem": "I like science, ____ I'm not good at it.", "options": ["but","or","and","because"], "answer_index": 0, "answer_text": "but", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "I like music ____ the class is fun.", "options": ["and","or","but","because"], "answer_index": 3, "answer_text": "because", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "I like maths ____ I am good with numbers.", "options": ["or","and","but","because"], "answer_index": 3, "answer_text": "because", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "I like English ____ my teacher is nice.", "options": ["because","but","and","or"], "answer_index": 0, "answer_text": "because", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "I want to be a scientist ____ maths is useful.", "options": ["or","and","but","because"], "answer_index": 3, "answer_text": "because", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "I like history ____ I learn about the past.", "options": ["and","because","or","but"], "answer_index": 1, "answer_text": "because", "explanation": "" },
+  { "volume": "7A", "unit": "U4", "point": "③because (原因)", "stem": "Emma likes history ____ it is interesting.", "options": ["and","but","or","because"], "answer_index": 3, "answer_text": "because", "explanation": "" }
+]

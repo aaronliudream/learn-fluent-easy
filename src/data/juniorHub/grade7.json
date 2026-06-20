@@ -5244,7 +5244,8 @@
               }
             ],
             "grammarTitle": "连词 and / but / because",
-            "grammarCode": "g7-t18",
+            "grammarCode": null,
+            "grammarCodes": ["g7u4.01", "g7u4.02", "g7u4.03"],
             "grammarQuiz": [
               {
                 "q": "I like English ___ it is useful.",

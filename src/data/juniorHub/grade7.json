@@ -14231,7 +14231,8 @@
               }
             ],
             "grammarTitle": "现在进行时表天气 + 方位",
-            "grammarCode": "g7-t13",
+            "grammarCode": null,
+            "grammarCodes": ["g7bu6.01", "g7bu6.02"],
             "grammarQuiz": [
               {
                 "q": "— How's the weather today? — It ___ heavily.",

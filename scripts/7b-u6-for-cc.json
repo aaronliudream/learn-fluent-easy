@@ -1,0 +1,14 @@
+[
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "In my hometown, the sun ____ at around 6 a.m. in summer.", "options": ["rises","rising","is rising","rise"], "answer_index": 0, "answer_text": "rises", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "She always ____ her favourite sweater in winter.", "options": ["wear","wears","wearing","is wearing"], "answer_index": 1, "answer_text": "wears", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "People often ____ kites in this season.", "options": ["flies","are flying","fly","flying"], "answer_index": 2, "answer_text": "fly", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "It ____ quite often in London.", "options": ["rains","raining","is raining","rain"], "answer_index": 0, "answer_text": "rains", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "We usually ____ in when it snows.", "options": ["stays","staying","stay","are staying"], "answer_index": 2, "answer_text": "stay", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "①一般现在时 (习惯/常态)", "stem": "It ____ cold here every winter.", "options": ["getting","is getting","gets","get"], "answer_index": 2, "answer_text": "gets", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "Look, it ____! That's amazing! It doesn't usually snow here.", "options": ["snow","snows","snowing","is snowing"], "answer_index": 3, "answer_text": "is snowing", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "What ____ the boys ____ at the moment?", "options": ["do; do","are; doing","is; doing","are; do"], "answer_index": 1, "answer_text": "are; doing", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "It ____ outside now, so please take your umbrella.", "options": ["is raining","rains","raining","rain"], "answer_index": 0, "answer_text": "is raining", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "The wind ____ hard right now.", "options": ["blow","blows","blowing","is blowing"], "answer_index": 3, "answer_text": "is blowing", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "Listen! Someone ____ in the next room.", "options": ["singing","sing","is singing","sings"], "answer_index": 2, "answer_text": "is singing", "explanation": "" },
+  { "volume": "7B", "unit": "U6", "point": "②现在进行时 (此刻正在进行)", "stem": "I ____ at the beach at the moment.", "options": ["sunbathing","sunbathe","sunbathes","am sunbathing"], "answer_index": 3, "answer_text": "am sunbathing", "explanation": "" }
+]

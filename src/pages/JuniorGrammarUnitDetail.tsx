@@ -84,7 +84,7 @@ export default function JuniorGrammarUnitDetail() {
             >
               <div className="flex items-center gap-3">
                 <div className="flex-1 min-w-0">
-                  <div className="font-bold leading-snug">{p.title}</div>
+                  <div className="text-lg font-bold leading-snug">{p.title}</div>
                   <div className="mt-2 grid grid-cols-2 gap-3">
                     <MiniBar label="完成" value={gpct(prog.done, prog.total)} sub={`${prog.done}/${prog.total}`} color="emerald" />
                     <MiniBar label="掌握" value={gpct(prog.mastered, prog.total)} sub={`${prog.mastered}/${prog.total}`} color="amber" />

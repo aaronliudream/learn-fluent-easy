@@ -55,6 +55,8 @@ interface Props {
   onAnswered: (result: AnswerResult) => void;
   onAskTutor?: () => void;
   enableTtsForStem?: boolean;
+  /** 放大题干与选项字体(初中语法专项用;高考默认 false 不变)。 */
+  large?: boolean;
 }
 
 function normalize(s: string) {
@@ -79,9 +81,12 @@ const CHOICE_LETTERS = ["A", "B", "C", "D"] as const;
 
 function choiceButtonClass(
   state: "idle" | "correct" | "wrong" | "revealed" | "dimmed",
+  large = false,
 ) {
-  const base =
-    "w-full text-left px-4 py-3 rounded-2xl border-2 transition-all flex items-baseline gap-2.5 font-medium";
+  const base = cn(
+    "w-full text-left px-4 py-3 rounded-2xl border-2 transition-all flex items-baseline gap-2.5 font-medium",
+    large && "text-lg",
+  );
   switch (state) {
     case "correct":
       return cn(
@@ -114,6 +119,7 @@ export function GrammarQuestionCard({
   onAnswered,
   onAskTutor,
   enableTtsForStem,
+  large = false,
 }: Props) {
   const q = question;
   const qType = q.question_type || "mcq";
@@ -283,7 +289,7 @@ export function GrammarQuestionCard({
         )}
       </div>
 
-      <div className="relative text-sm font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground">
+      <div className={cn("relative font-bold whitespace-pre-wrap leading-relaxed mb-4 text-foreground", large ? "text-lg sm:text-xl" : "text-sm")}>
         {q.stem?.replace(/\\n/g, "\n")}
       </div>
 
@@ -308,7 +314,7 @@ export function GrammarQuestionCard({
                 key={c.text + i}
                 onClick={() => pickRewrite(c)}
                 disabled={isLocked || (wasPicked && !c.correct)}
-                className={choiceButtonClass(state)}
+                className={choiceButtonClass(state, large)}
               >
                 <span
                   className={cn(
@@ -322,7 +328,7 @@ export function GrammarQuestionCard({
                 >
                   {showCorrect || showRevealed ? "✓" : showWrong ? "✗" : CHOICE_LETTERS[i]}
                 </span>
-                <span className="text-sm leading-snug">{c.text}</span>
+                <span className={cn("leading-snug", large ? "text-lg" : "text-sm")}>{c.text}</span>
               </button>
             );
           })}
@@ -343,7 +349,7 @@ export function GrammarQuestionCard({
                 key={L}
                 disabled={!!picked}
                 onClick={() => pickMcq(L)}
-                className={choiceButtonClass(state)}
+                className={choiceButtonClass(state, large)}
               >
                 <span
                   className={cn(

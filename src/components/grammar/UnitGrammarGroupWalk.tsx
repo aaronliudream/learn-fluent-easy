@@ -200,10 +200,10 @@ export default function UnitGrammarGroupWalk({
         <p className="text-sm text-muted-foreground"><T>本组暂无题目</T></p>
       ) : (
         <>
-          <div className="text-xs text-muted-foreground">第 {Math.min(qIdx + 1, questions.length)} / {questions.length} 题</div>
+          <div className="text-sm text-muted-foreground">第 {Math.min(qIdx + 1, questions.length)} / {questions.length} 题</div>
           {activeQ && (
             <div className="space-y-3">
-              <GrammarQuestionCard key={activeQ.id} question={activeQ} index={qIdx} onAnswered={handleAnswered} />
+              <GrammarQuestionCard key={activeQ.id} question={activeQ} index={qIdx} onAnswered={handleAnswered} large />
               {answered && (
                 <div className="flex items-center justify-end pt-1">
                   <button
@@ -230,10 +230,10 @@ export default function UnitGrammarGroupWalk({
 function GroupPill({ groupIdx, total, title }: { groupIdx: number; total: number; title: string }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-extrabold text-orange-700 dark:bg-orange-950/40 dark:text-orange-300">
+      <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-extrabold text-orange-700 dark:bg-orange-950/40 dark:text-orange-300">
         第 {groupIdx + 1} / {total} 组
       </span>
-      <span className="text-sm font-bold text-foreground">{title}</span>
+      <span className="text-base font-bold text-foreground">{title}</span>
     </div>
   );
 }

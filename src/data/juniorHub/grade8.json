@@ -6277,7 +6277,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "should建议 + 反身代词 + 后缀-ache/-less构词",
+                "subtitle": "状语从句引导词 (although/until/so that)",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -6323,13 +6323,9 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "should建议 + 反身代词 + 后缀-ache/-less构词",
-            "grammarCode": "g8.18",
-            "grammarCodes": [
-              "g8.18",
-              "g8.14",
-              "g8.40"
-            ],
+            "grammarTitle": "状语从句引导词 (although/until/so that)",
+            "grammarCode": null,
+            "grammarCodes": ["g8bu2.01"],
             "grammarQuiz": [
               {
                 "q": "You have a fever. You ___ see a doctor right away.",
@@ -9666,11 +9662,8 @@
               }
             ],
             "grammarTitle": "现在完成时 + 形容词后缀",
-            "grammarCode": "g8.24",
-            "grammarCodes": [
-              "g8.24",
-              "g8.43"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu7.01", "g8bu7.02", "g8bu7.03"],
             "grammarQuiz": [
               {
                 "q": "I ___ already ___ that mystery novel, so you can borrow it.",

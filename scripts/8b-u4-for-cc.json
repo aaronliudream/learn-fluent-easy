@@ -1,0 +1,15 @@
+[
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "The Yangtze River is ____ than the Yellow River.", "options": ["longest","more long","longer","long"], "answer_index": 2, "answer_text": "longer", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "This mountain is ____ than the one we climbed last year.", "options": ["higher","highest","high","more high"], "answer_index": 0, "answer_text": "higher", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "Africa is ____ than Europe.", "options": ["more big","bigger","big","biggest"], "answer_index": 1, "answer_text": "bigger", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "He walked ____ than his partner in the race. (far→?)", "options": ["far","more far","farther","farthest"], "answer_index": 2, "answer_text": "farther", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "The water is ____ in this area than in that area.", "options": ["more deep","deeper","deep","deepest"], "answer_index": 1, "answer_text": "deeper", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "The rainforest is ____ than the grassland.", "options": ["beautifuller","beautiful","beautifulest","more beautiful"], "answer_index": 3, "answer_text": "more beautiful", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "①比较级 (地理数据比较)", "stem": "Lake Baikal is ____ than West Lake.", "options": ["deepest","more deep","deeper","deep"], "answer_index": 2, "answer_text": "deeper", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "Mount Qomolangma is the ____ mountain in the world.", "options": ["high","higher","most high","highest"], "answer_index": 3, "answer_text": "highest", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "The Sahara is the ____ desert in the world.", "options": ["bigger","most big","big","biggest"], "answer_index": 3, "answer_text": "biggest", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "The Mariana Trench is the ____ point in the ocean.", "options": ["deep","deepest","deeper","most deep"], "answer_index": 1, "answer_text": "deepest", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "The Yangtze River travels the ____ in China. (far→?)", "options": ["most far","farther","farthest","far"], "answer_index": 2, "answer_text": "farthest", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "This is the ____ experience I have ever had.", "options": ["more wonderful","wonderfuller","most wonderful","wonderfullest"], "answer_index": 2, "answer_text": "most wonderful", "explanation": "" },
+  { "volume": "8B", "unit": "U4", "point": "②最高级 (地理之最)", "stem": "The Pacific is the ____ ocean on earth.", "options": ["large","larger","largest","most large"], "answer_index": 2, "answer_text": "largest", "explanation": "" }
+]

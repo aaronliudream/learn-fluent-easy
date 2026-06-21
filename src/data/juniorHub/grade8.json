@@ -7663,12 +7663,8 @@
               }
             ],
             "grammarTitle": "比较级/最高级复习;大数字",
-            "grammarCode": "g8.04",
-            "grammarCodes": [
-              "g8.04",
-              "g8.05",
-              "g8.09"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu4.01", "g8bu4.02"],
             "grammarQuiz": [
               {
                 "q": "Mount Qomolangma is ___ mountain in the world.",

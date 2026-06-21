@@ -6277,7 +6277,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "状语从句引导词 (although/until/so that)",
+                "subtitle": "情态动词建议 should/could + 反身代词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -6323,9 +6323,9 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "状语从句引导词 (although/until/so that)",
+            "grammarTitle": "情态动词建议 should/could + 反身代词",
             "grammarCode": null,
-            "grammarCodes": ["g8bu2.01"],
+            "grammarCodes": ["g8bu2.01", "g8bu2.02"],
             "grammarQuiz": [
               {
                 "q": "You have a fever. You ___ see a doctor right away.",
@@ -6991,10 +6991,8 @@
               }
             ],
             "grammarTitle": "连词 although / until / so that",
-            "grammarCode": "g8.32",
-            "grammarCodes": [
-              "g8.32"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu3.01"],
             "grammarQuiz": [
               {
                 "q": "___ I was very tired, I kept practising for the match.",

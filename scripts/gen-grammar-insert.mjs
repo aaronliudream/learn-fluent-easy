@@ -17,13 +17,15 @@ const CAT = {
 };
 const catFor = pt => CAT[pt] || 'other';
 const gradeOf = vol => Number(String(vol)[0]);
-// 单元 → code 前缀:SU1→g7su1、U1→g7u1、(8A)U1→g8u1
+// 单元 → code 前缀:卷别 A 无后缀、B 加 'b' 区分。
+//   7A SU1→g7su1、7A U1→g7u1、7B U1→g7bu1、8A U1→g8u1、8B U1→g8bu1
 function unitCodePrefix(vol, unit) {
   const g = gradeOf(vol);
+  const volTag = String(vol).slice(1).toUpperCase() === 'B' ? 'b' : '';
   const m = String(unit).match(/^(SU|U)(\d+)$/i);
-  if (!m) return `g${g}x${unit}`;
+  if (!m) return `g${g}${volTag}x${unit}`;
   const pre = m[1].toUpperCase() === 'SU' ? 'su' : 'u';
-  return `g${g}${pre}${m[2]}`;
+  return `g${g}${volTag}${pre}${m[2]}`;
 }
 
 // 1) 聚合语法点:按出现顺序 distinct(volume,unit,point)

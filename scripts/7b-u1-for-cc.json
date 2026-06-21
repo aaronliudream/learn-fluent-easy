@@ -1,0 +1,22 @@
+[
+  { "volume": "7B", "unit": "U1", "point": "①Why (询问原因)", "stem": "— ____ do you like penguins so much? — Because they're very cute.", "options": ["Where","Why","When","What"], "answer_index": 1, "answer_text": "Why", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "①Why (询问原因)", "stem": "— ____ don't you like snakes? — Because they're scary.", "options": ["Where","Who","Why","What"], "answer_index": 2, "answer_text": "Why", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "①Why (询问原因)", "stem": "— ____ do you like elephants? — Because they are clever.", "options": ["Where","When","Why","What"], "answer_index": 2, "answer_text": "Why", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "①Why (询问原因)", "stem": "— ____ are you happy? — Because it's my birthday.", "options": ["Where","Who","What","Why"], "answer_index": 3, "answer_text": "Why", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "①Why (询问原因)", "stem": "— ____ do you like the zoo? — Because it's great fun.", "options": ["When","Where","What","Why"], "answer_index": 3, "answer_text": "Why", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "②Where (询问地点)", "stem": "— ____ are penguins from? — They're from Antarctica.", "options": ["What","Why","Where","When"], "answer_index": 2, "answer_text": "Where", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "②Where (询问地点)", "stem": "— ____ do the elephants live? — They live in the forests.", "options": ["What","Who","Where","Why"], "answer_index": 2, "answer_text": "Where", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "②Where (询问地点)", "stem": "— ____ is your favourite animal? — At the zoo.", "options": ["What","When","Why","Where"], "answer_index": 3, "answer_text": "Where", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "②Where (询问地点)", "stem": "— ____ are the monkeys? — They're in the trees.", "options": ["Where","What","Who","Why"], "answer_index": 0, "answer_text": "Where", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "②Where (询问地点)", "stem": "— ____ does Malee live? — She lives in Thailand.", "options": ["Why","What","Where","When"], "answer_index": 2, "answer_text": "Where", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "③because (引出原因)", "stem": "I like elephants ____ they are strong and clever.", "options": ["or","because","and","but"], "answer_index": 1, "answer_text": "because", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "③because (引出原因)", "stem": "— Why do you like monkeys? — ____ they're clever and funny.", "options": ["And","Or","Because","But"], "answer_index": 2, "answer_text": "Because", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "③because (引出原因)", "stem": "— Why are you happy? — ____ it's my birthday today.", "options": ["But","Because","Or","And"], "answer_index": 1, "answer_text": "Because", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "③because (引出原因)", "stem": "I don't like sharks ____ they are very scary.", "options": ["or","because","but","and"], "answer_index": 1, "answer_text": "because", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "③because (引出原因)", "stem": "She likes the zoo ____ it's great fun.", "options": ["but","and","because","or"], "answer_index": 2, "answer_text": "because", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "④名词复数 (规则+不规则)", "stem": "one eagle, two ____", "options": ["eagle","eaglees","eaglies","eagles"], "answer_index": 3, "answer_text": "eagles", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "④名词复数 (规则+不规则)", "stem": "one fox, two ____", "options": ["foxies","foxs","foxes","fox"], "answer_index": 2, "answer_text": "foxes", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "④名词复数 (规则+不规则)", "stem": "one mouse, two ____ (不规则)", "options": ["mice","mouse","mouses","mices"], "answer_index": 0, "answer_text": "mice", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "④名词复数 (规则+不规则)", "stem": "one whale, two ____", "options": ["whale","whalies","whales","whalees"], "answer_index": 2, "answer_text": "whales", "explanation": "" },
+  { "volume": "7B", "unit": "U1", "point": "④名词复数 (规则+不规则)", "stem": "one sheep, two ____ (不规则,不变)", "options": ["sheeps","sheep","sheepies","sheepes"], "answer_index": 1, "answer_text": "sheep", "explanation": "" }
+]

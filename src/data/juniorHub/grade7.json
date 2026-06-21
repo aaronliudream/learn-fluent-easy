@@ -7843,11 +7843,8 @@
               }
             ],
             "grammarTitle": "日期序数 + how much购物",
-            "grammarCode": "g7-t10",
-            "grammarCodes": [
-              "g7-t10",
-              "g7-t22"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7u7.01", "g7u7.02", "g7u7.03", "g7u7.04", "g7u7.05"],
             "grammarQuiz": [
               {
                 "q": "My birthday is ___ October 1st.",

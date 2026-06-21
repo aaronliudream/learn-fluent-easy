@@ -12181,9 +12181,8 @@
               }
             ],
             "grammarTitle": "可数/不可数 + How much/many + would like",
-            "grammarCodes": [
-              "g7-t26"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7bu4.01", "g7bu4.02"],
             "grammarQuiz": [
               {
                 "q": "How ___ apples would you like?",

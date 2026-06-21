@@ -1,0 +1,14 @@
+[
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "There are many ____ on the plate.", "options": ["cookys","cookiess","cookie","cookies"], "answer_index": 3, "answer_text": "cookies", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "I eat two ____ every day.", "options": ["apple","applies","apples","applees"], "answer_index": 2, "answer_text": "apples", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "How many ____ are there in the bowl?", "options": ["beanies","bean","beans","beanes"], "answer_index": 2, "answer_text": "beans", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "She bought three ____ for her lunch.", "options": ["chips","chip","chipes","chipies"], "answer_index": 0, "answer_text": "chips", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "The little boy likes eating ____.", "options": ["strawberry","strawberrys","strawberries","strawberryes"], "answer_index": 2, "answer_text": "strawberries", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "①可数名词 (复数形式)", "stem": "We need some ____ for the salad.", "options": ["tomatos","tomatoes","tomatoies","tomato"], "answer_index": 1, "answer_text": "tomatoes", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "Would you like ____ tea?", "options": ["a bowl of","a piece of","many","a cup of"], "answer_index": 3, "answer_text": "a cup of", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "I'd like ____ rice for lunch.", "options": ["a glass of","a cup of","a bowl of","two"], "answer_index": 2, "answer_text": "a bowl of", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "She wants ____ bread for breakfast.", "options": ["a piece of","a cup of","three","a glass of"], "answer_index": 0, "answer_text": "a piece of", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "He drinks ____ milk every morning.", "options": ["a piece of","a bowl of","a glass of","many"], "answer_index": 2, "answer_text": "a glass of", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "How ____ sugar is there in the soft drink?", "options": ["some","much","a few","many"], "answer_index": 1, "answer_text": "much", "explanation": "" },
+  { "volume": "7B", "unit": "U4", "point": "②不可数名词 (量词搭配 a ... of)", "stem": "I want some ____. (不可数,不加s)", "options": ["meat","meates","a meat","meats"], "answer_index": 0, "answer_text": "meat", "explanation": "" }
+]

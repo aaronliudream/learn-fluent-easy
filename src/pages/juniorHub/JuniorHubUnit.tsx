@@ -7,7 +7,9 @@ import { getUnitState } from "@/lib/juniorHub/storage";
 import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
-import { loadUnitOverall, pctOf, type UnitOverallBreakdown } from "@/lib/juniorHub/unitOverallProgress";
+import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
+import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
+import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/juniorHub/types";
 
 const GROUP = 12; // 每组词数(与三关一致)
@@ -85,20 +87,33 @@ function StageList({
     };
   }, [words]);
 
-  // 单元综合 完成度/掌握度(词汇+语法,与板块/语法专项页同源)。
-  const [overall, setOverall] = useState<UnitOverallBreakdown | null>(null);
+  // 各关进度(挂在对应关卡行右侧):词汇关 / 语法关各自的 完成度/掌握度,与板块/语法专项页同源。
+  const [vocabProg, setVocabProg] = useState<UnitOverall | null>(null);
+  const [grammarProg, setGrammarProg] = useState<GrammarProgress | null>(null);
   useEffect(() => {
     let cancelled = false;
     (async () => {
       if (!words) return;
       const ids = words.map((w) => w.id).filter((x): x is string => !!x);
-      const ov = await loadUnitOverall({ wordIds: ids, grammarCodes: unit.grammarCodes ?? [] });
-      if (!cancelled) setOverall(ov);
+      const v = await loadUnitVocabProgress(ids);
+      if (!cancelled) setVocabProg(v);
     })();
     return () => {
       cancelled = true;
     };
-  }, [words, unit.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [words]);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const codes = unit.grammarCodes ?? [];
+      if (!codes.length) return;
+      const g = await loadProgressForCodes(codes);
+      if (!cancelled) setGrammarProg(g);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unit.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // 每关的"组进度"标签:返回 "3/6 组" 或 null(无进度/不适用)
   const groupLabel = (stageType: string): string | null => {
@@ -120,27 +135,6 @@ function StageList({
 
   return (
     <div className="space-y-2 px-4 py-4">
-      {overall && overall.combined.total > 0 && (
-        <div className="mb-2 rounded-2xl border border-[#EEEAE0] bg-white p-4 shadow-sm">
-          <div className="flex items-center justify-center gap-10">
-            <div className="flex flex-col items-center gap-1.5">
-              <MasteryRing value={overall.combined.done / overall.combined.total} size={96} stroke={10} colorClass="stroke-emerald-500">
-                <span className="text-2xl font-extrabold tabular-nums text-emerald-600">{pctOf(overall.combined.done, overall.combined.total)}%</span>
-              </MasteryRing>
-              <span className="text-sm font-bold text-[#5C5751]">完成度</span>
-            </div>
-            <div className="flex flex-col items-center gap-1.5">
-              <MasteryRing value={overall.combined.mastered / overall.combined.total} size={96} stroke={10} colorClass="stroke-amber-500">
-                <span className="text-2xl font-extrabold tabular-nums text-amber-600">{pctOf(overall.combined.mastered, overall.combined.total)}%</span>
-              </MasteryRing>
-              <span className="text-sm font-bold text-[#5C5751]">掌握度</span>
-            </div>
-          </div>
-          <div className="mt-2 text-center text-[11px] text-[#888780]">
-            词汇 + 语法 · 做过 {overall.combined.done}/{overall.combined.total} · 掌握 {overall.combined.mastered}/{overall.combined.total}
-          </div>
-        </div>
-      )}
       {unit.stages.map((stage, i) => {
         const done = us?.completedStages.includes(i) ?? false;
         const gl = groupLabel(stage.type);
@@ -169,10 +163,31 @@ function StageList({
                 {gl}
               </span>
             )}
+            {stage.type === "vocab" && vocabProg && (
+              <StageRings done={vocabProg.done} mastered={vocabProg.mastered} total={vocabProg.total} />
+            )}
+            {stage.type === "grammar" && grammarProg && (
+              <StageRings done={grammarProg.done} mastered={grammarProg.mastered} total={grammarProg.total} />
+            )}
             <span className="text-[#888780]">›</span>
           </button>
         );
       })}
+    </div>
+  );
+}
+
+/** 关卡行右侧两个小圆圈:完成度(绿)+ 掌握度(琥珀)。total<=0 不显示。 */
+function StageRings({ done, mastered, total }: { done: number; mastered: number; total: number }) {
+  if (total <= 0) return null;
+  return (
+    <div className="flex shrink-0 items-center gap-1.5">
+      <MasteryRing value={done / total} size={38} stroke={5} colorClass="stroke-emerald-500">
+        <span className="text-[10px] font-extrabold tabular-nums text-emerald-600">{pctOf(done, total)}</span>
+      </MasteryRing>
+      <MasteryRing value={mastered / total} size={38} stroke={5} colorClass="stroke-amber-500">
+        <span className="text-[10px] font-extrabold tabular-nums text-amber-600">{pctOf(mastered, total)}</span>
+      </MasteryRing>
     </div>
   );
 }

@@ -978,10 +978,8 @@
               }
             ],
             "grammarTitle": "Can/Could 礼貌请求与许可",
-            "grammarCode": "g8.20",
-            "grammarCodes": [
-              "g8.20"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au2.01", "g8au2.02", "g8au2.03", "g8au2.04"],
             "grammarQuiz": [
               {
                 "q": "\"___ you pass me the glue, please?\" — Sure, here you are.",

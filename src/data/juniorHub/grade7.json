@@ -9879,10 +9879,8 @@
               }
             ],
             "grammarTitle": "祈使句 + have to / must / can't",
-            "grammarCodes": [
-              "g7-t12",
-              "g7-t25"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7bu2.01", "g7bu2.02", "g7bu2.03"],
             "grammarQuiz": [
               {
                 "q": "At school, you ___ wear a uniform every day.",
@@ -10924,9 +10922,8 @@
               }
             ],
             "grammarTitle": "频度副词 + How often",
-            "grammarCodes": [
-              "g7-t24"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g7bu3.01", "g7bu3.02"],
             "grammarQuiz": [
               {
                 "q": "— How often do you exercise? — ___ a week, on Saturday and Sunday.",

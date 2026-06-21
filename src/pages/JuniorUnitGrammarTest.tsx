@@ -201,7 +201,7 @@ export default function JuniorUnitGrammarTest() {
 
   // 新单元(g7su*/g7u*/g8u* 等小题库点):走「分组(组=语法点)」并从进入起显示「第N/共X组」;
   // 老单元(旧 g7-t* 大题库)保持原混抽 8 题,避免一组上百题。
-  const grouped = !loading && points.length > 0 && points.every((p) => /^g\d+(su|u)\d+\./.test(p.code));
+  const grouped = !loading && points.length > 0 && points.every((p) => /^g\d+[ab]?(su|u)\d+\./.test(p.code));
   if (grouped) {
     return (
       <UnitGrammarGroupWalk

@@ -312,11 +312,8 @@
               }
             ],
             "grammarTitle": "不定代词与一般过去时",
-            "grammarCode": "g8.06",
-            "grammarCodes": [
-              "g8.06",
-              "g8.01"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au1.01", "g8au1.02", "g8au1.03"],
             "grammarQuiz": [
               {
                 "q": "I didn't go ___ special during the holiday.",

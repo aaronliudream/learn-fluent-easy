@@ -14,6 +14,7 @@ const CAT = {
   '③情态动词 May 的礼貌用法': 'verb',
   '①have 的用法 (have / has)': 'verb',
   '①be动词的现在时 (am/is/are)': 'tense',
+  '②一般过去时 (动词过去式描述假期)': 'tense',
 };
 const catFor = pt => CAT[pt] || 'other';
 const gradeOf = vol => Number(String(vol)[0]);
@@ -21,7 +22,9 @@ const gradeOf = vol => Number(String(vol)[0]);
 //   7A SU1→g7su1、7A U1→g7u1、7B U1→g7bu1、8A U1→g8u1、8B U1→g8bu1
 function unitCodePrefix(vol, unit) {
   const g = gradeOf(vol);
-  const volTag = String(vol).slice(1).toUpperCase() === 'B' ? 'b' : '';
+  const letter = String(vol).slice(1).toUpperCase(); // A / B
+  // 7A 历史用无字母(g7u/g7su);其余卷别都带小写字母(7B→b、8A→a、8B→b)
+  const volTag = (g === 7 && letter === 'A') ? '' : letter.toLowerCase();
   const m = String(unit).match(/^(SU|U)(\d+)$/i);
   if (!m) return `g${g}${volTag}x${unit}`;
   const pre = m[1].toUpperCase() === 'SU' ? 'su' : 'u';

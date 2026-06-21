@@ -1,168 +1,1008 @@
 {
   "volume": "g9",
   "unit": "U1",
-  "code": "g9u1.cz",
-  "text": "Li Lei used to be weak in English. He could not understand the teacher and was afraid to __1__ in class. Then he decided to change. Every morning he read English __2__ for twenty minutes to improve his pronunciation. He also built his __3__ by making word cards and reviewing them on the bus. When he met a new word, he tried to guess its meaning by __4__ the sentences around it. In class, he became more __5__ and often asked the teacher questions. He knew that everyone makes __6__, so he was __7__ with himself and never gave up. He also joined an English club, where he made many __8__. Little by little, his English __9__. Now he can have a conversation with foreign visitors easily. Li Lei says that anyone can learn English well by working hard and finding the right __10__.",
-  "questions": [
+  "passages": [
     {
-      "qid": "g9u1.cz.q1",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 1,
-      "options": [
-        "sleep",
-        "speak",
-        "sing",
-        "run"
-      ],
-      "answer_index": 1,
-      "answer_text": "speak",
-      "explanation": "afraid to speak in class 害怕在课上发言。"
+      "code": "g9u1.cz1",
+      "title": "Learning from English Shows",
+      "text": "Tony has found a fun way to (1)____ English: watching English TV shows. Every evening he watches one short (2)____ with subtitles. He does not just watch for fun. He listens to how the actors (3)____ the words and then copies them. When he hears a useful (4)____, he says it again and again until it sounds (5)____. Sometimes he covers the Chinese subtitles and tries to (6)____ what the actors are saying. At first it was (7)____, but slowly he could understand more. His listening and (8)____ have both got better. Now Tony can speak more (9)____ than before. He says learning English can be as fun as (10)____ a show.",
+      "questions": [
+        {
+          "qid": "g9u1.cz1.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 1,
+          "options": [
+            "learn",
+            "teach",
+            "forget",
+            "draw"
+          ],
+          "answer_index": 0,
+          "answer_text": "learn",
+          "explanation": "a way to learn 学习的方法"
+        },
+        {
+          "qid": "g9u1.cz1.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 2,
+          "options": [
+            "song",
+            "show",
+            "game",
+            "meal"
+          ],
+          "answer_index": 1,
+          "answer_text": "show",
+          "explanation": "a short show 一集节目"
+        },
+        {
+          "qid": "g9u1.cz1.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 3,
+          "options": [
+            "write",
+            "count",
+            "pronounce",
+            "draw"
+          ],
+          "answer_index": 2,
+          "answer_text": "pronounce",
+          "explanation": "how actors pronounce 发音"
+        },
+        {
+          "qid": "g9u1.cz1.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 4,
+          "options": [
+            "number",
+            "colour",
+            "size",
+            "expression"
+          ],
+          "answer_index": 3,
+          "answer_text": "expression",
+          "explanation": "useful expression 有用表达"
+        },
+        {
+          "qid": "g9u1.cz1.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 5,
+          "options": [
+            "natural",
+            "terrible",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "answer_text": "natural",
+          "explanation": "sound natural 听起来自然"
+        },
+        {
+          "qid": "g9u1.cz1.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 6,
+          "options": [
+            "forget",
+            "guess",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 1,
+          "answer_text": "guess",
+          "explanation": "guess what 猜测"
+        },
+        {
+          "qid": "g9u1.cz1.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 7,
+          "options": [
+            "easy",
+            "free",
+            "hard",
+            "lucky"
+          ],
+          "answer_index": 2,
+          "answer_text": "hard",
+          "explanation": "at first hard 起初难"
+        },
+        {
+          "qid": "g9u1.cz1.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 8,
+          "options": [
+            "weather",
+            "money",
+            "health",
+            "pronunciation"
+          ],
+          "answer_index": 3,
+          "answer_text": "pronunciation",
+          "explanation": "listening and pronunciation 听力和发音"
+        },
+        {
+          "qid": "g9u1.cz1.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 9,
+          "options": [
+            "slowly",
+            "easily",
+            "quietly",
+            "sadly"
+          ],
+          "answer_index": 1,
+          "answer_text": "easily",
+          "explanation": "speak more easily 更轻松地说"
+        },
+        {
+          "qid": "g9u1.cz1.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz1",
+          "blank": 10,
+          "options": [
+            "watch",
+            "watched",
+            "watching",
+            "watches"
+          ],
+          "answer_index": 2,
+          "answer_text": "watching",
+          "explanation": "as fun as watching 和看节目一样有趣(动名词)"
+        }
+      ]
     },
     {
-      "qid": "g9u1.cz.q2",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 2,
-      "options": [
-        "aloud",
-        "quietly",
-        "slowly",
-        "alone"
-      ],
-      "answer_index": 0,
-      "answer_text": "aloud",
-      "explanation": "read aloud 朗读以改善发音。"
+      "code": "g9u1.cz2",
+      "title": "My Mistake Notebook",
+      "text": "After every test, many students just look at their (1)____ and forget about them. But Linda does something (2)____. She keeps a mistake notebook. In it, she writes down every question she got (3)____. Next to it, she writes the (4)____ answer and the reason for her mistake. This helps her understand (5)____ she was wrong. Every weekend, she (6)____ her notebook and does the wrong questions (7)____. Slowly, she stops making the same mistakes. Her teacher says a mistake notebook is a very (8)____ tool. \"Your mistakes can become your best (9)____,\" she always says. Linda's grades have really (10)____ since she started.",
+      "questions": [
+        {
+          "qid": "g9u1.cz2.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 1,
+          "options": [
+            "friends",
+            "scores",
+            "songs",
+            "games"
+          ],
+          "answer_index": 1,
+          "answer_text": "scores",
+          "explanation": "look at scores 看分数"
+        },
+        {
+          "qid": "g9u1.cz2.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 2,
+          "options": [
+            "different",
+            "boring",
+            "easy",
+            "late"
+          ],
+          "answer_index": 0,
+          "answer_text": "different",
+          "explanation": "something different 不一样的事"
+        },
+        {
+          "qid": "g9u1.cz2.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 3,
+          "options": [
+            "right",
+            "easy",
+            "wrong",
+            "new"
+          ],
+          "answer_index": 2,
+          "answer_text": "wrong",
+          "explanation": "got wrong 做错的"
+        },
+        {
+          "qid": "g9u1.cz2.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 4,
+          "options": [
+            "same",
+            "free",
+            "short",
+            "correct"
+          ],
+          "answer_index": 3,
+          "answer_text": "correct",
+          "explanation": "the correct answer 正确答案"
+        },
+        {
+          "qid": "g9u1.cz2.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 5,
+          "options": [
+            "who",
+            "why",
+            "when",
+            "where"
+          ],
+          "answer_index": 1,
+          "answer_text": "why",
+          "explanation": "understand why 明白为什么"
+        },
+        {
+          "qid": "g9u1.cz2.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 6,
+          "options": [
+            "reviews",
+            "forgets",
+            "loses",
+            "sells"
+          ],
+          "answer_index": 0,
+          "answer_text": "reviews",
+          "explanation": "review 复习"
+        },
+        {
+          "qid": "g9u1.cz2.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 7,
+          "options": [
+            "never",
+            "once",
+            "again",
+            "seldom"
+          ],
+          "answer_index": 2,
+          "answer_text": "again",
+          "explanation": "do them again 重做"
+        },
+        {
+          "qid": "g9u1.cz2.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 8,
+          "options": [
+            "terrible",
+            "silly",
+            "empty",
+            "useful"
+          ],
+          "answer_index": 3,
+          "answer_text": "useful",
+          "explanation": "a useful tool 有用工具"
+        },
+        {
+          "qid": "g9u1.cz2.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 9,
+          "options": [
+            "teachers",
+            "enemies",
+            "games",
+            "secrets"
+          ],
+          "answer_index": 0,
+          "answer_text": "teachers",
+          "explanation": "best teachers 最好的老师"
+        },
+        {
+          "qid": "g9u1.cz2.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz2",
+          "blank": 10,
+          "options": [
+            "fallen",
+            "improved",
+            "stopped",
+            "ended"
+          ],
+          "answer_index": 1,
+          "answer_text": "improved",
+          "explanation": "grades improved 成绩提高"
+        }
+      ]
     },
     {
-      "qid": "g9u1.cz.q3",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 3,
-      "options": [
-        "grammar",
-        "vocabulary",
-        "pronunciation",
-        "knowledge"
-      ],
-      "answer_index": 1,
-      "answer_text": "vocabulary",
-      "explanation": "make word cards 是为扩大 vocabulary。"
+      "code": "g9u1.cz3",
+      "title": "Little Bits of Time",
+      "text": "Peter is always busy, but he still learns many English words. His (1)____ is using little bits of time. He makes small word (2)____ and carries them in his (3)____. On the bus to school, he takes them (4)____ and reads a few. While he is (5)____ for his friends, he looks at one or two more. He even reviews them for a minute before he goes to (6)____. Each time is very (7)____, but the minutes add (8)____. In this way, Peter learns about ten new words every (9)____ without spending extra hours. He believes that time is like gold and should never be (10)____.",
+      "questions": [
+        {
+          "qid": "g9u1.cz3.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 1,
+          "options": [
+            "problem",
+            "mistake",
+            "secret",
+            "rule"
+          ],
+          "answer_index": 2,
+          "answer_text": "secret",
+          "explanation": "his secret 秘诀"
+        },
+        {
+          "qid": "g9u1.cz3.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 2,
+          "options": [
+            "songs",
+            "games",
+            "books",
+            "cards"
+          ],
+          "answer_index": 3,
+          "answer_text": "cards",
+          "explanation": "word cards 单词卡"
+        },
+        {
+          "qid": "g9u1.cz3.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 3,
+          "options": [
+            "pocket",
+            "head",
+            "garden",
+            "river"
+          ],
+          "answer_index": 0,
+          "answer_text": "pocket",
+          "explanation": "in his pocket 口袋里"
+        },
+        {
+          "qid": "g9u1.cz3.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 4,
+          "options": [
+            "off",
+            "out",
+            "away",
+            "down"
+          ],
+          "answer_index": 1,
+          "answer_text": "out",
+          "explanation": "take them out 拿出来"
+        },
+        {
+          "qid": "g9u1.cz3.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 5,
+          "options": [
+            "sleeping",
+            "running",
+            "waiting",
+            "singing"
+          ],
+          "answer_index": 2,
+          "answer_text": "waiting",
+          "explanation": "waiting for 等待"
+        },
+        {
+          "qid": "g9u1.cz3.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 6,
+          "options": [
+            "school",
+            "work",
+            "class",
+            "bed"
+          ],
+          "answer_index": 3,
+          "answer_text": "bed",
+          "explanation": "go to bed 睡觉"
+        },
+        {
+          "qid": "g9u1.cz3.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 7,
+          "options": [
+            "short",
+            "long",
+            "hard",
+            "free"
+          ],
+          "answer_index": 0,
+          "answer_text": "short",
+          "explanation": "very short 很短"
+        },
+        {
+          "qid": "g9u1.cz3.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 8,
+          "options": [
+            "down",
+            "up",
+            "off",
+            "in"
+          ],
+          "answer_index": 1,
+          "answer_text": "up",
+          "explanation": "add up 累积"
+        },
+        {
+          "qid": "g9u1.cz3.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 9,
+          "options": [
+            "year",
+            "week",
+            "month",
+            "day"
+          ],
+          "answer_index": 3,
+          "answer_text": "day",
+          "explanation": "every day 每天"
+        },
+        {
+          "qid": "g9u1.cz3.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz3",
+          "blank": 10,
+          "options": [
+            "saved",
+            "used",
+            "wasted",
+            "kept"
+          ],
+          "answer_index": 2,
+          "answer_text": "wasted",
+          "explanation": "never be wasted 不该浪费"
+        }
+      ]
     },
     {
-      "qid": "g9u1.cz.q4",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 4,
-      "options": [
-        "writing",
-        "copying",
-        "reading",
-        "drawing"
-      ],
-      "answer_index": 2,
-      "answer_text": "reading",
-      "explanation": "by reading the sentences around it 读上下文猜词义。"
+      "code": "g9u1.cz4",
+      "title": "Speaking in Front of Others",
+      "text": "Maria used to be very (1)____. She was afraid to speak English in (2)____ of the class. Her face turned red whenever the teacher asked her a (3)____. One day, the teacher asked everyone to give a short (4)____ about their hobby. Maria was so (5)____ that she could not sleep. But she decided to (6)____ it a try. She practised her talk many times at (7)____ and read it (8)____ until she knew it well. When the big day came, she stood up and spoke (9)____. Everyone listened and clapped for her. After that, Maria was no longer afraid to (10)____ in public.",
+      "questions": [
+        {
+          "qid": "g9u1.cz4.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 1,
+          "options": [
+            "brave",
+            "tall",
+            "happy",
+            "shy"
+          ],
+          "answer_index": 3,
+          "answer_text": "shy",
+          "explanation": "used to be shy 曾很害羞"
+        },
+        {
+          "qid": "g9u1.cz4.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 2,
+          "options": [
+            "front",
+            "back",
+            "top",
+            "middle"
+          ],
+          "answer_index": 0,
+          "answer_text": "front",
+          "explanation": "in front of 在……前面"
+        },
+        {
+          "qid": "g9u1.cz4.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 3,
+          "options": [
+            "song",
+            "question",
+            "game",
+            "story"
+          ],
+          "answer_index": 1,
+          "answer_text": "question",
+          "explanation": "ask a question 提问"
+        },
+        {
+          "qid": "g9u1.cz4.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 4,
+          "options": [
+            "song",
+            "game",
+            "talk",
+            "meal"
+          ],
+          "answer_index": 2,
+          "answer_text": "talk",
+          "explanation": "give a short talk 做简短发言"
+        },
+        {
+          "qid": "g9u1.cz4.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 5,
+          "options": [
+            "glad",
+            "free",
+            "lucky",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "answer_text": "nervous",
+          "explanation": "so nervous 紧张得"
+        },
+        {
+          "qid": "g9u1.cz4.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 6,
+          "options": [
+            "give",
+            "take",
+            "make",
+            "get"
+          ],
+          "answer_index": 0,
+          "answer_text": "give",
+          "explanation": "give it a try 试一试"
+        },
+        {
+          "qid": "g9u1.cz4.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 7,
+          "options": [
+            "school",
+            "home",
+            "noon",
+            "night"
+          ],
+          "answer_index": 1,
+          "answer_text": "home",
+          "explanation": "at home 在家"
+        },
+        {
+          "qid": "g9u1.cz4.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 8,
+          "options": [
+            "quietly",
+            "slowly",
+            "aloud",
+            "alone"
+          ],
+          "answer_index": 2,
+          "answer_text": "aloud",
+          "explanation": "read aloud 朗读"
+        },
+        {
+          "qid": "g9u1.cz4.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 9,
+          "options": [
+            "clearly",
+            "badly",
+            "loudly",
+            "slowly"
+          ],
+          "answer_index": 0,
+          "answer_text": "clearly",
+          "explanation": "spoke clearly 说得清楚"
+        },
+        {
+          "qid": "g9u1.cz4.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz4",
+          "blank": 10,
+          "options": [
+            "sleep",
+            "sing",
+            "run",
+            "speak"
+          ],
+          "answer_index": 3,
+          "answer_text": "speak",
+          "explanation": "speak in public 当众说"
+        }
+      ]
     },
     {
-      "qid": "g9u1.cz.q5",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 5,
-      "options": [
-        "quiet",
-        "shy",
-        "tired",
-        "active"
-      ],
-      "answer_index": 3,
-      "answer_text": "active",
-      "explanation": "常提问→更 active 积极。"
+      "code": "g9u1.cz5",
+      "title": "Asking a Classmate for Help",
+      "text": "Jack was good at most subjects, but he had trouble with English (1)____. He could not understand how to use the object (2)____. His homework was often (3)____, and he felt worried. Instead of giving up, he decided to ask his (4)____ Lily for help. Lily was happy to (5)____ him. She explained the rule with simple (6)____ and made him a few practice (7)____. \"Don't worry,\" she said. \"Everyone needs help (8)____.\" With her help, Jack slowly began to (9)____ the grammar. His next test was much (10)____. Jack learned that asking a classmate for help is a smart thing to do.",
+      "questions": [
+        {
+          "qid": "g9u1.cz5.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 1,
+          "options": [
+            "grammar",
+            "music",
+            "sports",
+            "art"
+          ],
+          "answer_index": 0,
+          "answer_text": "grammar",
+          "explanation": "English grammar 英语语法"
+        },
+        {
+          "qid": "g9u1.cz5.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 2,
+          "options": [
+            "song",
+            "clause",
+            "game",
+            "number"
+          ],
+          "answer_index": 1,
+          "answer_text": "clause",
+          "explanation": "object clause 宾语从句"
+        },
+        {
+          "qid": "g9u1.cz5.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 3,
+          "options": [
+            "right",
+            "easy",
+            "wrong",
+            "free"
+          ],
+          "answer_index": 2,
+          "answer_text": "wrong",
+          "explanation": "often wrong 常做错"
+        },
+        {
+          "qid": "g9u1.cz5.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 4,
+          "options": [
+            "teacher",
+            "brother",
+            "neighbour",
+            "classmate"
+          ],
+          "answer_index": 3,
+          "answer_text": "classmate",
+          "explanation": "ask his classmate 问同学"
+        },
+        {
+          "qid": "g9u1.cz5.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 5,
+          "options": [
+            "help",
+            "stop",
+            "watch",
+            "leave"
+          ],
+          "answer_index": 0,
+          "answer_text": "help",
+          "explanation": "happy to help 乐意帮"
+        },
+        {
+          "qid": "g9u1.cz5.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 6,
+          "options": [
+            "colours",
+            "examples",
+            "songs",
+            "games"
+          ],
+          "answer_index": 1,
+          "answer_text": "examples",
+          "explanation": "with examples 用例子"
+        },
+        {
+          "qid": "g9u1.cz5.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 7,
+          "options": [
+            "pictures",
+            "meals",
+            "questions",
+            "trips"
+          ],
+          "answer_index": 2,
+          "answer_text": "questions",
+          "explanation": "practice questions 练习题"
+        },
+        {
+          "qid": "g9u1.cz5.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 8,
+          "options": [
+            "never",
+            "seldom",
+            "hardly",
+            "sometimes"
+          ],
+          "answer_index": 3,
+          "answer_text": "sometimes",
+          "explanation": "needs help sometimes 有时需要帮助"
+        },
+        {
+          "qid": "g9u1.cz5.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 9,
+          "options": [
+            "forget",
+            "understand",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 1,
+          "answer_text": "understand",
+          "explanation": "understand the grammar 理解语法"
+        },
+        {
+          "qid": "g9u1.cz5.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz5",
+          "blank": 10,
+          "options": [
+            "better",
+            "worse",
+            "harder",
+            "smaller"
+          ],
+          "answer_index": 0,
+          "answer_text": "better",
+          "explanation": "much better 好多了"
+        }
+      ]
     },
     {
-      "qid": "g9u1.cz.q6",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 6,
-      "options": [
-        "mistakes",
-        "friends",
-        "notes",
-        "plans"
-      ],
-      "answer_index": 0,
-      "answer_text": "mistakes",
-      "explanation": "everyone makes mistakes 人人都会犯错。"
-    },
-    {
-      "qid": "g9u1.cz.q7",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 7,
-      "options": [
-        "angry",
-        "patient",
-        "busy",
-        "strict"
-      ],
-      "answer_index": 1,
-      "answer_text": "patient",
-      "explanation": "对自己有耐心 patient,不放弃。"
-    },
-    {
-      "qid": "g9u1.cz.q8",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 8,
-      "options": [
-        "problems",
-        "mistakes",
-        "friends",
-        "enemies"
-      ],
-      "answer_index": 2,
-      "answer_text": "friends",
-      "explanation": "加入俱乐部→结交许多 friends。"
-    },
-    {
-      "qid": "g9u1.cz.q9",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 9,
-      "options": [
-        "fell",
-        "stopped",
-        "improved",
-        "disappeared"
-      ],
-      "answer_index": 2,
-      "answer_text": "improved",
-      "explanation": "坚持努力→英语 improved 提高。"
-    },
-    {
-      "qid": "g9u1.cz.q10",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.cz",
-      "blank": 10,
-      "options": [
-        "time",
-        "place",
-        "reason",
-        "way"
-      ],
-      "answer_index": 3,
-      "answer_text": "way",
-      "explanation": "find the right way 找到正确方法,呼应全文。"
+      "code": "g9u1.cz6",
+      "title": "Making a Study Plan",
+      "text": "Exams were coming, and Emma had a lot to (1)____. At first she felt worried because there was so much to do. Then she decided to make a study (2)____. She wrote down all the subjects and how much (3)____ she needed for each one. She put the most difficult subject (4)____. Every day, she studied for a short (5)____ and then took a break. She did not try to learn everything in one (6)____. Before bed, she quickly (7)____ what she had studied that day. Because of her plan, Emma felt (8)____ and ready. She did not need to (9)____ all night before the exam. A good plan, she found, makes study easier and (10)____.",
+      "questions": [
+        {
+          "qid": "g9u1.cz6.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 1,
+          "options": [
+            "review",
+            "sing",
+            "draw",
+            "buy"
+          ],
+          "answer_index": 0,
+          "answer_text": "review",
+          "explanation": "a lot to review 很多要复习"
+        },
+        {
+          "qid": "g9u1.cz6.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 2,
+          "options": [
+            "game",
+            "plan",
+            "song",
+            "rule"
+          ],
+          "answer_index": 1,
+          "answer_text": "plan",
+          "explanation": "a study plan 学习计划"
+        },
+        {
+          "qid": "g9u1.cz6.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 3,
+          "options": [
+            "money",
+            "food",
+            "time",
+            "water"
+          ],
+          "answer_index": 2,
+          "answer_text": "time",
+          "explanation": "how much time 多少时间"
+        },
+        {
+          "qid": "g9u1.cz6.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 4,
+          "options": [
+            "last",
+            "late",
+            "slow",
+            "first"
+          ],
+          "answer_index": 3,
+          "answer_text": "first",
+          "explanation": "the hardest first 最难的先做"
+        },
+        {
+          "qid": "g9u1.cz6.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 5,
+          "options": [
+            "while",
+            "year",
+            "week",
+            "month"
+          ],
+          "answer_index": 0,
+          "answer_text": "while",
+          "explanation": "a short while 一小会儿"
+        },
+        {
+          "qid": "g9u1.cz6.q6",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 6,
+          "options": [
+            "day",
+            "night",
+            "week",
+            "hour"
+          ],
+          "answer_index": 1,
+          "answer_text": "night",
+          "explanation": "in one night 一晚之内"
+        },
+        {
+          "qid": "g9u1.cz6.q7",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 7,
+          "options": [
+            "lost",
+            "dropped",
+            "checked",
+            "sold"
+          ],
+          "answer_index": 2,
+          "answer_text": "checked",
+          "explanation": "checked what 检查所学"
+        },
+        {
+          "qid": "g9u1.cz6.q8",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 8,
+          "options": [
+            "angry",
+            "sad",
+            "tired",
+            "calm"
+          ],
+          "answer_index": 3,
+          "answer_text": "calm",
+          "explanation": "felt calm 感到平静"
+        },
+        {
+          "qid": "g9u1.cz6.q9",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 9,
+          "options": [
+            "study",
+            "sleep",
+            "eat",
+            "play"
+          ],
+          "answer_index": 0,
+          "answer_text": "study",
+          "explanation": "study all night 通宵学"
+        },
+        {
+          "qid": "g9u1.cz6.q10",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.cz6",
+          "blank": 10,
+          "options": [
+            "worse",
+            "better",
+            "harder",
+            "slower"
+          ],
+          "answer_index": 1,
+          "answer_text": "better",
+          "explanation": "easier and better 更轻松更好"
+        }
+      ]
     }
   ]
 }

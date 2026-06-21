@@ -1,181 +1,555 @@
 {
   "volume": "g9",
   "unit": "U1",
-  "code": "g9u1.ls",
-  "materials": [
+  "exercises": [
     {
+      "code": "g9u1.ls1",
+      "title": "九年级 U1 听力·对话 How to Practise Listening",
       "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_female",
       "transcript": [
-        "Lin Tao: Hi, Sarah! The English exam is coming. How do you study for it?",
-        "Sarah: I study by reading English stories every night. It helps me learn new words.",
-        "Lin Tao: That's a good idea. But I always forget new words quickly.",
-        "Sarah: You can try making word cards and reviewing them on the bus.",
-        "Lin Tao: Sounds useful. What about listening? Mine is really weak.",
-        "Sarah: Don't worry. I improved my listening by watching short English videos.",
-        "Lin Tao: How long do you watch them every day?",
-        "Sarah: About twenty minutes. Be patient, and you'll get better step by step.",
-        "Lin Tao: Thank you, Sarah. I'll start tonight!"
+        "Anna: Ben, my listening is really weak. How can I practise it?",
+        "Ben: I listen to short English songs and stories every day.",
+        "Anna: Do you understand everything?",
+        "Ben: No, not at first. But I listen to the same one a few times.",
+        "Anna: That's a good idea. Anything else?",
+        "Ben: Yes. I try to catch the key words, not every word.",
+        "Anna: So I don't need to understand every word?",
+        "Ben: Right. Just relax and listen a little every day. You'll get better."
       ],
-      "translation_cn": "林涛:嗨,莎拉!英语考试快到了,你怎么备考?/莎拉:我每晚通过读英语故事来学习,这能帮我记新词。/林涛:好主意。可我总是很快忘掉新词。/莎拉:你可以试试做单词卡片,在公交车上复习。/林涛:听起来有用。听力呢?我很弱。/莎拉:别担心,我是通过看英语短视频提高听力的。/林涛:你每天看多久?/莎拉:大约二十分钟。要有耐心,你会一步步进步。/林涛:谢谢你,莎拉!我今晚就开始!"
+      "translation_cn": "Anna说听力弱,问Ben怎么练。Ben:每天听英文歌和故事,起初听不懂就同一段多听几遍,只抓关键词而非每个词,放松、每天听一点就会进步。",
+      "questions": [
+        {
+          "qid": "g9u1.ls1.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls1",
+          "stem": "What is Anna's problem?",
+          "options": [
+            "Her listening is weak.",
+            "Her reading is weak.",
+            "Her writing is weak.",
+            "Her speaking is weak."
+          ],
+          "answer_index": 0,
+          "answer_text": "Her listening is weak."
+        },
+        {
+          "qid": "g9u1.ls1.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls1",
+          "stem": "How does Ben practise listening?",
+          "options": [
+            "By reading books.",
+            "By listening to songs and stories every day.",
+            "By writing diaries.",
+            "By playing games."
+          ],
+          "answer_index": 1,
+          "answer_text": "By listening to songs and stories every day."
+        },
+        {
+          "qid": "g9u1.ls1.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls1",
+          "stem": "Does Ben understand everything at first?",
+          "options": [
+            "Yes, all of it.",
+            "Yes, most of it.",
+            "No.",
+            "He never listens."
+          ],
+          "answer_index": 2,
+          "answer_text": "No."
+        },
+        {
+          "qid": "g9u1.ls1.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls1",
+          "stem": "What does Ben try to catch?",
+          "options": [
+            "Every word.",
+            "The Chinese.",
+            "The music only.",
+            "The key words."
+          ],
+          "answer_index": 3,
+          "answer_text": "The key words."
+        },
+        {
+          "qid": "g9u1.ls1.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls1",
+          "stem": "What is Ben's advice?",
+          "options": [
+            "Relax and listen a little every day.",
+            "Stop listening.",
+            "Listen only before exams.",
+            "Translate every word."
+          ],
+          "answer_index": 0,
+          "answer_text": "Relax and listen a little every day."
+        }
+      ]
     },
     {
+      "code": "g9u1.ls2",
+      "title": "九年级 U1 听力·短文 Listening While Running",
       "type": "passage",
+      "kind": "short",
+      "speaker": "us_male",
       "transcript": [
-        "My name is Mike. Last year my English was poor, but now I am one of the best students in my class. How did I change? First, I learned grammar by doing exercises every day. Second, I increased my vocabulary by reading newspapers and writing down useful expressions. I also practised speaking by talking with my foreign teacher after class. At first it was hard, but I never gave up. Now I really enjoy learning English, and I believe everyone can become a good learner by working hard and finding the right way."
+        "Every morning, I go running in the park. But I don't just run. I also learn English. I put on my earphones and listen to short English news on my phone. At first, the news was too fast, and I could not follow it. But I did not stop. I listened to the same news again later and read the words. Now I can understand most of it. Running and listening together save me time, and they make my morning happy."
       ],
-      "translation_cn": "我叫迈克。去年我的英语很差,但现在我是班上最好的学生之一。我怎么改变的?第一,我每天通过做练习学语法。第二,我通过读报纸、记下有用表达来扩大词汇量。我还通过课后和外教交谈练口语。起初很难,但我从不放弃。现在我很享受学英语,我相信只要努力并找到正确方法,人人都能成为优秀的学习者。"
-    }
-  ],
-  "questions": [
-    {
-      "qid": "g9u1.ls.q1",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How does Sarah study for the English exam?",
-      "options": [
-        "By playing games.",
-        "By singing songs.",
-        "By reading English stories.",
-        "By drawing pictures."
-      ],
-      "answer_index": 2,
-      "answer_text": "By reading English stories."
+      "translation_cn": "“我”每天清晨在公园跑步,同时戴耳机听手机里的英文短新闻。起初语速太快跟不上,但没放弃,事后又听同一条并读文字,现在大部分能懂。边跑边听省时,清晨更愉快。",
+      "questions": [
+        {
+          "qid": "g9u1.ls2.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls2",
+          "stem": "Where does the speaker run?",
+          "options": [
+            "At school.",
+            "In the park.",
+            "On the playground.",
+            "At home."
+          ],
+          "answer_index": 1,
+          "answer_text": "In the park."
+        },
+        {
+          "qid": "g9u1.ls2.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls2",
+          "stem": "What does the speaker listen to?",
+          "options": [
+            "English songs.",
+            "Chinese stories.",
+            "Short English news.",
+            "Pop music."
+          ],
+          "answer_index": 2,
+          "answer_text": "Short English news."
+        },
+        {
+          "qid": "g9u1.ls2.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls2",
+          "stem": "What was the problem at first?",
+          "options": [
+            "The phone was broken.",
+            "The park was noisy.",
+            "The words were Chinese.",
+            "The news was too fast."
+          ],
+          "answer_index": 3,
+          "answer_text": "The news was too fast."
+        },
+        {
+          "qid": "g9u1.ls2.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls2",
+          "stem": "What did the speaker do to understand better?",
+          "options": [
+            "Listened again and read the words.",
+            "Gave up.",
+            "Asked a friend.",
+            "Ran faster."
+          ],
+          "answer_index": 0,
+          "answer_text": "Listened again and read the words."
+        },
+        {
+          "qid": "g9u1.ls2.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls2",
+          "stem": "Why does the speaker like this way?",
+          "options": [
+            "It is expensive.",
+            "It saves time.",
+            "It is boring.",
+            "It wastes time."
+          ],
+          "answer_index": 1,
+          "answer_text": "It saves time."
+        }
+      ]
     },
     {
-      "qid": "g9u1.ls.q2",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "What does Sarah suggest for remembering words?",
-      "options": [
-        "Making word cards.",
-        "Reading aloud.",
-        "Copying the textbook.",
-        "Asking the teacher."
+      "code": "g9u1.ls3",
+      "title": "九年级 U1 听力·对话 Guessing Words While Reading",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_female",
+      "transcript": [
+        "Tom: Lily, you read English so fast. What's your secret?",
+        "Lily: When I meet a new word, I don't stop to look it up.",
+        "Tom: Really? But how do you know the meaning?",
+        "Lily: I guess it from the other words in the sentence.",
+        "Tom: Doesn't that slow you down?",
+        "Lily: No. Stopping for every word slows you down more.",
+        "Tom: So I should just keep reading?",
+        "Lily: Yes. You can check important words later. Guessing helps you read faster."
       ],
-      "answer_index": 0,
-      "answer_text": "Making word cards."
+      "translation_cn": "Tom问Lily读得快的秘诀。Lily:遇生词不停下查词典,而是根据句中其他词猜义;每个词都停反而更慢;重要的词可稍后再查,猜词帮助读得更快。",
+      "questions": [
+        {
+          "qid": "g9u1.ls3.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls3",
+          "stem": "What is Lily good at?",
+          "options": [
+            "Writing stories.",
+            "Singing songs.",
+            "Reading English fast.",
+            "Drawing pictures."
+          ],
+          "answer_index": 2,
+          "answer_text": "Reading English fast."
+        },
+        {
+          "qid": "g9u1.ls3.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls3",
+          "stem": "What does Lily do when she meets a new word?",
+          "options": [
+            "She stops at once.",
+            "She skips the page.",
+            "She asks Tom.",
+            "She doesn't stop to look it up."
+          ],
+          "answer_index": 3,
+          "answer_text": "She doesn't stop to look it up."
+        },
+        {
+          "qid": "g9u1.ls3.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls3",
+          "stem": "How does Lily know the meaning?",
+          "options": [
+            "She guesses from the sentence.",
+            "She uses a phone.",
+            "She asks the teacher.",
+            "She reads Chinese."
+          ],
+          "answer_index": 0,
+          "answer_text": "She guesses from the sentence."
+        },
+        {
+          "qid": "g9u1.ls3.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls3",
+          "stem": "What slows readers down more?",
+          "options": [
+            "Reading in groups.",
+            "Stopping for every word.",
+            "Guessing words.",
+            "Reading aloud."
+          ],
+          "answer_index": 1,
+          "answer_text": "Stopping for every word."
+        },
+        {
+          "qid": "g9u1.ls3.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls3",
+          "stem": "When can Tom check important words?",
+          "options": [
+            "Never.",
+            "Before reading.",
+            "Later.",
+            "In a song."
+          ],
+          "answer_index": 2,
+          "answer_text": "Later."
+        }
+      ]
     },
     {
-      "qid": "g9u1.ls.q3",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How did Sarah improve her listening?",
-      "options": [
-        "By taking notes.",
-        "By reading novels.",
-        "By making friends.",
-        "By watching short English videos."
+      "code": "g9u1.ls4",
+      "title": "九年级 U1 听力·短文 Using a Learner's Dictionary",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_male",
+      "transcript": [
+        "When I learn a new word, I like to use a learner's dictionary. It is different from a normal dictionary. It uses simple English to explain each word, so I can understand the meaning easily. It also gives example sentences, which show me how to use the word. Sometimes one word has several meanings, and the dictionary shows them all. After I read the example, I make my own sentence with the word. A good dictionary is like a quiet teacher that is always ready to help."
       ],
-      "answer_index": 3,
-      "answer_text": "By watching short English videos."
+      "translation_cn": "学新词时,“我”爱用学习型词典。它和普通词典不同:用简单英语解释,容易懂;还给例句示范用法;一词多义时全列出。读完例句后我用该词自己造句。好词典像一位随时帮忙的安静老师。",
+      "questions": [
+        {
+          "qid": "g9u1.ls4.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls4",
+          "stem": "What does the speaker use to learn a new word?",
+          "options": [
+            "A phone game.",
+            "A storybook.",
+            "A song list.",
+            "A learner's dictionary."
+          ],
+          "answer_index": 3,
+          "answer_text": "A learner's dictionary."
+        },
+        {
+          "qid": "g9u1.ls4.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls4",
+          "stem": "How is it different from a normal dictionary?",
+          "options": [
+            "It uses simple English to explain.",
+            "It uses pictures only.",
+            "It has no words.",
+            "It is in Chinese."
+          ],
+          "answer_index": 0,
+          "answer_text": "It uses simple English to explain."
+        },
+        {
+          "qid": "g9u1.ls4.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls4",
+          "stem": "What else does the dictionary give?",
+          "options": [
+            "Free gifts.",
+            "Example sentences.",
+            "Music.",
+            "Games."
+          ],
+          "answer_index": 1,
+          "answer_text": "Example sentences."
+        },
+        {
+          "qid": "g9u1.ls4.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls4",
+          "stem": "What does the speaker do after reading the example?",
+          "options": [
+            "Closes the book.",
+            "Forgets the word.",
+            "Makes his own sentence.",
+            "Draws a picture."
+          ],
+          "answer_index": 2,
+          "answer_text": "Makes his own sentence."
+        },
+        {
+          "qid": "g9u1.ls4.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls4",
+          "stem": "What is a good dictionary compared to?",
+          "options": [
+            "A loud radio.",
+            "A fast train.",
+            "A big game.",
+            "A quiet teacher."
+          ],
+          "answer_index": 3,
+          "answer_text": "A quiet teacher."
+        }
+      ]
     },
     {
-      "qid": "g9u1.ls.q4",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How long does Sarah watch videos every day?",
-      "options": [
-        "About ten minutes.",
-        "About twenty minutes.",
-        "About half an hour.",
-        "About one hour."
+      "code": "g9u1.ls5",
+      "title": "九年级 U1 听力·对话 Starting a Study Group",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_female",
+      "transcript": [
+        "Lucy: Shall we start an English study group?",
+        "Mark: Good idea! How many people should we have?",
+        "Lucy: About four. Too many people will be noisy.",
+        "Mark: OK. When and where shall we meet?",
+        "Lucy: Every Sunday afternoon at my home.",
+        "Mark: What will we do in the group?",
+        "Lucy: We can read together, share word cards and test each other.",
+        "Mark: Great! Studying with friends is more fun than studying alone."
       ],
-      "answer_index": 1,
-      "answer_text": "About twenty minutes."
+      "translation_cn": "Lucy提议办英语学习小组。两人商定:约四人(太多会吵);每周日下午在Lucy家;活动是一起读、分享单词卡、互相测验。Mark觉得和朋友一起学比一个人学更有趣。",
+      "questions": [
+        {
+          "qid": "g9u1.ls5.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls5",
+          "stem": "What do they want to start?",
+          "options": [
+            "An English study group.",
+            "A sports team.",
+            "A music band.",
+            "A book shop."
+          ],
+          "answer_index": 0,
+          "answer_text": "An English study group."
+        },
+        {
+          "qid": "g9u1.ls5.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls5",
+          "stem": "How many people does Lucy want?",
+          "options": [
+            "About ten.",
+            "About four.",
+            "About twenty.",
+            "Only two."
+          ],
+          "answer_index": 1,
+          "answer_text": "About four."
+        },
+        {
+          "qid": "g9u1.ls5.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls5",
+          "stem": "Why not too many people?",
+          "options": [
+            "It will be cheap.",
+            "It will be boring.",
+            "It will be noisy.",
+            "It will be easy."
+          ],
+          "answer_index": 2,
+          "answer_text": "It will be noisy."
+        },
+        {
+          "qid": "g9u1.ls5.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls5",
+          "stem": "When will they meet?",
+          "options": [
+            "Every morning.",
+            "On Monday night.",
+            "Every day.",
+            "Every Sunday afternoon."
+          ],
+          "answer_index": 3,
+          "answer_text": "Every Sunday afternoon."
+        },
+        {
+          "qid": "g9u1.ls5.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls5",
+          "stem": "What does Mark think about studying with friends?",
+          "options": [
+            "It is more fun than studying alone.",
+            "It is harder.",
+            "It is boring.",
+            "It wastes time."
+          ],
+          "answer_index": 0,
+          "answer_text": "It is more fun than studying alone."
+        }
+      ]
     },
     {
-      "qid": "g9u1.ls.q5",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "What does Sarah tell Lin Tao to be?",
-      "options": [
-        "Careful.",
-        "Quiet.",
-        "Patient.",
-        "Active."
+      "code": "g9u1.ls6",
+      "title": "九年级 U1 听力·短文 Getting Ready Before Class",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Many students only study after class, but I also get ready before class. The night before, I read the new lesson in my textbook. I look at the new words and mark the parts I don't understand. Then, in class, I listen more carefully to those difficult parts. Because I am ready, I can follow the teacher easily and answer more questions. Getting ready before class only takes ten minutes, but it makes the lesson much easier. I think it is one of the best study habits."
       ],
-      "answer_index": 2,
-      "answer_text": "Patient."
-    },
-    {
-      "qid": "g9u1.ls.q6",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How was Mike's English last year?",
-      "options": [
-        "Poor.",
-        "Excellent.",
-        "Just OK.",
-        "The best."
-      ],
-      "answer_index": 0,
-      "answer_text": "Poor."
-    },
-    {
-      "qid": "g9u1.ls.q7",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How did Mike learn grammar?",
-      "options": [
-        "By listening to tapes.",
-        "By watching TV.",
-        "By chatting online.",
-        "By doing exercises every day."
-      ],
-      "answer_index": 3,
-      "answer_text": "By doing exercises every day."
-    },
-    {
-      "qid": "g9u1.ls.q8",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How did Mike increase his vocabulary?",
-      "options": [
-        "By playing word games.",
-        "By reading newspapers and writing down expressions.",
-        "By memorizing the dictionary.",
-        "By writing letters."
-      ],
-      "answer_index": 1,
-      "answer_text": "By reading newspapers and writing down expressions."
-    },
-    {
-      "qid": "g9u1.ls.q9",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "How did Mike practise speaking?",
-      "options": [
-        "By reading aloud at home.",
-        "By recording himself.",
-        "By talking with his foreign teacher.",
-        "By singing songs."
-      ],
-      "answer_index": 2,
-      "answer_text": "By talking with his foreign teacher."
-    },
-    {
-      "qid": "g9u1.ls.q10",
-      "volume": "g9",
-      "unit": "U1",
-      "code": "g9u1.ls",
-      "stem": "What does Mike believe?",
-      "options": [
-        "Everyone can become a good learner by working hard.",
-        "English is useless.",
-        "Only clever students learn well.",
-        "Learning English is impossible."
-      ],
-      "answer_index": 0,
-      "answer_text": "Everyone can become a good learner by working hard."
+      "translation_cn": "许多同学只在课后学,而“我”也在课前预习:前一晚读课本新课,看生词、标出不懂的地方;上课时更专心听那些难点。因为有准备,能轻松跟上老师、多回答问题。预习每次只花十分钟,却让课变得简单,是最好的学习习惯之一。",
+      "questions": [
+        {
+          "qid": "g9u1.ls6.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls6",
+          "stem": "What does the speaker do that many students don't?",
+          "options": [
+            "Sleep in class.",
+            "Get ready before class.",
+            "Skip homework.",
+            "Eat in class."
+          ],
+          "answer_index": 1,
+          "answer_text": "Get ready before class."
+        },
+        {
+          "qid": "g9u1.ls6.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls6",
+          "stem": "When does the speaker read the new lesson?",
+          "options": [
+            "After the exam.",
+            "During the holiday.",
+            "In the morning only.",
+            "The night before."
+          ],
+          "answer_index": 3,
+          "answer_text": "The night before."
+        },
+        {
+          "qid": "g9u1.ls6.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls6",
+          "stem": "What does the speaker mark?",
+          "options": [
+            "The easy parts.",
+            "The pictures.",
+            "The parts he doesn't understand.",
+            "The page numbers."
+          ],
+          "answer_index": 2,
+          "answer_text": "The parts he doesn't understand."
+        },
+        {
+          "qid": "g9u1.ls6.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls6",
+          "stem": "What is the result in class?",
+          "options": [
+            "He can follow the teacher easily.",
+            "He feels sleepy.",
+            "He is always late.",
+            "He cannot hear."
+          ],
+          "answer_index": 0,
+          "answer_text": "He can follow the teacher easily."
+        },
+        {
+          "qid": "g9u1.ls6.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.ls6",
+          "stem": "How long does getting ready take?",
+          "options": [
+            "Two hours.",
+            "Ten minutes.",
+            "A whole day.",
+            "One minute."
+          ],
+          "answer_index": 1,
+          "answer_text": "Ten minutes."
+        }
+      ]
     }
   ]
 }

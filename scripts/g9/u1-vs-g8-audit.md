@@ -25,7 +25,7 @@
 - ✅ vocab_notes:8=100% / 9=100%
 - ✅ difficulty:8=100% / 9=100%
 
-### junior_cloze  (8年级 {"volume":"7B"}:16行 | 9年级 g9/U1:1行)
+### junior_cloze  (8年级 {"volume":"7B"}:16行 | 9年级 g9/U1:6行)
 - ✅ title:8=100% / 9=100%
 - ✅ body:8=100% / 9=100%
 - ✅ word_count:8=100% / 9=100%
@@ -33,7 +33,7 @@
 - ✅ difficulty:8=100% / 9=100%
 - ✅ sort_order:8=100% / 9=100%
 
-### junior_listening_exercises  (8年级 {"volume":"8A","unit":"U1"}:6行 | 9年级 g9/U1:2行)
+### junior_listening_exercises  (8年级 {"volume":"8A","unit":"U1"}:6行 | 9年级 g9/U1:6行)
 - ✅ title:8=100% / 9=100%
 - ✅ topic:8=100% / 9=100%
 - ✅ difficulty:8=100% / 9=100%
@@ -82,8 +82,8 @@
 ## 2. 归属完整性(9年级 volume/unit/grade 非空)
 - ✅ junior_vocab:29行,缺归属 0
 - ✅ junior_reading:6行,缺归属 0
-- ✅ junior_cloze:1行,缺归属 0
-- ✅ junior_listening_exercises:2行,缺归属 0
+- ✅ junior_cloze:6行,缺归属 0
+- ✅ junior_listening_exercises:6行,缺归属 0
 - ✅ junior_grammar_points:3行,缺归属/分类 0
 
 ## 3. 掌握度口径一致性(9年级与8年级同表→同函数→同阈值)

@@ -3,8 +3,8 @@
   "unit": "U1",
   "code": "g9u1.final",
   "title": "Unit 1 单元通关",
-  "note": "从语法/阅读/完形/听力各关已出题目抽题组卷,不另出新题,仅引用 qid。完形题携带其所属短文原文。",
-  "cloze_context": "Li Lei used to be weak in English. He could not understand the teacher and was afraid to __1__ in class. Then he decided to change. Every morning he read English __2__ for twenty minutes to improve his pronunciation. He also built his __3__ by making word cards and reviewing them on the bus. When he met a new word, he tried to guess its meaning by __4__ the sentences around it. In class, he became more __5__ and often asked the teacher questions. He knew that everyone makes __6__, so he was __7__ with himself and never gave up. He also joined an English club, where he made many __8__. Little by little, his English __9__. Now he can have a conversation with foreign visitors easily. Li Lei says that anyone can learn English well by working hard and finding the right __10__.",
+  "note": "运行时 buildFinalQuiz 组卷:语法7(g9u1.01/02/03 DB)+听力3(内联)+词汇2。完形题携带原文。",
+  "cloze_context": "Tony has found a fun way to (1)____ English: watching English TV shows. Every evening he watches one short (2)____ with subtitles. He does not just watch for fun. He listens to how the actors (3)____ the words and then copies them. When he hears a useful (4)____, he says it again and again until it sounds (5)____. Sometimes he covers the Chinese subtitles and tries to (6)____ what the actors are saying. At first it was (7)____, but slowly he could understand more. His listening and (8)____ have both got better. Now Tony can speak more (9)____ than before. He says learning English can be as fun as (10)____ a show.",
   "question_refs": [
     "g9u1.01.q1",
     "g9u1.01.q12",
@@ -15,11 +15,11 @@
     "g9u1.rd1.q1",
     "g9u1.rd3.q2",
     "g9u1.rd5.q4",
-    "g9u1.cz.q2",
-    "g9u1.cz.q6",
-    "g9u1.cz.q9",
-    "g9u1.ls.q1",
-    "g9u1.ls.q6",
-    "g9u1.ls.q9"
+    "g9u1.cz1.q2",
+    "g9u1.cz4.q4",
+    "g9u1.cz6.q1",
+    "g9u1.ls1.q1",
+    "g9u1.ls4.q4",
+    "g9u1.ls6.q5"
   ]
 }

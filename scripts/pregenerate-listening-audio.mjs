@@ -49,7 +49,10 @@ async function synth(text) {
 const ALL = process.argv.includes('--all');
 // 册:--volume=7A / 7B / 8A …(默认 7B)。grade 从册首位数字推断。
 const VOLUME = (process.argv.find(a => a.startsWith('--volume='))?.split('=')[1]) || '7B';
-const GRADE = Number(VOLUME[0]) || 7;
+// 'g9'/'G9' 等以字母 g 开头的"全一册"卷:grade 取 g 后的数字;否则取首字符数字。
+const GRADE = (VOLUME[0] === 'g' || VOLUME[0] === 'G')
+  ? (Number(VOLUME.slice(1).replace(/[^0-9]/g, '')) || 9)
+  : (Number(VOLUME[0]) || 7);
 
 // 拉目标册且 audio_url IS NULL(增量)
 const { data: rows, error } = await sb

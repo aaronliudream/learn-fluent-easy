@@ -1,0 +1,25 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "code": "g9u1.final",
+  "title": "Unit 1 单元通关",
+  "note": "从语法/阅读/完形/听力各关已出题目抽题组卷,不另出新题,仅引用 qid。完形题携带其所属短文原文。",
+  "cloze_context": "Li Lei used to be weak in English. He could not understand the teacher and was afraid to __1__ in class. Then he decided to change. Every morning he read English __2__ for twenty minutes to improve his pronunciation. He also built his __3__ by making word cards and reviewing them on the bus. When he met a new word, he tried to guess its meaning by __4__ the sentences around it. In class, he became more __5__ and often asked the teacher questions. He knew that everyone makes __6__, so he was __7__ with himself and never gave up. He also joined an English club, where he made many __8__. Little by little, his English __9__. Now he can have a conversation with foreign visitors easily. Li Lei says that anyone can learn English well by working hard and finding the right __10__.",
+  "question_refs": [
+    "g9u1.01.q1",
+    "g9u1.01.q12",
+    "g9u1.02.q2",
+    "g9u1.02.q10",
+    "g9u1.03.q5",
+    "g9u1.03.q16",
+    "g9u1.rd1.q1",
+    "g9u1.rd3.q2",
+    "g9u1.rd5.q4",
+    "g9u1.cz.q2",
+    "g9u1.cz.q6",
+    "g9u1.cz.q9",
+    "g9u1.ls.q1",
+    "g9u1.ls.q6",
+    "g9u1.ls.q9"
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "topic": "How can we become good learners?",
+  "words": [
+    {
+      "word": "textbook",
+      "ipa": "/ˈtekstbʊk/",
+      "pos": "n.",
+      "meaning_cn": "教科书；课本",
+      "phrase_en": "open your textbook",
+      "freq_rank": 1
+    },
+    {
+      "word": "conversation",
+      "ipa": "/ˌkɒnvəˈseɪʃn/",
+      "pos": "n.",
+      "meaning_cn": "交谈；谈话",
+      "phrase_en": "have a conversation",
+      "freq_rank": 2
+    },
+    {
+      "word": "aloud",
+      "ipa": "/əˈlaʊd/",
+      "pos": "adv.",
+      "meaning_cn": "出声地；大声地",
+      "phrase_en": "read aloud in class",
+      "freq_rank": 3
+    },
+    {
+      "word": "pronunciation",
+      "ipa": "/prəˌnʌnsiˈeɪʃn/",
+      "pos": "n.",
+      "meaning_cn": "发音；读音",
+      "phrase_en": "improve your pronunciation",
+      "freq_rank": 4
+    },
+    {
+      "word": "sentence",
+      "ipa": "/ˈsentəns/",
+      "pos": "n.",
+      "meaning_cn": "句子",
+      "phrase_en": "make a sentence",
+      "freq_rank": 5
+    },
+    {
+      "word": "patient",
+      "ipa": "/ˈpeɪʃnt/",
+      "pos": "adj./n.",
+      "meaning_cn": "有耐心的；病人",
+      "phrase_en": "be patient with others",
+      "freq_rank": 6
+    },
+    {
+      "word": "expression",
+      "ipa": "/ɪkˈspreʃn/",
+      "pos": "n.",
+      "meaning_cn": "表情；表达方式",
+      "phrase_en": "a useful expression",
+      "freq_rank": 7
+    },
+    {
+      "word": "discover",
+      "ipa": "/dɪˈskʌvə(r)/",
+      "pos": "v.",
+      "meaning_cn": "发现；发觉",
+      "phrase_en": "discover a secret",
+      "freq_rank": 8
+    },
+    {
+      "word": "secret",
+      "ipa": "/ˈsiːkrət/",
+      "pos": "n./adj.",
+      "meaning_cn": "秘密；秘诀；秘密的",
+      "phrase_en": "keep a secret",
+      "freq_rank": 9
+    },
+    {
+      "word": "grammar",
+      "ipa": "/ˈɡræmə(r)/",
+      "pos": "n.",
+      "meaning_cn": "语法",
+      "phrase_en": "English grammar",
+      "freq_rank": 10
+    },
+    {
+      "word": "repeat",
+      "ipa": "/rɪˈpiːt/",
+      "pos": "v.",
+      "meaning_cn": "重复；重做",
+      "phrase_en": "repeat the new words",
+      "freq_rank": 11
+    },
+    {
+      "word": "note",
+      "ipa": "/nəʊt/",
+      "pos": "n./v.",
+      "meaning_cn": "笔记；记录；注意",
+      "phrase_en": "take notes in class",
+      "freq_rank": 12
+    },
+    {
+      "word": "pronounce",
+      "ipa": "/prəˈnaʊns/",
+      "pos": "v.",
+      "meaning_cn": "发音",
+      "phrase_en": "pronounce the word",
+      "freq_rank": 13
+    },
+    {
+      "word": "increase",
+      "ipa": "/ɪnˈkriːs/",
+      "pos": "v.",
+      "meaning_cn": "增加；增长",
+      "phrase_en": "increase your vocabulary",
+      "freq_rank": 14
+    },
+    {
+      "word": "partner",
+      "ipa": "/ˈpɑːtnə(r)/",
+      "pos": "n.",
+      "meaning_cn": "搭档；同伴",
+      "phrase_en": "work with a partner",
+      "freq_rank": 15
+    },
+    {
+      "word": "physics",
+      "ipa": "/ˈfɪzɪks/",
+      "pos": "n.",
+      "meaning_cn": "物理（学）",
+      "phrase_en": "a physics class",
+      "freq_rank": 16
+    },
+    {
+      "word": "chemistry",
+      "ipa": "/ˈkemɪstri/",
+      "pos": "n.",
+      "meaning_cn": "化学",
+      "phrase_en": "a chemistry teacher",
+      "freq_rank": 17
+    },
+    {
+      "word": "born",
+      "ipa": "/bɔːn/",
+      "pos": "adj.",
+      "meaning_cn": "天生的（be born 出生）",
+      "phrase_en": "be born in 2010",
+      "freq_rank": 18
+    },
+    {
+      "word": "create",
+      "ipa": "/kriˈeɪt/",
+      "pos": "v.",
+      "meaning_cn": "创造；创建",
+      "phrase_en": "create a story",
+      "freq_rank": 19
+    },
+    {
+      "word": "speed",
+      "ipa": "/spiːd/",
+      "pos": "n.",
+      "meaning_cn": "速度",
+      "phrase_en": "reading speed",
+      "freq_rank": 20
+    },
+    {
+      "word": "ability",
+      "ipa": "/əˈbɪləti/",
+      "pos": "n.",
+      "meaning_cn": "能力；才能",
+      "phrase_en": "the ability to learn",
+      "freq_rank": 21
+    },
+    {
+      "word": "active",
+      "ipa": "/ˈæktɪv/",
+      "pos": "adj.",
+      "meaning_cn": "积极的；活跃的",
+      "phrase_en": "be active in class",
+      "freq_rank": 22
+    },
+    {
+      "word": "brain",
+      "ipa": "/breɪn/",
+      "pos": "n.",
+      "meaning_cn": "大脑",
+      "phrase_en": "use your brain",
+      "freq_rank": 23
+    },
+    {
+      "word": "connect",
+      "ipa": "/kəˈnekt/",
+      "pos": "v.",
+      "meaning_cn": "连接；联系",
+      "phrase_en": "connect words with pictures",
+      "freq_rank": 24
+    },
+    {
+      "word": "review",
+      "ipa": "/rɪˈvjuː/",
+      "pos": "v./n.",
+      "meaning_cn": "复习；回顾",
+      "phrase_en": "review your lessons",
+      "freq_rank": 25
+    },
+    {
+      "word": "knowledge",
+      "ipa": "/ˈnɒlɪdʒ/",
+      "pos": "n.",
+      "meaning_cn": "知识；学问",
+      "phrase_en": "gain knowledge",
+      "freq_rank": 26
+    },
+    {
+      "word": "wisely",
+      "ipa": "/ˈwaɪzli/",
+      "pos": "adv.",
+      "meaning_cn": "明智地",
+      "phrase_en": "use time wisely",
+      "freq_rank": 27
+    },
+    {
+      "word": "memorize",
+      "ipa": "/ˈmeməraɪz/",
+      "pos": "v.",
+      "meaning_cn": "记忆；记住",
+      "phrase_en": "memorize new words",
+      "freq_rank": 28
+    },
+    {
+      "word": "attention",
+      "ipa": "/əˈtenʃn/",
+      "pos": "n.",
+      "meaning_cn": "注意；关注",
+      "phrase_en": "pay attention to the teacher",
+      "freq_rank": 29
+    }
+  ],
+  "phrases": [
+    {
+      "phrase": "pay attention to",
+      "meaning_cn": "注意；关注"
+    },
+    {
+      "phrase": "connect ... with ...",
+      "meaning_cn": "把……和……连接（联系）起来"
+    },
+    {
+      "phrase": "read aloud",
+      "meaning_cn": "朗读；大声读"
+    },
+    {
+      "phrase": "make word cards",
+      "meaning_cn": "制作单词卡片"
+    },
+    {
+      "phrase": "be interested in",
+      "meaning_cn": "对……感兴趣"
+    },
+    {
+      "phrase": "be good at",
+      "meaning_cn": "擅长（做）……"
+    },
+    {
+      "phrase": "fall in love with",
+      "meaning_cn": "爱上；喜欢上"
+    },
+    {
+      "phrase": "the more ..., the more ...",
+      "meaning_cn": "越……，就越……"
+    },
+    {
+      "phrase": "look up",
+      "meaning_cn": "（在词典里）查（单词）"
+    },
+    {
+      "phrase": "for example",
+      "meaning_cn": "例如"
+    }
+  ]
+}

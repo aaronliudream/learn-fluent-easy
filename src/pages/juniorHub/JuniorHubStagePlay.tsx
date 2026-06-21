@@ -2020,7 +2020,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   // 自适应单元综合测验:7B 全 8 单元 + 八年级(8A/8B)16 单元。
   // 语法走 DB(grammarCodes 抽 7 题·自适应),听力 8 年级无 junior_listening_items → 内联 listeningQuestions 回退(TTS),词汇 vocabulary 动态生成 2 题 = 12 题。
   // 其余年级(7A/Starter/9, book 不在表内)仍走内联 quizQuestions;空池/失败也回退内联。
-  const adaptiveFinalUnit = !!unit && ["7B", "8A", "8B"].includes(unit.book);
+  const adaptiveFinalUnit = !!unit && ["7B", "8A", "8B", "g9"].includes(unit.book);
   // undefined = 加载中;null = 用内联回退;数组 = 自适应题目。
   const [finalAdaptive, setFinalAdaptive] = useState<FinalQuizItem[] | null | undefined>(undefined);
   useEffect(() => {

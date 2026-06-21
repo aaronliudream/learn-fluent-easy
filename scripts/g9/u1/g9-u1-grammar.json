@@ -1,0 +1,1043 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "points": [
+    {
+      "code": "g9u1.01",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "overview": "介词 by 后接动名词(v-ing),作方式状语,表示“通过做某事”,常回答 How 问句。by 后用 doing,不用动词原形;与表交通方式的 by bus 区分。"
+    },
+    {
+      "code": "g9u1.02",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "overview": "询问“怎样做某事/方式”用 How 引导的特殊疑问句,答语常用 by + doing。判断靠“答语是方式”而非后面的动词形式。"
+    },
+    {
+      "code": "g9u1.03",
+      "point": "情态动词/助动词 + 动词原形",
+      "overview": "情态动词(can/should/must/may/could/will/had better 等)和助动词(do/does/did)后一律接动词原形。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u1.01.q1",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How do you improve your English? — I improve it ____ English songs.",
+      "options": [
+        "by sing",
+        "by singing",
+        "to sing",
+        "singing"
+      ],
+      "answer_index": 1,
+      "answer_text": "by singing",
+      "explanation": "by 后接动名词。"
+    },
+    {
+      "qid": "g9u1.01.q2",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "We can learn a lot ____ books about history.",
+      "options": [
+        "by reading",
+        "to reading",
+        "by read",
+        "read"
+      ],
+      "answer_index": 0,
+      "answer_text": "by reading",
+      "explanation": "by + 动名词 reading。"
+    },
+    {
+      "qid": "g9u1.01.q3",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "My sister became a better writer ____ every day.",
+      "options": [
+        "by write",
+        "writes",
+        "write",
+        "by writing"
+      ],
+      "answer_index": 3,
+      "answer_text": "by writing",
+      "explanation": "by + 动名词 writing。"
+    },
+    {
+      "qid": "g9u1.01.q4",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How did you remember so many words? — ____ them again and again.",
+      "options": [
+        "By repeating",
+        "Repeat",
+        "By repeat",
+        "To repeat"
+      ],
+      "answer_index": 0,
+      "answer_text": "By repeating",
+      "explanation": "句首方式状语 By + doing。"
+    },
+    {
+      "qid": "g9u1.01.q5",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "Tom keeps fit ____ football after school.",
+      "options": [
+        "playing",
+        "by play",
+        "to play",
+        "by playing"
+      ],
+      "answer_index": 3,
+      "answer_text": "by playing",
+      "explanation": "by + 动名词 playing。"
+    },
+    {
+      "qid": "g9u1.01.q6",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "She learns new words ____ word cards.",
+      "options": [
+        "by make",
+        "making",
+        "by making",
+        "to make"
+      ],
+      "answer_index": 2,
+      "answer_text": "by making",
+      "explanation": "by + 动名词 making。"
+    },
+    {
+      "qid": "g9u1.01.q7",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "You can improve your pronunciation ____ to tapes.",
+      "options": [
+        "listen",
+        "by listening",
+        "listening",
+        "by listen"
+      ],
+      "answer_index": 1,
+      "answer_text": "by listening",
+      "explanation": "by + 动名词 listening。"
+    },
+    {
+      "qid": "g9u1.01.q8",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How does he study for tests? — ____ with a study group.",
+      "options": [
+        "Working",
+        "By work",
+        "By working",
+        "To work"
+      ],
+      "answer_index": 2,
+      "answer_text": "By working",
+      "explanation": "句首方式状语 By + doing。"
+    },
+    {
+      "qid": "g9u1.01.q9",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "I relax ____ music after class.",
+      "options": [
+        "by listen to",
+        "listening to",
+        "to listen to",
+        "by listening to"
+      ],
+      "answer_index": 3,
+      "answer_text": "by listening to",
+      "explanation": "by + 动名词短语 listening to。"
+    },
+    {
+      "qid": "g9u1.01.q10",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "He saved money ____ part-time jobs.",
+      "options": [
+        "by doing",
+        "by do",
+        "doing",
+        "to do"
+      ],
+      "answer_index": 0,
+      "answer_text": "by doing",
+      "explanation": "by + 动名词 doing。"
+    },
+    {
+      "qid": "g9u1.01.q11",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "We protect our eyes ____ less TV.",
+      "options": [
+        "by watch",
+        "watching",
+        "by watching",
+        "watch"
+      ],
+      "answer_index": 2,
+      "answer_text": "by watching",
+      "explanation": "by + 动名词 watching。"
+    },
+    {
+      "qid": "g9u1.01.q12",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How did you learn to swim? — ____ every weekend.",
+      "options": [
+        "By practising",
+        "Practise",
+        "By practise",
+        "To practise"
+      ],
+      "answer_index": 0,
+      "answer_text": "By practising",
+      "explanation": "句首 By + doing。"
+    },
+    {
+      "qid": "g9u1.01.q13",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "She got good grades ____ hard.",
+      "options": [
+        "by study",
+        "studying",
+        "to study",
+        "by studying"
+      ],
+      "answer_index": 3,
+      "answer_text": "by studying",
+      "explanation": "by + 动名词 studying。"
+    },
+    {
+      "qid": "g9u1.01.q14",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "You can make friends ____ in clubs.",
+      "options": [
+        "by join",
+        "by joining",
+        "joining",
+        "to join"
+      ],
+      "answer_index": 1,
+      "answer_text": "by joining",
+      "explanation": "by + 动名词 joining。"
+    },
+    {
+      "qid": "g9u1.01.q15",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "They celebrated ____ a big party.",
+      "options": [
+        "by have",
+        "having",
+        "by having",
+        "to have"
+      ],
+      "answer_index": 2,
+      "answer_text": "by having",
+      "explanation": "by + 动名词 having。"
+    },
+    {
+      "qid": "g9u1.01.q16",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How do you train your memory? — ____ poems.",
+      "options": [
+        "By reciting",
+        "Recite",
+        "By recite",
+        "To recite"
+      ],
+      "answer_index": 0,
+      "answer_text": "By reciting",
+      "explanation": "句首 By + doing。"
+    },
+    {
+      "qid": "g9u1.01.q17",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "He improved his handwriting ____ slowly and carefully.",
+      "options": [
+        "by write",
+        "writing",
+        "by writing",
+        "to write"
+      ],
+      "answer_index": 2,
+      "answer_text": "by writing",
+      "explanation": "by + 动名词 writing。"
+    },
+    {
+      "qid": "g9u1.01.q18",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "We learn about the world ____ to new places.",
+      "options": [
+        "by travel",
+        "by travelling",
+        "travelling",
+        "to travel"
+      ],
+      "answer_index": 1,
+      "answer_text": "by travelling",
+      "explanation": "by + 动名词 travelling。"
+    },
+    {
+      "qid": "g9u1.01.q19",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "She keeps healthy ____ vegetables every day.",
+      "options": [
+        "by eat",
+        "eating",
+        "to eat",
+        "by eating"
+      ],
+      "answer_index": 3,
+      "answer_text": "by eating",
+      "explanation": "by + 动名词 eating。"
+    },
+    {
+      "qid": "g9u1.01.q20",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "动词 + by + 动名词(by doing)表示“通过某种方式”",
+      "code": "g9u1.01",
+      "stem": "— How can I calm down? — ____ deeply.",
+      "options": [
+        "By breathing",
+        "Breathe",
+        "By breathe",
+        "To breathe"
+      ],
+      "answer_index": 0,
+      "answer_text": "By breathing",
+      "explanation": "句首 By + doing。"
+    },
+    {
+      "qid": "g9u1.02.q1",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ you study for a test? — I study by making notes.",
+      "options": [
+        "What do",
+        "How do",
+        "How are",
+        "Why do"
+      ],
+      "answer_index": 1,
+      "answer_text": "How do",
+      "explanation": "问方式用 How do you...?;答语为 by + doing。"
+    },
+    {
+      "qid": "g9u1.02.q2",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can I improve my spoken English quickly? — By talking more.",
+      "options": [
+        "How",
+        "What",
+        "Where",
+        "Who"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "问“怎样(方法)”用 How。"
+    },
+    {
+      "qid": "g9u1.02.q3",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ did you find the meaning of the word? — By guessing from the sentence.",
+      "options": [
+        "When",
+        "What",
+        "How",
+        "Which"
+      ],
+      "answer_index": 2,
+      "answer_text": "How",
+      "explanation": "答语为方式,故用 How。"
+    },
+    {
+      "qid": "g9u1.02.q4",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you go to school? — By bus.",
+      "options": [
+        "What",
+        "Where",
+        "What time",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "问交通方式用 How,答 By bus。"
+    },
+    {
+      "qid": "g9u1.02.q5",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you keep healthy? — By exercising every day.",
+      "options": [
+        "What",
+        "How",
+        "When",
+        "Who"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q6",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can we become good learners? — By studying actively.",
+      "options": [
+        "What",
+        "Why",
+        "How",
+        "Where"
+      ],
+      "answer_index": 2,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q7",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ did they win the game? — By working together.",
+      "options": [
+        "How",
+        "When",
+        "What",
+        "Who"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q8",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ does Lily learn so well? — By reviewing her notes daily.",
+      "options": [
+        "Where",
+        "Why",
+        "What",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q9",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can I remember new words better? — By using them in sentences.",
+      "options": [
+        "How",
+        "What",
+        "When",
+        "Which"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q10",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you usually relax? — By listening to music.",
+      "options": [
+        "Why",
+        "Where",
+        "What",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q11",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you save water at home? — By turning off the tap.",
+      "options": [
+        "What",
+        "How",
+        "Who",
+        "Where"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q12",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ did you fix the computer? — By following the instructions.",
+      "options": [
+        "How",
+        "When",
+        "Why",
+        "What"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q13",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can students reduce stress? — By planning their time wisely.",
+      "options": [
+        "What",
+        "Why",
+        "How",
+        "Who"
+      ],
+      "answer_index": 2,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q14",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do farmers protect the crops? — By building fences.",
+      "options": [
+        "When",
+        "How",
+        "What",
+        "Where"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q15",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ did she pass the exam? — By studying hard for a month.",
+      "options": [
+        "Why",
+        "What",
+        "How",
+        "Who"
+      ],
+      "answer_index": 2,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q16",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can I improve my writing? — By reading good articles.",
+      "options": [
+        "How",
+        "What",
+        "Where",
+        "When"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q17",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you learn idioms? — By watching English films.",
+      "options": [
+        "What",
+        "Why",
+        "Who",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q18",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ did the team raise money? — By selling old books.",
+      "options": [
+        "When",
+        "How",
+        "What",
+        "Where"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q19",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ can we learn about other cultures? — By travelling and reading.",
+      "options": [
+        "What",
+        "Why",
+        "How",
+        "Which"
+      ],
+      "answer_index": 2,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.02.q20",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "How 引导的方法疑问句(询问做事方式,答语为方式)",
+      "code": "g9u1.02",
+      "stem": "— ____ do you train your dog? — By giving it small rewards.",
+      "options": [
+        "When",
+        "What",
+        "Where",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "答语为方式,用 How。"
+    },
+    {
+      "qid": "g9u1.03.q1",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "— How ____ Lily learn English so well? — By reading aloud.",
+      "options": [
+        "do",
+        "is",
+        "did",
+        "does"
+      ],
+      "answer_index": 3,
+      "answer_text": "does",
+      "explanation": "主语三单、一般现在时,助动词 does + 动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q2",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "— How can I ____ my listening? — By listening to the radio.",
+      "options": [
+        "improving",
+        "improve",
+        "improves",
+        "improved"
+      ],
+      "answer_index": 1,
+      "answer_text": "improve",
+      "explanation": "can 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q3",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "— How do you ____ new words? — I memorize them by writing.",
+      "options": [
+        "remember",
+        "remembers",
+        "remembering",
+        "to remember"
+      ],
+      "answer_index": 0,
+      "answer_text": "remember",
+      "explanation": "do you 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q4",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "— How can we ____ good learners? — By studying actively.",
+      "options": [
+        "becoming",
+        "became",
+        "to become",
+        "become"
+      ],
+      "answer_index": 3,
+      "answer_text": "become",
+      "explanation": "can 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q5",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "You should ____ more water every day.",
+      "options": [
+        "drink",
+        "drinks",
+        "drinking",
+        "drank"
+      ],
+      "answer_index": 0,
+      "answer_text": "drink",
+      "explanation": "should 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q6",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "We must ____ attention to road safety.",
+      "options": [
+        "pays",
+        "paying",
+        "pay",
+        "paid"
+      ],
+      "answer_index": 2,
+      "answer_text": "pay",
+      "explanation": "must 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q7",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "Students should not ____ in class.",
+      "options": [
+        "talks",
+        "talk",
+        "talking",
+        "talked"
+      ],
+      "answer_index": 1,
+      "answer_text": "talk",
+      "explanation": "should not 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q8",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "____ he speak three languages?",
+      "options": [
+        "Does",
+        "Do",
+        "Is",
+        "Are"
+      ],
+      "answer_index": 0,
+      "answer_text": "Does",
+      "explanation": "主语 he 三单,助动词 Does + 原形。"
+    },
+    {
+      "qid": "g9u1.03.q9",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "They didn't ____ the meeting yesterday.",
+      "options": [
+        "attended",
+        "attends",
+        "attending",
+        "attend"
+      ],
+      "answer_index": 3,
+      "answer_text": "attend",
+      "explanation": "didn't 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q10",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "May I ____ your dictionary for a minute?",
+      "options": [
+        "borrowing",
+        "borrows",
+        "borrow",
+        "borrowed"
+      ],
+      "answer_index": 2,
+      "answer_text": "borrow",
+      "explanation": "May 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q11",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "____ you finish your homework last night?",
+      "options": [
+        "Do",
+        "Did",
+        "Does",
+        "Are"
+      ],
+      "answer_index": 1,
+      "answer_text": "Did",
+      "explanation": "一般过去时疑问,助动词 Did + 原形。"
+    },
+    {
+      "qid": "g9u1.03.q12",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "She can ____ the piano very well.",
+      "options": [
+        "play",
+        "plays",
+        "playing",
+        "played"
+      ],
+      "answer_index": 0,
+      "answer_text": "play",
+      "explanation": "can 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q13",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "We will ____ our best to win.",
+      "options": [
+        "trying",
+        "try",
+        "tries",
+        "tried"
+      ],
+      "answer_index": 1,
+      "answer_text": "try",
+      "explanation": "will 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q14",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "____ your parents like Beijing opera?",
+      "options": [
+        "Does",
+        "Is",
+        "Do",
+        "Was"
+      ],
+      "answer_index": 2,
+      "answer_text": "Do",
+      "explanation": "主语复数,助动词 Do + 原形。"
+    },
+    {
+      "qid": "g9u1.03.q15",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "He doesn't ____ coffee in the evening.",
+      "options": [
+        "drinks",
+        "drinking",
+        "drank",
+        "drink"
+      ],
+      "answer_index": 3,
+      "answer_text": "drink",
+      "explanation": "doesn't 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q16",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "Could you ____ me the way to the station?",
+      "options": [
+        "tell",
+        "telling",
+        "tells",
+        "told"
+      ],
+      "answer_index": 0,
+      "answer_text": "tell",
+      "explanation": "Could 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q17",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "Tom must ____ his room before going out.",
+      "options": [
+        "cleans",
+        "clean",
+        "cleaning",
+        "cleaned"
+      ],
+      "answer_index": 1,
+      "answer_text": "clean",
+      "explanation": "must 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q18",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "____ the students go on a trip last week?",
+      "options": [
+        "Do",
+        "Does",
+        "Did",
+        "Are"
+      ],
+      "answer_index": 2,
+      "answer_text": "Did",
+      "explanation": "一般过去时疑问,助动词 Did + 原形。"
+    },
+    {
+      "qid": "g9u1.03.q19",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "You'd better ____ to bed early tonight.",
+      "options": [
+        "going",
+        "goes",
+        "went",
+        "go"
+      ],
+      "answer_index": 3,
+      "answer_text": "go",
+      "explanation": "had better 后接动词原形。"
+    },
+    {
+      "qid": "g9u1.03.q20",
+      "volume": "g9",
+      "unit": "U1",
+      "point": "情态动词/助动词 + 动词原形",
+      "code": "g9u1.03",
+      "stem": "We should ____ down our ideas in a notebook.",
+      "options": [
+        "writing",
+        "writes",
+        "write",
+        "wrote"
+      ],
+      "answer_index": 2,
+      "answer_text": "write",
+      "explanation": "should 后接动词原形。"
+    }
+  ]
+}

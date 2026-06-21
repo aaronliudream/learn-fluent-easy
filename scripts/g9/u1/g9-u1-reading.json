@@ -1,0 +1,618 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "passages": [
+    {
+      "code": "g9u1.rd1",
+      "title": "Becoming a Good Learner",
+      "genre": "说明文",
+      "body": "Good learners are not born; they are made. They believe that everyone can learn well by finding the right way. First, good learners are active. They do not just wait for the teacher to tell them everything. Instead, they ask questions and try to find the answers by themselves. Second, good learners are patient. They know that making mistakes is a normal part of learning, so they never give up. Third, good learners connect new knowledge with what they already know. For example, when they meet a new word, they make a sentence with it so that they can remember it better. Finally, good learners study wisely. They plan their time and review what they have learned often. If you follow these tips, you can become a good learner, too.",
+      "questions": [
+        {
+          "qid": "g9u1.rd1.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd1",
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to become a good learner.",
+            "The history of English.",
+            "How to make friends.",
+            "Why exams are hard."
+          ],
+          "answer_index": 0,
+          "answer_text": "How to become a good learner.",
+          "explanation": "全文讲怎样成为优秀学习者。"
+        },
+        {
+          "qid": "g9u1.rd1.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd1",
+          "stem": "Good learners are active because they ____.",
+          "options": [
+            "wait for the teacher",
+            "ask questions and find answers themselves",
+            "never study at home",
+            "only read textbooks"
+          ],
+          "answer_index": 1,
+          "answer_text": "ask questions and find answers themselves",
+          "explanation": "原文:they ask questions and try to find the answers by themselves。"
+        },
+        {
+          "qid": "g9u1.rd1.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd1",
+          "stem": "What do good learners think about mistakes?",
+          "options": [
+            "They are terrible.",
+            "They should be hidden.",
+            "They are a normal part of learning.",
+            "They mean failure."
+          ],
+          "answer_index": 2,
+          "answer_text": "They are a normal part of learning.",
+          "explanation": "原文:making mistakes is a normal part of learning。"
+        },
+        {
+          "qid": "g9u1.rd1.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd1",
+          "stem": "How do good learners remember a new word?",
+          "options": [
+            "By reading it once.",
+            "By writing it many times.",
+            "By ignoring it.",
+            "By making a sentence with it."
+          ],
+          "answer_index": 3,
+          "answer_text": "By making a sentence with it.",
+          "explanation": "原文:make a sentence with it so that they can remember it better。"
+        },
+        {
+          "qid": "g9u1.rd1.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd1",
+          "stem": "The word “wisely” here means ____.",
+          "options": [
+            "in a lazy way",
+            "in a smart and sensible way",
+            "in a hurry",
+            "by luck"
+          ],
+          "answer_index": 1,
+          "answer_text": "in a smart and sensible way",
+          "explanation": "wisely=明智地。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "active",
+          "cn": "积极的；主动的"
+        },
+        {
+          "word": "patient",
+          "cn": "有耐心的"
+        },
+        {
+          "word": "connect",
+          "cn": "联系；连接"
+        }
+      ]
+    },
+    {
+      "code": "g9u1.rd2",
+      "title": "Anna and Her Reading Journey",
+      "genre": "记叙文",
+      "body": "When Anna was young, she hated reading. The books at school looked boring, and she could not understand many words. One summer, her aunt gave her a book about a girl who travelled around the world. Anna started reading just one page a day. Slowly, she wanted to know what would happen next, so she read more and more. Whenever she met a new word, she did not stop; she guessed its meaning from the story. By the end of the summer, she had finished five books. Reading had become her favourite hobby. Now Anna says that the secret is to start with something you really enjoy.",
+      "questions": [
+        {
+          "qid": "g9u1.rd2.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd2",
+          "stem": "How did Anna feel about reading when she was young?",
+          "options": [
+            "She loved it.",
+            "She found it easy.",
+            "She hated it.",
+            "She never heard of it."
+          ],
+          "answer_index": 2,
+          "answer_text": "She hated it.",
+          "explanation": "原文:she hated reading。"
+        },
+        {
+          "qid": "g9u1.rd2.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd2",
+          "stem": "Who gave Anna the book?",
+          "options": [
+            "Her mother.",
+            "Her teacher.",
+            "Her friend.",
+            "Her aunt."
+          ],
+          "answer_index": 3,
+          "answer_text": "Her aunt.",
+          "explanation": "原文:her aunt gave her a book。"
+        },
+        {
+          "qid": "g9u1.rd2.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd2",
+          "stem": "What did Anna do when she met a new word?",
+          "options": [
+            "She guessed its meaning from the story.",
+            "She looked it up at once.",
+            "She skipped the whole book.",
+            "She asked her aunt."
+          ],
+          "answer_index": 0,
+          "answer_text": "She guessed its meaning from the story.",
+          "explanation": "原文:she guessed its meaning from the story。"
+        },
+        {
+          "qid": "g9u1.rd2.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd2",
+          "stem": "How many books did Anna finish by the end of summer?",
+          "options": [
+            "Three.",
+            "Five.",
+            "Two.",
+            "Ten."
+          ],
+          "answer_index": 1,
+          "answer_text": "Five.",
+          "explanation": "原文:she had finished five books。"
+        },
+        {
+          "qid": "g9u1.rd2.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd2",
+          "stem": "What is Anna's secret to enjoying reading?",
+          "options": [
+            "Read very fast.",
+            "Use a dictionary often.",
+            "Start with something you enjoy.",
+            "Read one book a year."
+          ],
+          "answer_index": 2,
+          "answer_text": "Start with something you enjoy.",
+          "explanation": "原文:start with something you really enjoy。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "hate",
+          "cn": "讨厌；厌恶"
+        },
+        {
+          "word": "guess",
+          "cn": "猜测"
+        },
+        {
+          "word": "hobby",
+          "cn": "爱好"
+        }
+      ]
+    },
+    {
+      "code": "g9u1.rd3",
+      "title": "Two Ways to Remember Words",
+      "genre": "对比说明",
+      "body": "Students often ask how to remember English words. There are two common ways. The first way is to write a word many times. This helps some students, but it can be boring, and you may forget the word soon. The second way is to use the word in real sentences. For example, if you learn the word “brave”, you can say, “My brother is brave.” This way takes more time at first, but you will remember the word much longer, because it is connected with a real idea. Many teachers believe the second way is better, because learning with meaning is stronger than learning by repeating alone.",
+      "questions": [
+        {
+          "qid": "g9u1.rd3.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd3",
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "The history of English words.",
+            "How to write quickly.",
+            "Why words are difficult.",
+            "Two ways to remember words."
+          ],
+          "answer_index": 3,
+          "answer_text": "Two ways to remember words.",
+          "explanation": "主旨:记单词的两种方法。"
+        },
+        {
+          "qid": "g9u1.rd3.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd3",
+          "stem": "What is a problem with writing a word many times?",
+          "options": [
+            "It can be boring and easily forgotten.",
+            "It costs a lot of money.",
+            "It needs a partner.",
+            "It is not allowed."
+          ],
+          "answer_index": 0,
+          "answer_text": "It can be boring and easily forgotten.",
+          "explanation": "原文:it can be boring, and you may forget the word soon。"
+        },
+        {
+          "qid": "g9u1.rd3.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd3",
+          "stem": "The example “My brother is brave” shows ____.",
+          "options": [
+            "writing a word many times",
+            "using a word in a real sentence",
+            "reading a word aloud",
+            "drawing a picture"
+          ],
+          "answer_index": 1,
+          "answer_text": "using a word in a real sentence",
+          "explanation": "该例说明“在真实句子中使用单词”。"
+        },
+        {
+          "qid": "g9u1.rd3.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd3",
+          "stem": "Why is the second way better?",
+          "options": [
+            "It is faster.",
+            "It is easier.",
+            "Learning with meaning is stronger.",
+            "It needs no time."
+          ],
+          "answer_index": 2,
+          "answer_text": "Learning with meaning is stronger.",
+          "explanation": "原文:learning with meaning is stronger。"
+        },
+        {
+          "qid": "g9u1.rd3.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd3",
+          "stem": "Which way do many teachers prefer?",
+          "options": [
+            "The first way.",
+            "Neither way.",
+            "Both equally.",
+            "The second way."
+          ],
+          "answer_index": 3,
+          "answer_text": "The second way.",
+          "explanation": "原文:the second way is better。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "repeat",
+          "cn": "重复"
+        },
+        {
+          "word": "meaning",
+          "cn": "含义；意思"
+        },
+        {
+          "word": "connected",
+          "cn": "相联系的"
+        }
+      ]
+    },
+    {
+      "code": "g9u1.rd4",
+      "title": "A Letter to a New Classmate",
+      "genre": "书信",
+      "body": "Dear Sam, Welcome to our class! I know learning English in a new school can be hard, so here are some tips. First, do not be afraid to make mistakes when you speak. Everyone makes them, and they help us learn. Second, try to read English for a few minutes every day, even just a comic book. Third, find a study partner so that you can practise together. Finally, be patient with yourself, because real progress takes time. If you ever need help, just ask me. I am sure you will do well. Your friend, Lily",
+      "questions": [
+        {
+          "qid": "g9u1.rd4.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd4",
+          "stem": "Why did Lily write this letter?",
+          "options": [
+            "To welcome Sam and give him study tips.",
+            "To invite Sam to a party.",
+            "To say goodbye to Sam.",
+            "To borrow a book."
+          ],
+          "answer_index": 0,
+          "answer_text": "To welcome Sam and give him study tips.",
+          "explanation": "信的目的是欢迎并给学习建议。"
+        },
+        {
+          "qid": "g9u1.rd4.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd4",
+          "stem": "What does Lily say about mistakes?",
+          "options": [
+            "They are useless.",
+            "They help us learn.",
+            "They should be hidden.",
+            "They are dangerous."
+          ],
+          "answer_index": 1,
+          "answer_text": "They help us learn.",
+          "explanation": "原文:they help us learn。"
+        },
+        {
+          "qid": "g9u1.rd4.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd4",
+          "stem": "How often should Sam read English?",
+          "options": [
+            "Once a week.",
+            "Only at weekends.",
+            "A few minutes every day.",
+            "Three hours a day."
+          ],
+          "answer_index": 2,
+          "answer_text": "A few minutes every day.",
+          "explanation": "原文:read English for a few minutes every day。"
+        },
+        {
+          "qid": "g9u1.rd4.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd4",
+          "stem": "Why should Sam find a study partner?",
+          "options": [
+            "To copy answers.",
+            "To make money.",
+            "To save time.",
+            "To practise together."
+          ],
+          "answer_index": 3,
+          "answer_text": "To practise together.",
+          "explanation": "原文:so that you can practise together。"
+        },
+        {
+          "qid": "g9u1.rd4.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd4",
+          "stem": "What is Lily's last piece of advice?",
+          "options": [
+            "Be patient with yourself.",
+            "Buy many books.",
+            "Study all night.",
+            "Never ask for help."
+          ],
+          "answer_index": 0,
+          "answer_text": "Be patient with yourself.",
+          "explanation": "原文:be patient with yourself。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "mistake",
+          "cn": "错误"
+        },
+        {
+          "word": "partner",
+          "cn": "搭档；同伴"
+        },
+        {
+          "word": "progress",
+          "cn": "进步"
+        }
+      ]
+    },
+    {
+      "code": "g9u1.rd5",
+      "title": "The Power of Mistakes",
+      "genre": "议论文",
+      "body": "Many students are afraid of making mistakes. They keep quiet in class because they do not want to look silly. However, mistakes are not bad at all. In fact, they are an important part of learning. When you make a mistake and then correct it, your brain remembers the right answer better. Think about babies: they fall down many times before they learn to walk. Learning a language is the same. Every mistake shows you what to study next. So, the next time you make a mistake, do not feel sad. Be brave, learn from it, and try again. That is how good learners grow.",
+      "questions": [
+        {
+          "qid": "g9u1.rd5.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd5",
+          "stem": "Why do some students keep quiet in class?",
+          "options": [
+            "They are tired.",
+            "They are afraid of looking silly.",
+            "They have no questions.",
+            "They dislike English."
+          ],
+          "answer_index": 1,
+          "answer_text": "They are afraid of looking silly.",
+          "explanation": "原文:they do not want to look silly。"
+        },
+        {
+          "qid": "g9u1.rd5.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd5",
+          "stem": "What happens when you correct a mistake?",
+          "options": [
+            "Nothing happens.",
+            "You feel sad.",
+            "Your brain remembers the right answer better.",
+            "You forget everything."
+          ],
+          "answer_index": 2,
+          "answer_text": "Your brain remembers the right answer better.",
+          "explanation": "原文:your brain remembers the right answer better。"
+        },
+        {
+          "qid": "g9u1.rd5.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd5",
+          "stem": "Why does the writer mention babies?",
+          "options": [
+            "To talk about families.",
+            "To make readers laugh.",
+            "To change the topic.",
+            "To show that mistakes are part of learning."
+          ],
+          "answer_index": 3,
+          "answer_text": "To show that mistakes are part of learning.",
+          "explanation": "以婴儿学步类比,说明犯错是学习的一部分。"
+        },
+        {
+          "qid": "g9u1.rd5.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd5",
+          "stem": "What does every mistake show you?",
+          "options": [
+            "What to study next.",
+            "Which friend to choose.",
+            "When to sleep.",
+            "Where to go."
+          ],
+          "answer_index": 0,
+          "answer_text": "What to study next.",
+          "explanation": "原文:every mistake shows you what to study next。"
+        },
+        {
+          "qid": "g9u1.rd5.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd5",
+          "stem": "What does the writer advise readers to do?",
+          "options": [
+            "Give up quickly.",
+            "Be brave and learn from mistakes.",
+            "Stay silent.",
+            "Avoid all tests."
+          ],
+          "answer_index": 1,
+          "answer_text": "Be brave and learn from mistakes.",
+          "explanation": "原文:Be brave, learn from it, and try again。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "mistake",
+          "cn": "错误"
+        },
+        {
+          "word": "correct",
+          "cn": "改正；正确的"
+        },
+        {
+          "word": "brave",
+          "cn": "勇敢的"
+        }
+      ]
+    },
+    {
+      "code": "g9u1.rd6",
+      "title": "Learning Beyond the Classroom",
+      "genre": "应用说明",
+      "body": "School is not the only place to learn English. There are many fun ways to practise outside the classroom. You can watch English cartoons or films with subtitles to train your ears. You can listen to English songs and sing along to improve your pronunciation. The Internet is also helpful: you can read short news stories or chat with online friends from other countries. Some students keep a diary in English to practise writing. The most important thing is to use English a little every day. When learning becomes part of your daily life, you will improve without even noticing it.",
+      "questions": [
+        {
+          "qid": "g9u1.rd6.q1",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd6",
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "The rules of grammar.",
+            "A famous English teacher.",
+            "Ways to practise English outside class.",
+            "The history of films."
+          ],
+          "answer_index": 2,
+          "answer_text": "Ways to practise English outside class.",
+          "explanation": "主旨:课外练英语的方法。"
+        },
+        {
+          "qid": "g9u1.rd6.q2",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd6",
+          "stem": "How can watching films help you?",
+          "options": [
+            "They cost nothing.",
+            "They are short.",
+            "They are funny.",
+            "They train your ears."
+          ],
+          "answer_index": 3,
+          "answer_text": "They train your ears.",
+          "explanation": "原文:watch films with subtitles to train your ears。"
+        },
+        {
+          "qid": "g9u1.rd6.q3",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd6",
+          "stem": "Why listen to English songs?",
+          "options": [
+            "To improve pronunciation.",
+            "To learn grammar rules.",
+            "To make friends.",
+            "To pass exams."
+          ],
+          "answer_index": 0,
+          "answer_text": "To improve pronunciation.",
+          "explanation": "原文:sing along to improve your pronunciation。"
+        },
+        {
+          "qid": "g9u1.rd6.q4",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd6",
+          "stem": "What do some students do to practise writing?",
+          "options": [
+            "Watch more TV.",
+            "Keep a diary in English.",
+            "Play games.",
+            "Sing songs."
+          ],
+          "answer_index": 1,
+          "answer_text": "Keep a diary in English.",
+          "explanation": "原文:keep a diary in English to practise writing。"
+        },
+        {
+          "qid": "g9u1.rd6.q5",
+          "volume": "g9",
+          "unit": "U1",
+          "code": "g9u1.rd6",
+          "stem": "What is the most important thing?",
+          "options": [
+            "Study only before exams.",
+            "Buy expensive books.",
+            "Use English a little every day.",
+            "Travel abroad."
+          ],
+          "answer_index": 2,
+          "answer_text": "Use English a little every day.",
+          "explanation": "原文:use English a little every day。"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "subtitle",
+          "cn": "字幕"
+        },
+        {
+          "word": "pronunciation",
+          "cn": "发音"
+        },
+        {
+          "word": "diary",
+          "cn": "日记"
+        }
+      ]
+    }
+  ]
+}

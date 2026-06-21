@@ -10,15 +10,110 @@
             "id": "g9full_u1",
             "num": 1,
             "unitKey": "U1",
-            "book": "9",
+            "book": "g9",
             "title": "How can we become good learners?",
-            "cn": "怎样成为好的学习者",
+            "cn": "怎样成为优秀的学习者",
             "emoji": "📚",
             "available": true,
             "vocabulary": [
               {
-                "en": "/greI@m/ Bell",
-                "cn": "亚历山大·",
+                "en": "textbook",
+                "cn": "教科书",
+                "emoji": "📘"
+              },
+              {
+                "en": "conversation",
+                "cn": "交谈",
+                "emoji": "📘"
+              },
+              {
+                "en": "aloud",
+                "cn": "出声地",
+                "emoji": "📘"
+              },
+              {
+                "en": "pronunciation",
+                "cn": "发音",
+                "emoji": "📘"
+              },
+              {
+                "en": "sentence",
+                "cn": "句子",
+                "emoji": "📘"
+              },
+              {
+                "en": "patient",
+                "cn": "有耐心的",
+                "emoji": "📘"
+              },
+              {
+                "en": "expression",
+                "cn": "表情",
+                "emoji": "📘"
+              },
+              {
+                "en": "discover",
+                "cn": "发现",
+                "emoji": "📘"
+              },
+              {
+                "en": "secret",
+                "cn": "秘密",
+                "emoji": "📘"
+              },
+              {
+                "en": "grammar",
+                "cn": "语法",
+                "emoji": "📘"
+              },
+              {
+                "en": "repeat",
+                "cn": "重复",
+                "emoji": "📘"
+              },
+              {
+                "en": "note",
+                "cn": "笔记",
+                "emoji": "📘"
+              },
+              {
+                "en": "pronounce",
+                "cn": "发音",
+                "emoji": "📘"
+              },
+              {
+                "en": "increase",
+                "cn": "增加",
+                "emoji": "📘"
+              },
+              {
+                "en": "partner",
+                "cn": "搭档",
+                "emoji": "📘"
+              },
+              {
+                "en": "physics",
+                "cn": "物理",
+                "emoji": "📘"
+              },
+              {
+                "en": "chemistry",
+                "cn": "化学",
+                "emoji": "📘"
+              },
+              {
+                "en": "born",
+                "cn": "天生的",
+                "emoji": "📘"
+              },
+              {
+                "en": "create",
+                "cn": "创造",
+                "emoji": "📘"
+              },
+              {
+                "en": "speed",
+                "cn": "速度",
                 "emoji": "📘"
               },
               {
@@ -28,32 +123,7 @@
               },
               {
                 "en": "active",
-                "cn": "活跃的",
-                "emoji": "📘"
-              },
-              {
-                "en": "Alexander",
-                "cn": "",
-                "emoji": "📘"
-              },
-              {
-                "en": "aloud",
-                "cn": "大声地",
-                "emoji": "📘"
-              },
-              {
-                "en": "Annie",
-                "cn": "安妮",
-                "emoji": "📘"
-              },
-              {
-                "en": "atention",
-                "cn": "注意",
-                "emoji": "📘"
-              },
-              {
-                "en": "born",
-                "cn": "出生",
+                "cn": "积极的",
                 "emoji": "📘"
               },
               {
@@ -62,18 +132,33 @@
                 "emoji": "📘"
               },
               {
-                "en": "chemistry",
-                "cn": "化学",
-                "emoji": "📘"
-              },
-              {
                 "en": "connect",
                 "cn": "连接",
                 "emoji": "📘"
               },
               {
-                "en": "conversation",
-                "cn": "",
+                "en": "review",
+                "cn": "复习",
+                "emoji": "📘"
+              },
+              {
+                "en": "knowledge",
+                "cn": "知识",
+                "emoji": "📘"
+              },
+              {
+                "en": "wisely",
+                "cn": "明智地",
+                "emoji": "📘"
+              },
+              {
+                "en": "memorize",
+                "cn": "记忆",
+                "emoji": "📘"
+              },
+              {
+                "en": "attention",
+                "cn": "注意",
                 "emoji": "📘"
               }
             ],
@@ -83,18 +168,18 @@
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Do you know /greI@m/ Bell?",
-                    "cn": "你知道亚历山大·吗？"
+                    "text": "How do you study for an English test?",
+                    "cn": "你怎样备考英语?"
                   },
                   {
                     "role": "B",
-                    "text": "Yes, and ability too.",
-                    "cn": "知道，还有能力。"
+                    "text": "I study by working with a group and reading aloud.",
+                    "cn": "我通过小组学习和朗读来学。"
                   },
                   {
                     "role": "A",
-                    "text": "Great! Let's talk about How can we become good learners?.",
-                    "cn": "太好了！我们来聊聊How can we become good learners?。"
+                    "text": "Good idea! Practice makes perfect.",
+                    "cn": "好主意!熟能生巧。"
                   }
                 ]
               }
@@ -103,7 +188,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "29个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -127,7 +212,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "一般现在时被动",
+                "subtitle": "by+动名词 / How疑问 / 情态助动词",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -135,13 +220,21 @@
               {
                 "id": "s5",
                 "title": "课文阅读",
-                "subtitle": "阅读理解",
+                "subtitle": "阅读理解(6篇)",
                 "icon": "📖",
                 "type": "reading",
                 "time": "8分钟"
               },
               {
                 "id": "s6",
+                "title": "完形填空",
+                "subtitle": "10空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
                 "title": "听力短文",
                 "subtitle": "听音答题",
                 "icon": "👂",
@@ -149,15 +242,15 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s8",
                 "title": "写作练习",
-                "subtitle": "本单元句型",
+                "subtitle": "How I Study English",
                 "icon": "✍️",
                 "type": "writing",
                 "time": "10分钟"
               },
               {
-                "id": "s8",
+                "id": "s9",
                 "title": "单元通关",
                 "subtitle": "综合检测",
                 "icon": "🏆",
@@ -165,230 +258,253 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "一般现在时被动",
+            "grammarTitle": "by+动名词 / How疑问句 / 情态助动词",
             "grammarCode": null,
+            "grammarCodes": [
+              "g9u1.01",
+              "g9u1.02",
+              "g9u1.03"
+            ],
             "grammarQuiz": [
               {
-                "q": "本单元语法重点：一般现在时被动。下列哪项与「/greI@m/ Bell」词义最接近？",
+                "q": "I improve my English ____ English songs.",
                 "opts": [
-                  "亚历山大·",
-                  "连接",
-                  "安妮",
-                  ""
+                  "by singing",
+                  "by sing",
+                  "to sing",
+                  "sing"
                 ],
                 "answer": 0,
-                "point": "一般现在时被动",
+                "point": "by+动名词",
                 "dim": "grammar"
               },
               {
-                "q": "选择正确的英文：「能力」",
+                "q": "____ do you study for a test? — By making notes.",
                 "opts": [
-                  "ability",
-                  "active",
-                  "born",
-                  "/greI@m/ Bell"
+                  "What",
+                  "How",
+                  "Where",
+                  "Why"
                 ],
-                "answer": 0,
-                "point": "一般现在时被动",
+                "answer": 1,
+                "point": "How疑问句",
                 "dim": "grammar"
               }
             ],
             "reading": {
-              "passage": "3. I also learned useful sentences like “It’s a piece of cake” or “It serves you right”.",
-              "passageCn": "本单元阅读材料（How can we become good learners?）",
+              "passage": "(本单元课文阅读共 6 篇,见题库:Becoming a Good Learner 等。)",
+              "passageCn": "本单元阅读(How can we become good learners?)——原创 6 篇,体裁有梯度。",
               "questions": [
                 {
-                  "q": "According to the passage, this unit is mainly about:",
+                  "q": "What is Unit 1 mainly about?",
                   "opts": [
-                    "A different topic",
-                    "Only listening",
-                    "Only grammar",
-                    "How can we become good learners?"
-                  ],
-                  "answer": 3,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Sports only",
-                    "How can we become good learners?",
-                    "Cooking",
-                    "Math class"
+                    "Festivals",
+                    "How to become a good learner",
+                    "Inventions",
+                    "Shopping"
                   ],
                   "answer": 1,
                   "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「/greI@m/ Bell」 mean in Chinese?",
-                  "opts": [
-                    "亚历山大·",
-                    "注意",
-                    "出生",
-                    "大脑"
-                  ],
-                  "answer": 0,
-                  "point": "词汇理解",
                   "dim": "reading"
                 }
               ]
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"How can we become good learners?\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「How can we become good learners?」，使用本单元词汇。",
+              "prompt": "Write a short passage (about 80 words) on \"How I Study English\". Use “... by doing ...” and give at least three study methods.",
+              "promptCn": "以 “How I Study English” 为题写约 80 词短文:写出至少 3 种学习方法,必须用 “... by doing ...” 句型,结尾给一句鼓励。",
               "sampleWords": [
-                "/greI@m/ Bell",
-                "ability",
-                "active",
-                "Alexander",
+                "textbook",
+                "conversation",
                 "aloud",
-                "Annie"
+                "pronunciation",
+                "sentence",
+                "patient",
+                "expression",
+                "discover"
               ]
             },
             "quizQuestions": [
               {
-                "q": "「/greI@m/ Bell」的意思是？",
+                "q": "「textbook」的意思是？",
                 "opts": [
-                  "大脑",
-                  "安妮",
-                  "",
-                  "亚历山大·"
+                  "教科书",
+                  "发音",
+                  "发现",
+                  "笔记"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「ability」的意思是？",
+                "q": "「conversation」的意思是？",
                 "opts": [
-                  "注意",
-                  "亚历山大·",
-                  "出生",
-                  "能力"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「active」的意思是？",
-                "opts": [
-                  "连接",
-                  "",
-                  "注意",
-                  "活跃的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Alexander」的意思是？",
-                "opts": [
-                  "注意",
-                  "亚历山大·",
-                  "安妮",
-                  ""
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「aloud」的意思是？",
-                "opts": [
-                  "安妮",
-                  "大声地",
-                  "",
-                  "连接"
+                  "发音",
+                  "交谈",
+                  "句子",
+                  "秘密"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Annie」的意思是？",
+                "q": "「aloud」的意思是？",
                 "opts": [
-                  "",
-                  "大脑",
-                  "安妮",
-                  "亚历山大·"
+                  "语法",
+                  "增加",
+                  "出声地",
+                  "有耐心的"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「atention」的意思是？",
+                "q": "「pronunciation」的意思是？",
                 "opts": [
-                  "活跃的",
-                  "化学",
-                  "大声地",
-                  "注意"
+                  "表情",
+                  "重复",
+                  "搭档",
+                  "发音"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「born」的意思是？",
+                "q": "「sentence」的意思是？",
                 "opts": [
-                  "出生",
-                  "大声地",
+                  "句子",
+                  "发现",
+                  "笔记",
+                  "物理"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「patient」的意思是？",
+                "opts": [
                   "化学",
-                  "连接"
+                  "有耐心的",
+                  "秘密",
+                  "发音"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "哪个单词表示「亚历山大·」？",
+                "q": "「expression」的意思是？",
                 "opts": [
-                  "/greI@m/ Bell",
-                  "Alexander",
-                  "chemistry",
-                  "connect"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「怎样成为好的学习者」的核心词是？",
-                "opts": [
-                  "brain",
-                  "atention",
-                  "/greI@m/ Bell",
-                  "apple"
+                  "增加",
+                  "天生的",
+                  "表情",
+                  "语法"
                 ],
                 "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「discover」的意思是？",
+                "opts": [
+                  "重复",
+                  "搭档",
+                  "创造",
+                  "发现"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「secret」的意思是？",
+                "opts": [
+                  "秘密",
+                  "笔记",
+                  "物理",
+                  "速度"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「grammar」的意思是？",
+                "opts": [
+                  "能力",
+                  "语法",
+                  "发音",
+                  "化学"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "How can we become good learners?",
+                "audio": "I study English by reading stories every night.",
                 "opts": [
-                  "How can we become good learners?",
-                  "This is /greI@m/ Bell.",
-                  "ability",
-                  "active"
+                  "I study English by reading stories every night.",
+                  "This is a new schoolbag.",
+                  "The weather is fine today.",
+                  "She bought a scarf for her mom."
                 ],
                 "answer": 0
               },
               {
-                "audio": "Well, try them on and see how they look on you. Take your time. There’s no hurry.",
+                "audio": "How do you improve your listening?",
                 "opts": [
-                  "Well, try them on and see how they look on you. Take your time. There’s no hurry.",
-                  "This is /greI@m/ Bell.",
-                  "ability",
-                  "active"
+                  "She bought a scarf for her mom.",
+                  "How do you improve your listening?",
+                  "This is a new schoolbag.",
+                  "The weather is fine today."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "You can learn new words by making word cards.",
+                "opts": [
+                  "The weather is fine today.",
+                  "She bought a scarf for her mom.",
+                  "You can learn new words by making word cards.",
+                  "This is a new schoolbag."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "I improved my listening by watching English videos.",
+                "opts": [
+                  "This is a new schoolbag.",
+                  "The weather is fine today.",
+                  "She bought a scarf for her mom.",
+                  "I improved my listening by watching English videos."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Be patient, and you will get better step by step.",
+                "opts": [
+                  "Be patient, and you will get better step by step.",
+                  "This is a new schoolbag.",
+                  "The weather is fine today.",
+                  "She bought a scarf for her mom."
                 ],
                 "answer": 0
+              },
+              {
+                "audio": "Everyone can become a good learner by working hard.",
+                "opts": [
+                  "She bought a scarf for her mom.",
+                  "Everyone can become a good learner by working hard.",
+                  "This is a new schoolbag.",
+                  "The weather is fine today."
+                ],
+                "answer": 1
               }
             ]
           },

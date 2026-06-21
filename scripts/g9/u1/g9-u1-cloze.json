@@ -1,0 +1,168 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "code": "g9u1.cz",
+  "text": "Li Lei used to be weak in English. He could not understand the teacher and was afraid to __1__ in class. Then he decided to change. Every morning he read English __2__ for twenty minutes to improve his pronunciation. He also built his __3__ by making word cards and reviewing them on the bus. When he met a new word, he tried to guess its meaning by __4__ the sentences around it. In class, he became more __5__ and often asked the teacher questions. He knew that everyone makes __6__, so he was __7__ with himself and never gave up. He also joined an English club, where he made many __8__. Little by little, his English __9__. Now he can have a conversation with foreign visitors easily. Li Lei says that anyone can learn English well by working hard and finding the right __10__.",
+  "questions": [
+    {
+      "qid": "g9u1.cz.q1",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 1,
+      "options": [
+        "sleep",
+        "speak",
+        "sing",
+        "run"
+      ],
+      "answer_index": 1,
+      "answer_text": "speak",
+      "explanation": "afraid to speak in class 害怕在课上发言。"
+    },
+    {
+      "qid": "g9u1.cz.q2",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 2,
+      "options": [
+        "aloud",
+        "quietly",
+        "slowly",
+        "alone"
+      ],
+      "answer_index": 0,
+      "answer_text": "aloud",
+      "explanation": "read aloud 朗读以改善发音。"
+    },
+    {
+      "qid": "g9u1.cz.q3",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 3,
+      "options": [
+        "grammar",
+        "vocabulary",
+        "pronunciation",
+        "knowledge"
+      ],
+      "answer_index": 1,
+      "answer_text": "vocabulary",
+      "explanation": "make word cards 是为扩大 vocabulary。"
+    },
+    {
+      "qid": "g9u1.cz.q4",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 4,
+      "options": [
+        "writing",
+        "copying",
+        "reading",
+        "drawing"
+      ],
+      "answer_index": 2,
+      "answer_text": "reading",
+      "explanation": "by reading the sentences around it 读上下文猜词义。"
+    },
+    {
+      "qid": "g9u1.cz.q5",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 5,
+      "options": [
+        "quiet",
+        "shy",
+        "tired",
+        "active"
+      ],
+      "answer_index": 3,
+      "answer_text": "active",
+      "explanation": "常提问→更 active 积极。"
+    },
+    {
+      "qid": "g9u1.cz.q6",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 6,
+      "options": [
+        "mistakes",
+        "friends",
+        "notes",
+        "plans"
+      ],
+      "answer_index": 0,
+      "answer_text": "mistakes",
+      "explanation": "everyone makes mistakes 人人都会犯错。"
+    },
+    {
+      "qid": "g9u1.cz.q7",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 7,
+      "options": [
+        "angry",
+        "patient",
+        "busy",
+        "strict"
+      ],
+      "answer_index": 1,
+      "answer_text": "patient",
+      "explanation": "对自己有耐心 patient,不放弃。"
+    },
+    {
+      "qid": "g9u1.cz.q8",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 8,
+      "options": [
+        "problems",
+        "mistakes",
+        "friends",
+        "enemies"
+      ],
+      "answer_index": 2,
+      "answer_text": "friends",
+      "explanation": "加入俱乐部→结交许多 friends。"
+    },
+    {
+      "qid": "g9u1.cz.q9",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 9,
+      "options": [
+        "fell",
+        "stopped",
+        "improved",
+        "disappeared"
+      ],
+      "answer_index": 2,
+      "answer_text": "improved",
+      "explanation": "坚持努力→英语 improved 提高。"
+    },
+    {
+      "qid": "g9u1.cz.q10",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.cz",
+      "blank": 10,
+      "options": [
+        "time",
+        "place",
+        "reason",
+        "way"
+      ],
+      "answer_index": 3,
+      "answer_text": "way",
+      "explanation": "find the right way 找到正确方法,呼应全文。"
+    }
+  ]
+}

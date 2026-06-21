@@ -1,0 +1,181 @@
+{
+  "volume": "g9",
+  "unit": "U1",
+  "code": "g9u1.ls",
+  "materials": [
+    {
+      "type": "dialogue",
+      "transcript": [
+        "Lin Tao: Hi, Sarah! The English exam is coming. How do you study for it?",
+        "Sarah: I study by reading English stories every night. It helps me learn new words.",
+        "Lin Tao: That's a good idea. But I always forget new words quickly.",
+        "Sarah: You can try making word cards and reviewing them on the bus.",
+        "Lin Tao: Sounds useful. What about listening? Mine is really weak.",
+        "Sarah: Don't worry. I improved my listening by watching short English videos.",
+        "Lin Tao: How long do you watch them every day?",
+        "Sarah: About twenty minutes. Be patient, and you'll get better step by step.",
+        "Lin Tao: Thank you, Sarah. I'll start tonight!"
+      ],
+      "translation_cn": "林涛:嗨,莎拉!英语考试快到了,你怎么备考?/莎拉:我每晚通过读英语故事来学习,这能帮我记新词。/林涛:好主意。可我总是很快忘掉新词。/莎拉:你可以试试做单词卡片,在公交车上复习。/林涛:听起来有用。听力呢?我很弱。/莎拉:别担心,我是通过看英语短视频提高听力的。/林涛:你每天看多久?/莎拉:大约二十分钟。要有耐心,你会一步步进步。/林涛:谢谢你,莎拉!我今晚就开始!"
+    },
+    {
+      "type": "passage",
+      "transcript": [
+        "My name is Mike. Last year my English was poor, but now I am one of the best students in my class. How did I change? First, I learned grammar by doing exercises every day. Second, I increased my vocabulary by reading newspapers and writing down useful expressions. I also practised speaking by talking with my foreign teacher after class. At first it was hard, but I never gave up. Now I really enjoy learning English, and I believe everyone can become a good learner by working hard and finding the right way."
+      ],
+      "translation_cn": "我叫迈克。去年我的英语很差,但现在我是班上最好的学生之一。我怎么改变的?第一,我每天通过做练习学语法。第二,我通过读报纸、记下有用表达来扩大词汇量。我还通过课后和外教交谈练口语。起初很难,但我从不放弃。现在我很享受学英语,我相信只要努力并找到正确方法,人人都能成为优秀的学习者。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u1.ls.q1",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How does Sarah study for the English exam?",
+      "options": [
+        "By playing games.",
+        "By singing songs.",
+        "By reading English stories.",
+        "By drawing pictures."
+      ],
+      "answer_index": 2,
+      "answer_text": "By reading English stories."
+    },
+    {
+      "qid": "g9u1.ls.q2",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "What does Sarah suggest for remembering words?",
+      "options": [
+        "Making word cards.",
+        "Reading aloud.",
+        "Copying the textbook.",
+        "Asking the teacher."
+      ],
+      "answer_index": 0,
+      "answer_text": "Making word cards."
+    },
+    {
+      "qid": "g9u1.ls.q3",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How did Sarah improve her listening?",
+      "options": [
+        "By taking notes.",
+        "By reading novels.",
+        "By making friends.",
+        "By watching short English videos."
+      ],
+      "answer_index": 3,
+      "answer_text": "By watching short English videos."
+    },
+    {
+      "qid": "g9u1.ls.q4",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How long does Sarah watch videos every day?",
+      "options": [
+        "About ten minutes.",
+        "About twenty minutes.",
+        "About half an hour.",
+        "About one hour."
+      ],
+      "answer_index": 1,
+      "answer_text": "About twenty minutes."
+    },
+    {
+      "qid": "g9u1.ls.q5",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "What does Sarah tell Lin Tao to be?",
+      "options": [
+        "Careful.",
+        "Quiet.",
+        "Patient.",
+        "Active."
+      ],
+      "answer_index": 2,
+      "answer_text": "Patient."
+    },
+    {
+      "qid": "g9u1.ls.q6",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How was Mike's English last year?",
+      "options": [
+        "Poor.",
+        "Excellent.",
+        "Just OK.",
+        "The best."
+      ],
+      "answer_index": 0,
+      "answer_text": "Poor."
+    },
+    {
+      "qid": "g9u1.ls.q7",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How did Mike learn grammar?",
+      "options": [
+        "By listening to tapes.",
+        "By watching TV.",
+        "By chatting online.",
+        "By doing exercises every day."
+      ],
+      "answer_index": 3,
+      "answer_text": "By doing exercises every day."
+    },
+    {
+      "qid": "g9u1.ls.q8",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How did Mike increase his vocabulary?",
+      "options": [
+        "By playing word games.",
+        "By reading newspapers and writing down expressions.",
+        "By memorizing the dictionary.",
+        "By writing letters."
+      ],
+      "answer_index": 1,
+      "answer_text": "By reading newspapers and writing down expressions."
+    },
+    {
+      "qid": "g9u1.ls.q9",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "How did Mike practise speaking?",
+      "options": [
+        "By reading aloud at home.",
+        "By recording himself.",
+        "By talking with his foreign teacher.",
+        "By singing songs."
+      ],
+      "answer_index": 2,
+      "answer_text": "By talking with his foreign teacher."
+    },
+    {
+      "qid": "g9u1.ls.q10",
+      "volume": "g9",
+      "unit": "U1",
+      "code": "g9u1.ls",
+      "stem": "What does Mike believe?",
+      "options": [
+        "Everyone can become a good learner by working hard.",
+        "English is useless.",
+        "Only clever students learn well.",
+        "Learning English is impossible."
+      ],
+      "answer_index": 0,
+      "answer_text": "Everyone can become a good learner by working hard."
+    }
+  ]
+}

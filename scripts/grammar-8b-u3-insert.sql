@@ -7,7 +7,7 @@ ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS unit text;
 
 -- B. 建 1 个新语法点(每考点一个;code 唯一,幂等)
 INSERT INTO public.junior_grammar_points (category_id, code, title, cefr, grade, summary, explanation_md, sort_order, volume, unit)
-SELECT (SELECT id FROM public.junior_grammar_categories WHERE code='other'), 'g8bu3.01', '①状语从句 (although/until/so that)', 'A1', 7, '对应:8B U3', '', 1, '8B', 'U3'
+SELECT (SELECT id FROM public.junior_grammar_categories WHERE code='other'), 'g8bu3.01', '①状语从句 (although/until/so that/if)', 'A1', 7, '对应:8B U3', '', 1, '8B', 'U3'
 WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_points WHERE code='g8bu3.01');
 
 -- 兜底:若点已存在但缺 volume/unit(重跑场景),补齐
@@ -15,35 +15,35 @@ UPDATE public.junior_grammar_points SET volume='8B', unit='U3' WHERE code='g8bu3
 
 -- C. 插 10 道题(按 point code 挂 point_id;按 point+stem 去重幂等)
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ it was raining heavily, we still went out for a walk.', 'Because', 'Although', 'Until', 'So that', 'B', '', 'mcq', 1, 1, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ it was raining heavily, we still went out for a walk.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ you argued, you are still very close friends.', 'Although', 'Until', 'So that', 'If', 'A', '', 'mcq', 1, 1, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ you argued, you are still very close friends.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ he is very young, he can speak three languages.', 'Because', 'Until', 'So that', 'Although', 'D', '', 'mcq', 1, 2, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ he is very young, he can speak three languages.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'You won''t know how he feels ____ you talk to him.', 'although', 'until', 'so that', 'if', 'B', '', 'mcq', 1, 2, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='You won''t know how he feels ____ you talk to him.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'You should wait here ____ the rain stops.', 'until', 'although', 'so that', 'but', 'A', '', 'mcq', 1, 3, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='You should wait here ____ the rain stops.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'You can write to your parents ____ they''ll know how you feel.', 'so that', 'if', 'although', 'until', 'A', '', 'mcq', 1, 3, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='You can write to your parents ____ they''ll know how you feel.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'He didn''t go to bed ____ he finished his homework.', 'until', 'so that', 'but', 'although', 'A', '', 'mcq', 1, 4, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='He didn''t go to bed ____ he finished his homework.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ you did something wrong, you should say sorry.', 'Until', 'So that', 'If', 'Although', 'C', '', 'mcq', 1, 4, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ you did something wrong, you should say sorry.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'Please speak clearly ____ everyone can hear you.', 'but', 'until', 'so that', 'although', 'C', '', 'mcq', 1, 5, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='Please speak clearly ____ everyone can hear you.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ you feel upset, you should speak to someone you trust.', 'Although', 'So that', 'If', 'Until', 'C', '', 'mcq', 1, 5, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ you feel upset, you should speak to someone you trust.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'He studied hard ____ he could get a good grade.', 'until', 'although', 'so that', 'but', 'C', '', 'mcq', 1, 6, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='He studied hard ____ he could get a good grade.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ people might hurt you sometimes, it isn''t always on purpose.', 'If', 'Until', 'So that', 'Although', 'D', '', 'mcq', 1, 6, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ people might hurt you sometimes, it isn''t always on purpose.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ she tried her best, she didn''t pass the exam.', 'Because', 'So that', 'Although', 'Until', 'C', '', 'mcq', 1, 7, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ she tried her best, she didn''t pass the exam.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'You won''t feel better ____ you share your problems.', 'although', 'until', 'so that', 'if', 'B', '', 'mcq', 1, 7, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='You won''t feel better ____ you share your problems.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'Don''t leave the room ____ the teacher tells you to.', 'until', 'so that', 'but', 'although', 'A', '', 'mcq', 1, 8, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='Don''t leave the room ____ the teacher tells you to.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'Take a break ____ you can clear your mind.', 'until', 'if', 'although', 'so that', 'D', '', 'mcq', 1, 8, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='Take a break ____ you can clear your mind.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), 'She saved money ____ she could buy a new computer.', 'so that', 'until', 'although', 'but', 'A', '', 'mcq', 1, 9, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='She saved money ____ she could buy a new computer.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ others might say bad things about you, don''t lose confidence.', 'Until', 'So that', 'If', 'Although', 'D', '', 'mcq', 1, 9, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ others might say bad things about you, don''t lose confidence.');
 INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, question_type, difficulty, sort_order, grammar_topic)
-SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ they lost the game, they felt proud of themselves.', 'Because', 'So that', 'Although', 'Until', 'C', '', 'mcq', 1, 10, 'g8bu3.01'
-WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ they lost the game, they felt proud of themselves.');
+SELECT (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01'), '____ I spend more time studying, I''ll get better grades.', 'So that', 'If', 'Until', 'Although', 'B', '', 'mcq', 1, 10, 'g8bu3.01'
+WHERE NOT EXISTS (SELECT 1 FROM public.junior_grammar_questions q JOIN public.junior_grammar_points p ON q.point_id=p.id WHERE p.code='g8bu3.01' AND q.stem='____ I spend more time studying, I''ll get better grades.');
 
 -- D. count 校验(本批,应:语法点 1 / 题 10)
 SELECT 'points' AS kind, count(*) FROM public.junior_grammar_points WHERE (volume,unit) IN (('8B','U3'))

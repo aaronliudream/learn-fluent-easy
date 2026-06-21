@@ -4979,11 +4979,8 @@
               }
             ],
             "grammarTitle": "if条件句(主将从现) + 名词后缀构词",
-            "grammarCode": "g8.17",
-            "grammarCodes": [
-              "g8.17",
-              "g8.38"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au8.01", "g8au8.02", "g8au8.03"],
             "grammarQuiz": [
               {
                 "q": "If you ____ to others carefully, you will understand them better.",

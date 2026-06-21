@@ -1,5 +1,10 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { GrammarQuestion } from "@/components/grammar/GrammarQuestionCard";
+import {
+  loadGrammarQuestionMastery,
+  computeGrammarProgress,
+  type GrammarProgress,
+} from "@/lib/juniorGrammarQuestionMastery";
 
 /**
  * 语法「按单元」组织 —— 方案B。
@@ -83,6 +88,26 @@ export async function loadPoint(pointId: string): Promise<GPointMeta | null> {
     .eq("id", pointId)
     .maybeSingle();
   return (data as GPointMeta) ?? null;
+}
+
+/**
+ * 按 grammarCodes(单元挂的语法点 code)算完成/掌握度 —— 与语法页 L2 同一套口径
+ * (取这些点的全部题 id → loadGrammarQuestionMastery → computeGrammarProgress),
+ * 保证 hub 第4关 与 语法专项页 同一单元数字一致。
+ */
+export async function loadProgressForCodes(codes: string[]): Promise<GrammarProgress> {
+  if (!codes || !codes.length) return { done: 0, mastered: 0, total: 0 };
+  const { data: pts } = await supabase.from("junior_grammar_points").select("id").in("code", codes);
+  const pointIds = ((pts ?? []) as { id: string }[]).map((p) => p.id);
+  if (!pointIds.length) return { done: 0, mastered: 0, total: 0 };
+  const qids: string[] = [];
+  for (let i = 0; i < pointIds.length; i += 100) {
+    const slice = pointIds.slice(i, i + 100);
+    const { data } = await supabase.from("junior_grammar_questions").select("id").in("point_id", slice);
+    for (const q of (data ?? []) as { id: string }[]) qids.push(q.id);
+  }
+  const mastery = await loadGrammarQuestionMastery(qids);
+  return computeGrammarProgress(qids, mastery);
 }
 
 const Q_SELECT =

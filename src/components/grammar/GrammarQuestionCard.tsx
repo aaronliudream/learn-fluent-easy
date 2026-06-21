@@ -361,9 +361,19 @@ export function GrammarQuestionCard({
                         : "bg-gradient-to-br from-pink-100 to-cyan-100 text-pink-600",
                   )}
                 >
-                  {L}
+                  {isAns ? "✓" : isWrong ? "✗" : L}
                 </span>
-                {txt}
+                <span className="min-w-0 flex-1">{txt}</span>
+                {isAns && (
+                  <span className="ml-auto shrink-0 rounded-full bg-emerald-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                    正确
+                  </span>
+                )}
+                {isWrong && (
+                  <span className="ml-auto shrink-0 rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                    你的答案
+                  </span>
+                )}
               </button>
             );
           })}

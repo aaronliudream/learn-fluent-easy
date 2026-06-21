@@ -8,6 +8,8 @@ import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { useUnitVocab, useRankedUnitVocab } from "@/lib/juniorHub/useUnitVocab";
+import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
+import { gpct, type GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
 import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
@@ -1062,6 +1064,44 @@ function FinalQuizStage({
   );
 }
 
+// 第4关语法关顶部:显示该单元 完成度/掌握度(与语法专项页 L2 同源同口径)。
+function UnitGrammarProgress({ codes }: { codes: string[] }) {
+  const [prog, setProg] = useState<GrammarProgress | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const p = await loadProgressForCodes(codes);
+      if (!cancelled) setProg(p);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [codes.join(",")]);
+  if (!prog || prog.total === 0) return null;
+  return (
+    <div className="mb-3 grid grid-cols-2 gap-2">
+      <GrammarProgPill label="完成度" value={gpct(prog.done, prog.total)} sub={`${prog.done}/${prog.total} 题`} color="emerald" />
+      <GrammarProgPill label="掌握度" value={gpct(prog.mastered, prog.total)} sub={`${prog.mastered}/${prog.total} 题`} color="amber" />
+    </div>
+  );
+}
+
+function GrammarProgPill({ label, value, sub, color }: { label: string; value: number; sub: string; color: "emerald" | "amber" }) {
+  const bar = color === "emerald" ? "bg-emerald-500" : "bg-amber-500";
+  return (
+    <div className="rounded-xl border border-[#EEEAE0] bg-[#FAF8F3] p-2 dark:border-border dark:bg-muted/30">
+      <div className="flex items-center justify-between text-[10px] font-bold text-[#5C5751] dark:text-muted-foreground">
+        <span>{label}</span>
+        <span className="tabular-nums">{value}%</span>
+      </div>
+      <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div className={`h-full ${bar}`} style={{ width: `${Math.max(2, value)}%` }} />
+      </div>
+      <div className="mt-0.5 text-[9px] text-muted-foreground">{sub}</div>
+    </div>
+  );
+}
+
 function GrammarStage({
   unit,
   grade,
@@ -1107,6 +1147,7 @@ function GrammarStage({
         <p className="mb-3 text-sm text-[#5C5751]">
           本单元语法综合测试：{unit.grammarCodes.length} 个语法点混合抽题，成绩计入你的掌握度。
         </p>
+        <UnitGrammarProgress codes={unit.grammarCodes} />
         <Link
           to={testPath}
           className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"

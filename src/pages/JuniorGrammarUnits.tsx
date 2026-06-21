@@ -89,6 +89,9 @@ export default function JuniorGrammarUnits() {
                         <span className="rounded-md bg-primary/10 px-2 py-0.5 text-[11px] font-extrabold text-primary">{u.label}</span>
                         <span className="text-xs text-muted-foreground">{u.points.length} 个语法点 · {u.questionIds.length} 题</span>
                       </div>
+                      <div className="mt-1.5 text-sm font-semibold leading-snug text-foreground">
+                        {u.points.map((p) => shortPoint(p.title)).join(" · ")}
+                      </div>
                       <div className="mt-2 grid grid-cols-2 gap-3">
                         <MiniBar label="完成" value={gpct(prog.done, prog.total)} color="emerald" />
                         <MiniBar label="掌握" value={gpct(prog.mastered, prog.total)} color="amber" />
@@ -104,6 +107,11 @@ export default function JuniorGrammarUnits() {
       )}
     </main>
   );
+}
+
+/** 精简考点名:去掉开头的 ①②③ 序号和括号补充,便于在卡片上一行展示。 */
+function shortPoint(title: string): string {
+  return title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, "").replace(/\s*[(（][^)）]*[)）]\s*$/, "").trim();
 }
 
 function ProgressTile({ label, value, sub, color }: { label: string; value: number; sub: string; color: "emerald" | "amber" }) {

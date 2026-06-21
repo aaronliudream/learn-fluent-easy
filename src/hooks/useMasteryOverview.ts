@@ -299,19 +299,32 @@ export function useMasteryOverview(stage: Stage): StageOverview {
           if ((r as any).next_review_at && new Date((r as any).next_review_at).getTime() <= Date.now()) grammar.due += 1;
         }
       } else if (stage === "junior") {
-        // junior 语法掌握度写在 junior_user_mastery(item_type='grammar_point');只数考点层,
-        // 不数 'grammar_kp' 行(否则与 point 重复计数)。due 用 due_at(非 gaokao 的 next_review_at)。
+        // junior 语法板块口径 = 按题(junior_user_mastery item_type='grammar_question',累计答对2次=掌握),
+        // 与语法专项页/单元页/第4关一致;不再用旧 grammar_point 点级 FSRS,保证全站语法数字同源。
         const { data: jm } = await supabase
           .from("junior_user_mastery")
-          .select("mastery_level,due_at")
+          .select("correct_count,wrong_count")
           .eq("user_id", user.id)
-          .eq("item_type", "grammar_point");
+          .eq("item_type", "grammar_question");
         for (const r of jm ?? []) {
-          const lvl = (r as any).mastery_level ?? 0;
-          if (lvl >= 3) grammar.mastered += 1;
-          else if (lvl >= 1) grammar.learned += 1;
-          if ((r as any).due_at && new Date((r as any).due_at).getTime() <= Date.now()) grammar.due += 1;
+          const c = Number((r as any).correct_count ?? 0);
+          const w = Number((r as any).wrong_count ?? 0);
+          if (c >= 2) grammar.mastered += 1;
+          else if (c + w > 0) grammar.learned += 1;
         }
+        // 动态总题数 = 新体系语法题(挂在 unit 非空语法点上的题)
+        const { data: gpts } = await supabase.from("junior_grammar_points").select("id").not("unit", "is", null);
+        const pids = ((gpts ?? []) as { id: string }[]).map((p) => p.id);
+        let gtotal = 0;
+        for (let i = 0; i < pids.length; i += 100) {
+          const slice = pids.slice(i, i + 100);
+          const { count } = await supabase
+            .from("junior_grammar_questions")
+            .select("*", { count: "exact", head: true })
+            .in("point_id", slice);
+          gtotal += count ?? 0;
+        }
+        grammar.total = gtotal;
       }
       grammar.percent = grammar.total ? Math.round((grammar.mastered / grammar.total) * 100) : 0;
 

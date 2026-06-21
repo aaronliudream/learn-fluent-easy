@@ -100,23 +100,43 @@ async function countVocabMastered(userId: string, dbGrades: number[]): Promise<n
   return count ?? 0;
 }
 
-async function countGrammarMastered(userId: string, dbGrades: number[]): Promise<number> {
+/** 新体系语法题 id(unit 非空点,指定年级)。 */
+async function newGrammarQuestionIds(dbGrades: number[]): Promise<string[]> {
   const { data: points } = await supabase
     .from("junior_grammar_points")
     .select("id")
-    .in("grade", dbGrades);
-  const ids = (points ?? []).map((p) => p.id);
-  if (!ids.length) return 0;
+    .in("grade", dbGrades)
+    .not("unit", "is", null);
+  const pids = (points ?? []).map((p) => p.id);
+  if (!pids.length) return [];
+  const qids: string[] = [];
+  for (let i = 0; i < pids.length; i += 100) {
+    const slice = pids.slice(i, i + 100);
+    const { data } = await supabase.from("junior_grammar_questions").select("id").in("point_id", slice);
+    for (const q of (data ?? []) as { id: string }[]) qids.push(q.id);
+  }
+  return qids;
+}
 
-  const { count, error } = await supabase
+async function countGrammarQuestions(dbGrades: number[]): Promise<number> {
+  return (await newGrammarQuestionIds(dbGrades)).length;
+}
+
+// 语法掌握 = 按题累计答对2次(junior_user_mastery item_type='grammar_question'),与语法专项页/单元页同口径。
+async function countGrammarMastered(userId: string, dbGrades: number[]): Promise<number> {
+  const qids = await newGrammarQuestionIds(dbGrades);
+  if (!qids.length) return 0;
+  const set = new Set(qids);
+  const { data: rows, error } = await supabase
     .from("junior_user_mastery")
-    .select("id", { count: "exact", head: true })
+    .select("item_id,correct_count")
     .eq("user_id", userId)
-    .eq("item_type", "grammar_point")
-    .in("item_id", ids)
-    .gte("mastery_level", CLASSROOM_MASTERED_LEVEL);
+    .eq("item_type", "grammar_question")
+    .gte("correct_count", 2);
   if (error) return 0;
-  return count ?? 0;
+  let mastered = 0;
+  for (const r of (rows ?? []) as { item_id: string }[]) if (set.has(r.item_id)) mastered++;
+  return mastered;
 }
 
 async function countReadingMastered(userId: string, dbGrades: number[]): Promise<number> {
@@ -217,7 +237,7 @@ export async function fetchJuniorClassroomSyncProgress(
   const [vocabTotal, grammarTotal, readingTotal, listeningTotal, writingTotal, stageTotal] =
     await Promise.all([
       countRows("junior_vocab", dbGrades),
-      countRows("junior_grammar_points", dbGrades),
+      countGrammarQuestions(dbGrades),
       countRows("junior_reading", dbGrades),
       countRows("junior_listening_exercises", dbGrades),
       countRows("junior_writing_prompts", dbGrades),

@@ -5652,11 +5652,8 @@
               }
             ],
             "grammarTitle": "不定式(目的状语+宾补) + 课余活动动词搭配",
-            "grammarCode": "g8.11",
-            "grammarCodes": [
-              "g8.11",
-              "g8.39"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu1.01", "g8bu1.02", "g8bu1.03"],
             "grammarQuiz": [
               {
                 "q": "My mother asked me ___ the room before dinner.",

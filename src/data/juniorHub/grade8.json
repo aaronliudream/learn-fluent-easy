@@ -8332,11 +8332,8 @@
               }
             ],
             "grammarTitle": "过去进行时(when/while) + 自然灾害合成词",
-            "grammarCode": "g8.22",
-            "grammarCodes": [
-              "g8.22",
-              "g8.41"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu5.01", "g8bu5.02"],
             "grammarQuiz": [
               {
                 "q": "I ___ in bed when the earthquake happened.",
@@ -9002,11 +8999,8 @@
               }
             ],
             "grammarTitle": "so…that/unless/as soon as + 否定前缀&ed/ing辨析",
-            "grammarCode": "g8.33",
-            "grammarCodes": [
-              "g8.33",
-              "g8.42"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8bu6.01"],
             "grammarQuiz": [
               {
                 "q": "The custom was ___ strange ___ the visitor did not know what to do.",

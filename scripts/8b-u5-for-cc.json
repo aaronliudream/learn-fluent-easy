@@ -1,0 +1,14 @@
+[
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "The wind ____ strongly last night.", "options": ["blew","was blowing","is blowing","blows"], "answer_index": 1, "answer_text": "was blowing", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "They ____ for the typhoon yesterday afternoon.", "options": ["prepared","prepare","are preparing","were preparing"], "answer_index": 3, "answer_text": "were preparing", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "It ____ heavily at that time.", "options": ["rains","rained","was raining","is raining"], "answer_index": 2, "answer_text": "was raining", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "What ____ you doing at 8:00 yesterday evening?", "options": ["are","were","was","did"], "answer_index": 1, "answer_text": "were", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "They ____ dinner when I called. (否定)", "options": ["don't have","aren't having","weren't having","didn't have"], "answer_index": 2, "answer_text": "weren't having", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "①过去进行时 (was/were + doing)", "stem": "We ____ at home when the storm came.", "options": ["stayed","are staying","stay","were staying"], "answer_index": 3, "answer_text": "were staying", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "I was reading ____ the lights went out. (后接突发动作)", "options": ["while","if","because","when"], "answer_index": 3, "answer_text": "when", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "____ I was sleeping, it was raining. (后接持续动作)", "options": ["Because","When","If","While"], "answer_index": 3, "answer_text": "While", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "Tom was sleeping ____ the earthquake happened.", "options": ["although","when","unless","because"], "answer_index": 1, "answer_text": "when", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "____ we were driving home, the strong winds started.", "options": ["While","Since","Because","If"], "answer_index": 0, "answer_text": "While", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "The power went out ____ my father was making dinner.", "options": ["while","if","although","until"], "answer_index": 0, "answer_text": "while", "explanation": "" },
+  { "volume": "8B", "unit": "U5", "point": "②when / while 用法区分", "stem": "My neighbour called ____ my family was having dinner.", "options": ["because","although","when","unless"], "answer_index": 2, "answer_text": "when", "explanation": "" }
+]

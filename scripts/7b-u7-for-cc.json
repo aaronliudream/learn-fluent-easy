@@ -1,0 +1,14 @@
+[
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "We ____ the plants in the afternoon.", "options": ["water","watered","waterd","watering"], "answer_index": 1, "answer_text": "watered", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "I ____ to the tourists at the museum yesterday.", "options": ["talk","talking","talked","talkd"], "answer_index": 2, "answer_text": "talked", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "She ____ many strawberries on the farm.", "options": ["pick","picked","pickd","picking"], "answer_index": 1, "answer_text": "picked", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "They ____ the science museum last weekend.", "options": ["visit","visited","visiting","visitted"], "answer_index": 1, "answer_text": "visited", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "He ____ hard on the farm all day.", "options": ["work","workd","worked","working"], "answer_index": 2, "answer_text": "worked", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "①规则动词过去式 (-ed)", "stem": "We ____ food for our parents last night.", "options": ["cooking","cook","cooked","cookd"], "answer_index": 2, "answer_text": "cooked", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "Last week, our class ____ on a school trip.", "options": ["went","wented","go","goed"], "answer_index": 0, "answer_text": "went", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "We ____ many important things at the museum.", "options": ["sawed","seed","see","saw"], "answer_index": 3, "answer_text": "saw", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "The farmer ____ us how to cut branches.", "options": ["teached","taughted","taught","teach"], "answer_index": 2, "answer_text": "taught", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "We ____ dirty water clean again.", "options": ["make","maded","made","maked"], "answer_index": 2, "answer_text": "made", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "I ____ it was a memorable day.", "options": ["thought","think","thoughted","thinked"], "answer_index": 0, "answer_text": "thought", "explanation": "" },
+  { "volume": "7B", "unit": "U7", "point": "②不规则动词过去式 (go/see/teach/make...)", "stem": "She ____ very happy at the farm last Saturday.", "options": ["were","is","be","was"], "answer_index": 3, "answer_text": "was", "explanation": "" }
+]

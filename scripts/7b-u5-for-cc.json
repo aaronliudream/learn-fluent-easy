@@ -1,0 +1,14 @@
+[
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "She ____ an online class in her room now.", "options": ["is taking","takes","take","taking"], "answer_index": 0, "answer_text": "is taking", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "I ____ to you from Pingyao right now!", "options": ["writes","write","am writing","writing"], "answer_index": 2, "answer_text": "am writing", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "My family and I ____ a great time at the moment!", "options": ["having","have","are having","has"], "answer_index": 2, "answer_text": "are having", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "Listen! What ____ the people next door ____?", "options": ["are; do","is; doing","do; do","are; doing"], "answer_index": 3, "answer_text": "are; doing", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "Hao Yi and I ____ zongzi now.", "options": ["are making","make","makes","making"], "answer_index": 0, "answer_text": "are making", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "①现在进行时结构 (be + doing)", "stem": "Dad ____ the car right now.", "options": ["is washing","wash","washes","washing"], "answer_index": 0, "answer_text": "is washing", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "Lights ____ brightly across the city now.", "options": ["shining","shines","shine","are shining"], "answer_index": 3, "answer_text": "are shining", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "Many people ____ to the subway right now.", "options": ["rushing","rushes","are rushing","rush"], "answer_index": 2, "answer_text": "are rushing", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "— Are you ____ for the Dragon Boat Festival?", "options": ["preparing","prepares","prepared","prepare"], "answer_index": 0, "answer_text": "preparing", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "Colourful boats ____ slowly down the river at the moment.", "options": ["moves","are moving","moving","move"], "answer_index": 1, "answer_text": "are moving", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "Some people ____ for gifts in the shops now.", "options": ["shop","are shopping","shopping","shops"], "answer_index": 1, "answer_text": "are shopping", "explanation": "" },
+  { "volume": "7B", "unit": "U5", "point": "②现在进行时应用 (时间状语/各人称)", "stem": "I ____ the car at the moment. (在这一刻)", "options": ["washes","wash","washing","am washing"], "answer_index": 3, "answer_text": "am washing", "explanation": "" }
+]

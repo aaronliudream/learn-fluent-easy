@@ -13171,7 +13171,8 @@
               }
             ],
             "grammarTitle": "现在进行时",
-            "grammarCode": "g7-t13",
+            "grammarCode": null,
+            "grammarCodes": ["g7bu5.01", "g7bu5.02"],
             "grammarQuiz": [
               {
                 "q": "Look! The children ___ in the park.",
@@ -15256,7 +15257,8 @@
               }
             ],
             "grammarTitle": "一般过去时（出游）",
-            "grammarCode": "g7-t14",
+            "grammarCode": null,
+            "grammarCodes": ["g7bu7.01", "g7bu7.02"],
             "grammarQuiz": [
               {
                 "q": "Last weekend, we ___ to the science museum.",
@@ -16285,7 +16287,8 @@
               }
             ],
             "grammarTitle": "一般过去时（故事叙述）",
-            "grammarCode": "g7-t14",
+            "grammarCode": null,
+            "grammarCodes": ["g7bu8.01", "g7bu8.02"],
             "grammarQuiz": [
               {
                 "q": "Once upon a time, there ___ a wise old king.",

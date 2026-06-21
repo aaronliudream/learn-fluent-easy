@@ -1,0 +1,14 @@
+[
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "Once upon a time, there ____ a king who loved painting.", "options": ["is","be","was","were"], "answer_index": 2, "answer_text": "was", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "The king ____ many beautiful horses in his castle.", "options": ["had","haved","have","has"], "answer_index": 0, "answer_text": "had", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "The artist ____ the king and felt nervous.", "options": ["seed","see","sawed","saw"], "answer_index": 3, "answer_text": "saw", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "The boy ____ everyone the truth about the emperor.", "options": ["telled","told","tolded","tell"], "answer_index": 1, "answer_text": "told", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "The ugly duckling ____ to the lake and met three swans.", "options": ["wented","went","goed","go"], "answer_index": 1, "answer_text": "went", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "①不规则动词过去式 (be/have/see/tell/go...)", "stem": "There ____ six little ducklings in the story.", "options": ["be","were","are","was"], "answer_index": 1, "answer_text": "were", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "The emperor ____ to buy some new clothes.", "options": ["wanted","wantd","wantted","want"], "answer_index": 0, "answer_text": "wanted", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "The two brothers ____ to the emperor to get money.", "options": ["lyed","lied","lieed","lie"], "answer_index": 1, "answer_text": "lied", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "People ____ the clothes because they were afraid.", "options": ["praised","praiseed","praise","praisd"], "answer_index": 0, "answer_text": "praised", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "Everyone ____ laughing when the boy cried out.", "options": ["startted","start","startd","started"], "answer_index": 3, "answer_text": "started", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "The ugly duckling ____ for a new home.", "options": ["searcheed","search","searched","searchd"], "answer_index": 2, "answer_text": "searched", "explanation": "" },
+  { "volume": "7B", "unit": "U8", "point": "②规则动词过去式 (-ed)", "stem": "The boy ____, 'The emperor has no clothes!'", "options": ["cry","cryed","cried","crieed"], "answer_index": 2, "answer_text": "cried", "explanation": "" }
+]

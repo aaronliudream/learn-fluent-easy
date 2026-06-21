@@ -2311,11 +2311,8 @@
               }
             ],
             "grammarTitle": "形容词最高级 + 名词后缀构词",
-            "grammarCode": "g8.09",
-            "grammarCodes": [
-              "g8.09",
-              "g8.35"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au4.01", "g8au4.02"],
             "grammarQuiz": [
               {
                 "q": "The cheetah is ___ animal on land.",

@@ -12,7 +12,17 @@ import {
 } from "@/lib/juniorGrammarQuestionMastery";
 import { T } from "@/i18n/T";
 
-/** 语法页 L1:7A/7B Tab + 紧凑网格单元卡(配色编号),每卡显示完成度/掌握度。点进 → 单元语法点。 */
+/** 卷代码 → tab 显示用学期名(仅改显示,不动底层 volume code)。 */
+const VOLUME_LABELS: Record<string, string> = {
+  "7A": "初一上学期",
+  "7B": "初一下学期",
+  "8A": "初二上学期",
+  "8B": "初二下学期",
+  "g9": "初三全学期",
+};
+const volLabel = (v: string) => VOLUME_LABELS[v] ?? v;
+
+/** 语法页 L1:学期 Tab + 紧凑网格单元卡(配色编号),每卡显示完成度/掌握度。点进 → 单元语法点。 */
 export default function JuniorGrammarUnits() {
   const [units, setUnits] = useState<GUnit[] | null>(null);
   const [mastery, setMastery] = useState<Map<string, QMasteryRow>>(new Map());
@@ -88,7 +98,7 @@ export default function JuniorGrammarUnits() {
                 vol === v ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground",
               )}
             >
-              {v}
+              {volLabel(v)}
             </button>
           ))}
         </div>

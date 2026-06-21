@@ -1,0 +1,14 @@
+[
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "Mr Wang has worked at the museum ____ his summer holidays started. (过去从句)", "options": ["since","for","from","during"], "answer_index": 0, "answer_text": "since", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "She has been a member of the Red Cross ____ six years. (时段)", "options": ["since","for","from","at"], "answer_index": 1, "answer_text": "for", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "The group has trained many volunteers ____ it began three years ago.", "options": ["since","in","during","for"], "answer_index": 0, "answer_text": "since", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "I have lived in this neighbourhood ____ I was a child. (过去从句)", "options": ["during","when","since","for"], "answer_index": 2, "answer_text": "since", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "They have helped the animal shelter ____ a long time. (时段)", "options": ["since","at","for","from"], "answer_index": 2, "answer_text": "for", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "①for / since (持续时间)", "stem": "He has played the violin ____ 2019. (时间点)", "options": ["in","for","during","since"], "answer_index": 3, "answer_text": "since", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "____ have you been a volunteer at the nursing home?", "options": ["How much","How long","How many","How often"], "answer_index": 1, "answer_text": "How long", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "How long ____ he known his best friend?", "options": ["have","does","did","has"], "answer_index": 3, "answer_text": "has", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "How long ____ they lived in this city?", "options": ["has","did","do","have"], "answer_index": 3, "answer_text": "have", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "____ has the school had a volunteer group?", "options": ["How often","How long","How many","How much"], "answer_index": 1, "answer_text": "How long", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "How long have you ____ your pet dog?", "options": ["owned","owns","own","owning"], "answer_index": 0, "answer_text": "owned", "explanation": "" },
+  { "volume": "8B", "unit": "U8", "point": "②How long 提问 (现在完成时)", "stem": "____ have you studied English so far?", "options": ["How old","How long","How many","How much"], "answer_index": 1, "answer_text": "How long", "explanation": "" }
+]

@@ -1645,11 +1645,8 @@
               }
             ],
             "grammarTitle": "形容词比较级 + as...as 同级比较",
-            "grammarCode": "g8.04",
-            "grammarCodes": [
-              "g8.04",
-              "g8.36"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au3.01", "g8au3.02", "g8au3.03"],
             "grammarQuiz": [
               {
                 "q": "My brother is ___ than me.",

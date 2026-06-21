@@ -3645,11 +3645,8 @@
               }
             ],
             "grammarTitle": "be going to 与不定式作宾语",
-            "grammarCode": "g8.30",
-            "grammarCodes": [
-              "g8.30",
-              "g8.13"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au6.01", "g8au6.02", "g8au6.03"],
             "grammarQuiz": [
               {
                 "q": "I ___ study computer science next year.",

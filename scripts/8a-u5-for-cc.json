@@ -1,0 +1,20 @@
+[
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ delicious meal it is!", "options": ["How a","What a","How","What"], "answer_index": 1, "answer_text": "What a", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ beautiful flowers they are!", "options": ["What a","How a","What","How"], "answer_index": 2, "answer_text": "What", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ nice weather it is today!", "options": ["How a","What","What a","What an"], "answer_index": 1, "answer_text": "What", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ exciting game it was!", "options": ["What","What an","How","How an"], "answer_index": 1, "answer_text": "What an", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ useful information it is!", "options": ["What","What a","How a","What an"], "answer_index": 0, "answer_text": "What", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "①What 引导的感叹句 (What + adj + 名词!)", "stem": "____ amazing smell it is!", "options": ["What a","How","How an","What an"], "answer_index": 3, "answer_text": "What an", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ delicious the dish looks!", "options": ["How","What a","What","How a"], "answer_index": 0, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ well Emma sings!", "options": ["What","How","What a","How a"], "answer_index": 1, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ terrible the weather is!", "options": ["What a","How an","How","What"], "answer_index": 2, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ fantastic the Christmas tree looks!", "options": ["What a","How a","What","How"], "answer_index": 3, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ fast the cheetah runs!", "options": ["What a","How a","What","How"], "answer_index": 3, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "②How 引导的感叹句 (How + adj/adv + 主语 + 谓语!)", "stem": "____ sweet the cake tastes!", "options": ["What a","How an","How","What"], "answer_index": 2, "answer_text": "How", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ the carrots into small pieces.", "options": ["Cuts","To cut","Cut","Cutting"], "answer_index": 2, "answer_text": "Cut", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ the eggs before cooking.", "options": ["Washing","Washes","Wash","Washed"], "answer_index": 2, "answer_text": "Wash", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ too much salt in the soup.", "options": ["Not add","Didn't add","Don't add","Doesn't add"], "answer_index": 2, "answer_text": "Don't add", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ the milk into the bowl.", "options": ["Pours","Pour","Pouring","Poured"], "answer_index": 1, "answer_text": "Pour", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ the noodles for five minutes.", "options": ["Cooking","Cooked","Cook","Cooks"], "answer_index": 2, "answer_text": "Cook", "explanation": "" },
+  { "volume": "8A", "unit": "U5", "point": "③祈使句 (烹饪语境)", "stem": "____ open the oven while baking.", "options": ["Not","Don't","No","Doesn't"], "answer_index": 1, "answer_text": "Don't", "explanation": "" }
+]

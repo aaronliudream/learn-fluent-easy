@@ -2978,11 +2978,8 @@
               }
             ],
             "grammarTitle": "感叹句与可数/不可数名词",
-            "grammarCode": "g8.31",
-            "grammarCodes": [
-              "g8.31",
-              "g8.34"
-            ],
+            "grammarCode": null,
+            "grammarCodes": ["g8au5.01", "g8au5.02", "g8au5.03"],
             "grammarQuiz": [
               {
                 "q": "____ delicious meal it is!",

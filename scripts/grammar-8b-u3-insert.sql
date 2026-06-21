@@ -5,6 +5,10 @@
 ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS volume text;
 ALTER TABLE public.junior_grammar_points ADD COLUMN IF NOT EXISTS unit text;
 
+-- A2. U3 内容更新(状语从句加入 if):先清掉旧 g8bu3.01 的题与点,下面重建为新版(否则会新旧叠加成 20 题)。
+DELETE FROM public.junior_grammar_questions WHERE point_id IN (SELECT id FROM public.junior_grammar_points WHERE code='g8bu3.01');
+DELETE FROM public.junior_grammar_points WHERE code='g8bu3.01';
+
 -- B. 建 1 个新语法点(每考点一个;code 唯一,幂等)
 INSERT INTO public.junior_grammar_points (category_id, code, title, cefr, grade, summary, explanation_md, sort_order, volume, unit)
 SELECT (SELECT id FROM public.junior_grammar_categories WHERE code='other'), 'g8bu3.01', '①状语从句 (although/until/so that/if)', 'A1', 7, '对应:8B U3', '', 1, '8B', 'U3'

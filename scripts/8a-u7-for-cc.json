@@ -1,0 +1,20 @@
+[
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "People ____ live much longer in the future.", "options": ["do","will","were","are"], "answer_index": 1, "answer_text": "will", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "Robots ____ help doctors do their work.", "options": ["did","have","are","will"], "answer_index": 3, "answer_text": "will", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "People ____ use paper books in 50 years.", "options": ["aren't","won't","didn't","don't"], "answer_index": 1, "answer_text": "won't", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "____ robots do housework in the future?", "options": ["Did","Are","Will","Do"], "answer_index": 2, "answer_text": "Will", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "What ____ the future be like?", "options": ["are","is","will","does"], "answer_index": 2, "answer_text": "will", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "①一般将来时 will (表预测)", "stem": "Scientists will ____ smarter robots.", "options": ["builds","building","built","build"], "answer_index": 3, "answer_text": "build", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "There ____ more trees in the future.", "options": ["is","has","will be","are"], "answer_index": 2, "answer_text": "will be", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "There ____ fewer cars in the city.", "options": ["have","is","will be","are"], "answer_index": 2, "answer_text": "will be", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "There ____ less pollution one day.", "options": ["will be","are","have","were"], "answer_index": 0, "answer_text": "will be", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "There ____ more electric buses soon.", "options": ["will be","have","is","are"], "answer_index": 0, "answer_text": "will be", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "There ____ more people in big cities.", "options": ["will be","were","is","has"], "answer_index": 0, "answer_text": "will be", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "②There will be...", "stem": "____ there be more schools in 2050?", "options": ["Will","Does","Are","Is"], "answer_index": 0, "answer_text": "Will", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ cars in the city. (可数复数)", "options": ["much","less","fewer","little"], "answer_index": 2, "answer_text": "fewer", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ pollution. (不可数)", "options": ["few","many","fewer","less"], "answer_index": 3, "answer_text": "less", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ robots to help us.", "options": ["little","much","less","more"], "answer_index": 3, "answer_text": "more", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ traffic in the future. (不可数)", "options": ["fewer","less","many","few"], "answer_index": 1, "answer_text": "less", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ trees and parks.", "options": ["less","much","little","more"], "answer_index": 3, "answer_text": "more", "explanation": "" },
+  { "volume": "8A", "unit": "U7", "point": "③more / fewer / less (数量比较)", "stem": "There will be ____ factories making pollution. (可数复数)", "options": ["much","little","less","fewer"], "answer_index": 3, "answer_text": "fewer", "explanation": "" }
+]

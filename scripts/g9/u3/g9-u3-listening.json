@@ -1,0 +1,569 @@
+{
+  "volume": "g9",
+  "unit": "U3",
+  "exercises": [
+    {
+      "code": "g9u3.l.01",
+      "title": "九年级 U3 听力·对话 Asking the Way to the Library",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Visitor: Excuse me, could you please tell me how I can get to the public library?",
+        "Local: Sure. Go straight down this street and you'll see a big bank on your left. The library is right next to it.",
+        "Visitor: Thank you. Is it far from here?",
+        "Local: No, it's just a five-minute walk.",
+        "Visitor: Great. Do you know if it's open now?",
+        "Local: Yes, it stays open until six in the evening.",
+        "Visitor: Thanks a lot for your help!",
+        "Local: You're welcome."
+      ],
+      "translation_cn": "访客:打扰一下,能告诉我怎么去公共图书馆吗?\n当地人:当然。沿这条街直走,会看到左边有个大银行。图书馆就在它旁边。\n访客:谢谢。离这儿远吗?\n当地人:不远,走路五分钟。\n访客:太好了。你知道现在开门吗?\n当地人:开着,一直到晚上六点。\n访客:非常感谢你的帮助!\n当地人:不客气。",
+      "questions": [
+        {
+          "qid": "g9u3.l.01.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.01",
+          "stem": "Where does the visitor want to go?",
+          "options": [
+            "The bank.",
+            "The station.",
+            "A shop.",
+            "The public library."
+          ],
+          "answer_index": 3,
+          "answer_text": "The public library."
+        },
+        {
+          "qid": "g9u3.l.01.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.01",
+          "stem": "Where is the library?",
+          "options": [
+            "Next to the bank.",
+            "Across from the bank.",
+            "Behind the bank.",
+            "Inside the bank."
+          ],
+          "answer_index": 0,
+          "answer_text": "Next to the bank."
+        },
+        {
+          "qid": "g9u3.l.01.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.01",
+          "stem": "How far is it?",
+          "options": [
+            "Two stops by bus.",
+            "A five-minute walk.",
+            "A ten-minute walk.",
+            "Very far."
+          ],
+          "answer_index": 1,
+          "answer_text": "A five-minute walk."
+        },
+        {
+          "qid": "g9u3.l.01.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.01",
+          "stem": "When does the library close?",
+          "options": [
+            "It is closed.",
+            "At five.",
+            "At six in the evening.",
+            "At noon."
+          ],
+          "answer_index": 2,
+          "answer_text": "At six in the evening."
+        },
+        {
+          "qid": "g9u3.l.01.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.01",
+          "stem": "How does the local person sound?",
+          "options": [
+            "Angry.",
+            "Helpful and friendly.",
+            "Rude and busy.",
+            "Tired and bored."
+          ],
+          "answer_index": 1,
+          "answer_text": "Helpful and friendly."
+        }
+      ]
+    },
+    {
+      "code": "g9u3.l.02",
+      "title": "九年级 U3 听力·对话 Asking About Places to Visit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Tourist: Hi, could you tell me if there are any interesting places to visit here?",
+        "Guide: Of course! The City Museum is very famous, and many people enjoy it.",
+        "Tourist: That sounds great. Do you know when it opens?",
+        "Guide: It opens at nine in the morning and closes at five on weekdays.",
+        "Tourist: Perfect. How can I get there from the hotel?",
+        "Guide: You can take Bus No. 7. It stops right in front of the museum.",
+        "Tourist: Thank you so much for the information!",
+        "Guide: My pleasure. Enjoy your visit!"
+      ],
+      "translation_cn": "游客:你好,能告诉我这里有什么好玩的地方吗?\n导游:当然!城市博物馆很有名,很多人都喜欢。\n游客:听起来不错。你知道它几点开门吗?\n导游:工作日早上九点开,下午五点关。\n游客:太好了。从酒店怎么去那里?\n导游:你可以坐7路公交,它就停在博物馆门口。\n游客:非常感谢你的信息!\n导游:不客气,玩得开心!",
+      "questions": [
+        {
+          "qid": "g9u3.l.02.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.02",
+          "stem": "What does the guide recommend?",
+          "options": [
+            "The City Museum.",
+            "A cinema.",
+            "A park.",
+            "A restaurant."
+          ],
+          "answer_index": 0,
+          "answer_text": "The City Museum."
+        },
+        {
+          "qid": "g9u3.l.02.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.02",
+          "stem": "When does the museum open?",
+          "options": [
+            "At ten.",
+            "At nine in the morning.",
+            "At noon.",
+            "At eight."
+          ],
+          "answer_index": 1,
+          "answer_text": "At nine in the morning."
+        },
+        {
+          "qid": "g9u3.l.02.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.02",
+          "stem": "When does it close on weekdays?",
+          "options": [
+            "At six.",
+            "At five.",
+            "At seven.",
+            "At four."
+          ],
+          "answer_index": 1,
+          "answer_text": "At five."
+        },
+        {
+          "qid": "g9u3.l.02.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.02",
+          "stem": "How can the tourist get there?",
+          "options": [
+            "By taxi.",
+            "On foot.",
+            "By Bus No. 7.",
+            "By subway."
+          ],
+          "answer_index": 2,
+          "answer_text": "By Bus No. 7."
+        },
+        {
+          "qid": "g9u3.l.02.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.02",
+          "stem": "Where are the two people probably talking?",
+          "options": [
+            "In a classroom.",
+            "In a museum.",
+            "At a tourist information desk.",
+            "At home."
+          ],
+          "answer_index": 2,
+          "answer_text": "At a tourist information desk."
+        }
+      ]
+    },
+    {
+      "code": "g9u3.l.03",
+      "title": "九年级 U3 听力·对话 Ordering at a Restaurant",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Customer: Good evening. Could you please tell me where I can wash my hands first?",
+        "Waiter: Certainly. The restrooms are at the end of the hall, next to the stairs.",
+        "Customer: Thank you. I'd also like to know what is popular here.",
+        "Waiter: Our beef noodles and dumplings are the most popular dishes.",
+        "Customer: I'll have a bowl of beef noodles and a cup of green tea, please.",
+        "Waiter: No problem. Your food will be ready in about ten minutes.",
+        "Customer: Great, thank you.",
+        "Waiter: You're welcome. Enjoy your meal!"
+      ],
+      "translation_cn": "顾客:晚上好。能告诉我先去哪里洗手吗?\n服务员:当然。洗手间在走廊尽头,楼梯旁边。\n顾客:谢谢。我还想知道这里什么最受欢迎。\n服务员:我们的牛肉面和饺子最受欢迎。\n顾客:请给我一碗牛肉面和一杯绿茶。\n服务员:没问题,大约十分钟做好。\n顾客:太好了,谢谢。\n服务员:不客气,祝您用餐愉快!",
+      "questions": [
+        {
+          "qid": "g9u3.l.03.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.03",
+          "stem": "Where does the customer want to go first?",
+          "options": [
+            "The kitchen.",
+            "The cashier.",
+            "The restroom.",
+            "The stairs."
+          ],
+          "answer_index": 2,
+          "answer_text": "The restroom."
+        },
+        {
+          "qid": "g9u3.l.03.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.03",
+          "stem": "Where are the restrooms?",
+          "options": [
+            "Upstairs.",
+            "Near the entrance.",
+            "Next to the stairs.",
+            "Behind the kitchen."
+          ],
+          "answer_index": 2,
+          "answer_text": "Next to the stairs."
+        },
+        {
+          "qid": "g9u3.l.03.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.03",
+          "stem": "What does the customer order?",
+          "options": [
+            "Dumplings and juice.",
+            "Chicken rice and coffee.",
+            "Beef noodles and milk.",
+            "Beef noodles and green tea."
+          ],
+          "answer_index": 3,
+          "answer_text": "Beef noodles and green tea."
+        },
+        {
+          "qid": "g9u3.l.03.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.03",
+          "stem": "How long will the food take?",
+          "options": [
+            "About twenty minutes.",
+            "About fifteen minutes.",
+            "About five minutes.",
+            "About ten minutes."
+          ],
+          "answer_index": 3,
+          "answer_text": "About ten minutes."
+        },
+        {
+          "qid": "g9u3.l.03.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.03",
+          "stem": "What best describes the conversation?",
+          "options": [
+            "A closed restaurant.",
+            "A polite request for information and an order.",
+            "A refusal to help.",
+            "A complaint about food."
+          ],
+          "answer_index": 1,
+          "answer_text": "A polite request for information and an order."
+        }
+      ]
+    },
+    {
+      "code": "g9u3.l.04",
+      "title": "九年级 U3 听力·对话 Shopping for Books",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Customer: Excuse me, could you please tell me where I can find English dictionaries?",
+        "Assistant: Certainly. They're on the second floor, next to the reading area.",
+        "Customer: Thanks. I'm also looking for a notebook.",
+        "Assistant: Notebooks are on the same floor. Just walk past the dictionaries.",
+        "Customer: Do you have any on sale today?",
+        "Assistant: Yes. If you buy two, you get the third one at half price.",
+        "Customer: That sounds good. I'll take three notebooks and one dictionary.",
+        "Assistant: Great. Please pay at the cashier near the exit."
+      ],
+      "translation_cn": "顾客:打扰一下,能告诉我哪里能找到英语词典吗?\n店员:当然。在二楼,阅读区旁边。\n顾客:谢谢。我还想买笔记本。\n店员:笔记本在同一层,经过词典区就是。\n顾客:今天有打折的吗?\n店员:有。买两本第三本半价。\n顾客:不错。我要三本笔记本和一本词典。\n店员:好的,请到出口附近的收银台付款。",
+      "questions": [
+        {
+          "qid": "g9u3.l.04.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.04",
+          "stem": "What is the customer looking for first?",
+          "options": [
+            "Pens.",
+            "Notebooks.",
+            "Storybooks.",
+            "English dictionaries."
+          ],
+          "answer_index": 3,
+          "answer_text": "English dictionaries."
+        },
+        {
+          "qid": "g9u3.l.04.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.04",
+          "stem": "Where are the dictionaries?",
+          "options": [
+            "On the second floor.",
+            "At the entrance.",
+            "On the first floor.",
+            "Near the exit."
+          ],
+          "answer_index": 0,
+          "answer_text": "On the second floor."
+        },
+        {
+          "qid": "g9u3.l.04.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.04",
+          "stem": "What is the special offer?",
+          "options": [
+            "Buy one, get one free.",
+            "Free dictionary.",
+            "20% off all books.",
+            "Buy two notebooks, get the third at half price."
+          ],
+          "answer_index": 3,
+          "answer_text": "Buy two notebooks, get the third at half price."
+        },
+        {
+          "qid": "g9u3.l.04.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.04",
+          "stem": "What does the customer finally buy?",
+          "options": [
+            "Three notebooks and one dictionary.",
+            "One notebook and one dictionary.",
+            "Three dictionaries.",
+            "Two notebooks."
+          ],
+          "answer_index": 0,
+          "answer_text": "Three notebooks and one dictionary."
+        },
+        {
+          "qid": "g9u3.l.04.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.04",
+          "stem": "Where should the customer pay?",
+          "options": [
+            "At the cashier near the exit.",
+            "At the reading area.",
+            "On the second floor.",
+            "At the entrance."
+          ],
+          "answer_index": 0,
+          "answer_text": "At the cashier near the exit."
+        }
+      ]
+    },
+    {
+      "code": "g9u3.l.05",
+      "title": "九年级 U3 听力·短文 Welcome to Maple City",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Welcome to Maple City! Before you start your trip, here is some useful information. The Visitor Center is across from the train station. There you can get free maps, ask for directions, or buy bus cards. The staff are friendly and always ready to help. The City Museum is open from nine in the morning to half past five. If you want to visit Green Park, you can take Bus No. 15, and the ride takes about twenty minutes. Please remember to keep the city clean and be polite when asking questions. A smile and a simple \"thank you\" can make your trip even more enjoyable. We hope you have a wonderful time here!"
+      ],
+      "translation_cn": "欢迎来到枫叶城!开始旅行前,这里有些有用信息。游客中心在火车站对面。在那里你可以领免费地图、问路或买公交卡。工作人员很友好,随时乐意帮忙。城市博物馆早九点到下午五点半开放。想去绿园公园,可坐15路公交,车程约二十分钟。请记得保持城市整洁、礼貌提问。一个微笑和一句谢谢能让旅行更愉快。祝你在这里玩得开心!",
+      "questions": [
+        {
+          "qid": "g9u3.l.05.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.05",
+          "stem": "Where is the Visitor Center?",
+          "options": [
+            "At the bus stop.",
+            "Across from the train station.",
+            "Inside Green Park.",
+            "Next to the museum."
+          ],
+          "answer_index": 1,
+          "answer_text": "Across from the train station."
+        },
+        {
+          "qid": "g9u3.l.05.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.05",
+          "stem": "What can visitors NOT do at the Visitor Center?",
+          "options": [
+            "Buy bus cards.",
+            "Get free maps.",
+            "Ask for directions.",
+            "Buy museum tickets."
+          ],
+          "answer_index": 3,
+          "answer_text": "Buy museum tickets."
+        },
+        {
+          "qid": "g9u3.l.05.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.05",
+          "stem": "How can visitors get to Green Park?",
+          "options": [
+            "By subway.",
+            "By taxi.",
+            "By Bus No. 15.",
+            "By Bus No. 5."
+          ],
+          "answer_index": 2,
+          "answer_text": "By Bus No. 15."
+        },
+        {
+          "qid": "g9u3.l.05.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.05",
+          "stem": "How long does the ride to Green Park take?",
+          "options": [
+            "About twenty minutes.",
+            "About thirty minutes.",
+            "About fifteen minutes.",
+            "About ten minutes."
+          ],
+          "answer_index": 0,
+          "answer_text": "About twenty minutes."
+        },
+        {
+          "qid": "g9u3.l.05.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.05",
+          "stem": "What does the speaker advise visitors to do?",
+          "options": [
+            "Be polite and keep the city clean.",
+            "Speak loudly.",
+            "Travel at night.",
+            "Walk everywhere."
+          ],
+          "answer_index": 0,
+          "answer_text": "Be polite and keep the city clean."
+        }
+      ]
+    },
+    {
+      "code": "g9u3.l.06",
+      "title": "九年级 U3 听力·对话 Asking for Help at School",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Student: Excuse me, Ms. Brown. Could you please tell me where the language lab is?",
+        "Teacher: Of course. Go down this hallway and turn right at the end. It's on the second floor, next to the computer room.",
+        "Student: Thank you. I also want to borrow an English dictionary. Is there a library here?",
+        "Teacher: Yes. The library is on the first floor, and it's open until half past five.",
+        "Student: Do I need a student card to borrow books?",
+        "Teacher: Yes, you do. Just show your card at the front desk.",
+        "Student: I see. Thank you for your help.",
+        "Teacher: You're welcome. Have a good day!"
+      ],
+      "translation_cn": "学生:打扰一下,Brown老师。能告诉我语言实验室在哪吗?\n老师:当然。沿走廊走,尽头右转。在二楼,电脑室旁边。\n学生:谢谢。我还想借本英语词典。这里有图书馆吗?\n老师:有。图书馆在一楼,开到五点半。\n学生:借书需要学生证吗?\n老师:需要。在服务台出示你的卡就行。\n学生:明白了,谢谢您的帮助。\n老师:不客气,祝你愉快!",
+      "questions": [
+        {
+          "qid": "g9u3.l.06.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.06",
+          "stem": "Where does the student want to go first?",
+          "options": [
+            "The language lab.",
+            "The library.",
+            "The computer room.",
+            "The playground."
+          ],
+          "answer_index": 0,
+          "answer_text": "The language lab."
+        },
+        {
+          "qid": "g9u3.l.06.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.06",
+          "stem": "Where is the language lab?",
+          "options": [
+            "Next to the library.",
+            "On the second floor, next to the computer room.",
+            "On the first floor.",
+            "Across from the playground."
+          ],
+          "answer_index": 1,
+          "answer_text": "On the second floor, next to the computer room."
+        },
+        {
+          "qid": "g9u3.l.06.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.06",
+          "stem": "What does the student want to borrow?",
+          "options": [
+            "A school map.",
+            "A magazine.",
+            "An English dictionary.",
+            "A science book."
+          ],
+          "answer_index": 2,
+          "answer_text": "An English dictionary."
+        },
+        {
+          "qid": "g9u3.l.06.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.06",
+          "stem": "What does the student need to borrow books?",
+          "options": [
+            "A library key.",
+            "A notebook.",
+            "A student card.",
+            "A bus card."
+          ],
+          "answer_index": 2,
+          "answer_text": "A student card."
+        },
+        {
+          "qid": "g9u3.l.06.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.l.06",
+          "stem": "What is the main purpose of the conversation?",
+          "options": [
+            "To discuss homework.",
+            "To borrow money.",
+            "To invite the teacher out.",
+            "To ask for directions and school information politely."
+          ],
+          "answer_index": 3,
+          "answer_text": "To ask for directions and school information politely."
+        }
+      ]
+    }
+  ]
+}

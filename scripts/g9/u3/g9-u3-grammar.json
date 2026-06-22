@@ -1,0 +1,1166 @@
+{
+  "volume": "g9",
+  "unit": "U3",
+  "points": [
+    {
+      "code": "g9u3.01",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "category": "clause",
+      "overview": "特殊/一般疑问句作宾语从句时,一律用陈述语序(主语+谓语),不用疑问倒装。"
+    },
+    {
+      "code": "g9u3.02",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "category": "clause",
+      "overview": "嵌入特殊疑问句→用原疑问词;嵌入一般疑问句→用 if/whether。"
+    },
+    {
+      "code": "g9u3.03",
+      "point": "礼貌委婉句型(请求/问路)",
+      "category": "other",
+      "overview": "礼貌请求/问路固定句型:Could you please…? / Would you mind doing…? / I wonder if… / Excuse me / May I…?"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u3.01.q1",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Could you tell me where ____?",
+      "options": [
+        "the post office is",
+        "the post office does",
+        "does the post office be",
+        "is the post office"
+      ],
+      "answer_index": 0,
+      "answer_text": "the post office is",
+      "explanation": "[语序] 宾从用陈述语序 主+谓"
+    },
+    {
+      "qid": "g9u3.01.q2",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Do you know when ____?",
+      "options": [
+        "does he arrive",
+        "will he arrive",
+        "he will arrive",
+        "arrive he will"
+      ],
+      "answer_index": 2,
+      "answer_text": "he will arrive",
+      "explanation": "[语序] 陈述语序 he will arrive"
+    },
+    {
+      "qid": "g9u3.01.q3",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "I wonder how ____ to the museum.",
+      "options": [
+        "get I can",
+        "I can get",
+        "do I get",
+        "can I get"
+      ],
+      "answer_index": 1,
+      "answer_text": "I can get",
+      "explanation": "[语序] 陈述语序 I can get"
+    },
+    {
+      "qid": "g9u3.01.q4",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Could you please tell me where ____ a stamp?",
+      "options": [
+        "I can buy",
+        "buy I can",
+        "can I buy",
+        "do I buy"
+      ],
+      "answer_index": 0,
+      "answer_text": "I can buy",
+      "explanation": "[语序] 陈述语序 I can buy"
+    },
+    {
+      "qid": "g9u3.01.q5",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Please tell me what ____ yesterday.",
+      "options": [
+        "did he buy",
+        "bought he",
+        "he bought",
+        "did he bought"
+      ],
+      "answer_index": 2,
+      "answer_text": "he bought",
+      "explanation": "[语序] 陈述语序,过去时不用did"
+    },
+    {
+      "qid": "g9u3.01.q6",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Can you tell me why ____ so happy today?",
+      "options": [
+        "does she be",
+        "she does",
+        "is she",
+        "she is"
+      ],
+      "answer_index": 3,
+      "answer_text": "she is",
+      "explanation": "[语序] 陈述语序 she is"
+    },
+    {
+      "qid": "g9u3.01.q7",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Do you know where ____ this morning?",
+      "options": [
+        "they went",
+        "went they",
+        "do they went",
+        "did they go"
+      ],
+      "answer_index": 0,
+      "answer_text": "they went",
+      "explanation": "[语序] 陈述语序 they went"
+    },
+    {
+      "qid": "g9u3.01.q8",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Could you tell me how much ____?",
+      "options": [
+        "is this dictionary",
+        "this dictionary is",
+        "this dictionary does",
+        "does this dictionary"
+      ],
+      "answer_index": 1,
+      "answer_text": "this dictionary is",
+      "explanation": "[语序] 陈述语序 this dictionary is"
+    },
+    {
+      "qid": "g9u3.01.q9",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "I wonder where ____ to spend the holiday.",
+      "options": [
+        "going they are",
+        "do they going",
+        "are they going",
+        "they are going"
+      ],
+      "answer_index": 3,
+      "answer_text": "they are going",
+      "explanation": "[语序] 陈述语序 they are going"
+    },
+    {
+      "qid": "g9u3.01.q10",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Please tell me what ____ just now.",
+      "options": [
+        "did he say",
+        "does he say",
+        "said he",
+        "he said"
+      ],
+      "answer_index": 3,
+      "answer_text": "he said",
+      "explanation": "[语序] 陈述语序 he said"
+    },
+    {
+      "qid": "g9u3.01.q11",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Do you know how far ____ from here?",
+      "options": [
+        "is it",
+        "it does",
+        "it is",
+        "does it be"
+      ],
+      "answer_index": 2,
+      "answer_text": "it is",
+      "explanation": "[语序] 陈述语序 it is"
+    },
+    {
+      "qid": "g9u3.01.q12",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Could you tell me who ____ talking with?",
+      "options": [
+        "you are",
+        "you do",
+        "are you",
+        "do you"
+      ],
+      "answer_index": 0,
+      "answer_text": "you are",
+      "explanation": "[语序] 陈述语序 you are"
+    },
+    {
+      "qid": "g9u3.01.q13",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "I'd like to know why ____ late again.",
+      "options": [
+        "did they be",
+        "they did",
+        "were they",
+        "they were"
+      ],
+      "answer_index": 3,
+      "answer_text": "they were",
+      "explanation": "[语序] 陈述语序 they were"
+    },
+    {
+      "qid": "g9u3.01.q14",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Tell me what ____ for lunch today.",
+      "options": [
+        "are they eating",
+        "eating they",
+        "do they eating",
+        "they are eating"
+      ],
+      "answer_index": 3,
+      "answer_text": "they are eating",
+      "explanation": "[语序] 陈述语序 they are eating"
+    },
+    {
+      "qid": "g9u3.01.q15",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Please tell me when ____ finished.",
+      "options": [
+        "does the work",
+        "the work is",
+        "the work does",
+        "is the work"
+      ],
+      "answer_index": 1,
+      "answer_text": "the work is",
+      "explanation": "[语序] 陈述语序 the work is"
+    },
+    {
+      "qid": "g9u3.01.q16",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Do you know whose umbrella ____?",
+      "options": [
+        "this is",
+        "this does",
+        "does this be",
+        "is this"
+      ],
+      "answer_index": 0,
+      "answer_text": "this is",
+      "explanation": "[语序] 陈述语序 this is"
+    },
+    {
+      "qid": "g9u3.01.q17",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "I want to know where ____ now.",
+      "options": [
+        "she live",
+        "does she live",
+        "she lives",
+        "live she"
+      ],
+      "answer_index": 2,
+      "answer_text": "she lives",
+      "explanation": "[语序] 陈述语序,三单 she lives"
+    },
+    {
+      "qid": "g9u3.01.q18",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Could you tell me how long ____ here?",
+      "options": [
+        "you have stayed",
+        "stayed you have",
+        "have you stayed",
+        "do you stayed"
+      ],
+      "answer_index": 0,
+      "answer_text": "you have stayed",
+      "explanation": "[语序] 陈述语序 you have stayed"
+    },
+    {
+      "qid": "g9u3.01.q19",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "Please tell me which way ____ to the station.",
+      "options": [
+        "is lead",
+        "leads",
+        "does lead",
+        "do lead"
+      ],
+      "answer_index": 1,
+      "answer_text": "leads",
+      "explanation": "[语序] which way作主语,直接接谓语 leads"
+    },
+    {
+      "qid": "g9u3.01.q20",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:语序还原(疑问句→陈述语序)",
+      "code": "g9u3.01",
+      "category": "clause",
+      "tag": "语序",
+      "stem": "I wonder what ____ after school.",
+      "options": [
+        "they do usually",
+        "usually do they",
+        "do they usually",
+        "they usually do"
+      ],
+      "answer_index": 3,
+      "answer_text": "they usually do",
+      "explanation": "[语序] 陈述语序 they usually do"
+    },
+    {
+      "qid": "g9u3.02.q1",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I wonder ____ he will come to the party.",
+      "options": [
+        "if",
+        "what",
+        "how",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "if",
+      "explanation": "[if] 一般疑问句作宾语→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q2",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Could you tell me ____ the ticket office is?",
+      "options": [
+        "where",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "answer_text": "where",
+      "explanation": "[疑问词] be动词后缺表语(地点)→只能where;whether the ticket office is 后无表语不成立"
+    },
+    {
+      "qid": "g9u3.02.q3",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "Do you know ____ the library is open today?",
+      "options": [
+        "when",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 2,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q4",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I'm not sure ____ they have finished the report.",
+      "options": [
+        "why",
+        "where",
+        "whether",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q5",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Please tell me ____ bus I should take.",
+      "options": [
+        "if",
+        "which",
+        "that",
+        "whether"
+      ],
+      "answer_index": 1,
+      "answer_text": "which",
+      "explanation": "[疑问词] ____ bus 作定语→只能which(if/whether不修饰名词)"
+    },
+    {
+      "qid": "g9u3.02.q6",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I wonder ____ the train has arrived.",
+      "options": [
+        "what",
+        "why",
+        "if",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "if",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q7",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Could you tell me ____ the museum is?",
+      "options": [
+        "whether",
+        "that",
+        "if",
+        "where"
+      ],
+      "answer_index": 3,
+      "answer_text": "where",
+      "explanation": "[疑问词] be句缺表语→只能where;whether the museum is 不成立"
+    },
+    {
+      "qid": "g9u3.02.q8",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I want to know ____ she likes the gift.",
+      "options": [
+        "what",
+        "whether",
+        "how",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q9",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Can you tell me ____ the bank is?",
+      "options": [
+        "if",
+        "where",
+        "that",
+        "whether"
+      ],
+      "answer_index": 1,
+      "answer_text": "where",
+      "explanation": "[疑问词] be句缺表语→只能where;whether the bank is 不成立"
+    },
+    {
+      "qid": "g9u3.02.q10",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Do you know ____ they will do during the holiday?",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 1,
+      "answer_text": "what",
+      "explanation": "[疑问词] do后缺宾语→只能what;whether they will do 后无宾语不成立"
+    },
+    {
+      "qid": "g9u3.02.q11",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I'm wondering ____ the store opens on Sundays.",
+      "options": [
+        "how",
+        "what",
+        "whether",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q12",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Please tell me ____ you want to buy.",
+      "options": [
+        "that",
+        "whether",
+        "if",
+        "what"
+      ],
+      "answer_index": 3,
+      "answer_text": "what",
+      "explanation": "[疑问词] 特殊疑问→what"
+    },
+    {
+      "qid": "g9u3.02.q13",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I don't know ____ it is going to rain.",
+      "options": [
+        "why",
+        "where",
+        "if",
+        "how"
+      ],
+      "answer_index": 2,
+      "answer_text": "if",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q14",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Can you tell me ____ we should do next?",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 1,
+      "answer_text": "what",
+      "explanation": "[疑问词] 特殊疑问→what"
+    },
+    {
+      "qid": "g9u3.02.q15",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I wonder ____ he passed the exam.",
+      "options": [
+        "where",
+        "if",
+        "what",
+        "when"
+      ],
+      "answer_index": 1,
+      "answer_text": "if",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q16",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Do you know ____ got the first prize?",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[疑问词] 特殊疑问→who(who作主语)"
+    },
+    {
+      "qid": "g9u3.02.q17",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Please tell me ____ I should put my bag.",
+      "options": [
+        "where",
+        "that",
+        "if",
+        "whether"
+      ],
+      "answer_index": 0,
+      "answer_text": "where",
+      "explanation": "[疑问词] put my bag后缺地点→只能where"
+    },
+    {
+      "qid": "g9u3.02.q18",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I'm not sure ____ he is at home now.",
+      "options": [
+        "where",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 2,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.02.q19",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "疑问词",
+      "stem": "Can you tell me ____ you feel now?",
+      "options": [
+        "that",
+        "whether",
+        "if",
+        "how"
+      ],
+      "answer_index": 3,
+      "answer_text": "how",
+      "explanation": "[疑问词] 特殊疑问→how"
+    },
+    {
+      "qid": "g9u3.02.q20",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "宾语从句:连接词选择(疑问词 vs if/whether)",
+      "code": "g9u3.02",
+      "category": "clause",
+      "tag": "if",
+      "stem": "I wonder ____ they need any help.",
+      "options": [
+        "what",
+        "where",
+        "whether",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "whether",
+      "explanation": "[if] 一般疑问句→if/whether"
+    },
+    {
+      "qid": "g9u3.03.q1",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ tell me the way to the post office?",
+      "options": [
+        "Are you please",
+        "Do you must",
+        "Could you please",
+        "Will you must"
+      ],
+      "answer_index": 2,
+      "answer_text": "Could you please",
+      "explanation": "[句型] 礼貌请求 Could you please…?"
+    },
+    {
+      "qid": "g9u3.03.q2",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____, could you tell me where the bank is?",
+      "options": [
+        "Excuse me",
+        "Sorry for",
+        "Thank you",
+        "Never mind"
+      ],
+      "answer_index": 0,
+      "answer_text": "Excuse me",
+      "explanation": "[句型] 问路开头礼貌语 Excuse me"
+    },
+    {
+      "qid": "g9u3.03.q3",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ telling me how to get to the station?",
+      "options": [
+        "Would you like",
+        "Would you mind",
+        "Could you mind",
+        "Do you want"
+      ],
+      "answer_index": 1,
+      "answer_text": "Would you mind",
+      "explanation": "[句型] Would you mind + doing 委婉请求"
+    },
+    {
+      "qid": "g9u3.03.q4",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "I ____ you could help me find the museum.",
+      "options": [
+        "hope what",
+        "think how",
+        "wonder if",
+        "want that"
+      ],
+      "answer_index": 2,
+      "answer_text": "wonder if",
+      "explanation": "[句型] I wonder if… 委婉请求"
+    },
+    {
+      "qid": "g9u3.03.q5",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ tell me where I can buy a map?",
+      "options": [
+        "Must you to",
+        "Could you please",
+        "Are you can",
+        "Do you will"
+      ],
+      "answer_index": 1,
+      "answer_text": "Could you please",
+      "explanation": "[句型] Could you please…? 礼貌请求"
+    },
+    {
+      "qid": "g9u3.03.q6",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "Excuse me, ____ tell me when the show starts?",
+      "options": [
+        "will you must",
+        "are you",
+        "must you",
+        "could you"
+      ],
+      "answer_index": 3,
+      "answer_text": "could you",
+      "explanation": "[句型] could you…? 礼貌问询"
+    },
+    {
+      "qid": "g9u3.03.q7",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ showing me the way to the library?",
+      "options": [
+        "Would you mind",
+        "Do you mind to",
+        "Could you like",
+        "Would you like to"
+      ],
+      "answer_index": 0,
+      "answer_text": "Would you mind",
+      "explanation": "[句型] Would you mind + doing"
+    },
+    {
+      "qid": "g9u3.03.q8",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ you tell me how far the airport is?",
+      "options": [
+        "Shall to",
+        "Could",
+        "May to",
+        "Must"
+      ],
+      "answer_index": 1,
+      "answer_text": "Could",
+      "explanation": "[句型] Could you…? 礼貌请求"
+    },
+    {
+      "qid": "g9u3.03.q9",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "Sorry to ____ you, but could you help me?",
+      "options": [
+        "welcome",
+        "thank",
+        "bother",
+        "mind"
+      ],
+      "answer_index": 2,
+      "answer_text": "bother",
+      "explanation": "[句型] Sorry to bother you 礼貌打扰语"
+    },
+    {
+      "qid": "g9u3.03.q10",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ I ask you a question about the city?",
+      "options": [
+        "Must",
+        "Need",
+        "Ought",
+        "May"
+      ],
+      "answer_index": 3,
+      "answer_text": "May",
+      "explanation": "[句型] May I…? 礼貌请求许可"
+    },
+    {
+      "qid": "g9u3.03.q11",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ tell me where the nearest hospital is?",
+      "options": [
+        "Could you please",
+        "Are you please to",
+        "Do you please",
+        "Will you please to"
+      ],
+      "answer_index": 0,
+      "answer_text": "Could you please",
+      "explanation": "[句型] Could you please…?"
+    },
+    {
+      "qid": "g9u3.03.q12",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ you mind if I sat here?",
+      "options": [
+        "Would",
+        "Must",
+        "Should",
+        "Could"
+      ],
+      "answer_index": 0,
+      "answer_text": "Would",
+      "explanation": "[句型] Would you mind if…? 委婉征求"
+    },
+    {
+      "qid": "g9u3.03.q13",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "I'd ____ to know if there is a bus stop nearby.",
+      "options": [
+        "want",
+        "hope",
+        "like",
+        "wish to"
+      ],
+      "answer_index": 2,
+      "answer_text": "like",
+      "explanation": "[句型] I'd like to know… 委婉表达"
+    },
+    {
+      "qid": "g9u3.03.q14",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ me, do you know where the restroom is?",
+      "options": [
+        "Please for",
+        "Thank",
+        "Sorry",
+        "Excuse"
+      ],
+      "answer_index": 3,
+      "answer_text": "Excuse",
+      "explanation": "[句型] Excuse me 问路开头"
+    },
+    {
+      "qid": "g9u3.03.q15",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ you please show me how to use the map?",
+      "options": [
+        "Could",
+        "May to",
+        "Must",
+        "Shall to"
+      ],
+      "answer_index": 0,
+      "answer_text": "Could",
+      "explanation": "[句型] Could you please…?"
+    },
+    {
+      "qid": "g9u3.03.q16",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "Would you ____ telling me the way to the park?",
+      "options": [
+        "want",
+        "like",
+        "hope",
+        "mind"
+      ],
+      "answer_index": 3,
+      "answer_text": "mind",
+      "explanation": "[句型] Would you mind + doing"
+    },
+    {
+      "qid": "g9u3.03.q17",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ tell me if the store is open, please?",
+      "options": [
+        "Are you to",
+        "Can you",
+        "Must you",
+        "Will you to"
+      ],
+      "answer_index": 1,
+      "answer_text": "Can you",
+      "explanation": "[句型] Can you…, please? 礼貌请求"
+    },
+    {
+      "qid": "g9u3.03.q18",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "I wonder ____ you could tell me the time.",
+      "options": [
+        "how",
+        "what",
+        "that",
+        "if"
+      ],
+      "answer_index": 3,
+      "answer_text": "if",
+      "explanation": "[句型] I wonder if… 委婉请求(句型固定搭配)"
+    },
+    {
+      "qid": "g9u3.03.q19",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "____ I help you find your way?",
+      "options": [
+        "May",
+        "Need to",
+        "Ought",
+        "Must"
+      ],
+      "answer_index": 0,
+      "answer_text": "May",
+      "explanation": "[句型] May I help you? 礼貌提供帮助"
+    },
+    {
+      "qid": "g9u3.03.q20",
+      "volume": "g9",
+      "unit": "U3",
+      "point": "礼貌委婉句型(请求/问路)",
+      "code": "g9u3.03",
+      "category": "other",
+      "tag": "句型",
+      "stem": "Thank you ____ much for your help.",
+      "options": [
+        "quite a",
+        "very",
+        "too",
+        "so a"
+      ],
+      "answer_index": 1,
+      "answer_text": "very",
+      "explanation": "[句型] Thank you very much 礼貌致谢"
+    }
+  ]
+}

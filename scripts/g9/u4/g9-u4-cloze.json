@@ -1,0 +1,1014 @@
+{
+  "volume": "g9",
+  "unit": "U4",
+  "passages": [
+    {
+      "code": "g9u4.c.01",
+      "title": "Afraid of the Dark",
+      "scene": "童年怕黑→克服",
+      "body": "When I was six, I used to be afraid of the (1)____. Every night, I asked my mother to leave a light (2)____. I believed there were monsters under my bed. One evening, my father sat down and (3)____ to me kindly. He said, \"The dark is not (4)____. It is just a room without light.\" To help me, he gave me a small (5)____ to hold at night. Slowly, I began to feel (6)____. I learned to turn off the light by (7)____. Now I am twelve, and I am not afraid (8)____ more. Looking back, I think my father (9)____ me an important lesson: most fears are not (10)____, and we can face them one step at a time.",
+      "questions": [
+        {
+          "qid": "g9u4.c.01.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 1,
+          "options": [
+            "sky",
+            "light",
+            "day",
+            "dark"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "怕黑,afraid of the dark"
+        },
+        {
+          "qid": "g9u4.c.01.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 2,
+          "options": [
+            "on",
+            "out",
+            "off",
+            "up"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "开着灯 leave a light on"
+        },
+        {
+          "qid": "g9u4.c.01.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 3,
+          "options": [
+            "talked",
+            "shouted",
+            "listened",
+            "looked"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "talk to me 跟我谈"
+        },
+        {
+          "qid": "g9u4.c.01.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 4,
+          "options": [
+            "happy",
+            "easy",
+            "scary",
+            "funny"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "黑暗不可怕 not scary"
+        },
+        {
+          "qid": "g9u4.c.01.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 5,
+          "options": [
+            "ball",
+            "toy",
+            "map",
+            "book"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "给个玩具拿着,后文hold at night"
+        },
+        {
+          "qid": "g9u4.c.01.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 6,
+          "options": [
+            "afraid",
+            "safer",
+            "tired",
+            "worse"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "渐渐感到更安全 feel safer(规范比较级)"
+        },
+        {
+          "qid": "g9u4.c.01.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 7,
+          "options": [
+            "herself",
+            "themselves",
+            "himself",
+            "myself"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "自己关灯 by myself"
+        },
+        {
+          "qid": "g9u4.c.01.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 8,
+          "options": [
+            "no",
+            "any",
+            "some",
+            "much"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "not...any more 不再"
+        },
+        {
+          "qid": "g9u4.c.01.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 9,
+          "options": [
+            "taught",
+            "gave",
+            "told",
+            "bought"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "教了我一课 taught me a lesson"
+        },
+        {
+          "qid": "g9u4.c.01.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.01",
+          "blank": 10,
+          "options": [
+            "new",
+            "long",
+            "real",
+            "big"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "恐惧并不真实 not real"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.c.02",
+      "title": "The Quiet Girl",
+      "scene": "曾经内向→变开朗",
+      "body": "Lucy used to be a very (1)____ girl. She didn't use to talk to anyone in class, and she always sat (2)____ in the corner. Her classmates thought she was unfriendly, but the (3)____ was that she was just shy. Everything changed when a new teacher (4)____ her to join the school play. At first, Lucy was (5)____ and wanted to say no. But the teacher encouraged her, so she (6)____ to try. During the weeks of practice, she made many (7)____. They helped her feel more confident. On the night of the show, Lucy spoke (8)____ and clearly in front of everyone. Her parents were so (9)____ of her. Now Lucy is one of the most active students in school. She is no longer the quiet girl she (10)____ to be.",
+      "questions": [
+        {
+          "qid": "g9u4.c.02.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 1,
+          "options": [
+            "tall",
+            "quiet",
+            "funny",
+            "loud"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "曾经内向 quiet"
+        },
+        {
+          "qid": "g9u4.c.02.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 2,
+          "options": [
+            "together",
+            "alone",
+            "happily",
+            "quickly"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "独自坐角落 sat alone"
+        },
+        {
+          "qid": "g9u4.c.02.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 3,
+          "options": [
+            "truth",
+            "idea",
+            "story",
+            "problem"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "事实是 the truth was"
+        },
+        {
+          "qid": "g9u4.c.02.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 4,
+          "options": [
+            "asked",
+            "refused",
+            "forgot",
+            "stopped"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "老师叫她参加 asked her to join"
+        },
+        {
+          "qid": "g9u4.c.02.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 5,
+          "options": [
+            "nervous",
+            "excited",
+            "angry",
+            "tired"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "紧张想拒绝 nervous"
+        },
+        {
+          "qid": "g9u4.c.02.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 6,
+          "options": [
+            "failed",
+            "forgot",
+            "refused",
+            "decided"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "决定试试 decided to try"
+        },
+        {
+          "qid": "g9u4.c.02.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 7,
+          "options": [
+            "mistakes",
+            "photos",
+            "plans",
+            "friends"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "交了朋友 made many friends"
+        },
+        {
+          "qid": "g9u4.c.02.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 8,
+          "options": [
+            "quietly",
+            "slowly",
+            "loudly",
+            "badly"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "大声清楚地说 spoke loudly"
+        },
+        {
+          "qid": "g9u4.c.02.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 9,
+          "options": [
+            "afraid",
+            "proud",
+            "bored",
+            "tired"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "为她骄傲 proud of her"
+        },
+        {
+          "qid": "g9u4.c.02.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.02",
+          "blank": 10,
+          "options": [
+            "liked",
+            "had",
+            "used",
+            "wanted"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "她曾经的样子 used to be"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.c.03",
+      "title": "My Grandfather's Stories",
+      "scene": "祖父今昔对比",
+      "body": "My grandfather is eighty years old now, but he (1)____ to be a strong young farmer. He often tells me about his (2)____. When he was young, there were no phones or computers. People used to (3)____ letters to keep in touch. Life was (4)____ then, but he says it was also peaceful. Every morning, he used to (5)____ up before the sun and work in the fields. In the evening, the whole family would (6)____ around the table and share stories. \"We didn't have much (7)____,\" he says, \"but we were happy.\" I love listening to him because his stories help me (8)____ how much the world has changed. Sometimes I wish I (9)____ see the village he grew up in. His memories are like a (10)____ to the past.",
+      "questions": [
+        {
+          "qid": "g9u4.c.03.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 1,
+          "options": [
+            "wanted",
+            "used",
+            "liked",
+            "had"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "曾经是 used to be"
+        },
+        {
+          "qid": "g9u4.c.03.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 2,
+          "options": [
+            "future",
+            "past",
+            "city",
+            "school"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "讲他的过去 his past"
+        },
+        {
+          "qid": "g9u4.c.03.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 3,
+          "options": [
+            "write",
+            "buy",
+            "sell",
+            "read"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "写信 write letters"
+        },
+        {
+          "qid": "g9u4.c.03.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 4,
+          "options": [
+            "easier",
+            "shorter",
+            "harder",
+            "richer"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "生活更艰苦 harder"
+        },
+        {
+          "qid": "g9u4.c.03.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 5,
+          "options": [
+            "put",
+            "get",
+            "look",
+            "take"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "起床 get up"
+        },
+        {
+          "qid": "g9u4.c.03.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 6,
+          "options": [
+            "jump",
+            "run",
+            "sit",
+            "stand"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "围坐桌旁 sit around the table"
+        },
+        {
+          "qid": "g9u4.c.03.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 7,
+          "options": [
+            "water",
+            "food",
+            "time",
+            "money"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "没多少钱 not much money"
+        },
+        {
+          "qid": "g9u4.c.03.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 8,
+          "options": [
+            "understand",
+            "forget",
+            "leave",
+            "refuse"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "帮我理解 understand"
+        },
+        {
+          "qid": "g9u4.c.03.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 9,
+          "options": [
+            "should",
+            "need",
+            "must",
+            "could"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "但愿我能 wish I could"
+        },
+        {
+          "qid": "g9u4.c.03.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.03",
+          "blank": 10,
+          "options": [
+            "window",
+            "map",
+            "key",
+            "door"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "通往过去的窗 a window to the past"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.c.04",
+      "title": "Learning to Swim",
+      "scene": "曾怕水→学会游泳",
+      "body": "I used to be afraid of (1)____. When I was younger, I wouldn't even put my face in the pool. My friends could all swim, but I always sat by the (2)____ and watched. I felt (3)____ that I was the only one who couldn't. One summer, my aunt offered to (4)____ me. She was very patient. \"Don't be afraid,\" she said. \"I will (5)____ you the whole time.\" At first, I only put my feet in the water. Then, little by little, I learned to (6)____ my breath and float. It took many (7)____, but I didn't give up. By the end of the summer, I could swim across the whole pool! I felt so (8)____ of myself. Now I love swimming, and I can hardly believe I (9)____ to be scared of it. The water that once frightened me is now my favorite (10)____.",
+      "questions": [
+        {
+          "qid": "g9u4.c.04.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 1,
+          "options": [
+            "heights",
+            "dogs",
+            "water",
+            "fire"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "怕水 afraid of water"
+        },
+        {
+          "qid": "g9u4.c.04.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 2,
+          "options": [
+            "wall",
+            "door",
+            "pool",
+            "tree"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "坐在泳池边 by the pool"
+        },
+        {
+          "qid": "g9u4.c.04.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 3,
+          "options": [
+            "proud",
+            "glad",
+            "brave",
+            "bad"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "感觉很糟 felt bad"
+        },
+        {
+          "qid": "g9u4.c.04.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 4,
+          "options": [
+            "buy",
+            "teach",
+            "leave",
+            "watch"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "教我 teach me"
+        },
+        {
+          "qid": "g9u4.c.04.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 5,
+          "options": [
+            "stop",
+            "support",
+            "sell",
+            "lose"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "[填空] 我会一直扶着你 support you the whole time"
+        },
+        {
+          "qid": "g9u4.c.04.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 6,
+          "options": [
+            "catch",
+            "hold",
+            "cut",
+            "throw"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "屏住呼吸 hold my breath"
+        },
+        {
+          "qid": "g9u4.c.04.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 7,
+          "options": [
+            "weeks",
+            "games",
+            "books",
+            "photos"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "花了好几周 many weeks"
+        },
+        {
+          "qid": "g9u4.c.04.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 8,
+          "options": [
+            "afraid",
+            "sorry",
+            "tired",
+            "proud"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "为自己自豪 proud"
+        },
+        {
+          "qid": "g9u4.c.04.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 9,
+          "options": [
+            "used",
+            "wanted",
+            "liked",
+            "had"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "曾经怕 used to be scared"
+        },
+        {
+          "qid": "g9u4.c.04.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.04",
+          "blank": 10,
+          "options": [
+            "place",
+            "time",
+            "day",
+            "way"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "最爱的地方 favorite place"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.c.05",
+      "title": "The Old Photo",
+      "scene": "老照片回忆变化",
+      "body": "Last weekend, I found an old (1)____ in a drawer. It showed my mother when she was a (2)____ girl. I was surprised because she looked so (3)____ from now. In the photo, she used to have long curly hair, but today her hair is short and (4)____. She used to wear glasses too, but now she doesn't. I showed the photo to her, and she (5)____. \"I remember that day,\" she said. \"I used to be very shy back then. I didn't use to (6)____ to strangers at all.\" It was hard to (7)____, because now she talks to everyone easily. She told me that people can (8)____ a lot over the years. Looking at the photo made me (9)____ about how I might change in the future too. I carefully put the photo (10)____ in the drawer to keep it safe.",
+      "questions": [
+        {
+          "qid": "g9u4.c.05.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 1,
+          "options": [
+            "photo",
+            "book",
+            "letter",
+            "map"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "老照片 old photo"
+        },
+        {
+          "qid": "g9u4.c.05.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 2,
+          "options": [
+            "young",
+            "old",
+            "tall",
+            "new"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "年轻女孩 young girl"
+        },
+        {
+          "qid": "g9u4.c.05.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 3,
+          "options": [
+            "easy",
+            "busy",
+            "same",
+            "different"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "看起来不同 different from now"
+        },
+        {
+          "qid": "g9u4.c.05.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 4,
+          "options": [
+            "long",
+            "curly",
+            "white",
+            "straight"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "短而直 short and straight"
+        },
+        {
+          "qid": "g9u4.c.05.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 5,
+          "options": [
+            "smiled",
+            "slept",
+            "cried",
+            "ran"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "她笑了 smiled"
+        },
+        {
+          "qid": "g9u4.c.05.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 6,
+          "options": [
+            "sit",
+            "talk",
+            "look",
+            "walk"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "不跟陌生人说话 talk to strangers"
+        },
+        {
+          "qid": "g9u4.c.05.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 7,
+          "options": [
+            "refuse",
+            "believe",
+            "forget",
+            "leave"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "难以相信 hard to believe"
+        },
+        {
+          "qid": "g9u4.c.05.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 8,
+          "options": [
+            "sell",
+            "change",
+            "stop",
+            "lose"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "会变很多 change a lot"
+        },
+        {
+          "qid": "g9u4.c.05.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 9,
+          "options": [
+            "stop",
+            "forget",
+            "think",
+            "refuse"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "让我思考 made me think"
+        },
+        {
+          "qid": "g9u4.c.05.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.05",
+          "blank": 10,
+          "options": [
+            "off",
+            "out",
+            "back",
+            "away"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放回抽屉 put it back"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.c.06",
+      "title": "From Lazy to Hard-working",
+      "scene": "曾经懒散→努力",
+      "body": "Tom didn't use to be a good (1)____. In the past, he never finished his homework on (2)____, and he often fell asleep in class. His grades were (3)____, and his teachers were worried about him. Then, in Grade 8, something (4)____. His class had a new science teacher who made every lesson fun and (5)____. For the first time, Tom felt interested in (6)____. He started to study harder and ask questions. Slowly, his grades got (7)____. His parents could hardly (8)____ the change in him. \"You used to hate studying,\" his mother said, \"but now you can't (9)____ reading your books!\" Tom just smiled. He had learned that the right teacher and a little effort can (10)____ everything. He is no longer the lazy boy he used to be.",
+      "questions": [
+        {
+          "qid": "g9u4.c.06.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 1,
+          "options": [
+            "driver",
+            "cook",
+            "teacher",
+            "student"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "好学生 good student"
+        },
+        {
+          "qid": "g9u4.c.06.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 2,
+          "options": [
+            "time",
+            "sale",
+            "foot",
+            "fire"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "按时 on time"
+        },
+        {
+          "qid": "g9u4.c.06.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 3,
+          "options": [
+            "poor",
+            "great",
+            "high",
+            "good"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "成绩差 poor"
+        },
+        {
+          "qid": "g9u4.c.06.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 4,
+          "options": [
+            "opened",
+            "stopped",
+            "changed",
+            "closed"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "有事发生改变 something changed"
+        },
+        {
+          "qid": "g9u4.c.06.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 5,
+          "options": [
+            "interesting",
+            "difficult",
+            "short",
+            "boring"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "有趣 fun and interesting"
+        },
+        {
+          "qid": "g9u4.c.06.q6",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 6,
+          "options": [
+            "playing",
+            "learning",
+            "eating",
+            "sleeping"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "对学习感兴趣 interested in learning"
+        },
+        {
+          "qid": "g9u4.c.06.q7",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 7,
+          "options": [
+            "worse",
+            "better",
+            "less",
+            "fewer"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "成绩变好 got better"
+        },
+        {
+          "qid": "g9u4.c.06.q8",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 8,
+          "options": [
+            "lose",
+            "believe",
+            "refuse",
+            "forget"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "难以相信变化 hardly believe"
+        },
+        {
+          "qid": "g9u4.c.06.q9",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 9,
+          "options": [
+            "begin",
+            "keep",
+            "stop",
+            "start"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "停不下来读书 can't stop reading"
+        },
+        {
+          "qid": "g9u4.c.06.q10",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.c.06",
+          "blank": 10,
+          "options": [
+            "buy",
+            "sell",
+            "lose",
+            "change"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "能改变一切 change everything"
+        }
+      ]
+    }
+  ]
+}

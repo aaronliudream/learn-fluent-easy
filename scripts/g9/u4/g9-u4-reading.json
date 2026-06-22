@@ -1,0 +1,534 @@
+{
+  "volume": "g9",
+  "unit": "U4",
+  "passages": [
+    {
+      "code": "g9u4.r.01",
+      "genre": "记叙文",
+      "title": "Brave Now",
+      "body": "When I was little, I used to be afraid of almost everything. I was afraid of the dark, afraid of dogs, and even afraid of speaking in front of the class. My hands would shake and my face would turn red. My mother always told me, \"Everyone feels scared sometimes. Being brave does not mean you have no fear. It means you keep going even when you are afraid.\" Her words stayed in my mind. Little by little, I tried to face my fears. I started by reading a poem aloud at home, then in front of my family, and finally in class. Last week, I gave a speech to the whole school. I was still a little nervous, but I did it. I am not the shy child I used to be.",
+      "questions": [
+        {
+          "qid": "g9u4.r.01.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.01",
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How the writer became braver over time.",
+            "How to write a poem.",
+            "Why dogs are scary.",
+            "The writer's favorite class."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "主旨:讲述作者如何逐渐克服恐惧变勇敢"
+        },
+        {
+          "qid": "g9u4.r.01.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.01",
+          "stem": "What did the writer use to be afraid of?",
+          "options": [
+            "Tests and homework.",
+            "Water and heights.",
+            "The dark, dogs, and speaking in class.",
+            "Cars and trains."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:afraid of the dark, dogs, and speaking in front of the class"
+        },
+        {
+          "qid": "g9u4.r.01.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.01",
+          "stem": "According to the mother, what does being brave mean?",
+          "options": [
+            "Never feeling any fear.",
+            "Asking others for help.",
+            "Keeping going even when you are afraid.",
+            "Avoiding all danger."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:keep going even when you are afraid"
+        },
+        {
+          "qid": "g9u4.r.01.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.01",
+          "stem": "How did the writer first practice facing fear?",
+          "options": [
+            "By reading a poem aloud at home.",
+            "By playing with dogs.",
+            "By turning off the lights.",
+            "By giving a school speech."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:started by reading a poem aloud at home"
+        },
+        {
+          "qid": "g9u4.r.01.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.01",
+          "stem": "What can we learn about the writer now?",
+          "options": [
+            "The writer is much braver than before.",
+            "The writer hates speaking.",
+            "The writer is still very shy.",
+            "The writer is afraid of school."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "推断:结尾 I am not the shy child I used to be"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.r.02",
+      "genre": "对话",
+      "title": "A Class Reunion",
+      "body": "Anna: Is that you, Ben? You look so different! You used to be really short, didn't you?\nBen: Haha, yes! And I used to be very quiet too. I never said a word in class.\nAnna: I remember! Now you're tall and you talk to everyone. What changed?\nBen: I joined the school basketball team. It made me taller and gave me confidence. What about you? You used to have long hair.\nAnna: I cut it last year. And I didn't use to like reading, but now I read a book every week.\nBen: People really change in a few years, don't they?\nAnna: They do. It's nice to see how far we've both come.",
+      "questions": [
+        {
+          "qid": "g9u4.r.02.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.02",
+          "stem": "What did Ben use to be like?",
+          "options": [
+            "Short and quiet.",
+            "Funny and active.",
+            "Tall and loud.",
+            "Lazy and shy."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:used to be really short… used to be very quiet"
+        },
+        {
+          "qid": "g9u4.r.02.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.02",
+          "stem": "What helped Ben change?",
+          "options": [
+            "Moving to a new city.",
+            "Cutting his hair.",
+            "Reading many books.",
+            "Joining the basketball team."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:I joined the school basketball team"
+        },
+        {
+          "qid": "g9u4.r.02.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.02",
+          "stem": "What did Anna use to have?",
+          "options": [
+            "Long hair.",
+            "Glasses.",
+            "A basketball.",
+            "Short hair."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:You used to have long hair"
+        },
+        {
+          "qid": "g9u4.r.02.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.02",
+          "stem": "What does Anna do now that she didn't use to do?",
+          "options": [
+            "Stay quiet in class.",
+            "Play basketball.",
+            "Read a book every week.",
+            "Cut others' hair."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:didn't use to like reading, but now I read a book every week"
+        },
+        {
+          "qid": "g9u4.r.02.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.02",
+          "stem": "What do both speakers agree on?",
+          "options": [
+            "People really change over the years.",
+            "Reading is hard.",
+            "School is boring.",
+            "Sports are useless."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "推断:结尾都同意 people really change"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.r.03",
+      "genre": "说明文",
+      "title": "Why People Change",
+      "body": "Why do people change as they grow up? Scientists say there are many reasons. First, our bodies change. A child who used to be the shortest in class may become the tallest as a teenager. Second, our interests change. Many people who used to hate vegetables enjoy them as adults. Third, our experiences shape us. A student who used to be afraid of speaking may become confident after joining a club or winning a competition. Change is a normal part of life. It does not happen overnight; it happens slowly, day by day. The important thing is not to compare yourself with others, but to notice how far you have come from the person you used to be.",
+      "questions": [
+        {
+          "qid": "g9u4.r.03.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.03",
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Clubs are important for students.",
+            "People change as they grow up, for several reasons.",
+            "Vegetables are good for health.",
+            "Tall people are more confident."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "主旨:解释人成长中为何会变化"
+        },
+        {
+          "qid": "g9u4.r.03.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.03",
+          "stem": "Which is NOT a reason for change mentioned?",
+          "options": [
+            "Our interests change.",
+            "Our experiences shape us.",
+            "The weather where we live.",
+            "Our bodies change."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文给出身体/兴趣/经历三条,未提天气"
+        },
+        {
+          "qid": "g9u4.r.03.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.03",
+          "stem": "How does change usually happen, according to the text?",
+          "options": [
+            "Slowly, day by day.",
+            "Only in childhood.",
+            "Suddenly, overnight.",
+            "Only after winning a prize."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:It does not happen overnight; it happens slowly"
+        },
+        {
+          "qid": "g9u4.r.03.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.03",
+          "stem": "What does the writer advise readers to do?",
+          "options": [
+            "Stay the same forever.",
+            "Compare themselves with others.",
+            "Avoid joining clubs.",
+            "Notice how far they have come."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:not to compare… but to notice how far you have come"
+        },
+        {
+          "qid": "g9u4.r.03.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.03",
+          "stem": "What does the word \"shape\" mean in the passage?",
+          "options": [
+            "To cut into pieces.",
+            "To clean carefully.",
+            "To influence or change.",
+            "To draw a picture."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "猜词:experiences shape us = 经历塑造/影响我们"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.r.04",
+      "genre": "书信",
+      "title": "A Letter to My Younger Self",
+      "body": "Dear younger me, I know you are scared right now. You are afraid of the dark, afraid of making mistakes, and afraid that others will laugh at you. I want you to know that things will get better. You used to think you were not good enough, but you are wrong. In a few years, you will stand on a stage and sing in front of hundreds of people. You won't believe it now, but it is true. The shy, quiet child you are today will grow into someone brave and kind. So please, don't give up. Take small steps every day. Be patient with yourself. The fears that feel so big now will one day feel very small. With love, your future self.",
+      "questions": [
+        {
+          "qid": "g9u4.r.04.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.04",
+          "stem": "Who is the letter written to?",
+          "options": [
+            "The writer's younger self.",
+            "The writer's best friend.",
+            "The writer's teacher.",
+            "A famous singer."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:Dear younger me / your future self"
+        },
+        {
+          "qid": "g9u4.r.04.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.04",
+          "stem": "What did the younger self use to think?",
+          "options": [
+            "That the writer was the best.",
+            "That the writer was not good enough.",
+            "That the writer would be a doctor.",
+            "That school was easy."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:used to think you were not good enough"
+        },
+        {
+          "qid": "g9u4.r.04.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.04",
+          "stem": "What will the younger self do in a few years?",
+          "options": [
+            "Move to another country.",
+            "Sing on a stage in front of many people.",
+            "Become a teacher.",
+            "Win a sports match."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:stand on a stage and sing in front of hundreds"
+        },
+        {
+          "qid": "g9u4.r.04.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.04",
+          "stem": "What advice does the writer give?",
+          "options": [
+            "Compare yourself with others.",
+            "Give up when it is hard.",
+            "Take small steps and be patient.",
+            "Stay afraid of the dark."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Take small steps every day. Be patient"
+        },
+        {
+          "qid": "g9u4.r.04.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.04",
+          "stem": "What is the tone of the letter?",
+          "options": [
+            "Angry and cold.",
+            "Sad and hopeless.",
+            "Funny and silly.",
+            "Encouraging and warm."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "推断:全文鼓励温暖语气"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.r.05",
+      "genre": "议论文",
+      "title": "Is Change Always Good?",
+      "body": "Most people agree that change can be a good thing. A shy child who becomes confident, or a lazy student who learns to work hard — these are changes we admire. However, not all change is good. Some people who used to be kind become selfish when they get rich or famous. Some who used to love reading stop because they spend all their time on their phones. So change itself is not always good or bad; what matters is the direction. We should welcome changes that make us better people, and be careful about changes that take us away from who we want to be. The goal is not just to change, but to grow.",
+      "questions": [
+        {
+          "qid": "g9u4.r.05.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.05",
+          "stem": "What is the main argument of the passage?",
+          "options": [
+            "Change is not always good; the direction matters.",
+            "All change is bad.",
+            "All change is good.",
+            "People should never change."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "主旨:变化好坏取决于方向"
+        },
+        {
+          "qid": "g9u4.r.05.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.05",
+          "stem": "Which is given as an example of bad change?",
+          "options": [
+            "Kind people becoming selfish when rich.",
+            "A shy child becoming confident.",
+            "A lazy student working hard.",
+            "A child learning to read."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:used to be kind become selfish when they get rich"
+        },
+        {
+          "qid": "g9u4.r.05.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.05",
+          "stem": "Why do some people stop reading, according to the text?",
+          "options": [
+            "They become teachers.",
+            "They move away.",
+            "They spend all their time on phones.",
+            "They lose their books."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:stop because they spend all their time on their phones"
+        },
+        {
+          "qid": "g9u4.r.05.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.05",
+          "stem": "What kind of change does the writer support?",
+          "options": [
+            "Any change at all.",
+            "Change that makes us better people.",
+            "Change that makes us famous.",
+            "Change that makes us rich."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:welcome changes that make us better people"
+        },
+        {
+          "qid": "g9u4.r.05.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.05",
+          "stem": "What does the writer mean by \"not just to change, but to grow\"?",
+          "options": [
+            "Change is always easy.",
+            "We should change in a positive direction.",
+            "Growing is impossible.",
+            "We should never change."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "推断:成长=向好的方向变化"
+        }
+      ]
+    },
+    {
+      "code": "g9u4.r.06",
+      "genre": "应用文",
+      "title": "Youth Club Notice: 'The New Me' Sharing Day",
+      "body": "GREENWOOD YOUTH CLUB invites you to our 'The New Me' Sharing Day! Have you changed a lot in the past few years? Come and share your story! WHEN: Saturday, May 18th, 2:00 p.m. - 4:00 p.m. WHERE: Club Hall, 2nd floor. WHAT TO DO: Tell us in three minutes how you used to be and how you have changed. You can bring old photos! PRIZES: The three most inspiring stories will win a free book of their choice. SIGN UP: Write your name on the list outside Room 201 before May 15th. Everyone is welcome — whether you used to be shy, afraid, or just very different. We believe every story can inspire someone else!",
+      "questions": [
+        {
+          "qid": "g9u4.r.06.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.06",
+          "stem": "What is the main purpose of this notice?",
+          "options": [
+            "To sell old photos.",
+            "To advertise a bookshop.",
+            "To start a reading class.",
+            "To invite young people to share how they have changed."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "应用文目的:邀请分享成长变化"
+        },
+        {
+          "qid": "g9u4.r.06.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.06",
+          "stem": "When does the event take place?",
+          "options": [
+            "Sunday morning.",
+            "Saturday, May 18th, 2:00-4:00 p.m.",
+            "Friday, May 15th, all day.",
+            "May 201st."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:Saturday, May 18th, 2:00 p.m. - 4:00 p.m."
+        },
+        {
+          "qid": "g9u4.r.06.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.06",
+          "stem": "What can a participant bring?",
+          "options": [
+            "A pet dog.",
+            "Food and drinks.",
+            "Old photos.",
+            "A musical instrument."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:You can bring old photos"
+        },
+        {
+          "qid": "g9u4.r.06.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.06",
+          "stem": "What do the three best stories win?",
+          "options": [
+            "A free trip.",
+            "Money.",
+            "A trophy.",
+            "A free book of their choice."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:win a free book of their choice"
+        },
+        {
+          "qid": "g9u4.r.06.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.r.06",
+          "stem": "How does one sign up?",
+          "options": [
+            "Just show up on the day.",
+            "Write your name on the list outside Room 201 before May 15th.",
+            "Send an email.",
+            "Call the club."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:Write your name on the list outside Room 201 before May 15th"
+        }
+      ]
+    }
+  ]
+}

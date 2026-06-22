@@ -1,0 +1,1166 @@
+{
+  "volume": "g9",
+  "unit": "U4",
+  "points": [
+    {
+      "code": "g9u4.01",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "category": "verb",
+      "overview": "used to + 动词原形,表过去常常发生/存在而现在不再。注意是 used(带d)+ to。"
+    },
+    {
+      "code": "g9u4.02",
+      "point": "didn't use to 否定(use 不带 d)",
+      "category": "verb",
+      "overview": "否定 didn't use to + 动词原形。注意助动词 didn't 后 use 不带 d。"
+    },
+    {
+      "code": "g9u4.03",
+      "point": "used to 疑问与反意疑问句",
+      "category": "verb",
+      "overview": "疑问 Did + 主语 + use to…?;陈述句 used to… 的反意疑问用 didn't + 主语(There used to be→didn't there)。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u4.01.q1",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "I ____ be afraid of the dark when I was a child.",
+      "options": [
+        "use to",
+        "used to",
+        "used",
+        "am used to"
+      ],
+      "answer_index": 1,
+      "answer_text": "used to",
+      "explanation": "[结构] 过去常常→used to + 动词原形"
+    },
+    {
+      "qid": "g9u4.01.q2",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "My grandpa ____ tell us stories every evening.",
+      "options": [
+        "used to",
+        "used",
+        "use to",
+        "is used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形,表过去习惯"
+    },
+    {
+      "qid": "g9u4.01.q3",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "She ____ have long straight hair, but now it's short.",
+      "options": [
+        "used",
+        "uses to",
+        "used to",
+        "use to"
+      ],
+      "answer_index": 2,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q4",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "There ____ be a small shop on the corner.",
+      "options": [
+        "use to",
+        "is used to",
+        "used",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] There used to be… 过去存在"
+    },
+    {
+      "qid": "g9u4.01.q5",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "We ____ walk to school together when we were young.",
+      "options": [
+        "are used to",
+        "use to",
+        "used",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q6",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "He ____ be really quiet, but now he talks a lot.",
+      "options": [
+        "used",
+        "is used to",
+        "used to",
+        "use to"
+      ],
+      "answer_index": 2,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q7",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "My sister ____ play the piano, but she stopped last year.",
+      "options": [
+        "plays",
+        "used to",
+        "use to",
+        "used"
+      ],
+      "answer_index": 1,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q8",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "They ____ live in a small village in the mountains.",
+      "options": [
+        "used to",
+        "use to",
+        "are used to",
+        "used"
+      ],
+      "answer_index": 0,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q9",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "I ____ hate carrots, but now I like them.",
+      "options": [
+        "am used to",
+        "used",
+        "use to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q10",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "There ____ be many trees here before the road was built.",
+      "options": [
+        "use to",
+        "is used to",
+        "used",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] There used to be…"
+    },
+    {
+      "qid": "g9u4.01.q11",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "My father ____ smoke, but he gave it up.",
+      "options": [
+        "used",
+        "use to",
+        "is used to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q12",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "Lucy ____ be short, but now she is the tallest in class.",
+      "options": [
+        "used",
+        "uses to",
+        "used to",
+        "use to"
+      ],
+      "answer_index": 2,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q13",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "We ____ watch cartoons on Saturday mornings.",
+      "options": [
+        "are used to",
+        "used to",
+        "use to",
+        "used"
+      ],
+      "answer_index": 1,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q14",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "He ____ read books about history when he was young.",
+      "options": [
+        "used",
+        "reads",
+        "use to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q15",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "My mom ____ make dumplings every weekend.",
+      "options": [
+        "used",
+        "makes",
+        "use to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q16",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "Tom ____ be afraid of dogs, but now he loves them.",
+      "options": [
+        "use to",
+        "used",
+        "is used to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q17",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "This building ____ be a school many years ago.",
+      "options": [
+        "is used to",
+        "used to",
+        "use to",
+        "used"
+      ],
+      "answer_index": 1,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q18",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "I ____ go fishing with my grandfather on holidays.",
+      "options": [
+        "used",
+        "used to",
+        "am used to",
+        "use to"
+      ],
+      "answer_index": 1,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q19",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "She ____ wear glasses, but now she doesn't need them.",
+      "options": [
+        "use to",
+        "used",
+        "used to",
+        "wears"
+      ],
+      "answer_index": 2,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.01.q20",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 肯定(过去常常/曾经,现已不然)",
+      "code": "g9u4.01",
+      "category": "verb",
+      "tag": "结构",
+      "stem": "Children ____ play outside more before mobile phones.",
+      "options": [
+        "used",
+        "use to",
+        "are used to",
+        "used to"
+      ],
+      "answer_index": 3,
+      "answer_text": "used to",
+      "explanation": "[结构] used to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q1",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "I ____ like vegetables, but now I eat them every day.",
+      "options": [
+        "wasn't used to",
+        "didn't used to",
+        "didn't use to",
+        "don't use to"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] 否定 didn't use to(use不带d)"
+    },
+    {
+      "qid": "g9u4.02.q2",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "She ____ be popular in school, but things have changed.",
+      "options": [
+        "doesn't use to",
+        "isn't used to",
+        "didn't use to",
+        "didn't used to"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q3",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "He ____ enjoy sports when he was little.",
+      "options": [
+        "didn't used to",
+        "don't use to",
+        "didn't use to",
+        "wasn't used to"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q4",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "We ____ have a computer at home years ago.",
+      "options": [
+        "didn't used to",
+        "aren't used to",
+        "didn't use to",
+        "don't use to"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q5",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "Paula ____ talk much in class, but now she does.",
+      "options": [
+        "didn't use to",
+        "didn't used to",
+        "doesn't use to",
+        "isn't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q6",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "They ____ go abroad for holidays in the past.",
+      "options": [
+        "aren't used to",
+        "didn't used to",
+        "don't use to",
+        "didn't use to"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q7",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "I ____ be good at math, but I work hard now.",
+      "options": [
+        "didn't use to",
+        "don't use to",
+        "didn't used to",
+        "wasn't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q8",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "My brother ____ help with the housework before.",
+      "options": [
+        "didn't used to",
+        "didn't use to",
+        "isn't used to",
+        "doesn't use to"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q9",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "She ____ like tests, so she felt nervous.",
+      "options": [
+        "didn't used to",
+        "didn't use to",
+        "isn't used to",
+        "doesn't use to"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q10",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "People ____ travel so much in those days.",
+      "options": [
+        "didn't use to",
+        "didn't used to",
+        "don't use to",
+        "aren't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q11",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "I ____ get up early, but now I do every morning.",
+      "options": [
+        "don't use to",
+        "didn't use to",
+        "didn't used to",
+        "wasn't used to"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q12",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "He ____ care about his clothes when he was young.",
+      "options": [
+        "didn't used to",
+        "isn't used to",
+        "doesn't use to",
+        "didn't use to"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q13",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "We ____ eat out often when I was a kid.",
+      "options": [
+        "didn't use to",
+        "don't use to",
+        "didn't used to",
+        "aren't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q14",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "My grandma ____ use a smartphone before this year.",
+      "options": [
+        "doesn't use to",
+        "isn't used to",
+        "didn't used to",
+        "didn't use to"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q15",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "The street ____ be so busy a few years ago.",
+      "options": [
+        "didn't used to",
+        "didn't use to",
+        "isn't used to",
+        "doesn't use to"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q16",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "Lily ____ read for fun, but now she loves books.",
+      "options": [
+        "didn't use to",
+        "doesn't use to",
+        "didn't used to",
+        "isn't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q17",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "I ____ believe I could speak English so well.",
+      "options": [
+        "didn't use to",
+        "don't use to",
+        "wasn't used to",
+        "didn't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q18",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "They ____ recycle paper and bottles in the past.",
+      "options": [
+        "don't use to",
+        "aren't used to",
+        "didn't use to",
+        "didn't used to"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q19",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "He ____ exercise, but now he runs every day.",
+      "options": [
+        "didn't use to",
+        "doesn't use to",
+        "didn't used to",
+        "isn't used to"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.02.q20",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "didn't use to 否定(use 不带 d)",
+      "code": "g9u4.02",
+      "category": "verb",
+      "tag": "否定",
+      "stem": "She ____ wear that color, but it suits her now.",
+      "options": [
+        "didn't used to",
+        "didn't use to",
+        "isn't used to",
+        "doesn't use to"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't use to",
+      "explanation": "[否定] didn't use to + 原形"
+    },
+    {
+      "qid": "g9u4.03.q1",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ you use to be afraid of the dark?",
+      "options": [
+        "Are",
+        "Were",
+        "Do",
+        "Did"
+      ],
+      "answer_index": 3,
+      "answer_text": "Did",
+      "explanation": "[疑问] 一般疑问 Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q2",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "You used to wear glasses, ____?",
+      "options": [
+        "didn't you",
+        "did you",
+        "weren't you",
+        "didn't he"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't you",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't you"
+    },
+    {
+      "qid": "g9u4.03.q3",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ she use to play the piano?",
+      "options": [
+        "Did",
+        "Is",
+        "Does",
+        "Was"
+      ],
+      "answer_index": 0,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q4",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "He used to be short, ____?",
+      "options": [
+        "did he",
+        "didn't he",
+        "wasn't he",
+        "didn't she"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't he",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't he"
+    },
+    {
+      "qid": "g9u4.03.q5",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ they use to live near the sea?",
+      "options": [
+        "Did",
+        "Do",
+        "Are",
+        "Were"
+      ],
+      "answer_index": 0,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q6",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "Mary used to be quiet, ____?",
+      "options": [
+        "did she",
+        "wasn't she",
+        "didn't he",
+        "didn't she"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't she",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't she"
+    },
+    {
+      "qid": "g9u4.03.q7",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ your father use to smoke?",
+      "options": [
+        "Did",
+        "Is",
+        "Was",
+        "Does"
+      ],
+      "answer_index": 0,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q8",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "We used to walk to school, ____?",
+      "options": [
+        "didn't we",
+        "did we",
+        "weren't we",
+        "didn't they"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't we",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't we"
+    },
+    {
+      "qid": "g9u4.03.q9",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ you use to hate carrots when you were young?",
+      "options": [
+        "Are",
+        "Do",
+        "Were",
+        "Did"
+      ],
+      "answer_index": 3,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q10",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "There used to be a park here, ____?",
+      "options": [
+        "did there",
+        "didn't it",
+        "wasn't there",
+        "didn't there"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't there",
+      "explanation": "[反意] There used to be… 反意用 didn't there"
+    },
+    {
+      "qid": "g9u4.03.q11",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ Tom use to read books about history?",
+      "options": [
+        "Was",
+        "Did",
+        "Does",
+        "Is"
+      ],
+      "answer_index": 1,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q12",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "She used to have long hair, ____?",
+      "options": [
+        "hadn't she",
+        "did she",
+        "didn't she",
+        "didn't he"
+      ],
+      "answer_index": 2,
+      "answer_text": "didn't she",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't she"
+    },
+    {
+      "qid": "g9u4.03.q13",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ the children use to play outside more?",
+      "options": [
+        "Are",
+        "Do",
+        "Were",
+        "Did"
+      ],
+      "answer_index": 3,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q14",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "They used to come here every summer, ____?",
+      "options": [
+        "didn't we",
+        "did they",
+        "weren't they",
+        "didn't they"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't they",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't they"
+    },
+    {
+      "qid": "g9u4.03.q15",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ he use to be popular in school?",
+      "options": [
+        "Did",
+        "Was",
+        "Is",
+        "Does"
+      ],
+      "answer_index": 0,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q16",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "You used to go fishing with him, ____?",
+      "options": [
+        "did you",
+        "didn't you",
+        "weren't you",
+        "didn't he"
+      ],
+      "answer_index": 1,
+      "answer_text": "didn't you",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't you"
+    },
+    {
+      "qid": "g9u4.03.q17",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "How ____ people use to live without phones?",
+      "options": [
+        "did",
+        "were",
+        "are",
+        "do"
+      ],
+      "answer_index": 0,
+      "answer_text": "did",
+      "explanation": "[疑问] 特殊疑问 How did…use to"
+    },
+    {
+      "qid": "g9u4.03.q18",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "Lucy used to be afraid of dogs, ____?",
+      "options": [
+        "didn't he",
+        "did she",
+        "wasn't she",
+        "didn't she"
+      ],
+      "answer_index": 3,
+      "answer_text": "didn't she",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't she"
+    },
+    {
+      "qid": "g9u4.03.q19",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "疑问",
+      "stem": "____ your family use to travel by train?",
+      "options": [
+        "Was",
+        "Does",
+        "Were",
+        "Did"
+      ],
+      "answer_index": 3,
+      "answer_text": "Did",
+      "explanation": "[疑问] Did + 主语 + use to"
+    },
+    {
+      "qid": "g9u4.03.q20",
+      "volume": "g9",
+      "unit": "U4",
+      "point": "used to 疑问与反意疑问句",
+      "code": "g9u4.03",
+      "category": "verb",
+      "tag": "反意",
+      "stem": "I used to be like that too, ____?",
+      "options": [
+        "didn't I",
+        "did I",
+        "wasn't I",
+        "didn't you"
+      ],
+      "answer_index": 0,
+      "answer_text": "didn't I",
+      "explanation": "[反意] 肯定陈述+否定反意 didn't I"
+    }
+  ]
+}

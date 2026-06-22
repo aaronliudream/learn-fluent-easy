@@ -1,0 +1,534 @@
+{
+  "volume": "g9",
+  "unit": "U3",
+  "passages": [
+    {
+      "code": "g9u3.r.01",
+      "genre": "说明文",
+      "title": "Asking for Directions Politely",
+      "body": "When you visit a new place, you will often need to ask for directions. Knowing how to ask politely can make a big difference. First, get the person's attention in a friendly way. A simple \"Excuse me\" is the best start. Then, use a polite question form, such as \"Could you please tell me where the station is?\" instead of a direct \"Where is the station?\" A polite question shows respect and makes people more willing to help. If the directions are not clear, you can politely ask the person to repeat them. Finally, don't forget to say \"Thank you\" before you leave. These small steps can turn a stranger into a helpful friend and make your trip much smoother.",
+      "questions": [
+        {
+          "qid": "g9u3.r.01.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.01",
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to ask for directions politely.",
+            "How to read a map.",
+            "How to make friends at school.",
+            "Why cities are big."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "主旨:讲如何礼貌地问路"
+        },
+        {
+          "qid": "g9u3.r.01.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.01",
+          "stem": "What is the best way to get someone's attention?",
+          "options": [
+            "Touching their arm.",
+            "Shouting loudly.",
+            "Saying \"Excuse me\".",
+            "Waving a map."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:A simple Excuse me is the best start"
+        },
+        {
+          "qid": "g9u3.r.01.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.01",
+          "stem": "Why is a polite question better than a direct one?",
+          "options": [
+            "It saves money.",
+            "It is easier to say.",
+            "It is shorter.",
+            "It shows respect and makes people willing to help."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:shows respect and makes people more willing to help"
+        },
+        {
+          "qid": "g9u3.r.01.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.01",
+          "stem": "What should you do if the directions are not clear?",
+          "options": [
+            "Politely ask the person to repeat them.",
+            "Guess the way.",
+            "Ask a different question.",
+            "Walk away."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:politely ask the person to repeat them"
+        },
+        {
+          "qid": "g9u3.r.01.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.01",
+          "stem": "What does the writer suggest doing before leaving?",
+          "options": [
+            "Giving money.",
+            "Shaking hands.",
+            "Taking a photo.",
+            "Saying \"Thank you\"."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:don't forget to say Thank you before you leave"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.r.02",
+      "genre": "对话",
+      "title": "At the Information Desk",
+      "body": "Tourist: Excuse me, could you please tell me how I can get to the City Library?\nClerk: Of course. Go straight along this street and turn left at the second corner. It's next to the post office.\nTourist: Thank you. Do you know if the library is open on Sundays?\nClerk: Yes, it is, but only in the morning, from nine to twelve.\nTourist: Great. One more question — is there a place to eat near the library?\nClerk: There's a nice cafe across from it. The sandwiches there are very popular.\nTourist: That's very helpful. Thank you so much!\nClerk: You're welcome. Enjoy your day!",
+      "questions": [
+        {
+          "qid": "g9u3.r.02.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.02",
+          "stem": "Where does the tourist want to go?",
+          "options": [
+            "The City Library.",
+            "The post office.",
+            "A cafe.",
+            "The information desk."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:how I can get to the City Library"
+        },
+        {
+          "qid": "g9u3.r.02.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.02",
+          "stem": "Where is the library?",
+          "options": [
+            "Inside the station.",
+            "Across from a cafe only.",
+            "At the second corner shop.",
+            "Next to the post office."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:turn left… It's next to the post office"
+        },
+        {
+          "qid": "g9u3.r.02.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.02",
+          "stem": "When is the library open on Sundays?",
+          "options": [
+            "All day.",
+            "Only in the afternoon.",
+            "It is closed.",
+            "Only in the morning, nine to twelve."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:only in the morning, from nine to twelve"
+        },
+        {
+          "qid": "g9u3.r.02.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.02",
+          "stem": "What is popular at the cafe?",
+          "options": [
+            "The juice.",
+            "The cakes.",
+            "The sandwiches.",
+            "The coffee."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:The sandwiches there are very popular"
+        },
+        {
+          "qid": "g9u3.r.02.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.02",
+          "stem": "How would you describe the clerk?",
+          "options": [
+            "Tired and bored.",
+            "Angry and busy.",
+            "Polite and helpful.",
+            "Rude and impatient."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "推断:全程礼貌耐心回答"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.r.03",
+      "genre": "记叙文",
+      "title": "A Kind Stranger",
+      "body": "Last summer, I traveled to a small town alone for the first time. After I got off the train, I felt completely lost. The streets all looked the same, and I could not find my hotel. I was too shy to ask anyone at first. Finally, I saw an old man sitting on a bench. I walked up to him and said, \"Excuse me, sir. Could you please tell me how I can get to the Sunshine Hotel?\" He smiled warmly and stood up. Instead of just pointing, he walked with me for five minutes until we reached the hotel gate. I thanked him again and again. That day, I learned that being polite and brave enough to ask can turn a stranger into a friend.",
+      "questions": [
+        {
+          "qid": "g9u3.r.03.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.03",
+          "stem": "Why did the writer feel lost?",
+          "options": [
+            "It was raining.",
+            "The train was late.",
+            "The streets all looked the same.",
+            "The hotel was closed."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:the streets all looked the same"
+        },
+        {
+          "qid": "g9u3.r.03.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.03",
+          "stem": "How did the writer feel about asking at first?",
+          "options": [
+            "Too shy.",
+            "Angry.",
+            "Excited.",
+            "Happy."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:I was too shy to ask anyone at first"
+        },
+        {
+          "qid": "g9u3.r.03.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.03",
+          "stem": "What did the old man do to help?",
+          "options": [
+            "He drew a map.",
+            "He walked with the writer to the hotel.",
+            "He called a taxi.",
+            "He gave money."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:he walked with me… until we reached the hotel"
+        },
+        {
+          "qid": "g9u3.r.03.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.03",
+          "stem": "What polite phrase did the writer use?",
+          "options": [
+            "Could you please tell me…",
+            "Where is the hotel, now.",
+            "Give me the way.",
+            "Take me there."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文用了 Could you please tell me how I can get to…"
+        },
+        {
+          "qid": "g9u3.r.03.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.03",
+          "stem": "What did the writer learn?",
+          "options": [
+            "Being polite and brave can turn a stranger into a friend.",
+            "Travel alone is dangerous.",
+            "Maps are useless.",
+            "Never trust strangers."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文结尾:being polite and brave… turn a stranger into a friend"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.r.04",
+      "genre": "书信",
+      "title": "A Letter Before the Trip",
+      "body": "Dear Mike, I'm so glad you are coming to visit my city next month! Let me give you some useful tips. When you arrive at the airport, you can take the airport bus to the city center. If you are not sure which bus to take, just ask the staff politely. You can say, \"Could you please tell me which bus goes to the city center?\" People here are friendly and will be happy to help. If you get lost in the streets, don't worry. Look for a police officer or go into a shop and ask, \"Excuse me, do you know where I am on this map?\" Remember to say \"thank you\" afterwards. I'm sure you will enjoy your trip. See you soon! Yours, Anna",
+      "questions": [
+        {
+          "qid": "g9u3.r.04.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.04",
+          "stem": "Why does Anna write this letter?",
+          "options": [
+            "To give Mike travel tips before his trip.",
+            "To say goodbye.",
+            "To cancel the trip.",
+            "To borrow money."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "信的目的是出行前给建议"
+        },
+        {
+          "qid": "g9u3.r.04.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.04",
+          "stem": "How can Mike get to the city center from the airport?",
+          "options": [
+            "By taxi only.",
+            "On foot.",
+            "By the airport bus.",
+            "By train."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:take the airport bus to the city center"
+        },
+        {
+          "qid": "g9u3.r.04.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.04",
+          "stem": "What should Mike do if he is unsure which bus to take?",
+          "options": [
+            "Take any bus.",
+            "Ask the staff politely.",
+            "Go home.",
+            "Wait there."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:just ask the staff politely"
+        },
+        {
+          "qid": "g9u3.r.04.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.04",
+          "stem": "If Mike gets lost, who does Anna suggest asking?",
+          "options": [
+            "A tourist.",
+            "No one.",
+            "A bus driver only.",
+            "A police officer or shop staff."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:look for a police officer or go into a shop and ask"
+        },
+        {
+          "qid": "g9u3.r.04.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.04",
+          "stem": "What does Anna remind Mike to do after asking?",
+          "options": [
+            "Say thank you.",
+            "Leave quickly.",
+            "Take a photo.",
+            "Pay money."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:Remember to say thank you afterwards"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.r.05",
+      "genre": "议论文",
+      "title": "Why Politeness Matters When Asking",
+      "body": "When we need help from a stranger, the way we ask is very important. Some people think that asking directly, like \"Where is the station?\", saves time. However, a direct question can sound rude. A polite question, such as \"Could you please tell me where the station is?\", shows respect. People are more willing to help someone who is polite. Politeness also makes the other person feel comfortable. In a new place, you may need to ask many people for help, so good manners can make your trip much smoother. Of course, being polite does not mean using long, difficult sentences. A simple \"Excuse me\" at the beginning is often enough. In short, a little politeness goes a long way.",
+      "questions": [
+        {
+          "qid": "g9u3.r.05.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.05",
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Politeness matters when asking for help.",
+            "Travel is difficult.",
+            "Asking directly saves time.",
+            "Strangers never help."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "主旨:问路时礼貌很重要"
+        },
+        {
+          "qid": "g9u3.r.05.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.05",
+          "stem": "Why can a direct question be a problem?",
+          "options": [
+            "It is hard to say.",
+            "It wastes money.",
+            "It can sound rude.",
+            "It is too long."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:a direct question can sound rude"
+        },
+        {
+          "qid": "g9u3.r.05.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.05",
+          "stem": "According to the passage, people are more willing to help someone who is ____.",
+          "options": [
+            "polite",
+            "rich",
+            "fast",
+            "quiet"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:more willing to help someone who is polite"
+        },
+        {
+          "qid": "g9u3.r.05.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.05",
+          "stem": "Does being polite mean using long difficult sentences?",
+          "options": [
+            "No, a simple Excuse me is often enough.",
+            "Yes, always.",
+            "It is not mentioned.",
+            "Yes, the longer the better."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:does not mean using long, difficult sentences"
+        },
+        {
+          "qid": "g9u3.r.05.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.05",
+          "stem": "What does \"a little politeness goes a long way\" mean?",
+          "options": [
+            "You must walk a long way.",
+            "A small amount of politeness brings big results.",
+            "Politeness takes a long time.",
+            "Politeness is useless."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "谚语义:少许礼貌带来很大效果"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.r.06",
+      "genre": "应用文",
+      "title": "City Information Guide",
+      "body": "Welcome to Greentown! Here is some useful information for visitors. TOURIST CENTER: Located at No. 5 Center Street, open from 9:00 a.m. to 6:00 p.m. The staff can answer your questions and give you a free map. RESTROOMS: Public restrooms can be found in the Central Park and near the bus station. ASKING FOR HELP: If you need directions, look for people wearing blue \"Helper\" shirts. They are city volunteers. You can also ask shop workers politely. USEFUL TIP: Save the city emergency number 110 in your phone. ENJOY YOUR STAY: Greentown is a safe and friendly city. Don't be afraid to ask for help — we are always glad to welcome visitors!",
+      "questions": [
+        {
+          "qid": "g9u3.r.06.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.06",
+          "stem": "Where is the Tourist Center?",
+          "options": [
+            "In Central Park.",
+            "Near the bus station.",
+            "At No. 5 Center Street.",
+            "At the airport."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Located at No. 5 Center Street"
+        },
+        {
+          "qid": "g9u3.r.06.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.06",
+          "stem": "What can you get for free at the Tourist Center?",
+          "options": [
+            "A hotel room.",
+            "A bus ticket.",
+            "A map.",
+            "A meal."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:give you a free map"
+        },
+        {
+          "qid": "g9u3.r.06.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.06",
+          "stem": "Where can visitors find public restrooms?",
+          "options": [
+            "Only at the airport.",
+            "In every shop.",
+            "At the Tourist Center.",
+            "In the Central Park and near the bus station."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:in the Central Park and near the bus station"
+        },
+        {
+          "qid": "g9u3.r.06.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.06",
+          "stem": "Who are the people in blue \"Helper\" shirts?",
+          "options": [
+            "Shop owners.",
+            "City volunteers.",
+            "Bus drivers.",
+            "Police officers."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:They are city volunteers"
+        },
+        {
+          "qid": "g9u3.r.06.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.r.06",
+          "stem": "What is the main purpose of this guide?",
+          "options": [
+            "To advertise a hotel.",
+            "To sell maps.",
+            "To describe the weather.",
+            "To give visitors useful information."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "应用文:给游客提供有用信息"
+        }
+      ]
+    }
+  ]
+}

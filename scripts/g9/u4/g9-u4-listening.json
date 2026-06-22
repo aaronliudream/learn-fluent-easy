@@ -1,0 +1,551 @@
+{
+  "volume": "g9",
+  "unit": "U4",
+  "exercises": [
+    {
+      "code": "g9u4.l.01",
+      "title": "九年级 U4 听力·对话 Meeting an Old Classmate",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Emma: Wow, Jack, is that really you? You used to be so short!",
+        "Jack: Haha, I know! I grew almost twenty centimeters in two years.",
+        "Emma: That's amazing. You also used to be really quiet. Now you talk so much!",
+        "Jack: Yeah, joining the drama club changed me. What about you? You used to have long hair.",
+        "Emma: I cut it short last summer. It's much easier to take care of.",
+        "Jack: It looks great. People really change, don't they?"
+      ],
+      "translation_cn": "Emma:哇,Jack,真的是你吗?你以前那么矮!\nJack:哈哈,我知道!我两年长高了快二十厘米。\nEmma:太惊人了。你以前还很安静,现在话好多!\nJack:对,参加戏剧社改变了我。你呢?你以前留长发。\nEmma:去年夏天剪短了,打理起来容易多了。\nJack:很好看。人真的会变,对吧?",
+      "questions": [
+        {
+          "qid": "g9u4.l.01.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.01",
+          "stem": "What did Jack use to be like?",
+          "options": [
+            "Shy and lazy.",
+            "Funny and active.",
+            "Tall and loud.",
+            "Short and quiet."
+          ],
+          "answer_index": 3,
+          "answer_text": "Short and quiet."
+        },
+        {
+          "qid": "g9u4.l.01.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.01",
+          "stem": "How much did Jack grow in two years?",
+          "options": [
+            "Five centimeters.",
+            "Ten centimeters.",
+            "Almost twenty centimeters.",
+            "Thirty centimeters."
+          ],
+          "answer_index": 2,
+          "answer_text": "Almost twenty centimeters."
+        },
+        {
+          "qid": "g9u4.l.01.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.01",
+          "stem": "What changed Jack?",
+          "options": [
+            "Moving house.",
+            "Playing basketball.",
+            "Joining the drama club.",
+            "Reading books."
+          ],
+          "answer_index": 2,
+          "answer_text": "Joining the drama club."
+        },
+        {
+          "qid": "g9u4.l.01.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.01",
+          "stem": "What did Emma do with her hair?",
+          "options": [
+            "Nothing.",
+            "Made it longer.",
+            "Dyed it.",
+            "Cut it short."
+          ],
+          "answer_index": 3,
+          "answer_text": "Cut it short."
+        },
+        {
+          "qid": "g9u4.l.01.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.01",
+          "stem": "What do they agree on?",
+          "options": [
+            "Long hair is better.",
+            "Drama is boring.",
+            "People really change.",
+            "School is hard."
+          ],
+          "answer_index": 2,
+          "answer_text": "People really change."
+        }
+      ]
+    },
+    {
+      "code": "g9u4.l.02",
+      "title": "九年级 U4 听力·短文 How I Have Changed",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Hello, I'm Sarah, and I want to share how I have changed. When I was younger, I used to be afraid of speaking in public. My voice would shake and I would forget my words. I didn't use to put up my hand in class at all. But in Grade 7, my teacher asked me to read a short story to the class. I was so nervous, but everyone clapped afterwards. That moment gave me confidence. Now I am the host of our school radio show, and I speak to hundreds of students every week. I never thought I could change so much."
+      ],
+      "translation_cn": "大家好,我是Sarah,想分享我的变化。小时候我很怕当众讲话,声音会发抖,还会忘词。我以前在课上根本不举手。但七年级时,老师让我给全班读一个小故事。我特别紧张,但读完大家都鼓掌了。那一刻给了我信心。现在我是学校广播节目的主持人,每周对几百名学生讲话。我从没想过自己能变这么多。",
+      "questions": [
+        {
+          "qid": "g9u4.l.02.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.02",
+          "stem": "What did Sarah use to be afraid of?",
+          "options": [
+            "Animals.",
+            "Speaking in public.",
+            "Tests.",
+            "The dark."
+          ],
+          "answer_index": 1,
+          "answer_text": "Speaking in public."
+        },
+        {
+          "qid": "g9u4.l.02.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.02",
+          "stem": "What did she NOT use to do in class?",
+          "options": [
+            "Put up her hand.",
+            "Sit down.",
+            "Take notes.",
+            "Listen."
+          ],
+          "answer_index": 0,
+          "answer_text": "Put up her hand."
+        },
+        {
+          "qid": "g9u4.l.02.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.02",
+          "stem": "What did her teacher ask her to do in Grade 7?",
+          "options": [
+            "Sing a song.",
+            "Read a short story to the class.",
+            "Write an essay.",
+            "Lead a game."
+          ],
+          "answer_index": 1,
+          "answer_text": "Read a short story to the class."
+        },
+        {
+          "qid": "g9u4.l.02.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.02",
+          "stem": "What is Sarah's role now?",
+          "options": [
+            "Host of the school radio show.",
+            "A class monitor.",
+            "A drama actor.",
+            "A sports captain."
+          ],
+          "answer_index": 0,
+          "answer_text": "Host of the school radio show."
+        },
+        {
+          "qid": "g9u4.l.02.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.02",
+          "stem": "What is the main message of Sarah's talk?",
+          "options": [
+            "She has changed a lot and gained confidence.",
+            "She loves the radio.",
+            "School is difficult.",
+            "Reading is boring."
+          ],
+          "answer_index": 0,
+          "answer_text": "She has changed a lot and gained confidence."
+        }
+      ]
+    },
+    {
+      "code": "g9u4.l.03",
+      "title": "九年级 U4 听力·对话 Talking About Old Fears",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Ben: Lily, were you ever afraid of anything when you were little?",
+        "Lily: Oh yes. I used to be terrified of dogs. I would cross the street to avoid them.",
+        "Ben: Really? But now you have a pet dog!",
+        "Lily: I know, it's funny. My uncle gave me a tiny puppy three years ago. I was scared at first, but it was so gentle.",
+        "Ben: So the puppy helped you?",
+        "Lily: Exactly. Now I love all dogs. What about you?",
+        "Ben: I used to be afraid of the dark, but I'm fine now."
+      ],
+      "translation_cn": "Ben:Lily,你小时候怕过什么吗?\nLily:有啊。我以前特别怕狗,会为了躲它们而过马路。\nBen:真的?可你现在养了只狗!\nLily:我知道,挺好笑的。三年前我叔叔给了我一只小奶狗。我一开始很害怕,但它特别温顺。\nBen:所以是小狗帮了你?\nLily:正是。现在我爱所有的狗。你呢?\nBen:我以前怕黑,不过现在没事了。",
+      "questions": [
+        {
+          "qid": "g9u4.l.03.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.03",
+          "stem": "What did Lily use to be afraid of?",
+          "options": [
+            "Cats.",
+            "Dogs.",
+            "Water.",
+            "The dark."
+          ],
+          "answer_index": 1,
+          "answer_text": "Dogs."
+        },
+        {
+          "qid": "g9u4.l.03.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.03",
+          "stem": "What would Lily do to avoid dogs?",
+          "options": [
+            "Call her mom.",
+            "Run home.",
+            "Cross the street.",
+            "Close her eyes."
+          ],
+          "answer_index": 2,
+          "answer_text": "Cross the street."
+        },
+        {
+          "qid": "g9u4.l.03.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.03",
+          "stem": "Who gave Lily a puppy?",
+          "options": [
+            "Her friend.",
+            "Her father.",
+            "Her teacher.",
+            "Her uncle."
+          ],
+          "answer_index": 3,
+          "answer_text": "Her uncle."
+        },
+        {
+          "qid": "g9u4.l.03.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.03",
+          "stem": "How does Lily feel about dogs now?",
+          "options": [
+            "She loves all dogs.",
+            "She is unsure.",
+            "She dislikes them.",
+            "She still fears them."
+          ],
+          "answer_index": 0,
+          "answer_text": "She loves all dogs."
+        },
+        {
+          "qid": "g9u4.l.03.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.03",
+          "stem": "What did Ben use to be afraid of?",
+          "options": [
+            "Heights.",
+            "The dark.",
+            "Dogs.",
+            "Tests."
+          ],
+          "answer_index": 1,
+          "answer_text": "The dark."
+        }
+      ]
+    },
+    {
+      "code": "g9u4.l.04",
+      "title": "九年级 U4 听力·短文 My Cousin Mike",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Let me tell you about my cousin, Mike. A few years ago, he used to be a chubby boy with glasses. He didn't use to do any sports, and he spent most of his time playing computer games. But last year, something changed. He started running every morning and joined the school swimming team. Now he is fit and strong, and he doesn't wear glasses anymore because he had an eye operation. He also used to be quite shy, but now he has many friends. The biggest change is that he is much happier and more active than before."
+      ],
+      "translation_cn": "我来说说我表哥Mike。几年前,他是个戴眼镜的胖男孩。他以前不做任何运动,大部分时间打电脑游戏。但去年有了变化。他开始每天早上跑步,还加入了学校游泳队。现在他健康强壮,也不再戴眼镜了,因为做了眼睛手术。他以前还挺害羞,现在朋友很多。最大的变化是他比以前快乐、活跃多了。",
+      "questions": [
+        {
+          "qid": "g9u4.l.04.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.04",
+          "stem": "What did Mike use to look like?",
+          "options": [
+            "A boy with curly hair.",
+            "A tall thin boy.",
+            "A short boy with short hair.",
+            "A chubby boy with glasses."
+          ],
+          "answer_index": 3,
+          "answer_text": "A chubby boy with glasses."
+        },
+        {
+          "qid": "g9u4.l.04.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.04",
+          "stem": "What did Mike NOT use to do?",
+          "options": [
+            "Sleeping.",
+            "Eating.",
+            "Computer games.",
+            "Any sports."
+          ],
+          "answer_index": 3,
+          "answer_text": "Any sports."
+        },
+        {
+          "qid": "g9u4.l.04.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.04",
+          "stem": "What did Mike do to change?",
+          "options": [
+            "Got a pet.",
+            "Started running and joined the swimming team.",
+            "Started reading.",
+            "Moved to a new school."
+          ],
+          "answer_index": 1,
+          "answer_text": "Started running and joined the swimming team."
+        },
+        {
+          "qid": "g9u4.l.04.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.04",
+          "stem": "Why doesn't Mike wear glasses now?",
+          "options": [
+            "He never needed them.",
+            "He bought contact lenses.",
+            "He lost them.",
+            "He had an eye operation."
+          ],
+          "answer_index": 3,
+          "answer_text": "He had an eye operation."
+        },
+        {
+          "qid": "g9u4.l.04.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.04",
+          "stem": "What is the biggest change in Mike?",
+          "options": [
+            "He is quieter.",
+            "He is richer.",
+            "He is happier and more active.",
+            "He is taller."
+          ],
+          "answer_index": 2,
+          "answer_text": "He is happier and more active."
+        }
+      ]
+    },
+    {
+      "code": "g9u4.l.05",
+      "title": "九年级 U4 听力·短文 Life in the Old Days",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "When I was a child, life used to be very different. We didn't use to have televisions or mobile phones. In the evenings, my family used to sit together and tell stories. We used to grow our own vegetables in the garden. There used to be a big tree in front of our house, and I would climb it every day. School was far away, so we used to walk for an hour to get there. Things were harder then, but we were close to nature and to each other. I sometimes miss those simple days."
+      ],
+      "translation_cn": "我小时候,生活和现在很不一样。我们以前没有电视和手机。晚上,一家人会坐在一起讲故事。我们以前自己在园子里种菜。我家门前以前有棵大树,我每天都爬。学校很远,所以我们以前要走一小时去上学。那时生活更艰苦,但我们亲近自然、彼此亲密。我有时会怀念那些简单的日子。",
+      "questions": [
+        {
+          "qid": "g9u4.l.05.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.05",
+          "stem": "What did the speaker's family NOT use to have?",
+          "options": [
+            "A house.",
+            "Televisions or mobile phones.",
+            "A garden.",
+            "A big tree."
+          ],
+          "answer_index": 1,
+          "answer_text": "Televisions or mobile phones."
+        },
+        {
+          "qid": "g9u4.l.05.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.05",
+          "stem": "What did the family use to do in the evenings?",
+          "options": [
+            "Play games.",
+            "Go shopping.",
+            "Watch TV.",
+            "Sit together and tell stories."
+          ],
+          "answer_index": 3,
+          "answer_text": "Sit together and tell stories."
+        },
+        {
+          "qid": "g9u4.l.05.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.05",
+          "stem": "What used to be in front of their house?",
+          "options": [
+            "A big tree.",
+            "A river.",
+            "A garden.",
+            "A small shop."
+          ],
+          "answer_index": 0,
+          "answer_text": "A big tree."
+        },
+        {
+          "qid": "g9u4.l.05.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.05",
+          "stem": "How did they use to get to school?",
+          "options": [
+            "Drive a car.",
+            "Walk for an hour.",
+            "Ride a bike.",
+            "Take a bus."
+          ],
+          "answer_index": 1,
+          "answer_text": "Walk for an hour."
+        },
+        {
+          "qid": "g9u4.l.05.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.05",
+          "stem": "How does the speaker feel about the past?",
+          "options": [
+            "She felt bored.",
+            "She is glad they ended.",
+            "She misses those simple days.",
+            "She has no feeling."
+          ],
+          "answer_index": 2,
+          "answer_text": "She misses those simple days."
+        }
+      ]
+    },
+    {
+      "code": "g9u4.l.06",
+      "title": "九年级 U4 听力·对话 Sharing How We Have Changed",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Teacher: Today, let's share how we have changed. Tony, would you like to start?",
+        "Tony: Sure. I used to be very lazy. I never did my homework on time.",
+        "Teacher: And now?",
+        "Tony: Now I finish it every day. My new habit started when I made a study plan.",
+        "Teacher: Well done! Anyone else? Grace?",
+        "Grace: I used to be afraid of math. But my friend helped me practice, and now it's my favorite subject.",
+        "Teacher: That's wonderful. You see, everyone can change for the better."
+      ],
+      "translation_cn": "老师:今天我们来分享自己的变化。Tony,你先来好吗?\nTony:好的。我以前很懒,从不按时做作业。\n老师:那现在呢?\nTony:现在我每天都完成。我的新习惯是从制定学习计划开始的。\n老师:做得好!还有人吗?Grace?\nGrace:我以前怕数学。但我朋友帮我练习,现在它是我最喜欢的科目。\n老师:太棒了。你们看,每个人都能变得更好。",
+      "questions": [
+        {
+          "qid": "g9u4.l.06.q1",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.06",
+          "stem": "What did Tony use to be like?",
+          "options": [
+            "Very active.",
+            "Very lazy.",
+            "Very hard-working.",
+            "Very shy."
+          ],
+          "answer_index": 1,
+          "answer_text": "Very lazy."
+        },
+        {
+          "qid": "g9u4.l.06.q2",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.06",
+          "stem": "What helped Tony change?",
+          "options": [
+            "Making a study plan.",
+            "Getting a tutor.",
+            "Joining a club.",
+            "Moving house."
+          ],
+          "answer_index": 0,
+          "answer_text": "Making a study plan."
+        },
+        {
+          "qid": "g9u4.l.06.q3",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.06",
+          "stem": "What did Grace use to be afraid of?",
+          "options": [
+            "Speaking.",
+            "The dark.",
+            "Math.",
+            "English."
+          ],
+          "answer_index": 2,
+          "answer_text": "Math."
+        },
+        {
+          "qid": "g9u4.l.06.q4",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.06",
+          "stem": "How did Grace overcome her fear?",
+          "options": [
+            "She asked the teacher.",
+            "She gave up.",
+            "She changed schools.",
+            "Her friend helped her practice."
+          ],
+          "answer_index": 3,
+          "answer_text": "Her friend helped her practice."
+        },
+        {
+          "qid": "g9u4.l.06.q5",
+          "volume": "g9",
+          "unit": "U4",
+          "code": "g9u4.l.06",
+          "stem": "What is the teacher's conclusion?",
+          "options": [
+            "Everyone can change for the better.",
+            "Homework is boring.",
+            "Plans never work.",
+            "Math is hard."
+          ],
+          "answer_index": 0,
+          "answer_text": "Everyone can change for the better."
+        }
+      ]
+    }
+  ]
+}

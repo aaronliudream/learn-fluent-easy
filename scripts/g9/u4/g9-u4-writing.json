@@ -1,0 +1,34 @@
+{
+  "volume": "g9",
+  "unit": "U4",
+  "writing": {
+    "volume": "g9",
+    "unit": "U4",
+    "code": "g9u4.w.01",
+    "type": "guided_writing",
+    "title": "How I Have Changed",
+    "genre": "记叙短文 (narrative paragraph)",
+    "prompt_cn": "每个人都在成长中改变。请以 \"How I Have Changed\" 为题,写一篇约80词的短文,描述你和过去相比的变化。",
+    "key_points": [
+      "你过去是什么样(外貌/性格/习惯,至少两点,用 used to)",
+      "你现在是什么样",
+      "是什么让你改变的",
+      "你对这个变化的感受"
+    ],
+    "useful_expressions": [
+      "I used to be / used to + 动词原形",
+      "I didn't use to ...",
+      "but now ...",
+      "... helped me change",
+      "I'm happy that I have changed"
+    ],
+    "sample": "I have changed a lot in the past few years. I used to be a short and shy boy. I didn't use to talk to new people, and I was even afraid of speaking in class. But now I am taller and much more confident. Joining the school basketball team helped me change. I made many friends and learned to believe in myself. I'm really happy that I am not the shy child I used to be.",
+    "sample_cn": "在过去几年里我变化很大。我以前是个又矮又害羞的男孩,以前不跟陌生人说话,甚至害怕在课上发言。但现在我长高了,也自信多了。参加学校篮球队帮我改变。我交了很多朋友,学会了相信自己。我很高兴自己不再是从前那个害羞的孩子。",
+    "scoring": {
+      "content": "涵盖4个要点(过去样子≥2点/现在/原因/感受)",
+      "language": "正确使用 used to / didn't use to;时态过去与现在对比清晰",
+      "structure": "条理清晰、句子连贯",
+      "wordcount": "约80词"
+    }
+  }
+}

@@ -1,0 +1,1014 @@
+{
+  "volume": "g9",
+  "unit": "U3",
+  "passages": [
+    {
+      "code": "g9u3.c.01",
+      "title": "Lost in a New City",
+      "scene": "新城迷路问路",
+      "body": "Last week, I traveled to a new city by myself. After I left the station, I soon got (1)____. All the streets looked the same. I wanted to ask for help, but I was a little (2)____ at first. Finally, I saw a kind-looking woman and walked up to her. \"Excuse me,\" I said (3)____, \"could you please tell me how I can get to the Grand Hotel?\" She smiled and (4)____ me the way. \"Go straight and turn (5)____ at the second corner,\" she said. I (6)____ her and followed her directions. Soon I found the hotel. I learned that being (7)____ when you ask makes people happy to help. A simple \"Excuse me\" and \"Thank you\" can (8)____ a big difference. Now I am never (9)____ to ask for directions, because most people are (10)____ to help a polite stranger.",
+      "questions": [
+        {
+          "qid": "g9u3.c.01.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 1,
+          "options": [
+            "tired",
+            "lost",
+            "hungry",
+            "late"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "迷路 got lost"
+        },
+        {
+          "qid": "g9u3.c.01.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 2,
+          "options": [
+            "happy",
+            "proud",
+            "shy",
+            "angry"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "一开始有点害羞 shy"
+        },
+        {
+          "qid": "g9u3.c.01.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 3,
+          "options": [
+            "politely",
+            "quickly",
+            "loudly",
+            "sadly"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "礼貌地说 politely"
+        },
+        {
+          "qid": "g9u3.c.01.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 4,
+          "options": [
+            "asked",
+            "gave",
+            "took",
+            "told"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "告诉我路 told me the way"
+        },
+        {
+          "qid": "g9u3.c.01.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 5,
+          "options": [
+            "out",
+            "left",
+            "up",
+            "off"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "左转 turn left"
+        },
+        {
+          "qid": "g9u3.c.01.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 6,
+          "options": [
+            "left",
+            "asked",
+            "followed",
+            "thanked"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "谢了她 thanked her"
+        },
+        {
+          "qid": "g9u3.c.01.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 7,
+          "options": [
+            "polite",
+            "rude",
+            "quiet",
+            "busy"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "礼貌 being polite"
+        },
+        {
+          "qid": "g9u3.c.01.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 8,
+          "options": [
+            "have",
+            "do",
+            "make",
+            "take"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "产生不同 make a difference"
+        },
+        {
+          "qid": "g9u3.c.01.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 9,
+          "options": [
+            "afraid",
+            "glad",
+            "ready",
+            "sure"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "不再害怕 never afraid"
+        },
+        {
+          "qid": "g9u3.c.01.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.01",
+          "blank": 10,
+          "options": [
+            "sorry",
+            "glad",
+            "busy",
+            "tired"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "乐意帮忙 glad to help"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.c.02",
+      "title": "A Helpful Travel Tip",
+      "scene": "旅游求助小贴士",
+      "body": "When you travel to a foreign country, it is important to know how to ask for help (1)____. In many places, people may not speak your (2)____. So a polite smile and a few simple words can (3)____ a lot. Instead of saying \"Where is the bank?\", it is (4)____ to say \"Excuse me, could you please tell me where the bank is?\" This kind of question shows (5)____. Most people are happy to (6)____ a polite visitor. If you do not understand the (7)____, you can ask the person to say it again slowly. Remember to (8)____ them afterwards. Being polite does not (9)____ much time, but it can make your trip much more (10)____. Good manners are welcome everywhere in the world.",
+      "questions": [
+        {
+          "qid": "g9u3.c.02.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 1,
+          "options": [
+            "sadly",
+            "politely",
+            "loudly",
+            "quickly"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "礼貌地求助 politely"
+        },
+        {
+          "qid": "g9u3.c.02.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 2,
+          "options": [
+            "money",
+            "language",
+            "food",
+            "name"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "语言 not speak your language"
+        },
+        {
+          "qid": "g9u3.c.02.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 3,
+          "options": [
+            "lose",
+            "take",
+            "cost",
+            "mean"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "礼貌能意味很多 can mean a lot"
+        },
+        {
+          "qid": "g9u3.c.02.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 4,
+          "options": [
+            "worse",
+            "harder",
+            "better",
+            "easier"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "更好 it is better to say"
+        },
+        {
+          "qid": "g9u3.c.02.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 5,
+          "options": [
+            "respect",
+            "money",
+            "fear",
+            "anger"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "显示尊重 shows respect"
+        },
+        {
+          "qid": "g9u3.c.02.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 6,
+          "options": [
+            "sell",
+            "leave",
+            "help",
+            "stop"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "乐意帮助 happy to help"
+        },
+        {
+          "qid": "g9u3.c.02.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 7,
+          "options": [
+            "photos",
+            "directions",
+            "prices",
+            "tickets"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "听不懂方向 the directions"
+        },
+        {
+          "qid": "g9u3.c.02.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 8,
+          "options": [
+            "ask",
+            "watch",
+            "call",
+            "thank"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "记得感谢 thank them"
+        },
+        {
+          "qid": "g9u3.c.02.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 9,
+          "options": [
+            "take",
+            "keep",
+            "do",
+            "make"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "不花太多时间 take much time"
+        },
+        {
+          "qid": "g9u3.c.02.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.02",
+          "blank": 10,
+          "options": [
+            "pleasant",
+            "difficult",
+            "boring",
+            "strange"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "更愉快 pleasant"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.c.03",
+      "title": "The Polite Way",
+      "scene": "礼貌的重要",
+      "body": "My grandmother always tells me that good (1)____ open many doors. When I was young, I used to ask questions in a (2)____ way. For example, I would say \"Give me water!\" instead of asking (3)____. One day, my grandmother taught me a lesson. She said, \"If you want people to (4)____ you, you must ask kindly.\" From then on, I (5)____ to use polite words like \"please\" and \"thank you\". I noticed that people became much (6)____ to me. My teachers smiled more, and my friends were happy to (7)____ me. Being polite did not (8)____ anything, but it changed how people (9)____ me. Now I understand that a few kind words can make the world a (10)____ place. My grandmother was right all along.",
+      "questions": [
+        {
+          "qid": "g9u3.c.03.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 1,
+          "options": [
+            "grades",
+            "manners",
+            "games",
+            "clothes"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "好的礼貌 good manners"
+        },
+        {
+          "qid": "g9u3.c.03.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 2,
+          "options": [
+            "funny",
+            "rude",
+            "kind",
+            "quiet"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "粗鲁的方式 rude way"
+        },
+        {
+          "qid": "g9u3.c.03.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 3,
+          "options": [
+            "politely",
+            "loudly",
+            "slowly",
+            "sadly"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "礼貌地问 asking politely"
+        },
+        {
+          "qid": "g9u3.c.03.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 4,
+          "options": [
+            "respect",
+            "watch",
+            "stop",
+            "leave"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "想让别人尊重你 respect you"
+        },
+        {
+          "qid": "g9u3.c.03.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 5,
+          "options": [
+            "failed",
+            "learned",
+            "forgot",
+            "refused"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "学会用礼貌词 learned to use"
+        },
+        {
+          "qid": "g9u3.c.03.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 6,
+          "options": [
+            "angrier",
+            "quieter",
+            "friendlier",
+            "busier"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "对我更友好 friendlier"
+        },
+        {
+          "qid": "g9u3.c.03.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 7,
+          "options": [
+            "stop",
+            "leave",
+            "fight",
+            "help"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "乐意帮我 happy to help"
+        },
+        {
+          "qid": "g9u3.c.03.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 8,
+          "options": [
+            "keep",
+            "take",
+            "make",
+            "cost"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "不花费任何 didn't cost anything"
+        },
+        {
+          "qid": "g9u3.c.03.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 9,
+          "options": [
+            "treated",
+            "left",
+            "called",
+            "forgot"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "别人如何待我 treated me"
+        },
+        {
+          "qid": "g9u3.c.03.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.03",
+          "blank": 10,
+          "options": [
+            "worse",
+            "smaller",
+            "better",
+            "colder"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "更美好的世界 better place"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.c.04",
+      "title": "At the Train Station",
+      "scene": "火车站问询",
+      "body": "Tom arrived at the train station, but he could not (1)____ the right platform. He felt a little worried because his train would (2)____ in twenty minutes. He looked around and saw a station worker. Tom walked over and asked (3)____, \"Excuse me, could you please tell me (4)____ platform I should go to?\" The worker pointed to the (5)____ and said, \"Go up the stairs and turn right. It's at the (6)____ of the hall.\" Tom (7)____ him and hurried there. On the way, he also wanted to know (8)____ he could buy some water. A kind passenger showed him a small (9)____ near the platform. Thanks to these helpful people, Tom (10)____ his train just in time. He was very grateful for their kindness.",
+      "questions": [
+        {
+          "qid": "g9u3.c.04.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 1,
+          "options": [
+            "make",
+            "take",
+            "find",
+            "buy"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "找不到站台 find the platform"
+        },
+        {
+          "qid": "g9u3.c.04.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 2,
+          "options": [
+            "leave",
+            "stay",
+            "open",
+            "stop"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "火车将离开 train would leave"
+        },
+        {
+          "qid": "g9u3.c.04.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 3,
+          "options": [
+            "angrily",
+            "politely",
+            "quickly",
+            "loudly"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "礼貌地问 asked politely"
+        },
+        {
+          "qid": "g9u3.c.04.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 4,
+          "options": [
+            "why",
+            "which",
+            "that",
+            "how"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "问哪个站台 which platform(后接名词只能which)"
+        },
+        {
+          "qid": "g9u3.c.04.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 5,
+          "options": [
+            "stairs",
+            "tree",
+            "door",
+            "window"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "指向楼梯 pointed to the stairs"
+        },
+        {
+          "qid": "g9u3.c.04.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 6,
+          "options": [
+            "start",
+            "top",
+            "side",
+            "end"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "大厅尽头 at the end"
+        },
+        {
+          "qid": "g9u3.c.04.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 7,
+          "options": [
+            "asked",
+            "left",
+            "thanked",
+            "called"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "谢了他 thanked him"
+        },
+        {
+          "qid": "g9u3.c.04.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 8,
+          "options": [
+            "why",
+            "that",
+            "when",
+            "where"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "在哪买水 where he could buy"
+        },
+        {
+          "qid": "g9u3.c.04.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 9,
+          "options": [
+            "shop",
+            "park",
+            "bank",
+            "school"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "小商店 a small shop"
+        },
+        {
+          "qid": "g9u3.c.04.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.04",
+          "blank": 10,
+          "options": [
+            "lost",
+            "caught",
+            "sold",
+            "missed"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "正好赶上火车 caught his train"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.c.05",
+      "title": "Helping a Visitor",
+      "scene": "帮助外地访客",
+      "body": "One afternoon, I was walking home when a (1)____ stopped me. He looked confused and was holding a (2)____. \"Excuse me,\" he said politely, \"do you know (3)____ I can find the City Museum?\" I was happy to (4)____ him. \"It's not far,\" I said. \"Go (5)____ this road and turn left at the bank.\" He thanked me, but he still looked (6)____. So I decided to (7)____ him there myself. As we walked, we talked about his (8)____ to our city. He told me he was from another country and loved Chinese (9)____. When we arrived, he shook my hand and thanked me warmly. Helping him made me feel (10)____. A small kind act can brighten someone's whole day.",
+      "questions": [
+        {
+          "qid": "g9u3.c.05.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 1,
+          "options": [
+            "driver",
+            "friend",
+            "teacher",
+            "stranger"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "陌生人 a stranger"
+        },
+        {
+          "qid": "g9u3.c.05.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 2,
+          "options": [
+            "map",
+            "book",
+            "phone",
+            "bag"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "拿着地图 holding a map"
+        },
+        {
+          "qid": "g9u3.c.05.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 3,
+          "options": [
+            "that",
+            "where",
+            "when",
+            "why"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "问博物馆在哪 where I can find"
+        },
+        {
+          "qid": "g9u3.c.05.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 4,
+          "options": [
+            "leave",
+            "stop",
+            "help",
+            "watch"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "乐意帮他 help him"
+        },
+        {
+          "qid": "g9u3.c.05.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 5,
+          "options": [
+            "off",
+            "along",
+            "up",
+            "out"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "沿这条路 go along this road"
+        },
+        {
+          "qid": "g9u3.c.05.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 6,
+          "options": [
+            "angry",
+            "tired",
+            "happy",
+            "confused"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "仍然困惑 still looked confused"
+        },
+        {
+          "qid": "g9u3.c.05.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 7,
+          "options": [
+            "buy",
+            "sell",
+            "take",
+            "make"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "带他去 take him there"
+        },
+        {
+          "qid": "g9u3.c.05.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 8,
+          "options": [
+            "trip",
+            "plan",
+            "photo",
+            "book"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "他的旅行 his trip"
+        },
+        {
+          "qid": "g9u3.c.05.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 9,
+          "options": [
+            "food",
+            "weather",
+            "money",
+            "homework"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "喜欢中国美食 Chinese food"
+        },
+        {
+          "qid": "g9u3.c.05.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.05",
+          "blank": 10,
+          "options": [
+            "tired",
+            "happy",
+            "bored",
+            "sorry"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "感到开心 feel happy"
+        }
+      ]
+    },
+    {
+      "code": "g9u3.c.06",
+      "title": "Good Manners Around the World",
+      "scene": "世界各地的礼貌",
+      "body": "Good manners are important everywhere, but they can be a little (1)____ in different countries. In most places, however, being polite when you ask for (2)____ is always welcome. For example, starting with \"Excuse me\" is a (3)____ way to get someone's attention. In some countries, people speak in a very (4)____ and indirect way to be polite. In others, people are more direct but still (5)____. No matter where you are, a (6)____ and a \"thank you\" are understood by everyone. When you visit a new place, it is (7)____ to learn a few polite words in the local language. This shows that you (8)____ the local culture. People will be more willing to (9)____ you if you make an effort. In the end, kindness and respect are a (10)____ that everyone understands.",
+      "questions": [
+        {
+          "qid": "g9u3.c.06.q1",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 1,
+          "options": [
+            "different",
+            "hard",
+            "easy",
+            "same"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "有点不同 a little different"
+        },
+        {
+          "qid": "g9u3.c.06.q2",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 2,
+          "options": [
+            "food",
+            "directions",
+            "money",
+            "time"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "问路时 ask for directions"
+        },
+        {
+          "qid": "g9u3.c.06.q3",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 3,
+          "options": [
+            "slow",
+            "good",
+            "strange",
+            "bad"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "好方法 a good way"
+        },
+        {
+          "qid": "g9u3.c.06.q4",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 4,
+          "options": [
+            "soft",
+            "fast",
+            "short",
+            "loud"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "温和的方式 soft and indirect"
+        },
+        {
+          "qid": "g9u3.c.06.q5",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 5,
+          "options": [
+            "sad",
+            "rude",
+            "lazy",
+            "friendly"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "仍然友好 still friendly"
+        },
+        {
+          "qid": "g9u3.c.06.q6",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 6,
+          "options": [
+            "ticket",
+            "smile",
+            "map",
+            "key"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "微笑 a smile"
+        },
+        {
+          "qid": "g9u3.c.06.q7",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 7,
+          "options": [
+            "hard",
+            "boring",
+            "helpful",
+            "useless"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "学几句很有用 helpful"
+        },
+        {
+          "qid": "g9u3.c.06.q8",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 8,
+          "options": [
+            "leave",
+            "sell",
+            "respect",
+            "forget"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "尊重当地文化 respect the culture"
+        },
+        {
+          "qid": "g9u3.c.06.q9",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 9,
+          "options": [
+            "fight",
+            "leave",
+            "stop",
+            "help"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "更愿意帮你 help you"
+        },
+        {
+          "qid": "g9u3.c.06.q10",
+          "volume": "g9",
+          "unit": "U3",
+          "code": "g9u3.c.06",
+          "blank": 10,
+          "options": [
+            "language",
+            "game",
+            "story",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "通用的语言 a language everyone understands"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "volume": "g9",
+  "unit": "U3",
+  "writing": {
+    "volume": "g9",
+    "unit": "U3",
+    "code": "g9u3.w.01",
+    "type": "practical_writing",
+    "title": "A Guide for My Foreign Friend",
+    "genre": "应用文/邮件 (email)",
+    "prompt_cn": "你的外国朋友 David 下个月要来你的城市旅游,想去市图书馆(City Library)但不知道怎么走。请写一封约80词的邮件,告诉他怎么去、可以怎样礼貌地问路,并表示欢迎。",
+    "key_points": [
+      "欢迎David来访",
+      "市图书馆的位置/怎么从火车站去(公交或步行)",
+      "教他礼貌问路的句型(Excuse me / Could you please tell me...?)",
+      "迷路时怎么办(找路标或礼貌问当地人)"
+    ],
+    "useful_expressions": [
+      "I'm glad you'll visit...",
+      "Excuse me, could you please tell me...?",
+      "Go straight / turn left / It's next to...",
+      "If you get lost, don't worry...",
+      "Welcome to my city!"
+    ],
+    "sample": "Hi David,\nI'm glad you'll visit my city next month. The City Library isn't far from the train station. You can take Bus No. 8, or walk there in about fifteen minutes. If you need help, just ask politely. You can say, \"Excuse me, could you please tell me how I can get to the City Library?\" If you get lost, don't worry — look for road signs or kindly ask a local person. People here are very friendly. Welcome to my city!\nBest,\nLi Hua",
+    "sample_cn": "嗨,David:\n很高兴你下个月要来我的城市。市图书馆离火车站不远。你可以坐8路公交,或者步行大约十五分钟。如果需要帮助,礼貌地问就好。你可以说:\"打扰一下,请问怎么去市图书馆?\"如果迷路了,别担心——找路标或礼貌地问当地人。这里的人很友好。欢迎来我的城市!\n此致,\n李华",
+    "scoring": {
+      "content": "涵盖4要点(欢迎/位置怎么去/礼貌问路句型/迷路怎么办)",
+      "language": "正确使用礼貌问路句型 Could you please…?；指路表达 go straight/turn left/next to",
+      "structure": "邮件格式齐(称呼+正文+落款)、条理清晰",
+      "wordcount": "约80词"
+    }
+  }
+}

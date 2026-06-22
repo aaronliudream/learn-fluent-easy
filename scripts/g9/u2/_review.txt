@@ -1,0 +1,217 @@
+﻿===== 去重表(阅读6+完形6+听力6=18,情境互不重复)=====
+-- 阅读 --
+  g9u2.rd1: [中秋·说明]月饼/满月/团圆  《The Mid-Autumn Festival》
+  g9u2.rd2: [春节·记叙]Tom在乡村过第一个春节  《Tom's First Spring Festival》
+  g9u2.rd3: [春节vs圣诞·对比]异同  《Spring Festival and Christmas》
+  g9u2.rd4: [端午·书信]李华邀Jack看龙舟  《An Invitation to the Dragon Boat Festival》
+  g9u2.rd5: [通用·议论]传统节日为何重要  《Why Festivals Still Matter》
+  g9u2.rd6: [泼水节·应用]傣族/泰国  《The Water Festival》
+-- 完形 --
+  g9u2.cz1: 灯节(灯谜/汤圆)  《The Lantern Festival》
+  g9u2.cz2: 在美国寄宿家庭过感恩节  《My First Thanksgiving》
+  g9u2.cz3: 学校国际文化节  《Our Culture Festival》
+  g9u2.cz4: 圣诞节早晨拆礼物  《A Christmas Morning》
+  g9u2.cz5: 在加拿大第一次过万圣节  《My First Halloween》
+  g9u2.cz6: 中秋团圆饭赏月  《A Mid-Autumn Reunion》
+-- 听力 --
+  g9u2.ls1: 约看龙舟赛  《九年级 U2 听力·对话 Watching the Dragon Boat Races》
+  g9u2.ls2: 我家怎么过春节  《九年级 U2 听力·短文 How My Family Celebrates Spring Festival》
+  g9u2.ls3: 外国学生问中秋  《九年级 U2 听力·对话 Asking about the Mid-Autumn Festival》
+  g9u2.ls4: 我的泼水节一天  《九年级 U2 听力·短文 My Water Festival Day》
+  g9u2.ls5: 聊各自最爱的节日  《九年级 U2 听力·对话 Our Favourite Festivals》
+  g9u2.ls6: 和奶奶包粽子  《九年级 U2 听力·短文 Making Zongzi with Grandma》
+
+===== QC =====
+  阅读 6篇/30题 A/B/C/D=10/7/5/8
+  完形 6篇/60空 A/B/C/D=12/17/18/13
+  听力 6篇/30题 A/B/C/D=8/6/7/9
+  qid去重 120/120 | 选项/答案失败 0 []
+
+############### 完形全文 ###############
+
+===== g9u2.cz1 《The Lantern Festival》(10空) =====
+The Lantern Festival comes on the fifteenth day of the first lunar (1)____, two weeks after Spring Festival. It marks the (2)____ of the New Year celebrations. On this night, the streets are full of beautiful (3)____ in many shapes and colours. Children carry small ones and walk (4)____ the streets happily. Many lanterns have riddles on them, and people try to (5)____ the answers. Families also eat tangyuan, sweet rice (6)____ that are round and soft. The round shape (7)____ family reunion, just like the full moon. Long ago, people lit lanterns to (8)____ for good luck. Today the festival is still very (9)____, and parks hold big lantern shows. It is a (10)____ end to the Spring Festival holiday.
+  (1) A.week  B.day  C.year  D.month  →D(month) | first lunar month 正月
+  (2) A.start  B.middle  C.end  D.top  →C(end) | marks the end 标志结束
+  (3) A.books  B.cars  C.lanterns  D.trees  →C(lanterns) | 灯笼
+  (4) A.under  B.along  C.into  D.off  →B(along) | walk along the streets 沿街
+  (5) A.throw  B.lose  C.guess  D.cut  →C(guess) | guess the answers 猜谜底
+  (6) A.cards  B.boxes  C.leaves  D.balls  →D(balls) | rice balls 汤圆
+  (7) A.asks  B.stops  C.means  D.leaves  →C(means) | 圆形象征团圆
+  (8) A.hope  B.hate  C.fear  D.fail  →A(hope) | to hope for good luck 祈求好运
+  (9) A.empty  B.silent  C.popular  D.quiet  →C(popular) | 仍很受欢迎
+  (10) A.boring  B.scary  C.happy  D.terrible  →C(happy) | 欢乐的结尾
+
+===== g9u2.cz2 《My First Thanksgiving》(10空) =====
+Last November, I stayed with a host (1)____ in the United States and had my first Thanksgiving. Thanksgiving is an important American (2)____. On that day, families get (3)____ to give thanks for the good things in their life. My host mother (4)____ a big dinner. The main dish was a large (5)____, and there were also potatoes and pumpkin pie. Before we (6)____, everyone said what they were thankful (7)____. I said I was thankful for my new friends. The food was (8)____, and I ate too much! After dinner, we (9)____ games and talked for hours. It was a warm evening, and I will never (10)____ my first Thanksgiving.
+  (1) A.school  B.family  C.shop  D.team  →B(family) | host family 寄宿家庭
+  (2) A.lesson  B.festival  C.game  D.sport  →B(festival) | 美国重要节日
+  (3) A.away  B.lost  C.together  D.angry  →C(together) | get together 团聚
+  (4) A.cooked  B.washed  C.sold  D.broke  →A(cooked) | cook dinner 做饭
+  (5) A.fish  B.cake  C.soup  D.turkey  →D(turkey) | 火鸡是主菜
+  (6) A.slept  B.ran  C.ate  D.left  →C(ate) | before we ate 吃饭前
+  (7) A.at  B.in  C.for  D.on  →C(for) | thankful for 感激
+  (8) A.terrible  B.ugly  C.delicious  D.empty  →C(delicious) | 食物美味
+  (9) A.lost  B.played  C.missed  D.stopped  →B(played) | play games 玩游戏
+  (10) A.clean  B.sell  C.miss  D.forget  →D(forget) | never forget 永不忘
+
+===== g9u2.cz3 《Our Culture Festival》(10空) =====
+Last Friday, our school held an International Culture (1)____. Each class showed the festivals of a different (2)____. My class chose China. We made paper (3)____ and wrote Spring Festival couplets. The students in Class Two showed Christmas, with a big green (4)____ and small gifts. Another class (5)____ everyone an Indian dance. The hall was full of music, colour and (6)____ food from around the world. I (7)____ a sweet rice cake from the Japan booth — it was new to me but very nice. Through the festival, we (8)____ a lot about other cultures. We also felt (9)____ of our own traditions. Everyone agreed it was the best school (10)____ of the year.
+  (1) A.lesson  B.Festival  C.exam  D.match  →B(Festival) | 文化节
+  (2) A.country  B.school  C.family  D.year  →A(country) | 不同国家
+  (3) A.cars  B.boats  C.lanterns  D.planes  →C(lanterns) | 纸灯笼
+  (4) A.box  B.tree  C.bell  D.star  →B(tree) | Christmas tree 圣诞树
+  (5) A.sold  B.bought  C.taught  D.threw  →C(taught) | teach a dance 教舞蹈
+  (6) A.ugly  B.tasty  C.empty  D.silent  →B(tasty) | 美味的食物
+  (7) A.threw  B.lost  C.tried  D.broke  →C(tried) | try food 品尝
+  (8) A.learned  B.forgot  C.lost  D.missed  →A(learned) | learn about 了解
+  (9) A.afraid  B.proud  C.tired  D.bored  →B(proud) | proud of 自豪
+  (10) A.exam  B.event  C.rule  D.problem  →B(event) | 最棒的活动
+
+===== g9u2.cz4 《A Christmas Morning》(10空) =====
+On Christmas (1)____, my sister and I woke up very early. We ran to the living room and saw a big Christmas (2)____ with colourful lights. Under it, there were many (3)____ wrapped in shiny paper. We could not (4)____ to open them! I got a new book, and my sister got a beautiful (5)____. We said "Thank you" to our parents and gave them our cards. Then the whole family had a big (6)____ together. My mother had cooked a turkey, and the kitchen smelled (7)____. After lunch, we sang Christmas (8)____ and called our grandparents to say "(9)____ Christmas". It was a warm and (10)____ day that I will always remember.
+  (1) A.night  B.morning  C.week  D.year  →B(morning) | 圣诞节早晨
+  (2) A.box  B.car  C.wall  D.tree  →D(tree) | 圣诞树
+  (3) A.problems  B.lessons  C.presents  D.rules  →C(presents) | 礼物
+  (4) A.run  B.sleep  C.wait  D.cry  →C(wait) | could not wait 迫不及待
+  (5) A.knife  B.stone  C.brick  D.doll  →D(doll) | 洋娃娃
+  (6) A.game  B.meal  C.test  D.trip  →B(meal) | a big meal 大餐
+  (7) A.terrible  B.empty  C.silent  D.wonderful  →D(wonderful) | smell wonderful 香
+  (8) A.songs  B.books  C.games  D.cards  →A(songs) | Christmas songs 圣诞歌
+  (9) A.Merry  B.sad  C.angry  D.late  →A(Merry) | Merry Christmas 圣诞快乐
+  (10) A.boring  B.happy  C.scary  D.sad  →B(happy) | 温暖快乐的一天
+
+===== g9u2.cz5 《My First Halloween》(10空) =====
+When I was studying in Canada, I (1)____ my first Halloween on October 31st. In the afternoon, my friends and I made lanterns from big orange (2)____. We cut funny faces on them and put a light (3)____. In the evening, we put on scary (4)____. I dressed up as a black cat! Then we went from house to (5)____ in our neighbourhood. At each door, we said "Trick or (6)____!" and people gave us sweets. Soon my bag was (7)____ of candy. Some houses looked really (8)____, with fake spiders and ghosts. At first I was a little (9)____, but it was actually great fun. Halloween is a (10)____ festival, and I enjoyed every minute of it.
+  (1) A.lost  B.missed  C.sold  D.celebrated  →D(celebrated) | 过节
+  (2) A.apples  B.pumpkins  C.oranges  D.potatoes  →B(pumpkins) | 南瓜
+  (3) A.outside  B.away  C.off  D.inside  →D(inside) | put a light inside 里面放灯
+  (4) A.costumes  B.books  C.songs  D.games  →A(costumes) | scary costumes 吓人服装
+  (5) A.school  B.house  C.river  D.hill  →B(house) | house to house 挨家挨户
+  (6) A.treat  B.trip  C.team  D.test  →A(treat) | Trick or treat 不给糖就捣蛋
+  (7) A.free  B.short  C.late  D.full  →D(full) | full of candy 装满糖
+  (8) A.scary  B.lovely  C.quiet  D.empty  →A(scary) | 房子很吓人
+  (9) A.proud  B.tired  C.afraid  D.sure  →C(afraid) | 起初有点害怕
+  (10) A.boring  B.fun  C.sad  D.terrible  →B(fun) | 有趣的节日
+
+===== g9u2.cz6 《A Mid-Autumn Reunion》(10空) =====
+Every year on Mid-Autumn night, my family has a big reunion (1)____. This year my aunt came back from far away, so everyone was very (2)____. After dinner, we carried chairs into the (3)____ and sat under the night sky. The moon was round and (4)____, the brightest I had ever seen. We ate (5)____ together, and each one had a different filling. My grandfather told us the old (6)____ of Chang'e flying to the moon. My little cousin listened with wide (7)____. We also took many photos to (8)____ this happy moment. My mother said the round moon (9)____ that our family is always together, even when we are far (10)____. It was a perfect night.
+  (1) A.exam  B.dinner  C.game  D.trip  →B(dinner) | 团圆饭
+  (2) A.angry  B.tired  C.happy  D.sad  →C(happy) | 非常高兴
+  (3) A.river  B.school  C.shop  D.garden  →D(garden) | 院子里
+  (4) A.dark  B.bright  C.small  D.empty  →B(bright) | 又圆又亮
+  (5) A.mooncakes  B.dumplings  C.noodles  D.bread  →A(mooncakes) | 吃月饼
+  (6) A.song  B.game  C.rule  D.story  →D(story) | 嫦娥的故事
+  (7) A.ears  B.hands  C.eyes  D.feet  →C(eyes) | with wide eyes 睁大眼睛
+  (8) A.remember  B.forget  C.lose  D.sell  →A(remember) | to remember 记住此刻
+  (9) A.means  B.asks  C.stops  D.hopes  →A(means) | 圆月象征团圆
+  (10) A.ago  B.along  C.off  D.apart  →D(apart) | far apart 远隔
+
+############### 听力全文 ###############
+
+===== g9u2.ls1 《九年级 U2 听力·对话 Watching the Dragon Boat Races》[dialogue/long] =====
+  Mike: Anna, the Dragon Boat Festival is this Saturday. Do you want to watch the races with me?
+  Anna: Sure! I've never seen a dragon boat race before. Where are they?
+  Mike: By the river near the city park. They start at nine in the morning.
+  Anna: Great. Should we bring anything?
+  Mike: Yes, let's bring some zongzi to eat. My mum made a lot.
+  Anna: Yummy! How does a team win?
+  Mike: The fastest boat to the end wins. The drums help them row together.
+  Anna: Sounds exciting. Let's meet at the park gate at half past eight.
+译: Mike约Anna周六看龙舟赛;赛在城市公园旁的河上、上午九点开始;带Mike妈妈做的粽子;最快到终点的队获胜,鼓声帮助齐桨;约八点半在公园门口见。
+  Q1 When is the Dragon Boat Festival?
+     A.Next Sunday.  B.This Friday.  C.Next month.  D.This Saturday.  →D(This Saturday.)
+  Q2 Where are the races held?
+     A.At the school.  B.In the city square.  C.By the river near the city park.  D.On the lake in the mountains.  →C(By the river near the city park.)
+  Q3 What will they bring to eat?
+     A.Mooncakes.  B.Dumplings.  C.Zongzi.  D.Turkey.  →C(Zongzi.)
+  Q4 How does a team win the race?
+     A.It has the biggest boat.  B.It sings the loudest.  C.Its boat reaches the end fastest.  D.It has the most people.  →C(Its boat reaches the end fastest.)
+  Q5 When will they meet?
+     A.At nine at the river.  B.At eight at school.  C.At ten at the park.  D.At half past eight at the park gate.  →D(At half past eight at the park gate.)
+
+===== g9u2.ls2 《九年级 U2 听力·短文 How My Family Celebrates Spring Festival》[passage/short] =====
+  Spring Festival is my favourite time of the year. A few days before it, my family cleans the whole house to sweep away bad luck. We also put up red couplets on the door. On New Year's Eve, all my relatives come to my grandparents' home for a big dinner. We always eat dumplings and fish, because they bring good luck. After dinner, we watch the festival show on TV and wait for midnight. The best part for me is the red packets. My parents and grandparents give us money in red envelopes. The next day, we visit our relatives and say "Happy New Year".
+译: 春节是“我”最爱的节日。节前几天全家大扫除扫走霉运、贴红春联;除夕亲戚到爷爷奶奶家吃年夜饭,吃饺子和鱼(寓意好运);饭后看春晚守岁;最爱红包(长辈给压岁钱);第二天走亲戚拜年。
+  Q1 What does the family do a few days before Spring Festival?
+     A.Buy a new car.  B.Travel abroad.  C.Plant trees.  D.Clean the whole house.  →D(Clean the whole house.)
+  Q2 Where do the relatives gather on New Year's Eve?
+     A.At a restaurant.  B.At the grandparents' home.  C.At the speaker's school.  D.At the park.  →B(At the grandparents' home.)
+  Q3 What do they eat for good luck?
+     A.Turkey and pie.  B.Mooncakes.  C.Dumplings and fish.  D.Zongzi.  →C(Dumplings and fish.)
+  Q4 What is the speaker's favourite part?
+     A.The cleaning.  B.The red packets.  C.The TV show.  D.The couplets.  →B(The red packets.)
+  Q5 What do they do the next day?
+     A.Go back to school.  B.Clean again.  C.Visit relatives and say Happy New Year.  D.Watch races.  →C(Visit relatives and say Happy New Year.)
+
+===== g9u2.ls3 《九年级 U2 听力·对话 Asking about the Mid-Autumn Festival》[dialogue/long] =====
+  Sam: Hi, Mei. What festival is coming soon?
+  Mei: The Mid-Autumn Festival. It's next week.
+  Sam: I'm from Australia, so I don't know much about it. What do people do?
+  Mei: Families get together and look at the full moon. We also eat mooncakes.
+  Sam: Mooncakes? What are they like?
+  Mei: They're round cakes with sweet fillings, like nuts or red beans.
+  Sam: That sounds nice. Why do you look at the moon?
+  Mei: A round moon means the family is together. Would you like to join my family this year?
+  Sam: I'd love to. Thank you!
+译: Sam问梅快到什么节日;梅:下周中秋节。Sam来自澳大利亚不太了解;梅:家人团聚、赏满月、吃月饼;月饼是带坚果或红豆等甜馅的圆饼;圆月象征团圆;梅邀Sam今年加入她家,Sam欣然答应。
+  Q1 What festival is coming soon?
+     A.The Spring Festival.  B.Christmas.  C.The Mid-Autumn Festival.  D.Halloween.  →C(The Mid-Autumn Festival.)
+  Q2 Where is Sam from?
+     A.Australia.  B.Canada.  C.England.  D.America.  →A(Australia.)
+  Q3 What do families do on this festival?
+     A.Get together and look at the full moon.  B.Throw water at each other.  C.Watch boat races.  D.Make lanterns.  →A(Get together and look at the full moon.)
+  Q4 What is inside mooncakes?
+     A.Meat and salt.  B.Sweet fillings like nuts or red beans.  C.Rice and leaves.  D.Cheese and ham.  →B(Sweet fillings like nuts or red beans.)
+  Q5 What does Mei invite Sam to do?
+     A.Join her family.  B.Visit Australia.  C.Buy mooncakes.  D.Write a letter.  →A(Join her family.)
+
+===== g9u2.ls4 《九年级 U2 听力·短文 My Water Festival Day》[passage/short] =====
+  Last April, I visited Yunnan during the Water Festival of the Dai people. It was the most fun day of my trip. In the morning, everyone went into the streets carrying bowls and buckets of water. Then the water fight began! People threw water at each other and laughed. Soon I was wet from head to foot, but I didn't mind at all. The Dai people say that the water washes away bad luck and brings happiness. In the afternoon, we watched dragon boat races and saw beautiful dances. By evening, I was tired but very happy. I will never forget the day I got soaked at the Water Festival.
+译: 去年四月“我”在云南赶上傣族泼水节,是旅途中最开心的一天。早上人们提着碗和桶上街,泼水大战开始,互相泼水欢笑;很快全身湿透但毫不在意;傣族人说水能洗去霉运、带来幸福;下午看龙舟赛和舞蹈;傍晚虽累但很开心,永远忘不了被泼湿的这天。
+  Q1 Where did the speaker go?
+     A.Thailand.  B.Beijing.  C.London.  D.Yunnan.  →D(Yunnan.)
+  Q2 When was it?
+     A.Last December.  B.Last September.  C.Last June.  D.Last April.  →D(Last April.)
+  Q3 What did people throw at each other?
+     A.Flowers.  B.Water.  C.Sweets.  D.Paper.  →B(Water.)
+  Q4 What do the Dai people believe the water does?
+     A.Makes people rich.  B.Washes away bad luck and brings happiness.  C.Keeps people cool only.  D.Cleans the streets.  →B(Washes away bad luck and brings happiness.)
+  Q5 How did the speaker feel by evening?
+     A.Tired but very happy.  B.Angry and wet.  C.Bored and cold.  D.Sad and tired.  →A(Tired but very happy.)
+
+===== g9u2.ls5 《九年级 U2 听力·对话 Our Favourite Festivals》[dialogue/long] =====
+  Lily: What's your favourite festival, Ben?
+  Ben: I think Spring Festival is the best. I love the dumplings and the red packets.
+  Lily: Me too, but I also like the Mid-Autumn Festival.
+  Ben: Why is that?
+  Lily: Because I can eat mooncakes and look at the beautiful moon with my family.
+  Ben: That's nice. What about a festival from another country?
+  Lily: I'd like to try Christmas one day. I want to see a real Christmas tree.
+  Ben: I'd like to see Halloween. Wearing scary costumes looks fun!
+  Lily: Haha, you would make a great ghost!
+译: Lily问Ben最爱的节日;Ben:春节最好,爱饺子和红包;Lily也喜欢春节,还喜欢中秋(能和家人吃月饼赏月);谈到外国节日,Lily想体验圣诞看真圣诞树,Ben想看万圣节、觉得穿吓人服装好玩;Lily打趣他会是个好“鬼”。
+  Q1 What is Ben's favourite festival?
+     A.Spring Festival.  B.The Mid-Autumn Festival.  C.Christmas.  D.Halloween.  →A(Spring Festival.)
+  Q2 Why does Lily like the Mid-Autumn Festival?
+     A.She gets red packets.  B.She watches races.  C.She throws water.  D.She can eat mooncakes and look at the moon with family.  →D(She can eat mooncakes and look at the moon with family.)
+  Q3 Which foreign festival would Lily like to try?
+     A.Halloween.  B.Thanksgiving.  C.Christmas.  D.The Water Festival.  →C(Christmas.)
+  Q4 What does Ben want to see?
+     A.Halloween.  B.A dragon boat race.  C.A lantern show.  D.A Christmas tree.  →A(Halloween.)
+  Q5 Why does Ben like Halloween?
+     A.Wearing scary costumes looks fun.  B.He likes the food.  C.He likes the moon.  D.He likes red packets.  →A(Wearing scary costumes looks fun.)
+
+===== g9u2.ls6 《九年级 U2 听力·短文 Making Zongzi with Grandma》[passage/short] =====
+  Last year, before the Dragon Boat Festival, my grandma taught me how to make zongzi. First, we washed the green leaves and the sticky rice. Then Grandma showed me how to fold the leaves into a small cup. We put rice and a sweet red date inside, and tied it up with string. My first zongzi looked ugly, and the rice fell out! But Grandma was patient, and I tried again and again. By the end, I could make nice ones. When we ate them together, I felt very proud. Making zongzi with Grandma is my best festival memory, because I learned a skill and spent happy time with her.
+译: 去年端午前,奶奶教“我”包粽子。先洗粽叶和糯米;奶奶教把叶子折成小杯,放米和一颗甜红枣,用绳扎好;“我”第一个包得很丑、米还漏出来,但奶奶很耐心,反复练后能包好了;一起吃时很自豪。和奶奶包粽子是最美的节日记忆——学会一项技能又和她共度快乐时光。
+  Q1 Which festival was coming?
+     A.The Lantern Festival.  B.The Dragon Boat Festival.  C.Christmas.  D.The Water Festival.  →B(The Dragon Boat Festival.)
+  Q2 Who taught the speaker to make zongzi?
+     A.Mum.  B.A teacher.  C.A friend.  D.Grandma.  →D(Grandma.)
+  Q3 What did they put inside the zongzi?
+     A.Meat and salt.  B.Nuts and sugar.  C.Fish and leaves.  D.Rice and a sweet red date.  →D(Rice and a sweet red date.)
+  Q4 What happened to the first zongzi?
+     A.It was perfect.  B.It was too big.  C.It tasted salty.  D.It looked ugly and the rice fell out.  →D(It looked ugly and the rice fell out.)
+  Q5 Why is it the speaker's best festival memory?
+     A.She learned a skill and spent happy time with Grandma.  B.She won a prize.  C.She got money.  D.She went travelling.  →A(She learned a skill and spent happy time with Grandma.)

@@ -1,0 +1,557 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "exercises": [
+    {
+      "code": "g9u2.ls1",
+      "title": "九年级 U2 听力·对话 Watching the Dragon Boat Races",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Mike: Anna, the Dragon Boat Festival is this Saturday. Do you want to watch the races with me?",
+        "Anna: Sure! I've never seen a dragon boat race before. Where are they?",
+        "Mike: By the river near the city park. They start at nine in the morning.",
+        "Anna: Great. Should we bring anything?",
+        "Mike: Yes, let's bring some zongzi to eat. My mum made a lot.",
+        "Anna: Yummy! How does a team win?",
+        "Mike: The fastest boat to the end wins. The drums help them row together.",
+        "Anna: Sounds exciting. Let's meet at the park gate at half past eight."
+      ],
+      "translation_cn": "Mike约Anna周六看龙舟赛;赛在城市公园旁的河上、上午九点开始;带Mike妈妈做的粽子;最快到终点的队获胜,鼓声帮助齐桨;约八点半在公园门口见。",
+      "questions": [
+        {
+          "qid": "g9u2.ls1.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls1",
+          "stem": "When is the Dragon Boat Festival?",
+          "options": [
+            "Next Sunday.",
+            "This Friday.",
+            "Next month.",
+            "This Saturday."
+          ],
+          "answer_index": 3,
+          "answer_text": "This Saturday."
+        },
+        {
+          "qid": "g9u2.ls1.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls1",
+          "stem": "Where are the races held?",
+          "options": [
+            "At the school.",
+            "In the city square.",
+            "By the river near the city park.",
+            "On the lake in the mountains."
+          ],
+          "answer_index": 2,
+          "answer_text": "By the river near the city park."
+        },
+        {
+          "qid": "g9u2.ls1.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls1",
+          "stem": "What will they bring to eat?",
+          "options": [
+            "Mooncakes.",
+            "Dumplings.",
+            "Zongzi.",
+            "Turkey."
+          ],
+          "answer_index": 2,
+          "answer_text": "Zongzi."
+        },
+        {
+          "qid": "g9u2.ls1.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls1",
+          "stem": "How does a team win the race?",
+          "options": [
+            "It has the biggest boat.",
+            "It sings the loudest.",
+            "Its boat reaches the end fastest.",
+            "It has the most people."
+          ],
+          "answer_index": 2,
+          "answer_text": "Its boat reaches the end fastest."
+        },
+        {
+          "qid": "g9u2.ls1.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls1",
+          "stem": "When will they meet?",
+          "options": [
+            "At nine at the river.",
+            "At eight at school.",
+            "At ten at the park.",
+            "At half past eight at the park gate."
+          ],
+          "answer_index": 3,
+          "answer_text": "At half past eight at the park gate."
+        }
+      ]
+    },
+    {
+      "code": "g9u2.ls2",
+      "title": "九年级 U2 听力·短文 How My Family Celebrates Spring Festival",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Spring Festival is my favourite time of the year. A few days before it, my family cleans the whole house to sweep away bad luck. We also put up red couplets on the door. On New Year's Eve, all my relatives come to my grandparents' home for a big dinner. We always eat dumplings and fish, because they bring good luck. After dinner, we watch the festival show on TV and wait for midnight. The best part for me is the red packets. My parents and grandparents give us money in red envelopes. The next day, we visit our relatives and say \"Happy New Year\"."
+      ],
+      "translation_cn": "春节是“我”最爱的节日。节前几天全家大扫除扫走霉运、贴红春联;除夕亲戚到爷爷奶奶家吃年夜饭,吃饺子和鱼(寓意好运);饭后看春晚守岁;最爱红包(长辈给压岁钱);第二天走亲戚拜年。",
+      "questions": [
+        {
+          "qid": "g9u2.ls2.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls2",
+          "stem": "What does the family do a few days before Spring Festival?",
+          "options": [
+            "Buy a new car.",
+            "Travel abroad.",
+            "Plant trees.",
+            "Clean the whole house."
+          ],
+          "answer_index": 3,
+          "answer_text": "Clean the whole house."
+        },
+        {
+          "qid": "g9u2.ls2.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls2",
+          "stem": "Where do the relatives gather on New Year's Eve?",
+          "options": [
+            "At a restaurant.",
+            "At the grandparents' home.",
+            "At the speaker's school.",
+            "At the park."
+          ],
+          "answer_index": 1,
+          "answer_text": "At the grandparents' home."
+        },
+        {
+          "qid": "g9u2.ls2.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls2",
+          "stem": "What do they eat for good luck?",
+          "options": [
+            "Turkey and pie.",
+            "Mooncakes.",
+            "Dumplings and fish.",
+            "Zongzi."
+          ],
+          "answer_index": 2,
+          "answer_text": "Dumplings and fish."
+        },
+        {
+          "qid": "g9u2.ls2.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls2",
+          "stem": "What is the speaker's favourite part?",
+          "options": [
+            "The cleaning.",
+            "The red packets.",
+            "The TV show.",
+            "The couplets."
+          ],
+          "answer_index": 1,
+          "answer_text": "The red packets."
+        },
+        {
+          "qid": "g9u2.ls2.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls2",
+          "stem": "What do they do the next day?",
+          "options": [
+            "Go back to school.",
+            "Clean again.",
+            "Visit relatives and say Happy New Year.",
+            "Watch races."
+          ],
+          "answer_index": 2,
+          "answer_text": "Visit relatives and say Happy New Year."
+        }
+      ]
+    },
+    {
+      "code": "g9u2.ls3",
+      "title": "九年级 U2 听力·对话 Asking about the Mid-Autumn Festival",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "Sam: Hi, Mei. What festival is coming soon?",
+        "Mei: The Mid-Autumn Festival. It's next week.",
+        "Sam: I'm from Australia, so I don't know much about it. What do people do?",
+        "Mei: Families get together and look at the full moon. We also eat mooncakes.",
+        "Sam: Mooncakes? What are they like?",
+        "Mei: They're round cakes with sweet fillings, like nuts or red beans.",
+        "Sam: That sounds nice. Why do you look at the moon?",
+        "Mei: A round moon means the family is together. Would you like to join my family this year?",
+        "Sam: I'd love to. Thank you!"
+      ],
+      "translation_cn": "Sam问梅快到什么节日;梅:下周中秋节。Sam来自澳大利亚不太了解;梅:家人团聚、赏满月、吃月饼;月饼是带坚果或红豆等甜馅的圆饼;圆月象征团圆;梅邀Sam今年加入她家,Sam欣然答应。",
+      "questions": [
+        {
+          "qid": "g9u2.ls3.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls3",
+          "stem": "What festival is coming soon?",
+          "options": [
+            "The Spring Festival.",
+            "Christmas.",
+            "The Mid-Autumn Festival.",
+            "Halloween."
+          ],
+          "answer_index": 2,
+          "answer_text": "The Mid-Autumn Festival."
+        },
+        {
+          "qid": "g9u2.ls3.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls3",
+          "stem": "Where is Sam from?",
+          "options": [
+            "Australia.",
+            "Canada.",
+            "England.",
+            "America."
+          ],
+          "answer_index": 0,
+          "answer_text": "Australia."
+        },
+        {
+          "qid": "g9u2.ls3.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls3",
+          "stem": "What do families do on this festival?",
+          "options": [
+            "Get together and look at the full moon.",
+            "Throw water at each other.",
+            "Watch boat races.",
+            "Make lanterns."
+          ],
+          "answer_index": 0,
+          "answer_text": "Get together and look at the full moon."
+        },
+        {
+          "qid": "g9u2.ls3.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls3",
+          "stem": "What is inside mooncakes?",
+          "options": [
+            "Meat and salt.",
+            "Sweet fillings like nuts or red beans.",
+            "Rice and leaves.",
+            "Cheese and ham."
+          ],
+          "answer_index": 1,
+          "answer_text": "Sweet fillings like nuts or red beans."
+        },
+        {
+          "qid": "g9u2.ls3.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls3",
+          "stem": "What does Mei invite Sam to do?",
+          "options": [
+            "Join her family.",
+            "Visit Australia.",
+            "Buy mooncakes.",
+            "Write a letter."
+          ],
+          "answer_index": 0,
+          "answer_text": "Join her family."
+        }
+      ]
+    },
+    {
+      "code": "g9u2.ls4",
+      "title": "九年级 U2 听力·短文 My Water Festival Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Last April, I visited Yunnan during the Water Festival of the Dai people. It was the most fun day of my trip. In the morning, everyone went into the streets carrying bowls and buckets of water. Then the water fight began! People threw water at each other and laughed. Soon I was wet from head to foot, but I didn't mind at all. The Dai people say that the water washes away bad luck and brings happiness. In the afternoon, we watched dragon boat races and saw beautiful dances. By evening, I was tired but very happy. I will never forget the day I got soaked at the Water Festival."
+      ],
+      "translation_cn": "去年四月“我”在云南赶上傣族泼水节,是旅途中最开心的一天。早上人们提着碗和桶上街,泼水大战开始,互相泼水欢笑;很快全身湿透但毫不在意;傣族人说水能洗去霉运、带来幸福;下午看龙舟赛和舞蹈;傍晚虽累但很开心,永远忘不了被泼湿的这天。",
+      "questions": [
+        {
+          "qid": "g9u2.ls4.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls4",
+          "stem": "Where did the speaker go?",
+          "options": [
+            "Thailand.",
+            "Beijing.",
+            "London.",
+            "Yunnan."
+          ],
+          "answer_index": 3,
+          "answer_text": "Yunnan."
+        },
+        {
+          "qid": "g9u2.ls4.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls4",
+          "stem": "When was it?",
+          "options": [
+            "Last December.",
+            "Last September.",
+            "Last June.",
+            "Last April."
+          ],
+          "answer_index": 3,
+          "answer_text": "Last April."
+        },
+        {
+          "qid": "g9u2.ls4.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls4",
+          "stem": "What did people throw at each other?",
+          "options": [
+            "Flowers.",
+            "Water.",
+            "Sweets.",
+            "Paper."
+          ],
+          "answer_index": 1,
+          "answer_text": "Water."
+        },
+        {
+          "qid": "g9u2.ls4.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls4",
+          "stem": "What do the Dai people believe the water does?",
+          "options": [
+            "Makes people rich.",
+            "Washes away bad luck and brings happiness.",
+            "Keeps people cool only.",
+            "Cleans the streets."
+          ],
+          "answer_index": 1,
+          "answer_text": "Washes away bad luck and brings happiness."
+        },
+        {
+          "qid": "g9u2.ls4.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls4",
+          "stem": "How did the speaker feel by evening?",
+          "options": [
+            "Tired but very happy.",
+            "Angry and wet.",
+            "Bored and cold.",
+            "Sad and tired."
+          ],
+          "answer_index": 0,
+          "answer_text": "Tired but very happy."
+        }
+      ]
+    },
+    {
+      "code": "g9u2.ls5",
+      "title": "九年级 U2 听力·对话 Our Favourite Festivals",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_female",
+      "transcript": [
+        "Lily: What's your favourite festival, Ben?",
+        "Ben: I think Spring Festival is the best. I love the dumplings and the red packets.",
+        "Lily: Me too, but I also like the Mid-Autumn Festival.",
+        "Ben: Why is that?",
+        "Lily: Because I can eat mooncakes and look at the beautiful moon with my family.",
+        "Ben: That's nice. What about a festival from another country?",
+        "Lily: I'd like to try Christmas one day. I want to see a real Christmas tree.",
+        "Ben: I'd like to see Halloween. Wearing scary costumes looks fun!",
+        "Lily: Haha, you would make a great ghost!"
+      ],
+      "translation_cn": "Lily问Ben最爱的节日;Ben:春节最好,爱饺子和红包;Lily也喜欢春节,还喜欢中秋(能和家人吃月饼赏月);谈到外国节日,Lily想体验圣诞看真圣诞树,Ben想看万圣节、觉得穿吓人服装好玩;Lily打趣他会是个好“鬼”。",
+      "questions": [
+        {
+          "qid": "g9u2.ls5.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls5",
+          "stem": "What is Ben's favourite festival?",
+          "options": [
+            "Spring Festival.",
+            "The Mid-Autumn Festival.",
+            "Christmas.",
+            "Halloween."
+          ],
+          "answer_index": 0,
+          "answer_text": "Spring Festival."
+        },
+        {
+          "qid": "g9u2.ls5.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls5",
+          "stem": "Why does Lily like the Mid-Autumn Festival?",
+          "options": [
+            "She gets red packets.",
+            "She watches races.",
+            "She throws water.",
+            "She can eat mooncakes and look at the moon with family."
+          ],
+          "answer_index": 3,
+          "answer_text": "She can eat mooncakes and look at the moon with family."
+        },
+        {
+          "qid": "g9u2.ls5.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls5",
+          "stem": "Which foreign festival would Lily like to try?",
+          "options": [
+            "Halloween.",
+            "Thanksgiving.",
+            "Christmas.",
+            "The Water Festival."
+          ],
+          "answer_index": 2,
+          "answer_text": "Christmas."
+        },
+        {
+          "qid": "g9u2.ls5.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls5",
+          "stem": "What does Ben want to see?",
+          "options": [
+            "Halloween.",
+            "A dragon boat race.",
+            "A lantern show.",
+            "A Christmas tree."
+          ],
+          "answer_index": 0,
+          "answer_text": "Halloween."
+        },
+        {
+          "qid": "g9u2.ls5.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls5",
+          "stem": "Why does Ben like Halloween?",
+          "options": [
+            "Wearing scary costumes looks fun.",
+            "He likes the food.",
+            "He likes the moon.",
+            "He likes red packets."
+          ],
+          "answer_index": 0,
+          "answer_text": "Wearing scary costumes looks fun."
+        }
+      ]
+    },
+    {
+      "code": "g9u2.ls6",
+      "title": "九年级 U2 听力·短文 Making Zongzi with Grandma",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Last year, before the Dragon Boat Festival, my grandma taught me how to make zongzi. First, we washed the green leaves and the sticky rice. Then Grandma showed me how to fold the leaves into a small cup. We put rice and a sweet red date inside, and tied it up with string. My first zongzi looked ugly, and the rice fell out! But Grandma was patient, and I tried again and again. By the end, I could make nice ones. When we ate them together, I felt very proud. Making zongzi with Grandma is my best festival memory, because I learned a skill and spent happy time with her."
+      ],
+      "translation_cn": "去年端午前,奶奶教“我”包粽子。先洗粽叶和糯米;奶奶教把叶子折成小杯,放米和一颗甜红枣,用绳扎好;“我”第一个包得很丑、米还漏出来,但奶奶很耐心,反复练后能包好了;一起吃时很自豪。和奶奶包粽子是最美的节日记忆——学会一项技能又和她共度快乐时光。",
+      "questions": [
+        {
+          "qid": "g9u2.ls6.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls6",
+          "stem": "Which festival was coming?",
+          "options": [
+            "The Lantern Festival.",
+            "The Dragon Boat Festival.",
+            "Christmas.",
+            "The Water Festival."
+          ],
+          "answer_index": 1,
+          "answer_text": "The Dragon Boat Festival."
+        },
+        {
+          "qid": "g9u2.ls6.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls6",
+          "stem": "Who taught the speaker to make zongzi?",
+          "options": [
+            "Mum.",
+            "A teacher.",
+            "A friend.",
+            "Grandma."
+          ],
+          "answer_index": 3,
+          "answer_text": "Grandma."
+        },
+        {
+          "qid": "g9u2.ls6.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls6",
+          "stem": "What did they put inside the zongzi?",
+          "options": [
+            "Meat and salt.",
+            "Nuts and sugar.",
+            "Fish and leaves.",
+            "Rice and a sweet red date."
+          ],
+          "answer_index": 3,
+          "answer_text": "Rice and a sweet red date."
+        },
+        {
+          "qid": "g9u2.ls6.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls6",
+          "stem": "What happened to the first zongzi?",
+          "options": [
+            "It was perfect.",
+            "It was too big.",
+            "It tasted salty.",
+            "It looked ugly and the rice fell out."
+          ],
+          "answer_index": 3,
+          "answer_text": "It looked ugly and the rice fell out."
+        },
+        {
+          "qid": "g9u2.ls6.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.ls6",
+          "stem": "Why is it the speaker's best festival memory?",
+          "options": [
+            "She learned a skill and spent happy time with Grandma.",
+            "She won a prize.",
+            "She got money.",
+            "She went travelling."
+          ],
+          "answer_index": 0,
+          "answer_text": "She learned a skill and spent happy time with Grandma."
+        }
+      ]
+    }
+  ]
+}

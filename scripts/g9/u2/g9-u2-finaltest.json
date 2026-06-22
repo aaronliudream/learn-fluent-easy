@@ -1,0 +1,25 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "code": "g9u2.final",
+  "title": "Unit 2 单元通关",
+  "note": "运行时 buildFinalQuiz:语法7(g9u2.01/02/03)+听力3(内联)+词汇2。完形题携带原文。",
+  "cloze_context": "The Lantern Festival comes on the fifteenth day of the first lunar (1)____, two weeks after Spring Festival. It marks the (2)____ of the New Year celebrations. On this night, the streets are full of beautiful (3)____ in many shapes and colours. Children carry small ones and walk (4)____ the streets happily. Many lanterns have riddles on them, and people try to (5)____ the answers. Families also eat tangyuan, sweet rice (6)____ that are round and soft. The round shape (7)____ family reunion, just like the full moon. Long ago, people lit lanterns to (8)____ for good luck. Today the festival is still very (9)____, and parks hold big lantern shows. It is a (10)____ end to the Spring Festival holiday.",
+  "question_refs": [
+    "g9u2.01.q1",
+    "g9u2.01.q12",
+    "g9u2.02.q1",
+    "g9u2.02.q11",
+    "g9u2.03.q3",
+    "g9u2.03.q5",
+    "g9u2.rd1.q2",
+    "g9u2.rd4.q1",
+    "g9u2.rd6.q3",
+    "g9u2.cz1.q3",
+    "g9u2.cz4.q3",
+    "g9u2.cz6.q5",
+    "g9u2.ls1.q1",
+    "g9u2.ls3.q1",
+    "g9u2.ls6.q2"
+  ]
+}

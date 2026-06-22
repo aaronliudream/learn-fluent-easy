@@ -1,0 +1,239 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "topic": "I think that mooncakes are delicious!",
+  "words": [
+    {
+      "word": "stranger",
+      "ipa": "/ˈstreɪndʒə(r)/",
+      "pos": "n.",
+      "meaning_cn": "陌生人",
+      "phrase_en": "talk to a stranger",
+      "freq_rank": 1
+    },
+    {
+      "word": "relative",
+      "ipa": "/ˈrelətɪv/",
+      "pos": "n.",
+      "meaning_cn": "亲戚",
+      "phrase_en": "visit my relatives",
+      "freq_rank": 2
+    },
+    {
+      "word": "pound",
+      "ipa": "/paʊnd/",
+      "pos": "n.",
+      "meaning_cn": "磅;英镑",
+      "phrase_en": "put on five pounds",
+      "freq_rank": 3
+    },
+    {
+      "word": "dessert",
+      "ipa": "/dɪˈzɜːt/",
+      "pos": "n.",
+      "meaning_cn": "甜点",
+      "phrase_en": "have some dessert",
+      "freq_rank": 4
+    },
+    {
+      "word": "garden",
+      "ipa": "/ˈɡɑːdn/",
+      "pos": "n.",
+      "meaning_cn": "花园;院子",
+      "phrase_en": "sit in the garden",
+      "freq_rank": 5
+    },
+    {
+      "word": "tie",
+      "ipa": "/taɪ/",
+      "pos": "n.",
+      "meaning_cn": "领带",
+      "phrase_en": "wear a tie",
+      "freq_rank": 6
+    },
+    {
+      "word": "treat",
+      "ipa": "/triːt/",
+      "pos": "n./v.",
+      "meaning_cn": "款待;招待;特别的享受",
+      "phrase_en": "a special treat",
+      "freq_rank": 7
+    },
+    {
+      "word": "Christmas",
+      "ipa": "/ˈkrɪsməs/",
+      "pos": "n.",
+      "meaning_cn": "圣诞节",
+      "phrase_en": "at Christmas",
+      "freq_rank": 8
+    },
+    {
+      "word": "novel",
+      "ipa": "/ˈnɒvl/",
+      "pos": "n.",
+      "meaning_cn": "小说",
+      "phrase_en": "read a novel",
+      "freq_rank": 9
+    },
+    {
+      "word": "business",
+      "ipa": "/ˈbɪznəs/",
+      "pos": "n.",
+      "meaning_cn": "生意;商业",
+      "phrase_en": "good for business",
+      "freq_rank": 10
+    },
+    {
+      "word": "warmth",
+      "ipa": "/wɔːmθ/",
+      "pos": "n.",
+      "meaning_cn": "温暖",
+      "phrase_en": "the warmth of family",
+      "freq_rank": 11
+    },
+    {
+      "word": "steal",
+      "ipa": "/stiːl/",
+      "pos": "v.",
+      "meaning_cn": "偷(stole)",
+      "phrase_en": "steal money",
+      "freq_rank": 12
+    },
+    {
+      "word": "lay",
+      "ipa": "/leɪ/",
+      "pos": "v.",
+      "meaning_cn": "摆放;放置(laid)",
+      "phrase_en": "lay out the food",
+      "freq_rank": 13
+    },
+    {
+      "word": "admire",
+      "ipa": "/ədˈmaɪə(r)/",
+      "pos": "v.",
+      "meaning_cn": "欣赏;钦佩",
+      "phrase_en": "admire the view",
+      "freq_rank": 14
+    },
+    {
+      "word": "lie",
+      "ipa": "/laɪ/",
+      "pos": "n./v.",
+      "meaning_cn": "谎言;说谎",
+      "phrase_en": "tell a lie",
+      "freq_rank": 15
+    },
+    {
+      "word": "punish",
+      "ipa": "/ˈpʌnɪʃ/",
+      "pos": "v.",
+      "meaning_cn": "惩罚",
+      "phrase_en": "punish the boy",
+      "freq_rank": 16
+    },
+    {
+      "word": "warn",
+      "ipa": "/wɔːn/",
+      "pos": "v.",
+      "meaning_cn": "警告;提醒",
+      "phrase_en": "warn the children",
+      "freq_rank": 17
+    },
+    {
+      "word": "spread",
+      "ipa": "/spred/",
+      "pos": "v.",
+      "meaning_cn": "传播;展开",
+      "phrase_en": "spread the news",
+      "freq_rank": 18
+    },
+    {
+      "word": "dead",
+      "ipa": "/ded/",
+      "pos": "adj.",
+      "meaning_cn": "死的",
+      "phrase_en": "a dead tree",
+      "freq_rank": 19
+    },
+    {
+      "word": "present",
+      "ipa": "/ˈpreznt/",
+      "pos": "n.",
+      "meaning_cn": "礼物",
+      "phrase_en": "a birthday present",
+      "freq_rank": 20
+    },
+    {
+      "word": "fantastic",
+      "ipa": "/fænˈtæstɪk/",
+      "pos": "adj.",
+      "meaning_cn": "极好的",
+      "phrase_en": "a fantastic show",
+      "freq_rank": 21
+    },
+    {
+      "word": "crowded",
+      "ipa": "/ˈkraʊdɪd/",
+      "pos": "adj.",
+      "meaning_cn": "拥挤的",
+      "phrase_en": "a crowded street",
+      "freq_rank": 22
+    },
+    {
+      "word": "delicious",
+      "ipa": "/dɪˈlɪʃəs/",
+      "pos": "adj.",
+      "meaning_cn": "美味的",
+      "phrase_en": "delicious mooncakes",
+      "freq_rank": 23
+    },
+    {
+      "word": "traditional",
+      "ipa": "/trəˈdɪʃənl/",
+      "pos": "adj.",
+      "meaning_cn": "传统的",
+      "phrase_en": "a traditional festival",
+      "freq_rank": 24
+    },
+    {
+      "word": "pretty",
+      "ipa": "/ˈprɪti/",
+      "pos": "adj.",
+      "meaning_cn": "漂亮的",
+      "phrase_en": "a pretty dress",
+      "freq_rank": 25
+    },
+    {
+      "word": "exciting",
+      "ipa": "/ɪkˈsaɪtɪŋ/",
+      "pos": "adj.",
+      "meaning_cn": "令人兴奋的",
+      "phrase_en": "an exciting race",
+      "freq_rank": 26
+    },
+    {
+      "word": "special",
+      "ipa": "/ˈspeʃl/",
+      "pos": "adj.",
+      "meaning_cn": "特别的",
+      "phrase_en": "a special day",
+      "freq_rank": 27
+    },
+    {
+      "word": "scary",
+      "ipa": "/ˈskeəri/",
+      "pos": "adj.",
+      "meaning_cn": "吓人的",
+      "phrase_en": "a scary story",
+      "freq_rank": 28
+    },
+    {
+      "word": "popular",
+      "ipa": "/ˈpɒpjələ(r)/",
+      "pos": "adj.",
+      "meaning_cn": "受欢迎的",
+      "phrase_en": "a popular festival",
+      "freq_rank": 29
+    }
+  ]
+}

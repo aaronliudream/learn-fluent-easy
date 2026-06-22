@@ -1,0 +1,1106 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "points": [
+    {
+      "code": "g9u2.01",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "category": "clause",
+      "overview": "主句后接陈述句作宾语,连接词用 that(常可省略),从句用陈述语序,主句过去时从句相应过去。"
+    },
+    {
+      "code": "g9u2.02",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "category": "clause",
+      "overview": "嵌入一般疑问句作宾语,连接词用 if/whether(whether…or 用 whether),从句一律陈述语序、不倒装。"
+    },
+    {
+      "code": "g9u2.03",
+      "point": "感叹句 What…! / How…!",
+      "category": "other",
+      "overview": "看感叹中心词词性:名词→What(单数可数加a/an、复数或不可数不加);形容词/副词→How。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u2.01.q1",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "I think ____ mooncakes are delicious.",
+      "options": [
+        "what",
+        "that",
+        "who",
+        "which"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q2",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "We know ____ the Mid-Autumn Festival is in autumn.",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "what"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q3",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "She believes ____ her team will win the race.",
+      "options": [
+        "what",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q4",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "He said ____ the lanterns were beautiful.",
+      "options": [
+        "why",
+        "where",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q5",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "Do you think ____ Spring Festival is important?",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q6",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "I hope ____ you can come to our party.",
+      "options": [
+        "that",
+        "what",
+        "whose",
+        "who"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q7",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "Everyone knows ____ the dragon boat race is exciting.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q8",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "The teacher told us ____ the old story was true.",
+      "options": [
+        "what",
+        "where",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q9",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "I'm sure ____ they will have a good time.",
+      "options": [
+        "why",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q10",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "连接词",
+      "stem": "We believe ____ honesty matters most.",
+      "options": [
+        "what",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[连接词] 嵌入陈述句→that"
+    },
+    {
+      "qid": "g9u2.01.q11",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "语序",
+      "stem": "I know that ____.",
+      "options": [
+        "from Canada she is",
+        "she is from Canada",
+        "she from Canada",
+        "is she from Canada"
+      ],
+      "answer_index": 1,
+      "answer_text": "she is from Canada",
+      "explanation": "[语序] 宾从用陈述语序 主+谓"
+    },
+    {
+      "qid": "g9u2.01.q12",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "语序",
+      "stem": "He said that ____.",
+      "options": [
+        "the food delicious was",
+        "was the food delicious",
+        "the food was delicious",
+        "delicious was the food"
+      ],
+      "answer_index": 2,
+      "answer_text": "the food was delicious",
+      "explanation": "[语序] 宾从用陈述语序"
+    },
+    {
+      "qid": "g9u2.01.q13",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "语序",
+      "stem": "They think that ____ a wonderful festival.",
+      "options": [
+        "is Spring Festival",
+        "Spring Festival is",
+        "Spring Festival are",
+        "be Spring Festival"
+      ],
+      "answer_index": 1,
+      "answer_text": "Spring Festival is",
+      "explanation": "[语序] 陈述语序+主谓一致"
+    },
+    {
+      "qid": "g9u2.01.q14",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "语序",
+      "stem": "I believe that ____ next year.",
+      "options": [
+        "they will come back",
+        "back they will come",
+        "they come back will",
+        "will they come back"
+      ],
+      "answer_index": 0,
+      "answer_text": "they will come back",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.01.q15",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "语序",
+      "stem": "She hopes that ____ the exam.",
+      "options": [
+        "pass she can",
+        "she can pass",
+        "she passes can",
+        "can she pass"
+      ],
+      "answer_index": 1,
+      "answer_text": "she can pass",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.01.q16",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "时态",
+      "stem": "He said that he ____ busy the day before.",
+      "options": [
+        "are",
+        "were",
+        "was",
+        "is"
+      ],
+      "answer_index": 2,
+      "answer_text": "was",
+      "explanation": "[时态] 主句过去→从句过去"
+    },
+    {
+      "qid": "g9u2.01.q17",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "时态",
+      "stem": "She told me that she ____ the film before.",
+      "options": [
+        "had seen",
+        "sees",
+        "seeing",
+        "see"
+      ],
+      "answer_index": 0,
+      "answer_text": "had seen",
+      "explanation": "[时态] 主句过去+before→过去完成"
+    },
+    {
+      "qid": "g9u2.01.q18",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "时态",
+      "stem": "They thought that the show ____ wonderful.",
+      "options": [
+        "be",
+        "will be",
+        "is",
+        "was"
+      ],
+      "answer_index": 3,
+      "answer_text": "was",
+      "explanation": "[时态] 主句过去→从句过去"
+    },
+    {
+      "qid": "g9u2.01.q19",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "时态",
+      "stem": "I knew that he ____ from Beijing.",
+      "options": [
+        "came",
+        "come",
+        "comes",
+        "coming"
+      ],
+      "answer_index": 0,
+      "answer_text": "came",
+      "explanation": "[时态] 主句过去→从句过去"
+    },
+    {
+      "qid": "g9u2.01.q20",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:that 引导(陈述句作宾语)",
+      "code": "g9u2.01",
+      "tag": "时态",
+      "stem": "He said that he ____ help me the next day.",
+      "options": [
+        "can",
+        "will",
+        "would",
+        "may"
+      ],
+      "answer_index": 2,
+      "answer_text": "would",
+      "explanation": "[时态] 主句过去→will变would"
+    },
+    {
+      "qid": "g9u2.02.q1",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "I wonder ____ she will come to the festival.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "if"
+      ],
+      "answer_index": 3,
+      "answer_text": "if",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q2",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "Can you tell me ____ the shop is open?",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 1,
+      "answer_text": "whether",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q3",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "I don't know ____ he likes mooncakes.",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "if"
+      ],
+      "answer_index": 3,
+      "answer_text": "if",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q4",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "She asked me ____ I had finished my homework.",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "when"
+      ],
+      "answer_index": 0,
+      "answer_text": "whether",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q5",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "Do you know ____ they will have the race again?",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "whose"
+      ],
+      "answer_index": 1,
+      "answer_text": "if",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q6",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "I'm not sure ____ the news is true.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "why"
+      ],
+      "answer_index": 1,
+      "answer_text": "whether",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q7",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "He wonders ____ it will rain tomorrow.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "if"
+      ],
+      "answer_index": 3,
+      "answer_text": "if",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q8",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "Please tell me ____ you can join us.",
+      "options": [
+        "whether",
+        "when",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "answer_text": "whether",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q9",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "I asked her ____ she liked the dragon boat race.",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "if",
+      "explanation": "[连接词] 嵌入一般疑问→if/whether"
+    },
+    {
+      "qid": "g9u2.02.q10",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "连接词",
+      "stem": "We don't know ____ the festival is in May or June.",
+      "options": [
+        "whether",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 0,
+      "answer_text": "whether",
+      "explanation": "[连接词] whether…or 结构用 whether"
+    },
+    {
+      "qid": "g9u2.02.q11",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "I wonder if ____.",
+      "options": [
+        "open is the museum",
+        "the museum open is",
+        "is the museum open",
+        "the museum is open"
+      ],
+      "answer_index": 3,
+      "answer_text": "the museum is open",
+      "explanation": "[语序] 宾从用陈述语序"
+    },
+    {
+      "qid": "g9u2.02.q12",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "Can you tell me whether ____?",
+      "options": [
+        "she has passed the test",
+        "has she passed the test",
+        "passed she the test",
+        "she has pass the test"
+      ],
+      "answer_index": 0,
+      "answer_text": "she has passed the test",
+      "explanation": "[语序] 宾从用陈述语序"
+    },
+    {
+      "qid": "g9u2.02.q13",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "I don't know if ____ tomorrow.",
+      "options": [
+        "will they arrive",
+        "they will arrive",
+        "they arrive will",
+        "arrive they will"
+      ],
+      "answer_index": 1,
+      "answer_text": "they will arrive",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.02.q14",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "Do you know whether ____?",
+      "options": [
+        "the show started has",
+        "has the show started",
+        "started the show has",
+        "the show has started"
+      ],
+      "answer_index": 3,
+      "answer_text": "the show has started",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.02.q15",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "She asked whether ____ the party.",
+      "options": [
+        "we join would",
+        "join we would",
+        "we would join",
+        "would we join"
+      ],
+      "answer_index": 2,
+      "answer_text": "we would join",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.02.q16",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "I'm not sure if ____ at home now.",
+      "options": [
+        "be he",
+        "he be",
+        "he is",
+        "is he"
+      ],
+      "answer_index": 2,
+      "answer_text": "he is",
+      "explanation": "[语序] 陈述语序 主+系"
+    },
+    {
+      "qid": "g9u2.02.q17",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "Tell me if ____ the answer.",
+      "options": [
+        "you know",
+        "do you know",
+        "you do know",
+        "know you"
+      ],
+      "answer_index": 0,
+      "answer_text": "you know",
+      "explanation": "[语序] 陈述语序(不用助动词倒装)"
+    },
+    {
+      "qid": "g9u2.02.q18",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "I wonder whether ____ enough time.",
+      "options": [
+        "we has",
+        "we have",
+        "do we have",
+        "have we"
+      ],
+      "answer_index": 1,
+      "answer_text": "we have",
+      "explanation": "[语序] 陈述语序+主谓一致"
+    },
+    {
+      "qid": "g9u2.02.q19",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "He asked if ____ the festival before.",
+      "options": [
+        "had I seen",
+        "I had seen",
+        "I have saw",
+        "seen I had"
+      ],
+      "answer_index": 1,
+      "answer_text": "I had seen",
+      "explanation": "[语序] 陈述语序+过去完成"
+    },
+    {
+      "qid": "g9u2.02.q20",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "宾语从句:if / whether 引导(一般疑问句作宾语)",
+      "code": "g9u2.02",
+      "tag": "语序",
+      "stem": "Do you know whether ____ now?",
+      "options": [
+        "the train left has",
+        "left the train has",
+        "the train has left",
+        "has the train left"
+      ],
+      "answer_index": 2,
+      "answer_text": "the train has left",
+      "explanation": "[语序] 陈述语序"
+    },
+    {
+      "qid": "g9u2.03.q1",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ delicious the mooncakes are!",
+      "options": [
+        "What",
+        "What a",
+        "What an",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=形容词 delicious→How"
+    },
+    {
+      "qid": "g9u2.03.q2",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "What",
+      "stem": "____ beautiful flowers they are!",
+      "options": [
+        "What",
+        "How",
+        "What a",
+        "What an"
+      ],
+      "answer_index": 0,
+      "answer_text": "What",
+      "explanation": "[What] 中心词=复数名词 flowers→What(无a)"
+    },
+    {
+      "qid": "g9u2.03.q3",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatAn",
+      "stem": "____ exciting race it was!",
+      "options": [
+        "What a",
+        "What",
+        "How",
+        "What an"
+      ],
+      "answer_index": 3,
+      "answer_text": "What an",
+      "explanation": "[WhatAn] 单数可数+元音音素 exciting→What an"
+    },
+    {
+      "qid": "g9u2.03.q4",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatA",
+      "stem": "____ wonderful festival Spring Festival is!",
+      "options": [
+        "What a",
+        "What",
+        "What an",
+        "How"
+      ],
+      "answer_index": 0,
+      "answer_text": "What a",
+      "explanation": "[WhatA] 单数可数+辅音 festival→What a"
+    },
+    {
+      "qid": "g9u2.03.q5",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ fast he runs!",
+      "options": [
+        "What an",
+        "What",
+        "What a",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=副词 fast→How"
+    },
+    {
+      "qid": "g9u2.03.q6",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "What",
+      "stem": "____ delicious food it is!",
+      "options": [
+        "What a",
+        "What an",
+        "What",
+        "How"
+      ],
+      "answer_index": 2,
+      "answer_text": "What",
+      "explanation": "[What] 不可数名词 food→What(无a)"
+    },
+    {
+      "qid": "g9u2.03.q7",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ tall the building is!",
+      "options": [
+        "What a",
+        "What",
+        "What an",
+        "How"
+      ],
+      "answer_index": 3,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=形容词 tall→How"
+    },
+    {
+      "qid": "g9u2.03.q8",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatA",
+      "stem": "____ clever boy he is!",
+      "options": [
+        "What",
+        "What an",
+        "What a",
+        "How"
+      ],
+      "answer_index": 2,
+      "answer_text": "What a",
+      "explanation": "[WhatA] 单数可数+辅音 boy→What a"
+    },
+    {
+      "qid": "g9u2.03.q9",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "What",
+      "stem": "____ interesting books these are!",
+      "options": [
+        "How",
+        "What an",
+        "What",
+        "What a"
+      ],
+      "answer_index": 2,
+      "answer_text": "What",
+      "explanation": "[What] 复数名词 books→What(无a)"
+    },
+    {
+      "qid": "g9u2.03.q10",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ nice the weather is today!",
+      "options": [
+        "What an",
+        "How",
+        "What a",
+        "What"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=形容词 nice→How"
+    },
+    {
+      "qid": "g9u2.03.q11",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatA",
+      "stem": "____ long bridge it is!",
+      "options": [
+        "What an",
+        "What",
+        "What a",
+        "How"
+      ],
+      "answer_index": 2,
+      "answer_text": "What a",
+      "explanation": "[WhatA] 单数可数+辅音 bridge→What a"
+    },
+    {
+      "qid": "g9u2.03.q12",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ hard they worked!",
+      "options": [
+        "What an",
+        "How",
+        "What",
+        "What a"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=副词 hard→How"
+    },
+    {
+      "qid": "g9u2.03.q13",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatAn",
+      "stem": "____ old temple it is!",
+      "options": [
+        "How",
+        "What",
+        "What an",
+        "What a"
+      ],
+      "answer_index": 2,
+      "answer_text": "What an",
+      "explanation": "[WhatAn] 单数可数+元音 old→What an"
+    },
+    {
+      "qid": "g9u2.03.q14",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "What",
+      "stem": "____ lovely music it is!",
+      "options": [
+        "What",
+        "What a",
+        "What an",
+        "How"
+      ],
+      "answer_index": 0,
+      "answer_text": "What",
+      "explanation": "[What] 不可数名词 music→What(无a)"
+    },
+    {
+      "qid": "g9u2.03.q15",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ brave the firefighter is!",
+      "options": [
+        "How",
+        "What an",
+        "What",
+        "What a"
+      ],
+      "answer_index": 0,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=形容词 brave→How"
+    },
+    {
+      "qid": "g9u2.03.q16",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "What",
+      "stem": "____ happy children they are!",
+      "options": [
+        "How",
+        "What",
+        "What a",
+        "What an"
+      ],
+      "answer_index": 1,
+      "answer_text": "What",
+      "explanation": "[What] 复数名词 children→What(无a)"
+    },
+    {
+      "qid": "g9u2.03.q17",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatA",
+      "stem": "____ wonderful time we had!",
+      "options": [
+        "What a",
+        "What",
+        "What an",
+        "How"
+      ],
+      "answer_index": 0,
+      "answer_text": "What a",
+      "explanation": "[WhatA] 单数可数(一段时光)+辅音→What a"
+    },
+    {
+      "qid": "g9u2.03.q18",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ well she sings!",
+      "options": [
+        "What a",
+        "How",
+        "What an",
+        "What"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "[How] 中心词=副词 well→How"
+    },
+    {
+      "qid": "g9u2.03.q19",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "WhatAn",
+      "stem": "____ amazing show it was!",
+      "options": [
+        "What a",
+        "What an",
+        "How",
+        "What"
+      ],
+      "answer_index": 1,
+      "answer_text": "What an",
+      "explanation": "[WhatAn] 单数可数+元音 amazing→What an"
+    },
+    {
+      "qid": "g9u2.03.q20",
+      "volume": "g9",
+      "unit": "U2",
+      "point": "感叹句 What…! / How…!",
+      "code": "g9u2.03",
+      "tag": "How",
+      "stem": "____ cold it is today!",
+      "options": [
+        "What",
+        "How",
+        "What a",
+        "What the"
+      ],
+      "answer_index": 1,
+      "answer_text": "How",
+      "explanation": "[How] 无名词,中心词=形容词 cold→How"
+    }
+  ]
+}

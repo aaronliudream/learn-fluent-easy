@@ -512,50 +512,25 @@
             "id": "g9full_u2",
             "num": 2,
             "unitKey": "U2",
-            "book": "9",
+            "book": "g9",
             "title": "I think that mooncakes are delicious!",
             "cn": "我觉得月饼很好吃",
             "emoji": "🥮",
             "available": true,
             "vocabulary": [
               {
-                "en": "A Christmas Carol",
-                "cn": "圣诞欢歌",
+                "en": "stranger",
+                "cn": "陌生人",
                 "emoji": "📘"
               },
               {
-                "en": "admire",
-                "cn": "欣赏",
+                "en": "relative",
+                "cn": "亲戚",
                 "emoji": "📘"
               },
               {
-                "en": "business",
-                "cn": "生意",
-                "emoji": "📘"
-              },
-              {
-                "en": "Charles",
-                "cn": "查尔斯·",
-                "emoji": "📘"
-              },
-              {
-                "en": "Chiang Mai",
-                "cn": "清迈",
-                "emoji": "📘"
-              },
-              {
-                "en": "Christmas",
-                "cn": "圣诞节",
-                "emoji": "📘"
-              },
-              {
-                "en": "Clara",
-                "cn": "克拉拉",
-                "emoji": "📘"
-              },
-              {
-                "en": "dead",
-                "cn": "死的",
+                "en": "pound",
+                "cn": "磅",
                 "emoji": "📘"
               },
               {
@@ -564,18 +539,128 @@
                 "emoji": "📘"
               },
               {
-                "en": "Easter",
-                "cn": "复活节",
+                "en": "garden",
+                "cn": "花园",
                 "emoji": "📘"
               },
               {
-                "en": "eve",
-                "cn": "前夕",
+                "en": "tie",
+                "cn": "领带",
                 "emoji": "📘"
               },
               {
-                "en": "folk",
-                "cn": "民间的",
+                "en": "treat",
+                "cn": "款待",
+                "emoji": "📘"
+              },
+              {
+                "en": "Christmas",
+                "cn": "圣诞节",
+                "emoji": "📘"
+              },
+              {
+                "en": "novel",
+                "cn": "小说",
+                "emoji": "📘"
+              },
+              {
+                "en": "business",
+                "cn": "生意",
+                "emoji": "📘"
+              },
+              {
+                "en": "warmth",
+                "cn": "温暖",
+                "emoji": "📘"
+              },
+              {
+                "en": "steal",
+                "cn": "偷",
+                "emoji": "📘"
+              },
+              {
+                "en": "lay",
+                "cn": "摆放",
+                "emoji": "📘"
+              },
+              {
+                "en": "admire",
+                "cn": "欣赏",
+                "emoji": "📘"
+              },
+              {
+                "en": "lie",
+                "cn": "谎言",
+                "emoji": "📘"
+              },
+              {
+                "en": "punish",
+                "cn": "惩罚",
+                "emoji": "📘"
+              },
+              {
+                "en": "warn",
+                "cn": "警告",
+                "emoji": "📘"
+              },
+              {
+                "en": "spread",
+                "cn": "传播",
+                "emoji": "📘"
+              },
+              {
+                "en": "dead",
+                "cn": "死的",
+                "emoji": "📘"
+              },
+              {
+                "en": "present",
+                "cn": "礼物",
+                "emoji": "📘"
+              },
+              {
+                "en": "fantastic",
+                "cn": "极好的",
+                "emoji": "📘"
+              },
+              {
+                "en": "crowded",
+                "cn": "拥挤的",
+                "emoji": "📘"
+              },
+              {
+                "en": "delicious",
+                "cn": "美味的",
+                "emoji": "📘"
+              },
+              {
+                "en": "traditional",
+                "cn": "传统的",
+                "emoji": "📘"
+              },
+              {
+                "en": "pretty",
+                "cn": "漂亮的",
+                "emoji": "📘"
+              },
+              {
+                "en": "exciting",
+                "cn": "令人兴奋的",
+                "emoji": "📘"
+              },
+              {
+                "en": "special",
+                "cn": "特别的",
+                "emoji": "📘"
+              },
+              {
+                "en": "scary",
+                "cn": "吓人的",
+                "emoji": "📘"
+              },
+              {
+                "en": "popular",
+                "cn": "受欢迎的",
                 "emoji": "📘"
               }
             ],
@@ -585,18 +670,18 @@
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Do you know A Christmas Carol?",
-                    "cn": "你知道圣诞欢歌吗？"
+                    "text": "What do you think of mooncakes?",
+                    "cn": "你觉得月饼怎么样?"
                   },
                   {
                     "role": "B",
-                    "text": "Yes, and admire too.",
-                    "cn": "知道，还有欣赏。"
+                    "text": "I think that they are delicious! I love the Mid-Autumn Festival.",
+                    "cn": "我觉得很好吃!我爱中秋节。"
                   },
                   {
                     "role": "A",
-                    "text": "Great! Let's talk about I think that mooncakes are delicious!.",
-                    "cn": "太好了！我们来聊聊I think that mooncakes are delicious!。"
+                    "text": "What a wonderful festival it is!",
+                    "cn": "多么美好的节日啊!"
                   }
                 ]
               }
@@ -605,7 +690,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "29个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -629,7 +714,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "used to 与感叹句",
+                "subtitle": "宾语从句 that/if/whether · 感叹句",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -637,13 +722,21 @@
               {
                 "id": "s5",
                 "title": "课文阅读",
-                "subtitle": "阅读理解",
+                "subtitle": "阅读理解(6篇)",
                 "icon": "📖",
                 "type": "reading",
                 "time": "8分钟"
               },
               {
                 "id": "s6",
+                "title": "完形填空",
+                "subtitle": "10空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
                 "title": "听力短文",
                 "subtitle": "听音答题",
                 "icon": "👂",
@@ -651,15 +744,15 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s8",
                 "title": "写作练习",
-                "subtitle": "本单元句型",
+                "subtitle": "My Favourite Festival",
                 "icon": "✍️",
                 "type": "writing",
                 "time": "10分钟"
               },
               {
-                "id": "s8",
+                "id": "s9",
                 "title": "单元通关",
                 "subtitle": "综合检测",
                 "icon": "🏆",
@@ -667,230 +760,253 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "used to 与感叹句",
+            "grammarTitle": "宾语从句 that / if·whether · 感叹句",
             "grammarCode": null,
+            "grammarCodes": [
+              "g9u2.01",
+              "g9u2.02",
+              "g9u2.03"
+            ],
             "grammarQuiz": [
               {
-                "q": "本单元语法重点：used to 与感叹句。下列哪项与「A Christmas Carol」词义最接近？",
+                "q": "I think ____ mooncakes are delicious.",
                 "opts": [
-                  "民间的",
-                  "圣诞欢歌",
-                  "清迈",
-                  "查尔斯·"
+                  "that",
+                  "what",
+                  "which",
+                  "who"
                 ],
-                "answer": 1,
-                "point": "used to 与感叹句",
+                "answer": 0,
+                "point": "宾语从句that",
                 "dim": "grammar"
               },
               {
-                "q": "选择正确的英文：「欣赏」",
+                "q": "____ a wonderful festival it is!",
                 "opts": [
-                  "folk",
-                  "A Christmas Carol",
-                  "eve",
-                  "admire"
+                  "How",
+                  "What",
+                  "What an",
+                  "How a"
                 ],
-                "answer": 3,
-                "point": "used to 与感叹句",
+                "answer": 1,
+                "point": "感叹句",
                 "dim": "grammar"
               }
             ],
             "reading": {
-              "passage": "It’s not that bad. Even little kids dress up as ghosts or black cats. They can also dress up as fun things like cartoon characters. Some parents join in the fun by dressing up, too! Wu Yu: Do parents take their children around the neighborhood to ask for candies and treats?",
-              "passageCn": "本单元阅读材料（I think that mooncakes are delicious!）",
+              "passage": "(本单元课文阅读共6篇,见题库:The Mid-Autumn Festival 等。)",
+              "passageCn": "本单元阅读(节日)——原创6篇,体裁有梯度。",
               "questions": [
                 {
-                  "q": "According to the passage, this unit is mainly about:",
+                  "q": "What is Unit 2 mainly about?",
                   "opts": [
-                    "I think that mooncakes are delicious!",
-                    "A different topic",
-                    "Only listening",
-                    "Only grammar"
-                  ],
-                  "answer": 0,
-                  "point": "课文理解",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What is this unit mainly about?",
-                  "opts": [
-                    "Sports only",
-                    "I think that mooncakes are delicious!",
-                    "Math class",
-                    "Cooking"
+                    "Learning methods",
+                    "Festivals",
+                    "Inventions",
+                    "Sports"
                   ],
                   "answer": 1,
                   "point": "阅读主旨",
-                  "dim": "reading"
-                },
-                {
-                  "q": "What does 「A Christmas Carol」 mean in Chinese?",
-                  "opts": [
-                    "复活节",
-                    "圣诞欢歌",
-                    "清迈",
-                    "克拉拉"
-                  ],
-                  "answer": 1,
-                  "point": "词汇理解",
                   "dim": "reading"
                 }
               ]
             },
             "writing": {
-              "prompt": "Write 4-6 sentences about \"I think that mooncakes are delicious!\" using words from this unit.",
-              "promptCn": "用 4-6 个句子描述本单元「I think that mooncakes are delicious!」，使用本单元词汇。",
+              "prompt": "Write a short passage (about 80 words) on \"My Favourite Festival\". Use object clauses (I think that…) and exclamations (What…!/How…!).",
+              "promptCn": "以 \"My Favourite Festival\" 为题写约80词:节日名+时间、做什么吃什么、为什么喜欢;用宾语从句 I think/believe that… + 感叹句 What…!/How…!。",
               "sampleWords": [
-                "A Christmas Carol",
-                "admire",
-                "business",
-                "Charles",
-                "Chiang Mai",
+                "stranger",
+                "relative",
+                "pound",
+                "dessert",
+                "garden",
+                "tie",
+                "treat",
                 "Christmas"
               ]
             },
             "quizQuestions": [
               {
-                "q": "「A Christmas Carol」的意思是？",
+                "q": "「stranger」的意思是?",
                 "opts": [
-                  "圣诞欢歌",
-                  "前夕",
-                  "欣赏",
-                  "查尔斯·"
+                  "陌生人",
+                  "甜点",
+                  "圣诞节",
+                  "偷"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「admire」的意思是？",
+                "q": "「relative」的意思是?",
                 "opts": [
-                  "圣诞欢歌",
-                  "死的",
-                  "欣赏",
-                  "民间的"
+                  "摆放",
+                  "亲戚",
+                  "花园",
+                  "小说"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「business」的意思是？",
+                "q": "「pound」的意思是?",
                 "opts": [
                   "生意",
-                  "复活节",
-                  "清迈",
-                  "查尔斯·"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Charles」的意思是？",
-                "opts": [
-                  "民间的",
                   "欣赏",
-                  "查尔斯·",
-                  "克拉拉"
+                  "磅",
+                  "领带"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Chiang Mai」的意思是？",
+                "q": "「dessert」的意思是?",
                 "opts": [
-                  "清迈",
-                  "前夕",
-                  "甜点",
-                  "生意"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Christmas」的意思是？",
-                "opts": [
-                  "圣诞节",
-                  "民间的",
-                  "欣赏",
-                  "圣诞欢歌"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Clara」的意思是？",
-                "opts": [
-                  "圣诞节",
-                  "克拉拉",
-                  "清迈",
+                  "款待",
+                  "温暖",
+                  "谎言",
                   "甜点"
                 ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「garden」的意思是?",
+                "opts": [
+                  "花园",
+                  "圣诞节",
+                  "偷",
+                  "惩罚"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tie」的意思是?",
+                "opts": [
+                  "警告",
+                  "领带",
+                  "小说",
+                  "摆放"
+                ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「dead」的意思是？",
+                "q": "「treat」的意思是?",
                 "opts": [
-                  "克拉拉",
+                  "欣赏",
+                  "传播",
+                  "款待",
+                  "生意"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Christmas」的意思是?",
+                "opts": [
+                  "温暖",
+                  "谎言",
                   "死的",
-                  "民间的",
-                  "查尔斯·"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个单词表示「圣诞欢歌」？",
-                "opts": [
-                  "dead",
-                  "A Christmas Carol",
-                  "Christmas",
-                  "dessert"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我觉得月饼很好吃」的核心词是？",
-                "opts": [
-                  "apple",
-                  "teacher",
-                  "business",
-                  "A Christmas Carol"
+                  "圣诞节"
                 ],
                 "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「novel」的意思是?",
+                "opts": [
+                  "小说",
+                  "偷",
+                  "惩罚",
+                  "礼物"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「business」的意思是?",
+                "opts": [
+                  "极好的",
+                  "生意",
+                  "摆放",
+                  "警告"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "What a great day!",
+                "audio": "I think that mooncakes are delicious.",
                 "opts": [
-                  "What a great day!",
-                  "This is A Christmas Carol.",
-                  "admire",
-                  "business"
+                  "I think that mooncakes are delicious.",
+                  "The shop is closed today.",
+                  "She is reading a novel.",
+                  "He plays football after school."
                 ],
                 "answer": 0
               },
               {
-                "audio": "What did you like best?",
+                "audio": "What a wonderful festival it is!",
                 "opts": [
-                  "What did you like best?",
-                  "This is A Christmas Carol.",
-                  "admire",
-                  "business"
+                  "He plays football after school.",
+                  "What a wonderful festival it is!",
+                  "The shop is closed today.",
+                  "She is reading a novel."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "We watch the dragon boat races by the river.",
+                "opts": [
+                  "She is reading a novel.",
+                  "He plays football after school.",
+                  "We watch the dragon boat races by the river.",
+                  "The shop is closed today."
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Families get together and look at the full moon.",
+                "opts": [
+                  "The shop is closed today.",
+                  "She is reading a novel.",
+                  "He plays football after school.",
+                  "Families get together and look at the full moon."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "How exciting the lantern show is!",
+                "opts": [
+                  "How exciting the lantern show is!",
+                  "The shop is closed today.",
+                  "She is reading a novel.",
+                  "He plays football after school."
                 ],
                 "answer": 0
+              },
+              {
+                "audio": "People give red packets at Spring Festival.",
+                "opts": [
+                  "He plays football after school.",
+                  "People give red packets at Spring Festival.",
+                  "The shop is closed today.",
+                  "She is reading a novel."
+                ],
+                "answer": 1
               }
             ]
           },

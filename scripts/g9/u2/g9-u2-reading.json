@@ -1,0 +1,534 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "passages": [
+    {
+      "code": "g9u2.rd1",
+      "title": "The Mid-Autumn Festival",
+      "genre": "说明文",
+      "body": "The Mid-Autumn Festival is one of the most important festivals in China. It falls on the fifteenth day of the eighth lunar month, usually in September or October. On this day, the moon is round and bright. Chinese people believe that a round moon means family reunion, so families try to get together on this night. They sit in the yard, look at the full moon and eat mooncakes. Mooncakes are round and sweet, with many different fillings. Children also love the old story of Chang'e, the lady who flew to the moon. The festival is a happy time for families to share love and good food.",
+      "questions": [
+        {
+          "qid": "g9u2.rd1.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd1",
+          "stem": "When does the Mid-Autumn Festival fall?",
+          "options": [
+            "On October 1st.",
+            "On the 15th day of the 8th lunar month.",
+            "On December 25th.",
+            "On the first day of the year."
+          ],
+          "answer_index": 1,
+          "answer_text": "On the 15th day of the 8th lunar month.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd1.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd1",
+          "stem": "What does a round moon mean to Chinese people?",
+          "options": [
+            "Good weather.",
+            "Family reunion.",
+            "A new year.",
+            "Hard work."
+          ],
+          "answer_index": 1,
+          "answer_text": "Family reunion.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd1.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd1",
+          "stem": "What do families do on this night?",
+          "options": [
+            "Watch dragon boat races.",
+            "Throw water at each other.",
+            "Give red packets.",
+            "Look at the full moon and eat mooncakes."
+          ],
+          "answer_index": 3,
+          "answer_text": "Look at the full moon and eat mooncakes.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd1.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd1",
+          "stem": "What are mooncakes like?",
+          "options": [
+            "Long and salty.",
+            "Hot and spicy.",
+            "Green and sour.",
+            "Round and sweet with different fillings."
+          ],
+          "answer_index": 3,
+          "answer_text": "Round and sweet with different fillings.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd1.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd1",
+          "stem": "Whose story do children love?",
+          "options": [
+            "Chang'e's.",
+            "Qu Yuan's.",
+            "Santa's.",
+            "The Monkey King's."
+          ],
+          "answer_index": 0,
+          "answer_text": "Chang'e's.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.rd2",
+      "title": "Tom's First Spring Festival",
+      "genre": "记叙文",
+      "body": "Last winter, Tom, an exchange student from London, spent his first Spring Festival in a small Chinese village. His friend Lin invited him home for the holiday. On New Year's Eve, the whole family cleaned the house and put up red couplets on the doors. In the evening, they made dumplings together and watched the Spring Festival show on TV. At midnight, Tom heard firecrackers outside and saw the sky full of light. The next morning, Lin's grandparents gave the children red packets with money inside. Tom was very surprised and happy. He said it was the most exciting festival he had ever had.",
+      "questions": [
+        {
+          "qid": "g9u2.rd2.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd2",
+          "stem": "Where is Tom from?",
+          "options": [
+            "Sydney.",
+            "London.",
+            "New York.",
+            "Tokyo."
+          ],
+          "answer_index": 1,
+          "answer_text": "London.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd2.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd2",
+          "stem": "Where did Tom spend Spring Festival?",
+          "options": [
+            "In a big city.",
+            "At school.",
+            "In a small Chinese village.",
+            "In London."
+          ],
+          "answer_index": 2,
+          "answer_text": "In a small Chinese village.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd2.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd2",
+          "stem": "What did the family do on New Year's Eve?",
+          "options": [
+            "Cleaned the house and made dumplings.",
+            "Watched a film at the cinema.",
+            "Went swimming.",
+            "Visited a museum."
+          ],
+          "answer_index": 0,
+          "answer_text": "Cleaned the house and made dumplings.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd2.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd2",
+          "stem": "What did the grandparents give the children?",
+          "options": [
+            "Red packets with money.",
+            "Books and pens.",
+            "New clothes.",
+            "Toy cars."
+          ],
+          "answer_index": 0,
+          "answer_text": "Red packets with money.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd2.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd2",
+          "stem": "How did Tom feel about the festival?",
+          "options": [
+            "It was the most exciting one he had ever had.",
+            "It was boring.",
+            "It was too quiet.",
+            "It was scary."
+          ],
+          "answer_index": 0,
+          "answer_text": "It was the most exciting one he had ever had.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.rd3",
+      "title": "Spring Festival and Christmas",
+      "genre": "对比说明",
+      "body": "Spring Festival in China and Christmas in the West are both important family festivals, but they have some differences. Both are a time for family: people come home, share a big meal and give presents to each other. However, the dates are different. Spring Festival follows the lunar calendar, so it falls on a different day each year, usually in late January or February. Christmas is always on December 25th. The food is different too. At Spring Festival, Chinese families eat dumplings and fish, while at Christmas many Western families eat turkey. Though the customs are not the same, both festivals carry the same warm wish: happiness for the whole family.",
+      "questions": [
+        {
+          "qid": "g9u2.rd3.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd3",
+          "stem": "What do the two festivals have in common?",
+          "options": [
+            "Both fall on the same day.",
+            "Both are a time for family.",
+            "Both have the same food.",
+            "Both last one month."
+          ],
+          "answer_index": 1,
+          "answer_text": "Both are a time for family.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd3.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd3",
+          "stem": "When is Spring Festival?",
+          "options": [
+            "Always on December 25th.",
+            "Always in April.",
+            "On October 1st.",
+            "In late January or February."
+          ],
+          "answer_index": 3,
+          "answer_text": "In late January or February.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd3.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd3",
+          "stem": "When is Christmas?",
+          "options": [
+            "On a different day each year.",
+            "In February.",
+            "On December 25th.",
+            "In June."
+          ],
+          "answer_index": 2,
+          "answer_text": "On December 25th.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd3.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd3",
+          "stem": "What do many Western families eat at Christmas?",
+          "options": [
+            "Turkey.",
+            "Dumplings.",
+            "Zongzi.",
+            "Mooncakes."
+          ],
+          "answer_index": 0,
+          "answer_text": "Turkey.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd3.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd3",
+          "stem": "What wish do both festivals carry?",
+          "options": [
+            "Success at work.",
+            "Good weather.",
+            "More money.",
+            "Happiness for the whole family."
+          ],
+          "answer_index": 3,
+          "answer_text": "Happiness for the whole family.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.rd4",
+      "title": "An Invitation to the Dragon Boat Festival",
+      "genre": "书信",
+      "body": "Dear Jack, How are you? I'm writing to invite you to visit my city during the Dragon Boat Festival in June. It is one of the most exciting festivals in China. On that day, people watch dragon boat races by the river. The boats are long and colourful, and the teams row very fast to the sound of drums. We also eat zongzi, sticky rice wrapped in green leaves. My mother makes the best zongzi! The festival remembers an old poet who loved his country. I'm sure you will love the races and the food. Please come and join us! Your friend, Li Hua",
+      "questions": [
+        {
+          "qid": "g9u2.rd4.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd4",
+          "stem": "Why is Li Hua writing the letter?",
+          "options": [
+            "To invite Jack to the Dragon Boat Festival.",
+            "To say goodbye.",
+            "To borrow money.",
+            "To ask for homework."
+          ],
+          "answer_index": 0,
+          "answer_text": "To invite Jack to the Dragon Boat Festival.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd4.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd4",
+          "stem": "When is the Dragon Boat Festival?",
+          "options": [
+            "In June.",
+            "In December.",
+            "In April.",
+            "In September."
+          ],
+          "answer_index": 0,
+          "answer_text": "In June.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd4.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd4",
+          "stem": "What do people watch on that day?",
+          "options": [
+            "Dragon boat races.",
+            "Lantern shows.",
+            "Football matches.",
+            "Films."
+          ],
+          "answer_index": 0,
+          "answer_text": "Dragon boat races.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd4.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd4",
+          "stem": "What is zongzi?",
+          "options": [
+            "A round sweet cake.",
+            "Sticky rice wrapped in green leaves.",
+            "A kind of soup.",
+            "A green drink."
+          ],
+          "answer_index": 1,
+          "answer_text": "Sticky rice wrapped in green leaves.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd4.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd4",
+          "stem": "Who does the festival remember?",
+          "options": [
+            "A famous king.",
+            "A brave soldier.",
+            "An old poet who loved his country.",
+            "A rich businessman."
+          ],
+          "answer_index": 2,
+          "answer_text": "An old poet who loved his country.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.rd5",
+      "title": "Why Festivals Still Matter",
+      "genre": "议论文",
+      "body": "Today some young people think that traditional festivals are old-fashioned. They prefer shopping online or playing games. But traditional festivals still matter a lot. First, they bring families together. In our busy life, festivals give us a reason to go home and meet the people we love. Second, festivals help us remember our culture and history. Through festival food, stories and customs, young people learn where they come from. Finally, festivals make life more colourful and fun. Without them, the year would feel the same from beginning to end. So we should keep our festivals alive and pass them on to the next generation.",
+      "questions": [
+        {
+          "qid": "g9u2.rd5.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd5",
+          "stem": "What do some young people think about traditional festivals?",
+          "options": [
+            "They are too expensive.",
+            "They are dangerous.",
+            "They are too short.",
+            "They are old-fashioned."
+          ],
+          "answer_index": 3,
+          "answer_text": "They are old-fashioned.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd5.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd5",
+          "stem": "What is the first reason festivals matter?",
+          "options": [
+            "They save money.",
+            "They bring families together.",
+            "They are easy.",
+            "They are quiet."
+          ],
+          "answer_index": 1,
+          "answer_text": "They bring families together.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd5.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd5",
+          "stem": "How do festivals help with culture?",
+          "options": [
+            "Through festival food, stories and customs.",
+            "By selling things online.",
+            "By playing games.",
+            "By cleaning houses."
+          ],
+          "answer_index": 0,
+          "answer_text": "Through festival food, stories and customs.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd5.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd5",
+          "stem": "What would the year feel like without festivals?",
+          "options": [
+            "Much shorter.",
+            "Much busier.",
+            "More expensive.",
+            "The same from beginning to end."
+          ],
+          "answer_index": 3,
+          "answer_text": "The same from beginning to end.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd5.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd5",
+          "stem": "What does the writer suggest?",
+          "options": [
+            "Stop all festivals.",
+            "Only shop online.",
+            "Keep festivals alive and pass them on.",
+            "Forget old customs."
+          ],
+          "answer_index": 2,
+          "answer_text": "Keep festivals alive and pass them on.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.rd6",
+      "title": "The Water Festival",
+      "genre": "应用说明",
+      "body": "The Water Festival is the most important festival for the Dai people in Yunnan, China. It also takes place in Thailand and some other countries in April. During the festival, people go out into the streets and throw water at each other. You may get very wet, but no one gets angry. In fact, getting wet is a good thing! People believe that the water washes away bad luck and brings a happy new year. Besides throwing water, people also watch dragon boat races, sing and dance. The Water Festival is a time of joy, and visitors from all over the world come to join the fun.",
+      "questions": [
+        {
+          "qid": "g9u2.rd6.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd6",
+          "stem": "Who is the Water Festival most important for?",
+          "options": [
+            "The British.",
+            "The Dai people.",
+            "The Americans.",
+            "The Japanese."
+          ],
+          "answer_index": 1,
+          "answer_text": "The Dai people.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd6.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd6",
+          "stem": "When does it take place?",
+          "options": [
+            "In December.",
+            "In September.",
+            "In January.",
+            "In April."
+          ],
+          "answer_index": 3,
+          "answer_text": "In April.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd6.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd6",
+          "stem": "What do people do during the festival?",
+          "options": [
+            "Light lanterns.",
+            "Climb mountains.",
+            "Throw water at each other.",
+            "Watch films."
+          ],
+          "answer_index": 2,
+          "answer_text": "Throw water at each other.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd6.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd6",
+          "stem": "Why is getting wet a good thing?",
+          "options": [
+            "The weather is hot.",
+            "Water is cheap.",
+            "It saves time.",
+            "The water washes away bad luck."
+          ],
+          "answer_index": 3,
+          "answer_text": "The water washes away bad luck.",
+          "explanation": "见原文对应句"
+        },
+        {
+          "qid": "g9u2.rd6.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.rd6",
+          "stem": "Who comes to join the fun?",
+          "options": [
+            "Visitors from all over the world.",
+            "Only the Dai people.",
+            "Only children.",
+            "Only teachers."
+          ],
+          "answer_index": 0,
+          "answer_text": "Visitors from all over the world.",
+          "explanation": "见原文对应句"
+        }
+      ]
+    }
+  ]
+}

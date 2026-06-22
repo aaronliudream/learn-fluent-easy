@@ -1,0 +1,1008 @@
+{
+  "volume": "g9",
+  "unit": "U2",
+  "passages": [
+    {
+      "code": "g9u2.cz1",
+      "title": "The Lantern Festival",
+      "text": "The Lantern Festival comes on the fifteenth day of the first lunar (1)____, two weeks after Spring Festival. It marks the (2)____ of the New Year celebrations. On this night, the streets are full of beautiful (3)____ in many shapes and colours. Children carry small ones and walk (4)____ the streets happily. Many lanterns have riddles on them, and people try to (5)____ the answers. Families also eat tangyuan, sweet rice (6)____ that are round and soft. The round shape (7)____ family reunion, just like the full moon. Long ago, people lit lanterns to (8)____ for good luck. Today the festival is still very (9)____, and parks hold big lantern shows. It is a (10)____ end to the Spring Festival holiday.",
+      "questions": [
+        {
+          "qid": "g9u2.cz1.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 1,
+          "options": [
+            "week",
+            "day",
+            "year",
+            "month"
+          ],
+          "answer_index": 3,
+          "answer_text": "month",
+          "explanation": "first lunar month 正月"
+        },
+        {
+          "qid": "g9u2.cz1.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 2,
+          "options": [
+            "start",
+            "middle",
+            "end",
+            "top"
+          ],
+          "answer_index": 2,
+          "answer_text": "end",
+          "explanation": "marks the end 标志结束"
+        },
+        {
+          "qid": "g9u2.cz1.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 3,
+          "options": [
+            "books",
+            "cars",
+            "lanterns",
+            "trees"
+          ],
+          "answer_index": 2,
+          "answer_text": "lanterns",
+          "explanation": "灯笼"
+        },
+        {
+          "qid": "g9u2.cz1.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 4,
+          "options": [
+            "under",
+            "along",
+            "into",
+            "off"
+          ],
+          "answer_index": 1,
+          "answer_text": "along",
+          "explanation": "walk along the streets 沿街"
+        },
+        {
+          "qid": "g9u2.cz1.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 5,
+          "options": [
+            "throw",
+            "lose",
+            "guess",
+            "cut"
+          ],
+          "answer_index": 2,
+          "answer_text": "guess",
+          "explanation": "guess the answers 猜谜底"
+        },
+        {
+          "qid": "g9u2.cz1.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 6,
+          "options": [
+            "cards",
+            "boxes",
+            "leaves",
+            "balls"
+          ],
+          "answer_index": 3,
+          "answer_text": "balls",
+          "explanation": "rice balls 汤圆"
+        },
+        {
+          "qid": "g9u2.cz1.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 7,
+          "options": [
+            "asks",
+            "stops",
+            "means",
+            "leaves"
+          ],
+          "answer_index": 2,
+          "answer_text": "means",
+          "explanation": "圆形象征团圆"
+        },
+        {
+          "qid": "g9u2.cz1.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 8,
+          "options": [
+            "hope",
+            "hate",
+            "fear",
+            "fail"
+          ],
+          "answer_index": 0,
+          "answer_text": "hope",
+          "explanation": "to hope for good luck 祈求好运"
+        },
+        {
+          "qid": "g9u2.cz1.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 9,
+          "options": [
+            "empty",
+            "silent",
+            "popular",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "answer_text": "popular",
+          "explanation": "仍很受欢迎"
+        },
+        {
+          "qid": "g9u2.cz1.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz1",
+          "blank": 10,
+          "options": [
+            "boring",
+            "scary",
+            "happy",
+            "terrible"
+          ],
+          "answer_index": 2,
+          "answer_text": "happy",
+          "explanation": "欢乐的结尾"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.cz2",
+      "title": "My First Thanksgiving",
+      "text": "Last November, I stayed with a host (1)____ in the United States and had my first Thanksgiving. Thanksgiving is an important American (2)____. On that day, families get (3)____ to give thanks for the good things in their life. My host mother (4)____ a big dinner. The main dish was a large (5)____, and there were also potatoes and pumpkin pie. Before we (6)____, everyone said what they were thankful (7)____. I said I was thankful for my new friends. The food was (8)____, and I ate too much! After dinner, we (9)____ games and talked for hours. It was a warm evening, and I will never (10)____ my first Thanksgiving.",
+      "questions": [
+        {
+          "qid": "g9u2.cz2.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 1,
+          "options": [
+            "school",
+            "family",
+            "shop",
+            "team"
+          ],
+          "answer_index": 1,
+          "answer_text": "family",
+          "explanation": "host family 寄宿家庭"
+        },
+        {
+          "qid": "g9u2.cz2.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 2,
+          "options": [
+            "lesson",
+            "festival",
+            "game",
+            "sport"
+          ],
+          "answer_index": 1,
+          "answer_text": "festival",
+          "explanation": "美国重要节日"
+        },
+        {
+          "qid": "g9u2.cz2.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 3,
+          "options": [
+            "away",
+            "lost",
+            "together",
+            "angry"
+          ],
+          "answer_index": 2,
+          "answer_text": "together",
+          "explanation": "get together 团聚"
+        },
+        {
+          "qid": "g9u2.cz2.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 4,
+          "options": [
+            "cooked",
+            "washed",
+            "sold",
+            "broke"
+          ],
+          "answer_index": 0,
+          "answer_text": "cooked",
+          "explanation": "cook dinner 做饭"
+        },
+        {
+          "qid": "g9u2.cz2.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 5,
+          "options": [
+            "fish",
+            "cake",
+            "soup",
+            "turkey"
+          ],
+          "answer_index": 3,
+          "answer_text": "turkey",
+          "explanation": "火鸡是主菜"
+        },
+        {
+          "qid": "g9u2.cz2.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 6,
+          "options": [
+            "slept",
+            "ran",
+            "ate",
+            "left"
+          ],
+          "answer_index": 2,
+          "answer_text": "ate",
+          "explanation": "before we ate 吃饭前"
+        },
+        {
+          "qid": "g9u2.cz2.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 7,
+          "options": [
+            "at",
+            "in",
+            "for",
+            "on"
+          ],
+          "answer_index": 2,
+          "answer_text": "for",
+          "explanation": "thankful for 感激"
+        },
+        {
+          "qid": "g9u2.cz2.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 8,
+          "options": [
+            "terrible",
+            "ugly",
+            "delicious",
+            "empty"
+          ],
+          "answer_index": 2,
+          "answer_text": "delicious",
+          "explanation": "食物美味"
+        },
+        {
+          "qid": "g9u2.cz2.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 9,
+          "options": [
+            "lost",
+            "played",
+            "missed",
+            "stopped"
+          ],
+          "answer_index": 1,
+          "answer_text": "played",
+          "explanation": "play games 玩游戏"
+        },
+        {
+          "qid": "g9u2.cz2.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz2",
+          "blank": 10,
+          "options": [
+            "clean",
+            "sell",
+            "miss",
+            "forget"
+          ],
+          "answer_index": 3,
+          "answer_text": "forget",
+          "explanation": "never forget 永不忘"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.cz3",
+      "title": "Our Culture Festival",
+      "text": "Last Friday, our school held an International Culture (1)____. Each class showed the festivals of a different (2)____. My class chose China. We made paper (3)____ and wrote Spring Festival couplets. The students in Class Two showed Christmas, with a big green (4)____ and small gifts. Another class (5)____ everyone an Indian dance. The hall was full of music, colour and (6)____ food from around the world. I (7)____ a sweet rice cake from the Japan booth — it was new to me but very nice. Through the festival, we (8)____ a lot about other cultures. We also felt (9)____ of our own traditions. Everyone agreed it was the best school (10)____ of the year.",
+      "questions": [
+        {
+          "qid": "g9u2.cz3.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 1,
+          "options": [
+            "lesson",
+            "Festival",
+            "exam",
+            "match"
+          ],
+          "answer_index": 1,
+          "answer_text": "Festival",
+          "explanation": "文化节"
+        },
+        {
+          "qid": "g9u2.cz3.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 2,
+          "options": [
+            "country",
+            "school",
+            "family",
+            "year"
+          ],
+          "answer_index": 0,
+          "answer_text": "country",
+          "explanation": "不同国家"
+        },
+        {
+          "qid": "g9u2.cz3.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 3,
+          "options": [
+            "cars",
+            "boats",
+            "lanterns",
+            "planes"
+          ],
+          "answer_index": 2,
+          "answer_text": "lanterns",
+          "explanation": "纸灯笼"
+        },
+        {
+          "qid": "g9u2.cz3.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 4,
+          "options": [
+            "box",
+            "tree",
+            "bell",
+            "star"
+          ],
+          "answer_index": 1,
+          "answer_text": "tree",
+          "explanation": "Christmas tree 圣诞树"
+        },
+        {
+          "qid": "g9u2.cz3.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 5,
+          "options": [
+            "sold",
+            "bought",
+            "taught",
+            "threw"
+          ],
+          "answer_index": 2,
+          "answer_text": "taught",
+          "explanation": "teach a dance 教舞蹈"
+        },
+        {
+          "qid": "g9u2.cz3.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 6,
+          "options": [
+            "ugly",
+            "tasty",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 1,
+          "answer_text": "tasty",
+          "explanation": "美味的食物"
+        },
+        {
+          "qid": "g9u2.cz3.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 7,
+          "options": [
+            "threw",
+            "lost",
+            "tried",
+            "broke"
+          ],
+          "answer_index": 2,
+          "answer_text": "tried",
+          "explanation": "try food 品尝"
+        },
+        {
+          "qid": "g9u2.cz3.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 8,
+          "options": [
+            "learned",
+            "forgot",
+            "lost",
+            "missed"
+          ],
+          "answer_index": 0,
+          "answer_text": "learned",
+          "explanation": "learn about 了解"
+        },
+        {
+          "qid": "g9u2.cz3.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 9,
+          "options": [
+            "afraid",
+            "proud",
+            "tired",
+            "bored"
+          ],
+          "answer_index": 1,
+          "answer_text": "proud",
+          "explanation": "proud of 自豪"
+        },
+        {
+          "qid": "g9u2.cz3.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz3",
+          "blank": 10,
+          "options": [
+            "exam",
+            "event",
+            "rule",
+            "problem"
+          ],
+          "answer_index": 1,
+          "answer_text": "event",
+          "explanation": "最棒的活动"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.cz4",
+      "title": "A Christmas Morning",
+      "text": "On Christmas (1)____, my sister and I woke up very early. We ran to the living room and saw a big Christmas (2)____ with colourful lights. Under it, there were many (3)____ wrapped in shiny paper. We could not (4)____ to open them! I got a new book, and my sister got a beautiful (5)____. We said \"Thank you\" to our parents and gave them our cards. Then the whole family had a big (6)____ together. My mother had cooked a turkey, and the kitchen smelled (7)____. After lunch, we sang Christmas (8)____ and called our grandparents to say \"(9)____ Christmas\". It was a warm and (10)____ day that I will always remember.",
+      "questions": [
+        {
+          "qid": "g9u2.cz4.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 1,
+          "options": [
+            "night",
+            "morning",
+            "week",
+            "year"
+          ],
+          "answer_index": 1,
+          "answer_text": "morning",
+          "explanation": "圣诞节早晨"
+        },
+        {
+          "qid": "g9u2.cz4.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 2,
+          "options": [
+            "box",
+            "car",
+            "wall",
+            "tree"
+          ],
+          "answer_index": 3,
+          "answer_text": "tree",
+          "explanation": "圣诞树"
+        },
+        {
+          "qid": "g9u2.cz4.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 3,
+          "options": [
+            "problems",
+            "lessons",
+            "presents",
+            "rules"
+          ],
+          "answer_index": 2,
+          "answer_text": "presents",
+          "explanation": "礼物"
+        },
+        {
+          "qid": "g9u2.cz4.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 4,
+          "options": [
+            "run",
+            "sleep",
+            "wait",
+            "cry"
+          ],
+          "answer_index": 2,
+          "answer_text": "wait",
+          "explanation": "could not wait 迫不及待"
+        },
+        {
+          "qid": "g9u2.cz4.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 5,
+          "options": [
+            "knife",
+            "stone",
+            "brick",
+            "doll"
+          ],
+          "answer_index": 3,
+          "answer_text": "doll",
+          "explanation": "洋娃娃"
+        },
+        {
+          "qid": "g9u2.cz4.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 6,
+          "options": [
+            "game",
+            "meal",
+            "test",
+            "trip"
+          ],
+          "answer_index": 1,
+          "answer_text": "meal",
+          "explanation": "a big meal 大餐"
+        },
+        {
+          "qid": "g9u2.cz4.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 7,
+          "options": [
+            "terrible",
+            "empty",
+            "silent",
+            "wonderful"
+          ],
+          "answer_index": 3,
+          "answer_text": "wonderful",
+          "explanation": "smell wonderful 香"
+        },
+        {
+          "qid": "g9u2.cz4.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 8,
+          "options": [
+            "songs",
+            "books",
+            "games",
+            "cards"
+          ],
+          "answer_index": 0,
+          "answer_text": "songs",
+          "explanation": "Christmas songs 圣诞歌"
+        },
+        {
+          "qid": "g9u2.cz4.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 9,
+          "options": [
+            "Merry",
+            "sad",
+            "angry",
+            "late"
+          ],
+          "answer_index": 0,
+          "answer_text": "Merry",
+          "explanation": "Merry Christmas 圣诞快乐"
+        },
+        {
+          "qid": "g9u2.cz4.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz4",
+          "blank": 10,
+          "options": [
+            "boring",
+            "happy",
+            "scary",
+            "sad"
+          ],
+          "answer_index": 1,
+          "answer_text": "happy",
+          "explanation": "温暖快乐的一天"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.cz5",
+      "title": "My First Halloween",
+      "text": "When I was studying in Canada, I (1)____ my first Halloween on October 31st. In the afternoon, my friends and I made lanterns from big orange (2)____. We cut funny faces on them and put a light (3)____. In the evening, we put on scary (4)____. I dressed up as a black cat! Then we went from house to (5)____ in our neighbourhood. At each door, we said \"Trick or (6)____!\" and people gave us sweets. Soon my bag was (7)____ of candy. Some houses looked really (8)____, with fake spiders and ghosts. At first I was a little (9)____, but it was actually great fun. Halloween is a (10)____ festival, and I enjoyed every minute of it.",
+      "questions": [
+        {
+          "qid": "g9u2.cz5.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 1,
+          "options": [
+            "lost",
+            "missed",
+            "sold",
+            "celebrated"
+          ],
+          "answer_index": 3,
+          "answer_text": "celebrated",
+          "explanation": "过节"
+        },
+        {
+          "qid": "g9u2.cz5.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 2,
+          "options": [
+            "apples",
+            "pumpkins",
+            "oranges",
+            "potatoes"
+          ],
+          "answer_index": 1,
+          "answer_text": "pumpkins",
+          "explanation": "南瓜"
+        },
+        {
+          "qid": "g9u2.cz5.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 3,
+          "options": [
+            "outside",
+            "away",
+            "off",
+            "inside"
+          ],
+          "answer_index": 3,
+          "answer_text": "inside",
+          "explanation": "put a light inside 里面放灯"
+        },
+        {
+          "qid": "g9u2.cz5.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 4,
+          "options": [
+            "costumes",
+            "books",
+            "songs",
+            "games"
+          ],
+          "answer_index": 0,
+          "answer_text": "costumes",
+          "explanation": "scary costumes 吓人服装"
+        },
+        {
+          "qid": "g9u2.cz5.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 5,
+          "options": [
+            "school",
+            "house",
+            "river",
+            "hill"
+          ],
+          "answer_index": 1,
+          "answer_text": "house",
+          "explanation": "house to house 挨家挨户"
+        },
+        {
+          "qid": "g9u2.cz5.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 6,
+          "options": [
+            "treat",
+            "trip",
+            "team",
+            "test"
+          ],
+          "answer_index": 0,
+          "answer_text": "treat",
+          "explanation": "Trick or treat 不给糖就捣蛋"
+        },
+        {
+          "qid": "g9u2.cz5.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 7,
+          "options": [
+            "free",
+            "short",
+            "late",
+            "full"
+          ],
+          "answer_index": 3,
+          "answer_text": "full",
+          "explanation": "full of candy 装满糖"
+        },
+        {
+          "qid": "g9u2.cz5.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 8,
+          "options": [
+            "scary",
+            "lovely",
+            "quiet",
+            "empty"
+          ],
+          "answer_index": 0,
+          "answer_text": "scary",
+          "explanation": "房子很吓人"
+        },
+        {
+          "qid": "g9u2.cz5.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 9,
+          "options": [
+            "proud",
+            "tired",
+            "afraid",
+            "sure"
+          ],
+          "answer_index": 2,
+          "answer_text": "afraid",
+          "explanation": "起初有点害怕"
+        },
+        {
+          "qid": "g9u2.cz5.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz5",
+          "blank": 10,
+          "options": [
+            "boring",
+            "fun",
+            "sad",
+            "terrible"
+          ],
+          "answer_index": 1,
+          "answer_text": "fun",
+          "explanation": "有趣的节日"
+        }
+      ]
+    },
+    {
+      "code": "g9u2.cz6",
+      "title": "A Mid-Autumn Reunion",
+      "text": "Every year on Mid-Autumn night, my family has a big reunion (1)____. This year my aunt came back from far away, so everyone was very (2)____. After dinner, we carried chairs into the (3)____ and sat under the night sky. The moon was round and (4)____, the brightest I had ever seen. We ate (5)____ together, and each one had a different filling. My grandfather told us the old (6)____ of Chang'e flying to the moon. My little cousin listened with wide (7)____. We also took many photos to (8)____ this happy moment. My mother said the round moon (9)____ that our family is always together, even when we are far (10)____. It was a perfect night.",
+      "questions": [
+        {
+          "qid": "g9u2.cz6.q1",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 1,
+          "options": [
+            "exam",
+            "dinner",
+            "game",
+            "trip"
+          ],
+          "answer_index": 1,
+          "answer_text": "dinner",
+          "explanation": "团圆饭"
+        },
+        {
+          "qid": "g9u2.cz6.q2",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 2,
+          "options": [
+            "angry",
+            "tired",
+            "happy",
+            "sad"
+          ],
+          "answer_index": 2,
+          "answer_text": "happy",
+          "explanation": "非常高兴"
+        },
+        {
+          "qid": "g9u2.cz6.q3",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 3,
+          "options": [
+            "river",
+            "school",
+            "shop",
+            "garden"
+          ],
+          "answer_index": 3,
+          "answer_text": "garden",
+          "explanation": "院子里"
+        },
+        {
+          "qid": "g9u2.cz6.q4",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 4,
+          "options": [
+            "dark",
+            "bright",
+            "small",
+            "empty"
+          ],
+          "answer_index": 1,
+          "answer_text": "bright",
+          "explanation": "又圆又亮"
+        },
+        {
+          "qid": "g9u2.cz6.q5",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 5,
+          "options": [
+            "mooncakes",
+            "dumplings",
+            "noodles",
+            "bread"
+          ],
+          "answer_index": 0,
+          "answer_text": "mooncakes",
+          "explanation": "吃月饼"
+        },
+        {
+          "qid": "g9u2.cz6.q6",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 6,
+          "options": [
+            "song",
+            "game",
+            "rule",
+            "story"
+          ],
+          "answer_index": 3,
+          "answer_text": "story",
+          "explanation": "嫦娥的故事"
+        },
+        {
+          "qid": "g9u2.cz6.q7",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 7,
+          "options": [
+            "ears",
+            "hands",
+            "eyes",
+            "feet"
+          ],
+          "answer_index": 2,
+          "answer_text": "eyes",
+          "explanation": "with wide eyes 睁大眼睛"
+        },
+        {
+          "qid": "g9u2.cz6.q8",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 8,
+          "options": [
+            "remember",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "answer_text": "remember",
+          "explanation": "to remember 记住此刻"
+        },
+        {
+          "qid": "g9u2.cz6.q9",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 9,
+          "options": [
+            "means",
+            "asks",
+            "stops",
+            "hopes"
+          ],
+          "answer_index": 0,
+          "answer_text": "means",
+          "explanation": "圆月象征团圆"
+        },
+        {
+          "qid": "g9u2.cz6.q10",
+          "volume": "g9",
+          "unit": "U2",
+          "code": "g9u2.cz6",
+          "blank": 10,
+          "options": [
+            "ago",
+            "along",
+            "off",
+            "apart"
+          ],
+          "answer_index": 3,
+          "answer_text": "apart",
+          "explanation": "far apart 远隔"
+        }
+      ]
+    }
+  ]
+}

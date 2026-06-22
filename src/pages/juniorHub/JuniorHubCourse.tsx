@@ -8,7 +8,7 @@ export default function JuniorHubCourse() {
   const nav = useNavigate();
   const course = getGradeCourse(grade);
   const base = `/junior/hub/${grade}`;
-  const [v1, v2] = semesterIdsForGrade(grade);
+  const semIds = semesterIdsForGrade(grade);
 
   return (
     <>
@@ -18,8 +18,9 @@ export default function JuniorHubCourse() {
       </div>
       <div className="px-4 pt-4">
         <div className="mb-2 text-base font-semibold">{course.name}</div>
-        {[v1, v2].map((semId) => {
+        {semIds.map((semId) => {
           const sem = course.semesters[semId];
+          if (!sem) return null;
           const sp = getSemesterProgress(state, semId);
           const locked = !sem.available;
           return (

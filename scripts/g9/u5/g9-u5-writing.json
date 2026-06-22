@@ -1,0 +1,36 @@
+{
+  "volume": "9",
+  "unit": "U5",
+  "writing": {
+    "volume": "9",
+    "unit": "U5",
+    "code": "g9u5.w.01",
+    "type": "guided_writing",
+    "title": "How a Product Is Made",
+    "genre": "说明短文 (descriptive paragraph)",
+    "prompt_cn": "用被动语态介绍一种你熟悉的传统工艺品或产品(如风筝、剪纸、茶、瓷器等)是怎样制作的。写清原料、制作步骤、产地或特色。60词左右。",
+    "key_points": [
+      "这个产品由什么材料制成(be made of/from)",
+      "在哪里制造或出产(be made/produced in)",
+      "制作的主要步骤(被动语态:is/are + 过去分词)",
+      "它有什么特色或为什么受欢迎"
+    ],
+    "useful_expressions": [
+      "be made of / from ...",
+      "be made / produced in ...",
+      "First, ... is/are ...",
+      "Then it is ...",
+      "Finally, it is ...",
+      "be known for ...",
+      "by hand",
+      "with great care"
+    ],
+    "sample": "Let me tell you how a kite is made. A Chinese kite is made of paper and thin bamboo. Most kites are made by hand by local people. First, the bamboo is cut and joined into a light frame. Then paper is put on the frame. After that, the kite is painted in bright and lively colors. Finally, a long string is added. Weifang is known for its beautiful kites. A good kite is made with great care, so it can fly high in the sky.",
+    "scoring": [
+      "内容完整:含材料/产地/步骤/特色四要点(4分)",
+      "被动语态:正确使用 is/are/was/were + 过去分词(3分)",
+      "语句通顺、衔接词得当 First/Then/Finally(2分)",
+      "词数达标、书写规范(1分)"
+    ]
+  }
+}

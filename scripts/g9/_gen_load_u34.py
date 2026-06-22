@@ -18,6 +18,7 @@ NUM = {"01": "①", "02": "②", "03": "③"}
 CFG = {
  "u3": {"unit": "U3", "cefr": "B1", "ltopic": "九年级 Unit3 听力·问路与礼貌请求"},
  "u4": {"unit": "U4", "cefr": "B1", "ltopic": "九年级 Unit4 听力·成长变化(used to)"},
+ "u5": {"unit": "U5", "cefr": "B1", "ltopic": "九年级 Unit5 听力·被动语态/制作工艺"},
 }
 def q(s): return str(s).replace("'", "''")
 def jb(o): return "'" + json.dumps(o, ensure_ascii=False).replace("'", "''") + "'::jsonb"
@@ -55,9 +56,11 @@ def gen(ukey):
     S.append(f"DELETE FROM public.junior_reading WHERE volume='{VOL}' AND unit='{U}';")
     for p in reading["passages"]:
         wc = len(p["body"].split())
-        qs = [{"q": x["stem"], "answer": LET[x["answer_index"]], "options": x["options"], "explanation": x["explanation"]} for x in p["questions"]]
+        genre = p.get("genre") or p.get("topic") or ""   # 兼容 genre/topic
+        qs = [{"q": x.get("stem") or x.get("q"), "answer": LET[x["answer_index"]], "options": x["options"], "explanation": x.get("explanation", "")} for x in p["questions"]]  # 兼容 stem/q
+        vn = p.get("vocab_notes", [])   # g8 基线必填:每篇3生词
         S.append("INSERT INTO public.junior_reading (id, grade, title, body, topic, word_count, questions, vocab_notes, difficulty, volume, unit) "
-            f"VALUES (gen_random_uuid(), 9, '{q(p['title'])}', '{q(p['body'])}', '{q(p['genre'])}', {wc}, {jb(qs)}, '[]'::jsonb, 3, '{VOL}', '{U}');")
+            f"VALUES (gen_random_uuid(), 9, '{q(p['title'])}', '{q(p['body'])}', '{q(genre)}', {wc}, {jb(qs)}, {jb(vn)}, 3, '{VOL}', '{U}');")
 
     # 3) cloze(兼容 body/text)
     S.append(f"\n-- ===== junior_cloze (预期 {len(cloze['passages'])}) =====")
@@ -73,15 +76,20 @@ def gen(ukey):
     S.append(f"DELETE FROM public.junior_listening_exercises WHERE volume='{VOL}' AND unit='{U}';")
     for e in listening["exercises"]:
         tr = "\n".join(e["transcript"])
+        kind = "long" if e.get("type") == "dialogue" else "short"   # 按 type 派生,统一 long/short(兼容 kind=passage)
+        tcn = e.get("translation_cn", "")
         qs = [{"q": x["stem"], "type": "choice", "answer": LET[x["answer_index"]], "options": x["options"]} for x in e["questions"]]
         S.append("INSERT INTO public.junior_listening_exercises (id, grade, title, topic, difficulty, transcript, translation_cn, speaker, questions, key_vocab, kind, volume, unit) "
-            f"VALUES (gen_random_uuid(), 9, '{q(e['title'])}', '{q(cfg['ltopic'])}', 2, '{q(tr)}', '{q(e['translation_cn'])}', '{q(e['speaker'])}', {jb(qs)}, '[]'::jsonb, '{q(e['kind'])}', '{VOL}', '{U}');")
+            f"VALUES (gen_random_uuid(), 9, '{q(e['title'])}', '{q(cfg['ltopic'])}', 2, '{q(tr)}', '{q(tcn)}', '{q(e['speaker'])}', {jb(qs)}, '[]'::jsonb, '{kind}', '{VOL}', '{U}');")
 
     # 5) writing(字段映射)
     S.append("\n-- ===== junior_writing_prompts (预期 1) =====")
     w = writing["writing"] if "writing" in writing else writing
     topic = w["title"]; prompt_en = f'Write a short passage on the topic: "{w["title"]}".'
-    sc = w.get("scoring", {}); rubric = "；".join(f"{k}:{v}" for k, v in sc.items()) if sc else "按内容/语言/结构/字数四档评分"
+    sc = w.get("scoring")   # 兼容 dict / list
+    if isinstance(sc, dict): rubric = "；".join(f"{k}:{v}" for k, v in sc.items())
+    elif isinstance(sc, list): rubric = "；".join(str(x) for x in sc)
+    else: rubric = "按内容/语言/结构/字数四档评分"
     paragraph_template = "要点:" + "；".join(w.get("key_points", []))
     high = w.get("useful_expressions", []); errs = []
     S.append("INSERT INTO public.junior_writing_prompts (id, grade, topic, prompt_cn, prompt_en, requirements, min_words, max_words, sample_answer, scoring_rubric, difficulty, title_en, high_sentences, error_pairs, paragraph_template, volume, unit) "
@@ -103,5 +111,5 @@ def gen(ukey):
     cats = {pt['code']: f"{pt['category']}={CAT[pt['category']][:8]}…" for pt in grammar['points']}
     print(f"[{ukey}] -> {OUT}  INSERT={ins} DELETE={dele} volume='{VOL}'  grammar分类={cats}")
 
-for u in ["u3", "u4"]:
+for u in ["u5"]:
     gen(u)

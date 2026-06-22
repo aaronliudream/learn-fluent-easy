@@ -1,0 +1,144 @@
+{
+  "volume": "9",
+  "unit": "U5",
+  "passages": [
+    {
+      "code": "g9u5.c.01",
+      "volume": "9",
+      "unit": "U5",
+      "title": "How Silk Is Made",
+      "scene": "丝绸制作",
+      "body": "Silk is a beautiful material, and China is (1)____ for it. Have you ever wondered how silk is made? It is a long (2)____. First, silkworms are (3)____ on special farms. They eat the leaves of trees. After some weeks, each worm makes a small ball of silk thread. These balls are (4)____ collected by farmers. Then the thread is taken from them and (5)____ into long pieces. The thread is (6)____ cleaned and made ready. After that, it is (7)____ to make cloth. The cloth is often (8)____ in lovely colors. Finally, the silk is (9)____ and sent to shops. Real silk is not (10)____ in a day; it needs much time and care.",
+      "word_count": 115,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["known", "grown", "sold", "made"], "answer": "A", "answer_index": 0, "explanation": "be known for 以…闻名" },
+        { "q": "2", "blank": 2, "options": ["color", "price", "product", "process"], "answer": "D", "answer_index": 3, "explanation": "长过程 process" },
+        { "q": "3", "blank": 3, "options": ["kept", "eaten", "sold", "lost"], "answer": "A", "answer_index": 0, "explanation": "蚕被养 kept" },
+        { "q": "4", "blank": 4, "options": ["quickly", "carefully", "loudly", "sadly"], "answer": "B", "answer_index": 1, "explanation": "小心地收集 carefully" },
+        { "q": "5", "blank": 5, "options": ["taken", "made", "sold", "given"], "answer": "B", "answer_index": 1, "explanation": "被做成 made into" },
+        { "q": "6", "blank": 6, "options": ["once", "then", "seldom", "never"], "answer": "B", "answer_index": 1, "explanation": "然后 then" },
+        { "q": "7", "blank": 7, "options": ["used", "lost", "thrown", "broken"], "answer": "A", "answer_index": 0, "explanation": "被用来 used to" },
+        { "q": "8", "blank": 8, "options": ["written", "sung", "read", "painted"], "answer": "D", "answer_index": 3, "explanation": "染上颜色 painted" },
+        { "q": "9", "blank": 9, "options": ["opened", "cut", "packed", "dropped"], "answer": "C", "answer_index": 2, "explanation": "被包装 packed" },
+        { "q": "10", "blank": 10, "options": ["picked", "sold", "made", "grown"], "answer": "C", "answer_index": 2, "explanation": "非一日做成 made in a day" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u5.c.02",
+      "volume": "9",
+      "unit": "U5",
+      "title": "A Kite Festival",
+      "scene": "风筝节",
+      "body": "Every spring, a big kite festival is (1)____ in our city. People come from many (2)____ places to see it. The kites are (3)____ in many shapes and colors. Some look like birds, and others look like (4)____. Most of the kites are made (5)____ hand by local people. They are made (6)____ paper and thin bamboo. Making a good kite takes great (7)____. On the day of the festival, the sky is (8)____ with flying kites. Children are very (9)____ to fly their own kites. The festival is (10)____ by everyone, young and old. It is a wonderful part of our local culture.",
+      "word_count": 104,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["grown", "sold", "held", "made"], "answer": "C", "answer_index": 2, "explanation": "举办 held" },
+        { "q": "2", "blank": 2, "options": ["quiet", "empty", "same", "different"], "answer": "D", "answer_index": 3, "explanation": "不同地方 different" },
+        { "q": "3", "blank": 3, "options": ["made", "sold", "lost", "eaten"], "answer": "A", "answer_index": 0, "explanation": "被做成 made" },
+        { "q": "4", "blank": 4, "options": ["shoes", "fish", "books", "cars"], "answer": "B", "answer_index": 1, "explanation": "像鱼 fish" },
+        { "q": "5", "blank": 5, "options": ["of", "by", "in", "at"], "answer": "B", "answer_index": 1, "explanation": "made by hand 手工" },
+        { "q": "6", "blank": 6, "options": ["in", "of", "at", "by"], "answer": "B", "answer_index": 1, "explanation": "made of 看得出材料" },
+        { "q": "7", "blank": 7, "options": ["skill", "noise", "time", "money"], "answer": "A", "answer_index": 0, "explanation": "技巧 skill" },
+        { "q": "8", "blank": 8, "options": ["clean", "empty", "dark", "filled"], "answer": "D", "answer_index": 3, "explanation": "天空满是 filled with" },
+        { "q": "9", "blank": 9, "options": ["tired", "sad", "excited", "bored"], "answer": "C", "answer_index": 2, "explanation": "兴奋 excited" },
+        { "q": "10", "blank": 10, "options": ["loved", "hated", "sold", "lost"], "answer": "A", "answer_index": 0, "explanation": "被喜爱 loved" }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u5.c.03",
+      "volume": "9",
+      "unit": "U5",
+      "title": "Recycled Art",
+      "scene": "环保艺术",
+      "body": "At our school, an art show was (1)____ last week. The most special thing was that the art was (2)____ from waste materials. Students used things that are usually (3)____ away, like old boxes and bottles. One girl made a beautiful flower (4)____ old paper. A boy built a small car that was made (5)____ used metal. My friend and I made a robot. Its body was (6)____ of old cans. The teachers were (7)____ by our ideas. They said useful things can be (8)____ from waste. This show taught us to (9)____ throwing away useful things. When we use waste in a clever way, we also help (10)____ the environment.",
+      "word_count": 111,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["made", "held", "grown", "sold"], "answer": "B", "answer_index": 1, "explanation": "举办 held" },
+        { "q": "2", "blank": 2, "options": ["bought", "sold", "made", "grown"], "answer": "C", "answer_index": 2, "explanation": "被做成 made" },
+        { "q": "3", "blank": 3, "options": ["kept", "given", "sent", "thrown"], "answer": "D", "answer_index": 3, "explanation": "被扔掉 thrown away" },
+        { "q": "4", "blank": 4, "options": ["at", "from", "on", "by"], "answer": "B", "answer_index": 1, "explanation": "made from 看不出原貌" },
+        { "q": "5", "blank": 5, "options": ["of", "in", "by", "at"], "answer": "A", "answer_index": 0, "explanation": "made of 看得出" },
+        { "q": "6", "blank": 6, "options": ["made", "lost", "eaten", "sold"], "answer": "A", "answer_index": 0, "explanation": "被做成 made of" },
+        { "q": "7", "blank": 7, "options": ["surprised", "tired", "angry", "bored"], "answer": "A", "answer_index": 0, "explanation": "被惊到 surprised" },
+        { "q": "8", "blank": 8, "options": ["picked", "grown", "made", "sold"], "answer": "C", "answer_index": 2, "explanation": "被做成 made" },
+        { "q": "9", "blank": 9, "options": ["enjoy", "start", "forget", "avoid"], "answer": "D", "answer_index": 3, "explanation": "避免 avoid" },
+        { "q": "10", "blank": 10, "options": ["cut", "protect", "pollute", "waste"], "answer": "B", "answer_index": 1, "explanation": "保护 protect" }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u5.c.04",
+      "volume": "9",
+      "unit": "U5",
+      "title": "The Story of Porcelain",
+      "scene": "瓷器故事",
+      "body": "Porcelain is one of the great products of China, and it is (1)____ all over the world. The making of porcelain is an old (2)____ that began long ago. First, a special kind of clay is (3)____ from the ground. Then it is shaped by (4)____ into bowls, cups, or plates. After that, the pieces are (5)____ in a very hot fire. This makes them hard and (6)____. Beautiful pictures are then (7)____ on the surface. Each piece is made with great (8)____. In the past, Chinese porcelain was (9)____ to many countries by ship. Today it is still (10)____ by people everywhere as a symbol of Chinese art.",
+      "word_count": 109,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["made", "lost", "known", "grown"], "answer": "C", "answer_index": 2, "explanation": "be known 知名" },
+        { "q": "2", "blank": 2, "options": ["art", "size", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "古老技艺 art" },
+        { "q": "3", "blank": 3, "options": ["eaten", "taken", "thrown", "sold"], "answer": "B", "answer_index": 1, "explanation": "被取出 taken" },
+        { "q": "4", "blank": 4, "options": ["water", "fire", "machine", "hand"], "answer": "D", "answer_index": 3, "explanation": "by hand 手工" },
+        { "q": "5", "blank": 5, "options": ["cleaned", "broken", "heated", "cooled"], "answer": "C", "answer_index": 2, "explanation": "被加热 heated" },
+        { "q": "6", "blank": 6, "options": ["strong", "weak", "wet", "soft"], "answer": "A", "answer_index": 0, "explanation": "坚硬 strong" },
+        { "q": "7", "blank": 7, "options": ["sung", "written", "read", "painted"], "answer": "D", "answer_index": 3, "explanation": "被画上 painted" },
+        { "q": "8", "blank": 8, "options": ["noise", "care", "speed", "money"], "answer": "B", "answer_index": 1, "explanation": "用心 care" },
+        { "q": "9", "blank": 9, "options": ["lost", "sent", "kept", "eaten"], "answer": "B", "answer_index": 1, "explanation": "被运送 sent" },
+        { "q": "10", "blank": 10, "options": ["loved", "dropped", "hated", "sold"], "answer": "A", "answer_index": 0, "explanation": "被喜爱 loved" }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u5.c.05",
+      "volume": "9",
+      "unit": "U5",
+      "title": "Cotton to Cloth",
+      "scene": "棉花到布",
+      "body": "Have you ever thought about how your cotton clothes are (1)____? It is an interesting (2)____. First, cotton is (3)____ on large farms in warm areas. When it is ready, the cotton is (4)____ by hand or by machine. Then it is cleaned and made (5)____ thin thread. The thread is (6)____ into cloth in big factories. After that, the cloth is (7)____ in many bright colors. Workers then cut and (8)____ the cloth to make shirts and blouses. Finally, the clothes are (9)____ to shops in many countries. So your simple shirt is the (10)____ of much hard work and many steps.",
+      "word_count": 103,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["grown", "made", "sold", "lost"], "answer": "B", "answer_index": 1, "explanation": "被做成 made" },
+        { "q": "2", "blank": 2, "options": ["price", "game", "process", "color"], "answer": "C", "answer_index": 2, "explanation": "过程 process" },
+        { "q": "3", "blank": 3, "options": ["made", "sold", "eaten", "grown"], "answer": "D", "answer_index": 3, "explanation": "棉花被种 grown" },
+        { "q": "4", "blank": 4, "options": ["dropped", "thrown", "lost", "picked"], "answer": "D", "answer_index": 3, "explanation": "被采摘 picked" },
+        { "q": "5", "blank": 5, "options": ["into", "by", "of", "at"], "answer": "A", "answer_index": 0, "explanation": "made into 做成" },
+        { "q": "6", "blank": 6, "options": ["made", "grown", "kept", "sold"], "answer": "A", "answer_index": 0, "explanation": "被织成 made" },
+        { "q": "7", "blank": 7, "options": ["written", "painted", "read", "sung"], "answer": "B", "answer_index": 1, "explanation": "染色 painted/dyed" },
+        { "q": "8", "blank": 8, "options": ["join", "break", "lose", "throw"], "answer": "A", "answer_index": 0, "explanation": "缝合 join/sew" },
+        { "q": "9", "blank": 9, "options": ["lost", "kept", "sent", "eaten"], "answer": "C", "answer_index": 2, "explanation": "被送 sent" },
+        { "q": "10", "blank": 10, "options": ["size", "result", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "结果 result" }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u5.c.06",
+      "volume": "9",
+      "unit": "U5",
+      "title": "A Famous Local Brand",
+      "scene": "本地品牌",
+      "body": "In our town, there is a famous (1)____ of tea that is loved by many people. No (2)____ where you go, you can see it in shops. How did it become so popular? The tea is (3)____ on the hills near our town. The leaves are (4)____ by hand in early spring. Then they are (5)____ with great care to keep the good taste. The tea is never (6)____ by machines, so its quality is high. Each box is (7)____ by local workers. Because the tea is so good, it is now (8)____ to other countries too. The local people are very (9)____ of their tea. They believe that good products are (10)____ with care, not with speed.",
+      "word_count": 118,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["brand", "game", "color", "price"], "answer": "A", "answer_index": 0, "explanation": "品牌 brand" },
+        { "q": "2", "blank": 2, "options": ["way", "matter", "problem", "time"], "answer": "B", "answer_index": 1, "explanation": "no matter 无论" },
+        { "q": "3", "blank": 3, "options": ["made", "eaten", "sold", "grown"], "answer": "D", "answer_index": 3, "explanation": "被种 grown" },
+        { "q": "4", "blank": 4, "options": ["picked", "dropped", "thrown", "lost"], "answer": "A", "answer_index": 0, "explanation": "被采 picked" },
+        { "q": "5", "blank": 5, "options": ["processed", "sold", "broken", "lost"], "answer": "A", "answer_index": 0, "explanation": "被加工 processed" },
+        { "q": "6", "blank": 6, "options": ["picked", "grown", "made", "sold"], "answer": "C", "answer_index": 2, "explanation": "不由机器做 made" },
+        { "q": "7", "blank": 7, "options": ["opened", "cut", "dropped", "packed"], "answer": "D", "answer_index": 3, "explanation": "被包装 packed" },
+        { "q": "8", "blank": 8, "options": ["eaten", "sold", "lost", "thrown"], "answer": "B", "answer_index": 1, "explanation": "被卖到 sold" },
+        { "q": "9", "blank": 9, "options": ["afraid", "bored", "proud", "tired"], "answer": "C", "answer_index": 2, "explanation": "自豪 proud of" },
+        { "q": "10", "blank": 10, "options": ["grown", "made", "sold", "lost"], "answer": "B", "answer_index": 1, "explanation": "用心做成 made with care" }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

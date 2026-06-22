@@ -1,0 +1,510 @@
+{
+  "volume": "9",
+  "unit": "U5",
+  "exercises": [
+    {
+      "code": "g9u5.l.01",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·对话 Asking About a Shirt",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: What a nice shirt! Is it made of silk?",
+        "M: No, it's made of cotton. It's very comfortable.",
+        "W: Where was it made?",
+        "M: It was made in China. I bought it last week.",
+        "W: It looks really good on you."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.01.q1",
+          "stem": "What is the shirt made of?",
+          "options": [
+            "Cotton and silk.",
+            "Cotton.",
+            "Silk.",
+            "Wool."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made of cotton"
+        },
+        {
+          "qid": "g9u5.l.01.q2",
+          "stem": "Where was the shirt made?",
+          "options": [
+            "In the US.",
+            "In France.",
+            "In Korea.",
+            "In China."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:made in China"
+        },
+        {
+          "qid": "g9u5.l.01.q3",
+          "stem": "When did the man buy the shirt?",
+          "options": [
+            "Yesterday.",
+            "Last month.",
+            "Last week.",
+            "Last year."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:bought it last week"
+        },
+        {
+          "qid": "g9u5.l.01.q4",
+          "stem": "How does the man feel about the shirt?",
+          "options": [
+            "It is comfortable.",
+            "It is too small.",
+            "It is expensive.",
+            "It is old."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:very comfortable"
+        },
+        {
+          "qid": "g9u5.l.01.q5",
+          "stem": "What does the woman think of the shirt?",
+          "options": [
+            "It is too big.",
+            "It looks good on him.",
+            "It is cheap.",
+            "It is dirty."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:looks really good on you"
+        }
+      ],
+      "translation_cn": "女:多漂亮的衬衫!是丝绸做的吗?\n男:不,是棉的,很舒服。\n女:在哪里做的?\n男:中国制造的,我上周买的。\n女:你穿着真好看。"
+    },
+    {
+      "code": "g9u5.l.02",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·短文 How Tea Is Made",
+      "type": "monologue",
+      "kind": "passage",
+      "speaker": "us_female",
+      "transcript": [
+        "Let me tell you how tea is made.",
+        "First, the tea leaves are picked by hand in spring.",
+        "Then they are dried in the sun.",
+        "After that, the leaves are processed with great care.",
+        "Finally, the tea is packed and sent to shops around the world."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.02.q1",
+          "stem": "How are the tea leaves picked?",
+          "options": [
+            "By animals.",
+            "By wind.",
+            "By machines.",
+            "By hand."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:picked by hand"
+        },
+        {
+          "qid": "g9u5.l.02.q2",
+          "stem": "When are the leaves picked?",
+          "options": [
+            "In winter.",
+            "In autumn.",
+            "In spring.",
+            "In summer."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:in spring"
+        },
+        {
+          "qid": "g9u5.l.02.q3",
+          "stem": "What is the last step?",
+          "options": [
+            "The tea is eaten.",
+            "The tea is grown.",
+            "The tea is drunk.",
+            "The tea is packed and sent to shops."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:packed and sent"
+        },
+        {
+          "qid": "g9u5.l.02.q4",
+          "stem": "How are the leaves dried?",
+          "options": [
+            "By machines.",
+            "In the sun.",
+            "By fire.",
+            "In a fridge."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:dried in the sun"
+        },
+        {
+          "qid": "g9u5.l.02.q5",
+          "stem": "What is the main topic?",
+          "options": [
+            "Why tea is cheap.",
+            "How tea is made.",
+            "Who drinks tea.",
+            "Where to buy tea."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "主题:制茶过程"
+        }
+      ],
+      "translation_cn": "我来告诉你茶是怎么做的。\n首先,茶叶在春天由人手采摘。\n然后在阳光下晒干。\n之后,茶叶被精心加工。\n最后,茶被包装好,送往世界各地的商店。"
+    },
+    {
+      "code": "g9u5.l.03",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·对话 At the Science Fair",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Wow, what a cool model plane! What is it made of?",
+        "M: It's made of used wood and glass.",
+        "W: Really? How was it produced?",
+        "M: Every part was cut and joined by hand.",
+        "W: That's amazing! It's good for the environment too."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.03.q1",
+          "stem": "What is the model plane made of?",
+          "options": [
+            "Paper and grass.",
+            "Used wood and glass.",
+            "Steel and clay.",
+            "Cotton and silver."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:used wood and glass"
+        },
+        {
+          "qid": "g9u5.l.03.q2",
+          "stem": "How was it produced?",
+          "options": [
+            "Printed.",
+            "Bought in a shop.",
+            "Cut and joined by hand.",
+            "Made by machines."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:cut and joined by hand"
+        },
+        {
+          "qid": "g9u5.l.03.q3",
+          "stem": "Why is it good for the environment?",
+          "options": [
+            "It is made of used materials.",
+            "It is colorful.",
+            "It is very big.",
+            "It is expensive."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "用废料环保"
+        },
+        {
+          "qid": "g9u5.l.03.q4",
+          "stem": "What does the woman think of the model plane?",
+          "options": [
+            "It is ugly.",
+            "It is cool and amazing.",
+            "It is broken.",
+            "It is boring."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:cool / amazing"
+        },
+        {
+          "qid": "g9u5.l.03.q5",
+          "stem": "Who made the model plane?",
+          "options": [
+            "The man.",
+            "His sister.",
+            "A factory.",
+            "His teacher."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "对话中男生自己做的"
+        }
+      ],
+      "translation_cn": "女:哇,好酷的飞机模型!它是用什么做的?\n男:是用废木头和玻璃做的。\n女:真的吗?它是怎么做出来的?\n男:每个零件都是手工切割拼接的。\n女:太厉害了!而且还环保。"
+    },
+    {
+      "code": "g9u5.l.04",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·短文 Paper Cutting",
+      "type": "monologue",
+      "kind": "passage",
+      "speaker": "us_female",
+      "transcript": [
+        "Paper cutting is a traditional Chinese art.",
+        "Beautiful pictures are cut from paper with scissors.",
+        "The pictures are often about animals and flowers.",
+        "During the Spring Festival, paper cuttings are put on windows.",
+        "They are believed to bring good luck to the family."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.04.q1",
+          "stem": "What are the pictures cut with?",
+          "options": [
+            "Scissors.",
+            "A pen.",
+            "A brush.",
+            "A machine."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:cut with scissors"
+        },
+        {
+          "qid": "g9u5.l.04.q2",
+          "stem": "Where are paper cuttings put during the Spring Festival?",
+          "options": [
+            "On the road.",
+            "In books.",
+            "On windows.",
+            "On the floor."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:put on windows"
+        },
+        {
+          "qid": "g9u5.l.04.q3",
+          "stem": "What are paper cuttings believed to bring?",
+          "options": [
+            "Money.",
+            "Rain.",
+            "Food.",
+            "Good luck."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:bring good luck"
+        },
+        {
+          "qid": "g9u5.l.04.q4",
+          "stem": "What are the pictures often about?",
+          "options": [
+            "Animals and flowers.",
+            "Cars and trains.",
+            "Food and drinks.",
+            "Books and pens."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:animals and flowers"
+        },
+        {
+          "qid": "g9u5.l.04.q5",
+          "stem": "What is paper cutting?",
+          "options": [
+            "A type of music.",
+            "A kind of food.",
+            "A new game.",
+            "A traditional Chinese art."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:traditional Chinese art"
+        }
+      ],
+      "translation_cn": "剪纸是中国的传统艺术。\n美丽的图案用剪刀从纸上剪出来。\n图案常常是动物和花卉。\n春节期间,剪纸被贴在窗户上。\n人们相信它们会给家庭带来好运。"
+    },
+    {
+      "code": "g9u5.l.05",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·对话 Buying a Handbag",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Excuse me, is this handbag made of leather?",
+        "M: No, madam. It's made from cotton, and it's washable.",
+        "W: Nice. Where was it made?",
+        "M: It was made by local workers in this town.",
+        "W: Then I'll take it. I like to buy local products."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.05.q1",
+          "stem": "What is the handbag made from?",
+          "options": [
+            "Steel.",
+            "Silver.",
+            "Leather.",
+            "Cotton."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:made from cotton"
+        },
+        {
+          "qid": "g9u5.l.05.q2",
+          "stem": "Who made the handbag?",
+          "options": [
+            "Foreign workers.",
+            "Local workers.",
+            "Machines only.",
+            "A big factory."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made by local workers"
+        },
+        {
+          "qid": "g9u5.l.05.q3",
+          "stem": "Why does the woman buy it?",
+          "options": [
+            "She likes to buy local products.",
+            "It is made of gold.",
+            "It is very cheap.",
+            "It is very big."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:like to buy local"
+        },
+        {
+          "qid": "g9u5.l.05.q4",
+          "stem": "Is the handbag made of leather?",
+          "options": [
+            "Yes, it is.",
+            "No, it is made of steel.",
+            "No, it is made from cotton.",
+            "Yes, real leather."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:made from cotton, not leather"
+        },
+        {
+          "qid": "g9u5.l.05.q5",
+          "stem": "What is good about the handbag?",
+          "options": [
+            "It glows.",
+            "It is very heavy.",
+            "It is washable.",
+            "It is made of gold."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:it's washable"
+        }
+      ],
+      "translation_cn": "女:打扰一下,这个手提包是真皮的吗?\n男:不是,女士,是棉布做的,可水洗。\n女:不错。在哪里做的?\n男:是本镇的本地工人做的。\n女:那我买了。我喜欢买本地产品。"
+    },
+    {
+      "code": "g9u5.l.06",
+      "volume": "9",
+      "unit": "U5",
+      "title": "九年级 U5 听力·短文 Clay Figures",
+      "type": "monologue",
+      "kind": "passage",
+      "speaker": "us_female",
+      "transcript": [
+        "Clay figures are a famous art in Tianjin.",
+        "They are made of clay and shaped by hand.",
+        "After shaping, the figures are heated to make them hard.",
+        "Then they are painted in bright and lively colors.",
+        "Each figure is made with care and tells a story of Chinese life."
+      ],
+      "questions": [
+        {
+          "qid": "g9u5.l.06.q1",
+          "stem": "What are the clay figures made of?",
+          "options": [
+            "Clay.",
+            "Steel.",
+            "Wood.",
+            "Glass."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:made of clay"
+        },
+        {
+          "qid": "g9u5.l.06.q2",
+          "stem": "Why are the figures heated?",
+          "options": [
+            "To sell them.",
+            "To clean them.",
+            "To color them.",
+            "To make them hard."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:heated to make them hard"
+        },
+        {
+          "qid": "g9u5.l.06.q3",
+          "stem": "What do the figures tell?",
+          "options": [
+            "A price.",
+            "A song.",
+            "A story of Chinese life.",
+            "A joke."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:tell a story of Chinese life"
+        },
+        {
+          "qid": "g9u5.l.06.q4",
+          "stem": "How are the clay figures shaped?",
+          "options": [
+            "By machines.",
+            "By fire.",
+            "By hand.",
+            "By water."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:shaped by hand"
+        },
+        {
+          "qid": "g9u5.l.06.q5",
+          "stem": "What colors are the figures painted in?",
+          "options": [
+            "Bright and lively colors.",
+            "Dark colors.",
+            "Only black.",
+            "Only white."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:bright and lively colors"
+        }
+      ],
+      "translation_cn": "泥人是天津著名的艺术。\n它们用黏土制成,手工塑形。\n塑形后,泥人被加热使其变硬。\n然后被涂上明亮鲜艳的颜色。\n每个泥人都用心制作,讲述着中国生活的故事。"
+    }
+  ]
+}

@@ -88,6 +88,20 @@
           "answer_index": 0,
           "explanation": "推断:结尾 I am not the shy child I used to be"
         }
+      ],
+      "vocab_notes": [
+        {
+          "word": "scared",
+          "cn": "害怕的"
+        },
+        {
+          "word": "brave",
+          "cn": "勇敢的"
+        },
+        {
+          "word": "nervous",
+          "cn": "紧张的"
+        }
       ]
     },
     {
@@ -175,6 +189,20 @@
           "answer": "A",
           "answer_index": 0,
           "explanation": "推断:结尾都同意 people really change"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "different",
+          "cn": "不同的"
+        },
+        {
+          "word": "confidence",
+          "cn": "自信"
+        },
+        {
+          "word": "quiet",
+          "cn": "安静的"
         }
       ]
     },
@@ -264,6 +292,20 @@
           "answer_index": 2,
           "explanation": "猜词:experiences shape us = 经历塑造/影响我们"
         }
+      ],
+      "vocab_notes": [
+        {
+          "word": "experiences",
+          "cn": "经历"
+        },
+        {
+          "word": "confident",
+          "cn": "自信的"
+        },
+        {
+          "word": "competition",
+          "cn": "竞赛;竞争"
+        }
       ]
     },
     {
@@ -351,6 +393,20 @@
           "answer": "D",
           "answer_index": 3,
           "explanation": "推断:全文鼓励温暖语气"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "mistakes",
+          "cn": "错误"
+        },
+        {
+          "word": "stage",
+          "cn": "舞台"
+        },
+        {
+          "word": "patient",
+          "cn": "有耐心的"
         }
       ]
     },
@@ -440,6 +496,20 @@
           "answer_index": 1,
           "explanation": "推断:成长=向好的方向变化"
         }
+      ],
+      "vocab_notes": [
+        {
+          "word": "selfish",
+          "cn": "自私的"
+        },
+        {
+          "word": "direction",
+          "cn": "方向"
+        },
+        {
+          "word": "admire",
+          "cn": "钦佩;欣赏"
+        }
       ]
     },
     {
@@ -527,6 +597,20 @@
           "answer": "B",
           "answer_index": 1,
           "explanation": "原文:Write your name on the list outside Room 201 before May 15th"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "inspiring",
+          "cn": "鼓舞人心的"
+        },
+        {
+          "word": "share",
+          "cn": "分享"
+        },
+        {
+          "word": "welcome",
+          "cn": "欢迎"
         }
       ]
     }

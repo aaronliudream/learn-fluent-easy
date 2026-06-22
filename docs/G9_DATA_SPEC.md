@@ -176,11 +176,13 @@ G9 早期分两批做,用了两个不同的 volume 键,导致分裂:
 | --- | --- | --- | --- |
 | **vocab** | `volume, unit, words[]` | word 项:`word, ipa, pos, meaning_cn, phrase_en, freq_rank`(词组 ipa/pos 可空字符串) | — |
 | **grammar** | `volume, unit, points[], questions[]` | point:`code, point, category, overview` | `qid, volume, unit, point, code, category, tag, stem, options, answer_index, answer_text, explanation` |
-| **reading** | `volume, unit, passages[]` | passage:`code, genre, title, body, questions`(**用 `genre` 不是 topic**) | `qid, volume, unit, code, stem, options, answer, answer_index, explanation`(**题干用 `stem` 不是 q**) |
+| **reading** | `volume, unit, passages[]` | passage:`code, genre, title, body, questions, vocab_notes`(**用 `genre` 不是 topic**;**vocab_notes 必填**) | `qid, volume, unit, code, stem, options, answer, answer_index, explanation`(**题干用 `stem` 不是 q**) |
 | **cloze** | `volume, unit, passages[]` | passage:`code, title, scene, body, questions`(正文用 `body`) | `qid, volume, unit, code, blank, options, answer, answer_index, explanation` |
 | **listening** | `volume, unit, exercises[]` | exercise:`code, title, type, kind, speaker, transcript, translation_cn, questions`(`transcript`=**字符串数组**,每行一句) | `qid, volume, unit, code, stem, options, answer_index, answer_text` |
 | **writing** | `volume, unit, writing{}` | writing:`volume, unit, code, type, title, genre, prompt_cn, key_points[], useful_expressions[], sample, sample_cn, scoring` | `scoring`=**dict** `{content, language, structure, wordcount}`(不是 list) |
 
 **listening 值域(锁死)**:`type` ∈ {`dialogue`, `passage`};`kind` ∈ {`long`(对话), `short`(短文)};`speaker` ∈ {`us_male`, `us_female`}(对话=us_male、短文=us_female)。**别用 monologue/passage(kind)**。
+**reading `vocab_notes`(必填,g8 基线)**:每篇 **3 个生词** `[{"word","cn"}]`,生词须取自该篇 body(较难词),前端阅读关展示。
+**listening `translation_cn`(必填,g8 基线)**:整段中文翻译(逐行对应 transcript)。
 **reading `genre` 值**:说明文/记叙文/对话/书信/议论文/应用文。
 **code 命名**:grammar point=`g9uX.01/02/03`;reading=`g9uX.r.01`…;cloze=`g9uX.c.01`…;listening=`g9uX.l.01`…;writing=`g9uX.w.01`。

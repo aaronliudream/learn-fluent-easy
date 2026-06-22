@@ -1,0 +1,522 @@
+{
+  "volume": "9",
+  "unit": "U5",
+  "passages": [
+    {
+      "code": "g9u5.r.01",
+      "volume": "9",
+      "unit": "U5",
+      "title": "How Tea Is Made",
+      "topic": "说明文",
+      "body": "Tea is one of the most popular drinks in the world, and China is known for it. But do you know how tea is made? First, the tea leaves are picked by hand from the tea plants. This is usually done in spring, when the leaves are fresh and green. Then the leaves are dried in the sun or by machines. After that, they are processed carefully to bring out the flavor. Finally, the tea is packed and sent to shops all over the world. The whole process needs great care. Good tea is not made in a day. Next time you drink a cup of tea, remember the hard work behind it.",
+      "word_count": 113,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "How are the tea leaves picked?",
+          "options": [
+            "By animals.",
+            "By machines.",
+            "By hand.",
+            "In winter."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:picked by hand"
+        },
+        {
+          "q": "When are the leaves usually picked?",
+          "options": [
+            "In winter.",
+            "In autumn.",
+            "In summer.",
+            "In spring."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:done in spring"
+        },
+        {
+          "q": "What happens after the leaves are dried?",
+          "options": [
+            "They are eaten.",
+            "They are sold.",
+            "They are thrown away.",
+            "They are processed."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:processed carefully"
+        },
+        {
+          "q": "What is the main idea of the passage?",
+          "options": [
+            "Why tea is cheap.",
+            "Where to buy tea.",
+            "How tea is made.",
+            "Who drinks tea."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "主旨:制茶过程"
+        },
+        {
+          "q": "What does the writer want us to remember?",
+          "options": [
+            "The name of tea.",
+            "The hard work behind tea.",
+            "The color of tea.",
+            "The price of tea."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:remember the hard work"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "process",
+          "cn": "加工;处理"
+        },
+        {
+          "word": "flavor",
+          "cn": "味道;风味"
+        },
+        {
+          "word": "pack",
+          "cn": "包装"
+        }
+      ]
+    },
+    {
+      "code": "g9u5.r.02",
+      "volume": "9",
+      "unit": "U5",
+      "title": "The Art of Paper Cutting",
+      "topic": "说明文",
+      "body": "Paper cutting is a traditional Chinese art with a long history. It is loved by many people around the world. In this art, beautiful pictures are cut from paper with scissors or a knife. The pictures are often about animals, flowers, or happy events. During the Spring Festival, paper cuttings are put on windows and doors. They are believed to bring good luck. Most paper cuttings are made by hand, and each one takes a lot of time and skill. Today, this old art is still taught in many schools, so that it will not be lost. Paper cutting shows the beauty of Chinese culture.",
+      "word_count": 105,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "What is paper cutting made with?",
+          "options": [
+            "A machine.",
+            "A pen.",
+            "A brush.",
+            "Scissors or a knife."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:cut with scissors or a knife"
+        },
+        {
+          "q": "Where are paper cuttings put during the Spring Festival?",
+          "options": [
+            "On windows and doors.",
+            "On the road.",
+            "In books.",
+            "On the floor."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:put on windows and doors"
+        },
+        {
+          "q": "Why are paper cuttings put up?",
+          "options": [
+            "To bring good luck.",
+            "To sell them.",
+            "To clean rooms.",
+            "To save money."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:bring good luck"
+        },
+        {
+          "q": "How are most paper cuttings made?",
+          "options": [
+            "By computers.",
+            "By hand.",
+            "By printing.",
+            "By machines."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made by hand"
+        },
+        {
+          "q": "Why is paper cutting taught in schools?",
+          "options": [
+            "To pass exams.",
+            "So that it will not be lost.",
+            "To make money.",
+            "To buy paper."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:so it will not be lost"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "traditional",
+          "cn": "传统的"
+        },
+        {
+          "word": "scissors",
+          "cn": "剪刀"
+        },
+        {
+          "word": "skill",
+          "cn": "技巧;技能"
+        }
+      ]
+    },
+    {
+      "code": "g9u5.r.03",
+      "volume": "9",
+      "unit": "U5",
+      "title": "Clay Figures of Tianjin",
+      "topic": "记叙文",
+      "body": "In the city of Tianjin, there is a famous traditional art called clay figures. These small figures are made of clay and are known for their lively colors and shapes. The art was started over a hundred years ago by a man named Zhang. First, soft clay is taken and shaped into people or animals by hand. Then the figures are dried and heated to make them hard. After that, they are painted in bright colors. Each figure takes several days to complete. Visitors to Tianjin often buy these figures as gifts. The clay figures are not just toys; they tell stories of Chinese life and history.",
+      "word_count": 107,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "What are the Tianjin figures made of?",
+          "options": [
+            "Wood.",
+            "Clay.",
+            "Steel.",
+            "Glass."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made of clay"
+        },
+        {
+          "q": "How is the clay first shaped?",
+          "options": [
+            "By fire.",
+            "By water.",
+            "By hand.",
+            "By machines."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:shaped by hand"
+        },
+        {
+          "q": "Why are the figures heated?",
+          "options": [
+            "To sell them.",
+            "To make them hard.",
+            "To color them.",
+            "To clean them."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:heated to make them hard"
+        },
+        {
+          "q": "What is done after the figures are dried and heated?",
+          "options": [
+            "They are eaten.",
+            "They are broken.",
+            "They are painted.",
+            "They are buried."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:painted in bright colors"
+        },
+        {
+          "q": "What do the clay figures tell?",
+          "options": [
+            "Jokes.",
+            "Songs.",
+            "Prices.",
+            "Stories of Chinese life and history."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:tell stories of Chinese life"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "clay",
+          "cn": "黏土;陶土"
+        },
+        {
+          "word": "lively",
+          "cn": "鲜艳的;生动的"
+        },
+        {
+          "word": "shape",
+          "cn": "塑造;使成形"
+        }
+      ]
+    },
+    {
+      "code": "g9u5.r.04",
+      "volume": "9",
+      "unit": "U5",
+      "title": "Made in Many Countries",
+      "topic": "议论文",
+      "body": "Today, the things we use every day are made in many different countries. Your phone may be made in Korea, your watch in Switzerland, and your shoes in China. Why are products made all over the world? One reason is cost. Some countries can produce things at a lower price. Another reason is skill. Some places are known for special products, like cars from Germany. When you buy something, look at the label. It often tells you where the product was made. No matter where things are made, what matters most is good quality. A good product is welcomed everywhere in the world.",
+      "word_count": 103,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "Where might your watch be made?",
+          "options": [
+            "In Switzerland.",
+            "In Germany.",
+            "In Korea.",
+            "In China."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:watch in Switzerland"
+        },
+        {
+          "q": "What is one reason products are made worldwide?",
+          "options": [
+            "Cost.",
+            "Size.",
+            "Color.",
+            "Weather."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:One reason is cost"
+        },
+        {
+          "q": "What is Germany known for?",
+          "options": [
+            "Shoes.",
+            "Watches.",
+            "Phones.",
+            "Cars."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:cars from Germany"
+        },
+        {
+          "q": "Where can you find out where a product was made?",
+          "options": [
+            "In the sky.",
+            "On TV.",
+            "On the label.",
+            "In a song."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:look at the label"
+        },
+        {
+          "q": "What matters most according to the writer?",
+          "options": [
+            "Bright color.",
+            "Good quality.",
+            "Big size.",
+            "Low price."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:what matters most is good quality"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "cost",
+          "cn": "成本;费用"
+        },
+        {
+          "word": "label",
+          "cn": "标签"
+        },
+        {
+          "word": "quality",
+          "cn": "质量"
+        }
+      ]
+    },
+    {
+      "code": "g9u5.r.05",
+      "volume": "9",
+      "unit": "U5",
+      "title": "A School Science Fair",
+      "topic": "记叙文",
+      "body": "Last week, an international science fair was held at our school. Students brought many amazing things that were made by themselves. Marcus made a model plane. It was made of used wood and glass, so it was good for the environment. When people asked how it was produced, he said every part was cut and joined by hand. Anna showed a small house that was built from old boxes. My project was a kite that was painted with lively colors. The teachers said our projects were creative because they were made from everyday materials. The science fair taught us that useful things can be made from things we already have.",
+      "word_count": 110,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "When was the science fair held?",
+          "options": [
+            "Last week.",
+            "Last month.",
+            "Yesterday.",
+            "Last year."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:Last week"
+        },
+        {
+          "q": "What was Marcus's model plane made of?",
+          "options": [
+            "Cotton and silver.",
+            "Paper and grass.",
+            "Clay and steel.",
+            "Used wood and glass."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:made of used wood and glass"
+        },
+        {
+          "q": "How was the model plane produced?",
+          "options": [
+            "Printed by computer.",
+            "Bought in a shop.",
+            "Cut and joined by hand.",
+            "Made by machines."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:cut and joined by hand"
+        },
+        {
+          "q": "What was Anna's house built from?",
+          "options": [
+            "New wood.",
+            "Clay.",
+            "Old boxes.",
+            "Glass."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:built from old boxes"
+        },
+        {
+          "q": "Why did the teachers say the projects were creative?",
+          "options": [
+            "Made of gold.",
+            "Made from everyday materials.",
+            "Bought online.",
+            "Made by adults."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made from everyday materials"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "international",
+          "cn": "国际的"
+        },
+        {
+          "word": "environment",
+          "cn": "环境"
+        },
+        {
+          "word": "creative",
+          "cn": "有创意的"
+        }
+      ]
+    },
+    {
+      "code": "g9u5.r.06",
+      "volume": "9",
+      "unit": "U5",
+      "title": "Buying Local Products",
+      "topic": "应用文",
+      "body": "GREEN MARKET — SUPPORT LOCAL! Welcome to our Green Market! Here all the products are made by local people. FOOD: Fresh fruit and vegetables are grown on nearby farms. No long travel is needed, so they are always fresh. CRAFTS: Beautiful handbags and gloves are made by hand from local cotton. Each one is special. TOYS: Wooden toys are made from trees grown in our area. They are safe for children. WHY BUY LOCAL? Local products are fresh, and buying them helps people in our town. When you buy local, you also help protect the environment, because less traffic is needed to bring goods from far away. Come and support local products today!",
+      "word_count": 113,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "Where are the fruit and vegetables grown?",
+          "options": [
+            "In other countries.",
+            "In factories.",
+            "On nearby farms.",
+            "In the city center."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:grown on nearby farms"
+        },
+        {
+          "q": "What are the handbags made from?",
+          "options": [
+            "Local cotton.",
+            "Plastic.",
+            "Steel.",
+            "Paper."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:made from local cotton"
+        },
+        {
+          "q": "What are the wooden toys made from?",
+          "options": [
+            "Old boxes.",
+            "Glass.",
+            "Metal.",
+            "Trees grown in the area."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:from trees grown in our area"
+        },
+        {
+          "q": "Why are local fruits always fresh?",
+          "options": [
+            "They are big.",
+            "No long travel is needed.",
+            "They are cheap.",
+            "They are frozen."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:no long travel is needed"
+        },
+        {
+          "q": "How does buying local help the environment?",
+          "options": [
+            "More factories open.",
+            "More trees are cut.",
+            "More paper is used.",
+            "Less traffic is needed."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:less traffic is needed"
+        }
+      ],
+      "vocab_notes": [
+        {
+          "word": "local",
+          "cn": "本地的;当地的"
+        },
+        {
+          "word": "craft",
+          "cn": "手工艺品"
+        },
+        {
+          "word": "traffic",
+          "cn": "交通;车辆"
+        }
+      ]
+    }
+  ]
+}

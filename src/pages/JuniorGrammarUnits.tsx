@@ -18,6 +18,7 @@ const VOLUME_LABELS: Record<string, string> = {
   "7B": "初一下学期",
   "8A": "初二上学期",
   "8B": "初二下学期",
+  "9": "初三全学期",
   "g9": "初三全学期",
 };
 const volLabel = (v: string) => VOLUME_LABELS[v] ?? v;

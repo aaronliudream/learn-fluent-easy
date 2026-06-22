@@ -30,7 +30,7 @@ export type GUnit = {
 };
 
 const UNIT_ORDER = ["SU1", "SU2", "SU3", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "U10", "U11", "U12"];
-const VOL_ORDER = ["7A", "7B", "8A", "8B", "9A", "9B"];
+const VOL_ORDER = ["7A", "7B", "8A", "8B", "9", "9A", "9B"];
 
 /** 取所有带 unit 归属的语法点(按课本序),并附每个点的题 id 列表。 */
 export async function loadUnitGrammar(): Promise<GUnit[]> {

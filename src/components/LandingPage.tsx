@@ -371,11 +371,6 @@ export default function LandingPage() {
                 className="hidden text-sm font-semibold text-white/90 hover:text-white sm:inline">
                 <T>登录</T>
               </Link>
-              <Link
-                to="/auth"
-                className="rounded-full bg-[#e5b567] px-3.5 py-2 text-xs font-extrabold text-[#0a1628] shadow-lg shadow-amber-500/20 hover:bg-[#f0c97d] md:px-5 md:text-sm">
-                <T>免费试用</T>
-              </Link>
               <div className="hidden sm:block">
                 <LangToggleEnZh />
               </div>
@@ -441,11 +436,6 @@ export default function LandingPage() {
               <HeroCopy {...HERO_COPY.subtitle} />
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-              <Link
-                to="/auth"
-                className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#e5b567] px-6 py-2.5 text-[13px] font-bold text-[#0a1628] shadow-[0_8px_24px_rgba(229,181,103,0.35)] hover:bg-[#f0c97d] md:text-sm">
-                <HeroCopy {...HERO_COPY.ctaTrial} />
-              </Link>
               <a
                 href="#courses"
                 className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-[#e5b567]/70 bg-transparent px-6 py-2.5 text-[13px] font-semibold text-[#e5b567] hover:bg-[#e5b567]/10 md:text-sm">
@@ -623,20 +613,6 @@ export default function LandingPage() {
         </div>
         <div className="mx-auto mt-8 flex max-w-[1200px] flex-col items-center justify-between gap-3 border-t border-white/10 px-4 pt-6 text-xs text-white/45 md:flex-row md:px-6">
           <div>© {new Date().getFullYear()} Big Moon English</div>
-          <div className="flex flex-wrap justify-center gap-5">
-            <Link to="/auth" className="hover:text-white">
-              <T>登录 / 注册</T>
-            </Link>
-            <Link to="/about" className="hover:text-white">
-              <T>关于我们</T>
-            </Link>
-            <Link to="/privacy" className="hover:text-white">
-              <T>隐私</T>
-            </Link>
-            <Link to="/terms" className="hover:text-white">
-              <T>条款</T>
-            </Link>
-          </div>
         </div>
       </footer>
     </main>

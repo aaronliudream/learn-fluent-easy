@@ -163,3 +163,24 @@ G9 早期分两批做,用了两个不同的 volume 键,导致分裂:
 | U5–U14 骨架 vocab | `volume='9'` 裸词(无 IPA/chunk),做每单元时按官方版覆盖 | 随单元生产逐个覆盖,非独立任务 |
 
 **当前主线 = 内容生产(G9 U5–U14 → 高中)。** 以上搁置,做内容时不为它们分心。
+
+---
+
+## 12. JSON 字段规范(U6 起严格遵守 —— 字段名锁死,别再漂移)
+
+> 从 U3/U4 实际文件提取的**权威字段名**。`_gen_load` 按这套读。U5 曾漂移(topic/q/scoring-list/monologue),已用兼容 loader 一次性救;**U6+ 必须严格用下表字段名,不要再变体**,否则积兼容债。
+
+**通用**:每个文件顶层都有 `"volume": "9"`、`"unit": "U5"`(大写U+数字);题目 `options` 恒 4 个、`answer_index` 0–3。
+
+| 文件 | 顶层 | 单元项字段 | 题目项字段 |
+| --- | --- | --- | --- |
+| **vocab** | `volume, unit, words[]` | word 项:`word, ipa, pos, meaning_cn, phrase_en, freq_rank`(词组 ipa/pos 可空字符串) | — |
+| **grammar** | `volume, unit, points[], questions[]` | point:`code, point, category, overview` | `qid, volume, unit, point, code, category, tag, stem, options, answer_index, answer_text, explanation` |
+| **reading** | `volume, unit, passages[]` | passage:`code, genre, title, body, questions`(**用 `genre` 不是 topic**) | `qid, volume, unit, code, stem, options, answer, answer_index, explanation`(**题干用 `stem` 不是 q**) |
+| **cloze** | `volume, unit, passages[]` | passage:`code, title, scene, body, questions`(正文用 `body`) | `qid, volume, unit, code, blank, options, answer, answer_index, explanation` |
+| **listening** | `volume, unit, exercises[]` | exercise:`code, title, type, kind, speaker, transcript, translation_cn, questions`(`transcript`=**字符串数组**,每行一句) | `qid, volume, unit, code, stem, options, answer_index, answer_text` |
+| **writing** | `volume, unit, writing{}` | writing:`volume, unit, code, type, title, genre, prompt_cn, key_points[], useful_expressions[], sample, sample_cn, scoring` | `scoring`=**dict** `{content, language, structure, wordcount}`(不是 list) |
+
+**listening 值域(锁死)**:`type` ∈ {`dialogue`, `passage`};`kind` ∈ {`long`(对话), `short`(短文)};`speaker` ∈ {`us_male`, `us_female`}(对话=us_male、短文=us_female)。**别用 monologue/passage(kind)**。
+**reading `genre` 值**:说明文/记叙文/对话/书信/议论文/应用文。
+**code 命名**:grammar point=`g9uX.01/02/03`;reading=`g9uX.r.01`…;cloze=`g9uX.c.01`…;listening=`g9uX.l.01`…;writing=`g9uX.w.01`。

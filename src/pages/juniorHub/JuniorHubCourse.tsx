@@ -1,4 +1,4 @@
-﻿import { Link, useNavigate } from "react-router-dom";
+﻿import { useNavigate } from "react-router-dom";
 import { useJuniorHub } from "@/lib/juniorHub/context";
 import { getGradeCourse, semesterIdsForGrade } from "@/lib/juniorHub/courseData";
 import { getSemesterProgress } from "@/lib/juniorHub/progress";
@@ -46,13 +46,6 @@ export default function JuniorHubCourse() {
             </button>
           );
         })}
-        <div className="rounded-2xl bg-[#FFF8F0] p-4 text-center">
-          <div className="mb-1 text-3xl">🚀</div>
-          <div className="text-sm font-semibold">更多内容持续更新中</div>
-          <Link to="/primary" className="mt-2 inline-block text-xs text-[#FF6B35]">
-            ← 切换年级
-          </Link>
-        </div>
       </div>
     </>
   );

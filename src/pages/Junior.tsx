@@ -14,6 +14,7 @@ import { listExams } from "@/data/exams";
 import { isReviewUnlocked } from "@/lib/suzhouExamProgress";
 import { useIsAdmin } from "@/hooks/useIsAdmin";
 import JuniorComingSoon from "@/components/junior/JuniorComingSoon";
+import { isJuniorGradeOpen } from "@/lib/juniorHub/access";
 
 const LS_KEY = "junior:gradeFilter";
 
@@ -166,9 +167,12 @@ export default function Junior() {
 
   const gradeLabel = grade === "all" ? "初一至初三" : GRADE_LABELS[grade];
 
-  // 初二/初三整理中:非管理员选这两个年级 → 占位(年级 tab 仍可见,可切回初一)。
+  // 年级开放状态走单一来源 access.ts(OPEN_JUNIOR_GRADES);受限年级非管理员 → 占位。
+  // 现 7/8/9 全开放,此处实际不再拦截;保留逻辑以便未来若收某年级自动跟随。
   const { isAdmin } = useIsAdmin();
-  const restricted = grade === "g9" && !isAdmin;
+  const GRADE_NUM: Record<string, number> = { g7: 7, g8: 8, g9: 9 };
+  const gradeNum = GRADE_NUM[grade] ?? null;
+  const restricted = gradeNum != null && !isJuniorGradeOpen(gradeNum) && !isAdmin;
 
   const classroomTo =
     grade === "g8" ? "/junior/hub/8" : grade === "g9" ? "/junior/hub/9" : "/junior/hub/7";

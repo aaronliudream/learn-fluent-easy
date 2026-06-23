@@ -1,0 +1,570 @@
+{
+  "volume": "9",
+  "unit": "U6",
+  "exercises": [
+    {
+      "code": "g9u6.l.01",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·对话 When Was It Invented",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: This is a great museum. When was the telephone invented?",
+        "M: It was invented in 1876 by Alexander Graham Bell.",
+        "W: Really? And who invented basketball?",
+        "M: It was invented by James Naismith in 1891.",
+        "W: Wow, you know a lot about inventions!"
+      ],
+      "translation_cn": "女:这个博物馆真棒。电话是什么时候发明的?\n男:它是1876年由亚历山大·格雷厄姆·贝尔发明的。\n女:真的吗?那篮球是谁发明的?\n男:是詹姆斯·奈史密斯在1891年发明的。\n女:哇,你懂好多发明的事!",
+      "questions": [
+        {
+          "qid": "g9u6.l.01.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.01",
+          "stem": "When was the telephone invented?",
+          "options": [
+            "In 1891.",
+            "In 1786.",
+            "In 1867.",
+            "In 1876."
+          ],
+          "answer_index": 3,
+          "answer_text": "In 1876."
+        },
+        {
+          "qid": "g9u6.l.01.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.01",
+          "stem": "Who invented the telephone?",
+          "options": [
+            "Bell.",
+            "Shen Nong.",
+            "Crum.",
+            "Naismith."
+          ],
+          "answer_index": 0,
+          "answer_text": "Bell."
+        },
+        {
+          "qid": "g9u6.l.01.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.01",
+          "stem": "When was basketball invented?",
+          "options": [
+            "In 1819.",
+            "In 1918.",
+            "In 1876.",
+            "In 1891."
+          ],
+          "answer_index": 3,
+          "answer_text": "In 1891."
+        },
+        {
+          "qid": "g9u6.l.01.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.01",
+          "stem": "Who invented basketball?",
+          "options": [
+            "Crum.",
+            "Bell.",
+            "James Naismith.",
+            "Edison."
+          ],
+          "answer_index": 2,
+          "answer_text": "James Naismith."
+        },
+        {
+          "qid": "g9u6.l.01.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.01",
+          "stem": "Where are they?",
+          "options": [
+            "In a museum.",
+            "In a shop.",
+            "At home.",
+            "At school."
+          ],
+          "answer_index": 0,
+          "answer_text": "In a museum."
+        }
+      ]
+    },
+    {
+      "code": "g9u6.l.02",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·短文 The Potato Chip",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Let me tell you how the potato chip was invented.",
+        "It was invented by a cook named George Crum in 1853.",
+        "A customer said his potatoes were too thick.",
+        "So Crum cut them very thin and fried them.",
+        "The thin, crispy chips became popular all over the world."
+      ],
+      "translation_cn": "我来告诉你薯片是怎么发明的。\n它是1853年由一位叫乔治·克拉姆的厨师发明的。\n一位顾客说他的土豆切得太厚了。\n于是克拉姆把土豆切得很薄,然后油炸。\n这种又薄又脆的薯片在全世界流行起来。",
+      "questions": [
+        {
+          "qid": "g9u6.l.02.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.02",
+          "stem": "Who invented the potato chip?",
+          "options": [
+            "A customer.",
+            "Naismith.",
+            "George Crum.",
+            "Bell."
+          ],
+          "answer_index": 2,
+          "answer_text": "George Crum."
+        },
+        {
+          "qid": "g9u6.l.02.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.02",
+          "stem": "When was it invented?",
+          "options": [
+            "In 1876.",
+            "In 1835.",
+            "In 1853.",
+            "In 1953."
+          ],
+          "answer_index": 2,
+          "answer_text": "In 1853."
+        },
+        {
+          "qid": "g9u6.l.02.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.02",
+          "stem": "What did the customer say?",
+          "options": [
+            "Too thin.",
+            "Too salty.",
+            "Too cold.",
+            "The potatoes were too thick."
+          ],
+          "answer_index": 3,
+          "answer_text": "The potatoes were too thick."
+        },
+        {
+          "qid": "g9u6.l.02.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.02",
+          "stem": "How did Crum cut the potatoes?",
+          "options": [
+            "Very thick.",
+            "Very thin.",
+            "In big pieces.",
+            "Round."
+          ],
+          "answer_index": 1,
+          "answer_text": "Very thin."
+        },
+        {
+          "qid": "g9u6.l.02.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.02",
+          "stem": "How did the chips become?",
+          "options": [
+            "Popular all over the world.",
+            "Hated.",
+            "Lost.",
+            "Cheap."
+          ],
+          "answer_index": 0,
+          "answer_text": "Popular all over the world."
+        }
+      ]
+    },
+    {
+      "code": "g9u6.l.03",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·对话 What Is It Used For",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: What a strange tool! What is it used for?",
+        "M: It's used for opening bottles.",
+        "W: Oh, I see. And what about this one?",
+        "M: That one is used for cutting paper.",
+        "W: These old tools are really interesting."
+      ],
+      "translation_cn": "女:好奇怪的工具!它是用来干什么的?\n男:它是用来开瓶子的。\n女:哦,明白了。那这个呢?\n男:那个是用来裁纸的。\n女:这些旧工具真有意思。",
+      "questions": [
+        {
+          "qid": "g9u6.l.03.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.03",
+          "stem": "What is the first tool used for?",
+          "options": [
+            "Telling time.",
+            "Opening bottles.",
+            "Cutting paper.",
+            "Making tea."
+          ],
+          "answer_index": 1,
+          "answer_text": "Opening bottles."
+        },
+        {
+          "qid": "g9u6.l.03.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.03",
+          "stem": "What is the second tool used for?",
+          "options": [
+            "Cooking.",
+            "Cutting paper.",
+            "Opening bottles.",
+            "Writing."
+          ],
+          "answer_index": 1,
+          "answer_text": "Cutting paper."
+        },
+        {
+          "qid": "g9u6.l.03.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.03",
+          "stem": "What does the woman think of the tools?",
+          "options": [
+            "They are useless.",
+            "They are boring.",
+            "They are new.",
+            "They are interesting."
+          ],
+          "answer_index": 3,
+          "answer_text": "They are interesting."
+        },
+        {
+          "qid": "g9u6.l.03.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.03",
+          "stem": "How many tools are mentioned?",
+          "options": [
+            "Two.",
+            "Four.",
+            "One.",
+            "Three."
+          ],
+          "answer_index": 0,
+          "answer_text": "Two."
+        },
+        {
+          "qid": "g9u6.l.03.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.03",
+          "stem": "Are the tools new or old?",
+          "options": [
+            "Lost.",
+            "Broken.",
+            "New.",
+            "Old."
+          ],
+          "answer_index": 3,
+          "answer_text": "Old."
+        }
+      ]
+    },
+    {
+      "code": "g9u6.l.04",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·短文 The Story of Tea",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Tea was discovered by accident long ago.",
+        "A Chinese ruler was boiling water under a tree.",
+        "Some leaves fell into the water by chance.",
+        "The water changed color and smelled nice.",
+        "He tasted it, and that was how tea was first made."
+      ],
+      "translation_cn": "很久以前,茶是偶然被发现的。\n一位中国的统治者正在树下煮水。\n一些树叶碰巧落进了水里。\n水变了颜色,还散发出好闻的气味。\n他尝了尝,茶最初就是这样被制作出来的。",
+      "questions": [
+        {
+          "qid": "g9u6.l.04.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.04",
+          "stem": "How was tea discovered?",
+          "options": [
+            "In a shop.",
+            "By a teacher.",
+            "By accident.",
+            "On purpose."
+          ],
+          "answer_index": 2,
+          "answer_text": "By accident."
+        },
+        {
+          "qid": "g9u6.l.04.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.04",
+          "stem": "Who was boiling water?",
+          "options": [
+            "A teacher.",
+            "A cook.",
+            "A Chinese ruler.",
+            "A farmer."
+          ],
+          "answer_index": 2,
+          "answer_text": "A Chinese ruler."
+        },
+        {
+          "qid": "g9u6.l.04.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.04",
+          "stem": "What fell into the water?",
+          "options": [
+            "Some fruit.",
+            "Some flowers.",
+            "Some leaves.",
+            "Some grass."
+          ],
+          "answer_index": 2,
+          "answer_text": "Some leaves."
+        },
+        {
+          "qid": "g9u6.l.04.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.04",
+          "stem": "What happened to the water?",
+          "options": [
+            "It turned to ice.",
+            "It changed color and smelled nice.",
+            "It became cold.",
+            "It dried up."
+          ],
+          "answer_index": 1,
+          "answer_text": "It changed color and smelled nice."
+        },
+        {
+          "qid": "g9u6.l.04.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.04",
+          "stem": "What is the passage about?",
+          "options": [
+            "How tea was discovered.",
+            "Why tea is cheap.",
+            "How to grow tea.",
+            "Where to buy tea."
+          ],
+          "answer_index": 0,
+          "answer_text": "How tea was discovered."
+        }
+      ]
+    },
+    {
+      "code": "g9u6.l.05",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·对话 A Science Project",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: What did you make for your science project?",
+        "M: I made a small lamp. It's powered by the sun.",
+        "W: That's cool! What is it used for?",
+        "M: It's used for lighting my room at night.",
+        "W: Great idea! No electricity is needed."
+      ],
+      "translation_cn": "女:你的科学项目做了什么?\n男:我做了一盏小灯,是太阳能的。\n女:真酷!它是用来干什么的?\n男:它用来在晚上照亮我的房间。\n女:好主意!不需要用电。",
+      "questions": [
+        {
+          "qid": "g9u6.l.05.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.05",
+          "stem": "What did the man make?",
+          "options": [
+            "A small lamp.",
+            "A clock.",
+            "A car.",
+            "A bag."
+          ],
+          "answer_index": 0,
+          "answer_text": "A small lamp."
+        },
+        {
+          "qid": "g9u6.l.05.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.05",
+          "stem": "What is the lamp powered by?",
+          "options": [
+            "The sun.",
+            "Wind.",
+            "A battery.",
+            "Electricity."
+          ],
+          "answer_index": 0,
+          "answer_text": "The sun."
+        },
+        {
+          "qid": "g9u6.l.05.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.05",
+          "stem": "What is the lamp used for?",
+          "options": [
+            "Telling time.",
+            "Lighting his room at night.",
+            "Playing music.",
+            "Cooking."
+          ],
+          "answer_index": 1,
+          "answer_text": "Lighting his room at night."
+        },
+        {
+          "qid": "g9u6.l.05.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.05",
+          "stem": "Does the lamp need electricity?",
+          "options": [
+            "Sometimes.",
+            "A little.",
+            "Yes.",
+            "No."
+          ],
+          "answer_index": 3,
+          "answer_text": "No."
+        },
+        {
+          "qid": "g9u6.l.05.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.05",
+          "stem": "What does the woman think of the idea?",
+          "options": [
+            "It is hard.",
+            "It is bad.",
+            "It is great.",
+            "It is boring."
+          ],
+          "answer_index": 2,
+          "answer_text": "It is great."
+        }
+      ]
+    },
+    {
+      "code": "g9u6.l.06",
+      "volume": "9",
+      "unit": "U6",
+      "title": "九年级 U6 听力·短文 Inventions in Our Life",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Many inventions make our daily life easier.",
+        "The light bulb was invented so we can see at night.",
+        "The fridge is used for keeping food cold and fresh.",
+        "The zipper, invented in 1893, is used on clothes and bags.",
+        "All these things were created to solve our problems."
+      ],
+      "translation_cn": "许多发明让我们的日常生活更方便。\n电灯被发明出来,让我们在夜晚能看见东西。\n冰箱用来保持食物冷藏新鲜。\n拉链发明于1893年,用在衣服和包上。\n所有这些东西都是为了解决我们的问题而创造的。",
+      "questions": [
+        {
+          "qid": "g9u6.l.06.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.06",
+          "stem": "Why was the light bulb invented?",
+          "options": [
+            "To tell time.",
+            "To play music.",
+            "To cook food.",
+            "So we can see at night."
+          ],
+          "answer_index": 3,
+          "answer_text": "So we can see at night."
+        },
+        {
+          "qid": "g9u6.l.06.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.06",
+          "stem": "What is the fridge used for?",
+          "options": [
+            "Keeping food cold and fresh.",
+            "Lighting rooms.",
+            "Telling time.",
+            "Washing clothes."
+          ],
+          "answer_index": 0,
+          "answer_text": "Keeping food cold and fresh."
+        },
+        {
+          "qid": "g9u6.l.06.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.06",
+          "stem": "When was the zipper invented?",
+          "options": [
+            "In 1983.",
+            "In 1893.",
+            "In 1839.",
+            "In 1876."
+          ],
+          "answer_index": 1,
+          "answer_text": "In 1893."
+        },
+        {
+          "qid": "g9u6.l.06.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.06",
+          "stem": "Where is the zipper used?",
+          "options": [
+            "On shoes only.",
+            "On cars.",
+            "On clothes and bags.",
+            "On books."
+          ],
+          "answer_index": 2,
+          "answer_text": "On clothes and bags."
+        },
+        {
+          "qid": "g9u6.l.06.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.l.06",
+          "stem": "Why were these things created?",
+          "options": [
+            "To make money.",
+            "To solve our problems.",
+            "To be sold.",
+            "To look nice."
+          ],
+          "answer_index": 1,
+          "answer_text": "To solve our problems."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "volume": "9",
+  "unit": "U6",
+  "words": [
+    {
+      "word": "heel",
+      "ipa": "/hiːl/",
+      "pos": "n.",
+      "meaning_cn": "鞋跟;足跟",
+      "phrase_en": "high heels",
+      "freq_rank": 1
+    },
+    {
+      "word": "scoop",
+      "ipa": "/skuːp/",
+      "pos": "n.",
+      "meaning_cn": "勺;铲子",
+      "phrase_en": "an ice-cream scoop",
+      "freq_rank": 2
+    },
+    {
+      "word": "electricity",
+      "ipa": "/ɪˌlekˈtrɪsəti/",
+      "pos": "n.",
+      "meaning_cn": "电;电能",
+      "phrase_en": "produce electricity",
+      "freq_rank": 3
+    },
+    {
+      "word": "style",
+      "ipa": "/staɪl/",
+      "pos": "n.",
+      "meaning_cn": "样式;款式",
+      "phrase_en": "the style of shoes",
+      "freq_rank": 4
+    },
+    {
+      "word": "project",
+      "ipa": "/ˈprɒdʒekt, ˈprɑːdʒekt/",
+      "pos": "n.",
+      "meaning_cn": "项目;工程",
+      "phrase_en": "a school project",
+      "freq_rank": 5
+    },
+    {
+      "word": "pleasure",
+      "ipa": "/ˈpleʒə(r)/",
+      "pos": "n.",
+      "meaning_cn": "高兴;愉快",
+      "phrase_en": "with pleasure",
+      "freq_rank": 6
+    },
+    {
+      "word": "zipper",
+      "ipa": "/ˈzɪpə(r)/",
+      "pos": "n.",
+      "meaning_cn": "(=zip)拉链;拉锁",
+      "phrase_en": "a broken zipper",
+      "freq_rank": 7
+    },
+    {
+      "word": "daily",
+      "ipa": "/ˈdeɪli/",
+      "pos": "adj.",
+      "meaning_cn": "每日的;日常的",
+      "phrase_en": "daily life",
+      "freq_rank": 8
+    },
+    {
+      "word": "have a point",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "有道理",
+      "phrase_en": "you have a point",
+      "freq_rank": 9
+    },
+    {
+      "word": "website",
+      "ipa": "/ˈwebsaɪt/",
+      "pos": "n.",
+      "meaning_cn": "网站",
+      "phrase_en": "a useful website",
+      "freq_rank": 10
+    },
+    {
+      "word": "pioneer",
+      "ipa": "/ˌpaɪəˈnɪə, ˌpaɪəˈnɪr/",
+      "pos": "n.",
+      "meaning_cn": "先驱;先驱者",
+      "phrase_en": "a pioneer in science",
+      "freq_rank": 11
+    },
+    {
+      "word": "list",
+      "ipa": "/lɪst/",
+      "pos": "v. & n.",
+      "meaning_cn": "列表;列清单;名单;清单",
+      "phrase_en": "list the inventions",
+      "freq_rank": 12
+    },
+    {
+      "word": "mention",
+      "ipa": "/ˈmenʃn/",
+      "pos": "v.",
+      "meaning_cn": "提到;说到",
+      "phrase_en": "mention his name",
+      "freq_rank": 13
+    },
+    {
+      "word": "accidental",
+      "ipa": "/ˌæksɪˈdentl/",
+      "pos": "adj.",
+      "meaning_cn": "意外的;偶然的",
+      "phrase_en": "an accidental invention",
+      "freq_rank": 14
+    },
+    {
+      "word": "by accident",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "偶然;意外地",
+      "phrase_en": "found by accident",
+      "freq_rank": 15
+    },
+    {
+      "word": "ruler",
+      "ipa": "/ˈruːlə/",
+      "pos": "n.",
+      "meaning_cn": "统治者;支配者",
+      "phrase_en": "a great ruler",
+      "freq_rank": 16
+    },
+    {
+      "word": "boil",
+      "ipa": "/bɔɪl/",
+      "pos": "v.",
+      "meaning_cn": "煮沸;烧开",
+      "phrase_en": "boil the water",
+      "freq_rank": 17
+    },
+    {
+      "word": "remain",
+      "ipa": "/rɪˈmeɪn/",
+      "pos": "v.",
+      "meaning_cn": "保持不变;剩余",
+      "phrase_en": "remain calm",
+      "freq_rank": 18
+    },
+    {
+      "word": "smell",
+      "ipa": "/smel/",
+      "pos": "n.",
+      "meaning_cn": "气味;v.(smelt/smelt, smelled/smelled)发出……气味;闻到",
+      "phrase_en": "a nice smell",
+      "freq_rank": 19
+    },
+    {
+      "word": "saint",
+      "ipa": "/seɪnt/",
+      "pos": "n.",
+      "meaning_cn": "圣人;圣徒",
+      "phrase_en": "a kind saint",
+      "freq_rank": 20
+    },
+    {
+      "word": "national",
+      "ipa": "/ˈnæʃnəl/",
+      "pos": "adj.",
+      "meaning_cn": "国家的;民族的",
+      "phrase_en": "a national hero",
+      "freq_rank": 21
+    },
+    {
+      "word": "trade",
+      "ipa": "/treɪd/",
+      "pos": "n.",
+      "meaning_cn": "贸易;交易;v. 做买卖;从事贸易",
+      "phrase_en": "trade with other countries",
+      "freq_rank": 22
+    },
+    {
+      "word": "take place",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "发生;出现",
+      "phrase_en": "take place in 1893",
+      "freq_rank": 23
+    },
+    {
+      "word": "popularity",
+      "ipa": "/ˌpɒpjuˈlærəti, ˌpɑːpjuˈlærəti/",
+      "pos": "n.",
+      "meaning_cn": "受欢迎;普及",
+      "phrase_en": "gain popularity",
+      "freq_rank": 24
+    },
+    {
+      "word": "doubt",
+      "ipa": "/daʊt/",
+      "pos": "n.",
+      "meaning_cn": "疑惑;疑问;v. 怀疑",
+      "phrase_en": "without doubt",
+      "freq_rank": 25
+    },
+    {
+      "word": "without doubt",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "毫无疑问;的确",
+      "phrase_en": "without doubt the best",
+      "freq_rank": 26
+    },
+    {
+      "word": "fridge",
+      "ipa": "/frɪdʒ/",
+      "pos": "n.",
+      "meaning_cn": "冰箱",
+      "phrase_en": "put it in the fridge",
+      "freq_rank": 27
+    },
+    {
+      "word": "low",
+      "ipa": "/ləʊ/",
+      "pos": "adj.",
+      "meaning_cn": "低的;矮的",
+      "phrase_en": "a low price",
+      "freq_rank": 28
+    },
+    {
+      "word": "somebody",
+      "ipa": "/ˈsʌmbədi/",
+      "pos": "pron.",
+      "meaning_cn": "某人;n. 重要人物",
+      "phrase_en": "somebody famous",
+      "freq_rank": 29
+    },
+    {
+      "word": "translate",
+      "ipa": "/trænsˈleɪt/",
+      "pos": "v.",
+      "meaning_cn": "翻译",
+      "phrase_en": "translate into English",
+      "freq_rank": 30
+    },
+    {
+      "word": "lock",
+      "ipa": "/lɒk, lɑːk/",
+      "pos": "v.",
+      "meaning_cn": "锁上;锁住;n. 锁",
+      "phrase_en": "lock the door",
+      "freq_rank": 31
+    },
+    {
+      "word": "ring",
+      "ipa": "/rɪŋ/",
+      "pos": "v.",
+      "meaning_cn": "(rang/rung)(使)发出钟声或铃声;打电话",
+      "phrase_en": "ring the bell",
+      "freq_rank": 32
+    },
+    {
+      "word": "earthquake",
+      "ipa": "/ˈɜː(r)θkweɪk/",
+      "pos": "n.",
+      "meaning_cn": "地震",
+      "phrase_en": "a big earthquake",
+      "freq_rank": 33
+    },
+    {
+      "word": "sudden",
+      "ipa": "/ˈsʌdən/",
+      "pos": "adj.",
+      "meaning_cn": "突然(的)",
+      "phrase_en": "a sudden change",
+      "freq_rank": 34
+    },
+    {
+      "word": "all of a sudden",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "突然;猛地",
+      "phrase_en": "all of a sudden",
+      "freq_rank": 35
+    },
+    {
+      "word": "bell",
+      "ipa": "/bel/",
+      "pos": "n.",
+      "meaning_cn": "钟(声);铃(声)",
+      "phrase_en": "ring the bell",
+      "freq_rank": 36
+    },
+    {
+      "word": "biscuit",
+      "ipa": "/ˈbɪskɪt/",
+      "pos": "n.",
+      "meaning_cn": "饼干",
+      "phrase_en": "eat a biscuit",
+      "freq_rank": 37
+    },
+    {
+      "word": "cookie",
+      "ipa": "/ˈkʊki/",
+      "pos": "n.",
+      "meaning_cn": "曲奇饼",
+      "phrase_en": "a sweet cookie",
+      "freq_rank": 38
+    },
+    {
+      "word": "musical",
+      "ipa": "/ˈmjuːzɪkl/",
+      "pos": "adj.",
+      "meaning_cn": "音乐的;有音乐天赋的",
+      "phrase_en": "a musical family",
+      "freq_rank": 39
+    },
+    {
+      "word": "instrument",
+      "ipa": "/ˈɪnstrəmənt/",
+      "pos": "n.",
+      "meaning_cn": "器械;仪器;工具",
+      "phrase_en": "a musical instrument",
+      "freq_rank": 40
+    },
+    {
+      "word": "crispy",
+      "ipa": "/ˈkrɪspi/",
+      "pos": "adj.",
+      "meaning_cn": "脆的;酥脆的",
+      "phrase_en": "crispy chips",
+      "freq_rank": 41
+    },
+    {
+      "word": "salty",
+      "ipa": "/ˈsɔːlti/",
+      "pos": "adj.",
+      "meaning_cn": "咸的",
+      "phrase_en": "too salty",
+      "freq_rank": 42
+    },
+    {
+      "word": "sour",
+      "ipa": "/ˈsaʊə(r)/",
+      "pos": "adj.",
+      "meaning_cn": "酸的;有酸味的",
+      "phrase_en": "a sour taste",
+      "freq_rank": 43
+    },
+    {
+      "word": "by mistake",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "错误地;无意中",
+      "phrase_en": "by mistake",
+      "freq_rank": 44
+    },
+    {
+      "word": "customer",
+      "ipa": "/ˈkʌstəmə(r)/",
+      "pos": "n.",
+      "meaning_cn": "顾客;客户",
+      "phrase_en": "a happy customer",
+      "freq_rank": 45
+    },
+    {
+      "word": "the Olympics",
+      "ipa": "/əˈlɪmpɪks/",
+      "pos": "n.",
+      "meaning_cn": "奥林匹克运动会",
+      "phrase_en": "win at the Olympics",
+      "freq_rank": 46
+    },
+    {
+      "word": "Canadian",
+      "ipa": "/kəˈneɪdiən/",
+      "pos": "adj.",
+      "meaning_cn": "加拿大的;n. 加拿大人",
+      "phrase_en": "a Canadian doctor",
+      "freq_rank": 47
+    },
+    {
+      "word": "divide",
+      "ipa": "/dɪˈvaɪd/",
+      "pos": "v.",
+      "meaning_cn": "分开;分散",
+      "phrase_en": "divide into groups",
+      "freq_rank": 48
+    },
+    {
+      "word": "divide into",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "把……分开",
+      "phrase_en": "divide into two teams",
+      "freq_rank": 49
+    },
+    {
+      "word": "basket",
+      "ipa": "/ˈbɑːskɪt, ˈbæskɪt/",
+      "pos": "n.",
+      "meaning_cn": "篮;筐",
+      "phrase_en": "a basket of fruit",
+      "freq_rank": 50
+    },
+    {
+      "word": "not only ... but also ...",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "不但……而且……",
+      "phrase_en": "not only fast but also safe",
+      "freq_rank": 51
+    },
+    {
+      "word": "look up to",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "钦佩;仰慕",
+      "phrase_en": "look up to a hero",
+      "freq_rank": 52
+    },
+    {
+      "word": "hero",
+      "ipa": "/ˈhɪərəʊ, ˈhɪrəʊ/",
+      "pos": "n.",
+      "meaning_cn": "英雄;男主角",
+      "phrase_en": "a national hero",
+      "freq_rank": 53
+    },
+    {
+      "word": "professional",
+      "ipa": "/prəˈfeʃnəl/",
+      "pos": "adj.",
+      "meaning_cn": "职业的;专业的",
+      "phrase_en": "a professional player",
+      "freq_rank": 54
+    },
+    {
+      "word": "nearly",
+      "ipa": "/ˈnɪəli, ˈnɪrli/",
+      "pos": "adv.",
+      "meaning_cn": "几乎",
+      "phrase_en": "nearly finished",
+      "freq_rank": 55
+    }
+  ]
+}

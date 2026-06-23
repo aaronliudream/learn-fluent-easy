@@ -2438,7 +2438,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "定语从句 which/that",
+                "subtitle": "被动语态(疑问与by)",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -2453,6 +2453,14 @@
               },
               {
                 "id": "s6",
+                "title": "完形填空",
+                "subtitle": "10空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
                 "title": "听力短文",
                 "subtitle": "听音答题",
                 "icon": "👂",
@@ -2460,7 +2468,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s8",
                 "title": "写作练习",
                 "subtitle": "本单元句型",
                 "icon": "✍️",
@@ -2468,7 +2476,7 @@
                 "time": "10分钟"
               },
               {
-                "id": "s8",
+                "id": "s9",
                 "title": "单元通关",
                 "subtitle": "综合检测",
                 "icon": "🏆",
@@ -2476,8 +2484,13 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "定语从句 which/that",
-            "grammarCode": "g8.28",
+            "grammarTitle": "被动语态(疑问与by)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "g9u6.01",
+              "g9u6.02",
+              "g9u6.03"
+            ],
             "grammarQuiz": [
               {
                 "q": "本单元语法重点：定语从句 which/that。下列哪项与「accidental」词义最接近？",

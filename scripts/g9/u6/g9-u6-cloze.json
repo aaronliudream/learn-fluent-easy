@@ -1,0 +1,864 @@
+{
+  "volume": "9",
+  "unit": "U6",
+  "passages": [
+    {
+      "code": "g9u6.c.01",
+      "volume": "9",
+      "unit": "U6",
+      "title": "The First Ice Cream",
+      "scene": "冰淇淋发明",
+      "body": "Ice cream is loved by people all over the world. But do you know how it was (1)____? Long ago, there were no fridges. People could not (2)____ food cold easily. It is said that ice cream was first (3)____ in China. Ice and milk were (4)____ together to make a cold, sweet food. Later, this idea was (5)____ to other countries. In Italy, new kinds of ice cream were (6)____. People added fruit and sugar to make it (7)____. Today, ice cream is (8)____ in many flavors. It is (9)____ for cooling us down in summer. A simple cold food has (10)____ people happy for hundreds of years.",
+      "word_count": 109,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "eaten",
+            "sold",
+            "grown",
+            "invented"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被发明 invented"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "lose",
+            "throw",
+            "cut",
+            "keep"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "保持冷 keep cold"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "sold",
+            "made",
+            "eaten",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被制作 made"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "mixed",
+            "dropped",
+            "thrown",
+            "broken"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被混合 mixed"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "brought",
+            "kept",
+            "eaten",
+            "lost"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被带到 brought"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "eaten",
+            "sold",
+            "created",
+            "lost"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被创造 created"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "colder",
+            "worse",
+            "better",
+            "smaller"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "更好 better"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "thrown",
+            "sold",
+            "lost",
+            "kept"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被卖 sold"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "thrown",
+            "used",
+            "broken",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "made",
+            "lost",
+            "sold",
+            "kept"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "使…快乐 made people happy"
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u6.c.02",
+      "volume": "9",
+      "unit": "U6",
+      "title": "How the Telephone Was Invented",
+      "scene": "电话发明",
+      "body": "The telephone is one of the most important (1)____ in history. It was (2)____ in 1876 by Alexander Graham Bell. Before that, people could only (3)____ letters to talk over long distances. This took a long (4)____. Bell wanted to find a way for people to (5)____ to each other quickly. After much hard work, the first telephone was (6)____. When it was (7)____ for the first time, people were amazed. Soon, telephones were (8)____ in many homes. Today, mobile phones are (9)____ by almost everyone. The telephone has (10)____ the way we live and talk.",
+      "word_count": 96,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "products",
+            "prices",
+            "colors",
+            "inventions"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "发明 inventions"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "sold",
+            "invented",
+            "eaten",
+            "grown"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被发明 invented"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "send",
+            "lose",
+            "eat",
+            "cut"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "寄信 send letters"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "time",
+            "place",
+            "color",
+            "money"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "花时间 time"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "walk",
+            "talk",
+            "run",
+            "sleep"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "交谈 talk"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "sold",
+            "made",
+            "eaten",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被制造 made"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "used",
+            "lost",
+            "thrown",
+            "broken"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被使用 used"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "put"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被安装 put"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "kept",
+            "broken",
+            "used",
+            "lost"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被使用 used"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "sold",
+            "lost",
+            "changed",
+            "kept"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "改变了 changed"
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u6.c.03",
+      "volume": "9",
+      "unit": "U6",
+      "title": "A Useful Mistake",
+      "scene": "有用的错误",
+      "body": "Some great things are (1)____ by mistake. One example is the sticky note. A scientist was trying to make a strong (2)____. But the glue he made was very (3)____. It could stick to paper but came off easily. At first, he thought his work was a (4)____. But later, another person had an idea. The weak glue could be (5)____ to make notes that stick and come off. So the sticky note was (6)____. Today, sticky notes are (7)____ by students and workers everywhere. They are (8)____ for leaving short messages. This story shows that a (9)____ can become something useful. We should never (10)____ up after a mistake.",
+      "word_count": 110,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "eaten",
+            "sold",
+            "made",
+            "lost"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被做出 made"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "glue",
+            "game",
+            "color",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "胶水 glue"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "big",
+            "cold",
+            "strong",
+            "weak"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "弱的 weak"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "failure",
+            "game",
+            "success",
+            "color"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "失败 failure"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "broken",
+            "used",
+            "thrown",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被用来 used"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "eaten",
+            "lost",
+            "sold",
+            "created"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被创造 created"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "broken",
+            "used",
+            "lost",
+            "kept"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被使用 used"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "broken",
+            "used",
+            "lost",
+            "thrown"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "mistake",
+            "song",
+            "color",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "错误 mistake"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "lose",
+            "take",
+            "give",
+            "keep"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放弃 give up"
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u6.c.04",
+      "volume": "9",
+      "unit": "U6",
+      "title": "The History of Paper",
+      "scene": "纸的历史",
+      "body": "Paper is used (1)____ writing, drawing, and many other things. But how was it (2)____? Paper was (3)____ in China about two thousand years ago. Before paper, words were (4)____ on bamboo or silk. But these were heavy or (5)____. A man named Cai Lun found a way to make paper from cheap (6)____ like grass and old cloth. His paper was light and (7)____. Soon, this great invention was (8)____ to other countries. Books could then be (9)____ more easily. Paper has (10)____ the way people share knowledge. It is one of the greatest inventions in history.",
+      "word_count": 98,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "for",
+            "by",
+            "with",
+            "to"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "used for"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "grown",
+            "invented",
+            "sold",
+            "eaten"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被发明 invented"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "made"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被制造 made"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "eaten",
+            "grown",
+            "written",
+            "sold"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被写 written"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "short",
+            "cheap",
+            "expensive",
+            "cold"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "昂贵的 expensive"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "colors",
+            "games",
+            "prices",
+            "materials"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "材料 materials"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "sour",
+            "cheap",
+            "heavy",
+            "cold"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "便宜的 cheap"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "eaten",
+            "brought",
+            "lost",
+            "kept"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被带到 brought"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "made",
+            "sold",
+            "lost",
+            "kept"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被制作 made"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "changed",
+            "kept",
+            "lost",
+            "sold"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "改变了 changed"
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u6.c.05",
+      "volume": "9",
+      "unit": "U6",
+      "title": "The Olympics",
+      "scene": "奥运会",
+      "body": "The Olympic Games are (1)____ by millions of people around the world. But do you know how they were (2)____? The Olympics were first (3)____ in ancient Greece more than two thousand years ago. They were (4)____ to honor the gods. Later, the games were (5)____ for many years. Then in 1896, the modern Olympics were (6)____ again in Greece. Since then, the games have been (7)____ every four years. Athletes from many countries are (8)____ to take part. The Olympics are now (9)____ for bringing people together in peace. They are (10)____ as a symbol of friendship and sport.",
+      "word_count": 100,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "lost",
+            "watched",
+            "sold",
+            "eaten"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被观看 watched"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "kept",
+            "eaten",
+            "started",
+            "lost"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "开始 started"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "held",
+            "eaten",
+            "lost",
+            "sold"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被举办 held"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "broken",
+            "thrown",
+            "used",
+            "lost"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "用来 used to honor"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "stopped",
+            "started",
+            "eaten",
+            "sold"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被停止 stopped"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "lost",
+            "sold",
+            "eaten",
+            "held"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被举办 held"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "held",
+            "kept",
+            "lost",
+            "broken"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被举办 held"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "lost",
+            "welcomed",
+            "thrown",
+            "broken"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被欢迎 welcomed"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "kept",
+            "known",
+            "lost",
+            "sold"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "以…著称 known for"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "sold",
+            "kept",
+            "lost",
+            "seen"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被看作 seen as"
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u6.c.06",
+      "volume": "9",
+      "unit": "U6",
+      "title": "Things Used Every Day",
+      "scene": "日常用品",
+      "body": "Many things that are (1)____ every day were invented long ago. Look at the clock. It is (2)____ for telling time. Before clocks, people used the sun to (3)____ the time. The umbrella is another useful thing. It is (4)____ for keeping off rain and sun. It was first (5)____ in China. The fridge is (6)____ for keeping food cold and fresh. Before fridges, food could not be (7)____ for long. Even the simple key is (8)____ for opening and closing locks. All these things were (9)____ to make our lives easier. We should be (10)____ to the people who invented them.",
+      "word_count": 102,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "broken",
+            "used",
+            "thrown",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被使用 used"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "used",
+            "kept",
+            "broken",
+            "lost"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "lose",
+            "tell",
+            "cut",
+            "eat"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "知道时间 tell time"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "lost",
+            "thrown",
+            "used",
+            "broken"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "eaten",
+            "lost",
+            "made",
+            "sold"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被制造 made"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "broken",
+            "kept",
+            "lost",
+            "used"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "kept",
+            "sold",
+            "lost",
+            "eaten"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被保存 kept"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "thrown",
+            "used",
+            "broken",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "用于 used for"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "eaten",
+            "sold",
+            "lost",
+            "created"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被创造 created"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "thankful",
+            "tired",
+            "angry",
+            "sad"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "感激的 thankful"
+        }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

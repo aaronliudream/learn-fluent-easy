@@ -1,0 +1,642 @@
+{
+  "volume": "9",
+  "unit": "U6",
+  "passages": [
+    {
+      "code": "g9u6.r.01",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "说明文",
+      "title": "An Accidental Invention",
+      "body": "Many great things were invented by accident. The potato chip is one of them. It was invented in 1853 by a cook named George Crum. One day, a customer said his fried potatoes were too thick. Crum was not happy, so he cut the potatoes very thin and fried them. He thought the customer would hate them. But the customer loved them! Soon these thin, crispy chips became popular. Today, potato chips are eaten all over the world. This story shows that some of the best things are made by mistake. A small accident can change the world.",
+      "word_count": 98,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "customer",
+          "cn": "顾客"
+        },
+        {
+          "word": "crispy",
+          "cn": "酥脆的"
+        },
+        {
+          "word": "popular",
+          "cn": "受欢迎的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.01.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.01",
+          "stem": "When was the potato chip invented?",
+          "options": [
+            "In 1900.",
+            "In 1835.",
+            "In 1953.",
+            "In 1853."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:invented in 1853"
+        },
+        {
+          "qid": "g9u6.r.01.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.01",
+          "stem": "Who invented the potato chip?",
+          "options": [
+            "George Crum.",
+            "A teacher.",
+            "A customer.",
+            "A farmer."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:by a cook named George Crum"
+        },
+        {
+          "qid": "g9u6.r.01.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.01",
+          "stem": "Why did Crum cut the potatoes thin?",
+          "options": [
+            "He was hungry.",
+            "He had no choice.",
+            "The customer said they were too thick.",
+            "He liked thin chips."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:too thick"
+        },
+        {
+          "qid": "g9u6.r.01.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.01",
+          "stem": "How did the customer feel about the thin chips?",
+          "options": [
+            "He loved them.",
+            "He was angry.",
+            "He hated them.",
+            "He was bored."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:the customer loved them"
+        },
+        {
+          "qid": "g9u6.r.01.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.01",
+          "stem": "What does the story show?",
+          "options": [
+            "Cooking is hard.",
+            "Customers are rude.",
+            "Potatoes are cheap.",
+            "Some of the best things are made by mistake."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "主旨:意外造就好东西"
+        }
+      ]
+    },
+    {
+      "code": "g9u6.r.02",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "记叙文",
+      "title": "Who Invented Basketball?",
+      "body": "Basketball is loved by millions of people, but do you know who invented it? It was invented in 1891 by a Canadian teacher named James Naismith. At that time, he worked at a school in the US. The winter was cold, and students could not play outside. Naismith wanted a new indoor game. He divided the students into two teams and used a basket on the wall. The first game was played with a soccer ball. Soon the game became popular. Today, basketball is played all over the world, and Naismith is looked up to as a hero.",
+      "word_count": 98,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "divide",
+          "cn": "分开"
+        },
+        {
+          "word": "indoor",
+          "cn": "室内的"
+        },
+        {
+          "word": "hero",
+          "cn": "英雄"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.02.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.02",
+          "stem": "When was basketball invented?",
+          "options": [
+            "In 1891.",
+            "In 1981.",
+            "In 1900.",
+            "In 1819."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:invented in 1891"
+        },
+        {
+          "qid": "g9u6.r.02.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.02",
+          "stem": "Who invented basketball?",
+          "options": [
+            "A doctor.",
+            "George Crum.",
+            "James Naismith.",
+            "A student."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:by James Naismith"
+        },
+        {
+          "qid": "g9u6.r.02.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.02",
+          "stem": "Why did Naismith want a new game?",
+          "options": [
+            "Students could not play outside in winter.",
+            "He was bored.",
+            "He needed money.",
+            "He liked baseball."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:winter was cold...could not play outside"
+        },
+        {
+          "qid": "g9u6.r.02.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.02",
+          "stem": "What was the first game played with?",
+          "options": [
+            "A tennis ball.",
+            "A baseball.",
+            "A basketball.",
+            "A soccer ball."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:played with a soccer ball"
+        },
+        {
+          "qid": "g9u6.r.02.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.02",
+          "stem": "How do people see Naismith today?",
+          "options": [
+            "As a cook.",
+            "As a teacher only.",
+            "As a player.",
+            "As a hero."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:looked up to as a hero"
+        }
+      ]
+    },
+    {
+      "code": "g9u6.r.03",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "说明文",
+      "title": "The Story of Tea",
+      "body": "Tea is one of the most popular drinks in the world. It is said that tea was discovered by accident. A long time ago, a Chinese ruler named Shen Nong was boiling water under a tree. Suddenly, some leaves fell into the water. The water changed color and gave off a nice smell. Shen Nong tasted it and found it delicious. This was how tea was first made. Later, tea was brought to Korea and Japan. By the 17th century, it was also traded to Western countries. Today, tea is drunk by people everywhere, but it all began with a happy accident.",
+      "word_count": 102,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "discover",
+          "cn": "发现"
+        },
+        {
+          "word": "boil",
+          "cn": "煮沸"
+        },
+        {
+          "word": "trade",
+          "cn": "贸易;交易"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.03.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.03",
+          "stem": "How was tea discovered?",
+          "options": [
+            "By a teacher.",
+            "On purpose.",
+            "By accident.",
+            "In a shop."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:discovered by accident"
+        },
+        {
+          "qid": "g9u6.r.03.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.03",
+          "stem": "Who discovered tea?",
+          "options": [
+            "Shen Nong.",
+            "A farmer.",
+            "George Crum.",
+            "James Naismith."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:a ruler named Shen Nong"
+        },
+        {
+          "qid": "g9u6.r.03.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.03",
+          "stem": "What fell into the water?",
+          "options": [
+            "Some flowers.",
+            "Some fruit.",
+            "Some leaves.",
+            "Some grass."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:some leaves fell"
+        },
+        {
+          "qid": "g9u6.r.03.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.03",
+          "stem": "Where was tea brought after China?",
+          "options": [
+            "The US and UK.",
+            "France.",
+            "Korea and Japan.",
+            "Germany."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:brought to Korea and Japan"
+        },
+        {
+          "qid": "g9u6.r.03.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.03",
+          "stem": "By when was tea traded to the West?",
+          "options": [
+            "By the 7th century.",
+            "By the 17th century.",
+            "By 1891.",
+            "By 1853."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:By the 17th century"
+        }
+      ]
+    },
+    {
+      "code": "g9u6.r.04",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "议论文",
+      "title": "Inventions Change Our Lives",
+      "body": "Inventions have changed our daily lives in many ways. Think about the light bulb. Before it was invented, people used candles at night. Now our homes are filled with light. The telephone was invented so that people could talk over long distances. Today, mobile phones are used by almost everyone. Even small things, like the zipper, make life easier. It was invented in 1893 and is now used on clothes and bags everywhere. Some inventions were made on purpose, and some were made by accident. But all of them share one thing: they were created to solve problems and make our lives better.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "invention",
+          "cn": "发明"
+        },
+        {
+          "word": "distance",
+          "cn": "距离"
+        },
+        {
+          "word": "solve",
+          "cn": "解决"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.04.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.04",
+          "stem": "What did people use before the light bulb?",
+          "options": [
+            "Candles.",
+            "Phones.",
+            "Zippers.",
+            "Computers."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:used candles at night"
+        },
+        {
+          "qid": "g9u6.r.04.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.04",
+          "stem": "Why was the telephone invented?",
+          "options": [
+            "So people could talk over long distances.",
+            "To play music.",
+            "To tell time.",
+            "To take photos."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:talk over long distances"
+        },
+        {
+          "qid": "g9u6.r.04.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.04",
+          "stem": "When was the zipper invented?",
+          "options": [
+            "In 1983.",
+            "In 1853.",
+            "In 1839.",
+            "In 1893."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:invented in 1893"
+        },
+        {
+          "qid": "g9u6.r.04.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.04",
+          "stem": "Where is the zipper used now?",
+          "options": [
+            "Only on books.",
+            "On clothes and bags.",
+            "Only on shoes.",
+            "Only on cars."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:used on clothes and bags"
+        },
+        {
+          "qid": "g9u6.r.04.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.04",
+          "stem": "What do all the inventions share?",
+          "options": [
+            "They were created to solve problems.",
+            "They are Chinese.",
+            "They are expensive.",
+            "They are old."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:created to solve problems"
+        }
+      ]
+    },
+    {
+      "code": "g9u6.r.05",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "记叙文",
+      "title": "My Science Project",
+      "body": "Last month, our class had a science project about inventions. Each student was asked to make something useful. My friend Tom made a small lamp. It was powered by the sun, so no electricity was needed. A girl named Lily made a bag that was made from old clothes. My project was a clock that was made of used wood. The teacher asked us how our things were produced. We explained that everything was made by hand from waste materials. The teacher was very pleased. She said that good inventions are not always made of expensive things. Sometimes the best ideas come from simple materials.",
+      "word_count": 105,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "project",
+          "cn": "项目"
+        },
+        {
+          "word": "electricity",
+          "cn": "电"
+        },
+        {
+          "word": "pleased",
+          "cn": "高兴的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.05.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.05",
+          "stem": "What was each student asked to make?",
+          "options": [
+            "A painting.",
+            "A song.",
+            "A story.",
+            "Something useful."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:make something useful"
+        },
+        {
+          "qid": "g9u6.r.05.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.05",
+          "stem": "What powered Tom's lamp?",
+          "options": [
+            "Wind.",
+            "The sun.",
+            "Electricity.",
+            "A battery."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:powered by the sun"
+        },
+        {
+          "qid": "g9u6.r.05.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.05",
+          "stem": "What was the writer's clock made of?",
+          "options": [
+            "Glass.",
+            "Metal.",
+            "Used wood.",
+            "Old clothes."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:made of used wood"
+        },
+        {
+          "qid": "g9u6.r.05.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.05",
+          "stem": "How were the projects produced?",
+          "options": [
+            "Bought online.",
+            "By hand from waste materials.",
+            "By machines.",
+            "In a factory."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:made by hand from waste"
+        },
+        {
+          "qid": "g9u6.r.05.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.05",
+          "stem": "What did the teacher say about good inventions?",
+          "options": [
+            "They are hard.",
+            "They take years.",
+            "They are not always made of expensive things.",
+            "They need money."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:not always made of expensive things"
+        }
+      ]
+    },
+    {
+      "code": "g9u6.r.06",
+      "volume": "9",
+      "unit": "U6",
+      "genre": "应用文",
+      "title": "Invention Museum Guide",
+      "body": "WELCOME TO THE INVENTION MUSEUM! Discover how everyday things were invented. OPENING HOURS: 9:00 a.m. to 5:00 p.m., Tuesday to Sunday. FLOOR 1 — DAILY LIFE: See how the telephone, the light bulb, and the fridge were invented. Many were created by accident! FLOOR 2 — SPORTS: Learn how basketball and other games were invented and who invented them. FLOOR 3 — FOOD: Find out how potato chips and ice cream were first made. FREE GUIDE: A free guidebook is given to every visitor. TICKETS: Adults 20 yuan, students 10 yuan. Come and see how great ideas changed the world!",
+      "word_count": 100,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "discover",
+          "cn": "发现"
+        },
+        {
+          "word": "guide",
+          "cn": "指南;向导"
+        },
+        {
+          "word": "visitor",
+          "cn": "参观者"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u6.r.06.q1",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.06",
+          "stem": "When is the museum open?",
+          "options": [
+            "Only Monday.",
+            "Every day.",
+            "Only weekends.",
+            "Tuesday to Sunday."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:Tuesday to Sunday"
+        },
+        {
+          "qid": "g9u6.r.06.q2",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.06",
+          "stem": "What can you see on Floor 1?",
+          "options": [
+            "Basketball.",
+            "Potato chips.",
+            "The telephone, light bulb, and fridge.",
+            "Cars."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Floor 1 — Daily Life"
+        },
+        {
+          "qid": "g9u6.r.06.q3",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.06",
+          "stem": "Where can you learn about basketball?",
+          "options": [
+            "Floor 1.",
+            "Floor 2.",
+            "The shop.",
+            "Floor 3."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:Floor 2 — Sports"
+        },
+        {
+          "qid": "g9u6.r.06.q4",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.06",
+          "stem": "What is given to every visitor?",
+          "options": [
+            "A free toy.",
+            "A free guidebook.",
+            "A free ticket.",
+            "A free drink."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:free guidebook is given"
+        },
+        {
+          "qid": "g9u6.r.06.q5",
+          "volume": "9",
+          "unit": "U6",
+          "code": "g9u6.r.06",
+          "stem": "How much is a student ticket?",
+          "options": [
+            "Free.",
+            "10 yuan.",
+            "15 yuan.",
+            "20 yuan."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:students 10 yuan"
+        }
+      ]
+    }
+  ]
+}

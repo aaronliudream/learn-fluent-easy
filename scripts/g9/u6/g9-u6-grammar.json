@@ -1,0 +1,1166 @@
+{
+  "volume": "9",
+  "unit": "U6",
+  "points": [
+    {
+      "code": "g9u6.01",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "category": "verb",
+      "overview": "过去时被动疑问:When/Where + was/were + 主语 + 过去分词?"
+    },
+    {
+      "code": "g9u6.02",
+      "point": "被动语态:by 引导施动者",
+      "category": "verb",
+      "overview": "by 引导动作执行者:was/were + 过去分词 + by + 人。"
+    },
+    {
+      "code": "g9u6.03",
+      "point": "被动语态:be used for(用途表达)",
+      "category": "verb",
+      "overview": "be used for + doing/名词,表示用途。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u6.01.q1",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the telephone invented?",
+      "options": [
+        "was",
+        "did",
+        "were",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] 单数 was + invented"
+    },
+    {
+      "qid": "g9u6.01.q2",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ these cars made?",
+      "options": [
+        "are",
+        "did",
+        "were",
+        "was"
+      ],
+      "answer_index": 2,
+      "answer_text": "were",
+      "explanation": "[过去被动疑问] 复数 were + made"
+    },
+    {
+      "qid": "g9u6.01.q3",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Where ____ tea first drunk?",
+      "options": [
+        "was",
+        "were",
+        "did",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was + drunk"
+    },
+    {
+      "qid": "g9u6.01.q4",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When was the light bulb ____?",
+      "options": [
+        "invented",
+        "invent",
+        "invents",
+        "inventing"
+      ],
+      "answer_index": 0,
+      "answer_text": "invented",
+      "explanation": "[过去被动疑问] was + 过去分词 invented"
+    },
+    {
+      "qid": "g9u6.01.q5",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the bridge built?",
+      "options": [
+        "did",
+        "was",
+        "were",
+        "does"
+      ],
+      "answer_index": 1,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was built"
+    },
+    {
+      "qid": "g9u6.01.q6",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Where were the photos ____?",
+      "options": [
+        "taken",
+        "taking",
+        "took",
+        "take"
+      ],
+      "answer_index": 0,
+      "answer_text": "taken",
+      "explanation": "[过去被动疑问] were + taken"
+    },
+    {
+      "qid": "g9u6.01.q7",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ paper invented in China?",
+      "options": [
+        "did",
+        "were",
+        "is",
+        "was"
+      ],
+      "answer_index": 3,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was invented"
+    },
+    {
+      "qid": "g9u6.01.q8",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "____ the zipper invented in 1893?",
+      "options": [
+        "Is",
+        "Were",
+        "Did",
+        "Was"
+      ],
+      "answer_index": 3,
+      "answer_text": "Was",
+      "explanation": "[过去被动疑问] Was + invented"
+    },
+    {
+      "qid": "g9u6.01.q9",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When were the buildings ____?",
+      "options": [
+        "build",
+        "builds",
+        "built",
+        "building"
+      ],
+      "answer_index": 2,
+      "answer_text": "built",
+      "explanation": "[过去被动疑问] were + built"
+    },
+    {
+      "qid": "g9u6.01.q10",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Where ____ the watch made?",
+      "options": [
+        "were",
+        "was",
+        "does",
+        "did"
+      ],
+      "answer_index": 1,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was made"
+    },
+    {
+      "qid": "g9u6.01.q11",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ basketball invented?",
+      "options": [
+        "is",
+        "were",
+        "did",
+        "was"
+      ],
+      "answer_index": 3,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was invented"
+    },
+    {
+      "qid": "g9u6.01.q12",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Were the letters ____ yesterday?",
+      "options": [
+        "sending",
+        "send",
+        "sent",
+        "sends"
+      ],
+      "answer_index": 2,
+      "answer_text": "sent",
+      "explanation": "[过去被动疑问] were + sent"
+    },
+    {
+      "qid": "g9u6.01.q13",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the school built?",
+      "options": [
+        "did",
+        "were",
+        "does",
+        "was"
+      ],
+      "answer_index": 3,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was built"
+    },
+    {
+      "qid": "g9u6.01.q14",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Where were these toys ____?",
+      "options": [
+        "make",
+        "making",
+        "makes",
+        "made"
+      ],
+      "answer_index": 3,
+      "answer_text": "made",
+      "explanation": "[过去被动疑问] were + made"
+    },
+    {
+      "qid": "g9u6.01.q15",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the first car produced?",
+      "options": [
+        "did",
+        "was",
+        "were",
+        "is"
+      ],
+      "answer_index": 1,
+      "answer_text": "was",
+      "explanation": "[过去被动疑问] was produced"
+    },
+    {
+      "qid": "g9u6.01.q16",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Was the cake ____ by your mother?",
+      "options": [
+        "made",
+        "making",
+        "makes",
+        "make"
+      ],
+      "answer_index": 0,
+      "answer_text": "made",
+      "explanation": "[过去被动疑问] was + made"
+    },
+    {
+      "qid": "g9u6.01.q17",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the trees planted?",
+      "options": [
+        "was",
+        "were",
+        "are",
+        "did"
+      ],
+      "answer_index": 1,
+      "answer_text": "were",
+      "explanation": "[过去被动疑问] 复数 were planted"
+    },
+    {
+      "qid": "g9u6.01.q18",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "Where was the book ____?",
+      "options": [
+        "wrote",
+        "write",
+        "written",
+        "writing"
+      ],
+      "answer_index": 2,
+      "answer_text": "written",
+      "explanation": "[过去被动疑问] was + written"
+    },
+    {
+      "qid": "g9u6.01.q19",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "When ____ the potato chips invented?",
+      "options": [
+        "are",
+        "were",
+        "was",
+        "did"
+      ],
+      "answer_index": 1,
+      "answer_text": "were",
+      "explanation": "[过去被动疑问] 复数 were invented"
+    },
+    {
+      "qid": "g9u6.01.q20",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:一般过去时疑问句(was/were + 过去分词)",
+      "code": "g9u6.01",
+      "category": "verb",
+      "tag": "过去被动疑问",
+      "stem": "____ the song written long ago?",
+      "options": [
+        "Were",
+        "Is",
+        "Was",
+        "Did"
+      ],
+      "answer_index": 2,
+      "answer_text": "Was",
+      "explanation": "[过去被动疑问] Was + written"
+    },
+    {
+      "qid": "g9u6.02.q1",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The telephone was invented ____ Bell.",
+      "options": [
+        "with",
+        "of",
+        "by",
+        "from"
+      ],
+      "answer_index": 2,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by Bell"
+    },
+    {
+      "qid": "g9u6.02.q2",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "Who was the zipper invented ____?",
+      "options": [
+        "with",
+        "by",
+        "of",
+        "from"
+      ],
+      "answer_index": 1,
+      "answer_text": "by",
+      "explanation": "[by] 问施动者→invented by"
+    },
+    {
+      "qid": "g9u6.02.q3",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The cake was made ____ my mother.",
+      "options": [
+        "of",
+        "by",
+        "from",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q4",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "Basketball was invented ____ James Naismith.",
+      "options": [
+        "by",
+        "of",
+        "in",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q5",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The picture was painted ____ a famous artist.",
+      "options": [
+        "from",
+        "with",
+        "of",
+        "by"
+      ],
+      "answer_index": 3,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q6",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "These books were written ____ Lu Xun.",
+      "options": [
+        "with",
+        "from",
+        "of",
+        "by"
+      ],
+      "answer_index": 3,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q7",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "Who were the chips invented ____?",
+      "options": [
+        "by",
+        "of",
+        "from",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "by",
+      "explanation": "[by] 问施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q8",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The window was broken ____ the boy.",
+      "options": [
+        "for",
+        "of",
+        "by",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q9",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The film was produced ____ a famous director.",
+      "options": [
+        "with",
+        "of",
+        "from",
+        "by"
+      ],
+      "answer_index": 3,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q10",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The house was built ____ workers in 1990.",
+      "options": [
+        "by",
+        "with",
+        "of",
+        "from"
+      ],
+      "answer_index": 0,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q11",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The pyramids were built ____ ancient people long ago.",
+      "options": [
+        "with",
+        "by",
+        "from",
+        "of"
+      ],
+      "answer_index": 1,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q12",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "Tea was first discovered ____ Shen Nong.",
+      "options": [
+        "with",
+        "in",
+        "of",
+        "by"
+      ],
+      "answer_index": 3,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q13",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The trees were planted ____ the students.",
+      "options": [
+        "with",
+        "of",
+        "by",
+        "from"
+      ],
+      "answer_index": 2,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q14",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The clay figures were made ____ hand.",
+      "options": [
+        "by",
+        "of",
+        "from",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "by",
+      "explanation": "[by] by hand 方式"
+    },
+    {
+      "qid": "g9u6.02.q15",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "Who was America discovered ____?",
+      "options": [
+        "with",
+        "by",
+        "of",
+        "from"
+      ],
+      "answer_index": 1,
+      "answer_text": "by",
+      "explanation": "[by] 问施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q16",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The bridge was designed ____ a great engineer.",
+      "options": [
+        "by",
+        "from",
+        "of",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q17",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The room was cleaned ____ the children.",
+      "options": [
+        "of",
+        "from",
+        "by",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.02.q18",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The model was made ____ used wood.",
+      "options": [
+        "by",
+        "of",
+        "to",
+        "for"
+      ],
+      "answer_index": 1,
+      "answer_text": "of",
+      "explanation": "[of] 材料→made of(对比by施动者)"
+    },
+    {
+      "qid": "g9u6.02.q19",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The bridge was destroyed ____ the earthquake.",
+      "options": [
+        "for",
+        "with",
+        "by",
+        "from"
+      ],
+      "answer_index": 2,
+      "answer_text": "by",
+      "explanation": "[by] 施动者(自然力)→by"
+    },
+    {
+      "qid": "g9u6.02.q20",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:by 引导施动者",
+      "code": "g9u6.02",
+      "category": "verb",
+      "tag": "by施动者",
+      "stem": "The gifts were wrapped ____ the workers.",
+      "options": [
+        "of",
+        "with",
+        "from",
+        "by"
+      ],
+      "answer_index": 3,
+      "answer_text": "by",
+      "explanation": "[by] 施动者→by"
+    },
+    {
+      "qid": "g9u6.03.q1",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "The scoop is used ____ serving ice-cream.",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "by"
+      ],
+      "answer_index": 1,
+      "answer_text": "for",
+      "explanation": "[used for] for + doing"
+    },
+    {
+      "qid": "g9u6.03.q2",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "What is it used ____?",
+      "options": [
+        "of",
+        "by",
+        "for",
+        "to"
+      ],
+      "answer_index": 2,
+      "answer_text": "for",
+      "explanation": "[used for] 问用途→for"
+    },
+    {
+      "qid": "g9u6.03.q3",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "A pen is used ____ writing.",
+      "options": [
+        "with",
+        "by",
+        "to",
+        "for"
+      ],
+      "answer_index": 3,
+      "answer_text": "for",
+      "explanation": "[used for] for writing"
+    },
+    {
+      "qid": "g9u6.03.q4",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Knives are used ____ cutting things.",
+      "options": [
+        "to",
+        "with",
+        "for",
+        "by"
+      ],
+      "answer_index": 2,
+      "answer_text": "for",
+      "explanation": "[used for] for cutting"
+    },
+    {
+      "qid": "g9u6.03.q5",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "This room is used ____ meetings.",
+      "options": [
+        "by",
+        "of",
+        "to",
+        "for"
+      ],
+      "answer_index": 3,
+      "answer_text": "for",
+      "explanation": "[used for] for + 名词"
+    },
+    {
+      "qid": "g9u6.03.q6",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Computers are used ____ many things.",
+      "options": [
+        "for",
+        "to",
+        "by",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "for",
+      "explanation": "[used for] for"
+    },
+    {
+      "qid": "g9u6.03.q7",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "What are scissors used ____?",
+      "options": [
+        "for",
+        "of",
+        "by",
+        "to"
+      ],
+      "answer_index": 0,
+      "answer_text": "for",
+      "explanation": "[used for] 问用途→for"
+    },
+    {
+      "qid": "g9u6.03.q8",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Glass is used ____ making windows.",
+      "options": [
+        "to",
+        "by",
+        "with",
+        "for"
+      ],
+      "answer_index": 3,
+      "answer_text": "for",
+      "explanation": "[used for] for making"
+    },
+    {
+      "qid": "g9u6.03.q9",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "A fridge is used ____ keeping food cold.",
+      "options": [
+        "for",
+        "by",
+        "to",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "for",
+      "explanation": "[used for] for keeping"
+    },
+    {
+      "qid": "g9u6.03.q10",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "This machine is used ____ washing clothes.",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "by"
+      ],
+      "answer_index": 1,
+      "answer_text": "for",
+      "explanation": "[used for] for washing"
+    },
+    {
+      "qid": "g9u6.03.q11",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Phones are used ____ talking to people.",
+      "options": [
+        "to",
+        "for",
+        "by",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "for",
+      "explanation": "[used for] for talking"
+    },
+    {
+      "qid": "g9u6.03.q12",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "A key is used ____ opening locks.",
+      "options": [
+        "with",
+        "for",
+        "by",
+        "to"
+      ],
+      "answer_index": 1,
+      "answer_text": "for",
+      "explanation": "[used for] for opening"
+    },
+    {
+      "qid": "g9u6.03.q13",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "What is this tool used ____?",
+      "options": [
+        "by",
+        "of",
+        "to",
+        "for"
+      ],
+      "answer_index": 3,
+      "answer_text": "for",
+      "explanation": "[used for] 问用途→for"
+    },
+    {
+      "qid": "g9u6.03.q14",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Cameras are used ____ taking photos.",
+      "options": [
+        "for",
+        "to",
+        "with",
+        "by"
+      ],
+      "answer_index": 0,
+      "answer_text": "for",
+      "explanation": "[used for] for taking"
+    },
+    {
+      "qid": "g9u6.03.q15",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "This box is used ____ keeping books.",
+      "options": [
+        "to",
+        "of",
+        "for",
+        "by"
+      ],
+      "answer_index": 2,
+      "answer_text": "for",
+      "explanation": "[used for] for keeping"
+    },
+    {
+      "qid": "g9u6.03.q16",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "Paper is used ____ writing and drawing.",
+      "options": [
+        "with",
+        "to",
+        "for",
+        "by"
+      ],
+      "answer_index": 2,
+      "answer_text": "for",
+      "explanation": "[used for] for writing"
+    },
+    {
+      "qid": "g9u6.03.q17",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "An umbrella is used ____ keeping off rain.",
+      "options": [
+        "with",
+        "to",
+        "by",
+        "for"
+      ],
+      "answer_index": 3,
+      "answer_text": "for",
+      "explanation": "[used for] for keeping off"
+    },
+    {
+      "qid": "g9u6.03.q18",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "What is silk used ____?",
+      "options": [
+        "for",
+        "by",
+        "of",
+        "to"
+      ],
+      "answer_index": 0,
+      "answer_text": "for",
+      "explanation": "[used for] 问用途→for"
+    },
+    {
+      "qid": "g9u6.03.q19",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "These cups are used ____ drinking tea.",
+      "options": [
+        "to",
+        "by",
+        "for",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "for",
+      "explanation": "[used for] for drinking"
+    },
+    {
+      "qid": "g9u6.03.q20",
+      "volume": "9",
+      "unit": "U6",
+      "point": "被动语态:be used for(用途表达)",
+      "code": "g9u6.03",
+      "category": "verb",
+      "tag": "used for",
+      "stem": "A map is used ____ finding the way.",
+      "options": [
+        "by",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "for",
+      "explanation": "[used for] for finding"
+    }
+  ]
+}

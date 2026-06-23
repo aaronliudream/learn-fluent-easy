@@ -1,0 +1,1166 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "points": [
+    {
+      "code": "g9u8.01",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "category": "other",
+      "overview": "must表推测:有把握的肯定推测(一定),用于有明显证据时。"
+    },
+    {
+      "code": "g9u8.02",
+      "point": "情态动词表推测:might/could(可能)",
+      "category": "other",
+      "overview": "might/could表推测:可能(把握较小),用于不确定时。"
+    },
+    {
+      "code": "g9u8.03",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "category": "other",
+      "overview": "can't表推测:不可能(否定推测);belong to表示所属。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u8.01.q1",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "The volleyball ____ belong to Carla. She loves volleyball.",
+      "options": [
+        "can't",
+        "needn't",
+        "must",
+        "mustn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "must",
+      "explanation": "[must] 有把握的肯定推测"
+    },
+    {
+      "qid": "g9u8.01.q2",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "He ____ be tired. He worked all day.",
+      "options": [
+        "can't",
+        "needn't",
+        "may not",
+        "must"
+      ],
+      "answer_index": 3,
+      "answer_text": "must",
+      "explanation": "[must] 一定累了"
+    },
+    {
+      "qid": "g9u8.01.q3",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "This book ____ be Tom's. His name is on it.",
+      "options": [
+        "can't",
+        "mustn't",
+        "must",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "must",
+      "explanation": "[must] 一定是Tom的"
+    },
+    {
+      "qid": "g9u8.01.q4",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "She ____ be at home. The lights are on.",
+      "options": [
+        "must",
+        "may not",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "answer_text": "must",
+      "explanation": "[must] 灯亮→一定在家"
+    },
+    {
+      "qid": "g9u8.01.q5",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "They ____ be hungry. They haven't eaten all day.",
+      "options": [
+        "can't",
+        "mustn't",
+        "needn't",
+        "must"
+      ],
+      "answer_index": 3,
+      "answer_text": "must",
+      "explanation": "[must] 一定饿了"
+    },
+    {
+      "qid": "g9u8.01.q6",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "The keys ____ be in your bag. You just put them there.",
+      "options": [
+        "may not",
+        "must",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "answer_text": "must",
+      "explanation": "[must] 一定在包里"
+    },
+    {
+      "qid": "g9u8.01.q7",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "He ____ be the new teacher. He's standing in front of the class.",
+      "options": [
+        "mustn't",
+        "must",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "answer_text": "must",
+      "explanation": "[must] 一定是新老师"
+    },
+    {
+      "qid": "g9u8.01.q8",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "It ____ be cold outside. People are wearing coats.",
+      "options": [
+        "may not",
+        "must",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "answer_text": "must",
+      "explanation": "[must] 一定冷"
+    },
+    {
+      "qid": "g9u8.01.q9",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "She ____ love music. She plays the piano every day.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "can't",
+        "must"
+      ],
+      "answer_index": 3,
+      "answer_text": "must",
+      "explanation": "[must] 一定爱音乐"
+    },
+    {
+      "qid": "g9u8.01.q10",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "The cat ____ be hungry. It keeps crying.",
+      "options": [
+        "must",
+        "may not",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "answer_text": "must",
+      "explanation": "[must] 一定饿"
+    },
+    {
+      "qid": "g9u8.01.q11",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "Your sister ____ be clever. She always gets full marks.",
+      "options": [
+        "mustn't",
+        "must",
+        "needn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "answer_text": "must",
+      "explanation": "[must] 一定聪明"
+    },
+    {
+      "qid": "g9u8.01.q12",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "He ____ be over sixty. His hair is all white.",
+      "options": [
+        "needn't",
+        "may not",
+        "must",
+        "can't"
+      ],
+      "answer_index": 2,
+      "answer_text": "must",
+      "explanation": "[must] 一定六十多"
+    },
+    {
+      "qid": "g9u8.01.q13",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "The film ____ be good. Everyone is talking about it.",
+      "options": [
+        "mustn't",
+        "can't",
+        "needn't",
+        "must"
+      ],
+      "answer_index": 3,
+      "answer_text": "must",
+      "explanation": "[must] 一定好看"
+    },
+    {
+      "qid": "g9u8.01.q14",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "She ____ be Chinese. She speaks Chinese so well.",
+      "options": [
+        "can't",
+        "may not",
+        "must",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "must",
+      "explanation": "[must] 一定是中国人"
+    },
+    {
+      "qid": "g9u8.01.q15",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "They ____ be brothers. They look so alike.",
+      "options": [
+        "mustn't",
+        "must",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 1,
+      "answer_text": "must",
+      "explanation": "[must] 一定是兄弟"
+    },
+    {
+      "qid": "g9u8.01.q16",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "The shop ____ be open. The door is wide open.",
+      "options": [
+        "needn't",
+        "may not",
+        "can't",
+        "must"
+      ],
+      "answer_index": 3,
+      "answer_text": "must",
+      "explanation": "[must] 一定开着"
+    },
+    {
+      "qid": "g9u8.01.q17",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "He ____ know the answer. He's smiling confidently.",
+      "options": [
+        "must",
+        "needn't",
+        "can't",
+        "mustn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "must",
+      "explanation": "[must] 一定知道"
+    },
+    {
+      "qid": "g9u8.01.q18",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "It ____ be raining. The ground is wet.",
+      "options": [
+        "must",
+        "may not",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "must",
+      "explanation": "[must] 一定在下雨"
+    },
+    {
+      "qid": "g9u8.01.q19",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "She ____ be very busy. She never answers her phone.",
+      "options": [
+        "must",
+        "can't",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "must",
+      "explanation": "[must] 一定很忙"
+    },
+    {
+      "qid": "g9u8.01.q20",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:must(一定,有把握)",
+      "code": "g9u8.01",
+      "category": "other",
+      "tag": "must推测",
+      "stem": "This ____ be his car. It's parked in his own spot.",
+      "options": [
+        "may not",
+        "needn't",
+        "must",
+        "can't"
+      ],
+      "answer_index": 2,
+      "answer_text": "must",
+      "explanation": "[must] 一定是他的车"
+    },
+    {
+      "qid": "g9u8.02.q1",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The hair band ____ belong to Linda, but I'm not sure.",
+      "options": [
+        "can't",
+        "might",
+        "must",
+        "mustn't"
+      ],
+      "answer_index": 1,
+      "answer_text": "might",
+      "explanation": "[might] 可能是Linda的"
+    },
+    {
+      "qid": "g9u8.02.q2",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "He's not here. He ____ be in the library.",
+      "options": [
+        "needn't",
+        "mustn't",
+        "can't",
+        "could"
+      ],
+      "answer_index": 3,
+      "answer_text": "could",
+      "explanation": "[could] 可能在图书馆"
+    },
+    {
+      "qid": "g9u8.02.q3",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The noise ____ be a cat. I'm not sure.",
+      "options": [
+        "can't",
+        "must",
+        "might",
+        "mustn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "might",
+      "explanation": "[might] 可能是猫"
+    },
+    {
+      "qid": "g9u8.02.q4",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "She's late. She ____ have missed the bus.",
+      "options": [
+        "might",
+        "can't",
+        "mustn't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "might",
+      "explanation": "[might] 可能错过了车"
+    },
+    {
+      "qid": "g9u8.02.q5",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The book ____ be Mary's, or it could be Jane's.",
+      "options": [
+        "mustn't",
+        "can't",
+        "must",
+        "might"
+      ],
+      "answer_index": 3,
+      "answer_text": "might",
+      "explanation": "[might] 可能是Mary的"
+    },
+    {
+      "qid": "g9u8.02.q6",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "I don't know where he is. He ____ be at the park.",
+      "options": [
+        "could",
+        "can't",
+        "needn't",
+        "mustn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "could",
+      "explanation": "[could] 可能在公园"
+    },
+    {
+      "qid": "g9u8.02.q7",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The light is on. Someone ____ be inside, perhaps.",
+      "options": [
+        "can't",
+        "needn't",
+        "might",
+        "mustn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "might",
+      "explanation": "[might] 可能有人"
+    },
+    {
+      "qid": "g9u8.02.q8",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "That ____ be the answer, but I'm not sure.",
+      "options": [
+        "must",
+        "could",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "answer_text": "could",
+      "explanation": "[could] 可能是答案"
+    },
+    {
+      "qid": "g9u8.02.q9",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "She didn't come. She ____ be ill, maybe.",
+      "options": [
+        "mustn't",
+        "can't",
+        "might",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "might",
+      "explanation": "[might] 可能病了"
+    },
+    {
+      "qid": "g9u8.02.q10",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The umbrella ____ belong to the teacher, perhaps.",
+      "options": [
+        "needn't",
+        "can't",
+        "could",
+        "mustn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "could",
+      "explanation": "[could] 可能是老师的"
+    },
+    {
+      "qid": "g9u8.02.q11",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "I'm not certain, but the man ____ be running for a bus.",
+      "options": [
+        "must",
+        "can't",
+        "mustn't",
+        "might"
+      ],
+      "answer_index": 3,
+      "answer_text": "might",
+      "explanation": "[might] 可能在赶车"
+    },
+    {
+      "qid": "g9u8.02.q12",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "He ____ be at work, or he could be at home.",
+      "options": [
+        "mustn't",
+        "needn't",
+        "can't",
+        "might"
+      ],
+      "answer_index": 3,
+      "answer_text": "might",
+      "explanation": "[might] 可能在上班"
+    },
+    {
+      "qid": "g9u8.02.q13",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The strange light ____ be a UFO. Who knows?",
+      "options": [
+        "mustn't",
+        "could",
+        "can't",
+        "must"
+      ],
+      "answer_index": 1,
+      "answer_text": "could",
+      "explanation": "[could] 可能是UFO"
+    },
+    {
+      "qid": "g9u8.02.q14",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "She's smiling. She ____ have good news, perhaps.",
+      "options": [
+        "can't",
+        "needn't",
+        "mustn't",
+        "might"
+      ],
+      "answer_index": 3,
+      "answer_text": "might",
+      "explanation": "[might] 可能有好消息"
+    },
+    {
+      "qid": "g9u8.02.q15",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The keys ____ be in the kitchen. Let's check there.",
+      "options": [
+        "must",
+        "could",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 1,
+      "answer_text": "could",
+      "explanation": "[could] 可能在厨房"
+    },
+    {
+      "qid": "g9u8.02.q16",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "That bird ____ be an eagle, but it's far away.",
+      "options": [
+        "can't",
+        "mustn't",
+        "might",
+        "needn't"
+      ],
+      "answer_index": 2,
+      "answer_text": "might",
+      "explanation": "[might] 可能是鹰"
+    },
+    {
+      "qid": "g9u8.02.q17",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "He ____ know her. They went to the same school, perhaps.",
+      "options": [
+        "might",
+        "mustn't",
+        "can't",
+        "needn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "might",
+      "explanation": "[might] 可能认识"
+    },
+    {
+      "qid": "g9u8.02.q18",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The package ____ be for you. Check the name to be sure.",
+      "options": [
+        "could",
+        "must",
+        "mustn't",
+        "can't"
+      ],
+      "answer_index": 0,
+      "answer_text": "could",
+      "explanation": "[could] 可能是给你的"
+    },
+    {
+      "qid": "g9u8.02.q19",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "It ____ rain later. The sky is a little grey.",
+      "options": [
+        "might",
+        "needn't",
+        "can't",
+        "mustn't"
+      ],
+      "answer_index": 0,
+      "answer_text": "might",
+      "explanation": "[might] 可能下雨"
+    },
+    {
+      "qid": "g9u8.02.q20",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:might/could(可能)",
+      "code": "g9u8.02",
+      "category": "other",
+      "tag": "might推测",
+      "stem": "The sound ____ be the wind, or it could be an animal.",
+      "options": [
+        "can't",
+        "might",
+        "mustn't",
+        "must"
+      ],
+      "answer_index": 1,
+      "answer_text": "might",
+      "explanation": "[might] 可能是风"
+    },
+    {
+      "qid": "g9u8.03.q1",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "It ____ be a dog. It was much bigger than any dog.",
+      "options": [
+        "might",
+        "must",
+        "can't",
+        "could"
+      ],
+      "answer_index": 2,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是狗"
+    },
+    {
+      "qid": "g9u8.03.q2",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "This ____ be his bag. His is black, not red.",
+      "options": [
+        "might",
+        "could",
+        "must",
+        "can't"
+      ],
+      "answer_index": 3,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是他的"
+    },
+    {
+      "qid": "g9u8.03.q3",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "She ____ be at school. It's Sunday today.",
+      "options": [
+        "might",
+        "must",
+        "can't",
+        "could"
+      ],
+      "answer_index": 2,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能在学校"
+    },
+    {
+      "qid": "g9u8.03.q4",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "The phone must ____ to Anna. It has her photo.",
+      "options": [
+        "belongs",
+        "belonging",
+        "belonged",
+        "belong"
+      ],
+      "answer_index": 3,
+      "answer_text": "belong",
+      "explanation": "[belong to] must belong to"
+    },
+    {
+      "qid": "g9u8.03.q5",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "He ____ be hungry. He just had a big meal.",
+      "options": [
+        "might",
+        "can't",
+        "must",
+        "could"
+      ],
+      "answer_index": 1,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能饿"
+    },
+    {
+      "qid": "g9u8.03.q6",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "Whose book is this? It might ____ to Tom.",
+      "options": [
+        "belonging",
+        "belonged",
+        "belong",
+        "belongs"
+      ],
+      "answer_index": 2,
+      "answer_text": "belong",
+      "explanation": "[belong to] might belong to"
+    },
+    {
+      "qid": "g9u8.03.q7",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "That ____ be true. I don't believe it at all.",
+      "options": [
+        "can't",
+        "could",
+        "must",
+        "might"
+      ],
+      "answer_index": 0,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是真的"
+    },
+    {
+      "qid": "g9u8.03.q8",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "They ____ be twins. They look completely different.",
+      "options": [
+        "could",
+        "can't",
+        "must",
+        "might"
+      ],
+      "answer_index": 1,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是双胞胎"
+    },
+    {
+      "qid": "g9u8.03.q9",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "The keys could ____ to my brother.",
+      "options": [
+        "belonging",
+        "belonged",
+        "belong",
+        "belongs"
+      ],
+      "answer_index": 2,
+      "answer_text": "belong",
+      "explanation": "[belong to] could belong to"
+    },
+    {
+      "qid": "g9u8.03.q10",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "It ____ be cold. People are wearing T-shirts.",
+      "options": [
+        "can't",
+        "could",
+        "might",
+        "must"
+      ],
+      "answer_index": 0,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能冷"
+    },
+    {
+      "qid": "g9u8.03.q11",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "She ____ be forty. She looks so young.",
+      "options": [
+        "can't",
+        "could",
+        "must",
+        "might"
+      ],
+      "answer_index": 0,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能四十"
+    },
+    {
+      "qid": "g9u8.03.q12",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "Does this pen ____ to you?",
+      "options": [
+        "belonging",
+        "belongs",
+        "belonged",
+        "belong"
+      ],
+      "answer_index": 3,
+      "answer_text": "belong",
+      "explanation": "[belong to] Does it belong to"
+    },
+    {
+      "qid": "g9u8.03.q13",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "He ____ be the thief. He was with me all day.",
+      "options": [
+        "could",
+        "can't",
+        "might",
+        "must"
+      ],
+      "answer_index": 1,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是小偷"
+    },
+    {
+      "qid": "g9u8.03.q14",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "The story ____ be real. It's just a film.",
+      "options": [
+        "could",
+        "might",
+        "can't",
+        "must"
+      ],
+      "answer_index": 2,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能真实"
+    },
+    {
+      "qid": "g9u8.03.q15",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "The bike belongs ____ the girl over there.",
+      "options": [
+        "for",
+        "to",
+        "of",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[belong to] belong to sb"
+    },
+    {
+      "qid": "g9u8.03.q16",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "That ____ be John. John is much taller than that.",
+      "options": [
+        "can't",
+        "must",
+        "might",
+        "could"
+      ],
+      "answer_index": 0,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是John"
+    },
+    {
+      "qid": "g9u8.03.q17",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "She ____ be sleeping. I can hear her singing.",
+      "options": [
+        "must",
+        "might",
+        "could",
+        "can't"
+      ],
+      "answer_index": 3,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能在睡觉"
+    },
+    {
+      "qid": "g9u8.03.q18",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "Whose gloves are these? They might ____ to Lucy.",
+      "options": [
+        "belongs",
+        "belonged",
+        "belonging",
+        "belong"
+      ],
+      "answer_index": 3,
+      "answer_text": "belong",
+      "explanation": "[belong to] might belong to"
+    },
+    {
+      "qid": "g9u8.03.q19",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "cant推测",
+      "stem": "It ____ be a wolf in the city. That's impossible.",
+      "options": [
+        "can't",
+        "might",
+        "must",
+        "could"
+      ],
+      "answer_index": 0,
+      "answer_text": "can't",
+      "explanation": "[can't] 不可能是狼"
+    },
+    {
+      "qid": "g9u8.03.q20",
+      "volume": "9",
+      "unit": "U8",
+      "point": "情态动词表推测:can't(不可能)+ belong to",
+      "code": "g9u8.03",
+      "category": "other",
+      "tag": "belong to",
+      "stem": "The wallet must belong ____ that man.",
+      "options": [
+        "of",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[belong to] belong to"
+    }
+  ]
+}

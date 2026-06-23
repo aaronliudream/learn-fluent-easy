@@ -1,0 +1,350 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "words": [
+    {
+      "word": "whose",
+      "ipa": "/huːz/",
+      "pos": "adj. & pron.",
+      "meaning_cn": "谁的",
+      "phrase_en": "whose book",
+      "freq_rank": 1
+    },
+    {
+      "word": "truck",
+      "ipa": "/trʌk/",
+      "pos": "n.",
+      "meaning_cn": "卡车;货车",
+      "phrase_en": "a big truck",
+      "freq_rank": 2
+    },
+    {
+      "word": "picnic",
+      "ipa": "/ˈpɪknɪk/",
+      "pos": "n.",
+      "meaning_cn": "野餐",
+      "phrase_en": "have a picnic",
+      "freq_rank": 3
+    },
+    {
+      "word": "rabbit",
+      "ipa": "/ˈræbɪt/",
+      "pos": "n.",
+      "meaning_cn": "兔;野兔",
+      "phrase_en": "a white rabbit",
+      "freq_rank": 4
+    },
+    {
+      "word": "attend",
+      "ipa": "/əˈtend/",
+      "pos": "v.",
+      "meaning_cn": "出席;参加",
+      "phrase_en": "attend a concert",
+      "freq_rank": 5
+    },
+    {
+      "word": "valuable",
+      "ipa": "/ˈvæljuəbl/",
+      "pos": "adj.",
+      "meaning_cn": "贵重的;很有用的;宝贵的",
+      "phrase_en": "a valuable ring",
+      "freq_rank": 6
+    },
+    {
+      "word": "anybody",
+      "ipa": "/ˈenibɒdi, ˈenibɑːdi/",
+      "pos": "pron.",
+      "meaning_cn": "任何人",
+      "phrase_en": "anybody else",
+      "freq_rank": 7
+    },
+    {
+      "word": "policeman",
+      "ipa": "/pəˈliːsmən/",
+      "pos": "n.",
+      "meaning_cn": "(pl. policemen)男警察",
+      "phrase_en": "ask a policeman",
+      "freq_rank": 8
+    },
+    {
+      "word": "wolf",
+      "ipa": "/wʊlf/",
+      "pos": "n.",
+      "meaning_cn": "狼",
+      "phrase_en": "a hungry wolf",
+      "freq_rank": 9
+    },
+    {
+      "word": "uneasy",
+      "ipa": "/ʌnˈiːzi/",
+      "pos": "adj.",
+      "meaning_cn": "担心的;不安的",
+      "phrase_en": "feel uneasy",
+      "freq_rank": 10
+    },
+    {
+      "word": "happening",
+      "ipa": "/ˈhæpənɪŋ/",
+      "pos": "n.",
+      "meaning_cn": "事件;发生的事情(常指不寻常的)",
+      "phrase_en": "a strange happening",
+      "freq_rank": 11
+    },
+    {
+      "word": "noise",
+      "ipa": "/nɔɪz/",
+      "pos": "n.",
+      "meaning_cn": "声音;噪音",
+      "phrase_en": "a loud noise",
+      "freq_rank": 12
+    },
+    {
+      "word": "laboratory",
+      "ipa": "/ləˈbɒrətri, ˈlæbrətɔːri/",
+      "pos": "n.",
+      "meaning_cn": "实验室",
+      "phrase_en": "a science laboratory",
+      "freq_rank": 13
+    },
+    {
+      "word": "outdoors",
+      "ipa": "/ˌaʊtˈdɔː(r)z/",
+      "pos": "adv.",
+      "meaning_cn": "在户外;在野外",
+      "phrase_en": "play outdoors",
+      "freq_rank": 14
+    },
+    {
+      "word": "coat",
+      "ipa": "/kəʊt/",
+      "pos": "n.",
+      "meaning_cn": "外套;外衣",
+      "phrase_en": "a warm coat",
+      "freq_rank": 15
+    },
+    {
+      "word": "sleepy",
+      "ipa": "/ˈsliːpi/",
+      "pos": "adj.",
+      "meaning_cn": "困倦的;瞌睡的",
+      "phrase_en": "feel sleepy",
+      "freq_rank": 16
+    },
+    {
+      "word": "midsummer",
+      "ipa": "/ˌmɪdˈsʌmə(r)/",
+      "pos": "n.",
+      "meaning_cn": "仲夏;中夏",
+      "phrase_en": "a midsummer night",
+      "freq_rank": 17
+    },
+    {
+      "word": "land",
+      "ipa": "/lænd/",
+      "pos": "v.",
+      "meaning_cn": "着陆;降落",
+      "phrase_en": "land on the ground",
+      "freq_rank": 18
+    },
+    {
+      "word": "alien",
+      "ipa": "/ˈeɪliən/",
+      "pos": "n.",
+      "meaning_cn": "外星人",
+      "phrase_en": "an alien from space",
+      "freq_rank": 19
+    },
+    {
+      "word": "run after",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "追逐;追赶",
+      "phrase_en": "run after the bus",
+      "freq_rank": 20
+    },
+    {
+      "word": "suit",
+      "ipa": "/sjuːt, suːt/",
+      "pos": "n.",
+      "meaning_cn": "西服;套装;v. 适合",
+      "phrase_en": "wear a suit",
+      "freq_rank": 21
+    },
+    {
+      "word": "express",
+      "ipa": "/ɪkˈspres/",
+      "pos": "v.",
+      "meaning_cn": "表示;表达",
+      "phrase_en": "express an idea",
+      "freq_rank": 22
+    },
+    {
+      "word": "at the same time",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "同时;一起",
+      "phrase_en": "at the same time",
+      "freq_rank": 23
+    },
+    {
+      "word": "circle",
+      "ipa": "/ˈsɜː(r)kl/",
+      "pos": "n.",
+      "meaning_cn": "圆圈;v. 圈出",
+      "phrase_en": "a stone circle",
+      "freq_rank": 24
+    },
+    {
+      "word": "medical",
+      "ipa": "/ˈmedɪkl/",
+      "pos": "adj.",
+      "meaning_cn": "医疗的;医学的",
+      "phrase_en": "medical care",
+      "freq_rank": 25
+    },
+    {
+      "word": "purpose",
+      "ipa": "/ˈpɜː(r)pəs/",
+      "pos": "n.",
+      "meaning_cn": "目的;目标",
+      "phrase_en": "the main purpose",
+      "freq_rank": 26
+    },
+    {
+      "word": "prevent",
+      "ipa": "/prɪˈvent/",
+      "pos": "v.",
+      "meaning_cn": "阻止;阻挠",
+      "phrase_en": "prevent illness",
+      "freq_rank": 27
+    },
+    {
+      "word": "energy",
+      "ipa": "/ˈenə(r)dʒi/",
+      "pos": "n.",
+      "meaning_cn": "力量;精力",
+      "phrase_en": "full of energy",
+      "freq_rank": 28
+    },
+    {
+      "word": "position",
+      "ipa": "/pəˈzɪʃn/",
+      "pos": "n.",
+      "meaning_cn": "位置;地方",
+      "phrase_en": "a good position",
+      "freq_rank": 29
+    },
+    {
+      "word": "pink",
+      "ipa": "/pɪŋk/",
+      "pos": "adj.",
+      "meaning_cn": "粉红色的;n. 粉红色",
+      "phrase_en": "a pink coat",
+      "freq_rank": 30
+    },
+    {
+      "word": "mystery",
+      "ipa": "/ˈmɪstri/",
+      "pos": "n.",
+      "meaning_cn": "奥秘;神秘事物",
+      "phrase_en": "an old mystery",
+      "freq_rank": 31
+    },
+    {
+      "word": "receive",
+      "ipa": "/rɪˈsiːv/",
+      "pos": "v.",
+      "meaning_cn": "接待;接受;收到",
+      "phrase_en": "receive a gift",
+      "freq_rank": 32
+    },
+    {
+      "word": "historian",
+      "ipa": "/hɪˈstɔːriən/",
+      "pos": "n.",
+      "meaning_cn": "历史学家;史学工作者",
+      "phrase_en": "a famous historian",
+      "freq_rank": 33
+    },
+    {
+      "word": "temple",
+      "ipa": "/ˈtempl/",
+      "pos": "n.",
+      "meaning_cn": "庙宇;寺院;圣殿",
+      "phrase_en": "an old temple",
+      "freq_rank": 34
+    },
+    {
+      "word": "leader",
+      "ipa": "/ˈliːdə(r)/",
+      "pos": "n.",
+      "meaning_cn": "领导;领袖",
+      "phrase_en": "a great leader",
+      "freq_rank": 35
+    },
+    {
+      "word": "burial",
+      "ipa": "/ˈberiəl/",
+      "pos": "n.",
+      "meaning_cn": "埋葬;安葬",
+      "phrase_en": "a burial place",
+      "freq_rank": 36
+    },
+    {
+      "word": "honor",
+      "ipa": "/ˈɒnə, ˈɑːnər/",
+      "pos": "v.",
+      "meaning_cn": "(=honour)尊重;表示敬意;n. 荣幸;荣誉",
+      "phrase_en": "honor the dead",
+      "freq_rank": 37
+    },
+    {
+      "word": "ancestor",
+      "ipa": "/ˈænsestə(r)/",
+      "pos": "n.",
+      "meaning_cn": "祖宗;祖先",
+      "phrase_en": "our ancestors",
+      "freq_rank": 38
+    },
+    {
+      "word": "victory",
+      "ipa": "/ˈvɪktəri/",
+      "pos": "n.",
+      "meaning_cn": "胜利;成功",
+      "phrase_en": "a great victory",
+      "freq_rank": 39
+    },
+    {
+      "word": "enemy",
+      "ipa": "/ˈenəmi/",
+      "pos": "n.",
+      "meaning_cn": "敌人;仇人",
+      "phrase_en": "beat the enemy",
+      "freq_rank": 40
+    },
+    {
+      "word": "period",
+      "ipa": "/ˈpɪəriəd, ˈpɪriəd/",
+      "pos": "n.",
+      "meaning_cn": "一段时间;时期",
+      "phrase_en": "a long period",
+      "freq_rank": 41
+    },
+    {
+      "word": "Stonehenge",
+      "ipa": "/ˈstəʊnhendʒ/",
+      "pos": "n.",
+      "meaning_cn": "巨石阵",
+      "phrase_en": "visit Stonehenge",
+      "freq_rank": 42
+    },
+    {
+      "word": "Britain",
+      "ipa": "/ˈbrɪtn/",
+      "pos": "n.",
+      "meaning_cn": "(=Great Britain)大不列颠;英国",
+      "phrase_en": "in Britain",
+      "freq_rank": 43
+    }
+  ]
+}

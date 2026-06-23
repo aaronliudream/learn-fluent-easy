@@ -1,0 +1,570 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "exercises": [
+    {
+      "code": "g9u8.l.01",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·对话 Whose Volleyball",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Look, there's a volleyball here. Whose is it?",
+        "M: It must be Carla's. She loves volleyball.",
+        "W: And whose is this hair band?",
+        "M: It might be Mei's. She has long hair.",
+        "W: You're a good guesser!"
+      ],
+      "translation_cn": "女:看,这里有个排球。是谁的?\n男:一定是卡拉的。她喜欢排球。\n女:那这个发带是谁的?\n男:可能是梅的。她留长发。\n女:你真会猜!",
+      "questions": [
+        {
+          "qid": "g9u8.l.01.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.01",
+          "stem": "Whose volleyball must it be?",
+          "options": [
+            "The woman's.",
+            "Mei's.",
+            "Carla's.",
+            "The man's."
+          ],
+          "answer_index": 2,
+          "answer_text": "Carla's."
+        },
+        {
+          "qid": "g9u8.l.01.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.01",
+          "stem": "Why does the man think so?",
+          "options": [
+            "Carla loves volleyball.",
+            "Carla is new.",
+            "Carla sits there.",
+            "Carla is tall."
+          ],
+          "answer_index": 0,
+          "answer_text": "Carla loves volleyball."
+        },
+        {
+          "qid": "g9u8.l.01.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.01",
+          "stem": "Whose hair band might it be?",
+          "options": [
+            "Mei's.",
+            "Linda's.",
+            "The woman's.",
+            "Carla's."
+          ],
+          "answer_index": 0,
+          "answer_text": "Mei's."
+        },
+        {
+          "qid": "g9u8.l.01.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.01",
+          "stem": "Why might it be Mei's?",
+          "options": [
+            "She is new.",
+            "She likes pink.",
+            "She has long hair.",
+            "She is tall."
+          ],
+          "answer_index": 2,
+          "answer_text": "She has long hair."
+        },
+        {
+          "qid": "g9u8.l.01.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.01",
+          "stem": "What does the woman call the man?",
+          "options": [
+            "A teacher.",
+            "A player.",
+            "A singer.",
+            "A good guesser."
+          ],
+          "answer_index": 3,
+          "answer_text": "A good guesser."
+        }
+      ]
+    },
+    {
+      "code": "g9u8.l.02",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·短文 The Mystery of Stonehenge",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Stonehenge is a famous mystery in Britain.",
+        "It is a circle of very large, heavy stones.",
+        "No one knows for sure why it was built.",
+        "It might have been a temple or a place for medical care.",
+        "How the stones were moved is still a mystery today."
+      ],
+      "translation_cn": "巨石阵是英国一个著名的谜。\n它是一圈非常巨大、沉重的石头。\n没有人确切知道它为什么被建造。\n它可能曾是一座庙宇,或是用于医疗的地方。\n那些石头是如何被移动的,至今仍是一个谜。",
+      "questions": [
+        {
+          "qid": "g9u8.l.02.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.02",
+          "stem": "Where is Stonehenge?",
+          "options": [
+            "In Britain.",
+            "In China.",
+            "In France.",
+            "In the US."
+          ],
+          "answer_index": 0,
+          "answer_text": "In Britain."
+        },
+        {
+          "qid": "g9u8.l.02.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.02",
+          "stem": "What is Stonehenge made of?",
+          "options": [
+            "Wood.",
+            "Large, heavy stones.",
+            "Glass.",
+            "Metal."
+          ],
+          "answer_index": 1,
+          "answer_text": "Large, heavy stones."
+        },
+        {
+          "qid": "g9u8.l.02.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.02",
+          "stem": "What might Stonehenge have been?",
+          "options": [
+            "A temple or a place for medical care.",
+            "A house.",
+            "A shop.",
+            "A school."
+          ],
+          "answer_index": 0,
+          "answer_text": "A temple or a place for medical care."
+        },
+        {
+          "qid": "g9u8.l.02.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.02",
+          "stem": "Does anyone know why it was built?",
+          "options": [
+            "Yes, the writer.",
+            "Yes, scientists.",
+            "No, not for sure.",
+            "Yes, everyone."
+          ],
+          "answer_index": 2,
+          "answer_text": "No, not for sure."
+        },
+        {
+          "qid": "g9u8.l.02.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.02",
+          "stem": "What is still a mystery?",
+          "options": [
+            "When it rains.",
+            "How the stones were moved.",
+            "Why it's famous.",
+            "Who visits it."
+          ],
+          "answer_index": 1,
+          "answer_text": "How the stones were moved."
+        }
+      ]
+    },
+    {
+      "code": "g9u8.l.03",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·对话 A Strange Noise",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Did you hear that noise last night? What could it be?",
+        "M: It might be a cat. Or it could be the wind.",
+        "W: No, it was too loud. It can't be a cat.",
+        "M: Then it must be a bigger animal.",
+        "W: Let's ask the neighbors tomorrow."
+      ],
+      "translation_cn": "女:你听到昨晚那个声音了吗?会是什么呢?\n男:可能是猫。或者可能是风。\n女:不,声音太大了。不可能是猫。\n男:那一定是更大的动物。\n女:我们明天问问邻居吧。",
+      "questions": [
+        {
+          "qid": "g9u8.l.03.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.03",
+          "stem": "When did they hear the noise?",
+          "options": [
+            "Last night.",
+            "Last week.",
+            "This morning.",
+            "Yesterday afternoon."
+          ],
+          "answer_index": 0,
+          "answer_text": "Last night."
+        },
+        {
+          "qid": "g9u8.l.03.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.03",
+          "stem": "What might it be according to the man first?",
+          "options": [
+            "A dog.",
+            "A car.",
+            "A bird.",
+            "A cat or the wind."
+          ],
+          "answer_index": 3,
+          "answer_text": "A cat or the wind."
+        },
+        {
+          "qid": "g9u8.l.03.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.03",
+          "stem": "Why can't it be a cat?",
+          "options": [
+            "It was too quiet.",
+            "It was too small.",
+            "It was too loud.",
+            "It was too fast."
+          ],
+          "answer_index": 2,
+          "answer_text": "It was too loud."
+        },
+        {
+          "qid": "g9u8.l.03.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.03",
+          "stem": "What must it be then?",
+          "options": [
+            "The wind.",
+            "A bigger animal.",
+            "A cat.",
+            "A person."
+          ],
+          "answer_index": 1,
+          "answer_text": "A bigger animal."
+        },
+        {
+          "qid": "g9u8.l.03.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.03",
+          "stem": "What will they do tomorrow?",
+          "options": [
+            "Move away.",
+            "Call the police.",
+            "Stay home.",
+            "Ask the neighbors."
+          ],
+          "answer_index": 3,
+          "answer_text": "Ask the neighbors."
+        }
+      ]
+    },
+    {
+      "code": "g9u8.l.04",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·短文 The UFO Night",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "One summer night, Jean saw a bright light in the sky.",
+        "It was moving slowly above her house.",
+        "She thought it couldn't be a plane.",
+        "The light landed in a field nearby, and Jean felt uneasy.",
+        "To this day, she still wonders what it was."
+      ],
+      "translation_cn": "一个夏夜,琼看到天空中有一道明亮的光。\n它在她家上空缓缓移动。\n她觉得那不可能是飞机。\n那道光降落在附近的田野里,琼感到不安。\n直到今天,她仍然想知道那是什么。",
+      "questions": [
+        {
+          "qid": "g9u8.l.04.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.04",
+          "stem": "When did Jean see the light?",
+          "options": [
+            "One winter day.",
+            "One summer night.",
+            "One morning.",
+            "Last week."
+          ],
+          "answer_index": 1,
+          "answer_text": "One summer night."
+        },
+        {
+          "qid": "g9u8.l.04.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.04",
+          "stem": "What did the light do?",
+          "options": [
+            "Made noise.",
+            "Disappeared fast.",
+            "Changed color.",
+            "Moved slowly above her house."
+          ],
+          "answer_index": 3,
+          "answer_text": "Moved slowly above her house."
+        },
+        {
+          "qid": "g9u8.l.04.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.04",
+          "stem": "What did Jean think it couldn't be?",
+          "options": [
+            "A plane.",
+            "A cloud.",
+            "A bird.",
+            "A star."
+          ],
+          "answer_index": 0,
+          "answer_text": "A plane."
+        },
+        {
+          "qid": "g9u8.l.04.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.04",
+          "stem": "Where did the light land?",
+          "options": [
+            "In the sea.",
+            "In a field nearby.",
+            "On the road.",
+            "On her house."
+          ],
+          "answer_index": 1,
+          "answer_text": "In a field nearby."
+        },
+        {
+          "qid": "g9u8.l.04.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.04",
+          "stem": "How did Jean feel?",
+          "options": [
+            "Bored.",
+            "Sleepy.",
+            "Uneasy.",
+            "Happy."
+          ],
+          "answer_index": 2,
+          "answer_text": "Uneasy."
+        }
+      ]
+    },
+    {
+      "code": "g9u8.l.05",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·对话 Whose Things",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: There are some things left after the party. Whose are they?",
+        "M: This blue coat must belong to a boy. It's big.",
+        "W: And this science book?",
+        "M: It could be Tom's. He loves science.",
+        "W: Let's put them in the lost-and-found box."
+      ],
+      "translation_cn": "女:聚会后留下了一些东西。是谁的呢?\n男:这件蓝外套一定是男孩的,它很大。\n女:那这本科学书呢?\n男:可能是汤姆的,他喜欢科学。\n女:我们把它们放进失物招领箱吧。",
+      "questions": [
+        {
+          "qid": "g9u8.l.05.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.05",
+          "stem": "When were the things left?",
+          "options": [
+            "After the party.",
+            "Before class.",
+            "At night.",
+            "During lunch."
+          ],
+          "answer_index": 0,
+          "answer_text": "After the party."
+        },
+        {
+          "qid": "g9u8.l.05.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.05",
+          "stem": "Who must the blue coat belong to?",
+          "options": [
+            "A girl.",
+            "The teacher.",
+            "A boy.",
+            "Tom."
+          ],
+          "answer_index": 2,
+          "answer_text": "A boy."
+        },
+        {
+          "qid": "g9u8.l.05.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.05",
+          "stem": "Why must it be a boy's?",
+          "options": [
+            "It's new.",
+            "It's warm.",
+            "It's big.",
+            "It's blue."
+          ],
+          "answer_index": 2,
+          "answer_text": "It's big."
+        },
+        {
+          "qid": "g9u8.l.05.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.05",
+          "stem": "Whose could the science book be?",
+          "options": [
+            "A girl's.",
+            "The woman's.",
+            "The teacher's.",
+            "Tom's."
+          ],
+          "answer_index": 3,
+          "answer_text": "Tom's."
+        },
+        {
+          "qid": "g9u8.l.05.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.05",
+          "stem": "Where will they put the things?",
+          "options": [
+            "In a bag.",
+            "In the bin.",
+            "On the desk.",
+            "In the lost-and-found box."
+          ],
+          "answer_index": 3,
+          "answer_text": "In the lost-and-found box."
+        }
+      ]
+    },
+    {
+      "code": "g9u8.l.06",
+      "volume": "9",
+      "unit": "U8",
+      "title": "九年级 U8 听力·短文 Making Guesses",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "In daily life, we often make guesses with special words.",
+        "If we are very sure, we use must.",
+        "If we are less sure, we use might or could.",
+        "If we think something is impossible, we use can't.",
+        "Making good guesses helps us understand the world."
+      ],
+      "translation_cn": "在日常生活中,我们常常用特定的词来做猜测。\n如果我们很确定,就用must。\n如果不太确定,就用might或could。\n如果我们认为某事不可能,就用can't。\n做出好的猜测有助于我们理解世界。",
+      "questions": [
+        {
+          "qid": "g9u8.l.06.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.06",
+          "stem": "What do we make in daily life?",
+          "options": [
+            "Rules.",
+            "Lists.",
+            "Guesses.",
+            "Plans."
+          ],
+          "answer_index": 2,
+          "answer_text": "Guesses."
+        },
+        {
+          "qid": "g9u8.l.06.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.06",
+          "stem": "Which word shows we are very sure?",
+          "options": [
+            "Could.",
+            "Might.",
+            "Can't.",
+            "Must."
+          ],
+          "answer_index": 3,
+          "answer_text": "Must."
+        },
+        {
+          "qid": "g9u8.l.06.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.06",
+          "stem": "Which words show we are less sure?",
+          "options": [
+            "Must.",
+            "Might or could.",
+            "Should.",
+            "Can't."
+          ],
+          "answer_index": 1,
+          "answer_text": "Might or could."
+        },
+        {
+          "qid": "g9u8.l.06.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.06",
+          "stem": "Which word shows something is impossible?",
+          "options": [
+            "Can't.",
+            "Could.",
+            "Might.",
+            "Must."
+          ],
+          "answer_index": 0,
+          "answer_text": "Can't."
+        },
+        {
+          "qid": "g9u8.l.06.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.l.06",
+          "stem": "What does making good guesses help with?",
+          "options": [
+            "Winning games.",
+            "Understanding the world.",
+            "Telling time.",
+            "Making money."
+          ],
+          "answer_index": 1,
+          "answer_text": "Understanding the world."
+        }
+      ]
+    }
+  ]
+}

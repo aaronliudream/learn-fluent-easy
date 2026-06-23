@@ -1,0 +1,864 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "passages": [
+    {
+      "code": "g9u8.c.01",
+      "volume": "9",
+      "unit": "U8",
+      "title": "The Noise at Night",
+      "scene": "夜里的声音",
+      "body": "One night, my family heard a strange (1)____ outside. \"What (2)____ it be?\" my father asked. I thought it (3)____ be a cat, but I wasn't sure. My mother said it (4)____ be the wind, but the wind can't move things. \"It (5)____ be a big animal,\" said my brother. \"It's too loud to be a small one.\" We felt a little (6)____. The next morning, we found our rubbish bins were open. There (7)____ have been an animal looking for (8)____. Finally, my father saw it: a large dog from next door! The (9)____ was solved. We all (10)____ when we knew the truth.",
+      "word_count": 105,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "noise",
+            "game",
+            "price",
+            "color"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "噪音 noise"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "could",
+            "must",
+            "mustn't",
+            "can't"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "could it be 可能"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "mustn't",
+            "might",
+            "can't",
+            "must"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "can't",
+            "must",
+            "mustn't",
+            "might"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "can't",
+            "might",
+            "must",
+            "could"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "must be 一定"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "proud",
+            "happy",
+            "sleepy",
+            "uneasy"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "不安 uneasy"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "could",
+            "must",
+            "might",
+            "can't"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "must have been 一定"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "books",
+            "color",
+            "food",
+            "music"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "找食物 food"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "mystery",
+            "color",
+            "game",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "谜团 mystery"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "ran",
+            "laughed",
+            "slept",
+            "cried"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "笑了 laughed"
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u8.c.02",
+      "volume": "9",
+      "unit": "U8",
+      "title": "Whose Bag Is This?",
+      "scene": "这是谁的包",
+      "body": "After class, I found a school bag on the (1)____. \"Whose bag is this?\" I wondered. It (2)____ belong to a boy, because it was big and blue. I opened it to look for a (3)____. Inside, there was a basketball, so it (4)____ belong to someone who plays sports. There was also a science (5)____. The owner (6)____ love science. Then I saw a name on the book: \"Tom\". So the bag (7)____ be Tom's! I was happy to find the (8)____. I took the bag to Tom. He was very (9)____ to get it back. \"Thank you so much,\" he said. Helping others always makes me (10)____.",
+      "word_count": 109,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "game",
+            "color",
+            "desk",
+            "price"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "桌上 desk"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "can't",
+            "must",
+            "could",
+            "might"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "must belong 一定"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "name",
+            "price",
+            "song",
+            "color"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "名字 name"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "could",
+            "can't",
+            "might",
+            "must"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "must belong 一定"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "price",
+            "color",
+            "book",
+            "game"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "书 book"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "must",
+            "can't",
+            "could",
+            "might"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "must love 一定"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "might",
+            "must",
+            "could",
+            "can't"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "must be 一定"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "game",
+            "price",
+            "color",
+            "owner"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "主人 owner"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "sad",
+            "happy",
+            "tired",
+            "angry"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "开心 happy"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "happy",
+            "sad",
+            "angry",
+            "bored"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "开心 happy"
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u8.c.03",
+      "volume": "9",
+      "unit": "U8",
+      "title": "The Old Castle",
+      "scene": "古堡",
+      "body": "Last summer, my family visited an old (1)____ in the countryside. It was very old and full of (2)____. \"Who (3)____ have lived here?\" I asked. The guide said it (4)____ have been the home of a king long ago. Some rooms were very large. They (5)____ have been used for big parties. One small room (6)____ have been a prison, because it had thick walls and no windows. We weren't (7)____, of course, but it was fun to (8)____. The castle (9)____ keeps its secrets, but visiting it was a wonderful (10)____. I hope to go there again someday.",
+      "word_count": 100,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "color",
+            "castle",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "城堡 castle"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "mystery",
+            "color",
+            "price",
+            "song"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "神秘 mystery"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "mustn't",
+            "must",
+            "could",
+            "can't"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "could have lived 可能"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "can't",
+            "must",
+            "mustn't",
+            "might"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "might have been 可能"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "could",
+            "mustn't",
+            "can't",
+            "must"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "could have been 可能"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "might",
+            "mustn't",
+            "must",
+            "can't"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "might have been 可能"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "sleepy",
+            "sure",
+            "happy",
+            "tired"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "确定 sure"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "break",
+            "lose",
+            "guess",
+            "throw"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "猜 guess"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "seldom",
+            "once",
+            "never",
+            "still"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "仍然 still"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "color",
+            "experience",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "经历 experience"
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u8.c.04",
+      "volume": "9",
+      "unit": "U8",
+      "title": "A Surprise Gift",
+      "scene": "惊喜礼物",
+      "body": "One day, I found a small box on my (1)____. There was no name on it. \"Whose (2)____ this be?\" I wondered. It (3)____ be for me, but I wasn't sure. I opened it carefully. Inside was a (4)____ watch. It looked very (5)____. \"Who (6)____ have left this?\" I thought. It (7)____ be from my parents, because my birthday was coming. Or it (8)____ be from a friend. Later, my mother told me the (9)____. The watch was a birthday gift from my grandmother! I was so (10)____. I called her at once to say thank you.",
+      "word_count": 98,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "desk",
+            "price",
+            "color",
+            "game"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "桌上 desk"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "must",
+            "mustn't",
+            "can't",
+            "could"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "could this be 可能"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "must",
+            "might",
+            "mustn't",
+            "can't"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "bad",
+            "sour",
+            "nice",
+            "cold"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "漂亮 nice"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "cheap",
+            "broken",
+            "old",
+            "valuable"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "贵重 valuable"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "could",
+            "must",
+            "mustn't",
+            "can't"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "could have left 可能"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "can't",
+            "mustn't",
+            "might",
+            "must"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "could",
+            "can't",
+            "mustn't",
+            "must"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "could be 可能"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "color",
+            "truth",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "真相 truth"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "angry",
+            "happy",
+            "sad",
+            "tired"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "开心 happy"
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u8.c.05",
+      "volume": "9",
+      "unit": "U8",
+      "title": "The Strange Light",
+      "scene": "奇怪的光",
+      "body": "Late one night, Tom saw a strange (1)____ in the sky. It was moving slowly. \"It (2)____ be a plane,\" he thought, \"because planes don't move like that.\" The light was very (3)____. \"It (4)____ be a UFO,\" he wondered, but he wasn't sure. He felt a bit (5)____ and called his friend. His friend said it (6)____ be a weather balloon. \"Or it (7)____ be a trick of the light,\" he added. Tom looked again, but the light was (8)____. To this day, Tom doesn't know what he (9)____. Some mysteries may never be (10)____. But it was an exciting night for him.",
+      "word_count": 104,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "price",
+            "color",
+            "light",
+            "game"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "光 light"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "could",
+            "must",
+            "might",
+            "can't"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "can't be 不可能"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "bright",
+            "cold",
+            "sour",
+            "dark"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "明亮 bright"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "mustn't",
+            "can't",
+            "might",
+            "must"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "uneasy",
+            "happy",
+            "sleepy",
+            "proud"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "不安 uneasy"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "mustn't",
+            "could",
+            "must",
+            "can't"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "could be 可能"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "might",
+            "must",
+            "can't",
+            "mustn't"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "might be 可能"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "here",
+            "gone",
+            "new",
+            "big"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "不见了 gone"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "seeing",
+            "see",
+            "seen",
+            "saw"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "看见 saw"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "lost",
+            "solved",
+            "sold",
+            "kept"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被解开 solved"
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u8.c.06",
+      "volume": "9",
+      "unit": "U8",
+      "title": "Clues and Guesses",
+      "scene": "线索与猜测",
+      "body": "Good detectives are skilled at making (1)____. They look at clues and try to find the (2)____. For example, if a window is broken, someone (3)____ have come in that way. If there is mud on the floor, the person (4)____ have come from outside. A good detective never (5)____. He thinks about every (6)____. Sometimes a clue (7)____ point to one person, but the detective checks again to be (8)____. Making careful guesses helps to (9)____ a mystery. We can all learn from detectives. When we are not sure about something, we should look for (10)____ before we decide.",
+      "word_count": 100,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "guesses",
+            "color",
+            "game",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "猜测 guesses"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "song",
+            "price",
+            "color",
+            "truth"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "真相 truth"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "might",
+            "can't",
+            "mustn't",
+            "must"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "might have come 可能"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "could",
+            "might",
+            "must",
+            "can't"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "must have come 一定"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "runs",
+            "guesses",
+            "wins",
+            "sleeps"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "从不瞎猜 never guesses"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "price",
+            "color",
+            "game",
+            "clue"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "线索 clue"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "can't",
+            "must",
+            "might",
+            "mustn't"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "might point 可能"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "sure",
+            "sleepy",
+            "tired",
+            "happy"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "确定 sure"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "break",
+            "solve",
+            "lose",
+            "throw"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "解开 solve"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "prices",
+            "clues",
+            "games",
+            "colors"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "线索 clues"
+        }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

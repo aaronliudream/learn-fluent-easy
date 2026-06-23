@@ -3,23 +3,23 @@
 -- 幂等:仅 audio_url IS NULL 才更新
 -- ============================================================
 
--- U7 d2 "九年级 U7 听力·对话 Choosing Clothes" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/f9/f97609ffd3e9b94a0dbe103302548a2b34ddc9f0aa90ea5c913b8f8bb8115765.mp3' WHERE id = '09ee5236-3dd1-4bea-92b1-a2c1dca07fc1' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·对话 Whose Volleyball" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/ae/ae8627a5cc2f5019bbe6a90fa2dc46f68ecde00a7c4df7ea179ac811b46d1650.mp3' WHERE id = 'e09ccc7a-e292-4c97-be94-6b9e31da012e' AND audio_url IS NULL;
 
--- U7 d2 "九年级 U7 听力·短文 Liu Yu's Dream" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/02/02ecd276c985c7a093a755fd92d5c5892f26a742411a5d8d8f3d9f37d71fd8c0.mp3' WHERE id = '647243eb-a548-4b7d-9c4d-85f4a25a7d31' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·短文 The Mystery of Stonehenge" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/0f/0fc420459fa12178174bbe1391891823e3ff529ffbd1a5c790a86dc858e82d8b.mp3' WHERE id = '3a8bca5b-20e1-47bc-8508-5d42a80d2d6a' AND audio_url IS NULL;
 
--- U7 d2 "九年级 U7 听力·对话 Part-Time Job" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/d9/d97639258a06ba07e51b47def0357a954ab46352257bebe6f4683cb90cae6add.mp3' WHERE id = '5b6af26a-e321-403f-a541-00ed5b7d589e' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·对话 A Strange Noise" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/8f/8f7bdcd56ac532dc29cb53e85b64a5f00680f38675934cd0b0a54c5042bca133.mp3' WHERE id = '05b3d96e-945d-4b6c-8339-6ceb677eb8e1' AND audio_url IS NULL;
 
--- U7 d2 "九年级 U7 听力·短文 Mom Knows Best" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/04/04252d2edfcb88b6b4945469c4d2e7a04ab64d8d180e36fa0df14b8f858d5f16.mp3' WHERE id = '6425ae39-c973-4023-82df-71890cd90f34' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·短文 The UFO Night" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/cd/cd30d9c4383e5067a29918e9c232da5d2723360dc0f1ceb64642891db5c3d90b.mp3' WHERE id = '2385fec1-e230-4d4a-b457-2773f28bf95a' AND audio_url IS NULL;
 
--- U7 d2 "九年级 U7 听力·对话 At the Museum" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/3b/3b383d0fba2a73b19aa6e75480ab1ab46bc0bfe521fbfeb4bd57509115b63832.mp3' WHERE id = '42071d60-0e02-4b95-a07c-bd190aac8c0d' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·对话 Whose Things" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/63/639ac804a721f2bd2e39321b63b7c2a4ca5916b63fc22f8a14a05a10a9e0898b.mp3' WHERE id = '12295ed5-0103-4ba4-8374-bb4bda13e261' AND audio_url IS NULL;
 
--- U7 d2 "九年级 U7 听力·短文 School Rules" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/81/81268bba484347ef7358f6723e006a7e2d9c6e114827e65ab279f1545dd708c1.mp3' WHERE id = 'e2cbb1c9-f5f4-4b17-8e3b-fd919a2d8455' AND audio_url IS NULL;
+-- U8 d2 "九年级 U8 听力·短文 Making Guesses" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/cc/cc99a0f727c54fbc20a9f1ffcd1e30acf8199574d07da895c0455f97859b848c.mp3' WHERE id = '86bea9c8-19b5-4c45-98d1-f944e3746817' AND audio_url IS NULL;
 
 -- 校验(单独跑): 9 已填 audio_url 的条数
 SELECT unit, count(*) FROM junior_listening_exercises WHERE grade=9 AND volume='9' AND audio_url IS NOT NULL GROUP BY unit ORDER BY unit;

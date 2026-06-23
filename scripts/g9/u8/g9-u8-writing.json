@@ -1,0 +1,35 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "writing": {
+    "volume": "9",
+    "unit": "U8",
+    "code": "g9u8.w.01",
+    "type": "narrative_writing",
+    "title": "A Mystery Story",
+    "genre": "记叙短文 (narrative paragraph)",
+    "prompt_cn": "写一个关于谜团或奇怪事件的短文(如:夜里的怪声、捡到的失物、天空中的怪光)。用情态动词must/might/could/can't表达你的推测。60词左右。",
+    "key_points": [
+      "发生了什么奇怪的事",
+      "你的推测(用must/might/could/can't)",
+      "你如何寻找答案",
+      "最后谜团是否解开"
+    ],
+    "useful_expressions": [
+      "It must be ...",
+      "It might / could be ...",
+      "It can't be ...",
+      "Whose ... is this?",
+      "belong to ...",
+      "I wonder ...",
+      "The mystery was solved."
+    ],
+    "sample": "One night, my family heard a strange noise outside. \"What could it be?\" we asked. My brother thought it might be a cat, but it was too loud. It couldn't be a small animal. \"It must be something bigger,\" said my father. The next morning, we found our rubbish bins open. It must have been a large dog! At last, the mystery was solved, and we all felt relieved.",
+    "scoring": {
+      "content": "含奇怪事件/推测/寻找答案/结果(4分)",
+      "language": "正确使用must/might/could/can't推测(3分)",
+      "structure": "叙事清楚、衔接得当(2分)",
+      "wordcount": "词数达标、书写规范(1分)"
+    }
+  }
+}

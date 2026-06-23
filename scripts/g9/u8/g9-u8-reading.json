@@ -1,0 +1,642 @@
+{
+  "volume": "9",
+  "unit": "U8",
+  "passages": [
+    {
+      "code": "g9u8.r.01",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "记叙文",
+      "title": "Strange Happenings in My Town",
+      "body": "Last week, some strange things happened in my small town. Every night, people heard strange noises outside. \"What could it be?\" everyone asked. My neighbor Victor said it might be a dog. But I didn't agree. A dog can't make such a loud noise. My mother thought it could be the wind. But the wind can't move things around. One morning, we found rubbish all over the street. It must be an animal looking for food, but which animal? Finally, a policeman found the answer. It was a group of large birds! They came at night to look for food. The mystery was solved at last.",
+      "word_count": 106,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "noise",
+          "cn": "噪音"
+        },
+        {
+          "word": "rubbish",
+          "cn": "垃圾"
+        },
+        {
+          "word": "mystery",
+          "cn": "奥秘;神秘事物"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.01.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.01",
+          "stem": "When did the strange things happen?",
+          "options": [
+            "Last week.",
+            "Yesterday.",
+            "Last month.",
+            "Last year."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:Last week"
+        },
+        {
+          "qid": "g9u8.r.01.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.01",
+          "stem": "What did people hear every night?",
+          "options": [
+            "Voices.",
+            "Strange lights.",
+            "Strange noises.",
+            "Music."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:heard strange noises"
+        },
+        {
+          "qid": "g9u8.r.01.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.01",
+          "stem": "What did Victor think it might be?",
+          "options": [
+            "A bird.",
+            "A wolf.",
+            "The wind.",
+            "A dog."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:Victor said it might be a dog"
+        },
+        {
+          "qid": "g9u8.r.01.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.01",
+          "stem": "What did they find one morning?",
+          "options": [
+            "A dog.",
+            "A note.",
+            "Rubbish all over the street.",
+            "Footprints."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:rubbish all over the street"
+        },
+        {
+          "qid": "g9u8.r.01.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.01",
+          "stem": "What was the cause of the noise?",
+          "options": [
+            "A wolf.",
+            "Large birds looking for food.",
+            "A dog.",
+            "The wind."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:a group of large birds"
+        }
+      ]
+    },
+    {
+      "code": "g9u8.r.02",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "说明文",
+      "title": "The Mystery of Stonehenge",
+      "body": "Stonehenge is one of the most famous mysteries in the world. It is a circle of large stones in Britain. The stones are very old and very heavy. No one knows for sure why Stonehenge was built. Some people think it might have been a place for medical care. Others believe it could have been a temple where people honored their ancestors. Some historians say it must have been used to watch the sun and stars. The biggest mystery is how the stones were moved. They weigh thousands of kilos, and there were no trucks long ago. Stonehenge still keeps its secrets today.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "mystery",
+          "cn": "奥秘"
+        },
+        {
+          "word": "temple",
+          "cn": "庙宇;圣殿"
+        },
+        {
+          "word": "historian",
+          "cn": "历史学家"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.02.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.02",
+          "stem": "Where is Stonehenge?",
+          "options": [
+            "In Britain.",
+            "In the US.",
+            "In China.",
+            "In France."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:in Britain"
+        },
+        {
+          "qid": "g9u8.r.02.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.02",
+          "stem": "What is Stonehenge made of?",
+          "options": [
+            "Wood.",
+            "Metal.",
+            "Glass.",
+            "Large stones."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:a circle of large stones"
+        },
+        {
+          "qid": "g9u8.r.02.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.02",
+          "stem": "What might Stonehenge have been used for?",
+          "options": [
+            "Medical care or a temple.",
+            "A house.",
+            "A school.",
+            "A shop."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:medical care...temple"
+        },
+        {
+          "qid": "g9u8.r.02.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.02",
+          "stem": "What do some historians think it was used to watch?",
+          "options": [
+            "Animals.",
+            "The sea.",
+            "The sun and stars.",
+            "People."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:watch the sun and stars"
+        },
+        {
+          "qid": "g9u8.r.02.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.02",
+          "stem": "What is the biggest mystery?",
+          "options": [
+            "Why it's famous.",
+            "How the stones were moved.",
+            "When it rains.",
+            "Who lived there."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:how the stones were moved"
+        }
+      ]
+    },
+    {
+      "code": "g9u8.r.03",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "记叙文",
+      "title": "The UFO Night",
+      "body": "One summer night, Jean saw something strange in the sky. A bright light was moving slowly above her house. \"It can't be a plane,\" she thought. \"It moves too strangely.\" The light landed in a field nearby. Jean felt uneasy. She wanted to know what it was. Could it be a UFO? Could there be aliens inside? She told her friends the next day. Some said it might be a weather balloon. Others said it must be a trick of the light. Jean was not sure. To this day, she still wonders what she really saw that night. Some mysteries may never be solved.",
+      "word_count": 104,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "uneasy",
+          "cn": "不安的"
+        },
+        {
+          "word": "land",
+          "cn": "着陆;降落"
+        },
+        {
+          "word": "alien",
+          "cn": "外星人"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.03.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.03",
+          "stem": "When did Jean see something strange?",
+          "options": [
+            "One winter day.",
+            "One morning.",
+            "One summer night.",
+            "Last week."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:One summer night"
+        },
+        {
+          "qid": "g9u8.r.03.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.03",
+          "stem": "What was moving in the sky?",
+          "options": [
+            "A bird.",
+            "A plane.",
+            "A cloud.",
+            "A bright light."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:A bright light was moving"
+        },
+        {
+          "qid": "g9u8.r.03.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.03",
+          "stem": "Why did Jean think it wasn't a plane?",
+          "options": [
+            "It was too quiet.",
+            "It moved too strangely.",
+            "It was too fast.",
+            "It was too small."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:moves too strangely"
+        },
+        {
+          "qid": "g9u8.r.03.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.03",
+          "stem": "Where did the light land?",
+          "options": [
+            "On her house.",
+            "On the road.",
+            "In a field nearby.",
+            "In the sea."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:landed in a field"
+        },
+        {
+          "qid": "g9u8.r.03.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.03",
+          "stem": "How did Jean feel?",
+          "options": [
+            "Uneasy.",
+            "Bored.",
+            "Happy.",
+            "Sleepy."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:Jean felt uneasy"
+        }
+      ]
+    },
+    {
+      "code": "g9u8.r.04",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "记叙文",
+      "title": "Whose Things Are These?",
+      "body": "After the school party, the teacher found many things left behind. \"Whose are these?\" she asked. There was a blue coat. It must belong to a boy, because it was big. There was also a pink hair band. It might belong to a girl with long hair. A science book was on the desk. It could be Tom's, because he loves science. There was also a volleyball. It must be Carla's, because she plays volleyball every day. The teacher put all the things in the lost-and-found box. She hoped the students would come and take their things back soon.",
+      "word_count": 99,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "coat",
+          "cn": "外套"
+        },
+        {
+          "word": "pink",
+          "cn": "粉红色的"
+        },
+        {
+          "word": "belong",
+          "cn": "属于"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.04.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.04",
+          "stem": "When did the teacher find the things?",
+          "options": [
+            "At night.",
+            "After the school party.",
+            "During lunch.",
+            "Before class."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:After the school party"
+        },
+        {
+          "qid": "g9u8.r.04.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.04",
+          "stem": "Who must the blue coat belong to?",
+          "options": [
+            "A boy.",
+            "Tom.",
+            "A girl.",
+            "The teacher."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:must belong to a boy"
+        },
+        {
+          "qid": "g9u8.r.04.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.04",
+          "stem": "Who might the pink hair band belong to?",
+          "options": [
+            "The teacher.",
+            "A girl with long hair.",
+            "Carla's brother.",
+            "A boy."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:a girl with long hair"
+        },
+        {
+          "qid": "g9u8.r.04.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.04",
+          "stem": "Why could the science book be Tom's?",
+          "options": [
+            "He loves science.",
+            "He sits there.",
+            "He is new.",
+            "He is tall."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:he loves science"
+        },
+        {
+          "qid": "g9u8.r.04.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.04",
+          "stem": "Who must the volleyball belong to?",
+          "options": [
+            "Tom.",
+            "Victor.",
+            "Carla.",
+            "Jean."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:must be Carla's"
+        }
+      ]
+    },
+    {
+      "code": "g9u8.r.05",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "议论文",
+      "title": "Making Guesses",
+      "body": "In daily life, we often make guesses about things we are not sure of. We use special words to show how sure we are. If we are very sure, we use \"must\". For example, if the lights are on, someone must be home. If we are less sure, we use \"might\" or \"could\". The keys might be in the kitchen, or they could be in the car. If we think something is impossible, we use \"can't\". A small cat can't make such a loud sound. Making guesses is a useful skill. It helps us understand the world around us. But we should remember that a guess is not always right.",
+      "word_count": 110,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "guess",
+          "cn": "猜测"
+        },
+        {
+          "word": "sure",
+          "cn": "确信的"
+        },
+        {
+          "word": "impossible",
+          "cn": "不可能的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.05.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.05",
+          "stem": "What do we often make about uncertain things?",
+          "options": [
+            "Rules.",
+            "Guesses.",
+            "Plans.",
+            "Lists."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:make guesses"
+        },
+        {
+          "qid": "g9u8.r.05.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.05",
+          "stem": "Which word shows we are very sure?",
+          "options": [
+            "Can't.",
+            "Might.",
+            "Could.",
+            "Must."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:very sure, we use must"
+        },
+        {
+          "qid": "g9u8.r.05.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.05",
+          "stem": "Which words show we are less sure?",
+          "options": [
+            "Must.",
+            "Can't.",
+            "Should.",
+            "Might or could."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:less sure...might or could"
+        },
+        {
+          "qid": "g9u8.r.05.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.05",
+          "stem": "Which word shows something is impossible?",
+          "options": [
+            "Can't.",
+            "Might.",
+            "Could.",
+            "Must."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:impossible, we use can't"
+        },
+        {
+          "qid": "g9u8.r.05.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.05",
+          "stem": "What should we remember about a guess?",
+          "options": [
+            "It is always right.",
+            "It is easy.",
+            "It is not always right.",
+            "It is useless."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:not always right"
+        }
+      ]
+    },
+    {
+      "code": "g9u8.r.06",
+      "volume": "9",
+      "unit": "U8",
+      "genre": "应用文",
+      "title": "Lost and Found Notice",
+      "body": "SCHOOL LOST AND FOUND. The following things were found last week. Please come to Room 105 to collect them. A PAIR OF GLASSES: Found in the library. They must belong to someone who reads a lot. A SCHOOL BAG: Found in the gym. There is a basketball inside, so it might belong to a player. A WATCH: Found near the science lab. It looks valuable, so please come quickly. A SET OF KEYS: Found in the playground. They could belong to anyone, so check if yours are missing. To collect your things, you must show your student card. Office hours: 8:00 a.m. to 5:00 p.m.",
+      "word_count": 105,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "valuable",
+          "cn": "贵重的"
+        },
+        {
+          "word": "library",
+          "cn": "图书馆"
+        },
+        {
+          "word": "collect",
+          "cn": "收集;领取"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u8.r.06.q1",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.06",
+          "stem": "Where can students collect lost things?",
+          "options": [
+            "The library.",
+            "The playground.",
+            "Room 105.",
+            "The gym."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:come to Room 105"
+        },
+        {
+          "qid": "g9u8.r.06.q2",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.06",
+          "stem": "Where were the glasses found?",
+          "options": [
+            "Near the lab.",
+            "In the gym.",
+            "In the playground.",
+            "In the library."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:Found in the library"
+        },
+        {
+          "qid": "g9u8.r.06.q3",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.06",
+          "stem": "Why might the school bag belong to a player?",
+          "options": [
+            "It is big.",
+            "It is blue.",
+            "It is new.",
+            "There is a basketball inside."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:a basketball inside"
+        },
+        {
+          "qid": "g9u8.r.06.q4",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.06",
+          "stem": "What must students show to collect things?",
+          "options": [
+            "Their student card.",
+            "A letter.",
+            "Money.",
+            "A photo."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:must show your student card"
+        },
+        {
+          "qid": "g9u8.r.06.q5",
+          "volume": "9",
+          "unit": "U8",
+          "code": "g9u8.r.06",
+          "stem": "When does the office close?",
+          "options": [
+            "6:00 p.m.",
+            "5:00 p.m.",
+            "8:00 a.m.",
+            "12:00 p.m."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:to 5:00 p.m."
+        }
+      ]
+    }
+  ]
+}

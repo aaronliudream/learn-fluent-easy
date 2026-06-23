@@ -1,0 +1,588 @@
+{
+  "volume": "9",
+  "unit": "U10",
+  "passages": [
+    {
+      "code": "g9u10.r.01",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "说明文",
+      "title": "Different Customs Around the World",
+      "body": "When you visit a foreign country, it is important to learn about its customs. In some countries, people are supposed to shake hands when they meet. In Japan, people are supposed to bow instead. In some places, friends greet each other with a kiss on the cheek. Time also matters. In Switzerland, you are supposed to be on time. It is impolite to keep others waiting. But in some warm countries, people are more relaxed about time. Knowing these customs helps us make a good first impression. After all, good manners are important everywhere, even if they are different from place to place.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "custom", "cn": "风俗;习俗" },
+        { "word": "greet", "cn": "打招呼;迎接" },
+        { "word": "relaxed", "cn": "放松的" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.01.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.01",
+          "stem": "What is important when you visit a foreign country?",
+          "options": [
+            "To buy clothes.",
+            "To learn about its customs.",
+            "To stay home.",
+            "To bring a gift."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:important to learn about its customs"
+        },
+        {
+          "qid": "g9u10.r.01.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.01",
+          "stem": "What are people supposed to do in Japan when they meet?",
+          "options": [
+            "Wave.",
+            "Bow.",
+            "Kiss.",
+            "Shake hands."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:In Japan, people are supposed to bow"
+        },
+        {
+          "qid": "g9u10.r.01.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.01",
+          "stem": "What is the rule about time in Switzerland?",
+          "options": [
+            "You are supposed to be on time.",
+            "You can be late.",
+            "Time does not matter.",
+            "You must come early."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:In Switzerland, you are supposed to be on time"
+        },
+        {
+          "qid": "g9u10.r.01.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.01",
+          "stem": "What is impolite according to the passage?",
+          "options": [
+            "Keeping others waiting.",
+            "Shaking hands.",
+            "Being early.",
+            "Bowing."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:impolite to keep others waiting"
+        },
+        {
+          "qid": "g9u10.r.01.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.01",
+          "stem": "What helps us make a good first impression?",
+          "options": [
+            "Speaking loudly.",
+            "Being late.",
+            "Knowing these customs.",
+            "Wearing a suit."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:helps us make a good first impression"
+        }
+      ]
+    },
+    {
+      "code": "g9u10.r.02",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "记叙文",
+      "title": "Maria's First Dinner",
+      "body": "Maria is an exchange student in the US. Last night, she had dinner at an American friend's house. Maria made a few mistakes because she did not know the customs. First, she arrived late. In the US, you are supposed to arrive on time. Then, she ate the food before everyone else started. You are supposed to wait until everyone is ready. She also greeted her friend's mother in the wrong way. But her friend's family was very kind. They were not mad at her. They helped her learn. By the end of the evening, Maria felt much more relaxed. She learned that it is important to learn local customs.",
+      "word_count": 110,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "exchange", "cn": "交换" },
+        { "word": "mad", "cn": "很生气的" },
+        { "word": "relaxed", "cn": "放松的" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.02.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.02",
+          "stem": "Where is Maria an exchange student?",
+          "options": [
+            "In China.",
+            "In Brazil.",
+            "In the US.",
+            "In Japan."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:exchange student in the US"
+        },
+        {
+          "qid": "g9u10.r.02.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.02",
+          "stem": "What was Maria's first mistake?",
+          "options": [
+            "She ate too much.",
+            "She wore the wrong clothes.",
+            "She arrived late.",
+            "She left early."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:she arrived late"
+        },
+        {
+          "qid": "g9u10.r.02.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.02",
+          "stem": "When are you supposed to start eating in the US?",
+          "options": [
+            "At any time.",
+            "Before everyone.",
+            "When everyone is ready.",
+            "After dinner."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:supposed to wait until everyone is ready"
+        },
+        {
+          "qid": "g9u10.r.02.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.02",
+          "stem": "How did her friend's family feel?",
+          "options": [
+            "They were sad.",
+            "They were not mad.",
+            "They left.",
+            "They were angry."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:They were not mad at her"
+        },
+        {
+          "qid": "g9u10.r.02.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.02",
+          "stem": "What did Maria learn?",
+          "options": [
+            "Friends are mean.",
+            "The US is far.",
+            "Dinner is hard.",
+            "It is important to learn local customs."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:important to learn local customs"
+        }
+      ]
+    },
+    {
+      "code": "g9u10.r.03",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "议论文",
+      "title": "Is It OK to Be Late?",
+      "body": "People in different countries have different ideas about time. Teresa is from Colombia. She says it is OK to be a little late when meeting friends. \"We value people more than time,\" she says. If a friend is late, she does not get mad. Marc is from Switzerland. For him, being on time is very important. \"We are the capital of clocks and watches,\" he says. If someone invites you to dinner at seven, you are supposed to arrive at seven. Both ideas are fine in their own countries. The most important thing is to learn the local custom, so that you do not make others uneasy.",
+      "word_count": 107,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "value", "cn": "重视;珍视" },
+        { "word": "capital", "cn": "首都;国都" },
+        { "word": "custom", "cn": "风俗;习俗" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.03.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.03",
+          "stem": "Where is Teresa from?",
+          "options": [
+            "the US.",
+            "Switzerland.",
+            "Colombia.",
+            "Japan."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Teresa is from Colombia"
+        },
+        {
+          "qid": "g9u10.r.03.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.03",
+          "stem": "What does Teresa value more than time?",
+          "options": [
+            "Food.",
+            "Money.",
+            "People.",
+            "Clocks."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:We value people more than time"
+        },
+        {
+          "qid": "g9u10.r.03.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.03",
+          "stem": "Where is Marc from?",
+          "options": [
+            "Brazil.",
+            "Switzerland.",
+            "China.",
+            "Colombia."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:Marc is from Switzerland"
+        },
+        {
+          "qid": "g9u10.r.03.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.03",
+          "stem": "What is important to Marc?",
+          "options": [
+            "Being relaxed.",
+            "Being late.",
+            "Being early.",
+            "Being on time."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:being on time is very important"
+        },
+        {
+          "qid": "g9u10.r.03.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.03",
+          "stem": "What is the most important thing according to the writer?",
+          "options": [
+            "To value clocks.",
+            "To be late.",
+            "To be early.",
+            "To learn the local custom."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:learn the local custom"
+        }
+      ]
+    },
+    {
+      "code": "g9u10.r.04",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "说明文",
+      "title": "Table Manners Around the World",
+      "body": "Table manners are different around the world. In some countries, you are supposed to use chopsticks. In others, you use a knife and fork. In India, people often eat with their right hand, but you are not supposed to use your left hand. In China, it is impolite to stick your chopsticks into your food. In some Western countries, you are not supposed to put your elbows on the table. In Japan, it is polite to make noise when you eat noodles. So when you travel, remember: what is polite in one country may be rude in another. The best advice is to watch what others do.",
+      "word_count": 107,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "manner", "cn": "礼仪;方式" },
+        { "word": "elbow", "cn": "肘;胳膊" },
+        { "word": "stick", "cn": "插;粘" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.04.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.04",
+          "stem": "What are you supposed to use in some countries to eat?",
+          "options": [
+            "Chopsticks.",
+            "Your feet.",
+            "A spoon only.",
+            "Nothing."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:supposed to use chopsticks"
+        },
+        {
+          "qid": "g9u10.r.04.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.04",
+          "stem": "In India, which hand are you not supposed to use?",
+          "options": [
+            "The left hand.",
+            "The right hand.",
+            "No hands.",
+            "Both hands."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:not supposed to use your left hand"
+        },
+        {
+          "qid": "g9u10.r.04.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.04",
+          "stem": "What is impolite in China?",
+          "options": [
+            "Using a fork.",
+            "Sticking chopsticks into your food.",
+            "Eating noodles.",
+            "Bowing."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:impolite to stick your chopsticks into your food"
+        },
+        {
+          "qid": "g9u10.r.04.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.04",
+          "stem": "What is polite in Japan when eating noodles?",
+          "options": [
+            "To make noise.",
+            "To be silent.",
+            "To stand up.",
+            "To use a fork."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:polite to make noise when you eat noodles"
+        },
+        {
+          "qid": "g9u10.r.04.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.04",
+          "stem": "What is the best advice when you travel?",
+          "options": [
+            "To bring food.",
+            "To eat fast.",
+            "To stay home.",
+            "To watch what others do."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:watch what others do"
+        }
+      ]
+    },
+    {
+      "code": "g9u10.r.05",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "记叙文",
+      "title": "Yu Mei's Letter from France",
+      "body": "Dear Laura, How are you? I am an exchange student in France now, and I am learning a lot. At first, I made many mistakes with the customs. For example, in France, you are not supposed to put your bread on your plate. You are supposed to put it on the table! Also, when you have dinner, you are expected to keep both hands on the table. At home, I was taught the opposite. The biggest challenge is the food. There is so much of it! But my host family is very kind. They go out of their way to make me feel at home. Gradually, I am getting used to life here. Yours, Yu Mei",
+      "word_count": 116,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "custom", "cn": "习俗" },
+        { "word": "gradually", "cn": "逐步地" },
+        { "word": "challenge", "cn": "挑战" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.05.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.05",
+          "stem": "Where is Yu Mei an exchange student?",
+          "options": [
+            "In France.",
+            "In Japan.",
+            "In the US.",
+            "In China."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:exchange student in France"
+        },
+        {
+          "qid": "g9u10.r.05.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.05",
+          "stem": "Where are you supposed to put your bread in France?",
+          "options": [
+            "On the floor.",
+            "In your bag.",
+            "On your plate.",
+            "On the table."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:put it on the table"
+        },
+        {
+          "qid": "g9u10.r.05.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.05",
+          "stem": "Where are you expected to keep your hands during dinner?",
+          "options": [
+            "On the table.",
+            "In your pockets.",
+            "Under the table.",
+            "In your lap."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:keep both hands on the table"
+        },
+        {
+          "qid": "g9u10.r.05.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.05",
+          "stem": "What is Yu Mei's biggest challenge?",
+          "options": [
+            "The school.",
+            "The food.",
+            "The weather.",
+            "The language."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:The biggest challenge is the food"
+        },
+        {
+          "qid": "g9u10.r.05.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.05",
+          "stem": "How does the host family treat Yu Mei?",
+          "options": [
+            "They are angry.",
+            "They ignore her.",
+            "They are strict.",
+            "They make her feel at home."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:make me feel at home"
+        }
+      ]
+    },
+    {
+      "code": "g9u10.r.06",
+      "volume": "9",
+      "unit": "U10",
+      "genre": "应用文",
+      "title": "Welcome Guide for Exchange Students",
+      "body": "WELCOME TO OUR SCHOOL! This guide will help you learn our customs. GREETINGS: When you meet a teacher, you are supposed to say \"Good morning.\" It is polite to be friendly. ON TIME: You are expected to arrive at class on time. It is impolite to be late. IN CLASS: You are not supposed to use your phone. Please turn it off. AT LUNCH: You are supposed to wait in line. Do not push others. WITH FRIENDS: It is polite to share and help each other. If you are not sure what to do, just ask. We hope you will feel at home here. Enjoy your time with us!",
+      "word_count": 109,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "custom", "cn": "习俗" },
+        { "word": "greet", "cn": "打招呼" },
+        { "word": "polite", "cn": "礼貌的" }
+      ],
+      "questions": [
+        {
+          "qid": "g9u10.r.06.q1",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.06",
+          "stem": "What does the guide help you learn?",
+          "options": [
+            "The school's history.",
+            "The school's food.",
+            "The school's customs.",
+            "The school's map."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:help you learn our customs"
+        },
+        {
+          "qid": "g9u10.r.06.q2",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.06",
+          "stem": "What are you supposed to say to a teacher?",
+          "options": [
+            "Hello there.",
+            "Good morning.",
+            "Nothing.",
+            "Goodbye."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:supposed to say Good morning"
+        },
+        {
+          "qid": "g9u10.r.06.q3",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.06",
+          "stem": "What is impolite according to the guide?",
+          "options": [
+            "Being early.",
+            "Sharing.",
+            "Saying hello.",
+            "Being late."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:impolite to be late"
+        },
+        {
+          "qid": "g9u10.r.06.q4",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.06",
+          "stem": "What are you not supposed to do in class?",
+          "options": [
+            "Use your phone.",
+            "Ask questions.",
+            "Listen.",
+            "Take notes."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:not supposed to use your phone"
+        },
+        {
+          "qid": "g9u10.r.06.q5",
+          "volume": "9",
+          "unit": "U10",
+          "code": "g9u10.r.06",
+          "stem": "What should you do if you are not sure what to do?",
+          "options": [
+            "Go home.",
+            "Stay quiet.",
+            "Just ask.",
+            "Leave."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:just ask"
+        }
+      ]
+    }
+  ]
+}

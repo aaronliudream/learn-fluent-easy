@@ -1,0 +1,864 @@
+{
+  "volume": "9",
+  "unit": "U10",
+  "passages": [
+    {
+      "code": "g9u10.c.01",
+      "volume": "9",
+      "unit": "U10",
+      "title": "Customs in Different Countries",
+      "scene": "各国习俗",
+      "body": "When you visit a foreign country, it is important to learn its (1)____. People greet each other in different (2)____. In some countries, you are (3)____ to shake hands. In Japan, you are supposed to (4)____. In some places, friends greet with a (5)____ on the cheek. Time also (6)____. In some countries, you are supposed to be on (7)____, and it is impolite to keep others (8)____. In other places, people are more (9)____ about time. Learning these customs helps you make a good first (10)____. Good manners are important everywhere.",
+      "word_count": 92,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "colors",
+            "games",
+            "prices",
+            "customs"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "习俗 customs"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "price",
+            "ways",
+            "game",
+            "color"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "方式 ways"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "supposed",
+            "supposing",
+            "supposes",
+            "suppose"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "be supposed to"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "throw",
+            "break",
+            "bow",
+            "lose"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "鞠躬 bow"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "price",
+            "kiss",
+            "color",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "亲吻 kiss"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "breaks",
+            "matters",
+            "loses",
+            "throws"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "重要 matters"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "time",
+            "color",
+            "price",
+            "game"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "准时 on time"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "waiting",
+            "running",
+            "sleeping",
+            "eating"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "等候 keep waiting"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "strict",
+            "tired",
+            "relaxed",
+            "busy"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放松 relaxed"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "price",
+            "game",
+            "color",
+            "impression"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "印象 impression"
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u10.c.02",
+      "volume": "9",
+      "unit": "U10",
+      "title": "Maria's Mistakes",
+      "scene": "玛丽亚的错误",
+      "body": "Maria is an exchange (1)____ in the US. Last night, she had (2)____ at a friend's house. She made some (3)____ because she did not know the customs. First, she arrived (4)____. In the US, you are supposed to be on (5)____. Then she started eating before everyone (6)____. You are supposed to (7)____ until everyone is ready. But her friend's family was not (8)____ at her. They kindly helped her (9)____. By the end of the night, Maria felt more (10)____. She learned that customs are important.",
+      "word_count": 88,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "price",
+            "game",
+            "color",
+            "student"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "学生 student"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "color",
+            "dinner",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "晚饭 dinner"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "prices",
+            "games",
+            "colors",
+            "mistakes"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "错误 mistakes"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "early",
+            "late",
+            "on",
+            "at"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "迟到 late"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "price",
+            "color",
+            "time",
+            "game"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "准时 on time"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "else",
+            "game",
+            "color",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "别人 everyone else"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "wait",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "等待 wait"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "glad",
+            "mad",
+            "happy",
+            "kind"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "生气 mad"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "learn",
+            "lose",
+            "break",
+            "throw"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "学习 learn"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "angry",
+            "busy",
+            "relaxed",
+            "tired"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放松 relaxed"
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u10.c.03",
+      "volume": "9",
+      "unit": "U10",
+      "title": "On Time or Relaxed?",
+      "scene": "守时还是随意",
+      "body": "People have different ideas (1)____ time. Teresa is from Colombia. She thinks it is (2)____ to be a little late. \"We (3)____ people more than time,\" she says. If a friend is late, she does not get (4)____. Marc is from Switzerland. For him, being on (5)____ is very important. If you are (6)____ to dinner at seven, you are supposed to (7)____ at seven. Both ideas are fine in their own (8)____. The most important thing is to learn the local (9)____, so you do not make others feel (10)____.",
+      "word_count": 91,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "color",
+            "about",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "关于 about time"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "bad",
+            "rude",
+            "OK",
+            "wrong"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "没关系 OK"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "value",
+            "lose",
+            "throw",
+            "break"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "重视 value"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "mad",
+            "happy",
+            "glad",
+            "kind"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "生气 mad"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "price",
+            "color",
+            "game",
+            "time"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "准时 on time"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "broken",
+            "invited",
+            "thrown",
+            "lost"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被邀请 invited"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "break",
+            "arrive",
+            "lose",
+            "throw"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "到达 arrive"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "colors",
+            "games",
+            "countries",
+            "prices"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "国家 countries"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "game",
+            "color",
+            "price",
+            "custom"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "习俗 custom"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "uneasy",
+            "happy",
+            "proud",
+            "glad"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "不安 uneasy"
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u10.c.04",
+      "volume": "9",
+      "unit": "U10",
+      "title": "Table Manners",
+      "scene": "餐桌礼仪",
+      "body": "Table manners are different around the (1)____. In some countries, you are supposed to use (2)____. In others, you use a knife and (3)____. In China, it is (4)____ to stick your chopsticks into your food. In some Western countries, you are not supposed to put your (5)____ on the table. In Japan, it is (6)____ to make noise when you eat noodles. So when you (7)____, remember that what is polite in one country may be (8)____ in another. The best (9)____ is to watch what others do. Then you will not (10)____ any mistakes.",
+      "word_count": 96,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "color",
+            "price",
+            "game",
+            "world"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "世界 world"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "chopsticks",
+            "prices",
+            "colors",
+            "games"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "筷子 chopsticks"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "price",
+            "fork",
+            "game",
+            "color"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "叉子 fork"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "impolite",
+            "kind",
+            "polite",
+            "nice"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "不礼貌 impolite"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "colors",
+            "elbows",
+            "prices",
+            "games"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "胳膊肘 elbows"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "bad",
+            "wrong",
+            "rude",
+            "polite"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "礼貌 polite"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "throw",
+            "lose",
+            "travel",
+            "break"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "旅行 travel"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "nice",
+            "rude",
+            "polite",
+            "kind"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "粗鲁 rude"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "game",
+            "price",
+            "advice",
+            "color"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "建议 advice"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "make",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "犯错 make mistakes"
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u10.c.05",
+      "volume": "9",
+      "unit": "U10",
+      "title": "A Letter from France",
+      "scene": "来自法国的信",
+      "body": "Dear Laura, I am an exchange student in France now. At first, I made many (1)____ with the customs. For example, in France, you are not (2)____ to put your bread on your plate. You put it on the (3)____! Also, you are (4)____ to keep both hands on the table during dinner. At home, I was taught the (5)____. The biggest (6)____ for me is the food. There is so much of it! But my host family is very (7)____. They go out of their way to make me feel at (8)____. (9)____, I am getting used to life here. I will write again (10)____. Yours, Yu Mei",
+      "word_count": 109,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "prices",
+            "mistakes",
+            "colors",
+            "games"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "错误 mistakes"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "supposed",
+            "supposes",
+            "supposing",
+            "suppose"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "be supposed to"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "game",
+            "color",
+            "price",
+            "table"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "桌子 table"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "expected",
+            "expecting",
+            "expect",
+            "expects"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "be expected to"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "price",
+            "opposite",
+            "same",
+            "color"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "相反 opposite"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "game",
+            "color",
+            "price",
+            "challenge"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "挑战 challenge"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "bad",
+            "kind",
+            "mad",
+            "rude"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "友好 kind"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "price",
+            "game",
+            "home",
+            "color"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "家 at home"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "Seldom",
+            "Once",
+            "Gradually",
+            "Never"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "逐渐 gradually"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "soon",
+            "late",
+            "never",
+            "slow"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "很快 soon"
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u10.c.06",
+      "volume": "9",
+      "unit": "U10",
+      "title": "Welcome Guide",
+      "scene": "欢迎指南",
+      "body": "Welcome to our school! This guide will help you learn our (1)____. When you meet a teacher, you are (2)____ to say \"Good morning.\" It is (3)____ to be friendly. You are (4)____ to arrive at class on time. It is impolite to be (5)____. In class, you are not supposed to use your (6)____. Please turn it off. At lunch, you are supposed to wait in (7)____. With friends, it is polite to (8)____ and help each other. If you are not (9)____ what to do, just ask. We hope you will feel at (10)____ here. Enjoy your time with us!",
+      "word_count": 102,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "customs",
+            "prices",
+            "games",
+            "colors"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "习俗 customs"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "supposing",
+            "supposed",
+            "supposes",
+            "suppose"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "be supposed to"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "rude",
+            "bad",
+            "polite",
+            "wrong"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "礼貌 polite"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "expect",
+            "expecting",
+            "expects",
+            "expected"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "be expected to"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "on",
+            "late",
+            "at",
+            "early"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "迟到 late"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "phone",
+            "color",
+            "game",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "手机 phone"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "price",
+            "line",
+            "game",
+            "color"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "排队 in line"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "share",
+            "throw",
+            "break",
+            "lose"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "分享 share"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "happy",
+            "tired",
+            "sure",
+            "busy"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "确定 sure"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "game",
+            "price",
+            "color",
+            "home"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "家 at home"
+        }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

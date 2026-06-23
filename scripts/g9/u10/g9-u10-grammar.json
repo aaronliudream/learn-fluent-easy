@@ -1,0 +1,1166 @@
+{
+  "volume": "9",
+  "unit": "U10",
+  "points": [
+    {
+      "code": "g9u10.01",
+      "point": "be supposed to do:习俗上应该做",
+      "category": "other",
+      "overview": "be supposed to do:被认为/习俗上应该做某事。"
+    },
+    {
+      "code": "g9u10.02",
+      "point": "be supposed/expected to:时态与一致",
+      "category": "other",
+      "overview": "be supposed/expected to:随时态变化(was/were supposed to表示过去本应)。"
+    },
+    {
+      "code": "g9u10.03",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "category": "other",
+      "overview": "It's polite/impolite/important to do:评价某种行为是否礼貌/重要。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u10.01.q1",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "When you meet for the first time, you're supposed ____ shake hands.",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[supposed to] be supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q2",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "In Korea, people are supposed ____ bow when they meet.",
+      "options": [
+        "to",
+        "for",
+        "at",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[supposed to] be supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q3",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "You ____ supposed to take off your shoes here.",
+      "options": [
+        "is",
+        "be",
+        "am",
+        "are"
+      ],
+      "answer_index": 3,
+      "answer_text": "are",
+      "explanation": "[supposed to] you are supposed"
+    },
+    {
+      "qid": "g9u10.01.q4",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "What are we supposed ____ do at the party?",
+      "options": [
+        "to",
+        "with",
+        "for",
+        "of"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q5",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "In China, you're supposed ____ use chopsticks.",
+      "options": [
+        "to",
+        "at",
+        "for",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q6",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "He ____ supposed to be here by now.",
+      "options": [
+        "am",
+        "are",
+        "be",
+        "is"
+      ],
+      "answer_index": 3,
+      "answer_text": "is",
+      "explanation": "[supposed to] he is supposed"
+    },
+    {
+      "qid": "g9u10.01.q7",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "Students are supposed ____ wear a uniform.",
+      "options": [
+        "for",
+        "of",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q8",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "Are we supposed ____ bring a gift?",
+      "options": [
+        "with",
+        "to",
+        "at",
+        "for"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q9",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "In Japan, you're ____ to bow when greeting.",
+      "options": [
+        "supposes",
+        "suppose",
+        "supposed",
+        "supposing"
+      ],
+      "answer_index": 2,
+      "answer_text": "supposed",
+      "explanation": "[supposed to] be supposed to"
+    },
+    {
+      "qid": "g9u10.01.q10",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "We ____ supposed to be quiet in the library.",
+      "options": [
+        "am",
+        "are",
+        "be",
+        "is"
+      ],
+      "answer_index": 1,
+      "answer_text": "are",
+      "explanation": "[supposed to] we are supposed"
+    },
+    {
+      "qid": "g9u10.01.q11",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "You're supposed ____ knock before entering.",
+      "options": [
+        "of",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q12",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "She ____ supposed to call me last night, but she didn't.",
+      "options": [
+        "was",
+        "is",
+        "were",
+        "are"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[supposed to] she was supposed(过去)"
+    },
+    {
+      "qid": "g9u10.01.q13",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "What time are you supposed ____ arrive?",
+      "options": [
+        "at",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q14",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "In the US, you're ____ to shake hands.",
+      "options": [
+        "supposes",
+        "supposed",
+        "suppose",
+        "supposing"
+      ],
+      "answer_index": 1,
+      "answer_text": "supposed",
+      "explanation": "[supposed to] be supposed to"
+    },
+    {
+      "qid": "g9u10.01.q15",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "Children ____ supposed to listen to their teachers.",
+      "options": [
+        "am",
+        "be",
+        "are",
+        "is"
+      ],
+      "answer_index": 2,
+      "answer_text": "are",
+      "explanation": "[supposed to] children are supposed"
+    },
+    {
+      "qid": "g9u10.01.q16",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "You're not supposed ____ talk loudly here.",
+      "options": [
+        "with",
+        "of",
+        "for",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q17",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "Am I supposed ____ wear a tie?",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "at"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q18",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "We're supposed ____ finish the work by Friday.",
+      "options": [
+        "of",
+        "for",
+        "with",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.01.q19",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "In some countries, you're ____ to kiss on the cheek.",
+      "options": [
+        "supposed",
+        "supposes",
+        "supposing",
+        "suppose"
+      ],
+      "answer_index": 0,
+      "answer_text": "supposed",
+      "explanation": "[supposed to] be supposed to"
+    },
+    {
+      "qid": "g9u10.01.q20",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed to do:习俗上应该做",
+      "code": "g9u10.01",
+      "category": "other",
+      "tag": "supposed to",
+      "stem": "He is supposed ____ help his mother at home.",
+      "options": [
+        "at",
+        "for",
+        "with",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[supposed to] supposed to do"
+    },
+    {
+      "qid": "g9u10.02.q1",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "I ____ supposed to arrive at 7:00, but I was late.",
+      "options": [
+        "was",
+        "is",
+        "were",
+        "am"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[过去] I was supposed"
+    },
+    {
+      "qid": "g9u10.02.q2",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "They ____ supposed to come yesterday, but they didn't.",
+      "options": [
+        "are",
+        "was",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "answer_text": "were",
+      "explanation": "[过去复数] they were supposed"
+    },
+    {
+      "qid": "g9u10.02.q3",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "We ____ supposed to meet at noon tomorrow.",
+      "options": [
+        "was",
+        "are",
+        "is",
+        "were"
+      ],
+      "answer_index": 1,
+      "answer_text": "are",
+      "explanation": "[现在] we are supposed"
+    },
+    {
+      "qid": "g9u10.02.q4",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "She ____ expected to win the prize, and she did.",
+      "options": [
+        "am",
+        "was",
+        "were",
+        "are"
+      ],
+      "answer_index": 1,
+      "answer_text": "was",
+      "explanation": "[过去] she was expected"
+    },
+    {
+      "qid": "g9u10.02.q5",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "You ____ expected to wear a suit at the meeting.",
+      "options": [
+        "were",
+        "are",
+        "was",
+        "am"
+      ],
+      "answer_index": 1,
+      "answer_text": "are",
+      "explanation": "[现在] you are expected"
+    },
+    {
+      "qid": "g9u10.02.q6",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "expected to",
+      "stem": "Visitors are expected ____ be quiet in the museum.",
+      "options": [
+        "with",
+        "to",
+        "of",
+        "for"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[expected to] expected to do"
+    },
+    {
+      "qid": "g9u10.02.q7",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "He ____ supposed to be at school an hour ago.",
+      "options": [
+        "am",
+        "are",
+        "was",
+        "is"
+      ],
+      "answer_index": 2,
+      "answer_text": "was",
+      "explanation": "[过去] he was supposed"
+    },
+    {
+      "qid": "g9u10.02.q8",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "The guests ____ expected to arrive at six.",
+      "options": [
+        "were",
+        "are",
+        "is",
+        "was"
+      ],
+      "answer_index": 1,
+      "answer_text": "are",
+      "explanation": "[现在复数] guests are expected"
+    },
+    {
+      "qid": "g9u10.02.q9",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "expected to",
+      "stem": "Students are not expected ____ bring their own food.",
+      "options": [
+        "to",
+        "with",
+        "at",
+        "for"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[expected to] expected to do"
+    },
+    {
+      "qid": "g9u10.02.q10",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "I ____ supposed to finish this yesterday.",
+      "options": [
+        "were",
+        "am",
+        "was",
+        "is"
+      ],
+      "answer_index": 2,
+      "answer_text": "was",
+      "explanation": "[过去] I was supposed"
+    },
+    {
+      "qid": "g9u10.02.q11",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "We ____ supposed to wait here until she comes.",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "are"
+      ],
+      "answer_index": 3,
+      "answer_text": "are",
+      "explanation": "[现在] we are supposed"
+    },
+    {
+      "qid": "g9u10.02.q12",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "She ____ expected to call, but the phone never rang.",
+      "options": [
+        "was",
+        "were",
+        "are",
+        "am"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[过去] she was expected"
+    },
+    {
+      "qid": "g9u10.02.q13",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "expected to",
+      "stem": "Are we expected ____ tip the waiter here?",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[expected to] expected to do"
+    },
+    {
+      "qid": "g9u10.02.q14",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "The train ____ supposed to leave at eight, but it was late.",
+      "options": [
+        "am",
+        "were",
+        "are",
+        "was"
+      ],
+      "answer_index": 3,
+      "answer_text": "was",
+      "explanation": "[过去] train was supposed"
+    },
+    {
+      "qid": "g9u10.02.q15",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "You ____ supposed to take off your shoes before you came in.",
+      "options": [
+        "were",
+        "was",
+        "am",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "were",
+      "explanation": "[过去] you were supposed"
+    },
+    {
+      "qid": "g9u10.02.q16",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "expected to",
+      "stem": "He is expected ____ behave well at the dinner.",
+      "options": [
+        "to",
+        "with",
+        "for",
+        "at"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[expected to] expected to do"
+    },
+    {
+      "qid": "g9u10.02.q17",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "They ____ expected to arrive soon. Please wait.",
+      "options": [
+        "is",
+        "was",
+        "are",
+        "were"
+      ],
+      "answer_index": 2,
+      "answer_text": "are",
+      "explanation": "[现在复数] they are expected"
+    },
+    {
+      "qid": "g9u10.02.q18",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "I ____ supposed to meet him, but I forgot.",
+      "options": [
+        "is",
+        "am",
+        "was",
+        "were"
+      ],
+      "answer_index": 2,
+      "answer_text": "was",
+      "explanation": "[过去] I was supposed"
+    },
+    {
+      "qid": "g9u10.02.q19",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "时态",
+      "stem": "We ____ supposed to be on time for the exam.",
+      "options": [
+        "were",
+        "was",
+        "is",
+        "are"
+      ],
+      "answer_index": 3,
+      "answer_text": "are",
+      "explanation": "[现在] we are supposed"
+    },
+    {
+      "qid": "g9u10.02.q20",
+      "volume": "9",
+      "unit": "U10",
+      "point": "be supposed/expected to:时态与一致",
+      "code": "g9u10.02",
+      "category": "other",
+      "tag": "expected to",
+      "stem": "Children are expected ____ respect their elders.",
+      "options": [
+        "with",
+        "at",
+        "for",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[expected to] expected to do"
+    },
+    {
+      "qid": "g9u10.03.q1",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's important ____ be on time for a meeting.",
+      "options": [
+        "to",
+        "with",
+        "of",
+        "for"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[It's...to] important to do"
+    },
+    {
+      "qid": "g9u10.03.q2",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's impolite ____ keep others waiting.",
+      "options": [
+        "for",
+        "at",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[It's...to] impolite to do"
+    },
+    {
+      "qid": "g9u10.03.q3",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's polite ____ say thank you.",
+      "options": [
+        "with",
+        "to",
+        "of",
+        "for"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[It's...to] polite to do"
+    },
+    {
+      "qid": "g9u10.03.q4",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's rude ____ talk with your mouth full.",
+      "options": [
+        "for",
+        "to",
+        "with",
+        "at"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[It's...to] rude to do"
+    },
+    {
+      "qid": "g9u10.03.q5",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It ____ important to greet your guests warmly.",
+      "options": [
+        "be",
+        "are",
+        "am",
+        "is"
+      ],
+      "answer_index": 3,
+      "answer_text": "is",
+      "explanation": "[It's...to] it is important"
+    },
+    {
+      "qid": "g9u10.03.q6",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's not polite ____ point at people.",
+      "options": [
+        "to",
+        "for",
+        "with",
+        "of"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[It's...to] polite to do"
+    },
+    {
+      "qid": "g9u10.03.q7",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "Is it impolite ____ arrive early in this country?",
+      "options": [
+        "at",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[It's...to] impolite to do"
+    },
+    {
+      "qid": "g9u10.03.q8",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's kind ____ help an old person cross the road.",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[It's...to] kind to do(无人称用to)"
+    },
+    {
+      "qid": "g9u10.03.q9",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It ____ important to learn about other customs.",
+      "options": [
+        "is",
+        "am",
+        "be",
+        "are"
+      ],
+      "answer_index": 0,
+      "answer_text": "is",
+      "explanation": "[It's...to] it is important"
+    },
+    {
+      "qid": "g9u10.03.q10",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's good manners ____ knock before entering.",
+      "options": [
+        "for",
+        "to",
+        "at",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[It's...to] manners to do"
+    },
+    {
+      "qid": "g9u10.03.q11",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's rude ____ put your elbows on the table.",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "of"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[It's...to] rude to do"
+    },
+    {
+      "qid": "g9u10.03.q12",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's important ____ make guests feel at home.",
+      "options": [
+        "for",
+        "at",
+        "with",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[It's...to] important to do"
+    },
+    {
+      "qid": "g9u10.03.q13",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It ____ polite to bow when you meet someone in Japan.",
+      "options": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "answer_index": 0,
+      "answer_text": "is",
+      "explanation": "[It's...to] it is polite"
+    },
+    {
+      "qid": "g9u10.03.q14",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's not polite ____ be late for dinner.",
+      "options": [
+        "for",
+        "of",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[It's...to] polite to do"
+    },
+    {
+      "qid": "g9u10.03.q15",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "Is it OK ____ drop by without calling first?",
+      "options": [
+        "to",
+        "with",
+        "at",
+        "for"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[It's...to] OK to do"
+    },
+    {
+      "qid": "g9u10.03.q16",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's important ____ value other people's time.",
+      "options": [
+        "of",
+        "for",
+        "with",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[It's...to] important to do"
+    },
+    {
+      "qid": "g9u10.03.q17",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It ____ impolite to use your phone at the table.",
+      "options": [
+        "are",
+        "am",
+        "be",
+        "is"
+      ],
+      "answer_index": 3,
+      "answer_text": "is",
+      "explanation": "[It's...to] it is impolite"
+    },
+    {
+      "qid": "g9u10.03.q18",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's polite ____ take off your hat indoors.",
+      "options": [
+        "with",
+        "to",
+        "for",
+        "at"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[It's...to] polite to do"
+    },
+    {
+      "qid": "g9u10.03.q19",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It's important ____ make an effort to be friendly.",
+      "options": [
+        "for",
+        "of",
+        "with",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[It's...to] important to do"
+    },
+    {
+      "qid": "g9u10.03.q20",
+      "volume": "9",
+      "unit": "U10",
+      "point": "It's polite/impolite/important to do:礼仪评价",
+      "code": "g9u10.03",
+      "category": "other",
+      "tag": "its...to",
+      "stem": "It ____ rude to leave without saying goodbye.",
+      "options": [
+        "am",
+        "be",
+        "is",
+        "are"
+      ],
+      "answer_index": 2,
+      "answer_text": "is",
+      "explanation": "[It's...to] it is rude"
+    }
+  ]
+}

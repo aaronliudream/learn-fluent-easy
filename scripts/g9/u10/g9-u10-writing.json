@@ -1,0 +1,34 @@
+{
+  "volume": "9",
+  "unit": "U10",
+  "writing": {
+    "volume": "9",
+    "unit": "U10",
+    "code": "g9u10.w.01",
+    "type": "expository_writing",
+    "title": "Customs in My Country",
+    "genre": "说明短文 (expository paragraph)",
+    "prompt_cn": "用be supposed to介绍你们国家或地区的一两个习俗或礼仪(如见面方式、餐桌礼仪、做客规矩)。说明应该怎么做、什么是礼貌或不礼貌的。60词左右。",
+    "key_points": [
+      "你要介绍的习俗是什么",
+      "在这个场合人们应该怎么做(be supposed to do)",
+      "什么是礼貌/不礼貌的(It's polite/impolite to do)",
+      "给来访者的一条建议"
+    ],
+    "useful_expressions": [
+      "You are supposed to ...",
+      "You are expected to ...",
+      "It is polite/impolite to ...",
+      "It is important to ...",
+      "When you visit ...",
+      "make a good impression"
+    ],
+    "sample": "In China, there are some customs you are supposed to follow. When you meet someone for the first time, you are supposed to shake hands and smile. At dinner, it is impolite to stick your chopsticks into your food. You are also expected to wait for the older people to start eating first. It is important to be on time when you are invited to dinner. If you follow these customs, you will make a good impression.",
+    "scoring": {
+      "content": "含习俗/应该怎么做/礼貌评价/建议(4分)",
+      "language": "正确使用be supposed to及It's polite/impolite to do(3分)",
+      "structure": "条理清楚、衔接得当(2分)",
+      "wordcount": "词数达标、书写规范(1分)"
+    }
+  }
+}

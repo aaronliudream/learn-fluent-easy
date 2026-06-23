@@ -1,0 +1,864 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "passages": [
+    {
+      "code": "g9u7.c.01",
+      "volume": "9",
+      "unit": "U7",
+      "title": "My Own Decisions",
+      "scene": "自主决定",
+      "body": "Like many teenagers, I want to be (1)____ to make my own decisions. My parents are very (2)____. They decide what time I go to bed and what clothes I (3)____. I know they (4)____ about me. But I think I am old (5)____ to make some choices myself. For example, I should be (6)____ to choose my own hobbies. Last week, I (7)____ my mom that I wanted to join the art club. At first she said (8)____. But after we (9)____ about it, she agreed. Now I am very (10)____. Talking with parents really helps.",
+      "word_count": 97,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "allows",
+            "allowing",
+            "allow",
+            "allowed"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被允许 be allowed"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "strict",
+            "happy",
+            "kind",
+            "free"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "严格的 strict"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "wear",
+            "read",
+            "drive",
+            "eat"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "穿 wear"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "sell",
+            "worry",
+            "leave",
+            "forget"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "担心 worry about"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "so",
+            "too",
+            "enough",
+            "very"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "足够大 old enough"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "made",
+            "told",
+            "stopped",
+            "allowed"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被允许 allowed to"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "told",
+            "spoke",
+            "asked",
+            "said"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "告诉 told sb"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "yes",
+            "ok",
+            "no",
+            "sure"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "说不 said no"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "cried",
+            "talked",
+            "fought",
+            "slept"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "谈过 talked about"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "tired",
+            "happy",
+            "angry",
+            "sad"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "开心 happy"
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u7.c.02",
+      "volume": "9",
+      "unit": "U7",
+      "title": "School Rules",
+      "scene": "校规",
+      "body": "Every school has rules, and students must (1)____ them. At our school, we are not (2)____ to use phones in class. Phones must be turned (3)____ during lessons. We are also not allowed to (4)____ the school during the day without a note. Some students think the rules are too (5)____. But I think most rules are (6)____ for us. For example, the rule about phones helps us (7)____ on our studies. The rule about safety keeps us (8)____. Of course, students should be (9)____ to share their ideas about the rules. Good rules make school a (10)____ place to learn.",
+      "word_count": 101,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "break",
+            "follow",
+            "forget",
+            "lose"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "遵守 follow rules"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "allowed",
+            "stopped",
+            "made",
+            "kept"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被允许 allowed"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "down",
+            "on",
+            "off",
+            "up"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "关掉 turned off"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "leave",
+            "clean",
+            "build",
+            "enter"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "离开 leave"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "free",
+            "strict",
+            "easy",
+            "kind"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "严格 strict"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "bad",
+            "sad",
+            "good",
+            "hard"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "有益 good for"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "run",
+            "focus",
+            "play",
+            "sleep"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "专注 focus on"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "safe",
+            "late",
+            "tired",
+            "busy"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "安全 keep safe"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "made",
+            "told",
+            "stopped",
+            "allowed"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被允许 allowed to"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "colder",
+            "smaller",
+            "worse",
+            "better"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "更好 better place"
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u7.c.03",
+      "volume": "9",
+      "unit": "U7",
+      "title": "A Talk with My Dad",
+      "scene": "和爸爸谈心",
+      "body": "Last weekend, I had a long (1)____ with my dad. I told him I wanted to be (2)____ to choose my own subjects. He listened (3)____ to me. At first, he did not (4)____. He said I was too young to decide. But I explained why it was (5)____ to me. I said I should be (6)____ to follow my own interests. My dad thought for a while. Then he (7)____ that maybe I had a point. He agreed to (8)____ me choose two subjects. I was so (9)____! This talk taught me that if you want something, you should (10)____ talk to your parents about it.",
+      "word_count": 107,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "color",
+            "talk",
+            "price",
+            "game"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "谈话 talk"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "kept",
+            "allowed",
+            "made",
+            "stopped"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被允许 allowed"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "sadly",
+            "loudly",
+            "carefully",
+            "quickly"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "认真地 carefully"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "agree",
+            "disagree",
+            "leave",
+            "sleep"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "同意 agree"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "cheap",
+            "boring",
+            "easy",
+            "important"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "重要 important"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "allowed",
+            "made",
+            "stopped",
+            "told"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被允许 allowed to"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "said",
+            "ran",
+            "asked",
+            "cried"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "说 said"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "make",
+            "keep",
+            "stop",
+            "let"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "让 let sb do"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "angry",
+            "tired",
+            "happy",
+            "sad"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "开心 happy"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "badly",
+            "calmly",
+            "seldom",
+            "never"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "冷静地 calmly talk"
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u7.c.04",
+      "volume": "9",
+      "unit": "U7",
+      "title": "Growing Up",
+      "scene": "成长",
+      "body": "When I was young, I was not (1)____ to do many things. I could not cross the road (2)____. My mom always held my (3)____. I thought she was too (4)____. But now I understand she was keeping me (5)____. As I grew older, I was allowed to do (6)____ things by myself. Now I can go to school (7)____. I can also make some of my own (8)____. Growing up means getting more (9)____, but it also means more responsibility. I am thankful to my parents for (10)____ me grow up step by step.",
+      "word_count": 95,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "allowed",
+            "allowing",
+            "allows",
+            "allow"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "被允许 allowed"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "together",
+            "late",
+            "early",
+            "alone"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "独自 alone"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "book",
+            "head",
+            "hand",
+            "foot"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "手 hand"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "free",
+            "happy",
+            "kind",
+            "strict"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "严格 strict"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "busy",
+            "safe",
+            "late",
+            "sad"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "安全 safe"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "less",
+            "more",
+            "worse",
+            "fewer"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "更多 more things"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "slowly",
+            "together",
+            "alone",
+            "late"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "独自 alone"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "games",
+            "decisions",
+            "prices",
+            "colors"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "决定 decisions"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "freedom",
+            "time",
+            "food",
+            "money"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "自由 freedom"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "helping",
+            "losing",
+            "leaving",
+            "stopping"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "帮助 helping me"
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u7.c.05",
+      "volume": "9",
+      "unit": "U7",
+      "title": "Part-Time Work",
+      "scene": "兼职",
+      "body": "In some places, teenagers are (1)____ to do part-time jobs. They may work in a shop or a (2)____ after school. Many people think this is a good (3)____. By working, young people learn how to (4)____ their time and money. They also learn how to (5)____ with others. But some parents do not (6)____. They are afraid that work will get in the (7)____ of study. They think school should come (8)____. Experts say a part-time job is fine if it is not (9)____ many hours. The key is to find a good (10)____ between work and study.",
+      "word_count": 99,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "allow",
+            "allows",
+            "allowing",
+            "allowed"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "被允许 allowed"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "restaurant",
+            "price",
+            "color",
+            "game"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "餐馆 restaurant"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "price",
+            "idea",
+            "song",
+            "color"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "主意 idea"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "break",
+            "throw",
+            "lose",
+            "manage"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "管理 manage"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "work",
+            "run",
+            "play",
+            "sleep"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "合作 work with"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "agree",
+            "disagree",
+            "cry",
+            "leave"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "同意 agree"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "road",
+            "window",
+            "way",
+            "door"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "妨碍 in the way of"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "last",
+            "first",
+            "slow",
+            "late"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "第一 come first"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "very",
+            "too",
+            "much",
+            "so"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "太多 too many"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "color",
+            "price",
+            "balance",
+            "game"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "平衡 balance"
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u7.c.06",
+      "volume": "9",
+      "unit": "U7",
+      "title": "Different Opinions",
+      "scene": "不同观点",
+      "body": "People often have (1)____ opinions about what teenagers should be allowed to do. Some adults (2)____ that teenagers are too young to make big choices. They think young people should always (3)____ to their parents. Other people (4)____ with this. They believe teenagers should be (5)____ to make some of their own decisions. They say that making choices helps young people (6)____ up. Of course, some choices are (7)____ for teenagers to make alone. In these cases, parents and children should (8)____ together. The best way is to (9)____ to each other with respect. Then they can find an answer that (10)____ everyone.",
+      "word_count": 103,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "empty",
+            "same",
+            "different",
+            "quiet"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "不同 different"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "think",
+            "thought",
+            "thinking",
+            "thinks"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "认为 think"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "sleep",
+            "listen",
+            "run",
+            "talk"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "听从 listen to"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "cry",
+            "agree",
+            "leave",
+            "disagree"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "不同意 disagree"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "kept",
+            "allowed",
+            "stopped",
+            "made"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "被允许 allowed"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "lose",
+            "grow",
+            "throw",
+            "break"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "成长 grow up"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "hard",
+            "easy",
+            "free",
+            "cheap"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "难 hard"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "fight",
+            "run",
+            "sleep",
+            "talk"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "商量 talk together"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "listen",
+            "cry",
+            "leave",
+            "shout"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "倾听 listen"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "throws",
+            "breaks",
+            "suits",
+            "loses"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "适合 suits everyone"
+        }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

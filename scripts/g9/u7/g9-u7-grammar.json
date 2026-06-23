@@ -1,0 +1,1166 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "points": [
+    {
+      "code": "g9u7.01",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "category": "verb",
+      "overview": "should (not) be allowed to do:应/不应被允许做某事(情态动词+被动)。"
+    },
+    {
+      "code": "g9u7.02",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "category": "verb",
+      "overview": "be allowed to do:被允许做某事,be随主语/时态变化(am/is/are/was/were)。"
+    },
+    {
+      "code": "g9u7.03",
+      "point": "观点表达:agree/disagree/think",
+      "category": "other",
+      "overview": "表达观点:I think/don't think、agree/disagree with、too...to、old enough to。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u7.01.q1",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Teenagers should ____ allowed to choose their own clothes.",
+      "options": [
+        "to be",
+        "being",
+        "been",
+        "be"
+      ],
+      "answer_index": 3,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should + be + 过去分词"
+    },
+    {
+      "qid": "g9u7.01.q2",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Sixteen-year-olds should not be ____ to drive.",
+      "options": [
+        "allows",
+        "allow",
+        "allowing",
+        "allowed"
+      ],
+      "answer_index": 3,
+      "answer_text": "allowed",
+      "explanation": "[should be allowed] be + allowed"
+    },
+    {
+      "qid": "g9u7.01.q3",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Students should be allowed ____ make their own decisions.",
+      "options": [
+        "of",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed + to do"
+    },
+    {
+      "qid": "g9u7.01.q4",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "I don't think students should ____ allowed to smoke.",
+      "options": [
+        "be",
+        "been",
+        "to be",
+        "being"
+      ],
+      "answer_index": 0,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should be"
+    },
+    {
+      "qid": "g9u7.01.q5",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Children should not be allowed ____ stay up late.",
+      "options": [
+        "for",
+        "with",
+        "at",
+        "to"
+      ],
+      "answer_index": 3,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q6",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Should teenagers ____ allowed to have part-time jobs?",
+      "options": [
+        "being",
+        "been",
+        "is",
+        "be"
+      ],
+      "answer_index": 3,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should + be"
+    },
+    {
+      "qid": "g9u7.01.q7",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Young people should be ____ to make mistakes.",
+      "options": [
+        "allows",
+        "allow",
+        "allowing",
+        "allowed"
+      ],
+      "answer_index": 3,
+      "answer_text": "allowed",
+      "explanation": "[should be allowed] be allowed"
+    },
+    {
+      "qid": "g9u7.01.q8",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "We should not be allowed ____ use phones in class.",
+      "options": [
+        "to",
+        "of",
+        "for",
+        "with"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q9",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Do you think kids should ____ allowed to play games?",
+      "options": [
+        "being",
+        "be",
+        "to be",
+        "been"
+      ],
+      "answer_index": 1,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should be"
+    },
+    {
+      "qid": "g9u7.01.q10",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Workers should be ____ to rest on weekends.",
+      "options": [
+        "allow",
+        "allowed",
+        "allowing",
+        "allows"
+      ],
+      "answer_index": 1,
+      "answer_text": "allowed",
+      "explanation": "[should be allowed] be allowed"
+    },
+    {
+      "qid": "g9u7.01.q11",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Students should be allowed ____ choose their clubs.",
+      "options": [
+        "to",
+        "at",
+        "with",
+        "for"
+      ],
+      "answer_index": 0,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q12",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Pets should not ____ allowed in the library.",
+      "options": [
+        "be",
+        "is",
+        "been",
+        "being"
+      ],
+      "answer_index": 0,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should not be"
+    },
+    {
+      "qid": "g9u7.01.q13",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "I think we should be ____ to wear our own clothes.",
+      "options": [
+        "allow",
+        "allowing",
+        "allowed",
+        "allows"
+      ],
+      "answer_index": 2,
+      "answer_text": "allowed",
+      "explanation": "[should be allowed] be allowed"
+    },
+    {
+      "qid": "g9u7.01.q14",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Should children be allowed ____ get their ears pierced?",
+      "options": [
+        "for",
+        "of",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q15",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Teenagers should ____ be allowed to drink.",
+      "options": [
+        "don't",
+        "not",
+        "no",
+        "doesn't"
+      ],
+      "answer_index": 1,
+      "answer_text": "not",
+      "explanation": "[should be allowed] should not be(否定)"
+    },
+    {
+      "qid": "g9u7.01.q16",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Students should be allowed ____ take photos here.",
+      "options": [
+        "at",
+        "with",
+        "to",
+        "for"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q17",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Do you think we should ____ allowed to stay out late?",
+      "options": [
+        "been",
+        "being",
+        "be",
+        "to be"
+      ],
+      "answer_index": 2,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should be"
+    },
+    {
+      "qid": "g9u7.01.q18",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Young children should not be ____ to watch scary films.",
+      "options": [
+        "allowing",
+        "allowed",
+        "allow",
+        "allows"
+      ],
+      "answer_index": 1,
+      "answer_text": "allowed",
+      "explanation": "[should be allowed] be allowed"
+    },
+    {
+      "qid": "g9u7.01.q19",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "Should students be allowed ____ work part-time?",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[should be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.01.q20",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态+情态:should (not) be allowed to",
+      "code": "g9u7.01",
+      "category": "verb",
+      "tag": "should be allowed",
+      "stem": "People should ____ allowed to make their own choices.",
+      "options": [
+        "be",
+        "been",
+        "being",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "be",
+      "explanation": "[should be allowed] should be"
+    },
+    {
+      "qid": "g9u7.02.q1",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Students ____ allowed to use the lab on Fridays.",
+      "options": [
+        "are",
+        "be",
+        "am",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "are",
+      "explanation": "[be allowed] 复数 are allowed"
+    },
+    {
+      "qid": "g9u7.02.q2",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "She ____ allowed to drive last year.",
+      "options": [
+        "was",
+        "were",
+        "are",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "was",
+      "explanation": "[be allowed] 过去 was allowed"
+    },
+    {
+      "qid": "g9u7.02.q3",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "I ____ not allowed to go out at night.",
+      "options": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "answer_index": 1,
+      "answer_text": "am",
+      "explanation": "[be allowed] I am allowed"
+    },
+    {
+      "qid": "g9u7.02.q4",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "He ____ allowed to keep a pet at home.",
+      "options": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "answer_index": 2,
+      "answer_text": "is",
+      "explanation": "[be allowed] 单数 is allowed"
+    },
+    {
+      "qid": "g9u7.02.q5",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Visitors ____ not allowed to touch the paintings.",
+      "options": [
+        "be",
+        "am",
+        "are",
+        "is"
+      ],
+      "answer_index": 2,
+      "answer_text": "are",
+      "explanation": "[be allowed] 复数 are allowed"
+    },
+    {
+      "qid": "g9u7.02.q6",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "We were ____ to leave early yesterday.",
+      "options": [
+        "allow",
+        "allowed",
+        "allows",
+        "allowing"
+      ],
+      "answer_index": 1,
+      "answer_text": "allowed",
+      "explanation": "[be allowed] were + allowed"
+    },
+    {
+      "qid": "g9u7.02.q7",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Tom is allowed ____ stay up until ten.",
+      "options": [
+        "with",
+        "of",
+        "to",
+        "for"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[be allowed] allowed to do"
+    },
+    {
+      "qid": "g9u7.02.q8",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Children ____ not allowed to swim here alone.",
+      "options": [
+        "are",
+        "am",
+        "be",
+        "is"
+      ],
+      "answer_index": 0,
+      "answer_text": "are",
+      "explanation": "[be allowed] 复数 are"
+    },
+    {
+      "qid": "g9u7.02.q9",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Were the students ____ to bring phones?",
+      "options": [
+        "allowing",
+        "allowed",
+        "allow",
+        "allows"
+      ],
+      "answer_index": 1,
+      "answer_text": "allowed",
+      "explanation": "[be allowed] were + allowed"
+    },
+    {
+      "qid": "g9u7.02.q10",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "My sister ____ allowed to wear make-up now.",
+      "options": [
+        "is",
+        "am",
+        "be",
+        "are"
+      ],
+      "answer_index": 0,
+      "answer_text": "is",
+      "explanation": "[be allowed] 单数 is"
+    },
+    {
+      "qid": "g9u7.02.q11",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "I ____ allowed to choose my own subjects this year.",
+      "options": [
+        "are",
+        "be",
+        "is",
+        "am"
+      ],
+      "answer_index": 3,
+      "answer_text": "am",
+      "explanation": "[be allowed] I am"
+    },
+    {
+      "qid": "g9u7.02.q12",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "They ____ allowed to enter the park for free.",
+      "options": [
+        "is",
+        "am",
+        "be",
+        "are"
+      ],
+      "answer_index": 3,
+      "answer_text": "are",
+      "explanation": "[be allowed] 复数 are"
+    },
+    {
+      "qid": "g9u7.02.q13",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "She was allowed ____ join the team.",
+      "options": [
+        "with",
+        "to",
+        "at",
+        "for"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.02.q14",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Last week we ____ allowed to visit the museum.",
+      "options": [
+        "are",
+        "was",
+        "is",
+        "were"
+      ],
+      "answer_index": 3,
+      "answer_text": "were",
+      "explanation": "[be allowed] 过去复数 were"
+    },
+    {
+      "qid": "g9u7.02.q15",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "He is not ____ to play outside after dark.",
+      "options": [
+        "allow",
+        "allowing",
+        "allows",
+        "allowed"
+      ],
+      "answer_index": 3,
+      "answer_text": "allowed",
+      "explanation": "[be allowed] is + allowed"
+    },
+    {
+      "qid": "g9u7.02.q16",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Are we ____ to take pictures in the hall?",
+      "options": [
+        "allowed",
+        "allow",
+        "allows",
+        "allowing"
+      ],
+      "answer_index": 0,
+      "answer_text": "allowed",
+      "explanation": "[be allowed] are + allowed"
+    },
+    {
+      "qid": "g9u7.02.q17",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "The child ____ allowed to eat sweets only on weekends.",
+      "options": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "answer_index": 2,
+      "answer_text": "is",
+      "explanation": "[be allowed] 单数 is"
+    },
+    {
+      "qid": "g9u7.02.q18",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "Students are allowed ____ use the gym after school.",
+      "options": [
+        "of",
+        "to",
+        "for",
+        "with"
+      ],
+      "answer_index": 1,
+      "answer_text": "to",
+      "explanation": "[be allowed] allowed to"
+    },
+    {
+      "qid": "g9u7.02.q19",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "We ____ allowed to go on the trip last month.",
+      "options": [
+        "is",
+        "was",
+        "are",
+        "were"
+      ],
+      "answer_index": 3,
+      "answer_text": "were",
+      "explanation": "[be allowed] 过去复数 were"
+    },
+    {
+      "qid": "g9u7.02.q20",
+      "volume": "9",
+      "unit": "U7",
+      "point": "被动语态:be allowed to do(各主语/时态)",
+      "code": "g9u7.02",
+      "category": "verb",
+      "tag": "be allowed to",
+      "stem": "I was ____ to stay at my friend's house.",
+      "options": [
+        "allows",
+        "allowing",
+        "allowed",
+        "allow"
+      ],
+      "answer_index": 2,
+      "answer_text": "allowed",
+      "explanation": "[be allowed] was + allowed"
+    },
+    {
+      "qid": "g9u7.03.q1",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ think sixteen-year-olds should drive. They aren't serious enough.",
+      "options": [
+        "not",
+        "am not",
+        "doesn't",
+        "don't"
+      ],
+      "answer_index": 3,
+      "answer_text": "don't",
+      "explanation": "[观点] I don't think"
+    },
+    {
+      "qid": "g9u7.03.q2",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ with you. Teenagers can learn a lot from working.",
+      "options": [
+        "agree not",
+        "not agree",
+        "disagree",
+        "no agree"
+      ],
+      "answer_index": 2,
+      "answer_text": "disagree",
+      "explanation": "[观点] disagree 不同意"
+    },
+    {
+      "qid": "g9u7.03.q3",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ they aren't serious enough to drive.",
+      "options": [
+        "agree with",
+        "agree on",
+        "agree",
+        "agree to"
+      ],
+      "answer_index": 2,
+      "answer_text": "agree",
+      "explanation": "[观点] I agree(that)"
+    },
+    {
+      "qid": "g9u7.03.q4",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "Teenagers are ____ young to make their own decisions.",
+      "options": [
+        "too",
+        "very",
+        "much",
+        "so"
+      ],
+      "answer_index": 0,
+      "answer_text": "too",
+      "explanation": "[观点] too young to do"
+    },
+    {
+      "qid": "g9u7.03.q5",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "Do you ____ teenagers should choose their own clothes?",
+      "options": [
+        "thought",
+        "thinking",
+        "think",
+        "thinks"
+      ],
+      "answer_index": 2,
+      "answer_text": "think",
+      "explanation": "[观点] Do you think"
+    },
+    {
+      "qid": "g9u7.03.q6",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I don't ____ with this idea at all.",
+      "options": [
+        "doubt",
+        "think",
+        "agree",
+        "mind"
+      ],
+      "answer_index": 2,
+      "answer_text": "agree",
+      "explanation": "[观点] agree with"
+    },
+    {
+      "qid": "g9u7.03.q7",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ that students should have more free time.",
+      "options": [
+        "thinking",
+        "am think",
+        "to think",
+        "think"
+      ],
+      "answer_index": 3,
+      "answer_text": "think",
+      "explanation": "[观点] I think that"
+    },
+    {
+      "qid": "g9u7.03.q8",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "They are too young ____ stay out late.",
+      "options": [
+        "with",
+        "of",
+        "to",
+        "for"
+      ],
+      "answer_index": 2,
+      "answer_text": "to",
+      "explanation": "[观点] too...to do"
+    },
+    {
+      "qid": "g9u7.03.q9",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I agree ____ you on this point.",
+      "options": [
+        "at",
+        "with",
+        "for",
+        "to"
+      ],
+      "answer_index": 1,
+      "answer_text": "with",
+      "explanation": "[观点] agree with sb"
+    },
+    {
+      "qid": "g9u7.03.q10",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "In my ____, kids should help with housework.",
+      "options": [
+        "idea",
+        "mind",
+        "think",
+        "opinion"
+      ],
+      "answer_index": 3,
+      "answer_text": "opinion",
+      "explanation": "[观点] in my opinion"
+    },
+    {
+      "qid": "g9u7.03.q11",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I don't think it ____ a good idea.",
+      "options": [
+        "is",
+        "being",
+        "are",
+        "be"
+      ],
+      "answer_index": 0,
+      "answer_text": "is",
+      "explanation": "[观点] I don't think it is"
+    },
+    {
+      "qid": "g9u7.03.q12",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "She is old ____ to make her own choices.",
+      "options": [
+        "enough",
+        "so",
+        "very",
+        "too"
+      ],
+      "answer_index": 0,
+      "answer_text": "enough",
+      "explanation": "[观点] old enough to do"
+    },
+    {
+      "qid": "g9u7.03.q13",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ agree with what you said.",
+      "options": [
+        "very much so",
+        "totally",
+        "much",
+        "too"
+      ],
+      "answer_index": 1,
+      "answer_text": "totally",
+      "explanation": "[观点] totally agree"
+    },
+    {
+      "qid": "g9u7.03.q14",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "Do you ____ that teenagers need more sleep?",
+      "options": [
+        "think",
+        "thinking",
+        "thought",
+        "thinks"
+      ],
+      "answer_index": 0,
+      "answer_text": "think",
+      "explanation": "[观点] Do you think"
+    },
+    {
+      "qid": "g9u7.03.q15",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I'm ____ sure about that. Maybe you're right.",
+      "options": [
+        "no",
+        "not",
+        "never",
+        "don't"
+      ],
+      "answer_index": 1,
+      "answer_text": "not",
+      "explanation": "[观点] not sure"
+    },
+    {
+      "qid": "g9u7.03.q16",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ that we should respect our parents.",
+      "options": [
+        "believes",
+        "believe",
+        "believing",
+        "belief"
+      ],
+      "answer_index": 1,
+      "answer_text": "believe",
+      "explanation": "[观点] I believe that"
+    },
+    {
+      "qid": "g9u7.03.q17",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "Teenagers should learn to make their own ____.",
+      "options": [
+        "decisions",
+        "weather",
+        "prices",
+        "colors"
+      ],
+      "answer_index": 0,
+      "answer_text": "decisions",
+      "explanation": "[观点] make their own decisions"
+    },
+    {
+      "qid": "g9u7.03.q18",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I ____ with your idea. It makes sense.",
+      "options": [
+        "no agree",
+        "agree",
+        "disagree with not",
+        "agree not"
+      ],
+      "answer_index": 1,
+      "answer_text": "agree",
+      "explanation": "[观点] agree"
+    },
+    {
+      "qid": "g9u7.03.q19",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "That ____ a good point. I hadn't thought of it.",
+      "options": [
+        "be",
+        "being",
+        "are",
+        "is"
+      ],
+      "answer_index": 3,
+      "answer_text": "is",
+      "explanation": "[观点] that is a good point"
+    },
+    {
+      "qid": "g9u7.03.q20",
+      "volume": "9",
+      "unit": "U7",
+      "point": "观点表达:agree/disagree/think",
+      "code": "g9u7.03",
+      "category": "other",
+      "tag": "观点",
+      "stem": "I think children ____ listen to their parents.",
+      "options": [
+        "shall be",
+        "to",
+        "being",
+        "should"
+      ],
+      "answer_index": 3,
+      "answer_text": "should",
+      "explanation": "[观点] should + 动词原形"
+    }
+  ]
+}

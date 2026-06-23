@@ -2837,7 +2837,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "被动语态",
+                "subtitle": "情态动词被动(should be allowed to)",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -2852,6 +2852,14 @@
               },
               {
                 "id": "s6",
+                "title": "完形填空",
+                "subtitle": "10空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
                 "title": "听力短文",
                 "subtitle": "听音答题",
                 "icon": "👂",
@@ -2859,7 +2867,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s8",
                 "title": "写作练习",
                 "subtitle": "本单元句型",
                 "icon": "✍️",
@@ -2867,7 +2875,7 @@
                 "time": "10分钟"
               },
               {
-                "id": "s8",
+                "id": "s9",
                 "title": "单元通关",
                 "subtitle": "综合检测",
                 "icon": "🏆",
@@ -2875,8 +2883,13 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "被动语态",
-            "grammarCode": "g8.27",
+            "grammarTitle": "情态动词被动(should be allowed to)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "g9u7.01",
+              "g9u7.02",
+              "g9u7.03"
+            ],
             "grammarQuiz": [
               {
                 "q": "本单元语法重点：被动语态。下列哪项与「awful」词义最接近？",

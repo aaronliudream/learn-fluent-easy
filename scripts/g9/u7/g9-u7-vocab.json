@@ -1,0 +1,238 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "words": [
+    {
+      "word": "license",
+      "ipa": "/ˈlaɪsns/",
+      "pos": "n.",
+      "meaning_cn": "(=licence)证;证件",
+      "phrase_en": "a driving license",
+      "freq_rank": 1
+    },
+    {
+      "word": "safety",
+      "ipa": "/ˈseɪfti/",
+      "pos": "n.",
+      "meaning_cn": "安全;安全性",
+      "phrase_en": "road safety",
+      "freq_rank": 2
+    },
+    {
+      "word": "smoke",
+      "ipa": "/sməʊk/",
+      "pos": "v.",
+      "meaning_cn": "吸烟;冒烟;n. 烟",
+      "phrase_en": "not allowed to smoke",
+      "freq_rank": 3
+    },
+    {
+      "word": "part-time",
+      "ipa": "/ˌpɑː(r)t ˈtaɪm/",
+      "pos": "adj. & adv.",
+      "meaning_cn": "兼职(的)",
+      "phrase_en": "a part-time job",
+      "freq_rank": 4
+    },
+    {
+      "word": "pierce",
+      "ipa": "/pɪəs, pɪrs/",
+      "pos": "v.",
+      "meaning_cn": "扎;刺破;穿透",
+      "phrase_en": "pierce one's ears",
+      "freq_rank": 5
+    },
+    {
+      "word": "earring",
+      "ipa": "/ˈɪərɪŋ, ˈɪrɪŋ/",
+      "pos": "n.",
+      "meaning_cn": "耳环;耳饰",
+      "phrase_en": "gold earrings",
+      "freq_rank": 6
+    },
+    {
+      "word": "flash",
+      "ipa": "/flæʃ/",
+      "pos": "n.",
+      "meaning_cn": "闪光灯;闪光;v. 闪耀;闪光",
+      "phrase_en": "use a flash",
+      "freq_rank": 7
+    },
+    {
+      "word": "tiny",
+      "ipa": "/ˈtaɪni/",
+      "pos": "adj.",
+      "meaning_cn": "极小的;微小的",
+      "phrase_en": "a tiny baby",
+      "freq_rank": 8
+    },
+    {
+      "word": "cry",
+      "ipa": "/kraɪ/",
+      "pos": "v. & n.",
+      "meaning_cn": "哭;叫喊",
+      "phrase_en": "cry loudly",
+      "freq_rank": 9
+    },
+    {
+      "word": "field",
+      "ipa": "/fiːld/",
+      "pos": "n.",
+      "meaning_cn": "田野;场地",
+      "phrase_en": "a green field",
+      "freq_rank": 10
+    },
+    {
+      "word": "hug",
+      "ipa": "/hʌɡ/",
+      "pos": "n. & v.",
+      "meaning_cn": "拥抱;搂抱",
+      "phrase_en": "give a hug",
+      "freq_rank": 11
+    },
+    {
+      "word": "lift",
+      "ipa": "/lɪft/",
+      "pos": "v.",
+      "meaning_cn": "举起;抬高;n. 电梯;搭便车",
+      "phrase_en": "lift the box",
+      "freq_rank": 12
+    },
+    {
+      "word": "badly",
+      "ipa": "/ˈbædli/",
+      "pos": "adv.",
+      "meaning_cn": "严重地;差;非常",
+      "phrase_en": "want it badly",
+      "freq_rank": 13
+    },
+    {
+      "word": "talk back",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "回嘴;顶嘴",
+      "phrase_en": "talk back to parents",
+      "freq_rank": 14
+    },
+    {
+      "word": "awful",
+      "ipa": "/ˈɔːfl/",
+      "pos": "adj.",
+      "meaning_cn": "很坏的;讨厌的",
+      "phrase_en": "an awful day",
+      "freq_rank": 15
+    },
+    {
+      "word": "teen",
+      "ipa": "/tiːn/",
+      "pos": "n.",
+      "meaning_cn": "(13至19岁之间的)青少年",
+      "phrase_en": "a happy teen",
+      "freq_rank": 16
+    },
+    {
+      "word": "regret",
+      "ipa": "/rɪˈɡret/",
+      "pos": "v. & n.",
+      "meaning_cn": "感到遗憾;懊悔",
+      "phrase_en": "regret nothing",
+      "freq_rank": 17
+    },
+    {
+      "word": "poem",
+      "ipa": "/ˈpəʊɪm/",
+      "pos": "n.",
+      "meaning_cn": "诗;韵文",
+      "phrase_en": "write a poem",
+      "freq_rank": 18
+    },
+    {
+      "word": "community",
+      "ipa": "/kəˈmjuːnəti/",
+      "pos": "n.",
+      "meaning_cn": "社区;社团",
+      "phrase_en": "help the community",
+      "freq_rank": 19
+    },
+    {
+      "word": "keep ... away from",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "避免接近;远离",
+      "phrase_en": "keep away from danger",
+      "freq_rank": 20
+    },
+    {
+      "word": "chance",
+      "ipa": "/tʃɑːns, tʃæns/",
+      "pos": "n.",
+      "meaning_cn": "机会;可能性",
+      "phrase_en": "a good chance",
+      "freq_rank": 21
+    },
+    {
+      "word": "make one's own decision",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "自己做决定",
+      "phrase_en": "make my own decision",
+      "freq_rank": 22
+    },
+    {
+      "word": "educate",
+      "ipa": "/ˈedʒukeɪt/",
+      "pos": "v.",
+      "meaning_cn": "教育;教导",
+      "phrase_en": "educate children",
+      "freq_rank": 23
+    },
+    {
+      "word": "manage",
+      "ipa": "/ˈmænɪdʒ/",
+      "pos": "v.",
+      "meaning_cn": "完成(困难的事);应付(困难局面)",
+      "phrase_en": "manage their time",
+      "freq_rank": 24
+    },
+    {
+      "word": "society",
+      "ipa": "/səˈsaɪəti/",
+      "pos": "n.",
+      "meaning_cn": "社会",
+      "phrase_en": "a part of society",
+      "freq_rank": 25
+    },
+    {
+      "word": "get in the way of",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "挡……的路;妨碍",
+      "phrase_en": "get in the way of study",
+      "freq_rank": 26
+    },
+    {
+      "word": "support",
+      "ipa": "/səˈpɔː(r)t/",
+      "pos": "v. & n.",
+      "meaning_cn": "支持",
+      "phrase_en": "support a dream",
+      "freq_rank": 27
+    },
+    {
+      "word": "enter",
+      "ipa": "/ˈentə(r)/",
+      "pos": "v.",
+      "meaning_cn": "进来;进去",
+      "phrase_en": "enter the room",
+      "freq_rank": 28
+    },
+    {
+      "word": "choice",
+      "ipa": "/tʃɔɪs/",
+      "pos": "n.",
+      "meaning_cn": "选择;挑选",
+      "phrase_en": "a hard choice",
+      "freq_rank": 29
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "exercises": [
+    {
+      "code": "g9u7.l.01",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·对话 Choosing Clothes",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Do you think teenagers should be allowed to choose their own clothes?",
+        "M: Yes, I do. It's a way to show who they are.",
+        "W: But what about school? We have to wear a uniform.",
+        "M: I think that's OK. Uniforms make everyone equal.",
+        "W: That's a good point."
+      ],
+      "translation_cn": "女:你觉得青少年应该被允许选择自己的衣服吗?\n男:是的,我觉得应该。这是表达自我的一种方式。\n女:但是在学校呢?我们得穿校服。\n男:我觉得那没问题。校服让大家平等。\n女:说得有道理。",
+      "questions": [
+        {
+          "qid": "g9u7.l.01.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.01",
+          "stem": "Does the man think teenagers should choose their own clothes?",
+          "options": [
+            "He doesn't care.",
+            "No.",
+            "Yes.",
+            "He's not sure."
+          ],
+          "answer_index": 2,
+          "answer_text": "Yes."
+        },
+        {
+          "qid": "g9u7.l.01.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.01",
+          "stem": "Why does the man support it?",
+          "options": [
+            "It's easy.",
+            "It shows who they are.",
+            "It's warm.",
+            "It's cheap."
+          ],
+          "answer_index": 1,
+          "answer_text": "It shows who they are."
+        },
+        {
+          "qid": "g9u7.l.01.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.01",
+          "stem": "What must they wear at school?",
+          "options": [
+            "Sports clothes.",
+            "A uniform.",
+            "Their own clothes.",
+            "Nothing special."
+          ],
+          "answer_index": 1,
+          "answer_text": "A uniform."
+        },
+        {
+          "qid": "g9u7.l.01.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.01",
+          "stem": "Why does the man think uniforms are OK?",
+          "options": [
+            "They are cheap.",
+            "They make everyone equal.",
+            "They are new.",
+            "They are colorful."
+          ],
+          "answer_index": 1,
+          "answer_text": "They make everyone equal."
+        },
+        {
+          "qid": "g9u7.l.01.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.01",
+          "stem": "What does the woman think of his point?",
+          "options": [
+            "It's strange.",
+            "It's boring.",
+            "It's a good point.",
+            "It's wrong."
+          ],
+          "answer_index": 2,
+          "answer_text": "It's a good point."
+        }
+      ]
+    },
+    {
+      "code": "g9u7.l.02",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·短文 Liu Yu's Dream",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Liu Yu is fifteen years old and loves running.",
+        "He dreams of becoming a professional runner.",
+        "But his parents want him to be a doctor.",
+        "They think running is too risky.",
+        "Liu Yu believes he should be allowed to follow his own dream."
+      ],
+      "translation_cn": "刘宇十五岁,热爱跑步。\n他梦想成为一名职业跑步运动员。\n但他的父母希望他当医生。\n他们觉得跑步太冒险了。\n刘宇相信自己应该被允许追随自己的梦想。",
+      "questions": [
+        {
+          "qid": "g9u7.l.02.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.02",
+          "stem": "How old is Liu Yu?",
+          "options": [
+            "Fifteen.",
+            "Sixteen.",
+            "Thirteen.",
+            "Eighteen."
+          ],
+          "answer_index": 0,
+          "answer_text": "Fifteen."
+        },
+        {
+          "qid": "g9u7.l.02.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.02",
+          "stem": "What is Liu Yu's dream?",
+          "options": [
+            "To be a teacher.",
+            "To be a doctor.",
+            "To be a professional runner.",
+            "To be a singer."
+          ],
+          "answer_index": 2,
+          "answer_text": "To be a professional runner."
+        },
+        {
+          "qid": "g9u7.l.02.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.02",
+          "stem": "What do his parents want him to be?",
+          "options": [
+            "A doctor.",
+            "A runner.",
+            "A writer.",
+            "A teacher."
+          ],
+          "answer_index": 0,
+          "answer_text": "A doctor."
+        },
+        {
+          "qid": "g9u7.l.02.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.02",
+          "stem": "Why don't his parents support him?",
+          "options": [
+            "He is lazy.",
+            "He is slow.",
+            "He is young.",
+            "Running is too risky."
+          ],
+          "answer_index": 3,
+          "answer_text": "Running is too risky."
+        },
+        {
+          "qid": "g9u7.l.02.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.02",
+          "stem": "What does Liu Yu believe?",
+          "options": [
+            "He should follow his own dream.",
+            "He should study medicine.",
+            "He should rest.",
+            "He should give up."
+          ],
+          "answer_index": 0,
+          "answer_text": "He should follow his own dream."
+        }
+      ]
+    },
+    {
+      "code": "g9u7.l.03",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·对话 Part-Time Job",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: My parents said I can have a part-time job this summer.",
+        "M: That's great! What will you do?",
+        "W: I'll work in a bookshop. I can learn to manage money.",
+        "M: My parents don't allow me to work. They worry about my study.",
+        "W: Well, the key is to find a good balance."
+      ],
+      "translation_cn": "女:我父母说今年夏天我可以做一份兼职。\n男:太好了!你打算做什么?\n女:我要在书店工作,可以学着管理钱。\n男:我父母不允许我工作,他们担心我的学习。\n女:嗯,关键是找到好的平衡。",
+      "questions": [
+        {
+          "qid": "g9u7.l.03.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.03",
+          "stem": "What did the woman's parents allow?",
+          "options": [
+            "A new phone.",
+            "A pet.",
+            "A trip.",
+            "A part-time job."
+          ],
+          "answer_index": 3,
+          "answer_text": "A part-time job."
+        },
+        {
+          "qid": "g9u7.l.03.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.03",
+          "stem": "Where will the woman work?",
+          "options": [
+            "In a school.",
+            "In a restaurant.",
+            "At home.",
+            "In a bookshop."
+          ],
+          "answer_index": 3,
+          "answer_text": "In a bookshop."
+        },
+        {
+          "qid": "g9u7.l.03.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.03",
+          "stem": "What can the woman learn?",
+          "options": [
+            "To swim.",
+            "To cook.",
+            "To manage money.",
+            "To drive."
+          ],
+          "answer_index": 2,
+          "answer_text": "To manage money."
+        },
+        {
+          "qid": "g9u7.l.03.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.03",
+          "stem": "Why don't the man's parents allow him to work?",
+          "options": [
+            "They worry about his study.",
+            "He has no time.",
+            "He is lazy.",
+            "He is too young."
+          ],
+          "answer_index": 0,
+          "answer_text": "They worry about his study."
+        },
+        {
+          "qid": "g9u7.l.03.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.03",
+          "stem": "What is the key according to the woman?",
+          "options": [
+            "To work more.",
+            "To study less.",
+            "To earn money.",
+            "To find a good balance."
+          ],
+          "answer_index": 3,
+          "answer_text": "To find a good balance."
+        }
+      ]
+    },
+    {
+      "code": "g9u7.l.04",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·短文 Mom Knows Best",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "When I was little, my mom held my hand on the road.",
+        "As a teenager, I was not allowed to stay up late.",
+        "I thought my mom was too strict.",
+        "But now I am older and I understand her.",
+        "She always wanted the best for me and kept me safe."
+      ],
+      "translation_cn": "我小时候,妈妈在路上牵着我的手。\n当我是青少年时,我不被允许熬夜。\n我以为妈妈太严格了。\n但现在我长大了,我理解她了。\n她一直为我着想,保护我的安全。",
+      "questions": [
+        {
+          "qid": "g9u7.l.04.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.04",
+          "stem": "What did mom do on the road?",
+          "options": [
+            "She held the child's hand.",
+            "She said no.",
+            "She walked away.",
+            "She ran."
+          ],
+          "answer_index": 0,
+          "answer_text": "She held the child's hand."
+        },
+        {
+          "qid": "g9u7.l.04.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.04",
+          "stem": "What was the teenager not allowed to do?",
+          "options": [
+            "Go to school.",
+            "Read books.",
+            "Stay up late.",
+            "Eat dinner."
+          ],
+          "answer_index": 2,
+          "answer_text": "Stay up late."
+        },
+        {
+          "qid": "g9u7.l.04.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.04",
+          "stem": "What did the child think of mom then?",
+          "options": [
+            "Too funny.",
+            "Too strict.",
+            "Too kind.",
+            "Too quiet."
+          ],
+          "answer_index": 1,
+          "answer_text": "Too strict."
+        },
+        {
+          "qid": "g9u7.l.04.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.04",
+          "stem": "What does the writer understand now?",
+          "options": [
+            "Mom was unkind.",
+            "Mom was wrong.",
+            "Mom was lazy.",
+            "Mom wanted the best for her."
+          ],
+          "answer_index": 3,
+          "answer_text": "Mom wanted the best for her."
+        },
+        {
+          "qid": "g9u7.l.04.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.04",
+          "stem": "What is the main idea?",
+          "options": [
+            "Mom knows best.",
+            "Roads are safe.",
+            "Kids are smart.",
+            "Sleep is bad."
+          ],
+          "answer_index": 0,
+          "answer_text": "Mom knows best."
+        }
+      ]
+    },
+    {
+      "code": "g9u7.l.05",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·对话 At the Museum",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Excuse me, are we allowed to take photos here?",
+        "M: Yes, but you are not allowed to use a flash.",
+        "W: Oh, I see. Why is that?",
+        "M: A flash may damage the old paintings.",
+        "W: Thank you. I'll turn off my flash."
+      ],
+      "translation_cn": "女:打扰一下,我们可以在这里拍照吗?\n男:可以,但不允许使用闪光灯。\n女:哦,明白了。为什么呢?\n男:闪光灯可能会损坏古老的画作。\n女:谢谢。我会关掉闪光灯。",
+      "questions": [
+        {
+          "qid": "g9u7.l.05.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.05",
+          "stem": "What does the woman want to do?",
+          "options": [
+            "Leave early.",
+            "Take photos.",
+            "Buy a ticket.",
+            "Touch a painting."
+          ],
+          "answer_index": 1,
+          "answer_text": "Take photos."
+        },
+        {
+          "qid": "g9u7.l.05.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.05",
+          "stem": "What is she not allowed to use?",
+          "options": [
+            "A pen.",
+            "A flash.",
+            "A camera.",
+            "A phone."
+          ],
+          "answer_index": 1,
+          "answer_text": "A flash."
+        },
+        {
+          "qid": "g9u7.l.05.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.05",
+          "stem": "Why is a flash not allowed?",
+          "options": [
+            "It's not allowed by law.",
+            "It's too bright for people.",
+            "It may damage the old paintings.",
+            "It's too loud."
+          ],
+          "answer_index": 2,
+          "answer_text": "It may damage the old paintings."
+        },
+        {
+          "qid": "g9u7.l.05.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.05",
+          "stem": "What will the woman do?",
+          "options": [
+            "Turn off her flash.",
+            "Buy a camera.",
+            "Leave the museum.",
+            "Stop taking photos."
+          ],
+          "answer_index": 0,
+          "answer_text": "Turn off her flash."
+        },
+        {
+          "qid": "g9u7.l.05.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.05",
+          "stem": "Where are they?",
+          "options": [
+            "In a shop.",
+            "At home.",
+            "In a museum.",
+            "At school."
+          ],
+          "answer_index": 2,
+          "answer_text": "In a museum."
+        }
+      ]
+    },
+    {
+      "code": "g9u7.l.06",
+      "volume": "9",
+      "unit": "U7",
+      "title": "九年级 U7 听力·短文 School Rules",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Our school has some important rules.",
+        "Students are not allowed to use phones in class.",
+        "We should wear the school uniform every day.",
+        "On sports day, we are allowed to wear sports clothes.",
+        "These rules help us study and stay safe."
+      ],
+      "translation_cn": "我们学校有一些重要的规则。\n学生上课时不被允许使用手机。\n我们每天都应该穿校服。\n在运动会那天,我们被允许穿运动服。\n这些规则帮助我们学习并保持安全。",
+      "questions": [
+        {
+          "qid": "g9u7.l.06.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.06",
+          "stem": "What are students not allowed to use in class?",
+          "options": [
+            "Pens.",
+            "Bags.",
+            "Phones.",
+            "Books."
+          ],
+          "answer_index": 2,
+          "answer_text": "Phones."
+        },
+        {
+          "qid": "g9u7.l.06.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.06",
+          "stem": "What should students wear every day?",
+          "options": [
+            "Anything.",
+            "The school uniform.",
+            "Sports clothes.",
+            "Their own clothes."
+          ],
+          "answer_index": 1,
+          "answer_text": "The school uniform."
+        },
+        {
+          "qid": "g9u7.l.06.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.06",
+          "stem": "When can students wear sports clothes?",
+          "options": [
+            "Never.",
+            "On Monday.",
+            "Every day.",
+            "On sports day."
+          ],
+          "answer_index": 3,
+          "answer_text": "On sports day."
+        },
+        {
+          "qid": "g9u7.l.06.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.06",
+          "stem": "What do these rules help with?",
+          "options": [
+            "Playing games.",
+            "Making money.",
+            "Eating lunch.",
+            "Study and staying safe."
+          ],
+          "answer_index": 3,
+          "answer_text": "Study and staying safe."
+        },
+        {
+          "qid": "g9u7.l.06.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.l.06",
+          "stem": "What is the passage about?",
+          "options": [
+            "School rules.",
+            "A class party.",
+            "A sports game.",
+            "A school trip."
+          ],
+          "answer_index": 0,
+          "answer_text": "School rules."
+        }
+      ]
+    }
+  ]
+}

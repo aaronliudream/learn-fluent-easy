@@ -1,0 +1,642 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "passages": [
+    {
+      "code": "g9u7.r.01",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "议论文",
+      "title": "Should Teenagers Choose Their Own Clothes?",
+      "body": "Many teenagers think they should be allowed to choose their own clothes. They say it is a way to show who they are. But some parents do not agree. They worry that teenagers may make poor choices. In some schools, students are not allowed to wear their own clothes. They must wear a uniform instead. Some students think this is unfair. They believe they are old enough to decide. Other students like uniforms because they are easy and cheap. There is no simple answer. Perhaps the best way is for parents and teenagers to talk and find a choice that works for both.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "unfair",
+          "cn": "不公平的"
+        },
+        {
+          "word": "uniform",
+          "cn": "校服;制服"
+        },
+        {
+          "word": "choice",
+          "cn": "选择"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.01.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.01",
+          "stem": "What do many teenagers think?",
+          "options": [
+            "They should wear uniforms.",
+            "They should choose their own clothes.",
+            "They should buy new clothes.",
+            "They should not have clothes."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:should be allowed to choose their own clothes"
+        },
+        {
+          "qid": "g9u7.r.01.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.01",
+          "stem": "Why do some parents disagree?",
+          "options": [
+            "Uniforms are nice.",
+            "Clothes are expensive.",
+            "They have no time.",
+            "They worry teenagers may make poor choices."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:worry that teenagers may make poor choices"
+        },
+        {
+          "qid": "g9u7.r.01.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.01",
+          "stem": "What must students wear in some schools?",
+          "options": [
+            "Old clothes.",
+            "A uniform.",
+            "No clothes.",
+            "Their own clothes."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:must wear a uniform"
+        },
+        {
+          "qid": "g9u7.r.01.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.01",
+          "stem": "Why do some students like uniforms?",
+          "options": [
+            "They are new.",
+            "They are beautiful.",
+            "They are warm.",
+            "They are easy and cheap."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:easy and cheap"
+        },
+        {
+          "qid": "g9u7.r.01.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.01",
+          "stem": "What is the best way according to the writer?",
+          "options": [
+            "Schools decide.",
+            "Students decide alone.",
+            "Parents and teenagers talk and find a choice.",
+            "Parents decide alone."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:talk and find a choice that works for both"
+        }
+      ]
+    },
+    {
+      "code": "g9u7.r.02",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "记叙文",
+      "title": "Liu Yu's Dream",
+      "body": "Liu Yu is a fifteen-year-old boy. He loves running and dreams of becoming a professional runner. He has trained hard since he was young. But his parents do not support his dream. They want him to study more and become a doctor. \"Of course we want him to do well,\" says his mother. \"But running is too risky.\" Liu Yu does not agree. He thinks he should be allowed to make his own decision. \"If I am not allowed to follow my dream, I will regret it,\" he says. He hopes that one day his parents will understand and let him try.",
+      "word_count": 102,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "professional",
+          "cn": "职业的;专业的"
+        },
+        {
+          "word": "support",
+          "cn": "支持"
+        },
+        {
+          "word": "regret",
+          "cn": "懊悔;遗憾"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.02.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.02",
+          "stem": "How old is Liu Yu?",
+          "options": [
+            "Sixteen.",
+            "Thirteen.",
+            "Eighteen.",
+            "Fifteen."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:fifteen-year-old"
+        },
+        {
+          "qid": "g9u7.r.02.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.02",
+          "stem": "What is Liu Yu's dream?",
+          "options": [
+            "To be a singer.",
+            "To become a professional runner.",
+            "To be a doctor.",
+            "To be a teacher."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:professional runner"
+        },
+        {
+          "qid": "g9u7.r.02.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.02",
+          "stem": "What do his parents want him to be?",
+          "options": [
+            "An artist.",
+            "A doctor.",
+            "A runner.",
+            "A teacher."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:become a doctor"
+        },
+        {
+          "qid": "g9u7.r.02.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.02",
+          "stem": "Why don't his parents support him?",
+          "options": [
+            "They think running is too risky.",
+            "He has no time.",
+            "He runs slowly.",
+            "He is lazy."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:running is too risky"
+        },
+        {
+          "qid": "g9u7.r.02.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.02",
+          "stem": "What does Liu Yu think he should be allowed to do?",
+          "options": [
+            "Make his own decision.",
+            "Stop running.",
+            "Study medicine.",
+            "Leave home."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:allowed to make his own decision"
+        }
+      ]
+    },
+    {
+      "code": "g9u7.r.03",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "说明文",
+      "title": "Part-Time Jobs for Teenagers",
+      "body": "In some countries, teenagers are allowed to have part-time jobs. They may work in shops or restaurants after school. Many people think this is a good idea. By working, teenagers can learn how to manage money and time. They also learn how to work with others. However, some parents do not agree. They worry that jobs will get in the way of study. They think school work should come first. Experts say part-time jobs can be helpful if teenagers do not work too many hours. The key is to find a good balance between study and work.",
+      "word_count": 97,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "manage",
+          "cn": "管理;应付"
+        },
+        {
+          "word": "balance",
+          "cn": "平衡"
+        },
+        {
+          "word": "expert",
+          "cn": "专家"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.03.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.03",
+          "stem": "What are teenagers allowed to do in some countries?",
+          "options": [
+            "Smoke.",
+            "Have part-time jobs.",
+            "Drive cars.",
+            "Stay out late."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:allowed to have part-time jobs"
+        },
+        {
+          "qid": "g9u7.r.03.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.03",
+          "stem": "What can teenagers learn by working?",
+          "options": [
+            "How to swim.",
+            "How to cook.",
+            "How to manage money and time.",
+            "How to drive."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:manage money and time"
+        },
+        {
+          "qid": "g9u7.r.03.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.03",
+          "stem": "Why do some parents disagree?",
+          "options": [
+            "Jobs are unsafe.",
+            "Jobs may get in the way of study.",
+            "Jobs are far away.",
+            "Jobs are boring."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:get in the way of study"
+        },
+        {
+          "qid": "g9u7.r.03.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.03",
+          "stem": "What do experts say?",
+          "options": [
+            "Jobs are always bad.",
+            "Part-time jobs can be helpful with limits.",
+            "Teenagers must work.",
+            "Study is useless."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:helpful if...not too many hours"
+        },
+        {
+          "qid": "g9u7.r.03.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.03",
+          "stem": "What is the key?",
+          "options": [
+            "Study less.",
+            "Quit school.",
+            "Find a good balance between study and work.",
+            "Work more."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:find a good balance"
+        }
+      ]
+    },
+    {
+      "code": "g9u7.r.04",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "记叙文",
+      "title": "Mom Knows Best",
+      "body": "When I was a small child, my mom held my hand when we crossed the road. When I was tired, she carried me. I thought she was too strict. When I was a teenager, I wanted to eat ice cream every day. But she said no. I was not allowed to stay up late or watch too much TV. I thought she did not understand me. Now I am older. I look back at those times. I know now that my mom always wanted the best for me. She was not being unkind. She was keeping me safe. Mom really does know best.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "strict",
+          "cn": "严格的"
+        },
+        {
+          "word": "teenager",
+          "cn": "青少年"
+        },
+        {
+          "word": "safe",
+          "cn": "安全的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.04.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.04",
+          "stem": "What did mom do when crossing the road?",
+          "options": [
+            "She held the child's hand.",
+            "She walked ahead.",
+            "She carried the child.",
+            "She said no."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:held my hand when we crossed"
+        },
+        {
+          "qid": "g9u7.r.04.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.04",
+          "stem": "What did the child want as a teenager?",
+          "options": [
+            "To study more.",
+            "To sleep early.",
+            "To stay home.",
+            "To eat ice cream every day."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:eat ice cream every day"
+        },
+        {
+          "qid": "g9u7.r.04.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.04",
+          "stem": "What was the child not allowed to do?",
+          "options": [
+            "Stay up late or watch too much TV.",
+            "Eat dinner.",
+            "Go to school.",
+            "Read books."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:not allowed to stay up late or watch too much TV"
+        },
+        {
+          "qid": "g9u7.r.04.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.04",
+          "stem": "What does the writer understand now?",
+          "options": [
+            "Mom was unkind.",
+            "Mom was lazy.",
+            "Mom always wanted the best.",
+            "Mom was wrong."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:always wanted the best for me"
+        },
+        {
+          "qid": "g9u7.r.04.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.04",
+          "stem": "What is the main idea?",
+          "options": [
+            "Ice cream is bad.",
+            "TV is fun.",
+            "Mom knows best.",
+            "Roads are dangerous."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "主旨:Mom Knows Best"
+        }
+      ]
+    },
+    {
+      "code": "g9u7.r.05",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "议论文",
+      "title": "Are School Uniforms a Good Idea?",
+      "body": "School uniforms are a hot topic. Should students be allowed to wear what they like, or should they wear uniforms? Those who like uniforms say they make students equal. No one is judged by their clothes. Uniforms also save time in the morning. But others think uniforms are boring. They believe students should be allowed to show their own style. Some say uniforms stop students from being creative. In many schools, students are not allowed to change their uniforms at all. Maybe schools could let students help design the uniforms. That way, both sides might be happy.",
+      "word_count": 97,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "equal",
+          "cn": "平等的"
+        },
+        {
+          "word": "judge",
+          "cn": "评判"
+        },
+        {
+          "word": "creative",
+          "cn": "有创意的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.05.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.05",
+          "stem": "What is the hot topic?",
+          "options": [
+            "What to eat.",
+            "How to drive.",
+            "Whether students should wear uniforms.",
+            "Where to study."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:School uniforms are a hot topic"
+        },
+        {
+          "qid": "g9u7.r.05.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.05",
+          "stem": "Why do some people like uniforms?",
+          "options": [
+            "They are warm.",
+            "They are colorful.",
+            "They are cheap only.",
+            "They make students equal."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:make students equal"
+        },
+        {
+          "qid": "g9u7.r.05.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.05",
+          "stem": "What do others think about uniforms?",
+          "options": [
+            "They are safe.",
+            "They are nice.",
+            "They are cheap.",
+            "They are boring."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:uniforms are boring"
+        },
+        {
+          "qid": "g9u7.r.05.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.05",
+          "stem": "What do some say uniforms stop?",
+          "options": [
+            "Students from eating.",
+            "Students from sleeping.",
+            "Students from being creative.",
+            "Students from learning."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:stop students from being creative"
+        },
+        {
+          "qid": "g9u7.r.05.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.05",
+          "stem": "What does the writer suggest?",
+          "options": [
+            "Let students help design the uniforms.",
+            "Sell uniforms.",
+            "Ban uniforms.",
+            "Force uniforms."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:let students help design"
+        }
+      ]
+    },
+    {
+      "code": "g9u7.r.06",
+      "volume": "9",
+      "unit": "U7",
+      "genre": "应用文",
+      "title": "School Rules Notice",
+      "body": "GREENWOOD SCHOOL — STUDENT RULES. Please read these rules carefully. IN CLASS: Students are not allowed to use mobile phones. Phones must be turned off. CLOTHES: Students should wear the school uniform every day. On sports day, students are allowed to wear sports clothes. LIBRARY: Students must be quiet. Eating and drinking are not allowed. SAFETY: Students are not allowed to leave school during the day without a note from a parent. CLUBS: All students are allowed to join one club after school. We hope these rules help everyone study and stay safe. Thank you for following them.",
+      "word_count": 98,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "rule",
+          "cn": "规则"
+        },
+        {
+          "word": "safety",
+          "cn": "安全"
+        },
+        {
+          "word": "quiet",
+          "cn": "安静的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u7.r.06.q1",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.06",
+          "stem": "What are students not allowed to use in class?",
+          "options": [
+            "Mobile phones.",
+            "Books.",
+            "Computers.",
+            "Pens."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:not allowed to use mobile phones"
+        },
+        {
+          "qid": "g9u7.r.06.q2",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.06",
+          "stem": "When can students wear sports clothes?",
+          "options": [
+            "On sports day.",
+            "On Monday.",
+            "Never.",
+            "Every day."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:on sports day...allowed to wear sports clothes"
+        },
+        {
+          "qid": "g9u7.r.06.q3",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.06",
+          "stem": "What is not allowed in the library?",
+          "options": [
+            "Talking quietly.",
+            "Reading.",
+            "Eating and drinking.",
+            "Studying."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Eating and drinking are not allowed"
+        },
+        {
+          "qid": "g9u7.r.06.q4",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.06",
+          "stem": "What do students need to leave school during the day?",
+          "options": [
+            "A phone.",
+            "A ticket.",
+            "A book.",
+            "A note from a parent."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:without a note from a parent"
+        },
+        {
+          "qid": "g9u7.r.06.q5",
+          "volume": "9",
+          "unit": "U7",
+          "code": "g9u7.r.06",
+          "stem": "How many clubs can a student join?",
+          "options": [
+            "One.",
+            "Two.",
+            "Three.",
+            "None."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:join one club"
+        }
+      ]
+    }
+  ]
+}

@@ -20,6 +20,7 @@ CFG = {
  "u4": {"unit": "U4", "cefr": "B1", "ltopic": "九年级 Unit4 听力·成长变化(used to)"},
  "u5": {"unit": "U5", "cefr": "B1", "ltopic": "九年级 Unit5 听力·被动语态/制作工艺"},
  "u6": {"unit": "U6", "cefr": "B1", "ltopic": "九年级 Unit6 听力·发明与被动语态"},
+ "u7": {"unit": "U7", "cefr": "B1", "ltopic": "九年级 Unit7 听力·青少年话题/be allowed to"},
 }
 def q(s): return str(s).replace("'", "''")
 def jb(o): return "'" + json.dumps(o, ensure_ascii=False).replace("'", "''") + "'::jsonb"
@@ -112,5 +113,5 @@ def gen(ukey):
     cats = {pt['code']: f"{pt['category']}={CAT[pt['category']][:8]}…" for pt in grammar['points']}
     print(f"[{ukey}] -> {OUT}  INSERT={ins} DELETE={dele} volume='{VOL}'  grammar分类={cats}")
 
-for u in ["u6"]:
+for u in ["u7"]:
     gen(u)

@@ -1,0 +1,35 @@
+{
+  "volume": "9",
+  "unit": "U7",
+  "writing": {
+    "volume": "9",
+    "unit": "U7",
+    "code": "g9u7.w.01",
+    "type": "argumentative_writing",
+    "title": "Should Teenagers Be Allowed to ...?",
+    "genre": "议论短文 (argumentative paragraph)",
+    "prompt_cn": "就一个与青少年相关的话题写一篇短文,表达你的观点(如:青少年是否应被允许做兼职/选择自己的衣服/自己做决定)。用should be allowed to表达观点,说明理由。60词左右。",
+    "key_points": [
+      "你讨论的话题是什么",
+      "你的观点(should/should not be allowed to)",
+      "至少两条理由",
+      "结尾总结你的看法"
+    ],
+    "useful_expressions": [
+      "should (not) be allowed to ...",
+      "I think / I don't think ...",
+      "One reason is ...",
+      "Another reason is ...",
+      "In my opinion ...",
+      "too young to ...",
+      "old enough to ..."
+    ],
+    "sample": "I think teenagers should be allowed to make their own decisions. One reason is that making choices helps young people grow up. They learn from both good and bad choices. Another reason is that teenagers are old enough to know what they want. Of course, some big decisions should be made with parents. But in daily life, teenagers should be allowed to choose for themselves. This helps them become more responsible.",
+    "scoring": {
+      "content": "含话题/观点/两条理由/总结(4分)",
+      "language": "正确使用should be allowed to及观点表达(3分)",
+      "structure": "论点清晰、衔接得当(2分)",
+      "wordcount": "词数达标、书写规范(1分)"
+    }
+  }
+}

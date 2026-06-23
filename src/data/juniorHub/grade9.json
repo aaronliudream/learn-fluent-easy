@@ -5062,7 +5062,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "复习综合",
+                "subtitle": "过去完成时(had done)",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -5077,6 +5077,14 @@
               },
               {
                 "id": "s6",
+                "title": "完形填空",
+                "subtitle": "10空",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
                 "title": "听力短文",
                 "subtitle": "听音答题",
                 "icon": "👂",
@@ -5084,7 +5092,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s8",
                 "title": "写作练习",
                 "subtitle": "本单元句型",
                 "icon": "✍️",
@@ -5092,7 +5100,7 @@
                 "time": "10分钟"
               },
               {
-                "id": "s8",
+                "id": "s9",
                 "title": "单元通关",
                 "subtitle": "综合检测",
                 "icon": "🏆",
@@ -5100,8 +5108,13 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "复习综合",
+            "grammarTitle": "过去完成时(had done)",
             "grammarCode": null,
+            "grammarCodes": [
+              "g9u12.01",
+              "g9u12.02",
+              "g9u12.03"
+            ],
             "grammarQuiz": [
               {
                 "q": "本单元语法重点：复习综合。下列哪项与「(overslept」词义最接近？",

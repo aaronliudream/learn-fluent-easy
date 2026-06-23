@@ -1,0 +1,144 @@
+{
+  "volume": "9",
+  "unit": "U12",
+  "passages": [
+    {
+      "code": "g9u12.c.01",
+      "volume": "9",
+      "unit": "U12",
+      "title": "A Morning of Surprises",
+      "scene": "充满意外的早晨",
+      "body": "Last Saturday started as a normal day, but it was full of the (1)____. First, I (2)____. By the time I woke up, it was already nine. I had (3)____ to meet my friend at nine. I got ready in a (4)____. But when I got to the bus stop, the bus had already (5)____. I had to wait for the next (6)____. When I finally arrived, my friend (7)____ gone home. I felt (8)____. But then she called. \"I overslept (9)____!\" she said. We both (10)____. What an unexpected morning!",
+      "word_count": 91,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["game", "unexpected", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "意外 unexpected" },
+        { "q": "2", "blank": 2, "options": ["overslept", "oversleeps", "oversleeping", "oversleep"], "answer": "A", "answer_index": 0, "explanation": "睡过头 overslept" },
+        { "q": "3", "blank": 3, "options": ["plan", "planned", "plans", "planning"], "answer": "B", "answer_index": 1, "explanation": "计划 had planned" },
+        { "q": "4", "blank": 4, "options": ["hurry", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "匆忙 in a hurry" },
+        { "q": "5", "blank": 5, "options": ["leaves", "left", "leave", "leaving"], "answer": "B", "answer_index": 1, "explanation": "离开 had left" },
+        { "q": "6", "blank": 6, "options": ["color", "price", "game", "one"], "answer": "D", "answer_index": 3, "explanation": "下一辆 the next one" },
+        { "q": "7", "blank": 7, "options": ["had", "did", "was", "have"], "answer": "A", "answer_index": 0, "explanation": "过完 had gone" },
+        { "q": "8", "blank": 8, "options": ["happy", "proud", "terrible", "glad"], "answer": "C", "answer_index": 2, "explanation": "糟糕 terrible" },
+        { "q": "9", "blank": 9, "options": ["so", "much", "very", "too"], "answer": "D", "answer_index": 3, "explanation": "也 too" },
+        { "q": "10", "blank": 10, "options": ["ran", "cried", "laughed", "slept"], "answer": "C", "answer_index": 2, "explanation": "笑 laughed" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u12.c.02",
+      "volume": "9",
+      "unit": "U12",
+      "title": "The Aliens Radio Show",
+      "scene": "外星人广播",
+      "body": "On a night in 1938, something strange (1)____ in the US. A radio show (2)____ that aliens had landed on Earth. The show said the aliens were (3)____ towns. Many people who were (4)____ did not know it was just a (5)____. They thought it was (6)____ news. People ran into the (7)____ in fear. By the time they (8)____ the truth, many had become very (9)____. The show was a famous (10)____. It taught people to be careful about what they hear.",
+      "word_count": 83,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["happening", "happens", "happen", "happened"], "answer": "D", "answer_index": 3, "explanation": "发生 happened" },
+        { "q": "2", "blank": 2, "options": ["announce", "announces", "announcing", "announced"], "answer": "D", "answer_index": 3, "explanation": "宣布 announced" },
+        { "q": "3", "blank": 3, "options": ["burning", "color", "price", "game"], "answer": "A", "answer_index": 0, "explanation": "燃烧 burning" },
+        { "q": "4", "blank": 4, "options": ["price", "listening", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "在听 listening" },
+        { "q": "5", "blank": 5, "options": ["play", "game", "color", "price"], "answer": "A", "answer_index": 0, "explanation": "戏剧 play" },
+        { "q": "6", "blank": 6, "options": ["real", "wrong", "bad", "false"], "answer": "A", "answer_index": 0, "explanation": "真实 real" },
+        { "q": "7", "blank": 7, "options": ["colors", "streets", "prices", "games"], "answer": "B", "answer_index": 1, "explanation": "街道 streets" },
+        { "q": "8", "blank": 8, "options": ["break", "throw", "learned", "lose"], "answer": "C", "answer_index": 2, "explanation": "得知 learned" },
+        { "q": "9", "blank": 9, "options": ["proud", "frightened", "happy", "glad"], "answer": "B", "answer_index": 1, "explanation": "害怕 frightened" },
+        { "q": "10", "blank": 10, "options": ["game", "price", "hoax", "color"], "answer": "C", "answer_index": 2, "explanation": "骗局 hoax" }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u12.c.03",
+      "volume": "9",
+      "unit": "U12",
+      "title": "The Costume Party Joke",
+      "scene": "化装舞会玩笑",
+      "body": "Last week, I was (1)____ to a costume party. I was very excited. I spent a long time (2)____ a funny costume. On the day, I (3)____ on my costume and went to my friend's house. But when I got there, I was (4)____. Everyone was wearing (5)____ clothes! No one else had worn a (6)____. I stood at the door in (7)____. My friends (8)____ at me. I felt so (9)____. Then my friend said, \"April (10)____!\" There was no costume party. In the end, I laughed too.",
+      "word_count": 89,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["inviting", "invites", "invite", "invited"], "answer": "D", "answer_index": 3, "explanation": "被邀请 invited" },
+        { "q": "2", "blank": 2, "options": ["making", "lose", "throw", "break"], "answer": "A", "answer_index": 0, "explanation": "制作 making" },
+        { "q": "3", "blank": 3, "options": ["throw", "put", "break", "lose"], "answer": "B", "answer_index": 1, "explanation": "穿上 put on" },
+        { "q": "4", "blank": 4, "options": ["shocked", "proud", "happy", "glad"], "answer": "A", "answer_index": 0, "explanation": "震惊 shocked" },
+        { "q": "5", "blank": 5, "options": ["funny", "old", "new", "normal"], "answer": "D", "answer_index": 3, "explanation": "普通 normal" },
+        { "q": "6", "blank": 6, "options": ["color", "game", "costume", "price"], "answer": "C", "answer_index": 2, "explanation": "服装 costume" },
+        { "q": "7", "blank": 7, "options": ["price", "game", "disbelief", "color"], "answer": "C", "answer_index": 2, "explanation": "不信 disbelief" },
+        { "q": "8", "blank": 8, "options": ["throw", "stared", "break", "lose"], "answer": "B", "answer_index": 1, "explanation": "盯着 stared" },
+        { "q": "9", "blank": 9, "options": ["glad", "embarrassed", "happy", "proud"], "answer": "B", "answer_index": 1, "explanation": "窘迫 embarrassed" },
+        { "q": "10", "blank": 10, "options": ["Fool", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "April Fool 愚人节" }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u12.c.04",
+      "volume": "9",
+      "unit": "U12",
+      "title": "About April Fool's Day",
+      "scene": "关于愚人节",
+      "body": "April Fool's Day is (1)____ in many countries on April 1st. On this day, people (2)____ jokes on each other. The jokes are meant to be (3)____, not unkind. No one knows for (4)____ how the day began. Some people think it (5)____ in France long ago. When the new year was (6)____ to January 1st, some people did not know about the (7)____. They still celebrated on April 1st. Others began to (8)____ them. Today, people of all (9)____ enjoy this day. But by the end of the day, they tell everyone the (10)____.",
+      "word_count": 95,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["celebrated", "celebrates", "celebrating", "celebrate"], "answer": "A", "answer_index": 0, "explanation": "庆祝 celebrated" },
+        { "q": "2", "blank": 2, "options": ["lose", "play", "throw", "break"], "answer": "B", "answer_index": 1, "explanation": "开玩笑 play jokes" },
+        { "q": "3", "blank": 3, "options": ["funny", "sad", "bad", "mean"], "answer": "A", "answer_index": 0, "explanation": "有趣 funny" },
+        { "q": "4", "blank": 4, "options": ["price", "game", "sure", "color"], "answer": "C", "answer_index": 2, "explanation": "确定 for sure" },
+        { "q": "5", "blank": 5, "options": ["starting", "start", "started", "starts"], "answer": "C", "answer_index": 2, "explanation": "开始 started" },
+        { "q": "6", "blank": 6, "options": ["moves", "moving", "move", "moved"], "answer": "D", "answer_index": 3, "explanation": "被移到 was moved" },
+        { "q": "7", "blank": 7, "options": ["price", "color", "game", "change"], "answer": "D", "answer_index": 3, "explanation": "变化 change" },
+        { "q": "8", "blank": 8, "options": ["throw", "fool", "break", "lose"], "answer": "B", "answer_index": 1, "explanation": "愚弄 fool" },
+        { "q": "9", "blank": 9, "options": ["ages", "prices", "colors", "games"], "answer": "A", "answer_index": 0, "explanation": "年龄 all ages" },
+        { "q": "10", "blank": 10, "options": ["game", "truth", "color", "price"], "answer": "B", "answer_index": 1, "explanation": "真相 truth" }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u12.c.05",
+      "volume": "9",
+      "unit": "U12",
+      "title": "Tom's Lost Backpack",
+      "scene": "汤姆丢失的背包",
+      "body": "It was a busy (1)____. Tom was in a hurry. He (2)____ his backpack and ran to catch the bus. By the time he got to the (3)____, he was tired. He reached for his backpack, but it was (4)____ there! He realized he had (5)____ it on the bus. Inside were his keys and some important (6)____. Tom was worried. He (7)____ the bus company. A kind (8)____ told him a worker had (9)____ his backpack. Tom felt a great sense of (10)____. By the end of the day, he had got it back.",
+      "word_count": 95,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["workday", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "工作日 workday" },
+        { "q": "2", "blank": 2, "options": ["throw", "grabbed", "break", "lose"], "answer": "B", "answer_index": 1, "explanation": "抓起 grabbed" },
+        { "q": "3", "blank": 3, "options": ["office", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "办公室 office" },
+        { "q": "4", "blank": 4, "options": ["very", "too", "not", "so"], "answer": "C", "answer_index": 2, "explanation": "不在 not there" },
+        { "q": "5", "blank": 5, "options": ["leaves", "left", "leave", "leaving"], "answer": "B", "answer_index": 1, "explanation": "落下 had left" },
+        { "q": "6", "blank": 6, "options": ["games", "colors", "prices", "papers"], "answer": "D", "answer_index": 3, "explanation": "文件 papers" },
+        { "q": "7", "blank": 7, "options": ["break", "throw", "lose", "called"], "answer": "D", "answer_index": 3, "explanation": "打电话 called" },
+        { "q": "8", "blank": 8, "options": ["game", "price", "lady", "color"], "answer": "C", "answer_index": 2, "explanation": "女士 lady" },
+        { "q": "9", "blank": 9, "options": ["found", "lose", "break", "throw"], "answer": "A", "answer_index": 0, "explanation": "找到 had found" },
+        { "q": "10", "blank": 10, "options": ["price", "relief", "game", "color"], "answer": "B", "answer_index": 1, "explanation": "轻松 relief" }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u12.c.06",
+      "volume": "9",
+      "unit": "U12",
+      "title": "April Fool's Day Rules",
+      "scene": "愚人节规则",
+      "body": "On April 1st, our school will have a fun (1)____. Here are the rules. You may (2)____ jokes on your friends, but they must be (3)____ and safe. Do not hurt or (4)____ anyone. At lunch, you may wear a funny (5)____. There will be a (6)____ for the best one. Jokes that make others feel (7)____ are not allowed. By the end of the day, tell your friends the (8)____ about any joke. Let's make this a day full of (9)____. Remember, the best jokes make (10)____ happy, not just the joker!",
+      "word_count": 93,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["game", "color", "price", "day"], "answer": "D", "answer_index": 3, "explanation": "日子 day" },
+        { "q": "2", "blank": 2, "options": ["play", "throw", "break", "lose"], "answer": "A", "answer_index": 0, "explanation": "开玩笑 play jokes" },
+        { "q": "3", "blank": 3, "options": ["mean", "bad", "kind", "sad"], "answer": "C", "answer_index": 2, "explanation": "友善 kind" },
+        { "q": "4", "blank": 4, "options": ["lose", "break", "throw", "scare"], "answer": "D", "answer_index": 3, "explanation": "吓 scare" },
+        { "q": "5", "blank": 5, "options": ["game", "costume", "color", "price"], "answer": "B", "answer_index": 1, "explanation": "服装 costume" },
+        { "q": "6", "blank": 6, "options": ["game", "price", "prize", "color"], "answer": "C", "answer_index": 2, "explanation": "奖品 prize" },
+        { "q": "7", "blank": 7, "options": ["good", "bad", "kind", "glad"], "answer": "B", "answer_index": 1, "explanation": "难受 feel bad" },
+        { "q": "8", "blank": 8, "options": ["game", "truth", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "真相 truth" },
+        { "q": "9", "blank": 9, "options": ["laughter", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "欢笑 laughter" },
+        { "q": "10", "blank": 10, "options": ["everyone", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "每个人 everyone" }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

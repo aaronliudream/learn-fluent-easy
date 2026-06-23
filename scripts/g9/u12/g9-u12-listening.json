@@ -1,0 +1,150 @@
+{
+  "volume": "9",
+  "unit": "U12",
+  "exercises": [
+    {
+      "code": "g9u12.l.01",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·对话 A Bad Morning",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: You look tired. What happened this morning?",
+        "M: I overslept. By the time I woke up, it was nine o'clock.",
+        "W: Oh no! Did you miss the bus?",
+        "M: Yes. By the time I got to the stop, the bus had already left.",
+        "W: What a morning! At least you're here now."
+      ],
+      "translation_cn": "女:你看起来很累。今早怎么了?\n男:我睡过头了。等我醒来,已经九点了。\n女:糟糕!你错过公交车了吗?\n男:是的。等我到站时,车已经开走了。\n女:真是个糟糕的早晨!至少你现在到了。",
+      "questions": [
+        { "qid": "g9u12.l.01.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.01", "stem": "Why does the man look tired?", "options": ["He worked late.", "He was sick.", "He overslept.", "He ran far."], "answer_index": 2, "answer_text": "He overslept." },
+        { "qid": "g9u12.l.01.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.01", "stem": "What time did the man wake up?", "options": ["Nine o'clock.", "Eight o'clock.", "Seven o'clock.", "Ten o'clock."], "answer_index": 0, "answer_text": "Nine o'clock." },
+        { "qid": "g9u12.l.01.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.01", "stem": "What had happened when he got to the bus stop?", "options": ["The bus broke down.", "The bus was full.", "The bus was waiting.", "The bus had already left."], "answer_index": 3, "answer_text": "The bus had already left." },
+        { "qid": "g9u12.l.01.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.01", "stem": "Did the man miss the bus?", "options": ["No.", "He took a taxi.", "Almost.", "Yes."], "answer_index": 3, "answer_text": "Yes." },
+        { "qid": "g9u12.l.01.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.01", "stem": "Is the man at work now?", "options": ["No.", "Yes.", "He is still on the bus.", "He went home."], "answer_index": 1, "answer_text": "Yes." }
+      ]
+    },
+    {
+      "code": "g9u12.l.02",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·短文 The Radio Hoax",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "In 1938, a radio show in the US told a strange story.",
+        "It announced that aliens had landed on Earth.",
+        "Many people thought it was real news.",
+        "By the time they learned the truth, they had become frightened.",
+        "The show was a famous hoax."
+      ],
+      "translation_cn": "1938年,美国一档广播节目讲了一个奇怪的故事。\n它宣布外星人已经在地球着陆。\n许多人以为那是真实的新闻。\n等他们得知真相时,已经吓坏了。\n那档节目是一个著名的骗局。",
+      "questions": [
+        { "qid": "g9u12.l.02.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.02", "stem": "When did the radio show happen?", "options": ["In 1893.", "In 1983.", "In 2000.", "In 1938."], "answer_index": 3, "answer_text": "In 1938." },
+        { "qid": "g9u12.l.02.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.02", "stem": "What did the show announce?", "options": ["A storm was coming.", "A war started.", "Aliens had landed on Earth.", "A fire broke out."], "answer_index": 2, "answer_text": "Aliens had landed on Earth." },
+        { "qid": "g9u12.l.02.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.02", "stem": "What did many people think?", "options": ["It was a joke.", "It was a song.", "It was an ad.", "It was real news."], "answer_index": 3, "answer_text": "It was real news." },
+        { "qid": "g9u12.l.02.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.02", "stem": "How did people feel by the time they learned the truth?", "options": ["Calm.", "Frightened.", "Bored.", "Happy."], "answer_index": 1, "answer_text": "Frightened." },
+        { "qid": "g9u12.l.02.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.02", "stem": "What was the show?", "options": ["A concert.", "A famous hoax.", "A weather report.", "Real news."], "answer_index": 1, "answer_text": "A famous hoax." }
+      ]
+    },
+    {
+      "code": "g9u12.l.03",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·对话 The Costume Mistake",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Why are you wearing a costume?",
+        "M: There's a costume party today. Didn't you know?",
+        "W: A costume party? No one told me about that.",
+        "M: Wait... everyone is in normal clothes. April Fool!",
+        "W: Oh no! You fooled me. How embarrassing!"
+      ],
+      "translation_cn": "女:你为什么穿着化装服?\n男:今天有化装舞会啊。你不知道吗?\n女:化装舞会?没人告诉我。\n男:等等……大家都穿着普通衣服。愚人节快乐!\n女:不好!你耍了我。太尴尬了!",
+      "questions": [
+        { "qid": "g9u12.l.03.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.03", "stem": "Why is the man wearing a costume?", "options": ["He is cold.", "He thinks there's a costume party.", "He is an actor.", "He likes it."], "answer_index": 1, "answer_text": "He thinks there's a costume party." },
+        { "qid": "g9u12.l.03.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.03", "stem": "Did anyone tell the woman about the party?", "options": ["Maybe.", "The teacher did.", "No.", "Yes."], "answer_index": 2, "answer_text": "No." },
+        { "qid": "g9u12.l.03.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.03", "stem": "What are the other people wearing?", "options": ["Sports clothes.", "Uniforms.", "Normal clothes.", "Costumes."], "answer_index": 2, "answer_text": "Normal clothes." },
+        { "qid": "g9u12.l.03.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.03", "stem": "What day is it?", "options": ["April Fool's Day.", "Christmas.", "New Year.", "Birthday."], "answer_index": 0, "answer_text": "April Fool's Day." },
+        { "qid": "g9u12.l.03.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.03", "stem": "How does the woman feel?", "options": ["Calm.", "Happy.", "Embarrassed.", "Proud."], "answer_index": 2, "answer_text": "Embarrassed." }
+      ]
+    },
+    {
+      "code": "g9u12.l.04",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·短文 April Fool's Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "April Fool's Day is on April 1st.",
+        "On this day, people play jokes on each other.",
+        "The jokes are meant to be funny, not unkind.",
+        "No one knows for sure how the day began.",
+        "By the end of the day, people tell the truth about their jokes."
+      ],
+      "translation_cn": "愚人节是4月1日。\n这一天,人们互相开玩笑。\n这些玩笑是为了好玩,而不是不友善。\n没人确切知道这个节日是怎么开始的。\n到这一天结束时,人们会说出玩笑的真相。",
+      "questions": [
+        { "qid": "g9u12.l.04.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.04", "stem": "When is April Fool's Day?", "options": ["On April 30th.", "On April 1st.", "On October 30th.", "On January 1st."], "answer_index": 1, "answer_text": "On April 1st." },
+        { "qid": "g9u12.l.04.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.04", "stem": "What do people do on this day?", "options": ["Play jokes on each other.", "Sing songs.", "Give gifts.", "Have a feast."], "answer_index": 0, "answer_text": "Play jokes on each other." },
+        { "qid": "g9u12.l.04.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.04", "stem": "What are the jokes meant to be?", "options": ["Funny, not unkind.", "Sad.", "Scary.", "Mean."], "answer_index": 0, "answer_text": "Funny, not unkind." },
+        { "qid": "g9u12.l.04.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.04", "stem": "Does anyone know how the day began?", "options": ["No, not for sure.", "Yes, scientists.", "Yes, the writer.", "Yes, everyone."], "answer_index": 0, "answer_text": "No, not for sure." },
+        { "qid": "g9u12.l.04.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.04", "stem": "What do people do by the end of the day?", "options": ["Tell the truth about their jokes.", "Leave.", "Keep the joke.", "Win a prize."], "answer_index": 0, "answer_text": "Tell the truth about their jokes." }
+      ]
+    },
+    {
+      "code": "g9u12.l.05",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·对话 The Lost Backpack",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: You look worried. What's wrong?",
+        "M: I left my backpack on the bus this morning.",
+        "W: Oh no! Was anything important inside?",
+        "M: Yes, my keys and phone. But the bus company called.",
+        "W: Did they find it? That's great news!"
+      ],
+      "translation_cn": "女:你看起来很担心。怎么了?\n男:我今早把背包落在公交车上了。\n女:不好!里面有重要东西吗?\n男:有,我的钥匙和手机。不过公交公司打来电话了。\n女:他们找到了吗?那太好了!",
+      "questions": [
+        { "qid": "g9u12.l.05.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.05", "stem": "Why does the man look worried?", "options": ["He lost his keys at home.", "He missed the bus.", "He left his backpack on the bus.", "He is sick."], "answer_index": 2, "answer_text": "He left his backpack on the bus." },
+        { "qid": "g9u12.l.05.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.05", "stem": "When did he leave it?", "options": ["Last night.", "Yesterday.", "This morning.", "Just now."], "answer_index": 2, "answer_text": "This morning." },
+        { "qid": "g9u12.l.05.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.05", "stem": "What was inside the backpack?", "options": ["His books.", "His clothes.", "His keys and phone.", "His lunch."], "answer_index": 2, "answer_text": "His keys and phone." },
+        { "qid": "g9u12.l.05.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.05", "stem": "Who called the man?", "options": ["His friend.", "His mother.", "The police.", "The bus company."], "answer_index": 3, "answer_text": "The bus company." },
+        { "qid": "g9u12.l.05.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.05", "stem": "How does the woman react?", "options": ["She is bored.", "She thinks it's great news.", "She is sad.", "She is angry."], "answer_index": 1, "answer_text": "She thinks it's great news." }
+      ]
+    },
+    {
+      "code": "g9u12.l.06",
+      "volume": "9",
+      "unit": "U12",
+      "title": "九年级 U12 听力·短文 School April Fool's Rules",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "On April 1st, our school will have a fun day.",
+        "You may play kind and safe jokes on your friends.",
+        "Do not hurt or scare anyone.",
+        "At lunch, you may wear a funny costume.",
+        "By the end of the day, tell your friends the truth."
+      ],
+      "translation_cn": "4月1日,我们学校将有一个有趣的日子。\n你可以和朋友开友善又安全的玩笑。\n不要伤害或吓唬任何人。\n午餐时,你可以穿有趣的化装服。\n到这一天结束时,告诉朋友真相。",
+      "questions": [
+        { "qid": "g9u12.l.06.q1", "volume": "9", "unit": "U12", "code": "g9u12.l.06", "stem": "When is the fun day?", "options": ["On April 30th.", "On October 30th.", "On January 1st.", "On April 1st."], "answer_index": 3, "answer_text": "On April 1st." },
+        { "qid": "g9u12.l.06.q2", "volume": "9", "unit": "U12", "code": "g9u12.l.06", "stem": "What kind of jokes can you play?", "options": ["Kind and safe jokes.", "Mean jokes.", "Scary jokes.", "No jokes."], "answer_index": 0, "answer_text": "Kind and safe jokes." },
+        { "qid": "g9u12.l.06.q3", "volume": "9", "unit": "U12", "code": "g9u12.l.06", "stem": "What should you not do?", "options": ["Hurt or scare anyone.", "Have fun.", "Wear a costume.", "Play jokes."], "answer_index": 0, "answer_text": "Hurt or scare anyone." },
+        { "qid": "g9u12.l.06.q4", "volume": "9", "unit": "U12", "code": "g9u12.l.06", "stem": "What can you wear at lunch?", "options": ["A hat only.", "Sports clothes.", "A uniform.", "A funny costume."], "answer_index": 3, "answer_text": "A funny costume." },
+        { "qid": "g9u12.l.06.q5", "volume": "9", "unit": "U12", "code": "g9u12.l.06", "stem": "What should you do by the end of the day?", "options": ["Win a prize.", "Tell your friends the truth.", "Keep the joke.", "Leave early."], "answer_index": 1, "answer_text": "Tell your friends the truth." }
+      ]
+    }
+  ]
+}

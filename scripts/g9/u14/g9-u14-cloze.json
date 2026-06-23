@@ -1,0 +1,144 @@
+{
+  "volume": "9",
+  "unit": "U14",
+  "passages": [
+    {
+      "code": "g9u14.c.01",
+      "volume": "9",
+      "unit": "U14",
+      "title": "Looking Back",
+      "scene": "回首往事",
+      "body": "As I look (1)____ at my three years in junior high, many happy memories come to my (2)____. I remember (3)____ all of you in Grade 7. I was very (4)____ on my first day. But soon I made many good (5)____. I remember our first sports day, when our class (6)____ the basketball competition. I used to (7)____ shy, but now I am much more (8)____. Time has gone by so (9)____. Soon we will (10)____ and go to senior high. These three years have been the best of my life.",
+      "word_count": 92,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["back", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "look back 回顾" },
+        { "q": "2", "blank": 2, "options": ["color", "game", "price", "mind"], "answer": "D", "answer_index": 3, "explanation": "心头 come to mind" },
+        { "q": "3", "blank": 3, "options": ["meeting", "meets", "met", "to meet"], "answer": "A", "answer_index": 0, "explanation": "remember doing 遇见" },
+        { "q": "4", "blank": 4, "options": ["happy", "glad", "proud", "nervous"], "answer": "D", "answer_index": 3, "explanation": "紧张 nervous" },
+        { "q": "5", "blank": 5, "options": ["games", "friends", "prices", "colors"], "answer": "B", "answer_index": 1, "explanation": "朋友 friends" },
+        { "q": "6", "blank": 6, "options": ["wins", "won", "win", "winning"], "answer": "B", "answer_index": 1, "explanation": "赢 won" },
+        { "q": "7", "blank": 7, "options": ["be", "been", "being", "was"], "answer": "A", "answer_index": 0, "explanation": "used to be 过去是" },
+        { "q": "8", "blank": 8, "options": ["sad", "confident", "tired", "shy"], "answer": "B", "answer_index": 1, "explanation": "自信 confident" },
+        { "q": "9", "blank": 9, "options": ["late", "slow", "quickly", "hard"], "answer": "C", "answer_index": 2, "explanation": "快 quickly" },
+        { "q": "10", "blank": 10, "options": ["lose", "break", "graduate", "build"], "answer": "C", "answer_index": 2, "explanation": "毕业 graduate" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u14.c.02",
+      "volume": "9",
+      "unit": "U14",
+      "title": "The Teacher's Words",
+      "scene": "老师的话",
+      "body": "Ladies and (1)____, welcome to our graduation (2)____. First of all, I want to (3)____ all the students here. I remember (4)____ you in Grade 7. At that time, you were just (5)____. But now you have grown (6)____ fine young people. You have all worked very (7)____. But your real test is still (8)____ of you. Soon the work will be much (9)____. Remember to keep your (10)____ when things are difficult. Believe in yourselves, and you can overcome any problem.",
+      "word_count": 82,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["games", "colors", "gentlemen", "prices"], "answer": "C", "answer_index": 2, "explanation": "先生们 gentlemen" },
+        { "q": "2", "blank": 2, "options": ["price", "ceremony", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "典礼 ceremony" },
+        { "q": "3", "blank": 3, "options": ["congratulate", "lose", "break", "build"], "answer": "A", "answer_index": 0, "explanation": "祝贺 congratulate" },
+        { "q": "4", "blank": 4, "options": ["to meet", "met", "meets", "meeting"], "answer": "D", "answer_index": 3, "explanation": "remember doing 遇见" },
+        { "q": "5", "blank": 5, "options": ["colors", "games", "children", "prices"], "answer": "C", "answer_index": 2, "explanation": "孩子 children" },
+        { "q": "6", "blank": 6, "options": ["into", "on", "off", "in"], "answer": "A", "answer_index": 0, "explanation": "grow into 成长为" },
+        { "q": "7", "blank": 7, "options": ["easy", "hard", "slow", "late"], "answer": "B", "answer_index": 1, "explanation": "努力 hard" },
+        { "q": "8", "blank": 8, "options": ["game", "price", "color", "ahead"], "answer": "D", "answer_index": 3, "explanation": "ahead of 在前面" },
+        { "q": "9", "blank": 9, "options": ["later", "harder", "slower", "easier"], "answer": "B", "answer_index": 1, "explanation": "更难 harder" },
+        { "q": "10", "blank": 10, "options": ["cool", "price", "color", "game"], "answer": "A", "answer_index": 0, "explanation": "keep cool 冷静" }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u14.c.03",
+      "volume": "9",
+      "unit": "U14",
+      "title": "Changes",
+      "scene": "成长与变化",
+      "body": "Junior high school is a time of great (1)____. Students change a lot in these three (2)____. When they first arrive in Grade 7, they are young and often (3)____. By the time they (4)____, they have grown taller and become more (5)____. Their study habits change, too. By Grade 9, most have (6)____ to study on their own. Students also become more (7)____. They learn to keep their cool when faced with (8)____. These three years are not always (9)____, but they help students (10)____ into better people.",
+      "word_count": 89,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["change", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "变化 change" },
+        { "q": "2", "blank": 2, "options": ["games", "prices", "years", "colors"], "answer": "C", "answer_index": 2, "explanation": "年 years" },
+        { "q": "3", "blank": 3, "options": ["confident", "loud", "old", "shy"], "answer": "D", "answer_index": 3, "explanation": "害羞 shy" },
+        { "q": "4", "blank": 4, "options": ["lose", "break", "build", "graduate"], "answer": "D", "answer_index": 3, "explanation": "毕业 graduate" },
+        { "q": "5", "blank": 5, "options": ["shy", "confident", "tired", "sad"], "answer": "B", "answer_index": 1, "explanation": "自信 confident" },
+        { "q": "6", "blank": 6, "options": ["break", "build", "learned", "lose"], "answer": "C", "answer_index": 2, "explanation": "学会 learned" },
+        { "q": "7", "blank": 7, "options": ["responsible", "sad", "quiet", "lazy"], "answer": "A", "answer_index": 0, "explanation": "有责任心 responsible" },
+        { "q": "8", "blank": 8, "options": ["problems", "games", "prices", "colors"], "answer": "A", "answer_index": 0, "explanation": "问题 problems" },
+        { "q": "9", "blank": 9, "options": ["hard", "easy", "cold", "old"], "answer": "B", "answer_index": 1, "explanation": "容易 easy" },
+        { "q": "10", "blank": 10, "options": ["break", "grow", "build", "lose"], "answer": "B", "answer_index": 1, "explanation": "成长 grow" }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u14.c.04",
+      "volume": "9",
+      "unit": "U14",
+      "title": "Looking Ahead",
+      "scene": "展望未来",
+      "body": "Now that junior high is almost (1)____, it is time to look to the (2)____. Many students feel both excited and a little (3)____ about senior high. The work will be (4)____, and there will be new (5)____. But change is a part of growing (6)____. First, set clear (7)____. Think about what you want to achieve. Second, work hard, but keep your (8)____. Third, believe in (9)____. Remember, every new beginning is a chance to grow. So spread your (10)____ and fly. The future belongs to you.",
+      "word_count": 88,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["over", "up", "in", "on"], "answer": "A", "answer_index": 0, "explanation": "结束 over" },
+        { "q": "2", "blank": 2, "options": ["price", "game", "color", "future"], "answer": "D", "answer_index": 3, "explanation": "未来 future" },
+        { "q": "3", "blank": 3, "options": ["glad", "worried", "proud", "happy"], "answer": "B", "answer_index": 1, "explanation": "担心 worried" },
+        { "q": "4", "blank": 4, "options": ["easier", "harder", "later", "slower"], "answer": "B", "answer_index": 1, "explanation": "更难 harder" },
+        { "q": "5", "blank": 5, "options": ["challenges", "prices", "games", "colors"], "answer": "A", "answer_index": 0, "explanation": "挑战 challenges" },
+        { "q": "6", "blank": 6, "options": ["up", "off", "on", "in"], "answer": "A", "answer_index": 0, "explanation": "grow up 长大" },
+        { "q": "7", "blank": 7, "options": ["prices", "colors", "goals", "games"], "answer": "C", "answer_index": 2, "explanation": "目标 goals" },
+        { "q": "8", "blank": 8, "options": ["price", "cool", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "冷静 cool" },
+        { "q": "9", "blank": 9, "options": ["game", "price", "yourself", "color"], "answer": "C", "answer_index": 2, "explanation": "自己 yourself" },
+        { "q": "10", "blank": 10, "options": ["games", "colors", "prices", "wings"], "answer": "D", "answer_index": 3, "explanation": "翅膀 wings" }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u14.c.05",
+      "volume": "9",
+      "unit": "U14",
+      "title": "Lily's Plans",
+      "scene": "莉莉的计划",
+      "body": "My name is Lily, and I am about to (1)____ from junior high. When I look back, I remember (2)____ a quiet girl in Grade 7. Now I have big (3)____. So what are my plans for the (4)____? First, I am going to (5)____ hard in senior high. I want good grades so I can go to a good (6)____. After that, I am going to study (7)____. I have always been (8)____ for knowledge. In ten years, I hope I (9)____ be a doctor. I know the road ahead will not be (10)____. But if I keep trying, I will reach my goals.",
+      "word_count": 105,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["break", "lose", "graduate", "build"], "answer": "C", "answer_index": 2, "explanation": "毕业 graduate" },
+        { "q": "2", "blank": 2, "options": ["been", "being", "to be", "was"], "answer": "B", "answer_index": 1, "explanation": "remember doing 是" },
+        { "q": "3", "blank": 3, "options": ["dreams", "colors", "prices", "games"], "answer": "A", "answer_index": 0, "explanation": "梦想 dreams" },
+        { "q": "4", "blank": 4, "options": ["future", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "未来 future" },
+        { "q": "5", "blank": 5, "options": ["work", "break", "build", "lose"], "answer": "A", "answer_index": 0, "explanation": "努力 work" },
+        { "q": "6", "blank": 6, "options": ["game", "price", "color", "university"], "answer": "D", "answer_index": 3, "explanation": "大学 university" },
+        { "q": "7", "blank": 7, "options": ["game", "science", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "科学 science" },
+        { "q": "8", "blank": 8, "options": ["glad", "proud", "thirsty", "happy"], "answer": "C", "answer_index": 2, "explanation": "渴望 thirsty" },
+        { "q": "9", "blank": 9, "options": ["am", "will", "have", "did"], "answer": "B", "answer_index": 1, "explanation": "将来 will be" },
+        { "q": "10", "blank": 10, "options": ["old", "hard", "cold", "easy"], "answer": "D", "answer_index": 3, "explanation": "容易 easy" }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u14.c.06",
+      "volume": "9",
+      "unit": "U14",
+      "title": "Graduation Day",
+      "scene": "毕业日",
+      "body": "Our graduation (1)____ is coming soon. It will be on Friday, June 28th, in the school (2)____. Please wear your school (3)____. First, our head teacher will give a (4)____. Then, we will give out the graduation (5)____. After that, a few students will (6)____ their memories of these three years. (7)____, we will take a class (8)____ together. This is an important (9)____. It is a time to look back at our happy memories and look (10)____ to a bright future. Let's celebrate this special moment together!",
+      "word_count": 88,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["price", "ceremony", "game", "color"], "answer": "B", "answer_index": 1, "explanation": "典礼 ceremony" },
+        { "q": "2", "blank": 2, "options": ["hall", "game", "color", "price"], "answer": "A", "answer_index": 0, "explanation": "礼堂 hall" },
+        { "q": "3", "blank": 3, "options": ["game", "price", "uniform", "color"], "answer": "C", "answer_index": 2, "explanation": "校服 uniform" },
+        { "q": "4", "blank": 4, "options": ["speech", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "演讲 speech" },
+        { "q": "5", "blank": 5, "options": ["games", "colors", "prices", "certificates"], "answer": "D", "answer_index": 3, "explanation": "证书 certificates" },
+        { "q": "6", "blank": 6, "options": ["lose", "build", "break", "share"], "answer": "D", "answer_index": 3, "explanation": "分享 share" },
+        { "q": "7", "blank": 7, "options": ["First", "Lastly", "Once", "Never"], "answer": "B", "answer_index": 1, "explanation": "最后 lastly" },
+        { "q": "8", "blank": 8, "options": ["price", "game", "photo", "color"], "answer": "C", "answer_index": 2, "explanation": "照片 photo" },
+        { "q": "9", "blank": 9, "options": ["price", "day", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "日子 day" },
+        { "q": "10", "blank": 10, "options": ["ahead", "away", "back", "down"], "answer": "A", "answer_index": 0, "explanation": "look ahead 展望" }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

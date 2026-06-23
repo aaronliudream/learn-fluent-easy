@@ -1,0 +1,138 @@
+{
+  "volume": "9",
+  "unit": "U14",
+  "passages": [
+    {
+      "code": "g9u14.r.01",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "记叙文",
+      "title": "I Remember Grade 7",
+      "body": "As I look back at my three years in junior high, many happy memories come to my mind. I remember meeting all of you in Grade 7. I was very nervous on my first day. I didn't know anyone. But soon I made many good friends. I remember our first sports day, when our class won the basketball competition. I also remember the kind teachers who helped me grow. I used to be shy, but now I am much more confident. Time has gone by so quickly. Soon we will graduate and go to different senior high schools. I will always be thankful to my teachers and friends. These three years have been the best of my life.",
+      "word_count": 118,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "nervous", "cn": "紧张的" },
+        { "word": "confident", "cn": "自信的" },
+        { "word": "thankful", "cn": "感激的" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.01.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.01", "stem": "How does the writer feel on the first day?", "options": ["Very happy.", "Very proud.", "Very bored.", "Very nervous."], "answer": "D", "answer_index": 3, "explanation": "原文:very nervous on my first day" },
+        { "qid": "g9u14.r.01.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.01", "stem": "What did the writer's class win?", "options": ["A writing contest.", "The basketball competition.", "A race.", "A music prize."], "answer": "B", "answer_index": 1, "explanation": "原文:won the basketball competition" },
+        { "qid": "g9u14.r.01.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.01", "stem": "How did the writer used to be?", "options": ["Loud.", "Shy.", "Confident.", "Lazy."], "answer": "B", "answer_index": 1, "explanation": "原文:used to be shy" },
+        { "qid": "g9u14.r.01.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.01", "stem": "What will happen soon?", "options": ["They will graduate.", "They will start Grade 7.", "They will move away.", "They will stop school."], "answer": "A", "answer_index": 0, "explanation": "原文:we will graduate" },
+        { "qid": "g9u14.r.01.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.01", "stem": "Who is the writer thankful to?", "options": ["No one.", "Only parents.", "Teachers and friends.", "Only teachers."], "answer": "C", "answer_index": 2, "explanation": "原文:thankful to my teachers and friends" }
+      ]
+    },
+    {
+      "code": "g9u14.r.02",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "应用文",
+      "title": "A Teacher's Speech",
+      "body": "Ladies and gentlemen, thank you for coming today to attend the graduation ceremony at No. 3 Junior High School. First of all, I want to congratulate all the students who are here today. I remember meeting all of you when you were just starting Grade 7 three years ago. At that time, you were just children. But now, you have grown into fine young men and women. Although you have all worked very hard over the last three years, your real test is still ahead of you. Soon you will go to senior high school, and the work will be much harder. But I believe you are ready. Remember to keep your cool when things are difficult. Believe in yourselves, and you can overcome any problem. Good luck, and I hope to see you again sometime in the future.",
+      "word_count": 139,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "ceremony", "cn": "典礼;仪式" },
+        { "word": "congratulate", "cn": "祝贺" },
+        { "word": "overcome", "cn": "克服;战胜" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.02.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.02", "stem": "What event is the speech for?", "options": ["A class party.", "A school trip.", "A sports day.", "A graduation ceremony."], "answer": "D", "answer_index": 3, "explanation": "原文:graduation ceremony" },
+        { "qid": "g9u14.r.02.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.02", "stem": "Who is the speaker congratulating?", "options": ["All the students.", "Only teachers.", "The principal.", "Only parents."], "answer": "A", "answer_index": 0, "explanation": "原文:congratulate all the students" },
+        { "qid": "g9u14.r.02.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.02", "stem": "How long ago did the speaker meet the students?", "options": ["One year ago.", "Three years ago.", "Ten years ago.", "Five years ago."], "answer": "B", "answer_index": 1, "explanation": "原文:three years ago" },
+        { "qid": "g9u14.r.02.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.02", "stem": "What is still ahead of the students?", "options": ["Their real test.", "Their graduation.", "Their holiday.", "Their party."], "answer": "A", "answer_index": 0, "explanation": "原文:your real test is still ahead" },
+        { "qid": "g9u14.r.02.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.02", "stem": "What does the speaker tell them to do when things are difficult?", "options": ["Stay home.", "Give up.", "Keep their cool.", "Run away."], "answer": "C", "answer_index": 2, "explanation": "原文:keep your cool when things are difficult" }
+      ]
+    },
+    {
+      "code": "g9u14.r.03",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "说明文",
+      "title": "Changes in Junior High",
+      "body": "Junior high school is a time of great change. Students change a lot in these three years. When they first arrive in Grade 7, they are young and often shy. By the time they graduate, they have grown taller and become more confident. Their study habits change, too. In Grade 7, many students need help from teachers. By Grade 9, most have learned to study on their own. Students also become more responsible. They learn to keep their cool when faced with problems. They make new friends and learn to work as a team. These three years are not always easy, but they help students grow into better people, ready for the challenges of senior high school.",
+      "word_count": 117,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "graduate", "cn": "毕业" },
+        { "word": "responsible", "cn": "有责任心的" },
+        { "word": "confident", "cn": "自信的" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.03.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.03", "stem": "What is junior high school a time of?", "options": ["Rest.", "Great change.", "No change.", "Travel."], "answer": "B", "answer_index": 1, "explanation": "原文:a time of great change" },
+        { "qid": "g9u14.r.03.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.03", "stem": "How are students when they first arrive in Grade 7?", "options": ["Young and often shy.", "Old and tired.", "Loud and proud.", "Tall and confident."], "answer": "A", "answer_index": 0, "explanation": "原文:young and often shy" },
+        { "qid": "g9u14.r.03.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.03", "stem": "What have most students learned by Grade 9?", "options": ["To stop learning.", "To skip class.", "To study on their own.", "To depend on teachers."], "answer": "C", "answer_index": 2, "explanation": "原文:learned to study on their own" },
+        { "qid": "g9u14.r.03.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.03", "stem": "What do students learn to do when faced with problems?", "options": ["Run away.", "Give up.", "Cry.", "Keep their cool."], "answer": "D", "answer_index": 3, "explanation": "原文:keep their cool when faced with problems" },
+        { "qid": "g9u14.r.03.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.03", "stem": "What are students ready for after three years?", "options": ["Going home.", "Stopping school.", "Staying in Grade 7.", "The challenges of senior high."], "answer": "D", "answer_index": 3, "explanation": "原文:ready for the challenges of senior high" }
+      ]
+    },
+    {
+      "code": "g9u14.r.04",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "议论文",
+      "title": "Looking to the Future",
+      "body": "Now that junior high is almost over, it is time to look to the future. Many students feel both excited and a little worried about senior high school. The work will be harder, and there will be new challenges. But change is a part of growing up. There are some things you can do to get ready. First, set clear goals. Think about what you want to achieve. Second, work hard, but also keep your cool when things get difficult. Third, believe in yourself. If you believe you can do it, you are already halfway there. Remember, every new beginning is a chance to grow. So spread your wings and fly. The future is full of hope, and it belongs to you.",
+      "word_count": 122,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "wing", "cn": "翅膀" },
+        { "word": "believe", "cn": "相信" },
+        { "word": "future", "cn": "未来" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.04.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.04", "stem": "How do many students feel about senior high?", "options": ["Both excited and worried.", "Nothing at all.", "Only bored.", "Only sad."], "answer": "A", "answer_index": 0, "explanation": "原文:both excited and a little worried" },
+        { "qid": "g9u14.r.04.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.04", "stem": "What is the first thing you can do to get ready?", "options": ["Stop working.", "Set clear goals.", "Stay home.", "Forget the past."], "answer": "B", "answer_index": 1, "explanation": "原文:First, set clear goals" },
+        { "qid": "g9u14.r.04.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.04", "stem": "What should you do when things get difficult?", "options": ["Run away.", "Give up.", "Keep your cool.", "Cry."], "answer": "C", "answer_index": 2, "explanation": "原文:keep your cool when things get difficult" },
+        { "qid": "g9u14.r.04.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.04", "stem": "What does the writer say about believing in yourself?", "options": ["It is useless.", "You are already halfway there.", "It is hard.", "It is wrong."], "answer": "B", "answer_index": 1, "explanation": "原文:already halfway there" },
+        { "qid": "g9u14.r.04.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.04", "stem": "Who does the future belong to?", "options": ["Teachers.", "Parents.", "No one.", "You."], "answer": "D", "answer_index": 3, "explanation": "原文:it belongs to you" }
+      ]
+    },
+    {
+      "code": "g9u14.r.05",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "记叙文",
+      "title": "My Plans for the Future",
+      "body": "My name is Lily, and I am about to graduate from junior high school. When I look back, I remember being a quiet girl in Grade 7. Now I have many friends and big dreams. So what are my plans for the future? First, I am going to work hard in senior high school. I want to get good grades so that I can go to a good university. After that, I am going to study science. I have always been thirsty for knowledge. In ten years, I hope I will be a doctor. I want to help sick people and make the world a better place. I know the road ahead will not be easy. But I believe that if I keep trying, I will reach my goals one day.",
+      "word_count": 131,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "graduate", "cn": "毕业" },
+        { "word": "thirsty", "cn": "渴望的" },
+        { "word": "ahead", "cn": "在前面" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.05.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.05", "stem": "What is Lily about to do?", "options": ["Stop school.", "Graduate from junior high school.", "Start Grade 7.", "Move away."], "answer": "B", "answer_index": 1, "explanation": "原文:about to graduate from junior high" },
+        { "qid": "g9u14.r.05.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.05", "stem": "How was Lily in Grade 7?", "options": ["A quiet girl.", "A lazy girl.", "A new teacher.", "A loud girl."], "answer": "A", "answer_index": 0, "explanation": "原文:a quiet girl in Grade 7" },
+        { "qid": "g9u14.r.05.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.05", "stem": "What is Lily going to study?", "options": ["History.", "Music.", "Science.", "Art."], "answer": "C", "answer_index": 2, "explanation": "原文:going to study science" },
+        { "qid": "g9u14.r.05.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.05", "stem": "What does Lily hope to be in ten years?", "options": ["A singer.", "A teacher.", "A manager.", "A doctor."], "answer": "D", "answer_index": 3, "explanation": "原文:I will be a doctor" },
+        { "qid": "g9u14.r.05.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.05", "stem": "What does Lily believe?", "options": ["If she keeps trying, she will reach her goals.", "She will fail.", "The road is easy.", "She should give up."], "answer": "A", "answer_index": 0, "explanation": "原文:if I keep trying, I will reach my goals" }
+      ]
+    },
+    {
+      "code": "g9u14.r.06",
+      "volume": "9",
+      "unit": "U14",
+      "genre": "应用文",
+      "title": "Graduation Ceremony Notice",
+      "body": "GRADUATION CEREMONY — CLASS OF GRADE 9! Dear students, our graduation ceremony is coming soon. Here are the details. DATE: Friday, June 28th. TIME: 9:00 a.m. to 11:00 a.m. PLACE: The school hall. WHAT TO WEAR: Please wear your school uniform. THE PROGRAM: First, our head teacher will give a speech. Then, we will give out the graduation certificates. After that, a few students will share their memories of these three years. Lastly, we will take a class photo together. This is an important day. It is a time to look back at our happy memories and look ahead to a bright future. We hope to see all of you there. Let's celebrate this special moment together!",
+      "word_count": 117,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "graduation", "cn": "毕业" },
+        { "word": "ceremony", "cn": "典礼" },
+        { "word": "lastly", "cn": "最后" }
+      ],
+      "questions": [
+        { "qid": "g9u14.r.06.q1", "volume": "9", "unit": "U14", "code": "g9u14.r.06", "stem": "When is the graduation ceremony?", "options": ["Monday, June 1st.", "Friday, June 28th.", "Friday, May 28th.", "Sunday, July 5th."], "answer": "B", "answer_index": 1, "explanation": "原文:Friday, June 28th" },
+        { "qid": "g9u14.r.06.q2", "volume": "9", "unit": "U14", "code": "g9u14.r.06", "stem": "Where will the ceremony be held?", "options": ["The gym.", "The library.", "The school hall.", "The playground."], "answer": "C", "answer_index": 2, "explanation": "原文:The school hall" },
+        { "qid": "g9u14.r.06.q3", "volume": "9", "unit": "U14", "code": "g9u14.r.06", "stem": "What should students wear?", "options": ["A suit.", "Costumes.", "Their school uniform.", "Sports clothes."], "answer": "C", "answer_index": 2, "explanation": "原文:wear your school uniform" },
+        { "qid": "g9u14.r.06.q4", "volume": "9", "unit": "U14", "code": "g9u14.r.06", "stem": "What will happen first in the program?", "options": ["The head teacher will give a speech.", "Students share memories.", "Certificates given.", "A class photo."], "answer": "A", "answer_index": 0, "explanation": "原文:First, our head teacher will give a speech" },
+        { "qid": "g9u14.r.06.q5", "volume": "9", "unit": "U14", "code": "g9u14.r.06", "stem": "What will they do lastly?", "options": ["Leave early.", "Hand out food.", "Give a speech.", "Take a class photo."], "answer": "D", "answer_index": 3, "explanation": "原文:Lastly, we will take a class photo" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "volume": "9",
+  "unit": "U14",
+  "exercises": [
+    {
+      "code": "g9u14.l.01",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·对话 Remembering Grade 7",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Can you believe we're about to graduate?",
+        "M: No! I still remember meeting you in Grade 7.",
+        "W: Me too. I used to be so shy back then.",
+        "M: And now you're so confident. We've all changed a lot.",
+        "W: Yes. These three years have been wonderful."
+      ],
+      "translation_cn": "女:你能相信我们快要毕业了吗?\n男:不敢相信!我还记得七年级时遇见你。\n女:我也是。那时我特别害羞。\n男:现在你这么自信。我们都变了很多。\n女:是的。这三年太美好了。",
+      "questions": [
+        {
+          "qid": "g9u14.l.01.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.01",
+          "stem": "What are they about to do?",
+          "options": [
+            "Graduate.",
+            "Take an exam.",
+            "Start Grade 7.",
+            "Move away."
+          ],
+          "answer_index": 0,
+          "answer_text": "Graduate."
+        },
+        {
+          "qid": "g9u14.l.01.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.01",
+          "stem": "What does the man remember?",
+          "options": [
+            "Meeting the woman in Grade 7.",
+            "A school trip.",
+            "A party.",
+            "A test."
+          ],
+          "answer_index": 0,
+          "answer_text": "Meeting the woman in Grade 7."
+        },
+        {
+          "qid": "g9u14.l.01.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.01",
+          "stem": "How did the woman used to be?",
+          "options": [
+            "Shy.",
+            "Loud.",
+            "Lazy.",
+            "Confident."
+          ],
+          "answer_index": 0,
+          "answer_text": "Shy."
+        },
+        {
+          "qid": "g9u14.l.01.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.01",
+          "stem": "How is the woman now?",
+          "options": [
+            "Sad.",
+            "Confident.",
+            "Tired.",
+            "Shy."
+          ],
+          "answer_index": 1,
+          "answer_text": "Confident."
+        },
+        {
+          "qid": "g9u14.l.01.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.01",
+          "stem": "How were the three years?",
+          "options": [
+            "Boring.",
+            "Terrible.",
+            "Wonderful.",
+            "Hard."
+          ],
+          "answer_index": 2,
+          "answer_text": "Wonderful."
+        }
+      ]
+    },
+    {
+      "code": "g9u14.l.02",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·短文 A Graduation Speech",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Welcome to our graduation ceremony.",
+        "First of all, I want to congratulate all the students.",
+        "I remember meeting you when you started Grade 7.",
+        "Now you have grown into fine young people.",
+        "Believe in yourselves, and you can overcome any problem."
+      ],
+      "translation_cn": "欢迎参加我们的毕业典礼。\n首先,我要祝贺所有的学生。\n我记得你们刚上七年级时和你们见面。\n如今你们已成长为优秀的年轻人。\n相信自己,你们就能克服任何困难。",
+      "questions": [
+        {
+          "qid": "g9u14.l.02.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.02",
+          "stem": "What event is this speech for?",
+          "options": [
+            "A party.",
+            "A sports day.",
+            "A trip.",
+            "A graduation ceremony."
+          ],
+          "answer_index": 3,
+          "answer_text": "A graduation ceremony."
+        },
+        {
+          "qid": "g9u14.l.02.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.02",
+          "stem": "What does the speaker do first?",
+          "options": [
+            "Give out prizes.",
+            "Congratulate all the students.",
+            "Take a photo.",
+            "Sing a song."
+          ],
+          "answer_index": 1,
+          "answer_text": "Congratulate all the students."
+        },
+        {
+          "qid": "g9u14.l.02.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.02",
+          "stem": "When did the speaker meet the students?",
+          "options": [
+            "Last month.",
+            "Last year.",
+            "When they started Grade 7.",
+            "Yesterday."
+          ],
+          "answer_index": 2,
+          "answer_text": "When they started Grade 7."
+        },
+        {
+          "qid": "g9u14.l.02.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.02",
+          "stem": "What have the students grown into?",
+          "options": [
+            "Teachers.",
+            "Old people.",
+            "Fine young people.",
+            "Small children."
+          ],
+          "answer_index": 2,
+          "answer_text": "Fine young people."
+        },
+        {
+          "qid": "g9u14.l.02.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.02",
+          "stem": "What does the speaker tell them to do?",
+          "options": [
+            "Stop trying.",
+            "Give up.",
+            "Believe in themselves.",
+            "Stay home."
+          ],
+          "answer_index": 2,
+          "answer_text": "Believe in themselves."
+        }
+      ]
+    },
+    {
+      "code": "g9u14.l.03",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·对话 Plans for Senior High",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: What are your plans for senior high school?",
+        "M: I'm going to study harder for my exams.",
+        "W: That's great. I'm going to join the music club.",
+        "M: Do you think things will be different?",
+        "W: Yes, the work will be harder, but I'm ready."
+      ],
+      "translation_cn": "女:你对高中有什么计划?\n男:我打算更努力地备考。\n女:太好了。我打算加入音乐社。\n男:你觉得情况会不一样吗?\n女:会的,功课会更难,但我准备好了。",
+      "questions": [
+        {
+          "qid": "g9u14.l.03.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.03",
+          "stem": "What is the man going to do in senior high?",
+          "options": [
+            "Travel.",
+            "Study harder for his exams.",
+            "Join the music club.",
+            "Play sports."
+          ],
+          "answer_index": 1,
+          "answer_text": "Study harder for his exams."
+        },
+        {
+          "qid": "g9u14.l.03.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.03",
+          "stem": "What is the woman going to join?",
+          "options": [
+            "The science club.",
+            "The sports club.",
+            "The music club.",
+            "The art club."
+          ],
+          "answer_index": 2,
+          "answer_text": "The music club."
+        },
+        {
+          "qid": "g9u14.l.03.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.03",
+          "stem": "What does the man ask about?",
+          "options": [
+            "The food.",
+            "The time.",
+            "If things will be different.",
+            "The weather."
+          ],
+          "answer_index": 2,
+          "answer_text": "If things will be different."
+        },
+        {
+          "qid": "g9u14.l.03.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.03",
+          "stem": "How will the work be in senior high?",
+          "options": [
+            "Easier.",
+            "The same.",
+            "Shorter.",
+            "Harder."
+          ],
+          "answer_index": 3,
+          "answer_text": "Harder."
+        },
+        {
+          "qid": "g9u14.l.03.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.03",
+          "stem": "Is the woman ready?",
+          "options": [
+            "Never.",
+            "No.",
+            "Yes.",
+            "Not yet."
+          ],
+          "answer_index": 2,
+          "answer_text": "Yes."
+        }
+      ]
+    },
+    {
+      "code": "g9u14.l.04",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·短文 Changes in Three Years",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Students change a lot in three years of junior high.",
+        "In Grade 7, they are young and often shy.",
+        "By Grade 9, they have become more confident.",
+        "They have also learned to study on their own.",
+        "These three years help them grow into better people."
+      ],
+      "translation_cn": "学生在三年的初中生活里变化很大。\n七年级时,他们年幼而且常常害羞。\n到九年级,他们变得更加自信。\n他们也学会了独立学习。\n这三年帮助他们成长为更好的人。",
+      "questions": [
+        {
+          "qid": "g9u14.l.04.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.04",
+          "stem": "How long is junior high?",
+          "options": [
+            "Four years.",
+            "Two years.",
+            "One year.",
+            "Three years."
+          ],
+          "answer_index": 3,
+          "answer_text": "Three years."
+        },
+        {
+          "qid": "g9u14.l.04.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.04",
+          "stem": "How are students in Grade 7?",
+          "options": [
+            "Young and often shy.",
+            "Loud and proud.",
+            "Tall and confident.",
+            "Old and tired."
+          ],
+          "answer_index": 0,
+          "answer_text": "Young and often shy."
+        },
+        {
+          "qid": "g9u14.l.04.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.04",
+          "stem": "How are students by Grade 9?",
+          "options": [
+            "More shy.",
+            "More tired.",
+            "More lazy.",
+            "More confident."
+          ],
+          "answer_index": 3,
+          "answer_text": "More confident."
+        },
+        {
+          "qid": "g9u14.l.04.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.04",
+          "stem": "What have they learned to do?",
+          "options": [
+            "Study on their own.",
+            "Skip class.",
+            "Stop learning.",
+            "Depend on others."
+          ],
+          "answer_index": 0,
+          "answer_text": "Study on their own."
+        },
+        {
+          "qid": "g9u14.l.04.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.04",
+          "stem": "What do these years help them do?",
+          "options": [
+            "Stay the same.",
+            "Grow into better people.",
+            "Leave school.",
+            "Give up."
+          ],
+          "answer_index": 1,
+          "answer_text": "Grow into better people."
+        }
+      ]
+    },
+    {
+      "code": "g9u14.l.05",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·对话 Lily's Dream",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: What do you want to be in the future, Lily?",
+        "M: I hope I will be a doctor one day.",
+        "W: That's a great goal! Why a doctor?",
+        "M: I want to help sick people. I'm thirsty for knowledge.",
+        "W: I'm sure you'll reach your goal if you keep trying."
+      ],
+      "translation_cn": "女:莉莉,你将来想做什么?\n男:我希望有一天能成为医生。\n女:这是个很棒的目标!为什么想当医生?\n男:我想帮助病人。我渴望知识。\n女:只要你坚持,我相信你一定能实现目标。",
+      "questions": [
+        {
+          "qid": "g9u14.l.05.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.05",
+          "stem": "What does Lily want to be?",
+          "options": [
+            "A singer.",
+            "A manager.",
+            "A teacher.",
+            "A doctor."
+          ],
+          "answer_index": 3,
+          "answer_text": "A doctor."
+        },
+        {
+          "qid": "g9u14.l.05.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.05",
+          "stem": "When does Lily hope to be one?",
+          "options": [
+            "One day in the future.",
+            "Right now.",
+            "Next week.",
+            "Yesterday."
+          ],
+          "answer_index": 0,
+          "answer_text": "One day in the future."
+        },
+        {
+          "qid": "g9u14.l.05.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.05",
+          "stem": "Why does Lily want to be a doctor?",
+          "options": [
+            "To make money.",
+            "To be famous.",
+            "To travel.",
+            "To help sick people."
+          ],
+          "answer_index": 3,
+          "answer_text": "To help sick people."
+        },
+        {
+          "qid": "g9u14.l.05.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.05",
+          "stem": "What is Lily thirsty for?",
+          "options": [
+            "Fame.",
+            "Money.",
+            "Power.",
+            "Knowledge."
+          ],
+          "answer_index": 3,
+          "answer_text": "Knowledge."
+        },
+        {
+          "qid": "g9u14.l.05.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.05",
+          "stem": "What does the woman think?",
+          "options": [
+            "Lily will reach her goal if she keeps trying.",
+            "Lily should give up.",
+            "Lily will fail.",
+            "Lily is too young."
+          ],
+          "answer_index": 0,
+          "answer_text": "Lily will reach her goal if she keeps trying."
+        }
+      ]
+    },
+    {
+      "code": "g9u14.l.06",
+      "volume": "9",
+      "unit": "U14",
+      "title": "九年级 U14 听力·短文 Graduation Day Notice",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Our graduation ceremony is coming soon.",
+        "It will be on Friday at nine in the morning.",
+        "Please wear your school uniform.",
+        "First, the head teacher will give a speech.",
+        "Lastly, we will take a class photo together."
+      ],
+      "translation_cn": "我们的毕业典礼即将到来。\n它将在周五早上九点举行。\n请穿好校服。\n首先,班主任会致辞。\n最后,我们将一起拍班级合照。",
+      "questions": [
+        {
+          "qid": "g9u14.l.06.q1",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.06",
+          "stem": "What is coming soon?",
+          "options": [
+            "An exam.",
+            "The graduation ceremony.",
+            "A sports day.",
+            "A holiday."
+          ],
+          "answer_index": 1,
+          "answer_text": "The graduation ceremony."
+        },
+        {
+          "qid": "g9u14.l.06.q2",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.06",
+          "stem": "When is the ceremony?",
+          "options": [
+            "Sunday evening.",
+            "Monday at noon.",
+            "Friday at nine in the morning.",
+            "Saturday morning."
+          ],
+          "answer_index": 2,
+          "answer_text": "Friday at nine in the morning."
+        },
+        {
+          "qid": "g9u14.l.06.q3",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.06",
+          "stem": "What should students wear?",
+          "options": [
+            "A suit.",
+            "Their school uniform.",
+            "Costumes.",
+            "Sports clothes."
+          ],
+          "answer_index": 1,
+          "answer_text": "Their school uniform."
+        },
+        {
+          "qid": "g9u14.l.06.q4",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.06",
+          "stem": "What happens first?",
+          "options": [
+            "The head teacher gives a speech.",
+            "A song.",
+            "A class photo.",
+            "Certificates given."
+          ],
+          "answer_index": 0,
+          "answer_text": "The head teacher gives a speech."
+        },
+        {
+          "qid": "g9u14.l.06.q5",
+          "volume": "9",
+          "unit": "U14",
+          "code": "g9u14.l.06",
+          "stem": "What happens lastly?",
+          "options": [
+            "They eat.",
+            "They take a class photo.",
+            "They leave.",
+            "They give a speech."
+          ],
+          "answer_index": 1,
+          "answer_text": "They take a class photo."
+        }
+      ]
+    }
+  ]
+}

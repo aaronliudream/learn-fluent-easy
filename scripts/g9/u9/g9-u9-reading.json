@@ -1,0 +1,642 @@
+{
+  "volume": "9",
+  "unit": "U9",
+  "passages": [
+    {
+      "code": "g9u9.r.01",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "说明文",
+      "title": "What Music Do You Like?",
+      "body": "People like different kinds of music. Some people prefer music that has great lyrics, because the words tell a story. Other people like music that they can dance to. They enjoy fast songs with a strong beat. Some like quiet, smooth music that helps them relax. Others love electronic music that is loud and exciting. There are also people who like singers that play their own instruments. Music is a part of our lives. It can make us happy when we are sad. No matter what kind of music you like, the best music is the music that touches your heart.",
+      "word_count": 101,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "prefer",
+          "cn": "更喜欢"
+        },
+        {
+          "word": "lyrics",
+          "cn": "歌词"
+        },
+        {
+          "word": "smooth",
+          "cn": "悦耳的;平滑的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.01.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.01",
+          "stem": "What do some people prefer in music?",
+          "options": [
+            "Silence.",
+            "Loud noise.",
+            "Music that has great lyrics.",
+            "Music with no words."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:prefer music that has great lyrics"
+        },
+        {
+          "qid": "g9u9.r.01.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.01",
+          "stem": "Why do some people like music with lyrics?",
+          "options": [
+            "It is fast.",
+            "It is loud.",
+            "It is cheap.",
+            "The words tell a story."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:the words tell a story"
+        },
+        {
+          "qid": "g9u9.r.01.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.01",
+          "stem": "What kind of music helps people relax?",
+          "options": [
+            "Fast music.",
+            "Loud music.",
+            "Quiet, smooth music.",
+            "Electronic music."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:quiet, smooth music that helps them relax"
+        },
+        {
+          "qid": "g9u9.r.01.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.01",
+          "stem": "What do some people love about electronic music?",
+          "options": [
+            "It is quiet.",
+            "It is loud and exciting.",
+            "It has no beat.",
+            "It is slow."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:loud and exciting"
+        },
+        {
+          "qid": "g9u9.r.01.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.01",
+          "stem": "What is the best music according to the writer?",
+          "options": [
+            "Music that touches your heart.",
+            "Loud music.",
+            "Fast music.",
+            "Old music."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:touches your heart"
+        }
+      ]
+    },
+    {
+      "code": "g9u9.r.02",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "说明文",
+      "title": "What Do You Feel Like Watching?",
+      "body": "When I am tired, I prefer movies that can cheer me up. Comedies like Kung Fu Panda are funny. The characters may not be perfect, but they try their best to solve their problems. After I watch them, my problems suddenly seem less serious, and I feel much better again. I don't often like dramas or documentaries when I am sad or tired. Dramas like Titanic make me feel even sadder. Documentaries like March of the Penguins are slow and quiet. But sometimes, when I am bored, I like to watch movies that are scary. They give me something to think about. Once in a while, scary movies are fun.",
+      "word_count": 110,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "prefer",
+          "cn": "更喜欢"
+        },
+        {
+          "word": "comedies",
+          "cn": "喜剧片"
+        },
+        {
+          "word": "serious",
+          "cn": "严重的;严肃的"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.02.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.02",
+          "stem": "What kind of movies does the writer prefer when tired?",
+          "options": [
+            "Movies that can cheer him up.",
+            "Scary movies.",
+            "Slow movies.",
+            "Sad movies."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:movies that can cheer me up"
+        },
+        {
+          "qid": "g9u9.r.02.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.02",
+          "stem": "Why does the writer like comedies?",
+          "options": [
+            "They are sad.",
+            "They are scary.",
+            "The characters try their best.",
+            "They are slow."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:try their best to solve their problems"
+        },
+        {
+          "qid": "g9u9.r.02.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.02",
+          "stem": "How does Titanic make the writer feel?",
+          "options": [
+            "Calmer.",
+            "Happier.",
+            "Braver.",
+            "Even sadder."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:make me feel even sadder"
+        },
+        {
+          "qid": "g9u9.r.02.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.02",
+          "stem": "When does the writer like scary movies?",
+          "options": [
+            "When he is happy.",
+            "When he is bored.",
+            "When he is sad.",
+            "When he is tired."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:when I am bored"
+        },
+        {
+          "qid": "g9u9.r.02.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.02",
+          "stem": "What do scary movies give the writer?",
+          "options": [
+            "A happy ending.",
+            "A quiet night.",
+            "Something to think about.",
+            "A good sleep."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:something to think about"
+        }
+      ]
+    },
+    {
+      "code": "g9u9.r.03",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "记叙文",
+      "title": "Sad but Beautiful",
+      "body": "Abing was a folk musician who was born in the city of Wuxi in 1893. His mother died when he was very young. Abing's father taught him to play many musical instruments. Sadly, Abing later became ill and could not see. Life grew worse for Abing. He was very poor. Not only that, but he developed a serious illness. He had no home. But Abing did not give up. He kept playing music in the streets. In his lifetime, Abing wrote over 600 pieces of music. His most famous piece is Erquan Yingyue. It is a piece that reflects his hard life, but it is also full of hope. Today, Abing's music is loved by people all over the world.",
+      "word_count": 120,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "musician",
+          "cn": "音乐家"
+        },
+        {
+          "word": "instruments",
+          "cn": "乐器"
+        },
+        {
+          "word": "lifetime",
+          "cn": "一生"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.03.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.03",
+          "stem": "When was Abing born?",
+          "options": [
+            "In 1893.",
+            "In 1938.",
+            "In 1983.",
+            "In 1839."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:born...in 1893"
+        },
+        {
+          "qid": "g9u9.r.03.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.03",
+          "stem": "Who taught Abing to play instruments?",
+          "options": [
+            "His father.",
+            "His friend.",
+            "His teacher.",
+            "His mother."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:father taught him"
+        },
+        {
+          "qid": "g9u9.r.03.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.03",
+          "stem": "What happened to Abing later?",
+          "options": [
+            "He became ill and could not see.",
+            "He moved away.",
+            "He stopped music.",
+            "He became rich."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:became ill and could not see"
+        },
+        {
+          "qid": "g9u9.r.03.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.03",
+          "stem": "How many pieces of music did Abing write?",
+          "options": [
+            "Over 6000.",
+            "Over 600.",
+            "Over 6.",
+            "Over 60."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:over 600 pieces"
+        },
+        {
+          "qid": "g9u9.r.03.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.03",
+          "stem": "What does Erquan Yingyue reflect?",
+          "options": [
+            "His rich life.",
+            "His travels.",
+            "His happy childhood.",
+            "His hard life."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:reflects his hard life"
+        }
+      ]
+    },
+    {
+      "code": "g9u9.r.04",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "议论文",
+      "title": "Why We Love Music",
+      "body": "Why do people all over the world love music? One reason is that music can express our feelings. When we are happy, we sing happy songs. When we feel down, sad music helps us. Music can also bring people together. At a concert, thousands of people who don't know each other share the same joy. Music has no language. A person who speaks Chinese and a person who speaks English can enjoy the same song. Music can even help us remember things. A song that we heard long ago can bring back old memories. Music is truly a gift that everyone can enjoy.",
+      "word_count": 103,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "express",
+          "cn": "表达"
+        },
+        {
+          "word": "feelings",
+          "cn": "情感"
+        },
+        {
+          "word": "memories",
+          "cn": "回忆"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.04.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.04",
+          "stem": "What is one reason people love music?",
+          "options": [
+            "It can express our feelings.",
+            "It is free.",
+            "It is fast.",
+            "It is loud."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:music can express our feelings"
+        },
+        {
+          "qid": "g9u9.r.04.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.04",
+          "stem": "What do we do when we are happy?",
+          "options": [
+            "Stay quiet.",
+            "Sing sad songs.",
+            "Sing happy songs.",
+            "Stop singing."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:When we are happy, we sing happy songs"
+        },
+        {
+          "qid": "g9u9.r.04.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.04",
+          "stem": "What can music do at a concert?",
+          "options": [
+            "Bring people together.",
+            "Send people home.",
+            "Stop the noise.",
+            "Make people sad."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:bring people together"
+        },
+        {
+          "qid": "g9u9.r.04.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.04",
+          "stem": "Can people who speak different languages enjoy the same song?",
+          "options": [
+            "Only with words.",
+            "No.",
+            "Yes.",
+            "Only sometimes."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Music has no language"
+        },
+        {
+          "qid": "g9u9.r.04.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.04",
+          "stem": "What can a song from long ago bring back?",
+          "options": [
+            "New friends.",
+            "Old memories.",
+            "Money.",
+            "Energy."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:bring back old memories"
+        }
+      ]
+    },
+    {
+      "code": "g9u9.r.05",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "说明文",
+      "title": "Different Kinds of Movies",
+      "body": "There are many kinds of movies, and people enjoy different ones. Comedies are movies that make us laugh. They are great when we want to relax. Action movies are movies that are full of exciting scenes. They often have superheroes who save the world. Documentaries are movies that teach us about real life, like nature or history. Some people find them a little slow, but others love to learn from them. Dramas are movies that show strong feelings. They may make us cry. Scary movies are movies that frighten us. Some people love them, while others can't watch them at all. Which kind of movie do you prefer?",
+      "word_count": 108,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "comedies",
+          "cn": "喜剧片"
+        },
+        {
+          "word": "superheroes",
+          "cn": "超级英雄"
+        },
+        {
+          "word": "frighten",
+          "cn": "使害怕"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.05.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.05",
+          "stem": "What are comedies?",
+          "options": [
+            "Movies that scare us.",
+            "Movies that make us laugh.",
+            "Movies that teach us.",
+            "Movies that make us cry."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:comedies...make us laugh"
+        },
+        {
+          "qid": "g9u9.r.05.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.05",
+          "stem": "What do action movies often have?",
+          "options": [
+            "Slow scenes.",
+            "Superheroes who save the world.",
+            "Real history.",
+            "Sad endings."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:superheroes who save the world"
+        },
+        {
+          "qid": "g9u9.r.05.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.05",
+          "stem": "What do documentaries teach us about?",
+          "options": [
+            "Real life, like nature or history.",
+            "Made-up heroes.",
+            "Music.",
+            "Funny stories."
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "原文:teach us about real life"
+        },
+        {
+          "qid": "g9u9.r.05.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.05",
+          "stem": "What may dramas make us do?",
+          "options": [
+            "Dance.",
+            "Laugh.",
+            "Sleep.",
+            "Cry."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:may make us cry"
+        },
+        {
+          "qid": "g9u9.r.05.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.05",
+          "stem": "What do scary movies do?",
+          "options": [
+            "Relax us.",
+            "Make us laugh.",
+            "Frighten us.",
+            "Teach us."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:scary movies...frighten us"
+        }
+      ]
+    },
+    {
+      "code": "g9u9.r.06",
+      "volume": "9",
+      "unit": "U9",
+      "genre": "应用文",
+      "title": "School Music Club Notice",
+      "body": "JOIN THE SCHOOL MUSIC CLUB! Do you love music? Come and join us! WHO CAN JOIN: Any student who enjoys music is welcome. You don't need to be a master. WHAT WE DO: We listen to music that comes from around the world. We also learn to play instruments that are easy for beginners, like the guitar. SPECIAL EVENT: This month, we will watch a documentary that tells the story of Abing, a famous Chinese musician. WHEN: Every Friday, 4:00 p.m. to 5:30 p.m. WHERE: Music Room 203. Come and meet friends who share your love of music. Music is a gift that everyone can enjoy!",
+      "word_count": 106,
+      "difficulty": 3,
+      "vocab_notes": [
+        {
+          "word": "master",
+          "cn": "大师;能手"
+        },
+        {
+          "word": "documentary",
+          "cn": "纪录片"
+        },
+        {
+          "word": "instrument",
+          "cn": "乐器;器械"
+        }
+      ],
+      "questions": [
+        {
+          "qid": "g9u9.r.06.q1",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.06",
+          "stem": "Who can join the music club?",
+          "options": [
+            "Only singers.",
+            "Only teachers.",
+            "Any student who enjoys music.",
+            "Only masters."
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "原文:Any student who enjoys music"
+        },
+        {
+          "qid": "g9u9.r.06.q2",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.06",
+          "stem": "What instruments do they learn?",
+          "options": [
+            "Hard instruments.",
+            "Only the piano.",
+            "No instruments.",
+            "Instruments easy for beginners, like the guitar."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:easy for beginners, like the guitar"
+        },
+        {
+          "qid": "g9u9.r.06.q3",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.06",
+          "stem": "What is the special event this month?",
+          "options": [
+            "A test.",
+            "A concert.",
+            "A dance.",
+            "A documentary about Abing."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:documentary that tells the story of Abing"
+        },
+        {
+          "qid": "g9u9.r.06.q4",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.06",
+          "stem": "When does the club meet?",
+          "options": [
+            "Every Monday.",
+            "On weekends.",
+            "Every day.",
+            "Every Friday."
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "原文:Every Friday"
+        },
+        {
+          "qid": "g9u9.r.06.q5",
+          "volume": "9",
+          "unit": "U9",
+          "code": "g9u9.r.06",
+          "stem": "Where does the club meet?",
+          "options": [
+            "The gym.",
+            "Music Room 203.",
+            "Room 105.",
+            "The library."
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "原文:Music Room 203"
+        }
+      ]
+    }
+  ]
+}

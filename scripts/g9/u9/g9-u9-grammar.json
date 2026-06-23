@@ -1,0 +1,1166 @@
+{
+  "volume": "9",
+  "unit": "U9",
+  "points": [
+    {
+      "code": "g9u9.01",
+      "point": "定语从句:that/which 指物",
+      "category": "clause",
+      "overview": "定语从句:先行词是物,用that或which引导。"
+    },
+    {
+      "code": "g9u9.02",
+      "point": "定语从句:who 指人",
+      "category": "clause",
+      "overview": "定语从句:先行词是人,用who引导。"
+    },
+    {
+      "code": "g9u9.03",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "category": "clause",
+      "overview": "定语从句:根据先行词选关系词——人用who,物用that/which。"
+    }
+  ],
+  "questions": [
+    {
+      "qid": "g9u9.01.q1",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I like music ____ I can dance to.",
+      "options": [
+        "whose",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[指物] 先行词music是物→that(who指人错)"
+    },
+    {
+      "qid": "g9u9.01.q2",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "This is the book ____ changed my life.",
+      "options": [
+        "that",
+        "where",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[指物] book是物→that"
+    },
+    {
+      "qid": "g9u9.01.q3",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "He prefers movies ____ make him laugh.",
+      "options": [
+        "whose",
+        "who",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[指物] movies是物→that"
+    },
+    {
+      "qid": "g9u9.01.q4",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I love songs ____ have great lyrics.",
+      "options": [
+        "who",
+        "where",
+        "whom",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[指物] songs是物→that"
+    },
+    {
+      "qid": "g9u9.01.q5",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "which指物",
+      "stem": "The film ____ we watched was moving.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "which",
+      "explanation": "[指物] film是物→which"
+    },
+    {
+      "qid": "g9u9.01.q6",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "She likes food ____ tastes spicy.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[指物] food是物→that"
+    },
+    {
+      "qid": "g9u9.01.q7",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "This is the phone ____ I bought last week.",
+      "options": [
+        "who",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[指物] phone是物→that"
+    },
+    {
+      "qid": "g9u9.01.q8",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "which指物",
+      "stem": "The music ____ he plays is electronic.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "answer_index": 0,
+      "answer_text": "which",
+      "explanation": "[指物] music是物→which"
+    },
+    {
+      "qid": "g9u9.01.q9",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I want a bag ____ has many pockets.",
+      "options": [
+        "that",
+        "where",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[指物] bag是物→that"
+    },
+    {
+      "qid": "g9u9.01.q10",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "The movie ____ won the prize is a documentary.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whom"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[指物] movie是物→that"
+    },
+    {
+      "qid": "g9u9.01.q11",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "He told a story ____ made everyone cry.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[指物] story是物→that"
+    },
+    {
+      "qid": "g9u9.01.q12",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "which指物",
+      "stem": "The CD ____ I lost was a gift.",
+      "options": [
+        "whom",
+        "where",
+        "who",
+        "which"
+      ],
+      "answer_index": 3,
+      "answer_text": "which",
+      "explanation": "[指物] CD是物→which"
+    },
+    {
+      "qid": "g9u9.01.q13",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I prefer clothes ____ are comfortable.",
+      "options": [
+        "where",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[指物] clothes是物→that"
+    },
+    {
+      "qid": "g9u9.01.q14",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "This is the song ____ I want to sing.",
+      "options": [
+        "whom",
+        "where",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[指物] song是物→that"
+    },
+    {
+      "qid": "g9u9.01.q15",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "which指物",
+      "stem": "The book ____ is on the desk is mine.",
+      "options": [
+        "whom",
+        "where",
+        "which",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "which",
+      "explanation": "[指物] book是物→which"
+    },
+    {
+      "qid": "g9u9.01.q16",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "She likes shows ____ have happy endings.",
+      "options": [
+        "who",
+        "where",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[指物] shows是物→that"
+    },
+    {
+      "qid": "g9u9.01.q17",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I need a pen ____ writes smoothly.",
+      "options": [
+        "where",
+        "whom",
+        "who",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[指物] pen是物→that"
+    },
+    {
+      "qid": "g9u9.01.q18",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "The food ____ my mom cooks is delicious.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[指物] food是物→that"
+    },
+    {
+      "qid": "g9u9.01.q19",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "which指物",
+      "stem": "The picture ____ hangs on the wall is old.",
+      "options": [
+        "which",
+        "whom",
+        "who",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "which",
+      "explanation": "[指物] picture是物→which"
+    },
+    {
+      "qid": "g9u9.01.q20",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:that/which 指物",
+      "code": "g9u9.01",
+      "category": "clause",
+      "tag": "that指物",
+      "stem": "I like films ____ give me something to think about.",
+      "options": [
+        "that",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[指物] films是物→that"
+    },
+    {
+      "qid": "g9u9.02.q1",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "She likes musicians ____ play different kinds of music.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[指人] musicians是人→who(which指物错)"
+    },
+    {
+      "qid": "g9u9.02.q2",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I know a girl ____ can speak three languages.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "who",
+      "explanation": "[指人] girl是人→who"
+    },
+    {
+      "qid": "g9u9.02.q3",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The man ____ lives next door is a teacher.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[指人] man是人→who"
+    },
+    {
+      "qid": "g9u9.02.q4",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "He is a singer ____ writes his own songs.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[指人] singer是人→who"
+    },
+    {
+      "qid": "g9u9.02.q5",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I have a friend ____ loves electronic music.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[指人] friend是人→who"
+    },
+    {
+      "qid": "g9u9.02.q6",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The doctor ____ helped me was very kind.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[指人] doctor是人→who"
+    },
+    {
+      "qid": "g9u9.02.q7",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "She is the teacher ____ teaches us English.",
+      "options": [
+        "whose",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[指人] teacher是人→who"
+    },
+    {
+      "qid": "g9u9.02.q8",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I met a boy ____ comes from Australia.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[指人] boy是人→who"
+    },
+    {
+      "qid": "g9u9.02.q9",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The people ____ work here are friendly.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[指人] people是人→who"
+    },
+    {
+      "qid": "g9u9.02.q10",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "He is a director ____ makes great films.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "which"
+      ],
+      "answer_index": 0,
+      "answer_text": "who",
+      "explanation": "[指人] director是人→who"
+    },
+    {
+      "qid": "g9u9.02.q11",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I like writers ____ tell interesting stories.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "who",
+      "explanation": "[指人] writers是人→who"
+    },
+    {
+      "qid": "g9u9.02.q12",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The woman ____ sang that song is famous.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[指人] woman是人→who"
+    },
+    {
+      "qid": "g9u9.02.q13",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "She is an artist ____ paints beautiful pictures.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[指人] artist是人→who"
+    },
+    {
+      "qid": "g9u9.02.q14",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I respect people ____ help others.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[指人] people是人→who"
+    },
+    {
+      "qid": "g9u9.02.q15",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The student ____ won the prize is my friend.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "who",
+      "explanation": "[指人] student是人→who"
+    },
+    {
+      "qid": "g9u9.02.q16",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "He is a player ____ never gives up.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[指人] player是人→who"
+    },
+    {
+      "qid": "g9u9.02.q17",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "I know a man ____ can play the violin well.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[指人] man是人→who"
+    },
+    {
+      "qid": "g9u9.02.q18",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The cook ____ made this cake is talented.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[指人] cook是人→who"
+    },
+    {
+      "qid": "g9u9.02.q19",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "She likes friends ____ are honest and kind.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "who",
+      "explanation": "[指人] friends是人→who"
+    },
+    {
+      "qid": "g9u9.02.q20",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:who 指人",
+      "code": "g9u9.02",
+      "category": "clause",
+      "tag": "who指人",
+      "stem": "The musician ____ performed last night was great.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[指人] musician是人→who"
+    },
+    {
+      "qid": "g9u9.03.q1",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I like a teacher ____ is patient and kind.",
+      "options": [
+        "which",
+        "what",
+        "who",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[人] teacher→who"
+    },
+    {
+      "qid": "g9u9.03.q2",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "This is a song ____ makes me happy.",
+      "options": [
+        "that",
+        "who",
+        "what",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[物] song→that"
+    },
+    {
+      "qid": "g9u9.03.q3",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "She is a person ____ I admire very much.",
+      "options": [
+        "what",
+        "who",
+        "where",
+        "which"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[人] person→who"
+    },
+    {
+      "qid": "g9u9.03.q4",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I want a job ____ pays well.",
+      "options": [
+        "that",
+        "who",
+        "what",
+        "where"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[物] job→that"
+    },
+    {
+      "qid": "g9u9.03.q5",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "He is the boy ____ broke the window.",
+      "options": [
+        "where",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[人] boy→who"
+    },
+    {
+      "qid": "g9u9.03.q6",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The car ____ he drives is very fast.",
+      "options": [
+        "where",
+        "that",
+        "who",
+        "what"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[物] car→that"
+    },
+    {
+      "qid": "g9u9.03.q7",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I have a dog ____ loves to run.",
+      "options": [
+        "that",
+        "whose",
+        "where",
+        "what"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[物/动物] dog→that"
+    },
+    {
+      "qid": "g9u9.03.q8",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The girl ____ helped me is my classmate.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "what"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[人] girl→who"
+    },
+    {
+      "qid": "g9u9.03.q9",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I read a book ____ was very moving.",
+      "options": [
+        "that",
+        "who",
+        "where",
+        "what"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[物] book→that"
+    },
+    {
+      "qid": "g9u9.03.q10",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "She is a writer ____ lives in our city.",
+      "options": [
+        "where",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[人] writer→who"
+    },
+    {
+      "qid": "g9u9.03.q11",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "This is the house ____ has a red door.",
+      "options": [
+        "that",
+        "where",
+        "who",
+        "what"
+      ],
+      "answer_index": 0,
+      "answer_text": "that",
+      "explanation": "[物] house→that"
+    },
+    {
+      "qid": "g9u9.03.q12",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The nurse ____ took care of me was gentle.",
+      "options": [
+        "what",
+        "who",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "answer_text": "who",
+      "explanation": "[人] nurse→who"
+    },
+    {
+      "qid": "g9u9.03.q13",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I like movies ____ have a happy ending.",
+      "options": [
+        "where",
+        "what",
+        "who",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[物] movies→that"
+    },
+    {
+      "qid": "g9u9.03.q14",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "He is a man ____ everyone respects.",
+      "options": [
+        "what",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[人] man→who"
+    },
+    {
+      "qid": "g9u9.03.q15",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The pen ____ you gave me writes well.",
+      "options": [
+        "what",
+        "where",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "answer_text": "that",
+      "explanation": "[物] pen→that"
+    },
+    {
+      "qid": "g9u9.03.q16",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I know a singer ____ has a beautiful voice.",
+      "options": [
+        "which",
+        "what",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[人] singer→who"
+    },
+    {
+      "qid": "g9u9.03.q17",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The food ____ she made was delicious.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "what"
+      ],
+      "answer_index": 1,
+      "answer_text": "that",
+      "explanation": "[物] food→that"
+    },
+    {
+      "qid": "g9u9.03.q18",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "She is the doctor ____ saved his life.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "what"
+      ],
+      "answer_index": 2,
+      "answer_text": "who",
+      "explanation": "[人] doctor→who"
+    },
+    {
+      "qid": "g9u9.03.q19",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "I bought a watch ____ shows the date.",
+      "options": [
+        "what",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "answer_text": "that",
+      "explanation": "[物] watch→that"
+    },
+    {
+      "qid": "g9u9.03.q20",
+      "volume": "9",
+      "unit": "U9",
+      "point": "定语从句:关系词选择(人用who、物用that/which)",
+      "code": "g9u9.03",
+      "category": "clause",
+      "tag": "综合",
+      "stem": "The children ____ play here are happy.",
+      "options": [
+        "which",
+        "where",
+        "what",
+        "who"
+      ],
+      "answer_index": 3,
+      "answer_text": "who",
+      "explanation": "[人] children→who"
+    }
+  ]
+}

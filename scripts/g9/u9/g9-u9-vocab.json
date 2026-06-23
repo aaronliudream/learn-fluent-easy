@@ -1,0 +1,334 @@
+{
+  "volume": "9",
+  "unit": "U9",
+  "words": [
+    {
+      "word": "prefer",
+      "ipa": "/prɪˈfɜː(r)/",
+      "pos": "v.",
+      "meaning_cn": "更喜欢",
+      "phrase_en": "prefer pop music",
+      "freq_rank": 1
+    },
+    {
+      "word": "lyrics",
+      "ipa": "/ˈlɪrɪks/",
+      "pos": "n.",
+      "meaning_cn": "(pl.)歌词",
+      "phrase_en": "sad lyrics",
+      "freq_rank": 2
+    },
+    {
+      "word": "Australian",
+      "ipa": "/ɒˈstreɪliən, ɔːˈstreɪliən/",
+      "pos": "adj.",
+      "meaning_cn": "澳大利亚(人)的;n. 澳大利亚人",
+      "phrase_en": "an Australian singer",
+      "freq_rank": 3
+    },
+    {
+      "word": "electronic",
+      "ipa": "/ɪˌlekˈtrɒnɪk, ɪˌlekˈtrɑːnɪk/",
+      "pos": "adj.",
+      "meaning_cn": "电子的;电子设备的",
+      "phrase_en": "electronic music",
+      "freq_rank": 4
+    },
+    {
+      "word": "suppose",
+      "ipa": "/səˈpəʊz/",
+      "pos": "v.",
+      "meaning_cn": "推断;料想",
+      "phrase_en": "I suppose so",
+      "freq_rank": 5
+    },
+    {
+      "word": "smooth",
+      "ipa": "/smuːð/",
+      "pos": "adj.",
+      "meaning_cn": "悦耳的;平滑的",
+      "phrase_en": "smooth music",
+      "freq_rank": 6
+    },
+    {
+      "word": "spare",
+      "ipa": "/speə(r), sper/",
+      "pos": "adj.",
+      "meaning_cn": "空闲的;不用的;v. 抽出;留出",
+      "phrase_en": "spare time",
+      "freq_rank": 7
+    },
+    {
+      "word": "director",
+      "ipa": "/dəˈrektə(r), daɪˈrektə(r)/",
+      "pos": "n.",
+      "meaning_cn": "导演;部门负责人",
+      "phrase_en": "a film director",
+      "freq_rank": 8
+    },
+    {
+      "word": "case",
+      "ipa": "/keɪs/",
+      "pos": "n.",
+      "meaning_cn": "情况;实情",
+      "phrase_en": "in any case",
+      "freq_rank": 9
+    },
+    {
+      "word": "in that case",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "既然那样;假使那样的话",
+      "phrase_en": "in that case",
+      "freq_rank": 10
+    },
+    {
+      "word": "war",
+      "ipa": "/wɔː(r)/",
+      "pos": "n.",
+      "meaning_cn": "战争;战争状态",
+      "phrase_en": "a long war",
+      "freq_rank": 11
+    },
+    {
+      "word": "stick",
+      "ipa": "/stɪk/",
+      "pos": "v.",
+      "meaning_cn": "(stuck, stuck)粘贴;将……刺入",
+      "phrase_en": "stick a stamp",
+      "freq_rank": 12
+    },
+    {
+      "word": "stick to",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "坚持;固守",
+      "phrase_en": "stick to a plan",
+      "freq_rank": 13
+    },
+    {
+      "word": "down",
+      "ipa": "/daʊn/",
+      "pos": "adj.",
+      "meaning_cn": "悲哀;沮丧",
+      "phrase_en": "feel down",
+      "freq_rank": 14
+    },
+    {
+      "word": "dialog",
+      "ipa": "/ˈdaɪəlɒɡ, ˈdaɪəlɑːɡ/",
+      "pos": "n.",
+      "meaning_cn": "(=dialogue)对话;对白",
+      "phrase_en": "a short dialog",
+      "freq_rank": 15
+    },
+    {
+      "word": "ending",
+      "ipa": "/ˈendɪŋ/",
+      "pos": "n.",
+      "meaning_cn": "(故事、电影等的)结尾;结局",
+      "phrase_en": "a happy ending",
+      "freq_rank": 16
+    },
+    {
+      "word": "documentary",
+      "ipa": "/ˌdɒkjuˈmentri, ˌdɑːkjuˈmentri/",
+      "pos": "n.",
+      "meaning_cn": "纪录片",
+      "phrase_en": "watch a documentary",
+      "freq_rank": 17
+    },
+    {
+      "word": "drama",
+      "ipa": "/ˈdrɑːmə/",
+      "pos": "n.",
+      "meaning_cn": "戏;剧",
+      "phrase_en": "a TV drama",
+      "freq_rank": 18
+    },
+    {
+      "word": "plenty",
+      "ipa": "/ˈplenti/",
+      "pos": "pron.",
+      "meaning_cn": "大量;众多",
+      "phrase_en": "plenty to do",
+      "freq_rank": 19
+    },
+    {
+      "word": "plenty of",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "大量;充足",
+      "phrase_en": "plenty of time",
+      "freq_rank": 20
+    },
+    {
+      "word": "shut",
+      "ipa": "/ʃʌt/",
+      "pos": "v.",
+      "meaning_cn": "(shut, shut)关闭;关上",
+      "phrase_en": "shut the door",
+      "freq_rank": 21
+    },
+    {
+      "word": "shut off",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "关闭;停止运转",
+      "phrase_en": "shut off the music",
+      "freq_rank": 22
+    },
+    {
+      "word": "superhero",
+      "ipa": "/ˈsuːpə(r)hɪərəʊ/",
+      "pos": "n.",
+      "meaning_cn": "超级英雄",
+      "phrase_en": "a brave superhero",
+      "freq_rank": 23
+    },
+    {
+      "word": "once in a while",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "偶尔地;间或",
+      "phrase_en": "once in a while",
+      "freq_rank": 24
+    },
+    {
+      "word": "intelligent",
+      "ipa": "/ɪnˈtelɪdʒənt/",
+      "pos": "adj.",
+      "meaning_cn": "有才智的;聪明的",
+      "phrase_en": "an intelligent boy",
+      "freq_rank": 25
+    },
+    {
+      "word": "sense",
+      "ipa": "/sens/",
+      "pos": "v.",
+      "meaning_cn": "感觉到;意识到;n. 感觉;意识",
+      "phrase_en": "sense danger",
+      "freq_rank": 26
+    },
+    {
+      "word": "sadness",
+      "ipa": "/ˈsædnəs/",
+      "pos": "n.",
+      "meaning_cn": "悲伤;悲痛",
+      "phrase_en": "deep sadness",
+      "freq_rank": 27
+    },
+    {
+      "word": "pain",
+      "ipa": "/peɪn/",
+      "pos": "n.",
+      "meaning_cn": "痛苦;疼痛;苦恼",
+      "phrase_en": "feel pain",
+      "freq_rank": 28
+    },
+    {
+      "word": "reflect",
+      "ipa": "/rɪˈflekt/",
+      "pos": "v.",
+      "meaning_cn": "反映;映出",
+      "phrase_en": "reflect feelings",
+      "freq_rank": 29
+    },
+    {
+      "word": "moving",
+      "ipa": "/ˈmuːvɪŋ/",
+      "pos": "adj.",
+      "meaning_cn": "动人的;令人感动的",
+      "phrase_en": "a moving story",
+      "freq_rank": 30
+    },
+    {
+      "word": "perform",
+      "ipa": "/pə(r)ˈfɔː(r)m/",
+      "pos": "v.",
+      "meaning_cn": "表演;执行",
+      "phrase_en": "perform on stage",
+      "freq_rank": 31
+    },
+    {
+      "word": "lifetime",
+      "ipa": "/ˈlaɪftaɪm/",
+      "pos": "n.",
+      "meaning_cn": "一生;有生之年",
+      "phrase_en": "in his lifetime",
+      "freq_rank": 32
+    },
+    {
+      "word": "pity",
+      "ipa": "/ˈpɪti/",
+      "pos": "n.",
+      "meaning_cn": "遗憾;怜悯;v. 同情;怜悯",
+      "phrase_en": "what a pity",
+      "freq_rank": 33
+    },
+    {
+      "word": "total",
+      "ipa": "/ˈtəʊtl/",
+      "pos": "n.",
+      "meaning_cn": "总数;合计;adj. 总的;全体的",
+      "phrase_en": "the total number",
+      "freq_rank": 34
+    },
+    {
+      "word": "in total",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "总共;合计",
+      "phrase_en": "in total",
+      "freq_rank": 35
+    },
+    {
+      "word": "master",
+      "ipa": "/ˈmɑːstə, ˈmæstər/",
+      "pos": "n.",
+      "meaning_cn": "大师;能手;主人;v. 掌握",
+      "phrase_en": "a master of music",
+      "freq_rank": 36
+    },
+    {
+      "word": "praise",
+      "ipa": "/preɪz/",
+      "pos": "v. & n.",
+      "meaning_cn": "表扬;赞扬",
+      "phrase_en": "win praise",
+      "freq_rank": 37
+    },
+    {
+      "word": "recall",
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "v.",
+      "meaning_cn": "回忆起;回想起",
+      "phrase_en": "recall the past",
+      "freq_rank": 38
+    },
+    {
+      "word": "wound",
+      "ipa": "/wuːnd/",
+      "pos": "n.",
+      "meaning_cn": "伤;伤口;创伤;v. 使受伤;伤害",
+      "phrase_en": "a deep wound",
+      "freq_rank": 39
+    },
+    {
+      "word": "painful",
+      "ipa": "/ˈpeɪnfl/",
+      "pos": "adj.",
+      "meaning_cn": "令人痛苦的;令人疼痛的",
+      "phrase_en": "a painful memory",
+      "freq_rank": 40
+    },
+    {
+      "word": "World War II",
+      "ipa": "",
+      "pos": "",
+      "meaning_cn": "第二次世界大战",
+      "phrase_en": "during World War II",
+      "freq_rank": 41
+    }
+  ]
+}

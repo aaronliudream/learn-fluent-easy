@@ -1,0 +1,864 @@
+{
+  "volume": "9",
+  "unit": "U9",
+  "passages": [
+    {
+      "code": "g9u9.c.01",
+      "volume": "9",
+      "unit": "U9",
+      "title": "The Music I Love",
+      "scene": "我爱的音乐",
+      "body": "I love music more than anything. I prefer music (1)____ I can sing along with. When I feel (2)____, a happy song can cheer me up. My favorite (3)____ are pop and rock. I like songs that have great (4)____, because the words tell a story. My friend Lisa likes (5)____ music that helps her relax. My brother prefers (6)____ music that is loud and fast. We all like (7)____ kinds of music, but that's okay. Music is a (8)____ that everyone can enjoy. No matter what kind you like, the best music is the music that (9)____ your heart. That's why I will always (10)____ music.",
+      "word_count": 107,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "that",
+            "where",
+            "whose",
+            "who"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "[定从] music是物→that"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "down",
+            "glad",
+            "happy",
+            "up"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "沮丧 feel down"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "kinds",
+            "game",
+            "color",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "种类 kinds"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "game",
+            "price",
+            "lyrics",
+            "color"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "歌词 lyrics"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "loud",
+            "fast",
+            "sour",
+            "smooth"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "悦耳 smooth"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "soft",
+            "electronic",
+            "slow",
+            "quiet"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "电子 electronic"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "quiet",
+            "different",
+            "empty",
+            "same"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "不同 different"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "game",
+            "color",
+            "gift",
+            "price"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "礼物 gift"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "breaks",
+            "touches",
+            "loses",
+            "throws"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "触动 touches"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "leave",
+            "lose",
+            "hate",
+            "love"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "爱 love"
+        }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u9.c.02",
+      "volume": "9",
+      "unit": "U9",
+      "title": "My Favorite Movies",
+      "scene": "我最爱的电影",
+      "body": "I love watching movies in my (1)____ time. I prefer movies (2)____ make me laugh. Comedies are my favorite (3)____. When I am tired, a funny movie can (4)____ me up. I don't like movies that are too (5)____, because they make me feel down. My sister likes (6)____ that teach her about real life, like nature films. My father prefers (7)____ movies with superheroes who save the world. Once in a (8)____, I watch a scary movie, but only with friends. After a movie, I always feel more (9)____. Watching movies is a great way to (10)____ after a busy week.",
+      "word_count": 102,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "work",
+            "spare",
+            "study",
+            "busy"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "空闲 spare time"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "where",
+            "who",
+            "whose",
+            "that"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "[定从] movies是物→that"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "kind",
+            "price",
+            "color",
+            "game"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "种类 kind"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "lose",
+            "cheer",
+            "break",
+            "throw"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "使振奋 cheer up"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "funny",
+            "glad",
+            "happy",
+            "sad"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "悲伤 sad"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "prices",
+            "documentaries",
+            "games",
+            "colors"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "纪录片 documentaries"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "action",
+            "soft",
+            "quiet",
+            "slow"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "动作 action movies"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "color",
+            "time",
+            "while",
+            "price"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "偶尔 once in a while"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "relaxed",
+            "sad",
+            "tired",
+            "busy"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "放松 relaxed"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "study",
+            "cry",
+            "relax",
+            "work"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放松 relax"
+        }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u9.c.03",
+      "volume": "9",
+      "unit": "U9",
+      "title": "Abing's Story",
+      "scene": "阿炳的故事",
+      "body": "Abing was a folk musician (1)____ was born in Wuxi. When he was young, his mother (2)____. His father taught him to play many musical (3)____. Sadly, Abing later became (4)____ and could not see. His life grew very (5)____. He was poor and had no home. But Abing never gave (6)____. He kept playing music in the (7)____. In his lifetime, he wrote over 600 (8)____ of music. His most famous piece (9)____ his hard life but is full of hope. Today, his music is (10)____ by people all over the world. Abing's story is sad but beautiful.",
+      "word_count": 99,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "who",
+            "where",
+            "which",
+            "whose"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "[定从] musician是人→who"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "lived",
+            "died",
+            "ran",
+            "sang"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "去世 died"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "prices",
+            "instruments",
+            "games",
+            "colors"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "乐器 instruments"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "strong",
+            "happy",
+            "rich",
+            "ill"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "生病 ill"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "rich",
+            "hard",
+            "easy",
+            "good"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "艰难 hard"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "off",
+            "on",
+            "up",
+            "in"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放弃 give up"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "streets",
+            "color",
+            "game",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "街头 streets"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "prices",
+            "games",
+            "colors",
+            "pieces"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "首 pieces of music"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "reflects",
+            "loses",
+            "breaks",
+            "throws"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "反映 reflects"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "hated",
+            "lost",
+            "loved",
+            "sold"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "被喜爱 loved"
+        }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u9.c.04",
+      "volume": "9",
+      "unit": "U9",
+      "title": "A Concert Night",
+      "scene": "音乐会之夜",
+      "body": "Last weekend, I went to a concert with my (1)____. The singer was an artist (2)____ writes her own songs. The music hall was full of people (3)____ love music. When the music started, everyone felt (4)____. The singer's voice was (5)____ and beautiful. She sang songs that had great (6)____. Some songs were happy, and some were (7)____. One song was so (8)____ that many people cried. Music can (9)____ our feelings in a special way. After the concert, I felt (10)____ and happy. It was a night I will never forget. I hope to go to another concert soon.",
+      "word_count": 101,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "color",
+            "friends",
+            "game",
+            "price"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "朋友 friends"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "whose",
+            "who",
+            "where",
+            "which"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "[定从] artist是人→who"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "which",
+            "where",
+            "whose",
+            "who"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "[定从] people是人→who"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "tired",
+            "sad",
+            "bored",
+            "excited"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "兴奋 excited"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "sour",
+            "fast",
+            "smooth",
+            "loud"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "悦耳 smooth"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "lyrics",
+            "prices",
+            "games",
+            "colors"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "歌词 lyrics"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "sad",
+            "funny",
+            "fast",
+            "quiet"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "悲伤 sad"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "boring",
+            "moving",
+            "cheap",
+            "easy"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "动人 moving"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "express",
+            "lose",
+            "throw",
+            "break"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "表达 express"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "busy",
+            "tired",
+            "relaxed",
+            "angry"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放松 relaxed"
+        }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u9.c.05",
+      "volume": "9",
+      "unit": "U9",
+      "title": "Kinds of Movies",
+      "scene": "电影种类",
+      "body": "There are many kinds of movies (1)____ people enjoy. Comedies are movies that make us (2)____. They are great when we want to (3)____. Action movies are full of exciting (4)____. They often have superheroes (5)____ save the world. Documentaries are movies that (6)____ us about real life. Some people find them (7)____, but others love them. Dramas are movies that show strong (8)____. They may make us cry. Scary movies (9)____ us, and not everyone likes them. There is a kind of movie for everyone. Which kind do you (10)____?",
+      "word_count": 91,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "who",
+            "where",
+            "whose",
+            "that"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "[定从] movies是物→that"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "laugh",
+            "sleep",
+            "run",
+            "cry"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "笑 laugh"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "fight",
+            "study",
+            "relax",
+            "work"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "放松 relax"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "colors",
+            "scenes",
+            "prices",
+            "games"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "场面 scenes"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "who",
+            "which",
+            "where",
+            "whose"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "[定从] superheroes是人→who"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "teach",
+            "lose",
+            "throw",
+            "break"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "教 teach"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "loud",
+            "slow",
+            "fast",
+            "sweet"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "慢 slow"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "colors",
+            "games",
+            "prices",
+            "feelings"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "情感 feelings"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "help",
+            "frighten",
+            "teach",
+            "save"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "使害怕 frighten"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "lose",
+            "break",
+            "prefer",
+            "throw"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "更喜欢 prefer"
+        }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u9.c.06",
+      "volume": "9",
+      "unit": "U9",
+      "title": "Music Brings Us Together",
+      "scene": "音乐让我们相聚",
+      "body": "Music is something (1)____ everyone in the world can enjoy. It has no (2)____. A person who speaks Chinese and a person (3)____ speaks English can love the same song. Music can (4)____ our feelings. When we are happy, we sing happy (5)____. When we feel down, sad music (6)____ us. Music can also bring people (7)____. At a concert, thousands of strangers share the same (8)____. A song that we heard long ago can bring back old (9)____. Music is truly a (10)____ that everyone can enjoy. That is why music is loved all over the world.",
+      "word_count": 98,
+      "difficulty": 3,
+      "questions": [
+        {
+          "q": "1",
+          "blank": 1,
+          "options": [
+            "who",
+            "that",
+            "whose",
+            "where"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "[定从] something是物→that"
+        },
+        {
+          "q": "2",
+          "blank": 2,
+          "options": [
+            "color",
+            "price",
+            "game",
+            "language"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "语言 language"
+        },
+        {
+          "q": "3",
+          "blank": 3,
+          "options": [
+            "where",
+            "which",
+            "who",
+            "whose"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "[定从] person是人→who"
+        },
+        {
+          "q": "4",
+          "blank": 4,
+          "options": [
+            "break",
+            "express",
+            "lose",
+            "throw"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "表达 express"
+        },
+        {
+          "q": "5",
+          "blank": 5,
+          "options": [
+            "colors",
+            "prices",
+            "songs",
+            "games"
+          ],
+          "answer": "C",
+          "answer_index": 2,
+          "explanation": "歌 songs"
+        },
+        {
+          "q": "6",
+          "blank": 6,
+          "options": [
+            "throws",
+            "helps",
+            "breaks",
+            "loses"
+          ],
+          "answer": "B",
+          "answer_index": 1,
+          "explanation": "帮助 helps"
+        },
+        {
+          "q": "7",
+          "blank": 7,
+          "options": [
+            "together",
+            "apart",
+            "away",
+            "alone"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "一起 together"
+        },
+        {
+          "q": "8",
+          "blank": 8,
+          "options": [
+            "joy",
+            "game",
+            "price",
+            "color"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "喜悦 joy"
+        },
+        {
+          "q": "9",
+          "blank": 9,
+          "options": [
+            "colors",
+            "prices",
+            "games",
+            "memories"
+          ],
+          "answer": "D",
+          "answer_index": 3,
+          "explanation": "回忆 memories"
+        },
+        {
+          "q": "10",
+          "blank": 10,
+          "options": [
+            "gift",
+            "game",
+            "color",
+            "price"
+          ],
+          "answer": "A",
+          "answer_index": 0,
+          "explanation": "礼物 gift"
+        }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

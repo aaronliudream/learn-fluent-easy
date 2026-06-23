@@ -1,0 +1,138 @@
+{
+  "volume": "9",
+  "unit": "U11",
+  "passages": [
+    {
+      "code": "g9u11.r.01",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "记叙文",
+      "title": "The Shirt of a Happy Man",
+      "body": "Long ago, there lived a king who had everything. He had power, wealth, and a grand palace. But the king was not happy. Day after day, he felt grey and sad. He called in many doctors, but none of them could help. One day, a wise doctor said, \"To make the king happy, find the shirt of a truly happy man. The king must wear it.\" So the king's men looked everywhere. At last, they found a happy man. He was singing in a field. \"Are you really happy?\" they asked. \"Yes, I am the happiest man alive,\" he said. But when they asked for his shirt, they were surprised. The happy man had no shirt at all!",
+      "word_count": 118,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "king", "cn": "国王" },
+        { "word": "power", "cn": "权力;力量" },
+        { "word": "wealth", "cn": "财富" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.01.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.01", "stem": "What did the king have?", "options": ["Many friends.", "No money.", "A small house.", "Power, wealth, and a palace."], "answer": "D", "answer_index": 3, "explanation": "原文:power, wealth, and a grand palace" },
+        { "qid": "g9u11.r.01.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.01", "stem": "Was the king happy?", "options": ["Yes.", "No.", "Always.", "Sometimes."], "answer": "B", "answer_index": 1, "explanation": "原文:the king was not happy" },
+        { "qid": "g9u11.r.01.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.01", "stem": "What did the wise doctor say would help?", "options": ["A new palace.", "More money.", "The shirt of a truly happy man.", "More power."], "answer": "C", "answer_index": 2, "explanation": "原文:find the shirt of a truly happy man" },
+        { "qid": "g9u11.r.01.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.01", "stem": "Where did they find the happy man?", "options": ["In a palace.", "Singing in a field.", "In a city.", "In a shop."], "answer": "B", "answer_index": 1, "explanation": "原文:singing in a field" },
+        { "qid": "g9u11.r.01.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.01", "stem": "What surprised the king's men?", "options": ["He was rich.", "He was sad.", "The happy man had no shirt.", "He was a king."], "answer": "C", "answer_index": 2, "explanation": "原文:had no shirt at all" }
+      ]
+    },
+    {
+      "code": "g9u11.r.02",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "记叙文",
+      "title": "The Winning Team",
+      "body": "Peter was new on the soccer team. He felt like there was a heavy weight on his shoulders because he had let his team down. In the last game, he had missed an important goal, and his team had lost. He was afraid the coach would kick him off the team. After the game, the coach called Peter in. \"It's not your fault,\" the coach said. \"We win and lose as a team.\" His teammates nodded in agreement. \"You have the courage to keep trying,\" said his friend. \"That's what makes you a good player.\" Peter felt a great sense of relief. He realized that real friends pull together. They do not let each other down.",
+      "word_count": 116,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "weight", "cn": "重量;分量" },
+        { "word": "coach", "cn": "教练" },
+        { "word": "relief", "cn": "轻松;解脱" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.02.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.02", "stem": "Why did Peter feel a heavy weight?", "options": ["He was new.", "He was tired.", "He had let his team down.", "He was sick."], "answer": "C", "answer_index": 2, "explanation": "原文:he had let his team down" },
+        { "qid": "g9u11.r.02.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.02", "stem": "What did Peter do in the last game?", "options": ["He scored a goal.", "He missed an important goal.", "He was late.", "He got hurt."], "answer": "B", "answer_index": 1, "explanation": "原文:missed an important goal" },
+        { "qid": "g9u11.r.02.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.02", "stem": "What was Peter afraid of?", "options": ["Losing money.", "Moving away.", "Being kicked off the team.", "Getting hurt."], "answer": "C", "answer_index": 2, "explanation": "原文:coach would kick him off the team" },
+        { "qid": "g9u11.r.02.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.02", "stem": "What did the coach say?", "options": ["It's not your fault.", "You are late.", "You are out.", "You are slow."], "answer": "A", "answer_index": 0, "explanation": "原文:It's not your fault" },
+        { "qid": "g9u11.r.02.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.02", "stem": "What did Peter realize?", "options": ["Soccer is hard.", "Real friends pull together.", "He is the best.", "He should quit."], "answer": "B", "answer_index": 1, "explanation": "原文:real friends pull together" }
+      ]
+    },
+    {
+      "code": "g9u11.r.03",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "议论文",
+      "title": "What Makes Us Happy?",
+      "body": "What makes people happy? Many people think that money and fame make us happy. But this is not always true. A rich banker may have wealth, but he can still feel sad and lonely. Studies show that good friendships make us happier than money. When we are with friends, we feel relaxed and warm. Helping others also makes us happy. The more we give, the more joy we feel. Doing things we love, like music or sports, makes us feel alive. So happiness does not come from things we own. It comes from the people we love and the things we enjoy. True happiness is found in the heart, not in the wallet.",
+      "word_count": 113,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "fame", "cn": "名声;声誉" },
+        { "word": "banker", "cn": "银行家" },
+        { "word": "friendship", "cn": "友谊" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.03.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.03", "stem": "What do many people think makes us happy?", "options": ["Friends only.", "Sports only.", "Money and fame.", "Music only."], "answer": "C", "answer_index": 2, "explanation": "原文:money and fame make us happy" },
+        { "qid": "g9u11.r.03.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.03", "stem": "Is this always true?", "options": ["No.", "Yes.", "Often.", "Sometimes."], "answer": "A", "answer_index": 0, "explanation": "原文:this is not always true" },
+        { "qid": "g9u11.r.03.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.03", "stem": "What makes us happier than money?", "options": ["Good friendships.", "More wealth.", "More work.", "More fame."], "answer": "A", "answer_index": 0, "explanation": "原文:good friendships make us happier" },
+        { "qid": "g9u11.r.03.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.03", "stem": "What happens the more we give?", "options": ["The poorer we are.", "The sadder we feel.", "The less we have.", "The more joy we feel."], "answer": "D", "answer_index": 3, "explanation": "原文:The more we give, the more joy we feel" },
+        { "qid": "g9u11.r.03.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.03", "stem": "Where is true happiness found?", "options": ["In the wallet.", "In money.", "In the heart.", "In fame."], "answer": "C", "answer_index": 2, "explanation": "原文:in the heart, not in the wallet" }
+      ]
+    },
+    {
+      "code": "g9u11.r.04",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "说明文",
+      "title": "How Music Affects Us",
+      "body": "Music has a strong effect on our feelings. Different kinds of music make us feel different things. Soft, quiet music can make us feel calm and relaxed. It can help us sleep or study better. Fast, loud music can make us feel excited and full of energy. It is great for sports or parties. Sad music can even make some people cry, but it can also help them feel better afterwards. Happy songs make us want to dance and smile. Music can also bring back memories. A song from our childhood can make us think of the past. This is why music is such an important part of our lives.",
+      "word_count": 110,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "effect", "cn": "影响;效果" },
+        { "word": "calm", "cn": "平静的" },
+        { "word": "energy", "cn": "精力;能量" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.04.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.04", "stem": "What does music have a strong effect on?", "options": ["Our age.", "Our height.", "Our money.", "Our feelings."], "answer": "D", "answer_index": 3, "explanation": "原文:strong effect on our feelings" },
+        { "qid": "g9u11.r.04.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.04", "stem": "What can soft, quiet music make us feel?", "options": ["Excited.", "Tired.", "Angry.", "Calm and relaxed."], "answer": "D", "answer_index": 3, "explanation": "原文:make us feel calm and relaxed" },
+        { "qid": "g9u11.r.04.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.04", "stem": "What is fast, loud music great for?", "options": ["Sports or parties.", "Sleeping.", "Resting.", "Studying."], "answer": "A", "answer_index": 0, "explanation": "原文:great for sports or parties" },
+        { "qid": "g9u11.r.04.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.04", "stem": "What can sad music help people do afterwards?", "options": ["Forget music.", "Stop crying never.", "Feel worse.", "Feel better."], "answer": "D", "answer_index": 3, "explanation": "原文:help them feel better afterwards" },
+        { "qid": "g9u11.r.04.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.04", "stem": "What can a childhood song make us think of?", "options": ["The past.", "Food.", "The future.", "Money."], "answer": "A", "answer_index": 0, "explanation": "原文:make us think of the past" }
+      ]
+    },
+    {
+      "code": "g9u11.r.05",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "记叙文",
+      "title": "A True Friend",
+      "body": "Holly and Amy had been friends for years. But lately, they had not been getting along. Amy felt that Holly was leaving her out. Holly always spent time with her new friends. One day, Amy decided to talk to Holly rather than stay angry. \"I feel hurt when you leave me out,\" Amy said. Holly was surprised. \"I'm sorry,\" she said. \"I didn't mean to make you feel that way. You are still my best friend.\" The two girls talked for a long time. In the end, their friendship was stronger than before. Amy learned that a true friend will talk about problems, not run away from them.",
+      "word_count": 108,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "lately", "cn": "最近" },
+        { "word": "friendship", "cn": "友谊" },
+        { "word": "leave", "cn": "离开;留下" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.05.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.05", "stem": "How long had Holly and Amy been friends?", "options": ["For days.", "For years.", "For a month.", "For a week."], "answer": "B", "answer_index": 1, "explanation": "原文:friends for years" },
+        { "qid": "g9u11.r.05.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.05", "stem": "What did Amy feel Holly was doing?", "options": ["Leaving her out.", "Calling her.", "Visiting her.", "Helping her."], "answer": "A", "answer_index": 0, "explanation": "原文:Holly was leaving her out" },
+        { "qid": "g9u11.r.05.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.05", "stem": "What did Amy decide to do?", "options": ["Stay angry.", "Talk to Holly.", "Run away.", "Find new friends."], "answer": "B", "answer_index": 1, "explanation": "原文:talk to Holly rather than stay angry" },
+        { "qid": "g9u11.r.05.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.05", "stem": "How did Holly feel when Amy told her?", "options": ["Surprised.", "Angry.", "Happy.", "Bored."], "answer": "A", "answer_index": 0, "explanation": "原文:Holly was surprised" },
+        { "qid": "g9u11.r.05.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.05", "stem": "What did Amy learn?", "options": ["Friends are hard.", "Run away.", "Stay angry.", "A true friend talks about problems."], "answer": "D", "answer_index": 3, "explanation": "原文:talk about problems, not run away" }
+      ]
+    },
+    {
+      "code": "g9u11.r.06",
+      "volume": "9",
+      "unit": "U11",
+      "genre": "应用文",
+      "title": "Friendship Week Notice",
+      "body": "FRIENDSHIP WEEK IS COMING! Friends make our lives better. This week, let's celebrate our friendships! MONDAY: Write a thank-you card to a friend. Tell them what makes them special. TUESDAY: Have lunch with someone new. It is a good way to make new friends. WEDNESDAY: Help a classmate with their work. Helping others makes us both happy. THURSDAY: Share a happy memory with a friend. Good memories pull us together. FRIDAY: Play a team game. Remember, we win and lose as a team. Let's make this a week full of kindness. After all, a life with good friends is a happy life!",
+      "word_count": 102,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "friendship", "cn": "友谊" },
+        { "word": "memory", "cn": "记忆;回忆" },
+        { "word": "kindness", "cn": "善良;友好" }
+      ],
+      "questions": [
+        { "qid": "g9u11.r.06.q1", "volume": "9", "unit": "U11", "code": "g9u11.r.06", "stem": "What does the notice celebrate?", "options": ["Friendships.", "Music.", "Food.", "Sports."], "answer": "A", "answer_index": 0, "explanation": "原文:celebrate our friendships" },
+        { "qid": "g9u11.r.06.q2", "volume": "9", "unit": "U11", "code": "g9u11.r.06", "stem": "What should you do on Monday?", "options": ["Play a game.", "Write a thank-you card to a friend.", "Have lunch.", "Help a classmate."], "answer": "B", "answer_index": 1, "explanation": "原文:Monday: Write a thank-you card" },
+        { "qid": "g9u11.r.06.q3", "volume": "9", "unit": "U11", "code": "g9u11.r.06", "stem": "What is a good way to make new friends?", "options": ["Play games.", "Write cards.", "Stay alone.", "Have lunch with someone new."], "answer": "D", "answer_index": 3, "explanation": "原文:have lunch with someone new" },
+        { "qid": "g9u11.r.06.q4", "volume": "9", "unit": "U11", "code": "g9u11.r.06", "stem": "What makes us both happy on Wednesday?", "options": ["Playing games.", "Writing cards.", "Helping others.", "Eating lunch."], "answer": "C", "answer_index": 2, "explanation": "原文:Helping others makes us both happy" },
+        { "qid": "g9u11.r.06.q5", "volume": "9", "unit": "U11", "code": "g9u11.r.06", "stem": "What do we do on Friday?", "options": ["Have lunch.", "Write a card.", "Play a team game.", "Share a memory."], "answer": "C", "answer_index": 2, "explanation": "原文:Friday: Play a team game" }
+      ]
+    }
+  ]
+}

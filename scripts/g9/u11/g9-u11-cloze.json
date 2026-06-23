@@ -1,0 +1,144 @@
+{
+  "volume": "9",
+  "unit": "U11",
+  "passages": [
+    {
+      "code": "g9u11.c.01",
+      "volume": "9",
+      "unit": "U11",
+      "title": "The Unhappy King",
+      "scene": "不快乐的国王",
+      "body": "Long ago, there lived a (1)____ who had everything. He had power, wealth, and a grand (2)____. But he was not (3)____. Day after day, he felt grey and (4)____. He called (5)____ many doctors, but none could help. One wise doctor said, \"To make the king (6)____, find the shirt of a truly happy man.\" So the king's men (7)____ everywhere. At last, they found a happy man singing in a (8)____. But when they asked for his shirt, they were (9)____. The happy man had no shirt at all! This story shows that wealth does not always (10)____ people happy.",
+      "word_count": 102,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["price", "game", "king", "color"], "answer": "C", "answer_index": 2, "explanation": "国王 king" },
+        { "q": "2", "blank": 2, "options": ["palace", "price", "color", "game"], "answer": "A", "answer_index": 0, "explanation": "宫殿 palace" },
+        { "q": "3", "blank": 3, "options": ["busy", "happy", "sad", "tired"], "answer": "B", "answer_index": 1, "explanation": "快乐 happy" },
+        { "q": "4", "blank": 4, "options": ["proud", "happy", "glad", "sad"], "answer": "D", "answer_index": 3, "explanation": "悲伤 sad" },
+        { "q": "5", "blank": 5, "options": ["up", "out", "in", "off"], "answer": "C", "answer_index": 2, "explanation": "call in 召来" },
+        { "q": "6", "blank": 6, "options": ["tired", "happy", "sad", "busy"], "answer": "B", "answer_index": 1, "explanation": "快乐 happy" },
+        { "q": "7", "blank": 7, "options": ["looked", "broke", "threw", "lost"], "answer": "A", "answer_index": 0, "explanation": "寻找 looked" },
+        { "q": "8", "blank": 8, "options": ["game", "field", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "田野 field" },
+        { "q": "9", "blank": 9, "options": ["tired", "calm", "happy", "surprised"], "answer": "D", "answer_index": 3, "explanation": "惊讶 surprised" },
+        { "q": "10", "blank": 10, "options": ["make", "lose", "throw", "break"], "answer": "A", "answer_index": 0, "explanation": "使…快乐 make happy" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u11.c.02",
+      "volume": "9",
+      "unit": "U11",
+      "title": "Peter and the Team",
+      "scene": "彼得与球队",
+      "body": "Peter was new on the soccer (1)____. He felt a heavy weight on his (2)____ because he had let his team (3)____. In the last game, he missed an important (4)____, and the team lost. He was afraid the coach would (5)____ him off the team. After the game, the coach called him (6)____. \"It's not your (7)____,\" the coach said. \"We win and lose as a (8)____.\" His teammates nodded in (9)____. Peter felt a great sense of (10)____. He learned that real friends pull together.",
+      "word_count": 87,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["color", "team", "game", "price"], "answer": "B", "answer_index": 1, "explanation": "球队 team" },
+        { "q": "2", "blank": 2, "options": ["games", "colors", "prices", "shoulders"], "answer": "D", "answer_index": 3, "explanation": "肩膀 shoulders" },
+        { "q": "3", "blank": 3, "options": ["off", "down", "up", "in"], "answer": "B", "answer_index": 1, "explanation": "let down 使失望" },
+        { "q": "4", "blank": 4, "options": ["goal", "color", "price", "game"], "answer": "A", "answer_index": 0, "explanation": "进球 goal" },
+        { "q": "5", "blank": 5, "options": ["kick", "break", "throw", "lose"], "answer": "A", "answer_index": 0, "explanation": "kick off 开除" },
+        { "q": "6", "blank": 6, "options": ["out", "up", "in", "off"], "answer": "C", "answer_index": 2, "explanation": "call in 叫来" },
+        { "q": "7", "blank": 7, "options": ["color", "price", "fault", "game"], "answer": "C", "answer_index": 2, "explanation": "过错 fault" },
+        { "q": "8", "blank": 8, "options": ["price", "team", "game", "color"], "answer": "B", "answer_index": 1, "explanation": "团队 team" },
+        { "q": "9", "blank": 9, "options": ["agreement", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "同意 agreement" },
+        { "q": "10", "blank": 10, "options": ["color", "game", "price", "relief"], "answer": "D", "answer_index": 3, "explanation": "轻松 relief" }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u11.c.03",
+      "volume": "9",
+      "unit": "U11",
+      "title": "What Makes Us Happy",
+      "scene": "什么让我们快乐",
+      "body": "Many people think that money and (1)____ make us happy. But this is not always (2)____. A rich banker may have great (3)____, but he can still feel (4)____ and lonely. Studies show that good (5)____ make us happier than money. When we are with friends, we feel (6)____ and warm. Helping others also makes us (7)____. The more we (8)____, the more joy we feel. So happiness does not come from the things we (9)____. It comes from the people we love. True happiness is found in the (10)____, not in the wallet.",
+      "word_count": 94,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["price", "fame", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "名声 fame" },
+        { "q": "2", "blank": 2, "options": ["bad", "wrong", "false", "true"], "answer": "D", "answer_index": 3, "explanation": "真实 true" },
+        { "q": "3", "blank": 3, "options": ["wealth", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "财富 wealth" },
+        { "q": "4", "blank": 4, "options": ["sad", "glad", "happy", "proud"], "answer": "A", "answer_index": 0, "explanation": "悲伤 sad" },
+        { "q": "5", "blank": 5, "options": ["colors", "friendships", "games", "prices"], "answer": "B", "answer_index": 1, "explanation": "友谊 friendships" },
+        { "q": "6", "blank": 6, "options": ["relaxed", "angry", "tired", "busy"], "answer": "A", "answer_index": 0, "explanation": "放松 relaxed" },
+        { "q": "7", "blank": 7, "options": ["busy", "tired", "happy", "sad"], "answer": "C", "answer_index": 2, "explanation": "快乐 happy" },
+        { "q": "8", "blank": 8, "options": ["throw", "give", "lose", "break"], "answer": "B", "answer_index": 1, "explanation": "给予 give" },
+        { "q": "9", "blank": 9, "options": ["break", "lose", "throw", "own"], "answer": "D", "answer_index": 3, "explanation": "拥有 own" },
+        { "q": "10", "blank": 10, "options": ["game", "color", "heart", "price"], "answer": "C", "answer_index": 2, "explanation": "内心 heart" }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u11.c.04",
+      "volume": "9",
+      "unit": "U11",
+      "title": "Music and Feelings",
+      "scene": "音乐与情感",
+      "body": "Music has a strong (1)____ on our feelings. Soft, quiet music can make us feel (2)____ and relaxed. It can help us (3)____ better. Fast, loud music can make us feel (4)____ and full of energy. It is great for (5)____ or parties. Sad music can even make some people (6)____, but it can also help them feel (7)____ afterwards. Happy songs make us want to (8)____ and smile. Music can also bring back (9)____. A song from our childhood can make us think of the (10)____. This is why music is so important in our lives.",
+      "word_count": 97,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["effect", "price", "color", "game"], "answer": "A", "answer_index": 0, "explanation": "影响 effect" },
+        { "q": "2", "blank": 2, "options": ["calm", "loud", "fast", "angry"], "answer": "A", "answer_index": 0, "explanation": "平静 calm" },
+        { "q": "3", "blank": 3, "options": ["lose", "throw", "sleep", "break"], "answer": "C", "answer_index": 2, "explanation": "睡 sleep" },
+        { "q": "4", "blank": 4, "options": ["tired", "excited", "bored", "calm"], "answer": "B", "answer_index": 1, "explanation": "兴奋 excited" },
+        { "q": "5", "blank": 5, "options": ["prices", "games", "colors", "sports"], "answer": "D", "answer_index": 3, "explanation": "运动 sports" },
+        { "q": "6", "blank": 6, "options": ["break", "throw", "cry", "lose"], "answer": "C", "answer_index": 2, "explanation": "哭 cry" },
+        { "q": "7", "blank": 7, "options": ["colder", "better", "worse", "smaller"], "answer": "B", "answer_index": 1, "explanation": "更好 better" },
+        { "q": "8", "blank": 8, "options": ["dance", "throw", "lose", "break"], "answer": "A", "answer_index": 0, "explanation": "跳舞 dance" },
+        { "q": "9", "blank": 9, "options": ["colors", "games", "prices", "memories"], "answer": "D", "answer_index": 3, "explanation": "回忆 memories" },
+        { "q": "10", "blank": 10, "options": ["game", "past", "price", "color"], "answer": "B", "answer_index": 1, "explanation": "过去 past" }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u11.c.05",
+      "volume": "9",
+      "unit": "U11",
+      "title": "A True Friend",
+      "scene": "真正的朋友",
+      "body": "Holly and Amy had been friends for (1)____. But lately, they had not been getting (2)____. Amy felt that Holly was leaving her (3)____. One day, Amy decided to (4)____ to Holly rather than stay angry. \"I feel (5)____ when you leave me out,\" Amy said. Holly was (6)____. \"I'm sorry,\" she said. \"I didn't mean to make you feel that (7)____.\" The two girls talked for a long (8)____. In the end, their friendship was (9)____ than before. Amy learned that a true friend will talk about problems, not (10)____ away from them.",
+      "word_count": 94,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["games", "years", "prices", "colors"], "answer": "B", "answer_index": 1, "explanation": "多年 years" },
+        { "q": "2", "blank": 2, "options": ["color", "along", "game", "price"], "answer": "B", "answer_index": 1, "explanation": "get along 相处" },
+        { "q": "3", "blank": 3, "options": ["up", "in", "off", "out"], "answer": "D", "answer_index": 3, "explanation": "leave out 忽略" },
+        { "q": "4", "blank": 4, "options": ["throw", "lose", "talk", "break"], "answer": "C", "answer_index": 2, "explanation": "谈 talk" },
+        { "q": "5", "blank": 5, "options": ["hurt", "glad", "happy", "proud"], "answer": "A", "answer_index": 0, "explanation": "受伤 hurt" },
+        { "q": "6", "blank": 6, "options": ["calm", "tired", "surprised", "happy"], "answer": "C", "answer_index": 2, "explanation": "惊讶 surprised" },
+        { "q": "7", "blank": 7, "options": ["way", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "方式 that way" },
+        { "q": "8", "blank": 8, "options": ["game", "color", "price", "time"], "answer": "D", "answer_index": 3, "explanation": "时间 a long time" },
+        { "q": "9", "blank": 9, "options": ["stronger", "weaker", "smaller", "colder"], "answer": "A", "answer_index": 0, "explanation": "更强 stronger" },
+        { "q": "10", "blank": 10, "options": ["lose", "run", "throw", "break"], "answer": "B", "answer_index": 1, "explanation": "逃避 run away" }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u11.c.06",
+      "volume": "9",
+      "unit": "U11",
+      "title": "Friendship Week",
+      "scene": "友谊周",
+      "body": "Friendship Week is coming! Friends make our lives (1)____. On Monday, write a thank-you (2)____ to a friend. Tell them what makes them (3)____. On Tuesday, have lunch with someone (4)____. It is a good way to make new (5)____. On Wednesday, (6)____ a classmate with their work. Helping others makes us both (7)____. On Thursday, share a happy (8)____ with a friend. Good memories pull us (9)____. On Friday, play a team game. Let's make this a week full of (10)____. After all, a life with good friends is a happy life!",
+      "word_count": 93,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["better", "colder", "worse", "smaller"], "answer": "A", "answer_index": 0, "explanation": "更好 better" },
+        { "q": "2", "blank": 2, "options": ["color", "game", "card", "price"], "answer": "C", "answer_index": 2, "explanation": "卡片 card" },
+        { "q": "3", "blank": 3, "options": ["wrong", "special", "sad", "bad"], "answer": "B", "answer_index": 1, "explanation": "特别 special" },
+        { "q": "4", "blank": 4, "options": ["cold", "new", "old", "sad"], "answer": "B", "answer_index": 1, "explanation": "新 new" },
+        { "q": "5", "blank": 5, "options": ["friends", "prices", "colors", "games"], "answer": "A", "answer_index": 0, "explanation": "朋友 friends" },
+        { "q": "6", "blank": 6, "options": ["help", "throw", "break", "lose"], "answer": "A", "answer_index": 0, "explanation": "帮助 help" },
+        { "q": "7", "blank": 7, "options": ["sad", "happy", "tired", "busy"], "answer": "B", "answer_index": 1, "explanation": "快乐 happy" },
+        { "q": "8", "blank": 8, "options": ["price", "color", "memory", "game"], "answer": "C", "answer_index": 2, "explanation": "回忆 memory" },
+        { "q": "9", "blank": 9, "options": ["apart", "away", "alone", "together"], "answer": "D", "answer_index": 3, "explanation": "一起 together" },
+        { "q": "10", "blank": 10, "options": ["price", "color", "game", "kindness"], "answer": "D", "answer_index": 3, "explanation": "善良 kindness" }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

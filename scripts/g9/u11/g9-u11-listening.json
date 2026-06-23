@@ -1,0 +1,150 @@
+{
+  "volume": "9",
+  "unit": "U11",
+  "exercises": [
+    {
+      "code": "g9u11.l.01",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·对话 Sad Movies",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Do you like sad movies?",
+        "M: Not really. Sad movies make me cry.",
+        "W: I know what you mean. But I think they make me think.",
+        "M: I prefer funny movies. They make me laugh.",
+        "W: Well, different movies make us feel different things."
+      ],
+      "translation_cn": "女:你喜欢悲伤的电影吗?\n男:不太喜欢。悲伤的电影让我哭。\n女:我懂你的意思。但我觉得它们让我思考。\n男:我更喜欢搞笑的电影,它们让我笑。\n女:嗯,不同的电影让我们有不同的感受。",
+      "questions": [
+        { "qid": "g9u11.l.01.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.01", "stem": "How do sad movies make the man feel?", "options": ["They make him laugh.", "They make him angry.", "They make him cry.", "They make him sleep."], "answer_index": 2, "answer_text": "They make him cry." },
+        { "qid": "g9u11.l.01.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.01", "stem": "What do sad movies make the woman do?", "options": ["Sleep.", "Cry.", "Laugh.", "Think."], "answer_index": 3, "answer_text": "Think." },
+        { "qid": "g9u11.l.01.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.01", "stem": "What kind of movies does the man prefer?", "options": ["Scary movies.", "Funny movies.", "Long movies.", "Sad movies."], "answer_index": 1, "answer_text": "Funny movies." },
+        { "qid": "g9u11.l.01.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.01", "stem": "What do funny movies make the man do?", "options": ["Think.", "Cry.", "Laugh.", "Sleep."], "answer_index": 2, "answer_text": "Laugh." },
+        { "qid": "g9u11.l.01.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.01", "stem": "What do different movies make us feel?", "options": ["Different things.", "The same thing.", "Only sad.", "Nothing."], "answer_index": 0, "answer_text": "Different things." }
+      ]
+    },
+    {
+      "code": "g9u11.l.02",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·短文 The Happy Man's Shirt",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Long ago, a king had power and wealth, but he was not happy.",
+        "A wise doctor said to find the shirt of a happy man.",
+        "The king's men looked everywhere.",
+        "At last, they found a happy man singing in a field.",
+        "But the happy man had no shirt at all!"
+      ],
+      "translation_cn": "很久以前,一位国王有权有财,但他并不快乐。\n一位智慧的医生说,去找一个快乐的人的衬衫。\n国王的人到处寻找。\n最后,他们找到了一个在田野里唱歌的快乐的人。\n但这个快乐的人根本没有衬衫!",
+      "questions": [
+        { "qid": "g9u11.l.02.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.02", "stem": "Was the king happy?", "options": ["Sometimes.", "Yes.", "No.", "Always."], "answer_index": 2, "answer_text": "No." },
+        { "qid": "g9u11.l.02.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.02", "stem": "What did the wise doctor say to find?", "options": ["The shirt of a happy man.", "A new palace.", "More money.", "A doctor."], "answer_index": 0, "answer_text": "The shirt of a happy man." },
+        { "qid": "g9u11.l.02.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.02", "stem": "Where did they find the happy man?", "options": ["Singing in a field.", "In a city.", "In a shop.", "In a palace."], "answer_index": 0, "answer_text": "Singing in a field." },
+        { "qid": "g9u11.l.02.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.02", "stem": "What did the happy man have?", "options": ["A new shirt.", "A red shirt.", "No shirt at all.", "Many shirts."], "answer_index": 2, "answer_text": "No shirt at all." },
+        { "qid": "g9u11.l.02.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.02", "stem": "What does the story teach?", "options": ["Shirts are nice.", "Doctors are wise.", "Wealth does not always bring happiness.", "Kings are happy."], "answer_index": 2, "answer_text": "Wealth does not always bring happiness." }
+      ]
+    },
+    {
+      "code": "g9u11.l.03",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·对话 The Soccer Team",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: You look sad. What's wrong?",
+        "M: I missed an important goal, and my team lost.",
+        "W: It's not your fault. You win and lose as a team.",
+        "M: But I let my teammates down.",
+        "W: A real team pulls together. Don't be so hard on yourself."
+      ],
+      "translation_cn": "女:你看起来很难过。怎么了?\n男:我错过了一个重要进球,我们队输了。\n女:这不是你的错。胜负是全队的事。\n男:但我让队友失望了。\n女:真正的团队会齐心协力。别对自己太苛刻。",
+      "questions": [
+        { "qid": "g9u11.l.03.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.03", "stem": "Why is the man sad?", "options": ["He is late.", "He missed a goal and his team lost.", "He is tired.", "He is sick."], "answer_index": 1, "answer_text": "He missed a goal and his team lost." },
+        { "qid": "g9u11.l.03.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.03", "stem": "What does the woman say about the loss?", "options": ["He is bad.", "He should quit.", "It's not his fault.", "It's his fault."], "answer_index": 2, "answer_text": "It's not his fault." },
+        { "qid": "g9u11.l.03.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.03", "stem": "How do you win and lose according to the woman?", "options": ["Alone.", "With the coach.", "As a team.", "With fans."], "answer_index": 2, "answer_text": "As a team." },
+        { "qid": "g9u11.l.03.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.03", "stem": "What does a real team do?", "options": ["Blames others.", "Pulls together.", "Gives up.", "Quits."], "answer_index": 1, "answer_text": "Pulls together." },
+        { "qid": "g9u11.l.03.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.03", "stem": "What does the woman tell the man?", "options": ["Don't be so hard on yourself.", "Be angry.", "Leave the team.", "Stop playing."], "answer_index": 0, "answer_text": "Don't be so hard on yourself." }
+      ]
+    },
+    {
+      "code": "g9u11.l.04",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·短文 How Music Affects Us",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Music has a strong effect on our feelings.",
+        "Soft, quiet music can make us feel calm.",
+        "Fast, loud music can make us feel excited.",
+        "Sad music can make some people cry.",
+        "Music is an important part of our lives."
+      ],
+      "translation_cn": "音乐对我们的情感有很强的影响。\n轻柔安静的音乐能让我们感到平静。\n快速响亮的音乐能让我们感到兴奋。\n悲伤的音乐能让一些人哭泣。\n音乐是我们生活中重要的一部分。",
+      "questions": [
+        { "qid": "g9u11.l.04.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.04", "stem": "What does music have a strong effect on?", "options": ["Our age.", "Our height.", "Our money.", "Our feelings."], "answer_index": 3, "answer_text": "Our feelings." },
+        { "qid": "g9u11.l.04.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.04", "stem": "What can soft, quiet music make us feel?", "options": ["Tired.", "Calm.", "Angry.", "Excited."], "answer_index": 1, "answer_text": "Calm." },
+        { "qid": "g9u11.l.04.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.04", "stem": "What can fast, loud music make us feel?", "options": ["Sad.", "Sleepy.", "Calm.", "Excited."], "answer_index": 3, "answer_text": "Excited." },
+        { "qid": "g9u11.l.04.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.04", "stem": "What can sad music make some people do?", "options": ["Dance.", "Sleep.", "Laugh.", "Cry."], "answer_index": 3, "answer_text": "Cry." },
+        { "qid": "g9u11.l.04.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.04", "stem": "What is music according to the passage?", "options": ["Only for parties.", "A waste of time.", "An important part of our lives.", "Only for kids."], "answer_index": 2, "answer_text": "An important part of our lives." }
+      ]
+    },
+    {
+      "code": "g9u11.l.05",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·对话 Two Friends",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: You seem upset. Is everything OK with Holly?",
+        "M: Not really. I feel she's been leaving me out lately.",
+        "W: Have you talked to her about it?",
+        "M: Not yet. But I'd rather talk than stay angry.",
+        "W: That's a good idea. A true friend talks about problems."
+      ],
+      "translation_cn": "女:你好像不开心。和霍莉还好吗?\n男:不太好。我觉得她最近一直把我晾在一边。\n女:你和她谈过了吗?\n男:还没。但我宁愿谈一谈,也不愿一直生气。\n女:这是个好主意。真正的朋友会谈论问题。",
+      "questions": [
+        { "qid": "g9u11.l.05.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.05", "stem": "Who is the man upset about?", "options": ["His coach.", "The woman.", "His teacher.", "Holly."], "answer_index": 3, "answer_text": "Holly." },
+        { "qid": "g9u11.l.05.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.05", "stem": "What does the man feel Holly is doing?", "options": ["Leaving him out.", "Helping him.", "Visiting him.", "Calling him."], "answer_index": 0, "answer_text": "Leaving him out." },
+        { "qid": "g9u11.l.05.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.05", "stem": "Has the man talked to Holly yet?", "options": ["No.", "Just now.", "Yes.", "Many times."], "answer_index": 0, "answer_text": "No." },
+        { "qid": "g9u11.l.05.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.05", "stem": "What would the man rather do?", "options": ["Stay angry.", "Find new friends.", "Run away.", "Talk than stay angry."], "answer_index": 3, "answer_text": "Talk than stay angry." },
+        { "qid": "g9u11.l.05.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.05", "stem": "What does a true friend do according to the woman?", "options": ["Talks about problems.", "Ignores problems.", "Stays angry.", "Runs away."], "answer_index": 0, "answer_text": "Talks about problems." }
+      ]
+    },
+    {
+      "code": "g9u11.l.06",
+      "volume": "9",
+      "unit": "U11",
+      "title": "九年级 U11 听力·短文 Friendship Week",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Friendship Week is coming, and friends make our lives better.",
+        "On Monday, write a thank-you card to a friend.",
+        "On Wednesday, help a classmate with their work.",
+        "Helping others makes us both happy.",
+        "After all, a life with good friends is a happy life."
+      ],
+      "translation_cn": "友谊周就要到了,朋友让我们的生活更美好。\n周一,给朋友写一张感谢卡。\n周三,帮助同学完成功课。\n帮助别人会让我们都开心。\n毕竟,有好朋友的人生是幸福的人生。",
+      "questions": [
+        { "qid": "g9u11.l.06.q1", "volume": "9", "unit": "U11", "code": "g9u11.l.06", "stem": "What makes our lives better?", "options": ["Fame.", "Friends.", "Power.", "Money."], "answer_index": 1, "answer_text": "Friends." },
+        { "qid": "g9u11.l.06.q2", "volume": "9", "unit": "U11", "code": "g9u11.l.06", "stem": "What should you do on Monday?", "options": ["Have lunch.", "Write a thank-you card.", "Help a classmate.", "Play a game."], "answer_index": 1, "answer_text": "Write a thank-you card." },
+        { "qid": "g9u11.l.06.q3", "volume": "9", "unit": "U11", "code": "g9u11.l.06", "stem": "What should you do on Wednesday?", "options": ["Have lunch.", "Help a classmate.", "Write a card.", "Play a game."], "answer_index": 1, "answer_text": "Help a classmate." },
+        { "qid": "g9u11.l.06.q4", "volume": "9", "unit": "U11", "code": "g9u11.l.06", "stem": "What does helping others do?", "options": ["Makes us both happy.", "Wastes time.", "Costs money.", "Makes us tired."], "answer_index": 0, "answer_text": "Makes us both happy." },
+        { "qid": "g9u11.l.06.q5", "volume": "9", "unit": "U11", "code": "g9u11.l.06", "stem": "What kind of life is a happy life?", "options": ["A life with fame.", "A life with money.", "A life alone.", "A life with good friends."], "answer_index": 3, "answer_text": "A life with good friends." }
+      ]
+    }
+  ]
+}

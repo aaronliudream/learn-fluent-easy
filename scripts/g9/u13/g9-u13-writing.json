@@ -1,0 +1,35 @@
+{
+  "volume": "9",
+  "unit": "U13",
+  "writing": {
+    "volume": "9",
+    "unit": "U13",
+    "code": "g9u13.w.01",
+    "type": "argumentative_writing",
+    "title": "Saving Our Environment",
+    "genre": "议论短文 (argumentative paragraph)",
+    "prompt_cn": "写一篇关于保护环境的短文。说明你们当地的一个环境问题,并提出你的建议(用should/can表达,用被动语态描述问题)。60词左右。",
+    "key_points": [
+      "你们当地的一个环境问题(用被动语态:is polluted/are cut down)",
+      "为什么这是个问题",
+      "你的建议(用should/can:We should.../We can...)",
+      "呼吁大家一起行动"
+    ],
+    "useful_expressions": [
+      "The river/air is badly polluted.",
+      "We should ...",
+      "We can ...",
+      "Trees are being cut down.",
+      "take action",
+      "reduce, reuse, recycle",
+      "The earth is our home."
+    ],
+    "sample": "The river near my home is badly polluted. Litter is thrown into it every day, and the water used to be clean. This is harmful to fish and people. We should take action to save our environment. We can stop throwing rubbish into the river. We can also recycle paper, glass, and metal instead of throwing them away. If we all do our part, we can make a big difference. The earth is our home, and we must protect it.",
+    "scoring": {
+      "content": "含环境问题/危害/建议/呼吁(4分)",
+      "language": "正确使用被动语态及should/can(3分)",
+      "structure": "论证清楚、衔接得当(2分)",
+      "wordcount": "词数达标、书写规范(1分)"
+    }
+  }
+}

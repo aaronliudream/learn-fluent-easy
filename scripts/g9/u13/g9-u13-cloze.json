@@ -1,0 +1,144 @@
+{
+  "volume": "9",
+  "unit": "U13",
+  "passages": [
+    {
+      "code": "g9u13.c.01",
+      "volume": "9",
+      "unit": "U13",
+      "title": "Save the Sharks",
+      "scene": "拯救鲨鱼",
+      "body": "Sharks are in (1)____. Every year, millions of sharks are (2)____ for their fins. This is very (3)____. Fishermen cut off their fins and (4)____ the sharks back into the sea. Without their fins, the sharks cannot (5)____ and soon die. Sharks are at the top of the food (6)____. They keep the ocean's ecosystem (7)____. If all the sharks (8)____, the ocean will be in danger. We (9)____ all help save the sharks. We can (10)____ to eat shark fins.",
+      "word_count": 81,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["price", "game", "color", "danger"], "answer": "D", "answer_index": 3, "explanation": "危险 in danger" },
+        { "q": "2", "blank": 2, "options": ["kills", "killing", "killed", "kill"], "answer": "C", "answer_index": 2, "explanation": "被杀 are killed" },
+        { "q": "3", "blank": 3, "options": ["kind", "cruel", "good", "nice"], "answer": "B", "answer_index": 1, "explanation": "残酷 cruel" },
+        { "q": "4", "blank": 4, "options": ["build", "lose", "break", "throw"], "answer": "D", "answer_index": 3, "explanation": "扔 throw" },
+        { "q": "5", "blank": 5, "options": ["build", "break", "swim", "lose"], "answer": "C", "answer_index": 2, "explanation": "游泳 swim" },
+        { "q": "6", "blank": 6, "options": ["chain", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "链 food chain" },
+        { "q": "7", "blank": 7, "options": ["sick", "healthy", "tired", "weak"], "answer": "B", "answer_index": 1, "explanation": "健康 healthy" },
+        { "q": "8", "blank": 8, "options": ["disappear", "break", "lose", "build"], "answer": "A", "answer_index": 0, "explanation": "消失 disappear" },
+        { "q": "9", "blank": 9, "options": ["must to", "should", "ought", "shall"], "answer": "B", "answer_index": 1, "explanation": "情态 should" },
+        { "q": "10", "blank": 10, "options": ["refuse", "build", "lose", "break"], "answer": "A", "answer_index": 0, "explanation": "拒绝 refuse" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "code": "g9u13.c.02",
+      "volume": "9",
+      "unit": "U13",
+      "title": "The Three R's",
+      "scene": "三个R",
+      "body": "We all create (1)____ every day. But there are three ways to help the (2)____: rethink, reuse, and recycle. First, (3)____. Before you buy something, ask if you really (4)____ it. Second, reuse. Many things can be (5)____ again. You can use a glass (6)____ to hold water. Third, recycle. Paper, glass, and (7)____ can all be recycled into new things. If we all take (8)____, we can make a big (9)____. Saving the earth is not (10)____. It just takes a little effort.",
+      "word_count": 84,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["price", "color", "waste", "game"], "answer": "C", "answer_index": 2, "explanation": "垃圾 waste" },
+        { "q": "2", "blank": 2, "options": ["price", "earth", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "地球 earth" },
+        { "q": "3", "blank": 3, "options": ["rethink", "build", "break", "lose"], "answer": "A", "answer_index": 0, "explanation": "重新思考 rethink" },
+        { "q": "4", "blank": 4, "options": ["need", "lose", "build", "break"], "answer": "A", "answer_index": 0, "explanation": "需要 need" },
+        { "q": "5", "blank": 5, "options": ["use", "uses", "used", "using"], "answer": "C", "answer_index": 2, "explanation": "被使用 be used" },
+        { "q": "6", "blank": 6, "options": ["color", "bottle", "price", "game"], "answer": "B", "answer_index": 1, "explanation": "瓶子 bottle" },
+        { "q": "7", "blank": 7, "options": ["color", "game", "price", "metal"], "answer": "D", "answer_index": 3, "explanation": "金属 metal" },
+        { "q": "8", "blank": 8, "options": ["color", "game", "price", "action"], "answer": "D", "answer_index": 3, "explanation": "行动 take action" },
+        { "q": "9", "blank": 9, "options": ["difference", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "差别 difference" },
+        { "q": "10", "blank": 10, "options": ["good", "hard", "easy", "kind"], "answer": "B", "answer_index": 1, "explanation": "难 hard" }
+      ],
+      "sort_order": 2
+    },
+    {
+      "code": "g9u13.c.03",
+      "volume": "9",
+      "unit": "U13",
+      "title": "The Bottle House",
+      "scene": "瓶子房",
+      "body": "In a small town, there was a man named Mr. Lee. He loved to (1)____ old things. One day, he had an (2)____. He decided to build a house using old glass (3)____. People thought he was (4)____. But Mr. Lee did not give (5)____. He collected thousands of bottles that people had (6)____ away. He put them to good (7)____. After two years, the house was (8)____. It was beautiful and colorful. Now people come to see it. Mr. Lee showed everyone that old things can become a (9)____ of art. His story is a real (10)____.",
+      "word_count": 98,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["lose", "reuse", "break", "build"], "answer": "B", "answer_index": 1, "explanation": "再利用 reuse" },
+        { "q": "2", "blank": 2, "options": ["idea", "game", "color", "price"], "answer": "A", "answer_index": 0, "explanation": "主意 idea" },
+        { "q": "3", "blank": 3, "options": ["prices", "bottles", "games", "colors"], "answer": "B", "answer_index": 1, "explanation": "瓶子 bottles" },
+        { "q": "4", "blank": 4, "options": ["kind", "good", "crazy", "nice"], "answer": "C", "answer_index": 2, "explanation": "疯狂 crazy" },
+        { "q": "5", "blank": 5, "options": ["in", "off", "on", "up"], "answer": "D", "answer_index": 3, "explanation": "放弃 give up" },
+        { "q": "6", "blank": 6, "options": ["throws", "throwing", "throw", "thrown"], "answer": "D", "answer_index": 3, "explanation": "扔掉 had thrown" },
+        { "q": "7", "blank": 7, "options": ["color", "use", "game", "price"], "answer": "B", "answer_index": 1, "explanation": "用途 good use" },
+        { "q": "8", "blank": 8, "options": ["finishing", "finish", "finished", "finishes"], "answer": "C", "answer_index": 2, "explanation": "完成 was finished" },
+        { "q": "9", "blank": 9, "options": ["work", "price", "game", "color"], "answer": "A", "answer_index": 0, "explanation": "作品 work of art" },
+        { "q": "10", "blank": 10, "options": ["inspiration", "game", "color", "price"], "answer": "A", "answer_index": 0, "explanation": "灵感 inspiration" }
+      ],
+      "sort_order": 3
+    },
+    {
+      "code": "g9u13.c.04",
+      "volume": "9",
+      "unit": "U13",
+      "title": "Plastic or Paper?",
+      "scene": "塑料还是纸",
+      "body": "When we go shopping, we often choose between (1)____ bags and paper bags. Which is better for the (2)____? Plastic bags are cheap and strong. But they are very (3)____ to the environment. They do not break (4)____ for hundreds of years. Many end up in the (5)____, where they hurt animals. Paper bags break down more (6)____, but making them uses many (7)____. So what is the best (8)____? Use a (9)____ bag! It can be used many times. Next time you shop, remember to (10)____ your own bag.",
+      "word_count": 90,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["plastic", "color", "game", "price"], "answer": "A", "answer_index": 0, "explanation": "塑料 plastic" },
+        { "q": "2", "blank": 2, "options": ["price", "earth", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "地球 earth" },
+        { "q": "3", "blank": 3, "options": ["helpful", "good", "harmful", "useful"], "answer": "C", "answer_index": 2, "explanation": "有害 harmful" },
+        { "q": "4", "blank": 4, "options": ["on", "down", "in", "off"], "answer": "B", "answer_index": 1, "explanation": "分解 break down" },
+        { "q": "5", "blank": 5, "options": ["price", "game", "color", "sea"], "answer": "D", "answer_index": 3, "explanation": "海洋 sea" },
+        { "q": "6", "blank": 6, "options": ["late", "slow", "easily", "hard"], "answer": "C", "answer_index": 2, "explanation": "容易 easily" },
+        { "q": "7", "blank": 7, "options": ["trees", "prices", "colors", "games"], "answer": "A", "answer_index": 0, "explanation": "树 trees" },
+        { "q": "8", "blank": 8, "options": ["choice", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "选择 choice" },
+        { "q": "9", "blank": 9, "options": ["paper", "reusable", "new", "plastic"], "answer": "B", "answer_index": 1, "explanation": "可重复使用 reusable" },
+        { "q": "10", "blank": 10, "options": ["break", "lose", "build", "bring"], "answer": "D", "answer_index": 3, "explanation": "带 bring" }
+      ],
+      "sort_order": 4
+    },
+    {
+      "code": "g9u13.c.05",
+      "volume": "9",
+      "unit": "U13",
+      "title": "Small Actions",
+      "scene": "小行动",
+      "body": "Saving the earth is not only the job of (1)____. Each of us can help, too. We can turn (2)____ the lights when we leave a room. This (3)____ energy. We can ride bikes or take public (4)____ instead of driving. This makes the air (5)____. We can use (6)____ paper and recycle what we use. This saves (7)____. We can carry a reusable water (8)____ instead of buying plastic ones. These small actions may seem (9)____, but together they make a big (10)____. The earth is our home, and we must take care of it.",
+      "word_count": 96,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["governments", "games", "colors", "prices"], "answer": "A", "answer_index": 0, "explanation": "政府 governments" },
+        { "q": "2", "blank": 2, "options": ["up", "off", "in", "on"], "answer": "B", "answer_index": 1, "explanation": "关掉 turn off" },
+        { "q": "3", "blank": 3, "options": ["saves", "build", "lose", "break"], "answer": "A", "answer_index": 0, "explanation": "节省 saves" },
+        { "q": "4", "blank": 4, "options": ["color", "game", "price", "transportation"], "answer": "D", "answer_index": 3, "explanation": "交通 transportation" },
+        { "q": "5", "blank": 5, "options": ["dirtier", "worse", "cleaner", "older"], "answer": "C", "answer_index": 2, "explanation": "更干净 cleaner" },
+        { "q": "6", "blank": 6, "options": ["much", "less", "many", "more"], "answer": "B", "answer_index": 1, "explanation": "更少 less" },
+        { "q": "7", "blank": 7, "options": ["games", "trees", "prices", "colors"], "answer": "B", "answer_index": 1, "explanation": "树 trees" },
+        { "q": "8", "blank": 8, "options": ["price", "game", "bottle", "color"], "answer": "C", "answer_index": 2, "explanation": "瓶子 bottle" },
+        { "q": "9", "blank": 9, "options": ["unimportant", "useful", "important", "good"], "answer": "A", "answer_index": 0, "explanation": "不重要 unimportant" },
+        { "q": "10", "blank": 10, "options": ["game", "price", "color", "difference"], "answer": "D", "answer_index": 3, "explanation": "差别 difference" }
+      ],
+      "sort_order": 5
+    },
+    {
+      "code": "g9u13.c.06",
+      "volume": "9",
+      "unit": "U13",
+      "title": "Green School Week",
+      "scene": "绿色校园周",
+      "body": "Green School Week is here! Let's work (1)____ to protect our environment. On Monday, turn (2)____ lights and computers when you leave. Save (3)____! On Tuesday, bring a (4)____ water bottle. Do not use (5)____ ones. On Wednesday, use both (6)____ of your paper. Save trees! On Thursday, put rubbish in the right (7)____. We will (8)____ paper, glass, and metal. On Friday, walk or ride a bike to school. Remember, the earth is our (9)____. Every small action (10)____. Let's make our school a greener place!",
+      "word_count": 87,
+      "difficulty": 3,
+      "questions": [
+        { "q": "1", "blank": 1, "options": ["away", "apart", "together", "alone"], "answer": "C", "answer_index": 2, "explanation": "一起 together" },
+        { "q": "2", "blank": 2, "options": ["up", "off", "on", "in"], "answer": "B", "answer_index": 1, "explanation": "关掉 turn off" },
+        { "q": "3", "blank": 3, "options": ["energy", "game", "price", "color"], "answer": "A", "answer_index": 0, "explanation": "能源 energy" },
+        { "q": "4", "blank": 4, "options": ["new", "plastic", "reusable", "paper"], "answer": "C", "answer_index": 2, "explanation": "可重复 reusable" },
+        { "q": "5", "blank": 5, "options": ["plastic", "price", "color", "game"], "answer": "A", "answer_index": 0, "explanation": "塑料 plastic" },
+        { "q": "6", "blank": 6, "options": ["sides", "games", "prices", "colors"], "answer": "A", "answer_index": 0, "explanation": "面 both sides" },
+        { "q": "7", "blank": 7, "options": ["games", "colors", "prices", "bins"], "answer": "D", "answer_index": 3, "explanation": "垃圾箱 bins" },
+        { "q": "8", "blank": 8, "options": ["build", "break", "lose", "recycle"], "answer": "D", "answer_index": 3, "explanation": "回收 recycle" },
+        { "q": "9", "blank": 9, "options": ["price", "home", "color", "game"], "answer": "B", "answer_index": 1, "explanation": "家 home" },
+        { "q": "10", "blank": 10, "options": ["lose", "counts", "build", "break"], "answer": "B", "answer_index": 1, "explanation": "重要 counts" }
+      ],
+      "sort_order": 6
+    }
+  ]
+}

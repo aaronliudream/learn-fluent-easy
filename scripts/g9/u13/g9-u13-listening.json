@@ -1,0 +1,150 @@
+{
+  "volume": "9",
+  "unit": "U13",
+  "exercises": [
+    {
+      "code": "g9u13.l.01",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·对话 Saving the Earth",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: The river near my home is so polluted now.",
+        "M: I know. It used to be clean and clear.",
+        "W: We should do something to help.",
+        "M: Yes. We can stop throwing litter into it.",
+        "W: And we should tell others to do the same."
+      ],
+      "translation_cn": "女:我家附近的河现在污染得很严重。\n男:我知道。它以前又干净又清澈。\n女:我们应该做点什么来帮忙。\n男:是的。我们可以不再往里面扔垃圾。\n女:我们还应该告诉别人也这样做。",
+      "questions": [
+        { "qid": "g9u13.l.01.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.01", "stem": "What is the problem with the river?", "options": ["It is gone.", "It is polluted now.", "It is frozen.", "It is dry."], "answer_index": 1, "answer_text": "It is polluted now." },
+        { "qid": "g9u13.l.01.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.01", "stem": "What did the river used to be?", "options": ["Dirty.", "Clean and clear.", "Small.", "Empty."], "answer_index": 1, "answer_text": "Clean and clear." },
+        { "qid": "g9u13.l.01.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.01", "stem": "What does the woman say they should do?", "options": ["Move away.", "Swim in it.", "Do nothing.", "Do something to help."], "answer_index": 3, "answer_text": "Do something to help." },
+        { "qid": "g9u13.l.01.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.01", "stem": "What can they stop doing?", "options": ["Drinking water.", "Throwing litter into the river.", "Riding bikes.", "Planting trees."], "answer_index": 1, "answer_text": "Throwing litter into the river." },
+        { "qid": "g9u13.l.01.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.01", "stem": "What else should they do?", "options": ["Leave the town.", "Keep it secret.", "Tell others to do the same.", "Buy plastic."], "answer_index": 2, "answer_text": "Tell others to do the same." }
+      ]
+    },
+    {
+      "code": "g9u13.l.02",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·短文 Save the Sharks",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Sharks are in danger today.",
+        "Every year, millions of sharks are killed for their fins.",
+        "Without their fins, the sharks cannot swim and soon die.",
+        "Sharks are at the top of the food chain.",
+        "We should all help save the sharks."
+      ],
+      "translation_cn": "如今鲨鱼正处于危险之中。\n每年都有数百万条鲨鱼因鱼鳍而被杀。\n没有了鳍,鲨鱼无法游泳,很快就会死去。\n鲨鱼处于食物链的顶端。\n我们都应该帮助拯救鲨鱼。",
+      "questions": [
+        { "qid": "g9u13.l.02.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.02", "stem": "Are sharks in danger?", "options": ["Sometimes.", "Yes.", "Not anymore.", "No."], "answer_index": 1, "answer_text": "Yes." },
+        { "qid": "g9u13.l.02.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.02", "stem": "Why are sharks killed?", "options": ["For food.", "For their skin.", "For their fins.", "For sport."], "answer_index": 2, "answer_text": "For their fins." },
+        { "qid": "g9u13.l.02.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.02", "stem": "What happens without their fins?", "options": ["They swim faster.", "They cannot swim and soon die.", "They get healthy.", "They grow bigger."], "answer_index": 1, "answer_text": "They cannot swim and soon die." },
+        { "qid": "g9u13.l.02.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.02", "stem": "Where are sharks in the food chain?", "options": ["Outside it.", "At the bottom.", "In the middle.", "At the top."], "answer_index": 3, "answer_text": "At the top." },
+        { "qid": "g9u13.l.02.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.02", "stem": "What should we do?", "options": ["Catch more sharks.", "Eat more fins.", "Do nothing.", "Help save the sharks."], "answer_index": 3, "answer_text": "Help save the sharks." }
+      ]
+    },
+    {
+      "code": "g9u13.l.03",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·对话 The Three R's",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Our school is starting a recycling program.",
+        "M: That's great! What can we do?",
+        "W: We can rethink, reuse, and recycle.",
+        "M: I always reuse old bottles and boxes.",
+        "W: And we can recycle paper, glass, and metal."
+      ],
+      "translation_cn": "女:我们学校要开展一个回收项目。\n男:太好了!我们能做什么?\n女:我们可以重新思考、再利用、回收。\n男:我总是把旧瓶子和旧盒子再利用。\n女:我们还可以回收纸、玻璃和金属。",
+      "questions": [
+        { "qid": "g9u13.l.03.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.03", "stem": "What is the school starting?", "options": ["A music class.", "A recycling program.", "A party.", "A sports day."], "answer_index": 1, "answer_text": "A recycling program." },
+        { "qid": "g9u13.l.03.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.03", "stem": "What three things can they do?", "options": ["Read, write, play.", "Buy, sell, throw.", "Rethink, reuse, and recycle.", "Eat, drink, sleep."], "answer_index": 2, "answer_text": "Rethink, reuse, and recycle." },
+        { "qid": "g9u13.l.03.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.03", "stem": "What does the man always reuse?", "options": ["Old bottles and boxes.", "Old books.", "Old clothes.", "Old toys."], "answer_index": 0, "answer_text": "Old bottles and boxes." },
+        { "qid": "g9u13.l.03.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.03", "stem": "What can they recycle?", "options": ["Paper, glass, and metal.", "Only food.", "Only paper.", "Nothing."], "answer_index": 0, "answer_text": "Paper, glass, and metal." },
+        { "qid": "g9u13.l.03.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.03", "stem": "How does the man feel about the program?", "options": ["He thinks it's great.", "He thinks it's bad.", "He is angry.", "He is bored."], "answer_index": 0, "answer_text": "He thinks it's great." }
+      ]
+    },
+    {
+      "code": "g9u13.l.04",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·短文 The Bottle House",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "Mr. Lee loved to reuse old things.",
+        "He decided to build a house using old glass bottles.",
+        "People thought he was crazy at first.",
+        "After two years, the beautiful house was finished.",
+        "He showed that old things can become a work of art."
+      ],
+      "translation_cn": "李先生喜欢再利用旧物。\n他决定用旧玻璃瓶建一座房子。\n起初人们以为他疯了。\n两年后,这座漂亮的房子建成了。\n他证明了旧物也能成为艺术品。",
+      "questions": [
+        { "qid": "g9u13.l.04.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.04", "stem": "What did Mr. Lee love to do?", "options": ["Reuse old things.", "Buy new things.", "Throw things away.", "Sell bottles."], "answer_index": 0, "answer_text": "Reuse old things." },
+        { "qid": "g9u13.l.04.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.04", "stem": "What did he build?", "options": ["A car.", "A house using old glass bottles.", "A boat.", "A school."], "answer_index": 1, "answer_text": "A house using old glass bottles." },
+        { "qid": "g9u13.l.04.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.04", "stem": "What did people think at first?", "options": ["He was clever.", "He was kind.", "He was rich.", "He was crazy."], "answer_index": 3, "answer_text": "He was crazy." },
+        { "qid": "g9u13.l.04.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.04", "stem": "How long did it take?", "options": ["Two days.", "Two weeks.", "Two months.", "Two years."], "answer_index": 3, "answer_text": "Two years." },
+        { "qid": "g9u13.l.04.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.04", "stem": "What did he show?", "options": ["Houses are cheap.", "Rubbish is bad.", "Bottles are useless.", "Old things can become a work of art."], "answer_index": 3, "answer_text": "Old things can become a work of art." }
+      ]
+    },
+    {
+      "code": "g9u13.l.05",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·对话 A Reusable Bag",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "us_male",
+      "transcript": [
+        "W: Do you want a plastic bag for your shopping?",
+        "M: No, thanks. I brought my own reusable bag.",
+        "W: That's a good idea. Plastic bags are bad for the earth.",
+        "M: Yes. A reusable bag can be used many times.",
+        "W: I should start using one too."
+      ],
+      "translation_cn": "女:你购物需要塑料袋吗?\n男:不用,谢谢。我自己带了可重复使用的袋子。\n女:这是个好主意。塑料袋对地球有害。\n男:是的。可重复使用的袋子可以用很多次。\n女:我也应该开始用一个了。",
+      "questions": [
+        { "qid": "g9u13.l.05.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.05", "stem": "Does the man want a plastic bag?", "options": ["Two of them.", "Maybe.", "No.", "Yes."], "answer_index": 2, "answer_text": "No." },
+        { "qid": "g9u13.l.05.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.05", "stem": "What did the man bring?", "options": ["A box.", "A paper bag.", "His own reusable bag.", "A plastic bag."], "answer_index": 2, "answer_text": "His own reusable bag." },
+        { "qid": "g9u13.l.05.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.05", "stem": "Why are plastic bags bad?", "options": ["They are bad for the earth.", "They are expensive.", "They are weak.", "They are too small."], "answer_index": 0, "answer_text": "They are bad for the earth." },
+        { "qid": "g9u13.l.05.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.05", "stem": "How many times can a reusable bag be used?", "options": ["Never.", "Once.", "Many times.", "Twice."], "answer_index": 2, "answer_text": "Many times." },
+        { "qid": "g9u13.l.05.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.05", "stem": "What will the woman start doing?", "options": ["Using a reusable bag too.", "Using nothing.", "Buying plastic.", "Buying paper."], "answer_index": 0, "answer_text": "Using a reusable bag too." }
+      ]
+    },
+    {
+      "code": "g9u13.l.06",
+      "volume": "9",
+      "unit": "U13",
+      "title": "九年级 U13 听力·短文 Green School Week",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "us_female",
+      "transcript": [
+        "This week is Green School Week.",
+        "On Monday, turn off lights to save energy.",
+        "On Tuesday, bring a reusable water bottle.",
+        "On Thursday, put rubbish in the right bins to recycle.",
+        "Remember, every small action counts."
+      ],
+      "translation_cn": "这周是绿色校园周。\n周一,关灯以节约能源。\n周二,带一个可重复使用的水瓶。\n周四,把垃圾放进正确的垃圾箱以便回收。\n记住,每一个小行动都很重要。",
+      "questions": [
+        { "qid": "g9u13.l.06.q1", "volume": "9", "unit": "U13", "code": "g9u13.l.06", "stem": "What week is it?", "options": ["Exam Week.", "Music Week.", "Sports Week.", "Green School Week."], "answer_index": 3, "answer_text": "Green School Week." },
+        { "qid": "g9u13.l.06.q2", "volume": "9", "unit": "U13", "code": "g9u13.l.06", "stem": "What should you do on Monday?", "options": ["Turn off lights to save energy.", "Bring a bottle.", "Ride a bike.", "Recycle rubbish."], "answer_index": 0, "answer_text": "Turn off lights to save energy." },
+        { "qid": "g9u13.l.06.q3", "volume": "9", "unit": "U13", "code": "g9u13.l.06", "stem": "What should you bring on Tuesday?", "options": ["A plastic bottle.", "A book.", "A reusable water bottle.", "A paper bag."], "answer_index": 2, "answer_text": "A reusable water bottle." },
+        { "qid": "g9u13.l.06.q4", "volume": "9", "unit": "U13", "code": "g9u13.l.06", "stem": "What should you do on Thursday?", "options": ["Bring a bottle.", "Walk to school.", "Put rubbish in the right bins.", "Turn off lights."], "answer_index": 2, "answer_text": "Put rubbish in the right bins." },
+        { "qid": "g9u13.l.06.q5", "volume": "9", "unit": "U13", "code": "g9u13.l.06", "stem": "What counts according to the passage?", "options": ["Every small action.", "Only big actions.", "Only teachers.", "Only money."], "answer_index": 0, "answer_text": "Every small action." }
+      ]
+    }
+  ]
+}

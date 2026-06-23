@@ -1,0 +1,138 @@
+{
+  "volume": "9",
+  "unit": "U13",
+  "passages": [
+    {
+      "code": "g9u13.r.01",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "说明文",
+      "title": "Save the Sharks!",
+      "body": "Sharks are in danger. Every year, millions of sharks are killed for their fins. This is very cruel. Fishermen catch the sharks, cut off their fins, and throw the sharks back into the sea. Without their fins, the sharks cannot swim, and they soon die. Sharks are at the top of the food chain. They help keep the ocean's ecosystem healthy. If all the sharks disappear, the whole ocean will be in danger. Some people eat shark fins because they think they are good for health. But no scientific studies have shown this. We should all help save the sharks. We can refuse to eat shark fins and ask others to do the same.",
+      "word_count": 114,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "shark", "cn": "鲨鱼" },
+        { "word": "cruel", "cn": "残酷的" },
+        { "word": "ecosystem", "cn": "生态系统" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.01.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.01", "stem": "Why are sharks in danger?", "options": ["They are killed for their fins.", "The sea is too warm.", "They are too slow.", "They have no food."], "answer": "A", "answer_index": 0, "explanation": "原文:killed for their fins" },
+        { "qid": "g9u13.r.01.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.01", "stem": "What happens to sharks without their fins?", "options": ["They swim faster.", "They cannot swim and soon die.", "They become healthy.", "They grow new fins."], "answer": "B", "answer_index": 1, "explanation": "原文:cannot swim, and they soon die" },
+        { "qid": "g9u13.r.01.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.01", "stem": "Where are sharks in the food chain?", "options": ["At the top.", "At the bottom.", "In the middle.", "Outside it."], "answer": "A", "answer_index": 0, "explanation": "原文:at the top of the food chain" },
+        { "qid": "g9u13.r.01.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.01", "stem": "Do scientific studies show shark fins are good for health?", "options": ["Only a few.", "No.", "Sometimes.", "Yes."], "answer": "B", "answer_index": 1, "explanation": "原文:no scientific studies have shown this" },
+        { "qid": "g9u13.r.01.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.01", "stem": "What should we do to help?", "options": ["Eat more fins.", "Do nothing.", "Refuse to eat shark fins.", "Catch more sharks."], "answer": "C", "answer_index": 2, "explanation": "原文:refuse to eat shark fins" }
+      ]
+    },
+    {
+      "code": "g9u13.r.02",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "说明文",
+      "title": "Rethink, Reuse, Recycle",
+      "body": "We all create waste every day. But there are three simple ways to help the earth: rethink, reuse, and recycle. First, rethink. Before you buy something, ask if you really need it. The more we buy, the more waste we make. Second, reuse. Many things can be used again. You can use a glass bottle to hold water, or turn an old box into a useful container. Third, recycle. Paper, glass, and metal can all be recycled. They can be made into new things. If we all take action, we can make a big difference. Saving the earth is not hard. It just takes a little thought and effort from everyone.",
+      "word_count": 111,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "recycle", "cn": "回收利用" },
+        { "word": "bottle", "cn": "瓶子" },
+        { "word": "metal", "cn": "金属" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.02.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.02", "stem": "How many ways are there to help the earth?", "options": ["Two.", "Four.", "Three.", "Five."], "answer": "C", "answer_index": 2, "explanation": "原文:three simple ways" },
+        { "qid": "g9u13.r.02.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.02", "stem": "What should you do before you buy something?", "options": ["Pay more.", "Ask if you really need it.", "Buy two.", "Throw it away."], "answer": "B", "answer_index": 1, "explanation": "原文:ask if you really need it" },
+        { "qid": "g9u13.r.02.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.02", "stem": "What can you do with a glass bottle?", "options": ["Bury it.", "Throw it away.", "Burn it.", "Use it to hold water."], "answer": "D", "answer_index": 3, "explanation": "原文:use a glass bottle to hold water" },
+        { "qid": "g9u13.r.02.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.02", "stem": "What can be recycled?", "options": ["Nothing.", "Only paper.", "Only food.", "Paper, glass, and metal."], "answer": "D", "answer_index": 3, "explanation": "原文:Paper, glass, and metal can all be recycled" },
+        { "qid": "g9u13.r.02.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.02", "stem": "Is saving the earth hard?", "options": ["Very hard.", "Yes.", "No.", "Impossible."], "answer": "C", "answer_index": 2, "explanation": "原文:not hard" }
+      ]
+    },
+    {
+      "code": "g9u13.r.03",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "记叙文",
+      "title": "The Bottle House",
+      "body": "In a small town, there was a man named Mr. Lee. He loved to reuse old things. One day, he had an idea. He decided to build a house using old glass bottles. People thought he was crazy. \"You can't build a house from rubbish!\" they said. But Mr. Lee did not give up. He collected thousands of bottles that people had thrown away. He put them to good use. After two years, the house was finished. It was beautiful and colorful. The sun shone through the bottles like a rainbow. Now, people come from far away to see the bottle house. Mr. Lee showed everyone that old things can become a work of art.",
+      "word_count": 115,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "bottle", "cn": "瓶子" },
+        { "word": "reuse", "cn": "再利用" },
+        { "word": "work", "cn": "作品" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.03.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.03", "stem": "What did Mr. Lee love to do?", "options": ["Throw things away.", "Reuse old things.", "Sell bottles.", "Buy new things."], "answer": "B", "answer_index": 1, "explanation": "原文:loved to reuse old things" },
+        { "qid": "g9u13.r.03.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.03", "stem": "What did he decide to build?", "options": ["A school.", "A house from old glass bottles.", "A boat.", "A car."], "answer": "B", "answer_index": 1, "explanation": "原文:build a house using old glass bottles" },
+        { "qid": "g9u13.r.03.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.03", "stem": "What did people think at first?", "options": ["He was rich.", "He was kind.", "He was crazy.", "He was clever."], "answer": "C", "answer_index": 2, "explanation": "原文:thought he was crazy" },
+        { "qid": "g9u13.r.03.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.03", "stem": "How long did it take to finish?", "options": ["Two years.", "Two days.", "Two weeks.", "Two months."], "answer": "A", "answer_index": 0, "explanation": "原文:After two years" },
+        { "qid": "g9u13.r.03.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.03", "stem": "What did Mr. Lee show everyone?", "options": ["Rubbish is bad.", "Bottles are useless.", "Old things can become a work of art.", "Houses are cheap."], "answer": "C", "answer_index": 2, "explanation": "原文:old things can become a work of art" }
+      ]
+    },
+    {
+      "code": "g9u13.r.04",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "议论文",
+      "title": "Plastic or Paper?",
+      "body": "When we go shopping, we often have to choose between plastic bags and paper bags. Which is better for the earth? Plastic bags are cheap and strong. But they are very harmful to the environment. They do not break down for hundreds of years. Many plastic bags end up in the sea, where they hurt animals. Paper bags break down more easily, but making them uses many trees. So what is the best choice? The answer is simple: use a reusable bag! A reusable bag can be used many times. It saves money and helps the earth. Next time you go shopping, remember to bring your own bag.",
+      "word_count": 108,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "plastic", "cn": "塑料的" },
+        { "word": "harmful", "cn": "有害的" },
+        { "word": "reusable", "cn": "可重复使用的" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.04.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.04", "stem": "What do we often choose between when shopping?", "options": ["Food and drink.", "Books and pens.", "Plastic bags and paper bags.", "Cars and bikes."], "answer": "C", "answer_index": 2, "explanation": "原文:between plastic bags and paper bags" },
+        { "qid": "g9u13.r.04.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.04", "stem": "Why are plastic bags harmful?", "options": ["They are weak.", "They are heavy.", "They do not break down for hundreds of years.", "They are expensive."], "answer": "C", "answer_index": 2, "explanation": "原文:do not break down for hundreds of years" },
+        { "qid": "g9u13.r.04.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.04", "stem": "What problem do paper bags have?", "options": ["They are too strong.", "They cost too much.", "They never break down.", "Making them uses many trees."], "answer": "D", "answer_index": 3, "explanation": "原文:making them uses many trees" },
+        { "qid": "g9u13.r.04.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.04", "stem": "What is the best choice?", "options": ["A reusable bag.", "No bag.", "A plastic bag.", "A paper bag."], "answer": "A", "answer_index": 0, "explanation": "原文:use a reusable bag" },
+        { "qid": "g9u13.r.04.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.04", "stem": "What should you do next time you shop?", "options": ["Buy plastic.", "Bring your own bag.", "Use both.", "Buy paper."], "answer": "B", "answer_index": 1, "explanation": "原文:bring your own bag" }
+      ]
+    },
+    {
+      "code": "g9u13.r.05",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "说明文",
+      "title": "Small Actions, Big Difference",
+      "body": "Saving the earth is not only the job of governments. Each of us can help, too. There are many small actions we can take. We can turn off the lights when we leave a room. This saves energy. We can ride bikes or take public transportation instead of driving cars. This makes the air cleaner. We can use less paper and recycle what we use. This saves trees. We can carry a reusable water bottle instead of buying plastic ones. We can also tell our friends and family to do the same. These small actions may seem unimportant, but together they can make a big difference. The earth is our home, and we must take care of it.",
+      "word_count": 118,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "transportation", "cn": "运输;交通" },
+        { "word": "recycle", "cn": "回收" },
+        { "word": "reusable", "cn": "可重复使用的" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.05.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.05", "stem": "Whose job is saving the earth?", "options": ["Only scientists'.", "Only governments'.", "Everyone's, not only governments'.", "Only teachers'."], "answer": "C", "answer_index": 2, "explanation": "原文:not only the job of governments" },
+        { "qid": "g9u13.r.05.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.05", "stem": "What does turning off lights save?", "options": ["Money only.", "Energy.", "Water.", "Trees."], "answer": "B", "answer_index": 1, "explanation": "原文:This saves energy" },
+        { "qid": "g9u13.r.05.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.05", "stem": "What makes the air cleaner?", "options": ["Riding bikes or taking public transportation.", "Burning coal.", "Using plastic.", "Driving more."], "answer": "A", "answer_index": 0, "explanation": "原文:ride bikes or take public transportation" },
+        { "qid": "g9u13.r.05.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.05", "stem": "What does using less paper save?", "options": ["Time.", "Water.", "Energy.", "Trees."], "answer": "D", "answer_index": 3, "explanation": "原文:This saves trees" },
+        { "qid": "g9u13.r.05.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.05", "stem": "What can small actions do together?", "options": ["Cause harm.", "Nothing.", "Waste time.", "Make a big difference."], "answer": "D", "answer_index": 3, "explanation": "原文:make a big difference" }
+      ]
+    },
+    {
+      "code": "g9u13.r.06",
+      "volume": "9",
+      "unit": "U13",
+      "genre": "应用文",
+      "title": "Green School Notice",
+      "body": "GREEN SCHOOL WEEK! Let's work together to protect our environment. Here is how you can help. MONDAY: Turn off lights and computers when you leave the classroom. Save energy! TUESDAY: Bring a reusable water bottle. Do not use plastic ones. WEDNESDAY: Use both sides of your paper. Save trees! THURSDAY: Put rubbish in the right bins. We will recycle paper, glass, and metal. FRIDAY: Walk or ride a bike to school if you can. Remember, the earth is our home. Every small action counts. Let's take action together and make our school a greener place. Thank you for your help!",
+      "word_count": 100,
+      "difficulty": 3,
+      "vocab_notes": [
+        { "word": "recycle", "cn": "回收" },
+        { "word": "reusable", "cn": "可重复使用的" },
+        { "word": "bin", "cn": "垃圾箱" }
+      ],
+      "questions": [
+        { "qid": "g9u13.r.06.q1", "volume": "9", "unit": "U13", "code": "g9u13.r.06", "stem": "What is the notice about?", "options": ["Green School Week.", "A party week.", "A sports week.", "An exam week."], "answer": "A", "answer_index": 0, "explanation": "原文:GREEN SCHOOL WEEK" },
+        { "qid": "g9u13.r.06.q2", "volume": "9", "unit": "U13", "code": "g9u13.r.06", "stem": "What should you do on Monday?", "options": ["Ride a bike.", "Bring a bottle.", "Use both sides of paper.", "Turn off lights and computers."], "answer": "D", "answer_index": 3, "explanation": "原文:Monday: Turn off lights and computers" },
+        { "qid": "g9u13.r.06.q3", "volume": "9", "unit": "U13", "code": "g9u13.r.06", "stem": "What should you bring on Tuesday?", "options": ["A reusable water bottle.", "A book.", "A paper bag.", "A plastic bottle."], "answer": "A", "answer_index": 0, "explanation": "原文:Bring a reusable water bottle" },
+        { "qid": "g9u13.r.06.q4", "volume": "9", "unit": "U13", "code": "g9u13.r.06", "stem": "What will be recycled on Thursday?", "options": ["Paper, glass, and metal.", "Only food.", "Only paper.", "Nothing."], "answer": "A", "answer_index": 0, "explanation": "原文:recycle paper, glass, and metal" },
+        { "qid": "g9u13.r.06.q5", "volume": "9", "unit": "U13", "code": "g9u13.r.06", "stem": "What counts according to the notice?", "options": ["Only big actions.", "Only teachers.", "Only money.", "Every small action."], "answer": "D", "answer_index": 3, "explanation": "原文:Every small action counts" }
+      ]
+    }
+  ]
+}

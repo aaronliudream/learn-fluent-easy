@@ -3,23 +3,23 @@
 -- 幂等:仅 audio_url IS NULL 才更新
 -- ============================================================
 
--- U12 d2 "九年级 U12 听力·对话 A Bad Morning" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/01/0199dc3a69827e52305fa217a9ef82a25985cc38ec4c622159ca35de95d92fca.mp3' WHERE id = 'eb1ada55-001b-4927-ae30-bba332e37eb9' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·短文 Save the Sharks" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/d5/d55ccb4b94062f322509ed3f388ffc7f9a0717abd5f333e861ceb3a6499bb5c5.mp3' WHERE id = '593732e0-c7a1-43bf-bb5a-4b207fc2b7d0' AND audio_url IS NULL;
 
--- U12 d2 "九年级 U12 听力·短文 The Radio Hoax" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/3c/3ccd8a63fa223a506f3c077e6018c1efa565e8b43cce211f7c4dc46d483b1d8f.mp3' WHERE id = 'fddb7d42-b7a5-4bfa-9be8-787717a1e746' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·对话 The Three R's" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/30/307e32cedfe82b8c969ce8d943a044fa3c32b1b5ba710377a2c033f101349ee5.mp3' WHERE id = '23bb7bf5-1c09-4df3-bc25-c662b83cd6bb' AND audio_url IS NULL;
 
--- U12 d2 "九年级 U12 听力·对话 The Costume Mistake" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/68/68d6ce21c824c0fb615d714203a40e1d9f248df7aed536faa29f24541489c4f9.mp3' WHERE id = 'f5825166-4fee-4cd1-b97d-23785c77385c' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·短文 The Bottle House" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/53/538e4b5276373341b9ca777c417bd86972aecf8b39d88b80dc52ce2553c96125.mp3' WHERE id = '2c78b479-0a5a-4fa0-b28e-26c253855342' AND audio_url IS NULL;
 
--- U12 d2 "九年级 U12 听力·短文 April Fool's Day" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/67/67433998ba01d940aa507318e59eaf2bbe99c933c9f1ccf18b96b3cb0bc7900a.mp3' WHERE id = '84b84ce1-cad2-4ca8-a8e9-e8a237b1f1e2' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·对话 A Reusable Bag" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/5b/5b9aacea737e2fed22166ee11422e9d49721d341b61909d6d33aed13b6c48e10.mp3' WHERE id = 'a37634ea-f5a0-4470-b7b7-67320522b500' AND audio_url IS NULL;
 
--- U12 d2 "九年级 U12 听力·对话 The Lost Backpack" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/98/98d0e71ea2913f967750aa41b22ec1b7ec94af653cbd17d309a72f32de95df77.mp3' WHERE id = 'f91d338f-ea40-4bd4-a7f2-5a274097e3ec' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·短文 Green School Week" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/97/975ca39776914823e66b461bc7e54193c81e408e4d605ac6a61bb13689c92683.mp3' WHERE id = '90f2ba1b-bb87-4d09-9df1-9f8fdde12fcd' AND audio_url IS NULL;
 
--- U12 d2 "九年级 U12 听力·短文 School April Fool's Rules" (provider:openai)
-UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/b8/b8967809bbe573b107aef615d50f8917f36944ef3eca222ea7a7ddaafa17c895.mp3' WHERE id = '9825dc85-342d-4f53-b0a8-bf6f7403c0a4' AND audio_url IS NULL;
+-- U13 d2 "九年级 U13 听力·对话 Saving the Earth" (provider:openai)
+UPDATE junior_listening_exercises SET audio_url = 'https://audio.bigmooneducation.com/f7/f7f1ec82fece9af36ff5518b338baaa98109a58ac8088a0fb160d46ffdfb6877.mp3' WHERE id = '53f429e5-6e67-44a7-8512-5d939ab73b5b' AND audio_url IS NULL;
 
 -- 校验(单独跑): 9 已填 audio_url 的条数
 SELECT unit, count(*) FROM junior_listening_exercises WHERE grade=9 AND volume='9' AND audio_url IS NOT NULL GROUP BY unit ORDER BY unit;

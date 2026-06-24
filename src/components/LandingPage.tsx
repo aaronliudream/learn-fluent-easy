@@ -27,6 +27,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type SyntheticEvent } from "react";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
 
@@ -228,14 +229,16 @@ function NavLink({
   href,
   label,
   onNavigate,
+  admin,
 }: {
   href: string;
   label: string;
   onNavigate?: () => void;
+  admin?: boolean;
 }) {
   const isHash = href.startsWith("#");
   const className = "text-[13px] font-medium text-white/90 transition hover:text-[#e5b567]";
-  if (SOON_HREFS.has(href)) {
+  if (SOON_HREFS.has(href) && !admin) {
     return (
       <span className="cursor-not-allowed text-[13px] font-medium text-white/40" title="整理中">
         <T>{label}</T>
@@ -271,9 +274,9 @@ function AvatarImg({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
+function CourseCard({ c, admin }: { c: (typeof COURSE_CARDS)[number]; admin?: boolean }) {
   const Icon = c.icon;
-  const soon = SOON_HREFS.has(c.to);
+  const soon = SOON_HREFS.has(c.to) && !admin;
   const cls =
     "group relative flex min-h-[168px] flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition" +
     (soon
@@ -335,7 +338,8 @@ function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
 
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  // 初中开放;高中(/gaokao、/senior)整理中不可点。全部入口都展示。
+  // 初中开放;高中(/gaokao、/senior)整理中对普通用户不可点,管理员(aaron)可点进。
+  const { isAdmin } = useIsAdmin();
   const navLinks = NAV_LINKS;
   const courseCards = COURSE_CARDS;
 
@@ -361,7 +365,7 @@ export default function LandingPage() {
 
             <div className="hidden flex-1 items-center justify-center gap-5 lg:flex lg:gap-7">
               {navLinks.map((n) => (
-                <NavLink key={n.href} href={n.href} label={n.label} />
+                <NavLink key={n.href} href={n.href} label={n.label} admin={isAdmin} />
               ))}
             </div>
 
@@ -398,6 +402,7 @@ export default function LandingPage() {
                     key={n.href}
                     href={n.href}
                     label={n.label}
+                    admin={isAdmin}
                     onNavigate={() => setMobileOpen(false)}
                   />
                 ))}
@@ -469,7 +474,7 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:grid-cols-[1.2fr_0.85fr] md:gap-7 md:px-6 lg:gap-9">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {courseCards.map((c) => (
-              <CourseCard key={c.to} c={c} />
+              <CourseCard key={c.to} c={c} admin={isAdmin} />
             ))}
           </div>
 

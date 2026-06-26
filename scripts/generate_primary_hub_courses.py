@@ -218,14 +218,8 @@ def make_quiz(vocab: list[dict], unit_cn: str, book: str, unit_num: int) -> list
         en_pool = themed_distractors(theme, v0["en"], all_en)
         qs.append(_mcq(f"哪个是「{v0['cn']}」？", v0["en"], en_pool))
         qs.append(_mcq(f"「{v1['en']}」的中文是？", v1["cn"], themed_cn_distractors(theme, v1["cn"], all_cn)))
-    theme_en = themed_distractors(theme, vocab[0]["en"], all_en)
-    qs.append(
-        _mcq(
-            f"本单元「{unit_cn}」核心词是？",
-            vocab[0]["en"],
-            theme_en + all_en,
-        )
-    )
+    # ⚠️ 已禁用「本单元『{主题}』核心词是?」题:单元主题非具体单词,无唯一答案=废题(2026-06 删)。
+    # 别恢复:一个单元所有词都是核心词,任选 vocab[0] 当答案都不成立。
     qs.extend(make_unit_quiz_extras(book, unit_num, vocab, unit_cn))
     return qs[:15]
 

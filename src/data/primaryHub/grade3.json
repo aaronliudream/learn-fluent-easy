@@ -285,18 +285,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你好！」核心词是？",
-                "opts": [
-                  "pencil",
-                  "ruler",
-                  "pen",
-                  "bag"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「eraser」的意思是？",
                 "opts": [
                   "铅笔盒",
@@ -661,18 +649,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「颜色」核心词是？",
-                "opts": [
-                  "blue",
-                  "red",
-                  "brown",
-                  "orange"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「yellow」的意思是？",
                 "opts": [
                   "黄色",
@@ -1017,18 +993,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「看看我」核心词是？",
-                "opts": [
-                  "eye",
-                  "face",
-                  "mouth",
-                  "arm"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「eye」的意思是？",
                 "opts": [
                   "鼻子",
@@ -1349,18 +1313,6 @@
                   "熊猫"
                 ],
                 "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我们爱动物」核心词是？",
-                "opts": [
-                  "bear",
-                  "pig",
-                  "monkey",
-                  "duck"
-                ],
-                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1689,18 +1641,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「一起吃饭吧」核心词是？",
-                "opts": [
-                  "juice",
-                  "egg",
-                  "bread",
-                  "soup"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "Do you like bread? 喜欢怎么回答？",
                 "opts": [
                   "Yes, I do.",
@@ -2023,18 +1963,6 @@
                   "叔叔"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「生日快乐」核心词是？",
-                "opts": [
-                  "aunt",
-                  "seven",
-                  "one",
-                  "eight"
-                ],
-                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2369,18 +2297,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「欢迎回来」核心词是？",
-                "opts": [
-                  "Canada",
-                  "UK",
-                  "student",
-                  "storybook"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「USA」的意思是？",
                 "opts": [
                   "铅笔",
@@ -2701,18 +2617,6 @@
                   "爸爸"
                 ],
                 "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我的家人」核心词是？",
-                "opts": [
-                  "mother",
-                  "sister",
-                  "father",
-                  "grandmother"
-                ],
-                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3041,18 +2945,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「在动物园」核心词是？",
-                "opts": [
-                  "dog",
-                  "thin",
-                  "duck",
-                  "small"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「tall」的意思是？",
                 "opts": [
                   "熊",
@@ -3377,18 +3269,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我的小汽车在哪里」核心词是？",
-                "opts": [
-                  "in",
-                  "on",
-                  "ball",
-                  "desk"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「under」的意思是？",
                 "opts": [
                   "地铁",
@@ -3709,18 +3589,6 @@
                   "梨"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你喜欢梨吗」核心词是？",
-                "opts": [
-                  "orange",
-                  "pear",
-                  "banana",
-                  "grape"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4057,18 +3925,6 @@
                   "八"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「有多少」核心词是？",
-                "opts": [
-                  "eleven",
-                  "eighteen",
-                  "thirteen",
-                  "fourteen"
-                ],
-                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },

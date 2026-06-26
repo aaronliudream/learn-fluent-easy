@@ -275,18 +275,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「他什么样」核心词是？",
-                "opts": [
-                  "old",
-                  "strict",
-                  "uncle",
-                  "kind"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「funny」的意思是？",
                 "opts": [
                   "滑稽的",
@@ -607,18 +595,6 @@
                   "晚餐"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我的一周」核心词是？",
-                "opts": [
-                  "Saturday",
-                  "Wednesday",
-                  "Monday",
-                  "weekend"
-                ],
-                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -959,18 +935,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你想吃什么」核心词是？",
-                "opts": [
-                  "ice cream",
-                  "salad",
-                  "tea",
-                  "sandwich"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "Do you like sandwich? 喜欢怎么回答？",
                 "opts": [
                   "Yes, it is.",
@@ -1304,18 +1268,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你能做什么」核心词是？",
-                "opts": [
-                  "dance",
-                  "do kung fu",
-                  "sing",
-                  "draw"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「sing English songs」的意思是？",
                 "opts": [
                   "练武术",
@@ -1635,18 +1587,6 @@
                   "瓶子"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「大床在哪里」核心词是？",
-                "opts": [
-                  "bottle",
-                  "clock",
-                  "in front of",
-                  "front"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1975,18 +1915,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「在自然公园」核心词是？",
-                "opts": [
-                  "river",
-                  "forest",
-                  "building",
-                  "lake"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「lake」的意思是？",
                 "opts": [
                   "湖",
@@ -2310,18 +2238,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「复活节是什么时候」核心词是？",
-                "opts": [
-                  "eat breakfast",
-                  "play sports",
-                  "eat dinner",
-                  "have … class"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「play sports」的意思是？",
                 "opts": [
                   "做早操",
@@ -2641,18 +2557,6 @@
                   "摘"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我最喜欢的季节」核心词是？",
-                "opts": [
-                  "picnic",
-                  "spring",
-                  "pick",
-                  "season"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2981,18 +2885,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「校历」核心词是？",
-                "opts": [
-                  "July",
-                  "January",
-                  "March",
-                  "August"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「March」的意思是？",
                 "opts": [
                   "三月",
@@ -3313,18 +3205,6 @@
                   "裤子"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「去购物」核心词是？",
-                "opts": [
-                  "third",
-                  "first",
-                  "fourth",
-                  "jacket"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3665,18 +3545,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「这是谁的狗」核心词是？",
-                "opts": [
-                  "mine",
-                  "eating",
-                  "his",
-                  "theirs"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「his」的意思是？",
                 "opts": [
                   "他的",
@@ -3990,18 +3858,6 @@
                   "保持你 的课桌干净"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「安静地工作」核心词是？",
-                "opts": [
-                  "keep",
-                  "classroom",
-                  "listening to music",
-                  "doing morning exercises"
-                ],
-                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },

@@ -275,18 +275,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「怎么去那里」核心词是？",
-                "opts": [
-                  "cinema",
-                  "plane",
-                  "subway",
-                  "science"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「post office」的意思是？",
                 "opts": [
                   "博物馆",
@@ -611,18 +599,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「上学的方式」核心词是？",
-                "opts": [
-                  "on foot",
-                  "by",
-                  "train",
-                  "subway"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「bus」的意思是？",
                 "opts": [
                   "乘",
@@ -939,18 +915,6 @@
                   "超市",
                   "电影",
                   "晚上"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「周末计划」核心词是？",
-                "opts": [
-                  "lunch",
-                  "breakfast",
-                  "visit",
-                  "trip"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1293,18 +1257,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我有个笔友」核心词是？",
-                "opts": [
-                  "aunt",
-                  "studies",
-                  "brother",
-                  "hiking"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「hiking」的意思是？",
                 "opts": [
                   "叔叔",
@@ -1629,18 +1581,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「他做什么工作」核心词是？",
-                "opts": [
-                  "scientist",
-                  "businessman",
-                  "factory",
-                  "fisherman"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「postman」的意思是？",
                 "opts": [
                   "医生",
@@ -1960,18 +1900,6 @@
                   "穿"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「你感觉怎么样」核心词是？",
-                "opts": [
-                  "sad",
-                  "angry",
-                  "more",
-                  "happy"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2306,18 +2234,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你有多高」核心词是？",
-                "opts": [
-                  "heavier",
-                  "younger",
-                  "thinner",
-                  "longer"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「taller」的意思是？",
                 "opts": [
                   "更高的",
@@ -2637,18 +2553,6 @@
                   "睡觉"
                 ],
                 "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「上个周末」核心词是？",
-                "opts": [
-                  "read",
-                  "dinner",
-                  "cleaned",
-                  "washed"
-                ],
-                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2987,18 +2891,6 @@
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你去哪儿了」核心词是？",
-                "opts": [
-                  "went camping",
-                  "plane",
-                  "hurt",
-                  "went"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「went camping」的意思是？",
                 "opts": [
                   "自行车",
@@ -3316,18 +3208,6 @@
                   "草坪",
                   "滑冰",
                   "饭厅"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「那时和现在」核心词是？",
-                "opts": [
-                  "uncle",
-                  "dining hall",
-                  "ice-skate",
-                  "cycling"
                 ],
                 "answer": 1,
                 "point": "词汇",

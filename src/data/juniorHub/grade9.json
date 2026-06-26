@@ -1372,18 +1372,6 @@
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「请问洗手间在哪里」的核心词是？",
-                "opts": [
-                  "address",
-                  "beside",
-                  "bookstore",
-                  "corner"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -1829,18 +1817,6 @@
                   "absent"
                 ],
                 "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我过去怕黑」的核心词是？",
-                "opts": [
-                  "school",
-                  "absent",
-                  "boarding",
-                  "dare"
-                ],
-                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2290,18 +2266,6 @@
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「这些衬衫是什么做的」的核心词是？",
-                "opts": [
-                  "avoid",
-                  "blouse",
-                  "school",
-                  "competitor"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -2675,18 +2639,6 @@
                   "Berlin",
                   "accidental",
                   "bell"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「它是什么时候发明的」的核心词是？",
-                "opts": [
-                  "apple",
-                  "boil",
-                  "accidental",
-                  "Berlin"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3076,18 +3028,6 @@
                   "chance"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「青少年应被允许自己选衣服」的核心词是？",
-                "opts": [
-                  "cry",
-                  "chance",
-                  "apple",
-                  "awful"
-                ],
-                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3537,18 +3477,6 @@
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「它一定是卡拉的」的核心词是？",
-                "opts": [
-                  "alien",
-                  "express",
-                  "Carla",
-                  "teacher"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -3922,18 +3850,6 @@
                   "Australian",
                   "intelligent",
                   "director"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我喜欢能跳舞的音乐」的核心词是？",
-                "opts": [
-                  "documentary",
-                  "Australian",
-                  "dialog",
-                  "electronic"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -4385,18 +4301,6 @@
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「你应该握手」的核心词是？",
-                "opts": [
-                  "bow",
-                  "basic",
-                  "capital",
-                  "apple"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -4844,18 +4748,6 @@
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「悲伤的电影让我哭」的核心词是？",
-                "opts": [
-                  "Bert",
-                  "agreement",
-                  "friendship",
-                  "courage"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -5298,18 +5190,6 @@
                   "bean",
                   "backpack",
                   "alive",
-                  "(overslept"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「生活充满意外」的核心词是？",
-                "opts": [
-                  "alive",
-                  "announce",
-                  "burnt; burned",
                   "(overslept"
                 ],
                 "answer": 3,
@@ -5762,18 +5642,6 @@
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
-              },
-              {
-                "q": "本单元「我们在努力拯救地球」的核心词是？",
-                "opts": [
-                  "cost",
-                  "advantage",
-                  "creativity",
-                  "bin"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
               }
             ],
             "listeningQuestions": [
@@ -6217,18 +6085,6 @@
                   "(overcame",
                   "caring",
                   "degree"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我记得七年级认识你们」的核心词是？",
-                "opts": [
-                  "congratulate",
-                  "(overcame",
-                  "school",
-                  "double"
                 ],
                 "answer": 1,
                 "point": "词汇",

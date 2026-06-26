@@ -193,13 +193,8 @@ def make_quiz(vocab: list[dict], unit_cn: str) -> list[dict]:
         qs.append(_mcq(f"「{v['en']}」的意思是？", v["cn"], all_cn))
     if len(vocab) >= 2:
         qs.append(_mcq(f"哪个单词表示「{vocab[0]['cn']}」？", vocab[0]["en"], all_en))
-    qs.append(
-        _mcq(
-            f"本单元「{unit_cn}」的核心词是？",
-            vocab[0]["en"],
-            all_en + ["apple", "school", "teacher"],
-        )
-    )
+    # ⚠️ 已禁用「本单元『{主题}』的核心词是?」题:单元主题非具体单词,无唯一答案=废题(2026-06 删)。
+    # 别恢复:一个单元所有词都是核心词,任选 vocab[0] 当答案都不成立(且原干扰项是字母填充词,更乱)。
     return qs[:18]
 
 

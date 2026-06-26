@@ -20,7 +20,7 @@ export function getSemesterProgress(state: GaokaoHubPersist, semesterId: string)
   let totalStages = 0;
   let completedStages = 0;
   let completedUnits = 0;
-  semester.units.forEach((u) => {
+  semester.units.filter((u) => u.available).forEach((u) => {
     const p = getUnitProgress(state, u.id);
     totalStages += p.total;
     completedStages += p.completed;
@@ -40,7 +40,7 @@ export function getGradeProgress(state: GaokaoHubPersist, grade: GaokaoHubGrade)
   let totalStages = 0;
   let completedStages = 0;
   Object.values(course.semesters).forEach((sem) => {
-    sem.units.forEach((u) => {
+    sem.units.filter((u) => u.available).forEach((u) => {
       const p = getUnitProgress(state, u.id);
       totalStages += p.total;
       completedStages += p.completed;

@@ -55,6 +55,11 @@ export function totalStagesForGrade(grade: GaokaoHubGrade): number {
   return n;
 }
 
+/** 用户可见单元标签:从 unitKey 推(WU=预备单元,U1→Unit 1…),与底层 id 的 num 偏移解绑。 */
+export function unitLabel(unit: { unitKey: string }): string {
+  return unit.unitKey === "WU" ? "Welcome Unit" : `Unit ${unit.unitKey.replace(/^U/i, "")}`;
+}
+
 export function totalUnitsForGrade(grade: GaokaoHubGrade): number {
   let n = 0;
   for (const sem of Object.values(COURSES[grade].semesters)) {

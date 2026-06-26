@@ -25,7 +25,7 @@ export function useUnitVocab(unit: UnitDef, grade: number): UnitVocabItem[] | nu
     (async () => {
       const { data } = await supabase
         .from("junior_vocab")
-        .select("id,word,meaning_cn,phrase_en,example_en,example_cn")
+        .select("id,word,phonetic,meaning_cn,phrase_en,example_en,example_cn")
         .eq("grade", grade)
         .eq("volume", unit.book)
         .eq("unit", unit.unitKey)
@@ -34,6 +34,7 @@ export function useUnitVocab(unit: UnitDef, grade: number): UnitVocabItem[] | nu
       const rows = (data ?? []) as Array<{
         id: string;
         word: string;
+        phonetic: string | null;
         meaning_cn: string | null;
         phrase_en: string | null;
         example_en: string | null;
@@ -50,6 +51,7 @@ export function useUnitVocab(unit: UnitDef, grade: number): UnitVocabItem[] | nu
               id: r.id,
               en: r.word.trim(),
               cn: r.meaning_cn as string,
+              phonetic: r.phonetic?.trim() || undefined,
               phrase,
               example,
               // 核心词汇关翻卡用 chunks:例句优先,无例句则用短语(无中文,cn 留空)

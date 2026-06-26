@@ -726,18 +726,20 @@ function GrammarStage({
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
       <div className="mb-2 text-lg font-bold">🧩 {unit.grammarTitle}</div>
-      <p className="mb-4 text-sm text-[#5C5751]">
-        本关使用五关语法测：选择题 → 填空 → 改错 → 句型转换 → 造句/写作，达标后解锁下一关。
-      </p>
       {masteryPath ? (
-        <Link
-          to={masteryPath}
-          className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
-        >
-          进入语法五关测试 →
-        </Link>
+        <>
+          <p className="mb-4 text-sm text-[#5C5751]">
+            本关使用五关语法测：选择题 → 填空 → 改错 → 句型转换 → 造句/写作，达标后解锁下一关。
+          </p>
+          <Link
+            to={masteryPath}
+            className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
+          >
+            进入语法五关测试 →
+          </Link>
+        </>
       ) : (
-        <p className="mb-3 text-sm text-amber-700">本单元语法题在下方完成（教材同步版）。</p>
+        <p className="mb-4 text-sm text-[#5C5751]">本关共 6 道语法题，全部做完即过关。</p>
       )}
       <FinalQuizStage
         questions={shuffleArray([...unit.grammarQuiz]).slice(0, 6)}

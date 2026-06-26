@@ -352,6 +352,7 @@ function VocabStage({
                 <>
                   {v.emoji && <div className="text-2xl">{v.emoji}</div>}
                   <div className="mt-1 text-sm font-semibold">{v.en}</div>
+                  {v.phonetic && <div className="text-[11px] text-[#888780]">{v.phonetic}</div>}
                   <span
                     role="button"
                     tabIndex={0}
@@ -375,6 +376,7 @@ function VocabStage({
                   {v.emoji && <div className="text-2xl">{v.emoji}</div>}
                   <div className="mt-1 text-sm font-bold text-[#FF6B35]">{v.cn}</div>
                   <div className="mt-1 text-xs text-[#888780]">{v.en}</div>
+                  {v.phonetic && <div className="text-[11px] text-[#888780]">{v.phonetic}</div>}
                   {v.chunks && v.chunks.length > 0 && (
                     <div className="mt-2 space-y-1">
                       {v.chunks.map((c, ci) => (
@@ -994,12 +996,32 @@ function FinalQuizStage({
     setPicked(optIdx);
     const isCorrect = optIdx === q.answer;
     onAnswered?.(q, isCorrect);
+    // 答题后"学到一个词/句":听力题→原文;词汇题→完整释义+例句;语法/阅读→解析(已有)。
+    const learnMore = (
+      <>
+        {q.kind === "listening" && q.audio && (
+          <div className="mt-1 text-xs font-normal text-[#5C5751]">🔊 原文：{q.audio}</div>
+        )}
+        {q.kind === "vocab" && (q.meaningFull || q.exampleEn) && (
+          <div className="mt-1 text-xs font-normal text-[#5C5751]">
+            {q.meaningFull && <div>释义：{q.meaningFull}</div>}
+            {q.exampleEn && (
+              <div className="mt-0.5">
+                例：{q.exampleEn}
+                {q.exampleCn ? ` ${q.exampleCn}` : ""}
+              </div>
+            )}
+          </div>
+        )}
+        {q.explanation && <div className="mt-1 text-xs font-normal text-[#5C5751]">{q.explanation}</div>}
+      </>
+    );
     if (isCorrect) {
       onCorrect();
       setFeedback(
         <div className="feedback-box success">
           ✨ 答对了！
-          {q.explanation && <div className="mt-1 text-xs font-normal text-[#5C5751]">{q.explanation}</div>}
+          {learnMore}
         </div>,
       );
     } else {
@@ -1007,7 +1029,7 @@ function FinalQuizStage({
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
-          {q.explanation && <div className="mt-1 text-xs font-normal text-[#5C5751]">{q.explanation}</div>}
+          {learnMore}
         </div>,
       );
     }
@@ -2020,7 +2042,8 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   // 自适应单元综合测验:7B 全 8 单元 + 八年级(8A/8B)16 单元 + 九年级(volume '9')。
   // 语法走 DB(grammarCodes 抽 7 题·自适应),听力 8 年级无 junior_listening_items → 内联 listeningQuestions 回退(TTS),词汇 vocabulary 动态生成 2 题 = 12 题。
   // 其余年级(7A/Starter, book 不在表内)仍走内联 quizQuestions;空池/失败也回退内联。
-  const adaptiveFinalUnit = !!unit && ["7B", "8A", "8B", "g9", "9"].includes(unit.book);
+  const adaptiveFinalUnit =
+    !!unit && (["7B", "8A", "8B", "g9", "9"].includes(unit.book) || /^(required|elective)/.test(unit.book));
   // undefined = 加载中;null = 用内联回退;数组 = 自适应题目。
   const [finalAdaptive, setFinalAdaptive] = useState<FinalQuizItem[] | null | undefined>(undefined);
   useEffect(() => {
@@ -2030,7 +2053,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     }
     let cancelled = false;
     setFinalAdaptive(undefined);
-    buildFinalQuiz(unit)
+    buildFinalQuiz(unit, grade)
       .then((items) => {
         if (!cancelled) setFinalAdaptive(items); // items 为 null(空池)时也回退内联
       })
@@ -2041,7 +2064,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     return () => {
       cancelled = true;
     };
-  }, [unit, stage?.type, adaptiveFinalUnit]);
+  }, [unit, stage?.type, adaptiveFinalUnit, grade]);
 
   if (!unit || !stage) return null;
 

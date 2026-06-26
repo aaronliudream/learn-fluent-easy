@@ -13,13 +13,16 @@ import type { UnitDef } from "./juniorHub/types";
 import type { QuizQuestion } from "./juniorHub/types";
 
 /**
- * 单元综合通关速测(路A):12 题纯单选 = 语法7 + 听力3 + 词汇2,半自适应。
+ * 单元综合通关速测(路A):12 题纯单选 = 语法5 + 听力3 + 阅读1 + 词汇3,半自适应。
+ * 语法不超半数 → 真"综合检测"而非语法刷屏。
  *
  * - 语法:复用 juniorUnitGrammar(grammarCode→point→junior_grammar_questions),
- *   按本单元掌握度选难度配额(高2/2/3·中3/3/1·低4/2/1,难度不足时降级借补),
- *   弱知识点(kp)倾斜多抽,避开最近错题(mastery_matrix.wrongQ),每 point 保底 1 道。
+ *   ⚠️ 只收应用型题(isApplicationGrammar:读真句判结构 / 英文用法选项),排除术语定义题
+ *   ("X 中的 Y 表示什么""…叫什么""…由什么充当");
+ *   按本单元掌握度选难度配额,弱kp倾斜,避错题,每 point 保底 1 道。
  * - 听力:内联 listeningQuestions(单句 TTS,4 选项)洗牌取 3。
- * - 词汇:unit.vocabulary 内联生成 英↔中 MCQ 取 2。
+ * - 阅读:junior_reading 本单元最短一篇,短文嵌题干 + 首题(无则用词汇补足题量)。
+ * - 词汇:unit.vocabulary 内联生成 英↔中 MCQ 取 3(阅读缺位时补到 4)。
  * - 每题选项洗牌 + answer 重映射(消除"点A白嫖"),题序整体洗牌。
  * - ⚠️ 语法池为空(无 grammarCode / 无 DB 题)→ 返回 null,调用层回退内联 quizQuestions。
  *
@@ -27,7 +30,7 @@ import type { QuizQuestion } from "./juniorHub/types";
  * 留作第二步:finalQuiz 写 question_id 进 ai_question_attempts + 抽题读它排除。
  */
 
-export type FinalQuizKind = "grammar" | "listening" | "vocab";
+export type FinalQuizKind = "grammar" | "listening" | "vocab" | "reading";
 
 /** 喂 FinalQuizStage 的统一题项:QuizQuestion + finalQuiz 专用可选字段。
  *  kind 设为可选,使内联 quizQuestions(QuizQuestion[])回退时仍可赋值给本类型。 */
@@ -37,17 +40,80 @@ export type FinalQuizItem = QuizQuestion & {
   questionId?: string; // 语法题:junior_grammar_questions.id(记录用)
   pointId?: string; // 语法题归属 point(记录用)
   kpId?: string | null; // 语法题归属 kp(记录用)
+  exampleEn?: string; // 词汇题:答对后展示的例句(英)
+  exampleCn?: string; // 词汇题:例句(中)
+  meaningFull?: string; // 词汇题:完整多义(展示用,做题选项仍用单义)
 };
 
-const GRAMMAR_N = 7;
-const LISTENING_N = 3;
-const VOCAB_N = 2;
+/** 词汇展示元数据:word(小写) → 完整多义 + 例句(供单元通关答题后"学到一个词")。 */
+type VocabMeta = { meaningFull?: string; exampleEn?: string; exampleCn?: string };
+async function loadUnitVocabMeta(
+  unit: UnitDef,
+  grade: number,
+): Promise<Map<string, VocabMeta>> {
+  const map = new Map<string, VocabMeta>();
+  const { data } = await supabase
+    .from("junior_vocab")
+    .select("word,meaning_cn,example_en,example_cn")
+    .eq("grade", grade)
+    .eq("volume", unit.book)
+    .eq("unit", unit.unitKey);
+  for (const r of (data ?? []) as Array<Record<string, string | null>>) {
+    if (!r.word) continue;
+    map.set(String(r.word).trim().toLowerCase(), {
+      meaningFull: r.meaning_cn?.trim() || undefined, // DB meaning_cn 即完整多义("外向的;爱交际的")
+      exampleEn: r.example_en?.trim() || undefined,
+      exampleCn: r.example_cn?.trim() || undefined,
+    });
+  }
+  return map;
+}
 
-/** 难度三档配额(语法 7 题):跟本单元掌握度走。 */
+// 单元通关 12 题综合配比:语法 5(应用型,排除术语定义题)+ 听力 3 + 阅读 1 + 词汇 3。
+// 语法不超过一半(≤6),其余题型占多数 → 真"综合检测"而非语法刷屏。
+const GRAMMAR_N = 5;
+const LISTENING_N = 3;
+const READING_N = 1;
+const VOCAB_N = 3;
+
+/** 难度三档配额(语法 5 题):跟本单元掌握度走。 */
 function difficultyQuota(pct: number): Record<1 | 2 | 3, number> {
-  if (pct > 0.8) return { 1: 2, 2: 2, 3: 3 }; // 高:偏难
-  if (pct >= 0.5) return { 1: 3, 2: 3, 3: 1 }; // 中:均衡
-  return { 1: 4, 2: 2, 3: 1 }; // 低:偏易
+  if (pct > 0.8) return { 1: 1, 2: 2, 3: 2 }; // 高:偏难
+  if (pct >= 0.5) return { 1: 2, 2: 2, 3: 1 }; // 中:均衡
+  return { 1: 3, 2: 1, 3: 1 }; // 低:偏易
+}
+
+/**
+ * 应用型语法题判定(单元通关只收应用型,排除"术语定义题")。
+ * 保留:① 选项是英文用法项(初中填空 / "下列哪一句…"选英文句);
+ *       ② 判断整句结构(stem 含引号英文整句 + 结构标签选项 + "判断/哪一句")。
+ * 排除:纯中文概念题("X 中的 Y 表示什么""…由什么充当""…叫什么""…常构成哪种结构"),
+ *       及"句子'…'中,us 是?"这类成分标注题(答案是术语,非读句用句)。
+ */
+function isApplicationGrammar(q: UnitQuestion): boolean {
+  const stem = String(q.stem || "");
+  const opts = [q.option_a, q.option_b, q.option_c, q.option_d]
+    .filter((o): o is string => !!o)
+    .map(String);
+  const STRUCT = /主谓|主系表|There be|SVO|SVA|SVOC/;
+  const structLabel = opts.filter((o) => STRUCT.test(o)).length;
+  const engOpts = opts.filter((o) => /[A-Za-z]{2,}/.test(o)).length;
+  // ① 多数选项是英文用法项(非结构标签)→ 应用型(读/用英文)。
+  if (engOpts >= 3 && structLabel < 2) return true;
+  // ② 判断整句结构:结构标签选项 + "判断句子结构/下列哪一句"框架(读真实句子选结构)。
+  //    用框架词而非引号正则(撇号 There's/don't 会断引号匹配,误杀合法判断题)。
+  if (structLabel >= 2 && /判断句子结构|下列哪一?句|哪一?句(是|不是)/.test(stem)) return true;
+  return false;
+}
+
+/** 答案归一化为下标:兼容字母(A-D)/数字下标/答案文本。 */
+function answerToIndex(raw: unknown, opts: string[]): number {
+  if (typeof raw === "number") return raw >= 0 && raw < opts.length ? raw : 0;
+  const s = String(raw ?? "").trim();
+  const letter = "ABCD".indexOf(s.toUpperCase());
+  if (letter >= 0 && letter < opts.length) return letter;
+  const byText = opts.findIndex((o) => String(o).trim() === s);
+  return byText >= 0 ? byText : 0;
 }
 
 /** 题难度(null/越界 → 当中档 2)。 */
@@ -257,13 +323,18 @@ async function listeningItemsForUnit(unit: UnitDef): Promise<FinalQuizItem[]> {
   return inlineListening(unit);
 }
 
-/** 词汇 2 题:从本单元词表生成 英↔中 MCQ(交替方向),3 个同单元干扰项。 */
-function vocabItems(unit: UnitDef): FinalQuizItem[] {
-  const words = shuffleArray([...unit.vocabulary]).slice(0, VOCAB_N);
+/** 词汇题:从本单元词表生成 英↔中 MCQ(交替方向),3 个同单元干扰项。count 默认 VOCAB_N。 */
+function vocabItems(
+  unit: UnitDef,
+  count: number = VOCAB_N,
+  meta?: Map<string, VocabMeta>,
+): FinalQuizItem[] {
+  const words = shuffleArray([...unit.vocabulary]).slice(0, count);
   return words.map((target, i) => {
     const distractors = shuffleArray(unit.vocabulary.filter((v) => v.en !== target.en)).slice(0, 3);
     const opts4 = shuffleArray([target, ...distractors]);
     const en2cn = i % 2 === 0;
+    const m = meta?.get(target.en.trim().toLowerCase());
     return {
       kind: "vocab" as const,
       q: en2cn ? `单词 “${target.en}” 的中文意思是？` : `“${target.cn}” 对应的英文单词是？`,
@@ -271,8 +342,61 @@ function vocabItems(unit: UnitDef): FinalQuizItem[] {
       answer: opts4.findIndex((o) => o.en === target.en),
       point: "词汇",
       dim: "vocab" as const,
+      // 答对/答错后展示:完整多义(优先 DB,缺则用单义)+ 例句 → "学到一个词的用法"。
+      meaningFull: m?.meaningFull || target.cn,
+      exampleEn: m?.exampleEn,
+      exampleCn: m?.exampleCn,
     };
   });
+}
+
+type ReadingRow = {
+  title: string | null;
+  body: string | null;
+  questions: unknown;
+  word_count: number | null;
+};
+
+/**
+ * 阅读 n 题:从 junior_reading 取本单元最短的一篇,短文嵌进题干(stage 用 whitespace-pre-line 渲染),
+ * 取该篇首题作单选。全年级通用(grade+volume+unit);无行/无题 → 返回空(调用层用词汇补足题量)。
+ */
+async function readingItemsForUnit(
+  unit: UnitDef,
+  grade: number,
+  n: number,
+): Promise<FinalQuizItem[]> {
+  if (n <= 0) return [];
+  const { data } = await supabase
+    .from("junior_reading")
+    .select("title,body,questions,word_count")
+    .eq("grade", grade)
+    .eq("volume", unit.book)
+    .eq("unit", unit.unitKey)
+    .order("word_count", { ascending: true });
+  const rows = (data ?? []) as ReadingRow[];
+  if (!rows.length) return [];
+  const out: FinalQuizItem[] = [];
+  for (const row of rows) {
+    if (out.length >= n) break;
+    const passage = String(row.body || "").trim();
+    const qs = Array.isArray(row.questions) ? (row.questions as Array<Record<string, unknown>>) : [];
+    if (!passage || !qs.length) continue;
+    const q0 = qs[0];
+    const opts = Array.isArray(q0.options) ? (q0.options as unknown[]).map(String) : [];
+    const stem = String(q0.q ?? "").trim();
+    if (opts.length < 2 || !stem) continue;
+    out.push({
+      kind: "reading",
+      q: `阅读短文，回答问题：\n\n${passage}\n\n${stem}`,
+      opts,
+      answer: answerToIndex(q0.answer, opts),
+      explanation: (q0.explanation as string) || undefined,
+      point: "阅读",
+      dim: "reading",
+    });
+  }
+  return out;
 }
 
 /** 选项洗牌 + answer 重映射(每题独立)。 */
@@ -286,9 +410,10 @@ function shuffleOpts(item: FinalQuizItem): FinalQuizItem {
 }
 
 /**
- * 组装本单元 finalQuiz(12 题)。语法池为空 → 返回 null(调用层回退内联)。
+ * 组装本单元 finalQuiz(12 题综合):语法 5(应用型,排除术语定义题)+ 听力 3 + 阅读 1 + 词汇 3。
+ * 语法不超半数;阅读取自 junior_reading(无则用词汇补足题量)。语法池为空 → 返回 null(调用层回退内联)。
  */
-export async function buildFinalQuiz(unit: UnitDef): Promise<FinalQuizItem[] | null> {
+export async function buildFinalQuiz(unit: UnitDef, grade: number): Promise<FinalQuizItem[] | null> {
   const codes = [unit.grammarCode, ...(unit.grammarCodes ?? [])].filter(
     (c): c is string => !!c,
   );
@@ -296,6 +421,9 @@ export async function buildFinalQuiz(unit: UnitDef): Promise<FinalQuizItem[] | n
   if (!points.length) return null;
   const pool = await loadUnitPool(points);
   if (!pool.length) return null;
+  // 单元通关只收应用型语法题(排除术语定义题);过滤后不足 GRAMMAR_N 才放回全池兜底。
+  const appPool = pool.filter(isApplicationGrammar);
+  const grammarPool = appPool.length >= GRAMMAR_N ? appPool : pool;
 
   // 本单元掌握度 → 难度档位。
   const allMastery = await loadJuniorGrammarMasteryAll();
@@ -316,10 +444,14 @@ export async function buildFinalQuiz(unit: UnitDef): Promise<FinalQuizItem[] | n
   const weakKp = new Set<string>();
   for (const q of pool) if (q.kp_id && !strongKp.has(q.kp_id)) weakKp.add(q.kp_id);
 
-  const grammar = pickGrammar(pool, points, quota, weakKp, wrongQ, GRAMMAR_N).map(grammarItem);
+  const grammar = pickGrammar(grammarPool, points, quota, weakKp, wrongQ, GRAMMAR_N).map(grammarItem);
   if (!grammar.length) return null;
 
   const listening = await listeningItemsForUnit(unit);
-  const items = [...grammar, ...listening, ...vocabItems(unit)].map(shuffleOpts);
+  const reading = await readingItemsForUnit(unit, grade, READING_N);
+  const vocabMeta = await loadUnitVocabMeta(unit, grade); // 词汇例句/多义(答对后展示)
+  // 阅读缺几道,用词汇补几道,保持 12 题总量。
+  const vocab = vocabItems(unit, VOCAB_N + (READING_N - reading.length), vocabMeta);
+  const items = [...grammar, ...listening, ...reading, ...vocab].map(shuffleOpts);
   return shuffleArray(items);
 }

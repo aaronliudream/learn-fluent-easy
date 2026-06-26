@@ -1,6 +1,6 @@
 ﻿import { useNavigate, useParams } from "react-router-dom";
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
-import { findSemester, getGradeCourse } from "@/lib/gaokaoHub/courseData";
+import { findSemester, getGradeCourse, unitLabel } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/gaokaoHub/progress";
 import { savePersist } from "@/lib/gaokaoHub/storage";
 
@@ -48,7 +48,12 @@ export default function GaokaoHubSemester() {
         </div>
       </div>
       <div className="space-y-3 px-4 py-4">
-        {sem.units.map((unit) => {
+        {sem.units.filter((u) => u.available).length === 0 && (
+          <div className="rounded-2xl bg-white p-6 text-center text-sm text-[#888780]">
+            本册内容正在建设中，敬请期待 🚧
+          </div>
+        )}
+        {sem.units.filter((u) => u.available).map((unit) => {
           const p = getUnitProgress(state, unit.id);
           const isCurrent = unit.id === state.currentUnit && unit.available;
           const isDone = p.total > 0 && p.completed === p.total;
@@ -73,7 +78,7 @@ export default function GaokaoHubSemester() {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{unit.emoji}</span>
                 <div className="min-w-0 flex-1 text-left">
-                  <div className="text-[11px] font-bold uppercase text-[#888780]">Unit {unit.num}</div>
+                  <div className="text-[11px] font-bold uppercase text-[#888780]">{unitLabel(unit)}</div>
                   <div className="font-bold">
                     {unit.title} · {unit.cn}
                   </div>

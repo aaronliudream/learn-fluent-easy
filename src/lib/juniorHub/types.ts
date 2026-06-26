@@ -1,9 +1,11 @@
-export type JuniorHubGrade = 7 | 8 | 9;
+// 7|8|9 = 初中(不可改动);10|11|12 = 高中(必修=10 高一 / 选必=11 高二 / 复习=12),加法接入,不影响初中逻辑。
+export type JuniorHubGrade = 7 | 8 | 9 | 10 | 11 | 12;
 
 export type VocabItem = {
   en: string;
   cn: string;
   emoji?: string;
+  phonetic?: string; // 音标(junior_vocab.phonetic;英音)
   chunks?: { en: string; cn: string }[];
 };
 

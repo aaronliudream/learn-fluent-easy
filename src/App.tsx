@@ -46,6 +46,7 @@ const WorkplacePlay = lazy(() => import("./pages/WorkplacePlay.tsx"));
 const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrade = lazy(() => import("./pages/GaokaoGrade.tsx"));
+const GaokaoBooks = lazy(() => import("./pages/GaokaoBooks.tsx"));
 const GaokaoExam = lazy(() => import("./pages/GaokaoExam.tsx"));
 const GaokaoDeepDiagnosis = lazy(() => import("./pages/GaokaoDeepDiagnosis.tsx"));
 const China = lazy(() => import("./pages/China.tsx"));
@@ -459,6 +460,7 @@ const App = () => (
             <Route path="aihistory" element={<GaokaoHubAIHistory />} />
           </Route>
           <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/books/:group" element={<ChineseOnlyRoute><GaokaoBooks /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
           <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />

@@ -14,7 +14,7 @@
             "title": "Science and Scientists",
             "cn": "科学与科学家",
             "emoji": "🔬",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "PUTONG",
@@ -447,7 +447,7 @@
             "title": "Bridging Cultures",
             "cn": "跨文化沟通",
             "emoji": "🌉",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Reading",
@@ -880,7 +880,7 @@
             "title": "Food and Culture",
             "cn": "饮食与文化",
             "emoji": "🍜",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Dehydration",
@@ -1313,7 +1313,7 @@
             "title": "Journey Across a Vast Land",
             "cn": "穿越广袤大地",
             "emoji": "🗺️",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Desire",
@@ -1746,7 +1746,7 @@
             "title": "First Aid",
             "cn": "急救",
             "emoji": "🩹",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Streets",
@@ -2185,7 +2185,7 @@
             "title": "Art",
             "cn": "艺术",
             "emoji": "🎨",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "PUTONG",
@@ -2618,7 +2618,7 @@
             "title": "Healthy Lifestyle",
             "cn": "健康生活方式",
             "emoji": "❤️",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Ages",
@@ -3041,7 +3041,7 @@
             "title": "Environmental Protection",
             "cn": "环境保护",
             "emoji": "🌿",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Real",
@@ -3464,7 +3464,7 @@
             "title": "Adversity and Courage",
             "cn": "逆境与勇气",
             "emoji": "⛰️",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Influential",
@@ -3897,7 +3897,7 @@
             "title": "Poems",
             "cn": "诗歌",
             "emoji": "📜",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Shadow",
@@ -4326,7 +4326,7 @@
             "title": "Science Fiction",
             "cn": "科幻小说",
             "emoji": "🛸",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "PUTONG",
@@ -4759,7 +4759,7 @@
             "title": "Icons",
             "cn": "标志性人物",
             "emoji": "⭐",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Lives",
@@ -5192,7 +5192,7 @@
             "title": "Sea Exploration",
             "cn": "海洋探索",
             "emoji": "🌊",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Information",
@@ -5625,7 +5625,7 @@
             "title": "Sharing",
             "cn": "分享",
             "emoji": "🤲",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Richest",
@@ -6058,7 +6058,7 @@
             "title": "Launching Your Career",
             "cn": "开启职业生涯",
             "emoji": "🎯",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Seemed",

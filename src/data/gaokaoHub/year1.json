@@ -17,84 +17,224 @@
             "available": true,
             "vocabulary": [
               {
-                "en": "PUTONG",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "exchange",
+                "cn": "交换",
+                "emoji": "🏃"
               },
               {
-                "en": "GAOZHONG",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "lecture",
+                "cn": "讲座",
+                "emoji": "📦"
               },
               {
-                "en": "JIAOKESHU",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "register",
+                "cn": "登记",
+                "emoji": "🏃"
               },
               {
-                "en": "YINGYU",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "registration",
+                "cn": "登记",
+                "emoji": "📦"
               },
               {
-                "en": "Iinndddd",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "nationality",
+                "cn": "国籍",
+                "emoji": "📦"
               },
               {
-                "en": "ENGLISH",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "design",
+                "cn": "设计",
+                "emoji": "🏃"
               },
               {
-                "en": "Sarah",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "designer",
+                "cn": "设计者",
+                "emoji": "📦"
               },
               {
-                "en": "WORKBOOK",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "campus",
+                "cn": "校园",
+                "emoji": "📦"
               },
               {
-                "en": "Unit",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "formal",
+                "cn": "正式的",
+                "emoji": "🔤"
               },
               {
-                "en": "Listening",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "anxious",
+                "cn": "焦虑的",
+                "emoji": "🔤"
               },
               {
-                "en": "Speaking",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "annoy",
+                "cn": "使恼怒",
+                "emoji": "🏃"
               },
               {
-                "en": "People",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "annoyed",
+                "cn": "恼怒的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "frightened",
+                "cn": "害怕的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "senior",
+                "cn": "级别（或年龄）高的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "outgoing",
+                "cn": "爱交际的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "impression",
+                "cn": "印象",
+                "emoji": "📦"
+              },
+              {
+                "en": "impress",
+                "cn": "使钦佩",
+                "emoji": "🏃"
+              },
+              {
+                "en": "concentrate",
+                "cn": "集中（注意力）",
+                "emoji": "🏃"
+              },
+              {
+                "en": "experiment",
+                "cn": "实验",
+                "emoji": "📦"
+              },
+              {
+                "en": "awkward",
+                "cn": "令人尴尬的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "junior",
+                "cn": "级别（或年龄）低的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "explore",
+                "cn": "探索",
+                "emoji": "🏃"
+              },
+              {
+                "en": "confident",
+                "cn": "自信的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "confidence",
+                "cn": "信心",
+                "emoji": "📦"
+              },
+              {
+                "en": "organise",
+                "cn": "组织",
+                "emoji": "🏃"
+              },
+              {
+                "en": "organisation",
+                "cn": "组织",
+                "emoji": "📦"
+              },
+              {
+                "en": "goal",
+                "cn": "目标",
+                "emoji": "📦"
+              },
+              {
+                "en": "strategy",
+                "cn": "策略",
+                "emoji": "📦"
+              },
+              {
+                "en": "partner",
+                "cn": "同伴",
+                "emoji": "📦"
+              },
+              {
+                "en": "improve",
+                "cn": "改进",
+                "emoji": "🏃"
+              },
+              {
+                "en": "curious",
+                "cn": "好奇的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "company",
+                "cn": "公司",
+                "emoji": "📦"
+              },
+              {
+                "en": "personality",
+                "cn": "性格",
+                "emoji": "📦"
+              },
+              {
+                "en": "style",
+                "cn": "方式",
+                "emoji": "📦"
+              },
+              {
+                "en": "revise",
+                "cn": "复习",
+                "emoji": "🏃"
+              },
+              {
+                "en": "female",
+                "cn": "女（性）的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "male",
+                "cn": "男（性）的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "nation",
+                "cn": "国家",
+                "emoji": "📦"
+              },
+              {
+                "en": "sex",
+                "cn": "性别",
+                "emoji": "📦"
+              },
+              {
+                "en": "forward",
+                "cn": "向前",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Getting to Know Each Other",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Welcome Unit.",
-                    "cn": "我们来讨论Welcome Unit。"
+                    "text": "Hi! I am new here. My name is Li Hua.",
+                    "cn": "你好!我是新来的,我叫李华。"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned PUTONG today.",
-                    "cn": "好的，我今天学了必修第一册 课文词汇。"
+                    "text": "Nice to meet you, Li Hua. Are you a Grade 10 student too?",
+                    "cn": "很高兴认识你,李华。你也是高一的吗?"
                   },
                   {
                     "role": "A",
-                    "text": "And GAOZHONG is important too.",
-                    "cn": "必修第一册 课文词汇也很重要。"
+                    "text": "Yes. I feel a little anxious, but also excited.",
+                    "cn": "是的。我有点紧张,但也很兴奋。"
                   }
                 ]
               }
@@ -103,7 +243,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "40个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -141,6 +281,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -165,8 +313,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "基本句型（SV / SVO / SP）",
-            "grammarCode": "pep-r1-welcome-basic-sentences",
+            "grammarTitle": "句子基本结构（SV / SVO / SP …）",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "普 ® 通 普 通 高 中 教 科 书 高 中 教 全国优秀教材二等奖 科 书 英语 英 语 必 修 ______ GAOZHONG JIAOKESHU YINGYU 第一册 第 一 册 绿绿色色印印刷刷产产品品 定价： 元 人人教教教教材材封封面面 高高中中英英语语 必必修修一一 2200119900773300..iinndddd 11 22002222//66//77 1133::0099\n",
@@ -194,225 +342,246 @@
               }
             ],
             "reading": {
-              "passage": "Circle the pictures that describe how you felt. happy anxious excited annoyed frightened 2 Read the text quickly and draw pictures to show Han Jing's feelings on her first school day. Han Jing's World So this is it—senior high school at last! I'm not outgoing so I'm a little 7:00 a.m. anxious right now. What if no one talks to me? 9 I just had my first maths class at senior high school! The 12:30 p.m. 5:32 p.m. class was difficult, but the teacher was kind and friendly. He even told us a funny story, and everyone laughed so This afternoon, we had our chemistry much! I found most of my classmates and class in the science lab. The lab is teachers friendly and helpful. new and the lesson was great, but the guy next to me tried to talk to me the whole time.",
-              "passageCn": "（人教版必修第一册 · 教材节选）",
+              "passage": "So this is it — senior high school at last! In the morning, Han Jing felt a little anxious because she is not very outgoing. She wanted to make a good first impression, and she kept wondering whether she would make any friends. Her first maths class was difficult, but the teacher was kind and friendly. He told the class a funny story, and everyone laughed. Han Jing found most of her classmates and teachers friendly and helpful. In the afternoon, they had a chemistry class in the science lab. The lab was new and the layout was great, but the boy next to her talked the whole time, so she could not concentrate on the experiment. By the evening, Han Jing felt much better. She did not feel awkward or frightened at all. She still missed her friends from junior high school, but she believed she would make new friends here, and that there was a lot to explore at senior high school. She felt much more confident than she did in the morning, and she thought that tomorrow would be a great day.",
+              "passageCn": "Welcome Unit 课文:开学第一天的第一印象(详见课文阅读关)。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Circle the pictures that describe how you felt....\"",
+                  "q": "Why did Han Jing feel anxious in the morning?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Circle the pictures that describe how you felt."
+                    "She is not very outgoing and worried about making friends.",
+                    "She was late for class.",
+                    "She forgot her books.",
+                    "She disliked the school."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"happy anxious excited annoyed frightened 2 Read th...\"",
+                  "q": "What was her first maths class like?",
                   "opts": [
-                    "Not stated.",
-                    "happy anxious excited annoyed frightened 2 Read the text quickly and d",
-                    "Unrelated.",
-                    "Opposite meaning."
+                    "Easy and boring.",
+                    "Cancelled.",
+                    "Too noisy.",
+                    "Difficult, but the teacher was kind and friendly."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 3
                 },
                 {
-                  "q": "According to the passage: \"Han Jing's World So this is it—senior high school ...\"",
+                  "q": "Why couldn't Han Jing concentrate in the chemistry class?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Han Jing's World So this is it—senior high school at last!",
-                    "Unrelated."
+                    "The lab was too old.",
+                    "She felt sick.",
+                    "The teacher spoke too fast.",
+                    "The boy next to her talked the whole time."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"I'm not outgoing so I'm a little 7:00 a.m....\"",
-                  "opts": [
-                    "Not stated.",
-                    "I'm not outgoing so I'm a little 7:00 a.m.",
-                    "Unrelated.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 3
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FIRST IMPRESSIONS\" (PEP 必修第一册).",
-              "promptCn": "根据人教版《必修第一册》课文《FIRST IMPRESSIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "It is the start of a new term. Write a student profile about yourself (about 80 words) to introduce yourself. Include: 1) your name, age, grade and school; 2) your personality; 3) your favourite subject and how you learn best; 4) your hobbies; 5) your future plans or dreams.",
+              "promptCn": "新学期开始，请用英语写一份你自己的学生档案（约 80 词）作自我介绍，内容包括：① 姓名、年龄、年级、学校；② 性格；③ 最喜欢的科目与学习方式；④ 爱好；⑤ 未来的计划或梦想。",
+              "sampleWords": [
+                "outgoing",
+                "curious",
+                "active",
+                "personality",
+                "favourite subject",
+                "learning style",
+                "hobby",
+                "improve",
+                "goal",
+                "confident"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「PUTONG」的意思是？",
+                "q": "「外向的」对应的英文单词是？",
                 "opts": [
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项2",
-                  "选项1"
+                  "outgoing",
+                  "anxious",
+                  "awkward",
+                  "formal"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「GAOZHONG」的意思是？",
+                "q": "「好奇的」对应的英文单词是？",
                 "opts": [
-                  "必修第一册 课文词汇",
-                  "选项2",
-                  "选项3",
-                  "选项1"
+                  "curious",
+                  "senior",
+                  "female",
+                  "junior"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「JIAOKESHU」的意思是？",
+                "q": "concentrate 的中文意思是？",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "选项3",
-                  "必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「YINGYU」的意思是？",
-                "opts": [
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项2"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Iinndddd」的意思是？",
-                "opts": [
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「ENGLISH」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Sarah」的意思是？",
-                "opts": [
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1",
-                  "选项2"
+                  "集中;专心",
+                  "交换",
+                  "探索",
+                  "复习"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「WORKBOOK」的意思是？",
+                "q": "impression 的中文意思是？",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "必修第一册 课文词汇"
+                  "印象",
+                  "策略",
+                  "国籍",
+                  "公司"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「启航 · 高中新起点」相关词是？",
+                "q": "判断句子结构:All of us laughed.",
                 "opts": [
-                  "Speaking",
-                  "GAOZHONG",
-                  "Iinndddd",
-                  "PUTONG"
+                  "主谓 (SV)",
+                  "主谓宾 (SVO)",
+                  "主系表 (SP)",
+                  "主谓宾补 (SVOC)"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "判断句子结构:I miss my old friends.",
+                "opts": [
+                  "主谓宾 (SVO)",
+                  "主谓 (SV)",
+                  "主系表 (SP)",
+                  "主谓状 (SVA)"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "判断句子结构:The food smells delicious.",
+                "opts": [
+                  "主系表 (SP)",
+                  "主谓 (SV)",
+                  "主谓宾 (SVO)",
+                  "主谓宾补 (SVOC)"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "There ___ many new students in our class this term.",
+                "opts": [
+                  "are",
+                  "is",
+                  "has",
+                  "have"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "My favourite subject ___ English.",
+                "opts": [
+                  "is",
+                  "are",
+                  "am",
+                  "be"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "🔊 听句子,选出与它相符的一项",
+                "opts": [
+                  "我高中第一周有点令人困惑。",
+                  "我已经毕业了。",
+                  "我没去上学。",
+                  "我转学了。"
+                ],
+                "answer": 0,
+                "audio": "My first week at senior high school was a little confusing.",
+                "point": "听力",
+                "dim": "listening"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Circle the pictures that describe how you felt. happy anxious excited annoyed fr",
+                "audio": "Welcome to senior high school! Let us get to know each other.",
                 "opts": [
-                  "What if no one talks to me? 9 I just had my first maths class at senior ",
-                  "I'm not outgoing so I'm a little 7:00 a.m. anxious right now.",
-                  "Circle the pictures that describe how you felt. happy anxious excited an",
-                  "Han Jing's World So this is it—senior high school at last!"
+                  "欢迎来到高中!让我们互相认识一下。",
+                  "欢迎回到小学。",
+                  "请打开课本第十页。",
+                  "今天的课结束了。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Circle the pictures that describe how you felt. happy anxious excited annoyed fr",
+                "audio": "My name is Li Hua, and I am a Grade 10 student at No.2 High School.",
                 "opts": [
-                  "What if no one talks to me? 9 I just had my first maths class at senior ",
-                  "Circle the pictures that describe how you felt. happy anxious excited an",
-                  "I'm not outgoing so I'm a little 7:00 a.m. anxious right now.",
-                  "Han Jing's World So this is it—senior high school at last!"
+                  "我叫李华,是第二中学高一年级学生。",
+                  "我叫李华,是一名老师。",
+                  "我住在第二中学附近。",
+                  "我喜欢第二中学的食堂。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Circle the pictures that describe how you felt. happy anxious excited annoyed fr",
+                "audio": "I felt a little anxious on my first day at the new school.",
                 "opts": [
-                  "Circle the pictures that describe how you felt. happy anxious excited an",
-                  "I'm not outgoing so I'm a little 7:00 a.m. anxious right now.",
-                  "Han Jing's World So this is it—senior high school at last!",
-                  "What if no one talks to me? 9 I just had my first maths class at senior "
+                  "开学第一天我有点焦虑。",
+                  "开学第一天我很无聊。",
+                  "开学第一天我迟到了。",
+                  "开学第一天我很开心。"
                 ],
-                "answer": 1
+                "answer": 0
               },
               {
-                "audio": "Circle the pictures that describe how you felt. happy anxious excited annoyed fr",
+                "audio": "I learn best by doing experiments myself.",
                 "opts": [
-                  "Circle the pictures that describe how you felt. happy anxious excited an",
-                  "Han Jing's World So this is it—senior high school at last!",
-                  "I'm not outgoing so I'm a little 7:00 a.m. anxious right now.",
-                  "What if no one talks to me? 9 I just had my first maths class at senior "
+                  "我通过自己做实验学得最好。",
+                  "我喜欢听音乐。",
+                  "我从不做实验。",
+                  "老师帮我做实验。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Circle the pictures that describe how you felt. happy anxious excited annoyed fr",
+                "audio": "She is an outgoing and curious person.",
                 "opts": [
-                  "Circle the pictures that describe how you felt. happy anxious excited an",
-                  "The 12:30 p.m. 5:32 p.m. class was difficult, but the teacher was kind a",
-                  "Han Jing's World So this is it—senior high school at last!",
-                  "I'm not outgoing so I'm a little 7:00 a.m. anxious right now."
+                  "她性格外向、好奇心强。",
+                  "她很安静、害羞。",
+                  "她不喜欢交朋友。",
+                  "她对什么都不感兴趣。"
                 ],
-                "answer": 1
+                "answer": 0
+              },
+              {
+                "audio": "Making a good first impression is really important.",
+                "opts": [
+                  "留下好的第一印象很重要。",
+                  "第一印象并不重要。",
+                  "考试很重要。",
+                  "准时上学很重要。"
+                ],
+                "answer": 0
               }
+            ],
+            "grammarCodes": [
+              "wu.01",
+              "wu.02",
+              "wu.03"
             ]
           },
           {
@@ -426,93 +595,232 @@
             "available": true,
             "vocabulary": [
               {
-                "en": "Hello",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "teenage",
+                "cn": "十几岁的",
+                "emoji": "🧑"
               },
               {
-                "en": "Everyone",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "teenager",
+                "cn": "",
+                "emoji": "🧑"
               },
               {
-                "en": "Listen",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "ballet",
+                "cn": "芭蕾舞",
+                "emoji": "🩰"
               },
               {
-                "en": "Conversation",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "volunteer",
+                "cn": "志愿者",
+                "emoji": "🙋"
               },
               {
-                "en": "Complete",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "debate",
+                "cn": "辩论",
+                "emoji": "🗣️"
               },
               {
-                "en": "Table",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "prefer",
+                "cn": "较喜欢",
+                "emoji": "❤️"
               },
               {
-                "en": "REGISTRATION",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "content",
+                "cn": "内容",
+                "emoji": "📋"
               },
               {
-                "en": "Nationality",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "movement",
+                "cn": "动作",
+                "emoji": "🤸"
               },
               {
-                "en": "Grade",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "greenhouse",
+                "cn": "温室",
+                "emoji": "🌱"
               },
               {
-                "en": "Email",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "suitable",
+                "cn": "合适的",
+                "emoji": "✅"
               },
               {
-                "en": "Female",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "actually",
+                "cn": "事实上",
+                "emoji": "💡"
               },
               {
-                "en": "Meets",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "challenge",
+                "cn": "挑战",
+                "emoji": "⛰️"
+              },
+              {
+                "en": "title",
+                "cn": "名称",
+                "emoji": "🔖"
+              },
+              {
+                "en": "topic",
+                "cn": "话题",
+                "emoji": "💬"
+              },
+              {
+                "en": "freshman",
+                "cn": "",
+                "emoji": "🆕"
+              },
+              {
+                "en": "confusing",
+                "cn": "难以理解的",
+                "emoji": "😵"
+              },
+              {
+                "en": "confuse",
+                "cn": "使糊涂",
+                "emoji": "😵"
+              },
+              {
+                "en": "confused",
+                "cn": "糊涂的",
+                "emoji": "😕"
+              },
+              {
+                "en": "fluent",
+                "cn": "",
+                "emoji": "🎤"
+              },
+              {
+                "en": "graduate",
+                "cn": "毕业",
+                "emoji": "🎓"
+              },
+              {
+                "en": "recommend",
+                "cn": "建议",
+                "emoji": "👍"
+              },
+              {
+                "en": "advanced",
+                "cn": "高级的",
+                "emoji": "⬆️"
+              },
+              {
+                "en": "advance",
+                "cn": "前进",
+                "emoji": "➡️"
+              },
+              {
+                "en": "literature",
+                "cn": "文学",
+                "emoji": "📚"
+              },
+              {
+                "en": "extra-curricular",
+                "cn": "课外的",
+                "emoji": "🎭"
+              },
+              {
+                "en": "extra",
+                "cn": "额外的",
+                "emoji": "➕"
+              },
+              {
+                "en": "obviously",
+                "cn": "显然",
+                "emoji": "👀"
+              },
+              {
+                "en": "quit",
+                "cn": "停止",
+                "emoji": "🛑"
+              },
+              {
+                "en": "responsible",
+                "cn": "负责的",
+                "emoji": "🫡"
+              },
+              {
+                "en": "responsibility",
+                "cn": "责任",
+                "emoji": "📌"
+              },
+              {
+                "en": "solution",
+                "cn": "解决办法",
+                "emoji": "🔑"
+              },
+              {
+                "en": "schedule",
+                "cn": "工作计划",
+                "emoji": "📅"
+              },
+              {
+                "en": "editor",
+                "cn": "主编",
+                "emoji": "✏️"
+              },
+              {
+                "en": "adventure",
+                "cn": "冒险",
+                "emoji": "🗺️"
+              },
+              {
+                "en": "youth",
+                "cn": "青年时期",
+                "emoji": "🌟"
+              },
+              {
+                "en": "survival",
+                "cn": "生存",
+                "emoji": "🏕️"
+              },
+              {
+                "en": "expert",
+                "cn": "专家",
+                "emoji": "🎯"
+              },
+              {
+                "en": "behaviour",
+                "cn": "行为",
+                "emoji": "🚸"
+              },
+              {
+                "en": "generation",
+                "cn": "一代",
+                "emoji": "👨‍👩‍👧"
+              },
+              {
+                "en": "attract",
+                "cn": "吸引",
+                "emoji": "🧲"
+              },
+              {
+                "en": "focus",
+                "cn": "集中",
+                "emoji": "🔍"
+              },
+              {
+                "en": "addicted",
+                "cn": "有瘾的",
+                "emoji": "🎮"
+              },
+              {
+                "en": "addict",
+                "cn": "对…入迷的人",
+                "emoji": "🎮"
+              },
+              {
+                "en": "adult",
+                "cn": "成年人",
+                "emoji": "🧑‍💼"
               }
             ],
-            "dialogues": [
-              {
-                "title": "Reading and Thinking",
-                "lines": [
-                  {
-                    "role": "A",
-                    "text": "Let's discuss Teenage Life.",
-                    "cn": "我们来讨论Teenage Life。"
-                  },
-                  {
-                    "role": "B",
-                    "text": "Sure. I learned Hello today.",
-                    "cn": "好的，我今天学了必修第一册 课文词汇。"
-                  },
-                  {
-                    "role": "A",
-                    "text": "And Everyone is important too.",
-                    "cn": "必修第一册 课文词汇也很重要。"
-                  }
-                ]
-              }
-            ],
+            "dialogues": [],
             "stages": [
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "44个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -536,7 +844,7 @@
               {
                 "id": "s4",
                 "title": "语法专项",
-                "subtitle": "名词短语与形容词短语",
+                "subtitle": "名词/形容词/副词短语",
                 "icon": "🧩",
                 "type": "grammar",
                 "time": "12分钟"
@@ -547,6 +855,14 @@
                 "subtitle": "阅读理解",
                 "icon": "📖",
                 "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
                 "time": "8分钟"
               },
               {
@@ -574,278 +890,411 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "名词短语与形容词短语",
-            "grammarCode": "pep-r1-u1-noun-phrases",
+            "grammarTitle": "名词短语 / 形容词短语 / 副词短语",
+            "grammarCode": null,
             "grammarQuiz": [
               {
-                "q": "I’d ______ to have a student ID card, please.\n\n（名词短语与形容词短语 · 教材原句）",
+                "q": "We should respect ____.",
                 "opts": [
-                  "like",
-                  "please",
-                  "Jackson",
-                  "UK"
+                  "our debate teacher",
+                  "very polite",
+                  "quite often",
+                  "afraid of failure"
                 ],
                 "answer": 0,
-                "point": "名词短语与形容词短语",
+                "point": "名词短语 Noun Phrase",
                 "dim": "grammar"
               },
               {
-                "q": "B Hi, I’m Max ______.\n\n（名词短语与形容词短语 · 教材原句）",
+                "q": "The school adviser helped me choose ____.",
                 "opts": [
-                  "Jackson",
-                  "please",
-                  "UK",
-                  "everyone"
+                  "the suitable courses",
+                  "very suitable",
+                  "quite easily",
+                  "easy to learn"
                 ],
                 "answer": 0,
-                "point": "名词短语与形容词短语",
+                "point": "名词短语 Noun Phrase",
                 "dim": "grammar"
               },
               {
-                "q": "I’m an exchange student ______ the UK.\n\n（名词短语与形容词短语 · 教材原句）",
+                "q": "____ is a big challenge for freshmen.",
                 "opts": [
-                  "from",
-                  "please",
-                  "Jackson",
-                  "UK"
+                  "The first week",
+                  "Quite hard",
+                  "Very busy",
+                  "Hard to manage"
                 ],
                 "answer": 0,
-                "point": "名词短语与形容词短语",
+                "point": "名词短语 Noun Phrase",
                 "dim": "grammar"
               },
               {
-                "q": "C Hello, ______!\n\n（名词短语与形容词短语 · 教材原句）",
+                "q": "句子 \"The first week was a little confusing.\" 中,\"The first week\" 作____。",
                 "opts": [
-                  "everyone",
-                  "please",
-                  "Jackson",
-                  "UK"
+                  "主语",
+                  "宾语",
+                  "表语",
+                  "状语"
                 ],
                 "answer": 0,
-                "point": "名词短语与形容词短语",
+                "point": "名词短语 Noun Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "Many teenagers are ____ computer games.",
+                "opts": [
+                  "addicted to",
+                  "addicted in",
+                  "addicted with",
+                  "addicted at"
+                ],
+                "answer": 0,
+                "point": "形容词短语 Adjective Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "I'm really ____ English literature.",
+                "opts": [
+                  "interested in",
+                  "interested on",
+                  "interested at",
+                  "interested for"
+                ],
+                "answer": 0,
+                "point": "形容词短语 Adjective Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is ____ to make a workable schedule.",
+                "opts": [
+                  "important",
+                  "importantly",
+                  "importance",
+                  "to import"
+                ],
+                "answer": 0,
+                "point": "形容词短语 Adjective Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "句子 \"The first week was a little confusing.\" 中,\"a little confusing\" 作____。",
+                "opts": [
+                  "表语",
+                  "主语",
+                  "宾语",
+                  "定语"
+                ],
+                "answer": 0,
+                "point": "形容词短语 Adjective Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "You'll finish the homework ____.",
+                "opts": [
+                  "pretty soon",
+                  "very busy",
+                  "a long time",
+                  "hard work"
+                ],
+                "answer": 0,
+                "point": "副词短语 Adverb Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "Please read the new words ____.",
+                "opts": [
+                  "aloud and clearly",
+                  "loud and clear",
+                  "a clear voice",
+                  "very clear"
+                ],
+                "answer": 0,
+                "point": "副词短语 Adverb Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "I'll improve ____ so I can make the team.",
+                "opts": [
+                  "on my own",
+                  "my own effort",
+                  "very independent",
+                  "work alone"
+                ],
+                "answer": 0,
+                "point": "副词短语 Adverb Phrase",
+                "dim": "grammar"
+              },
+              {
+                "q": "句子 \"Linda thinks and speaks quite quickly.\" 中,\"quite quickly\" 作____。",
+                "opts": [
+                  "状语",
+                  "表语",
+                  "宾语",
+                  "定语"
+                ],
+                "answer": 0,
+                "point": "副词短语 Adverb Phrase",
                 "dim": "grammar"
               }
             ],
             "reading": {
-              "passage": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa My name is Ann Wells and I'm a Grade I'm Thando Gowon. I'm a Grade 10 an active person and I love sports. I often ask good, think fast, and play hard. You'll questions, but I learn best by doing. My never see me without a book or a pen. favourite subject is physics. Dancing and If I'm not in class, I'm either in the library skating are my hobbies, and I also like to or in the computer lab. I plan to become an I play computer games if I'm not busy engineer in the future. studying. My dream is to start my own IT company! 1 What is Ann like?",
-              "passageCn": "（人教版必修第一册 · 教材节选）",
+              "passage": "Hi! My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge, and my first week was a little confusing. First, I had to think carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate. My adviser also recommended that I should sign up for advanced literature, because I like English and I'm good at it. I had to choose extra-curricular activities, too. I tried to join the school football team, but the coach told me that I didn't play well enough. Obviously, I was unhappy, but I won't quit. I'll find a way to improve on my own so that I can make the team next year. Instead, I joined a volunteer club. Every Wednesday, we hand out food to homeless people in the community. I know I'll have to study harder and get used to being responsible for a lot more. Still, I'm happy to be here, and I'll be well prepared for whatever comes in the future.",
+              "passageCn": "嗨!我叫 Adam,是一名高一新生。从初中升入高中是个很大的挑战,开学第一周有点令人困惑。首先,我得仔细考虑选哪些课程,学业顾问帮我选了合适的:数学、英语、化学、世界历史和语文。我知道汉语很难,但希望毕业时能说得流利。顾问还建议我报名高级文学,因为我喜欢英语也擅长它。我也得选课外活动:我想加入校足球队,但教练说我踢得不够好。我虽然不开心,但我不会放弃,会自己想办法提高,争取明年进队。于是我改加入了志愿者社团,每周三给社区里无家可归的人发放食物。我知道以后要更努力学习,承担更多责任。不过我很高兴来到这里,会为将来做好准备。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Ann, 15 Thando, 16 Lakeside High School South Hill...\"",
+                  "q": "Why was Adam's first week of senior high school \"a little confusing\"?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA Sou",
-                    "Unrelated."
+                    "He had to make many new choices, such as courses and activities.",
+                    "He could not find his classroom.",
+                    "He did not know any of the teachers.",
+                    "He was new to the city."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
+                  "answer": 0,
+                  "point": "阅读理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "According to the passage: \"I'm a Grade 10 an active person and I love sports....\"",
+                  "q": "Why did the adviser recommend advanced literature to Adam?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "I'm a Grade 10 an active person and I love sports.",
-                    "Unrelated."
+                    "Because Adam likes English and is good at it.",
+                    "Because it is an easy course.",
+                    "Because Chinese is too difficult.",
+                    "Because the football team needed him."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
+                  "answer": 0,
+                  "point": "阅读理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "According to the passage: \"I often ask good, think fast, and play hard....\"",
+                  "q": "What does \"make the team\" in the passage mean?",
                   "opts": [
-                    "Unrelated.",
-                    "I often ask good, think fast, and play hard.",
-                    "Opposite meaning.",
-                    "Not stated."
+                    "To be chosen as a member of the team.",
+                    "To set up a new team.",
+                    "To beat the other team.",
+                    "To train the team."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
+                  "answer": 0,
+                  "point": "阅读理解",
                   "dim": "reading"
                 },
                 {
-                  "q": "According to the passage: \"You'll questions, but I learn best by doing....\"",
+                  "q": "What can we learn about Adam from the passage?",
                   "opts": [
-                    "Not stated.",
-                    "Unrelated.",
-                    "You'll questions, but I learn best by doing.",
-                    "Opposite meaning."
+                    "He stays positive and does not give up easily.",
+                    "He regrets coming to senior high school.",
+                    "He dislikes all his courses.",
+                    "He has given up sports for ever."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
+                  "answer": 0,
+                  "point": "阅读理解",
                   "dim": "reading"
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"必修第一册 · Reading 2\" (PEP 必修第一册).",
-              "promptCn": "根据人教版《必修第一册》课文《必修第一册 · Reading 2》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Your classmate Li Hua spends too much time playing computer games and cannot focus on his studies. Write him a letter of advice (about 80 words). Your letter should: 1) show that you understand his problem and how he feels; 2) give at least two pieces of advice, each with a reason; 3) end with a few words of encouragement.",
+              "promptCn": "你的同学李华最近沉迷电脑游戏、无法专心学习,向你求助。请用英语给他写一封建议信(约80词),内容包括:① 点明你了解他的问题与感受;② 给出至少两条建议及理由;③ 以鼓励的话收尾。",
+              "sampleWords": [
+                "worried",
+                "focus on",
+                "schedule",
+                "hobby",
+                "encourage",
+                "relax",
+                "manage",
+                "responsible",
+                "behaviour"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Hello」的意思是？",
+                "q": "「青少年」对应的英文单词是？",
                 "opts": [
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项3"
+                  "adult",
+                  "teenager",
+                  "editor",
+                  "expert"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Everyone」的意思是？",
+                "q": "「挑战」对应的英文单词是？",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项2"
+                  "topic",
+                  "movement",
+                  "challenge",
+                  "schedule"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Listen」的意思是？",
+                "q": "「流利的」对应的英文单词是？",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "必修第一册 课文词汇"
+                  "confused",
+                  "suitable",
+                  "advanced",
+                  "fluent"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Conversation」的意思是？",
+                "q": "「推荐；建议」对应的英文单词是？",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项2"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Complete」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项2"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Table」的意思是？",
-                "opts": [
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "recommend",
+                  "quit",
+                  "attract",
+                  "graduate"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「REGISTRATION」的意思是？",
+                "q": "「负责的」对应的英文单词是？",
                 "opts": [
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1"
+                  "curious",
+                  "responsible",
+                  "obvious",
+                  "suitable"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Nationality」的意思是？",
+                "q": "Many teenagers are ____ computer games.",
                 "opts": [
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项2",
-                  "选项1"
+                  "addicted in",
+                  "addicted to",
+                  "addicted with",
+                  "addicted at"
                 ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "形容词短语",
+                "dim": "grammar"
               },
               {
-                "q": "本单元「青少年生活」相关词是？",
+                "q": "The teacher is always ____ his students.",
                 "opts": [
-                  "Grade",
-                  "Conversation",
-                  "Everyone",
-                  "Hello"
+                  "patient to",
+                  "patient for",
+                  "patient with",
+                  "patient at"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 2,
+                "point": "形容词短语",
+                "dim": "grammar"
+              },
+              {
+                "q": "We should respect ____.",
+                "opts": [
+                  "our debate teacher",
+                  "very polite",
+                  "quite often",
+                  "afraid of failure"
+                ],
+                "answer": 0,
+                "point": "名词短语",
+                "dim": "grammar"
+              },
+              {
+                "q": "In 'The Freshman Challenge', what did Adam join instead of the football team?",
+                "opts": [
+                  "A volunteer club",
+                  "The ballet club",
+                  "A debate team",
+                  "A music band"
+                ],
+                "answer": 0,
+                "point": "阅读理解",
+                "dim": "reading"
+              },
+              {
+                "q": "What is a good way to manage your time at senior high?",
+                "opts": [
+                  "Play more games",
+                  "Make a schedule",
+                  "Skip your homework",
+                  "Sleep all day"
+                ],
+                "answer": 1,
+                "point": "阅读理解",
+                "dim": "reading"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "My first week at senior high was a little confusing.",
                 "opts": [
-                  "I often ask good, think fast, and play hard.",
-                  "You'll questions, but I learn best by doing.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "I'm a Grade 10 an active person and I love sports."
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
-                "opts": [
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "You'll questions, but I learn best by doing.",
-                  "I often ask good, think fast, and play hard."
+                  "我高中第一周有点令人困惑。",
+                  "我高中第一周很无聊。",
+                  "我没去上学。",
+                  "我第一周就毕业了。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "I prefer reading to playing computer games.",
                 "opts": [
-                  "You'll questions, but I learn best by doing.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "I often ask good, think fast, and play hard."
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
-                "opts": [
-                  "I often ask good, think fast, and play hard.",
-                  "You'll questions, but I learn best by doing.",
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South"
+                  "我喜欢玩电脑游戏。",
+                  "比起玩电脑游戏我更喜欢读书。",
+                  "我讨厌读书。",
+                  "我两者都不喜欢。"
                 ],
                 "answer": 1
               },
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "You should make a schedule to manage your time.",
                 "opts": [
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "I often ask good, think fast, and play hard.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "My never see me without a book or a pen. favourite subject is physics."
+                  "你应该多玩游戏。",
+                  "时间不重要。",
+                  "你应该制定计划来管理时间。",
+                  "你不需要计划。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Don't be afraid of making mistakes.",
+                "opts": [
+                  "错误很可怕。",
+                  "不要再犯错。",
+                  "别再尝试了。",
+                  "不要害怕犯错。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "I joined the volunteer club to help homeless people.",
+                "opts": [
+                  "我加入志愿者社团帮助无家可归的人。",
+                  "我退出了社团。",
+                  "我在打篮球。",
+                  "我不喜欢帮助别人。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "He is good at maths and science.",
+                "opts": [
+                  "他讨厌数学。",
+                  "他擅长数学和科学。",
+                  "他不会科学。",
+                  "他喜欢艺术。"
+                ],
+                "answer": 1
               }
+            ],
+            "grammarCodes": [
+              "r1u1.01",
+              "r1u1.02",
+              "r1u1.03"
             ]
           },
           {
@@ -856,7 +1305,7 @@
             "title": "Travelling Around",
             "cn": "环球旅行",
             "emoji": "✈️",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Adviser",
@@ -1265,7 +1714,7 @@
             "title": "Sports and Fitness",
             "cn": "运动与健康",
             "emoji": "⚽",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Group",
@@ -1674,7 +2123,7 @@
             "title": "Natural Disasters",
             "cn": "自然灾害",
             "emoji": "🌋",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Quiz",
@@ -2083,7 +2532,7 @@
             "title": "Languages Around the World",
             "cn": "世界语言",
             "emoji": "🌍",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "IMPRESSIONS",
@@ -2498,7 +2947,7 @@
             "title": "Cultural Heritage",
             "cn": "文化遗产",
             "emoji": "🏛️",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "PUTONG",
@@ -2931,7 +3380,7 @@
             "title": "Wildlife Protection",
             "cn": "野生动物保护",
             "emoji": "🐼",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Together",
@@ -3364,7 +3813,7 @@
             "title": "The Internet",
             "cn": "互联网",
             "emoji": "💻",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Means",
@@ -3797,7 +4246,7 @@
             "title": "History and Traditions",
             "cn": "历史与传统",
             "emoji": "📜",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Mountain",
@@ -4230,7 +4679,7 @@
             "title": "Music",
             "cn": "音乐",
             "emoji": "🎵",
-            "available": true,
+            "available": false,
             "vocabulary": [
               {
                 "en": "Grew",

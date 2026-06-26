@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
+import listenWordAudio from "@/data/primaryHub/listenWordAudio.json";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, readUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak, hubSpeakAtSpeed, isOClockVocabToken, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
@@ -975,11 +976,13 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
     if (!unit) return [];
     const count = getListenWordConfig(`g${grade}` as GradeKey).questionCount;
     const shuffled = shuffleArray([...unit.vocabulary]);
+    const audioMap = listenWordAudio as Record<string, string>;
     return shuffled.slice(0, count).map((target) => {
       const distractors = shuffleArray(unit.vocabulary.filter((v) => v.en !== target.en)).slice(0, 3);
       const allOpts = shuffleArray([target, ...distractors]);
       return {
         audio: target.en,
+        audioUrl: audioMap[`${grade}|${target.en}`], // 预生成秒播,缺则 undefined → 关卡回退实时 TTS
         opts: allOpts.map((o) => ({ en: o.en, cn: o.cn })),
         answer: allOpts.findIndex((o) => o.en === target.en),
         point: "听力",

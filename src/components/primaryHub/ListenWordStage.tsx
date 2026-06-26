@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { toHubTtsText } from "@/lib/primaryHub/speech";
 import {
   speakKid,
+  speakFromUrl,
   stopSpeaking,
   prefetchTTSBatchKid,
   unlockAudioSync,
@@ -18,6 +19,8 @@ export type ListenWordOption = { en: string; cn: string };
 export type ListenWordQuestion = {
   /** English word that gets spoken aloud. */
   audio: string;
+  /** Pre-generated CF 音频 URL(el:lily,各年级语速)。有则秒播,缺则回退实时 TTS。 */
+  audioUrl?: string;
   opts: ListenWordOption[];
   answer: number;
   point?: string;
@@ -71,7 +74,7 @@ export default function ListenWordStage({
   // ---- Speech: ElevenLabs (kid voice, content-addressed cache → no repeat cost),
   // with Web Speech fallback so a TTS error never blocks the kid. ----
   const playWord = useCallback(
-    (word: string) => {
+    (word: string, audioUrl?: string) => {
       if (!word) return;
       stopSpeaking();
       setSpeaking(true);
@@ -83,6 +86,13 @@ export default function ListenWordStage({
           setSpeaking(false);
         }
       };
+      // 优先:预生成 CF 音频(固定文件、秒播,走解锁元素绕开实时 TTS 抽风)。
+      if (audioUrl) {
+        speakFromUrl(audioUrl).then(done).catch(done);
+        after(2500, done);
+        return;
+      }
+      // 回退:无预生成 URL(如后加的词)→ 实时 ElevenLabs,失败再 Web Speech。
       speakKid(spoken, { grade, speed: cfg.speechRate })
         .then(done)
         .catch((err) => {
@@ -97,12 +107,11 @@ export default function ListenWordStage({
     [cfg.speechRate, grade],
   );
 
-  // Warm the ElevenLabs cache for every prompt word on entry (avoids first-play lag/fail).
+  // Warm the ElevenLabs cache only for words WITHOUT a pre-generated URL (those play
+  // straight from CF). url-backed words need no runtime synthesis, so skip them.
   useEffect(() => {
-    prefetchTTSBatchKid(
-      questions.map((item) => toHubTtsText(item.audio)),
-      { grade, speed: cfg.speechRate },
-    );
+    const needWarm = questions.filter((item) => !item.audioUrl).map((item) => toHubTtsText(item.audio));
+    if (needWarm.length) prefetchTTSBatchKid(needWarm, { grade, speed: cfg.speechRate });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -134,7 +143,7 @@ export default function ListenWordStage({
   // Chrome autoplay policy). No re-play on a wrong pick — there is nothing to retype.
   useEffect(() => {
     if (!started || !q) return;
-    const id = window.setTimeout(() => playWord(q.audio), 250);
+    const id = window.setTimeout(() => playWord(q.audio, q.audioUrl), 250);
     timers.current.push(id);
     return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -223,7 +232,7 @@ export default function ListenWordStage({
         <button
           type="button"
           className="mx-auto grid size-16 place-items-center rounded-full bg-[#378ADD] text-2xl text-white shadow-md disabled:opacity-60"
-          onClick={() => playWord(q.audio)}
+          onClick={() => playWord(q.audio, q.audioUrl)}
           disabled={speaking}
         >
           {speaking ? "🔈" : "🔊"}

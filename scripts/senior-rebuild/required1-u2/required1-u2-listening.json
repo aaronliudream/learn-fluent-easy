@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Travelling Around",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修一 Unit 2 同主题听力(订机票/秘鲁见闻/酒店入住/爱徒步/城市问路/旅行贴士)。用词限 U2/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "WU 听力·对话 Booking a Flight",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Clerk: Good morning. How can I help you?",
+        "Tom: Hi, I'd like to book a flight to Lima next month.",
+        "Clerk: Sure. When would you like to leave?",
+        "Tom: On the fifteenth, in the morning if possible.",
+        "Clerk: There's a flight at nine. It costs 600 dollars.",
+        "Tom: That's fine. Do I need a visa for Peru?",
+        "Clerk: Yes, you should apply for one early.",
+        "Tom: OK, thank you very much."
+      ],
+      "translation_cn": "Tom 想订下月去利马的机票;职员问出发日期,Tom 要15号上午;有班9点的、600美元;Tom 问秘鲁要不要签证,职员说要、且要早申请;Tom 道谢。",
+      "questions": [
+        {
+          "stem": "Where does Tom want to fly to?",
+          "options": [
+            "Lima.",
+            "Paris.",
+            "London.",
+            "Tokyo."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does Tom want to leave?",
+          "options": [
+            "On the fifth, at night.",
+            "On the fifteenth, in the morning.",
+            "Next week.",
+            "Today."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How much is the flight?",
+          "options": [
+            "600 dollars.",
+            "60 dollars.",
+            "1,600 dollars.",
+            "It's free."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom ask about?",
+          "options": [
+            "Where to eat.",
+            "Whether he needs a visa.",
+            "How to drive.",
+            "The hotel price."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the clerk advise about the visa?",
+          "options": [
+            "Forget about it.",
+            "Buy it on the plane.",
+            "Apply for it early.",
+            "Ask the hotel."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "WU 听力·短文 My Trip to Peru",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Last summer I visited Peru with my family.",
+        "We flew to Lima and then took a train into the mountains.",
+        "Our main destination was Machu Picchu, an ancient city of the Inca.",
+        "We hiked up a narrow path to reach it.",
+        "The view from the top was amazing, and I will never forget it."
+      ],
+      "translation_cn": "去年夏天我和家人去了秘鲁;先飞到利马,再坐火车进山;主要目的地是印加古城马丘比丘;我们沿狭窄小路爬上去;山顶的景色令人惊叹,我永远忘不了。",
+      "questions": [
+        {
+          "stem": "When did the speaker visit Peru?",
+          "options": [
+            "Last winter.",
+            "Last week.",
+            "Two years ago.",
+            "Last summer."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did they get into the mountains?",
+          "options": [
+            "By train.",
+            "By boat.",
+            "On foot only.",
+            "By bike."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was their main destination?",
+          "options": [
+            "Lima airport.",
+            "Machu Picchu.",
+            "A beach.",
+            "A shopping mall."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did they reach the ancient city?",
+          "options": [
+            "They drove a car.",
+            "They took a plane.",
+            "They hiked up a narrow path.",
+            "They swam across a river."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did the speaker feel about the view?",
+          "options": [
+            "It was boring.",
+            "It was frightening.",
+            "It was disappointing.",
+            "It was amazing and unforgettable."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "WU 听力·对话 Checking In at the Hotel",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Guest: Hello, I have a booking under the name Green.",
+        "Clerk: Welcome. Yes, a room for three nights.",
+        "Guest: That's right. Could I have a room with a view?",
+        "Clerk: Of course. Room 502 looks out over the lake.",
+        "Guest: Wonderful. What time is breakfast?",
+        "Clerk: From seven to nine in the morning.",
+        "Guest: Great. And when do we have to check out?",
+        "Clerk: Before noon on the last day. Here is your key."
+      ],
+      "translation_cn": "客人以 Green 的名字订了三晚;想要带景观的房间;职员给 502、能看到湖;问早餐时间,7点到9点;问几点退房,最后一天中午前;给钥匙。",
+      "questions": [
+        {
+          "stem": "How many nights is the booking for?",
+          "options": [
+            "Three nights.",
+            "One night.",
+            "Five nights.",
+            "Seven nights."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of room does the guest ask for?",
+          "options": [
+            "A room near the kitchen.",
+            "A room with a view.",
+            "The cheapest room.",
+            "A room with no windows."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can the guest see from Room 502?",
+          "options": [
+            "A car park.",
+            "A factory.",
+            "The lake.",
+            "Nothing."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When is breakfast served?",
+          "options": [
+            "All day.",
+            "Only at noon.",
+            "In the evening.",
+            "From seven to nine in the morning."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When must the guest check out?",
+          "options": [
+            "Before noon on the last day.",
+            "At midnight.",
+            "Any time.",
+            "After three days of extra stay."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "WU 听力·短文 Why I Love Hiking",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "My favourite way to travel is hiking.",
+        "I like to walk slowly and enjoy the quiet of the mountains.",
+        "Hiking is good for my health and clears my mind.",
+        "Sometimes the path is steep and my bag feels heavy.",
+        "But the amazing views at the top are always worth it."
+      ],
+      "translation_cn": "我最喜欢的旅行方式是徒步;喜欢慢慢走、享受山里的宁静;徒步有益健康、能让头脑放空;有时路陡、背包很重;但山顶的美景总是值得的。",
+      "questions": [
+        {
+          "stem": "What is the speaker's favourite way to travel?",
+          "options": [
+            "Flying.",
+            "Hiking.",
+            "Driving.",
+            "Sailing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does the speaker like to walk slowly?",
+          "options": [
+            "Because walking is hard.",
+            "To save money.",
+            "To enjoy the quiet of the mountains.",
+            "Because of the traffic."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one benefit of hiking the speaker mentions?",
+          "options": [
+            "It costs a lot.",
+            "It is always easy.",
+            "It needs no walking.",
+            "It is good for health and the mind."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say can be difficult?",
+          "options": [
+            "The steep path and heavy bag.",
+            "Finding a plane.",
+            "Speaking the language.",
+            "Booking a hotel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What makes the difficulty worth it?",
+          "options": [
+            "The money saved.",
+            "The amazing views at the top.",
+            "The free food.",
+            "The short distance."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "WU 听力·对话 Asking for Directions",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Visitor: Excuse me, how can I get to the old castle?",
+        "Local: It's not far. Walk straight along this street.",
+        "Visitor: And then?",
+        "Local: Turn left at the bank, and you'll see a narrow path.",
+        "Visitor: Should I take a bus?",
+        "Local: No need. It's only ten minutes on foot.",
+        "Visitor: Great. Thank you so much for your help.",
+        "Local: You're welcome. Enjoy the view from the top!"
+      ],
+      "translation_cn": "游客问怎么去古堡;当地人说不远,沿这条街直走;然后在银行左转,会看到一条窄路;游客问要不要坐公交,当地人说不用,步行只要十分钟;游客道谢,当地人让他好好欣赏山顶景色。",
+      "questions": [
+        {
+          "stem": "Where does the visitor want to go?",
+          "options": [
+            "The airport.",
+            "The hospital.",
+            "The old castle.",
+            "The train station."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should the visitor do at the bank?",
+          "options": [
+            "Turn right.",
+            "Go back.",
+            "Wait for a bus.",
+            "Turn left."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Does the visitor need to take a bus?",
+          "options": [
+            "No, it's only ten minutes on foot.",
+            "Yes, it's very far.",
+            "Yes, there is no path.",
+            "Only at night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long does it take to walk there?",
+          "options": [
+            "About two hours.",
+            "About ten minutes.",
+            "A whole day.",
+            "Thirty seconds."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the local person wish the visitor?",
+          "options": [
+            "To buy a ticket.",
+            "To drive carefully.",
+            "To enjoy the view from the top.",
+            "To learn the language."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "WU 听力·短文 A Tip for Travellers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who loves travelling.",
+        "Before you leave, learn a few words of the local language.",
+        "Even just \"hello\" and \"thank you\" can make a big difference.",
+        "Local people are always pleased when visitors make the effort.",
+        "A few kind words often open the door to new friends."
+      ],
+      "translation_cn": "给爱旅行的人一个小贴士:出发前学几句当地语言;哪怕只是\"你好\"和\"谢谢\"也大不一样;当地人见到游客努力尝试总是很高兴;几句友善的话常能为你打开结识新朋友的大门。",
+      "questions": [
+        {
+          "stem": "What is the tip about?",
+          "options": [
+            "Buying cheap tickets.",
+            "Packing light.",
+            "Avoiding strangers.",
+            "Learning a few words of the local language."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which words does the speaker give as examples?",
+          "options": [
+            "\"Hello\" and \"thank you\".",
+            "\"Yes\" and \"no\".",
+            "\"Stop\" and \"go\".",
+            "\"Up\" and \"down\"."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do local people feel when visitors try?",
+          "options": [
+            "Angry.",
+            "Pleased.",
+            "Bored.",
+            "Afraid."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can a few kind words do?",
+          "options": [
+            "Cost a lot of money.",
+            "Ruin the trip.",
+            "Help you make new friends.",
+            "Make people leave."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only pilots.",
+            "Only children.",
+            "Only hotel workers.",
+            "Anyone who loves travelling."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

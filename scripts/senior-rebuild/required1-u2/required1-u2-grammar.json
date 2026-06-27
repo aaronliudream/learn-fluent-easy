@@ -1,0 +1,746 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "grammar_title": "谈论将来:be going to / will / 现在进行时表将来",
+  "source": "人教版2019必修一 Unit 2 Discovering Useful Structures:Talk about your future travel plans(将来时表达)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "be going to(计划打算 + 有迹象的预测)",
+      "overview": "be going to do 表示已定的计划/打算,或根据现有迹象作出的预测(Look at the clouds! It is going to rain.)。"
+    },
+    {
+      "code": "u2.02",
+      "point": "will(将来 / 临时决定 / 预测)",
+      "overview": "will do 表示对将来的预测、说话当下做出的临时决定、承诺或主动提议(I will help you.)。"
+    },
+    {
+      "code": "u2.03",
+      "point": "现在进行时表将来(已确定的安排)",
+      "overview": "be doing 表示按计划/时间表已确定、近期就要发生的安排,常带将来时间状语(We are leaving tomorrow.)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "\"Look at those dark clouds! It ____ rain soon.\"",
+      "options": [
+        "is going to",
+        "was",
+        "rained",
+        "rains"
+      ],
+      "answer_index": 0,
+      "explanation": "有迹象(乌云)→ be going to 预测,主语 it 用 is going to。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"We ____ visit Peru next summer; we've already booked the flight.\"",
+      "options": [
+        "went",
+        "are going to",
+        "visit",
+        "were going"
+      ],
+      "answer_index": 1,
+      "explanation": "已定计划 → be going to,主语 we 用 are going to。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"She ____ apply for a visa tomorrow.\"",
+      "options": [
+        "was",
+        "applied",
+        "is going to",
+        "applies"
+      ],
+      "answer_index": 2,
+      "explanation": "打算做的事 → is going to apply。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Be careful! That box ____ fall.\"",
+      "options": [
+        "fell",
+        "falls",
+        "was going",
+        "is going to"
+      ],
+      "answer_index": 3,
+      "explanation": "看到迹象作预测 → is going to fall。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"They ____ rent a car for the trip.\"",
+      "options": [
+        "are not going to",
+        "did not",
+        "are not",
+        "were not going"
+      ],
+      "answer_index": 0,
+      "explanation": "计划的否定 → are not going to rent。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ you going to pack tonight?\"",
+      "options": [
+        "Do",
+        "Are",
+        "Did",
+        "Will"
+      ],
+      "answer_index": 1,
+      "explanation": "be going to 一般疑问,主语 you → Are you going to。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"I ____ hike to Machu Picchu; I've planned it for months.\"",
+      "options": [
+        "was",
+        "hiked",
+        "am going to",
+        "hike"
+      ],
+      "answer_index": 2,
+      "explanation": "长期计划 → am going to hike。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"The sky is clear, so it ____ be a fine day.\"",
+      "options": [
+        "was",
+        "is be",
+        "go to",
+        "is going to"
+      ],
+      "answer_index": 3,
+      "explanation": "据迹象预测 → is going to be。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"What ____ you going to do in Lima?\"",
+      "options": [
+        "are",
+        "do",
+        "did",
+        "have"
+      ],
+      "answer_index": 0,
+      "explanation": "be going to 特殊疑问,主语 you → are you going to do。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"He ____ study Spanish before the trip.\"",
+      "options": [
+        "studied",
+        "is going to",
+        "studies",
+        "was study"
+      ],
+      "answer_index": 1,
+      "explanation": "打算 → is going to study。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Look, the train ____ leave! Hurry up!\"",
+      "options": [
+        "left",
+        "leaves",
+        "is going to",
+        "was leaving"
+      ],
+      "answer_index": 2,
+      "explanation": "眼前迹象 → is going to leave。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"We ____ stay in a small hotel near the castle.\"",
+      "options": [
+        "stayed",
+        "stay",
+        "were stay",
+        "are going to"
+      ],
+      "answer_index": 3,
+      "explanation": "已定安排/计划 → are going to stay。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"My parents ____ travel by train, not by plane.\"",
+      "options": [
+        "are going to",
+        "was",
+        "travels",
+        "is going to"
+      ],
+      "answer_index": 0,
+      "explanation": "复数主语 parents → are going to travel。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"There are so many clouds; I think it ____ snow.\"",
+      "options": [
+        "snowed",
+        "is going to",
+        "snows",
+        "was snow"
+      ],
+      "answer_index": 1,
+      "explanation": "迹象预测 → is going to snow。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"Are they going to ____ the old town tomorrow?\"",
+      "options": [
+        "explored",
+        "explores",
+        "explore",
+        "exploring"
+      ],
+      "answer_index": 2,
+      "explanation": "be going to + 动词原形 explore。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"I'm tired, so I ____ have an early night.\"",
+      "options": [
+        "had",
+        "have",
+        "was going",
+        "am going to"
+      ],
+      "answer_index": 3,
+      "explanation": "打算 → am going to have。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"This bridge looks weak; it ____ break one day.\"",
+      "options": [
+        "is going to",
+        "broke",
+        "breaks",
+        "was break"
+      ],
+      "answer_index": 0,
+      "explanation": "据迹象预测 → is going to break。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"We ____ not going to miss the sunrise.\"",
+      "options": [
+        "do",
+        "are",
+        "did",
+        "were"
+      ],
+      "answer_index": 1,
+      "explanation": "be going to 否定,主语 we → are not going to miss。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"She ____ buy some gifts for her family.\"",
+      "options": [
+        "bought",
+        "buys",
+        "is going to",
+        "was buy"
+      ],
+      "answer_index": 2,
+      "explanation": "打算 → is going to buy。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"They ____ build a new airport here next year.\"",
+      "options": [
+        "built",
+        "build",
+        "was going",
+        "are going to"
+      ],
+      "answer_index": 3,
+      "explanation": "复数主语已定计划 → are going to build。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Don't worry — I ____ help you carry the bags.\"",
+      "options": [
+        "will",
+        "wo",
+        "am",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "当下临时决定/主动帮忙 → I will help。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Maybe the weather ____ be better tomorrow.\"",
+      "options": [
+        "did",
+        "will",
+        "is",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "对将来的预测 → will be。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"I think you ____ love the view from the top.\"",
+      "options": [
+        "loved",
+        "are",
+        "will",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "I think + will 预测 → will love。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"— The phone is ringing. — OK, I ____ answer it.\"",
+      "options": [
+        "answered",
+        "am",
+        "was",
+        "will"
+      ],
+      "answer_index": 3,
+      "explanation": "说话当下临时决定 → I will answer。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"He probably ____ arrive late because of the traffic.\"",
+      "options": [
+        "will",
+        "arrived",
+        "is",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "probably + 预测 → will arrive。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"I promise I ____ send you a postcard.\"",
+      "options": [
+        "sent",
+        "will",
+        "am",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "承诺 → I will send。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"In the future, more people ____ travel to space.\"",
+      "options": [
+        "travelled",
+        "are",
+        "will",
+        "were"
+      ],
+      "answer_index": 2,
+      "explanation": "对将来的预测 → will travel。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Perhaps we ____ never know who built it.\"",
+      "options": [
+        "knew",
+        "are",
+        "did",
+        "will"
+      ],
+      "answer_index": 3,
+      "explanation": "perhaps + 预测 → will never know。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"____ you pass me the map, please?\"",
+      "options": [
+        "Will",
+        "Did",
+        "Are",
+        "Do"
+      ],
+      "answer_index": 0,
+      "explanation": "礼貌请求 → Will you pass…?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"If it rains, we ____ stay in the hotel.\"",
+      "options": [
+        "stayed",
+        "will",
+        "are",
+        "were"
+      ],
+      "answer_index": 1,
+      "explanation": "条件句主句用 will → will stay。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"That bag is heavy. — Don't worry, I ____ carry it for you.\"",
+      "options": [
+        "carried",
+        "am",
+        "will",
+        "was"
+      ],
+      "answer_index": 2,
+      "explanation": "当下主动提议 → I will carry。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"I'm sure the trip ____ be amazing.\"",
+      "options": [
+        "was",
+        "is",
+        "did",
+        "will"
+      ],
+      "answer_index": 3,
+      "explanation": "I'm sure + 预测 → will be。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"She ____ probably book the accommodation online.\"",
+      "options": [
+        "will",
+        "booked",
+        "is",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "probably 预测 → will book。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Scientists believe robots ____ change how we travel.\"",
+      "options": [
+        "changed",
+        "will",
+        "are",
+        "were"
+      ],
+      "answer_index": 1,
+      "explanation": "believe + 预测 → will change。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"— I can't open this. — Here, I ____ do it for you.\"",
+      "options": [
+        "did",
+        "am",
+        "will",
+        "was"
+      ],
+      "answer_index": 2,
+      "explanation": "临时决定 → I will do it。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"One day this small town ____ become a big city.\"",
+      "options": [
+        "became",
+        "is",
+        "was",
+        "will"
+      ],
+      "answer_index": 3,
+      "explanation": "对将来的预测 → will become。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"We hope the weather ____ stay fine all week.\"",
+      "options": [
+        "will",
+        "stayed",
+        "is",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "hope + 预测 → will stay。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Take an umbrella — it ____ probably rain later.\"",
+      "options": [
+        "rained",
+        "will",
+        "is",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "probably 预测 → will rain。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"Don't worry about the tickets; I ____ book them tonight.\"",
+      "options": [
+        "booked",
+        "am",
+        "will",
+        "was"
+      ],
+      "answer_index": 2,
+      "explanation": "当下决定/承诺 → I will book。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"I believe you ____ enjoy every minute of the journey.\"",
+      "options": [
+        "enjoyed",
+        "are",
+        "did",
+        "will"
+      ],
+      "answer_index": 3,
+      "explanation": "believe + 预测 → will enjoy。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"We ____ to Peru next Monday; the tickets are booked.\"",
+      "options": [
+        "are flying",
+        "go",
+        "went",
+        "flew"
+      ],
+      "answer_index": 0,
+      "explanation": "已定安排+将来时间 → 现在进行时表将来 are flying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"I ____ my grandparents this weekend.\"",
+      "options": [
+        "visit",
+        "am visiting",
+        "visited",
+        "was visiting"
+      ],
+      "answer_index": 1,
+      "explanation": "近期已定安排 → am visiting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The train ____ at six tomorrow morning.\"",
+      "options": [
+        "leave",
+        "left",
+        "is leaving",
+        "was leaving"
+      ],
+      "answer_index": 2,
+      "explanation": "时间表/已定 → is leaving(也可一般现在时,这里选进行时)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"They ____ in a hotel near the beach next week.\"",
+      "options": [
+        "stay",
+        "stayed",
+        "were staying",
+        "are staying"
+      ],
+      "answer_index": 3,
+      "explanation": "已定安排 → are staying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"What ____ you ____ this evening?\"",
+      "options": [
+        "are / doing",
+        "do / do",
+        "did / do",
+        "were / doing"
+      ],
+      "answer_index": 0,
+      "explanation": "问近期安排 → are you doing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"She ____ a guided tour at nine o'clock tomorrow.\"",
+      "options": [
+        "take",
+        "is taking",
+        "took",
+        "was taking"
+      ],
+      "answer_index": 1,
+      "explanation": "已约定时间 → is taking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"We ____ the castle this afternoon, so let's hurry.\"",
+      "options": [
+        "visit",
+        "visited",
+        "are visiting",
+        "were visiting"
+      ],
+      "answer_index": 2,
+      "explanation": "今天下午已定 → are visiting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"My friends ____ me at the airport tonight.\"",
+      "options": [
+        "meet",
+        "met",
+        "were meeting",
+        "are meeting"
+      ],
+      "answer_index": 3,
+      "explanation": "已约定 → are meeting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"I'm not ____ anywhere this holiday; I'm staying home.\"",
+      "options": [
+        "going",
+        "go",
+        "went",
+        "gone"
+      ],
+      "answer_index": 0,
+      "explanation": "现在进行时表将来否定 → am not going。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"I ____ the night train to the coast tonight; I have already booked a bed.\"",
+      "options": [
+        "took",
+        "take",
+        "am taking",
+        "was taking"
+      ],
+      "answer_index": 2,
+      "explanation": "已定安排(已订卧铺)→ 现在进行时表将来 am taking;take a train 比 catch a flight 更适合进行时表将来(catch 有瞬间性,进行时不地道)。",
+      "answer_text": "am taking"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"____ they coming with us tomorrow?\"",
+      "options": [
+        "Do",
+        "Did",
+        "Are",
+        "Were"
+      ],
+      "answer_index": 2,
+      "explanation": "现在进行时表将来疑问 → Are they coming?"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The guide ____ us at the gate in ten minutes.\"",
+      "options": [
+        "meet",
+        "met",
+        "was meeting",
+        "is meeting"
+      ],
+      "answer_index": 3,
+      "explanation": "近期已定 → is meeting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"We ____ out for dinner tonight to celebrate.\"",
+      "options": [
+        "are eating",
+        "eat",
+        "ate",
+        "were eating"
+      ],
+      "answer_index": 0,
+      "explanation": "今晚已定安排 → are eating。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"She ____ back home on Sunday evening.\"",
+      "options": [
+        "come",
+        "is coming",
+        "came",
+        "was coming"
+      ],
+      "answer_index": 1,
+      "explanation": "已定行程 → is coming。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"I ____ a new bag for the trip this afternoon.\"",
+      "options": [
+        "buy",
+        "bought",
+        "am buying",
+        "was buying"
+      ],
+      "answer_index": 2,
+      "explanation": "今天下午计划 → am buying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"They ____ the museum at two tomorrow, not three.\"",
+      "options": [
+        "tour",
+        "toured",
+        "were touring",
+        "are touring"
+      ],
+      "answer_index": 3,
+      "explanation": "已约时间 → are touring。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"We ____ in Lima for three nights before moving on.\"",
+      "options": [
+        "are staying",
+        "stay",
+        "stayed",
+        "were staying"
+      ],
+      "answer_index": 0,
+      "explanation": "已定行程 → are staying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"My sister ____ married next month.\"",
+      "options": [
+        "get",
+        "is getting",
+        "got",
+        "was getting"
+      ],
+      "answer_index": 1,
+      "explanation": "已定安排 → is getting married。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"____ you flying or driving to the coast next week?\"",
+      "options": [
+        "Do",
+        "Did",
+        "Are",
+        "Were"
+      ],
+      "answer_index": 2,
+      "explanation": "问已定方式 → Are you flying…?"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The plane ____ off in half an hour, so board now.\"",
+      "options": [
+        "take",
+        "took",
+        "was taking",
+        "is taking"
+      ],
+      "answer_index": 3,
+      "explanation": "近期已定 → is taking off。"
+    }
+  ]
+}

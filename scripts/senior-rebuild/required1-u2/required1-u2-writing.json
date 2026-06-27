@@ -1,0 +1,54 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Write to a Friend About a Travel Experience(给朋友写一次旅行经历)",
+  "genre": "应用文 / 书信(travel experience email/letter)",
+  "source": "人教版2019必修一 Unit 2 Reading for Writing:write to a friend about a travel experience。",
+  "prompt_cn": "假设你叫李华,暑假和家人去了一个地方旅行。请用英语给你的朋友 Sam 写一封电子邮件(约80词),分享这次旅行,内容包括:① 你去了哪里、怎么去的;② 在那里做了什么、看到了什么;③ 你的感受;④ 邀请对方下次一起去。",
+  "prompt_en": "Suppose you are Li Hua. You travelled somewhere with your family during the summer holiday. Write an email (about 80 words) to your friend Sam to share the trip, including: 1) where you went and how you got there; 2) what you did and saw; 3) how you felt; 4) an invitation to go together next time.",
+  "points": [
+    "去哪里 + 怎么去(I went to … We got there by …)",
+    "做了什么 + 看到什么(We visited … / We saw …)",
+    "感受(It was amazing / I'll never forget …)",
+    "邀请(I hope we can go together next time.)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Sam,\n\nHow are you? I want to share an amazing trip with you. This summer my family and I travelled to Peru. We flew to Lima and then took a train into the mountains. We visited Machu Picchu, an ancient city of the Inca, and hiked up a narrow path to reach it. The view from the top was wonderful, and I will never forget it. I learned so much about the local culture and food. I really hope we can travel there together next time!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的 Sam:你好吗?我想和你分享一次精彩的旅行。今年夏天我和家人去了秘鲁。我们飞到利马,再坐火车进山。我们参观了印加古城马丘比丘,沿着狭窄的小路爬上去。山顶的景色美极了,我永远忘不了。我学到了很多当地的文化和美食。真希望下次我们能一起去那里!李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:去哪+怎么去 / 做了看了什么 / 感受 / 邀请" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式完整(称呼+正文+落款),要点顺序清晰、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样,正确使用过去时叙述旅行,语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼 Dear Sam,",
+      "去哪+怎么去 I/We travelled to … We got there by …",
+      "做了看了什么 We visited … / We saw …",
+      "感受 It was amazing / I'll never forget …",
+      "邀请 I hope we can … together next time",
+      "落款 Yours, Li Hua"
+    ],
+    "key_expressions": [
+      "I want to share an amazing trip with you.",
+      "We travelled to … / We flew to … and then took a train.",
+      "We visited … and hiked up …",
+      "The view was wonderful, and I'll never forget it.",
+      "I hope we can travel there together next time!"
+    ],
+    "useful_words": ["travel", "destination", "visit", "hike", "view", "amazing", "culture", "journey", "explore", "unforgettable"]
+  },
+  "high_sentences": [
+    "This summer my family and I travelled to Peru.",
+    "We flew to Lima and then took a train into the mountains.",
+    "The view from the top was wonderful, and I will never forget it.",
+    "I really hope we can travel there together next time!"
+  ],
+  "error_pairs": [
+    { "wrong": "Last summer I go to Peru.", "correct": "Last summer I went to Peru.", "note": "叙述过去旅行用一般过去时 went。" },
+    { "wrong": "We arrived to Lima in the morning.", "correct": "We arrived in Lima in the morning.", "note": "arrive in + 大地点(城市/国家),不用 arrive to。" },
+    { "wrong": "The view was so amazing that I can't forget it.", "correct": "The view was so amazing that I couldn't forget it.", "note": "主句过去时,从句时态保持一致 couldn't。" }
+  ],
+  "paragraph_template": "【旅行邮件结构】\n第1步 称呼+开场:Dear Sam, … I want to share … trip.\n第2步 去哪+怎么去:We travelled to … We got there by …\n第3步 做了看了什么:We visited … and saw …\n第4步 感受:It was … I'll never forget …\n第5步 邀请+落款:I hope we can go together next time. Yours, Li Hua"
+}

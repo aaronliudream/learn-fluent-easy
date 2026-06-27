@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Travelling Around",
+  "source": "人教版2019必修一 Unit 2 同主题完形(明信片/机场登机/订房/城市游/异国文化/行前打包)。用词限 U2/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后统一打散到15/15/15/15。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Postcard from Peru",
+      "text": "Dear Mum, I am having a wonderful time in Peru! Yesterday we (1)____ up early and took a train to Machu Picchu. The (2)____ from the mountain was amazing — green valleys everywhere. We walked along a (3)____ path to reach the old city, and our guide explained its history in (4)____. I was (5)____ at how the Inca built such a place so long ago. Today we are going to (6)____ the local market and buy some gifts. The food here is (7)____ and the people are very friendly. The only problem is that my bag is too (8)____ to carry! Tomorrow we (9)____ flying to the rainforest, so I will send you more photos. I really hope you can come here one (10)____. Love, Anna",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "got",
+            "lost",
+            "gave",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "got up early 早起。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "view",
+            "smell",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "the view from the mountain 山上的景色。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "wide",
+            "flat",
+            "narrow",
+            "modern"
+          ],
+          "answer_index": 2,
+          "explanation": "a narrow path 狭窄的小路。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silence",
+            "danger",
+            "money",
+            "detail"
+          ],
+          "answer_index": 3,
+          "explanation": "in detail 详细地。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "amazed",
+            "bored",
+            "angry",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "be amazed at 对……惊叹。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "explore",
+            "lose",
+            "close"
+          ],
+          "answer_index": 1,
+          "explanation": "explore the market 逛市场。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "terrible",
+            "boring",
+            "delicious",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "food is delicious 食物美味。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "light",
+            "cheap",
+            "clean",
+            "heavy"
+          ],
+          "answer_index": 3,
+          "explanation": "too heavy to carry 太重提不动。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "are",
+            "were",
+            "did",
+            "have"
+          ],
+          "answer_index": 0,
+          "explanation": "are flying 现在进行时表将来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hour",
+            "day",
+            "week",
+            "minute"
+          ],
+          "answer_index": 1,
+          "explanation": "one day 有一天。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "At the Airport",
+      "text": "When you arrive at the airport, the first thing to do is to (1)____ in for your flight. Show your passport and ticket to the (2)____ at the desk, and put your big bag on the machine to be weighed. If your bag is too (3)____, you may have to pay extra. After that, you keep only a small bag and walk to the (4)____ gate shown on your ticket. Remember to (5)____ your boarding pass safe, because you will need it again. There is usually time to buy a drink or read a (6)____ before the plane is ready. When your flight is (7)____, you join the line and get on board. Soon the plane will (8)____ off and your journey begins. Flying can feel long, so it is a good idea to (9)____ a book or some music. Before you know it, you will (10)____ at your destination.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "give",
+            "wake",
+            "check",
+            "turn"
+          ],
+          "answer_index": 2,
+          "explanation": "check in 办理登机。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "driver",
+            "doctor",
+            "farmer",
+            "officer"
+          ],
+          "answer_index": 3,
+          "explanation": "the officer at the desk 柜台工作人员。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "heavy",
+            "light",
+            "small",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "too heavy 超重。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "wrong",
+            "right",
+            "old",
+            "free"
+          ],
+          "answer_index": 1,
+          "explanation": "the right gate 正确的登机口。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "throw",
+            "keep",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "keep … safe 妥善保管。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "mountain",
+            "machine",
+            "message",
+            "magazine"
+          ],
+          "answer_index": 3,
+          "explanation": "read a magazine 看杂志。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "called",
+            "closed",
+            "broken",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "flight is called 航班开始登机。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "put",
+            "take",
+            "look",
+            "give"
+          ],
+          "answer_index": 1,
+          "explanation": "take off 起飞。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "leave",
+            "lose",
+            "bring",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "bring a book 带本书。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "leave",
+            "return",
+            "stay",
+            "arrive"
+          ],
+          "answer_index": 3,
+          "explanation": "arrive at your destination 到达目的地。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Booking a Hotel",
+      "text": "Finding good (1)____ is an important part of any trip. These days most people book a hotel (2)____ before they leave home. First, choose a place that is close to the sights you want to (3)____. Then read the comments that other travellers have (4)____, because they tell you what the rooms are really like. Check the (5)____ carefully, as some hotels look cheap but add extra fees. It is also wise to ask for a room with a nice (6)____, especially in the mountains. When you arrive, you check (7)____ at the front desk and show your booking. If you have any special (8)____, such as a quiet room, tell the staff politely. A friendly hotel can make your stay much more (9)____. When you leave, do not forget to check (10)____ and return your key.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "accommodation",
+            "homework",
+            "weather",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "find accommodation 找住处。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "outside",
+            "online",
+            "alone",
+            "loudly"
+          ],
+          "answer_index": 1,
+          "explanation": "book online 网上预订。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "forget",
+            "lose",
+            "visit",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "sights you want to visit 想去的景点。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "broken",
+            "eaten",
+            "left"
+          ],
+          "answer_index": 3,
+          "explanation": "comments others have left 别人留下的评论。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "speed"
+          ],
+          "answer_index": 0,
+          "explanation": "check the price 看价格。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rule",
+            "view",
+            "test",
+            "job"
+          ],
+          "answer_index": 1,
+          "explanation": "a room with a nice view 有好景观的房间。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "out",
+            "off",
+            "in",
+            "up"
+          ],
+          "answer_index": 2,
+          "explanation": "check in 入住登记。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "mistakes",
+            "problems",
+            "answers",
+            "requests"
+          ],
+          "answer_index": 3,
+          "explanation": "special requests 特别要求。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "pleasant",
+            "boring",
+            "dangerous",
+            "difficult"
+          ],
+          "answer_index": 0,
+          "explanation": "more pleasant 更愉快。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "in",
+            "out",
+            "up",
+            "on"
+          ],
+          "answer_index": 1,
+          "explanation": "check out 退房。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Day in a New City",
+      "text": "There is no better way to know a city than to (1)____ around on foot. On our first morning, we left the hotel early and followed a small (2)____ into the old town. The streets were (3)____, with tall buildings on both sides, and every corner had something new to (4)____. We stopped to (5)____ the beautiful old architecture and take photos. Around noon we were hungry, so we tried a (6)____ kind of local food at a tiny restaurant. In the afternoon we used the city's cheap public (7)____ to reach a famous museum. A guide there told us many interesting (8)____ about the city's history. By evening our feet were tired, but we had (9)____ so much in just one day. We agreed that walking had shown us the (10)____ city far better than any bus tour.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lose",
+            "give",
+            "get",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "get around 四处走动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rule",
+            "test",
+            "team",
+            "path"
+          ],
+          "answer_index": 3,
+          "explanation": "a small path 一条小路。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "narrow",
+            "wide",
+            "empty",
+            "modern"
+          ],
+          "answer_index": 0,
+          "explanation": "streets were narrow 街道狭窄。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hide",
+            "see",
+            "lose",
+            "close"
+          ],
+          "answer_index": 1,
+          "explanation": "something new to see 新东西可看。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "break",
+            "forget",
+            "admire",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "admire the architecture 欣赏建筑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "terrible",
+            "empty",
+            "special"
+          ],
+          "answer_index": 3,
+          "explanation": "a special kind of food 一种特别的食物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "transport",
+            "homework",
+            "weather",
+            "money"
+          ],
+          "answer_index": 0,
+          "explanation": "public transport 公共交通。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "mistakes",
+            "details",
+            "problems",
+            "rules"
+          ],
+          "answer_index": 1,
+          "explanation": "interesting details 有趣的细节。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lost",
+            "missed",
+            "seen",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "had seen so much 看了那么多。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fake",
+            "empty",
+            "false",
+            "real"
+          ],
+          "answer_index": 3,
+          "explanation": "the real city 真实的城市。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Learning About a Culture",
+      "text": "Travelling to another country is a great way to learn about a different (1)____. Before you go, it helps to read a little about the local way of (2)____. Try to learn a few (3)____ in the local language, such as \"hello\" and \"thank you\"; people are always pleased when visitors make the (4)____. Remember that what is polite at home may be (5)____ somewhere else, so watch how local people behave and follow their (6)____. Be ready to taste food that looks (7)____ to you — it is often delicious. Most importantly, keep an open (8)____ and treat everyone with respect. If you are friendly and (9)____, local people will be happy to help you. In this way, a journey can do more than show you new places; it can also help you (10)____ the world better.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "culture",
+            "machine",
+            "weather",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "a different culture 不同的文化。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "life",
+            "noise",
+            "speed"
+          ],
+          "answer_index": 1,
+          "explanation": "the way of life 生活方式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cars",
+            "rooms",
+            "words",
+            "rules"
+          ],
+          "answer_index": 2,
+          "explanation": "learn a few words 学几个词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mistake",
+            "noise",
+            "money",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "make the effort 努力尝试。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rude",
+            "kind",
+            "happy",
+            "easy"
+          ],
+          "answer_index": 0,
+          "explanation": "polite at home may be rude elsewhere 别处可能失礼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machine",
+            "example",
+            "ticket",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "follow their example 学他们的样子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "normal",
+            "boring",
+            "strange",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "food that looks strange 看起来陌生的食物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "door",
+            "box",
+            "book",
+            "mind"
+          ],
+          "answer_index": 3,
+          "explanation": "keep an open mind 保持开放心态。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "polite",
+            "rude",
+            "lazy",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "friendly and polite 友好礼貌。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "understand",
+            "leave",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "understand the world better 更好理解世界。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "How to Pack Well",
+      "text": "Packing the right way can make a journey much (1)____. Many travellers take far too much and end up with a bag that is too (2)____ to carry. The trick is to make a (3)____ of what you really need before you start. Choose clothes that are easy to wash and can be (4)____ for different days. Always keep your passport, tickets and some money in a (5)____ place that you can reach quickly. Pack a small bag for the things you will need during the (6)____, such as a book and a bottle of water. Do not (7)____ to leave a little space for the gifts you may buy. It is also wise to bring any medicine you might (8)____. Finally, check your list once more so that you do not (9)____ anything important. With good packing, you can (10)____ your trip instead of worrying about your bags.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "harder",
+            "longer",
+            "easier",
+            "slower"
+          ],
+          "answer_index": 2,
+          "explanation": "much easier 容易得多。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "light",
+            "cheap",
+            "clean",
+            "heavy"
+          ],
+          "answer_index": 3,
+          "explanation": "too heavy to carry 太重。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "list",
+            "noise",
+            "price",
+            "rule"
+          ],
+          "answer_index": 0,
+          "explanation": "make a list 列清单。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "worn",
+            "sold",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "can be worn for different days 可换着穿。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "busy",
+            "loud",
+            "safe",
+            "far"
+          ],
+          "answer_index": 2,
+          "explanation": "a safe place 安全的地方。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "school",
+            "class",
+            "game",
+            "flight"
+          ],
+          "answer_index": 3,
+          "explanation": "during the flight 飞行途中。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "agree",
+            "refuse",
+            "promise"
+          ],
+          "answer_index": 0,
+          "explanation": "don't forget 别忘了。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "need",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "medicine you might need 可能需要的药。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "win",
+            "keep",
+            "miss",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "do not miss anything 不漏掉东西。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hate",
+            "stop",
+            "lose",
+            "enjoy"
+          ],
+          "answer_index": 3,
+          "explanation": "enjoy your trip 享受旅行。"
+        }
+      ]
+    }
+  ]
+}

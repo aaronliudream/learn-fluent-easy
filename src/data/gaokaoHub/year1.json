@@ -1330,89 +1330,234 @@
             "unitKey": "U2",
             "book": "required1",
             "title": "Travelling Around",
-            "cn": "环球旅行",
+            "cn": "环游世界 · 旅行",
             "emoji": "✈️",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Adviser",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "castle",
+                "cn": "城堡",
+                "emoji": "📦"
               },
               {
-                "en": "Courses",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "apply",
+                "cn": "申请",
+                "emoji": "🏃"
               },
               {
-                "en": "Choose",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "visa",
+                "cn": "签证",
+                "emoji": "📦"
               },
               {
-                "en": "Answer",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "rent",
+                "cn": "租用",
+                "emoji": "🏃"
               },
               {
-                "en": "Questions",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "pack",
+                "cn": "收拾(行李)",
+                "emoji": "🏃"
               },
               {
-                "en": "Does",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "amazing",
+                "cn": "令人惊奇的",
+                "emoji": "🔤"
               },
               {
-                "en": "Future",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "amazed",
+                "cn": "惊奇的",
+                "emoji": "🔤"
               },
               {
-                "en": "Engineer",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "arrangement",
+                "cn": "安排",
+                "emoji": "📦"
               },
               {
-                "en": "Designer",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "extremely",
+                "cn": "极其",
+                "emoji": "🏃"
               },
               {
-                "en": "Writer",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "source",
+                "cn": "来源",
+                "emoji": "📦"
               },
               {
-                "en": "Course",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "narrow",
+                "cn": "狭窄的",
+                "emoji": "🔤"
               },
               {
-                "en": "Probably",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "flat",
+                "cn": "平坦的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "detail",
+                "cn": "细节",
+                "emoji": "📦"
+              },
+              {
+                "en": "powerful",
+                "cn": "强大的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "empire",
+                "cn": "帝国",
+                "emoji": "📦"
+              },
+              {
+                "en": "emperor",
+                "cn": "皇帝",
+                "emoji": "📦"
+              },
+              {
+                "en": "site",
+                "cn": "地点",
+                "emoji": "📦"
+              },
+              {
+                "en": "view",
+                "cn": "视野",
+                "emoji": "📦"
+              },
+              {
+                "en": "sight",
+                "cn": "景象",
+                "emoji": "📦"
+              },
+              {
+                "en": "official",
+                "cn": "官方的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "statue",
+                "cn": "雕像",
+                "emoji": "📦"
+              },
+              {
+                "en": "recognise",
+                "cn": "辨认出",
+                "emoji": "🏃"
+              },
+              {
+                "en": "tomb",
+                "cn": "坟墓",
+                "emoji": "📦"
+              },
+              {
+                "en": "unearth",
+                "cn": "挖掘",
+                "emoji": "🏃"
+              },
+              {
+                "en": "type",
+                "cn": "类型",
+                "emoji": "📦"
+              },
+              {
+                "en": "comment",
+                "cn": "评论",
+                "emoji": "🏃"
+              },
+              {
+                "en": "flight",
+                "cn": "航班",
+                "emoji": "📦"
+              },
+              {
+                "en": "accommodation",
+                "cn": "住处",
+                "emoji": "📦"
+              },
+              {
+                "en": "unique",
+                "cn": "独特的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "path",
+                "cn": "小路",
+                "emoji": "📦"
+              },
+              {
+                "en": "destination",
+                "cn": "目的地",
+                "emoji": "📦"
+              },
+              {
+                "en": "admire",
+                "cn": "钦佩",
+                "emoji": "🏃"
+              },
+              {
+                "en": "architecture",
+                "cn": "建筑设计",
+                "emoji": "📦"
+              },
+              {
+                "en": "architect",
+                "cn": "建筑设计师",
+                "emoji": "📦"
+              },
+              {
+                "en": "brochure",
+                "cn": "(介绍信息的)小册子",
+                "emoji": "📦"
+              },
+              {
+                "en": "soldier",
+                "cn": "士兵",
+                "emoji": "📦"
+              },
+              {
+                "en": "transport",
+                "cn": "交通运输",
+                "emoji": "🏃"
+              },
+              {
+                "en": "hike",
+                "cn": "徒步旅行",
+                "emoji": "🏃"
+              },
+              {
+                "en": "economy",
+                "cn": "经济",
+                "emoji": "📦"
+              },
+              {
+                "en": "economic",
+                "cn": "经济(上)的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "request",
+                "cn": "(礼貌的)要求",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Planning a Trip",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Travelling Around.",
-                    "cn": "我们来讨论Travelling Around。"
+                    "text": "Where are you going this summer?",
+                    "cn": "今年夏天你去哪儿?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Adviser today.",
-                    "cn": "好的，我今天学了必修第一册 课文词汇。"
+                    "text": "We are going to travel to Peru.",
+                    "cn": "我们打算去秘鲁旅行。"
                   },
                   {
                     "role": "A",
-                    "text": "And Courses is important too.",
-                    "cn": "必修第一册 课文词汇也很重要。"
+                    "text": "Amazing! Have you booked the flight?",
+                    "cn": "太棒了!订机票了吗?"
                   }
                 ]
               }
@@ -1421,7 +1566,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "41个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -1459,6 +1604,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -1483,8 +1636,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "现在进行时表将来计划",
-            "grammarCode": "pep-r1-u2-present-continuous-future",
+            "grammarTitle": "谈论将来:be going to / will / 现在进行时表将来",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ Chinese Maths English Chemistry Physics Max’s favourite Amy’s favourite 4 Amy is talking to Ms Li, a school adviser, about which courses to choose.\n\n（现在进行时表将来计划 · 教材原句）",
@@ -1512,225 +1665,254 @@
               }
             ],
             "reading": {
-              "passage": "Discuss the questions. 1 What do you want to know about school life in other countries? 2 What would you tell a teenager from another country about school life in China? 2 Read the text quickly to find the main idea of each paragraph. Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a quick look at the title, picture(s), key words and Paragraph 4: phrases, and topic sentences. My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge. First, I had to think very carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate.",
-              "passageCn": "（人教版必修第一册 · 教材节选）",
+              "passage": "Peru is a country in South America with a rich history. The most famous site is Machu Picchu, an ancient city high in the mountains.",
+              "passageCn": "秘鲁课文见阅读关(探索秘鲁)。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Discuss the questions....\"",
+                  "q": "What is Machu Picchu?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Discuss the questions."
+                    "An ancient mountain city.",
+                    "A modern airport.",
+                    "A river.",
+                    "A market."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"1 What do you want to know about school life in ot...\"",
-                  "opts": [
-                    "Not stated.",
-                    "1 What do you want to know about school life in other countries?",
-                    "Unrelated.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"2 What would you tell a teenager from another coun...\"",
-                  "opts": [
-                    "2 What would you tell a teenager from another country about school lif",
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Not stated."
-                  ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"2 Read the text quickly to find the main idea of e...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "2 Read the text quickly to find the main idea of each paragraph.",
-                    "Not stated."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FIRST IMPRESSIONS\" (PEP 必修第一册).",
-              "promptCn": "根据人教版《必修第一册》课文《FIRST IMPRESSIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write an email to your friend about a travel experience (about 80 words).",
+              "promptCn": "给朋友写一封旅行经历的邮件(约80词)。",
+              "sampleWords": [
+                "travel",
+                "destination",
+                "visit",
+                "hike",
+                "view",
+                "amazing",
+                "culture",
+                "journey",
+                "explore",
+                "unforgettable"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Adviser」的意思是？",
+                "q": "「目的地」对应的英文单词是？",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "必修第一册 课文词汇"
+                  "destination",
+                  "castle",
+                  "soldier",
+                  "visa"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Courses」的意思是？",
+                "q": "「徒步旅行」对应的英文单词是？",
                 "opts": [
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项2",
-                  "选项1"
+                  "hike",
+                  "rent",
+                  "admire",
+                  "pack"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Choose」的意思是？",
+                "q": "accommodation 的中文意思是？",
                 "opts": [
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项2"
+                  "住宿",
+                  "签证",
+                  "帝国",
+                  "航班"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Answer」的意思是？",
+                "q": "unique 的中文意思是？",
                 "opts": [
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1"
+                  "独特的",
+                  "狭窄的",
+                  "平坦的",
+                  "官方的"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Questions」的意思是？",
+                "q": "\"Look at the clouds! It ____ rain.\"",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "必修第一册 课文词汇"
+                  "is going to",
+                  "was",
+                  "rained",
+                  "rains"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Does」的意思是？",
+                "q": "\"Don't worry, I ____ help you.\"",
                 "opts": [
-                  "选项1",
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项3"
+                  "will",
+                  "was",
+                  "am",
+                  "did"
                 ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Future」的意思是？",
+                "q": "\"We ____ to Peru next Monday; tickets are booked.\"",
                 "opts": [
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项2"
+                  "are flying",
+                  "flew",
+                  "fly",
+                  "flown"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Engineer」的意思是？",
+                "q": "\"She ____ apply for a visa tomorrow.\"",
                 "opts": [
-                  "选项1",
-                  "选项2",
-                  "选项3",
-                  "必修第一册 课文词汇"
+                  "is going to",
+                  "applied",
+                  "applies",
+                  "was"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "本单元「环球旅行」相关词是？",
+                "q": "🔊 听句子,选出与它相符的一项",
                 "opts": [
-                  "Does",
-                  "Adviser",
-                  "Probably",
-                  "Courses"
+                  "我们打算明年夏天去秘鲁旅行。",
+                  "我们已经从秘鲁回来了。",
+                  "我们取消了旅行。",
+                  "秘鲁不能去。"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "audio": "We are going to travel to Peru next summer.",
+                "point": "听力",
+                "dim": "listening"
+              },
+              {
+                "q": "🔊 听句子,选出与它相符的一项",
+                "opts": [
+                  "山上的景色令人惊叹。",
+                  "山上在下雨。",
+                  "看不到山。",
+                  "山被云遮住了。"
+                ],
+                "answer": 0,
+                "audio": "The view from the mountain was amazing.",
+                "point": "听力",
+                "dim": "listening"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "We are going to travel to Peru next summer.",
                 "opts": [
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Paragraph 1: Senior high school is a challenge.",
-                  "Going from junior high school to senior high school is a really big chal"
+                  "我们打算明年夏天去秘鲁旅行。",
+                  "我们昨天去了秘鲁。",
+                  "我们不想去秘鲁。",
+                  "秘鲁离这里很近。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "I have booked an early flight to Lima.",
                 "opts": [
-                  "Paragraph 1: Senior high school is a challenge.",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a"
+                  "我订了一班飞往利马的早班机。",
+                  "我错过了航班。",
+                  "我在利马住了一年。",
+                  "利马没有机场。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "The view from the mountain was amazing.",
                 "opts": [
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "山上的景色令人惊叹。",
+                  "山上什么也看不见。",
+                  "下山很危险。",
+                  "山很矮。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "Don't forget to apply for a visa before the trip.",
                 "opts": [
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "旅行前别忘了申请签证。",
+                  "旅行不需要任何准备。",
+                  "签证已经过期。",
+                  "别带护照。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "We hiked up a narrow path to the old city.",
                 "opts": [
-                  "First, I had to think very carefully about which courses I wanted to tak",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "我们沿一条狭窄小路爬到古城。",
+                  "我们开车进了古城。",
+                  "古城在山脚下。",
+                  "小路很宽。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Public transport here is cheap and fast.",
+                "opts": [
+                  "这里的公共交通又便宜又快。",
+                  "这里没有公交。",
+                  "打车很贵。",
+                  "地铁很慢。"
                 ],
                 "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "Sara is planning her first trip abroad next month. She is excited, but she is also a little worried because she has never travelled alone before. Her older brother told her that careful planning is the best way to feel safe and enjoy the journey.",
+              "questions": [
+                {
+                  "q": "Why is Sara a little worried about her trip?",
+                  "options": [
+                    "It is her first time travelling on her own.",
+                    "She does not like flying at all.",
+                    "She has lost her passport.",
+                    "She cannot afford the tickets."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 she has never travelled alone before 的转述(非照抄);B/C/D 听起来合理但文中没说。"
+                },
+                {
+                  "q": "What does Sara's brother say will help her most?",
+                  "options": [
+                    "Planning the trip carefully.",
+                    "Taking as little money as possible.",
+                    "Going without any plan.",
+                    "Cancelling the trip."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 careful planning is the best way to feel safe(考短文后半段,覆盖不同位置);其余与原文相反或未提。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u2.01",
+              "u2.02",
+              "u2.03"
             ]
           },
           {

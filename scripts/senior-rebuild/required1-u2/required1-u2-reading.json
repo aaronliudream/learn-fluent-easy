@@ -1,0 +1,344 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Travelling Around",
+  "source": "人教版2019必修一 Unit 2。rd1=Explore Peru(课文,据原文整理);rd2-rd6 同主题衍生(规划/徒步/交通/城堡/旅行的意义),用词限 U2/常见词。答案转述不照抄、覆盖全文不同位置。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Explore Peru",
+      "genre": "说明文(旅行介绍)",
+      "body": "Peru is a country in South America with a rich history and amazing sights. Many travellers come here to explore the Inca Empire, which was once powerful and ruled a large area. The most famous site is Machu Picchu, a lost city high in the Andes Mountains. It was built for an emperor about 600 years ago and was unearthed only a hundred years ago. Today visitors can hike along a narrow mountain path to reach it and admire its unique stone architecture. Other than Machu Picchu, Peru also has deep rainforests and the source of the Amazon River. The official language is Spanish, but many people still speak older languages too. Whatever your interest, Peru is an unforgettable destination.",
+      "questions": [
+        {
+          "stem": "Why do many travellers visit Peru?",
+          "options": [
+            "To explore its history and amazing sights.",
+            "To learn to speak French.",
+            "To buy cheap cars.",
+            "To watch football matches."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 rich history and amazing sights … explore the Inca Empire 的概括。",
+          "answer_text": "To explore its history and amazing sights."
+        },
+        {
+          "stem": "What is Machu Picchu?",
+          "options": [
+            "A modern airport in Lima.",
+            "An ancient city high in the mountains.",
+            "A large shopping centre.",
+            "A river in the rainforest."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 a lost city high in the Andes 的转述,非照抄。",
+          "answer_text": "An ancient city high in the mountains."
+        },
+        {
+          "stem": "How can visitors reach Machu Picchu today?",
+          "options": [
+            "By taking a boat across the sea.",
+            "By driving on a wide flat road.",
+            "By walking up a narrow mountain path.",
+            "By flying directly to the city centre."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 hike along a narrow mountain path 的转述。",
+          "answer_text": "By walking up a narrow mountain path."
+        },
+        {
+          "stem": "What else does Peru have besides Machu Picchu?",
+          "options": [
+            "Deserts with no water.",
+            "Only modern buildings.",
+            "No old languages at all.",
+            "Thick rainforests and the beginning of the Amazon River."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 rainforests and the source of the Amazon River(考后半段,覆盖不同位置)。",
+          "answer_text": "Thick rainforests and the beginning of the Amazon River."
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Getting Ready for a Trip",
+      "genre": "说明文",
+      "body": "Travelling to another country is exciting, but good planning makes it easier. First, decide on your destination and find out whether you need a visa. Some countries ask travellers to apply for one weeks before they arrive, so do not leave it too late. Next, book your flight and accommodation early, because prices often rise as the date comes near. It is also wise to read about the local culture and learn a few words of the language. Make a list of what to pack, and keep your tickets and passport in a safe place. Finally, plan your daily activities, but leave some free time too. With careful arrangements made in advance, you can relax and enjoy every moment of your journey.",
+      "questions": [
+        {
+          "stem": "What is the first thing the writer suggests doing?",
+          "options": [
+            "Choosing where to go and checking visa rules.",
+            "Buying lots of gifts.",
+            "Packing all your clothes.",
+            "Learning to drive."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 decide on your destination and find out whether you need a visa 的概括。",
+          "answer_text": "Choosing where to go and checking visa rules."
+        },
+        {
+          "stem": "Why should you book flights and rooms early?",
+          "options": [
+            "Because they are always free.",
+            "Because prices tend to go up later.",
+            "Because airports close at night.",
+            "Because hotels dislike late guests."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 prices often rise as the date comes near 的转述。",
+          "answer_text": "Because prices tend to go up later."
+        },
+        {
+          "stem": "What does the writer advise about your daily plan?",
+          "options": [
+            "Fill every hour with activities.",
+            "Never make any plan.",
+            "Leave some free time as well.",
+            "Only rest in the hotel."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 leave some free time too(考后半段)。",
+          "answer_text": "Leave some free time as well."
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Travelling is too much trouble.",
+            "You should travel alone.",
+            "Visas are a waste of money.",
+            "Careful planning makes a trip easier and more enjoyable."
+          ],
+          "answer_index": 3,
+          "explanation": "全文主旨:good planning makes it easier。",
+          "answer_text": "Careful planning makes a trip easier and more enjoyable."
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Hike to Remember",
+      "genre": "记叙文",
+      "body": "Last summer my family went hiking in the mountains. We got up before sunrise and started along a narrow path through the forest. At first the walk was easy, but soon the path became steep and our bags felt extremely heavy. My little brother wanted to give up, so I carried his bag for a while. After three hours we reached the top, and the view there made everyone forget how tired they were. Below us we could see a silver river and green valleys stretching far away. We sat down to rest and admire the scenery, and Dad took many photos. The way down was much easier, and by evening we were back at our small hotel, tired but happy. It was the best day of the whole trip.",
+      "questions": [
+        {
+          "stem": "When did the family begin their hike?",
+          "options": [
+            "Early, before the sun rose.",
+            "Late at night.",
+            "At lunchtime.",
+            "In the evening."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 before sunrise 的转述。",
+          "answer_text": "Early, before the sun rose."
+        },
+        {
+          "stem": "Why did the writer carry the brother's bag?",
+          "options": [
+            "The bag was empty.",
+            "The brother was tired and wanted to stop.",
+            "The writer liked heavy bags.",
+            "Dad asked for it."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 my little brother wanted to give up 的转述。",
+          "answer_text": "The brother was tired and wanted to stop."
+        },
+        {
+          "stem": "How did everyone feel at the top?",
+          "options": [
+            "Bored and angry.",
+            "Too tired to look.",
+            "Amazed by the view and no longer tired.",
+            "Afraid of the height."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 the view … made everyone forget how tired they were(考中段)。",
+          "answer_text": "Amazed by the view and no longer tired."
+        },
+        {
+          "stem": "How does the writer describe the day overall?",
+          "options": [
+            "A waste of time.",
+            "A frightening day.",
+            "A boring day.",
+            "The finest day of the whole journey."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 the best day of the whole trip(考结尾)。",
+          "answer_text": "The finest day of the whole journey."
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Ways to Get Around",
+      "genre": "说明文",
+      "body": "When you travel, choosing the right transport can save both time and money. For long distances, flying is the fastest way, though tickets can be expensive. Trains are slower but let you enjoy the changing scenery through the window, and they often reach the city centre directly. In many cities, public transport such as buses and the underground is cheap and easy to use. If you want freedom, you can rent a car and stop wherever you like, but remember that parking is sometimes hard to find. For short trips, walking or cycling is healthy and lets you see small streets that buses pass by. The best choice depends on your time, your money and the kind of experience you are looking for.",
+      "questions": [
+        {
+          "stem": "According to the passage, what is the fastest way to travel far?",
+          "options": [
+            "Flying.",
+            "Cycling.",
+            "Walking.",
+            "Taking a bus."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 flying is the fastest way 的转述。",
+          "answer_text": "Flying."
+        },
+        {
+          "stem": "What advantage of trains does the writer mention?",
+          "options": [
+            "They are always free.",
+            "You can enjoy the scenery and reach the city centre.",
+            "They never stop.",
+            "They are the cheapest of all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 enjoy the changing scenery … reach the city centre directly。",
+          "answer_text": "You can enjoy the scenery and reach the city centre."
+        },
+        {
+          "stem": "What problem of renting a car is mentioned?",
+          "options": [
+            "Cars cannot turn.",
+            "Cars are too slow.",
+            "Parking can be hard to find.",
+            "You cannot stop anywhere."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 parking is sometimes hard to find(考中段)。",
+          "answer_text": "Parking can be hard to find."
+        },
+        {
+          "stem": "What does the writer say about the best choice of transport?",
+          "options": [
+            "It is always the plane.",
+            "It is always walking.",
+            "It never matters.",
+            "It depends on time, money and the experience you want."
+          ],
+          "answer_index": 3,
+          "explanation": "原文结尾 depends on your time, your money and the kind of experience。",
+          "answer_text": "It depends on time, money and the experience you want."
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Castle in the Mountains",
+      "genre": "说明文",
+      "body": "High in the mountains of southern Germany stands a beautiful castle that looks like something from a fairy tale. It was built for a king who loved music and stories, and its tall white towers can be seen from far away. Visitors today walk up a path to reach the gate, just as people did long ago. Inside, the rooms are full of wonderful paintings and unique furniture, and from the windows you can admire an amazing view of green valleys and a blue lake. The castle was never quite finished, because the king died before the work was complete. Even so, it has become one of the most popular destinations in the country, and millions of tourists come to see its famous architecture every year.",
+      "questions": [
+        {
+          "stem": "Who was the castle built for?",
+          "options": [
+            "A music-loving king who enjoyed stories.",
+            "A soldier.",
+            "A famous architect.",
+            "A group of farmers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 built for a king who loved music and stories 的转述。",
+          "answer_text": "A music-loving king who enjoyed stories."
+        },
+        {
+          "stem": "What can visitors see from the castle windows?",
+          "options": [
+            "A busy modern city.",
+            "Open valleys and a lake far below.",
+            "A wide flat desert.",
+            "Nothing at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 admire an amazing view of green valleys and a blue lake。",
+          "answer_text": "Open valleys and a lake far below."
+        },
+        {
+          "stem": "Why was the castle never quite finished?",
+          "options": [
+            "It ran out of stone.",
+            "Tourists stopped the work.",
+            "Its king passed away before it was finished.",
+            "It was too cold."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 the king died before the work was complete(考后半段)。",
+          "answer_text": "Its king passed away before it was finished."
+        },
+        {
+          "stem": "How popular is the castle today?",
+          "options": [
+            "Almost no one visits.",
+            "Only kings may enter.",
+            "It is closed forever.",
+            "Millions of tourists come each year."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 millions of tourists come … every year(考结尾)。",
+          "answer_text": "Millions of tourists come each year."
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Why We Travel",
+      "genre": "议论文",
+      "body": "People travel for many different reasons. Some go abroad to relax and escape their busy lives, while others want excitement and adventure. Travelling also teaches us a great deal. When we visit new places, we meet people whose lives are different from our own, and we begin to understand the world better. We taste new food, hear new languages and see how others solve everyday problems. Such experiences can change the way we think. Of course, travelling is not always easy: flights may be delayed and plans may go wrong. But even the difficult moments often become the stories we enjoy telling later. In the end, the greatest gift of travel is not the photos we bring home, but the way it opens our minds.",
+      "questions": [
+        {
+          "stem": "According to the passage, why do some people travel?",
+          "options": [
+            "To relax or to look for adventure.",
+            "To stay at home.",
+            "To avoid all new food.",
+            "To stop learning."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 relax and escape … others want excitement and adventure 的概括。",
+          "answer_text": "To relax or to look for adventure."
+        },
+        {
+          "stem": "What does the writer say travelling teaches us?",
+          "options": [
+            "Nothing useful.",
+            "To understand the world and other people better.",
+            "To dislike strangers.",
+            "Only how to take photos."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 understand the world better … see how others solve problems。",
+          "answer_text": "To understand the world and other people better."
+        },
+        {
+          "stem": "What does the writer say about difficult moments?",
+          "options": [
+            "They ruin every trip.",
+            "They never happen.",
+            "They often become enjoyable stories later.",
+            "They should be forgotten at once."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 become the stories we enjoy telling later(考后半段)。",
+          "answer_text": "They often become enjoyable stories later."
+        },
+        {
+          "stem": "What does the writer think is the greatest gift of travel?",
+          "options": [
+            "The photos we bring home.",
+            "The money we spend.",
+            "The food we eat.",
+            "How it broadens the way we think."
+          ],
+          "answer_index": 3,
+          "explanation": "原文结尾 not the photos … but the way it opens our minds。",
+          "answer_text": "How it broadens the way we think."
+        }
+      ]
+    }
+  ]
+}

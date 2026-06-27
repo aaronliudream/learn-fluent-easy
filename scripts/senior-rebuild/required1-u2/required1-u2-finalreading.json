@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(旅行主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Sara is planning her first trip abroad next month. She is excited, but she is also a little worried because she has never travelled alone before. Her older brother told her that careful planning is the best way to feel safe and enjoy the journey.",
+    "questions": [
+      {
+        "q": "Why is Sara a little worried about her trip?",
+        "options": [
+          "It is her first time travelling on her own.",
+          "She does not like flying at all.",
+          "She has lost her passport.",
+          "She cannot afford the tickets."
+        ],
+        "answer": "A",
+        "explanation": "原文 she has never travelled alone before 的转述(非照抄);B/C/D 听起来合理但文中没说。"
+      },
+      {
+        "q": "What does Sara's brother say will help her most?",
+        "options": [
+          "Planning the trip carefully.",
+          "Taking as little money as possible.",
+          "Going without any plan.",
+          "Cancelling the trip."
+        ],
+        "answer": "A",
+        "explanation": "原文 careful planning is the best way to feel safe(考短文后半段,覆盖不同位置);其余与原文相反或未提。"
+      }
+    ]
+  }
+}

@@ -17,6 +17,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
 import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import GrammarTipsCard from "@/components/grammar/GrammarTipsCard";
 import { buildFinalQuiz, type FinalQuizItem } from "@/lib/juniorFinalQuiz";
 import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { awardCoins } from "@/lib/coins";
@@ -1148,6 +1149,7 @@ function GrammarStage({
     const kpPath = `${basePath}/grammar/kp/${kpPracticeId}?returnTo=${returnTo}`;
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
         <p className="mb-3 text-sm text-[#5C5751]">本单元语法专项练习：连续答对即点亮掌握度，成绩计入你的语法掌握。</p>
         <Link
           to={kpPath}
@@ -1174,6 +1176,7 @@ function GrammarStage({
         <p className="mb-3 text-sm text-[#5C5751]">
           本单元语法综合测试：{unit.grammarCodes.length} 个语法点混合抽题，成绩计入你的掌握度。
         </p>
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
         <UnitGrammarProgress codes={unit.grammarCodes} />
         <Link
           to={testPath}
@@ -1196,6 +1199,7 @@ function GrammarStage({
   if (masteryPath) {
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
         <p className="mb-3 text-sm text-[#5C5751]">本单元语法用真题题库测练，成绩计入你的掌握度。</p>
         <Link
           to={masteryPath}

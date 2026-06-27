@@ -49,6 +49,8 @@ interface Props {
   /** When set with trackJuniorMastery, also writes junior_word_mastery (JuniorVocab hub / SRS). */
   grade?: number;
   trackJuniorMastery?: boolean;
+  /** ★铁律★ 高中复用路径设 true → 跳过 recordCohortAttempt(写 gaokao_user_mastery),只写 junior_word_mastery。 */
+  suppressGaokao?: boolean;
 }
 
 interface CardState {
@@ -91,6 +93,7 @@ export default function GuidedSession({
   mode = "learn",
   grade,
   trackJuniorMastery = false,
+  suppressGaokao = false,
 }: Props) {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState<CardState[]>([]);
@@ -172,15 +175,17 @@ export default function GuidedSession({
       mode === "review"
         ? "fsrs_due"
         : pickPracticeSource(active.v.id, cohortCtx);
-    recordCohortAttempt({
-      vocabId: active.v.id,
-      kind,
-      isCorrect,
-      latencyMs: latency,
-      source,
-      cohortId: cohortCtx.cohortId,
-      cohortWordIds: cohortCtx.cohortWordIds,
-    }).catch((e) => console.error("[GuidedSession] recordCohortAttempt", e));
+    if (!suppressGaokao) {
+      recordCohortAttempt({
+        vocabId: active.v.id,
+        kind,
+        isCorrect,
+        latencyMs: latency,
+        source,
+        cohortId: cohortCtx.cohortId,
+        cohortWordIds: cohortCtx.cohortWordIds,
+      }).catch((e) => console.error("[GuidedSession] recordCohortAttempt", e));
+    }
     if (trackJuniorMastery && grade != null) {
       void recordJuniorWordMastery({
         wordId: active.v.id,

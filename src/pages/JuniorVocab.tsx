@@ -24,7 +24,7 @@ import { canonSpelling } from "@/lib/spellingVariants";
 import { unlockAudioSync } from "@/lib/speak";
 import { Rocket } from "lucide-react";
 
-type Vocab = {
+export type Vocab = {
   id: string;
   word: string;
   phonetic: string | null;
@@ -515,7 +515,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+export function ClassicQuiz({ pool, onExit, gradeNum, suppressGaokao = false }: {pool: Vocab[];onExit: () => void;gradeNum: number;suppressGaokao?: boolean;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const BATCH = 20;
@@ -665,20 +665,21 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});else
     notifyWrong();
+    // ★铁律★ suppressGaokao(高中复用路径)→ 跳过 gaokao_user_mastery / cohort / unified,只写权威 junior_word_mastery。
     const [, , unifiedRes] = await Promise.all([
-      recordCohortAttempt({
+      suppressGaokao ? Promise.resolve() : recordCohortAttempt({
         vocabId: cur.id,
         isCorrect: correct,
         kind: "en2cn",
         source: "free_practice",
       }).catch((e) => logJuniorVocabSideEffect("recordCohortAttempt", e)),
-      recordAttempt({
+      suppressGaokao ? Promise.resolve() : recordAttempt({
         questionType: "vocab",
         questionId: cur.id,
         userAnswer: m,
         isCorrect: correct,
       }).catch((e) => logJuniorVocabSideEffect("recordAttempt", e)),
-      recordUnifiedAttempt({
+      suppressGaokao ? Promise.resolve(null) : recordUnifiedAttempt({
         stage: "junior",
         grade: gradeNum,
         module: "vocab",
@@ -774,7 +775,7 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
    读句子(挖空)4 选 1。题库 context_questions(DB);掌握记在 word 原形上(context_consec)。 */
 type CtxQ = { id: string; word: string; sentence: string; options: string[]; answer: string };
 
-function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+export function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const BATCH = 10;
@@ -1050,7 +1051,7 @@ function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
 
 /* -------------------- MEMORY MATCH WRAPPER --------------------
    MemoryMatch 组件签名可能不同；用一个简化的本地实现保证可用 */
-function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+export function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const PAIRS = 8;
@@ -1266,7 +1267,7 @@ function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
 }
 
 /* -------------------- DICTATION -------------------- */
-function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+export function DictationSession({ pool, onExit, gradeNum, suppressGaokao = false }: {pool: Vocab[];onExit: () => void;gradeNum: number;suppressGaokao?: boolean;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const BATCH = 15;
@@ -1405,20 +1406,21 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
     setScore((s) => ({ correct: s.correct + (ok ? 1 : 0), total: s.total + 1 }));
     if (ok) awardCoins(3, "junior_vocab_dict").catch(() => {});else
     notifyWrong();
+    // ★铁律★ suppressGaokao(高中)→ 只写权威 junior_word_mastery,不碰 gaokao_user_mastery / cohort / unified。
     const [, , unifiedRes] = await Promise.all([
-      recordCohortAttempt({
+      suppressGaokao ? Promise.resolve() : recordCohortAttempt({
         vocabId: cur.id,
         isCorrect: ok,
         kind: "spell",
         source: "free_practice",
       }).catch((e) => logJuniorVocabSideEffect("recordCohortAttempt", e)),
-      recordAttempt({
+      suppressGaokao ? Promise.resolve() : recordAttempt({
         questionType: "vocab",
         questionId: cur.id,
         userAnswer: input,
         isCorrect: ok,
       }).catch((e) => logJuniorVocabSideEffect("recordAttempt", e)),
-      recordUnifiedAttempt({
+      suppressGaokao ? Promise.resolve(null) : recordUnifiedAttempt({
         stage: "junior",
         grade: gradeNum,
         module: "vocab",

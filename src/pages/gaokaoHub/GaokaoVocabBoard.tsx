@@ -5,6 +5,7 @@ import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
+import VocabGameLauncher from "@/components/vocab/VocabGameLauncher";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import WordBento from "@/components/WordBento";
@@ -150,13 +151,6 @@ export default function GaokaoVocabBoard() {
   }
 
   // ── 首页:仪表盘 + 复习 + 5步 + 5游戏 + 单词清单 ──
-  const games: { mode: Mode; cn: string; icon: typeof Brain; desc: string }[] = [
-    { mode: "classic", cn: "智能选义", icon: Brain, desc: "看词选义,答对2次掌握" },
-    { mode: "bento", cn: "单词便当", icon: Music, desc: "翻牌速配中英" },
-    { mode: "match", cn: "记忆翻牌", icon: Sparkles, desc: "配对记忆游戏" },
-    { mode: "dict", cn: "听写挑战", icon: Keyboard, desc: "听音拼写单词" },
-    { mode: "context", cn: "单词情景闯关", icon: Headphones, desc: "语境中用词" },
-  ];
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-5">
       <Link to="/gaokao/vocab" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -177,24 +171,16 @@ export default function GaokaoVocabBoard() {
         </button>
       )}
 
-      <button onClick={() => setMode("guided")} className="flex w-full items-center gap-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-500 p-4 text-left text-white shadow">
-        <BookOpen className="size-6 shrink-0" />
-        <div className="flex-1"><p className="font-extrabold">5步通关 · 看→认→想→拼→用</p><p className="text-xs text-white/80">按级解锁,系统化学一组新词</p></div>
-        <ChevronRight className="size-5" />
+      <button onClick={() => setMode("guided")} className="flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700">
+        <div className="flex items-center gap-3">
+          <BookOpen className="size-6 shrink-0" />
+          <div><p className="font-extrabold">5步通关 · 看→认→想→拼→用</p><p className="text-xs text-white/80">按级解锁,系统化学一组新词</p></div>
+        </div>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">推荐 ★</span>
       </button>
 
-      <section className="space-y-2">
-        <h2 className="px-1 text-sm font-bold text-muted-foreground">辅助训练游戏</h2>
-        <div className="grid grid-cols-2 gap-3">
-          {games.map((g) => (
-            <button key={g.mode} onClick={() => setMode(g.mode)} className="flex flex-col items-start gap-1 rounded-2xl border border-border bg-white p-4 text-left shadow-sm transition hover:border-emerald-300 hover:shadow-md dark:bg-card">
-              <g.icon className="size-5 text-emerald-500" />
-              <span className="font-extrabold text-foreground">{g.cn}</span>
-              <span className="text-[11px] text-muted-foreground">{g.desc}</span>
-            </button>
-          ))}
-        </div>
-      </section>
+      {/* 5 游戏启动卡(与初中 1:1 同色同序),复用共享 VocabGameLauncher */}
+      <VocabGameLauncher onPick={(m) => setMode(m)} />
 
       <section className="space-y-2">
         <h2 className="px-1 text-sm font-bold text-muted-foreground">单词清单(分组逐组学,共 {groups.length} 组)</h2>

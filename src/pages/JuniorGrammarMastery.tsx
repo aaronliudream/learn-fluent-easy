@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -88,6 +88,9 @@ function tierInfo(firstPct: number): { emoji: string; big: string; pass: boolean
 
 export default function JuniorGrammarMastery() {
   const { id } = useParams<{ id: string }>();
+  // 从 Hub 单元关进入时带 ?returnTo=<单元关URL>(高中=/gaokao/hub/...);有则所有返回出口回 Hub 关,全程不掉初中。
+  const [sp] = useSearchParams();
+  const returnTo = sp.get("returnTo");
   const [pt, setPt] = useState<Pt | null>(null);
   const [pool, setPool] = useState<GrammarQuestion[]>([]);
   const [loading, setLoading] = useState(true);
@@ -282,11 +285,11 @@ export default function JuniorGrammarMastery() {
             )}
           </p>
           <BackLink
-            to="/junior/grammar"
+            to={returnTo || "/junior/grammar"}
             className="playful-btn playful-btn-cyan mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-sky-400 px-6 py-2.5 text-sm text-white"
           >
             <ArrowLeft className="size-4" />
-            <T>返回语法地图</T>
+            <T>{returnTo ? "返回单元" : "返回语法地图"}</T>
           </BackLink>
         </div>
       </main>
@@ -294,10 +297,10 @@ export default function JuniorGrammarMastery() {
   }
 
   if (viewResult && completion) {
-    return <CompletionScreen pt={pt} data={completion} onRestart={restart} />;
+    return <CompletionScreen pt={pt} data={completion} onRestart={restart} returnTo={returnTo} />;
   }
 
-  const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
+  const backTo = returnTo || (pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar");
 
   return (
     <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
@@ -305,7 +308,7 @@ export default function JuniorGrammarMastery() {
         to={backTo}
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> <T>返回考点列表</T>
+        <ArrowLeft className="size-4" /> <T>{returnTo ? "返回单元" : "返回考点列表"}</T>
       </BackLink>
 
       <header className="playful-card relative overflow-hidden p-5">
@@ -393,14 +396,16 @@ function CompletionScreen({
   pt,
   data,
   onRestart,
+  returnTo,
 }: {
   pt: Pt;
   data: CompletionData;
   onRestart: () => void;
+  returnTo?: string | null;
 }) {
   const tier = tierInfo(data.firstPct);
-  const backToList = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
-  const backToHub = pt.grade ? `/junior/hub/${pt.grade}` : "/junior";
+  const backToList = returnTo || (pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar");
+  const backToHub = returnTo || (pt.grade ? `/junior/hub/${pt.grade}` : "/junior");
   const sub = tier.pass
     ? "本次测试表现不错，继续巩固会更棒"
     : data.neededMore > 0

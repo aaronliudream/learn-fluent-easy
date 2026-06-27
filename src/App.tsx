@@ -131,6 +131,7 @@ const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
 const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx"));
 const GaokaoReadingKnowledge = lazy(() => import("./pages/GaokaoReadingKnowledge.tsx"));
 const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
+const GaokaoUnitGrammarTest = lazy(() => import("./pages/gaokaoHub/GaokaoUnitGrammarTest.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
 const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
@@ -482,6 +483,15 @@ const App = () => (
           <Route path="/gaokao/writing/:id" element={<ChineseOnlyRoute><GaokaoWritingPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/listening" element={<ChineseOnlyRoute><GaokaoListening /></ChineseOnlyRoute>} />
           <Route path="/gaokao/listening/:id" element={<ChineseOnlyRoute><GaokaoListeningPlay /></ChineseOnlyRoute>} />
+          {/* 课本同步 9关 子页(高中壳镜像,basePath=/gaokao/lesson):复用 junior 子页组件(returnTo 回 /gaokao/hub),
+              全程不掉初中。与上方 /gaokao/reading|cloze|listening(旧专项play)路径区分,避免冲突。语法综合测试用高中孪生。
+              掌握度全部题级写 junior_user_mastery → 与课本同步/未来专项板块自动互通。见 docs/高中专区架构方案.md §①。 */}
+          <Route path="/gaokao/lesson/unit-grammar/:grade/:unitId" element={<ChineseOnlyRoute><GaokaoUnitGrammarTest /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/lesson/grammar/kp/:kpId" element={<ChineseOnlyRoute><JuniorKpPractice /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/lesson/grammar/:id/mastery" element={<ChineseOnlyRoute><JuniorGrammarMastery /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/lesson/reading/:id" element={<ChineseOnlyRoute><JuniorReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/lesson/cloze/:id" element={<ChineseOnlyRoute><JuniorClozePlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/lesson/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           </Route>

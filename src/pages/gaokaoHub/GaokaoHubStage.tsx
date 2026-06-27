@@ -28,6 +28,7 @@ export default function GaokaoHubStage() {
       <JuniorHubStagePlay
         unitId={unitId}
         stageIdx={stageIdx}
+        basePath="/gaokao/lesson"
         onBack={() => nav(`${base}/semester/${semId}/unit/${unitId}`)}
         onComplete={(needAiTest) => {
           completeStage(unitId, stageIdx); // 同步 gaokao 持久化(单元页进度/小圆圈)

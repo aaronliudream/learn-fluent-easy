@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 type TipContent = {
   title?: string;
   intro?: string;
-  speedTable?: { stmt: string; tag: string }[];
+  table?: { headers: string[]; rows: string[][] }; // 通用速查表(2列:用法/句型 → 例句/规则)
   specialRules?: { rule: string; mark?: string }[];
   why?: string[];
   gaokaoPoints?: string[];
@@ -57,17 +57,18 @@ export default function GrammarTipsCard({ volume, unit }: { volume?: string; uni
         <div className="space-y-3 px-4 pb-4 text-sm">
           {tip.intro && <p className="text-[#5C5751] dark:text-muted-foreground">{tip.intro}</p>}
 
-          {tip.speedTable && tip.speedTable.length > 0 && (
+          {tip.table && tip.table.rows.length > 0 && (
             <div className="overflow-hidden rounded-xl border border-amber-200 dark:border-amber-900/40">
               <table className="w-full text-left text-xs">
                 <thead className="bg-amber-100/70 dark:bg-amber-950/40">
-                  <tr><th className="px-3 py-1.5 font-bold">陈述句</th><th className="px-3 py-1.5 font-bold">反意疑问</th></tr>
+                  <tr>{(tip.table.headers ?? []).map((h, i) => <th key={i} className="px-3 py-1.5 font-bold">{h}</th>)}</tr>
                 </thead>
                 <tbody>
-                  {tip.speedTable.map((r, i) => (
+                  {tip.table.rows.map((row, i) => (
                     <tr key={i} className="border-t border-amber-100 dark:border-amber-900/30">
-                      <td className="px-3 py-1.5">{r.stmt}</td>
-                      <td className="px-3 py-1.5 font-bold text-amber-700 dark:text-amber-300">{r.tag}</td>
+                      {row.map((cell, j) => (
+                        <td key={j} className={`px-3 py-1.5 ${j === 1 ? "font-bold text-amber-700 dark:text-amber-300" : ""}`}>{cell}</td>
+                      ))}
                     </tr>
                   ))}
                 </tbody>

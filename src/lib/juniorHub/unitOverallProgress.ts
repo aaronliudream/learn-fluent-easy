@@ -11,6 +11,18 @@ import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 export type UnitOverall = { done: number; mastered: number; total: number };
 export const VOCAB_MASTER_LEVEL = 3;
 
+/**
+ * 核心词汇关「完成度环」口径(初中+高中统一):绿环=浏览进度(看了多少词),非"做过题"。
+ * vocabGroup = 已看到的最后一组下标(单调不回退,存 junior_hub_progress.state);每组 12 词。
+ * 掌握度(橙环)仍走游戏掌握(loadUnitVocabProgress.mastered = mastery_level≥3),与本函数无关。
+ * ⚠️ 纯展示口径,不写任何数据 → 不影响学生进度数据。
+ */
+export const VOCAB_GROUP_SIZE = 12;
+export function browsedWordCount(vocabGroup: number | null | undefined, total: number): number {
+  if (!total || vocabGroup == null) return 0;
+  return Math.min((vocabGroup + 1) * VOCAB_GROUP_SIZE, total);
+}
+
 export async function loadUnitVocabProgress(wordIds: string[]): Promise<UnitOverall> {
   const total = wordIds.length;
   if (!total) return { done: 0, mastered: 0, total: 0 };

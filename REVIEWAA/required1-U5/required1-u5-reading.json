@@ -1,0 +1,248 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Languages Around the World",
+  "source": "人教版2019必修一 Unit 5 同主题阅读(汉字书写系统/书法/学外语的理由/学德语的奋斗/英美英语差异/学英语的困难与建议)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Chinese Writing System",
+      "body": "China is widely known for its ancient civilisation, which has continued into modern times despite the many ups and downs in its history. There are many reasons why this has been possible, but one of the main factors has been the Chinese writing system. At the beginning, written Chinese was a picture-based language. It dates back thousands of years to symbols carved on animal bones and shells. By the Shang Dynasty, these symbols had become a well-developed writing system. Over time, the system developed into different forms, and many varieties of characters appeared. This changed under Emperor Qinshihuang of the Qin Dynasty, who united the seven major states into one country where the writing system began to develop in one direction. That writing system was of great importance in uniting the Chinese people and culture.",
+      "questions": [
+        {
+          "stem": "According to the text, what has helped Chinese civilisation continue?",
+          "options": [
+            "Mainly the Chinese writing system.",
+            "Only its large population.",
+            "The weather of the country.",
+            "Foreign trade alone."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'one of the main factors has been the Chinese writing system' 的转述。"
+        },
+        {
+          "stem": "What was written Chinese like at the very beginning?",
+          "options": [
+            "It was based on sounds.",
+            "It was a picture-based language.",
+            "It had no symbols at all.",
+            "It was the same as today's hanzi."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'written Chinese was a picture-based language'(中段)。"
+        },
+        {
+          "stem": "What did Emperor Qinshihuang do for the writing system?",
+          "options": [
+            "He united the country so it developed in one direction.",
+            "He removed all characters.",
+            "He made it picture-based again.",
+            "He banned the use of writing."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'united the seven major states… develop in one direction' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Art of Chinese Calligraphy",
+      "body": "Written Chinese has become an important means by which China's present is connected with its past. People today can read the classic works that were written in ancient times. The high regard for the writing system can be seen in the development of Chinese characters as an art form, known as Chinese calligraphy. Calligraphy is not only a beautiful art done with a brush, but also a way of showing the character of the person behind the brush. It is difficult to say exactly when calligraphy began, but it dates back at least to the Han Dynasty. Today, anyone from small children to old people can enjoy practising this art. As China plays a greater role in global affairs, an increasing number of international students are beginning to appreciate Chinese culture through this amazing language.",
+      "questions": [
+        {
+          "stem": "What can people today still read, thanks to the writing system?",
+          "options": [
+            "Only modern newspapers.",
+            "The classic works written long ago.",
+            "Pictures with no words.",
+            "Nothing from the past."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'read the classic works that were written in ancient times' 的转述。"
+        },
+        {
+          "stem": "Besides being beautiful, what does calligraphy show?",
+          "options": [
+            "The price of the brush.",
+            "The weather of the day.",
+            "The personality of the writer holding the brush.",
+            "The age of the paper."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a way of showing the character of the person behind the brush'(中段)。"
+        },
+        {
+          "stem": "Why are more international students appreciating Chinese culture?",
+          "options": [
+            "Because Chinese is easy to spell.",
+            "Because calligraphy is free.",
+            "Because no one studies English now.",
+            "Because China is becoming more important in the world."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'As China plays a greater role in global affairs…' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Learn a Foreign Language",
+      "body": "There are about seven thousand languages in the world, but only a few are spoken by very large numbers of people. Chinese and English have the most speakers, and the official languages of the United Nations are spoken by around 2.8 billion people as a native or second language. So why do so many students study a foreign language? Some think it means better job chances in the future. Others want to enjoy films, music or books in their original language. A few simply love the sound of a language and want to travel to the countries where it is spoken. Whatever the reason, learning a new language opens a door to a different way of thinking. It lets you see the world from another point of view, and that, many believe, is worth all the hard work.",
+      "questions": [
+        {
+          "stem": "How many languages are there in the world, according to the text?",
+          "options": [
+            "About seven thousand.",
+            "Only a few hundred.",
+            "Exactly 2.8 billion.",
+            "Just two."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'about seven thousand languages in the world' 的转述。"
+        },
+        {
+          "stem": "Why do some students learn a foreign language?",
+          "options": [
+            "To forget their own language.",
+            "Because it may improve their future job prospects.",
+            "Because they are forced to.",
+            "To avoid travelling abroad."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'better job chances in the future'(中段,众多原因之一)。"
+        },
+        {
+          "stem": "What does the writer say learning a language gives you?",
+          "options": [
+            "Less free time.",
+            "A worse memory.",
+            "A new way of seeing the world.",
+            "Fewer friends."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'see the world from another point of view' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "My Struggle with German",
+      "body": "When I started studying German, it was a real struggle. The words felt strange on my tongue, and the grammar would not stay in my head. I told my mum that I wanted to give up. But she said that studying a language was not just for my future; it was exercise for the brain. The more I learned of a language, she said, the more my brain would grow. So I kept going. Then came the day when German suddenly no longer felt like a foreign language. I had finally reached a place where I could think in it and see the world from a different point of view. I could open a book and see meanings, not just a sea of words. That was when I finally understood the reason why my mum had encouraged me not to give up.",
+      "questions": [
+        {
+          "stem": "How did the writer feel when first studying German?",
+          "options": [
+            "It was very easy.",
+            "It was boring and useless.",
+            "It felt like a holiday.",
+            "It felt very difficult at first."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'it was a real struggle' 的转述。"
+        },
+        {
+          "stem": "What did the writer's mum compare language learning to?",
+          "options": [
+            "Exercise for the brain.",
+            "A waste of time.",
+            "A game with no rules.",
+            "A short holiday."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'it was exercise for the brain'(中段)。"
+        },
+        {
+          "stem": "What finally happened after the writer kept going?",
+          "options": [
+            "The writer gave up completely.",
+            "The writer could think in German and see meanings.",
+            "German became harder than ever.",
+            "The mum stopped helping."
+          ],
+          "answer_index": 1,
+          "explanation": "末段 'could think in it… see meanings, not just a sea of words' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Two Kinds of English",
+      "body": "English is not exactly the same everywhere. British English and American English use different words for the same things. For example, what British people call petrol, Americans call gas; the British underground is the American subway; a British flat is an American apartment. Sometimes these differences can cause funny misunderstandings. A Chinese student once told his British friend that he wanted to buy some pants. In American English, pants means trousers, but in British English the same word means underwear. They both laughed when they understood the mix-up. These differences are not mistakes; they are just two ways of speaking the same language. If you are not sure which word someone means, it is always polite to ask, \"Sorry, what do you mean by that?\"",
+      "questions": [
+        {
+          "stem": "What is the British word for the American 'gas'?",
+          "options": [
+            "Subway.",
+            "Apartment.",
+            "Petrol.",
+            "Underground."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'what British people call petrol, Americans call gas'。"
+        },
+        {
+          "stem": "Why did the two friends laugh?",
+          "options": [
+            "Because the student spoke no English.",
+            "Because they could not find a shop.",
+            "Because the word did not exist.",
+            "Because 'pants' means different things in the two kinds of English."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'pants means trousers… means underwear… laughed when they understood'(中段)。"
+        },
+        {
+          "stem": "What does the writer suggest doing when you are unsure of a word?",
+          "options": [
+            "Politely ask what the person means.",
+            "Stop speaking English.",
+            "Guess and say nothing.",
+            "Use only Chinese."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'it is always polite to ask…' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Help with Learning English",
+      "body": "On an online forum, Chinese students share their biggest problems with learning English. Wang Le says he used to get high marks but now has trouble with listening; when native speakers talk fast, he can catch only a few words. Jia Xin advises listening to English radio programmes to get used to the speed, and even recording your own voice to compare your pronunciation with the host's. Jia Xin's own headache is being polite: it is easy to say \"Open the window\", but harder to choose between \"Open the window, please\" and \"Would you mind opening the window?\" Li Rui explains that the right choice depends on who you are talking to. With a close friend, a few short words are enough; with someone you do not know well, a longer and more polite question is better. For Li Rui, though, the biggest problem is simply remembering so many new words.",
+      "questions": [
+        {
+          "stem": "What is Wang Le's main problem with English now?",
+          "options": [
+            "He cannot read at all.",
+            "He has trouble with listening.",
+            "He forgets how to write.",
+            "He dislikes English films."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'now has trouble with listening' 的转述。"
+        },
+        {
+          "stem": "What does Jia Xin advise doing to improve listening?",
+          "options": [
+            "Stop listening to English.",
+            "Only read silently.",
+            "Listen to English radio and record your own voice.",
+            "Speak Chinese more often."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'listening to English radio programmes… recording your own voice'(中段)。"
+        },
+        {
+          "stem": "According to Li Rui, what does being polite in English depend on?",
+          "options": [
+            "The time of day.",
+            "The weather.",
+            "How loud you speak.",
+            "The person you are speaking with."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the right choice depends on who you are talking to'(后段)。"
+        }
+      ]
+    }
+  ]
+}

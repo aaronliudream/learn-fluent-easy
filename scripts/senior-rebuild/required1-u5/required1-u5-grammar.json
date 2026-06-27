@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "grammar_title": "限制性定语从句:关系副词 when / where / why(及与关系代词的判断)",
+  "source": "人教版2019必修一 Unit 5 Discovering Useful Structures:限制性定语从句(关系副词 when/where/why,= 介词+which)。句子地道、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "when(时间先行词 = on/in/at which)",
+      "overview": "先行词表时间(day/time/year/moment 等)、从句不缺主语或宾语(只缺时间状语)时,用关系副词 when(= 介词+which)。"
+    },
+    {
+      "code": "u5.02",
+      "point": "where(地点先行词 = in/at/on which)",
+      "overview": "先行词表地点(place/country/city/room 等)、从句只缺地点状语时,用关系副词 where(= 介词+which)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "why(原因)+ 关系副词 vs 关系代词判断",
+      "overview": "先行词为 reason、从句缺原因状语时用 why;但若从句缺主语/宾语,即使先行词表时间/地点也要用关系代词 that/which;介词后只能用 which。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "\"I still remember the day ____ I first wrote a Chinese character.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 表时间,从句不缺主宾(只缺时间状语)→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There was a time ____ people in China were divided by dialects.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 time、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Spring is the season ____ many students start learning a new language.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 season 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"1949 was the year ____ the country began a new chapter.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 year 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I will never forget the moment ____ I could finally think in German.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 moment 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"That was the day ____ Emperor Qinshihuang unified the writing system.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There comes a point ____ a foreign language no longer feels foreign.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "point 在此表'时刻'→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Sunday is the day ____ I usually practise my calligraphy.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 day → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"He still recalls the night ____ he gave his first speech in English.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 night 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There is an age ____ children begin to learn characters.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "age 在此表'时期'→ when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"That was the period ____ many varieties of characters appeared.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 period 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I remember the week ____ I first started the German course.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 week 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Autumn is the time of year ____ we hold the language festival.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 time of year → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"It was an era ____ writing was done on bones and shells.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 era 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I'll never forget the first day ____ Mrs Haus introduced herself to us.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There was a time ____ I really wanted to give up learning.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 time → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I remember the morning ____ I read my first book in Latin.\"",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 morning 表时间 → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"That was the moment ____ the whole room suddenly fell silent.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 moment → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"202 BCE was the year ____ the Han Dynasty began.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 year → when。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I'll always remember the day ____ I finally understood my mum's words.\"",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 day、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Qinshihuang built a unified country ____ the writing system developed in one direction.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 country 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"I had finally come to a place ____ I could think in this foreign language.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 place 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"This is the school ____ I first learned to write Chinese.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 school 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Canada is a country ____ several languages are spoken.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 country 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the classroom ____ Mrs Haus taught us German.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 classroom → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"I once wished to live in a country ____ German was spoken every day.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 country 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"China is a place ____ people of different dialects communicate in writing.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 place → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"We visited the museum ____ ancient bones and shells are kept.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 museum 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It was a small room ____ we met for our language classes.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 room 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There are still villages ____ an old dialect is spoken today.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 villages 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"The library is the place ____ I quietly studied Latin every afternoon.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 place → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the building ____ the summer German course was held.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 building 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Reading opened a window to a world ____ I could see meanings, not just words.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 world 表抽象地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It was a time and a land ____ people were divided geographically.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 land 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"I found a quiet corner ____ I could read in peace.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 corner 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"That is the office ____ our German teacher used to work.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 office 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Rome was a city ____ Latin was once the main language.\"",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 city 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"This is the studio ____ Chinese calligraphy is taught.\"",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 studio 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"He showed me the hall ____ the old dictionary was first written.\"",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 hall 表地点 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is a website ____ students can practise foreign languages for free.\"",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "website 视作抽象地点 → where。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The reason ____ he gave up was simply a lack of practice.\"",
+      "options": [
+        "why",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"There are many reasons ____ people learn a foreign language.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reasons → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"I finally understood the reason ____ my mum had encouraged me.\"",
+      "options": [
+        "that",
+        "which",
+        "why",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"One reason ____ this has been possible is the writing system.\"",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"That is the reason ____ Mrs Haus's students loved German so much.\"",
+      "options": [
+        "why",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"This is the main reason ____ written Chinese has survived so long.\"",
+      "options": [
+        "that",
+        "why",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"I don't know the reason ____ he suddenly stopped studying Latin.\"",
+      "options": [
+        "that",
+        "which",
+        "why",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"There must be a reason ____ so many students choose Chinese.\"",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The day ____ changed my view of language was truly special.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 虽表时间,但从句缺主语 → 用关系代词 that(不是 when)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The book ____ I read that summer opened a whole new world.\"",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 book、从句缺宾语 → 关系代词 that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The language ____ she loved most of all was German.\"",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 language、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The place ____ I visited last week was a calligraphy museum.\"",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 place 虽表地点,但从句缺宾语(visited ___)→ 用 that(不是 where)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The words ____ felt strange at first soon began to make sense.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 words、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The first character ____ I learned to write was 马 (horse).\"",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 character、从句缺宾语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The goal ____ I had been fighting for was finally within reach.\"",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 goal、从句缺宾语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The dialect ____ they speak at home is hard for outsiders to follow.\"",
+      "options": [
+        "when",
+        "where",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 dialect、从句缺宾语 → that。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"These were animal bones and shells on ____ symbols were carved.\"",
+      "options": [
+        "which",
+        "that",
+        "when",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 on 后只能用 which(不可 that)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"That was the way in ____ the writing system developed.\"",
+      "options": [
+        "that",
+        "which",
+        "when",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "the way in which;介词 in 后用 which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Calligraphy is a means by ____ China's present connects with its past.\"",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "a means by which;介词 by 后用 which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The brush with ____ calligraphy is done must be held correctly.\"",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指物用 which。"
+    }
+  ]
+}

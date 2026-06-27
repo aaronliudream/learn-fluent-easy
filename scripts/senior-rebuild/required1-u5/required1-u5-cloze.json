@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Languages Around the World",
+  "source": "人教版2019必修一 Unit 5 同主题完形(学写汉字/一个字的由来/爱上书法/英美误会/练口语建议/文字统一中国)。用词限 U5/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Write Chinese",
+      "text": "When I first started learning Chinese, the characters looked like tiny pictures that I could not (1)____. My teacher told me that each character is a (2)____ with its own meaning and story. She said that written Chinese (3)____ back thousands of years to symbols carved on bones. At first it was a real (4)____, and the strokes felt strange on my hand. But slowly I began to (5)____ how beautiful the writing was. I learned that people who speak different (6)____ across China can still read the same characters. That is the (7)____ why written Chinese has helped to (8)____ the country for so long. Now I practise a few characters every (9)____, and each one feels like a small window into an ancient (10)____. Learning to write Chinese has changed the way I see the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "read",
+            "eat",
+            "buy",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "could not read 看不懂。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "symbol",
+            "noise",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a symbol 一个符号。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "looks",
+            "gives",
+            "dates",
+            "puts"
+          ],
+          "answer_index": 2,
+          "explanation": "date back 追溯到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "game",
+            "joke",
+            "struggle"
+          ],
+          "answer_index": 3,
+          "explanation": "a real struggle 一种艰难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "appreciate",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "appreciate 欣赏。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "foods",
+            "dialects",
+            "songs",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "different dialects 不同方言。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "reason",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the reason why 原因。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "break",
+            "leave",
+            "sell",
+            "unify"
+          ],
+          "answer_index": 3,
+          "explanation": "unify the country 统一国家。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "day",
+            "year",
+            "century",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "every day 每天。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "civilisation",
+            "market",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "ancient civilisation 古老文明。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Story of a Character",
+      "text": "Many Chinese characters began as simple (1)____ of real things. Long ago, ancient people (2)____ marks onto animal bones and shells to record their lives. The character for 'horse', for example, once looked like a real horse with four (3)____ and a tail. Over the (4)____, the picture slowly became simpler, until it turned into the character we (5)____ today. This is one (6)____ why Chinese is such an interesting language to learn: behind each character there is often a small (7)____. By the Shang Dynasty, these pictures had developed into a complete writing (8)____. Even now, some of the ancient (9)____ can still be seen inside modern characters. Learning where a character comes from makes it much easier to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "noises",
+            "pictures",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "pictures of real things 实物的图画。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "ate",
+            "lost",
+            "carved"
+          ],
+          "answer_index": 3,
+          "explanation": "carved marks 刻下记号。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "legs",
+            "books",
+            "wheels",
+            "wings"
+          ],
+          "answer_index": 0,
+          "explanation": "four legs 四条腿。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "minutes",
+            "years",
+            "seconds",
+            "metres"
+          ],
+          "answer_index": 1,
+          "explanation": "over the years 多年间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "buy",
+            "drop",
+            "use",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "the character we use 我们使用的字。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "shop",
+            "city",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "one reason why 一个原因。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "story",
+            "price",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "a small story 一个小故事。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "machine",
+            "system",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "writing system 书写系统。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "songs",
+            "prices",
+            "symbols",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "ancient symbols 古老符号。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "remember"
+          ],
+          "answer_index": 3,
+          "explanation": "easier to remember 更容易记住。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Why I Love Calligraphy",
+      "text": "My grandfather is the person (1)____ first showed me Chinese calligraphy. He told me it is an (2)____ form done with a soft brush. At first my lines were shaky and ugly, and I almost wanted to give (3)____. But Grandpa said that calligraphy shows the (4)____ of the person behind the brush, so I should be patient. Little by little, I learned to hold the brush correctly and to (5)____ each stroke slowly. Now calligraphy is the hobby (6)____ I enjoy most. It makes me feel (7)____ and helps me forget the stress of school. It also (8)____ me to the past, because people have practised this art for thousands of (9)____. Whenever I pick up my brush, I feel proud to be part of such an ancient (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "which",
+            "where",
+            "when"
+          ],
+          "answer_index": 0,
+          "explanation": "the person who 指人作主语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "exam",
+            "art",
+            "error",
+            "event"
+          ],
+          "answer_index": 1,
+          "explanation": "an art form 一种艺术形式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "in",
+            "off",
+            "up",
+            "out"
+          ],
+          "answer_index": 2,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "character"
+          ],
+          "answer_index": 3,
+          "explanation": "the character of the person 人的品格。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "draw",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "draw each stroke 画好每一笔。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "who",
+            "that",
+            "where",
+            "when"
+          ],
+          "answer_index": 1,
+          "explanation": "the hobby that I enjoy 指物作宾语。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "angry",
+            "afraid",
+            "calm",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "feel calm 感到平静。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "connects"
+          ],
+          "answer_index": 3,
+          "explanation": "connects me to the past 把我和过去相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "years",
+            "minutes",
+            "metres",
+            "seconds"
+          ],
+          "answer_index": 0,
+          "explanation": "thousands of years 数千年。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shop",
+            "art",
+            "game",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "an ancient art 古老的艺术。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Funny Misunderstanding",
+      "text": "Last week my American friend Tom and I had a funny (1)____. I told him I needed to buy some 'pants', and he started to (2)____. In American English, 'pants' means trousers, but I had learned the (3)____ in British English, where it means underwear! When we finally (4)____ the mix-up, we both laughed. Tom explained that British and American English often use different (5)____ for the same thing. For example, the British say 'petrol' while Americans say 'gas', and a British 'flat' is an American (6)____. These are not (7)____; they are just two ways of speaking the same (8)____. Now, whenever I am not (9)____ what someone means, I simply ask, \"Sorry, what do you mean by that?\" Being willing to (10)____ has saved me from many funny mistakes.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "machine",
+            "misunderstanding",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a funny misunderstanding 有趣的误会。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cry",
+            "sleep",
+            "leave",
+            "laugh"
+          ],
+          "answer_index": 3,
+          "explanation": "start to laugh 开始笑。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "word",
+            "price",
+            "song",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "learned the word 学的词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forgot",
+            "understood",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "understood the mix-up 弄懂误会。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "noises",
+            "words",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "different words 不同的词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "garden",
+            "stadium",
+            "castle",
+            "apartment"
+          ],
+          "answer_index": 3,
+          "explanation": "American apartment 美式公寓。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "mistakes",
+            "songs",
+            "prices",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "not mistakes 不是错误。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "food",
+            "language",
+            "city",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the same language 同一种语言。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rich",
+            "late",
+            "sure",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "not sure 不确定。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hide",
+            "forget",
+            "leave",
+            "ask"
+          ],
+          "answer_index": 3,
+          "explanation": "willing to ask 愿意询问。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Improving My Spoken English",
+      "text": "My biggest (1)____ with English used to be speaking politely. It is easy to say \"Open the window\", but in English that can sound quite (2)____. So I had to learn to (3)____ between \"Open the window, please\" and \"Would you mind opening the window?\" My friend Li Rui told me that the right choice (4)____ on who you are talking to. With a close friend, a few short words are (5)____; but with someone you do not know well, a longer, more polite (6)____ is better. To practise, I listen to English radio every day to get (7)____ to how fast native speakers talk. Sometimes I even (8)____ my own voice and compare it with the host's. Step by step, my speaking has (9)____, and I feel much more (10)____ when I talk to foreign visitors now.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "trouble",
+            "song",
+            "price",
+            "game"
+          ],
+          "answer_index": 0,
+          "explanation": "biggest trouble 最大困难。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "polite",
+            "rude",
+            "happy",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "sound rude 听起来无礼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "sell",
+            "choose",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "choose between 在……之间选择。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sells",
+            "breaks",
+            "leaves",
+            "depends"
+          ],
+          "answer_index": 3,
+          "explanation": "depends on 取决于。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "enough",
+            "wrong",
+            "empty",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "are enough 就够了。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "request",
+            "price",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "a polite request 礼貌的请求。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lost",
+            "afraid",
+            "used",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "get used to 习惯于。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "sell",
+            "hide",
+            "record"
+          ],
+          "answer_index": 3,
+          "explanation": "record my own voice 录下声音。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "improved",
+            "stopped",
+            "failed",
+            "disappeared"
+          ],
+          "answer_index": 0,
+          "explanation": "has improved 提高了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "confident",
+            "bored",
+            "sorry"
+          ],
+          "answer_index": 1,
+          "explanation": "more confident 更自信。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "How Writing United China",
+      "text": "Long ago, China was a land (1)____ people were divided by mountains and rivers. Different regions spoke different (2)____, and they could not easily understand one another's speech. However, there was one thing they (3)____: their written characters. No matter (4)____ a person lived, the same character carried the same (5)____. This is the main reason (6)____ written Chinese became so important. When Emperor Qinshihuang (7)____ the country, he made the writing system develop in one (8)____, which helped to bring the people together. Even today, written Chinese is a (9)____ by which the past and the present are connected. People can still read works that were (10)____ thousands of years ago, and in this way the long story of Chinese culture continues.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "which",
+            "when",
+            "where",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "a land where 地点先行词用 where。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "foods",
+            "songs",
+            "games",
+            "dialects"
+          ],
+          "answer_index": 3,
+          "explanation": "different dialects 不同方言。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shared",
+            "lost",
+            "sold",
+            "broke"
+          ],
+          "answer_index": 0,
+          "explanation": "one thing they shared 共有的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "what",
+            "where",
+            "who",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "no matter where 不论在哪里。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "meaning",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the same meaning 相同的意义。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "which",
+            "where",
+            "when",
+            "why"
+          ],
+          "answer_index": 3,
+          "explanation": "the reason why 原因。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "unified",
+            "left",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "unified the country 统一国家。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "direction",
+            "market",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "in one direction 朝一个方向。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "means",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "a means by which 一种途径。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "eaten",
+            "sold",
+            "thrown",
+            "written"
+          ],
+          "answer_index": 3,
+          "explanation": "works that were written 被写下的作品。"
+        }
+      ]
+    }
+  ]
+}

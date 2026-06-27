@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Languages Around the World",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修一 Unit 5 同主题听力(选学哪门语言/世界语言/英美英语误会/汉字系统/请教学英语/书法贴士)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Which Language to Learn",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Amy: What foreign language do you want to study, Ben?",
+        "Ben: I really want to study French. I think it sounds beautiful.",
+        "Amy: Why French? Do you want to go to France one day?",
+        "Ben: Yes, and French is used by many international organisations.",
+        "Amy: That's true. I'd like to learn Russian myself.",
+        "Ben: Russian? Why is that?",
+        "Amy: My father does business with Russians, so I can help him.",
+        "Ben: That's a great reason. Good luck with it!"
+      ],
+      "translation_cn": "Amy 问 Ben 想学哪门外语;Ben 想学法语,觉得好听;因为想去法国、且许多国际组织用法语;Amy 想学俄语;因为父亲和俄罗斯人做生意,她可以帮忙。",
+      "questions": [
+        {
+          "stem": "Which language does Ben want to study?",
+          "options": [
+            "French.",
+            "Russian.",
+            "German.",
+            "Japanese."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Ben like that language?",
+          "options": [
+            "It is the easiest to spell.",
+            "He thinks it sounds beautiful.",
+            "It has the most speakers.",
+            "His teacher chose it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which language does Amy want to learn?",
+          "options": [
+            "Russian.",
+            "French.",
+            "Arabic.",
+            "Korean."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Amy want to learn it?",
+          "options": [
+            "To watch cartoons.",
+            "Her father does business with Russians.",
+            "To travel to France.",
+            "Because it is required at school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is one extra reason Ben gives for his choice?",
+          "options": [
+            "It is spoken only in France.",
+            "No one else speaks it.",
+            "Many international organisations use it.",
+            "It has no grammar."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 Languages of the World",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "There are about seven thousand languages in the world today.",
+        "Chinese and English have the most native speakers.",
+        "The official languages of the United Nations are spoken by billions of people.",
+        "People study a foreign language for many different reasons.",
+        "Learning one opens a door to a new way of thinking."
+      ],
+      "translation_cn": "当今世界约有七千种语言;汉语和英语母语者最多;联合国官方语言被数十亿人使用;人们学外语原因各异;学一门语言会打开通往新思维方式的大门。",
+      "questions": [
+        {
+          "stem": "About how many languages are there in the world?",
+          "options": [
+            "About seventy.",
+            "About seven million.",
+            "Only two.",
+            "About seven thousand."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which two languages have the most native speakers?",
+          "options": [
+            "Chinese and English.",
+            "French and German.",
+            "Russian and Arabic.",
+            "Korean and Japanese."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who speaks the UN's official languages?",
+          "options": [
+            "Only a few people.",
+            "Billions of people.",
+            "Nobody today.",
+            "Only students."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do people study a foreign language?",
+          "options": [
+            "For only one reason.",
+            "Because they are forced to.",
+            "For many different reasons.",
+            "To forget their own language."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does learning a language open, according to the passage?",
+          "options": [
+            "A shop.",
+            "A window to the past only.",
+            "A box of money.",
+            "A door to a new way of thinking."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 A Word with Two Meanings",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Zhou Wei: I really need to buy some pants today.",
+        "Martin: Pants? That's funny. I don't usually shop for pants with friends.",
+        "Zhou Wei: You don't? Don't you want someone to tell you if they look good?",
+        "Martin: Wait, do you mean trousers, the ones we wear on our legs?",
+        "Zhou Wei: Yes! That's American English for trousers.",
+        "Martin: Ah, I see. In British English, 'pants' means underwear.",
+        "Zhou Wei: Oh! No wonder you looked surprised.",
+        "Martin: Don't worry. It's just two ways of speaking the same language."
+      ],
+      "translation_cn": "周伟说要买 pants;Martin 觉得好笑;原来周伟说的是美式英语里的'裤子';而英式英语里 pants 指内裤;两人弄懂这只是同一语言的两种说法。",
+      "questions": [
+        {
+          "stem": "What did Zhou Wei want to buy?",
+          "options": [
+            "Trousers (he called them 'pants').",
+            "A pair of shoes.",
+            "A new book.",
+            "Some food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Martin find it funny at first?",
+          "options": [
+            "He had no money.",
+            "He thought 'pants' meant underwear.",
+            "He did not like Zhou Wei.",
+            "He could not hear well."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In American English, what does 'pants' mean?",
+          "options": [
+            "Underwear.",
+            "Shoes.",
+            "Trousers.",
+            "A hat."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "In British English, what does 'pants' mean?",
+          "options": [
+            "Trousers.",
+            "A coat.",
+            "Socks.",
+            "Underwear."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Martin explain the difference?",
+          "options": [
+            "It is two ways of speaking the same language.",
+            "One of them is wrong.",
+            "Zhou Wei made a mistake.",
+            "English is too hard."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 The Chinese Writing System",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Written Chinese began thousands of years ago as simple pictures.",
+        "Ancient people carved symbols onto animal bones and shells.",
+        "By the Shang Dynasty, these became a complete writing system.",
+        "No matter what dialect people speak, they can read the same characters.",
+        "In this way, written Chinese has helped to unite the people."
+      ],
+      "translation_cn": "汉字数千年前始于简单的图画;古人把符号刻在动物骨头和龟甲上;到商朝已成完整书写系统;不论说什么方言,人们都能读同样的字;这样汉字帮助团结了人民。",
+      "questions": [
+        {
+          "stem": "What did written Chinese begin as?",
+          "options": [
+            "Spoken sounds only.",
+            "Simple pictures.",
+            "Foreign words.",
+            "Modern letters."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where did ancient people carve the symbols?",
+          "options": [
+            "On paper books.",
+            "On metal coins.",
+            "On animal bones and shells.",
+            "On glass."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "By which dynasty had it become a complete system?",
+          "options": [
+            "The Tang Dynasty.",
+            "The Ming Dynasty.",
+            "No dynasty.",
+            "The Shang Dynasty."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who can read the same characters?",
+          "options": [
+            "People who speak different dialects.",
+            "Only one region.",
+            "Only scholars.",
+            "Only foreigners."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What has written Chinese helped to do?",
+          "options": [
+            "Divide the people.",
+            "Unite the people.",
+            "End all dialects.",
+            "Replace speaking."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Advice on Learning English",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Wang Le: I have so much trouble with my listening. Any advice?",
+        "Jia Xin: Try listening to English radio every day.",
+        "Wang Le: Does that really help?",
+        "Jia Xin: Yes. It helps you get used to how fast native speakers talk.",
+        "Wang Le: That's a good idea. What else can I do?",
+        "Jia Xin: Record your own voice and compare it with the speaker's.",
+        "Wang Le: I see. So I can hear my own mistakes.",
+        "Jia Xin: Exactly. Little by little, your listening will improve."
+      ],
+      "translation_cn": "王乐听力困难求建议;佳欣建议每天听英语广播;能帮助习惯母语者语速;还建议录下自己声音和原声比较,听出自己的错误;一点点听力就会进步。",
+      "questions": [
+        {
+          "stem": "What problem does Wang Le have?",
+          "options": [
+            "Trouble with writing.",
+            "Trouble with reading.",
+            "Trouble with listening.",
+            "Trouble with spelling."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Jia Xin's first piece of advice?",
+          "options": [
+            "Stop studying English.",
+            "Only read silently.",
+            "Watch films with no sound.",
+            "Listen to English radio every day."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does that advice help?",
+          "options": [
+            "It helps you get used to native speakers' speed.",
+            "It saves money.",
+            "It makes English easier to spell.",
+            "It teaches new grammar rules."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the second piece of advice?",
+          "options": [
+            "Speak only Chinese.",
+            "Record your voice and compare it.",
+            "Never listen to others.",
+            "Read the dictionary."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will happen little by little?",
+          "options": [
+            "Wang Le will give up.",
+            "His English will get worse.",
+            "His listening will improve.",
+            "Nothing will change."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 A Tip for Language Learners",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone learning a new language.",
+        "Do not be afraid to make mistakes when you speak.",
+        "Every mistake is a chance to learn something new.",
+        "If you are not sure what a word means, just ask politely.",
+        "A few brave words today can open many doors tomorrow."
+      ],
+      "translation_cn": "给学新语言的人一个小贴士:说话时别怕犯错;每个错误都是学新东西的机会;不确定词义就礼貌地问;今天几句勇敢的话,明天能打开许多扇门。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only teachers.",
+            "Only children.",
+            "Only native speakers.",
+            "Anyone learning a new language."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say about making mistakes?",
+          "options": [
+            "Do not be afraid of them.",
+            "Never speak at all.",
+            "Mistakes are useless.",
+            "Avoid speaking to anyone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is every mistake, according to the passage?",
+          "options": [
+            "A reason to quit.",
+            "A chance to learn something new.",
+            "A waste of time.",
+            "A serious problem."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do if unsure of a word's meaning?",
+          "options": [
+            "Pretend to understand.",
+            "Stop the conversation.",
+            "Just ask politely.",
+            "Speak only Chinese."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can a few brave words today do?",
+          "options": [
+            "Cost a lot of money.",
+            "Make people angry.",
+            "Waste your time.",
+            "Open many doors tomorrow."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

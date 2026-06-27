@@ -1,0 +1,51 @@
+{
+  "volume": "required1",
+  "unit": "U5",
+  "topic": "Write a Blog about English Study(写一篇英语学习博客)",
+  "genre": "博客 / 议论(describe a problem in learning English + give advice)",
+  "source": "人教版2019必修一 Unit 5 Reading for Writing:write a blog about English study(描述一个英语学习中的困难 + 给出解决建议)。",
+  "prompt_cn": "假设你叫李华,你常逛一个中国学生学英语的论坛。请用英语写一篇约80词的博客,内容包括:① 清楚描述你在学英语时遇到的一个困难(如听力/口语礼貌/词汇);② 给出一两条解决这个困难的方法;③ 鼓励有同样困难的同学。注意:每句都要围绕中心、用代词正确指代。",
+  "prompt_en": "Suppose you are Li Hua. You often visit a forum where Chinese students discuss learning English. Write a blog (about 80 words) including: 1) a clear description of one problem you have in learning English (e.g. listening, being polite, vocabulary); 2) one or two ways to solve it; 3) some encouragement for classmates with the same problem.",
+  "points": [
+    "清楚描述困难(My biggest problem is … / I have trouble with …)",
+    "解决方法(One thing that works for me is … / You might try …)",
+    "鼓励同学(Don't give up — it gets easier!)",
+    "每句围绕中心、代词指代清楚"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Hi everyone! My biggest problem in learning English is listening. When native speakers talk fast, I can catch only a few words and miss the main idea. One thing that really works for me is listening to English radio every day, so I get used to the speed. I also record my own voice and compare it with the speaker's, which helps me hear my mistakes. If you have the same problem, don't give up — little by little, it gets much easier. We can all improve together!",
+  "model_translation": "大家好!我学英语最大的困难是听力。母语者说得快时,我只能听懂几个词,抓不住大意。对我真正有用的一个办法是每天听英语广播,这样就习惯了语速。我还会录下自己的声音和原声比较,帮我听出错误。如果你也有同样的问题,别放弃——一点一点地,会越来越容易。我们都能一起进步!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:清楚描述困难 / 解决方法 / 鼓励同学" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个困难展开、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、定语从句等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "描述困难 My biggest problem is …",
+      "方法1 One thing that works for me is …",
+      "方法2 I also … , which helps me …",
+      "鼓励 If you have the same problem, don't give up — it gets easier."
+    ],
+    "key_expressions": [
+      "My biggest problem in learning English is listening.",
+      "One thing that really works for me is listening to English radio every day.",
+      "I record my own voice and compare it with the speaker's.",
+      "Don't give up — little by little, it gets much easier."
+    ],
+    "useful_words": ["problem", "trouble", "listening", "native speaker", "advice", "improve", "record", "compare", "confident", "give up"]
+  },
+  "high_sentences": [
+    "My biggest problem in learning English is listening.",
+    "One thing that really works for me is listening to English radio every day.",
+    "I record my own voice and compare it with the speaker's, which helps me hear my mistakes.",
+    "Little by little, it gets much easier."
+  ],
+  "error_pairs": [
+    { "wrong": "I have trouble in listening.", "correct": "I have trouble with listening.", "note": "have trouble with sth 固定搭配。" },
+    { "wrong": "The radio help me a lot.", "correct": "The radio helps me a lot.", "note": "主语第三人称单数,动词加 s。" },
+    { "wrong": "It is a way which I can improve.", "correct": "It is a way in which I can improve.", "note": "way 后从句缺方式状语,用 in which / that / 省略。" }
+  ],
+  "paragraph_template": "【英语学习博客结构】\n第1句 描述困难:My biggest problem is …\n第2-3句 方法:One thing that works for me is … I also … , which helps me …\n第4句 鼓励:If you have the same problem, don't give up — it gets easier!"
+}

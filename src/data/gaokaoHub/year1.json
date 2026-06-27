@@ -3139,88 +3139,253 @@
             "book": "required1",
             "title": "Languages Around the World",
             "cn": "世界语言",
-            "emoji": "🌍",
-            "available": false,
+            "emoji": "🗣️",
+            "available": true,
             "vocabulary": [
               {
-                "en": "IMPRESSIONS",
-                "cn": "必修第一册 课文词汇",
+                "en": "system",
+                "cn": "体系",
+                "emoji": "📦"
+              },
+              {
+                "en": "character",
+                "cn": "文字",
+                "emoji": "📦"
+              },
+              {
+                "en": "calligraphy",
+                "cn": "书法",
+                "emoji": "📦"
+              },
+              {
+                "en": "civilisation",
+                "cn": "文明",
+                "emoji": "📦"
+              },
+              {
+                "en": "dynasty",
+                "cn": "王朝",
+                "emoji": "📦"
+              },
+              {
+                "en": "symbol",
+                "cn": "符号",
+                "emoji": "📦"
+              },
+              {
+                "en": "carve",
+                "cn": "雕刻",
+                "emoji": "🏃"
+              },
+              {
+                "en": "bone",
+                "cn": "骨头",
+                "emoji": "📦"
+              },
+              {
+                "en": "shell",
+                "cn": "壳",
+                "emoji": "📦"
+              },
+              {
+                "en": "dialect",
+                "cn": "方言",
+                "emoji": "📦"
+              },
+              {
+                "en": "means",
+                "cn": "方式",
+                "emoji": "📦"
+              },
+              {
+                "en": "classic",
+                "cn": "经典的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "regard",
+                "cn": "把……视为",
+                "emoji": "🏃"
+              },
+              {
+                "en": "unify",
+                "cn": "统一",
+                "emoji": "🏃"
+              },
+              {
+                "en": "variety",
+                "cn": "变体",
+                "emoji": "📦"
+              },
+              {
+                "en": "major",
+                "cn": "主要的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "factor",
+                "cn": "因素",
+                "emoji": "📦"
+              },
+              {
+                "en": "despite",
+                "cn": "尽管",
                 "emoji": "📘"
               },
               {
-                "en": "Jing's",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "develop",
+                "cn": "发展",
+                "emoji": "🏃"
               },
               {
-                "en": "World",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "modern",
+                "cn": "现代的",
+                "emoji": "🔤"
               },
               {
-                "en": "Last",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "ancient",
+                "cn": "古代的",
+                "emoji": "🔤"
               },
               {
-                "en": "Outgoing",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "communicate",
+                "cn": "交流",
+                "emoji": "🏃"
               },
               {
-                "en": "Little",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "native",
+                "cn": "本地的",
+                "emoji": "🔤"
               },
               {
-                "en": "Right",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "global",
+                "cn": "全球的",
+                "emoji": "🔤"
               },
               {
-                "en": "Impression",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "billion",
+                "cn": "十亿",
+                "emoji": "📦"
               },
               {
-                "en": "Friends",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "attitude",
+                "cn": "态度",
+                "emoji": "📦"
               },
               {
-                "en": "Talks",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "struggle",
+                "cn": "斗争",
+                "emoji": "🏃"
               },
               {
-                "en": "Class",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "tongue",
+                "cn": "舌头",
+                "emoji": "📦"
               },
               {
-                "en": "Difficult",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "appreciate",
+                "cn": "欣赏",
+                "emoji": "🏃"
+              },
+              {
+                "en": "specific",
+                "cn": "特定的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "reference",
+                "cn": "指称关系",
+                "emoji": "📦"
+              },
+              {
+                "en": "relate",
+                "cn": "联系",
+                "emoji": "🏃"
+              },
+              {
+                "en": "gap",
+                "cn": "差距",
+                "emoji": "📦"
+              },
+              {
+                "en": "increase",
+                "cn": "增加",
+                "emoji": "🏃"
+              },
+              {
+                "en": "spell",
+                "cn": "拼写",
+                "emoji": "🏃"
+              },
+              {
+                "en": "advice",
+                "cn": "建议",
+                "emoji": "📦"
+              },
+              {
+                "en": "polite",
+                "cn": "礼貌的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "request",
+                "cn": "请求",
+                "emoji": "🏃"
+              },
+              {
+                "en": "depend",
+                "cn": "依靠",
+                "emoji": "🏃"
+              },
+              {
+                "en": "record",
+                "cn": "录(音)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "trouble",
+                "cn": "困难",
+                "emoji": "📦"
+              },
+              {
+                "en": "foreign",
+                "cn": "外国的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "history",
+                "cn": "历史",
+                "emoji": "📦"
+              },
+              {
+                "en": "connect",
+                "cn": "连接",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Which Language to Learn",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Languages Around the World.",
-                    "cn": "我们来讨论Languages Around the World。"
+                    "text": "What foreign language do you want to study?",
+                    "cn": "你想学哪门外语?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned IMPRESSIONS today.",
-                    "cn": "好的，我今天学了必修第一册 课文词汇。"
+                    "text": "I really want to study French. I think it sounds beautiful.",
+                    "cn": "我很想学法语,觉得它很好听。"
                   },
                   {
                     "role": "A",
-                    "text": "And Jing's is important too.",
-                    "cn": "必修第一册 课文词汇也很重要。"
+                    "text": "Do you want to go to France one day?",
+                    "cn": "你想有一天去法国吗?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and French is used by many international organisations.",
+                    "cn": "是的,而且许多国际组织都用法语。"
                   }
                 ]
               }
@@ -3229,7 +3394,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "44个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -3267,6 +3432,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3291,8 +3464,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "基本句型（SV / SVO / SP）",
-            "grammarCode": "pep-r1-welcome-basic-sentences",
+            "grammarTitle": "限制性定语从句:关系副词 when / where / why",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "普 ® 通 普 通 高 中 教 科 书 高 中 教 全国优秀教材二等奖 科 书 英语 英 语 必 修 ______ GAOZHONG JIAOKESHU YINGYU 第一册 第 一 册 绿绿色色印印刷刷产产品品 定价： 元 人人教教教教材材封封面面 高高中中英英语语 必必修修一一 2200119900773300..iinndddd 11 22002222//66//77 1133::0099\n",
@@ -3320,225 +3493,254 @@
               }
             ],
             "reading": {
-              "passage": "Discuss the questions. 1 What do you want to know about school life in other countries? 2 What would you tell a teenager from another country about school life in China? 2 Read the text quickly to find the main idea of each paragraph. Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a quick look at the title, picture(s), key words and Paragraph 4: phrases, and topic sentences. My name is Adam and I'm a freshman at senior high school. Going from junior high school to senior high school is a really big challenge. First, I had to think very carefully about which courses I wanted to take. The school adviser helped me choose the suitable ones: maths, English, chemistry, world history, and Chinese. I know that Chinese is a very difficult language, but I hope to be fluent when I graduate.",
-              "passageCn": "（人教版必修第一册 · 教材节选）",
+              "passage": "China is known for its ancient civilisation, which has continued into modern times. One of the main reasons is the Chinese writing system, by which the present is connected with the past.",
+              "passageCn": "汉字书写系统课文见阅读关(汉字系统/书法/学外语等)。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Discuss the questions....\"",
+                  "q": "What connects China's present with its past?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Discuss the questions.",
-                    "Not stated."
+                    "The Chinese writing system.",
+                    "Modern films.",
+                    "Foreign trade.",
+                    "The weather."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"1 What do you want to know about school life in ot...\"",
-                  "opts": [
-                    "1 What do you want to know about school life in other countries?",
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Not stated."
-                  ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"2 What would you tell a teenager from another coun...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "2 What would you tell a teenager from another country about school lif",
-                    "Unrelated.",
-                    "Not stated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"2 Read the text quickly to find the main idea of e...\"",
-                  "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "2 Read the text quickly to find the main idea of each paragraph.",
-                    "Unrelated."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"必修第一册 · Reading 2\" (PEP 必修第一册).",
-              "promptCn": "根据人教版《必修第一册》课文《必修第一册 · Reading 2》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write a blog (about 80 words) about a problem you have in learning English and how to solve it.",
+              "promptCn": "写一篇约80词的英语学习博客:描述一个学英语的困难 + 解决方法 + 鼓励同学。",
+              "sampleWords": [
+                "problem",
+                "trouble",
+                "listening",
+                "native speaker",
+                "advice",
+                "improve",
+                "record",
+                "compare",
+                "confident",
+                "give up"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「IMPRESSIONS」的意思是？",
+                "q": "「书法」对应的英文单词是？",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "选项3",
-                  "必修第一册 课文词汇"
+                  "calligraphy",
+                  "dynasty",
+                  "dialect",
+                  "civilisation"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Jing's」的意思是？",
+                "q": "「文字;符号」对应的英文单词是？",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项2"
+                  "character",
+                  "tongue",
+                  "system",
+                  "factor"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「World」的意思是？",
+                "q": "despite 的中文意思是？",
                 "opts": [
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项2"
+                  "尽管;即使",
+                  "欣赏",
+                  "雕刻",
+                  "统一"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Last」的意思是？",
+                "q": "appreciate 的中文意思是？",
                 "opts": [
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项2"
+                  "欣赏;重视",
+                  "方言",
+                  "态度",
+                  "差距"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Outgoing」的意思是？",
+                "q": "\"I remember the day ____ I first wrote a character.\" (时间先行词)",
                 "opts": [
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1"
+                  "when",
+                  "which",
+                  "where",
+                  "that"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Little」的意思是？",
+                "q": "\"This is the country ____ many languages are spoken.\" (地点先行词)",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "必修第一册 课文词汇"
+                  "where",
+                  "which",
+                  "when",
+                  "that"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Right」的意思是？",
+                "q": "\"There are many reasons ____ people learn a language.\" (原因)",
                 "opts": [
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项2"
+                  "why",
+                  "which",
+                  "where",
+                  "when"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Impression」的意思是？",
+                "q": "\"The bones on ____ symbols were carved are very old.\" (介词后指物)",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项2"
+                  "which",
+                  "that",
+                  "when",
+                  "where"
                 ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "本单元「世界语言」相关词是？",
+                "q": "🔊 听句子,选出与它相符的一项",
                 "opts": [
-                  "teacher",
-                  "Right",
-                  "IMPRESSIONS",
-                  "Outgoing"
+                  "汉语和英语是世界上母语者最多的语言。",
+                  "法语最多。",
+                  "只有两种语言。",
+                  "没人说英语。"
                 ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "audio": "Chinese and English have the most native speakers in the world.",
+                "point": "听力",
+                "dim": "listening"
+              },
+              {
+                "q": "🔊 听句子,选出与它相符的一项",
+                "opts": [
+                  "学外语会打开通往新思维方式的大门。",
+                  "学外语没用。",
+                  "外语太难。",
+                  "只有出国才能学。"
+                ],
+                "answer": 0,
+                "audio": "Learning a foreign language opens a door to a new way of thinking.",
+                "point": "听力",
+                "dim": "listening"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "Chinese and English have the most native speakers in the world.",
                 "opts": [
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Paragraph 1: Senior high school is a challenge.",
-                  "Going from junior high school to senior high school is a really big chal"
+                  "汉语和英语是世界上母语者最多的语言。",
+                  "法语母语者最多。",
+                  "世界只有两种语言。",
+                  "没人说英语。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "Written Chinese dates back thousands of years to symbols carved on bones.",
                 "opts": [
-                  "Paragraph 1: Senior high school is a challenge.",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a"
+                  "汉字可追溯到数千年前刻在骨头上的符号。",
+                  "汉字是去年发明的。",
+                  "汉字从不变化。",
+                  "汉字写在纸上很晚才出现。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "No matter what dialect people speak, they can read the same characters.",
                 "opts": [
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "不论说什么方言,人们都能读同样的字。",
+                  "不同方言无法书写。",
+                  "汉字每个地区都不同。",
+                  "只有学者能读汉字。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "Learning a foreign language opens a door to a new way of thinking.",
                 "opts": [
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "Going from junior high school to senior high school is a really big chal",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "学外语会打开通往新思维方式的大门。",
+                  "学外语没有用。",
+                  "外语太难学不会。",
+                  "只有出国才能学外语。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "Paragraph 1: Senior high school is a challenge. Skim Paragraph 2: You can find m",
+                "audio": "In British English, pants means underwear, not trousers.",
                 "opts": [
-                  "First, I had to think very carefully about which courses I wanted to tak",
-                  "Skim Paragraph 2: You can find main ideas by Paragraph 3: first taking a",
-                  "My name is Adam and I'm a freshman at senior high school.",
-                  "Paragraph 1: Senior high school is a challenge."
+                  "在英式英语里 pants 指内裤,不是裤子。",
+                  "英美英语完全一样。",
+                  "pants 在哪都指裤子。",
+                  "没有英美差异。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Listening to English radio every day helps me get used to the speed.",
+                "opts": [
+                  "每天听英语广播帮我习惯语速。",
+                  "听广播没有帮助。",
+                  "我从不练听力。",
+                  "广播让我更困惑。"
                 ],
                 "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "When Anna first moved to China, she could not read a single character and often felt lost. Instead of giving up, she learned a few new characters every day and asked her friends whenever she was unsure. A year later, she could read simple signs and menus on her own, and she felt proud of how far a little daily effort had taken her.",
+              "questions": [
+                {
+                  "q": "What did Anna do instead of giving up?",
+                  "options": [
+                    "She learned a few characters each day and asked friends when unsure.",
+                    "She stopped trying to read Chinese.",
+                    "She moved back to her own country.",
+                    "She only spoke English to everyone."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'learned a few new characters every day and asked her friends whenever she was unsure' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Anna feel a year later?",
+                  "options": [
+                    "Lost and discouraged.",
+                    "Proud of what her daily effort had achieved.",
+                    "Sorry that she had started.",
+                    "Bored with learning Chinese."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'felt proud of how far a little daily effort had taken her'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u5.01",
+              "u5.02",
+              "u5.03"
             ]
           }
         ]

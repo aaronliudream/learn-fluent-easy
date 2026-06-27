@@ -3,13 +3,15 @@ import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 
 /**
  * 单元综合 完成度/掌握度(第一步:词汇 + 语法,这两块有单元归属)。
- * - 词汇:done=有 junior_word_mastery 记录(做过);mastered=mastery_level≥3(与初中板块总览 useMasteryOverview 同口径)。
+ * - 词汇:done=有 junior_word_mastery 记录(做过);mastered=任一游戏 consec≥2(答对2次=掌握,全站统一 MASTER_STREAK)。
+ *   绿环(完成度)单独走浏览进度(browsedWordCount/vocabGroup),不用本函数的 done。
  * - 语法:复用 loadProgressForCodes(按题:done=做过,mastered=累计答对2次),与语法专项页/第4关同源。
  * 听力/阅读暂不计入(题库无 volume/unit 归属,见第二步)。
  */
 
 export type UnitOverall = { done: number; mastered: number; total: number };
-export const VOCAB_MASTER_LEVEL = 3;
+export const VOCAB_MASTER_LEVEL = 3; // (旧口径,保留备查)
+export const VOCAB_MASTER_STREAK = 2; // 答对2次=掌握(全站统一,= useJuniorVocabMastery.MASTER_STREAK)
 
 /**
  * 核心词汇关「完成度环」口径(初中+高中统一):绿环=浏览进度(看了多少词),非"做过题"。
@@ -36,12 +38,16 @@ export async function loadUnitVocabProgress(wordIds: string[]): Promise<UnitOver
     const slice = wordIds.slice(i, i + 200);
     const { data } = await supabase
       .from("junior_word_mastery")
-      .select("word_id,mastery_level")
+      .select("word_id,quiz_consec,match_consec,spell_consec,bento_consec,context_consec")
       .eq("user_id", user.id)
       .in("word_id", slice);
-    for (const r of (data ?? []) as { word_id: string; mastery_level: number }[]) {
-      done++;
-      if ((r.mastery_level ?? 0) >= VOCAB_MASTER_LEVEL) mastered++;
+    for (const r of (data ?? []) as Record<string, number>[]) {
+      done++; // 做过(有记录)
+      // 掌握度(橙环)= 全站"答对2次=掌握"口径:任一游戏 consec≥2(MASTER_STREAK,见 useJuniorVocabMastery)。
+      const maxConsec = Math.max(
+        r.quiz_consec ?? 0, r.match_consec ?? 0, r.spell_consec ?? 0, r.bento_consec ?? 0, r.context_consec ?? 0,
+      );
+      if (maxConsec >= VOCAB_MASTER_STREAK) mastered++;
     }
   }
   return { done, mastered, total };

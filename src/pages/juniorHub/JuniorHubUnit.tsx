@@ -7,7 +7,7 @@ import { getUnitState } from "@/lib/juniorHub/storage";
 import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
-import { loadUnitVocabProgress, browsedWordCount, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
+import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/juniorHub/types";
@@ -164,8 +164,8 @@ function StageList({
               </span>
             )}
             {stage.type === "vocab" && vocabProg && (
-              // 绿环=浏览进度(看了多少词),橙环=游戏掌握(mastery_level≥3)。与高中统一口径,见 unitOverallProgress。
-              <StageRings done={browsedWordCount(us?.vocabGroup, vocabProg.total)} mastered={vocabProg.mastered} total={vocabProg.total} />
+              // 绿环=完成度=点开看过的词数(loadUnitVocabProgress.done,按 word_id 数行),橙环=答对2次掌握。
+              <StageRings done={vocabProg.done} mastered={vocabProg.mastered} total={vocabProg.total} />
             )}
             {stage.type === "grammar" && grammarProg && (
               <StageRings done={grammarProg.done} mastered={grammarProg.mastered} total={grammarProg.total} />

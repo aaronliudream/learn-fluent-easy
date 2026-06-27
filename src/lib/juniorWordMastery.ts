@@ -129,6 +129,28 @@ export async function recordJuniorWordMastery(opts: {
   return true;
 }
 
+/**
+ * 核心词汇关「点开看中文」→ 建一行 junior_word_mastery(若无),供「完成度绿环」按词统计(=点开看过的词数)。
+ * ⚠️ 只建行、不动任何游戏计数/consec/mastery_level → 不污染掌握度(橙环)。已有行则跳过(幂等、省写)。
+ * 按 word_id 落库 → 高中/初中单元页都按 word_id 读(loadUnitVocabProgress.done),天然跨 context、无存储分裂。
+ */
+export async function recordJuniorWordViewed(wordId: string, grade: number): Promise<void> {
+  if (!wordId) return;
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return;
+  const { data: existing } = await supabase
+    .from("junior_word_mastery")
+    .select("id")
+    .eq("user_id", user.id)
+    .eq("word_id", wordId)
+    .maybeSingle();
+  if (existing) return; // 已有行(看过或玩过)→ 不重复写
+  const { error } = await supabase
+    .from("junior_word_mastery")
+    .insert({ user_id: user.id, word_id: wordId, grade, mastery_level: 0, last_seen_at: new Date().toISOString() });
+  if (error) console.error("[junior_word_mastery] viewed insert", error);
+}
+
 /** Word ids due for SRS review (reads junior_word_mastery, not gaokao_user_mastery). */
 export async function fetchJuniorDueWordIds(vocabIds: string[]): Promise<string[]> {
   if (vocabIds.length === 0) return [];

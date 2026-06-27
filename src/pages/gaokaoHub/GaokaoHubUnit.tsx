@@ -6,13 +6,7 @@ import { getUnitProgress } from "@/lib/gaokaoHub/progress";
 import { getUnitState } from "@/lib/gaokaoHub/storage";
 import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
-import { loadUnitVocabProgress, browsedWordCount, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
-// 高中 9 关在 JuniorHubProvider(grade=gaokao+9)下写浏览进度 vocabGroup 到 junior 存储;
-// 高中单元页用的是 gaokao 存储(无 vocabGroup),所以绿环要从 junior 存储读(跨 context),否则恒 0。
-import { loadPersist, getUnitState as getJuniorUnitState } from "@/lib/juniorHub/storage";
-import { hydrateJuniorHubFromCloud } from "@/lib/juniorHub/hubCloudSync";
-import type { JuniorHubGrade } from "@/lib/juniorHub/types";
-import { supabase } from "@/integrations/supabase/client";
+import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/gaokaoHub/types";
@@ -56,20 +50,6 @@ function StageList({
   const words = useUnitVocab(unit, grade);
   const [vocabProg, setVocabProg] = useState<UnitOverall | null>(null);
   const [grammarProg, setGrammarProg] = useState<GrammarProgress | null>(null);
-  // 浏览进度(vocabGroup)从 junior 存储读(高中 9 关写在那里):先取本地即时值,再云端刷新(跨设备)。
-  const [browseGroup, setBrowseGroup] = useState<number | null>(null);
-  useEffect(() => {
-    const g = grade as JuniorHubGrade;
-    setBrowseGroup(getJuniorUnitState(loadPersist(g), unitId)?.vocabGroup ?? null);
-    let cancelled = false;
-    (async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return;
-      const merged = await hydrateJuniorHubFromCloud(user.id, g);
-      if (!cancelled) setBrowseGroup(getJuniorUnitState(merged, unitId)?.vocabGroup ?? null);
-    })();
-    return () => { cancelled = true; };
-  }, [grade, unitId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -122,8 +102,8 @@ function StageList({
               </div>
             </div>
             {stage.type === "vocab" && vocabProg && (
-              // 绿环=浏览进度(从 junior 存储读的 browseGroup,高中9关写在那),橙环=游戏掌握。
-              <StageRings done={browsedWordCount(browseGroup, vocabProg.total)} mastered={vocabProg.mastered} total={vocabProg.total} />
+              // 绿环=完成度=点开看过的词数(loadUnitVocabProgress.done,按 word_id 数行,跨 context 安全),橙环=答对2次掌握。
+              <StageRings done={vocabProg.done} mastered={vocabProg.mastered} total={vocabProg.total} />
             )}
             {stage.type === "grammar" && grammarProg && (
               <StageRings done={grammarProg.done} mastered={grammarProg.mastered} total={grammarProg.total} />

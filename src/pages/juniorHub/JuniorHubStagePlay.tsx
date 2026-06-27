@@ -16,7 +16,7 @@ import { useKnowledgePointId } from "@/hooks/useKnowledgePointId";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
-import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { recordJuniorWordMastery, recordJuniorWordViewed } from "@/lib/juniorWordMastery";
 import GrammarTipsCard from "@/components/grammar/GrammarTipsCard";
 import { buildFinalQuiz, type FinalQuizItem } from "@/lib/juniorFinalQuiz";
 import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
@@ -310,6 +310,8 @@ function VocabStage({
       setFlipped((prev) => new Set(prev).add(i));
       setViewed((prev) => new Set(prev).add(i));
       speakWord(v.en);
+      // 点开看中文 → 按词记"看过"(建 junior_word_mastery 行,不动游戏计数)→ 完成度绿环=点开词数。
+      if (v.id) void recordJuniorWordViewed(v.id, grade);
     } else {
       setFlipped((prev) => {
         const next = new Set(prev);

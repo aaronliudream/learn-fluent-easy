@@ -75,8 +75,10 @@ export default function GaokaoGrammarBoard() {
     if (!grade) return m;
     try {
       const course = getGradeCourse(grade);
+      // ⚠️ 同一 grade 含多本书(year1 = gk_required1 + gk_required2),unitKey(U1/U2…)跨册重名。
+      // 必须按所选册(u.book === book)过滤,否则后一本会覆盖前一本 → 链到错册无 grammarCodes 的单元 → "未配置"。
       for (const sem of Object.values(course.semesters))
-        for (const u of sem.units) m.set(u.unitKey, u.id);
+        for (const u of sem.units) if (u.book === book) m.set(u.unitKey, u.id);
     } catch {
       /* no-op */
     }

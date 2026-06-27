@@ -95,6 +95,11 @@ export type UnitDef = {
   writing: WritingBlock | null;
   quizQuestions: QuizQuestion[];
   listeningQuestions: ListeningQuestion[];
+  /** 单元通关专属迷你阅读(短文2-3句+转述题,不撞阅读关)。buildFinalQuiz 优先用它。 */
+  finalReading?: {
+    passage: string;
+    questions: Array<{ q: string; options: string[]; answer: string; explanation?: string }>;
+  };
 };
 
 export type SemesterDef = {

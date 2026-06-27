@@ -601,7 +601,7 @@
               },
               {
                 "en": "teenager",
-                "cn": "",
+                "cn": "青少年",
                 "emoji": "🧑"
               },
               {
@@ -666,7 +666,7 @@
               },
               {
                 "en": "freshman",
-                "cn": "",
+                "cn": "(中学/大学)一年级新生",
                 "emoji": "🆕"
               },
               {
@@ -686,7 +686,7 @@
               },
               {
                 "en": "fluent",
-                "cn": "",
+                "cn": "流利的;流畅的",
                 "emoji": "🎤"
               },
               {
@@ -1295,7 +1295,34 @@
               "r1u1.01",
               "r1u1.02",
               "r1u1.03"
-            ]
+            ],
+            "finalReading": {
+              "passage": "Li Hua is a Grade 10 student who joined three clubs this term. He enjoys all of them, but he often feels there is not enough time for everything. His teacher told him that planning his time well is the key to a balanced school life.",
+              "questions": [
+                {
+                  "q": "Why does Li Hua often feel short of time?",
+                  "options": [
+                    "He has taken on several clubs and has a lot to do.",
+                    "He spends too many hours sleeping.",
+                    "He does not like any of his clubs.",
+                    "His classes finish very late every day."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 joined three clubs … not enough time for everything 的转述(非照抄);B/D 听起来合理但文中没说,C 与 'enjoys all of them' 矛盾。"
+                },
+                {
+                  "q": "What does his teacher suggest is the key to a balanced life?",
+                  "options": [
+                    "Planning his time well.",
+                    "Quitting two of the clubs.",
+                    "Sleeping less to study more.",
+                    "Joining even more clubs."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 planning his time well is the key 的转述(考短文后半段,覆盖不同位置);B/C/D 像建议但文中未提或相反。"
+                }
+              ]
+            }
           },
           {
             "id": "gk1_required1_u3",

@@ -73,8 +73,8 @@ async function loadUnitVocabMeta(
 // 语法不超过一半(≤6),其余题型占多数 → 真"综合检测"而非语法刷屏。
 const GRAMMAR_N = 5;
 const LISTENING_N = 3;
-const READING_N = 1;
-const VOCAB_N = 3;
+const READING_N = 2; // 单元通关阅读=finalReading 短文配2题(覆盖不同位置)
+const VOCAB_N = 2;
 
 /** 难度三档配额(语法 5 题):跟本单元掌握度走。 */
 function difficultyQuota(pct: number): Record<1 | 2 | 3, number> {
@@ -329,9 +329,11 @@ function vocabItems(
   count: number = VOCAB_N,
   meta?: Map<string, VocabMeta>,
 ): FinalQuizItem[] {
-  const words = shuffleArray([...unit.vocabulary]).slice(0, count);
+  // 运行时护栏:剔除空 en/cn 的词条(否则会生成"空选项/无正确答案"的畸形题,如 teenager cn 为空)。
+  const pool = unit.vocabulary.filter((v) => v.en?.trim() && v.cn?.trim());
+  const words = shuffleArray([...pool]).slice(0, count);
   return words.map((target, i) => {
-    const distractors = shuffleArray(unit.vocabulary.filter((v) => v.en !== target.en)).slice(0, 3);
+    const distractors = shuffleArray(pool.filter((v) => v.en !== target.en)).slice(0, 3);
     const opts4 = shuffleArray([target, ...distractors]);
     const en2cn = i % 2 === 0;
     const m = meta?.get(target.en.trim().toLowerCase());
@@ -361,12 +363,37 @@ type ReadingRow = {
  * 阅读 n 题:从 junior_reading 取本单元最短的一篇,短文嵌进题干(stage 用 whitespace-pre-line 渲染),
  * 取该篇首题作单选。全年级通用(grade+volume+unit);无行/无题 → 返回空(调用层用词汇补足题量)。
  */
+function readingItemFrom(passage: string, q: Record<string, unknown>): FinalQuizItem | null {
+  const opts = Array.isArray(q.options) ? (q.options as unknown[]).map(String) : [];
+  const stem = String(q.q ?? "").trim();
+  if (opts.length < 2 || !stem) return null;
+  return {
+    kind: "reading",
+    q: `阅读短文，回答问题：\n\n${passage}\n\n${stem}`,
+    opts,
+    answer: answerToIndex(q.answer, opts),
+    explanation: (q.explanation as string) || undefined,
+    point: "阅读",
+    dim: "reading",
+  };
+}
+
 async function readingItemsForUnit(
   unit: UnitDef,
   grade: number,
   n: number,
 ): Promise<FinalQuizItem[]> {
   if (n <= 0) return [];
+  // 优先:内联 finalReading(短文2-3句 + 转述题,不撞阅读关 → 推荐方案)。
+  const fr = unit.finalReading;
+  if (fr?.passage && Array.isArray(fr.questions) && fr.questions.length) {
+    const passage = String(fr.passage).trim();
+    return fr.questions
+      .slice(0, n)
+      .map((q) => readingItemFrom(passage, q as unknown as Record<string, unknown>))
+      .filter((it): it is FinalQuizItem => !!it);
+  }
+  // 回退(无 finalReading 的旧单元):junior_reading 最短一篇,取前 n 题。
   const { data } = await supabase
     .from("junior_reading")
     .select("title,body,questions,word_count")
@@ -375,28 +402,14 @@ async function readingItemsForUnit(
     .eq("unit", unit.unitKey)
     .order("word_count", { ascending: true });
   const rows = (data ?? []) as ReadingRow[];
-  if (!rows.length) return [];
-  const out: FinalQuizItem[] = [];
   for (const row of rows) {
-    if (out.length >= n) break;
     const passage = String(row.body || "").trim();
     const qs = Array.isArray(row.questions) ? (row.questions as Array<Record<string, unknown>>) : [];
     if (!passage || !qs.length) continue;
-    const q0 = qs[0];
-    const opts = Array.isArray(q0.options) ? (q0.options as unknown[]).map(String) : [];
-    const stem = String(q0.q ?? "").trim();
-    if (opts.length < 2 || !stem) continue;
-    out.push({
-      kind: "reading",
-      q: `阅读短文，回答问题：\n\n${passage}\n\n${stem}`,
-      opts,
-      answer: answerToIndex(q0.answer, opts),
-      explanation: (q0.explanation as string) || undefined,
-      point: "阅读",
-      dim: "reading",
-    });
+    const out = qs.slice(0, n).map((q) => readingItemFrom(passage, q)).filter((it): it is FinalQuizItem => !!it);
+    if (out.length) return out; // 用同一篇的前 n 题(覆盖多于只 q0)
   }
-  return out;
+  return [];
 }
 
 /** 选项洗牌 + answer 重映射(每题独立)。 */
@@ -453,5 +466,15 @@ export async function buildFinalQuiz(unit: UnitDef, grade: number): Promise<Fina
   // 阅读缺几道,用词汇补几道,保持 12 题总量。
   const vocab = vocabItems(unit, VOCAB_N + (READING_N - reading.length), vocabMeta);
   const items = [...grammar, ...listening, ...reading, ...vocab].map(shuffleOpts);
-  return shuffleArray(items);
+  // 运行时兜底护栏(补静态QC看不到的动态盲区):丢弃任何畸形题——空选项/选项<2/答案越界。
+  const valid = items.filter(
+    (it) =>
+      Array.isArray(it.opts) &&
+      it.opts.length >= 2 &&
+      it.opts.every((o) => o != null && String(o).trim() !== "") &&
+      it.answer >= 0 &&
+      it.answer < it.opts.length,
+  );
+  if (valid.length < items.length) console.warn(`[finalQuiz] 丢弃 ${items.length - valid.length} 道畸形题(空选项/答案越界)`);
+  return shuffleArray(valid);
 }

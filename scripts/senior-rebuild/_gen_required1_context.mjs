@@ -34,16 +34,16 @@ for (const w of words) {
   }
   if (picks.length < 3) { skip++; continue; }
   const opts = [base, ...picks].sort((a, b) => ((w.word.charCodeAt(1) || 0) + a.length) % 5 - (((w.word.charCodeAt(1) || 0) + b.length) % 5));
-  rows.push({ word: base, sentence, options: opts, answer: base });
+  rows.push({ word: base, sentence, options: opts, answer: base, unit: w.unit });
 }
 
 let sql = '-- 必修一 情景闯关题(context_questions, grade=10),由 junior_vocab 真实例句挖空生成。Aaron 跑。\n';
-sql += '-- ContextQuiz 按 grade=10 读;junior 在 7/8/9,互不影响。幂等。\nBEGIN;\n';
-sql += "DELETE FROM public.context_questions WHERE grade=10;\n";
+sql += '-- ContextQuiz 高中按 grade=10 + volume 读;写 volume/unit 防必修一/二/三串库。幂等(只删本册)。\nBEGIN;\n';
+sql += "DELETE FROM public.context_questions WHERE grade=10 AND volume='required1';\n";
 for (const r of rows) {
-  sql += `INSERT INTO public.context_questions (grade, word, sentence, options, answer) VALUES (10, '${esc(r.word)}', '${esc(r.sentence)}', '${esc(JSON.stringify(r.options))}'::jsonb, '${esc(r.answer)}');\n`;
+  sql += `INSERT INTO public.context_questions (grade, volume, unit, word, sentence, options, answer) VALUES (10, 'required1', '${esc(r.unit)}', '${esc(r.word)}', '${esc(r.sentence)}', '${esc(JSON.stringify(r.options))}'::jsonb, '${esc(r.answer)}');\n`;
 }
-sql += '\nCOMMIT;\nSELECT count(*) AS context_q_grade10 FROM public.context_questions WHERE grade=10;\n';
+sql += "\nCOMMIT;\nSELECT count(*) AS context_q_required1 FROM public.context_questions WHERE grade=10 AND volume='required1';\n";
 writeFileSync('SQLAA/required1-context-questions-load.sql', sql);
 console.log('生成情景题:', rows.length, '| 跳过(例句无干净词形或干扰项不足):', skip, '| -> SQLAA/required1-context-questions-load.sql');
 // 自检:每题选项含答案、4选项、无重复

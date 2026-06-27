@@ -727,7 +727,7 @@ export function ClassicQuiz({ pool, onExit, gradeNum, suppressGaokao = false }: 
    读句子(挖空)4 选 1。题库 context_questions(DB);掌握记在 word 原形上(context_consec)。 */
 type CtxQ = { id: string; word: string; sentence: string; options: string[]; answer: string };
 
-export function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
+export function ContextQuiz({ pool, onExit, gradeNum, volume }: {pool: Vocab[];onExit: () => void;gradeNum: number;volume?: string;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const BATCH = 10;
@@ -739,11 +739,13 @@ export function ContextQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: (
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase
+      // 高中按 grade+volume 过滤(防必修一/二/三同 grade 串库);初中不传 volume → 只按 grade(行为不变)。
+      let q = supabase
         .from("context_questions")
         .select("id,word,sentence,options,answer")
-        .eq("grade", gradeNum)
-        .limit(2000);
+        .eq("grade", gradeNum);
+      if (volume) q = q.eq("volume", volume);
+      const { data } = await q.limit(2000);
       if (cancelled) return;
       const qs = (data ?? [])
         .map((r: any) => ({

@@ -1,0 +1,769 @@
+{
+  "passage_count": 6,
+  "total_blanks": 60,
+  "answer_dist": "A:15 B:15 C:15 D:15",
+  "passages": [
+    {
+      "title": "Joining a School Club",
+      "word_count": 113,
+      "body": "There are many clubs at our school, and each one is (1)____ for different students. If you love dancing, the Ballet Club is a good (2)____. If you are (3)____ in plants and animals, you can join the Nature Club. Students who like to (4)____ different topics often choose the Debate Club. Last week, I decided to (5)____ up for the Volunteer Club. Every Saturday, we (6)____ up the park and help old people. At first I was a little (7)____ because I knew no one. But the other members were very (8)____, and soon I made some new (9)____. Joining a club is a great way to (10)____ your free time well.",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "difficult",
+            "suitable",
+            "boring",
+            "angry"
+          ],
+          "answer_index": 1,
+          "answer_text": "suitable",
+          "explanation": "be suitable for 对……合适。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "problem",
+            "mistake",
+            "question",
+            "choice"
+          ],
+          "answer_index": 3,
+          "answer_text": "choice",
+          "explanation": "a good choice 一个好选择。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "good",
+            "afraid",
+            "interested",
+            "ready"
+          ],
+          "answer_index": 2,
+          "answer_text": "interested",
+          "explanation": "be interested in 对……感兴趣。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "discuss",
+            "dance",
+            "grow",
+            "clean"
+          ],
+          "answer_index": 0,
+          "answer_text": "discuss",
+          "explanation": "辩论社的人喜欢 discuss(讨论)不同话题。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "give",
+            "look",
+            "get",
+            "sign"
+          ],
+          "answer_index": 3,
+          "answer_text": "sign",
+          "explanation": "sign up for 报名参加。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "look",
+            "clean",
+            "give",
+            "put"
+          ],
+          "answer_index": 1,
+          "answer_text": "clean",
+          "explanation": "clean up the park 打扫公园。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "happy",
+            "anxious",
+            "proud",
+            "glad"
+          ],
+          "answer_index": 1,
+          "answer_text": "anxious",
+          "explanation": "because I knew no one,所以感到 anxious(焦虑)。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "angry",
+            "lazy",
+            "friendly",
+            "boring"
+          ],
+          "answer_index": 2,
+          "answer_text": "friendly",
+          "explanation": "其他成员很 friendly(友好),所以很快交到朋友。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "problems",
+            "mistakes",
+            "friends",
+            "clubs"
+          ],
+          "answer_index": 2,
+          "answer_text": "friends",
+          "explanation": "made some new friends 交到新朋友。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "use",
+            "waste",
+            "lose",
+            "miss"
+          ],
+          "answer_index": 0,
+          "answer_text": "use",
+          "explanation": "use your free time well 善用空闲时间。"
+        }
+      ]
+    },
+    {
+      "title": "My First Day at Senior High",
+      "word_count": 102,
+      "body": "So this is senior high school at (1)____! On my first morning, I felt a little (2)____ because I am not very outgoing. I really wanted to make a good first (3)____. My first maths class was (4)____, but the teacher was kind and told us a funny (5)____. Everyone (6)____ so much! I found most of my classmates (7)____ and helpful. In the afternoon, the boy next to me talked the whole time, so I could not (8)____ on the experiment. By the evening, I felt much more (9)____ than in the morning. I think tomorrow will be a great (10)____.",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "home",
+            "last",
+            "night",
+            "school"
+          ],
+          "answer_index": 1,
+          "answer_text": "last",
+          "explanation": "at last 终于。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "lucky",
+            "anxious",
+            "proud",
+            "happy"
+          ],
+          "answer_index": 1,
+          "answer_text": "anxious",
+          "explanation": "because not very outgoing,所以有点 anxious(紧张)。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "idea",
+            "plan",
+            "lesson",
+            "impression"
+          ],
+          "answer_index": 3,
+          "answer_text": "impression",
+          "explanation": "make a good first impression 留下好的第一印象。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "easy",
+            "difficult",
+            "short",
+            "free"
+          ],
+          "answer_index": 1,
+          "answer_text": "difficult",
+          "explanation": "but the teacher was kind 表转折,说明课 difficult(难)。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "song",
+            "game",
+            "story",
+            "word"
+          ],
+          "answer_index": 2,
+          "answer_text": "story",
+          "explanation": "told us a funny story 讲了个有趣的故事。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "cried",
+            "slept",
+            "laughed",
+            "left"
+          ],
+          "answer_index": 2,
+          "answer_text": "laughed",
+          "explanation": "funny story 让 everyone laughed(大笑)。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "angry",
+            "friendly",
+            "tired",
+            "busy"
+          ],
+          "answer_index": 1,
+          "answer_text": "friendly",
+          "explanation": "classmates friendly and helpful 同学友好乐于助人。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "concentrate",
+            "depend",
+            "agree",
+            "win"
+          ],
+          "answer_index": 0,
+          "answer_text": "concentrate",
+          "explanation": "concentrate on 专注于;被打扰所以无法专注。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "confident",
+            "tired",
+            "angry",
+            "anxious"
+          ],
+          "answer_index": 0,
+          "answer_text": "confident",
+          "explanation": "傍晚比早晨更 confident(自信)。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "week",
+            "class",
+            "day",
+            "year"
+          ],
+          "answer_index": 2,
+          "answer_text": "day",
+          "explanation": "tomorrow will be a great day 明天会是美好的一天。"
+        }
+      ]
+    },
+    {
+      "title": "Making a Study Schedule",
+      "word_count": 92,
+      "body": "Senior high school keeps students very (1)____. They have more homework and more (2)____ than before. To manage your time well, you should make a (3)____. First, write down the most (4)____ tasks, such as homework and review. Then (5)____ how much time each task needs. It is also (6)____ to leave some free time for sports, because all work and no play is not (7)____. When you (8)____ your schedule, you will feel less (9)____ and get more done. Good time management will become a useful habit if you keep (10)____.",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "free",
+            "lazy",
+            "busy",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "answer_text": "busy",
+          "explanation": "keep sb busy 使某人忙碌;作业、科目多,所以学生很忙。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "friends",
+            "subjects",
+            "clubs",
+            "games"
+          ],
+          "answer_index": 1,
+          "answer_text": "subjects",
+          "explanation": "more homework and more subjects 更多作业和科目。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "mistake",
+            "promise",
+            "choice",
+            "schedule"
+          ],
+          "answer_index": 3,
+          "answer_text": "schedule",
+          "explanation": "make a schedule 制定日程表。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "boring",
+            "funny",
+            "easy",
+            "important"
+          ],
+          "answer_index": 3,
+          "answer_text": "important",
+          "explanation": "the most important tasks 最重要的任务。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "forget",
+            "decide",
+            "refuse",
+            "win"
+          ],
+          "answer_index": 1,
+          "answer_text": "decide",
+          "explanation": "decide how much time 决定需要多少时间。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "wrong",
+            "late",
+            "hard",
+            "wise"
+          ],
+          "answer_index": 3,
+          "answer_text": "wise",
+          "explanation": "it is wise to leave free time 留出空闲时间是明智的。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "happy",
+            "ready",
+            "clear",
+            "healthy"
+          ],
+          "answer_index": 3,
+          "answer_text": "healthy",
+          "explanation": "all work and no play is not healthy 只学不玩不健康。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "follow",
+            "break",
+            "lose",
+            "miss"
+          ],
+          "answer_index": 0,
+          "answer_text": "follow",
+          "explanation": "follow your schedule 遵守日程表。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "proud",
+            "anxious",
+            "free",
+            "happy"
+          ],
+          "answer_index": 1,
+          "answer_text": "anxious",
+          "explanation": "feel less anxious 不那么焦虑。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "trying",
+            "sleeping",
+            "playing",
+            "leaving"
+          ],
+          "answer_index": 0,
+          "answer_text": "trying",
+          "explanation": "keep trying 坚持努力。"
+        }
+      ]
+    },
+    {
+      "title": "A Letter About a Friend",
+      "word_count": 95,
+      "body": "Dear Worried Friend, You wrote that you are (1)____ about your friend, Chen Lei. You think he plays computer games too (2)____ and spends too much time (3)____. I (4)____ that you talk to him about his (5)____. It is not unusual for teenagers to be (6)____ to computer games. But spending too much time online is (7)____ and makes it hard to (8)____ on other things. I think you should (9)____ him to try new hobbies. I am sure he will (10)____ to you, because you are his good friend. All the best, Susan",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "happy",
+            "proud",
+            "worried",
+            "sure"
+          ],
+          "answer_index": 2,
+          "answer_text": "worried",
+          "explanation": "be worried about 为……担心。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "soon",
+            "well",
+            "often",
+            "early"
+          ],
+          "answer_index": 2,
+          "answer_text": "often",
+          "explanation": "plays games too often 玩游戏太频繁。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "alone",
+            "aloud",
+            "away",
+            "online"
+          ],
+          "answer_index": 3,
+          "answer_text": "online",
+          "explanation": "spends too much time online 花太多时间上网。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "refuse",
+            "forget",
+            "promise",
+            "recommend"
+          ],
+          "answer_index": 3,
+          "answer_text": "recommend",
+          "explanation": "I recommend that you talk 我建议你和他谈谈。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "schedule",
+            "behaviour",
+            "title",
+            "plate"
+          ],
+          "answer_index": 1,
+          "answer_text": "behaviour",
+          "explanation": "talk about his behaviour 谈他的行为。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "afraid",
+            "ready",
+            "good",
+            "attracted"
+          ],
+          "answer_index": 3,
+          "answer_text": "attracted",
+          "explanation": "be attracted to 被……吸引。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "useful",
+            "helpful",
+            "healthy",
+            "unhealthy"
+          ],
+          "answer_index": 3,
+          "answer_text": "unhealthy",
+          "explanation": "too much time online is unhealthy 上网太久不健康。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "depend",
+            "focus",
+            "agree",
+            "win"
+          ],
+          "answer_index": 1,
+          "answer_text": "focus",
+          "explanation": "focus on other things 专注于别的事。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "force",
+            "encourage",
+            "stop",
+            "leave"
+          ],
+          "answer_index": 1,
+          "answer_text": "encourage",
+          "explanation": "encourage him to try new hobbies 鼓励他尝试新爱好。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "agree",
+            "follow",
+            "believe",
+            "listen"
+          ],
+          "answer_index": 3,
+          "answer_text": "listen",
+          "explanation": "listen to sb 听某人的(只有 listen 能接 to you 表“听从”);agree/follow/believe 不接 to you。"
+        }
+      ]
+    },
+    {
+      "title": "Becoming More Responsible",
+      "word_count": 109,
+      "body": "As we grow up, we have to be (1)____ for more and more things. At home, we should help our (2)____ and take care of ourselves. At school, we are responsible for our own studies and (3)____. Some teenagers think that being responsible means (4)____ their freedom, but this is not (5)____. In fact, responsibility and freedom go (6)____. When you show that you can be responsible, adults (7)____ you more. For example, if you always finish your homework on (8)____, your parents will not worry. Of course, no one becomes responsible in a single (9)____. We all make mistakes, but what matters is that we (10)____ from them.",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "responsible",
+            "ready",
+            "famous",
+            "free"
+          ],
+          "answer_index": 0,
+          "answer_text": "responsible",
+          "explanation": "be responsible for 对……负责。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "clubs",
+            "plants",
+            "parents",
+            "teams"
+          ],
+          "answer_index": 2,
+          "answer_text": "parents",
+          "explanation": "at home,help our parents 在家帮父母。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "behaviour",
+            "ballet",
+            "debate",
+            "schedule"
+          ],
+          "answer_index": 0,
+          "answer_text": "behaviour",
+          "explanation": "studies and behaviour 学业和行为。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "losing",
+            "finding",
+            "keeping",
+            "getting"
+          ],
+          "answer_index": 0,
+          "answer_text": "losing",
+          "explanation": "means losing their freedom 意味着失去自由。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "late",
+            "busy",
+            "easy",
+            "true"
+          ],
+          "answer_index": 3,
+          "answer_text": "true",
+          "explanation": "but this is not true 但这不是真的。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "away",
+            "down",
+            "together",
+            "up"
+          ],
+          "answer_index": 2,
+          "answer_text": "together",
+          "explanation": "go together 相伴而行。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "trust",
+            "leave",
+            "blame",
+            "force"
+          ],
+          "answer_index": 0,
+          "answer_text": "trust",
+          "explanation": "adults trust you more 大人更信任你。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "time",
+            "hand",
+            "foot",
+            "head"
+          ],
+          "answer_index": 0,
+          "answer_text": "time",
+          "explanation": "finish homework on time 按时完成作业。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "week",
+            "year",
+            "day",
+            "hour"
+          ],
+          "answer_index": 2,
+          "answer_text": "day",
+          "explanation": "in a single day 在一天之内。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "hide",
+            "run",
+            "fall",
+            "learn"
+          ],
+          "answer_index": 3,
+          "answer_text": "learn",
+          "explanation": "learn from them 从错误中学习。"
+        }
+      ]
+    },
+    {
+      "title": "Choosing the Right Courses",
+      "word_count": 104,
+      "body": "At senior high school, choosing the right courses can be a real (1)____. In my first week, the school (2)____ helped me choose suitable ones: maths, English, and chemistry. I know that some subjects are (3)____, but I will work hard. My adviser also (4)____ that I sign up for advanced (5)____, because I like English and I am (6)____ at it. I had to choose extra-curricular (7)____, too. I tried to join the football team, but the coach said I did not play well (8)____. I was unhappy, but I will not (9)____. I will find a way to (10)____ on my own.",
+      "blanks": [
+        {
+          "stem": "1",
+          "options": [
+            "holiday",
+            "present",
+            "challenge",
+            "mistake"
+          ],
+          "answer_index": 2,
+          "answer_text": "challenge",
+          "explanation": "a real challenge 真正的挑战。"
+        },
+        {
+          "stem": "2",
+          "options": [
+            "doctor",
+            "driver",
+            "writer",
+            "adviser"
+          ],
+          "answer_index": 3,
+          "answer_text": "adviser",
+          "explanation": "the school adviser 学校顾问。"
+        },
+        {
+          "stem": "3",
+          "options": [
+            "difficult",
+            "easy",
+            "free",
+            "short"
+          ],
+          "answer_index": 0,
+          "answer_text": "difficult",
+          "explanation": "but I will work hard 表转折,说明科目 difficult。"
+        },
+        {
+          "stem": "4",
+          "options": [
+            "refused",
+            "recommended",
+            "forgot",
+            "stopped"
+          ],
+          "answer_index": 1,
+          "answer_text": "recommended",
+          "explanation": "adviser recommended that I sign up 建议我报名。"
+        },
+        {
+          "stem": "5",
+          "options": [
+            "ballet",
+            "literature",
+            "football",
+            "weather"
+          ],
+          "answer_index": 1,
+          "answer_text": "literature",
+          "explanation": "advanced literature,because I like English 高级文学。"
+        },
+        {
+          "stem": "6",
+          "options": [
+            "afraid",
+            "ready",
+            "good",
+            "sorry"
+          ],
+          "answer_index": 2,
+          "answer_text": "good",
+          "explanation": "be good at 擅长。"
+        },
+        {
+          "stem": "7",
+          "options": [
+            "activities",
+            "mistakes",
+            "problems",
+            "lessons"
+          ],
+          "answer_index": 0,
+          "answer_text": "activities",
+          "explanation": "extra-curricular activities 课外活动。"
+        },
+        {
+          "stem": "8",
+          "options": [
+            "enough",
+            "again",
+            "ago",
+            "instead"
+          ],
+          "answer_index": 0,
+          "answer_text": "enough",
+          "explanation": "play well enough 踢得够好。"
+        },
+        {
+          "stem": "9",
+          "options": [
+            "win",
+            "smile",
+            "quit",
+            "agree"
+          ],
+          "answer_index": 2,
+          "answer_text": "quit",
+          "explanation": "I will not quit 我不会放弃。"
+        },
+        {
+          "stem": "10",
+          "options": [
+            "improve",
+            "forget",
+            "lose",
+            "fail"
+          ],
+          "answer_index": 0,
+          "answer_text": "improve",
+          "explanation": "find a way to improve 找办法提高。"
+        }
+      ]
+    }
+  ]
+}

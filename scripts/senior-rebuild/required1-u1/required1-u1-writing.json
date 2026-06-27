@@ -1,0 +1,44 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "Write a Letter of Advice（给同学写一封建议信）",
+  "genre": "应用文 / 建议信（letter of advice）",
+  "source": "人教版2019必修一 Unit1 Reading for Writing:write a letter of advice。真实写作体裁=建议信。",
+  "prompt_cn": "你的同学李华最近沉迷电脑游戏、无法专心学习,向你求助。请用英语给他写一封建议信(约80词),内容包括:① 点明你了解他的问题与感受;② 给出至少两条建议及理由;③ 以鼓励的话收尾。",
+  "prompt_en": "Your classmate Li Hua spends too much time playing computer games and cannot focus on his studies. Write him a letter of advice (about 80 words). Your letter should: 1) show that you understand his problem and how he feels; 2) give at least two pieces of advice, each with a reason; 3) end with a few words of encouragement.",
+  "points": [
+    "用称呼开头,点明对方的问题(You wrote that …)",
+    "表示理解对方的感受(I understand that you feel …)",
+    "给出至少两条建议及理由(I think you should … / Why not … because …)",
+    "用鼓励的话和落款收尾(I am sure that … / Best wishes,)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Li Hua, You wrote that you spend too much time playing computer games and cannot focus on your studies. I understand that you feel worried. I think you should make a daily schedule and set a fixed time for games. Why not try some new hobbies, such as sports or reading? They can help you relax in a healthier way. I am sure that if you keep trying, you will manage your time much better. Best wishes, Wang Ming",
+  "model_translation": "亲爱的李华:你来信说你花太多时间打电脑游戏,无法专心学习。我理解你感到很担心。我认为你应该制定一份每日计划,给游戏设定固定的时间。何不尝试一些新爱好,比如运动或阅读呢?它们能以更健康的方式帮你放松。我相信只要你坚持努力,就能把时间管理得更好。祝好!王明",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "点明问题、表示理解、给出至少 2 条建议及理由" },
+      { "dimension": "结构", "max": 4, "criteria": "称呼 / 正文(问题+理解+建议+理由)/ 鼓励结尾 / 落款,顺序合理" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样,使用建议信常用表达,语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼 Dear …",
+      "指出问题 You wrote that …",
+      "表示理解 I understand that you feel …",
+      "建议+理由 I think you should … / Why not … because …",
+      "鼓励结尾 I am sure that …",
+      "落款 Best wishes, …"
+    ],
+    "key_expressions": [
+      "You wrote that …",
+      "I understand that you feel …",
+      "I think you should …",
+      "Why not …?",
+      "I recommend that …",
+      "I am sure that …",
+      "Best wishes,"
+    ],
+    "useful_words": ["worried", "focus on", "schedule", "hobby", "encourage", "relax", "manage", "responsible", "behaviour"]
+  }
+}

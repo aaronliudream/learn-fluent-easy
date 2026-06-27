@@ -1,0 +1,23 @@
+{
+  "note": "替换12道术语识别题的12道新应用题。与U1现有应用题同款:读句判断空白需要的短语类型(NP/AdjP/AdvP),4选项为不同短语类型只一个语义+语法都对。用词限U1/常见,不超纲,答案唯一。",
+  "new_questions": {
+    "r1u1.01": [
+      { "stem": "\"Most teenagers enjoy ____ after school.\"", "options": ["joining different clubs", "very active", "quite often", "good at sports"], "answer_text": "joining different clubs", "explanation": "enjoy 后接名词性短语作宾语,joining different clubs 是名词短语;very active/good at sports 是形容词短语、quite often 是副词短语,都不能作宾语。" },
+      { "stem": "\"____ gave us a lot of help this term.\"", "options": ["The kind volunteers", "Very helpful", "Quite quickly", "Ready to help"], "answer_text": "The kind volunteers", "explanation": "句子缺主语,需名词短语 The kind volunteers;其余是形容词/副词短语,不能作主语。" },
+      { "stem": "\"At school we can learn ____ from books.\"", "options": ["useful knowledge", "very widely", "quite hard", "good for us"], "answer_text": "useful knowledge", "explanation": "learn 后接宾语需名词短语 useful knowledge;very widely 副词短语、quite hard 副词短语、good for us 形容词短语,均不能作宾语。" }
+    ],
+    "r1u1.02": [
+      { "stem": "\"Many freshmen feel ____ on the first day.\"", "options": ["a little nervous", "a new school", "quite quickly", "make friends"], "answer_text": "a little nervous", "explanation": "feel 是系动词,后接形容词短语作表语 a little nervous;a new school 名词短语、quite quickly 副词短语、make friends 动词短语,均不能作表语。" },
+      { "stem": "\"Some teenagers are ____ computer games.\"", "options": ["addicted to", "a waste of time", "playing all day", "late at night"], "answer_text": "addicted to", "explanation": "be addicted to 沉迷于,形容词短语作表语:be addicted to computer games;其余不能跟在 are 后再接 games。" },
+      { "stem": "\"As the monitor, you should be ____ the whole class.\"", "options": ["responsible for", "a good leader", "very carefully", "help everyone"], "answer_text": "responsible for", "explanation": "be responsible for 对…负责,形容词短语作表语;a good leader 名词短语、very carefully 副词短语、help everyone 动词短语,不能接 the whole class 构成表语。" },
+      { "stem": "\"She is ____ English literature.\"", "options": ["very interested in", "a big fan", "reads a lot", "quite often"], "answer_text": "very interested in", "explanation": "be interested in 对…感兴趣,形容词短语作表语:be interested in English literature;a big fan 名词短语、reads a lot 动词短语、quite often 副词短语,均不合适。" }
+    ],
+    "r1u1.03": [
+      { "stem": "\"He finished the project ____.\"", "options": ["very quickly", "a quick job", "very quick", "quick to finish"], "answer_text": "very quickly", "explanation": "修饰动词 finished 需副词短语 very quickly;a quick job 名词短语、very quick / quick to finish 形容词短语,都不能修饰动词。" },
+      { "stem": "\"Please listen ____ in class.\"", "options": ["very carefully", "a careful student", "careful enough", "take notes"], "answer_text": "very carefully", "explanation": "修饰动词 listen 需副词短语 very carefully;其余是名词/形容词/动词短语。" },
+      { "stem": "\"We should manage our time ____.\"", "options": ["more wisely", "a good plan", "very busy", "make a schedule"], "answer_text": "more wisely", "explanation": "修饰动词 manage 需副词短语 more wisely;a good plan/make a schedule 名词或动词短语、very busy 形容词短语,均不合适。" },
+      { "stem": "\"The meeting started ____.\"", "options": ["right on time", "a great idea", "very important", "start early"], "answer_text": "right on time", "explanation": "修饰动词 started 表时间需副词短语 right on time;a great idea 名词短语、very important 形容词短语、start early 动词短语,均不能修饰 started。" },
+      { "stem": "\"After years of practice, she speaks ____.\"", "options": ["quite fluently", "a fluent speaker", "very fluent", "learn fast"], "answer_text": "quite fluently", "explanation": "修饰动词 speaks 需副词短语 quite fluently;a fluent speaker 名词短语、very fluent 形容词短语、learn fast 动词短语,均不合适。" }
+    ]
+  }
+}

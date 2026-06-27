@@ -1,0 +1,45 @@
+{
+  "prompt_count": 1,
+  "prompts": [
+    {
+      "topic": "Write a Letter of Advice（给同学写一封建议信）",
+      "title_en": "A Letter of Advice",
+      "prompt_cn": "你的同学李华最近沉迷电脑游戏、无法专心学习,向你求助。请用英语给他写一封建议信(约80词),内容包括:① 点明你了解他的问题与感受;② 给出至少两条建议及理由;③ 以鼓励的话收尾。",
+      "prompt_en": "Your classmate Li Hua spends too much time playing computer games and cannot focus on his studies. Write him a letter of advice (about 80 words). Your letter should: 1) show that you understand his problem and how he feels; 2) give at least two pieces of advice, each with a reason; 3) end with a few words of encouragement.",
+      "requirements": [
+        "用称呼开头,点明对方的问题(You wrote that …)",
+        "表示理解对方的感受(I understand that you feel …)",
+        "给出至少两条建议及理由(I think you should … / Why not … because …)",
+        "用鼓励的话和落款收尾(I am sure that … / Best wishes,)"
+      ],
+      "min_words": 70,
+      "max_words": 100,
+      "sample_answer": "Dear Li Hua, You wrote that you spend too much time playing computer games and cannot focus on your studies. I understand that you feel worried. I think you should make a daily schedule and set a fixed time for games. Why not try some new hobbies, such as sports or reading? They can help you relax in a healthier way. I am sure that if you keep trying, you will manage your time much better. Best wishes, Wang Ming",
+      "high_sentences": [
+        "You wrote that you spend too much time playing computer games.（你来信说你花太多时间打游戏。）",
+        "I understand that you feel worried.（我理解你感到担心。）",
+        "I think you should make a daily schedule.（我认为你应该制定每日计划。）",
+        "Why not try some new hobbies, such as sports or reading?（何不尝试运动、阅读等新爱好?）",
+        "I am sure that if you keep trying, you will manage your time better.（我相信只要坚持,你会把时间管理得更好。）"
+      ],
+      "error_pairs": [
+        {
+          "note": "should 是情态动词,后接动词原形,不加 to。",
+          "wrong": "I think you should to make a plan.",
+          "correct": "I think you should make a plan."
+        },
+        {
+          "note": "Why not 后直接接动词原形。",
+          "wrong": "Why not to try a new hobby?",
+          "correct": "Why not try a new hobby?"
+        },
+        {
+          "note": "修饰动词 manage 用副词 well,不用形容词 good。",
+          "wrong": "I am sure you will manage your time good.",
+          "correct": "I am sure you will manage your time well."
+        }
+      ],
+      "scoring_rubric": "【15 分制】A 档(13-15):结构完整(称呼/问题/理解/建议+理由/鼓励/落款)、建议≥2 条且有理由、语言准确多样;B 档(10-12):要点较全、少量语言错误;C 档(7-9):建议偏少或缺理由、句型简单、错误较多;D 档(0-6):内容不完整、结构混乱、错误多。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "note": "替换12道'成分识别'术语题(句子中X作什么成分→中文术语)的12道新应用题。搭配避开已用的(addicted to/responsible for/fluent/interested in/good at/afraid of/keen on/proud of/good for/ready to),改用 curious about/tired of/popular with/worried about + 多样名词/副词短语。NP5/AdjP4/AdvP3,读句判断短语类型,4选项不同类型只一个对,不超纲,答案唯一,带解析。",
+  "new_questions": {
+    "r1u1.01": [
+      { "stem": "\"Our school is building ____ this year.\"", "options": ["a new library", "very modern", "quite fast", "open to all"], "answer_text": "a new library", "explanation": "building 后接宾语需名词短语 a new library;very modern/open to all 形容词短语、quite fast 副词短语,不能作宾语。" },
+      { "stem": "\"____ took part in the charity show.\"", "options": ["Many young volunteers", "Very willingly", "Quite generous", "Glad to help"], "answer_text": "Many young volunteers", "explanation": "句子缺主语,需名词短语 Many young volunteers;其余是副词/形容词短语,不能作主语。" },
+      { "stem": "\"Good habits bring us ____.\"", "options": ["a healthy life", "very slowly", "quite useful", "easy to keep"], "answer_text": "a healthy life", "explanation": "bring us 后接直接宾语需名词短语 a healthy life;其余是副词/形容词短语。" },
+      { "stem": "\"The students raised ____ for the poor children.\"", "options": ["a lot of money", "very kindly", "quite generous", "willing to help"], "answer_text": "a lot of money", "explanation": "raised 后接宾语需名词短语 a lot of money;very kindly 副词短语、quite generous/willing to help 形容词短语。" },
+      { "stem": "\"I will never forget ____ in junior high.\"", "options": ["my best friends", "very happily", "quite close", "hard to leave"], "answer_text": "my best friends", "explanation": "forget 后接宾语需名词短语 my best friends;其余是副词/形容词短语。" }
+    ],
+    "r1u1.02": [
+      { "stem": "\"Young children are often ____ the world around them.\"", "options": ["curious about", "a big question", "ask a lot", "very often"], "answer_text": "curious about", "explanation": "be curious about 对…好奇,形容词短语作表语;a big question 名词短语、ask a lot 动词短语、very often 副词短语,均不合适。" },
+      { "stem": "\"After the long trip, we were all ____ walking.\"", "options": ["tired of", "a good rest", "sit down", "quite slowly"], "answer_text": "tired of", "explanation": "be tired of 厌倦,形容词短语作表语:be tired of walking;其余不能跟在 were 后接 walking。" },
+      { "stem": "\"This song is very ____ young people.\"", "options": ["popular with", "a big hit", "sing along", "quite loudly"], "answer_text": "popular with", "explanation": "be popular with 受…欢迎,形容词短语作表语:popular with young people;a big hit 名词短语、sing along 动词短语、quite loudly 副词短语。" },
+      { "stem": "\"Some students feel ____ their exam results.\"", "options": ["worried about", "a hard test", "study harder", "very carefully"], "answer_text": "worried about", "explanation": "feel 是系动词,后接形容词短语 worried about 作表语:worried about their results;其余是名词/动词/副词短语。" }
+    ],
+    "r1u1.03": [
+      { "stem": "\"Our spoken English is getting better ____.\"", "options": ["day by day", "a big step", "very good", "speak more"], "answer_text": "day by day", "explanation": "修饰 is getting better 表方式/程度需副词短语 day by day;a big step 名词短语、very good 形容词短语、speak more 动词短语。" },
+      { "stem": "\"The crowd cheered ____ when the team won.\"", "options": ["loudly and happily", "a great victory", "very excited", "jump up"], "answer_text": "loudly and happily", "explanation": "修饰动词 cheered 需副词短语 loudly and happily;a great victory 名词短语、very excited 形容词短语、jump up 动词短语。" },
+      { "stem": "\"She explained the new rules ____.\"", "options": ["very clearly", "a clear example", "very clear", "explain again"], "answer_text": "very clearly", "explanation": "修饰动词 explained 需副词短语 very clearly;a clear example 名词短语、very clear 形容词短语、explain again 动词短语。" }
+    ]
+  }
+}

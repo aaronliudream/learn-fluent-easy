@@ -132,6 +132,8 @@ const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx
 const GaokaoReadingKnowledge = lazy(() => import("./pages/GaokaoReadingKnowledge.tsx"));
 const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoUnitGrammarTest = lazy(() => import("./pages/gaokaoHub/GaokaoUnitGrammarTest.tsx"));
+const GaokaoGrammarBoard = lazy(() => import("./pages/gaokaoHub/GaokaoGrammarBoard.tsx"));
+const GaokaoVocabBoard = lazy(() => import("./pages/gaokaoHub/GaokaoVocabBoard.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
 const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
@@ -466,7 +468,9 @@ const App = () => (
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
           <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
           <Route path="/gaokao/deep-diagnosis" element={<ChineseOnlyRoute><GaokaoDeepDiagnosis /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
+          {/* 语法板块 = 7册分册(选册→必修一读 junior_grammar 真题,练习写 junior_user_mastery 互通)。旧3500/虚拟语气壳留 grammar-legacy 备查。 */}
+          <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammarBoard /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar-board-legacy" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug/mastery" element={<ChineseOnlyRoute><GaokaoGrammarMastery /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
@@ -476,7 +480,9 @@ const App = () => (
           <Route path="/gaokao/reading/knowledge" element={<ChineseOnlyRoute><GaokaoReadingKnowledge /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/article/:id" element={<ChineseOnlyRoute><GaokaoReadingArticle /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/:id" element={<ChineseOnlyRoute><GaokaoReadingPlay /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
+          {/* 词汇板块 = 7册分册(选册→必修一读 junior_vocab 真实单元词汇,测一测写 junior_word_mastery 互通)。旧3500壳留 vocab-board-legacy。 */}
+          <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocabBoard /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/vocab-board-legacy" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze/:id" element={<ChineseOnlyRoute><GaokaoClozePlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/writing" element={<ChineseOnlyRoute><GaokaoWriting /></ChineseOnlyRoute>} />

@@ -134,6 +134,8 @@ const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoUnitGrammarTest = lazy(() => import("./pages/gaokaoHub/GaokaoUnitGrammarTest.tsx"));
 const GaokaoGrammarBoard = lazy(() => import("./pages/gaokaoHub/GaokaoGrammarBoard.tsx"));
 const GaokaoVocabBoard = lazy(() => import("./pages/gaokaoHub/GaokaoVocabBoard.tsx"));
+const GaokaoExerciseBoard = lazy(() => import("./pages/gaokaoHub/GaokaoExerciseBoard.tsx"));
+const GaokaoWritingBoard = lazy(() => import("./pages/gaokaoHub/GaokaoWritingBoard.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
 const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
@@ -476,18 +478,26 @@ const App = () => (
           <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug/quiz/:index" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/grammar-lab/subjunctive" element={<ChineseOnlyRoute><SubjunctiveLab /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/reading" element={<ChineseOnlyRoute><GaokaoReading /></ChineseOnlyRoute>} />
+          {/* 阅读板块 = 7册分册(选册→必修一读 junior_reading,链①镜像路由 play 写 mastery_progress 互通)。旧壳留 -legacy。 */}
+          <Route path="/gaokao/reading" element={<ChineseOnlyRoute><GaokaoExerciseBoard boardTitle="阅读专项" boardEmoji="📖" basePath="/gaokao/reading" table="junior_reading" module="junior_reading" lessonSeg="reading" /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/reading-board-legacy" element={<ChineseOnlyRoute><GaokaoReading /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/knowledge" element={<ChineseOnlyRoute><GaokaoReadingKnowledge /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/article/:id" element={<ChineseOnlyRoute><GaokaoReadingArticle /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/:id" element={<ChineseOnlyRoute><GaokaoReadingPlay /></ChineseOnlyRoute>} />
           {/* 词汇板块 = 7册分册(选册→必修一读 junior_vocab 真实单元词汇,测一测写 junior_word_mastery 互通)。旧3500壳留 vocab-board-legacy。 */}
           <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocabBoard /></ChineseOnlyRoute>} />
           <Route path="/gaokao/vocab-board-legacy" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
+          {/* 完形板块 = 7册分册(junior_cloze + ①镜像路由 /gaokao/lesson/cloze)。旧壳留 -legacy。 */}
+          <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoExerciseBoard boardTitle="完形专项" boardEmoji="🧩" basePath="/gaokao/cloze" table="junior_cloze" module="junior_cloze" lessonSeg="cloze" /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/cloze-board-legacy" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze/:id" element={<ChineseOnlyRoute><GaokaoClozePlay /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/writing" element={<ChineseOnlyRoute><GaokaoWriting /></ChineseOnlyRoute>} />
+          {/* 写作板块 = 7册分册(junior_writing_prompts,提交制无掌握表互通)。旧壳留 -legacy。 */}
+          <Route path="/gaokao/writing" element={<ChineseOnlyRoute><GaokaoWritingBoard /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/writing-board-legacy" element={<ChineseOnlyRoute><GaokaoWriting /></ChineseOnlyRoute>} />
           <Route path="/gaokao/writing/:id" element={<ChineseOnlyRoute><GaokaoWritingPlay /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/listening" element={<ChineseOnlyRoute><GaokaoListening /></ChineseOnlyRoute>} />
+          {/* 听力板块 = 7册分册(junior_listening_exercises + ①镜像路由 /gaokao/lesson/listening)。旧壳留 -legacy。 */}
+          <Route path="/gaokao/listening" element={<ChineseOnlyRoute><GaokaoExerciseBoard boardTitle="听力专项" boardEmoji="🎧" basePath="/gaokao/listening" table="junior_listening_exercises" module="junior_listening" lessonSeg="listening" /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/listening-board-legacy" element={<ChineseOnlyRoute><GaokaoListening /></ChineseOnlyRoute>} />
           <Route path="/gaokao/listening/:id" element={<ChineseOnlyRoute><GaokaoListeningPlay /></ChineseOnlyRoute>} />
           {/* 课本同步 9关 子页(高中壳镜像,basePath=/gaokao/lesson):复用 junior 子页组件(returnTo 回 /gaokao/hub),
               全程不掉初中。与上方 /gaokao/reading|cloze|listening(旧专项play)路径区分,避免冲突。语法综合测试用高中孪生。

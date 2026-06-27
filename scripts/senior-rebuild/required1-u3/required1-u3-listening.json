@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Sports and Fitness",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修一 Unit 3 同主题听力(邀约看球/运动传奇/健身房对话/为何慢跑/体育精神/健身小贴士)。用词限 U3/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Inviting a Friend to a Match",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Shen Qi: Hi, Amy. Did you hear there's a soccer game this weekend?",
+        "Amy: Really? Where is it?",
+        "Shen Qi: At the Wuhan Stadium, on Saturday afternoon.",
+        "Amy: That sounds fun. Who is playing?",
+        "Shen Qi: Wuhan against Guangzhou. Would you like to come along?",
+        "Amy: I'd love to! What time does it start?",
+        "Shen Qi: At three o'clock. Let's meet at the gate at two thirty.",
+        "Amy: Great. See you then!"
+      ],
+      "translation_cn": "申奇问 Amy 周末有场足球赛;在武汉体育场,周六下午;武汉对广州;申奇邀她一起去;Amy 很乐意;比赛三点开始;两点半在门口见。",
+      "questions": [
+        {
+          "stem": "What event is Shen Qi inviting Amy to?",
+          "options": [
+            "A soccer game.",
+            "A boxing match.",
+            "A ski race.",
+            "A marathon."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where will the game take place?",
+          "options": [
+            "At the gym.",
+            "At the Wuhan Stadium.",
+            "At the school track.",
+            "In a park."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which two teams are playing?",
+          "options": [
+            "Wuhan and Guangzhou.",
+            "Beijing and Shanghai.",
+            "Wuhan and Beijing.",
+            "Two school teams."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What time does the game start?",
+          "options": [
+            "At two o'clock.",
+            "At three o'clock.",
+            "At two thirty.",
+            "At four o'clock."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where will they meet?",
+          "options": [
+            "At Amy's home.",
+            "On the bus.",
+            "At the stadium gate.",
+            "At the train station."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 A Volleyball Legend",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lang Ping is loved by volleyball fans both at home and abroad.",
+        "As a player, she brought honour and glory to her country.",
+        "As a coach, she led the team to medals at the Olympics.",
+        "When two key players were lost before a big match, she did not lose heart.",
+        "She believed her young players could win if they worked as a team."
+      ],
+      "translation_cn": "郎平深受国内外排球迷喜爱;作为球员,她为祖国带来荣誉;作为教练,她带队在奥运会上夺牌;大赛前失去两名主力,她没有泄气;她相信只要团结,年轻队员就能赢。",
+      "questions": [
+        {
+          "stem": "Who loves Lang Ping, according to the passage?",
+          "options": [
+            "Only her family.",
+            "Only her students.",
+            "Nobody.",
+            "Volleyball fans at home and abroad."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did she do as a player?",
+          "options": [
+            "She brought honour to her country.",
+            "She gave up early.",
+            "She refused to train.",
+            "She lost every game."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did she lead her team to as a coach?",
+          "options": [
+            "Nothing at all.",
+            "Medals at the Olympics.",
+            "A single practice.",
+            "A holiday abroad."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did she react when two key players were lost?",
+          "options": [
+            "She quit at once.",
+            "She blamed the team.",
+            "She did not lose heart.",
+            "She cancelled the match."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did Lang Ping believe about her young players?",
+          "options": [
+            "They would surely fail.",
+            "They were too weak.",
+            "They should leave.",
+            "They could win by working as a team."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 At the Gym",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Jack: Wow, this is a wonderful gym, isn't it?",
+        "Dave: Yes, it's great. Is this your first time here?",
+        "Jack: Actually, it is. You come here often, don't you?",
+        "Dave: Yes, at least three times a week.",
+        "Jack: You've lost some weight, haven't you?",
+        "Dave: I have. All that fat has become muscle now.",
+        "Jack: It won't make me too tired, will it?",
+        "Dave: Maybe at first, but you'll get used to it."
+      ],
+      "translation_cn": "Jack 觉得健身房很棒;这是他第一次来;Dave 常来,每周至少三次;Jack 说 Dave 瘦了;Dave 说脂肪变成了肌肉;Jack 担心太累;Dave 说开始会,但会习惯。",
+      "questions": [
+        {
+          "stem": "Is this Jack's first time at the gym?",
+          "options": [
+            "Yes, it is.",
+            "No, he comes daily.",
+            "No, he came last year.",
+            "He never goes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How often does Dave go to the gym?",
+          "options": [
+            "Once a month.",
+            "At least three times a week.",
+            "Every day.",
+            "Never."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What has happened to Dave's body?",
+          "options": [
+            "He has gained weight.",
+            "Nothing has changed.",
+            "His fat has become muscle.",
+            "He has got weaker."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Jack worried about?",
+          "options": [
+            "The price.",
+            "The time.",
+            "The coach.",
+            "Getting too tired."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Dave say about feeling tired?",
+          "options": [
+            "He will get used to it.",
+            "It will last forever.",
+            "It means he should stop.",
+            "It is dangerous."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Why I Jog",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "My favourite way to stay healthy is jogging.",
+        "Every morning I run slowly around the park for half an hour.",
+        "Jogging is good for my body and helps me deal with stress.",
+        "After a hard day at school, a short run always clears my mind.",
+        "I don't run to win a medal; I run to feel happy and fit."
+      ],
+      "translation_cn": "我最喜欢的健康方式是慢跑;每天早晨绕公园慢跑半小时;慢跑有益身体,还能缓解压力;辛苦一天后,短跑总能让头脑清醒;我跑步不是为了奖牌,而是为了快乐和健康。",
+      "questions": [
+        {
+          "stem": "What is the speaker's favourite way to stay healthy?",
+          "options": [
+            "Boxing.",
+            "Jogging.",
+            "Skiing.",
+            "Swimming."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When does the speaker jog?",
+          "options": [
+            "Late at night.",
+            "Only on weekends.",
+            "Every morning.",
+            "Once a month."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Besides the body, what else does jogging help with?",
+          "options": [
+            "Making money.",
+            "Learning English.",
+            "Cooking meals.",
+            "Dealing with stress."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does a short run do after a hard day?",
+          "options": [
+            "It clears the speaker's mind.",
+            "It makes the speaker angry.",
+            "It wastes time.",
+            "It causes injuries."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does the speaker run?",
+          "options": [
+            "To win medals.",
+            "To feel happy and fit.",
+            "To beat others.",
+            "To become famous."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Talking About Fair Play",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Max: A player should never pretend to fall down, even to help the team.",
+        "Lily: Exactly. Cheating is always wrong.",
+        "Cao Jing: But an athlete should also do his best to win for the fans.",
+        "Max: Doing your best is fine, but you must play fair.",
+        "Lily: Right. The audience wants honest games.",
+        "Cao Jing: I see what you mean. A win by cheating is not a real win.",
+        "Max: That's true. Good sportsmanship matters more than the score.",
+        "Lily: I agree with that completely."
+      ],
+      "translation_cn": "Max 说球员不该假摔,哪怕为了帮队;Lily 赞同,作弊总是错的;曹静说运动员也该为球迷尽力争胜;Max 说尽力可以但要公平;Lily 说观众想看诚实的比赛;曹静认同,靠作弊赢不算真赢;Max 说体育精神比比分更重要;Lily 完全同意。",
+      "questions": [
+        {
+          "stem": "What does Max think a player should never do?",
+          "options": [
+            "Train hard.",
+            "Help teammates.",
+            "Pretend to fall down.",
+            "Win a game."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Lily's opinion about cheating?",
+          "options": [
+            "It is clever.",
+            "It is necessary.",
+            "It is fun.",
+            "It is always wrong."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Cao Jing first say an athlete should do?",
+          "options": [
+            "Do his best to win for the fans.",
+            "Give up early.",
+            "Cheat to win.",
+            "Leave the team."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the audience want, according to Lily?",
+          "options": [
+            "A long game.",
+            "Honest games.",
+            "A free ticket.",
+            "More noise."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they finally agree on?",
+          "options": [
+            "Winning is everything.",
+            "Cheating helps the team.",
+            "Good sportsmanship matters more than the score.",
+            "The score is all that counts."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 A Tip for Staying Fit",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who wants to stay fit.",
+        "Don't try to do too much exercise all at once.",
+        "It is better to train a little every day rather than for hours once a week.",
+        "Choose a sport you enjoy, like jogging, badminton, or swimming.",
+        "When exercise is fun, you will keep doing it and stay healthy."
+      ],
+      "translation_cn": "给想保持健康的人一个小贴士:别一次做太多运动;每天练一点,比一周一次练几个小时更好;选一项你喜欢的运动,比如慢跑、羽毛球或游泳;当运动有趣时,你就会坚持下去,保持健康。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only athletes.",
+            "Only coaches.",
+            "Only children.",
+            "Anyone who wants to stay fit."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker warn against?",
+          "options": [
+            "Doing too much exercise all at once.",
+            "Eating fruit.",
+            "Sleeping early.",
+            "Drinking water."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is better than training for hours once a week?",
+          "options": [
+            "Never training.",
+            "Training a little every day.",
+            "Only watching sports.",
+            "Training all night."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of sport should you choose?",
+          "options": [
+            "The hardest one.",
+            "The most expensive one.",
+            "One that you enjoy.",
+            "One nobody likes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens when exercise is fun?",
+          "options": [
+            "You stop quickly.",
+            "You get bored.",
+            "You feel worse.",
+            "You keep doing it and stay healthy."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

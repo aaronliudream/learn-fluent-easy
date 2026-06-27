@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Write a Page in a Wellness Book(为班级健康手册写一页)",
+  "genre": "记叙/说明文(describe a positive change in health and fitness)",
+  "source": "人教版2019必修一 Unit 3 Reading for Writing:write a page in a wellness book(对比过去与现在,描述自己在健康/健身上的积极改变)。",
+  "prompt_cn": "假设你叫李华,你们班有一本'健康手册',同学们在里面分享健康与健身的心得。请用英语写一页(约80词),描述你在运动或饮食上的一个积极改变,内容包括:① 你过去的问题或习惯;② 你做了什么改变;③ 改变带来的结果;④ 给同学的一条建议。注意用表示对比的词(instead of, rather than, now…)。",
+  "prompt_en": "Suppose you are Li Hua. Your class keeps a wellness book where students share ideas about health and fitness. Write a page (about 80 words) describing one positive change you have made in exercise or eating, including: 1) your problem or habit in the past; 2) what change you made; 3) the result of the change; 4) one piece of advice for your classmates. Use words that show contrast (instead of, rather than, now…).",
+  "points": [
+    "过去的问题/习惯(I used to … / In the past, I worried about …)",
+    "做出的改变(Instead of …, I … / Rather than …, I started …)",
+    "结果(Now I feel … / I have become both happier and healthier)",
+    "给同学的建议(My advice is … / Why not …?)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "In the past, I worried about my weight all the time and tried every new diet I read about online. Then I decided to think about fitness rather than weight. Instead of cutting out the foods I enjoyed, I added healthy foods to my meals, and I started jogging for half an hour every morning. Now I feel both happier and healthier, and I have much more energy at school. My advice is simple: choose a sport you enjoy and train a little every day. Stay positive, and your body will thank you!",
+  "model_translation": "过去我整天担心体重,试遍了网上看到的每一种减肥法。后来我决定多想健康,而不是体重。我没有戒掉爱吃的食物,而是往三餐里加了健康食物,还开始每天早晨慢跑半小时。现在我更快乐也更健康,在学校精力充沛得多。我的建议很简单:选一项你喜欢的运动,每天练一点。保持积极,你的身体会感谢你!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:过去问题 / 做的改变 / 结果 / 建议" },
+      { "dimension": "结构", "max": 4, "criteria": "过去—现在对比清晰,用 instead of / rather than / now 等连接,行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样,过去与现在时态正确,语法基本无误" }
+    ],
+    "required_structure": [
+      "过去 In the past, I … / I used to …",
+      "改变 Instead of … / Rather than …, I started …",
+      "结果 Now I feel both happier and healthier",
+      "建议 My advice is … / Why not …?"
+    ],
+    "key_expressions": [
+      "In the past, I worried about my weight all the time.",
+      "I decided to think about fitness rather than weight.",
+      "Instead of cutting out the foods I enjoyed, I added healthy foods.",
+      "Now I feel both happier and healthier.",
+      "Choose a sport you enjoy and train a little every day."
+    ],
+    "useful_words": ["fitness", "diet", "jog", "instead of", "rather than", "positive", "healthier", "stress", "exercise", "strength"]
+  },
+  "high_sentences": [
+    "I decided to think about fitness rather than weight.",
+    "Instead of cutting out the foods I enjoyed, I added healthy foods to my meals.",
+    "Now I feel both happier and healthier, and I have much more energy.",
+    "Choose a sport you enjoy and train a little every day."
+  ],
+  "error_pairs": [
+    { "wrong": "In the past I am worried about my weight.", "correct": "In the past I worried about my weight.", "note": "叙述过去的状态用一般过去时 worried。" },
+    { "wrong": "Instead of cut out the foods, I added healthy foods.", "correct": "Instead of cutting out the foods, I added healthy foods.", "note": "instead of 后接动名词 cutting。" },
+    { "wrong": "Now I become both happier and healthier.", "correct": "Now I have become both happier and healthier.", "note": "表示从过去到现在的变化用现在完成时 have become。" }
+  ],
+  "paragraph_template": "【健康手册一页结构】\n第1步 过去:In the past, I … / I used to …\n第2步 改变:Instead of … , I … / Rather than … , I started …\n第3步 结果:Now I feel both happier and healthier …\n第4步 建议+收尾:My advice is … / Why not …? Stay positive!"
+}

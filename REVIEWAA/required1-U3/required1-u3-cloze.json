@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Sports and Fitness",
+  "source": "人教版2019必修一 Unit 3 同主题完形(加入健身房/马拉松日/小游泳选手/校园球赛/从沙发到慢跑/教练的话)。用词限 U3/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后统一打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Joining the Gym",
+      "text": "Last month I decided to get (1)____, so I joined a gym near my home. On my first day I felt nervous, but a friendly coach showed me around. He told me to (2)____ up before every workout so that I would not hurt myself. At first even ten push-ups made me (3)____ a lot. I wanted to give (4)____ many times, but I remembered my goal and kept going. Slowly, my (5)____ grew and the exercises felt easier. The coach said the secret was to train a little every day (6)____ than too much at once. Now I go to the gym three times a (7)____. I have more energy, sleep better, and feel (8)____ about myself. Exercise has become a part of my life that I really (9)____. If you want to be healthier, why not (10)____ a gym, too?",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fit",
+            "rich",
+            "late",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "get fit 变得健康。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "give",
+            "warm",
+            "wake",
+            "look"
+          ],
+          "answer_index": 1,
+          "explanation": "warm up 热身。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "smile",
+            "sweat",
+            "speak"
+          ],
+          "answer_index": 2,
+          "explanation": "运动让人 sweat 出汗。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "strength",
+            "weight",
+            "stress",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "体力 strength 增长。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "more",
+            "rather",
+            "less",
+            "other"
+          ],
+          "answer_index": 1,
+          "explanation": "rather than 而不是。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "day",
+            "year",
+            "week",
+            "month"
+          ],
+          "answer_index": 2,
+          "explanation": "three times a week 每周三次。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "sorry",
+            "tired",
+            "positive"
+          ],
+          "answer_index": 3,
+          "explanation": "feel positive 感觉积极。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "enjoy",
+            "hate",
+            "miss",
+            "fear"
+          ],
+          "answer_index": 0,
+          "explanation": "really enjoy 真正享受。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "leave",
+            "join",
+            "close",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "join a gym 加入健身房。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My First Marathon",
+      "text": "I had never run a (1)____ before, so I trained for six months. On race day, thousands of runners filled the (2)____ start line, and a huge (3)____ cheered for us. The first ten kilometres felt easy, but later my legs began to (4)____. I really wanted to stop, yet I did not lose (5)____. I kept telling myself, \"You can make (6)____!\" When I finally crossed the finish line, I was covered in (7)____ but full of joy. I did not win a (8)____, and I was not the fastest, but finishing was a kind of (9)____ for me. That day taught me that with enough (10)____, an ordinary person can do something amazing.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "medal",
+            "machine",
+            "marathon",
+            "meeting"
+          ],
+          "answer_index": 2,
+          "explanation": "run a marathon 跑马拉松。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "narrow",
+            "quiet",
+            "crowded"
+          ],
+          "answer_index": 3,
+          "explanation": "crowded start line 拥挤的起跑线。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "audience",
+            "machine",
+            "garden",
+            "library"
+          ],
+          "answer_index": 0,
+          "explanation": "audience 观众欢呼。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "grow",
+            "hurt",
+            "jump",
+            "rest"
+          ],
+          "answer_index": 1,
+          "explanation": "legs began to hurt 腿开始疼。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "weight",
+            "money",
+            "heart",
+            "time"
+          ],
+          "answer_index": 2,
+          "explanation": "lose heart 泄气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "out",
+            "up",
+            "off",
+            "it"
+          ],
+          "answer_index": 3,
+          "explanation": "make it 成功/坚持到。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sweat",
+            "snow",
+            "dust",
+            "paint"
+          ],
+          "answer_index": 0,
+          "explanation": "covered in sweat 满身大汗。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "ticket",
+            "medal",
+            "letter",
+            "ball"
+          ],
+          "answer_index": 1,
+          "explanation": "win a medal 赢奖牌。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "failure",
+            "danger",
+            "victory",
+            "problem"
+          ],
+          "answer_index": 2,
+          "explanation": "完赛对我是一种 victory 胜利。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "luck",
+            "fear",
+            "determination"
+          ],
+          "answer_index": 3,
+          "explanation": "with enough determination 凭足够的决心。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Young Swimmer",
+      "text": "Mei started swimming when she was only six years old. Every morning she got up before sunrise to (1)____. The water was cold and her arms felt heavy, but she never (2)____ a single practice. Her coach often said she had the (3)____ to become a great athlete one day. When she lost a race, she did not feel like a (4)____. Instead, she studied her mistakes and tried to (5)____ the skills she still lacked. \"Everyone (6)____ at something,\" her coach reminded her, \"but a true champion learns from it.\" Year after year, Mei's hard work began to (7)____ a difference. Last summer she finally won a gold (8)____ at the city games. Standing on the stage, she felt proud, not because she had beaten others, but because she had never (9)____ up on her (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "train",
+            "sleep",
+            "eat",
+            "read"
+          ],
+          "answer_index": 0,
+          "explanation": "起床去 train 训练。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "won",
+            "missed",
+            "started",
+            "loved"
+          ],
+          "answer_index": 1,
+          "explanation": "never missed a practice 从不缺席训练。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "ticket",
+            "strength",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "have the strength 有实力/力量。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "champion",
+            "captain",
+            "master",
+            "failure"
+          ],
+          "answer_index": 3,
+          "explanation": "输了不觉得自己是 failure 失败者。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "master",
+            "lose",
+            "waste",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "master the skills 掌握技能。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "wins",
+            "fails",
+            "sleeps",
+            "cheats"
+          ],
+          "answer_index": 1,
+          "explanation": "everyone fails 人人都会失败。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "take",
+            "make",
+            "find"
+          ],
+          "answer_index": 2,
+          "explanation": "make a difference 产生影响。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "path",
+            "view",
+            "diet",
+            "medal"
+          ],
+          "answer_index": 3,
+          "explanation": "gold medal 金牌。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "given",
+            "got",
+            "looked",
+            "kept"
+          ],
+          "answer_index": 0,
+          "explanation": "given up 放弃(never given up)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "error",
+            "dream",
+            "stress",
+            "fear"
+          ],
+          "answer_index": 1,
+          "explanation": "never given up on her dream 没放弃梦想。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Fair Play",
+      "text": "During the school football match, our team was losing by one goal. With only two minutes left, a player from the other team fell down near our goal. Some of my teammates shouted that he was only (1)____ to be hurt so that he could win a free kick. But our captain ran over to (2)____ him stand up. \"Even if it helps us, we should never (3)____,\" he said. The (4)____ on the stands grew quiet, and then they began to clap. In the end, we did not (5)____ the match, but everyone respected our team. Our coach told us that good (6)____ is more important than winning. \"A medal shines for a while,\" he said, \"but a good (7)____ lasts for years.\" That day I learnt that playing (8)____ matters more than the final (9)____. I felt proud to be part of such a (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "training",
+            "jumping",
+            "pretending",
+            "resting"
+          ],
+          "answer_index": 2,
+          "explanation": "pretending to be hurt 假装受伤。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stop",
+            "watch",
+            "leave",
+            "help"
+          ],
+          "answer_index": 3,
+          "explanation": "help him stand up 帮他站起来。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cheat",
+            "train",
+            "smile",
+            "agree"
+          ],
+          "answer_index": 0,
+          "explanation": "never cheat 决不作弊。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "players",
+            "audience",
+            "coaches",
+            "workers"
+          ],
+          "answer_index": 1,
+          "explanation": "看台上的 audience 观众。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "start",
+            "win",
+            "watch"
+          ],
+          "answer_index": 2,
+          "explanation": "did not win the match 没赢比赛。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "homework",
+            "music",
+            "sportsmanship"
+          ],
+          "answer_index": 3,
+          "explanation": "good sportsmanship 良好的体育精神。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "name",
+            "ball",
+            "seat",
+            "gym"
+          ],
+          "answer_index": 0,
+          "explanation": "a good name 好名声。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fast",
+            "fair",
+            "late",
+            "alone"
+          ],
+          "answer_index": 1,
+          "explanation": "playing fair 公平比赛。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ticket",
+            "path",
+            "score",
+            "view"
+          ],
+          "answer_index": 2,
+          "explanation": "the final score 最终比分。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shop",
+            "city",
+            "class",
+            "team"
+          ],
+          "answer_index": 3,
+          "explanation": "part of such a team 这样一支队伍的一员。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "From the Sofa to the Track",
+      "text": "A year ago, I spent every evening sitting on the sofa, and I felt tired all the time. One day a friend asked me to go for a (1)____ with her in the park. I could hardly run for five minutes without stopping, but she told me not to (2)____ myself with others and just to enjoy the fresh air. Little by little, running became (3)____ for me. Instead of asking \"Am I thin?\", I started asking \"Am I (4)____?\" That small change made a big (5)____. Rather than (6)____ out the foods I loved, I simply added more fruit and vegetables to my (7)____. I also learnt to deal with (8)____ by jogging after a hard day at school. Now I feel both happier and (9)____. Exercise did not just change my body; it changed the way I (10)____ about myself.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "jog",
+            "sleep",
+            "drive",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "go for a jog 去慢跑。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "enjoy",
+            "compare",
+            "help",
+            "teach"
+          ],
+          "answer_index": 1,
+          "explanation": "compare myself with others 与别人比较。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "boring",
+            "harder",
+            "easier",
+            "slower"
+          ],
+          "answer_index": 2,
+          "explanation": "became easier 变得更轻松。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "rich",
+            "tall",
+            "busy",
+            "fit"
+          ],
+          "answer_index": 3,
+          "explanation": "Am I fit? 我健康吗(对应课文观念)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "difference",
+            "mistake",
+            "noise",
+            "problem"
+          ],
+          "answer_index": 0,
+          "explanation": "made a big difference 带来很大变化。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "finding",
+            "cutting",
+            "looking",
+            "calling"
+          ],
+          "answer_index": 1,
+          "explanation": "cutting out the foods 把食物戒掉。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weight",
+            "track",
+            "diet",
+            "gym"
+          ],
+          "answer_index": 2,
+          "explanation": "added to my diet 加进饮食。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "honour",
+            "glory",
+            "medal",
+            "stress"
+          ],
+          "answer_index": 3,
+          "explanation": "deal with stress 应对压力。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "healthier",
+            "sadder",
+            "weaker",
+            "lazier"
+          ],
+          "answer_index": 0,
+          "explanation": "happier and healthier 更快乐更健康。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "think",
+            "worry",
+            "doubt"
+          ],
+          "answer_index": 1,
+          "explanation": "the way I think about myself 看待自己的方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Word from the Coach",
+      "text": "Before the championship final, our coach gathered the whole team in the changing room. \"Tomorrow will be hard,\" he said, \"but I believe in every one of you.\" He reminded us that a team can only win if its members (1)____ together, not as separate players. \"When one of you is (2)____ and has to leave the field, the rest must not lose (3)____,\" he went on. He had faced difficult (4)____ before, and he knew how it felt. \"Skills are important,\" he said, \"but mental (5)____ wins the close games.\" He told us to learn from every (6)____ instead of being afraid of it. \"Do your (7)____, play (8)____, and respect your opponents.\" His calm words gave us (9)____. The next day, we stepped onto the field as one team, ready to (10)____ for the title.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fall",
+            "stay",
+            "work",
+            "stop"
+          ],
+          "answer_index": 2,
+          "explanation": "work together 团结协作。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "ready",
+            "slim",
+            "injured"
+          ],
+          "answer_index": 3,
+          "explanation": "队员 injured 受伤离场。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "heart",
+            "weight",
+            "time",
+            "money"
+          ],
+          "answer_index": 0,
+          "explanation": "lose heart 泄气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "meals",
+            "times",
+            "rooms",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "difficult times 艰难时刻。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "weight",
+            "error",
+            "strength",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "mental strength 心理素质。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "medal",
+            "view",
+            "failure"
+          ],
+          "answer_index": 3,
+          "explanation": "learn from every failure 从失败中学习。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "best",
+            "worst",
+            "least",
+            "most"
+          ],
+          "answer_index": 0,
+          "explanation": "Do your best 尽力而为。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "late",
+            "fair",
+            "alone",
+            "fast"
+          ],
+          "answer_index": 1,
+          "explanation": "play fair 公平竞赛。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fear",
+            "stress",
+            "courage",
+            "trouble"
+          ],
+          "answer_index": 2,
+          "explanation": "gave us courage 给我们勇气。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cheat",
+            "rest",
+            "sleep",
+            "compete"
+          ],
+          "answer_index": 3,
+          "explanation": "compete for the title 为冠军而战。"
+        }
+      ]
+    }
+  ]
+}

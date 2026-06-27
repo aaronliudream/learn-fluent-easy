@@ -1,0 +1,248 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Sports and Fitness",
+  "source": "人教版2019必修一 Unit 3 同主题阅读(运动传奇/心理素质/健康观念/运动益处/校园调查/体育精神)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一正确,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Living Legend: Lang Ping",
+      "body": "As a player, Lang Ping brought honour and glory to her country. As a coach, she led the China women's volleyball team to medals at world championships and the Olympics. When the team was preparing for the 2015 World Cup, her determination was tested. The team she had built was falling apart. One of the best players had been injured, and the captain had to leave because of heart problems. Losing two key players was a huge challenge, but Lang Ping did not lose heart. She had faced hard times before, and she believed her young players could win if they worked together as a team. Two weeks later, they were world champions. Then in 2016, she led her team to Olympic gold in Brazil. To fans at home and abroad, she is loved not only for her medals but for her spirit.",
+      "questions": [
+        {
+          "stem": "What happened to the team while preparing for the 2015 World Cup?",
+          "options": [
+            "It lost two important players and nearly broke apart.",
+            "It won every game easily.",
+            "It refused to train at all.",
+            "It changed its coach."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the team was falling apart… lost two key players' 的转述;其余与原文不符。"
+        },
+        {
+          "stem": "How did Lang Ping react to the difficulties?",
+          "options": [
+            "She gave up coaching.",
+            "She stayed confident in her young players.",
+            "She blamed the injured player.",
+            "She left for another country."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'did not lose heart… believed her young players could win' 的转述。"
+        },
+        {
+          "stem": "Why do fans love Lang Ping, according to the text?",
+          "options": [
+            "For both her medals and her spirit.",
+            "Only because she is rich.",
+            "Only because she is famous on TV.",
+            "Because she never lost a single match."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'loved not only for her medals but for her spirit' 的转述;D 与事实不符。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "What Made Air Jordan Unique",
+      "body": "When Michael Jordan's feet left the ground, time seemed to stand still. Known as \"Air Jordan\", he changed basketball with his graceful moves and jumps. His skills were impressive, but it was his mental strength that made him truly unique. In the final seconds of a close game, Jordan always seemed to find a way to win. He once said that the secret to his success was learning from his failures. \"I can accept failure; everyone fails at something. But I can't accept not trying.\" Losing games taught him to practise harder and never give up. Off the court, Jordan has learnt to share his success with others. The Boys and Girls Club he started in Chicago has been helping young people since 1996. For him, true greatness is measured not only by points scored but by the way a person keeps trying and helps others.",
+      "questions": [
+        {
+          "stem": "What does the writer say made Jordan special?",
+          "options": [
+            "His height alone.",
+            "His strong mind under pressure.",
+            "His expensive shoes.",
+            "His loud voice."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'it was his mental strength that made him truly unique' 的转述。"
+        },
+        {
+          "stem": "What lesson did losing games teach Jordan?",
+          "options": [
+            "To stop playing basketball.",
+            "To blame his teammates.",
+            "To train harder and keep going.",
+            "To avoid hard opponents."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'taught him to practise harder and never give up' 的转述。"
+        },
+        {
+          "stem": "What has Jordan done off the court since 1996?",
+          "options": [
+            "Refused to meet his fans.",
+            "Stopped sharing his success.",
+            "Opened a shoe factory abroad.",
+            "Helped young people through a club he started."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Boys and Girls Club he started… helping young people since 1996' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Going Positive",
+      "body": "I always wanted to look like the slim girls on TV, even though I knew it was impossible. I worried about my weight and tried every new diet I read about online. Then I read an article that said instead of asking \"Am I fat?\" I should ask \"Am I fit?\" I had no idea a single letter could make such a difference. Once I started thinking about fitness rather than weight, things began to change. Instead of saying \"I want to lose three kilos\", I would say \"I want to run two kilometres in eight minutes\" or \"I want to do thirty push-ups\". Rather than cutting out the foods I enjoyed, I added healthy foods to my meals. I could still have a burger now and then, but I would add a salad or an apple. Finally, I stopped comparing myself with models and made a list of things I liked about myself. By being positive, I became both happier and healthier.",
+      "questions": [
+        {
+          "stem": "What change in thinking helped the writer most?",
+          "options": [
+            "Asking about fitness instead of weight.",
+            "Following stricter diets.",
+            "Watching more TV shows.",
+            "Eating only bananas."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'instead of asking Am I fat? … Am I fit?' 是转折关键的转述。"
+        },
+        {
+          "stem": "How did the writer change her eating habits?",
+          "options": [
+            "She stopped eating completely.",
+            "She added healthy foods instead of giving up the ones she liked.",
+            "She ate only burgers.",
+            "She never ate fruit."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Rather than cutting out the foods I enjoyed, I added healthy foods' 的转述。"
+        },
+        {
+          "stem": "What was the final result of her new attitude?",
+          "options": [
+            "She felt worse about herself.",
+            "She gave up sports.",
+            "She became happier and healthier.",
+            "She lost all her friends."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'became both happier and healthier' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Why Sports Matter for Children",
+      "body": "Sports play a very valuable role in children's lives. Children who compete in a sport learn how to deal with failure, because even though they work hard to master the skills they need, it does not mean they will always win. Learning to lose with a smile is a skill that helps them far beyond the playing field. Sports also help children see that cheating is foolish. There is no use pretending to fall down or be hurt, because in the end the audience will see through it. Honest effort earns more respect than an easy win. Taking part in sports is fun but not always easy, so it helps children learn how to handle stress, something everyone must face in life. Through wins and losses, young players slowly build the determination and team spirit that will serve them as adults.",
+      "questions": [
+        {
+          "stem": "Why does competing in sport help children deal with failure?",
+          "options": [
+            "Because they never lose a game.",
+            "Because coaches let them win.",
+            "Because failure is never mentioned.",
+            "Because hard work does not always lead to winning."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'work hard… does not mean they will always win' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about cheating?",
+          "options": [
+            "It is foolish because people will notice.",
+            "It is a clever way to win.",
+            "It is necessary in team sports.",
+            "It helps build respect."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'cheating is foolish… the audience will see through it' 的转述。"
+        },
+        {
+          "stem": "Besides failure and honesty, what else do sports teach children?",
+          "options": [
+            "How to avoid all hard work.",
+            "How to handle stress in life.",
+            "How to win without effort.",
+            "How to give up early."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'learn how to handle stress' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A School Sports Survey",
+      "body": "Our group of five students did a survey of our classmates to find out what sports interests and needs they have. We hoped the results would help the school decide which new sports clubs to set up. The first question we asked was \"What is your favourite sport?\" Eight out of fifteen students said that one-on-one sports, such as table tennis or badminton, were their favourite way to get exercise. Five out of fifteen preferred team sports, such as football. Only two said they liked to exercise alone, such as jogging or walking. We also found that most students prefer to do sports in the late afternoon, after classes are over. Based on these answers, we suggest that the school start a table tennis club and a football club first. We believe well-organised clubs would encourage more students to exercise regularly and stay healthy.",
+      "questions": [
+        {
+          "stem": "Why did the students carry out the survey?",
+          "options": [
+            "To decide who is the best athlete.",
+            "To cancel all sports classes.",
+            "To help the school choose new sports clubs.",
+            "To compare two schools."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'help the school decide which new sports clubs to set up' 的转述。"
+        },
+        {
+          "stem": "Which type of sport was most popular among the students?",
+          "options": [
+            "Team sports like football.",
+            "Exercising alone like jogging.",
+            "Swimming.",
+            "One-on-one sports like table tennis."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Eight out of fifteen… one-on-one sports' 最多。"
+        },
+        {
+          "stem": "What did the group suggest to the school?",
+          "options": [
+            "Setting up clubs for table tennis and football.",
+            "Closing the gym.",
+            "Buying new uniforms.",
+            "Stopping the afternoon classes."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'suggest that the school start a table tennis club and a football club' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "What Good Sportsmanship Means",
+      "body": "Three students were talking about sportsmanship. Cao Jing believed an athlete should do his or her best to win, because fans and the country are watching. Lily disagreed, saying that good sportsmanship is more important than winning; if another player falls, you should stop and help. Max added that an athlete should never pretend to fall down, even if it helps the team, because cheating is wrong. They did not fully agree, but all of them felt that playing fair matters. A true champion, they decided, is not only the one who scores the most points but also the one who respects the rules and the other players. In the end, the audience remembers good behaviour long after the final score is forgotten. Winning feels good for a day, but a name for fair play lasts for years.",
+      "questions": [
+        {
+          "stem": "What did Lily think was most important?",
+          "options": [
+            "Winning at any cost.",
+            "Good sportsmanship over winning.",
+            "Scoring the most points.",
+            "Pretending to be hurt."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'good sportsmanship is more important than winning' 的转述。"
+        },
+        {
+          "stem": "Why did Max say a player should not pretend to fall?",
+          "options": [
+            "Because it is too tiring.",
+            "Because the coach forbids it.",
+            "Because dishonest play is wrong, even when it benefits his side.",
+            "Because nobody is watching."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'never pretend to fall… cheating is wrong' 的转述。"
+        },
+        {
+          "stem": "According to the passage, what makes a true champion?",
+          "options": [
+            "Always winning the trophy.",
+            "Having the most fans.",
+            "Never losing a single point.",
+            "Respecting the rules and other players, not just scoring."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'not only the one who scores the most… respects the rules and the other players' 的转述。"
+        }
+      ]
+    }
+  ]
+}

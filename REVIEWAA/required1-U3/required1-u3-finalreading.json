@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(运动健康主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Tom used to spend all his free time playing computer games, and he often felt tired. Last term, he joined the school running club and began to jog every morning before class. A few months later, he was not only fitter but also more cheerful, and his friends were surprised by the change.",
+    "questions": [
+      {
+        "q": "What was Tom's habit before he joined the running club?",
+        "options": [
+          "He filled his spare time with computer games.",
+          "He trained for a marathon every day.",
+          "He went jogging each morning.",
+          "He played soccer with friends."
+        ],
+        "answer": "A",
+        "explanation": "原文 'used to spend all his free time playing computer games' 的转述;B/C/D 是他之后或别的情况。"
+      },
+      {
+        "q": "What change did Tom's friends notice?",
+        "options": [
+          "He became lazier and quieter.",
+          "He grew fitter and more cheerful.",
+          "He stopped going to school.",
+          "He gave up the running club."
+        ],
+        "answer": "B",
+        "explanation": "原文 'not only fitter but also more cheerful'(短文后半段,覆盖不同位置)的转述;其余与原文相反或未提。"
+      }
+    ]
+  }
+}

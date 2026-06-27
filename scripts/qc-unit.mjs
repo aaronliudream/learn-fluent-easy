@@ -90,7 +90,9 @@ if (grammar?.questions) {
   const ac = {}; qs.forEach(q => { const a = String(q.options[ansIdx(q.answer_index ?? q.answer, q.options)] || '').toLowerCase(); ac[a] = (ac[a] || 0) + 1; });
   // 2.5 豁免:答案是固定语法形式(时态/助动词/情态)的题——重复是设计使然,只对实义搭配词查重复。
   const TENSE = /\b(will|won'?t|wo|going to|am|is|are|was|were|be|been|being|do|does|did|have|has|had|shall|should|would|could|may|might|must)\b/;
-  Object.entries(ac).forEach(([a, n]) => { if (n > 2 && !TENSE.test(a)) warn('2.5', `答案"${a}"在语法关出现${n}次(>2)`); });
+  // 反意疑问句答语逻辑(Yes/No 等)是固定答案,重复是设计使然,同样豁免。
+  const TAGREPLY = /^(yes|no|sure|never|not|of course)$/;
+  Object.entries(ac).forEach(([a, n]) => { if (n > 2 && !TENSE.test(a) && !TAGREPLY.test(a)) warn('2.5', `答案"${a}"在语法关出现${n}次(>2)`); });
 }
 
 // ===== 3 阅读 =====
@@ -214,8 +216,16 @@ function checkVocabAndFields() {
 function writeSemanticChecklist() {
   const outDir = `REVIEWAA/${VOL}-${UNIT}`; mkdirSync(outDir, { recursive: true });
   let md = `# ${VOL}-${UNIT} 语义复核清单(喂网页版 Claude · 脚本看不出的语义层)\n\n`;
-  md += `> 完形全60空 + 阅读全24题 + 词汇题全部**逐题全列、不预筛**(双解/语义对应只能人/LLM逐题看)。\n\n`;
-  md += `## 完形(全60空,查双解/同词性/通顺)\n`;
+  md += `> 语法全60题 + 完形全60空 + 阅读全24题 + finalReading 全部**逐题全列、不预筛**(双解/语义对应/句子地道性只能人/LLM逐题看)。\n\n`;
+  md += `## 语法(全60题,查【句子地道·本单元语法点自然成立】+ 答案唯一,见质检标准 §2.*铁律)\n`;
+  (grammar?.points || []).forEach(p => {
+    md += `\n### ${p.code} ${p.point}\n`;
+    (grammar.questions || []).filter(q => q.code === p.code).forEach(q => {
+      const ai = ansIdx(q.answer_index ?? q.answer, q.options);
+      md += `- ${q.stem}\n  ${q.options.map((o, i) => (i === ai ? `**${o}✓**` : o)).join(' / ')}\n  考点:${p.point} ｜ 解析:${q.explanation || ''}\n`;
+    });
+  });
+  md += `\n## 完形(全60空,查双解/同词性/通顺)\n`;
   (cloze?.passages || []).forEach(p => { md += `\n### ${p.code || p.title}\n`; (p.questions || []).forEach(q => { const ai = ansIdx(q.answer_index ?? q.answer, q.options); md += `- 空${q.blank ?? ''}: ${q.options.map((o, i) => (i === ai ? `**${o}✓**` : o)).join(' / ')}\n`; }); });
   md += `\n## 阅读(全24题,查双解/答案唯一/转述质量)\n`;
   (reading?.passages || []).forEach(p => { md += `\n### ${p.code || p.title}\n> ${(p.body || '').slice(0, 200)}…\n`; (p.questions || []).forEach(q => { const ai = ansIdx(q.answer_index ?? q.answer, q.options); md += `- ${q.stem}\n  ${q.options.map((o, i) => (i === ai ? `**${o}✓**` : o)).join(' / ')}\n`; }); });

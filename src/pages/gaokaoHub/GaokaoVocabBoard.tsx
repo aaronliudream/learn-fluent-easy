@@ -142,6 +142,7 @@ export default function GaokaoVocabBoard() {
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={gradeNum} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={gradeNum} suppressGaokao />;
   if (mode === "context") return <ContextQuiz pool={activePool} onExit={exit} gradeNum={gradeNum} />;
+  if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={gradeNum} suppressGaokao />;
 
   // 单词清单 → 某组浏览
   if (groupIdx >= 0 && groupIdx < groups.length) {

@@ -38,16 +38,21 @@ export async function loadUnitVocabProgress(wordIds: string[]): Promise<UnitOver
     const slice = wordIds.slice(i, i + 200);
     const { data } = await supabase
       .from("junior_word_mastery")
-      .select("word_id,quiz_consec,match_consec,spell_consec,bento_consec,context_consec")
+      .select("word_id,quiz_consec,match_consec,spell_consec,bento_consec,context_consec,listen_correct,cloze_correct")
       .eq("user_id", user.id)
       .in("word_id", slice);
     for (const r of (data ?? []) as Record<string, number>[]) {
       done++; // 做过(有记录)
-      // 掌握度(橙环)= 全站"答对2次=掌握"口径:任一游戏 consec≥2(MASTER_STREAK,见 useJuniorVocabMastery)。
+      // 掌握度(橙环)= 全站"答对2次=掌握"口径(per-游戏,与 useUnitVocab MASTERED_AT 一致):
+      //  有 consec 列的游戏(quiz/match/spell/bento/context)→ consec≥2;
+      //  无 consec 列的游戏(listen 听音辨词 / cloze)→ *_correct≥2。任一达标即"掌握"。
       const maxConsec = Math.max(
         r.quiz_consec ?? 0, r.match_consec ?? 0, r.spell_consec ?? 0, r.bento_consec ?? 0, r.context_consec ?? 0,
       );
-      if (maxConsec >= VOCAB_MASTER_STREAK) mastered++;
+      const ok = maxConsec >= VOCAB_MASTER_STREAK
+        || (r.listen_correct ?? 0) >= VOCAB_MASTER_STREAK
+        || (r.cloze_correct ?? 0) >= VOCAB_MASTER_STREAK;
+      if (ok) mastered++;
     }
   }
   return { done, mastered, total };

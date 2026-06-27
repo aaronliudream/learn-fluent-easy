@@ -1,0 +1,49 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Write a Summary(写一篇摘要)",
+  "genre": "摘要(summary of a news report / passage)",
+  "source": "人教版2019必修一 Unit 4 Reading for Writing:write a summary(把一篇灾害报道/课文概括成简短摘要)。",
+  "prompt_cn": "假设你叫李华。请用英语为下面这则新闻写一篇约80词的摘要,要点包括:① 何时何地发生了什么灾难;② 造成的主要影响(伤亡/破坏);③ 救援与援助情况。注意:摘要只写主要信息,不抄原句、不加细节或个人评论。\n【新闻大意】2004年12月26日,印度尼西亚附近海域发生9.0级强烈地震,引发横扫亚洲海岸的海啸,逾6500人遇难、上百万人受灾;多国组织救援,但道路损毁使物资运送困难。",
+  "prompt_en": "Suppose you are Li Hua. Write a summary (about 80 words) of the news below, including: 1) when and where the disaster happened and what it was; 2) the main effects (deaths / damage); 3) the rescue and aid. A summary keeps only the main points—do not copy sentences, add details or give personal opinions.",
+  "points": [
+    "时间地点+灾难(On 26 December 2004, a powerful earthquake off Indonesia caused a tsunami…)",
+    "主要影响(More than 6,500 people were killed and over a million were affected…)",
+    "救援与援助(Foreign aid was organised, but damaged roads made delivery difficult…)",
+    "只写主要信息、转述不照抄、不加评论"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "On 26 December 2004, a powerful earthquake struck under the sea near Indonesia and caused a huge tsunami that crashed into coastlines across Asia. More than 6,500 people were killed and over a million more were affected, as homes, cars and whole villages were swept away. Foreign aid was quickly organised for the affected countries. However, dangerous conditions and damaged roads made it very hard to deliver food and supplies to the survivors.",
+  "model_translation": "2004年12月26日,印度尼西亚附近海底发生强烈地震,引发巨大海啸,横扫亚洲各国海岸。逾6500人遇难、上百万人受灾,房屋、汽车乃至整座村庄被卷走。多国迅速组织援助,但危险的环境和受损的道路使向幸存者运送食物和物资十分困难。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:时间地点+灾难 / 主要影响 / 救援援助;只含主要信息" },
+      { "dimension": "结构", "max": 4, "criteria": "概括连贯、逻辑清楚、约为原文三分之一长度" },
+      { "dimension": "语言", "max": 5, "criteria": "转述准确(不照抄)、过去时叙述、被动语态运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "时间地点+灾难 On 26 December 2004, … earthquake … caused a tsunami …",
+      "主要影响 More than 6,500 … were killed and over a million … affected …",
+      "救援援助 Foreign aid was organised, but damaged roads made delivery difficult."
+    ],
+    "key_expressions": [
+      "A powerful earthquake struck under the sea and caused a tsunami.",
+      "More than 6,500 people were killed and over a million were affected.",
+      "Homes and villages were swept away by the waves.",
+      "Foreign aid was organised, but damaged roads made it hard to deliver supplies."
+    ],
+    "useful_words": ["earthquake", "tsunami", "magnitude", "affect", "sweep away", "aid", "deliver", "survivor", "damage", "rescue"]
+  },
+  "high_sentences": [
+    "A powerful earthquake struck under the sea and caused a huge tsunami.",
+    "More than 6,500 people were killed and over a million more were affected.",
+    "Foreign aid was organised, but damaged roads made it hard to deliver supplies."
+  ],
+  "error_pairs": [
+    { "wrong": "The earthquake happened in 26 December 2004.", "correct": "The earthquake happened on 26 December 2004.", "note": "具体某天用 on,不用 in。" },
+    { "wrong": "More than 6,500 people killed.", "correct": "More than 6,500 people were killed.", "note": "被动语态需要 be + 过去分词 were killed。" },
+    { "wrong": "Damaged roads made hard to deliver food.", "correct": "Damaged roads made it hard to deliver food.", "note": "make it + adj + to do,形式宾语 it 不可省。" }
+  ],
+  "paragraph_template": "【摘要结构】\n第1句 时间地点+灾难:On … , a … earthquake … caused a tsunami …\n第2句 主要影响:More than … were killed and … were affected …\n第3句 救援援助:Foreign aid was organised, but … made it hard to deliver …"
+}

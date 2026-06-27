@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(自然灾害主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When the earthquake struck at midnight, Mr Chen was the first in his village to feel it. Instead of running away, he ran from house to house, waking his neighbours so that they could escape before the walls fell. Thanks to him, everyone in the village reached the open fields safely, and not a single life was lost.",
+    "questions": [
+      {
+        "q": "What did Mr Chen do when he felt the earthquake?",
+        "options": [
+          "He woke his neighbours so they could escape.",
+          "He ran away from the village alone.",
+          "He went back to sleep.",
+          "He waited for the army to arrive."
+        ],
+        "answer": "A",
+        "explanation": "原文 'ran from house to house, waking his neighbours so that they could escape' 的转述;B/C/D 与原文相反或未提。"
+      },
+      {
+        "q": "What was the result of Mr Chen's action?",
+        "options": [
+          "Many villagers were hurt.",
+          "The whole village reached safety with no lives lost.",
+          "Only Mr Chen survived.",
+          "The village was never rebuilt."
+        ],
+        "answer": "B",
+        "explanation": "末句 'everyone… reached the open fields safely, and not a single life was lost'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

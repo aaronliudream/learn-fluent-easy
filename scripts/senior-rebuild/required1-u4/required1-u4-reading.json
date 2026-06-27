@@ -1,0 +1,248 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Natural Disasters",
+  "source": "人教版2019必修一 Unit 4 同主题阅读(唐山大地震/预兆/亚洲海啸/重建/防灾准备/救援)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Night the Earth Didn't Sleep",
+      "body": "At 3:42 a.m. on 28 July 1976, everything in Tangshan began to shake. It seemed as if the world were coming to an end. One of the most deadly earthquakes of the 20th century had begun, and even Beijing, 150 kilometres away, felt the shock. A huge crack, eight kilometres long, cut across houses, roads and waterways. In less than one minute, a large city lay in ruins. Two thirds of the people who lived there were dead or injured, and thousands of children were left without parents. About ninety percent of the homes and all of the hospitals were gone. Bricks covered the ground like red autumn leaves. People stood in shock, and then, later that afternoon, another big quake struck the city again. Water, food and electricity were all hard to get, and people began to wonder how long the disaster would last.",
+      "questions": [
+        {
+          "stem": "How long did it take for the city to be ruined?",
+          "options": [
+            "Less than a minute.",
+            "About an hour.",
+            "A whole day.",
+            "Several weeks."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'In less than one minute, a large city lay in ruins' 的转述。"
+        },
+        {
+          "stem": "What made the situation even worse that afternoon?",
+          "options": [
+            "The weather suddenly turned cold.",
+            "A second strong quake hit the city.",
+            "The river dried up completely.",
+            "The army left the city."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'another big quake struck the city again'(后半段,覆盖不同位置)。"
+        },
+        {
+          "stem": "What were people worried about after the quakes?",
+          "options": [
+            "Whether the disaster would soon come to an end.",
+            "How to leave the country.",
+            "How to find their cars.",
+            "Where to go shopping."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'wonder how long the disaster would last' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Strange Signs Before the Quake",
+      "body": "For several days before the Tangshan earthquake, strange things were happening in the countryside. The water in the village wells rose and fell, again and again. Deep cracks appeared in the well walls, and at least one well gave off a strange smelly gas. Chickens and even pigs were too nervous to eat, and dogs refused to go inside buildings. Mice ran out of the fields looking for places to hide, and fish jumped out of the water. At about 3 a.m., bright lights were seen in the sky outside the city, and loud noises were heard. But the city's one million people were asleep as usual that night, and no one understood what these signs meant. Today, scientists study such warning signs carefully, hoping that one day they may help to save lives.",
+      "questions": [
+        {
+          "stem": "What happened to the water in the village wells?",
+          "options": [
+            "It turned into ice.",
+            "It rose and fell many times.",
+            "It became sweet to drink.",
+            "It stayed completely still."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'rose and fell, again and again' 的转述。"
+        },
+        {
+          "stem": "How did the animals behave before the quake?",
+          "options": [
+            "They slept more than usual.",
+            "They became friendlier to people.",
+            "They acted nervous and tried to hide.",
+            "They ate much more food."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 animals 'too nervous to eat… mice ran out… fish jumped out' 的概括。"
+        },
+        {
+          "stem": "Why didn't the people react to the signs?",
+          "options": [
+            "They were busy working.",
+            "They had already left the city.",
+            "They thought the signs were a joke.",
+            "They were asleep and did not understand them."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'were asleep as usual… no one understood what these signs meant'(后段)。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Tsunami Hits Asia",
+      "body": "On 26 December 2004, the most powerful earthquake in forty years struck under the sea off the coast of Indonesia. The quake reached a magnitude of 9.0 and caused a huge tsunami that crashed into coastlines across Asia. Fishermen, tourists, homes and cars were swept away by the giant waves. More than six thousand five hundred people were killed in several countries, and over a million more were affected. In Sri Lanka, far from the quake centre, the waves still reached the shore and destroyed whole villages. Thousands of people were missing, and the number of deaths was expected to grow. Foreign aid was quickly organised for the tsunami-hit countries, but dangerous conditions and damaged roads made it very hard to deliver food and supplies to the survivors.",
+      "questions": [
+        {
+          "stem": "What caused the tsunami?",
+          "options": [
+            "A powerful undersea earthquake.",
+            "A volcanic eruption.",
+            "A strong typhoon.",
+            "Heavy rain for weeks."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'earthquake… caused a huge tsunami' 的转述。"
+        },
+        {
+          "stem": "What happened in Sri Lanka, far from the quake centre?",
+          "options": [
+            "Nothing serious happened there.",
+            "The waves still destroyed whole villages.",
+            "Only a few boats were lost.",
+            "The earthquake was not felt at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'far from the quake centre, the waves still reached the shore and destroyed whole villages'。"
+        },
+        {
+          "stem": "Why was it difficult to help the survivors?",
+          "options": [
+            "There were no volunteers.",
+            "No country wanted to help.",
+            "Damaged roads made delivering supplies hard.",
+            "The survivors refused all aid."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'damaged roads made it very hard to deliver food and supplies'(后段)。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Tangshan Rises Again",
+      "body": "Hope was not lost after the Tangshan earthquake. Soon after the quakes, the army sent more than a hundred thousand soldiers to dig out those who were trapped and to care for the injured. Thousands of doctors and nurses arrived to provide medical care, and water and food were brought into the city by train, truck and plane. Workers built shelters for survivors whose homes had been destroyed. Slowly, the city began to breathe again. With strong support from the government and the tireless efforts of its people, a new Tangshan was built upon the ruins. Today the new city is home to more than seven million people, with great improvements in transport, industry and the environment. Tangshan has proved to the world that, in times of disaster, people must unify and show the wisdom to stay positive and rebuild for a brighter future.",
+      "questions": [
+        {
+          "stem": "What did the soldiers do first when they arrived?",
+          "options": [
+            "They rebuilt the factories.",
+            "They opened new shops.",
+            "They left the city quickly.",
+            "They dug out trapped people and helped the injured."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'dig out those who were trapped and to care for the injured'。"
+        },
+        {
+          "stem": "How was the new Tangshan built?",
+          "options": [
+            "Through government support and the people's efforts.",
+            "By foreign companies alone.",
+            "Without any government help.",
+            "By moving the whole city away."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'with strong support from the government and the tireless efforts of its people'(后段)。"
+        },
+        {
+          "stem": "What lesson does Tangshan show the world?",
+          "options": [
+            "Disasters can never be survived.",
+            "That people should come together and rebuild with hope.",
+            "It is best to leave ruined cities empty.",
+            "Only money can rebuild a city."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'people must unify and show the wisdom to stay positive and rebuild' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Be Ready for a Disaster",
+      "body": "No one can stop a natural disaster, but we can all prepare for one. The most important thing during any disaster is to stay calm. Before an earthquake, make a safety list and decide where to meet your family. Keep an emergency kit on hand, with enough water and food for three days, a radio, a flashlight and a first aid kit. During an earthquake indoors, remember to drop, cover and hold on. If you are outdoors, move to an open space away from buildings and power lines. If you are trapped after a quake, do not shout for a long time, because that wastes your energy. Instead, tap on a pipe or wall, or use a whistle, so that rescue workers can find you. A little preparation today may save your life tomorrow.",
+      "questions": [
+        {
+          "stem": "What is the most important thing during a disaster?",
+          "options": [
+            "To run as fast as possible.",
+            "To take photos.",
+            "To stay calm.",
+            "To call your friends."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'The most important thing… is to stay calm'。"
+        },
+        {
+          "stem": "What should you do during an earthquake if you are indoors?",
+          "options": [
+            "Run outside at once.",
+            "Stand near the window.",
+            "Use the lift to leave.",
+            "Drop down, cover your head, and hold on."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'drop, cover and hold on'。"
+        },
+        {
+          "stem": "Why should a trapped person tap on a pipe instead of shouting for long?",
+          "options": [
+            "Shouting for long wastes energy.",
+            "Shouting is not allowed.",
+            "Tapping is more fun.",
+            "Pipes can move on their own."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'do not shout for a long time, because that wastes your energy… tap on a pipe'(后段)。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Rescue Worker's Diary",
+      "body": "My name is Lin, and I am a rescue worker. When the news of the earthquake came, my team and I left within an hour. The roads were so badly damaged that we had to walk the last few kilometres. Everywhere we looked, there was nothing but ruins. We worked day and night, digging carefully so that we would not hurt the people trapped below. On the second day, we heard a faint tapping on a broken pipe. We followed the sound and found a little girl whose leg was hurt but who was still alive. When we lifted her out, the whole street cheered. Moments like that gave us the strength to keep going. A disaster takes away so much, but it also shows how brave and kind ordinary people can be.",
+      "questions": [
+        {
+          "stem": "Why did the team have to walk the last few kilometres?",
+          "options": [
+            "They had no cars at all.",
+            "The roads were too badly damaged to drive on.",
+            "They wanted some exercise.",
+            "The city was closed to visitors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'roads were so badly damaged that we had to walk'。"
+        },
+        {
+          "stem": "How did they find the little girl?",
+          "options": [
+            "She shouted for help loudly.",
+            "A dog led them to her.",
+            "They traced a soft tapping sound coming from a pipe.",
+            "She walked out by herself."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'heard a faint tapping on a broken pipe… followed the sound'(中段)。"
+        },
+        {
+          "stem": "What does the writer learn from the disaster?",
+          "options": [
+            "That rescue work is easy.",
+            "That disasters can be prevented.",
+            "That cities should not be rebuilt.",
+            "That ordinary people can be brave and kind."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'shows how brave and kind ordinary people can be' 的转述。"
+        }
+      ]
+    }
+  ]
+}

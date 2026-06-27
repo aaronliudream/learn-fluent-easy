@@ -92,7 +92,9 @@ if (grammar?.questions) {
   const TENSE = /\b(will|won'?t|wo|going to|am|is|are|was|were|be|been|being|do|does|did|have|has|had|shall|should|would|could|may|might|must)\b/;
   // 反意疑问句答语逻辑(Yes/No 等)是固定答案,重复是设计使然,同样豁免。
   const TAGREPLY = /^(yes|no|sure|never|not|of course)$/;
-  Object.entries(ac).forEach(([a, n]) => { if (n > 2 && !TENSE.test(a) && !TAGREPLY.test(a)) warn('2.5', `答案"${a}"在语法关出现${n}次(>2)`); });
+  // 定语从句关系代词/关系副词(that/which/who/whom/whose/when/where/why)是固定语法形式答案,重复是设计使然,豁免。
+  const RELWORD = /^(that|which|who|whom|whose|when|where|why)$/;
+  Object.entries(ac).forEach(([a, n]) => { if (n > 2 && !TENSE.test(a) && !TAGREPLY.test(a) && !RELWORD.test(a)) warn('2.5', `答案"${a}"在语法关出现${n}次(>2)`); });
 }
 
 // ===== 3 阅读 =====

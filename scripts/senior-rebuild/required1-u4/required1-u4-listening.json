@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Natural Disasters",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修一 Unit 4 同主题听力(地震新闻/唐山短文/应急包/震时怎么做/幸存者采访/防灾贴士)。用词限 U4/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 An Earthquake News Report",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anchor: We are now joined by our reporter near the disaster area. What can you tell us?",
+        "Reporter: A strong earthquake hit the city early this morning.",
+        "Anchor: Do we know the magnitude?",
+        "Reporter: Yes, it reached a magnitude of seven point eight.",
+        "Anchor: How are the rescue teams doing?",
+        "Reporter: Soldiers and doctors are digging out people who are trapped.",
+        "Anchor: What do the survivors need most?",
+        "Reporter: They need clean water, food and shelter right now."
+      ],
+      "translation_cn": "主播连线灾区记者;记者说今早一场强震袭击城市;震级7.8;救援队中士兵和医生正挖出被困者;幸存者最需要的是干净的水、食物和避难所。",
+      "questions": [
+        {
+          "stem": "When did the earthquake hit the city?",
+          "options": [
+            "Early this morning.",
+            "Late last night.",
+            "Yesterday afternoon.",
+            "A week ago."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was the magnitude of the quake?",
+          "options": [
+            "Eight point seven.",
+            "Seven point eight.",
+            "Five point eight.",
+            "Six point five."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who are digging out the trapped people?",
+          "options": [
+            "Soldiers and doctors.",
+            "Tourists.",
+            "Shop workers.",
+            "Teachers."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do the survivors need most right now?",
+          "options": [
+            "Books and toys.",
+            "Water, food and shelter.",
+            "New phones.",
+            "More reporters."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where is the reporter speaking from?",
+          "options": [
+            "A library.",
+            "A train station.",
+            "Near the disaster area.",
+            "A shopping mall."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 The City That Rose Again",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In 1976, a deadly earthquake destroyed almost all of Tangshan.",
+        "In less than a minute, a large city lay in ruins.",
+        "But hope was not lost after the quake.",
+        "Soldiers, doctors and workers came from all over the country to help.",
+        "With great effort, a new Tangshan was built upon the ruins."
+      ],
+      "translation_cn": "1976年一场致命地震几乎摧毁了整个唐山;不到一分钟,大城市成了废墟;但震后希望未灭;来自全国的士兵、医生和工人前来帮忙;凭着巨大努力,一座新唐山在废墟上建起。",
+      "questions": [
+        {
+          "stem": "What happened to Tangshan in 1976?",
+          "options": [
+            "A flood covered it.",
+            "A typhoon hit it.",
+            "Nothing serious happened.",
+            "A deadly earthquake destroyed most of it."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How fast did the city fall into ruins?",
+          "options": [
+            "In less than a minute.",
+            "Over many years.",
+            "In about a week.",
+            "It never fell."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the passage say about hope after the quake?",
+          "options": [
+            "It was completely lost.",
+            "It was not lost.",
+            "No one cared.",
+            "It came too late."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who came to help the city?",
+          "options": [
+            "Only the local people.",
+            "No one at all.",
+            "Soldiers, doctors and workers from all over the country.",
+            "Foreign tourists."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What was finally built upon the ruins?",
+          "options": [
+            "A small village.",
+            "An empty field.",
+            "A shopping centre only.",
+            "A new Tangshan."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Making an Emergency Kit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Student: Mrs Fors, what should we keep in an emergency kit?",
+        "Mrs Fors: First, enough water and food for three days.",
+        "Student: What about when the power goes out?",
+        "Mrs Fors: Keep a flashlight and a radio so you can hear the news.",
+        "Student: Should we have anything for injuries?",
+        "Mrs Fors: Yes, always keep a first aid kit on hand.",
+        "Student: And if we are trapped after a quake?",
+        "Mrs Fors: Tap on a pipe or use a whistle so we can find you."
+      ],
+      "translation_cn": "学生问 Fors 女士应急包里放什么;先是三天的水和食物;停电时备手电和收音机听新闻;受伤要备急救箱;若被困,敲管子或吹哨子好让人找到你。",
+      "questions": [
+        {
+          "stem": "How much water and food should a kit hold?",
+          "options": [
+            "Enough for three days.",
+            "Enough for one hour.",
+            "Enough for a month.",
+            "None at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why keep a flashlight and a radio?",
+          "options": [
+            "To play games.",
+            "For when the power goes out and to hear the news.",
+            "To sell them later.",
+            "To give to friends."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you keep for injuries?",
+          "options": [
+            "A camera.",
+            "A football.",
+            "A first aid kit.",
+            "A map."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should a trapped person do?",
+          "options": [
+            "Shout for hours.",
+            "Run around.",
+            "Stay completely silent.",
+            "Tap on a pipe or use a whistle."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who is giving the advice?",
+          "options": [
+            "Mrs Fors.",
+            "A shop owner.",
+            "A bus driver.",
+            "A tourist."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 During an Earthquake",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If an earthquake happens while you are indoors, do not run outside at once.",
+        "Remember three words: drop, cover and hold on.",
+        "Get under a strong table and protect your head.",
+        "If you are outdoors, move to an open space away from buildings.",
+        "Most importantly, try to stay calm during the shaking."
+      ],
+      "translation_cn": "若室内地震,别立刻往外跑;记住三个词:伏地、遮挡、稳住;躲到结实的桌子下并护住头;若在室外,到远离建筑的开阔地;最重要的是摇晃时保持镇静。",
+      "questions": [
+        {
+          "stem": "What should you NOT do if a quake happens indoors?",
+          "options": [
+            "Protect your head.",
+            "Run outside at once.",
+            "Get under a table.",
+            "Stay calm."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What three words should you remember?",
+          "options": [
+            "Run, jump and shout.",
+            "Look, listen and wait.",
+            "Drop, cover and hold on.",
+            "Eat, drink and sleep."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where should you go if you are outdoors?",
+          "options": [
+            "Into the nearest building.",
+            "Under a tall wall.",
+            "Onto a bridge.",
+            "An open space away from buildings."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you protect when under a table?",
+          "options": [
+            "Your head.",
+            "Your phone.",
+            "Your bag.",
+            "Your shoes."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the most important thing during the shaking?",
+          "options": [
+            "To take photos.",
+            "To stay calm.",
+            "To make phone calls.",
+            "To find your friends."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 A Survivor's Story",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Reporter: You survived the earthquake. How did you feel that night?",
+        "Woman: I was in shock. Everything happened so fast.",
+        "Reporter: How did you escape from your home?",
+        "Woman: I ran out before the walls fell down.",
+        "Reporter: How were you finally rescued?",
+        "Woman: A rescue worker heard me tapping on a pipe.",
+        "Reporter: What do you want to say to those who helped?",
+        "Woman: I will always be grateful to them for saving my life."
+      ],
+      "translation_cn": "记者问女幸存者那晚的感受;她说很震惊,一切发生得太快;她在墙塌前跑了出来;后来救援人员听见她敲管子的声音;她对救命之人永远感激。",
+      "questions": [
+        {
+          "stem": "How did the woman feel that night?",
+          "options": [
+            "She was bored.",
+            "She was sleepy.",
+            "She was in shock.",
+            "She was happy."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did she escape from her home?",
+          "options": [
+            "She stayed in bed.",
+            "She climbed onto the roof.",
+            "She drove away.",
+            "She ran out before the walls fell."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How was she finally rescued?",
+          "options": [
+            "A worker heard her tapping on a pipe.",
+            "She walked out alone.",
+            "A dog carried her out.",
+            "She called on the phone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does she feel towards those who helped?",
+          "options": [
+            "Anger.",
+            "Gratitude.",
+            "Fear.",
+            "Surprise."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who is asking the questions?",
+          "options": [
+            "A doctor.",
+            "A teacher.",
+            "A reporter.",
+            "A soldier."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Tip for Disaster Safety",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip that may one day save your life.",
+        "Before any disaster, make a family safety plan.",
+        "Decide where to meet if you are not together.",
+        "Keep an emergency kit ready at home.",
+        "A little preparation today can make a big difference tomorrow."
+      ],
+      "translation_cn": "一个也许能救命的小贴士:任何灾难前,做一个家庭安全计划;约好走散后在哪会合;在家备好应急包;今天的一点准备,明天会有大不同。",
+      "questions": [
+        {
+          "stem": "What is the tip mainly about?",
+          "options": [
+            "Buying a new house.",
+            "Going on holiday.",
+            "Cooking meals.",
+            "Making a family safety plan."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should a family decide in advance?",
+          "options": [
+            "Where to meet if not together.",
+            "What films to watch.",
+            "Which shop to visit.",
+            "What clothes to wear."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should be kept ready at home?",
+          "options": [
+            "A football.",
+            "An emergency kit.",
+            "A new car.",
+            "A photo album."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When should you make these preparations?",
+          "options": [
+            "During the disaster.",
+            "After the disaster.",
+            "Before any disaster.",
+            "Never."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can a little preparation today do?",
+          "options": [
+            "Waste your time.",
+            "Cost a lot of money.",
+            "Make people worried.",
+            "Make a big difference tomorrow."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

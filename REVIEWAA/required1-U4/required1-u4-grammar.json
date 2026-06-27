@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grammar_title": "限制性定语从句:关系代词 that / which / who / whom / whose",
+  "source": "人教版2019必修一 Unit 4 Discovering Useful Structures:限制性定语从句(关系代词 that/which/who/whose/whom)。句子地道、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "指人:who(主格)/ whom(宾格·介词后)",
+      "overview": "先行词指人:作从句主语用 who;作宾语、尤其紧跟介词时用 whom(to/with/for whom)。"
+    },
+    {
+      "code": "u4.02",
+      "point": "指物:which / that(及 that 必用情形)",
+      "overview": "先行词指物用 which/that;先行词被 all/everything/nothing/the only/序数词/最高级 等修饰,或为不定代词时只能用 that;介词后只能用 which(不可 that)。"
+    },
+    {
+      "code": "u4.03",
+      "point": "whose(所属)+ 介词 + whom / which",
+      "overview": "表所属关系用 whose(指人或物);介词提到从句句首时,指人用 whom、指物用 which。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "\"The villagers ____ lived near the river were warned in time.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 villagers 指人、作从句主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The soldiers ____ dug out the survivors worked for days.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Doctors and nurses ____ came to help saved many lives.\"",
+      "options": [
+        "which",
+        "whom",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"A boy ____ saved several classmates became a hero.\"",
+      "options": [
+        "which",
+        "whom",
+        "whose",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The people ____ lost their homes were given shelter.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Volunteers ____ arrived from other cities brought food and water.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The man ____ warned the village is respected by everyone.\"",
+      "options": [
+        "which",
+        "whom",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Children ____ were left without parents needed special care.\"",
+      "options": [
+        "which",
+        "whom",
+        "whose",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The captain ____ led the rescue team never lost heart.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Survivors ____ were trapped under the ruins called for help.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "指人作主语 → who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The soldier to ____ she wrote a thank-you letter had saved her.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指人 → whom(不可 who/that)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The doctor with ____ James used to work died in the quake.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The neighbours for ____ they built shelters were very grateful.\"",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 for 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The expert to ____ we listened explained the warning signs.\"",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The friends on ____ she depended helped her rebuild her home.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 on 后指人 → whom(depend on)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The official from ____ we got the news arrived very quickly.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The teacher with ____ the students sheltered stayed brave.\"",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The pilot to ____ they waved flew the helicopter lower.\"",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The rescuer to ____ she owed her life later became her friend.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指人 → whom(owe sth to sb)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The nurse for ____ the boy waited finally came back.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 for 后指人 → whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Everything ____ stood in the city was destroyed in one minute.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词为不定代词 everything → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The only building ____ remained safe was the school.\"",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词被 the only 修饰 → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"This was the worst disaster ____ the country had ever seen.\"",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被最高级 worst 修饰 → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The first thing ____ they did was call for help.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词被序数词 first 修饰 → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"All the food ____ was left went to the children.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词被 all 修饰 → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"There was nothing ____ could be done that terrible night.\"",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词为不定代词 nothing → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"It was the largest earthquake ____ had ever hit the area.\"",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被最高级 largest 修饰 → 只能用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The few houses ____ were still standing became shelters.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词被 few 修饰 → 用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Everything ____ the flood touched was ruined.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "不定代词 everything 作先行词 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The second city ____ was hit by the quake was Beijing.\"",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词被序数词 second 修饰 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The narrow path along ____ they escaped led to the hills.\"",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 along 后指物 → 只能用 which(不可 that)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The well from ____ smelly gas came was near the village.\"",
+      "options": [
+        "that",
+        "who",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指物 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The train on ____ the supplies arrived was badly delayed.\"",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 on 后指物 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The shelter in ____ they slept was made of wood.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 in 后指物 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The bridge over ____ they crossed soon fell down.\"",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 over 后指物 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The boxes in ____ the medicine came were very heavy.\"",
+      "options": [
+        "that",
+        "who",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 in 后指物 → which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"It was the most powerful quake ____ they had ever felt.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词被最高级 most powerful 修饰 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The only road ____ was still open led up to the hills.\"",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词被 the only 修饰 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"This is the very spot ____ the tornado struck first.\"",
+      "options": [
+        "which",
+        "who",
+        "that",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被 the very 修饰 → that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"All ____ remained were broken bricks and pieces of metal.\"",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词为不定代词 all → 只能用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Workers built shelters for survivors ____ homes had been destroyed.\"",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(survivors 的 homes)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The boy ____ mother was lost in the disaster was taken to hospital.\"",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(boy 的 mother)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"An architect ____ designs won praise rebuilt the new town.\"",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "表所属(architect 的 designs)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The families ____ houses fell down moved to safe areas.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属 → whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The girl ____ leg was injured was rescued first.\"",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(girl 的 leg)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"A scientist ____ research warned of the quake became famous.\"",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(scientist 的 research)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The town ____ buildings were earthquake-safe survived well.\"",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "表所属(town 的 buildings,whose 也可指物)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"People ____ relatives were missing waited at the gate.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属 → whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The man ____ shop was ruined by the flood started again.\"",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属 → whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The village ____ wells dried up needed water badly.\"",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(village 的 wells)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The doctor with ____ he had worked for years died in the quake.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The strong building in ____ they took shelter did not fall.\"",
+      "options": [
+        "that",
+        "who",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 in 后指物 → which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The soldiers on ____ the city depended arrived very fast.\"",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 on 后指人 → whom(depend on)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The river into ____ the heavy rain fell soon flooded the town.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 into 后指物 → which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The hills to ____ they ran were safe and dry.\"",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指物 → which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The friends with ____ they shared their food became very close.\"",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The leader in ____ everyone trusted stayed calm and brave.\"",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 in 后指人 → whom(trust in)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The plane from ____ the aid was dropped flew very low.\"",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 from 后指物 → which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The nurse to ____ the boy owed his life visited him later.\"",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The family ____ car was swept away had to walk to safety.\"",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(family 的 car)→ whose。"
+    }
+  ]
+}

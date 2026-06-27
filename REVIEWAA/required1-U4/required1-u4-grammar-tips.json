@@ -1,0 +1,36 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "限制性定语从句·关系代词 速查",
+    "intro": "关系代词替代先行词、在从句里作主语/宾语/定语。判断用哪个:先看指人还是指物,再看在从句中作什么成分。",
+    "table": {
+      "headers": ["关系代词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人·作主语:The people who lived here were warned."],
+        ["whom", "指人·作宾语/介词后:the doctor with whom he worked"],
+        ["which", "指物·作主/宾语;介词后只能 which:the path along which they escaped"],
+        ["that", "指人或物;不定代词/最高级/序数词/the only 后只能 that"],
+        ["whose", "表所属(人或物):survivors whose homes were destroyed"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "先行词被 all/everything/nothing/the only/序数词/最高级 修饰 → 只能用 that", "mark": "the only building that…" },
+      { "rule": "介词紧跟关系代词:指人 whom、指物 which,都不可用 that", "mark": "in which / with whom" },
+      { "rule": "that 不能放在介词后,也不能引导非限制性定语从句", "mark": "× the city in that" },
+      { "rule": "whose 既可指人也可指物(= of which / of whom)", "mark": "the town whose buildings…" }
+    ],
+    "why": [
+      "限制性定语从句对先行词起限定作用,不能去掉、前面不加逗号;关系代词在从句里一定充当某个成分(主语/宾语/定语)。"
+    ],
+    "gaokaoPoints": [
+      "who/whom/which/that/whose 辨析、that 必用情形、介词+which/whom;语法填空与单选高频。",
+      "指人作宾语口语可用 who,但介词紧跟时必须 whom。"
+    ],
+    "examVsReal": [
+      { "exam": "the man with whom I spoke（考试/正式）", "real": "the man I spoke with / the man who I spoke with", "note": "考试用 with whom;口语常把介词后置、甚至省略关系代词" },
+      { "exam": "the people who helped us（考试更稳）", "real": "the people that helped us", "note": "考试用 who 指人;口语里 that 指人也很常见" }
+    ]
+  }
+}

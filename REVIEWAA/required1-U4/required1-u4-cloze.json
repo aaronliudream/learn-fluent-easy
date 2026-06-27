@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Natural Disasters",
+  "source": "人教版2019必修一 Unit 4 同主题完形(幸存者来信/洪水报道/防灾贴士/救援犬/重建小镇/为何研究灾害)。用词限 U4/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Letter After the Quake",
+      "text": "Dear Aunt, I am writing to tell you that we are safe. Last week a strong earthquake (1)____ our town in the middle of the night. In less than a minute many houses lay in (2)____. We were lucky, because our building did not (3)____ down. At first everyone was in (4)____ and did not know what to do. Then soldiers and doctors (5)____ to help us. They dug out the people who were (6)____ under the broken walls. Workers built (7)____ for the families whose homes were gone. Water and food were (8)____ into the town by truck. Slowly, life is starting to return to (9)____. Please do not worry about us. With the (10)____ of so many kind people, we will rebuild our home. Love, Mei",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hit",
+            "left",
+            "kept",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "earthquake hit our town 地震袭击。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "water",
+            "ruins",
+            "trees",
+            "boxes"
+          ],
+          "answer_index": 1,
+          "explanation": "lay in ruins 成废墟。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "stand",
+            "grow",
+            "fall",
+            "look"
+          ],
+          "answer_index": 2,
+          "explanation": "fall down 倒塌。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "love",
+            "peace",
+            "fun",
+            "shock"
+          ],
+          "answer_index": 3,
+          "explanation": "in shock 震惊。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "came",
+            "left",
+            "failed",
+            "refused"
+          ],
+          "answer_index": 0,
+          "explanation": "came to help 前来帮忙。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "happy",
+            "trapped",
+            "ready",
+            "calm"
+          ],
+          "answer_index": 1,
+          "explanation": "trapped 被困。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "gardens",
+            "markets",
+            "shelters",
+            "schools"
+          ],
+          "answer_index": 2,
+          "explanation": "build shelters 搭避难所。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "thrown",
+            "lost",
+            "hidden",
+            "brought"
+          ],
+          "answer_index": 3,
+          "explanation": "brought into the town 运进城。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "normal",
+            "danger",
+            "winter",
+            "silence"
+          ],
+          "answer_index": 0,
+          "explanation": "return to normal 恢复正常。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "help",
+            "money",
+            "fear"
+          ],
+          "answer_index": 1,
+          "explanation": "with the help of 在……帮助下。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Flood News Report",
+      "text": "Heavy rain fell for three days, and on Sunday a terrible (1)____ covered the whole valley. The river rose so fast that many families had no time to (2)____ their homes. By Monday, half a million people had been (3)____ by the water. Rescue teams used boats and (4)____ to reach those who were stuck on roofs. The government quickly (5)____ shelters and provided food and clean water. Sadly, more than eighty people lost their (6)____. Foreign (7)____ was organised for the flood-hit area, but damaged roads made it hard to (8)____ supplies. Experts say that planting more trees may help to (9)____ such floods in the future. For now, the most important thing is to keep everyone (10)____ and dry.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fire",
+            "wind",
+            "flood",
+            "ice"
+          ],
+          "answer_index": 2,
+          "explanation": "a terrible flood 洪水。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "build",
+            "clean",
+            "paint",
+            "leave"
+          ],
+          "answer_index": 3,
+          "explanation": "leave their homes 离开家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "affected",
+            "saved",
+            "invited",
+            "praised"
+          ],
+          "answer_index": 0,
+          "explanation": "affected by the water 受影响。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "books",
+            "helicopters",
+            "tickets",
+            "phones"
+          ],
+          "answer_index": 1,
+          "explanation": "boats and helicopters 船和直升机。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "closed",
+            "sold",
+            "set up",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "set up shelters 设立避难所。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "books",
+            "jobs",
+            "pets",
+            "lives"
+          ],
+          "answer_index": 3,
+          "explanation": "lose one's life 丧生。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "aid",
+            "noise",
+            "food",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "foreign aid 外国援助。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "deliver",
+            "waste",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "deliver supplies 运送物资。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cause",
+            "enjoy",
+            "prevent",
+            "watch"
+          ],
+          "answer_index": 2,
+          "explanation": "prevent such floods 预防洪水。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "rich",
+            "busy",
+            "late",
+            "safe"
+          ],
+          "answer_index": 3,
+          "explanation": "keep everyone safe 保证安全。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Before a Storm Comes",
+      "text": "When a typhoon is coming, a little (1)____ can keep your family safe. First of all, listen to the (2)____ on the radio or TV so that you know when the storm will (3)____. Bring inside anything that the strong wind could blow (4)____. Make sure you have an emergency (5)____ ready, with water, food, a flashlight and a first aid kit. During the storm, stay (6)____ and away from windows. Do not go (7)____ unless it is really necessary. If the power goes (8)____, use a flashlight instead of candles. Most importantly, stay (9)____ and follow the instructions of the local officials. After the storm passes, be careful of broken glass and fallen (10)____ wires. Being prepared is the best way to protect the people you love.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "preparation",
+            "noise",
+            "money",
+            "luck"
+          ],
+          "answer_index": 0,
+          "explanation": "a little preparation 一点准备。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "music",
+            "news",
+            "story",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "listen to the news 听新闻。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "smile",
+            "arrive",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "when the storm will arrive 何时到来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "up",
+            "down",
+            "on",
+            "away"
+          ],
+          "answer_index": 3,
+          "explanation": "blow away 吹走。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "kit",
+            "game",
+            "book",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "emergency kit 急救/应急包。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "outside",
+            "indoors",
+            "alone",
+            "awake"
+          ],
+          "answer_index": 1,
+          "explanation": "stay indoors 待在室内。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "inside",
+            "upstairs",
+            "outside",
+            "home"
+          ],
+          "answer_index": 2,
+          "explanation": "go outside 外出。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "up",
+            "in",
+            "off",
+            "out"
+          ],
+          "answer_index": 3,
+          "explanation": "the power goes out 停电。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "calm",
+            "loud",
+            "busy",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "stay calm 保持镇静。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "water",
+            "power",
+            "phone",
+            "train"
+          ],
+          "answer_index": 1,
+          "explanation": "fallen power wires 倒落的电线。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Rescue Dog Named Lucky",
+      "text": "Lucky is not an ordinary dog; he is a (1)____ dog. After the big earthquake, he went into the (2)____ with his owner, Mrs Fors, to look for survivors. Lucky uses his nose to (3)____ people who are trapped deep under the broken walls. One cold morning, he suddenly stopped and began to (4)____ at the ground. The workers dug carefully and found a man who was still (5)____. Everyone (6)____ when the man was lifted out alive. Lucky has helped to (7)____ many lives this way. He is never (8)____ of the danger, and he works until he is too tired to move. After a hard day, his (9)____ gives him a big meal and a warm bed. To the survivors and their families, brave little Lucky is a real (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "guard",
+            "farm",
+            "rescue",
+            "show"
+          ],
+          "answer_index": 2,
+          "explanation": "a rescue dog 救援犬。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "shop",
+            "river",
+            "ruins"
+          ],
+          "answer_index": 3,
+          "explanation": "go into the ruins 进入废墟。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "find",
+            "feed",
+            "wash",
+            "teach"
+          ],
+          "answer_index": 0,
+          "explanation": "find people 找到人。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "dig",
+            "sing",
+            "jump"
+          ],
+          "answer_index": 1,
+          "explanation": "begin to dig 开始刨。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "asleep",
+            "afraid",
+            "alive",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "still alive 仍活着。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cried",
+            "left",
+            "slept",
+            "cheered"
+          ],
+          "answer_index": 3,
+          "explanation": "everyone cheered 欢呼。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "save",
+            "lose",
+            "waste",
+            "end"
+          ],
+          "answer_index": 0,
+          "explanation": "save lives 拯救生命。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "proud",
+            "afraid",
+            "sure",
+            "fond"
+          ],
+          "answer_index": 1,
+          "explanation": "never afraid of danger 不怕危险。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "teacher",
+            "doctor",
+            "owner",
+            "driver"
+          ],
+          "answer_index": 2,
+          "explanation": "his owner 他的主人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "problem",
+            "stranger",
+            "enemy",
+            "hero"
+          ],
+          "answer_index": 3,
+          "explanation": "a real hero 真正的英雄。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Building the Town Again",
+      "text": "A year after the earthquake, our town looks very (1)____ from before. Where there were once ruins, new houses now (2)____. The government gave strong (3)____, and people from all over the country came to (4)____. My father, who lost his shop, has (5)____ a new one near the square. The new buildings are designed to be earthquake-(6)____, so we feel much safer now. Of course, we will never (7)____ those who died, and we still miss them. But we have learned that a disaster cannot (8)____ a people who refuse to give up. Out of (9)____ for all the help we received, many young people in our town now want to study medicine or join the army, so that they can (10)____ others one day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "different",
+            "boring",
+            "quiet",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "look different 看上去不同。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fall",
+            "stand",
+            "sleep",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "new houses stand 新房矗立。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "noise",
+            "weather",
+            "support",
+            "trouble"
+          ],
+          "answer_index": 2,
+          "explanation": "give support 给予支持。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "leave",
+            "watch",
+            "rest",
+            "help"
+          ],
+          "answer_index": 3,
+          "explanation": "came to help 前来帮忙。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "opened",
+            "lost",
+            "closed",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "opened a new one 开了新店。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "safe",
+            "famous",
+            "slow"
+          ],
+          "answer_index": 1,
+          "explanation": "earthquake-safe 抗震的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "meet",
+            "thank",
+            "forget",
+            "save"
+          ],
+          "answer_index": 2,
+          "explanation": "never forget those who died 永不忘记。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "help",
+            "teach",
+            "join",
+            "beat"
+          ],
+          "answer_index": 3,
+          "explanation": "cannot beat a people 打不垮。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "gratitude",
+            "fear",
+            "anger",
+            "surprise"
+          ],
+          "answer_index": 0,
+          "explanation": "out of gratitude 出于感激。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hurt",
+            "help",
+            "follow",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "help others 帮助他人。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Why We Study Disasters",
+      "text": "Natural disasters have always been part of life on Earth, so why do scientists (1)____ them so carefully? The main reason is to save (2)____. By studying earthquakes, scientists hope to find warning (3)____ that can give people time to escape. By tracking a tsunami across the sea, they can (4)____ the people on the coast before the waves (5)____. Studying past disasters also helps engineers build stronger houses that are less likely to (6)____ down. Of course, no one can completely (7)____ a natural disaster from happening. But the more we (8)____, the better we can prepare. When the next disaster (9)____, knowledge and preparation may be the difference between (10)____ and death. That is why this kind of research matters to us all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "forget",
+            "enjoy",
+            "study",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "study them carefully 仔细研究。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "time",
+            "books",
+            "lives"
+          ],
+          "answer_index": 3,
+          "explanation": "save lives 拯救生命。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "signs",
+            "songs",
+            "games",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "warning signs 预警信号。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "thank",
+            "warn",
+            "follow",
+            "teach"
+          ],
+          "answer_index": 1,
+          "explanation": "warn the people 警告人们。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "smile",
+            "arrive",
+            "rest"
+          ],
+          "answer_index": 2,
+          "explanation": "before the waves arrive 海浪到来前。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "grow",
+            "stand",
+            "wake",
+            "fall"
+          ],
+          "answer_index": 3,
+          "explanation": "fall down 倒塌。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stop",
+            "start",
+            "watch",
+            "enjoy"
+          ],
+          "answer_index": 0,
+          "explanation": "stop a disaster 阻止灾难。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "know",
+            "fear",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "the more we know 知道得越多。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ends",
+            "sleeps",
+            "strikes",
+            "leaves"
+          ],
+          "answer_index": 2,
+          "explanation": "the next disaster strikes 灾难来袭。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "money",
+            "fun",
+            "life"
+          ],
+          "answer_index": 3,
+          "explanation": "between life and death 生与死之间。"
+        }
+      ]
+    }
+  ]
+}

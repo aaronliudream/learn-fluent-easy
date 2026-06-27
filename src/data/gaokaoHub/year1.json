@@ -2529,87 +2529,252 @@
             "title": "Natural Disasters",
             "cn": "自然灾害",
             "emoji": "🌋",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Quiz",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "disaster",
+                "cn": "灾难",
+                "emoji": "📦"
               },
               {
-                "en": "Hope",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "tornado",
+                "cn": "龙卷风",
+                "emoji": "📦"
               },
               {
-                "en": "Lone",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "drought",
+                "cn": "旱灾",
+                "emoji": "📦"
               },
               {
-                "en": "Frog",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "flood",
+                "cn": "洪水",
+                "emoji": "🏃"
               },
               {
-                "en": "Ture",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "tsunami",
+                "cn": "海啸",
+                "emoji": "📦"
               },
               {
-                "en": "Cuss",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "magnitude",
+                "cn": "(地震)震级",
+                "emoji": "📦"
               },
               {
-                "en": "Reading",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "rescue",
+                "cn": "营救",
+                "emoji": "🏃"
               },
               {
-                "en": "Thinking",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "damage",
+                "cn": "损害",
+                "emoji": "🏃"
               },
               {
-                "en": "First",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "destroy",
+                "cn": "摧毁",
+                "emoji": "🏃"
               },
               {
-                "en": "Senior",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "evacuate",
+                "cn": "疏散",
+                "emoji": "🏃"
               },
               {
-                "en": "High",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "shelter",
+                "cn": "避难处",
+                "emoji": "🏃"
               },
               {
-                "en": "Circle",
-                "cn": "必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "survive",
+                "cn": "生存",
+                "emoji": "🏃"
+              },
+              {
+                "en": "survivor",
+                "cn": "幸存者",
+                "emoji": "📦"
+              },
+              {
+                "en": "shock",
+                "cn": "震惊",
+                "emoji": "🏃"
+              },
+              {
+                "en": "ruin",
+                "cn": "废墟",
+                "emoji": "🏃"
+              },
+              {
+                "en": "brick",
+                "cn": "砖",
+                "emoji": "📦"
+              },
+              {
+                "en": "metal",
+                "cn": "金属",
+                "emoji": "📦"
+              },
+              {
+                "en": "trap",
+                "cn": "使陷入险境",
+                "emoji": "🏃"
+              },
+              {
+                "en": "bury",
+                "cn": "埋葬",
+                "emoji": "🏃"
+              },
+              {
+                "en": "breathe",
+                "cn": "呼吸",
+                "emoji": "🏃"
+              },
+              {
+                "en": "revive",
+                "cn": "复活",
+                "emoji": "🏃"
+              },
+              {
+                "en": "unify",
+                "cn": "统一",
+                "emoji": "🏃"
+              },
+              {
+                "en": "wisdom",
+                "cn": "智慧",
+                "emoji": "📦"
+              },
+              {
+                "en": "suffer",
+                "cn": "遭受",
+                "emoji": "🏃"
+              },
+              {
+                "en": "volcano",
+                "cn": "火山",
+                "emoji": "📦"
+              },
+              {
+                "en": "erupt",
+                "cn": "(火山)爆发",
+                "emoji": "🏃"
+              },
+              {
+                "en": "typhoon",
+                "cn": "台风",
+                "emoji": "📦"
+              },
+              {
+                "en": "hurricane",
+                "cn": "飓风",
+                "emoji": "📦"
+              },
+              {
+                "en": "supply",
+                "cn": "供应(量)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "deliver",
+                "cn": "递送",
+                "emoji": "🏃"
+              },
+              {
+                "en": "emergency",
+                "cn": "突发事件",
+                "emoji": "📦"
+              },
+              {
+                "en": "calm",
+                "cn": "镇静的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "aid",
+                "cn": "援助",
+                "emoji": "🏃"
+              },
+              {
+                "en": "affect",
+                "cn": "影响",
+                "emoji": "🏃"
+              },
+              {
+                "en": "effect",
+                "cn": "影响",
+                "emoji": "📦"
+              },
+              {
+                "en": "crash",
+                "cn": "碰撞",
+                "emoji": "🏃"
+              },
+              {
+                "en": "sweep",
+                "cn": "打扫",
+                "emoji": "🏃"
+              },
+              {
+                "en": "wave",
+                "cn": "海浪",
+                "emoji": "🏃"
+              },
+              {
+                "en": "strike",
+                "cn": "侵袭",
+                "emoji": "🏃"
+              },
+              {
+                "en": "percent",
+                "cn": "百分之……",
+                "emoji": "📦"
+              },
+              {
+                "en": "power",
+                "cn": "电力供应",
+                "emoji": "📦"
+              },
+              {
+                "en": "electricity",
+                "cn": "电",
+                "emoji": "📦"
+              },
+              {
+                "en": "effort",
+                "cn": "努力",
+                "emoji": "📦"
+              },
+              {
+                "en": "injure",
+                "cn": "使受伤",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "An Earthquake News Report",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Natural Disasters.",
-                    "cn": "我们来讨论Natural Disasters。"
+                    "text": "What can you tell us about the disaster?",
+                    "cn": "关于这场灾难你能告诉我们什么?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Quiz today.",
-                    "cn": "好的，我今天学了必修第一册 课文词汇。"
+                    "text": "A strong earthquake hit the city early this morning.",
+                    "cn": "今天清晨一场强震袭击了城市。"
                   },
                   {
                     "role": "A",
-                    "text": "And Hope is important too.",
-                    "cn": "必修第一册 课文词汇也很重要。"
+                    "text": "What do the survivors need most?",
+                    "cn": "幸存者最需要什么?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "They need clean water, food and shelter right now.",
+                    "cn": "他们现在需要干净的水、食物和避难所。"
                   }
                 ]
               }
@@ -2618,7 +2783,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "44个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -2656,6 +2821,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -2680,8 +2853,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "基本句型（SV / SVO / SP）",
-            "grammarCode": "pep-r1-welcome-basic-sentences",
+            "grammarTitle": "限制性定语从句:关系代词 that / which / who / whom / whose",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "普 ® 通 普 通 高 中 教 科 书 高 中 教 全国优秀教材二等奖 科 书 英语 英 语 必 修 ______ GAOZHONG JIAOKESHU YINGYU 第一册 第 一 册 绿绿色色印印刷刷产产品品 定价： 元 人人教教教教材材封封面面 高高中中英英语语 必必修修一一 2200119900773300..iinndddd 11 22002222//66//77 1133::0099\n",
@@ -2709,225 +2882,254 @@
               }
             ],
             "reading": {
-              "passage": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa My name is Ann Wells and I'm a Grade I'm Thando Gowon. I'm a Grade 10 an active person and I love sports. I often ask good, think fast, and play hard. You'll questions, but I learn best by doing. My never see me without a book or a pen. favourite subject is physics. Dancing and If I'm not in class, I'm either in the library skating are my hobbies, and I also like to or in the computer lab. I plan to become an I play computer games if I'm not busy engineer in the future. studying. My dream is to start my own IT company! 1 What is Ann like?",
-              "passageCn": "（人教版必修第一册 · 教材节选）",
+              "passage": "At 3:42 a.m. on 28 July 1976, everything in Tangshan began to shake. In less than one minute, a large city lay in ruins. But hope was not lost, and a new city later rose from the ruins.",
+              "passageCn": "唐山大地震课文见阅读关(地震/预兆/海啸/重建)。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Ann, 15 Thando, 16 Lakeside High School South Hill...\"",
+                  "q": "How long did it take the city to lie in ruins?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA Sou",
-                    "Not stated."
+                    "Less than a minute.",
+                    "A whole day.",
+                    "A week.",
+                    "A month."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"I'm a Grade 10 an active person and I love sports....\"",
-                  "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "I'm a Grade 10 an active person and I love sports."
-                  ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"I often ask good, think fast, and play hard....\"",
-                  "opts": [
-                    "I often ask good, think fast, and play hard.",
-                    "Unrelated.",
-                    "Not stated.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"You'll questions, but I learn best by doing....\"",
-                  "opts": [
-                    "Unrelated.",
-                    "Not stated.",
-                    "You'll questions, but I learn best by doing.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FIRST IMPRESSIONS\" (PEP 必修第一册).",
-              "promptCn": "根据人教版《必修第一册》课文《FIRST IMPRESSIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write a summary (about 80 words) of a news report about a natural disaster.",
+              "promptCn": "为一则自然灾害新闻写一篇约80词的摘要(时间地点+灾难/主要影响/救援援助,转述不照抄)。",
+              "sampleWords": [
+                "earthquake",
+                "tsunami",
+                "magnitude",
+                "affect",
+                "sweep away",
+                "aid",
+                "deliver",
+                "survivor",
+                "damage",
+                "rescue"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Quiz」的意思是？",
+                "q": "「海啸」对应的英文单词是？",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项3"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Hope」的意思是？",
-                "opts": [
-                  "必修第一册 课文词汇",
-                  "选项3",
-                  "选项1",
-                  "选项2"
+                  "tsunami",
+                  "drought",
+                  "shelter",
+                  "wisdom"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Lone」的意思是？",
+                "q": "「废墟」对应的英文单词是？",
                 "opts": [
-                  "必修第一册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "ruins",
+                  "bricks",
+                  "waves",
+                  "effort"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Frog」的意思是？",
+                "q": "evacuate 的中文意思是？",
                 "opts": [
-                  "选项2",
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Ture」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项2",
-                  "必修第一册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Cuss」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选项3",
-                  "必修第一册 课文词汇",
-                  "选项2"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Reading」的意思是？",
-                "opts": [
-                  "选项1",
-                  "必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Thinking」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「自然灾害」相关词是？",
-                "opts": [
-                  "Quiz",
-                  "Reading",
-                  "Senior",
-                  "teacher"
+                  "疏散;撤离",
+                  "摧毁",
+                  "埋葬",
+                  "呼吸"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
+              },
+              {
+                "q": "magnitude 的中文意思是？",
+                "opts": [
+                  "(地震)震级",
+                  "避难所",
+                  "台风",
+                  "智慧"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "\"The people ____ lived near the river were warned.\" (指人作主语)",
+                "opts": [
+                  "who",
+                  "which",
+                  "whom",
+                  "whose"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"Everything ____ stood in the city was destroyed.\" (不定代词后)",
+                "opts": [
+                  "that",
+                  "which",
+                  "who",
+                  "whom"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"Survivors ____ homes were destroyed got shelter.\" (表所属)",
+                "opts": [
+                  "whose",
+                  "who",
+                  "which",
+                  "that"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "\"The doctor with ____ he worked died in the quake.\" (介词后指人)",
+                "opts": [
+                  "whom",
+                  "who",
+                  "which",
+                  "that"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "🔊 听句子,选出与它相符的一项",
+                "opts": [
+                  "今天清晨一场强震袭击了城市。",
+                  "城市很平静。",
+                  "地震在去年。",
+                  "无人受伤。"
+                ],
+                "answer": 0,
+                "audio": "A strong earthquake hit the city early this morning.",
+                "point": "听力",
+                "dim": "listening"
+              },
+              {
+                "q": "🔊 听句子,选出与它相符的一项",
+                "opts": [
+                  "地震时最重要的是保持镇静。",
+                  "应该大喊。",
+                  "地震不危险。",
+                  "要立刻睡觉。"
+                ],
+                "answer": 0,
+                "audio": "During an earthquake, the most important thing is to stay calm.",
+                "point": "听力",
+                "dim": "listening"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "A strong earthquake hit the city early this morning.",
                 "opts": [
-                  "I often ask good, think fast, and play hard.",
-                  "You'll questions, but I learn best by doing.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "I'm a Grade 10 an active person and I love sports."
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
-                "opts": [
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "You'll questions, but I learn best by doing.",
-                  "I often ask good, think fast, and play hard."
+                  "今天清晨一场强震袭击了城市。",
+                  "城市今天很平静。",
+                  "地震发生在去年。",
+                  "没有人受伤。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "Rescue workers dug out the people who were trapped.",
                 "opts": [
-                  "You'll questions, but I learn best by doing.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "I often ask good, think fast, and play hard."
+                  "救援人员把被困的人挖了出来。",
+                  "人们自己走了出来。",
+                  "没有人被困。",
+                  "救援队还没到。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "Keep an emergency kit with water, food and a first aid kit.",
                 "opts": [
-                  "I often ask good, think fast, and play hard.",
-                  "You'll questions, but I learn best by doing.",
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South"
+                  "备好装有水、食物和急救箱的应急包。",
+                  "应急包里只放玩具。",
+                  "不需要任何准备。",
+                  "把食物丢掉。"
                 ],
-                "answer": 1
+                "answer": 0
               },
               {
-                "audio": "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South Africa ",
+                "audio": "During an earthquake, the most important thing is to stay calm.",
                 "opts": [
-                  "I'm a Grade 10 an active person and I love sports.",
-                  "I often ask good, think fast, and play hard.",
-                  "Ann, 15 Thando, 16 Lakeside High School South Hill High School USA South",
-                  "My never see me without a book or a pen. favourite subject is physics."
+                  "地震时最重要的是保持镇静。",
+                  "地震时应该大喊大叫。",
+                  "地震不危险。",
+                  "地震时要立刻睡觉。"
                 ],
-                "answer": 3
+                "answer": 0
+              },
+              {
+                "audio": "Foreign aid was organised, but damaged roads made delivery hard.",
+                "opts": [
+                  "组织了外国援助,但受损道路使运送困难。",
+                  "没有任何援助。",
+                  "道路完好无损。",
+                  "物资很快送到。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "With great effort, a new city was built upon the ruins.",
+                "opts": [
+                  "凭着巨大努力,一座新城在废墟上建起。",
+                  "城市被永远废弃。",
+                  "没有人重建。",
+                  "废墟无法清理。"
+                ],
+                "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "When the earthquake struck at midnight, Mr Chen was the first in his village to feel it. Instead of running away, he ran from house to house, waking his neighbours so that they could escape before the walls fell. Thanks to him, everyone in the village reached the open fields safely, and not a single life was lost.",
+              "questions": [
+                {
+                  "q": "What did Mr Chen do when he felt the earthquake?",
+                  "options": [
+                    "He woke his neighbours so they could escape.",
+                    "He ran away from the village alone.",
+                    "He went back to sleep.",
+                    "He waited for the army to arrive."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'ran from house to house, waking his neighbours so that they could escape' 的转述;B/C/D 与原文相反或未提。"
+                },
+                {
+                  "q": "What was the result of Mr Chen's action?",
+                  "options": [
+                    "Many villagers were hurt.",
+                    "The whole village reached safety with no lives lost.",
+                    "Only Mr Chen survived.",
+                    "The village was never rebuilt."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'everyone… reached the open fields safely, and not a single life was lost'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u4.01",
+              "u4.02",
+              "u4.03"
             ]
           },
           {

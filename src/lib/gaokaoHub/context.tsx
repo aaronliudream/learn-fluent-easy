@@ -60,7 +60,7 @@ export function GaokaoHubProvider({
         return next;
       });
     },
-    [grade],
+    [grade, publisher],
   );
 
   const completeStage = useCallback(
@@ -99,8 +99,8 @@ export function GaokaoHubProvider({
   );
 
   const value = useMemo(
-    () => ({ grade, state, setState, persist, addMistake, completeStage }),
-    [grade, state, persist, addMistake, completeStage],
+    () => ({ grade, publisher, state, setState, persist, addMistake, completeStage }),
+    [grade, publisher, state, persist, addMistake, completeStage],
   );
 
   return <GaokaoHubContext.Provider value={value}>{children}</GaokaoHubContext.Provider>;

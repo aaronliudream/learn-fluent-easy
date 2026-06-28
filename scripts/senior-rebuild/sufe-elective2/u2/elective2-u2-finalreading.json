@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(语言与思维主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mai started learning Japanese, her friends asked why she bothered, since she already spoke English well. She kept going, and within a year she could enjoy Japanese stories that no translation could fully capture. Looking back, she felt that each new language had quietly given her a fresh way of seeing the world.",
+    "questions": [
+      {
+        "q": "Why did Mai's friends question her choice?",
+        "options": [
+          "They thought knowing English was already enough.",
+          "They disliked Japanese food.",
+          "They wanted her to study French instead.",
+          "They believed she spoke no English."
+        ],
+        "answer": "A",
+        "explanation": "原文'since she already spoke English well'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Mai feel about language learning later?",
+        "options": [
+          "She regretted wasting her time.",
+          "Each language had broadened how she understood the world.",
+          "She found the whole effort useless.",
+          "She had forgotten all her English."
+        ],
+        "answer": "B",
+        "explanation": "末句'a fresh way of seeing the world'的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

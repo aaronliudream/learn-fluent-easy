@@ -1,0 +1,362 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Healthy Lifestyle",
+  "source": "上外版必修第三册 Unit 3 同主题阅读(健康饮食/运动益处/睡眠/洗手防菌/口腔健康/蓝区长寿)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Plan Healthy Meals",
+      "topic_cn": "说明·健康饮食",
+      "body": "Taking charge of your health often starts with what is on your plate. Try to control how much and what type of food you eat. One simple rule is to make half of your plate fruits and vegetables, and to replace processed foods with fresh ones whenever you can. Colour matters too: dark green, red and orange vegetables carry high levels of nutrients, so a plate full of colour is usually a healthy one. Drinks deserve the same care. Sweet-tasting drinks such as soda, sweet tea and some juices add a lot of sugar, and that sugar simply means extra calories with little benefit. Choose low-fat or fat-free milk instead, because fat, like sugar, is also an important source of calories. None of this asks you to give up food you enjoy. It only asks you to choose a little more wisely, meal by meal, until healthier eating becomes a habit you no longer have to think about.",
+      "vocab_notes": [
+        {
+          "word": "plate",
+          "cn": "盘子;一盘食物"
+        },
+        {
+          "word": "replace",
+          "cn": "替换;以……代替"
+        },
+        {
+          "word": "calories",
+          "cn": "卡路里;热量"
+        },
+        {
+          "word": "source",
+          "cn": "来源"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What simple rule does the passage suggest for a healthy plate?",
+          "options": [
+            "Filling half the plate with fruits and vegetables.",
+            "Eating only meat at every meal.",
+            "Removing all colour from your food.",
+            "Skipping vegetables to save time."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'make half of your plate fruits and vegetables' 的转述。"
+        },
+        {
+          "stem": "Why does the writer warn against sweet drinks?",
+          "options": [
+            "They are too expensive for students.",
+            "The sugar in them adds calories without giving real nutrition.",
+            "They are hard to find in shops.",
+            "They taste worse than water."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'sugar simply means extra calories with little benefit' 的概括。"
+        },
+        {
+          "stem": "What is the writer's main attitude towards healthy eating?",
+          "options": [
+            "Small, wiser choices can slowly become a habit.",
+            "You must give up every food you enjoy.",
+            "Only a strict diet can ever work.",
+            "Eating well is impossible for busy people."
+          ],
+          "answer_index": 0,
+          "explanation": "末段强调 choose a little more wisely 直到成为习惯,选'逐步养成习惯'。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Why a Workout Beats Extra Sleep",
+      "topic_cn": "议论·运动的益处",
+      "body": "When you feel tired, which is better — exercise or an extra hour of sleep? Both rest and movement matter, but experts say that an extra hour added to a full night's sleep is not as beneficial as a morning workout. Studies have found that even a single session of exercise can make you feel happier. It helps people deal with depression, anxiety and stress, and it can lower blood pressure, improve heart health and reduce the risk of disease. There is more. Researchers once looked into the link between exercise and fatigue, that is, extreme tiredness. They were surprised to find that exercise actually helped people who suffered from fatigue, making them feel more energetic instead of more worn out. In other words, working out does not use up your energy; it builds it. So at the end of a long, tiring day, the smarter choice is often not to lie down at once, but to get moving, because you will almost always feel better after a workout than before it.",
+      "vocab_notes": [
+        {
+          "word": "beneficial",
+          "cn": "有益的"
+        },
+        {
+          "word": "anxiety",
+          "cn": "焦虑"
+        },
+        {
+          "word": "fatigue",
+          "cn": "疲劳"
+        },
+        {
+          "word": "suffered",
+          "cn": "遭受;受困扰"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to experts, what is better when you feel tired?",
+          "options": [
+            "Sleeping the whole weekend.",
+            "Doing a workout in the morning, not sleeping longer.",
+            "Skipping both rest and exercise.",
+            "Drinking strong coffee all day."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说 workout 比 extra hour of sleep 更有益,选'晨练而非多睡一小时'。"
+        },
+        {
+          "stem": "What did researchers find about exercise and fatigue?",
+          "options": [
+            "It always makes tired people more worn out.",
+            "It has no effect on tiredness at all.",
+            "It helped tired people feel more energetic.",
+            "It only works for professional athletes."
+          ],
+          "answer_index": 2,
+          "explanation": "对应 'exercise actually helped people who suffered from fatigue' 的转述。"
+        },
+        {
+          "stem": "What does the writer mean by saying a workout 'builds' energy?",
+          "options": [
+            "Exercise quickly uses up all your strength.",
+            "Exercise replaces the need for any food.",
+            "Exercise only helps in the morning.",
+            "Exercise tends to leave you with more energy, not less."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'does not use up your energy; it builds it' 的解释。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Sleep and Healthy Habits",
+      "topic_cn": "说明·睡眠与习惯养成",
+      "body": "Getting enough sleep is just as important for staying healthy as eating well or staying active. Your body needs sleep to do well at school and work, and even to fight off infection. When you do not sleep enough, the effects show up quickly: you may become moody and easily annoyed, and small problems start to feel much bigger than they really are. For teenagers between thirteen and eighteen years old, doctors suggest eight to ten hours of sleep each night. Changing old habits, however, can be hard. Developing a new habit, such as going to bed earlier, takes time and patience, and few people get it right on the very first try. The key is to stay motivated. Start small, keep track of how you are doing, and do not give up after one difficult night. As long as you keep going, the new pattern slowly becomes natural, and one day you reach your goal almost without noticing. Good sleep, in the end, is not luck; it is a habit you build.",
+      "vocab_notes": [
+        {
+          "word": "infection",
+          "cn": "感染"
+        },
+        {
+          "word": "moody",
+          "cn": "情绪低落的;脾气坏的"
+        },
+        {
+          "word": "motivated",
+          "cn": "有动力的"
+        },
+        {
+          "word": "goal",
+          "cn": "目标"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage say can happen if you do not sleep enough?",
+          "options": [
+            "Your mood drops and you get annoyed over small things.",
+            "You instantly become much stronger.",
+            "You no longer need any food.",
+            "Your problems all disappear."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'you may become moody and easily annoyed' 的转述。"
+        },
+        {
+          "stem": "How many hours of sleep are suggested for teenagers?",
+          "options": [
+            "Four to five hours.",
+            "Eight to ten hours each night.",
+            "As little as possible.",
+            "Exactly twelve hours."
+          ],
+          "answer_index": 1,
+          "explanation": "原文给出 'eight to ten hours of sleep each night'。"
+        },
+        {
+          "stem": "What is the writer's main point about forming a new sleep habit?",
+          "options": [
+            "It happens easily on the first try.",
+            "It is mostly a matter of luck.",
+            "It takes time and staying motivated.",
+            "It is impossible for students to do."
+          ],
+          "answer_index": 2,
+          "explanation": "末段强调需要时间、保持动力,选'需要时间并保持动力'。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Soap or Hand Gel?",
+      "topic_cn": "议论·洗手防菌",
+      "body": "Which is better at fighting germs — soap or hand gel? Many people reach for hand gel because it is quick, but experts say that washing with soap and water is still the way to go. The alcohol in some gels can indeed kill certain germs, yet a gel should really be only a second option, used when no sink is nearby. The reason is simple. Many studies have found that running your hands under water, soaping them, and then rubbing them together for about twenty seconds removes the most germs of all. Doing this regularly clearly reduces your chances of falling sick. There is one more thing worth knowing: you do not need warm or hot water for clean hands. Cool water clears just as many germs as hot water does, so there is no excuse to skip a wash because the tap runs cold. In short, good old soap, plenty of rubbing and a little patience beat almost any shortcut when it comes to keeping your hands, and you, healthy.",
+      "vocab_notes": [
+        {
+          "word": "germs",
+          "cn": "细菌;病菌"
+        },
+        {
+          "word": "alcohol",
+          "cn": "酒精"
+        },
+        {
+          "word": "option",
+          "cn": "选择"
+        },
+        {
+          "word": "rubbing",
+          "cn": "搓;擦"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do experts recommend for fighting germs?",
+          "options": [
+            "Using only hand gel at all times.",
+            "Never washing your hands at all.",
+            "Wearing gloves day and night.",
+            "Cleaning the hands with soap, not just reaching for gel."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'washing with soap and water is still the way to go',选'用肥皂和水洗手'。"
+        },
+        {
+          "stem": "How long should you rub your hands to remove the most germs?",
+          "options": [
+            "About twenty seconds.",
+            "About two seconds.",
+            "A full ten minutes.",
+            "No rubbing is needed."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'rubbing them together for about twenty seconds'。"
+        },
+        {
+          "stem": "What does the passage say about water temperature?",
+          "options": [
+            "Only boiling water can clean hands.",
+            "Cool water cleans germs just as well as hot water.",
+            "Hot water is the only safe choice.",
+            "Water temperature changes nothing about washing time."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Cool water clears just as many germs as hot water' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Taking Care of Your Teeth",
+      "topic_cn": "说明·口腔健康",
+      "body": "Brushing your teeth may seem like a small daily task, but it has a big effect on your overall health. A large review of many studies once confirmed that certain electric brushes remove more of the soft film on teeth than ordinary ones, and they also reduce signs of gum trouble. Yet the tool matters less than the time you spend. One helpful feature of many electric brushes is the built-in timer. Patients, a dentist explains, often do not realise how little time they spend cleaning their teeth. Proper brushing should take at least two minutes, but many people brush for less than one. Whether you brush by hand or with an electric brush, doing it well twice a day is one of the most important habits for healthy teeth. Interestingly, the benefits do not stop at your mouth. According to the same dentist, an infection in the mouth can be bad for your heart and for the flow of blood around the body. So a clean mouth, it turns out, is part of a healthy heart as well.",
+      "vocab_notes": [
+        {
+          "word": "confirm",
+          "cn": "证实"
+        },
+        {
+          "word": "overall",
+          "cn": "整体的"
+        },
+        {
+          "word": "infection",
+          "cn": "感染"
+        },
+        {
+          "word": "at least",
+          "cn": "至少"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the large review confirm about certain electric brushes?",
+          "options": [
+            "They are worse than ordinary brushes.",
+            "They make no difference at all.",
+            "They clear away more of the film and ease gum problems.",
+            "They damage healthy teeth."
+          ],
+          "answer_index": 2,
+          "explanation": "对应原文电动刷'去除更多软膜、减少牙龈问题'的转述。"
+        },
+        {
+          "stem": "How long should proper brushing take, according to the dentist?",
+          "options": [
+            "Less than ten seconds.",
+            "Exactly half an hour.",
+            "Only once a week.",
+            "At least two minutes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Proper brushing should take at least two minutes'。"
+        },
+        {
+          "stem": "Why does the dentist say a clean mouth matters beyond the teeth?",
+          "options": [
+            "A mouth infection can harm the heart and blood flow.",
+            "It makes brushing faster.",
+            "It saves money on toothpaste.",
+            "It has no effect on the rest of the body."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'an infection in the mouth can be bad for your heart and for the flow of blood' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Secrets of the Blue Zones",
+      "topic_cn": "说明·蓝区长寿生活",
+      "body": "Blue Zones are a few special places where people tend to live longer and more healthily than almost anywhere else. Okinawa in Japan and Sardinia in Italy are two well-known examples. Scientists who study these regions have noticed that the people there share a number of simple habits rather than any single secret. Most of them eat a plant-based diet with plenty of colourful vegetables, and they rarely eat until they feel completely full. Instead, small tricks help them stop in time, such as using smaller plates and putting extra food away before sitting down. Daily movement is part of ordinary life, built into walking, gardening and housework rather than saved for the gym. Just as important is a calm, low-stress life shared with family and close friends. Many keep a small group of lifelong companions to travel through life with, people who celebrate good luck together and offer support when things go wrong. None of these habits is hard or expensive. Together, though, they may explain why life in the Blue Zones is so long and so well.",
+      "vocab_notes": [
+        {
+          "word": "diet",
+          "cn": "饮食"
+        },
+        {
+          "word": "stress",
+          "cn": "压力"
+        },
+        {
+          "word": "companions",
+          "cn": "同伴"
+        },
+        {
+          "word": "movement",
+          "cn": "活动;运动"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What are Blue Zones, according to the passage?",
+          "options": [
+            "Areas where no one ever exercises.",
+            "Regions whose people often enjoy longer, healthier lives.",
+            "Cities with the most fast food.",
+            "Regions famous only for cold weather."
+          ],
+          "answer_index": 1,
+          "explanation": "对应开头对 Blue Zones 的定义转述。"
+        },
+        {
+          "stem": "How do people in Blue Zones avoid eating too much?",
+          "options": [
+            "They never eat any vegetables.",
+            "They only eat once a week.",
+            "They use smaller plates and put extra food away.",
+            "They count every single calorie."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'using smaller plates and putting extra food away' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest is behind their long, healthy lives?",
+          "options": [
+            "One single magic secret.",
+            "Expensive medicine and gym memberships.",
+            "Pure good luck with nothing to learn.",
+            "Several simple habits working together."
+          ],
+          "answer_index": 3,
+          "explanation": "末段强调多个简单习惯共同作用,选'多个简单习惯共同作用'。"
+        }
+      ]
+    }
+  ]
+}

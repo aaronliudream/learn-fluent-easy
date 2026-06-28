@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(成功/奋斗主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Leo first joined the swimming team, he was the slowest of all and often wanted to quit. Instead of giving up, he came to the pool early every morning and trained a little harder each week. A year later, he won a place in the city race, proud that his quiet daily effort had finally paid off.",
+    "questions": [
+      {
+        "q": "What did Leo do instead of quitting the team?",
+        "options": [
+          "He trained early every morning and worked a bit harder each week.",
+          "He stopped swimming altogether.",
+          "He moved to another school.",
+          "He asked someone else to swim for him."
+        ],
+        "answer": "A",
+        "explanation": "原文 'came to the pool early every morning and trained a little harder each week' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Leo feel a year later?",
+        "options": [
+          "Tired and ready to give up.",
+          "Proud that his daily effort had paid off.",
+          "Sorry that he had ever joined.",
+          "Angry at his teammates."
+        ],
+        "answer": "B",
+        "explanation": "末句 'proud that his quiet daily effort had finally paid off'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

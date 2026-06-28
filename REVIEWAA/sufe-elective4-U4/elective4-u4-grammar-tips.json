@@ -1,0 +1,36 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grade": 12,
+  "content": {
+    "title": "虚拟语气 wish 与 if only 速查",
+    "intro": "wish 和 if only 后接从句,表达不太可能或不可能实现的愿望,或对现状/往事的遗憾。判断核心是「时态后移」(backshift):看愿望针对现在、过去还是将来,从句相应往后退一个时态。陈述语气的现在式/将来式都不能直接跟在 wish/if only 之后。",
+    "table": {
+      "headers": ["愿望针对", "从句时态", "例句"],
+      "rows": [
+        ["现在(对现状遗憾)", "一般过去时(be 用 were)", "I wish I knew Spanish. / If only it were Sunday!"],
+        ["过去(对往事遗憾)", "过去完成时 had done", "I wish I had read it before the exam."],
+        ["将来/盼改变", "would / could + 动词原形", "I wish you would stop. / I wish I could fly."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "对现在的遗憾 → 从句用一般过去时,be 动词常用 were", "mark": "I wish I were taller now." },
+      { "rule": "对过去的遗憾 → 从句用过去完成时 had + 过去分词", "mark": "I wish I had gone yesterday." },
+      { "rule": "wish + would do:盼他人行为改变或盼将来变化(常含不满)", "mark": "I wish it would stop raining." },
+      { "rule": "wish + could do:表此刻欠缺的能力或难以实现的将来愿望", "mark": "I wish I could play the piano." },
+      { "rule": "if only 可替换 I wish,语气更强,后接同样三种时态", "mark": "If only I hadn't said that!" }
+    ],
+    "why": [
+      "wish/if only 表达的是与事实相反或难以实现的愿望,所以要用虚拟语气把时态整体往后退一步:现在的遗憾退成过去式,过去的遗憾退成过去完成式;而对将来的盼望则用 would/could。正因为从句是虚拟,陈述语气的现在式、将来式 will、现在完成式都不能跟在 wish 后面。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:见 wish、if only 立刻判断愿望指向的时间 —— 现在(过去式/were)、过去(had done)、将来(would/could do)。",
+      "易错点:句中出现 yesterday / last week / before… 等过去标志时,必须用过去完成时 had done,而不是一般过去时。",
+      "be 动词在虚拟条件里各人称多用 were(I/he/she/it were)。"
+    ],
+    "examVsReal": [
+      { "exam": "I wish I were at the seaside now.（考试规范)", "real": "I wish I was at the seaside now.", "note": "考试一律写 were;口语中 I/he/she was 也被广泛接受" },
+      { "exam": "If only I had known earlier!（书面)", "real": "I just wish I'd known sooner.", "note": "真实英语里常用 I'd known 的缩略形式,语气更口语化" }
+    ]
+  }
+}

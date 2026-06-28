@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Road to Success",
+  "source": "上外版必修第三册 Unit 1 同主题阅读(乔布斯演讲/屠呦呦抗疟/齐白石从木匠到大师/毅力与成功/弗莱明发现青霉素/一名中学生的成功秘诀)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Stay Hungry, Stay Foolish",
+      "topic_cn": "记叙·乔布斯的演讲",
+      "body": "In 2005, Steve Jobs gave a famous talk to graduating students at a university. In it he shared three short stories from his own life. He told the young people that their time was limited, so they should not waste it living the way someone else expected. He had once been fired from the very company he started, yet he never stopped loving what he did. Slowly it dawned on him that the only way forward was to start over, and years later that choice paid off. He had also faced a serious illness, which taught him to live each day fully. At the end of his talk, Jobs repeated four words he had read long ago on the back cover of an old magazine: \"Stay hungry. Stay foolish.\" To him, these words meant that a person should always keep learning and never become too proud to try new things.",
+      "vocab_notes": [
+        {
+          "word": "limited",
+          "cn": "有限的"
+        },
+        {
+          "word": "dawn on",
+          "cn": "使开始明白"
+        },
+        {
+          "word": "start over",
+          "cn": "重新开始"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Jobs tell the students not to waste their time?",
+          "options": [
+            "Because the time each person has is short.",
+            "Because school rules required it.",
+            "Because he disliked young people.",
+            "Because money is hard to earn."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'their time was limited' 的转述。"
+        },
+        {
+          "stem": "How did Jobs react after being fired by his own company?",
+          "options": [
+            "He gave up working forever.",
+            "He kept his love for his work and began again.",
+            "He moved to another country.",
+            "He blamed all his friends."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'never stopped loving what he did… start over' 的转述。"
+        },
+        {
+          "stem": "What did Jobs mean by \"Stay hungry. Stay foolish\"?",
+          "options": [
+            "People should keep learning and stay open to new things.",
+            "People should eat very little.",
+            "People should stop studying after school.",
+            "People should always feel proud of themselves."
+          ],
+          "answer_index": 0,
+          "explanation": "末句对这句话含义的概括转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Fighter Against Malaria",
+      "topic_cn": "说明·屠呦呦的探索",
+      "body": "In 2015, Tu Youyou became the first scientist from China to win the Nobel Prize in medicine. Years earlier, she had been asked to look for a new way to treat a widespread disease in nature. She and her team examined hundreds of old medical books and talked with many experienced doctors to gather useful ideas. At last they found a hint in a very old book, which said that a certain plant could help patients. After much testing, they took from the plant a substance that could fight the illness. The early results were not conclusive, so to speed things up Tu decided to try the substance on herself first. It proved safe, and the discovery later saved millions of lives across Asia and Africa. Though many people praised her, Tu remained modest. She often said that her training and the help of her team mattered most, but it was her passionate commitment that made the long struggle worthwhile.",
+      "vocab_notes": [
+        {
+          "word": "widespread",
+          "cn": "普遍的"
+        },
+        {
+          "word": "conclusive",
+          "cn": "确凿的"
+        },
+        {
+          "word": "commitment",
+          "cn": "投入"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Tu's team look for clues to treat the disease?",
+          "options": [
+            "By guessing without any reading.",
+            "By studying old books and asking experienced doctors.",
+            "By buying medicine from abroad.",
+            "By waiting for the disease to disappear."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'examined hundreds of old medical books and talked with many experienced doctors' 的转述。"
+        },
+        {
+          "stem": "Why did Tu test the substance on herself?",
+          "options": [
+            "Because no one else worked with her.",
+            "Because her team forced her to.",
+            "Because she wanted to move faster while the findings remained uncertain.",
+            "Because she enjoyed taking risks for fun."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'results were not conclusive, so to speed things up… on herself' 的转述。"
+        },
+        {
+          "stem": "What does the passage say about Tu's character?",
+          "options": [
+            "She was proud and worked alone.",
+            "She cared only about the prize.",
+            "She gave up after early failures.",
+            "She stayed humble and praised her team."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Tu remained modest… the help of her team mattered most' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "From Carpenter to Master",
+      "topic_cn": "记叙·齐白石的艺术之路",
+      "body": "Qi Baishi began life as a village carpenter, but he ended it as one of China's greatest painters. He reached the top not by talent alone, but by joining that talent with years of patient work. In 1953 his country honoured him with a special title. Among all his works, his paintings of shrimps are the best loved. At first he simply copied old models, but later he created his own style by using different shades of black ink so that each shrimp looked almost alive. His art also went beyond water creatures. He painted flowers that stood for good fortune and vegetables that pointed to a rich harvest, and people loved these works because they reminded them of their home villages. In his later years he often painted a dove, which was symbolic of his deep wish for peace in the world.",
+      "vocab_notes": [
+        {
+          "word": "shade",
+          "cn": "(颜色)浓淡"
+        },
+        {
+          "word": "harvest",
+          "cn": "收获"
+        },
+        {
+          "word": "symbolic",
+          "cn": "象征的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What helped Qi Baishi become a great painter?",
+          "options": [
+            "His talent together with long, patient effort.",
+            "Only his natural gift, with no practice.",
+            "The help of foreign teachers.",
+            "Luck and rich friends."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'not by talent alone, but by joining that talent with years of patient work' 的转述。"
+        },
+        {
+          "stem": "How did Qi make his shrimp paintings look real?",
+          "options": [
+            "By copying photographs exactly.",
+            "By using black ink of different darkness.",
+            "By painting them in bright colours.",
+            "By drawing them very large."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'different shades of black ink so that each shrimp looked almost alive' 的转述。"
+        },
+        {
+          "stem": "Why did people love Qi's flowers and vegetables?",
+          "options": [
+            "Because they were cheap to buy.",
+            "Because they were painted in gold.",
+            "Because they reminded people of their home villages.",
+            "Because they were very modern."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'reminded them of their home villages' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "What Really Predicts Success",
+      "topic_cn": "议论·毅力与成功",
+      "body": "A psychologist once studied very different groups of people to learn why some succeed and others do not. She looked at students, soldiers in training, and salespeople, asking the same question each time: who would keep going and who would give up. To her surprise, the answer was not talent, good looks, or even a high test score. The strongest sign of success was something she called grit. A person with grit has great passion and the will to keep working towards a far-off goal for years, not just for weeks. Such a person treats life less like a short race and more like a long marathon. They imagine their future clearly and then work hard, day after day, to make that future real. Her message was simple but powerful: when we want to do something difficult and worthwhile, the habit of never quitting matters more than any single gift we are born with.",
+      "vocab_notes": [
+        {
+          "word": "predictor",
+          "cn": "预示因素"
+        },
+        {
+          "word": "tough",
+          "cn": "艰难的"
+        },
+        {
+          "word": "perseverance",
+          "cn": "毅力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the psychologist find was the strongest sign of success?",
+          "options": [
+            "Natural talent above all.",
+            "A high test score.",
+            "Good looks and luck.",
+            "Grit, the steady will to pursue a distant goal over many years."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The strongest sign of success was something she called grit' 的转述。"
+        },
+        {
+          "stem": "How does a person with grit treat life?",
+          "options": [
+            "Like a long marathon rather than a short race.",
+            "Like a quick and easy game.",
+            "Like a holiday with no goals.",
+            "Like a single lucky day."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'less like a short race and more like a long marathon' 的转述。"
+        },
+        {
+          "stem": "What is the psychologist's main message?",
+          "options": [
+            "Talent decides everything.",
+            "Refusing to give up counts for more than any inborn gift.",
+            "Tests are the best way to judge people.",
+            "Success comes only to the lucky few."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'the habit of never quitting matters more than any single gift' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Lucky Discovery",
+      "topic_cn": "说明·弗莱明与青霉素",
+      "body": "Alexander Fleming was one of the most important scientists of his time. He is best remembered for finding a substance that could kill harmful germs. The story began almost by accident. One day, after coming back from a short holiday, he noticed that something strange had grown in a dish he had left behind in his lab. Around it, the germs had been cleared away. A careless person might have washed the dish and thought no more of it, but Fleming kept it and examined the strange growth with great care. He realised that it produced something able to stop germs from spreading. Years of further work by him and other scientists turned this lucky moment into a powerful medicine. Since then it has saved a huge number of lives. Fleming's story shows that success often depends not only on luck, but on a curious mind ready to notice what others would simply throw away.",
+      "vocab_notes": [
+        {
+          "word": "examine",
+          "cn": "检查"
+        },
+        {
+          "word": "moment",
+          "cn": "时刻"
+        },
+        {
+          "word": "further",
+          "cn": "进一步的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is Fleming best remembered for?",
+          "options": [
+            "Building a large hospital.",
+            "Writing a famous book of poems.",
+            "Finding a substance that kills harmful germs.",
+            "Teaching at many universities."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'finding a substance that could kill harmful germs' 的转述。"
+        },
+        {
+          "stem": "What did Fleming do that a careless person might not have done?",
+          "options": [
+            "He threw the dish away at once.",
+            "He stopped doing science.",
+            "He hid his discovery from everyone.",
+            "He kept the dish and studied the strange growth carefully."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'kept it and examined the strange growth with great care' 的转述。"
+        },
+        {
+          "stem": "What lesson does Fleming's story teach?",
+          "options": [
+            "A curious mind that notices small things matters.",
+            "Luck alone brings success.",
+            "Science is a waste of time.",
+            "Holidays should never be taken."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'a curious mind ready to notice what others would simply throw away' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "My Own Secret to Success",
+      "topic_cn": "记叙·一名中学生的成功秘诀",
+      "body": "Last term I was asked to give a short talk in front of the whole class, and the very thought of it filled me with fear. I have always been shy, and standing before so many faces felt like the hardest thing in the world. Instead of running away from the task, I decided to face it step by step. First, I wrote my main points on small cards so that I would not forget anything. Then I practised the talk again and again at home, until the words felt natural on my tongue. Just before I began, I breathed deeply several times to calm my beating heart. To my surprise, the talk went far better than I had feared, and my classmates clapped warmly at the end. Looking back, I am proud that a little daily effort helped me overcome my fear. Now I believe that real success is not about having no fear, but about acting in spite of it.",
+      "vocab_notes": [
+        {
+          "word": "overcome",
+          "cn": "克服"
+        },
+        {
+          "word": "reflect",
+          "cn": "反思"
+        },
+        {
+          "word": "achievement",
+          "cn": "成就"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the writer prepare for the talk?",
+          "options": [
+            "By asking a friend to speak instead.",
+            "By writing key points on cards and practising many times.",
+            "By reading the talk for the first time on the day.",
+            "By doing nothing at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'wrote my main points on small cards… practised the talk again and again' 的转述。"
+        },
+        {
+          "stem": "What did the writer do just before starting?",
+          "options": [
+            "Ran out of the classroom.",
+            "Shouted at the class.",
+            "Breathed deeply to calm down.",
+            "Threw away the cards."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'breathed deeply several times to calm my beating heart' 的转述。"
+        },
+        {
+          "stem": "What does the writer now believe about success?",
+          "options": [
+            "Successful people never feel afraid.",
+            "Success means avoiding all hard tasks.",
+            "Success depends only on luck.",
+            "Success is acting even when you still feel afraid."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'not about having no fear, but about acting in spite of it' 的转述。"
+        }
+      ]
+    }
+  ]
+}

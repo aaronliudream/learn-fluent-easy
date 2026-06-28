@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Approaching Classics",
+  "source": "上外版选择性必修四 Unit 4 同主题完形(推荐《西游记》/为何读经典/初读长篇经典/世界读书日/最爱的图书馆/续写故事技巧)。用词限本单元/常见词,答案唯一,4选项同词性,与阅读·听力关不撞。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Recommending a Chinese Classic",
+      "text": "My favourite Chinese (1)____ is Journey to the West, a story that almost everyone in China knows. It was (2)____ more than four hundred years ago and is still loved today. The book (3)____ the adventures of a monk and his three followers as they travel west to find holy books. The most famous (4)____ is the Monkey King, who is brave, clever and full of energy. Each chapter is an exciting (5)____ full of magic and danger. Behind the fun, however, the novel also teaches us about courage, friendship and never giving (6)____. I first read it when I was young, and I still (7)____ rereading it every year. The language is not too (8)____, so it is a good classic for beginners. If you want to (9)____ Chinese culture, this is a wonderful place to start. I highly (10)____ it to anyone who loves a good story.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "classic",
+            "machine",
+            "market",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "favourite classic 最爱的经典(作品)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eaten",
+            "written",
+            "sold",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "was written 被写成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sells",
+            "buys",
+            "tells",
+            "hides"
+          ],
+          "answer_index": 2,
+          "explanation": "tells the adventures 讲述冒险。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "price",
+            "noise",
+            "character"
+          ],
+          "answer_index": 3,
+          "explanation": "the most famous character 最著名的角色。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "adventure",
+            "mistake",
+            "machine",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "an exciting adventure 一场精彩的冒险。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "off",
+            "up",
+            "in",
+            "out"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "refuse",
+            "enjoy",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "enjoy rereading 喜欢重读。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "late",
+            "rich",
+            "difficult"
+          ],
+          "answer_index": 3,
+          "explanation": "not too difficult 不太难。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "appreciate",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "appreciate Chinese culture 欣赏中国文化。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "recommend",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "highly recommend 极力推荐。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Why We Should Read Classics",
+      "text": "Some students think that old (1)____ are boring and out of date, but classics still have a lot to (2)____ us. A classic is a book that has been loved by readers for many (3)____. It deals with feelings and questions that never really (4)____, such as love, courage and the meaning of life. When you read a great novel, you can (5)____ the world through another person's eyes. This makes both your heart and your mind (6)____. Classics can also improve your language, because they are often beautifully (7)____. Of course, some classics are not (8)____ to read, and you may need to go slowly. But the (9)____ is always worth it. Little by little, you will come to (10)____ why these books have lasted so long.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "noises",
+            "books",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "old books 旧书。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "teach"
+          ],
+          "answer_index": 3,
+          "explanation": "teach us 教给我们。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "years",
+            "minutes",
+            "metres",
+            "seconds"
+          ],
+          "answer_index": 0,
+          "explanation": "for many years 许多年。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cook",
+            "change",
+            "drive",
+            "swim"
+          ],
+          "answer_index": 1,
+          "explanation": "never really change 从不真正改变。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "hide",
+            "see",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "see the world 看世界。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fall",
+            "sell",
+            "lose",
+            "grow"
+          ],
+          "answer_index": 3,
+          "explanation": "makes your heart and mind grow 让心智成长。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "written",
+            "eaten",
+            "sold",
+            "driven"
+          ],
+          "answer_index": 0,
+          "explanation": "beautifully written 写得优美。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "easy",
+            "late",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "not easy to read 不易读。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "effort",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the effort is worth it 努力值得。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "waste",
+            "sell",
+            "understand"
+          ],
+          "answer_index": 3,
+          "explanation": "come to understand 渐渐明白。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "My First Long Classic",
+      "text": "When my teacher asked us to read War and Peace, I was a little (1)____ because the book was so thick. On the first (2)____, I could only manage a few pages, and the long Russian names (3)____ me. I almost wanted to give (4)____. But my mother told me to read just twenty minutes every (5)____, and slowly things got easier. After a while, the characters began to feel like real (6)____. I started to (7)____ forward to my quiet reading time each night. By the end of the term, I had (8)____ the whole novel, and I felt very (9)____ of myself. That experience taught me that even the longest classic can be finished if you are (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "worried",
+            "happy",
+            "rich",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "a little worried 有点担心。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "day",
+            "noise",
+            "metre"
+          ],
+          "answer_index": 1,
+          "explanation": "on the first day 第一天。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "helped",
+            "fed",
+            "confused",
+            "washed"
+          ],
+          "answer_index": 2,
+          "explanation": "the names confused me 名字把我弄糊涂。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "off",
+            "in",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "day",
+            "year",
+            "century",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "every day 每天。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "people",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "feel like real people 像真人。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "hide",
+            "look",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "look forward to 期待。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "sold",
+            "broken",
+            "finished"
+          ],
+          "answer_index": 3,
+          "explanation": "had finished the novel 读完小说。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "afraid",
+            "bored",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "proud of myself 为自己自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "patient",
+            "angry",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "if you are patient 只要有耐心。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "World Reading Day at School",
+      "text": "Every year on the twenty-third of April, our school (1)____ World Reading Day. It is one of my favourite (2)____ of the whole year. In the morning, each class (3)____ a few classic books to share with the others. Students stand up and (4)____ why they love a certain story. Some read a short (5)____ aloud, while others act out a famous (6)____ from a play. The library is open all day, and the teachers (7)____ us to borrow as many books as we like. There is even a (8)____ for the best book review. The day always reminds me how much (9)____ a good book can bring. By the time it (10)____, everyone leaves with a new story to read.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sells",
+            "forgets",
+            "celebrates",
+            "loses"
+          ],
+          "answer_index": 2,
+          "explanation": "celebrates Reading Day 庆祝读书日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "noises",
+            "metres",
+            "days"
+          ],
+          "answer_index": 3,
+          "explanation": "favourite days 最爱的日子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "chooses",
+            "sells",
+            "hides",
+            "breaks"
+          ],
+          "answer_index": 0,
+          "explanation": "each class chooses 每个班选。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "explain",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "explain why 解释原因。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "poem",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "read a short poem 读一首短诗。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "scene"
+          ],
+          "answer_index": 3,
+          "explanation": "a famous scene 著名的场景。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "encourage",
+            "stop",
+            "forbid",
+            "refuse"
+          ],
+          "answer_index": 0,
+          "explanation": "encourage us to borrow 鼓励借书。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "prize",
+            "price",
+            "metre"
+          ],
+          "answer_index": 1,
+          "explanation": "a prize for the best review 最佳书评奖。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "joy",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "how much joy 多少欢乐。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "cooks",
+            "swims",
+            "ends"
+          ],
+          "answer_index": 3,
+          "explanation": "by the time it ends 等到结束时。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "My Favourite Library",
+      "text": "My favourite place in the whole town is the old public (1)____ near my home. It is quiet, warm and full of thousands of (2)____. Whenever I feel tired or sad, I go there to (3)____ among the shelves. I can spend a whole afternoon reading without (4)____ the time. The staff are always (5)____ and ready to help me find what I need. Last month they (6)____ me an old copy of a classic poem collection. Reading in such a peaceful (7)____ makes me feel calm and happy. It also (8)____ me to the many writers of the past, whose words still speak to us today. I really hope this wonderful library will stay (9)____ for many more years, so that other readers can (10)____ it as much as I do.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "library",
+            "market",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "public library 公共图书馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "books",
+            "noises",
+            "metres"
+          ],
+          "answer_index": 1,
+          "explanation": "thousands of books 数千本书。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cook",
+            "drive",
+            "read",
+            "swim"
+          ],
+          "answer_index": 2,
+          "explanation": "go there to read 去那里读书。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "cooking",
+            "washing",
+            "noticing"
+          ],
+          "answer_index": 3,
+          "explanation": "without noticing the time 不知不觉。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "kind",
+            "rude",
+            "lazy",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "the staff are kind 工作人员友善。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "threw",
+            "found",
+            "washed",
+            "drove"
+          ],
+          "answer_index": 1,
+          "explanation": "found me an old copy 帮我找到旧本。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "place",
+            "metre"
+          ],
+          "answer_index": 2,
+          "explanation": "a peaceful place 宁静的地方。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "connects"
+          ],
+          "answer_index": 3,
+          "explanation": "connects me to the past 把我与过去相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "open",
+            "empty",
+            "late",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "stay open 继续开放。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "enjoy",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "enjoy it 享受它。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "How to Continue a Story",
+      "text": "Writing the continuation of a story can be great (1)____ if you know a few simple tricks. First, read the given part of the story (2)____, and underline the most important details. Think carefully about who the main (3)____ are and what problem they face. A good continuation should follow the same (4)____ and keep the characters acting in a believable (5)____. Every new event must move the (6)____ forward, and the ending should feel natural rather than (7)____. Try to show the characters' feelings through their actions instead of just (8)____ them. Before you finish, read your work again and (9)____ any small mistakes. With a little practice, you will be able to (10)____ stories that your readers really enjoy.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "fun",
+            "metre"
+          ],
+          "answer_index": 2,
+          "explanation": "great fun 很有趣。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loudly",
+            "angrily",
+            "sadly",
+            "carefully"
+          ],
+          "answer_index": 3,
+          "explanation": "read carefully 仔细读。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "characters",
+            "prices",
+            "noises",
+            "metres"
+          ],
+          "answer_index": 0,
+          "explanation": "the main characters 主要人物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "style",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "the same style 相同的风格。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "way",
+            "metre"
+          ],
+          "answer_index": 2,
+          "explanation": "in a believable way 以可信的方式。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "story"
+          ],
+          "answer_index": 3,
+          "explanation": "move the story forward 推动故事发展。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "strange",
+            "rich",
+            "late",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "natural rather than strange 自然而不突兀。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "telling",
+            "cooking",
+            "driving"
+          ],
+          "answer_index": 1,
+          "explanation": "instead of just telling 而非只是直说。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "hide",
+            "correct",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "correct any mistakes 改正错误。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "cook",
+            "drive",
+            "write"
+          ],
+          "answer_index": 3,
+          "explanation": "able to write stories 能写出故事。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Language can quietly shape the way we think.", "opts": ["语言能悄悄塑造我们的思维方式。", "语言对思维毫无影响。", "语言只是用来唱歌的。", "思维和语言完全无关。"], "answer": 0 },
+    { "audio": "Russian speakers can tell light and dark blue apart faster.", "opts": ["俄语者分不清蓝色。", "俄语者能更快区分浅蓝和深蓝。", "俄语里没有蓝色这个词。", "俄语者讨厌蓝色。"], "answer": 1 },
+    { "audio": "Speaking two languages gives the brain a healthy workout.", "opts": ["双语对大脑有害。", "双语让人变笨。", "会说两种语言给大脑做健康的锻炼。", "大脑从不改变。"], "answer": 2 },
+    { "audio": "Many languages around the world are in danger of dying out.", "opts": ["世界上所有语言都很安全。", "语言永远不会消失。", "语言越来越多了。", "世界上许多语言正面临消亡的危险。"], "answer": 3 },
+    { "audio": "Even unborn babies can distinguish between two languages.", "opts": ["甚至未出生的婴儿也能区分两种语言。", "婴儿听不懂任何语言。", "婴儿只能听懂一种语言。", "婴儿出生后才会听声音。"], "answer": 0 },
+    { "audio": "What a new language offers is a fresh way of seeing the world.", "opts": ["新语言毫无用处。", "一门新语言带来的是看世界的全新方式。", "学新语言会让人忘记母语。", "新语言只会带来麻烦。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Bilingual children sometimes ____ their classmates in memory tests.（胜过）", "opts": ["sell", "outperform", "hide", "drop"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Different languages make us pay ____ to different things.（注意）", "opts": ["attention", "money", "price", "ticket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Many ____ are working hard to save dying languages.（语言学家）", "opts": ["drivers", "cooks", "linguists", "farmers"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Small word choices can have a real ____ on our judgement.（影响）", "opts": ["price", "garden", "engine", "impact"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ matters most is not where you live but how you think.", "opts": ["What", "That", "Whether", "Why"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It is widely accepted ____ thought and language influence each other.", "opts": ["whether", "that", "what", "why"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The real question is ____ language shapes thought or thought shapes language.", "opts": ["that", "what", "whether", "how"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The reason is ____ their language makes them notice such details.", "opts": ["why", "what", "how", "that"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["每种语言都以不同方式划分世界。", "所有语言都一模一样。", "语言之间没有区别。", "语言不影响我们看世界。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Each language divides the world in its own way." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["保存一门语言很容易。", "拯救一门语言能让一整种看世界的方式存续。", "语言消失了也没关系。", "没人关心濒危语言。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Saving a language keeps a whole way of seeing the world alive." }
+  ],
+  "reading": {
+    "passage": "In English you say, 'He broke the glass,' even when it was an accident. In Spanish you might simply say, 'The glass broke,' as if no one were to blame. Such small differences may shape how quickly we look for someone to blame.",
+    "passageCn": "在英语里,即使是意外,你也会说'他打破了杯子';在西班牙语里,你可能只说'杯子破了',仿佛无人需要负责。这种细小的差别也许会影响我们多快去寻找该责怪的人。",
+    "questions": [
+      { "q": "How might an English speaker describe the accident?", "opts": ["By naming the person who broke the glass.", "By saying the glass broke on its own.", "By blaming nobody at all.", "By staying completely silent."], "answer": 0 },
+      { "q": "What might these small differences shape?", "opts": ["The price of a new glass.", "How quickly we look for someone to blame.", "The colour of the broken glass.", "The speed of the waiter."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short paragraph about a language you would like to learn. Say which language it is, why you want to learn it, and what you hope it will open up for you. Try to use a subject or predicative clause.",
+    "promptCn": "写一小段话,谈一门你想学的语言:是哪门、为什么想学、你希望它为你打开什么。试着用上主语从句或表语从句(如 What I want is… / The truth is that…)。",
+    "sampleWords": ["language", "learn", "because", "culture", "communicate", "mindset", "perceive", "opportunity", "truth", "open"]
+  },
+  "dialogues": [
+    {
+      "title": "Two Words for One Colour",
+      "lines": [
+        { "role": "A", "text": "Did you know Russian has two different words for blue?", "cn": "你知道俄语里蓝色有两个不同的词吗?" },
+        { "role": "B", "text": "Really? In English we just say 'blue' for everything.", "cn": "真的吗?英语里什么都只说'蓝'。" },
+        { "role": "A", "text": "That's why Russian speakers spot the two shades a little faster.", "cn": "所以俄语者能稍微更快地分辨这两种色度。" },
+        { "role": "B", "text": "Amazing. So the words we know really can train our eyes.", "cn": "太神奇了。原来我们知道的词真的能训练眼睛。" }
+      ]
+    },
+    {
+      "title": "Why Learn Another Language",
+      "lines": [
+        { "role": "A", "text": "Everyone speaks English now, so why learn anything else?", "cn": "现在人人都说英语,为什么还要学别的?" },
+        { "role": "B", "text": "Because what a new language offers is a whole new way of thinking.", "cn": "因为一门新语言带来的是一种全新的思维方式。" },
+        { "role": "A", "text": "I never thought of it like that.", "cn": "我从没这么想过。" },
+        { "role": "B", "text": "The truth is that every language opens a different window on the world.", "cn": "事实是,每种语言都为你打开一扇看世界的不同窗户。" }
+      ]
+    }
+  ]
+}

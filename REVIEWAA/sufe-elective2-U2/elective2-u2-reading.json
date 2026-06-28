@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Language and Mind",
+  "source": "上外版选择性必修二 Unit 2 同主题阅读(语言是否塑造思维/俄语的蓝色/描述意外与归咎/双语大脑/濒危语言/时间与空间的语言)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Does Language Shape the Mind?",
+      "topic_cn": "议论·语言与思维之争",
+      "body": "One of the oldest questions about language is simple to ask but hard to answer: does the language we speak change the way we think? A scholar named Benjamin Whorf once went very far. He claimed that language does not only influence thought, but actually decides it. In its strongest form, this idea has been turned down by many psychologists. After all, it is not hard to find thoughts that need no words at all. A baby, a dog, or a musician can clearly think without sentences. Yet a softer form of the idea is still hard to argue against. Few people would deny that the language we use can, at least a little, colour the way we see the world. So most experts today take a middle view. Language is probably not a prison for the mind, but it is more like a pair of glasses. It does not decide what is out there, but it can gently change what we notice first and what we easily forget.",
+      "vocab_notes": [
+        {
+          "word": "influence",
+          "cn": "影响"
+        },
+        {
+          "word": "psychologist",
+          "cn": "心理学家"
+        },
+        {
+          "word": "deny",
+          "cn": "否认"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Benjamin Whorf claim in his strongest view?",
+          "options": [
+            "Language completely decides how we think.",
+            "Language has no effect on thought at all.",
+            "Thought always comes before any language.",
+            "Words and thoughts are totally unrelated."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 Whorf 称语言'determines thought'的转述,即语言完全决定思维。"
+        },
+        {
+          "stem": "Why do many psychologists reject the strongest form?",
+          "options": [
+            "Because babies are unable to think at all.",
+            "Because people can clearly think without using words.",
+            "Because language is far too simple to study.",
+            "Because no one studies language today."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'thoughts that need no words'(婴儿、狗、音乐家)说明能无词而思 → 否定最强版本。"
+        },
+        {
+          "stem": "What middle view do most experts hold now?",
+          "options": [
+            "Language gently shapes what we notice, not what exists.",
+            "Language fully controls outside reality.",
+            "Language has zero influence on the mind.",
+            "Language is a complete prison for thought."
+          ],
+          "answer_index": 0,
+          "explanation": "末段'a pair of glasses…gently change what we notice'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Russian Blues",
+      "topic_cn": "说明·颜色词与感知",
+      "body": "Not every language cuts up the rainbow in the same way. English has one main word for blue, whether the sky is pale or deep. Russian is different. It has no single word that simply means 'blue'. Instead, Russian speakers must choose between 'goluboy' for light blue and 'siniy' for dark blue, just as English speakers choose between red and pink. Does this habit change anything real? Scientists decided to test it. They showed people two squares of colour and asked, as fast as possible, whether the shades were the same or different. Russian speakers were quicker when one square was light blue and the other dark blue, because their language forces them to mark that border every day. English speakers, who file both under a single word, were a little slower. The study suggests that the words we grow up with can train our eyes without our noticing. We are not born seeing colour this way; our language quietly teaches us where one shade ends and the next begins.",
+      "vocab_notes": [
+        {
+          "word": "rainbow",
+          "cn": "彩虹"
+        },
+        {
+          "word": "pale",
+          "cn": "浅的;淡的"
+        },
+        {
+          "word": "shade",
+          "cn": "色度;浓淡"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does Russian treat the colour blue?",
+          "options": [
+            "It has one single word for every shade of blue.",
+            "It uses separate words for light and dark blue.",
+            "It has no word for blue at all.",
+            "It uses the same word as it does for red."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'goluboy'与'siniy'分指浅蓝、深蓝的转述。"
+        },
+        {
+          "stem": "What were people asked to do in the test?",
+          "options": [
+            "Name every colour in the room.",
+            "Paint two blue squares by hand.",
+            "Judge quickly whether two shades matched.",
+            "Translate the Russian colour words."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'asked…whether the shades were the same or different'的转述。"
+        },
+        {
+          "stem": "What does the study suggest about language and colour?",
+          "options": [
+            "People are born seeing all colours the same way.",
+            "Colour words have no effect on the eyes.",
+            "Russian speakers cannot see dark blue.",
+            "Our language can train how fast we tell shades apart."
+          ],
+          "answer_index": 3,
+          "explanation": "末段'words…can train our eyes'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Whose Fault Was It?",
+      "topic_cn": "说明·描述意外与归咎",
+      "body": "Imagine a waiter who trips, and a glass falls and breaks. How would you describe it? In English, we usually say, 'He broke the glass,' naming the person even when nobody meant any harm. Spanish speakers often prefer a different shape: 'The glass broke,' as if the object had acted on its own. When the event is a pure accident, many languages avoid pointing at a person at all. This small difference may do more than it seems. In one study, people watched the same short films of accidents. Later, English speakers were better at remembering who had been involved, while Spanish speakers remembered the action more than the actor. Their languages had quietly told them what to keep in mind. Some researchers think this can even touch ideas like blame and punishment. If your language always names a doer, you may be quicker to ask whose fault it was. Language does not force us to judge, but it can lean us, softly, in one direction rather than another.",
+      "vocab_notes": [
+        {
+          "word": "trip",
+          "cn": "绊倒"
+        },
+        {
+          "word": "actor",
+          "cn": "行为者;做事的人"
+        },
+        {
+          "word": "punishment",
+          "cn": "惩罚"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do English and Spanish often differ when describing an accident?",
+          "options": [
+            "English names the person; Spanish stresses the event itself.",
+            "Both of them always blame the person.",
+            "Spanish always names the guilty person.",
+            "Neither one mentions the accident."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'He broke the glass'对'The glass broke'的对比转述。"
+        },
+        {
+          "stem": "What did the two groups remember differently after the films?",
+          "options": [
+            "Both groups forgot the films completely.",
+            "English speakers recalled who was involved more easily.",
+            "Spanish speakers recalled the person better.",
+            "Nobody remembered any action."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'English speakers were better at remembering who had been involved'的转述。"
+        },
+        {
+          "stem": "What larger idea might this difference affect?",
+          "options": [
+            "The price of the broken glasses.",
+            "The speed of the waiters.",
+            "How readily we assign blame.",
+            "The colour of the short films."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'ideas like blame and punishment…quicker to ask whose fault'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "For a Better Brain",
+      "topic_cn": "说明·双语与大脑",
+      "body": "Learning a new language can feel a little like magic, but the real magic happens inside the brain. Researchers in Sweden once studied two groups of students. One group began a hard language course, while the other studied medicine and science. Both groups had brain scans at the start and again three months later. Only in the language learners did the scans show clear changes in brain structure. In another study, people were asked to listen to a word and pick the matching picture from four. The trick was that one picture had a name that sounded close to the target, such as 'candy' and 'candle'. People who spoke two languages found it easier to ignore the distracting choice, while those who spoke only one had to work harder. Other research links speaking two languages to a later start of memory disease, sometimes by several years. None of this means a bilingual person is simply 'smarter'. It means the daily effort of switching between languages gives the brain a healthy, lasting workout.",
+      "vocab_notes": [
+        {
+          "word": "magic",
+          "cn": "魔法;奇迹"
+        },
+        {
+          "word": "medicine",
+          "cn": "医学;药"
+        },
+        {
+          "word": "workout",
+          "cn": "锻炼"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the Swedish brain scans reveal?",
+          "options": [
+            "Both groups' brains changed in the same way.",
+            "No brain changed at all in three months.",
+            "Only the science students' brains changed.",
+            "Only the language learners' brain structure changed."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'brain structure changed only in the language learning group'的转述。"
+        },
+        {
+          "stem": "Why was the 'candy/candle' part tricky?",
+          "options": [
+            "One picture's name sounded like the target word.",
+            "The pictures were too dark to see.",
+            "There were no pictures shown at all.",
+            "The words were in a foreign script."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'a distracting word…sounds similar to the target word'的转述。"
+        },
+        {
+          "stem": "What does the writer conclude about bilingual brains?",
+          "options": [
+            "Bilingual people are always far cleverer.",
+            "Switching languages keeps the brain fit, not simply smarter.",
+            "Two languages clearly harm the brain.",
+            "Language has no effect on memory."
+          ],
+          "answer_index": 1,
+          "explanation": "末段'does make your brain healthier…a workout'的转述,而非简单'更聪明'。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Languages Are Disappearing",
+      "topic_cn": "说明·濒危语言",
+      "body": "You probably know that many animals and plants are in danger, but languages can vanish too. There are around seven thousand living languages today, yet experts warn that more than half could be gone by the end of this century. When the last speaker of a language dies, something more than words is lost. Each language carries its own stories, jokes, songs, and ways of naming the plants and seasons around it. Much of that knowledge has never been written down, so it simply disappears with the final voice. In Australia, for example, hundreds of languages were once spoken, but only a small number are still used every day. For many communities, their language sits at the very heart of who they are. It links them to their land, their history, and their elders. That is why linguists travel to far and quiet places, recording speakers and helping younger people learn. Saving a language is hard work, but it keeps a whole way of seeing the world alive.",
+      "vocab_notes": [
+        {
+          "word": "vanish",
+          "cn": "消失"
+        },
+        {
+          "word": "community",
+          "cn": "社区;群体"
+        },
+        {
+          "word": "elder",
+          "cn": "长者;前辈"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What warning do experts give about today's languages?",
+          "options": [
+            "All of them are now perfectly safe.",
+            "They will all soon become English.",
+            "Over half may disappear within this century.",
+            "None of them has any speakers left."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'more than half will have disappeared by the end of the century'的转述。"
+        },
+        {
+          "stem": "Why is losing a language more than losing words?",
+          "options": [
+            "Only its spelling rules are lost.",
+            "Words are very easy to replace.",
+            "Nothing of value is actually lost.",
+            "Unwritten knowledge and stories vanish along with it."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'much knowledge goes with it…never been written down'的转述。"
+        },
+        {
+          "stem": "Why do linguists travel to far and quiet places?",
+          "options": [
+            "To record speakers and help young people learn.",
+            "To sell printed dictionaries.",
+            "To stop people from speaking.",
+            "To search for new animals."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'linguists who are studying and trying to save…languages'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Time, Space and Words",
+      "topic_cn": "说明·时间与空间的语言",
+      "body": "Languages can shape something as basic as how we picture time. In English, people often place time on a line that runs from left to right: last week is behind us, and next week lies ahead. Speakers of some Chinese expressions, by contrast, may also think of time as moving up and down, with an earlier month 'above' and a later month 'below'. Neither way is right or wrong, but each can guide the pictures that form in our minds. Space works in a similar way. A few languages have no words for 'left' and 'right' at all. Instead, their speakers always use north, south, east, and west, even indoors. To do this, they must keep track of direction all the time, and they become remarkably good at it. A child raised with such a language can point to the north without thinking. These habits show how a language can quietly train the mind, shaping not only the words we use but the very maps we carry inside our heads.",
+      "vocab_notes": [
+        {
+          "word": "ahead",
+          "cn": "在前面;向前"
+        },
+        {
+          "word": "direction",
+          "cn": "方向"
+        },
+        {
+          "word": "remarkably",
+          "cn": "非凡地;惊人地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do many English speakers picture time?",
+          "options": [
+            "As a circle with no beginning.",
+            "As a line running from left to right.",
+            "As something moving up and down.",
+            "As standing completely still."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'a line…left-right terms…next week lies ahead'的转述。"
+        },
+        {
+          "stem": "What is special about languages without 'left' and 'right'?",
+          "options": [
+            "Their speakers cannot describe space at all.",
+            "They never mention any direction.",
+            "Their speakers rely on compass directions instead.",
+            "They use only the words 'up' and 'down'."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'always use north, south, east, and west'的转述。"
+        },
+        {
+          "stem": "What do these examples show about language?",
+          "options": [
+            "It has no link to the way we think.",
+            "It only changes our spelling habits.",
+            "It makes people forget all directions.",
+            "It can quietly train how the mind maps the world."
+          ],
+          "answer_index": 3,
+          "explanation": "末段'quietly train the mind…maps we carry inside our heads'的转述。"
+        }
+      ]
+    }
+  ]
+}

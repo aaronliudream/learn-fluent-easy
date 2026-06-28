@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Joris raised money to purchase GPS collars that protect the cheetahs.", "opts": ["乔里斯筹钱购买保护猎豹的GPS颈圈。", "乔里斯卖掉了他的宠物猫。", "乔里斯害怕所有的野生动物。", "乔里斯在动物园里工作。"], "answer": 0 },
+    { "audio": "The twins launched a website that connects children with volunteer work.", "opts": ["双胞胎关闭了他们的网站。", "双胞胎创建了一个把孩子和志愿工作联系起来的网站。", "双胞胎在网上卖玩具。", "双胞胎拒绝帮助任何人。"], "answer": 1 },
+    { "audio": "Jackson is leading a campaign to promote reusable water bottles in his town.", "opts": ["杰克逊喜欢喝瓶装水。", "杰克逊搬到了另一个城市。", "杰克逊正发起一场推广可重复使用水瓶的运动。", "杰克逊放弃了他的环保俱乐部。"], "answer": 2 },
+    { "audio": "She asked me whether I had ever done any volunteer work before.", "opts": ["她告诉我她不需要帮助。", "她让我安静一点。", "她邀请我去看电影。", "她问我以前有没有做过志愿工作。"], "answer": 3 },
+    { "audio": "Pippa learned that you should do careful research before helping a community.", "opts": ["皮帕懂得了帮助社区前应先做仔细的调查。", "皮帕决定再也不旅行了。", "皮帕在坦桑尼亚买了很多礼物。", "皮帕忘记了这次旅行。"], "answer": 0 },
+    { "audio": "On the fifth of December, people around the world celebrate International Volunteer Day.", "opts": ["人们在元旦庆祝国际志愿者日。", "在12月5日,世界各地的人庆祝国际志愿者日。", "国际志愿者日每两年才有一次。", "只有老师才能庆祝这个节日。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Many groups have ____ to be listed on the volunteer website.", "opts": ["requested", "refused", "forgotten", "sold"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Volunteers ____ food and clothes to the homeless shelter every winter.", "opts": ["donate", "throw", "hide", "lose"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "His team is ____ local restaurants to sell more paper bottles.", "opts": ["urging", "ignoring", "stopping", "selling"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Even a small action can ____ a real difference in your community.", "opts": ["make", "lose", "break", "buy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "I really hope ____ more students will join our recycling campaign.", "opts": ["that", "if", "whether", "what"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The interviewer asked Xu Yuan ____ she had any experience before.", "opts": ["whether", "that", "what", "which"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Jiang was told ____ she would work during the import expo.", "opts": ["where", "that", "if", "whether"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She finally understood ____ her mother had encouraged her to volunteer.", "opts": ["why", "that", "if", "whether"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["志愿服务能培养更积极的人生态度并有益健康。", "志愿服务总是又累又无聊。", "志愿服务只为了赚钱。", "志愿服务对身体有害。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Volunteering can develop a positive attitude towards life and is good for your health." },
+    { "q": "听句子选中文:", "opts": ["这个夏令营不再需要任何人。", "选你喜欢的志愿工作,它就不会像苦差事。", "所有志愿者都得到很高的工资。", "孩子们拒绝参加任何游戏。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Choose volunteer work you enjoy, and it won't feel like a chore." }
+  ],
+  "reading": {
+    "passage": "Every year on the fifth of December, millions of people around the world celebrate International Volunteer Day. Some clean up parks, others donate blood or visit the elderly, and many simply help neighbours they have never met. These small actions remind us that anyone can make a difference.",
+    "passageCn": "每年12月5日,世界各地数百万人庆祝国际志愿者日。有人清理公园,有人献血或探望老人,还有许多人只是帮助素未谋面的邻居。这些小小的行动提醒我们:人人都能带来改变。",
+    "questions": [
+      { "q": "When do people celebrate International Volunteer Day?", "opts": ["On the fifth of December.", "On New Year's Day.", "Every Sunday.", "Once every two years."], "answer": 0 },
+      { "q": "What do these small actions remind us of?", "opts": ["That only adults can help.", "That anyone can make a difference.", "That volunteering costs too much.", "That helping is useless."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short essay (about 60 words) for the column \"Voices of Volunteers.\" Give one statement about why volunteering matters, and use an object clause such as \"I believe that …\".",
+    "promptCn": "为 'Voices of Volunteers' 专栏写一篇约60词的短文,给出一个关于志愿服务为何重要的观点,并至少用一个宾语从句(如 I believe that …)。",
+    "sampleWords": ["volunteer", "community", "donate", "campaign", "make a difference", "believe", "win-win", "give", "movement", "shelter"]
+  },
+  "dialogues": [
+    {
+      "title": "Signing Up to Volunteer",
+      "lines": [
+        { "role": "A", "text": "I want to start volunteering, but I don't know where to begin.", "cn": "我想做志愿者,可不知从哪儿开始。" },
+        { "role": "B", "text": "Think about what you really care about first.", "cn": "先想想你真正在意什么。" },
+        { "role": "A", "text": "I love animals, so maybe I'll help at the shelter.", "cn": "我喜欢动物,也许我会去收容所帮忙。" },
+        { "role": "B", "text": "Great. I'll ask whether they need helpers this weekend.", "cn": "太好了。我去问问他们这周末是否需要帮手。" }
+      ]
+    },
+    {
+      "title": "After the Care Home Visit",
+      "lines": [
+        { "role": "A", "text": "How was your visit to the care home today?", "cn": "你今天去敬老院怎么样?" },
+        { "role": "B", "text": "Lovely. An old man told me how he had been a teacher for forty years.", "cn": "很愉快。一位老人给我讲他当了四十年老师。" },
+        { "role": "A", "text": "Did he enjoy it?", "cn": "他喜欢这次探访吗?" },
+        { "role": "B", "text": "Yes, he asked whether I could come back next week.", "cn": "喜欢,他问我下周能不能再来。" }
+      ]
+    }
+  ]
+}

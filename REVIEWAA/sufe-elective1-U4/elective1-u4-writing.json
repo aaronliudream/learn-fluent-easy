@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Describe Your Future Home(描写你未来的家)",
+  "title_en": "My Future Home",
+  "genre": "说明 / 描写(describe an imagined future home + how it makes life better)",
+  "source": "上外版选择性必修第一册 Unit 4 Writing:describe your future home(描写一个想象中的未来之家 + 它如何让生活更好,试用非限制性定语从句)。",
+  "prompt_cn": "假设你叫李华,学校英语角以\"未来生活\"为主题征文。请用英语写一篇约100词的短文,描写你想象中的未来之家,内容包括:① 这个家是什么样子(智能家居/穹顶/电力墙等);② 它有哪些功能让生活更方便(家务/温度/空气等);③ 你对住在那里的感受。注意:适当使用非限制性定语从句(…, which … / …, who …),句句围绕中心。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English Corner is collecting short pieces on the theme 'Future Living'. Write about 100 words describing your imagined future home, including: 1) what the home looks like (e.g. a smart home, a glass dome, a power wall); 2) the functions that make life easier (housework, temperature, air, etc.); 3) how you would feel living there. Try to use non-defining relative clauses (…, which … / …, who …).",
+  "points": [
+    "描写外观(My future home is a smart house under a glass dome, which …)",
+    "列举便利功能(An electronic servant, who never gets tired, does all the housework.)",
+    "表达感受(Living there would feel comfortable and free.)",
+    "适当使用非限制性定语从句、句句围绕中心"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "My future home is a smart house built under a clear glass dome, which lets in plenty of sunlight. Most of its power comes from solar panels, so it needs very little energy to run. At its heart is a home computer, which controls the lighting, the temperature and the air. There is also a friendly robot servant, who does all the boring housework and never gets tired. When friends come over, I push a button and the walls move to make the living room larger. Living in such a home, where everything is clean and quiet, would feel both comfortable and free.",
+  "model_translation": "我未来的家是一座建在透明玻璃穹顶下的智能屋,穹顶让充足的阳光照进来。它的大部分电力来自太阳能板,所以几乎不耗能。屋子的核心是一台家用电脑,它掌管灯光、温度和空气。还有一个友好的机器人仆人,它包办所有无聊的家务,而且从不疲倦。朋友来访时,我按一下按钮,墙壁就移动,把客厅变大。住在这样一个一切都干净安静的家里,会感到既舒适又自由。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:外观 / 便利功能 / 个人感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕'未来之家'展开、句句相关、非限制性定语从句使用得当、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、定语从句逗号与关系词正确、语法基本无误" }
+    ],
+    "required_structure": [
+      "外观 My future home is a smart house under a glass dome, which …",
+      "功能1 At its heart is a home computer, which controls …",
+      "功能2 There is a robot servant, who does all the housework.",
+      "感受 Living in such a home, where everything is clean, would feel comfortable and free."
+    ],
+    "key_expressions": [
+      "My future home is a smart house under a glass dome, which lets in plenty of sunlight.",
+      "Most of its power comes from solar panels, so it needs very little energy.",
+      "A robot servant, who never gets tired, does all the boring housework.",
+      "I push a button and the walls move to make the room larger."
+    ],
+    "useful_words": ["smart home", "dome", "solar panel", "servant", "lighting", "temperature", "appliance", "leisure", "comfortable", "automatically"]
+  },
+  "high_sentences": [
+    "My future home is a smart house built under a clear glass dome, which lets in plenty of sunlight.",
+    "At its heart is a home computer, which controls the lighting, the temperature and the air.",
+    "There is a friendly robot servant, who does all the boring housework and never gets tired.",
+    "Living in such a home, where everything is clean and quiet, would feel both comfortable and free."
+  ],
+  "error_pairs": [
+    { "wrong": "My home, that has a glass dome, is very bright.", "correct": "My home, which has a glass dome, is very bright.", "note": "非限制性定语从句(有逗号)不能用 that,指物用 which。" },
+    { "wrong": "The robot servant which does the housework never gets tired.", "correct": "The robot servant, who does the housework, never gets tired.", "note": "补充说明的人用 who,且非限制性需加逗号。" },
+    { "wrong": "Solar panels gives the home most of its power.", "correct": "Solar panels give the home most of its power.", "note": "主语为复数,动词用原形 give。" }
+  ],
+  "paragraph_template": "【未来之家结构】\n第1句 外观:My future home is a smart house under a glass dome, which …\n第2-4句 功能:At its heart is a home computer, which … There is a robot servant, who … I push a button and the walls move …\n第5句 感受:Living in such a home, where …, would feel comfortable and free."
+}

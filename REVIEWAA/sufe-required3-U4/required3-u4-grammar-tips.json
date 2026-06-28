@@ -1,0 +1,39 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "情态动词完成式(modal + have done)速查",
+    "intro": "情态动词完成式用来对「过去」的事作出推测、判断或评价。核心:看语气强弱与语境证据——证据确凿用 must / can't,只是可能用 may / might / could,带责备或后悔用 should(n't),白做了用 needn't。",
+    "table": {
+      "headers": ["形式", "含义 / 例句"],
+      "rows": [
+        ["must have done", "对过去的肯定推测(几乎确定):She must have left it on the subway."],
+        ["can't / couldn't have done", "对过去的否定推测(断定不可能):He can't have finished it so fast."],
+        ["may / might have done", "对过去的可能性推测(不确定):I might have left it in class."],
+        ["could have done", "过去可能而未发生 / 一种可能:The accident could have been prevented."],
+        ["should have done", "本应做却没做(责备/后悔):You should have called me."],
+        ["shouldn't have done", "不该做却做了(责备/后悔):I shouldn't have signed up."],
+        ["needn't have done", "本不必做却做了(白做了):You needn't have worried."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "推测强弱看证据:有确凿依据→must/can't;只是猜测→may/might/could", "mark": "证据定语气" },
+      { "rule": "must have done 的否定推测不是 mustn't have,而是 can't / couldn't have done", "mark": "must↔can't" },
+      { "rule": "needn't have done(其实不必却做了)≠ didn't need to do(根本不必、也没做)", "mark": "白做 vs 没做" },
+      { "rule": "could have done 还可表「本可以做到却没做」(惋惜)", "mark": "could have = 本可以" }
+    ],
+    "why": [
+      "情态动词本身管「现在/将来」的态度;要把这种推测或评价移到「过去」,就用 have done 把动作钉在过去——所以是 modal + have + 过去分词。"
+    ],
+    "gaokaoPoints": [
+      "must have done / can't have done 的肯定与否定推测对应(高频:否定不用 mustn't have)。",
+      "should have done(本应而未)与 needn't have done(本不必却做)在语境完形/写作中常考。",
+      "may / might / could have done 表不确定可能;could have done 还表「本可以却没」。"
+    ],
+    "examVsReal": [
+      { "exam": "He must have left earlier.（考试:确定推测)", "real": "He's gotta have left earlier.", "note": "口语里 must have 常说成 must've / gotta have,但考试写完整形式" },
+      { "exam": "You should have told me.（考试:责备本应)", "real": "You shoulda told me.", "note": "口语 should have 常缩成 shoulda,书面仍写 should have done" }
+    ]
+  }
+}

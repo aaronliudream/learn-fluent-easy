@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Volunteering",
+  "source": "上外版选择性必修第一册 Unit 2 同主题完形(第一次做志愿者/敬老院的下午/海滩清洁/教孩子读书/给食物银行帮忙/为什么志愿服务有意义)。用词限本单元/初中/常见词,答案唯一,同词性,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Day as a Volunteer",
+      "text": "Last summer I signed up to (1)____ at a small animal shelter near my home. On my first morning I felt nervous, because I did not know (2)____ I could really be useful. A kind worker showed me (3)____ to clean the cages and feed the dogs safely. At first the work was hard and a little (4)____, and my back hurt by lunchtime. But when a frightened puppy finally came close and let me (5)____ it, all my tiredness disappeared. The manager told me (6)____ even small jobs matter a lot to the animals. By the end of the day I had learned (7)____ to care for several pets. I also made a few new (8)____ among the other helpers. I now go back every (9)____, and I am proud of the difference we (10)____ together. Volunteering has quickly become the best part of my week.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "volunteer",
+            "buy",
+            "sell",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "volunteer 做志愿者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "that",
+            "whether",
+            "which",
+            "what"
+          ],
+          "answer_index": 1,
+          "explanation": "did not know 后转述是否问题,用 whether。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "that",
+            "if",
+            "how",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "showed me how to do 教我怎么做。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "funny",
+            "lovely",
+            "lucky",
+            "awkward"
+          ],
+          "answer_index": 3,
+          "explanation": "a little awkward 有点别扭。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "touch",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "let me touch it 让我摸它。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "if",
+            "that",
+            "what",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "told me that 后接陈述。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "that",
+            "if",
+            "how",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "learned how to care 学会怎样照顾。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "mistakes",
+            "machines",
+            "friends"
+          ],
+          "answer_index": 3,
+          "explanation": "made new friends 交了新朋友。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weekend",
+            "year",
+            "century",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "every weekend 每个周末。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "make",
+            "break",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "make a difference 带来改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "An Afternoon at the Care Home",
+      "text": "Every Sunday afternoon, our class (1)____ to visit an old people's care home in our town. Most of the residents live far from their families, so they are always (2)____ to see young faces. When we arrive, we ask them (3)____ they would like to do that day. Some want to play chess, while others simply (4)____ to talk about their past. I once asked an old man (5)____ he had spent his life, and his stories kept us listening for an hour. Helping there has taught me (6)____ a little time can mean so much to someone who is (7)____. The care home staff often say (8)____ our visits bring real joy to the place. Before we leave, the residents always (9)____ us to come again soon. I now understand (10)____ my grandmother used to enjoy company so much.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "refuses",
+            "forgets",
+            "volunteers",
+            "sells"
+          ],
+          "answer_index": 2,
+          "explanation": "volunteers to visit 自愿去探访。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sorry",
+            "angry",
+            "afraid",
+            "happy"
+          ],
+          "answer_index": 3,
+          "explanation": "happy to see 很高兴见到。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "what",
+            "that",
+            "if",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "ask them what they would like 转述特殊疑问,用 what。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "fail",
+            "want",
+            "stop",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "want to talk 想聊天。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "that",
+            "if",
+            "how",
+            "whether"
+          ],
+          "answer_index": 2,
+          "explanation": "asked him how he had spent 转述特殊疑问,用 how。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "if",
+            "what",
+            "which",
+            "that"
+          ],
+          "answer_index": 3,
+          "explanation": "taught me that 后接陈述。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lonely",
+            "rich",
+            "young",
+            "busy"
+          ],
+          "answer_index": 0,
+          "explanation": "someone who is lonely 孤独的人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "if",
+            "that",
+            "what",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "say that 后接陈述。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "break",
+            "urge",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "urge us to come again 力劝我们再来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "that",
+            "if",
+            "whether",
+            "why"
+          ],
+          "answer_index": 3,
+          "explanation": "understand why 转述原因,用 why。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Cleaning Up the Beach",
+      "text": "One Saturday our environmental club held a beach (1)____ to fight against plastic pollution. More than fifty students came, each carrying a bag to (2)____ rubbish. We did not (3)____ how much waste we would find, but the beach turned out to be covered in plastic bottles and bags. Our leader explained (4)____ even one small bottle can harm sea animals for years. So we worked hard all morning to (5)____ the sand clean again. By noon we had filled dozens of (6)____ with plastic waste. A passing fisherman thanked us and asked (7)____ we did this kind of work. We told him (8)____ we wanted to protect the ocean for the future. The day was tiring, but it felt (9)____. As we walked home, we (10)____ each other to keep the beach clean in the months ahead.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "clean-up",
+            "party",
+            "race",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a beach clean-up 海滩清洁活动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "collect",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "collect rubbish 收集垃圾。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "that",
+            "what",
+            "know",
+            "which"
+          ],
+          "answer_index": 2,
+          "explanation": "did not know 不知道。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "if",
+            "what",
+            "which",
+            "that"
+          ],
+          "answer_index": 3,
+          "explanation": "explained that 后接陈述。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "make",
+            "leave",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "make the sand clean 使沙滩变干净。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "bags",
+            "songs",
+            "games"
+          ],
+          "answer_index": 1,
+          "explanation": "filled dozens of bags 装满几十个袋子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "that",
+            "whether",
+            "why",
+            "if"
+          ],
+          "answer_index": 2,
+          "explanation": "asked why 转述原因,用 why。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "if",
+            "what",
+            "which",
+            "that"
+          ],
+          "answer_index": 3,
+          "explanation": "told him that 后接陈述。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rewarding",
+            "boring",
+            "useless",
+            "wrong"
+          ],
+          "answer_index": 0,
+          "explanation": "felt rewarding 感到有意义。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "urged",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "urged each other 互相敦促。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Teaching Children to Read",
+      "text": "After school I (1)____ at a free reading class for younger children whose parents work late. At first I was not sure (2)____ I could teach anyone, since I am only a student myself. But my teacher said (3)____ patience matters more than perfect skill. Each afternoon I help a child choose a book and read it slowly, asking (4)____ they understand every page. When a shy boy finally read a whole story by (5)____, his happy smile made all my effort worth it. The children often ask me (6)____ words mean, and answering them makes me feel useful. Their parents have told me (7)____ grateful they are for the help. I have learned (8)____ teaching others also teaches me a lot. Now I look (9)____ to these afternoons every week. Helping these children (10)____ a real difference in their school marks.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "refuse",
+            "sleep",
+            "volunteer",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "volunteer at a class 在班里做志愿者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "that",
+            "what",
+            "which",
+            "whether"
+          ],
+          "answer_index": 3,
+          "explanation": "not sure whether 不确定是否,用 whether。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "that",
+            "if",
+            "what",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "said that 后接陈述。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "that",
+            "if",
+            "why",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "asking if they understand 转述是否,用 if。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "himself",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "read by himself 自己读。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "that",
+            "if",
+            "whether",
+            "what"
+          ],
+          "answer_index": 3,
+          "explanation": "ask me what words mean 转述特殊疑问,用 what。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "how",
+            "that",
+            "if",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "told me how grateful they are 转述感叹,用 how。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "if",
+            "that",
+            "what",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "learned that 后接陈述。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "after",
+            "down",
+            "forward",
+            "into"
+          ],
+          "answer_index": 2,
+          "explanation": "look forward to 盼望。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "loses",
+            "breaks",
+            "sells",
+            "makes"
+          ],
+          "answer_index": 3,
+          "explanation": "makes a real difference 带来真正的改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Helping at the Food Bank",
+      "text": "On weekends I help out at a local food (1)____ that gives meals to families in need. My job is to sort the donations and (2)____ them into boxes for delivery. People from all over the city (3)____ rice, oil and other food, and we make sure nothing is (4)____. The manager once asked me (5)____ I had ever felt hungry myself, and his question made me think deeply. He told me (6)____ many of the families were once just like mine. I now understand (7)____ such places are so important in a big city. Every box we pack can feed a family for a (8)____. The work can be hard, but the smiles we (9)____ in return are worth it. I no longer (10)____ for granted the food on my own table at home.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "bank",
+            "garden",
+            "market",
+            "stadium"
+          ],
+          "answer_index": 0,
+          "explanation": "a food bank 食物银行。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "pack",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "pack them into boxes 装进箱子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "buy",
+            "throw",
+            "donate",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "donate food 捐赠食物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "safe",
+            "ready",
+            "clean",
+            "wasted"
+          ],
+          "answer_index": 3,
+          "explanation": "nothing is wasted 没有浪费。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "whether",
+            "that",
+            "what",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "asked me whether 转述是否,用 whether。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "if",
+            "that",
+            "what",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "told me that 后接陈述。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "that",
+            "if",
+            "why",
+            "whether"
+          ],
+          "answer_index": 2,
+          "explanation": "understand why 转述原因,用 why。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "second",
+            "metre",
+            "price",
+            "week"
+          ],
+          "answer_index": 3,
+          "explanation": "for a week 维持一周。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "get",
+            "lose",
+            "break",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "the smiles we get 我们收获的笑容。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "give",
+            "take",
+            "sell",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "take ... for granted 把……视为理所当然。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Why Volunteering Matters",
+      "text": "Some people probably (1)____ that volunteer work is just hard work with no pay, but in fact it can change your life in surprising ways. While volunteering, you can find out (2)____ kind of work suits you and build a clearer goal for the future. It is also a great way to learn (3)____ you are good at working in a team. When you help others, you often discover skills you did not (4)____ know you had. Volunteering can raise your (5)____ by giving you the chance to try something new. It also helps you to (6)____ what you already have instead of worrying about small things. Many volunteers say (7)____ they receive far more than they give. The most important thing is to choose work that (8)____ something to you. If the work feels like a (9)____, it will not bring you much joy. In the end, helping others is also a way of (10)____ yourself.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "assume",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "assume that 想当然认为。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "that",
+            "if",
+            "whether",
+            "what"
+          ],
+          "answer_index": 3,
+          "explanation": "find out what kind 转述,用 what。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "whether",
+            "that",
+            "why",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "learn whether 转述是否,用 whether。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "never",
+            "even",
+            "soon",
+            "ever"
+          ],
+          "answer_index": 1,
+          "explanation": "did not even know 甚至不知道。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "confidence",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "raise your confidence 提升自信。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "sell",
+            "lose",
+            "value"
+          ],
+          "answer_index": 3,
+          "explanation": "value what you have 珍惜所拥有的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "that",
+            "if",
+            "what",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "say that 后接陈述。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "means",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 1,
+          "explanation": "means something to you 对你有意义。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "gift",
+            "song",
+            "chore",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "feels like a chore 像苦差事。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "selling",
+            "hiding",
+            "losing",
+            "helping"
+          ],
+          "answer_index": 3,
+          "explanation": "a way of helping yourself 也是帮助自己。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "grade": 11,
+  "content": {
+    "title": "主语从句 & 表语从句速查",
+    "intro": "主语从句和表语从句都是名词性从句:主语从句作句子主语,表语从句跟在系动词 be 后作表语。难点是选连接词。口诀:陈述完整事实→that;表'是否'→whether(不用 if);从句缺主语/宾语→what;问方式/程度→how;问原因→why。",
+    "table": {
+      "headers": ["连接词", "用法 / 例句"],
+      "rows": [
+        ["that", "从句完整、陈述事实:That language shapes thought is clear. / The truth is that words matter."],
+        ["whether", "表'是否'的疑问:Whether it is true is unknown. / The question is whether we can.（不用 if）"],
+        ["what", "从句缺主语或宾语:What matters is… / This is what language does（缺宾语）"],
+        ["how", "问方式/程度:How the brain learns is amazing. / It is amazing how quickly they react."],
+        ["why", "问原因:Why so many languages die is a mystery. / That is why he gave up."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语从句嫌句首太长 → 用 it 作形式主语,真主语后置", "mark": "It is true that… = That… is true" },
+      { "rule": "主语从句作主语,谓语一律用单数", "mark": "What we say matters（is/matters，不用 are）" },
+      { "rule": "主语/表语从句表'是否'只能用 whether,不用 if", "mark": "Whether… is the question √ / If… ×" },
+      { "rule": "The reason is + 表语从句,用 that，不用 why", "mark": "The reason is that… √ / The reason is why… ×（但 That is why… √）" }
+    ],
+    "why": [
+      "选词只看两点:① 从句缺不缺成分——缺主语/宾语就用 what(它本身在从句里当主语或宾语);不缺就在 that/whether/how/why 里按句意挑。② 句意是陈述事实(that)、还是疑问'是否'(whether)、方式(how)、原因(why)。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:句首主语从句或 be 后表语从句中填连接词,先看从句是否缺主宾,再看句意。",
+      "易错点:表'是否'用 whether 不用 if;The reason is that…(不用 why);what 引导的主语从句谓语用单数。"
+    ],
+    "examVsReal": [
+      { "exam": "What I want to say is that language shapes us.（考试/书面完整）", "real": "The thing is, language shapes us.", "note": "口语常用 'The thing is,' 起头,省去完整的主/表语从句结构。" },
+      { "exam": "Whether it is true remains unknown.（考试用 whether）", "real": "We don't really know if it's true.", "note": "宾语位置口语可用 if;但主语/表语从句仍须用 whether。" }
+    ]
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Charity",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修二 Unit 3 同主题听力(策划义卖/食物银行/动物收容所/冰桶挑战/旧书募集/善意接力)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Planning a Charity Sale",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Mr Green asked us to plan a charity event for the school. Any ideas?",
+        "Tom: How about holding a charity sale? We could sell things we make ourselves.",
+        "Lucy: That's a great idea. What could we sell?",
+        "Tom: I enjoy baking, so I could make some cakes and cookies.",
+        "Lucy: Perfect. I'm good at painting, so I'll sell some handmade cards.",
+        "Tom: Who should we give the money to?",
+        "Lucy: Let's donate it to the children's hospital in our city.",
+        "Tom: Wonderful. I'm really looking forward to organising it together."
+      ],
+      "translation_cn": "Green 老师让 Lucy 和 Tom 为学校策划慈善活动;Tom 提议办义卖,卖自己做的东西;Tom 会烤蛋糕饼干,Lucy 擅长画画会卖手工卡片;他们决定把钱捐给本市儿童医院;Tom 很期待一起筹办。",
+      "questions": [
+        {
+          "stem": "What event are the two students planning?",
+          "options": [
+            "A charity sale.",
+            "A sports day.",
+            "A school trip.",
+            "A music concert."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Tom make for the sale?",
+          "options": [
+            "Handmade cards.",
+            "Cakes and cookies.",
+            "Posters.",
+            "Toys."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Lucy good at?",
+          "options": [
+            "Painting.",
+            "Singing.",
+            "Cooking.",
+            "Dancing."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who will receive the money they raise?",
+          "options": [
+            "Their head teacher.",
+            "The children's hospital.",
+            "A local shop.",
+            "Themselves."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom feel about the plan?",
+          "options": [
+            "He thinks it will fail.",
+            "He is too busy for it.",
+            "He is looking forward to it.",
+            "He dislikes the idea."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 What a Food Bank Does",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A food bank is a place that collects food and gives it to people in need.",
+        "Volunteers sort the food carefully and pack it into boxes.",
+        "Families who do not have enough to eat can come and receive a box for free.",
+        "Most of the food is donated by shops, schools and ordinary people.",
+        "Thanks to food banks, fewer people in the city go hungry."
+      ],
+      "translation_cn": "食物银行收集食物并分发给有需要的人;志愿者仔细分类并装箱;吃不饱的家庭可以免费领取一箱;食物大多由商店、学校和普通人捐赠;有了食物银行,城里挨饿的人减少了。",
+      "questions": [
+        {
+          "stem": "What does a food bank do?",
+          "options": [
+            "It sells food at low prices.",
+            "It cooks meals in restaurants.",
+            "It grows vegetables on a farm.",
+            "It collects food and gives it to people in need."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do the volunteers do with the food?",
+          "options": [
+            "They sort it and pack it into boxes.",
+            "They throw most of it away.",
+            "They eat it themselves.",
+            "They sell it to shops."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How much do needy families pay for a box?",
+          "options": [
+            "A small fee.",
+            "Nothing; it is free.",
+            "The full price.",
+            "Double the price."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where does most of the food come from?",
+          "options": [
+            "The government only.",
+            "Foreign countries.",
+            "Donations from shops, schools and people.",
+            "Faraway farms."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the result of having food banks?",
+          "options": [
+            "More people become rich.",
+            "Food prices go up.",
+            "Shops have to close.",
+            "Fewer people go hungry."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Volunteering at the Animal Shelter",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: I spent my whole weekend volunteering at the animal shelter.",
+        "Jack: Really? What did you do there?",
+        "Mia: I fed the dogs and helped clean their cages.",
+        "Jack: That sounds like hard work. Did you enjoy it?",
+        "Mia: Yes, I loved it. The animals are so grateful for a little care.",
+        "Jack: Maybe I could join you next time. I'm interested in helping too.",
+        "Mia: That would be great. They always need more volunteers.",
+        "Jack: Then count me in. I can't wait to meet the dogs."
+      ],
+      "translation_cn": "Mia 整个周末在动物收容所做志愿者;喂狗、帮忙清理笼子;虽然辛苦但她很喜欢,动物对一点点照顾都心怀感激;Jack 也有兴趣帮忙,想下次加入;Mia 说收容所总缺志愿者;Jack 决定参加,迫不及待想见小狗。",
+      "questions": [
+        {
+          "stem": "Where did Mia volunteer at the weekend?",
+          "options": [
+            "At an animal shelter.",
+            "At a hospital.",
+            "At a library.",
+            "At a school."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Mia do there?",
+          "options": [
+            "She painted the walls.",
+            "She fed the dogs and cleaned their cages.",
+            "She cooked the meals.",
+            "She sold tickets."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did Mia feel about the work?",
+          "options": [
+            "She found it boring.",
+            "She regretted going.",
+            "She loved it despite the hard work.",
+            "She was angry about it."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Jack want to do?",
+          "options": [
+            "Stay at home instead.",
+            "Adopt all the dogs.",
+            "Open his own shelter.",
+            "Join Mia and help next time."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the shelter always need?",
+          "options": [
+            "More volunteers.",
+            "Less food.",
+            "Fewer animals.",
+            "Only money."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 The Ice Bucket Challenge",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A few years ago, a fun activity called the Ice Bucket Challenge spread around the world.",
+        "People poured a bucket of ice and water over their heads.",
+        "Then they asked their friends to do the same or to give money.",
+        "The aim was to raise awareness of a serious disease and to collect donations.",
+        "In the end, the challenge raised millions of dollars for research."
+      ],
+      "translation_cn": "几年前,一项叫'冰桶挑战'的有趣活动传遍世界;人们把一桶冰水浇在头上;然后请朋友照做或捐钱;目的是提高对一种严重疾病的关注并募集善款;最终为研究筹得数百万美元。",
+      "questions": [
+        {
+          "stem": "What did people do in the Ice Bucket Challenge?",
+          "options": [
+            "They ran a long race.",
+            "They poured ice water over their heads.",
+            "They climbed a mountain.",
+            "They sang in public."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did they ask their friends to do?",
+          "options": [
+            "Pay for their dinner.",
+            "Keep it a secret.",
+            "Do the same or donate money.",
+            "Stop the activity."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What was the aim of the challenge?",
+          "options": [
+            "To win a big prize.",
+            "To have a private party.",
+            "To sell ice.",
+            "To raise awareness and collect donations."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How much did the challenge raise in the end?",
+          "options": [
+            "Millions of dollars.",
+            "Only a few coins.",
+            "Nothing at all.",
+            "Only food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was the money used for?",
+          "options": [
+            "Building a new school.",
+            "Research into a serious disease.",
+            "Buying more ice.",
+            "A long holiday."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 The Used-Book Drive",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ella: Have you heard about the used-book drive next week?",
+        "Sam: No, what is it about?",
+        "Ella: We collect books we don't need and give them to a village school.",
+        "Sam: What a kind idea! I have lots of old storybooks at home.",
+        "Ella: Perfect. Could you bring them to the school library on Monday?",
+        "Sam: Of course. Is there anything else I can do to help?",
+        "Ella: We also need volunteers to pack the books. Would you mind helping?",
+        "Sam: Not at all. I'd be happy to spend Saturday packing books."
+      ],
+      "translation_cn": "Ella 提到下周的旧书募集活动;收集不需要的书捐给乡村学校;Sam 家里有很多旧故事书,愿意周一带到学校图书馆;他还想多帮忙;Ella 说需要志愿者装箱;Sam 乐意周六去帮忙装书。",
+      "questions": [
+        {
+          "stem": "What is the book drive for?",
+          "options": [
+            "Selling new books for profit.",
+            "Building a new library.",
+            "Giving used books to a village school.",
+            "Buying toys."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Sam have at home?",
+          "options": [
+            "Many new toys.",
+            "Old clothes.",
+            "Spare money.",
+            "Lots of old storybooks."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When should Sam bring the books?",
+          "options": [
+            "On Monday.",
+            "On Sunday.",
+            "Next month.",
+            "Right now."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What extra help does Ella need?",
+          "options": [
+            "Drivers only.",
+            "Volunteers to pack the books.",
+            "More money.",
+            "A bigger room."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Sam respond to helping on Saturday?",
+          "options": [
+            "He firmly refuses.",
+            "He says he is too busy.",
+            "He is happy to help.",
+            "He asks to be paid."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Pass the Kindness On",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple way to make the world a little kinder.",
+        "The next time someone helps you, do not just say thank you.",
+        "Instead, try to pass that kindness on to another person.",
+        "You could help a classmate, comfort a friend or give up your seat.",
+        "These small acts cost nothing, but together they can change a whole community."
+      ],
+      "translation_cn": "让世界更友善的简单方法:下次有人帮你时,别只说谢谢;试着把这份善意传递给别人;可以帮助同学、安慰朋友或让座;这些小事毫不费钱,但合在一起就能改变整个社区。",
+      "questions": [
+        {
+          "stem": "What is this passage mainly about?",
+          "options": [
+            "Saving money carefully.",
+            "Winning prizes.",
+            "Making friends abroad.",
+            "Passing kindness on to others."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker suggest doing when someone helps you?",
+          "options": [
+            "Pass the kindness on to another person.",
+            "Pay them back at once.",
+            "Forget about it quickly.",
+            "Keep it a secret."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which is given as an example of a small act of kindness?",
+          "options": [
+            "Buying a car.",
+            "Giving up your seat.",
+            "Travelling abroad.",
+            "Winning a race."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How much do these small acts cost?",
+          "options": [
+            "A lot of money.",
+            "A whole day.",
+            "Nothing.",
+            "A large gift."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can these small acts do together?",
+          "options": [
+            "Make everyone rich.",
+            "Build new houses.",
+            "Stop the rain.",
+            "Change a whole community."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

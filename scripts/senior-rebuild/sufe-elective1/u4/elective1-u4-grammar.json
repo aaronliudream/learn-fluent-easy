@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grammar_title": "非限制性定语从句(Non-defining relative clauses)",
+  "source": "上外版选择性必修第一册 Unit 4 Grammar in Use:非限制性定语从句(逗号分隔,补充说明,禁用 that、关系词不可省)。句子地道、未来生活主题、答案唯一。造题铁律:非限制性禁用 that;which/who 不混;辨析限制性/非限制性。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "which 引导非限制性(指物或整个主句)",
+      "overview": "逗号后用 which 补充说明前面的某个事物,或用 which 指代整个主句的内容(The dome house, which is energy-saving, …;Tom passed, which pleased us)。非限制性不可用 that。"
+    },
+    {
+      "code": "u4.02",
+      "point": "who / whom 引导非限制性(指人)",
+      "overview": "逗号后用 who(从句缺主语)或 whom(从句缺宾语/介词后)补充说明前面的人(My uncle, who lives in Shanghai, …;Lina, whom we trust, …)。非限制性不可用 that。"
+    },
+    {
+      "code": "u4.03",
+      "point": "whose / where / when 引导非限制性 + 与限制性辨析",
+      "overview": "逗号后用 whose(所属)、where(地点)、when(时间)补充说明;并辨析:有逗号→非限制性(禁 that、关系词不可省);无逗号且从句缺主宾→限制性(可用 that)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "The dome house, ____ is energy-saving, needs very little power to heat.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 house(指物)→ which;非限制性禁用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "My new smartphone, ____ I bought last year, controls every device at home.",
+      "options": [
+        "who",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 smartphone(指物、从句缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The walls can move backwards, ____ makes the living room any size you fancy.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代整个主句的内容(墙能移动这件事)→ which;非限制性禁 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The smart system filters the air, ____ then carries your favourite perfume.",
+      "options": [
+        "who",
+        "where",
+        "when",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 air(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The power wall, ____ replaces the old sockets, lets you attach any appliance.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 power wall(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Robots took over almost all the housework, ____ gave people far more leisure time.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整个主句的内容→ which;非限制性禁 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The integrated laundry, ____ uses easy-care fabric, never needs ironing.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 laundry(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Food is now grown in laboratories, ____ the government carefully controls.",
+      "options": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 laboratories 里的食物(指物、缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The home computer pays the bills, ____ saves the family a lot of trouble.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整个主句的内容→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The simulator, ____ can create any scene, lets you go surfing at home.",
+      "options": [
+        "who",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 simulator(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "My breakfast is planned with a controlled quantity, ____ I have grown used to.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 controlled quantity(指物、缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The robot passed every safety test, ____ surprised the whole research team.",
+      "options": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代整个主句的内容→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The dome roof, ____ is made of clear glass, brings nature close to you.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 dome roof(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Solar panels supply most of the power, ____ keeps the home almost free to run.",
+      "options": [
+        "who",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代整个主句的内容→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The X15 model, ____ my parents bought years ago, still works perfectly today.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 X15 model(指物、缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Every room has a power wall, ____ you can use instead of an electric socket.",
+      "options": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 power wall(指物、缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The lights turned on automatically, ____ told me it was time to get up.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "which 指代整个主句的内容→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The new fabric, ____ comes out of the laundry ready to wear, saves much time.",
+      "options": [
+        "who",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 fabric(指物)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The zoids fixed teeth and performed surgery, ____ humans could no longer do as well.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明前面提到的工作内容(指物、缺宾语)→ which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The city is full of grey skyscrapers, ____ all look exactly the same.",
+      "options": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 skyscrapers(指物)→ which。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "My uncle, ____ lives in a smart house, never does any housework himself.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 uncle(指人、缺主语)→ who;非限制性禁 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Lina X15, ____ my parents trust completely, has looked after me all my life.",
+      "options": [
+        "which",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 Lina(指人、缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The lecturer from Los Angeles, ____ spoke about polar bears, came to our school today.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 lecturer(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "My father, ____ a hospital once employed as a surgeon, now studies robot design.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 father(指人、employed 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The engineers, ____ designed the home computer, won a major prize for it.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 engineers(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Margie, ____ a mechanical teacher taught at home, had never seen a real book.",
+      "options": [
+        "which",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 Margie(指人、taught 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Tommy, ____ found the old book in the attic, showed it to Margie proudly.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 Tommy(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The nanny robot, ____ the family had bought new, soon became part of their life.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 nanny robot 当作人称指代(缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "My grandmother, ____ is used to her old neighbourhood, finds the smart home strange.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 grandmother(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Stephen, ____ a million people have watched online, talks about life on another planet.",
+      "options": [
+        "which",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 Stephen(指人、watched 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The elderly residents, ____ love the old lilong lanes, are slow to move away.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 residents(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Dr Johnson, ____ a large car company employs, predicts millions of self-driving cars.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 Dr Johnson(指人、employs 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The children, ____ have never been outside, breathe only recycled air.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 children(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Mr Lee, ____ everyone here respects, designed the first home robot in our city.",
+      "options": [
+        "which",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 Mr Lee(指人、respects 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The little boy, ____ made two wishes in the film, hoped to become a real child.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 boy(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "My mum, ____ the new system never replaces, still cooks on special days.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 mum(指人、replaces 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The scientists, ____ first built the zoids, never imagined they would take over.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后补充说明 scientists(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Anna, ____ I met at the technology fair, dreams of a fully automatic home.",
+      "options": [
+        "which",
+        "whom",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明 Anna(指人、met 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The housekeeper, ____ has been with the family for years, knows every routine.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明 housekeeper(指人、缺主语)→ who。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Our neighbour, ____ a robot company recently hired, tests new home gadgets.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "逗号后补充说明 neighbour(指人、hired 缺宾语)→ whom。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The boy, ____ mother had passed away, lived alone with a robot servant.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后表所属(boy 的 mother)→ whose;非限制性禁 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Margie went up to the attic, ____ Tommy had found the very old book.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明地点 attic、从句完整 → where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was the year 2157, ____ children learned everything from a mechanical teacher.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明时间 2157、从句完整 → when。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "This is the smart home ____ controls the lights, heating and security for you.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "无逗号、限制性、从句缺主语、先行词指物 → that(限制性可用 that)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The dome house, ____ roof is covered with solar panels, needs almost no power.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后表所属(house 的 roof)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We walked into a huge hall, ____ the simulator could create any adventure we liked.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明地点 hall、从句完整 → where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I still remember the morning, ____ my lights first turned on all by themselves.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明时间 morning、从句完整 → when。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The appliance ____ I attached to the power wall started working at once.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "无逗号、限制性、从句缺宾语、先行词指物 → that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Lina, ____ metallic voice echoed around the room, told me not to be late.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后表所属(Lina 的 voice)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He took me to the laboratory, ____ all the food for the city is now grown.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明地点 laboratory、从句完整 → where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Mum often talks about the old days, ____ people could buy food at the market.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明时间 the old days、从句完整 → when。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The reason ____ they bought the robot was that they had no time for children.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "无逗号、限制性、the reason 后从句缺原因状语,口语中常用 that 替代 why → that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Tommy, ____ house had an old attic, kept finding strange things up there.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后表所属(Tommy 的 house)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I rushed down to the lobby, ____ the other children in my building gathered.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明地点 lobby、从句完整 → where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Things went wrong on the day, ____ the Earth was passing close to Jupiter.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明时间 the day、从句完整 → when。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The smart device ____ connects all the others is the home computer itself.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "无逗号、限制性、从句缺主语、先行词指物 → that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The surgeon, ____ skill once amazed everyone, was replaced by a clever zoid.",
+      "options": [
+        "whose",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "逗号后表所属(surgeon 的 skill)→ whose。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We moved to a new flat, ____ every wall could slide to change the room size.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "逗号后补充说明地点 flat、从句完整 → where。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I look forward to the time, ____ a home robot will do all the boring chores.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "逗号后补充说明时间 the time、从句完整 → when。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The robot ____ the company advertised as reliable soon became very popular.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "无逗号、限制性、从句缺宾语、先行词指物 → that。"
+    }
+  ]
+}

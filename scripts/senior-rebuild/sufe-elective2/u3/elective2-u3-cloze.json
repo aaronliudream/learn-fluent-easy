@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Charity",
+  "source": "上外版选择性必修二 Unit 3 同主题完形(书籍募集/养老院做志愿者/校园义卖/慈善马拉松/路边善举/人们为何给予)。用词限本单元/初中/常见词,答案唯一、选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Book Donation Drive",
+      "text": "Last month, our class decided to organise a book donation (1)____ for a village school. Many children there have very few books to (2)____. First, we put up colourful (3)____ around the school to tell everyone about our plan. Then students brought in storybooks they no longer (4)____. Within a week, we had (5)____ more than three hundred books. We carefully (6)____ them by age, so that younger children would get picture books. On Friday, we (7)____ all the books into big boxes and sent them to the village. The head teacher there was very (8)____ and thanked us warmly. Helping others made every one of us feel (9)____. We learned that even a small (10)____ can bring a lot of happiness to people in need.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "drive",
+            "race",
+            "meal",
+            "storm"
+          ],
+          "answer_index": 0,
+          "explanation": "a donation drive 一次募集活动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "read",
+            "buy",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "few books to read 可读的书。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prices",
+            "meals",
+            "posters",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "put up posters 张贴海报。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cooked",
+            "sold",
+            "lost",
+            "needed"
+          ],
+          "answer_index": 3,
+          "explanation": "no longer needed 不再需要。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "collected",
+            "eaten",
+            "broken",
+            "spent"
+          ],
+          "answer_index": 0,
+          "explanation": "had collected 已收集。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "threw",
+            "sorted",
+            "ate",
+            "hid"
+          ],
+          "answer_index": 1,
+          "explanation": "sorted them by age 按年龄分类。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "drank",
+            "slept",
+            "packed",
+            "cried"
+          ],
+          "answer_index": 2,
+          "explanation": "packed into boxes 装箱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "afraid",
+            "grateful"
+          ],
+          "answer_index": 3,
+          "explanation": "very grateful 非常感激。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "jealous",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "feel proud 感到自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "act",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "a small act 小小的举动。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Volunteering at the Nursing Home",
+      "text": "Every Saturday, I (1)____ at a nursing home near my house. At first, I was a little (2)____, because I did not know how to talk to the elderly. But the old people were so (3)____ that I soon relaxed. I help them read letters, water the (4)____, and listen to their wonderful stories about the past. One grandmother always (5)____ me with a warm smile when I arrive. Spending time with them has taught me to be (6)____ and kind. I have also learned that many of them feel (7)____ and simply want someone to talk to. A few minutes of company can really (8)____ their whole day. My friends sometimes ask why I give up my (9)____ time to do this. The answer is simple: helping others makes me truly (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "shop",
+            "volunteer",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "volunteer at 在……做志愿者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "rich",
+            "tall",
+            "nervous"
+          ],
+          "answer_index": 3,
+          "explanation": "a little nervous 有点紧张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "friendly",
+            "rude",
+            "noisy",
+            "lazy"
+          ],
+          "answer_index": 0,
+          "explanation": "so friendly 如此友好。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "flowers",
+            "noises",
+            "engines"
+          ],
+          "answer_index": 1,
+          "explanation": "water the flowers 浇花。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "throws",
+            "sells",
+            "greets",
+            "breaks"
+          ],
+          "answer_index": 2,
+          "explanation": "greets me with a smile 微笑迎接我。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lazy",
+            "selfish",
+            "careless",
+            "patient"
+          ],
+          "answer_index": 3,
+          "explanation": "be patient 有耐心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lonely",
+            "proud",
+            "rich",
+            "busy"
+          ],
+          "answer_index": 0,
+          "explanation": "feel lonely 感到孤独。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "darken",
+            "brighten",
+            "waste",
+            "ruin"
+          ],
+          "answer_index": 1,
+          "explanation": "brighten their day 让他们一天更明亮。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lost",
+            "full",
+            "free",
+            "cold"
+          ],
+          "answer_index": 2,
+          "explanation": "free time 空闲时间。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "jealous",
+            "bored",
+            "angry",
+            "happy"
+          ],
+          "answer_index": 3,
+          "explanation": "makes me happy 让我快乐。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Our School Charity Sale",
+      "text": "To raise money for children in poor areas, our school held a charity (1)____ last weekend. Each class set up a small (2)____ to sell things they had made. My friends and I baked cakes and (3)____ lemonade. We were a little worried that no one would (4)____ our cakes, but they sold out in an hour! Other students sold handmade cards, old books and toys. Teachers also (5)____ by buying lots of food. By the end of the day, we had (6)____ over two thousand yuan. All the money was (7)____ to a charity that helps children go to school. Everyone felt (8)____ to have helped. The event also taught us how to work as a (9)____. We are already planning an even bigger sale for next (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sale",
+            "storm",
+            "race",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "a charity sale 义卖。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "stall",
+            "noise",
+            "engine"
+          ],
+          "answer_index": 1,
+          "explanation": "set up a stall 摆摊。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ate",
+            "broke",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "sold lemonade 卖柠檬水。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "break",
+            "lose",
+            "buy"
+          ],
+          "answer_index": 3,
+          "explanation": "no one would buy 没人会买。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "helped",
+            "slept",
+            "cried",
+            "left"
+          ],
+          "answer_index": 0,
+          "explanation": "teachers helped 老师们也来帮忙。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lost",
+            "raised",
+            "wasted",
+            "spent"
+          ],
+          "answer_index": 1,
+          "explanation": "had raised 筹得。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "thrown",
+            "sold",
+            "given",
+            "eaten"
+          ],
+          "answer_index": 2,
+          "explanation": "was given to a charity 捐给慈善机构。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "afraid",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "felt proud 感到自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "team",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "work as a team 作为团队合作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "minute",
+            "year",
+            "second",
+            "metre"
+          ],
+          "answer_index": 1,
+          "explanation": "next year 明年。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Charity Marathon",
+      "text": "This spring, I signed up for my first charity (1)____. I had been (2)____ for it for a whole month, running a little farther each day. On the morning of the race, thousands of runners (3)____ at the starting line, all hoping to raise money for sick children. My legs felt heavy, but the cheering crowd (4)____ me to keep going. Whenever I wanted to stop, I thought about the children we were (5)____, and I found new strength. Crossing the finish line was an amazing (6)____. I was tired but extremely (7)____ of myself. Together, the runners (8)____ a huge amount of money that day. The best part was knowing that our hard work would (9)____ a real difference. I have already promised myself to (10)____ part again next year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "meal",
+            "storm",
+            "marathon",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "a charity marathon 慈善马拉松。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleeping",
+            "shopping",
+            "cooking",
+            "training"
+          ],
+          "answer_index": 3,
+          "explanation": "had been training 一直在训练。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "gathered",
+            "slept",
+            "cried",
+            "left"
+          ],
+          "answer_index": 0,
+          "explanation": "runners gathered 跑者聚集。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "frightened",
+            "encouraged",
+            "ignored",
+            "blocked"
+          ],
+          "answer_index": 1,
+          "explanation": "the crowd encouraged me 人群鼓励我。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hurting",
+            "ignoring",
+            "helping",
+            "leaving"
+          ],
+          "answer_index": 2,
+          "explanation": "the children we were helping 我们在帮助的孩子。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "feeling"
+          ],
+          "answer_index": 3,
+          "explanation": "an amazing feeling 美妙的感觉。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "proud",
+            "afraid",
+            "bored",
+            "jealous"
+          ],
+          "answer_index": 0,
+          "explanation": "proud of myself 为自己自豪。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "raised",
+            "wasted",
+            "hid"
+          ],
+          "answer_index": 1,
+          "explanation": "raised money 筹到钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "break",
+            "lose",
+            "make",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "make a difference 带来改变。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "throw",
+            "sell",
+            "lose",
+            "take"
+          ],
+          "answer_index": 3,
+          "explanation": "take part 参加。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Small Act of Kindness",
+      "text": "It was a cold winter evening when I saw an old man sitting outside a shop. He looked (1)____ and was holding a small cardboard sign. Most people walked past without even (2)____ at him. At first, I was not sure what to (3)____. Then I remembered the warm soup my mother had packed for me. I walked over and (4)____ it to him with a smile. His tired face suddenly lit up with (5)____. \"Thank you, young man,\" he said softly. That simple moment (6)____ my whole evening. I realised that helping someone does not always (7)____ a lot of money. Sometimes a small, (8)____ act is enough to change someone's day. Since then, I always try to be (9)____ to people in need. Kindness, I have learned, is a gift that makes both people (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "cold",
+            "happy",
+            "rich",
+            "proud"
+          ],
+          "answer_index": 0,
+          "explanation": "looked cold 看起来很冷。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eating",
+            "looking",
+            "sleeping",
+            "buying"
+          ],
+          "answer_index": 1,
+          "explanation": "without even looking 甚至看都不看。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eat",
+            "buy",
+            "do",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "what to do 该做什么。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "threw",
+            "sold",
+            "hid",
+            "offered"
+          ],
+          "answer_index": 3,
+          "explanation": "offered it to him 把它递给他。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "gratitude",
+            "anger",
+            "fear",
+            "boredom"
+          ],
+          "answer_index": 0,
+          "explanation": "lit up with gratitude 满是感激。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ruined",
+            "brightened",
+            "wasted",
+            "darkened"
+          ],
+          "answer_index": 1,
+          "explanation": "brightened my evening 照亮了我的夜晚。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "eat",
+            "break",
+            "need",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "does not need a lot of money 不需要很多钱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cruel",
+            "lazy",
+            "rude",
+            "kind"
+          ],
+          "answer_index": 3,
+          "explanation": "a small, kind act 小小的善举。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "helpful",
+            "rude",
+            "lazy",
+            "cruel"
+          ],
+          "answer_index": 0,
+          "explanation": "be helpful to people 乐于助人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "jealous",
+            "happy",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "makes both people happy 让双方都快乐。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Why Do People Give?",
+      "text": "Have you ever wondered why people (1)____ money to strangers they will never meet? Scientists say the main (2)____ is empathy. When we can imagine another person's (3)____, we naturally want to help. Giving also makes the (4)____ feel good, not just the receiver. Studies show that people who help others often feel (5)____ and less stressed. Of course, a sense of (6)____ matters too. Some people give because they believe it is the (7)____ thing to do. Others give simply because they once received help and want to (8)____ it forward. Whatever the reason, every (9)____ act, big or small, makes the world a little kinder. Perhaps that is why the spirit of giving has lasted for thousands of (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eat",
+            "sell",
+            "give",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "give money 捐钱。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "engine",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "the main reason 主要原因。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pain",
+            "price",
+            "noise",
+            "colour"
+          ],
+          "answer_index": 0,
+          "explanation": "another person's pain 他人的痛苦。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "winner",
+            "giver",
+            "seller",
+            "buyer"
+          ],
+          "answer_index": 1,
+          "explanation": "makes the giver feel good 让给予者感觉良好。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "angrier",
+            "sadder",
+            "happier",
+            "poorer"
+          ],
+          "answer_index": 2,
+          "explanation": "feel happier 感到更快乐。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "distance",
+            "colour",
+            "justice"
+          ],
+          "answer_index": 3,
+          "explanation": "a sense of justice 正义感。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "right",
+            "wrong",
+            "funny",
+            "strange"
+          ],
+          "answer_index": 0,
+          "explanation": "the right thing to do 该做的正确之事。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "pay",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "pay it forward 把善意传递下去。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cruel",
+            "lazy",
+            "kind",
+            "rude"
+          ],
+          "answer_index": 2,
+          "explanation": "every kind act 每一个善举。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "minutes",
+            "seconds",
+            "metres",
+            "years"
+          ],
+          "answer_index": 3,
+          "explanation": "thousands of years 数千年。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Write an essay for a column \"Voices of Volunteers\"(为专栏写一篇志愿服务短文)",
+  "title_en": "Helping Others Helps You",
+  "genre": "议论 / 专栏短文(general statement + quotes as supporting details)",
+  "source": "上外版选择性必修第一册 Unit 2 Writing:为微信公众号专栏 'Voices of Volunteers' 写一篇短文,用引语(quote sandwich)支撑总论点。",
+  "prompt_cn": "假设你是学校公众号 'Voices of Volunteers' 专栏的撰稿人,为庆祝国际志愿者日写一篇约90-110词的短文,内容包括:① 先给出一个关于志愿服务的总论点;② 引用一两句他人的话(quote)来支撑你的论点,并简要解释这句话;③ 用一句话总结收尾。注意:用宾语从句(He said that … / I believe that …)来引述,行文连贯。",
+  "prompt_en": "Suppose you write for your school's online column \"Voices of Volunteers.\" To celebrate International Volunteer Day, write a short essay (about 90-110 words) including: 1) a general statement about volunteering; 2) one or two quotes from others to support your statement, with a short explanation; 3) a concluding sentence. Use object clauses (He said that … / I believe that …) to report what people say.",
+  "points": [
+    "给出总论点(I believe that volunteering … / Volunteering is …)",
+    "引用并解释引语(As Ben said, \"…\" This shows that …)",
+    "用宾语从句引述他人的话(He said that … / She believes that …)",
+    "一句话总结收尾(In short, … / The happiest people are those who give.)"
+  ],
+  "word_count": "90-110 词",
+  "model_essay": "Helping others helps you too. I believe that volunteering not only improves your community but also makes your own life richer. Ben, a college student who did volunteer work, said that it was a win-win situation. He explained that helpers feel good because they are giving, and others feel good because they are getting help. This shows that kindness flows in two directions at once. As an old saying goes, \"The fragrance of the rose lingers on the hand that casts it.\" In short, the happiest people are those who give, and give generously, to the world around them.",
+  "model_translation": "帮助别人也是在帮助自己。我相信,志愿服务不仅能改善你的社区,也能让你自己的生活更充实。做过志愿工作的大学生本说,这是一种双赢:帮助别人的人因付出而快乐,被帮助的人因得到帮助而快乐。这说明善意会同时朝两个方向流动。正如一句老话所说:'玫瑰的芬芳会留在送花人的手上。'总之,最幸福的人,是那些慷慨给予周围世界的人。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:总论点 / 引语+解释 / 总结收尾" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个总论点展开、引语用来支撑而非堆砌、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、宾语从句(that/wh-)引述得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "总论点 I believe that volunteering …",
+      "引语1 Ben said that it was a win-win situation.",
+      "解释 This shows that …",
+      "收尾 In short, the happiest people are those who give."
+    ],
+    "key_expressions": [
+      "I believe that volunteering makes your own life richer.",
+      "Ben said that it was a win-win situation.",
+      "He explained that helpers feel good because they are giving.",
+      "The happiest people are those who give, and give generously."
+    ],
+    "useful_words": ["volunteer", "community", "win-win", "give", "donate", "campaign", "movement", "make a difference", "believe", "explain"]
+  },
+  "high_sentences": [
+    "I believe that volunteering not only improves your community but also makes your own life richer.",
+    "Ben said that it was a win-win situation.",
+    "He explained that helpers feel good because they are giving, and others feel good because they are getting help.",
+    "The happiest people are those who give, and give generously."
+  ],
+  "error_pairs": [
+    { "wrong": "He said it is a win-win situation.", "correct": "He said that it was a win-win situation.", "note": "主句过去时(said),宾语从句一般也用过去时(was)。" },
+    { "wrong": "I believe volunteering improves your community and also makes richer your life.", "correct": "I believe that volunteering improves your community and also makes your life richer.", "note": "make + 宾语 + 形容词,形容词放宾语后:makes your life richer。" },
+    { "wrong": "She explained why she volunteers it helps others.", "correct": "She explained that she volunteers because it helps others.", "note": "引述陈述内容用 that 引导宾语从句,不要漏掉连接词。" }
+  ],
+  "paragraph_template": "【志愿服务专栏短文结构】\n第1-2句 总论点:I believe that volunteering …\n第3-4句 引语+解释:Ben said that … This shows that …\n第5句 引名言:As an old saying goes, \"…\"\n第6句 收尾:In short, the happiest people are those who give."
+}

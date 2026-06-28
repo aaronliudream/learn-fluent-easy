@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grammar_title": "不定式作主语和表语(To have a balanced life is the best way…)",
+  "source": "上外版选择性必修三 Unit 1 Grammar in Use:Infinitives — used as subjects and predicatives。句子地道、围绕'应对压力'主题、答案唯一(主语/表语位置只接 to-V,有限动词或形式主语 it 唯一成立)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "不定式作主语(To do ... is/takes ...)",
+      "overview": "句首主语位置不能放有限动词;表达'做某事'作主语时用不定式 To do(如 To have a balanced life is the best way to fight stress)。"
+    },
+    {
+      "code": "u1.02",
+      "point": "it 作形式主语 + 真正主语不定式(It is ... to do ...)",
+      "overview": "为了句子平衡,常用 it 作形式主语,把真正主语不定式放句尾:It is important to stay calm。形式主语只能用 it;句尾真正主语用 to do。"
+    },
+    {
+      "code": "u1.03",
+      "point": "不定式作表语(主语 + be + to do ...)",
+      "overview": "系动词 be 后用不定式作表语,说明、解释或等同主语:My plan is to do some volunteer work;The best way to relax is to breathe slowly。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "\"____ a balanced life is the best way to fight stress.\"",
+      "options": [
+        "To have",
+        "Have",
+        "Has",
+        "Had"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语位置不能用有限动词;'拥有平衡生活'作主语 → 不定式 To have。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ enough sleep every night helps you handle stress.\"",
+      "options": [
+        "Get",
+        "To get",
+        "Gets",
+        "Got"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位置用不定式 To get,有限动词 get/gets/got 不能作主语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ too much homework at once can make you anxious.\"",
+      "options": [
+        "Face",
+        "Faces",
+        "To face",
+        "Faced"
+      ],
+      "answer_index": 2,
+      "explanation": "'面对'作主语 → To face;其余为有限动词形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ slowly and deeply is a simple way to calm down.\"",
+      "options": [
+        "Breathe",
+        "Breathes",
+        "Breathed",
+        "To breathe"
+      ],
+      "answer_index": 3,
+      "explanation": "主语为'缓慢深呼吸'→ 不定式 To breathe。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ about your worries with a friend often helps.\"",
+      "options": [
+        "To talk",
+        "Talk",
+        "Talks",
+        "Talked"
+      ],
+      "answer_index": 0,
+      "explanation": "'谈论'作主语 → To talk。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ healthy food is one great way to reduce stress.\"",
+      "options": [
+        "Eat",
+        "To eat",
+        "Eats",
+        "Ate"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位置用 To eat,不能用有限动词。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ time for fun keeps your mind fresh and calm.\"",
+      "options": [
+        "Leave",
+        "Leaves",
+        "To leave",
+        "Left"
+      ],
+      "answer_index": 2,
+      "explanation": "'留出时间'作主语 → To leave。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ regular exercise can lift your mood very quickly.\"",
+      "options": [
+        "Do",
+        "Does",
+        "Did",
+        "To do"
+      ],
+      "answer_index": 3,
+      "explanation": "主语为'做运动'→ To do。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ that you feel stressed is the first useful step.\"",
+      "options": [
+        "To admit",
+        "Admit",
+        "Admits",
+        "Admitted"
+      ],
+      "answer_index": 0,
+      "explanation": "'承认……'作主语 → To admit。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ your problems will never make them disappear.\"",
+      "options": [
+        "Ignore",
+        "To ignore",
+        "Ignores",
+        "Ignored"
+      ],
+      "answer_index": 1,
+      "explanation": "主语为'忽视'→ To ignore。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ a trusted adult for advice is always a good idea.\"",
+      "options": [
+        "Ask",
+        "Asks",
+        "To ask",
+        "Asked"
+      ],
+      "answer_index": 2,
+      "explanation": "'询问'作主语 → To ask。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ soft music after class helps many students relax.\"",
+      "options": [
+        "Play",
+        "Plays",
+        "Played",
+        "To play"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位置用不定式 To play。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ the early signs of stress can save you trouble.\"",
+      "options": [
+        "To notice",
+        "Notice",
+        "Notices",
+        "Noticed"
+      ],
+      "answer_index": 0,
+      "explanation": "'注意到'作主语 → To notice。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ for a short walk often clears my busy mind.\"",
+      "options": [
+        "Go",
+        "To go",
+        "Goes",
+        "Went"
+      ],
+      "answer_index": 1,
+      "explanation": "主语为'去散步'→ To go,有限动词不能作主语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ a journal every evening helps me feel calmer.\"",
+      "options": [
+        "Keep",
+        "Keeps",
+        "To keep",
+        "Kept"
+      ],
+      "answer_index": 2,
+      "explanation": "'记日记'作主语 → To keep。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ kind to yourself really matters when life gets hard.\"",
+      "options": [
+        "Be",
+        "Is",
+        "Was",
+        "To be"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位置用不定式 To be。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ your feelings inside often makes the stress worse.\"",
+      "options": [
+        "To hide",
+        "Hide",
+        "Hides",
+        "Hid"
+      ],
+      "answer_index": 0,
+      "explanation": "'藏起'作主语 → To hide。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ a few breaks during study time can reduce stress.\"",
+      "options": [
+        "Take",
+        "To take",
+        "Takes",
+        "Took"
+      ],
+      "answer_index": 1,
+      "explanation": "主语为'休息几次'→ To take。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ a pet for a while can make you feel relaxed.\"",
+      "options": [
+        "Hold",
+        "Holds",
+        "To hold",
+        "Held"
+      ],
+      "answer_index": 2,
+      "explanation": "'抱一会儿宠物'作主语 → To hold。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "\"____ what is bothering you is better than staying silent.\"",
+      "options": [
+        "Share",
+        "Shares",
+        "Shared",
+        "To share"
+      ],
+      "answer_index": 3,
+      "explanation": "主语为'说出'→ To share。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is important to stay calm before a big test.\"",
+      "options": [
+        "It",
+        "That",
+        "There",
+        "This"
+      ],
+      "answer_index": 0,
+      "explanation": "形式主语只能用 it,真正主语是句尾的 to stay。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is necessary to share your feelings with others.\"",
+      "options": [
+        "There",
+        "It",
+        "That",
+        "This"
+      ],
+      "answer_index": 1,
+      "explanation": "it 作形式主语指代后面的 to share。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is helpful to recognise the real causes of your stress.\"",
+      "options": [
+        "There",
+        "That",
+        "It",
+        "This"
+      ],
+      "answer_index": 2,
+      "explanation": "形式主语用 it,后接真正主语 to recognise。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ takes courage to admit that you feel stressed.\"",
+      "options": [
+        "There",
+        "That",
+        "This",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "It takes courage to do 固定结构,it 为形式主语。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is normal to feel nervous before a performance.\"",
+      "options": [
+        "It",
+        "That",
+        "There",
+        "This"
+      ],
+      "answer_index": 0,
+      "explanation": "形式主语 it + 真正主语 to feel。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is hard to open up about your deepest worries.\"",
+      "options": [
+        "There",
+        "It",
+        "That",
+        "This"
+      ],
+      "answer_index": 1,
+      "explanation": "it 作形式主语,真正主语为 to open up。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is wise to turn to an adult you really trust.\"",
+      "options": [
+        "There",
+        "That",
+        "It",
+        "This"
+      ],
+      "answer_index": 2,
+      "explanation": "形式主语用 it,后接 to turn。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ feels good to talk about what is bothering you.\"",
+      "options": [
+        "There",
+        "That",
+        "This",
+        "It"
+      ],
+      "answer_index": 3,
+      "explanation": "it 作形式主语,真正主语 to talk 放句尾。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is better to face a problem than to run from it.\"",
+      "options": [
+        "It",
+        "There",
+        "That",
+        "This"
+      ],
+      "answer_index": 0,
+      "explanation": "形式主语 it 指代 to face。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"____ is worth taking some time to relax every single day.\"",
+      "options": [
+        "There",
+        "It",
+        "That",
+        "This"
+      ],
+      "answer_index": 1,
+      "explanation": "It is worth doing 中 it 为形式主语。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is wise ____ help when your worries last too long.\"",
+      "options": [
+        "seek",
+        "seeks",
+        "to seek",
+        "sought"
+      ],
+      "answer_index": 2,
+      "explanation": "真正主语用不定式 to seek,放在形式主语 it 之后。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is important ____ enough sleep during exam week.\"",
+      "options": [
+        "get",
+        "gets",
+        "got",
+        "to get"
+      ],
+      "answer_index": 3,
+      "explanation": "句尾真正主语用 to get。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is healthy ____ some exercise several times a week.\"",
+      "options": [
+        "to do",
+        "do",
+        "does",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语为 to do,有限动词不可用。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is useful ____ a few short breaks while studying.\"",
+      "options": [
+        "take",
+        "to take",
+        "takes",
+        "took"
+      ],
+      "answer_index": 1,
+      "explanation": "形式主语 it 后的真正主语用 to take。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is not easy ____ calm when everything goes wrong.\"",
+      "options": [
+        "stay",
+        "stays",
+        "to stay",
+        "stayed"
+      ],
+      "answer_index": 2,
+      "explanation": "真正主语用不定式 to stay。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is helpful ____ slowly and deeply when you panic.\"",
+      "options": [
+        "breathe",
+        "breathes",
+        "breathed",
+        "to breathe"
+      ],
+      "answer_index": 3,
+      "explanation": "句尾真正主语为 to breathe。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is brave ____ that you sometimes need a little help.\"",
+      "options": [
+        "to admit",
+        "admit",
+        "admits",
+        "admitted"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语用 to admit。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is relaxing ____ to soft music after a long day.\"",
+      "options": [
+        "listen",
+        "to listen",
+        "listens",
+        "listened"
+      ],
+      "answer_index": 1,
+      "explanation": "形式主语 it 后真正主语用 to listen。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is smart ____ time for both study and play.\"",
+      "options": [
+        "leave",
+        "leaves",
+        "to leave",
+        "left"
+      ],
+      "answer_index": 2,
+      "explanation": "句尾真正主语为 to leave。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "\"It is good ____ your worries with someone you trust.\"",
+      "options": [
+        "share",
+        "shares",
+        "shared",
+        "to share"
+      ],
+      "answer_index": 3,
+      "explanation": "真正主语用不定式 to share。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"John's plan is ____ some volunteer work this weekend.\"",
+      "options": [
+        "to do",
+        "does",
+        "did",
+        "done"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后作表语,说明 plan 的内容 → 不定式 to do。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The best way to relax is ____ slowly and deeply.\"",
+      "options": [
+        "breathes",
+        "to breathe",
+        "breathe",
+        "breathed"
+      ],
+      "answer_index": 1,
+      "explanation": "系动词 is 后用不定式作表语 to breathe。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Her main goal is ____ those in trouble find a calmer mind.\"",
+      "options": [
+        "helps",
+        "helped",
+        "to help",
+        "help"
+      ],
+      "answer_index": 2,
+      "explanation": "表语用不定式 to help,说明 goal 的内容。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"My favourite way to unwind is ____ a long evening walk.\"",
+      "options": [
+        "takes",
+        "took",
+        "taken",
+        "to take"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后作表语 → to take。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The very first step is ____ that you are feeling stressed.\"",
+      "options": [
+        "to admit",
+        "admits",
+        "admitted",
+        "admit"
+      ],
+      "answer_index": 0,
+      "explanation": "系动词后表语用不定式 to admit。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Our top priority is ____ the safety of every student.\"",
+      "options": [
+        "ensures",
+        "to ensure",
+        "ensured",
+        "ensure"
+      ],
+      "answer_index": 1,
+      "explanation": "表语用 to ensure,等同并说明 priority。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"His new habit is ____ to calm music before going to bed.\"",
+      "options": [
+        "listens",
+        "listened",
+        "to listen",
+        "listen"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后作表语 → to listen。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The aim of the club is ____ teens deal with daily stress.\"",
+      "options": [
+        "supports",
+        "supported",
+        "support",
+        "to support"
+      ],
+      "answer_index": 3,
+      "explanation": "表语用不定式 to support。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"A wise choice is ____ enough sleep during exam week.\"",
+      "options": [
+        "to get",
+        "gets",
+        "got",
+        "get"
+      ],
+      "answer_index": 0,
+      "explanation": "系动词后表语用 to get。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"What matters most is ____ a healthy, balanced life.\"",
+      "options": [
+        "lives",
+        "to live",
+        "lived",
+        "live"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后作表语 → to live。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The mission of the centre is ____ people who feel low.\"",
+      "options": [
+        "comforts",
+        "comforted",
+        "to comfort",
+        "comfort"
+      ],
+      "answer_index": 2,
+      "explanation": "表语用不定式 to comfort,说明 mission。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Her plan for the holiday is ____ yoga and read good books.\"",
+      "options": [
+        "practises",
+        "practised",
+        "practise",
+        "to practise"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后作表语 → to practise。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The purpose of the talk is ____ what stress really is.\"",
+      "options": [
+        "to explain",
+        "explains",
+        "explained",
+        "explain"
+      ],
+      "answer_index": 0,
+      "explanation": "系动词后表语用 to explain。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"My only wish now is ____ a quiet and restful weekend.\"",
+      "options": [
+        "enjoys",
+        "to enjoy",
+        "enjoyed",
+        "enjoy"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后作表语 → to enjoy。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The best advice is ____ what worries you with a friend.\"",
+      "options": [
+        "shares",
+        "shared",
+        "to share",
+        "share"
+      ],
+      "answer_index": 2,
+      "explanation": "表语用不定式 to share。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"One good idea is ____ for a run whenever you feel tense.\"",
+      "options": [
+        "goes",
+        "went",
+        "gone",
+        "to go"
+      ],
+      "answer_index": 3,
+      "explanation": "be 后作表语 → to go。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The key to a calm mind is ____ time for rest and fun.\"",
+      "options": [
+        "to leave",
+        "leaves",
+        "left",
+        "leave"
+      ],
+      "answer_index": 0,
+      "explanation": "系动词后表语用 to leave。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"His main goal this term is ____ stress from taking over.\"",
+      "options": [
+        "keeps",
+        "to keep",
+        "kept",
+        "keep"
+      ],
+      "answer_index": 1,
+      "explanation": "表语用不定式 to keep。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"A simple trick is ____ on one object until you feel calm.\"",
+      "options": [
+        "focuses",
+        "focused",
+        "to focus",
+        "focus"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后作表语 → to focus。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"The best response to worry is ____ it instead of hiding it.\"",
+      "options": [
+        "faces",
+        "faced",
+        "face",
+        "to face"
+      ],
+      "answer_index": 3,
+      "explanation": "系动词后表语用不定式 to face。"
+    }
+  ]
+}

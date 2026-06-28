@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The home computer will oversee the security of the whole house.", "opts": ["家用电脑将监管整座房子的安全。", "家用电脑会自己打扫房间。", "家用电脑是一个玩具。", "家用电脑不能上网。"], "answer": 0 },
+    { "audio": "Push a button and the walls will move to change the room size.", "opts": ["墙壁永远无法移动。", "按一下按钮,墙壁就会移动来改变房间大小。", "墙壁是用玻璃做的。", "房间只能由工人改建。"], "answer": 1 },
+    { "audio": "Most of the power comes from solar panels in the dome roof.", "opts": ["房子完全不需要电力。", "电力来自城市发电站。", "大部分电力来自穹顶屋顶的太阳能板。", "电力靠风力提供。"], "answer": 2 },
+    { "audio": "Robots now do almost all the housework in the future home.", "opts": ["机器人只会唱歌。", "机器人从不工作。", "人们仍然自己做所有家务。", "在未来的家里,机器人几乎包办所有家务。"], "answer": 3 },
+    { "audio": "Lina has been the family's reliable housekeeper for many years.", "opts": ["莉娜多年来一直是这家可靠的管家。", "莉娜是一位老师。", "莉娜刚刚离开了这个家。", "莉娜害怕孩子。"], "answer": 0 },
+    { "audio": "A smart home should serve you, not replace you.", "opts": ["智能家居会取代人类。", "智能家居应当为你服务,而不是取代你。", "智能家居毫无用处。", "智能家居只属于富人。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The home computer will oversee the home's ____.（安全)", "opts": ["security", "garden", "market", "weather"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "You can ____ any electrical appliance to the power wall.（把……附上)", "opts": ["eat", "attach", "sell", "throw"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "From far away, the grey skyscrapers all look ____.（完全相同的)", "opts": ["happy", "rainy", "identical", "loud"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "My lights turn on ____ each morning to wake me up.（自动地)", "opts": ["slowly", "sadly", "loudly", "automatically"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The dome house, ____ is energy-saving, needs very little power.", "opts": ["which", "who", "where", "that"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "My uncle, ____ lives in a smart house, never does any housework.", "opts": ["which", "who", "where", "that"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The boy, ____ mother had passed away, lived with a robot servant.", "opts": ["who", "which", "whose", "that"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Robots took over the housework, ____ gave people more leisure time.", "opts": ["who", "where", "when", "which"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["每个房间都有一面电力墙,而不是插座。", "每个房间都没有电。", "房子里满是插座。", "房间不能用电器。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Each room has a power wall instead of a socket." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["空气从不被过滤。", "系统会过滤空气并加上香味。", "房间总是有灰尘。", "人们必须打开窗户。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The system filters the air and then scents it." }
+  ],
+  "reading": {
+    "passage": "In the future home, a quiet electronic servant controls the lighting, the temperature and the security. It takes over almost all the housework, which gives the family much more leisure time. Most of the power comes from solar panels, so the home costs very little to run.",
+    "passageCn": "在未来的家里,一位安静的电子仆人掌管灯光、温度和安全。它接管了几乎所有家务,这让家人有了多得多的闲暇时间。大部分电力来自太阳能板,所以这个家几乎不花什么钱就能运转。",
+    "questions": [
+      { "q": "What does the electronic servant control?", "opts": ["The lighting, temperature and security.", "Only the front door.", "The school timetable.", "The city traffic."], "answer": 0 },
+      { "q": "Why does the family have more leisure time?", "opts": ["Because they do more chores.", "Because the servant does almost all the housework.", "Because they leave the home.", "Because the power is cut off."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Describe one piece of future technology you would like in your home. Say what it is, what it does, and how it would make your life better. Try to use a non-defining relative clause (…, which …).",
+    "promptCn": "描写一项你想拥有的未来家居科技:它是什么、有什么功能、会如何让你的生活更好(试着用非限制性定语从句 …, which …)。",
+    "sampleWords": ["smart home", "servant", "appliance", "automatically", "leisure", "control", "solar panel", "comfortable", "reliable", "future"]
+  },
+  "dialogues": [
+    {
+      "title": "What Would You Put in Your Future Home?",
+      "lines": [
+        { "role": "A", "text": "What would you most like to have in your future home?", "cn": "你最想在未来的家里拥有什么?" },
+        { "role": "B", "text": "A home computer, which does all the housework for me.", "cn": "一台家用电脑,它替我做所有家务。" },
+        { "role": "A", "text": "That sounds great. Why that one?", "cn": "听起来真棒。为什么选它?" },
+        { "role": "B", "text": "Because then I would have far more leisure time.", "cn": "因为那样我就能有多得多的闲暇时间。" }
+      ]
+    },
+    {
+      "title": "A Smart Home or a Simple One?",
+      "lines": [
+        { "role": "A", "text": "Do you think a smart home is always better?", "cn": "你觉得智能家居总是更好吗?" },
+        { "role": "B", "text": "It is comfortable, but we should stay in control of the machines.", "cn": "它很舒适,但我们应当掌控这些机器。" },
+        { "role": "A", "text": "I agree. A home should serve us, not replace us.", "cn": "我同意。家应当为我们服务,而不是取代我们。" },
+        { "role": "B", "text": "Exactly. Let robots do the chores while we make our own choices.", "cn": "正是。让机器人做家务,而我们自己做选择。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grammar_title": "不定式1(作宾语/补语/状语/定语)",
+  "source": "上外版必修三 Unit 2 Grammar in Use:Infinitives 1 — used as objects, complements, adverbials and attributives。句子地道、围绕艺术与艺术家主题、零术语、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "不定式作宾语(want/decide/hope/plan/refuse/manage to do;疑问词+to do)",
+      "overview": "want/decide/hope/plan/refuse/manage/wish/agree/offer/learn 等动词后接 to do 作宾语;know/wonder/decide/learn 等后接「疑问词(how/what/where/whether)+ to do」作宾语。"
+    },
+    {
+      "code": "u2.02",
+      "point": "不定式作宾语补足语(ask/tell/allow/encourage sb to do;使役 make/let/have sb do 不带 to)",
+      "overview": "ask/tell/want/allow/encourage/advise/expect/invite sb to do,补足语带 to;但使役动词 make/let/have 及感官动词 hear/watch/feel/see 后接 sb + do(不带 to)。"
+    },
+    {
+      "code": "u2.03",
+      "point": "不定式作状语和定语(目的/结果状语 to do、so as to;the first/best to do、a way to do、sth to do)",
+      "overview": "to do / in order to / so as to 作目的状语,…only to do 作结果状语;序数词/形容词最高级 + to do、a way/chance/time to do、sth/something to do 作定语,修饰前面的名词。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "The young painter hopes ____ his works in a city gallery one day.",
+      "options": [
+        "to show",
+        "showing",
+        "shows",
+        "showed"
+      ],
+      "answer_index": 0,
+      "explanation": "hope 后接 to do 作宾语,表示希望去做某事。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Qi Baishi decided ____ on the finer details while his eyesight was still good.",
+      "options": [
+        "focusing",
+        "to focus",
+        "focus",
+        "focused"
+      ],
+      "answer_index": 1,
+      "explanation": "decide 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The art student wants ____ how the masters mixed their colours.",
+      "options": [
+        "learning",
+        "learns",
+        "to learn",
+        "learn"
+      ],
+      "answer_index": 2,
+      "explanation": "want 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After many failures, Van Gogh refused ____ painting.",
+      "options": [
+        "giving up",
+        "gives up",
+        "gave up",
+        "to give up"
+      ],
+      "answer_index": 3,
+      "explanation": "refuse 后接 to do 作宾语,表示拒绝做某事。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Bob Dylan planned ____ a record so that his songs could be heard on the radio.",
+      "options": [
+        "to make",
+        "making",
+        "makes",
+        "made"
+      ],
+      "answer_index": 0,
+      "explanation": "plan 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Although money was short, the artist managed ____ his exhibition on time.",
+      "options": [
+        "holding",
+        "to hold",
+        "held",
+        "hold"
+      ],
+      "answer_index": 1,
+      "explanation": "manage 后接 to do 作宾语,表示设法做成某事。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the show, the curator wondered how ____ the paintings on the walls.",
+      "options": [
+        "arranging",
+        "arranges",
+        "to arrange",
+        "arranged"
+      ],
+      "answer_index": 2,
+      "explanation": "wonder 后接「疑问词 how + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Many visitors do not know what ____ when they look at modern art.",
+      "options": [
+        "feeling",
+        "feels",
+        "felt",
+        "to feel"
+      ],
+      "answer_index": 3,
+      "explanation": "know 后接「疑问词 what + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Have you ever wondered how ____ for a symphony performance?",
+      "options": [
+        "to dress",
+        "dressing",
+        "dresses",
+        "dressed"
+      ],
+      "answer_index": 0,
+      "explanation": "wonder 后接「疑问词 how + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The beginner needs to decide where ____ to study calligraphy.",
+      "options": [
+        "going",
+        "to go",
+        "goes",
+        "went"
+      ],
+      "answer_index": 1,
+      "explanation": "decide 后接「疑问词 where + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The two artists agreed ____ on a painting for the festival together.",
+      "options": [
+        "working",
+        "works",
+        "to work",
+        "worked"
+      ],
+      "answer_index": 2,
+      "explanation": "agree 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Our music teacher offered ____ us to the opera this weekend.",
+      "options": [
+        "taking",
+        "takes",
+        "took",
+        "to take"
+      ],
+      "answer_index": 3,
+      "explanation": "offer 后接 to do 作宾语,表示主动提出做某事。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The old master wished ____ his hometown through his ink paintings.",
+      "options": [
+        "to honour",
+        "honouring",
+        "honours",
+        "honoured"
+      ],
+      "answer_index": 0,
+      "explanation": "wish 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When his eyesight was failing, Qi still chose ____ on with his art.",
+      "options": [
+        "carrying",
+        "to carry",
+        "carries",
+        "carried"
+      ],
+      "answer_index": 1,
+      "explanation": "choose 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The young singer is still learning how ____ a large audience.",
+      "options": [
+        "facing",
+        "faces",
+        "to face",
+        "faced"
+      ],
+      "answer_index": 2,
+      "explanation": "learn 后接「疑问词 how + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Before the concert, Dylan could not decide which song ____ first.",
+      "options": [
+        "playing",
+        "plays",
+        "played",
+        "to play"
+      ],
+      "answer_index": 3,
+      "explanation": "decide 后接「疑问词 which (song) + to do」作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After the festival, the students promised ____ another art club next term.",
+      "options": [
+        "to start",
+        "starting",
+        "starts",
+        "started"
+      ],
+      "answer_index": 0,
+      "explanation": "promise 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The painter expects ____ his new landscape before winter comes.",
+      "options": [
+        "finishing",
+        "to finish",
+        "finishes",
+        "finished"
+      ],
+      "answer_index": 1,
+      "explanation": "expect 后接 to do 作宾语,此处无 sb,直接接 to do。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Some guests at the gallery were not sure whether ____ the artist for a photo.",
+      "options": [
+        "asking",
+        "asks",
+        "to ask",
+        "asked"
+      ],
+      "answer_index": 2,
+      "explanation": "「疑问词 whether + to do」作宾语,用于动词后(here: be sure 后)。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The committee hopes ____ the young artist with a special prize this year.",
+      "options": [
+        "honouring",
+        "honours",
+        "honoured",
+        "to honour"
+      ],
+      "answer_index": 3,
+      "explanation": "hope 后接 to do 作宾语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Our teacher advised us ____ the opera at least once this year.",
+      "options": [
+        "to see",
+        "seeing",
+        "saw",
+        "sees"
+      ],
+      "answer_index": 0,
+      "explanation": "advise sb to do,不定式带 to 作宾语补足语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "At the theatre, the audience are required ____ quiet during the play.",
+      "options": [
+        "keeping",
+        "to keep",
+        "keep",
+        "kept"
+      ],
+      "answer_index": 1,
+      "explanation": "require sb to do(被动:be required to do),补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Sam asked the two noisy men behind him ____ chatting.",
+      "options": [
+        "stopping",
+        "stop",
+        "to stop",
+        "stopped"
+      ],
+      "answer_index": 2,
+      "explanation": "ask sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The gallery does not allow visitors ____ the oil paintings.",
+      "options": [
+        "touching",
+        "touch",
+        "touched",
+        "to touch"
+      ],
+      "answer_index": 3,
+      "explanation": "allow sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "His art teacher always encouraged him ____ his own style.",
+      "options": [
+        "to develop",
+        "developing",
+        "develop",
+        "developed"
+      ],
+      "answer_index": 0,
+      "explanation": "encourage sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Yesterday I heard the street singer ____ \"Blowin' in the Wind\".",
+      "options": [
+        "to sing",
+        "sing",
+        "sings",
+        "sung"
+      ],
+      "answer_index": 1,
+      "explanation": "感官动词 hear sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The bright colours of the painting made the whole room ____ warmer.",
+      "options": [
+        "to feel",
+        "feeling",
+        "feel",
+        "felt"
+      ],
+      "answer_index": 2,
+      "explanation": "使役动词 make sth do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Please let the children ____ the clay with their own hands.",
+      "options": [
+        "to shape",
+        "shaping",
+        "shaped",
+        "shape"
+      ],
+      "answer_index": 3,
+      "explanation": "使役动词 let sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The museum guide had us ____ in front of the most famous portrait.",
+      "options": [
+        "wait",
+        "to wait",
+        "waiting",
+        "waited"
+      ],
+      "answer_index": 0,
+      "explanation": "使役动词 have sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We watched the old painter ____ a few simple lines into a lively fish.",
+      "options": [
+        "to turn",
+        "turn",
+        "turns",
+        "turned"
+      ],
+      "answer_index": 1,
+      "explanation": "感官动词 watch sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The director told the actors ____ their lines more slowly on stage.",
+      "options": [
+        "saying",
+        "say",
+        "to say",
+        "said"
+      ],
+      "answer_index": 2,
+      "explanation": "tell sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Sam expected other people ____ the noisy men to be quiet.",
+      "options": [
+        "telling",
+        "tell",
+        "told",
+        "to tell"
+      ],
+      "answer_index": 3,
+      "explanation": "expect sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The art club invited a local painter ____ a short talk about colour.",
+      "options": [
+        "to give",
+        "giving",
+        "give",
+        "gave"
+      ],
+      "answer_index": 0,
+      "explanation": "invite sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Strong feelings in the music can make a quiet listener ____ aloud.",
+      "options": [
+        "to cry",
+        "cry",
+        "crying",
+        "cried"
+      ],
+      "answer_index": 1,
+      "explanation": "使役动词 make sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The judges wanted every group ____ five clues about a famous artist.",
+      "options": [
+        "preparing",
+        "prepare",
+        "to prepare",
+        "prepared"
+      ],
+      "answer_index": 2,
+      "explanation": "want sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Soft background music can make the guests ____ more relaxed at the show.",
+      "options": [
+        "to feel",
+        "feeling",
+        "felt",
+        "feel"
+      ],
+      "answer_index": 3,
+      "explanation": "使役动词 make sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The teacher let each student ____ one painting to introduce to the class.",
+      "options": [
+        "choose",
+        "to choose",
+        "choosing",
+        "chose"
+      ],
+      "answer_index": 0,
+      "explanation": "使役动词 let sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The school festival expects the winners ____ their work in the main hall.",
+      "options": [
+        "displaying",
+        "to display",
+        "display",
+        "displayed"
+      ],
+      "answer_index": 1,
+      "explanation": "expect sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We saw the dancer slowly ____ across the empty stage.",
+      "options": [
+        "to move",
+        "moves",
+        "move",
+        "moved"
+      ],
+      "answer_index": 2,
+      "explanation": "感官动词 see sb do,补足语不带 to。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Her parents always encouraged her ____ her dream of becoming a painter.",
+      "options": [
+        "following",
+        "follow",
+        "followed",
+        "to follow"
+      ],
+      "answer_index": 3,
+      "explanation": "encourage sb to do,补足语带 to。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Painters use a variety of brushes ____ different effects on the paper.",
+      "options": [
+        "to create",
+        "creating",
+        "create",
+        "created"
+      ],
+      "answer_index": 0,
+      "explanation": "to do 作目的状语,表示「为了创造……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Qi left some spaces blank ____ to add flowers later.",
+      "options": [
+        "such as",
+        "so as",
+        "as so",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "so as to do 作目的状语,表示「以便……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Bob Dylan became the first songwriter ____ the Nobel Prize for Literature.",
+      "options": [
+        "winning",
+        "won",
+        "to win",
+        "wins"
+      ],
+      "answer_index": 2,
+      "explanation": "序数词 first 后用 to do 作定语,修饰 songwriter。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Every great artist needs a message ____ through colour and shape.",
+      "options": [
+        "conveying",
+        "convey",
+        "conveyed",
+        "to convey"
+      ],
+      "answer_index": 3,
+      "explanation": "to do 作定语,修饰 message,表示「要传达的信息」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The students need a quiet place ____ their sketches in peace.",
+      "options": [
+        "to finish",
+        "finishing",
+        "finish",
+        "finished"
+      ],
+      "answer_index": 0,
+      "explanation": "to do 作定语,修饰 place,表示「用来完成……的地方」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He worked hard all his life ____ his dream of world peace.",
+      "options": [
+        "pursuing",
+        "to pursue",
+        "pursue",
+        "pursued"
+      ],
+      "answer_index": 1,
+      "explanation": "to do 作目的状语,表示「为了追求……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Do you have the skills ____ a painting on your own?",
+      "options": [
+        "appreciating",
+        "appreciate",
+        "to appreciate",
+        "appreciated"
+      ],
+      "answer_index": 2,
+      "explanation": "to do 作定语,修饰 skills,表示「欣赏……的技能」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She arrived early at the gallery ____ a good seat near the stage.",
+      "options": [
+        "getting",
+        "get",
+        "got",
+        "to get"
+      ],
+      "answer_index": 3,
+      "explanation": "to do 作目的状语,表示「为了得到……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Van Gogh was probably the best painter ____ the beauty of a starry night.",
+      "options": [
+        "to capture",
+        "capturing",
+        "captured",
+        "captures"
+      ],
+      "answer_index": 0,
+      "explanation": "形容词最高级 best 后用 to do 作定语,修饰 painter。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Spend some time figuring out the clues ____ the painter's true feelings.",
+      "options": [
+        "understanding",
+        "to understand",
+        "understand",
+        "understood"
+      ],
+      "answer_index": 1,
+      "explanation": "to do 作目的状语,表示「为了理解……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Is there anything ____ before the art exhibition opens tomorrow?",
+      "options": [
+        "preparing",
+        "prepare",
+        "to prepare",
+        "prepared"
+      ],
+      "answer_index": 2,
+      "explanation": "to do 作定语,修饰不定代词 anything。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He saved money for years, only ____ that the painting had already been sold.",
+      "options": [
+        "finding",
+        "find",
+        "found",
+        "to find"
+      ],
+      "answer_index": 3,
+      "explanation": "only to do 作结果状语,表示出乎意料的结果。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "One good way ____ a painting is to place it in its time and place.",
+      "options": [
+        "to appreciate",
+        "appreciating",
+        "appreciate",
+        "appreciated"
+      ],
+      "answer_index": 0,
+      "explanation": "to do 作定语,修饰 way,表示「欣赏……的方法」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The young artist travelled to Paris in order ____ the works of the masters.",
+      "options": [
+        "studying",
+        "to study",
+        "study",
+        "studied"
+      ],
+      "answer_index": 1,
+      "explanation": "in order to do 作目的状语,表示「为了研究……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Qi Baishi was one of the first Chinese artists ____ insects in such fine detail.",
+      "options": [
+        "painting",
+        "painted",
+        "to paint",
+        "paints"
+      ],
+      "answer_index": 2,
+      "explanation": "序数词 first 后用 to do 作定语,修饰 artists。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Visitors lined up ____ the most famous painting in the museum.",
+      "options": [
+        "seeing",
+        "see",
+        "saw",
+        "to see"
+      ],
+      "answer_index": 3,
+      "explanation": "to do 作目的状语,表示「为了看……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Now is the right time ____ your own art club at school.",
+      "options": [
+        "to start",
+        "starting",
+        "start",
+        "started"
+      ],
+      "answer_index": 0,
+      "explanation": "to do 作定语,修饰 time,表示「该……的时候」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The museum stays open late ____ more working people a chance to visit.",
+      "options": [
+        "giving",
+        "to give",
+        "give",
+        "gave"
+      ],
+      "answer_index": 1,
+      "explanation": "to do 作目的状语,表示「为了给……」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He climbed onto the stage ____ the prize in person.",
+      "options": [
+        "receiving",
+        "receive",
+        "to receive",
+        "received"
+      ],
+      "answer_index": 2,
+      "explanation": "to do 作目的状语,表示「为了亲自领奖」。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I'm looking for a fresh subject ____ in my next ink painting.",
+      "options": [
+        "painting",
+        "paint",
+        "painted",
+        "to paint"
+      ],
+      "answer_index": 3,
+      "explanation": "to do 作定语,修饰 subject,表示「要画的题材」。"
+    }
+  ]
+}

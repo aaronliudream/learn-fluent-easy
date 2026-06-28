@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grammar_title": "倒装句(否定副词前置 · Only+状语前置 · so/such…that 与虚拟条件省略倒装)",
+  "source": "上外版选必四 Unit 3 Grammar in Use:Inversion(部分倒装与完全倒装)。句子地道、答案唯一(干扰项为错误语序或错误助动词)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "否定/半否定副词置于句首的部分倒装(Never/Hardly/No sooner/Not until/Seldom/Not only…)",
+      "overview": "当 never, never before, hardly…when, no sooner…than, not until, seldom, rarely, little, not only, on no account, nowhere 等否定或半否定词语置于句首时,主句用部分倒装:把助动词/情态动词/be 提到主语之前(do/does/did + 主语 + 动词原形;或 had/have + 主语 + 过去分词)。"
+    },
+    {
+      "code": "u3.02",
+      "point": "“Only + 状语”置于句首的部分倒装(Only then / Only when / Only by / Only after…)",
+      "overview": "当 “only + 副词/介词短语/状语从句” 置于句首时,主句(而非从句)用部分倒装:把助动词/情态动词提到主语之前,如 Only then did people realise…;Only by working together could they finish it。"
+    },
+    {
+      "code": "u3.03",
+      "point": "“so/such…that”倒装 与 虚拟条件句的省略倒装(Had/Were/Should…)",
+      "overview": "① So + 形容词/副词 或 Such + 名词 置于句首时,主句部分倒装(So important was the canal that…;Such was the fame that…)。② 虚拟条件句省略 if 时,把 had/were/should 提到主语前构成倒装:Had I known…(=If I had known);Were it not for…;Should you…。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "Never before ____ such a long canal been dug by human hands.",
+      "options": [
+        "had",
+        "did",
+        "have",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "否定词 Never before 置于句首,过去完成被动用 had 提前(had…been dug)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Never ____ so clearly why people study the past.",
+      "options": [
+        "I had understood",
+        "had I understood",
+        "did I understood",
+        "I understood"
+      ],
+      "answer_index": 1,
+      "explanation": "Never 置于句首要部分倒装,助动词 had 提到主语 I 之前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not until the railway was built ____ the Grand Canal lose its importance.",
+      "options": [
+        "had",
+        "was",
+        "did",
+        "does"
+      ],
+      "answer_index": 2,
+      "explanation": "Not until 状语前置,主句倒装用 did + 主语 + 动词原形 lose。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not until he read the old records ____ the truth about the canal.",
+      "options": [
+        "the scholar learned",
+        "the scholar did learn",
+        "did the scholar learned",
+        "did the scholar learn"
+      ],
+      "answer_index": 3,
+      "explanation": "Not until 前置,主句倒装 did + 主语 + 原形 learn。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Hardly ____ the tour of the Forbidden City begun when it started to rain.",
+      "options": [
+        "had",
+        "did",
+        "was",
+        "has"
+      ],
+      "answer_index": 0,
+      "explanation": "Hardly…when 结构,前半用过去完成,倒装 had 提到主语前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "No sooner ____ the gates opened than thousands of visitors poured in.",
+      "options": [
+        "did",
+        "had",
+        "were",
+        "have"
+      ],
+      "answer_index": 1,
+      "explanation": "No sooner…than 结构,前句用过去完成倒装,had 提前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Seldom ____ such a well-preserved ancient site.",
+      "options": [
+        "we have seen",
+        "did we saw",
+        "have we seen",
+        "we saw"
+      ],
+      "answer_index": 2,
+      "explanation": "Seldom 置于句首,现在完成倒装,have 提到主语 we 之前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Rarely ____ a canal played such a key role in a country’s history.",
+      "options": [
+        "did",
+        "have",
+        "was",
+        "has"
+      ],
+      "answer_index": 3,
+      "explanation": "Rarely 句首倒装,主语 a canal 为单数,用 has played。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Little ____ how much the canal would change their lives.",
+      "options": [
+        "did the villagers know",
+        "the villagers knew",
+        "did the villagers knew",
+        "the villagers did know"
+      ],
+      "answer_index": 0,
+      "explanation": "Little 表否定置于句首,倒装 did + 主语 + 原形 know。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not only ____ the Grand Canal carry grain, but it also spread new ideas.",
+      "options": [
+        "had",
+        "did",
+        "was",
+        "does"
+      ],
+      "answer_index": 1,
+      "explanation": "Not only 置于句首,部分倒装 did + 主语 + 原形 carry。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not only ____ goods along the route, but they also exchanged customs.",
+      "options": [
+        "traders carried",
+        "traders did carry",
+        "did traders carry",
+        "did traders carried"
+      ],
+      "answer_index": 2,
+      "explanation": "Not only 句首部分倒装,did + 主语 + 原形 carry。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "On no account ____ touch the priceless relics in the hall.",
+      "options": [
+        "visitors should",
+        "visitors must to",
+        "should visitors to",
+        "should visitors"
+      ],
+      "answer_index": 3,
+      "explanation": "On no account 表否定置于句首,倒装 should + 主语 + 原形 touch。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Nowhere else in China ____ so many old canal towns.",
+      "options": [
+        "can you find",
+        "you can find",
+        "can you found",
+        "you could finding"
+      ],
+      "answer_index": 0,
+      "explanation": "Nowhere 表否定地点置于句首,倒装 can + 主语 + 原形 find。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not for a moment ____ that the old city walls would be saved.",
+      "options": [
+        "she doubted",
+        "did she doubt",
+        "she did doubt",
+        "did she doubted"
+      ],
+      "answer_index": 1,
+      "explanation": "Not for a moment 表否定置于句首,倒装 did + 主语 + 原形 doubt。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "By no means ____ an easy task to keep the canal flowing.",
+      "options": [
+        "it was",
+        "it is",
+        "was it",
+        "were it"
+      ],
+      "answer_index": 2,
+      "explanation": "By no means 表否定置于句首,系动词 was 提到主语 it 之前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Never before ____ a project so large been attempted in the region.",
+      "options": [
+        "did",
+        "has",
+        "was",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "Never before + 过去完成被动,倒装 had 提前(had…been attempted)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Hardly ____ the emperor announced the plan when work began at once.",
+      "options": [
+        "had",
+        "did",
+        "was",
+        "does"
+      ],
+      "answer_index": 0,
+      "explanation": "Hardly…when,前句用过去完成倒装,had 提前。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Seldom ____ the value of protecting these historic sites.",
+      "options": [
+        "we question",
+        "do we question",
+        "did we questioned",
+        "we do question"
+      ],
+      "answer_index": 1,
+      "explanation": "Seldom 置于句首,一般现在倒装 do + 主语 + 原形 question。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Not until dusk ____ exploring the ruins of the old town.",
+      "options": [
+        "the students stopped",
+        "the students did stop",
+        "did the students stop",
+        "did the students stopped"
+      ],
+      "answer_index": 2,
+      "explanation": "Not until 前置,主句倒装 did + 主语 + 原形 stop。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "No sooner ____ off the boat than the guide began the tour.",
+      "options": [
+        "we had stepped",
+        "did we step",
+        "we stepped",
+        "had we stepped"
+      ],
+      "answer_index": 3,
+      "explanation": "No sooner…than,过去完成倒装,had 提到主语 we 之前。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only then ____ how important the canal had been to the empire.",
+      "options": [
+        "did people realise",
+        "people realised",
+        "people did realise",
+        "did people realised"
+      ],
+      "answer_index": 0,
+      "explanation": "Only then 置于句首,主句部分倒装 did + 主语 + 原形 realise。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only after years of digging ____ the two rivers finally linked.",
+      "options": [
+        "did",
+        "were",
+        "was",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "Only after… 状语前置,主句倒装;rivers 复数被动用 were…linked。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only in this way ____ protect the ancient site for future generations.",
+      "options": [
+        "we can",
+        "could we to",
+        "can we",
+        "we could"
+      ],
+      "answer_index": 2,
+      "explanation": "Only in this way 置于句首,倒装 can + 主语 we + 原形 protect。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only when the war ended ____ the canal again.",
+      "options": [
+        "the emperor repaired",
+        "the emperor did repair",
+        "did the emperor repaired",
+        "did the emperor repair"
+      ],
+      "answer_index": 3,
+      "explanation": "Only when… 置于句首,主句倒装 did + 主语 + 原形 repair。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only by studying history ____ truly understand the present.",
+      "options": [
+        "can we",
+        "we can",
+        "we could to",
+        "could we to"
+      ],
+      "answer_index": 0,
+      "explanation": "Only by… 置于句首,倒装 can + 主语 we + 原形 understand。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only after Marco Polo returned ____ about the wonders of the East.",
+      "options": [
+        "Europe learned",
+        "did Europe learn",
+        "Europe did learn",
+        "did Europe learned"
+      ],
+      "answer_index": 1,
+      "explanation": "Only after… 置于句首,主句倒装 did + 主语 + 原形 learn。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only then ____ the real purpose of the Grand Canal.",
+      "options": [
+        "historians understood",
+        "historians did understand",
+        "did historians understand",
+        "did historians understood"
+      ],
+      "answer_index": 2,
+      "explanation": "Only then 置于句首,倒装 did + 主语 + 原形 understand。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only with careful planning ____ the old buildings be saved.",
+      "options": [
+        "did",
+        "were",
+        "had",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "Only with… 置于句首,倒装 could + 主语 + 被动原形 be saved。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only after the bell rang ____ talking about the Silk Road.",
+      "options": [
+        "did the class stop",
+        "the class stopped",
+        "the class did stop",
+        "did the class stopped"
+      ],
+      "answer_index": 0,
+      "explanation": "Only after… 置于句首,倒装 did + 主语 + 原形 stop。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only in recent years ____ to value these forgotten canal towns.",
+      "options": [
+        "people have begun",
+        "have people begun",
+        "did people began",
+        "people began"
+      ],
+      "answer_index": 1,
+      "explanation": "Only in recent years 置于句首,现在完成倒装,have 提前。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only when you walk the route yourself ____ its true length.",
+      "options": [
+        "you feel",
+        "you do feel",
+        "do you feel",
+        "do you felt"
+      ],
+      "answer_index": 2,
+      "explanation": "Only when… 置于句首,一般现在倒装 do + 主语 + 原形 feel。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only by working together ____ such a huge canal.",
+      "options": [
+        "the workers could build",
+        "the workers built",
+        "could the workers built",
+        "could the workers build"
+      ],
+      "answer_index": 3,
+      "explanation": "Only by… 置于句首,倒装 could + 主语 + 原形 build。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only after the museum opened online ____ visit it from home.",
+      "options": [
+        "could people",
+        "people could",
+        "did people to",
+        "people did"
+      ],
+      "answer_index": 0,
+      "explanation": "Only after… 置于句首,倒装 could + 主语 + 原形 visit。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only then ____ that the old maps were still useful.",
+      "options": [
+        "they discovered",
+        "did they discover",
+        "they did discover",
+        "did they discovered"
+      ],
+      "answer_index": 1,
+      "explanation": "Only then 置于句首,倒装 did + 主语 + 原形 discover。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only through trade along the Silk Road ____ rich and powerful.",
+      "options": [
+        "many cities grew",
+        "many cities did grow",
+        "did many cities grow",
+        "did many cities grew"
+      ],
+      "answer_index": 2,
+      "explanation": "Only through… 置于句首,倒装 did + 主语 + 原形 grow。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only if we record these stories ____ remember them.",
+      "options": [
+        "future readers will",
+        "future readers would to",
+        "will future readers to",
+        "will future readers"
+      ],
+      "answer_index": 3,
+      "explanation": "Only if… 置于句首,倒装 will + 主语 + 原形 remember。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only after a long search ____ the lost section of the canal.",
+      "options": [
+        "did the team find",
+        "the team found",
+        "the team did find",
+        "did the team found"
+      ],
+      "answer_index": 0,
+      "explanation": "Only after… 置于句首,倒装 did + 主语 + 原形 find。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only here ____ see the oldest part of the ancient waterway.",
+      "options": [
+        "visitors can",
+        "can visitors",
+        "visitors could to",
+        "visitors can to"
+      ],
+      "answer_index": 1,
+      "explanation": "Only here 置于句首,倒装 can + 主语 + 原形 see。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only when the grain arrived ____ that the canal had saved the city.",
+      "options": [
+        "the people knew",
+        "the people did know",
+        "did the people know",
+        "did the people knew"
+      ],
+      "answer_index": 2,
+      "explanation": "Only when… 置于句首,倒装 did + 主语 + 原形 know。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Only by reading old records ____ piece together the lost past.",
+      "options": [
+        "scholars can",
+        "scholars could to",
+        "scholars can to",
+        "can scholars"
+      ],
+      "answer_index": 3,
+      "explanation": "Only by… 置于句首,倒装 can + 主语 + 原形 piece together。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So important ____ to trade that emperors kept it in good repair.",
+      "options": [
+        "was the canal",
+        "the canal was",
+        "the canal is",
+        "were the canal"
+      ],
+      "answer_index": 0,
+      "explanation": "So + 形容词 置于句首,主句倒装系动词 was + 主语 the canal。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Such ____ the fame of the Silk Road that traders came from far away.",
+      "options": [
+        "had",
+        "was",
+        "did",
+        "were"
+      ],
+      "answer_index": 1,
+      "explanation": "Such + be + 主语 结构;fame 为单数,用 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ the engineers known the danger, they would have changed the route.",
+      "options": [
+        "If had",
+        "Did",
+        "Had",
+        "Were"
+      ],
+      "answer_index": 2,
+      "explanation": "虚拟条件省略 if,把 Had 提前构成倒装(=If the engineers had known)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So heavy ____ the grain boats that they moved very slowly.",
+      "options": [
+        "was",
+        "did",
+        "had",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "So + 形容词 置于句首,boats 复数用 were。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ it not for the Grand Canal, the northern cities would have suffered.",
+      "options": [
+        "Were",
+        "Was",
+        "Had",
+        "If were"
+      ],
+      "answer_index": 0,
+      "explanation": "Were it not for… 固定倒装结构(=If it were not for)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Such ____ his interest in history that he read every book about it.",
+      "options": [
+        "were",
+        "was",
+        "did",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "Such + be + 主语;interest 为单数,用 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ you ever visit Suzhou, you will see the old canal for yourself.",
+      "options": [
+        "Would",
+        "If should",
+        "Should",
+        "Did"
+      ],
+      "answer_index": 2,
+      "explanation": "Should you… 倒装表示将来可能(=If you should ever visit)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So well ____ the ancient walls that they still stand today.",
+      "options": [
+        "the walls were built",
+        "the walls built",
+        "was the walls built",
+        "were the walls built"
+      ],
+      "answer_index": 3,
+      "explanation": "So + 副词 置于句首,被动倒装;walls 复数用 were…built。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ the emperor not moved his capital, the canal might have stayed unused.",
+      "options": [
+        "Had",
+        "If had",
+        "Did",
+        "Were"
+      ],
+      "answer_index": 0,
+      "explanation": "省略 if 的虚拟倒装:Had the emperor not moved…(=If the emperor had not moved)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So clearly ____ the value of the past that the city saved its old streets.",
+      "options": [
+        "the people saw",
+        "did the people see",
+        "the people did see",
+        "did the people saw"
+      ],
+      "answer_index": 1,
+      "explanation": "So + 副词 置于句首,主句倒装 did + 主语 + 原形 see。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Such ____ the crowds at the Forbidden City that tickets sold out early.",
+      "options": [
+        "was",
+        "did",
+        "were",
+        "had"
+      ],
+      "answer_index": 2,
+      "explanation": "Such + be + 主语;crowds 复数,用 were。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ we known how fragile the relics were, we would have been more careful.",
+      "options": [
+        "If had",
+        "Did",
+        "Were",
+        "Had"
+      ],
+      "answer_index": 3,
+      "explanation": "省略 if 倒装:Had we known…(=If we had known)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So famous ____ that millions of people visit it every year.",
+      "options": [
+        "is the Forbidden City",
+        "the Forbidden City is",
+        "the Forbidden City was",
+        "are the Forbidden City"
+      ],
+      "answer_index": 0,
+      "explanation": "So + 形容词 置于句首,现在时倒装 is + 单数主语。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ it not for Zhang Qian’s journeys, the trade routes might never have opened.",
+      "options": [
+        "Was",
+        "Were",
+        "Had",
+        "If were"
+      ],
+      "answer_index": 1,
+      "explanation": "Were it not for… 固定倒装结构。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So great ____ that the empire could not survive without it.",
+      "options": [
+        "the canal’s value was",
+        "the canal’s value is",
+        "was the canal’s value",
+        "were the canal’s value"
+      ],
+      "answer_index": 2,
+      "explanation": "So + 形容词 置于句首,倒装 was + 主语 value。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ you wish to learn more, the online museum is open day and night.",
+      "options": [
+        "Would",
+        "If should",
+        "Did",
+        "Should"
+      ],
+      "answer_index": 3,
+      "explanation": "Should you… 倒装(=If you should wish)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Such ____ the importance of salt that it became a main source of income.",
+      "options": [
+        "was",
+        "were",
+        "did",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "Such + be + 主语;importance 为单数,用 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "So slowly ____ that repairs took many years to finish.",
+      "options": [
+        "the work went",
+        "did the work go",
+        "the work did go",
+        "did the work went"
+      ],
+      "answer_index": 1,
+      "explanation": "So + 副词 置于句首,倒装 did + 主语 + 原形 go。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "____ the canal not been rebuilt, grain could not have reached the north.",
+      "options": [
+        "If had",
+        "Did",
+        "Had",
+        "Were"
+      ],
+      "answer_index": 2,
+      "explanation": "省略 if 倒装:Had the canal not been rebuilt…(=If the canal had not been rebuilt)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Such ____ the beauty of the old town that artists came to paint it.",
+      "options": [
+        "were",
+        "did",
+        "had",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "Such + be + 主语;beauty 为单数,用 was。"
+    }
+  ]
+}

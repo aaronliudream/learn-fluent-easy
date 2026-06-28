@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Donating books can help children who have none.", "opts": ["捐书能帮助没有书的孩子。", "买书是很贵的。", "孩子们都不喜欢读书。", "图书馆已经关门了。"], "answer": 0 },
+    { "audio": "She enjoys volunteering at the nursing home.", "opts": ["她喜欢在养老院做志愿者。", "她讨厌做家务。", "她在一家医院工作。", "她想出去旅行。"], "answer": 0 },
+    { "audio": "Thank you for helping with the charity sale.", "opts": ["谢谢你帮忙办义卖。", "请你快点回家。", "这本书很有意思。", "今天天气很冷。"], "answer": 0 },
+    { "audio": "Helping others makes us feel happy.", "opts": ["帮助别人让我们感到快乐。", "跑步让人感到疲惫。", "钱是非常重要的。", "学习是很难的。"], "answer": 0 },
+    { "audio": "They raised a lot of money for sick children.", "opts": ["他们为生病的孩子筹了很多钱。", "他们弄丢了钱包。", "他们买了一辆新车。", "他们去看电影了。"], "answer": 0 },
+    { "audio": "A small act of kindness can warm a cold day.", "opts": ["小小的善举能温暖寒冷的一天。", "冬天总是会下雪。", "商店正在打折。", "他上学迟到了。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "'donate' 的中文意思是?", "opts": ["捐赠", "偷窃", "购买", "丢弃"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'empathy' 的中文意思是?", "opts": ["同理心;共情", "愤怒", "懒惰", "骄傲"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'grateful' 的中文意思是?", "opts": ["感激的", "害怕的", "无聊的", "生气的"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "'volunteer' 作动词时意思是?", "opts": ["做志愿者", "卖东西", "睡觉", "哭泣"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ others is a rewarding thing to do.", "opts": ["Helping", "Help", "Helps", "Helped"], "answer": 0, "point": "动名词作主语", "dim": "grammar" },
+    { "q": "She enjoys ____ at the animal shelter.", "opts": ["working", "work", "to work", "worked"], "answer": 0, "point": "动名词作动词宾语", "dim": "grammar" },
+    { "q": "Thank you for ____ us with the charity sale.", "opts": ["helping", "help", "to help", "helped"], "answer": 0, "point": "动名词作介词宾语", "dim": "grammar" },
+    { "q": "Donating to charity ____ many lives every year.", "opts": ["changes", "change", "are changing", "were changing"], "answer": 0, "point": "动名词主语用单数", "dim": "grammar" },
+    { "q": "听句子,选出对应中文。", "audio": "Giving is better than receiving.", "opts": ["给予胜过接受。", "接受胜过给予。", "买卖很重要。", "沉默是金。"], "answer": 0, "point": "听力", "dim": "listening" },
+    { "q": "听句子,选出对应中文。", "audio": "Many teenagers start their own charities.", "opts": ["许多青少年创办自己的慈善组织。", "许多人喜欢运动。", "老师布置了作业。", "商店周末关门。"], "answer": 0, "point": "听力", "dim": "listening" }
+  ],
+  "reading": {
+    "passage": "During the school's charity week, students collected warm coats for children in cold villages. In just three days, they gathered over two hundred coats. The head teacher said it was the kindest thing the school had ever done.",
+    "passageCn": "在学校的慈善周,学生们为寒冷山村的孩子收集保暖外套;短短三天就收集了两百多件;校长说这是学校做过的最善良的事。",
+    "questions": [
+      { "q": "What did the students collect?", "opts": ["Warm coats.", "Old books.", "Toys.", "Food."], "answer": 0 },
+      { "q": "How many coats did they gather?", "opts": ["Over two hundred.", "About ten.", "None at all.", "A thousand."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short story (about 100 words) about a time you helped someone or did a kind deed.",
+    "promptCn": "写一篇约100词的小故事,讲述你帮助他人或做好事的一次经历。",
+    "sampleWords": ["charity", "donate", "volunteer", "kindness", "help", "grateful", "empathy", "warm", "share", "proud"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Kind Act",
+      "lines": [
+        { "role": "A", "text": "Our class wants to do something kind this week.", "cn": "我们班这周想做点善事。" },
+        { "role": "B", "text": "How about visiting the nursing home?", "cn": "去养老院看望老人怎么样?" },
+        { "role": "A", "text": "Great idea! The elderly love having visitors.", "cn": "好主意!老人们喜欢有人来看望。" },
+        { "role": "B", "text": "I'm really looking forward to helping them.", "cn": "我很期待去帮助他们。" }
+      ]
+    },
+    {
+      "title": "At the Charity Sale",
+      "lines": [
+        { "role": "A", "text": "These cakes look delicious! How much are they?", "cn": "这些蛋糕看着真好吃!多少钱?" },
+        { "role": "B", "text": "Five yuan each. All the money goes to sick children.", "cn": "每个五元,所有钱都捐给生病的孩子。" },
+        { "role": "A", "text": "Wonderful. I'll take three, please.", "cn": "太好了,请给我三个。" },
+        { "role": "B", "text": "Thank you for supporting our charity sale!", "cn": "谢谢你支持我们的义卖!" }
+      ]
+    }
+  ]
+}

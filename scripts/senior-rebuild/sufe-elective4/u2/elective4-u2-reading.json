@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Learning about Trade and Economy",
+  "source": "上外版选择性必修四 Unit 2 同主题阅读(中国外贸进步/一带一路/为何学经济·稀缺/边际思考/机会成本·航班/贝币·货币史)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "China's Trade Story",
+      "topic_cn": "说明·中国外贸进步",
+      "body": "Since it joined the World Trade Organization, China has opened its markets wider and grown faster than almost any other large country. Its rapid development has become a powerful engine driving the growth of the whole world economy. Year after year, China has bought more goods from abroad and sold more products to other nations. Its cheap, high-quality products reach businesses and families on every continent, while its rising demand for imports gives trading partners fresh chances to earn money. China has also created millions of jobs, both at home and overseas, and has helped lift hundreds of millions of its own people out of poverty. Many experts believe that the country's success in trade has made it one of the most important partners for more than a hundred nations. In this way, the story of a single country's trade has slowly become part of the story of the wider world.",
+      "vocab_notes": [
+        {
+          "word": "import",
+          "cn": "进口"
+        },
+        {
+          "word": "export",
+          "cn": "出口"
+        },
+        {
+          "word": "poverty",
+          "cn": "贫困"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What has happened to China's markets since it joined the WTO?",
+          "options": [
+            "They were opened wider and the country grew quickly.",
+            "They were closed to the rest of the world.",
+            "They were sold to foreign companies.",
+            "They stopped buying any goods at all."
+          ],
+          "answer_index": 0,
+          "explanation": "首句'opened its markets wider and grown faster'的转述。"
+        },
+        {
+          "stem": "How do China's imports help its trading partners?",
+          "options": [
+            "They force the partners to stop trading.",
+            "They give those partners new chances to earn money.",
+            "They make all foreign goods cheaper at once.",
+            "They close down factories abroad."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'rising demand for imports gives trading partners fresh chances to earn money'的概括。"
+        },
+        {
+          "stem": "What does the passage say about China's own people?",
+          "options": [
+            "Hundreds of millions were freed from poverty.",
+            "Most of them became much poorer.",
+            "They all moved to other countries.",
+            "They were not affected by trade."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'helped lift hundreds of millions of its own people out of poverty'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Roads That Carry Trade",
+      "topic_cn": "说明·一带一路",
+      "body": "The Belt and Road Initiative is one of China's most ambitious plans for trade and development. Its goal is to connect China with many countries across Asia, Africa and Europe by building roads, railways, ports and other links. Supporters say the plan does far more than simply move goods from place to place. By improving transport, it lowers the cost of trade and gives poorer regions a real chance to join the world economy. In Kenya, for example, a railway built with Chinese help is said to have boosted the country's growth. Cooperation agreements worth tens of billions of dollars have been signed, and many nations have welcomed the new opportunities. Of course, such a huge plan also raises questions about cost and fairness, and not everyone agrees on how the benefits should be shared. Even so, for many developing countries the initiative has opened a door that once seemed firmly shut.",
+      "vocab_notes": [
+        {
+          "word": "ambitious",
+          "cn": "雄心勃勃的"
+        },
+        {
+          "word": "link",
+          "cn": "连接;纽带"
+        },
+        {
+          "word": "region",
+          "cn": "地区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main aim of the Belt and Road Initiative?",
+          "options": [
+            "To stop all trade between the continents.",
+            "To link China with many other countries through transport and trade.",
+            "To build only new schools inside China.",
+            "To keep poorer regions out of the world economy."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'connect China with many countries… by building roads, railways, ports'的转述。"
+        },
+        {
+          "stem": "According to the passage, how does better transport help trade?",
+          "options": [
+            "It raises the cost of moving goods.",
+            "It blocks goods from crossing borders.",
+            "It makes trade cheaper for poorer areas.",
+            "It closes ports and railways down."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'lowers the cost of trade'的转述。"
+        },
+        {
+          "stem": "What does the writer admit about such a huge plan?",
+          "options": [
+            "Everyone fully agrees with every part of it.",
+            "It has had no effect at all on trade.",
+            "It only helps the very richest nations.",
+            "People still argue about its cost and fairness."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'raises questions about cost and fairness, and not everyone agrees'的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Study Economics?",
+      "topic_cn": "议论·稀缺与选择",
+      "body": "Why should ordinary students bother to learn economics? The simplest answer is that economics is the study of how people deal with scarcity. We all have endless wants, but the time, money and resources to meet them are strictly limited. Because we cannot have everything, every choice we make means giving up something else. Economists call this hidden price the 'opportunity cost'. Imagine you have only ten yuan and you must choose between a book and a film ticket. If you buy the book, the film you miss is the true cost of your choice. Thinking in this way helps us use our limited money and time more wisely. It also explains the choices of families, companies and even whole nations. Once you start to see the world through this lens, shopping, saving and planning all begin to make far more sense. That is exactly why so many schools now teach young people to think like economists.",
+      "vocab_notes": [
+        {
+          "word": "scarcity",
+          "cn": "稀缺;短缺"
+        },
+        {
+          "word": "resource",
+          "cn": "资源"
+        },
+        {
+          "word": "opportunity cost",
+          "cn": "机会成本"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what is economics mainly about?",
+          "options": [
+            "How people cope with limited resources.",
+            "How to become rich very quickly.",
+            "How to avoid making any choices.",
+            "How to spend with no limits at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'how people deal with scarcity'的转述。"
+        },
+        {
+          "stem": "What is the 'opportunity cost' of a choice?",
+          "options": [
+            "The money you manage to save.",
+            "The thing you give up when you choose.",
+            "The price printed on a tag.",
+            "The number of things you own."
+          ],
+          "answer_index": 1,
+          "explanation": "原文用买书放弃电影说明'机会成本'是放弃的东西。"
+        },
+        {
+          "stem": "Why do many schools now teach economics?",
+          "options": [
+            "To make students spend much more money.",
+            "To stop students from thinking carefully.",
+            "To help young people make wiser choices.",
+            "To teach students to ignore every cost."
+          ],
+          "answer_index": 2,
+          "explanation": "末句'teach young people to think like economists'+'make far more sense'的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Thinking at the Margin",
+      "topic_cn": "议论·边际思考",
+      "body": "Most decisions in real life are not simple choices between everything and nothing. At dinner you rarely decide between starving and eating until you are sick; instead you decide whether to take one more spoonful of rice. Before an exam you do not choose between never studying and studying all day; you choose whether to spend one more hour with your notes. Economists describe these tiny steps as changes 'at the margin'. To make such a decision well, you only need to compare the extra benefit of one more step with its extra cost. Suppose you are deciding whether to stay one more year at school. The useful question is not whether school is good in general, but whether that single extra year is worth its price in time and money. A wise person acts only when the gain from a step is bigger than what the step costs. Learning to think this carefully can improve almost every choice we make.",
+      "vocab_notes": [
+        {
+          "word": "margin",
+          "cn": "边际;边缘"
+        },
+        {
+          "word": "benefit",
+          "cn": "收益;好处"
+        },
+        {
+          "word": "extra",
+          "cn": "额外的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does 'thinking at the margin' mean here?",
+          "options": [
+            "Choosing only between everything and nothing.",
+            "Never making any small decisions at all.",
+            "Ignoring the cost of every decision.",
+            "Weighing the added benefit and cost of one more step."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'compare the extra benefit of one more step with its extra cost'的转述。"
+        },
+        {
+          "stem": "When deciding to stay one more year at school, what should you ask?",
+          "options": [
+            "Whether one more year of study is really worth what it costs.",
+            "Whether school is a good thing in general.",
+            "Whether to leave school forever now.",
+            "Whether other people enjoy school."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'whether that single extra year is worth its price'的转述。"
+        },
+        {
+          "stem": "When does a wise person take an action?",
+          "options": [
+            "When it costs as much money as possible.",
+            "When the gain from it outweighs what it costs.",
+            "When everyone around them is doing it.",
+            "When it brings no benefit whatsoever."
+          ],
+          "answer_index": 1,
+          "explanation": "末段'gain from a step is bigger than what the step costs'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Cheapest Flight",
+      "topic_cn": "记叙·机会成本",
+      "body": "When my mother planned a trip abroad, she had to choose among three flights. A Thursday night flight was the cheapest, a Friday flight cost a little more, and a Saturday morning flight was the most expensive of all. At first the choice seemed obvious: pick the cheapest ticket and save some money. But my mother thought like an economist. She worked in a restaurant from Monday to Friday and earned good money on each working day. If she took the cheap Thursday flight, she would lose two days of pay by leaving her job early. Once she added those lost wages to the ticket price, the 'cheap' flight turned out to be the most costly choice of the three. The expensive Saturday flight, which let her work the whole week, was in fact the best value. Her story taught me a useful lesson: the real price of something is not only the number on the tag, but everything else you give up to get it.",
+      "vocab_notes": [
+        {
+          "word": "wages",
+          "cn": "工资"
+        },
+        {
+          "word": "value",
+          "cn": "价值;划算"
+        },
+        {
+          "word": "costly",
+          "cn": "昂贵的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the cheapest flight seem the best at first?",
+          "options": [
+            "Because it left on a Saturday morning.",
+            "Because it was the most expensive one.",
+            "Because it had the lowest ticket price.",
+            "Because the mother had no job at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'pick the cheapest ticket and save some money'的转述。"
+        },
+        {
+          "stem": "Why was the cheap Thursday flight actually costly?",
+          "options": [
+            "The plane was extremely slow.",
+            "Its ticket was the dearest of all.",
+            "She simply disliked Thursdays.",
+            "She would miss two days' wages from her job."
+          ],
+          "answer_index": 3,
+          "explanation": "原文'lose two days of pay by leaving her job early'的转述。"
+        },
+        {
+          "stem": "What lesson did the writer learn from the story?",
+          "options": [
+            "The true cost includes what you give up, not just the price.",
+            "You should always buy the cheapest ticket.",
+            "You should never travel by plane again.",
+            "Money has no real value to anyone."
+          ],
+          "answer_index": 0,
+          "explanation": "末句关于'real price… everything else you give up'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Money Before Coins",
+      "topic_cn": "说明·货币史·贝币",
+      "body": "Long before coins and paper notes, people in many places used unusual objects as money. In China, one of the earliest forms of money was the cowrie shell, known as bei. During the Shang dynasty, these small, pretty shells were collected from seas far to the south. Because they were hard to find and could not easily be copied, people trusted them and accepted them in trade. Only kings and rich families could gather large numbers of them, so the shells also became a sign of wealth. As trade grew busier over time, shells were slowly replaced by metal coins, which were easier to make and to carry about. Yet the idea behind shell money has never really changed. Money, whether a shell, a coin or a number on a screen, works only because people are willing to take it. Its true power lies not in the object itself but in the shared trust of those who use it.",
+      "vocab_notes": [
+        {
+          "word": "shell",
+          "cn": "贝壳"
+        },
+        {
+          "word": "currency",
+          "cn": "货币"
+        },
+        {
+          "word": "wealth",
+          "cn": "财富"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did people trust cowrie shells as money?",
+          "options": [
+            "They were found almost everywhere.",
+            "They were rare and hard to copy.",
+            "They were all made out of gold.",
+            "They were printed by the kings."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'hard to find and could not easily be copied'的转述。"
+        },
+        {
+          "stem": "What did owning many shells show about a family?",
+          "options": [
+            "That the family was very poor.",
+            "That the family disliked trade.",
+            "That the family was wealthy.",
+            "That the family lived by the sea."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'became a sign of wealth'的转述。"
+        },
+        {
+          "stem": "What is the writer's main point about money in the last lines?",
+          "options": [
+            "Its power comes from the material it is made of.",
+            "Shells are still the main money used today.",
+            "Coins are completely worthless to everyone.",
+            "Money has value only when people are willing to accept it."
+          ],
+          "answer_index": 3,
+          "explanation": "末段'works only because people are willing to take it… shared trust'的转述。"
+        }
+      ]
+    }
+  ]
+}

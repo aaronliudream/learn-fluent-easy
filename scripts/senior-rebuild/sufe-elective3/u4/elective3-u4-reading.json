@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Protecting the Environment",
+  "source": "上外版选择性必修三 Unit 4 同主题阅读(温室效应/海平面上升/海洋塑料/年轻环保人士/碳足迹/个人小习惯)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Villain in the Atmosphere",
+      "topic_cn": "说明·温室效应",
+      "body": "Carbon dioxide is a gas that we breathe out every day, and at first it seems quite harmless. In fact, plants need this gas in order to make their own food. Yet the same gas can act like a quiet villain. Sunlight travels through the atmosphere and warms the surface of the Earth. At night, the Earth cools down again by radiating heat back into space. Carbon dioxide, however, tends to block some of this heat, so the planet keeps more warmth than it really should. This is what people call the greenhouse effect. A small amount of carbon dioxide keeps us comfortably warm, which is a good thing. The trouble is that its concentration in the air has been rising steadily for decades. As factories burn more coal and oil, and as more forests are cut down, more of the gas pours into the atmosphere. Little by little, the average temperature climbs, and the balance that all life depends on is slowly lost.",
+      "vocab_notes": [
+        {
+          "word": "atmosphere",
+          "cn": "大气层"
+        },
+        {
+          "word": "radiate",
+          "cn": "辐射"
+        },
+        {
+          "word": "concentration",
+          "cn": "浓度"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say carbon dioxide is not simply harmful?",
+          "options": [
+            "Plants rely on it to produce their food.",
+            "It can be sold for a high price.",
+            "It blocks all sunlight from the Earth.",
+            "It is never found in the air we breathe."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'plants need this gas in order to make their own food' 的转述。"
+        },
+        {
+          "stem": "How does carbon dioxide cause the greenhouse effect?",
+          "options": [
+            "By cooling the Earth's surface quickly.",
+            "By keeping heat that should escape into space.",
+            "By stopping plants from growing at all.",
+            "By removing oxygen from the atmosphere."
+          ],
+          "answer_index": 1,
+          "explanation": "对应 'tends to block some of this heat… keeps more warmth than it really should' 的转述。"
+        },
+        {
+          "stem": "What is making the amount of carbon dioxide go up?",
+          "options": [
+            "The burning of fuels and the loss of forests.",
+            "Fewer factories and more forests.",
+            "Cooler weather in the polar regions.",
+            "The slow movement of the glaciers."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'factories burn more coal and oil, and as more forests are cut down' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "When the Ice Caps Melt",
+      "topic_cn": "说明·海平面上升",
+      "body": "Most of the ice in the world is locked away in two huge ice caps. About ninety percent of it lies in Antarctica, and another eight percent covers Greenland. For a long time, this ice has stayed frozen and still. Now, as the average temperature of the Earth rises, that picture is changing. Winters are growing a little milder and summers a little hotter. Bit by bit, the glaciers retreat and the polar ice caps begin to melt. Scientists say this melting may be the most dangerous change of all. When ice on land turns to water, that water runs into the sea, and so the sea level slowly rises. If the great ice caps melt far enough, the rising water could one day reach deep into low-lying cities along the coast. Streets that are busy today might lie under the sea in the future. That is why so many researchers watch the ice so closely and warn us not to ignore the danger.",
+      "vocab_notes": [
+        {
+          "word": "glacier",
+          "cn": "冰川"
+        },
+        {
+          "word": "retreat",
+          "cn": "退去"
+        },
+        {
+          "word": "polar",
+          "cn": "极地的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where is most of the world's ice found?",
+          "options": [
+            "In rivers across Europe.",
+            "Mainly in the Antarctic ice cap.",
+            "On the tops of small mountains.",
+            "Under the streets of coastal cities."
+          ],
+          "answer_index": 1,
+          "explanation": "对应 'About ninety percent of it lies in Antarctica' 的转述。"
+        },
+        {
+          "stem": "Why does the sea level rise as the ice caps melt?",
+          "options": [
+            "Because ships push the water higher.",
+            "Because rain falls much more often.",
+            "Because melted ice flows from the land into the sea.",
+            "Because the ocean grows colder each year."
+          ],
+          "answer_index": 2,
+          "explanation": "对应 'that water runs into the sea, and so the sea level slowly rises' 的转述。"
+        },
+        {
+          "stem": "What does the writer warn could happen to some coastal cities?",
+          "options": [
+            "They will all become much colder.",
+            "They will lose every river nearby.",
+            "They will no longer need any water.",
+            "They may one day be covered by the rising sea."
+          ],
+          "answer_index": 3,
+          "explanation": "对应 'Streets that are busy today might lie under the sea in the future' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Together for Our Ocean",
+      "topic_cn": "说明·海洋塑料垃圾",
+      "body": "Every year a huge quantity of waste ends up in the world's oceans and causes trouble for the animals living there. About eighty percent of all marine waste is plastic from bottles and packaging. When it rains, this rubbish washes into rivers and then flows out to the sea. Some of it sinks, some collects in great floating patches, and the rest is left on beaches. The waste is dangerous because some animals mistake it for food. A floating plastic bag, for example, can look like a jellyfish to a hungry sea turtle. The plastic may block the animal's stomach so that it starves, or it may even poison it. A survey found that half of all green turtles have eaten rubbish, and that number is still rising. Six kinds of sea turtle are already threatened with extinction. Groups such as Ocean Conservancy now organise clean-up days on thousands of beaches around the world, but they remind us that the real answer is to throw away less in the first place.",
+      "vocab_notes": [
+        {
+          "word": "marine",
+          "cn": "海洋的"
+        },
+        {
+          "word": "jellyfish",
+          "cn": "水母"
+        },
+        {
+          "word": "threaten",
+          "cn": "威胁"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is most of the rubbish in the ocean made of?",
+          "options": [
+            "Mostly plastic, such as old drinks bottles.",
+            "Glass from windows.",
+            "Old metal from ships.",
+            "Wood from broken boats."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'About eighty percent of all marine waste is plastic from bottles and packaging' 的转述。"
+        },
+        {
+          "stem": "Why is plastic waste dangerous to sea turtles?",
+          "options": [
+            "It makes the water too cold for them.",
+            "They may eat it, thinking it is food.",
+            "It teaches them to swim too fast.",
+            "It frightens them away from the beaches."
+          ],
+          "answer_index": 1,
+          "explanation": "对应 'some animals mistake it for food… look like a jellyfish to a hungry sea turtle' 的转述。"
+        },
+        {
+          "stem": "According to the group, what is the best solution to the problem?",
+          "options": [
+            "Building more factories near the sea.",
+            "Catching all the sea turtles to save them.",
+            "Producing and throwing away less waste.",
+            "Banning people from visiting any beach."
+          ],
+          "answer_index": 2,
+          "explanation": "对应 'the real answer is to throw away less in the first place' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Young Environmentalist",
+      "topic_cn": "记叙·年轻环保人士",
+      "body": "Janine was only a teenager when she first travelled to Costa Rica with her family. There she saw something that she could not forget. People were cutting down the rainforest, tree after tree, to sell the wood and clear the land. Janine understood the significance of those forests to the whole planet, for they give us clean air and a home for countless animals. So she made an honourable decision: she would do something to save them. Back home, she and a few friends set up a small non-profit group. They were not after any profit; they only wanted to buy and protect pieces of the forest before they were lost. At first the task seemed almost impossible, and some people were pessimistic about their chances. But Janine stayed optimistic. Year after year, more volunteers joined, and the group slowly grew. Today it protects a large area of rainforest. Janine often says that the most valuable thing she has learned is that even one young person can begin to change the world.",
+      "vocab_notes": [
+        {
+          "word": "significance",
+          "cn": "重要性"
+        },
+        {
+          "word": "non-profit",
+          "cn": "非营利的"
+        },
+        {
+          "word": "optimistic",
+          "cn": "乐观的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Janine see in Costa Rica that troubled her?",
+          "options": [
+            "Animals were attacking the local people.",
+            "The sea was rising over the beaches.",
+            "Factories were closing one by one.",
+            "Local people were destroying the rainforest for wood."
+          ],
+          "answer_index": 3,
+          "explanation": "对应 'People were cutting down the rainforest, tree after tree' 的转述。"
+        },
+        {
+          "stem": "Why did Janine's group buy parts of the forest?",
+          "options": [
+            "To protect them before they were destroyed.",
+            "To build new houses there.",
+            "To make a large profit from the wood.",
+            "To turn them into farmland."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'wanted to buy and protect pieces of the forest before they were lost' 的转述;且 'not after any profit'。"
+        },
+        {
+          "stem": "What lesson does Janine say she values most?",
+          "options": [
+            "That saving forests costs very little.",
+            "That a single young person can start to make a difference.",
+            "That only governments can help nature.",
+            "That travelling abroad is always exciting."
+          ],
+          "answer_index": 1,
+          "explanation": "对应 'even one young person can begin to change the world' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Is a Carbon Footprint?",
+      "topic_cn": "说明·碳足迹",
+      "body": "You may have heard people talk about their 'carbon footprint', but what does the term really mean? A footprint is the mark you leave behind when you walk. In the same way, a carbon footprint is the mark each of us leaves on the environment. To be exact, it is a measure of all the greenhouse gases that our activities send into the air, both directly and indirectly. Every time you switch on a light, ride in a car, or buy a product wrapped in heavy packaging, a little more carbon dioxide is released somewhere. All of these add up to your personal footprint. The larger the footprint, the more you are adding to global warming. The good news is that a footprint can be made smaller. You might take public transport instead of a car, unplug electronics you are not using, or choose local food with less packaging. None of these changes is hard, yet together they tell us something important about how we use the energy of the Earth.",
+      "vocab_notes": [
+        {
+          "word": "carbon footprint",
+          "cn": "碳足迹"
+        },
+        {
+          "word": "indirectly",
+          "cn": "间接地"
+        },
+        {
+          "word": "packaging",
+          "cn": "包装"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does a carbon footprint measure?",
+          "options": [
+            "The size of a person's real footprint.",
+            "The amount of food a family eats.",
+            "The greenhouse gases caused by what we do.",
+            "The number of cars in a city."
+          ],
+          "answer_index": 2,
+          "explanation": "对应 'a measure of all the greenhouse gases that our activities send into the air' 的转述。"
+        },
+        {
+          "stem": "What does a larger footprint mean, according to the text?",
+          "options": [
+            "A person walks more each day.",
+            "A person uses less electricity.",
+            "A person buys lighter packaging.",
+            "A person is adding more to global warming."
+          ],
+          "answer_index": 3,
+          "explanation": "对应 'The larger the footprint, the more you are adding to global warming' 的转述。"
+        },
+        {
+          "stem": "Which action does the writer suggest to shrink your footprint?",
+          "options": [
+            "Travelling by bus rather than driving alone.",
+            "Leaving the lights on all night.",
+            "Buying products with heavier packaging.",
+            "Driving everywhere on your own."
+          ],
+          "answer_index": 0,
+          "explanation": "对应 'take public transport instead of a car' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Small Habits, Big Difference",
+      "topic_cn": "议论·个人小行动",
+      "body": "When people hear about global warming and rising seas, they often feel helpless. The problem seems far too big for any one person to solve. Yet the truth is that big changes are built from small habits. Think about the rubbish in your own home. Many cans, bottles and even old electrical goods can be used again instead of being thrown away. If you sort your waste carefully and drop it in a recycle bin, less of it ends up in the sea or buried in the ground. You can also save energy in simple ways: turn off the lights when you leave a room, unplug your phone charger, and walk or cycle for short trips. None of these actions costs much time or money. By themselves they may seem too small to matter, but every effort adds up. If millions of people each make a few green choices every day, the result is enormous. Protecting the environment, after all, is not the job of a few experts; it is something that belongs to each of us.",
+      "vocab_notes": [
+        {
+          "word": "recycle bin",
+          "cn": "回收箱"
+        },
+        {
+          "word": "sort",
+          "cn": "分类"
+        },
+        {
+          "word": "enormous",
+          "cn": "巨大的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many people feel helpless about global warming?",
+          "options": [
+            "They have never heard of rising seas.",
+            "They think the problem is too big for one person.",
+            "They believe experts have already solved it.",
+            "They do not produce any rubbish at all."
+          ],
+          "answer_index": 1,
+          "explanation": "对应 'The problem seems far too big for any one person to solve' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing with cans and bottles at home?",
+          "options": [
+            "Burying them in the garden.",
+            "Sending them straight to the sea.",
+            "Using them again rather than throwing them out.",
+            "Keeping them locked away forever."
+          ],
+          "answer_index": 2,
+          "explanation": "对应 'can be used again instead of being thrown away' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main message about protecting the environment?",
+          "options": [
+            "Only a few experts can really help.",
+            "Small habits are a waste of effort.",
+            "Saving energy costs too much money.",
+            "Everyone's small green choices add up to a big result."
+          ],
+          "answer_index": 3,
+          "explanation": "对应 'every effort adds up… it is something that belongs to each of us' 的转述。"
+        }
+      ]
+    }
+  ]
+}

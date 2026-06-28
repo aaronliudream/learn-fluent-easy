@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Protecting the Environment",
+  "source": "上外版选择性必修三 Unit 4 同主题完形(我的绿色日记/温室效应原理/拯救海龟/海滩清理日/融化的两极/校园环保)。用词限本单元/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Green Diary",
+      "text": "Last month our teacher asked us to keep a 'green diary' for thirty days. The (1)____ was simple: write down one small thing you did each day to help the (2)____. On the first day, I turned off the lights whenever I (3)____ a room. On the second day, I carried a cloth bag to the shop so that I would not need any plastic (4)____. Soon I began to (5)____ my own waste at home, dropping cans and bottles into the right (6)____. I also started to walk to school instead of asking my dad to (7)____ me. At first these changes felt too (8)____ to matter. But by the end of the month, my diary was full, and I felt (9)____ of what I had done. I learned that protecting the Earth does not need money or magic; it just needs us to form a few good (10)____ and keep them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "task",
+            "song",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "the task was simple 任务很简单,名词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "environment",
+            "machine",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "help the environment 帮助环境。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "ate",
+            "left",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "whenever I left a room 每当离开房间,动词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "food",
+            "music",
+            "money",
+            "bags"
+          ],
+          "answer_index": 3,
+          "explanation": "plastic bags 塑料袋,名词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sort",
+            "throw",
+            "buy",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "sort my own waste 给垃圾分类,动词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "bin",
+            "song",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "into the right bin 投进正确的垃圾箱,名词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "drive",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "ask my dad to drive me 让爸爸开车送我,动词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rich",
+            "late",
+            "busy",
+            "small"
+          ],
+          "answer_index": 3,
+          "explanation": "too small to matter 太小而无足轻重,形容词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "afraid",
+            "sorry",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "felt proud of 为……感到自豪,形容词。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "habits",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "a few good habits 一些好习惯,名词。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "How the Greenhouse Effect Works",
+      "text": "Many people have heard of the greenhouse effect, but few really (1)____ how it works. Each day, sunlight (2)____ through the air and warms the ground beneath our feet. After dark, the warm Earth sends this heat back (3)____ the sky. In a healthy world, the heat that comes in by day and (4)____ at night stays in balance. The problem begins when there is too much carbon dioxide in the (5)____. This gas tends to (6)____ part of the heat, so it cannot escape into space. As a (7)____, the planet keeps more warmth than it needs, and its average (8)____ slowly climbs. A little of this effect is (9)____, for without it the Earth would be far too cold for life. Too much of it, however, is (10)____, and that is the danger we must face today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "understand",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "understand how it works 理解它如何运作,动词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "throws",
+            "buys",
+            "travels"
+          ],
+          "answer_index": 3,
+          "explanation": "sunlight travels through 阳光穿过,动词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "into",
+            "under",
+            "below",
+            "across"
+          ],
+          "answer_index": 0,
+          "explanation": "back into the sky 回到天空,介词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "arrives",
+            "leaves",
+            "begins",
+            "stops"
+          ],
+          "answer_index": 1,
+          "explanation": "the heat that … leaves at night 夜间离开,动词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "garden",
+            "market",
+            "atmosphere",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "in the atmosphere 在大气中,名词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "wash",
+            "open",
+            "block"
+          ],
+          "answer_index": 3,
+          "explanation": "block part of the heat 阻挡部分热量,动词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "result",
+            "price",
+            "song",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "as a result 结果,固定搭配。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "temperature",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "its average temperature 平均气温,名词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "useless",
+            "empty",
+            "helpful",
+            "wrong"
+          ],
+          "answer_index": 2,
+          "explanation": "a little of this effect is helpful 有益的,形容词。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "safe",
+            "free",
+            "cheap",
+            "dangerous"
+          ],
+          "answer_index": 3,
+          "explanation": "too much of it is dangerous 危险的,形容词。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Saving the Sea Turtles",
+      "text": "On a quiet beach in summer, a group of students worked hard to (1)____ the sea turtles. Their teacher had told them a sad (2)____: many turtles die after eating plastic bags, which they (3)____ for jellyfish. The students did not want this to (4)____ near their own home. First, they walked along the sand and (5)____ up every piece of rubbish they could find. Then they put up bright (6)____ to remind visitors to take their litter home. One girl explained that even a single bag could (7)____ a turtle's stomach and cause it to starve. The work was tiring, and the sun was (8)____, but nobody wanted to stop. By evening, the beach was clean again, and everyone felt (9)____ that they had done something real. They knew that the ocean could not protect itself, so it was up to people to (10)____ after it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "protect",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "protect the sea turtles 保护海龟,动词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "story",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "a sad story 一个悲伤的故事,名词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "mistake",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "mistake … for jellyfish 误认为水母,动词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "leave",
+            "buy",
+            "happen"
+          ],
+          "answer_index": 3,
+          "explanation": "did not want this to happen 不想这发生,动词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "picked",
+            "sold",
+            "lost",
+            "hid"
+          ],
+          "answer_index": 0,
+          "explanation": "picked up every piece of rubbish 捡起垃圾,动词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "foods",
+            "signs",
+            "prices",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "put up bright signs 立起醒目的标牌,名词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "open",
+            "wash",
+            "block",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "block a turtle's stomach 堵住海龟的胃,动词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cold",
+            "quiet",
+            "empty",
+            "hot"
+          ],
+          "answer_index": 3,
+          "explanation": "the sun was hot 太阳很烈,形容词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "glad",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "felt glad that 感到高兴,形容词。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "look",
+            "throw",
+            "give"
+          ],
+          "answer_index": 1,
+          "explanation": "look after it 照看它,动词短语 look after。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Beach Clean-up Day",
+      "text": "Every spring, our town holds a special (1)____ called Ocean Clean-up Day. Hundreds of (2)____ come to the coast early in the morning, each carrying a bag and a pair of gloves. Their (3)____ is to remove as much rubbish from the beach as they can. If the litter is (4)____ now, it will not flow out to the sea and (5)____ problems for the animals there. Last year I took (6)____ for the first time. I was surprised by how much plastic I found buried in the (7)____. Bottles, cups and broken toys were everywhere. By noon, our small team had (8)____ more than twenty bags. The leader told us that this rubbish would now be (9)____ instead of left in nature. Tired but happy, I understood that one clean beach was only the (10)____; the real goal was to make people produce less waste all year round.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "event",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a special event 一个特别的活动,名词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "machines",
+            "songs",
+            "volunteers"
+          ],
+          "answer_index": 3,
+          "explanation": "Hundreds of volunteers 数百名志愿者,名词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "goal",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "their goal is to remove rubbish 目标,名词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "collected",
+            "lost",
+            "bought"
+          ],
+          "answer_index": 1,
+          "explanation": "if the litter is collected now 被收集起来,动词(被动)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "buy",
+            "cause",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "cause problems for the animals 给动物带来麻烦,动词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "part"
+          ],
+          "answer_index": 3,
+          "explanation": "took part 参加,take part(in)固定搭配。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sand",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "buried in the sand 埋在沙子里,名词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "filled",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "had filled more than twenty bags 装满了二十多个袋子,动词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "eaten",
+            "grown",
+            "recycled",
+            "driven"
+          ],
+          "answer_index": 2,
+          "explanation": "would now be recycled 将被回收,动词(被动)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "start"
+          ],
+          "answer_index": 3,
+          "explanation": "only the start 仅仅是开始,名词。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Melting Poles",
+      "text": "Far to the north and south of the world lie two great fields of ice. For thousands of years they stayed (1)____ and still, deep and white. Today, however, scientists are (2)____. The Earth is slowly growing warmer, and the ice has begun to (3)____. As the temperature (4)____, summers become a little hotter and winters a little milder. Bit by bit, the great glaciers (5)____ towards the mountains, leaving bare rock behind. When ice on the land turns to water, that water flows into the (6)____, and the level of the sea rises. Many low-lying cities along the coast could one day be in (7)____. This is why the melting of the ice is seen as such a serious (8)____. Researchers watch the poles (9)____, hoping the world will act in time. They remind us that the cold, distant ice is closely (10)____ to the lives of people everywhere.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "frozen",
+            "warm",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "stayed frozen and still 保持冰冻,形容词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "worried",
+            "bored",
+            "proud"
+          ],
+          "answer_index": 1,
+          "explanation": "scientists are worried 科学家很担忧,形容词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "grow",
+            "sell",
+            "melt",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "the ice has begun to melt 冰开始融化,动词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sells",
+            "buys",
+            "sleeps",
+            "rises"
+          ],
+          "answer_index": 3,
+          "explanation": "as the temperature rises 随着气温上升,动词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "retreat",
+            "sing",
+            "sell",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "the glaciers retreat 冰川退缩,动词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "sea",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "flows into the sea 流入大海,名词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "danger",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "be in danger 处于危险中,名词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "problem"
+          ],
+          "answer_index": 3,
+          "explanation": "such a serious problem 如此严重的问题,名词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "closely",
+            "loudly",
+            "cheaply",
+            "sweetly"
+          ],
+          "answer_index": 0,
+          "explanation": "watch the poles closely 密切关注,副词。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "linked",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "closely linked to 与……紧密相连,动词(过去分词)。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Going Green at School",
+      "text": "This year our Green Club decided to make our school more (1)____ to the environment. We started with a simple (2)____: to cut down the rubbish we produce every day. First, we placed clearly marked (3)____ in every classroom so that students could (4)____ paper, cans and bottles. Next, we asked the canteen to use fewer plastic boxes and more (5)____ that can be washed and used again. We also reminded everyone to (6)____ off the lights and fans when the last person leaves a room, which saves a lot of (7)____. At first, some classmates thought our ideas were too much (8)____. But once they saw how easy the new habits were, more and more of them (9)____ in. By the end of the term, our school had produced far less waste, and we felt that our small club had made a real (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "angry",
+            "empty",
+            "friendly",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "more friendly to the environment 对环境更友好,形容词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "goal"
+          ],
+          "answer_index": 3,
+          "explanation": "a simple goal 一个简单的目标,名词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bins",
+            "prices",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "clearly marked bins 标记清楚的垃圾箱,名词。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "sort",
+            "eat",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "sort paper, cans and bottles 给纸、罐、瓶分类,动词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "noises",
+            "boxes",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "boxes that can be washed and used again 可重复使用的盒子,名词。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "buy",
+            "lose",
+            "turn"
+          ],
+          "answer_index": 3,
+          "explanation": "turn off the lights 关灯,动词短语 turn off。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "energy",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "saves a lot of energy 节省大量能源,名词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "trouble",
+            "music",
+            "food"
+          ],
+          "answer_index": 1,
+          "explanation": "too much trouble 太麻烦,名词。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "joined",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "more of them joined in 加入进来,动词短语 join in。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "difference"
+          ],
+          "answer_index": 3,
+          "explanation": "made a real difference 带来真正的改变,名词。"
+        }
+      ]
+    }
+  ]
+}

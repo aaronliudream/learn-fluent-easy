@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Introducing an Artist for an Art Exhibition(为艺术展介绍一位艺术家)",
+  "title_en": "Introducing an Artist",
+  "genre": "说明文 / 介绍(introduce an artist using the general-specific pattern)",
+  "source": "上外版必修三 Unit 2 Moving Forward — Writing:Introducing artists for an art exhibition。用「总—分」结构:先总述,再用细节支撑(作品/题材/风格/社会影响等)。",
+  "prompt_cn": "学校艺术节将举办一场艺术展。请你用英语为齐白石写一段约80-100词的介绍,放在展品旁。要求用「总—分」结构:① 先写一句总述(他是谁、地位如何);② 再用细节支撑:他的作品形式与题材、艺术风格、传达的信息/象征意义、所获荣誉与社会影响。注意行文连贯、句句围绕中心。",
+  "prompt_en": "The School Art Festival will hold an art exhibition. Write an introduction (about 80-100 words) to the painter Qi Baishi to be placed beside his works. Use the general-specific pattern: 1) begin with a general statement (who he is and his place in art); 2) support it with details — his art forms and subjects, his artistic style, the messages or symbolic meanings he conveys, and his honours and social influence.",
+  "points": [
+    "总述句:Qi Baishi is one of the best-known Chinese painters of the 20th century.",
+    "作品与题材:art forms (paintings, seal carvings, poems) + subjects (shrimps, flowers, doves)",
+    "风格与信息:fresh and lively style, heavy ink and energetic strokes; conveys love of nature and a wish for peace",
+    "荣誉与影响:awarded the International Peace Prize; called the People's Artist"
+  ],
+  "word_count": "80-100 词",
+  "model_essay": "Qi Baishi is one of the best-known Chinese painters of the twentieth century. He worked in several art forms, creating paintings, seal carvings and poems. His favourite subjects were everyday things such as shrimps, flowers and doves. Using heavy ink and energetic strokes, he painted in a fresh and lively manner. Through these simple subjects he conveyed his deep love of nature and his wish for a peaceful world. Honoured as the People's Artist and awarded the International Peace Prize, he has inspired countless artists and is loved by ordinary people across the country.",
+  "model_translation": "齐白石是二十世纪最著名的中国画家之一。他从事多种艺术形式,创作绘画、印章雕刻和诗歌。他最喜爱的题材是虾、花、鸽子等日常事物。他用浓墨和充满活力的笔触,以清新生动的方式作画。通过这些简单的题材,他传达出对自然的深爱和对和平世界的向往。他被尊为「人民艺术家」,并获得国际和平奖,启发了无数艺术家,深受全国普通百姓的喜爱。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "总述 + 作品/题材 + 风格/信息 + 荣誉/影响 四方面齐全" },
+      { "dimension": "结构", "max": 4, "criteria": "总—分结构清晰:先总述,再细节支撑;句句围绕中心、连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "词汇句型准确多样、不定式等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "总述 Qi Baishi is one of the best-known Chinese painters …",
+      "作品/题材 He worked in several art forms … His favourite subjects were …",
+      "风格/信息 Using heavy ink and energetic strokes, he painted … he conveyed …",
+      "荣誉/影响 Honoured as the People's Artist and awarded …"
+    ],
+    "key_expressions": [
+      "one of the best-known Chinese painters of the twentieth century",
+      "He worked in several art forms, creating paintings, seal carvings and poems.",
+      "Using heavy ink and energetic strokes, he painted in a fresh and lively manner.",
+      "he conveyed his deep love of nature and his wish for a peaceful world"
+    ],
+    "useful_words": ["painter", "art form", "subject", "stroke", "manner", "convey", "harmonious", "award", "recognise", "influence"]
+  },
+  "high_sentences": [
+    "Qi Baishi is one of the best-known Chinese painters of the twentieth century.",
+    "Using heavy ink and energetic strokes, he painted in a fresh and lively manner.",
+    "Through these simple subjects he conveyed his deep love of nature and his wish for peace.",
+    "Honoured as the People's Artist, he has inspired countless artists across the country."
+  ],
+  "error_pairs": [
+    { "wrong": "He is good at to paint flowers.", "correct": "He is good at painting flowers.", "note": "be good at + doing,介词 at 后用动名词。" },
+    { "wrong": "His works conveys a love of nature.", "correct": "His works convey a love of nature.", "note": "主语 works 是复数,动词不加 s。" },
+    { "wrong": "He was awarded with the Peace Prize.", "correct": "He was awarded the Peace Prize.", "note": "award sb sth,被动 be awarded sth,不加 with。" }
+  ],
+  "paragraph_template": "【介绍艺术家·总—分结构】\n第1句 总述:Qi Baishi is one of the best-known … painters …\n第2-3句 作品与题材:He worked in several art forms … His favourite subjects were …\n第4-5句 风格与信息:Using …, he painted … he conveyed …\n第6句 荣誉与影响:Honoured as …, he has inspired …"
+}

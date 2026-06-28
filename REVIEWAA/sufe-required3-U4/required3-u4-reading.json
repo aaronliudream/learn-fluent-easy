@@ -1,0 +1,366 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Life and Technology",
+  "source": "上外版必修第三册 Unit 4 同主题阅读(机器狗/5G远程手术/人工智能/自动驾驶/VR/智能App);词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Life with a Robot Dog",
+      "topic_cn": "记叙·一只机器狗带来的体验",
+      "body": "When the boy first saw the robot dog, he treated it just like a real pet. Without any hesitation, he played with it and stroked it. The dog gave an enthusiastic response, and at first this evoked a strong emotional feeling in him. The robot looked good and its movements were flexible: it could stretch, dance and jump. Best of all, it did not need to be fed and it would never breathe or grow old. However, as the days passed, the boy realised that the relationship was limited. He could not train the robot to respond to his commands, even though it was built to learn. He constantly lost his patience and began to feel annoyed. A true emotional connection, he understood, is powerful and important, and that was something the machine could never give him. Eventually he stopped calling it \"he\" and started calling it \"the robot\". As a clever toy it was a success, but as a real pet it let him down.",
+      "vocab_notes": [
+        {
+          "word": "hesitation",
+          "cn": "犹豫"
+        },
+        {
+          "word": "flexible",
+          "cn": "灵活的"
+        },
+        {
+          "word": "enthusiastic",
+          "cn": "热情的"
+        },
+        {
+          "word": "emotional",
+          "cn": "情感的"
+        },
+        {
+          "word": "patience",
+          "cn": "耐心"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the boy feel about the robot dog at the very beginning?",
+          "options": [
+            "He treated it warmly, as if it were a real pet.",
+            "He was afraid of it and kept away.",
+            "He thought it was ugly and useless.",
+            "He refused to touch it at all."
+          ],
+          "answer_index": 0,
+          "explanation": "开头说他毫不犹豫地和它玩耍、抚摸它,把它当真宠物 → 概括为热情对待。"
+        },
+        {
+          "stem": "Why did the boy's feelings change over time?",
+          "options": [
+            "The robot dog became too expensive to keep.",
+            "He could not build a real emotional bond with the machine.",
+            "His parents took the robot away.",
+            "The robot dog needed too much food."
+          ],
+          "answer_index": 1,
+          "explanation": "文中说关系有限、无法建立真正的情感联系 → 转述。其余与原文不符(机器不用喂)。"
+        },
+        {
+          "stem": "What does calling it \"the robot\" instead of \"he\" suggest?",
+          "options": [
+            "He no longer saw it as a living companion.",
+            "He had grown to love it even more.",
+            "He decided to buy a second one.",
+            "He thought it had become a real dog."
+          ],
+          "answer_index": 0,
+          "explanation": "由“他”改称“机器”暗示他不再把它当作有生命的伙伴 → 推断转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Surgery over 5G",
+      "topic_cn": "说明·5G远程手术",
+      "body": "The future of surgery is looking remote. Recently doctors in China directed a heart operation on a patient who was hundreds of kilometres away, using a fast 5G connection. What makes long-distance surgery attractive is that leading specialists can help without being present in the operating room. All they need is a fast and stable Internet link, which until now they lacked. To prepare, the expert team studied a 3D model of the heart built by artificial intelligence from medical images, and then worked out a plan. During the operation they used a live video conference link to instruct the local team on where to cut and where to sew up. The 5G network is many times faster than the 4G we currently use, and it greatly reduces signal delay. With 4G, delays can be between twenty and eighty milliseconds; with 5G they drop to about one. This tiny difference matters most when a doctor operates remotely with a robot, because then every millisecond counts.",
+      "vocab_notes": [
+        {
+          "word": "remote",
+          "cn": "远程的"
+        },
+        {
+          "word": "specialist",
+          "cn": "专家"
+        },
+        {
+          "word": "conference",
+          "cn": "会议"
+        },
+        {
+          "word": "signal",
+          "cn": "信号"
+        },
+        {
+          "word": "delay",
+          "cn": "延迟"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, why is long-distance surgery attractive?",
+          "options": [
+            "It makes operations completely free of charge.",
+            "Top experts can take part without travelling to the patient.",
+            "It removes the need for any local doctors.",
+            "It works without any Internet connection."
+          ],
+          "answer_index": 1,
+          "explanation": "文中说顶尖专家无需亲临手术室即可参与 → 转述。其余未提或与文相反。"
+        },
+        {
+          "stem": "What role did artificial intelligence play before the operation?",
+          "options": [
+            "It performed the whole operation by itself.",
+            "It replaced the patient's heart with a new one.",
+            "Using medical scans, it created a 3D heart model for the team.",
+            "It chose which hospital to use."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说AI用医学影像建出心脏三维模型 → 转述。"
+        },
+        {
+          "stem": "Why does the reduced signal delay matter most during robot surgery?",
+          "options": [
+            "Because robots cannot work with any delay at all.",
+            "Because 4G is faster than 5G for robots.",
+            "Because the patient must control the robot.",
+            "Because every millisecond counts when a robot does the cutting."
+          ],
+          "answer_index": 3,
+          "explanation": "末句说机器人远程操作时每一毫秒都重要 → 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "What Artificial Intelligence Can Do",
+      "topic_cn": "说明·人工智能的能力与局限",
+      "body": "Artificial intelligence, often called AI, is software that can learn from data and make decisions. Today it already helps in many parts of daily life. In hospitals, AI can study thousands of medical images in seconds and point out problems a tired human eye might miss. On your phone, it suggests the next word as you type and recommends songs you may enjoy. In factories, smart machines work all day without losing patience or growing bored. Yet AI is not perfect. It only knows what it has been taught, so it can make strange mistakes that no person would make. It also lacks real feelings, which means it cannot truly understand why a joke is funny or why a piece of music moves us. Many experts believe the best results come when people and machines work together: the computer handles the boring, repeated tasks, while humans bring judgement, care and imagination. Used wisely, AI is a powerful tool rather than a replacement for human beings.",
+      "vocab_notes": [
+        {
+          "word": "artificial",
+          "cn": "人工的"
+        },
+        {
+          "word": "intelligence",
+          "cn": "智力"
+        },
+        {
+          "word": "image",
+          "cn": "图像"
+        },
+        {
+          "word": "lack",
+          "cn": "缺乏"
+        },
+        {
+          "word": "powerful",
+          "cn": "强大的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one way AI helps in hospitals, according to the text?",
+          "options": [
+            "It quickly examines many medical images and spots problems.",
+            "It decides which patients deserve treatment.",
+            "It refuses to work with human doctors.",
+            "It builds the hospital buildings."
+          ],
+          "answer_index": 0,
+          "explanation": "文中说AI能在几秒内研究大量医学影像并指出问题 → 转述。"
+        },
+        {
+          "stem": "What weakness of AI does the writer point out?",
+          "options": [
+            "It is always slower than a human worker.",
+            "It has no real feelings and can make odd mistakes.",
+            "It cannot store any information.",
+            "It needs to eat and rest like people."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说AI缺乏真正情感、会犯奇怪错误 → 转述。"
+        },
+        {
+          "stem": "What does the writer suggest is the best way to use AI?",
+          "options": [
+            "Replace all human workers with machines.",
+            "Stop using AI in daily life completely.",
+            "Have humans and computers cooperate, each handling what it does best.",
+            "Trust AI to make every decision alone."
+          ],
+          "answer_index": 2,
+          "explanation": "文末说人机合作效果最好,机器做重复活、人带来判断与想象 → 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Cars That Drive Themselves",
+      "topic_cn": "议论·自动驾驶汽车的利弊",
+      "body": "Imagine sitting in a car that drives itself while you read or rest. Self-driving cars use cameras and sensors to view the road, and a computer decides when to turn, slow down or stop. Supporters say such cars could make our roads much safer, because most accidents are caused by human mistakes like looking at a phone. A tireless computer never gets sleepy and can respond to danger in a fraction of a second. These cars could also help people who cannot drive, such as the old or the blind, to move around freely. Still, many people are not yet ready to trust them. In one survey, more than half said they would not ride in a self-driving car, and most wanted a human in the driver's seat who could take control when needed. There are hard questions too: if the car causes a crash, who is to blame? Until these worries are settled, most experts think people and machines should share the wheel for years to come.",
+      "vocab_notes": [
+        {
+          "word": "view",
+          "cn": "观看;察看"
+        },
+        {
+          "word": "respond",
+          "cn": "作出反应"
+        },
+        {
+          "word": "survey",
+          "cn": "调查"
+        },
+        {
+          "word": "blame",
+          "cn": "责怪"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do supporters believe self-driving cars could be safer?",
+          "options": [
+            "They are much cheaper than ordinary cars.",
+            "They can only be used on empty roads.",
+            "They travel far more slowly than people drive.",
+            "A computer never gets tired and reacts to danger very fast."
+          ],
+          "answer_index": 3,
+          "explanation": "文中说不知疲倦的电脑能极快反应,且多数事故由人为失误引起 → 转述。"
+        },
+        {
+          "stem": "What did most people in the survey want?",
+          "options": [
+            "A person ready to take over the wheel if necessary.",
+            "Cars with no controls at all.",
+            "To ban self-driving cars completely.",
+            "Faster cars with no sensors."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说多数人希望驾驶座上有人可在必要时接管 → 转述。"
+        },
+        {
+          "stem": "What unsolved question does the writer raise?",
+          "options": [
+            "How to make the cars change colour.",
+            "Who should be blamed if a self-driving car causes a crash.",
+            "Why blind people dislike cars.",
+            "When phones will replace cars."
+          ],
+          "answer_index": 1,
+          "explanation": "文中提出若自动驾驶车致事故由谁负责 → 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Travelling Without Leaving Home",
+      "topic_cn": "记叙·VR帮助老人重游故地",
+      "body": "An elderly couple sat side by side, each wearing a pair of large glasses. They could no longer travel far because of their age, and this made them sad. Then their grandson, who works in a busy city, brought them a virtual reality headset. As soon as they put it on, the room around them seemed to disappear. Suddenly they were standing on a warm beach in Thailand, a place they had visited many years before. They could turn their heads and look around at the blue sea and the green islands. The wife smiled and said it felt as real as the day they first went there. With VR, they could also visit countries they had never seen, such as France and South Korea, all without leaving their sofa. The grandson explained that the same technology is now used to treat lonely or worried minds, and even to help students explore places that are too far or too dangerous to reach in person.",
+      "vocab_notes": [
+        {
+          "word": "elderly",
+          "cn": "上了年纪的"
+        },
+        {
+          "word": "virtual reality",
+          "cn": "虚拟现实"
+        },
+        {
+          "word": "headset",
+          "cn": "头戴设备"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why were the elderly couple sad at first?",
+          "options": [
+            "Their grandson had moved abroad forever.",
+            "They had lost all their old photos.",
+            "Their age stopped them from travelling far.",
+            "They disliked their quiet sofa."
+          ],
+          "answer_index": 2,
+          "explanation": "文中说他们因年纪大无法远行而难过 → 转述。"
+        },
+        {
+          "stem": "What did the wife feel during the VR experience?",
+          "options": [
+            "It was frightening and made her dizzy.",
+            "It was boring compared with photos.",
+            "It reminded her of nothing at all.",
+            "She found the experience as vivid as their original trip there."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说妻子笑着说感觉和当年第一次去时一样真实 → 转述。"
+        },
+        {
+          "stem": "What other use of VR does the grandson mention?",
+          "options": [
+            "Helping worried minds and letting students explore far-off places.",
+            "Cooking meals for the whole family.",
+            "Replacing real beaches with fake ones forever.",
+            "Teaching dogs to do new tricks."
+          ],
+          "answer_index": 0,
+          "explanation": "文末说同样技术用于治疗孤独焦虑的心理、帮学生探索遥远或危险之地 → 转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Apps in Our Pockets",
+      "topic_cn": "说明·智能App如何改变日常",
+      "body": "Not long ago, you needed a map, a dictionary, a camera and a wallet to get through the day. Now a single phone, full of smart apps, can do all of these and more. With a few taps you can call a taxi, order dinner, pay a bill or learn a new language on the bus home. These apps save us time and make life more convenient, and many of them learn from how we use them, so the more you tap, the better they seem to know you. Yet there is a price for all this ease. Apps collect a great deal of information about where we go and what we like, and not everyone is comfortable with that. Some people also find it hard to put their phones down, checking them constantly even when nothing new has happened. Experts advise us to enjoy the help that apps offer but to stay in charge: turn off the screen now and then, and remember that the most important moments happen in the real world, not behind the glass.",
+      "vocab_notes": [
+        {
+          "word": "convenient",
+          "cn": "方便的"
+        },
+        {
+          "word": "constantly",
+          "cn": "不断地"
+        },
+        {
+          "word": "information",
+          "cn": "信息"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the writer's main point about smart apps?",
+          "options": [
+            "They are useless and should be deleted.",
+            "They make life easier but should be used with care.",
+            "They can fully replace real-world friends.",
+            "They never collect any personal information."
+          ],
+          "answer_index": 1,
+          "explanation": "全文说App方便但有代价、应自己做主 → 概括主旨。"
+        },
+        {
+          "stem": "What concern does the writer raise about apps?",
+          "options": [
+            "They make phones too heavy to carry.",
+            "They only work without the Internet.",
+            "They collect plenty of details on our movements and tastes.",
+            "They cost nothing to use."
+          ],
+          "answer_index": 2,
+          "explanation": "文中说App收集大量关于我们行踪与喜好的信息 → 转述。"
+        },
+        {
+          "stem": "What advice do the experts give?",
+          "options": [
+            "Never use any app again.",
+            "Spend even more time on your phone.",
+            "Buy a new phone every month.",
+            "Enjoy the apps but stay in charge and look up from the screen."
+          ],
+          "answer_index": 3,
+          "explanation": "文末建议享受便利同时自己做主、时常放下手机 → 转述。"
+        }
+      ]
+    }
+  ]
+}

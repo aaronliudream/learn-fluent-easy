@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Art and Artists",
+  "source": "上外版必修三 Unit 2 同主题阅读(齐白石/梵高/鲍勃·迪伦/中国水墨技法/如何欣赏艺术/艺术展)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Qi Baishi, the People's Artist",
+      "topic_cn": "说明·人物·画家齐白石",
+      "body": "Qi Baishi is one of the best-known Chinese painters of the twentieth century. Whether he painted landscapes, birds, flowers or small figures, his works are full of feeling and fine detail. Using heavy ink, bright colours and energetic strokes, he created pictures in a fresh and lively manner that expressed his deep love of nature and life. Although the world knows him first as a painter, he is also famous for his seal carvings and his poems. The man stayed hardworking even in his seventies. In one group of paintings he drew insects in the corners and left some spaces blank, because he wanted to finish the tiny details while his eyesight was still sharp, and planned to add flowers later. As he grew older, he set higher goals for himself. While many artists retire from public life when they are old, Qi took on more social duties instead. He once said that what he truly pursued was peace for the whole world. In 1956 he was given the International Peace Prize.",
+      "vocab_notes": [
+        {
+          "word": "stroke",
+          "cn": "笔触"
+        },
+        {
+          "word": "blank",
+          "cn": "空白的"
+        },
+        {
+          "word": "pursue",
+          "cn": "追求"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Besides painting, what else is Qi Baishi famous for?",
+          "options": [
+            "His seal carvings and poems.",
+            "His oil paintings of cities.",
+            "His large stone statues.",
+            "His songs and music."
+          ],
+          "answer_index": 0,
+          "explanation": "原文提到他也以印章雕刻和诗歌闻名,转述。"
+        },
+        {
+          "stem": "Why did Qi leave some parts of his paintings blank at first?",
+          "options": [
+            "Because he had run out of ink.",
+            "He wanted to complete the small details while he could still see clearly, with flowers to come afterwards.",
+            "Because he disliked painting flowers.",
+            "Because the paper was too small."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他想趁视力好时画细节,打算以后补上花朵,转述。"
+        },
+        {
+          "stem": "What did Qi do differently from many other old artists?",
+          "options": [
+            "Rather than retiring, he accepted greater social responsibility.",
+            "He stopped painting completely.",
+            "He left China to live abroad.",
+            "He refused to set any new goals."
+          ],
+          "answer_index": 0,
+          "explanation": "原文对比:别的艺术家年老退隐,他却承担更多社会责任,转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Lonely World of Van Gogh",
+      "topic_cn": "记叙·人物·梵高",
+      "body": "Vincent van Gogh was a Dutch painter who lived a poor and unhappy life. People who knew him often described him as a difficult person to get along with, and he was rarely cheerful. He was never able to sell his own paintings, and he depended on his brother for money. Yet his short life produced some of the most loved pictures in the world. His painting style is very personal: he used very bright colours, and the shapes in his works look strange and dreamlike. Night was a special subject for him. In his famous Starry Night, a quiet town sits under a sky full of shining stars, and a dark tree seems to join the earth with the sky. For Van Gogh, the night was often a time of safety, comfort and creativity. He died young and almost unknown, but after his death his paintings became some of the most valuable in the world. They have inspired songs, books and even a film told entirely through oil paintings.",
+      "vocab_notes": [
+        {
+          "word": "creativity",
+          "cn": "创造力"
+        },
+        {
+          "word": "inspiration",
+          "cn": "灵感"
+        },
+        {
+          "word": "feature",
+          "cn": "(电影)正片"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did people who knew Van Gogh usually describe him?",
+          "options": [
+            "As a cheerful and easy-going man.",
+            "As someone who was difficult company and seldom cheerful.",
+            "As a rich and popular painter.",
+            "As a calm and gentle teacher."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他难相处、很少开心,转述。"
+        },
+        {
+          "stem": "What does the passage say about Starry Night?",
+          "options": [
+            "It shows a busy city in bright daylight.",
+            "It pictures the sea during a storm.",
+            "A peaceful village rests beneath a star-filled night sky.",
+            "It has no stars or sky at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文描述安静小镇在繁星天空下,转述。"
+        },
+        {
+          "stem": "What happened to Van Gogh's paintings after he died?",
+          "options": [
+            "They were all lost or destroyed.",
+            "They were sold cheaply and forgotten.",
+            "They stayed hidden in his brother's house.",
+            "They grew into some of the world's most highly valued works."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说他死后画作成为世上最珍贵的作品之一,转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "When a Songwriter Won a Literature Prize",
+      "topic_cn": "议论·音乐·鲍勃·迪伦",
+      "body": "In 2016, the American singer and songwriter Bob Dylan was given the Nobel Prize for Literature. He became the first songwriter ever to receive this honour, and the news surprised the whole world. Dylan said that winning the prize was something he could never have imagined; he joked that he had about the same chance of standing on the moon. From an early age he had loved the works of the great writers, whose books were spoken of in respectful tones in classrooms. To find that his own name now joined theirs felt to him beyond words. When he started writing songs as a teenager, he only hoped they might be heard in small coffee houses or bars. Over the years he made dozens of records and played thousands of concerts around the world. Like Shakespeare, he said, he was often busy with both his creations and many ordinary matters, such as choosing the right musicians or the right studio. He was deeply grateful that his songs had found a place in the lives of so many people.",
+      "vocab_notes": [
+        {
+          "word": "literature",
+          "cn": "文学"
+        },
+        {
+          "word": "grateful",
+          "cn": "感激的"
+        },
+        {
+          "word": "studio",
+          "cn": "录音室"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Dylan's prize so surprising to many people?",
+          "options": [
+            "He was a songwriter, not a traditional writer of books.",
+            "He had never written any songs before.",
+            "He had refused the prize many times.",
+            "He was already too old to perform."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说他是首位获文学奖的词曲作者,故令人意外,转述。"
+        },
+        {
+          "stem": "What did Dylan hope for his songs when he was a teenager?",
+          "options": [
+            "That they would win a prize one day.",
+            "That a few people might hear them in small cafes or bars.",
+            "That they would be taught in every school.",
+            "That they would never be recorded."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他少年时只希望歌曲能在小咖啡馆或酒吧被听到,转述。"
+        },
+        {
+          "stem": "Why does the writer compare Dylan with Shakespeare?",
+          "options": [
+            "Both wrote only plays for the theatre.",
+            "Both lived in the same century.",
+            "Both were busy with creation and many ordinary matters.",
+            "Both refused to perform in public."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说他像莎士比亚一样忙于创作与琐事,转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Art of Chinese Ink Painting",
+      "topic_cn": "说明·技法·水墨画",
+      "body": "Chinese ink painting is one of the oldest art forms in the world, and it looks very different from Western oil painting. Instead of filling the whole picture with colour, an ink painter often leaves large areas of the paper blank. These empty spaces are not mistakes; they let the viewer imagine water, sky or mist, and they give the picture a calm, open feeling. A good painter must control the brush with care, since a single stroke cannot be changed once it touches the soft paper. Painters use brushes of different sizes to create different effects, from thin gentle lines to thick energetic ones. Light and heavy ink are mixed to show near and far, light and shadow. The subjects are usually simple: a few fish, a branch of plum blossom, or a lonely mountain. Yet through these simple subjects, the artist tries to convey deep feelings about nature and life. To understand such a painting, a viewer should slow down and feel the spirit behind the simple shapes, rather than only count the objects on the paper.",
+      "vocab_notes": [
+        {
+          "word": "ink",
+          "cn": "墨"
+        },
+        {
+          "word": "blank",
+          "cn": "空白的"
+        },
+        {
+          "word": "convey",
+          "cn": "传达"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does an ink painter often leave parts of the paper empty?",
+          "options": [
+            "Because there is not enough ink to use.",
+            "Because the rules forbid using colour.",
+            "Because empty paper is cheaper.",
+            "So that viewers can imagine things like water or sky."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说留白让观者想象水、天等,转述。"
+        },
+        {
+          "stem": "What must a painter be careful about when using the brush?",
+          "options": [
+            "Once a line meets the paper, it can no longer be altered.",
+            "The brush must always stay completely dry.",
+            "Only one colour may be used in a picture.",
+            "The paper must be painted from the corners first."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说一笔触纸便无法更改,转述。"
+        },
+        {
+          "stem": "How does the writer suggest viewing an ink painting?",
+          "options": [
+            "Count every object as quickly as possible.",
+            "Take it slowly and sense the feeling that the plain forms carry.",
+            "Look only at the brightest colours.",
+            "Compare it with Western oil paintings."
+          ],
+          "answer_index": 1,
+          "explanation": "原文建议慢下来感受简单形状背后的精神,转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How to Read a Painting",
+      "topic_cn": "说明·方法·艺术欣赏",
+      "body": "Many people stand in front of a famous painting and feel they have nothing to say. They worry that art is only for experts. In fact, anyone can learn to enjoy a work of art. It does take a little knowledge, but the easiest way to begin is to place the work in its own time and place. We need to know how a painting is related to the world in which it was created, because every artist answers the questions of his or her age. Next, we should be able to say why we like or dislike a piece, instead of only repeating what others think. Not every work will attract you at first sight, and that is fine. Spend some time looking for signs of the feelings the artist wanted to share, such as joy, sadness or hope. One important thing to remember is that, in art appreciation, there is often no simple right or wrong answer. You may even notice something about a painting that no one else has ever thought about, and that small discovery is part of the pleasure of art.",
+      "vocab_notes": [
+        {
+          "word": "appreciate",
+          "cn": "欣赏"
+        },
+        {
+          "word": "expression",
+          "cn": "表达"
+        },
+        {
+          "word": "convey",
+          "cn": "传达"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say is the easiest way to begin enjoying art?",
+          "options": [
+            "Memorising the names of all famous painters.",
+            "Buying an expensive guidebook.",
+            "Setting the piece against the period and setting it came from.",
+            "Asking an expert to explain everything."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说最容易的起点是把作品放在它的时代与地点中,转述。"
+        },
+        {
+          "stem": "According to the passage, what should viewers be able to do?",
+          "options": [
+            "Agree with whatever experts say.",
+            "Like every famous painting equally.",
+            "Avoid talking about their feelings.",
+            "Give their own reasons for enjoying or disliking a work."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说要能说出自己喜欢或不喜欢的原因,转述。"
+        },
+        {
+          "stem": "What point does the writer make about right and wrong in art?",
+          "options": [
+            "A clear correct or incorrect response usually does not exist.",
+            "Only experts can give the correct answer.",
+            "Every painting has one clear meaning.",
+            "Beginners are always wrong about art."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说艺术欣赏常无简单对错,转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Field Trip to the Art Museum",
+      "topic_cn": "记叙·活动·参观艺术馆",
+      "body": "Last Saturday our class took a field trip to the city art museum, and it turned out to be a wonderful day. Before the trip, our teacher asked us to check the museum's website to discover which artworks were on display. We then decided where to go, when to go and whom to go with. When we arrived, a friendly guide led us through several quiet rooms full of paintings, carvings and old photographs. My favourite work was a large ink painting of a river, in which a tiny boat seemed almost lost among the mountains. The guide told us to look closely at the energetic strokes and the wide blank spaces, and slowly the river seemed to come alive. We were not allowed to touch any of the works, but we could take notes and a few pictures. Before we left, each of us bought a small postcard to bring home. Back in class, we wrote a short report about what we had discovered and shared our favourite artworks. Everyone agreed that seeing art in person is very different from looking at it in a book.",
+      "vocab_notes": [
+        {
+          "word": "display",
+          "cn": "陈列;展出"
+        },
+        {
+          "word": "stroke",
+          "cn": "笔触"
+        },
+        {
+          "word": "blank",
+          "cn": "空白的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the students do before the trip?",
+          "options": [
+            "They painted their own pictures at home.",
+            "They checked the museum's website to see which works were shown.",
+            "They bought tickets for a concert.",
+            "They wrote the report in advance."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说出发前老师让他们查网站看展出作品,转述。"
+        },
+        {
+          "stem": "What was the writer's favourite artwork?",
+          "options": [
+            "A bright oil painting of a city street.",
+            "A stone statue of an artist.",
+            "A big river scene in ink showing one small boat.",
+            "An old black-and-white photograph."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说最喜欢一幅有小船的大幅水墨河景,转述。"
+        },
+        {
+          "stem": "What did everyone agree about at the end of the trip?",
+          "options": [
+            "Books are always better than real museums.",
+            "Touching the paintings is the best way to learn.",
+            "The museum was too crowded to enjoy.",
+            "Viewing artworks for real feels quite unlike studying them in print."
+          ],
+          "answer_index": 3,
+          "explanation": "原文结尾说亲眼看艺术与在书上看很不同,转述。"
+        }
+      ]
+    }
+  ]
+}

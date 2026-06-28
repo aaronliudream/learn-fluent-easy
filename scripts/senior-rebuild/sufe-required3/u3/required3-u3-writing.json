@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Leading a Healthy Life:Write an advice letter to 'Ask Amy'(给健康专栏写建议信)",
+  "title_en": "Dear Liz: Advice on a Health Problem",
+  "genre": "建议信 / 问题—解决型(describe the problem's causes + offer practical solutions)",
+  "source": "上外版必修第三册 Unit 3 Writing:as a school-newspaper columnist, reply to a reader's letter about a health problem, using the problem-solution pattern.",
+  "prompt_cn": "假设你是校报'Ask Amy'专栏的编辑。一位同学 Liz 来信说:她最近学习太忙,饮食不规律,常深夜吃披萨、薯片和汉堡,还边写作业边喝汽水,结果体重增加,十分焦虑。请用英语写一封约80—100词的回信:① 简述你理解的她的问题与可能原因;② 给出两到三条切实可行的解决办法;③ 鼓励她坚持。注意运用本单元'省略'结构使行文自然。",
+  "prompt_en": "Suppose you write the 'Ask Amy' column for your school newspaper. A reader named Liz says that, because she has been studying so hard, she has not been eating right: she eats pizza, chips and hamburgers late at night and drinks soda while doing homework, and now she has put on weight and feels anxious. Write a reply of about 80–100 words that: 1) shows you understand her problem and its likely causes; 2) offers two or three practical solutions; 3) encourages her to keep going.",
+  "points": [
+    "理解问题并指出可能原因(You mentioned … One likely cause is …)",
+    "给出可行办法1(A useful suggestion would be to …)",
+    "给出可行办法2/3(It would also help if you … / Another way is to …)",
+    "鼓励坚持(Don't worry — small changes really add up!)"
+  ],
+  "word_count": "80–100 词",
+  "model_essay": "Dear Liz, Thank you for writing in. You mentioned that you study so hard that you eat pizza and chips late at night and drink soda while doing homework. One likely cause of your weight gain is these extra calories from sugary drinks and snacks. A useful suggestion would be to replace soda with water and keep some fruit nearby for late-night hunger. It would also help if you went for a short walk after dinner, because exercise builds energy rather than using it up. Don't worry — small changes really add up. Stay motivated, and you will soon feel better. Best wishes, Amy",
+  "model_translation": "亲爱的 Liz:谢谢你的来信。你提到你学习太用功,常深夜吃披萨和薯片,还边写作业边喝汽水。你体重增加的一个可能原因,就是含糖饮料和零食带来的多余热量。一个有用的建议是:把汽水换成水,并在身边备些水果应付深夜的饥饿。如果你晚饭后去散散步也会有帮助,因为运动能增加而非消耗精力。别担心——小小的改变真的会积少成多。保持动力,你很快就会感觉更好。祝好,Amy",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:理解问题与原因 / 两到三条可行办法 / 鼓励坚持" },
+      { "dimension": "结构", "max": 4, "criteria": "问题—解决脉络清楚、句句相关、衔接自然、书信格式正确" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、恰当运用省略结构、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼+感谢 Dear Liz, Thank you for writing in.",
+      "指出原因 One likely cause of … is …",
+      "办法 A useful suggestion would be to … / It would also help if you …",
+      "鼓励+落款 Don't worry — small changes add up. Best wishes, Amy"
+    ],
+    "key_expressions": [
+      "You mentioned that you …",
+      "One likely cause of your weight gain is …",
+      "A useful suggestion would be to replace soda with water.",
+      "Exercise builds energy rather than using it up."
+    ],
+    "useful_words": ["weight", "calorie", "replace", "sugary", "snack", "exercise", "energy", "habit", "motivated", "advice"]
+  },
+  "high_sentences": [
+    "One likely cause of your weight gain is the extra calories from sugary drinks and snacks.",
+    "A useful suggestion would be to replace soda with water and keep some fruit nearby.",
+    "It would also help if you went for a short walk after dinner.",
+    "Don't worry — small changes really add up."
+  ],
+  "error_pairs": [
+    { "wrong": "You should eat less the junk food.", "correct": "You should eat less junk food.", "note": "junk food 为不可数名词,前面不加 the。" },
+    { "wrong": "Exercise will help you to feeling better.", "correct": "Exercise will help you (to) feel better.", "note": "help sb (to) do sth,后接动词原形,不用 -ing。" },
+    { "wrong": "If it necessary, see a doctor.", "correct": "If (it is) necessary, see a doctor.", "note": "状语从句省略须主语与主句一致且含 be,补全为 it is 或整体省略,不能只丢 is。" }
+  ],
+  "paragraph_template": "【健康建议信结构】\n第1句 称呼+感谢:Dear Liz, Thank you for writing in.\n第2句 问题与原因:You mentioned … One likely cause is …\n第3-4句 办法:A useful suggestion would be to … It would also help if you …\n第5句 鼓励+落款:Don't worry — small changes add up. Best wishes, Amy"
+}

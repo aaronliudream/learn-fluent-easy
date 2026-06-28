@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Scientists",
+  "source": "上外版选择性必修第二册 Unit 1 同主题完形(立志做科学家/参观科技馆/科学需要每个人/太空动物/霍金的精神/发现的乐趣)。用词限本单元/初中/常见词，每篇10空，选项同词性、无双解，与阅读/听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Becoming a Scientist",
+      "text": "When I was young, I was already very (1)____ about how the world works. I would spend hours (2)____ insects in the garden and asking endless questions. My parents were always (3)____ and bought me my first science book. After reading it, I felt (4)____ to learn much more. At school, my favourite (5)____ was biology, because it explained how living things grow. My teacher told us that a good scientist must stay (6)____ and never stop wondering. She also said that every great (7)____ began with a simple question. Slowly, I made up my mind to (8)____ science at university one day. I know the road ahead will be (9)____, but I am ready to work hard. In the future, I hope my own research will (10)____ many other people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "curious",
+            "careful",
+            "polite",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "curious about 对……好奇。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "buying",
+            "watching",
+            "selling",
+            "hiding"
+          ],
+          "answer_index": 1,
+          "explanation": "watching insects 观察昆虫。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "angry",
+            "bored",
+            "supportive",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "supportive 支持的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tired",
+            "bored",
+            "scared",
+            "inspired"
+          ],
+          "answer_index": 3,
+          "explanation": "feel inspired 受到鼓舞。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "subject",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "favourite subject 最喜欢的科目。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rich",
+            "patient",
+            "late",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "stay patient 保持耐心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "discovery",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "great discovery 伟大的发现。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "forget",
+            "drop",
+            "study"
+          ],
+          "answer_index": 3,
+          "explanation": "study science 学习科学。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hard",
+            "soft",
+            "late",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "the road will be hard 道路艰难。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hurt",
+            "help",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "help other people 帮助他人。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Visit to the Science Museum",
+      "text": "Last spring, our class went to visit a science (1)____. The moment we walked in, I felt (2)____ by all the amazing machines. A robot could even (3)____ to our questions in English. In one room, we learned how a rocket is (4)____ into space. In another, a guide showed us a model of the human (5)____ powered by electricity. I was so (6)____ that I almost forgot to eat lunch. My friend Lin was most (7)____ in the part about space animals. We also watched a short (8)____ about famous scientists and their hard work. Before we left, each of us wrote down one science (9)____ we still wanted to answer. That trip made me want to (10)____ harder at my science lessons.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "market",
+            "garden",
+            "museum",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "science museum 科技馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "bored",
+            "tired",
+            "angry",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "feel amazed 感到惊叹。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "reply",
+            "sleep",
+            "leave",
+            "cry"
+          ],
+          "answer_index": 0,
+          "explanation": "reply to questions 回答问题。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eaten",
+            "sent",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "be sent into space 被送入太空。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "body",
+            "season"
+          ],
+          "answer_index": 2,
+          "explanation": "the human body 人体。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "bored",
+            "calm",
+            "quiet",
+            "excited"
+          ],
+          "answer_index": 3,
+          "explanation": "so excited that 如此激动以至于。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "interested",
+            "afraid",
+            "sorry",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "interested in 对……感兴趣。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "film",
+            "noise",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a short film 一部短片。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "machine",
+            "question",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a science question 一个科学问题。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "sell",
+            "hide",
+            "study"
+          ],
+          "answer_index": 3,
+          "explanation": "study harder 更努力学习。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Why Science Needs Everyone",
+      "text": "For a long time, science was seen as a (1)____ only for men. Many talented women were not (2)____ the same chances as men. Some were not even (3)____ to join important discussions. Yet a few brave women refused to give (4)____. They worked hard, often without any (5)____ for their efforts. One famous woman studied tiny living things under a (6)____ and helped others understand disease. Her careful (7)____ later became the base of many discoveries. Today we know that good ideas can come from (8)____, no matter who they are. Science becomes (9)____ when more kinds of people take part. That is why schools now (10)____ both boys and girls to dream of becoming scientists.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "world",
+            "price",
+            "noise",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a world only for men 一个只属于男性的世界。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "given",
+            "eaten",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "be given chances 被给予机会。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "eaten",
+            "allowed",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "be allowed to join 被允许加入。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "credit",
+            "noise",
+            "weather",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "without any credit 没有任何认可。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "market",
+            "microscope",
+            "garden",
+            "station"
+          ],
+          "answer_index": 1,
+          "explanation": "under a microscope 在显微镜下。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "work",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "her careful work 她细致的工作。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "nowhere",
+            "nothing",
+            "never",
+            "anyone"
+          ],
+          "answer_index": 3,
+          "explanation": "come from anyone 来自任何人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "stronger",
+            "weaker",
+            "smaller",
+            "shorter"
+          ],
+          "answer_index": 0,
+          "explanation": "becomes stronger 变得更强大。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stop",
+            "encourage",
+            "forbid",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "encourage…to dream 鼓励……去梦想。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Animals in Space",
+      "text": "The first living things to travel into space were not people but (1)____. In the 1950s, scientists sent two monkeys high above the Earth. They wanted to find out what would (2)____ to living things during the trip. The monkeys (3)____ the journey, and the scientists were very glad. Later, a dog was (4)____ into space to travel around the Earth. Special tools (5)____ the animals' heart rate and breathing. In this way, researchers slowly learned about the (6)____ of space travel on the body. These brave animals (7)____ the way for human astronauts. Without them, sending people into space would have been far more (8)____. Today, we (9)____ a lot to those early animal travellers. Their story reminds us that every great (10)____ takes courage and care.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "books",
+            "prices",
+            "animals",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "not people but animals 不是人而是动物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "sleep",
+            "hide",
+            "happen"
+          ],
+          "answer_index": 3,
+          "explanation": "what would happen 会发生什么。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "survived",
+            "lost",
+            "sold",
+            "forgot"
+          ],
+          "answer_index": 0,
+          "explanation": "survived the journey 活过了旅程。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eaten",
+            "sent",
+            "sold",
+            "dropped"
+          ],
+          "answer_index": 1,
+          "explanation": "be sent into space 被送入太空。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ate",
+            "sold",
+            "recorded",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "recorded the heart rate 记录心率。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "noises",
+            "songs",
+            "effects"
+          ],
+          "answer_index": 3,
+          "explanation": "the effects of space travel 太空旅行的影响。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "opened",
+            "closed",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "opened the way 开辟了道路。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "dangerous",
+            "quiet",
+            "short"
+          ],
+          "answer_index": 1,
+          "explanation": "far more dangerous 危险得多。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "owe",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "owe a lot to 把很多归功于。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "market",
+            "step"
+          ],
+          "answer_index": 3,
+          "explanation": "every great step 每一大步。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Stephen Hawking's Spirit",
+      "text": "Stephen Hawking was one of the greatest scientists of our (1)____. At the age of twenty-one, he was told that he had a serious (2)____. Doctors believed he would live only a few (3)____. But Hawking proved them (4)____. He went on working for more than fifty years. As the illness grew worse, he lost the (5)____ to move and to speak. Even so, he never (6)____ his research. With the help of a special machine, he could still (7)____ with the world. He once wrote that, looking back, he could feel (8)____ with his life. His story shows that a strong (9)____ can be more powerful than the body. Millions of people are still (10)____ by his courage today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "time",
+            "price",
+            "noise",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "scientists of our time 我们这个时代的科学家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "disease",
+            "market",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "a serious disease 一种严重的疾病。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "metres",
+            "prices",
+            "years",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "a few years 几年。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "right",
+            "late",
+            "busy",
+            "wrong"
+          ],
+          "answer_index": 3,
+          "explanation": "prove them wrong 证明他们错了。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ability",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "the ability to move 行动的能力。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "stopped",
+            "ate",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "never stopped his research 从未停止研究。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "leave",
+            "communicate",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "communicate with the world 与世界交流。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "afraid",
+            "satisfied"
+          ],
+          "answer_index": 3,
+          "explanation": "feel satisfied 感到满意。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mind",
+            "price",
+            "noise",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a strong mind 坚强的头脑。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "bored",
+            "inspired",
+            "tired",
+            "scared"
+          ],
+          "answer_index": 1,
+          "explanation": "be inspired by 受到鼓舞。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Joy of Discovery",
+      "text": "Many people think that science is just a (1)____ of hard facts to memorise. In fact, science begins with (2)____ — the simple wish to know why things happen. A good scientist looks at the world with (3)____ eyes and is never afraid to ask questions. When an experiment does not (4)____ as planned, that is not a failure but a chance to (5)____ something new. Some of the greatest discoveries came from a small (6)____ that no one expected. Of course, the work can be slow and (7)____, and answers do not come easily. But the moment when everything finally makes (8)____ is wonderful. That feeling is the real (9)____ that keeps scientists going. In the end, curiosity and patience matter just as (10)____ as intelligence.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "set",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a set of facts 一堆事实。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "noise",
+            "weather",
+            "curiosity"
+          ],
+          "answer_index": 3,
+          "explanation": "begins with curiosity 始于好奇心。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "curious",
+            "angry",
+            "sleepy",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "with curious eyes 用好奇的眼睛。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "work",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "does not work as planned 没有按计划进行。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "sell",
+            "learn",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "learn something new 学到新东西。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "song",
+            "ticket",
+            "detail"
+          ],
+          "answer_index": 3,
+          "explanation": "a small detail 一个小细节。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "difficult",
+            "easy",
+            "cheap",
+            "short"
+          ],
+          "answer_index": 0,
+          "explanation": "slow and difficult 缓慢而困难。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "sense",
+            "price",
+            "money"
+          ],
+          "answer_index": 1,
+          "explanation": "makes sense 讲得通。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "reward",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the real reward 真正的回报。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "little",
+            "few",
+            "many",
+            "much"
+          ],
+          "answer_index": 3,
+          "explanation": "just as much as 与……同等重要。"
+        }
+      ]
+    }
+  ]
+}

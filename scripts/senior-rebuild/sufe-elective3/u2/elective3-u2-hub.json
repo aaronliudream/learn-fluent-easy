@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "A true friend stays with you when times are hard.", "opts": ["真正的朋友会在困难时陪着你。", "真正的朋友只在好时光出现。", "真正的朋友住得离你很近。", "真正的朋友总是很有趣。"], "answer": 0 },
+    { "audio": "He gave me a grateful smile after I helped him.", "opts": ["我帮了他之后,他向我露出感激的微笑。", "我帮了他之后,他生气地走开了。", "他帮了我之后,我笑了。", "我们一起对老师笑了笑。"], "answer": 0 },
+    { "audio": "With one small gesture you can change a person's life.", "opts": ["一个小小的举动就能改变一个人的一生。", "一句大话也救不了一个人。", "改变别人需要花很多钱。", "一个手势没有任何意义。"], "answer": 0 },
+    { "audio": "Never underestimate the power of a kind action.", "opts": ["永远不要低估善举的力量。", "永远不要相信陌生人的话。", "善举往往得不到回报。", "力量来自财富而非善意。"], "answer": 0 },
+    { "audio": "We often forget to thank the friends who matter most.", "opts": ["我们常常忘了感谢最重要的朋友。", "我们总记得感谢每一个人。", "最重要的朋友从不需要感谢。", "朋友之间不必说谢谢。"], "answer": 0 },
+    { "audio": "Behrman painted the last leaf and saved his friend's life.", "opts": ["贝尔曼画了最后一片叶子,救了朋友的命。", "贝尔曼摘下最后一片叶子卖钱。", "苏画了最后一片叶子。", "最后一片叶子是真的没有掉。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "\"grateful\" 是什么意思?", "opts": ["感激的", "孤独的", "紧张的", "愤怒的"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"to drop out\" 指的是?", "opts": ["退学;退出", "搬家", "迟到", "毕业"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"cherish a friendship\" 中 cherish 意为?", "opts": ["珍视", "结束", "忘记", "出售"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"a small gesture\" 中 gesture 意为?", "opts": ["举动;姿态", "价格", "噪音", "错误"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "When I walked in, Kyle seemed ____ all his books across the yard.", "opts": ["to be carrying", "to carry", "to have carried", "to be carried"], "answer": 0, "point": "复杂不定式·进行", "dim": "grammar" },
+    { "q": "I'm so glad ____ such a loyal friend years ago.", "opts": ["to have met", "to meet", "to be meeting", "to be met"], "answer": 0, "point": "复杂不定式·完成", "dim": "grammar" },
+    { "q": "Tom looks upset; something needs ____ to cheer him up.", "opts": ["to be done", "to do", "to be doing", "to have done"], "answer": 0, "point": "复杂不定式·被动", "dim": "grammar" },
+    { "q": "The last leaf is believed ____ by Behrman that night.", "opts": ["to have been painted", "to paint", "to be painting", "to have painted"], "answer": 0, "point": "复杂不定式·完成被动", "dim": "grammar" },
+    { "q": "听句子选中文:A friend in need is a friend indeed.", "opts": ["患难见真情。", "远亲不如近邻。", "三思而后行。", "熟能生巧。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "A friend in need is a friend indeed." },
+    { "q": "听句子选中文:Good friends help you through your tough moments.", "opts": ["好朋友帮你度过艰难时刻。", "好朋友帮你赚钱。", "好朋友帮你做作业。", "好朋友帮你搬家。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Good friends help you through your tough moments." }
+  ],
+  "reading": {
+    "passage": "A new boy sat alone at lunch, looking nervous and sad. A classmate simply smiled and said, \"Come and sit with us.\" That small act of kindness was the start of a friendship that lasted for years.",
+    "passageCn": "一个新来的男孩独自坐着吃午饭,看上去紧张又难过。一位同学只是微笑着说:\"过来和我们一起坐吧。\"那个小小的善举,成了一段持续多年的友谊的开端。",
+    "questions": [
+      { "q": "How did the new boy feel at lunch?", "opts": ["Nervous and sad.", "Proud and happy.", "Angry and loud.", "Tired and sleepy."], "answer": 0 },
+      { "q": "What started the long friendship?", "opts": ["A small act of kindness.", "An expensive gift.", "A football match.", "A school exam."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences to thank a friend who once helped you. Mention what they did and why you are grateful.",
+    "promptCn": "写几句话感谢一位曾经帮过你的朋友:说说他/她做了什么,以及你为什么心怀感激。",
+    "sampleWords": ["friendship", "grateful", "cherish", "kindness", "gesture", "helped", "glad", "thank", "support", "cheer up"]
+  },
+  "dialogues": [
+    {
+      "title": "Welcoming a New Friend",
+      "lines": [
+        { "role": "A", "text": "There's a new student in our class today. She looks a bit lonely.", "cn": "今天班里来了个新同学,她看起来有点孤单。" },
+        { "role": "B", "text": "Let's go and say hello. A friendly smile can really help.", "cn": "我们去打个招呼吧,一个友好的微笑真的很有用。" },
+        { "role": "A", "text": "Good idea. I'll save her a seat and show her around at lunch.", "cn": "好主意,我给她留个座位,午饭时带她转转。" },
+        { "role": "B", "text": "Perfect. One small gesture might make her whole week.", "cn": "太好了,一个小举动也许能温暖她一整周。" }
+      ]
+    }
+  ]
+}

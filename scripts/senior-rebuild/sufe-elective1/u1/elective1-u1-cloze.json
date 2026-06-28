@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Learning for Life",
+  "source": "上外版选择性必修第一册 Unit 1 同主题完形(听力建议博客/学习习惯30天/学习社团采访/老钢琴家/读书的力量/做中学反思)。用词限本单元/初中/常见词,答案唯一,选项同词性,与阅读听力不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Advice on Improving English",
+      "text": "Learning English well takes time and the right (1)____. My biggest problem used to be listening: when native speakers talked fast, I could (2)____ only a few words. A classmate gave me some useful (3)____. She told me to listen to English radio every day so that I could get (4)____ to the speed. I also began to (5)____ my own voice and compare it with the host's, which helped me hear my own (6)____. Little by little, my listening (7)____, and I felt much more (8)____ when foreigners spoke to me. The most important thing, I learned, is never to (9)____ up. If you keep practising, your skills will surely (10)____. Learning a language is a long road, but every small step counts.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "method",
+            "weather",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "the right method 正确的方法。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "catch",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "catch only a few words 只能听懂几个词。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "food",
+            "advice",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "useful advice 有用的建议。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "afraid",
+            "tired",
+            "used"
+          ],
+          "answer_index": 3,
+          "explanation": "get used to 习惯于。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "record",
+            "lose",
+            "eat",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "record my own voice 录下声音。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "songs",
+            "mistakes",
+            "prices",
+            "gardens"
+          ],
+          "answer_index": 1,
+          "explanation": "hear my own mistakes 听出错误。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "stopped",
+            "failed",
+            "improved",
+            "disappeared"
+          ],
+          "answer_index": 2,
+          "explanation": "my listening improved 听力提高了。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "sorry",
+            "bored",
+            "confident"
+          ],
+          "answer_index": 3,
+          "explanation": "more confident 更自信。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "give",
+            "stand",
+            "look",
+            "wake"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fall",
+            "improve",
+            "break",
+            "stop"
+          ],
+          "answer_index": 1,
+          "explanation": "skills will improve 技能会提高。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Thirty Days of a New Habit",
+      "text": "A speaker once shared a simple idea: try something (1)____ for thirty days. He explained that a month is just long (2)____ to add a good habit or drop a bad one. During his own thirty-day (3)____, he hiked up a mountain and even started to (4)____ a short book. The experience made him feel more confident and (5)____. He gave one piece of (6)____: keep your goals small and (7)____, so that you can really stick to them. A big dream is wonderful, but it is the small daily (8)____ that finally bring change. By the (9)____ of a month, you may be surprised at how much you have (10)____. The secret of lifelong learning, he said, is simply to begin and to keep going.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "old",
+            "broken",
+            "new",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "something new 新事物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "short",
+            "wide",
+            "deep",
+            "enough"
+          ],
+          "answer_index": 3,
+          "explanation": "long enough to 足够长以至于。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "challenge",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "thirty-day challenge 三十天挑战。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "write",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "write a short book 写一本短书。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lazy",
+            "sleepy",
+            "adventurous",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "confident and adventurous 自信又爱冒险。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "food",
+            "music",
+            "advice"
+          ],
+          "answer_index": 3,
+          "explanation": "a piece of advice 一条建议。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sustainable",
+            "wrong",
+            "loud",
+            "rotten"
+          ],
+          "answer_index": 0,
+          "explanation": "small and sustainable 小而可持续。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noises",
+            "steps",
+            "prices",
+            "rooms"
+          ],
+          "answer_index": 1,
+          "explanation": "small daily steps 每天的小步。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "end",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "by the end of a month 一个月结束时。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "broken",
+            "sold",
+            "achieved"
+          ],
+          "answer_index": 3,
+          "explanation": "how much you have achieved 取得了多少。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "An Interview about Learning",
+      "text": "Our school newspaper is holding an (1)____ about what students learn outside the classroom. One girl said the Go Green Club had (2)____ her most of all. She has been a (3)____ there for over a year, taking part in many activities that raise (4)____ of environmental protection. Through this work, she has (5)____ practical knowledge about how to protect nature. Her sense of (6)____ and her team spirit have also grown. 'Learning,' she said, 'is never (7)____ to classrooms. It can happen anywhere, as long as you are (8)____ to try.' She added that working with others had taught her how to (9)____ as a team. By the end of the interview, everyone agreed that out-of-class activities can be just as (10)____ as ordinary lessons.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "interview",
+            "garden",
+            "price",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "an interview 一次采访。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "influenced",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "influenced her most 对她影响最大。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "member",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a member 一名成员。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "noises",
+            "songs",
+            "awareness"
+          ],
+          "answer_index": 3,
+          "explanation": "raise awareness 提高意识。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "acquired",
+            "lost",
+            "sold",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "acquired practical knowledge 获得实用知识。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "responsibility",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "sense of responsibility 责任感。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "open",
+            "free",
+            "limited",
+            "ready"
+          ],
+          "answer_index": 2,
+          "explanation": "never limited to 从不局限于。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "sorry",
+            "tired",
+            "willing"
+          ],
+          "answer_index": 3,
+          "explanation": "willing to try 愿意尝试。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cooperate",
+            "sleep",
+            "shout",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "cooperate as a team 团队合作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "useless",
+            "valuable",
+            "boring",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "just as valuable 同样有价值。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Ninety-Year-Old Piano Man",
+      "text": "Jack is a remarkable old man who is still (1)____ to learn. He joined the army many years ago, but only late in life did he begin to (2)____ the piano. Now, at over ninety, he still (3)____ with his teacher for forty-five minutes every two weeks. His birthday is coming, and he is busy (4)____ for his party. People who meet him are always (5)____ by his energy. 'Age is just a (6)____,' he likes to say. 'You are never too old to (7)____ something new.' His teacher describes him as a hard-working and (8)____ student who never misses a lesson. Jack believes that music keeps his mind (9)____ and his heart young. His story reminds us that lifelong learning can bring great (10)____ at any age.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "afraid",
+            "sorry",
+            "eager",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "eager to learn 渴望学习。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "play"
+          ],
+          "answer_index": 3,
+          "explanation": "play the piano 弹钢琴。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "practises",
+            "sleeps",
+            "shouts",
+            "hides"
+          ],
+          "answer_index": 0,
+          "explanation": "practises with his teacher 和老师练习。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "preparing",
+            "losing",
+            "breaking"
+          ],
+          "answer_index": 1,
+          "explanation": "preparing for his party 为聚会做准备。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "bored",
+            "angry",
+            "amazed",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "amazed by his energy 被他的活力震撼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "number"
+          ],
+          "answer_index": 3,
+          "explanation": "age is just a number 年龄只是个数字。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "learn",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "learn something new 学新东西。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lazy",
+            "patient",
+            "rude",
+            "sleepy"
+          ],
+          "answer_index": 1,
+          "explanation": "hard-working and patient 勤奋而有耐心。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "empty",
+            "broken",
+            "active",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "keeps his mind active 让头脑活跃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "trouble",
+            "noise",
+            "danger",
+            "joy"
+          ],
+          "answer_index": 3,
+          "explanation": "bring great joy 带来巨大的快乐。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Power of Reading",
+      "text": "When I was young, books opened a door to a wider (1)____. My grandfather, who was a quiet (2)____, kept a shelf full of stories and poems. Every evening he would (3)____ a few pages aloud to me. At first I did not understand much, but I (4)____ began to fall in love with words. Reading taught me that real (5)____ is to know how little we actually know. It also gave me the (6)____ to ask questions and to think for myself. Whenever I felt sad, a good book could (7)____ me and lift my mood. Books, I learned, are patient teachers that never (8)____ giving us their wisdom. They connect us with people who lived (9)____ years ago. Now I believe that anyone who keeps reading will keep (10)____ for a whole lifetime.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "world",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a wider world 更广阔的世界。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "educator",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a quiet educator 一位安静的教育者。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "recite",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "recite a few pages aloud 朗读几页。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "never",
+            "rarely",
+            "seldom",
+            "gradually"
+          ],
+          "answer_index": 3,
+          "explanation": "gradually began to 渐渐开始。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "knowledge",
+            "weather",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "real knowledge 真正的知识。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "courage",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "the courage to ask 提问的勇气。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hurt",
+            "lose",
+            "comfort",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "comfort me 安慰我。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "start",
+            "enjoy",
+            "love",
+            "stop"
+          ],
+          "answer_index": 3,
+          "explanation": "never stop giving 从不停止给予。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "thousands of",
+            "few",
+            "no",
+            "single"
+          ],
+          "answer_index": 0,
+          "explanation": "thousands of years ago 数千年前。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "falling",
+            "growing",
+            "stopping",
+            "failing"
+          ],
+          "answer_index": 1,
+          "explanation": "keep growing 不断成长。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "What I Learned by Doing",
+      "text": "Last term I joined a design course that completely changed the way I (1)____. Instead of sitting and listening, we learned by (2)____ things with our own hands. Our teacher gave each of us some paper and (3)____ us to build the tallest tower we could. At first my tower kept (4)____ down, and I almost wanted to give up. But I was (5)____ to keep trying, and slowly I found a better (6)____. When my tower finally stood tall, I felt a deep sense of (7)____. The course showed me, in a very (8)____ way, that mistakes are part of learning. Every time something fell, I (9)____ a little more about balance and weight. Now I am a firm believer that we understand an idea best after we have (10)____ it ourselves.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "learn",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "the way I learn 我学习的方式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "losing",
+            "selling",
+            "breaking",
+            "making"
+          ],
+          "answer_index": 3,
+          "explanation": "learning by making things 通过动手做来学。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "encouraged",
+            "sold",
+            "lost",
+            "forgot"
+          ],
+          "answer_index": 0,
+          "explanation": "encouraged us to build 鼓励我们搭建。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "growing",
+            "falling",
+            "rising",
+            "standing"
+          ],
+          "answer_index": 1,
+          "explanation": "kept falling down 一直倒下。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "afraid",
+            "sorry",
+            "determined",
+            "lazy"
+          ],
+          "answer_index": 2,
+          "explanation": "determined to keep trying 决心继续尝试。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "price",
+            "garden",
+            "method"
+          ],
+          "answer_index": 3,
+          "explanation": "a better method 更好的方法。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "achievement",
+            "fear",
+            "anger",
+            "sadness"
+          ],
+          "answer_index": 0,
+          "explanation": "a sense of achievement 成就感。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "wrong",
+            "practical",
+            "empty",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "in a very practical way 以非常实际的方式。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forgot",
+            "lost",
+            "learned",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "learned a little more 学到更多。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "sold",
+            "broken",
+            "tried"
+          ],
+          "answer_index": 3,
+          "explanation": "after we have tried it 在亲手试过之后。"
+        }
+      ]
+    }
+  ]
+}

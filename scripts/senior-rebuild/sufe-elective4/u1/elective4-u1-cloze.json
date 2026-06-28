@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Achieving Effective Communication",
+  "source": "上外版选择性必修四 Unit 1 主题完形;每篇10空,四选项同词性、无双解;文章与阅读关/听力关不复用。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Getting Ready for the Talk",
+      "text": "The best speakers rarely sound nervous, but that calm is not an accident. Most of them (1) hours of quiet practice before they ever face a crowd. Lan was asked to (2) a short speech at her school's science week. At first the very (3) of standing in front of two hundred classmates made her hands shake. Her teacher gave her a piece of (4): read the words aloud again and again until they felt natural. So every evening Lan stood in front of a mirror and (5) her whole talk. She also recorded her voice so that she could (6) her own pace and tone. Slowly the strange sentences began to feel (7) hers. By the day of the event, she no longer needed to (8) the printed page. She walked onto the stage, took a deep breath, and (9) at the audience with a smile. The (10) of all that practice was a calm, confident talk.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "put in",
+            "give up",
+            "call off",
+            "throw away"
+          ],
+          "answer_index": 0,
+          "explanation": "'投入'数小时练习 → put in;其余意思不通。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "delay",
+            "deliver",
+            "delete",
+            "design"
+          ],
+          "answer_index": 1,
+          "explanation": "deliver a speech 发表演讲。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "habit",
+            "reward",
+            "thought",
+            "promise"
+          ],
+          "answer_index": 2,
+          "explanation": "'一想到站在台前'→ the thought of。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "order",
+            "warning",
+            "praise",
+            "advice"
+          ],
+          "answer_index": 3,
+          "explanation": "老师给的是建议 → advice。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "practised",
+            "ignored",
+            "lost",
+            "forgot"
+          ],
+          "answer_index": 0,
+          "explanation": "对着镜子练习整篇 → practised。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "check",
+            "hide",
+            "spend"
+          ],
+          "answer_index": 1,
+          "explanation": "录音是为了检查语速语调 → check。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hardly",
+            "rarely",
+            "truly",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "句子开始'真正'像她自己的 → truly。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tear up",
+            "throw at",
+            "laugh at",
+            "read from"
+          ],
+          "answer_index": 3,
+          "explanation": "不再需要照着稿子念 → read from。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "looked",
+            "shouted",
+            "ran",
+            "pointed"
+          ],
+          "answer_index": 0,
+          "explanation": "微笑着望向观众 → looked。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "problem",
+            "result",
+            "danger",
+            "excuse"
+          ],
+          "answer_index": 1,
+          "explanation": "练习的结果是镇定自信 → result。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My First Presentation",
+      "text": "I will never forget my first class presentation. When my teacher read out my name, my heart began to (1) so fast that I could hear it. I walked to the front on (2) legs and stared at a sea of faces. For a moment my mind went completely (3), and I forgot every word I had prepared. Then I remembered my friend's tip: find one (4) face and speak to it. So I looked at my best friend, who gave me an encouraging (5). Slowly my voice grew (6), and the shaking in my hands began to fade. I started to use my hands to (7) what I meant, just as we had been taught. To my surprise, the class actually (8) to what I was saying. When I finished, they gave me a warm round of (9). That day I learned that fear is normal, but it does not have to (10) us.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "melt",
+            "beat",
+            "freeze"
+          ],
+          "answer_index": 2,
+          "explanation": "心脏'跳'得很快 → beat。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "running",
+            "sleeping",
+            "waving",
+            "shaking"
+          ],
+          "answer_index": 3,
+          "explanation": "双腿发抖 → shaking。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "blank",
+            "bright",
+            "wide",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "脑子一片空白 → went blank。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "friendly",
+            "empty",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "找一张'友善的'脸 → friendly。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shout",
+            "push",
+            "smile",
+            "rule"
+          ],
+          "answer_index": 2,
+          "explanation": "朋友给了鼓励的微笑 → smile。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "quieter",
+            "colder",
+            "darker",
+            "steadier"
+          ],
+          "answer_index": 3,
+          "explanation": "声音逐渐'稳'了下来 → steadier。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "show",
+            "hide",
+            "buy",
+            "spell"
+          ],
+          "answer_index": 0,
+          "explanation": "用手势'展示'含义 → show。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "objected",
+            "listened",
+            "belonged",
+            "pointed"
+          ],
+          "answer_index": 1,
+          "explanation": "全班在'倾听' → listened (to)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "silence",
+            "questions",
+            "applause",
+            "homework"
+          ],
+          "answer_index": 2,
+          "explanation": "热烈的'掌声' → applause。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "help",
+            "teach",
+            "thank",
+            "control"
+          ],
+          "answer_index": 3,
+          "explanation": "恐惧不必'控制'我们 → control。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Sending Messages Through Time",
+      "text": "Long before phones existed, people still found clever ways to send (1) over long distances. On open hills, soldiers lit fires and used rising (2) to warn of danger far away. Sailors at sea raised coloured flags, while travellers trained (3) to carry tiny notes home. Later, a code of short and long signals let operators tap out words along a wire, which made news (4) much faster than any horse. The telephone then allowed two people to (5) directly, even when they were miles (6). In our own time, the Internet has changed everything once (7). A message can now cross the planet in less than a (8). Yet the basic aim has never (9): to share an idea with someone who is not standing beside us. Each new tool simply makes that ancient wish a little (10) to reach.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "messages",
+            "buildings",
+            "animals",
+            "mountains"
+          ],
+          "answer_index": 0,
+          "explanation": "远距离传'信息' → messages。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "water",
+            "smoke",
+            "sand",
+            "grass"
+          ],
+          "answer_index": 1,
+          "explanation": "升起的'烟'(烽烟报警)→ smoke。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "horses",
+            "fish",
+            "pigeons",
+            "lions"
+          ],
+          "answer_index": 2,
+          "explanation": "训练'鸽子'送信 → pigeons。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stop",
+            "sleep",
+            "fall",
+            "travel"
+          ],
+          "answer_index": 3,
+          "explanation": "电报让消息'传播'更快 → travel。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "talk",
+            "fight",
+            "walk",
+            "wait"
+          ],
+          "answer_index": 0,
+          "explanation": "电话让两人直接'交谈' → talk。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ahead",
+            "apart",
+            "along",
+            "aside"
+          ],
+          "answer_index": 1,
+          "explanation": "相隔很远 → miles apart。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "never",
+            "hardly",
+            "again",
+            "rarely"
+          ],
+          "answer_index": 2,
+          "explanation": "互联网'再次'改变一切 → again。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "year",
+            "mile",
+            "page",
+            "second"
+          ],
+          "answer_index": 3,
+          "explanation": "不到一'秒'传遍全球 → second。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "changed",
+            "helped",
+            "moved",
+            "opened"
+          ],
+          "answer_index": 0,
+          "explanation": "基本目的从未'改变' → changed。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "harder",
+            "easier",
+            "slower",
+            "darker"
+          ],
+          "answer_index": 1,
+          "explanation": "让愿望更'容易'实现 → easier。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Seat at the Front",
+      "text": "Tom was born with very weak hearing, and for years he sat (1) at the back of the classroom, missing half of every lesson. He often felt (2) out, as if a wall stood between him and his classmates. Last term, his school decided to (3) some new technology. A small microphone now sends the teacher's voice straight to a device in Tom's ear, so the words arrive (4) and clear. A screen at the front also shows the speech as written (5), so he can read whatever he might miss. The change has been (6). For the first time, Tom can follow a fast discussion and even (7) his own questions without fear. His classmates say he has become far more (8) in group work. Tom himself says the hardest barrier was never his ears but the (9) of being left out. With the right help, that barrier has finally come (10).",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "loudly",
+            "proudly",
+            "quietly",
+            "happily"
+          ],
+          "answer_index": 2,
+          "explanation": "安静地坐在后排 → quietly。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "given",
+            "taken",
+            "put",
+            "left"
+          ],
+          "answer_index": 3,
+          "explanation": "感到被'冷落' → left out。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "try",
+            "sell",
+            "break",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "学校决定'尝试'新技术 → try。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dark",
+            "loud",
+            "late",
+            "cold"
+          ],
+          "answer_index": 1,
+          "explanation": "声音传来既'响亮'又清晰 → loud。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "songs",
+            "colours",
+            "words",
+            "numbers"
+          ],
+          "answer_index": 2,
+          "explanation": "屏幕显示成文字 → words。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "tiny",
+            "false",
+            "rude",
+            "huge"
+          ],
+          "answer_index": 3,
+          "explanation": "变化是'巨大的' → huge。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ask",
+            "miss",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "毫无畏惧地'提出'问题 → ask。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "silent",
+            "active",
+            "absent",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "在小组中更'积极' → active。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "joy",
+            "habit",
+            "fear",
+            "rule"
+          ],
+          "answer_index": 2,
+          "explanation": "最难的障碍是被排斥的'恐惧' → fear。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "back",
+            "true",
+            "alive",
+            "down"
+          ],
+          "answer_index": 3,
+          "explanation": "障碍终于'倒下' → come down。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Talking Through a Screen",
+      "text": "Video calls have made it easy to meet people far away, yet they bring their own small (1). On a screen, others cannot fully see your body, so your face and voice must do (2) of the work. Before an important call, it is wise to (3) your camera and microphone so that nothing fails at the wrong moment. Sit where the light falls on your face rather than (4) you, or you will appear as a dark shape. Look into the camera, not at the screen, so that the other person feels you are making eye (5) with them. Speak a little more (6) than usual, and pause now and then to let your words (7) in. If the connection is poor, do not shout; instead, repeat the key (8) calmly. Above all, give the speaker your full (9), since people can always tell when you are checking another window. Good manners (10) just as much online as they do face to face.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "challenges",
+            "rewards",
+            "holidays",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "带来自己的小'挑战' → challenges。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "none",
+            "most",
+            "little",
+            "least"
+          ],
+          "answer_index": 1,
+          "explanation": "脸和声音得承担'大部分'工作 → most。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "break",
+            "sell",
+            "test",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "事先'测试'摄像头麦克风 → test。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "beside",
+            "below",
+            "between",
+            "behind"
+          ],
+          "answer_index": 3,
+          "explanation": "光应照在脸上而非身后 → behind。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "contact",
+            "level",
+            "shadow",
+            "corner"
+          ],
+          "answer_index": 0,
+          "explanation": "眼神交流 → eye contact。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rudely",
+            "slowly",
+            "wildly",
+            "sadly"
+          ],
+          "answer_index": 1,
+          "explanation": "比平时说得更'慢'些 → slowly。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fall",
+            "jump",
+            "sink",
+            "melt"
+          ],
+          "answer_index": 2,
+          "explanation": "让话语'沉入'(被吸收)→ sink in。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "doors",
+            "prices",
+            "seats",
+            "points"
+          ],
+          "answer_index": 3,
+          "explanation": "平静地重复关键'要点' → points。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "attention",
+            "money",
+            "homework",
+            "distance"
+          ],
+          "answer_index": 0,
+          "explanation": "给予全部'注意力' → attention。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cost",
+            "matter",
+            "stop",
+            "fail"
+          ],
+          "answer_index": 1,
+          "explanation": "礼貌同样'重要' → matter。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Friends Behind the Screen",
+      "text": "Our class recently ran a small (1) to find out how social media affects the way we talk to each other. We asked forty students about their favourite (2) of keeping in touch. The (3) surprised us. Although almost everyone used chat apps every day, most still said they (4) face-to-face talks for anything important. Many admitted that they often check their phones while (5) time with family, a habit they were not (6) of. Several students felt that endless messages had actually made them feel more (7), not less, because a screen hides real feelings. Others, however, argued that apps help shy people (8) friendships they would never start in person. In the end we (9) that technology is neither all good nor all bad; it simply depends on how we use it. The wisest plan, we decided, is to let our phones (10) real conversation, never replace it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "concert",
+            "lesson",
+            "survey",
+            "journey"
+          ],
+          "answer_index": 2,
+          "explanation": "做了一个小'调查' → survey。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "day",
+            "rule",
+            "price",
+            "way"
+          ],
+          "answer_index": 3,
+          "explanation": "最喜欢的联系'方式' → way。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "result",
+            "weather",
+            "ticket",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "调查的'结果'让人意外 → result。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "refused",
+            "preferred",
+            "feared",
+            "missed"
+          ],
+          "answer_index": 1,
+          "explanation": "重要事情更'偏爱'面谈 → preferred。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wasting",
+            "saving",
+            "spending",
+            "buying"
+          ],
+          "answer_index": 2,
+          "explanation": "与家人'共度'时光 → spending time。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "fond",
+            "tired",
+            "aware"
+          ],
+          "answer_index": 3,
+          "explanation": "并未'意识到'这一习惯 → aware of。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "alone",
+            "proud",
+            "polite",
+            "awake"
+          ],
+          "answer_index": 0,
+          "explanation": "反而感到更'孤独' → alone。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "break",
+            "build",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "帮助腼腆者'建立'友谊 → build。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "refused",
+            "doubted",
+            "agreed",
+            "complained"
+          ],
+          "answer_index": 2,
+          "explanation": "最后我们'一致认为' → agreed。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "replace",
+            "stop",
+            "delay",
+            "support"
+          ],
+          "answer_index": 3,
+          "explanation": "让手机'辅助'而非取代真实交流 → support。"
+        }
+      ]
+    }
+  ]
+}

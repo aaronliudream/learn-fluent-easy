@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Approaching Classics",
+  "source": "上外版选择性必修四 Unit 4 同主题阅读(《老人与海》情节/海明威文风/湖畔派与华兹华斯/莎士比亚《人生七阶》/苏轼《水调歌头》/诗歌为何重要)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形·听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Old Man and the Sea",
+      "topic_cn": "小说·《老人与海》的故事",
+      "body": "Ernest Hemingway's The Old Man and the Sea tells the story of Santiago, an old fisherman who has caught nothing for many days. At last he hooks a giant fish, far bigger than his small boat. For three days the old man holds on, fighting the great fish with all his strength until he finally wins. On the way home, however, sharks smell the blood and attack again and again. One by one they tear away the flesh, and the old man fights back with a harpoon, a knife and even an oar. By the time he reaches the shore, only the bones of the fish are left. Yet Santiago is not broken. A man can be destroyed but not defeated, he believes. Though he loses the fish, he keeps his courage and his pride. This simple story has moved readers all over the world and helped make Hemingway one of the most respected writers of his time.",
+      "vocab_notes": [
+        {
+          "word": "fisherman",
+          "cn": "渔夫"
+        },
+        {
+          "word": "shark",
+          "cn": "鲨鱼"
+        },
+        {
+          "word": "defeated",
+          "cn": "被打败的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How long does the old man struggle before he finally catches the great fish?",
+          "options": [
+            "For three days and nights.",
+            "For only a few minutes.",
+            "For a whole month.",
+            "He never manages to catch it."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'For three days the old man holds on… until he finally wins' 的转述。"
+        },
+        {
+          "stem": "What is left of the fish by the time he gets home?",
+          "options": [
+            "The whole fish, undamaged.",
+            "Almost nothing but its bones.",
+            "Half of the fresh meat.",
+            "Only its head."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'only the bones of the fish are left' 的转述。"
+        },
+        {
+          "stem": "What does the story mainly show about Santiago?",
+          "options": [
+            "He keeps his courage even in defeat.",
+            "He gives up as soon as life is hard.",
+            "He cares only about money.",
+            "He is too afraid to go to sea."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'keeps his courage and his pride… not defeated' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Hemingway's Iceberg Style",
+      "topic_cn": "说明·海明威的简洁文风",
+      "body": "Hemingway is famous for his brief and simple writing style. He once said that good writing is like an iceberg: only a small part shows above the water, while most of the meaning lies hidden beneath. In The Old Man and the Sea, his sentences are short and his words are plain, yet they carry deep feeling. He rarely tells the reader what to think. Instead, he describes simple actions, the old man's hands, the sea and the fish, and lets the reader feel the emotion behind them. This quiet style makes the characters seem real and strong. Because so much is left unsaid, every single word matters, and readers must use their own imagination to fill in the rest. Many later writers have tried to copy this clear and powerful way of writing, but few have done it so well. His style is one important reason why his stories are still read and loved today.",
+      "vocab_notes": [
+        {
+          "word": "iceberg",
+          "cn": "冰山"
+        },
+        {
+          "word": "plain",
+          "cn": "朴素的"
+        },
+        {
+          "word": "imagination",
+          "cn": "想象力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does Hemingway compare good writing to?",
+          "options": [
+            "A loud and busy song.",
+            "An iceberg in the sea.",
+            "A very long letter.",
+            "A crowded market."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'good writing is like an iceberg' 的转述。"
+        },
+        {
+          "stem": "How does Hemingway help readers feel emotion?",
+          "options": [
+            "By explaining every feeling directly.",
+            "By using very long sentences.",
+            "By describing simple actions and details.",
+            "By avoiding any description at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'describes simple actions… lets the reader feel the emotion' 的转述。"
+        },
+        {
+          "stem": "Why does every word matter in his stories?",
+          "options": [
+            "Because the words are unusually long.",
+            "Because readers skip most of them.",
+            "Because he repeats every idea twice.",
+            "Because so much meaning is left unsaid."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'so much is left unsaid, every single word matters' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Lake Poets and Wordsworth",
+      "topic_cn": "文化·湖畔派诗人与《写于三月》",
+      "body": "The Lake Poets were a group of English poets who lived in the beautiful Lake District in the early nineteenth century. The three best-known of them were William Wordsworth, Samuel Taylor Coleridge and Robert Southey. They are seen as an important part of the Romantic movement, which valued nature, feeling and simple country life. Wordsworth, who later became Britain's Poet Laureate, often wrote about the natural world around him. In his short poem Written in March, he paints a fresh picture of an early spring day. Birds sing, a stream flows, cattle graze quietly, and snow melts away on the hills. Blue sky begins to prevail, and there is joy in the mountains and life in the fountains. The poem feels bright and full of hope. Through such simple scenes, Wordsworth invites readers to slow down and notice the quiet beauty of the world, and that is one reason his work is still loved today.",
+      "vocab_notes": [
+        {
+          "word": "stream",
+          "cn": "小溪"
+        },
+        {
+          "word": "prevail",
+          "cn": "盛行"
+        },
+        {
+          "word": "Poet Laureate",
+          "cn": "桂冠诗人"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where did the Lake Poets live?",
+          "options": [
+            "In England's Lake District.",
+            "In the centre of London.",
+            "By the sea in France.",
+            "In a large industrial city."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'lived in the beautiful Lake District' 的转述。"
+        },
+        {
+          "stem": "What did the Romantic movement value?",
+          "options": [
+            "Money and busy city life.",
+            "Nature, feeling and country life.",
+            "War, power and conquest.",
+            "Machines and modern science."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'valued nature, feeling and simple country life' 的转述。"
+        },
+        {
+          "stem": "What kind of day does Written in March describe?",
+          "options": [
+            "A cold and lonely winter night.",
+            "A hot and tiring summer afternoon.",
+            "A bright early spring day full of hope.",
+            "A grey and rainy autumn day."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a fresh picture of an early spring day… bright and full of hope' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "All the World's a Stage",
+      "topic_cn": "文学·莎士比亚与人生七阶",
+      "body": "William Shakespeare, often called The Bard, is widely seen as the greatest playwright and poet in the English language. He wrote more than thirty plays and over a hundred and fifty sonnets, and he helped shape the very English we use today. One of his most famous passages comes from the comedy As You Like It. In it, a thoughtful character says that all the world is a stage, and all the men and women are merely players. He then compares a person's life to a play in seven acts, from a crying baby in its nurse's arms to a helpless old man at the very end. With humour and gentle sadness, Shakespeare reminds us that everyone plays many different parts during a lifetime. Though these lines were written more than four hundred years ago, they still feel true. That is why people around the world continue to read, perform and quote Shakespeare's words after so many years.",
+      "vocab_notes": [
+        {
+          "word": "playwright",
+          "cn": "剧作家"
+        },
+        {
+          "word": "sonnet",
+          "cn": "十四行诗"
+        },
+        {
+          "word": "quote",
+          "cn": "引用"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is Shakespeare best known as?",
+          "options": [
+            "A famous modern scientist.",
+            "A powerful king of England.",
+            "A writer of children's songs.",
+            "The greatest playwright in English."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the greatest playwright and poet in the English language' 的转述。"
+        },
+        {
+          "stem": "What does the speaker compare human life to?",
+          "options": [
+            "A play that has seven acts.",
+            "A long and difficult journey.",
+            "A quiet river in spring.",
+            "A single endless day."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'compares a person's life to a play in seven acts' 的转述。"
+        },
+        {
+          "stem": "Why are Shakespeare's words still read today?",
+          "options": [
+            "They are short and very easy.",
+            "They still feel true after centuries.",
+            "They were written in Chinese.",
+            "They describe modern machines."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'written more than four hundred years ago, they still feel true' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Su Shi and the Mid-Autumn Moon",
+      "topic_cn": "文学·苏轼《水调歌头》",
+      "body": "Su Shi, also known as Su Dongpo, was one of China's greatest poets. He lived during the Song dynasty and was also a painter, calligrapher and government official. He is remembered for freeing Chinese poetry from many old rules and for starting a bold, free style of writing. One of his best-loved works is the ci poem Shui Diao Ge Tou, written on a Mid-Autumn night while he was thinking of his younger brother far away. In the poem he looks up at the bright moon and asks the deep blue sky how old it is. He dreams of flying to the palaces in the sky, yet decides he is happier in the human world below. At the end, he sends a warm wish to those he loves, that they may enjoy long life and share the same beautiful moonlight, however far apart they are. This gentle and hopeful poem is still recited by Chinese people every Mid-Autumn Festival.",
+      "vocab_notes": [
+        {
+          "word": "calligrapher",
+          "cn": "书法家"
+        },
+        {
+          "word": "ci poem",
+          "cn": "词"
+        },
+        {
+          "word": "moonlight",
+          "cn": "月光"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Besides writing poetry, what else was Su Shi skilled in?",
+          "options": [
+            "Sailing and fishing.",
+            "Building large bridges.",
+            "Painting, calligraphy and government work.",
+            "Playing football."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a painter, calligrapher and government official' 的转述。"
+        },
+        {
+          "stem": "When did Su Shi write Shui Diao Ge Tou?",
+          "options": [
+            "During a busy market day.",
+            "On a cold winter morning at sea.",
+            "While travelling in a foreign land.",
+            "On a Mid-Autumn night, missing his brother."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'on a Mid-Autumn night while he was thinking of his younger brother' 的转述。"
+        },
+        {
+          "stem": "What does Su Shi wish for the people he loves at the end?",
+          "options": [
+            "Long life and shared moonlight, even when apart.",
+            "Great wealth and royal power.",
+            "A quick return to the capital.",
+            "An end to all writing of poems."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'enjoy long life and share the same beautiful moonlight' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Why Poetry Matters",
+      "topic_cn": "议论·诗歌为何重要",
+      "body": "Why does poetry matter in a world that seems to care most about money and success? In the film Dead Poets Society, a teacher named Mr Keating gives his students a surprising answer. Medicine, law and business, he says, are needed to keep us alive, but poetry, beauty and love are the very things we stay alive for. He reminds his class that the human race is full of strong feeling, and that each of us may add our own verse to the great play of life. The thinker Bertrand Russell once offered similar advice to future generations: always look honestly for the facts, and let love guide the way we treat one another. Both men believed that great writing helps us understand who we are and why we live. Reading classics, then, is far from a waste of time. It feeds the heart as well as the mind, and it can quietly change the way we see the whole world.",
+      "vocab_notes": [
+        {
+          "word": "matter",
+          "cn": "要紧;重要"
+        },
+        {
+          "word": "verse",
+          "cn": "诗句"
+        },
+        {
+          "word": "generation",
+          "cn": "一代人"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to Mr Keating, what do we stay alive for?",
+          "options": [
+            "Only money and success.",
+            "Poetry, beauty and love.",
+            "Sleep, food and comfort.",
+            "Fame and great power."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'poetry, beauty and love are the very things we stay alive for' 的转述。"
+        },
+        {
+          "stem": "What advice did Bertrand Russell give future generations?",
+          "options": [
+            "Avoid reading any old books.",
+            "Care only about yourself.",
+            "Seek the truth and let love guide us.",
+            "Forget the whole past."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'look honestly for the facts, and let love guide…' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main point about reading classics?",
+          "options": [
+            "It is mostly a waste of time.",
+            "It is only useful for exams.",
+            "It should be avoided by the young.",
+            "It feeds both the heart and the mind."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'feeds the heart as well as the mind' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(应对压力主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Before her first violin concert, Nina felt so nervous that her hands shook and her mouth went dry. Instead of panicking, she found a quiet corner, breathed slowly for a few minutes, and told herself that a little stress was perfectly normal. By the time she walked onto the stage, she felt calm enough to enjoy every note.",
+    "questions": [
+      {
+        "q": "What did Nina do instead of panicking?",
+        "options": [
+          "She calmed herself by breathing slowly in a quiet spot.",
+          "She refused to go on stage at all.",
+          "She shouted loudly at the audience.",
+          "She gave her violin to a friend."
+        ],
+        "answer": "A",
+        "explanation": "原文'found a quiet corner, breathed slowly … told herself a little stress was normal'的转述。"
+      },
+      {
+        "q": "How did Nina feel by the time she went on stage?",
+        "options": [
+          "Too frightened to move.",
+          "Angry with the other players.",
+          "Relaxed enough to enjoy performing.",
+          "Sorry that she had come."
+        ],
+        "answer": "C",
+        "explanation": "末句'felt calm enough to enjoy every note'的转述(短文结尾,覆盖不同位置)。"
+      }
+    ]
+  }
+}

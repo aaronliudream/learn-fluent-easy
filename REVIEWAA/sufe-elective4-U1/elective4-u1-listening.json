@@ -1,0 +1,492 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Achieving Effective Communication",
+  "tts_voice": "nova",
+  "source": "上外版选择性必修四 Unit 1 主题听力;6篇 long/short 交替(3长对话 + 3短独白),每篇5题,答案均可在 transcript 找到依据;与阅读/完形不复用。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "Calming the Nerves",
+      "type": "dialogue 两名学生赛前准备",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "Leo, the speech contest is on Friday and I'm already terrified. My hands shake whenever I imagine the stage."
+        },
+        {
+          "speaker": "Leo",
+          "text": "I felt exactly the same last year. The trick that helped me most was simply practising out loud, again and again, until the words felt natural."
+        },
+        {
+          "speaker": "Mia",
+          "text": "I've read my speech silently about ten times, but I still freeze when I try to say it aloud."
+        },
+        {
+          "speaker": "Leo",
+          "text": "Reading silently isn't enough. Stand up, use your hands, and say it to the mirror. Record yourself too, so you can hear your speed."
+        },
+        {
+          "speaker": "Mia",
+          "text": "That's a good idea. I always rush when I'm nervous, so people can't follow me."
+        },
+        {
+          "speaker": "Leo",
+          "text": "Then breathe slowly before you begin, and find one friendly face in the crowd to speak to. It makes the whole room feel smaller."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Speak to one person at a time. I'll try that. Thanks, Leo — I feel a little braver already."
+        }
+      ],
+      "translation_cn": "米娅周五要参加演讲比赛,十分紧张,一想到上台手就发抖。里奥说去年自己也一样,最有用的办法是反复大声练习,直到说得自然。米娅说她默读了十遍,但出声就卡壳。里奥建议她站起来、用手势、对着镜子说,还要录音听语速。米娅承认自己一紧张就语速过快,别人跟不上。里奥让她开口前慢慢呼吸,并在观众中找一张友善的脸来交流,这样整个房间会显得小一些。米娅决定试试,觉得勇敢了一些。",
+      "questions": [
+        {
+          "stem": "What is Mia worried about?",
+          "options": [
+            "A speech contest later in the week",
+            "A maths exam on Friday",
+            "A school sports day",
+            "A music performance"
+          ],
+          "answer_index": 0,
+          "explanation": "她担心周五的演讲比赛。"
+        },
+        {
+          "stem": "What does Leo say helped him most last year?",
+          "options": [
+            "Reading the speech silently",
+            "Practising aloud many times",
+            "Memorising other people's speeches",
+            "Avoiding the stage completely"
+          ],
+          "answer_index": 1,
+          "explanation": "里奥说反复大声练习最有用。"
+        },
+        {
+          "stem": "Why does Leo suggest recording yourself?",
+          "options": [
+            "To check your speaking speed",
+            "To share the talk online",
+            "To shorten the speech",
+            "To copy a friend's voice"
+          ],
+          "answer_index": 0,
+          "explanation": "录音是为了听自己的语速。"
+        },
+        {
+          "stem": "What problem does Mia admit she has when nervous?",
+          "options": [
+            "She speaks too quietly",
+            "She talks too fast for people to follow",
+            "She forgets to smile",
+            "She stares at the floor"
+          ],
+          "answer_index": 1,
+          "explanation": "她承认一紧张就语速太快。"
+        },
+        {
+          "stem": "What does Leo recommend doing during the speech?",
+          "options": [
+            "Closing your eyes the whole time",
+            "Reading straight from the page",
+            "Looking at one friendly face in the crowd",
+            "Walking off the stage to relax"
+          ],
+          "answer_index": 2,
+          "explanation": "里奥建议对着人群中一张友善的脸说话。"
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "Workshop Announcement",
+      "type": "monologue 校园广播通知",
+      "kind": "short",
+      "speaker": "uk_male",
+      "transcript": "Good morning, everyone. This is a quick reminder from the students' union. Next Wednesday afternoon, we are holding a free workshop called 'Speak with Confidence' in the school library. The trainer is a former television presenter who has coached many nervous beginners. She will show you how to control your breathing, how to use simple gestures, and how to keep an audience interested even when you feel shy. Places are limited to thirty students, so please sign up by Monday at the union office. Remember to bring a short two-minute talk on any topic you like, because everyone will get the chance to practise in a friendly group. Don't worry if you have never spoken in public before — that is exactly what this workshop is for. We hope to see many of you there.",
+      "translation_cn": "早上好。学生会通知:下周三下午将在学校图书馆举办免费工作坊“自信演讲”。培训师是一位曾任电视主持人、辅导过许多紧张新手的老师。她将教大家如何控制呼吸、如何使用简单手势,以及在害羞时如何吸引听众。名额限三十人,请周一前到学生会办公室报名。请准备一个两分钟的任意话题短演讲,因为每人都将在友好的小组中练习。从未公开演讲过也别担心,这正是工作坊的意义所在。期待大家参加。",
+      "questions": [
+        {
+          "stem": "Where will the workshop be held?",
+          "options": [
+            "In the sports hall",
+            "In the union office",
+            "On the playground",
+            "In the school library"
+          ],
+          "answer_index": 3,
+          "explanation": "工作坊在学校图书馆举办。"
+        },
+        {
+          "stem": "Who is the trainer?",
+          "options": [
+            "A former television presenter",
+            "A famous singer",
+            "The school headmaster",
+            "A university professor"
+          ],
+          "answer_index": 0,
+          "explanation": "培训师曾是电视主持人。"
+        },
+        {
+          "stem": "What is one thing the trainer will teach?",
+          "options": [
+            "How to write a novel",
+            "How to control your breathing",
+            "How to design a poster",
+            "How to record music"
+          ],
+          "answer_index": 1,
+          "explanation": "她会教如何控制呼吸等。"
+        },
+        {
+          "stem": "How can students get a place?",
+          "options": [
+            "Pay a fee at the door",
+            "Email the trainer directly",
+            "Sign up at the union office by Monday",
+            "Just turn up on Wednesday"
+          ],
+          "answer_index": 2,
+          "explanation": "名额有限,需周一前到学生会报名。"
+        },
+        {
+          "stem": "What should students bring to the workshop?",
+          "options": [
+            "A musical instrument",
+            "A laptop computer",
+            "A printed newspaper",
+            "A short two-minute talk"
+          ],
+          "answer_index": 3,
+          "explanation": "需带一个两分钟的短演讲。"
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "An App for Shoppers",
+      "type": "dialogue 小组讨论科技方案",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Sara",
+          "text": "For our science-week project, let's solve a real communication problem. What about helping blind people do their shopping?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "I like that. Reading the labels must be really hard for them, especially when no one is nearby to ask."
+        },
+        {
+          "speaker": "Sara",
+          "text": "Exactly. So what if we design an app that connects a shopper to a call centre full of volunteers?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "The shopper points the phone camera at a product, and a volunteer reads the label aloud through the speaker."
+        },
+        {
+          "speaker": "Sara",
+          "text": "That's the heart of it. The clever part is that it uses people, not just a machine, so it can handle anything unusual."
+        },
+        {
+          "speaker": "Ben",
+          "text": "We should make the button very large and easy to find by touch, so the user never has to see the screen."
+        },
+        {
+          "speaker": "Sara",
+          "text": "Good thinking. Let's write up the idea and submit it to the students' union before Friday."
+        }
+      ],
+      "translation_cn": "为科技周项目,萨拉提议解决一个真实的交流难题:帮盲人购物。本同意,认为读商品标签对他们很难,尤其身边无人可问时。萨拉设想做一个把购物者连到志愿者呼叫中心的App:购物者用手机摄像头对准商品,志愿者通过扬声器读出标签。萨拉说妙处在于靠人而非单纯机器,能应对各种特殊情况。本建议把按钮做得很大、便于触摸,用户无需看屏幕。萨拉赞同,决定周五前写好方案交给学生会。",
+      "questions": [
+        {
+          "stem": "What problem does the group decide to solve?",
+          "options": [
+            "Helping blind people do their shopping",
+            "Cleaning the school library",
+            "Saving money on phone bills",
+            "Teaching maths online"
+          ],
+          "answer_index": 0,
+          "explanation": "他们决定帮盲人购物。"
+        },
+        {
+          "stem": "How would the app help a shopper read a label?",
+          "options": [
+            "It prints the label on paper",
+            "A volunteer reads it aloud after seeing it through the camera",
+            "It sends a text message to a friend",
+            "It plays loud music"
+          ],
+          "answer_index": 1,
+          "explanation": "志愿者通过摄像头看到标签后读出来。"
+        },
+        {
+          "stem": "Why does Sara think using volunteers is clever?",
+          "options": [
+            "Volunteers work for free forever",
+            "Machines are always broken",
+            "People can handle unusual situations a machine might miss",
+            "It makes the app cheaper to sell"
+          ],
+          "answer_index": 2,
+          "explanation": "靠人能应对机器处理不了的特殊情况。"
+        },
+        {
+          "stem": "What design feature does Ben suggest?",
+          "options": [
+            "A bright flashing screen",
+            "A loud alarm bell",
+            "A tiny secret switch",
+            "A very large button easy to find by touch"
+          ],
+          "answer_index": 3,
+          "explanation": "本建议做一个便于触摸的大按钮。"
+        },
+        {
+          "stem": "What will they do before Friday?",
+          "options": [
+            "Submit the idea to the students' union",
+            "Sell the app to a company",
+            "Open a real shop",
+            "Cancel the project"
+          ],
+          "answer_index": 0,
+          "explanation": "他们要在周五前把方案交给学生会。"
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "When Words Don't Reach",
+      "type": "monologue 播客谈生理障碍对策",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Welcome back to the podcast. Today I want to focus on one type of communication barrier: the physical kind. This happens when a person's hearing or sight makes it hard for a message to get through. The good news is that simple strategies can help a great deal. If someone has weak hearing, face them directly, speak clearly, and don't cover your mouth. A hearing aid or a quiet room can make a huge difference. If someone has poor sight, describe what is around you instead of just pointing, and read out any important signs. And whatever the barrier, check often that the other person has understood, rather than rushing on. Remember, the goal is not to speak louder, but to make sure your meaning truly arrives. A little patience turns a barrier into a small step.",
+      "translation_cn": "欢迎回到播客。今天我想聚焦一类交流障碍——生理障碍,即一个人的听力或视力使信息难以传达。好消息是,简单的策略能帮上大忙。若对方听力弱,要正对着他、说清楚、别捂嘴;助听器或安静的环境会大不相同。若对方视力差,要描述周围的事物而非只是用手指,并读出重要的标识。无论何种障碍,都要经常确认对方是否听懂,而不是一味往下赶。记住,目标不是说得更大声,而是确保你的意思真正传达到。一点耐心就能把障碍变成一个小小的台阶。",
+      "questions": [
+        {
+          "stem": "Which barrier does the podcast focus on today?",
+          "options": [
+            "The cultural barrier",
+            "The physical barrier",
+            "The language barrier",
+            "The money barrier"
+          ],
+          "answer_index": 1,
+          "explanation": "今天聚焦生理(身体)障碍。"
+        },
+        {
+          "stem": "What should you do when talking to someone with weak hearing?",
+          "options": [
+            "Whisper from behind them",
+            "Write everything in another language",
+            "Face them and speak clearly without covering your mouth",
+            "Turn off all the lights"
+          ],
+          "answer_index": 2,
+          "explanation": "应正对着、说清楚、别捂嘴。"
+        },
+        {
+          "stem": "What helps when someone has poor sight?",
+          "options": [
+            "Pointing silently at things",
+            "Speaking much faster",
+            "Showing them colourful pictures",
+            "Describing what is around them instead of pointing"
+          ],
+          "answer_index": 3,
+          "explanation": "应描述周围事物而非只用手指。"
+        },
+        {
+          "stem": "What does the speaker say you should do often?",
+          "options": [
+            "Check that the other person has understood",
+            "Repeat every word three times",
+            "Change the subject quickly",
+            "Speak in a foreign accent"
+          ],
+          "answer_index": 0,
+          "explanation": "要经常确认对方是否听懂。"
+        },
+        {
+          "stem": "What is the speaker's main message?",
+          "options": [
+            "Loud voices solve every problem",
+            "The aim is to make your meaning arrive, not just to be louder",
+            "Barriers can never be reduced",
+            "Patience makes communication harder"
+          ],
+          "answer_index": 1,
+          "explanation": "核心是确保意思传达到,而非单纯大声。"
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "Feedback After the Talk",
+      "type": "dialogue 师生演讲反馈",
+      "kind": "long",
+      "speaker": "uk_male",
+      "transcript": [
+        {
+          "speaker": "Mr Reed",
+          "text": "Well done, Anna. That was a brave first speech. May I share a few thoughts to help you improve?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yes, please. I know I made some mistakes. The beginning felt the hardest."
+        },
+        {
+          "speaker": "Mr Reed",
+          "text": "Actually your opening question was excellent — it made us all curious. But you read too much from your notes in the middle."
+        },
+        {
+          "speaker": "Anna",
+          "text": "I was afraid of forgetting my points, so I kept looking down at the page."
+        },
+        {
+          "speaker": "Mr Reed",
+          "text": "That's natural. Next time, write only key words on a small card, then look up and talk to us. Your eyes are part of the message."
+        },
+        {
+          "speaker": "Anna",
+          "text": "And I stood very still the whole time. Should I move more?"
+        },
+        {
+          "speaker": "Mr Reed",
+          "text": "A little. Step forward when you make an important point. It adds energy. Overall, a strong start — keep practising."
+        }
+      ],
+      "translation_cn": "里德老师称赞安娜勇敢地完成了第一次演讲,并提出改进建议。安娜请老师指点,说开头最难。里德说她开场的提问很棒、引起了大家好奇,但中间太多照着笔记念。安娜解释怕忘记要点,所以一直低头看稿。里德说这很正常,建议下次只在小卡片上写关键词,然后抬头与听众交流,因为眼神也是信息的一部分。安娜问自己全程站着不动,是否该多走动。里德说可以稍微走动,在讲到要点时向前一步,能增添活力。总体开局不错,要继续练习。",
+      "questions": [
+        {
+          "stem": "What does Mr Reed praise about Anna's speech?",
+          "options": [
+            "Her very long ending",
+            "Her loud and fast voice",
+            "Her opening question made the audience curious",
+            "Her colourful slides"
+          ],
+          "answer_index": 2,
+          "explanation": "老师称赞她开场的提问引起了好奇。"
+        },
+        {
+          "stem": "What was the main weakness in the middle of her talk?",
+          "options": [
+            "She spoke too quietly to hear",
+            "She told too many jokes",
+            "She finished far too early",
+            "She read too much from her notes"
+          ],
+          "answer_index": 3,
+          "explanation": "中间她太多照稿念。"
+        },
+        {
+          "stem": "Why did Anna keep looking down at the page?",
+          "options": [
+            "She was afraid of forgetting her points",
+            "She had dropped her pen",
+            "She was reading a different book",
+            "She felt sleepy"
+          ],
+          "answer_index": 0,
+          "explanation": "她怕忘记要点才一直低头。"
+        },
+        {
+          "stem": "What does Mr Reed suggest she use next time?",
+          "options": [
+            "A full written script",
+            "A small card with only key words",
+            "A loudspeaker",
+            "A large picture book"
+          ],
+          "answer_index": 1,
+          "explanation": "建议用只写关键词的小卡片。"
+        },
+        {
+          "stem": "What does Mr Reed say about moving on stage?",
+          "options": [
+            "Never move at all",
+            "Run from side to side constantly",
+            "Step forward a little when making an important point",
+            "Sit down for the whole talk"
+          ],
+          "answer_index": 2,
+          "explanation": "讲到要点时可向前一步,增添活力。"
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "Writing a Good Summary",
+      "type": "monologue 学习策略独白",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "If a friend misses a talk, a clear summary is a kind gift. But writing one well takes a little skill. First, listen or read for the shape of the whole piece, not just single facts. Many talks follow a general-to-specific pattern: the speaker makes one big point, then supports it with several details. Your job is to catch that main point first and put it in your own words. After that, pick only the two or three details that really matter, and leave out the small examples. Keep your summary short — often under sixty words — and never copy long phrases straight from the speaker. Finally, read your summary once more to check that it makes sense on its own, even to someone who was not there. A good summary is not shorter writing; it is clearer thinking.",
+      "translation_cn": "如果朋友错过了一场演讲,一份清晰的摘要就是一份善意的礼物,但写好它需要一点技巧。首先,要把握整篇的结构,而非只抓零碎事实。许多演讲遵循“由总到分”的模式:讲者先提出一个大观点,再用若干细节支撑。你的任务是先抓住主旨并用自己的话表达。之后,只挑出两三个真正重要的细节,略去小例子。摘要要短——常少于六十词——且绝不照抄讲者的长句。最后,再读一遍,确认它独立成篇、即使没在场的人也能看懂。好的摘要不是更短的文字,而是更清晰的思考。",
+      "questions": [
+        {
+          "stem": "What should you listen for first when writing a summary?",
+          "options": [
+            "Every single small fact",
+            "The speaker's clothes",
+            "The length of the room",
+            "The shape of the whole piece"
+          ],
+          "answer_index": 3,
+          "explanation": "首先要把握整篇的结构。"
+        },
+        {
+          "stem": "What pattern do many talks follow, according to the speaker?",
+          "options": [
+            "A general point supported by details",
+            "A list of unrelated jokes",
+            "A song followed by a dance",
+            "A series of questions only"
+          ],
+          "answer_index": 0,
+          "explanation": "许多演讲是由总到分:大观点加细节。"
+        },
+        {
+          "stem": "How should you express the main point?",
+          "options": [
+            "By copying long phrases exactly",
+            "In your own words",
+            "In another language",
+            "Only with pictures"
+          ],
+          "answer_index": 1,
+          "explanation": "要用自己的话表达主旨。"
+        },
+        {
+          "stem": "How long should the summary usually be?",
+          "options": [
+            "At least five pages",
+            "Exactly one hundred words",
+            "Often under sixty words",
+            "As long as the original talk"
+          ],
+          "answer_index": 2,
+          "explanation": "摘要常少于六十词。"
+        },
+        {
+          "stem": "What is the final check the speaker recommends?",
+          "options": [
+            "That it rhymes nicely",
+            "That it is longer than the talk",
+            "That it uses difficult words",
+            "That the summary makes sense on its own"
+          ],
+          "answer_index": 3,
+          "explanation": "最后确认摘要能独立成篇、让没在场的人也看懂。"
+        }
+      ]
+    }
+  ]
+}

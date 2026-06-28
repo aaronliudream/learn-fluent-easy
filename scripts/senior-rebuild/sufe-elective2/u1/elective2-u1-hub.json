@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Zhong Yang gave his life to collecting seeds in Tibet.", "opts": ["钟扬一生致力于在西藏采集种子。", "钟扬讨厌种子。", "钟扬从未去过西藏。", "钟扬只研究动物。"], "answer": 0 },
+    { "audio": "Franklin's photograph held the key to the shape of DNA.", "opts": ["富兰克林对DNA一无所知。", "富兰克林的照片藏着DNA形状的关键。", "富兰克林从不拍照。", "富兰克林是一名医生。"], "answer": 1 },
+    { "audio": "Hawking kept working for more than fifty years.", "opts": ["霍金很快就放弃了。", "霍金从不工作。", "霍金坚持工作了五十多年。", "霍金只活了几年。"], "answer": 2 },
+    { "audio": "Curie won the Nobel Prize in two different fields.", "opts": ["居里夫人从未获奖。", "居里夫人只研究文学。", "居里夫人讨厌科学。", "居里夫人在两个不同领域获得诺贝尔奖。"], "answer": 3 },
+    { "audio": "Every great discovery begins with a simple question.", "opts": ["每个伟大的发现都始于一个简单的问题。", "发现与提问无关。", "科学家从不提问。", "问题会毁掉科学。"], "answer": 0 },
+    { "audio": "The young students were amazed by the model of the human body.", "opts": ["学生们对模型毫无兴趣。", "年轻学生被人体模型深深震撼。", "学生们弄坏了模型。", "模型属于老师。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "We ____ this rich seed bank to Zhong Yang.（归功于）", "opts": ["owe", "sell", "throw", "hide"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "She had an undying ____ for science all her life.（酷爱）", "opts": ["price", "passion", "noise", "weather"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Franklin received almost no ____ for her key discovery.（认可）", "opts": ["garden", "market", "credit", "ticket"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Despite all the ____, the team never gave up.（艰难）", "opts": ["prices", "songs", "machines", "hardships"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The results of the experiment were truly ____.", "opts": ["amazing", "amazed", "amaze", "amazes"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "When the monkeys survived, the scientists were ____.", "opts": ["amazing", "amazed", "amaze", "amazes"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Her dream job is ____ new planets in deep space.", "opts": ["explored", "explore", "exploring", "explores"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "For many years, the mystery of DNA remained ____.", "opts": ["unsolving", "unsolve", "unsolves", "unsolved"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他从不后悔成为一名科学家。", "他后悔学了科学。", "他从未做过科学家。", "他讨厌他的工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He has never regretted being a scientist." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["好奇心毫无用处。", "好奇心是科学家最重要的品质之一。", "科学家不需要好奇心。", "好奇心会带来麻烦。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Curiosity is one of the most important qualities of a scientist." }
+  ],
+  "reading": {
+    "passage": "John Goodenough did some of his best work after the age of seventy. He helped invent a battery that now powers phones and cars all over the world. In 2019, at the age of ninety-seven, he became the oldest person ever to win a Nobel Prize, showing that it is never too late to make a great contribution.",
+    "passageCn": "约翰·古迪纳夫在七十岁之后完成了他最出色的一些工作。他帮助发明了如今为全世界手机和汽车供电的电池。2019年，九十七岁的他成为获诺贝尔奖年龄最大的人，证明了做出伟大贡献永远不嫌晚。",
+    "questions": [
+      { "q": "What did Goodenough help to invent?", "opts": ["A battery used in phones and cars.", "A new kind of seed.", "A space rocket.", "A computer game."], "answer": 0 },
+      { "q": "Why is his 2019 prize so remarkable?", "opts": ["He was the oldest person ever to win a Nobel Prize.", "He was the youngest winner ever.", "He won it twice.", "He refused to accept it."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short paragraph about a scientist you admire. Say who the person is, what they did, and why you admire them. Try to use the unit's -ing/-ed forms as predicatives.",
+    "promptCn": "写一小段你敬佩的科学家:他/她是谁、做了什么、你为什么敬佩(试着用本单元的 -ing/-ed 形式作表语，如 inspiring / inspired)。",
+    "sampleWords": ["scientist", "admire", "contribution", "devoted", "inspiring", "inspired", "courage", "discovery", "persist", "achievement"]
+  },
+  "dialogues": [
+    {
+      "title": "A Scientist I Admire",
+      "lines": [
+        { "role": "A", "text": "Which scientist do you admire most?", "cn": "你最敬佩哪位科学家?" },
+        { "role": "B", "text": "Marie Curie. Her story is really inspiring.", "cn": "居里夫人。她的故事真的很鼓舞人心。" },
+        { "role": "A", "text": "Why are you so inspired by her?", "cn": "你为什么这么受她鼓舞?" },
+        { "role": "B", "text": "Because she never gave up, even when it was hard.", "cn": "因为即使再难，她也从不放弃。" }
+      ]
+    },
+    {
+      "title": "Never Too Late",
+      "lines": [
+        { "role": "A", "text": "Did you hear about the ninety-seven-year-old Nobel winner?", "cn": "你听说那位九十七岁的诺贝尔奖得主了吗?" },
+        { "role": "B", "text": "Yes! It's amazing that he was still working at that age.", "cn": "听说了!他那个年纪还在工作，太了不起了。" },
+        { "role": "A", "text": "It shows it's never too late to make a contribution.", "cn": "这说明做出贡献永远不嫌晚。" },
+        { "role": "B", "text": "Exactly. I feel really encouraged by his story.", "cn": "正是。我被他的故事深深鼓舞。" }
+      ]
+    }
+  ]
+}

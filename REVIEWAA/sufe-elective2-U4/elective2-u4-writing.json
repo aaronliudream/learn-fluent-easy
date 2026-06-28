@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Write an expository essay about a natural disaster(写一篇介绍某种自然灾害的说明文)",
+  "title_en": "Earthquakes: What They Are and How to Stay Safe",
+  "genre": "说明文 / expository(introduce a natural disaster: definition, effects, causes, what to do)",
+  "source": "上外版选择性必修二 Unit 4 Writing:write an expository essay on a natural disaster(下定义 + 危害 + 成因 + 应对措施),信息客观、清晰。",
+  "prompt_cn": "假设你校举办'防灾教育周',要求每班写一篇英语说明文,向同学介绍一种自然灾害,以提高大家的防灾意识。请用英语写一篇约100–120词的说明文,内容包括:① 简要说明这种灾害是什么(下定义);② 它的危害;③ 它的主要成因;④ 人们可以采取的应对措施。注意:语言客观、信息清晰,不掺入个人感受。",
+  "prompt_en": "Your school is holding a Disaster Education Week. Each class must write an expository essay (about 100-120 words) introducing one natural disaster, in order to raise students' awareness. Your essay should include: 1) a short definition of the disaster; 2) its harmful effects; 3) its main causes; 4) measures people can take. Keep the writing objective, informative and clear.",
+  "points": [
+    "下定义(An earthquake is a sudden shaking of the ground caused by …)",
+    "危害(It may knock down houses, break roads and put lives in danger.)",
+    "成因(Most earthquakes happen where the Earth's plates suddenly slip.)",
+    "应对措施(Fix heavy furniture, keep a survival kit, and know where to hide.)"
+  ],
+  "word_count": "100–120 词",
+  "model_essay": "An earthquake is a sudden, violent shaking of the ground caused by the movement of rocks deep under the Earth's surface. It can be one of the most destructive natural disasters of all. When a strong earthquake strikes, it may knock down houses, break roads and pipes, and put many lives in danger. Most earthquakes happen near the edges of the Earth's great plates, where the rocks suddenly slip. Although we cannot stop earthquakes, we can prepare for them. Fixing heavy furniture to the wall, keeping a survival kit ready, and knowing where to hide can all save lives. By staying calm and acting quickly, people have a much better chance of surviving.",
+  "model_translation": "地震是地面突然剧烈的晃动,由地表深处岩石的运动引起。它可能是最具破坏力的自然灾害之一。强烈地震发生时,可能震倒房屋、破坏道路和管道,使许多人生命受到威胁。大多数地震发生在地球巨大板块的边缘,那里的岩石会突然滑动。虽然我们无法阻止地震,但可以为之做准备。把重家具固定在墙上、备好求生包、知道躲在哪里,都能挽救生命。保持冷静、迅速行动,人们生还的机会就大得多。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:定义 / 危害 / 成因 / 应对措施" },
+      { "dimension": "结构", "max": 4, "criteria": "说明文结构清晰:总起定义→展开各方面→收尾措施,信息客观、句句相关" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、复合动名词等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "定义 An earthquake is a sudden shaking of the ground caused by …",
+      "危害 When a strong earthquake strikes, it may …",
+      "成因 Most earthquakes happen where …",
+      "措施 We can prepare by … and …"
+    ],
+    "key_expressions": [
+      "An earthquake is a sudden, violent shaking of the ground.",
+      "It may knock down houses and put many lives in danger.",
+      "Although we cannot stop earthquakes, we can prepare for them.",
+      "Keeping a survival kit ready can save lives."
+    ],
+    "useful_words": ["earthquake", "disaster", "destructive", "strike", "danger", "prepare", "survival", "measure", "furniture", "survive"]
+  },
+  "high_sentences": [
+    "An earthquake is a sudden, violent shaking of the ground caused by the movement of rocks deep underground.",
+    "When a strong earthquake strikes, it may knock down houses, break roads and put many lives in danger.",
+    "Although we cannot stop earthquakes, we can prepare for them.",
+    "By staying calm and acting quickly, people have a much better chance of surviving."
+  ],
+  "error_pairs": [
+    { "wrong": "An earthquake is caused by the move of rocks.", "correct": "An earthquake is caused by the movement of rocks.", "note": "此处指'运动、移动'用名词 movement,move 多作动词。" },
+    { "wrong": "It may put many lives in danger after it strikes suddenly.", "correct": "When it strikes, it may put many lives in danger.", "note": "说明文宜先交代条件再说结果,语序更清晰客观。" },
+    { "wrong": "We can prepare them by fixing furniture.", "correct": "We can prepare for them by fixing furniture.", "note": "prepare for sth 表'为某事做准备',不可漏 for。" }
+  ],
+  "paragraph_template": "【自然灾害说明文结构】\n第1句 定义:An earthquake is a sudden shaking of the ground caused by …\n第2句 危害:When a strong one strikes, it may …\n第3句 成因:Most earthquakes happen where …\n第4-5句 措施:Although we cannot stop them, we can … By …, people have a better chance of surviving."
+}

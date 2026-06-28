@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Success means doing something you love and doing it well.", "opts": ["成功意味着做自己热爱并做得好的事。", "成功就是变得又富又有名。", "成功是从不工作。", "成功只靠运气。"], "answer": 0 },
+    { "audio": "A person with grit keeps working towards a goal for years.", "opts": ["有毅力的人只工作一天。", "有毅力的人朝目标坚持数年。", "有毅力的人从不设目标。", "有毅力的人很快放弃。"], "answer": 1 },
+    { "audio": "Almost every great achievement comes after many failures.", "opts": ["伟大成就从不需要失败。", "伟大成就靠一次轻松完成。", "几乎每项伟大成就都来自多次失败。", "伟大成就只属于幸运儿。"], "answer": 2 },
+    { "audio": "Before her speech, she breathed deeply to calm her nerves.", "opts": ["演讲前她大声喊叫。", "演讲前她跑出了房间。", "演讲前她睡着了。", "演讲前她深呼吸以平复紧张。"], "answer": 3 },
+    { "audio": "A small step taken every day adds up over time.", "opts": ["每天迈出的一小步会日积月累。", "一小步毫无意义。", "成功只需一次大跳跃。", "每天什么都不用做。"], "answer": 0 },
+    { "audio": "She remained modest and gave the credit to her whole team.", "opts": ["她独占了所有功劳。", "她保持谦逊,把功劳归于整个团队。", "她拒绝和团队合作。", "她忘记了她的团队。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Her passionate ____ to her work never weakened.（投入/献身）", "opts": ["commitment", "holiday", "garden", "ticket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "After much testing, the early results were not ____.（确凿的/结论性的）", "opts": ["empty", "conclusive", "cheap", "quiet"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "He reached the top by joining his ____ with hard work.（天赋）", "opts": ["price", "noise", "talent", "ticket"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Through daily practice I finally ____ my fear of speaking.（克服）", "opts": ["forgot", "lost", "wasted", "overcame"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "It was friendship that kept me ____ during my hardest time.", "opts": ["going", "gone", "to go", "go"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Before the big speech, he went to have his hair ____ short.", "opts": ["cutting", "cut", "to cut", "cuts"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "From the window I watched the runners ____ slowly up the hill.", "opts": ["climbed", "to climb", "climbing", "climb up"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "After much persistence, the team finally got the problem ____.", "opts": ["solving", "to solve", "solve", "solved"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["努力往往是通往成功之路。", "金钱是唯一重要的东西。", "成功只属于名人。", "你不必努力工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Hard work is often the road to success." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["失败时别灰心,要重新开始。", "失败后应永远放弃。", "失败说明你没有天赋。", "失败和努力无关。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "When you fail, do not lose heart; start over and try again." }
+  ],
+  "reading": {
+    "passage": "Qi Baishi was once a poor village carpenter, but he became one of China's greatest painters. He reached the top not by talent alone, but by joining that gift with many years of patient practice.",
+    "passageCn": "齐白石曾是个贫穷的乡村木匠,后来却成为中国最伟大的画家之一。他登上顶峰不只靠天赋,而是把天赋和多年耐心的练习结合在一起。",
+    "questions": [
+      { "q": "What was Qi Baishi at first?", "opts": ["A poor village carpenter.", "A rich businessman.", "A famous singer.", "A school teacher."], "answer": 0 },
+      { "q": "How did he reach the top?", "opts": ["By luck alone.", "By talent together with years of patient practice.", "By copying others forever.", "By giving up early."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about one achievement you are proud of. Say what you did and the reasons that led to your success.",
+    "promptCn": "写一项你引以为豪的成就:你做了什么,以及促成你成功的原因(试着用 because / one factor is / as a result 等因果表达)。",
+    "sampleWords": ["success", "achievement", "factor", "because", "practise", "prepare", "as a result", "overcome", "struggle", "proud"]
+  },
+  "dialogues": [
+    {
+      "title": "What Does Success Mean?",
+      "lines": [
+        { "role": "A", "text": "Do you think a person is successful only if they are rich?", "cn": "你觉得只有有钱才算成功吗?" },
+        { "role": "B", "text": "No. To me, success means doing something I love and doing it well.", "cn": "不。对我来说,成功是做我热爱并做得好的事。" },
+        { "role": "A", "text": "So money is not the most important thing?", "cn": "那么金钱不是最重要的?" },
+        { "role": "B", "text": "Right. A happy life matters more than money.", "cn": "对。幸福的生活比金钱更重要。" }
+      ]
+    },
+    {
+      "title": "How Do You Stay Motivated?",
+      "lines": [
+        { "role": "A", "text": "How do you keep going when a goal feels too hard?", "cn": "当目标太难时,你怎么坚持下去?" },
+        { "role": "B", "text": "I take one small step every day instead of giving up.", "cn": "我每天迈一小步,而不是放弃。" },
+        { "role": "A", "text": "Does that really work?", "cn": "那真的有用吗?" },
+        { "role": "B", "text": "Yes. Little by little, the steps add up to success.", "cn": "有用。一点一点,这些步子终会汇成成功。" }
+      ]
+    }
+  ]
+}

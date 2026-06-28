@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grade": 11,
+  "content": {
+    "title": "动名词(-ing)作主语 / 宾语速查",
+    "intro": "动词加 -ing 变成动名词,具有名词性质,可作主语、动词宾语和介词宾语。判断口诀:句首/介词后 → 用 -ing;特定动词(enjoy/finish/mind 等)后 → 用 -ing。",
+    "table": {
+      "headers": ["用法", "例句 / 说明"],
+      "rows": [
+        ["作主语(单数)", "Helping others is rewarding.(动名词作主语,谓语用单数 is)"],
+        ["作动词宾语", "She enjoys volunteering.(enjoy/admit/avoid/finish/mind/suggest/keep/practise 等后接 -ing)"],
+        ["作介词宾语", "Thank you for helping.(for/at/in/of/by/without/instead of + -ing)"],
+        ["固定搭配 to + -ing", "look forward to / be used to / be committed to + doing(此处 to 是介词)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动名词作主语时被看作一个整体,谓语动词用单数", "mark": "Giving makes us happy(makes 不用 make)" },
+      { "rule": "这些动词后只接 -ing 不接 to do:enjoy, finish, mind, admit, avoid, consider, suggest, keep, practise, deny, imagine", "mark": "finish cleaning √ / finish to clean ×" },
+      { "rule": "介词后只能接 -ing,不能接 to do", "mark": "good at singing √ / good at to sing ×" },
+      { "rule": "look forward to / be used to / be devoted to 中的 to 是介词,后接 -ing", "mark": "look forward to seeing √ / to see ×" }
+    ],
+    "why": [
+      "动名词由动词变来,但具有名词性质,所以能像名词一样作主语和宾语;作主语时表示泛指或经常性的行为,被看作单数,谓语用单数。"
+    ],
+    "gaokaoPoints": [
+      "动名词作主语 vs 不定式作主语:-ing 多表泛指/经常性(Seeing is believing),to do 多表具体一次的行为;作动词/介词宾语时按固定搭配只能用 -ing。",
+      "动词后接 -ing 还是 to do:remember/forget/stop/try + doing(已做)与 + to do(将做)含义不同,是高频考点。"
+    ],
+    "examVsReal": [
+      { "exam": "Seeing is believing.(谚语/书面)", "real": "You have to see it to believe it.", "note": "考试爱考动名词作主语;真实口语常换成更口语化的句式" },
+      { "exam": "I look forward to hearing from you.(书面/考试)", "real": "Can't wait to hear from you!", "note": "to 后用 -ing 是考点;真实口语常用 can't wait to do" }
+    ]
+  }
+}

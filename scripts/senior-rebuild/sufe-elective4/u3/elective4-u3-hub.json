@@ -1,0 +1,259 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "listeningQuestions": [
+    {
+      "audio": "The Grand Canal runs from Beijing in the north to Hangzhou in the south.",
+      "opts": [
+        "大运河从北边的北京一直通到南边的杭州。",
+        "长城从东边一直延伸到西边。",
+        "丝绸之路连接中国和印度。",
+        "黄河流入大海。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Silk was the most important good traded along the Silk Road.",
+      "opts": [
+        "丝绸是丝绸之路上最重要的贸易品。",
+        "盐是运河上唯一的货物。",
+        "茶叶从欧洲运到中国。",
+        "黄金没有人买卖。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Ordinary people could not enter the Forbidden City without permission.",
+      "opts": [
+        "普通人未经允许不能进入故宫。",
+        "所有人都能随意进入皇宫。",
+        "故宫只在夜里开放。",
+        "皇帝从不住在故宫里。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Ships sailed through the Strait of Malacca on the Maritime Silk Road.",
+      "opts": [
+        "船只沿海上丝绸之路穿过马六甲海峡。",
+        "骆驼穿越沙漠去往欧洲。",
+        "火车把粮食运往北方。",
+        "渔民在长江里捕鱼。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "History helps us avoid repeating the mistakes of the past.",
+      "opts": [
+        "历史帮助我们避免重蹈过去的错误。",
+        "历史让我们忘记一切往事。",
+        "历史只是讲故事而已。",
+        "历史与今天毫无关系。"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Never touch the ancient walls or relics at a historic site.",
+      "opts": [
+        "在古迹绝不要触碰古老的墙壁或文物。",
+        "在古迹可以随便攀爬城墙。",
+        "参观前不必了解任何历史。",
+        "古迹里允许大声喧哗。"
+      ],
+      "answer": 0
+    }
+  ],
+  "quizQuestions": [
+    {
+      "q": "The Grand Canal became the economic ____ of the empire, on which countless lives depended.",
+      "opts": [
+        "lifeline",
+        "holiday",
+        "machine",
+        "garden"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "Silk was the most valuable ____ traded from China to the West.",
+      "opts": [
+        "commodity",
+        "mistake",
+        "silence",
+        "weather"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "Zhang Qian's missions ____ the way for later trade along the Silk Road.",
+      "opts": [
+        "paved",
+        "lost",
+        "closed",
+        "washed"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "The project will ____ water from the south to the arid regions of the north.",
+      "opts": [
+        "divert",
+        "forget",
+        "sell",
+        "break"
+      ],
+      "answer": 0,
+      "point": "词汇",
+      "dim": "vocab"
+    },
+    {
+      "q": "Not until the railway was built ____ the Grand Canal lose its importance.",
+      "opts": [
+        "did",
+        "had",
+        "was",
+        "does"
+      ],
+      "answer": 0,
+      "point": "语法·倒装",
+      "dim": "grammar"
+    },
+    {
+      "q": "Only then ____ how important the canal had been to the empire.",
+      "opts": [
+        "did people realise",
+        "people realised",
+        "people did realise",
+        "did people realised"
+      ],
+      "answer": 0,
+      "point": "语法·倒装",
+      "dim": "grammar"
+    },
+    {
+      "q": "____ the engineers known the danger, they would have changed the route.",
+      "opts": [
+        "Had",
+        "If had",
+        "Did",
+        "Were"
+      ],
+      "answer": 0,
+      "point": "语法·倒装",
+      "dim": "grammar"
+    },
+    {
+      "q": "So important ____ to trade that emperors kept it in good repair.",
+      "opts": [
+        "was the canal",
+        "the canal was",
+        "the canal is",
+        "were the canal"
+      ],
+      "answer": 0,
+      "point": "语法·倒装",
+      "dim": "grammar"
+    },
+    {
+      "q": "Listen and choose the correct meaning.",
+      "opts": [
+        "The Forbidden City was built between 1406 and 1420.",
+        "The Forbidden City was built last year.",
+        "The Forbidden City is a modern museum.",
+        "The Forbidden City was never finished."
+      ],
+      "answer": 0,
+      "point": "听力",
+      "dim": "listening",
+      "audio": "The Forbidden City was built between 1406 and 1420 during the Ming dynasty."
+    },
+    {
+      "q": "Listen and choose the correct meaning.",
+      "opts": [
+        "Coastal cities grew rich from sea trade.",
+        "Coastal cities were always poor.",
+        "Coastal cities had no harbours.",
+        "Coastal cities banned all ships."
+      ],
+      "answer": 0,
+      "point": "听力",
+      "dim": "listening",
+      "audio": "Coastal cities grew wealthy as their harbours filled with ships from many nations."
+    }
+  ],
+  "reading": {
+    "passage": "The Grand Canal once carried grain, salt and cotton between the south and the north of China. For hundreds of years it was the busy lifeline of the empire, and port cities along it grew rich.",
+    "passageCn": "大运河曾在中国南北之间运送粮食、盐和棉布。数百年间它是帝国繁忙的命脉,沿线的港口城市因此富裕起来。",
+    "questions": [
+      {
+        "q": "What did the Grand Canal carry between south and north?",
+        "opts": [
+          "Grain, salt and cotton.",
+          "Only soldiers.",
+          "Cars and trains.",
+          "Nothing useful."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did port cities along the canal change?",
+        "opts": [
+          "They grew rich.",
+          "They were destroyed.",
+          "They stayed empty.",
+          "They moved away."
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, write a short summary of why the Grand Canal mattered to China.",
+    "promptCn": "用约60词写一段简短摘要,概括大运河对中国的重要意义。",
+    "sampleWords": [
+      "canal",
+      "grain",
+      "trade",
+      "lifeline",
+      "empire",
+      "port",
+      "economy",
+      "connect",
+      "history",
+      "protect"
+    ]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Visit",
+      "lines": [
+        {
+          "role": "A",
+          "text": "Have you ever been to the Grand Canal?",
+          "cn": "你去过大运河吗?"
+        },
+        {
+          "role": "B",
+          "text": "Not yet, but I’d love to take a boat ride there.",
+          "cn": "还没,不过我很想去那里坐船游览。"
+        },
+        {
+          "role": "A",
+          "text": "Did you know it once carried grain all the way to the north?",
+          "cn": "你知道它曾经把粮食一路运到北方吗?"
+        },
+        {
+          "role": "B",
+          "text": "Yes, and old trading towns still stand beside it today.",
+          "cn": "知道,而且今天运河边还保留着古老的贸易小镇。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Charity",
+  "source": "上外版选择性必修二 Unit 3 同主题阅读(同理心与捐助/善意接力/青少年公益/教孩子慈善/创意慈善/古代中国慈善)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Power of Empathy",
+      "topic_cn": "说明·同理心如何影响我们是否捐助",
+      "body": "Why do some people give money to a homeless person while others walk past? According to a recent study, the answer often comes down to empathy. When we can imagine the pain that pushed someone into a hopeless situation, we feel closer to them and are more willing to give. The study asked people to donate to those who seemed responsible for their own troubles. Some refused, believing it was wrong to reward bad choices. Interestingly, the people who felt most certain of their own good morals were even less likely to give. Yet when the same people were asked to think about their own past mistakes, they became kinder and gave more freely. The researchers concluded that empathy has immense power. Suffering, after all, is something everyone understands. Any kind of hardship can help us relate to another person's pain and prompt us to reach out. In the end, it is empathy that connects us and moves us to help.",
+      "vocab_notes": [
+        {
+          "word": "empathy",
+          "cn": "同理心"
+        },
+        {
+          "word": "responsible",
+          "cn": "负有责任的"
+        },
+        {
+          "word": "prompt",
+          "cn": "促使"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the study, what makes people more willing to give?",
+          "options": [
+            "Being able to imagine the other person's pain.",
+            "Knowing the person very well.",
+            "Having plenty of spare money.",
+            "Being ordered to by others."
+          ],
+          "answer_index": 0,
+          "explanation": "对原文'imagine the pain… more willing to give'的概括转述。"
+        },
+        {
+          "stem": "What happened when people thought about their own past mistakes?",
+          "options": [
+            "They stopped giving altogether.",
+            "They felt more sympathy and donated more.",
+            "They blamed the sufferers even more.",
+            "They forgot about the study."
+          ],
+          "answer_index": 1,
+          "explanation": "原文'became kinder and gave more freely'的转述,非照抄。"
+        },
+        {
+          "stem": "What did the researchers conclude about empathy?",
+          "options": [
+            "It has great power to connect people and move them to help.",
+            "It is useless in real life.",
+            "It only works among family members.",
+            "It makes people selfish."
+          ],
+          "answer_index": 0,
+          "explanation": "对末段'empathy… connects us and moves us to help'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Pay It Forward",
+      "topic_cn": "记叙·得来速窗口的善意接力",
+      "body": "Working at the drive-through window of a fast-food shop was the job I hated most. On freezing days, customers often arrived cold and annoyed, and they took out their bad mood on me. Then, one icy Tuesday afternoon, something changed. A woman with a bright smile came up to the window to pay. \"I'll get the next car's order as well,\" she said. I was confused, but she simply explained, \"Pay it forward.\" When the next driver heard what had happened, his face changed from annoyed to surprised, and then to delight. He decided to pay for the order behind him too. The kindness spread from car to car all through the busy hour. People who arrived stressed drove away calm and smiling. Nobody refused to join in. As they left, they honked and waved their thanks. That cold afternoon taught me something simple: it only takes one person, one smile, to warm up even the coldest of days.",
+      "vocab_notes": [
+        {
+          "word": "annoyance",
+          "cn": "恼怒"
+        },
+        {
+          "word": "delight",
+          "cn": "高兴"
+        },
+        {
+          "word": "gratitude",
+          "cn": "感激"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the narrator feel about the drive-through job at first?",
+          "options": [
+            "It was their favourite task.",
+            "It was the part of the job they disliked most.",
+            "It was easy and comfortable.",
+            "It paid extremely well."
+          ],
+          "answer_index": 1,
+          "explanation": "对'the job I hated most'的转述。"
+        },
+        {
+          "stem": "What did the woman mean by 'pay it forward'?",
+          "options": [
+            "Asking for her own money back.",
+            "Paying much less than the real price.",
+            "Paying for the next customer's order as an act of kindness.",
+            "Refusing to pay anything at all."
+          ],
+          "answer_index": 2,
+          "explanation": "结合上下文,她为下一辆车的订单付钱、把善意传下去。"
+        },
+        {
+          "stem": "What lesson did the narrator learn from that afternoon?",
+          "options": [
+            "Working in winter is completely impossible.",
+            "Customers are always rude and selfish.",
+            "Kindness usually costs far too much.",
+            "A single act of kindness can change everyone's mood."
+          ],
+          "answer_index": 3,
+          "explanation": "对末句'one person, one smile… warm up… the coldest of days'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Young People Who Give Back",
+      "topic_cn": "说明·青少年创办的公益组织",
+      "body": "Charity is not only for adults. Around the world, many teenagers have started their own non-profit organisations to help others. Jonas, for example, was deeply moved when he saw both animals and young people in need. He set up a group that encourages teenagers to make a difference through volunteer work, providing young people and their families with basic daily necessities. Annie's story is different. She learned that many children were forced to leave their homes suddenly, taking very few of their own belongings with them. To comfort them, she began making soft bags filled with caring and comforting items, for children from babies to teenagers. These young founders prove an important point: you do not have to be rich or grown-up to change someone's life. A caring heart and a simple idea are often enough. Their work reminds us that helping others can begin at any age, and that even small actions can bring great comfort to people who are struggling.",
+      "vocab_notes": [
+        {
+          "word": "non-profit",
+          "cn": "非营利的"
+        },
+        {
+          "word": "necessities",
+          "cn": "必需品"
+        },
+        {
+          "word": "comfort",
+          "cn": "安慰"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What inspired Jonas to start his organisation?",
+          "options": [
+            "He saw animals as well as young people who needed help.",
+            "Winning a large cash prize.",
+            "A school project he disliked.",
+            "A long trip abroad."
+          ],
+          "answer_index": 0,
+          "explanation": "对'moved when he saw both animals and young people in need'的转述。"
+        },
+        {
+          "stem": "What does Annie make for children in difficult situations?",
+          "options": [
+            "Envelopes full of money.",
+            "Soft bags filled with comforting items.",
+            "School textbooks only.",
+            "Brand-new houses."
+          ],
+          "answer_index": 1,
+          "explanation": "对'soft bags filled with caring and comforting items'的转述。"
+        },
+        {
+          "stem": "What main point do the two stories share?",
+          "options": [
+            "Only adults are able to run charities.",
+            "Charity is mostly a waste of time.",
+            "Young people can also make a real difference.",
+            "Money is the only way to help."
+          ],
+          "answer_index": 2,
+          "explanation": "对'you do not have to be rich or grown-up to change someone's life'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Teaching Children About Charity",
+      "topic_cn": "说明·一位母亲如何教孩子慈善",
+      "body": "How can parents teach young children about charity? One mother found a clever way. She knew that big words and serious lectures would only confuse her kids, so she spoke in simple terms they could easily understand. Instead of giving all the answers herself, she let the children take part in the whole process. She asked them who they would like to help and how they could do it, so the choice felt like their own. Most importantly, she made the activity fun rather than a boring duty. Because of this, her children did not see giving as something difficult or far away. They saw it as a natural and enjoyable part of life. Teaching kindness, the mother believed, works best when children feel they are helping by choice. In this way, small acts of giving slowly grow into a lifelong habit. Children who learn charity young, she said, often become caring and responsible citizens when they grow up.",
+      "vocab_notes": [
+        {
+          "word": "confuse",
+          "cn": "使困惑"
+        },
+        {
+          "word": "duty",
+          "cn": "义务"
+        },
+        {
+          "word": "responsible",
+          "cn": "有责任心的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the mother use simple words with her children?",
+          "options": [
+            "Because she could not speak well herself.",
+            "Because the children were already adults.",
+            "Because she had very little time.",
+            "Because complicated words would only confuse them."
+          ],
+          "answer_index": 3,
+          "explanation": "对'big words… would only confuse her kids'的转述。"
+        },
+        {
+          "stem": "How did the mother involve her children?",
+          "options": [
+            "She let them decide who to help and how.",
+            "She gave them all the answers herself.",
+            "She did everything on her own.",
+            "She paid them to take part."
+          ],
+          "answer_index": 0,
+          "explanation": "对'asked them who they would like to help and how'的转述。"
+        },
+        {
+          "stem": "What does the mother believe about teaching kindness?",
+          "options": [
+            "It should be a strict daily duty.",
+            "It works best when children help by their own choice.",
+            "It is impossible for young kids.",
+            "It always needs a lot of money."
+          ],
+          "answer_index": 1,
+          "explanation": "对'works best when children feel they are helping by choice'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Creative Ways to Give",
+      "topic_cn": "说明·世界各地有创意的慈善方式",
+      "body": "Charity does not always look the same. Around the world, people have found creative and even funny ways to raise money for good causes. In Dublin, a Women's Mini Marathon is held every year, and many men join in dressed as women to make the race more cheerful. France became the first country to stop supermarkets from throwing away food they cannot sell. Instead, the shops must give this food to charities that feed the hungry. There is even a story of a dog from Maryland that ran half of a marathon and helped to raise thousands of dollars for charity. These examples show that giving can be joyful and full of imagination. A creative idea can attract more attention, bring people together and make helping others feel like a celebration. When charity is fun, more people are willing to take part. So the next time your school plans an event, why not think of something new and surprising?",
+      "vocab_notes": [
+        {
+          "word": "marathon",
+          "cn": "马拉松"
+        },
+        {
+          "word": "celebration",
+          "cn": "庆祝"
+        },
+        {
+          "word": "imagination",
+          "cn": "想象力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is special about the marathon in Dublin?",
+          "options": [
+            "Only children are allowed to run.",
+            "Nobody is allowed to watch it.",
+            "Many men take part dressed as women.",
+            "It lasts for a whole week."
+          ],
+          "answer_index": 2,
+          "explanation": "对'many men join in dressed as women'的转述。"
+        },
+        {
+          "stem": "What must French supermarkets do with unsold food?",
+          "options": [
+            "Throw all of it away.",
+            "Sell it at a much higher price.",
+            "Keep it locked away forever.",
+            "Hand it to charities that help the hungry."
+          ],
+          "answer_index": 3,
+          "explanation": "对'must give this food to charities that feed the hungry'的转述。"
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Charity can be creative and enjoyable.",
+            "Charity should always be serious.",
+            "Only rich countries are able to give.",
+            "Animals can never help charities."
+          ],
+          "answer_index": 0,
+          "explanation": "对'giving can be joyful and full of imagination'的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Charity in Ancient China",
+      "topic_cn": "说明·古代中国的慈善传统",
+      "body": "Giving to others is not a modern idea. In ancient China, many well-known people were famous for their generous hearts. Fan Li, who lived long ago, is said to have given away all his fortune to the poor three times in his life. Fan Zhongyan of the Song Dynasty turned his own house into a school so that poor children could study there. Zhang Zhongjing, a famous doctor of the Han Dynasty, made warm dumplings to heal the frozen ears of people who had no food in winter. Others offered free sugar or free meals to help families fight illness and hunger. These stories were passed down from one generation to the next, teaching young people the value of kindness. For thousands of years, the spirit of giving has been an important part of Chinese culture. It reminds us that true wealth lies not in what we keep for ourselves, but in what we are willing to share with others.",
+      "vocab_notes": [
+        {
+          "word": "generous",
+          "cn": "慷慨的"
+        },
+        {
+          "word": "fortune",
+          "cn": "财富"
+        },
+        {
+          "word": "wealth",
+          "cn": "财富"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Fan Zhongyan do to help poor children?",
+          "options": [
+            "He gave each of them gold.",
+            "He made his own home into a place for poor children to study.",
+            "He built them brand-new homes.",
+            "He taught them how to fight."
+          ],
+          "answer_index": 1,
+          "explanation": "对'turned his own house into a school'的转述。"
+        },
+        {
+          "stem": "Why did Zhang Zhongjing make warm dumplings?",
+          "options": [
+            "To sell them for a good price.",
+            "To celebrate a grand festival.",
+            "To cure the frozen ears of starving people.",
+            "To feed only his own family."
+          ],
+          "answer_index": 2,
+          "explanation": "对'heal the frozen ears of people who had no food'的转述。"
+        },
+        {
+          "stem": "What do these ancient stories teach?",
+          "options": [
+            "That only doctors are able to help people.",
+            "That kindness is a modern invention.",
+            "That giving always makes people poor.",
+            "That sharing with others is a true form of wealth."
+          ],
+          "answer_index": 3,
+          "explanation": "对末句'true wealth lies… in what we are willing to share'的转述。"
+        }
+      ]
+    }
+  ]
+}

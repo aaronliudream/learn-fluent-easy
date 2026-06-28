@@ -1,0 +1,338 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Adventuring",
+  "source": "上外版选择性必修第一册 Unit 3 同主题阅读(沙克尔顿南极冒险/被困坚忍号/横穿南乔治亚岛/初次航海的恐惧/为何探险/现代极地探险者)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Leader Who Brought Everyone Home",
+      "topic_cn": "人物·杰出领导力",
+      "body": "Ernest Shackleton is remembered as one of the greatest polar explorers, yet his most famous journey was, in a way, a failure. In 1914 he set out to cross Antarctica, the coldest continent on the earth. His ship never reached land. It became stuck in the ice and was slowly crushed before it sank. What makes the story remarkable is not the goal he missed but the way he brought every single man home alive. For nearly two years the crew lived in constant danger, short of food and warmth. Again and again Shackleton put his men before himself, sharing his food and hiding his own fear. He pushed on across freezing seas and icy mountains so that others could be rescued. People today look up to him as a hero, not because he won, but because of his exceptional leadership when everything went wrong. His example reminds us that true courage is often shown in how we deal with failure.",
+      "vocab_notes": [
+        {
+          "word": "explorer",
+          "cn": "探险者"
+        },
+        {
+          "word": "continent",
+          "cn": "大陆"
+        },
+        {
+          "word": "leadership",
+          "cn": "领导力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Shackleton's most famous journey described as a failure?",
+          "options": [
+            "His ship was lost and he never reached the land he aimed for.",
+            "All of his men died on the ice.",
+            "He refused to share food with the crew.",
+            "He gave up exploring after one winter."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说船陷冰、沉没、never reached land,目标未达成;其余与原文相反。"
+        },
+        {
+          "stem": "What does the text say truly made Shackleton a hero?",
+          "options": [
+            "The speed at which he crossed Antarctica.",
+            "The way he led his men through disaster and saved them all.",
+            "The money he made from the trip.",
+            "The fame he gained before the voyage."
+          ],
+          "answer_index": 1,
+          "explanation": "原文强调 exceptional leadership 与把全员带回,是 brought everyone home 的转述。"
+        },
+        {
+          "stem": "What lesson does the writer draw from the story?",
+          "options": [
+            "Real courage often shows in how a person handles failure.",
+            "Only winners deserve to be remembered.",
+            "Exploring is too dangerous to try.",
+            "Leaders should always put themselves first."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 true courage is often shown in how we deal with failure 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Trapped in the Ice",
+      "topic_cn": "事件·坚忍号被困",
+      "body": "In January 1915 the ship known as the Endurance got stuck fast in the frozen Weddell Sea. The crew had hoped to sail close to land, but the ice closed in around them and would not let go. For month after month the men waited, living in the dark and the bitter cold. They played games, looked after the dogs, and tried to keep their spirits up, but everyone knew the danger was growing. As spring came, the moving ice began to press harder against the wooden ship. At last the great pressure broke the Endurance apart, and it slowly went down beneath the surface. The men were now alone on the ice, far from any help. They saved three small lifeboats and a little food from the wreck. With no land in sight, they camped on the ice and let it carry them slowly north. It was a frightening time, but they refused to give up hope of being saved.",
+      "vocab_notes": [
+        {
+          "word": "crew",
+          "cn": "全体船员"
+        },
+        {
+          "word": "frozen",
+          "cn": "冰冻的"
+        },
+        {
+          "word": "lifeboat",
+          "cn": "救生艇"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened to the Endurance in the end?",
+          "options": [
+            "It safely sailed back to land.",
+            "The pressure of the ice broke it and it sank.",
+            "It was set on fire by the crew.",
+            "It was pulled out by another ship."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 the great pressure broke the Endurance apart, and it slowly went down 的转述。"
+        },
+        {
+          "stem": "How did the crew spend the long months trapped in the ice?",
+          "options": [
+            "They quickly built a new ship.",
+            "They split up and walked away alone.",
+            "They kept busy and tried to stay hopeful despite the danger.",
+            "They gave up and stopped caring for the animals."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 played games, looked after the dogs, tried to keep their spirits up 的概括。"
+        },
+        {
+          "stem": "What did the men do after the ship was lost?",
+          "options": [
+            "They immediately walked across to the South Pole.",
+            "They returned at once to the warm cabins.",
+            "They sailed straight to a whaling station.",
+            "They set up camp and let the moving ice carry them northward."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 camped on the ice and let it carry them slowly north 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The March Across South Georgia",
+      "topic_cn": "事件·徒步横穿南乔治亚岛",
+      "body": "After an open-boat journey of more than a thousand kilometres, Shackleton and five men finally reached South Georgia. Their suffering was far from over. The whaling station, where help waited, lay on the other side of a wild, mountainous island. No one had ever crossed it on foot before. With no tent and almost no food, the small group set off into the unknown. For about thirty-six hours they marched without stopping. They could not rest for more than a few minutes, for if they fell asleep in the cold they might never wake again. They climbed icy slopes, slid down snowfields, and pushed on through thick fog. Hungry, frozen, and close to the end of their strength, the three men who were strong enough at last stumbled down to the station. The whalers could hardly believe that anyone had survived such a march. Help was now within reach, and the long fight to save the others on Elephant Island could begin.",
+      "vocab_notes": [
+        {
+          "word": "march",
+          "cn": "行进"
+        },
+        {
+          "word": "whaling",
+          "cn": "捕鲸的"
+        },
+        {
+          "word": "frozen",
+          "cn": "冻僵的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was crossing South Georgia so dangerous?",
+          "options": [
+            "It was a wild mountain island no one had crossed on foot, and they had no shelter.",
+            "It was full of wild animals that attacked travellers.",
+            "The whaling station kept moving away from them.",
+            "They had too much food to carry over the hills."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说无人徒步穿越过、no tent、mountainous,是综合转述。"
+        },
+        {
+          "stem": "Why could the men not stop to rest properly?",
+          "options": [
+            "The whalers had told them to hurry for fun.",
+            "Falling asleep in the cold could mean they would die.",
+            "There were too many tourists on the path.",
+            "Their boat was waiting just behind them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 if they fell asleep in the cold they might never wake again 的转述。"
+        },
+        {
+          "stem": "How did the whalers react when the men arrived?",
+          "options": [
+            "They refused to let the men in.",
+            "They had been expecting them for weeks.",
+            "They were amazed that anyone could survive such a journey.",
+            "They thought the men had taken an easy route."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 could hardly believe that anyone had survived such a march 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "My First Storm at Sea",
+      "topic_cn": "文学·初次航海的恐惧",
+      "body": "When I first went to sea as a young sailor, I knew nothing about ships or storms. On only my second day, the wind rose and the waves grew higher and higher. To me they looked like mountains of water. Every time the ship dived into the deep valley between two waves, I was sure we would never rise again. In my fear I made many promises. If only my life could be spared, I said to myself, I would go straight home to my father and never set sail again. I now saw plainly how wise his advice had been and how safe his quiet life on shore really was. Yet the next day the wind died away and the sea became calm and beautiful. The sun shone on the smooth water, and the whole sight seemed the finest I had ever seen. My fear faded as quickly as the storm. When my friend came up and laughed at my fright, I almost forgot all the promises I had made the night before.",
+      "vocab_notes": [
+        {
+          "word": "sailor",
+          "cn": "水手"
+        },
+        {
+          "word": "plainly",
+          "cn": "清楚地"
+        },
+        {
+          "word": "calm",
+          "cn": "平静的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the young sailor feel during the storm?",
+          "options": [
+            "He felt calm and enjoyed the high waves.",
+            "He was proud of his skill at sea.",
+            "He was bored and wanted more excitement.",
+            "He was terrified and regretted ever going to sea."
+          ],
+          "answer_index": 3,
+          "explanation": "原文描述他害怕、后悔、想回家;其余与原文相反。"
+        },
+        {
+          "stem": "What promise did the sailor make during the storm?",
+          "options": [
+            "To return home to his father and stop sailing.",
+            "To become the captain of his own ship.",
+            "To sail even further the next year.",
+            "To teach others how to face storms."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 go straight home to my father and never set sail again 的转述。"
+        },
+        {
+          "stem": "What happened to his fear the following day?",
+          "options": [
+            "It grew much stronger overnight.",
+            "It disappeared as the sea grew calm and lovely.",
+            "It stayed exactly the same.",
+            "It turned into anger at his friend."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说风停海平、My fear faded as quickly as the storm。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Why Do People Explore?",
+      "topic_cn": "议论·探险的理由",
+      "body": "Why do people leave warm homes to face danger in far-off places? Long ago, our ancestors wondered what lay on the other side of the sky and beyond the distant hills. That same wonder still drives us today. Some explorers are searching for knowledge. They want to understand how the world works, from the deepest oceans to the highest mountains. Others are drawn by the simple wish to be the first, to stand where no human foot has stood before. There are also those who explore to test themselves, to find out just how much hardship their bodies and minds can bear. Of course, exploring is rarely safe. People may be hurt, lost, or worse. Yet history shows that humans have never been willing to stay still. Each new place we reach opens a door to questions we did not even know how to ask. As long as there is an unknown world out there, someone, somewhere, will always want to set out and discover it.",
+      "vocab_notes": [
+        {
+          "word": "explore",
+          "cn": "探索"
+        },
+        {
+          "word": "hardship",
+          "cn": "艰难"
+        },
+        {
+          "word": "unknown",
+          "cn": "未知的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, what is one reason people explore?",
+          "options": [
+            "To avoid ever learning anything new.",
+            "To stay safely at home forever.",
+            "To gain knowledge about how the world works.",
+            "To make sure no one travels at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 searching for knowledge, want to understand how the world works 的转述。"
+        },
+        {
+          "stem": "What does the writer say about the danger of exploring?",
+          "options": [
+            "It no longer exists in modern times.",
+            "It keeps almost everyone at home.",
+            "It only affects machines, not people.",
+            "It is real, yet it has never stopped people from setting out."
+          ],
+          "answer_index": 3,
+          "explanation": "原文承认 rarely safe 但 humans have never been willing to stay still。"
+        },
+        {
+          "stem": "What does each newly reached place do, according to the passage?",
+          "options": [
+            "It opens up fresh questions people had not thought of before.",
+            "It answers every question once and for all.",
+            "It makes future exploring pointless.",
+            "It closes the door on all curiosity."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 opens a door to questions we did not even know how to ask 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Polar Explorers Today",
+      "topic_cn": "现代·当代极地探险",
+      "body": "Modern explorers no longer travel in wooden ships that can be crushed by the ice. Instead, they use light sledges, warm tents, and clothing designed for the coldest weather on the earth. Some of them ski across the frozen continent, pulling everything they need behind them. Others ride special vehicles that can move over deep snow without sinking. Radios and satellites mean that, unlike Shackleton's crew, today's teams can call for rescue if something goes wrong. Yet the polar world is still one of the most dangerous places a person can go. Storms appear without warning, and the cold can freeze skin in minutes. Cracks may open in the ice without a sound, and a single mistake can cost a life. For this reason, careful planning matters as much as courage. Modern adventurers study the weather, test their gear, and train their bodies for months before they set out. Better tools have made polar travel safer, but they have not removed the need for the strong spirit that drove earlier explorers.",
+      "vocab_notes": [
+        {
+          "word": "sledge",
+          "cn": "雪橇"
+        },
+        {
+          "word": "frozen",
+          "cn": "冰冻的"
+        },
+        {
+          "word": "rescue",
+          "cn": "救援"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How is travel for modern polar explorers different from Shackleton's day?",
+          "options": [
+            "They face no cold or storms at all.",
+            "They have better gear and can call for help by radio or satellite.",
+            "They still sail in wooden ships through the ice.",
+            "They never need to plan their journeys."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 radios and satellites... can call for rescue 及更好装备的转述。"
+        },
+        {
+          "stem": "Why is the polar world still described as very dangerous?",
+          "options": [
+            "The ice has become warm and soft.",
+            "There are crowds of tourists everywhere.",
+            "Sudden storms, deep cold, and hidden cracks can quickly kill.",
+            "Modern tools never break down."
+          ],
+          "answer_index": 2,
+          "explanation": "原文列举 storms without warning、cold freezes skin、cracks open。"
+        },
+        {
+          "stem": "What does the writer say is still needed besides good tools?",
+          "options": [
+            "A faster way to skip all planning.",
+            "A guarantee that nothing will go wrong.",
+            "A warmer climate at the poles.",
+            "The strong spirit that earlier explorers had."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 have not removed the need for the strong spirit 的转述。"
+        }
+      ]
+    }
+  ]
+}

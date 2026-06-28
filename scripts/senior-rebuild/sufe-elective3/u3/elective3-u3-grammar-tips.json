@@ -1,0 +1,36 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "同位语从句(the belief / fact that …)速查",
+    "intro": "同位语从句跟在抽象名词后,用一个完整的句子说明该名词的'具体内容'。判断口诀:从句完整(不缺主/宾/状)→ 同位语,用 that/whether/wh-;从句缺成分 → 是定语从句,用 which/who/where/when。",
+    "table": {
+      "headers": ["引导词", "用法 / 例句"],
+      "rows": [
+        ["that", "抽象名词 + 完整句:the fact that the world is round(that 只连接、不作成分)"],
+        ["whether", "question/doubt 后表'是否':the question whether life exists(不用 if、不用 that)"],
+        ["what/who", "从句缺名词性成分:the question what these symbols mean(缺宾语)"],
+        ["how/why/when", "从句只缺方式/原因/时间状语:the question how they moved the stones"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同位语 that 从句完整、that 不可省略也不作成分;定语从句 that 在从句里作主语或宾语", "mark": "the belief that the world is round(同位语) vs the belief that he expressed(定语,that 作宾语)" },
+      { "rule": "常接同位语从句的抽象名词:belief, fact, idea, news, evidence, theory, hope, truth, doubt, question, problem", "mark": "记住这串'内容名词'" },
+      { "rule": "question/doubt(肯定句)后表'是否'用 whether,不用 that;但 no doubt 后用 that", "mark": "the question whether… / There is no doubt that…" },
+      { "rule": "先行词后若缺地点/时间状语,是定语从句,用 where/when,不是同位语", "mark": "the place where they raised the stones(定语)" }
+    ],
+    "why": [
+      "同位语从句是把名词的'内容'用一整句话说清楚,所以那句话本身是完整的,引导词(尤其是 that)只起连接作用;一旦句子里缺了主语、宾语或状语,就说明引导词要去'补那个缺口',那就成了定语从句。"
+    ],
+    "gaokaoPoints": [
+      "that 引导同位语从句 vs 定语从句的辨析(看从句完不完整);语法填空/改错高频。",
+      "question/doubt 后 whether 与 that 的选择;no doubt that 固定搭配。",
+      "同位语从句与先行词之间可被插入语隔开:The news came yesterday that…(从句后置)。"
+    ],
+    "examVsReal": [
+      { "exam": "the fact that he succeeded(书面/考试)", "real": "the fact he succeeded", "note": "考试要求写 that;口语里同位语 that 常被省略" },
+      { "exam": "the question whether it is true(考试)", "real": "the question of whether it's true / whether it's true", "note": "考试用 whether;口语常加 of 或直接说 whether,极少用 if 引导名词后的同位语" }
+    ]
+  }
+}

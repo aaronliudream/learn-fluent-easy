@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The robot dog can respond to simple voice commands.", "opts": ["机器狗能对简单的语音命令作出反应。", "机器狗会吃东西和睡觉。", "机器狗害怕所有的人。", "机器狗只能在夜里工作。"], "answer": 0 },
+    { "audio": "Doctors used a 5G connection to direct the surgery from far away.", "opts": ["医生用纸笔记录了手术。", "医生用5G连接从远处指挥了手术。", "医生坐飞机赶到了医院。", "医生取消了那台手术。"], "answer": 1 },
+    { "audio": "Artificial intelligence built a 3D model of the patient's heart.", "opts": ["人工智能弄丢了病人的资料。", "人工智能拒绝帮助医生。", "人工智能建出了病人心脏的三维模型。", "人工智能给病人做了饭。"], "answer": 2 },
+    { "audio": "With 5G, the signal delay drops to about one millisecond.", "opts": ["用5G信号会完全消失。", "用5G信号变得更慢了。", "用5G要等上一分钟。", "用5G信号延迟降到约一毫秒。"], "answer": 3 },
+    { "audio": "Many people are worried that machines will take their jobs.", "opts": ["许多人担心机器会抢走他们的工作。", "许多人觉得机器毫无用处。", "许多人想买更多机器人。", "许多人讨厌使用手机。"], "answer": 0 },
+    { "audio": "The VR headset took the elderly couple back to a beach they once visited.", "opts": ["VR头盔坏了无法使用。", "VR头盔把老夫妇带回他们曾去过的海滩。", "VR头盔教会了他们做饭。", "VR头盔让他们感到害怕。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "A built-in camera let people ____ the world through the dog's eyes.（观看)", "opts": ["view", "eat", "buy", "throw"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "What makes remote surgery ____ is that experts need not travel.（有吸引力的)", "opts": ["boring", "attractive", "empty", "quiet"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "5G greatly reduces signal ____, dropping it to one millisecond.（延迟)", "opts": ["colour", "noise", "delay", "garden"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Training a robot to obey is a ____ task that needs patience.（要求高的)", "opts": ["cheap", "lazy", "empty", "demanding"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Her e-reader was only used on the subway, so she ____ left it there.（确定推测)", "opts": ["must have", "needn't have", "shouldn't have", "may not have"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I forgot to back up the files. I ____ saved them first.（本应而未做)", "opts": ["can't have", "should have", "must have", "needn't have"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "I'm not sure where my phone is. I ____ left it in class.（不确定的可能)", "opts": ["must have", "can't have", "might have", "needn't have"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The free trial covered everything, so you ____ paid for the full version.（本不必却做了)", "opts": ["should have", "must have", "can't have", "needn't have"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这台手术是通过5G连接完成的。", "这台手术被取消了。", "医生忘记了病人。", "医院里没有医生。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The whole operation was carried out over a 5G connection." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["人工智能没有真正的情感。", "人工智能比人更善良。", "人工智能讨厌音乐。", "人工智能会自己睡觉。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Artificial intelligence has no real feelings." }
+  ],
+  "reading": {
+    "passage": "A boy bought a robot dog that could dance and respond to his voice. At first he loved it and treated it like a real pet. But he soon found he could not build a true emotional bond with a machine, and his enthusiasm began to die down.",
+    "passageCn": "一个男孩买了一只能跳舞、能回应他声音的机器狗。起初他很喜欢它,把它当真宠物。但他很快发现自己无法与一台机器建立真正的情感联系,热情开始减退。",
+    "questions": [
+      { "q": "What could the robot dog do?", "opts": ["Dance and respond to the boy's voice.", "Cook meals for the family.", "Drive a small car.", "Read books aloud."], "answer": 0 },
+      { "q": "Why did the boy's enthusiasm fade?", "opts": ["He could not build a true emotional bond with a machine.", "The robot dog was too expensive.", "His parents took it away.", "The robot dog ate too much."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short paragraph comparing online learning and traditional classroom learning. Mention one thing they share and one way they differ.",
+    "promptCn": "写一小段比较在线学习与传统课堂学习:写出一个共同点和一个不同点(试着用 both… / while…)。",
+    "sampleWords": ["online", "traditional", "both", "likewise", "however", "while", "flexible", "interaction", "view", "convenient"]
+  },
+  "dialogues": [
+    {
+      "title": "Should I Buy a Robot Dog?",
+      "lines": [
+        { "role": "A", "text": "I'm thinking of buying a robot dog. What do you think?", "cn": "我在考虑买一只机器狗,你觉得呢?" },
+        { "role": "B", "text": "It's cute, but can it really respond to you like a real one?", "cn": "它很可爱,但它真能像真狗一样回应你吗?" },
+        { "role": "A", "text": "The shop says it learns your voice and obeys commands.", "cn": "店里说它能学你的声音、听从命令。" },
+        { "role": "B", "text": "Still, a machine can't build a true emotional bond with you.", "cn": "不过,机器无法和你建立真正的情感联系。" }
+      ]
+    },
+    {
+      "title": "Surgery over 5G",
+      "lines": [
+        { "role": "A", "text": "Did you hear a doctor did an operation from another city?", "cn": "你听说一位医生从另一座城市做了手术吗?" },
+        { "role": "B", "text": "Really? How was that possible?", "cn": "真的吗?那怎么可能?" },
+        { "role": "A", "text": "He used a fast 5G link to direct the local team in real time.", "cn": "他用快速的5G连接实时指挥当地团队。" },
+        { "role": "B", "text": "Amazing! That could really help patients in remote places.", "cn": "太厉害了!这能真正帮到偏远地区的病人。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Delving into History",
+  "source": "上外版选必四 Unit 3 同主题完形(马可·波罗/张骞/线上博物馆/今日运河之行/保护古建筑/运河贸易货物)。用词限本单元/初中/常见词,选项同词性,答案唯一,与阅读听力不撞。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Marco Polo’s Journey",
+      "text": "More than seven hundred years ago, a young man named Marco Polo set out from Venice on a long (1)____ to the East. The trip was hard and dangerous, and it took him several (2)____ to reach China. When he finally arrived, he was (3)____ by the size and wealth of the cities he saw. He stayed in China for many years and even (4)____ for the great emperor Kublai Khan. During this time he (5)____ many places that no European had ever seen. When he at last returned home, few people (6)____ his amazing stories. They thought he was simply (7)____ tales. But Marco Polo wrote a (8)____ about his travels, and slowly readers began to (9)____ that the East was real. His book opened a window on a faraway world and (10)____ many later explorers to follow his path.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "journey",
+            "garden",
+            "machine",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "a long journey 漫长的旅程。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "metres",
+            "years",
+            "prices",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "several years 好几年(时间)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bored",
+            "angry",
+            "amazed",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "be amazed by 被……惊到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "slept",
+            "failed",
+            "cried",
+            "worked"
+          ],
+          "answer_index": 3,
+          "explanation": "worked for the emperor 为皇帝效力。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "visited",
+            "ate",
+            "sold",
+            "threw"
+          ],
+          "answer_index": 0,
+          "explanation": "visited many places 游历许多地方。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forgot",
+            "believed",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "few people believed 很少人相信。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cleaning",
+            "cooking",
+            "making up",
+            "washing"
+          ],
+          "answer_index": 2,
+          "explanation": "making up tales 编故事。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "song",
+            "price",
+            "game",
+            "book"
+          ],
+          "answer_index": 3,
+          "explanation": "wrote a book 写了一本书。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "believe",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "begin to believe 开始相信。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stopped",
+            "inspired",
+            "frightened",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "inspired explorers 激励了探险家。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Zhang Qian’s Mission",
+      "text": "During the Han dynasty, the emperor wanted to build (1)____ with the lands to the west of China. He chose a brave official named Zhang Qian to (2)____ this difficult task. Zhang Qian set off with a small group, but on the way he was (3)____ by enemies and held for many years. He never gave (4)____ his mission, however, and at last he managed to escape. When he returned, he brought back (5)____ knowledge about the peoples, animals and goods of the Western Regions. His reports (6)____ the way for regular trade along what later became the Silk Road. Thanks to his (7)____, Chinese silk travelled west while new plants and ideas (8)____ into China. Today many people (9)____ Zhang Qian as a great explorer whose courage (10)____ two parts of the world together.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "mistakes",
+            "links",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "build links 建立联系。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "lose",
+            "sell",
+            "handle"
+          ],
+          "answer_index": 3,
+          "explanation": "handle this task 处理这项任务。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "captured",
+            "invited",
+            "praised",
+            "paid"
+          ],
+          "answer_index": 0,
+          "explanation": "was captured 被抓获。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "up",
+            "on",
+            "off"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "empty",
+            "silent",
+            "valuable",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "valuable knowledge 宝贵的知识。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lost",
+            "sold",
+            "broke",
+            "paved"
+          ],
+          "answer_index": 3,
+          "explanation": "paved the way 铺平了道路。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "efforts",
+            "prices",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "thanks to his efforts 多亏他的努力。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "stopped",
+            "flowed",
+            "fell",
+            "slept"
+          ],
+          "answer_index": 1,
+          "explanation": "ideas flowed into 涌入。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forget",
+            "lose",
+            "regard",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "regard…as 把……视为。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "kept",
+            "left",
+            "threw",
+            "brought"
+          ],
+          "answer_index": 3,
+          "explanation": "brought…together 把……连在一起。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Museum Online",
+      "text": "In recent years, technology has changed the way we (1)____ history. Today you do not need to travel far to see a famous (2)____. Many of the world’s greatest museums can now be visited (3)____, right from your own home. A team of experts spent eighteen months building an online museum that (4)____ collections from many countries. Using special cameras, they took photographs so (5)____ that visitors can see every tiny detail of a painting. If you are (6)____ in one of the museums, you simply type its name and start your tour. This kind of project makes art and history (7)____ to everyone, not only to those who can afford to travel. Of course, standing in front of a real (8)____ is still special, but an online visit is a wonderful way to (9)____ from home. Thanks to the internet, the treasures of the past are now within (10)____ of millions of people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "study",
+            "eat",
+            "sell",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "study history 学习历史。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "museum",
+            "market",
+            "kitchen"
+          ],
+          "answer_index": 1,
+          "explanation": "a famous museum 著名博物馆。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loudly",
+            "slowly",
+            "online",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "visited online 在线参观。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loses",
+            "sells",
+            "breaks",
+            "holds"
+          ],
+          "answer_index": 3,
+          "explanation": "holds collections 收藏着藏品。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "clear",
+            "dark",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "so clear that 如此清晰。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "interested",
+            "angry",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "interested in 对……感兴趣。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "empty",
+            "silent",
+            "available",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "available to everyone 人人可及。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "painting"
+          ],
+          "answer_index": 3,
+          "explanation": "a real painting 真迹画作。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "learn",
+            "sleep",
+            "fall",
+            "cry"
+          ],
+          "answer_index": 0,
+          "explanation": "learn from home 在家学习。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "reach",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "within reach 触手可及。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Trip on the Canal",
+      "text": "Last summer my family took a boat trip along part of the Grand Canal. As we floated south, our guide (1)____ us about the canal’s long history. She said that for hundreds of years it had been the main (2)____ for moving grain to the north. Along the banks we saw old (3)____ where traders had once stopped to rest. Some of the houses were more than a hundred years (4)____, yet people still lived in them. Although the canal is no longer as (5)____ as it once was, it has not been forgotten. The government has started a huge project to (6)____ water from the south to the dry north, using parts of the old waterway. Seeing the boats and bridges, I (7)____ how clever the ancient builders had been. By the end of the trip, I felt (8)____ of this great work. The canal had (9)____ from a busy trade route into a living piece of history that we can still (10)____ today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ate",
+            "sold",
+            "told",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "told us about 给我们讲述。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "route"
+          ],
+          "answer_index": 3,
+          "explanation": "the main route 主要路线。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "towns",
+            "prices",
+            "songs",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "old towns 古镇。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "new",
+            "old",
+            "rich",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "years old 有……年历史。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "empty",
+            "silent",
+            "important",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "as important as 像……一样重要。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "break",
+            "move"
+          ],
+          "answer_index": 3,
+          "explanation": "move water 调水。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "realised",
+            "forgot",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "realised how clever 意识到多么聪明。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "proud",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "proud of 为……自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "stopped",
+            "failed",
+            "changed",
+            "disappeared"
+          ],
+          "answer_index": 2,
+          "explanation": "changed from…into 从……变成。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "enjoy"
+          ],
+          "answer_index": 3,
+          "explanation": "still enjoy today 今天仍能欣赏。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Keep the Old Buildings",
+      "text": "In many cities, old buildings are being pulled down to make (1)____ for tall new towers. Some people think this is a (2)____ of progress. They say that old houses look out of date and are hard to (3)____ with modern life. Others, however, strongly (4)____ this idea. They believe that historic buildings are a precious (5)____ to our past. An old temple or street can remind us of the people who lived there long (6)____. Such places also bring (7)____ visitors from around the world, which helps the local economy. If we (8)____ down every old building, our cities will all look the same and lose their special (9)____. Once a historic building is gone, it can never be (10)____. For these reasons, many people feel we should protect old buildings instead of destroying them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "room",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "make room for 给……腾地方。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "sign",
+            "noise",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "a sign of progress 进步的标志。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "fit",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "fit with 与……相融。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "enjoy",
+            "forget",
+            "sell",
+            "oppose"
+          ],
+          "answer_index": 3,
+          "explanation": "oppose this idea 反对这种看法。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "link",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "a link to our past 与过去的纽带。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "never",
+            "ago",
+            "slowly",
+            "loudly"
+          ],
+          "answer_index": 1,
+          "explanation": "long ago 很久以前。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "silent",
+            "empty",
+            "many",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "many visitors 许多游客。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "wash",
+            "cook",
+            "clean",
+            "tear"
+          ],
+          "answer_index": 3,
+          "explanation": "tear down 拆除。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "character",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "special character 独特韵味。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "rebuilt",
+            "cooked",
+            "washed"
+          ],
+          "answer_index": 1,
+          "explanation": "never be rebuilt 无法重建。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Goods on the Water",
+      "text": "During the Ming dynasty, grain was not the only (1)____ carried north along the Grand Canal. Salt was another, and it had become one of the most (2)____ sources of income for the empire. Boats also carried cotton, wool, coal and even precious (3)____ from one region to another. At busy times, more than a hundred thousand soldiers were needed to (4)____ the thousands of government boats on the water. Port cities along the canal grew (5)____, and Suzhou in particular became a thriving centre of trade. Hotels, restaurants and shops opened to (6)____ the many travellers who passed through. In this way, the canal did more than move goods; it helped the whole (7)____ to grow. It also allowed people from the north and south to (8)____ ideas and customs. The canal was truly the (9)____ of the empire, a single waterway on which countless lives and businesses (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "product",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the only product 唯一的货物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "silent",
+            "cheap",
+            "reliable"
+          ],
+          "answer_index": 3,
+          "explanation": "reliable sources 可靠的来源。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "stones",
+            "prices",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "precious stones 宝石。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "operate",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "operate the boats 驾驶船只。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "empty",
+            "silent",
+            "rich",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "grew rich 变得富裕。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "break",
+            "lose",
+            "throw",
+            "serve"
+          ],
+          "answer_index": 3,
+          "explanation": "serve travellers 服务旅客。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "economy",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "the whole economy 整个经济。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "exchange",
+            "sell",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "exchange ideas 交流思想。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "lifeline",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the lifeline 命脉。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stopped",
+            "failed",
+            "disappeared",
+            "depended"
+          ],
+          "answer_index": 3,
+          "explanation": "lives depended on 生活依赖于。"
+        }
+      ]
+    }
+  ]
+}

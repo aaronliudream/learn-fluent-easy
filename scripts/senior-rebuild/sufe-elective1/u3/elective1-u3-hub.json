@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The explorer brought every man home alive after two years on the ice.", "opts": ["在冰上的两年后,探险者把每个人都活着带回了家。", "探险者独自一人逃回了家。", "船员们全都留在了岛上。", "探险者用了两天就回家了。"], "answer": 0 },
+    { "audio": "The ship was crushed by the ice before it finally sank.", "opts": ["这艘船被冰压碎后最终沉没。", "这艘船安全地回到了港口。", "这艘船被卖给了别国。", "这艘船至今仍在航行。"], "answer": 0 },
+    { "audio": "No one had ever crossed the island on foot before that day.", "opts": ["在那天之前从没有人徒步穿越过这座岛。", "很多人常常徒步穿越这座岛。", "那座岛上没有山。", "他们坐船绕过了这座岛。"], "answer": 0 },
+    { "audio": "Great efforts were being made when the storm suddenly hit the boat.", "opts": ["风暴突然袭来时,人们正在做巨大的努力。", "风暴来时大家都在睡觉。", "船早就被修好了。", "没有人在乎那场风暴。"], "answer": 0 },
+    { "audio": "Modern explorers can call for rescue by radio if something goes wrong.", "opts": ["如果出了问题,现代探险者能用无线电求救。", "现代探险者从不带任何装备。", "现代探险者不会遇到危险。", "现代探险者只能徒步回家。"], "answer": 0 },
+    { "audio": "Real courage is often shown in how we deal with failure.", "opts": ["真正的勇气常常体现在我们如何面对失败。", "只有赢家才算勇敢。", "勇敢的人从不感到害怕。", "失败的人都不值得记住。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "探险者、勘探者,用哪个词?", "opts": ["explorer", "teacher", "farmer", "driver"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "幸存、渡过难关,用哪个词?", "opts": ["survive", "forget", "waste", "borrow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "卓越的、杰出的,用哪个词?", "opts": ["exceptional", "ordinary", "boring", "cheap"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "舍弃、弃(船),用哪个词?", "opts": ["abandon", "build", "enjoy", "follow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "By 1915 the ship ____ completely by the ice.", "opts": ["had been surrounded", "was surrounding", "is surrounded", "surrounds"], "answer": 0, "point": "过去完成被动 had been done", "dim": "grammar" },
+    { "q": "Great efforts ____ to free the ship when the ice broke.", "opts": ["were being made", "had made", "are making", "make"], "answer": 0, "point": "过去进行被动 were being done", "dim": "grammar" },
+    { "q": "The route ____ on foot by anyone before that day.", "opts": ["had never been crossed", "was never crossing", "never crosses", "is never crossed"], "answer": 0, "point": "过去完成被动·否定", "dim": "grammar" },
+    { "q": "The wounded man ____ by two friends when we got there.", "opts": ["was being carried", "had carried", "carries", "is carrying"], "answer": 0, "point": "过去进行被动 was being done", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["他们在冰上扎营,缓缓向北漂去。", "他们立刻飞回了家。", "他们游到了最近的城市。", "他们烧掉了所有的船。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "They camped on the ice and drifted slowly north." },
+    { "q": "听句子选意思:", "opts": ["如果在严寒中睡着,他们可能再也醒不来。", "他们随时都能停下来好好睡一觉。", "天气太热让他们睡不着。", "他们坐着船一直在睡觉。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "If they fell asleep in the cold, they might never wake up." }
+  ],
+  "reading": {
+    "passage": "Shackleton's most famous journey was, in a way, a failure: his ship was lost in the ice and he never reached the land he set out to cross. Yet he is remembered as a hero, because his calm leadership brought every member of the crew home alive.",
+    "passageCn": "从某种意义上说,沙克尔顿最著名的旅程是一次失败:他的船在冰中失踪,他始终没能到达想要横穿的陆地。然而他被铭记为英雄,因为他沉着的领导力把全体船员都活着带回了家。",
+    "questions": [
+      { "q": "Why is the journey called a failure?", "opts": ["His ship was lost and he never reached his goal.", "All his men died on the ice.", "He gave up after one day.", "He refused to lead the crew."], "answer": 0 },
+      { "q": "Why is Shackleton remembered as a hero?", "opts": ["His leadership brought everyone home alive.", "He won a great race.", "He found gold on the ice.", "He travelled faster than anyone."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about 60 words on an explorer or adventure you admire: who or what it is, one thing that makes the story amazing, and why you find it inspiring.",
+    "promptCn": "用约60词写一位你敬佩的探险者或一次冒险:是谁/是什么、故事中最了不起的一点,以及它为何打动你。",
+    "sampleWords": ["explorer", "expedition", "survive", "leadership", "courage", "rescue", "frozen", "voyage", "danger", "inspiring"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about a Hero",
+      "lines": [
+        { "role": "A", "text": "I just read about Shackleton. What an amazing explorer!", "cn": "我刚读了沙克尔顿的故事,真是了不起的探险家!" },
+        { "role": "B", "text": "Didn't his ship get crushed by the ice?", "cn": "他的船不是被冰压碎了吗?" },
+        { "role": "A", "text": "Yes, but he still brought every man home alive.", "cn": "是的,但他仍把每个人都活着带回了家。" },
+        { "role": "B", "text": "That's true courage. I'd like to read about him too.", "cn": "那才是真正的勇气。我也想读读他的故事。" }
+      ]
+    },
+    {
+      "title": "Planning a Polar Trip",
+      "lines": [
+        { "role": "A", "text": "I'd love to join a polar expedition one day.", "cn": "我真想有朝一日参加一次极地探险。" },
+        { "role": "B", "text": "It takes a lot of planning. You can't just set out.", "cn": "那需要大量准备,不能贸然出发。" },
+        { "role": "A", "text": "What should I learn first?", "cn": "我该先学什么?" },
+        { "role": "B", "text": "Learn to read maps and watch the weather, and always carry a radio.", "cn": "学会看地图、留意天气,并随身带无线电。" }
+      ]
+    }
+  ]
+}

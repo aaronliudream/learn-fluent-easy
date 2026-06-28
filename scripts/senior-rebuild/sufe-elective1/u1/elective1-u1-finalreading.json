@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(终身学习主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mr Lin retired at sixty, he decided to study painting, something he had never tried before. Although his early pictures looked clumsy, he kept practising every single day and asked younger artists for help. Three years later, his works were shown in a small local gallery, and he felt proud that a late start had not stopped him at all.",
+    "questions": [
+      {
+        "q": "Why was painting a new challenge for Mr Lin?",
+        "options": [
+          "He had never tried it before retiring.",
+          "He had painted all his life.",
+          "He disliked all kinds of art.",
+          "He was forced to learn it at work."
+        ],
+        "answer": "A",
+        "explanation": "原文 'something he had never tried before' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Mr Lin feel three years later?",
+        "options": [
+          "Sorry that he had ever begun.",
+          "Proud that beginning so late had still led to success.",
+          "Bored with painting completely.",
+          "Afraid to show his works to anyone."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt proud that a late start had not stopped him' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

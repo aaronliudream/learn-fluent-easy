@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Language and Mind",
+  "source": "上外版选择性必修二 Unit 2 同主题完形(初到异国的双语周/外婆的方言/英语改变了我看世界的方式/班级辩论/善意之词的力量/演讲中的过渡语)。用词限本单元/常见词,答案唯一,4选项同词性,与阅读/听力关不撞。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Week Abroad",
+      "text": "When I arrived in London as an exchange student, I quickly learned that having a (1)____ language was like owning a second pair of eyes. At first, switching between Chinese and English was (2)____, and my head felt tired by lunchtime. My host mother told me not to (3)____ myself for every small mistake. She said that the daily effort to (4)____ between two languages would actually make my brain stronger. Slowly, I began to (5)____ sounds that I had never noticed before. What surprised me most was (6)____ a single kind sentence from a stranger could lift my whole day. I started to keep a (7)____ in which I wrote down new words every evening. Reading it later, I could clearly (8)____ how much progress I had made. By the end of the week, English no longer felt like a wall but like a door that had begun to (9)____ up. The (10)____ is that learning a language slowly changes the way you see everything.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "second",
+            "quiet",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "a second language 第二语言。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "easy",
+            "demanding",
+            "silent",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "下文'head felt tired'→ demanding 费力的。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "praise",
+            "thank",
+            "blame",
+            "help"
+          ],
+          "answer_index": 2,
+          "explanation": "not to blame myself 不要责备自己。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "pay",
+            "sell",
+            "switch"
+          ],
+          "answer_index": 3,
+          "explanation": "switch between two languages 在两种语言间切换。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "recognise",
+            "forget",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "recognise sounds 辨认出声音。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "why",
+            "that",
+            "where",
+            "whether"
+          ],
+          "answer_index": 1,
+          "explanation": "表语从句陈述事实 → that。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ticket",
+            "price",
+            "journal",
+            "map"
+          ],
+          "answer_index": 2,
+          "explanation": "keep a journal 记日志。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hide",
+            "lose",
+            "sell",
+            "see"
+          ],
+          "answer_index": 3,
+          "explanation": "see how much progress 看出进步。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "open",
+            "break",
+            "fall",
+            "shut"
+          ],
+          "answer_index": 0,
+          "explanation": "open up 打开;拓展。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "truth",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "The truth is that… 表语从句结构。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Grandma's Words",
+      "text": "My grandmother speaks an old village (1)____ that very few young people still use. When I was small, I thought it sounded strange, and I could not (2)____ many of her words. Now I understand that her way of speaking carries (3)____ that no textbook could ever hold. Each phrase is tied to the fields, the festivals, and the (4)____ of our family. Sadly, languages like hers are (5)____, and experts (6)____ that many will disappear within fifty years. When the last speaker is gone, much local (7)____ goes with them. That is (8)____ I have decided to record my grandmother. Every weekend I sit with her and ask her to tell old stories. The (9)____ is whether young people like me can keep these words alive. I believe even a small effort can have a real (10)____ on the future of a language.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "ticket",
+            "dialect",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "an old dialect 一种古老方言。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "cook",
+            "follow"
+          ],
+          "answer_index": 3,
+          "explanation": "could not follow her words 听不懂她的话。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "knowledge",
+            "noise",
+            "money",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "carries knowledge 承载知识。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "stories",
+            "engines",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "the stories of our family 家族的故事。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "modern",
+            "cheap",
+            "endangered",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "languages are endangered 语言濒危。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "sell",
+            "hide",
+            "predict"
+          ],
+          "answer_index": 3,
+          "explanation": "experts predict that… 专家预测。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "knowledge",
+            "money",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "much local knowledge 许多地方知识。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "what",
+            "why",
+            "whether",
+            "how"
+          ],
+          "answer_index": 1,
+          "explanation": "That is why… 表语从句说明原因。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "weather",
+            "question",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "The question is whether… 问题在于能否。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "holiday",
+            "impact"
+          ],
+          "answer_index": 3,
+          "explanation": "have an impact on 对……有影响。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How English Changed My World",
+      "text": "Before I learned English well, I thought a language was just a set of words for naming things. Now I (1)____ that it is much more than that. Learning English has slowly changed the way I (2)____ the world. For example, English made me notice (3)____ differently people can describe the very same event. It also taught me that there is more than one (4)____ behind every story. Sometimes I read an English poem and feel a kind of (5)____ deep inside me, as if the words were ringing a bell. My teacher says that to have a second language is to gain a second (6)____. That idea once sounded strange, but now I fully (7)____ it. The most (8)____ part is that my Chinese has improved too, because comparing the two languages makes each one clearer. (9)____ matters is not which language is better, but how each one opens a new window. The (10)____ is that every language I learn makes me a slightly different person.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "realise",
+            "forget",
+            "doubt",
+            "deny"
+          ],
+          "answer_index": 0,
+          "explanation": "now I realise 如今我意识到。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "perceive",
+            "cook",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "the way I perceive the world 我感知世界的方式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "why",
+            "whether",
+            "how",
+            "where"
+          ],
+          "answer_index": 2,
+          "explanation": "notice how differently… 名词性从句,表程度/方式用 how。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "ticket",
+            "engine",
+            "reality"
+          ],
+          "answer_index": 3,
+          "explanation": "more than one reality 不止一种现实。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "resonance",
+            "hunger",
+            "traffic",
+            "silence"
+          ],
+          "answer_index": 0,
+          "explanation": "feel a kind of resonance 感到共鸣。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "coin",
+            "soul",
+            "road",
+            "clock"
+          ],
+          "answer_index": 1,
+          "explanation": "a second soul 第二个灵魂。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "refuse",
+            "doubt",
+            "accept",
+            "ignore"
+          ],
+          "answer_index": 2,
+          "explanation": "now I fully accept it 如今我完全接受。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "boring",
+            "silent",
+            "empty",
+            "surprising"
+          ],
+          "answer_index": 3,
+          "explanation": "the most surprising part 最令人惊讶的部分。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "What",
+            "That",
+            "Whether",
+            "Why"
+          ],
+          "answer_index": 0,
+          "explanation": "主语从句缺主语 → What matters is…。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "lesson",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "The lesson is that… 表语从句结构。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Should We Learn More Than English?",
+      "text": "Last week our class held a debate on a simple question: is English the only foreign language (1)____ learning? Those who said yes argued that English is already used in business, science, and (2)____ communication around the world. Their (3)____ was that one global language is enough for everyone. The other side, however, made a (4)____ point. They said that every language is a key that (5)____ a different world for us. (6)____ we learn French, Japanese, or Arabic, each new language lets us reach more people and (7)____ more cultures. One girl said that to give up other languages would be to make our minds (8)____. In the end, most of us agreed (9)____ English alone is not enough. The real (10)____ is whether our school can offer more language courses in the future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "busy",
+            "afraid",
+            "worth",
+            "ready"
+          ],
+          "answer_index": 2,
+          "explanation": "worth learning 值得学习。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "silent",
+            "empty",
+            "cheap",
+            "international"
+          ],
+          "answer_index": 3,
+          "explanation": "international communication 国际交流。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "belief",
+            "price",
+            "noise",
+            "engine"
+          ],
+          "answer_index": 0,
+          "explanation": "Their belief was that… 他们的看法是。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silent",
+            "strong",
+            "empty",
+            "sleepy"
+          ],
+          "answer_index": 1,
+          "explanation": "made a strong point 提出有力观点。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "closes",
+            "breaks",
+            "unlocks",
+            "sells"
+          ],
+          "answer_index": 2,
+          "explanation": "a key that unlocks a world 开启世界的钥匙。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "That",
+            "What",
+            "Why",
+            "Whether"
+          ],
+          "answer_index": 3,
+          "explanation": "whether…or… 不论……还是。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "appreciate",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "appreciate more cultures 欣赏更多文化。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "richer",
+            "smaller",
+            "louder",
+            "faster"
+          ],
+          "answer_index": 1,
+          "explanation": "make our minds smaller 让头脑变得狭小。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "whether",
+            "what",
+            "that",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "agreed that… 宾语从句陈述观点 → that。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "question"
+          ],
+          "answer_index": 3,
+          "explanation": "The real question is whether… 真正的问题在于能否。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Power of Kind Words",
+      "text": "What was the most beautiful thing someone ever said to you? It could have been a single sentence that (1)____ your whole day, or even your year. There is far more to language than spelling and (2)____. Words carry a real power. The kind things people say to us, and the thoughts we hear in our own (3)____, slowly add up and shape our personal stories. Those stories, in turn, help to (4)____ who we are. This is the quiet power of language. If you pay (5)____ to the exact words people choose, you will see how each language (6)____ in the world it builds. You can also feel this power when you (7)____ a negative sentence with a positive one. Saying 'I want to feel secure' instead of 'I don't want to fail' can (8)____ how you feel inside. The (9)____ is that the words we speak do not just describe our lives; they help to (10)____ them. So choose your words with care.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "affected",
+            "sold",
+            "cooked",
+            "threw"
+          ],
+          "answer_index": 0,
+          "explanation": "a sentence that affected your day 影响你一天的句子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "traffic",
+            "grammar",
+            "weather",
+            "money"
+          ],
+          "answer_index": 1,
+          "explanation": "spelling and grammar 拼写与语法。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cars",
+            "shops",
+            "minds",
+            "gardens"
+          ],
+          "answer_index": 2,
+          "explanation": "the thoughts in our own minds 我们心中的想法。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "hide",
+            "waste",
+            "determine"
+          ],
+          "answer_index": 3,
+          "explanation": "help to determine who we are 帮助决定我们是谁。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "attention",
+            "money",
+            "prices",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "pay attention to 关注。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleeps",
+            "differs",
+            "eats",
+            "sells"
+          ],
+          "answer_index": 1,
+          "explanation": "how each language differs 每种语言如何不同。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "drop",
+            "replace",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "replace A with B 用 B 替换 A。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "hide",
+            "cook",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "change how you feel 改变你的感受。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "point",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "The point is that… 表语从句结构。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "shape",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "help to shape them 帮助塑造它们。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Guiding Your Audience",
+      "text": "A good speaker is a little like a guide leading people along a path. As you move from one idea to the (1)____, you must show your audience the way, or they may get lost. The best presenters do this by using small (2)____ such as 'now that I have explained this' or 'let me turn to that'. These words are called transitions, and they quietly (3)____ what idea is coming next. Without them, even a (4)____ talk can be hard to follow. (5)____ you are speaking about science or history, clear signposts help your listeners (6)____ your argument step by step. Good transitions also give you, the speaker, a moment to (7)____ your thoughts. (8)____ makes a talk truly clear is not only strong ideas but smooth links between them. So before your next presentation, plan (9)____ you will move from point to point. The (10)____ is that the audience should never have to wonder where you are taking them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "next",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "from one idea to the next 从一个想法到下一个。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "engines",
+            "tickets",
+            "phrases"
+          ],
+          "answer_index": 3,
+          "explanation": "small phrases 一些短语。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "signal",
+            "sell",
+            "hide",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "signal what idea is coming 提示下一个想法。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "silent",
+            "brilliant",
+            "empty",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "even a brilliant talk 即使是精彩的演讲。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "That",
+            "What",
+            "Whether",
+            "Why"
+          ],
+          "answer_index": 2,
+          "explanation": "whether…or… 不论……还是。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "lose",
+            "drop",
+            "follow"
+          ],
+          "answer_index": 3,
+          "explanation": "follow your argument 跟上你的论证。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "organise",
+            "sell",
+            "hide",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "organise your thoughts 整理思路。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "That",
+            "What",
+            "Whether",
+            "Why"
+          ],
+          "answer_index": 1,
+          "explanation": "主语从句缺主语 → What makes a talk clear is…。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "why",
+            "whether",
+            "how",
+            "what"
+          ],
+          "answer_index": 2,
+          "explanation": "plan how you will move 计划如何过渡 → how。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "goal"
+          ],
+          "answer_index": 3,
+          "explanation": "The goal is that… 表语从句结构。"
+        }
+      ]
+    }
+  ]
+}

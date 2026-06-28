@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Write a Letter of Advice on Dealing with Stress(写一封应对压力的建议信)",
+  "title_en": "A Letter of Advice to a Stressed Friend",
+  "genre": "应用文 / 建议信(describe a friend's problem + give practical advice)",
+  "source": "上外版选择性必修三 Unit 1 Writing:write a letter of advice on how to deal with a problem(描述对方的压力问题 + 给出有效建议,语气友好)。",
+  "prompt_cn": "假设你叫李华。你的好友 Alan 最近因为学习和成绩压力很大,常常失眠、注意力不集中。请用英语写一封约 110-130 词的建议信,内容包括:① 表达你对他处境的理解与关心;② 给出一两条切实可行的应对压力的方法(如规律作息、运动、向人倾诉、深呼吸);③ 以鼓励的话结尾。注意书信格式、语气友好,不要批评。试着用本单元的不定式作主语/表语(如 To have a balanced life is …)。",
+  "prompt_en": "Suppose you are Li Hua. Your good friend Alan is under great stress because of his studies and grades, and he often cannot sleep or focus. Write a letter of advice (about 110-130 words) including: 1) understanding and care for his situation; 2) one or two practical ways to deal with stress (e.g. a regular routine, exercise, talking to someone, deep breathing); 3) an encouraging ending. Keep a friendly tone and try to use infinitives as subjects/predicatives.",
+  "points": [
+    "表达理解与关心(I'm sorry to hear that … / I know how hard it can be …)",
+    "给出可行建议(To have a balanced life is … / One thing you could try is …)",
+    "鼓励结尾(Don't worry — things will get better!)",
+    "书信格式、语气友好、不定式作主语/表语运用得当"
+  ],
+  "word_count": "110-130 词",
+  "model_essay": "Dear Alan,\n\nI'm sorry to hear that you have been feeling so stressed about your studies lately. I know how hard it can be when you cannot sleep or focus, so I'd like to share a few tips that might help.\n\nTo have a balanced life is the best way to fight stress. The first thing you could try is to keep a regular routine, with enough sleep and some exercise every day. Going for a short run really clears the mind. My favourite tip is to breathe slowly and deeply whenever you feel panicky. It is also important to talk about your worries with someone you trust, like a parent or a teacher.\n\nDon't worry — things will get better. You are stronger than you think!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的 Alan:\n\n听说你最近因学习压力很大,我很难过。我知道睡不好、注意力不集中有多难受,所以想分享几条也许有用的小建议。\n\n拥有平衡的生活是应对压力的最佳方式。你可以先试着保持规律作息,每天保证充足睡眠和适量运动。去短跑一下真的能让头脑清醒。我最喜欢的一招是:一感到惊慌就缓慢深呼吸。同样重要的是,把你的担忧告诉你信任的人,比如父母或老师。\n\n别担心——一切都会好起来的。你比自己想象的更坚强!\n\n你的朋友\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:理解关心 / 一两条可行建议 / 鼓励结尾" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式完整(称呼·正文·落款)、行文连贯、语气友好不批评" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、不定式作主语/表语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "表达关心 I'm sorry to hear that …",
+      "总建议 To have a balanced life is the best way to fight stress.",
+      "具体方法 The first thing you could try is to … / It is important to …",
+      "鼓励 Don't worry — things will get better."
+    ],
+    "key_expressions": [
+      "I'm sorry to hear that you have been feeling so stressed.",
+      "To have a balanced life is the best way to fight stress.",
+      "My favourite tip is to breathe slowly and deeply.",
+      "It is also important to talk about your worries with someone you trust."
+    ],
+    "useful_words": ["stress", "anxious", "balanced", "routine", "exercise", "relax", "breathe", "handle", "advice", "encourage"]
+  },
+  "high_sentences": [
+    "To have a balanced life is the best way to fight stress.",
+    "The first thing you could try is to keep a regular routine.",
+    "My favourite tip is to breathe slowly and deeply whenever you feel panicky.",
+    "It is also important to talk about your worries with someone you trust."
+  ],
+  "error_pairs": [
+    { "wrong": "To having a balanced life is important.", "correct": "To have a balanced life is important.", "note": "不定式作主语用 to do(动词原形),不能写 to having。" },
+    { "wrong": "It is important talk to a friend.", "correct": "It is important to talk to a friend.", "note": "形式主语 it 后,真正主语用不定式 to talk。" },
+    { "wrong": "My advice is breathe slowly.", "correct": "My advice is to breathe slowly.", "note": "be 后作表语用不定式 to breathe。" }
+  ],
+  "paragraph_template": "【应对压力建议信结构】\n称呼:Dear Alan,\n第1段 关心:I'm sorry to hear that … I know how hard it can be …\n第2段 建议:To have a balanced life is … The first thing you could try is to … It is important to …\n第3段 鼓励:Don't worry — things will get better!\n落款:Yours, Li Hua"
+}

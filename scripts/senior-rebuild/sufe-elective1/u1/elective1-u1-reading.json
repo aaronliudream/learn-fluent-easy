@@ -1,0 +1,362 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Learning for Life",
+  "source": "上外版选择性必修第一册 Unit 1 同主题阅读(居里的诗歌启蒙/达尔文的实验室/曼德拉的田野课/古德纳夫的晚成/荀子《劝学》/邓稼先与学以致用)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形听力不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Curie's First Teacher",
+      "topic_cn": "记叙·居里的诗歌启蒙",
+      "body": "Marie Curie started school when she was only six years old. Because she was the youngest and smallest in her class, she was frequently brought forward to recite in front of visitors. This was a great trial for the shy girl, and she often wanted to run away and hide. Luckily, her father was an excellent educator who knew how to help. He was familiar with both Polish and foreign poetry, and he even wrote little poems himself. On Saturday evenings, he used to recite or read masterpieces of poetry to the whole family. These quiet evenings were a great pleasure for the children. Under his patient guidance, Curie gradually acquired a strong taste for poetry. In the end, she willingly learned long passages by heart and recited them to others. The girl who once wanted to hide had become a confident learner, all because of her father's gentle, lifelong love of books.",
+      "vocab_notes": [
+        {
+          "word": "recite",
+          "cn": "背诵"
+        },
+        {
+          "word": "trial",
+          "cn": "考验"
+        },
+        {
+          "word": "educator",
+          "cn": "教育家"
+        },
+        {
+          "word": "guidance",
+          "cn": "指导"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did young Curie often want to run away?",
+          "options": [
+            "Reciting before visitors frightened the shy girl.",
+            "She disliked her father's poems.",
+            "Her class was too large to enjoy.",
+            "She had to look after her brothers."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a great trial for the shy girl, and she often wanted to run away' 的转述。"
+        },
+        {
+          "stem": "How did her father help her learn?",
+          "options": [
+            "By making her recite alone every night.",
+            "By sharing his love of poetry with the family.",
+            "By sending her to a famous school.",
+            "By punishing her when she was shy."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'used to recite or read masterpieces of poetry to the whole family' 的概括。"
+        },
+        {
+          "stem": "What change happened to Curie in the end?",
+          "options": [
+            "She turned into a confident learner.",
+            "She gave up reading poems for good.",
+            "She forgot the passages she had learned.",
+            "She started to dislike her father."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'had become a confident learner' 的转述;其余与原文相反。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Lessons in the Garden",
+      "topic_cn": "记叙·达尔文的实验室启蒙",
+      "body": "Towards the end of his school days, Charles Darwin found a new kind of learning far from any classroom. His brother worked hard at chemistry and made a small laboratory in the tool-house in the garden. Darwin was allowed to help him with most of his experiments. Together they made many gases and compounds, and Darwin also read several books on chemistry with great care. The subject interested him so much that the two brothers often kept working till late at night. Looking back, Darwin felt that this was the best part of his whole education, for it showed him practically the meaning of experimental science. Somehow the news that they were studying chemistry got known at school, and his classmates nicknamed him 'Gas'. Yet the teasing did not trouble him at all. He had discovered that real learning could happen anywhere, and that a simple garden shed could teach more than many ordinary lessons.",
+      "vocab_notes": [
+        {
+          "word": "laboratory",
+          "cn": "实验室"
+        },
+        {
+          "word": "experiment",
+          "cn": "实验"
+        },
+        {
+          "word": "practically",
+          "cn": "切实地"
+        },
+        {
+          "word": "somehow",
+          "cn": "不知怎么地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where did Darwin do his chemistry learning?",
+          "options": [
+            "In the main school laboratory.",
+            "In a small lab his brother built in the garden.",
+            "In a famous university classroom.",
+            "At a friend's house in town."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'made a small laboratory in the tool-house in the garden' 的转述。"
+        },
+        {
+          "stem": "How did Darwin feel about this part of his education?",
+          "options": [
+            "He thought it was a waste of his time.",
+            "He was ashamed of the nickname.",
+            "He saw it as the finest part of all his schooling.",
+            "He found chemistry boring."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the best part of his whole education' 的转述。"
+        },
+        {
+          "stem": "What main idea does Darwin's story show?",
+          "options": [
+            "Only schools can offer real learning.",
+            "Teasing always stops people from learning.",
+            "Chemistry is harder than other subjects.",
+            "Real learning can take place anywhere."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'real learning could happen anywhere' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Lesson from a Donkey",
+      "topic_cn": "记叙·曼德拉的田野课",
+      "body": "When Nelson Mandela was no more than five, he became a herd-boy, looking after sheep in the fields. It was there, far from any school, that he learned countless skills: how to gather wild honey, how to swim in cold streams, and how to catch fish. But his deepest lesson came from an unruly donkey. One day he and his friends were taking turns riding it. When Mandela's turn came, the donkey suddenly rushed into a bush, bent its head, and threw him off, which embarrassed him in front of everyone. He had lost face among his friends. Yet the young boy did not simply feel angry. He understood that to shame another person is to make him suffer an unnecessarily cruel fate. From that small accident he drew a great rule for life: even when you win, you should never dishonour those you defeat. As a boy he had already begun to learn the meaning of true dignity.",
+      "vocab_notes": [
+        {
+          "word": "gather",
+          "cn": "采集"
+        },
+        {
+          "word": "embarrass",
+          "cn": "使尴尬"
+        },
+        {
+          "word": "dignity",
+          "cn": "尊严"
+        },
+        {
+          "word": "defeat",
+          "cn": "战胜"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Mandela learn in the fields?",
+          "options": [
+            "Many practical outdoor skills.",
+            "How to read foreign books.",
+            "How to write English poems.",
+            "How to do science experiments."
+          ],
+          "answer_index": 0,
+          "explanation": "原文列举 gather honey / swim / catch fish 等户外技能的概括。"
+        },
+        {
+          "stem": "What did the donkey accident teach him?",
+          "options": [
+            "That riding animals is dangerous.",
+            "That shaming others causes needless suffering.",
+            "That he should never play with friends.",
+            "That losing face does not matter at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'to shame another person is to make him suffer an unnecessarily cruel fate' 的转述。"
+        },
+        {
+          "stem": "How did he later treat people he beat?",
+          "options": [
+            "He shamed them in front of their friends.",
+            "He refused to compete with them.",
+            "He won without taking away their dignity.",
+            "He avoided them completely."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'never dignity... never dishonour those you defeat' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Never Too Old to Learn",
+      "topic_cn": "记叙·古德纳夫的晚成",
+      "body": "John Goodenough is proof that learning has no age limit. As a child, he struggled with reading because of a learning disorder, yet he taught himself to write and won a place at a boarding school. The strict education there prepared him well, and he later graduated with honours in mathematics. After the Second World War he went to study physics, a completely new subject for him, and earned a Ph.D. in 1952. Years later, while working at Oxford, he researched the properties of materials in order to produce better rechargeable batteries. His pioneering work made a major breakthrough possible, leading to safer batteries for phones and electric cars. In 2019 he received the Nobel Prize in Chemistry at the age of ninety-seven. Many people had told him he was too old to succeed, but he had not taken it to heart. Even now he goes to his laboratory every day, saying, 'I'm only 97. I still have time to go.'",
+      "vocab_notes": [
+        {
+          "word": "struggle",
+          "cn": "艰难地做"
+        },
+        {
+          "word": "scholarship",
+          "cn": "奖学金"
+        },
+        {
+          "word": "breakthrough",
+          "cn": "突破"
+        },
+        {
+          "word": "honour",
+          "cn": "荣誉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What problem did Goodenough face as a child?",
+          "options": [
+            "He had no school to attend.",
+            "He hated mathematics.",
+            "He was too poor to study.",
+            "He had great trouble with reading."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'struggled with reading because of a learning disorder' 的转述。"
+        },
+        {
+          "stem": "What did his research at Oxford help to create?",
+          "options": [
+            "Better and safer rechargeable batteries.",
+            "A new kind of school.",
+            "A famous chemistry prize.",
+            "A faster steamship."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'better rechargeable batteries... safer batteries for phones and electric cars' 的转述。"
+        },
+        {
+          "stem": "What does his story mainly teach us?",
+          "options": [
+            "Only young people can win prizes.",
+            "It is never too late to keep learning.",
+            "Science is too hard for most people.",
+            "Old age always brings failure."
+          ],
+          "answer_index": 1,
+          "explanation": "标题与全文 'learning has no age limit / still have time to go' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Xunzi on Learning",
+      "topic_cn": "议论·荀子《劝学》",
+      "body": "More than two thousand years ago, the Chinese thinker Xunzi wrote that learning should never cease. He used simple pictures to make his point. Blue dye comes from the indigo plant, he said, yet it is bluer than the plant itself; this shows how a learner can go beyond the teacher. If wood is pressed against a board, it can be made straight; if metal is put to the grindstone, it can be sharpened. In the same way, a person who studies widely and examines himself each day will see his wisdom grow clear and his conduct become faultless. Xunzi also reminded people to be patient. Unless you pile up tiny streams, you can never make a river; unless you take little steps, you can never travel a thousand li. Even the finest horse cannot cross the land in one leap. True achievement, he taught, consists in never giving up. If you carve without stopping, you can cut through metal or stone.",
+      "vocab_notes": [
+        {
+          "word": "cease",
+          "cn": "停止"
+        },
+        {
+          "word": "press",
+          "cn": "压"
+        },
+        {
+          "word": "wisdom",
+          "cn": "智慧"
+        },
+        {
+          "word": "carve",
+          "cn": "雕刻"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the indigo example show, according to Xunzi?",
+          "options": [
+            "Blue is the most useful colour.",
+            "Plants are stronger than dye.",
+            "A learner can surpass the teacher.",
+            "Learning is mostly about colours."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'bluer than the plant... a learner can go beyond the teacher' 的转述。"
+        },
+        {
+          "stem": "Why does Xunzi mention tiny streams and little steps?",
+          "options": [
+            "To describe the beauty of rivers.",
+            "To warn against travelling far.",
+            "To explain how horses run.",
+            "To stress that progress needs patience."
+          ],
+          "answer_index": 3,
+          "explanation": "原文以 streams/steps 强调积累与耐心的概括。"
+        },
+        {
+          "stem": "What does Xunzi say true achievement depends on?",
+          "options": [
+            "Refusing ever to give up.",
+            "Being born with great talent.",
+            "Studying for only one day.",
+            "Carving on soft wood only."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'achievement... consists in never giving up' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Learning by Doing",
+      "topic_cn": "议论·学以致用与社团学习",
+      "body": "The idea of learning by doing has become more and more popular among high school students. It proved very effective in one of the most unforgettable courses I ever took in our school Art Club. To my surprise, the course on three-dimensional design was not based on computers at all; instead, it focused on real materials and their properties. In one task, we had to see what structures we could create simply by folding pieces of paper. We were encouraged to use our hands and cool tools to make as many things as possible, such as paper cranes, lanterns and frogs. In another task, we tried to see how many parts could be removed from a wooden structure before it fell down. The course gave us useful exposure to design principles because it actively engaged us in the learning process. Since then I have been a firm believer that we often understand an idea best only after we have tried it with our own hands.",
+      "vocab_notes": [
+        {
+          "word": "effective",
+          "cn": "有效的"
+        },
+        {
+          "word": "process",
+          "cn": "过程"
+        },
+        {
+          "word": "acquire",
+          "cn": "习得"
+        },
+        {
+          "word": "lifelong",
+          "cn": "终身的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What surprised the writer about the design course?",
+          "options": [
+            "It had no teacher at all.",
+            "It used no computers and focused on real materials.",
+            "It was only about paper cranes.",
+            "It was held outside the school."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'not based on computers at all... focused on real materials' 的转述。"
+        },
+        {
+          "stem": "What did students do in the folding task?",
+          "options": [
+            "They drew designs on a computer.",
+            "They removed wood from a structure.",
+            "They made many objects by hand with paper.",
+            "They read books on design."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'use our hands... make as many things as possible' 的转述。"
+        },
+        {
+          "stem": "What does the writer finally believe?",
+          "options": [
+            "Design can only be learned from books.",
+            "Computers teach better than hands do.",
+            "Art clubs waste students' time.",
+            "We understand ideas best after trying them ourselves."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'understand an idea best only after we have tried it' 的转述。"
+        }
+      ]
+    }
+  ]
+}

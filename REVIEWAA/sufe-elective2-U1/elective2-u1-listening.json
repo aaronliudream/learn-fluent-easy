@@ -1,0 +1,493 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Scientists",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修第二册 Unit 1 同主题听力(我敬佩的科学家/种子库/筹备科学节/罗莎琳·富兰克林/科学展见闻/好科学家的品质)。long/short 交替，答案可在 transcript 找到依据，与读写关不撞。答案位由 _balance 打散。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 A Scientist I Admire",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Who is the scientist you admire most, Lily?"
+        },
+        {
+          "speaker": "B",
+          "text": "I really admire Zhong Yang, the biologist who collected seeds in Tibet."
+        },
+        {
+          "speaker": "A",
+          "text": "Why do you admire him so much?"
+        },
+        {
+          "speaker": "B",
+          "text": "Because he gave up a comfortable life to protect plants for the future."
+        },
+        {
+          "speaker": "A",
+          "text": "That does sound impressive. Was the work difficult?"
+        },
+        {
+          "speaker": "B",
+          "text": "Very. He often walked thousands of kilometres and sometimes got ill from allergies."
+        },
+        {
+          "speaker": "A",
+          "text": "And yet he never stopped?"
+        },
+        {
+          "speaker": "B",
+          "text": "No. He said work that helps others is always worth it."
+        }
+      ],
+      "translation_cn": "A 问 Lily 最敬佩哪位科学家；Lily 敬佩在西藏采集种子的生物学家钟扬；因为他放弃舒适生活去为未来保护植物；工作很艰难，他常走上千公里、有时因过敏生病，却从不停下；他说帮助他人的工作总是值得的。",
+      "questions": [
+        {
+          "stem": "Which scientist does Lily admire most?",
+          "options": [
+            "Zhong Yang, a biologist.",
+            "A famous astronaut.",
+            "A computer engineer.",
+            "A doctor in Tibet."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Zhong Yang collect?",
+          "options": [
+            "Old books.",
+            "Plant seeds.",
+            "Rare stones.",
+            "Animal bones."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Lily admire him?",
+          "options": [
+            "He worked to protect plants for the future.",
+            "He became very rich.",
+            "He won many sports prizes.",
+            "He travelled for fun."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What problem did he face during the work?",
+          "options": [
+            "He could not find any helpers.",
+            "He sometimes got ill from allergies.",
+            "He had no maps.",
+            "He was afraid of heights."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Zhong believe about his work?",
+          "options": [
+            "It was a waste of time.",
+            "It should be kept secret.",
+            "Helping others made it worth doing.",
+            "It was only for money."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 What a Seed Bank Does",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A seed bank is a special place that keeps plant seeds safe.",
+        "The seeds may be used for medicine or farming many years later.",
+        "A seed bank also protects the rich variety of plant life on Earth.",
+        "To fill one, scientists must travel far and gather thousands of seeds.",
+        "The work is hard, but it is a real gift to people of the future."
+      ],
+      "translation_cn": "种子库是一个把植物种子安全保存的特殊场所；这些种子多年后可能用于医药或农业；它还保护地球上丰富的植物多样性；为了装满它，科学家必须远行并采集成千上万颗种子；工作很辛苦，但这是给未来人们的一份真正礼物。",
+      "questions": [
+        {
+          "stem": "What does a seed bank keep safe?",
+          "options": [
+            "Old coins.",
+            "Fresh fruit.",
+            "Science books.",
+            "Plant seeds."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How might the seeds be used later?",
+          "options": [
+            "For medicine or farming.",
+            "For building houses.",
+            "For making toys.",
+            "For cooking dinner."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What else does a seed bank protect?",
+          "options": [
+            "The price of food.",
+            "The variety of plant life.",
+            "The speed of trains.",
+            "The weather."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What must scientists do to fill a seed bank?",
+          "options": [
+            "Stay in one city.",
+            "Buy seeds online.",
+            "Travel far and gather many seeds.",
+            "Wait for seeds to arrive."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who will the seeds help, according to the passage?",
+          "options": [
+            "Only scientists today.",
+            "Nobody at all.",
+            "Only farmers in the past.",
+            "People in the future."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Planning the Science Festival",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Our class needs to recommend a scientist for the science festival."
+        },
+        {
+          "speaker": "B",
+          "text": "How about Marie Curie? She won the Nobel Prize twice."
+        },
+        {
+          "speaker": "A",
+          "text": "That's a great idea. Why do you like her story?"
+        },
+        {
+          "speaker": "B",
+          "text": "Because she never gave up, even when science was seen as a man's world."
+        },
+        {
+          "speaker": "A",
+          "text": "True. Should we also include a Chinese scientist?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, let's add Zhong Yang and his work on seeds."
+        },
+        {
+          "speaker": "A",
+          "text": "Perfect. I'll prepare the photos and you can write the introductions."
+        },
+        {
+          "speaker": "B",
+          "text": "Sounds good. The festival is going to be wonderful."
+        }
+      ],
+      "translation_cn": "A 说班级要为科学节推荐一位科学家；B 建议居里夫人，她两次获诺贝尔奖；因为即便科学曾被视为男人的世界，她也从不放弃；A 提议也加一位中国科学家；B 建议加上钟扬和他的种子工作；A 负责准备照片，B 写介绍；两人都很期待这次科学节。",
+      "questions": [
+        {
+          "stem": "What are the two students planning?",
+          "options": [
+            "A recommendation for the science festival.",
+            "A holiday trip abroad.",
+            "A music concert.",
+            "A sports match."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which scientist does B suggest first?",
+          "options": [
+            "Jane Goodall.",
+            "Marie Curie.",
+            "Grace Hopper.",
+            "Stephen Hawking."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How many times did that scientist win the Nobel Prize?",
+          "options": [
+            "Once.",
+            "Three times.",
+            "Twice.",
+            "Never."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which Chinese scientist do they decide to add?",
+          "options": [
+            "A famous doctor.",
+            "A space pilot.",
+            "A maths teacher.",
+            "Zhong Yang."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What will speaker A prepare?",
+          "options": [
+            "The photos.",
+            "The introductions.",
+            "The food.",
+            "The music."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 The Story of Rosalind Franklin",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Rosalind Franklin was a British scientist who studied the structure of DNA.",
+        "Using X-ray pictures, she found important clues about its shape.",
+        "Sadly, other scientists used her work without asking her first.",
+        "She received very little credit at the time because she was a woman.",
+        "Yet she never lost heart and kept doing the science she loved."
+      ],
+      "translation_cn": "罗莎琳·富兰克林是研究DNA结构的英国科学家；她用X射线照片找到了关于其形状的重要线索；遗憾的是，别的科学家未经她允许就使用了她的成果；当时因为她是女性，她几乎没有得到认可；但她从未灰心，继续做着她热爱的科学。",
+      "questions": [
+        {
+          "stem": "What did Franklin study?",
+          "options": [
+            "The speed of light.",
+            "The structure of DNA.",
+            "The history of art.",
+            "The growth of trees."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did she find clues about its shape?",
+          "options": [
+            "By asking other people.",
+            "By reading old books.",
+            "By using X-ray pictures.",
+            "By guessing."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happened to her work?",
+          "options": [
+            "It was completely lost.",
+            "It was kept in a museum.",
+            "It was never finished.",
+            "Others used it without asking."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why did she receive little credit at the time?",
+          "options": [
+            "Because she was a woman.",
+            "Because her work was wrong.",
+            "Because she stopped early.",
+            "Because she moved away."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did she respond to the difficulties?",
+          "options": [
+            "She gave up science.",
+            "She never lost heart and kept working.",
+            "She left the country.",
+            "She blamed her friends."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 At the Science Fair",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "This science fair is so crowded today!"
+        },
+        {
+          "speaker": "B",
+          "text": "I know. Look at that model of a human body powered by electricity."
+        },
+        {
+          "speaker": "A",
+          "text": "Amazing! You can actually see the heart and lungs working."
+        },
+        {
+          "speaker": "B",
+          "text": "The boy who made it says he loves how the body works."
+        },
+        {
+          "speaker": "A",
+          "text": "I wish I could build something like that."
+        },
+        {
+          "speaker": "B",
+          "text": "Why don't you bring your model rocket next year?"
+        },
+        {
+          "speaker": "A",
+          "text": "Good idea! I feel really inspired after seeing all this."
+        },
+        {
+          "speaker": "B",
+          "text": "Me too. Let's join the school science club together."
+        }
+      ],
+      "translation_cn": "A 感叹科学展今天人很多；B 让她看那个用电力驱动的人体模型；A 惊叹能看到心脏和肺在工作；B 说做模型的男孩热爱身体的运作方式；A 希望自己也能做出这样的东西；B 建议明年带上她的火箭模型；A 看完这些深受鼓舞；两人决定一起加入学校科学社团。",
+      "questions": [
+        {
+          "stem": "Where are the two speakers?",
+          "options": [
+            "In a library.",
+            "At a train station.",
+            "At a science fair.",
+            "In a restaurant."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the special model powered by?",
+          "options": [
+            "Water.",
+            "Wind.",
+            "Sunlight.",
+            "Electricity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can you see working in the model?",
+          "options": [
+            "The heart and lungs.",
+            "A clock and a bell.",
+            "A small engine.",
+            "A pair of wings."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does speaker A plan to bring next year?",
+          "options": [
+            "A toy car.",
+            "A model rocket.",
+            "A new book.",
+            "A painting."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do together?",
+          "options": [
+            "Go home early.",
+            "Buy lunch.",
+            "Join the school science club.",
+            "Stop studying science."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 What Makes a Good Scientist",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "What makes someone a good scientist? It is not only brain power.",
+        "Curiosity is just as important, because every discovery starts with a question.",
+        "Scientists also need courage to keep going when others doubt them.",
+        "Good communication helps them share their ideas with the world.",
+        "Above all, they must be patient, since answers often take many years to find."
+      ],
+      "translation_cn": "是什么让一个人成为好科学家？不仅仅是头脑聪明；好奇心同样重要，因为每个发现都始于一个问题；科学家还需要勇气，在别人怀疑时坚持下去；良好的沟通帮助他们把想法分享给世界；最重要的是要有耐心，因为答案往往要花很多年才能找到。",
+      "questions": [
+        {
+          "stem": "According to the passage, what does every discovery start with?",
+          "options": [
+            "A prize.",
+            "A machine.",
+            "A holiday.",
+            "A question."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Besides brain power, what is just as important?",
+          "options": [
+            "Curiosity.",
+            "Money.",
+            "Luck.",
+            "Speed."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do scientists need courage?",
+          "options": [
+            "To win every argument.",
+            "To keep going when others doubt them.",
+            "To work alone forever.",
+            "To avoid all mistakes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does good communication help scientists?",
+          "options": [
+            "It makes them rich.",
+            "It ends all their work.",
+            "It helps them share ideas with the world.",
+            "It hides their findings."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why must scientists be patient?",
+          "options": [
+            "They have nothing else to do.",
+            "They dislike fast work.",
+            "Patience is required by law.",
+            "Answers often take many years to find."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "A healthy lifestyle includes good food, exercise and enough sleep.", "opts": ["健康的生活方式包括良好饮食、运动和充足睡眠。", "健康只取决于吃药。", "睡眠对健康没有影响。", "运动会让人更累。"], "answer": 0 },
+    { "audio": "Sugary drinks just add extra calories with little benefit.", "opts": ["含糖饮料能补充能量。", "含糖饮料只是增加多余热量,益处很少。", "含糖饮料能帮助睡眠。", "含糖饮料很便宜。"], "answer": 1 },
+    { "audio": "Exercise builds energy rather than using it up.", "opts": ["运动会耗尽你的精力。", "运动和精力毫无关系。", "运动能增加精力,而非消耗精力。", "运动只在早上有用。"], "answer": 2 },
+    { "audio": "Teenagers should get eight to ten hours of sleep each night.", "opts": ["青少年应尽量少睡。", "青少年每晚睡两小时就够。", "青少年不需要睡眠。", "青少年每晚应睡八到十小时。"], "answer": 3 },
+    { "audio": "Washing your hands with soap removes the most germs.", "opts": ["用肥皂洗手能去除最多的细菌。", "洗手没有任何作用。", "只有热水才能洗手。", "洗手会让手更脏。"], "answer": 0 },
+    { "audio": "Proper brushing should take at least two minutes.", "opts": ["刷牙十秒就够了。", "正确刷牙至少要两分钟。", "刷牙越快越好。", "一周刷一次牙就行。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Exercise can ____ your blood pressure and improve heart health.（降低)", "opts": ["lower", "raise", "sell", "open"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Try to ____ processed foods with fresh fruits and vegetables.（替换)", "opts": ["sell", "replace", "lose", "drop"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "A fitness app helps you keep ____ of how active you are.（了解……的动态:keep ___ of)", "opts": ["price", "noise", "track", "city"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Not getting enough sleep can make you ____ and easily annoyed.（脾气坏的)", "opts": ["calm", "happy", "polite", "moody"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ young, you should start building healthy habits early.", "opts": ["When", "Because", "Unless", "So"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "See a doctor immediately ____ necessary, rather than wait at home.", "opts": ["though", "if", "unless", "so"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "He looks much healthier than his cousin ____.", "opts": ["is", "has", "does", "done"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "– Would you like to join our dance club? – Yes, I'd love ____.", "opts": ["it", "do", "that", "to"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["晚饭后散步有助于消化。", "他从不锻炼。", "他讨厌走路。", "散步没有好处。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "A short walk after dinner helps with digestion." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["蓝区的人很少运动。", "蓝区的人过着低压力的生活。", "蓝区的人总是独居。", "蓝区的人吃很多甜食。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "People in the Blue Zones live a low-stress life." }
+  ],
+  "reading": {
+    "passage": "When you feel tired, a morning workout is often better than an extra hour of sleep. A single session of exercise can lower your stress, improve your heart health and even leave you with more energy. Working out does not use up your energy; it builds it.",
+    "passageCn": "当你感到疲惫时,晨练往往比多睡一小时更好。一次锻炼就能减轻压力、改善心脏健康,甚至让你更有精力。锻炼不会耗尽精力,反而会增加精力。",
+    "questions": [
+      { "q": "What is often better than an extra hour of sleep?", "opts": ["A morning workout.", "Skipping breakfast.", "Drinking more soda.", "Staying in bed all day."], "answer": 0 },
+      { "q": "What does the passage say a workout does to your energy?", "opts": ["It quickly uses it all up.", "It builds it rather than using it up.", "It has no effect on it.", "It only helps at night."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "A classmate asks you for advice about a health problem. Write a short reply: name one likely cause and give two practical solutions.",
+    "promptCn": "一位同学就健康问题向你求助。写一段简短回信:指出一个可能原因,并给出两条切实可行的办法(试着用省略结构,如 If (it is) necessary…)。",
+    "sampleWords": ["weight", "calorie", "replace", "exercise", "energy", "habit", "motivated", "sleep", "advice", "charge"]
+  },
+  "dialogues": [
+    {
+      "title": "Taking Charge of My Diet",
+      "lines": [
+        { "role": "A", "text": "Should we just get pizza and soda for lunch?", "cn": "我们午饭就吃披萨喝汽水好吗?" },
+        { "role": "B", "text": "Let's try something healthier. I'm taking charge of my diet.", "cn": "试试更健康的吧。我正在掌管自己的饮食。" },
+        { "role": "A", "text": "But I really want a soda.", "cn": "可我真的很想喝汽水。" },
+        { "role": "B", "text": "Sugary drinks just add extra calories. Why not have water?", "cn": "含糖饮料只是增加多余热量,何不喝水呢?" }
+      ]
+    },
+    {
+      "title": "Let's Exercise Together",
+      "lines": [
+        { "role": "A", "text": "I'm always tired and have no energy after class.", "cn": "我下课后总是很累,没有精力。" },
+        { "role": "B", "text": "Try exercising. It builds energy instead of using it up.", "cn": "试试运动吧,它能增加而非消耗精力。" },
+        { "role": "A", "text": "But I'm too tired to start.", "cn": "可我太累了,不想开始。" },
+        { "role": "B", "text": "Then come jogging with me. It's more fun with a friend.", "cn": "那就和我一起慢跑吧,有朋友更有趣。" }
+      ]
+    }
+  ]
+}

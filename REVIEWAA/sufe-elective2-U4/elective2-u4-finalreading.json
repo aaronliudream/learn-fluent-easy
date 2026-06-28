@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(灾难求生主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When the typhoon warning came on the radio, the Chen family did not wait. Having packed a survival kit the week before, they quickly moved to a shelter on higher ground. The next morning, their whole street was under water, but every member of the family was safe and dry.",
+    "questions": [
+      {
+        "q": "Why was the Chen family able to act so quickly?",
+        "options": [
+          "They had prepared a survival kit in advance.",
+          "They lived right next to the shelter.",
+          "The police carried them out by car.",
+          "They had never heard the warning before."
+        ],
+        "answer": "A",
+        "explanation": "原文 'Having packed a survival kit the week before' 的转述;事先备好包,所以行动迅速。"
+      },
+      {
+        "q": "What happened to their street the next morning?",
+        "options": [
+          "It was covered with flood water.",
+          "It was completely dry and clear.",
+          "It was filled with cheering crowds.",
+          "It was blocked by fallen trees only."
+        ],
+        "answer": "A",
+        "explanation": "末句 'their whole street was under water' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

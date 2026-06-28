@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grammar_title": "复杂不定式(进行/完成/被动:to be doing / to have done / to be done)",
+  "source": "上外版选择性必修三 Unit 2 Grammar in Use: Complex infinitives(进行式 to be doing / 完成式 to have done / 被动式 to be done)。零术语应用题,每题四选项为同一动词的四种不定式形式,语境只让一种自然成立,答案唯一。句子围绕本单元两则友谊故事。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "进行式不定式 to be doing(动作正在进行)",
+      "overview": "当不定式表示的动作此刻或当时正在进行时,在 seem/appear/happen/pretend 等之后用 to be doing。"
+    },
+    {
+      "code": "u2.02",
+      "point": "完成式不定式 to have done(先于谓语完成)",
+      "overview": "当不定式动作发生在谓语动作之前并已完成时用 to have done;常见于 be glad/proud/sorry/lucky + 不定式,或 be said/thought/known/believed to ...。"
+    },
+    {
+      "code": "u2.03",
+      "point": "被动式不定式 to be done / to have been done(主语是承受者)",
+      "overview": "当不定式的逻辑主语是动作的承受者时用被动式不定式;need/want/deserve/hope + to be done,或 be said/believed to have been done。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "When I first noticed Kyle, he seemed ____ a huge stack of books across the yard.",
+      "options": [
+        "to be carrying",
+        "to carry",
+        "to have carried",
+        "to be carried"
+      ],
+      "answer_index": 0,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right then, the new boy appeared ____ on the ground for his broken glasses.",
+      "options": [
+        "to look",
+        "to be looking",
+        "to have looked",
+        "to be looked"
+      ],
+      "answer_index": 1,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "As the bell rang, the two friends happened ____ about their coming graduation.",
+      "options": [
+        "to talk",
+        "to have talked",
+        "to be talking",
+        "to be talked"
+      ],
+      "answer_index": 2,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Kyle stayed quiet, pretending ____ at the unkind joke about him.",
+      "options": [
+        "to laugh",
+        "to have laughed",
+        "to be laughed",
+        "to be laughing"
+      ],
+      "answer_index": 3,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At that moment, Johnsy seemed ____ the ivy leaves falling outside her window.",
+      "options": [
+        "to be counting",
+        "to count",
+        "to have counted",
+        "to be counted"
+      ],
+      "answer_index": 0,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When Sue walked in, old Behrman appeared ____ angrily about her strange idea.",
+      "options": [
+        "to shout",
+        "to be shouting",
+        "to have shouted",
+        "to be shouted"
+      ],
+      "answer_index": 1,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I happened ____ across the schoolyard just when the kids knocked his books down.",
+      "options": [
+        "to walk",
+        "to have walked",
+        "to be walking",
+        "to be walked"
+      ],
+      "answer_index": 2,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Late that stormy night, Behrman seemed ____ something secretly by the old wall.",
+      "options": [
+        "to paint",
+        "to have painted",
+        "to be painted",
+        "to be painting"
+      ],
+      "answer_index": 3,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Just then my best friend appeared ____ gratefully at me from the stage.",
+      "options": [
+        "to be smiling",
+        "to smile",
+        "to have smiled",
+        "to be smiled"
+      ],
+      "answer_index": 0,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When I arrived, Kyle happened ____ for me right outside the classroom.",
+      "options": [
+        "to wait",
+        "to be waiting",
+        "to have waited",
+        "to be waited"
+      ],
+      "answer_index": 1,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "That afternoon Kyle seemed ____ out his locker for the very last time.",
+      "options": [
+        "to clean",
+        "to have cleaned",
+        "to be cleaning",
+        "to be cleaned"
+      ],
+      "answer_index": 2,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "While he was on the muddy ground, the freshman appeared ____ around for his glasses.",
+      "options": [
+        "to crawl",
+        "to have crawled",
+        "to be crawled",
+        "to be crawling"
+      ],
+      "answer_index": 3,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right now Johnsy seems ____ that single leaf still left on the wall.",
+      "options": [
+        "to be watching",
+        "to watch",
+        "to have watched",
+        "to be watched"
+      ],
+      "answer_index": 0,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "As I patted his back, Kyle seemed ____ back his tears with great effort.",
+      "options": [
+        "to hold",
+        "to be holding",
+        "to have held",
+        "to be held"
+      ],
+      "answer_index": 1,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "During the speech, the whole crowd appeared ____ to every single word he said.",
+      "options": [
+        "to listen",
+        "to have listened",
+        "to be listening",
+        "to be listened"
+      ],
+      "answer_index": 2,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Just then Kyle happened ____ everyone the story of our very first meeting.",
+      "options": [
+        "to tell",
+        "to have told",
+        "to be told",
+        "to be telling"
+      ],
+      "answer_index": 3,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When his mother looked over, I seemed ____ Kyle through a hard moment once more.",
+      "options": [
+        "to be helping",
+        "to help",
+        "to have helped",
+        "to be helped"
+      ],
+      "answer_index": 0,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At halftime the students appeared ____ loudly for their best friend on the field.",
+      "options": [
+        "to cheer",
+        "to be cheering",
+        "to have cheered",
+        "to be cheered"
+      ],
+      "answer_index": 1,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When I knocked softly, Sue seemed ____ an old letter from a dear friend.",
+      "options": [
+        "to read",
+        "to have read",
+        "to be reading",
+        "to be read"
+      ],
+      "answer_index": 2,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right then the kind boy happened ____ up the heavy books for the sad freshman.",
+      "options": [
+        "to pick",
+        "to have picked",
+        "to be picked",
+        "to be picking"
+      ],
+      "answer_index": 3,
+      "explanation": "动作在当时正在进行,用进行式不定式 to be doing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Kyle felt proud ____ his whole speech without forgetting a single word.",
+      "options": [
+        "to have finished",
+        "to finish",
+        "to be finishing",
+        "to be finished"
+      ],
+      "answer_index": 0,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm so glad ____ Kyle on that rainy Friday years ago.",
+      "options": [
+        "to meet",
+        "to have met",
+        "to be meeting",
+        "to be met"
+      ],
+      "answer_index": 1,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Johnsy was sorry ____ so many days simply waiting to die.",
+      "options": [
+        "to waste",
+        "to be wasting",
+        "to have wasted",
+        "to be wasted"
+      ],
+      "answer_index": 2,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Jimmy and Paul are said ____ each other well for many years.",
+      "options": [
+        "to know",
+        "to be knowing",
+        "to be known",
+        "to have known"
+      ],
+      "answer_index": 3,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The two close friends are known ____ each other ever since that summer.",
+      "options": [
+        "to have inspired",
+        "to inspire",
+        "to be inspiring",
+        "to be inspired"
+      ],
+      "answer_index": 0,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I feel lucky ____ such a loyal friend for over ten years now.",
+      "options": [
+        "to have",
+        "to have had",
+        "to be having",
+        "to be had"
+      ],
+      "answer_index": 1,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Old Behrman is believed ____ the last leaf on that very stormy night.",
+      "options": [
+        "to paint",
+        "to be painting",
+        "to have painted",
+        "to be painted"
+      ],
+      "answer_index": 2,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I was proud ____ my friend back when he needed me the most.",
+      "options": [
+        "to help",
+        "to be helping",
+        "to be helped",
+        "to have helped"
+      ],
+      "answer_index": 3,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Sue was relieved ____ the doctor before Johnsy lost all her hope.",
+      "options": [
+        "to have called",
+        "to call",
+        "to be calling",
+        "to be called"
+      ],
+      "answer_index": 0,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Kyle was grateful ____ our friendship strong all through those four years.",
+      "options": [
+        "to keep",
+        "to have kept",
+        "to be keeping",
+        "to be kept"
+      ],
+      "answer_index": 1,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Kyle admitted ____ to drop out of school during those lonely early days.",
+      "options": [
+        "to plan",
+        "to be planning",
+        "to have planned",
+        "to be planned"
+      ],
+      "answer_index": 2,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By graduation day, Kyle seemed ____ all of his early sadness already.",
+      "options": [
+        "to forget",
+        "to be forgetting",
+        "to be forgotten",
+        "to have forgotten"
+      ],
+      "answer_index": 3,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm glad ____ Kyle a little smile on that difficult first day.",
+      "options": [
+        "to have given",
+        "to give",
+        "to be giving",
+        "to be given"
+      ],
+      "answer_index": 0,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Their friendship is thought ____ stronger after every hard moment they shared.",
+      "options": [
+        "to grow",
+        "to have grown",
+        "to be growing",
+        "to be grown"
+      ],
+      "answer_index": 1,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Johnsy was happy ____ from the last leaf that she should never give up.",
+      "options": [
+        "to learn",
+        "to be learning",
+        "to have learnt",
+        "to be learnt"
+      ],
+      "answer_index": 2,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Behrman is said ____ Johnsy's life with that one final painting.",
+      "options": [
+        "to save",
+        "to be saving",
+        "to be saved",
+        "to have saved"
+      ],
+      "answer_index": 3,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I feel lucky ____ so many good times with my best friend over the years.",
+      "options": [
+        "to have shared",
+        "to share",
+        "to be sharing",
+        "to be shared"
+      ],
+      "answer_index": 0,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The famous writer is believed ____ this story about friendship long ago.",
+      "options": [
+        "to write",
+        "to have written",
+        "to be writing",
+        "to be written"
+      ],
+      "answer_index": 1,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I was glad ____ my friend through his toughest exam week last term.",
+      "options": [
+        "to support",
+        "to be supporting",
+        "to have supported",
+        "to be supported"
+      ],
+      "answer_index": 2,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Over four years the two boys are known ____ a friendship that lasted a lifetime.",
+      "options": [
+        "to build",
+        "to be building",
+        "to be built",
+        "to have built"
+      ],
+      "answer_index": 3,
+      "explanation": "动作先于谓语已经完成,用完成式不定式 to have done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Tom looks upset; I feel that something needs ____ to cheer him up.",
+      "options": [
+        "to be done",
+        "to do",
+        "to be doing",
+        "to have done"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The injured freshman needed ____ to the school nurse at once.",
+      "options": [
+        "to take",
+        "to be taken",
+        "to be taking",
+        "to have taken"
+      ],
+      "answer_index": 1,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Kyle did not want his weakest moment ____ in front of the whole school.",
+      "options": [
+        "to reveal",
+        "to be revealing",
+        "to be revealed",
+        "to have revealed"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Every true friendship deserves ____ with patience and real care.",
+      "options": [
+        "to treat",
+        "to be treating",
+        "to have treated",
+        "to be treated"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The scattered books needed ____ up from the muddy ground first.",
+      "options": [
+        "to be picked",
+        "to pick",
+        "to be picking",
+        "to have picked"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Johnsy's cold room needed ____ warm through the long winter night.",
+      "options": [
+        "to keep",
+        "to be kept",
+        "to be keeping",
+        "to have kept"
+      ],
+      "answer_index": 1,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "A real friend expects nothing ____ in return for an act of kindness.",
+      "options": [
+        "to give",
+        "to be giving",
+        "to be given",
+        "to have given"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "After the fall, the muddy books still needed ____ before class.",
+      "options": [
+        "to wash",
+        "to be washing",
+        "to have washed",
+        "to be washed"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The thank-you letter was waiting ____ to his dearest old friend.",
+      "options": [
+        "to be sent",
+        "to send",
+        "to be sending",
+        "to have sent"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Old quarrels between close friends often deserve ____ and forgotten.",
+      "options": [
+        "to forgive",
+        "to be forgiven",
+        "to be forgiving",
+        "to have forgiven"
+      ],
+      "answer_index": 1,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The lonely freshman badly needed ____ on that difficult first day.",
+      "options": [
+        "to help",
+        "to be helping",
+        "to be helped",
+        "to have helped"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Every classmate hoped ____ to Kyle's graduation party that weekend.",
+      "options": [
+        "to invite",
+        "to be inviting",
+        "to have invited",
+        "to be invited"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "After all those years, the kind boy truly deserved ____ at last.",
+      "options": [
+        "to be thanked",
+        "to thank",
+        "to be thanking",
+        "to have thanked"
+      ],
+      "answer_index": 0,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Such a moving story about friendship ought ____ to everyone.",
+      "options": [
+        "to tell",
+        "to be told",
+        "to be telling",
+        "to have told"
+      ],
+      "answer_index": 1,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The freshman's broken glasses needed ____ before the lesson began.",
+      "options": [
+        "to fix",
+        "to be fixing",
+        "to be fixed",
+        "to have fixed"
+      ],
+      "answer_index": 2,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The last leaf on the wall is believed ____ by Behrman that very night.",
+      "options": [
+        "to paint",
+        "to be painting",
+        "to have painted",
+        "to have been painted"
+      ],
+      "answer_index": 3,
+      "explanation": "动作早已完成且主语是其承受者,用完成被动式不定式 to have been done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "These photos of our school trip are said ____ by Danny, not by me.",
+      "options": [
+        "to have been taken",
+        "to take",
+        "to be taking",
+        "to have taken"
+      ],
+      "answer_index": 0,
+      "explanation": "动作早已完成且主语是其承受者,用完成被动式不定式 to have been done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "This famous letter of thanks is thought ____ many years ago.",
+      "options": [
+        "to write",
+        "to have been written",
+        "to be writing",
+        "to have written"
+      ],
+      "answer_index": 1,
+      "explanation": "动作早已完成且主语是其承受者,用完成被动式不定式 to have been done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Johnsy's life is believed ____ by a single painted leaf on the wall.",
+      "options": [
+        "to save",
+        "to be saving",
+        "to have been saved",
+        "to have saved"
+      ],
+      "answer_index": 2,
+      "explanation": "动作早已完成且主语是其承受者,用完成被动式不定式 to have been done。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Kyle was the first student ____ as the graduation speaker that year.",
+      "options": [
+        "to choose",
+        "to be choosing",
+        "to have chosen",
+        "to be chosen"
+      ],
+      "answer_index": 3,
+      "explanation": "不定式的逻辑主语是动作的承受者,用被动式不定式 to be done。"
+    }
+  ]
+}

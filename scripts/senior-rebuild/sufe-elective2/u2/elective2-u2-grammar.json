@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "grammar_title": "主语从句 & 表语从句(subject clauses & predicative clauses)",
+  "source": "上外版选择性必修二 Unit 2 Grammar in Use:主语从句与表语从句的连接词选择(that/whether/what/how/why 等)。句子地道、答案唯一(从句是否缺成分 + 句意决定连接词)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "主语从句(句首):连接词选择",
+      "overview": "名词性从句放句首作主语时:从句完整且陈述事实用 that;表'是否'的疑问用 whether(不用 if);从句缺主语或宾语(=所…的事物)用 what;问方式/程度用 how;问原因用 why。"
+    },
+    {
+      "code": "u2.02",
+      "point": "it 作形式主语:真正主语后置",
+      "overview": "用 it 作形式主语、真正的主语从句后置:It is + 形容词/名词/过去分词 + that(陈述)/whether(是否)/what·how·why(疑问词)从句。如 It is true that… / It is unknown whether… / It is amazing how…。"
+    },
+    {
+      "code": "u2.03",
+      "point": "表语从句(系动词 be 之后)",
+      "overview": "名词性从句跟在系动词 be 后作表语;连接词由主语名词与从句意义决定:fact/truth/idea/belief/point + that;question/problem + whether;The reason is that…;That is why…;主语为 this/that/all、从句缺成分 + what。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "\"____ our language really shapes our thoughts has interested scientists for years.\"",
+      "options": [
+        "Whether",
+        "What",
+        "If",
+        "Because"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语从句表'是否'的待解疑问 → whether(不用 if);从句完整,what 多余。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ surprised the researchers most was the speed of the answers.\"",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "It"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语(____ surprised…)→ what(=the thing that)。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ language can shape thought is now widely accepted by experts.\"",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、陈述被接受的事实 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ languages describe colours differs from culture to culture.\"",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 3,
+      "explanation": "'differs from culture to culture'指方式不同 → how。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ babies can tell two languages apart was tested in the study.\"",
+      "options": [
+        "Whether",
+        "What",
+        "That",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "研究检验的是'能否'这一疑问 → whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ each language asks us to notice can differ a great deal.\"",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺宾语(asks us to notice ____)→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ every healthy child can learn a language is simply a fact.\"",
+      "options": [
+        "What",
+        "How",
+        "That",
+        "Whether"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、点明它'是一个事实'→ that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ quickly we name a colour varies from language to language.\"",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer_index": 3,
+      "explanation": "'how quickly'表程度 → how。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ she discovered about colour words changed the debate.\"",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺宾语(discovered ____)→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ speaking two languages slows the brain was the real question.\"",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "'was the real question'指'是否'的疑问 → whether(不用 if)。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ no two languages divide the world alike is well known.\"",
+      "options": [
+        "Whether",
+        "What",
+        "That",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、是众所周知的事实 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ we call 'blue' may not exist in another language.\"",
+      "options": [
+        "That",
+        "Whether",
+        "Why",
+        "What"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺宾语(we call ____ 'blue')→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ a dying language can be saved depends on its young speakers.\"",
+      "options": [
+        "Whether",
+        "What",
+        "That",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "'depends on'后接'能否'的疑问 → whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ words can shape our feelings is no surprise to linguists.\"",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、是'不足为奇'的事实 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ the speaker described was a simple colour experiment.\"",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺宾语(described ____)→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ varies from person to person is the way they picture time.\"",
+      "options": [
+        "How",
+        "That",
+        "Whether",
+        "What"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺主语(____ varies…)→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ colour words affect memory was the focus of the test.\"",
+      "options": [
+        "Whether",
+        "What",
+        "That",
+        "Why"
+      ],
+      "answer_index": 0,
+      "explanation": "测试的焦点是'是否'这一疑问 → whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ matters is not where others live but how you think.\"",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语(____ matters)→ what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ the human mind is so flexible is clear from its love of language.\"",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、是'显而易见'的事实 → that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "\"____ some small languages disappear so fast is still a mystery.\"",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 3,
+      "explanation": "'is still a mystery'指未解的原因 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is true ____ language can change the way we see colour.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "It is true 后接陈述事实的主语从句 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It remains unknown ____ a dying language can ever be revived.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "remains unknown 后是'能否'的疑问 → whether。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is amazing ____ quickly Russian speakers spot light blue.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "'how quickly'表程度 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is no surprise ____ bilingual brains often stay sharper.\"",
+      "options": [
+        "whether",
+        "what",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "It is no surprise 后接陈述事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is doubtful ____ language alone can determine our thoughts.\"",
+      "options": [
+        "whether",
+        "that",
+        "how",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "doubtful 表怀疑'是否' → whether。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is hard to say ____ makes one language die before another.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语(____ makes…)→ what。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is well known ____ no two languages divide the world alike.\"",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "well known 后接公认的事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is still unclear ____ babies can tell two languages apart.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "unclear 表不确定'能否' → whether。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is interesting ____ differently languages treat the same event.\"",
+      "options": [
+        "how",
+        "that",
+        "what",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "'how differently'表程度/方式 → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is widely accepted ____ thought and language influence each other.\"",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "widely accepted 后接被接受的事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is not always obvious ____ a language asks us to pay attention to.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺宾语(pay attention to ____)→ what。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is a real mystery ____ so many languages are vanishing at once.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "a mystery 指未解的原因 → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is surprising ____ a single kind sentence can lift a whole day.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "surprising 后陈述令人惊讶的事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It matters little ____ you call it 'goluboy' or 'siniy'.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "'whether…or…'表'不论是否' → whether。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is fascinating ____ the mind handles two languages at the same time.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "指大脑处理的'方式' → how。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is often forgotten ____ some thoughts need no language at all.\"",
+      "options": [
+        "whether",
+        "what",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "forgotten 后接被遗忘的事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is worth asking ____ we think the way that we do.\"",
+      "options": [
+        "why",
+        "that",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "asking 后问'为什么这样想' → why。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is clear ____ our first language leaves a deep mark on us.\"",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "It is clear 后接清楚的事实 → that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is uncertain ____ saving a script can save a spoken language.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "uncertain 表不确定'能否' → whether。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "\"It is no wonder ____ learning a language reshapes the brain.\"",
+      "options": [
+        "whether",
+        "what",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "no wonder 后陈述'难怪'的事实 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The truth is ____ language and thought shape each other.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 truth、从句陈述事实 → 表语从句用 that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The real question is ____ language shapes thought or the other way round.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 question、表'是否/哪一种' → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"What still puzzles me is ____ a baby learns to speak so quickly.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "表语从句指学说话的'方式' → how。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"One common belief is ____ any language can be mastered with practice.\"",
+      "options": [
+        "whether",
+        "what",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 belief、从句陈述内容 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The reason is ____ their language makes them notice such details.\"",
+      "options": [
+        "that",
+        "why",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "'The reason is + 表语从句'用 that(不用 why)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The problem is ____ we can ever fully translate one language into another.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 problem、表'能否'的疑问 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"His greatest fear is ____ his mother tongue will die out.\"",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "表语从句陈述所担心的内容 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"That is ____ Russian speakers react to shades of blue so fast.\"",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "'That is why…'说明原因 → why。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The first thing she noticed was ____ the two words sounded almost alike.\"",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "表语从句陈述她注意到的事实 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"This is ____ language can quietly do to our thinking.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺宾语(do ____ to our thinking)→ what。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The point is ____ small words can steer big decisions.\"",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 point、从句陈述要点 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"What matters most is ____ you pay attention to, not where you live.\"",
+      "options": [
+        "that",
+        "whether",
+        "how",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺宾语(pay attention to ____)→ what。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The mystery is ____ so many languages are disappearing today.\"",
+      "options": [
+        "why",
+        "that",
+        "what",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 mystery、追问原因 → why。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"Her firm belief is ____ every language opens a new window on the world.\"",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 belief、从句陈述信念 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The strange thing is ____ we rarely ask why we think as we do.\"",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、陈述'奇怪的事实' → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The whole point of her talk was ____ language shapes us all.\"",
+      "options": [
+        "whether",
+        "what",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句陈述演讲要点 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The open question is ____ thought can exist without any words.\"",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 question、表'能否'的疑问 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The best part is ____ learning a language actually reshapes the brain.\"",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "从句陈述'最棒的部分'这一事实 → that。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"His only doubt is ____ a written record can keep a language alive.\"",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 doubt、表'能否'的疑问 → whether。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "\"The amazing fact is ____ no single language can capture every idea.\"",
+      "options": [
+        "whether",
+        "what",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 fact、从句陈述事实 → that。"
+    }
+  ]
+}

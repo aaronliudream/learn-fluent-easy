@@ -1,0 +1,350 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Future Living",
+  "source": "上外版选择性必修第一册 Unit 4 同主题阅读(智能家居/玻璃穹顶之家/机器人取代工作/X15管家/未来摩天城市/未来人类预测)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Welcome to the Smart Home",
+      "topic_cn": "说明·智能家居如何运作",
+      "body": "When you are out, small doubts can crowd your mind. Did I turn the lights off? Is the room too cold for my pet? In a smart home, you can quiet all these worries with a quick look at your phone. Every device that uses electricity can be added to one home network and placed under your control. Most of these devices deal with lighting, temperature, home security and cleaning chores. As an electronic servant takes over almost all the housework, you will enjoy far more leisure time, and old-fashioned tools such as the duster will slowly disappear. Much of this is thanks to the huge success of smartphones and tablets. These tiny computers are everywhere, and their always-on connections mean they can manage many online gadgets at once. The idea may sound like science fiction, but the technology is real and growing smarter every year. It is especially useful for elderly people and people with disabilities who wish to live independently.",
+      "vocab_notes": [
+        {
+          "word": "device",
+          "cn": "设备"
+        },
+        {
+          "word": "network",
+          "cn": "网络"
+        },
+        {
+          "word": "security",
+          "cn": "安全"
+        },
+        {
+          "word": "leisure",
+          "cn": "闲暇"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How can a smart home quiet your worries when you are out?",
+          "options": [
+            "By letting you check and control things from your phone.",
+            "By sending a servant to your office.",
+            "By switching off all power at night.",
+            "By calling your neighbours for help."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'quiet all these worries with a quick look at your phone' 的转述。"
+        },
+        {
+          "stem": "What happens to old-fashioned tools like the duster?",
+          "options": [
+            "They become more expensive.",
+            "They will slowly disappear.",
+            "They are sold to museums.",
+            "They control the lighting."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'old-fashioned tools such as the duster will slowly disappear' 的转述。"
+        },
+        {
+          "stem": "Who does the writer say smart homes are especially useful for?",
+          "options": [
+            "Elderly people and those with disabilities.",
+            "Only rich families.",
+            "Children who hate school.",
+            "People who never use phones."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'especially useful for elderly people and people with disabilities' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A House Under a Glass Dome",
+      "topic_cn": "说明·玻璃穹顶之家",
+      "body": "Imagine a home built under a huge glass dome. Because you are always indoors, it needs only a tiny amount of energy to stay warm, and most of that power comes from solar panels in the round roof above you. At the heart of the house sits a home computer that acts as a quiet electronic servant. It controls the temperature, the humidity and the lighting, and it even pays your bills and orders your food. Having friends over? Push a button and the walls move backwards to make the living room larger; push it again and the room shrinks once your guests have gone. There are no electric sockets here. Instead, each room has a power wall, and you simply attach any appliance you like to its surface. The good old duster is gone, too, for the air is filtered and then scented with your favourite perfume. Such a home brings nature close while keeping you safe and comfortable inside.",
+      "vocab_notes": [
+        {
+          "word": "dome",
+          "cn": "穹顶"
+        },
+        {
+          "word": "humidity",
+          "cn": "湿度"
+        },
+        {
+          "word": "socket",
+          "cn": "插座"
+        },
+        {
+          "word": "scent",
+          "cn": "使具香味"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the dome house need very little energy to heat?",
+          "options": [
+            "Because nobody lives in it.",
+            "Because you stay indoors and solar panels supply the power.",
+            "Because the windows are always open.",
+            "Because it is never used in winter."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'always indoors… most of that power comes from solar panels' 的转述。"
+        },
+        {
+          "stem": "How do you change the size of the living room?",
+          "options": [
+            "You wait for the dome to grow.",
+            "You ask a servant to rebuild it.",
+            "You push a button to move the walls.",
+            "You turn off the lights."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Push a button and the walls move backwards… push it again and the room shrinks' 的转述。"
+        },
+        {
+          "stem": "What replaces the electric sockets in this house?",
+          "options": [
+            "A large battery box.",
+            "Long cables on the floor.",
+            "Nothing at all.",
+            "A power wall you attach appliances to."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'each room has a power wall… attach any appliance' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "When Robots Take Over the Jobs",
+      "topic_cn": "议论·机器人取代工作",
+      "body": "In the world of 2050, robots are everywhere, and people simply call them zoids. When they first appeared on the market around 2030, everyone wanted one, and twenty years later they have taken over almost every kind of work. Zoids labour in factories and laboratories, fix teeth and even perform surgery in hospitals. One boy's father used to be a surgeon, but he changed his job once people found that zoids could operate with less room for error than any human hand. Food, too, is now grown in laboratories rather than in fields, and every home receives just enough of it, no more and no less, because the planet can no longer deal with overpopulation. Some people welcome this change, saying that machines free us from boring and dangerous tasks. Others worry that humans may slowly forget how to do things for themselves. Whether we like it or not, such a future seems to be on its way, and we will have to decide what kind of work we still want to keep.",
+      "vocab_notes": [
+        {
+          "word": "perform",
+          "cn": "执行;做"
+        },
+        {
+          "word": "error",
+          "cn": "差错"
+        },
+        {
+          "word": "overpopulation",
+          "cn": "人口过剩"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the boy's father stop working as a surgeon?",
+          "options": [
+            "Zoids could operate more accurately than people.",
+            "He grew too old for the job.",
+            "Hospitals closed in 2050.",
+            "He decided to grow food instead."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'zoids could operate with less room for error than any human hand' 的转述。"
+        },
+        {
+          "stem": "Why does each home receive only a limited amount of food?",
+          "options": [
+            "Because too many people now share too little space.",
+            "Because Earth now holds far too many people for its space.",
+            "Because robots eat most of it.",
+            "Because people prefer to stay hungry."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'just enough… because the planet can no longer deal with overpopulation' 的转述。"
+        },
+        {
+          "stem": "What worries some people about a world full of zoids?",
+          "options": [
+            "That robots will run out of power.",
+            "That food will taste strange.",
+            "That people might lose the skill of looking after themselves.",
+            "That factories will be too quiet."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'humans may slowly forget how to do things for themselves' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Lina, My Family's Housekeeper",
+      "topic_cn": "记叙·家用机器人 X15",
+      "body": "My lights turn on by themselves each morning, and at ten to seven the house gently wakes me up. Still sleepy, I find my school uniform in the wardrobe, already washed, ironed and hung up the night before by Lina X15, my family's housekeeper. When I was little, she was my nanny, and she has been by my side for my whole life. My parents had no time for children back then, so they bought Lina, who had been advertised as a reliable helper, to look after me. Almost every family has an X15 today. My breakfast is always waiting for me in the kitchen, planned and served in a carefully controlled quantity. As I leave my room, I feel a light tap on my shoulder and turn around. It is Lina, her metallic voice echoing softly through the room, reminding me not to be late for school. 'On my way,' I answer, and I promise to be home again by six. Sometimes I wonder what life would be like without her.",
+      "vocab_notes": [
+        {
+          "word": "wardrobe",
+          "cn": "衣柜"
+        },
+        {
+          "word": "nanny",
+          "cn": "保姆"
+        },
+        {
+          "word": "quantity",
+          "cn": "数量"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the writer's parents buy Lina?",
+          "options": [
+            "They wanted a robot to drive their car.",
+            "They were told every house must own one.",
+            "They hoped to sell her later.",
+            "They were too busy to raise him and wanted a helper."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'My parents had no time for children… bought Lina… to look after me' 的转述。"
+        },
+        {
+          "stem": "What had Lina done with the uniform before the boy woke up?",
+          "options": [
+            "She had washed, ironed and hung it up.",
+            "She had hidden it in the attic.",
+            "She had thrown it away.",
+            "She had sold it at the market."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'already washed, ironed and hung up the night before' 的转述。"
+        },
+        {
+          "stem": "How does the writer seem to feel about Lina by the end?",
+          "options": [
+            "Angry and afraid of her.",
+            "Thoughtful, even a little attached to her.",
+            "Bored and uninterested.",
+            "Sure that he no longer needs her."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'I wonder what life would be like without her' 暗示依赖与思考的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A City of Grey Towers",
+      "topic_cn": "记叙·未来城市景观",
+      "body": "I walk to the window and look out over the landscape of my city. All I can see are buildings and the tunnels that interconnect them. Grey skyscrapers rise everywhere, and they are all identical, like boxes stacked toward the sky. I try to spot my school, which is just over to the right, but it looks the same as every other tower around it. Today a lecturer is coming to speak to us about the extinction of animals such as the polar bear and the elephant. I find it strange that, even with all our clever technology, we still could not save them. To reach school, we go down sixty floors and walk through the tunnels with the other children in our building. We have always breathed recycled air, and none of us has ever been outside. I often wonder what the open sky feels like, and whether the wind is warm or cold. Perhaps one day Lina can explain it to me, or perhaps I will simply have to imagine it.",
+      "vocab_notes": [
+        {
+          "word": "landscape",
+          "cn": "景色"
+        },
+        {
+          "word": "skyscraper",
+          "cn": "摩天大楼"
+        },
+        {
+          "word": "identical",
+          "cn": "完全相同的"
+        },
+        {
+          "word": "recycle",
+          "cn": "回收利用"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer see when looking out of the window?",
+          "options": [
+            "Green fields and rivers.",
+            "A busy market by the sea.",
+            "Grey towers and connecting tunnels that all look alike.",
+            "Animals running in the wild."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Grey skyscrapers… all identical… tunnels that interconnect them' 的转述。"
+        },
+        {
+          "stem": "What does the writer find strange about their technology?",
+          "options": [
+            "That it makes the city too colourful.",
+            "That it cannot build tall towers.",
+            "That it works only at night.",
+            "That it could not save animals from dying out."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'even with all our clever technology, we still could not save them' 的转述。"
+        },
+        {
+          "stem": "Why has the writer never felt the open sky?",
+          "options": [
+            "Because the children live indoors and breathe recycled air.",
+            "Because the school has no windows.",
+            "Because the city is always dark.",
+            "Because the wind is forbidden."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'always breathed recycled air, and none of us has ever been outside' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "What Will Future Humans Be Like",
+      "topic_cn": "说明·未来人类的样子",
+      "body": "Scientists enjoy guessing how human beings might change over the next thousands of years. Some believe we will keep growing taller, since better food and care help each new generation reach a greater height. Because we will use our brains more and more, the forehead may grow larger to make room inside the head. Our eyes, which we rely on so heavily to read screens, are likely to become stronger over a very long period of time. Arms and legs, on the other hand, may grow weaker, for machines now do much of the heavy work that muscles once handled. Fingers, however, could become more skilful, as we use them all day long to tap and type. Even hair might one day disappear from the body, simply because it no longer serves any clear purpose. Of course, no one can be certain that these predictions will come true. They are only educated guesses, yet they remind us that, just like our homes and cities, human beings themselves never stop changing.",
+      "vocab_notes": [
+        {
+          "word": "generation",
+          "cn": "一代人"
+        },
+        {
+          "word": "forehead",
+          "cn": "前额"
+        },
+        {
+          "word": "purpose",
+          "cn": "目的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why might the human forehead grow larger in the future?",
+          "options": [
+            "Because people will wear bigger hats.",
+            "Because greater use of the brain may need more space.",
+            "Because the air will be cleaner.",
+            "Because hair will cover it."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'use our brains more… the forehead may grow larger to make room' 的转述。"
+        },
+        {
+          "stem": "Why might arms and legs become weaker?",
+          "options": [
+            "Because people will stop eating well.",
+            "Because the weather will get colder.",
+            "Because machines do most of the heavy work for us.",
+            "Because we will grow much taller."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'machines now do much of the heavy work that muscles once handled' 的转述。"
+        },
+        {
+          "stem": "How does the writer describe these ideas about the future?",
+          "options": [
+            "As proven scientific facts.",
+            "As silly stories with no value.",
+            "As warnings of certain danger.",
+            "As educated guesses that may or may not come true."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'only educated guesses… no one can be certain' 的转述。"
+        }
+      ]
+    }
+  ]
+}

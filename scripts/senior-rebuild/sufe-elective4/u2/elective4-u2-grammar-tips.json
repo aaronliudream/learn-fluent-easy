@@ -1,0 +1,36 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "非谓语动词速查:-ing / -ed 分词与不定式",
+    "intro": "非谓语动词不能单独作谓语,也不受主谓一致影响。判断三步:① 看它在句中作什么(宾语/定语/状语…);② 看与逻辑主语是主动还是被动;③ 看前面的动词或结构有没有固定搭配。",
+    "table": {
+      "headers": ["形式", "核心含义", "常见用法"],
+      "rows": [
+        ["to do(不定式)", "表将要做、目的、结果", "作主语/宾语;表目的(to/in order to);too…to、enough to;adj.+to do"],
+        ["-ing(现在分词/动名词)", "表主动、正在进行", "作动名词宾语(enjoy/finish/avoid doing);作定语(a growing market)/状语(主动)"],
+        ["-ed(过去分词)", "表被动、已完成", "作定语(imported goods)/状语(被动);作表语/补语"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "只接动名词的动词:enjoy/finish/avoid/suggest/consider/mind/practise/keep/admit/give up", "mark": "finish signing √ / finish to sign ×" },
+      { "rule": "只接不定式的动词:decide/hope/agree/offer/refuse/manage/plan/promise/afford/expect", "mark": "decide to expand √ / decide expanding ×" },
+      { "rule": "分词作定语/状语:主动且'正在/发出'→ -ing;被动且'被…/已完成'→ -ed", "mark": "a growing economy(主动) / goods produced here(被动)" },
+      { "rule": "固定结构后只用不定式:too…to、enough to、the way/first/best…to、be likely/ready/willing/able to", "mark": "too expensive to sell;the best way to cut costs" }
+    ],
+    "why": [
+      "-ing 与 -ed 的根本区别是'主动 vs 被动':名词自己发出动作用 -ing,名词承受动作用 -ed;同理状语中,逻辑主语主动用 -ing,被动用 -ed。",
+      "动名词与不定式哪个作宾语,主要由前面的动词决定,属固定搭配,需要记忆,但多数有'已发生(doing)/将要做(to do)'的语感规律。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给动词原形,要求填 doing / to do / done;先判成分再判主被动。",
+      "分词作状语要找逻辑主语,避免'悬垂分词';目的状语优先用 to do 或 in order to do。",
+      "remember/forget/stop/try + doing 与 + to do 含义不同(高考易考,但本单元以单义动词为主)。"
+    ],
+    "examVsReal": [
+      { "exam": "In order to save money, we made a plan.(考试/书面)", "real": "To save money, we made a plan. / We made a plan to save money.", "note": "口语里 in order 常省略,直接 to do 表目的即可。" },
+      { "exam": "The goods produced here are cheap.(考试用过去分词)", "real": "The goods (that are) produced here are cheap.", "note": "过去分词作定语本质是被动定语从句的省略形式。" }
+    ]
+  }
+}

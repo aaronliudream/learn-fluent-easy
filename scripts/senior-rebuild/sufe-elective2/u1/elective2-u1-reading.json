@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Scientists",
+  "source": "上外版选择性必修第二册 Unit 1 同主题阅读(钟扬种子库/罗莎琳·富兰克林/史蒂芬·霍金/居里夫人/简·古道尔/格蕾丝·霍珀)。词限本单元/初中/常见词，答案转述非照抄，4选项唯一，与完形/听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Saving Seeds for the Future",
+      "topic_cn": "人物·钟扬与种子库",
+      "body": "Zhong Yang was a biology professor who gave much of his life to collecting plant seeds on the high Qinghai-Tibet Plateau. He believed that seeds were a treasure for the years to come. A seed bank, he explained, keeps seeds safe and may one day be useful for medicine or farming. It also protects the rich variety of plant life on our planet. The work was far from easy. Zhong and his students walked huge distances every year, often climbing higher than four thousand metres. The weather changed quickly, and they sometimes fell ill because of plant allergies. To save time, they ate only one simple meal a day. Yet they never stopped. Zhong also cared deeply about education, so he helped build new science programmes at Tibet University. Even after a serious illness, he kept working until a car accident took his life in 2017. He once said that work which helps others is always worth the price.",
+      "vocab_notes": [
+        {
+          "word": "plateau",
+          "cn": "高原"
+        },
+        {
+          "word": "variety",
+          "cn": "多样性"
+        },
+        {
+          "word": "allergy",
+          "cn": "过敏"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Zhong Yang think the seeds were so important?",
+          "options": [
+            "They might be useful for medicine and farming later on.",
+            "They were easy to sell for a high price.",
+            "They could replace every modern plant.",
+            "They were only useful as food for animals."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说种子库的种子'may one day be useful for medicine or farming'的转述。"
+        },
+        {
+          "stem": "What made the seed-collecting work so hard?",
+          "options": [
+            "A lack of money to buy seeds.",
+            "Long walks, high mountains, fast weather changes and illness.",
+            "Too many helpers on the team.",
+            "The seeds were too heavy to carry."
+          ],
+          "answer_index": 1,
+          "explanation": "原文提到走长路、登高山、天气多变、因过敏生病等困难的概括。"
+        },
+        {
+          "stem": "Besides science, what else did Zhong care about?",
+          "options": [
+            "Improving education in Tibet.",
+            "Becoming rich and famous.",
+            "Building a large factory.",
+            "Travelling around the world for fun."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'cared deeply about education… build new science programmes' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Woman Behind the DNA Photo",
+      "topic_cn": "人物·罗莎琳·富兰克林",
+      "body": "Rosalind Franklin was a British scientist who helped the world understand the shape of DNA. Using a special X-ray method, she produced a famous image that showed important clues about its structure. She was careful and patient, and she wanted more evidence before announcing anything. While she waited, two other scientists got hold of her data without asking. Soon they published a model of DNA that was built on her photograph. Years later, those scientists won a great prize, but Franklin received almost no credit for the key information she had given them. Life in science was not fair to her. As the only woman on the project, she could not even share lunch with the male scientists or join their discussions after work. Still, she never lost heart. She took up every challenge so that she could do what she loved most. Sadly, she fell ill and died young, before the world fully understood how much it owed her.",
+      "vocab_notes": [
+        {
+          "word": "evidence",
+          "cn": "证据"
+        },
+        {
+          "word": "credit",
+          "cn": "认可"
+        },
+        {
+          "word": "data",
+          "cn": "数据"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Franklin's famous X-ray image help to show?",
+          "options": [
+            "A cure for a common disease.",
+            "Clues about the shape of DNA.",
+            "How to build a faster computer.",
+            "The age of an ancient rock."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'showed important clues about its structure'(指 DNA)的转述。"
+        },
+        {
+          "stem": "Why did she wait before announcing her findings?",
+          "options": [
+            "She had forgotten her own results.",
+            "She was told to keep them secret.",
+            "She wanted to be sure by collecting more proof.",
+            "She did not believe in her own work."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'careful and patient… wanted more evidence' 的转述。"
+        },
+        {
+          "stem": "How does the writer present Franklin's treatment in science?",
+          "options": [
+            "As easy and full of rewards.",
+            "As fair and equal to everyone.",
+            "As unimportant to her career.",
+            "As unfair, especially because she was a woman."
+          ],
+          "answer_index": 3,
+          "explanation": "原文描述她不被尊重、得不到认可，体现作者认为对她不公平。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Mind That Never Stopped",
+      "topic_cn": "人物·史蒂芬·霍金",
+      "body": "When Stephen Hawking was twenty-one, doctors found that he had a serious disease and told him he would live only a few years. The news was hard to accept, and at first he thought his life was over. But Hawking proved the doctors wrong in a remarkable way. He went on living and working for more than fifty years. As the illness grew worse, it slowly took away his power to move and even to speak. With the help of a special machine, he could still share his ideas with the world, and he wrote books that millions of people read. Looking back near the end of his life, he wrote that he could feel quietly satisfied with all he had done. His story shows that a strong mind can be far more powerful than a weak body. Today many young people are still inspired by his courage and his refusal to give up, no matter how difficult life became.",
+      "vocab_notes": [
+        {
+          "word": "disease",
+          "cn": "疾病"
+        },
+        {
+          "word": "satisfied",
+          "cn": "满意的"
+        },
+        {
+          "word": "inspire",
+          "cn": "鼓舞"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the doctors tell Hawking when he was twenty-one?",
+          "options": [
+            "That he would only live for a few more years.",
+            "That his disease was not serious at all.",
+            "That he should stop studying science.",
+            "That he would soon be completely cured."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'told him he would live only a few years' 的转述。"
+        },
+        {
+          "stem": "How did Hawking keep sharing his ideas after losing his speech?",
+          "options": [
+            "By writing with his own hand.",
+            "By using a special machine.",
+            "By asking others to speak for him.",
+            "By giving up his research."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'with the help of a special machine, he could still share his ideas' 的转述。"
+        },
+        {
+          "stem": "What main message does the writer want readers to take away?",
+          "options": [
+            "Good health is the only key to success.",
+            "Science is too hard for most people.",
+            "A determined mind can be stronger than a weak body.",
+            "Fame matters more than courage."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'a strong mind can be far more powerful than a weak body' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Twice a Nobel Winner",
+      "topic_cn": "人物·居里夫人",
+      "body": "Marie Curie is one of the most famous scientists in history, and she is remembered for a very rare achievement. She won the Nobel Prize not once but twice, in two different areas of science. This had never been done by a woman before her. Curie spent long hours in a cold, poorly equipped room, studying materials that few people understood at the time. The work was slow and sometimes dangerous, yet she carried on with great patience. Like many women of her day, she had to prove herself again and again in a world that did not expect women to be scientists. She believed that nothing in life should be feared; it should only be understood. Her discoveries opened new doors in both physics and medicine, and they continue to help doctors and researchers today. Curie's story reminds us that curiosity, hard work and courage matter just as much as natural talent.",
+      "vocab_notes": [
+        {
+          "word": "achievement",
+          "cn": "成就"
+        },
+        {
+          "word": "patience",
+          "cn": "耐心"
+        },
+        {
+          "word": "curiosity",
+          "cn": "好奇心"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Marie Curie's achievement described as rare?",
+          "options": [
+            "She was the youngest scientist ever.",
+            "She never published any work.",
+            "She worked completely alone all her life.",
+            "She earned the Nobel Prize twice, in two separate fields of science."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'won the Nobel Prize not once but twice, in two different areas' 的转述。"
+        },
+        {
+          "stem": "What were her working conditions like?",
+          "options": [
+            "A cold room with poor equipment.",
+            "A warm and modern laboratory.",
+            "A busy and crowded factory.",
+            "A quiet seaside house."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a cold, poorly equipped room' 的转述。"
+        },
+        {
+          "stem": "According to the last lines, what does Curie's story teach us?",
+          "options": [
+            "Only talent decides success.",
+            "Courage and hard work count for as much as talent does.",
+            "Science is best left to men.",
+            "Money is the key to discovery."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'curiosity, hard work and courage matter just as much as natural talent' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Life Among the Chimpanzees",
+      "topic_cn": "人物·简·古道尔",
+      "body": "Jane Goodall is a scientist who is famous for her work on animal behaviour, especially that of chimpanzees. As a young woman, she travelled to Africa with little training but a great love of animals. Instead of watching the animals from far away, she lived close to them in the forest for many years. She gave the chimpanzees names rather than numbers, and she watched them patiently, day after day. Slowly she discovered that they could make and use simple tools, something many people had believed only humans could do. Her findings surprised scientists around the world and changed the way we think about animals. Goodall also learned that protecting wild animals means protecting the places where they live. Today she travels widely, telling young people that every one of us can make a difference. Her story shows that careful watching, patience and respect can lead to discoveries that books alone could never give.",
+      "vocab_notes": [
+        {
+          "word": "behaviour",
+          "cn": "行为"
+        },
+        {
+          "word": "tool",
+          "cn": "工具"
+        },
+        {
+          "word": "patiently",
+          "cn": "耐心地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Goodall choose to study the chimpanzees?",
+          "options": [
+            "By keeping them in a small cage.",
+            "By reading about them in books only.",
+            "By living near them in the wild for several years.",
+            "By watching them on television."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'lived close to them in the forest for many years' 的转述。"
+        },
+        {
+          "stem": "What surprising discovery did she make?",
+          "options": [
+            "Chimpanzees can speak human languages.",
+            "Chimpanzees never eat plants.",
+            "Chimpanzees cannot live in groups.",
+            "Chimpanzees are able to make and use basic tools."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'they could make and use simple tools' 的转述。"
+        },
+        {
+          "stem": "What does Goodall tell young people today?",
+          "options": [
+            "That each person can make a difference.",
+            "That only experts can help animals.",
+            "That science is a waste of time.",
+            "That forests should be cut down."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'every one of us can make a difference' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Mother of Computer Software",
+      "topic_cn": "人物·格蕾丝·霍珀",
+      "body": "Grace Hopper was one of the most important people in the early development of computer software. In her time, computers were huge machines that filled whole rooms, and very few people knew how to use them. Hopper believed that ordinary people should be able to give computers instructions using words that were easy to understand, not just difficult numbers. Many experts told her that this idea would never work, but she refused to give up. After years of patient effort, she helped create a new way of writing instructions that was much closer to everyday English. Her work made computers far easier to use and opened the door for the software we depend on today. Hopper was also a famous teacher who loved to encourage young people to try new things. She often said that the most dangerous phrase in any language is 'We have always done it this way.' Her courage to question old habits changed the world of computing forever.",
+      "vocab_notes": [
+        {
+          "word": "software",
+          "cn": "软件"
+        },
+        {
+          "word": "instruction",
+          "cn": "指令"
+        },
+        {
+          "word": "depend",
+          "cn": "依靠"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Hopper want ordinary people to be able to do?",
+          "options": [
+            "Build computers in their own homes.",
+            "Give computers instructions using easy words.",
+            "Sell computers around the world.",
+            "Stop using computers completely."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'give computers instructions using words that were easy to understand' 的转述。"
+        },
+        {
+          "stem": "How did many experts react to her idea at first?",
+          "options": [
+            "They quickly agreed with her.",
+            "They asked her to lead them.",
+            "They thought it would never work.",
+            "They had never heard of computers."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'many experts told her that this idea would never work' 的转述。"
+        },
+        {
+          "stem": "What does her favourite phrase about old habits suggest?",
+          "options": [
+            "We should always do things the same way.",
+            "Computers can never be improved.",
+            "New ideas are usually a mistake.",
+            "We should be ready to question the old way of doing things."
+          ],
+          "answer_index": 3,
+          "explanation": "她认为'We have always done it this way'最危险，说明应敢于质疑旧习惯。"
+        }
+      ]
+    }
+  ]
+}

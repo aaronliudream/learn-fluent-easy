@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(艺术主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mei first joined the painting club, she could draw only simple shapes and often felt shy about her work. Instead of giving up, she practised a little every day and asked her teacher whenever she was unsure. By the end of the year, one of her ink paintings was chosen for the school exhibition, and she felt proud of how far her daily effort had taken her.",
+    "questions": [
+      {
+        "q": "What did Mei do instead of giving up?",
+        "options": [
+          "She practised daily and asked her teacher when unsure.",
+          "She left the painting club at once.",
+          "She copied other students' work.",
+          "She only watched others paint."
+        ],
+        "answer": "A",
+        "explanation": "原文说她每天练习并在不确定时请教老师,转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Mei feel at the end of the year?",
+        "options": [
+          "Shy and disappointed.",
+          "Proud of what her daily effort had achieved.",
+          "Sorry that she had started painting.",
+          "Bored with art."
+        ],
+        "answer": "B",
+        "explanation": "末句说她为每日努力的成果感到自豪(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

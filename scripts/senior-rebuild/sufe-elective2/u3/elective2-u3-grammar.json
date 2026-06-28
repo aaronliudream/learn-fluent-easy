@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grammar_title": "动名词(-ing 形式作主语 / 宾语)",
+  "source": "上外版选择性必修二 Unit 3 Grammar in Use:-ing forms used as subjects and objects(动名词作主语、动词宾语、介词宾语)。句子地道、慈善主题、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "动名词作主语(谓语用单数)",
+      "overview": "动词的 -ing 形式可像名词一样作句子主语,表泛指/经常性的行为;作主语时被看作一个整体,谓语动词用单数(is/makes/...)。"
+    },
+    {
+      "code": "u3.02",
+      "point": "动名词作动词宾语",
+      "overview": "enjoy, finish, mind, admit, avoid, consider, suggest, keep, practise, deny, imagine, give up, feel like, can't help 等动词后只接 -ing 形式作宾语,不接 to do。"
+    },
+    {
+      "code": "u3.03",
+      "point": "动名词作介词宾语",
+      "overview": "介词(for, at, in, of, by, before, after, without, instead of 等)以及 look forward to / be used to / be committed to 中作介词的 to 后,只能接 -ing 形式。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "____ to a food bank helps families who have nothing to eat.",
+      "options": [
+        "Donating",
+        "Donate",
+        "Donates",
+        "Donated"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语应用动名词 → Donating;原形/三单/过去式都不能作主语。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ used books gives them a useful second life.",
+      "options": [
+        "Collect",
+        "Collecting",
+        "Collects",
+        "Collected"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位置用动名词 → Collecting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the elderly at the nursing home brings them great joy.",
+      "options": [
+        "Visit",
+        "Visits",
+        "Visiting",
+        "Visited"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语用动名词 → Visiting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ money for the village school is not always easy.",
+      "options": [
+        "Raise",
+        "Raises",
+        "Raised",
+        "Raising"
+      ],
+      "answer_index": 3,
+      "explanation": "主语用动名词 → Raising。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ others in trouble is something we can all do.",
+      "options": [
+        "Helping",
+        "Help",
+        "Helps",
+        "Helped"
+      ],
+      "answer_index": 0,
+      "explanation": "作主语用动名词 → Helping。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ at the animal shelter taught me real responsibility.",
+      "options": [
+        "Volunteer",
+        "Volunteering",
+        "Volunteers",
+        "Volunteered"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位置用动名词 → Volunteering。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ warm clothes to the homeless is a truly kind act.",
+      "options": [
+        "Give",
+        "Gives",
+        "Giving",
+        "Gave"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语用动名词 → Giving。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ part in the charity run made the whole class proud.",
+      "options": [
+        "Take",
+        "Takes",
+        "Took",
+        "Taking"
+      ],
+      "answer_index": 3,
+      "explanation": "主语用动名词 → Taking。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ for a stranger's coffee can brighten their whole day.",
+      "options": [
+        "Paying",
+        "Pay",
+        "Pays",
+        "Paid"
+      ],
+      "answer_index": 0,
+      "explanation": "作主语用动名词 → Paying。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ kindness to others often costs very little.",
+      "options": [
+        "Show",
+        "Showing",
+        "Shows",
+        "Showed"
+      ],
+      "answer_index": 1,
+      "explanation": "主语用动名词 → Showing。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Helping people in need ____ a rewarding experience for everyone.",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "be"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作主语视作单数,谓语用 is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Donating blood ____ the lives of strangers every single day.",
+      "options": [
+        "save",
+        "are saving",
+        "were saving",
+        "saves"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语用单数谓语 → saves。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Volunteering at the shelter ____ a lot of patience and care.",
+      "options": [
+        "requires",
+        "require",
+        "are requiring",
+        "were requiring"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词主语用单数 → requires。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Caring for sick animals ____ hard but meaningful work.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "being"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作主语用单数 → is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Giving without expecting anything back ____ true kindness.",
+      "options": [
+        "show",
+        "are showing",
+        "shows",
+        "were showing"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词主语用单数 → shows。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Raising money for the village school ____ our main goal this term.",
+      "options": [
+        "remain",
+        "are remaining",
+        "were remaining",
+        "remains"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语用单数 → remains。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Reading to blind children ____ them a window into wonderful stories.",
+      "options": [
+        "gives",
+        "give",
+        "are giving",
+        "were giving"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词主语用单数 → gives。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Collecting old toys for the hospital ____ the sick children very happy.",
+      "options": [
+        "make",
+        "makes",
+        "are making",
+        "were making"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词主语用单数 → makes。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Teaching young kids about charity ____ not always easy.",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "be"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作主语用单数 → is。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Sharing food with the hungry ____ a real difference in their lives.",
+      "options": [
+        "make",
+        "are making",
+        "were making",
+        "makes"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词主语用单数 → makes。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She enjoys ____ at the local food bank every weekend.",
+      "options": [
+        "helping",
+        "help",
+        "to help",
+        "helped"
+      ],
+      "answer_index": 0,
+      "explanation": "enjoy 后只接动名词 → helping。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We have finished ____ all the donated clothes by size.",
+      "options": [
+        "sort",
+        "sorting",
+        "to sort",
+        "sorted"
+      ],
+      "answer_index": 1,
+      "explanation": "finish 后接动名词 → sorting。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He suggested ____ a charity sale at the school next month.",
+      "options": [
+        "hold",
+        "to hold",
+        "holding",
+        "held"
+      ],
+      "answer_index": 2,
+      "explanation": "suggest 后接动名词 → holding。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Would you mind ____ these boxes of food to the truck?",
+      "options": [
+        "carry",
+        "to carry",
+        "carried",
+        "carrying"
+      ],
+      "answer_index": 3,
+      "explanation": "mind 后接动名词 → carrying。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The volunteers kept ____ until every family had been served.",
+      "options": [
+        "working",
+        "work",
+        "to work",
+        "worked"
+      ],
+      "answer_index": 0,
+      "explanation": "keep 后接动名词 → working。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "They are considering ____ a fund for the flood victims.",
+      "options": [
+        "start",
+        "starting",
+        "to start",
+        "started"
+      ],
+      "answer_index": 1,
+      "explanation": "consider 后接动名词 → starting。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "I can't help ____ sorry for the homeless man out in the cold.",
+      "options": [
+        "feel",
+        "to feel",
+        "feeling",
+        "felt"
+      ],
+      "answer_index": 2,
+      "explanation": "can't help doing 忍不住做 → feeling。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He admitted ____ the donation box at home by mistake.",
+      "options": [
+        "leave",
+        "to leave",
+        "left",
+        "leaving"
+      ],
+      "answer_index": 3,
+      "explanation": "admit 后接动名词 → leaving。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Please try to avoid ____ food; give it to charity instead.",
+      "options": [
+        "wasting",
+        "waste",
+        "to waste",
+        "wasted"
+      ],
+      "answer_index": 0,
+      "explanation": "avoid 后接动名词 → wasting。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Our class practises ____ kindness in small ways every day.",
+      "options": [
+        "show",
+        "showing",
+        "to show",
+        "showed"
+      ],
+      "answer_index": 1,
+      "explanation": "practise 后接动名词 → showing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She doesn't mind ____ extra hours to prepare the charity event.",
+      "options": [
+        "spend",
+        "to spend",
+        "spending",
+        "spent"
+      ],
+      "answer_index": 2,
+      "explanation": "mind 后接动名词 → spending。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The children enjoyed ____ gift bags for the kids in hospital.",
+      "options": [
+        "make",
+        "to make",
+        "made",
+        "making"
+      ],
+      "answer_index": 3,
+      "explanation": "enjoy 后接动名词 → making。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "After the storm, the team didn't give up ____ for the lost dog.",
+      "options": [
+        "searching",
+        "search",
+        "to search",
+        "searched"
+      ],
+      "answer_index": 0,
+      "explanation": "give up 后接动名词 → searching。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The shop owner suggested ____ the unsold bread to a shelter.",
+      "options": [
+        "donate",
+        "donating",
+        "to donate",
+        "donated"
+      ],
+      "answer_index": 1,
+      "explanation": "suggest 后接动名词 → donating。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We must keep ____ people about the cause until everyone knows.",
+      "options": [
+        "tell",
+        "to tell",
+        "telling",
+        "told"
+      ],
+      "answer_index": 2,
+      "explanation": "keep 后接动名词 → telling。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Do you feel like ____ in the charity marathon this year?",
+      "options": [
+        "run",
+        "to run",
+        "ran",
+        "running"
+      ],
+      "answer_index": 3,
+      "explanation": "feel like doing 想做 → running。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He denied ____ the credit for the donation, though it was his idea.",
+      "options": [
+        "taking",
+        "take",
+        "to take",
+        "took"
+      ],
+      "answer_index": 0,
+      "explanation": "deny 后接动名词 → taking。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Imagine ____ a whole village with clean water to drink.",
+      "options": [
+        "provide",
+        "providing",
+        "to provide",
+        "provided"
+      ],
+      "answer_index": 1,
+      "explanation": "imagine 后接动名词 → providing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The patients enjoy ____ songs sung by the visiting students.",
+      "options": [
+        "hear",
+        "to hear",
+        "hearing",
+        "heard"
+      ],
+      "answer_index": 2,
+      "explanation": "enjoy 后接动名词 → hearing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Have you finished ____ the posters for the book drive?",
+      "options": [
+        "design",
+        "to design",
+        "designed",
+        "designing"
+      ],
+      "answer_index": 3,
+      "explanation": "finish 后接动名词 → designing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Thank you for ____ us with the charity sale all afternoon.",
+      "options": [
+        "helping",
+        "help",
+        "to help",
+        "helped"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 for 后接动名词 → helping。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She is very good at ____ money for worthy causes.",
+      "options": [
+        "raise",
+        "raising",
+        "to raise",
+        "raised"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 at 后接动名词 → raising。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Instead of ____ the old clothes away, they gave them to charity.",
+      "options": [
+        "throw",
+        "to throw",
+        "throwing",
+        "threw"
+      ],
+      "answer_index": 2,
+      "explanation": "instead of 后接动名词 → throwing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We raised a lot of money by ____ homemade cakes at the fair.",
+      "options": [
+        "sell",
+        "to sell",
+        "sold",
+        "selling"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 by 后接动名词 → selling。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "He is interested in ____ for the homeless shelter this winter.",
+      "options": [
+        "volunteering",
+        "volunteer",
+        "to volunteer",
+        "volunteered"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 in 后接动名词 → volunteering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "I'm really looking forward to ____ part in next month's charity run.",
+      "options": [
+        "take",
+        "taking",
+        "to take",
+        "took"
+      ],
+      "answer_index": 1,
+      "explanation": "look forward to 的 to 是介词,后接动名词 → taking。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Before ____ the event, we made a careful plan together.",
+      "options": [
+        "organise",
+        "to organise",
+        "organising",
+        "organised"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 before 后接动名词 → organising。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "After ____ all the donations, the team thanked everyone warmly.",
+      "options": [
+        "count",
+        "to count",
+        "counted",
+        "counting"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 after 后接动名词 → counting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "They succeeded in ____ enough money to rebuild the school.",
+      "options": [
+        "collecting",
+        "collect",
+        "to collect",
+        "collected"
+      ],
+      "answer_index": 0,
+      "explanation": "succeed in 的 in 后接动名词 → collecting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She thanked the volunteers for ____ their whole weekend to help.",
+      "options": [
+        "give",
+        "giving",
+        "to give",
+        "gave"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 for 后接动名词 → giving。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We can make a difference by ____ just a little of our time.",
+      "options": [
+        "offer",
+        "to offer",
+        "offering",
+        "offered"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 by 后接动名词 → offering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "He is very keen on ____ at the animal shelter on Saturdays.",
+      "options": [
+        "work",
+        "to work",
+        "worked",
+        "working"
+      ],
+      "answer_index": 3,
+      "explanation": "be keen on 的 on 后接动名词 → working。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "They have got used to ____ food to the shelter every Friday.",
+      "options": [
+        "bringing",
+        "bring",
+        "to bring",
+        "brought"
+      ],
+      "answer_index": 0,
+      "explanation": "be/get used to 的 to 是介词,后接动名词 → bringing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Everyone is capable of ____ kindness to others in some way.",
+      "options": [
+        "show",
+        "showing",
+        "to show",
+        "showed"
+      ],
+      "answer_index": 1,
+      "explanation": "be capable of 的 of 后接动名词 → showing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Apart from ____ clothes, you can also donate books and toys.",
+      "options": [
+        "donate",
+        "to donate",
+        "donating",
+        "donated"
+      ],
+      "answer_index": 2,
+      "explanation": "apart from 后接动名词 → donating。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She left the party without ____ anyone how much she had given.",
+      "options": [
+        "tell",
+        "to tell",
+        "told",
+        "telling"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 without 后接动名词 → telling。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We are committed to ____ clean water to the whole village.",
+      "options": [
+        "providing",
+        "provide",
+        "to provide",
+        "provided"
+      ],
+      "answer_index": 0,
+      "explanation": "be committed to 的 to 是介词,后接动名词 → providing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "He felt very proud of ____ a difference in his own community.",
+      "options": [
+        "make",
+        "making",
+        "to make",
+        "made"
+      ],
+      "answer_index": 1,
+      "explanation": "be proud of 的 of 后接动名词 → making。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The poster is about ____ warm coats for the winter charity drive.",
+      "options": [
+        "gather",
+        "to gather",
+        "gathering",
+        "gathered"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 about 后接动名词 → gathering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Thank you for ____ so generously to such a worthy cause.",
+      "options": [
+        "contribute",
+        "to contribute",
+        "contributed",
+        "contributing"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 for 后接动名词 → contributing。"
+    }
+  ]
+}

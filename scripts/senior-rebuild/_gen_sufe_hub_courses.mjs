@@ -1,11 +1,25 @@
 // 生成上外(sufe)hub 课本结构数据 -> src/data/gaokaoHub/sufe-courses.json
-// 形如 { "1": GradeCourseDef, "2": {...空}, "3": {...空} }。只含已灌库(DB有内容)的 required1+required2。
+// 形如 { "1": GradeCourseDef, "2": GradeCourseDef, "3": GradeCourseDef }。上外全 7 册。
+// 年级分组(对齐人教):高一=必修1/2/3,高二=选必1/2,高三=选必3/4。
 // 9关全部 DB 驱动(按 grade+book+unitKey+publisher),内联只给 writing/finalReading/(hub.json有则补 reading/听力/quiz)。
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
-const BOOKS = ['required1', 'required2'];
-const PREFIX = { required1: 's1', required2: 's2' };
-const COURSE_NAME = '高一';
+// 每个 grade 含哪些册(顺序 = hub 学期顺序)。
+const GRADE_BOOKS = {
+  1: ['required1', 'required2', 'required3'],
+  2: ['elective1', 'elective2'],
+  3: ['elective3', 'elective4'],
+};
+const GRADE_NAME = { 1: '高一', 2: '高二', 3: '高三' };
+const PREFIX = {
+  required1: 's1', required2: 's2', required3: 's3',
+  elective1: 'se1', elective2: 'se2', elective3: 'se3', elective4: 'se4',
+};
+const SEM_NAME = {
+  required1: '必修第一册', required2: '必修第二册', required3: '必修第三册',
+  elective1: '选择性必修第一册', elective2: '选择性必修第二册',
+  elective3: '选择性必修第三册', elective4: '选择性必修第四册',
+};
 
 const STD_STAGES = (grammarTitle) => ([
   { id: 's1', title: '核心词汇', subtitle: '教材核心词汇', icon: '📚', type: 'vocab', time: '8分钟' },
@@ -76,21 +90,24 @@ function buildUnit(vol, ukey, idx, m) {
   return unit;
 }
 
-const SEM_NAME = { required1: '必修第一册', required2: '必修第二册' };
-const semesters = {};
-for (const vol of BOOKS) {
-  const meta = (await import(`./sufe-${vol}/_meta.mjs`)).META;
-  const ukeys = Object.keys(meta); // u1..u4
-  const units = ukeys.map((uk, i) => buildUnit(vol, uk, i, meta[uk]));
-  semesters[`gk_${vol}`] = { name: SEM_NAME[vol], available: true, units };
+const out = {};
+let total = 0;
+for (const grade of [1, 2, 3]) {
+  const semesters = {};
+  for (const vol of GRADE_BOOKS[grade]) {
+    const meta = (await import(`./sufe-${vol}/_meta.mjs`)).META;
+    const ukeys = Object.keys(meta); // u1..u4
+    const units = ukeys.map((uk, i) => buildUnit(vol, uk, i, meta[uk]));
+    semesters[`gk_${vol}`] = { name: SEM_NAME[vol], available: true, units };
+    total += units.length;
+  }
+  out[grade] = { name: GRADE_NAME[grade], semesters };
 }
 
-const out = {
-  1: { name: COURSE_NAME, semesters },
-  2: { name: '高二', semesters: {} },
-  3: { name: '高三', semesters: {} },
-};
 writeFileSync('src/data/gaokaoHub/sufe-courses.json', JSON.stringify(out, null, 2));
-let n = 0; for (const s of Object.values(semesters)) n += s.units.length;
-console.log(`sufe-courses.json 写出:${Object.keys(semesters).length} 学期 / ${n} 单元`);
-for (const [sid, s] of Object.entries(semesters)) console.log(`  ${sid}: ${s.units.map(u => u.unitKey + ' ' + u.title + ' [' + u.grammarCodes.join(',') + ']').join(' | ')}`);
+console.log(`sufe-courses.json 写出:${total} 单元`);
+for (const grade of [1, 2, 3]) {
+  for (const [sid, s] of Object.entries(out[grade].semesters)) {
+    console.log(`  [G${grade}] ${sid}: ${s.units.map(u => u.unitKey + ' ' + u.title + ' [' + u.grammarCodes.join(',') + ']').join(' | ')}`);
+  }
+}

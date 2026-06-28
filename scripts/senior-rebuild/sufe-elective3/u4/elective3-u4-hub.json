@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "It is carbon dioxide that plants need to produce their food.", "opts": ["植物正是需要二氧化碳来制造食物。", "植物不需要任何气体。", "植物会释放二氧化碳。", "植物只在夜里生长。"], "answer": 0 },
+    { "audio": "The polar ice caps have begun to melt because of global warming.", "opts": ["极地冰盖正在变厚。", "由于全球变暖,极地冰盖已开始融化。", "冰盖和变暖没有关系。", "极地从不下雪。"], "answer": 1 },
+    { "audio": "Most marine waste is plastic from bottles and packaging.", "opts": ["海洋垃圾大多是玻璃。", "海洋里几乎没有垃圾。", "大多数海洋垃圾是来自瓶子和包装的塑料。", "海洋垃圾主要是木头。"], "answer": 2 },
+    { "audio": "If everyone reduces waste, one day the beaches may stay clean.", "opts": ["垃圾再多也没关系。", "只有专家才能清理海滩。", "海滩永远无法变干净。", "如果人人减少垃圾,有一天海滩也许能保持干净。"], "answer": 3 },
+    { "audio": "It was a young environmentalist who started the rainforest project.", "opts": ["正是一位年轻的环保人士发起了这个雨林项目。", "没有人关心雨林。", "雨林项目失败了。", "项目是政府独自完成的。"], "answer": 0 },
+    { "audio": "Taking public transport helps to make your carbon footprint smaller.", "opts": ["开私家车最环保。", "乘坐公共交通有助于减小你的碳足迹。", "碳足迹无法改变。", "走路会增加碳足迹。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The factory ____ harmful gases into the air every day.（排放）", "opts": ["releases", "buys", "hides", "grows"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Six kinds of sea turtle are already ____ with extinction.（受威胁）", "opts": ["sold", "threatened", "painted", "cooked"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The ocean ____ us with the basic elements of life.（维持）", "opts": ["throws", "loses", "sustains", "blocks"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Buying products with less ____ helps to cut down waste.（包装）", "opts": ["music", "price", "noise", "packaging"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "It is carbon dioxide ____ the plants need in order to make food.", "opts": ["that", "which", "what", "who"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It was in 1958 ____ the carbon dioxide in the air was first measured.", "opts": ["when", "that", "where", "which"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "It is the volunteers ____ clean this beach every weekend.", "opts": ["which", "what", "who", "whose"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "It was not until the ice began to melt ____ people saw the danger.", "opts": ["when", "which", "where", "that"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["正是我们大家才能拯救地球。", "没有人能帮助地球。", "拯救地球太容易了。", "地球不需要保护。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "It is all of us who can save the Earth." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["塑料对动物无害。", "塑料垃圾会毒害吞食它的海洋动物。", "海洋动物喜欢吃塑料。", "塑料能变成食物。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Plastic waste may poison the sea animals that swallow it." }
+  ],
+  "reading": {
+    "passage": "On a small island, the people once threw all their rubbish straight into the sea. Then the fish began to disappear and the beaches turned grey with plastic. So the islanders started to sort their waste and clean the shore together. Within a few years, the fish came back, and the island became a model for its neighbours.",
+    "passageCn": "在一座小岛上,人们曾把所有垃圾直接扔进海里。后来鱼开始消失,海滩被塑料染成灰色。于是岛民们开始给垃圾分类、一起清理海岸。几年之内,鱼回来了,这座小岛也成了邻近地区的榜样。",
+    "questions": [
+      { "q": "What problem did the island first have?", "opts": ["People threw all their rubbish into the sea.", "There were too many fish.", "The beaches were too clean.", "No one lived there."], "answer": 0 },
+      { "q": "What happened after the islanders sorted their waste?", "opts": ["The fish came back and the island became a model.", "The sea turned grey forever.", "Everyone left the island.", "The rubbish doubled."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short proposal to your class about one way to protect the environment. Say what the problem is, what you suggest doing, and why it helps. Try to use an emphatic structure (It is … that …).",
+    "promptCn": "给你的班级写一段简短倡议:指出一个环境问题、提出你的建议、说明它为什么有用。试着用一个强调句(It is … that …)。",
+    "sampleWords": ["environment", "waste", "rubbish", "sort", "recycle", "bin", "energy", "sustainable", "difference", "protect"]
+  },
+  "dialogues": [
+    {
+      "title": "Sorting the Rubbish",
+      "lines": [
+        { "role": "A", "text": "Which bin should this plastic bottle go in?", "cn": "这个塑料瓶应该扔进哪个垃圾箱?" },
+        { "role": "B", "text": "The blue one — it's for things we can recycle.", "cn": "蓝色那个——它是放可回收物的。" },
+        { "role": "A", "text": "I see. So sorting our waste really helps the Earth?", "cn": "明白了。所以给垃圾分类真的对地球有帮助吗?" },
+        { "role": "B", "text": "Of course. It is small habits like this that make a big difference.", "cn": "当然。正是这样的小习惯才能带来大改变。" }
+      ]
+    },
+    {
+      "title": "Why It Is Getting Warmer",
+      "lines": [
+        { "role": "A", "text": "Why is the Earth getting warmer every year?", "cn": "为什么地球每年都在变暖?" },
+        { "role": "B", "text": "It is gases like carbon dioxide that trap too much heat.", "cn": "正是二氧化碳这类气体困住了过多的热量。" },
+        { "role": "A", "text": "So what can ordinary people do about it?", "cn": "那普通人能为此做些什么呢?" },
+        { "role": "B", "text": "Save energy, use less plastic, and plant more trees.", "cn": "节约能源、少用塑料、多种树。" }
+      ]
+    }
+  ]
+}

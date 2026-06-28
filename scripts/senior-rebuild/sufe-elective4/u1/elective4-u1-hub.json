@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "A good speaker keeps the audience interested from start to finish.", "opts": ["好的演讲者能让听众从头到尾都感兴趣。", "好的演讲者总是说得很快。", "好的演讲者从不看观众。", "好的演讲者只读讲稿。"], "answer": 0 },
+    { "audio": "Practising aloud again and again helps you sound natural on stage.", "opts": ["反复大声练习能让你在台上显得自然。", "默读一遍就足够了。", "练习会让你更加紧张。", "上台前不要做任何准备。"], "answer": 0 },
+    { "audio": "If you feel nervous inside, you can still look confident on stage.", "opts": ["即使内心紧张,你仍能在台上显得自信。", "紧张时就该离开舞台。", "只有不紧张才能演讲。", "自信的人从不紧张。"], "answer": 0 },
+    { "audio": "Braille lets blind people read and write by touching raised dots.", "opts": ["盲文让盲人通过触摸凸点来读写。", "盲文只能用法语书写。", "盲文是用来听的。", "盲文已经无人使用。"], "answer": 0 },
+    { "audio": "A sincere respect for differences helps us cross the cultural barrier.", "opts": ["真诚尊重差异有助于我们跨越文化障碍。", "说得更大声能解决文化障碍。", "文化障碍是无法克服的。", "应当避免接触外国人。"], "answer": 0 },
+    { "audio": "A good summary catches the main point and leaves out small examples.", "opts": ["好的摘要抓住主旨、略去小例子。", "好的摘要要照抄原文长句。", "好的摘要越长越好。", "好的摘要只列举例子。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "选出与 deliver a speech 意思最接近的表达。", "opts": ["发表演讲", "取消演讲", "推迟演讲", "删除演讲"], "answer": 0, "point": "词汇 deliver", "dim": "vocab" },
+    { "q": "communication barrier 指的是什么?", "opts": ["交流障碍", "交流工具", "交流时间", "交流地点"], "answer": 0, "point": "词汇 barrier", "dim": "vocab" },
+    { "q": "be passionate about sth 最贴切的意思是?", "opts": ["对某事充满激情", "对某事感到厌烦", "对某事一无所知", "对某事保持沉默"], "answer": 0, "point": "词汇 passionate", "dim": "vocab" },
+    { "q": "reach a compromise 的意思是?", "opts": ["达成妥协", "拒绝让步", "引发争吵", "结束会议"], "answer": 0, "point": "词汇 compromise", "dim": "vocab" },
+    { "q": "The lecturer ____ overcame his fear later became famous.", "opts": ["who", "which", "where", "whose"], "answer": 0, "point": "定语从句关系词", "dim": "grammar" },
+    { "q": "____ you keep practising, you will gradually beat stage fright.", "opts": ["As long as", "Unless", "Although", "Because"], "answer": 0, "point": "条件状语从句", "dim": "grammar" },
+    { "q": "____ matters most in a great speech is a genuine connection with people.", "opts": ["What", "That", "Whether", "Why"], "answer": 0, "point": "主语从句 what/that", "dim": "grammar" },
+    { "q": "The fact ____ a deaf-blind girl could learn to read amazed the world.", "opts": ["that", "what", "which", "why"], "answer": 0, "point": "同位语从句 that", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["走动和提问有助于吸引听众参与。", "听众喜欢安静地坐着。", "演讲者应当一动不动。", "提问会打断演讲。"], "answer": 0, "point": "听力理解", "dim": "listening", "audio": "Movement and questions help engage the listeners." },
+    { "q": "听句子选中文:", "opts": ["眼神交流让听众觉得你在和他们说话。", "看着天花板更显自信。", "演讲时应避免目光接触。", "眼神交流会让人分心。"], "answer": 0, "point": "听力理解", "dim": "listening", "audio": "Eye contact makes listeners feel you are talking to them." }
+  ],
+  "reading": {
+    "passage": "When Mia stepped onto the stage, her hands were shaking. She found one friendly face in the crowd, took a slow breath, and began to speak to that single person. Little by little, the whole room felt smaller, and her fear melted away.",
+    "passageCn": "米娅走上舞台时双手发抖。她在人群中找到一张友善的脸,缓缓吸了口气,然后对着那一个人开始讲。渐渐地,整个房间似乎变小了,她的恐惧也消散了。",
+    "questions": [
+      { "q": "What did Mia do to calm herself?", "opts": ["She spoke to one friendly face and breathed slowly", "She ran off the stage", "She closed her eyes and shouted", "She read quickly from a script"], "answer": 0 },
+      { "q": "What happened to Mia's fear by the end?", "opts": ["It slowly disappeared", "It grew much stronger", "It stayed exactly the same", "It made her stop talking"], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short summary (about 50 words) of a talk on how to keep an audience engaged.",
+    "promptCn": "用约50词写一篇关于“如何让听众保持专注”的演讲摘要:先用一句话概括总观点,再提炼三到四条建议,用自己的话表达。",
+    "sampleWords": ["summary", "engage", "audience", "passion", "energy", "personality", "humour", "valuable", "advise", "instead of"]
+  },
+  "dialogues": [
+    {
+      "title": "Before the Speech Contest",
+      "lines": [
+        { "role": "A", "text": "The contest is on Friday and I'm terrified.", "cn": "比赛在周五,我好害怕。" },
+        { "role": "B", "text": "Practise out loud until the words feel natural.", "cn": "大声练习,直到说得自然。" },
+        { "role": "A", "text": "I always rush when I'm nervous.", "cn": "我一紧张就语速太快。" },
+        { "role": "B", "text": "Breathe slowly first, then speak to one friendly face.", "cn": "先慢慢呼吸,再对着一张友善的脸说。" }
+      ]
+    },
+    {
+      "title": "Feedback After the Talk",
+      "lines": [
+        { "role": "A", "text": "Your opening question made us all curious.", "cn": "你开场的提问让我们都很好奇。" },
+        { "role": "B", "text": "Thanks. But I read too much from my notes.", "cn": "谢谢,但我太多照稿念了。" },
+        { "role": "A", "text": "Next time, use a card with only key words.", "cn": "下次用只写关键词的卡片。" },
+        { "role": "B", "text": "And look up at the audience more. I'll try.", "cn": "还要多抬头看观众。我会试试。" }
+      ]
+    }
+  ]
+}

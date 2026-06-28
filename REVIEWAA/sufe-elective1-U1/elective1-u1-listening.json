@@ -1,0 +1,475 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Learning for Life",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修第一册 Unit 1 同主题听力(选社团/终身学习短文/学习计划对话/三十天习惯短文/请教时间管理对话/做中学短文)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Choosing a School Club",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tina",
+          "text": "Which school club are you going to join this term, Sam?"
+        },
+        {
+          "speaker": "Sam",
+          "text": "I'm thinking about the Go Green Club. I care a lot about nature."
+        },
+        {
+          "speaker": "Tina",
+          "text": "That sounds great. What do members usually do there?"
+        },
+        {
+          "speaker": "Sam",
+          "text": "We organise events to reduce waste and teach children to recycle."
+        },
+        {
+          "speaker": "Tina",
+          "text": "Nice! I want to join the Art Club myself."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Why the Art Club? Do you like drawing?"
+        },
+        {
+          "speaker": "Tina",
+          "text": "Yes, and I've heard you can learn design by making things with your hands."
+        },
+        {
+          "speaker": "Sam",
+          "text": "That's true. Learning by doing is the best way to remember."
+        }
+      ],
+      "translation_cn": "Tina 问 Sam 这学期加入哪个社团;Sam 想加入环保社,因为关心大自然;社团组织活动减少浪费、教孩子回收;Tina 想加入美术社,因为喜欢画画,且听说能通过动手做来学设计;Sam 同意做中学最利于记忆。",
+      "questions": [
+        {
+          "stem": "Which club is Sam thinking about joining?",
+          "options": [
+            "The Go Green Club.",
+            "The Art Club.",
+            "The Music Club.",
+            "The Sports Club."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Sam want that club?",
+          "options": [
+            "He needs more friends.",
+            "He cares a lot about nature.",
+            "His teacher told him to.",
+            "It is the easiest one."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do members of Sam's club do?",
+          "options": [
+            "They organise events to reduce waste.",
+            "They only paint pictures.",
+            "They study foreign languages.",
+            "They play music together."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tina choose the Art Club?",
+          "options": [
+            "Because it has no homework.",
+            "Because she likes drawing and design.",
+            "Because her friends are there.",
+            "Because it meets every day."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they agree is the best way to remember?",
+          "options": [
+            "Reading silently.",
+            "Copying notes.",
+            "Learning by doing.",
+            "Listening only."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 Learning Is Everywhere",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Learning is never limited to classrooms. It may happen at home, in a laboratory, or out in nature. Marie Curie learned a love of poetry from her father at home. Charles Darwin discovered the joy of science in a simple garden shed. Nelson Mandela learned important lessons while looking after sheep in the fields. Their stories remind us that real learning can take place anywhere, at any age.",
+      "translation_cn": "学习从不局限于教室。它可能发生在家里、实验室或大自然中。居里在家从父亲那里学会了热爱诗歌;达尔文在简陋的花园棚里发现了科学的乐趣;曼德拉在田野放羊时学到重要的人生课。他们的故事提醒我们,真正的学习可以发生在任何地方、任何年龄。",
+      "questions": [
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Only schools can teach us.",
+            "Poetry is the best subject.",
+            "Learning is limited to books.",
+            "Learning can happen anywhere."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where did Curie learn to love poetry?",
+          "options": [
+            "At home from her father.",
+            "In a large school.",
+            "In a laboratory.",
+            "In the fields."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where did Darwin find the joy of science?",
+          "options": [
+            "In a famous university.",
+            "In a simple garden shed.",
+            "On a steamship.",
+            "In a music club."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was Mandela doing when he learned his lessons?",
+          "options": [
+            "Reading poems.",
+            "Doing experiments.",
+            "Looking after sheep.",
+            "Playing the piano."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do the three stories remind us?",
+          "options": [
+            "Science is too hard.",
+            "Only children can learn.",
+            "Poetry is useless.",
+            "Real learning can happen anywhere and at any age."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Planning to Study Abroad",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Wu Xuan",
+          "text": "I've been working on my English a lot recently."
+        },
+        {
+          "speaker": "Liu Xin",
+          "text": "Really? Why so hard all of a sudden?"
+        },
+        {
+          "speaker": "Wu Xuan",
+          "text": "I'm taking an important test this time next week."
+        },
+        {
+          "speaker": "Liu Xin",
+          "text": "I see. So that's why you look a little tired."
+        },
+        {
+          "speaker": "Wu Xuan",
+          "text": "Yes, but I think I've made great progress."
+        },
+        {
+          "speaker": "Liu Xin",
+          "text": "What have you done to improve so much?"
+        },
+        {
+          "speaker": "Wu Xuan",
+          "text": "I've been listening to English radio every day to get used to the speed."
+        },
+        {
+          "speaker": "Liu Xin",
+          "text": "Lucky you! Then you don't need to worry about the test."
+        }
+      ],
+      "translation_cn": "吴轩说最近一直在努力学英语;刘心问为何突然这么拼;因为下周这个时候要参加重要考试;所以看起来有点累;但他觉得自己进步很大;靠每天听英语广播来习惯语速;刘心说那就不用担心考试了。",
+      "questions": [
+        {
+          "stem": "What has Wu Xuan been doing recently?",
+          "options": [
+            "Working hard on his English.",
+            "Travelling around the world.",
+            "Playing the piano.",
+            "Looking after sheep."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When will his important test be?",
+          "options": [
+            "This time tomorrow.",
+            "This time next week.",
+            "Next year.",
+            "Yesterday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does he look a little tired?",
+          "options": [
+            "He has been ill.",
+            "He travels every night.",
+            "He has been studying very hard.",
+            "He dislikes English."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How has he improved his listening?",
+          "options": [
+            "By reading silently.",
+            "By sleeping more.",
+            "By speaking Chinese.",
+            "By listening to English radio every day."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Liu Xin think about the test?",
+          "options": [
+            "Wu Xuan need not worry about it.",
+            "It will be very easy for everyone.",
+            "Wu Xuan should give it up.",
+            "It has already finished."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 Try Something New for 30 Days",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Here is a simple idea for lifelong learners: try something new for thirty days. A month is just long enough to build a good habit or break a bad one. One man used this idea to hike up a high mountain and even to write a short book. He became more confident and adventurous. His advice is to keep your goals small and easy to keep, because small daily steps are what finally bring real change.",
+      "translation_cn": "给终身学习者一个简单的点子:坚持尝试新事物三十天。一个月刚好够养成一个好习惯或改掉一个坏习惯。有个人用这个方法登上高山,甚至写了一本短书。他变得更自信、更爱冒险。他的建议是把目标定得小而易于坚持,因为正是每天的小步带来真正的改变。",
+      "questions": [
+        {
+          "stem": "What is the simple idea in the passage?",
+          "options": [
+            "Sleep for thirty days.",
+            "Try something new for thirty days.",
+            "Travel for a whole year.",
+            "Read only one book."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is a month long enough?",
+          "options": [
+            "It is the longest time possible.",
+            "It costs no money.",
+            "It can help build a habit or break one.",
+            "It never feels boring."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did one man do with this idea?",
+          "options": [
+            "He stopped all learning.",
+            "He slept every afternoon.",
+            "He gave up his job.",
+            "He hiked a mountain and wrote a short book."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did the man change?",
+          "options": [
+            "He became more confident and adventurous.",
+            "He became lazy and tired.",
+            "He grew afraid of new things.",
+            "He lost all his confidence."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the man's advice?",
+          "options": [
+            "Set the biggest goals you can.",
+            "Keep goals small and easy to keep.",
+            "Never make any plans.",
+            "Change your goal every day."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Advice on Time Management",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "I never seem to have enough time for my studies. Any advice?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Try making a clear plan for each day before you start."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Does that really help?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Yes. It helps you see what matters most and do it first."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That makes sense. What else can I do?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Take short breaks, so your mind stays fresh and active."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I'll try that. I always feel tired after studying for hours."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Little by little, you'll learn to use your time well."
+        }
+      ],
+      "translation_cn": "Ben 说学习时间总是不够,求建议;Mia 建议开始前为每天做清晰计划;能帮你看清最重要的事并先做;还建议休息片刻,让头脑保持清醒活跃;Ben 说连学几小时后总是很累;Mia 说慢慢就会学会善用时间。",
+      "questions": [
+        {
+          "stem": "What is Ben's problem?",
+          "options": [
+            "He cannot read English.",
+            "He has too many friends.",
+            "He never has enough time for studies.",
+            "He dislikes his teacher."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Mia's first piece of advice?",
+          "options": [
+            "Sleep more in class.",
+            "Stop studying at night.",
+            "Copy others' notes.",
+            "Make a clear daily plan."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does a plan help, according to Mia?",
+          "options": [
+            "It helps you do the most important things first.",
+            "It saves money.",
+            "It makes friends.",
+            "It ends all homework."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Mia's second piece of advice?",
+          "options": [
+            "Never rest at all.",
+            "Take short breaks to stay fresh.",
+            "Study only at night.",
+            "Skip difficult subjects."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will happen little by little?",
+          "options": [
+            "Ben will give up studying.",
+            "Ben will become lazier.",
+            "Ben will learn to use his time well.",
+            "Nothing will change at all."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 The Value of Learning by Doing",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Many great thinkers believed that we learn best by doing. Xunzi, an ancient Chinese teacher, said that learning should never stop and that true success comes from never giving up. Modern teachers agree. When students fold paper, build towers or grow plants, they remember far more than from books alone. Each small mistake teaches them something new. So the next time you face a hard task, do not just read about it. Try it with your own hands, and learn.",
+      "translation_cn": "许多伟大的思想家都相信我们在动手中学得最好。古代中国老师荀子说,学习不应停止,真正的成功来自永不放弃。现代教师也认同。当学生折纸、搭塔或种植物时,他们记住的远比只看书多。每一个小错误都教会他们新东西。所以下次面对难题时,别只是读它,用你自己的双手去尝试、去学习。",
+      "questions": [
+        {
+          "stem": "What did many great thinkers believe?",
+          "options": [
+            "Books are the only teachers.",
+            "Learning should stop early.",
+            "Mistakes are useless.",
+            "We learn best by doing."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Xunzi say about learning?",
+          "options": [
+            "It should never stop.",
+            "It is only for the young.",
+            "It needs no effort.",
+            "It is a waste of time."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What helps students remember more?",
+          "options": [
+            "Reading books alone.",
+            "Doing things with their hands.",
+            "Sleeping in class.",
+            "Copying answers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does each small mistake do?",
+          "options": [
+            "It stops all learning.",
+            "It makes students give up.",
+            "It teaches them something new.",
+            "It wastes their time."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker suggest doing with a hard task?",
+          "options": [
+            "Only read about it.",
+            "Avoid it completely.",
+            "Ask someone else to do it.",
+            "Try it with your own hands."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

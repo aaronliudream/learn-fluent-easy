@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Write a narrative about helping others(写一篇助人经历的记叙文)",
+  "title_en": "A Kind Deed I Will Never Forget",
+  "genre": "记叙文 / narrative(share a true or imagined experience of helping others)",
+  "source": "上外版选择性必修二 Unit 3 Writing:写一篇 100–120 词的记叙文,讲述自己做慈善或做好事帮助他人的一次经历(setting + plot + emotion/lesson)。",
+  "prompt_cn": "假设你是李华,学校报社正在征集'帮助他人'的故事。请用英语写一篇约100–120词的记叙文,讲述你做慈善或帮助别人的一次经历。内容包括:① 时间、地点、人物(setting);② 事情经过(开端·发展·高潮·结尾);③ 你的感受或从中得到的启示。注意:动名词作主语/宾语等结构运用得当,行文连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your school Newspaper Club is collecting stories about helping others. Write a narrative of about 100–120 words about a time you did charity work or a kind deed. Include: 1) the setting (time, place, people); 2) what happened (beginning, rising action, climax, end); 3) your feelings or the lesson you learned. Use -ing forms (as subject/object) naturally and keep the story connected.",
+  "points": [
+    "交代背景 setting(时间/地点/人物)",
+    "按顺序叙述经过(开端→发展→高潮→结尾)",
+    "结尾点出感受或启示(Helping others … / I realised that …)",
+    "动名词作主语/宾语等结构运用得当、句句连贯"
+  ],
+  "word_count": "100–120 词",
+  "model_essay": "Last winter, I saw an old man selling pencils outside our school gate. He looked cold and tired, and few people stopped to buy from him. Remembering the warm gloves in my bag, I walked over and bought several pencils. Then I quietly gave him my gloves and a cup of hot tea. His face lit up with a bright smile, and he thanked me again and again. That moment filled my heart with warmth. As I walked home, I realised that helping others does not need much money or time. A small act of kindness can warm both the giver and the receiver, even on the coldest day.",
+  "model_translation": "去年冬天,我看见一位老人在校门口卖铅笔。他看上去又冷又累,几乎没人停下来买。想起包里温暖的手套,我走过去买了几支铅笔。然后我悄悄把手套和一杯热茶递给他。他的脸上绽放出灿烂的笑容,一遍遍向我道谢。那一刻,我的心里满是温暖。走回家的路上,我意识到帮助别人并不需要很多钱或时间。一个小小的善举,即使在最冷的日子里,也能温暖给予者和接受者双方。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:背景设定 / 完整经过 / 感受或启示" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、开端发展高潮结尾清晰、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、动名词作主语/宾语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "背景 Last winter, I saw … (setting)",
+      "经过 Remembering …, I walked over and … (rising action)",
+      "高潮 His face lit up with a bright smile … (climax)",
+      "感受/启示 I realised that helping others …"
+    ],
+    "key_expressions": [
+      "Remembering the warm gloves in my bag, I walked over and bought several pencils.",
+      "His face lit up with a bright smile.",
+      "Helping others does not need much money or time.",
+      "A small act of kindness can warm both the giver and the receiver."
+    ],
+    "useful_words": ["charity", "donate", "volunteer", "kindness", "grateful", "empathy", "homeless", "warm", "share", "give up"]
+  },
+  "high_sentences": [
+    "Remembering the warm gloves in my bag, I walked over and bought several pencils.",
+    "His face lit up with a bright smile, and he thanked me again and again.",
+    "Helping others does not need much money or time.",
+    "A small act of kindness can warm both the giver and the receiver, even on the coldest day."
+  ],
+  "error_pairs": [
+    { "wrong": "I enjoy to help others.", "correct": "I enjoy helping others.", "note": "enjoy 后只接动名词,不接 to do。" },
+    { "wrong": "Thank you for help me that day.", "correct": "Thank you for helping me that day.", "note": "介词 for 后接动名词 helping。" },
+    { "wrong": "Helping others are very rewarding.", "correct": "Helping others is very rewarding.", "note": "动名词作主语视作单数,谓语用 is。" }
+  ],
+  "paragraph_template": "【助人记叙文结构】\n第1句 背景:Last winter, I saw …(时间/地点/人物)\n第2-3句 经过:Remembering …, I walked over and … Then I …\n第4-5句 高潮:His face lit up … and thanked me …\n第6句 感受/启示:I realised that helping others …"
+}

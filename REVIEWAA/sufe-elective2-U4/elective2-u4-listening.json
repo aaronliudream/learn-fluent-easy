@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Disaster Survival",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修二 Unit 4 同主题听力(备台风/地震应对/做求生包/洪水常识/灾后采访/野火安全)。long/short 交替,用词限本单元/初中/常见词,答案可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Getting Ready for a Typhoon",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mum: A strong typhoon is coming tonight, so we need to get ready.",
+        "Tom: What should we do first, Mum?",
+        "Mum: First, help me move these flower pots inside so the wind can't throw them around.",
+        "Tom: Done. Should I fill some bottles with water too?",
+        "Mum: Yes, good thinking. The water may be cut off for a day or two.",
+        "Tom: I'll also find the radio and put in fresh batteries.",
+        "Mum: Perfect. If the power goes out, the radio will tell us when it is safe.",
+        "Tom: I feel much safer now that we are prepared."
+      ],
+      "translation_cn": "妈妈说今晚有强台风要做好准备;先把花盆搬进屋,免得被风吹得到处乱飞;Tom 还往瓶子里装水,因为可能停水一两天;并找出收音机换上新电池;停电时收音机能告诉他们何时安全;Tom 觉得做了准备安心多了。",
+      "questions": [
+        {
+          "stem": "What is coming tonight?",
+          "options": [
+            "A typhoon.",
+            "A snowstorm.",
+            "A heatwave.",
+            "An earthquake."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Mum want to move the flower pots inside?",
+          "options": [
+            "Because they need more water.",
+            "So the wind cannot throw them around.",
+            "Because they look nicer indoors.",
+            "To sell them the next day."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they fill bottles with water?",
+          "options": [
+            "The water may be cut off for a day or two.",
+            "They want to wash the car.",
+            "The bottles are too empty.",
+            "They are going on a long trip."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom do with the radio?",
+          "options": [
+            "He sells it to a neighbour.",
+            "He puts fresh batteries in it.",
+            "He throws it away.",
+            "He turns it off for good."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom feel at the end?",
+          "options": [
+            "Bored and sleepy.",
+            "Angry with his mum.",
+            "Much safer now that they are prepared.",
+            "Sure that nothing will happen."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 What to Do in an Earthquake",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If an earthquake strikes while you are indoors, do not run outside at once.",
+        "Get under a strong table and hold on until the shaking stops.",
+        "Stay away from the windows, because the glass may break.",
+        "If you are driving, slow down and stop the car in an open place.",
+        "After the shaking stops, leave the building calmly and check for danger."
+      ],
+      "translation_cn": "若地震时你在室内,别马上往外跑;躲到结实的桌子下并抓牢,直到摇晃停止;远离窗户,因为玻璃可能碎裂;若在开车,减速并把车停在开阔处;摇晃停止后镇定地离开建筑并检查危险。",
+      "questions": [
+        {
+          "stem": "What should you NOT do when an earthquake strikes indoors?",
+          "options": [
+            "Get under a table.",
+            "Hold on tightly.",
+            "Stay calm.",
+            "Run outside straight away."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where should you take cover?",
+          "options": [
+            "Under a strong table.",
+            "Beside a large window.",
+            "On the balcony.",
+            "Inside a lift."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why should you stay away from windows?",
+          "options": [
+            "The view is poor.",
+            "The glass may break.",
+            "They are too high.",
+            "They are locked."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should a driver do?",
+          "options": [
+            "Speed up to get home.",
+            "Stop under a bridge.",
+            "Slow down and stop in an open place.",
+            "Leave the car at once."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you do after the shaking stops?",
+          "options": [
+            "Stay in bed and sleep.",
+            "Turn on all the lights.",
+            "Run back inside quickly.",
+            "Leave the building calmly and check for danger."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Building a Survival Kit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Our teacher asked us to make a survival kit at home. Where do we start?",
+        "Dad: Good idea. First, we need food and clean water for at least three days.",
+        "Lily: How much water is that?",
+        "Dad: About three litres for each person every day.",
+        "Lily: I'll add a torch and some spare batteries as well.",
+        "Dad: Don't forget a first-aid box and a whistle to call for help.",
+        "Lily: Should we keep a dust mask too?",
+        "Dad: Yes, and put everything in a bag that is easy to carry."
+      ],
+      "translation_cn": "Lily 的老师让大家在家做一个求生包,她问从哪开始;爸爸说先要至少三天的食物和干净水;每人每天约三升水;Lily 还要加手电筒和备用电池;爸爸提醒别忘急救箱和求救哨子;还要口罩;最后把所有东西装进易携带的包里。",
+      "questions": [
+        {
+          "stem": "What did Lily's teacher ask the class to do?",
+          "options": [
+            "Make a survival kit at home.",
+            "Write a long story.",
+            "Clean the classroom.",
+            "Plant some trees."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How much food and water do they need at first?",
+          "options": [
+            "Enough for one hour.",
+            "Enough for at least three days.",
+            "Enough for a whole month.",
+            "None at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How much water does each person need a day?",
+          "options": [
+            "About ten litres.",
+            "Just one cup.",
+            "About three litres.",
+            "No water is needed."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Dad say they need to call for help?",
+          "options": [
+            "A camera.",
+            "A clock.",
+            "A blanket.",
+            "A whistle."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where should they put everything?",
+          "options": [
+            "In a bag that is easy to carry.",
+            "Under the bed.",
+            "In the garden.",
+            "On the roof."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Floods",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Floods are one of the most common natural disasters in the world.",
+        "They are usually caused by heavy rain that lasts for many days.",
+        "When you hear a flood warning, leave for higher ground at once.",
+        "Never try to walk or drive through fast-moving water.",
+        "Keep your important papers in a waterproof bag, just in case."
+      ],
+      "translation_cn": "洪水是世界上最常见的自然灾害之一;通常由连日暴雨引起;听到洪水警报要立刻往高处转移;切勿步行或开车穿过湍急的水流;把重要文件放进防水袋,以防万一。",
+      "questions": [
+        {
+          "stem": "How common are floods?",
+          "options": [
+            "They almost never happen.",
+            "They are one of the most common disasters.",
+            "They only happen at sea.",
+            "They happen once a century."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What usually causes floods?",
+          "options": [
+            "A sudden earthquake.",
+            "Strong sunshine.",
+            "Heavy rain lasting many days.",
+            "A cold, dry wind."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you do when you hear a flood warning?",
+          "options": [
+            "Go down to the basement.",
+            "Stay in bed.",
+            "Open the front door wide.",
+            "Leave for higher ground at once."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you never do?",
+          "options": [
+            "Walk or drive through fast-moving water.",
+            "Listen to the radio.",
+            "Pack a bag.",
+            "Call for help."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where should you keep important papers?",
+          "options": [
+            "On the kitchen table.",
+            "In a waterproof bag.",
+            "In a paper box.",
+            "Under the doormat."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 After the Storm",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Reporter: Excuse me, can you tell me what happened here last night?",
+        "Resident: A typhoon hit our town and the wind was terribly strong.",
+        "Reporter: Was anyone hurt?",
+        "Resident: Luckily not. We had all moved to the school hall before it came.",
+        "Reporter: How did you know it was time to leave?",
+        "Resident: We heard the evacuation order on the radio.",
+        "Reporter: And what are people doing now?",
+        "Resident: We are clearing the streets and helping our neighbours repair their roofs."
+      ],
+      "translation_cn": "记者问昨晚这里发生了什么;居民说台风袭击了小镇,风非常猛;幸好无人受伤,因为台风来临前大家都去了学校礼堂;他们是从收音机听到撤离令才知道该走;现在人们正在清理街道、帮邻居修屋顶。",
+      "questions": [
+        {
+          "stem": "What hit the town last night?",
+          "options": [
+            "A flood.",
+            "An avalanche.",
+            "A typhoon.",
+            "A wildfire."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Was anyone hurt?",
+          "options": [
+            "Yes, many people were hurt.",
+            "Only the reporter was hurt.",
+            "The interview does not say.",
+            "No, luckily no one was hurt."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where had the residents gone before the storm?",
+          "options": [
+            "To the school hall.",
+            "To the seaside.",
+            "To another city.",
+            "To the basement of a shop."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did they know it was time to leave?",
+          "options": [
+            "A neighbour knocked on the door.",
+            "They heard the evacuation order on the radio.",
+            "They saw the wind start.",
+            "The school called each family."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What are people doing now?",
+          "options": [
+            "Leaving the town for good.",
+            "Waiting quietly at home.",
+            "Clearing the streets and helping repair roofs.",
+            "Watching the news on TV."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 Wildfire Safety",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Wildfires can spread very quickly and destroy everything in their path.",
+        "If you are caught in one, cover your nose and mouth with a wet cloth.",
+        "Move towards a river, a pond or any open water if you can.",
+        "Stay low to the ground, where the air is cleaner and cooler.",
+        "Most of all, stay calm and listen for instructions from the firefighters."
+      ],
+      "translation_cn": "野火蔓延极快,摧毁沿途一切;若被困其中,用湿布捂住口鼻;尽量往河流、池塘或任何开阔水域移动;贴近地面,那里空气更干净、更凉;最重要的是保持冷静,听消防员的指示。",
+      "questions": [
+        {
+          "stem": "How do wildfires spread?",
+          "options": [
+            "Very slowly.",
+            "Only at night.",
+            "Only in winter.",
+            "Very quickly."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you cover your nose and mouth with?",
+          "options": [
+            "A wet cloth.",
+            "A dry book.",
+            "Your bare hands.",
+            "A glass jar."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where should you try to move?",
+          "options": [
+            "Towards the centre of the fire.",
+            "Towards a river, pond or open water.",
+            "Up the nearest hill.",
+            "Into a wooden hut."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why stay low to the ground?",
+          "options": [
+            "It is easier to sleep.",
+            "The fire cannot be seen.",
+            "The air there is cleaner and cooler.",
+            "It is faster to run."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is most important of all?",
+          "options": [
+            "Shout as loudly as you can.",
+            "Run in any direction.",
+            "Take photos of the fire.",
+            "Stay calm and listen to the firefighters."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

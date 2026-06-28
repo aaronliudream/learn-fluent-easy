@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Exploring the Unknown",
+  "source": "上外版选择性必修三 Unit 3 同主题阅读(巨石阵/马里亚纳海沟/查瓦利河谷/磬吉石林/复活节岛石像/尼斯湖水怪)。答案转述非照抄,4选项唯一,与完形/听力关不撞篇。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Mystery of Stonehenge",
+      "topic_cn": "说明·巨石阵之谜",
+      "body": "Stonehenge, a ring of huge stones on Salisbury Plain in England, is one of the most famous ancient monuments in the world. It was put up in several stages over many centuries, beginning around 3,000 BCE, long before the wheel was invented. Some of the stones weigh as much as fifty tons, yet they were pulled to the site from areas far away. How the early people managed to move and raise such enormous stones is still a puzzle that no one can fully explain. Even more mysterious is the reason behind the whole project. Some historians once thought the place was a burial ground, since human bones have been found nearby. Today, however, many experts believe it acted as a kind of calendar, because certain stones point to the sun at the summer and winter solstices. A few people even hold the wild belief that visitors from space lent a hand. After thousands of years, Stonehenge still keeps its secrets.",
+      "vocab_notes": [
+        {
+          "word": "monument",
+          "cn": "遗迹;纪念碑"
+        },
+        {
+          "word": "solstice",
+          "cn": "至(点)"
+        },
+        {
+          "word": "belief",
+          "cn": "信念"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When did the building of Stonehenge begin?",
+          "options": [
+            "Around five thousand years ago, before the wheel existed.",
+            "Only a few hundred years ago.",
+            "Soon after cars were invented.",
+            "During modern times."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说始于约公元前3000年、远早于车轮发明,即约五千年前。"
+        },
+        {
+          "stem": "What still puzzles people about the stones?",
+          "options": [
+            "Who first found the human bones.",
+            "How such heavy stones were moved and lifted.",
+            "Why the wheel was invented so late.",
+            "Where the sun rises each day."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说人们无法解释早期的人如何搬运、竖起这些巨石。"
+        },
+        {
+          "stem": "What do many experts believe today about Stonehenge?",
+          "options": [
+            "It was probably used to mark the seasons, like a calendar.",
+            "It was a space station built for aliens.",
+            "It was a factory for making computers.",
+            "It was a place for growing crops."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说今天许多专家认为它像一种日历,石头在夏至冬至指向太阳。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Into the Deepest Trench",
+      "topic_cn": "说明·马里亚纳海沟",
+      "body": "Far down in the western Pacific Ocean lies the Mariana Trench, the deepest place in all the world's oceans. At one narrow point, known as the Challenger Deep, it drops to more than ten thousand metres below the surface — deep enough to swallow the highest mountain on land. Because of this extreme depth, the trench is one of the least explored regions on the planet. The water pressure down there is so powerful that it would crush most equipment in seconds, and almost no sunlight ever reaches the bottom. For a long time people doubted that anything could survive in such a place. Yet earlier voyages have proved them wrong. Cameras and small submarines have brought back images of strange fish and other creatures that somehow make the cold, dark deep their home. Each new trip raises fresh questions about how life manages to exist where conditions seem impossible, and scientists are keen to go back and learn more.",
+      "vocab_notes": [
+        {
+          "word": "trench",
+          "cn": "海沟"
+        },
+        {
+          "word": "previous",
+          "cn": "先前的"
+        },
+        {
+          "word": "pose",
+          "cn": "造成(危险)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the Mariana Trench so little explored?",
+          "options": [
+            "It is always crowded with tourists.",
+            "Its great depth and crushing pressure make it hard to reach.",
+            "It is hidden under a thick forest.",
+            "It lies too close to the sun."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说因极深、水压强大会瞬间压坏设备,所以难以到达探索。"
+        },
+        {
+          "stem": "What did earlier voyages reveal?",
+          "options": [
+            "Nothing at all can be found down there.",
+            "The water there is warm and bright.",
+            "Some creatures actually live in the deep, dark water.",
+            "The trench is shallower than people thought."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说相机和潜水器带回了深海生物的影像,证明那里有生命。"
+        },
+        {
+          "stem": "How do scientists feel about the trench now?",
+          "options": [
+            "They have lost all interest in it.",
+            "They believe it is already fully understood.",
+            "They hope it will be closed forever.",
+            "They want to go back and keep studying it."
+          ],
+          "answer_index": 3,
+          "explanation": "原文末句说科学家渴望再去、了解更多。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Hidden World in Brazil",
+      "topic_cn": "说明·查瓦利河谷",
+      "body": "Deep in the rainforests of Brazil lies Vale do Javari, one of the largest areas of protected land set aside for native peoples. Hidden among its thick trees and winding rivers live a number of tribes who have had almost no contact with the outside world. In fact, several of these groups were first noticed only through pictures taken by satellites high above the forest. The region is extremely difficult to reach. Endless trees, wide rivers and the absence of roads keep most travellers far away, and that is exactly the point. Brazilian law forbids outsiders from going in, and a local organisation works hard to guard the area and keep its rich plant and animal life safe. Some people argue that these communities should be visited and studied, while others insist that the kindest choice is to leave them completely alone. For now, Vale do Javari remains a green world that very few people will ever see with their own eyes.",
+      "vocab_notes": [
+        {
+          "word": "indigenous",
+          "cn": "本地的;土生土长的"
+        },
+        {
+          "word": "tribe",
+          "cn": "部落"
+        },
+        {
+          "word": "satellite",
+          "cn": "卫星"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How were some of the tribes first noticed?",
+          "options": [
+            "By studying images taken from space.",
+            "By driving along the main roads.",
+            "By reading very old maps.",
+            "By chatting with city visitors."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说有些部落最初是通过卫星拍摄的图像被发现的。"
+        },
+        {
+          "stem": "Why is the region so hard to reach?",
+          "options": [
+            "It is surrounded by tall mountains of ice.",
+            "Dense trees, broad rivers and a lack of roads block the way.",
+            "It is buried under desert sand.",
+            "It is far too crowded with tourists."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说茂密树木、宽阔河流和没有道路把旅行者挡在外面。"
+        },
+        {
+          "stem": "What do some people think should be done with the tribes?",
+          "options": [
+            "Everyone agrees they must be moved to cities.",
+            "All visitors should quickly build roads to them.",
+            "Some believe it is best not to disturb the people there.",
+            "The forest around them should be cut down."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说一些人坚持最善意的选择是完全不去打扰他们。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Forest of Stone Needles",
+      "topic_cn": "说明·磬吉石林",
+      "body": "On the western side of Madagascar stands one of the strangest landscapes on Earth: the Tsingy de Bemaraha. Here, tall grey rocks rise from the ground like a forest of stone needles, their edges so sharp that they can cut through skin. The name itself comes from a local word meaning a place where a person cannot walk barefoot, and anyone who has seen these rocks understands why. Reaching the area is hard, and moving through it is harder still, since one careless step among the blades of limestone can cause a serious injury. In spite of these dangers, the place has been protected since 1990 as a World Heritage Site. Its towers of rock shelter all kinds of wildlife, and scientists have even found animals here that live nowhere else. Visitors are let in only in small numbers, reaching the reserve by road or by light plane. For the brave few who go, it offers a view of nature that they will never forget.",
+      "vocab_notes": [
+        {
+          "word": "limestone",
+          "cn": "石灰岩"
+        },
+        {
+          "word": "barefoot",
+          "cn": "赤脚地"
+        },
+        {
+          "word": "reserve",
+          "cn": "保护区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the local name of the place mean?",
+          "options": [
+            "A land of soft green grass.",
+            "A warm and friendly beach.",
+            "A busy city full of people.",
+            "Somewhere a person cannot walk without shoes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说这个名字源自当地词语,意为'人不能赤脚行走的地方'。"
+        },
+        {
+          "stem": "Why is the place so dangerous?",
+          "options": [
+            "Its very sharp rocks can badly hurt anyone who slips.",
+            "Wild storms strike it every hour.",
+            "The ground is always covered in thick ice.",
+            "Poisonous smoke fills the whole air."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说尖利的石灰岩刀刃一不小心就会造成严重伤害。"
+        },
+        {
+          "stem": "Why is the place valuable to scientists?",
+          "options": [
+            "It produces large amounts of oil.",
+            "Certain animals there are found in no other place on Earth.",
+            "It is the easiest reserve in the world to visit.",
+            "It has the warmest weather in all of Africa."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说科学家在这里发现了别处没有的动物。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Giants of Easter Island",
+      "topic_cn": "说明·复活节岛石像",
+      "body": "In the middle of the vast Pacific Ocean lies a tiny piece of land called Easter Island, famous for its rows of giant stone figures. European sailors gave the island its name when they arrived there on Easter Day, long ago. What they found amazed them: hundreds of huge statues, some weighing many tons and standing several metres tall, staring silently out across the land. For years people have asked the same questions. Who carved these giants, and what were they meant to stand for? And, perhaps most puzzling of all, how did a small group of islanders, working only with simple tools, move such heavy figures across rough ground? Many ideas have been suggested, from clever wooden sledges to teams of people gently rocking the statues forward step by step. None of these explanations has been fully proved. The stone faces of Easter Island still gaze out to sea, guarding the secret of how they came to be.",
+      "vocab_notes": [
+        {
+          "word": "incredible",
+          "cn": "难以置信的"
+        },
+        {
+          "word": "previous",
+          "cn": "先前的"
+        },
+        {
+          "word": "origin",
+          "cn": "起源"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the island get its name?",
+          "options": [
+            "It was shaped exactly like an egg.",
+            "The local people chose the name themselves.",
+            "Visiting sailors reached it on the day of Easter.",
+            "A king named it after his daughter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说欧洲水手在复活节那天到达,因而给岛取了这个名字。"
+        },
+        {
+          "stem": "What puzzles people most about the statues?",
+          "options": [
+            "Why the island is so cold all year.",
+            "When the first cars arrived there.",
+            "Who built the island's airport.",
+            "How such heavy statues were moved using only basic tools."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说最令人困惑的是岛民如何仅用简单工具搬动如此沉重的石像。"
+        },
+        {
+          "stem": "What has happened to the many explanations?",
+          "options": [
+            "So far, not one of them has been clearly confirmed.",
+            "All of them have been proved true.",
+            "They were never written down anywhere.",
+            "Everyone now agrees on a single answer."
+          ],
+          "answer_index": 0,
+          "explanation": "原文说这些说法没有一个被完全证实。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Legend of Loch Ness",
+      "topic_cn": "说明·尼斯湖水怪",
+      "body": "For hundreds of years, stories have spread about a strange creature said to live in the deep, cold waters of Loch Ness in Scotland. People call it 'Nessie', and many claim to have seen it rise for a moment before slipping back beneath the surface. Over time, thousands of sightings have been written down, and a few blurry photographs have appeared as well. Yet, in spite of all the excitement, no firm proof has ever been found to show that such an animal really exists. Some believers suggest that Nessie could be a kind of ancient sea reptile that somehow survived to the present day. Scientists, however, point out that a creature of that size would need to come up for air often, and would surely have been filmed clearly by now. Searches using modern underwater equipment have turned up nothing unusual. Still, the legend refuses to die, and every year curious visitors travel to the lake, hoping to catch sight of the monster for themselves.",
+      "vocab_notes": [
+        {
+          "word": "evidence",
+          "cn": "证据"
+        },
+        {
+          "word": "doubt",
+          "cn": "怀疑"
+        },
+        {
+          "word": "previous",
+          "cn": "先前的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is 'Nessie' said to be?",
+          "options": [
+            "A famous singer from Scotland.",
+            "A mysterious animal believed to live in a Scottish lake.",
+            "An old wooden sailing ship.",
+            "A rare kind of mountain bird."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说传说中有一种奇怪生物住在苏格兰尼斯湖的深水里。"
+        },
+        {
+          "stem": "What is the problem with the sightings and photographs?",
+          "options": [
+            "They were all taken just last week.",
+            "They clearly show a large reptile.",
+            "They still fail to prove the creature truly exists.",
+            "They were carefully drawn by scientists."
+          ],
+          "answer_index": 2,
+          "explanation": "原文说尽管热闹,却从未找到确凿证据证明这种动物真的存在。"
+        },
+        {
+          "stem": "Why do scientists doubt the story?",
+          "options": [
+            "Scotland has no lakes at all.",
+            "Nobody has ever once visited the lake.",
+            "The water there is far too warm for any life.",
+            "An animal that big would surely have been recorded clearly already."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说那么大的动物得经常浮上来呼吸,早该被清楚拍到了。"
+        }
+      ]
+    }
+  ]
+}

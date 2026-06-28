@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "-ing / -ed 形式作补语速查",
+    "intro": "分词作补语,用来补充说明宾语(或主语)的状态。判断口诀:看宾语和动作的关系——宾语主动发出、动作进行中 → 用 -ing;宾语承受动作、被动或已完成 → 用 -ed。",
+    "table": {
+      "headers": ["分词形式", "用法 / 例句"],
+      "rows": [
+        ["-ing(主动·进行)", "感官/使役 + 宾语 + doing:I saw him crossing the road. / keep me going"],
+        ["-ed(被动·完成)", "have/get/make/keep + 宾语 + done:I had my hair cut. / get the problem solved"],
+        ["with 复合结构", "with + 宾语 + 分词:with the door locked / with the lights shining"],
+        ["辨析关键", "宾语自己做 → -ing;宾语被别人做 → -ed(I saw the work done)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "感官动词(see/hear/watch/feel/notice)+ 宾语 + doing,强调动作正在进行", "mark": "I heard her singing(她正在唱)" },
+      { "rule": "have/get sth done = 让某事被(别人)做,宾语是动作的承受者", "mark": "have my hair cut / get the car repaired" },
+      { "rule": "make oneself understood / heard 是固定搭配,用过去分词", "mark": "make yourself understood(让别人听懂你)" },
+      { "rule": "see/hear sb do(原形)强调动作的全过程或已完成,doing 强调进行中", "mark": "saw her dream come true(全过程)vs saw him crossing(进行中)" }
+    ],
+    "why": [
+      "分词没有'人称、时态'的变化,只表达'主动进行(-ing)'还是'被动完成(-ed)'。所以选哪个,关键看它前面的宾语是动作的发出者还是承受者。"
+    ],
+    "gaokaoPoints": [
+      "have/get/keep/make/find/leave + 宾语 + 分词:由宾语主被动选 -ing 或 -ed,语法填空与单选高频。",
+      "感官动词 + 宾语 + doing/done/do 的区别(进行中用 doing,被动用 done,全过程用 do)。",
+      "with 复合结构作状语:with + n. + 分词,常考主被动判断。"
+    ],
+    "examVsReal": [
+      { "exam": "I had my hair cut yesterday.(考试/书面)", "real": "I got a haircut yesterday.", "note": "考试爱考 have sth done;口语里常用更简单的说法表达同一意思" },
+      { "exam": "with the door locked(考试)", "real": "and the door was locked", "note": "考试用 with 复合结构;口语里常拆成一个并列分句更自然" }
+    ]
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Exploring the Unknown",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修三 Unit 3 同主题听力(选谜题做课题/天生爱探索/嫦娥四号/深海事实/尼斯湖纪录片/记数字小贴士)。long/short 交替,答案均可在 transcript 找到依据,与读写关不撞篇。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Choosing a Mystery",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lin: Mr Brown asked us to choose a famous mystery for our class project. Any ideas?",
+        "Kate: How about Stonehenge? No one is sure why those huge stones were put up.",
+        "Lin: That's interesting, but lots of groups will pick it. Let's choose something different.",
+        "Kate: Then what about the giant statues on Easter Island?",
+        "Lin: I like that. We could find out how such heavy statues were moved with simple tools.",
+        "Kate: Good. I'll search for some theories online, and you can prepare the questions for our survey.",
+        "Lin: Perfect. Let's meet in the library on Friday to put it all together.",
+        "Kate: See you then. This is going to be fun."
+      ],
+      "translation_cn": "林说 Brown 老师让他们为班级课题选一个著名谜团;Kate 提议巨石阵,但林觉得太多组会选,想换一个;Kate 改提复活节岛石像;林赞同,想研究岛民如何用简单工具搬动沉重石像;Kate 负责上网找理论,林准备调查问题;两人约周五在图书馆汇总。",
+      "questions": [
+        {
+          "stem": "What does Mr Brown want the students to do?",
+          "options": [
+            "Choose a famous mystery for a project.",
+            "Write a song about Stonehenge.",
+            "Travel to Easter Island.",
+            "Clean the school library."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why doesn't Lin want to pick Stonehenge?",
+          "options": [
+            "Because it is too far to reach.",
+            "Because many other groups will pick it.",
+            "Because it is not mysterious at all.",
+            "Because Kate dislikes it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which mystery do they finally choose?",
+          "options": [
+            "The giant statues on Easter Island.",
+            "The Bermuda Triangle.",
+            "The deep ocean.",
+            "Stonehenge."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Kate do for the project?",
+          "options": [
+            "Prepare the survey questions.",
+            "Search for theories online.",
+            "Build a model of the statues.",
+            "Cook dinner for the class."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When and where will the two students meet?",
+          "options": [
+            "In the park on Sunday.",
+            "At home on Monday.",
+            "In the library on Friday.",
+            "At the gate on Tuesday."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 Born to Explore",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "People have always wanted to explore the world around them.",
+        "Long ago, our ancestors climbed mountains and crossed wide seas.",
+        "They simply wanted to see what lay beyond the next hill.",
+        "Today we send probes far into space to study other worlds.",
+        "As long as something is unknown, someone will want to discover it."
+      ],
+      "translation_cn": "人们一直想探索周遭的世界;很久以前,我们的祖先翻山越海;只是想看看下一座山那边有什么;今天我们把探测器送往遥远的太空去研究其他星球;只要还有未知,就总会有人想去发现。",
+      "questions": [
+        {
+          "stem": "What have people always wanted to do?",
+          "options": [
+            "Stay safely at home.",
+            "Stop asking questions.",
+            "Forget the past.",
+            "Explore the world around them."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did our ancestors do long ago?",
+          "options": [
+            "Climbed mountains and crossed seas.",
+            "Built large cities only.",
+            "Slept through the day.",
+            "Stayed away from the ocean."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did they want to cross the next hill?",
+          "options": [
+            "To sell their goods.",
+            "To see what lay beyond it.",
+            "To find more water.",
+            "To meet old friends."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do we send far into space today?",
+          "options": [
+            "Trees.",
+            "Boats.",
+            "Probes.",
+            "Letters."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When will someone want to discover something?",
+          "options": [
+            "Only when they are paid.",
+            "Never again in future.",
+            "Only during winter.",
+            "As long as it stays unknown."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 At the Science Museum",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Guide: Welcome. This model shows China's Chang'e-4 probe.",
+        "Tom: Is that the one that landed on the far side of the moon?",
+        "Guide: Yes. It was the first probe ever to land softly there, back in 2019.",
+        "Tom: Why is the far side so hard to reach?",
+        "Guide: We can never see it from Earth, and radio signals cannot reach it directly.",
+        "Tom: So how did people on Earth talk to the probe?",
+        "Guide: Engineers sent up a special satellite to pass messages back and forth.",
+        "Tom: That's clever. I'd love to work on a mission like this one day."
+      ],
+      "translation_cn": "讲解员欢迎参观,介绍这是中国嫦娥四号探测器的模型;Tom 问是不是降落在月球远端的那台;讲解员说是,2019年它是首个在那里软着陆的探测器;Tom 问为何远端难以到达;因为从地球永远看不到它、无线电信号也无法直接到达;工程师便发射了一颗专门的卫星来回传递信息;Tom 说很巧妙,希望有朝一日能参与这样的任务。",
+      "questions": [
+        {
+          "stem": "What does the museum model show?",
+          "options": [
+            "China's Chang'e-4 probe.",
+            "A brand-new aeroplane.",
+            "An old sailing ship.",
+            "A small weather station."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When did the probe land on the far side?",
+          "options": [
+            "In 1999.",
+            "In 2019.",
+            "In 2030.",
+            "In 1969."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is the far side of the moon hard to reach?",
+          "options": [
+            "It is covered in deep water.",
+            "It is far too bright to land on.",
+            "Radio signals cannot reach it directly from Earth.",
+            "It is always crowded with people."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did engineers talk to the probe?",
+          "options": [
+            "By shouting very loudly.",
+            "By posting letters to it.",
+            "They could not talk to it at all.",
+            "Through a special satellite."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Tom hope to do one day?",
+          "options": [
+            "Work on a mission like this one.",
+            "Stop studying science.",
+            "Move to the moon at once.",
+            "Sell the museum model."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Facts about the Deep Ocean",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The deep ocean is one of the least explored places on Earth.",
+        "At the bottom of the deepest trench, the water is freezing and dark.",
+        "The pressure there could easily crush an ordinary submarine.",
+        "Even so, scientists have found strange fish living in the deep.",
+        "Each new dive teaches us a little more about this hidden world."
+      ],
+      "translation_cn": "深海是地球上探索最少的地方之一;在最深海沟的底部,海水冰冷而漆黑;那里的压力能轻易压垮一艘普通潜艇;尽管如此,科学家仍在深处发现了奇怪的鱼;每一次新的下潜都让我们对这个隐秘世界多了解一点。",
+      "questions": [
+        {
+          "stem": "How well explored is the deep ocean?",
+          "options": [
+            "It is completely mapped.",
+            "It is one of the least explored places.",
+            "It is a popular holiday spot.",
+            "It is very easy to reach."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the water like at the bottom of the trench?",
+          "options": [
+            "Warm and bright.",
+            "Shallow and calm.",
+            "Freezing and dark.",
+            "Full of green plants."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What could the pressure do to an ordinary submarine?",
+          "options": [
+            "Clean it.",
+            "Speed it up.",
+            "Paint it brightly.",
+            "Crush it."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What have scientists found in the deep?",
+          "options": [
+            "Strange fish living there.",
+            "Nothing alive at all.",
+            "Tall green trees.",
+            "Warm sandy beaches."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does each new dive do?",
+          "options": [
+            "Wastes everyone's time.",
+            "Teaches us more about this hidden world.",
+            "Closes the ocean forever.",
+            "Ends all the research."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 A Nessie Documentary",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sam: I watched a documentary about the Loch Ness Monster last night.",
+        "Mia: Oh, Nessie! Did they finally prove it is real?",
+        "Sam: No. They showed many old photos, but none of them was clear.",
+        "Mia: I thought scientists searched the lake with modern machines.",
+        "Sam: They did, but the machines found nothing unusual at all.",
+        "Mia: So why do people still visit the lake every year?",
+        "Sam: I suppose they just enjoy the mystery and hope to see something.",
+        "Mia: Maybe one day someone will get a clear photo. Who knows?"
+      ],
+      "translation_cn": "Sam 说昨晚看了一部关于尼斯湖水怪的纪录片;Mia 问是否终于证明它是真的;Sam 说没有,片中展示了许多旧照片,但都不清晰;Mia 以为科学家用现代仪器搜过湖;Sam 说搜过,但仪器什么异常都没发现;Mia 问那为何人们每年还去;Sam 觉得他们只是享受这份神秘、盼着看到点什么;Mia 说也许哪天有人能拍到清晰照片,谁知道呢。",
+      "questions": [
+        {
+          "stem": "What did Sam watch last night?",
+          "options": [
+            "A live football match.",
+            "A cooking show.",
+            "A documentary about the Loch Ness Monster.",
+            "A music video."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Did the documentary prove Nessie is real?",
+          "options": [
+            "Yes, with very clear photos.",
+            "Yes, all scientists agreed.",
+            "It never mentioned Nessie.",
+            "No, the photos were not clear."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the modern machines find in the lake?",
+          "options": [
+            "Nothing unusual.",
+            "A huge sea reptile.",
+            "An old wooden ship.",
+            "A brand-new island."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do people still visit the lake every year?",
+          "options": [
+            "To go fishing for food.",
+            "They enjoy the mystery and hope to see something.",
+            "To study the lake's rocks.",
+            "To swim there in summer."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mia think might happen one day?",
+          "options": [
+            "The lake will dry up.",
+            "Nessie will leave the lake.",
+            "Someone may get a clear photo.",
+            "People will stop visiting."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 A Tip for Taking Notes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a useful tip for when you listen to a report about a discovery.",
+        "Speakers often give important numbers, such as dates, sizes and distances.",
+        "These numbers can be easy to miss if you are not ready for them.",
+        "So keep a pen in your hand and write each number down at once.",
+        "Good notes will help you remember the facts long after the talk ends."
+      ],
+      "translation_cn": "这是一个在听有关发现的报告时很有用的小贴士:讲话者常会给出重要数字,如日期、大小和距离;如果没准备好,这些数字很容易被漏掉;所以手里拿支笔,把每个数字立刻记下来;好的笔记能帮你在讲话结束很久后仍记住这些事实。",
+      "questions": [
+        {
+          "stem": "When is this tip useful?",
+          "options": [
+            "When cooking dinner.",
+            "When playing sport.",
+            "When falling asleep.",
+            "When listening to a report about a discovery."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do speakers often give?",
+          "options": [
+            "Important numbers.",
+            "Free gifts.",
+            "Funny jokes.",
+            "Long songs."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can happen to these numbers?",
+          "options": [
+            "They are always written down for you.",
+            "They can be easy to miss.",
+            "They are never important.",
+            "They are always spoken twice."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you keep in your hand?",
+          "options": [
+            "A phone.",
+            "A cup.",
+            "A pen.",
+            "A book."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will good notes help you do?",
+          "options": [
+            "Forget the talk quickly.",
+            "Leave the room early.",
+            "Stop listening at once.",
+            "Remember the facts later."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

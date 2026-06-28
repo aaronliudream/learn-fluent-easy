@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Writing a Summary of a Problem-Solution Essay(为问题—解决型短文写摘要)",
+  "title_en": "Summarising 'Rational People Think at the Margin'",
+  "genre": "摘要写作 summary(读懂一篇经济短文,用自己的话概括其核心)",
+  "source": "上外版选择性必修四 Unit 2 Writing: writing a summary of a problem-solution essay(范文 'Rational People Think at the Margin')。Writing Strategy: 用同义词与不同句型改写,避免照抄。",
+  "prompt_cn": "阅读短文 'Rational People Think at the Margin',用英语写一篇不超过60词的摘要。要求:① 抓住核心观点(生活中的决策多为'边际'上的小调整);② 说清判断方法(比较多走一步的额外收益与额外成本);③ 用自己的话改写、不照抄原句、句型多样。",
+  "prompt_en": "Read the essay 'Rational People Think at the Margin' and write a summary of no more than 60 words. Capture the main idea (most real-life decisions are small steps 'at the margin'), state how to judge such a step (compare its extra benefit with its extra cost), and use your own words rather than copying the original sentences.",
+  "points": [
+    "抓核心:决策多是边际上的小调整,不是非此即彼",
+    "讲方法:比较多走一步的额外收益与额外成本",
+    "下结论:额外收益大于额外成本才行动",
+    "用同义改写、句型多样、控制在60词内"
+  ],
+  "word_count": "不超过60词",
+  "model_essay": "Most real-life decisions are not all-or-nothing choices but small steps that economists call marginal changes. To choose wisely, we should compare the extra benefit of one more step with its extra cost. A rational person takes an action only when that added benefit outweighs the added cost. In short, thinking at the margin helps people make better everyday decisions.",
+  "model_translation": "现实中的大多数决策并非非此即彼,而是经济学家所说的'边际'小调整。为明智地选择,我们应比较多走一步的额外收益与额外成本。理性的人只有在额外收益大于额外成本时才会行动。简言之,边际思考能帮助人们在日常生活中做出更好的决定。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:边际小调整的核心 / 比较额外收益与额外成本的方法 / 收益大于成本才行动" },
+      { "dimension": "结构", "max": 4, "criteria": "概括完整、逻辑清晰、句句围绕原文核心、不超60词" },
+      { "dimension": "语言", "max": 5, "criteria": "同义改写到位、句型多样、非谓语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "核心:Most decisions are small steps called marginal changes.",
+      "方法:Compare the extra benefit of one more step with its extra cost.",
+      "结论:Act only when the added benefit outweighs the added cost.",
+      "收束:Thinking at the margin helps people decide better."
+    ],
+    "key_expressions": [
+      "marginal changes / thinking at the margin",
+      "compare the extra benefit with the extra cost",
+      "take an action only when the benefit outweighs the cost",
+      "make better everyday decisions"
+    ],
+    "useful_words": ["decision", "marginal", "benefit", "cost", "compare", "rational", "outweigh", "wisely", "economy", "choice"]
+  },
+  "high_sentences": [
+    "Most real-life decisions are small steps that economists call marginal changes.",
+    "We should compare the extra benefit of one more step with its extra cost.",
+    "A rational person acts only when the added benefit outweighs the added cost.",
+    "Thinking at the margin helps people make better everyday decisions."
+  ],
+  "error_pairs": [
+    { "wrong": "The essay tells about how to decide.", "correct": "The essay explains how to make decisions.", "note": "摘要用 explain/describe 等更书面的概括动词,避免口语 tell about。" },
+    { "wrong": "Compare the benefit with the cost is important.", "correct": "Comparing the benefit with the cost is important.", "note": "句首作主语用动名词 Comparing,不能用动词原形。" },
+    { "wrong": "People should act when the benefit is more bigger than the cost.", "correct": "People should act when the benefit is bigger than the cost.", "note": "bigger 已是比较级,不再加 more。" }
+  ],
+  "paragraph_template": "【经济短文摘要结构(≤60词)】\n第1句 核心:Most decisions are small steps called marginal changes.\n第2句 方法:Compare the extra benefit of one more step with its extra cost.\n第3句 结论:Act only when the added benefit outweighs the added cost.\n第4句 收束:Thinking at the margin helps people decide better."
+}

@@ -1,0 +1,36 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grade": 11,
+  "content": {
+    "title": "三大时态·过去完成时 / 现在完成进行时 / 将来进行时 速查",
+    "intro": "本单元三个时态各管一段时间轴:过去完成时=「过去的过去」(had done);现在完成进行时=从过去持续到现在的动作(have been doing);将来进行时=将来某刻正在进行(will be doing)。判断口诀:看时间标志词和「相对哪个时间点」。",
+    "table": {
+      "headers": ["时态", "结构 / 时间标志 / 例句"],
+      "rows": [
+        ["过去完成时", "had + 过去分词；before / by the time / after / already / by + 过去时间：When I arrived, the class had begun."],
+        ["现在完成进行时", "have/has been + doing；for / since / all day / lately / recently / how long：She has been studying for hours."],
+        ["将来进行时", "will be + doing；this time tomorrow / at + 将来时刻 / soon / when you grow up：This time tomorrow I'll be flying to London."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去完成时是「过去的过去」——必须有另一个过去动作作参照", "mark": "after he had gained his degree, he sailed home" },
+      { "rule": "现在完成进行时强调「动作持续、还可能在继续」,常与 for/since 连用", "mark": "Our motherland has been suffering for so long." },
+      { "rule": "将来进行时表示将来某刻「正在进行」,不强调开始或结束", "mark": "When you grow up, you will be studying science." },
+      { "rule": "现在完成进行时(强调过程) vs 现在完成时(强调结果):been doing 看重'一直在做',have done 看重'已做完'", "mark": "have been reading(还在读) / have read(读完了)" }
+    ],
+    "why": [
+      "三个时态都在表达「相对某个时间点」的动作:过去完成相对过去;现在完成进行从过去连到现在;将来进行落在将来。抓住参照点和持续/进行的含义,就不会混。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:by the time / before / after 引导句中辨过去完成时;for / since / lately 辨现在完成进行时。",
+      "this time tomorrow / at this moment next week 等标志,辨将来进行时;别误用一般将来时。",
+      "完成进行 vs 完成:题干给出 'and is still doing / 眼睛还红着' 等线索时,优先 been doing(强调持续)。"
+    ],
+    "examVsReal": [
+      { "exam": "By the time we arrived, the film had started.（考试/书面)", "real": "We got there late — the film already started.", "note": "考试用 had started 体现'过去的过去';口语里常简化成一般过去时 + already" },
+      { "exam": "I have been studying English for three years.（考试)", "real": "I've been doing English for three years now.", "note": "口语里 study 常说成 do;现在完成进行强调'这些年一直在学'" },
+      { "exam": "This time tomorrow I will be flying to London.（考试)", "real": "Same time tomorrow I'll be on the plane to London.", "note": "口语常用 be + 介词短语表'正处于某状态',意思与将来进行时相近" }
+    ]
+  }
+}

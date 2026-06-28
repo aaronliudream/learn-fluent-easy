@@ -1,0 +1,36 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "不定式作主语和表语·速查",
+    "intro": "句子的主语或表语位置若要表达'做某事',用不定式 to do。主语位置不能放有限动词;为求句子平衡,常用 it 作形式主语,把真正主语不定式放到句尾。",
+    "table": {
+      "headers": ["用法", "结构 / 例句"],
+      "rows": [
+        ["不定式作主语", "To do … + is/takes …:To have a balanced life is the best way to fight stress."],
+        ["it 形式主语", "It is + adj./n. + to do …:It is important to stay calm before a test."],
+        ["不定式作表语", "主语 + be + to do …:My plan is to do some volunteer work."],
+        ["对比 -ing", "不定式偏'具体/将来意图',-ing 偏'泛指/习惯':My favourite pastime is reading."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语位置不能用有限动词,用 To do(动词原形)", "mark": "To have … √ / Have … × / Has … ×" },
+      { "rule": "形式主语只能用 it,不能用 there/that/this", "mark": "It is hard to … √ / There is hard to … ×" },
+      { "rule": "be 后表语用 to do,说明或等同主语", "mark": "The best way is to breathe slowly." },
+      { "rule": "不定式作主语/表语,动词要用原形,不写 to doing", "mark": "to have √ / to having ×" }
+    ],
+    "why": [
+      "不定式 to do 本身相当于一个名词性成分,可以充当主语或表语;有限动词带时态,只能作谓语,所以不能放在主语位置。用 it 作形式主语是为了避免句子'头重脚轻',让结构更平衡。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/选词:主语或 be 后空格,提示词是动词 → 多半填 to do。",
+      "It is + 形容词 + to do 是高频写作句型(important/necessary/hard/wise…)。",
+      "辨析不定式与动名词作主语/表语的细微差别(意图/将来 vs 泛指/习惯)。"
+    ],
+    "examVsReal": [
+      { "exam": "To get up early is good for health.（考试/书面、谚语体)", "real": "It's good to get up early. / Getting up early is good.", "note": "考试爱考句首不定式;日常口语更常用 it 形式主语或动名词" },
+      { "exam": "My plan is to travel this summer.（表语不定式)", "real": "I'm planning to travel this summer.", "note": "书面常用'be + to do'表语;口语常直接用动词 plan to do" }
+    ]
+  }
+}

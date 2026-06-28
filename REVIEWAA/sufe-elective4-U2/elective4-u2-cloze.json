@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Learning about Trade and Economy",
+  "source": "上外版选择性必修四 Unit 2 同主题完形(学生理财/贸易游戏/网购/家庭消费决策/中国出口惠及世界/班级春游预算)。用词限本单元/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Budget",
+      "text": "When Lily started university, she had to learn how to (1)____ her own money for the first time. Her main (2)____ of income was a small loan from the bank, so she had to spend (3)____. Every month she made a simple (4)____, writing down how much she could use for food, books and travel. She tried hard to (5)____ buying things she did not really need. Whenever she wanted something expensive, she would (6)____ the cost against the benefit before paying. If she ran (7)____ of money, she cut down on treats like coffee and films. Slowly, she learned that a clear plan could (8)____ her a lot of worry. By the end of the year, she had even managed to (9)____ a little money for a holiday. Looking back, Lily felt (10)____ that she had picked up such a useful skill so early.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "manage",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "manage one's money 管理钱财。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "source",
+            "noise",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "source of income 收入来源。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "angrily",
+            "sleepily",
+            "carefully",
+            "noisily"
+          ],
+          "answer_index": 2,
+          "explanation": "spend carefully 小心花钱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mistake",
+            "journey",
+            "machine",
+            "budget"
+          ],
+          "answer_index": 3,
+          "explanation": "make a budget 做预算。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "avoid",
+            "enjoy",
+            "continue",
+            "risk"
+          ],
+          "answer_index": 0,
+          "explanation": "不需要的东西要 avoid buying 避免购买。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "weigh",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "weigh cost against benefit 权衡成本与收益。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "in",
+            "up",
+            "out",
+            "off"
+          ],
+          "answer_index": 2,
+          "explanation": "run out of money 钱花光。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cost",
+            "lose",
+            "waste",
+            "save"
+          ],
+          "answer_index": 3,
+          "explanation": "save sb worry 省去烦恼。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "keep",
+            "spend",
+            "borrow",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "为度假 keep a little money 留住一点钱。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sorry",
+            "proud",
+            "afraid",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "felt proud 感到自豪。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Playing a Trading Game",
+      "text": "In our economics class, we played a trading (1)____ to understand how markets really work. Each group was given ten cards (2)____ as money, and there were five kinds of goods for (3)____. Gold was the most valuable, while food was the (4)____. The aim was to (5)____ as many points as possible by buying and selling wisely. At first, trading was (6)____, because no one knew the real value of each item. Then the teacher told us that the world was running (7)____ of oil, so its price suddenly went (8)____. Groups that had bought oil early made a big (9)____. By the end of the game, we all understood that prices change when goods become rare. It was a fun (10)____ to learn an important economic idea.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "game",
+            "letter"
+          ],
+          "answer_index": 2,
+          "explanation": "trading game 贸易游戏。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "eaten",
+            "lost",
+            "used"
+          ],
+          "answer_index": 3,
+          "explanation": "cards used as money 当作钱用的卡片。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sale",
+            "rain",
+            "sleep",
+            "sport"
+          ],
+          "answer_index": 0,
+          "explanation": "goods for sale 待售商品。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tallest",
+            "cheapest",
+            "oldest",
+            "loudest"
+          ],
+          "answer_index": 1,
+          "explanation": "food was the cheapest 最便宜。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "drop",
+            "win",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "win points 赢得分数。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "silent",
+            "empty",
+            "asleep",
+            "difficult"
+          ],
+          "answer_index": 3,
+          "explanation": "trading was difficult 交易很难。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "out",
+            "in",
+            "up",
+            "over"
+          ],
+          "answer_index": 0,
+          "explanation": "running out of oil 石油快用完。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "down",
+            "up",
+            "away",
+            "off"
+          ],
+          "answer_index": 1,
+          "explanation": "石油变稀缺，price went up 价格上涨。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mistake",
+            "noise",
+            "profit",
+            "holiday"
+          ],
+          "answer_index": 2,
+          "explanation": "made a big profit 赚大钱。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "rule",
+            "way"
+          ],
+          "answer_index": 3,
+          "explanation": "a fun way to learn 有趣的学习方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Shopping Online",
+      "text": "These days, more and more people in China (1)____ to shop online instead of going to busy stores. With just a phone, you can (2)____ goods from all over the world and pay in seconds. Cross-border online shopping has grown (3)____ in recent years. It gives small sellers a chance to (4)____ their products to customers far away. For buyers, it is easy to (5)____ prices from many shops before choosing the best (6)____. Of course, online shopping also has its (7)____: you cannot touch the goods, and sometimes they arrive (8)____ than you hoped. Still, most shoppers feel that the (9)____ are greater than the problems. As technology improves, this new (10)____ of trade is likely to grow even faster.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "choose",
+            "refuse",
+            "forget",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "choose to shop online 选择网购。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "throw",
+            "order",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "order goods 订购商品。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loudly",
+            "sadly",
+            "quickly",
+            "quietly"
+          ],
+          "answer_index": 2,
+          "explanation": "grown quickly 增长迅速。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hide",
+            "lose",
+            "eat",
+            "sell"
+          ],
+          "answer_index": 3,
+          "explanation": "sell their products 卖产品。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "compare",
+            "throw",
+            "cook",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "compare prices 比较价格。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "deal",
+            "rain",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "the best deal 最划算的交易。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "songs",
+            "gardens",
+            "problems",
+            "holidays"
+          ],
+          "answer_index": 2,
+          "explanation": "has its problems 有它的问题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "earlier",
+            "louder",
+            "higher",
+            "later"
+          ],
+          "answer_index": 3,
+          "explanation": "arrive later than hoped 到货比预期晚。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "benefits",
+            "mistakes",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "benefits are greater than problems 好处大于问题。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "mode",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a new mode of trade 新的贸易方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Family Decision",
+      "text": "Last month, my family had to make a difficult (1)____: should we buy a new car or keep our old one? My father suggested that we should (2)____ the costs and benefits carefully before deciding. A new car would be comfortable, but it was very (3)____, and we would have to borrow money from the bank. Keeping the old car would (4)____ us a lot of money, though it sometimes broke down. We sat together and made a (5)____ of all the good and bad points. In the end, we decided to (6)____ for the old car and save the money for my education. My father said this was a (7)____ choice, because the extra cost of a new car was greater than its extra (8)____. I learned that thinking carefully can help a family (9)____ its money wisely. Now I always try to (10)____ before I spend.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "garden",
+            "decision",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "make a difficult decision 做艰难决定。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "throw",
+            "cook",
+            "hide",
+            "weigh"
+          ],
+          "answer_index": 3,
+          "explanation": "weigh costs and benefits 权衡成本收益。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "expensive",
+            "quiet",
+            "empty",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "very expensive 很贵。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cost",
+            "save",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "保留旧车 save money 省钱。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "noise",
+            "rain",
+            "list",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "make a list 列清单。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "wait",
+            "sleep",
+            "cry",
+            "opt"
+          ],
+          "answer_index": 3,
+          "explanation": "opt for the old car 选择旧车。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wise",
+            "silly",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "a wise choice 明智的选择。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "mistake",
+            "benefit",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "extra benefit 额外收益。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "throw",
+            "break",
+            "spend",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "spend its money wisely 明智花钱。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "shout",
+            "run",
+            "think"
+          ],
+          "answer_index": 3,
+          "explanation": "try to think before spending 花钱前先想。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Trade Helps Both Sides",
+      "text": "China's factories produce goods that are sold in almost every (1)____ of the world. Because these products are good in quality but low in (2)____, families everywhere can afford them. At the same time, China buys huge amounts of goods from other countries, which (3)____ jobs for workers far away. When China's demand for imports (4)____, factories abroad become busier and hire more people. In this way, trade (5)____ both sides, not just one. Some people once worried that cheap Chinese goods would (6)____ foreign workers, but in many places the opposite has happened. New trade has helped poorer countries (7)____ their economies and lift people out of (8)____. Of course, no system is (9)____, and leaders must work hard to share the gains fairly. Still, the steady flow of goods across borders has made the world more closely (10)____ than ever before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "part",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "every part of the world 世界各地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "low in price 价格低。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loses",
+            "breaks",
+            "creates",
+            "hides"
+          ],
+          "answer_index": 2,
+          "explanation": "creates jobs 创造就业。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "falls",
+            "sleeps",
+            "sings",
+            "rises"
+          ],
+          "answer_index": 3,
+          "explanation": "工厂更忙→demand rises 需求上升。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "helps",
+            "hurts",
+            "stops",
+            "ends"
+          ],
+          "answer_index": 0,
+          "explanation": "trade helps both sides 贸易惠及双方。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "help",
+            "replace",
+            "teach",
+            "feed"
+          ],
+          "answer_index": 1,
+          "explanation": "怕廉价货 replace 抢走外国工人工作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "close",
+            "break",
+            "grow",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "grow their economies 发展经济。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "music",
+            "weather",
+            "sport",
+            "poverty"
+          ],
+          "answer_index": 3,
+          "explanation": "out of poverty 摆脱贫困。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "perfect",
+            "afraid",
+            "asleep",
+            "hungry"
+          ],
+          "answer_index": 0,
+          "explanation": "no system is perfect 没有完美的体系。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "divided",
+            "connected",
+            "forgotten",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "more closely connected 联系更紧密。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Budget for the Trip",
+      "text": "Our class has saved one thousand yuan for a spring (1)____, and now we need a good plan to spend it. First, we brainstormed a long (2)____ of things we might buy, such as food, water, tickets and small gifts. Then we put the items in (3)____ of importance, from the most necessary to the least. For each item, we had to (4)____ its cost against how useful it would be. Some students wanted matching T-shirts so that we could easily (5)____ each other in a crowd, but others felt they were too (6)____. In the end, we (7)____ to buy a bright flag instead, which was cheaper and worked just as (8)____. By talking together, we made sure that every yuan was (9)____ wisely. Everyone agreed that careful planning had made our trip both fun and (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "machine",
+            "outing",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "spring outing 春游。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "rain",
+            "game",
+            "list"
+          ],
+          "answer_index": 3,
+          "explanation": "a long list 一长串清单。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "order",
+            "noise",
+            "weather",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "in order of importance 按重要性排序。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "weigh",
+            "cook",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "weigh cost against usefulness 权衡。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "break",
+            "find",
+            "eat"
+          ],
+          "answer_index": 2,
+          "explanation": "find each other 找到彼此。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "quiet",
+            "asleep",
+            "empty",
+            "expensive"
+          ],
+          "answer_index": 3,
+          "explanation": "too expensive 太贵。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "decided",
+            "refused",
+            "forgot",
+            "slept"
+          ],
+          "answer_index": 0,
+          "explanation": "decided to buy a flag 决定买旗子。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "badly",
+            "well",
+            "slowly",
+            "loudly"
+          ],
+          "answer_index": 1,
+          "explanation": "worked just as well 同样管用。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lost",
+            "thrown",
+            "spent",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "every yuan was spent wisely 每分钱都花得明智。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "useless",
+            "empty",
+            "silent",
+            "useful"
+          ],
+          "answer_index": 3,
+          "explanation": "fun and useful 既有趣又有用。"
+        }
+      ]
+    }
+  ]
+}

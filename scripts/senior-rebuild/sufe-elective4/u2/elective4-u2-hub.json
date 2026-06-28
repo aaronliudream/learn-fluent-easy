@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "China's foreign trade has grown quickly in recent years.", "opts": ["近年来中国的对外贸易增长迅速。", "中国停止了对外贸易。", "中国的贸易每年都在下降。", "中国从不和别国做生意。"], "answer": 0 },
+    { "audio": "Foreign trade has helped lift millions of people out of poverty.", "opts": ["对外贸易帮助数百万人摆脱了贫困。", "对外贸易让更多人变穷了。", "贸易和贫困毫无关系。", "贸易让人们离开了国家。"], "answer": 0 },
+    { "audio": "Every choice we make has a hidden opportunity cost.", "opts": ["我们做的每个选择都有隐藏的机会成本。", "我们的选择从来没有成本。", "成本只和价格有关。", "选择越多花钱越少。"], "answer": 0 },
+    { "audio": "Cross-border e-commerce is growing very fast in China.", "opts": ["跨境电子商务在中国发展得非常快。", "中国的网购正在消失。", "电子商务只在国外存在。", "网上几乎买不到东西。"], "answer": 0 },
+    { "audio": "A wise buyer compares the costs and benefits before paying.", "opts": ["明智的买家付款前会权衡成本与收益。", "明智的买家从不看价格。", "买家总是先付钱再考虑。", "买东西不需要任何思考。"], "answer": 0 },
+    { "audio": "Money works only because people are willing to accept it.", "opts": ["钱之所以有用,是因为人们愿意接受它。", "钱的价值在于它的材料。", "贝壳至今仍是主要货币。", "硬币对所有人都没有价值。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "经济迅速增长，创造了更多就业。A strong ____ creates more jobs.", "opts": ["economy", "weather", "garden", "holiday"], "answer": 0, "point": "词汇 economy", "dim": "vocab" },
+    { "q": "这些产品主要为出口而生产。These products are made for ____.", "opts": ["export", "weather", "music", "sleep"], "answer": 0, "point": "词汇 export", "dim": "vocab" },
+    { "q": "出口在该国总量中占很大份额。Exports ____ a large share of the total.", "opts": ["account for", "look after", "give up", "run out"], "answer": 0, "point": "词汇 account for", "dim": "vocab" },
+    { "q": "价格上涨时买家往往选更便宜的货。Buyers often ____ for cheaper goods.", "opts": ["opt", "cry", "sleep", "shout"], "answer": 0, "point": "词汇 opt", "dim": "vocab" },
+    { "q": "The factory finished ____ the trade agreement yesterday.", "opts": ["signing", "to sign", "signed", "sign"], "answer": 0, "point": "语法 动名词作宾语", "dim": "grammar" },
+    { "q": "The young company decided ____ the overseas market.", "opts": ["to enter", "entering", "entered", "enter"], "answer": 0, "point": "语法 不定式作宾语", "dim": "grammar" },
+    { "q": "The cheap goods ____ from other countries sold quickly.", "opts": ["imported", "importing", "to import", "import"], "answer": 0, "point": "语法 -ed 分词作定语(被动)", "dim": "grammar" },
+    { "q": "The car was too expensive ____ quickly.", "opts": ["to sell", "selling", "sold", "sell"], "answer": 0, "point": "语法 too…to 结构", "dim": "grammar" },
+    { "q": "听录音，选出与句意相符的一项。", "opts": ["卖家因今天生意清淡而降价。", "卖家因为商品很贵而降价。", "买家拒绝购买任何东西。", "卖家把价格提高了一倍。"], "answer": 0, "point": "听力 砍价对话", "dim": "listening", "audio": "Because business is slow today, the seller can offer a lower price." },
+    { "q": "听录音，选出与句意相符的一项。", "opts": ["一枚硬币能帮助许多人谋生。", "钱总是停在一个地方不动。", "银行从不把钱借出去。", "工人把钱埋进了地里。"], "answer": 0, "point": "听力 货币流动", "dim": "listening", "audio": "In this way, a single coin can help many different people earn a living." }
+  ],
+  "reading": {
+    "passage": "Since China joined the WTO, it has bought more goods from abroad and sold more products to the world. Its rising demand for imports gives trading partners new chances to earn money, while its exports bring cheap, good products to families everywhere.",
+    "passageCn": "自加入世贸组织以来，中国从国外购买了更多商品，也向世界卖出了更多产品。其不断上升的进口需求给贸易伙伴带来赚钱的新机会，而其出口则把价廉物美的产品带给各地家庭。",
+    "questions": [
+      { "q": "How do China's imports help its trading partners?", "opts": ["They give partners new chances to earn money.", "They force partners to stop trading.", "They make all goods more expensive.", "They close foreign factories."], "answer": 0 },
+      { "q": "What do China's exports bring to families everywhere?", "opts": ["Cheap, good-quality products.", "Only very costly goods.", "Nothing useful at all.", "Higher local prices."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short summary (about 50 words) of the idea 'Rational people think at the margin', explaining how to weigh the extra benefit and the extra cost of one more step.",
+    "promptCn": "用约50词写一段摘要，概括'理性的人会进行边际思考'这一观点，说明如何权衡多走一步的额外收益与额外成本。",
+    "sampleWords": ["decision", "marginal", "benefit", "cost", "compare", "rational", "outweigh", "wisely", "economy", "choice"]
+  },
+  "dialogues": [
+    {
+      "title": "Bargaining at the Market",
+      "lines": [
+        { "role": "A", "text": "How much is this silk scarf?", "cn": "这条丝巾多少钱？" },
+        { "role": "B", "text": "It's two hundred yuan, but business is slow, so I can offer one hundred and seventy.", "cn": "二百元，不过今天生意清淡，我可以一百七卖给你。" },
+        { "role": "A", "text": "How about one hundred and sixty, and I'll take two?", "cn": "一百六怎么样，我买两条？" },
+        { "role": "B", "text": "All right, it's a deal.", "cn": "好的，成交。" }
+      ]
+    },
+    {
+      "title": "A New Phone or Save?",
+      "lines": [
+        { "role": "A", "text": "My old phone still works, but I really want the new model.", "cn": "我的旧手机还能用，但我很想要新款。" },
+        { "role": "B", "text": "Is the new one really worth a thousand yuan more?", "cn": "新款真的值得多花一千元吗？" },
+        { "role": "A", "text": "When you put it that way, maybe the extra features aren't worth the extra cost.", "cn": "这么一想，额外的功能也许不值额外的花费。" },
+        { "role": "B", "text": "That's smart thinking. Save the money for your trip.", "cn": "想得很明智，把钱留着去旅行吧。" }
+      ]
+    }
+  ]
+}

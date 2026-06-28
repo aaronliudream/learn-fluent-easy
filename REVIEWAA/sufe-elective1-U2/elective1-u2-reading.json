@@ -1,0 +1,356 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Volunteering",
+  "source": "上外版选择性必修第一册 Unit 2 同主题阅读(保护猎豹的少年/连接志愿机会的网站/反塑料运动/故宫志愿导览/坦桑尼亚之行的教训/国际志愿者日)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Boy Who Helps Cheetahs",
+      "body": "Joris is only ten years old, but he has already done something many adults never do. Living in Seattle, he became aware that cheetahs were under the threat of extinction. Instead of just feeling sad, he decided to act. He sold lemonade, flowers and T-shirts, and organised skating parties and a garage sale to earn money. In this way he raised more than fourteen thousand dollars. With that money, he helped to purchase GPS collars that can track and protect the animals in the wild. Joris has also volunteered to help in a wildlife conservation organisation. When people ask him why a child should worry about animals so far away, he simply answers that every living thing deserves a chance. His story shows that you do not have to be rich or grown up to make a difference. A small idea, a lot of effort and a kind heart can be enough to change the world a little.",
+      "vocab_notes": [
+        {
+          "word": "cheetah",
+          "cn": "猎豹"
+        },
+        {
+          "word": "extinction",
+          "cn": "灭绝"
+        },
+        {
+          "word": "collar",
+          "cn": "颈圈"
+        },
+        {
+          "word": "conservation",
+          "cn": "保护"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Joris get the money he needed?",
+          "options": [
+            "By selling things and holding events to raise funds.",
+            "By asking the government for a large gift.",
+            "By winning a school competition.",
+            "By borrowing it from a wildlife club."
+          ],
+          "answer_index": 0,
+          "explanation": "原文卖柠檬水、花、T恤并组织活动筹钱的转述;其余选项原文未提或相反。"
+        },
+        {
+          "stem": "What were the GPS collars used for?",
+          "options": [
+            "To decorate the cheetahs.",
+            "To track and protect the cheetahs.",
+            "To sell to other countries.",
+            "To keep the cheetahs in a zoo."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'track and protect the animals' 的转述。"
+        },
+        {
+          "stem": "What main lesson does Joris's story teach?",
+          "options": [
+            "Even a child can make a difference.",
+            "Only adults can protect wild animals.",
+            "Helping animals is a waste of money.",
+            "Cheetahs are too far away to help."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'you do not have to be rich or grown up to make a difference' 的概括转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Website Built by Twins",
+      "body": "Jake and Max are twin brothers who are only fourteen years old. One day they wanted to serve meals at a shelter, but they were told that they were simply too young to help. Many children feel the same way: they want to do good, yet they do not know where to start. Instead of giving up, the twins decided to solve the problem for everyone. They launched a website and built a database that connects young people with volunteer opportunities near them. The site now receives an average of one hundred visitors every day. A growing number of groups, such as animal shelters and urban farming groups, have requested to be listed on it. Because of the twins, a child who wants to help can now find the right place in just a few minutes. What began as one closed door has opened many new ones. Their story proves that turning a personal problem into a shared solution is itself a powerful form of volunteering.",
+      "vocab_notes": [
+        {
+          "word": "database",
+          "cn": "数据库"
+        },
+        {
+          "word": "shelter",
+          "cn": "收容所"
+        },
+        {
+          "word": "urban",
+          "cn": "城市的"
+        },
+        {
+          "word": "list",
+          "cn": "列入名单"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the twins first feel disappointed?",
+          "options": [
+            "They had no money for the project.",
+            "They were told they were too young to help.",
+            "Their parents stopped them.",
+            "The shelter had already closed."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他们想送餐却被告知太小的转述。"
+        },
+        {
+          "stem": "What does the website mainly do?",
+          "options": [
+            "It sells food to shelters.",
+            "It teaches children how to cook.",
+            "It connects young people with places to volunteer.",
+            "It collects money for animals."
+          ],
+          "answer_index": 2,
+          "explanation": "原文网站把年轻人与志愿机会连接起来的转述。"
+        },
+        {
+          "stem": "What does the writer think the twins' story shows?",
+          "options": [
+            "Children should not try to volunteer.",
+            "Only big organisations can help others.",
+            "Websites are better than serving meals.",
+            "That solving a shared need is itself real volunteering."
+          ],
+          "answer_index": 3,
+          "explanation": "末句概括其转述,其余与原文观点不符。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Fighting Plastic Pollution",
+      "body": "Jackson is seventeen, and he has always cared about the problem of plastic pollution. He serves as the president of an environmental club at his school. This year, he organised a march in his county to raise awareness of water rights, and many people walked with him to show their support. But Jackson believes that one march is not enough. He is also leading a campaign in his town to promote the use of reusable water bottles. His team is urging local restaurants to join the movement by selling more paper cups and bottles instead of plastic ones. \"Change does not happen overnight,\" Jackson says, \"but every bottle we save still matters.\" Some people argue that one teenager cannot change the habits of a whole town. Jackson disagrees. He thinks that big movements always start with small actions taken by ordinary people. Step by step, his town is beginning to throw away less plastic, and other schools nearby have started similar clubs of their own.",
+      "vocab_notes": [
+        {
+          "word": "campaign",
+          "cn": "运动"
+        },
+        {
+          "word": "promote",
+          "cn": "推广"
+        },
+        {
+          "word": "urge",
+          "cn": "力劝"
+        },
+        {
+          "word": "reusable",
+          "cn": "可重复使用的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Jackson organise in his county this year?",
+          "options": [
+            "A protest march about water rights.",
+            "A sports competition.",
+            "A school exam.",
+            "A music festival."
+          ],
+          "answer_index": 0,
+          "explanation": "原文他在县里组织游行提高水权意识的转述。"
+        },
+        {
+          "stem": "What is Jackson's team asking local restaurants to do?",
+          "options": [
+            "To close down completely.",
+            "To offer paper bottles in place of plastic ones.",
+            "To stop serving water.",
+            "To give free meals to students."
+          ],
+          "answer_index": 1,
+          "explanation": "原文力劝餐馆多卖纸瓶代替塑料的转述。"
+        },
+        {
+          "stem": "What does Jackson believe about big movements?",
+          "options": [
+            "They can never succeed.",
+            "They need a famous leader.",
+            "They begin with small actions by ordinary people.",
+            "They should be left to the government."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'big movements always start with small actions' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Guide in the Old Palace",
+      "body": "Xiao Meng is a twenty-year-old student in Beijing, and she is one of around three hundred volunteer tour guides in the Forbidden City. From a distance she looks like any other visitor, walking quietly among the crowds, but she wears a red \"volunteer\" card on her chest. Becoming a good guide was not easy. It took her about three months to remember every detail of the one hundred and seventy-six clocks in the clock gallery of the Palace Museum. She loves spending time in the buildings where twenty-five emperors once spent their whole lives. \"Every brick has a story to tell,\" she likes to say. For Xiao Meng, the work is not only about sharing facts with strangers. It is also a way of keeping the past alive and passing it on to a new generation. When tourists thank her with shining eyes, she feels that all those long hours of study were truly worth it.",
+      "vocab_notes": [
+        {
+          "word": "gallery",
+          "cn": "陈列室"
+        },
+        {
+          "word": "emperor",
+          "cn": "皇帝"
+        },
+        {
+          "word": "brick",
+          "cn": "砖块"
+        },
+        {
+          "word": "generation",
+          "cn": "一代人"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How can people tell that Xiao Meng is a volunteer?",
+          "options": [
+            "She carries a large flag.",
+            "She wears a special hat.",
+            "She walks far from the crowds.",
+            "By the red volunteer card she has on."
+          ],
+          "answer_index": 3,
+          "explanation": "原文她戴红色志愿者卡的转述。"
+        },
+        {
+          "stem": "What took Xiao Meng about three months?",
+          "options": [
+            "Learning every detail of the clocks in the gallery.",
+            "Travelling to Beijing.",
+            "Building the palace.",
+            "Writing a book about emperors."
+          ],
+          "answer_index": 0,
+          "explanation": "原文她花三个月记住钟表细节的转述。"
+        },
+        {
+          "stem": "Why does Xiao Meng find her work meaningful?",
+          "options": [
+            "It earns her a high wage.",
+            "It keeps the past alive for a new generation.",
+            "It lets her travel for free.",
+            "It helps her avoid school."
+          ],
+          "answer_index": 1,
+          "explanation": "原文她视之为让过去存续、传给新一代的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Lesson from Tanzania",
+      "body": "A few years ago, Pippa joined a school trip to Tanzania. Her group of students went to an orphanage, where their mission was to build a library. They were all highly educated, yet they were so bad at the basic construction work that the local men had to come back each night to rebuild it in secret. In the end, the money paid for two libraries: the poor one the students made by day, and the real one built quietly at night. Pippa felt that they had failed at the only purpose of their visit. She also brought hair bands as gifts, which seemed logical to her, until she saw that the local schoolgirls all had closely cropped hair and could not use them at all. Looking back, Pippa believes the trip taught her something important. If you truly want to help a community, she says, you should do careful research first and never assume that others value the same things you do.",
+      "vocab_notes": [
+        {
+          "word": "orphanage",
+          "cn": "孤儿院"
+        },
+        {
+          "word": "construction",
+          "cn": "建造"
+        },
+        {
+          "word": "cropped",
+          "cn": "剪短的"
+        },
+        {
+          "word": "assume",
+          "cn": "想当然地认为"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the local men rebuild the library at night?",
+          "options": [
+            "They wanted to make it larger.",
+            "They were paid extra to do so.",
+            "The students' construction work was too poor.",
+            "The students asked them to."
+          ],
+          "answer_index": 2,
+          "explanation": "原文学生建筑活儿太差、当地人夜里偷偷重建的转述。"
+        },
+        {
+          "stem": "Why were the hair bands a useless gift?",
+          "options": [
+            "They were too expensive.",
+            "The girls already had many of them.",
+            "They broke during the trip.",
+            "The local girls had very short hair."
+          ],
+          "answer_index": 3,
+          "explanation": "原文女生头发剪得很短、用不上的转述。"
+        },
+        {
+          "stem": "What lesson did Pippa learn from the trip?",
+          "options": [
+            "Do research first and respect what others value.",
+            "Never travel to other countries.",
+            "Gifts are always a bad idea.",
+            "Only adults should volunteer abroad."
+          ],
+          "answer_index": 0,
+          "explanation": "末段先做调查、别想当然假设的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "International Volunteer Day",
+      "body": "The act of volunteering is found in all cultures around the world. Every year, hundreds of millions of people give their time and skills to help make the world a better place. When they volunteer, they not only improve the lives of others but also gain a stronger sense of belonging to their own communities. To celebrate this spirit, the world marks International Volunteer Day on the fifth of December each year. On that day, people hold parades, volunteer fairs, group clean-ups, blood donations, conferences and exhibitions. Some plant trees, others read to elderly people, and many simply spend a few hours helping neighbours they have never met before. The day reminds us that volunteering is not a rare or distant thing. It is something almost anyone can do, in big ways or small. Whether you give a whole weekend or just a single afternoon, your effort joins millions of others and helps to build a kinder, more connected world for everyone.",
+      "vocab_notes": [
+        {
+          "word": "parade",
+          "cn": "游行"
+        },
+        {
+          "word": "donation",
+          "cn": "捐献"
+        },
+        {
+          "word": "belonging",
+          "cn": "归属感"
+        },
+        {
+          "word": "community",
+          "cn": "社区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do volunteers gain besides helping others?",
+          "options": [
+            "A large amount of money.",
+            "A deeper feeling of belonging in their own communities.",
+            "A free holiday abroad.",
+            "A chance to avoid work."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他们也获得对社区的归属感的转述。"
+        },
+        {
+          "stem": "When is International Volunteer Day held?",
+          "options": [
+            "On the first of January.",
+            "On any weekend in spring.",
+            "Each year on December the fifth.",
+            "Once every two years."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'on the fifth of December' 的对应。"
+        },
+        {
+          "stem": "What main idea does the passage express about volunteering?",
+          "options": [
+            "Only special people can volunteer.",
+            "Volunteering should last a whole month.",
+            "Volunteering is mostly about parades.",
+            "Almost anyone can volunteer in big or small ways."
+          ],
+          "answer_index": 3,
+          "explanation": "末段几乎人人都能以大小方式参与的概括转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grade": 11,
+  "content": {
+    "title": "非限制性定语从句 速查",
+    "intro": "非限制性定语从句用逗号和主句隔开,只是对先行词作补充说明(去掉它句子意思仍完整)。核心三铁律:① 必须有逗号;② 禁用 that;③ 关系词不可省。指人用 who/whom,指物用 which,还可用 which 指代整个主句;另有 whose(所属)、where(地点)、when(时间)。",
+    "table": {
+      "headers": ["关系词", "用法 / 例句"],
+      "rows": [
+        ["which", "指物 / 指整个主句:The dome, which is energy-saving, …;He passed, which pleased us."],
+        ["who / whom", "指人(who 作主语 / whom 作宾语):My uncle, who lives here, …;Lina, whom we trust, …"],
+        ["whose", "表所属:The boy, whose mother had died, …"],
+        ["where / when", "地点 / 时间:the attic, where Tommy found it …;2157, when children …"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "非限制性必须有逗号,且禁用 that", "mark": "…, which … √ / …, that … ×" },
+      { "rule": "关系词在非限制性从句中不可省略", "mark": "My phone, which I bought last year, …(which 不能省)" },
+      { "rule": "which 可指代前面整个主句(逗号 + which)", "mark": "Robots took over, which gave us more time." },
+      { "rule": "限制性(无逗号、缺主宾)指物可用 that;非限制性不可", "mark": "the device that connects all(限制性)√" }
+    ],
+    "why": [
+      "限制性从句帮你'锁定'是哪一个(去掉句意残缺);非限制性只是'顺带多说一句'(去掉句意仍完整)。正因为它只是补充,所以用逗号隔开、不能用 that、关系词也不能省。"
+    ],
+    "gaokaoPoints": [
+      "逗号判定:有逗号→非限制性(禁 that、禁省略);看从句缺什么成分定 who/which(缺主宾)还是 where/when(缺状语)。",
+      "which 指代整个主句(语法填空与改错高频);whose 表所属;非限制性禁 that 是常见陷阱。"
+    ],
+    "examVsReal": [
+      { "exam": "Lina, who looks after me, never gets tired.（考试 / 书面）", "real": "Lina looks after me — she never gets tired.", "note": "考试爱考非限制性从句;口语常拆成两个短句或破折号。" },
+      { "exam": "He passed the test, which pleased his parents.（考试)", "real": "He passed the test, and that pleased his parents.", "note": "which 指代整句;口语里也常用 and that 表达。" }
+    ]
+  }
+}

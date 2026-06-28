@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grammar_title": "省略(Ellipsis)",
+  "source": "上外版必修第三册 Unit 3 Grammar in Use:Ellipsis(省略)。三类:并列句/简单句中避免重复的省略、状语从句中主语+be 的省略、不定式 to 的省略与答语/对话省略。句子地道、答案唯一、零术语。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "并列句/简单句省略(避免重复)",
+      "overview": "当 and / but / or 连接的两部分共用相同的动词、主语或成分时,后半部分把重复的词省去:I like tea and (I like) coffee;She can swim but I can't (swim)。"
+    },
+    {
+      "code": "u3.02",
+      "point": "状语从句省略(主语与主句一致且含 be)",
+      "overview": "when/while/if/though/as 等从句的主语与主句相同且含 be 动词时,可省略「主语+be」:when (you are) young;if (it is) necessary;though (he was) tired。"
+    },
+    {
+      "code": "u3.03",
+      "point": "不定式 to 的省略 & 答语/对话省略",
+      "overview": "为避免重复前面出现过的动词,只保留 to:I'd love to (go);want to / would like to 后动词省去。答语中也常省略已知信息:Yes, I'd love to。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "\"Xiaohan is going on a diet, but I don't think Xiaosong ____.\"",
+      "options": [
+        "will",
+        "does so",
+        "goes",
+        "is"
+      ],
+      "answer_index": 0,
+      "explanation": "省去重复的 go on a diet,用助动词 will 收尾即可。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My brother likes swimming, and ____ jogging in the morning.\"",
+      "options": [
+        "me",
+        "I",
+        "mine",
+        "myself"
+      ],
+      "answer_index": 1,
+      "explanation": "并列结构省去重复的动词 like,后半句主语用主格 I。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Yihui likes reading, Lingyun likes football and Shanshan ____ gardening.\"",
+      "options": [
+        "to like",
+        "liking",
+        "likes",
+        "like"
+      ],
+      "answer_index": 2,
+      "explanation": "三项并列重复同一动词 like,各分句保留 likes(主语第三人称单数)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"You'd better drink fat-free milk or ____ low-fat milk.\"",
+      "options": [
+        "drank",
+        "to drink",
+        "drinking",
+        "drink"
+      ],
+      "answer_index": 3,
+      "explanation": "or 连接的并列,省去重复的情态结构,保留原形动词 drink 与前一致。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"She eats a lot of vegetables, but her brother ____.\"",
+      "options": [
+        "doesn't",
+        "isn't",
+        "won't",
+        "hasn't"
+      ],
+      "answer_index": 0,
+      "explanation": "省去重复的 eat a lot of vegetables,一般现在时否定用 doesn't。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Too much sugar is harmful to physical and ____ health.\"",
+      "options": [
+        "the mental",
+        "mental",
+        "a mental",
+        "mentally"
+      ],
+      "answer_index": 1,
+      "explanation": "physical and mental health 共用一个 health,省去重复名词,形容词 mental 直接并列。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"He wanted to go to the gym, but he was too tired ____.\"",
+      "options": [
+        "for",
+        "that",
+        "to",
+        "so"
+      ],
+      "answer_index": 2,
+      "explanation": "too...to 结构中省去重复的 go to the gym,只留不定式记号 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"I can run five kilometres, but my sister ____.\"",
+      "options": [
+        "doesn't",
+        "isn't",
+        "won't",
+        "can't"
+      ],
+      "answer_index": 3,
+      "explanation": "省去重复的 run five kilometres,情态动词 can 的否定用 can't。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Dark green, red ____ orange vegetables all have high levels of nutrients.\"",
+      "options": [
+        "and",
+        "but",
+        "so",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "三个并列形容词共用一个名词 vegetables,用 and 连接,省去重复的 vegetables。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Some students skip meals, others eat very little, ____ a few simply fast.\"",
+      "options": [
+        "that",
+        "and",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "并列分句用 and 连接,后句省去重复成分,只保留新信息。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My friends have different hobbies: Tom likes cycling and Ann ____ yoga.\"",
+      "options": [
+        "is",
+        "has done",
+        "does",
+        "will"
+      ],
+      "answer_index": 2,
+      "explanation": "do yoga 的 do 不能省,省去的是重复信息;此处保留 does(第三人称单数)接 yoga。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"He looks much healthier than his cousin ____.\"",
+      "options": [
+        "is",
+        "has",
+        "done",
+        "does"
+      ],
+      "answer_index": 3,
+      "explanation": "比较句省去重复的 looks healthy,用助动词 does 收尾。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"We can eat out tonight, or we ____ cook something simple at home.\"",
+      "options": [
+        "can",
+        "are",
+        "do",
+        "have"
+      ],
+      "answer_index": 0,
+      "explanation": "or 连接的并列省去重复的 can,后句保留情态动词 can。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Liz drinks soda while studying, but she knows she ____.\"",
+      "options": [
+        "isn't",
+        "shouldn't",
+        "doesn't",
+        "won't"
+      ],
+      "answer_index": 1,
+      "explanation": "省去重复的 drink soda,情态结构否定用 shouldn't。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Routine chores don't get your heart rate up the way jogging ____.\"",
+      "options": [
+        "is",
+        "has",
+        "does",
+        "done"
+      ],
+      "answer_index": 2,
+      "explanation": "比较中省去重复的 gets your heart rate up,用 does 替代。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"He has already exercised today, but I ____ yet.\"",
+      "options": [
+        "didn't",
+        "wasn't",
+        "don't",
+        "haven't"
+      ],
+      "answer_index": 3,
+      "explanation": "省去重复的 exercised,现在完成时否定用 haven't(配 yet)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Mike runs faster than John ____.\"",
+      "options": [
+        "does",
+        "is",
+        "run",
+        "ran"
+      ],
+      "answer_index": 0,
+      "explanation": "比较句省去重复的 runs,用助动词 does 收尾。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"You should reduce salt, ____ leave it out altogether if you can.\"",
+      "options": [
+        "that",
+        "or",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "or 连接两个并列建议,后句省去重复的主语 you 与 should。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My sister got eight hours of sleep last night, but I only ____ six.\"",
+      "options": [
+        "get",
+        "getting",
+        "got",
+        "to get"
+      ],
+      "answer_index": 2,
+      "explanation": "并列句省去重复的 hours of sleep,保留过去式 got 接 six。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Some people love morning workouts, ____ others prefer evening walks.\"",
+      "options": [
+        "for",
+        "so",
+        "that",
+        "but"
+      ],
+      "answer_index": 3,
+      "explanation": "前后形成对比,用 but 连接两个并列分句。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"She wanted to join the dance club, and her friends ____ too.\"",
+      "options": [
+        "did",
+        "were",
+        "have",
+        "are"
+      ],
+      "answer_index": 0,
+      "explanation": "省去重复的 wanted to join the dance club,用助动词 did 收尾。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ weak and tired, Yutong still went jogging in the afternoon.\"",
+      "options": [
+        "Because",
+        "Though",
+        "Unless",
+        "So"
+      ],
+      "answer_index": 1,
+      "explanation": "句意'虽然又弱又累,却仍去慢跑'=Though (he was) weak and tired,从句省去'he was';让步连词用 Though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ young, you should start building healthy habits early.\"",
+      "options": [
+        "Unless",
+        "Because",
+        "When",
+        "So"
+      ],
+      "answer_index": 2,
+      "explanation": "When (you are) young '当你年轻时',时间从句省去'you are';连词用 When。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"See a doctor immediately ____ necessary, rather than wait at home.\"",
+      "options": [
+        "unless",
+        "though",
+        "so",
+        "if"
+      ],
+      "answer_index": 3,
+      "explanation": "if (it is) necessary '如果必要',条件从句省去'it is';连词用 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ exercising on a regular basis, you also need enough sleep.\"",
+      "options": [
+        "While",
+        "Unless",
+        "Because",
+        "So"
+      ],
+      "answer_index": 0,
+      "explanation": "While (you are) exercising '在运动的同时',时间从句省去'you are';连词用 While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ a classic debate, the answer is actually quite simple.\"",
+      "options": [
+        "Because",
+        "Though",
+        "Unless",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "Though (it is) a classic debate '尽管是个典型争论',让步从句省去'it is';连词用 Though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ in doubt about a symptom, ask a doctor for advice.\"",
+      "options": [
+        "Unless",
+        "Because",
+        "When",
+        "So"
+      ],
+      "answer_index": 2,
+      "explanation": "When (you are) in doubt '当你有疑问时',时间从句省去'you are';连词用 When。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Wash your hands ____ necessary to fight off germs.\"",
+      "options": [
+        "because",
+        "though",
+        "so",
+        "whenever"
+      ],
+      "answer_index": 3,
+      "explanation": "whenever (it is) necessary '每当有必要时',从句省去'it is';连词用 whenever。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Get eight to ten hours of sleep each night ____ possible.\"",
+      "options": [
+        "if",
+        "unless",
+        "though",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "if (it is) possible '如果可能',条件从句省去'it is';连词用 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ at the gym, remember to stretch before you start.\"",
+      "options": [
+        "Unless",
+        "While",
+        "Because",
+        "So"
+      ],
+      "answer_index": 1,
+      "explanation": "While (you are) at the gym '在健身房时',时间从句省去'you are';连词用 While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ told otherwise by a doctor, brush your teeth twice a day.\"",
+      "options": [
+        "Because",
+        "Though",
+        "Unless",
+        "So"
+      ],
+      "answer_index": 2,
+      "explanation": "Unless (you are) told otherwise '除非另有医嘱',从句省去'you are';否定条件用 Unless。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ active every day, you will find new habits much easier.\"",
+      "options": [
+        "Unless",
+        "Because",
+        "So",
+        "Once"
+      ],
+      "answer_index": 3,
+      "explanation": "Once (you are) active '一旦你每天活跃起来',时间从句省去'you are';连词用 Once。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ tired after a long day, she still made a healthy dinner.\"",
+      "options": [
+        "Though",
+        "Because",
+        "Unless",
+        "So"
+      ],
+      "answer_index": 0,
+      "explanation": "Though (she was) tired '尽管累',让步从句省去'she was';连词用 Though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ looking for active events, sign up together with your friends.\"",
+      "options": [
+        "Unless",
+        "When",
+        "Because",
+        "So"
+      ],
+      "answer_index": 1,
+      "explanation": "When (you are) looking '当你寻找时',时间从句省去'you are';连词用 When。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ in good shape, you can enjoy many more outdoor activities.\"",
+      "options": [
+        "Unless",
+        "Though",
+        "If",
+        "Because"
+      ],
+      "answer_index": 2,
+      "explanation": "If (you are) in good shape '如果身体状态好',条件从句省去'you are';连词用 If。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ drinking water, also remember to eat plenty of fresh fruit.\"",
+      "options": [
+        "Unless",
+        "Because",
+        "So",
+        "While"
+      ],
+      "answer_index": 3,
+      "explanation": "While (you are) drinking '在喝水的同时',时间从句省去'you are';连词用 While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ beneficial, a daily morning run can be hard to keep up.\"",
+      "options": [
+        "Though",
+        "Because",
+        "Unless",
+        "So"
+      ],
+      "answer_index": 0,
+      "explanation": "Though (it is) beneficial '尽管有益',让步从句省去'it is';连词用 Though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ ready, you can begin the new exercise plan tomorrow.\"",
+      "options": [
+        "Unless",
+        "When",
+        "Because",
+        "So"
+      ],
+      "answer_index": 1,
+      "explanation": "When (you are) ready '当你准备好时',时间从句省去'you are';连词用 When。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ stressed, take a short walk to lower your tension.\"",
+      "options": [
+        "Unless",
+        "Though",
+        "If",
+        "Because"
+      ],
+      "answer_index": 2,
+      "explanation": "If (you are) stressed '如果你感到有压力',条件从句省去'you are';连词用 If。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ on the running machine, keep your back straight at all times.\"",
+      "options": [
+        "Unless",
+        "Because",
+        "So",
+        "While"
+      ],
+      "answer_index": 3,
+      "explanation": "While (you are) on the running machine '在跑步机上时',时间从句省去'you are';连词用 While。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ busy, try to make some time for gentle movement.\"",
+      "options": [
+        "Even when",
+        "Because",
+        "So that",
+        "Unless"
+      ],
+      "answer_index": 0,
+      "explanation": "Even when (you are) busy '即使忙碌时',时间从句省去'you are';连词用 Even when。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Would you like to join our dance club? – Yes, I'd love ____.\"",
+      "options": [
+        "it",
+        "to",
+        "that",
+        "do"
+      ],
+      "answer_index": 1,
+      "explanation": "答语省去重复的 join your dance club,只保留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I don't go jogging now, but I used ____.\"",
+      "options": [
+        "do",
+        "it",
+        "to",
+        "so"
+      ],
+      "answer_index": 2,
+      "explanation": "used to (go jogging),省去重复动词,保留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Do you want to sign up for the fun run? – I'd really like ____.\"",
+      "options": [
+        "do",
+        "it",
+        "that",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "would like to (sign up),省去重复动词,保留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"She doesn't eat much junk food now, though she used ____.\"",
+      "options": [
+        "to",
+        "do",
+        "so",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "used to (eat much junk food),省去动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– How would you like your potatoes? – ____, please.\"",
+      "options": [
+        "Boil it",
+        "Boiled",
+        "To boil",
+        "Boiling them"
+      ],
+      "answer_index": 1,
+      "explanation": "答语省去 I'd like them,只保留过去分词 Boiled。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I haven't started the new habit yet, but I'm going ____.\"",
+      "options": [
+        "do",
+        "so",
+        "to",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "be going to (start),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Could you brush for two minutes? – Sure, I'll try ____.\"",
+      "options": [
+        "do",
+        "it that",
+        "so to",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "try to (brush for two minutes),省去动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Will you exercise on a regular basis? – Yes, I promise ____.\"",
+      "options": [
+        "to",
+        "do",
+        "so",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "promise to (exercise),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Are you going to give up sugary drinks? – I hope ____.\"",
+      "options": [
+        "to do",
+        "so",
+        "it",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "hope so 替代整句肯定内容,是常见的答语省略。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Would you mind opening the window? – Not at all, I'd be glad ____.\"",
+      "options": [
+        "do",
+        "it",
+        "to",
+        "so"
+      ],
+      "answer_index": 2,
+      "explanation": "be glad to (open it),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"He never used to take a nap, but now he wants ____.\"",
+      "options": [
+        "do",
+        "it",
+        "so",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "want to (take a nap),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Do you think you can become a super-ager? – I'd love ____.\"",
+      "options": [
+        "to",
+        "do",
+        "it",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "would love to (become one),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Has Liz changed her diet? – I'm afraid ____.\"",
+      "options": [
+        "to not",
+        "not",
+        "no do",
+        "don't to"
+      ],
+      "answer_index": 1,
+      "explanation": "I'm afraid not 替代否定整句,是固定的答语省略。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"You don't have to walk every day, but it helps ____.\"",
+      "options": [
+        "do",
+        "so",
+        "to",
+        "it"
+      ],
+      "answer_index": 2,
+      "explanation": "it helps to (walk every day),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Are you joining the charity walk? – Yes, I'd be happy ____.\"",
+      "options": [
+        "do",
+        "it",
+        "that",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "be happy to (join),省去重复动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Did Liz skip breakfast again? – No, this morning she chose not ____.\"",
+      "options": [
+        "to",
+        "do",
+        "so",
+        "it"
+      ],
+      "answer_index": 0,
+      "explanation": "chose not to (skip breakfast),省去重复动词,保留 to(否定用 not to)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Will you keep track of your sleep? – I'll certainly try ____.\"",
+      "options": [
+        "do",
+        "to",
+        "it so",
+        "so it"
+      ],
+      "answer_index": 1,
+      "explanation": "try to (keep track),省去动词,留 to。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"– Would you like more cabbage soup? – Yes, I ____, please.\"",
+      "options": [
+        "do like",
+        "am",
+        "would",
+        "to"
+      ],
+      "answer_index": 2,
+      "explanation": "答语 Yes, I would (like more),省去重复内容,保留情态动词 would。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I don't usually eat out, but tonight I've decided ____.\"",
+      "options": [
+        "do",
+        "so",
+        "it",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "decide to (eat out),省去重复动词,留 to。"
+    }
+  ]
+}

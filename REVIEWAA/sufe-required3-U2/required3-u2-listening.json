@@ -1,0 +1,415 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Art and Artists",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修三 Unit 2 同主题听力(约去美术馆/梵高小讲座/校园艺术节/齐白石短讲/学吉他/欣赏艺术贴士)。用词限本单元/初中/常见词,答案唯一,与读/写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Planning a Museum Visit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Hi, Leo. Are you free this Saturday? I really want to visit the new art museum.",
+        "Leo: That sounds great. I've heard they are showing some famous ink paintings.",
+        "Mia: Yes, and there are some of Van Gogh's works on display too.",
+        "Leo: Wonderful! What time should we go?",
+        "Mia: Let's go in the morning. It's usually quieter, so we can look at every detail.",
+        "Leo: Good idea. Should we ask Anna to come with us?",
+        "Mia: Of course. She loves painting, and she's hoping to become an artist one day.",
+        "Leo: Perfect. I'll check the website to see which artworks are on display.",
+        "Mia: Thanks. Remember, we are not allowed to touch any of the paintings.",
+        "Leo: I know. But we can take a few photos and buy some postcards to bring home."
+      ],
+      "translation_cn": "Mia 想周六去新的艺术馆;Leo 说那里在展出著名水墨画,还有梵高的作品;两人决定上午去,因为人少、能看清细节;还要叫热爱绘画、想当艺术家的 Anna 一起;Leo 去查网站看展品;Mia 提醒不能触碰画作,但能拍照、买明信片。",
+      "questions": [
+        {
+          "stem": "When do Mia and Leo decide to visit the museum?",
+          "options": [
+            "On Saturday morning.",
+            "On Sunday evening.",
+            "On Friday afternoon.",
+            "On Monday night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they choose to go in the morning?",
+          "options": [
+            "It is cheaper in the morning.",
+            "It is usually quieter then.",
+            "The museum closes at noon.",
+            "The paintings look brighter then."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they want Anna to join them?",
+          "options": [
+            "She loves painting and hopes to be an artist.",
+            "She works at the museum.",
+            "She has a free ticket.",
+            "She has a car to drive them."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Leo do before the trip?",
+          "options": [
+            "Buy lunch for everyone.",
+            "Check the website for the artworks on display.",
+            "Paint a picture of the museum.",
+            "Call the museum guide."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What are visitors not allowed to do?",
+          "options": [
+            "Take any photos.",
+            "Buy postcards.",
+            "Touch any of the paintings.",
+            "Speak to each other."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Van Gogh in a Few Minutes",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Welcome to today's short talk about Vincent van Gogh. He was a Dutch painter who lived a poor and rather unhappy life. People who knew him said he was hard to get along with, and he was rarely cheerful. During his life he was never able to sell his own paintings, so he depended on his brother for money. Yet today his works are among the most loved in the world. His painting style is very personal: he used very bright colours, and the shapes in his pictures look strange and dreamlike. After his death, his paintings became some of the most valuable on Earth, and they have inspired many songs and films."
+      ],
+      "translation_cn": "今天的短讲介绍梵高:他是一位荷兰画家,生活贫困、并不快乐;认识他的人说他难相处、很少开心;在世时他从未能卖出自己的画,靠弟弟接济;然而如今他的作品是世上最受喜爱的;他画风很个人化,用极明亮的色彩,形状奇异如梦;他死后画作成为世上最珍贵的作品之一,启发了许多歌曲和电影。",
+      "questions": [
+        {
+          "stem": "What was Van Gogh's nationality?",
+          "options": [
+            "French.",
+            "American.",
+            "British.",
+            "Dutch."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did people who knew him describe him?",
+          "options": [
+            "Hard to get along with and rarely cheerful.",
+            "Friendly and always happy.",
+            "Rich and famous.",
+            "Calm and gentle."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did he get money during his life?",
+          "options": [
+            "He sold many paintings.",
+            "He depended on his brother.",
+            "He worked in a bank.",
+            "He won several prizes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is special about his painting style?",
+          "options": [
+            "Only black and white lines.",
+            "Very dark and simple shapes.",
+            "Very bright colours and dreamlike shapes.",
+            "Photographs of real people."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happened to his paintings after he died?",
+          "options": [
+            "They were all destroyed.",
+            "They were given away for free.",
+            "They were forgotten completely.",
+            "They became some of the most valuable in the world."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 The School Art Festival",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: Hi, Sophie. Are you taking part in the School Art Festival next week?",
+        "Sophie: Yes! Our group is preparing a guessing game about famous artists.",
+        "Tom: That sounds fun. How does the game work?",
+        "Sophie: Each group gives five clues about an artist without saying the name. Then the others guess.",
+        "Tom: Clever. Which artist did your group choose?",
+        "Sophie: Qi Baishi. We'll say he painted shrimps and flowers in a fresh and lively manner.",
+        "Tom: Nice clues. My group is going to display our own paintings in the main hall.",
+        "Sophie: Wonderful. The teacher told us to put our best works on display by Friday.",
+        "Tom: I'd better hurry, then. I still want to finish my landscape before the show.",
+        "Sophie: Good luck! I'm sure the whole school will enjoy the festival."
+      ],
+      "translation_cn": "Tom 问 Sophie 是否参加下周的校园艺术节;Sophie 说她们组在准备「猜艺术家」游戏:每组给五条线索但不说名字,别人来猜;她们选了齐白石,会说他以清新生动的方式画虾和花;Tom 组要在大厅展出自画;老师让大家周五前把最好的作品摆出来;Tom 想在展览前画完风景画;Sophie 祝他好运,相信全校都会喜欢艺术节。",
+      "questions": [
+        {
+          "stem": "What is Sophie's group preparing for the festival?",
+          "options": [
+            "A guessing game about famous artists.",
+            "A singing competition.",
+            "A cooking show.",
+            "A sports match."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does the guessing game work?",
+          "options": [
+            "Players draw pictures very quickly.",
+            "Each group gives five clues without saying the artist's name.",
+            "Players sing songs by famous artists.",
+            "Each group writes a long essay."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which artist did Sophie's group choose?",
+          "options": [
+            "Van Gogh.",
+            "Bob Dylan.",
+            "Qi Baishi.",
+            "Shakespeare."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Tom's group going to do?",
+          "options": [
+            "Play music on the stage.",
+            "Sell postcards to visitors.",
+            "Guess the artists first.",
+            "Display their own paintings in the main hall."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Tom still want to do before the show?",
+          "options": [
+            "Finish his landscape painting.",
+            "Buy a new brush.",
+            "Choose a different artist.",
+            "Write the five clues."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 The People's Artist",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Let me tell you about a great Chinese painter named Qi Baishi. He painted landscapes, birds, flowers and small figures, and his works are full of feeling. Using heavy ink and energetic strokes, he created pictures in a fresh and lively manner. Even in his seventies he stayed hardworking, often painting tiny insects in fine detail. As he grew older, he took on more social duties instead of retiring. He once said that what he truly pursued was peace for the whole world. In 1956 he was awarded the International Peace Prize, and people lovingly called him the People's Artist."
+      ],
+      "translation_cn": "介绍中国画家齐白石:他画山水、鸟、花和小人物,作品饱含情感;用浓墨和充满活力的笔触,以清新生动的方式作画;七十多岁仍勤奋,常细致地画小昆虫;年纪渐长却承担更多社会责任而非退隐;他说自己真正追求的是世界和平;1956年获国际和平奖,人们亲切地称他为「人民艺术家」。",
+      "questions": [
+        {
+          "stem": "What kinds of things did Qi Baishi paint?",
+          "options": [
+            "Only modern buildings.",
+            "Landscapes, birds, flowers and small figures.",
+            "Only cars and machines.",
+            "Only the sea and ships."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How are his works described?",
+          "options": [
+            "Dark and cold.",
+            "Empty and boring.",
+            "Fresh and lively, full of feeling.",
+            "Strange and frightening."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did he do as he grew older?",
+          "options": [
+            "He stopped painting.",
+            "He moved to another country.",
+            "He sold all his works.",
+            "He took on more social duties."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Qi Baishi say he truly pursued?",
+          "options": [
+            "Peace for the whole world.",
+            "Money and fame.",
+            "A big house.",
+            "A quiet life alone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What prize was he given in 1956?",
+          "options": [
+            "The Nobel Prize for Literature.",
+            "The International Peace Prize.",
+            "A music award.",
+            "A science prize."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Learning the Guitar",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: Emma, I've decided to learn to play the guitar this year.",
+        "Emma: That's great, Ben! What made you want to start?",
+        "Ben: I love the songs of Bob Dylan, and I want to play them myself.",
+        "Emma: He's a wonderful songwriter. Did you know he won the Nobel Prize for Literature?",
+        "Ben: Yes, the first songwriter ever to get it. His words are like poems.",
+        "Emma: They are. At first the guitar will be hard, so don't give up too soon.",
+        "Ben: I won't. My teacher told me to practise a little every day.",
+        "Emma: That's good advice. Even great musicians had to start with simple songs.",
+        "Ben: Right. One day I hope to perform on a real stage in front of an audience.",
+        "Emma: I'm sure you will. Keep going, and I'll come to your first concert!"
+      ],
+      "translation_cn": "Ben 决定今年学吉他;Emma 问原因;Ben 说他爱鲍勃·迪伦的歌、想自己弹;Emma 说迪伦是了不起的词曲作者,还获了诺贝尔文学奖;Ben 说他是首位获此奖的词曲作者,歌词像诗;Emma 提醒吉他起初难、别太快放弃;Ben 说老师让他每天练一点;Emma 说大音乐家也从简单歌曲起步;Ben 希望有一天能在真正的舞台上对观众演奏;Emma 说一定会去听他的首场音乐会。",
+      "questions": [
+        {
+          "stem": "What has Ben decided to do this year?",
+          "options": [
+            "Learn to paint.",
+            "Write a book.",
+            "Learn to play the guitar.",
+            "Join a dance club."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Ben want to learn it?",
+          "options": [
+            "His parents asked him to.",
+            "He wants to win a prize.",
+            "His friends all play it.",
+            "He loves Bob Dylan's songs and wants to play them."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Emma say about Bob Dylan?",
+          "options": [
+            "He won the Nobel Prize for Literature.",
+            "He never wrote his own songs.",
+            "He stopped singing long ago.",
+            "He was a famous painter."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What advice did Ben's teacher give him?",
+          "options": [
+            "Buy a very expensive guitar.",
+            "Practise a little every day.",
+            "Play only difficult songs.",
+            "Stop after one week."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben hope to do one day?",
+          "options": [
+            "Sell his guitar.",
+            "Become a painter instead.",
+            "Perform on a real stage in front of an audience.",
+            "Teach at a university."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 How to Enjoy a Painting",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who feels nervous in front of a famous painting. You do not need to be an expert to enjoy art. The easiest way to begin is to place the work in its own time and place, and to think about the world in which it was created. Next, ask yourself why you like or dislike it, instead of only repeating what others say. Not every picture will attract you at first sight, and that is fine. Take your time to look for the feelings the artist wanted to share. Remember, in art there is often no simple right or wrong answer."
+      ],
+      "translation_cn": "给在名画前紧张的人一个小建议:欣赏艺术无需做专家;最容易的起点是把作品放在它的时代与地点中,想想它诞生的世界;接着问自己为何喜欢或不喜欢,而不是只重复别人的话;不是每幅画都会一见钟情,这很正常;慢慢寻找艺术家想分享的情感;记住,艺术中往往没有简单的对错答案。",
+      "questions": [
+        {
+          "stem": "According to the talk, who can enjoy art?",
+          "options": [
+            "Only painters.",
+            "Only rich people.",
+            "Only museum guides.",
+            "Anyone, not only experts."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the easiest way to begin enjoying a painting?",
+          "options": [
+            "Place the work in its own time and place.",
+            "Buy the most expensive ticket.",
+            "Touch the painting gently.",
+            "Copy what experts say."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you ask yourself about a work?",
+          "options": [
+            "How much it costs.",
+            "Why you like or dislike it.",
+            "Who painted it first.",
+            "When the museum closes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do if a picture does not attract you at first?",
+          "options": [
+            "Leave the museum at once.",
+            "Decide it is a bad work.",
+            "Take your time and keep looking.",
+            "Ask for your money back."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker say about right and wrong in art?",
+          "options": [
+            "There is always one correct answer.",
+            "Only experts know the answer.",
+            "Beginners are always wrong.",
+            "There is often no simple right or wrong answer."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

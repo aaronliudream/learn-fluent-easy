@@ -1,0 +1,36 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "复杂句综合·定语/状语/名词性从句速查",
+    "intro": "复杂句 = 主句 + 一个或多个从句,从句由从属连接词引导。判断三步:① 这是哪类从句(看它在主句里充当什么)② 从句缺不缺成分 ③ 表达什么逻辑/语气,据此选连接词。",
+    "table": {
+      "headers": ["从句类型", "判断要点 / 常用连接词 / 例句"],
+      "rows": [
+        ["定语从句", "修饰名词;人作主语 who、人加介词 whom、所属 whose、物 which、缺地点状语 where、缺时间状语 when:the teacher who helped me"],
+        ["状语从句", "作状语表逻辑;让步 though/even if、条件 unless/as long as/once、结果 so…that/such…that、目的 so that、时间 as soon as/while/until、原因 because/since:Once you start, it gets easier."],
+        ["名词性从句", "作主/宾/表/同位语;完整句用 that、缺主宾用 what、是否用 whether(配 or not)、原因 why、程度 how:What matters is practice."],
+        ["关键对比", "that vs what 看从句缺不缺成分;whether vs that 看是否表'是非';that is why 表原因结论"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "定从:从句缺主语/宾语用关系代词,只缺状语才用关系副词", "mark": "the day when (缺时间状语) vs the day that changed… (缺主语)" },
+      { "rule": "名从:从句结构完整用 that,缺主语或宾语用 what", "mark": "That he came surprised us. / What he said surprised us." },
+      { "rule": "结果状语:so + 形/副 + that;such + (a) + 形 + 名 + that", "mark": "so quiet that… / such a moment that…" },
+      { "rule": "条件/让步:unless = if…not;even if 即使;no matter how 无论多么", "mark": "You can't win them unless you sound real." }
+    ],
+    "why": [
+      "复杂句的难点不在认识单个连接词,而在'先分清从句类型、再看从句缺什么成分':同一个 that,在定语从句里是关系代词(可省略、可换 which),在名词性从句里是连词(不充当成分、常不可省);what 永远要在从句里充当主语或宾语。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/写作高频:定从关系词(who/which/whose/where/when/介词+which)、名从连接词(that/what/whether/why/how)、状语从句连词据逻辑选择。",
+      "易错点:that vs what(看缺不缺成分)、whether vs if(主语从句、介词后、+or not 只用 whether)、so…that vs such…that。"
+    ],
+    "examVsReal": [
+      { "exam": "I don't know whether he will come or not.（考试/正式）", "real": "I don't know if he'll come.", "note": "口语里 if 更常见;但主语从句、介词后、+or not 仍只能用 whether" },
+      { "exam": "The reason why he left is unclear.（考试)", "real": "The reason he left is unclear.", "note": "口语常省略 why/that;书面考试保留更稳妥" },
+      { "exam": "It was so cold that we stayed in.（考试强调 so…that 结构)", "real": "It was really cold, so we stayed in.", "note": "真实英语常拆成两句用 so 连接,更口语化" }
+    ]
+  }
+}

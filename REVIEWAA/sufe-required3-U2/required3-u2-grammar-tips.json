@@ -1,0 +1,38 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "不定式 to do 作宾语 / 宾补 / 状语 / 定语 速查",
+    "intro": "不定式 to do 在句中能当宾语、宾语补足语、状语和定语。判断口诀:看它跟在谁后面、补充说明谁、或修饰前面哪个名词。特别小心使役/感官动词后宾补「不带 to」。",
+    "table": {
+      "headers": ["用法", "结构 / 例句"],
+      "rows": [
+        ["作宾语", "want/decide/hope/plan/refuse/manage + to do:He decided to focus on the details."],
+        ["疑问词+to do(宾语)", "know/wonder/decide + how/what/where/whether to do:She wondered how to dress."],
+        ["作宾补(带to)", "ask/tell/want/allow/encourage sb to do:The teacher advised me to go."],
+        ["作宾补(不带to)", "make/let/have + sb do;hear/watch/feel/see sb do:I heard him sing."],
+        ["作状语", "(in order)/(so as) to do 表目的;…only to do 表结果:Painters use brushes to create effects."],
+        ["作定语", "the first/best + to do;a way/time/chance to do;sth to do:the first songwriter to win it."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "使役动词 make / let / have 后,宾补用动词原形(不带 to)", "mark": "make sb do √ / make sb to do ×" },
+      { "rule": "感官动词 hear / watch / feel / see 后,宾补也用原形(不带 to)", "mark": "I watched her paint √" },
+      { "rule": "make/hear 等变被动后,to 要还原", "mark": "He was made to wait.(主动 make sb do → 被动 be made to do)" },
+      { "rule": "序数词、形容词最高级、the only/last 后常用 to do 作定语", "mark": "the first/best/only … to do" }
+    ],
+    "why": [
+      "不定式表示「将要、目的或一次性的动作」,所以在「打算做/为了做/要去做的事物」这些场合自然出现;而使役/感官动词本身已含动作意味,后面只需原形动词补充宾语在做什么,故省去 to。"
+    ],
+    "gaokaoPoints": [
+      "to do 与 doing 的区分(decide to do vs enjoy doing);疑问词+to do 高频。",
+      "make/let/have/hear/watch + sb do 的「不带 to」考点;变被动时 to 回来。",
+      "the first/best/only + to do、a way/chance to do 作定语,语法填空常考。"
+    ],
+    "examVsReal": [
+      { "exam": "I heard him sing a song.(考试:hear sb do)", "real": "I heard him singing a song.", "note": "考试爱考原形 do(听到全过程);真实口语里 doing 表示「听到正在唱」,两者侧重不同。" },
+      { "exam": "the first person to do it（考试用 to do 定语）", "real": "the first person who did it", "note": "考试偏好不定式定语;口语常用定语从句,意思相同。" }
+    ]
+  }
+}

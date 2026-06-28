@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Healthy Lifestyle",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第三册 Unit 3 同主题听力(点餐选健康/超级老人短文/约朋友锻炼/睡眠贴士短文/看牙医/蓝区短文)。用词限 U3/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Ordering a Healthy Lunch",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: I'm starving. Should we just get some pizza and soda?",
+        "Leo: Let's try something healthier today. I'm taking charge of my diet.",
+        "Mia: Really? What are you going to order, then?",
+        "Leo: A salad with lots of colourful vegetables and some grilled chicken.",
+        "Mia: That does sound good. But I really want a soda.",
+        "Leo: Sugary drinks just add extra calories. Why not have water instead?",
+        "Mia: You're right. I'll have water and a fruit bowl.",
+        "Leo: Great choice. Half our plates are fruits and vegetables now!"
+      ],
+      "translation_cn": "Mia 饿了想点披萨和汽水;Leo 想吃更健康的,正在掌管自己的饮食;他打算点彩色蔬菜沙拉和烤鸡;Mia 想喝汽水;Leo 说含糖饮料只是多余热量,建议喝水;Mia 改点水和水果;两人盘子一半是水果蔬菜。",
+      "questions": [
+        {
+          "stem": "What does Mia first want to order?",
+          "options": [
+            "Pizza and soda.",
+            "A green salad.",
+            "Grilled fish.",
+            "Only water."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Leo choosing healthier food today?",
+          "options": [
+            "He has no money.",
+            "He is taking charge of his diet.",
+            "He dislikes pizza.",
+            "His doctor forced him."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Leo say about sugary drinks?",
+          "options": [
+            "They just add extra calories.",
+            "They are very cheap.",
+            "They taste of nothing.",
+            "They are good for sleep."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Mia decide to drink in the end?",
+          "options": [
+            "Soda.",
+            "Water.",
+            "Sweet tea.",
+            "Juice."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do their plates mostly contain by the end?",
+          "options": [
+            "Cake and sweets.",
+            "Only meat.",
+            "Fruits and vegetables.",
+            "Nothing at all."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 Secrets of Super-agers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Scientists are interested in people who stay healthy at a very old age.",
+        "These super-agers often share a few simple habits.",
+        "They eat a plant-based diet and rarely eat until they are full.",
+        "They also get gentle exercise every single day.",
+        "Most importantly, they keep close friends to share their lives with."
+      ],
+      "translation_cn": "科学家对高龄仍健康的人很感兴趣;这些'超级老人'常有几个简单习惯;他们吃植物性饮食、很少吃到饱;每天都做轻柔运动;最重要的是,他们有亲密的朋友相伴。",
+      "questions": [
+        {
+          "stem": "Who are scientists interested in?",
+          "options": [
+            "People who never sleep.",
+            "Only young athletes.",
+            "People who eat fast food.",
+            "People who stay healthy at a very old age."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of diet do super-agers eat?",
+          "options": [
+            "A plant-based diet.",
+            "A meat-only diet.",
+            "No food at all.",
+            "Only sweet drinks."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How much do they usually eat?",
+          "options": [
+            "They always eat until very full.",
+            "They rarely eat until they are full.",
+            "They eat only once a week.",
+            "They never eat vegetables."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How often do they get gentle exercise?",
+          "options": [
+            "Once a year.",
+            "Only on holidays.",
+            "Every single day.",
+            "Never."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage say is most important?",
+          "options": [
+            "Earning a lot of money.",
+            "Living completely alone.",
+            "Watching television all day.",
+            "Keeping close friends to share life with."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Let's Exercise Together",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: You look tired, Sam. Are you sleeping enough?",
+        "Sam: Not really. And I never seem to have energy after class.",
+        "Anna: Have you tried exercising? It actually builds energy instead of using it up.",
+        "Sam: But I'm too tired to start.",
+        "Anna: Then come jogging with me. It's more fun with a friend.",
+        "Sam: All right. Where should we go?",
+        "Anna: There's a quiet park nearby. Let's stretch first, then run slowly.",
+        "Sam: Sounds good. Maybe we can sign up for the charity run too."
+      ],
+      "translation_cn": "Anna 见 Sam 疲惫,问他睡得够不够;Sam 课后总没精力;Anna 说运动其实能增加而非消耗精力;Sam 太累不想开始;Anna 邀他一起慢跑,有朋友更有趣;两人决定去附近安静的公园,先拉伸再慢跑;还打算报名慈善跑。",
+      "questions": [
+        {
+          "stem": "What problem does Sam have?",
+          "options": [
+            "He has no energy after class.",
+            "He sleeps too much.",
+            "He dislikes his friends.",
+            "He exercises too hard."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna say about exercise?",
+          "options": [
+            "It uses up all your energy.",
+            "It actually builds energy.",
+            "It is bad for tired people.",
+            "It only works in winter."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Anna suggest jogging together?",
+          "options": [
+            "It is cheaper alone.",
+            "It is required by school.",
+            "It is more fun with a friend.",
+            "Sam has no choice."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Anna want to do before running?",
+          "options": [
+            "Eat a big meal.",
+            "Take a long nap.",
+            "Buy new shoes.",
+            "Stretch first."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What might they sign up for?",
+          "options": [
+            "A charity run.",
+            "A cooking class.",
+            "A music club.",
+            "A long sleep."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 A Tip for Better Sleep",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Getting enough sleep is one of the easiest ways to stay healthy.",
+        "If you do not sleep enough, you may feel moody and easily annoyed.",
+        "Teenagers should try to get eight to ten hours each night.",
+        "A simple tip is to keep your phone in another room.",
+        "Stay motivated, and an early bedtime will soon become a habit."
+      ],
+      "translation_cn": "充足睡眠是保持健康最简单的方法之一;睡不够会让人情绪低落、易怒;青少年每晚应睡八到十小时;一个简单贴士是把手机放在别的房间;保持动力,早睡很快会成为习惯。",
+      "questions": [
+        {
+          "stem": "What is one of the easiest ways to stay healthy?",
+          "options": [
+            "Eating more sugar.",
+            "Getting enough sleep.",
+            "Skipping breakfast.",
+            "Watching TV late."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How might you feel without enough sleep?",
+          "options": [
+            "Calm and happy.",
+            "Stronger than ever.",
+            "Moody and easily annoyed.",
+            "Completely fine."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How many hours should teenagers sleep each night?",
+          "options": [
+            "Two to three hours.",
+            "As little as possible.",
+            "Exactly fourteen hours.",
+            "Eight to ten hours."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What simple tip does the passage give?",
+          "options": [
+            "Keep your phone in another room.",
+            "Drink coffee before bed.",
+            "Study all night.",
+            "Play games in bed."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will help an early bedtime become a habit?",
+          "options": [
+            "Giving up at once.",
+            "Staying motivated.",
+            "Sleeping less.",
+            "Buying a new phone."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 At the Dentist",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Dentist: How long do you usually spend brushing your teeth?",
+        "Ben: Maybe thirty seconds? I'm always in a hurry.",
+        "Dentist: That's far too short. Proper brushing takes at least two minutes.",
+        "Ben: Two minutes? I never realised it should be that long.",
+        "Dentist: An electric brush with a timer could really help you.",
+        "Ben: Does it clean better than an ordinary one?",
+        "Dentist: Studies confirm it removes more of the soft film on your teeth.",
+        "Ben: Then I'll get one. I want to protect my overall health."
+      ],
+      "translation_cn": "牙医问 Ben 平时刷牙多久;Ben 说大概三十秒,总是匆忙;牙医说太短,正确刷牙至少两分钟;Ben 没意识到要这么久;牙医建议用带计时器的电动牙刷;问能否刷得更干净;牙医说研究证实它能去除更多牙齿软膜;Ben 决定买一支,保护整体健康。",
+      "questions": [
+        {
+          "stem": "How long does Ben usually brush his teeth?",
+          "options": [
+            "About ten minutes.",
+            "A full hour.",
+            "About thirty seconds.",
+            "He never brushes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How long should proper brushing take?",
+          "options": [
+            "Five seconds.",
+            "Half a day.",
+            "Once a week is enough.",
+            "At least two minutes."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the dentist suggest Ben use?",
+          "options": [
+            "An electric brush with a timer.",
+            "A bigger cup.",
+            "A toothpick only.",
+            "No brush at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do studies confirm about that brush?",
+          "options": [
+            "It costs less money.",
+            "It removes more of the soft film.",
+            "It is harder to hold.",
+            "It works only at night."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Ben decide to buy one?",
+          "options": [
+            "To win a prize.",
+            "Because it is cheap.",
+            "To protect his overall health.",
+            "Because his friend told him to."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Life in the Blue Zones",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In a few special places, people live longer and more healthily than elsewhere.",
+        "These places are known as the Blue Zones.",
+        "People there eat lots of vegetables and move their bodies every day.",
+        "They also keep a low-stress life with family and friends.",
+        "None of their habits is hard, but together they make a big difference."
+      ],
+      "translation_cn": "在少数特别的地方,人们比别处活得更久更健康;这些地方被称为蓝区;那里的人吃很多蔬菜、每天活动身体;还和家人朋友过着低压力的生活;他们的习惯都不难,但合在一起作用很大。",
+      "questions": [
+        {
+          "stem": "What is special about these few places?",
+          "options": [
+            "No one ever eats vegetables.",
+            "People never see friends.",
+            "It is always very cold.",
+            "People live longer and more healthily."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What are these places called?",
+          "options": [
+            "The Blue Zones.",
+            "The Red Lines.",
+            "The Green Hills.",
+            "The Grey Towns."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How often do people there move their bodies?",
+          "options": [
+            "Once a month.",
+            "Every day.",
+            "Only on weekends.",
+            "Almost never."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of life do they keep?",
+          "options": [
+            "A busy, lonely life.",
+            "A high-stress life.",
+            "A low-stress life with family and friends.",
+            "A life with no friends."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage say about their habits?",
+          "options": [
+            "Each one is very difficult.",
+            "They have no effect at all.",
+            "Only the rich can follow them.",
+            "None is hard, but together they make a big difference."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

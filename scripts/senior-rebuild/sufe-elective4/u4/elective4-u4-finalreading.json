@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(走进经典主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel first opened a thick volume of Shakespeare, the old words frightened him and he nearly closed the book for good. Instead, he read just one short scene each evening and quietly looked up the lines he did not understand. By the end of the summer, he could follow the famous monologue with ease, and he felt proud that a little daily reading had opened such a rich new world.",
+    "questions": [
+      {
+        "q": "What did Daniel do instead of closing the book?",
+        "options": [
+          "He worked through a single scene each night and checked unfamiliar lines.",
+          "He gave up reading Shakespeare completely.",
+          "He asked a friend to read the whole play for him.",
+          "He decided to watch a film of the play instead."
+        ],
+        "answer": "A",
+        "explanation": "原文 'read just one short scene each evening and quietly looked up the lines he did not understand' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Daniel feel by the end of the summer?",
+        "options": [
+          "Bored and ready to quit reading.",
+          "Proud that steady daily reading had rewarded him.",
+          "Sorry that he had ever started the play.",
+          "As frightened of the old words as before."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt proud that a little daily reading had opened such a rich new world'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

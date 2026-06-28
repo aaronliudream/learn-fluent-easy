@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "My Secrets to Success(我的成功秘诀)",
+  "title_en": "My Secrets to Success",
+  "genre": "记叙 / 说明(cause-effect:describe an achievement + explain the reasons behind it)",
+  "source": "上外版必修第三册 Unit 1 Moving Forward:write about your secrets to success(先介绍你取得的一项成就,再用因果结构说明背后的原因)。",
+  "prompt_cn": "班委会要开一次以\"我的成功秘诀\"为题的班会。请用英语写一段约80–100词的短文,内容包括:① 介绍你曾取得的一项成就(如克服当众讲话的恐惧、学会一项技能等);② 用因果结构说明促成这一成就的三个原因;③ 结尾给同学一句鼓励。注意用 because / one factor is / as a result 等表达因果关系。",
+  "prompt_en": "The class committee is holding a meeting on \"My Secrets to Success\". Write a passage of about 80–100 words including: 1) one achievement you have made (e.g. overcoming a fear, learning a skill); 2) three reasons that led to it, using the cause-effect pattern; 3) one sentence of encouragement for your classmates. Use phrases such as because, one factor is, and as a result.",
+  "points": [
+    "介绍成就(One thing I am proud of is …)",
+    "用因果结构说明三个原因(One factor is … Another is … because …)",
+    "用结果连接词收束(As a result, I have …)",
+    "结尾鼓励同学(If you keep trying, you can succeed too!)"
+  ],
+  "word_count": "80–100 词",
+  "model_essay": "One achievement I am really proud of is overcoming my fear of public speaking. There are several factors behind this success. The first is careful preparation: I wrote my main points on small cards so that I would not forget anything. The second is practice. I practised the talk again and again at home until the words felt natural. The third is staying calm, because I breathed deeply several times before I began. As a result, I gave my speech well and my classmates clapped warmly. If you keep trying step by step, you can overcome your fears too!",
+  "model_translation": "我真正自豪的一项成就是克服了当众讲话的恐惧。这一成功背后有几个因素。第一是认真准备:我把要点写在小卡片上,以免忘记。第二是练习。我在家一遍又一遍地练,直到说起来自然流畅。第三是保持镇定,因为开始前我深呼吸了好几次。结果我把演讲讲得很好,同学们热情鼓掌。只要你一步步坚持,也能克服自己的恐惧!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍一项成就 / 用因果说明三个原因 / 鼓励同学" },
+      { "dimension": "结构", "max": 4, "criteria": "因果结构清晰、先果后因或先因后果有条理、连词得当、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing/-ed 作补语等结构运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍成就 One achievement I am proud of is …",
+      "原因1 The first factor is …",
+      "原因2/3 The second is … because …",
+      "结果+鼓励 As a result, … If you keep trying, you can succeed too."
+    ],
+    "key_expressions": [
+      "One achievement I am really proud of is …",
+      "There are several factors behind this success.",
+      "I practised the talk again and again until the words felt natural.",
+      "As a result, I gave my speech well."
+    ],
+    "useful_words": ["success", "achievement", "factor", "because", "practise", "prepare", "as a result", "overcome", "struggle", "proud"]
+  },
+  "high_sentences": [
+    "One achievement I am really proud of is overcoming my fear of public speaking.",
+    "There are several factors behind this success.",
+    "I practised the talk again and again until the words felt natural.",
+    "As a result, I gave my speech well and my classmates clapped warmly."
+  ],
+  "error_pairs": [
+    { "wrong": "The first factor is I prepared carefully.", "correct": "The first factor is careful preparation.", "note": "is 后接名词短语,或用 that 从句(The first factor is that I prepared carefully)。" },
+    { "wrong": "I practised the talk again and again until the words felt naturally.", "correct": "I practised the talk again and again until the words felt natural.", "note": "feel 是系动词,后接形容词 natural 而非副词。" },
+    { "wrong": "As a result, my classmates clapped warm.", "correct": "As a result, my classmates clapped warmly.", "note": "修饰动词 clapped 用副词 warmly。" }
+  ],
+  "paragraph_template": "【成功秘诀(因果结构)】\n第1句 介绍成就:One achievement I am proud of is …\n第2句 总起:There are several factors behind this success.\n第3-5句 原因:The first is … The second is … The third is … because …\n第6句 结果+鼓励:As a result, … If you keep trying, you can succeed too!"
+}

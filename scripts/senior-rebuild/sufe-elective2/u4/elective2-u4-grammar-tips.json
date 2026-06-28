@@ -1,0 +1,37 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grade": 11,
+  "content": {
+    "title": "复合动名词 complex -ing 速查(被动 being done · 完成 having done)",
+    "intro": "动名词除了简单形式 doing,还有被动式、完成式、否定式,并可带自己的逻辑主语。判断口诀:看逻辑主语是主动还是被动→选 doing / being done;看动作是否早于主句完成→选 doing / having done;否定就在前面加 not。",
+    "table": {
+      "headers": ["形式", "用法 / 例句"],
+      "rows": [
+        ["being done(被动)", "逻辑主语是动作承受者:afraid of being buried 害怕被埋"],
+        ["having done(完成)", "动作主动且早于主句:proud of having saved ten people 为救了十人而自豪"],
+        ["having been done(完成被动)", "被动且早于主句:after having been rescued 在被救出之后"],
+        ["not doing(否定)", "在 -ing 前加 not:not knowing what to do 不知所措"],
+        ["sb('s) doing(带逻辑主语)", "动名词前带自己的主语:no point in us staying 我们留下没意义"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "承受者用被动:介词后若逻辑主语'被…',用 being done", "mark": "in danger of being washed away(桥被冲走)" },
+      { "rule": "在先的动作用完成式:有明显时间先后时用 having done", "mark": "praised for having saved all the passengers(先救人后受表扬)" },
+      { "rule": "否定加 not,且 not 放在最前", "mark": "Not following the order, … √ / Following not … ×" },
+      { "rule": "不及物动词(arrive/escape/rise/shout)无被动式,不能用 being done", "mark": "depend on the helicopter arriving √ / being arrived ×" }
+    ],
+    "why": [
+      "动名词本质是'名词化的动作';当这个动作的承受者做逻辑主语时就要被动(being done),当它发生在主句之前就要完成(having done)。两者可叠加成 having been done。"
+    ],
+    "gaokaoPoints": [
+      "介词(of/for/without/after/about)+ 动名词:辨被动 being done 还是主动 doing。",
+      "完成式 having done 与简单式 doing 的时间先后判断;否定式 not doing 作状语表原因。",
+      "动名词的复合结构(sb('s) doing)及'不及物动词无被动'这一易错点,常出现在语法填空与改错。"
+    ],
+    "examVsReal": [
+      { "exam": "He was proud of having saved ten people.（书面/考试）", "real": "He was proud he had saved ten people. / proud of saving ten people", "note": "口语里常用从句或简单动名词;时间先后清楚时,简单式 saving 也很常见" },
+      { "exam": "Not knowing what to do, they panicked.（书面）", "real": "They didn't know what to do, so they panicked.", "note": "考试爱用 -ing 状语;口语更常拆成两个并列/因果分句" }
+    ]
+  }
+}

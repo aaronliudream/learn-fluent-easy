@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "grammar_title": "宾语从句(复习)",
+  "source": "上外版选择性必修第一册 Unit 2 Grammar in Use:宾语从句(复习)。三点:that 引导陈述宾语从句、if/whether 引导一般疑问的转述、连接代词/副词引导特殊疑问宾语从句(陈述语序+时态呼应)。句子地道、零术语、答案唯一(选项排除其他成立项)、围绕志愿服务主题。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "that 引导陈述宾语从句(think/know/believe/hope (that) ...)",
+      "overview": "think/know/believe/hope/say/find 等动词后接陈述内容时,用连接词 that 引导宾语从句(口语中常省略),从句用陈述语序;不可用 if/what/whether 等引导一个完整的陈述。"
+    },
+    {
+      "code": "u2.02",
+      "point": "if / whether 引导一般疑问的转述(ask/wonder/want to know ...)",
+      "overview": "把一个一般疑问句(Yes/No 问题)变成宾语从句时,用 if 或 whether 引导,从句改为陈述语序(主语在前、谓语在后);ask/wonder/want to know 等后接是否类内容时不用 that/what。"
+    },
+    {
+      "code": "u2.03",
+      "point": "连接代词/副词引导特殊疑问宾语从句(陈述语序 + 时态呼应)",
+      "overview": "把特殊疑问句变成宾语从句时,保留疑问词 what/who/whom/where/when/why/how,从句改为陈述语序;主句为过去时,从句一般也用相应的过去时。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "Max believes ____ volunteering can change a young person's whole life.",
+      "options": [
+        "that",
+        "if",
+        "what",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "believe 后接一个完整的陈述内容(志愿服务能改变人生),用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I really hope ____ more students will join our recycling campaign this year.",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "hope 后是对未来的陈述,用 that(可省略);不能用表示是否的 if/whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The twins know ____ their website helps children find volunteer work.",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "know 后是一句陈述(网站帮孩子找志愿工作),用 that 引导。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Jackson says ____ reusable bottles can cut down a lot of plastic waste.",
+      "options": [
+        "if",
+        "what",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "say 后接陈述内容,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Many people think ____ young volunteers can truly make a difference.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "think 后是陈述(年轻志愿者能带来改变),用 that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Xiao Meng found ____ every brick in the palace seemed to tell a story.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "find 后接陈述发现,用 that 引导;不能用 if/whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "We all agreed ____ the animal shelter needed more weekend helpers.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "agree 后接一致意见的陈述,用 that 引导。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The teacher explained ____ volunteering teaches us to value what we have.",
+      "options": [
+        "if",
+        "what",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "explain 后接陈述内容,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Joris believes ____ even a child can help protect endangered animals.",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "believe 后是陈述(孩子也能帮助保护动物),用 that。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She realised ____ doing research first would have saved a lot of trouble.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "realise 后接陈述领悟,用 that 引导;非是否问题。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I promise ____ I will spend every Saturday morning at the shelter.",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "promise 后接承诺的陈述,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Pippa admitted ____ the group had failed at the only task they were given.",
+      "options": [
+        "if",
+        "what",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "admit 后接陈述承认,用 that 引导;不能用 if/whether。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Everyone hopes ____ the new campaign will reach the whole town soon.",
+      "options": [
+        "that",
+        "if",
+        "what",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "hope 后接对未来的陈述,用 that 引导。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The volunteers learned ____ small daily efforts can add up to real change.",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "learn 后接陈述所得,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He noticed ____ the local men quietly rebuilt the library every night.",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "notice 后接陈述发现,用 that 引导;非是否或疑问内容。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The article points out ____ good intentions alone are not always enough.",
+      "options": [
+        "if",
+        "what",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "point out 后接陈述观点,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I feel ____ helping others also makes the helper happier in the end.",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "feel 后接陈述感受(可省 that),用 that 引导;不能用 if/whether/what。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The guide added ____ twenty-five emperors had once lived in the palace.",
+      "options": [
+        "whether",
+        "that",
+        "if",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "add 后接补充的陈述,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Our team is sure ____ reusable bottles will become popular before long.",
+      "options": [
+        "if",
+        "what",
+        "that",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "be sure 后接陈述把握,用 that 引导;非是否问题。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Volunteers often say ____ giving their time is far more rewarding than money.",
+      "options": [
+        "if",
+        "what",
+        "whether",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "say 后接陈述内容,用 that 引导陈述宾语从句。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The interviewer asked Xu Yuan ____ she had any volunteer experience before.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "ask 后转述一个一般疑问(有没有经验),用 if 引导,从句陈述语序;不能用 that。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I wonder ____ the animal shelter still needs helpers this weekend.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "wonder 后转述是否类问题,用 whether(= if)引导,从句陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She wanted to know ____ her attendance at the expo would be recorded.",
+      "options": [
+        "that",
+        "what",
+        "if",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "want to know 后转述 Yes/No 问题(会不会被记录),用 if 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Jackson asked the restaurant owners ____ they would sell paper bottles.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "ask 后转述一般疑问(愿不愿意卖),用 whether 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The boys did not know ____ the website would attract any visitors at all.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "know(否定)后转述是否问题,选项中只有 whether 成立(that/what/who 均不引导是否类转述)。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Please tell me ____ the charity accepts second-hand clothes as donations.",
+      "options": [
+        "that",
+        "if",
+        "what",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "tell 后转述 Yes/No 问题(收不收旧衣),用 if 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Jiang was not sure ____ all the food at the expo could be traced to its source.",
+      "options": [
+        "what",
+        "who",
+        "whether",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "be sure(否定)后转述是否问题,用 whether 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He wondered ____ his small donation could really help the shelter at all.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "if"
+      ],
+      "answer_index": 3,
+      "explanation": "wonder 后转述是否问题(能不能帮上),用 if 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The students asked ____ the orphanage really needed a new library.",
+      "options": [
+        "whether",
+        "what",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "ask 后转述 Yes/No 问题(是否真的需要),用 whether 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'd like to find out ____ the march has been approved by the county yet.",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "find out 后转述是否问题(有没有获批),用 if 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She asked the guide ____ ordinary visitors could join the tour for free.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "ask 后转述一般疑问(能否免费参加),用 whether 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "We are not certain ____ the campaign has changed people's daily habits.",
+      "options": [
+        "what",
+        "who",
+        "that",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "be certain(否定)后转述是否问题,用 whether 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He asked the officials ____ a short haircut was required for every girl.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "ask 后转述 Yes/No 问题(是否要求短发),用 if 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I wonder ____ the two boys planned the whole project on their own.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "wonder 后转述是否问题(是否独立完成),用 whether 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Could you tell me ____ the volunteer fair will be held this December?",
+      "options": [
+        "that",
+        "what",
+        "if",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "tell 后转述 Yes/No 问题(是否举办),用 if 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The teacher asked us ____ we had ever donated to a charity before.",
+      "options": [
+        "what",
+        "who",
+        "which",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "ask 后转述是否问题(有没有捐过),用 whether 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Pippa wondered ____ her gifts would really be useful to the local girls.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "wonder 后转述是否问题(礼物是否有用),用 if 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Nobody knew ____ the local men would come back to fix the wall at night.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "know(否定)后转述是否问题,用 whether 引导,陈述语序。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She asked the leader ____ new volunteers needed any special training first.",
+      "options": [
+        "that",
+        "what",
+        "if",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "ask 后转述 Yes/No 问题(是否需要培训),用 if 引导。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm wondering ____ our paper bottles can really replace plastic ones.",
+      "options": [
+        "what",
+        "who",
+        "that",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "wonder 后转述是否问题(能否替代),用 whether 引导,陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At the interview she asked me ____ my greatest strength was.",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "转述特殊疑问 'What is your greatest strength?',保留 what,从句用陈述语序 what my strength was。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The leader explained ____ we should report to after the interview.",
+      "options": [
+        "that",
+        "whom",
+        "if",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "转述 'Whom should you report to?',保留 whom,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Jiang was told ____ she would work during the import expo.",
+      "options": [
+        "if",
+        "that",
+        "where",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "转述 'Where will you work?',保留 where,从句陈述语序 where she would work。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I'd like to know ____ first started this volunteer website.",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "转述 'Who started the website?',who 作从句主语,语序不变。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The interviewer wondered ____ I had organised so many activities.",
+      "options": [
+        "how",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "转述 'How did you organise them?',保留 how,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She wanted to know ____ I would like to serve as a volunteer.",
+      "options": [
+        "that",
+        "when",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "转述 'When would you like to serve?',保留 when,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Nobody could tell us ____ the old guide had remembered every clock.",
+      "options": [
+        "if",
+        "that",
+        "how",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "转述 'How did she remember them?',保留 how,主句过去时从句也用过去完成。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The teacher asked us ____ we wanted to help in our community.",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "转述 'Why do you want to help?',保留 why,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I forget ____ the volunteer fair will be held this year.",
+      "options": [
+        "where",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "转述 'Where will it be held?',保留 where,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He explained ____ his work experience related to the volunteer position.",
+      "options": [
+        "that",
+        "how",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "转述 'How does your experience relate?',保留 how,主句过去时从句用过去时 related。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She finally understood ____ her mother had encouraged her to volunteer.",
+      "options": [
+        "if",
+        "that",
+        "why",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "转述 'Why did her mother encourage her?',保留 why,主句过去时从句用过去完成。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Please tell me ____ I can sign up for the weekend shelter work.",
+      "options": [
+        "that",
+        "if",
+        "whether",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "转述 'How can I sign up?',保留 how,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The girls did not understand ____ the strange hair bands were for.",
+      "options": [
+        "what",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "转述 'What are the bands for?',保留 what(介词 for 留在句末),从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I asked the guide ____ many visitors came to the palace each day.",
+      "options": [
+        "that",
+        "how",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "转述 'How many visitors come each day?',保留 how many,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "We were curious about ____ the twins had got their first idea.",
+      "options": [
+        "if",
+        "that",
+        "where",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "转述 'Where did they get the idea?',保留 where,主句过去时从句用过去完成。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Can you tell me ____ is in charge of the recycling campaign?",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "转述 'Who is in charge?',who 作从句主语,语序不变。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The officials decided ____ the schoolgirls should wear their hair.",
+      "options": [
+        "how",
+        "if",
+        "that",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "转述 'How should the girls wear their hair?',保留 how,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She showed the new helper ____ she could keep the food safe.",
+      "options": [
+        "that",
+        "how",
+        "if",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "转述 'How can I keep the food safe?',保留 how,主句过去时从句用过去时 could。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Then I was supposed to tell her ____ I expected from the position.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "转述 'What do you expect from the position?',保留 what 作宾语,从句陈述语序。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I really want to find out ____ this strength will help me as a volunteer.",
+      "options": [
+        "if",
+        "that",
+        "whether",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "转述 'How will this strength help you?',保留 how,从句陈述语序。"
+    }
+  ]
+}

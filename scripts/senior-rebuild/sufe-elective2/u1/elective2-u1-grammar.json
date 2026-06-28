@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grammar_title": "-ing/-ed 形式作表语(predicatives)",
+  "source": "上外版选择性必修第二册 Unit 1 Grammar in Use:-ing/-ed forms used as predicatives。-ing/-ed 形式跟在 be/seem/get/look/become/feel/remain 等系动词后作表语，说明主语的性质或状态。句子地道、答案唯一。答案位由 _balance 打散。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "-ing 形式作表语(说明事物的性质/命名活动)",
+      "overview": "-ing 形式跟在 be/seem/sound/look 等系动词后作表语：①说明主语(事物/想法)令人产生某种感受，如 The findings were amazing；②在 'one's job/dream/task is + V-ing' 中说明所从事的活动，如 His job is studying animals。"
+    },
+    {
+      "code": "u1.02",
+      "point": "-ed 形式作表语(说明人的感受/事物的状态)",
+      "overview": "-ed 形式跟在 be/feel/seem/get/look/remain 等系动词后作表语，说明主语(多为人)的感受或事物所处的被动状态，如 The scientists were amazed；All these mysteries remain unsolved。"
+    },
+    {
+      "code": "u1.03",
+      "point": "-ing 还是 -ed(看主语)",
+      "overview": "判断用 -ing 还是 -ed 作表语：主语是引起感受的事物→用 -ing(exciting)；主语是产生感受的人→用 -ed(excited)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "The results of the experiment were really ____.",
+      "options": [
+        "amazing",
+        "amazed",
+        "amaze",
+        "amazes"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 results 是引起感受的事物，用 -ing 形式作表语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "To young students, the idea of space travel sounds truly ____.",
+      "options": [
+        "fascinated",
+        "fascinating",
+        "fascinate",
+        "fascinates"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 idea 是事物，令人着迷，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The professor's lecture on viruses was very ____.",
+      "options": [
+        "inspired",
+        "inspire",
+        "inspiring",
+        "inspires"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 lecture 是事物，给人启发，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The new discovery about DNA seemed quite ____.",
+      "options": [
+        "surprised",
+        "surprise",
+        "surprises",
+        "surprising"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 discovery 是事物，令人惊讶，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "For many people, the plan to land on Mars is ____.",
+      "options": [
+        "exciting",
+        "excited",
+        "excite",
+        "excites"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 plan 是事物，令人激动，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The strange data we collected last night looked rather ____.",
+      "options": [
+        "puzzled",
+        "puzzling",
+        "puzzle",
+        "puzzles"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 data 是事物，令人困惑，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The story of the female scientist was deeply ____.",
+      "options": [
+        "moved",
+        "move",
+        "moving",
+        "moves"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 story 是事物，感人，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Watching the rocket take off was absolutely ____.",
+      "options": [
+        "thrilled",
+        "thrill",
+        "thrills",
+        "thrilling"
+      ],
+      "answer_index": 3,
+      "explanation": "主语(动名词短语)是事物，令人激动，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The result of his patent application was ____.",
+      "options": [
+        "disappointing",
+        "disappointed",
+        "disappoint",
+        "disappoints"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 result 是事物，令人失望，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The way she never gave up is truly ____.",
+      "options": [
+        "encouraged",
+        "encouraging",
+        "encourage",
+        "encourages"
+      ],
+      "answer_index": 1,
+      "explanation": "主语(the way 从句)是事物，给人鼓舞，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The science fair this year was very ____.",
+      "options": [
+        "interested",
+        "interest",
+        "interesting",
+        "interests"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 science fair 是事物，有趣，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The strange noise from the old machine was a little ____.",
+      "options": [
+        "worried",
+        "worry",
+        "worries",
+        "worrying"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 noise 是事物，令人担心，用 -ing 形式。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Her dream job is ____ new planets in deep space.",
+      "options": [
+        "exploring",
+        "explored",
+        "explore",
+        "explores"
+      ],
+      "answer_index": 0,
+      "explanation": "'job is + V-ing' 用 -ing 形式作表语，说明所从事的活动。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "One key part of his work is ____ seeds for the national seed bank.",
+      "options": [
+        "collected",
+        "collecting",
+        "collect",
+        "collects"
+      ],
+      "answer_index": 1,
+      "explanation": "'part of work is + V-ing'，用 -ing 形式说明活动。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A biologist's daily task is ____ living things very closely.",
+      "options": [
+        "observed",
+        "observe",
+        "observing",
+        "observes"
+      ],
+      "answer_index": 2,
+      "explanation": "'task is + V-ing'，用 -ing 形式作表语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My goal this year is ____ how viruses spread among plants.",
+      "options": [
+        "discovered",
+        "discover",
+        "discovers",
+        "discovering"
+      ],
+      "answer_index": 3,
+      "explanation": "'goal is + V-ing'，用 -ing 形式说明活动。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His real passion is ____ machines that can help sick people.",
+      "options": [
+        "inventing",
+        "invented",
+        "invent",
+        "invents"
+      ],
+      "answer_index": 0,
+      "explanation": "'passion is + V-ing'，用 -ing 形式作表语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The team's main duty is ____ the rare seeds for the future.",
+      "options": [
+        "protected",
+        "protecting",
+        "protect",
+        "protects"
+      ],
+      "answer_index": 1,
+      "explanation": "'duty is + V-ing'，用 -ing 形式说明活动。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Her main job on the team is ____ how the animal reacts in space.",
+      "options": [
+        "described",
+        "describe",
+        "describing",
+        "describes"
+      ],
+      "answer_index": 2,
+      "explanation": "'job is + V-ing'，用 -ing 形式作表语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A good scientist's habit is ____ every result with great care.",
+      "options": [
+        "examined",
+        "examine",
+        "examines",
+        "examining"
+      ],
+      "answer_index": 3,
+      "explanation": "'habit is + V-ing'，用 -ing 形式说明活动。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When the monkeys survived, the scientists were ____.",
+      "options": [
+        "amazed",
+        "amazing",
+        "amaze",
+        "amazes"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 scientists 是产生感受的人，用 -ed 形式作表语。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Hawking felt ____ when he first learned of his illness.",
+      "options": [
+        "frightening",
+        "frightened",
+        "frighten",
+        "frightens"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 Hawking 是人，感到害怕，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The students were ____ at the news of the science prize.",
+      "options": [
+        "exciting",
+        "excite",
+        "excited",
+        "excites"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 students 是人，感到激动，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Professor Chen looked ____ at the failed results.",
+      "options": [
+        "disappointing",
+        "disappoint",
+        "disappoints",
+        "disappointed"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 Professor Chen 是人，感到失望，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Franklin's parents seemed ____ about her choice at first.",
+      "options": [
+        "worried",
+        "worrying",
+        "worry",
+        "worries"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 parents 是人，感到担心，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We were all ____ by her courage in the face of hardship.",
+      "options": [
+        "inspiring",
+        "inspired",
+        "inspire",
+        "inspires"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 we 是人，受到鼓舞，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The young researcher felt ____ when the data made no sense.",
+      "options": [
+        "puzzling",
+        "puzzle",
+        "puzzled",
+        "puzzles"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 researcher 是人，感到困惑，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Everyone in the lab was ____ with the final result.",
+      "options": [
+        "satisfying",
+        "satisfy",
+        "satisfies",
+        "satisfied"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 everyone 是人，感到满意，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The visitors were deeply ____ by the scientist's life story.",
+      "options": [
+        "moved",
+        "moving",
+        "move",
+        "moves"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 visitors 是人，被打动，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She became ____ in biology when she was only fifteen.",
+      "options": [
+        "interesting",
+        "interested",
+        "interest",
+        "interests"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 she 是人，对生物学感兴趣，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The whole class was ____ to hear that the animals survived in space.",
+      "options": [
+        "surprising",
+        "surprise",
+        "surprised",
+        "surprises"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 class(指人)是产生感受的一方，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "After the long climb, Zhong's team felt completely ____.",
+      "options": [
+        "exhausting",
+        "exhaust",
+        "exhausts",
+        "exhausted"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 team(指人)感到精疲力竭，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He was ____ by the warm support of his fellow scientists.",
+      "options": [
+        "touched",
+        "touching",
+        "touch",
+        "touches"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 he 是人，被感动，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The children looked ____ during the whole science show.",
+      "options": [
+        "fascinating",
+        "fascinated",
+        "fascinate",
+        "fascinates"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 children 是人，被吸引，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Many girls feel ____ to study science by Franklin's example.",
+      "options": [
+        "encouraging",
+        "encourage",
+        "encouraged",
+        "encourages"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 girls 是人，受到鼓励，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For many years, the mystery of DNA remained ____.",
+      "options": [
+        "unsolving",
+        "unsolve",
+        "unsolves",
+        "unsolved"
+      ],
+      "answer_index": 3,
+      "explanation": "remain 后用 -ed 形式作表语，说明谜团'未被解开'的状态。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Zhong Yang was completely ____ to his work in Tibet.",
+      "options": [
+        "devoted",
+        "devoting",
+        "devote",
+        "devotes"
+      ],
+      "answer_index": 0,
+      "explanation": "be devoted to 用 -ed 形式作表语，表示'专注于'。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The biologists were ____ to find the old seeds still alive.",
+      "options": [
+        "delighting",
+        "delighted",
+        "delight",
+        "delights"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 biologists 是人，感到高兴，用 -ed 形式。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Her important work went ____ for many years.",
+      "options": [
+        "unnoticing",
+        "unnotice",
+        "unnoticed",
+        "unnotices"
+      ],
+      "answer_index": 2,
+      "explanation": "go 后用 -ed 形式作表语，表示'未被注意'的状态。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The audience was ____ by the documentary about Franklin.",
+      "options": [
+        "impressing",
+        "impress",
+        "impresses",
+        "impressed"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 audience 是人，被打动，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The experiment was ____, so everyone wanted to try it themselves.",
+      "options": [
+        "exciting",
+        "excited",
+        "excite",
+        "excites"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 experiment 是事物，令人激动，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After the long test, the students felt ____ and went home to rest.",
+      "options": [
+        "tiring",
+        "tired",
+        "tire",
+        "tires"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 students 是人，感到疲惫，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The lecture about black holes was ____ from start to finish.",
+      "options": [
+        "fascinated",
+        "fascinate",
+        "fascinating",
+        "fascinates"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 lecture 是事物，令人着迷，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The professor was ____ by the strange results on the screen.",
+      "options": [
+        "puzzling",
+        "puzzle",
+        "puzzles",
+        "puzzled"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 professor 是人，感到困惑，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The news about the Nobel Prize was ____ to all of us.",
+      "options": [
+        "surprising",
+        "surprised",
+        "surprise",
+        "surprises"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 news 是事物，令人惊讶，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We were ____ to hear how she never gave up on her dream.",
+      "options": [
+        "inspiring",
+        "inspired",
+        "inspire",
+        "inspires"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 we 是人，受到鼓舞，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Collecting seeds at high altitude is ____ work for the team.",
+      "options": [
+        "tired",
+        "tire",
+        "tiring",
+        "tires"
+      ],
+      "answer_index": 2,
+      "explanation": "修饰 work(事物)、说明其令人劳累，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The young girl was very ____ in how plants grow.",
+      "options": [
+        "interesting",
+        "interest",
+        "interests",
+        "interested"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 girl 是人，感兴趣，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The final result of the long study was rather ____.",
+      "options": [
+        "disappointing",
+        "disappointed",
+        "disappoint",
+        "disappoints"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 result 是事物，令人失望，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Franklin felt ____ when others took the credit for her work.",
+      "options": [
+        "discouraging",
+        "discouraged",
+        "discourage",
+        "discourages"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 Franklin 是人，感到气馁，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The scientist's life story is truly ____.",
+      "options": [
+        "moved",
+        "move",
+        "moving",
+        "moves"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 story 是事物，感人，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The whole team looked ____ after the long journey to the mountains.",
+      "options": [
+        "exhausting",
+        "exhaust",
+        "exhausts",
+        "exhausted"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 team(指人)感到精疲力竭，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The idea of one day living on Mars sounds ____.",
+      "options": [
+        "amazing",
+        "amazed",
+        "amaze",
+        "amazes"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 idea 是事物，令人惊叹，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The children were ____ by the loud noise from the rocket.",
+      "options": [
+        "frightening",
+        "frightened",
+        "frighten",
+        "frightens"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 children 是人，感到害怕，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Her speech about female scientists was very ____.",
+      "options": [
+        "encouraged",
+        "encourage",
+        "encouraging",
+        "encourages"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 speech 是事物，给人鼓舞，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Everyone was ____ with the success of the experiment.",
+      "options": [
+        "pleasing",
+        "please",
+        "pleases",
+        "pleased"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 everyone 是人，感到高兴，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The data from the spaceship looked ____ at first.",
+      "options": [
+        "confusing",
+        "confused",
+        "confuse",
+        "confuses"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 data 是事物，令人困惑，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The students seemed ____ during the long, dull lecture.",
+      "options": [
+        "boring",
+        "bored",
+        "bore",
+        "bores"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 students 是人，感到无聊，用 -ed 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Watching the rare seeds finally grow was deeply ____.",
+      "options": [
+        "rewarded",
+        "reward",
+        "rewarding",
+        "rewards"
+      ],
+      "answer_index": 2,
+      "explanation": "主语(动名词短语)是事物，令人有收获感，用 -ing 形式。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The biologist was ____ to see her work help so many people.",
+      "options": [
+        "delighting",
+        "delight",
+        "delights",
+        "delighted"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 biologist 是人，感到欣喜，用 -ed 形式。"
+    }
+  ]
+}

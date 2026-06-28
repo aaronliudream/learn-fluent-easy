@@ -1,0 +1,338 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Disaster Survival",
+  "source": "上外版选择性必修二 Unit 4 同主题阅读(地震求生/台风防护/洪水自救/雪崩逃生/野火求生/救援队与求生包)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Surviving an Earthquake",
+      "topic_cn": "记叙·一场地震中的求生",
+      "body": "At twelve minutes past five in the morning, a loud roar woke the whole town. The ground shook so hard that people could not stand. Mirrors fell from the walls and broke into pieces, lumps of plaster dropped from the ceilings, and windows shattered all around. Many people wanted to run, but the shaking was too strong, and dust filled their throats so that they could hardly breathe. When the earth finally grew still, the silence felt almost as frightening as the noise had been. The streets were covered with bricks, stones and broken glass. Some weak houses had fallen down, while others looked as if a single push would send them crashing. Yet within a few days, the people began to talk about rebuilding. They set up tents, shared food and water, and helped one another search for those who were still missing. Their hands were cut and black with ash, but together they still looked strong. The city was gone, they said, but its spirit was very much alive.",
+      "vocab_notes": [
+        {
+          "word": "plaster",
+          "cn": "灰泥"
+        },
+        {
+          "word": "shatter",
+          "cn": "破碎"
+        },
+        {
+          "word": "ash",
+          "cn": "灰烬"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What woke the people of the town that morning?",
+          "options": [
+            "A loud roar as the ground began to shake.",
+            "A heavy rainstorm outside.",
+            "The ringing of the school bells.",
+            "A fire in the busy market."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a loud roar woke the whole town' 与随后地面摇晃的转述。"
+        },
+        {
+          "stem": "Why could many people not run away at first?",
+          "options": [
+            "Because all the doors were locked.",
+            "The violent shaking and the dust in their throats stopped them.",
+            "Because they were still fast asleep.",
+            "Because the streets were far too crowded."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 '摇晃太强、灰尘塞满喉咙' 的转述,非照抄。"
+        },
+        {
+          "stem": "What did the people decide to do within a few days?",
+          "options": [
+            "Begin to rebuild their ruined town together.",
+            "Leave the area for ever.",
+            "Blame one another for the damage.",
+            "Wait quietly for outside help."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'began to talk about rebuilding' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "When a Typhoon Comes",
+      "topic_cn": "说明·台风的防护",
+      "body": "Typhoons are violent tropical storms that bring powerful winds and heavy rain. They form over warm seas and often strike coastal areas without much warning. In southern China, people have learned to take them seriously. Before a typhoon arrives, fishing boats hurry back to port, and residents living near the water are moved to safer places. The safest spot to hide is a strong room with no windows, such as a basement or an inner bathroom. It is also wise to stay under solid furniture in case the roof gives way. A battery-powered radio is one of the most useful things to keep, because the power often goes out during a storm. Through it you can hear evacuation orders and learn when the danger has finally passed. After the storm, streets may be flooded and roads blocked, so it is best to stay indoors until the local government says it is safe to go out. A little planning can turn a terrible night into one your family will simply remember, not regret.",
+      "vocab_notes": [
+        {
+          "word": "typhoon",
+          "cn": "台风"
+        },
+        {
+          "word": "port",
+          "cn": "港口"
+        },
+        {
+          "word": "evacuation",
+          "cn": "撤离"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where do typhoons usually form?",
+          "options": [
+            "On high mountains.",
+            "Over warm seas.",
+            "In dry deserts.",
+            "Deep inside cities."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'form over warm seas' 的转述。"
+        },
+        {
+          "stem": "Why is a battery-powered radio so useful in a typhoon?",
+          "options": [
+            "It can stop the strong wind.",
+            "It dries wet clothes quickly.",
+            "It still works when the electricity is cut off.",
+            "It cooks food without a fire."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the power often goes out' 的转述。"
+        },
+        {
+          "stem": "What should people do right after the storm?",
+          "options": [
+            "Rush outside to see the damage.",
+            "Drive through the flooded roads at once.",
+            "Open all the windows immediately.",
+            "Stay inside until officials say it is safe."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'stay indoors until the local government says it is safe' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Staying Safe in a Flood",
+      "topic_cn": "说明·洪水中的自救",
+      "body": "Floods happen more often than any other natural disaster, and they can change the land in a single night. Most floods are caused by intense rain that lasts for days, though a broken dam or a high sea tide can also be to blame. The water rises slowly at first, then faster and faster, until quiet streets turn into rushing rivers. The most important rule is simple: never try to be a hero by staying in your house. As soon as you hear a flood warning, leave for higher ground. Take only what you really need, and keep your money and important papers inside a waterproof bag. Never try to walk or drive through moving water, because even a small amount can sweep a person or a car away in seconds. If you do become trapped, climb to the highest floor and call for help. Clean water may be hard to find afterwards, so it is wise to store some in a sealed container before the flood ever reaches you.",
+      "vocab_notes": [
+        {
+          "word": "intense",
+          "cn": "强烈的"
+        },
+        {
+          "word": "warning",
+          "cn": "警告"
+        },
+        {
+          "word": "waterproof",
+          "cn": "防水的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What causes most floods, according to the text?",
+          "options": [
+            "Days of heavy, intense rain.",
+            "A sudden strong earthquake.",
+            "Cold ocean winds.",
+            "A very long dry season."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'intense rain that lasts for days' 的转述。"
+        },
+        {
+          "stem": "What is the most important rule during a flood?",
+          "options": [
+            "Stay in the house to guard it.",
+            "Leave for higher ground instead of staying home.",
+            "Wait until the water reaches the roof.",
+            "Swim across the moving water."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'never try to be a hero by staying in your house... leave for higher ground' 的转述。"
+        },
+        {
+          "stem": "Why should people avoid moving water?",
+          "options": [
+            "Because it is always dirty.",
+            "Because it is too cold to touch.",
+            "Even shallow, fast water is strong enough to knock you down.",
+            "Because it makes loud noises."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'even a small amount can sweep a person or a car away' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Caught in an Avalanche",
+      "topic_cn": "说明·雪崩中的逃生",
+      "body": "An avalanche is a huge mass of snow and ice that suddenly slides down a mountain. It can happen while skiers are enjoying a beautiful slope, and it moves so fast that there is very little time to react. If you ever see one start, try to move to the side of the slope at once, because the deepest snow rushes down through the middle. Dropping any heavy equipment will help you move more quickly and stay nearer the surface. If the snow buries you, the most important thing is to make a small space in front of your face so that you can keep breathing. Do not waste your strength by shouting or digging without a plan, since this only uses up the air and energy you badly need. Instead, stay calm and wait. When you hear the rescue team coming close, call out to them. Many people who keep their heads have been found alive hours after the snow finally stopped moving.",
+      "vocab_notes": [
+        {
+          "word": "avalanche",
+          "cn": "雪崩"
+        },
+        {
+          "word": "slope",
+          "cn": "斜坡"
+        },
+        {
+          "word": "equipment",
+          "cn": "器材"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What should you do first when an avalanche begins?",
+          "options": [
+            "Ski straight down the middle.",
+            "Lie down and cover your head.",
+            "Climb higher up the mountain.",
+            "Get out of the centre and head to the slope's edge."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'move to the side of the slope... the deepest snow rushes down through the middle' 的转述。"
+        },
+        {
+          "stem": "Why should you drop heavy equipment?",
+          "options": [
+            "So you can move faster and stay near the surface.",
+            "To make the snow stop sliding.",
+            "To keep your hands warm.",
+            "To signal a helicopter above."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'help you move more quickly and stay nearer the surface' 的转述。"
+        },
+        {
+          "stem": "Why is it unwise to shout and dig wildly under the snow?",
+          "options": [
+            "It makes the snow melt faster.",
+            "It quickly burns the strength a trapped person must save.",
+            "It frightens the rescue team away.",
+            "It is against the mountain rules."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'uses up the air and energy you badly need' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Surviving a Wildfire",
+      "topic_cn": "说明·野火中的求生",
+      "body": "Wildfires can start in nature or be caused by people, and they spread at an amazing speed, destroying almost everything in their path. If you are ever caught in one, remember that the smoke is often more dangerous than the flames, so cover your nose and mouth with a wet cloth to help you breathe. Try to keep the wind behind the fire and in front of you, and move towards a pond, a river or any large open water. If there is no water nearby, head for ground that has already burned, because it has very little left to catch fire again. Stay as low as you can and cover yourself with wet clothing, a blanket or even soil until the fire passes by. If you have no other choice, go inside a building, shut every door and window, but leave the doors unlocked so that firefighters can reach you later. Acting calmly and quickly always gives you the best chance of staying alive.",
+      "vocab_notes": [
+        {
+          "word": "raging",
+          "cn": "猛烈的"
+        },
+        {
+          "word": "pond",
+          "cn": "池塘"
+        },
+        {
+          "word": "firefighter",
+          "cn": "消防员"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is often more dangerous than the flames in a wildfire?",
+          "options": [
+            "The noise.",
+            "The light.",
+            "The smoke.",
+            "The heat of the sun."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the smoke is often more dangerous than the flames' 的转述。"
+        },
+        {
+          "stem": "Why should you move to ground that has already burned?",
+          "options": [
+            "It is always much cooler.",
+            "It is closer to the main road.",
+            "It is easier to dig into.",
+            "It has little fuel left to burn again."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'little left to catch fire again' 的转述。"
+        },
+        {
+          "stem": "Why leave the doors of the building unlocked?",
+          "options": [
+            "So that firefighters are able to reach you.",
+            "To let the smoke escape outside.",
+            "To keep the building cool.",
+            "To save electricity at night."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'leave the doors unlocked so that firefighters can reach you' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Team That Brings Hope",
+      "topic_cn": "说明·救援队与求生包",
+      "body": "When a major disaster strikes, trained rescue teams are often the difference between life and death. China's international search and rescue team was set up in 2001, and in only ten years it grew from a few hundred members to around four hundred and fifty. The team has carried out many missions, both at home and abroad. After a powerful earthquake hit Nepal in 2015, for example, Chinese experts flew there to help dig survivors out of the ruins. Such teams remind us that every family should also be ready at home. A basic survival kit can keep a family safe for the first few days, when help may not yet have arrived. It should hold enough food and clean water for at least three days, a torch with spare batteries, a first-aid box, a whistle and a dust mask. Some damp towels and a phone with backup batteries are useful too. Once your kit is ready, you are far better prepared for whatever may come your way.",
+      "vocab_notes": [
+        {
+          "word": "kit",
+          "cn": "成套工具"
+        },
+        {
+          "word": "backup",
+          "cn": "备用"
+        },
+        {
+          "word": "damp",
+          "cn": "潮湿的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When was China's search and rescue team set up?",
+          "options": [
+            "In 2015.",
+            "In 2001.",
+            "In 1990.",
+            "In 2020."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'set up in 2001'。"
+        },
+        {
+          "stem": "What did the team do after the 2015 Nepal earthquake?",
+          "options": [
+            "Sent only money to the country.",
+            "Built a new airport there.",
+            "Sent experts to help free survivors from the ruins.",
+            "Trained the local farmers."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'flew there to help dig survivors out of the ruins' 的转述。"
+        },
+        {
+          "stem": "Why should a family keep a survival kit?",
+          "options": [
+            "To save money on shopping.",
+            "To use it on family holidays.",
+            "To give it away as a gift.",
+            "To stay safe in the first days before help arrives."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'keep a family safe for the first few days, when help may not yet have arrived' 的转述。"
+        }
+      ]
+    }
+  ]
+}

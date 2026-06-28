@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(科技主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Ben bought a smart speaker hoping it would make life easier at home. At first he loved giving orders and watching the lights turn on, but soon he noticed it was always listening and recording his words. In the end he decided to switch it off at night, so that his family could keep some quiet, private time of their own.",
+    "questions": [
+      {
+        "q": "Why did Ben buy the smart speaker?",
+        "options": [
+          "He hoped it would make home life easier.",
+          "He wanted to record his neighbours.",
+          "He needed it to drive his car.",
+          "He was told to by his teacher."
+        ],
+        "answer": "A",
+        "explanation": "开头说他希望它让家里生活更轻松 → 转述;其余短文未提。"
+      },
+      {
+        "q": "What did Ben finally decide to do?",
+        "options": [
+          "Turn the speaker off at night for some privacy.",
+          "Buy a second speaker for every room.",
+          "Give the speaker to his neighbour.",
+          "Use it to control the family car."
+        ],
+        "answer": "A",
+        "explanation": "末句说他决定夜里关掉它以保留私密安静时间 → 转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

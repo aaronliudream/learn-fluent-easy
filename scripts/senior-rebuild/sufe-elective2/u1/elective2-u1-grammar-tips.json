@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grade": 11,
+  "content": {
+    "title": "-ing / -ed 形式作表语速查",
+    "intro": "动词的 -ing / -ed 形式可以跟在系动词后面作表语，说明主语的性质或状态。常见系动词:be, seem, get, look, become, appear, feel, remain。判断口诀:主语是引起感受的事物 → -ing;主语是产生感受的人 → -ed。",
+    "table": {
+      "headers": ["形式", "用法 / 例句"],
+      "rows": [
+        ["-ing(说明事物)", "事物令人产生感受:The findings were amazing. / The story is moving."],
+        ["-ing(命名活动)", "job/dream/task is + V-ing:His job is studying animals."],
+        ["-ed(说明人)", "人产生感受:The scientists were amazed. / She felt excited."],
+        ["-ed(说明状态)", "事物处于被动状态:All these mysteries remain unsolved. / He is devoted to his work."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语是物、令人产生某种感受 → 用 -ing", "mark": "The result was disappointing.(令人失望)" },
+      { "rule": "主语是人、自己产生某种感受 → 用 -ed", "mark": "We were disappointed.(感到失望)" },
+      { "rule": "'one's job/dream/task is + 动名词' 命名所做的事", "mark": "Her dream is exploring space." },
+      { "rule": "remain / go / be + -ed 说明事物的被动状态", "mark": "The puzzle remained unsolved." }
+    ],
+    "why": [
+      "-ing 表示'主动地、令人……'，所以用来形容引起感受的事物;-ed 表示'被……、感到……',所以用来形容产生感受的人或处于被动状态的事物。同一动词两种形式不能混用。"
+    ],
+    "gaokaoPoints": [
+      "interesting/interested、exciting/excited、moving/moved 等成对形容词的选择(看主语是物还是人),语法填空与改错高频。",
+      "系动词(be/seem/get/look/become/feel/remain)后接 -ing/-ed 作表语,而非简单进行时或被动语态——靠主语意义判断。"
+    ],
+    "examVsReal": [
+      { "exam": "The news was surprising.（考试/书面）", "real": "The news? Wow, so surprising!", "note": "考试要求按主语严格区分 -ing/-ed;口语里常省略系动词、直接用形容词。" },
+      { "exam": "His job is collecting seeds.（考试）", "real": "His job is to collect seeds. / He collects seeds.", "note": "考试可用 V-ing 作表语;真实表达里 'is to do' 与一般现在时同样自然。" }
+    ]
+  }
+}

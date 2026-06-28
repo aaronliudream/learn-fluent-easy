@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Future Living",
+  "source": "上外版选择性必修第一册 Unit 4 同主题完形(手机管家/电力墙/机器人做饭/穹顶空气/自动驾驶/课堂辩论AI)。用词限本单元/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Home in My Pocket",
+      "text": "I used to worry all day about whether I had turned off the lights or locked the (1)____. Now my whole home sits in my pocket. With one (2)____ on my phone, I can change the lighting, check the temperature and watch the front door. Every (3)____ that uses electricity is joined to a single home (4)____, so they can talk to one another and to me. If a window is left open, the system sends me a quiet (5)____ at once. The home computer even pays the (6)____ and orders food when the fridge is almost empty. Because it takes (7)____ most of the boring housework, I now enjoy much more (8)____ time after school. My grandmother thinks it all sounds like science (9)____, but the technology is completely (10)____. Little by little, our home has learned to look after us.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "door",
+            "sky",
+            "river",
+            "tree"
+          ],
+          "answer_index": 0,
+          "explanation": "locked the door 锁门。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "forest",
+            "tap",
+            "ocean",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "one tap on my phone 在手机上轻点一下。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "price",
+            "device",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "every device 每件设备。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "market",
+            "garden",
+            "machine",
+            "network"
+          ],
+          "answer_index": 3,
+          "explanation": "home network 家庭网络。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "message",
+            "garden",
+            "price",
+            "stone"
+          ],
+          "answer_index": 0,
+          "explanation": "a quiet message 一条提示信息。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "trees",
+            "bills",
+            "songs",
+            "stars"
+          ],
+          "answer_index": 1,
+          "explanation": "pays the bills 付账单。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "off",
+            "up",
+            "over",
+            "in"
+          ],
+          "answer_index": 2,
+          "explanation": "take over 接管。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "empty",
+            "rainy",
+            "leisure"
+          ],
+          "answer_index": 3,
+          "explanation": "leisure time 闲暇时间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fiction",
+            "market",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "science fiction 科幻小说。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wrong",
+            "real",
+            "empty",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "completely real 完全真实。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Power Wall",
+      "text": "When we moved into our new flat, the first thing I noticed was that there were no electric (1)____ on the walls. At first I thought something was (2)____, but my father just smiled. Instead of old plugs, each room has a smart power (3)____. You simply (4)____ any appliance you like to its surface, and it begins to work straight (5)____. There are no cables to trip over and no plugs to (6)____. The wall can power a lamp, a fan or a small (7)____ at the same time. Even better, it knows how much (8)____ each device needs, so nothing is ever wasted. My little brother loves to (9)____ his toy car onto the wall and watch its lights come on. Such a simple idea has made our home far (10)____ and much tidier than before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rivers",
+            "songs",
+            "sockets",
+            "clouds"
+          ],
+          "answer_index": 2,
+          "explanation": "electric sockets 电源插座。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sweet",
+            "loud",
+            "warm",
+            "wrong"
+          ],
+          "answer_index": 3,
+          "explanation": "something was wrong 出了问题。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "wall",
+            "garden",
+            "market",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "power wall 电力墙。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "attach",
+            "sell",
+            "eat"
+          ],
+          "answer_index": 1,
+          "explanation": "attach any appliance 把电器附上去。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "down",
+            "off",
+            "away",
+            "up"
+          ],
+          "answer_index": 2,
+          "explanation": "straight away 立刻。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sing",
+            "fly",
+            "swim",
+            "break"
+          ],
+          "answer_index": 3,
+          "explanation": "plugs to break 会损坏的插头。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "appliance",
+            "river",
+            "cloud",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a small appliance 一件小电器。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "water",
+            "power",
+            "snow",
+            "rain"
+          ],
+          "answer_index": 1,
+          "explanation": "how much power 需要多少电。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lose",
+            "sell",
+            "attach",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "attach his toy car 把玩具车贴上去。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "worse",
+            "darker",
+            "colder",
+            "safer"
+          ],
+          "answer_index": 3,
+          "explanation": "far safer 安全得多。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Breakfast Made by a Robot",
+      "text": "Every morning my breakfast is already (1)____ for me on the kitchen table. I never have to cook, because a robot (2)____ does it all. It plans each meal with a carefully controlled (3)____, so I am given just enough food, no more and no (4)____. The government says our planet can no longer deal with (5)____, and so every home receives the same fair share. My mother often talks about the old (6)____ when people grew vegetables in their own gardens. Back then, animals lived in the (7)____ and not in carefully managed zoos. To me, however, robot meals are simply all I have ever (8)____. The food is healthy and never (9)____, yet sometimes I dream of choosing my own dishes. I wonder whether future children will think a kitchen robot is (10)____ or strange.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "waiting",
+            "crying",
+            "sleeping",
+            "flying"
+          ],
+          "answer_index": 0,
+          "explanation": "breakfast is waiting 早餐已备好。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "housekeeper",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a robot housekeeper 机器人管家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "cloud",
+            "quantity",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "controlled quantity 受控的数量。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "more",
+            "rain",
+            "snow",
+            "less"
+          ],
+          "answer_index": 3,
+          "explanation": "no more, no less 不多不少。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "overpopulation",
+            "music",
+            "sunshine",
+            "holidays"
+          ],
+          "answer_index": 0,
+          "explanation": "deal with overpopulation 应对人口过剩。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "days",
+            "songs",
+            "clouds"
+          ],
+          "answer_index": 1,
+          "explanation": "the old days 过去的日子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "market",
+            "office",
+            "wild",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "lived in the wild 生活在野外。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "broken",
+            "known"
+          ],
+          "answer_index": 3,
+          "explanation": "all I have ever known 我所知道的一切。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wasted",
+            "happy",
+            "afraid",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "never wasted 从不被浪费。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "loud",
+            "normal",
+            "wet",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "think it normal 觉得正常。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Air Under the Dome",
+      "text": "In our dome house, the old dusty days are completely (1)____. There is no need for the good old (2)____ any more, because the home looks after the air by itself. First, the system (3)____ the air to remove every bit of dust. Then it adds your favourite (4)____, so each room smells fresh and clean. Because we live under a clear glass (5)____, sunlight pours in all day, and most of our power comes from solar (6)____ above us. The temperature and the (7)____ are kept just right, so the rooms never feel too dry or too damp. When friends come over, we push a (8)____ and the walls move to make the living room (9)____. Living here feels healthy and calm, and I can hardly imagine going back to an (10)____ house with open windows and dusty corners.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "wet",
+            "loud",
+            "gone",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "are gone 消失了。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "garden",
+            "market",
+            "duster"
+          ],
+          "answer_index": 3,
+          "explanation": "the good old duster 那把老抹布。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "filters",
+            "sells",
+            "eats",
+            "throws"
+          ],
+          "answer_index": 0,
+          "explanation": "filters the air 过滤空气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "perfume",
+            "noise",
+            "stone"
+          ],
+          "answer_index": 1,
+          "explanation": "your favourite perfume 你最爱的香味。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "market",
+            "river",
+            "dome",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "glass dome 玻璃穹顶。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "songs",
+            "clouds",
+            "prices",
+            "panels"
+          ],
+          "answer_index": 3,
+          "explanation": "solar panels 太阳能电池板。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "humidity",
+            "river",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "the humidity 湿度。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cloud",
+            "button",
+            "song",
+            "river"
+          ],
+          "answer_index": 1,
+          "explanation": "push a button 按按钮。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "colder",
+            "darker",
+            "larger",
+            "wetter"
+          ],
+          "answer_index": 2,
+          "explanation": "make the room larger 把房间变大。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "happy",
+            "quiet",
+            "clever",
+            "old-fashioned"
+          ],
+          "answer_index": 3,
+          "explanation": "an old-fashioned house 一座旧式房子。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Cars That Drive Themselves",
+      "text": "On my way to school each morning, I climb into a car that has no (1)____ wheel at all. The car drives itself, and I just sit back and (2)____. Experts say that within a few years, millions of self-driving cars will be on the (3)____. These clever machines can (4)____ other cars, people and traffic lights, so they hardly ever make an (5)____. While the car carries me to school, I can read a book or finish my (6)____. The streets feel much (7)____ now, because the cars never grow tired or angry. Of course, some older people still do not (8)____ the new cars, and they miss driving with their own (9)____. For me, however, a car that drives itself is simply part of everyday (10)____, and I cannot imagine travelling any other way.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "steering",
+            "happy",
+            "rainy",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "no steering wheel 没有方向盘。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cry",
+            "relax",
+            "shout",
+            "fall"
+          ],
+          "answer_index": 1,
+          "explanation": "sit back and relax 放松。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sky",
+            "sea",
+            "road",
+            "cloud"
+          ],
+          "answer_index": 2,
+          "explanation": "on the road 在路上。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "sell",
+            "throw",
+            "spot"
+          ],
+          "answer_index": 3,
+          "explanation": "spot other cars 注意到其他车辆。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "error",
+            "garden",
+            "song",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "make an error 出错。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "garden",
+            "homework",
+            "market",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "finish my homework 完成作业。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "worse",
+            "darker",
+            "safer",
+            "colder"
+          ],
+          "answer_index": 2,
+          "explanation": "much safer 安全得多。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "sell",
+            "drop",
+            "trust"
+          ],
+          "answer_index": 3,
+          "explanation": "do not trust 不信任。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hands",
+            "songs",
+            "clouds",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "with their own hands 用自己的双手。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "song",
+            "life",
+            "price",
+            "cloud"
+          ],
+          "answer_index": 1,
+          "explanation": "everyday life 日常生活。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Class Debate about AI",
+      "text": "Today our class held a (1)____ about whether robots make people more or less clever. Anna spoke first and (2)____ that machines free us from boring tasks, so we have more time to think. She gave a clear (3)____: a kitchen robot cooks dinner while she reads a good book. Ben did not fully (4)____. He said that if robots do everything, people may slowly (5)____ how to do simple things by themselves. Our teacher reminded us that it is not (6)____ to say only 'I agree' or 'I disagree'; we must give good (7)____ to support our views. In the end, most of us felt that robots can be helpful, but only if we stay in (8)____ of them. Technology is (9)____ our world very quickly, yet the most important choices are still (10)____ by humans, not by machines.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "river",
+            "debate",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "held a debate 举行辩论。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cried",
+            "slept",
+            "flew",
+            "argued"
+          ],
+          "answer_index": 3,
+          "explanation": "argued that 主张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "example",
+            "price",
+            "noise",
+            "stone"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear example 一个清楚的例子。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "agree",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "did not fully agree 没有完全同意。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "buy",
+            "sell",
+            "forget",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "forget how to 忘记如何。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rainy",
+            "happy",
+            "loud",
+            "enough"
+          ],
+          "answer_index": 3,
+          "explanation": "not enough 不够。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "reasons",
+            "clouds",
+            "songs",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "give good reasons 给出充分理由。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "song",
+            "control",
+            "river",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "stay in control 保持掌控。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "losing",
+            "selling",
+            "changing",
+            "eating"
+          ],
+          "answer_index": 2,
+          "explanation": "changing our world 改变世界。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "made"
+          ],
+          "answer_index": 3,
+          "explanation": "made by humans 由人类做出。"
+        }
+      ]
+    }
+  ]
+}

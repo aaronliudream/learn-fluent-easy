@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Fighting Stress",
+  "source": "上外版选择性必修三 Unit 1 同主题完形(写压力日记/帮助焦虑的朋友/考试周/公园跑步/呼吸练习/心理老师的建议)。用词限本单元/初高中常见词,答案唯一,选项同词性,与阅读听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Stress Journal",
+      "text": "Last term I often felt (1)____ and could not sleep well at night. My teacher suggested that I keep a stress (2)____. Every evening I (3)____ down what had worried me that day and how it made me (4)____. At first it felt strange, but slowly I began to (5)____ a pattern. Most of my worries came from leaving my homework until the (6)____ minute. Once I could (7)____ the real cause, it was much easier to (8)____ the problem. Writing also helped me get (9)____ of the heavy feelings inside. Now my journal is a quiet place where I can (10)____ calm again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "anxious",
+            "proud",
+            "lucky",
+            "polite"
+          ],
+          "answer_index": 0,
+          "explanation": "felt anxious 感到焦虑,与失眠相符。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machine",
+            "journal",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "keep a journal 记日记。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "threw",
+            "wrote",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "wrote down 写下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "drive",
+            "buy",
+            "feel"
+          ],
+          "answer_index": 3,
+          "explanation": "made me feel 让我感到。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "notice",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "notice a pattern 注意到规律。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rich",
+            "last",
+            "kind",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "the last minute 最后一刻。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "waste",
+            "recognise",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "recognise the cause 认清原因。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "sell",
+            "break",
+            "handle"
+          ],
+          "answer_index": 3,
+          "explanation": "handle the problem 处理问题。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rid",
+            "out",
+            "off",
+            "down"
+          ],
+          "answer_index": 0,
+          "explanation": "get rid of 摆脱。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "find",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "find calm 重获平静。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Helping a Friend",
+      "text": "My best friend Lucy has been very (1)____ lately. Before every test her hands turn cold and (2)____, and her stomach seems to (3)____. I really wanted to help, so I asked her gently what was (4)____ her. She was glad that someone had finally (5)____ it up. We made a simple (6)____ together: each day she would get more (7)____, eat better food, and leave some time to (8)____. I also told her to (9)____ to a teacher if the worry ever grew too strong. Little by little, Lucy became calmer and more (10)____. Helping her made me feel good too.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rich",
+            "polite",
+            "tense",
+            "proud"
+          ],
+          "answer_index": 2,
+          "explanation": "very tense 非常紧张。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sunny",
+            "sleepy",
+            "sandy",
+            "sweaty"
+          ],
+          "answer_index": 3,
+          "explanation": "cold and sweaty 又冷又出汗。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "churn",
+            "sing",
+            "shop",
+            "sleep"
+          ],
+          "answer_index": 0,
+          "explanation": "stomach churns 胃翻腾。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "washing",
+            "bothering",
+            "painting",
+            "buying"
+          ],
+          "answer_index": 1,
+          "explanation": "what was bothering her 困扰她的事。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "thrown",
+            "sold",
+            "brought",
+            "washed"
+          ],
+          "answer_index": 2,
+          "explanation": "brought it up 把它说出来。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "coin",
+            "plan"
+          ],
+          "answer_index": 3,
+          "explanation": "a simple plan 一个简单的计划。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "money",
+            "noise",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "get more sleep 多睡觉。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "relax",
+            "argue",
+            "worry"
+          ],
+          "answer_index": 1,
+          "explanation": "time to relax 放松的时间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "throw",
+            "sell",
+            "turn",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "turn to a teacher 求助老师。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "afraid",
+            "tired",
+            "composed"
+          ],
+          "answer_index": 3,
+          "explanation": "calmer and more composed 更镇定。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Exam Week",
+      "text": "During exam week, I was so (1)____ with revision that I could hardly sleep. There was always a lot on my (2)____. One night I ended up with a terrible (3)____ and could not study at all. My mother saw how (4)____ I looked and sat down beside me. She reminded me that a little stress is (5)____ and can even help me focus. The important thing, she said, was not to let it (6)____ too long. Together we made a timetable that left time to (7)____ and rest. After that I began to (8)____ slowly and deeply whenever I felt panicky. By the end of the week, I felt far more (9)____. I learned that the right (10)____ to stress can change everything.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "busy",
+            "rich",
+            "kind",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "busy with revision 忙于复习。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shoe",
+            "mind",
+            "table",
+            "road"
+          ],
+          "answer_index": 1,
+          "explanation": "on my mind 挂在心上。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "holiday",
+            "garden",
+            "headache",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a terrible headache 严重的头痛。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "happy",
+            "proud",
+            "lucky",
+            "tired"
+          ],
+          "answer_index": 3,
+          "explanation": "how tired I looked 我看起来多疲惫。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "normal",
+            "deadly",
+            "silent",
+            "golden"
+          ],
+          "answer_index": 0,
+          "explanation": "stress is normal 压力是正常的。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "last",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "let it last 让它持续。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "argue",
+            "worry",
+            "relax",
+            "panic"
+          ],
+          "answer_index": 2,
+          "explanation": "time to relax and rest 放松与休息。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "shout",
+            "run",
+            "jump",
+            "breathe"
+          ],
+          "answer_index": 3,
+          "explanation": "breathe slowly and deeply 缓慢深呼吸。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "relaxed",
+            "afraid",
+            "angry",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "far more relaxed 放松得多。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "response",
+            "noise",
+            "coin"
+          ],
+          "answer_index": 1,
+          "explanation": "the right response to stress 对压力的正确回应。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Run in the Park",
+      "text": "Whenever I feel (1)____ out, I put on my shoes and go for a run in the park. Running takes my (2)____ off my problems and clears my head. As my feet hit the path, my worries seem to (3)____ away. The fresh air and green trees help me feel (4)____ again. Exercise is one of the best ways to (5)____ stress, because it lifts your mood almost at (6)____. After twenty minutes, my heart beats fast, but my mind feels (7)____. I come home pleasantly tired and able to (8)____ on my homework. That night I always sleep more (9)____. A short run cannot solve every problem, but it gives me the (10)____ to face them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rich",
+            "polite",
+            "stressed",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "stressed out 焦虑不堪。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "coat",
+            "lunch",
+            "key",
+            "mind"
+          ],
+          "answer_index": 3,
+          "explanation": "take my mind off 让我不去想。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fade",
+            "cook",
+            "shout",
+            "paint"
+          ],
+          "answer_index": 0,
+          "explanation": "fade away 渐渐消退。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "calm",
+            "sleepy",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "feel calm 感到平静。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "build",
+            "reduce",
+            "invite"
+          ],
+          "answer_index": 2,
+          "explanation": "reduce stress 减轻压力。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "school",
+            "lunch",
+            "home",
+            "once"
+          ],
+          "answer_index": 3,
+          "explanation": "at once 立刻。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "clear",
+            "dark",
+            "heavy",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "mind feels clear 头脑清醒。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleep",
+            "focus",
+            "shout",
+            "argue"
+          ],
+          "answer_index": 1,
+          "explanation": "focus on my homework 专注作业。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "loudly",
+            "rarely",
+            "deeply",
+            "hardly"
+          ],
+          "answer_index": 2,
+          "explanation": "sleep deeply 睡得沉。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "price",
+            "ticket",
+            "courage"
+          ],
+          "answer_index": 3,
+          "explanation": "the courage to face them 面对的勇气。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Breathing Exercise",
+      "text": "Here is a simple breathing exercise you can (1)____ whenever you feel nervous. First, sit up straight and gently close your (2)____. Breathe in slowly through your nose and (3)____ the air for a few seconds. Then let it out softly through your (4)____. As you do this, try to (5)____ only on the sound of your own breath. If a worried thought comes, just let it (6)____ and quietly return to your breathing. After about five (7)____, your heartbeat will slow down and your whole body will feel (8)____. The best part is that no one around you will even (9)____. You can use this quiet trick before a test or any time you need to feel (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "try",
+            "sell",
+            "throw",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "you can try 你可以试试。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "books",
+            "eyes",
+            "doors",
+            "shoes"
+          ],
+          "answer_index": 1,
+          "explanation": "close your eyes 闭上眼睛。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "drop",
+            "hold",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "hold the air 屏住气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "window",
+            "pocket",
+            "garden",
+            "mouth"
+          ],
+          "answer_index": 3,
+          "explanation": "through your mouth 用嘴呼出。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "focus",
+            "spend",
+            "argue",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "focus on the sound 专注于声音。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "grow",
+            "go",
+            "shout",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "let it go 让它过去。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "metres",
+            "coins",
+            "minutes",
+            "songs"
+          ],
+          "answer_index": 2,
+          "explanation": "five minutes 五分钟。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "hungry",
+            "noisy",
+            "relaxed"
+          ],
+          "answer_index": 3,
+          "explanation": "feel relaxed 感到放松。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "notice",
+            "sell",
+            "cook",
+            "paint"
+          ],
+          "answer_index": 0,
+          "explanation": "no one will notice 没人会察觉。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "calm",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "feel calm 感到平静。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Counsellor's Advice",
+      "text": "When Tom could not stop (1)____ about everything, he decided to visit the school (2)____. She listened carefully and told him that his feelings were quite (3)____. Many students, she said, feel the same (4)____. Her first piece of advice was to (5)____ up his worries instead of hiding them away. The second was to keep a (6)____ life, with enough sleep, exercise and fun. She also taught him to (7)____ deeply whenever he felt panicky. Tom was surprised how much lighter he felt after just one (8)____. He realised that asking for help was a sign of (9)____, not weakness. Now, whenever a friend seems stressed, Tom (10)____ them to talk to someone they trust.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "singing",
+            "cooking",
+            "worrying",
+            "shopping"
+          ],
+          "answer_index": 2,
+          "explanation": "stop worrying 停止担忧。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "ticket",
+            "machine",
+            "counsellor"
+          ],
+          "answer_index": 3,
+          "explanation": "the school counsellor 学校的心理老师。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "normal",
+            "golden",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "feelings were normal 感受是正常的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "way",
+            "coin",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "feel the same way 有同样的感受。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "throw",
+            "sell",
+            "bring",
+            "wash"
+          ],
+          "answer_index": 2,
+          "explanation": "bring up his worries 说出担忧。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "broken",
+            "frozen",
+            "golden",
+            "balanced"
+          ],
+          "answer_index": 3,
+          "explanation": "a balanced life 平衡的生活。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "breathe",
+            "shout",
+            "jump",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "breathe deeply 深呼吸。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "coin",
+            "talk",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "after just one talk 只谈了一次。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weather",
+            "traffic",
+            "strength",
+            "furniture"
+          ],
+          "answer_index": 2,
+          "explanation": "a sign of strength 力量的表现。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "throws",
+            "paints",
+            "advises"
+          ],
+          "answer_index": 3,
+          "explanation": "advises them to talk 建议他们倾诉。"
+        }
+      ]
+    }
+  ]
+}

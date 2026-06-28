@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "grade": 11,
+  "content": {
+    "title": "宾语从句(复习)速查",
+    "intro": "宾语从句 = 主语 + 动词 + 一个充当宾语的从句。三步走:① 选对连接词;② 从句一律用陈述语序(主语在前);③ 主句过去时,从句一般也用相应的过去时。口诀:陈述用 that,是否用 if/whether,带疑问词就照搬疑问词。",
+    "table": {
+      "headers": ["从句原本是", "用什么连接词", "例句"],
+      "rows": [
+        ["陈述句", "that(常可省略)", "I believe (that) volunteering helps you."],
+        ["一般疑问句(Yes/No)", "if / whether", "She asked if I had any experience."],
+        ["特殊疑问句(wh-)", "what/who/where/when/why/how", "He told me where she would work."],
+        ["疑问词作主语", "who/what(语序不变)", "Tell me who started the website."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句一律陈述语序:疑问词/if + 主语 + 谓语,不再倒装", "mark": "what my strength was √ / what was my strength ×" },
+      { "rule": "主句过去时,从句一般用相应的过去时(过去/过去完成/过去将来)", "mark": "She asked where I would work." },
+      { "rule": "ask/wonder/want to know + 是否类内容 → if/whether,不用 that", "mark": "wonder whether √ / wonder that ×" },
+      { "rule": "介词后、句首、与 or not 连用时只能用 whether,不用 if", "mark": "whether or not √ / if or not ×" }
+    ],
+    "why": [
+      "宾语从句是把一句话'装进'另一句话当宾语:原句一旦成了从句,就不再是独立的问句,所以要去掉疑问语序、改回主语在前的陈述语序;连接词只负责'连接'和'表明原句类型'(陈述/是否/特殊疑问)。"
+    ],
+    "gaokaoPoints": [
+      "语序题高频:疑问句变宾语从句必须改陈述语序(不倒装、不加 do/does/did)。",
+      "连接词选择:陈述 that、是否 if/whether、特殊疑问照搬 wh-;时态呼应(主过去→从过去)。"
+    ],
+    "examVsReal": [
+      { "exam": "He asked me whether I had finished.(考试/书面)", "real": "He asked, \"Have you finished?\"", "note": "考试爱考转述(陈述语序);口语里常直接引用原话。" },
+      { "exam": "I think that he is right.(考试常带 that)", "real": "I think he's right.", "note": "口语里 that 几乎总被省略,但考试写出来更稳妥。" }
+    ]
+  }
+}

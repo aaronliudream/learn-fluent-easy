@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(环保主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Anna's small town began sorting its rubbish, many people thought it was too much trouble. A year later, the streets were cleaner, far less waste was buried in the ground, and even the children knew which bin to use. Today the town is proud to be one of the greenest places in the whole area.",
+    "questions": [
+      {
+        "q": "How did many people feel about sorting rubbish at first?",
+        "options": [
+          "They felt it would be a bother.",
+          "They were excited to start at once.",
+          "They wanted to sell their rubbish.",
+          "They refused to use any bins."
+        ],
+        "answer": "A",
+        "explanation": "对应 'many people thought it was too much trouble' 的转述;其余与原文不符或未提。"
+      },
+      {
+        "q": "What was the town like one year later?",
+        "options": [
+          "Dirtier and full of waste.",
+          "Exactly the same as before.",
+          "Cleaner, with much less waste buried.",
+          "Empty because people had left."
+        ],
+        "answer": "C",
+        "explanation": "对应 'the streets were cleaner, far less waste was buried in the ground' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

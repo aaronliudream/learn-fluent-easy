@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Write a Brief Report on People's Beliefs about Adventure(写一篇关于人们对探险看法的简短报告)",
+  "title_en": "My Classmates' Beliefs about Adventure",
+  "genre": "调查报告 / 说明(report survey results using statistics as supporting details)",
+  "source": "上外版选择性必修第一册 Unit 3 Writing:writing a brief report on people's beliefs about adventure,用统计数字作为支撑细节(Writing Strategy: using statistics as supporting details)。",
+  "prompt_cn": "你在班里做了一次关于'探险对你意味着什么'的小调查。请用英语写一篇约90-110词的简短报告,内容包括:① 用一句总体陈述说明同学们对探险的总体态度;② 用具体的百分比数字描述至少两类不同看法(如'见识新事物''高风险活动''说走就走的旅行'等);③ 用一句话作结。注意:数字要具体、相关、清楚,用来支撑你的陈述。",
+  "prompt_en": "You have done a mini-survey in class about what adventure means to your classmates. Write a brief report (about 90-110 words) including: 1) a general statement about your classmates' overall attitude towards adventure; 2) specific percentages describing at least two different views (e.g. seeing something new, highly risky activities, travelling on a budget); 3) a concluding sentence. Use statistics that are specific, relevant and clear to support your statement.",
+  "points": [
+    "总体陈述(The majority of my classmates … / Most of my classmates hold a … attitude)",
+    "用具体百分比描述不同看法(45.2% of them said …; 26.8% described it as …)",
+    "数字具体、相关、清楚(避免 'more than half',用 '52.4%')",
+    "结尾句总结(It can thus be seen that …)"
+  ],
+  "word_count": "90-110 词",
+  "model_essay": "Last week I carried out a mini-survey in our class to find out what adventure means to my classmates. The results show that most of them hold a positive attitude towards adventure. As the figures show, 45.2% of the students said adventure meant \"seeing and doing something new\", while 28.6% described it as \"getting off the beaten track and visiting unusual places\". A smaller group, 16.7%, believed adventure was \"taking part in highly risky activities\", and only 9.5% related it to \"travelling on a budget\". It can thus be seen that, to most of my classmates, adventure is more about new experiences than about danger.",
+  "model_translation": "上周我在班里做了一次小调查,想弄清探险对同学们意味着什么。结果显示大多数同学对探险持积极态度。数据表明,45.2%的同学认为探险意味着'见识并尝试新事物',28.6%把它描述为'走人迹罕至之路、去不寻常的地方'。较少的一部分,即16.7%,认为探险是'参加高风险活动',只有9.5%把它与'省钱旅行'联系起来。由此可见,对大多数同学而言,探险更多关乎新体验,而非危险。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:总体陈述 / 至少两类带具体百分比的看法 / 结论句" },
+      { "dimension": "结构", "max": 4, "criteria": "报告体例清楚:陈述—数据支撑—结论;数字具体相关清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、被动/数据表达得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "总体陈述 Most of my classmates hold a … attitude towards adventure.",
+      "数据1 45.2% of the students said adventure meant …",
+      "数据2 28.6% described it as … ; 16.7% believed …",
+      "结论 It can thus be seen that …"
+    ],
+    "key_expressions": [
+      "Last week I carried out a mini-survey in our class.",
+      "As the figures show, 45.2% of the students said adventure meant …",
+      "A smaller group, 16.7%, believed adventure was …",
+      "It can thus be seen that, to most of my classmates, adventure is more about new experiences than about danger."
+    ],
+    "useful_words": ["survey", "adventure", "attitude", "percentage", "figure", "describe", "risky", "experience", "result", "statement"]
+  },
+  "high_sentences": [
+    "Last week I carried out a mini-survey to find out what adventure means to my classmates.",
+    "As the figures show, 45.2% of the students said adventure meant seeing and doing something new.",
+    "A smaller group, 16.7%, believed adventure was taking part in highly risky activities.",
+    "It can thus be seen that adventure is more about new experiences than about danger."
+  ],
+  "error_pairs": [
+    { "wrong": "More than half students think so.", "correct": "More than half of the students think so.", "note": "half of the + 复数名词;数字报告中更宜用具体百分比如 52.4%。" },
+    { "wrong": "45.2% of students said adventure mean new things.", "correct": "45.2% of the students said adventure meant new things.", "note": "宾语从句用过去时 meant;百分比后通常加 of the。" },
+    { "wrong": "The survey was carry out last week.", "correct": "The survey was carried out last week.", "note": "被动语态 be + 过去分词 carried out。" }
+  ],
+  "paragraph_template": "【探险看法调查报告结构】\n第1句 引出调查:Last week I carried out a mini-survey to find out what adventure means to my classmates.\n第2句 总体陈述:The results show that most of them hold a … attitude.\n第3-4句 数据支撑:As the figures show, 45.2% said … , while 28.6% described it as … ; a smaller group, 16.7%, believed …\n第5句 结论:It can thus be seen that …"
+}

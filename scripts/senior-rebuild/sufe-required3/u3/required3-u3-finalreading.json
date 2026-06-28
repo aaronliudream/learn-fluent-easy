@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(健康生活主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "After putting on weight during a busy exam month, Tom decided to take charge of his health. He swapped late-night soda for water, took a short walk after each dinner, and went to bed an hour earlier. A few weeks later, he felt lighter, slept better, and had far more energy for his lessons.",
+    "questions": [
+      {
+        "q": "What made Tom decide to change his habits?",
+        "options": [
+          "He had put on extra weight while exams kept him busy.",
+          "His doctor told him to move house.",
+          "He wanted to win a running race.",
+          "His friends laughed at his cooking."
+        ],
+        "answer": "A",
+        "explanation": "原文 'After putting on weight during a busy exam month' 的转述;其余未提或与文意不符。"
+      },
+      {
+        "q": "How did Tom feel a few weeks later?",
+        "options": [
+          "More tired and anxious than before.",
+          "Lighter, better-rested and more energetic.",
+          "Bored with all his new habits.",
+          "Sorry that he had started at all."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt lighter, slept better, and had far more energy'(短文后半段,覆盖不同位置)的概括。"
+      }
+    ]
+  }
+}

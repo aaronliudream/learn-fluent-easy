@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grammar_title": "同位语从句(the belief / fact / idea / news that …)",
+  "source": "上外版选择性必修三 Unit 3 Grammar in Use:同位语从句。抽象名词后用从句说明其具体内容;从句完整→用 that/whether/wh-(同位语);从句缺主语/宾语/状语→是定语从句(which/who/where/when)。句子地道、答案唯一。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "抽象名词 + that 同位语从句(从句完整,that 只连接、不作成分)",
+      "overview": "belief/fact/idea/news/evidence/theory/hope/truth 等抽象名词后,接一个本身完整的句子来说明其内容,用 that 连接;that 在从句里不缺主语、宾语或状语,只起连接作用,不可用 which/what/where 等替换。"
+    },
+    {
+      "code": "u3.02",
+      "point": "同位语从句 vs 定语从句(完整→that;缺主/宾→which/who;缺地点/时间→where/when)",
+      "overview": "同一个抽象名词后,若后面的句子完整、只是补充说明其内容,用 that(同位语);若句子缺主语或宾语,则是定语从句,指物用 which、指人用 who;若只缺地点/时间状语,用 where/when。靠'从句缺不缺成分'来判断。"
+    },
+    {
+      "code": "u3.03",
+      "point": "whether / what / how / why / when 引导的同位语从句",
+      "overview": "question/problem 等表疑问的名词后,若内容是'是否',用 whether(不用 that);若从句缺名词性成分用 what;若只缺方式/原因/时间状语,用 how/why/when。靠从句'缺什么成分、表什么意思'唯一确定。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "Columbus had a firm belief ____ the world was round.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "belief 后的句子 'the world was round' 本身完整、不缺任何成分,只补充说明这一信念的内容,用 that 连接;其余词都要求从句里缺一个成分,这里不缺。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "There is strong evidence ____ Stonehenge was once used as a calendar.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "evidence 后的从句完整,只说明'证据的内容',用 that;which/what 需从句缺成分,where 需缺地点状语,都不符合。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Scientists put forward the idea ____ Earth's water was delivered by an asteroid.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "idea 后的句子完整,是对这一观点内容的说明,用 that;其余词在完整从句里没有可承担的成分。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The news ____ the Chang'e-4 probe had landed thrilled the whole country.",
+      "options": [
+        "which",
+        "what",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "news 后从句完整,说明消息的内容,用 that;which/what/whose 都要求从句缺成分。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Many people accept the theory ____ the giant statues were carved by hand.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "theory 后的从句完整,补充理论的具体内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Archaeologists made the discovery ____ the bluestones came from South Wales.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "discovery 后从句完整,说明发现的内容,用 that;此处不缺主宾,也不缺地点状语。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The fact ____ no one knows how the trilithons were raised still amazes visitors.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "fact 后从句完整,是对'事实'内容的说明,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We cannot ignore the truth ____ many ancient sites remain unexplained.",
+      "options": [
+        "which",
+        "where",
+        "what",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "truth 后从句完整,说明真相的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "There is a belief ____ aliens from another world helped build the monument.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "belief 后从句完整,补充说明这一信念,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Researchers reached the conclusion ____ the trench is the deepest place on Earth.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "conclusion 后从句完整,说明结论的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The suggestion ____ we should leave the ruins untouched sounds wise.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "suggestion 后从句完整,说明建议的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Nobody can deny the fact ____ life exists even at the bottom of the ocean.",
+      "options": [
+        "what",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "fact 后从句完整,说明事实内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The old story spread the idea ____ a monster still lives in the lake.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "idea 后从句完整,说明这一说法的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "There is little evidence ____ the islanders ever reached South America.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "evidence 后从句完整,说明证据所指的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The report confirmed the news ____ a new species had been found in the forest.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "news 后从句完整,说明消息内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She had a strong feeling ____ the cave was hiding an ancient secret.",
+      "options": [
+        "which",
+        "what",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "feeling 后从句完整,说明这种感觉的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The hope ____ humans will one day explore the whole universe drives science on.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "hope 后从句完整,说明希望的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Everyone was struck by the discovery ____ the deep trench was full of life.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "discovery 后从句完整,说明发现的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He made the claim ____ he had crossed the great desert entirely alone.",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "claim 后从句完整,说明所声称的内容,用 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The belief ____ giants once ruled the island comes from old local legends.",
+      "options": [
+        "which",
+        "what",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "belief 后从句完整,说明这一信念的内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The discovery ____ the trench supports life surprised many biologists.",
+      "options": [
+        "that",
+        "which",
+        "where",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "discovery 后的句子完整(不缺主宾或状语),是对发现内容的说明,属同位语从句,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Experts hold the view ____ ancient people had real astronomical knowledge.",
+      "options": [
+        "which",
+        "that",
+        "when",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "view 后从句完整,说明观点内容,是同位语从句,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "There is growing evidence ____ the statues were moved by rocking them.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "evidence 后从句完整,说明证据内容,用 that(同位语)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The idea ____ the limestone can cut through flesh keeps tourists away.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "idea 后从句完整,说明这一看法的内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "No one doubts the fact ____ the rainforest hides uncontacted tribes.",
+      "options": [
+        "that",
+        "which",
+        "when",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "fact 后从句完整,说明事实内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We were excited by the news ____ a probe had reached the far side of the moon.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "news 后从句完整,说明消息内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The belief ____ the lake hides a monster still draws many visitors.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "belief 后从句完整,说明信念内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Scientists support the theory ____ water came to Earth from outer space.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "theory 后从句完整,说明理论内容,用 that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The evidence ____ the archaeologists uncovered proved the city was real.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'the archaeologists uncovered ____' 缺动词 uncovered 的宾语,是定语从句,指物用 which;who 指人、where/when 是状语都不对。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The deep trench ____ explorers have rarely reached is full of strange life.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺 reached 的宾语,定语从句指物用 which。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The ancient symbols ____ they carved still puzzle researchers today.",
+      "options": [
+        "who",
+        "when",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺 carved 的宾语,定语从句指物用 which。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The mysterious island ____ sailors named on Easter Day lies far out at sea.",
+      "options": [
+        "who",
+        "where",
+        "when",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺 named 的宾语,定语从句指物用 which。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "This is the remote valley ____ outsiders are not allowed to set foot.",
+      "options": [
+        "where",
+        "which",
+        "that",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整、只缺地点状语(set foot ____),定语从句用 where;which/that 需缺主宾,这里不缺。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Madagascar has a reserve ____ huge needle-shaped rocks rise from the ground.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺地点状语,定语从句用 where。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "They reached the deep part of the ocean ____ the water pressure is deadly.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、只缺地点状语,用 where。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Salisbury Plain is the place ____ the ancient builders raised the huge stones.",
+      "options": [
+        "which",
+        "that",
+        "when",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "raised 已有宾语 the huge stones,从句只缺地点状语,用 where。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Around 2,000 BCE was the time ____ the builders rearranged the bluestones.",
+      "options": [
+        "when",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "rearranged 已有宾语,从句只缺时间状语,定语从句用 when。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Easter Day was the day ____ European sailors first saw the island.",
+      "options": [
+        "where",
+        "when",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "saw 已有宾语 the island,从句只缺时间状语,用 when。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The Bronze Age was the period ____ the largest stones were pulled to the site.",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、只缺时间状语,用 when。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "2019 was the year ____ China's probe landed on the far side of the moon.",
+      "options": [
+        "where",
+        "which",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、只缺时间状语,用 when。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Scientists are studying the question ____ there is water on the moon.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "question 后的从句完整、内容是'是否有水',表疑问的同位语从句用 whether;that 不能引导表疑问的同位语从句,what/which 在完整从句里无成分可担。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There remains the question ____ Stonehenge was really used as a cemetery.",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "question 后内容是'是否',用 whether;that 不可引导表疑问的同位语从句。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Experts discussed the question ____ aliens could ever have visited Earth.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "question 后表'是否'的疑问,用 whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The question ____ the old photographs are real has never been settled.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "question 后内容是'是否真实',用 whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Historians argue over the question ____ the Trojan War actually happened.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "question 后表'是否发生过',用 whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There is still the problem ____ such isolated tribes should be contacted.",
+      "options": [
+        "that",
+        "whether",
+        "which",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "problem 后内容是'是否应该',表疑问的同位语从句用 whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "I often wonder about the question ____ the universe will ever be fully known.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "question 后表'是否',用 whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There is the question ____ these strange symbols actually mean.",
+      "options": [
+        "whether",
+        "how",
+        "that",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺 mean 的宾语(……意味着什么),用 what;whether/how/that 都会使 mean 缺宾语而不通。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There is the question ____ the ancient builders were trying to record.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺 record 的宾语,用 what。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The mystery ____ lies at the bottom of the trench fascinates scientists.",
+      "options": [
+        "whether",
+        "what",
+        "who",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语(……躺在海沟底部),用 what;who 指人不合,whether/that 无法充当主语。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The question ____ the giant statues were meant to show puzzles everyone.",
+      "options": [
+        "whether",
+        "how",
+        "what",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺 show 的宾语,用 what。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Researchers raised the question ____ the islanders ate during the hard times.",
+      "options": [
+        "whether",
+        "why",
+        "that",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺 ate 的宾语,用 what。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The question ____ the ancient people raised the trilithons remains unanswered.",
+      "options": [
+        "how",
+        "what",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "raised 已有宾语 the trilithons,从句只缺方式状语(怎样竖起),用 how;what/which/that 无名词性空缺可担。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Nobody could explain the question ____ the heavy bluestones were transported.",
+      "options": [
+        "what",
+        "how",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "从句被动完整、只缺方式状语,用 how。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There is the question ____ early sailors found such a tiny island in the sea.",
+      "options": [
+        "what",
+        "which",
+        "how",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "found 已有宾语 such a tiny island,从句只缺方式状语,用 how。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The question ____ the builders devoted so much energy to the site puzzles us.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、只缺原因状语(为何投入这么多精力),用 why。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "There remains the question ____ the islanders abandoned their stone giants.",
+      "options": [
+        "why",
+        "what",
+        "who",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "abandoned 已有宾语,从句只缺原因状语,用 why。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "No one has answered the question ____ ancient people built the huge monument.",
+      "options": [
+        "what",
+        "why",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "built 已有宾语 the huge monument,从句只缺原因状语,用 why。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The question ____ the first humans reached the island is hard to answer.",
+      "options": [
+        "what",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "reached 已有宾语 the island,从句只缺时间状语,用 when。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Historians study the question ____ the second phase of building began.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、只缺时间状语(何时开始),用 when。"
+    }
+  ]
+}

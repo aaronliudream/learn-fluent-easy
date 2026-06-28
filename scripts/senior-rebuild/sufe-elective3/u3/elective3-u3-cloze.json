@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Exploring the Unknown",
+  "source": "上外版选择性必修三 Unit 3 同主题完形(百慕大三角/嫦娥四号/亚特兰蒂斯/穿越撒哈拉/天生的探索者/深海探测技术)。选项同词性,答案唯一,与阅读/听力关不撞篇。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Bermuda Triangle",
+      "text": "The Bermuda Triangle is an area of the Atlantic Ocean that has long been a (1)____ to people around the world. Since 1945, more than a hundred ships and planes are said to have (2)____ there, often without leaving a single (3)____ behind. Many strange (4)____ have been put forward to explain these losses, but few people are truly (5)____ by them. Some writers blamed sudden storms; others (6)____ to magnetic forces or even aliens. Careful scientists, however, (7)____ that the area is no more dangerous than many other busy parts of the sea. They point out that heavy traffic and bad weather can easily (8)____ accidents. In (9)____, records show that ships go missing here no more often than (10)____. Even so, the puzzle of the Triangle still excites the imagination of millions.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "mystery",
+            "holiday",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a mystery to people 对人们而言是个谜。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "returned",
+            "disappeared",
+            "improved",
+            "agreed"
+          ],
+          "answer_index": 1,
+          "explanation": "have disappeared there 在那里消失,与'没留下痕迹'呼应。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "song",
+            "clue",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "without leaving a single clue 没留下一丝线索。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "gardens",
+            "machines",
+            "tickets",
+            "theories"
+          ],
+          "answer_index": 3,
+          "explanation": "strange theories 奇怪的理论(被提出来解释)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "convinced",
+            "painted",
+            "cooked",
+            "opened"
+          ],
+          "answer_index": 0,
+          "explanation": "convinced by them 被它们说服。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "pointed",
+            "cooked",
+            "slept"
+          ],
+          "answer_index": 1,
+          "explanation": "pointed to magnetic forces 把原因指向磁力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "sleep",
+            "insist",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "scientists insist that 科学家坚持认为。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "paint",
+            "sing",
+            "cause"
+          ],
+          "answer_index": 3,
+          "explanation": "cause accidents 引发事故。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fact",
+            "water",
+            "music",
+            "grass"
+          ],
+          "answer_index": 0,
+          "explanation": "in fact 事实上。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "abroad",
+            "elsewhere",
+            "upstairs",
+            "yesterday"
+          ],
+          "answer_index": 1,
+          "explanation": "no more often than elsewhere 不比别处更频繁。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "China's Journey to the Far Side of the Moon",
+      "text": "In early 2019, China made history when its Chang'e-4 probe became the first to land softly on the far (1)____ of the moon. This part of the moon can never be seen from Earth, so the (2)____ was extremely difficult. Because no radio signal can travel (3)____ from there to our planet, engineers first sent up a special satellite to (4)____ messages between the probe and the control centre. After a long journey, the probe (5)____ touched down and began to explore. It took clear (6)____ of the strange grey surface and studied the soil with care. Scientists hope these samples will help them (7)____ how the moon was formed long ago. The (8)____ was praised around the world as a great step forward. It also showed that the desire to (9)____ the unknown is as strong as ever. One day, such work may even help humans build a research (10)____ on the moon.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "side",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "the far side of the moon 月球的远端。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "market",
+            "dinner",
+            "landing"
+          ],
+          "answer_index": 3,
+          "explanation": "the landing was difficult 着陆很困难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "directly",
+            "loudly",
+            "sweetly",
+            "politely"
+          ],
+          "answer_index": 0,
+          "explanation": "travel directly 直接传送(信号)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "carry",
+            "cook",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "carry messages between 在两者间传递信息。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "never",
+            "hardly",
+            "finally",
+            "rarely"
+          ],
+          "answer_index": 2,
+          "explanation": "finally touched down 终于着陆,后文确实落了地。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "songs",
+            "tickets",
+            "pictures"
+          ],
+          "answer_index": 3,
+          "explanation": "took clear pictures 拍下清晰的照片。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "understand",
+            "sell",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "help them understand 帮助他们理解。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "mission",
+            "market",
+            "dinner"
+          ],
+          "answer_index": 1,
+          "explanation": "the mission was praised 这次任务受到称赞。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "cook",
+            "explore",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "explore the unknown 探索未知。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "song",
+            "price",
+            "holiday",
+            "station"
+          ],
+          "answer_index": 3,
+          "explanation": "a research station 一座科研站。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Lost City of Atlantis",
+      "text": "Thousands of years ago, the Greek writer Plato told of a great island (1)____ called Atlantis. According to his story, it was a rich and powerful (2)____ that suddenly sank beneath the waves in a single day and night. Ever since, people have (3)____ whether such a place ever truly existed. Some treasure hunters have spent their whole lives (4)____ for its ruins under the sea, but no one has found solid (5)____. A few researchers (6)____ that the tale was based on a real island near Greece, which was partly destroyed by a volcano long ago. Others (7)____ that Plato simply made the whole thing up to teach a lesson. The (8)____ that a wonderful city lies hidden somewhere on the ocean floor is hard to give up. Perhaps the (9)____ of Atlantis will never be solved. Still, the search goes on, (10)____ all the doubts of careful scientists.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "kingdom",
+            "holiday",
+            "machine",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "an island kingdom 一个岛国。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "nation",
+            "dinner",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a rich and powerful nation 富强的国度。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "painted",
+            "wondered",
+            "cooked"
+          ],
+          "answer_index": 2,
+          "explanation": "wondered whether 想知道是否……。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleeping",
+            "singing",
+            "cooking",
+            "searching"
+          ],
+          "answer_index": 3,
+          "explanation": "searching for its ruins 寻找它的遗迹。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "evidence",
+            "weather",
+            "music",
+            "grass"
+          ],
+          "answer_index": 0,
+          "explanation": "solid evidence 确凿证据。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "believe",
+            "sleep",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "researchers believe that 研究者认为。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "paint",
+            "sail",
+            "argue",
+            "swim"
+          ],
+          "answer_index": 2,
+          "explanation": "others argue that 另一些人则主张。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "idea"
+          ],
+          "answer_index": 3,
+          "explanation": "the idea that 一座城藏在海底这一想法。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mystery",
+            "garden",
+            "market",
+            "dinner"
+          ],
+          "answer_index": 0,
+          "explanation": "the mystery of Atlantis 亚特兰蒂斯之谜。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "during",
+            "despite",
+            "towards",
+            "beside"
+          ],
+          "answer_index": 1,
+          "explanation": "despite all the doubts 尽管有种种怀疑。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Crossing the Great Sahara",
+      "text": "The Sahara is the largest hot (1)____ in the world, stretching across the north of Africa. For thousands of years, brave traders (2)____ its endless sand to carry salt and gold from one side to the other. Travelling there was always (3)____, for the days were burning hot and the nights were bitterly cold. Without enough water, a person could not (4)____ for long. Guides had to (5)____ the safest path by reading the stars and the shape of the dunes. Even today, with modern cars, crossing the desert is far from (6)____. Sandstorms can (7)____ a serious danger, hiding the road and turning day into night. Yet the Sahara still (8)____ many explorers, who long to test themselves against its harsh beauty. Each year a few (9)____ travellers set out to cross it on foot or by camel. For them, the empty desert is not a place to fear but a (10)____ to be met.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "market",
+            "desert",
+            "river"
+          ],
+          "answer_index": 2,
+          "explanation": "the largest hot desert 最大的热带沙漠。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "painted",
+            "sang",
+            "crossed"
+          ],
+          "answer_index": 3,
+          "explanation": "crossed its endless sand 穿越无尽的沙海。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "difficult",
+            "easy",
+            "cheap",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "was always difficult,与后文酷热严寒相符。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "survive",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "could not survive for long 无法长久存活。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "drop",
+            "choose",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "choose the safest path 选出最安全的路。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "green",
+            "cheap",
+            "modern",
+            "easy"
+          ],
+          "answer_index": 3,
+          "explanation": "far from easy 远非易事。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "pose",
+            "sell",
+            "paint",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "pose a serious danger 构成严重危险。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "attracts",
+            "loses",
+            "breaks"
+          ],
+          "answer_index": 1,
+          "explanation": "still attracts many explorers 仍吸引许多探险者。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sleepy",
+            "lazy",
+            "brave",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "a few brave travellers 几位勇敢的旅人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dinner",
+            "price",
+            "song",
+            "challenge"
+          ],
+          "answer_index": 3,
+          "explanation": "a challenge to be met 一项有待迎接的挑战。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Born to Explore",
+      "text": "Human beings seem to be born (1)____. From the earliest times, our ancestors were never (2)____ to stay in one place. They climbed the highest mountains, crossed wide oceans, and walked into empty deserts simply to see what lay (3)____. This deep (4)____ to discover new things has shaped the whole history of our species. Every time one question is answered, a new one (5)____. When we finally reached the moon, we at once began to dream of the (6)____ beyond it. Some people ask why we should (7)____ so much time and money on exploration. The answer is that curiosity makes us (8)____ as human beings. Exploring teaches us about the world and, just as importantly, about (9)____. As long as there are unknown places to reach, there will always be people (10)____ enough to go and find them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "explorers",
+            "singers",
+            "farmers",
+            "sellers"
+          ],
+          "answer_index": 0,
+          "explanation": "born explorers 天生的探索者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleepy",
+            "content",
+            "angry",
+            "polite"
+          ],
+          "answer_index": 1,
+          "explanation": "never content to stay 从不满足于待着不动。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "downstairs",
+            "yesterday",
+            "beyond",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "see what lay beyond 看看更远处有什么。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "desire"
+          ],
+          "answer_index": 3,
+          "explanation": "this deep desire 这种强烈的渴望。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "appears",
+            "sells",
+            "sleeps",
+            "eats"
+          ],
+          "answer_index": 0,
+          "explanation": "a new one appears 又冒出一个新问题。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "stars",
+            "songs",
+            "markets"
+          ],
+          "answer_index": 1,
+          "explanation": "dream of the stars beyond it 梦想月球之外的群星。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "spend",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "spend so much time and money 花费大量时间金钱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "sleep",
+            "fall",
+            "grow"
+          ],
+          "answer_index": 3,
+          "explanation": "makes us grow 让我们成长。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ourselves",
+            "themselves",
+            "himself",
+            "herself"
+          ],
+          "answer_index": 0,
+          "explanation": "about ourselves 也认识我们自己(we → ourselves)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lazy",
+            "curious",
+            "sleepy",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "curious enough to go 好奇到愿意前往。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "New Tools for the Deep Sea",
+      "text": "Exploring the deep ocean is one of the hardest (1)____ that scientists face today. The water there is freezing cold and completely (2)____, and the pressure is strong enough to crush a submarine like a tin can. To reach such depths, engineers have built special machines that can (3)____ the huge pressure far below the surface. These vehicles carry bright lights and cameras, so that researchers can (4)____ creatures that have never been seen before. Some are sent down without any people inside and are (5)____ from a ship on the surface. Thanks to this modern (6)____, we now know that life exists even at the very (7)____ of the sea. Each dive brings back new (8)____ about a world that is stranger than any story. Yet most of the ocean floor is still a complete (9)____ to us. There is no (10)____ that the deep sea will keep surprising explorers for many years to come.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "songs",
+            "prices",
+            "tasks",
+            "gardens"
+          ],
+          "answer_index": 2,
+          "explanation": "one of the hardest tasks 最艰难的任务之一。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sweet",
+            "loud",
+            "dry",
+            "dark"
+          ],
+          "answer_index": 3,
+          "explanation": "completely dark 一片漆黑。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "resist",
+            "sell",
+            "sing",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "resist the huge pressure 顶住巨大的压力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "study",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "study creatures 研究海洋生物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "painted",
+            "cooked",
+            "controlled",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "controlled from a ship 由船上操控。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "music",
+            "dinner",
+            "technology"
+          ],
+          "answer_index": 3,
+          "explanation": "this modern technology 这种现代技术。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "bottom",
+            "price",
+            "song",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "at the very bottom of the sea 在海的最底层。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "facts",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "brings back new facts 带回新的事实。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "garden",
+            "market",
+            "mystery",
+            "dinner"
+          ],
+          "answer_index": 2,
+          "explanation": "a complete mystery 一个完全的谜。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "garden",
+            "song",
+            "doubt"
+          ],
+          "answer_index": 3,
+          "explanation": "there is no doubt that 毫无疑问。"
+        }
+      ]
+    }
+  ]
+}

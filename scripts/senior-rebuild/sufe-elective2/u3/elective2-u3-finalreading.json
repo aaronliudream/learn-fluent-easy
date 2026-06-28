@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(慈善主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Ben noticed that his elderly neighbour struggled to carry her shopping up the stairs every day. Without being asked, he began helping her with the heavy bags each evening after school. The old lady was so touched that she baked him cookies, and the two soon became good friends.",
+    "questions": [
+      {
+        "q": "Why did Ben start helping his neighbour?",
+        "options": [
+          "He saw that she found it hard to carry her shopping upstairs.",
+          "She offered to pay him for the help.",
+          "His teacher told him he had to.",
+          "He wanted some of her cookies."
+        ],
+        "answer": "A",
+        "explanation": "对'struggled to carry her shopping up the stairs'的转述;其余在文中无依据或与文意相反。"
+      },
+      {
+        "q": "What was the result of Ben's kindness?",
+        "options": [
+          "She quickly moved away.",
+          "The two became good friends.",
+          "He was paid a large sum.",
+          "Nothing at all changed."
+        ],
+        "answer": "B",
+        "explanation": "对末句'the two soon became good friends'的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

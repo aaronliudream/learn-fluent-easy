@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "To have a balanced life is the best way to fight stress.", "opts": ["拥有平衡的生活是应对压力的最佳方式。", "压力是无法被战胜的。", "平衡的生活毫无意义。", "只有考试才会带来压力。"], "answer": 0 },
+    { "audio": "A little stress before a test can actually help you focus.", "opts": ["考前的一点压力会让你失败。", "考前的一点压力其实能帮你集中注意力。", "压力在任何时候都有害。", "考试根本不需要准备。"], "answer": 1 },
+    { "audio": "Breathe in slowly through your nose to calm yourself down.", "opts": ["大声喊叫才能冷静下来。", "压力是无法缓解的。", "用鼻子慢慢吸气让自己平静下来。", "睡觉是唯一的办法。"], "answer": 2 },
+    { "audio": "Talking to someone you trust can make your worries feel lighter.", "opts": ["把担忧藏起来才最好。", "向陌生人倾诉最有效。", "担忧永远不会减轻。", "向你信任的人倾诉能让担忧变轻。"], "answer": 3 },
+    { "audio": "Getting enough sleep helps you handle stress much better.", "opts": ["充足的睡眠能帮你更好地应对压力。", "睡眠和压力毫无关系。", "熬夜更能缓解压力。", "睡得越少越好。"], "answer": 0 },
+    { "audio": "Doing some exercise can lift your mood very quickly.", "opts": ["运动会让心情更糟。", "做些运动能很快提升你的心情。", "运动对心情毫无作用。", "只有学习才是重要的。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Too much ____ can make you feel sick and tired.（压力）", "opts": ["stress", "price", "garden", "ticket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "She felt great ____ before the important exam.（焦虑）", "opts": ["weather", "anxiety", "furniture", "traffic"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Relaxation can help reduce ____ thoughts and worry.（消极的）", "opts": ["golden", "silent", "negative", "empty"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Getting enough sleep helps you ____ stress.（应对）", "opts": ["sell", "build", "invite", "handle"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ a balanced life is the best way to stay calm.", "opts": ["To have", "Have", "Has", "Had"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "John's plan is ____ some volunteer work this weekend.", "opts": ["does", "to do", "did", "done"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ is necessary to share your feelings with others.", "opts": ["There", "That", "It", "This"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The best way to relax is ____ slowly and deeply.", "opts": ["breathes", "breathe", "breathed", "to breathe"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["承认自己有压力是勇敢的表现。", "有压力的人都很软弱。", "绝不要承认自己有压力。", "压力是根本不存在的。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "It is brave to admit that you feel stressed." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["我最讨厌跑步。", "我最喜欢的放松方式是去跑步。", "跑步让我更累。", "我从不做任何运动。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "My favourite way to relax is to go for a run." }
+  ],
+  "reading": {
+    "passage": "When David felt stressed before his exams, he started going to bed earlier and taking a short walk every afternoon. These small changes helped him sleep better and worry less, and soon he felt ready to face his tests with a calmer mind.",
+    "passageCn": "考试前感到压力时,David 开始早点睡觉,并每天下午散一小段步。这些小小的改变让他睡得更好、担忧更少,很快他就以更平静的心态准备迎接考试了。",
+    "questions": [
+      { "q": "What two changes did David make?", "opts": ["Going to bed earlier and taking a short walk.", "Studying all night and skipping meals.", "Giving up his exams completely.", "Watching films all day long."], "answer": 0 },
+      { "q": "How did David feel after these changes?", "opts": ["More tired and more worried.", "Calmer and ready for his tests.", "Angry with all his teachers.", "Too sleepy to study at all."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short note to a friend who feels stressed before exams. Tell them one or two ways to relax. Try to use an infinitive as a subject or predicative (e.g. To have a balanced life is the best way to stay calm).",
+    "promptCn": "给一位考前感到压力的朋友写一段短信,告诉他/她一两种放松的方法。试着用不定式作主语或表语(如 To have a balanced life is …)。",
+    "sampleWords": ["stress", "anxious", "balanced", "relax", "breathe", "exercise", "sleep", "handle", "calm", "advice"]
+  },
+  "dialogues": [
+    {
+      "title": "Feeling Stressed",
+      "lines": [
+        { "role": "A", "text": "You look worried. Is everything okay?", "cn": "你看起来很担心,一切还好吗?" },
+        { "role": "B", "text": "I'm a bit stressed about my exams next week.", "cn": "下周的考试让我有点压力。" },
+        { "role": "A", "text": "To have a balanced life really helps. Don't forget to rest.", "cn": "拥有平衡的生活真的有帮助,别忘了休息。" },
+        { "role": "B", "text": "You're right. I'll try to sleep earlier tonight.", "cn": "你说得对,我今晚会试着早点睡。" }
+      ]
+    },
+    {
+      "title": "A Way to Relax",
+      "lines": [
+        { "role": "A", "text": "What do you do when you feel panicky?", "cn": "你惊慌的时候会怎么做?" },
+        { "role": "B", "text": "My favourite way to relax is to breathe slowly and deeply.", "cn": "我最喜欢的放松方式是缓慢深呼吸。" },
+        { "role": "A", "text": "Does it really work?", "cn": "这真的有用吗?" },
+        { "role": "B", "text": "Yes. After a few minutes, I always feel much calmer.", "cn": "有用,几分钟后我总会平静很多。" }
+      ]
+    }
+  ]
+}

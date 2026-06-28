@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(贸易经济·决策主题,独立短文,不在阅读关出现)。短文3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When David had only one free hour, he chose to read for a job exam instead of watching a film. He knew the film would be fun, but the new skills from reading would help him earn more in the future. For David, the hour spent reading was worth far more than the hour he gave up at the cinema.",
+    "questions": [
+      {
+        "q": "Why did David choose to read rather than watch a film?",
+        "options": [
+          "He believed reading would bring greater gains later.",
+          "He disliked every kind of film.",
+          "He had no free time at all that day.",
+          "He simply wanted to waste the hour."
+        ],
+        "answer": "A",
+        "explanation": "原文'new skills from reading would help him earn more in the future'的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What does David's decision show about how he valued the hour?",
+        "options": [
+          "He saw reading as the more worthwhile use of it.",
+          "He thought the film was clearly more useful.",
+          "He felt he had nothing at all to give up.",
+          "He believed both choices were equally useless."
+        ],
+        "answer": "A",
+        "explanation": "末句'worth far more than the hour he gave up at the cinema'的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

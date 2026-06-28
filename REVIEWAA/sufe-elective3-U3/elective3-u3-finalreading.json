@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(探索未知主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Last summer, a young scientist named Mei joined a team that explored a newly found cave deep in the mountains. Inside, they discovered strange paintings on the walls that no one could explain, along with the bones of animals that had died there long ago. Mei said the mystery only made her more eager to keep exploring the unknown.",
+    "questions": [
+      {
+        "q": "What did the team find inside the cave?",
+        "options": [
+          "Strange wall paintings and ancient animal bones.",
+          "A modern shopping centre.",
+          "A busy city street full of cars.",
+          "A wide field of green crops."
+        ],
+        "answer": "A",
+        "explanation": "原文说洞里有无人能解释的奇怪壁画,以及很久前死在那里的动物骨头;其余选项与原文不符。"
+      },
+      {
+        "q": "How did the discovery make Mei feel?",
+        "options": [
+          "Bored with science.",
+          "Keener to go on exploring the unknown.",
+          "Sorry that she had joined the team.",
+          "Afraid of every cave."
+        ],
+        "answer": "B",
+        "explanation": "末句说这谜团让她更渴望继续探索未知(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

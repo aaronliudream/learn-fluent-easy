@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Art and Artists",
+  "source": "上外版必修三 Unit 2 同主题完形(学书法/拜访工作室/一首歌的故事/画肖像/美术课/年轻雕塑家)。用词限本单元/初中/常见词,答案唯一,同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Calligraphy Lesson",
+      "text": "On Saturday morning I went to my first Chinese calligraphy lesson. At first the brush felt strange in my hand, and my lines were thin and (1)____. My teacher, an old man with kind eyes, told me not to (2)____ up so easily. He said that every great artist had to (3)____ for years before the brush would obey him. He showed me how to hold the brush and how to control each (4)____ on the soft paper. \"Do not try to fill the whole page,\" he said. \"A little (5)____ space can make the work more beautiful.\" I watched him paint a single bamboo leaf in a fresh and lively (6)____. It looked so simple, yet it was full of (7)____. When I tried again, my hand was steadier, and I began to (8)____ how hard this art really was. By the end of the lesson I was tired but (9)____, because I had learned something new and old at the same time. I decided (10)____ back every week.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "weak",
+            "loud",
+            "sweet",
+            "cold"
+          ],
+          "answer_index": 0,
+          "explanation": "线条又细又「弱」(weak),与 thin 并列。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wake",
+            "give",
+            "look",
+            "stand"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃,固定短语。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "shout",
+            "practise",
+            "travel"
+          ],
+          "answer_index": 2,
+          "explanation": "练习 practise 多年才能掌握。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "meal",
+            "stroke"
+          ],
+          "answer_index": 3,
+          "explanation": "控制纸上的每一「笔触」(stroke)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "blank",
+            "dark",
+            "busy",
+            "wet"
+          ],
+          "answer_index": 0,
+          "explanation": "blank space 留白。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "manner",
+            "season",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "in a ... manner 以……方式;呼应课文 fresh and lively manner。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "money",
+            "danger",
+            "feeling",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "充满「情感」(feeling)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "refuse",
+            "sell",
+            "appreciate"
+          ],
+          "answer_index": 3,
+          "explanation": "appreciate 领会、体会这门艺术之难。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happy",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "学到新东西,因而「高兴」(happy)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "coming",
+            "to come",
+            "come",
+            "came"
+          ],
+          "answer_index": 1,
+          "explanation": "decide to do,不定式作宾语(呼应本单元语法)。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Visit to the Painter's Studio",
+      "text": "Our art club was lucky enough to visit a famous painter's (1)____ last week. The room was filled with brushes, bottles of ink and half-finished pictures. The painter welcomed us with a warm (2)____ and asked us to sit down. He was (3)____ even in his seventies, and his eyes were still bright. He told us that he wanted (4)____ his love of nature through simple shapes. While we watched, he picked up a brush and, with a few (5)____ strokes, turned a blank sheet into a lively fish. We could hardly (6)____ how quickly it had happened. He explained that a good painter must (7)____ the brush with great care, because a single line cannot be changed. One student asked what (8)____ he hoped to send through his art. \"Peace and joy,\" he answered with a gentle smile. Before we left, he encouraged each of us (9)____ our own style instead of copying others. We thanked him and walked home, (10)____ for such a wonderful afternoon.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "garden",
+            "kitchen",
+            "studio",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "画家的「工作室」(studio)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "ticket",
+            "price",
+            "weather",
+            "greeting"
+          ],
+          "answer_index": 3,
+          "explanation": "热情的「问候」(greeting)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "energetic",
+            "lazy",
+            "silent",
+            "tired"
+          ],
+          "answer_index": 0,
+          "explanation": "七十多岁仍「精力充沛」(energetic)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "conveying",
+            "to convey",
+            "convey",
+            "conveyed"
+          ],
+          "answer_index": 1,
+          "explanation": "want to do,不定式作宾语。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "empty",
+            "quiet",
+            "energetic",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "充满活力的「笔触」(energetic strokes)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "drink",
+            "wash",
+            "buy",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "几乎不敢「相信」(believe)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "control",
+            "throw",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "必须小心「控制」(control)画笔。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "message",
+            "season",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "想通过艺术传达什么「信息」(message)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "developing",
+            "develop",
+            "to develop",
+            "developed"
+          ],
+          "answer_index": 2,
+          "explanation": "encourage sb to do,补足语带 to。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "afraid",
+            "sorry",
+            "grateful"
+          ],
+          "answer_index": 3,
+          "explanation": "为美好的下午而「感激」(grateful)。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Story Behind a Song",
+      "text": "When the famous singer was young, he never (1)____ that one day he would win a great prize. As a teenager he only hoped his songs might be (2)____ in small coffee houses. He wrote about peace, freedom and the lives of (3)____ people. His music slowly reached a much bigger (4)____, and he made dozens of records. Years later, he was (5)____ a famous prize for literature, which surprised the whole world. He said he was deeply (6)____ that his songs had found a place in so many hearts. In his speech he (7)____ his warmest greetings to all the guests. He also remembered the great writers whose works were spoken of in (8)____ tones at school. Like them, he said, he was often (9)____ with both his art and ordinary daily matters. \"Some things never change,\" he added, \"even after four hundred years.\" The (10)____ rose to their feet and cheered for a long time.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "imagined",
+            "cooked",
+            "washed",
+            "counted"
+          ],
+          "answer_index": 0,
+          "explanation": "从未「想象」(imagined)会获奖。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "heard",
+            "eaten",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "希望歌曲能被「听到」(heard)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "foreign",
+            "ancient",
+            "ordinary",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "「普通」(ordinary)人的生活。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "garden",
+            "machine",
+            "river",
+            "audience"
+          ],
+          "answer_index": 3,
+          "explanation": "触及更大的「听众」(audience)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "awarded",
+            "sold",
+            "cooked",
+            "carried"
+          ],
+          "answer_index": 0,
+          "explanation": "be awarded a prize 被授予奖项。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "grateful",
+            "afraid",
+            "sorry"
+          ],
+          "answer_index": 1,
+          "explanation": "深深「感激」(grateful)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "closed",
+            "dropped",
+            "extended",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "extend greetings 致以问候。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noisy",
+            "empty",
+            "cheap",
+            "respectful"
+          ],
+          "answer_index": 3,
+          "explanation": "以「充满敬意」(respectful)的语气谈论。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "occupied",
+            "filled",
+            "covered",
+            "painted"
+          ],
+          "answer_index": 0,
+          "explanation": "be occupied with 忙于(固定搭配)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "weather",
+            "audience",
+            "machine",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "「观众」(audience)起立欢呼。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Painting My Grandmother",
+      "text": "For the school art show, I decided to paint a (1)____ of my grandmother. I wanted the picture to (2)____ how kind and patient she is. First I asked her to sit quietly by the window so that I could see every (3)____ of her face. The soft afternoon light made her grey hair (4)____ almost silver. I worked slowly, adding line after line, because I knew a single wrong (5)____ could ruin the whole picture. It was not easy, and at times I almost wanted to (6)____ up. But I kept telling myself to focus on the small (7)____, just as the great masters did. After three afternoons, the (8)____ was finally finished. When my grandmother saw it, her eyes filled with tears, and she was so (9)____ that she hugged me at once. The teacher later chose my work to be put (10)____ display in the school hall. I felt proud that art had helped me show my love.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ticket",
+            "machine",
+            "portrait",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "画一幅「肖像」(portrait)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "wash",
+            "count",
+            "show"
+          ],
+          "answer_index": 3,
+          "explanation": "想让画「展现」(show)祖母的善良。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "detail",
+            "price",
+            "noise",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "看清脸上每一「细节」(detail)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "smell",
+            "look",
+            "taste",
+            "sound"
+          ],
+          "answer_index": 1,
+          "explanation": "让头发「看起来」(look)像银色,系动词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "meal",
+            "price",
+            "stroke",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "一处错误的「笔触」(stroke)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "stand",
+            "wake",
+            "look",
+            "give"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "details",
+            "prices",
+            "noises",
+            "meals"
+          ],
+          "answer_index": 0,
+          "explanation": "专注于小「细节」(details)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "kitchen",
+            "painting",
+            "garden",
+            "station"
+          ],
+          "answer_index": 1,
+          "explanation": "「画作」(painting)终于完成。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "bored",
+            "afraid",
+            "grateful",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "祖母如此「感激」(grateful)以至于拥抱我。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "off",
+            "out",
+            "down",
+            "on"
+          ],
+          "answer_index": 3,
+          "explanation": "on display 陈列、展出(固定短语)。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "An Afternoon Art Class",
+      "text": "Our new art teacher, Miss Lin, has changed the way I see the world. On the first day she did not let us (1)____ at once. Instead, she made us close our eyes and (2)____ a happy moment. \"Art begins with feeling,\" she said. Then she asked each of us to (3)____ that feeling on paper using only three colours. At first I had no idea what (4)____ paint, so I just made a few simple shapes. Miss Lin walked over, looked at my work, and (5)____ me to add more energetic lines. Slowly my page began to come (6)____. She told us that the easiest way to enjoy art is to (7)____ a work in its own time and place. She also said there is often no clear right or (8)____ answer in art. By the end of the class, the walls were (9)____ with bright pictures, and everyone wanted (10)____ them to friends. I had never enjoyed a lesson so much.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "paint",
+            "sleep",
+            "shout",
+            "eat"
+          ],
+          "answer_index": 0,
+          "explanation": "不让我们马上「画画」(paint)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wash",
+            "imagine",
+            "buy",
+            "count"
+          ],
+          "answer_index": 1,
+          "explanation": "闭眼「想象」(imagine)一个快乐时刻。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "convey",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "用颜色「传达」(convey)那种感觉。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "of",
+            "in",
+            "with",
+            "to"
+          ],
+          "answer_index": 3,
+          "explanation": "what to paint 疑问词+to do(呼应本单元语法)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "encouraged",
+            "stopped",
+            "forced",
+            "warned"
+          ],
+          "answer_index": 0,
+          "explanation": "encourage sb to do,鼓励我加更多线条。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "asleep",
+            "alive",
+            "apart",
+            "down"
+          ],
+          "answer_index": 1,
+          "explanation": "画面渐渐「活」(come alive)起来。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "drop",
+            "break",
+            "place",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "place a work in its time and place,把作品放在它的时空中。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "early",
+            "cheap",
+            "quiet",
+            "wrong"
+          ],
+          "answer_index": 3,
+          "explanation": "right or wrong 对或错,固定搭配。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "covered",
+            "emptied",
+            "cleaned",
+            "opened"
+          ],
+          "answer_index": 0,
+          "explanation": "墙上「挂满」(be covered with)明亮的画。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "showing",
+            "to show",
+            "show",
+            "showed"
+          ],
+          "answer_index": 1,
+          "explanation": "want to do,不定式作宾语。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Young Sculptor",
+      "text": "Lin Tao was only sixteen, but everyone in town already (1)____ him as a gifted young artist. While other children played outside, he spent hours shaping wet clay with his hands. His dream was (2)____ a beautiful statue for the city park. The work was slow and difficult, and a single mistake could (3)____ days of effort. Yet Lin Tao refused (4)____ up. He studied the faces of ordinary people, trying to catch every (5)____ in their expressions. \"A good statue should (6)____ real feeling,\" he often said. One evening a famous artist visited his small workshop and was (7)____ by what he saw. The man encouraged Lin Tao (8)____ his work to a national art show. To everyone's joy, the young sculptor won first prize, and his statue was put on (9)____ in the city museum. Standing beside his work, Lin Tao felt deeply (10)____ for all the help he had received along the way.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "washed",
+            "sold",
+            "recognised",
+            "counted"
+          ],
+          "answer_index": 2,
+          "explanation": "大家「认可」(recognised)他是有天赋的艺术家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "making",
+            "make",
+            "made",
+            "to make"
+          ],
+          "answer_index": 3,
+          "explanation": "His dream was to do,不定式作表语。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "waste",
+            "save",
+            "wash",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "一个错误会「浪费」(waste)多日努力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "giving",
+            "to give",
+            "give",
+            "gave"
+          ],
+          "answer_index": 1,
+          "explanation": "refuse to do,不定式作宾语。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "detail",
+            "meal"
+          ],
+          "answer_index": 2,
+          "explanation": "捕捉表情中的每个「细节」(detail)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "wash",
+            "lose",
+            "convey"
+          ],
+          "answer_index": 3,
+          "explanation": "好的雕像应「传达」(convey)真实情感。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "amazed",
+            "bored",
+            "frightened",
+            "tired"
+          ],
+          "answer_index": 0,
+          "explanation": "被所见「惊叹」(amazed)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sending",
+            "to send",
+            "send",
+            "sent"
+          ],
+          "answer_index": 1,
+          "explanation": "encourage sb to do,补足语带 to。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sale",
+            "fire",
+            "display",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "on display 陈列、展出(固定短语)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "afraid",
+            "bored",
+            "grateful"
+          ],
+          "answer_index": 3,
+          "explanation": "对一路的帮助深深「感激」(grateful)。"
+        }
+      ]
+    }
+  ]
+}

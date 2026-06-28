@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Qi Baishi was awarded the International Peace Prize in 1956.", "opts": ["齐白石于1956年被授予国际和平奖。", "齐白石只是一名教师。", "齐白石放弃了绘画。", "齐白石写了一部小说。"], "answer": 0 },
+    { "audio": "Van Gogh used very bright colours and dreamlike shapes.", "opts": ["梵高只用黑白两色。", "梵高使用非常明亮的色彩和如梦的形状。", "梵高从不画画。", "梵高是一名医生。"], "answer": 1 },
+    { "audio": "Bob Dylan was the first songwriter to win the Nobel Prize for Literature.", "opts": ["鲍勃·迪伦从未写过歌。", "鲍勃·迪伦是一名画家。", "鲍勃·迪伦是首位获诺贝尔文学奖的词曲作者。", "鲍勃·迪伦拒绝了这个奖。"], "answer": 2 },
+    { "audio": "We are not allowed to touch any of the paintings in the museum.", "opts": ["我们可以随意触摸画作。", "博物馆不展出画作。", "画作都可以买走。", "我们不被允许触摸博物馆里的任何画作。"], "answer": 3 },
+    { "audio": "He painted shrimps and flowers in a fresh and lively manner.", "opts": ["他以清新生动的方式画虾和花。", "他只画高楼大厦。", "他从不画自然。", "他讨厌画画。"], "answer": 0 },
+    { "audio": "The easiest way to enjoy art is to place it in its time and place.", "opts": ["欣赏艺术必须先成为专家。", "欣赏艺术最容易的方法是把它放在它的时代与地点中。", "欣赏艺术要先买昂贵的门票。", "欣赏艺术只能听别人说。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "His paintings are full of feeling and fine ____.（细节)", "opts": ["detail", "noise", "price", "danger"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "He painted with bright colours and ____ strokes.（充满活力的)", "opts": ["empty", "energetic", "quiet", "cheap"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Through his art he wanted to ____ a wish for peace.（传达)", "opts": ["sell", "wash", "convey", "count"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "He was deeply ____ for the great honour he received.（感激的)", "opts": ["angry", "bored", "afraid", "grateful"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The young painter hopes ____ his works in a real gallery one day.", "opts": ["to show", "showing", "shows", "showed"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Our teacher advised us ____ the opera at least once this year.", "opts": ["seeing", "to see", "saw", "sees"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The bright colours made the whole room ____ warmer.", "opts": ["to feel", "feeling", "feel", "felt"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Painters use a variety of brushes ____ different effects.", "opts": ["creating", "create", "created", "to create"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他被尊为「人民艺术家」。", "他卖掉了所有画作。", "他从不工作。", "他离开了中国。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He was honoured as the People's Artist." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["她想学画画。", "她想成为一名艺术家。", "她在博物馆工作。", "她有一张免费门票。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "She is hoping to become an artist one day." }
+  ],
+  "reading": {
+    "passage": "Qi Baishi is one of the best-known Chinese painters of the twentieth century. He painted shrimps, flowers and doves in a fresh and lively manner, conveying his love of nature and his wish for peace. In 1956 he was awarded the International Peace Prize.",
+    "passageCn": "齐白石是二十世纪最著名的中国画家之一。他以清新生动的方式画虾、花和鸽子,传达出对自然的热爱和对和平的向往。1956年他被授予国际和平奖。",
+    "questions": [
+      { "q": "How did Qi Baishi paint his subjects?", "opts": ["In a fresh and lively manner.", "In a dark and cold style.", "Without any feeling.", "Only in black and white."], "answer": 0 },
+      { "q": "What did Qi Baishi wish for through his art?", "opts": ["Money and fame.", "Love of nature and peace.", "A quiet life alone.", "A big house."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Introduce an artist you admire for an art exhibition. Say who the person is, what he or she creates, the style, and his or her influence.",
+    "promptCn": "为艺术展介绍一位你敬佩的艺术家:此人是谁、创作什么、风格如何、有何影响(试用「总—分」结构和不定式 to do)。",
+    "sampleWords": ["painter", "art form", "subject", "stroke", "manner", "convey", "award", "recognise", "influence", "harmonious"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a Museum Visit",
+      "lines": [
+        { "role": "A", "text": "I really want to visit the new art museum this Saturday.", "cn": "这周六我很想去新的艺术馆。" },
+        { "role": "B", "text": "Great! They are showing some famous ink paintings and Van Gogh's works.", "cn": "太好了!他们在展出一些著名水墨画和梵高的作品。" },
+        { "role": "A", "text": "Let's go in the morning, when it's quieter.", "cn": "我们上午去吧,那时人少些。" },
+        { "role": "B", "text": "Good idea. I'll check the website to see which artworks are on display.", "cn": "好主意。我去查网站看有哪些展品。" }
+      ]
+    },
+    {
+      "title": "Guessing the Artist",
+      "lines": [
+        { "role": "A", "text": "Here's a clue: he painted shrimps and flowers in a lively manner.", "cn": "给你一条线索:他以生动的方式画虾和花。" },
+        { "role": "B", "text": "Is it Qi Baishi, the People's Artist?", "cn": "是「人民艺术家」齐白石吗?" },
+        { "role": "A", "text": "Yes! He was even awarded the International Peace Prize.", "cn": "对!他还获得过国际和平奖。" },
+        { "role": "B", "text": "Amazing. His works convey a real love of nature.", "cn": "了不起。他的作品传达出对自然真挚的热爱。" }
+      ]
+    }
+  ]
+}

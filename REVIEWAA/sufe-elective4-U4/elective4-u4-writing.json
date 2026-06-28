@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Writing a Continuation of a Story(读后续写:Shifting Gears)",
+  "title_en": "Shifting Gears — A Continuation",
+  "genre": "记叙文 / 读后续写(narrative continuation,按情节五要素续写故事)",
+  "source": "上外版选择性必修四 Unit 4 Writing:Writing a continuation of a story。给定故事开头 Shifting Gears(Ted 生日想要一辆崭新的赛车,父亲失业,最后送他一辆翻新的二手车),续写最后两段(falling action + resolution)。",
+  "prompt_cn": "阅读故事开头 Shifting Gears:Ted 十三岁生日想要一辆崭新的蓝色21速赛车,但父亲失业、家境困难;生日早晨,父亲端来早餐,推出来的不是崭新赛车,而是一辆翻新过的二手10速车,Ted 别过脸,有些失望。请续写约150词、两段:第5段(falling action)以 \"I know it's not exactly what you wanted, but …\" 开头;第6段(resolution)以 \"Are you kidding, Dad?\" Ted hugged his father. 开头。要求:每个情节都推动主题、人物态度发生转变、因果合理。",
+  "prompt_en": "Read the beginning of the story Shifting Gears. Ted, who turns thirteen, longs for a brand-new blue racing bike, but his father has lost his job and the family is struggling. On his birthday morning, his father brings out not the shiny racer but a freshly painted second-hand bike, and Ted looks away, disappointed. Write a continuation of about 150 words in two paragraphs. Paragraph 5 (the falling action) must begin with \"I know it's not exactly what you wanted, but …\"; Paragraph 6 (the resolution) must begin with \"Are you kidding, Dad?\" Ted hugged his father. Make sure every event moves the plot, the character's attitude changes, and the causes and effects are believable.",
+  "points": [
+    "承接给定首句、写好下落动作(Ted 的心理由失望开始转变)",
+    "结局段:态度彻底转变,体会父亲的爱与付出",
+    "通过动作/神态展现情感,而非直接说教",
+    "因果合理、首尾呼应,主题落在亲情与理解上"
+  ],
+  "word_count": "150 词左右(两段)",
+  "model_essay": "\"I know it's not exactly what you wanted,\" Dad said quietly, \"but I fixed it up myself, just for you.\" Ted looked at the old bike again. For the first time he noticed how carefully the frame had been painted and how brightly the metal shone. He thought of all the late nights his father must have spent in the cold garage, working with tired hands so that his son would still have something special. Slowly, the disappointment in his heart began to melt away.\n\n\"Are you kidding, Dad?\" Ted hugged his father tightly. \"It's perfect. It's the best birthday present I've ever had.\" He meant every word. As they rode together to the park that morning, Ted realised that the bike was not really old at all. It was full of his father's love. He had wanted a shiny new racer, but what he received was far more precious, and he would treasure it for the rest of his life.",
+  "model_translation": "“我知道这不完全是你想要的,”爸爸轻声说,“但这是我亲手为你修好的。”Ted 又看了看那辆旧车。他第一次注意到车架被刷得多么仔细,金属又擦得多么亮。他想到父亲一定在寒冷的车库里熬了许多夜,用疲惫的双手忙活,只为让儿子仍能有件特别的礼物。慢慢地,他心里的失望开始消散。\n\n“爸,你开玩笑吧?”Ted 紧紧抱住父亲。“它太棒了。这是我收到过最好的生日礼物。”他句句真心。那天早晨,父子俩一起骑车去公园,Ted 明白了这辆车其实一点也不旧——它满载着父亲的爱。他原本想要一辆崭新的赛车,而他得到的却珍贵得多,他会珍惜一生。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容与情节", "max": 6, "criteria": "两段衔接自然、推动情节;Ted 态度发生可信的转变;因果合理" },
+      { "dimension": "结构", "max": 4, "criteria": "以给定句开头、首尾呼应、过渡连贯、详略得当" },
+      { "dimension": "语言", "max": 5, "criteria": "用动作/神态描写情感、句式词汇丰富、语法基本无误(可恰当用 wish/if only)" }
+    ],
+    "required_structure": [
+      "Para 5 下落动作:以 \"I know it's not exactly what you wanted, but …\" 开头,写 Ted 心理转变",
+      "细节描写:注意到车被精心翻新、想到父亲的付出",
+      "Para 6 结局:以 \"Are you kidding, Dad?\" Ted hugged his father. 开头",
+      "升华主题:旧车其实满载父爱,Ted 学会理解与感激"
+    ],
+    "key_expressions": [
+      "I fixed it up myself, just for you.",
+      "Slowly, the disappointment in his heart began to melt away.",
+      "It's the best birthday present I've ever had.",
+      "The bike was full of his father's love."
+    ],
+    "useful_words": ["bike", "birthday", "disappointed", "realise", "hug", "proud", "grateful", "effort", "treasure", "love"]
+  },
+  "high_sentences": [
+    "For the first time he noticed how carefully the frame had been painted.",
+    "He thought of all the late nights his father must have spent in the cold garage.",
+    "Slowly, the disappointment in his heart began to melt away.",
+    "What he received was far more precious, and he would treasure it for the rest of his life."
+  ],
+  "error_pairs": [
+    { "wrong": "Ted hugged to his father.", "correct": "Ted hugged his father.", "note": "hug 是及物动词,后面直接跟宾语,不加 to。" },
+    { "wrong": "He wish he can keep the bike forever.", "correct": "He wished he could keep the bike forever.", "note": "wish 后从句用过去时(could)表示虚拟;主句 wished 也用过去式。" },
+    { "wrong": "The bike made by his father.", "correct": "The bike was made by his father.", "note": "被动语态须有 be 动词:was made。" }
+  ],
+  "paragraph_template": "【读后续写结构(两段)】\n第5段 下落动作:I know it's not exactly what you wanted, but …（父亲的话 → Ted 注意到细节 → 想到父亲付出 → 失望消散）\n第6段 结局:\"Are you kidding, Dad?\" Ted hugged his father.（拥抱 → 真心的话 → 一起骑车 → 升华:旧车满载父爱,学会感激）"
+}

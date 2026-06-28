@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Healthy Lifestyle",
+  "source": "上外版必修第三册 Unit 3 同主题完形(改饮食日记/加入球队/睡眠挑战/洗手倡议/换电动牙刷/奶奶的长寿)。用词限 U3/初中/常见词,答案唯一,选项同词性,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My New Food Diary",
+      "text": "Last month I decided to take (1)____ of what I ate and started a food diary. The first thing I noticed was how many sugary (2)____ I drank every day. Each soda added a lot of (3)____ calories that I never really needed. So I began to (4)____ them with water and low-fat milk. I also tried to fill half of my (5)____ with fruits and vegetables at every meal. Dark green and orange vegetables, my mother said, are a rich (6)____ of nutrients. At first the change was not (7)____, and I often missed my favourite snacks. But as the days passed, I started to feel lighter and had more (8)____ for school. Writing everything down helped me (9)____ track of my progress. Slowly, eating well turned into a (10)____ I no longer had to think about.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "charge",
+            "noise",
+            "weather",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "take charge of 掌管。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "drinks",
+            "tickets",
+            "gardens"
+          ],
+          "answer_index": 1,
+          "explanation": "sugary drinks 含糖饮料。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "empty",
+            "quiet",
+            "extra",
+            "polite"
+          ],
+          "answer_index": 2,
+          "explanation": "extra calories 多余的热量。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "replace"
+          ],
+          "answer_index": 3,
+          "explanation": "replace ... with 用……替换。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "plate",
+            "shop",
+            "city",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "fill half of my plate 盘子一半。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "source",
+            "price",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a rich source of 丰富的来源。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "wet",
+            "easy",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "not easy 不容易。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "snow",
+            "rain",
+            "energy"
+          ],
+          "answer_index": 3,
+          "explanation": "more energy 更多精力。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "keep",
+            "sell",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "keep track of 了解动态。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "habit",
+            "noise",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "a habit 一个习惯。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Joining the Running Club",
+      "text": "I used to think exercise was boring, until my friend asked me to (1)____ up for the school running club. Being active, she said, is much more (2)____ with other people. On the first evening I could barely run one kilometre, and my legs felt (3)____ tired afterwards. But the coach told us to (4)____ our muscles gently before each run, and soon the pain went away. Week by week, I noticed that running helped (5)____ my stress after a long day of study. It even seemed to (6)____ my blood pressure and make my heart stronger. Best of all, I made new friends who would (7)____ me to keep going whenever I felt lazy. Now I exercise on a regular (8)____ rather than once a month. Running has given me more (9)____, not less, and I always feel (10)____ after a workout than before it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "sign",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "sign up 报名。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "boring",
+            "empty",
+            "quiet",
+            "fun"
+          ],
+          "answer_index": 3,
+          "explanation": "more fun 更有趣。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "extremely",
+            "happily",
+            "softly",
+            "politely"
+          ],
+          "answer_index": 0,
+          "explanation": "extremely tired 极度疲惫。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "stretch",
+            "drop",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "stretch our muscles 伸展肌肉。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "raise",
+            "sell",
+            "reduce",
+            "build"
+          ],
+          "answer_index": 2,
+          "explanation": "reduce my stress 减轻压力。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "raise",
+            "sell",
+            "open",
+            "lower"
+          ],
+          "answer_index": 3,
+          "explanation": "lower my blood pressure 降低血压。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "motivate",
+            "stop",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "motivate me 激励我。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "basis",
+            "noise",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "on a regular basis 有规律地。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "trouble",
+            "energy",
+            "weight"
+          ],
+          "answer_index": 2,
+          "explanation": "more energy 更多精力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "worse",
+            "sadder",
+            "angrier",
+            "better"
+          ],
+          "answer_index": 3,
+          "explanation": "feel better 感觉更好。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Two-Week Sleep Challenge",
+      "text": "After weeks of late nights, I often felt (1)____ and easily annoyed in class. My teacher explained that not getting enough sleep can also make it harder to fight (2)____ infection. So I set myself a simple two-week (3)____: to go to bed an hour earlier each night. At first it was a real (4)____, because my phone was always within reach. To stay (5)____, I left it in another room and read a book instead. Doctors say teenagers like me need at (6)____ eight hours of sleep, yet I had been getting only six. By the end of the first week, I could already feel an (7)____ in my mood and focus. I also used a sleep app to keep (8)____ of how long I actually slept. The hardest part was not giving (9)____ after one bad night. But I stayed motivated, and slowly the early bedtime became a natural (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "moody",
+            "rich",
+            "loud",
+            "polite"
+          ],
+          "answer_index": 0,
+          "explanation": "feel moody 情绪低落。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "off",
+            "noise",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "fight off infection 抵抗感染。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shop",
+            "garden",
+            "challenge",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a challenge 一项挑战。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "joke",
+            "game",
+            "struggle"
+          ],
+          "answer_index": 3,
+          "explanation": "a real struggle 真正的艰难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "motivated",
+            "afraid",
+            "angry",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "stay motivated 保持动力。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "least",
+            "noise",
+            "first"
+          ],
+          "answer_index": 1,
+          "explanation": "at least 至少。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "error",
+            "noise",
+            "improvement",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "an improvement 改善。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "lose",
+            "drop",
+            "track"
+          ],
+          "answer_index": 3,
+          "explanation": "keep track of 了解动态。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "up",
+            "off",
+            "in",
+            "out"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "habit",
+            "noise",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "a natural habit 自然的习惯。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Clean Hands Campaign",
+      "text": "Our class started a 'Clean Hands' campaign to (1)____ the spread of germs at school. Many students used to (2)____ a quick hand gel because it was fast, but our health teacher said soap and water should always be the first (3)____. The (4)____ in some gels can kill certain germs, she explained, yet washing properly removes far more. She showed us how to (5)____ our hands together for about twenty seconds under running water. Doing this every day clearly (6)____ our chances of falling sick. She also told us that cool water works just as well, so there is no need to (7)____ for hot water. To make it fun, we put up colourful posters and asked everyone to wash their hands (8)____ before lunch. Within a month, fewer classmates were (9)____ from colds. The whole campaign proved that one small (10)____ can protect a whole class.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "raise",
+            "sell",
+            "reduce",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "reduce the spread 减少传播。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "lose",
+            "drop",
+            "reach"
+          ],
+          "answer_index": 3,
+          "explanation": "reach for 伸手去拿(reach for a gel)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "option",
+            "noise",
+            "price",
+            "city"
+          ],
+          "answer_index": 0,
+          "explanation": "the first option 首选。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "alcohol",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "the alcohol in some gels 凝胶中的酒精。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "hide",
+            "rub",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "rub our hands together 搓手。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "raises",
+            "sells",
+            "opens",
+            "reduces"
+          ],
+          "answer_index": 3,
+          "explanation": "reduces our chances 降低几率。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wait",
+            "sell",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "wait for hot water 等热水。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "never",
+            "immediately",
+            "rarely",
+            "seldom"
+          ],
+          "answer_index": 1,
+          "explanation": "wash immediately 立即洗。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "selling",
+            "winning",
+            "suffering",
+            "buying"
+          ],
+          "answer_index": 2,
+          "explanation": "suffering from colds 受感冒之苦。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "price",
+            "city",
+            "habit"
+          ],
+          "answer_index": 3,
+          "explanation": "one small habit 一个小习惯。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Switching to an Electric Brush",
+      "text": "Last year my dentist suggested that I (1)____ to an electric toothbrush. A large review, he said, had (2)____ that powered brushes remove more of the soft film on teeth than ordinary ones. I was surprised to learn how (3)____ time most people spend cleaning their teeth. Proper brushing should take at (4)____ two minutes, but I used to brush for less than one. The built-in timer became my favourite (5)____ of the new brush, gently telling me when to stop. After a few weeks, my dentist (6)____ that my gums looked much healthier. He also reminded me that good oral care matters for my (7)____ health, not just my mouth. An (8)____ in the mouth, he warned, can even be bad for the heart. Now I brush carefully twice a day and try to (9)____ my teeth properly each time. Such a small change has had a surprisingly big (10)____ on how I feel.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "switch",
+            "sell",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "switch to 换成。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lost",
+            "confirmed",
+            "sold",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "had confirmed 证实。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "many",
+            "much",
+            "little",
+            "few"
+          ],
+          "answer_index": 2,
+          "explanation": "how little time 时间多么少。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "city",
+            "least"
+          ],
+          "answer_index": 3,
+          "explanation": "at least 至少。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "feature",
+            "noise",
+            "price",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "favourite feature 最喜欢的功能。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "confirmed",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "confirmed 确认。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "wet",
+            "overall",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "overall health 整体健康。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "error",
+            "noise",
+            "price",
+            "infection"
+          ],
+          "answer_index": 3,
+          "explanation": "an infection 感染。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "clean",
+            "sell",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "clean my teeth 清洁牙齿。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "effect",
+            "price",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "a big effect 大的影响。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My Grandmother's Long Life",
+      "text": "My grandmother is ninety years old, yet she is still healthy and full of (1)____. People often ask her secret, but she just smiles and says there is no single (2)____. Like people in the so-called Blue Zones, she keeps a number of simple habits. She eats a mostly plant-based (3)____, with lots of colourful vegetables and very little meat. She rarely eats until she is completely full, using a (4)____ plate to help herself stop in time. Every morning she takes a slow walk, because gentle (5)____ keeps her body strong. She lives a calm, low-(6)____ life surrounded by family and old friends. Whenever something goes wrong, she has someone to (7)____ with it together. I think these companions are one big (8)____ why she is so happy. None of her habits is hard or (9)____. Together, though, they may explain why she has reached such a great (10)____ in good health.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "noise",
+            "trouble",
+            "energy",
+            "weight"
+          ],
+          "answer_index": 2,
+          "explanation": "full of energy 充满活力。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "city",
+            "secret"
+          ],
+          "answer_index": 3,
+          "explanation": "no single secret 没有单一秘诀。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "diet",
+            "machine",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a plant-based diet 植物性饮食。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "smaller",
+            "wet",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "a smaller plate 更小的盘子。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "noise",
+            "price",
+            "movement",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "gentle movement 轻柔的活动。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "city",
+            "stress"
+          ],
+          "answer_index": 3,
+          "explanation": "low-stress life 低压力的生活。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "deal",
+            "sell",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "deal with it 应对它。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "reason",
+            "price",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "one big reason 一个重要原因。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cheap",
+            "easy",
+            "expensive",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "hard or expensive 难或贵。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "price",
+            "city",
+            "age"
+          ],
+          "answer_index": 3,
+          "explanation": "such a great age 如此高龄。"
+        }
+      ]
+    }
+  ]
+}

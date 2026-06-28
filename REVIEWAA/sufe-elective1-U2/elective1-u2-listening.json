@@ -1,0 +1,421 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Volunteering",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修第一册 Unit 2 同主题听力(志愿者面试/志愿服务的好处与挑战/选哪种志愿工作/招募启事/敬老院的对话/国际志愿者日)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 A Volunteer Interview",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Interviewer: Welcome, Xu Yuan. May I ask why you want to volunteer with us?",
+        "Xu Yuan: I really want to help people in my community and learn new skills.",
+        "Interviewer: That's good. What do you think your greatest strength is?",
+        "Xu Yuan: I'm patient, so I'm good at working with children and older people.",
+        "Interviewer: I see. Do you have any free time at weekends?",
+        "Xu Yuan: Yes, I'm free every Saturday morning.",
+        "Interviewer: Wonderful. We'll let you know whether you've been chosen by Friday.",
+        "Xu Yuan: Thank you so much. I really hope I can join your team."
+      ],
+      "translation_cn": "面试官欢迎徐媛并问她为何想做志愿者;徐媛说想帮助社区、学新技能;她认为自己最大的优点是有耐心,擅长和孩子与老人相处;周六上午有空;面试官说周五前通知是否被选上;徐媛希望能加入。",
+      "questions": [
+        {
+          "stem": "Why does Xu Yuan want to volunteer?",
+          "options": [
+            "To help her community and learn new skills.",
+            "To earn a high wage.",
+            "To avoid going to school.",
+            "To travel to another country."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Xu Yuan say is her greatest strength?",
+          "options": [
+            "She is very rich.",
+            "She is patient.",
+            "She is good at sport.",
+            "She speaks five languages."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is Xu Yuan free to volunteer?",
+          "options": [
+            "Every Saturday morning.",
+            "Every weekday evening.",
+            "Only on holidays.",
+            "She is never free."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When will the interviewer tell Xu Yuan the result?",
+          "options": [
+            "On Monday.",
+            "By Friday.",
+            "Right away.",
+            "Next month."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Xu Yuan feel about joining the team?",
+          "options": [
+            "She is not interested.",
+            "She is too busy to join.",
+            "She really hopes to join.",
+            "She has changed her mind."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Benefits of Volunteering",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Volunteering brings many benefits to the people who do it.",
+        "It can develop a more positive attitude towards life.",
+        "It is also good for your health and helps you make new friends.",
+        "But it only helps if the work means something to you.",
+        "If it feels like a chore, it will bring you little joy."
+      ],
+      "translation_cn": "做志愿服务给参与者带来许多好处;能培养更积极的人生态度;也有益健康并帮你结交新朋友;但只有当这份工作对你有意义时才有帮助;若它像苦差事,就带不来多少快乐。",
+      "questions": [
+        {
+          "stem": "What attitude can volunteering develop?",
+          "options": [
+            "A fear of meeting people.",
+            "A wish to be alone.",
+            "A dislike of hard work.",
+            "A more positive attitude towards life."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Besides health, what else does volunteering help with?",
+          "options": [
+            "Making new friends.",
+            "Earning more money.",
+            "Avoiding all problems.",
+            "Sleeping longer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does volunteering really help you?",
+          "options": [
+            "When it is paid well.",
+            "When the work means something to you.",
+            "When it is very easy.",
+            "When no one notices."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happens if the work feels like a chore?",
+          "options": [
+            "It makes you rich.",
+            "It improves your health most.",
+            "It brings you little joy.",
+            "It pleases everyone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Volunteering is always boring.",
+            "Volunteering is only about money.",
+            "Volunteering harms your health.",
+            "Volunteering helps you if the work matters to you."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Choosing Volunteer Work",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: I want to start volunteering, but I'm not sure where to begin.",
+        "Tom: Think about what you really care about first.",
+        "Lily: Well, I love animals. Maybe I could help at a shelter.",
+        "Tom: That's a great idea. They always need people to feed and walk the dogs.",
+        "Lily: Do you think they would mind that I'm only sixteen?",
+        "Tom: Not at all. Many young people volunteer there.",
+        "Lily: Then I'll ask whether they need helpers this weekend.",
+        "Tom: Good. Choose work you enjoy, and it won't feel like a chore."
+      ],
+      "translation_cn": "莉莉想做志愿者却不知从何开始;汤姆建议先想想自己真正在意什么;莉莉喜欢动物,想去收容所帮忙;汤姆说那里总缺喂狗、遛狗的人;莉莉担心自己才十六岁;汤姆说很多年轻人都在那做;莉莉决定问问周末是否需要帮手;汤姆说选喜欢的工作就不会像苦差事。",
+      "questions": [
+        {
+          "stem": "What is Lily's problem at the start?",
+          "options": [
+            "She does not know where to begin volunteering.",
+            "She has no free time at all.",
+            "She dislikes animals.",
+            "She wants to be paid."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom tell Lily to think about first?",
+          "options": [
+            "How much money she can earn.",
+            "What she really cares about.",
+            "Which city to move to.",
+            "How far the shelter is."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Lily worried about?",
+          "options": [
+            "That the work is too easy.",
+            "That she has no friends there.",
+            "That she may be too young.",
+            "That dogs are dangerous."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Lily decide to do?",
+          "options": [
+            "Give up the idea completely.",
+            "Wait until next year.",
+            "Volunteer at a hospital instead.",
+            "Ask whether they need helpers this weekend."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What advice does Tom give at the end?",
+          "options": [
+            "Choose work you enjoy so it won't feel like a chore.",
+            "Pick the highest-paid job.",
+            "Only volunteer with friends.",
+            "Never volunteer with animals."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 A Call for Volunteers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our summer camp is looking for volunteers, and we need you.",
+        "Volunteers will help to organise games and keep the children safe.",
+        "You should be creative, responsible and full of energy.",
+        "The work runs from nine in the morning to four in the afternoon.",
+        "If you are interested, please send an email to the camp leader today."
+      ],
+      "translation_cn": "我们的夏令营正在招募志愿者,需要你;志愿者将帮助组织游戏并确保孩子的安全;你应有创意、有责任心、充满活力;工作时间从上午九点到下午四点;有意者请今天给营地负责人发邮件。",
+      "questions": [
+        {
+          "stem": "What is the summer camp looking for?",
+          "options": [
+            "New tents.",
+            "Volunteers.",
+            "More money.",
+            "A new leader."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will the volunteers help to do?",
+          "options": [
+            "Build a new camp.",
+            "Cook for the whole town.",
+            "Organise games and keep children safe.",
+            "Sell tickets to visitors."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of person should a volunteer be?",
+          "options": [
+            "Quiet and shy.",
+            "Lazy and slow.",
+            "Rich and famous.",
+            "Creative, responsible and energetic."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What are the working hours?",
+          "options": [
+            "From nine in the morning to four in the afternoon.",
+            "All night long.",
+            "Only on Sundays.",
+            "Just one hour a day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How should interested people reply?",
+          "options": [
+            "By visiting another city.",
+            "By sending an email to the camp leader.",
+            "By calling their parents.",
+            "By doing nothing."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Visiting the Care Home",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: How was your visit to the care home today?",
+        "Ben: It was lovely. I spent the whole afternoon talking with an old man named Mr Green.",
+        "Anna: That sounds nice. What did you talk about?",
+        "Ben: He told me how he had worked as a teacher for forty years.",
+        "Anna: Did he enjoy your visit?",
+        "Ben: Yes, he asked me whether I could come back next week.",
+        "Anna: Of course you should! These visits clearly mean a lot to him.",
+        "Ben: They mean a lot to me too. I learn something new from him every time."
+      ],
+      "translation_cn": "安娜问本今天去敬老院怎么样;本说很愉快,整个下午都在和一位叫格林先生的老人聊天;聊到老人当了四十年老师;老人很喜欢这次探访,还问本下周能否再来;安娜鼓励他去;本说这些探访对他自己也意义重大,每次都能学到新东西。",
+      "questions": [
+        {
+          "stem": "Where did Ben spend his afternoon?",
+          "options": [
+            "At a beach.",
+            "At a sports field.",
+            "At a care home.",
+            "At a shop."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What had Mr Green done for forty years?",
+          "options": [
+            "Travelled the world.",
+            "Run a restaurant.",
+            "Played in a band.",
+            "Worked as a teacher."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Mr Green ask Ben?",
+          "options": [
+            "Whether Ben could come back next week.",
+            "Whether Ben was a doctor.",
+            "How old Ben was.",
+            "Where Ben lived."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Anna react to Ben's story?",
+          "options": [
+            "She tells him to stop visiting.",
+            "She encourages him to go back.",
+            "She is not interested.",
+            "She thinks it is a waste of time."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben gain from the visits?",
+          "options": [
+            "He earns a lot of money.",
+            "He gets free meals.",
+            "He learns something new each time.",
+            "He becomes famous."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 International Volunteer Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Every year, the world celebrates International Volunteer Day on the fifth of December.",
+        "On that day, millions of people give their time to help others.",
+        "Some clean up parks, while others donate blood or visit the elderly.",
+        "These actions remind us that anyone can make a difference.",
+        "Even a single afternoon of help can bring a community closer together."
+      ],
+      "translation_cn": "每年世界在12月5日庆祝国际志愿者日;那天数百万人付出时间帮助他人;有人清理公园,有人献血或探望老人;这些行动提醒我们人人都能带来改变;哪怕只是一个下午的帮助,也能让社区更紧密。",
+      "questions": [
+        {
+          "stem": "When is International Volunteer Day?",
+          "options": [
+            "On the first of May.",
+            "On New Year's Day.",
+            "Every Sunday.",
+            "On the fifth of December."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do millions of people do on that day?",
+          "options": [
+            "They give their time to help others.",
+            "They travel abroad for fun.",
+            "They stay at home and rest.",
+            "They go shopping."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which action is mentioned in the passage?",
+          "options": [
+            "Building new houses.",
+            "Donating blood.",
+            "Painting pictures.",
+            "Writing songs."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do these actions remind us of?",
+          "options": [
+            "That only adults can help.",
+            "That helping costs too much.",
+            "That anyone can make a difference.",
+            "That volunteering is rare."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can even a single afternoon of help do?",
+          "options": [
+            "Make people unhappy.",
+            "Waste everyone's time.",
+            "Stop all volunteering.",
+            "Bring a community closer together."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

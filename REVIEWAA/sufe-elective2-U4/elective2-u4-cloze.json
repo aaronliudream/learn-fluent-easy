@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Disaster Survival",
+  "source": "上外版选择性必修二 Unit 4 同主题完形(家庭应急计划/地震记忆/气象收音机/震前防护/洪水救援/为何恐慌)。用词限本单元/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Family Emergency Plan",
+      "text": "Disasters can strike at any time, so every family should have a (1)____ ready in advance. Sit down together and choose a safe (2)____ where everyone will meet if you are separated. Next, learn the quickest (3)____ out of your home and out of your neighbourhood. It is also important to (4)____ a basic kit with food, water and a torch, and to keep it where it is easy to (5)____. Make sure that everyone knows how to (6)____ off the water, the gas and the electricity. Younger children should (7)____ their parents' phone numbers by heart. Practise the plan two or three (8)____ a year, just like a school fire drill. A good plan will not stop a disaster from (9)____, but it can keep your family much (10)____ when one does.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "plan",
+            "game",
+            "song",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "have a plan 制定计划。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "spot",
+            "price",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a safe spot 安全的地点。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "toy",
+            "meal",
+            "way",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the quickest way out 最快的出路。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "throw",
+            "hide",
+            "prepare"
+          ],
+          "answer_index": 3,
+          "explanation": "prepare a kit 准备一个工具包。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "reach",
+            "sell",
+            "break",
+            "spend"
+          ],
+          "answer_index": 0,
+          "explanation": "easy to reach 容易拿到。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sing",
+            "turn",
+            "buy",
+            "grow"
+          ],
+          "answer_index": 1,
+          "explanation": "turn off 关掉。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "drop",
+            "learn",
+            "spill"
+          ],
+          "answer_index": 2,
+          "explanation": "learn ... by heart 记牢。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "metres",
+            "songs",
+            "prices",
+            "times"
+          ],
+          "answer_index": 3,
+          "explanation": "two or three times a year 一年两三次。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happening",
+            "singing",
+            "shopping",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "stop ... from happening 阻止其发生。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "richer",
+            "safer",
+            "louder",
+            "colder"
+          ],
+          "answer_index": 1,
+          "explanation": "much safer 安全得多。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Morning the Earth Shook",
+      "text": "I was still asleep when a deep (1)____ woke me before dawn. My bed was shaking so hard that I could not (2)____ up. I heard glass (3)____ as the windows broke one by one. Dust got into my (4)____, and I could not even shout for help. Just then my brother grabbed my arm and (5)____ me towards the door. We reached the street only seconds before the bricks came (6)____ down behind us. When the ground finally became (7)____ again, the silence felt strange and frightening. Around me, weak houses had (8)____ down, and people stood crying in the street. For a long time I was too (9)____ to move at all. Later, I felt thankful that my family was still (10)____ after such a terrible night.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "song",
+            "price",
+            "roar",
+            "smell"
+          ],
+          "answer_index": 2,
+          "explanation": "a deep roar 低沉的轰鸣。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "sing",
+            "buy",
+            "stand"
+          ],
+          "answer_index": 3,
+          "explanation": "could not stand up 站不起来。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "breaking",
+            "singing",
+            "growing",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "hear glass breaking 听见玻璃破碎。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "pocket",
+            "throat",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "dust got into my throat 灰尘进了喉咙。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "sang",
+            "pulled",
+            "bought"
+          ],
+          "answer_index": 2,
+          "explanation": "pulled me towards the door 把我拉向门口。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "singing",
+            "cooking",
+            "shopping",
+            "pouring"
+          ],
+          "answer_index": 3,
+          "explanation": "came pouring down 倾泻而下。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "still",
+            "rich",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 0,
+          "explanation": "became still 重归平静。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "grown",
+            "fallen",
+            "sold",
+            "sung"
+          ],
+          "answer_index": 1,
+          "explanation": "had fallen down 倒塌了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happy",
+            "proud",
+            "frightened",
+            "hungry"
+          ],
+          "answer_index": 2,
+          "explanation": "too frightened to move 吓得不敢动。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "rich",
+            "busy",
+            "late",
+            "alive"
+          ],
+          "answer_index": 3,
+          "explanation": "still alive 还活着。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Little Radio That Saves Lives",
+      "text": "During a big storm, the electricity often goes out, and the television and the internet stop (1)____. That is why a battery-powered weather (2)____ is one of the most useful things you can own. Through it you can hear the latest (3)____ about the storm. You will learn when it is time to (4)____ your home and move to higher ground. You will also hear (5)____ on how to stay safe inside your shelter. Because it runs on (6)____, the radio keeps working even when the power is (7)____. Always keep some (8)____ batteries beside it, so it will never go silent at the worst (9)____. A radio is cheap and small, but in an emergency it can be the one thing that keeps you (10)____ to the outside world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "working",
+            "singing",
+            "eating",
+            "sleeping"
+          ],
+          "answer_index": 0,
+          "explanation": "stop working 停止工作。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "garden",
+            "radio",
+            "market",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "a weather radio 气象收音机。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "songs",
+            "prices",
+            "news",
+            "meals"
+          ],
+          "answer_index": 2,
+          "explanation": "the latest news 最新消息。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "grow",
+            "sing",
+            "leave"
+          ],
+          "answer_index": 3,
+          "explanation": "leave your home 离开家。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "advice",
+            "noise",
+            "weather",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "hear advice 听到建议。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "water",
+            "batteries",
+            "wind",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "runs on batteries 靠电池工作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "rich",
+            "sweet",
+            "off",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "the power is off 停电。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sweet",
+            "loud",
+            "rich",
+            "spare"
+          ],
+          "answer_index": 3,
+          "explanation": "spare batteries 备用电池。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "moment",
+            "garden",
+            "market",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "at the worst moment 在最糟的时刻。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hungry",
+            "connected",
+            "bored",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "keep you connected 让你保持联系。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Making Your Home Safer",
+      "text": "You cannot stop an earthquake, but you can make your home much (1)____ before one comes. Walk through every room and look for tall objects that could (2)____ over and hurt someone. Heavy bookcases and cabinets should be fixed firmly to the (3)____. Store heavy or sharp things on (4)____ shelves, not high up where they might fall on your head. Keep dangerous items, such as glass and (5)____ liquids, in low, locked cupboards. Learn where the safe (6)____ in each room are, for example under a strong table. It is also wise to (7)____ a first-aid class, so that you can help if someone is (8)____. Finally, check that everyone in the family knows how to (9)____ off the gas. A few simple steps today can (10)____ lives tomorrow.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "richer",
+            "louder",
+            "safer",
+            "sweeter"
+          ],
+          "answer_index": 2,
+          "explanation": "much safer 安全得多。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sing",
+            "grow",
+            "sell",
+            "fall"
+          ],
+          "answer_index": 3,
+          "explanation": "fall over 倒下。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "wall",
+            "song",
+            "price",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "fixed to the wall 固定在墙上。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "louder",
+            "lower",
+            "sweeter",
+            "richer"
+          ],
+          "answer_index": 1,
+          "explanation": "lower shelves 较低的架子。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "happy",
+            "sweet",
+            "harmful",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "harmful liquids 有害液体。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "songs",
+            "prices",
+            "markets",
+            "spots"
+          ],
+          "answer_index": 3,
+          "explanation": "safe spots 安全地点。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "take",
+            "sell",
+            "grow",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "take a class 上一门课。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rich",
+            "hurt",
+            "glad",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "someone is hurt 有人受伤。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sing",
+            "grow",
+            "turn",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "turn off 关掉。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "sing",
+            "spill",
+            "save"
+          ],
+          "answer_index": 3,
+          "explanation": "save lives 拯救生命。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Rescued from the Flood",
+      "text": "The rain had fallen for three days when the river finally (1)____ its banks. Within an hour, the streets of the small town had turned into (2)____. The Li family climbed to the top (3)____ of their house and waited there. Mr Li used his phone, which still had (4)____ batteries, to call for help. Outside, the brown water kept (5)____, carrying away cars and furniture. The family felt afraid, but they tried hard to stay (6)____. At last they heard the sound of a (7)____ coming closer through the rain. A rescue team had come in a small one to (8)____ them. One by one, they were helped aboard and taken to (9)____ ground. That night, safe in a shelter, the children said they would never (10)____ the day the water came.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "broke",
+            "sold",
+            "sang",
+            "grew"
+          ],
+          "answer_index": 0,
+          "explanation": "broke its banks 决堤。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "gardens",
+            "rivers",
+            "markets",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "turned into rivers 变成了河流。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "price",
+            "floor",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "the top floor 顶层。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sweet",
+            "loud",
+            "rich",
+            "extra"
+          ],
+          "answer_index": 3,
+          "explanation": "extra batteries 额外的电池。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rising",
+            "singing",
+            "smiling",
+            "sleeping"
+          ],
+          "answer_index": 0,
+          "explanation": "kept rising 不断上涨。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "calm",
+            "proud",
+            "hungry"
+          ],
+          "answer_index": 1,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "song",
+            "price",
+            "boat",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "the sound of a boat 一条船的声音。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "sing",
+            "grow",
+            "save"
+          ],
+          "answer_index": 3,
+          "explanation": "come to save them 来救他们。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "higher",
+            "louder",
+            "sweeter",
+            "richer"
+          ],
+          "answer_index": 0,
+          "explanation": "higher ground 更高的地方。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "forget",
+            "sing",
+            "grow"
+          ],
+          "answer_index": 1,
+          "explanation": "never forget 永远不会忘记。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Why People Panic",
+      "text": "Experts say that the main (1)____ people panic during a disaster is that they do not know what to do. When the ground shakes or the water (2)____, a frightened mind often makes poor choices. The best way to fight this fear is to be (3)____ in advance. If you have already made a plan and (4)____ it a few times, your body will know how to act. Try to take a deep (5)____ and think before you move. Help the people around you to stay (6)____ too, because fear spreads quickly in a crowd. Never (7)____ towards a lift during an earthquake; always use the stairs. If you are driving, slow down and come to a gentle (8)____. Remember that most disasters (9)____ only a short time. Staying calm will not make the danger smaller, but it will help you make (10)____ choices.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "garden",
+            "reason",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the main reason 主要原因。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sings",
+            "grows",
+            "sells",
+            "rises"
+          ],
+          "answer_index": 3,
+          "explanation": "the water rises 水位上涨。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ready",
+            "rich",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 0,
+          "explanation": "be ready in advance 事先准备好。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "practised",
+            "sang",
+            "grew"
+          ],
+          "answer_index": 1,
+          "explanation": "practised it a few times 练过几次。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "garden",
+            "breath",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "take a deep breath 深吸一口气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "hungry",
+            "proud",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "run",
+            "sing",
+            "grow",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "never run towards a lift 切勿冲向电梯。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "song",
+            "stop",
+            "price",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "come to a gentle stop 缓缓停下。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "sing",
+            "last",
+            "grow"
+          ],
+          "answer_index": 2,
+          "explanation": "last only a short time 只持续很短时间。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "louder",
+            "sweeter",
+            "richer",
+            "better"
+          ],
+          "answer_index": 3,
+          "explanation": "make better choices 做出更好的选择。"
+        }
+      ]
+    }
+  ]
+}

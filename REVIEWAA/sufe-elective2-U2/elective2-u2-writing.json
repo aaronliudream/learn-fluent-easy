@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Write an argumentative letter about learning another foreign language(就再开一门外语写议论性书信)",
+  "title_en": "Is English the Only Foreign Language Worth Learning?",
+  "genre": "议论文 / 劝说信(argumentative letter with claim and counterclaim)",
+  "source": "上外版选择性必修二 Unit 2 Writing:写一封劝说信,用 claim 与 counterclaim 论证高中是否应开设英语之外的外语课。",
+  "prompt_cn": "假设你是陈凯,你校只教英语一门外语。你希望学校能再开设一门法语课。请用英语给校长写一封约100–120词的劝说信,内容包括:① 明确提出你的主张(claim):高中生应有机会学习英语以外的语言;② 先承认对方可能的反方观点(counterclaim),再加以反驳;③ 给出一两条具体理由(如能与更多人交流、打开新世界);④ 礼貌地提出请求。注意:用上主语从句/表语从句让说理更清楚。",
+  "prompt_en": "Suppose you are Chen Kai, and your school teaches only English as a foreign language. Write a letter (about 100–120 words) to your headmaster to persuade him to offer a French course. Include: 1) a clear claim that students should be able to learn languages other than English; 2) a likely counterclaim, which you then answer; 3) one or two concrete reasons; 4) a polite request. Try to use subject or predicative clauses to make your argument clear.",
+  "points": [
+    "明确主张(I strongly believe that students should …)",
+    "承认并反驳反方观点(It is true that … However, …)",
+    "给出具体理由(What a new language offers is …)",
+    "礼貌请求(I would be grateful if the school could …)"
+  ],
+  "word_count": "100–120 词",
+  "model_essay": "Dear Headmaster,\n\nI am writing to ask the school to offer a French course. I strongly believe that high school students should be able to learn a language other than English.\n\nIt is true that English is already used in business, science and travel around the world. However, this does not mean that one language is enough. What a new language really offers is a fresh way of seeing the world and a chance to reach millions more people. The truth is that every language we learn quietly changes how we think.\n\nMany of my classmates feel the same way. I would be grateful if the school could consider opening a French class.\n\nYours sincerely,\nChen Kai",
+  "model_translation": "尊敬的校长:\n\n我写信是想请学校开设一门法语课。我坚信高中生应当有机会学习英语之外的语言。\n\n诚然,英语在全球的商业、科学和旅行中已被广泛使用。然而,这并不意味着一门语言就足够了。一门新语言真正带来的,是看待世界的全新方式,以及接触数百万更多人的机会。事实是,我们所学的每一门语言都在悄悄改变我们的思维。\n\n我的许多同学也有同感。如果学校能考虑开设一个法语班,我将不胜感激。\n\n此致\n陈凯",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "要素齐全:明确主张 / 承认并反驳反方观点 / 具体理由 / 礼貌请求" },
+      { "dimension": "结构", "max": 4, "criteria": "claim–counterclaim 逻辑清晰、过渡自然、书信格式正确、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、主语/表语从句运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "主张 I strongly believe that students should …",
+      "反方+反驳 It is true that … However, this does not mean that …",
+      "理由 What a new language offers is …",
+      "请求 I would be grateful if the school could …"
+    ],
+    "key_expressions": [
+      "I strongly believe that students should be able to learn a language other than English.",
+      "It is true that English is widely used; however, one language is not enough.",
+      "What a new language really offers is a fresh way of seeing the world.",
+      "The truth is that every language we learn changes how we think."
+    ],
+    "useful_words": ["believe", "claim", "however", "language", "communicate", "culture", "opportunity", "offer", "request", "grateful"]
+  },
+  "high_sentences": [
+    "I strongly believe that high school students should be able to learn a language other than English.",
+    "It is true that English is widely used; however, this does not mean that one language is enough.",
+    "What a new language really offers is a fresh way of seeing the world.",
+    "The truth is that every language we learn quietly changes how we think."
+  ],
+  "error_pairs": [
+    { "wrong": "I believe that students should to learn French.", "correct": "I believe that students should learn French.", "note": "情态动词 should 后接动词原形,不加 to。" },
+    { "wrong": "The truth is what every language changes our thinking.", "correct": "The truth is that every language changes our thinking.", "note": "表语从句陈述事实、从句完整,用 that 不用 what。" },
+    { "wrong": "What a new language offers are a new way of thinking.", "correct": "What a new language offers is a new way of thinking.", "note": "What 引导的主语从句作主语视为单数,谓语用 is。" }
+  ],
+  "paragraph_template": "【劝说信结构】\n开头 说明目的 + 主张:I am writing to … I strongly believe that …\n中间 反方+反驳:It is true that … However, this does not mean that …\n中间 理由:What a new language offers is … The truth is that …\n结尾 请求:I would be grateful if the school could …"
+}

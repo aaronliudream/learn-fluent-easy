@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grammar_title": "时态(过去完成时·现在完成进行时·将来进行时)",
+  "source": "上外版选择性必修第一册 Unit 1 Grammar in Use:Tenses(past perfect, present perfect continuous, future continuous)。句子地道、语境唯一判定时态、答案唯一、零术语。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "过去完成时(had done:过去的过去)",
+      "overview": "表示在过去某一时间或动作之前已经完成的动作(过去的过去)。常与 before / by the time / when / already / by + 过去时间 连用:When I arrived, the class had begun."
+    },
+    {
+      "code": "u1.02",
+      "point": "现在完成进行时(have/has been doing:持续到现在)",
+      "overview": "表示从过去某时开始、一直持续到现在(可能还在继续)的动作,强调动作的持续。常与 for / since / all day / lately / recently / how long 连用:She has been studying for hours."
+    },
+    {
+      "code": "u1.03",
+      "point": "将来进行时(will be doing:将来正在进行)",
+      "overview": "表示将来某一时刻或时段正在进行的动作。常与 this time tomorrow / at + 将来时刻 / soon / when you grow up 连用:This time tomorrow I'll be flying to London."
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "By the time the visitors arrived, Curie ____ the long poem.",
+      "options": [
+        "had already recited",
+        "recites",
+        "has recited",
+        "will recite"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time + 过去动作之前已完成 → 过去完成时 had recited。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "When the teacher came in, the experiment ____, so we had to start again.",
+      "options": [
+        "fails",
+        "had already failed",
+        "is failing",
+        "will fail"
+      ],
+      "answer_index": 1,
+      "explanation": "过去某动作(came in)之前已发生 → had failed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Just nine days after he ____ his degree, the physicist sailed home.",
+      "options": [
+        "gains",
+        "has gained",
+        "had gained",
+        "is gaining"
+      ],
+      "answer_index": 2,
+      "explanation": "after 引导、动作早于过去的 sailed → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Before he taught himself to write, the boy ____ with reading for years.",
+      "options": [
+        "struggles",
+        "has struggled",
+        "will struggle",
+        "had struggled"
+      ],
+      "answer_index": 3,
+      "explanation": "before 过去动作之前的持续 → 过去完成时 had struggled。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She told us that she ____ those poems by heart long before.",
+      "options": [
+        "had learned",
+        "learns",
+        "has learned",
+        "is learning"
+      ],
+      "answer_index": 0,
+      "explanation": "主句过去 told,从句更早 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By 1937, Deng's father ____ him a deep love of science.",
+      "options": [
+        "gives",
+        "had given",
+        "has given",
+        "will give"
+      ],
+      "answer_index": 1,
+      "explanation": "by + 过去年份,之前已完成 → had given。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "When I got home, my mother ____ the books for my evening study.",
+      "options": [
+        "prepares",
+        "has prepared",
+        "had already prepared",
+        "is preparing"
+      ],
+      "answer_index": 2,
+      "explanation": "过去 got home 之前已完成 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mandela realised that the donkey ____ him off before his friends could laugh.",
+      "options": [
+        "throws",
+        "has thrown",
+        "will throw",
+        "had thrown"
+      ],
+      "answer_index": 3,
+      "explanation": "过去 realised 之前发生 → had thrown。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "After the war ____, Goodenough went to Chicago to study physics.",
+      "options": [
+        "had ended",
+        "ends",
+        "has ended",
+        "is ending"
+      ],
+      "answer_index": 0,
+      "explanation": "after 过去动作之前完成 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Darwin found that his brother ____ a small laboratory in the garden.",
+      "options": [
+        "builds",
+        "had built",
+        "has built",
+        "will build"
+      ],
+      "answer_index": 1,
+      "explanation": "过去 found,从句动作更早 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By the end of that summer, he ____ several books on chemistry.",
+      "options": [
+        "reads",
+        "has read",
+        "had read",
+        "is reading"
+      ],
+      "answer_index": 2,
+      "explanation": "by the end of + 过去时间 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She wanted to run away because she ____ never ____ in front of strangers before.",
+      "options": [
+        "does; recite",
+        "has; recited",
+        "will; recite",
+        "had; recited"
+      ],
+      "answer_index": 3,
+      "explanation": "过去 wanted 之前的'从未……过' → 过去完成时 had recited。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The class was over; clearly the bell ____ a few minutes earlier.",
+      "options": [
+        "had rung",
+        "rings",
+        "has rung",
+        "is ringing"
+      ],
+      "answer_index": 0,
+      "explanation": "过去 was over 之前更早发生 → had rung。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Until he climbed the hill, he ____ how much farther one could see.",
+      "options": [
+        "does not realise",
+        "had not realised",
+        "has not realised",
+        "will not realise"
+      ],
+      "answer_index": 1,
+      "explanation": "until + 过去动作之前一直未……→ 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He said the wise man ____ himself every day before his conduct grew faultless.",
+      "options": [
+        "examines",
+        "has examined",
+        "had examined",
+        "is examining"
+      ],
+      "answer_index": 2,
+      "explanation": "过去 said,更早的反省 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By the time she finished school, she ____ a strong taste for poetry.",
+      "options": [
+        "develops",
+        "has developed",
+        "will develop",
+        "had developed"
+      ],
+      "answer_index": 3,
+      "explanation": "by the time + 过去 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "When the prize was announced, Goodenough ____ already ____ ninety-seven.",
+      "options": [
+        "had; turned",
+        "does; turn",
+        "has; turned",
+        "will; turn"
+      ],
+      "answer_index": 0,
+      "explanation": "过去 announced 之前已发生 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He admitted that he ____ that lesson from the donkey years before.",
+      "options": [
+        "learns",
+        "had learned",
+        "has learned",
+        "is learning"
+      ],
+      "answer_index": 1,
+      "explanation": "过去 admitted,更早的 learned → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Before the steamship reached China, the young man ____ how to serve his country.",
+      "options": [
+        "decides",
+        "has decided",
+        "had decided",
+        "will decide"
+      ],
+      "answer_index": 2,
+      "explanation": "before 过去动作之前 → 过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "No sooner ____ he ____ his Ph.D. than he joined a research lab.",
+      "options": [
+        "does; earn",
+        "has; earned",
+        "will; earn",
+        "had; earned"
+      ],
+      "answer_index": 3,
+      "explanation": "no sooner ... than 句型用过去完成时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Our motherland ____ from the attack for so long, the father said sadly.",
+      "options": [
+        "has been suffering",
+        "suffered",
+        "had suffered",
+        "will suffer"
+      ],
+      "answer_index": 0,
+      "explanation": "for so long、持续到现在并强调持续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I ____ on my English recently, so I feel much more confident now.",
+      "options": [
+        "worked",
+        "have been working",
+        "had worked",
+        "will work"
+      ],
+      "answer_index": 1,
+      "explanation": "recently + 持续到现在 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He ____ in the Go Green Club since last October.",
+      "options": [
+        "worked",
+        "had worked",
+        "has been working",
+        "is working"
+      ],
+      "answer_index": 2,
+      "explanation": "since + 过去时间点、持续至今 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She ____ long poems by heart all afternoon and is still going.",
+      "options": [
+        "learned",
+        "had learned",
+        "will learn",
+        "has been learning"
+      ],
+      "answer_index": 3,
+      "explanation": "all afternoon + 仍在继续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I ____ to English radio every day for months to get used to the speed.",
+      "options": [
+        "have been listening",
+        "listened",
+        "had listened",
+        "will listen"
+      ],
+      "answer_index": 0,
+      "explanation": "for months + 持续动作 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "How long ____ you ____ reading exercises under your teacher's guidance?",
+      "options": [
+        "did; do",
+        "have; been doing",
+        "had; done",
+        "will; do"
+      ],
+      "answer_index": 1,
+      "explanation": "how long + 持续到现在 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Goodenough ____ new types of batteries since he was a young man.",
+      "options": [
+        "researched",
+        "had researched",
+        "has been researching",
+        "will research"
+      ],
+      "answer_index": 2,
+      "explanation": "since + 从句、持续至今 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I ____ from you lately—how has your study been going?",
+      "options": [
+        "did not hear",
+        "had not heard",
+        "will not hear",
+        "have not been hearing"
+      ],
+      "answer_index": 3,
+      "explanation": "lately + 强调一段时间 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "My sense of responsibility ____ steadily ever since I joined the club.",
+      "options": [
+        "has been growing",
+        "grew",
+        "had grown",
+        "will grow"
+      ],
+      "answer_index": 0,
+      "explanation": "ever since + 持续发展 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "They ____ wild honey in the fields all day, and their baskets are nearly full.",
+      "options": [
+        "gathered",
+        "have been gathering",
+        "had gathered",
+        "will gather"
+      ],
+      "answer_index": 1,
+      "explanation": "all day + 仍在进行 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He ____ at chemistry hard for weeks, so his hands are stained with dye.",
+      "options": [
+        "worked",
+        "had worked",
+        "has been working",
+        "will work"
+      ],
+      "answer_index": 2,
+      "explanation": "for weeks + 现在仍有结果 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We ____ on this design project since early spring without a break.",
+      "options": [
+        "worked",
+        "had worked",
+        "will work",
+        "have been working"
+      ],
+      "answer_index": 3,
+      "explanation": "since early spring + 持续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Why are your eyes so red? — I ____ for the test since this morning.",
+      "options": [
+        "have been studying",
+        "studied",
+        "had studied",
+        "will study"
+      ],
+      "answer_index": 0,
+      "explanation": "since this morning + 持续到现在(眼睛红) → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The old pianist ____ with his teacher for years and still practises weekly.",
+      "options": [
+        "practised",
+        "has been practising",
+        "had practised",
+        "will practise"
+      ],
+      "answer_index": 1,
+      "explanation": "for years + 仍在继续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I ____ a lot of reading exercises lately, and my marks are improving.",
+      "options": [
+        "did",
+        "had done",
+        "have been doing",
+        "will do"
+      ],
+      "answer_index": 2,
+      "explanation": "lately + 持续到现在并有结果 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She ____ about lifelong learning ever since she read that book.",
+      "options": [
+        "thought",
+        "had thought",
+        "will think",
+        "has been thinking"
+      ],
+      "answer_index": 3,
+      "explanation": "ever since + 持续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "They ____ to reduce food waste in the canteen for the whole term.",
+      "options": [
+        "have been trying",
+        "tried",
+        "had tried",
+        "will try"
+      ],
+      "answer_index": 0,
+      "explanation": "for the whole term + 持续至今 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "How long ____ he ____ in this laboratory? — Since he was thirty.",
+      "options": [
+        "did; research",
+        "has; been researching",
+        "had; researched",
+        "will; research"
+      ],
+      "answer_index": 1,
+      "explanation": "how long ... since → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I ____ my own voice and comparing it with the host's for a month now.",
+      "options": [
+        "recorded",
+        "had recorded",
+        "have been recording",
+        "will record"
+      ],
+      "answer_index": 2,
+      "explanation": "for a month now + 持续 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "My twin sister ____ for the chemistry exam since breakfast, and looks tired.",
+      "options": [
+        "prepared",
+        "had prepared",
+        "will prepare",
+        "has been preparing"
+      ],
+      "answer_index": 3,
+      "explanation": "since breakfast + 持续到现在 → 现在完成进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I ____ for my country soon, the young scientist said on the ship.",
+      "options": [
+        "will be working",
+        "worked",
+        "have worked",
+        "had worked"
+      ],
+      "answer_index": 0,
+      "explanation": "soon + 将来正在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "For the country's future, you ____ science when you grow up.",
+      "options": [
+        "studied",
+        "will be studying",
+        "have studied",
+        "had studied"
+      ],
+      "answer_index": 1,
+      "explanation": "when you grow up + 将来正在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This time next week she ____ an important English test.",
+      "options": [
+        "takes",
+        "has taken",
+        "will be taking",
+        "took"
+      ],
+      "answer_index": 2,
+      "explanation": "this time next week + 将来某刻在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Next Friday we ____ kindergarten kids how to reuse glass bottles.",
+      "options": [
+        "showed",
+        "have shown",
+        "had shown",
+        "will be showing"
+      ],
+      "answer_index": 3,
+      "explanation": "next Friday + 将来某时进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This time tomorrow my sister ____ an experiment in the lab.",
+      "options": [
+        "will be doing",
+        "does",
+        "has done",
+        "did"
+      ],
+      "answer_index": 0,
+      "explanation": "this time tomorrow + 将来正在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Don't call me at nine; I ____ a long passage for the speech contest.",
+      "options": [
+        "recite",
+        "will be reciting",
+        "have recited",
+        "recited"
+      ],
+      "answer_index": 1,
+      "explanation": "at nine(将来时刻)+ 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At this moment next month, he ____ batteries in his Oxford laboratory.",
+      "options": [
+        "researches",
+        "has researched",
+        "will be researching",
+        "researched"
+      ],
+      "answer_index": 2,
+      "explanation": "at this moment next month + 将来在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By eight tomorrow evening, the students ____ for their group project.",
+      "options": [
+        "work",
+        "have worked",
+        "worked",
+        "will be working"
+      ],
+      "answer_index": 3,
+      "explanation": "by eight tomorrow evening(将来时段)+ 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When you arrive at the club, we ____ ways to reduce food waste.",
+      "options": [
+        "will be discussing",
+        "discuss",
+        "have discussed",
+        "discussed"
+      ],
+      "answer_index": 0,
+      "explanation": "将来 when 时间状语 + 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This time tomorrow afternoon, Jack ____ the piano with his teacher.",
+      "options": [
+        "practises",
+        "will be practising",
+        "has practised",
+        "practised"
+      ],
+      "answer_index": 1,
+      "explanation": "this time tomorrow afternoon + 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Don't worry—at ten o'clock the host ____ the same programme as usual.",
+      "options": [
+        "broadcasts",
+        "has broadcast",
+        "will be broadcasting",
+        "broadcast"
+      ],
+      "answer_index": 2,
+      "explanation": "at ten o'clock(将来)+ 例行进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This weekend the volunteers ____ younger children with their reading.",
+      "options": [
+        "help",
+        "have helped",
+        "helped",
+        "will be helping"
+      ],
+      "answer_index": 3,
+      "explanation": "this weekend + 将来在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By next term, I hope I ____ my own voice every day to improve.",
+      "options": [
+        "will be recording",
+        "record",
+        "have recorded",
+        "recorded"
+      ],
+      "answer_index": 0,
+      "explanation": "by next term + 将来在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At noon tomorrow the team ____ their plan for the learning festival.",
+      "options": [
+        "presents",
+        "will be presenting",
+        "has presented",
+        "presented"
+      ],
+      "answer_index": 1,
+      "explanation": "at noon tomorrow + 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This time next year, many of us ____ at different universities.",
+      "options": [
+        "study",
+        "have studied",
+        "will be studying",
+        "studied"
+      ],
+      "answer_index": 2,
+      "explanation": "this time next year + 将来某刻在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When you call me tonight, I ____ for the listening test.",
+      "options": [
+        "prepare",
+        "have prepared",
+        "prepared",
+        "will be preparing"
+      ],
+      "answer_index": 3,
+      "explanation": "将来 tonight + when 时间状语,在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At this time on Saturday, the children ____ lanterns and paper cranes.",
+      "options": [
+        "will be making",
+        "make",
+        "have made",
+        "made"
+      ],
+      "answer_index": 0,
+      "explanation": "at this time on Saturday + 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Soon he ____ his birthday party, so he is busy preparing now.",
+      "options": [
+        "celebrates",
+        "will be celebrating",
+        "has celebrated",
+        "celebrated"
+      ],
+      "answer_index": 1,
+      "explanation": "soon + 将来在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This time tomorrow, the interviewer ____ students about learning by doing.",
+      "options": [
+        "asks",
+        "has asked",
+        "will be asking",
+        "asked"
+      ],
+      "answer_index": 2,
+      "explanation": "this time tomorrow + 在进行 → 将来进行时。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At three o'clock next Monday, we ____ to old people at the nursing home.",
+      "options": [
+        "read",
+        "have read",
+        "read aloud",
+        "will be reading"
+      ],
+      "answer_index": 3,
+      "explanation": "at three o'clock next Monday + 将来在进行 → 将来进行时。"
+    }
+  ]
+}

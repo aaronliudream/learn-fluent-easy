@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Write a Summary of a General-Specific Speech(为一篇“总—分”演讲写摘要)",
+  "title_en": "A Summary of \"How to Keep Your Audience Engaged\"",
+  "genre": "摘要写作 / summary(grasp the general statement + main details of a general-specific text)",
+  "source": "上外版选择性必修四 Unit 1 Writing:Writing a summary of a general-specific essay。围绕“如何让听众保持专注”的演讲,抓住总述句和几条要点,用自己的话写一篇不超过60词的摘要。",
+  "prompt_cn": "一位演讲者在你校做了题为《如何在演讲时让听众保持专注》的报告。你的朋友很感兴趣却未能到场,请你用英语写一篇不超过60词的摘要分享给他/她。要求:① 用一句话概括演讲的总观点;② 用自己的话提炼出三到四条具体建议;③ 不照抄原文长句,代词指代清楚、句句围绕中心。",
+  "prompt_en": "A speaker gave a talk at your school called \"How to Keep Your Audience Engaged While Delivering a Speech.\" A friend was interested but could not attend. Write a summary in no more than 60 words including: 1) one sentence stating the speaker's general point; 2) three or four key pieces of advice in your own words; 3) no long copying from the original, with clear pronoun reference.",
+  "points": [
+    "总述句概括(The speaker explained how to keep listeners engaged …)",
+    "提炼要点1-2(speak with passion; move on stage)",
+    "提炼要点3-4(show some personality; offer real value, not a sales pitch)",
+    "用自己的话改写、不超60词、句句围绕中心"
+  ],
+  "word_count": "60 词以内",
+  "model_essay": "In her talk, the speaker explained how to keep an audience engaged during a speech. She advised speakers to talk with real passion, to move around the stage to add energy, and to let a little personality show through stories or humour. Above all, she said, offer the listeners something truly valuable instead of sounding like a salesperson.",
+  "model_translation": "在演讲中,这位讲者讲解了如何在演讲时让听众保持专注。她建议演讲者要满怀激情地讲、在台上走动以增添活力,并通过故事或幽默展现一点个性。她说,最重要的是为听众提供真正有价值的东西,而不要听起来像在推销。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "总观点 + 三到四条要点齐全、准确反映原文" },
+      { "dimension": "结构", "max": 4, "criteria": "先总后分、句句围绕中心、代词指代清楚、不超60词" },
+      { "dimension": "语言", "max": 5, "criteria": "用自己的话转述、不照抄长句、句型词汇准确多样" }
+    ],
+    "required_structure": [
+      "总述 The speaker explained how to …",
+      "要点1-2 She advised speakers to … and to …",
+      "要点3 She also suggested … ",
+      "要点4 Above all, … instead of …"
+    ],
+    "key_expressions": [
+      "The speaker explained how to keep an audience engaged.",
+      "She advised speakers to talk with real passion.",
+      "Move around the stage to add energy.",
+      "Offer the listeners something truly valuable instead of sounding like a salesperson."
+    ],
+    "useful_words": ["summary", "engage", "audience", "passion", "energy", "personality", "humour", "valuable", "advise", "instead of"]
+  },
+  "high_sentences": [
+    "The speaker explained how to keep an audience engaged during a speech.",
+    "She advised speakers to talk with real passion and to move around the stage.",
+    "Letting a little personality show makes listeners warm to you.",
+    "Offer the audience something truly valuable instead of sounding like a salesperson."
+  ],
+  "error_pairs": [
+    { "wrong": "The speaker explained how to keep engaged the audience.", "correct": "The speaker explained how to keep the audience engaged.", "note": "keep + 宾语 + 形容词,宾语放在 keep 之后。" },
+    { "wrong": "She advised speakers talk with passion.", "correct": "She advised speakers to talk with passion.", "note": "advise sb to do sth,不定式带 to。" },
+    { "wrong": "Offer something valuable instead of to sound like a salesperson.", "correct": "Offer something valuable instead of sounding like a salesperson.", "note": "instead of 后接动名词 -ing。" }
+  ],
+  "paragraph_template": "【总—分演讲摘要结构】\n第1句 总述:The speaker explained how to …\n第2-3句 要点:She advised speakers to … ; she also suggested …\n第4句 升华:Above all, … instead of …\n(全文≤60词,用自己的话,勿照抄长句)"
+}

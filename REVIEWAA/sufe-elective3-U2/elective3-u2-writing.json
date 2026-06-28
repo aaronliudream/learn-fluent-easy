@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Write a Thank-You Letter to a Friend(给朋友写一封感谢信)",
+  "title_en": "A Thank-You Letter to a Friend",
+  "genre": "书信 / 感谢信(personal thank-you letter:express gratitude + give reasons)",
+  "source": "上外版选择性必修三 Unit 2 Writing:为友谊日给一位朋友写一封感谢信(问候 + 表达感激 + 说明感激的理由 + 得体的结尾)。",
+  "prompt_cn": "国际友谊日就要到了。假设你叫 Li Hua,请用英语给你的好朋友 Anna 写一封约 110 词的感谢信,内容包括:① 友好的问候;② 表达你对她的感激之情;③ 具体说明一两件让你难忘、令你感激的事;④ 得体的结尾与署名。注意:行文连贯、代词指代清楚、可恰当使用复杂不定式(如 to have helped me / I am glad to have met you)。",
+  "prompt_en": "International Friendship Day is coming. Suppose you are Li Hua. Write a thank-you letter (about 110 words) to your good friend Anna, including: 1) a friendly greeting; 2) your gratitude towards her; 3) one or two specific things she did that touched you and that you are grateful for; 4) a suitable closing and signature.",
+  "points": [
+    "友好问候(Dear Anna, / I hope this letter finds you well.)",
+    "表达感激(I am writing to thank you for … / I am truly grateful to you.)",
+    "具体事例(I will never forget the day you … / You always helped me when …)",
+    "得体结尾与署名(Best wishes, / Yours, Li Hua)"
+  ],
+  "word_count": "110 词左右",
+  "model_essay": "Dear Anna,\n\nInternational Friendship Day is coming soon, and I am writing to say a heartfelt thank-you. Since the day I moved to this school, you have been the kindest friend I could ever hope to have. I am so glad to have met you on that very first morning.\n\nI will never forget the day you helped me carry my heavy bags home in the rain, or the many times you cheered me up before exams. You always seemed to be standing right beside me whenever I felt low. Such small acts of kindness mean more than you know.\n\nThank you for everything. I truly cherish our friendship.\n\nBest wishes,\nLi Hua",
+  "model_translation": "亲爱的安娜:\n\n国际友谊日就要到了,我写信向你致以诚挚的谢意。自从我转到这所学校,你就是我所能企盼的最善良的朋友。很高兴在那个第一天的清晨就遇见了你。\n\n我永远不会忘记你在雨中帮我把沉重的包提回家的那一天,也忘不了考试前你无数次为我打气。每当我情绪低落时,你似乎总是站在我身边。这些小小的善举,意义远超你的想象。\n\n谢谢你所做的一切。我真心珍惜我们的友谊。\n\n祝好,\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:问候 / 表达感激 / 具体事例 / 得体结尾" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式正确、围绕'感谢'展开、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、复杂不定式等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "问候 Dear Anna, …",
+      "表达感激 I am writing to say a heartfelt thank-you / I am glad to have met you.",
+      "具体事例 I will never forget the day you … / You always seemed to be standing beside me.",
+      "结尾 Thank you for everything. Best wishes, Li Hua"
+    ],
+    "key_expressions": [
+      "I am writing to say a heartfelt thank-you.",
+      "I am so glad to have met you on that very first morning.",
+      "I will never forget the day you helped me carry my heavy bags home.",
+      "I truly cherish our friendship."
+    ],
+    "useful_words": ["friendship", "grateful", "gratitude", "cherish", "kindness", "gesture", "helped", "cheer up", "glad", "Best wishes"]
+  },
+  "high_sentences": [
+    "I am so glad to have met you on that very first morning.",
+    "You always seemed to be standing right beside me whenever I felt low.",
+    "I will never forget the day you helped me carry my heavy bags home in the rain.",
+    "Such small acts of kindness mean more than you know."
+  ],
+  "error_pairs": [
+    { "wrong": "I am glad to meet you last year.", "correct": "I am glad to have met you last year.", "note": "感激的是过去已完成的相遇,用完成式不定式 to have met。" },
+    { "wrong": "You seemed to stand beside me at that moment.", "correct": "You seemed to be standing beside me at that moment.", "note": "当时正在进行的动作,用进行式不定式 to be standing。" },
+    { "wrong": "Thank you for help me so much.", "correct": "Thank you for helping me so much.", "note": "介词 for 后用动名词 helping。" }
+  ],
+  "paragraph_template": "【感谢信结构】\n问候:Dear Anna,\n第1段 表达感激:I am writing to say thank-you. I am glad to have met you.\n第2段 具体事例:I will never forget the day you … You always seemed to be …\n结尾:Thank you for everything. Best wishes, Li Hua"
+}

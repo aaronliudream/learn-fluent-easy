@@ -1,0 +1,322 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Cherishing Friendship",
+  "source": "上外版选择性必修三 Unit 2 同主题阅读(Personal Touch 改写/The Last Leaf 改写/友谊与健康/国际友谊日/什么是真朋友/雪中送炭)。词限本单元/初高中常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Small Gesture",
+      "topic_cn": "记叙·一个小举动改变一生",
+      "body": "On a Friday afternoon, a sad freshman was carrying all his books home from his new school. A bunch of older kids ran towards him, knocked the books out of his arms and tripped him, so that he landed in the dirt. His glasses went flying. While he was crawling around looking for them, another boy stopped, handed him the glasses and helped him pick up the heavy pile. They found they lived near each other and hung out all that weekend. Over the next four years they became best friends. On graduation day, the freshman, now a popular student named Kyle, was chosen to give the speech. To everyone's surprise, he told the story of that first afternoon. He had once planned to drop out because of loneliness, but one small act of kindness had changed his mind. With one small gesture, he said, you can truly change a person's life.",
+      "vocab_notes": [
+        {
+          "word": "freshman",
+          "cn": "新生"
+        },
+        {
+          "word": "gesture",
+          "cn": "举动"
+        },
+        {
+          "word": "drop out",
+          "cn": "退学"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened to the freshman on that Friday afternoon?",
+          "options": [
+            "A group of older students knocked his books down and tripped him.",
+            "He won a prize in a school football match.",
+            "He gave a speech in front of the whole school.",
+            "He moved to a brand-new town with his family."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'knocked the books out of his arms and tripped him' 的转述,其余在文中没有发生。"
+        },
+        {
+          "stem": "How did the two boys end up becoming friends?",
+          "options": [
+            "They were placed in the same sports team by a teacher.",
+            "They realised they lived nearby and spent the weekend together.",
+            "Their parents had been close friends for years.",
+            "They met again at the graduation ceremony."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'they lived near each other and hung out all that weekend' 的概括。"
+        },
+        {
+          "stem": "What surprising thing did Kyle share in his speech?",
+          "options": [
+            "That he had once meant to leave school, but a kind act stopped him.",
+            "That he had secretly disliked his best friend.",
+            "That he wanted to study abroad after graduation.",
+            "That he had written the speech in a single night."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'He had once planned to drop out… one small act of kindness had changed his mind' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Last Leaf",
+      "topic_cn": "记叙·欧·亨利《最后一片叶子》改写",
+      "body": "Sue and Johnsy were two young painters who shared a small flat in the city. One cold winter, Johnsy fell ill with pneumonia and lay weakly in her bed. Losing all hope, she decided that she would die when the last ivy leaf fell from the old tree outside her window. No matter what Sue said, Johnsy kept counting the falling leaves. Downstairs lived Behrman, an old painter who had never finished a great work. When Sue told him about Johnsy's strange idea, he grew angry. That stormy night, after heavy rain and wild wind, one single leaf still held on to the wall. Day after day it refused to fall, and slowly Johnsy felt ashamed of wanting to die. She began to eat and soon started to recover. Later Sue learned the truth: Behrman had gone out and painted that last leaf on the wall during the storm. He caught pneumonia in the freezing rain and died, but his small masterpiece had saved his friend's life.",
+      "vocab_notes": [
+        {
+          "word": "pneumonia",
+          "cn": "肺炎"
+        },
+        {
+          "word": "ivy",
+          "cn": "常春藤"
+        },
+        {
+          "word": "masterpiece",
+          "cn": "杰作"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Johnsy believe she was going to die?",
+          "options": [
+            "The doctor had told her there was no chance left.",
+            "She thought her life would end once the final leaf dropped.",
+            "She had quarrelled badly with her friend Sue.",
+            "She was too poor to buy any medicine."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'she would die when the last ivy leaf fell' 的转述。"
+        },
+        {
+          "stem": "What made Johnsy change her mind and want to live?",
+          "options": [
+            "Sue promised to take her on a long holiday.",
+            "The doctor gave her a brand-new medicine.",
+            "The leaf that never fell made her ashamed of giving up.",
+            "Her family came to visit her every day."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'it refused to fall, and slowly Johnsy felt ashamed of wanting to die' 的概括。"
+        },
+        {
+          "stem": "What was the truth about the last leaf?",
+          "options": [
+            "It was the only real leaf strong enough to survive.",
+            "Sue had tied it to the branch with a thread.",
+            "Johnsy had imagined it in her illness.",
+            "Old Behrman had secretly painted the leaf there one stormy night."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'Behrman had gone out and painted that last leaf on the wall' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Friends Are Good for You",
+      "topic_cn": "说明·友谊有益身心健康",
+      "body": "Most people know that good friends make life happier, but few realise that friendship is also good for the body. A friend is someone you trust and with whom you share a deep level of understanding. Recent studies suggest that having close friends can have a powerful effect on your physical health. In fact, a lack of close friendship may be as harmful as smoking or drinking too much. Along with regular exercise, keeping strong friendships can even add several years to a person's life. Friends also reduce our stress and cheer us up when we are feeling low. However, keeping old friendships alive often takes more time and effort than making new ones. You need to be there for your friends whenever they need you. If you always do this, the friendship can last for a long time, even when you are unable to meet very often.",
+      "vocab_notes": [
+        {
+          "word": "stress",
+          "cn": "压力"
+        },
+        {
+          "word": "effort",
+          "cn": "努力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What surprising point does the passage make about friendship?",
+          "options": [
+            "It can be good for your physical health, not just your mood.",
+            "It always costs a lot of money to keep.",
+            "It is only useful when you are young.",
+            "It matters less than regular exercise."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'friendship is also good for the body… powerful effect on your physical health' 的转述。"
+        },
+        {
+          "stem": "How harmful can a lack of close friends be, according to the text?",
+          "options": [
+            "It has no real effect on health.",
+            "It can be as harmful to the body as heavy smoking.",
+            "It only makes people feel a little bored.",
+            "It can be fixed by sleeping more."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'as harmful as smoking or drinking too much' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about keeping old friendships?",
+          "options": [
+            "They look after themselves with no effort.",
+            "They are easier to keep than to start.",
+            "They need time and effort, and being there when friends need you.",
+            "They should end once friends move away."
+          ],
+          "answer_index": 2,
+          "explanation": "后段 'takes more time and effort… be there for your friends whenever they need you' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "International Friendship Day",
+      "topic_cn": "说明·国际友谊日的由来",
+      "body": "Friendship Day is a special time set aside to celebrate the people we care about. The idea was first created by the greeting-card industry back in the 1920s, when companies hoped that people would send cards to their friends. The day slowly grew popular in many parts of the world. In 2011, the United Nations declared the thirtieth of July as the official International Friendship Day. Its aim is to encourage governments, schools and groups to hold events that build understanding and respect between people of different backgrounds. Interestingly, the date is not the same everywhere; many countries still celebrate it on other days of the year. On this day, people send warm messages, give small gifts, or simply spend time together. Whatever the date may be, the meaning stays the same: to remind us how much our friends are needed and loved.",
+      "vocab_notes": [
+        {
+          "word": "declare",
+          "cn": "宣布"
+        },
+        {
+          "word": "background",
+          "cn": "背景"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who first came up with the idea of Friendship Day?",
+          "options": [
+            "The United Nations in 2011.",
+            "A group of school teachers.",
+            "Famous writers of the past.",
+            "Greeting-card companies in the 1920s."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'first created by the greeting-card industry back in the 1920s' 的转述。"
+        },
+        {
+          "stem": "What is the main aim of International Friendship Day?",
+          "options": [
+            "To build understanding and respect among different people.",
+            "To help card companies sell more products.",
+            "To make everyone celebrate on the very same day.",
+            "To replace all other national holidays."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'build understanding and respect between people of different backgrounds' 的转述。"
+        },
+        {
+          "stem": "What does the text say about the date of the celebration?",
+          "options": [
+            "Every country celebrates on the thirtieth of July.",
+            "Different countries may celebrate it on different days.",
+            "It changes from year to year in each country.",
+            "No country celebrates it any more."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the date is not the same everywhere… on other days of the year' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Makes a True Friend",
+      "topic_cn": "议论·真朋友的价值",
+      "body": "People have always tried to describe what makes a friend truly special. One famous saying tells us that a real friend is the one who walks in just as the rest of the world walks out. Another reminds us that a friend in need is a friend indeed, which means that hard times show us who our true friends really are. Good friends do much more than share our happy moments. They help us find the important things we have lost, such as our smile, our hope and our courage. A true friend is also like a clear mirror, showing us honestly who we really are. None of these old ideas is about money or expensive gifts. They all point to the same simple truth: real friendship is shown through kindness, honesty and standing by someone when life gets hard.",
+      "vocab_notes": [
+        {
+          "word": "indeed",
+          "cn": "确实"
+        },
+        {
+          "word": "honesty",
+          "cn": "诚实"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the saying 'a friend in need is a friend indeed' mean here?",
+          "options": [
+            "Friends should always need each other.",
+            "You should only help rich friends.",
+            "Hard times reveal who your true friends are.",
+            "A real friend never asks for help."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'hard times show us who our true friends really are' 的转述。"
+        },
+        {
+          "stem": "Besides sharing happy moments, what do good friends do?",
+          "options": [
+            "They give each other costly presents.",
+            "They keep our secrets from everyone.",
+            "They compete to be the most popular.",
+            "They help us find lost things like our hope and courage."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'help us find the important things we have lost, such as our smile, our hope and our courage' 的转述。"
+        },
+        {
+          "stem": "What common truth do all these sayings point to?",
+          "options": [
+            "Real friendship shows in kindness, honesty and loyalty.",
+            "True friendship depends on wealth.",
+            "Friends should look exactly alike.",
+            "Old sayings are no longer useful today."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'real friendship is shown through kindness, honesty and standing by someone' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Friend in Need",
+      "topic_cn": "记叙·雪中送炭的友谊",
+      "body": "When Lily moved to a new town, she was shy and ate lunch alone every day. A girl named Mei noticed her sitting by herself and decided to do something about it. Instead of just feeling sorry for her, Mei sat down beside her and started a friendly chat. At first Lily said very little, but Mei kept coming back, day after day. She shared her snacks, lent Lily her notes and slowly introduced her to other classmates. Before long, Lily began to smile again and joined in their games at break. Months later, when Mei was ill and missed school for a whole week, it was Lily who brought her the homework and cheered her up. Neither girl had done anything grand, yet their small acts of care had grown into a deep friendship. Sometimes, helping a lonely person is as easy as choosing not to look away.",
+      "vocab_notes": [
+        {
+          "word": "shy",
+          "cn": "害羞的"
+        },
+        {
+          "word": "lend",
+          "cn": "借出"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Mei do when she noticed Lily eating alone?",
+          "options": [
+            "She told a teacher to move Lily's seat.",
+            "She sat beside Lily and began a friendly chat.",
+            "She quietly felt sorry but said nothing.",
+            "She asked Lily to leave the lunchroom."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Mei sat down beside her and started a friendly chat' 的转述。"
+        },
+        {
+          "stem": "How did Lily repay Mei's kindness later on?",
+          "options": [
+            "She bought Mei an expensive present.",
+            "She introduced Mei to a new school.",
+            "Lily took her schoolwork to her and lifted her spirits while she was ill.",
+            "She wrote a story about their town."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'it was Lily who brought her the homework and cheered her up' 的转述。"
+        },
+        {
+          "stem": "What lesson does the last sentence suggest?",
+          "options": [
+            "Only big actions can build friendship.",
+            "Lonely people prefer to be left alone.",
+            "New towns are always unfriendly places.",
+            "Helping a lonely person can be as simple as not looking away."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'helping a lonely person is as easy as choosing not to look away' 的转述。"
+        }
+      ]
+    }
+  ]
+}

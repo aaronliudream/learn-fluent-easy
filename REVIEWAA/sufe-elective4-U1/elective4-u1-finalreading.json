@@ -1,0 +1,43 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(有效交流主题,独立短文,不在阅读关出现)。短文3句+3题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "Before his first online interview, Daniel arranged his camera so that the light fell on his face rather than behind him. He looked straight into the lens, spoke a little more slowly than usual, and paused now and then to let his answers settle. By the end, the manager said he had seemed remarkably calm and clear, even through a small screen.",
+    "questions": [
+      {
+        "q": "Why did Daniel make the light fall on his face?",
+        "options": [
+          "To avoid appearing as a dark shape on screen",
+          "To make the room feel warmer",
+          "To save electricity during the call",
+          "To hide his nervous expression"
+        ],
+        "answer": "A",
+        "explanation": "把光打在脸上是为了不显得像屏幕上的暗影,选项是对原文意图的转述。"
+      },
+      {
+        "q": "What did Daniel do while answering questions?",
+        "options": [
+          "He shouted to be heard clearly",
+          "He paused at times so his words could sink in",
+          "He read every answer from a script",
+          "He looked away from the camera"
+        ],
+        "answer": "B",
+        "explanation": "他不时停顿,让回答被听者消化吸收。"
+      },
+      {
+        "q": "How did the manager describe Daniel at the end?",
+        "options": [
+          "Confused and unprepared",
+          "Loud but unclear",
+          "Calm and easy to follow",
+          "Bored and distant"
+        ],
+        "answer": "C",
+        "explanation": "经理说他显得十分镇定清晰,'calm and clear' 的转述。"
+      }
+    ]
+  }
+}

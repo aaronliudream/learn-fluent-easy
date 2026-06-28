@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(历史主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,覆盖不同位置。",
+  "finalReading": {
+    "passage": "The terracotta dancers and musicians once travelled along the Silk Road, bringing music and dance from Central Asia into China. People in ancient cities crowded the streets to watch these colourful performances. Even today, old paintings and pottery show us how popular such shows once were.",
+    "questions": [
+      {
+        "q": "What did the terracotta dancers and musicians bring into China?",
+        "options": [
+          "Performing arts from the lands to China’s west.",
+          "New kinds of food and drink.",
+          "Heavy goods such as iron and salt.",
+          "Books written in classical Greek."
+        ],
+        "answer": "A",
+        "explanation": "原文 “bringing music and dance from Central Asia into China” 的转述;其余原文未提。"
+      },
+      {
+        "q": "How do we know these shows were popular long ago?",
+        "options": [
+          "Old paintings and pottery still show them.",
+          "People still perform them in schools.",
+          "The dancers wrote down their stories.",
+          "Modern films copy them exactly."
+        ],
+        "answer": "B",
+        "explanation": "末句 “old paintings and pottery show us how popular such shows once were” 的转述(覆盖短文后半)。"
+      }
+    ]
+  }
+}

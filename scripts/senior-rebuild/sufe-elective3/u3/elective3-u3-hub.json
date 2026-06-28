@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Stonehenge is one of the most famous ancient monuments in the world.", "opts": ["巨石阵是世界上最著名的古代遗迹之一。", "巨石阵是一座现代博物馆。", "巨石阵是用木头建成的。", "巨石阵很容易搬动。"], "answer": 0 },
+    { "audio": "The Mariana Trench is the deepest place in the world's oceans.", "opts": ["海沟里没有任何生命。", "马里亚纳海沟是世界海洋中最深的地方。", "海沟很浅,光线充足。", "海沟位于沙漠中。"], "answer": 1 },
+    { "audio": "Some tribes were first discovered through satellite images.", "opts": ["这些部落住在大城市里。", "没人见过这些部落。", "一些部落最初是通过卫星图像被发现的。", "部落是开车找到的。"], "answer": 2 },
+    { "audio": "The sharp limestone rocks can cut through skin.", "opts": ["这些石头柔软光滑。", "石头是温暖的。", "石头能浮在水上。", "锋利的石灰岩能划破皮肤。"], "answer": 3 },
+    { "audio": "No one is sure how the islanders moved the giant statues.", "opts": ["没人确定岛民是如何搬动巨型石像的。", "石像是用卡车运来的。", "石像很轻,容易搬动。", "石像是机器造的。"], "answer": 0 },
+    { "audio": "There is still no proof that the lake monster is real.", "opts": ["人们已证明湖怪是真的。", "至今仍没有证据证明那湖怪是真的。", "湖里从没有过传说。", "科学家拍到了清晰照片。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The deep ____ is the deepest part of the ocean.（海沟)", "opts": ["trench", "garden", "market", "song"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "There is no solid ____ that aliens built the monument.（证据)", "opts": ["evidence", "weather", "music", "dinner"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The sharp rocks ____ a serious danger to explorers.（造成)", "opts": ["pose", "sell", "paint", "cook"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Humans have always longed to explore the ____.（未知)", "opts": ["unknown", "breakfast", "ticket", "garden"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The belief ____ the world is round was once new.（从句完整,只说明内容)", "opts": ["that", "which", "what", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Scientists study the question ____ there is water on the moon.（是否)", "opts": ["whether", "that", "what", "which"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The evidence ____ they found proved the city was real.（从句缺宾语→定语)", "opts": ["which", "whether", "where", "when"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "There is no doubt ____ the trench is very deep.（no doubt 后)", "opts": ["that", "whether", "what", "how"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["没人确切知道这些巨石是如何被搬动的。", "巨石是用卡车运来的。", "石头很轻,容易搬动。", "没人见过这些石头。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "No one knows exactly how the huge stones were moved." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["深海里没有任何生物。", "海水温暖又明亮。", "深海底部也能找到生命。", "海底全是绿色植物。"], "answer": 2, "point": "听力", "dim": "listening", "audio": "Life can be found even at the bottom of the deep sea." }
+  ],
+  "reading": {
+    "passage": "People have always looked up at the night sky and wondered what lies among the stars. Today, spacecraft travel millions of miles to study distant planets, sending back pictures that answer some old questions and raise many new ones.",
+    "passageCn": "人们一直仰望夜空,好奇繁星之间有什么。如今,航天器飞行数百万英里去研究遥远的行星,传回的照片回答了一些老问题,也带来许多新的问题。",
+    "questions": [
+      { "q": "What have people always done when looking at the night sky?", "opts": ["Wondered what lies among the stars.", "Felt bored and walked away.", "Closed their eyes at once.", "Counted all their money."], "answer": 0 },
+      { "q": "What do the pictures from spacecraft do?", "opts": ["Answer some questions and raise new ones.", "Solve every mystery at once.", "Show nothing at all useful.", "Stop all further research."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short report about a mystery you find interesting. Say what the mystery is, give one theory about it, and explain why it interests you. Try to use appositive clauses such as 'the theory that …'.",
+    "promptCn": "写一篇关于你感兴趣的某个谜团的短报道:谜团是什么、关于它的一种理论、你为何感兴趣;试着用 'the theory that …' 这类同位语从句。",
+    "sampleWords": ["mystery", "theory", "belief", "evidence", "monument", "explore", "unknown", "trench", "doubt", "discover"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about Stonehenge",
+      "lines": [
+        { "role": "A", "text": "Why do you think the ancient people built Stonehenge?", "cn": "你觉得古人为什么要建巨石阵?" },
+        { "role": "B", "text": "Many experts hold the belief that it worked as a kind of calendar.", "cn": "许多专家相信它曾起一种日历的作用。" },
+        { "role": "A", "text": "How could simple tools move such enormous stones?", "cn": "用简单的工具怎么能搬动这么巨大的石头?" },
+        { "role": "B", "text": "No one is sure, and that is what makes the mystery so interesting.", "cn": "没人确定,而这正是这个谜团如此有趣的地方。" }
+      ]
+    },
+    {
+      "title": "Reporting a Discovery",
+      "lines": [
+        { "role": "A", "text": "Did you hear the news that a new species was found in the rainforest?", "cn": "你听说在雨林里发现了一个新物种的消息吗?" },
+        { "role": "B", "text": "Really? Is there any solid evidence that it lives nowhere else?", "cn": "真的吗?有确凿证据证明它只生活在那里吗?" },
+        { "role": "A", "text": "Yes. Scientists used satellite images and then explored the area on foot.", "cn": "有。科学家先用卫星图像,然后徒步探索了那片地区。" },
+        { "role": "B", "text": "That's amazing. There is still so much unknown about our own planet.", "cn": "太了不起了。关于我们自己的星球,仍有那么多未知。" }
+      ]
+    }
+  ]
+}

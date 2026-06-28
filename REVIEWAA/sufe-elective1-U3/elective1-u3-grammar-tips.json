@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grade": 11,
+  "content": {
+    "title": "被动语态·过去完成被动 & 过去进行被动速查",
+    "intro": "被动语态强调'动作的承受者'。本单元两大形式:过去某动作之前已被做完 → had been done(过去完成被动);过去某一时刻正在被做 → was/were being done(过去进行被动)。判断口诀:看时间状语——'之前/by then/before'用过去完成被动;'当时/when/while'用过去进行被动。",
+    "table": {
+      "headers": ["被动形式", "结构 / 用法 / 例句"],
+      "rows": [
+        ["过去完成被动", "had been + 过去分词:过去动作A之前B已被完成。The ship had been crushed before they escaped."],
+        ["过去进行被动", "was/were being + 过去分词:过去某刻正被进行。The boat was being repaired when the storm hit."],
+        ["by 短语", "引出动作执行者:Every man had been chosen by Shackleton."],
+        ["含情态的被动", "modal + be + 过去分词:Anyone left there would be starved to death."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "时间状语含 before / by the time / by 1915 / long before → 用过去完成被动 had been done", "mark": "By 1915 the ship had been surrounded by ice." },
+      { "rule": "时间状语含 when / while / at that moment / as → 用过去进行被动 was/were being done", "mark": "Efforts were being made when the ice broke." },
+      { "rule": "主语是动作的承受者才用被动;若主语自己发出动作,用主动", "mark": "The men were marching(主动)vs The route was being explored(被动)" },
+      { "rule": "情态动词的被动:would/might/must + be + done;对过去推测 might have been + done", "mark": "Without him, the men might have been lost." }
+    ],
+    "why": [
+      "用被动是为了把焦点放在'受动作影响的人或事'上,或在不知道/不必说出执行者时使用。had been done 表'过去之前已完成'的被动,was/were being done 表'过去那一刻正在进行'的被动——时态由对应的过去时被动而来。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给动词原形,据时间状语(before/by then vs when/while)判断填 had been done 还是 was/were being done。",
+      "辨析过去完成被动 vs 过去进行被动 vs 一般过去被动(was/were done);by 短语引出执行者;含情态被动 modal + be done。"
+    ],
+    "examVsReal": [
+      { "exam": "The boat was being repaired when the storm hit.(考试规范被动)", "real": "They were repairing the boat when the storm hit.", "note": "口语里常用主动更直接;考试为强调受动者或客观叙述常用被动。" },
+      { "exam": "The route had never been crossed before.(过去完成被动)", "real": "No one had ever crossed the route before.", "note": "真实英语两种都地道;考试常借被动考'过去之前已完成'这一时间关系。" }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Sharing Views on Online and Traditional Classroom Learning(在线学习与传统课堂学习的异同)",
+  "title_en": "Online vs Traditional Classroom Learning",
+  "genre": "比较与对照 / 议论(compare and contrast two types of learning)",
+  "source": "上外版必修第三册 Unit 4 Moving Forward:在80-100词内分两段讨论在线学习与传统课堂学习的相同点与不同点(comparison and contrast)。",
+  "prompt_cn": "你的班级正在讨论在线学习与传统课堂学习。请用英语写两段、约80-100词,①第一段写两者的相同点;②第二段写两者的不同点。要求:用比较与对照的连接词(both / likewise / however / unlike / while 等),观点清楚、句句相关。",
+  "prompt_en": "Your class is holding a discussion about online and traditional classroom learning. In about 80-100 words, write two paragraphs: 1) the similarities between the two; 2) the differences between them. Use comparison-and-contrast linking words (both, likewise, however, unlike, while), keep your ideas clear and every sentence on the point.",
+  "points": [
+    "相同点段:both 引出共同特征(都需努力、都有老师指导)",
+    "不同点段:unlike / while / however 引出差异(地点、互动、灵活度)",
+    "用比较对照连接词组织全文(both / likewise / in contrast / while)",
+    "结尾给出自己的看法或小结"
+  ],
+  "word_count": "80-100 词",
+  "model_essay": "Online and traditional classroom learning share several common features. Both ask students to study hard and to finish their tasks on time, and in both ways a teacher guides the lessons. Likewise, both help us gain real knowledge and skills.\n\nThere are also clear differences between the two. In a traditional classroom, students and teachers meet face to face, while online learning takes place through a screen at home. Online study is more flexible, because you can view a recorded lesson again whenever you like. However, a real classroom offers warmer interaction with classmates. In my view, the two ways work best together.",
+  "model_translation": "在线学习与传统课堂学习有几个共同点。两者都要求学生努力学习、按时完成任务,且都由老师指导课程。同样,两者都能帮助我们获得真正的知识与技能。\n\n两者之间也有明显差异。在传统课堂里,师生面对面;而在线学习是在家里通过屏幕进行的。在线学习更灵活,因为你可以随时重看录播课。然而,真实课堂提供与同学更温暖的互动。在我看来,两种方式结合起来效果最好。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "两段齐全:相同点段 + 不同点段,各≥两条具体信息" },
+      { "dimension": "结构", "max": 4, "criteria": "比较对照结构清晰、连接词得当(both/likewise/however/while)、句句相关" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、对照句地道、语法基本无误" }
+    ],
+    "required_structure": [
+      "相同点开头 … share several common features.",
+      "相同点展开 Both … / Likewise, …",
+      "不同点开头 There are also clear differences between the two.",
+      "不同点展开 In a traditional classroom … , while online learning … / However, …"
+    ],
+    "key_expressions": [
+      "Online and traditional learning share several common features.",
+      "Both ask students to study hard and finish tasks on time.",
+      "Online study is more flexible, while a real classroom offers warmer interaction.",
+      "In my view, the two ways work best together."
+    ],
+    "useful_words": ["online", "traditional", "similar", "both", "likewise", "however", "unlike", "flexible", "interaction", "view"]
+  },
+  "high_sentences": [
+    "Online and traditional classroom learning share several common features.",
+    "Both ask students to study hard and to finish their tasks on time.",
+    "Online study is more flexible, while a real classroom offers warmer interaction.",
+    "In my view, the two ways work best together."
+  ],
+  "error_pairs": [
+    { "wrong": "Both of them needs hard work.", "correct": "Both of them need hard work.", "note": "both 作主语谓语用复数 need。" },
+    { "wrong": "Unlike with a classroom, online learning is flexible.", "correct": "Unlike a traditional classroom, online learning is flexible.", "note": "unlike 后直接接名词,不加 with。" },
+    { "wrong": "Online learning is more flexible, but a classroom offers warmer interaction, while is fun.", "correct": "Online learning is more flexible, while a classroom offers warmer interaction.", "note": "while 表对比,连接两个对照分句,不重复连词。" }
+  ],
+  "paragraph_template": "【比较对照结构】\n第1段(相同点):… share several common features. Both … Likewise, …\n第2段(不同点):There are also clear differences. In a traditional classroom … , while online learning … However, … In my view, …"
+}

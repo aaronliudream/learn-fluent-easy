@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "grammar_title": "复杂句综合(定语从句 / 状语从句 / 名词性从句的句法分析与运用)",
+  "source": "上外版选择性必修四 Unit 1 Grammar in Use: Complex sentences (review)。三个子技能分关:定语从句关系词、状语从句连词、名词性从句连接词。句子地道、答案唯一(选项排除其他成立项),零术语全应用填空。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "定语从句:关系代词/关系副词(who/whom/whose/which/where/when)",
+      "overview": "看先行词(人/物/地点/时间/所属)和从句缺什么成分:人作主语 who、人前加介词 whom、表所属 whose、物作主/宾(不与 that 同现时)which、缺地点状语 where、缺时间状语 when。"
+    },
+    {
+      "code": "u1.02",
+      "point": "状语从句:让步/条件/结果/时间/原因连词",
+      "overview": "按逻辑关系选连词:让步 though/although/even though/no matter how;条件 unless/as long as/once;结果 so…that/such…that/so that(目的);时间 as soon as/while/until/before;原因 because/since。靠句意排除其他连词。"
+    },
+    {
+      "code": "u1.03",
+      "point": "名词性从句:主语/宾语/表语/同位语从句连接词(that/what/whether/why/how)",
+      "overview": "从句结构完整(不缺成分)用 that;从句缺主语或宾语用 what;一般疑问(常配 or not)用 whether;表原因用 why、表程度/方式用 how;'the fact/idea + that…' 为同位语从句。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "The lecturer ____ overcame his stage fright that night later became famous.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 lecturer 指人、从句缺主语 → who;which 指物、where/whose 不能作主语。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Anyone ____ speaks in public for the first time may feel nervous.",
+      "options": [
+        "whose",
+        "who",
+        "when",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 anyone 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The teacher ____ spelled words into Helen's hand changed her whole life.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 teacher 指人、缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Speakers ____ truly engage the audience usually win warm applause.",
+      "options": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 speakers 指人、缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The friends ____ sat in the crowd pounded their clubs on the floor.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 friends 指人、缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The speaker ____ voice was trembling still managed to finish his talk.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "voice 属于 speaker、表所属 → whose。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mark Twain, ____ humour delighted everyone, joked about his own age.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "humour 属于 Twain、表所属 → whose。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Helen, ____ world had been silent and dark, longed to understand language.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "world 属于 Helen、表所属 → whose。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "We admire writers ____ words can move millions of readers.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "words 属于 writers、表所属 → whose。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The governor's wife, to ____ Twain glanced, led the whole hall in laughter.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 to 后指人 → whom;who 不用于介词后,which 指物。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The audience for ____ he had prepared so hard sat in total silence.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 for 后指人 → whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The teacher from ____ Helen learned everything was Miss Sullivan.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指人 → whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The theatre ____ Twain gave his first lecture was dark and almost empty.",
+      "options": [
+        "where",
+        "which",
+        "that",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 theatre 表地点、从句不缺主宾(只缺地点状语)→ where。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Helen reached the well-house ____ the mystery of language was revealed to her.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 well-house 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A stage is a place ____ even brave people may suddenly freeze with fear.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 place 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I still recall the moment ____ my stage fright suddenly left me for good.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 moment 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "There came a day ____ Helen finally understood that everything has a name.",
+      "options": [
+        "when",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Twain remembered the evening ____ he made his first bow as a lecturer.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 evening 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The manuscript ____ lay hidden under the flag was never actually used.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 manuscript 指物、从句缺主语且未与 that 同现 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Modern technology, ____ keeps improving fast, now helps the blind communicate.",
+      "options": [
+        "who",
+        "when",
+        "whose",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性从句指物、缺主语 → which(此处不能用 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ he was almost paralysed with fear, Mark Twain still walked onto the stage.",
+      "options": [
+        "Though",
+        "Unless",
+        "So that",
+        "As soon as"
+      ],
+      "answer_index": 0,
+      "explanation": "前后是让步关系(尽管害怕仍上台)→ Though。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Helen made steady progress ____ she could neither see nor hear.",
+      "options": [
+        "because",
+        "although",
+        "unless",
+        "so that"
+      ],
+      "answer_index": 1,
+      "explanation": "'既看不见又听不见'与'取得进步'是让步对比 → although。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You will gradually beat stage fright ____ you keep practising in front of others.",
+      "options": [
+        "unless",
+        "although",
+        "as long as",
+        "because"
+      ],
+      "answer_index": 2,
+      "explanation": "'只要坚持练习'是条件 → as long as;unless 表否定条件、意思相反。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You cannot really engage your listeners ____ you speak with genuine passion.",
+      "options": [
+        "because",
+        "although",
+        "while",
+        "unless"
+      ],
+      "answer_index": 3,
+      "explanation": "'除非满怀激情,否则吸引不了听众'→ unless(=if…not)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ the audience feels involved, they will go on listening to you.",
+      "options": [
+        "As long as",
+        "Unless",
+        "Although",
+        "Because"
+      ],
+      "answer_index": 0,
+      "explanation": "'只要听众有参与感'是肯定条件 → As long as。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ you feel nervous inside, you should still look confident on stage.",
+      "options": [
+        "Because",
+        "Even if",
+        "Unless",
+        "So that"
+      ],
+      "answer_index": 1,
+      "explanation": "'即使内心紧张也要显得自信'是让步条件 → Even if。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He bound himself by a hard contract ____ he could not escape the lecture.",
+      "options": [
+        "as if",
+        "even if",
+        "so that",
+        "now that"
+      ],
+      "answer_index": 2,
+      "explanation": "'签合同'的目的是'无法逃避'→ so that(目的状语)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Speakers move around the stage ____ their presentation feels lively and energetic.",
+      "options": [
+        "as if",
+        "although",
+        "unless",
+        "so that"
+      ],
+      "answer_index": 3,
+      "explanation": "走动的目的是让演讲显得有活力 → so that(目的)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The whole hall was ____ quiet that you could have heard a pin drop.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 0,
+      "explanation": "'so + 形容词 + that' 引出结果状语从句 → so;such 接名词、very/too 不接 that 从句。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "It was ____ a moving moment that the entire audience sat in silence.",
+      "options": [
+        "so",
+        "such",
+        "very",
+        "too"
+      ],
+      "answer_index": 1,
+      "explanation": "'such + a + 形容词 + 名词 + that' 引出结果 → such。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ Twain glanced at the governor's wife, the whole hall burst into laughter.",
+      "options": [
+        "Unless",
+        "Although",
+        "As soon as",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "'一…就…'表时间紧接 → As soon as。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ she was drawing water from the well, Helen suddenly grasped the word.",
+      "options": [
+        "Unless",
+        "Even if",
+        "So that",
+        "While"
+      ],
+      "answer_index": 3,
+      "explanation": "'在打水的同时'表正在进行的背景时间 → While。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Helen kept confusing the two words ____ the truth finally dawned on her.",
+      "options": [
+        "until",
+        "unless",
+        "although",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "'一直混淆,直到真相显现'→ until(持续到某时间点)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Several weeks passed ____ Helen realised that every object had its own name.",
+      "options": [
+        "unless",
+        "before",
+        "although",
+        "so that"
+      ],
+      "answer_index": 1,
+      "explanation": "'过了几周才…'→ before(…之前/才)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The audience kept listening closely ____ the speaker sounded truly passionate.",
+      "options": [
+        "although",
+        "unless",
+        "because",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "听众专注的原因是演讲者充满激情 → because(原因)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ public speaking can be learned, there is really no need to fear it.",
+      "options": [
+        "Unless",
+        "So that",
+        "As soon as",
+        "Since"
+      ],
+      "answer_index": 3,
+      "explanation": "'既然演讲可以学会'是已知原因 → Since。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ hard the new word seemed, Helen simply refused to give up.",
+      "options": [
+        "No matter how",
+        "As long as",
+        "Because",
+        "So that"
+      ],
+      "answer_index": 0,
+      "explanation": "'无论这个词多难'是让步 → No matter how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ Twain had spoken in public for years, he never forgot that first agony.",
+      "options": [
+        "Because",
+        "Even though",
+        "Unless",
+        "So that"
+      ],
+      "answer_index": 1,
+      "explanation": "'尽管已演讲多年'与'难忘初次煎熬'是让步 → Even though。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "____ you win the audience's attention, holding on to it becomes much easier.",
+      "options": [
+        "Unless",
+        "Although",
+        "Once",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "'一旦赢得注意'表条件/时间 → Once;Unless/Although 逻辑不通。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "You should still sound natural ____ you are reading from a written script.",
+      "options": [
+        "because",
+        "so that",
+        "as soon as",
+        "even if"
+      ],
+      "answer_index": 3,
+      "explanation": "'即使在照稿念'也要自然 → even if(让步)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ Helen learned that morning changed her whole world forever.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 0,
+      "explanation": "主语从句缺 learned 的宾语 → What;that 引导的主语从句须结构完整。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ communication sometimes breaks down is something we all experience.",
+      "options": [
+        "What",
+        "That",
+        "Why",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "从句 'communication breaks down' 结构完整、不缺成分 → That 引导主语从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Nobody in the hall could understand ____ the frightened speaker was mumbling.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语从句缺 mumbling 的宾语 → what。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mark Twain admitted ____ stage fright felt like a terrible disease to him.",
+      "options": [
+        "what",
+        "whether",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语从句结构完整、陈述事实 → that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He honestly wasn't sure ____ his little joke had really worked or not.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "'…or not' 表示是否、二选一 → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "A lack of confidence — that is ____ so many people are afraid of the stage.",
+      "options": [
+        "because",
+        "why",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "'that is why…' 表语从句表原因 → why;because 不引导表语从句。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We were all amazed at ____ quickly Helen picked up so many new words.",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "修饰 quickly 表程度 → how(how quickly)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The fact ____ a deaf-blind girl could learn to read amazed the whole world.",
+      "options": [
+        "what",
+        "which",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "'the fact + 完整句子' 为同位语从句 → that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Real-time translation is exactly ____ travellers need most when they go abroad.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "表语从句缺 need 的宾语 → what。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Lucas keeps reminding us ____ a speech should aim to change people's minds.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语从句结构完整 → that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The team kept testing ____ the new app could read the labels aloud or not.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "'…or not' 表是否 → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Helen's early progress depended on ____ her teacher spelled into her palm.",
+      "options": [
+        "that",
+        "which",
+        "why",
+        "what"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 on 后的宾语从句缺 spelled 的宾语 → what。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Listeners noticed ____ calmly the experienced speaker handled the tough question.",
+      "options": [
+        "how",
+        "that",
+        "what",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "修饰 calmly 表程度/方式 → how(how calmly)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ the audience stays engaged or not depends largely on the speaker.",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "Why"
+      ],
+      "answer_index": 1,
+      "explanation": "主语从句配 'or not' 表是否 → Whether(此处不可用 if)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "____ matters most in a great speech is a genuine connection with people.",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "Why"
+      ],
+      "answer_index": 2,
+      "explanation": "主语从句缺 matters 的主语 → What。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The nervous speaker promised ____ he would keep his talk short and lively.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语从句结构完整 → that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It is really surprising ____ much our gestures add to the spoken words.",
+      "options": [
+        "how",
+        "that",
+        "what",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "修饰 much 表程度 → how(how much)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Write down ____ you want to say clearly before you stand up to speak.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语从句缺 say 的宾语 → what。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The idea ____ technology can give a voice to the silent excites many scientists.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "'the idea + 完整句子' 为同位语从句 → that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We often wonder ____ machines will ever truly understand us the way people do.",
+      "options": [
+        "that",
+        "what",
+        "why",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "wonder 后表'是否'、从句结构完整(understand 已带宾语 us)→ whether。"
+    }
+  ]
+}

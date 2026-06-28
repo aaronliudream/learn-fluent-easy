@@ -1,0 +1,421 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Protecting the Environment",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修三 Unit 4 同主题听力(植树/气候基础/海滩清理采访/碳足迹贴士/乐观还是悲观/号召行动)。答案可在 transcript 找到依据,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Planning a Green Project",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Our class needs a green project for this term. Any ideas, Leo?",
+        "Leo: How about planting trees on the hill behind the school?",
+        "Mia: I like that. Trees take in carbon dioxide and give us fresh air.",
+        "Leo: Exactly. And the hill looks so bare and grey now.",
+        "Mia: How many trees do you think we could plant?",
+        "Leo: If everyone helps, maybe a hundred young trees in one day.",
+        "Mia: Wonderful. I'll ask the teacher to choose a good weekend.",
+        "Leo: Great. Let's make a poster to get more students to join."
+      ],
+      "translation_cn": "Mia 说班级本学期需要一个环保项目;Leo 提议在学校后山种树;Mia 赞同,树能吸收二氧化碳、提供新鲜空气;后山现在光秃秃的;若大家帮忙,一天能种约一百棵小树;Mia 去请老师定周末;Leo 提议做海报吸引更多同学参加。",
+      "questions": [
+        {
+          "stem": "What does the class need this term?",
+          "options": [
+            "A green project.",
+            "A sports match.",
+            "A new classroom.",
+            "A music show."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Leo suggest doing?",
+          "options": [
+            "Cleaning the canteen.",
+            "Planting trees behind the school.",
+            "Selling old books.",
+            "Building a new hill."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why are trees good, according to Mia?",
+          "options": [
+            "They take in carbon dioxide and give fresh air.",
+            "They make the hill look grey.",
+            "They need no water at all.",
+            "They block the sunlight."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How many trees might they plant in one day?",
+          "options": [
+            "Only two or three.",
+            "About a hundred.",
+            "Exactly one thousand.",
+            "None at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will Leo do to get more students to join?",
+          "options": [
+            "Cancel the project.",
+            "Cut down the trees.",
+            "Make a poster.",
+            "Stay at home."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 A Warmer World",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Earth is slowly getting warmer year after year.",
+        "One main cause is the greenhouse effect from gases like carbon dioxide.",
+        "As the planet warms, the polar ice begins to melt.",
+        "When the ice melts, the level of the sea rises.",
+        "Scientists warn that extreme weather may also happen more often."
+      ],
+      "translation_cn": "地球正逐年缓慢变暖;一个主要原因是二氧化碳等气体造成的温室效应;随着地球变暖,极地冰开始融化;冰融化时,海平面上升;科学家警告极端天气也可能更频繁地发生。",
+      "questions": [
+        {
+          "stem": "What is happening to the Earth year after year?",
+          "options": [
+            "It is getting much colder.",
+            "It is staying exactly the same.",
+            "It is moving away from the sun.",
+            "It is slowly getting warmer."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is one main cause of the warming?",
+          "options": [
+            "The greenhouse effect from gases like carbon dioxide.",
+            "Too much rain in winter.",
+            "The light of the moon.",
+            "People planting trees."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What begins to happen to the polar ice?",
+          "options": [
+            "It grows much thicker.",
+            "It begins to melt.",
+            "It turns into rock.",
+            "It stays frozen forever."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the melting ice do to the sea?",
+          "options": [
+            "It makes the sea disappear.",
+            "It makes the sea colder only.",
+            "It makes the sea level rise.",
+            "It has no effect on the sea."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What else may happen more often, scientists warn?",
+          "options": [
+            "Longer school holidays.",
+            "Cheaper electricity.",
+            "Quieter cities.",
+            "Extreme weather."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 At the Beach Clean-up",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Reporter: Good morning! Can you tell us why you organise this clean-up?",
+        "Sam: Of course. Too much rubbish ends up on this beach and harms the animals.",
+        "Reporter: What kind of rubbish do you usually find?",
+        "Sam: Mostly plastic — bottles, bags and bits of packaging.",
+        "Reporter: How many people have come today?",
+        "Sam: More than two hundred volunteers, and new ones keep arriving.",
+        "Reporter: That's amazing. What do you hope people will learn?",
+        "Sam: I hope they will simply use less plastic in their daily lives."
+      ],
+      "translation_cn": "记者问 Sam 为何组织这次清理;Sam 说太多垃圾留在海滩、伤害动物;通常捡到的多是塑料——瓶子、袋子和包装碎片;今天来了两百多名志愿者,还有人不断到来;Sam 希望大家在日常生活中少用塑料。",
+      "questions": [
+        {
+          "stem": "Why does Sam organise the clean-up?",
+          "options": [
+            "Too much rubbish on the beach harms the animals.",
+            "He wants to sell the rubbish.",
+            "He likes swimming in winter.",
+            "The beach is too quiet."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of rubbish does Sam usually find?",
+          "options": [
+            "Mostly glass.",
+            "Mostly plastic.",
+            "Mostly metal.",
+            "Mostly wood."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How many volunteers have come today?",
+          "options": [
+            "Only about ten.",
+            "Exactly fifty.",
+            "More than two hundred.",
+            "None so far."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What are new volunteers still doing?",
+          "options": [
+            "Going back home.",
+            "Refusing to help.",
+            "Selling bottles.",
+            "Arriving at the beach."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Sam hope people will learn?",
+          "options": [
+            "To use less plastic in daily life.",
+            "To visit the beach less often.",
+            "To buy more bottles.",
+            "To stop cleaning beaches."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Shrink Your Footprint",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are a few easy ways to make your carbon footprint smaller.",
+        "First, take a bus or ride a bike instead of going by car.",
+        "Second, turn off the lights and unplug devices you are not using.",
+        "Third, choose local food and products with less packaging.",
+        "None of these steps is hard, but together they really help the planet."
+      ],
+      "translation_cn": "这里有几个让碳足迹变小的简单方法:第一,坐公交或骑自行车,而不是开车;第二,关灯并拔掉不用的电器;第三,选择本地食物和包装少的产品;每一步都不难,但合在一起真的能帮助地球。",
+      "questions": [
+        {
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "How to grow more food at home.",
+            "Easy ways to make your carbon footprint smaller.",
+            "Why cars are fun to drive.",
+            "How to win a sports match."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the first suggestion?",
+          "options": [
+            "Buy a bigger car.",
+            "Travel only by plane.",
+            "Take a bus or ride a bike instead of driving.",
+            "Stay in bed all day."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you do with devices you are not using?",
+          "options": [
+            "Leave them all switched on.",
+            "Throw them into the sea.",
+            "Sell them to friends.",
+            "Turn off the lights and unplug them."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of products should you choose?",
+          "options": [
+            "Local food with less packaging.",
+            "Food shipped from far away.",
+            "Products with heavy packaging.",
+            "Things you do not need."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say about these steps?",
+          "options": [
+            "Each one is very expensive.",
+            "None is hard, but together they really help.",
+            "They make no difference at all.",
+            "Only experts can do them."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Optimistic or Not?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: Sometimes I feel the Earth is in real trouble, Anna.",
+        "Anna: I understand, but I try to stay optimistic about it.",
+        "Ben: How can you? The ice is melting and the sea is rising.",
+        "Anna: True, yet more and more people are starting to act.",
+        "Ben: Do you really think ordinary people can change anything?",
+        "Anna: Yes. When millions make small green choices, the result is huge.",
+        "Ben: I suppose you're right. Being pessimistic helps no one.",
+        "Anna: Exactly. Hope gives us the energy to keep trying."
+      ],
+      "translation_cn": "Ben 觉得地球真的有麻烦;Anna 理解但努力保持乐观;Ben 不解,冰在融化、海在上升;Anna 说越来越多人开始行动;Ben 怀疑普通人能否改变什么;Anna 说当数百万人做小的绿色选择,结果是巨大的;Ben 认同,悲观对谁都没帮助;Anna 说希望给我们坚持的动力。",
+      "questions": [
+        {
+          "stem": "How does Anna try to feel about the Earth?",
+          "options": [
+            "She feels totally hopeless.",
+            "She does not care at all.",
+            "She tries to stay optimistic.",
+            "She is always angry."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What worries Ben?",
+          "options": [
+            "The weather is too cold.",
+            "There are too many trees.",
+            "People act too quickly.",
+            "The ice is melting and the sea is rising."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Anna say is happening with people?",
+          "options": [
+            "More and more of them are starting to act.",
+            "They are all giving up.",
+            "They never think about it.",
+            "They are leaving the cities."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens when millions make small green choices?",
+          "options": [
+            "Nothing changes.",
+            "The result is huge.",
+            "The Earth gets colder.",
+            "The choices are wasted."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben finally agree about being pessimistic?",
+          "options": [
+            "It solves everything.",
+            "It is the only choice.",
+            "It helps no one.",
+            "It saves energy."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Message for Young People",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Young people, the future of the planet is partly in your hands.",
+        "You do not have to be a scientist to make a difference.",
+        "Sort your rubbish, save water, and walk for short trips.",
+        "Speak up and ask your school and town to go greener.",
+        "Remember, it is everyone working together that can save our Earth."
+      ],
+      "translation_cn": "年轻人,地球的未来部分掌握在你们手中;你不必是科学家也能带来改变;给垃圾分类、节约用水、短途步行;勇敢发声,要求学校和城镇更环保;记住,正是大家齐心协力才能拯救地球。",
+      "questions": [
+        {
+          "stem": "Whose hands is the planet's future partly in?",
+          "options": [
+            "Only scientists'.",
+            "Only leaders'.",
+            "No one's.",
+            "Young people's."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Do you need to be a scientist to make a difference?",
+          "options": [
+            "No, you do not.",
+            "Yes, you must be one.",
+            "Only if you are old.",
+            "Only on weekends."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which action does the speaker suggest?",
+          "options": [
+            "Buy more plastic bags.",
+            "Sort your rubbish and save water.",
+            "Leave the taps running.",
+            "Drive everywhere alone."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should young people ask their school and town to do?",
+          "options": [
+            "To build more factories.",
+            "To use more energy.",
+            "To go greener.",
+            "To stop recycling."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "According to the speaker, what can save the Earth?",
+          "options": [
+            "One person alone.",
+            "Doing nothing at all.",
+            "Waiting for the future.",
+            "Everyone working together."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

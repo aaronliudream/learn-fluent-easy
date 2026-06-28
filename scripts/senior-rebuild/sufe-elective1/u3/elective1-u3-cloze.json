@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Adventuring",
+  "source": "上外版选择性必修第一册 Unit 3 同主题完形(选拔队员/极夜生活/驾艇求救/雪夜行军/重返象岛/写给少年探险者)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Choosing the Team",
+      "text": "Before any great expedition can begin, a leader must (1)____ the right people. When Shackleton planned his trip, hundreds of men wrote to him, all (2)____ to join. He could not take everyone, so he had to be very (3)____. He did not only look at how strong a man was. He also wanted to know whether someone could stay (4)____ in danger and work well with others. A team that argues will soon (5)____ apart. Each man chosen had a clear (6)____ to do, such as caring for the dogs or cooking the food. Shackleton believed that a happy crew had a better (7)____ of staying alive. He even valued men who could sing or tell jokes, because laughter helped people (8)____ the long, dark days. In the end, the men he picked were not only (9)____, but also kind and patient. That careful choice was one (10)____ why so many of them came home alive.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "choose",
+            "forget",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "choose the right people 挑选合适的人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "afraid",
+            "eager",
+            "unable",
+            "slow"
+          ],
+          "answer_index": 1,
+          "explanation": "eager to join 渴望加入。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lazy",
+            "rude",
+            "careful",
+            "noisy"
+          ],
+          "answer_index": 2,
+          "explanation": "be very careful 非常谨慎。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "asleep",
+            "lost",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "stay calm in danger 危险中保持镇定。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "fall",
+            "grow",
+            "build",
+            "stand"
+          ],
+          "answer_index": 0,
+          "explanation": "fall apart 散伙、瓦解。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "game",
+            "job",
+            "song",
+            "meal"
+          ],
+          "answer_index": 1,
+          "explanation": "a clear job to do 明确的任务。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "chance",
+            "size"
+          ],
+          "answer_index": 2,
+          "explanation": "a better chance of staying alive 更大的生还机会。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "enjoy",
+            "buy",
+            "count",
+            "bear"
+          ],
+          "answer_index": 3,
+          "explanation": "bear the long days 熬过漫长的日子。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "strong",
+            "weak",
+            "silent",
+            "famous"
+          ],
+          "answer_index": 0,
+          "explanation": "not only strong but also kind 不仅强壮。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "minute",
+            "reason",
+            "step",
+            "place"
+          ],
+          "answer_index": 1,
+          "explanation": "one reason why 之所以……的一个原因。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Living Through the Polar Night",
+      "text": "For weeks the sun did not rise at all, and the men lived in (1)____ darkness. The cold was so (2)____ that breath turned to ice on their beards. To pass the time, they read aloud, played cards, and (3)____ stories of home. Keeping busy was important, because too much (4)____ time made the danger feel even worse. Every day someone had to break the ice to find fresh (5)____ to drink. The dogs needed feeding, and the boats had to be (6)____ from the moving ice. Shackleton made sure that each man kept a daily (7)____, so that nobody felt useless. He knew that a person who has nothing to do soon loses (8)____. When a small problem appeared, he dealt with it (9)____, before it could grow into a real disaster. Slowly, the days began to lengthen again, and a thin line of light returned to the (10)____. Hope came back with the sun.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "bright",
+            "warm",
+            "complete",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "complete darkness 完全的黑暗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "gentle",
+            "lovely",
+            "useful",
+            "bitter"
+          ],
+          "answer_index": 3,
+          "explanation": "so bitter (cold) 刺骨地冷。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shared",
+            "sold",
+            "burnt",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "shared stories 分享故事。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "school",
+            "free",
+            "summer",
+            "boat"
+          ],
+          "answer_index": 1,
+          "explanation": "too much free time 太多空闲时间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "money",
+            "music",
+            "water",
+            "paper"
+          ],
+          "answer_index": 2,
+          "explanation": "fresh water to drink 可饮用的淡水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "thrown",
+            "sold",
+            "painted",
+            "protected"
+          ],
+          "answer_index": 3,
+          "explanation": "protected from the ice 保护以防冰挤。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "task",
+            "joke",
+            "song",
+            "prize"
+          ],
+          "answer_index": 0,
+          "explanation": "a daily task 每日的任务。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weight",
+            "hope",
+            "speed",
+            "colour"
+          ],
+          "answer_index": 1,
+          "explanation": "loses hope 失去希望。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rarely",
+            "lazily",
+            "quickly",
+            "loudly"
+          ],
+          "answer_index": 2,
+          "explanation": "dealt with it quickly 迅速处理。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boat",
+            "tent",
+            "dog",
+            "sky"
+          ],
+          "answer_index": 3,
+          "explanation": "a line of light returned to the sky 天空中重现光线。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Open-Boat Journey",
+      "text": "There was no hope of (1)____ on the lonely island, so Shackleton decided to sail for help. He chose five men to go with him in a tiny (2)____ only seven metres long. The sea in that part of the world is among the most (3)____ on the earth, with waves as tall as houses. Day and night the little boat was (4)____ by huge waves, and freezing water poured over the men. They were always wet, always cold, and could hardly (5)____. To find their way, the captain used the sun whenever the clouds (6)____ for a moment. One wrong turn could mean they would never (7)____ land at all. After about two weeks of this terrible (8)____, they finally saw the dark shape of the island ahead. Even then, the rough sea would not let them (9)____ for two more days. When at last they stepped onto the rocks, they could hardly (10)____, but they were alive.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rescue",
+            "summer",
+            "music",
+            "rest"
+          ],
+          "answer_index": 0,
+          "explanation": "no hope of rescue 没有获救的希望。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "house",
+            "boat",
+            "train",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "a tiny boat 一条小艇。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "peaceful",
+            "shallow",
+            "dangerous",
+            "warm"
+          ],
+          "answer_index": 2,
+          "explanation": "the most dangerous seas 最危险的海域。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "ignored",
+            "warmed",
+            "sold",
+            "surrounded"
+          ],
+          "answer_index": 3,
+          "explanation": "surrounded by huge waves 被巨浪包围。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "swim",
+            "fly",
+            "drive"
+          ],
+          "answer_index": 0,
+          "explanation": "could hardly sleep 几乎无法入睡。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "froze",
+            "cleared",
+            "grew",
+            "fell"
+          ],
+          "answer_index": 1,
+          "explanation": "the clouds cleared 云散开(才能用太阳定位)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "build",
+            "buy",
+            "reach",
+            "paint"
+          ],
+          "answer_index": 2,
+          "explanation": "never reach land 永远到不了陆地。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lesson",
+            "meal",
+            "game",
+            "voyage"
+          ],
+          "answer_index": 3,
+          "explanation": "this terrible voyage 这次可怕的航行。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "land",
+            "sing",
+            "sleep",
+            "win"
+          ],
+          "answer_index": 0,
+          "explanation": "would not let them land 不让他们登陆。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "read",
+            "stand",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 1,
+          "explanation": "could hardly stand 几乎站不稳。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Marching Through the Night",
+      "text": "Once on the island, the men still had to cross high mountains to (1)____ the whaling station. They had almost no food and no (2)____ to sleep in. To stop and rest for long would be (3)____, because anyone who fell asleep in the cold might never wake. So they kept walking, hour after (4)____ hour. The ground was covered in deep snow, and thick fog made it hard to (5)____ the way. Sometimes they slid down icy slopes, hoping they would not fall off a cliff in the (6)____. Their bodies were so tired that every step took great (7)____. Yet the thought of their friends waiting for help gave them the (8)____ to go on. After about thirty-six hours, they (9)____ heard the sound of the station whistle far below. That sound told them their long march was nearly (10)____, and help was finally close.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "leave",
+            "lose",
+            "reach",
+            "build"
+          ],
+          "answer_index": 2,
+          "explanation": "reach the station 到达站点。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "boat",
+            "car",
+            "shop",
+            "tent"
+          ],
+          "answer_index": 3,
+          "explanation": "no tent to sleep in 没有可睡的帐篷。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "deadly",
+            "easy",
+            "boring",
+            "funny"
+          ],
+          "answer_index": 0,
+          "explanation": "would be deadly 会致命。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "happy",
+            "weary",
+            "sunny",
+            "lazy"
+          ],
+          "answer_index": 1,
+          "explanation": "hour after weary hour 一个接一个疲惫的小时。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eat",
+            "sell",
+            "see",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "hard to see the way 难以看清道路。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "shop",
+            "sun",
+            "boat",
+            "fog"
+          ],
+          "answer_index": 3,
+          "explanation": "fall off a cliff in the fog 在雾中坠崖。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "effort",
+            "money",
+            "music",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "took great effort 费很大力气。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "weight",
+            "strength",
+            "size",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "gave them the strength to go on 给他们继续的力量。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rarely",
+            "hardly",
+            "finally",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "finally heard 终于听到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lost",
+            "wrong",
+            "empty",
+            "over"
+          ],
+          "answer_index": 3,
+          "explanation": "the march was nearly over 行军快结束了。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Going Back for the Others",
+      "text": "Reaching safety was not the end of Shackleton's story. Twenty-three men were still (1)____ on the cold island far away, and he had promised to bring them home. Three times he tried to sail back, and three times the thick ice (2)____ his way. He refused to give up, even when others said it was (3)____. At last a small boat lent by another country managed to break through the ice. As it came close to the shore, Shackleton stood on the deck and began to (4)____ the men one by one. To his great (5)____, every single man was still there, thin and weak but (6)____. Not one of them had died during the long (7)____. The men on the beach cheered and waved when they saw their leader (8)____. After two years of danger, the whole team was together again. Their (9)____ was proof of the trust between a leader and his men, and the world soon learned of their (10)____ return.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "waiting",
+            "cooking",
+            "swimming",
+            "singing"
+          ],
+          "answer_index": 0,
+          "explanation": "still waiting 仍在等待。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "opened",
+            "blocked",
+            "warmed",
+            "painted"
+          ],
+          "answer_index": 1,
+          "explanation": "the ice blocked his way 冰挡住去路。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "easy",
+            "cheap",
+            "hopeless",
+            "funny"
+          ],
+          "answer_index": 2,
+          "explanation": "said it was hopeless 说没希望了。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "sell",
+            "bury",
+            "count"
+          ],
+          "answer_index": 3,
+          "explanation": "count the men 一个个数人。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "joy",
+            "anger",
+            "fear",
+            "shame"
+          ],
+          "answer_index": 0,
+          "explanation": "to his great joy 令他十分欣喜。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "asleep",
+            "alive",
+            "absent",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "weak but alive 虚弱却活着。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "meal",
+            "game",
+            "wait",
+            "race"
+          ],
+          "answer_index": 2,
+          "explanation": "during the long wait 在漫长等待期间。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "leave",
+            "sink",
+            "fall",
+            "return"
+          ],
+          "answer_index": 3,
+          "explanation": "saw their leader return 看到领袖归来。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "survival",
+            "failure",
+            "silence",
+            "holiday"
+          ],
+          "answer_index": 0,
+          "explanation": "their survival 他们的生还。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "safe",
+            "quick",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "their safe return 平安归来。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Letter to a Young Adventurer",
+      "text": "Dear friend, you tell me that you dream of one day becoming an (1)____ and seeing wild, distant places. That is a fine dream, but let me give you some (2)____. First, never set out without careful planning. The most exciting trips can quickly turn into (3)____ when people are not prepared. Learn to read maps, to watch the weather, and to look after your own (4)____ in the cold. Second, choose your companions with (5)____. On a hard journey, the people around you matter more than any tool you (6)____. Third, remember that real courage is not the absence of (7)____. Brave explorers feel afraid too, but they keep going anyway. Finally, do not explore only to be (8)____. The best reason to set out is the wish to (9)____ something new about the world and about yourself. If you keep all this in mind, you will (10)____ the unknown with both excitement and care. Good luck, and travel wisely.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "actor",
+            "farmer",
+            "explorer",
+            "driver"
+          ],
+          "answer_index": 2,
+          "explanation": "becoming an explorer 成为探险家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "food",
+            "music",
+            "advice"
+          ],
+          "answer_index": 3,
+          "explanation": "give you some advice 给你一些建议。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "disaster",
+            "holiday",
+            "victory",
+            "comfort"
+          ],
+          "answer_index": 0,
+          "explanation": "turn into disaster 变成灾难。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "phone",
+            "body",
+            "garden",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "look after your own body 照顾好自己的身体。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "anger",
+            "noise",
+            "care",
+            "speed"
+          ],
+          "answer_index": 2,
+          "explanation": "choose with care 慎重选择。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "bury",
+            "throw",
+            "carry"
+          ],
+          "answer_index": 3,
+          "explanation": "any tool you carry 你带的任何工具。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fear",
+            "sleep",
+            "snow",
+            "water"
+          ],
+          "answer_index": 0,
+          "explanation": "the absence of fear 没有恐惧。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tired",
+            "famous",
+            "cold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "explore only to be famous 只为出名而探险。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "throw",
+            "sell",
+            "learn",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "learn something new 学到新东西。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "drop",
+            "paint",
+            "count",
+            "face"
+          ],
+          "answer_index": 3,
+          "explanation": "face the unknown 面对未知。"
+        }
+      ]
+    }
+  ]
+}

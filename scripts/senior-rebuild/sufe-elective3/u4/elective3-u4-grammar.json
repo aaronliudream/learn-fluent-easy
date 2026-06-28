@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "grammar_title": "强调结构(It is/was … that/who … 强调句:强调主语、宾语、状语,与普通句及定语从句对比)",
+  "source": "上外版选择性必修三 Unit 4 Grammar in Use: Emphatic structures(It is/was + 被强调部分 + that/who…)。句子地道、环境主题、答案唯一(强调句连接词固定,排除关系副词/which等)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "强调句连接词:强调人用 who,强调物/事用 that",
+      "overview": "It is/was + 被强调部分 + that/who…。被强调的是人(指人的成分)时连接词用 who;被强调的是物或事情时一律用 that,不能用 which。"
+    },
+    {
+      "code": "u4.02",
+      "point": "强调状语(时间/地点/原因/方式):连接词仍用 that",
+      "overview": "强调句强调时间、地点、原因、方式等状语时,连接词都用 that,而不用普通定语从句里的 when/where/why——这正是强调句与定语从句的区别。"
+    },
+    {
+      "code": "u4.03",
+      "point": "It was not until … that … 与强调一般疑问句/强调主语",
+      "overview": "It was not until + 时间/事件 + that + 主句(直到……才……);一般疑问句强调用 Is/Was it + 被强调部分 + that/who…;强调作主语的人仍用 who。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "It was Dr Lin ____ first warned the village about the rising sea.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "强调句强调的是人 Dr Lin,且在从句中作主语,连接词用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is the volunteers ____ clean the beach every single weekend.",
+      "options": [
+        "which",
+        "who",
+        "what",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "被强调部分 the volunteers 指人,强调句连接词用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was Janine ____ decided to save the rainforest in Costa Rica.",
+      "options": [
+        "which",
+        "what",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "强调的是人 Janine,用 who 引导强调句。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is ordinary people ____ can make the biggest difference to the planet.",
+      "options": [
+        "which",
+        "what",
+        "whom",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "被强调部分 ordinary people 指人,连接词用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was my grandmother ____ taught me to sort the rubbish at home.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "强调的是人 my grandmother,强调句用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is scientists ____ have measured the carbon dioxide for many years.",
+      "options": [
+        "which",
+        "who",
+        "what",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "被强调部分 scientists 指人,连接词用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was a young environmentalist ____ started the whole clean-up project.",
+      "options": [
+        "which",
+        "what",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "强调的是人,且作从句主语,用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is the students ____ planted those young trees along the river.",
+      "options": [
+        "which",
+        "what",
+        "whose",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "被强调部分 the students 指人,强调句用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was Tom and Lily ____ organised the recycling drive at our school.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "强调的是人 Tom and Lily,连接词用 who。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is all of us ____ should take care of the Earth, not just the government.",
+      "options": [
+        "which",
+        "who",
+        "what",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "被强调部分 all of us 指人,用 who 引导强调句。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was carbon dioxide ____ the plants needed in order to produce food.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "被强调部分 carbon dioxide 指物,强调句一律用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is the greenhouse effect ____ keeps the Earth warm enough for life.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调的是事物 the greenhouse effect,连接词用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was the melting of the ice caps ____ worried the scientists most.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "被强调部分指事情,强调句用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is plastic waste ____ causes the most harm to sea animals.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调的是物 plastic waste,连接词用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was the burning of fossil fuels ____ released so much carbon dioxide.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "被强调部分指事情,强调句一律用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is clean energy ____ many countries are turning to these days.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调的是物 clean energy,连接词用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was a small habit ____ changed the way our whole family lives.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "被强调部分 a small habit 指物,强调句用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is the ocean ____ produces about half of the oxygen we breathe.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调的是事物 the ocean,连接词用 that。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It was the rising temperature ____ made the glaciers slowly retreat.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "被强调部分指事物,强调句一律用 that,不用 which。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "It is the rubbish left on the beaches ____ finally flows into the sea.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调的是物 the rubbish,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was in 1958 ____ the carbon dioxide in the air was first measured carefully.",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "强调句强调时间状语 in 1958,连接词用 that,不用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is in the polar regions ____ the effects of warming show up first.",
+      "options": [
+        "where",
+        "that",
+        "when",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "强调地点状语 in the polar regions,强调句用 that,不用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was because of human activity ____ too much carbon dioxide built up.",
+      "options": [
+        "why",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "强调原因状语 because of human activity,连接词用 that,不用 why。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is on the beaches ____ most of the plastic rubbish finally ends up.",
+      "options": [
+        "where",
+        "when",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调地点状语 on the beaches,强调句用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was step by step ____ the family slowly reduced its carbon footprint.",
+      "options": [
+        "that",
+        "which",
+        "when",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "强调方式状语 step by step,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is at night ____ the Earth loses heat by radiating it into space.",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "强调时间状语 at night,强调句用 that,不用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was in Costa Rica ____ the young environmentalist saved a rainforest.",
+      "options": [
+        "where",
+        "when",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "强调地点状语 in Costa Rica,连接词用 that,不用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is only with everyone's help ____ we can really slow global warming.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调方式/条件状语,强调句用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was during the last century ____ the forests began to disappear quickly.",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "强调时间状语 during the last century,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is in the huge Antarctic ice cap ____ most of the world's ice is found.",
+      "options": [
+        "where",
+        "that",
+        "when",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "强调地点状语,强调句用 that,不用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was for this reason ____ the school decided to start a recycling project.",
+      "options": [
+        "why",
+        "when",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "强调原因状语 for this reason,连接词用 that,不用 why。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is by saving energy at home ____ each of us can help the planet.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调方式状语 by saving energy,强调句用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was after the survey ____ people realised how serious the problem was.",
+      "options": [
+        "that",
+        "when",
+        "where",
+        "which"
+      ],
+      "answer_index": 0,
+      "explanation": "强调时间状语 after the survey,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is near the equator ____ many dry areas now suffer long droughts.",
+      "options": [
+        "where",
+        "that",
+        "when",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "强调地点状语 near the equator,强调句用 that,不用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was little by little ____ the sea level began to rise along the coast.",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "强调方式状语 little by little,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is every weekend ____ the volunteers gather to clean up the river.",
+      "options": [
+        "when",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调时间状语 every weekend,强调句用 that,不用 when。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was through cutting down forests ____ humans made the problem worse.",
+      "options": [
+        "that",
+        "which",
+        "when",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "强调方式状语,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is in the oceans ____ a huge quantity of waste ends up each year.",
+      "options": [
+        "where",
+        "that",
+        "when",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "强调地点状语 in the oceans,强调句用 that,不用 where。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It was not long ago ____ people first heard the words 'carbon footprint'.",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "强调时间状语 not long ago,连接词用 that。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "It is for the sake of our children ____ we must protect the Earth now.",
+      "options": [
+        "why",
+        "when",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调原因/目的状语,强调句用 that,不用 why。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until midnight ____ the rescue team reached the flooded village.",
+      "options": [
+        "that",
+        "when",
+        "until",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "It was not until … that … 是固定的强调结构,空格用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until the ice began to melt ____ people saw the real danger.",
+      "options": [
+        "when",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "not until 强调结构,主句前用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until 2020 ____ the city finally banned thin plastic bags.",
+      "options": [
+        "when",
+        "where",
+        "that",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "It was not until + 时间 + that…,空格用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is not until rubbish is picked up ____ the beach becomes safe again.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "not until 强调结构,连接用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until the forests disappeared ____ less carbon dioxide was removed.",
+      "options": [
+        "that",
+        "when",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "It was not until … that … 强调,空格用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until the survey came out ____ we understood the whole problem.",
+      "options": [
+        "when",
+        "that",
+        "where",
+        "which"
+      ],
+      "answer_index": 1,
+      "explanation": "not until 强调结构,用 that 连接主句。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is not until we act together ____ global warming can really be slowed.",
+      "options": [
+        "when",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "It is not until … that … 强调,空格用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until last year ____ our school started sorting its waste.",
+      "options": [
+        "when",
+        "where",
+        "which",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "It was not until + 时间 + that…,空格用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Was it the greenhouse effect ____ caused the temperature to rise so fast?",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "一般疑问句强调结构 Was it … that …,强调物用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Is it really plastic ____ does the most harm to the sea turtles?",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句一般疑问形式 Is it … that …,强调物用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Was it carbon dioxide ____ the plants needed to make their own food?",
+      "options": [
+        "which",
+        "what",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "Was it … that … 强调结构,强调物用 that,不用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Is it clean energy ____ our country is turning to in order to cut emissions?",
+      "options": [
+        "which",
+        "what",
+        "who",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调句一般疑问形式,强调物用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was the volunteers ____ first cleaned up that part of the coast.",
+      "options": [
+        "who",
+        "which",
+        "what",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "强调作主语的人 the volunteers,连接词用 who。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Is it the young environmentalist ____ leads the rainforest project now?",
+      "options": [
+        "which",
+        "who",
+        "what",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句一般疑问形式,强调的是人,用 who。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was only after the flood ____ the town built much higher sea walls.",
+      "options": [
+        "when",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "强调时间状语 only after the flood,连接词用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was by reducing packaging ____ the shop cut its waste in half.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "强调方式状语 by reducing packaging,强调句用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is the rising sea ____ threatens many low-lying coastal cities today.",
+      "options": [
+        "that",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer_index": 0,
+      "explanation": "强调作主语的事物 the rising sea,连接词用 that,不用 which。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was the melting glaciers ____ first showed the world the real danger.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调作主语的事物,强调句用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is everyone's small effort ____ adds up to one big change in the end.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "强调作主语的事物 everyone's small effort,连接词用 that。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It was not until the air grew dirty ____ the old factory was finally closed.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "It was not until … that … 强调结构,空格用 that。"
+    }
+  ]
+}

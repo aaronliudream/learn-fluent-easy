@@ -1,0 +1,87 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Write a Summary of a Claim-Counterclaim Essay(为一篇立论—驳论文写摘要)",
+  "title_en": "Should Historical Buildings Be Reconstructed or Removed?",
+  "genre": "摘要 / summary(概括一篇关于是否保护历史建筑的立论—驳论文)",
+  "source": "上外版选必四 Unit 3 Writing:writing a summary of a claim-counterclaim essay(用自己的话概括原文的主张、论据与反驳)。",
+  "prompt_cn": "假设你读了一篇题为《城市里的历史建筑该重建或拆除吗?》的博客。原文认为有丰富文化价值的历史建筑不应被重建或拆除:支持拆除者认为旧建筑过时、难与现代建筑相融,且不翻新会贬值;但作者反驳说旧建筑吸引各国游客、是经济的推动力,还能反映文化、增强民族认同。请用英语写一篇约60词的摘要,做到:① 用自己的话(同义替换、改变句式);② 只保留最重要的观点;③ 保持原文原意、不加入个人评论。",
+  "prompt_en": "You have read a blog titled “Should Historical Buildings in the City Be Reconstructed or Removed?” Write a summary of about 60 words. You should: 1) use your own words (synonyms and changed sentence structures); 2) keep only the most important points; 3) keep the original meaning without adding your own opinion.",
+  "points": [
+    "点明原文主张(有文化价值的历史建筑不应被拆除或重建)",
+    "概括赞成拆除一方的理由(过时、难融现代、不翻新会贬值)",
+    "概括作者的反驳(吸引游客、推动经济、反映文化、增强认同)",
+    "用自己的话改写、不照抄、不加评论"
+  ],
+  "word_count": "60 词左右",
+  "model_essay": "The blog argues that historical buildings of rich cultural value should be kept rather than rebuilt or pulled down. Some claim such buildings are outdated and hard to fit with modern cities, and that unused ones lose their worth. However, the writer replies that old sites draw tourists, boost the economy, reflect culture and strengthen national identity, so they deserve protection.",
+  "model_translation": "这篇博客主张:具有丰富文化价值的历史建筑应当保留,而非重建或拆除。有人声称这些建筑过时、难以与现代城市相融,且闲置不用会贬值。然而作者回应说,古迹能吸引游客、拉动经济、反映文化并增强民族认同,因此值得保护。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      {
+        "dimension": "内容要点",
+        "max": 6,
+        "criteria": "抓住三要素:原文主张 / 赞成拆除方理由 / 作者反驳;不漏不偏"
+      },
+      {
+        "dimension": "结构",
+        "max": 4,
+        "criteria": "先主张后双方、逻辑清楚、连接自然、约60词"
+      },
+      {
+        "dimension": "语言",
+        "max": 5,
+        "criteria": "同义替换与句式转换到位、未照抄、语法基本无误、无个人评论"
+      }
+    ],
+    "required_structure": [
+      "主张 The blog argues that historical buildings… should be kept…",
+      "一方 Some claim such buildings are outdated…",
+      "反驳 However, the writer replies that old sites draw tourists…",
+      "结论 …so they deserve protection."
+    ],
+    "key_expressions": [
+      "The blog argues that historical buildings of rich cultural value should be kept.",
+      "Some claim such buildings are outdated and hard to fit with modern cities.",
+      "The writer replies that old sites draw tourists and boost the economy.",
+      "They reflect culture and strengthen national identity."
+    ],
+    "useful_words": [
+      "summary",
+      "argue",
+      "claim",
+      "outdated",
+      "reconstruct",
+      "remove",
+      "heritage",
+      "tourist",
+      "economy",
+      "identity"
+    ]
+  },
+  "high_sentences": [
+    "The blog argues that historical buildings of rich cultural value should be kept rather than rebuilt or pulled down.",
+    "Some claim such buildings are outdated and hard to fit with modern cities.",
+    "The writer replies that old sites draw tourists, boost the economy and reflect culture.",
+    "For these reasons, historical buildings deserve to be protected."
+  ],
+  "error_pairs": [
+    {
+      "wrong": "The blog argue that…",
+      "correct": "The blog argues that…",
+      "note": "主语第三人称单数,动词加 s。"
+    },
+    {
+      "wrong": "Such buildings are hard to fit modern cities.",
+      "correct": "Such buildings are hard to fit with modern cities.",
+      "note": "fit with sth 与……相融,需介词 with。"
+    },
+    {
+      "wrong": "In a summary, I think old buildings are beautiful.",
+      "correct": "The writer believes old buildings are valuable.",
+      "note": "摘要不得加入个人评论(I think),应转述原作者观点。"
+    }
+  ],
+  "paragraph_template": "【立论—驳论文摘要结构】\n第1句 原文主张:The blog argues that… should be kept.\n第2句 赞成拆除方:Some claim such buildings are outdated…\n第3句 作者反驳:However, the writer replies that…\n第4句 收束:…so they deserve protection."
+}

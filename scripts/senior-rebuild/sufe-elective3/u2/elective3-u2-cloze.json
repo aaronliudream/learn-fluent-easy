@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Cherishing Friendship",
+  "source": "上外版选择性必修三 Unit 2 同主题完形(新生第一周/感谢信/朋友助我成长/雨天/维系老友/一句善言)。用词限本单元/初高中常见词,4选项同词性,答案唯一无双解,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A New Student's First Week",
+      "text": "Moving to a new school can feel very lonely. On my first (1)____, I knew nobody and ate lunch all by myself. A boy named Sam (2)____ that I looked sad and came over to sit beside me. He had such a warm (3)____ that we were soon chatting like old friends. He (4)____ his snacks with me and showed me around the building. By the end of the (5)____, I no longer felt like a stranger. Sam even (6)____ me to his other classmates, who were all very (7)____ to me. That small act of (8)____ completely changed my week. Now I always try to (9)____ new students, because I still remember how much a single friendly (10)____ can mean.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "day",
+            "trip",
+            "exam",
+            "party"
+          ],
+          "answer_index": 0,
+          "explanation": "first day 第一天,与下文'吃午饭'对应。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "noticed",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "noticed that I looked sad 注意到我看起来难过。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "smile",
+            "coin"
+          ],
+          "answer_index": 2,
+          "explanation": "a warm smile 温暖的微笑。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "threw",
+            "hid",
+            "sold",
+            "shared"
+          ],
+          "answer_index": 3,
+          "explanation": "shared his snacks with me 和我分享零食。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "week",
+            "metre",
+            "coin",
+            "second"
+          ],
+          "answer_index": 0,
+          "explanation": "by the end of the week 到这周结束时。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refused",
+            "introduced",
+            "dropped",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "introduced me to his classmates 把我介绍给同学。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "angry",
+            "asleep",
+            "kind",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "very kind to me 对我很友善。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "anger",
+            "noise",
+            "dust",
+            "kindness"
+          ],
+          "answer_index": 3,
+          "explanation": "an act of kindness 善举。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "welcome",
+            "ignore",
+            "blame",
+            "push"
+          ],
+          "answer_index": 0,
+          "explanation": "welcome new students 欢迎新同学。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "storm",
+            "gesture",
+            "price",
+            "mistake"
+          ],
+          "answer_index": 1,
+          "explanation": "a friendly gesture 友好的举动。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Thank-You Letter",
+      "text": "Dear Anna, I am writing this letter to say a big thank-you. When I first arrived, I was a (1)____ student who knew no one at all. You were the first person to show me real (2)____. Whenever I felt down, you always (3)____ me, and you never (4)____ how much that meant to me. I still remember the day you (5)____ my heavy bags and walked me home in the rain. Your (6)____ has made my whole year so much (7)____. A good friend like you is really hard to (8)____. I feel truly (9)____ to have met you. Thank you for everything, and I hope our friendship will last for many (10)____. Your friend, Lily.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rich",
+            "tall",
+            "new",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "a new student 一个新生。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "anger",
+            "noise",
+            "dirt",
+            "kindness"
+          ],
+          "answer_index": 3,
+          "explanation": "real kindness 真正的善意。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "helped",
+            "blamed",
+            "left",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "you always helped me 你总是帮我。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "enjoyed",
+            "underestimated",
+            "opened",
+            "counted"
+          ],
+          "answer_index": 1,
+          "explanation": "never underestimated 从不低估。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "dropped",
+            "sold",
+            "carried",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "carried my heavy bags 帮我提沉重的包。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "price",
+            "noise",
+            "friendship"
+          ],
+          "answer_index": 3,
+          "explanation": "Your friendship 你的友谊。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "brighter",
+            "colder",
+            "darker",
+            "emptier"
+          ],
+          "answer_index": 0,
+          "explanation": "so much brighter 美好得多。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "throw",
+            "find",
+            "sell",
+            "spend"
+          ],
+          "answer_index": 1,
+          "explanation": "hard to find 很难找到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "bored",
+            "grateful",
+            "sorry"
+          ],
+          "answer_index": 2,
+          "explanation": "truly grateful 真心感激。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "metres",
+            "coins",
+            "seconds",
+            "years"
+          ],
+          "answer_index": 3,
+          "explanation": "many years 许多年。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "How Friends Help Us Grow",
+      "text": "Good friends do much more than keep us company. They help us (1)____ into better people. When I lost my (2)____ before a big exam, my friends cheered me up and told me not to give (3)____. Their kind words gave me back my (4)____. A true friend is also honest, like a clear (5)____ that shows you who you really are. Sometimes a friend will gently tell you a hard (6)____ that others are afraid to mention. This kind of honesty helps us (7)____ our mistakes. Of course, friendship works both (8)____. We must also be ready to (9)____ our friends when they are in trouble. In this way, we grow (10)____ together, year after year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "grow",
+            "fall",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "grow into better people 成长为更好的人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "coin",
+            "courage",
+            "map",
+            "key"
+          ],
+          "answer_index": 1,
+          "explanation": "lost my courage 失去勇气。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "off",
+            "away",
+            "up",
+            "down"
+          ],
+          "answer_index": 2,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dust",
+            "noise",
+            "price",
+            "hope"
+          ],
+          "answer_index": 3,
+          "explanation": "gave me back my hope 让我重拾希望。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mirror",
+            "window",
+            "door",
+            "wall"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear mirror 一面清晰的镜子。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "truth",
+            "price",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "a hard truth 一个难以接受的真相。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hide",
+            "sell",
+            "fix",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "fix our mistakes 改正错误。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "days",
+            "prices",
+            "coins",
+            "ways"
+          ],
+          "answer_index": 3,
+          "explanation": "both ways 双向的。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "support",
+            "blame",
+            "ignore",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "support our friends 支持朋友。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "weaker",
+            "stronger",
+            "poorer",
+            "shorter"
+          ],
+          "answer_index": 1,
+          "explanation": "grow stronger together 一起变得更坚强。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Rainy Day Turned Bright",
+      "text": "It was pouring with rain, and I had forgotten my (1)____. Standing at the school gate, I watched everyone hurry home and felt quite (2)____. Just then my classmate Ben (3)____ over and offered to share his umbrella. We (4)____ home together, laughing as we jumped over the (5)____ in the road. On the way, he told me a funny (6)____ that made me forget the bad weather. By the time we reached my house, I was no longer (7)____. Such a small (8)____ of kindness completely changed my afternoon. Ben did not have to (9)____ me, but he chose to. That rainy day taught me how a good friend can turn even the worst day into a (10)____ one.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "pencil",
+            "ticket",
+            "umbrella",
+            "coin"
+          ],
+          "answer_index": 2,
+          "explanation": "forgotten my umbrella 忘带伞。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rich",
+            "tall",
+            "asleep",
+            "alone"
+          ],
+          "answer_index": 3,
+          "explanation": "felt quite alone 感到很孤单。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "came",
+            "sold",
+            "lost",
+            "threw"
+          ],
+          "answer_index": 0,
+          "explanation": "came over 走过来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "walked",
+            "threw",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "walked home together 一起走回家。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "books",
+            "coins",
+            "pools",
+            "walls"
+          ],
+          "answer_index": 2,
+          "explanation": "jumped over the pools 跳过水洼。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "wall",
+            "story"
+          ],
+          "answer_index": 3,
+          "explanation": "a funny story 一个有趣的故事。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sad",
+            "glad",
+            "rich",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "no longer sad 不再难过。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "act",
+            "noise",
+            "coin"
+          ],
+          "answer_index": 1,
+          "explanation": "a small act of kindness 一个小小的善举。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sleep",
+            "sell",
+            "help",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "did not have to help me 本不必帮我。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dark",
+            "cold",
+            "empty",
+            "bright"
+          ],
+          "answer_index": 3,
+          "explanation": "a bright one 美好的一天。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Keeping Old Friends Close",
+      "text": "Making new friends is exciting, but keeping old (1)____ is just as important. As we grow up, our busy lives can slowly (2)____ us apart. That is why we must put in real (3)____ to stay close. A short message or a quick (4)____ can remind an old friend that you still (5)____. Whenever my best friend has a problem, I try to be (6)____ for her, even though we live far apart. Last month I travelled for hours just to (7)____ her birthday with her. She was so (8)____ that I came all that way. Old friendships are like old trees: they need time and care to stay (9)____. If we look after them well, they can last a (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "friends",
+            "coins",
+            "books",
+            "walls"
+          ],
+          "answer_index": 0,
+          "explanation": "old friends 老朋友。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "drive",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "drive us apart 使我们疏远。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "effort",
+            "dust"
+          ],
+          "answer_index": 2,
+          "explanation": "real effort 真正的努力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "wall",
+            "coin",
+            "storm",
+            "call"
+          ],
+          "answer_index": 3,
+          "explanation": "a quick call 一个简短的电话。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "care",
+            "sell",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "you still care 你仍然在乎。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "rich",
+            "there",
+            "tall",
+            "asleep"
+          ],
+          "answer_index": 1,
+          "explanation": "be there for her 在她身边支持她。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "drop",
+            "share",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "share her birthday 一起度过她的生日。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "tired",
+            "happy"
+          ],
+          "answer_index": 3,
+          "explanation": "so happy that I came 因我赶来而高兴。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "strong",
+            "weak",
+            "poor",
+            "short"
+          ],
+          "answer_index": 0,
+          "explanation": "stay strong 保持牢固。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "second",
+            "lifetime",
+            "metre",
+            "coin"
+          ],
+          "answer_index": 1,
+          "explanation": "last a lifetime 持续一生。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Power of a Kind Word",
+      "text": "We often (1)____ how much a single kind word can do. One morning a new boy in our class looked nervous and (2)____. I simply smiled and said, \"Welcome — sit with us.\" His worried face lit up at (3)____. From that day on, he was no longer (4)____, and he soon became one of my closest (5)____. A small (6)____ costs nothing, yet it can change someone's whole day. Kind words can give a worried person back his (7)____ and help him feel that he (8)____ here. We should never be too busy to (9)____ others. After all, the friendships that matter most often begin with one (10)____ act of kindness.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "enjoy",
+            "count",
+            "underestimate",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "often underestimate 常常低估。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rich",
+            "tall",
+            "busy",
+            "alone"
+          ],
+          "answer_index": 3,
+          "explanation": "nervous and alone 紧张又孤单。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "once",
+            "wall",
+            "coin",
+            "storm"
+          ],
+          "answer_index": 0,
+          "explanation": "lit up at once 立刻亮了起来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "happy",
+            "lonely",
+            "rich",
+            "tall"
+          ],
+          "answer_index": 1,
+          "explanation": "no longer lonely 不再孤单。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "coins",
+            "books",
+            "friends",
+            "walls"
+          ],
+          "answer_index": 2,
+          "explanation": "closest friends 最亲密的朋友。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "dust",
+            "gesture"
+          ],
+          "answer_index": 3,
+          "explanation": "a small gesture 一个小举动。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "confidence",
+            "coin",
+            "map",
+            "key"
+          ],
+          "answer_index": 0,
+          "explanation": "back his confidence 重拾信心。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "belongs",
+            "loses",
+            "hides"
+          ],
+          "answer_index": 1,
+          "explanation": "feel that he belongs 感到自己属于这里。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "throw",
+            "help",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "too busy to help others 忙得顾不上帮别人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "angry",
+            "empty",
+            "cold",
+            "simple"
+          ],
+          "answer_index": 3,
+          "explanation": "one simple act 一个简单的举动。"
+        }
+      ]
+    }
+  ]
+}

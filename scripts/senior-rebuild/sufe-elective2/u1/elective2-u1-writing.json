@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Write a descriptive essay about exploring science(描写一次探索科学的经历)",
+  "title_en": "An Unforgettable Science Experience",
+  "genre": "记叙 / 描写文(descriptive essay with sensory details and dialogue)",
+  "source": "上外版选择性必修第二册 Unit 1 Writing:write a descriptive essay to share your experience of exploring science(用感官细节与对话描写一次探索科学的经历)。",
+  "prompt_cn": "你所在学校的科学社团下个月将庆祝成立四周年，邀请你写一篇英语短文，分享一次你探索科学的个人经历(可以是听的一次科学讲座、做的一个实验、参观科技馆、和朋友玩的科学游戏等)。要求:① 写清时间、地点和你做了什么;② 用感官细节(看到/听到/感到)和一句对话让描写生动;③ 表达你的感受。约100-120词。",
+  "prompt_en": "Your school science society is celebrating its fourth anniversary next month. Write a short essay (about 100-120 words) sharing a personal experience of exploring science — a lecture you attended, an experiment you did, a visit to a science museum, or a science game you played. Make sure to: 1) say when and where it was and what you did; 2) use sensory details and at least one line of dialogue to make the writing vivid; 3) describe how you felt.",
+  "points": [
+    "交代时间地点与所做的事(Last week, our class visited …)",
+    "用感官细节让画面生动(I saw … / I could hear … / It felt …)",
+    "用一句对话增添真实感(\"That's so cool!\" I said.)",
+    "结尾表达感受(I left with a feeling of joy and wonder.)"
+  ],
+  "word_count": "100-120 词",
+  "model_essay": "Last week, our class visited a science fair, and I was so excited that I could hardly sleep the night before. The hall was crowded with students and bright with colourful models. What interested me most was a model of the human body powered by electricity. I could see the heart and lungs working clearly before my eyes. \"That's so cool!\" I said, leaning closer. The boy who had built it glowed with pride. \"I'm always fascinated by how our body works,\" he told me with a smile. The whole place was full of amazing inventions and curious faces. I left the fair with a feeling of joy and wonder, and I made up my mind to bring my own model rocket next year.",
+  "model_translation": "上周，我们班参观了一个科学展，我激动得前一晚几乎睡不着。展厅里挤满了学生，到处是色彩缤纷的模型。最让我感兴趣的是一个用电力驱动的人体模型。我能清清楚楚地看到心脏和肺在我眼前工作。\"太酷了!\"我凑近说道。做模型的男孩满脸自豪。\"我一直对身体如何运作着迷，\"他笑着对我说。整个场地都是奇妙的发明和好奇的面孔。我带着喜悦与惊叹离开了科学展，并下定决心明年带上我自己的火箭模型。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:交代时间地点与所做的事 / 感官细节与对话 / 个人感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一次经历展开、按顺序描写、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing/-ed 形式作表语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头交代 Last week, our class visited …",
+      "感官细节 I could see / hear / feel …",
+      "对话 \"That's so cool!\" I said.",
+      "结尾感受 I left with a feeling of joy and wonder."
+    ],
+    "key_expressions": [
+      "I was so excited that I could hardly sleep the night before.",
+      "What interested me most was a model powered by electricity.",
+      "I could see the heart and lungs working clearly before my eyes.",
+      "I left the fair with a feeling of joy and wonder."
+    ],
+    "useful_words": ["science fair", "model", "electricity", "fascinated", "amazing", "curious", "experiment", "inspired", "wonder", "explore"]
+  },
+  "high_sentences": [
+    "I was so excited that I could hardly sleep the night before.",
+    "What interested me most was a model of the human body powered by electricity.",
+    "The boy who had built it glowed with pride.",
+    "I left the fair with a feeling of joy and wonder."
+  ],
+  "error_pairs": [
+    { "wrong": "The experiment was very interested.", "correct": "The experiment was very interesting.", "note": "主语是事物用 -ing 形式作表语。" },
+    { "wrong": "I was so exciting that I could not sleep.", "correct": "I was so excited that I could not sleep.", "note": "主语是人用 -ed 形式作表语。" },
+    { "wrong": "My dream is become a scientist.", "correct": "My dream is becoming a scientist.", "note": "'dream is + V-ing' 用 -ing 形式作表语。" }
+  ],
+  "paragraph_template": "【探索科学经历·描写文结构】\n第1句 交代时间地点与事件:Last week, our class visited …\n第2-4句 感官细节+对话:I could see/hear … \"That's so cool!\" I said.\n第5句 结尾感受:I left with a feeling of joy and wonder."
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grammar_title": "复合动名词(被动式 being done / 完成式 having done / 否定式与逻辑主语 complex -ing)",
+  "source": "上外版选择性必修二 Unit 4 Grammar in Use:复合动名词。句子地道、围绕灾难求生主题,答案唯一(干扰项为语态/时间/否定上不成立的-ing形式)。零术语、应用型填空。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "被动式动名词 being done(动作的承受者)",
+      "overview": "当 -ing 形式的逻辑主语是动作的承受者(被…)时,介词后或作主语/宾语用被动式动名词 being done。"
+    },
+    {
+      "code": "u4.02",
+      "point": "完成式动名词 having done(先于主句的动作)",
+      "overview": "当 -ing 表示的动作主动发生、且明显早于主句动作完成时,用完成式 having done。"
+    },
+    {
+      "code": "u4.03",
+      "point": "否定式 not doing 与带逻辑主语的复合动名词 sb doing",
+      "overview": "在 -ing 前加 not 构成否定式;-ing 前可带自己的逻辑主语(代词/名词)构成复合结构。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "The little boy was terrified of ____ under the broken wall.",
+      "options": [
+        "being buried",
+        "burying",
+        "having buried",
+        "to bury"
+      ],
+      "answer_index": 0,
+      "explanation": "男孩是被埋的承受者,介词 of 后用被动式动名词 being buried;burying 表主动埋别人,与句意不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "No one enjoys ____ alone in the dark during a long power cut.",
+      "options": [
+        "leaving",
+        "being left",
+        "having left",
+        "to leave"
+      ],
+      "answer_index": 1,
+      "explanation": "人是被独自留下的对象,用被动式 being left;leaving 表主动离开,意思相反。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The trapped miners had little hope of ____ before their air ran out.",
+      "options": [
+        "rescuing",
+        "having rescued",
+        "being rescued",
+        "to rescue"
+      ],
+      "answer_index": 2,
+      "explanation": "矿工是被营救的对象,of 后用被动式 being rescued。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "These old houses are in real danger of ____ down in the next quake.",
+      "options": [
+        "knocking",
+        "having knocked",
+        "to knock",
+        "being knocked"
+      ],
+      "answer_index": 3,
+      "explanation": "房子是被震倒的承受者,用被动式 being knocked down。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The villagers were afraid of ____ by the fast-rising flood water.",
+      "options": [
+        "being trapped",
+        "trapping",
+        "having trapped",
+        "to trap"
+      ],
+      "answer_index": 0,
+      "explanation": "村民是被困的对象,of 后用被动式 being trapped。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The injured man was carried out without ____ by anyone in the crowd.",
+      "options": [
+        "noticing",
+        "being noticed",
+        "having noticed",
+        "to notice"
+      ],
+      "answer_index": 1,
+      "explanation": "他是被注意的对象,without 后用被动式 being noticed。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She hated ____ in the crowded shelter with no news for hours.",
+      "options": [
+        "keeping",
+        "having kept",
+        "being kept",
+        "to keep"
+      ],
+      "answer_index": 2,
+      "explanation": "她是被滞留的对象,用被动式 being kept;keeping 表主动保留某物,与句意不符。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The villagers still remember ____ of the coming typhoon by the radio.",
+      "options": [
+        "warning",
+        "having warned",
+        "to warn",
+        "being warned"
+      ],
+      "answer_index": 3,
+      "explanation": "村民是被警告的对象,用被动式 being warned。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "After ____ from the rubble at last, the child cried with joy.",
+      "options": [
+        "being pulled",
+        "pulling",
+        "having pulled",
+        "to pull"
+      ],
+      "answer_index": 0,
+      "explanation": "孩子是被拉出的对象,after 后用被动式 being pulled。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The frightened dog was scared of ____ behind in the flooded house.",
+      "options": [
+        "leaving",
+        "being left",
+        "having left",
+        "to leave"
+      ],
+      "answer_index": 1,
+      "explanation": "狗是被留下的对象,of 后用被动式 being left。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A good shelter saves people from ____ by falling stones.",
+      "options": [
+        "hitting",
+        "having hit",
+        "being hit",
+        "to hit"
+      ],
+      "answer_index": 2,
+      "explanation": "人是被砸的对象,save sb from 后用被动式 being hit。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The old bridge was at risk of ____ away by the powerful flood.",
+      "options": [
+        "washing",
+        "having washed",
+        "to wash",
+        "being washed"
+      ],
+      "answer_index": 3,
+      "explanation": "桥是被冲走的对象,of 后用被动式 being washed away。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Nobody likes ____ woken by a loud alarm in the middle of the night.",
+      "options": [
+        "being woken",
+        "waking",
+        "having woken",
+        "to wake"
+      ],
+      "answer_index": 0,
+      "explanation": "人是被吵醒的对象,用被动式 being woken。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The climbers were in danger of ____ by a sudden avalanche.",
+      "options": [
+        "burying",
+        "being buried",
+        "having buried",
+        "to bury"
+      ],
+      "answer_index": 1,
+      "explanation": "登山者是被掩埋的对象,of 后用被动式 being buried。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He escaped from the building without ____ by the falling bricks.",
+      "options": [
+        "striking",
+        "having struck",
+        "being struck",
+        "to strike"
+      ],
+      "answer_index": 2,
+      "explanation": "他是被砸的对象,without 后用被动式 being struck。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The low town could not avoid ____ by the huge waves of the storm.",
+      "options": [
+        "flooding",
+        "having flooded",
+        "to flood",
+        "being flooded"
+      ],
+      "answer_index": 3,
+      "explanation": "城镇是被淹的对象,avoid 后用被动式 being flooded。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Important papers should be kept dry to stop them from ____ in the flood.",
+      "options": [
+        "being ruined",
+        "ruining",
+        "having ruined",
+        "to ruin"
+      ],
+      "answer_index": 0,
+      "explanation": "文件是被毁坏的对象,stop...from 后用被动式 being ruined。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The little cat hid under the bed to keep from ____ during the quake.",
+      "options": [
+        "seeing",
+        "being seen",
+        "having seen",
+        "to see"
+      ],
+      "answer_index": 1,
+      "explanation": "猫是被看见的对象,keep from 后用被动式 being seen。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Several survivors spoke of ____ for hours before any help arrived.",
+      "options": [
+        "trapping",
+        "having trapped",
+        "being trapped",
+        "to trap"
+      ],
+      "answer_index": 2,
+      "explanation": "幸存者是被困的对象,of 后用被动式 being trapped。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The little girl was proud of ____ to safety by the brave firefighter.",
+      "options": [
+        "carrying",
+        "having carried",
+        "to carry",
+        "being carried"
+      ],
+      "answer_index": 3,
+      "explanation": "女孩是被抱到安全处的对象,of 后用被动式 being carried。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ everything they owned in the flood, the family had to start again.",
+      "options": [
+        "Having lost",
+        "Being lost",
+        "Having been lost",
+        "To lose"
+      ],
+      "answer_index": 0,
+      "explanation": "他们主动失去财物且早于主句,用完成式 Having lost;被动式与句意不符。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the residents in good time, the police moved on to the next village.",
+      "options": [
+        "Being warned",
+        "Having warned",
+        "Having been warned",
+        "To warn"
+      ],
+      "answer_index": 1,
+      "explanation": "警察先警告了居民再前往,主动且在先,用 Having warned。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The rescuer was proud of ____ ten people the day before.",
+      "options": [
+        "being saved",
+        "having been saved",
+        "having saved",
+        "to save"
+      ],
+      "answer_index": 2,
+      "explanation": "救援者主动救人且发生在'前一天',of 后用完成式 having saved。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ through several earthquakes, the old man stayed calm this time.",
+      "options": [
+        "Being lived",
+        "Having been lived",
+        "To live",
+        "Having lived"
+      ],
+      "answer_index": 3,
+      "explanation": "老人经历过多次地震在先,用主动完成式 Having lived through。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ their homes to the fire, the villagers were still grateful to be alive.",
+      "options": [
+        "Having lost",
+        "Being lost",
+        "Having been lost",
+        "To lose"
+      ],
+      "answer_index": 0,
+      "explanation": "村民先失去家园,主动且在先,用 Having lost。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She thanked the soldiers for ____ her family well before the dam broke.",
+      "options": [
+        "being warned",
+        "having warned",
+        "having been warned",
+        "to warn"
+      ],
+      "answer_index": 1,
+      "explanation": "士兵主动警告且在大坝决堤'之前',for 后用完成式 having warned。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ a strong shelter earlier, they felt safe when the typhoon came.",
+      "options": [
+        "Being built",
+        "Having been built",
+        "Having built",
+        "To build"
+      ],
+      "answer_index": 2,
+      "explanation": "他们更早就建好了避难所,主动且在先,用 Having built。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ everyone out of the building, the firefighters finally took a rest.",
+      "options": [
+        "Being led",
+        "Having been led",
+        "To lead",
+        "Having led"
+      ],
+      "answer_index": 3,
+      "explanation": "消防员先把人带出再休息,主动在先,用 Having led。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The captain was praised for ____ all the passengers before the ship sank.",
+      "options": [
+        "having saved",
+        "being saved",
+        "having been saved",
+        "to save"
+      ],
+      "answer_index": 0,
+      "explanation": "船长主动救人且在沉船'之前',for 后用完成式 having saved。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the danger before others, he was able to warn the whole street.",
+      "options": [
+        "Being seen",
+        "Having seen",
+        "Having been seen",
+        "To see"
+      ],
+      "answer_index": 1,
+      "explanation": "他先看出危险才去示警,主动在先,用 Having seen。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ many lives in past floods, the river was finally controlled by a new dam.",
+      "options": [
+        "Being taken",
+        "Having been taken",
+        "Having taken",
+        "To take"
+      ],
+      "answer_index": 2,
+      "explanation": "河流过去夺去许多生命在先,主动用 Having taken。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "After ____ for help for hours, the trapped workers heard the rescue team.",
+      "options": [
+        "being shouted",
+        "having been shouted",
+        "to shout",
+        "having shouted"
+      ],
+      "answer_index": 3,
+      "explanation": "他们主动呼救数小时在先,after 后用主动完成式 having shouted;shout 不及物,无被动。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ all our water on the first day, we had nothing left to drink later.",
+      "options": [
+        "Having used",
+        "Being used",
+        "Having been used",
+        "To use"
+      ],
+      "answer_index": 0,
+      "explanation": "我们先用光了水,主动在先,用 Having used。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He felt sorry for ____ the warning, which had cost the family their home.",
+      "options": [
+        "being ignored",
+        "having ignored",
+        "having been ignored",
+        "to ignore"
+      ],
+      "answer_index": 1,
+      "explanation": "他主动忽视了警告在先,for 后用完成式 having ignored。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ a kit ready well in advance, they faced the typhoon quite calmly.",
+      "options": [
+        "Being prepared",
+        "Having been prepared",
+        "Having prepared",
+        "To prepare"
+      ],
+      "answer_index": 2,
+      "explanation": "他们事先备好了求生包,主动在先,用 Having prepared。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The town was proud of ____ thousands of people during the great flood.",
+      "options": [
+        "being sheltered",
+        "having been sheltered",
+        "to shelter",
+        "having sheltered"
+      ],
+      "answer_index": 3,
+      "explanation": "小镇主动收容了数千人,of 后用完成式 having sheltered。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from the avalanche just in time, the skiers hugged each other.",
+      "options": [
+        "Having escaped",
+        "Being escaped",
+        "Having been escaped",
+        "To escape"
+      ],
+      "answer_index": 0,
+      "explanation": "滑雪者先逃出雪崩再相拥,主动在先;escape 不及物,无被动,用 Having escaped。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She remembered ____ the gas before leaving, so she felt relieved.",
+      "options": [
+        "being turned off",
+        "having turned off",
+        "having been turned off",
+        "to turn off"
+      ],
+      "answer_index": 1,
+      "explanation": "她主动关了燃气且在离开'之前',用完成式 having turned off。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the children to safety first, the teacher went back for the others.",
+      "options": [
+        "Being taken",
+        "Having been taken",
+        "Having taken",
+        "To take"
+      ],
+      "answer_index": 2,
+      "explanation": "老师先把孩子带到安全处再返回,主动在先,用 Having taken。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The volunteers were thanked for ____ so much food before the roads closed.",
+      "options": [
+        "being brought",
+        "having been brought",
+        "to bring",
+        "having brought"
+      ],
+      "answer_index": 3,
+      "explanation": "志愿者主动送来食物且在封路'之前',for 后用完成式 having brought。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ what was happening, the children kept playing in the street.",
+      "options": [
+        "Not knowing",
+        "Knowing",
+        "Not known",
+        "Not having known"
+      ],
+      "answer_index": 0,
+      "explanation": "与主句同时发生、表否定原因,用否定式 Not knowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ where to hide, the tourists ran in all directions during the quake.",
+      "options": [
+        "Knowing",
+        "Not knowing",
+        "Not known",
+        "Not having known"
+      ],
+      "answer_index": 1,
+      "explanation": "不知道往哪躲(同时、否定原因),用 Not knowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The driver apologised for ____ the warning signs on the flooded road.",
+      "options": [
+        "noticing",
+        "not noticed",
+        "not noticing",
+        "not to notice"
+      ],
+      "answer_index": 2,
+      "explanation": "for 后接否定式动名词 not noticing,表'没注意到'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She blamed herself for ____ the family earlier about the storm.",
+      "options": [
+        "warning",
+        "not warned",
+        "not to warn",
+        "not warning"
+      ],
+      "answer_index": 3,
+      "explanation": "for 后用否定式动名词 not warning,表'没早点提醒'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the evacuation order, some people stayed and put themselves in danger.",
+      "options": [
+        "Not following",
+        "Following",
+        "Not followed",
+        "Not to follow"
+      ],
+      "answer_index": 0,
+      "explanation": "没听从撤离令(否定原因),用否定式 Not following。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He felt guilty about ____ enough water before the shops all closed.",
+      "options": [
+        "buying",
+        "not buying",
+        "not bought",
+        "not to buy"
+      ],
+      "answer_index": 1,
+      "explanation": "about 后用否定式动名词 not buying,表'没买够'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ for two days, the trapped hikers grew weak and cold.",
+      "options": [
+        "Not eating",
+        "Not eaten",
+        "Not having eaten",
+        "Being not eaten"
+      ],
+      "answer_index": 2,
+      "explanation": "'两天没吃东西'早于主句且需完成意味,用否定完成式 Not having eaten。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The town suffered badly for ____ ready for such a strong typhoon.",
+      "options": [
+        "being",
+        "not been",
+        "not to be",
+        "not being"
+      ],
+      "answer_index": 3,
+      "explanation": "for 后用否定式动名词 not being ready,表'没做好准备'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the gas before he left the house, the man caused a small fire.",
+      "options": [
+        "Not turning off",
+        "Turning off",
+        "Not turned off",
+        "Not to turn off"
+      ],
+      "answer_index": 0,
+      "explanation": "'没关燃气'是起火原因,用否定式 Not turning off。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I really regret ____ to the weather warning on the radio that night.",
+      "options": [
+        "listening",
+        "not listening",
+        "not listened",
+        "not to listen"
+      ],
+      "answer_index": 1,
+      "explanation": "regret 后用否定式动名词 not listening,表'后悔没听'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There is no point in us ____ in such a dangerous area any longer.",
+      "options": [
+        "stayed",
+        "to stay",
+        "staying",
+        "being stayed"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 后接动名词,逻辑主语 us + staying。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Nothing could stop the river ____ its banks during the heavy storm.",
+      "options": [
+        "broken",
+        "to break",
+        "being broken",
+        "breaking"
+      ],
+      "answer_index": 3,
+      "explanation": "stop sth doing 结构,逻辑主语 the river + breaking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We were grateful for the soldiers ____ us food and clean water.",
+      "options": [
+        "bringing",
+        "brought",
+        "to bring",
+        "being brought"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 for 后接动名词,逻辑主语 the soldiers + bringing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "I don't mind the neighbours ____ in our shelter for the night.",
+      "options": [
+        "stayed",
+        "staying",
+        "to stay",
+        "being stayed"
+      ],
+      "answer_index": 1,
+      "explanation": "mind 后接动名词,逻辑主语 the neighbours + staying。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The loud alarm prevented the family from ____ asleep in the smoke.",
+      "options": [
+        "stayed",
+        "to stay",
+        "staying",
+        "being stayed"
+      ],
+      "answer_index": 2,
+      "explanation": "prevent...from 后接动名词,逻辑主语 the family + staying。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Everyone was surprised at the firefighters ____ the fire so quickly.",
+      "options": [
+        "put out",
+        "to put out",
+        "being put out",
+        "putting out"
+      ],
+      "answer_index": 3,
+      "explanation": "at 后接动名词,逻辑主语 the firefighters + putting out。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "There is little chance of the storm ____ before midnight tonight.",
+      "options": [
+        "passing",
+        "passed",
+        "to pass",
+        "being passed"
+      ],
+      "answer_index": 0,
+      "explanation": "of 后接动名词,逻辑主语 the storm + passing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We could not imagine the water ____ so fast inside the house.",
+      "options": [
+        "risen",
+        "rising",
+        "to rise",
+        "being risen"
+      ],
+      "answer_index": 1,
+      "explanation": "imagine 后接动名词,逻辑主语 the water + rising;rise 不及物,无被动。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is no use the children ____ when the lift has already stopped.",
+      "options": [
+        "shouted",
+        "to shout",
+        "shouting",
+        "being shouted"
+      ],
+      "answer_index": 2,
+      "explanation": "It is no use doing 结构,逻辑主语 the children + shouting。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The whole rescue depended on the helicopter ____ before dark.",
+      "options": [
+        "arrived",
+        "to arrive",
+        "being arrived",
+        "arriving"
+      ],
+      "answer_index": 3,
+      "explanation": "depend on 后接动名词,逻辑主语 the helicopter + arriving;arrive 不及物,无被动。"
+    }
+  ]
+}

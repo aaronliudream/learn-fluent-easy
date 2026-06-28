@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(科学家主题，独立短文，不在阅读关出现)。短文2-3句+2题，答案转述非照抄，两题覆盖不同位置。",
+  "finalReading": {
+    "passage": "As a boy, Thomas Edison was so curious that he once sat on a nest of eggs to see if they would hatch. His many questions often puzzled his teachers, who thought he was a slow learner. But his mother trusted him and taught him at home, turning a restless child into one of the world's greatest inventors.",
+    "questions": [
+      {
+        "q": "What does the story suggest about Edison as a boy?",
+        "options": [
+          "He was extremely curious about how things worked.",
+          "He disliked learning anything new.",
+          "He was afraid of asking questions.",
+          "He was the best student in his class."
+        ],
+        "answer": "A",
+        "explanation": "原文 'so curious that he once sat on a nest of eggs' 体现他极为好奇的转述;其余与原文相反。"
+      },
+      {
+        "q": "How did Edison's mother help him?",
+        "options": [
+          "She sent him away to a famous school.",
+          "She believed in him and taught him herself.",
+          "She told him to stop asking questions.",
+          "She thought he was a slow learner too."
+        ],
+        "answer": "B",
+        "explanation": "原文 'his mother trusted him and taught him at home' 的转述;'slow learner' 是老师的看法,非母亲。"
+      }
+    ]
+  }
+}

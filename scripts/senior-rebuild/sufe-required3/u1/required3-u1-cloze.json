@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Road to Success",
+  "source": "上外版必修第三册 Unit 1 同主题完形(坚持学骑车/一次失败后再来/团队的力量/演讲前的紧张/把爱好变成本领/帮助他人也是成功)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Ride",
+      "text": "When I was eight, my father tried to teach me to ride a bike, but I was afraid of (1)____. Every time the bike moved, my heart began to (2)____ fast, and I wanted to give up. My father told me that the only way to (3)____ was to keep trying. So each evening after dinner I (4)____ in the small yard behind our house. At first I fell again and again, and my knees were always (5)____. But little by little I learned to keep my balance (6)____. One warm evening, I suddenly felt the bike moving (7)____ under me, and I did not fall. My father stood there, (8)____ at me with pride. That moment taught me an important (9)____: with enough patience, even a hard skill can be learned. Now, whenever something seems too difficult, I remember the day I finally (10)____ my fear of the bike.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "falling",
+            "eating",
+            "reading",
+            "singing"
+          ],
+          "answer_index": 0,
+          "explanation": "afraid of falling 害怕摔倒。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "beat",
+            "leave",
+            "sleep"
+          ],
+          "answer_index": 1,
+          "explanation": "heart began to beat fast 心跳加快。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "forget",
+            "lose",
+            "succeed",
+            "waste"
+          ],
+          "answer_index": 2,
+          "explanation": "the only way to succeed 成功之道。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "slept",
+            "shouted",
+            "cried",
+            "practised"
+          ],
+          "answer_index": 3,
+          "explanation": "I practised 我练习。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hurt",
+            "clean",
+            "empty",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "knees were hurt 膝盖受伤。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "worse",
+            "better",
+            "lower",
+            "louder"
+          ],
+          "answer_index": 1,
+          "explanation": "keep my balance better 平衡得更好。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sadly",
+            "angrily",
+            "smoothly",
+            "loudly"
+          ],
+          "answer_index": 2,
+          "explanation": "moving smoothly 平稳地前行。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "crying",
+            "shouting",
+            "sleeping",
+            "smiling"
+          ],
+          "answer_index": 3,
+          "explanation": "smiling at me 朝我微笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lesson",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "an important lesson 重要的一课。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forgot",
+            "overcame",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "overcame my fear 克服恐惧。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "After the First Failure",
+      "text": "My first science project was a complete (1)____. I had spent weeks on it, yet on the day of the show my model simply would not (2)____. I felt so disappointed that I almost decided to (3)____ science for good. That night, my mother sat with me and said that every great scientist had (4)____ many times before getting things right. Her words slowly (5)____ on me, and I made up my mind to (6)____ over. This time I planned my work more (7)____ and asked my teacher for advice. When the next show came, my model worked, and the judges were (8)____ with it. I learned that one failure is not the end; it is only a (9)____ to do better. Looking back, I am glad I did not let that early failure (10)____ me from trying again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "garden",
+            "failure",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "a complete failure 彻底的失败。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "sing",
+            "eat",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "would not work 不运转。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "quit",
+            "enjoy",
+            "buy",
+            "open"
+          ],
+          "answer_index": 0,
+          "explanation": "quit science 放弃科学。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "won",
+            "failed",
+            "slept",
+            "danced"
+          ],
+          "answer_index": 1,
+          "explanation": "had failed many times 失败过许多次。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "dawned",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "dawned on me 让我开始明白。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "give",
+            "look",
+            "turn",
+            "start"
+          ],
+          "answer_index": 3,
+          "explanation": "start over 重新开始。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "carefully",
+            "sadly",
+            "loudly",
+            "lazily"
+          ],
+          "answer_index": 0,
+          "explanation": "more carefully 更仔细地。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "pleased",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 1,
+          "explanation": "pleased with it 对它满意。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "chance",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a chance to do better 做得更好的机会。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "help",
+            "save",
+            "teach",
+            "stop"
+          ],
+          "answer_index": 3,
+          "explanation": "stop me from trying 阻止我尝试。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Power of a Team",
+      "text": "People often think that great success is the work of one (1)____ person, but the truth is usually different. Behind almost every famous achievement there is a (2)____ of people working together. When one member feels tired, the others keep him (3)____ with kind words. When a hard problem appears, many minds can (4)____ ideas and find an answer faster than one mind alone. A good leader (5)____ each person's strengths and gives everyone a part to play. That is why even a (6)____ scientist often gives the credit to her whole team instead of (7)____ it for herself. A team that trusts each other can stay (8)____ through difficult times. So if you ever feel that a goal is too (9)____ for you alone, remember that asking others for help is not weakness. Together, ordinary people can (10)____ extraordinary things.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "single",
+            "empty",
+            "broken",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "one single person 单独一个人。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "team",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a team of people 一群人/团队。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "going",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "keep him going 让他坚持下去。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "break",
+            "sell",
+            "lose",
+            "gather"
+          ],
+          "answer_index": 3,
+          "explanation": "gather ideas 汇集想法。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "knows",
+            "hides",
+            "sells",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "knows each person's strengths 了解长处。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lazy",
+            "modest",
+            "rude",
+            "careless"
+          ],
+          "answer_index": 1,
+          "explanation": "a modest scientist 谦逊的科学家。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleeping",
+            "buying",
+            "keeping",
+            "leaving"
+          ],
+          "answer_index": 2,
+          "explanation": "keeping it for herself 把功劳留给自己。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "afraid",
+            "asleep",
+            "strong"
+          ],
+          "answer_index": 3,
+          "explanation": "stay strong 保持坚强。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "big",
+            "small",
+            "cheap",
+            "near"
+          ],
+          "answer_index": 0,
+          "explanation": "too big for you alone 对你独自太艰巨。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "achieve",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "achieve extraordinary things 取得非凡成就。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Before the Big Speech",
+      "text": "The night before my first English speech, I could hardly (1)____. I kept imagining the audience (2)____ at me, and my hands felt cold. My teacher had told me that even great speakers feel (3)____ before they begin. To calm myself, I wrote my key points on small (4)____ so that I would not forget them. Then I (5)____ the speech aloud in front of a mirror until the words felt (6)____ on my tongue. When the morning came, I breathed deeply several times to keep my heart from (7)____ too fast. As I started to speak, I was surprised to find the room quietly (8)____ to me. My voice grew (9)____ with every sentence. When I finished, the warm clapping told me that all my (10)____ had been worthwhile.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "fly",
+            "sleep",
+            "swim"
+          ],
+          "answer_index": 2,
+          "explanation": "could hardly sleep 几乎睡不着。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "lost",
+            "broken",
+            "staring"
+          ],
+          "answer_index": 3,
+          "explanation": "imagining the audience staring 想象观众盯着。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "nervous",
+            "happy",
+            "lazy",
+            "sleepy"
+          ],
+          "answer_index": 0,
+          "explanation": "feel nervous 感到紧张。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "cards",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "on small cards 在小卡片上。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slept",
+            "ate",
+            "practised",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "I practised the speech 我练习演讲。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "wrong",
+            "empty",
+            "late",
+            "natural"
+          ],
+          "answer_index": 3,
+          "explanation": "felt natural 感觉自然。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "beating",
+            "sleeping",
+            "selling",
+            "leaving"
+          ],
+          "answer_index": 0,
+          "explanation": "from beating too fast 跳得太快。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "shouting",
+            "listening",
+            "crying",
+            "sleeping"
+          ],
+          "answer_index": 1,
+          "explanation": "listening to me 在听我讲。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "weaker",
+            "lower",
+            "stronger",
+            "quieter"
+          ],
+          "answer_index": 2,
+          "explanation": "grew stronger 越来越有力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "money",
+            "noise",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "all my effort 我所有的努力。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Turning a Hobby into a Skill",
+      "text": "When I was young, drawing was just a (1)____ I did for fun after school. My early pictures were rough, and I almost (2)____ up many times. But my grandfather told me that real skill comes from years of patient (3)____, not from talent alone. So I kept drawing every day, even when I was (4)____. Slowly I learned to use different (5)____ of colour to make my pictures look alive. I (6)____ my work on the styles of painters I loved, and then little by little I found my own way. After a few years, my art teacher asked to (7)____ my best pictures in the school hall. Seeing my work on (8)____ filled me with pride. That experience taught me a simple (9)____: a hobby can grow into a real ability if you are willing to (10)____ time and effort into it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hobby",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a hobby I did for fun 一项爱好。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "slept",
+            "gave",
+            "sold",
+            "ate"
+          ],
+          "answer_index": 1,
+          "explanation": "gave up 放弃。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "money",
+            "work",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "patient work 耐心的努力。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "rich",
+            "tall",
+            "late",
+            "tired"
+          ],
+          "answer_index": 3,
+          "explanation": "even when I was tired 即使疲倦。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shades",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "different shades of colour 不同的色度。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "based",
+            "lost",
+            "threw"
+          ],
+          "answer_index": 1,
+          "explanation": "based my work on 以……为基础。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "lose",
+            "display",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "to display my pictures 展出我的画。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sale",
+            "fire",
+            "sleep",
+            "display"
+          ],
+          "answer_index": 3,
+          "explanation": "on display 在展出。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lesson",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a simple lesson 一个简单的道理。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "put",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "put time and effort into 投入时间和精力。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Helping Others Is Success Too",
+      "text": "Many people think that success only (1)____ being famous or making a lot of money. But my aunt, a village nurse, taught me a different (2)____. For thirty years she has cared for sick people in a poor area, where good doctors are (3)____. She is not rich, and very few people outside the village know her (4)____. Yet every patient she has (5)____ remembers her with thanks. She often says that the happiest (6)____ in her career is seeing a sick child get well again. To her, a life spent (7)____ others is a truly successful one. She is (8)____ and never talks much about what she has done. Watching her, I have come to (9)____ that real success is not always about money or fame. Sometimes it is simply about making other people's lives a little (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sells",
+            "loses",
+            "means",
+            "forgets"
+          ],
+          "answer_index": 2,
+          "explanation": "success only means 成功仅意味着。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "lesson"
+          ],
+          "answer_index": 3,
+          "explanation": "a different lesson 不同的道理。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "few",
+            "many",
+            "cheap",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "good doctors are few 好医生很少。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "name",
+            "song",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "know her name 知道她的名字。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "helped",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "every patient she has helped 她帮助过的每个病人。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "moment"
+          ],
+          "answer_index": 3,
+          "explanation": "the happiest moment 最快乐的时刻。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "helping",
+            "selling",
+            "losing",
+            "leaving"
+          ],
+          "answer_index": 0,
+          "explanation": "spent helping others 用来帮助他人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rude",
+            "modest",
+            "lazy",
+            "careless"
+          ],
+          "answer_index": 1,
+          "explanation": "she is modest 她很谦逊。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forget",
+            "lose",
+            "realise",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "come to realise 渐渐明白。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "worse",
+            "darker",
+            "shorter",
+            "better"
+          ],
+          "answer_index": 3,
+          "explanation": "a little better 好一点。"
+        }
+      ]
+    }
+  ]
+}

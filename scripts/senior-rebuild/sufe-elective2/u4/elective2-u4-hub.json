@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "A strong typhoon struck the southern coast last night.", "opts": ["昨晚一场强台风袭击了南部海岸。", "昨晚下了一点小雨。", "昨晚天气晴朗无风。", "昨晚发生了一场雪崩。"], "answer": 0 },
+    { "audio": "When you hear a flood warning, move to higher ground.", "opts": ["听到洪水警报时,要转移到高处。", "听到洪水警报时,留在原地不动。", "听到洪水警报时,跳进水里。", "听到洪水警报时,先去睡觉。"], "answer": 0 },
+    { "audio": "Cover your nose and mouth with a wet cloth in a wildfire.", "opts": ["野火中用湿布捂住口鼻。", "野火中要大声呼喊。", "野火中往火中心跑。", "野火中把窗户全部打开。"], "answer": 0 },
+    { "audio": "A battery-powered radio works even when the power is off.", "opts": ["停电时电池收音机仍能工作。", "收音机只能在白天使用。", "停电时收音机也没用了。", "收音机需要插电才能用。"], "answer": 0 },
+    { "audio": "Get under a solid table when the ground starts to shake.", "opts": ["地面开始摇晃时,躲到结实的桌子下。", "地面摇晃时立刻跳出窗户。", "地面摇晃时站在窗边。", "地面摇晃时坐进电梯。"], "answer": 0 },
+    { "audio": "The rescue team pulled three people from the rubble.", "opts": ["救援队从废墟中救出了三个人。", "救援队没有找到任何人。", "救援队只是在拍照片。", "救援队把废墟搬走了。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "We must take ____ to protect people from floods.（措施)", "opts": ["measures", "songs", "prices", "gardens"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Local ____ were moved to safety before the typhoon.（居民)", "opts": ["residents", "markets", "prices", "flames"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Hide in a secure ____ during a strong typhoon.（地下室)", "opts": ["basement", "garden", "market", "price"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Follow the ____ order and leave for higher ground.（撤离)", "opts": ["evacuation", "holiday", "shopping", "painting"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The little boy was terrified of ____ under the broken wall.", "opts": ["being buried", "burying", "having buried", "to bury"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ everything in the flood, the family had to start again.", "opts": ["Having lost", "Being lost", "Having been lost", "To lose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ what to do, many people panicked during the quake.", "opts": ["Not knowing", "Knowing", "Not known", "Not having known"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The captain was praised for ____ all the passengers before the ship sank.", "opts": ["having saved", "being saved", "having been saved", "to save"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["地震可能毫无预警地发生。", "地震总是提前一周通知。", "地震只在夜里发生。", "地震不会造成任何伤害。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Earthquakes can strike without any warning." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["灾难时要准备好求生包。", "求生包没有任何用处。", "只有医生才需要求生包。", "灾难从不会发生。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Keep a survival kit ready in case of a disaster." }
+  ],
+  "reading": {
+    "passage": "During the big flood, a teacher led all her students up to the roof of the school. They waited there calmly until a rescue boat finally arrived. Thanks to her quick thinking, not a single child was hurt.",
+    "passageCn": "在那场大洪水中,一位老师把全体学生带到了学校的屋顶。他们在那里镇定地等待,直到一艘救援船终于到来。多亏她反应迅速,没有一个孩子受伤。",
+    "questions": [
+      { "q": "Where did the teacher lead her students?", "opts": ["To the roof of the school.", "Into the basement.", "Into the flood water.", "Onto a school bus."], "answer": 0 },
+      { "q": "Why was no child hurt?", "opts": ["Because of the teacher's quick thinking.", "Because the flood was very small.", "Because they could all swim well.", "Because help came by plane."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short notice (about 60 words) telling classmates how to stay safe in ONE natural disaster, such as an earthquake, a typhoon or a flood. Say what to do before and during it.",
+    "promptCn": "写一则约60词的英文须知,告诉同学如何在某一种自然灾害(如地震、台风或洪水)中保护自己,说明灾前和灾中该怎么做。",
+    "sampleWords": ["disaster", "earthquake", "typhoon", "warning", "evacuation", "survival", "kit", "secure", "calm", "measure"]
+  },
+  "dialogues": [
+    {
+      "title": "Before the Storm",
+      "lines": [
+        { "role": "A", "text": "The radio says a typhoon is coming tonight.", "cn": "收音机说今晚有台风要来。" },
+        { "role": "B", "text": "Then let's fill some bottles with water and find the torch.", "cn": "那我们装几瓶水,再找出手电筒吧。" },
+        { "role": "A", "text": "Good idea. I'll put fresh batteries in the radio too.", "cn": "好主意。我再给收音机换上新电池。" },
+        { "role": "B", "text": "With everything ready, we have nothing to fear.", "cn": "一切都准备好了,我们就没什么可怕的了。" }
+      ]
+    },
+    {
+      "title": "Helping the Neighbours",
+      "lines": [
+        { "role": "A", "text": "The flood has gone down. What can we do to help?", "cn": "洪水退了。我们能做点什么帮忙呢?" },
+        { "role": "B", "text": "Let's clear the street and check on the old couple next door.", "cn": "我们去清理街道,再看看隔壁的老两口。" },
+        { "role": "A", "text": "Having lost so much, they will need our help.", "cn": "他们损失了那么多,会需要我们帮忙的。" },
+        { "role": "B", "text": "Yes. Together we can rebuild faster.", "cn": "是的。齐心协力,我们能更快重建。" }
+      ]
+    }
+  ]
+}

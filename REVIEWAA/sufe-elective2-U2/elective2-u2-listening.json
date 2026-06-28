@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Language and Mind",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版选择性必修二 Unit 2 同主题听力(选哪门外语/澳洲的语言/俄语的两种蓝/更健康的大脑/拯救爷爷的方言/你为何这样思考)。long/short 交替,用词限本单元/常见词,答案可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Which Language Will You Choose",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Have you decided which foreign language to take next year, Tom?",
+        "Tom: I'm thinking about Spanish. So many people around the world speak it.",
+        "Lily: That's a good reason. What made you interested in the first place?",
+        "Tom: Last month I watched a Spanish film and loved how the language sounded.",
+        "Lily: I know what you mean. I want to learn Japanese myself.",
+        "Tom: Japanese? Why is that?",
+        "Lily: I love Japanese stories, and I'd like to read them in the original language.",
+        "Tom: That's great. Learning any new language opens a door to another world."
+      ],
+      "translation_cn": "Lily 问 Tom 明年选哪门外语;Tom 想学西班牙语,因为说的人多;他上个月看了部西班牙电影,喜欢那语言的声音;Lily 想学日语,因为喜欢日本故事,想读原文;Tom 说学任何新语言都会打开通往另一个世界的门。",
+      "questions": [
+        {
+          "stem": "Which language is Tom thinking of taking?",
+          "options": [
+            "Spanish.",
+            "Japanese.",
+            "French.",
+            "Russian."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Tom become interested in that language?",
+          "options": [
+            "His teacher chose it for him.",
+            "He watched a film and loved how it sounded.",
+            "It is the easiest one to spell.",
+            "Almost no one else speaks it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which language does Lily want to learn?",
+          "options": [
+            "Japanese.",
+            "Spanish.",
+            "Arabic.",
+            "German."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Lily want to learn it?",
+          "options": [
+            "She no longer likes English.",
+            "She wants to read Japanese stories in the original.",
+            "She is moving abroad next week.",
+            "Her parents made her choose it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom say about learning a new language?",
+          "options": [
+            "It is mostly a waste of time.",
+            "It can harm the brain.",
+            "It opens a door to another world.",
+            "It is only useful for exams."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Languages in Australia",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Long ago, hundreds of different languages were spoken across Australia.",
+        "Today only a small number of them are still used every day.",
+        "Europeans arrived a little over two hundred years ago, and many languages slowly died out.",
+        "For Aboriginal communities, language is a central part of who they are.",
+        "It links them to their land, their history, and their sense of belonging."
+      ],
+      "translation_cn": "很久以前,澳大利亚有数百种不同的语言;如今只有少数仍在日常使用;欧洲人两百多年前到来,许多语言渐渐消亡;对原住民社区来说,语言是他们身份的核心;它把他们与土地、历史和归属感相连。",
+      "questions": [
+        {
+          "stem": "About how many languages were once spoken in Australia?",
+          "options": [
+            "Only two.",
+            "About seven.",
+            "None at all.",
+            "Hundreds."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How many of them are still used daily now?",
+          "options": [
+            "Only a small number.",
+            "Almost all of them.",
+            "Exactly one hundred.",
+            "More than before."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When did Europeans arrive, according to the talk?",
+          "options": [
+            "Only last year.",
+            "A little over two hundred years ago.",
+            "Five thousand years ago.",
+            "They never arrived."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is language for Aboriginal communities?",
+          "options": [
+            "A brand-new invention.",
+            "An unimportant daily habit.",
+            "A central part of their identity.",
+            "A foreign import they dislike."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does their language link them to?",
+          "options": [
+            "Only their money.",
+            "Only the weather.",
+            "Nothing in particular.",
+            "Their land, history, and sense of belonging."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Two Words for Blue",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Look at these two squares. Are they the same colour or different?",
+        "Igor: Different, of course. One is light blue and the other is dark blue.",
+        "Anna: Really? To me they both look just 'blue'.",
+        "Igor: In Russian we have two separate words, so I notice the line between them at once.",
+        "Anna: That's amazing. So your language trains your eyes a little.",
+        "Igor: Maybe. Scientists say Russian speakers are faster at telling these blues apart.",
+        "Anna: I'd never have guessed that words could change how quickly we see.",
+        "Igor: It shows how deeply language and the mind are connected."
+      ],
+      "translation_cn": "Anna 让 Igor 看两个方块是否同色;Igor 说不同,一个浅蓝一个深蓝;Anna 觉得两个都只是'蓝';Igor 说俄语里有两个分开的词,所以一眼就看出界线;Anna 惊叹语言训练了眼睛;Igor 说研究表明俄语者更快区分这些蓝色;两人感叹语言与思维联系之深。",
+      "questions": [
+        {
+          "stem": "How do the two squares look to Anna?",
+          "options": [
+            "They both look simply 'blue'.",
+            "They look like two different reds.",
+            "They look completely black.",
+            "She cannot see them at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Igor notice the difference at once?",
+          "options": [
+            "He is wearing special glasses.",
+            "Russian has two separate words for the blues.",
+            "He painted the squares himself.",
+            "English has far more colour words."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do scientists say about Russian speakers?",
+          "options": [
+            "They cannot see the colour blue.",
+            "They are always much slower.",
+            "They tell these blues apart faster.",
+            "They ignore colours completely."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What surprises Anna about words?",
+          "options": [
+            "That words have no meaning at all.",
+            "That blue is her favourite colour.",
+            "That Russian is very easy to learn.",
+            "That words can change how quickly we see."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the talk show, according to Igor?",
+          "options": [
+            "Language and the mind are deeply connected.",
+            "Colours do not really exist.",
+            "Russian is a useless language.",
+            "Our eyes never change."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 A Healthier Brain",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Speaking two languages does more than help you talk to more people.",
+        "Every time you switch between them, your brain gets a small workout.",
+        "Studies show that this effort can keep the mind sharp for longer.",
+        "It may even delay certain memory problems by several years.",
+        "So learning a language is not only useful; it is good for the brain."
+      ],
+      "translation_cn": "会说两种语言不只是能和更多人交流;每次在两种语言间切换,大脑都会做个小锻炼;研究表明这种努力能让头脑更久保持敏锐;甚至可能把某些记忆问题推迟数年;所以学语言不仅有用,还有益大脑。",
+      "questions": [
+        {
+          "stem": "What happens each time you switch languages?",
+          "options": [
+            "Your brain stops working.",
+            "Your brain gets a small workout.",
+            "You forget your first language.",
+            "Nothing at all changes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do the studies show?",
+          "options": [
+            "Two languages harm the mind.",
+            "Switching is simply impossible.",
+            "The effort can keep the mind sharp for longer.",
+            "Memory gets worse straight away."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What may speaking two languages delay?",
+          "options": [
+            "Learning how to read.",
+            "Growing any taller.",
+            "Making new friends.",
+            "Certain memory problems."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long might it delay them?",
+          "options": [
+            "By several years.",
+            "By a few minutes.",
+            "By a single day.",
+            "Not at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the speaker's main point?",
+          "options": [
+            "Languages are a waste of time.",
+            "A language is useful and good for the brain.",
+            "Only one language is ever needed.",
+            "The brain never changes."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Saving Grandpa's Dialect",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mei: My grandpa speaks an old dialect that almost no young people use now.",
+        "Sam: That's a pity. What happens when the last speakers are gone?",
+        "Mei: A lot of stories and local knowledge could disappear with them.",
+        "Sam: So have you thought of doing anything about it?",
+        "Mei: Yes. Every weekend I record him telling old tales in his dialect.",
+        "Sam: That's a wonderful idea. You're saving more than just words.",
+        "Mei: Exactly. The real question is whether my generation will keep it alive.",
+        "Sam: I'm sure small efforts like yours can make a real difference."
+      ],
+      "translation_cn": "Mei 说爷爷讲一种几乎没年轻人用的老方言;Sam 觉得可惜,问最后的说话者走后会怎样;Mei 说许多故事和地方知识可能随之消失;Mei 每个周末录爷爷用方言讲老故事;Sam 称赞这是在拯救不止是词语的东西;Mei 说真正的问题是她这代人能否让它存续;Sam 相信小小的努力能带来真正的改变。",
+      "questions": [
+        {
+          "stem": "What is special about Mei's grandpa's dialect?",
+          "options": [
+            "Everyone in the city speaks it.",
+            "It is a brand-new language.",
+            "Few young people still use it.",
+            "It is taught in every school."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What could disappear with the last speakers?",
+          "options": [
+            "Only the spelling rules.",
+            "Nothing of any value.",
+            "A few old road signs.",
+            "Stories and local knowledge."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Mei do every weekend?",
+          "options": [
+            "She records him telling old tales.",
+            "She forgets the dialect on purpose.",
+            "She studies only English.",
+            "She travels far abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Sam say she is really saving?",
+          "options": [
+            "Only a little money.",
+            "More than just words.",
+            "A pile of old books.",
+            "Nothing important at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mei call the real question?",
+          "options": [
+            "Where her grandpa now lives.",
+            "How old the dialect really is.",
+            "Whether her generation will keep it alive.",
+            "Why English is so useful."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Why You Think the Way You Do",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "We have seen that speakers of different languages can think in different ways.",
+        "But this talk is not really about how people far away think.",
+        "It is about how you, yourself, think every single day.",
+        "Your language quietly shapes what you notice and what you forget.",
+        "So it is always worth asking why you see the world the way you do."
+      ],
+      "translation_cn": "我们看到说不同语言的人可能以不同方式思考;但这次演讲并非真的关于远方的人如何思考;而是关于你自己每天如何思考;你的语言悄悄塑造你注意什么、忽略什么;所以值得问问:你为何这样看世界。",
+      "questions": [
+        {
+          "stem": "What have we seen about speakers of different languages?",
+          "options": [
+            "They all think exactly the same.",
+            "They are unable to think.",
+            "They never use any words.",
+            "They can think in different ways."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is this talk really about?",
+          "options": [
+            "How you yourself think.",
+            "How people far away think.",
+            "How to spell English words.",
+            "How to travel abroad cheaply."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does your language quietly shape?",
+          "options": [
+            "Only how tall you grow.",
+            "What you notice and what you forget.",
+            "Only the weather outside.",
+            "Nothing about your mind."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How often does language shape your thinking?",
+          "options": [
+            "Only once a year.",
+            "Never in real life.",
+            "Every single day.",
+            "Only during exams."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker say is worth asking?",
+          "options": [
+            "Where you were first born.",
+            "How tall your friends are.",
+            "Who your teacher is.",
+            "Why you see the world as you do."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

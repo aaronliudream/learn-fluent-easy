@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Life and Technology",
+  "source": "上外版必修第三册 Unit 4 同主题完形(智能家居/在线学习/可穿戴健康设备/科技与老人/机器人比赛/数字时代的礼貌);用词限 U4/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Smart Home",
+      "text": "My family recently turned our flat into a smart home, and it has changed our daily life. In the morning, the lights come on by (1)____ before I even open my eyes. I just say a word, and the speaker (2)____ to my voice and plays the news. The heating is (3)____, so the rooms are warm enough but never too hot. When I leave, a single tap on my phone can (4)____ off everything at once. Cameras let me (5)____ the front door from anywhere in the city. At first my grandmother (6)____ that all this was too complicated, but soon she learned to use it without any (7)____. Of course, the system is not (8)____. Once the Internet went down and nothing worked, which (9)____ me a little. Still, used (10)____, a smart home saves time and makes life more comfortable.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "itself",
+            "themselves",
+            "themself",
+            "ourselves"
+          ],
+          "answer_index": 0,
+          "explanation": "灯自己亮起 → 单数无生命主语用 itself。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "complains",
+            "responds",
+            "breathes",
+            "lacks"
+          ],
+          "answer_index": 1,
+          "explanation": "音箱对声音作出反应 → respond to。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "remote",
+            "demanding",
+            "flexible",
+            "mature"
+          ],
+          "answer_index": 2,
+          "explanation": "供暖灵活调节 → flexible。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "view",
+            "attract",
+            "sew",
+            "turn"
+          ],
+          "answer_index": 3,
+          "explanation": "一键关掉一切 → turn off。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "view",
+            "annoy",
+            "breathe",
+            "possess"
+          ],
+          "answer_index": 0,
+          "explanation": "随处查看前门 → view。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "responded",
+            "complained",
+            "located",
+            "operated"
+          ],
+          "answer_index": 1,
+          "explanation": "奶奶抱怨太复杂 → complain。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "signal",
+            "delay",
+            "hesitation",
+            "network"
+          ],
+          "answer_index": 2,
+          "explanation": "毫无犹豫地学会 → without any hesitation。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "advanced",
+            "interactive",
+            "powerful",
+            "perfect"
+          ],
+          "answer_index": 3,
+          "explanation": "系统并非完美 → perfect。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "annoyed",
+            "attracted",
+            "viewed",
+            "instructed"
+          ],
+          "answer_index": 0,
+          "explanation": "断网让我有点恼火 → annoy。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "currently",
+            "wisely",
+            "constantly",
+            "apart"
+          ],
+          "answer_index": 1,
+          "explanation": "明智地使用 → wisely。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Learning Online",
+      "text": "Last winter my school moved its lessons online, and I had to study from home through a screen. At first it was a real (1)____, because I missed sitting with my classmates. The video link sometimes had a long (2)____, and the teacher's voice broke up. I had to be (3)____ enough to switch between apps and find the right page quickly. Slowly, though, I began to (4)____ some real advantages. I could (5)____ a recorded lesson again whenever I did not understand something. I no longer wasted time travelling, so I had (6)____ hours to read. Online study also asked me to be more (7)____: nobody stood beside me, so I had to (8)____ myself to follow the timetable. By the end of the term, I had become a far more (9)____ learner. Both kinds of study, I realised, have their own (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "signal",
+            "soldier",
+            "struggle",
+            "surgeon"
+          ],
+          "answer_index": 2,
+          "explanation": "起初很吃力 → a real struggle。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "image",
+            "chest",
+            "network",
+            "delay"
+          ],
+          "answer_index": 3,
+          "explanation": "视频常有长延迟 → delay。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "flexible",
+            "remote",
+            "emotional",
+            "mature"
+          ],
+          "answer_index": 0,
+          "explanation": "灵活切换应用 → flexible。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sew",
+            "see",
+            "lack",
+            "annoy"
+          ],
+          "answer_index": 1,
+          "explanation": "开始看到一些好处 → see。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "complain",
+            "breathe",
+            "view",
+            "possess"
+          ],
+          "answer_index": 2,
+          "explanation": "重看录播课 → view。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "remote",
+            "advanced",
+            "surgical",
+            "extra"
+          ],
+          "answer_index": 3,
+          "explanation": "省下时间→有额外的时间 → extra。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "independent",
+            "interactive",
+            "impressive",
+            "artificial"
+          ],
+          "answer_index": 0,
+          "explanation": "在线学习要求更独立 → independent。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "attract",
+            "discipline",
+            "instruct",
+            "operate"
+          ],
+          "answer_index": 1,
+          "explanation": "约束自己守时间表 → discipline myself。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "demanding",
+            "currently",
+            "effective",
+            "constantly"
+          ],
+          "answer_index": 2,
+          "explanation": "成为更高效的学习者 → effective。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "delays",
+            "signals",
+            "networks",
+            "strengths"
+          ],
+          "answer_index": 3,
+          "explanation": "两种学习各有长处 → strengths。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Watch That Watches You",
+      "text": "My new smartwatch does far more than tell the time. All day it quietly (1)____ how many steps I take and how fast my heart beats. If I sit too long, it gently (2)____ me to stand up and move. One evening it warned me that my heart rate looked (3)____, so I went to see a doctor. A (4)____ checked me and said the watch had spotted an early problem. This small device can (5)____ a great deal of useful information about my health. It is (6)____ to charge and easy to wear, so I almost forget it is there. Of course, a watch cannot (7)____ a real doctor, and I should not let it (8)____ me about every tiny change. But used (9)____, it is a (10)____ tool that helps me take better care of myself.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "records",
+            "complains",
+            "breathes",
+            "lacks"
+          ],
+          "answer_index": 0,
+          "explanation": "整天默默记录步数心率 → record。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "attracts",
+            "reminds",
+            "operates",
+            "sews"
+          ],
+          "answer_index": 1,
+          "explanation": "提醒我站起来 → remind。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "flexible",
+            "remote",
+            "unusual",
+            "mature"
+          ],
+          "answer_index": 2,
+          "explanation": "心率看起来异常 → unusual。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "soldier",
+            "signal",
+            "network",
+            "specialist"
+          ],
+          "answer_index": 3,
+          "explanation": "专科医生检查我 → specialist。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "possess",
+            "annoy",
+            "instruct",
+            "view"
+          ],
+          "answer_index": 0,
+          "explanation": "能掌握大量健康信息 → possess。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "demanding",
+            "convenient",
+            "emotional",
+            "artificial"
+          ],
+          "answer_index": 1,
+          "explanation": "充电方便 → convenient。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "relate",
+            "locate",
+            "replace",
+            "respond"
+          ],
+          "answer_index": 2,
+          "explanation": "手表不能取代真正医生 → replace。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "attract",
+            "breathe",
+            "sew",
+            "worry"
+          ],
+          "answer_index": 3,
+          "explanation": "不该让它为每点小变化担忧 → worry。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wisely",
+            "currently",
+            "constantly",
+            "apart"
+          ],
+          "answer_index": 0,
+          "explanation": "明智地使用 → wisely。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "remote",
+            "powerful",
+            "surgical",
+            "interactive"
+          ],
+          "answer_index": 1,
+          "explanation": "是个强大的工具 → powerful。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Grandpa and the Tablet",
+      "text": "When we gave Grandpa a tablet, he stared at it with a little (1)____, unsure where to begin. The bright screen did not (2)____ him at first, and he said the buttons were too small. We sat with him (3)____ and showed him, step by step, how to send a message and make a video call. He needed a lot of (4)____, because he often forgot which icon to press. But he never (5)____; instead he tried again and again. (6)____, after a few weeks, his face broke into a huge smile: he had called his old friend, who lives far (7)____ in another city. Now the tablet helps him stay (8)____ to people he loves. Technology had once seemed (9)____ to him, but kindness and patience made it friendly. The lesson is simple: with the right help, even an older person can (10)____ a useful new skill.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "signal",
+            "delay",
+            "hesitation",
+            "chest"
+          ],
+          "answer_index": 2,
+          "explanation": "带着一点犹豫盯着平板 → hesitation。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "respond",
+            "complain",
+            "operate",
+            "attract"
+          ],
+          "answer_index": 3,
+          "explanation": "屏幕起初没吸引他 → attract。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "patiently",
+            "currently",
+            "apart",
+            "miserably"
+          ],
+          "answer_index": 0,
+          "explanation": "耐心地陪他坐着 → patiently。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "network",
+            "patience",
+            "soldier",
+            "image"
+          ],
+          "answer_index": 1,
+          "explanation": "需要很多耐心 → patience。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "viewed",
+            "located",
+            "complained",
+            "possessed"
+          ],
+          "answer_index": 2,
+          "explanation": "他从不抱怨 → complain。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "Constantly",
+            "Currently",
+            "Hardly",
+            "Eventually"
+          ],
+          "answer_index": 3,
+          "explanation": "几周后终于 → eventually。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "apart",
+            "down",
+            "off",
+            "out"
+          ],
+          "answer_index": 0,
+          "explanation": "住在很远的另一城市 → far apart。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "advanced",
+            "connected",
+            "surgical",
+            "mature"
+          ],
+          "answer_index": 1,
+          "explanation": "帮他与所爱的人保持联系 → connected。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "flexible",
+            "effective",
+            "demanding",
+            "powerful"
+          ],
+          "answer_index": 2,
+          "explanation": "科技曾让他觉得难应付 → demanding。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "annoy",
+            "breathe",
+            "sew",
+            "master"
+          ],
+          "answer_index": 3,
+          "explanation": "掌握一项有用新技能 → master。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The School Robot Contest",
+      "text": "Our school held a robot contest, and my team spent a month building a machine that could (1)____ to simple voice orders. Designing it was a (2)____ job that tested our patience every day. The first model was clumsy, but each new version had more (3)____ joints and smoother moves. On the day of the contest, our robot did something truly (4)____: it picked up a cup and placed it on a tray. The judges were clearly (5)____ by its design. We were so (6)____ that we cheered out loud. Of course, our little machine could not really (7)____ feelings, yet watching it work gave us a strong sense of pride. The contest taught us that good (8)____ and teamwork matter more than fancy parts. (9)____, we did not win first prize, but we learned more than any (10)____ in a book could teach.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "respond",
+            "complain",
+            "lack",
+            "sew"
+          ],
+          "answer_index": 0,
+          "explanation": "机器对语音命令作出反应 → respond。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "remote",
+            "demanding",
+            "emotional",
+            "currently"
+          ],
+          "answer_index": 1,
+          "explanation": "要求高、考验耐心的活 → demanding。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "surgical",
+            "artificial",
+            "flexible",
+            "mature"
+          ],
+          "answer_index": 2,
+          "explanation": "更灵活的关节 → flexible。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "demanding",
+            "remote",
+            "powerful",
+            "impressive"
+          ],
+          "answer_index": 3,
+          "explanation": "做了真正令人赞叹的事 → impressive。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "attracted",
+            "annoyed",
+            "located",
+            "instructed"
+          ],
+          "answer_index": 0,
+          "explanation": "评委被设计吸引 → attract(被动)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "remote",
+            "enthusiastic",
+            "surgical",
+            "artificial"
+          ],
+          "answer_index": 1,
+          "explanation": "我们非常热情兴奋 → enthusiastic。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "view",
+            "operate",
+            "possess",
+            "instruct"
+          ],
+          "answer_index": 2,
+          "explanation": "机器并不能真正拥有情感 → possess。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "signal",
+            "delay",
+            "soldier",
+            "technique"
+          ],
+          "answer_index": 3,
+          "explanation": "好的技艺与团队合作 → technique。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Eventually",
+            "Constantly",
+            "Currently",
+            "Hardly"
+          ],
+          "answer_index": 0,
+          "explanation": "最后我们没拿第一 → eventually。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "image",
+            "lesson",
+            "chest",
+            "network"
+          ],
+          "answer_index": 1,
+          "explanation": "比书上任何一课学到的都多 → lesson。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Being Polite in the Digital Age",
+      "text": "Technology has given us many fast ways to talk, but it has also raised new questions about how to be (1)____. When a message arrives, we feel we must (2)____ at once, even in the middle of a meal. Some people check their phones (3)____, glancing at the screen while a friend is still speaking. This habit can (4)____ the people around us, who feel ignored. Good manners online are much the same as in real life. We should not (5)____ that everyone is free the moment we send a text. It is kind to leave a clear (6)____ to a friend's question rather than a cold one-word reply. We should also be careful not to share someone's photo without asking, because that can hurt an (7)____ bond. The most (8)____ thing, perhaps, is to remember the person on the other side of the screen. Put the phone down (9)____, look up, and give the people in front of you your full (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "remote",
+            "surgical",
+            "polite",
+            "artificial"
+          ],
+          "answer_index": 2,
+          "explanation": "如何做到礼貌 → polite。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "possess",
+            "breathe",
+            "sew",
+            "respond"
+          ],
+          "answer_index": 3,
+          "explanation": "觉得必须立刻回复 → respond。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "constantly",
+            "apart",
+            "currently",
+            "miserably"
+          ],
+          "answer_index": 0,
+          "explanation": "不断查看手机 → constantly。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "attract",
+            "annoy",
+            "view",
+            "locate"
+          ],
+          "answer_index": 1,
+          "explanation": "这会惹恼周围人 → annoy。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "instruct",
+            "operate",
+            "assume",
+            "relate"
+          ],
+          "answer_index": 2,
+          "explanation": "不该想当然以为人人都有空 → assume。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "signal",
+            "delay",
+            "network",
+            "response"
+          ],
+          "answer_index": 3,
+          "explanation": "给朋友清楚的回应 → response。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "emotional",
+            "remote",
+            "advanced",
+            "interactive"
+          ],
+          "answer_index": 0,
+          "explanation": "可能伤害情感联系 → emotional bond。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "demanding",
+            "important",
+            "flexible",
+            "powerful"
+          ],
+          "answer_index": 1,
+          "explanation": "最重要的事 → important。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "far apart",
+            "at first",
+            "now and then",
+            "by sight"
+          ],
+          "answer_index": 2,
+          "explanation": "时不时放下手机 → now and then。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "image",
+            "chest",
+            "soldier",
+            "attention"
+          ],
+          "answer_index": 3,
+          "explanation": "给面前的人全部注意力 → full attention。"
+        }
+      ]
+    }
+  ]
+}

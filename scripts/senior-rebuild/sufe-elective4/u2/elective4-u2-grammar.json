@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grammar_title": "-ing/-ed 形式与不定式综合运用(非谓语动词复习)",
+  "source": "上外版选择性必修四 Unit 2 Grammar in Use: -ing/-ed forms and infinitives (review)。句子地道、贸易经济主题、答案唯一(选项为同一动词的四种形式,只一个成立)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "动词后接动名词还是不定式作宾语",
+      "overview": "有些动词后只接动名词(enjoy/finish/avoid/suggest/consider/mind/practise/keep/admit/give up 等),有些只接不定式(decide/hope/agree/offer/refuse/manage/plan/promise/afford/expect 等);按动词搭配在 -ing 和 to do 之间选择。"
+    },
+    {
+      "code": "u2.02",
+      "point": "-ing 与 -ed 分词作定语/状语",
+      "overview": "-ing 分词表主动或正在进行(修饰发出动作的名词,或主语主动发出动作);-ed 分词表被动或已完成(修饰承受动作的名词,或主语被动);据主动/被动关系选 -ing 或 -ed。"
+    },
+    {
+      "code": "u2.03",
+      "point": "不定式表目的/结果及固定结构",
+      "overview": "to do 表目的(in order to / the way·first·best…to)或结果(too…to / enough to);adj.+to do、be likely/ready/willing/able to 等结构后只能用不定式,不可用 -ing/-ed。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "The two companies finally finished ____ the trade agreement.",
+      "options": [
+        "signing",
+        "to sign",
+        "signed",
+        "sign"
+      ],
+      "answer_index": 0,
+      "explanation": "finish 后只接动名词 → signing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Many small firms avoid ____ too much money from banks.",
+      "options": [
+        "to borrow",
+        "borrowing",
+        "borrowed",
+        "borrow"
+      ],
+      "answer_index": 1,
+      "explanation": "avoid 后只接动名词 → borrowing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The manager suggested ____ costs before raising any prices.",
+      "options": [
+        "to cut",
+        "cut",
+        "cutting",
+        "to cutting"
+      ],
+      "answer_index": 2,
+      "explanation": "suggest 后接动名词 → cutting。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "To stay competitive, we should keep ____ in new technology.",
+      "options": [
+        "to invest",
+        "invested",
+        "invest",
+        "investing"
+      ],
+      "answer_index": 3,
+      "explanation": "keep(继续)后接动名词 → investing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The factory considered ____ its production to a cheaper region.",
+      "options": [
+        "moving",
+        "to move",
+        "moved",
+        "move"
+      ],
+      "answer_index": 0,
+      "explanation": "consider 后接动名词 → moving。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Many customers enjoy ____ online because it saves them time.",
+      "options": [
+        "to shop",
+        "shopping",
+        "shopped",
+        "shop"
+      ],
+      "answer_index": 1,
+      "explanation": "enjoy 后只接动名词 → shopping。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He honestly admitted ____ a poor decision about the budget.",
+      "options": [
+        "to make",
+        "made",
+        "making",
+        "make"
+      ],
+      "answer_index": 2,
+      "explanation": "admit 后接动名词 → making。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The shop owner did not mind ____ the price a little for us.",
+      "options": [
+        "to lower",
+        "lowered",
+        "lower",
+        "lowering"
+      ],
+      "answer_index": 3,
+      "explanation": "mind 后接动名词 → lowering。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "In class we practised ____ costs and benefits before each choice.",
+      "options": [
+        "comparing",
+        "to compare",
+        "compared",
+        "compare"
+      ],
+      "answer_index": 0,
+      "explanation": "practise 后接动名词 → comparing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Once prices rose, many shoppers gave up ____ luxury goods.",
+      "options": [
+        "to buy",
+        "buying",
+        "bought",
+        "buy"
+      ],
+      "answer_index": 1,
+      "explanation": "give up 后接动名词 → buying。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "In 2014, the government decided ____ the free trade zone.",
+      "options": [
+        "expanding",
+        "expanded",
+        "to expand",
+        "expand"
+      ],
+      "answer_index": 2,
+      "explanation": "decide 后只接不定式 → to expand。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The company hopes ____ the overseas market early next year.",
+      "options": [
+        "entering",
+        "entered",
+        "enter",
+        "to enter"
+      ],
+      "answer_index": 3,
+      "explanation": "hope 后接不定式 → to enter。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After long talks, both sides agreed ____ the price of the goods.",
+      "options": [
+        "to reduce",
+        "reducing",
+        "reduced",
+        "reduce"
+      ],
+      "answer_index": 0,
+      "explanation": "agree 后接不定式 → to reduce。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She kindly offered ____ her friend some money for the trip.",
+      "options": [
+        "lending",
+        "to lend",
+        "lent",
+        "lend"
+      ],
+      "answer_index": 1,
+      "explanation": "offer 后接不定式 → to lend。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The young trader refused ____ at such an unfair price.",
+      "options": [
+        "selling",
+        "sold",
+        "to sell",
+        "sell"
+      ],
+      "answer_index": 2,
+      "explanation": "refuse 后接不定式 → to sell。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After months of talks, they managed ____ a fair deal at last.",
+      "options": [
+        "reaching",
+        "reached",
+        "reach",
+        "to reach"
+      ],
+      "answer_index": 3,
+      "explanation": "manage 后接不定式 → to reach。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Our class plans ____ a small fund for the spring outing.",
+      "options": [
+        "to raise",
+        "raising",
+        "raised",
+        "raise"
+      ],
+      "answer_index": 0,
+      "explanation": "plan 后接不定式 → to raise。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He promised ____ back the loan within a single year.",
+      "options": [
+        "paying",
+        "to pay",
+        "paid",
+        "pay"
+      ],
+      "answer_index": 1,
+      "explanation": "promise 后接不定式 → to pay。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Few families can afford ____ money on things they do not need.",
+      "options": [
+        "wasting",
+        "wasted",
+        "to waste",
+        "waste"
+      ],
+      "answer_index": 2,
+      "explanation": "afford 后接不定式 → to waste。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The seller expects buyers ____ prices carefully before paying.",
+      "options": [
+        "comparing",
+        "compared",
+        "compare",
+        "to compare"
+      ],
+      "answer_index": 3,
+      "explanation": "expect sb 后接不定式 → to compare。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "China has become a ____ engine for the whole world economy.",
+      "options": [
+        "growing",
+        "grown",
+        "to grow",
+        "grow"
+      ],
+      "answer_index": 0,
+      "explanation": "engine 主动地'增长' → 现在分词 growing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Shoppers like cheap products ____ from other countries.",
+      "options": [
+        "importing",
+        "imported",
+        "to import",
+        "import"
+      ],
+      "answer_index": 1,
+      "explanation": "products 被进口、被动 → 过去分词 imported。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "A well-____ brand can sell its goods at higher prices.",
+      "options": [
+        "knowing",
+        "to know",
+        "known",
+        "know"
+      ],
+      "answer_index": 2,
+      "explanation": "brand 被知晓、被动 → 过去分词 known。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The ____ goods were loaded onto the ship at the busy port.",
+      "options": [
+        "packing",
+        "to pack",
+        "pack",
+        "packed"
+      ],
+      "answer_index": 3,
+      "explanation": "goods 被打包、被动 → 过去分词 packed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Cross-border trade has opened an ever-____ market for sellers.",
+      "options": [
+        "expanding",
+        "expanded",
+        "to expand",
+        "expand"
+      ],
+      "answer_index": 0,
+      "explanation": "market 主动地'扩大' → 现在分词 expanding。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Careful buyers trust ____ goods that pass strict quality tests.",
+      "options": [
+        "manufacturing",
+        "manufactured",
+        "to manufacture",
+        "manufacture"
+      ],
+      "answer_index": 1,
+      "explanation": "goods 被生产、被动 → 过去分词 manufactured。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The ____ cost of oil worried many small businesses last year.",
+      "options": [
+        "risen",
+        "to rise",
+        "rising",
+        "rise"
+      ],
+      "answer_index": 2,
+      "explanation": "cost 主动地'上涨' → 现在分词 rising。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Before the trip, we compared the prices of three ____ flights.",
+      "options": [
+        "competed",
+        "to compete",
+        "compete",
+        "competing"
+      ],
+      "answer_index": 3,
+      "explanation": "flights 主动地'相互竞争' → 现在分词 competing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The manager read the ____ report carefully before the meeting.",
+      "options": [
+        "printed",
+        "printing",
+        "to print",
+        "print"
+      ],
+      "answer_index": 0,
+      "explanation": "report 被打印、被动 → 过去分词 printed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "An economy ____ by innovation usually grows much faster.",
+      "options": [
+        "driving",
+        "driven",
+        "to drive",
+        "drive"
+      ],
+      "answer_index": 1,
+      "explanation": "economy 被创新推动、被动 → 过去分词 driven。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The goods ____ in this region are both cheap and reliable.",
+      "options": [
+        "producing",
+        "to produce",
+        "produced",
+        "produce"
+      ],
+      "answer_index": 2,
+      "explanation": "goods 被生产、被动 → 过去分词 produced。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The free trade zone, ____ in 2013, lies in the Pudong area.",
+      "options": [
+        "founding",
+        "to found",
+        "found",
+        "founded"
+      ],
+      "answer_index": 3,
+      "explanation": "zone 被建立、被动 → 过去分词 founded。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Companies ____ reasonable decisions always weigh costs and benefits.",
+      "options": [
+        "making",
+        "made",
+        "to make",
+        "make"
+      ],
+      "answer_index": 0,
+      "explanation": "companies 主动'作出'决定 → 现在分词 making。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The money ____ in the bank can later be loaned to others.",
+      "options": [
+        "saving",
+        "saved",
+        "to save",
+        "save"
+      ],
+      "answer_index": 1,
+      "explanation": "money 被存、被动 → 过去分词 saved。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The students ____ the trading game learned a lot about money.",
+      "options": [
+        "played",
+        "to play",
+        "playing",
+        "play"
+      ],
+      "answer_index": 2,
+      "explanation": "students 主动'玩'游戏 → 现在分词 playing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "A plan ____ to cut waste was warmly welcomed by the board.",
+      "options": [
+        "designing",
+        "to design",
+        "design",
+        "designed"
+      ],
+      "answer_index": 3,
+      "explanation": "plan 被设计、被动 → 过去分词 designed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the costs and benefits, the family made a wise choice.",
+      "options": [
+        "Comparing",
+        "Compared",
+        "To compare",
+        "Compare"
+      ],
+      "answer_index": 0,
+      "explanation": "family 主动比较(带宾语)、作状语 → 现在分词 Comparing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by clever managers, the firm soon began to make a profit.",
+      "options": [
+        "Leading",
+        "Led",
+        "To lead",
+        "Lead"
+      ],
+      "answer_index": 1,
+      "explanation": "firm 被带领、被动状语 → 过去分词 Led。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The shoppers left the market, ____ bags full of cheap goods.",
+      "options": [
+        "carried",
+        "to carry",
+        "carrying",
+        "carry"
+      ],
+      "answer_index": 2,
+      "explanation": "shoppers 主动'提着'、伴随状语 → 现在分词 carrying。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by the good news, investors put more money into the firm.",
+      "options": [
+        "Encouraging",
+        "To encourage",
+        "Encourage",
+        "Encouraged"
+      ],
+      "answer_index": 3,
+      "explanation": "investors 被鼓舞、被动状语 → 过去分词 Encouraged。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The luxury watch was far too expensive ____ easily.",
+      "options": [
+        "to sell",
+        "selling",
+        "sold",
+        "sell"
+      ],
+      "answer_index": 0,
+      "explanation": "too…to 结构 → 不定式 to sell。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "These simple products are cheap enough ____ many buyers.",
+      "options": [
+        "attracting",
+        "to attract",
+        "attracted",
+        "attract"
+      ],
+      "answer_index": 1,
+      "explanation": "enough to 结构 → 不定式 to attract。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Oil grew so scarce that it was too costly ____ at all.",
+      "options": [
+        "wasting",
+        "wasted",
+        "to waste",
+        "waste"
+      ],
+      "answer_index": 2,
+      "explanation": "too…to 结构 → 不定式 to waste。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The young company was strong enough ____ foreign markets.",
+      "options": [
+        "entering",
+        "entered",
+        "enter",
+        "to enter"
+      ],
+      "answer_index": 3,
+      "explanation": "enough to 结构 → 不定式 to enter。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The best way ____ costs is to plan a careful budget.",
+      "options": [
+        "to cut",
+        "cutting",
+        "cut",
+        "cuts"
+      ],
+      "answer_index": 0,
+      "explanation": "the best way to do 固定结构 → 不定式 to cut。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Saving a little each day is the first step ____ towards wealth.",
+      "options": [
+        "taking",
+        "to take",
+        "taken",
+        "take"
+      ],
+      "answer_index": 1,
+      "explanation": "the first step to do → 不定式 to take。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes time and trust ____ a lasting trade partnership.",
+      "options": [
+        "building",
+        "built",
+        "to build",
+        "build"
+      ],
+      "answer_index": 2,
+      "explanation": "It takes…to do 结构 → 不定式 to build。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "That honest trader was the first ____ a fair price for the goods.",
+      "options": [
+        "offering",
+        "offered",
+        "offer",
+        "to offer"
+      ],
+      "answer_index": 3,
+      "explanation": "the first to do → 不定式 to offer。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Cheap imported products are likely ____ from the shelves quickly.",
+      "options": [
+        "to disappear",
+        "disappearing",
+        "disappeared",
+        "disappear"
+      ],
+      "answer_index": 0,
+      "explanation": "be likely to do → 不定式 to disappear。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "A rational buyer is always willing ____ costs and benefits.",
+      "options": [
+        "comparing",
+        "to compare",
+        "compared",
+        "compare"
+      ],
+      "answer_index": 1,
+      "explanation": "be willing to do → 不定式 to compare。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The two firms are now ready ____ the new trade agreement.",
+      "options": [
+        "signing",
+        "signed",
+        "to sign",
+        "sign"
+      ],
+      "answer_index": 2,
+      "explanation": "be ready to do → 不定式 to sign。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "In order ____ money, the family made a careful spending plan.",
+      "options": [
+        "saving",
+        "saved",
+        "save",
+        "to save"
+      ],
+      "answer_index": 3,
+      "explanation": "in order to do 表目的 → 不定式 to save。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The new policy is likely ____ the local economy this year.",
+      "options": [
+        "to boost",
+        "boosting",
+        "boosted",
+        "boost"
+      ],
+      "answer_index": 0,
+      "explanation": "be likely to do → 不定式 to boost。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The market was too crowded for the small shop ____ for long.",
+      "options": [
+        "surviving",
+        "to survive",
+        "survived",
+        "survive"
+      ],
+      "answer_index": 1,
+      "explanation": "too…for sb to do → 不定式 to survive。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She was very happy ____ cheaper goods at the morning market.",
+      "options": [
+        "finding",
+        "found",
+        "to find",
+        "find"
+      ],
+      "answer_index": 2,
+      "explanation": "adj.(happy)+ to do → 不定式 to find。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The only way ____ loyal customers is to offer real value.",
+      "options": [
+        "winning",
+        "won",
+        "win",
+        "to win"
+      ],
+      "answer_index": 3,
+      "explanation": "the only way to do → 不定式 to win。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The struggling firm needs more time ____ its huge debt.",
+      "options": [
+        "to repay",
+        "repaying",
+        "repaid",
+        "repay"
+      ],
+      "answer_index": 0,
+      "explanation": "time to do → 不定式 to repay。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Wise families are careful enough ____ running up large debts.",
+      "options": [
+        "avoiding",
+        "to avoid",
+        "avoided",
+        "avoid"
+      ],
+      "answer_index": 1,
+      "explanation": "enough to do → 不定式 to avoid。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is never too late ____ how to manage your own money.",
+      "options": [
+        "learning",
+        "learned",
+        "to learn",
+        "learn"
+      ],
+      "answer_index": 2,
+      "explanation": "too…to 结构 → 不定式 to learn。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The manager was glad ____ a fair deal with the friendly buyer.",
+      "options": [
+        "reaching",
+        "reached",
+        "reach",
+        "to reach"
+      ],
+      "answer_index": 3,
+      "explanation": "adj.(glad)+ to do → 不定式 to reach。"
+    }
+  ]
+}

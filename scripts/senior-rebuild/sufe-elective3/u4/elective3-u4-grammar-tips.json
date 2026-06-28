@@ -1,0 +1,37 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "grade": 12,
+  "content": {
+    "title": "强调句 It is/was … that/who … 速查",
+    "intro": "想突出句子里的某一部分(常为对比或加强语气),就把它放进框架 It is/was + 被强调部分 + that/who…。判断口诀:去掉 It is/was … that,句子仍然完整通顺,就是强调句。",
+    "table": {
+      "headers": ["被强调成分", "用法 / 例句"],
+      "rows": [
+        ["主语(人)", "It is the volunteers who clean the beach.(用 who 或 that)"],
+        ["主语(物/事)", "It is carbon dioxide that plants need.(一律 that)"],
+        ["宾语", "It is clean energy that we should choose.(用 that)"],
+        ["时间/地点/原因状语", "It was in 1958 that the gas was first measured.(仍用 that,不用 when/where/why)"],
+        ["not until 结构", "It was not until midnight that the team arrived.(直到……才……)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "无论强调时间、地点还是原因,连接词都用 that,不用 when/where/why——这是强调句与定语从句最大的区别", "mark": "It was here that… √ / It was here where… ✗" },
+      { "rule": "强调的是人,可用 who 或 that;强调物/事只能用 that", "mark": "It is Janine who/that started it." },
+      { "rule": "It was not until + 时间/事件 + that + 主句(主句不倒装)", "mark": "It was not until he left that I knew." },
+      { "rule": "一般疑问句强调:Is/Was it + 被强调部分 + that/who…?", "mark": "Was it CO₂ that the plants needed?" }
+    ],
+    "why": [
+      "强调句只是给句子加了一层 It is/was … that 的'外壳',句子本身的成分一个不少;正因为被强调的部分已经被'抽'到 that 前面,that 后面的从句往往会缺一个成分,而连接词只起'连接'作用,所以固定用 that(人用 who),不随被强调成分变化。"
+    ],
+    "gaokaoPoints": [
+      "that vs when/where/why:看是不是 It is/was … that 强调句,是就用 that;高考语法填空、单选高频。",
+      "强调句 vs 定语从句:去掉 It is/was … that 后句子完整=强调句;去掉后不完整、需要先行词=定语从句。",
+      "It was not until … that … 的固定搭配与主句不倒装。"
+    ],
+    "examVsReal": [
+      { "exam": "It is health that matters most.(考试/书面强调)", "real": "Health is what matters most. / Health really matters.", "note": "口语里更常用 what-分裂句或加 really、do/does/did 来强调" },
+      { "exam": "It was John who broke the window.(考试)", "real": "JOHN broke the window.(重读)", "note": "口语常靠重读和语气强调,不一定动用整个 It is…that 框架" }
+    ]
+  }
+}

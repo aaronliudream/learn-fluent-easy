@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Delving into History",
+  "source": "上外版选必四 Unit 3 同主题阅读(大运河/故宫/陆上丝路/海上丝路/希罗多德/保护古迹)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形听力不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Grand Canal",
+      "topic_cn": "说明·大运河的由来与发展",
+      "body": "The Grand Canal is the longest artificial river ever made by people. Stretching for about 1,800 kilometres, it links several provinces and joins five great river systems, running all the way from Beijing in the north to Hangzhou in the south. The first part was dug long ago, around 486 BCE, when the leader of the State of Wu needed a better way to move grain and military supplies northward. Instead of building roads, he chose a longer-lasting waterway based on natural rivers. Centuries later, Emperor Yang of the Sui dynasty had the old channels rebuilt and connected into one continuous canal. During the Ming dynasty, the canal became the economic lifeline of the empire, and tens of thousands of workers were employed to keep it open. Boats carried grain, salt, cotton and many other goods between the south and the north. Although trains later reduced its importance, the canal is still seen today as a treasure worth protecting.",
+      "vocab_notes": [
+        {
+          "word": "artificial",
+          "cn": "人造的"
+        },
+        {
+          "word": "lifeline",
+          "cn": "命脉"
+        },
+        {
+          "word": "empire",
+          "cn": "帝国"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the leader of the State of Wu first build a canal?",
+          "options": [
+            "To move supplies to the north more easily.",
+            "To attract visitors from other states.",
+            "To connect Beijing with Hangzhou at once.",
+            "To replace all the rivers in China."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 “needed a better way to move grain and military supplies northward” 的转述。"
+        },
+        {
+          "stem": "What did Emperor Yang of the Sui dynasty do?",
+          "options": [
+            "He dug the very first section himself.",
+            "He joined the older waterways into one long canal.",
+            "He closed the canal to all traders.",
+            "He moved the capital to Hangzhou."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 “had the old channels rebuilt and connected into one continuous canal” 的转述。"
+        },
+        {
+          "stem": "How is the Grand Canal regarded today, according to the text?",
+          "options": [
+            "As a valuable heritage that should be kept safe.",
+            "As a useless and forgotten ditch.",
+            "As the busiest trade route in the world.",
+            "As a danger that must be filled in."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 “still seen today as a treasure worth protecting” 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Forbidden City",
+      "topic_cn": "说明·故宫的历史与价值",
+      "body": "The Forbidden City, in the heart of Beijing, was the imperial palace of China for almost five hundred years. Built between 1406 and 1420 under the Ming dynasty, it served as the home and workplace of emperors during both the Ming and Qing dynasties. Its name came from the fact that ordinary people were not allowed to enter without permission. The palace is made up of about ninety smaller palaces and many other halls, courtyards and gardens, all carefully arranged according to old ideas of order and balance. After the last emperor left in 1911, the palace slowly opened to the public, and in 1987 it was listed as a World Heritage Site. Today it is one of the most visited museums on earth, welcoming millions of people every year. Visitors come not only to admire its golden roofs and red walls but also to learn how people once lived and ruled. Protecting such a place keeps the memory of history alive.",
+      "vocab_notes": [
+        {
+          "word": "imperial",
+          "cn": "皇帝的;帝国的"
+        },
+        {
+          "word": "permission",
+          "cn": "许可"
+        },
+        {
+          "word": "courtyard",
+          "cn": "庭院"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the palace given the name “Forbidden City”?",
+          "options": [
+            "It was hidden deep in the mountains.",
+            "Common people could not go in without permission.",
+            "No emperor ever lived there.",
+            "It was always closed in winter."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 “ordinary people were not allowed to enter without permission” 的转述。"
+        },
+        {
+          "stem": "What happened to the palace after 1911?",
+          "options": [
+            "It was completely pulled down.",
+            "It was turned into a market.",
+            "It gradually became open to ordinary visitors.",
+            "It became the home of a new emperor."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 “the palace slowly opened to the public” 的转述。"
+        },
+        {
+          "stem": "Why do people visit the Forbidden City today, according to the text?",
+          "options": [
+            "To buy cheap modern goods.",
+            "To watch trains pass by.",
+            "To live inside the old palaces.",
+            "To enjoy its beauty and learn about the past."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 “admire its golden roofs…learn how people once lived” 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Web of Roads",
+      "topic_cn": "说明·陆上丝绸之路",
+      "body": "The Silk Road was not a single road but a wide web of routes that crossed China and reached far beyond its borders. It linked cities such as Xi’an and Urumqi and continued westward all the way to Istanbul and Venice. A German geographer first gave these routes their famous name because silk was the most important product carried along them. During the Han dynasty, Emperor Wu sent Zhang Qian on two long missions to the Western Regions, and his travels opened the way for later trade and friendly contact between China and the western states. Along the routes people exchanged not only goods like tea, porcelain and gold but also skills, music, dance and new ideas. Crafts such as raising silkworms and casting iron spread westward, while grapes, walnuts and other plants travelled east into China. In this way the Silk Road became far more than a path for trade; it became a bridge that joined very different cultures together.",
+      "vocab_notes": [
+        {
+          "word": "web",
+          "cn": "网络"
+        },
+        {
+          "word": "geographer",
+          "cn": "地理学家"
+        },
+        {
+          "word": "mission",
+          "cn": "使命;出使"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why were these routes called the “Silk Road”?",
+          "options": [
+            "Silk was the chief good carried along them.",
+            "They were paved with silk cloth.",
+            "Only silk farmers were allowed on them.",
+            "They were built by silk traders alone."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 “silk was the most important product carried along them” 的转述。"
+        },
+        {
+          "stem": "What was the result of Zhang Qian’s missions?",
+          "options": [
+            "They ended all contact with the West.",
+            "They made later trade and friendship possible.",
+            "They closed the western borders.",
+            "They stopped the trade in silk."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 “opened the way for later trade and friendly contact” 的转述(非照抄)。"
+        },
+        {
+          "stem": "Besides goods, what else moved along the Silk Road?",
+          "options": [
+            "Only soldiers and weapons.",
+            "Nothing but silk cloth.",
+            "Skills, music and fresh ideas.",
+            "Empty boats and carts."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 “skills, music, dance and new ideas” 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Road Across the Sea",
+      "topic_cn": "说明·海上丝绸之路",
+      "body": "While many people picture camels crossing deserts, the Silk Road was not limited to land. Ships also carried trade between China and distant lands, following sea routes that modern scholars call the Maritime Silk Road. Sailing boats left the southern coast of China, passed through the Strait of Malacca in Southeast Asia, and reached destinations as far away as the Indian Peninsula. By sea, traders could move heavy and fragile goods, such as porcelain, more safely than over rough mountain paths. The sea routes connected China with India, Arabia and eventually Europe, allowing an exchange of products, beliefs and knowledge. Coastal cities grew wealthy as their harbours filled with ships from many nations. Like the land routes, the sea routes carried far more than cargo: they spread religions, customs and ways of thinking from one shore to another. Together, the land and sea Silk Roads helped build lasting ties between the East and the West.",
+      "vocab_notes": [
+        {
+          "word": "fragile",
+          "cn": "易碎的"
+        },
+        {
+          "word": "harbour",
+          "cn": "港湾"
+        },
+        {
+          "word": "cargo",
+          "cn": "货物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do modern scholars call the sea trade routes?",
+          "options": [
+            "The Grand Canal.",
+            "The Mountain Road.",
+            "The Desert Path.",
+            "The Maritime Silk Road."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 “sea routes that modern scholars call the Maritime Silk Road”。"
+        },
+        {
+          "stem": "Why was the sea route useful for goods like porcelain?",
+          "options": [
+            "Fragile items could travel more safely by water.",
+            "It was much shorter than any land road.",
+            "Porcelain floated easily on the sea.",
+            "No taxes were paid at sea."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 “move heavy and fragile goods…more safely than over rough mountain paths” 的转述。"
+        },
+        {
+          "stem": "How did coastal cities change because of sea trade?",
+          "options": [
+            "They were left empty and poor.",
+            "They became rich as ships filled their harbours.",
+            "They moved inland to the mountains.",
+            "They stopped trading with anyone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 “Coastal cities grew wealthy as their harbours filled with ships” 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The First Historian",
+      "topic_cn": "说明·希罗多德与《历史》",
+      "body": "Long before China’s canals reached their greatest length, a Greek writer named Herodotus was creating a new kind of book. Written around 440 BCE, his work, known as The Histories, is often called the founding work of history in the Western world. Instead of simply repeating old legends, Herodotus tried to record real events, customs and conflicts among the peoples of Western Asia, North Africa and Greece. He travelled widely, asked many questions and compared different accounts before writing anything down. Because of this careful method, his book became one of the most important sources for understanding the ancient world. More than that, Herodotus showed later writers that the past could be examined in a systematic, careful manner, rather than just remembered through stories. For this reason, many people regard him as the very first historian, and his way of recording the world still shapes how we study history today.",
+      "vocab_notes": [
+        {
+          "word": "legend",
+          "cn": "传说"
+        },
+        {
+          "word": "account",
+          "cn": "记述;描述"
+        },
+        {
+          "word": "systematic",
+          "cn": "系统的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is The Histories an important book?",
+          "options": [
+            "It was the longest book of its time.",
+            "It told only funny stories.",
+            "It is seen as the first true work of Western history.",
+            "It was written in modern English."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 “the founding work of history in the Western world” 的转述。"
+        },
+        {
+          "stem": "How did Herodotus gather his information?",
+          "options": [
+            "He copied one old legend word for word.",
+            "He stayed at home and guessed.",
+            "He asked only one person.",
+            "He travelled, asked questions and compared accounts."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 “travelled widely, asked many questions and compared different accounts” 的转述。"
+        },
+        {
+          "stem": "What did Herodotus teach later writers?",
+          "options": [
+            "That history can be studied in an orderly, careful way.",
+            "That history should be forgotten.",
+            "That stories are always false.",
+            "That only kings matter in history."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 “the past could be examined in a systematic, careful manner” 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Worth Keeping",
+      "topic_cn": "议论·为何保护古迹",
+      "body": "Why should we spend money and effort to protect old canals, palaces and city walls? Some people argue that such places are out of date and simply get in the way of modern building. Yet many others believe that historic sites are far too valuable to lose. First, they are a link to our past. A wall built six hundred years ago can tell us how people once lived, worked and defended their homes. Second, old places strengthen a shared sense of who we are. When people from one country visit the same famous site, they feel connected by a common story. Third, historic places can help the economy, because visitors from all over the world travel to see them and spend money nearby. Of course, protecting these sites costs time and money, but the reward is great. Once a piece of history is destroyed, it can never be brought back, so keeping it safe is everyone’s duty.",
+      "vocab_notes": [
+        {
+          "word": "out of date",
+          "cn": "过时的"
+        },
+        {
+          "word": "defend",
+          "cn": "保卫"
+        },
+        {
+          "word": "reward",
+          "cn": "回报"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do some people say against protecting old sites?",
+          "options": [
+            "They are too small to notice.",
+            "They are outdated and block new building.",
+            "They cost nothing to keep.",
+            "They attract too few visitors."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 “out of date and simply get in the way of modern building” 的转述。"
+        },
+        {
+          "stem": "How can historic places help the economy?",
+          "options": [
+            "They produce grain for the city.",
+            "They lower the price of houses.",
+            "Tourists come to visit them and spend money.",
+            "They give people free electricity."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 “visitors…travel to see them and spend money nearby” 的转述。"
+        },
+        {
+          "stem": "Why does the writer say protecting sites is important?",
+          "options": [
+            "New buildings are always ugly.",
+            "Old walls are cheap to repair.",
+            "Tourists dislike modern cities.",
+            "Lost history can never be recovered."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 “Once a piece of history is destroyed, it can never be brought back” 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "省略(Ellipsis)速查",
+    "intro": "省略就是为了避免重复、让句子更简洁,把可以从上下文补全的词去掉,而句意保持完整。三大常见场合:① 并列句中重复的成分;② 状语从句中与主句一致的'主语+be';③ 不定式只留 to、以及对话答语中的省略。",
+    "table": {
+      "headers": ["省略场合", "完整 → 省略后(例句)"],
+      "rows": [
+        ["并列(and/but/or)", "I like tea and (I like) coffee;She can swim but I can't (swim)"],
+        ["状语从句 主语+be", "when (you are) young;if (it is) necessary;though (he was) tired"],
+        ["不定式留 to", "I'd love to (go);I don't now, but I used to (do)"],
+        ["答语省略", "– Would you like more? – Yes, I would (like more)."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "状语从句省略的前提:从句主语 = 主句主语,且从句含 be 动词,才能省去'主语+be'", "mark": "When (you are) young √ / When young you... ×(主语不一致就不能省)" },
+      { "rule": "为避免重复前面的动词,不定式只保留 to;若是 be going to / used to / want to 等,也只留 to", "mark": "I hope to (join) √" },
+      { "rule": "助动词/情态动词后可直接省去重复的实义动词", "mark": "He runs faster than I do;but she can't (swim)" },
+      { "rule": "答语中常整体省略已知信息,只留关键词:Yes, I would. / I'm afraid not. / I hope so.", "mark": "答语省略" }
+    ],
+    "why": [
+      "英语忌重复;凡是上文已出现、读者能补全的词,都可省去,使句子更简洁地道。判断能否省略,关键看'省掉的部分能否被准确还原'。"
+    ],
+    "gaokaoPoints": [
+      "状语从句的'主语+be'省略(when/while/if/though/once/unless + 形容词/分词)是语法填空与改错高频点。",
+      "不定式 to 的省略(would love to / used to / be going to)与答语省略(Yes, I would / I'm afraid not)常考。",
+      "并列结构省略要保证'省后还原一致':时态、主谓、句法成分都要对得上。"
+    ],
+    "examVsReal": [
+      { "exam": "If (it is) necessary, see a doctor.（书面省略，规范）", "real": "Need a doctor? Just go.", "note": "考试考'主语+be'的规范省略;真实口语更短,直接用问句或祈使句" },
+      { "exam": "Yes, I would (like more).（答语保留情态动词）", "real": "Yeah, please!", "note": "考试要求答语省略后结构完整;日常口语常只用一两个词回应" }
+    ]
+  }
+}

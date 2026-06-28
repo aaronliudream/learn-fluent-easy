@@ -1,0 +1,37 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "复杂不定式·进行 / 完成 / 被动 速查",
+    "intro": "不定式不只有 to do 一种。它可以表示「正在进行」「先于谓语完成」「主语是承受者」。判断口诀:看动作是不是正在进行(→进行式)、是不是更早完成(→完成式)、主语是不是被动承受(→被动式)。",
+    "table": {
+      "headers": ["形式", "结构 / 含义 / 例句"],
+      "rows": [
+        ["简单式 to do", "一般动作:I want to help my friend.(想帮朋友)"],
+        ["进行式 to be doing", "当时正在进行:He seemed to be carrying all his books.(似乎正抱着书)"],
+        ["完成式 to have done", "先于谓语已完成:I'm glad to have met you years ago.(很高兴当年遇见你)"],
+        ["被动式 to be done", "主语是承受者:Something needs to be done.(有事需要去做)"],
+        ["完成被动 to have been done", "更早完成且被动:The leaf is believed to have been painted.(据信那叶子是被画上去的)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动作此刻/当时正在进行 → 用进行式不定式 to be doing", "mark": "happen / seem / appear / pretend to be doing" },
+      { "rule": "动作先于谓语并已完成 → 用完成式不定式 to have done", "mark": "be glad / proud / sorry to have done;be said / known to have done" },
+      { "rule": "不定式的逻辑主语是动作的承受者 → 用被动式不定式 to be done", "mark": "need / want / deserve + to be done" },
+      { "rule": "既更早完成又被动 → 用完成被动式 to have been done", "mark": "be believed / said to have been done" }
+    ],
+    "why": [
+      "不定式的'形式'只是给动作加上'体'(进行/完成)和'态'(主动/被动)的信息:进行式强调过程,完成式强调先后,被动式强调主语是被作用的一方;先判断这三点,形式自然就定了。"
+    ],
+    "gaokaoPoints": [
+      "seem/appear/happen/pretend + to be doing 考'正在进行';语法填空与改错高频。",
+      "be glad/proud/sorry + to have done 与 be said/thought/known to have done 考'先于谓语完成'。",
+      "need/want/deserve + to be done(主动形式表被动易错);be believed to have been done 考完成被动。"
+    ],
+    "examVsReal": [
+      { "exam": "The work needs to be done.(考试/正式)", "real": "The work needs doing.", "note": "口语里 need 后常直接用动名词 doing 表被动,意思相同" },
+      { "exam": "I am glad to have met you.(强调早已发生)", "real": "I'm glad I met you.", "note": "日常口语更常用一个完整从句,而不一定用完成式不定式" }
+    ]
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "book_cn": "上外版选择性必修第四册",
+  "unit_cn": "Unit 3 Delving into History 深入历史",
+  "source": "上外版选必四 Unit 3 词表(大运河/丝绸之路 真词);IPA 英音标准词典回填;例句原创、历史/运河/丝路主题、含目标词、不超纲;多义词给多个中文释义。",
+  "words": [
+    {
+      "word": "empire",
+      "ipa": "/ˈempaɪə(r)/",
+      "pos": "n.",
+      "meaning_cn": "帝国",
+      "phrase_en": "the whole empire",
+      "example_en": "The Grand Canal became the lifeline of the whole empire.",
+      "example_cn": "大运河成了整个帝国的命脉。",
+      "freq_rank": 1
+    },
+    {
+      "word": "economy",
+      "ipa": "/ɪˈkɒnəmi/",
+      "pos": "n.",
+      "meaning_cn": "经济;经济情况",
+      "phrase_en": "promote the economy",
+      "example_en": "The canal helped to promote the economy of the empire.",
+      "example_cn": "运河帮助促进了帝国的经济。",
+      "freq_rank": 2
+    },
+    {
+      "word": "expansion",
+      "ipa": "/ɪkˈspænʃn/",
+      "pos": "n.",
+      "meaning_cn": "扩张;扩展",
+      "phrase_en": "the expansion of trade",
+      "example_en": "The expansion of the railway slowly replaced the old canal.",
+      "example_cn": "铁路的扩展慢慢取代了古老的运河。",
+      "freq_rank": 3
+    },
+    {
+      "word": "income",
+      "ipa": "/ˈɪnkʌm/",
+      "pos": "n.",
+      "meaning_cn": "收入;收益",
+      "phrase_en": "a source of income",
+      "example_en": "Salt became an important source of income during the Ming dynasty.",
+      "example_cn": "盐在明朝成了重要的收入来源。",
+      "freq_rank": 4
+    },
+    {
+      "word": "route",
+      "ipa": "/ruːt/",
+      "pos": "n.",
+      "meaning_cn": "路线;固定线路",
+      "phrase_en": "a trade route",
+      "example_en": "The Silk Road was a famous trade route between East and West.",
+      "example_cn": "丝绸之路是连接东西方的著名贸易路线。",
+      "freq_rank": 5
+    },
+    {
+      "word": "port",
+      "ipa": "/pɔːt/",
+      "pos": "n.",
+      "meaning_cn": "港口;港口城市",
+      "phrase_en": "a busy port",
+      "example_en": "Many goods left from the busy port cities along the coast.",
+      "example_cn": "许多货物从沿海繁忙的港口城市运出。",
+      "freq_rank": 6
+    },
+    {
+      "word": "thrive",
+      "ipa": "/θraɪv/",
+      "pos": "v.",
+      "meaning_cn": "兴旺;繁荣;蓬勃发展",
+      "phrase_en": "thrive on trade",
+      "example_en": "Suzhou grew to thrive as a centre of trade along the canal.",
+      "example_cn": "苏州发展成运河沿线繁荣的贸易中心。",
+      "freq_rank": 7
+    },
+    {
+      "word": "prove",
+      "ipa": "/pruːv/",
+      "pos": "v.",
+      "meaning_cn": "证明;证实;结果是",
+      "phrase_en": "prove useful",
+      "example_en": "The canal proved a powerful tool for moving grain north.",
+      "example_cn": "运河被证明是向北运粮的有力工具。",
+      "freq_rank": 8
+    },
+    {
+      "word": "operate",
+      "ipa": "/ˈɒpəreɪt/",
+      "pos": "v.",
+      "meaning_cn": "操作;运转;运营",
+      "phrase_en": "operate the boats",
+      "example_en": "Thousands of soldiers were needed to operate the canal boats.",
+      "example_cn": "需要数千名士兵来驾驶运河上的船只。",
+      "freq_rank": 9
+    },
+    {
+      "word": "aim",
+      "ipa": "/eɪm/",
+      "pos": "n.",
+      "meaning_cn": "目的;目标",
+      "phrase_en": "the main aim",
+      "example_en": "The main aim of the project is to move water to dry regions.",
+      "example_cn": "这一工程的主要目标是把水调往干旱地区。",
+      "freq_rank": 10
+    },
+    {
+      "word": "divert",
+      "ipa": "/daɪˈvɜːt/",
+      "pos": "v.",
+      "meaning_cn": "使转向;转移;改道",
+      "phrase_en": "divert water",
+      "example_en": "The project will divert water from the south to the north.",
+      "example_cn": "这项工程将把南方的水调往北方。",
+      "freq_rank": 11
+    },
+    {
+      "word": "arid",
+      "ipa": "/ˈærɪd/",
+      "pos": "adj.",
+      "meaning_cn": "干旱的;干燥的",
+      "phrase_en": "an arid region",
+      "example_en": "Water is carried to the arid regions of the north every year.",
+      "example_cn": "每年都有水被输送到北方干旱的地区。",
+      "freq_rank": 12
+    },
+    {
+      "word": "legendary",
+      "ipa": "/ˈledʒəndri/",
+      "pos": "adj.",
+      "meaning_cn": "享有盛名的;传奇的",
+      "phrase_en": "the legendary Silk Road",
+      "example_en": "The legendary Silk Road linked China with distant lands.",
+      "example_cn": "传奇的丝绸之路把中国与遥远的国度连接起来。",
+      "freq_rank": 13
+    },
+    {
+      "word": "gateway",
+      "ipa": "/ˈɡeɪtweɪ/",
+      "pos": "n.",
+      "meaning_cn": "门户;通道",
+      "phrase_en": "the gateway to Europe",
+      "example_en": "Istanbul was seen as the gateway to Europe on the Silk Road.",
+      "example_cn": "伊斯坦布尔被视为丝绸之路上通往欧洲的门户。",
+      "freq_rank": 14
+    },
+    {
+      "word": "boom",
+      "ipa": "/buːm/",
+      "pos": "v.",
+      "meaning_cn": "迅速发展;激增;繁荣",
+      "phrase_en": "trade boomed",
+      "example_en": "The trade in silk boomed along the entire length of the road.",
+      "example_cn": "丝绸贸易沿整条道路迅速发展。",
+      "freq_rank": 15
+    },
+    {
+      "word": "commodity",
+      "ipa": "/kəˈmɒdəti/",
+      "pos": "n.",
+      "meaning_cn": "商品;货物",
+      "phrase_en": "a valuable commodity",
+      "example_en": "Silk was the most valuable commodity traded from China.",
+      "example_cn": "丝绸是中国出口的最珍贵的商品。",
+      "freq_rank": 16
+    },
+    {
+      "word": "complex",
+      "ipa": "/ˈkɒmpleks/",
+      "pos": "adj.",
+      "meaning_cn": "复杂的;难懂的",
+      "phrase_en": "a complex network",
+      "example_en": "The trade routes grew into a complex network of paths.",
+      "example_cn": "这些贸易路线发展成一张复杂的路网。",
+      "freq_rank": 17
+    },
+    {
+      "word": "pave",
+      "ipa": "/peɪv/",
+      "pos": "v.",
+      "meaning_cn": "铺(路);为……创造条件",
+      "phrase_en": "pave the way",
+      "example_en": "Zhang Qian's journeys paved the way for trade with the West.",
+      "example_cn": "张骞的出使为同西方的贸易铺平了道路。",
+      "freq_rank": 18
+    },
+    {
+      "word": "diplomatic",
+      "ipa": "/ˌdɪpləˈmætɪk/",
+      "pos": "adj.",
+      "meaning_cn": "外交的",
+      "phrase_en": "diplomatic exchanges",
+      "example_en": "His missions opened the way for diplomatic exchanges between states.",
+      "example_cn": "他的出使为各国间的外交往来开辟了道路。",
+      "freq_rank": 19
+    },
+    {
+      "word": "commercial",
+      "ipa": "/kəˈmɜːʃl/",
+      "pos": "adj.",
+      "meaning_cn": "商业的;贸易的",
+      "phrase_en": "commercial exchanges",
+      "example_en": "The Silk Road encouraged commercial exchanges across many lands.",
+      "example_cn": "丝绸之路促进了许多国家之间的商业往来。",
+      "freq_rank": 20
+    },
+    {
+      "word": "kingdom",
+      "ipa": "/ˈkɪŋdəm/",
+      "pos": "n.",
+      "meaning_cn": "王国",
+      "phrase_en": "the Middle Kingdom",
+      "example_en": "Traders carried goods between the Middle Kingdom and the West.",
+      "example_cn": "商人在中国与西方之间运送货物。",
+      "freq_rank": 21
+    },
+    {
+      "word": "religious",
+      "ipa": "/rɪˈlɪdʒəs/",
+      "pos": "adj.",
+      "meaning_cn": "宗教的;宗教信仰的",
+      "phrase_en": "religious thought",
+      "example_en": "The road also became a channel for religious thought.",
+      "example_cn": "这条道路也成了宗教思想传播的通道。",
+      "freq_rank": 22
+    },
+    {
+      "word": "efficient",
+      "ipa": "/ɪˈfɪʃnt/",
+      "pos": "adj.",
+      "meaning_cn": "高效的;有功效的",
+      "phrase_en": "an efficient way",
+      "example_en": "The Silk Road was an efficient way to spread new ideas.",
+      "example_cn": "丝绸之路是传播新思想的高效途径。",
+      "freq_rank": 23
+    },
+    {
+      "word": "version",
+      "ipa": "/ˈvɜːʃn/",
+      "pos": "n.",
+      "meaning_cn": "版本;变体;型式",
+      "phrase_en": "an ancient version",
+      "example_en": "The Silk Road was a kind of ancient version of the information highway.",
+      "example_cn": "丝绸之路是信息高速公路的一种古代版本。",
+      "freq_rank": 24
+    },
+    {
+      "word": "porcelain",
+      "ipa": "/ˈpɔːsəlɪn/",
+      "pos": "n.",
+      "meaning_cn": "瓷;瓷器",
+      "phrase_en": "fine porcelain",
+      "example_en": "The Chinese traded fine porcelain, tea and gold with the West.",
+      "example_cn": "中国人用精美的瓷器、茶叶和黄金同西方交易。",
+      "freq_rank": 25
+    },
+    {
+      "word": "craft",
+      "ipa": "/krɑːft/",
+      "pos": "n.",
+      "meaning_cn": "手艺;工艺",
+      "phrase_en": "skills and crafts",
+      "example_en": "Asian skills and crafts were shared along the Silk Road.",
+      "example_cn": "亚洲的技艺和工艺沿丝绸之路得到分享。",
+      "freq_rank": 26
+    },
+    {
+      "word": "spin",
+      "ipa": "/spɪn/",
+      "pos": "v.",
+      "meaning_cn": "纺(线);快速旋转",
+      "phrase_en": "spin silk",
+      "example_en": "The skill of spinning silk thread spread westward along the road.",
+      "example_cn": "纺丝的技艺沿这条路向西传播。",
+      "freq_rank": 27
+    },
+    {
+      "word": "iron",
+      "ipa": "/ˈaɪən/",
+      "pos": "n.",
+      "meaning_cn": "铁",
+      "phrase_en": "cast iron",
+      "example_en": "Iron casting was one of the crafts introduced to the West.",
+      "example_cn": "铸铁是传入西方的工艺之一。",
+      "freq_rank": 28
+    },
+    {
+      "word": "cast",
+      "ipa": "/kɑːst/",
+      "pos": "v.",
+      "meaning_cn": "浇铸;铸造",
+      "phrase_en": "cast iron",
+      "example_en": "Workers learned to cast iron and make strong tools.",
+      "example_cn": "工人们学会了铸铁并制作坚固的工具。",
+      "freq_rank": 29
+    },
+    {
+      "word": "performance",
+      "ipa": "/pəˈfɔːməns/",
+      "pos": "n.",
+      "meaning_cn": "表演;演出",
+      "phrase_en": "a music performance",
+      "example_en": "Music and dance performances from Central Asia were popular in China.",
+      "example_cn": "来自中亚的音乐舞蹈表演在中国很受欢迎。",
+      "freq_rank": 30
+    },
+    {
+      "word": "feature",
+      "ipa": "/ˈfiːtʃə(r)/",
+      "pos": "v.",
+      "meaning_cn": "以……为特色;由……主演",
+      "phrase_en": "feature dancers",
+      "example_en": "The shows often featured dancers and musicians in colourful masks.",
+      "example_cn": "这些演出常以戴着彩色面具的舞者和乐师为特色。",
+      "freq_rank": 31
+    },
+    {
+      "word": "agriculture",
+      "ipa": "/ˈæɡrɪkʌltʃə(r)/",
+      "pos": "n.",
+      "meaning_cn": "农业;农艺",
+      "phrase_en": "in agriculture",
+      "example_en": "In agriculture, grapes and walnuts were brought to China from the west.",
+      "example_cn": "在农业方面,葡萄和核桃从西方传入中国。",
+      "freq_rank": 32
+    },
+    {
+      "word": "maritime",
+      "ipa": "/ˈmærɪtaɪm/",
+      "pos": "adj.",
+      "meaning_cn": "海的;海运的",
+      "phrase_en": "the Maritime Silk Road",
+      "example_en": "Scholars call the sea routes the Maritime Silk Road.",
+      "example_cn": "学者把这些海上路线称为海上丝绸之路。",
+      "freq_rank": 33
+    },
+    {
+      "word": "coastal",
+      "ipa": "/ˈkəʊstl/",
+      "pos": "adj.",
+      "meaning_cn": "沿海的;靠近海岸的",
+      "phrase_en": "coastal ports",
+      "example_en": "Ships left the coastal ports of southeast China and sailed far away.",
+      "example_cn": "船只从中国东南沿海的港口出发,航行到远方。",
+      "freq_rank": 34
+    },
+    {
+      "word": "strait",
+      "ipa": "/streɪt/",
+      "pos": "n.",
+      "meaning_cn": "海峡",
+      "phrase_en": "the Strait of Malacca",
+      "example_en": "The ships sailed through the Strait of Malacca on their way west.",
+      "example_cn": "船只在西行途中穿过马六甲海峡。",
+      "freq_rank": 35
+    },
+    {
+      "word": "destination",
+      "ipa": "/ˌdestɪˈneɪʃn/",
+      "pos": "n.",
+      "meaning_cn": "目的地;终点",
+      "phrase_en": "a distant destination",
+      "example_en": "The boats reached distant destinations as far away as India.",
+      "example_cn": "这些船只到达了远至印度的目的地。",
+      "freq_rank": 36
+    },
+    {
+      "word": "peninsula",
+      "ipa": "/pəˈnɪnsjələ/",
+      "pos": "n.",
+      "meaning_cn": "半岛",
+      "phrase_en": "the Indian Peninsula",
+      "example_en": "The sea route reached as far as the Indian Peninsula.",
+      "example_cn": "这条海路远达印度半岛。",
+      "freq_rank": 37
+    },
+    {
+      "word": "gain",
+      "ipa": "/ɡeɪn/",
+      "pos": "v.",
+      "meaning_cn": "获得;取得",
+      "phrase_en": "gain much",
+      "example_en": "Countries along the routes gained much more than material goods.",
+      "example_cn": "沿线国家获得的远不止物质货物。",
+      "freq_rank": 38
+    },
+    {
+      "word": "material",
+      "ipa": "/məˈtɪəriəl/",
+      "pos": "adj.",
+      "meaning_cn": "物质的;实际的",
+      "phrase_en": "material goods",
+      "example_en": "The Silk Road brought more than just material goods to the world.",
+      "example_cn": "丝绸之路给世界带来的不只是物质货物。",
+      "freq_rank": 39
+    },
+    {
+      "word": "invaluable",
+      "ipa": "/ɪnˈvæljuəbl/",
+      "pos": "adj.",
+      "meaning_cn": "极宝贵的;极有用的",
+      "phrase_en": "an invaluable exchange",
+      "example_en": "The road brought about an invaluable exchange of culture.",
+      "example_cn": "这条路带来了极其宝贵的文化交流。",
+      "freq_rank": 40
+    },
+    {
+      "word": "lifeline",
+      "ipa": "/ˈlaɪflaɪn/",
+      "pos": "n.",
+      "meaning_cn": "命脉;生命线",
+      "phrase_en": "the economic lifeline",
+      "example_en": "The Grand Canal became the economic lifeline of the empire.",
+      "example_cn": "大运河成了帝国的经济命脉。",
+      "freq_rank": 41
+    },
+    {
+      "word": "large-scale",
+      "ipa": "/ˌlɑːdʒ ˈskeɪl/",
+      "pos": "adj.",
+      "meaning_cn": "大规模的;大范围的",
+      "phrase_en": "a large-scale project",
+      "example_en": "Never before had such a large-scale canal project been attempted.",
+      "example_cn": "此前从未尝试过如此大规模的运河工程。",
+      "freq_rank": 42
+    },
+    {
+      "word": "cotton",
+      "ipa": "/ˈkɒtn/",
+      "pos": "n.",
+      "meaning_cn": "棉布;棉花",
+      "phrase_en": "cotton and wool",
+      "example_en": "Goods sent from the north included cotton, wool and coal.",
+      "example_cn": "从北方运来的货物包括棉布、毛料和煤。",
+      "freq_rank": 43
+    },
+    {
+      "word": "wool",
+      "ipa": "/wʊl/",
+      "pos": "n.",
+      "meaning_cn": "毛料;羊毛",
+      "phrase_en": "wool and cotton",
+      "example_en": "Wool was carried south while grain was carried north.",
+      "example_cn": "毛料被运往南方,而粮食被运往北方。",
+      "freq_rank": 44
+    },
+    {
+      "word": "barge",
+      "ipa": "/bɑːdʒ/",
+      "pos": "n.",
+      "meaning_cn": "驳船(平底货船)",
+      "phrase_en": "a government barge",
+      "example_en": "Thousands of government barges travelled along this route each year.",
+      "example_cn": "每年有数千艘官府驳船沿这条线路航行。",
+      "freq_rank": 45
+    },
+    {
+      "word": "chief",
+      "ipa": "/tʃiːf/",
+      "pos": "adj.",
+      "meaning_cn": "最重要的;首要的",
+      "phrase_en": "chief among them",
+      "example_en": "Many port cities thrived, chief among them Suzhou.",
+      "example_cn": "许多港口城市繁荣起来,其中以苏州为首。",
+      "freq_rank": 46
+    },
+    {
+      "word": "restrict",
+      "ipa": "/rɪˈstrɪkt/",
+      "pos": "v.",
+      "meaning_cn": "限制;限定",
+      "phrase_en": "be restricted to",
+      "example_en": "The routes were not restricted to land but also crossed the sea.",
+      "example_cn": "这些路线不限于陆地,也跨越海洋。",
+      "freq_rank": 47
+    },
+    {
+      "word": "two-way",
+      "ipa": "/ˌtuː ˈweɪ/",
+      "pos": "adj.",
+      "meaning_cn": "双向的",
+      "phrase_en": "a two-way movement",
+      "example_en": "The routes became a two-way movement of trade and ideas.",
+      "example_cn": "这些路线成了贸易与思想的双向流动。",
+      "freq_rank": 48
+    }
+  ]
+}

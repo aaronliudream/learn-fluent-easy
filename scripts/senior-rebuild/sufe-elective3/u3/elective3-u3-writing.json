@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Write a Survey Report on Theories of a Mystery(就一个谜团的不同理论写调查报告)",
+  "title_en": "How People View the Theories of a Mystery",
+  "genre": "调查报告 / 说明(report the results of a class survey)",
+  "source": "上外版选择性必修三 Unit 3 Guided Writing:writing a survey report on how people view different theories of a mystery(就某谜团的不同理论做调查并写报告)。",
+  "prompt_cn": "假设你们班开展了一次'读后分享'活动,就'巨石阵为何而建'调查了同学最认可哪种理论。请用英语写一篇约110-130词的调查报告,内容包括:① 介绍调查并转述调查问题;② 用比例/分数描述主要发现;③ 总结整体结论。注意恰当使用同位语从句(the theory that… / the belief that…)。",
+  "prompt_en": "Your class held a read-and-share activity and surveyed which theory about why Stonehenge was built classmates find most believable. Write a survey report (about 110-130 words) that: 1) introduces the survey and restates the question; 2) describes the main findings using fractions or percentages; 3) ends with an overall conclusion. Try to use appositive clauses (the theory that… / the belief that…).",
+  "points": [
+    "介绍调查并转述问题(We carried out a survey to find out…)",
+    "用比例描述主要发现(Nearly two thirds… / About one fourth…)",
+    "恰当使用同位语从句(the theory that… / the belief that…)",
+    "总结整体结论(Overall, it is clear that…)"
+  ],
+  "word_count": "110-130 词",
+  "model_essay": "Our class carried out a survey to find out which theory about why Stonehenge was built our classmates find most believable. Forty students took part and chose from three explanations. Nearly two thirds supported the theory that the monument worked as a calendar, since certain stones point to the sun at the solstices. About one fourth accepted the idea that it was once a burial ground, because human bones were found nearby. Only a few held the surprising belief that visitors from space lent a hand. Overall, it is clear that most of our classmates trust the scientific explanation rather than stranger stories. Even so, several of them said they still enjoy the mystery and hope that future discoveries will finally settle the question.",
+  "model_translation": "我们班做了一次调查,想了解同学们最认可关于巨石阵为何而建的哪一种理论。四十名同学参与,从三种解释中选择。近三分之二支持'这处遗迹曾用作日历'的理论,因为某些石头在至日指向太阳;约四分之一接受'它曾是一处墓地'的看法,因为附近发现了人骨;只有少数人持有'外星来客曾出手相助'这一令人惊讶的信念。总体来看,大多数同学更信任科学解释,而非离奇故事。即便如此,仍有几位表示他们依然享受这份神秘,希望未来的发现能最终解开这个谜团。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍调查并转述问题 / 用比例描述发现 / 总结结论" },
+      { "dimension": "结构", "max": 4, "criteria": "按'引入—发现—结论'展开、比例表达清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、同位语从句(the theory that…)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "引入 We carried out a survey to find out…",
+      "发现1 Nearly two thirds supported the theory that…",
+      "发现2 About one fourth accepted the idea that…",
+      "结论 Overall, it is clear that…"
+    ],
+    "key_expressions": [
+      "We carried out a survey to find out which theory… is most believable.",
+      "Nearly two thirds supported the theory that the monument worked as a calendar.",
+      "About one fourth accepted the idea that it was once a burial ground.",
+      "Overall, it is clear that most of our classmates trust the scientific explanation."
+    ],
+    "useful_words": ["survey", "theory", "belief", "idea", "evidence", "monument", "explanation", "support", "fraction", "conclusion"]
+  },
+  "high_sentences": [
+    "We carried out a survey to find out which theory our classmates find most believable.",
+    "Nearly two thirds supported the theory that the monument worked as a calendar.",
+    "Only a few held the surprising belief that visitors from space lent a hand.",
+    "Overall, it is clear that most of our classmates trust the scientific explanation."
+  ],
+  "error_pairs": [
+    { "wrong": "the theory which the monument was a calendar", "correct": "the theory that the monument was a calendar", "note": "从句完整、补充说明 theory 的内容,是同位语从句,用 that 不用 which。" },
+    { "wrong": "Two thirds of students supports the theory.", "correct": "Two thirds of the students support the theory.", "note": "of the students 为复数,谓语用 support。" },
+    { "wrong": "There is no doubt whether the result is clear.", "correct": "There is no doubt that the result is clear.", "note": "no doubt 后表'确信'用 that;whether 表'是否',语义相反。" }
+  ],
+  "paragraph_template": "【谜团理论调查报告结构】\n第1句 引入:We carried out a survey to find out which theory…\n第2-4句 发现:Nearly two thirds supported the theory that… About one fourth accepted the idea that… Only a few held the belief that…\n第5句 结论:Overall, it is clear that…"
+}

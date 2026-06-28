@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Life and Technology",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第三册 Unit 4 同主题听力(买机器宠物/科技担忧报告/远程手术对话/5G科普/智能家居对话/AI日常独白);long/short 交替,用词限 U4/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Choosing a Robot Pet",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: I'm thinking of buying that robot dog. It looks so cute.",
+        "Leo: Really? Why a robot one and not a real puppy?",
+        "Mia: Because it doesn't need to be fed, and it never gets sick.",
+        "Leo: That's true. But can it really respond to you like a real dog?",
+        "Mia: The shop says it can learn your voice and obey simple commands.",
+        "Leo: Sounds impressive. Still, I think a real dog gives you more love.",
+        "Mia: Maybe. A robot can't build a true emotional bond with you.",
+        "Leo: Exactly. I'd rather have a pet that really feels something."
+      ],
+      "translation_cn": "Mia 想买那只机器狗,觉得它可爱;Leo 问为何不买真小狗;Mia 说机器狗不用喂、不生病;Leo 问它能否像真狗一样回应;Mia 说它能学声音、听简单命令;Leo 觉得很厉害但真狗更有爱;Mia 承认机器无法建立真正情感联系;Leo 表示更想要有真情感的宠物。",
+      "questions": [
+        {
+          "stem": "What does Mia want to buy?",
+          "options": [
+            "A robot dog.",
+            "A real puppy.",
+            "A new phone.",
+            "A camera."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Mia prefer a robot pet?",
+          "options": [
+            "It is much cheaper than food.",
+            "It needs no feeding and never gets sick.",
+            "It can talk like a person.",
+            "It can drive a car."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can the robot dog do, according to the shop?",
+          "options": [
+            "Learn her voice and obey simple commands.",
+            "Cook meals for the family.",
+            "Fly around the room.",
+            "Repair itself when broken."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Leo think a real dog offers?",
+          "options": [
+            "Less trouble than a robot.",
+            "More love than a robot.",
+            "A faster Internet link.",
+            "Better video games."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they finally agree on?",
+          "options": [
+            "Robots are always better than real pets.",
+            "Real dogs are too expensive.",
+            "A robot can't build a true emotional bond.",
+            "Nobody should keep any pet."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 Worries About New Technology",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A recent report shows that many people are worried about new technology.",
+        "Most of all, they are afraid that new machines will make them lose their jobs.",
+        "Some say that robots may increase the gap between the rich and the poor.",
+        "Many would not ride in a self-driving car without a human in the seat.",
+        "Yet the report also notes that technology, used wisely, can save lives and time."
+      ],
+      "translation_cn": "一份最新报告显示许多人担忧新科技;他们最害怕新机器让自己失业;有人说机器人可能拉大贫富差距;许多人不愿乘坐没有人在驾驶座的自动驾驶车;但报告也指出,明智地使用科技能挽救生命、节省时间。",
+      "questions": [
+        {
+          "stem": "What are people most afraid of, according to the report?",
+          "options": [
+            "Running out of phones.",
+            "Having no Internet at all.",
+            "Driving too slowly.",
+            "Losing their jobs to machines."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What might robots increase, some people say?",
+          "options": [
+            "The gap between rich and poor.",
+            "The price of food.",
+            "The number of real dogs.",
+            "The speed of trains."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What would many people not do?",
+          "options": [
+            "Use a smartphone at all.",
+            "Ride in a self-driving car with no human in the seat.",
+            "Visit a hospital.",
+            "Watch the news."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the report also note about technology?",
+          "options": [
+            "It always destroys jobs.",
+            "It is useless in hospitals.",
+            "Used wisely, it can save lives and time.",
+            "It can never be trusted."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main idea of the report?",
+          "options": [
+            "All new technology should be banned.",
+            "Robots already control the world.",
+            "Self-driving cars are perfectly safe.",
+            "People worry about technology but it can also help."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Surgery from Far Away",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Nina: Did you hear that a doctor did a heart operation from another city?",
+        "Sam: From another city? How is that even possible?",
+        "Nina: He used a 5G connection to direct the local team in real time.",
+        "Sam: So the specialist didn't have to travel to the patient at all?",
+        "Nina: Right. He just needed a fast and stable Internet link.",
+        "Sam: But what if the signal had a delay? That sounds risky.",
+        "Nina: With 5G the delay is only about one millisecond, so it's safe.",
+        "Sam: Amazing. That could really help patients in remote places."
+      ],
+      "translation_cn": "Nina 说一位医生从另一座城市做了心脏手术;Sam 惊讶问怎么可能;Nina 说他用5G实时指挥当地团队;Sam 问专家因此完全不用奔波;Nina 说对,只需快速稳定的网络;Sam 担心信号延迟有风险;Nina 说5G延迟仅约一毫秒,很安全;Sam 感叹这能真正帮到偏远地区的病人。",
+      "questions": [
+        {
+          "stem": "Where was the doctor during the operation?",
+          "options": [
+            "In another city, far from the patient.",
+            "In the same room as the patient.",
+            "On a plane to the hospital.",
+            "At the patient's home."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the doctor use to direct the team?",
+          "options": [
+            "A paper letter.",
+            "A 5G connection in real time.",
+            "A loud telephone.",
+            "A printed map."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the specialist need most?",
+          "options": [
+            "A faster car.",
+            "A bigger operating room.",
+            "A fast and stable Internet link.",
+            "More nurses on the plane."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is 5G safe enough for this, Nina says?",
+          "options": [
+            "It never uses electricity.",
+            "It is slower than 4G.",
+            "It needs no signal at all.",
+            "Its delay is only about one millisecond."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who could this technology especially help?",
+          "options": [
+            "Patients in remote places.",
+            "Drivers in big cities.",
+            "Students learning music.",
+            "Cooks in restaurants."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 How 5G Is Different",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The 5G network is many times faster than the 4G Internet we currently use.",
+        "Its biggest advantage is that it greatly reduces signal delay.",
+        "With 4G, the delay can be between twenty and eighty milliseconds.",
+        "With 5G, the delay drops to about one millisecond.",
+        "This small change makes a huge difference when a robot is controlled from far away."
+      ],
+      "translation_cn": "5G网络比我们目前使用的4G快很多倍;它最大的优势是大幅减少信号延迟;用4G延迟在20到80毫秒之间;用5G延迟降到约一毫秒;这个微小变化在远程控制机器人时会带来巨大差别。",
+      "questions": [
+        {
+          "stem": "How does 5G compare with 4G?",
+          "options": [
+            "It is much slower.",
+            "It is many times faster.",
+            "It is exactly the same.",
+            "It uses no signal."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is 5G's biggest advantage?",
+          "options": [
+            "It makes phones cheaper.",
+            "It removes all cameras.",
+            "It greatly reduces signal delay.",
+            "It stops the Internet."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the delay with 4G?",
+          "options": [
+            "Exactly one millisecond.",
+            "A full minute.",
+            "No delay at all.",
+            "Between twenty and eighty milliseconds."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the delay with 5G?",
+          "options": [
+            "About one millisecond.",
+            "About eighty milliseconds.",
+            "About one minute.",
+            "About one hour."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does this small change matter most?",
+          "options": [
+            "When you watch a film at home.",
+            "When a robot is controlled from far away.",
+            "When you read a paper book.",
+            "When you walk to school."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Setting Up a Smart Home",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Dad: This new speaker is supposed to control all the lights. Can you set it up?",
+        "Ella: Sure. You just connect it to the Internet and give it a name.",
+        "Dad: And then it really responds when I speak to it?",
+        "Ella: Yes. Say \"turn on the lights\" and watch what happens.",
+        "Dad: Wow, the room lit up at once! That's quite impressive.",
+        "Ella: You can also use your phone to view the front door from anywhere.",
+        "Dad: That's handy. But what happens if the Internet goes down?",
+        "Ella: Then nothing smart works, so we still keep the normal switches."
+      ],
+      "translation_cn": "爸爸说这个新音箱能控制所有灯,让 Ella 帮忙设置;Ella 说连网并取名即可;爸爸问它真能在他说话时回应吗;Ella 让他说“开灯”看看;爸爸惊喜灯立刻亮了,觉得很厉害;Ella 说还能用手机随处查看前门;爸爸问断网怎么办;Ella 说那时智能功能都失灵,所以仍保留普通开关。",
+      "questions": [
+        {
+          "stem": "What is the new speaker supposed to control?",
+          "options": [
+            "The family car.",
+            "The kitchen oven only.",
+            "All the lights in the home.",
+            "The front garden."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How do you set up the speaker, Ella says?",
+          "options": [
+            "Take it apart and clean it.",
+            "Plug it into the television.",
+            "Charge it for a whole day.",
+            "Connect it to the Internet and give it a name."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Dad think after the lights come on?",
+          "options": [
+            "It is quite impressive.",
+            "It is rather boring.",
+            "It is too slow.",
+            "It is broken."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What else can the phone do?",
+          "options": [
+            "Cook dinner by itself.",
+            "View the front door from anywhere.",
+            "Drive the car home.",
+            "Charge the speaker."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they keep the normal switches?",
+          "options": [
+            "Because the speaker is too loud.",
+            "Because the lights are too bright.",
+            "Because nothing smart works if the Internet goes down.",
+            "Because Ella dislikes phones."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 AI in Everyday Life",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Artificial intelligence is already a quiet part of our daily life.",
+        "When you type a message, it guesses the next word you want.",
+        "When you open a music app, it recommends songs you may enjoy.",
+        "In hospitals, it can study medical images and help doctors find problems.",
+        "But AI has no real feelings, so people and machines work best together."
+      ],
+      "translation_cn": "人工智能已悄然融入我们的日常生活;打字时它会猜你想用的下一个词;打开音乐App时它推荐你可能喜欢的歌;在医院它能研究医学影像、帮医生发现问题;但AI没有真正的情感,所以人与机器合作效果最好。",
+      "questions": [
+        {
+          "stem": "What does AI do when you type a message?",
+          "options": [
+            "It deletes the message.",
+            "It calls your friend.",
+            "It turns off the phone.",
+            "It guesses the next word you want."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does AI do in a music app?",
+          "options": [
+            "Recommends songs you may enjoy.",
+            "Stops all the music.",
+            "Records your voice.",
+            "Charges the battery."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does AI help in hospitals?",
+          "options": [
+            "It builds the hospital walls.",
+            "It studies medical images to help find problems.",
+            "It feeds the patients.",
+            "It drives the ambulance."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does AI lack, according to the passage?",
+          "options": [
+            "Electric power.",
+            "Any useful skill.",
+            "Real feelings.",
+            "A connection to the Internet."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What works best, the speaker says?",
+          "options": [
+            "Machines working completely alone.",
+            "Banning AI from daily life.",
+            "Letting AI make every choice.",
+            "People and machines working together."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

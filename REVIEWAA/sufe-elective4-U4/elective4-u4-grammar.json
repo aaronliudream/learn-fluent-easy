@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grammar_title": "虚拟语气 wish 与 if only(I wish… had done / If only…)",
+  "source": "上外版选择性必修四 Unit 4 Grammar in Use:Subjunctive Mood (wish and if only)。wish/if only + 从句表达不太可能/不可能的愿望或遗憾;时态后移(backshift)是判别关键 —— 干扰项均为时态错误(陈述语气的现在/将来/现在完成),故答案唯一。句子地道、文学经典主题。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "wish + 一般过去时(对现在的遗憾/此刻的非真实愿望)",
+      "overview": "对现在状况的遗憾或此刻达不到的愿望,wish 后从句用一般过去时(be 多用 were);句中常有 now / so I could… 等现在线索。陈述语气的现在式/将来式/现在完成式都不能跟在 wish 之后,故只有过去式成立。"
+    },
+    {
+      "code": "u4.02",
+      "point": "wish + 过去完成时(对过去的遗憾)",
+      "overview": "对过去已发生或未发生之事的遗憾,wish 后从句用过去完成时(had done / hadn't done);句中常有 last week / yesterday / before… 等过去时间线索,使一般过去时(表现在非真实)不成立,只有过去完成时正确。"
+    },
+    {
+      "code": "u4.03",
+      "point": "wish + would/could · if only 各式",
+      "overview": "wish + would do 表对将来变化的期盼或对当下行为的不满;wish + could do 表此刻欠缺的能力或将来的可能;if only 可替换 I wish,后接过去时(对现在)、过去完成时(对过去)或 could do。干扰项为陈述语气的 will/can/现在式/进行式,均不能跟在 wish/if only 之后。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "\"How she wishes she ____ Spanish, so she could read Neruda's poems in the original now!\"",
+      "options": [
+        "knew",
+        "knows",
+        "will know",
+        "has known"
+      ],
+      "answer_index": 0,
+      "explanation": "对现在的非真实愿望(此刻并不懂西班牙语),wish 后用一般过去时;现在式/将来式/现在完成式都不能跟在 wish 之后。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ the deeper meaning of this classic poem.\"",
+      "options": [
+        "understand",
+        "understood",
+        "will understand",
+        "have understood"
+      ],
+      "answer_index": 1,
+      "explanation": "对当下理解力的遗憾,用一般过去时表此刻的非真实状况。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"He wishes he ____ enough free time to read all the great novels.\"",
+      "options": [
+        "has",
+        "will have",
+        "had",
+        "is having"
+      ],
+      "answer_index": 2,
+      "explanation": "现在并没有足够时间,wish 后用一般过去时表非真实现状。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish this ancient text ____ a little easier to read.\"",
+      "options": [
+        "is",
+        "will be",
+        "has been",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "对现在状况的愿望,be 动词在虚拟里多用 were。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"She wishes she ____ near a big library full of classics.\"",
+      "options": [
+        "lived",
+        "lives",
+        "will live",
+        "is living"
+      ],
+      "answer_index": 0,
+      "explanation": "现实是她并不住在附近,wish 后用一般过去时表非真实现状。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ a complete set of Shakespeare's plays.\"",
+      "options": [
+        "own",
+        "owned",
+        "will own",
+        "have owned"
+      ],
+      "answer_index": 1,
+      "explanation": "对现在没有的东西表愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ Italian, so I could read Dante in the original.\"",
+      "options": [
+        "speak",
+        "will speak",
+        "spoke",
+        "have spoken"
+      ],
+      "answer_index": 2,
+      "explanation": "so I could… 表明是当下的非真实愿望,用一般过去时 spoke。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"He wishes he ____ every line of that famous monologue by heart.\"",
+      "options": [
+        "remembers",
+        "will remember",
+        "has remembered",
+        "remembered"
+      ],
+      "answer_index": 3,
+      "explanation": "对现在记不住的遗憾,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ more about the Lake Poets and their lives.\"",
+      "options": [
+        "knew",
+        "know",
+        "will know",
+        "have known"
+      ],
+      "answer_index": 0,
+      "explanation": "对现在了解不足的遗憾,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"She wishes she ____ as beautifully as Su Shi once did.\"",
+      "options": [
+        "writes",
+        "wrote",
+        "will write",
+        "has written"
+      ],
+      "answer_index": 1,
+      "explanation": "对当下能力的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ the patience to enjoy such long classics.\"",
+      "options": [
+        "have",
+        "will have",
+        "had",
+        "am having"
+      ],
+      "answer_index": 2,
+      "explanation": "现在缺乏耐心,wish 后用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ as wise as the old fisherman in the story.\"",
+      "options": [
+        "am",
+        "will be",
+        "have been",
+        "were"
+      ],
+      "answer_index": 3,
+      "explanation": "对现在的非真实愿望,be 用 were。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ poetry as much as my literature teacher does.\"",
+      "options": [
+        "enjoyed",
+        "enjoy",
+        "will enjoy",
+        "have enjoyed"
+      ],
+      "answer_index": 0,
+      "explanation": "对当下感受的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"She wishes she ____ why this old novel is called a classic.\"",
+      "options": [
+        "understands",
+        "understood",
+        "will understand",
+        "has understood"
+      ],
+      "answer_index": 1,
+      "explanation": "对现在不明白的遗憾,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"We wish our teacher ____ a class on classic Chinese poems.\"",
+      "options": [
+        "teaches",
+        "will teach",
+        "taught",
+        "is teaching"
+      ],
+      "answer_index": 2,
+      "explanation": "对现状(老师并不教这门课)的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ in the age of the great Romantic poets.\"",
+      "options": [
+        "live",
+        "will live",
+        "have lived",
+        "lived"
+      ],
+      "answer_index": 3,
+      "explanation": "与现实相反的愿望,用一般过去时表非真实。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish everyone in my class ____ about books the way you do.\"",
+      "options": [
+        "spoke",
+        "speaks",
+        "will speak",
+        "is speaking"
+      ],
+      "answer_index": 0,
+      "explanation": "对现状的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish my little brother ____ reading classics as much as I do.\"",
+      "options": [
+        "likes",
+        "liked",
+        "will like",
+        "has liked"
+      ],
+      "answer_index": 1,
+      "explanation": "现实是他并不喜欢,wish 后用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"He wishes he ____ an old first edition of that famous novel.\"",
+      "options": [
+        "owns",
+        "will own",
+        "owned",
+        "is owning"
+      ],
+      "answer_index": 2,
+      "explanation": "对现在没有之物的愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"I wish I ____ as moved by poetry as my best friend is.\"",
+      "options": [
+        "feel",
+        "will feel",
+        "have felt",
+        "felt"
+      ],
+      "answer_index": 3,
+      "explanation": "对当下感受的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ that classic novel before the exam last week.\"",
+      "options": [
+        "had read",
+        "read",
+        "have read",
+        "will read"
+      ],
+      "answer_index": 0,
+      "explanation": "last week 表过去,对过去未做之事的遗憾,wish 后用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"He wishes he ____ reading War and Peace before yesterday's literature quiz.\"",
+      "options": [
+        "finished",
+        "had finished",
+        "has finished",
+        "will finish"
+      ],
+      "answer_index": 1,
+      "explanation": "yesterday 锁定过去,对过去的遗憾用过去完成时 had finished。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ up so late reading Gone with the Wind last night.\"",
+      "options": [
+        "didn't stay",
+        "haven't stayed",
+        "hadn't stayed",
+        "won't stay"
+      ],
+      "answer_index": 2,
+      "explanation": "last night 表过去,对昨晚行为的后悔用过去完成时的否定式。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"She wishes she ____ to the poetry recital yesterday evening.\"",
+      "options": [
+        "went",
+        "has gone",
+        "will go",
+        "had gone"
+      ],
+      "answer_index": 3,
+      "explanation": "yesterday evening 表过去,对过去未去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ those cruel words to my best friend an hour ago.\"",
+      "options": [
+        "hadn't said",
+        "didn't say",
+        "haven't said",
+        "won't say"
+      ],
+      "answer_index": 0,
+      "explanation": "an hour ago 表过去,对说过的话后悔,用过去完成时的否定式。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"He wishes he ____ the great DiMaggio play before that star retired.\"",
+      "options": [
+        "saw",
+        "had seen",
+        "has seen",
+        "will see"
+      ],
+      "answer_index": 1,
+      "explanation": "before that star retired 指过去,对过去错过之事的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ more attention during yesterday's lecture on Shakespeare.\"",
+      "options": [
+        "paid",
+        "have paid",
+        "had paid",
+        "will pay"
+      ],
+      "answer_index": 2,
+      "explanation": "yesterday 表过去,对过去未做好的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"They wish they ____ the old fisherman's advice earlier in the story.\"",
+      "options": [
+        "followed",
+        "have followed",
+        "will follow",
+        "had followed"
+      ],
+      "answer_index": 3,
+      "explanation": "earlier 指此前,对过去未做之事的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ the poem by heart for last week's competition.\"",
+      "options": [
+        "had learned",
+        "learned",
+        "have learned",
+        "will learn"
+      ],
+      "answer_index": 0,
+      "explanation": "last week 表过去,对过去准备不足的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"She wishes she ____ the real ending before a friend spoilt it for her.\"",
+      "options": [
+        "knew",
+        "had known",
+        "has known",
+        "will know"
+      ],
+      "answer_index": 1,
+      "explanation": "before a friend spoilt it 指过去,对过去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ that rare copy when it was still on sale last month.\"",
+      "options": [
+        "bought",
+        "have bought",
+        "had bought",
+        "will buy"
+      ],
+      "answer_index": 2,
+      "explanation": "last month 表过去,对过去未买的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"He wishes he ____ the chance to meet the famous author years ago.\"",
+      "options": [
+        "took",
+        "has taken",
+        "will take",
+        "had taken"
+      ],
+      "answer_index": 3,
+      "explanation": "years ago 表过去,对过去错过机会的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ harder when I first began learning calligraphy.\"",
+      "options": [
+        "had tried",
+        "tried",
+        "have tried",
+        "will try"
+      ],
+      "answer_index": 0,
+      "explanation": "when I first began 指过去起点,对过去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"We wish we ____ the museum of classics during our trip last summer.\"",
+      "options": [
+        "visited",
+        "had visited",
+        "have visited",
+        "will visit"
+      ],
+      "answer_index": 1,
+      "explanation": "last summer 表过去,对过去未做之事的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ my essay on Su Shi before the deadline passed.\"",
+      "options": [
+        "wrote",
+        "have written",
+        "had written",
+        "will write"
+      ],
+      "answer_index": 2,
+      "explanation": "before the deadline passed 指过去,对过去未完成的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"She wishes she ____ a shorter classic for her first book report last term.\"",
+      "options": [
+        "chose",
+        "has chosen",
+        "will choose",
+        "had chosen"
+      ],
+      "answer_index": 3,
+      "explanation": "last term 表过去,对过去选择的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ the teacher when she explained that difficult verse yesterday.\"",
+      "options": [
+        "had asked",
+        "asked",
+        "have asked",
+        "will ask"
+      ],
+      "answer_index": 0,
+      "explanation": "yesterday 表过去,对过去未问的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"He wishes he ____ the poetry club in his very first year at school.\"",
+      "options": [
+        "joined",
+        "had joined",
+        "has joined",
+        "will join"
+      ],
+      "answer_index": 1,
+      "explanation": "first year(已过去)指过去,对过去未做的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"I wish I ____ that line correctly during last night's recitation contest.\"",
+      "options": [
+        "recited",
+        "have recited",
+        "had recited",
+        "will recite"
+      ],
+      "answer_index": 2,
+      "explanation": "last night 表过去,对过去表现的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"They wish they ____ the play when it was first performed long ago.\"",
+      "options": [
+        "watched",
+        "have watched",
+        "will watch",
+        "had watched"
+      ],
+      "answer_index": 3,
+      "explanation": "when it was first performed long ago 指过去,对过去错过的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish those noisy students ____ stop talking during the poetry reading.\"",
+      "options": [
+        "would stop",
+        "will stop",
+        "stop",
+        "are stopping"
+      ],
+      "answer_index": 0,
+      "explanation": "对他人当下行为的不满、盼其改变,wish 后用 would do;陈述语气的 will/现在式/进行式都不能跟在 wish 之后。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish my brother ____ read more classics instead of only comics.\"",
+      "options": [
+        "will read",
+        "would read",
+        "reads",
+        "is reading"
+      ],
+      "answer_index": 1,
+      "explanation": "盼对方将来改变习惯,用 wish + would do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish our teacher ____ give us a lecture on Shakespeare one day.\"",
+      "options": [
+        "will give",
+        "gives",
+        "would give",
+        "is giving"
+      ],
+      "answer_index": 2,
+      "explanation": "对将来的期盼,用 wish + would do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish people ____ stop spoiling the endings of famous novels.\"",
+      "options": [
+        "will stop",
+        "stop",
+        "have stopped",
+        "would stop"
+      ],
+      "answer_index": 3,
+      "explanation": "盼他人行为改变,用 wish + would do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish I ____ write poetry as beautifully as Wordsworth.\"",
+      "options": [
+        "could write",
+        "can write",
+        "will write",
+        "am writing"
+      ],
+      "answer_index": 0,
+      "explanation": "表此刻欠缺的能力,用 wish + could do;陈述语气的 can/will/进行式都不能跟在 wish 之后。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish I ____ recite the whole monologue without a single mistake.\"",
+      "options": [
+        "can recite",
+        "could recite",
+        "will recite",
+        "is reciting"
+      ],
+      "answer_index": 1,
+      "explanation": "表当下做不到的能力,用 wish + could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish I ____ meet my favourite novelist in person some day.\"",
+      "options": [
+        "can meet",
+        "will meet",
+        "could meet",
+        "am meeting"
+      ],
+      "answer_index": 2,
+      "explanation": "表难以实现的将来愿望,用 wish + could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish I ____ understand classical Chinese poems more easily.\"",
+      "options": [
+        "can understand",
+        "will understand",
+        "is understanding",
+        "could understand"
+      ],
+      "answer_index": 3,
+      "explanation": "表当下欠缺的能力,用 wish + could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ play the guzheng like the girl in the contest!\"",
+      "options": [
+        "could play",
+        "can play",
+        "will play",
+        "am playing"
+      ],
+      "answer_index": 0,
+      "explanation": "if only 表强烈愿望、能力当下达不到,用 could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ travel back to the age of the great poets!\"",
+      "options": [
+        "can travel",
+        "could travel",
+        "will travel",
+        "am travelling"
+      ],
+      "answer_index": 1,
+      "explanation": "if only 表不可能实现的愿望,用 could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only this difficult classic ____ a little shorter!\"",
+      "options": [
+        "is",
+        "will be",
+        "were",
+        "has been"
+      ],
+      "answer_index": 2,
+      "explanation": "if only 对现在状况的非真实愿望,be 用 were。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ more free time to read for pleasure!\"",
+      "options": [
+        "have",
+        "will have",
+        "am having",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "if only 对现在的非真实愿望,用一般过去时。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only my handwriting ____ as neat as a calligrapher's!\"",
+      "options": [
+        "were",
+        "is",
+        "will be",
+        "has been"
+      ],
+      "answer_index": 0,
+      "explanation": "if only 对现在状况的非真实愿望,be 用 were。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ such a cruel thing to her yesterday!\"",
+      "options": [
+        "didn't say",
+        "hadn't said",
+        "don't say",
+        "won't say"
+      ],
+      "answer_index": 1,
+      "explanation": "yesterday 表过去,if only 对过去的后悔用过去完成时的否定式。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ the whole novel before watching the film last night!\"",
+      "options": [
+        "read",
+        "have read",
+        "had read",
+        "will read"
+      ],
+      "answer_index": 2,
+      "explanation": "last night 表过去,if only 对过去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ to the recital before it ended yesterday evening!\"",
+      "options": [
+        "went",
+        "have gone",
+        "will go",
+        "had gone"
+      ],
+      "answer_index": 3,
+      "explanation": "yesterday evening 表过去,if only 对过去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"If only I ____ harder for last week's literature exam!\"",
+      "options": [
+        "had studied",
+        "studied",
+        "have studied",
+        "will study"
+      ],
+      "answer_index": 0,
+      "explanation": "last week 表过去,if only 对过去的遗憾用过去完成时。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish my old computer ____ open these poetry files a bit faster.\"",
+      "options": [
+        "will open",
+        "would open",
+        "opens",
+        "is opening"
+      ],
+      "answer_index": 1,
+      "explanation": "盼其行为改变,用 wish + would do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish I ____ remember every line of my favourite sonnet.\"",
+      "options": [
+        "can remember",
+        "will remember",
+        "could remember",
+        "am remembering"
+      ],
+      "answer_index": 2,
+      "explanation": "表当下达不到的能力,用 wish + could do。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"I wish the library ____ stay open later during exam week.\"",
+      "options": [
+        "will stay",
+        "stays",
+        "is staying",
+        "would stay"
+      ],
+      "answer_index": 3,
+      "explanation": "盼将来情况改变,用 wish + would do。"
+    }
+  ]
+}

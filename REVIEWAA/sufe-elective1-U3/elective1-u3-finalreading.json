@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(探险/极地主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When the young explorer's boat became stuck in the ice, most people thought the whole team was lost for good. Instead of panicking, the captain shared out the food fairly and kept everyone busy with daily tasks. Months later, every single member of the crew was rescued alive, and the captain was praised more for his calm leadership than for the distance he had travelled.",
+    "questions": [
+      {
+        "q": "What did the captain do when the boat became stuck?",
+        "options": [
+          "He shared food fairly and gave everyone daily tasks.",
+          "He left the crew and walked away alone.",
+          "He panicked and gave up at once.",
+          "He kept all the food for himself."
+        ],
+        "answer": "A",
+        "explanation": "原文 shared out the food fairly and kept everyone busy with daily tasks 的转述;其余与原文相反。"
+      },
+      {
+        "q": "Why was the captain mainly praised?",
+        "options": [
+          "For the great distance he had covered.",
+          "For his calm leadership during the danger.",
+          "For finding treasure on the ice.",
+          "For sailing faster than anyone else."
+        ],
+        "answer": "B",
+        "explanation": "末句 praised more for his calm leadership than for the distance(短文后半,覆盖不同位置)。"
+      }
+    ]
+  }
+}

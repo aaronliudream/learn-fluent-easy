@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Achieving Effective Communication",
+  "source": "上外版选择性必修四 Unit 1 主题原创阅读:演讲怯场、海伦·凯勒、盲文、辅助科技、交流障碍、吸引听众六个不同子题材;答案转述、不照抄正文;互不重复。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Night the Fear Left",
+      "topic_cn": "记叙·吐温的初次演讲",
+      "body": "When Mark Twain was still only a young reporter, he agreed to give his first public lecture. He was so afraid of failing that he signed a strict contract, which made it impossible for him to back out. On the evening of the talk, he reached the theatre nearly an hour early, his knees shaking so badly that he could hardly stand. To be safe, he arranged for several strong friends to sit among the listeners and bang their clubs on the floor whenever he said something meant to be funny. He also asked the governor's wife to laugh loudly so that the rest of the hall would follow. In the middle of his speech he placed a touching story, and the audience fell completely silent. After about five minutes of pure misery, his fear suddenly disappeared and never came back. Years later he could still describe the agony of those opening moments in detail.",
+      "vocab_notes": [
+        {
+          "word": "contract",
+          "cn": "合同;契约"
+        },
+        {
+          "word": "agony",
+          "cn": "极度痛苦;煎熬"
+        },
+        {
+          "word": "governor",
+          "cn": "州长;总督"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Mark Twain sign a strict contract before the lecture?",
+          "options": [
+            "To make sure he could not avoid giving the talk",
+            "To earn a larger payment for the evening",
+            "To force the theatre to lower its ticket prices",
+            "To win the support of the local governor"
+          ],
+          "answer_index": 0,
+          "explanation": "他签合同是为了断了退路、逼自己上台,对应'无法退出'。"
+        },
+        {
+          "stem": "What was the purpose of the friends with clubs and the governor's wife?",
+          "options": [
+            "To protect Twain from an angry crowd",
+            "To help spread laughter and applause through the hall",
+            "To time how long his speech lasted",
+            "To take notes on the audience's reactions"
+          ],
+          "answer_index": 1,
+          "explanation": "朋友敲棒、州长夫人大笑都是为了带动全场笑声与掌声。"
+        },
+        {
+          "stem": "How did Twain's stage fright finally end?",
+          "options": [
+            "It vanished after a few painful minutes and stayed away",
+            "A friend stepped in to finish the talk",
+            "It slowly grew worse until he stopped",
+            "He left the stage and returned much calmer"
+          ],
+          "answer_index": 0,
+          "explanation": "煎熬约五分钟后,恐惧突然消失且再没回来。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Word at the Well",
+      "topic_cn": "记叙·海伦·凯勒理解语言",
+      "body": "For weeks after her teacher arrived, Helen Keller copied finger signs without grasping what they meant. She could form the letters for many objects, yet she had no idea that these shapes stood for real things. One morning she kept mixing up the signs for two different objects, grew angry, and threw a doll to the floor. Her teacher quietly swept the broken pieces aside and led her outside into the warm sunshine. They walked down to the well-house, where someone was drawing water. Her teacher placed one of Helen's hands under the flowing tap and spelled the word for water into the other, first slowly and then quickly. All at once a misty feeling of something long forgotten rushed back to her. In that single moment Helen understood that the cool stream pouring over her hand had a name. She left the well eager to learn, certain now that everything in the world could be named.",
+      "vocab_notes": [
+        {
+          "word": "sign",
+          "cn": "手势;符号"
+        },
+        {
+          "word": "well-house",
+          "cn": "井房"
+        },
+        {
+          "word": "tap",
+          "cn": "水龙头"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Helen's main problem before the moment at the well?",
+          "options": [
+            "She could not move her fingers at all",
+            "She copied signs without understanding their meaning",
+            "She refused to let her teacher touch her hands",
+            "She had already learned to read printed books"
+          ],
+          "answer_index": 1,
+          "explanation": "她只是机械模仿手势,并不明白其含义。"
+        },
+        {
+          "stem": "What finally happened to Helen beside the running water?",
+          "options": [
+            "She learned to speak her first full sentence",
+            "She remembered the doll she had broken earlier",
+            "She suddenly grasped that the water had its own name",
+            "She decided she no longer wanted to study"
+          ],
+          "answer_index": 2,
+          "explanation": "水流过手时,她突然懂得这事物是有名字的。"
+        },
+        {
+          "stem": "How did Helen feel as she left the well-house?",
+          "options": [
+            "Tired and ready to rest",
+            "Confused about what had happened",
+            "Angry at her strict teacher",
+            "Hungry to learn the names of everything"
+          ],
+          "answer_index": 3,
+          "explanation": "她离开时'渴望学习',想知道一切的名字。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Reading with the Fingers",
+      "topic_cn": "说明·盲文及其发明者",
+      "body": "Braille is a clever system that lets people who cannot see read and write by touch. Each letter is formed from a small pattern of raised dots, and the fingers move across the page to feel them one by one. Because the same dot patterns can be borrowed by many languages, Braille is now used around the world for English, Chinese, Arabic and dozens of others. The system is named after Louis Braille, a Frenchman who lost his eyesight in an accident when he was a small child. As a student he was unhappy with the clumsy reading methods of his day, so he designed a simpler code that ordinary fingers could follow quickly. Today his invention does far more than print books. It appears on lift buttons, medicine boxes and signs in public places, giving blind people greater freedom to live and communicate on their own. A single good idea changed millions of lives.",
+      "vocab_notes": [
+        {
+          "word": "raised dots",
+          "cn": "凸点"
+        },
+        {
+          "word": "code",
+          "cn": "代码;符号系统"
+        },
+        {
+          "word": "invention",
+          "cn": "发明"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do readers use Braille?",
+          "options": [
+            "By feeling patterns of raised dots with their fingers",
+            "By listening to spoken letters",
+            "By looking at large coloured pictures",
+            "By pressing buttons that speak each word"
+          ],
+          "answer_index": 0,
+          "explanation": "盲文靠手指触摸凸点来阅读。"
+        },
+        {
+          "stem": "Why is Braille described as useful for many languages?",
+          "options": [
+            "It can only be written in French",
+            "Its dot patterns can be shared by different languages",
+            "It uses a different alphabet for every country",
+            "It replaces all printed letters with pictures"
+          ],
+          "answer_index": 1,
+          "explanation": "同样的凸点组合可被多种语言借用。"
+        },
+        {
+          "stem": "What does the passage suggest about Braille's value today?",
+          "options": [
+            "It is mainly used for printing storybooks",
+            "It has been replaced by newer machines",
+            "It helps blind people manage daily life more independently",
+            "It is too difficult for most people to learn"
+          ],
+          "answer_index": 2,
+          "explanation": "盲文出现在电梯、药盒、标识上,让盲人更独立地生活交流。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Lending a Voice to the Silent",
+      "topic_cn": "说明·辅助科技与交流",
+      "body": "Some people cannot speak with their own voice, yet modern technology is finding new ways to give them one. A famous scientist who could move only a single muscle in his cheek once relied on a computer to talk for him. A small sensor noticed each tiny movement, and special software studied his old writings to guess which letter he was likely to choose next. Step by step, the machine turned his slow signals into full sentences and then into clear speech. Newer tools try to read movements even faster, while a few research teams are testing systems that could one day work directly from brain signals. For travellers, simple phone apps now translate between languages almost instantly, and other apps describe the world aloud for users who cannot see. None of these tools is perfect, but together they are slowly removing barriers that once kept many people silent. The goal is simple: to let everyone join the conversation.",
+      "vocab_notes": [
+        {
+          "word": "sensor",
+          "cn": "传感器"
+        },
+        {
+          "word": "software",
+          "cn": "软件"
+        },
+        {
+          "word": "signal",
+          "cn": "信号"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the scientist's computer help him speak?",
+          "options": [
+            "It read his thoughts directly from his brain",
+            "It recorded his voice and played it back",
+            "It translated his writing into other languages",
+            "It turned tiny cheek movements into words and speech"
+          ],
+          "answer_index": 3,
+          "explanation": "传感器捕捉脸颊微动,软件预测字母,再转为语音。"
+        },
+        {
+          "stem": "What are some newer technologies trying to do?",
+          "options": [
+            "Work from brain signals and read movements faster",
+            "Make all old apps stop working",
+            "Teach people to write with their hands again",
+            "Replace human conversation completely"
+          ],
+          "answer_index": 0,
+          "explanation": "新工具尝试更快读取动作,甚至直接用脑信号。"
+        },
+        {
+          "stem": "What is the writer's overall attitude towards these tools?",
+          "options": [
+            "They are useless and should be dropped",
+            "They are imperfect but helpfully removing barriers",
+            "They are dangerous to ordinary speakers",
+            "They are already perfect and need no change"
+          ],
+          "answer_index": 1,
+          "explanation": "作者认为工具虽不完美,却在逐步消除交流障碍。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Gets in the Way",
+      "topic_cn": "说明·四类交流障碍",
+      "body": "Even when two people share a language, communication can still go wrong. Experts often sort the problems into four groups. The first is psychological: fear or shyness, such as stage fright, can stop a message before it leaves our mouths. The second is physical: poor hearing or weak sight may block words and signs, though hearing aids and glasses often help. The third is the language barrier, which appears when speakers do not share the same tongue; here a reliable translator or a few clear gestures can bridge the gap. The fourth is cultural: a joke or a habit that feels polite in one country may seem strange or even rude in another. The most useful cure for this last barrier is not a clever device but an honest respect for differences. Knowing which barrier you face is the first step, because each kind calls for its own simple strategy rather than a single fix.",
+      "vocab_notes": [
+        {
+          "word": "shyness",
+          "cn": "害羞"
+        },
+        {
+          "word": "hearing aid",
+          "cn": "助听器"
+        },
+        {
+          "word": "strategy",
+          "cn": "策略"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what is a psychological barrier?",
+          "options": [
+            "Not sharing the same language",
+            "Weak hearing or poor eyesight",
+            "Fear or shyness that holds a message back",
+            "A custom that seems rude abroad"
+          ],
+          "answer_index": 2,
+          "explanation": "心理障碍指怯场等恐惧或害羞,使信息说不出口。"
+        },
+        {
+          "stem": "What does the writer suggest works best against the cultural barrier?",
+          "options": [
+            "A powerful new device",
+            "Speaking much more loudly",
+            "Avoiding foreigners altogether",
+            "A sincere respect for differences"
+          ],
+          "answer_index": 3,
+          "explanation": "对待文化障碍最有效的是真诚尊重差异,而非设备。"
+        },
+        {
+          "stem": "What is the main point of the final sentence?",
+          "options": [
+            "Different barriers each need their own strategy",
+            "One single method can fix every barrier",
+            "Barriers can never really be overcome",
+            "Only language barriers truly matter"
+          ],
+          "answer_index": 0,
+          "explanation": "每类障碍都需各自的对策,没有万能办法。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Holding the Room",
+      "topic_cn": "说明·如何吸引听众",
+      "body": "Keeping an audience interested is one of the hardest parts of public speaking, especially when you are nervous. A few simple habits make a real difference. First, speak with passion, since listeners can tell at once whether you care about your subject; caring about it also helps calm your own fear. Second, use the stage. Moving as you change topics, or stepping closer as you ask a question, gives your talk energy, while standing frozen like a board builds a wall between you and the room. Third, let a little of your personality show. A short personal story or a touch of humour, used where it fits, makes people warm to you. Finally, offer something of real value instead of sounding like a salesperson. Audiences quickly sense pressure and grow resistant, but they stay open when they feel you are giving rather than selling. Practise these habits and even a shy speaker can hold the room.",
+      "vocab_notes": [
+        {
+          "word": "passion",
+          "cn": "激情;热情"
+        },
+        {
+          "word": "personality",
+          "cn": "个性;性格"
+        },
+        {
+          "word": "value",
+          "cn": "价值"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer recommend speaking with passion?",
+          "options": [
+            "It makes a speech much shorter",
+            "Listeners notice it and the speaker's fear eases",
+            "It hides any mistakes in the notes",
+            "It forces the audience to take notes"
+          ],
+          "answer_index": 1,
+          "explanation": "充满激情既能被听众察觉,也能缓解演讲者自身的恐惧。"
+        },
+        {
+          "stem": "What does standing frozen on stage do, according to the text?",
+          "options": [
+            "It gives the talk extra energy",
+            "It helps the speaker remember more",
+            "It puts a wall between speaker and audience",
+            "It makes the speech sound more polite"
+          ],
+          "answer_index": 2,
+          "explanation": "一动不动会在演讲者与听众之间筑起一道墙。"
+        },
+        {
+          "stem": "Why might an audience become resistant?",
+          "options": [
+            "When the speaker shares a personal story",
+            "When the speaker moves around the stage",
+            "When the speech offers something valuable",
+            "When the talk feels like a sales pitch under pressure"
+          ],
+          "answer_index": 3,
+          "explanation": "当演讲像在施压推销时,听众会产生抵触。"
+        }
+      ]
+    }
+  ]
+}

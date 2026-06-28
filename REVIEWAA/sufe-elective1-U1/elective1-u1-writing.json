@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Write a Website Article about \"Learning by Doing\"(写一篇关于\"做中学\"的网站短文)",
+  "title_en": "The Art of Learning by Doing",
+  "genre": "网站短文 / 议论(general statement + personal experience as supporting details)",
+  "source": "上外版选择性必修第一册 Unit 1 Writing:write a short website article about \"learning by doing\"(先给出一个总观点,再用个人经历作为支撑细节)。",
+  "prompt_cn": "假设你叫李军,你为学校学生会的\"做中学(Learning by Doing)\"活动征稿。请用英语写一篇约100词的网站短文,内容包括:① 提出一个关于\"做中学\"的总观点;② 用你自己(或他人)的一段亲身经历作为支撑细节;③ 用一句话总结。注意:用上本单元时态(过去完成时/现在完成进行时/将来进行时),用个人经历让观点更有说服力。",
+  "prompt_en": "Suppose you are Li Jun. You are calling for articles for your school's \"Learning by Doing\" event. Write a short website article (about 100 words) that: 1) gives a general statement about learning by doing; 2) uses your own (or someone else's) personal experience as supporting details; 3) ends with a concluding sentence. Try to use the unit's tenses (past perfect / present perfect continuous / future continuous).",
+  "points": [
+    "提出总观点(The idea of \"learning by doing\" is becoming increasingly appealing …)",
+    "用亲身经历作支撑细节(In the Art Club, I once …)",
+    "用单元时态(had done / have been doing / will be doing)",
+    "一句话总结呼应观点"
+  ],
+  "word_count": "100 词左右(90–110)",
+  "model_essay": "The idea of \"learning by doing\" is becoming increasingly appealing to high school students, and my own experience shows why. Last term, I joined a three-dimensional design course in the Art Club. Before that course, I had always thought design was only about computers. To my surprise, we used our hands to fold paper into cranes, lanterns and towers. Each time a structure fell, I learned something new about balance. Since then, I have been telling my friends that we understand an idea best after we try it ourselves. Next month, I will be sharing these projects with our sister school in Singapore.",
+  "model_translation": "\"做中学\"的理念正越来越吸引高中生,而我自己的经历就说明了原因。上学期,我在美术社参加了一门三维设计课。在那门课之前,我一直以为设计只和电脑有关。出乎意料的是,我们用双手把纸折成纸鹤、灯笼和高塔。每当一个结构倒下,我都对平衡有了新的认识。从那以后,我一直告诉朋友:只有亲手尝试,我们才能最透彻地理解一个想法。下个月,我将与新加坡的姊妹校分享这些作品。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:总观点 / 亲身经历支撑 / 总结句" },
+      { "dimension": "结构", "max": 4, "criteria": "先观点后例证、细节具体可信、行文连贯、总结呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、单元时态(过去完成/现在完成进行/将来进行)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "总观点 The idea of \"learning by doing\" is becoming increasingly appealing …",
+      "经历1 Before that course, I had always thought …（过去完成时)",
+      "经历2 Since then, I have been telling … （现在完成进行时)",
+      "展望/总结 Next month, I will be sharing … （将来进行时)"
+    ],
+    "key_expressions": [
+      "The idea of \"learning by doing\" is becoming increasingly appealing.",
+      "Before that course, I had always thought design was only about computers.",
+      "Since then, I have been telling my friends that …",
+      "We understand an idea best after we try it ourselves."
+    ],
+    "useful_words": ["learning by doing", "design", "experience", "structure", "balance", "appealing", "supporting detail", "understand", "process", "lifelong"]
+  },
+  "high_sentences": [
+    "The idea of \"learning by doing\" is becoming increasingly appealing to high school students.",
+    "Before that course, I had always thought design was only about computers.",
+    "Each time a structure fell, I learned something new about balance.",
+    "We understand an idea best after we try it with our own hands."
+  ],
+  "error_pairs": [
+    { "wrong": "Before the course, I have always thought design was easy.", "correct": "Before the course, I had always thought design was easy.", "note": "过去某点之前的状态用过去完成时 had thought,不用现在完成时。" },
+    { "wrong": "Since then, I tell my friends about it.", "correct": "Since then, I have been telling my friends about it.", "note": "since + 持续到现在的动作用现在完成进行时。" },
+    { "wrong": "Next month, I share these projects with our sister school.", "correct": "Next month, I will be sharing these projects with our sister school.", "note": "将来某时正在进行的动作用将来进行时。" }
+  ],
+  "paragraph_template": "【做中学网站短文结构】\n第1句 总观点:The idea of \"learning by doing\" is becoming increasingly appealing …\n第2-4句 个人经历(细节):Last term, I joined … Before that, I had thought … Each time …, I learned …\n第5句 总结:We understand an idea best after we try it ourselves.\n(可加展望:Next month, I will be sharing …)"
+}

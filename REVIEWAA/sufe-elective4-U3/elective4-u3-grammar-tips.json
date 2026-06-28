@@ -1,0 +1,79 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "倒装句·速查(否定前置 / Only+状语 / so·such…that / 虚拟省略)",
+    "intro": "倒装就是把正常的「主语+谓语」语序颠倒,用来强调或承前。常见为部分倒装:把助动词/情态动词/be 提到主语前(do/does/did + 主语 + 动词原形;had/have + 主语 + 过去分词)。判断口诀:句首是否定/only/so/such,主句就要倒装;从句不倒装。",
+    "table": {
+      "headers": [
+        "触发词置于句首",
+        "倒装形式 / 例句"
+      ],
+      "rows": [
+        [
+          "Never / Seldom / Rarely / Little / Hardly…when / No sooner…than",
+          "助动词提前:Never had I seen…;No sooner had we left than…"
+        ],
+        [
+          "Not until + 状语",
+          "主句倒装:Not until then did the canal lose its importance."
+        ],
+        [
+          "Not only…but also…",
+          "Not only did it carry grain, but it also spread ideas."
+        ],
+        [
+          "Only + 副词/介词短语/状语从句",
+          "Only then did people realise…;Only by trying can we succeed."
+        ],
+        [
+          "So + 形/副…that;Such + 名…that",
+          "So important was the canal that…;Such was the fame that…"
+        ],
+        [
+          "虚拟条件省略 if",
+          "Had I known…;Were it not for…;Should you visit…"
+        ]
+      ]
+    },
+    "specialRules": [
+      {
+        "rule": "部分倒装只动助动词/情态/be,实义动词留原位、用原形",
+        "mark": "Only then did people realise(realise 用原形)"
+      },
+      {
+        "rule": "Not only A but also B:倒装只发生在 A(句首)部分,B 不倒装",
+        "mark": "Not only did it…, but it also proved…"
+      },
+      {
+        "rule": "so…that 提前的是形容词/副词;such…that 提前的是名词词组",
+        "mark": "So heavy were the boats…/ Such was his interest…"
+      },
+      {
+        "rule": "虚拟条件省略 if 时把 had/were/should 提前;否定 not 留在主语后",
+        "mark": "Had the emperor not moved…(=If the emperor had not moved)"
+      }
+    ],
+    "why": [
+      "英语把信息焦点放句尾;当强调成分(否定词、only、so/such)被提到句首时,只能靠倒装助动词来维持句子节奏并表强调,所以主语后才出现真正的谓语。"
+    ],
+    "gaokaoPoints": [
+      "否定/半否定词置于句首必倒装(never/seldom/hardly/no sooner/not until/not only…);判断助动词时态与主谓一致是采分点。",
+      "Only + 状语 在句首使「主句」倒装,而非 only 后面的从句:Only when…did + 主语。",
+      "虚拟条件省略 if 的倒装(Had/Were/Should)是写作高分句型,常考语法填空与改错。"
+    ],
+    "examVsReal": [
+      {
+        "exam": "Never had I seen such a sight.(考试/书面强调)",
+        "real": "I had never seen anything like it.",
+        "note": "日常口语多用正常语序;倒装更书面、更强调。"
+      },
+      {
+        "exam": "Had I known, I would have come.(考试虚拟倒装)",
+        "real": "If I’d known, I would’ve come.",
+        "note": "口语保留 if、用缩略;倒装省 if 更正式。"
+      }
+    ]
+  }
+}

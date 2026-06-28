@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(未来生活主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Tom first moved into a smart home, he felt strange because the lights, the air and even his breakfast were all managed by a quiet home computer. At first he missed doing little things for himself, yet within a few weeks he was enjoying the extra free time it gave him. Now he uses those calm afternoons to read, paint and visit his friends, things he had never had time for before.",
+    "questions": [
+      {
+        "q": "Why did Tom feel strange at first in the smart home?",
+        "options": [
+          "Because a home computer managed nearly everything for him.",
+          "Because the house had no electricity at all.",
+          "Because he could not find his bedroom.",
+          "Because the robot kept making mistakes."
+        ],
+        "answer": "A",
+        "explanation": "原文 'the lights, the air and even his breakfast were all managed by a quiet home computer' 的转述;其余未提或与原文相反。"
+      },
+      {
+        "q": "How does Tom spend his free time now?",
+        "options": [
+          "Worrying about the machines.",
+          "Reading, painting and seeing friends.",
+          "Doing all the housework himself.",
+          "Trying to leave the smart home."
+        ],
+        "answer": "B",
+        "explanation": "末句 'read, paint and visit his friends'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

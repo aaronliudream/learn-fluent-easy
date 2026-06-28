@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Learning is never limited to classrooms.", "opts": ["学习从不局限于教室。", "学习只能在学校进行。", "学习需要很多金钱。", "学习对每个人都很无聊。"], "answer": 0 },
+    { "audio": "Curie learned a love of poetry from her father.", "opts": ["居里讨厌读诗。", "居里从父亲那里学会了热爱诗歌。", "居里从不上学。", "居里是一名科学老师。"], "answer": 1 },
+    { "audio": "John Goodenough won the Nobel Prize at the age of ninety-seven.", "opts": ["古德纳夫很年轻就得奖了。", "古德纳夫从未上过大学。", "古德纳夫九十七岁时获得了诺贝尔奖。", "古德纳夫放弃了研究。"], "answer": 2 },
+    { "audio": "Xunzi said that learning should never cease.", "opts": ["荀子认为学习应尽早停止。", "荀子从不读书。", "荀子只教数学。", "荀子说学习不应停止。"], "answer": 3 },
+    { "audio": "We often understand an idea best after we try it ourselves.", "opts": ["亲手尝试后,我们往往最能理解一个想法。", "我们只能从书本里学东西。", "尝试新事物毫无意义。", "理解一个想法不需要努力。"], "answer": 0 },
+    { "audio": "This time tomorrow, the volunteers will be helping the children read.", "opts": ["志愿者昨天帮过孩子们。", "明天这个时候,志愿者们将正在帮孩子们读书。", "志愿者从不帮助别人。", "孩子们正在帮助志愿者。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "She was often asked to ____ poems in front of visitors.（背诵)", "opts": ["recite", "sell", "throw", "hide"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "His research led to a major ____ in battery design.（突破)", "opts": ["garden", "breakthrough", "noise", "price"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Under her father's ____, Curie grew to love poetry.（指导)", "opts": ["price", "noise", "guidance", "weather"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "True ____ consists in never giving up.（成就)", "opts": ["price", "noise", "weather", "achievement"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "By the time the visitors arrived, she ____ the long poem.", "opts": ["had already recited", "recites", "has recited", "will recite"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He ____ on his English recently, so he feels more confident now.", "opts": ["worked", "has been working", "had worked", "will work"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "This time tomorrow my sister ____ an experiment in the lab.", "opts": ["does", "did", "will be doing", "has done"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Our motherland ____ from the attack for so long.", "opts": ["suffered", "had suffered", "will suffer", "has been suffering"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他每天仍去实验室。", "他卖掉了实验室。", "他讨厌科学。", "他从不工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He still goes to his laboratory every day." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他第一次失败就放弃了。", "他屡次失败后从不放弃。", "他从未失败过。", "他不喜欢学习。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "He never gave up after failing many times." }
+  ],
+  "reading": {
+    "passage": "Charles Darwin found his love of science not in a classroom but in a small garden shed. There, with his brother, he did many chemistry experiments late into the night. He later said this was the best part of his whole education, because it showed him what real science meant.",
+    "passageCn": "达尔文对科学的热爱不是在教室,而是在一间小小的花园棚里找到的。在那里,他和哥哥常做化学实验直到深夜。他后来说这是他整个教育中最好的部分,因为它让他懂得了真正的科学是什么。",
+    "questions": [
+      { "q": "Where did Darwin find his love of science?", "opts": ["In a small garden shed.", "In a large classroom.", "On a steamship.", "In a music club."], "answer": 0 },
+      { "q": "Why did he value this experience so much?", "opts": ["It made him famous.", "It showed him what real science meant.", "It cost very little money.", "It was easy and short."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about a learning experience you had outside the classroom. Say what you did, what you learned, and how you felt. Try to use the unit's tenses.",
+    "promptCn": "写一次你在课堂之外的学习经历:你做了什么、学到了什么、感受如何(试着用本单元时态:had done / have been doing / will be doing)。",
+    "sampleWords": ["learning", "experience", "outside", "club", "knowledge", "achievement", "lifelong", "process", "guidance", "patient"]
+  },
+  "dialogues": [
+    {
+      "title": "Learning Outside Class",
+      "lines": [
+        { "role": "A", "text": "Where do you think you learn the most?", "cn": "你觉得你在哪里学到的东西最多?" },
+        { "role": "B", "text": "Honestly, in our school club, not in the classroom.", "cn": "说实话,是在我们学校的社团,而不是教室里。" },
+        { "role": "A", "text": "Really? What have you been doing there?", "cn": "真的吗?你在那里一直在做什么?" },
+        { "role": "B", "text": "I've been learning design by making things with my hands.", "cn": "我一直在通过动手做东西来学习设计。" }
+      ]
+    },
+    {
+      "title": "Never Too Old to Learn",
+      "lines": [
+        { "role": "A", "text": "Did you hear about the ninety-year-old piano man?", "cn": "你听说那位九十岁的钢琴老人了吗?" },
+        { "role": "B", "text": "Yes! He only started learning the piano late in life.", "cn": "听说了!他很晚才开始学钢琴。" },
+        { "role": "A", "text": "It shows you are never too old to learn.", "cn": "这说明活到老学到老。" },
+        { "role": "B", "text": "Exactly. This time next year, I'll be learning something new too.", "cn": "正是。明年这个时候,我也会在学新东西。" }
+      ]
+    }
+  ]
+}

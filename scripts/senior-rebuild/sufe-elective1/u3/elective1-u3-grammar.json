@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grammar_title": "被动语态(过去完成被动·过去进行被动)",
+  "source": "上外版选择性必修第一册 Unit 3 Grammar in Use:Passives(past perfect passive & past continuous passive)。句子地道、围绕探险/航海/极地主题、时间状语唯一判定被动时态、答案唯一(选项排除其他成立项)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "过去完成被动 had been done(过去某动作之前已被完成)",
+      "overview": "表示在过去某个时间/动作之前,某事已经被做完。结构 had been + 过去分词。常与 before/by the time/when（先发生）等连用:The ship had been crushed before they escaped."
+    },
+    {
+      "code": "u3.02",
+      "point": "过去进行被动 was/were being done(过去某时正在被进行)",
+      "overview": "表示过去某一时刻某事正在被进行。结构 was/were being + 过去分词。常与 when/while/at that moment（同时点)连用:The boat was being repaired when the storm hit."
+    },
+    {
+      "code": "u3.03",
+      "point": "两者辨析 + by 短语 / 含情态的被动",
+      "overview": "根据时间状语判定:某动作之前已完成→had been done;过去某刻正在进行→was/were being done;by 引出动作执行者;情态动词的被动用 modal + be done。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "By the time Shackleton set out, twenty-eight men ____ from the applicants.",
+      "options": [
+        "had been selected",
+        "were being selected",
+        "were selecting",
+        "had selected"
+      ],
+      "answer_index": 0,
+      "explanation": "By the time + 过去动作,选拔在那之前已完成 → 过去完成被动 had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Before the storm hit, the lifeboats ____ and made ready on the deck.",
+      "options": [
+        "were being prepared",
+        "had been prepared",
+        "were preparing",
+        "are prepared"
+      ],
+      "answer_index": 1,
+      "explanation": "Before + 过去动作,准备在那之前已完成 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When the men reached the island, all their food ____ already.",
+      "options": [
+        "was being eaten",
+        "was eating",
+        "had been eaten",
+        "has been eaten"
+      ],
+      "answer_index": 2,
+      "explanation": "already 强调在到达这一过去时点前食物已吃完 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The route across the mountains ____ on foot by anyone before that day.",
+      "options": [
+        "was never being crossed",
+        "never crossed",
+        "has never been crossed",
+        "had never been crossed"
+      ],
+      "answer_index": 3,
+      "explanation": "before that day 指过去时点之前,从未被穿越过 → 过去完成被动否定 had never been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "By 1915 the ship ____ completely by the moving ice.",
+      "options": [
+        "had been surrounded",
+        "was being surrounded",
+        "was surrounding",
+        "is surrounded"
+      ],
+      "answer_index": 0,
+      "explanation": "By 1915 表示到那个过去时间点为止,包围已完成 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The captain found that his orders ____ before he even returned to camp.",
+      "options": [
+        "were being carried out",
+        "had already been carried out",
+        "were carrying out",
+        "have been carried out"
+      ],
+      "answer_index": 1,
+      "explanation": "before he returned 之前命令已被执行 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Two months earlier the broken ship ____ to the freezing sea.",
+      "options": [
+        "was being abandoned",
+        "was abandoning",
+        "had been abandoned",
+        "abandoned"
+      ],
+      "answer_index": 2,
+      "explanation": "Two months earlier 指更早的过去,弃船动作已完成 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When help finally came, three of the tents ____ by the wind.",
+      "options": [
+        "were being torn down",
+        "were tearing down",
+        "are torn down",
+        "had been torn down"
+      ],
+      "answer_index": 3,
+      "explanation": "在 help came 这一过去时点之前帐篷已被吹倒 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Every survivor was amazed that the message ____ to the station before nightfall.",
+      "options": [
+        "had been sent",
+        "was being sent",
+        "was sending",
+        "has been sent"
+      ],
+      "answer_index": 0,
+      "explanation": "before nightfall 这一过去界限之前消息已送达 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "By the second winter, the crew realised that they ____ by the rest of the world.",
+      "options": [
+        "were being forgotten",
+        "had been forgotten",
+        "were forgetting",
+        "are forgotten"
+      ],
+      "answer_index": 1,
+      "explanation": "By the second winter 表示到过去那个点为止已被遗忘 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The diary showed that a route ____ long before the men left the island.",
+      "options": [
+        "was being planned",
+        "was planning",
+        "had been planned",
+        "has been planned"
+      ],
+      "answer_index": 2,
+      "explanation": "long before + 过去动作,计划早已被定好 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "After the boat sank, they learned that warm clothes ____ on board the night before.",
+      "options": [
+        "were being left",
+        "were leaving",
+        "are left",
+        "had been left"
+      ],
+      "answer_index": 3,
+      "explanation": "the night before 指更早的过去,衣服已被落下 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The rescue boat ____ by the Chilean government before the captain set off again.",
+      "options": [
+        "had been provided",
+        "was being provided",
+        "was providing",
+        "has been provided"
+      ],
+      "answer_index": 0,
+      "explanation": "before the captain set off 之前船已被提供 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "When the sun rose, every man saw that the camp ____ by a thick layer of snow.",
+      "options": [
+        "was being buried",
+        "had been buried",
+        "was burying",
+        "is buried"
+      ],
+      "answer_index": 1,
+      "explanation": "在 sun rose 这一过去时点之前营地已被埋住 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The explorer was proud that nobody ____ during the whole long expedition.",
+      "options": [
+        "was being lost",
+        "was losing",
+        "had been lost",
+        "has been lost"
+      ],
+      "answer_index": 2,
+      "explanation": "the whole expedition 结束(过去)前无人丧生 → 过去完成被动 had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "By the time the ice melted, the lifeboats ____ down to the water's edge.",
+      "options": [
+        "were being dragged",
+        "were dragging",
+        "are dragged",
+        "had been dragged"
+      ],
+      "answer_index": 3,
+      "explanation": "By the time + 过去动作,救生艇在那之前已被拖到水边 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He told us that the photographs ____ before the ship finally went down.",
+      "options": [
+        "had been taken",
+        "were being taken",
+        "were taking",
+        "have been taken"
+      ],
+      "answer_index": 0,
+      "explanation": "before the ship went down 之前照片已被拍下 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The men were relieved that a fire ____ by the time they crawled into the hut.",
+      "options": [
+        "was being lit",
+        "had been lit",
+        "was lighting",
+        "is lit"
+      ],
+      "answer_index": 1,
+      "explanation": "by the time they crawled in 之前火已被点着 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Before dawn broke, the heavy sledge ____ across the frozen ground.",
+      "options": [
+        "was being pulled",
+        "was pulling",
+        "had been pulled",
+        "has been pulled"
+      ],
+      "answer_index": 2,
+      "explanation": "Before dawn broke 这一过去界限之前雪橇已被拉过去 → had been + done。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "By the next morning the wet ropes ____ as hard as iron.",
+      "options": [
+        "were being frozen",
+        "were freezing",
+        "are frozen",
+        "had been frozen"
+      ],
+      "answer_index": 3,
+      "explanation": "By the next morning 指到过去那个早晨为止绳子已被冻硬 → had been + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Great efforts ____ to free the ship when the ice suddenly broke in half.",
+      "options": [
+        "were being made",
+        "had been made",
+        "were making",
+        "are being made"
+      ],
+      "answer_index": 0,
+      "explanation": "when 引出过去某刻,努力正在被进行 → 过去进行被动 were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The lifeboat ____ when a huge wave struck it from the side.",
+      "options": [
+        "had been repaired",
+        "was being repaired",
+        "was repairing",
+        "is being repaired"
+      ],
+      "answer_index": 1,
+      "explanation": "when 引出过去同一时点,修理正在被进行 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the supplies ____ onto the boats, the wind began to rise.",
+      "options": [
+        "had been loaded",
+        "were loading",
+        "were being loaded",
+        "are being loaded"
+      ],
+      "answer_index": 2,
+      "explanation": "While + 过去进行,补给正在被搬上船 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "At that very moment the tents ____ against the freezing wind.",
+      "options": [
+        "had been put up",
+        "were putting up",
+        "are being put up",
+        "were being put up"
+      ],
+      "answer_index": 3,
+      "explanation": "At that very moment 强调过去某刻正在进行 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The injured man's leg ____ when the doctor's hands grew too cold to work.",
+      "options": [
+        "was being treated",
+        "had been treated",
+        "was treating",
+        "is being treated"
+      ],
+      "answer_index": 0,
+      "explanation": "when 引出过去同一时点,治疗正在被进行 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As the documentary explained, the explorers ____ to the very limits of human endurance.",
+      "options": [
+        "had been pushed",
+        "were being pushed",
+        "were pushing",
+        "are being pushed"
+      ],
+      "answer_index": 1,
+      "explanation": "叙述过去那段时间持续正在被推向极限 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When I looked out of the hut, the dogs ____ for the long journey ahead.",
+      "options": [
+        "had been harnessed",
+        "were harnessing",
+        "were being harnessed",
+        "are being harnessed"
+      ],
+      "answer_index": 2,
+      "explanation": "When I looked out 引出过去某刻,套挽具正在被进行 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The captain's plan ____ over and over while the men waited on the ice.",
+      "options": [
+        "had been discussed",
+        "was discussing",
+        "is being discussed",
+        "was being discussed"
+      ],
+      "answer_index": 3,
+      "explanation": "while + 过去进行,计划正在被反复讨论 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Just as the storm reached the boat, the sails ____ to slow it down.",
+      "options": [
+        "were being lowered",
+        "had been lowered",
+        "were lowering",
+        "are being lowered"
+      ],
+      "answer_index": 0,
+      "explanation": "Just as 引出过去同一时点,船帆正在被放下 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While fresh water ____ from the melting snow, the men sang to keep warm.",
+      "options": [
+        "had been collected",
+        "was being collected",
+        "was collecting",
+        "is being collected"
+      ],
+      "answer_index": 1,
+      "explanation": "While + 过去进行,淡水正在被收集 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The wireless ____ when the last of the batteries finally died.",
+      "options": [
+        "had been used",
+        "was using",
+        "was being used",
+        "is being used"
+      ],
+      "answer_index": 2,
+      "explanation": "when 引出过去某刻,无线电正在被使用 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "At nine o'clock the heavy boat ____ across the rocks towards the open sea.",
+      "options": [
+        "had been carried",
+        "was carrying",
+        "is being carried",
+        "was being carried"
+      ],
+      "answer_index": 3,
+      "explanation": "At nine o'clock 指过去具体时刻正在进行 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the route ____ on the map, a fresh snowstorm closed in.",
+      "options": [
+        "was being marked",
+        "had been marked",
+        "was marking",
+        "is being marked"
+      ],
+      "answer_index": 0,
+      "explanation": "While + 过去进行,路线正在被标在地图上 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The frozen meat ____ slowly over the fire when a gust blew the flames out.",
+      "options": [
+        "had been warmed",
+        "was being warmed",
+        "was warming",
+        "is being warmed"
+      ],
+      "answer_index": 1,
+      "explanation": "when 引出过去同一时点,肉正在被加热 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "As night fell, the last messages ____ down in the captain's log.",
+      "options": [
+        "had been written",
+        "were writing",
+        "were being written",
+        "are being written"
+      ],
+      "answer_index": 2,
+      "explanation": "As night fell 引出过去某刻正在进行 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The sick sailor ____ below deck while the others fought the rising waves.",
+      "options": [
+        "had been looked after",
+        "was looking after",
+        "is being looked after",
+        "was being looked after"
+      ],
+      "answer_index": 3,
+      "explanation": "while + 过去进行,病人正在被照料 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When the rescuers arrived, a signal fire ____ on the highest point of the island.",
+      "options": [
+        "was being kept",
+        "had been kept",
+        "was keeping",
+        "is being kept"
+      ],
+      "answer_index": 0,
+      "explanation": "When the rescuers arrived 引出过去某刻,信号火正在被维持 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the photographs ____ from the wreck, the ice cracked beneath their feet.",
+      "options": [
+        "had been saved",
+        "were being saved",
+        "were saving",
+        "are being saved"
+      ],
+      "answer_index": 1,
+      "explanation": "While + 过去进行,照片正在被抢救 → were being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "At dawn the small boat ____ towards the distant whaling station.",
+      "options": [
+        "had been rowed",
+        "was rowing",
+        "was being rowed",
+        "is being rowed"
+      ],
+      "answer_index": 2,
+      "explanation": "At dawn 指过去某刻正在进行,小船正在被划 → was being + done。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While the deck ____ clear of snow, a huge wave swept right over the men.",
+      "options": [
+        "had been cleared",
+        "was clearing",
+        "is being cleared",
+        "was being cleared"
+      ],
+      "answer_index": 3,
+      "explanation": "While + 过去进行,甲板正在被清扫 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The expedition ship ____ by the accident long before it reached the sea.",
+      "options": [
+        "had been delayed",
+        "was being delayed",
+        "was delaying",
+        "is delayed"
+      ],
+      "answer_index": 0,
+      "explanation": "long before + 过去动作,延误早已发生 → 过去完成被动 had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Preparations ____ for the rescue when news of the storm arrived.",
+      "options": [
+        "had been made",
+        "were being made",
+        "were making",
+        "are being made"
+      ],
+      "answer_index": 1,
+      "explanation": "when 引出过去同一时点,准备正在被进行 → 过去进行被动 were being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Every member of the crew ____ by Shackleton himself before the voyage began.",
+      "options": [
+        "was being chosen",
+        "was choosing",
+        "had been chosen",
+        "is chosen"
+      ],
+      "answer_index": 2,
+      "explanation": "before the voyage began 之前已被本人挑选,by 引出执行者 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "When we got there, the wounded explorer ____ by two of his friends.",
+      "options": [
+        "had been carried",
+        "was carrying",
+        "is being carried",
+        "was being carried"
+      ],
+      "answer_index": 3,
+      "explanation": "When we got there 引出过去某刻,正被两位朋友抬着 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The whole story ____ in his diary years before it was finally published.",
+      "options": [
+        "had been recorded",
+        "was being recorded",
+        "was recording",
+        "is recorded"
+      ],
+      "answer_index": 0,
+      "explanation": "years before + 过去动作,故事早已被记录 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The signal ____ by the watchman the moment the rescue boat appeared.",
+      "options": [
+        "had been raised",
+        "was being raised",
+        "was raising",
+        "is being raised"
+      ],
+      "answer_index": 1,
+      "explanation": "the moment 引出过去同一时点,信号正被升起,by 引出执行者 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Nothing ____ public about the men until they had safely come home.",
+      "options": [
+        "was being made",
+        "was making",
+        "had been made",
+        "is made"
+      ],
+      "answer_index": 2,
+      "explanation": "until 之前(过去)什么都没被公开 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Heavy sledges ____ over the mountains by the exhausted men at that time.",
+      "options": [
+        "had been dragged",
+        "were dragging",
+        "are being dragged",
+        "were being dragged"
+      ],
+      "answer_index": 3,
+      "explanation": "at that time 指过去某刻正在进行,by 引出执行者 → were being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Anyone left in that place ____ to death, the captain knew, unless help came.",
+      "options": [
+        "would be starved",
+        "had been starved",
+        "was being starved",
+        "is starved"
+      ],
+      "answer_index": 0,
+      "explanation": "情态语气表对将来后果的判断 → 情态被动 would be + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The captain warned that the boat ____ by the rocks if they steered too close.",
+      "options": [
+        "had been smashed",
+        "might be smashed",
+        "was being smashed",
+        "is smashed"
+      ],
+      "answer_index": 1,
+      "explanation": "if 条件下的可能后果 → 情态被动 might be + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "By the time the sun came out, the broken mast ____ with rope and wood.",
+      "options": [
+        "was being repaired",
+        "was repairing",
+        "had been repaired",
+        "is repaired"
+      ],
+      "answer_index": 2,
+      "explanation": "By the time + 过去动作,桅杆在那之前已被修好 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "As the camera turned, fresh supplies ____ onto the tiny lifeboat by the sailors.",
+      "options": [
+        "had been loaded",
+        "were loading",
+        "are being loaded",
+        "were being loaded"
+      ],
+      "answer_index": 3,
+      "explanation": "As the camera turned 引出过去某刻正在进行,by 引出执行者 → were being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The route ____ on foot by anyone in history before Shackleton's men crossed it.",
+      "options": [
+        "had never been explored",
+        "was never being explored",
+        "never explored",
+        "is never explored"
+      ],
+      "answer_index": 0,
+      "explanation": "before + 过去动作,历史上从未被徒步探索过 → 过去完成被动否定 had never been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "While the documentary ____ , old sailors shared memories of the great voyage.",
+      "options": [
+        "had been filmed",
+        "was being filmed",
+        "was filming",
+        "is being filmed"
+      ],
+      "answer_index": 1,
+      "explanation": "While + 过去进行,纪录片正在被拍摄 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The plan to cross the island ____ by the captain before anyone else woke up.",
+      "options": [
+        "was being worked out",
+        "was working out",
+        "had been worked out",
+        "is worked out"
+      ],
+      "answer_index": 2,
+      "explanation": "before anyone woke up 之前计划已被想出,by 引出执行者 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The frightened sailor felt the ship ____ down into the depths of each wave.",
+      "options": [
+        "had been dragged",
+        "was dragging",
+        "is being dragged",
+        "was being dragged"
+      ],
+      "answer_index": 3,
+      "explanation": "感官动词后表过去某刻正在被进行 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "All the lifeboats ____ from the wreck long before the ship sank for good.",
+      "options": [
+        "had been saved",
+        "were being saved",
+        "were saving",
+        "are saved"
+      ],
+      "answer_index": 0,
+      "explanation": "long before + 过去动作,救生艇早已被救出 → had been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The good news ____ across the deck just as the men sat down to rest.",
+      "options": [
+        "had been spread",
+        "was being spread",
+        "was spreading",
+        "is being spread"
+      ],
+      "answer_index": 1,
+      "explanation": "just as 引出过去同一时点,好消息正在被传开 → was being + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Without his leadership, the men ____ on that island, the historian noted.",
+      "options": [
+        "were being lost",
+        "had lost",
+        "might have been lost",
+        "are lost"
+      ],
+      "answer_index": 2,
+      "explanation": "对过去未发生情况的推测 → 情态完成被动 might have been + done。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The brave story ____ down from sailor to sailor long after the captain died.",
+      "options": [
+        "was being handed",
+        "was handing",
+        "is handed",
+        "had been handed"
+      ],
+      "answer_index": 3,
+      "explanation": "long after + 过去动作,在更早过去之前故事已被代代相传 → had been + done。"
+    }
+  ]
+}

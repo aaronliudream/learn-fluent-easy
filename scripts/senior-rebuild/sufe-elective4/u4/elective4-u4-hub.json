@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "A man can be destroyed but not defeated.", "opts": ["一个人可以被毁灭,但不能被打败。", "一个人很容易被吓倒。", "一个人应该常常放弃。", "一个人不需要勇气。"], "answer": 0 },
+    { "audio": "We read poetry because we are members of the human race.", "opts": ["我们从不读诗。", "我们读诗,因为我们都是人类的一员。", "诗歌只属于诗人。", "读诗浪费时间。"], "answer": 1 },
+    { "audio": "Su Shi wrote his famous poem on a Mid-Autumn night.", "opts": ["苏轼从不写诗。", "苏轼是一名画家而非诗人。", "苏轼在中秋之夜写下了那首名作。", "苏轼住在英国。"], "answer": 2 },
+    { "audio": "Shakespeare is seen as the greatest playwright of all time.", "opts": ["莎士比亚是一名科学家。", "莎士比亚只写过一部剧。", "莎士比亚害怕舞台。", "莎士比亚被视为有史以来最伟大的剧作家。"], "answer": 3 },
+    { "audio": "Wordsworth often wrote about the beauty of nature.", "opts": ["华兹华斯常常描写大自然之美。", "华兹华斯讨厌乡村。", "华兹华斯只写战争。", "华兹华斯从不写诗。"], "answer": 0 },
+    { "audio": "Reading classics feeds both the heart and the mind.", "opts": ["读经典毫无用处。", "读经典既滋养心灵也滋养头脑。", "读经典只为考试。", "读经典让人疲惫。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The old man faced the sharks with quiet ____.（决心)", "opts": ["determination", "weather", "market", "machine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A true ____ is a book loved by readers for hundreds of years.（经典)", "opts": ["noise", "classic", "price", "garden"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Reading great books deepens our ____ of beauty.（欣赏;鉴赏)", "opts": ["price", "noise", "appreciation", "market"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Shakespeare wrote more than 150 ____.（十四行诗)", "opts": ["machines", "gardens", "prices", "sonnets"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "I wish I ____ Spanish, so I could read the poems in the original now.", "opts": ["knew", "know", "will know", "has known"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "He wishes he ____ the novel before the exam last week.", "opts": ["reads", "had read", "has read", "will read"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "If only I ____ those cruel words to her yesterday!", "opts": ["don't say", "didn't say", "hadn't said", "won't say"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "I wish our teacher ____ give us a lecture on poetry one day.", "opts": ["gives", "will give", "is giving", "would give"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这位老人保住了他的尊严。", "这位老人卖掉了他的船。", "这位老人忘记了那条鱼。", "这位老人从不出海。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The old man kept his dignity." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["这本小说很无聊。", "人们每年都朗诵那首诗。", "没有人喜欢读诗。", "图书馆已经关门了。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "People recite the poem every year." }
+  ],
+  "reading": {
+    "passage": "Hemingway is famous for his short, simple sentences. He believed that the best writing hides most of its meaning under the surface, like an iceberg. Although his words are plain, his stories carry deep feeling.",
+    "passageCn": "海明威以短小、简单的句子著称。他认为最好的写作把大部分含义藏在表面之下,就像一座冰山。尽管他的用词朴素,他的故事却饱含深情。",
+    "questions": [
+      { "q": "What is Hemingway famous for?", "opts": ["Short, simple sentences.", "Very long sentences.", "Difficult foreign words.", "Funny little pictures."], "answer": 0 },
+      { "q": "What did he compare good writing to?", "opts": ["A long letter.", "An iceberg.", "A busy city.", "A bright star."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Recommend a classic book you love. Say what it is, why it is great, and how it made you feel. Try to use 'I wish…' or 'If only…' to share a wish about it.",
+    "promptCn": "推荐一本你喜爱的经典:它是什么、为什么伟大、给你怎样的感受。试着用 'I wish…' 或 'If only…' 表达一个与它有关的愿望。",
+    "sampleWords": ["classic", "novel", "author", "poetry", "character", "appreciate", "courage", "wish", "recommend", "treasure"]
+  },
+  "dialogues": [
+    {
+      "title": "Recommending a Classic",
+      "lines": [
+        { "role": "A", "text": "Which classic would you recommend to me?", "cn": "你会向我推荐哪一本经典?" },
+        { "role": "B", "text": "The Old Man and the Sea. It's short but very powerful.", "cn": "《老人与海》,它短小却非常有力。" },
+        { "role": "A", "text": "What do you love most about it?", "cn": "你最喜欢它哪一点?" },
+        { "role": "B", "text": "The old man never gives up, even when he loses everything.", "cn": "老人即便失去一切也从不放弃。" }
+      ]
+    },
+    {
+      "title": "Why Read Classics",
+      "lines": [
+        { "role": "A", "text": "Do you really think classics still matter today?", "cn": "你真的觉得经典在今天还重要吗?" },
+        { "role": "B", "text": "Yes. They feed both the heart and the mind.", "cn": "当然。它们既滋养心灵也滋养头脑。" },
+        { "role": "A", "text": "But some of them are quite hard to read.", "cn": "可有些读起来挺难的。" },
+        { "role": "B", "text": "I wish I had started reading them earlier. It's worth the effort.", "cn": "我真希望自己早点开始读它们,这份努力是值得的。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Road to Success",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第三册 Unit 1 同主题听力(谈成功的含义/毅力短文/鼓励紧张的同学/坚持不懈短文/演讲建议/每天进步一点点短文)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 What Does Success Mean?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "Tom, do you think a person is successful only if they are rich and famous?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Not really. I think success means doing something you love and doing it well."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "So money is not the most important thing to you?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "No. For me, a happy family and a job I enjoy matter more than money."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "That makes sense. My uncle is a village nurse, not rich at all, but he feels successful."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Exactly. He helps others every day, and that is a kind of success too."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "I agree. Maybe success is different for each person."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Yes, and the most important thing is to find your own road to it."
+        }
+      ],
+      "translation_cn": "Lucy 问 Tom 是否只有又富又有名才算成功;Tom 认为成功是做自己热爱并做得好的事;对他来说幸福的家庭和喜欢的工作比金钱更重要;Lucy 提到当乡村护士的叔叔虽不富有却觉得成功;两人一致认为成功因人而异,最重要的是找到自己通向成功的路。",
+      "questions": [
+        {
+          "stem": "What does Tom think success mainly means?",
+          "options": [
+            "Doing something you love and doing it well.",
+            "Being rich and famous only.",
+            "Owning a big house.",
+            "Winning every prize."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What matters more to Tom than money?",
+          "options": [
+            "A bigger car.",
+            "A happy family and a job he enjoys.",
+            "Becoming famous.",
+            "Travelling abroad."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Lucy mention her uncle?",
+          "options": [
+            "Because he feels successful by helping others, though not rich.",
+            "Because he is very rich.",
+            "Because he is famous on TV.",
+            "Because he wants a new job."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do Lucy and Tom finally agree on?",
+          "options": [
+            "Only money brings success.",
+            "Success can be different for each person.",
+            "Success is the same for everyone.",
+            "Nobody can be successful."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom say is the most important thing?",
+          "options": [
+            "To copy other people exactly.",
+            "To give up when it is hard.",
+            "To find your own road to success.",
+            "To care only about fame."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 The Power of Grit",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people believe that talent is the key to success.",
+        "But studies show that something called grit matters even more.",
+        "A person with grit keeps working towards a goal for years, not just for days.",
+        "They treat life like a long marathon rather than a short race.",
+        "In the end, the habit of never giving up often decides who succeeds."
+      ],
+      "translation_cn": "许多人认为天赋是成功的关键;但研究表明一种叫'毅力'的品质更重要;有毅力的人会朝目标坚持数年,而非几天;他们把人生当作长跑而非短跑;最终,永不放弃的习惯常常决定谁能成功。",
+      "questions": [
+        {
+          "stem": "What do many people believe is the key to success?",
+          "options": [
+            "Money.",
+            "Luck.",
+            "Looks.",
+            "Talent."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to studies, what matters even more?",
+          "options": [
+            "Grit.",
+            "A high score.",
+            "Good clothes.",
+            "A famous teacher."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long does a person with grit keep working towards a goal?",
+          "options": [
+            "For a few minutes.",
+            "For years.",
+            "For one day.",
+            "Never."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does a person with grit treat life like?",
+          "options": [
+            "A short race.",
+            "A quick game.",
+            "A long marathon.",
+            "A lazy holiday."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What often decides who succeeds in the end?",
+          "options": [
+            "Being born rich.",
+            "Avoiding all hard work.",
+            "Having many friends.",
+            "The habit of never giving up."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Cheer Up, You Can Do It",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "I'm so nervous about the maths competition tomorrow. I might fail."
+        },
+        {
+          "speaker": "Jack",
+          "text": "Don't worry too much. You have practised hard for weeks."
+        },
+        {
+          "speaker": "Mia",
+          "text": "But what if I forget everything in front of the judges?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Take a few deep breaths before you start. That always calms me down."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Do you really think I have a chance?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Of course. Even great people felt afraid before big moments."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Thanks, Jack. You always know how to cheer me up."
+        },
+        {
+          "speaker": "Jack",
+          "text": "Just do your best. Whatever happens, you should be proud of trying."
+        }
+      ],
+      "translation_cn": "Mia 为明天的数学竞赛紧张,担心会失败;Jack 安慰说她已苦练数周;Mia 怕在评委面前忘光;Jack 建议开始前深呼吸几次来让自己镇定;并说连了不起的人在重要时刻前也会害怕;Mia 感谢 Jack 让她振作;Jack 让她尽力,无论结果如何都该为尝试而自豪。",
+      "questions": [
+        {
+          "stem": "Why is Mia nervous?",
+          "options": [
+            "Because of a maths competition tomorrow.",
+            "Because she lost her book.",
+            "Because she is ill.",
+            "Because she missed the bus."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Jack remind Mia she has done?",
+          "options": [
+            "She has slept all week.",
+            "She has practised hard for weeks.",
+            "She has skipped her lessons.",
+            "She has given up."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Jack suggest doing before she starts?",
+          "options": [
+            "Shouting loudly.",
+            "Running away.",
+            "Taking a few deep breaths.",
+            "Eating a big meal."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Jack say about great people?",
+          "options": [
+            "They never work hard.",
+            "They are always calm.",
+            "They never compete.",
+            "They also felt afraid before big moments."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Jack tell Mia at the end?",
+          "options": [
+            "To do her best and be proud of trying.",
+            "To skip the competition.",
+            "To copy others' answers.",
+            "To stop studying maths."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 Never Give Up",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Almost every great achievement comes after many failures.",
+        "The first try is often the hardest, and many people stop too soon.",
+        "But those who keep going slowly learn from their mistakes.",
+        "Each failure teaches them something new and brings them closer to the goal.",
+        "So when you fail, do not lose heart; instead, start over and try again."
+      ],
+      "translation_cn": "几乎每一项伟大成就都来自多次失败;第一次尝试往往最难,许多人太早放弃;但坚持下去的人会慢慢从错误中学习;每一次失败都教会他们新东西,使他们更接近目标;所以当你失败时,别灰心,要重新开始再试一次。",
+      "questions": [
+        {
+          "stem": "What does almost every great achievement come after?",
+          "options": [
+            "A single easy day.",
+            "Many failures.",
+            "A lot of luck only.",
+            "No effort at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do many people do too soon?",
+          "options": [
+            "Win the prize.",
+            "Become famous.",
+            "Stop trying.",
+            "Help others."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do those who keep going learn from?",
+          "options": [
+            "Their money.",
+            "Their friends.",
+            "Their holidays.",
+            "Their mistakes."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does each failure do, according to the passage?",
+          "options": [
+            "It teaches something new and brings you closer to the goal.",
+            "It makes the goal disappear.",
+            "It wastes all your time.",
+            "It stops you forever."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you do when you fail?",
+          "options": [
+            "Lose heart and quit.",
+            "Start over and try again.",
+            "Blame other people.",
+            "Forget your goal."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Tips for a Good Speech",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "Anna, you always give such great talks. How do you do it?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Thanks! First, I write my main points on small cards."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Just the main points, not every word?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Right. If you read every word, the talk sounds boring."
+        },
+        {
+          "speaker": "Ben",
+          "text": "What else helps you?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "I practise out loud many times, and I pause at full stops and commas."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That's clever. Anything for the nerves?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yes. Breathe slowly before you start, and speak to one friendly face at a time."
+        }
+      ],
+      "translation_cn": "Ben 问 Anna 演讲为何总那么棒;Anna 说先把要点写在小卡片上;只写要点而非逐字;因为逐字读会很无聊;还会大声练习多次,并在句号逗号处停顿;对付紧张则是开始前慢慢呼吸,每次只对一张友善的面孔讲。",
+      "questions": [
+        {
+          "stem": "What does Anna write on her cards?",
+          "options": [
+            "Every single word.",
+            "Other people's names.",
+            "Her main points.",
+            "Nothing at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why shouldn't you read every word?",
+          "options": [
+            "It takes no time.",
+            "It is against the rules.",
+            "Cards are too small.",
+            "The talk sounds boring."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where does Anna pause when she speaks?",
+          "options": [
+            "At full stops and commas.",
+            "In the middle of words.",
+            "Never at all.",
+            "Only at the very end."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Anna deal with nerves?",
+          "options": [
+            "She shouts loudly.",
+            "She breathes slowly before starting.",
+            "She runs away.",
+            "She skips the talk."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who does Anna suggest speaking to at a time?",
+          "options": [
+            "The whole crowd at once with eyes shut.",
+            "No one in the room.",
+            "One friendly face at a time.",
+            "Only the judges."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Little Every Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "You do not have to do something huge to move towards success.",
+        "A small step taken every day adds up over time.",
+        "If you learn five new words a day, that is almost two thousand in a year.",
+        "The secret is not speed, but doing a little, again and again.",
+        "Be patient, keep going, and one day you will be surprised how far you have come."
+      ],
+      "translation_cn": "你不必做什么惊天动地的大事才能走向成功;每天迈出一小步,日积月累会很可观;如果每天学五个新词,一年就近两千个;秘诀不在快,而在一点一点反复地做;要有耐心,坚持下去,有一天你会惊讶自己走了这么远。",
+      "questions": [
+        {
+          "stem": "What does the passage say you do NOT have to do?",
+          "options": [
+            "Sleep every night.",
+            "Eat breakfast.",
+            "Talk to friends.",
+            "Do something huge to move towards success."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What adds up over time?",
+          "options": [
+            "A small step taken every day.",
+            "A long holiday.",
+            "A single big jump.",
+            "A lucky win."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "If you learn five new words a day, how many is that in a year?",
+          "options": [
+            "About fifty.",
+            "Almost two thousand.",
+            "About five hundred.",
+            "Exactly ten."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the secret, according to the passage?",
+          "options": [
+            "Doing everything in one night.",
+            "Working only when you feel like it.",
+            "Doing a little, again and again.",
+            "Being the fastest of all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will happen if you keep going patiently?",
+          "options": [
+            "You will quickly give up.",
+            "Nothing will change at all.",
+            "You will forget your goal.",
+            "One day you will be surprised how far you have come."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

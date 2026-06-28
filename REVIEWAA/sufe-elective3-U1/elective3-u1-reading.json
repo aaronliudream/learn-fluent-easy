@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Fighting Stress",
+  "source": "上外版选择性必修三 Unit 1 同主题阅读(压力的定义/身体反应/平衡生活SELF/过度焦虑信号/放松方法/向人倾诉)。词限本单元/初高中常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "What Is Stress?",
+      "topic_cn": "说明·什么是压力",
+      "body": "Stress is what you feel when you are worried or uncomfortable about something. This worry in your mind can make you physically feel bad. You may feel angry, frightened or upset, and that feeling can give you a headache or an upset stomach. When you are stressed, you may not want to sleep or eat, or you may do too much of both. Plenty of things can cause it, and there is such a thing as good stress and bad stress. Good stress may show up when you are called on in class or have to give a report. A little of it can even inspire you to prepare well. But bad stress happens when the worried feelings last for a long time, perhaps because someone in your family is ill or you have problems at school every day. That kind of stress will not help you. In fact, if it goes on and on, it can actually make you sick.",
+      "vocab_notes": [
+        {
+          "word": "stress",
+          "cn": "压力"
+        },
+        {
+          "word": "frightened",
+          "cn": "害怕的"
+        },
+        {
+          "word": "inspire",
+          "cn": "激励"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, what is stress?",
+          "options": [
+            "A feeling that comes when something worries or troubles you.",
+            "A kind of illness that doctors must treat.",
+            "A type of food that is bad for you.",
+            "A game that teenagers like to play."
+          ],
+          "answer_index": 0,
+          "explanation": "首句把压力定义为'担忧或不舒服时的感受'的转述。"
+        },
+        {
+          "stem": "What can good stress do for you?",
+          "options": [
+            "It makes you sleep all day.",
+            "It can push you to get ready well.",
+            "It always makes you sick at once.",
+            "It removes every kind of worry."
+          ],
+          "answer_index": 1,
+          "explanation": "'A little of it can even inspire you to prepare well' 的转述。"
+        },
+        {
+          "stem": "When does stress become bad for you?",
+          "options": [
+            "When the worried feelings go on for a long time.",
+            "When it lasts only a few minutes.",
+            "When it happens before a fun trip.",
+            "When a teacher calls on you in class."
+          ],
+          "answer_index": 0,
+          "explanation": "原文指出坏压力是担忧感持续很久时出现的,选项为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "How Your Body Reacts",
+      "topic_cn": "说明·身体的压力反应",
+      "body": "Have you ever had butterflies in your stomach or sweaty hands before a big test? These are signs that your body is reacting to stress. When you feel worried, your heart may beat faster, your stomach may churn, and your knees may feel weak. Some people even feel a lump in their throat when they try to swallow. These reactions are not strange at all. Long ago, when people lived in the wild, this quick response helped them stay alert and react to danger fast. The same system still switches on today, even though our worries are usually about tests, friends or homework rather than wild animals. A small amount of this response is useful, because it keeps you awake and focused. The problem comes when the feeling is too strong or lasts too long. Then you may find it hard to pay attention in class or to remember things at home. Knowing why your body acts this way can make the feeling much less frightening.",
+      "vocab_notes": [
+        {
+          "word": "churn",
+          "cn": "翻腾"
+        },
+        {
+          "word": "swallow",
+          "cn": "吞咽"
+        },
+        {
+          "word": "alert",
+          "cn": "警觉的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What are sweaty hands and butterflies in the stomach examples of?",
+          "options": [
+            "Signs that you are seriously ill.",
+            "Clues that your body is responding to stress.",
+            "Signs that you have eaten too much.",
+            "Signs that you are very happy."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说这些是身体对压力作出反应的信号,选项为其转述。"
+        },
+        {
+          "stem": "Why did this quick response help people long ago?",
+          "options": [
+            "It helped them sleep more deeply.",
+            "It helped them eat less food.",
+            "It kept them alert so they could meet danger quickly.",
+            "It helped them avoid all worry."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'helped them stay alert and react to danger fast'的转述。"
+        },
+        {
+          "stem": "What does the writer say can make the feeling less frightening?",
+          "options": [
+            "Eating before every test.",
+            "Never taking any tests.",
+            "Keeping the worry a secret.",
+            "Understanding why the body reacts this way."
+          ],
+          "answer_index": 3,
+          "explanation": "末句指出了解身体为何如此反应能减轻恐惧,选项为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Keep Your SELF in Mind",
+      "topic_cn": "说明·平衡生活的四件事",
+      "body": "To have a balanced life is the best way to avoid stress. That means making good choices about how you spend your time. If you only deal with school work and leave no time to play, you can easily get stressed out. A simple way to remember what matters is to keep your SELF in mind. The letters stand for Sleep, Exercise, Leisure and Food. Getting enough sleep and eating healthy food are two great ways to handle daily pressure. Exercise lifts your mood and clears your busy mind, while leisure gives you a chance to enjoy the things you love. None of these four things should be missing for long. When students forget to rest or never make time for fun, small worries can grow into big ones. So make a plan that includes all four parts of your SELF. If you take care of yourself in this way and still leave room for the people around you, you will probably feel calmer and far less stressed.",
+      "vocab_notes": [
+        {
+          "word": "balanced",
+          "cn": "平衡的"
+        },
+        {
+          "word": "leisure",
+          "cn": "闲暇"
+        },
+        {
+          "word": "handle",
+          "cn": "应对"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say is the best way to avoid stress?",
+          "options": [
+            "Living a life that is well balanced.",
+            "Studying as many hours as possible.",
+            "Giving up all of your hobbies.",
+            "Sleeping through the whole weekend."
+          ],
+          "answer_index": 0,
+          "explanation": "首句'To have a balanced life is the best way to avoid stress'的转述。"
+        },
+        {
+          "stem": "What do the four letters of SELF stand for?",
+          "options": [
+            "Study, Energy, Love and Fun.",
+            "Sleep, Food, Exercise and Leisure.",
+            "Speed, Effort, Luck and Faith.",
+            "School, Email, Lunch and Friends."
+          ],
+          "answer_index": 1,
+          "explanation": "原文给出 SELF = Sleep、Exercise、Leisure、Food 四件事,正确项含全部四词。"
+        },
+        {
+          "stem": "What may happen if students never make time for fun?",
+          "options": [
+            "They will sleep far too little.",
+            "They will become star athletes.",
+            "Minor worries may slowly turn into serious ones.",
+            "They will forget how to study."
+          ],
+          "answer_index": 2,
+          "explanation": "原文指出忘记休息或不留娱乐时间会让小烦恼变大,选项为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "When Anxiety Is Too Much",
+      "topic_cn": "说明·过度焦虑的信号",
+      "body": "All teens feel anxious from time to time, but some feel it far more than others. A certain amount of worry is normal, especially before a test or a date. So how much anxiety is too much? Here are a few warning signs. You may feel afraid for no clear reason at all, even when nothing bad is happening. You may worry so much about ordinary events that you start to avoid them. You may check the same thing again and again, long after you know it is right. You may also feel so panicky that you cannot take a test or talk to friends. If these signs sound familiar, your anxiety level may be too high. The good news is that there are healthy ways to cope. It helps to recognise the kinds of situations that make you anxious and to admit that they are hard. Sometimes simply being ready for a difficult moment makes it easier. If these steps are not enough, getting help from a doctor or therapist is a wise next move.",
+      "vocab_notes": [
+        {
+          "word": "anxious",
+          "cn": "焦虑的"
+        },
+        {
+          "word": "panicky",
+          "cn": "惊慌的"
+        },
+        {
+          "word": "therapist",
+          "cn": "治疗师"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say about feeling some worry before a test?",
+          "options": [
+            "It is always a serious problem.",
+            "It means you should see a doctor.",
+            "It never happens to teenagers.",
+            "It is completely normal."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说考试或约会前有一定担忧是正常的,选项为其转述。"
+        },
+        {
+          "stem": "Which of these is named as a sign of too much anxiety?",
+          "options": [
+            "Checking the same thing over and over.",
+            "Sleeping well every night.",
+            "Enjoying time with friends.",
+            "Feeling calm before a date."
+          ],
+          "answer_index": 0,
+          "explanation": "原文'check the same thing again and again'是过度焦虑的信号之一,选项为其转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing if simple steps are not enough?",
+          "options": [
+            "Giving up on every activity.",
+            "Asking a doctor or therapist for help.",
+            "Hiding the problem from everyone.",
+            "Worrying even more about it."
+          ],
+          "answer_index": 1,
+          "explanation": "末句指出若这些步骤不够,应向医生或治疗师求助,选项为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Simple Ways to Relax",
+      "topic_cn": "说明·实用的放松方法",
+      "body": "When stress builds up, relaxation can help reduce worry and negative thoughts. The good news is that you do not need special tools or a lot of time. The easiest method is deep breathing. Breathe in slowly through your nose, hold the air for a moment, and then breathe out slowly through your mouth. You can do this anywhere, and no one will even notice. Many people also enjoy quiet activities such as meditation, listening to calming music or doing gentle yoga. Some find that singing softly, or even focusing their vision on a single object, helps them reach a calmer state of mind. In China, many people practise Taijiquan, an ancient form of exercise with slow, careful movements. Because it asks for a high level of attention, the busy mind slows down and a deep calm can take its place. You do not have to try all of these at once. Choose one that feels right for you, practise it often, and stress will trouble you far less.",
+      "vocab_notes": [
+        {
+          "word": "relaxation",
+          "cn": "放松"
+        },
+        {
+          "word": "meditation",
+          "cn": "冥想"
+        },
+        {
+          "word": "vision",
+          "cn": "视野"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say is the easiest way to relax?",
+          "options": [
+            "Running for several hours.",
+            "Buying expensive equipment.",
+            "Breathing deeply and slowly.",
+            "Eating a large meal."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'The easiest method is deep breathing'的转述。"
+        },
+        {
+          "stem": "Why does Taijiquan help the mind become calm?",
+          "options": [
+            "Because it is done very quickly.",
+            "Because it requires no thinking at all.",
+            "Because it must be done in a group.",
+            "Because it calls for very careful, full attention."
+          ],
+          "answer_index": 3,
+          "explanation": "原文说太极拳需要高度专注,因而心绪平静,选项为其转述。"
+        },
+        {
+          "stem": "What advice does the writer give at the end?",
+          "options": [
+            "Pick one method and practise it often.",
+            "Try every method on the same day.",
+            "Avoid relaxing until you are very ill.",
+            "Stop exercising completely."
+          ],
+          "answer_index": 0,
+          "explanation": "末句建议选一种适合自己的方法常练,选项为其转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Talking It Out",
+      "topic_cn": "记叙·向信任的人倾诉",
+      "body": "For a whole month, Daniel felt stressed out but told no one. He had too much homework, a test every week, and a quarrel with a close friend. Each night he lay awake, his stomach churning with worry. One afternoon his art teacher noticed how tired and upset he looked and gently asked what was bothering him. At first Daniel did not want to talk, but slowly he brought up everything that had been on his mind. To his surprise, simply saying the words out loud made the load feel lighter. His teacher did not solve every problem, yet she helped him see that he was not alone. She also showed him a quiet way to relax: drawing whatever he felt on a blank page. Art, she explained, can be a release for heavy thoughts and bring a little light into a dark mood. That evening Daniel slept well for the first time in weeks. He learned that to share a worry with someone you trust is often the first step towards feeling calm again.",
+      "vocab_notes": [
+        {
+          "word": "bother",
+          "cn": "困扰"
+        },
+        {
+          "word": "release",
+          "cn": "释放"
+        },
+        {
+          "word": "trust",
+          "cn": "信任"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why could Daniel not sleep at night?",
+          "options": [
+            "Because his room was too cold.",
+            "Because he was worried about several problems.",
+            "Because he drank too much coffee.",
+            "Because he had no homework to do."
+          ],
+          "answer_index": 1,
+          "explanation": "原文说他因作业、考试和与朋友争吵而忧心难眠,选项为其转述。"
+        },
+        {
+          "stem": "How did Daniel feel after talking to his teacher?",
+          "options": [
+            "More tired than before.",
+            "Angry that she had asked.",
+            "As if his worries felt lighter.",
+            "Sure that nothing could help."
+          ],
+          "answer_index": 2,
+          "explanation": "原文'made the load feel lighter'的转述。"
+        },
+        {
+          "stem": "What did Daniel learn from the experience?",
+          "options": [
+            "That he should keep every worry secret.",
+            "That teachers cannot help students.",
+            "That drawing is a waste of time.",
+            "That telling a trusted person about a worry helps."
+          ],
+          "answer_index": 3,
+          "explanation": "末句指出向信任的人倾诉是重获平静的第一步,选项为其转述。"
+        }
+      ]
+    }
+  ]
+}

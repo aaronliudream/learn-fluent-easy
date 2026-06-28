@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "grammar_title": "-ing/-ed 形式3(作补语 complements)",
+  "source": "上外版必修第三册 Unit 1 Grammar in Use:-ing/-ed forms used as complements。句子地道、答案唯一(由宾语与分词的主被动关系判定)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "-ing 作补语(感官/使役 + 现在分词:主动、正在进行)",
+      "overview": "see/hear/watch/notice/feel/find/keep/leave + sb/sth + 现在分词(doing):宾语主动发出动作、动作正在进行时,补语用 -ing 形式。"
+    },
+    {
+      "code": "u1.02",
+      "point": "-ed 作补语(have/get/make/find/keep sth + 过去分词:被动、已完成)",
+      "overview": "have/get/make/find/keep/leave/want + sth + 过去分词(done):宾语承受动作、动作已完成或被动,补语用 -ed 形式,如 have my hair cut。"
+    },
+    {
+      "code": "u1.03",
+      "point": "-ing vs -ed 补语辨析(由宾语与分词的主被动关系判定)",
+      "overview": "宾语主动发出动作、动作进行中 → 用 -ing(I saw him crossing);宾语承受动作、动作被动/已完成 → 用 -ed(I saw the work done)。看宾语和分词谁主动谁被动来选。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "During the interview, the comic star could feel his heart ____ fast.",
+      "options": [
+        "beating",
+        "beaten",
+        "to beat",
+        "beat"
+      ],
+      "answer_index": 0,
+      "explanation": "his heart 主动跳动、动作正在进行 → 现在分词 beating。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "After midnight, the professor was seen ____ an experiment in the lab.",
+      "options": [
+        "done",
+        "doing",
+        "to doing",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语(被见者)主动做实验、动作进行中 → doing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "It was friendship that kept me ____ during my hardest time.",
+      "options": [
+        "gone",
+        "to go",
+        "going",
+        "go"
+      ],
+      "answer_index": 2,
+      "explanation": "keep sb doing:me 主动'坚持下去'、动作持续 → going。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The teacher found the child ____ on the wall with a piece of chalk.",
+      "options": [
+        "written",
+        "to write",
+        "wrote",
+        "writing"
+      ],
+      "answer_index": 3,
+      "explanation": "the child 主动在写、动作进行中 → writing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "We heard Tu Youyou ____ about her years of hard research.",
+      "options": [
+        "talking",
+        "talked",
+        "to talk",
+        "talk about"
+      ],
+      "answer_index": 0,
+      "explanation": "hear sb doing:她主动讲述、动作进行中 → talking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The lecturer was heard ____ his success story in the next room.",
+      "options": [
+        "told",
+        "telling",
+        "to tell",
+        "tells"
+      ],
+      "answer_index": 1,
+      "explanation": "被听者主动讲述、动作进行中 → telling。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "From the window I watched the runners ____ slowly up the long hill.",
+      "options": [
+        "climbed",
+        "to climb",
+        "climbing",
+        "climb up"
+      ],
+      "answer_index": 2,
+      "explanation": "watch sb doing:runners 主动爬坡、动作进行中 → climbing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Don't leave the tap ____ while you brush your teeth.",
+      "options": [
+        "run",
+        "to run",
+        "ran",
+        "running"
+      ],
+      "answer_index": 3,
+      "explanation": "leave sth doing:the tap 主动'流'、状态持续 → running。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She noticed her young students ____ harder than ever before the exam.",
+      "options": [
+        "working",
+        "worked",
+        "to work",
+        "work hard"
+      ],
+      "answer_index": 0,
+      "explanation": "notice sb doing:students 主动学习、进行中 → working。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The coach kept the whole team ____ even when they wanted to quit.",
+      "options": [
+        "trained",
+        "trying",
+        "to try",
+        "tries"
+      ],
+      "answer_index": 1,
+      "explanation": "keep sb doing:team 主动坚持尝试 → trying。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Late at night, neighbours could hear the young pianist ____ the same piece.",
+      "options": [
+        "practised",
+        "to practise",
+        "practising",
+        "practise"
+      ],
+      "answer_index": 2,
+      "explanation": "hear sb doing:pianist 主动练习、进行中 → practising。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I caught my little brother ____ at my secret notebook again.",
+      "options": [
+        "looked",
+        "to look",
+        "look",
+        "looking"
+      ],
+      "answer_index": 3,
+      "explanation": "catch sb doing:brother 主动偷看、进行中 → looking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "On the screen we saw the scientist ____ the plant for a cure.",
+      "options": [
+        "testing",
+        "tested",
+        "to test",
+        "test on"
+      ],
+      "answer_index": 0,
+      "explanation": "see sb doing:scientist 主动测试、进行中 → testing。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The doctor felt the patient's hand ____ as the good news arrived.",
+      "options": [
+        "shaken",
+        "shaking",
+        "to shake",
+        "shakes"
+      ],
+      "answer_index": 1,
+      "explanation": "feel sth doing:hand 主动颤抖、进行中 → shaking。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "During the speech, I could see many graduates ____ with hope.",
+      "options": [
+        "smiled",
+        "to smile",
+        "smiling",
+        "smile"
+      ],
+      "answer_index": 2,
+      "explanation": "see sb doing:graduates 主动微笑、进行中 → smiling。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "We left the lights ____ so that the late workers could find their way.",
+      "options": [
+        "shone",
+        "to shine",
+        "shines",
+        "shining"
+      ],
+      "answer_index": 3,
+      "explanation": "leave sth doing:lights 主动'亮着'、状态持续 → shining。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Through the door, she watched her father ____ over his old medical books.",
+      "options": [
+        "bending",
+        "bent",
+        "to bend",
+        "bend down"
+      ],
+      "answer_index": 0,
+      "explanation": "watch sb doing:father 主动俯身、进行中 → bending。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Suddenly we heard the crowd ____ the marathon runner's name.",
+      "options": [
+        "shouted",
+        "shouting",
+        "to shout",
+        "shout out"
+      ],
+      "answer_index": 1,
+      "explanation": "hear sb doing:crowd 主动呼喊、进行中 → shouting。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He found his old teacher still ____ in the same quiet office.",
+      "options": [
+        "worked",
+        "to work",
+        "working",
+        "work"
+      ],
+      "answer_index": 2,
+      "explanation": "find sb doing:teacher 主动工作、进行中 → working。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The nurse kept the medicine ____ slowly into the patient's arm.",
+      "options": [
+        "flowed",
+        "to flow",
+        "flow in",
+        "flowing"
+      ],
+      "answer_index": 3,
+      "explanation": "keep sth doing:medicine 主动'流'、动作持续 → flowing。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The writer wants his new novel ____ at the book fair next week.",
+      "options": [
+        "displayed",
+        "displaying",
+        "to display",
+        "display"
+      ],
+      "answer_index": 0,
+      "explanation": "want sth done:novel 被展示、动作被动 → displayed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Before the big speech, he went to have his hair ____ short.",
+      "options": [
+        "cutting",
+        "cut",
+        "to cut",
+        "cuts"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:hair 被剪 → 过去分词 cut。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "After much persistence, the team finally got the problem ____.",
+      "options": [
+        "solving",
+        "to solve",
+        "solved",
+        "solve"
+      ],
+      "answer_index": 2,
+      "explanation": "get sth done:problem 被解决、已完成 → solved。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "All afternoon she worked in the study with the door ____.",
+      "options": [
+        "locking",
+        "to lock",
+        "lock",
+        "locked"
+      ],
+      "answer_index": 3,
+      "explanation": "with the door done:door 被锁 → locked。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Tammy was disappointed to find her suggestions ____ down.",
+      "options": [
+        "turned",
+        "turning",
+        "to turn",
+        "turn"
+      ],
+      "answer_index": 0,
+      "explanation": "find sth done:suggestions 被否决 → turned(down)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Tu Youyou wanted the old prescriptions ____ into a single collection.",
+      "options": [
+        "gathering",
+        "gathered",
+        "to gather",
+        "gather"
+      ],
+      "answer_index": 1,
+      "explanation": "want sth done:prescriptions 被收集 → gathered。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She finally had the new treatment ____ as safe for humans.",
+      "options": [
+        "proving",
+        "to prove",
+        "proved",
+        "prove"
+      ],
+      "answer_index": 2,
+      "explanation": "have sth done:treatment 被证明、已完成 → proved。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He kept his eyes ____ during the last few minutes of the surgery.",
+      "options": [
+        "closing",
+        "to close",
+        "close",
+        "closed"
+      ],
+      "answer_index": 3,
+      "explanation": "keep sth done:eyes 被闭上、状态已成 → closed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The young poet managed to get a collection of her poems ____.",
+      "options": [
+        "published",
+        "publishing",
+        "to publish",
+        "publish"
+      ],
+      "answer_index": 0,
+      "explanation": "get sth done:poems 被出版 → published。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "With her talent ____ by more and more people, she became famous.",
+      "options": [
+        "recognising",
+        "recognised",
+        "to recognise",
+        "recognise"
+      ],
+      "answer_index": 1,
+      "explanation": "with sth done:talent 被认可 → recognised。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Make yourself ____ — speak slowly and clearly to the audience.",
+      "options": [
+        "understanding",
+        "to understand",
+        "understood",
+        "understand"
+      ],
+      "answer_index": 2,
+      "explanation": "make oneself done:被理解 → understood(make oneself understood 固定)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She left most of the work ____ until the results were conclusive.",
+      "options": [
+        "finishing",
+        "to finish",
+        "finish",
+        "unfinished"
+      ],
+      "answer_index": 3,
+      "explanation": "leave sth done:work 被'未完成'状态 → unfinished(过去分词作补语)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The committee wants the meeting room ____ before the guests arrive.",
+      "options": [
+        "prepared",
+        "preparing",
+        "to prepare",
+        "prepare"
+      ],
+      "answer_index": 0,
+      "explanation": "want sth done:room 被布置好 → prepared。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He was brave enough to have the test ____ on himself first.",
+      "options": [
+        "running",
+        "run",
+        "to run",
+        "runs"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:test 被进行 → run(过去分词)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "After the long debate, she finally made her point ____ to everyone.",
+      "options": [
+        "showing",
+        "to show",
+        "shown",
+        "show"
+      ],
+      "answer_index": 2,
+      "explanation": "make sth done:point 被说清楚 → shown。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "With the experiment ____ at last, the whole team cheered.",
+      "options": [
+        "completing",
+        "to complete",
+        "complete",
+        "completed"
+      ],
+      "answer_index": 3,
+      "explanation": "with sth done:experiment 被完成 → completed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She got the ancient book ____ word by word to find the answer.",
+      "options": [
+        "examined",
+        "examining",
+        "to examine",
+        "examine"
+      ],
+      "answer_index": 0,
+      "explanation": "get sth done:book 被审查 → examined。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The artist wanted his shrimps ____ in shades of black ink.",
+      "options": [
+        "painting",
+        "painted",
+        "to paint",
+        "paint"
+      ],
+      "answer_index": 1,
+      "explanation": "want sth done:shrimps 被画 → painted。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He kept his goal clearly ____ in his mind for many years.",
+      "options": [
+        "fixing",
+        "to fix",
+        "fixed",
+        "fix"
+      ],
+      "answer_index": 2,
+      "explanation": "keep sth done:goal 被固定/记牢 → fixed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Don't leave your dream ____ — work hard to make it real.",
+      "options": [
+        "forgetting",
+        "to forget",
+        "forget",
+        "forgotten"
+      ],
+      "answer_index": 3,
+      "explanation": "leave sth done:dream 被遗忘 → forgotten。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I saw the young researcher ____ tests on the plant all night long.",
+      "options": [
+        "running",
+        "run",
+        "to run",
+        "runs"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 researcher 主动做测试、进行中 → 现在分词 running。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She had the final results ____ before she dared to announce them.",
+      "options": [
+        "checking",
+        "checked",
+        "to check",
+        "check"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 results 被核对、动作被动 → 过去分词 checked。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We watched the old painter ____ a shrimp with a few quick strokes.",
+      "options": [
+        "drawn",
+        "to draw",
+        "drawing",
+        "draw it"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 painter 主动作画、进行中 → drawing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He finally got his speech ____ in time for the graduation.",
+      "options": [
+        "writing",
+        "to write",
+        "write",
+        "written"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 speech 被写出、被动完成 → written。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Through the door we could hear someone ____ the same word again and again.",
+      "options": [
+        "repeating",
+        "repeated",
+        "to repeat",
+        "repeat it"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 someone 主动重复、进行中 → repeating。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She kept the difficult question ____ until she found a better answer.",
+      "options": [
+        "asking",
+        "unanswered",
+        "to answer",
+        "answer"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 question 被'未作答'、被动 → 过去分词 unanswered。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "From the stage, I noticed my parents ____ at me with pride.",
+      "options": [
+        "smiled",
+        "to smile",
+        "smiling",
+        "smile"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 parents 主动微笑、进行中 → smiling。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He wanted the whole report ____ before the meeting started.",
+      "options": [
+        "finishing",
+        "to finish",
+        "finish",
+        "finished"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 report 被完成、被动 → finished。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I could feel the cold wind ____ against my face as I ran.",
+      "options": [
+        "blowing",
+        "blown",
+        "to blow",
+        "blow"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 wind 主动吹、进行中 → blowing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She had her old photos ____ and put them in a new album.",
+      "options": [
+        "printing",
+        "printed",
+        "to print",
+        "print"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 photos 被打印、被动 → printed。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We saw the marathon runner ____ towards the finish line at last.",
+      "options": [
+        "rushed",
+        "to rush",
+        "rushing",
+        "rush there"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 runner 主动冲刺、进行中 → rushing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He kept the office door ____ so that no one would disturb him.",
+      "options": [
+        "shutting",
+        "to shut",
+        "shut it",
+        "shut"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 door 被关、被动状态 → 过去分词 shut。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At dawn I found my grandfather already ____ in the garden.",
+      "options": [
+        "working",
+        "worked",
+        "to work",
+        "work"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 grandfather 主动劳作、进行中 → working。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She wanted the difficult words ____ on the board for everyone to see.",
+      "options": [
+        "writing",
+        "written",
+        "to write",
+        "write"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 words 被写、被动 → written。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We could hear the rain ____ heavily on the roof all night.",
+      "options": [
+        "fallen",
+        "to fall",
+        "falling",
+        "fall down"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 rain 主动落下、进行中 → falling。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He had the broken microphone ____ just before his thank-you speech.",
+      "options": [
+        "fixing",
+        "to fix",
+        "fix",
+        "fixed"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 microphone 被修好、被动 → fixed。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I watched the little boy ____ on the wall with a piece of chalk.",
+      "options": [
+        "drawing",
+        "drawn",
+        "to draw",
+        "draw on"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 boy 主动画、进行中 → drawing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She got her main points ____ on cue cards before the talk.",
+      "options": [
+        "noting",
+        "noted",
+        "to note",
+        "note"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 points 被记下、被动 → noted。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Late at night, he could hear his own heart still ____ with excitement.",
+      "options": [
+        "beaten",
+        "to beat",
+        "beating",
+        "beat fast"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 heart 主动跳动、进行中 → beating。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After years of effort, she finally saw her dream ____ true.",
+      "options": [
+        "coming",
+        "comes",
+        "to come",
+        "come"
+      ],
+      "answer_index": 3,
+      "explanation": "see sth come true 为感官动词后接动词原形的固定用法,强调'梦想实现'这一完整过程 → come。"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Write a Proposal Letter for the Green Club(为环保社团写一封倡议信)",
+  "title_en": "A Proposal Letter for Going Green",
+  "genre": "倡议信 / 应用文(state a problem + offer solutions + call for action)",
+  "source": "上外版选择性必修三 Unit 4 Writing: write a proposal letter to schoolmates about environmental protection(描述问题 + 提出解决办法 + 号召行动)。",
+  "prompt_cn": "假设你是李华,学校 Green Club(环保社团)的成员。社团即将发起一项'Going Green'活动。请用英语写一封约110-130词的倡议信给全校同学,内容包括:① 指出身边一个环境问题及其后果;② 提出一两条可行的解决办法及期望效果;③ 号召同学们一起行动。注意可适当使用本单元的强调句(It is/was … that …)。",
+  "prompt_en": "Suppose you are Li Hua, a member of your school's Green Club. The club is launching a 'Going Green' activity. Write a proposal letter (about 110-130 words) to your schoolmates including: 1) one environmental problem around you and its consequence; 2) one or two practical solutions and the result you expect; 3) a call for everyone to take action. Try to use an emphatic structure (It is/was … that …) where it fits.",
+  "points": [
+    "指出问题与后果(One serious problem is … This means that …)",
+    "提出解决办法(Our school can … We students can also …)",
+    "说明期望效果(This will lead to … / In this way, …)",
+    "号召行动并用强调句(It is all of us that should act now.)"
+  ],
+  "word_count": "110-130 词",
+  "model_essay": "Dear schoolmates,\n\nI am writing on behalf of the Green Club to call on everyone to go green. As you may have noticed, our campus produces far too much waste every day, and most of the plastic and paper is simply thrown away. This not only wastes resources but also harms the environment around us.\n\nTo deal with this, our school can place clearly marked bins so that we can sort our rubbish. We students can also carry reusable bags and turn off the lights when we leave a room. In this way, less waste will end up in nature.\n\nNone of these steps is hard. It is all of us, working together, that can make a real difference. Let's act today!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的同学们:\n\n我谨代表环保社团,号召大家践行环保。也许你已注意到,我们的校园每天产生太多垃圾,大部分塑料和纸张被直接扔掉。这既浪费资源,也伤害了我们周围的环境。\n\n为解决这一问题,学校可以摆放标记清晰的垃圾箱,方便我们进行分类。我们同学也可以自带可重复使用的袋子,并在离开房间时随手关灯。这样一来,流入自然的垃圾就会减少。\n\n这些做法都不难。正是我们大家齐心协力,才能带来真正的改变。让我们今天就行动起来吧!\n\n此致\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:问题与后果 / 解决办法与期望效果 / 号召行动" },
+      { "dimension": "结构", "max": 4, "criteria": "倡议信格式完整(称呼+目的+主体+号召+落款)、层次清楚、衔接自然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、恰当使用强调句 It is … that …、语法基本无误" }
+    ],
+    "required_structure": [
+      "目的 I am writing … to call on everyone to go green.",
+      "问题与后果 One serious problem is … This … harms the environment.",
+      "解决办法 Our school can … We students can also …",
+      "号召(强调句) It is all of us … that can make a real difference."
+    ],
+    "key_expressions": [
+      "I am writing to call on everyone to go green.",
+      "Our campus produces far too much waste every day.",
+      "We can sort our rubbish and carry reusable bags.",
+      "It is all of us, working together, that can make a real difference."
+    ],
+    "useful_words": ["environment", "waste", "rubbish", "sort", "recycle", "bin", "reusable", "sustainable", "difference", "action"]
+  },
+  "high_sentences": [
+    "I am writing on behalf of the Green Club to call on everyone to go green.",
+    "Most of the plastic and paper is simply thrown away, which harms the environment.",
+    "Our school can place clearly marked bins so that we can sort our rubbish.",
+    "It is all of us, working together, that can make a real difference."
+  ],
+  "error_pairs": [
+    { "wrong": "It is all of us who makes a difference.", "correct": "It is all of us who make a difference.", "note": "强调句强调复数 us,后面动词用 make,主谓一致看被强调的真实主语。" },
+    { "wrong": "Our campus produce too much waste.", "correct": "Our campus produces too much waste.", "note": "主语 campus 第三人称单数,动词加 s。" },
+    { "wrong": "It was in 2020 when the city banned plastic bags.", "correct": "It was in 2020 that the city banned plastic bags.", "note": "强调时间状语时连接词用 that,不用 when。" }
+  ],
+  "paragraph_template": "【环保倡议信结构】\n称呼:Dear schoolmates,\n第1段 目的:I am writing … to call on everyone to go green.\n第2段 问题+后果:One serious problem is … This harms …\n第3段 办法+效果:Our school can … We students can also … In this way, …\n第4段 号召(强调句):It is all of us that … Let's act today!\n落款:Yours, Li Hua"
+}

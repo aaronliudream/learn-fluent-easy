@@ -17,7 +17,7 @@ type TipContent = {
  * 渲染速查表 / 特例 / 为什么 / 高考考点 / 「考试vs真实」对照。初中高中通用(挂 GrammarStage)。
  * 无内容(该单元还没写 grammar_tips)→ 不渲染(纯加法,不挡做题)。
  */
-export default function GrammarTipsCard({ volume, unit }: { volume?: string; unit?: string }) {
+export default function GrammarTipsCard({ volume, unit, publisher }: { volume?: string; unit?: string; publisher?: string | null }) {
   const [tip, setTip] = useState<TipContent | null>(null);
   const [open, setOpen] = useState(false);
 
@@ -25,16 +25,17 @@ export default function GrammarTipsCard({ volume, unit }: { volume?: string; uni
     if (!volume || !unit) return;
     let cancelled = false;
     (async () => {
-      const { data } = await supabase
+      let q = supabase
         .from("junior_grammar_tips")
         .select("content")
         .eq("volume", volume)
-        .eq("unit", unit)
-        .maybeSingle();
+        .eq("unit", unit);
+      if (publisher) q = q.eq("publisher", publisher); // /gaokao→'pep';/junior→不传(行为不变)
+      const { data } = await q.maybeSingle();
       if (!cancelled) setTip((data?.content as TipContent) ?? null);
     })();
     return () => { cancelled = true; };
-  }, [volume, unit]);
+  }, [volume, unit, publisher]);
 
   if (!tip) return null;
 

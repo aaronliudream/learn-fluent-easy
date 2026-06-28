@@ -30,13 +30,16 @@ function shuffle<T>(arr: T[]): T[] {
   return r;
 }
 
-/** code[] → point[](id/code/title)。保留传入顺序,DB 里查不到的 code 自动丢弃。 */
-export async function resolveUnitPoints(codes: string[]): Promise<UnitPoint[]> {
+/** code[] → point[](id/code/title)。保留传入顺序,DB 里查不到的 code 自动丢弃。
+ *  publisher:高中入口传 'pep'(防外研社/上外同 code 撞);初中/不传 → 不过滤,行为不变。 */
+export async function resolveUnitPoints(codes: string[], publisher?: string): Promise<UnitPoint[]> {
   if (!codes.length) return [];
-  const { data } = await supabase
+  let q = supabase
     .from("junior_grammar_points")
     .select("id,code,title")
     .in("code", codes);
+  if (publisher) q = q.eq("publisher", publisher);
+  const { data } = await q;
   const byCode = new Map(((data ?? []) as UnitPoint[]).map((p) => [p.code, p]));
   return codes.map((c) => byCode.get(c)).filter((p): p is UnitPoint => !!p);
 }

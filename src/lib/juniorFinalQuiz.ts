@@ -50,14 +50,17 @@ type VocabMeta = { meaningFull?: string; exampleEn?: string; exampleCn?: string 
 async function loadUnitVocabMeta(
   unit: UnitDef,
   grade: number,
+  publisher?: string | null,
 ): Promise<Map<string, VocabMeta>> {
   const map = new Map<string, VocabMeta>();
-  const { data } = await supabase
+  let vq = supabase
     .from("junior_vocab")
     .select("word,meaning_cn,example_en,example_cn")
     .eq("grade", grade)
     .eq("volume", unit.book)
     .eq("unit", unit.unitKey);
+  if (publisher) vq = vq.eq("publisher", publisher);
+  const { data } = await vq;
   for (const r of (data ?? []) as Array<Record<string, string | null>>) {
     if (!r.word) continue;
     map.set(String(r.word).trim().toLowerCase(), {
@@ -382,6 +385,7 @@ async function readingItemsForUnit(
   unit: UnitDef,
   grade: number,
   n: number,
+  publisher?: string | null,
 ): Promise<FinalQuizItem[]> {
   if (n <= 0) return [];
   // 优先:内联 finalReading(短文2-3句 + 转述题,不撞阅读关 → 推荐方案)。
@@ -394,13 +398,14 @@ async function readingItemsForUnit(
       .filter((it): it is FinalQuizItem => !!it);
   }
   // 回退(无 finalReading 的旧单元):junior_reading 最短一篇,取前 n 题。
-  const { data } = await supabase
+  let rq = supabase
     .from("junior_reading")
     .select("title,body,questions,word_count")
     .eq("grade", grade)
     .eq("volume", unit.book)
-    .eq("unit", unit.unitKey)
-    .order("word_count", { ascending: true });
+    .eq("unit", unit.unitKey);
+  if (publisher) rq = rq.eq("publisher", publisher);
+  const { data } = await rq.order("word_count", { ascending: true });
   const rows = (data ?? []) as ReadingRow[];
   for (const row of rows) {
     const passage = String(row.body || "").trim();
@@ -426,11 +431,11 @@ function shuffleOpts(item: FinalQuizItem): FinalQuizItem {
  * 组装本单元 finalQuiz(12 题综合):语法 5(应用型,排除术语定义题)+ 听力 3 + 阅读 1 + 词汇 3。
  * 语法不超半数;阅读取自 junior_reading(无则用词汇补足题量)。语法池为空 → 返回 null(调用层回退内联)。
  */
-export async function buildFinalQuiz(unit: UnitDef, grade: number): Promise<FinalQuizItem[] | null> {
+export async function buildFinalQuiz(unit: UnitDef, grade: number, publisher?: string | null): Promise<FinalQuizItem[] | null> {
   const codes = [unit.grammarCode, ...(unit.grammarCodes ?? [])].filter(
     (c): c is string => !!c,
   );
-  const points = await resolveUnitPoints(codes);
+  const points = await resolveUnitPoints(codes, publisher ?? undefined);
   if (!points.length) return null;
   const pool = await loadUnitPool(points);
   if (!pool.length) return null;
@@ -460,9 +465,9 @@ export async function buildFinalQuiz(unit: UnitDef, grade: number): Promise<Fina
   const grammar = pickGrammar(grammarPool, points, quota, weakKp, wrongQ, GRAMMAR_N).map(grammarItem);
   if (!grammar.length) return null;
 
-  const listening = await listeningItemsForUnit(unit);
-  const reading = await readingItemsForUnit(unit, grade, READING_N);
-  const vocabMeta = await loadUnitVocabMeta(unit, grade); // 词汇例句/多义(答对后展示)
+  const listening = await listeningItemsForUnit(unit); // listening_items 全初中,不分流(维持现状)
+  const reading = await readingItemsForUnit(unit, grade, READING_N, publisher);
+  const vocabMeta = await loadUnitVocabMeta(unit, grade, publisher); // 词汇例句/多义(答对后展示)
   // 阅读缺几道,用词汇补几道,保持 12 题总量。
   const vocab = vocabItems(unit, VOCAB_N + (READING_N - reading.length), vocabMeta);
   const items = [...grammar, ...listening, ...reading, ...vocab].map(shuffleOpts);

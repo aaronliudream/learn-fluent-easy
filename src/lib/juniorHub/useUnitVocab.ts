@@ -17,19 +17,20 @@ export type UnitVocabItem = VocabItem & {
  * ⚠️ 仅供展示/分组用,与掌握度无关(掌握度按 wordId 独立记录,不经此 hook)。
  * 供 核心词汇关(VocabStage)、词义配对(WordMatchingGame)、听音辨词共用。
  */
-export function useUnitVocab(unit: UnitDef, grade: number): UnitVocabItem[] | null {
+export function useUnitVocab(unit: UnitDef, grade: number, publisher?: string | null): UnitVocabItem[] | null {
   const [vocab, setVocab] = useState<UnitVocabItem[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase
+      let vq = supabase
         .from("junior_vocab")
         .select("id,word,phonetic,meaning_cn,phrase_en,example_en,example_cn")
         .eq("grade", grade)
         .eq("volume", unit.book)
-        .eq("unit", unit.unitKey)
-        .order("freq_rank", { ascending: true, nullsFirst: false });
+        .eq("unit", unit.unitKey);
+      if (publisher) vq = vq.eq("publisher", publisher); // /gaokao→'pep';/junior→不传,行为不变
+      const { data } = await vq.order("freq_rank", { ascending: true, nullsFirst: false });
       if (cancelled) return;
       const rows = (data ?? []) as Array<{
         id: string;
@@ -66,7 +67,7 @@ export function useUnitVocab(unit: UnitDef, grade: number): UnitVocabItem[] | nu
     return () => {
       cancelled = true;
     };
-  }, [unit.id, unit.book, unit.unitKey, grade]);
+  }, [unit.id, unit.book, unit.unitKey, grade, publisher]);
 
   return vocab;
 }
@@ -89,8 +90,8 @@ export type RankedUnitVocab = {
  * 游客 / 未登录 / 无数据 → 不排序,等于按 freq_rank(=现状)。
  * 供 听音辨词(channel="listen")、词义配对(channel="match")用。
  */
-export function useRankedUnitVocab(unit: UnitDef, grade: number, channel: RankedChannel): RankedUnitVocab {
-  const words = useUnitVocab(unit, grade);
+export function useRankedUnitVocab(unit: UnitDef, grade: number, channel: RankedChannel, publisher?: string | null): RankedUnitVocab {
+  const words = useUnitVocab(unit, grade, publisher);
   const [out, setOut] = useState<{ words: UnitVocabItem[] | null; masteredCount: number; total: number }>(
     { words: null, masteredCount: 0, total: 0 },
   );

@@ -9,6 +9,7 @@ import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/juniorHub/types";
 import { useUnitVocab, useRankedUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
+import { publisherForBasePath } from "@/lib/gaokaoHub/publisher";
 import { gpct, type GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import { Link, useSearchParams } from "react-router-dom";
 import { useGrammarPointId } from "@/hooks/useGrammarPointId";
@@ -206,14 +207,16 @@ function VocabStage({
   unit,
   grade,
   onFinish,
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
+  publisher?: string | null;
 }) {
   const { state, setVocabGroup } = useJuniorHub();
   const savedGroup = getUnitState(state, unit.id).vocabGroup ?? 0;
-  const words = useUnitVocab(unit, grade);
+  const words = useUnitVocab(unit, grade, publisher);
   const [groupIdx, setGroupIdx] = useState(savedGroup); // 跨设备续学:从上次看到的组开始
   const [between, setBetween] = useState(false);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
@@ -454,13 +457,15 @@ function MatchStage({
   grade,
   onFinish,
   onMatch,
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
   onMatch: () => void;
+  publisher?: string | null;
 }) {
-  const ranked = useRankedUnitVocab(unit, grade, "match");
+  const ranked = useRankedUnitVocab(unit, grade, "match", publisher);
   const idByEn = useMemo(() => {
     const m = new Map<string, string>();
     for (const w of ranked.words ?? []) if (w.id) m.set(w.en, w.id);
@@ -640,15 +645,17 @@ function ListenWordStage({
   onFinish,
   onCorrect,
   onWrong,
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
   onCorrect: (q: { wordId?: string }) => void;
   onWrong: (q: { audio: string; opts: string[]; answer: number; wordId?: string }) => void;
+  publisher?: string | null;
 }) {
   // 未掌握优先排序(listen 通道:listen_correct≥2 沉底),排序非过滤——掌握词保留在后面的组。
-  const ranked = useRankedUnitVocab(unit, grade, "listen");
+  const ranked = useRankedUnitVocab(unit, grade, "listen", publisher);
   const [groupIdx, setGroupIdx] = useState(0);
   const [between, setBetween] = useState(false);
 
@@ -1092,18 +1099,18 @@ function FinalQuizStage({
 }
 
 // 第4关语法关顶部:显示该单元 完成度/掌握度(与语法专项页 L2 同源同口径)。
-function UnitGrammarProgress({ codes }: { codes: string[] }) {
+function UnitGrammarProgress({ codes, publisher }: { codes: string[]; publisher?: string | null }) {
   const [prog, setProg] = useState<GrammarProgress | null>(null);
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const p = await loadProgressForCodes(codes);
+      const p = await loadProgressForCodes(codes, publisher ?? undefined);
       if (!cancelled) setProg(p);
     })();
     return () => {
       cancelled = true;
     };
-  }, [codes.join(",")]);
+  }, [codes.join(","), publisher]);
   if (!prog || prog.total === 0) return null;
   return (
     <div className="mb-3 grid grid-cols-2 gap-2">
@@ -1141,6 +1148,7 @@ function GrammarStage({
   basePath?: string;
 }) {
   const pointId = useGrammarPointId(unit.grammarCode);
+  const pub = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(语法卡/进度不过滤,行为不变)
   // returnTo = 当前关 URL(高中=/gaokao/hub/...);子页带它返回 → 全程不掉初中。
   const returnTo = encodeURIComponent(window.location.pathname);
   const masteryPath = pointId ? `${basePath}/grammar/${pointId}/mastery?returnTo=${returnTo}` : null;
@@ -1151,7 +1159,7 @@ function GrammarStage({
     const kpPath = `${basePath}/grammar/kp/${kpPracticeId}?returnTo=${returnTo}`;
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
-        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} publisher={pub} />
         <p className="mb-3 text-sm text-[#5C5751]">本单元语法专项练习：连续答对即点亮掌握度，成绩计入你的语法掌握。</p>
         <Link
           to={kpPath}
@@ -1178,8 +1186,8 @@ function GrammarStage({
         <p className="mb-3 text-sm text-[#5C5751]">
           本单元语法综合测试：{unit.grammarCodes.length} 个语法点混合抽题，成绩计入你的掌握度。
         </p>
-        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
-        <UnitGrammarProgress codes={unit.grammarCodes} />
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} publisher={pub} />
+        <UnitGrammarProgress codes={unit.grammarCodes} publisher={pub} />
         <Link
           to={testPath}
           className="mb-3 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 py-3 text-sm font-semibold text-white"
@@ -1201,7 +1209,7 @@ function GrammarStage({
   if (masteryPath) {
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
-        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} />
+        <GrammarTipsCard volume={unit.book} unit={unit.unitKey} publisher={pub} />
         <p className="mb-3 text-sm text-[#5C5751]">本单元语法用真题题库测练，成绩计入你的掌握度。</p>
         <Link
           to={masteryPath}
@@ -1291,14 +1299,16 @@ function ReadingStage({
   useEffect(() => {
     let cancelled = false;
     (async () => {
+      const pub = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(不过滤,行为不变)
+      let rq = supabase
+        .from("junior_reading")
+        .select("id,title,word_count,difficulty")
+        .eq("grade", grade)
+        .eq("volume", unit.book)
+        .eq("unit", unit.unitKey);
+      if (pub) rq = rq.eq("publisher", pub);
       const [res, m] = await Promise.all([
-        supabase
-          .from("junior_reading")
-          .select("id,title,word_count,difficulty")
-          .eq("grade", grade)
-          .eq("volume", unit.book)
-          .eq("unit", unit.unitKey)
-          .order("difficulty", { ascending: true }),
+        rq.order("difficulty", { ascending: true }),
         loadMastery("junior_reading"),
       ]);
       if (cancelled) return;
@@ -1484,13 +1494,17 @@ function ClozeStage({
     let cancelled = false;
     (async () => {
       const [res, m] = await Promise.all([
-        supabase
-          .from("junior_cloze")
-          .select("id,title,word_count,difficulty")
-          .eq("grade", grade)
-          .eq("volume", unit.book)
-          .eq("unit", unit.unitKey)
-          .order("sort_order", { ascending: true }),
+        (() => {
+          let cq = supabase
+            .from("junior_cloze")
+            .select("id,title,word_count,difficulty")
+            .eq("grade", grade)
+            .eq("volume", unit.book)
+            .eq("unit", unit.unitKey);
+          const pub = publisherForBasePath(basePath);
+          if (pub) cq = cq.eq("publisher", pub);
+          return cq.order("sort_order", { ascending: true });
+        })(),
         loadMastery("junior_cloze"),
       ]);
       if (cancelled) return;
@@ -1610,13 +1624,17 @@ function ListeningStage({
     let cancelled = false;
     (async () => {
       const [res, m] = await Promise.all([
-        supabase
-          .from("junior_listening_exercises")
-          .select("id,title,questions")
-          .eq("grade", grade)
-          .eq("volume", unit.book)
-          .eq("unit", unit.unitKey)
-          .order("difficulty", { ascending: true }),
+        (() => {
+          let lq = supabase
+            .from("junior_listening_exercises")
+            .select("id,title,questions")
+            .eq("grade", grade)
+            .eq("volume", unit.book)
+            .eq("unit", unit.unitKey);
+          const pub = publisherForBasePath(basePath);
+          if (pub) lq = lq.eq("publisher", pub);
+          return lq.order("difficulty", { ascending: true });
+        })(),
         loadMastery("junior_listening"),
       ]);
       if (cancelled) return;
@@ -2007,6 +2025,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   const { grade, state, setState, addMistake, completeStage } = useJuniorHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
+  const publisher = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(共用组件初中路径不过滤)
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
@@ -2070,7 +2089,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     }
     let cancelled = false;
     setFinalAdaptive(undefined);
-    buildFinalQuiz(unit, grade)
+    buildFinalQuiz(unit, grade, publisher)
       .then((items) => {
         if (!cancelled) setFinalAdaptive(items); // items 为 null(空池)时也回退内联
       })
@@ -2081,20 +2100,21 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
     return () => {
       cancelled = true;
     };
-  }, [unit, stage?.type, adaptiveFinalUnit, grade]);
+  }, [unit, stage?.type, adaptiveFinalUnit, grade, publisher]);
 
   if (!unit || !stage) return null;
 
   const stageBody = (() => {
     switch (stage.type) {
       case "vocab":
-        return <VocabStage unit={unit} grade={grade} onFinish={handleFinish} />;
+        return <VocabStage unit={unit} grade={grade} publisher={publisher} onFinish={handleFinish} />;
       case "listenWord":
         // 数据源:junior_vocab 全单元词(分组12);无 DB 词回退 JSON。选对加星+写词汇掌握度(listen)。
         return (
           <ListenWordStage
             unit={unit}
             grade={grade}
+            publisher={publisher}
             onFinish={handleFinish}
             onCorrect={(q) => {
               addStar();
@@ -2116,7 +2136,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
         );
       case "match":
         // 词源改读 junior_vocab DB(完整 unit 词,与核心词汇关同源),每组 12 词分批。
-        return <MatchStage unit={unit} grade={grade} onFinish={handleFinish} onMatch={addStar} />;
+        return <MatchStage unit={unit} grade={grade} publisher={publisher} onFinish={handleFinish} onMatch={addStar} />;
       case "grammar":
         // 数据源 unit.grammarQuiz(内联水题);空时走兜底(GrammarStage 内部用它喂 FinalQuizStage,会白屏)。
         // 例外:有 grammarCodes 的单元走 JuniorUnitGrammarTest 从 DB 按 point 抽题,不依赖 grammarQuiz,放行进 GrammarStage。

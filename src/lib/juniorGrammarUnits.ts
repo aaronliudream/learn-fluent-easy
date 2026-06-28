@@ -32,13 +32,16 @@ export type GUnit = {
 const UNIT_ORDER = ["SU1", "SU2", "SU3", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "U10", "U11", "U12"];
 const VOL_ORDER = ["7A", "7B", "8A", "8B", "9", "9A", "9B"];
 
-/** 取所有带 unit 归属的语法点(按课本序),并附每个点的题 id 列表。 */
-export async function loadUnitGrammar(): Promise<GUnit[]> {
-  const { data: pData } = await supabase
+/** 取所有带 unit 归属的语法点(按课本序),并附每个点的题 id 列表。
+ *  publisher:高中入口传 'pep' 只取该社;初中/不传 → 不过滤,行为不变。 */
+export async function loadUnitGrammar(publisher?: string): Promise<GUnit[]> {
+  let pq = supabase
     .from("junior_grammar_points")
     .select("id,code,title,volume,unit,sort_order")
     .not("unit", "is", null)
     .order("sort_order");
+  if (publisher) pq = pq.eq("publisher", publisher);
+  const { data: pData } = await pq;
   const points = (pData ?? []) as Omit<GPoint, "questionIds">[];
   if (!points.length) return [];
 
@@ -95,9 +98,11 @@ export async function loadPoint(pointId: string): Promise<GPointMeta | null> {
  * (取这些点的全部题 id → loadGrammarQuestionMastery → computeGrammarProgress),
  * 保证 hub 第4关 与 语法专项页 同一单元数字一致。
  */
-export async function loadProgressForCodes(codes: string[]): Promise<GrammarProgress> {
+export async function loadProgressForCodes(codes: string[], publisher?: string): Promise<GrammarProgress> {
   if (!codes || !codes.length) return { done: 0, mastered: 0, total: 0 };
-  const { data: pts } = await supabase.from("junior_grammar_points").select("id").in("code", codes);
+  let pq = supabase.from("junior_grammar_points").select("id").in("code", codes);
+  if (publisher) pq = pq.eq("publisher", publisher);
+  const { data: pts } = await pq;
   const pointIds = ((pts ?? []) as { id: string }[]).map((p) => p.id);
   if (!pointIds.length) return { done: 0, mastered: 0, total: 0 };
   const qids: string[] = [];

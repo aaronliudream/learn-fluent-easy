@@ -5,6 +5,7 @@ import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
+import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
 import VocabGameLauncher from "@/components/vocab/VocabGameLauncher";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
@@ -33,6 +34,7 @@ export default function GaokaoVocabBoard() {
   const mode = params.get("mode") as Mode | null;
   const groupParam = Number(params.get("group") ?? "0");
   const grade = book ? VOL_GRADE[book] ?? 10 : 10;
+  const pub = readPublisherParam(params); // 高中出版社:默认 pep,可被 ?publisher= 覆盖(Phase 3)
 
   const [available, setAvailable] = useState<Set<string>>(new Set());
   const [words, setWords] = useState<Vocab[]>([]);
@@ -44,11 +46,11 @@ export default function GaokaoVocabBoard() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase.from("junior_vocab").select("volume").in("volume", SENIOR_VOLUMES);
+      const { data } = await supabase.from("junior_vocab").select("volume").eq("publisher", pub).in("volume", SENIOR_VOLUMES);
       if (!cancelled) setAvailable(new Set(((data ?? []) as { volume: string }[]).map((r) => r.volume)));
     })();
     return () => { cancelled = true; };
-  }, []);
+  }, [pub]);
 
   // 选册后:读该册全部词
   useEffect(() => {
@@ -59,7 +61,7 @@ export default function GaokaoVocabBoard() {
       const all: Vocab[] = [];
       for (let from = 0; from < 5000; from += 1000) {
         const { data, error } = await supabase.from("junior_vocab").select(COLS)
-          .eq("volume", book).order("freq_rank", { ascending: true, nullsFirst: false }).range(from, from + 999);
+          .eq("volume", book).eq("publisher", pub).order("freq_rank", { ascending: true, nullsFirst: false }).range(from, from + 999);
         if (error || !data || data.length === 0) break;
         all.push(...(data as Vocab[]));
         if (data.length < 1000) break;
@@ -90,7 +92,7 @@ export default function GaokaoVocabBoard() {
       setLoading(false);
     })();
     return () => { cancelled = true; };
-  }, [book]);
+  }, [book, pub]);
 
   // 复习池(到期词)
   useEffect(() => {
@@ -142,7 +144,7 @@ export default function GaokaoVocabBoard() {
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} gradeNum={gradeNum} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={gradeNum} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={gradeNum} suppressGaokao />;
-  if (mode === "context") return <ContextQuiz pool={activePool} onExit={exit} gradeNum={gradeNum} volume={book!} />;
+  if (mode === "context") return <ContextQuiz pool={activePool} onExit={exit} gradeNum={gradeNum} volume={book!} publisher={pub} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={gradeNum} suppressGaokao />;
 
   // 单词清单 → 某组浏览

@@ -8,6 +8,7 @@ import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
+import { DEFAULT_PUBLISHER } from "@/lib/gaokaoHub/publisher";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/gaokaoHub/types";
 
@@ -69,7 +70,7 @@ function StageList({
     (async () => {
       const codes = unit.grammarCodes ?? [];
       if (!codes.length) return;
-      const g = await loadProgressForCodes(codes);
+      const g = await loadProgressForCodes(codes, DEFAULT_PUBLISHER);
       if (!cancelled) setGrammarProg(g);
     })();
     return () => {

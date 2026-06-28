@@ -11,6 +11,7 @@ import { getGradeCourse } from "@/lib/juniorHub/courseData";
 import type { JuniorHubGrade } from "@/lib/juniorHub/types";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
+import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
 
 /** 册 → junior grade(必修=10/选必一二=11/选必三四=12)。物理沿用 year1/2/3.json。 */
 const VOL_GRADE: Record<string, JuniorHubGrade> = {
@@ -30,6 +31,7 @@ const VOL_GRADE: Record<string, JuniorHubGrade> = {
 export default function GaokaoGrammarBoard() {
   const [sp] = useSearchParams();
   const book = sp.get("book");
+  const pub = readPublisherParam(sp);
   const [units, setUnits] = useState<GUnit[]>([]);
   const [prog, setProg] = useState<Record<string, { mastered: number; total: number }>>({});
   const [loading, setLoading] = useState(true);
@@ -38,7 +40,7 @@ export default function GaokaoGrammarBoard() {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      const all = await loadUnitGrammar();
+      const all = await loadUnitGrammar(pub);
       if (cancelled) return;
       setUnits(all);
       const target = book ? all.filter((u) => u.volume === book) : [];
@@ -58,7 +60,7 @@ export default function GaokaoGrammarBoard() {
     return () => {
       cancelled = true;
     };
-  }, [book]);
+  }, [book, pub]);
 
   const available = useMemo(() => new Set(units.map((u) => u.volume)), [units]);
   const bookUnits = useMemo(

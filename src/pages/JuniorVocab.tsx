@@ -727,7 +727,7 @@ export function ClassicQuiz({ pool, onExit, gradeNum, suppressGaokao = false }: 
    读句子(挖空)4 选 1。题库 context_questions(DB);掌握记在 word 原形上(context_consec)。 */
 type CtxQ = { id: string; word: string; sentence: string; options: string[]; answer: string };
 
-export function ContextQuiz({ pool, onExit, gradeNum, volume }: {pool: Vocab[];onExit: () => void;gradeNum: number;volume?: string;}) {
+export function ContextQuiz({ pool, onExit, gradeNum, volume, publisher }: {pool: Vocab[];onExit: () => void;gradeNum: number;volume?: string;publisher?: string;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const BATCH = 10;
@@ -745,6 +745,7 @@ export function ContextQuiz({ pool, onExit, gradeNum, volume }: {pool: Vocab[];o
         .select("id,word,sentence,options,answer")
         .eq("grade", gradeNum);
       if (volume) q = q.eq("volume", volume);
+      if (publisher) q = q.eq("publisher", publisher); // 高中传 pep;初中不传 → 行为不变
       const { data } = await q.limit(2000);
       if (cancelled) return;
       const qs = (data ?? [])
@@ -757,7 +758,7 @@ export function ContextQuiz({ pool, onExit, gradeNum, volume }: {pool: Vocab[];o
       setQuestions(qs);
     })();
     return () => { cancelled = true; };
-  }, [gradeNum]);
+  }, [gradeNum, volume, publisher]);
 
   // word 原形(小写)→ junior_vocab id(记掌握用)
   const idByWord = useMemo(() => {

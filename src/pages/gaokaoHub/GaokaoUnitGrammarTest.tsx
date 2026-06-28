@@ -18,6 +18,7 @@ import {
   type UnitQuestion,
 } from "@/lib/juniorUnitGrammar";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
+import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
 import { findUnit } from "@/lib/juniorHub/courseData";
 import { recordSkillAttemptsForQuestion } from "@/lib/recordSkillAttempts";
 import { recordGrammarQuestionMastery } from "@/lib/juniorGrammarQuestionMastery";
@@ -47,6 +48,7 @@ export default function GaokaoUnitGrammarTest() {
   const { grade, unitId } = useParams<{ grade: string; unitId: string }>();
   const [sp] = useSearchParams();
   const returnTo = sp.get("returnTo");
+  const pub = readPublisherParam(sp); // 高中:默认 pep,?publisher= 可覆盖
   const unit = unitId ? findUnit(unitId) : null;
 
   const [points, setPoints] = useState<UnitPoint[]>([]);
@@ -67,7 +69,7 @@ export default function GaokaoUnitGrammarTest() {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      const pts = await resolveUnitPoints(codes);
+      const pts = await resolveUnitPoints(codes, pub);
       const merged = await loadUnitPool(pts);
       const picked = pickQuestions(merged, pts, 8);
       if (cancelled) return;
@@ -128,7 +130,7 @@ export default function GaokaoUnitGrammarTest() {
         if (ok) e.correct++;
       }
     });
-    const prog = await loadProgressForCodes(unit?.grammarCodes ?? []);
+    const prog = await loadProgressForCodes(unit?.grammarCodes ?? [], pub);
     setResult({
       perPoint: [...tally.values()],
       mastered: prog.mastered,
@@ -149,7 +151,7 @@ export default function GaokaoUnitGrammarTest() {
     if (codes.length) {
       setLoading(true);
       (async () => {
-        const pts = await resolveUnitPoints(codes);
+        const pts = await resolveUnitPoints(codes, pub);
         const merged = await loadUnitPool(pts);
         setPoints(pts);
         setPool(pickQuestions(merged, pts, 8));

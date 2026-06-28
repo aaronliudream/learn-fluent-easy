@@ -1,0 +1,481 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "History and Traditions",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修二 Unit 4 同主题听力(历史名城游/英国名字短文/酒馆传统对话/四群人短文/平遥见闻对话/英式下午茶短文)。用词限 U4/初中/常见词,答案唯一,与读写关不撞;long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Planning a Day in London",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Emma",
+          "text": "So, where should we start our day in London, Tom?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Let's begin near the river. London is an ancient port city with a long history."
+        },
+        {
+          "speaker": "Emma",
+          "text": "Great. Can we see Tower Bridge first? People say it's a symbol of the city."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Of course. After that, we can visit the National Gallery to see the paintings."
+        },
+        {
+          "speaker": "Emma",
+          "text": "Wonderful! But first I need to get my phone charged. The battery is almost dead."
+        },
+        {
+          "speaker": "Tom",
+          "text": "No problem. There's a café nearby where you can charge it."
+        },
+        {
+          "speaker": "Emma",
+          "text": "Perfect. Then let's keep our eyes open for the historic sites along the way."
+        }
+      ],
+      "translation_cn": "Emma 和 Tom 商量在伦敦怎样开始一天;Tom 建议从河边开始,因为伦敦是历史悠久的古老港口城市;先去看作为城市象征的塔桥,再去国家美术馆看画;Emma 想先给手机充电,Tom 说附近咖啡馆可以充;然后一路留心历史古迹。",
+      "questions": [
+        {
+          "stem": "Where does Tom suggest starting their day?",
+          "options": [
+            "Near the river.",
+            "At the airport.",
+            "In a shopping mall.",
+            "Outside the city."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom say about London?",
+          "options": [
+            "It has no history.",
+            "It is an ancient port city.",
+            "It is a very small town.",
+            "It is far from the river."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Tower Bridge said to be?",
+          "options": [
+            "A symbol of the city.",
+            "A new railway station.",
+            "A modern art gallery.",
+            "A famous restaurant."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Emma need to stop first?",
+          "options": [
+            "To buy a new map.",
+            "To get her phone charged.",
+            "To meet a friend.",
+            "To have lunch."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will they do along the way?",
+          "options": [
+            "Sleep on a bench.",
+            "Look for a car park only.",
+            "Keep their eyes open for historic sites.",
+            "Avoid all old buildings."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 The Names of the UK",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people are confused by the different names for the UK.",
+        "In the 16th century, Wales was joined to the Kingdom of England.",
+        "Later, Scotland and then Ireland were added.",
+        "In the 20th century, the southern part of Ireland broke away.",
+        "Today most people simply use the shortened name, the UK."
+      ],
+      "translation_cn": "许多人被英国的各种名字弄糊涂;16世纪威尔士并入英格兰王国;后来苏格兰、再后来爱尔兰也加入;20世纪爱尔兰南部脱离;如今大多数人就用简称 the UK。",
+      "questions": [
+        {
+          "stem": "What confuses many people?",
+          "options": [
+            "The weather in London.",
+            "The price of tickets.",
+            "The number of museums.",
+            "The different names for the UK."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which country was joined to England in the 16th century?",
+          "options": [
+            "Wales.",
+            "Scotland.",
+            "France.",
+            "Ireland."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happened in the 20th century?",
+          "options": [
+            "Wales joined England.",
+            "The south of Ireland broke away.",
+            "Scotland left the UK.",
+            "London was built."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What name do most people use today?",
+          "options": [
+            "Great England.",
+            "The Roman land.",
+            "The UK.",
+            "The Kingdom of Wales."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "In what order were the countries added?",
+          "options": [
+            "Ireland, then Wales, then Scotland.",
+            "Scotland, then Ireland, then Wales.",
+            "France, then Wales, then Scotland.",
+            "Wales, then Scotland, then Ireland."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 A Traditional Village Pub",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lily",
+          "text": "This village pub looks so old and cosy. Is it part of a tradition here?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Yes, the pub is at the heart of village life. People come here to meet friends."
+        },
+        {
+          "speaker": "Lily",
+          "text": "What should I try? I'd love to taste something traditional."
+        },
+        {
+          "speaker": "Jack",
+          "text": "You must try the beef stew. And many people enjoy a glass of wine or a local beer."
+        },
+        {
+          "speaker": "Lily",
+          "text": "That sounds lovely. Is there music too?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Yes, sometimes there's traditional music and dancing in the evening."
+        },
+        {
+          "speaker": "Lily",
+          "text": "How wonderful! It's a great way to experience the local culture first-hand."
+        }
+      ],
+      "translation_cn": "Lily 觉得乡村酒馆古老温馨,问这是否是当地传统;Jack 说酒馆是村庄生活的中心,人们来这儿见朋友;推荐 Lily 尝炖牛肉,还有人喝葡萄酒或本地啤酒;晚上有时有传统音乐和舞蹈;Lily 觉得这是亲身体验当地文化的好方式。",
+      "questions": [
+        {
+          "stem": "What does Jack say the pub is?",
+          "options": [
+            "At the heart of village life.",
+            "A brand-new building.",
+            "A place no one visits.",
+            "An empty old house."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What traditional food does Jack suggest trying?",
+          "options": [
+            "Fried rice.",
+            "Beef stew.",
+            "Cold pizza.",
+            "Sweet cakes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What drinks do many people enjoy there?",
+          "options": [
+            "Only cold water.",
+            "Hot coffee only.",
+            "Wine or local beer.",
+            "Fruit juice only."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What sometimes happens in the evening?",
+          "options": [
+            "The pub closes early.",
+            "Everyone goes home.",
+            "No one speaks.",
+            "There is traditional music and dancing."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Lily feel about the pub?",
+          "options": [
+            "It's a great way to experience local culture.",
+            "It is boring and cold.",
+            "It is too modern.",
+            "It has nothing to offer."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Four Groups in British History",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Four groups of people took over Britain at different times.",
+        "The Romans came first and built many towns and roads.",
+        "Then the Anglo-Saxons introduced the beginnings of the English language.",
+        "The Vikings left behind new words and many place names.",
+        "Finally the Normans conquered England and changed the legal system."
+      ],
+      "translation_cn": "四群人在不同时期先后占领了英国;罗马人最先到来,修建了许多城镇和道路;接着盎格鲁-撒克逊人带来了英语的雏形;维京人留下了新词和许多地名;最后诺曼人征服了英格兰并改变了法律制度。",
+      "questions": [
+        {
+          "stem": "How many groups took over Britain?",
+          "options": [
+            "Two.",
+            "Four.",
+            "Six.",
+            "Ten."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the Romans build?",
+          "options": [
+            "Castles only.",
+            "A new flag.",
+            "Many towns and roads.",
+            "A football team."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did the Vikings leave behind?",
+          "options": [
+            "Only castles.",
+            "A new legal system.",
+            "Roman roads.",
+            "New words and place names."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the Normans do?",
+          "options": [
+            "They conquered England and changed the law.",
+            "They left Britain at once.",
+            "They built no castles.",
+            "They spoke only English."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who introduced the beginnings of English?",
+          "options": [
+            "The Romans.",
+            "The Anglo-Saxons.",
+            "The Vikings.",
+            "The Normans."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Back from Pingyao",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "I've just come back from Pingyao, and it was amazing!"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Oh, I love Pingyao! Did you walk along Ming-Qing Street?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Of course, but I didn't expect to see so many tourists there."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I know what you mean. But the snacks on that street are wonderful, aren't they?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "They really are. I also climbed the old city wall. It was like walking into history."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Did you visit the famous family courtyard as well?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yes, but it wasn't as big as I had expected. Still, the whole trip was great fun."
+        }
+      ],
+      "translation_cn": "Anna 刚从平遥回来,觉得很棒;Ben 也爱平遥,问她有没有走明清街;Anna 走了,但没料到游客那么多;Ben 说那条街的小吃很棒;Anna 还爬了古城墙,像走进了历史;问她有没有去著名的家族庭院;去了,但没她想的那么大,不过整趟旅行很有趣。",
+      "questions": [
+        {
+          "stem": "Where has Anna just come back from?",
+          "options": [
+            "London.",
+            "Ireland.",
+            "Pingyao.",
+            "Scotland."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What surprised Anna on Ming-Qing Street?",
+          "options": [
+            "There were no shops.",
+            "It was completely empty.",
+            "It had closed down.",
+            "There were so many tourists."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ben say is wonderful on that street?",
+          "options": [
+            "The snacks.",
+            "The tall buildings.",
+            "The quiet rooms.",
+            "The car park."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did Anna feel on the old city wall?",
+          "options": [
+            "Bored and tired.",
+            "As if walking into history.",
+            "Cold and hungry.",
+            "Angry and lost."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Anna think of the family courtyard?",
+          "options": [
+            "It was the biggest she had seen.",
+            "It was completely closed.",
+            "It wasn't as big as she had expected.",
+            "It had no rooms at all."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 British Afternoon Tea",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Afternoon tea is an old British tradition that many families still enjoy.",
+        "People usually add a little milk to their tea.",
+        "They often eat small snacks such as cakes and sandwiches.",
+        "Friends greet each other warmly and sit down to chat.",
+        "It is a relaxing way to share time and keep an old custom alive."
+      ],
+      "translation_cn": "下午茶是许多英国家庭至今仍喜爱的古老传统;人们通常往茶里加一点牛奶;常配蛋糕、三明治等小点心;朋友们热情地相互问候、坐下闲聊;这是分享时光、让古老习俗延续下来的轻松方式。",
+      "questions": [
+        {
+          "stem": "What is afternoon tea?",
+          "options": [
+            "A new kind of sport.",
+            "A type of museum.",
+            "A famous castle.",
+            "An old British tradition."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do people usually add to their tea?",
+          "options": [
+            "A little milk.",
+            "A lot of salt.",
+            "Cold water.",
+            "Hot oil."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What small snacks do people often eat?",
+          "options": [
+            "Only fruit.",
+            "Cakes and sandwiches.",
+            "Beef stew.",
+            "Rice and soup."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do friends do at afternoon tea?",
+          "options": [
+            "They argue loudly.",
+            "They leave at once.",
+            "They greet each other and chat.",
+            "They stay silent."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is afternoon tea special, according to the passage?",
+          "options": [
+            "It costs a lot of money.",
+            "It is very tiring.",
+            "It ends all traditions.",
+            "It keeps an old custom alive."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

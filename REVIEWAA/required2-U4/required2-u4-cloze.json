@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "History and Traditions",
+  "source": "人教版2019必修二 Unit 4 同主题完形(美术馆参观/曲阜与孔子/英语习语/茶文化/平遥之行/伦敦节日)。用词限 U4/初中/常见词,答案唯一,同词性,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Day at the National Gallery",
+      "text": "Last week Judy and I spent a whole day in London. First we had our car (1)____ in an underground car park, where we could also get the car battery (2)____. Then we walked to the National Gallery. We were (3)____ by the large number of visitors and the amount of (4)____ at the entrance. When we reached the service desk, we heard it (5)____ that no audio guides were left, so we had to explore on our own. Inside, Judy had her eyes (6)____ on Van Gogh's Sunflowers for a long time. It was hard to (7)____ the painting because of the crowd. Before we left, she had a (8)____ of the painting boxed to (9)____ that it would arrive home safely. It was a tiring but wonderful day, and we agreed it was one of the best (10)____ of our whole trip.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "parked",
+            "sold",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 0,
+          "explanation": "have the car parked 把车停好。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "broken",
+            "charged",
+            "thrown",
+            "hidden"
+          ],
+          "answer_index": 1,
+          "explanation": "get the battery charged 给电池充电。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bored",
+            "sold",
+            "surprised",
+            "freed"
+          ],
+          "answer_index": 2,
+          "explanation": "be surprised by 被……惊到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "water",
+            "snow",
+            "noise"
+          ],
+          "answer_index": 3,
+          "explanation": "the amount of noise 噪音之大。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "announced",
+            "asked",
+            "drawn",
+            "carved"
+          ],
+          "answer_index": 0,
+          "explanation": "hear it announced that 听到宣布……。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lost",
+            "fixed",
+            "sold",
+            "left"
+          ],
+          "answer_index": 1,
+          "explanation": "have her eyes fixed on 目不转睛地盯着。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "break",
+            "approach",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "approach the painting 靠近那幅画。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "copy"
+          ],
+          "answer_index": 3,
+          "explanation": "a copy of the painting 一份复制品。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ensure",
+            "forget",
+            "refuse",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "ensure that 确保……。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistakes",
+            "memories",
+            "prices",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "the best memories 最美好的回忆。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Visiting Qufu",
+      "text": "When William visited Qufu, a Chinese student named Xiao Kong showed him around. Xiao Kong is a (1)____ of Confucius, and his name is recorded in the family tree. He told William that Confucius is one of his favourite (2)____. They first walked through the Temple of Confucius, then visited the Kong Family (3)____. William noticed that no modern building was allowed to be more (4)____ than the historic ones. He said this was the (5)____ why his own hometown felt so similar. Both places, he explained, are proud of a famous (6)____ who was born there. As they walked, Xiao Kong kept his eyes (7)____ for small details that most tourists miss. He believed that to truly understand a (8)____ site, you must learn about its history first. William was (9)____ to hear so many interesting stories. By the end of the day, he had a much deeper (10)____ for Chinese culture and traditions.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "machine",
+            "descendant",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a descendant of 的后代。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "prices",
+            "gardens",
+            "philosophers"
+          ],
+          "answer_index": 3,
+          "explanation": "favourite philosophers 最喜欢的哲学家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "Mansion",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "Kong Family Mansion 孔府。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "noticeable",
+            "quiet",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "more noticeable 更引人注目。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "reason",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "the reason why 原因。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machine",
+            "price",
+            "garden",
+            "person"
+          ],
+          "answer_index": 3,
+          "explanation": "a famous person 一位名人。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "open",
+            "closed",
+            "shut",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "keep your eyes open 留心观察。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "historic",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "a historic site 历史遗迹。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "angry",
+            "eager",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "be eager to hear 渴望听到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "machine",
+            "garden",
+            "appreciation"
+          ],
+          "answer_index": 3,
+          "explanation": "appreciation for 对……的欣赏。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Understanding English Idioms",
+      "text": "Learning a language is not only about words; it is also about idioms. An idiom is an expression whose meaning is different from each (1)____ word in it. For example, when British people say someone has an 'Achilles' heel', they do not mean a real (2)____. They mean a person's weakest point. Some idioms paint a (3)____ that gives a hint about their meaning, while others can only be understood from the (4)____ in which they appear. If you are (5)____ to learn a foreign culture, idioms are a great place to start. They often come from old stories, history or (6)____ that people have followed for years. When you are not sure what an idiom (7)____, the best thing is to ask politely. Little by little, you will (8)____ how colourful a language can be. Knowing idioms also helps you (9)____ native speakers more easily and feel less like a stranger. So keep your ears (10)____, and write down every new idiom you hear.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "individual",
+            "cheap",
+            "empty",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "each individual word 每个单独的词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "heel",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a real heel 真正的脚跟。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "picture",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "paint a picture 描绘画面。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "context"
+          ],
+          "answer_index": 3,
+          "explanation": "the context in which 出现的语境。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eager",
+            "afraid",
+            "sorry",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "be eager to 渴望。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "customs",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "customs 风俗习惯。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sells",
+            "buys",
+            "means",
+            "throws"
+          ],
+          "answer_index": 2,
+          "explanation": "what an idiom means 习语的意思。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "lose",
+            "drop",
+            "appreciate"
+          ],
+          "answer_index": 3,
+          "explanation": "appreciate 欣赏、领会。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "greet",
+            "sell",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "greet native speakers 与母语者打招呼。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "closed",
+            "open",
+            "shut",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "keep your ears open 注意聆听。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Different Tea Cultures",
+      "text": "Tea is enjoyed all around the world, but every country has its own (1)____. In China, where tea has a very long (2)____, people often drink it without milk and value its natural (3)____. Friends greet each other and then sit down to share a quiet pot of tea together. In Britain, tea is also an important (4)____. Many families enjoy 'afternoon tea', and they usually add milk and sometimes a little (5)____ to make it sweet. People often eat small (6)____ such as cakes and sandwiches with their tea. To make a good cup, the British (7)____ that the water must be very hot. In some places, you can get your tea (8)____ to your table in a beautiful pot. Whatever the country, tea brings people together and helps them (9)____. Trying a new tea custom is a simple but lovely way to (10)____ another culture first-hand.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "custom",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "its own custom 自己的风俗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "history"
+          ],
+          "answer_index": 3,
+          "explanation": "a long history 悠久的历史。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "scent",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "natural scent 天然的香气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "custom",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "an important custom 重要的习俗。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "stone",
+            "paper",
+            "honey",
+            "metal"
+          ],
+          "answer_index": 2,
+          "explanation": "add honey 加蜂蜜。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "noises",
+            "machines",
+            "snacks"
+          ],
+          "answer_index": 3,
+          "explanation": "small snacks 小点心。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ensure",
+            "sell",
+            "buy",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "ensure that 确保。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "delivered",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "get your tea delivered 让茶被送到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fail",
+            "forget",
+            "relax",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "helps them relax 帮他们放松。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "experience"
+          ],
+          "answer_index": 3,
+          "explanation": "experience another culture 体验另一种文化。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Trip to Pingyao",
+      "text": "Paul, a backpacker, was staying at a youth hostel in Pingyao. He was (1)____ to explore the ancient town, so the receptionist gave him a map. First he walked along Ming-Qing Street, where he tried some local (2)____ that smelled wonderful. He was (3)____ by how well the old buildings had been kept. Next he visited a famous family (4)____, with its quiet rooms and peaceful gardens. Paul said it was like walking into (5)____. Later he climbed the city (6)____, which surrounded the whole town like a stone belt. From the top he could (7)____ the rooftops bathed in golden evening light. He had not (8)____ such a beautiful view, and he felt a little surprised. Before leaving, he had a few (9)____ packed for the long train ride home. Paul agreed that learning about a place's history makes a (10)____ much more enjoyable.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eager",
+            "afraid",
+            "sorry",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "be eager to 渴望。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "snacks",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "local snacks 当地小吃。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bored",
+            "freed",
+            "surprised",
+            "sold"
+          ],
+          "answer_index": 2,
+          "explanation": "be surprised by 被……惊到。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "courtyard"
+          ],
+          "answer_index": 3,
+          "explanation": "a family courtyard 家族庭院。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "history",
+            "money",
+            "water",
+            "snow"
+          ],
+          "answer_index": 0,
+          "explanation": "walking into history 走进历史。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "wall",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "the city wall 城墙。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "forget",
+            "see",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "see the rooftops 看到屋顶。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "broken",
+            "expected"
+          ],
+          "answer_index": 3,
+          "explanation": "had not expected 没有料到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "snacks",
+            "prices",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "a few snacks 一些小吃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "visit",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "makes a visit enjoyable 让一次参观更愉快。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A British Street Festival",
+      "text": "Every summer, our small British town holds a street (1)____ that brings the whole community together. People work hard for weeks: they have the streets (2)____ with colourful flags, and they get the old town square (3)____ for the big day. In the morning, you can hear the festival (4)____ over loud speakers, and a happy (5)____ soon gathers in the square. There are stalls selling cakes, local (6)____ and other small snacks. A band plays while families relax with a cup of tea or a glass of (7)____. Children watch dancers, their eyes (8)____ on the bright costumes. The festival is a wonderful way to keep our local (9)____ alive and to share them with visitors. By the time the sun goes down, everyone agrees it has been a (10)____ day to remember.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "festival",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a street festival 街头节日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "lost",
+            "broken",
+            "decorated"
+          ],
+          "answer_index": 3,
+          "explanation": "have the streets decorated 把街道装饰好。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prepared",
+            "sold",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "get the square prepared 把广场准备好。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "announced",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "hear the festival announced 听到节日被宣布。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "machine",
+            "crowd",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a happy crowd 欢乐的人群。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "noises",
+            "machines",
+            "snacks"
+          ],
+          "answer_index": 3,
+          "explanation": "local snacks 当地小吃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wine",
+            "stone",
+            "paper",
+            "metal"
+          ],
+          "answer_index": 0,
+          "explanation": "a glass of wine 一杯葡萄酒。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "fixed",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "their eyes fixed on 目不转睛地盯着。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prices",
+            "noises",
+            "traditions",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "local traditions 当地传统。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cheap",
+            "empty",
+            "quiet",
+            "striking"
+          ],
+          "answer_index": 3,
+          "explanation": "a striking day 难忘的一天。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "We must protect our cultural heritage.", "opts": ["我们必须保护我们的文化遗产。", "我们必须建造一座新水坝。", "我们应该卖掉这些老房子。", "我们想去参观博物馆。"], "answer": 0 },
+    { "audio": "The engineers moved the temple to a safe place.", "opts": ["工人们拆毁了那座庙。", "工程师们把庙宇搬到了安全的地方。", "雨水淹没了整个山谷。", "游客们在入口处拍照。"], "answer": 1 },
+    { "audio": "Fifty countries donated money to the project.", "opts": ["项目去年才开始。", "没有人愿意提供帮助。", "五十个国家为这个项目捐了款。", "委员会拒绝了这个方案。"], "answer": 2 },
+    { "audio": "Researchers take digital photos of the cave paintings.", "opts": ["研究人员在墙上重新作画。", "他们关闭了所有洞窟。", "他们把壁画搬进了博物馆。", "研究人员为洞窟壁画拍摄数码照片。"], "answer": 3 },
+    { "audio": "The Great Wall belongs to the whole world.", "opts": ["长城属于全世界。", "长城只有几米长。", "长城是去年建的。", "长城很容易找到。"], "answer": 0 },
+    { "audio": "Protecting the past is everyone's duty.", "opts": ["保护过去毫无意义。", "保护过去是每个人的责任。", "只有政府才能保护遗产。", "古迹应当被卖掉。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "We must ____ our cultural heritage for future generations.", "opts": ["preserve", "destroy", "sell", "forget"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The government planned to build a ____ across the Nile.", "opts": ["song", "dam", "price", "noise"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Fifty countries ____ money to save the temples.", "opts": ["lost", "hid", "donated", "sold"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "We must keep a ____ between progress and protection.", "opts": ["noise", "price", "weather", "balance"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The archaeologist ____ found the relics became famous.", "opts": ["who", "which", "where", "whose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The temples ____ were moved are now safe from the water.", "opts": ["who", "which", "where", "whom"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Dunhuang is the city ____ the Mogao Caves are found.", "opts": ["which", "when", "where", "whose"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "She is the writer ____ book about heritage won a prize.", "opts": ["who", "which", "where", "whose"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["一个委员会成立起来以减少损害。", "他们建了一条新路。", "游客买了门票。", "孩子们在玩游戏。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "A committee was set up to limit the damage." },
+    { "q": "听句子选中文:", "opts": ["这些传统可能很快消失。", "这些传统会永远存在。", "这些传统被卖到了海外。", "这些传统毫无价值。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "These traditions may disappear very soon." }
+  ],
+  "reading": {
+    "passage": "In the 1950s, a new dam on the Nile threatened many ancient temples. Instead of letting them drown, the world worked together: experts made a plan, fifty countries gave money, and engineers moved the temples to higher ground. The rescue took twenty years and became a model of international teamwork.",
+    "passageCn": "20世纪50年代,尼罗河上的一座新水坝威胁着许多古庙。世界没有任其被淹,而是齐心协力:专家制定方案,五十个国家出钱,工程师把庙宇搬到高地。这场拯救历时二十年,成为国际合作的典范。",
+    "questions": [
+      { "q": "What threatened the ancient temples?", "opts": ["A new dam on the Nile.", "A big fire.", "A strong wind.", "A long war."], "answer": 0 },
+      { "q": "How were the temples saved?", "opts": ["They were left to drown.", "They were moved to higher ground.", "They were sold abroad.", "They were covered with sand."], "answer": 1 },
+      { "q": "What did the rescue become?", "opts": ["A waste of money.", "A failure.", "A model of international teamwork.", "A short holiday."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a person or group who works to protect cultural heritage. Say what they do and why it matters. Use at least one relative clause.",
+    "promptCn": "用3-4句话介绍一个保护文化遗产的人或团体:他们做什么、为什么重要。至少用一个定语从句。",
+    "sampleWords": ["heritage", "preserve", "relic", "temple", "volunteer", "protect", "photo", "remember", "duty", "who"]
+  },
+  "dialogues": [
+    {
+      "title": "At a Heritage Site",
+      "lines": [
+        { "role": "A", "text": "Excuse me, could you tell me about this temple?", "cn": "打扰一下,您能给我讲讲这座庙吗?" },
+        { "role": "B", "text": "Of course. It was built hundreds of years ago and is an important heritage site.", "cn": "当然。它建于数百年前,是一处重要的遗产地。" },
+        { "role": "A", "text": "How can we help protect places like this?", "cn": "我们能怎样帮助保护这样的地方呢?" },
+        { "role": "B", "text": "Never touch the relics, and tell others why they matter.", "cn": "绝不触碰文物,并告诉别人它们为何重要。" }
+      ]
+    }
+  ]
+}

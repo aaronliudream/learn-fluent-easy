@@ -1,0 +1,421 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Cultural Heritage",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修二 Unit 1 同主题听力(参观故宫/世界遗产广播/泰山营地访谈/保护文物贴士/筹款委员会对话/求助联合国短文)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 At the Forbidden City",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tourist: Excuse me, could you please tell me about this old mirror?",
+        "Guide: Of course. It is said that this mirror can tell right from wrong.",
+        "Tourist: How interesting! And what is that carving on the roof?",
+        "Guide: That is called chiwen, one of the nine sons of the Chinese dragon.",
+        "Tourist: I have never heard of it. Is this palace very old?",
+        "Guide: Yes. It was built hundreds of years ago and is an important heritage site.",
+        "Tourist: Thank you. I really want to help protect places like this.",
+        "Guide: That's wonderful. Every visitor who cares can make a difference."
+      ],
+      "translation_cn": "游客请向导介绍一面古镜;向导说这镜子据说能分辨是非;游客又问屋顶上的雕刻;那叫鸱吻,是中国龙的九子之一;宫殿建于数百年前,是重要遗产地;游客想帮忙保护这样的地方;向导说每个用心的游客都能起作用。",
+      "questions": [
+        {
+          "stem": "What does the guide say about the old mirror?",
+          "options": [
+            "It can tell right from wrong.",
+            "It is made of gold.",
+            "It was bought last year.",
+            "It is for sale."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the carving on the roof called?",
+          "options": [
+            "A dragon's tail.",
+            "Chiwen.",
+            "A mirror.",
+            "A pyramid."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How old is the palace?",
+          "options": [
+            "Built hundreds of years ago.",
+            "Only a few years old.",
+            "Built last month.",
+            "Nobody knows at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the tourist want to do?",
+          "options": [
+            "Buy the mirror.",
+            "Help protect such places.",
+            "Leave at once.",
+            "Take the carving home."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the guide say about caring visitors?",
+          "options": [
+            "They cause trouble.",
+            "They should stay away.",
+            "Each one can make a difference.",
+            "They waste money."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 What Is Cultural Heritage",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Cultural heritage is what we receive from the past.",
+        "It includes temples, relics, and ancient buildings.",
+        "But it also includes customs, dances, and old crafts.",
+        "We live with this heritage today and pass it on to the future.",
+        "Protecting it is the duty of every one of us."
+      ],
+      "translation_cn": "文化遗产是我们从过去继承下来的;它包括庙宇、文物和古建筑;但也包括习俗、舞蹈和古老的手工艺;我们今天与这份遗产共存,并把它传给未来;保护它是我们每个人的责任。",
+      "questions": [
+        {
+          "stem": "Where does cultural heritage come from?",
+          "options": [
+            "From the future only.",
+            "From other planets.",
+            "From nowhere.",
+            "From the past."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which of these is part of heritage, according to the passage?",
+          "options": [
+            "Customs and old crafts.",
+            "Only new buildings.",
+            "Cars and computers.",
+            "Modern roads."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do we do with this heritage today?",
+          "options": [
+            "We throw it away.",
+            "We live with it and pass it on.",
+            "We sell it abroad.",
+            "We hide it forever."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Whose duty is it to protect heritage?",
+          "options": [
+            "Only the government's.",
+            "Only teachers'.",
+            "Every one of us.",
+            "Only old people's."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Only temples matter.",
+            "Heritage is useless.",
+            "We should forget the past.",
+            "Cultural heritage is broad and worth protecting."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Interview at the Youth Camp",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Reporter: Hello, can you tell me what your camp is doing at Mount Tai?",
+        "Student: Sure. We are high school students from seven different countries.",
+        "Reporter: That's amazing. What exactly are you creating?",
+        "Student: We are making an app to introduce the mountain to young people.",
+        "Reporter: Why did you choose an app?",
+        "Student: Because it is a fun and easy way to share its history.",
+        "Reporter: Do you do anything besides the app?",
+        "Student: Yes, we visit local schools to talk about protecting heritage."
+      ],
+      "translation_cn": "记者问营地在泰山做什么;学生说他们是来自七个国家的高中生;他们在制作一个向年轻人介绍泰山的应用;选择应用是因为它有趣又容易分享历史;除了应用,他们还去当地学校宣传保护遗产。",
+      "questions": [
+        {
+          "stem": "Where are the students from?",
+          "options": [
+            "Seven different countries.",
+            "Only one city.",
+            "Only Egypt.",
+            "Nowhere in particular."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are the students creating?",
+          "options": [
+            "A new road.",
+            "An app about the mountain.",
+            "A large temple.",
+            "A film about school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did they choose an app?",
+          "options": [
+            "It is expensive.",
+            "Their teacher forced them.",
+            "It is a fun, easy way to share history.",
+            "Nobody knows."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What else do the students do?",
+          "options": [
+            "They climb every day.",
+            "They sell photos.",
+            "They rest all day.",
+            "They visit local schools to talk about heritage."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the students' main goal?",
+          "options": [
+            "To share the mountain's history with young people.",
+            "To build a new dam.",
+            "To make money quickly.",
+            "To close the mountain."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 Three Ways to Help",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are three simple ways to protect cultural heritage.",
+        "First, never touch or damage old relics when you visit them.",
+        "Second, learn the stories behind them and share what you know.",
+        "Third, join a group of volunteers near you.",
+        "Even small actions can help save our treasures."
+      ],
+      "translation_cn": "这里有三个保护文化遗产的简单方法;第一,参观时绝不触碰或损坏古老文物;第二,了解它们背后的故事并分享;第三,加入身边的志愿者团体;即使微小的行动也能帮助拯救我们的珍宝。",
+      "questions": [
+        {
+          "stem": "What is the first piece of advice?",
+          "options": [
+            "Take the relics home.",
+            "Never touch or damage old relics.",
+            "Sell the relics.",
+            "Climb on the relics."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the second piece of advice?",
+          "options": [
+            "Forget the stories.",
+            "Keep silent about them.",
+            "Learn the stories and share them.",
+            "Hide what you know."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the third piece of advice?",
+          "options": [
+            "Stay home alone.",
+            "Buy more tickets.",
+            "Build a new wall.",
+            "Join a group of volunteers."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How many ways does the passage give?",
+          "options": [
+            "Three.",
+            "One.",
+            "Two.",
+            "Five."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the passage say about small actions?",
+          "options": [
+            "They are useless.",
+            "They can help save our treasures.",
+            "They cost too much.",
+            "They cause damage."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Raising Money for the Temple",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: Our committee needs to raise more money to repair the old temple.",
+        "Ben: How much have we collected so far?",
+        "Anna: Only half of what we need. The roof is in danger.",
+        "Ben: Maybe we could ask different departments to contribute.",
+        "Anna: Good idea. We could also invite the public to donate.",
+        "Ben: I can write a letter to ask local companies for help.",
+        "Anna: Perfect. If we work together, I'm sure we can save it.",
+        "Ben: Let's start today. There is no time to lose."
+      ],
+      "translation_cn": "Anna 说委员会要为修庙筹更多钱;Ben 问已筹多少;只筹到一半,屋顶有危险;Ben 建议请各部门捐助;Anna 说也可邀请公众捐款;Ben 愿写信向本地公司求助;两人决定齐心就能拯救它;立刻就动手,刻不容缓。",
+      "questions": [
+        {
+          "stem": "Why does the committee need money?",
+          "options": [
+            "To build a new road.",
+            "To buy a computer.",
+            "To repair the old temple.",
+            "To take a holiday."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How much have they collected so far?",
+          "options": [
+            "All of it.",
+            "Nothing at all.",
+            "Far too much.",
+            "Only half of what they need."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ben suggest first?",
+          "options": [
+            "Asking different departments to contribute.",
+            "Giving up.",
+            "Closing the temple.",
+            "Selling the temple."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will Ben do to help?",
+          "options": [
+            "Climb the roof.",
+            "Write a letter to local companies.",
+            "Take photos.",
+            "Do nothing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do they feel about saving the temple?",
+          "options": [
+            "They think it is hopeless.",
+            "They do not care.",
+            "They are sure they can if they work together.",
+            "They want to wait a year."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 Help from the United Nations",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Sometimes a problem is too big for one country alone.",
+        "When ancient temples were in danger, one nation asked the world for help.",
+        "A committee was set up to limit the damage.",
+        "Many countries gave money and sent their best experts.",
+        "Together, they proved that great challenges can lead to great solutions."
+      ],
+      "translation_cn": "有时一个问题对单个国家来说太大;当古庙陷入危险时,一个国家向世界求助;成立了一个委员会以减少损害;许多国家出钱并派出最优秀的专家;他们共同证明,巨大的挑战能带来伟大的解决方案。",
+      "questions": [
+        {
+          "stem": "When is a problem too big for one country?",
+          "options": [
+            "When it is tiny.",
+            "When nobody cares.",
+            "When it is already solved.",
+            "When it is very large and difficult."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did one nation do when the temples were in danger?",
+          "options": [
+            "It asked the world for help.",
+            "It did nothing.",
+            "It hid the temples.",
+            "It sold the temples."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was the committee set up to do?",
+          "options": [
+            "To build a dam.",
+            "To limit the damage.",
+            "To collect tickets.",
+            "To close the country."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did many countries help?",
+          "options": [
+            "They sent nothing.",
+            "They only watched.",
+            "They gave money and sent experts.",
+            "They caused more damage."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did the countries prove together?",
+          "options": [
+            "Nothing can be done.",
+            "Money is useless.",
+            "Temples should be left to fall.",
+            "Great challenges can lead to great solutions."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

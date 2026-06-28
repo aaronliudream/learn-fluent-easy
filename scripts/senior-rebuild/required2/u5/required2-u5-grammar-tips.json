@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "过去分词作状语 速查",
+    "intro": "过去分词(done)放在句首或句中作状语,可表时间、原因、条件、让步。判断口诀:看分词的逻辑主语——它一定是主句主语;主语承受动作(被动/完成)用过去分词 done,主语发出动作(主动/进行)用现在分词 doing。",
+    "table": {
+      "headers": ["状语意义", "例句 / 等价从句"],
+      "rows": [
+        ["时间/原因", "Moved by his words, she accepted his gift.(= Because she was moved…)"],
+        ["条件", "Given more time, we could finish.(= If we were given more time…)"],
+        ["让步", "Though invited, he didn't come.(= Though he was invited…)"],
+        ["被动 vs 主动", "Used for shows, the hall is full of energy.(被动)≠ Using…(主动)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "过去分词的逻辑主语 = 主句主语,且二者是被动/完成关系", "mark": "Painted in dark colours, the room needed lights.(room 被刷漆)" },
+      { "rule": "主语发出动作(主动)→ 必须改用现在分词 doing", "mark": "Recording at home, the members joined the videos.(members 主动录)" },
+      { "rule": "表条件常用 Given …;表让步常保留 though/although + done", "mark": "Given a chance √ / Though invited √" },
+      { "rule": "be born / be filled with / be interested in 等被动短语,作状语只留分词", "mark": "Born in 1970, he… / Filled with spirit, they…" }
+    ],
+    "why": [
+      "状语从句与主句主语相同、且从句是被动语态时,可省去从句主语和 be 动词,只留过去分词;过去分词本身就带'被动/完成'之意,所以无须再写 was/were。"
+    ],
+    "gaokaoPoints": [
+      "done 还是 doing:抓住'主句主语是动作的承受者还是发出者'——承受者用 done,发出者用 doing。语法填空、读后续写高频。",
+      "Given / Moved / Born / Faced with 等开头的状语结构是写作高分句式;条件用 Given,让步用 Though + done。"
+    ],
+    "examVsReal": [
+      { "exam": "Moved by the song, she cried.(考试/书面)", "real": "The song moved her so much that she cried.", "note": "考试爱考分词状语的紧凑句式;口语里更常用 so … that 或直接两句话。" },
+      { "exam": "Given more time, we could finish.(考试)", "real": "If we had more time, we could finish.", "note": "考试用 Given 体现凝练;日常表达常还原成 if 从句,更口语化。" }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(音乐主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Max felt nervous before his first concert, his teacher handed him a small drum and told him to play whatever he felt. To his surprise, the simple beat calmed his shaking hands and helped him forget the crowd. By the end of the night, he was smiling, proud that a few honest sounds had carried him through.",
+    "questions": [
+      {
+        "q": "How did Max feel before the concert?",
+        "options": [
+          "Calm and confident.",
+          "Nervous, with shaking hands.",
+          "Bored and sleepy.",
+          "Angry at his teacher."
+        ],
+        "answer": "B",
+        "explanation": "原文 'felt nervous… calmed his shaking hands' 的转述,说明他演出前紧张。"
+      },
+      {
+        "q": "What helped Max get through the concert?",
+        "options": [
+          "Leaving the stage early.",
+          "A long speech from the teacher.",
+          "Playing a simple beat on the drum.",
+          "Listening to the crowd cheer."
+        ],
+        "answer": "C",
+        "explanation": "原文 'the simple beat calmed his shaking hands… carried him through' 的转述(覆盖短文后半)。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Introduce a Place, Festival or Tradition of the UK or China(介绍英国或中国的一个地方/节日/传统)",
+  "title_en": "A Place I Want to Introduce",
+  "genre": "说明文 / 介绍信(describe a place, festival or tradition using senses and details)",
+  "source": "人教版2019必修二 Unit 4 Reading for Writing & Project:用感官和细节描写一个有趣、令人兴奋或惊喜的地方/节日/传统(英国或中国)。",
+  "prompt_cn": "假设你叫李华,一位外国笔友想了解你最喜欢的一个地方、节日或传统(英国或中国均可)。请用英语写一篇约100词的短文,内容包括:① 用一个醒目的画面、引语或问题开头,介绍这个地方/节日/传统是什么;② 用不同感官(看、听、闻、尝、触)描写细节;③ 说说它为什么重要或为什么打动你,并以有力的句子结尾。注意:可适当使用过去分词作定语/宾补(如 a well-organised festival / have the streets decorated)。",
+  "prompt_en": "Suppose you are Li Hua. A foreign pen-friend wants to learn about your favourite place, festival or tradition (in the UK or China). Write a passage of about 100 words including: 1) an opening with a striking image, quote or question that says what it is; 2) sensory details (what you can see, hear, smell, taste or feel); 3) why it matters or moves you, with an effective ending. Try to use past participles as the attribute or object complement where natural.",
+  "points": [
+    "醒目开头(A striking image / a question / introduce the place or tradition)",
+    "感官细节(see / hear / smell / taste / feel)",
+    "为什么重要或动人 + 有力结尾",
+    "适当用过去分词作定语/宾补(a well-organised festival / have the streets decorated)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Have you ever walked into a town that feels like a living history book? My favourite place is the ancient town of Pingyao in China. The first thing you see is the old city wall, surrounded by narrow stone streets dotted with red lanterns. You can hear the soft sound of festival music and smell the warm scent of local snacks. If you are lucky, you can taste a delicious bowl of stew in a small courtyard, with your eyes fixed on the beautiful old roofs. Pingyao matters to me because it keeps so many traditions alive. Walking through it really feels like walking into history.",
+  "model_translation": "你有没有走进过一座仿佛活生生的历史书般的城镇?我最喜欢的地方是中国的古城平遥。你最先看到的是古老的城墙,周围是点缀着红灯笼的狭窄石街。你能听到柔和的节日音乐声,闻到当地小吃温暖的香气。运气好的话,你能在一处小庭院里尝到一碗美味的炖菜,目光定格在那些美丽的老屋顶上。平遥对我很重要,因为它让许多传统得以延续。漫步其中,真的像走进了历史。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:醒目开头介绍对象 / 多感官细节 / 重要性与有力结尾" },
+      { "dimension": "结构", "max": 4, "criteria": "开头-主体-结尾清晰、按感官或方位有序组织、句句围绕中心" },
+      { "dimension": "语言", "max": 5, "criteria": "词汇句型准确多样、过去分词作定语/宾补运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头 Have you ever …? / My favourite place is …",
+      "看 The first thing you see is …",
+      "听/闻/尝 You can hear … and smell … you can taste …",
+      "结尾 … matters to me because … It really feels like …"
+    ],
+    "key_expressions": [
+      "My favourite place is the ancient town of Pingyao.",
+      "The old city wall is surrounded by narrow streets dotted with red lanterns.",
+      "You can smell the warm scent of local snacks.",
+      "Walking through it really feels like walking into history."
+    ],
+    "useful_words": ["tradition", "festival", "ancient", "surround", "scent", "snack", "courtyard", "landscape", "custom", "striking"]
+  },
+  "high_sentences": [
+    "Have you ever walked into a town that feels like a living history book?",
+    "The old city wall is surrounded by narrow streets dotted with red lanterns.",
+    "You can taste a delicious bowl of stew with your eyes fixed on the old roofs.",
+    "Pingyao matters to me because it keeps so many traditions alive."
+  ],
+  "error_pairs": [
+    { "wrong": "The streets dotting with lanterns looked lovely.", "correct": "The streets dotted with lanterns looked lovely.", "note": "streets 被点缀,被动用过去分词 dotted,不用现在分词。" },
+    { "wrong": "We had the streets decorating before the festival.", "correct": "We had the streets decorated before the festival.", "note": "have sth done:streets 被装饰,用过去分词 decorated。" },
+    { "wrong": "I want introduce a place to you.", "correct": "I want to introduce a place to you.", "note": "want to do sth,want 后接动词不定式。" }
+  ],
+  "paragraph_template": "【介绍地方/节日/传统结构】\n第1句 醒目开头:Have you ever …? / My favourite … is …\n第2-4句 感官细节:You can see … hear … smell … taste …\n第5句 为什么重要:… matters to me because …\n第6句 有力结尾:It really feels like …"
+}

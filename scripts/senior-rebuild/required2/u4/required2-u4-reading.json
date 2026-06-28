@@ -1,0 +1,338 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "History and Traditions",
+  "source": "人教版2019必修二 Unit 4 同主题阅读(UK名称由来/征服英国的四群人/历史伦敦/尼斯湖/爱尔兰传统/英国酒馆文化)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "What's in a Name?",
+      "topic_cn": "说明·英国的几个名字由来",
+      "body": "Many people are confused by the names United Kingdom, Great Britain, Britain and England. So what is the difference between them? Getting to know a little British history will help you solve this puzzle. In the 16th century, the nearby country of Wales was joined to the Kingdom of England. Later, in the 18th century, Scotland was added to create the Kingdom of Great Britain. In the 19th century, Ireland was joined too, forming the United Kingdom of Great Britain and Ireland. Finally, in the 20th century, the southern part of Ireland broke away. This gave us the full name we use today: the United Kingdom of Great Britain and Northern Ireland. Most people just use the shortened name, the UK. People from the UK are called British, which is why the country is also called Britain or Great Britain.",
+      "vocab_notes": [
+        {
+          "word": "kingdom",
+          "cn": "王国"
+        },
+        {
+          "word": "puzzle",
+          "cn": "谜;疑问"
+        },
+        {
+          "word": "nearby",
+          "cn": "邻近的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say can help solve the puzzle of the names?",
+          "options": [
+            "Learning a little about British history.",
+            "Visiting every city in England.",
+            "Asking only people from Wales.",
+            "Reading a modern travel map."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Getting to know a little British history will help you solve this puzzle' 的转述。"
+        },
+        {
+          "stem": "Which country was joined to England earliest?",
+          "options": [
+            "Scotland.",
+            "Wales.",
+            "Ireland.",
+            "Northern Ireland."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 16 世纪先并入 Wales,故威尔士最早。"
+        },
+        {
+          "stem": "Why is the UK also called Britain?",
+          "options": [
+            "Because its people are known as British.",
+            "Because it has only one country.",
+            "Because the map shows it that way.",
+            "Because Ireland is still part of it."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'People from the UK are called British, which is why…' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Four Groups Who Shaped Britain",
+      "topic_cn": "说明·先后占领英国的四群人",
+      "body": "Almost everywhere you go in the UK, you are surrounded by evidence of four groups of people who took over at different times. The first group, the Romans, arrived in the first century. Among their great achievements were the towns and roads they built. Next came the Anglo-Saxons in the fifth century. They introduced the beginnings of the English language and changed the way houses were built. The Vikings then came in the eighth century. They left behind lots of new vocabulary, as well as the names of many places across the UK. The last group were the Normans, who were French. After the well-known Battle of Hastings in the eleventh century, they conquered England. They had castles built all around the country and made changes to the legal system. Because the Normans spoke French, many French words slowly entered the English language. Each group left its own mark on the country.",
+      "vocab_notes": [
+        {
+          "word": "conquer",
+          "cn": "征服"
+        },
+        {
+          "word": "battle",
+          "cn": "战役"
+        },
+        {
+          "word": "achievement",
+          "cn": "成就"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What were two great achievements of the Romans?",
+          "options": [
+            "The castles and the new flag.",
+            "Building towns and roads across the land.",
+            "The English language and houses.",
+            "The legal system and French words."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the towns and roads they built'(罗马人的成就)。"
+        },
+        {
+          "stem": "What did the Vikings mainly leave behind?",
+          "options": [
+            "New roads and bridges.",
+            "A brand-new legal system.",
+            "New words and many place names.",
+            "Large stone castles."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 Vikings 'left behind lots of new vocabulary… the names of many places' 的转述。"
+        },
+        {
+          "stem": "What happened after the Battle of Hastings?",
+          "options": [
+            "The Romans returned to Britain.",
+            "The Anglo-Saxons left the country.",
+            "All castles were pulled down.",
+            "The Normans conquered England."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'After the… Battle of Hastings… they conquered England'(诺曼人)。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Historic London",
+      "topic_cn": "说明·历史悠久的伦敦",
+      "body": "London sits upon the River Thames in the southeast of England. It is the capital of the United Kingdom and, with almost nine million people, one of Europe's largest cities. London is also an ancient port city, with a history that dates all the way back to Roman times. Because of this, the UK's capital is a great place to start exploring the country's past. There are countless historic sites to see, and many museums filled with ancient relics from all over the UK. Visitors can stand on Tower Bridge, a symbol of the city, or look up at the famous bell known as Big Ben. They can walk through Westminster Abbey, where royal funerals and most coronations take place, and enjoy the great art collection kept inside the National Gallery. London is a fascinating mix of old and new, and if you keep your eyes open, you can see both its past and its present at once.",
+      "vocab_notes": [
+        {
+          "word": "port",
+          "cn": "港口"
+        },
+        {
+          "word": "gallery",
+          "cn": "美术馆"
+        },
+        {
+          "word": "fascinating",
+          "cn": "迷人的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is London a good place to start exploring the UK's past?",
+          "options": [
+            "Because this old harbour city has such a long past.",
+            "Because it is the smallest city.",
+            "Because it has no museums.",
+            "Because it is far from the sea."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'an ancient port city… dates all the way back to Roman times… a great place to start' 的转述。"
+        },
+        {
+          "stem": "What can visitors do at Westminster Abbey?",
+          "options": [
+            "Charge their car battery.",
+            "See where royal funerals and coronations take place.",
+            "Buy local beer and stew.",
+            "Watch a football match."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Westminster Abbey, where royal funerals and most coronations take place' 的转述。"
+        },
+        {
+          "stem": "What is kept inside the National Gallery?",
+          "options": [
+            "A famous old bell.",
+            "The king's family tree.",
+            "A great art collection.",
+            "An underground car park."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the great art collection kept inside the National Gallery' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Legend of Loch Ness",
+      "topic_cn": "记叙·苏格兰尼斯湖的传说",
+      "body": "Loch Ness is a long, deep lake in the north of Scotland, surrounded by beautiful natural landscape that makes it look amazing. For many years, visitors have been attracted by a famous story: some people believe a large, mysterious animal lives deep in its dark water. Whether the story is true or not, it brings travellers from all over the world. Carl and his friends were among them. They were attracted by the legend and decided to watch over the lake themselves. With their cameras and binoculars positioned on a hill above the water, they waited quietly for hours, their eyes fixed on the surface. They stayed with a generous local family, who offered them fresh bread with butter and homemade honey. The young people never saw the famous animal, but they agreed that the peaceful landscape and the warm welcome had already made the trip worth it.",
+      "vocab_notes": [
+        {
+          "word": "landscape",
+          "cn": "风景"
+        },
+        {
+          "word": "surround",
+          "cn": "环绕"
+        },
+        {
+          "word": "generous",
+          "cn": "慷慨的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What attracts many visitors to Loch Ness?",
+          "options": [
+            "A large modern shopping centre.",
+            "A free music festival each summer.",
+            "A very long railway station.",
+            "A famous story about a mysterious animal."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a famous story: some people believe a large, mysterious animal lives' 的转述。"
+        },
+        {
+          "stem": "How did Carl and his friends watch the lake?",
+          "options": [
+            "With cameras and binoculars set up on a hill.",
+            "From a boat in the middle of the water.",
+            "Through the windows of a museum.",
+            "By swimming close to the surface."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'cameras and binoculars positioned on a hill above the water' 的转述。"
+        },
+        {
+          "stem": "Why did they feel the trip was worth it in the end?",
+          "options": [
+            "They finally saw the mysterious animal.",
+            "The lovely scenery and warm welcome were enough.",
+            "They won a prize for their photos.",
+            "They bought many cheap souvenirs."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'the peaceful landscape and the warm welcome had already made the trip worth it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Beautiful Ireland and Its Traditions",
+      "topic_cn": "说明·爱尔兰乡村与传统",
+      "body": "Ireland's beautiful countryside has always had a great influence on its people and their traditions. The country has a long history of producing great writers and poets. Its lovely countryside offers something for each of the senses. The peaceful landscape of the green island and its many counties is a true feast for the eyes, with rolling green hills dotted with sheep and cattle. Down by the sea, the roar of the ocean waves and the cries of the seabirds make up the music of the coast. On a quiet morning in the mountains, you can feel the sun on your skin and breathe in the sweet scent of fresh flowers, while birds greet the new day with their song. With all this beauty, it is no surprise that Ireland has strong traditions of music, dancing and dining. To experience them, stop by a village pub and relax with a glass of wine or a local beer, or enjoy a delicious traditional beef stew.",
+      "vocab_notes": [
+        {
+          "word": "scent",
+          "cn": "香味"
+        },
+        {
+          "word": "feast",
+          "cn": "盛宴"
+        },
+        {
+          "word": "stew",
+          "cn": "炖菜"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What has greatly influenced the people and traditions of Ireland?",
+          "options": [
+            "Its large modern cities.",
+            "Its busy port trade.",
+            "Its beautiful countryside.",
+            "Its long, cold winters."
+          ],
+          "answer_index": 2,
+          "explanation": "首句 'Ireland's beautiful countryside has always had a great influence' 的转述。"
+        },
+        {
+          "stem": "What makes up 'the music of the coast'?",
+          "options": [
+            "Songs played in village pubs.",
+            "Traditional dancing on the hills.",
+            "The bells of an old church.",
+            "The sound of the waves and the seabirds."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the roar of the ocean waves and the cries of the seabirds make up the music of the coast' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing to experience Irish traditions?",
+          "options": [
+            "Stopping by a village pub for a drink and a meal.",
+            "Climbing the highest mountain.",
+            "Visiting a large art gallery.",
+            "Staying inside all morning."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'stop by a village pub and relax… enjoy a… beef stew' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "One Land, Many Traditions",
+      "topic_cn": "说明·联合王国共有与差异的传统",
+      "body": "The four countries that belong to the United Kingdom work together in some ways, yet each keeps its own traditions. They use the same flag, known as the Union Jack, and they share the same currency and military defence. In these ways they act as one nation. However, in other ways they remain quite different. England, Wales, Scotland and Northern Ireland each have their own education and legal systems. They also keep their own national days and national dishes, and they are proud of these differences. Most surprising of all to many visitors, each country even sends its own football team to big competitions such as the World Cup. So when you travel around the UK, do not expect everything to be the same everywhere. Part of the fun is discovering how four neighbours can share so much and still hold on to what makes each of them special.",
+      "vocab_notes": [
+        {
+          "word": "belong",
+          "cn": "属于"
+        },
+        {
+          "word": "currency",
+          "cn": "货币"
+        },
+        {
+          "word": "legal",
+          "cn": "法律的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do the four countries share?",
+          "options": [
+            "The same education system.",
+            "The same flag, currency and military defence.",
+            "The same national dishes.",
+            "A single football team."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'use the same flag… share the same currency and military defence' 的转述。"
+        },
+        {
+          "stem": "In what way do the four countries differ?",
+          "options": [
+            "They use different flags.",
+            "They use different money.",
+            "They have separate education and legal systems.",
+            "They share one national day."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'each have their own education and legal systems' 的转述。"
+        },
+        {
+          "stem": "What surprises many visitors the most?",
+          "options": [
+            "Each country has the same dishes.",
+            "They all use the euro.",
+            "They never compete with each other.",
+            "Each one fields a separate football team at big events."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'each country even sends its own football team to big competitions' 的转述。"
+        }
+      ]
+    }
+  ]
+}

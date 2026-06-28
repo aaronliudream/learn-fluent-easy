@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "现在完成时的被动语态·has/have been + 过去分词 速查",
+    "intro": "当主语是动作的承受者、且动作'到现在已完成或有当前影响'时,用现在完成时的被动:has/have been + 过去分词。口诀:has/have + been + done。",
+    "table": {
+      "headers": ["句型", "结构 / 例句"],
+      "rows": [
+        ["肯定句", "主语 + has/have been + 过去分词:The software has been downloaded."],
+        ["否定句", "主语 + hasn't/haven't been + 过去分词:The file hasn't been copied yet."],
+        ["一般疑问", "Has/Have + 主语 + been + 过去分词?:Has the password been confirmed?"],
+        ["带 by 短语", "主语 + has/have been + done + by + 执行者:Jan's life has been improved by the Internet."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "单数主语(及不可数名词)用 has been done,复数及 I/you/we/they 用 have been done", "mark": "The PC has been built. / Many people have been helped." },
+      { "rule": "主动变被动:主动宾语→被动主语,动词改 has/have been + 过去分词,执行者用 by 引出", "mark": "They've built a new PC. → A new PC has been built (by them)." },
+      { "rule": "时间副词 already/just 放 been 前,yet 放句末(多用于否定/疑问)", "mark": "has already been done / hasn't been done yet" },
+      { "rule": "疑问句把 has/have 提到主语前,过去分词不变", "mark": "Has anyone made a comment? → Has a comment been made?" }
+    ],
+    "why": [
+      "被动语态把'谁承受动作'放在主语位置;再叠加现在完成时的'have/has + 过去分词',就得到 has/have been + 过去分词——既表被动,又表'到现在已完成'。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/改错高频:看主语是不是动作承受者,是→用被动;再判断'已完成'语境(already/yet/just/since/recently)→现在完成时被动。",
+      "主谓一致:被动主语决定 has 还是 have,与执行者(by 后)无关。"
+    ],
+    "examVsReal": [
+      { "exam": "The software has been downloaded.（考试/书面规范）", "real": "The software's downloaded. / It's all set up.", "note": "口语常缩写 has→'s,或用 be done/be all set 等更简洁的说法" },
+      { "exam": "Has the password been confirmed?（考试)", "real": "Did you confirm the password? / Is the password set?", "note": "日常口语里常用主动一般过去时或 be done 提问,语义相近" }
+    ]
+  }
+}

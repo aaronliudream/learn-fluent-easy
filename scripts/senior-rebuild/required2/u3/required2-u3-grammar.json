@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "grammar_title": "现在完成时的被动语态(has/have been + 过去分词)",
+  "source": "人教版2019必修二 Unit 3 Discovering Useful Structures:现在完成时的被动语态。句子地道、互联网主题、答案唯一(干扰项为同一时态家族的主动式/错误助动词形式,只有 has/have been + 过去分词 成立)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "肯定句 has/have been + 过去分词",
+      "overview": "主语是动作承受者时,现在完成时被动用 has/have been + 过去分词;单数主语用 has been done,复数/I/you/we/they 用 have been done。"
+    },
+    {
+      "code": "u3.02",
+      "point": "否定与疑问(hasn't/haven't been done;Has/Have ... been done?)",
+      "overview": "否定在 has/have 后加 not(hasn't/haven't been done);一般疑问把 has/have 提到主语前:Has/Have + 主语 + been + 过去分词?"
+    },
+    {
+      "code": "u3.03",
+      "point": "与时间状语连用 / 主动↔被动转换 / by 短语",
+      "overview": "常与 already/yet/just/recently 等连用,时间词位置与现在完成时一致;主动句变被动句时,宾语作主语、动作执行者用 by 引出。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "The new software ____ to my phone, so it runs much faster now.",
+      "options": [
+        "has been downloaded",
+        "has downloaded",
+        "is downloading",
+        "downloaded"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 software 是被下载的对象 → 现在完成时被动 has been downloaded。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "A kind of new PC ____ with many more useful functions.",
+      "options": [
+        "has built",
+        "has been built",
+        "is building",
+        "built"
+      ],
+      "answer_index": 1,
+      "explanation": "PC 是被建造的对象 → has been built。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Many older people ____ by Jan's free IT club.",
+      "options": [
+        "have helped",
+        "are helping",
+        "have been helped",
+        "helped"
+      ],
+      "answer_index": 2,
+      "explanation": "复数主语 people 被帮助 → have been helped。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Jan's life ____ greatly by the online community she joined.",
+      "options": [
+        "has improved",
+        "is improving",
+        "improved",
+        "has been improved"
+      ],
+      "answer_index": 3,
+      "explanation": "life 被改善 → has been improved。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "A lot ____ about the wonders of the World Wide Web.",
+      "options": [
+        "has been written",
+        "has written",
+        "is writing",
+        "wrote"
+      ],
+      "answer_index": 0,
+      "explanation": "a lot 指内容,被写 → has been written。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The Wi-Fi password ____, so we can connect now.",
+      "options": [
+        "has confirmed",
+        "has been confirmed",
+        "is confirming",
+        "confirmed"
+      ],
+      "answer_index": 1,
+      "explanation": "password 被确认 → has been confirmed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "All the files ____ to the new database safely.",
+      "options": [
+        "have copied",
+        "are copying",
+        "have been copied",
+        "copied"
+      ],
+      "answer_index": 2,
+      "explanation": "复数 files 被复制 → have been copied。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The parking system for the WIC centre ____ fully Internet-based.",
+      "options": [
+        "has made",
+        "is making",
+        "made",
+        "has been made"
+      ],
+      "answer_index": 3,
+      "explanation": "system 被改造 → has been made。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "People's lives ____ by online communities and social networks.",
+      "options": [
+        "have been changed",
+        "have changed",
+        "are changing",
+        "changed"
+      ],
+      "answer_index": 0,
+      "explanation": "复数 lives 被改变 → have been changed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The latest news ____ to the company's website this morning.",
+      "options": [
+        "has added",
+        "has been added",
+        "is adding",
+        "added"
+      ],
+      "answer_index": 1,
+      "explanation": "news 被添加 → has been added。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Her identity card ____, so she has to report it to the police.",
+      "options": [
+        "has lost",
+        "is losing",
+        "has been lost",
+        "lost"
+      ],
+      "answer_index": 2,
+      "explanation": "card 被丢失 → has been lost。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Mean comments ____ in our chat room by someone we don't know.",
+      "options": [
+        "have posted",
+        "are posting",
+        "posted",
+        "have been posted"
+      ],
+      "answer_index": 3,
+      "explanation": "复数 comments 被发布 → have been posted。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The app ____ to keep users updated on their favourite topics.",
+      "options": [
+        "has been designed",
+        "has designed",
+        "is designing",
+        "designed"
+      ],
+      "answer_index": 0,
+      "explanation": "app 被设计 → has been designed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "A charity website ____ to raise money for children in poor areas.",
+      "options": [
+        "has set up",
+        "has been set up",
+        "is setting up",
+        "set up"
+      ],
+      "answer_index": 1,
+      "explanation": "website 被建立 → has been set up。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The digital divide ____ in many small towns thanks to the Internet.",
+      "options": [
+        "has bridged",
+        "is bridging",
+        "has been bridged",
+        "bridged"
+      ],
+      "answer_index": 2,
+      "explanation": "divide 被弥合 → has been bridged。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Several embarrassing photos of her ____ online without permission.",
+      "options": [
+        "have shared",
+        "are sharing",
+        "shared",
+        "have been shared"
+      ],
+      "answer_index": 3,
+      "explanation": "复数 photos 被分享 → have been shared。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The button ____, and the file is now being copied.",
+      "options": [
+        "has been pressed",
+        "has pressed",
+        "is pressing",
+        "pressed"
+      ],
+      "answer_index": 0,
+      "explanation": "button 被按 → has been pressed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Great convenience ____ to Wuzhen by the World Internet Conference.",
+      "options": [
+        "has brought",
+        "has been brought",
+        "is bringing",
+        "brought"
+      ],
+      "answer_index": 1,
+      "explanation": "convenience 被带来 → has been brought。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Many useful guidelines ____ for staying safe online.",
+      "options": [
+        "have provided",
+        "are providing",
+        "have been provided",
+        "provided"
+      ],
+      "answer_index": 2,
+      "explanation": "复数 guidelines 被提供 → have been provided。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The online database ____ with the newest information today.",
+      "options": [
+        "has updated",
+        "is updating",
+        "updated",
+        "has been updated"
+      ],
+      "answer_index": 3,
+      "explanation": "database 被更新 → has been updated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the Wi-Fi password been confirmed yet?",
+      "options": [
+        "Has",
+        "Have",
+        "Is",
+        "Did"
+      ],
+      "answer_index": 0,
+      "explanation": "单数主语 password,疑问句把 has 提前 → Has ... been confirmed?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The software ____ been downloaded, so my phone is still slow.",
+      "options": [
+        "isn't",
+        "hasn't",
+        "doesn't",
+        "didn't"
+      ],
+      "answer_index": 1,
+      "explanation": "现在完成时被动否定 → hasn't been downloaded。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ all the files been copied to the new computer?",
+      "options": [
+        "Has",
+        "Are",
+        "Have",
+        "Did"
+      ],
+      "answer_index": 2,
+      "explanation": "复数主语 files,疑问 → Have ... been copied?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "A comment about the database ____ been made by anyone so far.",
+      "options": [
+        "isn't",
+        "doesn't",
+        "won't",
+        "hasn't"
+      ],
+      "answer_index": 3,
+      "explanation": "单数主语,否定 → hasn't been made。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the button been pressed to copy the file?",
+      "options": [
+        "Has",
+        "Have",
+        "Was",
+        "Does"
+      ],
+      "answer_index": 0,
+      "explanation": "单数 button,疑问 → Has ... been pressed?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Your account ____ been hacked, so don't worry about your password.",
+      "options": [
+        "isn't",
+        "hasn't",
+        "doesn't",
+        "didn't"
+      ],
+      "answer_index": 1,
+      "explanation": "单数 account,否定 → hasn't been hacked。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the new functions been added to the latest version of the app?",
+      "options": [
+        "Has",
+        "Are",
+        "Have",
+        "Did"
+      ],
+      "answer_index": 2,
+      "explanation": "复数 functions,疑问 → Have ... been added?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The charity website ____ been finished, so we can't share the link yet.",
+      "options": [
+        "isn't",
+        "doesn't",
+        "wasn't",
+        "hasn't"
+      ],
+      "answer_index": 3,
+      "explanation": "单数 website,否定 → hasn't been finished。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ your identity been stolen by anyone online before?",
+      "options": [
+        "Has",
+        "Have",
+        "Did",
+        "Is"
+      ],
+      "answer_index": 0,
+      "explanation": "单数 identity,疑问 → Has ... been stolen?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "These mean comments ____ been deleted, so they are still online.",
+      "options": [
+        "aren't",
+        "haven't",
+        "don't",
+        "weren't"
+      ],
+      "answer_index": 1,
+      "explanation": "复数 comments,否定 → haven't been deleted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the software been updated since you last used it?",
+      "options": [
+        "Have",
+        "Was",
+        "Has",
+        "Does"
+      ],
+      "answer_index": 2,
+      "explanation": "单数 software,疑问 → Has ... been updated?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The lost photos ____ been found, so she is still upset about them.",
+      "options": [
+        "aren't",
+        "don't",
+        "didn't",
+        "haven't"
+      ],
+      "answer_index": 3,
+      "explanation": "复数 photos,否定 → haven't been found。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the online survey been completed by all the students?",
+      "options": [
+        "Has",
+        "Have",
+        "Did",
+        "Are"
+      ],
+      "answer_index": 0,
+      "explanation": "单数 survey,疑问 → Has ... been completed?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "My blog post ____ been read by many people, which makes me a little sad.",
+      "options": [
+        "isn't",
+        "hasn't",
+        "doesn't",
+        "won't"
+      ],
+      "answer_index": 1,
+      "explanation": "单数 post,否定 → hasn't been read。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ any guidelines been written for using the school's network?",
+      "options": [
+        "Has",
+        "Did",
+        "Have",
+        "Were"
+      ],
+      "answer_index": 2,
+      "explanation": "复数 guidelines,疑问 → Have ... been written?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The new app ____ been released yet, so we can't download it now.",
+      "options": [
+        "isn't",
+        "doesn't",
+        "wasn't",
+        "hasn't"
+      ],
+      "answer_index": 3,
+      "explanation": "单数 app,否定 → hasn't been released。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the database been searched for the missing record?",
+      "options": [
+        "Has",
+        "Have",
+        "Did",
+        "Is"
+      ],
+      "answer_index": 0,
+      "explanation": "单数 database,疑问 → Has ... been searched?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "His personal information ____ been protected, so he feels worried.",
+      "options": [
+        "isn't",
+        "hasn't",
+        "doesn't",
+        "didn't"
+      ],
+      "answer_index": 1,
+      "explanation": "单数 information,否定 → hasn't been protected。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the movies been streamed at high speed on this network?",
+      "options": [
+        "Has",
+        "Did",
+        "Have",
+        "Are"
+      ],
+      "answer_index": 2,
+      "explanation": "复数 movies,疑问 → Have ... been streamed?"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The Wi-Fi ____ been set up in the old town, so people there can't go online.",
+      "options": [
+        "isn't",
+        "doesn't",
+        "wasn't",
+        "hasn't"
+      ],
+      "answer_index": 3,
+      "explanation": "单数 Wi-Fi,否定 → hasn't been set up。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The software has ____ been downloaded, so you can use it right away.",
+      "options": [
+        "just",
+        "ever",
+        "never",
+        "soon"
+      ],
+      "answer_index": 0,
+      "explanation": "现在完成时被动 + just,表'刚刚被下载',符合下文'马上能用'。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The Wi-Fi password has ____ been confirmed, so we no longer have to wait.",
+      "options": [
+        "yet",
+        "already",
+        "tomorrow",
+        "long ago"
+      ],
+      "answer_index": 1,
+      "explanation": "肯定句中表'已经'用 already;yet 用于否定/疑问,且时间副词须与现在完成时搭配。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The file hasn't been copied ____, so please press the button again.",
+      "options": [
+        "already",
+        "just now",
+        "yet",
+        "ago"
+      ],
+      "answer_index": 2,
+      "explanation": "否定句句末'还没'用 yet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Jan's life has been greatly improved ____ the Internet.",
+      "options": [
+        "of",
+        "with",
+        "from",
+        "by"
+      ],
+      "answer_index": 3,
+      "explanation": "被动句中动作执行者用 by 引出 → by the Internet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The company has updated the app.\" In the passive voice: \"The app ____ by the company.\"",
+      "options": [
+        "has been updated",
+        "has updated",
+        "updated",
+        "is updating"
+      ],
+      "answer_index": 0,
+      "explanation": "主动变被动:宾语 the app 作主语 → has been updated by the company。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Much has ____ been written about the dangers of sharing too much online.",
+      "options": [
+        "yesterday",
+        "recently",
+        "long",
+        "once upon"
+      ],
+      "answer_index": 1,
+      "explanation": "recently 可与现在完成时连用,表'近来已被写了很多'。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Someone has lost an identity card.\" In the passive voice: \"An identity card ____.\"",
+      "options": [
+        "has lost",
+        "lost",
+        "has been lost",
+        "is losing"
+      ],
+      "answer_index": 2,
+      "explanation": "主动变被动:宾语 an identity card 作主语 → has been lost。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The new functions have ____ been added, so there is nothing left to install.",
+      "options": [
+        "yet",
+        "ago",
+        "never",
+        "all"
+      ],
+      "answer_index": 3,
+      "explanation": "all 在肯定句中强调'全部已被加上';yet/never 不符合下文'没有剩下的'。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Have the photos been deleted ____? I really hope they are gone now.",
+      "options": [
+        "yet",
+        "already done",
+        "ago",
+        "long since"
+      ],
+      "answer_index": 0,
+      "explanation": "疑问句句末'到现在'用 yet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"People have helped many older learners.\" In the passive voice: \"Many older learners ____.\"",
+      "options": [
+        "have helped",
+        "have been helped",
+        "helped",
+        "are helping"
+      ],
+      "answer_index": 1,
+      "explanation": "主动变被动:宾语 learners 作主语(复数)→ have been helped。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The website has ____ been visited by thousands of people since it opened.",
+      "options": [
+        "yet",
+        "tomorrow",
+        "already",
+        "next week"
+      ],
+      "answer_index": 2,
+      "explanation": "肯定句表'已经'用 already,且与 since 引导的现在完成时一致。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "These embarrassing photos have ____ been removed, so she still feels upset.",
+      "options": [
+        "ever",
+        "just",
+        "already",
+        "not"
+      ],
+      "answer_index": 3,
+      "explanation": "have not been removed 表'还没被删除',与下文'仍然难过'一致。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"They have built a faster network.\" In the passive voice: \"A faster network ____.\"",
+      "options": [
+        "has been built",
+        "has built",
+        "built",
+        "is building"
+      ],
+      "answer_index": 0,
+      "explanation": "主动变被动:宾语 network 作主语 → has been built。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The town's transport has ____ been changed by the Internet in recent years.",
+      "options": [
+        "long ago",
+        "greatly",
+        "yesterday",
+        "tomorrow"
+      ],
+      "answer_index": 1,
+      "explanation": "greatly 作程度状语,与现在完成时被动连用,表'被极大改变'。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Has the database been searched ____? We need the result before noon.",
+      "options": [
+        "ago",
+        "long since",
+        "yet",
+        "tomorrow"
+      ],
+      "answer_index": 2,
+      "explanation": "疑问句句末用 yet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The blogger has answered the question many times.\" Passive: \"The question ____ many times.\"",
+      "options": [
+        "has answered",
+        "answered",
+        "is answering",
+        "has been answered"
+      ],
+      "answer_index": 3,
+      "explanation": "主动变被动:宾语 question 作主语 → has been answered。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The app has ____ been updated, so all the bugs are now fixed.",
+      "options": [
+        "recently",
+        "ago",
+        "yesterday",
+        "long"
+      ],
+      "answer_index": 0,
+      "explanation": "recently 与现在完成时连用,表'近来已被更新'。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Public bikes have been rented in the town ____ online apps, not paperwork.",
+      "options": [
+        "by use",
+        "by using",
+        "with using",
+        "of using"
+      ],
+      "answer_index": 1,
+      "explanation": "'通过……方式'用 by + doing → by using online apps。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Cyberbullies have attacked many users.\" Passive: \"Many users ____ by cyberbullies.\"",
+      "options": [
+        "have attacked",
+        "attacked",
+        "have been attacked",
+        "are attacking"
+      ],
+      "answer_index": 2,
+      "explanation": "主动变被动:宾语 users 作主语(复数)→ have been attacked。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The comment has ____ been posted, so everyone can read it now.",
+      "options": [
+        "yet",
+        "tomorrow",
+        "long since",
+        "already"
+      ],
+      "answer_index": 3,
+      "explanation": "肯定句表'已经'用 already,与下文'现在大家都能读到'一致。"
+    }
+  ]
+}

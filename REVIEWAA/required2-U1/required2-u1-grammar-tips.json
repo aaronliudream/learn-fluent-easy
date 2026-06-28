@@ -1,0 +1,38 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "限制性定语从句·关系词速查(who/whom/which/that·whose·where/when/why)",
+    "intro": "先看先行词指人还是指物,再看从句缺什么成分。缺主语/宾语→用关系代词(who/whom/which/that);不缺主宾、只缺状语→用关系副词(where/when/why)或「介词+which/whom」;表所属→whose。",
+    "table": {
+      "headers": ["关系词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人、从句缺主语:the guide who knows the city"],
+        ["whom", "指人、从句缺宾语或介词后:the man whom we met / to whom I spoke"],
+        ["which / that", "指物、从句缺主宾:the temple which/that was moved"],
+        ["whose", "表所属(谁的):the writer whose book won a prize"],
+        ["where / when / why", "从句缺地点/时间/原因状语:the place where… / the day when… / the reason why…"],
+        ["介词+which/whom", "从句不缺主宾、更正式:in which / by which / to whom"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺主语/宾语 → 关系代词(who/whom/which/that)", "mark": "the relics that we saved(缺宾语→that)" },
+      { "rule": "从句不缺主宾、只缺状语 → 关系副词或介词+which", "mark": "the place where = in which" },
+      { "rule": "介词后只能用 which 或 whom,不可用 that", "mark": "through which √ / through that ×" },
+      { "rule": "whose = 谁的,引导表所属的从句", "mark": "the engineer whose team moved the temples" }
+    ],
+    "why": [
+      "关系副词(where/when/why)= 介词+which,在从句里作状语,所以主语、宾语都齐;一旦从句缺了主语或宾语,就必须换成关系代词 who/whom/which/that。"
+    ],
+    "gaokaoPoints": [
+      "判断口诀:先行词指人/指物 + 从句缺主宾还是缺状语;语法填空高频。",
+      "易错:先行词是地点/时间但从句缺宾语时,用 that/which 而非 where/when(the place that I visited)。",
+      "介词提前时,指物用 which、指人用 whom(in which / to whom),不用 that。"
+    ],
+    "examVsReal": [
+      { "exam": "the door through which you can leave（考试/书面）", "real": "the door you can leave through", "note": "口语常省略关系词、把介词放句末" },
+      { "exam": "the man to whom I spoke（正式）", "real": "the man I spoke to / the man who I spoke to", "note": "口语里常省略 whom 或用 who,介词移到句末" }
+    ]
+  }
+}

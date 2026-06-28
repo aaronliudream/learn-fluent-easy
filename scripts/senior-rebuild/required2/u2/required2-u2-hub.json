@@ -1,0 +1,48 @@
+{
+  "listeningQuestions": [
+    { "audio": "Small birds are being caught with nets in the wetland.", "opts": ["小鸟正在被用网捕捉。", "小鸟在湿地里筑巢。", "小鸟正在飞过湿地。", "小鸟在网里睡觉。"], "answer": 0 },
+    { "audio": "The Tibetan antelope was removed from the endangered species list.", "opts": ["藏羚羊被列入濒危名单。", "藏羚羊已从濒危物种名单中移除。", "藏羚羊正在被捕猎。", "藏羚羊搬到了别的国家。"], "answer": 1 },
+    { "audio": "New reserves are being built for the river dolphins.", "opts": ["河豚正在被卖掉。", "河豚已经灭绝了。", "正在为河豚修建新的保护区。", "河豚游回了大海。"], "answer": 2 },
+    { "audio": "Please do not buy goods made from wild animals.", "opts": ["请多买动物制品。", "请把动物送给朋友。", "请去市场买毛皮。", "请不要购买用野生动物制成的商品。"], "answer": 3 },
+    { "audio": "Volunteers are watching over the antelopes day and night.", "opts": ["志愿者在日夜看护着羚羊。", "志愿者在售卖羚羊。", "志愿者已经离开了保护区。", "志愿者在捕猎羚羊。"], "answer": 0 },
+    { "audio": "Much is being done to protect the endangered wildlife.", "opts": ["没有人保护野生动物。", "人们正在采取很多措施保护濒危野生动物。", "野生动物正在被卖掉。", "保护工作已经停止了。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The forest is the natural ____ of many wild animals; losing it puts them in danger.", "opts": ["habitat", "market", "factory", "station"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "If a species becomes ____, it no longer exists anywhere on Earth.", "opts": ["extinct", "famous", "modern", "polite"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The government took strong ____ to save the antelope, such as building bridges and gates.", "opts": ["measures", "prices", "noises", "songs"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "We must make people ____ of the problem before it is too late.", "opts": ["aware", "afraid", "proud", "bored"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Right now, small birds ____ with nets in the wetland.", "opts": ["are being caught", "are catching", "have caught", "catch"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "At this moment, the wetland ____ by careless visitors.", "opts": ["is being destroyed", "is destroying", "destroys", "has destroyed"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ the new reserve being built for the dolphins right now?", "opts": ["Is", "Does", "Has", "Are"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Luckily, these old trees ____ cut down at present, so the koalas are safe.", "opts": ["aren't being", "don't", "haven't", "isn't being"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出与你听到的句子意思相符的一项。", "opts": ["非洲象因象牙正在被捕猎。", "非洲象在公园里散步。", "非洲象正在被运往动物园。", "非洲象喜欢吃树叶。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The African elephants are being hunted for their tusks." },
+    { "q": "听录音,选出与你听到的句子意思相符的一项。", "opts": ["人们正在采取措施帮助大象。", "没有人帮助大象。", "大象正在被卖掉。", "大象已经灭绝了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Special parks are being built and people are being told not to buy elephant products." }
+  ],
+  "reading": {
+    "passage": "Wildlife is dying out at an alarming rate, mainly because of hunting, habitat loss and pollution. The good news is that much is being done: reserves are being built, and more and more people are refusing to buy animal products.",
+    "passageCn": "野生动物正以惊人的速度消失,主要原因是捕猎、栖息地丧失和污染。好消息是,人们正在采取许多措施:保护区正在修建,越来越多的人拒绝购买动物制品。",
+    "questions": [
+      { "q": "What is mainly causing wildlife to die out?", "opts": ["Hunting, habitat loss and pollution.", "Cold weather only.", "Too many reserves.", "A lack of zoos."], "answer": 0 },
+      { "q": "What is the 'good news' in the passage?", "opts": ["Reserves are being built and people refuse to buy animal products.", "All animals have already disappeared.", "Hunting is becoming more popular.", "People are buying more fur."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short poster (about 60 words) calling on your schoolmates to protect an endangered animal: name the animal and why it is in danger, say what is being done, and call for action.",
+    "promptCn": "写一段约60词的海报内容,呼吁同学们保护一种濒危动物:点明动物及濒危原因,说明正在采取的措施,并号召大家行动。",
+    "sampleWords": ["wildlife", "endangered", "habitat", "hunt", "protection", "measure", "reserve", "aware", "protect", "extinct"]
+  },
+  "dialogues": [
+    {
+      "title": "Concern for the Elephants",
+      "lines": [
+        { "role": "A", "text": "I'm really concerned about the African elephants.", "cn": "我很担心非洲象。" },
+        { "role": "B", "text": "Why? What's happening to them?", "cn": "为什么?它们怎么了?" },
+        { "role": "A", "text": "They're being hunted for their tusks, and their habitat is getting smaller.", "cn": "它们因象牙被捕猎,栖息地也越来越小。" },
+        { "role": "B", "text": "That's terrible. What is being done to help them?", "cn": "太糟了。人们正在采取什么措施帮助它们?" },
+        { "role": "A", "text": "Special parks are being built, and people are being told not to buy elephant products.", "cn": "专门的园区正在修建,人们也被劝告不要购买大象制品。" },
+        { "role": "B", "text": "Good. When the buying stops, the killing can stop too.", "cn": "很好。当购买停止时,杀戮也会停止。" }
+      ]
+    }
+  ]
+}

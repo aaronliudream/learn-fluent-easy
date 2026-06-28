@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grammar_title": "限制性定语从句:关系代词 who/whom/which/that、whose、介词+which/whom、关系副词 where/when/why",
+  "source": "人教版2019必修二 Unit 1 Discovering Useful Structures:限制性定语从句。句子地道、答案唯一(看从句缺什么成分:缺主/宾→who/which/that;不缺主宾、缺状语→where/when/why 或 介词+which)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "who / whom(先行词指人)",
+      "overview": "先行词指人。从句缺主语用 who;从句缺宾语用 whom(尤其介词后、或正式书面)。"
+    },
+    {
+      "code": "u1.02",
+      "point": "which / that(先行词指物)",
+      "overview": "先行词指物、从句缺主语或宾语,用 which 或 that;that 不能用于介词后,不能引导非限制性从句。"
+    },
+    {
+      "code": "u1.03",
+      "point": "介词+which/whom · whose · 关系副词 where/when/why",
+      "overview": "从句不缺主宾、只缺状语:地点用 where、时间用 when、原因用 why,或用「介词+which/whom」;表所属用 whose。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "The archaeologist ____ found the ancient relics became famous all over the world.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 archaeologist 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The engineers ____ moved the first temple came from Germany.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 engineers 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She is the scientist to ____ the government turned for advice about the dam.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 to 后指人 → whom(to whom)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The volunteers ____ we met at the temple were taking photos of the relics.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 volunteers 指人、从句缺宾语(met ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The reporter ____ wrote the news report visited Mount Tai last summer.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reporter 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He is a guide ____ knows everything about the Forbidden City.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 guide 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The old people ____ the students interviewed shared many local traditions.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 old people 指人、从句缺宾语(interviewed ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The expert from ____ we learned the building process was very patient.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指人 → whom(from whom)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The teacher ____ takes photos of old houses wants to preserve the city's heritage.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 teacher 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The citizens ____ lived near the dam were worried about the temples.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 citizens 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The workers ____ the project hired came from many different countries.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 workers 指人、从句缺宾语(hired ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She is the kind of researcher with ____ everyone enjoys working.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指人 → whom(with whom)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The man ____ designed the new museum studied ancient architecture for years.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 man 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The students ____ joined the youth camp created an app about Mount Tai.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 students 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The friends ____ I invited to the heritage site enjoyed the visit very much.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 friends 指人、从句缺宾语(invited ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "She is the official to ____ the proposal was finally sent.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 to 后指人 → whom(to whom)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The director ____ leads the team has saved many cultural relics.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 director 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The local teenagers ____ visited the camp learned a lot about their history.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 teenagers 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The tour guide ____ the tourists thanked smiled and waved goodbye.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 tour guide 指人、从句缺宾语(thanked ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He is the only person on ____ the whole rescue plan depended.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 on 后指人 → whom(on whom)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The temples ____ were moved to higher ground are now safe from the water.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 temples 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "This is the app ____ introduces Mount Tai to young people.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 app 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The cultural relics ____ the workers rescued are kept in a safe place.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 relics 指物、从句缺宾语(rescued ___)→ which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The dam ____ the government planned would have flooded the valley.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 dam 指物、从句缺宾语(planned ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The document ____ was signed in 1960 started the whole project.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 document 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The photos ____ they took show the caves in great detail.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 photos 指物、从句缺宾语(took ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "It was a challenge ____ no single country could solve alone.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 challenge 指物、从句缺宾语(solve ___)→ which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The programme ____ prevents heritage sites from disappearing is run by UNESCO.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 programme 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The pyramid ____ stands near the river attracts visitors from everywhere.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 pyramid 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The fund ____ they raised paid for moving the ancient temples.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 fund 指物、从句缺宾语(raised ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The caves ____ lie along the old Silk Road are part of world history.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 caves 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The plan ____ the experts suggested saved the buildings from the flood.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 plan 指物、从句缺宾语(suggested ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The mirror ____ hangs in the palace is said to tell right from wrong.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 mirror 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The traditions ____ a country keeps are an important part of its heritage.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 traditions 指物、从句缺宾语(keeps ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The wall ____ runs across the mountains is one of the great wonders of the world.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 wall 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The images ____ the researchers collected are now shared on the Internet.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 images 指物、从句缺宾语(collected ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The proposal ____ led to so many protests was finally changed.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 proposal 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The carving ____ you can see on the roof is called chiwen.",
+      "options": [
+        "who",
+        "that",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 carving 指物、从句缺宾语(see ___)→ that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The committee ____ was established raised funds for the rescue work.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 committee 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The old houses ____ the photographer recorded are slowly disappearing.",
+      "options": [
+        "who",
+        "where",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 houses 指物、从句缺宾语(recorded ___)→ that。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The temples were moved to a place ____ they were safe from the water.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 place 表地点、从句不缺主宾(只缺地点状语)→ where。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I will never forget the day ____ the rescue project finally ended.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 day 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Nobody could fully explain the reason ____ so many countries offered help.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She is the writer ____ book about cultural heritage won a big prize.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(她的书)→ whose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "An exit is the door through ____ you can leave a building.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 through 后指物 → which(through which)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Dunhuang is the city ____ the famous Mogao Caves are found.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 city 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "There may come a time ____ these old traditions disappear forever.",
+      "options": [
+        "where",
+        "why",
+        "when",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 time 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We met the archaeologist ____ knowledge of the pyramid amazed us all.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(他的知识)→ whose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The way in ____ the temples were saved became a model for the world.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 in 后指物 → which(in which)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This is the museum ____ ancient bones and relics are carefully kept.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 museum 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "1980 was the year ____ the Aswan Dam project was finally completed.",
+      "options": [
+        "where",
+        "why",
+        "when",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 year 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He is the engineer ____ team moved twenty-two temples in twenty years.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(他的团队)→ whose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Calligraphy is an art form by ____ the past and present are connected.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 by 后指物 → which(by which)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mount Tai is the mountain ____ thousands of carvings have been studied.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 mountain 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I still remember the moment ____ the first temple was lifted into place.",
+      "options": [
+        "where",
+        "why",
+        "when",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 moment 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She is the volunteer ____ photos of old buildings are kept in the museum.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "表所属(她的照片)→ whose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "These are the tools with ____ the workers took the temple apart.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 with 后指物 → which(with which)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Egypt is the country ____ the world's most famous pyramids stand.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 country 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "That was the year ____ fifty countries donated money to the project.",
+      "options": [
+        "where",
+        "why",
+        "when",
+        "which"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 year 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Please tell me the reason ____ the old palace was rebuilt so carefully.",
+      "options": [
+        "where",
+        "when",
+        "whose",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    }
+  ]
+}

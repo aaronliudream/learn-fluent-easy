@@ -1,0 +1,478 @@
+[
+ {
+  "word": "absorbed",
+  "ipa": "bsO:bd",
+  "cn": "被……吸引住；专心致志",
+  "propn": false,
+  "raw": "absorbed /bsO:bd/ in sth/sb 被……吸引住；专心致志"
+ },
+ {
+  "word": "ache",
+  "ipa": "ek",
+  "cn": "疼痛",
+  "propn": false,
+  "raw": "ache /ek/ vi. & n. 疼痛"
+ },
+ {
+  "word": "addition",
+  "ipa": "dISn",
+  "cn": "添加；加法；增加物",
+  "propn": false,
+  "raw": "addition /dISn/ n. 添加；加法；增加物"
+ },
+ {
+  "word": "in addition",
+  "ipa": "",
+  "cn": "除……以外（还）",
+  "propn": false,
+  "raw": "in addition (to sb/sth) 除……以外（还）"
+ },
+ {
+  "word": "aim",
+  "ipa": "em",
+  "cn": "目的；目标 vi. & vt. 力求达到；力争做到；瞄准 vt. 目的是；旨在",
+  "propn": false,
+  "raw": "aim /em/ n. 目的；目标 vi. & vt. 力求达到；力争做到；瞄准 vt. 目的是；旨在"
+ },
+ {
+  "word": "album",
+  "ipa": "lbm",
+  "cn": "相册；集邮簿；音乐专辑",
+  "propn": false,
+  "raw": "album /lbm/ n. 相册；集邮簿；音乐专辑"
+ },
+ {
+  "word": "altogether",
+  "ipa": "lte(r)",
+  "cn": "用以强调）全部；总共",
+  "propn": false,
+  "raw": "altogether /lte(r)/ adv.（用以强调）全部；总共"
+ },
+ {
+  "word": "assume",
+  "ipa": "sju:m",
+  "cn": "以为；假设",
+  "propn": false,
+  "raw": "assume /sju:m/ vt. 以为；假设"
+ },
+ {
+  "word": "award",
+  "ipa": "wd",
+  "cn": "授予 n. 奖品",
+  "propn": false,
+  "raw": "award /wd/ vt. 授予 n. 奖品"
+ },
+ {
+  "word": "bagpipes",
+  "ipa": "bgpaIps",
+  "cn": "风笛",
+  "propn": false,
+  "raw": "bagpipes /bgpaIps/ n. [pl.] 风笛"
+ },
+ {
+  "word": "band",
+  "ipa": "bnd",
+  "cn": "乐队；带子",
+  "propn": false,
+  "raw": "band /bnd/ n. 乐队；带子"
+ },
+ {
+  "word": "being",
+  "ipa": "bi",
+  "cn": "身心；存在；生物",
+  "propn": false,
+  "raw": "being /bi/ n. 身心；存在；生物"
+ },
+ {
+  "word": "capable",
+  "ipa": "kepbl",
+  "cn": "有能力的；有才能的",
+  "propn": false,
+  "raw": "capable /kepbl/ adj. 有能力的；有才能的"
+ },
+ {
+  "word": "classical",
+  "ipa": "klskl",
+  "cn": "古典的；经典的",
+  "propn": false,
+  "raw": "classical /klskl/ adj. 古典的；经典的"
+ },
+ {
+  "word": "composer",
+  "ipa": "kmpUz(r)",
+  "cn": "作曲者；作曲家",
+  "propn": false,
+  "raw": "composer /kmpUz(r)/ n. 作曲者；作曲家"
+ },
+ {
+  "word": "composition",
+  "ipa": "kmpzn",
+  "cn": "成分；（音乐、艺术、诗歌的）作品",
+  "propn": false,
+  "raw": "composition/kmpzn/ n. 成分；（音乐、艺术、诗歌的）作品"
+ },
+ {
+  "word": "conductor",
+  "ipa": "kndkt(r)",
+  "cn": "乐队、合唱团等的）指挥；（公共汽车的）售票员",
+  "propn": false,
+  "raw": "conductor /kndkt(r)/ n. （乐队、合唱团等的）指挥；（公共汽车的）售票员"
+ },
+ {
+  "word": "cure",
+  "ipa": "kj(r)",
+  "cn": "治愈；治好（疾病）；解决（问题） n. 药物；治疗； （解决问题、改善糟糕情况的）措施",
+  "propn": false,
+  "raw": "cure /kj(r)/ vt. 治愈；治好（疾病）；解决（问题） n. 药物；治疗； （解决问题、改善糟糕情况的）措施"
+ },
+ {
+  "word": "disease",
+  "ipa": "dziz",
+  "cn": "疾）病",
+  "propn": false,
+  "raw": "disease /dziz/ n. （疾）病"
+ },
+ {
+  "word": "enable",
+  "ipa": "nebl",
+  "cn": "使能够；使可能",
+  "propn": false,
+  "raw": "enable /nebl/ vt. 使能够；使可能"
+ },
+ {
+  "word": "energyn. 能源；能量；精力",
+  "ipa": "",
+  "cn": "能源；能量；精力",
+  "propn": false,
+  "raw": "energyn. 能源；能量；精力"
+ },
+ {
+  "word": "equipment",
+  "ipa": "kwIpmnt",
+  "cn": "设备；装备",
+  "propn": false,
+  "raw": "equipment /kwIpmnt/ n. 设备；装备"
+ },
+ {
+  "word": "fall in love with",
+  "ipa": "",
+  "cn": "爱上",
+  "propn": false,
+  "raw": "fall in love with 爱上"
+ },
+ {
+  "word": "from",
+  "ipa": "",
+  "cn": "从（那）时起",
+  "propn": false,
+  "raw": "from (then) on 从（那）时起"
+ },
+ {
+  "word": "get through",
+  "ipa": "",
+  "cn": "设法）处理；完成",
+  "propn": false,
+  "raw": "get through （设法）处理；完成"
+ },
+ {
+  "word": "gradual",
+  "ipa": "grdul",
+  "cn": "逐渐的；渐进的",
+  "propn": false,
+  "raw": "gradual /grdul/ adj. 逐渐的；渐进的"
+ },
+ {
+  "word": "hip-hop",
+  "ipa": "hphp",
+  "cn": "嘻哈音乐；嘻哈文化",
+  "propn": false,
+  "raw": "hip-hop /hphp/ n. 嘻哈音乐；嘻哈文化"
+ },
+ {
+  "word": "impact",
+  "ipa": "mpkt",
+  "cn": "巨大影响；强大作用；冲击力",
+  "propn": false,
+  "raw": "impact /mpkt/ n. 巨大影响；强大作用；冲击力"
+ },
+ {
+  "word": "lean",
+  "ipa": "li:n",
+  "cn": "依靠；倾斜",
+  "propn": false,
+  "raw": "lean /li:n/ vt. （leant/leaned, leant/leaned）依靠；倾斜"
+ },
+ {
+  "word": "metaphor",
+  "ipa": "metf(r)",
+  "cn": "暗喻；隐喻",
+  "propn": false,
+  "raw": "metaphor /metf(r)/ n. 暗喻；隐喻"
+ },
+ {
+  "word": "moreover",
+  "ipa": "mrv(r)",
+  "cn": "而且；此外",
+  "propn": false,
+  "raw": "moreover /mrv(r)/ adv. 而且；此外"
+ },
+ {
+  "word": "nowadays",
+  "ipa": "nadez",
+  "cn": "现在；目前",
+  "propn": false,
+  "raw": "nowadays /nadez/ adv. 现在；目前"
+ },
+ {
+  "word": "onto",
+  "ipa": "nt",
+  "cn": "朝）向",
+  "propn": false,
+  "raw": "onto /nt/ prep. （朝）向"
+ },
+ {
+  "word": "opportunity",
+  "ipa": "ptjunti",
+  "cn": "机会；时机",
+  "propn": false,
+  "raw": "opportunity /ptjunti/ n. 机会；时机"
+ },
+ {
+  "word": "ordinary",
+  "ipa": "dnri",
+  "cn": "普通的；平凡的",
+  "propn": false,
+  "raw": "ordinary /dnri/ adj. 普通的；平凡的"
+ },
+ {
+  "word": "original",
+  "ipa": "rdnl",
+  "cn": "原来的；独创的；原作的 n. 原件；原作",
+  "propn": false,
+  "raw": "original /rdnl/ adj. 原来的；独创的；原作的 n. 原件；原作"
+ },
+ {
+  "word": "outline",
+  "ipa": "atlan",
+  "cn": "概述；概要",
+  "propn": false,
+  "raw": "outline /atlan/ n. & vt. 概述；概要"
+ },
+ {
+  "word": "perform",
+  "ipa": "pfm",
+  "cn": "表演；履行；执行",
+  "propn": false,
+  "raw": "perform /pfm/ vi. & vt. 表演；履行；执行"
+ },
+ {
+  "word": "performance",
+  "ipa": "pfmns",
+  "cn": "表演；演技；表现",
+  "propn": false,
+  "raw": "performance /pfmns/ n. 表演；演技；表现"
+ },
+ {
+  "word": "performer",
+  "ipa": "pfm(r)",
+  "cn": "表演者；演员",
+  "propn": false,
+  "raw": "performer /pfm(r)/ n. 表演者；演员"
+ },
+ {
+  "word": "personification",
+  "ipa": "psnfken",
+  "cn": "拟人；人格化；化身",
+  "propn": false,
+  "raw": "personification /psnfken/ n. 拟人；人格化；化身"
+ },
+ {
+  "word": "phenomenon",
+  "ipa": "fnmnn",
+  "cn": "现象",
+  "propn": false,
+  "raw": "phenomenon/fnmnn/ （pl. phenomena /-n/）n. 现象"
+ },
+ {
+  "word": "piano",
+  "ipa": "pin",
+  "cn": "钢琴",
+  "propn": false,
+  "raw": "piano /pin/ n. 钢琴"
+ },
+ {
+  "word": "previous",
+  "ipa": "privis",
+  "cn": "先前的；以往的",
+  "propn": false,
+  "raw": "previous /privis/ adj. 先前的；以往的"
+ },
+ {
+  "word": "prove",
+  "ipa": "pruv",
+  "cn": "证明；展现",
+  "propn": false,
+  "raw": "prove /pruv/ vt. 证明；展现"
+ },
+ {
+  "word": "rap ​",
+  "ipa": "rp",
+  "cn": "快速敲击；说唱音乐 vi. & vt. 敲击；（说唱歌中的）念白",
+  "propn": false,
+  "raw": "rap ​/rp/ n. 快速敲击；说唱音乐 vi. & vt. 敲击；（说唱歌中的）念白"
+ },
+ {
+  "word": "reaction",
+  "ipa": "rikn",
+  "cn": "反应；回应",
+  "propn": false,
+  "raw": "reaction /rikn/ n. 反应；回应"
+ },
+ {
+  "word": "relief",
+  "ipa": "rlif",
+  "cn": "焦虑、痛苦的）减轻或消除； （不快过后的）宽慰、轻松或解脱",
+  "propn": false,
+  "raw": "relief /rlif/ n. （焦虑、痛苦的）减轻或消除； （不快过后的）宽慰、轻松或解脱"
+ },
+ {
+  "word": "repetition",
+  "ipa": "reptn",
+  "cn": "重复；重做",
+  "propn": false,
+  "raw": "repetition /reptn/ n. 重复；重做"
+ },
+ {
+  "word": "rhetorical",
+  "ipa": "rtrkl",
+  "cn": "修辞的",
+  "propn": false,
+  "raw": "rhetorical /rtrkl/ adj. 修辞的"
+ },
+ {
+  "word": "romantic",
+  "ipa": "rmntk",
+  "cn": "浪漫的 n. 浪漫的人",
+  "propn": false,
+  "raw": "romantic /rmntk/ adj. 浪漫的 n. 浪漫的人"
+ },
+ {
+  "word": "satisfaction",
+  "ipa": "stsfkn",
+  "cn": "满足；满意；欣慰",
+  "propn": false,
+  "raw": "satisfaction /stsfkn/ n. 满足；满意；欣慰"
+ },
+ {
+  "word": "set sth up",
+  "ipa": "",
+  "cn": "安装好（设备或机器）",
+  "propn": false,
+  "raw": "set sth up 安装好（设备或机器）"
+ },
+ {
+  "word": "simile",
+  "ipa": "smli",
+  "cn": "明喻",
+  "propn": false,
+  "raw": "simile /smli/ n. 明喻"
+ },
+ {
+  "word": "somehow",
+  "ipa": "smha",
+  "cn": "以某种方式（或方法）；不知怎么地",
+  "propn": false,
+  "raw": "somehow /smha/ adv. 以某种方式（或方法）；不知怎么地"
+ },
+ {
+  "word": "soul",
+  "ipa": "sl",
+  "cn": "灵魂；心灵",
+  "propn": false,
+  "raw": "soul /sl/ n. 灵魂；心灵"
+ },
+ {
+  "word": "stage",
+  "ipa": "sted",
+  "cn": "发展或进展的）时期；阶段； （多指剧场中的）舞台",
+  "propn": false,
+  "raw": "stage /sted/ n. （发展或进展的）时期；阶段； （多指剧场中的）舞台"
+ },
+ {
+  "word": "stringed",
+  "ipa": "strINd",
+  "cn": "有弦的",
+  "propn": false,
+  "raw": "stringed /strINd/ adj. 有弦的"
+ },
+ {
+  "word": "stringed instrument",
+  "ipa": "",
+  "cn": "弦乐器",
+  "propn": false,
+  "raw": "stringed instrument 弦乐器"
+ },
+ {
+  "word": "studio",
+  "ipa": "stjudi",
+  "cn": "演播室；（音乐的）录音棚；工作室",
+  "propn": false,
+  "raw": "studio /stjudi/ n. 演播室；（音乐的）录音棚；工作室"
+ },
+ {
+  "word": "talent",
+  "ipa": "tlnt",
+  "cn": "天才；天资；天赋",
+  "propn": false,
+  "raw": "talent /tlnt/ n. 天才；天资；天赋"
+ },
+ {
+  "word": "thus",
+  "ipa": "s",
+  "cn": "如此；因此",
+  "propn": false,
+  "raw": "thus /s/ adv. 如此；因此"
+ },
+ {
+  "word": "treatment",
+  "ipa": "tritmnt",
+  "cn": "治疗；对待；处理",
+  "propn": false,
+  "raw": "treatment /tritmnt/ n. 治疗；对待；处理"
+ },
+ {
+  "word": "try out​参加……选拔（或试演）",
+  "ipa": "",
+  "cn": "参加……选拔（或试演）",
+  "propn": false,
+  "raw": "try out​参加……选拔（或试演）"
+ },
+ {
+  "word": "unemployed",
+  "ipa": "nImplOId",
+  "cn": "失业的；待业的",
+  "propn": false,
+  "raw": "unemployed /nImplOId/ adj. 失业的；待业的"
+ },
+ {
+  "word": "various",
+  "ipa": "veris",
+  "cn": "各种不同的；各种各样的",
+  "propn": false,
+  "raw": "various /veris/ adj. 各种不同的；各种各样的"
+ },
+ {
+  "word": "virtual",
+  "ipa": "vtul",
+  "cn": "很接近的；事实上的；虚拟的",
+  "propn": false,
+  "raw": "virtual /vtul/ adj. 很接近的；事实上的；虚拟的"
+ },
+ {
+  "word": "virtual choir",
+  "ipa": "kwa(r)",
+  "cn": "虚拟合唱团",
+  "propn": false,
+  "raw": "virtual choir /kwa(r)/ 虚拟合唱团"
+ }
+]

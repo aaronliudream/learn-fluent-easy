@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "The Internet",
+  "source": "人教版2019必修二 Unit 3 同主题完形(写安全博客/老人学上网/选App/聊天室麻烦/装软件/社交媒体习惯)。用词限 U3/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Blog about Online Safety",
+      "text": "Today I want to (1)____ about a question I am often asked: how do you stay safe online? I am not an expert, but years online have taught me a few useful (2)____. The first rule is simple. If something makes you feel uncomfortable, (3)____ the site at once and don't click on anything. Second, protect your (4)____. Never give out your home address or phone number, because a stranger might use it to steal your (5)____. Third, always be (6)____ to others. Being rude online can turn you into a (7)____ for a troll, who posts comments only to make (8)____. A troll often uses several (9)____ names so that nobody knows who he really is. Remember these tips, and you can (10)____ the Internet far more safely.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "blog",
+            "sleep",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "blog about 写博客谈论。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "tips",
+            "rivers",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "useful tips 有用的建议。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "build",
+            "paint",
+            "leave",
+            "open"
+          ],
+          "answer_index": 2,
+          "explanation": "leave the site 离开网站。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "garden",
+            "weight",
+            "privacy"
+          ],
+          "answer_index": 3,
+          "explanation": "protect your privacy 保护隐私。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "identity",
+            "dinner",
+            "garden",
+            "holiday"
+          ],
+          "answer_index": 0,
+          "explanation": "steal your identity 盗用身份。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "polite",
+            "tired",
+            "hungry"
+          ],
+          "answer_index": 1,
+          "explanation": "be polite 有礼貌。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "garden",
+            "ticket",
+            "target",
+            "letter"
+          ],
+          "answer_index": 2,
+          "explanation": "a target for a troll 攻击目标。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "noise",
+            "music",
+            "trouble"
+          ],
+          "answer_index": 3,
+          "explanation": "make trouble 惹是生非。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "false",
+            "kind",
+            "happy",
+            "warm"
+          ],
+          "answer_index": 0,
+          "explanation": "false names 假名。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "surf",
+            "build",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "surf the Internet 上网浏览。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Grandpa Learns to Use the Net",
+      "text": "Last year my grandpa, who is over seventy, finally decided to (1)____ how to use the Internet. At first he found it very (2)____, and he often got stuck. \"Why do I need this?\" he would ask. But my sister and I were (3)____ and showed him a little every day. Slowly, things began to change. He learned to (4)____ on a link, to send an email, and even to (5)____ photos of his garden to his old friends. One day he (6)____ a video chat app and saw the face of his brother, who lives far away in another (7)____. His eyes filled with tears of joy. Now Grandpa says the Internet has removed the (8)____ between him and the people he loves. He even keeps (9)____ of the news every morning. Helping him has taught me that no one is too old to enjoy the (10)____ of new technology.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "throw",
+            "sell",
+            "learn",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "learn how to 学会如何。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "tasty",
+            "warm",
+            "loud",
+            "tough"
+          ],
+          "answer_index": 3,
+          "explanation": "very tough 很难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "patient",
+            "lazy",
+            "angry",
+            "absent"
+          ],
+          "answer_index": 0,
+          "explanation": "be patient 有耐心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "click",
+            "cook",
+            "drive"
+          ],
+          "answer_index": 1,
+          "explanation": "click on a link 点击链接。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eat",
+            "burn",
+            "send",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "send photos 发送照片。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ate",
+            "sold",
+            "lost",
+            "opened"
+          ],
+          "answer_index": 3,
+          "explanation": "opened a video chat app 打开应用。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "province",
+            "garden",
+            "kitchen",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "another province 另一个省。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "distance",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "removed the distance 消除距离。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rain",
+            "noise",
+            "track",
+            "sport"
+          ],
+          "answer_index": 2,
+          "explanation": "keep track of 了解……的动态。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noises",
+            "seasons",
+            "benefits"
+          ],
+          "answer_index": 3,
+          "explanation": "the benefits of 好处。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Choosing the Right App",
+      "text": "Xiao Bo and Laura were (1)____ about which apps to put on their phones. Xiao Bo said he was looking for an app to help him get in (2)____, because he wanted to exercise more. Laura, however, wanted one that would help her (3)____ money while shopping. \"My guess is that this one would be (4)____ for you,\" Xiao Bo said, showing her an app that finds the best (5)____ in online shops. \"And I think this fitness app could help me (6)____ more steps every day.\" Before they (7)____ anything, they read what other users had written. Some reviews were good, but a few warned that one app would quickly use up the phone's (8)____. In the end, each of them chose an app they could (9)____, and both were happy with their choice. A good app, they agreed, should be both useful and easy to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "talking",
+            "sleeping",
+            "running",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "talking about 谈论。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "shape",
+            "rain",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "get in shape 健身;身材好。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lose",
+            "burn",
+            "save",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "save money 省钱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "asleep",
+            "absent",
+            "useful"
+          ],
+          "answer_index": 3,
+          "explanation": "be useful 有用。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "discounts",
+            "rivers",
+            "songs",
+            "clouds"
+          ],
+          "answer_index": 0,
+          "explanation": "the best discounts 折扣。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eat",
+            "take",
+            "drop",
+            "burn"
+          ],
+          "answer_index": 1,
+          "explanation": "take more steps 走更多步。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ate",
+            "sang",
+            "downloaded",
+            "slept"
+          ],
+          "answer_index": 2,
+          "explanation": "downloaded anything 下载。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "weather",
+            "season",
+            "battery"
+          ],
+          "answer_index": 3,
+          "explanation": "the phone's battery 手机电池。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "trust",
+            "throw",
+            "burn",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "an app they could trust 信任。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "use",
+            "drop",
+            "burn"
+          ],
+          "answer_index": 1,
+          "explanation": "easy to use 易用。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Trouble in the Chat Room",
+      "text": "Last year our online chat room had a serious (1)____. Mean comments were being posted by someone we did not (2)____, and several members began to feel (3)____. One girl was so unhappy that she almost wanted to (4)____ the group. We knew we had to do something. First, we agreed to stay (5)____ and never answer the rude messages, because that is exactly what a (6)____ wants. Next, we reported the user to the people who (7)____ the website. They soon found out that the same person was using two (8)____ names. After his account was closed, the mean comments finally (9)____. The room became a friendly place again. The whole experience taught us an important (10)____: a calm and polite group is much harder to attack.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "holiday",
+            "garden",
+            "problem",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "a serious problem 严重问题。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "cook",
+            "burn",
+            "sell",
+            "know"
+          ],
+          "answer_index": 3,
+          "explanation": "did not know 不认识。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "upset",
+            "happy",
+            "warm",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "feel upset 难过。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "build",
+            "leave",
+            "paint",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "leave the group 离开群组。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "angry",
+            "absent",
+            "calm",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "teacher",
+            "doctor",
+            "farmer",
+            "troll"
+          ],
+          "answer_index": 3,
+          "explanation": "what a troll wants 喷子想要的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ran",
+            "ate",
+            "burned",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "the people who ran the website 管理网站。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "warm",
+            "false",
+            "kind",
+            "happy"
+          ],
+          "answer_index": 1,
+          "explanation": "two false names 两个假名。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "grew",
+            "shone",
+            "stopped",
+            "rained"
+          ],
+          "answer_index": 2,
+          "explanation": "comments stopped 停止。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "lesson"
+          ],
+          "answer_index": 3,
+          "explanation": "an important lesson 教训。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Installing New Software",
+      "text": "Yesterday my phone became very (1)____, and it took ages to open even a simple page. A friend told me that a new piece of (2)____ might solve the problem. So I went to a website I was (3)____ with and started to download it. A box appeared, asking me to (4)____ a strong password for my new account. After I typed it in, I had to (5)____ a button to start the download. While I waited, I went to make a cup of tea. When I came back, the software had been (6)____ onto my phone, and a message said it was (7)____. I opened it at once. To my surprise, my phone now ran much (8)____ than before, and the (9)____ even lasted longer. It just shows that, used wisely, the right software can give an old phone a whole new (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "slow",
+            "warm",
+            "tasty",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "very slow 很慢。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "software",
+            "garden",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a piece of software 一款软件。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "angry",
+            "absent",
+            "familiar",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "familiar with 熟悉的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "burn",
+            "throw",
+            "choose"
+          ],
+          "answer_index": 3,
+          "explanation": "choose a password 设置密码。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "press",
+            "eat",
+            "burn",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "press a button 按按钮。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "downloaded",
+            "burned",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "had been downloaded 被下载(现在完成被动)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "asleep",
+            "absent",
+            "ready",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "it was ready 准备好了。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slower",
+            "worse",
+            "smaller",
+            "faster"
+          ],
+          "answer_index": 3,
+          "explanation": "much faster 快得多。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "battery",
+            "weather",
+            "garden",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "the battery lasted longer 电池更耐用。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "life",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a whole new life 新生命。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My Social Media Habits",
+      "text": "Like many students, I used to spend hours on (1)____ media every day. I would check my phone the moment I woke up, and I kept (2)____ of every new message and photo my friends posted. It felt good at first, but soon I noticed some (3)____ effects. I was sleeping less, and I felt (4)____ whenever I saw others having more fun than me. My marks at school began to (5)____, too. So I decided to make a change. Now I turn (6)____ all the apps an hour before bed, and I only check them at certain (7)____ during the day. I also try to share things that make people (8)____ rather than sad. These small steps have already made a big (9)____. I feel calmer, I sleep better, and I have more time for the things that really (10)____ to me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "angry",
+            "absent",
+            "social",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "social media 社交媒体。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rain",
+            "noise",
+            "sport",
+            "track"
+          ],
+          "answer_index": 3,
+          "explanation": "keep track of 关注……动态。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bad",
+            "tasty",
+            "warm",
+            "kind"
+          ],
+          "answer_index": 0,
+          "explanation": "bad effects 不良影响。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "happy",
+            "upset",
+            "warm",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "feel upset 难过。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "grow",
+            "shine",
+            "fall",
+            "rain"
+          ],
+          "answer_index": 2,
+          "explanation": "marks fall 成绩下降。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "into",
+            "over",
+            "along",
+            "off"
+          ],
+          "answer_index": 3,
+          "explanation": "turn off the apps 关掉应用。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "times",
+            "gardens",
+            "rivers",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "at certain times 在特定时间。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sad",
+            "smile",
+            "angry",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "make people smile 让人微笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "garden",
+            "difference",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "made a big difference 带来很大不同。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "burn",
+            "drop",
+            "matter"
+          ],
+          "answer_index": 3,
+          "explanation": "things that matter 重要的事。"
+        }
+      ]
+    }
+  ]
+}

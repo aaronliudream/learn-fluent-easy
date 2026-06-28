@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(野生动物保护主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "In a small town, a teenager named Sam noticed that the wild ducks by the river were disappearing fast. Instead of staying silent, he made a bright poster asking people to stop selling the birds and started cleaning the riverbank every weekend. A year later, the ducks had returned, and many of his neighbours had joined him to care for them.",
+    "questions": [
+      {
+        "q": "What did Sam do after noticing the ducks were disappearing?",
+        "options": [
+          "He made a poster and cleaned the riverbank every weekend.",
+          "He kept silent and did nothing.",
+          "He moved away from the town.",
+          "He started selling the wild ducks himself."
+        ],
+        "answer": "A",
+        "explanation": "原文 'made a bright poster… started cleaning the riverbank every weekend' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What happened in the town a year later?",
+        "options": [
+          "The river dried up completely.",
+          "The ducks came back and neighbours joined to help.",
+          "Sam gave up on the project.",
+          "All the ducks were sold at the market."
+        ],
+        "answer": "B",
+        "explanation": "末句 'the ducks had returned, and many of his neighbours had joined him'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "Music",
+  "source": "人教版2019必修二 Unit 5 同主题完形(学钢琴/筹办音乐节/虚拟合唱团之父/嘻哈舞者/贝多芬/乐队首张专辑)。用词限 U5/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning the Piano",
+      "text": "When I was six, my parents wanted me to learn to play the (1)____. To be a good daughter, I agreed, even though I was not very (2)____ in it at all. Experienced in reading her students' minds, my teacher could soon (3)____ that my heart was not in it. After learning for about six months, I was (4)____ to perform at the year-end concert. Surprised and a little terrified, I could only (5)____. Because I was a beginner, I chose a fairly simple (6)____. To play it well, I (7)____ the same piece for an hour every day. On the day of the concert I was so nervous that I almost wanted to give (8)____. As it turned out, all my hard work paid off and I played (9)____. Encouraged by the warm reaction of the audience, I have continued to play and now (10)____ it more every day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "piano",
+            "market",
+            "ticket",
+            "window"
+          ],
+          "answer_index": 0,
+          "explanation": "play the piano 弹钢琴。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "afraid",
+            "interested",
+            "early",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "be interested in 对……感兴趣。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "tell",
+            "buy"
+          ],
+          "answer_index": 2,
+          "explanation": "tell that 看出。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "lost",
+            "thrown",
+            "asked"
+          ],
+          "answer_index": 3,
+          "explanation": "be asked to 被要求。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "agree",
+            "refuse",
+            "sleep",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "could only agree 只能同意。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "composition",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "a simple composition 一首简单的作品。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "hid",
+            "practised",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "practised the piece 练习曲子。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "perfectly",
+            "badly",
+            "slowly",
+            "sadly"
+          ],
+          "answer_index": 0,
+          "explanation": "played perfectly 演奏得很完美。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "enjoy",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "enjoy it more 更加享受。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Planning a Music Festival",
+      "text": "Our school has decided to hold a music (1)____ on the sports field next month. The main (2)____ of the event is to raise money for charity. Students who can sing or play an instrument may (3)____ out as performers on the stage. Those who think they have no musical (4)____ can still help in many ways. Some will sell (5)____ at the gate, while others run food stands or set up the (6)____ before the show begins. In (7)____ to performing, my friend John will play the violin, and I have (8)____ to help with the crowds. We all hope the festival will (9)____ to be a great success. If it is for a good cause, everyone should take (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "garden",
+            "festival",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a music festival 音乐节。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "aim"
+          ],
+          "answer_index": 3,
+          "explanation": "the main aim 主要目的。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "try",
+            "sell",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "try out (for) 参加选拔/试演。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "talent",
+            "shop",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "musical talent 音乐天赋。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "songs",
+            "rivers",
+            "tickets",
+            "trees"
+          ],
+          "answer_index": 2,
+          "explanation": "sell tickets 卖票。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "price",
+            "noise",
+            "equipment"
+          ],
+          "answer_index": 3,
+          "explanation": "set up the equipment 架设设备。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "addition",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "in addition to 除……之外。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forgotten",
+            "offered",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "offered to help 主动提出帮忙。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "break",
+            "leave",
+            "prove",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "prove to be 结果是。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "rest",
+            "part"
+          ],
+          "answer_index": 3,
+          "explanation": "take part 参与。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Father of the Virtual Choir",
+      "text": "Eric Whitacre is an award-winning (1)____ and conductor. Born in the USA in 1970, he began (2)____ music at university in 1988. He fell in (3)____ with classical music while singing in the university choir. Over the next ten years, his (4)____ compositions became quite popular among singers. In 2009, he received a (5)____ of a girl singing one of his works. (6)____, he asked his fans to make their own videos, which he then (7)____ together into one performance. His first virtual choir had singers from twelve different (8)____ and received millions of views online. Since then, the virtual choir has become a worldwide (9)____. It is a wonderful way for people around the world to sing with one voice and (10)____ make the world a better place.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "composer",
+            "farmer",
+            "driver",
+            "doctor"
+          ],
+          "answer_index": 0,
+          "explanation": "an award-winning composer 获奖作曲家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "studying",
+            "hiding",
+            "losing"
+          ],
+          "answer_index": 1,
+          "explanation": "studying music 学习音乐。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hope",
+            "fear",
+            "love",
+            "rain"
+          ],
+          "answer_index": 2,
+          "explanation": "fall in love with 爱上。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "broken",
+            "silent",
+            "original"
+          ],
+          "answer_index": 3,
+          "explanation": "original compositions 原创作品。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "video",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "received a video 收到一段视频。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "Inspiring",
+            "Inspired",
+            "Inspire",
+            "Inspires"
+          ],
+          "answer_index": 1,
+          "explanation": "Inspired 过去分词作状语,主语受到启发(被动)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "joined",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "joined together 拼合在一起。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "noises",
+            "shops",
+            "countries"
+          ],
+          "answer_index": 3,
+          "explanation": "different countries 不同国家。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "phenomenon",
+            "machine",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a worldwide phenomenon 全球现象。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "never",
+            "thus",
+            "hardly",
+            "seldom"
+          ],
+          "answer_index": 1,
+          "explanation": "thus make 从而使。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Power of Hip-Hop",
+      "text": "Leo grew up in an (1)____ neighbourhood where few people expected much of him. The first time he heard (2)____ music, something inside him woke up. The strong beat made him want to (3)____, and he taught himself the moves by watching videos. At first his friends (4)____ at him, but Leo did not give up. Practising for hours every day, he slowly turned into a real (5)____. Music gave his ordinary days new (6)____, and dancing brought him a sense of (7)____. Later he joined a small (8)____ of dancers, and together they performed on a street (9)____ for crowds of strangers. (10)____ tired or nervous, Leo always felt free the moment the music began.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "golden",
+            "royal",
+            "ordinary",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "an ordinary neighbourhood 普通街区。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "classical",
+            "country",
+            "folk",
+            "hip-hop"
+          ],
+          "answer_index": 3,
+          "explanation": "hip-hop music 嘻哈音乐(下文 beat / dance 呼应)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "dance",
+            "sleep",
+            "cry",
+            "leave"
+          ],
+          "answer_index": 0,
+          "explanation": "want to dance 想跳舞。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "smiled",
+            "laughed",
+            "looked",
+            "pointed"
+          ],
+          "answer_index": 1,
+          "explanation": "laughed at him 嘲笑他。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "farmer",
+            "driver",
+            "performer",
+            "doctor"
+          ],
+          "answer_index": 2,
+          "explanation": "a real performer 真正的表演者。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "energy"
+          ],
+          "answer_index": 3,
+          "explanation": "new energy 新的活力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "satisfaction",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "a sense of satisfaction 满足感。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "band",
+            "shop",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "a band of dancers 一群舞者。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "river",
+            "tree",
+            "stage",
+            "cloud"
+          ],
+          "answer_index": 2,
+          "explanation": "a street stage 街头舞台。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Because",
+            "Unless",
+            "Until",
+            "Though"
+          ],
+          "answer_index": 3,
+          "explanation": "Though tired or nervous 尽管又累又紧张(让步)。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Composer Who Could Not Hear",
+      "text": "Ludwig van Beethoven is one of the greatest (1)____ in history. Born in Germany, he started his musical training when he was very (2)____. He soon became famous as a pianist, and by 1800 many people (3)____ him the most important composer of his time. During the same period, however, he slowly began to lose his (4)____. Even though he could not hear with his ears, he could still (5)____ music in his head. Most of his greatest (6)____ were completed after he became deaf. In later life he faced many health and money (7)____, and he often felt lonely. His friends tried to (8)____ him through his dark times. (9)____ by sadness as his life was, he never stopped creating beautiful music. Today his works still (10)____ the hearts of listeners all over the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "composers",
+            "farmers",
+            "drivers",
+            "doctors"
+          ],
+          "answer_index": 0,
+          "explanation": "the greatest composers 最伟大的作曲家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "old",
+            "young",
+            "tall",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "very young 很小的时候。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "thought",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "thought him… 认为他是……。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "garden",
+            "ticket",
+            "hearing"
+          ],
+          "answer_index": 3,
+          "explanation": "lose his hearing 失去听力。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hear",
+            "sell",
+            "hide",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "hear music in his head 在脑中听到音乐。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "works",
+            "noises",
+            "shops"
+          ],
+          "answer_index": 1,
+          "explanation": "greatest works 最伟大的作品。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "songs",
+            "gardens",
+            "issues",
+            "markets"
+          ],
+          "answer_index": 2,
+          "explanation": "health and money issues 健康和金钱问题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "lose",
+            "break",
+            "help"
+          ],
+          "answer_index": 3,
+          "explanation": "help him through 帮他度过。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Marked",
+            "Marking",
+            "Mark",
+            "Marks"
+          ],
+          "answer_index": 0,
+          "explanation": "Marked by sadness 被悲伤笼罩(过去分词作让步状语,被动)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "leave",
+            "touch",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "touch the hearts 打动人心。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Our First Album",
+      "text": "Last year my friends and I formed a small (1)____ and dreamed of making our own album. None of us was a professional (2)____, so the songs were far from perfect at first. We could not (3)____ a real recording studio, so we set up cheap (4)____ in my garage instead. Night after night we (5)____ the same songs until they sounded right. (6)____ enough time and practice, even ordinary players can create something good. When the album was finally (7)____, we shared it online, and to our (8)____ many strangers liked it. Their warm (9)____ gave us the courage to keep going. (10)____ in a tiny garage, that first album still means more to us than any prize.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "garden",
+            "band",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "formed a small band 组建小乐队。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "farmer",
+            "driver",
+            "doctor",
+            "musician"
+          ],
+          "answer_index": 3,
+          "explanation": "a professional musician 专业音乐人。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "afford",
+            "sell",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "could not afford 负担不起。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "equipment",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "cheap equipment 便宜的设备。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "recorded",
+            "hid"
+          ],
+          "answer_index": 2,
+          "explanation": "recorded the same songs 录同样的歌。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "Giving",
+            "Give",
+            "Gives",
+            "Given"
+          ],
+          "answer_index": 3,
+          "explanation": "Given enough time 倘若有足够时间(过去分词作条件状语,被动)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ready",
+            "sold",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "was finally ready 终于做好了。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "surprise",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "to our surprise 令我们惊讶的是。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "reaction",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "warm reaction 热烈的回应。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Recording",
+            "Record",
+            "Records",
+            "Recorded"
+          ],
+          "answer_index": 3,
+          "explanation": "Recorded in a tiny garage 在小车库里录制(过去分词作状语,被动)。"
+        }
+      ]
+    }
+  ]
+}

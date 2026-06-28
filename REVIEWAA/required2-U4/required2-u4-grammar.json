@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grammar_title": "过去分词作定语 和 作宾语补足语(have/get sth done · 感官/使役动词 + 宾语 + done)",
+  "source": "人教版2019必修二 Unit 4 Discovering Useful Structures:过去分词作定语(前置/后置,表被动·完成)与作宾语补足语(have/get/see/hear/find/want/make + 宾语 + 过去分词)。句子地道、过去分词形式唯一成立(doing 主动进行 / to do / do 均排除)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "过去分词作定语(前置 broken window / 后置 soldiers wounded)",
+      "overview": "过去分词修饰名词,表被动或完成,相当于定语从句。单个分词前置(a broken window),带短语后置(soldiers wounded in the war)。与表主动进行的现在分词(-ing)对照:被名词承受的动作用过去分词。"
+    },
+    {
+      "code": "u4.02",
+      "point": "have/get sth done(请人做·遭遇)",
+      "overview": "have/get + 宾语 + 过去分词,表示让别人做某事或某事被完成(get our car battery charged / had a copy boxed)。宾语与分词是被动关系,所以用过去分词,不用 doing/to do。"
+    },
+    {
+      "code": "u4.03",
+      "point": "感官/使役动词 + 宾语 + 过去分词(see/hear/find/want/make)",
+      "overview": "see/hear/find/want/make/keep + 宾语 + 过去分词,作宾语补足语,宾语与分词是被动关系(heard it announced / had her eyes fixed / want it done)。与表主动的 doing/动词原形对照。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "We looked up at the ____ window and wondered who had thrown the stone.",
+      "options": [
+        "broken",
+        "breaking",
+        "to break",
+        "break"
+      ],
+      "answer_index": 0,
+      "explanation": "window 被打破、表被动完成,过去分词 broken 作前置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The ____ visitors sat down on a bench to rest their feet.",
+      "options": [
+        "tiring",
+        "tired",
+        "to tire",
+        "tire"
+      ],
+      "answer_index": 1,
+      "explanation": "visitors 感到累、被动状态,tired 作前置定语;tiring 表'令人疲惫的'语义不通。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The soldiers ____ in the First World War were cared for by the family.",
+      "options": [
+        "wounding",
+        "to wound",
+        "wounded",
+        "wound"
+      ],
+      "answer_index": 2,
+      "explanation": "soldiers 被打伤、带短语后置,过去分词 wounded 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Loch Ness is a lake ____ by beautiful natural landscape.",
+      "options": [
+        "surrounding",
+        "to surround",
+        "surround",
+        "surrounded"
+      ],
+      "answer_index": 3,
+      "explanation": "lake 被环绕,过去分词短语 surrounded by... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "They sent us a copy ____ in a strong wooden box.",
+      "options": [
+        "boxed",
+        "boxing",
+        "to box",
+        "box"
+      ],
+      "answer_index": 0,
+      "explanation": "copy 被装箱,过去分词短语 boxed in... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The castles ____ by the Normans can still be seen across England.",
+      "options": [
+        "building",
+        "built",
+        "to build",
+        "build"
+      ],
+      "answer_index": 1,
+      "explanation": "castles 被建造,过去分词短语 built by... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We followed a ____ trip that took us to three historic towns.",
+      "options": [
+        "organising",
+        "to organise",
+        "well-organised",
+        "organise"
+      ],
+      "answer_index": 2,
+      "explanation": "trip 被精心安排,过去分词 well-organised 作前置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Many words ____ by the Vikings are still used in English today.",
+      "options": [
+        "introducing",
+        "to introduce",
+        "introduce",
+        "introduced"
+      ],
+      "answer_index": 3,
+      "explanation": "words 被引入,过去分词短语 introduced by... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The green hills ____ with sheep made a peaceful picture.",
+      "options": [
+        "dotted",
+        "dotting",
+        "to dot",
+        "dot"
+      ],
+      "answer_index": 0,
+      "explanation": "hills 被点缀,过去分词短语 dotted with... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Most people just use the ____ name 'the UK'.",
+      "options": [
+        "shortening",
+        "shortened",
+        "to shorten",
+        "shorten"
+      ],
+      "answer_index": 1,
+      "explanation": "name 被缩短,过去分词 shortened 作前置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The flag ____ as the Union Jack is shared by the four countries.",
+      "options": [
+        "knowing",
+        "to know",
+        "known",
+        "know"
+      ],
+      "answer_index": 2,
+      "explanation": "be known as 固定搭配,过去分词短语 known as... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "There were lots of museums full of ancient relics ____ from all over the UK.",
+      "options": [
+        "collecting",
+        "to collect",
+        "collect",
+        "collected"
+      ],
+      "answer_index": 3,
+      "explanation": "relics 被收集,过去分词短语 collected from... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We saw beautifully ____ stars arrive at the gallery opening.",
+      "options": [
+        "dressed",
+        "dressing",
+        "to dress",
+        "dress"
+      ],
+      "answer_index": 0,
+      "explanation": "stars 被打扮,过去分词 dressed(beautifully dressed)作前置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The names of many places ____ behind by the Vikings still exist.",
+      "options": [
+        "leaving",
+        "left",
+        "to leave",
+        "leave"
+      ],
+      "answer_index": 1,
+      "explanation": "places(的名字)被留下,过去分词短语 left behind 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A country ____ by four different groups has a very rich history.",
+      "options": [
+        "conquering",
+        "to conquer",
+        "conquered",
+        "conquer"
+      ],
+      "answer_index": 2,
+      "explanation": "country 被征服,过去分词短语 conquered by... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She bought a copy of the famous painting ____ in London.",
+      "options": [
+        "printing",
+        "to print",
+        "print",
+        "printed"
+      ],
+      "answer_index": 3,
+      "explanation": "copy 被印制,过去分词短语 printed in... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The ____ guidebook helped us find every historic site easily.",
+      "options": [
+        "updated",
+        "updating",
+        "to update",
+        "update"
+      ],
+      "answer_index": 0,
+      "explanation": "guidebook 被更新,过去分词 updated 作前置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Cameras ____ on the hill recorded the lake all day long.",
+      "options": [
+        "positioning",
+        "positioned",
+        "to position",
+        "position"
+      ],
+      "answer_index": 1,
+      "explanation": "cameras 被架设,过去分词短语 positioned on... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The new words ____ by the Normans came mostly from French.",
+      "options": [
+        "bringing",
+        "to bring",
+        "brought",
+        "bring"
+      ],
+      "answer_index": 2,
+      "explanation": "words 被诺曼人带入,过去分词短语 brought by... 作后置定语。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Towns and roads ____ by the Romans were a great achievement.",
+      "options": [
+        "building",
+        "to build",
+        "build",
+        "built"
+      ],
+      "answer_index": 3,
+      "explanation": "towns and roads 被建造,过去分词短语 built by... 作后置定语。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Judy and I had our car ____ in an underground car park.",
+      "options": [
+        "parked",
+        "parking",
+        "to park",
+        "park"
+      ],
+      "answer_index": 0,
+      "explanation": "have sth done:car 被停放,过去分词 parked 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Near the square we could get our car battery ____ quickly.",
+      "options": [
+        "charging",
+        "charged",
+        "to charge",
+        "charge"
+      ],
+      "answer_index": 1,
+      "explanation": "get sth done:battery 被充电,过去分词 charged 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She had a copy of the painting ____ to keep it safe on the way.",
+      "options": [
+        "boxing",
+        "to box",
+        "boxed",
+        "box"
+      ],
+      "answer_index": 2,
+      "explanation": "have sth done:copy 被装箱,过去分词 boxed 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We must get the old castle wall ____ before winter comes.",
+      "options": [
+        "repairing",
+        "to repair",
+        "repair",
+        "repaired"
+      ],
+      "answer_index": 3,
+      "explanation": "get sth done:wall 被修理,过去分词 repaired 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The hostel had the visitors' bags ____ at the front desk.",
+      "options": [
+        "checked",
+        "checking",
+        "to check",
+        "check"
+      ],
+      "answer_index": 0,
+      "explanation": "have sth done:bags 被检查,过去分词 checked 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "I'd like to have these old photos of the temple ____ this week.",
+      "options": [
+        "printing",
+        "printed",
+        "to print",
+        "print"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:photos 被冲印,过去分词 printed 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Before the trip, we got our tickets ____ at the station office.",
+      "options": [
+        "booking",
+        "to book",
+        "booked",
+        "book"
+      ],
+      "answer_index": 2,
+      "explanation": "get sth done:tickets 被预订,过去分词 booked 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The museum had the ancient relics ____ in glass cases.",
+      "options": [
+        "displaying",
+        "to display",
+        "display",
+        "displayed"
+      ],
+      "answer_index": 3,
+      "explanation": "have sth done:relics 被展示,过去分词 displayed 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She wanted to get the guidebook ____ into Chinese for her parents.",
+      "options": [
+        "translated",
+        "translating",
+        "to translate",
+        "translate"
+      ],
+      "answer_index": 0,
+      "explanation": "get sth done:guidebook 被翻译,过去分词 translated 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We had our audio guides ____ at the service desk inside the gallery.",
+      "options": [
+        "collecting",
+        "collected",
+        "to collect",
+        "collect"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:guides 被领取,过去分词 collected 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The family had their old mansion ____ in soft yellow light at night.",
+      "options": [
+        "lighting",
+        "to light",
+        "lit",
+        "light"
+      ],
+      "answer_index": 2,
+      "explanation": "have sth done:mansion 被照亮,过去分词 lit 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He got his name ____ in the family tree, just like his ancestors.",
+      "options": [
+        "recording",
+        "to record",
+        "record",
+        "recorded"
+      ],
+      "answer_index": 3,
+      "explanation": "get sth done:name 被记录,过去分词 recorded 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Before leaving Pingyao, Paul had a few snacks ____ for the long train ride.",
+      "options": [
+        "packed",
+        "packing",
+        "to pack",
+        "pack"
+      ],
+      "answer_index": 0,
+      "explanation": "have sth done:snacks 被打包,过去分词 packed 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We should get the courtyard floor ____ before the guests arrive.",
+      "options": [
+        "cleaning",
+        "cleaned",
+        "to clean",
+        "clean"
+      ],
+      "answer_index": 1,
+      "explanation": "get sth done:floor 被打扫,过去分词 cleaned 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The shop will have your purchase ____ to your hotel for free.",
+      "options": [
+        "delivering",
+        "to deliver",
+        "delivered",
+        "deliver"
+      ],
+      "answer_index": 2,
+      "explanation": "have sth done:purchase 被送达,过去分词 delivered 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "They had the historic bridge ____ exactly as it had once looked.",
+      "options": [
+        "rebuilding",
+        "to rebuild",
+        "rebuild",
+        "rebuilt"
+      ],
+      "answer_index": 3,
+      "explanation": "have sth done:bridge 被重建,过去分词 rebuilt 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "I want to get my room ____ before I go out to see the city wall.",
+      "options": [
+        "tidied",
+        "tidying",
+        "to tidy",
+        "tidy"
+      ],
+      "answer_index": 0,
+      "explanation": "get sth done:room 被整理,过去分词 tidied 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The hotel had a map of the old town ____ for every guest.",
+      "options": [
+        "preparing",
+        "prepared",
+        "to prepare",
+        "prepare"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:map 被准备好,过去分词 prepared 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She got the broken camera ____ just in time for the trip to Scotland.",
+      "options": [
+        "fixing",
+        "to fix",
+        "fixed",
+        "fix"
+      ],
+      "answer_index": 2,
+      "explanation": "get sth done:camera 被修好,过去分词 fixed 作宾补。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We had our coats and bags ____ before entering the National Gallery.",
+      "options": [
+        "storing",
+        "to store",
+        "store",
+        "stored"
+      ],
+      "answer_index": 3,
+      "explanation": "have sth done:coats and bags 被寄存,过去分词 stored 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the service desk, we heard it ____ that no audio guides were left.",
+      "options": [
+        "announced",
+        "announcing",
+        "to announce",
+        "announce"
+      ],
+      "answer_index": 0,
+      "explanation": "hear sth done:it(消息)被宣布,过去分词 announced 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Judy had her eyes ____ on Van Gogh's Sunflowers for a long time.",
+      "options": [
+        "fixing",
+        "fixed",
+        "to fix",
+        "fix"
+      ],
+      "answer_index": 1,
+      "explanation": "have sth done:eyes 被定住,过去分词 fixed 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We found ourselves ____ by the huge crowd at the entrance.",
+      "options": [
+        "surprising",
+        "to surprise",
+        "surprised",
+        "surprise"
+      ],
+      "answer_index": 2,
+      "explanation": "find sb done:ourselves 被惊到,过去分词 surprised 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The guide wanted the relics ____ exactly where they had been found.",
+      "options": [
+        "keeping",
+        "to keep",
+        "keep",
+        "kept"
+      ],
+      "answer_index": 3,
+      "explanation": "want sth done:relics 被保留,过去分词 kept 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Standing on the wall, we saw the whole town ____ in golden evening light.",
+      "options": [
+        "bathed",
+        "bathing",
+        "to bathe",
+        "bathe"
+      ],
+      "answer_index": 0,
+      "explanation": "see sth done:town 被笼罩,过去分词 bathed 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She heard her family name ____ aloud during the temple ceremony.",
+      "options": [
+        "calling",
+        "called",
+        "to call",
+        "call"
+      ],
+      "answer_index": 1,
+      "explanation": "hear sth done:name 被叫到,过去分词 called 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The receptionist found the guest book ____ open at the right page.",
+      "options": [
+        "leaving",
+        "to leave",
+        "left",
+        "leave"
+      ],
+      "answer_index": 2,
+      "explanation": "find sth done:book 被翻开放着,过去分词 left 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Visitors want the historic buildings ____ for future generations.",
+      "options": [
+        "protecting",
+        "to protect",
+        "protect",
+        "protected"
+      ],
+      "answer_index": 3,
+      "explanation": "want sth done:buildings 被保护,过去分词 protected 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We watched the old gate slowly ____ by the workers at sunset.",
+      "options": [
+        "closed",
+        "closing",
+        "to close",
+        "close"
+      ],
+      "answer_index": 0,
+      "explanation": "watch sth done:gate 被关上(强调被动),过去分词 closed 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the hill, they kept the lake ____ in view all afternoon.",
+      "options": [
+        "holding",
+        "held",
+        "to hold",
+        "hold"
+      ],
+      "answer_index": 1,
+      "explanation": "keep sth done:lake 被保持在视野中,过去分词 held 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He found the museum doors ____ when he arrived early in the morning.",
+      "options": [
+        "locking",
+        "to lock",
+        "locked",
+        "lock"
+      ],
+      "answer_index": 2,
+      "explanation": "find sth done:doors 被锁着,过去分词 locked 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The teacher wanted the report on British history ____ by Friday.",
+      "options": [
+        "finishing",
+        "to finish",
+        "finish",
+        "finished"
+      ],
+      "answer_index": 3,
+      "explanation": "want sth done:report 被完成,过去分词 finished 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the entrance, I heard my ticket number ____ over the speaker.",
+      "options": [
+        "read",
+        "reading",
+        "to read",
+        "ready"
+      ],
+      "answer_index": 0,
+      "explanation": "hear sth done:number 被读出,过去分词 read(/red/)作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The crowd saw the famous painting finally ____ to a safer wall.",
+      "options": [
+        "moving",
+        "moved",
+        "to move",
+        "move"
+      ],
+      "answer_index": 1,
+      "explanation": "see sth done:painting 被移动,过去分词 moved 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She wanted her photos of Loch Ness ____ in a small album.",
+      "options": [
+        "arranging",
+        "to arrange",
+        "arranged",
+        "arrange"
+      ],
+      "answer_index": 2,
+      "explanation": "want sth done:photos 被整理,过去分词 arranged 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We found the courtyard beautifully ____ with red lanterns for the feast.",
+      "options": [
+        "decorating",
+        "to decorate",
+        "decorate",
+        "decorated"
+      ],
+      "answer_index": 3,
+      "explanation": "find sth done:courtyard 被装饰,过去分词 decorated 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The visitors heard the old story ____ again by a local guide.",
+      "options": [
+        "told",
+        "telling",
+        "to tell",
+        "tell"
+      ],
+      "answer_index": 0,
+      "explanation": "hear sth done:story 被讲述,过去分词 told 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He wanted the broken castle gate ____ before the tourists came.",
+      "options": [
+        "mending",
+        "mended",
+        "to mend",
+        "mend"
+      ],
+      "answer_index": 1,
+      "explanation": "want sth done:gate 被修补,过去分词 mended 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the boat, we saw the whole valley ____ in thick morning mist.",
+      "options": [
+        "covering",
+        "to cover",
+        "covered",
+        "cover"
+      ],
+      "answer_index": 2,
+      "explanation": "see sth done:valley 被覆盖,过去分词 covered 作宾补。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The committee wants these old traditions ____ alive for many years.",
+      "options": [
+        "keeping",
+        "to keep",
+        "keep",
+        "kept"
+      ],
+      "answer_index": 3,
+      "explanation": "want sth done:traditions 被保持,过去分词 kept 作宾补。"
+    }
+  ]
+}

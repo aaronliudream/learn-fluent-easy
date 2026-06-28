@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "grammar_title": "过去分词作状语(时间/原因/条件/让步;逻辑主语 = 主句主语,与现在分词对照)",
+  "source": "人教版2019必修二 Unit 5 Discovering Useful Structures:过去分词作状语。过去分词(done)的逻辑主语就是主句主语,二者是被动/完成关系;主动则用现在分词(doing)。句子地道,答案唯一。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "过去分词作时间/原因状语(被动·完成,逻辑主语=主句主语)",
+      "overview": "当被省略的状语从句主语与主句主语一致、且二者是被动或已完成关系时,把从句压缩成过去分词放句首作时间/原因状语:Moved by his words, she accepted his gift.(= Because she was moved…)"
+    },
+    {
+      "code": "u5.02",
+      "point": "过去分词作条件/让步状语(if / though 引导可与过去分词搭配)",
+      "overview": "表示条件用 Given more time, we could finish.(= If we were given…);表示让步常保留连词:Though invited, he didn't come.(= Though he was invited…)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "分词逻辑主语 = 主句主语:被动用 done,主动用 doing",
+      "overview": "分词的逻辑主语必须是主句主语。主语承受动作(被动/完成)→ 过去分词 done;主语发出动作(主动/进行)→ 现在分词 doing。Used for performances, the hall is full of energy.(被动)≠ Using…(主动)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "\"____ by his romantic words, the girl finally accepted his gift.\"",
+      "options": [
+        "Moved",
+        "Moving",
+        "To move",
+        "Move"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 the girl 是被打动的对象(被动),作原因状语 → 过去分词 Moved。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in dark colours, the room needed some bright lights.\"",
+      "options": [
+        "Painting",
+        "Painted",
+        "To paint",
+        "Paint"
+      ],
+      "answer_index": 1,
+      "explanation": "the room 是被刷漆的(被动·已完成),作原因状语 → Painted。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by this music, Whitacre said it was like seeing colour for the first time.\"",
+      "options": [
+        "Inspiring",
+        "To inspire",
+        "Inspired",
+        "Inspire"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 Whitacre 被音乐激励(被动),作原因状语 → Inspired。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in the USA in 1970, Whitacre began studying music in 1988.\"",
+      "options": [
+        "Bearing",
+        "To bear",
+        "Bear",
+        "Born"
+      ],
+      "answer_index": 3,
+      "explanation": "出生用 be born,主语被'生于'某地(被动),作时间状语 → Born。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by the audience's cheers, the young singer played even better.\"",
+      "options": [
+        "Encouraged",
+        "Encouraging",
+        "To encourage",
+        "Encourage"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 the singer 被掌声鼓舞(被动),作原因状语 → Encouraged。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in a new way, the album was expected to be popular with fans.\"",
+      "options": [
+        "Recording",
+        "Recorded",
+        "To record",
+        "Record"
+      ],
+      "answer_index": 1,
+      "explanation": "the album 是被录制的(被动·完成),作原因状语 → Recorded。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ to perform on the stage, he felt both nervous and excited.\"",
+      "options": [
+        "Inviting",
+        "To invite",
+        "Invited",
+        "Invite"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 he 是被邀请的(被动),作原因状语 → Invited。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ for many years, the old piano still made a lovely sound.\"",
+      "options": [
+        "Using",
+        "To use",
+        "Use",
+        "Used"
+      ],
+      "answer_index": 3,
+      "explanation": "the piano 是被使用的(被动),作时间/原因状语 → Used。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by his teacher from time to time, Henry slowly lost interest in singing.\"",
+      "options": [
+        "Corrected",
+        "Correcting",
+        "To correct",
+        "Correct"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 Henry 被老师纠正(被动),作原因状语 → Corrected。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ with team spirit, the band members always act as a whole.\"",
+      "options": [
+        "Filling",
+        "Filled",
+        "To fill",
+        "Fill"
+      ],
+      "answer_index": 1,
+      "explanation": "the members 充满团队精神(be filled with,被动),作原因状语 → Filled。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ deeply by the song 'Happy', Sarah began to listen to music every day.\"",
+      "options": [
+        "Touching",
+        "To touch",
+        "Touched",
+        "Touch"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 Sarah 被歌曲打动(被动),作原因状语 → Touched。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ from university in 1995, Whitacre soon studied at the Juilliard School.\"",
+      "options": [
+        "Graduating",
+        "To graduate",
+        "Graduate",
+        "Graduated"
+      ],
+      "answer_index": 3,
+      "explanation": "主语与毕业是完成关系,过去分词表完成 → Graduated(此处用作时间状语,= After he graduated)。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in reading her students' minds, the piano teacher soon noticed my problem.\"",
+      "options": [
+        "Experienced",
+        "Experiencing",
+        "To experience",
+        "Experience"
+      ],
+      "answer_index": 0,
+      "explanation": "the teacher 富有经验(be experienced in,被动形式),作原因状语 → Experienced。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ and terrified at the same time, I could only agree to perform.\"",
+      "options": [
+        "Surprising",
+        "Surprised",
+        "To surprise",
+        "Surprise"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 I 是被惊到的(被动),作原因状语 → Surprised。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by the disease, she thought she did not have much longer to live.\"",
+      "options": [
+        "Frightening",
+        "To frighten",
+        "Frightened",
+        "Frighten"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 she 被疾病吓到(被动),作原因状语 → Frightened。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ all over the world, the virtual choir has brought people together.\"",
+      "options": [
+        "Seeing",
+        "To see",
+        "See",
+        "Seen"
+      ],
+      "answer_index": 3,
+      "explanation": "the choir 被全世界看到(被动),作时间/原因状语 → Seen。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by his fans' videos, Whitacre joined them into one performance.\"",
+      "options": [
+        "Inspired",
+        "Inspiring",
+        "To inspire",
+        "Inspire"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 Whitacre 受到启发(被动),作原因状语 → Inspired。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ for a good cause, the music festival drew the whole school together.\"",
+      "options": [
+        "Holding",
+        "Held",
+        "To hold",
+        "Hold"
+      ],
+      "answer_index": 1,
+      "explanation": "the festival 是被举办的(被动),作原因状语 → Held。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ onto the Internet, the videos were then joined into one virtual choir.\"",
+      "options": [
+        "Uploading",
+        "To upload",
+        "Uploaded",
+        "Upload"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the videos 被上传(被动)→ 过去分词 Uploaded;视频不会主动'上传',故不用 Uploading。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ by the rhythm of hip-hop, the children could not stop dancing.\"",
+      "options": [
+        "Exciting",
+        "To excite",
+        "Excite",
+        "Excited"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 the children 被节奏点燃(被动),作原因状语 → Excited。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in music since childhood, she chose to study composition at university.\"",
+      "options": [
+        "Interested",
+        "Interesting",
+        "To interest",
+        "Interest"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 she 对音乐感兴趣(be interested in,被动),作原因状语 → Interested。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ more time, the band could have finished recording the whole album.\"",
+      "options": [
+        "Giving",
+        "Given",
+        "To give",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "表条件 = If the band had been given…,主语被给予(被动)→ 过去分词 Given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Though ____ to the contest, the shy boy still refused to sing on stage.\"",
+      "options": [
+        "inviting",
+        "to invite",
+        "invited",
+        "invite"
+      ],
+      "answer_index": 2,
+      "explanation": "让步从句保留 though,主语被邀请(被动)→ 过去分词 invited(= though he was invited)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ properly, this old guitar could still produce a beautiful tone.\"",
+      "options": [
+        "Repairing",
+        "To repair",
+        "Repair",
+        "Repaired"
+      ],
+      "answer_index": 3,
+      "explanation": "表条件 = If it were repaired…,吉他被修(被动)→ Repaired。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Even though ____ by gradual blindness, Henry kept writing his music.\"",
+      "options": [
+        "affected",
+        "affecting",
+        "to affect",
+        "affect"
+      ],
+      "answer_index": 0,
+      "explanation": "让步从句,主语 Henry 被失明影响(被动)→ affected(= though he was affected)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ enough practice, even an ordinary person can play well in public.\"",
+      "options": [
+        "Giving",
+        "Given",
+        "To give",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "表条件 = If one is given…,主语被给予(被动)→ Given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Though ____ in dark colours, the small studio still felt warm and friendly.\"",
+      "options": [
+        "painting",
+        "to paint",
+        "painted",
+        "paint"
+      ],
+      "answer_index": 2,
+      "explanation": "让步从句,the studio 被刷成深色(被动)→ painted。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ a little more encouragement, the unemployed singer would not have quit.\"",
+      "options": [
+        "Offering",
+        "To offer",
+        "Offer",
+        "Offered"
+      ],
+      "answer_index": 3,
+      "explanation": "表条件 = If he had been offered…,主语被给予(被动)→ Offered。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Although ____ by the media many times, the band members were never discouraged.\"",
+      "options": [
+        "questioned",
+        "questioning",
+        "to question",
+        "question"
+      ],
+      "answer_index": 0,
+      "explanation": "让步从句,主语被媒体质疑(被动)→ questioned。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ the right equipment, anyone can set up a small home studio today.\"",
+      "options": [
+        "Giving",
+        "Given",
+        "To give",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "表条件 = If one is given…,主语被给予设备(被动)→ Given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Though ____ for performances, the Silver Hall is open to visitors in the day.\"",
+      "options": [
+        "using",
+        "to use",
+        "used",
+        "use"
+      ],
+      "answer_index": 2,
+      "explanation": "让步从句,the hall 被用于演出(被动)→ used。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ a fair chance, the street performer could become a real star.\"",
+      "options": [
+        "Allowing",
+        "To allow",
+        "Allow",
+        "Allowed"
+      ],
+      "answer_index": 3,
+      "explanation": "表条件 = If he were allowed…,主语被给予机会(被动)→ Allowed。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Even if ____ to a famous studio, she would still write her own songs.\"",
+      "options": [
+        "invited",
+        "inviting",
+        "to invite",
+        "invite"
+      ],
+      "answer_index": 0,
+      "explanation": "条件/让步从句,主语被邀请(被动)→ invited。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ proper training, an ordinary student can learn to read a musical score.\"",
+      "options": [
+        "Giving",
+        "Given",
+        "To give",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "表条件 = If a student is given…,主语被给予训练(被动)→ Given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Though ____ by sadness, Beethoven still completed his greatest works.\"",
+      "options": [
+        "marking",
+        "to mark",
+        "marked",
+        "mark"
+      ],
+      "answer_index": 2,
+      "explanation": "让步从句,主语的生活被悲伤所笼罩(be marked by,被动)→ marked。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ a louder microphone, the singer could have reached the back rows.\"",
+      "options": [
+        "Handing",
+        "To hand",
+        "Hand",
+        "Handed"
+      ],
+      "answer_index": 3,
+      "explanation": "表条件 = If he had been handed…,主语被递给(被动)→ Handed。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Although ____ many times by judges, the talented girl never lost heart.\"",
+      "options": [
+        "refused",
+        "refusing",
+        "to refuse",
+        "refuse"
+      ],
+      "answer_index": 0,
+      "explanation": "让步从句,主语被评委拒绝(被动)→ refused。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ enough time on stage, the new band would surely win the audience.\"",
+      "options": [
+        "Giving",
+        "Given",
+        "To give",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "表条件 = If the band were given…,主语被给予时间(被动)→ Given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Though ____ in a poor village, the young composer dreamed of great music.\"",
+      "options": [
+        "raising",
+        "to raise",
+        "raised",
+        "raise"
+      ],
+      "answer_index": 2,
+      "explanation": "让步从句,主语在村里被养大(be raised,被动)→ raised。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"____ a chance to record, the unemployed man finally shared his song with the world.\"",
+      "options": [
+        "Offering",
+        "To offer",
+        "Offer",
+        "Offered"
+      ],
+      "answer_index": 3,
+      "explanation": "表条件 = If/Once he was offered…,主语被给予机会(被动)→ Offered。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Even though ____ by his own teachers, the boy never gave up the piano.\"",
+      "options": [
+        "discouraged",
+        "discouraging",
+        "to discourage",
+        "discourage"
+      ],
+      "answer_index": 0,
+      "explanation": "让步从句,主语被老师们打击(被动)→ discouraged。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ for singing performances, the Silver Hall is always full of energy.\"",
+      "options": [
+        "Using",
+        "Used",
+        "To use",
+        "Use"
+      ],
+      "answer_index": 1,
+      "explanation": "主句主语 the hall 被用于演出(被动)→ 过去分词 Used;若用 Using 则错(大厅不会主动'使用')。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ their own videos at home, the choir members later joined them into one.\"",
+      "options": [
+        "Recorded",
+        "To record",
+        "Recording",
+        "Record"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the members 主动录制(主动)→ 现在分词 Recording;此处主语发出动作,不能用 Recorded。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ in 12 different countries, the singers were joined into one online video.\"",
+      "options": [
+        "Filming",
+        "To film",
+        "Film",
+        "Filmed"
+      ],
+      "answer_index": 3,
+      "explanation": "主句主语 the singers 被拍摄(被动)→ 过去分词 Filmed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ his fans to send videos, Whitacre created his first virtual choir.\"",
+      "options": [
+        "Asking",
+        "Asked",
+        "To ask",
+        "Ask"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 Whitacre 主动请求(主动)→ 现在分词 Asking;主语发出动作,不能用 Asked。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ by millions online, his first virtual choir became world-famous.\"",
+      "options": [
+        "Viewing",
+        "Viewed",
+        "To view",
+        "View"
+      ],
+      "answer_index": 1,
+      "explanation": "主句主语 the choir 被观看(被动)→ 过去分词 Viewed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ Mozart's classical music, the student felt his whole world light up.\"",
+      "options": [
+        "Heard",
+        "To hear",
+        "Hearing",
+        "Hear"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the student 主动听(主动)→ 现在分词 Hearing;主语发出动作,不能用 Heard。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ in a quiet studio, the new song sounded warm and clear.\"",
+      "options": [
+        "Producing",
+        "To produce",
+        "Produce",
+        "Produced"
+      ],
+      "answer_index": 3,
+      "explanation": "主句主语 the song 被制作(被动)→ 过去分词 Produced。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ the violin on the street, the boy soon drew a large crowd.\"",
+      "options": [
+        "Playing",
+        "Played",
+        "To play",
+        "Play"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 the boy 主动拉琴(主动)→ 现在分词 Playing;主语发出动作,不能用 Played。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ with great care, the old album still plays without a single problem.\"",
+      "options": [
+        "Keeping",
+        "Kept",
+        "To keep",
+        "Keep"
+      ],
+      "answer_index": 1,
+      "explanation": "主句主语 the album 被保管(被动)→ 过去分词 Kept。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ together every weekend, the band slowly built a loyal following.\"",
+      "options": [
+        "Practised",
+        "To practise",
+        "Practising",
+        "Practise"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the band 主动排练(主动)→ 现在分词 Practising;主语发出动作,不能用 Practised。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ by a famous composer, the song quickly spread around the world.\"",
+      "options": [
+        "Writing",
+        "To write",
+        "Write",
+        "Written"
+      ],
+      "answer_index": 3,
+      "explanation": "主句主语 the song 被创作(被动)→ 过去分词 Written。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ the audience with her voice, the singer forgot all her nerves.\"",
+      "options": [
+        "Touching",
+        "Touched",
+        "To touch",
+        "Touch"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 the singer 主动打动观众(主动)→ 现在分词 Touching;主语发出动作,不能用 Touched。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ in dark colours, the concert hall needed much brighter lights.\"",
+      "options": [
+        "Painting",
+        "Painted",
+        "To paint",
+        "Paint"
+      ],
+      "answer_index": 1,
+      "explanation": "主句主语 the hall 被刷漆(被动)→ 过去分词 Painted。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ a happy song to the patients, the doctor helped them relax.\"",
+      "options": [
+        "Played",
+        "To play",
+        "Playing",
+        "Play"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the doctor 主动放歌(主动)→ 现在分词 Playing;主语发出动作,不能用 Played。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ thousands of times online, the simple folk song became a hit.\"",
+      "options": [
+        "Sharing",
+        "To share",
+        "Share",
+        "Shared"
+      ],
+      "answer_index": 3,
+      "explanation": "主句主语 the song 被分享(被动)→ 过去分词 Shared。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ her own piano piece, the nervous girl gradually calmed down.\"",
+      "options": [
+        "Performing",
+        "Performed",
+        "To perform",
+        "Perform"
+      ],
+      "answer_index": 0,
+      "explanation": "主句主语 the girl 主动演奏(主动)→ 现在分词 Performing;主语发出动作,不能用 Performed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ for years in a small band, the guitar still sounds wonderful.\"",
+      "options": [
+        "Using",
+        "Used",
+        "To use",
+        "Use"
+      ],
+      "answer_index": 1,
+      "explanation": "主句主语 the guitar 被使用(被动)→ 过去分词 Used。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ the crowd to clap along, the street performer smiled brightly.\"",
+      "options": [
+        "Invited",
+        "To invite",
+        "Inviting",
+        "Invite"
+      ],
+      "answer_index": 2,
+      "explanation": "主句主语 the performer 主动邀请(主动)→ 现在分词 Inviting;主语发出动作,不能用 Invited。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ in 1827, Beethoven's music is still loved all over the world.\"",
+      "options": [
+        "Composing",
+        "To compose",
+        "Compose",
+        "Composed"
+      ],
+      "answer_index": 3,
+      "explanation": "主句主语 the music 被创作(被动)→ 过去分词 Composed。"
+    }
+  ]
+}

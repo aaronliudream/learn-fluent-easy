@@ -1,0 +1,332 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Cultural Heritage",
+  "source": "人教版2019必修二 Unit 1 同主题阅读(阿斯旺大坝/敦煌莫高窟/长城保护/发展与保护的平衡/泰山青年项目/无形文化遗产)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Saving the Temples on the Nile",
+      "body": "In the 1950s, the Egyptian government wanted to build a new dam across the Nile. The dam would control floods, produce electricity, and bring water to more farmers. But the plan led to protests, because the rising water would likely damage many temples and destroy cultural relics. After listening to scientists and to citizens who lived near the river, the government turned to the United Nations for help in 1959. A committee was set up to limit the damage and prevent the loss of the relics. Experts studied the problem and made a proposal. Then, over twenty years, thousands of engineers and workers took the temples down piece by piece and put them back together in a place where the water could not reach them. Fifty countries donated nearly eighty million dollars. When the project ended in 1980, it was seen as a great success and a model of how nations can work together.",
+      "vocab_notes": [
+        {
+          "word": "dam",
+          "cn": "水坝"
+        },
+        {
+          "word": "committee",
+          "cn": "委员会"
+        },
+        {
+          "word": "relic",
+          "cn": "文物;遗迹"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the Egyptian government want to build the dam?",
+          "options": [
+            "To control floods and supply water and electricity.",
+            "To attract more tourists to the river.",
+            "To destroy the old temples on purpose.",
+            "To stop ships from using the Nile."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'control floods, produce electricity, and bring water' 的转述。"
+        },
+        {
+          "stem": "How were the temples finally saved?",
+          "options": [
+            "They were left where they were.",
+            "They were taken apart and rebuilt on safer ground.",
+            "They were covered with water to protect them.",
+            "They were sold to other countries."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'took the temples down piece by piece and put them back together' 的转述。"
+        },
+        {
+          "stem": "What does the text suggest about the project's result?",
+          "options": [
+            "It showed that countries can solve problems together.",
+            "It failed and was soon forgotten.",
+            "It cost nothing at all.",
+            "It was finished within a single year."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'a model of how nations can work together' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Digital Light for the Mogao Caves",
+      "body": "Near the city of Dunhuang lie the Mogao Caves, a key stop along the ancient Silk Road. For more than a thousand years, travellers from many lands stopped here, and the walls of the caves were covered with beautiful paintings. Today these paintings face a quiet danger: time, light, and crowds of visitors slowly wear them away. To protect them, a team of researchers from China and other countries began an international project in 1994. Instead of touching the fragile walls, they take high-quality digital photographs of every painting. So far, nearly five hundred thousand images have been produced. By sharing these pictures over the Internet, the team hopes to promote interest in China's history and culture around the world. A museum in America has even made a copy of one cave so that people far away can admire it. In this way, modern technology helps a thousand-year-old treasure reach new eyes without harming the real thing.",
+      "vocab_notes": [
+        {
+          "word": "digital",
+          "cn": "数码的"
+        },
+        {
+          "word": "image",
+          "cn": "图像"
+        },
+        {
+          "word": "promote",
+          "cn": "促进;推广"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What danger do the cave paintings face?",
+          "options": [
+            "They are being painted over by artists.",
+            "They are slowly worn away by time, light and visitors.",
+            "They are too bright to look at.",
+            "They are kept in a foreign country."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'time, light, and crowds of visitors slowly wear them away' 的转述。"
+        },
+        {
+          "stem": "How does the team protect the paintings?",
+          "options": [
+            "By closing the caves to everyone.",
+            "By moving the walls to a museum.",
+            "By taking digital photos instead of touching the walls.",
+            "By repainting them every year."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'they take high-quality digital photographs… Instead of touching the fragile walls' 的转述。"
+        },
+        {
+          "stem": "Why does the team share the pictures online?",
+          "options": [
+            "To sell them for money.",
+            "To replace the real caves forever.",
+            "To stop people from visiting Dunhuang.",
+            "To raise interest in Chinese history around the world."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'hopes to promote interest in China's history and culture around the world' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Caring for the Great Wall",
+      "body": "The Great Wall of China is the largest structure ever made by people, and one of the great wonders of the world. It winds across mountains and deserts for thousands of kilometres, so it is an important heritage site not only for China but for everyone. Yet not every part of the wall is easy to find. Over the long centuries, wind, rain and wild plants have damaged many sections, and some have fallen into ruins. In a few places, weeds growing in the cracks even speed up the wall's collapse. To care for it, surveyors and archaeologists study the wall to record its true length and condition. Groups of volunteers visit the quieter parts once a month to clear away rubbish and watch for new damage. They hope that more people will join them, for the wall belongs to the whole world. By protecting it now, they can pass this great cultural treasure on to future generations.",
+      "vocab_notes": [
+        {
+          "word": "heritage",
+          "cn": "遗产"
+        },
+        {
+          "word": "preserve",
+          "cn": "保护"
+        },
+        {
+          "word": "professional",
+          "cn": "专业的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the Great Wall important to everyone, not just China?",
+          "options": [
+            "Because it is the largest human structure and a world wonder.",
+            "Because it is easy to walk along.",
+            "Because it was built last year.",
+            "Because it is only a few metres long."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the largest structure ever made… one of the great wonders of the world… for everyone' 的转述。"
+        },
+        {
+          "stem": "What has damaged many parts of the wall?",
+          "options": [
+            "Too many new buildings.",
+            "Weather and wild plants over the centuries.",
+            "Tourists buying tickets.",
+            "The work of the volunteers."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'wind, rain and wild plants have damaged many sections' 的转述。"
+        },
+        {
+          "stem": "What do the volunteers hope will happen?",
+          "options": [
+            "That the wall will be taken down.",
+            "That fewer people will care about it.",
+            "That more people will help protect the wall.",
+            "That the wall will be sold abroad."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'hope that more people will join them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "When the Old Meets the New",
+      "body": "Cities need to grow. New roads, new homes and new factories can make people's lives better. But growth often meets the past head-on. When a new road is planned, an old temple may stand in its way; when a dam is built, ancient relics may end up under water. There comes a time when the old must give way to the new, yet it is not possible to keep everything from the past. Finding the right balance between progress and protection is one of the biggest challenges a society can face. The story of the Aswan Dam shows that the choice need not be simple loss. With careful planning and the help of many hands, a country can build for the future without running over the treasures of the past. The best solutions, people have learned, are the ones that respect both the needs of today and the memory of yesterday.",
+      "vocab_notes": [
+        {
+          "word": "balance",
+          "cn": "平衡"
+        },
+        {
+          "word": "loss",
+          "cn": "损失"
+        },
+        {
+          "word": "process",
+          "cn": "过程"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What problem does the passage mainly discuss?",
+          "options": [
+            "How to build the tallest factory.",
+            "How to stop all cities from growing.",
+            "How to make roads cheaper.",
+            "How to balance new growth with protecting the past."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Finding the right balance between progress and protection' 的转述。"
+        },
+        {
+          "stem": "What does the Aswan Dam story teach, according to the text?",
+          "options": [
+            "That a country can grow without losing its treasures.",
+            "That progress always destroys the past.",
+            "That dams should never be built.",
+            "That the past is not worth saving."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'build for the future without running over the treasures of the past' 的转述。"
+        },
+        {
+          "stem": "What are the best solutions, according to the writer?",
+          "options": [
+            "The cheapest ones.",
+            "Those that honour today's needs while remembering the past.",
+            "The fastest ones.",
+            "The ones that ignore old buildings."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'respect both the needs of today and the memory of yesterday' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Summer at Mount Tai",
+      "body": "Last summer, high school students from seven countries came together at Mount Tai for an international youth camp. Mount Tai is one of the most famous mountains in China, and people have climbed and honoured it for more than three thousand years. On its slopes stand many temples, and thousands of stones are carved with old writing. The students wanted to share this treasure with people their own age, so they decided to create an app about the mountain. Every day they took photos of the temples and the carved stones, and they wrote simple notes to explain each one. In the afternoons, some of them visited nearby middle schools to talk with local teenagers about the value of protecting cultural heritage. One member said that he felt proud to help Mount Tai, just as people had done for thousands of years. By the end of the camp, the young volunteers had not only built an app but also made many new friends.",
+      "vocab_notes": [
+        {
+          "word": "creative",
+          "cn": "有创造力的"
+        },
+        {
+          "word": "tradition",
+          "cn": "传统"
+        },
+        {
+          "word": "heritage",
+          "cn": "遗产"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the students decide to create at the camp?",
+          "options": [
+            "A new road up the mountain.",
+            "A large new temple.",
+            "An app to introduce the mountain to young people.",
+            "A film about their school."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'decided to create an app about the mountain' 的转述。"
+        },
+        {
+          "stem": "What did some students do in the afternoons?",
+          "options": [
+            "They climbed to the very top alone.",
+            "They sold the photos they had taken.",
+            "They rested and did nothing.",
+            "They visited local schools to talk about protecting heritage."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'visited nearby middle schools to talk with local teenagers' 的转述。"
+        },
+        {
+          "stem": "How did one member feel about helping Mount Tai?",
+          "options": [
+            "Proud, like people before him.",
+            "Tired and unwilling.",
+            "Bored by the old stones.",
+            "Sorry that he had come."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'felt proud to help Mount Tai' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Heritage You Cannot Touch",
+      "body": "When we think of cultural heritage, we often picture temples, palaces and old relics. But a country's heritage is much more than the things we can touch. It also includes its traditions, customs and knowledge, such as dances, music, crafts and festivals. This kind of heritage is called intangible cultural heritage, because it lives in what people do rather than in stone or wood. A craft passed from grandmother to granddaughter, a folk song sung at a village festival, a special way of making paper — all of these carry the memory of a people. Yet such traditions can disappear quickly. If the young no longer learn them, they may be lost within a single generation. That is why many countries now record these arts, teach them in schools, and invite young people to take part in festivals. By keeping both the relics we can touch and the traditions we cannot, a culture stays alive and whole.",
+      "vocab_notes": [
+        {
+          "word": "tradition",
+          "cn": "传统"
+        },
+        {
+          "word": "disappear",
+          "cn": "消失"
+        },
+        {
+          "word": "within",
+          "cn": "在……之内"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is intangible cultural heritage?",
+          "options": [
+            "Only very old stone buildings.",
+            "Heritage that exists in people's actions rather than in objects.",
+            "Modern factories and roads.",
+            "Photos kept in a museum."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'lives in what people do rather than in stone or wood' 的转述。"
+        },
+        {
+          "stem": "Why can such traditions disappear quickly?",
+          "options": [
+            "Because they are made of weak stone.",
+            "Because they cost too much money.",
+            "Because young people may stop learning them.",
+            "Because they are kept overseas."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'If the young no longer learn them, they may be lost' 的转述。"
+        },
+        {
+          "stem": "What do many countries do to protect this heritage?",
+          "options": [
+            "They forbid all festivals.",
+            "They sell the old crafts.",
+            "They hide them from everyone.",
+            "They record the arts and teach them to the young."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'record these arts, teach them in schools, and invite young people' 的转述。"
+        }
+      ]
+    }
+  ]
+}

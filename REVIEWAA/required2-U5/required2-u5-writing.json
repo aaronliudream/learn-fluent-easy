@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "Write a Speech about How Music Has Helped You(写一篇关于音乐如何帮助你的演讲)",
+  "title_en": "How Music Changed My Life",
+  "genre": "演讲 / 记叙+议论(speech about your favourite music / a band / why music matters)",
+  "source": "人教版2019必修二 Unit 5 Reading for Writing:write a speech about how music has helped you or someone you know(讲述你与音乐的经历 + 音乐如何帮助你 + 运用比喻/拟人/引用等修辞)。",
+  "prompt_cn": "假设你叫李华,要在校园音乐分享会上做一个约100词的英语演讲。请讲述音乐对你(或你认识的人)的影响,内容包括:① 自我介绍并点明演讲主题;② 描述你与音乐的一段经历(如哪种音乐/哪支乐队帮过你);③ 说明音乐如何改变了你的心情或生活;④ 鼓励同学也让音乐成为生活的一部分。注意:适当用一两种修辞(比喻/引用/反问)。",
+  "prompt_en": "Suppose you are Li Hua. Give a short speech (about 100 words) at a school music event about how music has helped you or someone you know. Include: 1) introduce yourself and your topic; 2) describe an experience with music (a kind of music or a band that helped you); 3) explain how music changed your mood or life; 4) encourage classmates to make music part of their lives. Use one or two rhetorical devices (a metaphor, a quote, or a rhetorical question).",
+  "points": [
+    "自我介绍 + 点题(It's an honour to share how music has changed my life.)",
+    "音乐经历(Two years ago, when I felt low, I found a band / a kind of music …)",
+    "音乐的作用(Music gave me strength and brought me relief.)",
+    "鼓励 + 修辞(Have you ever …? / Music is the medicine of the mind.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Good morning, everyone! My name is Li Hua, and it is an honour to share how music has changed my life. Have you ever faced a time when everything looked dark? Last year, before my exams, I felt tired and alone. Then I discovered a band whose gentle songs became the rock I leant on. When I listened, music gave me strength and brought me relief; somehow it lifted my spirits like a kite in the wind. As one writer said, \"Music is the medicine of the mind.\" So whatever you are feeling, please make music a part of your life. Thank you!",
+  "model_translation": "大家早上好!我叫李华,很荣幸与大家分享音乐如何改变了我的生活。你是否曾遇到过一切看起来都很灰暗的时刻?去年考试前,我感到疲惫又孤单。后来我发现了一支乐队,他们温柔的歌成了我赖以依靠的磐石。当我聆听时,音乐给了我力量,也带给我宽慰;它不知怎地就把我的心情托起,像风中的一只风筝。正如一位作家所说:'音乐是心灵的良药。'所以,无论你有什么感受,请让音乐成为你生活的一部分。谢谢!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:自我介绍点题 / 音乐经历 / 音乐的作用 / 鼓励同学" },
+      { "dimension": "结构", "max": 4, "criteria": "演讲层次清晰、有称呼与结尾、句句围绕中心、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、过去分词作状语等运用得当、含1-2种修辞、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼+点题 It's an honour to share how music has changed my life.",
+      "经历 Last year, before my exams, I felt … Then I discovered …",
+      "作用 Music gave me strength and brought me relief.",
+      "结尾鼓励 Whatever you are feeling, make music a part of your life. Thank you!"
+    ],
+    "key_expressions": [
+      "It is an honour to share how music has changed my life.",
+      "Music gave me strength and brought me relief.",
+      "It lifted my spirits like a kite in the wind.",
+      "As one writer said, \"Music is the medicine of the mind.\""
+    ],
+    "useful_words": ["honour", "share", "band", "strength", "relief", "spirits", "somehow", "medicine", "moved", "thank"]
+  },
+  "high_sentences": [
+    "It is an honour to share how music has changed my life.",
+    "Music gave me strength and brought me relief.",
+    "Moved by its gentle songs, I slowly found hope again.",
+    "Whatever you are feeling, the right music can make it better."
+  ],
+  "error_pairs": [
+    { "wrong": "Move by the song, I felt better.", "correct": "Moved by the song, I felt better.", "note": "主语 I 被歌曲打动(被动),状语用过去分词 Moved,不用原形 Move。" },
+    { "wrong": "Music give me strength.", "correct": "Music gives me strength.", "note": "主语 Music 第三人称单数,动词加 s。" },
+    { "wrong": "I'd like to share how music changed my life with you all happily.", "correct": "I'd like to share with you all how music changed my life.", "note": "share with sb sth 语序;避免状语堆在句末造成歧义。" }
+  ],
+  "paragraph_template": "【音乐演讲结构】\n第1句 称呼+点题:Good morning! It's an honour to share how music has changed my life.\n第2-3句 经历:Have you ever …? Last year, I felt … Then I discovered …\n第4-5句 作用+修辞:Music gave me strength and brought me relief, like …\n第6句 鼓励结尾:Whatever you are feeling, make music a part of your life. Thank you!"
+}

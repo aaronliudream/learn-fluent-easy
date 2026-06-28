@@ -1,0 +1,366 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Wildlife Protection",
+  "source": "人教版2019必修二 Unit 2 同主题阅读(藏羚羊保护/家乡湿地/濒危物种与WWF/海报与情感/动物救助中心/与自然和谐)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Day with the Antelopes",
+      "topic_cn": "记叙·藏羚羊保护区见闻",
+      "body": "The air was thin, and we had to rest several times on the short hike from camp. On the plain in front of us, we could just make out a herd of graceful animals. This was why we had come here: to observe the Tibetan antelopes. Watching them move slowly across the green grass, I was struck by their beauty. My guide, a villager named Zhaxi, works at a nature reserve that gives shelter to the wild animals of the area. To him, the land is sacred, and protecting the wildlife is a way of life. He told me that during the 1980s and 1990s the antelope population dropped sharply, because hunters were shooting the animals to make profits and their living spaces were becoming smaller. To save the species, the government placed it under national protection, and volunteers watched over the herds day and night. Thanks to these measures, the population has recovered, and the antelope is no longer in danger. Yet Zhaxi still worries, for the threats have not completely disappeared.",
+      "vocab_notes": [
+        {
+          "word": "antelope",
+          "cn": "羚羊"
+        },
+        {
+          "word": "herd",
+          "cn": "兽群"
+        },
+        {
+          "word": "reserve",
+          "cn": "保护区"
+        },
+        {
+          "word": "sacred",
+          "cn": "神圣的"
+        },
+        {
+          "word": "recover",
+          "cn": "恢复"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the writer travel to the plain?",
+          "options": [
+            "To watch and study the Tibetan antelopes.",
+            "To go shopping in a nearby town.",
+            "To hunt animals for their fur.",
+            "To build a new road across the grass."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'to observe the Tibetan antelopes' 的转述。"
+        },
+        {
+          "stem": "What caused the antelope population to fall in the 1980s and 1990s?",
+          "options": [
+            "Too much rain on the plain.",
+            "Hunting for profit and the loss of living space.",
+            "A lack of interest from the government.",
+            "The animals moving to another country."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'hunters were shooting the animals to make profits and their living spaces were becoming smaller' 的概括。"
+        },
+        {
+          "stem": "How does Zhaxi feel about the antelopes now?",
+          "options": [
+            "He still worries because dangers remain.",
+            "He thinks the work is completely finished.",
+            "He no longer cares about them.",
+            "He wants to start hunting them again."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'still worries, for the threats have not completely disappeared' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Wetland Near My Home",
+      "topic_cn": "记叙·家乡湿地的变化",
+      "body": "When I was in primary school, there was a beautiful wetland near my home. It was full of life, with wild birds, fish, snakes and countless insects. My friends and I often went there to watch the birds and study them, and it was an interesting place for all of us. But things have begun to change in recent years. Small birds are being caught with nets, and wild ducks are being sold at the food market in town. Fish and snakes are being killed for food in some restaurants. Even worse, the wetland itself is being destroyed. Some parts are now being covered with new houses, and there is rubbish everywhere. The water is being polluted a little more every day. Whenever I go back, I feel very worried, because the place I loved as a child is slowly disappearing. I keep asking myself one question: what can ordinary people like us actually do to save it before it is too late?",
+      "vocab_notes": [
+        {
+          "word": "wetland",
+          "cn": "湿地"
+        },
+        {
+          "word": "insect",
+          "cn": "昆虫"
+        },
+        {
+          "word": "destroy",
+          "cn": "破坏"
+        },
+        {
+          "word": "pollute",
+          "cn": "污染"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the wetland like when the writer was a child?",
+          "options": [
+            "It was empty and lifeless.",
+            "It was full of birds, fish and insects.",
+            "It was already covered with houses.",
+            "It was used only as a market."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'full of life, with wild birds, fish, snakes and countless insects' 的转述。"
+        },
+        {
+          "stem": "Which of the following is happening to the wetland now?",
+          "options": [
+            "Its water is becoming cleaner each day.",
+            "More wild animals are moving in to live there.",
+            "Birds and ducks are being caught and sold.",
+            "The town has turned it into a new reserve."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Small birds are being caught… wild ducks are being sold' 的概括。"
+        },
+        {
+          "stem": "How does the writer feel about these changes?",
+          "options": [
+            "Proud and satisfied.",
+            "Bored and uninterested.",
+            "Calm and hopeful.",
+            "Worried and anxious to help."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'feel very worried… what can ordinary people like us actually do' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "What Are We Doing to Our Planet?",
+      "topic_cn": "说明·物种灭绝与公众觉醒",
+      "body": "Our planet is changing fast, and not always for the better. Wildlife is dying out at an alarming rate. Experts say that between 150 and 200 species become extinct every single day. This mass extinction is mainly caused by hunting, the loss of habitats and pollution. Once a species has gone, it can never come back, and the whole web of life around it grows weaker. The good news is that more and more people are beginning to understand the danger. Posters, films and online videos are being used to make ordinary people aware of the problem. When buyers stop wanting animal products, the killing slows down too. That is why one famous slogan says simply, 'When the buying stops, the killing can too.' Saving wildlife is not only the job of scientists or governments. Each of us can make a difference by refusing to buy goods made from wild animals, and by sharing what we know with our friends and family. Change really does begin with you.",
+      "vocab_notes": [
+        {
+          "word": "die out",
+          "cn": "灭亡;逐渐消失"
+        },
+        {
+          "word": "extinct",
+          "cn": "灭绝的"
+        },
+        {
+          "word": "mass extinction",
+          "cn": "大规模灭绝"
+        },
+        {
+          "word": "aware",
+          "cn": "意识到的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what mainly causes the mass extinction?",
+          "options": [
+            "Hunting, habitat loss and pollution.",
+            "Cold weather and heavy snow.",
+            "A shortage of zoos and parks.",
+            "Too many nature reserves."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'mainly caused by hunting, the loss of habitats and pollution' 的转述。"
+        },
+        {
+          "stem": "What does the writer say happens when buyers stop wanting animal products?",
+          "options": [
+            "More species become extinct.",
+            "The killing of animals slows down.",
+            "Hunters earn larger profits.",
+            "Reserves have to be closed."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'When buyers stop wanting animal products, the killing slows down too' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main message in the last part?",
+          "options": [
+            "Only scientists can solve the problem.",
+            "Buying animal goods is harmless.",
+            "Ordinary individuals can also help protect wildlife.",
+            "The danger has already disappeared."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'Each of us can make a difference… Change really does begin with you' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Work of the WWF",
+      "topic_cn": "说明·世界自然基金会",
+      "body": "The World Wide Fund for Nature, often called the WWF, is one of the best-known wildlife organisations in the world. Its task is to protect the many kinds of plants and animals that share our planet with us. The WWF believes that most people do not really want to harm wild creatures. The trouble is that many of them simply do not understand how serious the situation has become. So the group works hard to share clear information and to stir up public interest in the welfare of nature. It hopes that, once people learn the facts, they will stop buying animal products and start looking for better solutions. Many wild species cannot easily adapt to the rapid changes brought about by modern life, so they need our help to survive. Around the world, the WWF supports nature reserves, fights against the illegal animal trade, and teaches young people why wildlife matters. Step by step, it is trying to build a future in which humans and animals can live side by side.",
+      "vocab_notes": [
+        {
+          "word": "organisation",
+          "cn": "组织"
+        },
+        {
+          "word": "welfare",
+          "cn": "福祉"
+        },
+        {
+          "word": "adapt",
+          "cn": "适应"
+        },
+        {
+          "word": "illegal",
+          "cn": "非法的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main task of the WWF?",
+          "options": [
+            "To sell products made from wild animals.",
+            "To build large modern cities.",
+            "To stop people from visiting nature.",
+            "To protect the world's plants and animals."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'protect the many kinds of plants and animals' 的转述。"
+        },
+        {
+          "stem": "Why does the WWF spend so much effort sharing information?",
+          "options": [
+            "Because many people do not realise how serious the problem is.",
+            "Because it wants to make money quickly.",
+            "Because the law forces it to do so.",
+            "Because scientists have already solved everything."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'many of them simply do not understand how serious the situation has become' 的转述。"
+        },
+        {
+          "stem": "What kind of future does the WWF hope to build?",
+          "options": [
+            "A world with no wild animals left.",
+            "A world where people and animals live together.",
+            "A world where only humans matter.",
+            "A world full of illegal animal trade."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'humans and animals can live side by side' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Posters That Speak",
+      "topic_cn": "说明·海报如何打动人心",
+      "body": "A good poster can do something that a long report often cannot: it can touch people's hearts in a single moment. The best wildlife posters are simple, but they stir up strong emotions. One poster shows a lonely koala beside a fallen tree, with the words, 'Don't make paper with my home!' Behind the joke is a serious truth: billions of trees are being cut down every year, and many animal homes are being destroyed at the same time. Another poster reminds us that all species deserve care, not only the cute and famous ones. Pandas and dolphins easily win our love, but less attractive creatures matter too, because nature needs every kind to stay healthy. When you design a poster, experts suggest a few clear steps. Choose a title that is short, interesting and a little unusual. Use one powerful image to catch the reader's eye. Then tell the reader exactly what you want them to think and do. A poster that follows these steps can turn a quiet feeling into real action.",
+      "vocab_notes": [
+        {
+          "word": "poster",
+          "cn": "海报"
+        },
+        {
+          "word": "stir up",
+          "cn": "激起"
+        },
+        {
+          "word": "emotion",
+          "cn": "情感"
+        },
+        {
+          "word": "unusual",
+          "cn": "不寻常的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what can a good poster do better than a long report?",
+          "options": [
+            "List every fact about an animal.",
+            "Replace the work of scientists.",
+            "Touch people's feelings in a single moment.",
+            "Make trees grow faster."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'touch people's hearts in a single moment' 的转述。"
+        },
+        {
+          "stem": "Why does the writer say less attractive animals also matter?",
+          "options": [
+            "Because they are easy to sell.",
+            "Because they make the best pets.",
+            "Because pandas and dolphins dislike them.",
+            "Because a healthy natural world depends on every kind of creature."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'nature needs every kind to stay healthy' 的转述。"
+        },
+        {
+          "stem": "Which step does the writer suggest when designing a poster?",
+          "options": [
+            "Pick one powerful image and a short, unusual title.",
+            "Use as many small pictures as possible.",
+            "Hide the message from the reader.",
+            "Choose a long and ordinary title."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Choose a title that is short… Use one powerful image' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Shelter for Small Friends",
+      "topic_cn": "记叙·学生创办的动物救助站",
+      "body": "Not only endangered animals need help. Ordinary pets sometimes need it too. When families move away, they may leave a cat or a dog behind, and wounded wild birds often fall to the ground with nowhere to go. A few years ago, a group of high school students and their parents noticed how many pets had been left homeless in their town. Instead of just feeling sad, they decided to act, and together they started a small rescue shelter. Today the shelter is home to about seventy cats, fifty dogs, and a few rabbits and turtles. The young people who run it work hard to keep the place clean, feed the animals and find them new families. So far they have helped nearly two hundred animals find loving homes. The work is tiring, but the students say it is worth every minute. They welcome anyone who wants to volunteer time, money or simply love. As they like to remind visitors, what these animals need most is for someone to care.",
+      "vocab_notes": [
+        {
+          "word": "shelter",
+          "cn": "庇护所"
+        },
+        {
+          "word": "wounded",
+          "cn": "受伤的"
+        },
+        {
+          "word": "rescue",
+          "cn": "救助"
+        },
+        {
+          "word": "volunteer",
+          "cn": "志愿(者)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What made the students decide to start the shelter?",
+          "options": [
+            "They wanted to earn a large profit.",
+            "They noticed that lots of homeless pets had appeared locally.",
+            "Their teacher ordered them to do it.",
+            "They were looking for a place to live."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'noticed how many pets had been left homeless… decided to act' 的转述。"
+        },
+        {
+          "stem": "What do the young people do at the shelter?",
+          "options": [
+            "They sell the animals for money.",
+            "They release all the animals into the wild.",
+            "They keep the shelter tidy, feed its animals and seek new owners for them.",
+            "They keep the animals locked away from visitors."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'keep the place clean, feed the animals and find them new families' 的转述。"
+        },
+        {
+          "stem": "According to the students, what do the animals need most?",
+          "options": [
+            "Expensive food and toys.",
+            "A large and famous building.",
+            "More medicine than people.",
+            "Someone who is willing to care for them."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'what these animals need most is for someone to care' 的转述。"
+        }
+      ]
+    }
+  ]
+}

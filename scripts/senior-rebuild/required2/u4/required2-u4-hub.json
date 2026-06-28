@@ -1,0 +1,49 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "Four countries belong to the United Kingdom.", "opts": ["有四个国家属于联合王国。", "联合王国只有一个国家。", "苏格兰已经脱离了英国。", "英国没有自己的国旗。"], "answer": 0 },
+    { "audio": "The Normans conquered England after a famous battle.", "opts": ["罗马人修建了城镇和道路。", "诺曼人在一场著名战役后征服了英格兰。", "维京人留下了许多新词。", "盎格鲁-撒克逊人带来了英语。"], "answer": 1 },
+    { "audio": "We had our car parked in an underground car park.", "opts": ["我们把车开走了。", "我们卖掉了那辆车。", "我们把车停在了地下停车场。", "我们的车坏在了路上。"], "answer": 2 },
+    { "audio": "Loch Ness is surrounded by beautiful natural landscape.", "opts": ["尼斯湖里没有水。", "尼斯湖是新建的。", "尼斯湖很容易找到。", "尼斯湖被美丽的自然风景环绕。"], "answer": 3 },
+    { "audio": "London is an ancient port city with a long history.", "opts": ["伦敦是历史悠久的古老港口城市。", "伦敦是一座很小的新城。", "伦敦离大海很远。", "伦敦没有任何古迹。"], "answer": 0 },
+    { "audio": "Many families still enjoy the tradition of afternoon tea.", "opts": ["没有人再喝下午茶。", "许多家庭仍喜爱下午茶的传统。", "下午茶被禁止了。", "下午茶只在节日喝。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The four countries ____ to the United Kingdom.", "opts": ["belong", "destroy", "sell", "forget"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "London is an ancient ____ city with a long history.", "opts": ["song", "port", "price", "noise"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Loch Ness is ____ by beautiful natural landscape.", "opts": ["lost", "hidden", "surrounded", "sold"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Stop by a village ____ and relax with a glass of wine.", "opts": ["price", "noise", "machine", "pub"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "We looked up at the ____ window and wondered what had happened.", "opts": ["broken", "breaking", "to break", "break"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We could get our car battery ____ near the square.", "opts": ["charging", "charged", "to charge", "charge"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "At the desk, we heard it ____ that no audio guides were left.", "opts": ["announcing", "to announce", "announced", "announce"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The soldiers ____ in the war were cared for by the family.", "opts": ["wounding", "to wound", "wound", "wounded"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["维京人留下了新词和许多地名。", "他们建了一座新桥。", "游客买了门票。", "孩子们在玩游戏。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The Vikings left behind new words and many place names." },
+    { "q": "听句子选中文:", "opts": ["这座庙是新建的。", "她把目光定格在那幅向日葵上。", "她卖掉了那幅画。", "她从没去过美术馆。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "She had her eyes fixed on the painting of sunflowers." }
+  ],
+  "reading": {
+    "passage": "The United Kingdom is made up of four countries that share one flag and one currency, yet each keeps its own traditions. Over hundreds of years, different groups of people took over the land and left their mark, from Roman roads to Norman castles. Today the UK is a fascinating mix of old history and modern life.",
+    "passageCn": "联合王国由四个国家组成,它们共用一面国旗和一种货币,却各自保留着自己的传统。数百年来,不同的人群先后占领这片土地并留下印记,从罗马人的道路到诺曼人的城堡。如今的英国是古老历史与现代生活的迷人结合体。",
+    "questions": [
+      { "q": "What do the four countries share?", "opts": ["One flag and one currency.", "The same football team.", "The same national dish.", "Nothing at all."], "answer": 0 },
+      { "q": "What did different groups leave behind?", "opts": ["Nothing of value.", "Their mark, such as roads and castles.", "Only modern buildings.", "A single language only."], "answer": 1 },
+      { "q": "What is the UK like today?", "opts": ["A place with no history.", "Exactly the same everywhere.", "A fascinating mix of old and new.", "A country without traditions."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences introducing a place, festival or tradition of the UK or China. Use sensory details and at least one past participle (such as surrounded, dotted, or fixed).",
+    "promptCn": "用3-4句话介绍英国或中国的一个地方、节日或传统:用感官细节描写,并至少用一个过去分词(如 surrounded / dotted / fixed)。",
+    "sampleWords": ["tradition", "festival", "ancient", "surround", "scent", "snack", "courtyard", "landscape", "custom", "dotted"]
+  },
+  "dialogues": [
+    {
+      "title": "At a Historic Town",
+      "lines": [
+        { "role": "A", "text": "Wow, this old town feels like walking into history!", "cn": "哇,这座古镇感觉像走进了历史!" },
+        { "role": "B", "text": "It does. The whole town is surrounded by an ancient city wall.", "cn": "确实。整座城镇都被一道古城墙环绕着。" },
+        { "role": "A", "text": "What should we try while we're here?", "cn": "我们在这儿该尝点什么?" },
+        { "role": "B", "text": "Let's get some local snacks packed and eat them on the wall.", "cn": "我们打包些当地小吃,到城墙上吃吧。" }
+      ]
+    }
+  ]
+}

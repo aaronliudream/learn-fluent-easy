@@ -1,0 +1,493 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "The Internet",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修二 Unit 3 同主题听力(网上习惯调查/互联网好处短文/选健身App对话/上网安全短文/装软件问密码对话/社交媒体小贴士短文)。用词限 U3/初中/常见词,答案唯一,与读写关不撞;long,short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Online Habits Survey",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Sam",
+          "text": "Hi Anna, I'm doing a survey on online habits. How much time do you spend online every day?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "It depends, but usually about two hours, mostly after school."
+        },
+        {
+          "speaker": "Sam",
+          "text": "And what do you usually do online?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "I chat with my friends and stream music. Sometimes I write a blog post."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Interesting. Why do you use the Internet so much?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Mainly to keep in touch with friends who live far away. It makes me feel less lonely."
+        },
+        {
+          "speaker": "Sam",
+          "text": "That's a great reason. Do you ever worry about your privacy?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yes, I do. I never give out my home address, and I use a strong password for every account."
+        }
+      ],
+      "translation_cn": "Sam 在做网上习惯调查;Anna 每天约上网两小时,多在放学后;她常和朋友聊天、流播音乐,有时写博客;主要为了和远方朋友保持联系、减少孤独;她也注意隐私,从不透露家庭住址,每个账户都用强密码。",
+      "questions": [
+        {
+          "stem": "How much time does Anna usually spend online each day?",
+          "options": [
+            "About two hours.",
+            "About five hours.",
+            "Almost no time.",
+            "The whole day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna usually do online?",
+          "options": [
+            "Play football and run.",
+            "Chat with friends and stream music.",
+            "Only do her homework.",
+            "Watch TV with her family."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Anna use the Internet so much?",
+          "options": [
+            "To keep in touch with faraway friends.",
+            "To earn money.",
+            "To buy new phones.",
+            "To play games all night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does staying online make Anna feel?",
+          "options": [
+            "More tired.",
+            "Less lonely.",
+            "More bored.",
+            "Angry."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Anna do to protect her privacy?",
+          "options": [
+            "She shares her password with friends.",
+            "She posts her phone number online.",
+            "She never gives out her address and uses strong passwords.",
+            "She uses the same easy password everywhere."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 What the Internet Does for Us",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The Internet has made our daily lives far more convenient.",
+        "When we shop, we no longer need to wait in line or carry cash.",
+        "We can get the newest information from large databases in seconds.",
+        "We can also download software, documents, and images whenever we need them.",
+        "Most of all, it helps people who live far apart feel close to one another."
+      ],
+      "translation_cn": "互联网让日常生活方便许多;购物时不再需要排队或带现金;几秒内就能从大型数据库获取最新信息;需要时随时能下载软件、文档和图片;最重要的是,它让相隔遥远的人感到亲近。",
+      "questions": [
+        {
+          "stem": "What has the Internet done to our daily lives?",
+          "options": [
+            "Made them more dangerous.",
+            "Made them more expensive.",
+            "Made them slower.",
+            "Made them far more convenient."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do we no longer need to do when shopping?",
+          "options": [
+            "Wait in line or carry cash.",
+            "Choose what we like.",
+            "Use a phone at all.",
+            "Talk to anyone."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where can we get the newest information?",
+          "options": [
+            "From old paper maps.",
+            "From large databases.",
+            "From the radio only.",
+            "From nowhere online."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "According to the passage, what can we download whenever we need?",
+          "options": [
+            "Only music.",
+            "Only games.",
+            "Software, documents, and images.",
+            "Nothing useful."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage say the Internet helps people do most of all?",
+          "options": [
+            "Spend more money.",
+            "Forget their friends.",
+            "Travel less.",
+            "Feel close to faraway people."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Looking for a Fitness App",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Xiao Bo",
+          "text": "Laura, I'm looking for an app to help me get in shape. Any ideas?"
+        },
+        {
+          "speaker": "Laura",
+          "text": "Sure. This one keeps track of every step you take during the day."
+        },
+        {
+          "speaker": "Xiao Bo",
+          "text": "That sounds good. I imagine it would help me walk more."
+        },
+        {
+          "speaker": "Laura",
+          "text": "It might. And this second app can even help you make a fitness plan."
+        },
+        {
+          "speaker": "Xiao Bo",
+          "text": "Great! What about you? What kind of app do you want?"
+        },
+        {
+          "speaker": "Laura",
+          "text": "I'd like one that helps me get discounts when I shop online."
+        },
+        {
+          "speaker": "Xiao Bo",
+          "text": "I guess you could save a little money with that. Have you found one yet?"
+        },
+        {
+          "speaker": "Laura",
+          "text": "Not yet. But before I download anything, I always read what other users say."
+        }
+      ],
+      "translation_cn": "小波想找一款健身App;Laura 推荐一款能记录每天步数的;小波觉得能帮他多走路;Laura 说第二款还能帮他制定健身计划;小波问 Laura 想要什么;Laura 想要一款购物时能拿折扣的;小波说能省点钱;Laura 还没找到,且下载前总会先看别人的评价。",
+      "questions": [
+        {
+          "stem": "What kind of app is Xiao Bo looking for?",
+          "options": [
+            "One to help him get in shape.",
+            "One to help him cook.",
+            "One to help him sleep.",
+            "One to help him draw."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the first app Laura shows do?",
+          "options": [
+            "It plays music.",
+            "It keeps track of the steps he takes.",
+            "It sends emails.",
+            "It deletes photos."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can the second app do?",
+          "options": [
+            "Buy clothes for him.",
+            "Charge his phone.",
+            "Help him make a fitness plan.",
+            "Tell jokes."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What kind of app does Laura want?",
+          "options": [
+            "One that streams films.",
+            "One that writes blogs.",
+            "One that adds money to her bank.",
+            "One that helps her get discounts."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Laura always do before downloading an app?",
+          "options": [
+            "She reads what other users say.",
+            "She buys the most expensive one.",
+            "She asks her teacher first.",
+            "She downloads it at once."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 A Few Rules for Staying Safe",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are a few simple rules for staying safe online.",
+        "If a site makes you feel uncomfortable, leave it at once and click nothing.",
+        "Never give out your home address or phone number to people you don't know.",
+        "Someone could use that information to steal your identity.",
+        "And remember, the more polite you are, the less likely you are to be attacked."
+      ],
+      "translation_cn": "几条简单的上网安全规则:如果某网站让你不舒服,立刻离开、什么也别点;绝不要把家庭住址或电话给不认识的人;有人可能用这些信息盗用你的身份;记住,你越有礼貌,就越不容易被攻击。",
+      "questions": [
+        {
+          "stem": "What should you do if a site makes you uncomfortable?",
+          "options": [
+            "Post an angry message.",
+            "Leave it at once and click nothing.",
+            "Tell all your friends.",
+            "Stay and keep reading."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you never give out to strangers?",
+          "options": [
+            "Your favourite colour.",
+            "Your school subjects.",
+            "Your home address or phone number.",
+            "Your hobbies."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is sharing such information dangerous?",
+          "options": [
+            "It makes your phone slow.",
+            "It costs money.",
+            "It wastes your time.",
+            "Someone could use it to steal your identity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the passage, what happens the more polite you are?",
+          "options": [
+            "The less likely you are to be attacked.",
+            "The slower your phone gets.",
+            "The more money you spend.",
+            "The more friends you lose."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to buy a new phone.",
+            "A few rules for staying safe online.",
+            "How to write a long blog.",
+            "How to win online games."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Setting Up New Software",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mum",
+          "text": "My phone is so slow these days. Can you help me, dear?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Of course. Let's download some new software to clean it up."
+        },
+        {
+          "speaker": "Mum",
+          "text": "Is it safe? I worry about these things."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Don't worry. I'm using a website we're familiar with. Now it asks you to choose a password."
+        },
+        {
+          "speaker": "Mum",
+          "text": "What kind of password should I choose?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "A strong one, not your name or birthday. Now press this button to start."
+        },
+        {
+          "speaker": "Mum",
+          "text": "All right. Oh, it says the software has been downloaded already!"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Perfect. Let's open it. Look, your phone is running much faster now."
+        }
+      ],
+      "translation_cn": "妈妈手机很慢请 Tom 帮忙;Tom 提议下载新软件清理;妈妈担心是否安全;Tom 说用的是熟悉的网站,要她设个密码;妈妈问设什么样的;Tom 说要强密码,别用名字或生日,然后按按钮开始;很快软件就下载好了;打开后手机快了很多。",
+      "questions": [
+        {
+          "stem": "What is the problem with Mum's phone?",
+          "options": [
+            "It is broken.",
+            "It is lost.",
+            "It is too slow.",
+            "It is too loud."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does Tom plan to fix it?",
+          "options": [
+            "By buying a new phone.",
+            "By turning it off forever.",
+            "By selling it.",
+            "By downloading new software."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Tom say the download is safe?",
+          "options": [
+            "Because he uses a website they are familiar with.",
+            "Because it is free.",
+            "Because Mum is watching.",
+            "Because it is very fast."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of password does Tom tell Mum to choose?",
+          "options": [
+            "Her own name.",
+            "A strong one, not her name or birthday.",
+            "Her birthday.",
+            "A short and easy one."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happens after the software has been downloaded?",
+          "options": [
+            "The phone stops working.",
+            "The screen goes dark.",
+            "The phone runs much faster.",
+            "Nothing changes."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 A Tip on Social Media",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who uses social media.",
+        "It is easy to spend too much time checking messages and photos.",
+        "Try to turn off your apps for an hour before you go to bed.",
+        "This will help you sleep better and feel calmer the next day.",
+        "Remember, you control the Internet; the Internet should not control you."
+      ],
+      "translation_cn": "给使用社交媒体的人一个小贴士:很容易花太多时间查看消息和照片;试着睡前一小时关掉应用;这能帮你睡得更好、第二天更平静;记住,是你控制互联网,而不该是互联网控制你。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only teachers.",
+            "Only small children.",
+            "Only shop owners.",
+            "Anyone who uses social media."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is easy to do, according to the passage?",
+          "options": [
+            "Spend too much time checking messages and photos.",
+            "Forget your password.",
+            "Lose your phone.",
+            "Make new friends."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker suggest doing before bed?",
+          "options": [
+            "Reading more messages.",
+            "Turning off your apps for an hour.",
+            "Buying a new app.",
+            "Posting more photos."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will doing this help you do?",
+          "options": [
+            "Spend more money.",
+            "Stay up later.",
+            "Sleep better and feel calmer.",
+            "Make more posts."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Social media is always bad.",
+            "You should never use your phone.",
+            "Photos are more important than sleep.",
+            "You should control the Internet, not let it control you."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

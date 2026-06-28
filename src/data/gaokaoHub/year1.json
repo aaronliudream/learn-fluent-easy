@@ -3757,87 +3757,272 @@
             "title": "Cultural Heritage",
             "cn": "文化遗产",
             "emoji": "🏛️",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "PUTONG",
-                "cn": "必修第二册 课文词汇",
+                "en": "heritage",
+                "cn": "遗产(尤指国家或社会长期形成的历史、传统和特色)",
+                "emoji": "📦"
+              },
+              {
+                "en": "relic",
+                "cn": "遗物",
+                "emoji": "📦"
+              },
+              {
+                "en": "preserve",
+                "cn": "保存",
+                "emoji": "🏃"
+              },
+              {
+                "en": "dam",
+                "cn": "水坝",
+                "emoji": "📦"
+              },
+              {
+                "en": "temple",
+                "cn": "庙",
+                "emoji": "📦"
+              },
+              {
+                "en": "quote",
+                "cn": "引用",
+                "emoji": "🏃"
+              },
+              {
+                "en": "committee",
+                "cn": "委员会",
+                "emoji": "📦"
+              },
+              {
+                "en": "establish",
+                "cn": "建立",
+                "emoji": "🏃"
+              },
+              {
+                "en": "fund",
+                "cn": "基金",
+                "emoji": "📦"
+              },
+              {
+                "en": "contribute",
+                "cn": "捐献",
+                "emoji": "🏃"
+              },
+              {
+                "en": "contribution",
+                "cn": "捐款",
+                "emoji": "📦"
+              },
+              {
+                "en": "donate",
+                "cn": "捐赠",
+                "emoji": "🏃"
+              },
+              {
+                "en": "investigate",
+                "cn": "调查",
+                "emoji": "🏃"
+              },
+              {
+                "en": "conduct",
+                "cn": "组织",
+                "emoji": "🏃"
+              },
+              {
+                "en": "proposal",
+                "cn": "提议",
+                "emoji": "📦"
+              },
+              {
+                "en": "document",
+                "cn": "文件",
+                "emoji": "🏃"
+              },
+              {
+                "en": "limit",
+                "cn": "限度",
+                "emoji": "🏃"
+              },
+              {
+                "en": "prevent",
+                "cn": "阻止",
+                "emoji": "🏃"
+              },
+              {
+                "en": "loss",
+                "cn": "丧失",
+                "emoji": "📦"
+              },
+              {
+                "en": "process",
+                "cn": "过程",
+                "emoji": "🏃"
+              },
+              {
+                "en": "balance",
+                "cn": "平衡",
+                "emoji": "🏃"
+              },
+              {
+                "en": "promote",
+                "cn": "促进",
+                "emoji": "🏃"
+              },
+              {
+                "en": "tradition",
+                "cn": "传统",
+                "emoji": "📦"
+              },
+              {
+                "en": "identify",
+                "cn": "确认",
+                "emoji": "🏃"
+              },
+              {
+                "en": "digital",
+                "cn": "数码的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "image",
+                "cn": "图像",
+                "emoji": "📦"
+              },
+              {
+                "en": "cave",
+                "cn": "山洞",
+                "emoji": "📦"
+              },
+              {
+                "en": "historic",
+                "cn": "历史上著名(或重要)的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "quality",
+                "cn": "质量",
+                "emoji": "🔤"
+              },
+              {
+                "en": "attempt",
+                "cn": "企图",
+                "emoji": "🏃"
+              },
+              {
+                "en": "protest",
+                "cn": "抗议",
+                "emoji": "🏃"
+              },
+              {
+                "en": "issue",
+                "cn": "重要议题",
+                "emoji": "🏃"
+              },
+              {
+                "en": "opinion",
+                "cn": "意见",
+                "emoji": "📦"
+              },
+              {
+                "en": "worthwhile",
+                "cn": "值得做的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "department",
+                "cn": "部",
+                "emoji": "📦"
+              },
+              {
+                "en": "professional",
+                "cn": "专业的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "entrance",
+                "cn": "入口",
+                "emoji": "📦"
+              },
+              {
+                "en": "exit",
+                "cn": "出口",
+                "emoji": "🏃"
+              },
+              {
+                "en": "mirror",
+                "cn": "镜子",
+                "emoji": "📦"
+              },
+              {
+                "en": "roof",
+                "cn": "顶部",
+                "emoji": "📦"
+              },
+              {
+                "en": "former",
+                "cn": "以前的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "likely",
+                "cn": "可能的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "overseas",
+                "cn": "海外的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "throughout",
+                "cn": "各处",
                 "emoji": "📘"
               },
               {
-                "en": "GAOZHONG",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "within",
+                "cn": "在(某段时间、距离或范围)之内",
+                "emoji": "🏃"
               },
               {
-                "en": "JIAOKESHU",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "creative",
+                "cn": "创造性的",
+                "emoji": "🔤"
               },
               {
-                "en": "YINGYU",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "disappear",
+                "cn": "消失",
+                "emoji": "🏃"
               },
               {
-                "en": "ENGLISH",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Listening",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Speaking",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Part",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Youth",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Project",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Listen",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Pictures",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "forever",
+                "cn": "永远",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "At a Heritage Site",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Cultural Heritage.",
-                    "cn": "我们来讨论Cultural Heritage。"
+                    "text": "Excuse me, could you tell me about this temple?",
+                    "cn": "打扰一下,您能给我讲讲这座庙吗?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned PUTONG today.",
-                    "cn": "好的，我今天学了必修第二册 课文词汇。"
+                    "text": "Of course. It was built hundreds of years ago and is an important heritage site.",
+                    "cn": "当然。它建于数百年前,是一处重要的遗产地。"
                   },
                   {
                     "role": "A",
-                    "text": "And GAOZHONG is important too.",
-                    "cn": "必修第二册 课文词汇也很重要。"
+                    "text": "How can we help protect places like this?",
+                    "cn": "我们能怎样帮助保护这样的地方呢?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Never touch the relics, and tell others why they matter.",
+                    "cn": "绝不触碰文物,并告诉别人它们为何重要。"
                   }
                 ]
               }
@@ -3846,7 +4031,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "48个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -3884,6 +4069,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3908,8 +4101,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "限制性定语从句",
-            "grammarCode": "pep-r2-u1-restrictive-clauses",
+            "grammarTitle": "限制性定语从句(关系代词/副词 + 介词+which/whom)",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ students are making an app about Mount Tai and taking photos of the and stones.\n\n（限制性定语从句 · 教材原句）",
@@ -3961,225 +4154,274 @@
               }
             ],
             "reading": {
-              "passage": "What do you think the text is about? 2 Scan the text for numbers. Circle the numbers and guess what they mean. FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want to improve society. There comes a time when the old must give way to the new, and it is not possible to preserve everything from our past as we move towards the future. Finding and keeping the right balance between progress and the protection of cultural sites can be a big challenge. Big challenges, however, can sometimes lead to great solutions. In the 1950s, the Egyptian government wanted to build a new dam across the Nile in order to control floods, produce electricity, and supply water to more farmers in the area. Water from the dam would likely damage a number of temples and destroy cultural relics that were an important part of Egypt's cultural heritage.",
-              "passageCn": "（人教版必修第二册 · 教材节选）",
+              "passage": "In the 1950s, a new dam on the Nile threatened many ancient temples. Instead of letting them drown, the world worked together: experts made a plan, fifty countries gave money, and engineers moved the temples to higher ground. The rescue took twenty years and became a model of international teamwork.",
+              "passageCn": "20世纪50年代,尼罗河上的一座新水坝威胁着许多古庙。世界没有任其被淹,而是齐心协力:专家制定方案,五十个国家出钱,工程师把庙宇搬到高地。这场拯救历时二十年,成为国际合作的典范。",
               "questions": [
                 {
-                  "q": "According to the passage: \"What do you think the text is about?...\"",
+                  "q": "What threatened the ancient temples?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "What do you think the text is about?"
+                    "A new dam on the Nile.",
+                    "A big fire.",
+                    "A strong wind.",
+                    "A long war."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"2 Scan the text for numbers....\"",
+                  "q": "How were the temples saved?",
                   "opts": [
-                    "Not stated.",
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "2 Scan the text for numbers."
+                    "They were left to drown.",
+                    "They were moved to higher ground.",
+                    "They were sold abroad.",
+                    "They were covered with sand."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 },
                 {
-                  "q": "According to the passage: \"Circle the numbers and guess what they mean....\"",
+                  "q": "What did the rescue become?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Unrelated.",
-                    "Circle the numbers and guess what they mean."
+                    "A waste of money.",
+                    "A failure.",
+                    "A model of international teamwork.",
+                    "A short holiday."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"FROM PROBLEMS TO SOLUTIONS Economic development is...\"",
-                  "opts": [
-                    "Not stated.",
-                    "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we wan",
-                    "Opposite meaning.",
-                    "Unrelated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 2
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FROM PROBLEMS TO SOLUTIONS\" (PEP 必修第二册).",
-              "promptCn": "根据人教版《必修第二册》课文《FROM PROBLEMS TO SOLUTIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write 3-4 sentences about a person or group who works to protect cultural heritage. Say what they do and why it matters. Use at least one relative clause.",
+              "promptCn": "用3-4句话介绍一个保护文化遗产的人或团体:他们做什么、为什么重要。至少用一个定语从句。",
+              "sampleWords": [
+                "heritage",
+                "preserve",
+                "relic",
+                "temple",
+                "volunteer",
+                "protect",
+                "photo",
+                "remember",
+                "duty",
+                "who"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「PUTONG」的意思是？",
+                "q": "We must ____ our cultural heritage for future generations.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "必修第二册 课文词汇"
+                  "preserve",
+                  "destroy",
+                  "sell",
+                  "forget"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "The government planned to build a ____ across the Nile.",
+                "opts": [
+                  "song",
+                  "dam",
+                  "price",
+                  "noise"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Fifty countries ____ money to save the temples.",
+                "opts": [
+                  "lost",
+                  "hid",
+                  "donated",
+                  "sold"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "We must keep a ____ between progress and protection.",
+                "opts": [
+                  "noise",
+                  "price",
+                  "weather",
+                  "balance"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「GAOZHONG」的意思是？",
+                "q": "The archaeologist ____ found the relics became famous.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「JIAOKESHU」的意思是？",
-                "opts": [
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项1"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「YINGYU」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项2",
-                  "选项1"
+                  "who",
+                  "which",
+                  "where",
+                  "whose"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「ENGLISH」的意思是？",
+                "q": "The temples ____ were moved are now safe from the water.",
                 "opts": [
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项3"
+                  "who",
+                  "which",
+                  "where",
+                  "whom"
                 ],
                 "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Listening」的意思是？",
+                "q": "Dunhuang is the city ____ the Mogao Caves are found.",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项2"
+                  "which",
+                  "when",
+                  "where",
+                  "whose"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Speaking」的意思是？",
+                "q": "She is the writer ____ book about heritage won a prize.",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项3"
+                  "who",
+                  "which",
+                  "where",
+                  "whose"
                 ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Part」的意思是？",
+                "q": "听句子选中文:",
                 "opts": [
-                  "选项2",
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「文化遗产」相关词是？",
-                "opts": [
-                  "PUTONG",
-                  "Part",
-                  "school",
-                  "JIAOKESHU"
+                  "一个委员会成立起来以减少损害。",
+                  "他们建了一条新路。",
+                  "游客买了门票。",
+                  "孩子们在玩游戏。"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "听力",
+                "dim": "listening",
+                "audio": "A committee was set up to limit the damage."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "这些传统可能很快消失。",
+                  "这些传统会永远存在。",
+                  "这些传统被卖到了海外。",
+                  "这些传统毫无价值。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "These traditions may disappear very soon."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "We must protect our cultural heritage.",
                 "opts": [
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "Circle the numbers and guess what they mean.",
-                  "There comes a time when the old must give way to the new, and it is not "
+                  "我们必须保护我们的文化遗产。",
+                  "我们必须建造一座新水坝。",
+                  "我们应该卖掉这些老房子。",
+                  "我们想去参观博物馆。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "The engineers moved the temple to a safe place.",
                 "opts": [
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "Circle the numbers and guess what they mean."
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
-                "opts": [
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "Circle the numbers and guess what they mean."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
-                "opts": [
-                  "Circle the numbers and guess what they mean.",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want "
+                  "工人们拆毁了那座庙。",
+                  "工程师们把庙宇搬到了安全的地方。",
+                  "雨水淹没了整个山谷。",
+                  "游客们在入口处拍照。"
                 ],
                 "answer": 1
               },
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "Fifty countries donated money to the project.",
                 "opts": [
-                  "Circle the numbers and guess what they mean.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "Finding and keeping the right balance between progress and the protectio"
+                  "项目去年才开始。",
+                  "没有人愿意提供帮助。",
+                  "五十个国家为这个项目捐了款。",
+                  "委员会拒绝了这个方案。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Researchers take digital photos of the cave paintings.",
+                "opts": [
+                  "研究人员在墙上重新作画。",
+                  "他们关闭了所有洞窟。",
+                  "他们把壁画搬进了博物馆。",
+                  "研究人员为洞窟壁画拍摄数码照片。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "The Great Wall belongs to the whole world.",
+                "opts": [
+                  "长城属于全世界。",
+                  "长城只有几米长。",
+                  "长城是去年建的。",
+                  "长城很容易找到。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Protecting the past is everyone's duty.",
+                "opts": [
+                  "保护过去毫无意义。",
+                  "保护过去是每个人的责任。",
+                  "只有政府才能保护遗产。",
+                  "古迹应当被卖掉。"
+                ],
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "When the bridge in his town was about to be taken down, old Mr Lin spent months photographing every stone and writing down the stories people told about it. Years later, a new museum used his pictures and notes to teach young visitors about the bridge that once stood there. Mr Lin always said that even when a building is gone, its memory can still be kept alive.",
+              "questions": [
+                {
+                  "q": "What did Mr Lin do before the bridge was taken down?",
+                  "options": [
+                    "He photographed it and recorded the stories about it.",
+                    "He tried to stop the work by force.",
+                    "He moved the whole bridge to his garden.",
+                    "He sold the stones to a museum."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'spent months photographing every stone and writing down the stories' 的转述;其余未提或相反。"
+                },
+                {
+                  "q": "What does Mr Lin's belief suggest?",
+                  "options": [
+                    "Old bridges should never be removed.",
+                    "The memory of a place can survive even after it is gone.",
+                    "Photos are a waste of time.",
+                    "Museums should not teach young people."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'even when a building is gone, its memory can still be kept alive' 的转述(覆盖短文后半段)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u1.01",
+              "u1.02",
+              "u1.03"
             ]
           },
           {
@@ -4189,88 +4431,273 @@
             "book": "required2",
             "title": "Wildlife Protection",
             "cn": "野生动物保护",
-            "emoji": "🐼",
-            "available": false,
+            "emoji": "🦏",
+            "available": true,
             "vocabulary": [
               {
-                "en": "Together",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "wildlife",
+                "cn": "野生动物",
+                "emoji": "📦"
               },
               {
-                "en": "Cultural",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "protection",
+                "cn": "保护",
+                "emoji": "📦"
               },
               {
-                "en": "Relics",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "endanger",
+                "cn": "使遭受危险",
+                "emoji": "🏃"
               },
               {
-                "en": "Mount",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "endangered",
+                "cn": "濒危的",
+                "emoji": "🔤"
               },
               {
-                "en": "Heritage",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "species",
+                "cn": "物种",
+                "emoji": "📦"
               },
               {
-                "en": "Protection",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "extinct",
+                "cn": "已灭绝的",
+                "emoji": "🔤"
               },
               {
-                "en": "Interesting",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "extinction",
+                "cn": "灭绝",
+                "emoji": "📦"
               },
               {
-                "en": "Exciting",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "habitat",
+                "cn": "(动植物的)生活环境",
+                "emoji": "📦"
               },
               {
-                "en": "Reporter",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "reserve",
+                "cn": "(动植物)保护区",
+                "emoji": "🏃"
               },
               {
-                "en": "Complete",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "antelope",
+                "cn": "羚",
+                "emoji": "📦"
               },
               {
-                "en": "Interview",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "herd",
+                "cn": "牧群",
+                "emoji": "📦"
               },
               {
-                "en": "Notes",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "observe",
+                "cn": "观察(到)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "hunt",
+                "cn": "打猎",
+                "emoji": "🏃"
+              },
+              {
+                "en": "hunter",
+                "cn": "猎人",
+                "emoji": "📦"
+              },
+              {
+                "en": "illegal",
+                "cn": "不合法的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "illegally",
+                "cn": "不合法地",
+                "emoji": "🏃"
+              },
+              {
+                "en": "fur",
+                "cn": "毛(皮)",
+                "emoji": "📦"
+              },
+              {
+                "en": "shoot",
+                "cn": "射杀",
+                "emoji": "🏃"
+              },
+              {
+                "en": "profit",
+                "cn": "利润",
+                "emoji": "📦"
+              },
+              {
+                "en": "threat",
+                "cn": "威胁",
+                "emoji": "📦"
+              },
+              {
+                "en": "threaten",
+                "cn": "威胁",
+                "emoji": "🏃"
+              },
+              {
+                "en": "attack",
+                "cn": "攻击",
+                "emoji": "🏃"
+              },
+              {
+                "en": "measure",
+                "cn": "措施",
+                "emoji": "🏃"
+              },
+              {
+                "en": "effective",
+                "cn": "有效的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "recover",
+                "cn": "恢复",
+                "emoji": "🏃"
+              },
+              {
+                "en": "remove",
+                "cn": "去除",
+                "emoji": "🏃"
+              },
+              {
+                "en": "intend",
+                "cn": "打算",
+                "emoji": "🏃"
+              },
+              {
+                "en": "exist",
+                "cn": "存在",
+                "emoji": "🏃"
+              },
+              {
+                "en": "harmony",
+                "cn": "和谐",
+                "emoji": "📦"
+              },
+              {
+                "en": "reduce",
+                "cn": "减少",
+                "emoji": "🏃"
+              },
+              {
+                "en": "alarm",
+                "cn": "惊恐",
+                "emoji": "🏃"
+              },
+              {
+                "en": "alarming",
+                "cn": "惊人的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "aware",
+                "cn": "知道的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "concern",
+                "cn": "涉及",
+                "emoji": "🏃"
+              },
+              {
+                "en": "concerned",
+                "cn": "担心的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "pressure",
+                "cn": "压力",
+                "emoji": "📦"
+              },
+              {
+                "en": "authority",
+                "cn": "官方",
+                "emoji": "📦"
+              },
+              {
+                "en": "adapt",
+                "cn": "适应",
+                "emoji": "🏃"
+              },
+              {
+                "en": "creature",
+                "cn": "生物",
+                "emoji": "📦"
+              },
+              {
+                "en": "average",
+                "cn": "平均数",
+                "emoji": "🔤"
+              },
+              {
+                "en": "sacred",
+                "cn": "神圣的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "remind",
+                "cn": "提醒",
+                "emoji": "🏃"
+              },
+              {
+                "en": "poster",
+                "cn": "海报",
+                "emoji": "📦"
+              },
+              {
+                "en": "emotion",
+                "cn": "感情",
+                "emoji": "📦"
+              },
+              {
+                "en": "unusual",
+                "cn": "不寻常的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "due",
+                "cn": "由于",
+                "emoji": "🔤"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Concern for the Elephants",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Wildlife Protection.",
-                    "cn": "我们来讨论Wildlife Protection。"
+                    "text": "I'm really concerned about the African elephants.",
+                    "cn": "我很担心非洲象。"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Together today.",
-                    "cn": "好的，我今天学了必修第二册 课文词汇。"
+                    "text": "Why? What's happening to them?",
+                    "cn": "为什么?它们怎么了?"
                   },
                   {
                     "role": "A",
-                    "text": "And Cultural is important too.",
-                    "cn": "必修第二册 课文词汇也很重要。"
+                    "text": "They're being hunted for their tusks, and their habitat is getting smaller.",
+                    "cn": "它们因象牙被捕猎,栖息地也越来越小。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "That's terrible. What is being done to help them?",
+                    "cn": "太糟了。人们正在采取什么措施帮助它们?"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Special parks are being built, and people are being told not to buy elephant products.",
+                    "cn": "专门的园区正在修建,人们也被劝告不要购买大象制品。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Good. When the buying stops, the killing can stop too.",
+                    "cn": "很好。当购买停止时,杀戮也会停止。"
                   }
                 ]
               }
@@ -4279,7 +4706,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "46个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -4317,6 +4744,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -4341,8 +4776,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "一般过去时与过去进行",
-            "grammarCode": "pep-r2-u2-past-tense",
+            "grammarTitle": "现在进行时的被动语态(is/are being done)",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ across the street. / Yuanmingyuan?\n\n（一般过去时与过去进行 · 教材原句）",
@@ -4394,225 +4829,264 @@
               }
             ],
             "reading": {
-              "passage": "Lanzhou, 9 August 2017. A group of researchers and scientists from China and other countries are\n\nworking together to help increase knowledge and appreciation of China's ancient cultural heritage.\n\nThey are recording and collecting digital images of cultural relics from the Mogao Caves, which\n\nwere a key stop along the Silk Road throughout China's ancient history. Nearly 500,000 high-\n\nquality digital photographs have been produced since the international project started in 1994.\n\nThe Mogao Caves have long been a meeting point for different cultures and are part of the history\n\nof many countries. Today, the caves are just as international as they were at the time when people\n\ntravelled the Silk Road. Tourists from all over the world visit Dunhuang to see the caves, and the\n\nGetty Museum in Los Angeles has even reproduced a copy of the\n\ncaves and paintings for people to admire in America.\n\nBy sharing so many digital photos over the Internet, the group\n\nhopes to promote even wider interest around the world in\n\nChina's ancient history, culture, and traditions. They als",
-              "passageCn": "（人教版必修第二册 · 教材节选）",
+              "passage": "Wildlife is dying out at an alarming rate, mainly because of hunting, habitat loss and pollution. The good news is that much is being done: reserves are being built, and more and more people are refusing to buy animal products.",
+              "passageCn": "野生动物正以惊人的速度消失,主要原因是捕猎、栖息地丧失和污染。好消息是,人们正在采取许多措施:保护区正在修建,越来越多的人拒绝购买动物制品。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Lanzhou, 9 August 2017....\"",
+                  "q": "What is mainly causing wildlife to die out?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "Lanzhou, 9 August 2017.",
-                    "Unrelated."
+                    "Hunting, habitat loss and pollution.",
+                    "Cold weather only.",
+                    "Too many reserves.",
+                    "A lack of zoos."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"A group of researchers and scientists from China a...\"",
+                  "q": "What is the 'good news' in the passage?",
                   "opts": [
-                    "A group of researchers and scientists from China and other countries a",
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated."
+                    "Reserves are being built and people refuse to buy animal products.",
+                    "All animals have already disappeared.",
+                    "Hunting is becoming more popular.",
+                    "People are buying more fur."
                   ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"They are recording and collecting digital images o...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "They are recording and collecting digital images of cultural relics fr",
-                    "Not stated.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"Nearly 500,000 high-\n\nquality digital photographs ...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "Not stated.",
-                    "Nearly 500,000 high-\n\nquality digital photographs have been produced s",
-                    "Opposite meaning."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"PROMOTING CULTURE THROUGH DIGITAL IMAGES\" (PEP 必修第二册).",
-              "promptCn": "根据人教版《必修第二册》课文《PROMOTING CULTURE THROUGH DIGITAL IMAGES》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write a short poster (about 60 words) calling on your schoolmates to protect an endangered animal: name the animal and why it is in danger, say what is being done, and call for action.",
+              "promptCn": "写一段约60词的海报内容,呼吁同学们保护一种濒危动物:点明动物及濒危原因,说明正在采取的措施,并号召大家行动。",
+              "sampleWords": [
+                "wildlife",
+                "endangered",
+                "habitat",
+                "hunt",
+                "protection",
+                "measure",
+                "reserve",
+                "aware",
+                "protect",
+                "extinct"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Together」的意思是？",
+                "q": "The forest is the natural ____ of many wild animals; losing it puts them in danger.",
                 "opts": [
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项2"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Cultural」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "habitat",
+                  "market",
+                  "factory",
+                  "station"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Relics」的意思是？",
+                "q": "If a species becomes ____, it no longer exists anywhere on Earth.",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "必修第二册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Mount」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "extinct",
+                  "famous",
+                  "modern",
+                  "polite"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Heritage」的意思是？",
+                "q": "The government took strong ____ to save the antelope, such as building bridges and gates.",
                 "opts": [
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项1",
-                  "选项2"
+                  "measures",
+                  "prices",
+                  "noises",
+                  "songs"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Protection」的意思是？",
+                "q": "We must make people ____ of the problem before it is too late.",
                 "opts": [
-                  "选项2",
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项1"
+                  "aware",
+                  "afraid",
+                  "proud",
+                  "bored"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Interesting」的意思是？",
+                "q": "Right now, small birds ____ with nets in the wetland.",
                 "opts": [
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项3"
+                  "are being caught",
+                  "are catching",
+                  "have caught",
+                  "catch"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Exciting」的意思是？",
+                "q": "At this moment, the wetland ____ by careless visitors.",
                 "opts": [
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项2"
+                  "is being destroyed",
+                  "is destroying",
+                  "destroys",
+                  "has destroyed"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "本单元「野生动物保护」相关词是？",
+                "q": "____ the new reserve being built for the dolphins right now?",
                 "opts": [
-                  "Mount",
-                  "Cultural",
-                  "school",
-                  "Together"
+                  "Is",
+                  "Does",
+                  "Has",
+                  "Are"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Luckily, these old trees ____ cut down at present, so the koalas are safe.",
+                "opts": [
+                  "aren't being",
+                  "don't",
+                  "haven't",
+                  "isn't being"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听录音,选出与你听到的句子意思相符的一项。",
+                "opts": [
+                  "非洲象因象牙正在被捕猎。",
+                  "非洲象在公园里散步。",
+                  "非洲象正在被运往动物园。",
+                  "非洲象喜欢吃树叶。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "The African elephants are being hunted for their tusks."
+              },
+              {
+                "q": "听录音,选出与你听到的句子意思相符的一项。",
+                "opts": [
+                  "人们正在采取措施帮助大象。",
+                  "没有人帮助大象。",
+                  "大象正在被卖掉。",
+                  "大象已经灭绝了。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Special parks are being built and people are being told not to buy elephant products."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "A group of researchers and scientists from China and other countries are working",
+                "audio": "Small birds are being caught with nets in the wetland.",
                 "opts": [
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "The Mogao Caves have long been a meeting point for different cultures an"
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "The Mogao Caves have long been a meeting point for different cultures an",
-                  "A group of researchers and scientists from China and other countries are",
-                  "They are recording and collecting digital images of cultural relics from"
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "The Mogao Caves have long been a meeting point for different cultures an"
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "The Mogao Caves have long been a meeting point for different cultures an",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are"
+                  "小鸟正在被用网捕捉。",
+                  "小鸟在湿地里筑巢。",
+                  "小鸟正在飞过湿地。",
+                  "小鸟在网里睡觉。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "A group of researchers and scientists from China and other countries are working",
+                "audio": "The Tibetan antelope was removed from the endangered species list.",
                 "opts": [
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "Today, the caves are just as international as they were at the time when"
+                  "藏羚羊被列入濒危名单。",
+                  "藏羚羊已从濒危物种名单中移除。",
+                  "藏羚羊正在被捕猎。",
+                  "藏羚羊搬到了别的国家。"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "New reserves are being built for the river dolphins.",
+                "opts": [
+                  "河豚正在被卖掉。",
+                  "河豚已经灭绝了。",
+                  "正在为河豚修建新的保护区。",
+                  "河豚游回了大海。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Please do not buy goods made from wild animals.",
+                "opts": [
+                  "请多买动物制品。",
+                  "请把动物送给朋友。",
+                  "请去市场买毛皮。",
+                  "请不要购买用野生动物制成的商品。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "Volunteers are watching over the antelopes day and night.",
+                "opts": [
+                  "志愿者在日夜看护着羚羊。",
+                  "志愿者在售卖羚羊。",
+                  "志愿者已经离开了保护区。",
+                  "志愿者在捕猎羚羊。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Much is being done to protect the endangered wildlife.",
+                "opts": [
+                  "没有人保护野生动物。",
+                  "人们正在采取很多措施保护濒危野生动物。",
+                  "野生动物正在被卖掉。",
+                  "保护工作已经停止了。"
+                ],
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "In a small town, a teenager named Sam noticed that the wild ducks by the river were disappearing fast. Instead of staying silent, he made a bright poster asking people to stop selling the birds and started cleaning the riverbank every weekend. A year later, the ducks had returned, and many of his neighbours had joined him to care for them.",
+              "questions": [
+                {
+                  "q": "What did Sam do after noticing the ducks were disappearing?",
+                  "options": [
+                    "He made a poster and cleaned the riverbank every weekend.",
+                    "He kept silent and did nothing.",
+                    "He moved away from the town.",
+                    "He started selling the wild ducks himself."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'made a bright poster… started cleaning the riverbank every weekend' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "What happened in the town a year later?",
+                  "options": [
+                    "The river dried up completely.",
+                    "The ducks came back and neighbours joined to help.",
+                    "Sam gave up on the project.",
+                    "All the ducks were sold at the market."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'the ducks had returned, and many of his neighbours had joined him'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u2.01",
+              "u2.02",
+              "u2.03"
             ]
           },
           {
@@ -4622,88 +5096,273 @@
             "book": "required2",
             "title": "The Internet",
             "cn": "互联网",
-            "emoji": "💻",
-            "available": false,
+            "emoji": "🌐",
+            "available": true,
             "vocabulary": [
               {
-                "en": "Means",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "access",
+                "cn": "通道",
+                "emoji": "🏃"
               },
               {
-                "en": "UNIT",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "account",
+                "cn": "账户",
+                "emoji": "📦"
               },
               {
-                "en": "Tick",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "author",
+                "cn": "作者",
+                "emoji": "📦"
               },
               {
-                "en": "Reason",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "battery",
+                "cn": "电池",
+                "emoji": "📦"
               },
               {
-                "en": "Able",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "benefit",
+                "cn": "益处",
+                "emoji": "🏃"
               },
               {
-                "en": "Preserve",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "blog",
+                "cn": "博客",
+                "emoji": "🏃"
               },
               {
-                "en": "Promote",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "blogger",
+                "cn": "博客作者",
+                "emoji": "📦"
               },
               {
-                "en": "Cypress",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "button",
+                "cn": "按钮",
+                "emoji": "📦"
               },
               {
-                "en": "Word",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "cash",
+                "cn": "现金",
+                "emoji": "📦"
               },
               {
-                "en": "Group",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "charity",
+                "cn": "慈善",
+                "emoji": "📦"
               },
               {
-                "en": "Type",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "chat",
+                "cn": "聊天",
+                "emoji": "🏃"
               },
               {
-                "en": "Explained",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "click",
+                "cn": "点击",
+                "emoji": "🏃"
+              },
+              {
+                "en": "conference",
+                "cn": "会议",
+                "emoji": "📦"
+              },
+              {
+                "en": "confirm",
+                "cn": "确认",
+                "emoji": "🏃"
+              },
+              {
+                "en": "convenient",
+                "cn": "方便的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "cyberbully",
+                "cn": "网霸",
+                "emoji": "🏃"
+              },
+              {
+                "en": "database",
+                "cn": "数据库",
+                "emoji": "📦"
+              },
+              {
+                "en": "define",
+                "cn": "给……下定义",
+                "emoji": "🏃"
+              },
+              {
+                "en": "discount",
+                "cn": "折扣",
+                "emoji": "🏃"
+              },
+              {
+                "en": "distance",
+                "cn": "距离",
+                "emoji": "📦"
+              },
+              {
+                "en": "embarrassing",
+                "cn": "让人难堪(尴尬",
+                "emoji": "🔤"
+              },
+              {
+                "en": "engine",
+                "cn": "引擎",
+                "emoji": "📦"
+              },
+              {
+                "en": "false",
+                "cn": "假的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "familiar",
+                "cn": "熟悉的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "file",
+                "cn": "文件",
+                "emoji": "📦"
+              },
+              {
+                "en": "function",
+                "cn": "功能",
+                "emoji": "🏃"
+              },
+              {
+                "en": "guideline",
+                "cn": "准则",
+                "emoji": "📦"
+              },
+              {
+                "en": "identity",
+                "cn": "身份",
+                "emoji": "📦"
+              },
+              {
+                "en": "inspire",
+                "cn": "鼓舞",
+                "emoji": "🏃"
+              },
+              {
+                "en": "network",
+                "cn": "(互联)网络",
+                "emoji": "📦"
+              },
+              {
+                "en": "particular",
+                "cn": "特定的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "press",
+                "cn": "按,压",
+                "emoji": "🏃"
+              },
+              {
+                "en": "privacy",
+                "cn": "隐私",
+                "emoji": "📦"
+              },
+              {
+                "en": "province",
+                "cn": "省",
+                "emoji": "📦"
+              },
+              {
+                "en": "resident",
+                "cn": "居民",
+                "emoji": "📦"
+              },
+              {
+                "en": "rude",
+                "cn": "粗鲁的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "software",
+                "cn": "软件",
+                "emoji": "📦"
+              },
+              {
+                "en": "stream",
+                "cn": "流播(在线播放音视频)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "surf",
+                "cn": "浏览",
+                "emoji": "🏃"
+              },
+              {
+                "en": "target",
+                "cn": "目标",
+                "emoji": "🏃"
+              },
+              {
+                "en": "theft",
+                "cn": "偷(窃)",
+                "emoji": "📦"
+              },
+              {
+                "en": "tip",
+                "cn": "忠告",
+                "emoji": "📦"
+              },
+              {
+                "en": "tough",
+                "cn": "艰难的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "troll",
+                "cn": "发挑衅帖子的人",
+                "emoji": "📦"
+              },
+              {
+                "en": "update",
+                "cn": "更新",
+                "emoji": "🏃"
+              },
+              {
+                "en": "upset",
+                "cn": "心烦的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "Wi-Fi",
+                "cn": "无线保真",
+                "emoji": "📦"
+              },
+              {
+                "en": "comment",
+                "cn": "评论",
+                "emoji": "🏃"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Asking about Online Habits",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss The Internet.",
-                    "cn": "我们来讨论The Internet。"
+                    "text": "How much time do you spend online every day?",
+                    "cn": "你每天上网多长时间?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Means today.",
-                    "cn": "好的，我今天学了必修第二册 课文词汇。"
+                    "text": "About two hours. I chat with friends and stream music.",
+                    "cn": "大约两小时。我和朋友聊天、流播音乐。"
                   },
                   {
                     "role": "A",
-                    "text": "And UNIT is important too.",
-                    "cn": "必修第二册 课文词汇也很重要。"
+                    "text": "Do you ever worry about your privacy?",
+                    "cn": "你担心过你的隐私吗?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes. I never give out my address and I use a strong password.",
+                    "cn": "担心。我从不透露住址,而且用强密码。"
                   }
                 ]
               }
@@ -4712,7 +5371,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "48个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -4750,6 +5409,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -4774,8 +5441,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "文化遗产表达",
-            "grammarCode": "pep-r2-u3-heritage",
+            "grammarTitle": "现在完成时的被动语态(has/have been done)",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ challenges, however, can sometimes lead to great solutions.\n\n（文化遗产表达 · 教材原句）",
@@ -4827,225 +5494,264 @@
               }
             ],
             "reading": {
-              "passage": "What do you think the text is about? 2 What do you know about the Tibetan antelope and the Changtang National Nature Reserve? A DAY IN THE CLOUDS The air is thin and we have to rest several times on the short hike from camp. To our left, snow-covered mountains disappear into clouds that seem almost close enough to touch. On the plain in front of us, we can just make out a herd of graceful animals. This is why we're here—to observe Tibetan antelopes. Tibetan antelopes live on the plains of Tibet, Xinjiang, and Qinghai. Watching them move slowly across the green grass, I'm struck by their beauty. I'm also reminded of the danger they were in.",
-              "passageCn": "（人教版必修第二册 · 教材节选）",
+              "passage": "Online shopping has become part of everyday life. People order goods on the net and have them delivered home. It is convenient, and many sites even offer a discount.",
+              "passageCn": "网购已成为日常生活的一部分。人们在网上订购商品并送货到家。这很方便,许多网站还提供折扣。",
               "questions": [
                 {
-                  "q": "According to the passage: \"What do you think the text is about?...\"",
+                  "q": "Why do people enjoy online shopping?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "What do you think the text is about?",
-                    "Unrelated."
+                    "It is convenient and may offer discounts.",
+                    "It is slow and expensive.",
+                    "It needs a lot of cash.",
+                    "It is only for big cities."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"2 What do you know about the Tibetan antelope and ...\"",
+                  "q": "How do the goods reach the buyers?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "2 What do you know about the Tibetan antelope and the Changtang Nation"
+                    "They are delivered to people's homes.",
+                    "Buyers must collect them at a store.",
+                    "They are sent by post office only.",
+                    "They are never delivered."
                   ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"A DAY IN THE CLOUDS The air is thin and we have to...\"",
-                  "opts": [
-                    "Not stated.",
-                    "A DAY IN THE CLOUDS The air is thin and we have to rest several times ",
-                    "Opposite meaning.",
-                    "Unrelated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"To our left, snow-covered mountains disappear into...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "To our left, snow-covered mountains disappear into clouds that seem al",
-                    "Not stated.",
-                    "Unrelated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FROM PROBLEMS TO SOLUTIONS\" (PEP 必修第二册).",
-              "promptCn": "根据人教版《必修第二册》课文《FROM PROBLEMS TO SOLUTIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write a short blog post giving two tips on how to stay safe online.",
+              "promptCn": "写一篇简短的博客,给出两条安全上网的建议。",
+              "sampleWords": [
+                "online",
+                "safe",
+                "privacy",
+                "password",
+                "account",
+                "identity",
+                "polite",
+                "troll",
+                "comment",
+                "tip"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Means」的意思是？",
+                "q": "We can ____ software, documents and images whenever we need them.",
                 "opts": [
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项1"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「UNIT」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "必修第二册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Tick」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项2",
-                  "选项1"
+                  "download",
+                  "downstairs",
+                  "downtown",
+                  "downhill"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Reason」的意思是？",
+                "q": "Don't give out your address, or someone might steal your ____.",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "必修第二册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Able」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "必修第二册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Preserve」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "identity",
+                  "battery",
+                  "discount",
+                  "engine"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Promote」的意思是？",
+                "q": "Being online is no excuse for being ____ to others.",
                 "opts": [
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "rude",
+                  "convenient",
+                  "familiar",
+                  "false"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Cypress」的意思是？",
+                "q": "A ____ posts comments only to stir up trouble online.",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项3"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「互联网」相关词是？",
-                "opts": [
-                  "Means",
-                  "Cypress",
-                  "UNIT",
-                  "Type"
+                  "troll",
+                  "resident",
+                  "blogger",
+                  "author"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
+              },
+              {
+                "q": "A new PC ____ with more functions.",
+                "opts": [
+                  "has been built",
+                  "has built",
+                  "is building",
+                  "builds"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ the Wi-Fi password been confirmed yet?",
+                "opts": [
+                  "Has",
+                  "Have",
+                  "Is",
+                  "Did"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Many older people ____ by Jan's free IT club.",
+                "opts": [
+                  "have been helped",
+                  "have helped",
+                  "are helping",
+                  "helped"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Jan's life has been greatly improved ____ the Internet.",
+                "opts": [
+                  "by",
+                  "of",
+                  "with",
+                  "from"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "所有文件都已被复制到新数据库。",
+                  "所有文件都丢失了。",
+                  "请把文件打印出来。",
+                  "数据库被删掉了。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "All the files have been copied to the new database."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "每当有更新时你就会收到一条消息。",
+                  "你从不收到任何消息。",
+                  "请关掉所有的应用。",
+                  "这个应用要花很多钱。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "You get a message whenever there has been an update."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "What do you think the text is about? 2 What do you know about the Tibetan antelo",
+                "audio": "The Internet has made our lives more convenient.",
                 "opts": [
-                  "On the plain in front of us, we can just make out a herd of graceful ani",
-                  "What do you think the text is about? 2 What do you know about the Tibeta",
-                  "A DAY IN THE CLOUDS The air is thin and we have to rest several times on",
-                  "To our left, snow-covered mountains disappear into clouds that seem almo"
-                ],
-                "answer": 1
-              },
-              {
-                "audio": "What do you think the text is about? 2 What do you know about the Tibetan antelo",
-                "opts": [
-                  "A DAY IN THE CLOUDS The air is thin and we have to rest several times on",
-                  "What do you think the text is about? 2 What do you know about the Tibeta",
-                  "To our left, snow-covered mountains disappear into clouds that seem almo",
-                  "On the plain in front of us, we can just make out a herd of graceful ani"
+                  "互联网让我们的生活更方便了。",
+                  "互联网让我们的生活更危险了。",
+                  "互联网让我们的生活更昂贵了。",
+                  "互联网让我们的生活更慢了。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "What do you think the text is about? 2 What do you know about the Tibetan antelo",
+                "audio": "Protect your privacy and never give out your address.",
                 "opts": [
-                  "A DAY IN THE CLOUDS The air is thin and we have to rest several times on",
-                  "On the plain in front of us, we can just make out a herd of graceful ani",
-                  "To our left, snow-covered mountains disappear into clouds that seem almo",
-                  "What do you think the text is about? 2 What do you know about the Tibeta"
+                  "保护好你的隐私,绝不要透露你的地址。",
+                  "分享你的隐私和地址。",
+                  "把地址写在博客上。",
+                  "把密码告诉所有人。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "What do you think the text is about? 2 What do you know about the Tibetan antelo",
+                "audio": "The software has been downloaded to my phone.",
                 "opts": [
-                  "A DAY IN THE CLOUDS The air is thin and we have to rest several times on",
-                  "To our left, snow-covered mountains disappear into clouds that seem almo",
-                  "On the plain in front of us, we can just make out a herd of graceful ani",
-                  "What do you think the text is about? 2 What do you know about the Tibeta"
+                  "软件已经下载到我的手机上了。",
+                  "我正在给手机下载软件。",
+                  "我想删掉手机上的软件。",
+                  "软件还没有下载。"
                 ],
-                "answer": 2
+                "answer": 0
               },
               {
-                "audio": "What do you think the text is about? 2 What do you know about the Tibetan antelo",
+                "audio": "She was inspired by the people she met online.",
                 "opts": [
-                  "This is why we're here—to observe Tibetan antelopes.",
-                  "To our left, snow-covered mountains disappear into clouds that seem almo",
-                  "What do you think the text is about? 2 What do you know about the Tibeta",
-                  "A DAY IN THE CLOUDS The air is thin and we have to rest several times on"
+                  "她受到了网上结识的人的鼓舞。",
+                  "她在网上认识了很多坏人。",
+                  "她不喜欢上网聊天。",
+                  "她从不和陌生人说话。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "A search engine helps you find what you are looking for.",
+                "opts": [
+                  "搜索引擎帮你找到你要找的东西。",
+                  "搜索引擎会删掉你的文件。",
+                  "搜索引擎让手机变慢。",
+                  "搜索引擎只能听音乐。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Have you confirmed the Wi-Fi password yet?",
+                "opts": [
+                  "你确认过 Wi-Fi 密码了吗?",
+                  "你忘记 Wi-Fi 密码了吗?",
+                  "你修好 Wi-Fi 了吗?",
+                  "你换新手机了吗?"
                 ],
                 "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "Ben used to share his home address and phone number on every website he joined. One day a stranger used that information to enter his account, and Ben felt very upset. After that, he chose a strong password for each account and never gave out his private details again.",
+              "questions": [
+                {
+                  "q": "What mistake did Ben make at first?",
+                  "options": [
+                    "He revealed his personal information across many sites.",
+                    "He never went online at all.",
+                    "He forgot all his passwords.",
+                    "He refused to make any account."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'used to share his home address and phone number on every website' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "What did Ben do after the problem happened?",
+                  "options": [
+                    "He shared even more information.",
+                    "He chose strong passwords and kept his details private.",
+                    "He stopped using computers forever.",
+                    "He blamed his friends for it."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'chose a strong password for each account and never gave out his private details again'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u3.01",
+              "u3.02",
+              "u3.03"
             ]
           },
           {
@@ -5055,88 +5761,288 @@
             "book": "required2",
             "title": "History and Traditions",
             "cn": "历史与传统",
-            "emoji": "📜",
-            "available": false,
+            "emoji": "🏰",
+            "available": true,
             "vocabulary": [
               {
-                "en": "Mountain",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "achievement",
+                "cn": "成就",
+                "emoji": "📦"
               },
               {
-                "en": "Purpose",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "amount",
+                "cn": "金额",
+                "emoji": "📦"
               },
               {
-                "en": "Introducing",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "ancestor",
+                "cn": "祖宗",
+                "emoji": "📦"
               },
               {
-                "en": "Young",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "announce",
+                "cn": "宣布",
+                "emoji": "🏃"
               },
               {
-                "en": "People",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "approach",
+                "cn": "接近",
+                "emoji": "🏃"
               },
               {
-                "en": "Easy",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "battle",
+                "cn": "战役",
+                "emoji": "🏃"
               },
               {
-                "en": "Making",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "beer",
+                "cn": "(一杯)啤酒",
+                "emoji": "📦"
               },
               {
-                "en": "Stones",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "belong",
+                "cn": "属于",
+                "emoji": "🏃"
               },
               {
-                "en": "Volunteers",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "butter",
+                "cn": "黄油",
+                "emoji": "📦"
               },
               {
-                "en": "Visit",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "cattle",
+                "cn": "牛",
+                "emoji": "📦"
               },
               {
-                "en": "Middle",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "cemetery",
+                "cn": "墓地",
+                "emoji": "📦"
               },
               {
-                "en": "Schools",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "charge",
+                "cn": "充电",
+                "emoji": "🏃"
+              },
+              {
+                "en": "chief",
+                "cn": "最重要的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "conquer",
+                "cn": "占领",
+                "emoji": "🏃"
+              },
+              {
+                "en": "county",
+                "cn": "(英国、爱尔兰的)郡",
+                "emoji": "📦"
+              },
+              {
+                "en": "courtyard",
+                "cn": "庭院",
+                "emoji": "📦"
+              },
+              {
+                "en": "crowd",
+                "cn": "人群",
+                "emoji": "🏃"
+              },
+              {
+                "en": "currency",
+                "cn": "通货",
+                "emoji": "📦"
+              },
+              {
+                "en": "custom",
+                "cn": "风俗",
+                "emoji": "📦"
+              },
+              {
+                "en": "defence",
+                "cn": "防御",
+                "emoji": "📦"
+              },
+              {
+                "en": "descendant",
+                "cn": "后裔",
+                "emoji": "📦"
+              },
+              {
+                "en": "dot",
+                "cn": "加点",
+                "emoji": "🏃"
+              },
+              {
+                "en": "eager",
+                "cn": "热切的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "ensure",
+                "cn": "保证",
+                "emoji": "🏃"
+              },
+              {
+                "en": "evidence",
+                "cn": "证据",
+                "emoji": "📦"
+              },
+              {
+                "en": "fascinating",
+                "cn": "极有吸引力的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "feast",
+                "cn": "盛宴",
+                "emoji": "📦"
+              },
+              {
+                "en": "gallery",
+                "cn": "(艺术作品的)展览馆",
+                "emoji": "📦"
+              },
+              {
+                "en": "generous",
+                "cn": "慷慨的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "greet",
+                "cn": "问候",
+                "emoji": "🏃"
+              },
+              {
+                "en": "honey",
+                "cn": "蜂蜜",
+                "emoji": "📦"
+              },
+              {
+                "en": "individual",
+                "cn": "单独的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "kingdom",
+                "cn": "王国",
+                "emoji": "📦"
+              },
+              {
+                "en": "landscape",
+                "cn": "(陆上,尤指乡村的)风景",
+                "emoji": "📦"
+              },
+              {
+                "en": "legal",
+                "cn": "法律的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "location",
+                "cn": "地方",
+                "emoji": "📦"
+              },
+              {
+                "en": "mansion",
+                "cn": "公馆",
+                "emoji": "📦"
+              },
+              {
+                "en": "military",
+                "cn": "军事的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "nearby",
+                "cn": "附近的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "ocean",
+                "cn": "大海",
+                "emoji": "📦"
+              },
+              {
+                "en": "port",
+                "cn": "港口(城市)",
+                "emoji": "📦"
+              },
+              {
+                "en": "position",
+                "cn": "位置",
+                "emoji": "🏃"
+              },
+              {
+                "en": "pub",
+                "cn": "酒吧",
+                "emoji": "📦"
+              },
+              {
+                "en": "puzzle",
+                "cn": "谜",
+                "emoji": "🏃"
+              },
+              {
+                "en": "roar",
+                "cn": "吼叫",
+                "emoji": "🏃"
+              },
+              {
+                "en": "scent",
+                "cn": "气味",
+                "emoji": "📦"
+              },
+              {
+                "en": "snack",
+                "cn": "点心",
+                "emoji": "📦"
+              },
+              {
+                "en": "stew",
+                "cn": "炖菜",
+                "emoji": "🏃"
+              },
+              {
+                "en": "striking",
+                "cn": "引人注目的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "surround",
+                "cn": "围绕",
+                "emoji": "🏃"
+              },
+              {
+                "en": "wine",
+                "cn": "葡萄酒",
+                "emoji": "📦"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "At a Historic Town",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss History and Traditions.",
-                    "cn": "我们来讨论History and Traditions。"
+                    "text": "Wow, this old town feels like walking into history!",
+                    "cn": "哇,这座古镇感觉像走进了历史!"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Mountain today.",
-                    "cn": "好的，我今天学了必修第二册 课文词汇。"
+                    "text": "It does. The whole town is surrounded by an ancient city wall.",
+                    "cn": "确实。整座城镇都被一道古城墙环绕着。"
                   },
                   {
                     "role": "A",
-                    "text": "And Purpose is important too.",
-                    "cn": "必修第二册 课文词汇也很重要。"
+                    "text": "What should we try while we're here?",
+                    "cn": "我们在这儿该尝点什么?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Let's get some local snacks packed and eat them on the wall.",
+                    "cn": "我们打包些当地小吃,到城墙上吃吧。"
                   }
                 ]
               }
@@ -5145,7 +6051,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "51个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -5183,6 +6089,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -5207,8 +6121,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "限制性定语从句",
-            "grammarCode": "pep-r2-u1-restrictive-clauses",
+            "grammarTitle": "过去分词作定语和宾语补足语",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ students are making an app about Mount Tai and taking photos of the and stones.\n\n（限制性定语从句 · 教材原句）",
@@ -5260,225 +6174,274 @@
               }
             ],
             "reading": {
-              "passage": "What do you think the text is about? 2 Scan the text for numbers. Circle the numbers and guess what they mean. FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want to improve society. There comes a time when the old must give way to the new, and it is not possible to preserve everything from our past as we move towards the future. Finding and keeping the right balance between progress and the protection of cultural sites can be a big challenge. Big challenges, however, can sometimes lead to great solutions. In the 1950s, the Egyptian government wanted to build a new dam across the Nile in order to control floods, produce electricity, and supply water to more farmers in the area. Water from the dam would likely damage a number of temples and destroy cultural relics that were an important part of Egypt's cultural heritage.",
-              "passageCn": "（人教版必修第二册 · 教材节选）",
+              "passage": "The United Kingdom is made up of four countries that share one flag and one currency, yet each keeps its own traditions. Over hundreds of years, different groups of people took over the land and left their mark, from Roman roads to Norman castles. Today the UK is a fascinating mix of old history and modern life.",
+              "passageCn": "联合王国由四个国家组成,它们共用一面国旗和一种货币,却各自保留着自己的传统。数百年来,不同的人群先后占领这片土地并留下印记,从罗马人的道路到诺曼人的城堡。如今的英国是古老历史与现代生活的迷人结合体。",
               "questions": [
                 {
-                  "q": "According to the passage: \"What do you think the text is about?...\"",
+                  "q": "What do the four countries share?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "What do you think the text is about?",
-                    "Unrelated."
+                    "One flag and one currency.",
+                    "The same football team.",
+                    "The same national dish.",
+                    "Nothing at all."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"2 Scan the text for numbers....\"",
+                  "q": "What did different groups leave behind?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "2 Scan the text for numbers.",
-                    "Unrelated."
+                    "Nothing of value.",
+                    "Their mark, such as roads and castles.",
+                    "Only modern buildings.",
+                    "A single language only."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 },
                 {
-                  "q": "According to the passage: \"Circle the numbers and guess what they mean....\"",
+                  "q": "What is the UK like today?",
                   "opts": [
-                    "Unrelated.",
-                    "Circle the numbers and guess what they mean.",
-                    "Not stated.",
-                    "Opposite meaning."
+                    "A place with no history.",
+                    "Exactly the same everywhere.",
+                    "A fascinating mix of old and new.",
+                    "A country without traditions."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"FROM PROBLEMS TO SOLUTIONS Economic development is...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we wan",
-                    "Opposite meaning.",
-                    "Not stated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 2
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"PROMOTING CULTURE THROUGH DIGITAL IMAGES\" (PEP 必修第二册).",
-              "promptCn": "根据人教版《必修第二册》课文《PROMOTING CULTURE THROUGH DIGITAL IMAGES》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write 3-4 sentences introducing a place, festival or tradition of the UK or China. Use sensory details and at least one past participle (such as surrounded, dotted, or fixed).",
+              "promptCn": "用3-4句话介绍英国或中国的一个地方、节日或传统:用感官细节描写,并至少用一个过去分词(如 surrounded / dotted / fixed)。",
+              "sampleWords": [
+                "tradition",
+                "festival",
+                "ancient",
+                "surround",
+                "scent",
+                "snack",
+                "courtyard",
+                "landscape",
+                "custom",
+                "dotted"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Mountain」的意思是？",
+                "q": "The four countries ____ to the United Kingdom.",
                 "opts": [
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Purpose」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项1",
-                  "选项2"
+                  "belong",
+                  "destroy",
+                  "sell",
+                  "forget"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Introducing」的意思是？",
+                "q": "London is an ancient ____ city with a long history.",
                 "opts": [
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项3"
+                  "song",
+                  "port",
+                  "price",
+                  "noise"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Young」的意思是？",
+                "q": "Loch Ness is ____ by beautiful natural landscape.",
                 "opts": [
-                  "选项2",
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项3"
+                  "lost",
+                  "hidden",
+                  "surrounded",
+                  "sold"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「People」的意思是？",
+                "q": "Stop by a village ____ and relax with a glass of wine.",
                 "opts": [
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Easy」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项1",
-                  "选项3"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Making」的意思是？",
-                "opts": [
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项1"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Stones」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "必修第二册 课文词汇"
+                  "price",
+                  "noise",
+                  "machine",
+                  "pub"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「历史与传统」相关词是？",
+                "q": "We looked up at the ____ window and wondered what had happened.",
                 "opts": [
-                  "Mountain",
-                  "school",
-                  "Easy",
-                  "teacher"
+                  "broken",
+                  "breaking",
+                  "to break",
+                  "break"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "We could get our car battery ____ near the square.",
+                "opts": [
+                  "charging",
+                  "charged",
+                  "to charge",
+                  "charge"
+                ],
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "At the desk, we heard it ____ that no audio guides were left.",
+                "opts": [
+                  "announcing",
+                  "to announce",
+                  "announced",
+                  "announce"
+                ],
+                "answer": 2,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "The soldiers ____ in the war were cared for by the family.",
+                "opts": [
+                  "wounding",
+                  "to wound",
+                  "wound",
+                  "wounded"
+                ],
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "维京人留下了新词和许多地名。",
+                  "他们建了一座新桥。",
+                  "游客买了门票。",
+                  "孩子们在玩游戏。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "The Vikings left behind new words and many place names."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "这座庙是新建的。",
+                  "她把目光定格在那幅向日葵上。",
+                  "她卖掉了那幅画。",
+                  "她从没去过美术馆。"
+                ],
+                "answer": 1,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "She had her eyes fixed on the painting of sunflowers."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "Four countries belong to the United Kingdom.",
                 "opts": [
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "Circle the numbers and guess what they mean.",
-                  "There comes a time when the old must give way to the new, and it is not "
+                  "有四个国家属于联合王国。",
+                  "联合王国只有一个国家。",
+                  "苏格兰已经脱离了英国。",
+                  "英国没有自己的国旗。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "The Normans conquered England after a famous battle.",
                 "opts": [
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "Circle the numbers and guess what they mean."
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
-                "opts": [
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "Circle the numbers and guess what they mean."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
-                "opts": [
-                  "Circle the numbers and guess what they mean.",
-                  "There comes a time when the old must give way to the new, and it is not ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want "
+                  "罗马人修建了城镇和道路。",
+                  "诺曼人在一场著名战役后征服了英格兰。",
+                  "维京人留下了许多新词。",
+                  "盎格鲁-撒克逊人带来了英语。"
                 ],
                 "answer": 1
               },
               {
-                "audio": "What do you think the text is about? 2 Scan the text for numbers. Circle the num",
+                "audio": "We had our car parked in an underground car park.",
                 "opts": [
-                  "Circle the numbers and guess what they mean.",
-                  "FROM PROBLEMS TO SOLUTIONS Economic development is necessary if we want ",
-                  "What do you think the text is about? 2 Scan the text for numbers.",
-                  "Finding and keeping the right balance between progress and the protectio"
+                  "我们把车开走了。",
+                  "我们卖掉了那辆车。",
+                  "我们把车停在了地下停车场。",
+                  "我们的车坏在了路上。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Loch Ness is surrounded by beautiful natural landscape.",
+                "opts": [
+                  "尼斯湖里没有水。",
+                  "尼斯湖是新建的。",
+                  "尼斯湖很容易找到。",
+                  "尼斯湖被美丽的自然风景环绕。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "London is an ancient port city with a long history.",
+                "opts": [
+                  "伦敦是历史悠久的古老港口城市。",
+                  "伦敦是一座很小的新城。",
+                  "伦敦离大海很远。",
+                  "伦敦没有任何古迹。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Many families still enjoy the tradition of afternoon tea.",
+                "opts": [
+                  "没有人再喝下午茶。",
+                  "许多家庭仍喜爱下午茶的传统。",
+                  "下午茶被禁止了。",
+                  "下午茶只在节日喝。"
+                ],
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "When Mia first arrived in Scotland, she could not understand why one country had so many different traditions. After a week of visiting old castles and friendly village pubs, she finally saw the answer. Each group of people who had once lived there had left something behind, and together these gifts had shaped the rich culture she now loved.",
+              "questions": [
+                {
+                  "q": "Why was Mia confused at first?",
+                  "options": [
+                    "She could not see how a single nation held so many customs.",
+                    "She could not find any old castles.",
+                    "She disliked the village pubs.",
+                    "She wanted to go home at once."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'could not understand why one country had so many different traditions' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "What did Mia finally realise?",
+                  "options": [
+                    "That traditions are not worth keeping.",
+                    "That different groups had each left something that shaped the culture.",
+                    "That Scotland had no real history.",
+                    "That castles should be pulled down."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'Each group… had left something behind, and together these gifts had shaped the rich culture' 的转述(覆盖短文后半段)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u4.01",
+              "u4.02",
+              "u4.03"
             ]
           },
           {
@@ -5489,87 +6452,272 @@
             "title": "Music",
             "cn": "音乐",
             "emoji": "🎵",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Grew",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "band",
+                "cn": "乐队",
+                "emoji": "📦"
               },
               {
-                "en": "Scream",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "perform",
+                "cn": "表演",
+                "emoji": "🏃"
               },
               {
-                "en": "Cream",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "performance",
+                "cn": "表演",
+                "emoji": "📦"
               },
               {
-                "en": "Exist",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "performer",
+                "cn": "表演者",
+                "emoji": "📦"
               },
               {
-                "en": "Exists",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "composer",
+                "cn": "作曲家",
+                "emoji": "📦"
               },
               {
-                "en": "Twelve",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "composition",
+                "cn": "(音乐、艺术的)作品",
+                "emoji": "📦"
               },
               {
-                "en": "Twelfth",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "conductor",
+                "cn": "(乐队、合唱团的)指挥",
+                "emoji": "📦"
               },
               {
-                "en": "Confident",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "classical",
+                "cn": "古典的",
+                "emoji": "🔤"
               },
               {
-                "en": "Confused",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "album",
+                "cn": "音乐专辑",
+                "emoji": "📦"
               },
               {
-                "en": "Check",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "studio",
+                "cn": "录音棚",
+                "emoji": "📦"
               },
               {
-                "en": "Answers",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "stage",
+                "cn": "舞台",
+                "emoji": "📦"
               },
               {
-                "en": "Partner",
-                "cn": "必修第二册 课文词汇",
-                "emoji": "📘"
+                "en": "talent",
+                "cn": "天赋",
+                "emoji": "📦"
+              },
+              {
+                "en": "original",
+                "cn": "原创的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "ordinary",
+                "cn": "普通的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "opportunity",
+                "cn": "机会",
+                "emoji": "📦"
+              },
+              {
+                "en": "enable",
+                "cn": "使能够",
+                "emoji": "🏃"
+              },
+              {
+                "en": "prove",
+                "cn": "证明",
+                "emoji": "🏃"
+              },
+              {
+                "en": "phenomenon",
+                "cn": "现象",
+                "emoji": "📦"
+              },
+              {
+                "en": "various",
+                "cn": "各种各样的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "virtual",
+                "cn": "虚拟的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "award",
+                "cn": "奖",
+                "emoji": "🏃"
+              },
+              {
+                "en": "impact",
+                "cn": "影响",
+                "emoji": "📦"
+              },
+              {
+                "en": "disease",
+                "cn": "疾病",
+                "emoji": "📦"
+              },
+              {
+                "en": "cure",
+                "cn": "治愈",
+                "emoji": "🏃"
+              },
+              {
+                "en": "treatment",
+                "cn": "治疗",
+                "emoji": "📦"
+              },
+              {
+                "en": "relief",
+                "cn": "(痛苦的)减轻",
+                "emoji": "📦"
+              },
+              {
+                "en": "satisfaction",
+                "cn": "满足",
+                "emoji": "📦"
+              },
+              {
+                "en": "soul",
+                "cn": "灵魂",
+                "emoji": "📦"
+              },
+              {
+                "en": "energy",
+                "cn": "精力",
+                "emoji": "📦"
+              },
+              {
+                "en": "previous",
+                "cn": "先前的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "gradual",
+                "cn": "逐渐的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "capable",
+                "cn": "有能力的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "unemployed",
+                "cn": "失业的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "equipment",
+                "cn": "设备",
+                "emoji": "📦"
+              },
+              {
+                "en": "aim",
+                "cn": "目的",
+                "emoji": "🏃"
+              },
+              {
+                "en": "addition",
+                "cn": "增加",
+                "emoji": "📦"
+              },
+              {
+                "en": "moreover",
+                "cn": "而且",
+                "emoji": "🏃"
+              },
+              {
+                "en": "thus",
+                "cn": "因此",
+                "emoji": "🏃"
+              },
+              {
+                "en": "somehow",
+                "cn": "以某种方式",
+                "emoji": "🏃"
+              },
+              {
+                "en": "nowadays",
+                "cn": "现在",
+                "emoji": "🏃"
+              },
+              {
+                "en": "altogether",
+                "cn": "总共",
+                "emoji": "🏃"
+              },
+              {
+                "en": "assume",
+                "cn": "假设",
+                "emoji": "🏃"
+              },
+              {
+                "en": "romantic",
+                "cn": "浪漫的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "lean",
+                "cn": "依靠",
+                "emoji": "🏃"
+              },
+              {
+                "en": "reaction",
+                "cn": "反应",
+                "emoji": "📦"
+              },
+              {
+                "en": "piano",
+                "cn": "钢琴",
+                "emoji": "📦"
+              },
+              {
+                "en": "hip-hop",
+                "cn": "嘻哈音乐",
+                "emoji": "📦"
+              },
+              {
+                "en": "stringed",
+                "cn": "有弦的",
+                "emoji": "🔤"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Talking about Music Preferences",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Music.",
-                    "cn": "我们来讨论Music。"
+                    "text": "What kind of music do you like best?",
+                    "cn": "你最喜欢哪种音乐?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Grew today.",
-                    "cn": "好的，我今天学了必修第二册 课文词汇。"
+                    "text": "I love classical music. It makes me feel calm and peaceful.",
+                    "cn": "我喜欢古典乐,它让我感到平静祥和。"
                   },
                   {
                     "role": "A",
-                    "text": "And Scream is important too.",
-                    "cn": "必修第二册 课文词汇也很重要。"
+                    "text": "Nice. I prefer hip-hop, because it gives me energy.",
+                    "cn": "不错。我更喜欢嘻哈,因为它给我能量。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Different music for different moods, then!",
+                    "cn": "那真是不同心情配不同音乐啊!"
                   }
                 ]
               }
@@ -5578,7 +6726,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "48个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -5616,6 +6764,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -5640,8 +6796,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "限制性定语从句",
-            "grammarCode": "pep-r2-u1-restrictive-clauses",
+            "grammarTitle": "过去分词作状语",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ students are making an app about Mount Tai and taking photos of the and stones.\n\n（限制性定语从句 · 教材原句）",
@@ -5693,225 +6849,264 @@
               }
             ],
             "reading": {
-              "passage": "Lanzhou, 9 August 2017. A group of researchers and scientists from China and other countries are\n\nworking together to help increase knowledge and appreciation of China's ancient cultural heritage.\n\nThey are recording and collecting digital images of cultural relics from the Mogao Caves, which\n\nwere a key stop along the Silk Road throughout China's ancient history. Nearly 500,000 high-\n\nquality digital photographs have been produced since the international project started in 1994.\n\nThe Mogao Caves have long been a meeting point for different cultures and are part of the history\n\nof many countries. Today, the caves are just as international as they were at the time when people\n\ntravelled the Silk Road. Tourists from all over the world visit Dunhuang to see the caves, and the\n\nGetty Museum in Los Angeles has even reproduced a copy of the\n\ncaves and paintings for people to admire in America.\n\nBy sharing so many digital photos over the Internet, the group\n\nhopes to promote even wider interest around the world in\n\nChina's ancient history, culture, and traditions. They als",
-              "passageCn": "（人教版必修第二册 · 教材节选）",
+              "passage": "Lily was too shy to sing in front of others, so she joined a virtual choir online. Singing alone in her room, she added her quiet voice to hundreds of others. When she finally heard the finished song, she felt proud to be part of something so big.",
+              "passageCn": "莉莉太害羞,不敢当众唱歌,于是她在网上加入了一个虚拟合唱团。她独自在房间里歌唱,把自己轻轻的歌声加入到数百人之中。当她最终听到合成的歌曲时,她为自己成为这么宏大事物的一部分而感到自豪。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Lanzhou, 9 August 2017....\"",
+                  "q": "Why did Lily join a virtual choir?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Lanzhou, 9 August 2017.",
-                    "Unrelated."
+                    "She was too shy to sing in front of others.",
+                    "She wanted to become famous.",
+                    "Her teacher forced her to.",
+                    "She had no Internet at home."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"A group of researchers and scientists from China a...\"",
+                  "q": "How did Lily feel when she heard the finished song?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "A group of researchers and scientists from China and other countries a",
-                    "Unrelated."
+                    "Proud to be part of something big.",
+                    "Sorry that she had joined.",
+                    "Bored and tired.",
+                    "Angry at the other singers."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"They are recording and collecting digital images o...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "Unrelated.",
-                    "They are recording and collecting digital images of cultural relics fr"
-                  ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"Nearly 500,000 high-\n\nquality digital photographs ...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "Not stated.",
-                    "Nearly 500,000 high-\n\nquality digital photographs have been produced s",
-                    "Opposite meaning."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"FROM PROBLEMS TO SOLUTIONS\" (PEP 必修第二册).",
-              "promptCn": "根据人教版《必修第二册》课文《FROM PROBLEMS TO SOLUTIONS》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write 3-4 sentences about your favourite kind of music and how it makes you feel.",
+              "promptCn": "用3-4句话写一写你最喜欢的音乐类型,以及它带给你的感受。",
+              "sampleWords": [
+                "favourite",
+                "band",
+                "classical",
+                "hip-hop",
+                "energy",
+                "relief",
+                "mood",
+                "perform",
+                "feel",
+                "enjoy"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Grew」的意思是？",
+                "q": "My brother plays the guitar in a local rock ____.",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "必修第二册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Scream」的意思是？",
-                "opts": [
-                  "必修第二册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "band",
+                  "garden",
+                  "market",
+                  "ticket"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Cream」的意思是？",
+                "q": "The young singers will ____ on stage at the music festival.",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "必修第二册 课文词汇",
-                  "选项2"
+                  "perform",
+                  "forget",
+                  "destroy",
+                  "borrow"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Exist」的意思是？",
+                "q": "Beethoven is one of the greatest ____ in history.",
                 "opts": [
-                  "选项2",
-                  "必修第二册 课文词汇",
-                  "选项3",
-                  "选项1"
+                  "composers",
+                  "farmers",
+                  "drivers",
+                  "waiters"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Exists」的意思是？",
+                "q": "Music has had a great ____ on my life.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "必修第二册 课文词汇"
+                  "impact",
+                  "noise",
+                  "price",
+                  "weather"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Twelve」的意思是？",
+                "q": "____ by his romantic words, the girl accepted his gift.",
                 "opts": [
-                  "选项1",
-                  "必修第二册 课文词汇",
-                  "选项2",
-                  "选项3"
+                  "Moved",
+                  "Moving",
+                  "To move",
+                  "Move"
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Twelfth」的意思是？",
+                "q": "____ more time, the band could have finished the album.",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "必修第二册 课文词汇"
+                  "Given",
+                  "Giving",
+                  "To give",
+                  "Give"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Confident」的意思是？",
+                "q": "____ for performances, the hall is always full of energy.",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "必修第二册 课文词汇"
+                  "Used",
+                  "Using",
+                  "To use",
+                  "Use"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "本单元「音乐」相关词是？",
+                "q": "Though ____ to the contest, the shy boy refused to sing.",
                 "opts": [
-                  "Confident",
-                  "teacher",
-                  "Confused",
-                  "Grew"
+                  "invited",
+                  "inviting",
+                  "to invite",
+                  "invite"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听录音,选出正确的中文意思。",
+                "opts": [
+                  "古典乐让我感到平静祥和。",
+                  "嘻哈让我想跳舞。",
+                  "我喜欢乡村音乐。",
+                  "我讨厌所有音乐。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Classical music makes me feel calm and peaceful."
+              },
+              {
+                "q": "听录音,选出正确的中文意思。",
+                "opts": [
+                  "请让音乐成为你生活的一部分。",
+                  "请别再听音乐了。",
+                  "音乐是浪费时间。",
+                  "只有歌手才需要音乐。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Please make music a part of your life."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "A group of researchers and scientists from China and other countries are working",
+                "audio": "I really like hip-hop because the strong beat makes me want to move.",
                 "opts": [
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "The Mogao Caves have long been a meeting point for different cultures an"
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "The Mogao Caves have long been a meeting point for different cultures an",
-                  "A group of researchers and scientists from China and other countries are",
-                  "They are recording and collecting digital images of cultural relics from"
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "The Mogao Caves have long been a meeting point for different cultures an"
-                ],
-                "answer": 2
-              },
-              {
-                "audio": "A group of researchers and scientists from China and other countries are working",
-                "opts": [
-                  "The Mogao Caves have long been a meeting point for different cultures an",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are"
+                  "我喜欢嘻哈,强节拍让我想动起来。",
+                  "我喜欢古典乐,因为它让我平静。",
+                  "我不喜欢任何音乐。",
+                  "我只在睡觉时听音乐。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "A group of researchers and scientists from China and other countries are working",
+                "audio": "The aim of the festival is to raise money for charity.",
                 "opts": [
-                  "They are recording and collecting digital images of cultural relics from",
-                  "A group of researchers and scientists from China and other countries are",
-                  "Nearly 500,000 high- quality digital photographs have been produced sinc",
-                  "Today, the caves are just as international as they were at the time when"
+                  "这个音乐节的目的是为慈善筹款。",
+                  "这个音乐节是为了卖乐器。",
+                  "这个音乐节要选一位新老师。",
+                  "这个音乐节明天就结束。"
                 ],
-                "answer": 3
+                "answer": 0
+              },
+              {
+                "audio": "In a virtual choir, each member records a video alone at home.",
+                "opts": [
+                  "在虚拟合唱团里,每位成员在家独自录视频。",
+                  "在虚拟合唱团里,大家在同一个舞台唱歌。",
+                  "虚拟合唱团只收专业歌手。",
+                  "虚拟合唱团需要一个大录音棚。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "A stringed instrument like the violin makes sound from its strings.",
+                "opts": [
+                  "像小提琴这样的弦乐器靠琴弦发声。",
+                  "像长笛这样的管乐器靠空气发声。",
+                  "鼓是靠敲击发声的。",
+                  "弦乐器是不发声的。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Music gave me strength and brought me relief during the hard times.",
+                "opts": [
+                  "在艰难时刻,音乐给了我力量,也带给我宽慰。",
+                  "在艰难时刻,音乐让我更难过。",
+                  "音乐对我的生活毫无影响。",
+                  "我从不在困难时听音乐。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "A happy song can give you energy when you feel low.",
+                "opts": [
+                  "当你情绪低落时,一首欢快的歌能给你能量。",
+                  "当你情绪低落时,应该停止听音乐。",
+                  "欢快的歌只会让人更累。",
+                  "音乐不能改变心情。"
+                ],
+                "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "When Max felt nervous before his first concert, his teacher handed him a small drum and told him to play whatever he felt. To his surprise, the simple beat calmed his shaking hands and helped him forget the crowd. By the end of the night, he was smiling, proud that a few honest sounds had carried him through.",
+              "questions": [
+                {
+                  "q": "How did Max feel before the concert?",
+                  "options": [
+                    "Calm and confident.",
+                    "Nervous, with shaking hands.",
+                    "Bored and sleepy.",
+                    "Angry at his teacher."
+                  ],
+                  "answer": "B",
+                  "explanation": "原文 'felt nervous… calmed his shaking hands' 的转述,说明他演出前紧张。"
+                },
+                {
+                  "q": "What helped Max get through the concert?",
+                  "options": [
+                    "Leaving the stage early.",
+                    "A long speech from the teacher.",
+                    "Playing a simple beat on the drum.",
+                    "Listening to the crowd cheer."
+                  ],
+                  "answer": "C",
+                  "explanation": "原文 'the simple beat calmed his shaking hands… carried him through' 的转述(覆盖短文后半)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "u5.01",
+              "u5.02",
+              "u5.03"
             ]
           }
         ]

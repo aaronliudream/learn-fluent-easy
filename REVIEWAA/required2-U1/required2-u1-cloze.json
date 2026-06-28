@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Cultural Heritage",
+  "source": "人教版2019必修二 Unit 1 同主题完形(参观长城/一封求助信/博物馆志愿者/移走神庙/数字敦煌一日/无形遗产小课)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Visit to the Great Wall",
+      "text": "Last weekend I finally visited the Great Wall with my family. Standing on it, I could hardly believe that people had (1)____ such a huge structure by hand. Our guide told us that it is one of the great (2)____ of the world. As we walked, she pointed to a part that had fallen into (3)____ because of wind and rain. \"If we do not (4)____ it,\" she said, \"more of it will be lost forever.\" She explained that surveyors and archaeologists (5)____ the wall every year to record its true length. A group of (6)____ also come here once a month to clear away rubbish. I felt that protecting such a treasure was truly (7)____ . On the way home, I kept thinking about how each (8)____ of us can help. The wall does not belong only to China; it is a (9)____ site for the whole world. I decided that one day I would (10)____ part in protecting it too.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "built",
+            "eaten",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "had built 建造了。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "wonders",
+            "noises",
+            "shops"
+          ],
+          "answer_index": 1,
+          "explanation": "wonders of the world 世界奇迹。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "water",
+            "music",
+            "ruins",
+            "money"
+          ],
+          "answer_index": 2,
+          "explanation": "fallen into ruins 成为废墟。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "sell",
+            "leave",
+            "protect"
+          ],
+          "answer_index": 3,
+          "explanation": "protect it 保护它。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "study",
+            "throw",
+            "buy",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "study the wall 研究城墙。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machines",
+            "volunteers",
+            "gardens",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "volunteers 志愿者。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "boring",
+            "useless",
+            "worthwhile",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "truly worthwhile 真正值得。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "one"
+          ],
+          "answer_index": 3,
+          "explanation": "each one of us 我们每一个人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "heritage",
+            "garden",
+            "market",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a heritage site 遗产地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "take",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "take part in 参与。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Letter Asking for Help",
+      "text": "Dear Sir, I am writing on behalf of a small town that needs your (1)____ . Near our town stands an old temple that is more than five hundred years (2)____ . Last month, heavy rain damaged its roof, and we are afraid the whole building may (3)____ . The local people love this temple, but we do not have enough (4)____ to repair it. A few experts have already (5)____ the building and made a clear plan. They believe the temple can still be (6)____ if work begins soon. We are now trying to raise (7)____ from people who care about cultural heritage. Could your organisation (8)____ some money to our effort? Every small gift will make a real (9)____ . We do not want such an important relic to (10)____ forever. Thank you for your kind support. Yours faithfully, the Town Heritage Group.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "noise",
+            "price",
+            "help",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "needs your help 需要帮助。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "high",
+            "wide",
+            "deep",
+            "old"
+          ],
+          "answer_index": 3,
+          "explanation": "years old 历史悠久。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fall",
+            "grow",
+            "sing",
+            "laugh"
+          ],
+          "answer_index": 0,
+          "explanation": "may fall 可能倒塌。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "songs",
+            "money",
+            "games",
+            "foods"
+          ],
+          "answer_index": 1,
+          "explanation": "enough money 足够的钱。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eaten",
+            "sold",
+            "studied",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "studied the building 研究了建筑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lost",
+            "broken",
+            "sold",
+            "saved"
+          ],
+          "answer_index": 3,
+          "explanation": "can be saved 能被拯救。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "funds",
+            "noise",
+            "weather",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "raise funds 筹集资金。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "give",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "give money 捐钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mistake",
+            "noise",
+            "difference",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "make a difference 起作用。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "grow",
+            "sing",
+            "laugh",
+            "disappear"
+          ],
+          "answer_index": 3,
+          "explanation": "disappear forever 永远消失。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Day as a Museum Volunteer",
+      "text": "Every Saturday I work as a (1)____ at the city museum. My job is to help visitors understand the old (2)____ that are kept there. Some of them are thousands of years (3)____ , and each one tells a story about the people who made it. In the morning, I (4)____ visitors around the quiet halls and answer their questions. Many children are surprised to learn that one small bowl can (5)____ so much history. I always remind them not to (6)____ the objects, because even a gentle hand can cause (7)____ over time. In the afternoon, I help the staff to clean and (8)____ each item carefully. The work is tiring, but it is also (9)____ , because I feel I am helping to (10)____ our cultural heritage for the future. I hope more young people will join us.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "volunteer",
+            "machine",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a volunteer 志愿者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "songs",
+            "relics",
+            "games",
+            "foods"
+          ],
+          "answer_index": 1,
+          "explanation": "old relics 古老文物。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "wide",
+            "deep",
+            "old",
+            "high"
+          ],
+          "answer_index": 2,
+          "explanation": "years old 年代久远。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "eat",
+            "throw",
+            "show"
+          ],
+          "answer_index": 3,
+          "explanation": "show visitors around 带参观。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "carry",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "carry so much history 承载历史。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "touch",
+            "buy",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "not to touch 不要触摸。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "music",
+            "money",
+            "damage",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "cause damage 造成损害。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "hide",
+            "lose",
+            "check"
+          ],
+          "answer_index": 3,
+          "explanation": "check each item 检查每件。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "worthwhile",
+            "boring",
+            "useless",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "worthwhile 值得。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "preserve",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "preserve heritage 保护遗产。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Moving a Temple Stone by Stone",
+      "text": "Saving an ancient temple is harder than most people (1)____ . When rising water threatened the temples on the Nile, engineers could not simply lift a whole building and (2)____ it away. Instead, they had to take it down piece by (3)____ . First, experts gave every stone a number, so that nothing would be (4)____ later. Then workers carefully (5)____ the stones onto trucks and carried them to higher ground. There, following the numbers, they put the temple back (6)____ exactly as before. The whole (7)____ took many years and the help of thousands of people. Fifty countries (8)____ money to make it possible. When the last stone was finally in (9)____ , everyone cheered. It was proof that, with patience and teamwork, even the heaviest treasure can be (10)____ from the water.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eat",
+            "sell",
+            "think",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "than people think 人们以为的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sing",
+            "sleep",
+            "laugh",
+            "carry"
+          ],
+          "answer_index": 3,
+          "explanation": "carry it away 搬走。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "piece",
+            "song",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "piece by piece 一块一块。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "sung"
+          ],
+          "answer_index": 1,
+          "explanation": "would be lost 丢失。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ate",
+            "sold",
+            "lifted",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "lifted the stones 抬起石头。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "away",
+            "down",
+            "off",
+            "together"
+          ],
+          "answer_index": 3,
+          "explanation": "put back together 重新组装。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "process",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "the whole process 整个过程。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "gave",
+            "hid",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "gave money 捐钱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "price",
+            "place",
+            "music"
+          ],
+          "answer_index": 2,
+          "explanation": "in place 安放到位。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "thrown",
+            "sold",
+            "lost",
+            "saved"
+          ],
+          "answer_index": 3,
+          "explanation": "be saved 被拯救。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Digital Day at Dunhuang",
+      "text": "My aunt is a researcher (1)____ works on protecting the Mogao Caves. One day she took me to see her job. I had expected to watch people painting, but instead they were taking (2)____ photographs of the walls. \"We never (3)____ the paintings,\" she told me, \"because even soft light can harm them.\" Using special cameras, the team records every (4)____ in great detail. The pictures they take are of very high (5)____ , so people far away can study them too. My aunt said that they (6)____ these images on the Internet to (7)____ interest in China's history. By the end of the day, I understood that modern (8)____ can protect very old art. The caves have stood for more than a (9)____ years, and thanks to this work, they may be enjoyed for many more. I felt proud that my aunt was helping to (10)____ such a treasure.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "which",
+            "where",
+            "when"
+          ],
+          "answer_index": 0,
+          "explanation": "researcher who 指人作主语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "digital",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "digital photographs 数码照片。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "eat",
+            "touch",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "never touch 从不触碰。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "song",
+            "price",
+            "noise",
+            "image"
+          ],
+          "answer_index": 3,
+          "explanation": "every image 每个图像。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "quality",
+            "noise",
+            "price",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "high quality 高质量。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lose",
+            "share",
+            "hide",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "share on the Internet 在网上分享。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "lose",
+            "promote",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "promote interest 促进兴趣。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "food",
+            "noise",
+            "price",
+            "technology"
+          ],
+          "answer_index": 3,
+          "explanation": "modern technology 现代技术。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "thousand",
+            "minute",
+            "second",
+            "metre"
+          ],
+          "answer_index": 0,
+          "explanation": "a thousand years 一千年。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "break",
+            "preserve",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "preserve 保护。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning About Living Heritage",
+      "text": "In class today our teacher gave us a task (1)____ I really enjoyed. She asked us to learn about heritage that you cannot (2)____ with your hands. At first I was confused, because I always thought heritage meant old (3)____ and buildings. But she explained that a country's customs, dances and (4)____ are also part of its heritage. This kind is called intangible heritage, because it lives in what people (5)____ . My grandmother, for example, knows an old way of making paper (6)____ few young people can do today. The teacher warned that such skills may (7)____ if no one learns them. So she asked each of us to find one (8)____ from our own family and write about it. I chose my grandmother's paper, and I felt proud to (9)____ such knowledge alive. By the end of the lesson, I understood that heritage is not only about the (10)____ , but also about the people of today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "where",
+            "that",
+            "when"
+          ],
+          "answer_index": 2,
+          "explanation": "a task that 指物作宾语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "sing",
+            "sleep",
+            "touch"
+          ],
+          "answer_index": 3,
+          "explanation": "cannot touch 摸不到。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "relics",
+            "songs",
+            "games",
+            "foods"
+          ],
+          "answer_index": 0,
+          "explanation": "old relics 古老文物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "traditions",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "traditions 传统。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "throw",
+            "do",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "what people do 人们所做的事。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "who",
+            "where",
+            "when",
+            "that"
+          ],
+          "answer_index": 3,
+          "explanation": "a way that 指物作宾语。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "disappear",
+            "grow",
+            "sing",
+            "laugh"
+          ],
+          "answer_index": 0,
+          "explanation": "may disappear 可能消失。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "tradition",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "one tradition 一项传统。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "keep",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "keep it alive 使其延续。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "food",
+            "noise",
+            "price",
+            "past"
+          ],
+          "answer_index": 3,
+          "explanation": "about the past 关于过去。"
+        }
+      ]
+    }
+  ]
+}

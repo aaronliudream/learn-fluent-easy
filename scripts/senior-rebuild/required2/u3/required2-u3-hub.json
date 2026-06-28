@@ -1,0 +1,48 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "listeningQuestions": [
+    { "audio": "The Internet has made our lives more convenient.", "opts": ["互联网让我们的生活更方便了。", "互联网让我们的生活更危险了。", "互联网让我们的生活更昂贵了。", "互联网让我们的生活更慢了。"], "answer": 0 },
+    { "audio": "Protect your privacy and never give out your address.", "opts": ["保护好你的隐私,绝不要透露你的地址。", "分享你的隐私和地址。", "把地址写在博客上。", "把密码告诉所有人。"], "answer": 0 },
+    { "audio": "The software has been downloaded to my phone.", "opts": ["软件已经下载到我的手机上了。", "我正在给手机下载软件。", "我想删掉手机上的软件。", "软件还没有下载。"], "answer": 0 },
+    { "audio": "She was inspired by the people she met online.", "opts": ["她受到了网上结识的人的鼓舞。", "她在网上认识了很多坏人。", "她不喜欢上网聊天。", "她从不和陌生人说话。"], "answer": 0 },
+    { "audio": "A search engine helps you find what you are looking for.", "opts": ["搜索引擎帮你找到你要找的东西。", "搜索引擎会删掉你的文件。", "搜索引擎让手机变慢。", "搜索引擎只能听音乐。"], "answer": 0 },
+    { "audio": "Have you confirmed the Wi-Fi password yet?", "opts": ["你确认过 Wi-Fi 密码了吗?", "你忘记 Wi-Fi 密码了吗?", "你修好 Wi-Fi 了吗?", "你换新手机了吗?"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "We can ____ software, documents and images whenever we need them.", "opts": ["download", "downstairs", "downtown", "downhill"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Don't give out your address, or someone might steal your ____.", "opts": ["identity", "battery", "discount", "engine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Being online is no excuse for being ____ to others.", "opts": ["rude", "convenient", "familiar", "false"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A ____ posts comments only to stir up trouble online.", "opts": ["troll", "resident", "blogger", "author"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A new PC ____ with more functions.", "opts": ["has been built", "has built", "is building", "builds"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ the Wi-Fi password been confirmed yet?", "opts": ["Has", "Have", "Is", "Did"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Many older people ____ by Jan's free IT club.", "opts": ["have been helped", "have helped", "are helping", "helped"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Jan's life has been greatly improved ____ the Internet.", "opts": ["by", "of", "with", "from"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["所有文件都已被复制到新数据库。", "所有文件都丢失了。", "请把文件打印出来。", "数据库被删掉了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "All the files have been copied to the new database." },
+    { "q": "听句子选中文:", "opts": ["每当有更新时你就会收到一条消息。", "你从不收到任何消息。", "请关掉所有的应用。", "这个应用要花很多钱。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "You get a message whenever there has been an update." }
+  ],
+  "reading": {
+    "passage": "Online shopping has become part of everyday life. People order goods on the net and have them delivered home. It is convenient, and many sites even offer a discount.",
+    "passageCn": "网购已成为日常生活的一部分。人们在网上订购商品并送货到家。这很方便,许多网站还提供折扣。",
+    "questions": [
+      { "q": "Why do people enjoy online shopping?", "opts": ["It is convenient and may offer discounts.", "It is slow and expensive.", "It needs a lot of cash.", "It is only for big cities."], "answer": 0 },
+      { "q": "How do the goods reach the buyers?", "opts": ["They are delivered to people's homes.", "Buyers must collect them at a store.", "They are sent by post office only.", "They are never delivered."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short blog post giving two tips on how to stay safe online.",
+    "promptCn": "写一篇简短的博客,给出两条安全上网的建议。",
+    "sampleWords": ["online", "safe", "privacy", "password", "account", "identity", "polite", "troll", "comment", "tip"]
+  },
+  "dialogues": [
+    {
+      "title": "Asking about Online Habits",
+      "lines": [
+        { "role": "A", "text": "How much time do you spend online every day?", "cn": "你每天上网多长时间?" },
+        { "role": "B", "text": "About two hours. I chat with friends and stream music.", "cn": "大约两小时。我和朋友聊天、流播音乐。" },
+        { "role": "A", "text": "Do you ever worry about your privacy?", "cn": "你担心过你的隐私吗?" },
+        { "role": "B", "text": "Yes. I never give out my address and I use a strong password.", "cn": "担心。我从不透露住址,而且用强密码。" }
+      ]
+    }
+  ]
+}

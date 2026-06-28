@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(文化遗产主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When the bridge in his town was about to be taken down, old Mr Lin spent months photographing every stone and writing down the stories people told about it. Years later, a new museum used his pictures and notes to teach young visitors about the bridge that once stood there. Mr Lin always said that even when a building is gone, its memory can still be kept alive.",
+    "questions": [
+      {
+        "q": "What did Mr Lin do before the bridge was taken down?",
+        "options": [
+          "He photographed it and recorded the stories about it.",
+          "He tried to stop the work by force.",
+          "He moved the whole bridge to his garden.",
+          "He sold the stones to a museum."
+        ],
+        "answer": "A",
+        "explanation": "原文 'spent months photographing every stone and writing down the stories' 的转述;其余未提或相反。"
+      },
+      {
+        "q": "What does Mr Lin's belief suggest?",
+        "options": [
+          "Old bridges should never be removed.",
+          "The memory of a place can survive even after it is gone.",
+          "Photos are a waste of time.",
+          "Museums should not teach young people."
+        ],
+        "answer": "B",
+        "explanation": "末句 'even when a building is gone, its memory can still be kept alive' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

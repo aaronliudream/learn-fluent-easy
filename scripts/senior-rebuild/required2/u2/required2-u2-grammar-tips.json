@@ -1,0 +1,36 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "现在进行时的被动语态(is/are being done)速查",
+    "intro": "当主语是动作的承受者、且动作此刻正在被进行时,用 am/is/are being + 过去分词,意为'正在被……'。判断口诀:主语挨动作 + 此刻正在发生 → 用 be being done。",
+    "table": {
+      "headers": ["句型", "结构 / 例句"],
+      "rows": [
+        ["肯定(单数)", "is being + 过去分词:The wetland is being destroyed.(湿地正在被破坏)"],
+        ["肯定(复数)", "are being + 过去分词:Small birds are being caught.(小鸟正在被捕)"],
+        ["否定", "isn't/aren't being + 过去分词:The trees aren't being cut down now."],
+        ["一般疑问", "Is/Are + 主语 + being + 过去分词?:Are the ducks being sold?"],
+        ["对照", "经常/客观:is done(are served every day);此刻正在:is being done"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "结构固定 = be(am/is/are)+ being + 过去分词,being 不变", "mark": "are being hunted √ / are hunting ×" },
+      { "rule": "主语单复数决定 be 用 is 还是 are", "mark": "The wetland is being… / Birds are being…" },
+      { "rule": "by 短语引出动作执行者(可省略)", "mark": "The dolphins are being searched for by volunteers." },
+      { "rule": "区分'正在被做'(is being done)与'经常被做/事实'(is done)", "mark": "Shark fins are served daily(惯常)/ being served now(此刻)" }
+    ],
+    "why": [
+      "现在进行时表示'此刻正在发生',被动语态表示'主语承受动作';二者合一就是'某事此刻正在被进行',所以用 be being + 过去分词。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给动词原形,需填 is/are being + 过去分词(主谓一致 + 不规则过去分词)。",
+      "易错点:漏掉 being(误写成 is hunted)或把进行误判为完成;'每天/经常'类时间状语要用一般现在被动 is done,不是 being done。"
+    ],
+    "examVsReal": [
+      { "exam": "A new park is being built.(考试/书面正式)", "real": "They're building a new park.", "note": "口语里常用主动进行;被动多见于书面、新闻和说明文" },
+      { "exam": "The river is being cleaned now.(强调过程被动)", "real": "Someone's cleaning the river right now.", "note": "日常更爱用 someone / they + 主动,被动显得客观正式" }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Wildlife Protection",
+  "source": "人教版2019必修二 Unit 2 同主题完形(白鱀豚救援/华南虎保护计划/观鸟俱乐部/与象同行/濒危名单移除/大象孤儿院)。用词限 U2/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Saving the River Dolphin",
+      "text": "The Yangtze River dolphin was once a common sight, but its numbers fell quickly. The main (1)____ was the loss of its habitat, as the river became dirty and crowded. To help the shy creature, several nature (2)____ are being built along the water. Scientists are also (3)____ for the animal in the wild, hoping to find any that are left. They know it will not be easy, because the dolphin is very (4)____ to come close to people. At the same time, the rivers are being (5)____ up by groups of volunteers, so that the water becomes safe again. Local schools (6)____ children why the dolphin matters and what they can do to help. Everyone agrees that quick action is (7)____ if the species is to survive. The work is slow, but real (8)____ is being made step by step. The team will not (9)____ up easily, for they believe the river can become a home for wildlife once more. With enough care, this beautiful animal may one day (10)____ from danger.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "reason",
+            "price",
+            "noise",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "the main reason 主要原因。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "markets",
+            "reserves",
+            "factories",
+            "stations"
+          ],
+          "answer_index": 1,
+          "explanation": "nature reserves 自然保护区。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "paying",
+            "waiting",
+            "searching",
+            "asking"
+          ],
+          "answer_index": 2,
+          "explanation": "search for 寻找。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "happy",
+            "ready",
+            "glad",
+            "afraid"
+          ],
+          "answer_index": 3,
+          "explanation": "afraid to come close 害怕靠近。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cleaned",
+            "sold",
+            "thrown",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "are being cleaned up 被清理。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "teach",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "schools teach children 学校教孩子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "empty",
+            "late",
+            "needed",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "action is needed 需要行动。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "noise",
+            "trouble",
+            "progress"
+          ],
+          "answer_index": 3,
+          "explanation": "make progress 取得进步。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "give",
+            "stand",
+            "wake",
+            "look"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fall",
+            "recover",
+            "leave",
+            "die"
+          ],
+          "answer_index": 1,
+          "explanation": "recover from danger 脱离危险。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Plan for the Tiger",
+      "text": "The South China tiger is one of the most (1)____ animals in the country. For years it has faced a serious (2)____, mainly because its forest home has been cut down and it has been hunted for its skin. To stop the tiger from becoming (3)____, a careful plan is now being carried (4)____. Scientists are working to (5)____ the number of wild tigers, and new safe areas are being set up where the cats can live in (6)____. People are also asked not to (7)____ products made from tiger parts, because buyers keep the illegal trade alive. Posters and short videos are being used to make the public (8)____ of the danger. The team knows that real change takes time, but they remain (9)____ that the tiger can be saved. If we all do our part, this powerful animal may once again move freely through the forests where it (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "common",
+            "ordinary",
+            "endangered",
+            "modern"
+          ],
+          "answer_index": 2,
+          "explanation": "endangered animals 濒危动物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "holiday",
+            "threat"
+          ],
+          "answer_index": 3,
+          "explanation": "a serious threat 严重威胁。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "extinct",
+            "famous",
+            "useful",
+            "polite"
+          ],
+          "answer_index": 0,
+          "explanation": "become extinct 灭绝。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "away",
+            "out",
+            "off",
+            "in"
+          ],
+          "answer_index": 1,
+          "explanation": "carry out 实施。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lose",
+            "waste",
+            "increase",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "increase the number 增加数量。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "danger",
+            "trouble",
+            "noise",
+            "peace"
+          ],
+          "answer_index": 3,
+          "explanation": "live in peace 安宁地生活。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "buy",
+            "make",
+            "find",
+            "open"
+          ],
+          "answer_index": 0,
+          "explanation": "not to buy products 不买制品。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tired",
+            "aware",
+            "afraid",
+            "proud"
+          ],
+          "answer_index": 1,
+          "explanation": "make the public aware 使公众意识到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "sorry",
+            "hopeful",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "remain hopeful 保持希望。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "leaves",
+            "fails",
+            "belongs"
+          ],
+          "answer_index": 3,
+          "explanation": "where it belongs 它属于的地方。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Our Birdwatching Club",
+      "text": "Every Saturday morning, our birdwatching club meets in the park. We get up early to (1)____ for wild birds before the streets become busy. I always bring my (2)____, so that we can see the birds clearly from far away. My friend carries a field (3)____, which we use to look up the names of the birds we (4)____. Our club does more than just watch. We clean up the (5)____ where the birds live, build feeders so they have enough (6)____, and put paper cut-outs on windows so that birds do not (7)____ into the glass. These small actions help to (8)____ the birds in our neighbourhood. At first I joined only for fun, but now I really (9)____ how wonderful these little creatures are. Caring for them has changed the way I (10)____ at nature, and I hope more young people will join us soon.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "search",
+            "pay",
+            "wait",
+            "ask"
+          ],
+          "answer_index": 0,
+          "explanation": "search for 寻找。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "tickets",
+            "binoculars",
+            "books",
+            "boxes"
+          ],
+          "answer_index": 1,
+          "explanation": "binoculars 双筒望远镜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "guide",
+            "season"
+          ],
+          "answer_index": 2,
+          "explanation": "field guide 图鉴。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "see"
+          ],
+          "answer_index": 3,
+          "explanation": "the birds we see 我们看到的鸟。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "habitats",
+            "markets",
+            "factories",
+            "stations"
+          ],
+          "answer_index": 0,
+          "explanation": "clean up the habitats 清理栖息地。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "food",
+            "noise",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "enough food 足够食物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sleep",
+            "sing",
+            "crash",
+            "swim"
+          ],
+          "answer_index": 2,
+          "explanation": "crash into the glass 撞上玻璃。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "harm",
+            "leave",
+            "protect"
+          ],
+          "answer_index": 3,
+          "explanation": "protect the birds 保护鸟类。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "appreciate",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "appreciate 欣赏。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "look",
+            "throw",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "look at nature 看待自然。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Concern for the Elephants",
+      "text": "I am very (1)____ about the African elephants. These large animals are being (2)____ for their tusks, and at the same time their habitat is getting (3)____ as forests are cut down. Because elephants need huge living (4)____, it is very hard for them to (5)____ to such fast changes. To help them, the authorities are under (6)____ to build special parks and to tell people not to (7)____ elephant products. Reserves are being created where the animals can live in (8)____. Of course, no plan will (9)____ overnight, but every step counts. If buyers around the world lose interest in ivory, the killing will slow down too. That is why teaching the public is just as (10)____ as building reserves. Working together, we can give these gentle giants a real chance to survive.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "happy",
+            "proud",
+            "concerned",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "be concerned about 担心。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fed",
+            "saved",
+            "raised",
+            "hunted"
+          ],
+          "answer_index": 3,
+          "explanation": "are being hunted 被捕猎。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "smaller",
+            "bigger",
+            "louder",
+            "richer"
+          ],
+          "answer_index": 0,
+          "explanation": "getting smaller 越来越小。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "spaces",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "living spaces 生存空间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "lose",
+            "adapt",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "adapt to 适应。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "price",
+            "weather",
+            "pressure"
+          ],
+          "answer_index": 3,
+          "explanation": "under pressure 承受压力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "buy",
+            "make",
+            "find",
+            "open"
+          ],
+          "answer_index": 0,
+          "explanation": "not to buy products 不买制品。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "danger",
+            "safety",
+            "trouble",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "live in safety 安全地生活。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "leave",
+            "sell",
+            "work",
+            "fail"
+          ],
+          "answer_index": 2,
+          "explanation": "won't work overnight 不会一夜见效。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "late",
+            "free",
+            "important"
+          ],
+          "answer_index": 3,
+          "explanation": "just as important 同样重要。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Off the Danger List",
+      "text": "For many years, one wild species in China lived under a heavy (1)____ from hunters and from the loss of its home. Things looked very (2)____, and people feared it might soon disappear forever. Then the government placed the animal under national (3)____. Volunteers (4)____ over the herds day and night to keep them safe from attacks. New bridges and gates were (5)____ so that the animals could move about easily and stay away from cars and trains. These (6)____ turned out to be very effective. Year after year, the population slowly began to (7)____, until at last the species was (8)____ from the endangered list. It was wonderful (9)____, but the work did not stop there. The threats had not fully gone, so the protection programmes (10)____ on. The story shows that, with patience and care, even an animal close to extinction can be brought back.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "threat",
+            "price",
+            "noise",
+            "holiday"
+          ],
+          "answer_index": 0,
+          "explanation": "a heavy threat 沉重威胁。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "bright",
+            "bad",
+            "funny",
+            "easy"
+          ],
+          "answer_index": 1,
+          "explanation": "looked bad 形势糟糕。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "market",
+            "protection",
+            "factory",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "national protection 国家保护。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "lost",
+            "broke",
+            "watched"
+          ],
+          "answer_index": 3,
+          "explanation": "watched over 看护。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "added",
+            "sold",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "were added 被增设。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "measures",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "these measures 这些措施。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fall",
+            "leave",
+            "recover",
+            "die"
+          ],
+          "answer_index": 2,
+          "explanation": "begin to recover 开始恢复。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bought",
+            "lost",
+            "broken",
+            "removed"
+          ],
+          "answer_index": 3,
+          "explanation": "was removed 被移除。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "news",
+            "noise",
+            "price",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "wonderful news 好消息。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broke",
+            "went",
+            "sold",
+            "fell"
+          ],
+          "answer_index": 1,
+          "explanation": "went on 继续。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Elephant Whisperers",
+      "text": "In Kenya, a special group of keepers look after baby elephants that have lost their (1)____. The little animals are brought to a centre, where they are (2)____ milk from bottles every few hours, day and night. The keepers do far (3)____ than just feed them. They sing to the elephants, play games with them, and even (4)____ beside them at night so that the young ones do not feel (5)____. The most important thing each baby must (6)____ is how to live in the wild again. Little by little, the keepers (7)____ the elephants into the forest and teach them to find food on their (8)____. So far, the centre has helped hundreds of orphan elephants (9)____ to a normal life. The keepers say that elephants, like people, need love and patience. Their gentle work (10)____ us that protecting wildlife is not only about laws, but also about kindness.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "noises",
+            "mothers",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "lost their mothers 失去母亲。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "thrown",
+            "lost",
+            "given"
+          ],
+          "answer_index": 3,
+          "explanation": "are given milk 被喂奶。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "more",
+            "less",
+            "fewer",
+            "least"
+          ],
+          "answer_index": 0,
+          "explanation": "do more than 不止于。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "sleep",
+            "leave",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "sleep beside them 睡在它们旁边。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rich",
+            "late",
+            "alone",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "feel alone 感到孤单。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lose",
+            "sell",
+            "forget",
+            "learn"
+          ],
+          "answer_index": 3,
+          "explanation": "must learn 必须学会。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lead",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "lead the elephants 带领大象。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "own",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "on their own 靠自己。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "fall",
+            "leave",
+            "return",
+            "die"
+          ],
+          "answer_index": 2,
+          "explanation": "return to a normal life 回归正常生活。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sells",
+            "loses",
+            "breaks",
+            "reminds"
+          ],
+          "answer_index": 3,
+          "explanation": "reminds us 提醒我们。"
+        }
+      ]
+    }
+  ]
+}

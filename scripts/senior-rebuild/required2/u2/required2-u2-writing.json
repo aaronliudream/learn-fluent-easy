@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Make a Poster Calling for Wildlife Protection(写一篇呼吁保护野生动物的海报/倡议信)",
+  "title_en": "Protect Our Wildlife",
+  "genre": "应用文 / 海报·倡议信(call on people to protect an endangered animal)",
+  "source": "人教版2019必修二 Unit 2 Reading for Writing / Make a poster:为一种濒危动物设计海报或倡议信(说明它为何濒危 + 正在采取什么措施 + 呼吁大家做什么)。",
+  "prompt_cn": "假设你是李华,学校环保社团要为'世界野生动物日'制作一张海报(或一封面向同学的倡议信)。请用英语写约80词的海报内容,包括:① 指出一种濒危动物(如非洲象/藏羚羊)及它为何濒危;② 说明正在采取什么措施(用现在进行时被动语态);③ 呼吁同学们能做些什么(如拒买动物制品)。注意:语气号召、要点清楚。",
+  "prompt_en": "Suppose you are Li Hua. Your school's environmental club is making a poster (or an open letter to schoolmates) for World Wildlife Day. Write about 80 words including: 1) name one endangered animal and why it is in danger; 2) what is being done to help it (use the present continuous passive voice); 3) call on your schoolmates to take action, such as refusing to buy animal products.",
+  "points": [
+    "点明濒危动物及原因(… is in danger because …)",
+    "正在采取的措施(… is being done / measures are being taken)",
+    "号召行动(Let's … / Please do not buy …)",
+    "语气号召有力、要点清楚连贯"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Protect Our Wildlife! The African elephant is in great danger. It is being hunted for its tusks, and at the same time its habitat is getting smaller. The good news is that much is being done to help. Special parks are being built, and people are being told not to buy elephant products. But the animals still need us. Please do not buy goods made from wild animals, and share this message with your family and friends. Remember: when the buying stops, the killing can stop too. Change begins with you!",
+  "model_translation": "保护我们的野生动物!非洲象正处于极大危险之中。它因象牙被捕猎,与此同时栖息地也在变小。好消息是,人们正在采取很多措施来帮助它。专门的园区正在修建,人们也被告知不要购买大象制品。但这些动物仍然需要我们。请不要购买用野生动物制成的商品,并把这条信息分享给家人和朋友。记住:当购买停止时,杀戮也会停止。改变,从你开始!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:濒危动物及原因 / 正在采取的措施 / 号召行动" },
+      { "dimension": "结构", "max": 4, "criteria": "海报/倡议体例清楚、号召有力、要点连贯、人称一致" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、现在进行时被动语态(is/are being done)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 Protect Our Wildlife! / Dear schoolmates,",
+      "濒危原因 The … is in danger because it is being hunted …",
+      "正在采取的措施 … is being built / … are being told not to …",
+      "号召 Please do not buy … / Change begins with you!"
+    ],
+    "key_expressions": [
+      "The African elephant is in great danger.",
+      "It is being hunted for its tusks.",
+      "Special parks are being built to protect the animals.",
+      "Please do not buy goods made from wild animals."
+    ],
+    "useful_words": ["wildlife", "endangered", "habitat", "hunt", "protection", "measure", "reserve", "aware", "protect", "extinct"]
+  },
+  "high_sentences": [
+    "The African elephant is being hunted for its tusks, and its habitat is getting smaller.",
+    "Much is being done to help: special parks are being built and people are being told not to buy animal products.",
+    "Please do not buy goods made from wild animals.",
+    "When the buying stops, the killing can stop too."
+  ],
+  "error_pairs": [
+    { "wrong": "The elephant is being hunt now.", "correct": "The elephant is being hunted now.", "note": "现在进行被动 = be being + 过去分词,hunt 的过去分词是 hunted。" },
+    { "wrong": "New parks is being built.", "correct": "New parks are being built.", "note": "复数主语 parks 用 are being built。" },
+    { "wrong": "Please not buy animal products.", "correct": "Please do not buy animal products.", "note": "否定祈使句用 Please do not / Don't + 动词原形。" }
+  ],
+  "paragraph_template": "【野生动物保护海报/倡议信结构】\n标题/称呼:Protect Our Wildlife! / Dear schoolmates,\n第1-2句 濒危动物及原因:The … is in danger. It is being hunted … and its habitat is getting smaller.\n第3-4句 正在采取的措施:Much is being done. … are being built / … are being told not to …\n第5-6句 号召行动:Please do not buy … Change begins with you!"
+}

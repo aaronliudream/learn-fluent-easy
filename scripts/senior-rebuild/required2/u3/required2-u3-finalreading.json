@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(互联网主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Ben used to share his home address and phone number on every website he joined. One day a stranger used that information to enter his account, and Ben felt very upset. After that, he chose a strong password for each account and never gave out his private details again.",
+    "questions": [
+      {
+        "q": "What mistake did Ben make at first?",
+        "options": [
+          "He revealed his personal information across many sites.",
+          "He never went online at all.",
+          "He forgot all his passwords.",
+          "He refused to make any account."
+        ],
+        "answer": "A",
+        "explanation": "原文 'used to share his home address and phone number on every website' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Ben do after the problem happened?",
+        "options": [
+          "He shared even more information.",
+          "He chose strong passwords and kept his details private.",
+          "He stopped using computers forever.",
+          "He blamed his friends for it."
+        ],
+        "answer": "B",
+        "explanation": "末句 'chose a strong password for each account and never gave out his private details again'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

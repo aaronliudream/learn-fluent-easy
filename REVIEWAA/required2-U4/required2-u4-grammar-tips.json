@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "过去分词作定语 & 作宾语补足语 速查",
+    "intro": "过去分词(done)表被动或完成。作定语时修饰名词(a broken window / soldiers wounded in the war);作宾语补足语时跟在 have/get/see/hear/find/want/make + 宾语后(get the car charged / heard it announced)。核心判断:宾语/名词与动作是被动关系→用过去分词,主动进行→用现在分词(doing)。",
+    "table": {
+      "headers": ["用法", "结构 / 例句"],
+      "rows": [
+        ["前置定语", "单个分词修饰名词:a broken window / tired visitors / the shortened name"],
+        ["后置定语", "分词带短语:soldiers wounded in the war / a lake surrounded by hills"],
+        ["have/get sth done", "请人做或被完成:get the battery charged / had a copy boxed"],
+        ["感官/使役 + 宾 + done", "see/hear/find/want/make:heard it announced / had her eyes fixed"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "名词/宾语承受动作(被动)→ 用过去分词 done", "mark": "a broken window(窗户被打破)" },
+      { "rule": "名词/宾语主动发出动作(主动·进行)→ 用现在分词 doing", "mark": "a crying baby(婴儿在哭=主动)对照 a wounded soldier(士兵被伤)" },
+      { "rule": "have/get sth done = 让别人做某事 / 某事被完成", "mark": "get the car parked / have the photos printed" },
+      { "rule": "see/hear/find/want + 宾 + done,强调宾语被动", "mark": "heard it announced(它被宣布)" }
+    ],
+    "why": [
+      "过去分词本身含被动、完成的意味,相当于一个被动的定语从句:soldiers wounded = soldiers who were wounded;heard it announced = heard that it was announced。宾语或名词是动作的承受者,所以不能用主动的 doing 或动词原形。"
+    ],
+    "gaokaoPoints": [
+      "过去分词 vs 现在分词作定语/宾补:看名词或宾语是被动(done)还是主动(doing);语法填空、短文改错高频。",
+      "have/get sth done 与 have sb do sth 的区别:sth 被动用 done,sb 主动用 do/to do。"
+    ],
+    "examVsReal": [
+      { "exam": "I had my car repaired.(考试/书面)", "real": "I got my car fixed.", "note": "考试常用 have sth done;口语里 get sth done、用 fix 等更随意的词更常见" },
+      { "exam": "soldiers wounded in the war（考试,后置定语）", "real": "soldiers who got hurt in the war", "note": "考试爱用过去分词短语;口语常还原成定语从句、用 get hurt" }
+    ]
+  }
+}

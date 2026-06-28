@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Write a Blog about Online Safety(写一篇关于上网安全的博客)",
+  "title_en": "Stay Safe Online",
+  "genre": "博客 / 建议说明文(give advice on how to stay safe online)",
+  "source": "人教版2019必修二 Unit 3 Reading for Writing:write a blog post about online safety(围绕一个上网安全主题,给出几条清楚的建议,并解释关键词)。",
+  "prompt_cn": "假设你叫李华,你常逛一个中国学生交流上网经验的论坛。请用英语写一篇约100词的博客,谈谈如何安全上网,内容包括:① 简单说明为什么上网安全很重要;② 给出两三条具体的安全上网建议(如保护隐私、用强密码、对人有礼貌);③ 邀请读者在下方留言分享自己的经验。注意:每句围绕中心、代词指代清楚、可适当使用现在完成时的被动语态。",
+  "prompt_en": "Suppose you are Li Hua. You often visit a forum where Chinese students share their experiences online. Write a blog post (about 100 words) about how to stay safe online, including: 1) a short note on why online safety matters; 2) two or three clear tips for staying safe (e.g. protect your privacy, use strong passwords, be polite); 3) an invitation for readers to leave their own experiences in the comments below.",
+  "points": [
+    "说明上网安全的重要性(why it matters)",
+    "给出2-3条具体建议(Protect your privacy. / Use a strong password. / Be polite.)",
+    "解释关键词或举例(Identity theft is …)",
+    "邀请读者留言(Post your comments below!)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Hi everyone! Today I'd like to blog about a question I am often asked: how do you stay safe online? It matters because much harm has been done to people who share too much. First, protect your privacy. Never give out your home address or phone number, because someone might use the information to steal your identity. Identity theft is a common and serious problem. Second, use a strong password for every account, and never share it. Third, be polite, so you don't become a target for a troll or cyberbully. The more careful you are, the safer you will be. Have you had any bad experiences online? Post your comments below!",
+  "model_translation": "大家好!今天我想写篇博客谈谈一个我常被问到的问题:如何安全上网?这很重要,因为很多分享过多的人都受到了伤害。第一,保护好你的隐私。绝不要透露家庭住址或电话号码,因为有人可能用这些信息盗用你的身份。身份盗窃是个常见而严重的问题。第二,每个账户都用强密码,且绝不外泄。第三,要有礼貌,这样就不会成为喷子或网霸的目标。你越小心,就越安全。你有过糟糕的上网经历吗?请在下方留言!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:说明重要性 / 2-3条建议 / 邀请留言" },
+      { "dimension": "结构", "max": 4, "criteria": "用 First/Second/Third 等组织、句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、被动语态/现在完成时运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "引出话题 Today I'd like to blog about how to stay safe online.",
+      "建议1 First, protect your privacy. Never give out …",
+      "建议2 Second, use a strong password and never share it.",
+      "建议3 + 收尾 Third, be polite. Have you had any bad experiences? Post your comments below!"
+    ],
+    "key_expressions": [
+      "How do you stay safe online?",
+      "Protect your privacy and never give out your address.",
+      "Someone might use the information to steal your identity.",
+      "Post your comments below!"
+    ],
+    "useful_words": ["online", "safe", "privacy", "password", "account", "identity", "troll", "cyberbully", "polite", "comment"]
+  },
+  "high_sentences": [
+    "Today I'd like to blog about how to stay safe online.",
+    "Never give out your home address, because someone might use it to steal your identity.",
+    "Use a strong password for every account, and never share it.",
+    "The more careful you are, the safer you will be."
+  ],
+  "error_pairs": [
+    { "wrong": "Much harm has did to people.", "correct": "Much harm has been done to people.", "note": "现在完成时被动:has/have been + 过去分词。" },
+    { "wrong": "Protect your privacy is important.", "correct": "Protecting your privacy is important.", "note": "动词作主语用动名词 -ing 形式。" },
+    { "wrong": "Someone might steal your identity by the information.", "correct": "Someone might use the information to steal your identity.", "note": "'用某物做某事'用 use sth to do,不用 by。" }
+  ],
+  "paragraph_template": "【上网安全博客结构】\n第1句 引出+重要性:Today I'd like to blog about how to stay safe online. It matters because …\n第2-4句 建议:First, protect your privacy … Second, use a strong password … Third, be polite …\n第5句 邀请留言:Have you had any bad experiences? Post your comments below!"
+}

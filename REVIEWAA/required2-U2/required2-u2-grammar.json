@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "grammar_title": "现在进行时的被动语态(is/are being done)",
+  "source": "人教版2019必修二 Unit 2 Discovering Useful Structures:现在进行时的被动语态(am/is/are being + 过去分词),表示动作此刻正在被进行。句子地道、答案唯一(其余选项同时态家族但形式不成立)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "肯定句 am/is/are being + 过去分词",
+      "overview": "主语是动作的承受者、动作此刻正在被进行时,用 am/is/are being + 过去分词。单数主语用 is being done,复数主语用 are being done。"
+    },
+    {
+      "code": "u2.02",
+      "point": "否定与一般疑问(isn't/aren't being done; Is/Are ... being done?)",
+      "overview": "否定在 be 后加 not:isn't/aren't being done;一般疑问把 be 提到主语前:Is/Are + 主语 + being + 过去分词?"
+    },
+    {
+      "code": "u2.03",
+      "point": "主动↔被动转换 · by 短语 · 与一般现在被动(is done)对照",
+      "overview": "主动句变被动时,正在进行的动作用 are being done,by 引出动作执行者;区分'此刻正在被做'(is being done)与'经常被做/客观事实'(is done)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "Right now, small birds ____ with nets in the wetland.",
+      "options": [
+        "are being caught",
+        "are catching",
+        "have caught",
+        "catch"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 birds 是动作承受者、动作此刻正在被进行 → are being caught。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Look! Wild ducks ____ at the food market over there.",
+      "options": [
+        "are selling",
+        "are being sold",
+        "sell",
+        "have sold"
+      ],
+      "answer_index": 1,
+      "explanation": "ducks 被卖、此刻正在进行 → are being sold。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At this moment, the wetland ____ by careless visitors.",
+      "options": [
+        "destroys",
+        "has destroyed",
+        "is being destroyed",
+        "is destroying"
+      ],
+      "answer_index": 2,
+      "explanation": "单数主语 wetland 被破坏、正在进行 → is being destroyed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Now some parts of the forest ____ with new houses.",
+      "options": [
+        "cover",
+        "have covered",
+        "are covering",
+        "are being covered"
+      ],
+      "answer_index": 3,
+      "explanation": "parts 被覆盖、正在进行 → are being covered。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "African elephants ____ for their tusks at this very moment.",
+      "options": [
+        "are being hunted",
+        "are hunting",
+        "hunt",
+        "have hunted"
+      ],
+      "answer_index": 0,
+      "explanation": "elephants 被捕猎、正在进行 → are being hunted。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Listen! A plan ____ to increase the number of wild tigers.",
+      "options": [
+        "is carrying out",
+        "is being carried out",
+        "carries out",
+        "has carried out"
+      ],
+      "answer_index": 1,
+      "explanation": "单数主语 plan 被执行、正在进行 → is being carried out。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "These days, new reserves ____ for the river dolphins.",
+      "options": [
+        "build",
+        "have built",
+        "are being built",
+        "are building"
+      ],
+      "answer_index": 2,
+      "explanation": "reserves 被建造、当前正在进行 → are being built。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right now, the deer ____ over by many volunteers.",
+      "options": [
+        "watch",
+        "have watched",
+        "are watching",
+        "are being watched"
+      ],
+      "answer_index": 3,
+      "explanation": "deer 被看护、正在进行 → are being watched。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At present, the rivers ____ up by local students.",
+      "options": [
+        "are being cleaned",
+        "are cleaning",
+        "clean",
+        "have cleaned"
+      ],
+      "answer_index": 0,
+      "explanation": "rivers 被清理、正在进行 → are being cleaned。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Be careful! Some trees near the lake ____ down to make paper.",
+      "options": [
+        "are cutting",
+        "are being cut",
+        "cut",
+        "have cut"
+      ],
+      "answer_index": 1,
+      "explanation": "trees 被砍、正在进行 → are being cut。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At the moment, a special device ____ deep in the snowy forest.",
+      "options": [
+        "tests",
+        "has tested",
+        "is being tested",
+        "is testing"
+      ],
+      "answer_index": 2,
+      "explanation": "单数主语 device 被测试、正在进行 → is being tested。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Now wolverines ____ by scientists to learn how to protect them.",
+      "options": [
+        "study",
+        "have studied",
+        "are studying",
+        "are being studied"
+      ],
+      "answer_index": 3,
+      "explanation": "wolverines 被研究、正在进行 → are being studied。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right now, bridges and gates ____ to keep the antelopes safe.",
+      "options": [
+        "are being added",
+        "are adding",
+        "add",
+        "have added"
+      ],
+      "answer_index": 0,
+      "explanation": "bridges and gates 被增设、正在进行 → are being added。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Living spaces for wildlife ____ because of the cutting of trees these days.",
+      "options": [
+        "are reducing",
+        "are being reduced",
+        "reduce",
+        "have reduced"
+      ],
+      "answer_index": 1,
+      "explanation": "spaces 被缩减、正在进行 → are being reduced。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At this moment, fish and snakes ____ for food in some restaurants.",
+      "options": [
+        "kill",
+        "have killed",
+        "are being killed",
+        "are killing"
+      ],
+      "answer_index": 2,
+      "explanation": "fish and snakes 被杀、正在进行 → are being killed。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Now paper cut-outs ____ on the windows to protect the birds.",
+      "options": [
+        "put",
+        "have put",
+        "are putting",
+        "are being put"
+      ],
+      "answer_index": 3,
+      "explanation": "cut-outs 被贴上、正在进行 → are being put。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "These days, the sick whale ____ for by a team of vets.",
+      "options": [
+        "is being cared",
+        "is caring",
+        "cares",
+        "has cared"
+      ],
+      "answer_index": 0,
+      "explanation": "whale 被照料、正在进行 → is being cared (for)。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Look! Bird feeders ____ by the club members in the park.",
+      "options": [
+        "are building",
+        "are being built",
+        "build",
+        "have built"
+      ],
+      "answer_index": 1,
+      "explanation": "bird feeders 被搭建、正在进行 → are being built。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At present, the wetland ____ seriously by waste every day.",
+      "options": [
+        "pollutes",
+        "has polluted",
+        "is being polluted",
+        "is polluting"
+      ],
+      "answer_index": 2,
+      "explanation": "wetland 被污染、当前正在进行 → is being polluted。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Right now, the orphan elephants ____ milk from bottles by the keepers.",
+      "options": [
+        "feed",
+        "have fed",
+        "are feeding",
+        "are being fed"
+      ],
+      "answer_index": 3,
+      "explanation": "elephants 被喂、正在进行 → are being fed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the rivers being cleaned by the students at the moment?",
+      "options": [
+        "Are",
+        "Is",
+        "Do",
+        "Have"
+      ],
+      "answer_index": 0,
+      "explanation": "复数主语 rivers 的现在进行被动疑问句,be 提前 → Are ... being cleaned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Luckily, the rare birds ____ hunted in this reserve any more.",
+      "options": [
+        "aren't catching",
+        "aren't being caught",
+        "don't catch",
+        "haven't caught"
+      ],
+      "answer_index": 1,
+      "explanation": "鸟未被捕、现在进行被动否定 → aren't being caught。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the new reserve being built for the dolphins right now?",
+      "options": [
+        "Does",
+        "Has",
+        "Is",
+        "Are"
+      ],
+      "answer_index": 2,
+      "explanation": "单数主语 reserve 的现在进行被动疑问,be 提前 → Is ... being built。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "These old trees ____ cut down at present, so the koalas are safe for now.",
+      "options": [
+        "don't cut",
+        "haven't cut",
+        "aren't cutting",
+        "aren't being cut"
+      ],
+      "answer_index": 3,
+      "explanation": "树未被砍、现在进行被动否定 → aren't being cut。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the antelopes being watched over by volunteers these days?",
+      "options": [
+        "Are",
+        "Is",
+        "Do",
+        "Have"
+      ],
+      "answer_index": 0,
+      "explanation": "复数主语 antelopes 的现在进行被动疑问 → Are ... being watched。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I'm glad the wetland ____ destroyed by builders now.",
+      "options": [
+        "isn't destroying",
+        "isn't being destroyed",
+        "doesn't destroy",
+        "hasn't destroyed"
+      ],
+      "answer_index": 1,
+      "explanation": "单数主语 wetland 现在进行被动否定 → isn't being destroyed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ enough measures being taken to protect the elephants at present?",
+      "options": [
+        "Does",
+        "Has",
+        "Are",
+        "Is"
+      ],
+      "answer_index": 2,
+      "explanation": "复数主语 measures 的现在进行被动疑问句,be 提前 → Are ... being taken。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Sadly, the river ____ cleaned at the moment, and rubbish is everywhere.",
+      "options": [
+        "doesn't clean",
+        "hasn't cleaned",
+        "isn't cleaning",
+        "isn't being cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "单数主语 river 现在进行被动否定 → isn't being cleaned。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the device being tested in the snowy forest at this moment?",
+      "options": [
+        "Is",
+        "Are",
+        "Does",
+        "Have"
+      ],
+      "answer_index": 0,
+      "explanation": "单数主语 device 现在进行被动疑问 → Is ... being tested。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The shy animals ____ disturbed by the cameras at present.",
+      "options": [
+        "aren't disturbing",
+        "aren't being disturbed",
+        "don't disturb",
+        "haven't disturbed"
+      ],
+      "answer_index": 1,
+      "explanation": "动物未被打扰、现在进行被动否定 → aren't being disturbed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ paper cut-outs being put on the windows right now to save the birds?",
+      "options": [
+        "Do",
+        "Has",
+        "Are",
+        "Is"
+      ],
+      "answer_index": 2,
+      "explanation": "复数主语 cut-outs 现在进行被动疑问 → Are ... being put。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The poster ____ designed yet, so we cannot put it up today.",
+      "options": [
+        "isn't designing",
+        "doesn't design",
+        "hasn't design",
+        "isn't being designed"
+      ],
+      "answer_index": 3,
+      "explanation": "单数主语 poster 现在进行被动否定 → isn't being designed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the orphan elephants being fed by the keepers at the moment?",
+      "options": [
+        "Are",
+        "Is",
+        "Do",
+        "Has"
+      ],
+      "answer_index": 0,
+      "explanation": "复数主语 elephants 现在进行被动疑问 → Are ... being fed。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "These wild ducks ____ sold at the market now, which is good news.",
+      "options": [
+        "aren't selling",
+        "aren't being sold",
+        "don't sell",
+        "haven't sold"
+      ],
+      "answer_index": 1,
+      "explanation": "鸭未被卖、现在进行被动否定 → aren't being sold。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ a special smell being sent out near the cameras right now?",
+      "options": [
+        "Does",
+        "Has",
+        "Is",
+        "Are"
+      ],
+      "answer_index": 2,
+      "explanation": "单数主语 smell 现在进行被动疑问 → Is ... being sent。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The forest near our school ____ cut down at present, so the birds stay safe.",
+      "options": [
+        "doesn't cut",
+        "hasn't cut",
+        "isn't cutting",
+        "isn't being cut"
+      ],
+      "answer_index": 3,
+      "explanation": "单数主语 forest 现在进行被动否定 → isn't being cut。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the rivers being polluted by the new factory these days?",
+      "options": [
+        "Are",
+        "Is",
+        "Do",
+        "Have"
+      ],
+      "answer_index": 0,
+      "explanation": "复数主语 rivers 现在进行被动疑问 → Are ... being polluted。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Happily, the deer ____ hunted in the reserve any longer.",
+      "options": [
+        "aren't hunting",
+        "aren't being hunted",
+        "don't hunt",
+        "haven't hunted"
+      ],
+      "answer_index": 1,
+      "explanation": "鹿未被猎、现在进行被动否定 → aren't being hunted。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the wetland being covered with new houses at the moment?",
+      "options": [
+        "Does",
+        "Has",
+        "Is",
+        "Are"
+      ],
+      "answer_index": 2,
+      "explanation": "单数主语 wetland 现在进行被动疑问 → Is ... being covered。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The baby birds ____ harmed by anyone in this protected area now.",
+      "options": [
+        "don't harm",
+        "haven't harm",
+        "aren't harming",
+        "aren't being harmed"
+      ],
+      "answer_index": 3,
+      "explanation": "鸟未被伤害、现在进行被动否定 → aren't being harmed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Many trees are being cut down to make paper. → A lot of paper ____ from these trees right now.",
+      "options": [
+        "is being made",
+        "is making",
+        "makes",
+        "has made"
+      ],
+      "answer_index": 0,
+      "explanation": "把进行中的动作改为被动、单数主语 paper → is being made。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Scientists are studying the wolverines. → The wolverines ____ by scientists at present.",
+      "options": [
+        "are studying",
+        "are being studied",
+        "study",
+        "have studied"
+      ],
+      "answer_index": 1,
+      "explanation": "主动改被动、动作正在进行 → are being studied。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "In this reserve, antelopes ____ illegally every year, but right now poachers are quiet.",
+      "options": [
+        "are being hunted",
+        "were hunted",
+        "are hunted",
+        "have hunted"
+      ],
+      "answer_index": 2,
+      "explanation": "'每年(经常)被猎'是反复事实 → 一般现在被动 are hunted,而非正在进行。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Volunteers are searching the wild for the dolphins. → The dolphins ____ for in the wild now.",
+      "options": [
+        "are searching",
+        "search",
+        "have searched",
+        "are being searched"
+      ],
+      "answer_index": 3,
+      "explanation": "主动改被动、动作正在进行 → are being searched (for)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Right now, the wetland ____ by careless tourists, not by the local farmers.",
+      "options": [
+        "is being polluted",
+        "is polluting",
+        "pollutes",
+        "has polluted"
+      ],
+      "answer_index": 0,
+      "explanation": "动作正在进行、by 引出执行者 → is being polluted by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Workers are building new bridges for the antelopes. → New bridges ____ by the workers at this moment.",
+      "options": [
+        "are building",
+        "are being built",
+        "build",
+        "have built"
+      ],
+      "answer_index": 1,
+      "explanation": "主动改被动、动作正在进行 → are being built by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Every spring the reserve ____ to visitors, but it is closed for repairs at the moment.",
+      "options": [
+        "is being opened",
+        "is opening",
+        "is opened",
+        "has opened"
+      ],
+      "answer_index": 2,
+      "explanation": "'每年春天(经常)开放'是惯常事实 → 一般现在被动 is opened。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The keepers are feeding the orphan elephants. → The orphan elephants ____ by the keepers now.",
+      "options": [
+        "are feeding",
+        "feed",
+        "have fed",
+        "are being fed"
+      ],
+      "answer_index": 3,
+      "explanation": "主动改被动、动作正在进行 → are being fed by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At this very moment, a poster ____ by the students to call for protection.",
+      "options": [
+        "is being designed",
+        "is designing",
+        "designs",
+        "has designed"
+      ],
+      "answer_index": 0,
+      "explanation": "单数主语 poster、动作正在进行 → is being designed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "People are selling wild ducks at the market. → Wild ducks ____ at the market by some people.",
+      "options": [
+        "are selling",
+        "are being sold",
+        "sell",
+        "have sold"
+      ],
+      "answer_index": 1,
+      "explanation": "主动改被动、动作正在进行 → are being sold by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Shark fins ____ in many restaurants every day, though no shark is being killed in this bay now.",
+      "options": [
+        "are being served",
+        "were served",
+        "are served",
+        "have served"
+      ],
+      "answer_index": 2,
+      "explanation": "'每天(经常)被供应'是反复事实 → 一般现在被动 are served。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The club members are cleaning up the habitats. → The habitats ____ up by the members right now.",
+      "options": [
+        "are cleaning",
+        "clean",
+        "have cleaned",
+        "are being cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "主动改被动、动作正在进行 → are being cleaned by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Look — a new smell ____ near the cameras to attract the shy wolverines.",
+      "options": [
+        "is being sent out",
+        "is sending out",
+        "sends out",
+        "has sent out"
+      ],
+      "answer_index": 0,
+      "explanation": "单数主语 smell、动作正在进行 → is being sent out。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "A team is carrying out a plan to save the tigers. → A plan ____ out by a team at present.",
+      "options": [
+        "is carrying",
+        "is being carried",
+        "carries",
+        "has carried"
+      ],
+      "answer_index": 1,
+      "explanation": "主动改被动、动作正在进行 → is being carried out by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Wild animals ____ under national protection by law, and right now new gates are being added.",
+      "options": [
+        "are being placed",
+        "were placed",
+        "are placed",
+        "have placed"
+      ],
+      "answer_index": 2,
+      "explanation": "'依法(一直)被置于保护之下'是客观规定 → 一般现在被动 are placed。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Local students are recording the bird songs. → The bird songs ____ by local students now.",
+      "options": [
+        "are recording",
+        "record",
+        "have recorded",
+        "are being recorded"
+      ],
+      "answer_index": 3,
+      "explanation": "主动改被动、动作正在进行 → are being recorded by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At the moment, the injured deer ____ to a safer place by the rangers.",
+      "options": [
+        "is being moved",
+        "is moving",
+        "moves",
+        "has moved"
+      ],
+      "answer_index": 0,
+      "explanation": "单数主语 deer(此处指一只)、动作正在进行 → is being moved。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Hunters are shooting the antelopes for their fur. → The antelopes ____ for their fur by hunters.",
+      "options": [
+        "are shooting",
+        "are being shot",
+        "shoot",
+        "have shot"
+      ],
+      "answer_index": 1,
+      "explanation": "主动改被动、动作正在进行 → are being shot by …。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Pandas ____ in this base all year round, but no cub is being moved out this week.",
+      "options": [
+        "are being protected",
+        "were protected",
+        "are protected",
+        "have protected"
+      ],
+      "answer_index": 2,
+      "explanation": "'一年到头(经常)被保护'是惯常事实 → 一般现在被动 are protected。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The authorities are reducing the living spaces by mistake. → The living spaces ____ by the authorities now.",
+      "options": [
+        "are reducing",
+        "reduce",
+        "have reduced",
+        "are being reduced"
+      ],
+      "answer_index": 3,
+      "explanation": "主动改被动、动作正在进行 → are being reduced by …。"
+    }
+  ]
+}

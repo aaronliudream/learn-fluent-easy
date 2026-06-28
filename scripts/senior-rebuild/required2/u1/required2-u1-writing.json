@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Write a News Report about Protecting Cultural Heritage(写一篇保护文化遗产的新闻报道)",
+  "title_en": "Protecting Our Cultural Heritage",
+  "genre": "新闻报道 / 应用文(news report: lead + body + ending,介绍一个保护文化遗产的人或团体)",
+  "source": "人教版2019必修二 Unit 1 Reading for Writing:write a news report about a person or group who works to protect cultural heritage(标题 + 导语 + 主体 + 结尾,含引用和定语从句)。",
+  "prompt_cn": "假设你是校英语报记者李华。某团体长期致力于保护本地文化遗产(拍摄老建筑、采访老人、修缮古庙、向学生宣传)。请用英语写一篇约100词的新闻报道,内容包括:① 一句导语,说明谁、做什么、在哪里、为什么;② 主体段落,介绍该团体的具体做法,并引用一句他们的话;③ 简短结尾,总结其意义。注意:适当使用定语从句来介绍人、物、地点或时间。",
+  "prompt_en": "Suppose you are Li Hua, a reporter for the school English newspaper. A local group has worked for years to protect cultural heritage (taking photos of old buildings, interviewing elderly people, repairing old temples, and telling students about them). Write a news report of about 100 words including: 1) a lead sentence telling who, what, where and why; 2) a body explaining what the group does, with one quote; 3) a short ending that sums up its meaning. Use relative clauses to identify people, things, places or times.",
+  "points": [
+    "导语:谁/做什么/在哪里/为什么(Lead sentence)",
+    "主体:具体做法 + 一句引用(quote)",
+    "结尾:简短总结意义(short summary)",
+    "恰当使用定语从句(who/which/that/where/when)介绍人、物、地点、时间"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Wuhan, 8 May 2026. A local group called Protectors of the Past, which is made up of teachers and students, is working hard to protect the city's cultural heritage. Every weekend, members who love history take photos of old buildings that may soon disappear. They also interview elderly people whose stories help explain the past, and they visit schools where they teach students why heritage matters. \"Neither people nor buildings last forever, but our photos can help us remember them,\" said the group's leader. Through their patient work, this small group reminds us all that protecting the past is everyone's duty.",
+  "model_translation": "武汉,2026年5月8日。一个名为\"往昔守护者\"的本地团体由师生组成,正努力保护这座城市的文化遗产。每个周末,热爱历史的成员都会拍下那些可能很快消失的老建筑。他们还采访那些故事有助于讲述过去的老人,并走进学校,向学生讲解遗产为何重要。\"人和建筑都不会永存,但我们的照片能帮我们记住它们,\"该团体负责人说。通过他们耐心的工作,这个小团体提醒我们所有人:保护过去是每个人的责任。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:导语(谁/做什么/在哪里/为什么) / 主体做法+引用 / 结尾总结" },
+      { "dimension": "结构", "max": 4, "criteria": "新闻报道格式清晰(标题地点日期+导语+主体+结尾)、信息连贯、引用自然" },
+      { "dimension": "语言", "max": 5, "criteria": "定语从句运用得当、句型词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "导语 …, A group … is working to protect …",
+      "主体1 members who … take photos of buildings that …",
+      "主体2 引用 \"…\", said the leader.",
+      "结尾 This group reminds us that protecting the past is everyone's duty."
+    ],
+    "key_expressions": [
+      "A local group which is made up of teachers and students is working to protect the city's heritage.",
+      "Members who love history take photos of old buildings that may soon disappear.",
+      "They interview elderly people whose stories help explain the past.",
+      "Protecting the past is everyone's duty."
+    ],
+    "useful_words": ["heritage", "preserve", "relic", "temple", "volunteer", "committee", "protect", "interview", "remember", "duty"]
+  },
+  "high_sentences": [
+    "A local group, which is made up of teachers and students, is working hard to protect the city's cultural heritage.",
+    "Members who love history take photos of old buildings that may soon disappear.",
+    "They interview elderly people whose stories help explain the past.",
+    "Neither people nor buildings last forever, but our photos can help us remember them."
+  ],
+  "error_pairs": [
+    { "wrong": "The man who he took the photos is a teacher.", "correct": "The man who took the photos is a teacher.", "note": "who 已作从句主语,不可再加 he。" },
+    { "wrong": "The temple where they repaired is very old.", "correct": "The temple that they repaired is very old.", "note": "从句缺宾语(repaired ___)用 that/which,不用 where。" },
+    { "wrong": "It is a group makes up of students.", "correct": "It is a group made up of students.", "note": "be made up of 固定搭配;此处用过去分词作定语。" }
+  ],
+  "paragraph_template": "【新闻报道结构】\n标题 + 地点·日期\n导语:…, A group … is working to protect …(谁/做什么/在哪里/为什么)\n主体:members who … take photos of buildings that … ; they interview people whose … \n引用:\"…,\" said the leader.\n结尾:This group reminds us that protecting the past is everyone's duty."
+}

@@ -1,0 +1,548 @@
+[
+ {
+  "word": "all over the world",
+  "ipa": "",
+  "cn": "在世界各地",
+  "propn": false,
+  "raw": "all over the world 在世界各地"
+ },
+ {
+  "word": "app",
+  "ipa": "p",
+  "cn": "应用程序；应用软件 （application 的缩略形式）",
+  "propn": false,
+  "raw": "app /p/ n. 应用程序；应用软件 （application 的缩略形式）"
+ },
+ {
+  "word": "application",
+  "ipa": "plken",
+  "cn": "申请( 表)；用途；运用；应用( 程序)",
+  "propn": false,
+  "raw": "application /plken/ n. 申请( 表)；用途；运用；应用( 程序)"
+ },
+ {
+  "word": "archaeologist",
+  "ipa": ":kildIst",
+  "cn": "考古学家",
+  "propn": false,
+  "raw": "archaeologist /:kildIst/ n. 考古学家"
+ },
+ {
+  "word": "attempt",
+  "ipa": "tempt",
+  "cn": "企图；试图；尝试",
+  "propn": false,
+  "raw": "attempt /tempt/ n. & vt. 企图；试图；尝试"
+ },
+ {
+  "word": "balance",
+  "ipa": "blns",
+  "cn": "平衡；均匀 vt. 使平衡",
+  "propn": false,
+  "raw": "balance /blns/ n. 平衡；均匀 vt. 使平衡"
+ },
+ {
+  "word": "keep balance",
+  "ipa": "",
+  "cn": "保持平衡",
+  "propn": false,
+  "raw": "keep balance 保持平衡"
+ },
+ {
+  "word": "cave",
+  "ipa": "kev",
+  "cn": "山洞；洞穴",
+  "propn": false,
+  "raw": "cave /kev/ n. 山洞；洞穴"
+ },
+ {
+  "word": "chiwen",
+  "ipa": "twn",
+  "cn": "鸱吻",
+  "propn": false,
+  "raw": "chiwen /twn/ 鸱吻"
+ },
+ {
+  "word": "clue",
+  "ipa": "klu",
+  "cn": "线索；提示",
+  "propn": false,
+  "raw": "clue /klu/ n. 线索；提示"
+ },
+ {
+  "word": "committee",
+  "ipa": "kmti",
+  "cn": "委员会",
+  "propn": false,
+  "raw": "committee /kmti/ n. 委员会"
+ },
+ {
+  "word": "comparison",
+  "ipa": "kmprIsn",
+  "cn": "比较；相比",
+  "propn": false,
+  "raw": "comparison /kmprIsn/ n. 比较；相比"
+ },
+ {
+  "word": "conduct",
+  "ipa": "kndkt",
+  "cn": "行为；举止；管理方法 /kndkt/ vt. 组织；安排；带领",
+  "propn": false,
+  "raw": "conduct /kndkt/ n. 行为；举止；管理方法 /kndkt/ vt. 组织；安排；带领"
+ },
+ {
+  "word": "contrast",
+  "ipa": "kntrst",
+  "cn": "对比；对照 /kntrst/ vt. 对比；对照",
+  "propn": false,
+  "raw": "contrast /kntrst/ n. 对比；对照 /kntrst/ vt. 对比；对照"
+ },
+ {
+  "word": "contribute",
+  "ipa": "kntrbjut",
+  "cn": "捐献；捐助",
+  "propn": false,
+  "raw": "contribute /kntrbjut/ vi. & vt. 捐献；捐助"
+ },
+ {
+  "word": "contribution",
+  "ipa": "kntrbjun",
+  "cn": "捐款；贡献；捐赠",
+  "propn": false,
+  "raw": "contribution /kntrbjun/ n. 捐款；贡献；捐赠"
+ },
+ {
+  "word": "creative",
+  "ipa": "krietIv",
+  "cn": "创造性的；有创造力的；有创意的",
+  "propn": false,
+  "raw": "creative /krietIv/ adj. 创造性的；有创造力的；有创意的"
+ },
+ {
+  "word": "creatively",
+  "ipa": "krietIvli",
+  "cn": "创造性地；有创造力地",
+  "propn": false,
+  "raw": "creatively /krietIvli/ adv. 创造性地；有创造力地"
+ },
+ {
+  "word": "cypress",
+  "ipa": "saprs",
+  "cn": "柏树",
+  "propn": false,
+  "raw": "cypress /saprs/ n. 柏树"
+ },
+ {
+  "word": "dam",
+  "ipa": "dm",
+  "cn": "水坝；拦河坝",
+  "propn": false,
+  "raw": "dam /dm/ n. 水坝；拦河坝"
+ },
+ {
+  "word": "department",
+  "ipa": "dptmnt",
+  "cn": "部；司；科",
+  "propn": false,
+  "raw": "department /dptmnt/ n. 部；司；科"
+ },
+ {
+  "word": "digital",
+  "ipa": "ddtl",
+  "cn": "数码的；数字显示的",
+  "propn": false,
+  "raw": "digital /ddtl/ adj. 数码的；数字显示的"
+ },
+ {
+  "word": "disappear",
+  "ipa": "dsp(r)",
+  "cn": "消失；灭绝；消亡",
+  "propn": false,
+  "raw": "disappear /dsp(r)/ vi. 消失；灭绝；消亡"
+ },
+ {
+  "word": "document",
+  "ipa": "dkjumnt",
+  "cn": "文件；公文；( 计算机) 文档 vt. 记录；记载( 详情)",
+  "propn": false,
+  "raw": "document /dkjumnt/ n. 文件；公文；( 计算机) 文档 vt. 记录；记载( 详情)"
+ },
+ {
+  "word": "donate",
+  "ipa": "dnet",
+  "cn": "尤指向慈善机构) 捐赠；赠送；献( 血)",
+  "propn": false,
+  "raw": "donate /dnet/ vt. ( 尤指向慈善机构) 捐赠；赠送；献( 血)"
+ },
+ {
+  "word": "donate … to … 向……捐赠……",
+  "ipa": "",
+  "cn": "向……捐赠……",
+  "propn": false,
+  "raw": "donate … to … 向……捐赠……"
+ },
+ {
+  "word": "download  vt. 下载 n. 下载；已下载的数据资料",
+  "ipa": "",
+  "cn": "下载 n. 下载；已下载的数据资料",
+  "propn": false,
+  "raw": "download  vt. 下载 n. 下载；已下载的数据资料"
+ },
+ {
+  "word": "dragon",
+  "ipa": "drn",
+  "cn": "龙",
+  "propn": false,
+  "raw": "dragon /drn/ n. 龙"
+ },
+ {
+  "word": "Egyptian",
+  "ipa": "idIpSn",
+  "cn": "埃及的",
+  "propn": false,
+  "raw": "Egyptian /idIpSn/ adj. 埃及的"
+ },
+ {
+  "word": "entrance",
+  "ipa": "entrns",
+  "cn": "入口；进入",
+  "propn": false,
+  "raw": "entrance /entrns/ n. 入口；进入"
+ },
+ {
+  "word": "establish",
+  "ipa": "stbl",
+  "cn": "建立；创立",
+  "propn": false,
+  "raw": "establish /stbl/ vt. 建立；创立"
+ },
+ {
+  "word": "exit",
+  "ipa": "ekst",
+  "cn": "出口；通道 vi. & vt. 出去；离去",
+  "propn": false,
+  "raw": "exit /ekst/ n. 出口；通道 vi. & vt. 出去；离去"
+ },
+ {
+  "word": "forever",
+  "ipa": "frev(r)",
+  "cn": "永远; 长久地",
+  "propn": false,
+  "raw": "forever /frev(r)/ adv. 永远; 长久地"
+ },
+ {
+  "word": "forgive",
+  "ipa": "fgIv",
+  "cn": "原谅；宽恕 vt. 对不起；请原谅",
+  "propn": false,
+  "raw": "forgive /fgIv/ vt. & vi. （forgave, forgiven）原谅；宽恕 vt. 对不起；请原谅"
+ },
+ {
+  "word": "former",
+  "ipa": "fm(r)",
+  "cn": "以前的；( 两者中）前者的",
+  "propn": false,
+  "raw": "former /fm(r)/ adj. 以前的；( 两者中）前者的"
+ },
+ {
+  "word": "fund",
+  "ipa": "fnd",
+  "cn": "基金；专款",
+  "propn": false,
+  "raw": "fund /fnd/ n. 基金；专款"
+ },
+ {
+  "word": "further",
+  "ipa": "f:(r)",
+  "cn": "的比较级）更远；进一步",
+  "propn": false,
+  "raw": "further /f:(r)/ adv. （far 的比较级）更远；进一步"
+ },
+ {
+  "word": "give way to",
+  "ipa": "",
+  "cn": "让步；屈服",
+  "propn": false,
+  "raw": "give way to 让步；屈服"
+ },
+ {
+  "word": "Appendices heritage",
+  "ipa": "hertd",
+  "cn": "遗产( 指国家或社会长期 形成的历史、传统和特色)",
+  "propn": false,
+  "raw": "Appendices heritage /hertd/ n. 遗产( 指国家或社会长期 形成的历史、传统和特色)"
+ },
+ {
+  "word": "historic",
+  "ipa": "hstrk",
+  "cn": "历史上著名（或重要）的；有史时期的",
+  "propn": false,
+  "raw": "historic /hstrk/ adj. 历史上著名（或重要）的；有史时期的"
+ },
+ {
+  "word": "identify",
+  "ipa": "adentfa",
+  "cn": "确认；认出；找到",
+  "propn": false,
+  "raw": "identify /adentfa/ vt. 确认；认出；找到"
+ },
+ {
+  "word": "image",
+  "ipa": "md",
+  "cn": "形象；印象",
+  "propn": false,
+  "raw": "image /md/ n. 形象；印象"
+ },
+ {
+  "word": "investigate",
+  "ipa": "nvestet",
+  "cn": "调查；研究",
+  "propn": false,
+  "raw": "investigate /nvestet/ vi. & vt. 调查；研究"
+ },
+ {
+  "word": "issue",
+  "ipa": "u; BrE also sju ",
+  "cn": "重要议题；争论的问题 vt. 宣布；公布",
+  "propn": false,
+  "raw": "issue /u; BrE also sju / n. 重要议题；争论的问题 vt. 宣布；公布"
+ },
+ {
+  "word": "lead to",
+  "ipa": "",
+  "cn": "导致",
+  "propn": false,
+  "raw": "lead to 导致"
+ },
+ {
+  "word": "likely",
+  "ipa": "lakli",
+  "cn": "可能的 adv. 可能地",
+  "propn": false,
+  "raw": "likely /lakli/ adj. 可能的 adv. 可能地"
+ },
+ {
+  "word": "limit",
+  "ipa": "lImIt",
+  "cn": "限度；限制 vt. 限制；限定",
+  "propn": false,
+  "raw": "limit /lImIt/ n. 限度；限制 vt. 限制；限定"
+ },
+ {
+  "word": "loss",
+  "ipa": "ls",
+  "cn": "丧失；损失",
+  "propn": false,
+  "raw": "loss /ls/ n. 丧失；损失"
+ },
+ {
+  "word": "make sure",
+  "ipa": "",
+  "cn": "确保；设法保证",
+  "propn": false,
+  "raw": "make sure 确保；设法保证"
+ },
+ {
+  "word": "mirror",
+  "ipa": "mr",
+  "cn": "镜子",
+  "propn": false,
+  "raw": "mirror /mr/ n. 镜子"
+ },
+ {
+  "word": "mount",
+  "ipa": "mant",
+  "cn": "山峰 vt. 爬上；骑上 vi. 爬；登上",
+  "propn": false,
+  "raw": "mount /mant/ n. 山峰 vt. 爬上；骑上 vi. 爬；登上"
+ },
+ {
+  "word": "opinion",
+  "ipa": "pnjn",
+  "cn": "意见；想法；看法",
+  "propn": false,
+  "raw": "opinion /pnjn/ n. 意见；想法；看法"
+ },
+ {
+  "word": "overseas",
+  "ipa": "vsiz",
+  "cn": "海外的 adv. 在海外",
+  "propn": false,
+  "raw": "overseas /vsiz/ adj. 海外的 adv. 在海外"
+ },
+ {
+  "word": "parade",
+  "ipa": "pred",
+  "cn": "游行；检阅 vi. 游行庆祝；游行示威",
+  "propn": false,
+  "raw": "parade /pred/ n. 游行；检阅 vi. 游行庆祝；游行示威"
+ },
+ {
+  "word": "paraphrase",
+  "ipa": "prfrez",
+  "cn": "用更容易理解的文字) 解释",
+  "propn": false,
+  "raw": "paraphrase /prfrez/ n., vi. & vt. ( 用更容易理解的文字) 解释"
+ },
+ {
+  "word": "preserve",
+  "ipa": "przv",
+  "cn": "保存；保护；维持 n. 保护区",
+  "propn": false,
+  "raw": "preserve /przv/ vt. 保存；保护；维持 n. 保护区"
+ },
+ {
+  "word": "prevent",
+  "ipa": "prvent",
+  "cn": "阻止；阻碍；阻挠",
+  "propn": false,
+  "raw": "prevent /prvent/ vt. 阻止；阻碍；阻挠"
+ },
+ {
+  "word": "prevent … from … 阻止；不准",
+  "ipa": "",
+  "cn": "阻止；不准",
+  "propn": false,
+  "raw": "prevent … from … 阻止；不准"
+ },
+ {
+  "word": "process",
+  "ipa": "prses",
+  "cn": "过程；进程；步骤 vt. 处理；加工",
+  "propn": false,
+  "raw": "process /prses/ n. 过程；进程；步骤 vt. 处理；加工"
+ },
+ {
+  "word": "professional",
+  "ipa": "prfenl",
+  "cn": "专业的；职业的 n. 专业人员；职业选手",
+  "propn": false,
+  "raw": "professional /prfenl/ adj. 专业的；职业的 n. 专业人员；职业选手"
+ },
+ {
+  "word": "promote",
+  "ipa": "prmt",
+  "cn": "促进；提升；推销；晋级",
+  "propn": false,
+  "raw": "promote /prmt/ vt. 促进；提升；推销；晋级"
+ },
+ {
+  "word": "proposal",
+  "ipa": "prpzl",
+  "cn": "提议；建议",
+  "propn": false,
+  "raw": "proposal /prpzl/ n. 提议；建议"
+ },
+ {
+  "word": "make a proposal",
+  "ipa": "",
+  "cn": "提出建议",
+  "propn": false,
+  "raw": "make a proposal 提出建议"
+ },
+ {
+  "word": "protest",
+  "ipa": "prtest",
+  "cn": "抗议 /prtest/ vi. & vt. ( 公开) 反对；抗议",
+  "propn": false,
+  "raw": "protest /prtest/ n. 抗议 /prtest/ vi. & vt. ( 公开) 反对；抗议"
+ },
+ {
+  "word": "pyramid",
+  "ipa": "prmId",
+  "cn": "古埃及的）金字塔；棱锥体",
+  "propn": false,
+  "raw": "pyramid /prmId/ n.（古埃及的）金字塔；棱锥体"
+ },
+ {
+  "word": "quality",
+  "ipa": "kwlti",
+  "cn": "质量；品质；素质；特征 adj. 优质的；高质量的",
+  "propn": false,
+  "raw": "quality /kwlti/ n. 质量；品质；素质；特征 adj. 优质的；高质量的"
+ },
+ {
+  "word": "quote",
+  "ipa": "kwt",
+  "cn": "引用",
+  "propn": false,
+  "raw": "quote /kwt/ vt. 引用"
+ },
+ {
+  "word": "relic",
+  "ipa": "relk",
+  "cn": "遗物；遗迹",
+  "propn": false,
+  "raw": "relic /relk/ n. 遗物；遗迹"
+ },
+ {
+  "word": "republic",
+  "ipa": "rpblk",
+  "cn": "共和国",
+  "propn": false,
+  "raw": "republic /rpblk/ n. 共和国"
+ },
+ {
+  "word": "roof",
+  "ipa": "ruf",
+  "cn": "顶部；屋顶",
+  "propn": false,
+  "raw": "roof /ruf/ n. 顶部；屋顶"
+ },
+ {
+  "word": "sheet",
+  "ipa": "it",
+  "cn": "一张（纸）；床单；被单",
+  "propn": false,
+  "raw": "sheet /it/ n. 一张（纸）；床单；被单"
+ },
+ {
+  "word": "take part in",
+  "ipa": "",
+  "cn": "参与（某事）；参加（某活动）",
+  "propn": false,
+  "raw": "take part in 参与（某事）；参加（某活动）"
+ },
+ {
+  "word": "temple",
+  "ipa": "templ",
+  "cn": "庙；寺",
+  "propn": false,
+  "raw": "temple /templ/n. 庙；寺"
+ },
+ {
+  "word": "throughout",
+  "ipa": "ru:aut",
+  "cn": "各处；遍及；自始至终",
+  "propn": false,
+  "raw": "throughout /ru:aut/ prep. 各处；遍及；自始至终"
+ },
+ {
+  "word": "tradition",
+  "ipa": "trdn",
+  "cn": "传统；传统的信仰或风俗",
+  "propn": false,
+  "raw": "tradition /trdn/ n. 传统；传统的信仰或风俗"
+ },
+ {
+  "word": "turn to … 向……求助",
+  "ipa": "",
+  "cn": "向……求助",
+  "propn": false,
+  "raw": "turn to … 向……求助"
+ },
+ {
+  "word": "within",
+  "ipa": "wIn",
+  "cn": "在（某段时间、距离或范围）之内",
+  "propn": false,
+  "raw": "within /wIn/ prep. & adv. 在（某段时间、距离或范围）之内"
+ },
+ {
+  "word": "worthwhile",
+  "ipa": "w(r)wal",
+  "cn": "值得做的；值得花时间的",
+  "propn": false,
+  "raw": "worthwhile /w(r)wal/ adj. 值得做的；值得花时间的"
+ }
+]

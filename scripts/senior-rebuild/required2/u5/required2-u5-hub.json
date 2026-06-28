@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "I really like hip-hop because the strong beat makes me want to move.", "opts": ["我喜欢嘻哈,强节拍让我想动起来。", "我喜欢古典乐,因为它让我平静。", "我不喜欢任何音乐。", "我只在睡觉时听音乐。"], "answer": 0 },
+    { "audio": "The aim of the festival is to raise money for charity.", "opts": ["这个音乐节的目的是为慈善筹款。", "这个音乐节是为了卖乐器。", "这个音乐节要选一位新老师。", "这个音乐节明天就结束。"], "answer": 0 },
+    { "audio": "In a virtual choir, each member records a video alone at home.", "opts": ["在虚拟合唱团里,每位成员在家独自录视频。", "在虚拟合唱团里,大家在同一个舞台唱歌。", "虚拟合唱团只收专业歌手。", "虚拟合唱团需要一个大录音棚。"], "answer": 0 },
+    { "audio": "A stringed instrument like the violin makes sound from its strings.", "opts": ["像小提琴这样的弦乐器靠琴弦发声。", "像长笛这样的管乐器靠空气发声。", "鼓是靠敲击发声的。", "弦乐器是不发声的。"], "answer": 0 },
+    { "audio": "Music gave me strength and brought me relief during the hard times.", "opts": ["在艰难时刻,音乐给了我力量,也带给我宽慰。", "在艰难时刻,音乐让我更难过。", "音乐对我的生活毫无影响。", "我从不在困难时听音乐。"], "answer": 0 },
+    { "audio": "A happy song can give you energy when you feel low.", "opts": ["当你情绪低落时,一首欢快的歌能给你能量。", "当你情绪低落时,应该停止听音乐。", "欢快的歌只会让人更累。", "音乐不能改变心情。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "My brother plays the guitar in a local rock ____.", "opts": ["band", "garden", "market", "ticket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The young singers will ____ on stage at the music festival.", "opts": ["perform", "forget", "destroy", "borrow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Beethoven is one of the greatest ____ in history.", "opts": ["composers", "farmers", "drivers", "waiters"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Music has had a great ____ on my life.", "opts": ["impact", "noise", "price", "weather"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ by his romantic words, the girl accepted his gift.", "opts": ["Moved", "Moving", "To move", "Move"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ more time, the band could have finished the album.", "opts": ["Given", "Giving", "To give", "Give"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ for performances, the hall is always full of energy.", "opts": ["Used", "Using", "To use", "Use"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Though ____ to the contest, the shy boy refused to sing.", "opts": ["invited", "inviting", "to invite", "invite"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["古典乐让我感到平静祥和。", "嘻哈让我想跳舞。", "我喜欢乡村音乐。", "我讨厌所有音乐。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Classical music makes me feel calm and peaceful." },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["请让音乐成为你生活的一部分。", "请别再听音乐了。", "音乐是浪费时间。", "只有歌手才需要音乐。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Please make music a part of your life." }
+  ],
+  "reading": {
+    "passage": "Lily was too shy to sing in front of others, so she joined a virtual choir online. Singing alone in her room, she added her quiet voice to hundreds of others. When she finally heard the finished song, she felt proud to be part of something so big.",
+    "passageCn": "莉莉太害羞,不敢当众唱歌,于是她在网上加入了一个虚拟合唱团。她独自在房间里歌唱,把自己轻轻的歌声加入到数百人之中。当她最终听到合成的歌曲时,她为自己成为这么宏大事物的一部分而感到自豪。",
+    "questions": [
+      { "q": "Why did Lily join a virtual choir?", "opts": ["She was too shy to sing in front of others.", "She wanted to become famous.", "Her teacher forced her to.", "She had no Internet at home."], "answer": 0 },
+      { "q": "How did Lily feel when she heard the finished song?", "opts": ["Proud to be part of something big.", "Sorry that she had joined.", "Bored and tired.", "Angry at the other singers."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about your favourite kind of music and how it makes you feel.",
+    "promptCn": "用3-4句话写一写你最喜欢的音乐类型,以及它带给你的感受。",
+    "sampleWords": ["favourite", "band", "classical", "hip-hop", "energy", "relief", "mood", "perform", "feel", "enjoy"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about Music Preferences",
+      "lines": [
+        { "role": "A", "text": "What kind of music do you like best?", "cn": "你最喜欢哪种音乐?" },
+        { "role": "B", "text": "I love classical music. It makes me feel calm and peaceful.", "cn": "我喜欢古典乐,它让我感到平静祥和。" },
+        { "role": "A", "text": "Nice. I prefer hip-hop, because it gives me energy.", "cn": "不错。我更喜欢嘻哈,因为它给我能量。" },
+        { "role": "B", "text": "Different music for different moods, then!", "cn": "那真是不同心情配不同音乐啊!" }
+      ]
+    }
+  ]
+}

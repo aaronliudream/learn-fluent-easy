@@ -1,0 +1,338 @@
+{
+  "volume": "required2",
+  "unit": "U5",
+  "topic": "Music",
+  "source": "人教版2019必修二 Unit 5 同主题阅读(虚拟合唱团/不同音乐类型/为何学音乐/街头艺人/音乐的力量/乐器与乐队)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Virtual Choir",
+      "topic_cn": "说明·虚拟合唱团",
+      "body": "Imagine having the opportunity to sing together with hundreds of other people while you are at home alone. You can do this in a virtual choir. Members record themselves while they perform alone on video. These videos are uploaded onto the Internet, and then they are put together into one video that you can watch online. Anyone can take part from anywhere; all you need is a video camera and an Internet connection. You do not even need a studio. A virtual choir helps connect ordinary people. Many of them do not have friends who share their interest in music, and many others do not have the chance to join a local choir. A virtual choir enables them to add their voices to those of other singers and become part of a global community. It has proved to be a positive influence on the lives of many people. As one member said, music helps him forget his problems and become someone else.",
+      "vocab_notes": [
+        {
+          "word": "virtual",
+          "cn": "虚拟的"
+        },
+        {
+          "word": "choir",
+          "cn": "合唱团"
+        },
+        {
+          "word": "ordinary",
+          "cn": "普通的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the main thing a person needs to join a virtual choir?",
+          "options": [
+            "Only a camera and a way to get online.",
+            "A professional recording studio.",
+            "A famous teacher to help them.",
+            "A large group of friends nearby."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'all you need is a video camera and an Internet connection' 的转述;明确说不需要 studio。"
+        },
+        {
+          "stem": "How are the separate videos turned into a choir?",
+          "options": [
+            "They are printed out on paper.",
+            "They are joined into one video to watch online.",
+            "They are sold in local music shops.",
+            "They are kept secret from the public."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'put together into one video that you can watch online' 的转述。"
+        },
+        {
+          "stem": "Why is a virtual choir helpful for ordinary people?",
+          "options": [
+            "It lets them join in even without local friends or a local choir.",
+            "It pays them money to sing.",
+            "It teaches them to write music.",
+            "It removes all other kinds of music."
+          ],
+          "answer_index": 0,
+          "explanation": "中段说许多人没有同好朋友、也无法加入本地合唱团,虚拟合唱团让他们也能参与的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "So Many Kinds of Music",
+      "topic_cn": "说明·不同音乐类型",
+      "body": "There are many different kinds of music in the world, and each one makes us feel a different way. Classical music, written long ago by great composers, can sound peaceful, like sitting beside a quiet stream. Hip-hop has a strong beat that makes many young people want to move and dance. Country music often tells simple stories that touch the heart, while rock music feels full of power and energy. Some people enjoy folk songs from their own region, because the tunes remind them of home and the people they love. Others like dance music when they exercise, because it gives them energy. There is no single kind of music that is best for everyone. The same song may make one listener happy and leave another feeling bored. What matters is finding the music that speaks to you. Whatever style you choose, music has a special power to change how you feel and to bring people of different ages and cultures closer together.",
+      "vocab_notes": [
+        {
+          "word": "classical",
+          "cn": "古典的"
+        },
+        {
+          "word": "beat",
+          "cn": "节拍"
+        },
+        {
+          "word": "energy",
+          "cn": "活力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, how does classical music often make listeners feel?",
+          "options": [
+            "Angry and tired.",
+            "Calm and peaceful.",
+            "Frightened and lost.",
+            "Bored and sleepy."
+          ],
+          "answer_index": 1,
+          "explanation": "原文把古典乐比作坐在安静溪水边,'peaceful' 的转述。"
+        },
+        {
+          "stem": "Why do some people enjoy folk songs from their own region?",
+          "options": [
+            "Because the songs are very short.",
+            "Because folk songs are the loudest.",
+            "Because such songs make them think of home and family.",
+            "Because no one else can hear them."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'remind them of home and the people they love' 的转述。"
+        },
+        {
+          "stem": "What main point does the writer make about choosing music?",
+          "options": [
+            "Only classical music is worth hearing.",
+            "Young people should avoid hip-hop.",
+            "Everyone must like the same songs.",
+            "No single kind suits everyone, so find what speaks to you."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'no single kind of music that is best for everyone… finding the music that speaks to you' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Learn to Play Music",
+      "topic_cn": "议论·为何学音乐",
+      "body": "Why should ordinary students spend their time learning to play music? Some people think it is a waste of hours that could be used for exams. Yet learning an instrument brings many quiet rewards. First, it teaches patience. Nobody plays the piano well after a single lesson; real progress is gradual and comes only after months of practice. Second, music gives us a way to express feelings that are hard to put into words. After a long, difficult day, sitting down to play can bring a sense of relief and satisfaction. Third, playing in a band or choir teaches young people to listen to one another and to work as a team, since one wrong note can affect the whole group. Finally, the music we make does not have to be perfect to be valuable. Even a simple tune, played from the heart, can give us hope and remind us that we are capable of creating something beautiful. For all these reasons, learning music is time well spent.",
+      "vocab_notes": [
+        {
+          "word": "gradual",
+          "cn": "渐进的"
+        },
+        {
+          "word": "relief",
+          "cn": "宽慰"
+        },
+        {
+          "word": "capable",
+          "cn": "有能力的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do some people wrongly believe about learning music, according to the writer?",
+          "options": [
+            "That it wastes time better spent on exams.",
+            "That it is too cheap.",
+            "That it makes students unhealthy.",
+            "That only teachers can enjoy it."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a waste of hours that could be used for exams' 的转述,作者随后反驳。"
+        },
+        {
+          "stem": "Why does the writer say music teaches patience?",
+          "options": [
+            "Because instruments are very cheap.",
+            "Because progress is slow and needs months of practice.",
+            "Because music must always be loud.",
+            "Because lessons are held at night."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'real progress is gradual and comes only after months of practice' 的转述。"
+        },
+        {
+          "stem": "What does playing in a band or choir help young people learn?",
+          "options": [
+            "How to play alone.",
+            "How to sell tickets.",
+            "How to listen to others and work as a team.",
+            "How to write exams faster."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'teaches young people to listen to one another and to work as a team' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Street Performer",
+      "topic_cn": "记叙·街头艺人",
+      "body": "Every Saturday morning, an old man set up his violin near the busy market. He was not famous and had never recorded an album, yet people stopped to listen. At first he had been unemployed for a long time, and playing in the street was the only stage he had. His fingers were no longer young, but the music he made was warm and true. Children danced, and tired shoppers smiled and dropped a few coins into his open case. One cold morning a girl asked him why he kept playing when so few people gave him money. The old man answered that he did not play for the coins. He played because music gave his ordinary days meaning, and because a single tune could lift the mood of the whole street. Moved by his words, the girl came back the next week, this time with her own small guitar. Slowly, the two of them turned a quiet corner of the market into a little stage full of energy and joy.",
+      "vocab_notes": [
+        {
+          "word": "unemployed",
+          "cn": "失业的"
+        },
+        {
+          "word": "stage",
+          "cn": "舞台"
+        },
+        {
+          "word": "moved",
+          "cn": "被打动的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the street the old man's only stage at first?",
+          "options": [
+            "Because he disliked indoor halls.",
+            "Because he owned the market.",
+            "Because he was a famous star.",
+            "Because he had been out of work for a long time."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'had been unemployed for a long time, and playing in the street was the only stage he had' 的转述。"
+        },
+        {
+          "stem": "What reason did the old man give for playing?",
+          "options": [
+            "Playing gave meaning to his plain days and cheered the whole street.",
+            "He needed the coins to live.",
+            "He wanted to become famous.",
+            "He was forced to play by others."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'he did not play for the coins… music gave his ordinary days meaning… lift the mood of the whole street' 的转述。"
+        },
+        {
+          "stem": "What did the girl do after hearing his answer?",
+          "options": [
+            "She told him to stop playing.",
+            "She returned the next week with her own guitar.",
+            "She gave him a large amount of money.",
+            "She never came to the market again."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the girl came back the next week… with her own small guitar' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Medicine of the Mind",
+      "topic_cn": "记叙·音乐的力量",
+      "body": "Two years ago, Sarah was told she had a serious disease that was difficult to cure. Her body ached all the time, and she felt afraid and alone. One day she had to go through a long medical treatment. To help her relax, the doctor played some music, and one of the songs was simply called 'Happy'. That song made her feel so much better that, from then on, she began to listen to music every day. Music gave her happiness when she had little to smile about. It gave her strength and brought her relief during the hardest hours. It became the rock she leant on to get through that frightening time. Moreover, it gave her hope and a quiet sense of satisfaction, almost like a best friend that spoke words of encouragement. Sarah does not say that music cured her disease by itself. What she does say is that, during the darkest period of her life, music helped her in a way that no medicine alone ever could.",
+      "vocab_notes": [
+        {
+          "word": "disease",
+          "cn": "疾病"
+        },
+        {
+          "word": "treatment",
+          "cn": "治疗"
+        },
+        {
+          "word": "satisfaction",
+          "cn": "满足"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Sarah first come to listen to music every day?",
+          "options": [
+            "Her teacher ordered her to do so.",
+            "She wanted to become a singer.",
+            "A song during her treatment made her feel much better.",
+            "She read about it in a newspaper."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the doctor played some music… made her feel so much better that, from then on, she began to listen to music every day' 的转述。"
+        },
+        {
+          "stem": "What does the writer compare music to during Sarah's hard time?",
+          "options": [
+            "A heavy stone in her way.",
+            "A short and boring holiday.",
+            "A loud and painful noise.",
+            "A rock she leant on and a best friend."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the rock she leant on… like a best friend' 的转述。"
+        },
+        {
+          "stem": "What is Sarah careful NOT to claim?",
+          "options": [
+            "That music alone cured her disease.",
+            "That she ever felt afraid.",
+            "That music gave her hope.",
+            "That she listened to a song called 'Happy'."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'does not say that music cured her disease by itself' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Instruments from Around the World",
+      "topic_cn": "说明·乐器与乐队",
+      "body": "Music is made on instruments, and every culture has invented its own. Stringed instruments, such as the violin and the Chinese pipa, make sound when their strings are touched, plucked or rubbed with a bow. Wind instruments, such as the flute and the Scottish bagpipes, sing when air is pushed through them. Then there are the drums and other instruments that are struck to keep the beat. When several of these are played together, we call the group a band or an orchestra, and one person, the conductor, often stands in front to keep everyone together. Learning to play almost any instrument takes patience, because the first sounds a beginner makes are usually far from beautiful. Yet, given enough practice, ordinary hands can be trained to create wonderful music. Around the world, the instruments may look and sound very different, but the wish behind them is the same: people everywhere want to turn simple objects of wood, metal and string into something that can move the human heart.",
+      "vocab_notes": [
+        {
+          "word": "stringed",
+          "cn": "有弦的"
+        },
+        {
+          "word": "bagpipes",
+          "cn": "风笛"
+        },
+        {
+          "word": "conductor",
+          "cn": "指挥"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do stringed instruments such as the pipa make sound?",
+          "options": [
+            "By pushing air through them.",
+            "By having their strings touched, plucked or rubbed.",
+            "By being struck like drums.",
+            "By being left silent."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'make sound when their strings are touched, plucked or rubbed with a bow' 的转述。"
+        },
+        {
+          "stem": "What is the conductor's job in a band or orchestra?",
+          "options": [
+            "To sell the tickets.",
+            "To build the instruments.",
+            "To stand in front and keep everyone together.",
+            "To play the loudest drum."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the conductor, often stands in front to keep everyone together' 的转述。"
+        },
+        {
+          "stem": "What does the writer say is the same in every culture?",
+          "options": [
+            "The exact shape of every instrument.",
+            "The price of all instruments.",
+            "The number of strings on each instrument.",
+            "The wish to turn simple objects into music that moves the heart."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'the wish behind them is the same… something that can move the human heart' 的转述。"
+        }
+      ]
+    }
+  ]
+}

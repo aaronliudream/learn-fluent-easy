@@ -1,0 +1,450 @@
+[
+ {
+  "word": "achievement",
+  "ipa": "tivmnt",
+  "cn": "成就；成绩；达到",
+  "propn": false,
+  "raw": "achievement /tivmnt/ n. 成就；成绩；达到"
+ },
+ {
+  "word": "amount",
+  "ipa": "mant",
+  "cn": "金额；数量",
+  "propn": false,
+  "raw": "amount /mant/ n. 金额；数量"
+ },
+ {
+  "word": "ancestor",
+  "ipa": "nsest(r)",
+  "cn": "祖宗；祖先",
+  "propn": false,
+  "raw": "ancestor /nsest(r)/ n. 祖宗；祖先"
+ },
+ {
+  "word": "announce",
+  "ipa": "nans",
+  "cn": "宣布；通知；声称",
+  "propn": false,
+  "raw": "announce /nans/ vt. 宣布；通知；声称"
+ },
+ {
+  "word": "approach",
+  "ipa": "prt",
+  "cn": "方法；途径；接近 vt. 接近；接洽；着手处理 vi. 靠近",
+  "propn": false,
+  "raw": "approach /prt/ n. 方法；途径；接近 vt. 接近；接洽；着手处理 vi. 靠近"
+ },
+ {
+  "word": "as well as",
+  "ipa": "",
+  "cn": "同（一样也）；和；还",
+  "propn": false,
+  "raw": "as well as 同（一样也）；和；还"
+ },
+ {
+  "word": "battle",
+  "ipa": "btl",
+  "cn": "战役；搏斗 vi. & vt. 搏斗；奋斗",
+  "propn": false,
+  "raw": "battle /btl/ n. 战役；搏斗 vi. & vt. 搏斗；奋斗"
+ },
+ {
+  "word": "beer",
+  "ipa": "b(r)",
+  "cn": "一杯）啤酒",
+  "propn": false,
+  "raw": "beer /b(r)/ n. （一杯）啤酒"
+ },
+ {
+  "word": "belong",
+  "ipa": "bl",
+  "cn": "应在（某处）；适应",
+  "propn": false,
+  "raw": "belong /bl/ vi. 应在（某处）；适应"
+ },
+ {
+  "word": "belong to",
+  "ipa": "",
+  "cn": "属于",
+  "propn": false,
+  "raw": "belong to 属于"
+ },
+ {
+  "word": "break away",
+  "ipa": "",
+  "cn": "脱离；背叛；逃脱",
+  "propn": false,
+  "raw": "break away (from sb/sth) 脱离；背叛；逃脱"
+ },
+ {
+  "word": "butter",
+  "ipa": "bt(r)",
+  "cn": "黄油；奶油 vt. 涂黄油于",
+  "propn": false,
+  "raw": "butter /bt(r)/ n. 黄油；奶油 vt. 涂黄油于"
+ },
+ {
+  "word": "cattle",
+  "ipa": "ktl",
+  "cn": "牛",
+  "propn": false,
+  "raw": "cattle /ktl/ n. 牛"
+ },
+ {
+  "word": "cemetery",
+  "ipa": "semtri",
+  "cn": "墓地；公墓",
+  "propn": false,
+  "raw": "cemetery /semtri/ n. 墓地；公墓"
+ },
+ {
+  "word": "charge",
+  "ipa": "td",
+  "cn": "收费；指控；主管 vt. 收费；控告；充电",
+  "propn": false,
+  "raw": "charge /td/ n. 收费；指控；主管 vt. 收费；控告；充电"
+ },
+ {
+  "word": "chief",
+  "ipa": "tif",
+  "cn": "最重要的；最高级别的 n. （公司或机构的）首领；酋长",
+  "propn": false,
+  "raw": "chief /tif/ adj. 最重要的；最高级别的 n. （公司或机构的）首领；酋长"
+ },
+ {
+  "word": "Confucius",
+  "ipa": "knfju:Ss",
+  "cn": "孔子",
+  "propn": false,
+  "raw": "Confucius /knfju:Ss/ 孔子"
+ },
+ {
+  "word": "conquer",
+  "ipa": "kNk(r)",
+  "cn": "占领；征服；控制",
+  "propn": false,
+  "raw": "conquer /kNk(r)/ vt.  占领；征服；控制"
+ },
+ {
+  "word": "county",
+  "ipa": "kanti",
+  "cn": "英国、爱尔兰的）郡；（美国的）县",
+  "propn": false,
+  "raw": "county /kanti/​ n. （英国、爱尔兰的）郡；（美国的）县"
+ },
+ {
+  "word": "courtyard",
+  "ipa": "kO:tj:d",
+  "cn": "庭院；院子",
+  "propn": false,
+  "raw": "courtyard /kO:tj:d/ n. 庭院；院子"
+ },
+ {
+  "word": "crowd",
+  "ipa": "krad",
+  "cn": "人群；一群人；民众 vt. 挤满；使……拥挤",
+  "propn": false,
+  "raw": "crowd /krad/ n. 人群；一群人；民众 vt. 挤满；使……拥挤"
+ },
+ {
+  "word": "currency",
+  "ipa": "krnsi",
+  "cn": "通货；货币",
+  "propn": false,
+  "raw": "currency /krnsi/ n. 通货；货币"
+ },
+ {
+  "word": "custom",
+  "ipa": "kstm",
+  "cn": "风俗；习俗；习惯",
+  "propn": false,
+  "raw": "custom /kstm/ n. 风俗；习俗；习惯"
+ },
+ {
+  "word": "defence",
+  "ipa": "dfens",
+  "cn": "防御；保卫",
+  "propn": false,
+  "raw": "defence /dfens/ n. 防御；保卫"
+ },
+ {
+  "word": "descendant",
+  "ipa": "dsendnt",
+  "cn": "后裔；后代；子孙",
+  "propn": false,
+  "raw": "descendant /dsendnt/ n. 后裔；后代；子孙"
+ },
+ {
+  "word": "dot",
+  "ipa": "dt",
+  "cn": "点；小（圆）点  vt. 加点；遍布",
+  "propn": false,
+  "raw": "dot /dt/ n. 点；小（圆）点  vt. 加点；遍布"
+ },
+ {
+  "word": "eager",
+  "ipa": "i(r)",
+  "cn": "热切的；渴望的",
+  "propn": false,
+  "raw": "eager /i(r)/ adj. 热切的；渴望的"
+ },
+ {
+  "word": "ensure",
+  "ipa": "n(r)",
+  "cn": "保证；确保；担保",
+  "propn": false,
+  "raw": "ensure /n(r)/ vt. 保证；确保；担保"
+ },
+ {
+  "word": "evidence",
+  "ipa": "evIdns",
+  "cn": "证据；证明",
+  "propn": false,
+  "raw": "evidence /evIdns/ n. 证据；证明"
+ },
+ {
+  "word": "fascinating",
+  "ipa": "fsIneItIN",
+  "cn": "极有吸引力的；迷人的",
+  "propn": false,
+  "raw": "fascinating /fsIneItIN/ adj. 极有吸引力的；迷人的"
+ },
+ {
+  "word": "feast",
+  "ipa": "fist",
+  "cn": "盛宴；宴会；节日",
+  "propn": false,
+  "raw": "feast /fist/ n. 盛宴；宴会；节日"
+ },
+ {
+  "word": "gallery",
+  "ipa": "lri",
+  "cn": "艺术作品的）展览馆；画廊",
+  "propn": false,
+  "raw": "gallery /lri/ n. （艺术作品的）展览馆；画廊"
+ },
+ {
+  "word": "generous",
+  "ipa": "denrs",
+  "cn": "慷慨的；大方的；丰富的",
+  "propn": false,
+  "raw": "generous /denrs/ adj. 慷慨的；大方的；丰富的"
+ },
+ {
+  "word": "greet",
+  "ipa": "rit",
+  "cn": "问候；迎接",
+  "propn": false,
+  "raw": "greet /rit/ vt. 问候；迎接"
+ },
+ {
+  "word": "heel",
+  "ipa": "hi:l",
+  "cn": "足跟；（脚、袜子、鞋等的）后跟",
+  "propn": false,
+  "raw": "heel /hi:l/ n. 足跟；（脚、袜子、鞋等的）后跟"
+ },
+ {
+  "word": "Achilles’",
+  "ipa": "kIli:z",
+  "cn": "喻）（希腊神话） 阿喀琉斯的脚跟，致命的弱点",
+  "propn": false,
+  "raw": "Achilles’ /kIli:z/ heel （喻）（希腊神话） 阿喀琉斯的脚跟，致命的弱点"
+ },
+ {
+  "word": "honey",
+  "ipa": "hni",
+  "cn": "蜂蜜",
+  "propn": false,
+  "raw": "honey /hni/ n. 蜂蜜"
+ },
+ {
+  "word": "individual",
+  "ipa": "ndvdul",
+  "cn": "单独的；个别的 n. 个人",
+  "propn": false,
+  "raw": "individual /ndvdul/ adj. 单独的；个别的 n. 个人"
+ },
+ {
+  "word": "join … to … 把……和……连接或联结起来",
+  "ipa": "",
+  "cn": "把……和……连接或联结起来",
+  "propn": false,
+  "raw": "join … to … 把……和……连接或联结起来"
+ },
+ {
+  "word": "keep your eyes open",
+  "ipa": "",
+  "cn": "留心；留意",
+  "propn": false,
+  "raw": "keep your eyes open (for) 留心；留意"
+ },
+ {
+  "word": "kingdom",
+  "ipa": "kdm",
+  "cn": "王国；领域",
+  "propn": false,
+  "raw": "kingdom /kdm/ n. 王国；领域"
+ },
+ {
+  "word": "landscape",
+  "ipa": "lndskep",
+  "cn": "陆上，尤指乡村的）风景",
+  "propn": false,
+  "raw": "landscape /lndskep/ n. （陆上，尤指乡村的）风景"
+ },
+ {
+  "word": "legal",
+  "ipa": "lil",
+  "cn": "法律的；合法的",
+  "propn": false,
+  "raw": "legal /lil/ adj. 法律的；合法的"
+ },
+ {
+  "word": "location",
+  "ipa": "lken",
+  "cn": "地方；地点；位置",
+  "propn": false,
+  "raw": "location /lken/ n. 地方；地点；位置"
+ },
+ {
+  "word": "mansion",
+  "ipa": "mnSn",
+  "cn": "公馆；宅第",
+  "propn": false,
+  "raw": "mansion /mnSn/ n. 公馆；宅第"
+ },
+ {
+  "word": "military",
+  "ipa": "mltri",
+  "cn": "军事的；军用的",
+  "propn": false,
+  "raw": "military /mltri/ adj. 军事的；军用的"
+ },
+ {
+  "word": "nearby",
+  "ipa": "nba",
+  "cn": "附近的；邻近的 adv. 在附近",
+  "propn": false,
+  "raw": "nearby /nba/ adj. 附近的；邻近的 adv. 在附近"
+ },
+ {
+  "word": "ocean",
+  "ipa": "n",
+  "cn": "大海；海洋",
+  "propn": false,
+  "raw": "ocean /n/ n. 大海；海洋"
+ },
+ {
+  "word": "philosophy",
+  "ipa": "flsfi",
+  "cn": "哲学",
+  "propn": false,
+  "raw": "philosophy /flsfi/ n. 哲学"
+ },
+ {
+  "word": "poet",
+  "ipa": "pUIt",
+  "cn": "诗人",
+  "propn": false,
+  "raw": "poet /pUIt/ n. 诗人"
+ },
+ {
+  "word": "port",
+  "ipa": "pt",
+  "cn": "港口（城市）",
+  "propn": false,
+  "raw": "port /pt/ n. 港口（城市）"
+ },
+ {
+  "word": "position",
+  "ipa": "pzn",
+  "cn": "位置；姿态；职位 vt. 安装；安置",
+  "propn": false,
+  "raw": "position /pzn/ n. 位置；姿态；职位 vt. 安装；安置"
+ },
+ {
+  "word": "pub",
+  "ipa": "pb",
+  "cn": "酒吧；酒馆",
+  "propn": false,
+  "raw": "pub /pb/ n. 酒吧；酒馆"
+ },
+ {
+  "word": "puzzle",
+  "ipa": "pzl",
+  "cn": "谜；智力游戏；疑问 vt. 迷惑；使困惑",
+  "propn": false,
+  "raw": "puzzle /pzl/ n. 谜；智力游戏；疑问 vt. 迷惑；使困惑"
+ },
+ {
+  "word": "roar",
+  "ipa": "rO:(r)",
+  "cn": "吼叫；咆哮",
+  "propn": false,
+  "raw": "roar /rO:(r)/ vi. & n. 吼叫；咆哮"
+ },
+ {
+  "word": "roll",
+  "ipa": "rl",
+  "cn": "使）翻滚；（使）滚动 n. 卷（轴）；翻滚",
+  "propn": false,
+  "raw": "roll /rl/ vi. & vt. （使）翻滚；（使）滚动 n. 卷（轴）；翻滚"
+ },
+ {
+  "word": "scent",
+  "ipa": "sent",
+  "cn": "气味；气息",
+  "propn": false,
+  "raw": "scent /sent/ n. 气味；气息"
+ },
+ {
+  "word": "sensory",
+  "ipa": "sensri",
+  "cn": "感觉的；感官的",
+  "propn": false,
+  "raw": "sensory /sensri/ adj. 感觉的；感官的"
+ },
+ {
+  "word": "snack",
+  "ipa": "snk",
+  "cn": "点心；小吃",
+  "propn": false,
+  "raw": "snack /snk/ n. 点心；小吃"
+ },
+ {
+  "word": "stew",
+  "ipa": "stju:",
+  "cn": "炖菜（有肉和蔬菜） vt. & vi. 炖；煨",
+  "propn": false,
+  "raw": "stew /stju:/ n. 炖菜（有肉和蔬菜） vt. & vi. 炖；煨"
+ },
+ {
+  "word": "striking",
+  "ipa": "strak",
+  "cn": "引人注目的；显著的",
+  "propn": false,
+  "raw": "striking /strak/ adj. 引人注目的；显著的"
+ },
+ {
+  "word": "surround",
+  "ipa": "srand",
+  "cn": "围绕；包围",
+  "propn": false,
+  "raw": "surround /srand/ vt. 围绕；包围"
+ },
+ {
+  "word": "transition",
+  "ipa": "trnzn; -sn",
+  "cn": "过渡；转变；变迁",
+  "propn": false,
+  "raw": "transition /trnzn; -sn/ n. 过渡；转变；变迁"
+ },
+ {
+  "word": "wine",
+  "ipa": "wan",
+  "cn": "葡萄酒；果酒",
+  "propn": false,
+  "raw": "wine /wan/ n. 葡萄酒；果酒"
+ }
+]

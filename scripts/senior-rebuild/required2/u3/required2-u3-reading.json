@@ -1,0 +1,362 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "The Internet",
+  "source": "人教版2019必修二 Unit 3 同主题阅读(互联网改变生活/Jan 的网络社区/上网安全/网购/搜索信息/乌镇与互联网)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "How the Internet Changed Our Lives",
+      "topic_cn": "说明·互联网让生活更方便",
+      "body": "Much has been written about the wonders of the World Wide Web, and most of it tells us how the Internet has made our daily lives far more convenient. When we go shopping, we no longer have to wait in a long line or carry cash around. With just a few clicks, we can buy what we want and have it sent right to our door. We can also get the most updated information from large databases, and we can download software, documents, and images whenever we need them. But the Internet has done much more than simply make life easier. It has also changed the way people connect with one another. Through online communities and social networks, people who live far apart can share their feelings, support each other, and feel less lonely. In this way, the Internet has removed much of the distance that once stood between people, bringing the world closer together than ever before.",
+      "vocab_notes": [
+        {
+          "word": "convenient",
+          "cn": "方便的"
+        },
+        {
+          "word": "database",
+          "cn": "数据库"
+        },
+        {
+          "word": "download",
+          "cn": "下载"
+        },
+        {
+          "word": "distance",
+          "cn": "距离"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say we no longer need to do when shopping online?",
+          "options": [
+            "Stand in a queue or take banknotes with us.",
+            "Use any computer at all.",
+            "Talk to other shoppers.",
+            "Visit large databases."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'no longer have to wait in a long line or carry cash around' 的转述。"
+        },
+        {
+          "stem": "Besides making life easier, what else has the Internet changed?",
+          "options": [
+            "The price of all goods.",
+            "How people stay in touch with each other.",
+            "The speed of every computer.",
+            "The weather around the world."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'changed the way people connect with one another'(中段)。"
+        },
+        {
+          "stem": "What is the main effect of online communities, according to the text?",
+          "options": [
+            "They help people feel less lonely and closer together.",
+            "They make software cheaper.",
+            "They make people travel more.",
+            "They replace all real friends."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'feel less lonely… bringing the world closer together' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Jan's New Life Online",
+      "topic_cn": "记叙·Jan 与网络社区",
+      "body": "Jan was an English teacher in Birmingham who suddenly fell seriously ill and had to give up her job. At fifty, she found herself out of work and stuck at home with only her computer for company. After a while, she found that surfing the Internet helped her feel less lonely and bored. She could listen to music, watch films, and explore the world without leaving her room. She also joined an online group where she could talk about her problems and get advice from others. She was so inspired by the people she met online that she decided to start an IT club to teach older people how to use computers. Many people have been helped by her club. One man learnt to look for work online and found a good job, while a woman who lived alone started a small online company with two friends. Jan now believes that everyone should be able to enjoy the benefits of the Internet, whatever their age.",
+      "vocab_notes": [
+        {
+          "word": "surf",
+          "cn": "浏览"
+        },
+        {
+          "word": "inspire",
+          "cn": "激励"
+        },
+        {
+          "word": "benefit",
+          "cn": "益处"
+        },
+        {
+          "word": "stuck",
+          "cn": "困住"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Jan have to stop working?",
+          "options": [
+            "She wanted a long holiday.",
+            "She became seriously ill.",
+            "She moved to another city.",
+            "She disliked teaching."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'fell seriously ill and had to give up her job' 的转述。"
+        },
+        {
+          "stem": "What made Jan decide to start the IT club?",
+          "options": [
+            "Her doctor told her to.",
+            "She wanted to earn more money.",
+            "The friends she made on the net encouraged her.",
+            "Her computer broke down."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'so inspired by the people she met online that she decided to start an IT club'(中段)。"
+        },
+        {
+          "stem": "How did the club change the man's life?",
+          "options": [
+            "It taught him to play games.",
+            "It gave him free software.",
+            "It sold him a new computer.",
+            "It helped him find work online and get a good job."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'learnt to look for work online and found a good job'(后段)。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Staying Safe Online",
+      "topic_cn": "说明·上网安全建议",
+      "body": "Many people enjoy being online, but few stop to think about how to stay safe there. Here are a few simple guidelines worth keeping in mind. First, follow the golden rule of the Internet: if you read or see something that makes you feel uncomfortable, leave the site at once and do not click on anything. Second, protect your privacy. Never give out your home address or phone number, because someone might use the information to steal your identity. Identity theft has become a common and serious problem. Third, be polite to others. Being online is no excuse for being rude, and a rude person can easily become a target for a troll or a cyberbully. A troll posts comments only to stir up trouble, often using several false names, while a cyberbully writes mean things aimed at particular people. The good news is that the more polite you are, the less likely you are to be attacked. A little care can keep your time online both safe and happy.",
+      "vocab_notes": [
+        {
+          "word": "privacy",
+          "cn": "隐私"
+        },
+        {
+          "word": "identity",
+          "cn": "身份"
+        },
+        {
+          "word": "troll",
+          "cn": "喷子"
+        },
+        {
+          "word": "cyberbully",
+          "cn": "网霸"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer suggest doing if a website makes you uncomfortable?",
+          "options": [
+            "Leave the site immediately and click nothing.",
+            "Post an angry comment.",
+            "Share it with your friends.",
+            "Stay and read it carefully."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'leave the site at once and do not click on anything' 的转述。"
+        },
+        {
+          "stem": "Why should you keep your address and phone number private?",
+          "options": [
+            "So your friends cannot find you.",
+            "Because someone might use them to steal your identity.",
+            "Because the website charges money for them.",
+            "So you can shop more quickly."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'might use the information to steal your identity'(中段)。"
+        },
+        {
+          "stem": "According to the text, how can being polite help you online?",
+          "options": [
+            "It makes your computer faster.",
+            "It gives you more followers.",
+            "It makes you less likely to be attacked.",
+            "It saves you money."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'the more polite you are, the less likely you are to be attacked' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Shopping on the Net",
+      "topic_cn": "说明·网购的方便与小心",
+      "body": "Online shopping has become part of everyday life for many families. Instead of going out to stores week after week, more and more people now order everything from clothes to food on the net and have it delivered to their homes. There are clear reasons why it is so popular. It is convenient, because you can shop at any hour without leaving the house. It often saves money, too, since many sites offer a discount that you would not find in a normal shop. Yet careful shoppers know that it pays to be wise. Before you buy, use a website that you are familiar with, and read what other buyers say about the goods. Be sure to protect your account by choosing a strong password and never sharing it. If a deal looks far too good to be true, it probably is. Used with a little common sense, online shopping can save both your time and your money.",
+      "vocab_notes": [
+        {
+          "word": "discount",
+          "cn": "折扣"
+        },
+        {
+          "word": "account",
+          "cn": "账户"
+        },
+        {
+          "word": "familiar",
+          "cn": "熟悉的"
+        },
+        {
+          "word": "convenient",
+          "cn": "方便的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do many people do instead of going to stores each week?",
+          "options": [
+            "Stop buying anything new.",
+            "Travel to other towns to shop.",
+            "Borrow things from neighbours.",
+            "Order goods online and have them delivered home."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'order everything… on the net and have it delivered to their homes' 的转述。"
+        },
+        {
+          "stem": "Why does online shopping often save money?",
+          "options": [
+            "Because lower prices are often found on the web.",
+            "Because the goods are always free.",
+            "Because no one ever buys much.",
+            "Because it takes a long time."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'many sites offer a discount that you would not find in a normal shop'(中段)。"
+        },
+        {
+          "stem": "What advice does the writer give about your account?",
+          "options": [
+            "Share it with close friends.",
+            "Keep it safe with a strong password and tell no one.",
+            "Change it every single day.",
+            "Use the same password everywhere."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'protect your account by choosing a strong password and never sharing it'(后段)。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Finding What You Need",
+      "topic_cn": "说明·搜索引擎与信息检索",
+      "body": "Long ago, when people wanted to learn about something, they had to spend hours looking through heavy books in a library. Today, a search engine can do much of that work in seconds. A search engine is simply a tool that helps you find what you are looking for on the net. You type in a few words, press a button, and a list of pages appears at once. This has made study far easier, but it has also brought a new problem. Not everything you read online is true, and false information can spread very quickly. So it is wise to learn how to search well. Try to use clear and exact words, and look at more than one site before you believe an answer. It also helps to check who the author is and whether the page gives the sources of its facts. With a little care, a search engine becomes a powerful friend that opens the door to almost endless knowledge.",
+      "vocab_notes": [
+        {
+          "word": "engine",
+          "cn": "引擎"
+        },
+        {
+          "word": "false",
+          "cn": "假的"
+        },
+        {
+          "word": "author",
+          "cn": "作者"
+        },
+        {
+          "word": "press",
+          "cn": "按"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did people have to do before search engines existed?",
+          "options": [
+            "Ask robots for answers.",
+            "Write their own books first.",
+            "Spend hours looking through books in a library.",
+            "Wait for the news on TV."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'spend hours looking through heavy books in a library' 的转述。"
+        },
+        {
+          "stem": "What new problem has the search engine brought?",
+          "options": [
+            "Books have all disappeared.",
+            "People read far too slowly now.",
+            "Libraries have become free.",
+            "Untrue facts can travel across the net fast."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'false information can spread very quickly'(中段)。"
+        },
+        {
+          "stem": "What does the writer advise readers to do before believing an answer?",
+          "options": [
+            "Compare several pages and find out who wrote them.",
+            "Trust the very first page they see.",
+            "Stop using the Internet.",
+            "Only read printed books."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'look at more than one site… check who the author is'(后段)的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Small Town Goes Online",
+      "topic_cn": "说明·乌镇与世界互联网大会",
+      "body": "The Internet has brought great changes to Wuzhen, a small waterside town in Zhejiang. For the past few years, this ancient town has hosted the World Internet Conference, and life there has never been more convenient. Residents can now go online as easily as people in large modern cities, and they can stream films and music at high speeds. The Internet has even changed the way people get around. For short trips, both residents and visitors can use a public bike system; the bikes are rented through online apps, with no need for paperwork or cash. Even the parking system at the conference centre has been made fully Internet-based. The story of Wuzhen shows that no town is too small to join the world of the Internet. If a quiet old town beside the water can take this step, then towns everywhere should be able to do the same, so that everyone can share in what the Internet has to offer.",
+      "vocab_notes": [
+        {
+          "word": "resident",
+          "cn": "居民"
+        },
+        {
+          "word": "stream",
+          "cn": "流播"
+        },
+        {
+          "word": "conference",
+          "cn": "会议"
+        },
+        {
+          "word": "province",
+          "cn": "省"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What has Wuzhen hosted for the past few years?",
+          "options": [
+            "A national bike race.",
+            "The World Internet Conference.",
+            "A music festival.",
+            "A book fair."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'has hosted the World Internet Conference' 的转述。"
+        },
+        {
+          "stem": "How can people rent the public bikes in Wuzhen?",
+          "options": [
+            "By paying with cash at a desk.",
+            "By signing a long form.",
+            "By using apps on the net, needing no forms or money.",
+            "Only the residents may use them."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'rented through online apps, with no need for paperwork or cash'(中段)。"
+        },
+        {
+          "stem": "What main point does the story of Wuzhen make?",
+          "options": [
+            "Old towns should not change at all.",
+            "Only big cities can use the Internet.",
+            "Bikes are better than the Internet.",
+            "Even the smallest places can become part of the online world."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'no town is too small to join the world of the Internet' 的转述。"
+        }
+      ]
+    }
+  ]
+}

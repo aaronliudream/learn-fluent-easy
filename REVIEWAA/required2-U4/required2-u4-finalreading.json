@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(英国历史与传统主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mia first arrived in Scotland, she could not understand why one country had so many different traditions. After a week of visiting old castles and friendly village pubs, she finally saw the answer. Each group of people who had once lived there had left something behind, and together these gifts had shaped the rich culture she now loved.",
+    "questions": [
+      {
+        "q": "Why was Mia confused at first?",
+        "options": [
+          "She could not see how a single nation held so many customs.",
+          "She could not find any old castles.",
+          "She disliked the village pubs.",
+          "She wanted to go home at once."
+        ],
+        "answer": "A",
+        "explanation": "原文 'could not understand why one country had so many different traditions' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Mia finally realise?",
+        "options": [
+          "That traditions are not worth keeping.",
+          "That different groups had each left something that shaped the culture.",
+          "That Scotland had no real history.",
+          "That castles should be pulled down."
+        ],
+        "answer": "B",
+        "explanation": "末句 'Each group… had left something behind, and together these gifts had shaped the rich culture' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

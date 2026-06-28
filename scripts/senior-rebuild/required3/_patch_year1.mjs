@@ -1,13 +1,13 @@
 // 接 hub: 把某单元写进 year1.json 的 gk_required3.units[semIdx]。用法: node _patch_year1.mjs --unit u1
 import { readFileSync, writeFileSync } from 'node:fs';
-import { VOL, META, CODE_PREFIX } from './_meta.mjs';
+import { VOL, META, CODE_PREFIX, SEM, YEARFILE } from './_meta.mjs';
 const PFX = CODE_PREFIX || '';
 const U = process.argv[process.argv.indexOf('--unit') + 1];
 const m = META[U]; if (!m) throw new Error('未知 unit ' + U);
 const DIR = `scripts/senior-rebuild/required3/${U}`;
-const Y = 'src/data/gaokaoHub/year1.json';
+const Y = `src/data/gaokaoHub/${YEARFILE}.json`;
 const y = JSON.parse(readFileSync(Y, 'utf8'));
-const u = y.year1.semesters.gk_required3.units[m.semIdx];
+const u = y[YEARFILE].semesters[SEM].units[m.semIdx];
 if (u.unitKey !== m.unit) throw new Error(`units[${m.semIdx}] 不是 ${m.unit}: ${u.unitKey}`);
 
 const vf = JSON.parse(readFileSync(`${DIR}/${VOL}-${U}-vocab.json`, 'utf8'));

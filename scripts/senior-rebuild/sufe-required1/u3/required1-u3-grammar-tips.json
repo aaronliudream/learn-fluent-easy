@@ -1,0 +1,40 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "状语从句·六大类连词速查",
+    "intro": "状语从句在句中作状语,说明主句动作的时间、地点、原因、条件、让步、目的、结果、方式或比较。判断口诀:先看主从句的逻辑关系(什么时候/在哪里/为什么/如果/尽管/为了/以至于/好像/比),再选对应连词。",
+    "table": {
+      "headers": ["类型", "常用连词 / 例句"],
+      "rows": [
+        ["时间", "when/while/as/before/after/until/since/as soon as:I felt excited when the plane took off."],
+        ["地点", "where/wherever:This is the square where artists paint for tourists."],
+        ["原因", "because/since/as:We chose the train because it was cheaper."],
+        ["条件", "if/unless/as long as:We can't see the old town unless we get up early."],
+        ["让步", "though/although/even though/even if:Although she was tired, she went out at once."],
+        ["目的", "so that/in order that:She left early so that she could catch the first train."],
+        ["结果", "so…that / such…that:It was such a long flight that everyone fell asleep."],
+        ["方式/比较", "as if/as though;than:He spoke as if he had lived there. / Flying is faster than the train."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "so + 形容词/副词 + that 表结果;so that(中间不加形/副)表目的——别混", "mark": "so beautiful that(结果) ｜ so that I could see(目的)" },
+      { "rule": "such + (a/an) + 形容词 + 名词 + that 表结果", "mark": "such a long flight that everyone slept" },
+      { "rule": "unless = if … not,本身含否定,从句不再加 not", "mark": "unless you go(=if you don't go)" },
+      { "rule": "since/as 既可表时间也可表原因,看句意定;though/although 不与 but 连用", "mark": "Although …, (× but) …" }
+    ],
+    "why": [
+      "状语从句的连词不是靠记搭配硬背,而是看主句和从句之间是'时间先后''因果''假设''转折''目的''结果'还是'比较'——逻辑关系定连词,所以每题往往只有一个连词说得通。"
+    ],
+    "gaokaoPoints": [
+      "so…that 与 such…that 的区别(看 that 前是形容词还是'a+形+名');so that(目的) vs so…that(结果)。",
+      "unless / as long as / even if 在语法填空和完形中高频;though/although 引导让步从句、主句不加 but。",
+      "as 的多义(当……时/因为/随着/像……一样)需结合语境判断。"
+    ],
+    "examVsReal": [
+      { "exam": "Although it was raining, we still went out.(考试用 Although,主句不加 but)", "real": "It was raining, but we still went out.", "note": "考试常考'although 与 but 不同时用';真实口语里直接用 but 即可" },
+      { "exam": "He acted as if he had been there before.(考试用虚拟 had been)", "real": "He acted like he'd been there before.", "note": "考试 as if + 虚拟语气;口语里常用 like 代替 as if,且时态更随意" }
+    ]
+  }
+}

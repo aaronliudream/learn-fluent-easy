@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(语言与文化主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mark first lived in Spain, he was puzzled that people said \"in a minute\" but often kept him waiting for an hour. Instead of getting angry, he slowly learned that the words were not meant to be taken literally. A year later, he no longer panicked about small delays, and he felt much more relaxed about time than he had ever been at home.",
+    "questions": [
+      {
+        "q": "Why was Mark puzzled at first?",
+        "options": [
+          "Locals promised something soon, yet made him wait far longer.",
+          "He could not find any food in Spain.",
+          "Nobody in Spain could speak English.",
+          "He had lost his way in the city."
+        ],
+        "answer": "A",
+        "explanation": "原文 'said \"in a minute\" but often kept him waiting for an hour' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Mark feel about time a year later?",
+        "options": [
+          "Angrier than before.",
+          "Much more relaxed about small delays.",
+          "Sorry that he had moved there.",
+          "Too worried to leave home."
+        ],
+        "answer": "B",
+        "explanation": "末句 'no longer panicked… felt much more relaxed about time'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "School Life",
+  "source": "上外版必修第一册 Unit 1 同主题阅读(写作作业的故事/给女儿的信/图书馆采访/开学第一周文化差异/学习计划贴士/孔子论学)。词限 U1/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Different Writing Assignment",
+      "topic_cn": "记叙·一篇与众不同的作业",
+      "body": "At the start of a new term, Mrs Peabody asked her class to write something about the summer vacation. She told the students to be creative, but to use proper spelling and grammar. That night Jim sat at home and stared at a blank sheet of paper. He did not want to write the same boring essay about a dog, a water park and two weeks of camp. So he wrote a short science fiction story instead. It was about a distant planet that had no summer and no vacations, where the people worked all day and wished they could rest. After he handed it in, Jim lay awake worrying that the teacher would think he had ignored the task. To his great surprise, he was the only student who got an A, because he had the courage to be imaginative. English was his favourite class, and now he felt proud of his own choice.",
+      "vocab_notes": [
+        {
+          "word": "assignment",
+          "cn": "作业"
+        },
+        {
+          "word": "creative",
+          "cn": "有创意的"
+        },
+        {
+          "word": "imaginative",
+          "cn": "富有想象力的"
+        },
+        {
+          "word": "courage",
+          "cn": "勇气"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why didn't Jim write the usual essay about his summer vacation?",
+          "options": [
+            "He thought the usual topic was dull and wanted something fresh.",
+            "He had forgotten everything about his summer.",
+            "The teacher had banned writing about vacations.",
+            "He did not know how to spell the words."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 Jim 觉得老一套作文 boring 而想写不同的东西,转述其厌倦感。"
+        },
+        {
+          "stem": "What did Jim worry about after handing in his story?",
+          "options": [
+            "That he had lost his sheet of paper.",
+            "That the teacher might think he had not followed the task.",
+            "That his classmates would laugh at him.",
+            "That the planet in his story was too cold."
+          ],
+          "answer_index": 1,
+          "explanation": "原文他担心老师认为他无视了作业要求,转述其顾虑。"
+        },
+        {
+          "stem": "Why did Jim finally get an A?",
+          "options": [
+            "He dared to use his imagination instead of playing safe.",
+            "He wrote the longest essay in class.",
+            "He copied the example the teacher gave.",
+            "He finished his work the fastest."
+          ],
+          "answer_index": 0,
+          "explanation": "原文因为他有勇气富于想象,转述其得高分的原因。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Letter to My Daughter",
+      "topic_cn": "书信·母亲给女儿的鼓励",
+      "body": "Dear Daughter, as I watch you get ready for your first day of senior high school, there are a few things I want you to know. You may be putting yourself under pressure to make everything perfect, but there is no such thing as perfect. What matters most is believing that you are good enough, just as you are. Remember that you are not alone in this boat. Everyone else is facing a new school, new classmates and new pressures too. There may be some people who are not always friendly to you, and you will meet such people throughout your adult life. When someone makes a nasty comment, please remember that this kind of behaviour says more about the giver than about you. There will never be a shortage of kind people and genuine smiles in your life. As you go forward into this new chapter, I hope you will see that we are most often held back by the limits we put on ourselves. Love, Mum.",
+      "vocab_notes": [
+        {
+          "word": "pressure",
+          "cn": "压力"
+        },
+        {
+          "word": "genuine",
+          "cn": "真诚的"
+        },
+        {
+          "word": "shortage",
+          "cn": "缺少"
+        },
+        {
+          "word": "limitation",
+          "cn": "局限"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the mother think about trying to be perfect on the first day?",
+          "options": [
+            "She insists her daughter must be perfect.",
+            "She believes perfection does not really exist and is not needed.",
+            "She wants her to give up the first day.",
+            "She says only teachers can be perfect."
+          ],
+          "answer_index": 1,
+          "explanation": "原文母亲说世上没有完美这回事,重要的是相信自己足够好,转述其观点。"
+        },
+        {
+          "stem": "According to the mother, what does an unkind comment really show?",
+          "options": [
+            "That the receiver has done something wrong.",
+            "That the school rules are too strict.",
+            "More about the person who gives it than the one who receives it.",
+            "That the daughter should stay silent forever."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 behaviour says more about the giver,转述其含义。"
+        },
+        {
+          "stem": "What often holds people back, in the mother's opinion?",
+          "options": [
+            "The number of friends they have.",
+            "The size of their new school.",
+            "The weather on the first day.",
+            "The limits they set on themselves rather than outside forces."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 held back by the limits we put on ourselves,转述其主旨。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Library Everyone Loves",
+      "topic_cn": "采访·人人喜爱的图书馆",
+      "body": "The school newspaper was conducting an interview about students' first week at No. 1 Senior High School. Li Mei, the reporter, asked Zhang Yan and Zhao Shan what they liked best. Both of them spoke warmly about the school library. Zhao Shan said he loved the place the very first time he visited it. He explained that it took him only five minutes to borrow a book of short stories, because the self-service borrowing system was so convenient. The computer quickly helped him find what he wanted. Zhang Yan added that the environment was quiet and comfortable. The room was decorated with green plants and lovely desks and chairs, so she felt totally relaxed while reading there. The library also had a large collection of magazines and modern facilities. Li Mei smiled and agreed that it was a wonderful place to study. After the interview, the two students said they would visit the library again that afternoon.",
+      "vocab_notes": [
+        {
+          "word": "conduct",
+          "cn": "进行"
+        },
+        {
+          "word": "convenient",
+          "cn": "方便的"
+        },
+        {
+          "word": "facility",
+          "cn": "设施"
+        },
+        {
+          "word": "relaxed",
+          "cn": "放松的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Zhao Shan able to borrow a book so quickly?",
+          "options": [
+            "The self-service system and computer made it fast and easy.",
+            "A teacher carried the book to him.",
+            "He had reserved the book a week before.",
+            "There was only one book in the library."
+          ],
+          "answer_index": 0,
+          "explanation": "原文自助借书系统方便、电脑帮他快速找到,转述其原因。"
+        },
+        {
+          "stem": "What made Zhang Yan feel relaxed in the library?",
+          "options": [
+            "The loud music played all day.",
+            "Its quiet setting with plants and comfortable furniture.",
+            "The crowd of noisy students.",
+            "The lack of any books at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文安静、有绿植和可爱桌椅让她放松,转述其感受。"
+        },
+        {
+          "stem": "What did the two students plan to do after the interview?",
+          "options": [
+            "Move to a different school.",
+            "Stop using the library forever.",
+            "Return to the library later the same day.",
+            "Write a complaint to the reporter."
+          ],
+          "answer_index": 2,
+          "explanation": "原文他们说会当天下午再去图书馆,转述其计划。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "First Week Around the World",
+      "topic_cn": "说明·各地开学第一周",
+      "body": "The first week of senior high school looks quite different from one culture to another. In South Korea and Japan, for example, it is a custom to welcome new students with a school entrance ceremony. The ceremony reminds students of their duties and responsibilities at the start of this new chapter. In some Japanese schools, skilled painters even draw cheerful welcome pictures on the blackboard so that the classroom feels warm and friendly. In the United States, most high schools offer a short training course before the term actually begins. During this course, new students learn their way around the building, meet some of their teachers and get to know a few fellow students. These different customs all share one purpose. They help young people feel less worried and more at home as they begin an important period of their lives. Whatever the culture, a kind welcome can make the first week far less frightening and much more pleasant.",
+      "vocab_notes": [
+        {
+          "word": "throughout",
+          "cn": "遍及"
+        },
+        {
+          "word": "chapter",
+          "cn": "篇章"
+        },
+        {
+          "word": "pleasant",
+          "cn": "愉快的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the purpose of the entrance ceremony in South Korea and Japan?",
+          "options": [
+            "To test the students' English grammar.",
+            "To choose the best painter in the school.",
+            "To decide who will be the class president.",
+            "To remind new students of their duties as they start school."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 ceremony 提醒学生职责与责任,转述其目的。"
+        },
+        {
+          "stem": "What do American high schools often do before the term starts?",
+          "options": [
+            "Run a short course to help newcomers find their way and meet people.",
+            "Send students straight home for a holiday.",
+            "Ask parents to teach the first lessons.",
+            "Cancel all classes for a month."
+          ],
+          "answer_index": 0,
+          "explanation": "原文美国学校开学前办训练课程帮新生熟悉环境,转述其做法。"
+        },
+        {
+          "stem": "What do all these customs have in common?",
+          "options": [
+            "They force students to study harder than before.",
+            "They aim to make new students feel welcome and less anxious.",
+            "They only happen in very large cities.",
+            "They are designed to punish latecomers."
+          ],
+          "answer_index": 1,
+          "explanation": "原文这些习俗都为让学生更安心、有归属感,转述其共同点。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How to Have a Great First Year",
+      "topic_cn": "建议·开学第一年小贴士",
+      "body": "Some senior students like to share tips to help first-year students settle in. Their first piece of advice is simple: try to meet new friends early. One student said she first met her best friend at a Year 7 camp, and they have stayed close ever since. The second tip is about good habits. New students are expected to be more independent, so it helps to start a regular study plan as soon as the term begins. You might set up a quiet corner at home where you can concentrate on your work without being disturbed. It is also useful to write a list of all your homework and tick off each task as you finish it. That way you always know when each assignment is due and can plan what to get done. Finally, never be afraid to ask your teachers for help when something is confusing. A little courage at the right moment can save you a lot of trouble later.",
+      "vocab_notes": [
+        {
+          "word": "expectation",
+          "cn": "期望"
+        },
+        {
+          "word": "confusing",
+          "cn": "令人困惑的"
+        },
+        {
+          "word": "assignment",
+          "cn": "作业"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the senior students' first piece of advice?",
+          "options": [
+            "To avoid talking to anyone at first.",
+            "To skip all the school camps.",
+            "To make new friends soon after starting school.",
+            "To change schools quickly."
+          ],
+          "answer_index": 2,
+          "explanation": "原文第一条建议是早点结交新朋友,转述其内容。"
+        },
+        {
+          "stem": "Why is a regular study plan recommended?",
+          "options": [
+            "Because teachers will not give any homework.",
+            "Because the school has no timetable.",
+            "Because plans are only for exams.",
+            "Because newcomers are expected to manage their work more independently."
+          ],
+          "answer_index": 3,
+          "explanation": "原文新生被期待更独立,所以应早定学习计划,转述其原因。"
+        },
+        {
+          "stem": "What should students do when something is confusing?",
+          "options": [
+            "Find the courage to ask a teacher for help.",
+            "Pretend everything is clear.",
+            "Give up the subject at once.",
+            "Wait until the end of the year."
+          ],
+          "answer_index": 0,
+          "explanation": "原文遇困惑别怕向老师求助,转述其建议。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Lesson from Confucius",
+      "topic_cn": "故事·孔子因材施教",
+      "body": "For Confucius, China's greatest teacher, learning was a powerful joint effort between teacher and student. He often had interesting and meaningful discussions with the young people who studied with him. Once Zilu asked the Master whether he should put a new idea into practice right away. Confucius replied that, since Zilu's father and elder brothers were still alive, he should not act so immediately, but think of them first. Later Ran You asked exactly the same question. This time the Master answered yes, telling him to put the idea into action at once. The two students were puzzled by the different replies, but Confucius had a clear reason. The two boys had very different characters. Ran You was shy and slow, so the teacher encouraged him to go forward and be braver. Zilu, on the other hand, was active and courageous, so the teacher gently held him back. In this way Confucius taught each student in the way that suited him best.",
+      "vocab_notes": [
+        {
+          "word": "meaningful",
+          "cn": "有意义的"
+        },
+        {
+          "word": "immediate",
+          "cn": "立即的"
+        },
+        {
+          "word": "courageous",
+          "cn": "勇敢的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Confucius give the two students different answers?",
+          "options": [
+            "Because he had forgotten his first reply.",
+            "Because their characters were not the same and needed different guidance.",
+            "Because Ran You asked a harder question.",
+            "Because only one of them was his student."
+          ],
+          "answer_index": 1,
+          "explanation": "原文两人性格不同,因材施教,转述其原因。"
+        },
+        {
+          "stem": "How did Confucius treat the shy and slow student, Ran You?",
+          "options": [
+            "He told him never to act at all.",
+            "He punished him for being slow.",
+            "He encouraged him to move forward and be braver.",
+            "He sent him away from class."
+          ],
+          "answer_index": 2,
+          "explanation": "原文鼓励冉有前进更勇敢,转述其做法。"
+        },
+        {
+          "stem": "What does this story tell us about good teaching?",
+          "options": [
+            "Every student should be taught in exactly the same way.",
+            "Teachers should never explain their reasons.",
+            "Only brave students deserve attention.",
+            "A good teacher fits the advice to each learner's nature."
+          ],
+          "answer_index": 3,
+          "explanation": "原文孔子以最适合的方式教每个学生,转述其主旨。"
+        }
+      ]
+    }
+  ]
+}

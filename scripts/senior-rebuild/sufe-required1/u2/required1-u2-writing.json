@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Introducing a Chinese Word and the Culture Behind It(介绍一个汉语词及其背后的文化)",
+  "title_en": "A Chinese Word and Its Story",
+  "genre": "说明 / 介绍(introduce a Chinese word with its extended meanings and the cultural message behind it)",
+  "source": "上外版必修第一册 Unit 2 Writing:Writing about a Chinese word(写一个汉语词:用主题句+支撑句介绍它的不同含义与背后的文化)。",
+  "prompt_cn": "假设来自姐妹学校的外国学生正在参观你校,你被邀请做一个关于\"汉语词及其故事\"的小演讲。请用英语写一篇约80词的短文,介绍一个汉语词(如\"吃 chi\"),内容包括:① 一个清楚的主题句(这个词有很多引申含义);② 两三个例子说明它超出字面意思;③ 简述这个词背后的文化。注意:所有支撑句都要围绕主题句,代词指代清楚。",
+  "prompt_en": "Suppose some students from your sister school abroad are visiting your school, and you are asked to give a short talk about \"Chinese words and their stories\". Write a short passage (about 80 words) to introduce one Chinese word (e.g. \"chi\"). Include: 1) a clear topic sentence (the word has many extended meanings); 2) two or three examples showing it goes beyond its literal meaning; 3) a brief note on the culture behind the word. Make sure every supporting sentence relates to the topic sentence and your pronouns are clear.",
+  "points": [
+    "主题句(A simple Chinese word \"chi\" has a lot of extended meanings.)",
+    "例子说明超出字面(\"chi cu\" really means … rather than to eat vinegar.)",
+    "背后的文化(Behind the word lies the Chinese love of food.)",
+    "所有支撑句围绕主题、代词指代清楚"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Hello, everyone! Today I'd like to share a simple Chinese word, \"chi\", which means \"to eat\" but has many extended meanings. The word often goes far beyond its literal meaning. For example, \"chi cu\" really means to be jealous rather than to eat vinegar, and \"chi moshui\" means to receive an education rather than to eat ink. Behind these expressions lies the Chinese love of food, which has given the language many colourful sayings. So a small word like \"chi\" can open a window onto our culture. Thank you for listening!",
+  "model_translation": "大家好!今天我想分享一个简单的汉语词\"吃\",它的意思是 to eat,却有许多引申含义。这个词常常远远超出字面意思。比如,\"吃醋\"真正的意思是嫉妒,而不是吃醋;\"吃墨水\"意思是受教育,而不是吃墨。这些表达背后,是中国人对食物的喜爱,它给语言带来了许多生动的说法。所以像\"吃\"这样的小词,能为我们打开一扇了解文化的窗。谢谢大家!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:清楚的主题句 / 两三个超字面例子 / 背后的文化" },
+      { "dimension": "结构", "max": 4, "criteria": "主题句统领、支撑句句句相关、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "基本句型与词汇准确多样、主谓宾/主系表等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "主题句 A simple Chinese word \"chi\" has a lot of extended meanings.",
+      "例子1 \"chi cu\" really means to be jealous rather than to eat vinegar.",
+      "例子2 \"chi moshui\" means to receive an education rather than to eat ink.",
+      "文化 Behind these expressions lies the Chinese love of food."
+    ],
+    "key_expressions": [
+      "A simple Chinese word \"chi\" has a lot of extended meanings.",
+      "The word often goes far beyond its literal meaning.",
+      "\"Chi cu\" really means to be jealous rather than to eat vinegar.",
+      "Behind these expressions lies the Chinese love of food."
+    ],
+    "useful_words": ["word", "meaning", "literal", "extended", "culture", "example", "jealous", "education", "express", "behind"]
+  },
+  "high_sentences": [
+    "A simple Chinese word \"chi\" has a lot of extended meanings.",
+    "The word often goes far beyond its literal meaning.",
+    "\"Chi cu\" really means to be jealous rather than to eat vinegar.",
+    "Behind these expressions lies the Chinese love of food."
+  ],
+  "error_pairs": [
+    { "wrong": "The word has many meaning.", "correct": "The word has many meanings.", "note": "many 后接可数名词复数 meanings。" },
+    { "wrong": "It means to be jealous literal.", "correct": "It means to be jealous literally.", "note": "修饰动词要用副词 literally,不用形容词 literal。" },
+    { "wrong": "Behind these expressions lie the Chinese love of food.", "correct": "Behind these expressions lies the Chinese love of food.", "note": "倒装句主语 the love 为单数,谓语用 lies。" }
+  ],
+  "paragraph_template": "【介绍汉语词结构】\n第1句 主题句:A simple Chinese word \"chi\" has a lot of extended meanings.\n第2-3句 例子:For example, \"chi cu\" really means … and \"chi moshui\" means …\n第4句 文化:Behind these expressions lies the Chinese love of food."
+}

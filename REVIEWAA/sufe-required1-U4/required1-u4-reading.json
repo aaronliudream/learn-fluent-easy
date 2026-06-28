@@ -1,0 +1,338 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Customs and Traditions",
+  "source": "上外版必修第一册 Unit 4 同主题阅读(德国青年礼/拉美成人礼/印度圣线礼/中国笄礼冠礼/韩国成人日/美国校友返校)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Jugendfeier in Germany",
+      "topic_cn": "说明·德国青年礼",
+      "body": "In Germany, the coming-of-age ceremony is called Jugendfeier, which means youth celebration. It is held for young people who are about fourteen years old. The day is an important chance for them to think about many topics that are connected with their future as citizens. During the event, teachers deliver speeches about certain values, such as having respect for other people and developing a sense of duty. These speeches make the whole ceremony more serious than a simple party. The tradition began in the nineteenth century, at a time when people were starting to pay more attention to the rights and duties of ordinary citizens. Today, Jugendfeier reminds young Germans that growing up is not only about freedom but also about taking on real responsibilities. After the ceremony, families often gather together to celebrate the young person's new stage of life.",
+      "vocab_notes": [
+        {
+          "word": "celebration",
+          "cn": "庆祝活动"
+        },
+        {
+          "word": "citizen",
+          "cn": "公民"
+        },
+        {
+          "word": "duty",
+          "cn": "责任"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the word Jugendfeier mean?",
+          "options": [
+            "A celebration for young people.",
+            "A speech given by young citizens.",
+            "A national holiday for teachers.",
+            "A serious party held for families."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Jugendfeier, which means youth celebration' 的转述。"
+        },
+        {
+          "stem": "What do teachers talk about during the event?",
+          "options": [
+            "The history of Germany only.",
+            "Values such as respect and a sense of duty.",
+            "How to find a good job.",
+            "The cost of the ceremony."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'speeches about certain values, such as having respect… developing a sense of duty' 的转述。"
+        },
+        {
+          "stem": "What does the ceremony remind young Germans of?",
+          "options": [
+            "That growing up means taking on responsibilities.",
+            "That they can now do anything they like.",
+            "That school is finally over.",
+            "That they must leave their families."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'growing up is not only about freedom but also about taking on real responsibilities' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Quinceanera in Latin America",
+      "topic_cn": "说明·拉美女孩成人礼",
+      "body": "In Latin America, the quinceanera is a special celebration for a girl when she turns fifteen. It marks her change from a child into a young woman. In the past, girls were taught cooking, sewing and other household skills before the big day, because the ceremony was closely connected with getting ready for marriage. A traditional party would begin when the girl arrived with her father. He would dance with her first, and then give her away to dance with other relatives and friends. Over the years, however, the meaning of the quinceanera has slowly changed. Today it has become more like an individual celebration of the young person's coming of age, similar to the way an eighteenth birthday is treated as important in many other cultures. The dancing, the music and the family gathering remain, but the old link with marriage has mostly disappeared.",
+      "vocab_notes": [
+        {
+          "word": "marriage",
+          "cn": "婚姻"
+        },
+        {
+          "word": "individual",
+          "cn": "个人的"
+        },
+        {
+          "word": "relative",
+          "cn": "亲戚"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "At what age does a girl have her quinceanera?",
+          "options": [
+            "When she turns eighteen.",
+            "When she turns fifteen.",
+            "When she turns twelve.",
+            "When she turns twenty."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'when she turns fifteen' 的转述。"
+        },
+        {
+          "stem": "Why were girls taught household skills in the past?",
+          "options": [
+            "To win a school competition.",
+            "To become teachers.",
+            "To prepare for getting married.",
+            "To earn money quickly."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'connected with getting ready for marriage' 的转述。"
+        },
+        {
+          "stem": "How has the meaning of the quinceanera changed today?",
+          "options": [
+            "It has been completely forgotten.",
+            "It now happens only at school.",
+            "It is now only for boys.",
+            "It has become a personal coming-of-age celebration."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'become more like an individual celebration of the young person's coming of age' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Sacred Thread Ceremony in India",
+      "topic_cn": "说明·印度圣线礼",
+      "body": "In some Indian families, a special ceremony is performed when a boy is old enough to grow up. During the event, he is given three strands of a sacred thread. These three strands stand for three promises that he makes: to respect knowledge, to respect his parents and to respect society. People say that the ceremony marks the start of a new life. Traditionally, the child then leaves his family to go and live with a teacher, who is called a Guru. At this point the boy is said to become twice-born. In Indian thinking, a human being has at least two births. The first one is his ordinary, physical birth. The second one is his intellectual birth, which happens through the care of a teacher. So the ceremony is not only about growing older; it is also about beginning to learn and to take responsibility as a member of society.",
+      "vocab_notes": [
+        {
+          "word": "represent",
+          "cn": "象征"
+        },
+        {
+          "word": "knowledge",
+          "cn": "知识"
+        },
+        {
+          "word": "intellectual",
+          "cn": "智力的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do the three strands of thread stand for?",
+          "options": [
+            "Three promises the boy makes.",
+            "Three years of school.",
+            "Three members of the family.",
+            "Three gifts from the Guru."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'three strands stand for three promises' 的转述。"
+        },
+        {
+          "stem": "Where does the boy traditionally go after the ceremony?",
+          "options": [
+            "To a faraway city to work.",
+            "To live with a teacher called a Guru.",
+            "To his grandparents' home.",
+            "To another country."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'leaves his family to go and live with a teacher, who is called a Guru' 的转述。"
+        },
+        {
+          "stem": "What is the second birth in Indian thinking?",
+          "options": [
+            "A second physical birth.",
+            "The day of his wedding.",
+            "His intellectual birth through a teacher's care.",
+            "The birth of his own child."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'second one is his intellectual birth, which happens through the care of a teacher' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Old Ceremonies in Ancient China",
+      "topic_cn": "说明·中国笄礼与冠礼",
+      "body": "In ancient China, there were special ceremonies to mark the moment when a young person grew up. For a girl, a hair-pinning ceremony was held when she was fifteen years old. On that day she would wash and comb her hair, and then a ceremony master would carefully put a pin in it. This showed everyone that she was no longer a child. For a boy, a capping ceremony took place when he was about twenty. Respected elders were invited to perform the ceremony and to place a special hat on his head. Both ceremonies were ways of telling the young person that an important new stage in life had arrived. From that point on, he or she was expected to shoulder grown-up responsibilities, while also enjoying a bigger say in his or her own affairs. These customs show how much value old Chinese society placed on growing up.",
+      "vocab_notes": [
+        {
+          "word": "ancient",
+          "cn": "古代的"
+        },
+        {
+          "word": "ceremony",
+          "cn": "仪式"
+        },
+        {
+          "word": "responsibility",
+          "cn": "责任"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened at a girl's hair-pinning ceremony?",
+          "options": [
+            "She was given a new name.",
+            "She had to leave her home.",
+            "She received money from elders.",
+            "A master put a pin in her combed hair."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a ceremony master would carefully put a pin in it' 的转述。"
+        },
+        {
+          "stem": "Who performed the capping ceremony for boys?",
+          "options": [
+            "Respected elders.",
+            "The boy's young friends.",
+            "A foreign teacher.",
+            "The boy himself."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Respected elders were invited to perform the ceremony' 的转述。"
+        },
+        {
+          "stem": "What were young people expected to do after these ceremonies?",
+          "options": [
+            "To stop being a young person at school.",
+            "To take on adult responsibilities.",
+            "To leave their own affairs to the elders.",
+            "To give a special hat to a child."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'expected to shoulder grown-up responsibilities' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Coming-of-Age Day in South Korea",
+      "topic_cn": "说明·韩国成人日",
+      "body": "In South Korea, the third Monday of May is set aside as Coming-of-Age Day. It is the day to celebrate all the young people who turn nineteen that year. Reaching this age means that they can now enjoy the rights that come with being an adult. At the same time, the day reminds them to take on the real duties that adults carry. Many young people dress up in traditional Korean clothes and attend a public ceremony, often held in a city square. One of the most touching parts of the day comes at the end, when the young adults offer a graceful bow to their parents. This bow is a way of saying thank you for all the years of care and love. It also stands for the start of their own journeys in the wider world. Friends and family then gather to share food and good wishes.",
+      "vocab_notes": [
+        {
+          "word": "celebrate",
+          "cn": "庆祝"
+        },
+        {
+          "word": "duty",
+          "cn": "责任"
+        },
+        {
+          "word": "graceful",
+          "cn": "优雅的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When is Coming-of-Age Day held in South Korea?",
+          "options": [
+            "On the first day of the year.",
+            "On every Sunday in spring.",
+            "On May's third Monday.",
+            "On the last day of school."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the third Monday of May is set aside as Coming-of-Age Day' 的转述。"
+        },
+        {
+          "stem": "What does reaching this age allow young people to do?",
+          "options": [
+            "To stop going to school.",
+            "To travel for free.",
+            "To choose a new family.",
+            "To enjoy the rights of an adult."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'enjoy the rights that come with being an adult' 的转述。"
+        },
+        {
+          "stem": "What does the bow to the parents stand for?",
+          "options": [
+            "Thanks to parents and the start of a new journey.",
+            "A wish for more money.",
+            "A request to stay at home.",
+            "A goodbye to all their friends."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a way of saying thank you… stands for the start of their own journeys' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Homecoming in the United States",
+      "topic_cn": "说明·美国校友返校",
+      "body": "Homecoming is a well-loved tradition at many American high schools and colleges. It is a time to celebrate the school you are attending, and a time for those who have already graduated to come back, see old friends and remember their school days. Many schools begin their homecoming with Spirit Week. Each day of that week has a fun theme, and students are encouraged to join in. Some schools hold an election to choose a Homecoming King and Queen. A group of younger students, called the Court, will accompany them. Many towns also stage a parade with the school band, sports teams and classic cars. People gather along the streets to cheer and socialise. The week usually ends with a homecoming dance, which is open to every student. Some schools keep it casual, while others make it a more formal affair. Either way, it brings the whole school together.",
+      "vocab_notes": [
+        {
+          "word": "graduate",
+          "cn": "毕业"
+        },
+        {
+          "word": "election",
+          "cn": "选举"
+        },
+        {
+          "word": "parade",
+          "cn": "游行"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What can graduated students do at homecoming?",
+          "options": [
+            "Take new exams.",
+            "Come back and see old friends.",
+            "Pay the school fees again.",
+            "Join a different school."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'come back, see old friends and remember their school days' 的转述。"
+        },
+        {
+          "stem": "How do many schools begin their homecoming?",
+          "options": [
+            "With a final test.",
+            "With a long holiday.",
+            "With a week of themed days called Spirit Week.",
+            "With a quiet meeting."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'begin their homecoming with Spirit Week. Each day… has a fun theme' 的转述。"
+        },
+        {
+          "stem": "What usually ends the homecoming week?",
+          "options": [
+            "A school exam.",
+            "A long parade only.",
+            "A trip to another town.",
+            "A dance open to every student."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'ends with a homecoming dance, which is open to every student' 的转述。"
+        }
+      ]
+    }
+  ]
+}

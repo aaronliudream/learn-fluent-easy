@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "grammar_title": "基本句型(Basic Sentence Patterns):主谓/主谓宾·主系表/There be·主谓双宾/主谓宾补",
+  "source": "上外版必修第一册 Unit 2 Grammar in Use:Basic sentence patterns。句子地道、语言与文化主题、答案唯一(空格让目标句型自然成立;干扰项测系动词后形容词/副词、及物vs不及物、双宾语序等)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "主谓 SV(不及物动词)/ 主谓宾 SVO(及物动词+宾语)",
+      "overview": "判断动词是否需要宾语:及物动词后必须带宾语(speak Spanish),不及物动词后不带宾语(its meaning changed)。空格选能让句子主干成立、搭配地道的动词或宾语。"
+    },
+    {
+      "code": "u2.02",
+      "point": "主系表 SVC(系动词后用形容词作表语)/ There be 存在句",
+      "overview": "系动词(be/look/feel/become/seem/sound/get)后接形容词作表语,不接副词;There be 表'存在/有',后接名词。空格选系动词后正确的形容词,或存在句的正确结构。"
+    },
+    {
+      "code": "u2.03",
+      "point": "主谓双宾 SVOO(give sb sth)/ 主谓宾补 SVOC(make us happy / call it…)",
+      "overview": "双宾结构间接宾语在前直接宾语在后(give him a signal),或用 to/for 改写;宾补结构补足宾语(make the answer puzzling / call this eggplant)。空格选正确的语序或宾语补足语形式。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "The meaning of the word ____ greatly with the context.",
+      "options": [
+        "changes",
+        "change",
+        "changing",
+        "to change"
+      ],
+      "answer_index": 0,
+      "explanation": "主谓结构,主语 meaning 第三人称单数,谓语用 changes。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At first the foreigner ____ fluent Spanish but still felt confused.",
+      "options": [
+        "talked",
+        "spoke",
+        "said",
+        "told"
+      ],
+      "answer_index": 1,
+      "explanation": "及物动词+宾语 Spanish,speak a language 才地道,talk/say/tell 搭配不对。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "After waiting too long, she finally ____ for the nearest bus.",
+      "options": [
+        "rushed quickly",
+        "did a run",
+        "made a rush",
+        "went a hurry"
+      ],
+      "answer_index": 2,
+      "explanation": "make a rush for 是地道搭配,构成主谓宾;其余搭配不成立。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The strange experience slowly ____ from my memory.",
+      "options": [
+        "removed",
+        "deleted",
+        "erased",
+        "faded"
+      ],
+      "answer_index": 3,
+      "explanation": "fade 为不及物动词,fade from memory(逐渐消逝),构成主谓;其余多为及物且搭配不当。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I ____ to the seller that I could not wait any longer.",
+      "options": [
+        "signalled",
+        "spoke",
+        "told",
+        "talked"
+      ],
+      "answer_index": 0,
+      "explanation": "signal to sb 示意,构成主谓;told 需直接宾语 sb,spoke/talked 搭配不当。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She ____ a portion of French fries for us to share.",
+      "options": [
+        "asked",
+        "ordered",
+        "wished",
+        "hoped"
+      ],
+      "answer_index": 1,
+      "explanation": "及物动词 order+宾语 a portion,构成主谓宾;其余搭配不对。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When native speakers talk fast, I can ____ only a few words.",
+      "options": [
+        "listen",
+        "hear of",
+        "catch",
+        "look"
+      ],
+      "answer_index": 2,
+      "explanation": "catch+宾语 a few words(听清),主谓宾;listen 不及物需 to,look 也不及物。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "My attitude towards time ____ a lot since I moved abroad.",
+      "options": [
+        "has been changed",
+        "changes it",
+        "has changing",
+        "has changed"
+      ],
+      "answer_index": 3,
+      "explanation": "change 此处不及物表'变化',主谓结构,用现在完成 has changed;被动 has been changed 语义不通。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The waiter ____ us a plate of chips, not French fries.",
+      "options": [
+        "brought",
+        "came",
+        "arrived",
+        "appeared"
+      ],
+      "answer_index": 0,
+      "explanation": "bring 及物可带宾语,构成主谓宾(后又接双宾);come/arrive/appear 不及物,不能直接带宾语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Gestures ____ from country to country in expressing ideas.",
+      "options": [
+        "different",
+        "differ",
+        "difference",
+        "differently"
+      ],
+      "answer_index": 1,
+      "explanation": "需要谓语动词,differ from(不同于)为不及物动词,主谓结构;其余为形容词/名词/副词。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "He laughed and ____ to the aubergines on the pizza.",
+      "options": [
+        "showed",
+        "watched",
+        "pointed",
+        "saw"
+      ],
+      "answer_index": 2,
+      "explanation": "point to/at 指向,不及物需介词,搭配地道;show/watch/see 为及物且语义不合。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "Part of the excitement of learning a language ____ discovering the differences.",
+      "options": [
+        "lies on",
+        "stays at",
+        "puts in",
+        "lies in"
+      ],
+      "answer_index": 3,
+      "explanation": "lie in(在于)是地道搭配,主谓;其余介词搭配错误。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "I couldn't ____ what \"French fries\" really were.",
+      "options": [
+        "imagine",
+        "think",
+        "guess of",
+        "dream"
+      ],
+      "answer_index": 0,
+      "explanation": "imagine+宾语从句,及物,主谓宾;think 后多需 about/of,guess of 不成立。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "People in some countries ____ their hands to show their feelings.",
+      "options": [
+        "do",
+        "use",
+        "make",
+        "play"
+      ],
+      "answer_index": 1,
+      "explanation": "use+宾语 their hands,及物,主谓宾;其余搭配不地道。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When the visitor said this, the meaning ____ completely in Chinese culture.",
+      "options": [
+        "changed it",
+        "was changing it",
+        "changed",
+        "changed them"
+      ],
+      "answer_index": 2,
+      "explanation": "此处 change 不及物表'改变',主谓;加宾语 it/them 多余且无指代对象。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The two kinds of English ____ in spelling, grammar and pronunciation.",
+      "options": [
+        "compare",
+        "match",
+        "equal",
+        "differ"
+      ],
+      "answer_index": 3,
+      "explanation": "differ in(在……方面不同),不及物,主谓;compare/match/equal 为及物且语义相反。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "A few short words often ____ enough between close friends.",
+      "options": [
+        "are",
+        "have",
+        "do",
+        "make"
+      ],
+      "answer_index": 0,
+      "explanation": "此处需系动词构成判断;但本题考主语+谓语成立,are 让主干完整;have/do/make 缺宾语或语义不通。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "She ____ at her wrist to show that time was running out.",
+      "options": [
+        "looked",
+        "pointed",
+        "watched",
+        "saw"
+      ],
+      "answer_index": 1,
+      "explanation": "point at 指向,主谓(带介词短语);look 需 at 但 look at one's wrist 语义不如 point 自然,且其余为及物。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "My dad ____ this pizza, and it was covered in aubergines.",
+      "options": [
+        "asked",
+        "requested for",
+        "ordered",
+        "wished"
+      ],
+      "answer_index": 2,
+      "explanation": "order+宾语 this pizza,及物,主谓宾;request 后不接 for,ask/wish 语义不合。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "The host smiled and ____, \"Where? Where?\"",
+      "options": [
+        "spoke",
+        "talked",
+        "told",
+        "said"
+      ],
+      "answer_index": 3,
+      "explanation": "say+引语,及物,主谓宾;speak/talk 不及物不能直接接引语,tell 需 sb。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "His face was ____ when he saw the foreign gesture.",
+      "options": [
+        "confused",
+        "confusedly",
+        "confuse",
+        "confusing him"
+      ],
+      "answer_index": 0,
+      "explanation": "系动词 was 后用形容词作表语,confused(感到困惑的);副词 confusedly 不能作表语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Waiting longer wasn't ____, but I felt I should stay.",
+      "options": [
+        "pleasantly",
+        "pleasant",
+        "please",
+        "pleasure"
+      ],
+      "answer_index": 1,
+      "explanation": "系动词 wasn't 后接形容词 pleasant 作表语;副词/动词/名词都不行。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "This idea sounded very ____ to me, because in England biscuits are sweet.",
+      "options": [
+        "strangely",
+        "stranger ",
+        "strange",
+        "strangeness"
+      ],
+      "answer_index": 2,
+      "explanation": "sound 为系动词,后接形容词 strange 作表语;副词 strangely 不能作表语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ a time when she really wanted to walk away.",
+      "options": [
+        "It was",
+        "There had",
+        "It had",
+        "There was"
+      ],
+      "answer_index": 3,
+      "explanation": "There be 存在句表'有/存在'某段时间;It was 无法引出 a time when 的存在含义。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "After moving abroad, I no longer feel ____ about being a little late.",
+      "options": [
+        "anxious",
+        "anxiously",
+        "anxiety",
+        "anxiousness"
+      ],
+      "answer_index": 0,
+      "explanation": "feel 为系动词,后接形容词 anxious 作表语;副词/名词均不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ many varieties of English throughout the world.",
+      "options": [
+        "It is",
+        "There are",
+        "They are",
+        "Here is"
+      ],
+      "answer_index": 1,
+      "explanation": "There be 存在句,主语 varieties 为复数,用 There are;It/They/Here is 都不合。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The new word seemed ____ until I learned the culture behind it.",
+      "options": [
+        "confusingly",
+        "confusion",
+        "confusing",
+        "confuse"
+      ],
+      "answer_index": 2,
+      "explanation": "seem 为系动词,后接形容词 confusing 作表语;副词/名词/动词不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "When the host said \"Where?\", the American became quite ____.",
+      "options": [
+        "puzzle",
+        "puzzling him",
+        "puzzlingly",
+        "puzzled"
+      ],
+      "answer_index": 3,
+      "explanation": "become 为系动词,后接形容词 puzzled(感到困惑的)作表语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "In England, gravy is ____ and made from meat.",
+      "options": [
+        "salty",
+        "saltily",
+        "salt",
+        "saltiness"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后接形容词 salty 作表语;副词/名词均不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ likely to be many differences even in the same language.",
+      "options": [
+        "It is",
+        "There are",
+        "They have",
+        "Here are"
+      ],
+      "answer_index": 1,
+      "explanation": "There be 存在句,后跟 likely to be,表'存在……可能';主语 differences 用 are。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I felt ____ when a stranger said she liked my \"pants\".",
+      "options": [
+        "embarrassingly",
+        "embarrass",
+        "embarrassed",
+        "embarrassment"
+      ],
+      "answer_index": 2,
+      "explanation": "feel 为系动词,后接形容词 embarrassed(感到尴尬的)作表语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The differences are not mistakes; they are simply ____.",
+      "options": [
+        "differently",
+        "difference",
+        "differ",
+        "different"
+      ],
+      "answer_index": 3,
+      "explanation": "are 为系动词,后接形容词 different 作表语;名词/副词/动词均不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She was ____ that I had never tried French fries before.",
+      "options": [
+        "amazed",
+        "amazingly",
+        "amaze",
+        "amazement"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后接形容词 amazed(感到惊讶的)作表语;副词/动词/名词不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ a kind of humble expression behind the Chinese words \"Where? Where?\".",
+      "options": [
+        "It has",
+        "There is",
+        "They are",
+        "Here have"
+      ],
+      "answer_index": 1,
+      "explanation": "There be 存在句,主语 expression 单数用 There is。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "His explanation made everything ____ at last.",
+      "options": [
+        "clearly",
+        "clearness",
+        "clear",
+        "clarify"
+      ],
+      "answer_index": 2,
+      "explanation": "本题为宾补结构 make sth+形容词,clear 作宾语补足语;但形容词 vs 副词同样区分,clearly 不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "After living abroad for years, I have become much more ____ about time.",
+      "options": [
+        "relaxedly",
+        "relax",
+        "relaxation",
+        "relaxed"
+      ],
+      "answer_index": 3,
+      "explanation": "become 为系动词,后接形容词 relaxed(轻松的)作表语;副词/动词/名词不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ no single \"right\" meaning for the word \"ahorita\".",
+      "options": [
+        "There is",
+        "It is",
+        "They are",
+        "Here is"
+      ],
+      "answer_index": 0,
+      "explanation": "There be 存在句表'不存在唯一含义',主语 meaning 单数用 There is。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The biscuits in America taste quite ____ rather than sweet.",
+      "options": [
+        "savourily",
+        "savoury",
+        "savour",
+        "savouriness"
+      ],
+      "answer_index": 1,
+      "explanation": "taste 为系动词,后接形容词 savoury 作表语;副词/动词/名词不可。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "At first the strokes of the new language felt ____ on my tongue.",
+      "options": [
+        "strangely",
+        "strangeness",
+        "strange",
+        "stranger "
+      ],
+      "answer_index": 2,
+      "explanation": "feel 为系动词,后接形容词 strange 作表语;副词不能作表语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ always a reason why the same gesture means different things.",
+      "options": [
+        "It is",
+        "They are",
+        "Here are",
+        "There is"
+      ],
+      "answer_index": 3,
+      "explanation": "There be 存在句,主语 reason 单数用 There is;It/They/Here 不合存在句。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She gave ____ to show that she had to leave.",
+      "options": [
+        "him a signal",
+        "a signal him",
+        "to him a signal",
+        "him to a signal"
+      ],
+      "answer_index": 0,
+      "explanation": "give sb sth 双宾结构,间接宾语 him 在前、直接宾语 a signal 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The cultural difference made the answer ____ to the American.",
+      "options": [
+        "puzzle",
+        "puzzling",
+        "to puzzle",
+        "puzzlingly"
+      ],
+      "answer_index": 1,
+      "explanation": "make+宾语+宾补,形容词 puzzling 作宾语补足语;副词/动词原形不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "My friend asked me ____ I wanted to order French fries.",
+      "options": [
+        "that",
+        "what about",
+        "whether",
+        "for"
+      ],
+      "answer_index": 2,
+      "explanation": "ask sb whether... 双宾+宾语从句;that 不引导'是否',其余不合语法。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Americans call ____ this purple vegetable on the menu.",
+      "options": [
+        "\"eggplant\" it",
+        "to it \"eggplant\"",
+        "for it \"eggplant\"",
+        "it \"eggplant\""
+      ],
+      "answer_index": 3,
+      "explanation": "call sb/sth+名称,宾补结构,宾语 it 在前、补足语 \"eggplant\" 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The waiter brought ____ instead of the French fries I expected.",
+      "options": [
+        "us a plate of chips",
+        "a plate of chips to we",
+        "to us a plate of chips",
+        "us a plate of chips to"
+      ],
+      "answer_index": 0,
+      "explanation": "bring sb sth 双宾,间接宾语 us 在前、直接宾语 a plate of chips 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "What we call \"biscuits\", Americans ____ \"cookies\".",
+      "options": [
+        "say",
+        "call",
+        "speak",
+        "tell"
+      ],
+      "answer_index": 1,
+      "explanation": "call sth+名称,宾补结构;say/speak/tell 不能接'宾语+名称'作宾补。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The strange experience taught ____ about cultural differences.",
+      "options": [
+        "a lot me",
+        "to me a lot",
+        "me a lot",
+        "for me a lot"
+      ],
+      "answer_index": 2,
+      "explanation": "teach sb sth 双宾,间接宾语 me 在前、直接宾语 a lot 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Living in Mexico has made my idea of time much more ____.",
+      "options": [
+        "relax",
+        "to relax",
+        "relaxing it",
+        "relaxed"
+      ],
+      "answer_index": 3,
+      "explanation": "make+宾语 idea+宾补,形容词 relaxed 作宾语补足语;动词原形/不定式不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "A linguist once told ____ that \"ahorita\" could mean almost anything.",
+      "options": [
+        "me a fact",
+        "a fact me",
+        "to me a fact",
+        "for me a fact"
+      ],
+      "answer_index": 0,
+      "explanation": "tell sb sth 双宾,间接宾语 me 在前、直接宾语 a fact 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The host's reply \"Where? Where?\" left the visitor ____.",
+      "options": [
+        "confuse",
+        "confused",
+        "to confuse",
+        "confusedly"
+      ],
+      "answer_index": 1,
+      "explanation": "leave+宾语+宾补,形容词 confused 作宾语补足语;副词/动词不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She showed ____ how to read the menu in English.",
+      "options": [
+        "a way me",
+        "to me a way",
+        "me a way",
+        "for a way me"
+      ],
+      "answer_index": 2,
+      "explanation": "show sb sth 双宾,间接宾语 me 在前、直接宾语 a way 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Everyone found the foreign word \"ahorita\" ____ at first.",
+      "options": [
+        "confuse",
+        "to confuse",
+        "confusingly",
+        "confusing"
+      ],
+      "answer_index": 3,
+      "explanation": "find+宾语+宾补,形容词 confusing 作宾语补足语;动词/副词不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The seller offered ____ as a polite way of saying \"later\".",
+      "options": [
+        "me \"ahorita\"",
+        "\"ahorita\" me to",
+        "to me \"ahorita\" for",
+        "for me \"ahorita\""
+      ],
+      "answer_index": 0,
+      "explanation": "offer sb sth 双宾,间接宾语 me 在前、直接宾语 \"ahorita\" 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "British people call ____, while Americans say \"gas\".",
+      "options": [
+        "\"petrol\" to it",
+        "it \"petrol\"",
+        "to it \"petrol\"",
+        "for \"petrol\" it"
+      ],
+      "answer_index": 1,
+      "explanation": "call sth+名称,宾补结构,宾语 it 在前、补足语 \"petrol\" 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Learning about culture gives ____ to communicate across countries.",
+      "options": [
+        "confidence us",
+        "to us confidence",
+        "us confidence",
+        "for confidence us"
+      ],
+      "answer_index": 2,
+      "explanation": "give sb sth 双宾,间接宾语 us 在前、直接宾语 confidence 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The cross-cultural mix-up made both of them ____.",
+      "options": [
+        "laughing",
+        "to laugh",
+        "laughed",
+        "laugh"
+      ],
+      "answer_index": 3,
+      "explanation": "make sb do,使役动词后接动词原形 laugh 作宾语补足语;-ing/不定式/过去式不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "My mum told ____ that \"pants\" meant trousers in America.",
+      "options": [
+        "me the truth",
+        "the truth me",
+        "to me the truth",
+        "for me the truth"
+      ],
+      "answer_index": 0,
+      "explanation": "tell sb sth 双宾,间接宾语 me 在前、直接宾语 the truth 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "We should keep our minds ____ when we meet a new culture.",
+      "options": [
+        "openly",
+        "open",
+        "to open",
+        "opening it"
+      ],
+      "answer_index": 1,
+      "explanation": "keep+宾语 minds+宾补,形容词 open 作宾语补足语;副词/不定式不可。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The kind seller passed ____ even though I had to leave.",
+      "options": [
+        "the ice-cream me",
+        "to me the ice-cream",
+        "me the ice-cream",
+        "for me the ice-cream"
+      ],
+      "answer_index": 2,
+      "explanation": "pass sb sth 双宾,间接宾语 me 在前、直接宾语 the ice-cream 在后。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Cultural knowledge makes communication ____ between different peoples.",
+      "options": [
+        "easily",
+        "to ease",
+        "easing it",
+        "easier"
+      ],
+      "answer_index": 3,
+      "explanation": "make+宾语 communication+宾补,形容词 easier 作宾语补足语;副词/动词不可。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "英语基本句型(Basic Sentence Patterns)速查",
+    "intro": "英语句子万变不离五种基本句型。先找主干(主语+谓语),再看谓语动词后面缺什么:不缺=主谓;缺一个宾语=主谓宾;缺表语=主系表;给某人某物=双宾;宾语后还要补充说明=宾补。",
+    "table": {
+      "headers": ["句型", "结构 / 例句"],
+      "rows": [
+        ["主谓 SV", "主语+不及物动词:The meaning changes greatly."],
+        ["主谓宾 SVO", "主语+及物动词+宾语:I spoke Spanish well."],
+        ["主系表 SVC", "主语+系动词+表语(形容词/名词):I was torn. / It sounds strange."],
+        ["主谓双宾 SVOO", "主语+动词+间宾+直宾:She gave him a signal."],
+        ["主谓宾补 SVOC", "主语+动词+宾语+宾补:She found the word confusing. / They call it \"eggplant\"."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "系动词(be/look/feel/become/sound/taste/seem/get)后用形容词作表语,不用副词", "mark": "feel strange √ / feel strangely ×" },
+      { "rule": "及物动词后必须带宾语,不及物动词后不带(或加介词)", "mark": "differ from √ / differ sth ×" },
+      { "rule": "双宾语序:间接宾语(人)在前、直接宾语(物)在后;或用 to/for 改写", "mark": "give him a signal = give a signal to him" },
+      { "rule": "There be 表'存在/有',be 与后面的真正主语保持数一致", "mark": "There are many varieties / There is a reason" },
+      { "rule": "make/let/have/使役 + 宾语 + 动词原形作宾补", "mark": "made both of them laugh(不加 to)" }
+    ],
+    "why": [
+      "找句型的关键是先抓主干、再看谓语动词:它是否需要宾语、是否是系动词、是否要补足语。判断对了句型,理解长难句就不会乱。"
+    ],
+    "gaokaoPoints": [
+      "系动词后形容词 vs 副词(语法填空/改错高频):He felt nervous,不是 nervously。",
+      "双宾与宾补的辨认:give sb sth 与 make sb sth(后者是宾语+补足语,语义不同)。",
+      "There be 句型的主谓一致与时态:There seems to be / There are likely to be。"
+    ],
+    "examVsReal": [
+      { "exam": "She gave him a signal.（考试标准双宾）", "real": "She gave a signal to him.", "note": "考试两种都对;口语里强调'给谁'时常用 to him 的改写式" },
+      { "exam": "I felt embarrassed.（系表·形容词）", "real": "I was so embarrassed!", "note": "意思相同;真实口语爱加 so/really 等程度词,但系动词后仍是形容词" }
+    ]
+  }
+}

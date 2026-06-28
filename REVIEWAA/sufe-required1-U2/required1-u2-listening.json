@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Language and Culture",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第一册 Unit 2 同主题听力(点菜误会/手势的主旨/英美用词对话/汉字\"吃\"短文/时间观念对话/打招呼语短文)。用词限 U2/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Ordering Food in America",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Do you want to order some French fries with me?",
+        "Tom: French fries? I have no idea what they are.",
+        "Lily: They're just hot, thin pieces of potato. You call them chips, right?",
+        "Tom: Oh, so your fries are my chips! That's confusing.",
+        "Lily: Wait until you hear this. My biscuits are sweet, but yours are salty.",
+        "Tom: Salty biscuits? In England a biscuit is always sweet.",
+        "Lily: I know. In America, what you call biscuits, we call cookies.",
+        "Tom: The same language, but so many different words. How funny!"
+      ],
+      "translation_cn": "Lily 问 Tom 要不要点 French fries;Tom 不知是什么;原来美式 fries 就是英式 chips;biscuit 在美式里是咸的,英式里是甜的;美式的 biscuit 英式叫 cookie;同一语言却用词不同,很好笑。",
+      "questions": [
+        {
+          "stem": "What does Lily want to order?",
+          "options": [
+            "French fries.",
+            "A cup of tea.",
+            "Some cookies.",
+            "A bowl of rice."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom call \"French fries\"?",
+          "options": [
+            "Cookies.",
+            "Chips.",
+            "Biscuits.",
+            "Snacks."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How are biscuits different in their two countries?",
+          "options": [
+            "American ones are salty, British ones are sweet.",
+            "They cost different prices.",
+            "They are different colours.",
+            "One country has none."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do Americans call what the British call \"biscuits\"?",
+          "options": [
+            "Fries.",
+            "Cookies.",
+            "Chips.",
+            "Snacks."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom feel about the differences?",
+          "options": [
+            "He is very angry.",
+            "He is bored.",
+            "He finds them funny.",
+            "He is frightened."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Gestures Around the World",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Using gestures to show feelings is common in some countries but not in others.",
+        "Most people think shaking the head means \"no\".",
+        "But in a few places, the same gesture can mean the opposite.",
+        "A traveller who is not careful may send the wrong message.",
+        "So it is wise to learn how local people use their hands and heads."
+      ],
+      "translation_cn": "用手势表达感受在一些国家很常见,在另一些则不然;大多数人以为摇头表示'不';但在少数地方,同样的手势可能表示相反的意思;不小心的旅行者可能传递错误信息;所以最好了解当地人如何使用手和头部动作。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to cook local food.",
+            "The best places to travel.",
+            "How to learn grammar.",
+            "Gestures can mean different things in different countries."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do most people think shaking the head means?",
+          "options": [
+            "\"No\".",
+            "\"Yes\".",
+            "\"Hello\".",
+            "\"Thank you\"."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can happen to a careless traveller?",
+          "options": [
+            "They get a free meal.",
+            "They may send the wrong message.",
+            "They learn faster.",
+            "They never make friends."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In a few places, the head-shaking gesture can mean what?",
+          "options": [
+            "Nothing at all.",
+            "The same as everywhere.",
+            "The opposite.",
+            "Only \"goodbye\"."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker say is wise to do?",
+          "options": [
+            "Never use your hands.",
+            "Travel without any plan.",
+            "Speak as loudly as possible.",
+            "Learn how local people use gestures."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 What Do You Mean by \"Pants\"?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: I really need to buy some new pants this weekend.",
+        "Ben: Pants? You usually buy those by yourself, don't you?",
+        "Anna: What? I just want someone to tell me if they look nice on my legs.",
+        "Ben: On your legs? Do you mean trousers?",
+        "Anna: Yes! In American English, pants means trousers.",
+        "Ben: Ah, that explains it. In British English, pants means underwear.",
+        "Anna: No wonder you looked so surprised just now!",
+        "Ben: Don't worry. It's only two ways of speaking the same language."
+      ],
+      "translation_cn": "Anna 说周末要买 pants;Ben 觉得奇怪;原来 Anna 说的是穿在腿上的;Ben 问她是不是指 trousers;美式英语里 pants 指裤子;英式英语里 pants 指内裤;难怪 Ben 一脸惊讶;这只是同一语言的两种说法。",
+      "questions": [
+        {
+          "stem": "What does Anna want to buy?",
+          "options": [
+            "Trousers (she calls them \"pants\").",
+            "A pair of shoes.",
+            "A new hat.",
+            "Some food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Ben surprised at first?",
+          "options": [
+            "He has no money.",
+            "He thinks \"pants\" means underwear.",
+            "He cannot hear Anna.",
+            "He dislikes shopping."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In American English, what does \"pants\" mean?",
+          "options": [
+            "A coat.",
+            "Socks.",
+            "Trousers.",
+            "A scarf."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "In British English, what does \"pants\" mean?",
+          "options": [
+            "Trousers.",
+            "Shoes.",
+            "A jacket.",
+            "Underwear."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Ben describe the difference?",
+          "options": [
+            "Two ways of speaking the same language.",
+            "One of them is wrong.",
+            "Anna made a big mistake.",
+            "English is impossible to learn."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 The Word \"Chi\"",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The simple Chinese word \"chi\" means \"to eat\".",
+        "But it often goes far beyond its literal meaning.",
+        "\"Chi cu\" sounds like eating vinegar, yet it means to be jealous.",
+        "\"Chi moshui\" sounds like eating ink, but it means to receive an education.",
+        "So learners should not always take such a word literally."
+      ],
+      "translation_cn": "汉语词'吃'意为 to eat;但它常常超出字面意思;'吃醋'听起来像吃醋,实际指嫉妒;'吃墨水'听起来像吃墨,实际指受教育;所以学习者不应总按字面理解这样的词。",
+      "questions": [
+        {
+          "stem": "What does the word \"chi\" basically mean?",
+          "options": [
+            "To run.",
+            "To eat.",
+            "To sleep.",
+            "To read."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does \"chi cu\" really mean?",
+          "options": [
+            "To cook dinner.",
+            "To buy vinegar.",
+            "To be jealous.",
+            "To feel hungry."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does \"chi moshui\" actually mean?",
+          "options": [
+            "To drink water.",
+            "To paint a picture.",
+            "To clean a desk.",
+            "To receive an education."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker advise learners to do?",
+          "options": [
+            "Not always take the word literally.",
+            "Eat more Chinese food.",
+            "Forget these words.",
+            "Speak only English."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do these examples show about the word \"chi\"?",
+          "options": [
+            "It is never used today.",
+            "It has meanings beyond eating.",
+            "It only means food.",
+            "It cannot be translated."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 A New Sense of Time",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: You've lived in Mexico for years. Has anything about you changed?",
+        "Carl: Yes. My attitude towards time has changed a lot.",
+        "Mia: What do you mean?",
+        "Carl: Back home, I used to panic if I was even five minutes late.",
+        "Mia: And now?",
+        "Carl: Now I'm still on time for important appointments, but I don't worry so much.",
+        "Mia: So you feel more relaxed?",
+        "Carl: Exactly. Ironically, I feel I live more in the present moment than before."
+      ],
+      "translation_cn": "Mia 问在墨西哥住了多年的 Carl 有什么变化;Carl 说他对时间的态度变了很多;以前迟到五分钟都会慌;现在重要约会仍准时,但不太担心了;变得更放松;具有讽刺意味的是,他比以前更活在当下。",
+      "questions": [
+        {
+          "stem": "What about Carl has changed?",
+          "options": [
+            "His favourite food.",
+            "His hair colour.",
+            "His attitude towards time.",
+            "His job."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did Carl feel about being late before?",
+          "options": [
+            "He enjoyed it.",
+            "He did not care.",
+            "He never noticed.",
+            "He would panic."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Carl still careful about?",
+          "options": [
+            "Being on time for important appointments.",
+            "Eating on time.",
+            "Saving money.",
+            "Watching films."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Carl feel about time now?",
+          "options": [
+            "Very worried.",
+            "More relaxed.",
+            "Angry.",
+            "Confused."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Carl say he does more now?",
+          "options": [
+            "He sleeps all day.",
+            "He travels less.",
+            "He lives more in the present moment.",
+            "He works much harder."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Where \"Ciao\" Comes From",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many friendly greetings have a surprising history.",
+        "The Italian word \"ciao\" is used to say hello or goodbye.",
+        "Long ago, it came from a phrase that literally meant \"I am your slave\".",
+        "Of course, no one takes it that way today.",
+        "Its real meaning now is warm and friendly."
+      ],
+      "translation_cn": "许多友好的招呼语有令人惊讶的来历;意大利语 'ciao' 用来打招呼或告别;很久以前它来自一个字面意为'我是你的奴隶'的短语;当然今天没人那样理解;如今它的真实含义是温暖友好的。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to cook Italian food.",
+            "The best time to travel.",
+            "How to write letters.",
+            "The history behind a greeting."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When is the word \"ciao\" used?",
+          "options": [
+            "To say hello or goodbye.",
+            "Only at school.",
+            "Only in writing.",
+            "Only by children."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the original phrase literally mean?",
+          "options": [
+            "\"Good morning\".",
+            "\"I am your slave\".",
+            "\"See you soon\".",
+            "\"Thank you\"."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do people understand \"ciao\" today?",
+          "options": [
+            "As a rude word.",
+            "As a question.",
+            "As a warm, friendly greeting.",
+            "As a serious order."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does this example show about words?",
+          "options": [
+            "They never change.",
+            "They have no history.",
+            "They cannot be translated.",
+            "Their meanings can change over time."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

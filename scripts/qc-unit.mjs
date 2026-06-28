@@ -216,7 +216,7 @@ function checkVocabAndFields() {
 
 // ===== 语义复核清单(喂LLM,不预筛) =====
 function writeSemanticChecklist() {
-  const outDir = `REVIEWAA/${VOL}-${UNIT}`; mkdirSync(outDir, { recursive: true });
+  const outDir = `REVIEWAA/${arg('outlabel') || `${VOL}-${UNIT}`}`; mkdirSync(outDir, { recursive: true });
   let md = `# ${VOL}-${UNIT} 语义复核清单(喂网页版 Claude · 脚本看不出的语义层)\n\n`;
   md += `> 语法全60题 + 完形全60空 + 阅读全24题 + finalReading 全部**逐题全列、不预筛**(双解/语义对应/句子地道性只能人/LLM逐题看)。\n\n`;
   md += `## 语法(全60题,查【句子地道·本单元语法点自然成立】+ 答案唯一,见质检标准 §2.*铁律)\n`;

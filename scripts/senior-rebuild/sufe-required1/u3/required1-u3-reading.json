@@ -1,0 +1,362 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Travel",
+  "source": "上外版必修第一册 Unit 3 同主题阅读(罗马假日游记/给青少年旅行者的信/明代旅行家徐霞客/旅行计划与因素/机场行李规则/向朋友推荐城市)。用词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Roman Holiday",
+      "topic_cn": "游记·罗马假日",
+      "body": "Last week Eleanor spent three wonderful days in Rome, an ancient city full of ruins. She first visited the huge old theatre, once the largest outdoor theatre ever built. The ruins of the temples were so old that she could hardly believe her eyes. The best part of her trip, however, was the painted ceiling of a famous chapel. It was so breathtaking that she could not tear her eyes away from it. Eleanor also made an effort to find small restaurants where she could taste the popular meals of the region. In the evenings she enjoyed ice cream under the bright Christmas lights. At a Christmas market she found a perfect opportunity to buy presents that were in her price range. Eleanor loves visiting capital cities because each of them has its own history and its own special feeling, and she hopes to travel even more in the years ahead.",
+      "vocab_notes": [
+        {
+          "word": "ruins",
+          "cn": "遗迹;废墟"
+        },
+        {
+          "word": "ceiling",
+          "cn": "天花板"
+        },
+        {
+          "word": "breathtaking",
+          "cn": "令人赞叹的"
+        },
+        {
+          "word": "opportunity",
+          "cn": "机会"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Eleanor enjoy most during her trip?",
+          "options": [
+            "The beautifully painted chapel ceiling.",
+            "The crowded shopping streets.",
+            "The food sold to tourists.",
+            "The cold winter weather."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'The best part of her trip… was the painted ceiling' 的转述。"
+        },
+        {
+          "stem": "Why did Eleanor look for small restaurants?",
+          "options": [
+            "To meet other travellers there.",
+            "To taste the popular local meals.",
+            "To save the Christmas presents.",
+            "To avoid the busy markets."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'find small restaurants where she could taste the popular meals of the region' 的转述。"
+        },
+        {
+          "stem": "According to the text, why does Eleanor love capital cities?",
+          "options": [
+            "Every capital offers a unique past and atmosphere.",
+            "They are always cheap to visit.",
+            "They have no tourists at all.",
+            "They are easy to reach by train."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'each of them has its own history and its own special feeling' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Letter to a Young Dreamer",
+      "topic_cn": "书信·给青少年旅行者",
+      "body": "Dear Young Dreamer, you wrote to me that you dream of travelling, but as a teenager you wonder how to make it happen. You are not happy about studying subjects that do not seem relevant to your travel plans right now. Yet these lessons are teaching you valuable skills. You need them to analyse the world around you, to process information, and above all to think for yourself. These very skills will help you overcome the difficulties that stand between you and your dreams. My advice is simple: dream big, but stay practical. Even the most pleasant life has its setbacks, but a setback will not prevent you from reaching your goal if you stay rooted in the actions you can take today. Work hard, chart a course ahead, and then stick to it. Travel was once only a goal for me, too, but in the end I reached it. You can reach yours as well. Sincerely yours, Shannon.",
+      "vocab_notes": [
+        {
+          "word": "relevant",
+          "cn": "相关的"
+        },
+        {
+          "word": "overcome",
+          "cn": "克服"
+        },
+        {
+          "word": "setback",
+          "cn": "挫折"
+        },
+        {
+          "word": "practical",
+          "cn": "切实可行的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say school lessons are useful?",
+          "options": [
+            "They are all directly about travelling.",
+            "They teach skills for thinking and solving problems.",
+            "They make travel free for teenagers.",
+            "They replace the need for a travel plan."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'these lessons are teaching you valuable skills… to think for yourself' 的转述。"
+        },
+        {
+          "stem": "What is Shannon's main piece of advice?",
+          "options": [
+            "Give up studying and travel at once.",
+            "Wait until you are an adult.",
+            "Have big dreams while staying realistic.",
+            "Forget about travelling completely."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'dream big, but stay practical' 的转述。"
+        },
+        {
+          "stem": "What does Shannon say about setbacks?",
+          "options": [
+            "They make all dreams impossible.",
+            "They only happen to teenagers.",
+            "They should make you stop trying.",
+            "They won't stop you if you keep taking action."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a setback will not prevent you… if you stay rooted in the actions you can take' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Traveller of the Ming Dynasty",
+      "topic_cn": "人物·徐霞客",
+      "body": "Xu Xiake, who lived from 1587 to 1641, was one of the greatest travellers in Chinese history. For more than thirty years he journeyed across China, visiting countless mountains, valleys, rivers and caves. He often faced great difficulties and dangers, yet nothing could stop him from exploring new places. Wherever he went, he wrote down what he saw and heard. His careful notes were later collected into a famous travel book. Although it reads like the story of one man's adventures, the book is also full of useful information about geography and nature. Scientists today still regard it as an early and valuable record of the land. Xu Xiake never travelled for fame or money. He simply loved to see the world with his own eyes. His life reminds us that real travel is not only about reaching famous places, but also about looking closely and recording what we discover along the way.",
+      "vocab_notes": [
+        {
+          "word": "journey",
+          "cn": "旅行;旅程"
+        },
+        {
+          "word": "valley",
+          "cn": "山谷"
+        },
+        {
+          "word": "explore",
+          "cn": "探索"
+        },
+        {
+          "word": "record",
+          "cn": "记录"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How long did Xu Xiake spend travelling across China?",
+          "options": [
+            "More than thirty years.",
+            "Only a few months.",
+            "Exactly ten years.",
+            "His whole working life of fifty years."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'For more than thirty years he journeyed across China' 的转述。"
+        },
+        {
+          "stem": "Besides being an adventure story, what does his book contain?",
+          "options": [
+            "Only poems about the moon.",
+            "Valuable facts on the land and its nature.",
+            "A list of famous restaurants.",
+            "Letters to his family."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'full of useful information about geography and nature' 的转述。"
+        },
+        {
+          "stem": "Why did Xu Xiake travel, according to the text?",
+          "options": [
+            "To become rich and famous.",
+            "Because the emperor ordered him to.",
+            "Simply out of a personal love for seeing new places.",
+            "To sell maps to other travellers."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'never travelled for fame or money. He simply loved to see the world with his own eyes' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Planning a Trip as a Teenager",
+      "topic_cn": "说明·青少年的旅行计划",
+      "body": "When teenagers want to travel, they soon find that they cannot decide everything for themselves. Several factors will shape any plan they make. The first factor is their parents, who usually have a say in where and how their children travel. The second factor is money. The amount that a family can spend often determines the kind of trip a teenager can take. With a larger budget, a student might fly to Europe; with a smaller one, the same student might join a local exchange programme or simply stay close to home. None of this means that travel is impossible. A wise young traveller learns to chart a course ahead, comparing prices, checking the weather, and choosing places that fit the family's plans. It is also helpful to make a clear list of the things to prepare before leaving. Travel may take more planning for a teenager, but with patience and a practical attitude, a good trip is always within reach.",
+      "vocab_notes": [
+        {
+          "word": "factor",
+          "cn": "因素"
+        },
+        {
+          "word": "amount",
+          "cn": "数量"
+        },
+        {
+          "word": "determine",
+          "cn": "决定"
+        },
+        {
+          "word": "budget",
+          "cn": "预算"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the first factor mentioned that shapes a teenager's trip?",
+          "options": [
+            "The weather of the season.",
+            "The price of train tickets.",
+            "The size of their suitcase.",
+            "Their parents' opinions."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The first factor is their parents, who usually have a say' 的转述。"
+        },
+        {
+          "stem": "How does money affect a teenager's travel, according to the text?",
+          "options": [
+            "It decides what kind of trip is possible.",
+            "It has no real effect at all.",
+            "It only matters for flights to Europe.",
+            "It makes parents change their minds."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'The amount that a family can spend often determines the kind of trip' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest a wise young traveller should do?",
+          "options": [
+            "Travel without telling anyone.",
+            "Plan in advance and pick destinations suited to the family.",
+            "Ignore prices and the weather.",
+            "Wait until they are much older."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'learns to chart a course ahead, comparing prices… choosing places that fit the family's plans' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Rules at the Airport",
+      "topic_cn": "实用·机场行李规则",
+      "body": "Before Tina flew off for her holiday, she needed some information about the airline's luggage rules. At the desk, a friendly worker explained the main points clearly. Each passenger may bring only one carry-on item for free. If you want to take a second bag onto the plane, the airline will charge a fee. So the worker gave Tina some simple advice: do not pack anything that you do not really need. A lighter bag is not only cheaper but also much easier to carry through the busy airport. Tina also learned that some objects, such as bottles of water, are not allowed in carry-on luggage at all, because of safety rules. She decided to leave a few heavy items at home and to buy what she needed after she arrived. Thanks to the worker's help, Tina felt calm and ready. She checked in her large bag, kept her passport in her hand, and walked happily towards the gate.",
+      "vocab_notes": [
+        {
+          "word": "luggage",
+          "cn": "行李"
+        },
+        {
+          "word": "carry-on",
+          "cn": "随身携带的"
+        },
+        {
+          "word": "fee",
+          "cn": "费用"
+        },
+        {
+          "word": "passport",
+          "cn": "护照"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How many carry-on items can a passenger bring for free?",
+          "options": [
+            "As many as they like.",
+            "Exactly three.",
+            "Only one.",
+            "None at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Each passenger may bring only one carry-on item for free' 的转述。"
+        },
+        {
+          "stem": "What advice did the worker give Tina?",
+          "options": [
+            "To buy a bigger suitcase.",
+            "To carry two heavy bags onto the plane.",
+            "To leave her passport at home.",
+            "Not to pack things she did not really need."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'do not pack anything that you do not really need' 的转述。"
+        },
+        {
+          "stem": "Why are some objects not allowed in carry-on luggage?",
+          "options": [
+            "Because of safety rules.",
+            "Because they are too cheap.",
+            "Because they are too colourful.",
+            "Because passengers dislike them."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'are not allowed in carry-on luggage at all, because of safety rules' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Why I Recommend Xi'an",
+      "topic_cn": "推荐·向朋友介绍城市",
+      "body": "My Canadian friend Chris is planning a trip to China this winter, and he asked me which city to choose. I strongly recommend Xi'an, an amazing historic city in the northwest. Xi'an enjoys a very long history, as it was once the capital of thirteen dynasties and the starting point of the ancient Silk Road. The most famous attraction there is the army of terracotta warriors, built more than two thousand years ago. They are so lifelike that visitors often gasp in surprise when they first see them. Xi'an also has the old Bell Tower and Drum Tower, which are well worth a visit. If Chris gets hungry, he must try the local food, such as the warm bread soaked in lamb soup. I told Chris that he cannot really know how wonderful the city is unless he goes there himself. A three-day trip, I believe, would give him just enough time to enjoy its history, its sights and its tasty meals.",
+      "vocab_notes": [
+        {
+          "word": "recommend",
+          "cn": "推荐"
+        },
+        {
+          "word": "historic",
+          "cn": "历史悠久的"
+        },
+        {
+          "word": "attraction",
+          "cn": "景点"
+        },
+        {
+          "word": "dynasty",
+          "cn": "朝代"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Xi'an described as a historic city?",
+          "options": [
+            "It was built only a few years ago.",
+            "It was the capital of many dynasties and start of the Silk Road.",
+            "It has the largest airport in China.",
+            "It is the coldest place in the northwest."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'it was once the capital of thirteen dynasties and the starting point of the ancient Silk Road' 的转述。"
+        },
+        {
+          "stem": "What is the most famous attraction in Xi'an?",
+          "options": [
+            "A modern shopping centre.",
+            "A long sandy beach.",
+            "The ancient clay soldiers built long ago.",
+            "A tall glass tower."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'The most famous attraction there is the army of terracotta warriors' 的转述。"
+        },
+        {
+          "stem": "What does the writer tell Chris about really knowing the city?",
+          "options": [
+            "He should read more books about it.",
+            "He should ask other tourists first.",
+            "He should watch videos online instead.",
+            "He won't know how wonderful it is unless he visits."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'he cannot really know how wonderful the city is unless he goes there himself' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "grammar_title": "时态(复习 + 过去将来时)Tenses (review + future in the past)",
+  "source": "上外版必修第一册 Unit 1 Grammar in Use:时态复习 + 过去将来时。句子地道、学校生活主题,时间状语/语境决定唯一答案,干扰项均为错误时态。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "一般/进行/完成时态辨析(现在/过去)",
+      "overview": "看时间状语与语境选时态:now/every day→一般现在;at the moment/now→现在进行;yesterday/last term→一般过去;at this time yesterday→过去进行;already/by now/since→现在完成;by the time + 过去→过去完成。"
+    },
+    {
+      "code": "u1.02",
+      "point": "过去将来时 would do / was(were) going to do",
+      "overview": "站在过去某时点看将来:said/hoped/thought + that 从句用 would do;表过去的打算用 was/were going to do。"
+    },
+    {
+      "code": "u1.03",
+      "point": "时态呼应与语境选时态",
+      "overview": "主从句时态一致(主句过去→从句相应过去/过去将来);by the time / since / when 等连接词决定主从时态搭配。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "Every morning before class, Anne ____ her timetable to check which room to go to.",
+      "options": [
+        "checks",
+        "is checking",
+        "checked",
+        "has checked"
+      ],
+      "answer_index": 0,
+      "explanation": "Every morning 表习惯性动作,用一般现在时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Look! Jim ____ at a blank sheet of paper and can't think of anything to write.",
+      "options": [
+        "stares",
+        "is staring",
+        "stared",
+        "had stared"
+      ],
+      "answer_index": 1,
+      "explanation": "Look! 表此刻正在发生,用现在进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Last term our English teacher ____ us a creative writing assignment about summer.",
+      "options": [
+        "gives",
+        "is giving",
+        "gave",
+        "has given"
+      ],
+      "answer_index": 2,
+      "explanation": "Last term 是明确的过去时间,用一般过去时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "At this time yesterday evening, I ____ about my new school life in the quiet library.",
+      "options": [
+        "thought",
+        "am thinking",
+        "have thought",
+        "was thinking"
+      ],
+      "answer_index": 3,
+      "explanation": "At this time yesterday 表过去某刻正在进行,用过去进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "It is the first time that I ____ a dorm with three other girls, so everything feels new.",
+      "options": [
+        "have shared",
+        "shared",
+        "share",
+        "was sharing"
+      ],
+      "answer_index": 0,
+      "explanation": "It is the first time that 后从句用现在完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By the time the teacher arrived, the students ____ their essays into the box.",
+      "options": [
+        "put",
+        "had put",
+        "have put",
+        "were putting"
+      ],
+      "answer_index": 1,
+      "explanation": "By the time + 一般过去,主句动作更早完成,用过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "These days a lot of new students ____ hard to make friends in our class.",
+      "options": [
+        "try",
+        "tried",
+        "are trying",
+        "had tried"
+      ],
+      "answer_index": 2,
+      "explanation": "These days 表现阶段持续动作,用现在进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Many of my classmates ____ good friends of mine since the start of this term.",
+      "options": [
+        "became",
+        "become",
+        "were becoming",
+        "have become"
+      ],
+      "answer_index": 3,
+      "explanation": "since the start of this term 表从过去持续到现在,用现在完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "When the bell rang, we ____ a science fiction story aloud in the English class.",
+      "options": [
+        "were reading",
+        "read",
+        "have read",
+        "are reading"
+      ],
+      "answer_index": 0,
+      "explanation": "When the bell rang 时另一动作正在进行,用过去进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Jim usually ____ his homework right after dinner, but tonight he can't focus.",
+      "options": [
+        "is doing",
+        "does",
+        "did",
+        "has done"
+      ],
+      "answer_index": 1,
+      "explanation": "usually 表习惯,用一般现在时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I ____ already ____ in my assignment when the teacher reminded us of the deadline.",
+      "options": [
+        "have; handed",
+        "did; hand",
+        "had; handed",
+        "was; handing"
+      ],
+      "answer_index": 2,
+      "explanation": "already + when 过去某点之前已完成,用过去完成时 had handed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Listen! Someone ____ a welcome speech in the school hall right now.",
+      "options": [
+        "delivers",
+        "delivered",
+        "has delivered",
+        "is delivering"
+      ],
+      "answer_index": 3,
+      "explanation": "Listen! ... right now 表此刻正在进行,用现在进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "So far this week I ____ three new friends in my new class.",
+      "options": [
+        "have made",
+        "made",
+        "make",
+        "was making"
+      ],
+      "answer_index": 0,
+      "explanation": "So far 表到目前为止,用现在完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Anne ____ home in high spirits on the first day of September last year.",
+      "options": [
+        "comes",
+        "came",
+        "has come",
+        "was coming"
+      ],
+      "answer_index": 1,
+      "explanation": "on the first day ... last year 是过去具体时间,用一般过去时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Our school library ____ early every weekday so that students can read before class.",
+      "options": [
+        "is opening",
+        "opened",
+        "opens",
+        "has opened"
+      ],
+      "answer_index": 2,
+      "explanation": "every weekday 表规律性事实,用一般现在时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "While I ____ for the bus this morning, I met an old classmate from junior high.",
+      "options": [
+        "waited",
+        "wait",
+        "have waited",
+        "was waiting"
+      ],
+      "answer_index": 3,
+      "explanation": "this morning 过去某段时间正在进行,While 引导,用过去进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By the end of last term, Jim ____ greater progress in physics than ever before.",
+      "options": [
+        "had made",
+        "made",
+        "has made",
+        "makes"
+      ],
+      "answer_index": 0,
+      "explanation": "By the end of last term 表过去某点之前完成,用过去完成时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "At present an increasing number of students ____ part in the school drama club.",
+      "options": [
+        "take",
+        "are taking",
+        "took",
+        "had taken"
+      ],
+      "answer_index": 1,
+      "explanation": "At present 表现阶段正在进行,用现在进行时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The first-year students ____ their way around the building before school started.",
+      "options": [
+        "learn",
+        "have learned",
+        "learned",
+        "are learning"
+      ],
+      "answer_index": 2,
+      "explanation": "before school started 表过去,用一般过去时。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "I ____ this story three times already, and I still find it moving.",
+      "options": [
+        "read",
+        "am reading",
+        "had read",
+        "have read"
+      ],
+      "answer_index": 3,
+      "explanation": "three times already 表到现在的经历次数,用现在完成时。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Before the new term, Anne hoped that she ____ able to join a school drama club.",
+      "options": [
+        "would be",
+        "will be",
+        "is",
+        "had been"
+      ],
+      "answer_index": 0,
+      "explanation": "hoped 站在过去看将来,从句用过去将来时 would be。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Maybe Jim thought he ____ Mrs Peabody for a chance to rewrite the assignment.",
+      "options": [
+        "will beg",
+        "would beg",
+        "begs",
+        "had begged"
+      ],
+      "answer_index": 1,
+      "explanation": "thought 过去时点看将来的打算,用 would beg。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I was going to ____ you a message last night, but my phone ran out of power.",
+      "options": [
+        "sending",
+        "sent",
+        "send",
+        "have sent"
+      ],
+      "answer_index": 2,
+      "explanation": "was going to + 动词原形 表过去的打算,send。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When she was in junior high, Lin expected that senior high ____ much harder.",
+      "options": [
+        "will be",
+        "is",
+        "was being",
+        "would be"
+      ],
+      "answer_index": 3,
+      "explanation": "expected (过去) 看将来,用过去将来时 would be。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The teacher said she ____ pass back the writing the following day.",
+      "options": [
+        "would",
+        "will",
+        "is going",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "said + the following day 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We were going to ____ the new library after class, but it was already closed.",
+      "options": [
+        "visiting",
+        "visit",
+        "visited",
+        "have visited"
+      ],
+      "answer_index": 1,
+      "explanation": "were going to + 原形,表过去的计划,visit。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Jim promised that he ____ use proper spelling and grammar next time.",
+      "options": [
+        "will",
+        "is going to",
+        "would",
+        "had"
+      ],
+      "answer_index": 2,
+      "explanation": "promised 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Anne believed that she ____ like the school here even before the first lesson.",
+      "options": [
+        "will",
+        "is going to",
+        "had",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "believed (过去) 看将来,用过去将来时 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mum knew her daughter ____ meet some unfriendly people in her adult life.",
+      "options": [
+        "would",
+        "will",
+        "is going to",
+        "has"
+      ],
+      "answer_index": 0,
+      "explanation": "knew 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "On the first day I felt sure that I ____ make new friends very soon.",
+      "options": [
+        "will",
+        "would",
+        "am going to",
+        "had"
+      ],
+      "answer_index": 1,
+      "explanation": "felt sure (过去) 看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The students were going to ____ their assignments in, but the teacher arrived late.",
+      "options": [
+        "handing",
+        "handed",
+        "hand",
+        "have handed"
+      ],
+      "answer_index": 2,
+      "explanation": "were going to + 原形 表过去打算,hand。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Lizzie's father said that growing up ____ help her face difficulties at school.",
+      "options": [
+        "will",
+        "is going to",
+        "had",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "said 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I hoped that my new classmates ____ kind and friendly to me.",
+      "options": [
+        "would be",
+        "will be",
+        "are",
+        "had been"
+      ],
+      "answer_index": 0,
+      "explanation": "hoped (过去) 看将来状态,用过去将来时 would be。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She told her friend that she ____ join the music club the next month.",
+      "options": [
+        "will",
+        "would",
+        "is going to",
+        "has"
+      ],
+      "answer_index": 1,
+      "explanation": "told + the next month 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "We were going to ____ a survey in class, but the lesson ended too soon.",
+      "options": [
+        "doing",
+        "did",
+        "do",
+        "have done"
+      ],
+      "answer_index": 2,
+      "explanation": "were going to + 原形 表过去打算,do。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When he started senior high, Tom imagined that everything ____ be perfect.",
+      "options": [
+        "will",
+        "is going to",
+        "had",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "imagined (过去) 看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The new students were told that a training course ____ start before school.",
+      "options": [
+        "would",
+        "will",
+        "is going to",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "were told 过去看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Anne thought the master ____ be able to teach her something useful after all.",
+      "options": [
+        "will",
+        "would",
+        "is going to",
+        "has"
+      ],
+      "answer_index": 1,
+      "explanation": "thought (过去) 看将来,用 would。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "I was going to ____ part in the interview, but I felt too shy at the last minute.",
+      "options": [
+        "taking",
+        "took",
+        "take",
+        "have taken"
+      ],
+      "answer_index": 2,
+      "explanation": "was going to + 原形 表过去打算,take。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mrs Peabody hoped that one student ____ be brave enough to be imaginative.",
+      "options": [
+        "will",
+        "is going to",
+        "had",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "hoped (过去) 看将来,用过去将来时 would。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Jim said that he ____ awake until 3 a.m. the night before, worrying about his grade.",
+      "options": [
+        "had stayed",
+        "stayed",
+        "has stayed",
+        "would stay"
+      ],
+      "answer_index": 0,
+      "explanation": "主句过去 said,从句更早的动作用过去完成时 had stayed。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By the time Anne got to class, the teacher ____ already graded all the essays.",
+      "options": [
+        "has",
+        "had",
+        "would have",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "By the time + 过去,主句更早完成,用过去完成时 had。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Since I joined the drama club, I ____ much more confident in front of others.",
+      "options": [
+        "felt",
+        "feel",
+        "have felt",
+        "had felt"
+      ],
+      "answer_index": 2,
+      "explanation": "Since + 过去时间点,主句用现在完成时 have felt。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When the teacher walked in, the students ____ quietly about the assignment.",
+      "options": [
+        "talked",
+        "have talked",
+        "are talking",
+        "were talking"
+      ],
+      "answer_index": 3,
+      "explanation": "When + 过去,另一动作正在进行,用过去进行时 were talking。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Mum wrote that she ____ well what it was like to be a teenager.",
+      "options": [
+        "remembered",
+        "remembers",
+        "would remember",
+        "has remembered"
+      ],
+      "answer_index": 0,
+      "explanation": "主句过去 wrote,从句陈述当时状态,时态呼应用一般过去 remembered。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Anne announced that she ____ going to like school here.",
+      "options": [
+        "is",
+        "was",
+        "had been",
+        "would"
+      ],
+      "answer_index": 1,
+      "explanation": "主句过去 announced,从句呼应用 was going to,选 was。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By the end of the third year, Jim ____ great progress and made many friends.",
+      "options": [
+        "made",
+        "has made",
+        "had made",
+        "would make"
+      ],
+      "answer_index": 2,
+      "explanation": "By the end of ... (过去) 之前完成,用过去完成时 had made。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I didn't know my new desk-mate ____ from the same town as me until we talked.",
+      "options": [
+        "comes",
+        "has come",
+        "would come",
+        "came"
+      ],
+      "answer_index": 3,
+      "explanation": "主句过去 didn't know,从句陈述当时事实,时态呼应用一般过去 came。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Since the new term began, our class ____ three interesting school activities.",
+      "options": [
+        "has held",
+        "held",
+        "holds",
+        "had held"
+      ],
+      "answer_index": 0,
+      "explanation": "Since + 过去,主句用现在完成时 has held。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When Mrs Peabody started to comment on the essays, Jim ____ his eyes nervously.",
+      "options": [
+        "closes",
+        "closed",
+        "has closed",
+        "would close"
+      ],
+      "answer_index": 1,
+      "explanation": "When + 过去,主句叙述过去动作,时态呼应用一般过去 closed。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The teacher explained that the library ____ a self-service borrowing system now.",
+      "options": [
+        "has",
+        "would have",
+        "had",
+        "is having"
+      ],
+      "answer_index": 2,
+      "explanation": "主句过去 explained,从句呼应用过去 had。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Before I entered senior high, I had wondered whether I ____ make any friends.",
+      "options": [
+        "will",
+        "have",
+        "had",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "主句过去 had wondered,从句站过去看将来,用过去将来时 would。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By the time the bell rang, we ____ the topic sentence for our paragraph.",
+      "options": [
+        "had finished",
+        "finished",
+        "have finished",
+        "would finish"
+      ],
+      "answer_index": 0,
+      "explanation": "By the time + 过去,主句更早完成,用过去完成时 had finished。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She realised that her old fears about senior high ____ unnecessary after all.",
+      "options": [
+        "are",
+        "had been",
+        "have been",
+        "would be"
+      ],
+      "answer_index": 1,
+      "explanation": "主句过去 realised,从句指更早的状态,用过去完成时 had been。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Since Lizzie watched the video, she ____ less worried about senior high.",
+      "options": [
+        "felt",
+        "feels",
+        "has felt",
+        "had felt"
+      ],
+      "answer_index": 2,
+      "explanation": "Since + 过去动作,主句用现在完成时 has felt。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "When the new students arrived, some senior students ____ them around the building.",
+      "options": [
+        "showed",
+        "have shown",
+        "show",
+        "were showing"
+      ],
+      "answer_index": 3,
+      "explanation": "When + 过去,另一动作正在进行,用过去进行时 were showing。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Marilla said she ____ not tolerate rude words about a teacher.",
+      "options": [
+        "would",
+        "will",
+        "has",
+        "had"
+      ],
+      "answer_index": 0,
+      "explanation": "主句过去 said,从句站过去看将来,用 would。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "By last Friday our group ____ already chosen its interview topic.",
+      "options": [
+        "has",
+        "had",
+        "would have",
+        "was"
+      ],
+      "answer_index": 1,
+      "explanation": "By last Friday 过去某点之前完成,用过去完成时 had。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I found that the library ____ quiet and comfortable when I first visited it.",
+      "options": [
+        "is",
+        "has been",
+        "was",
+        "would be"
+      ],
+      "answer_index": 2,
+      "explanation": "主句过去 found,从句呼应陈述当时状态,用一般过去 was。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Since we became desk-mates, Zhang and I ____ many things about school together.",
+      "options": [
+        "shared",
+        "share",
+        "had shared",
+        "have shared"
+      ],
+      "answer_index": 3,
+      "explanation": "Since + 过去,主句用现在完成时 have shared。"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Introduce a Chinese Coming-of-Age Ceremony(介绍一种中国成人礼)",
+  "title_en": "An Introduction to a Chinese Coming-of-Age Ceremony",
+  "genre": "说明文 / 介绍(write a unified paragraph introducing a Chinese coming-of-age ceremony)",
+  "source": "上外版必修第一册 Unit 4 Moving Forward:Writing an introduction to a coming-of-age ceremony in China(60-80词,主题句+支撑句+结尾句,保持段落统一)。",
+  "prompt_cn": "你校正在举办成人礼,一群来自美国高中的学生前来参观。请你用英语写一段约80词的介绍,向美国学生介绍一种中国的成人礼(如古代的笄礼或冠礼),内容包括:① 它在什么时候、为谁举行;② 主要的庆祝活动或环节;③ 它的意义。注意:用一个主题句开头,支撑句围绕中心,用一个结尾句收束,保持段落统一。",
+  "prompt_en": "Your school is holding a coming-of-age ceremony, and a group of American high-school students are coming to visit. Write a paragraph of about 80 words to introduce one Chinese coming-of-age ceremony (such as the ancient hair-pinning or capping ceremony) to them. Include: 1) when and for whom it is held; 2) the main activities; 3) its meaning. Begin with a topic sentence, keep all supporting sentences on one idea, and finish with a concluding sentence.",
+  "points": [
+    "主题句:点明这是中国一种成人礼(In ancient China, … was held to mark …)",
+    "时间与对象(It was held for … when they were … years old)",
+    "主要环节/活动(During the ceremony, …)",
+    "意义 + 结尾句(It showed that … / It reminded young people that …)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "In ancient China, the hair-pinning ceremony was a coming-of-age ceremony held to mark an important moment in a girl's life. It was performed when she was fifteen years old. During the ceremony, the girl would wash and comb her hair, and then a ceremony master would carefully put a pin in it. This showed everyone that she was no longer a child. The custom reminded young people that, as adults, they should respect their parents and shoulder real responsibilities. In short, it was a meaningful way to welcome a new stage of life.",
+  "model_translation": "在古代中国,笄礼是一种成人礼,用来标志女孩生命中的一个重要时刻。它在女孩十五岁时举行。仪式上,女孩会梳洗头发,然后由一位仪式主持人小心地为她插上发笄。这向所有人表明她不再是个孩子。这一习俗提醒年轻人:作为成年人,他们应当尊重父母、承担真正的责任。总之,这是迎接人生新阶段的一种有意义的方式。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:何时为谁举行 / 主要环节 / 意义" },
+      { "dimension": "结构", "max": 4, "criteria": "主题句开头、支撑句围绕一个中心、结尾句回扣、段落统一" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、被动语态等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "主题句 In ancient China, … was held to mark …",
+      "时间对象 It was performed when …",
+      "环节 During the ceremony, …",
+      "意义/结尾 The custom reminded young people that … / In short, …"
+    ],
+    "key_expressions": [
+      "In ancient China, the hair-pinning ceremony was held to mark an important moment.",
+      "It was performed when she was fifteen years old.",
+      "During the ceremony, a master would put a pin in her hair.",
+      "It reminded young people that they should shoulder real responsibilities."
+    ],
+    "useful_words": ["custom", "tradition", "ceremony", "perform", "mark", "occasion", "responsibility", "respect", "adulthood", "meaningful"]
+  },
+  "high_sentences": [
+    "In ancient China, the hair-pinning ceremony was held to mark an important moment in a girl's life.",
+    "It was performed when she was fifteen years old.",
+    "This showed everyone that she was no longer a child.",
+    "The custom reminded young people that they should shoulder real responsibilities."
+  ],
+  "error_pairs": [
+    { "wrong": "The ceremony was hold when she was fifteen.", "correct": "The ceremony was held when she was fifteen.", "note": "被动语态用过去分词 held,不是 hold。" },
+    { "wrong": "A pin was put in her hair by a master carefully.", "correct": "A master carefully put a pin in her hair.", "note": "有明确施动者且要强调动作时,主动更自然;副词位置也要恰当。" },
+    { "wrong": "It reminded young people they should respect parents.", "correct": "It reminded young people that they should respect their parents.", "note": "remind sb that … 引导宾语从句,that 不宜省、需用 their。" }
+  ],
+  "paragraph_template": "【成人礼介绍结构】\n第1句 主题句:In ancient China, … was held to mark …\n第2句 时间对象:It was performed when …\n第3-4句 环节:During the ceremony, … This showed that …\n第5句 意义/结尾:The custom reminded young people that … / In short, …"
+}

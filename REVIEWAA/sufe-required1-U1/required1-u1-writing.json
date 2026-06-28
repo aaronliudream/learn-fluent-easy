@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "Describing My Ideal School Life(描述我理想的学校生活)",
+  "title_en": "My Ideal School Life",
+  "genre": "说明 / 记叙(describe your ideal school life: courses, activities, friends and feelings)",
+  "source": "上外版必修第一册 Unit 1 Further Exploration:Describing an ideal school life(描述你理想的学校生活——课程、活动、人与感受)。",
+  "prompt_cn": "上外版必修一 Unit 1 写作任务。请用英语写一篇约100词的短文,描述你理想的学校生活,内容包括:① 理想的课程或学习方式;② 你想参加的校园活动或社团;③ 你希望拥有怎样的同学与师生关系;④ 这样的学校生活会给你怎样的感受。注意:用时态正确(现在/将来),句子地道、围绕中心。",
+  "prompt_en": "Write a short passage of about 100 words describing your ideal school life. Include: 1) the courses or way of learning you would like; 2) the school activities or clubs you want to take part in; 3) what kind of classmates and teacher-student relationship you hope for; 4) how this school life would make you feel. Use tenses correctly (present / future) and keep every sentence on topic.",
+  "points": [
+    "理想课程/学习方式(In my ideal school, lessons would be …)",
+    "想参加的活动/社团(I would join …)",
+    "理想的同学与师生关系(My classmates would be … and teachers would …)",
+    "这样的校园生活带来的感受(In such a school, I would feel …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Everyone dreams of a perfect place to learn, and I often imagine my ideal school life. In my ideal school, lessons would be lively and creative, so that we could think freely instead of just memorising facts. After class, I would join a drama club and a reading group, where we share stories and perform on a real stage. My classmates would be kind and sympathetic, always ready to help one another, and our teachers would treat us as friends rather than judges. There would never be a shortage of warm smiles in the corridors. In such a school, I believe I would feel relaxed, confident and truly happy every single day.",
+  "model_translation": "每个人都梦想有一个完美的学习之地,我也常常想象自己理想的学校生活。在我理想的学校里,课程会生动而富有创意,让我们能自由思考,而不只是死记硬背。课后,我会加入戏剧社和读书会,一起分享故事、登上真正的舞台。我的同学会友善而有同情心,总乐于互相帮助;老师会把我们当朋友,而不是评判者。走廊里永远不会缺少温暖的笑容。在这样的学校里,我相信自己每天都会感到放松、自信、真正快乐。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:理想课程 / 活动社团 / 同学师生关系 / 感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕“理想学校生活”一个中心展开、句句相关、过渡自然" },
+      { "dimension": "语言", "max": 5, "criteria": "时态正确(现在/将来/过去将来)、词汇句型多样准确、语法基本无误" }
+    ],
+    "required_structure": [
+      "总起:I often imagine my ideal school life.",
+      "课程:In my ideal school, lessons would be lively and creative.",
+      "活动:I would join a drama club and a reading group.",
+      "感受:In such a school, I would feel relaxed and truly happy."
+    ],
+    "key_expressions": [
+      "In my ideal school, lessons would be lively and creative.",
+      "I would join a drama club and a reading group.",
+      "My classmates would be kind and sympathetic.",
+      "There would never be a shortage of warm smiles in the corridors."
+    ],
+    "useful_words": ["ideal", "creative", "club", "activity", "classmate", "sympathetic", "relaxed", "confident", "chapter", "forward"]
+  },
+  "high_sentences": [
+    "In my ideal school, lessons would be lively and creative, so that we could think freely.",
+    "I would join a drama club and a reading group, where we share stories and perform on a real stage.",
+    "My classmates would be kind and sympathetic, always ready to help one another.",
+    "There would never be a shortage of warm smiles in the corridors."
+  ],
+  "error_pairs": [
+    { "wrong": "In my ideal school, lessons will be creative.", "correct": "In my ideal school, lessons would be creative.", "note": "描述想象/非真实情景,主句用 would,而非 will。" },
+    { "wrong": "My classmates would helping each other.", "correct": "My classmates would help each other.", "note": "would 后接动词原形,不用 -ing。" },
+    { "wrong": "There would never be a shortage of warm smile.", "correct": "There would never be a shortage of warm smiles.", "note": "a shortage of 后接可数名词复数 smiles。" }
+  ],
+  "paragraph_template": "【理想学校生活结构】\n总起 I often imagine my ideal school life.\n课程 In my ideal school, lessons would be lively and creative.\n活动 I would join … where we …\n关系 My classmates would be … and teachers would …\n感受 In such a school, I would feel relaxed and truly happy."
+}

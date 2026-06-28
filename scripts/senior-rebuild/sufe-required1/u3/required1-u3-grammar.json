@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "grammar_title": "状语从句复习(Adverbial Clauses):时间/地点 · 原因/条件/让步 · 目的/结果/方式/比较",
+  "source": "上外版必修第一册 Unit 3 Grammar in Use:Adverbial clauses (review)。句子地道、旅行主题;看从句与主句的逻辑关系定连词,答案唯一,零术语;干扰项为逻辑不通的其他连词。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "时间 / 地点状语从句(when/while/as/before/after/until/since · where/wherever)",
+      "overview": "表'什么时候/在哪里':时间用 when/while/as/before/after/until/since/as soon as;地点用 where/wherever。看从句表达的是'时间点'还是'地点'来选。"
+    },
+    {
+      "code": "u3.02",
+      "point": "原因 / 条件 / 让步状语从句(because/since/as · if/unless · though/although/even if)",
+      "overview": "原因(给理由)用 because/since/as;条件(如果/除非)用 if/unless/as long as;让步(尽管/即使)用 though/although/even if。看主从句是'因果''假设'还是'转折'。"
+    },
+    {
+      "code": "u3.03",
+      "point": "目的 / 结果 / 方式 / 比较状语从句(so that/in order that · so…that/such…that · as if/as though · than)",
+      "overview": "目的(为了)用 so that/in order that;结果(如此…以至于)用 so…that/such…that;方式(好像)用 as if/as though;比较(比)用 than。看是'目的''结果''仿佛'还是'比较'。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "I always feel excited ____ the plane finally takes off for a new country.",
+      "options": [
+        "when",
+        "though",
+        "so that",
+        "than"
+      ],
+      "answer_index": 0,
+      "explanation": "表'……的时候'起飞,是时间关系 → when。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ we were walking along the river, a cold wind began to blow.",
+      "options": [
+        "Unless",
+        "While",
+        "Because",
+        "So that"
+      ],
+      "answer_index": 1,
+      "explanation": "两个动作同时进行(走路时起风)→ 时间 while。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We talked about our plans ____ we walked back to the hotel.",
+      "options": [
+        "if",
+        "such that",
+        "as",
+        "than"
+      ],
+      "answer_index": 2,
+      "explanation": "'一边……一边……',边走边聊 → 时间 as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Remember to book the tickets ____ you leave for the airport.",
+      "options": [
+        "because",
+        "although",
+        "as if",
+        "before"
+      ],
+      "answer_index": 3,
+      "explanation": "订票在出发'之前' → 时间 before。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ we arrived in Rome, we went straight to see the ancient ruins.",
+      "options": [
+        "After",
+        "Unless",
+        "So that",
+        "Than"
+      ],
+      "answer_index": 0,
+      "explanation": "先到达后参观,先后顺序 → 时间 after。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The tourists waited at the gate ____ the museum opened.",
+      "options": [
+        "because",
+        "until",
+        "though",
+        "in order that"
+      ],
+      "answer_index": 1,
+      "explanation": "一直等到开门为止 → 时间 until。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Eleanor has stayed in this hotel ____ she arrived in the city.",
+      "options": [
+        "unless",
+        "so that",
+        "since",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "从到达起一直住到现在 → 时间 since。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the tour guide finished speaking, everyone started taking photos.",
+      "options": [
+        "Because",
+        "Although",
+        "Such that",
+        "As soon as"
+      ],
+      "answer_index": 3,
+      "explanation": "一……就……,导游讲完马上拍照 → 时间 as soon as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "This is the small square ____ street artists paint pictures for tourists.",
+      "options": [
+        "where",
+        "because",
+        "if",
+        "than"
+      ],
+      "answer_index": 0,
+      "explanation": "表'在……地方'画画 → 地点 where。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you travel in this region, you will find friendly local people.",
+      "options": [
+        "Because",
+        "Wherever",
+        "Unless",
+        "So that"
+      ],
+      "answer_index": 1,
+      "explanation": "'无论在哪里'旅行 → 地点 wherever。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I felt a little nervous ____ the train slowly pulled out of the station.",
+      "options": [
+        "unless",
+        "although",
+        "as",
+        "in order that"
+      ],
+      "answer_index": 2,
+      "explanation": "随着火车开出(同时)→ 时间 as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We should check the weather ____ we set off on the mountain trip.",
+      "options": [
+        "because",
+        "even if",
+        "than",
+        "before"
+      ],
+      "answer_index": 3,
+      "explanation": "查天气在出发'之前' → 时间 before。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ I was buying souvenirs, my friend was booking our train tickets.",
+      "options": [
+        "While",
+        "Since",
+        "Unless",
+        "So that"
+      ],
+      "answer_index": 0,
+      "explanation": "两动作同时进行(买纪念品时订票)→ 时间 while。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The children kept asking questions ____ the bus reached the seaside.",
+      "options": [
+        "because",
+        "until",
+        "though",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "一直问到到达海边为止 → 时间 until。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Edinburgh is the city ____ many famous writers once lived and worked.",
+      "options": [
+        "because",
+        "if",
+        "where",
+        "than"
+      ],
+      "answer_index": 2,
+      "explanation": "表'在……城市'居住工作 → 地点 where。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the holiday ended, we promised to travel together again next year.",
+      "options": [
+        "Unless",
+        "So that",
+        "Such that",
+        "When"
+      ],
+      "answer_index": 3,
+      "explanation": "假期结束的'时候' → 时间 when。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He has loved travelling ____ he took his first solo trip at sixteen.",
+      "options": [
+        "since",
+        "because",
+        "although",
+        "in order that"
+      ],
+      "answer_index": 0,
+      "explanation": "从十六岁第一次独自旅行起 → 时间 since。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Please put a sticker on the map ____ you have already visited a place.",
+      "options": [
+        "because",
+        "wherever",
+        "unless",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "'在凡是去过的地方'贴贴纸 → 地点 wherever。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We had dinner at a riverside café ____ the sun was setting over the water.",
+      "options": [
+        "if",
+        "though",
+        "as",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "随着太阳西落的'同时' → 时间 as。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ you check out of the hotel, make sure you take everything with you.",
+      "options": [
+        "Because",
+        "Even if",
+        "Such that",
+        "Before"
+      ],
+      "answer_index": 3,
+      "explanation": "退房'之前'拿好东西 → 时间 before。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We chose to travel by train ____ it was cheaper than flying.",
+      "options": [
+        "because",
+        "until",
+        "where",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "给出'选火车'的理由(更便宜)→ 原因 because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ Eleanor is a first-time visitor, she would like to hire a guide.",
+      "options": [
+        "Unless",
+        "Since",
+        "When",
+        "Than"
+      ],
+      "answer_index": 1,
+      "explanation": "句首给已知原因(她是初次来)→ 原因 since。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ it was getting dark, we decided to head back to the hotel.",
+      "options": [
+        "If",
+        "Where",
+        "As",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "句首引出原因(天黑了)→ 原因 as。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We won't be able to see the old town ____ we get up early tomorrow.",
+      "options": [
+        "because",
+        "while",
+        "than",
+        "unless"
+      ],
+      "answer_index": 3,
+      "explanation": "'除非'早起,否则看不到 → 条件 unless。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ it rains tomorrow, we will visit the museum instead of the beach.",
+      "options": [
+        "If",
+        "Since",
+        "Where",
+        "So that"
+      ],
+      "answer_index": 0,
+      "explanation": "'如果'下雨(真实条件)→ 条件 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "You can keep the carry-on bag ____ it weighs less than ten kilograms.",
+      "options": [
+        "because",
+        "as long as",
+        "though",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "'只要'不超重就可以 → 条件 as long as。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He enjoyed the package tour ____ he disliked the very tight schedule.",
+      "options": [
+        "because",
+        "until",
+        "even though",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "喜欢却又不喜欢日程,前后转折 → 让步 even though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the journey was long and tiring, the beautiful views made it worth it.",
+      "options": [
+        "Because",
+        "Unless",
+        "Than",
+        "Although"
+      ],
+      "answer_index": 3,
+      "explanation": "辛苦但值得,转折关系 → 让步 although。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "I still remember the Terracotta Warriors clearly ____ I went there years ago.",
+      "options": [
+        "though",
+        "because",
+        "if",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "多年前去过却仍记得,转折 → 让步 though。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We had to take a taxi to the station ____ there were no buses that early.",
+      "options": [
+        "unless",
+        "because",
+        "where",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "给出'打车'的原因(没有公交)→ 原因 because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ you are not sure how much luggage you can take, ask the airline first.",
+      "options": [
+        "Since",
+        "Although",
+        "If",
+        "So that"
+      ],
+      "answer_index": 2,
+      "explanation": "'如果'不确定(假设)→ 条件 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ Chris prefers a city with history, I will recommend Xi'an to him.",
+      "options": [
+        "Unless",
+        "While",
+        "Than",
+        "Since"
+      ],
+      "answer_index": 3,
+      "explanation": "句首给已知原因(他偏爱历史名城)→ 原因 since。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We can't get closer to the sea lions ____ we have enough time today.",
+      "options": [
+        "unless",
+        "because",
+        "though",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "'除非'有足够时间,否则靠不近 → 条件 unless。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the food was a bit expensive, the restaurant was packed with tourists.",
+      "options": [
+        "Because",
+        "Although",
+        "Unless",
+        "Than"
+      ],
+      "answer_index": 1,
+      "explanation": "贵却还是满座,转折 → 让步 although。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "I'd love to visit Europe ____ my parents agree to pay for the flight.",
+      "options": [
+        "since",
+        "where",
+        "if",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "'如果'父母同意(条件)→ 条件 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We took lots of photos ____ we wanted to remember every moment of the trip.",
+      "options": [
+        "unless",
+        "when",
+        "than",
+        "because"
+      ],
+      "answer_index": 3,
+      "explanation": "给出'拍很多照片'的理由 → 原因 because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ a setback may slow you down, it should never stop your travel dreams.",
+      "options": [
+        "Even if",
+        "Because",
+        "Until",
+        "So that"
+      ],
+      "answer_index": 0,
+      "explanation": "'即使'有挫折(让步)→ 让步 even if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The trip cost less ____ we shared one room and cooked our own meals.",
+      "options": [
+        "unless",
+        "because",
+        "where",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "给出'花费更少'的原因(合住自炊)→ 原因 because。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "You won't enjoy the hike ____ you wear a pair of comfortable walking shoes.",
+      "options": [
+        "because",
+        "though",
+        "unless",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "'除非'穿舒适的鞋,否则不会享受 → 条件 unless。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ she was tired after the flight, she went out to explore the city at once.",
+      "options": [
+        "Because",
+        "Unless",
+        "Than",
+        "Although"
+      ],
+      "answer_index": 3,
+      "explanation": "累却立刻出门,转折 → 让步 although。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She downloaded a travel app ____ she could plan the whole trip on her phone.",
+      "options": [
+        "so that",
+        "because",
+        "until",
+        "than"
+      ],
+      "answer_index": 0,
+      "explanation": "下载 app 是'为了'能用手机规划 → 目的 so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We left home very early ____ we might catch the first train to the coast.",
+      "options": [
+        "because",
+        "in order that",
+        "though",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "早出门是'为了'赶上首班车 → 目的 in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The view from the hill was ____ beautiful that nobody wanted to leave.",
+      "options": [
+        "such",
+        "as",
+        "so",
+        "than"
+      ],
+      "answer_index": 2,
+      "explanation": "so + 形容词 beautiful + that → 结果 so…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was ____ a breathtaking ceiling that I couldn't tear my eyes away from it.",
+      "options": [
+        "so",
+        "as",
+        "than",
+        "such"
+      ],
+      "answer_index": 3,
+      "explanation": "such + a + 形容词 + 名词 ceiling → 结果 such…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The old explorer described the cave ____ he had walked through it yesterday.",
+      "options": [
+        "as if",
+        "because",
+        "until",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "'好像'昨天才走过(实际很久前)→ 方式 as if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "This seaside town attracts far more visitors in summer ____ it does in winter.",
+      "options": [
+        "because",
+        "than",
+        "though",
+        "so that"
+      ],
+      "answer_index": 1,
+      "explanation": "more…than,夏天比冬天多 → 比较 than。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "I kept a careful diary ____ I could remember every place we visited.",
+      "options": [
+        "because",
+        "until",
+        "so that",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "记日记是'为了'记住去过的地方 → 目的 so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The guide spoke slowly ____ the foreign tourists could follow her words.",
+      "options": [
+        "because",
+        "though",
+        "than",
+        "in order that"
+      ],
+      "answer_index": 3,
+      "explanation": "说慢是'为了'让游客听懂 → 目的 in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The square was ____ crowded that we could hardly move toward the fountain.",
+      "options": [
+        "so",
+        "such",
+        "as",
+        "than"
+      ],
+      "answer_index": 0,
+      "explanation": "so + 形容词 crowded + that → 结果 so…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was ____ a long flight that everyone fell asleep before the meal arrived.",
+      "options": [
+        "so",
+        "such",
+        "as",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "such + a + 形容词 + 名词 flight → 结果 such…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "He talked about the ancient city ____ he had lived there all his life.",
+      "options": [
+        "because",
+        "until",
+        "as though",
+        "so that"
+      ],
+      "answer_index": 2,
+      "explanation": "'仿佛'他一直住在那里 → 方式 as though。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Travelling by high-speed train is much faster ____ travelling by coach.",
+      "options": [
+        "because",
+        "though",
+        "in order that",
+        "than"
+      ],
+      "answer_index": 3,
+      "explanation": "faster…than,比坐长途汽车快 → 比较 than。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Pack your bag the night before ____ you won't be in a rush in the morning.",
+      "options": [
+        "so that",
+        "because",
+        "until",
+        "as if"
+      ],
+      "answer_index": 0,
+      "explanation": "前一晚收拾是'为了'早上不慌乱 → 目的 so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We booked the hotel early ____ we would have a room near the old town.",
+      "options": [
+        "because",
+        "in order that",
+        "though",
+        "than"
+      ],
+      "answer_index": 1,
+      "explanation": "早订房是'为了'有靠近老城的房间 → 目的 in order that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The waves were ____ high that the boat trip had to be put off until Monday.",
+      "options": [
+        "such",
+        "as",
+        "so",
+        "than"
+      ],
+      "answer_index": 2,
+      "explanation": "so + 形容词 high + that → 结果 so…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was ____ a wonderful holiday that we are already planning the next one.",
+      "options": [
+        "so",
+        "as",
+        "than",
+        "such"
+      ],
+      "answer_index": 3,
+      "explanation": "such + a + 形容词 + 名词 holiday → 结果 such…that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The little girl pointed at the map ____ she already knew the whole country.",
+      "options": [
+        "as if",
+        "because",
+        "until",
+        "so that"
+      ],
+      "answer_index": 0,
+      "explanation": "'好像'她已熟知整个国家 → 方式 as if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "A guided tour usually costs more ____ exploring a city on your own does.",
+      "options": [
+        "because",
+        "than",
+        "though",
+        "in order that"
+      ],
+      "answer_index": 1,
+      "explanation": "more…than,跟团比自由行贵 → 比较 than。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Keep your passport in your hand luggage ____ you can reach it quickly.",
+      "options": [
+        "because",
+        "until",
+        "so that",
+        "as though"
+      ],
+      "answer_index": 2,
+      "explanation": "放手提行李是'为了'能快速拿到 → 目的 so that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The terracotta figures were ____ lifelike that visitors gasped in surprise.",
+      "options": [
+        "such",
+        "as",
+        "than",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "so + 形容词 lifelike + that → 结果 so…that。"
+    }
+  ]
+}

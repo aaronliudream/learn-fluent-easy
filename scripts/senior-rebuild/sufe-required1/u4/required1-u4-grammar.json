@@ -1,0 +1,745 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grammar_title": "被动语态复习(各时态被动 + 现在进行被动 + 现在完成被动)",
+  "source": "上外版必修第一册 Unit 4 Grammar in Use:Passives(review + present continuous passive + present perfect passive)。句子地道、习俗/成人礼主题,时间状语/语境定时态,被动形式唯一成立(干扰项为主动或错时态被动)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "各时态被动(一般现在/过去/将来 + 情态被动)",
+      "overview": "主语是动作的承受者时用被动:一般现在 is/are done、一般过去 was/were done、一般将来 will be done、情态 can/must/should be done。由时间状语或语境判断时态。"
+    },
+    {
+      "code": "u4.02",
+      "point": "现在进行时被动(is/are being done)",
+      "overview": "表示'此刻正被……'时用现在进行被动:am/is/are + being + 过去分词。常与 now、at the moment、right now 等连用。"
+    },
+    {
+      "code": "u4.03",
+      "point": "现在完成时被动(has/have been done)",
+      "overview": "表示动作已完成并影响现在时用现在完成被动:has/have + been + 过去分词。常与 already、just、so far、recently 等连用;主语为动作承受者。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "\"In some Indian families, the sacred thread ceremony ____ when a boy grows up.\"",
+      "options": [
+        "is performed",
+        "performs",
+        "is performing",
+        "has performing"
+      ],
+      "answer_index": 0,
+      "explanation": "ceremony 是动作承受者、一般现在的习俗 → is performed。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In ancient China, a hair-pinning ceremony ____ for a girl when she turned fifteen.\"",
+      "options": [
+        "held",
+        "was held",
+        "was holding",
+        "holds"
+      ],
+      "answer_index": 1,
+      "explanation": "ancient China 指过去、ceremony 被举行 → was held。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Next week a coming-of-age ceremony ____ at our school for the senior students.\"",
+      "options": [
+        "will hold",
+        "holds",
+        "will be held",
+        "is held"
+      ],
+      "answer_index": 2,
+      "explanation": "Next week 指将来、ceremony 被举办 → will be held。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The capping ceremony ____ only by respected elders in old times.\"",
+      "options": [
+        "could perform",
+        "performs",
+        "is performing",
+        "could be performed"
+      ],
+      "answer_index": 3,
+      "explanation": "情态被动:只能被长辈来举行 → could be performed。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"During the ceremony, three strands of thread ____ to the boy as a gift.\"",
+      "options": [
+        "are given",
+        "give",
+        "are giving",
+        "have giving"
+      ],
+      "answer_index": 0,
+      "explanation": "thread 是被给予者、一般现在习俗 → are given。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Last year the festival ____ in the school gymnasium for the whole town.\"",
+      "options": [
+        "celebrated",
+        "was celebrated",
+        "was celebrating",
+        "celebrates"
+      ],
+      "answer_index": 1,
+      "explanation": "Last year 指过去、festival 被庆祝 → was celebrated。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Traditional clothes ____ before the ceremony begins tomorrow.\"",
+      "options": [
+        "must rent",
+        "are renting",
+        "must be rented",
+        "rents"
+      ],
+      "answer_index": 2,
+      "explanation": "情态被动:衣服必须被租好 → must be rented。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In Germany, the youth celebration ____ 'Jugendfeier' by local people.\"",
+      "options": [
+        "calls",
+        "is calling",
+        "has called",
+        "is called"
+      ],
+      "answer_index": 3,
+      "explanation": "celebration 被称为、一般现在 → is called。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In the past, girls ____ household skills to prepare for marriage.\"",
+      "options": [
+        "were taught",
+        "taught",
+        "were teaching",
+        "teach"
+      ],
+      "answer_index": 0,
+      "explanation": "In the past 指过去、girls 是被教者 → were taught。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"At next month's homecoming, a king and queen ____ from the upper-level students.\"",
+      "options": [
+        "will select",
+        "will be selected",
+        "select",
+        "are selecting"
+      ],
+      "answer_index": 1,
+      "explanation": "next month 指将来、king and queen 被选拔 → will be selected。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The whole occasion ____ with a graceful bow to the parents every year.\"",
+      "options": [
+        "ends it",
+        "is ending",
+        "is ended",
+        "has ending"
+      ],
+      "answer_index": 2,
+      "explanation": "every year 指一般现在、occasion 被以鞠躬结束 → is ended。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The parade ____ through the main streets of the town yesterday afternoon.\"",
+      "options": [
+        "staged",
+        "was staging",
+        "stages",
+        "was staged"
+      ],
+      "answer_index": 3,
+      "explanation": "yesterday 指过去、parade 被举办 → was staged。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"At the ceremony, the meaning of each ritual ____ clearly to the young guests.\"",
+      "options": [
+        "is explained",
+        "explains",
+        "is explaining",
+        "have explained"
+      ],
+      "answer_index": 0,
+      "explanation": "meaning 被解释、一般现在 → is explained。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In Finland, every new mother ____ a baby box by the government each year.\"",
+      "options": [
+        "gives",
+        "is given",
+        "is giving",
+        "has giving"
+      ],
+      "answer_index": 1,
+      "explanation": "每年发生的习俗、mother 被给予 → is given。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"The Coming-of-Age Day ____ on the third Monday of May every year.\"",
+      "options": [
+        "observes",
+        "is observing",
+        "is observed",
+        "has observed"
+      ],
+      "answer_index": 2,
+      "explanation": "every year、Day 被庆祝 → is observed。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In a hospital in Brazil, the gifts ____ to every visitor after the baby was born.\"",
+      "options": [
+        "gave",
+        "were giving",
+        "give",
+        "were given"
+      ],
+      "answer_index": 3,
+      "explanation": "was born 表过去、gifts 被赠送 → were given。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"A king and queen ____ at the next homecoming dance, as is the custom.\"",
+      "options": [
+        "will be elected",
+        "will elect",
+        "elect",
+        "are electing"
+      ],
+      "answer_index": 0,
+      "explanation": "next、是承受者 → will be elected。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"In Jamaica, a tree ____ on that spot by the parents many years ago.\"",
+      "options": [
+        "planted",
+        "was planted",
+        "was planting",
+        "plants"
+      ],
+      "answer_index": 1,
+      "explanation": "years ago 指过去、tree 被栽种 → was planted。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"At the dance, popular music ____ by a DJ or a live band each Friday.\"",
+      "options": [
+        "plays",
+        "is playing",
+        "is played",
+        "have played"
+      ],
+      "answer_index": 2,
+      "explanation": "each Friday、music 被演奏 → is played。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "\"Long ago the capping ceremony ____ for boys when they reached twenty.\"",
+      "options": [
+        "performed",
+        "was performing",
+        "performs",
+        "was performed"
+      ],
+      "answer_index": 3,
+      "explanation": "Long ago 指过去、ceremony 被举行 → was performed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Look! The Full Moon ceremony ____ in the hall right now.\"",
+      "options": [
+        "is being held",
+        "is holding",
+        "is held",
+        "holds"
+      ],
+      "answer_index": 0,
+      "explanation": "right now + 是承受者 → 现在进行被动 is being held。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Be quiet, please. The sacred thread ____ around the boy's wrist at the moment.\"",
+      "options": [
+        "is tying",
+        "is being tied",
+        "is tied",
+        "ties"
+      ],
+      "answer_index": 1,
+      "explanation": "at the moment + 线被系 → is being tied。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Listen! A speech of encouragement ____ to the young adults right now.\"",
+      "options": [
+        "is giving",
+        "is given",
+        "is being given",
+        "gives"
+      ],
+      "answer_index": 2,
+      "explanation": "right now + speech 被发表 → is being given。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The hall is noisy because the parade floats ____ at this moment.\"",
+      "options": [
+        "are decorating",
+        "are decorated",
+        "decorate",
+        "are being decorated"
+      ],
+      "answer_index": 3,
+      "explanation": "at this moment + floats 被装饰 → are being decorated。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Don't go in now — traditional clothes ____ on the young dancers.\"",
+      "options": [
+        "are being put",
+        "are putting",
+        "are put",
+        "put"
+      ],
+      "answer_index": 0,
+      "explanation": "正在进行、clothes 被穿上 → are being put。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Look at the stage! The Coming-of-Age Day ceremony ____ in Seoul now.\"",
+      "options": [
+        "is celebrating",
+        "is being celebrated",
+        "is celebrated",
+        "celebrates"
+      ],
+      "answer_index": 1,
+      "explanation": "now + 现场 → 现在进行被动 is being celebrated。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"We can't enter — the gymnasium ____ for tonight's homecoming dance right now.\"",
+      "options": [
+        "is preparing",
+        "is prepared",
+        "is being prepared",
+        "prepares"
+      ],
+      "answer_index": 2,
+      "explanation": "right now + 场馆被布置 → is being prepared。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Quiet, everyone! The king and queen ____ on the stage at this very moment.\"",
+      "options": [
+        "are electing",
+        "are elected",
+        "elect",
+        "are being elected"
+      ],
+      "answer_index": 3,
+      "explanation": "at this very moment + 被选 → are being elected。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The whole town is busy: a homecoming parade ____ down Main Street now.\"",
+      "options": [
+        "is being staged",
+        "is staging",
+        "is staged",
+        "stages"
+      ],
+      "answer_index": 0,
+      "explanation": "now + parade 被举办 → is being staged。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Please wait outside. The ceremony hall ____ with flowers for the occasion now.\"",
+      "options": [
+        "is filling",
+        "is being filled",
+        "is filled",
+        "fills"
+      ],
+      "answer_index": 1,
+      "explanation": "now + 大厅被布置 → is being filled。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Look over there! Old photos ____ to the returning alumni at the moment.\"",
+      "options": [
+        "are showing",
+        "are shown",
+        "are being shown",
+        "show"
+      ],
+      "answer_index": 2,
+      "explanation": "at the moment + 照片被展示 → are being shown。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Listen carefully — the rules of the ceremony ____ to the guests right now.\"",
+      "options": [
+        "are reading",
+        "are read",
+        "read",
+        "are being read"
+      ],
+      "answer_index": 3,
+      "explanation": "right now + 规则被宣读 → are being read。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Don't move the table; the traditional food ____ for the festival at the moment.\"",
+      "options": [
+        "is being prepared",
+        "is preparing",
+        "is prepared",
+        "prepares"
+      ],
+      "answer_index": 0,
+      "explanation": "at the moment + 食物被准备 → is being prepared。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"The street is crowded because the marching band ____ for the parade now.\"",
+      "options": [
+        "is organising",
+        "is being organised",
+        "is organised",
+        "organises"
+      ],
+      "answer_index": 1,
+      "explanation": "now + 乐队被组织 → is being organised。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Shh! A graceful bow to the parents ____ on the stage at this moment.\"",
+      "options": [
+        "is performing",
+        "is performed",
+        "is being performed",
+        "performs"
+      ],
+      "answer_index": 2,
+      "explanation": "at this moment + 鞠躬被表演 → is being performed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Look! The young dancers' costumes ____ backstage right now.\"",
+      "options": [
+        "are changing",
+        "are changed",
+        "change",
+        "are being changed"
+      ],
+      "answer_index": 3,
+      "explanation": "right now + 服装被更换 → are being changed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Wait a minute — the Homecoming Court ____ for the photo at the moment.\"",
+      "options": [
+        "is being arranged",
+        "is arranging",
+        "is arranged",
+        "arranges"
+      ],
+      "answer_index": 0,
+      "explanation": "at the moment + 队伍被安排 → is being arranged。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"You can hear the noise because the stage ____ for the celebration right now.\"",
+      "options": [
+        "is building",
+        "is being built",
+        "is built",
+        "builds"
+      ],
+      "answer_index": 1,
+      "explanation": "right now + 舞台被搭建 → is being built。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Look! Gifts ____ to each visitor as the baby's ceremony goes on now.\"",
+      "options": [
+        "are handing",
+        "are handed",
+        "are being handed",
+        "hand"
+      ],
+      "answer_index": 2,
+      "explanation": "now + 礼物被递出 → are being handed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "\"Keep your voice down — the elders' speeches ____ to the young guests now.\"",
+      "options": [
+        "are translating",
+        "are translated",
+        "translate",
+        "are being translated"
+      ],
+      "answer_index": 3,
+      "explanation": "now + 演讲被翻译 → are being translated。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The sacred thread ____ around the boy's wrist, so the ritual is now complete.\"",
+      "options": [
+        "has been tied",
+        "has tied",
+        "is tying",
+        "ties"
+      ],
+      "answer_index": 0,
+      "explanation": "已完成、thread 被系 → has been tied。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The ceremony hall ____ already ____ with flowers, so we can go in.\"",
+      "options": [
+        "has decorated",
+        "has been decorated",
+        "is decorating",
+        "decorates"
+      ],
+      "answer_index": 1,
+      "explanation": "already + 大厅被布置好 → has been decorated。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"So far, three coming-of-age ceremonies ____ at our school this term.\"",
+      "options": [
+        "have held",
+        "are holding",
+        "have been held",
+        "hold"
+      ],
+      "answer_index": 2,
+      "explanation": "So far + 是承受者 → 现在完成被动 have been held。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The traditional clothes ____ just ____, so the dancers can put them on.\"",
+      "options": [
+        "have ironed",
+        "are ironing",
+        "iron",
+        "have been ironed"
+      ],
+      "answer_index": 3,
+      "explanation": "just + 衣服被熨好 → have been ironed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The king and queen ____ already ____, and now they are receiving flowers.\"",
+      "options": [
+        "have been elected",
+        "have elected",
+        "are electing",
+        "elect"
+      ],
+      "answer_index": 0,
+      "explanation": "already + 被选出 → have been elected。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Recently, many old traditions ____ back to life in our town.\"",
+      "options": [
+        "have brought",
+        "have been brought",
+        "are bringing",
+        "bring"
+      ],
+      "answer_index": 1,
+      "explanation": "Recently + 传统被恢复 → have been brought。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The invitations to the homecoming dance ____ already ____ to every student.\"",
+      "options": [
+        "have sent",
+        "are sending",
+        "have been sent",
+        "send"
+      ],
+      "answer_index": 2,
+      "explanation": "already + 请柬被寄出 → have been sent。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Up to now, the meaning of the ritual ____ to all the foreign guests.\"",
+      "options": [
+        "has explained",
+        "is explaining",
+        "explains",
+        "has been explained"
+      ],
+      "answer_index": 3,
+      "explanation": "Up to now + 含义被解释 → has been explained。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"A tree ____ just ____ on that spot to mark the baby's birth.\"",
+      "options": [
+        "has been planted",
+        "has planted",
+        "is planting",
+        "plants"
+      ],
+      "answer_index": 0,
+      "explanation": "just + 树被栽 → has been planted。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The whole parade route ____ already ____ for tomorrow's celebration.\"",
+      "options": [
+        "has planned",
+        "has been planned",
+        "is planning",
+        "plans"
+      ],
+      "answer_index": 1,
+      "explanation": "already + 路线被规划 → has been planned。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"So far this week, two speeches of encouragement ____ to the young adults.\"",
+      "options": [
+        "have given",
+        "are giving",
+        "have been given",
+        "give"
+      ],
+      "answer_index": 2,
+      "explanation": "So far + 演讲被发表 → have been given。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The gymnasium ____ just ____ for the homecoming dance, so it looks lovely.\"",
+      "options": [
+        "has cleaned",
+        "is cleaning",
+        "cleans",
+        "has been cleaned"
+      ],
+      "answer_index": 3,
+      "explanation": "just + 场馆被打扫 → has been cleaned。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Many gifts ____ already ____ to the visitors at the baby's ceremony.\"",
+      "options": [
+        "have been handed",
+        "have handed",
+        "are handing",
+        "hand"
+      ],
+      "answer_index": 0,
+      "explanation": "already + 礼物被分发 → have been handed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The bow to the parents ____ just ____, and the ceremony is now over.\"",
+      "options": [
+        "has performed",
+        "has been performed",
+        "is performing",
+        "performs"
+      ],
+      "answer_index": 1,
+      "explanation": "just + 鞠躬被完成 → has been performed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"This year, the day ____ chosen as a national holiday for young people.\"",
+      "options": [
+        "has",
+        "is being",
+        "has been",
+        "is"
+      ],
+      "answer_index": 2,
+      "explanation": "This year + 被定为节日 → has been (chosen)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"All the traditional food ____ already ____ for the festival guests.\"",
+      "options": [
+        "has prepared",
+        "is preparing",
+        "prepares",
+        "has been prepared"
+      ],
+      "answer_index": 3,
+      "explanation": "already + 食物被准备好 → has been prepared。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The stage ____ just ____, so the celebration can begin at once.\"",
+      "options": [
+        "has been built",
+        "has built",
+        "is building",
+        "builds"
+      ],
+      "answer_index": 0,
+      "explanation": "just + 舞台被搭好 → has been built。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Over the years, this custom ____ down from one generation to the next.\"",
+      "options": [
+        "has passed",
+        "has been passed",
+        "is passing",
+        "passes"
+      ],
+      "answer_index": 1,
+      "explanation": "Over the years + 习俗被传承 → has been passed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"The names of the Homecoming Court ____ already ____ on the school website.\"",
+      "options": [
+        "have posted",
+        "are posting",
+        "have been posted",
+        "post"
+      ],
+      "answer_index": 2,
+      "explanation": "already + 名单被公布 → have been posted。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "\"Up to now, every part of the ceremony ____ carefully by the elders.\"",
+      "options": [
+        "has arranged",
+        "is arranging",
+        "arranges",
+        "has been arranged"
+      ],
+      "answer_index": 3,
+      "explanation": "Up to now + 各环节被安排 → has been arranged。"
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Language and Culture",
+  "source": "上外版必修第一册 Unit 2 同主题完形(餐桌上的误会/一个汉字的故事/手势课/时间观念/英美用词卡片/打招呼语的由来)。用词限 U2/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Funny Meal Abroad",
+      "text": "On my first trip to America, a small word almost spoiled my lunch. My friend asked me whether I wanted to (1)____ some \"French fries\". I had no (2)____ what they were, so I just smiled. When the waiter came, he put a (3)____ of hot chips in front of me. I was (4)____ to learn that \"fries\" and \"chips\" were the same food. Later we were given \"biscuits\", but they did not (5)____ sweet at all; they were salty and soft. My friend (6)____ that in America \"biscuits\" are savoury snacks. I felt a little (7)____ about all my mistakes, but she told me it was not my (8)____. The same (9)____ is spoken in our two countries, yet the words can be quite different. By the end of the meal, we were both (10)____ at how funny language can be.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "order",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "order food 点餐。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "idea",
+            "time",
+            "friend"
+          ],
+          "answer_index": 1,
+          "explanation": "have no idea 不知道。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "book",
+            "box",
+            "plate",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "a plate of chips 一盘薯条。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "sad",
+            "bored",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "amazed to learn 惊讶地得知。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "taste",
+            "look",
+            "sound",
+            "feel"
+          ],
+          "answer_index": 0,
+          "explanation": "taste sweet 尝起来甜(系动词)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "asked",
+            "explained",
+            "hoped",
+            "wished"
+          ],
+          "answer_index": 1,
+          "explanation": "explained that 解释说。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "proud",
+            "happy",
+            "embarrassed",
+            "calm"
+          ],
+          "answer_index": 2,
+          "explanation": "feel embarrassed 感到尴尬。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "city",
+            "fault"
+          ],
+          "answer_index": 3,
+          "explanation": "not my fault 不是我的错。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "language",
+            "machine",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "the same language 同一种语言。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "crying",
+            "laughing",
+            "sleeping",
+            "leaving"
+          ],
+          "answer_index": 1,
+          "explanation": "laughing at how funny 笑语言多有趣。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Story of One Word",
+      "text": "My Chinese teacher loves to tell us the (1)____ behind a single word. One day she taught us \"chi\", which simply (2)____ \"to eat\". But she said the word often goes far beyond its (3)____ meaning. For example, \"chi cu\" sounds like eating vinegar, but it really (4)____ to be jealous. We were all (5)____ to hear that. She also told us that \"chi moshui\" does not mean eating ink; it (6)____ to receiving an education. I learned that we should not always take a word (7)____. Behind such a small word (8)____ a whole way of thinking. Now, whenever I meet a new Chinese word, I try to find the (9)____ hidden inside it. Learning these expressions has made the (10)____ much more interesting to me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "story",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the story behind 背后的故事。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "buys",
+            "loses",
+            "means"
+          ],
+          "answer_index": 3,
+          "explanation": "means \"to eat\" 意为。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "literal",
+            "high",
+            "cheap",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "literal meaning 字面意思。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forgets",
+            "means",
+            "leaves",
+            "sells"
+          ],
+          "answer_index": 1,
+          "explanation": "means to be jealous 意为嫉妒。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "bored",
+            "angry",
+            "amazed",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "amazed to hear 惊讶地听到。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sells",
+            "throws",
+            "hides",
+            "refers"
+          ],
+          "answer_index": 3,
+          "explanation": "refers to 指的是。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "literally",
+            "slowly",
+            "quietly",
+            "loudly"
+          ],
+          "answer_index": 0,
+          "explanation": "take a word literally 按字面理解。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "lies",
+            "buys",
+            "loses"
+          ],
+          "answer_index": 1,
+          "explanation": "behind … lies … 在……背后有(倒装)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "meaning",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "the meaning hidden inside 隐藏的含义。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "weather",
+            "market",
+            "machine",
+            "language"
+          ],
+          "answer_index": 3,
+          "explanation": "made the language interesting 让语言有趣。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Lesson on Gestures",
+      "text": "Today our teacher gave us a fun (1)____ on body language. She said that a gesture is a kind of (2)____, just like words. Most of us think that shaking the head always (3)____ \"no\", but she told us this is not true everywhere. In some places, the same gesture can carry the (4)____ meaning. A careless traveller may send the (5)____ message and cause a small misunderstanding. So before you visit a new country, it is (6)____ to learn how local people use their hands. The teacher also said that a friendly (7)____ seems to mean the same warm thing almost everywhere. We were all (8)____ by how much a single movement can say. After the (9)____, I felt that learning gestures is part of learning a (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lesson",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a fun lesson 有趣的一课。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machine",
+            "language",
+            "market",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "a kind of language 一种语言。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sells",
+            "loses",
+            "means",
+            "buys"
+          ],
+          "answer_index": 2,
+          "explanation": "means \"no\" 意为'不'。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "same",
+            "cheap",
+            "loud",
+            "opposite"
+          ],
+          "answer_index": 3,
+          "explanation": "the opposite meaning 相反的意思。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wrong",
+            "right",
+            "happy",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "the wrong message 错误的信息。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lucky",
+            "wise",
+            "rude",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "it is wise to 明智的做法。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "smile",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a friendly smile 友好的微笑。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "angry",
+            "tired",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "amazed by 被……惊到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lesson",
+            "market",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "after the lesson 课后。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "culture",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "learning a culture 学习一种文化。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A New Sense of Time",
+      "text": "After I moved to a small town abroad, my (1)____ towards time slowly changed. At home, I used to (2)____ if I was even five minutes late. People around me, however, were much more (3)____ about the clock. When a shop owner said he would help me \"soon\", he did not (4)____ it literally; \"soon\" could mean in an hour or even the next day. At first this made me (5)____, because I expected things to happen at once. But over the months my (6)____ towards being late changed a lot. I am still (7)____ on time for important appointments, but when I am a little late, I no longer (8)____. Living here has taught (9)____ a new way to look at time. Ironically, I now feel that I live more in the (10)____ moment than ever before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "garden",
+            "attitude",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "attitude towards time 对时间的态度。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "sleep",
+            "sing",
+            "panic"
+          ],
+          "answer_index": 3,
+          "explanation": "panic if late 迟到就慌。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "relaxed",
+            "angry",
+            "afraid",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "relaxed about the clock 对时间放松。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "mean",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "mean it literally 按字面意思理解。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "happy",
+            "proud",
+            "anxious",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "made me anxious 让我焦虑(系动词后形容词)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "attitude"
+          ],
+          "answer_index": 3,
+          "explanation": "my attitude 我的态度。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "usually",
+            "late",
+            "free",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "usually on time 通常准时。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "panic",
+            "sing",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "no longer panic 不再惊慌。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "we",
+            "they",
+            "me",
+            "he"
+          ],
+          "answer_index": 2,
+          "explanation": "taught me 教会了我(间接宾语)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "past",
+            "future",
+            "ancient",
+            "present"
+          ],
+          "answer_index": 3,
+          "explanation": "the present moment 当下时刻。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Word Cards for Two Englishes",
+      "text": "To remember the differences between British and American English, I made some word (1)____. On each card I wrote a British word on one side and the American word on the (2)____. For example, the British say \"petrol\" while Americans (3)____ \"gas\". A British \"flat\" is an American \"apartment\", and a British \"biscuit\" is an American \"cookie\". These are not (4)____; they are just two ways of speaking the same language. At first the differences (5)____ me, but the cards helped a lot. Now, whenever I am not (6)____ which word someone means, I simply ask in a (7)____ way. My English teacher was (8)____ that I had made so many cards by myself. She said that paying attention to such (9)____ would make me a better speaker. Step by step, I have grown more (10)____ when I talk with people from different countries.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "cards",
+            "prices",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "word cards 单词卡片。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sky",
+            "other",
+            "wall",
+            "floor"
+          ],
+          "answer_index": 1,
+          "explanation": "on the other (side) 另一面。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "buy",
+            "say",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "Americans say \"gas\" 美国人说。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "songs",
+            "prices",
+            "games",
+            "mistakes"
+          ],
+          "answer_index": 3,
+          "explanation": "not mistakes 不是错误。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "confused",
+            "helped",
+            "saved",
+            "praised"
+          ],
+          "answer_index": 0,
+          "explanation": "confused me 让我困惑。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "late",
+            "sure",
+            "free",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "not sure 不确定。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "rude",
+            "polite",
+            "quick"
+          ],
+          "answer_index": 2,
+          "explanation": "in a polite way 礼貌地。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "sorry",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "amazed that 惊讶于。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "differences",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "such differences 这些差异。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "confident",
+            "tired",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "more confident 更自信。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Where Greetings Come From",
+      "text": "Many everyday greetings have a surprising (1)____. Take the Italian word \"ciao\", which people now use to (2)____ hello or goodbye. Long ago, it came from a phrase whose literal (3)____ was \"I am your slave\". Of course, no one (4)____ it that way today; its real meaning is friendly and warm. The English word \"hello\" also has an interesting (5)____. It is said to come from an old French word that roughly (6)____ \"whoa there!\". Over time the word slowly (7)____ into the friendly greeting we know now. These small facts show that words can (8)____ greatly over the years. When we learn where a greeting comes from, we understand the (9)____ behind it a little better. For me, this is the most (10)____ part of studying a language.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "origin",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a surprising origin 令人惊讶的由来。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "buy",
+            "lose",
+            "mean"
+          ],
+          "answer_index": 3,
+          "explanation": "mean hello 表示你好。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "translation",
+            "price",
+            "weather",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "literal translation 字面译文。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sells",
+            "takes",
+            "buys",
+            "hides"
+          ],
+          "answer_index": 1,
+          "explanation": "takes it that way 那样理解。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "history",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "an interesting history 有趣的来历。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sells",
+            "buys",
+            "loses",
+            "means"
+          ],
+          "answer_index": 3,
+          "explanation": "roughly means 大致意思是。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "grew",
+            "sold",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 0,
+          "explanation": "grew into 逐渐变成。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "change",
+            "buy",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "change greatly 变化很大。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "culture",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "the culture behind it 背后的文化。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "expensive",
+            "quiet",
+            "exciting"
+          ],
+          "answer_index": 3,
+          "explanation": "the most exciting part 最激动人心的部分。"
+        }
+      ]
+    }
+  ]
+}

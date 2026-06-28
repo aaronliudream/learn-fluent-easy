@@ -1,0 +1,52 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Propose a Travel Plan for a Friend(为朋友拟一份旅行计划)",
+  "title_en": "A Three-Day Trip for My Friend",
+  "genre": "电子邮件 / 应用文(recommend a city + make a three-day travel plan for a friend)",
+  "source": "上外版必修第一册 Unit 3 Further Exploration:Proposing a travel plan for a friend(向朋友推荐一座城市并拟三天行程,写一封邮件)。",
+  "prompt_cn": "假设你的加拿大朋友 Chris 计划今年十二月来中国旅行。请给他写一封约80词的电子邮件,为他推荐一座城市并拟一份三天的旅行计划,内容包括:① 推荐的城市及推荐理由(历史/风景/美食);② 三天的大致安排(景点、美食、购物等);③ 一句鼓励或祝愿。注意:适当使用状语从句使行文连贯。",
+  "prompt_en": "Suppose your Canadian friend Chris is planning a trip to China this December. Write an email (about 80 words) to recommend a city and make a three-day travel plan for him, including: 1) the city you recommend and why (history, scenery or food); 2) a rough plan for the three days (attractions, food, shopping, etc.); 3) one line of encouragement or good wishes. Try to use some adverbial clauses to link your ideas.",
+  "points": [
+    "推荐城市并说明理由(I strongly recommend … because …)",
+    "三天行程安排(On the first day … On the second day … On the last day …)",
+    "鼓励或祝愿(I'm sure you'll love it! / Have a wonderful trip!)",
+    "恰当使用状语从句(when / because / so that / unless …)使行文连贯"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Hi Chris, nice to hear from you. As you prefer a city with a long history, I strongly recommend Xi'an. On the first day, visit the terracotta warriors, which are so lifelike that visitors often gasp in surprise. On the second day, explore the old Bell Tower and try the warm bread soaked in lamb soup. On the last day, do some shopping before you depart from the airport. You can't really know how wonderful the city is unless you go there yourself. Have a great trip! Yours, Li Hua",
+  "model_translation": "嗨,Chris,很高兴收到你的来信。既然你偏爱历史悠久的城市,我强烈推荐西安。第一天,去看兵马俑,它们栩栩如生,游客常常惊叹不已。第二天,游览古老的钟楼,尝尝羊肉泡馍。最后一天,在从机场出发前去逛逛街。不亲自去,你是无法真正体会这座城市有多美的。祝你旅途愉快!你的,李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:推荐城市与理由 / 三天行程安排 / 鼓励或祝愿" },
+      { "dimension": "结构", "max": 4, "criteria": "按 Day 1–Day 3 清晰展开、首尾呼应、行文连贯、邮件格式得当" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、状语从句(when/because/so that/unless 等)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "推荐 As you prefer …, I strongly recommend …",
+      "Day 1 On the first day, visit … which is so … that …",
+      "Day 2–3 On the second day … On the last day …",
+      "祝愿 You can't know how wonderful it is unless you go. Have a great trip!"
+    ],
+    "key_expressions": [
+      "As you prefer a city with a long history, I strongly recommend Xi'an.",
+      "The terracotta warriors are so lifelike that visitors often gasp in surprise.",
+      "Do some shopping before you depart from the airport.",
+      "You can't really know how wonderful the city is unless you go there yourself."
+    ],
+    "useful_words": ["recommend", "attraction", "scenery", "explore", "depart", "journey", "destination", "souvenir", "historic", "unless"]
+  },
+  "high_sentences": [
+    "As you prefer a city with a long history, I strongly recommend Xi'an.",
+    "The terracotta warriors are so lifelike that visitors often gasp in surprise.",
+    "On the last day, do some shopping before you depart from the airport.",
+    "You can't really know how wonderful the city is unless you go there yourself."
+  ],
+  "error_pairs": [
+    { "wrong": "I recommend Xi'an because of it has a long history.", "correct": "I recommend Xi'an because it has a long history.", "note": "because 引导从句,后接句子,不与 of 连用。" },
+    { "wrong": "Visit the warriors so that lifelike that you gasp.", "correct": "The warriors are so lifelike that you gasp.", "note": "so + 形容词 + that 表结果;so that 表目的,二者不可混用。" },
+    { "wrong": "You can't know the city unless you don't go there.", "correct": "You can't know the city unless you go there.", "note": "unless 已含否定(=if not),从句不再加 not。" }
+  ],
+  "paragraph_template": "【为朋友拟旅行计划·邮件结构】\n开头 Hi Chris, nice to hear from you.\n推荐 As you prefer …, I strongly recommend …\nDay 1 On the first day, visit … which is so … that …\nDay 2–3 On the second day … On the last day, … before you depart …\n祝愿 You can't know how wonderful it is unless you go. Have a great trip! Yours, …"
+}

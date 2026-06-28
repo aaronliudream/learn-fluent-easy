@@ -1,0 +1,18 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(学校生活主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On her first morning at senior high, Mia felt so nervous that her hands shook while she looked for her classroom. A friendly senior student noticed her and kindly walked her to the right room. By the end of that day, Mia had already made two new friends and could not stop smiling on her way home.",
+    "questions": [
+      {
+        "q": "How did Mia feel at the very start of her first morning?", "options": ["Anxious and unsure of where to go.", "Calm and full of confidence.", "Bored and uninterested.", "Angry at her new teachers."], "answer": "A",
+        "explanation": "原文她紧张到手发抖、在找教室,转述其焦虑;其余与原文相反或未提。"
+      },
+      {
+        "q": "What happened to Mia by the end of the day?", "options": ["She had made new friends and felt happy.", "She decided to leave the school.", "She lost her way home.", "She still knew nobody."], "answer": "A",
+        "explanation": "末句她已交到两个新朋友、回家一路微笑(短文后半段,覆盖不同位置),转述其结果。"
+      }
+    ]
+  }
+}

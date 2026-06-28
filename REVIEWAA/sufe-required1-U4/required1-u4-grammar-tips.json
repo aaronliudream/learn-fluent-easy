@@ -1,0 +1,38 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "被动语态·各时态 + 现在进行被动 + 现在完成被动 速查",
+    "intro": "当主语是动作的承受者(而非发出者)时,用被动语态:be + 过去分词。be 随时态变化。判断口诀:看主语是'做'还是'被做';再由时间状语/语境定 be 的时态。",
+    "table": {
+      "headers": ["时态", "结构 / 例句"],
+      "rows": [
+        ["一般现在被动", "am/is/are + 过分:The ceremony is performed every year."],
+        ["一般过去被动", "was/were + 过分:The ceremony was held last year."],
+        ["一般将来被动", "will be + 过分:A king will be elected next week."],
+        ["情态被动", "can/must/should + be + 过分:Clothes must be rented in advance."],
+        ["现在进行被动", "am/is/are + being + 过分:The thread is being tied now."],
+        ["现在完成被动", "has/have + been + 过分:The thread has been tied."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语是动作承受者 → 才用被动;主语自己发出动作 → 用主动", "mark": "The hall is decorated(大厅被装饰)" },
+      { "rule": "现在进行被动:正在'被……',常与 now / at the moment 连用", "mark": "is being held(正被举行)" },
+      { "rule": "现在完成被动:已完成且影响现在,常与 already / just / so far 连用", "mark": "has been planted(已被栽下)" },
+      { "rule": "情态动词后接 be + 过分;助动词 will 同理 will be + 过分", "mark": "must be done / will be done" }
+    ],
+    "why": [
+      "用被动是为了把焦点放在'被影响的人或事'上;当我们不知道、或不想说出动作的执行者时,被动也最自然。"
+    ],
+    "gaokaoPoints": [
+      "语法填空:给出动词原形,由时间状语/语境判断时态再变被动(was held / is being held / has been held)。",
+      "进行被动与完成被动易混:now → being done;already/just/so far → been done。",
+      "主动↔被动转换:by 短语引出执行者,可省略未知或不重要的执行者。"
+    ],
+    "examVsReal": [
+      { "exam": "The flag is being raised now.（考试强调正被升起）", "real": "They're raising the flag now.", "note": "口语里执行者清楚时常用主动,更简洁" },
+      { "exam": "Laws have been made to govern its use.（考试用完成被动）", "real": "They've made laws about it.", "note": "日常表达常用主动+they/people 泛指施动者" }
+    ]
+  }
+}

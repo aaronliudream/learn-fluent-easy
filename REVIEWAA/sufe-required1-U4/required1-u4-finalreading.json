@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(习俗/成人礼主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On a small island in the South Pacific, young boys come of age by jumping from a tall wooden tower with a vine tied to their ankles. Before the very first jump, the boy's mother holds an object that stands for his childhood, and after he lands the object is thrown away. In this brave way, the boys show that they are ready to leave childhood behind and become men.",
+    "questions": [
+      {
+        "q": "How do the boys on the island come of age?",
+        "options": [
+          "By leaping off a high tower while a vine holds their ankles.",
+          "By writing a long letter to their parents.",
+          "By staying quietly at home for a year.",
+          "By giving away all of their toys."
+        ],
+        "answer": "A",
+        "explanation": "原文 'jumping from a tall wooden tower with a vine tied to their ankles' 的转述;其余与原文不符。"
+      },
+      {
+        "q": "What does throwing the object away stand for?",
+        "options": [
+          "That the family has become rich.",
+          "That the boy is leaving childhood behind.",
+          "That the jump has been cancelled.",
+          "That the mother wants a new gift."
+        ],
+        "answer": "B",
+        "explanation": "末句 'show that they are ready to leave childhood behind' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

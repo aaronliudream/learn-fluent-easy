@@ -1,0 +1,332 @@
+{
+  "volume": "required1",
+  "unit": "U2",
+  "topic": "Language and Culture",
+  "source": "上外版必修第一册 Unit 2 同主题阅读(墨西哥\"ahorita\"/英美英语差异/手势的文化含义/汉语\"吃\"的引申义/颜色词的文化/学语言中的文化误会)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Word \"Ahorita\"",
+      "body": "When a foreigner first set foot on Mexican soil, she learned a small but confusing word: \"ahorita\". She asked an ice-cream seller for an ice-cream, and he answered \"ahorita\". Because the word can be directly translated as \"right now\", she thought the ice-cream would come at once. But she waited for half an hour, and still nothing came. When she asked again, the seller said \"ahorita\" once more, with a face full of confusion. Years later, back in Mexico, she finally understood that the word should almost never be taken literally. Its meaning changes greatly with the context. It could mean tomorrow, in an hour, within five years, or even never. It is even used as a polite way of saying \"no, thanks\". Understanding \"ahorita\" took not a fluency in the language, but a fluency in the culture behind it.",
+      "vocab_notes": [
+        {
+          "word": "literally",
+          "cn": "照字面地"
+        },
+        {
+          "word": "context",
+          "cn": "语境"
+        },
+        {
+          "word": "fluency",
+          "cn": "流利;熟悉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the foreigner keep waiting after the seller said \"ahorita\"?",
+          "options": [
+            "She believed it meant \"right now\".",
+            "She had paid too much money.",
+            "She could not speak any Spanish.",
+            "She wanted to test the seller."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'directly translated as \"right now\"… thought the ice-cream would come at once' 的转述。"
+        },
+        {
+          "stem": "What does the passage say about the meaning of \"ahorita\"?",
+          "options": [
+            "It always means \"in five minutes\".",
+            "It depends a lot on the situation.",
+            "It has no real meaning at all.",
+            "It is only used by children."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'meaning changes greatly with the context' 的转述。"
+        },
+        {
+          "stem": "What did the foreigner finally realise about understanding the word?",
+          "options": [
+            "It required knowing the culture, not just the language.",
+            "It needed perfect Spanish grammar.",
+            "It was impossible for any foreigner.",
+            "It could be learned from a dictionary."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'took not a fluency in the language, but a fluency in the culture' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Two Kinds of English",
+      "body": "A British child once travelled across the United States and noticed something funny about the way people spoke English. At a restaurant, a friend asked her to order \"French fries\". She had no idea what they were, until the waiter brought a plate of chips. Later the friend said she would buy some \"chips\", but came back with a packet of crisps! During the holiday they were offered \"biscuits and gravy\". In England biscuits are sweet, so this sounded very strange. The child later realised that \"biscuits\" in America are savoury snacks, and what the British call \"biscuits\", Americans call \"cookies\". She was even embarrassed when a stranger said she liked her \"pants\", because in British English that word means underwear. Although the same language is spoken in both countries, there are likely to be many differences, not just in vocabulary but also in spelling, grammar and pronunciation.",
+      "vocab_notes": [
+        {
+          "word": "savoury",
+          "cn": "咸味的"
+        },
+        {
+          "word": "vocabulary",
+          "cn": "词汇"
+        },
+        {
+          "word": "pronunciation",
+          "cn": "发音"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the waiter actually bring when the child ordered \"French fries\"?",
+          "options": [
+            "A bowl of soup.",
+            "A plate of chips.",
+            "A packet of crisps.",
+            "Some sweet biscuits."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the waiter brought a plate of chips'。"
+        },
+        {
+          "stem": "Why was the child embarrassed by the word \"pants\"?",
+          "options": [
+            "She had forgotten to wear them.",
+            "She did not own any.",
+            "In British English it means underwear.",
+            "It was too expensive to buy."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'in British English that word means underwear' 的转述。"
+        },
+        {
+          "stem": "What is the main point of the passage?",
+          "options": [
+            "American food is better than British food.",
+            "Children should not travel abroad.",
+            "Restaurants often make mistakes.",
+            "The same language can differ in many ways between countries."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'there are likely to be many differences, not just in vocabulary…' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "When a Gesture Means \"No\"",
+      "body": "Using gestures to show what you feel is common in some countries but not in others. Most people think that shaking the head means \"no\", but this is not true everywhere. In a few countries, the same gesture can carry the opposite meaning. For example, in some areas people tip their head from side to side to say \"yes\", which often surprises visitors. A traveller who nods or shakes without thinking may send the wrong message and cause a small misunderstanding. The lesson is simple: a gesture is a kind of language, and like words, it does not mean the same thing in every culture. Before you travel, it is a good idea to learn how local people use their hands and heads. A friendly smile, however, seems to mean the same warm thing almost everywhere, which is why it is often called a universal gesture.",
+      "vocab_notes": [
+        {
+          "word": "gesture",
+          "cn": "手势"
+        },
+        {
+          "word": "opposite",
+          "cn": "相反的"
+        },
+        {
+          "word": "universal",
+          "cn": "通用的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage say about shaking the head?",
+          "options": [
+            "In some places it can mean the opposite.",
+            "It always means \"no\" everywhere.",
+            "It is never used by travellers.",
+            "It is the same as a smile."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the same gesture can carry the opposite meaning' 的转述。"
+        },
+        {
+          "stem": "Why might a traveller cause a misunderstanding?",
+          "options": [
+            "By speaking too quietly.",
+            "By using a gesture that means something different locally.",
+            "By eating the wrong food.",
+            "By arriving too early."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'may send the wrong message and cause a small misunderstanding' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest about a smile?",
+          "options": [
+            "It is rude in most countries.",
+            "It should be avoided abroad.",
+            "Its friendly meaning is shared in almost every culture.",
+            "It can only be understood at home."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'a friendly smile… seems to mean the same warm thing almost everywhere' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Many Meanings of \"Chi\"",
+      "body": "A simple Chinese word, \"chi\", which means \"to eat\", has a lot of extended meanings that may surprise a learner. As the saying goes, people cannot do without food, and the Chinese love of food has given many colourful expressions to the language. Sometimes the word goes far beyond its literal meaning. For example, \"chi cu\" sounds like \"to eat vinegar\", but it really means to be jealous. \"Chi moshui\" sounds like \"to eat ink\", yet it means to receive education. The word can even mean \"to depend on\": \"kaoshan chishan\" means that people living near a mountain make a living from the mountain. So when foreign students meet \"chi\", they should not always take it literally. Behind such a small word lies a whole way of thinking, and learning these expressions helps students understand Chinese culture as well as the language.",
+      "vocab_notes": [
+        {
+          "word": "extended",
+          "cn": "引申的"
+        },
+        {
+          "word": "jealous",
+          "cn": "嫉妒的"
+        },
+        {
+          "word": "literally",
+          "cn": "照字面地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does \"chi cu\" really mean?",
+          "options": [
+            "To eat real vinegar.",
+            "To receive education.",
+            "To climb a mountain.",
+            "To be jealous."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '\"chi cu\"… really means to be jealous'。"
+        },
+        {
+          "stem": "What does \"chi moshui\" actually refer to?",
+          "options": [
+            "Getting an education.",
+            "Drinking dark water.",
+            "Feeling hungry.",
+            "Making a living."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 '\"chi moshui\"… means to receive education' 的转述。"
+        },
+        {
+          "stem": "According to the passage, why is learning these expressions useful?",
+          "options": [
+            "Because they make food taste better.",
+            "Because they help learners understand the culture too.",
+            "Because they are easy to spell.",
+            "Because they are only used in exams."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'learning these expressions helps students understand Chinese culture as well as the language' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Colours Say",
+      "body": "Colours carry different cultural messages in different parts of the world, and this can lead to surprising mistakes. In many Western countries, a bride wears white at her wedding because white stands for purity and a new start. In some Asian cultures, however, white has long been linked with sadness and is worn at funerals instead. Red is another good example. In China, red is the colour of luck and happiness, so people use it at weddings and during the Spring Festival. In a few Western countries, red can warn of danger or anger. Black, too, is read in different ways: it may mean sad in one place but smart and formal in another. These meanings are not fixed; they have changed over time and may keep changing. So a colour is never just a colour. Knowing what a colour means in another culture can help us avoid sending the wrong message.",
+      "vocab_notes": [
+        {
+          "word": "purity",
+          "cn": "纯洁"
+        },
+        {
+          "word": "funeral",
+          "cn": "葬礼"
+        },
+        {
+          "word": "formal",
+          "cn": "正式的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do brides in many Western countries wear white?",
+          "options": [
+            "White is the cheapest colour.",
+            "White means danger to them.",
+            "To them, it suggests being pure and making a fresh start.",
+            "White is worn only at funerals."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'white stands for purity and a new start' 的转述。"
+        },
+        {
+          "stem": "How is the colour red seen in China, according to the text?",
+          "options": [
+            "As a sign of sadness.",
+            "As a warning of danger.",
+            "As a formal business colour.",
+            "As a sign of good luck and joy."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'In China, red is the colour of luck and happiness' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about the meanings of colours?",
+          "options": [
+            "They differ by culture and can change over time.",
+            "They are exactly the same everywhere.",
+            "They never change at all.",
+            "They are decided by the government."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'These meanings are not fixed; they have changed over time' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Learning the Culture, Not Just the Words",
+      "body": "Many students believe that learning a language is only about memorising words and grammar, but real understanding asks for more. A Chinese learner of English may know every word in a polite request, yet still feel unsure whether to say \"Open the window\" or \"Would you mind opening the window?\". The right choice depends on who you are talking to and where you are. In the same way, a foreigner studying Chinese may be confused when a host smiles and says \"Where? Where?\" after a compliment, because the words are humble rather than a real question. These small moments show that language and culture cannot be separated. When we learn how people use a language in real life, we make fewer mistakes and feel more confident. That is why many teachers say the most exciting part of learning a language is discovering the culture hidden inside it.",
+      "vocab_notes": [
+        {
+          "word": "request",
+          "cn": "请求"
+        },
+        {
+          "word": "compliment",
+          "cn": "赞美"
+        },
+        {
+          "word": "separate",
+          "cn": "分开"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what decides which polite form to use?",
+          "options": [
+            "The number of words you know.",
+            "The person and the situation you are in.",
+            "The time of the day.",
+            "The price of the lesson."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'depends on who you are talking to and where you are' 的转述。"
+        },
+        {
+          "stem": "Why might a foreigner be confused by \"Where? Where?\"?",
+          "options": [
+            "The host is asking for directions.",
+            "The host is angry at the compliment.",
+            "The words are humble, not a real question.",
+            "The words have no meaning at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the words are humble rather than a real question' 的转述。"
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Grammar is the only important thing.",
+            "Foreigners should not learn Chinese.",
+            "Teachers dislike teaching culture.",
+            "Language and culture should be learned together."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'language and culture cannot be separated' 的转述。"
+        }
+      ]
+    }
+  ]
+}

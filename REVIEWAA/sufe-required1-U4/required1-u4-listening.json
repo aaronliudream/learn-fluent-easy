@@ -1,0 +1,421 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Customs and Traditions",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第一册 Unit 4 同主题听力(聊成人礼/韩国成人日广播/校友返校对话/各地生日习俗/请教写介绍/演讲开场贴士)。用词限 U4/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Talking about Coming of Age",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: Tom, when do you think a person really becomes an adult?",
+        "Tom: In my country, eighteen is the age when you get adult rights.",
+        "Mia: That's interesting. Here in Korea, we celebrate it at nineteen.",
+        "Tom: Do you have a special ceremony for it?",
+        "Mia: Yes. On Coming-of-Age Day, we bow to our parents to thank them.",
+        "Tom: That sounds lovely. We don't have one single ceremony.",
+        "Mia: So how do young people in your country mark it?",
+        "Tom: Many just have a big birthday party with family and friends."
+      ],
+      "translation_cn": "Mia 问 Tom 何时算真正成年;Tom 说他的国家十八岁拥有成年权利;Mia 说韩国在十九岁庆祝、有成人日,要向父母鞠躬致谢;Tom 说他的国家没有单一的仪式,年轻人多是和家人朋友办大型生日派对。",
+      "questions": [
+        {
+          "stem": "At what age does Tom's country give adult rights?",
+          "options": [
+            "Eighteen.",
+            "Nineteen.",
+            "Sixteen.",
+            "Twenty-one."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "At what age does Korea celebrate coming of age?",
+          "options": [
+            "Eighteen.",
+            "Nineteen.",
+            "Fifteen.",
+            "Twenty."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do young Koreans do on Coming-of-Age Day?",
+          "options": [
+            "They bow to their parents.",
+            "They leave home.",
+            "They take an exam.",
+            "They plant a tree."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Does Tom's country have one single ceremony?",
+          "options": [
+            "Yes, a national one.",
+            "No, it does not.",
+            "Yes, only at school.",
+            "Yes, every month."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do many young people in Tom's country mark the day?",
+          "options": [
+            "With a quiet walk.",
+            "With a school test.",
+            "With a big birthday party.",
+            "With a long journey."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 Coming-of-Age Day in Korea",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In South Korea, the third Monday of May is Coming-of-Age Day.",
+        "It celebrates the young people who turn nineteen that year.",
+        "Reaching this age means they can enjoy the rights of an adult.",
+        "At the ceremony, the young adults bow to their parents.",
+        "The bow is a way of saying thank you for their care."
+      ],
+      "translation_cn": "在韩国,五月的第三个星期一是成人日;它庆祝当年满十九岁的年轻人;到这个年龄意味着他们能享有成年人的权利;在仪式上,年轻人向父母鞠躬;这一鞠躬是为了感谢父母的关爱。",
+      "questions": [
+        {
+          "stem": "When is Coming-of-Age Day in Korea?",
+          "options": [
+            "The first Sunday of June.",
+            "Every Friday.",
+            "The last day of April.",
+            "The third Monday of May."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who does the day celebrate?",
+          "options": [
+            "Young people who turn nineteen.",
+            "Children under ten.",
+            "Only teachers.",
+            "Older grandparents."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does reaching this age mean?",
+          "options": [
+            "They must leave school.",
+            "They can enjoy adult rights.",
+            "They lose their rights.",
+            "They move abroad."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do the young adults do at the ceremony?",
+          "options": [
+            "They sing alone.",
+            "They run a race.",
+            "They bow to their parents.",
+            "They write a test."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the bow show?",
+          "options": [
+            "A wish for money.",
+            "A goodbye to friends.",
+            "Anger at the rules.",
+            "Thanks for their parents' care."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Planning a Homecoming",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Ben: Lily, our school's homecoming week is coming. Are you joining in?",
+        "Lily: Of course! I love the parade through the town the most.",
+        "Ben: Me too. The school band and the classic cars are great.",
+        "Lily: Have you heard who will be the Homecoming King and Queen?",
+        "Ben: Not yet. The election is being held this Friday.",
+        "Lily: Right. And the younger students form the Court, don't they?",
+        "Ben: Yes. There's also a dance at the end of the week.",
+        "Lily: I can't wait. It brings the whole school together."
+      ],
+      "translation_cn": "Ben 问 Lily 是否参加学校的返校周;Lily 最爱穿过城镇的游行;Ben 也喜欢乐队和老爷车;Lily 问谁会当返校节国王和王后;Ben 说选举周五举行,低年级学生组成随从队伍;周末还有舞会;两人都期待它让全校齐聚一堂。",
+      "questions": [
+        {
+          "stem": "What does Lily like most about homecoming?",
+          "options": [
+            "The parade through the town.",
+            "The school exam.",
+            "The long holiday.",
+            "The quiet library."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben like in the parade?",
+          "options": [
+            "The new books.",
+            "The school band and classic cars.",
+            "The empty streets.",
+            "The food shops."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is the election held?",
+          "options": [
+            "On Monday.",
+            "On Sunday.",
+            "This Friday.",
+            "Next month."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who forms the Court?",
+          "options": [
+            "The teachers.",
+            "The parents.",
+            "The visitors.",
+            "The younger students."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens at the end of the week?",
+          "options": [
+            "A dance.",
+            "A test.",
+            "A trip abroad.",
+            "A long speech only."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Birthday Customs Around the World",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Different cultures have their own birthday customs.",
+        "In Finland, every new mother is given a baby box by the government.",
+        "In some Chinese families, a one-year-old baby chooses an object.",
+        "The item the baby reaches for is said to show its future.",
+        "These customs vary, but they all welcome a child with love."
+      ],
+      "translation_cn": "不同文化有各自的生日习俗;在芬兰,政府给每位新妈妈一个婴儿盒;在一些中国家庭,周岁婴儿要抓一件物品;婴儿抓到的东西据说预示其未来;这些习俗各不相同,但都满怀爱意地迎接孩子。",
+      "questions": [
+        {
+          "stem": "What does the passage talk about?",
+          "options": [
+            "School exams.",
+            "Birthday customs in different cultures.",
+            "Football games.",
+            "Cooking lessons."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the government in Finland give new mothers?",
+          "options": [
+            "A bag of money.",
+            "A book of stories.",
+            "A baby box.",
+            "A free car."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does a one-year-old Chinese baby do?",
+          "options": [
+            "Sing a song.",
+            "Write a name.",
+            "Plant a tree.",
+            "Choose an object."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the item said to show?",
+          "options": [
+            "The baby's future.",
+            "The baby's name.",
+            "The day's weather.",
+            "The cost of the gift."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do all these customs do?",
+          "options": [
+            "Make children leave home.",
+            "Welcome a child with love.",
+            "End all parties.",
+            "Keep families apart."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Writing an Introduction",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Zhou: Miss Lee, I have to write an introduction to a Chinese ceremony. Any advice?",
+        "Miss Lee: Good. First choose one custom you really know well.",
+        "Zhou: I'd like to write about the old hair-pinning ceremony for girls.",
+        "Miss Lee: Nice choice. Start with a clear topic sentence.",
+        "Zhou: And then add some details about the time and the meaning?",
+        "Miss Lee: Exactly. Every sentence should support that one main idea.",
+        "Zhou: Should I finish with a concluding sentence?",
+        "Miss Lee: Yes. It should echo the topic and tie everything together."
+      ],
+      "translation_cn": "周同学请 Lee 老师指点如何写中国仪式的介绍;老师建议先选一个最熟悉的习俗;周想写古代女孩的笄礼;老师说先写明确的主题句;再补充时间和意义等细节;每句都要支持中心;最后用一个回扣主题、收束全文的结尾句。",
+      "questions": [
+        {
+          "stem": "What does Zhou have to write?",
+          "options": [
+            "A maths report.",
+            "A shopping list.",
+            "An introduction to a Chinese ceremony.",
+            "A travel diary."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should Zhou choose first?",
+          "options": [
+            "A famous singer.",
+            "A new city.",
+            "A long poem.",
+            "One custom he knows well."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which custom does Zhou want to write about?",
+          "options": [
+            "The hair-pinning ceremony.",
+            "A football match.",
+            "A cooking class.",
+            "A music festival."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should every sentence do?",
+          "options": [
+            "Tell a joke.",
+            "Support the main idea.",
+            "Ask a question.",
+            "Be very long."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should the concluding sentence do?",
+          "options": [
+            "Start a new topic.",
+            "Add unrelated facts.",
+            "Echo the topic and tie things together.",
+            "Repeat the title only."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Tip for a Good Presentation",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for giving a good presentation about customs.",
+        "A strong opening should catch your audience's attention at once.",
+        "You can begin by asking the audience a clever question.",
+        "Then tell them clearly what your main topic will be.",
+        "A good start makes your listeners want to hear more."
+      ],
+      "translation_cn": "这里有个做好习俗主题演讲的小贴士:好的开场要立刻抓住听众的注意力;你可以先向听众抛出一个巧妙的问题;接着清楚地告诉他们你的主题;一个好的开头会让听众想听下去。",
+      "questions": [
+        {
+          "stem": "What is this tip about?",
+          "options": [
+            "Cooking a meal.",
+            "Buying clothes.",
+            "Planting a tree.",
+            "Giving a good presentation."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should a strong opening do?",
+          "options": [
+            "Catch the audience's attention.",
+            "End the talk.",
+            "Hide the topic.",
+            "Waste time."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How can you begin the presentation?",
+          "options": [
+            "By leaving the stage.",
+            "By asking a clever question.",
+            "By staying silent.",
+            "By reading numbers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do after the opening?",
+          "options": [
+            "Stop talking.",
+            "Change the room.",
+            "Tell them your main topic.",
+            "Lower the lights."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does a good start do?",
+          "options": [
+            "Makes people leave.",
+            "Costs a lot of money.",
+            "Ends the show early.",
+            "Makes listeners want to hear more."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

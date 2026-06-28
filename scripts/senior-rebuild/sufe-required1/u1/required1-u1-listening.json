@@ -1,0 +1,475 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "School Life",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85)。speaker 仅角色标注。kind 顺序 long,short,long,short,long,short。",
+  "source": "上外版必修第一册 Unit 1 同主题听力(选社团/校园广播/问路找教室/学习计划独白/采访新生/家长寄语)。用词限 U1/初中/常见词,答案可在 transcript 找到依据,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Choosing a Club",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Hi Ben, have you decided which club to join this term?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm still not sure, Amy. I'm torn between the drama club and the football club."
+        },
+        {
+          "speaker": "A",
+          "text": "Well, you always loved acting in junior high. Why not try drama?"
+        },
+        {
+          "speaker": "B",
+          "text": "That's true. I once hoped I would perform on a real stage one day."
+        },
+        {
+          "speaker": "A",
+          "text": "Then go for it! The drama club meets every Wednesday afternoon in Room 204."
+        },
+        {
+          "speaker": "B",
+          "text": "Great. What about you? Which club are you choosing?"
+        },
+        {
+          "speaker": "A",
+          "text": "I've already joined the school newspaper. I want to interview new students."
+        },
+        {
+          "speaker": "B",
+          "text": "That sounds fun. Maybe you can interview me after my first performance!"
+        }
+      ],
+      "translation_cn": "Amy 问 Ben 这学期想加入哪个社团;Ben 在戏剧社和足球社之间难以抉择;Amy 提醒他初中就爱表演,建议选戏剧社;Ben 想起曾希望有天能登台;Amy 告诉他戏剧社每周三下午在204室;Amy 自己已加入校报,想采访新生;Ben 开玩笑说等他演出后可来采访他。",
+      "questions": [
+        {
+          "stem": "Which two clubs is Ben torn between?",
+          "options": [
+            "The drama club and the football club.",
+            "The music club and the art club.",
+            "The newspaper club and the drama club.",
+            "The football club and the chess club."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Amy suggest the drama club for Ben?",
+          "options": [
+            "It is the easiest club to join.",
+            "He has always loved acting since junior high.",
+            "It meets on Friday evenings.",
+            "His parents told him to."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When and where does the drama club meet?",
+          "options": [
+            "Wednesday afternoon in Room 204.",
+            "Monday morning in the library.",
+            "Friday afternoon in the hall.",
+            "Tuesday evening in Room 102."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which club has Amy already joined?",
+          "options": [
+            "The football club.",
+            "The school newspaper.",
+            "The drama club.",
+            "The art club."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ben joke about at the end?",
+          "options": [
+            "Quitting all the clubs.",
+            "Joining the newspaper too.",
+            "Being interviewed after his first performance.",
+            "Missing the first meeting."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·独白 Morning Announcement",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Good morning, everyone, and welcome to a new term. This is your head teacher speaking. First, the library will open half an hour earlier this term, so you can read or study before lessons begin. Second, all first-year students should pick up their timetables from the office today and check them carefully. Third, club sign-up starts this Friday; there are many clubs to choose from, so think about what you enjoy. Finally, remember that the first week may feel a little confusing, but your teachers are always here to help. If something is unclear, just ask. Have a wonderful term, and let's make this a great year together.",
+      "translation_cn": "校长广播:欢迎新学期;图书馆本学期提前半小时开门,可在上课前阅读自习;高一新生今天到办公室领取课表并仔细核对;社团报名本周五开始,选择很多,想想自己的兴趣;开学第一周可能有点令人困惑,但老师随时帮忙,有不懂就问;祝大家学期愉快,一起把这一年过好。",
+      "questions": [
+        {
+          "stem": "Who is making the announcement?",
+          "options": [
+            "A first-year student.",
+            "The librarian.",
+            "A club leader.",
+            "The head teacher."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What change is made to the library this term?",
+          "options": [
+            "It opens half an hour earlier.",
+            "It closes for the whole term.",
+            "It moves to a new building.",
+            "It bans all first-year students."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should first-year students do today?",
+          "options": [
+            "Sign up for clubs immediately.",
+            "Collect and check their timetables.",
+            "Clean the classrooms.",
+            "Take an English exam."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When does club sign-up begin?",
+          "options": [
+            "Next Monday.",
+            "Today after lunch.",
+            "This Friday.",
+            "At the end of term."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the head teacher say about the confusing first week?",
+          "options": [
+            "Students must solve everything alone.",
+            "It is best to stay home.",
+            "Nobody can do anything about it.",
+            "Teachers are always there to help, so just ask."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Finding the Classroom",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Excuse me, could you help me? I can't find my classroom."
+        },
+        {
+          "speaker": "B",
+          "text": "Sure. Which class are you in?"
+        },
+        {
+          "speaker": "A",
+          "text": "Class One, Grade Ten. It's my first day, so I'm a bit lost."
+        },
+        {
+          "speaker": "B",
+          "text": "Don't worry, that's quite normal. Your room is on the second floor, Room 201."
+        },
+        {
+          "speaker": "A",
+          "text": "Thank you so much. How do I get to the second floor?"
+        },
+        {
+          "speaker": "B",
+          "text": "Take the stairs at the end of this corridor, then turn left. You'll see it right away."
+        },
+        {
+          "speaker": "A",
+          "text": "That's very kind of you. I was afraid I'd be late on my very first morning."
+        },
+        {
+          "speaker": "B",
+          "text": "You've got plenty of time. Welcome to our school, and good luck!"
+        }
+      ],
+      "translation_cn": "一名新生找不到教室向人求助;对方问他在哪个班;新生说高一(1)班,第一天有点迷路;对方安慰说很正常,教室在二楼201室;新生问怎么上二楼;对方指引走走廊尽头的楼梯然后左转就能看到;新生感谢并说怕第一天就迟到;对方说时间还很充裕,欢迎来到学校并祝好运。",
+      "questions": [
+        {
+          "stem": "What is the new student's problem?",
+          "options": [
+            "He cannot find his classroom.",
+            "He has lost his schoolbag.",
+            "He missed the school bus.",
+            "He forgot his homework."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which class is the new student in?",
+          "options": [
+            "Class Two, Grade Nine.",
+            "Class One, Grade Ten.",
+            "Class Three, Grade Ten.",
+            "Class One, Grade Eleven."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where is the student's classroom?",
+          "options": [
+            "On the first floor, Room 101.",
+            "In the library.",
+            "On the second floor, Room 201.",
+            "Next to the office."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How should the student reach the second floor?",
+          "options": [
+            "Take the lift and turn right.",
+            "Walk straight out of the building.",
+            "Ask the head teacher first.",
+            "Take the stairs at the end of the corridor and turn left."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why was the new student worried?",
+          "options": [
+            "He was afraid of being late on his first morning.",
+            "He had no friends at all.",
+            "He disliked the school food.",
+            "He had lost his timetable."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·独白 My Study Plan",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "When senior high started, I quickly learned that I had to be more independent than before. So I made a simple study plan to keep myself on track. Every evening I write down all my homework and tick off each task as I finish it. That way I always know which assignments are due and what I still have to get done. I also set up a quiet corner in my bedroom where I can concentrate without being disturbed. At first it was hard to keep the habit, but after a few weeks it felt natural. My grades have improved since I started planning, and I feel much less worried before deadlines. If you are a new student, I would really suggest making a plan of your own.",
+      "translation_cn": "高中开学后,我很快意识到要比以前更独立,于是制定了一个简单的学习计划。每晚我写下所有作业,完成一项就打个钩,这样总能知道哪些作业到期、还剩什么没做。我还在卧室布置了一个安静的角落,可以不受打扰地专心学习。一开始坚持很难,但几周后就成了习惯。自从开始做计划,我的成绩进步了,临近截止也不那么焦虑。如果你是新生,我真心建议你也定一个自己的计划。",
+      "questions": [
+        {
+          "stem": "What did the speaker realise when senior high started?",
+          "options": [
+            "She no longer needed to study.",
+            "She had to be more independent than before.",
+            "Homework would all disappear.",
+            "Teachers would do her work for her."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the speaker keep track of her homework?",
+          "options": [
+            "She tries to remember it all.",
+            "She asks a friend every night.",
+            "She writes it down and ticks off each finished task.",
+            "She only does it at weekends."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why did she set up a quiet corner at home?",
+          "options": [
+            "So she could watch television.",
+            "So her friends could visit.",
+            "So she could sleep more.",
+            "So she could concentrate without being disturbed."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happened after she started planning?",
+          "options": [
+            "Her grades improved and she felt less worried.",
+            "Her grades got worse.",
+            "She gave up all her plans.",
+            "She stopped doing homework."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker suggest to new students?",
+          "options": [
+            "Avoiding all homework.",
+            "Making a study plan of their own.",
+            "Studying only in the library.",
+            "Copying her plan exactly."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Interviewing a Newcomer",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Hi, I'm Li Mei from the school newspaper. Is anything exciting about your new school life?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes! The school library is wonderful. I loved it the first time I visited."
+        },
+        {
+          "speaker": "A",
+          "text": "Really? What makes it so attractive to you?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's quiet and comfortable, with plants, nice desks and modern facilities."
+        },
+        {
+          "speaker": "A",
+          "text": "That does sound lovely. Was it easy to borrow books there?"
+        },
+        {
+          "speaker": "B",
+          "text": "Very easy. The self-service system let me borrow a book in just five minutes."
+        },
+        {
+          "speaker": "A",
+          "text": "Amazing! So would you say the library is your favourite place so far?"
+        },
+        {
+          "speaker": "B",
+          "text": "Definitely. I feel totally relaxed whenever I study or read there."
+        }
+      ],
+      "translation_cn": "校报记者李梅采访一名新生,问校园新生活有什么令人兴奋的;新生说图书馆很棒,第一次去就爱上了;李梅问它为何如此吸引人;新生说安静舒适,有绿植、好桌椅和现代设施;李梅问借书是否方便;新生说很方便,自助系统五分钟就借到一本书;李梅问图书馆是否是他目前最爱的地方;新生肯定回答,说在那里学习阅读都感到完全放松。",
+      "questions": [
+        {
+          "stem": "Who is Li Mei?",
+          "options": [
+            "A new student.",
+            "The head teacher.",
+            "A reporter from the school newspaper.",
+            "The librarian."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the new student like best about school?",
+          "options": [
+            "The football field.",
+            "The dining hall.",
+            "The computer room.",
+            "The school library."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What makes the library attractive to the student?",
+          "options": [
+            "It is quiet and comfortable with modern facilities.",
+            "It is large but very noisy.",
+            "It has no books at all.",
+            "It is open only at night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long did it take to borrow a book?",
+          "options": [
+            "A whole afternoon.",
+            "About five minutes with the self-service system.",
+            "Three days.",
+            "It was not possible to borrow any."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the student feel when reading in the library?",
+          "options": [
+            "Quite bored.",
+            "Very nervous.",
+            "Totally relaxed.",
+            "Rather angry."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·独白 A Mother's Words",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Dear daughter, as you start senior high school, there are a few things I want you to remember. You may feel under pressure to make everything perfect, but there is no such thing as perfect — only good enough, and you already are. You are not alone; everyone around you is facing the same new school and new pressures. Some people may not always be friendly, but their unkind words say more about them than about you. There will never be a shortage of kind people and genuine smiles in your life. So go forward into this new chapter with courage, and don't let the limits you put on yourself hold you back. I believe in you, and I always will.",
+      "translation_cn": "亲爱的女儿,在你开始高中生活之际,有几件事希望你记住。你也许会感到压力,想让一切都完美,但世上没有完美,只有“足够好”,而你已经足够好。你并不孤单,周围每个人都面对同样的新学校和新压力。有些人未必总是友善,但他们刻薄的话更说明他们自己,而非你。你的人生中善良的人和真诚的微笑永远不会短缺。所以鼓起勇气迈入人生新篇章,别让自己设下的局限阻碍你。我相信你,而且永远会相信。",
+      "questions": [
+        {
+          "stem": "Who is speaking in this passage?",
+          "options": [
+            "A teacher to a class.",
+            "A student to a friend.",
+            "A reporter to a newcomer.",
+            "A mother to her daughter."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the mother say about being perfect?",
+          "options": [
+            "There is no such thing as perfect; good enough is fine.",
+            "Her daughter must be perfect every day.",
+            "Only perfect students do well.",
+            "Perfection is easy to reach."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the mother say about unkind words from others?",
+          "options": [
+            "They are always true.",
+            "They say more about the speaker than about her daughter.",
+            "They should never be forgotten.",
+            "They mean her daughter has failed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the mother say will never be in short supply?",
+          "options": [
+            "Difficult homework.",
+            "Strict school rules.",
+            "Kind people and genuine smiles.",
+            "Boring lessons."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What often holds people back, according to the mother?",
+          "options": [
+            "The size of the school.",
+            "The number of clubs.",
+            "The length of the term.",
+            "The limits they put on themselves."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

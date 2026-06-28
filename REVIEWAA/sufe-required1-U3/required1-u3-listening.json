@@ -1,0 +1,493 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Travel",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第一册 Unit 3 同主题听力(订机票/旅行的意义短文/酒店入住/给青少年旅行者短文/纪念品讨价/收拾行李贴士短文)。用词限 U3/初中/常见词,答案唯一可在 transcript 找依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Booking a Flight",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tina",
+          "text": "Hello, I'd like to book a flight to Rome for next Friday."
+        },
+        {
+          "speaker": "Agent",
+          "text": "Of course. Would you like a morning flight or an afternoon one?"
+        },
+        {
+          "speaker": "Tina",
+          "text": "A morning flight, please, so that I can have the whole day in the city."
+        },
+        {
+          "speaker": "Agent",
+          "text": "There is one that leaves at nine o'clock. The ticket costs two hundred pounds."
+        },
+        {
+          "speaker": "Tina",
+          "text": "That sounds fine. Can I take one carry-on bag for free?"
+        },
+        {
+          "speaker": "Agent",
+          "text": "Yes, one carry-on item is free, but a second bag has an extra fee."
+        },
+        {
+          "speaker": "Tina",
+          "text": "All right, I'll only bring one. Could you book that morning flight for me?"
+        },
+        {
+          "speaker": "Agent",
+          "text": "Certainly. Your nine o'clock flight to Rome is now booked. Have a good trip!"
+        }
+      ],
+      "translation_cn": "Tina 想订下周五去罗马的机票;她要早班机,这样能玩一整天;九点的航班票价两百英镑;一件随身行李免费,第二件要额外收费;Tina 只带一件,订下了九点的航班。",
+      "questions": [
+        {
+          "stem": "Where does Tina want to fly to?",
+          "options": [
+            "Rome.",
+            "Paris.",
+            "Beijing.",
+            "Cairo."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tina choose a morning flight?",
+          "options": [
+            "It is the cheapest.",
+            "So that she can have the whole day in the city.",
+            "Because there are no afternoon flights.",
+            "Her friend told her to."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How much does the ticket cost?",
+          "options": [
+            "Two hundred pounds.",
+            "Ninety pounds.",
+            "Nineteen pounds.",
+            "Two thousand pounds."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the agent say about luggage?",
+          "options": [
+            "No bags are allowed.",
+            "One carry-on bag is free; a second has a fee.",
+            "Two carry-on bags are free.",
+            "Carry-on bags are not allowed at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which flight does Tina finally book?",
+          "options": [
+            "An evening flight.",
+            "A flight for next Monday.",
+            "The nine o'clock morning flight.",
+            "No flight at all."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 What Travel Means",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A wise man once told me to experience life to the fullest while you are young.",
+        "There is no better way to do this than by travelling.",
+        "When you travel, you see the beauty of the world with your own eyes.",
+        "Being away from home opens your heart and changes the way you think.",
+        "So whenever you have the chance, go and discover new places."
+      ],
+      "translation_cn": "一位智者曾告诉我,趁年轻时要尽情体验生活;没有比旅行更好的方式;旅行时,你用自己的眼睛看到世界之美;离开家会敞开你的心扉,改变你的思维方式;所以一有机会,就去探索新地方。",
+      "questions": [
+        {
+          "stem": "What did the wise man say to do while young?",
+          "options": [
+            "Stay safely at home.",
+            "Save all your money.",
+            "Avoid making any plans.",
+            "Experience life to the fullest."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the passage, what is the best way to do this?",
+          "options": [
+            "By travelling.",
+            "By reading books.",
+            "By sleeping more.",
+            "By watching films."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do you see when you travel?",
+          "options": [
+            "Only your own town.",
+            "The beauty of the world with your own eyes.",
+            "Nothing new.",
+            "The inside of an airport."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does being away from home do?",
+          "options": [
+            "It makes you forget everything.",
+            "It keeps your mind closed.",
+            "It opens your heart and changes how you think.",
+            "It makes travel boring."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice does the speaker give at the end?",
+          "options": [
+            "Never leave your hometown.",
+            "Travel only when you are old.",
+            "Stop dreaming about travel.",
+            "Go and discover new places whenever you can."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Checking in at a Hotel",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Clerk",
+          "text": "Good evening, and welcome. Do you have a booking with us?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "Yes, I booked a room for three nights under the name Mark Lee."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Let me check. Yes, here it is. May I see your passport, please?"
+        },
+        {
+          "speaker": "Mark",
+          "text": "Here you are. Is breakfast included in the price?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Yes, breakfast is served from seven to ten in the morning."
+        },
+        {
+          "speaker": "Mark",
+          "text": "Great. Could you also tell me how to get to the old town?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Of course. It's a short walk. Turn left when you leave the hotel."
+        },
+        {
+          "speaker": "Mark",
+          "text": "Thank you so much. I can't wait to start exploring tomorrow."
+        }
+      ],
+      "translation_cn": "Mark 用 Mark Lee 的名字订了三晚的房间;前台核对预订并查看护照;房价含早餐,早餐七点到十点供应;前台告诉他去老城的路:出酒店左转,步行很近;Mark 期待明天开始游览。",
+      "questions": [
+        {
+          "stem": "How many nights did Mark book?",
+          "options": [
+            "Three nights.",
+            "One night.",
+            "Five nights.",
+            "Ten nights."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the clerk ask to see?",
+          "options": [
+            "His plane ticket.",
+            "His passport.",
+            "His map.",
+            "His luggage."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When is breakfast served?",
+          "options": [
+            "All day long.",
+            "Only at noon.",
+            "From seven to ten in the morning.",
+            "Late at night."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How can Mark get to the old town?",
+          "options": [
+            "By taking a long bus ride.",
+            "By flying there.",
+            "By calling a taxi.",
+            "By turning left and walking a short way."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Mark feel about the next day?",
+          "options": [
+            "He can't wait to start exploring.",
+            "He wants to go home.",
+            "He is too tired to move.",
+            "He dislikes the hotel."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Advice for Young Travellers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If you are a teenager who dreams of travelling, here is some simple advice.",
+        "Dream big, but always stay practical about what you can do now.",
+        "Remember that a small setback will not stop you if you keep taking action.",
+        "Work hard, chart a course ahead, and then stick to your plan.",
+        "Step by step, your travel dream can slowly come true."
+      ],
+      "translation_cn": "如果你是个梦想旅行的青少年,这里有些简单的建议:敢于做大梦,但对当下能做的事要切合实际;记住,只要不断行动,小小的挫折阻止不了你;努力做事,提前规划路线,然后坚持计划;一步步地,你的旅行梦想就能慢慢实现。",
+      "questions": [
+        {
+          "stem": "Who is this advice for?",
+          "options": [
+            "Only adults with lots of money.",
+            "A teenager who dreams of travelling.",
+            "People who hate travel.",
+            "Pilots and flight workers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker say about dreaming?",
+          "options": [
+            "Never dream at all.",
+            "Dream only about money.",
+            "Dream big but stay practical.",
+            "Forget your dreams quickly."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will not stop you, according to the passage?",
+          "options": [
+            "A long flight.",
+            "A friendly guide.",
+            "A clear travel plan.",
+            "A small setback, if you keep acting."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What three things should you do?",
+          "options": [
+            "Work hard, chart a course, and stick to the plan.",
+            "Sleep, wait, and hope.",
+            "Spend, borrow, and forget.",
+            "Read, talk, and rest."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does a travel dream come true?",
+          "options": [
+            "All at once, by luck.",
+            "Step by step, slowly.",
+            "Only with no effort.",
+            "Never, the speaker says."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Buying Souvenirs",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "Look at these little painted boxes. They'd make lovely gifts for my friends."
+        },
+        {
+          "speaker": "Ben",
+          "text": "They are pretty, but the prices here seem a bit high to me."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Do you think so? This one costs twenty pounds."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I saw the same boxes near the station for much less."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Really? Then maybe we should walk there before I buy anything."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Good idea. It's always wise to compare prices when you buy souvenirs."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "You're right. I don't want to spend more than I need to."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Let's go and check. We still have plenty of time before dinner."
+        }
+      ],
+      "translation_cn": "Lucy 看中一些手绘小盒子想送朋友;Ben 觉得这里价格偏高;一个要二十英镑;Ben 说在车站附近见过便宜得多的同款;两人决定先去那边比比价再买;比价是买纪念品的明智之举,他们晚饭前还有时间。",
+      "questions": [
+        {
+          "stem": "What does Lucy want to buy?",
+          "options": [
+            "A pair of shoes.",
+            "Some food.",
+            "Little painted boxes.",
+            "A train ticket."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Ben think about the prices here?",
+          "options": [
+            "They are free.",
+            "They are the lowest in town.",
+            "He doesn't mention prices.",
+            "They seem a bit high."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where did Ben see the same boxes for less?",
+          "options": [
+            "Near the station.",
+            "At the airport.",
+            "Inside the hotel.",
+            "On the mountain."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say is wise when buying souvenirs?",
+          "options": [
+            "To buy the first thing you see.",
+            "To compare prices.",
+            "To pay any price quickly.",
+            "To never ask the cost."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do?",
+          "options": [
+            "Buy everything at once.",
+            "Go straight to dinner.",
+            "Walk to the other place to compare prices.",
+            "Stop shopping for good."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Packing for a Trip",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a useful tip for anyone who is getting ready for a journey.",
+        "The night before you leave, make a clear list of everything you need.",
+        "Try to pack light, because a heavy bag is hard to carry around.",
+        "Keep your passport and tickets where you can reach them easily.",
+        "With a little planning ahead, packing becomes quick and stress-free."
+      ],
+      "translation_cn": "给准备出行的人一个实用贴士:出发前一晚,把要带的东西列成清单;尽量轻装,因为重包不好带;把护照和机票放在容易拿到的地方;只要提前规划一点,收拾行李就会又快又轻松。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only flight workers.",
+            "Only small children.",
+            "People who never travel.",
+            "Anyone getting ready for a journey."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you do the night before you leave?",
+          "options": [
+            "Make a clear list of what you need.",
+            "Pack nothing at all.",
+            "Buy a bigger suitcase.",
+            "Stay up very late."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why should you pack light?",
+          "options": [
+            "Because light bags are colourful.",
+            "Because a heavy bag is hard to carry.",
+            "Because it looks nicer.",
+            "Because the airline says so."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where should you keep your passport and tickets?",
+          "options": [
+            "In your large checked bag.",
+            "At home.",
+            "Where you can reach them easily.",
+            "With a stranger."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does planning ahead do for packing?",
+          "options": [
+            "It makes packing much harder.",
+            "It wastes a lot of time.",
+            "It has no effect at all.",
+            "It makes packing quick and stress-free."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

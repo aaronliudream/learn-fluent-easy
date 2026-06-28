@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "topic": "School Life",
+  "source": "上外版必修第一册 Unit 1 同主题完形(开学第一天/加入社团/克服紧张/适应新班级/校园友谊/给学弟妹的话)。用词限 U1/初中/常见词,答案唯一,与阅读听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Day at Senior High",
+      "text": "On my very first day of senior high school, I woke up early and felt both excited and a little (1)____. I was afraid I might lose my way, so I checked the (2)____ many times to find the right room. When I walked into the classroom, a friendly girl smiled and (3)____ me to sit beside her. That small act of kindness helped me (4)____ much calmer at once. Our head teacher gave a short (5)____ about the new term and reminded us to work hard. During the morning, I tried to (6)____ the names of as many classmates as I could. At lunch I was still a bit (7)____, but a boy from my group started a chat and soon we were (8)____ together. By the end of the day, my early fears had nearly (9)____ away. I went home in high (10)____, sure that I was going to like this place.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "nervous",
+            "lazy",
+            "angry",
+            "asleep"
+          ],
+          "answer_index": 0,
+          "explanation": "开学第一天兴奋又紧张,nervous。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "timetable",
+            "window",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "怕迷路所以查课表 timetable。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "refused",
+            "forced",
+            "invited",
+            "ignored"
+          ],
+          "answer_index": 2,
+          "explanation": "友善地请我坐旁边,invited。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "buy",
+            "sell",
+            "throw",
+            "feel"
+          ],
+          "answer_index": 3,
+          "explanation": "让我立刻感到平静,feel calmer。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "speech",
+            "meal",
+            "ticket",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "班主任作简短讲话,speech。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cook",
+            "remember",
+            "drive",
+            "paint"
+          ],
+          "answer_index": 1,
+          "explanation": "尽量记住同学名字,remember。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "tall",
+            "rich",
+            "shy",
+            "hungry"
+          ],
+          "answer_index": 2,
+          "explanation": "午餐时还有点害羞,shy。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "crying",
+            "sleeping",
+            "fighting",
+            "laughing"
+          ],
+          "answer_index": 3,
+          "explanation": "聊起来后一起欢笑,laughing。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "gone",
+            "grown",
+            "frozen",
+            "fallen"
+          ],
+          "answer_index": 0,
+          "explanation": "恐惧几乎消散,gone away。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "spirits",
+            "rivers",
+            "boxes"
+          ],
+          "answer_index": 1,
+          "explanation": "兴高采烈回家,in high spirits。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Joining a School Club",
+      "text": "When I was in junior high, I always hoped that I (1)____ join a drama club one day and perform on the stage. So in my first week of senior high, I decided to make that dream come (2)____. The teacher in charge welcomed me warmly and explained the club (3)____. At first I felt (4)____ when I tried to act in front of so many strangers. My voice shook and my face turned red with (5)____. But the older members were kind and (6)____ towards me, and they cheered me on. Little by little I learned to (7)____ on the lines instead of the audience. After a few weeks of (8)____ practice, I gave my first short performance, and people clapped for me. That moment was a pleasant (9)____ I will never forget. Now I tell new students that they should be brave enough to (10)____ something they truly love.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "must",
+            "need",
+            "would",
+            "dare"
+          ],
+          "answer_index": 2,
+          "explanation": "过去看将来的愿望,hoped that I would join。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "down",
+            "back",
+            "off",
+            "true"
+          ],
+          "answer_index": 3,
+          "explanation": "让梦想成真,come true。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "rules",
+            "doors",
+            "walls",
+            "clothes"
+          ],
+          "answer_index": 0,
+          "explanation": "讲解社团规则,club rules。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "proud",
+            "uneasy",
+            "sleepy",
+            "famous"
+          ],
+          "answer_index": 1,
+          "explanation": "在陌生人面前表演感到不安,uneasy。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "joy",
+            "hunger",
+            "embarrassment",
+            "money"
+          ],
+          "answer_index": 2,
+          "explanation": "脸红是因为难堪,embarrassment。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lazy",
+            "rude",
+            "silent",
+            "sympathetic"
+          ],
+          "answer_index": 3,
+          "explanation": "年长成员友善有同情心,sympathetic。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "focus",
+            "spend",
+            "live",
+            "depend"
+          ],
+          "answer_index": 0,
+          "explanation": "学会专注于台词,focus on。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "free",
+            "hard",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "几周的刻苦练习,hard practice。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mistake",
+            "problem",
+            "surprise",
+            "danger"
+          ],
+          "answer_index": 2,
+          "explanation": "那是个令人愉快的惊喜,pleasant surprise。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "drop",
+            "hide",
+            "lose",
+            "try"
+          ],
+          "answer_index": 3,
+          "explanation": "鼓励尝试真正热爱的事,try something。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Beating the First-Week Nerves",
+      "text": "The first week of a new school can be confusing, and almost every student feels a little (1)____ at the start. The building is large, the faces are new, and the timetable seems (2)____ to follow. I remember standing in a busy corridor, not sure (3)____ classroom I should enter. But I soon learned that this feeling does not (4)____ very long. The best way to beat the nerves is to (5)____ a few simple plans. First, arrive a little early so that you have time to find your (6)____. Second, write down your homework and tick each task off as you (7)____ it. Third, do not be afraid to (8)____ a teacher for help when something is unclear. Most teachers are happy to give you (9)____ if you only dare to ask. By following these steps, you will feel more in (10)____ of your new life and far less worried each day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lost",
+            "rich",
+            "asleep",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "开学第一周感到茫然,feel lost。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "easy",
+            "hard",
+            "cheap",
+            "soft"
+          ],
+          "answer_index": 1,
+          "explanation": "课表似乎难以跟上,hard to follow。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "whose",
+            "why",
+            "which",
+            "how"
+          ],
+          "answer_index": 2,
+          "explanation": "不确定该进哪间教室,which classroom。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "open",
+            "cook",
+            "drive",
+            "last"
+          ],
+          "answer_index": 3,
+          "explanation": "这种感觉不会持续很久,last。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "make",
+            "break",
+            "sell",
+            "burn"
+          ],
+          "answer_index": 0,
+          "explanation": "制定几个简单计划,make plans。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "way",
+            "lunch",
+            "bag"
+          ],
+          "answer_index": 1,
+          "explanation": "有时间找路,find your way。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "start",
+            "lose",
+            "finish",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "完成一项就打钩,as you finish it。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tell",
+            "leave",
+            "watch",
+            "ask"
+          ],
+          "answer_index": 3,
+          "explanation": "向老师求助,ask a teacher。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "help",
+            "trouble",
+            "noise",
+            "homework"
+          ],
+          "answer_index": 0,
+          "explanation": "老师乐意提供帮助,give you help。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "danger",
+            "control",
+            "fashion",
+            "secret"
+          ],
+          "answer_index": 1,
+          "explanation": "更能掌控新生活,in control of。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Fitting into a New Class",
+      "text": "Moving into a brand-new class is one of the biggest (1)____ that senior high brings. At first you may know nobody, and that can feel (2)____. I was quite quiet during my first days, and I (3)____ that nobody would want to talk to me. Then one afternoon a classmate asked to (4)____ my notes, and we started chatting about our favourite subjects. From that day on, things slowly (5)____ better. I joined a study group, and we often helped one another (6)____ difficult problems. I learned that the best way to (7)____ friends is simply to be kind and open. When someone looked unhappy, I tried to be (8)____ and listen to them. Over time our class became more like a (9)____ family than a group of strangers. Looking back, I am glad I did not let my early shyness (10)____ me back from reaching out to others.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prizes",
+            "meals",
+            "changes",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "进入新班级是巨大改变,biggest changes。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "funny",
+            "tasty",
+            "cheap",
+            "lonely"
+          ],
+          "answer_index": 3,
+          "explanation": "谁也不认识会感到孤独,lonely。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "feared",
+            "hoped",
+            "promised",
+            "agreed"
+          ],
+          "answer_index": 0,
+          "explanation": "我担心没人愿意跟我说话,feared。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cook",
+            "borrow",
+            "throw",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "同学想借我的笔记,borrow my notes。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "kept",
+            "stayed",
+            "got",
+            "ran"
+          ],
+          "answer_index": 2,
+          "explanation": "情况慢慢变好,got better。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "of",
+            "to",
+            "off",
+            "with"
+          ],
+          "answer_index": 3,
+          "explanation": "帮彼此解决难题,help one another with。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "make",
+            "lose",
+            "break",
+            "miss"
+          ],
+          "answer_index": 0,
+          "explanation": "交朋友,make friends。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rude",
+            "kind",
+            "loud",
+            "lazy"
+          ],
+          "answer_index": 1,
+          "explanation": "试着友善并倾听,be kind。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cold",
+            "wide",
+            "warm",
+            "high"
+          ],
+          "answer_index": 2,
+          "explanation": "班级更像温暖的家,warm family。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "give",
+            "take",
+            "put",
+            "hold"
+          ],
+          "answer_index": 3,
+          "explanation": "不让羞怯妨碍我,hold me back。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "What School Friendship Means",
+      "text": "Friendship is one of the most precious parts of school (1)____. A true friend stands by you when lessons are hard and cheers when you (2)____ well. I still remember how, in my first term, a classmate quietly (3)____ me his pen when I had forgotten mine. Such small kindnesses (4)____ a lot to a nervous newcomer. Over the years, my friends and I have (5)____ countless lunches, worries and dreams together. When I felt under (6)____ before an exam, they reminded me that I was good (7)____ just as I was. They never made nasty (8)____ when I made a mistake; instead they helped me learn from it. I have come to believe that a (9)____ smile from a friend can brighten the hardest day. Whatever happens, I know there will never be a (10)____ of kind people around me, and that thought gives me real comfort.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "life",
+            "bell",
+            "gate",
+            "bus"
+          ],
+          "answer_index": 0,
+          "explanation": "友谊是校园生活最珍贵的部分,school life。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fall",
+            "do",
+            "lose",
+            "fail"
+          ],
+          "answer_index": 1,
+          "explanation": "你做得好时为你欢呼,do well。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "threw",
+            "lent",
+            "hid"
+          ],
+          "answer_index": 2,
+          "explanation": "悄悄借给我笔,lent me his pen。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cost",
+            "weigh",
+            "buy",
+            "mean"
+          ],
+          "answer_index": 3,
+          "explanation": "小善举意义重大,mean a lot。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shared",
+            "wasted",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "一起分享许多午餐和梦想,shared。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "water",
+            "pressure",
+            "weather",
+            "music"
+          ],
+          "answer_index": 1,
+          "explanation": "考试前承受压力,under pressure。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "later",
+            "alone",
+            "enough",
+            "away"
+          ],
+          "answer_index": 2,
+          "explanation": "我本来就足够好,good enough。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "drinks",
+            "plans",
+            "gifts",
+            "comments"
+          ],
+          "answer_index": 3,
+          "explanation": "从不刻薄评论,nasty comments。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "genuine",
+            "broken",
+            "empty",
+            "heavy"
+          ],
+          "answer_index": 0,
+          "explanation": "朋友真诚的微笑,genuine smile。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shower",
+            "shortage",
+            "crowd",
+            "list"
+          ],
+          "answer_index": 1,
+          "explanation": "善良的人永远不会短缺,shortage of。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Word to New Students",
+      "text": "If I could speak to next year's first-year students, here is what I (1)____ tell them. Senior high is a new chapter, and you should step (2)____ into it with courage. Do not put too much (3)____ on yourself by trying to make every single day perfect. There is no such (4)____ as a perfect start; there is only good enough, and that is fine. You are not the only one who feels (5)____ — almost everyone around you feels the same way. When a lesson seems (6)____, ask a question instead of staying silent. When you meet someone who is not friendly, remember that their behaviour says more about (7)____ than about you. Most of all, keep an open mind and a (8)____ heart. Join a club, make a plan, and (9)____ a few good friends along the way. If you do these things, I am sure your first year will be far more (10)____ than you fear.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "should",
+            "must",
+            "would",
+            "could"
+          ],
+          "answer_index": 2,
+          "explanation": "过去将来语气表设想要说的话,I would tell them。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "back",
+            "down",
+            "away",
+            "forward"
+          ],
+          "answer_index": 3,
+          "explanation": "勇敢迈进新篇章,step forward。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "pressure",
+            "paper",
+            "water",
+            "colour"
+          ],
+          "answer_index": 0,
+          "explanation": "别给自己太多压力,too much pressure。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "place",
+            "thing",
+            "person",
+            "time"
+          ],
+          "answer_index": 1,
+          "explanation": "没有完美这回事,no such thing。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "famous",
+            "rich",
+            "worried",
+            "tall"
+          ],
+          "answer_index": 2,
+          "explanation": "你不是唯一感到担忧的人,feels worried。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "cheap",
+            "lovely",
+            "confusing"
+          ],
+          "answer_index": 3,
+          "explanation": "当一课令人困惑时,seems confusing。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "them",
+            "you",
+            "us",
+            "it"
+          ],
+          "answer_index": 0,
+          "explanation": "他们的行为更说明他们自己,about them。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cold",
+            "kind",
+            "heavy",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "保持善良的心,a kind heart。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lose",
+            "drop",
+            "make",
+            "miss"
+          ],
+          "answer_index": 2,
+          "explanation": "一路交几个好友,make friends。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "silent",
+            "empty",
+            "pleasant"
+          ],
+          "answer_index": 3,
+          "explanation": "第一年会比你担心的愉快得多,more pleasant。"
+        }
+      ]
+    }
+  ]
+}

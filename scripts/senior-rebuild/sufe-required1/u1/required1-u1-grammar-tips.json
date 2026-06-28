@@ -1,0 +1,39 @@
+{
+  "volume": "required1",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "时态(复习 + 过去将来时)速查",
+    "intro": "选时态先找“时间信号”:时间状语(now / yesterday / since / by the time）和语境决定唯一答案。过去将来时是难点:站在过去某个时点往后看,用 would do 或 was/were going to do。",
+    "table": {
+      "headers": ["时态", "标志 / 用法 / 例句"],
+      "rows": [
+        ["一般现在", "every day / usually / 客观事实:Our library opens early every weekday."],
+        ["现在进行", "now / Look! / Listen! / at the moment:Listen! Someone is delivering a speech."],
+        ["一般过去", "yesterday / last term / ago:Last term the teacher gave us an assignment."],
+        ["过去进行", "at this time yesterday / when ...(从句一般过去):I was thinking about school at this time yesterday."],
+        ["现在完成", "already / since / so far / for + 时间段:I have made three new friends so far."],
+        ["过去完成", "by the time + 过去 / before + 过去(更早动作):By the time she arrived, the teacher had left."],
+        ["过去将来", "said/hoped/thought + would do;过去的打算 = was/were going to do:He said he would beg the teacher."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主句过去 → 宾语从句时态相应后移(现在→过去、将来→过去将来)", "mark": "She said she WAS going to like it." },
+      { "rule": "by the time + 一般过去,主句用过去完成(had done)", "mark": "By last Friday we HAD chosen the topic." },
+      { "rule": "since + 过去时间点 / 过去动作,主句用现在完成", "mark": "Since the term began, I HAVE felt happier." },
+      { "rule": "would do 与 was/were going to do 都表“过去将来”,后者更强调当时的打算", "mark": "I was going to send you a message." }
+    ],
+    "why": [
+      "时态的本质是“说话视角的时间点 + 动作相对它的先后/状态”;过去将来就是把视角放回过去,再往后看,所以 will→would、am going to→was going to。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:由 since / by the time / when 等连接词判断主从句时态搭配。",
+      "宾语从句时态呼应:主句过去时,从句须相应后移(would / had done / was doing)。",
+      "区分 had done(过去的过去)与 would do(过去将来)——看动作发生在“过去时点”之前还是之后。"
+    ],
+    "examVsReal": [
+      { "exam": "He said he would come.（考试用过去将来 would）", "real": "He said he'll come.", "note": "口语里转述很近的将来常直接保留 will;考试默认时态呼应,用 would" },
+      { "exam": "By the time I arrived, the class had started.（考试用 had done）", "real": "When I got there, class already started.", "note": "口语常用一般过去 + already 代替过去完成;书面/考试讲究 had done" }
+    ]
+  }
+}

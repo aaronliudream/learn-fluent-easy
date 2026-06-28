@@ -1,0 +1,32 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(旅行主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Last winter Liam joined a student exchange and spent two weeks in a small town in the south. At first he felt shy because he knew no one there, but his host family was so kind that he soon felt at home. By the end of the trip, he had made new friends and learned far more about real life than any book had taught him.",
+    "questions": [
+      {
+        "q": "Why did Liam feel shy at the beginning?",
+        "options": [
+          "He did not know anyone in the town yet.",
+          "He had lost all his money.",
+          "He could not find the host family.",
+          "He disliked the cold winter."
+        ],
+        "answer": "A",
+        "explanation": "原文 'he felt shy because he knew no one there' 的转述;其余与原文不符。"
+      },
+      {
+        "q": "What did Liam gain by the end of the trip?",
+        "options": [
+          "A free plane ticket home.",
+          "New friends and real-life knowledge.",
+          "A job in the small town.",
+          "A large suitcase of souvenirs."
+        ],
+        "answer": "B",
+        "explanation": "末句 'made new friends and learned far more about real life'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U4",
+  "topic": "Customs and Traditions",
+  "source": "上外版必修第一册 Unit 4 同主题完形(我的成人礼/印度圣线的故事/为庆典做准备/一场误会式的礼物习俗/校友返校的一天/一个珍贵的家庭传统)。用词限 U4/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Coming-of-Age Day",
+      "text": "Last spring my school held a special (1)____ for all the students who had turned eighteen. We dressed up in clean, smart clothes and walked onto the (2)____ one by one. Our head teacher gave a short (3)____ about what it means to become an adult. She said that growing up is not only about new freedom, but also about taking on real (4)____. After that, each of us made a quiet (5)____ to study hard and to look after our families. The most touching (6)____ came at the end, when we offered a deep bow to our parents to thank them for their (7)____. Many of them could not hold back their tears. That day will always (8)____ in my heart as the moment I truly began to grow (9)____. Now, whenever I face something difficult, I remember the (10)____ I made and try to do my best.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ceremony",
+            "machine",
+            "garden",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a special ceremony 一场特别的典礼。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "river",
+            "stage",
+            "shop",
+            "kitchen"
+          ],
+          "answer_index": 1,
+          "explanation": "walked onto the stage 走上舞台。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "speech",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "gave a short speech 做简短演讲。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holidays",
+            "games",
+            "jokes",
+            "responsibilities"
+          ],
+          "answer_index": 3,
+          "explanation": "taking on real responsibilities 承担真正的责任。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "promise",
+            "mistake",
+            "noise",
+            "price"
+          ],
+          "answer_index": 0,
+          "explanation": "made a quiet promise 默默许下承诺。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "moment",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "the most touching moment 最动人的时刻。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "money",
+            "noise",
+            "love",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "thank them for their love 感谢他们的爱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "leave",
+            "throw",
+            "stay"
+          ],
+          "answer_index": 3,
+          "explanation": "will always stay in my heart 永远留在心里。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "up",
+            "off",
+            "down",
+            "out"
+          ],
+          "answer_index": 0,
+          "explanation": "grow up 长大。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "promise",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the promise I made 我许下的承诺。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Story of the Sacred Thread",
+      "text": "In an Indian village, a boy named Arun was getting ready for his coming-of-age (1)____. His grandfather explained that he would receive three (2)____ of a sacred thread. Each strand would (3)____ a promise: to respect knowledge, to respect his parents and to respect (4)____. On the morning of the big day, the whole family (5)____ together in the main hall. The thread was carefully (6)____ around Arun's wrist by an elder. People believe that this moment (7)____ the start of a new life. After the ceremony, a boy would traditionally leave home to live with a (8)____, who would guide him toward learning. Arun felt both nervous and (9)____ as he listened to the old words. He understood that, from that day, he would have to (10)____ the duties of a young adult.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "market",
+            "ceremony",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "coming-of-age ceremony 成人仪式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "noises",
+            "songs",
+            "strands"
+          ],
+          "answer_index": 3,
+          "explanation": "three strands 三股线。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "represent",
+            "break",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "represent a promise 象征一个承诺。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "society",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "respect society 尊重社会。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "gathered",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "gathered together 聚在一起。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "thrown",
+            "eaten",
+            "tied"
+          ],
+          "answer_index": 3,
+          "explanation": "carefully tied 小心地系上。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "marks",
+            "sells",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "marks the start 标志着开始。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "teacher",
+            "shop",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "live with a teacher 和老师一起生活。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "bored",
+            "proud",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "nervous and proud 紧张又自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "forget",
+            "hide",
+            "shoulder"
+          ],
+          "answer_index": 3,
+          "explanation": "shoulder the duties 承担责任。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Getting Ready for the Festival",
+      "text": "Our town was busy all week, because a big coming-of-age (1)____ was about to take place. In the school hall, parents and teachers worked hard to (2)____ everything. Bright flowers were placed on every (3)____, and traditional clothes were (4)____ for the young dancers to wear. A local (5)____ practised the music they would play during the parade. My job was to help (6)____ the chairs in neat rows. At the same time, a kind elder (7)____ to us why each part of the ceremony mattered. He said that such customs help to (8)____ the past with the present. By Friday evening, the whole hall looked (9)____ and ready. As I looked around, I felt proud to be part of such an old and meaningful (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "festival",
+            "machine",
+            "market",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "coming-of-age festival 成人庆典。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "prepare",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "prepare everything 准备好一切。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "table",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "on every table 在每张桌子上。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "eaten",
+            "thrown",
+            "rented"
+          ],
+          "answer_index": 3,
+          "explanation": "clothes were rented 衣服被租来。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "band",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a local band 当地乐队。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "arrange",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "arrange the chairs 摆好椅子。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "explained",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "explained why 解释原因。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "break",
+            "lose",
+            "connect"
+          ],
+          "answer_index": 3,
+          "explanation": "connect the past with the present 把过去和现在相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lovely",
+            "empty",
+            "broken",
+            "ugly"
+          ],
+          "answer_index": 0,
+          "explanation": "looked lovely 看起来很美。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "tradition",
+            "machine",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a meaningful tradition 有意义的传统。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Surprising Birthday Custom",
+      "text": "When my pen pal in Finland turned one month old, her family followed an unusual (1)____. Long ago, the government began to (2)____ every new mother a large box. Inside the box were small (3)____ such as clothes, sheets and toys for the baby. At first I found this hard to (4)____, but my pen pal said it was a much-loved (5)____ in her country. In Brazil, she told me, a soon-to-be mother often (6)____ gifts and gives them to the visitors who come when the baby is (7)____. Each culture, it seems, has its own special way to (8)____ a new life. These customs (9)____ from country to country, yet they all share one warm (10)____: to welcome a child into the world with love.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "market",
+            "custom",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "an unusual custom 一个不寻常的习俗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "give"
+          ],
+          "answer_index": 3,
+          "explanation": "give every new mother a box 给每位新妈妈一个盒子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "gifts",
+            "prices",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 0,
+          "explanation": "small gifts 小礼物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "believe",
+            "eat",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "hard to believe 难以置信。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "tradition",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a much-loved tradition 备受喜爱的传统。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "chooses"
+          ],
+          "answer_index": 3,
+          "explanation": "chooses gifts 挑选礼物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "born",
+            "sold",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "when the baby is born 当婴儿出生时。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "celebrate",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "celebrate a new life 庆祝新生命。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "break",
+            "vary",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "vary from country to country 因国而异。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "wish"
+          ],
+          "answer_index": 3,
+          "explanation": "one warm wish 一个温暖的愿望。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Day at Homecoming",
+      "text": "Last autumn I joined the homecoming week at my American friend's high (1)____. Each day had a fun (2)____, such as crazy hair day or pyjama day, and everyone was happy to join (3)____. On Friday, the school held an (4)____ to choose a Homecoming King and Queen. A group of younger students, called the Court, would (5)____ them through the day. In the afternoon, the whole town came out to watch a (6)____ with the school band, sports teams and classic cars. People stood along the streets to cheer and (7)____ with old friends. In the evening there was a homecoming (8)____, open to every student. Some schools keep it casual, while others make it a more (9)____ affair. For me, the best part was simply feeling that the (10)____ school had come together as one big family.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "school",
+            "machine",
+            "market",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "high school 高中。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "theme",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a fun theme 有趣的主题。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "off",
+            "out",
+            "in",
+            "down"
+          ],
+          "answer_index": 2,
+          "explanation": "join in 参加。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "error",
+            "song",
+            "price",
+            "election"
+          ],
+          "answer_index": 3,
+          "explanation": "held an election 举行选举。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "accompany",
+            "sell",
+            "break",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "accompany them 陪伴他们。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "parade",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "watch a parade 观看游行。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "socialise",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "socialise with old friends 与老友交际。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "dance"
+          ],
+          "answer_index": 3,
+          "explanation": "a homecoming dance 返校舞会。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "formal",
+            "empty",
+            "broken",
+            "ugly"
+          ],
+          "answer_index": 0,
+          "explanation": "a more formal affair 更正式的活动。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "entire",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the entire school 整个学校。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Family Tradition I Treasure",
+      "text": "In my family, there is a quiet little (1)____ that I treasure very much. On the first day of each new year, my grandmother (2)____ us all together in her small living room. She tells old stories about how our family has (3)____ through difficult times. Then each of us makes a simple (4)____ for the year ahead. My grandmother says that such customs help younger people to (5)____ where they come from. She believes that a strong family must always (6)____ knowledge and love from one generation to the next. Over the (7)____, this small custom has never changed, even though the world around us (8)____ so quickly. Whenever I take part, I feel calm and (9)____ to be part of something so old. To me, this tradition is far more (10)____ than any expensive gift.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "market",
+            "tradition",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a quiet little tradition 一个安静的小传统。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "gathers"
+          ],
+          "answer_index": 3,
+          "explanation": "gathers us all together 把我们聚在一起。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "survived",
+            "sold",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "has survived through difficult times 度过艰难时光。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "promise",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "makes a simple promise 许下简单的承诺。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "break",
+            "remember",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "remember where they come from 记住自己的来处。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "break",
+            "lose",
+            "pass"
+          ],
+          "answer_index": 3,
+          "explanation": "pass knowledge from one generation to the next 把知识传给下一代。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "years",
+            "minutes",
+            "seconds",
+            "metres"
+          ],
+          "answer_index": 0,
+          "explanation": "over the years 多年来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "changes",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 1,
+          "explanation": "changes so quickly 变化如此之快。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "bored",
+            "proud",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "calm and proud 平静又自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "precious"
+          ],
+          "answer_index": 3,
+          "explanation": "far more precious 珍贵得多。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "required1",
+  "unit": "U3",
+  "topic": "Travel",
+  "source": "上外版必修第一册 Unit 3 同主题完形(一次海边旅行/准备行李/在古城迷路/选择旅行城市/第一次坐飞机/状语从句串联的旅行小记)。用词限 U3/初中/常见词,答案唯一、同词性,与阅读关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Day at the Seaside",
+      "text": "Last summer my family took a short (1)____ to a small seaside town. We set off early in the morning (2)____ we could arrive before the crowds. As soon as we got there, I could not (3)____ my eyes away from the bright blue water. The town was (4)____ beautiful that we decided to stay an extra day. In the afternoon we walked along the beach and looked for shells. My little sister made a great (5)____ to build a sandcastle, but a wave soon washed it away. For lunch we (6)____ the popular seafood of the region, which tasted wonderful. Later we bought a few small (7)____ to take home for our friends. Although we were tired, the trip was (8)____ a happy one that none of us wanted to leave. On the way back, we already began to (9)____ a course for our next holiday. A short journey like this can (10)____ many good memories.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "trip",
+            "shell",
+            "fee",
+            "rule"
+          ],
+          "answer_index": 0,
+          "explanation": "take a short trip 短途旅行。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "unless",
+            "so that",
+            "though",
+            "than"
+          ],
+          "answer_index": 1,
+          "explanation": "目的'为了'早到 → so that。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "buy",
+            "sell",
+            "tear",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "tear one's eyes away 移开目光。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "such",
+            "as",
+            "than",
+            "so"
+          ],
+          "answer_index": 3,
+          "explanation": "so + 形容词 beautiful → so…that。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "effort",
+            "price",
+            "noise",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "make a great effort 努力。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forgot",
+            "tasted",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "tasted the seafood 品尝海鲜。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "songs",
+            "prices",
+            "souvenirs",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "buy souvenirs 买纪念品。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "so",
+            "as",
+            "than",
+            "such"
+          ],
+          "answer_index": 3,
+          "explanation": "such + a + 形容词 + 名词 → such…that。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "chart",
+            "throw",
+            "hide",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "chart a course 制定计划。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "create",
+            "waste",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "create memories 创造回忆。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Getting Ready to Pack",
+      "text": "Packing well is an important skill for every (1)____. The night before a trip, you should make a clear (2)____ of everything you need to take. Try to pack light, (3)____ a heavy bag is hard to carry through a busy airport. Most airlines allow only one (4)____ item of hand luggage for free. (5)____ you bring a second bag onto the plane, they will charge you a fee. So a wise traveller never packs anything that is not (6)____ to the trip. Remember to keep your passport and tickets where you can (7)____ them quickly. It is also helpful to (8)____ the weather of the place you are visiting, (9)____ you will know what clothes to bring. With a little planning (10)____, packing becomes quick and easy, and you can start your journey without any worry.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ceiling",
+            "valley",
+            "traveller",
+            "factor"
+          ],
+          "answer_index": 2,
+          "explanation": "every traveller 每位旅行者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "fee",
+            "list"
+          ],
+          "answer_index": 3,
+          "explanation": "make a list 列清单。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "because",
+            "unless",
+            "though",
+            "so that"
+          ],
+          "answer_index": 0,
+          "explanation": "给出'轻装'的原因 → because。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "carry-on",
+            "broken",
+            "sold"
+          ],
+          "answer_index": 1,
+          "explanation": "carry-on item 随身物品。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "Although",
+            "Until",
+            "If",
+            "Than"
+          ],
+          "answer_index": 2,
+          "explanation": "'如果'多带一个包 → 条件 If。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "asleep",
+            "alone",
+            "relevant"
+          ],
+          "answer_index": 3,
+          "explanation": "relevant to the trip 与旅行相关。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "reach",
+            "throw",
+            "hide",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "reach them quickly 能快速拿到。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "check",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "check the weather 查天气。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "unless",
+            "though",
+            "so that",
+            "than"
+          ],
+          "answer_index": 2,
+          "explanation": "目的'这样你就……' → so that。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "behind",
+            "below",
+            "inside",
+            "ahead"
+          ],
+          "answer_index": 3,
+          "explanation": "planning ahead 提前规划。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Lost in the Old Town",
+      "text": "On our second day, my friend and I got (1)____ in the narrow streets of the old town. The little map was (2)____ confusing that we soon had no idea where we were. (3)____ we felt a little worried, the walk turned into a small adventure. (4)____ we turned a corner, we saw something new and interesting. We passed quiet squares (5)____ old men were playing chess in the sun. We kept walking (6)____ we finally reached a busy market full of colour and noise. A kind shopkeeper (7)____ us the way back to our hotel and even drew a simple map for us. (8)____ we had lost our way, that afternoon became my favourite part of the whole trip. Sometimes getting lost lets you (9)____ a city in a way that no guidebook can. Now I always say that a wrong turn can (10)____ to the best surprises.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lost",
+            "rich",
+            "late",
+            "busy"
+          ],
+          "answer_index": 0,
+          "explanation": "get lost 迷路。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "such",
+            "so",
+            "as",
+            "than"
+          ],
+          "answer_index": 1,
+          "explanation": "so + 形容词 confusing → so…that。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "Because",
+            "Unless",
+            "Although",
+            "Than"
+          ],
+          "answer_index": 2,
+          "explanation": "担心却变成冒险,转折 → Although。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "Because",
+            "Unless",
+            "Than",
+            "Wherever"
+          ],
+          "answer_index": 3,
+          "explanation": "'无论拐到哪里' → 地点 Wherever。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "where",
+            "because",
+            "if",
+            "than"
+          ],
+          "answer_index": 0,
+          "explanation": "quiet squares where 地点状语从句 → where。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "because",
+            "until",
+            "unless",
+            "so that"
+          ],
+          "answer_index": 1,
+          "explanation": "一直走'直到'到达市场 → until。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "showed",
+            "hid"
+          ],
+          "answer_index": 2,
+          "explanation": "showed us the way 给我们指路。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "Because",
+            "Unless",
+            "Than",
+            "Although"
+          ],
+          "answer_index": 3,
+          "explanation": "迷了路却成最爱,转折 → Although。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "explore",
+            "sell",
+            "waste",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "explore a city 探索城市。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "throw",
+            "lead",
+            "drop",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "lead to surprises 带来惊喜。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Choosing a City to Visit",
+      "text": "My friend Emily has an (1)____ to visit a Chinese city this winter, so she asked us for some advice. We held a discussion to help her (2)____ which place to choose. I strongly (3)____ Xi'an, an amazing historic city in the northwest. It enjoys a long (4)____, because it was once the capital of many dynasties. Its most famous (5)____ is the army of terracotta warriors, which were built more than two thousand years ago. They are (6)____ lifelike that visitors often gasp in surprise. (7)____ Emily prefers a city with history, Xi'an would be a perfect choice. She should also try the local (8)____, such as warm bread soaked in lamb soup. I told her that she cannot know how wonderful the city is (9)____ she goes there herself. With three days, she will have just enough time to enjoy the sights and (10)____ wonderful memories.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "luggage",
+            "ceiling",
+            "opportunity",
+            "valley"
+          ],
+          "answer_index": 2,
+          "explanation": "have an opportunity 有机会。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "decide"
+          ],
+          "answer_index": 3,
+          "explanation": "decide which place 决定选哪里。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "recommend",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "recommend Xi'an 推荐西安。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "history",
+            "noise",
+            "fee"
+          ],
+          "answer_index": 1,
+          "explanation": "a long history 悠久历史。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mistake",
+            "machine",
+            "attraction",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "famous attraction 著名景点。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "such",
+            "as",
+            "than",
+            "so"
+          ],
+          "answer_index": 3,
+          "explanation": "so + 形容词 lifelike → so…that。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Since",
+            "Unless",
+            "Although",
+            "Than"
+          ],
+          "answer_index": 0,
+          "explanation": "给原因'因为她偏爱历史' → Since。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "song",
+            "food",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "local food 当地食物。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "because",
+            "though",
+            "unless",
+            "than"
+          ],
+          "answer_index": 2,
+          "explanation": "'除非'亲自去,否则不知道 → unless。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "waste",
+            "sell",
+            "create"
+          ],
+          "answer_index": 3,
+          "explanation": "create memories 创造回忆。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "My First Flight",
+      "text": "I will never forget the day (1)____ I took my very first flight. I was both excited and a little (2)____ as the plane began to move. (3)____ it slowly rose into the sky, the houses below grew smaller and smaller. Soon we were flying above the clouds, and the view was (4)____ amazing that I could not stop staring out of the window. A kind flight worker brought us drinks and a meal (5)____ we felt comfortable. The flight was (6)____ a long one that most passengers fell asleep before we landed. (7)____ I was tired, I stayed awake to watch the sunset from high above the earth. When we finally (8)____ from the plane, I felt like a real traveller. I had learned that flying is much faster (9)____ travelling by train or coach. From that day on, I have (10)____ every chance to see new places by air.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "when",
+            "where",
+            "why",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "the day when 时间状语从句 → when。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rich",
+            "afraid",
+            "late",
+            "busy"
+          ],
+          "answer_index": 1,
+          "explanation": "a little afraid 有点害怕。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "Unless",
+            "Because",
+            "As",
+            "Than"
+          ],
+          "answer_index": 2,
+          "explanation": "随着飞机上升(同时)→ 时间 As。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "such",
+            "as",
+            "than",
+            "so"
+          ],
+          "answer_index": 3,
+          "explanation": "so + 形容词 amazing → so…that。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "so that",
+            "unless",
+            "though",
+            "than"
+          ],
+          "answer_index": 0,
+          "explanation": "目的'为了让我们舒适' → so that。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "so",
+            "such",
+            "as",
+            "than"
+          ],
+          "answer_index": 1,
+          "explanation": "such + a + 形容词 + 名词 → such…that。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Because",
+            "Unless",
+            "Although",
+            "Than"
+          ],
+          "answer_index": 2,
+          "explanation": "累却保持清醒,转折 → Although。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "hid",
+            "departed"
+          ],
+          "answer_index": 3,
+          "explanation": "departed from the plane 下飞机。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "than",
+            "because",
+            "though",
+            "unless"
+          ],
+          "answer_index": 0,
+          "explanation": "faster…than 比……更快 → than。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "thrown",
+            "taken",
+            "dropped",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "have taken every chance 抓住每个机会。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Mountain Trip to Remember",
+      "text": "Two friends and I planned a mountain trip (1)____ we wanted to see the sunrise from the top. We got up very early (2)____ we could start climbing before dawn. (3)____ we walked, a cold wind blew across the path, but the beautiful (4)____ kept us going. We did not stop (5)____ we reached a small flat area near the top. (6)____ the climb was hard, none of us wanted to give up. At last the sun rose, and the view was (7)____ breathtaking that we stood in silence for a while. We took many photos (8)____ we could show our families back home. (9)____ you have stood on a mountain at sunrise, it is hard to imagine the feeling. That trip taught me that the best (10)____ are often the ones that take the most effort.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "unless",
+            "where",
+            "because",
+            "than"
+          ],
+          "answer_index": 2,
+          "explanation": "给出'计划登山'的原因 → because。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "unless",
+            "though",
+            "than",
+            "so that"
+          ],
+          "answer_index": 3,
+          "explanation": "目的'为了天亮前出发' → so that。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "As",
+            "Unless",
+            "Because",
+            "Than"
+          ],
+          "answer_index": 0,
+          "explanation": "随着我们走(同时)→ 时间 As。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "scenery",
+            "noise",
+            "fee"
+          ],
+          "answer_index": 1,
+          "explanation": "beautiful scenery 美丽风景。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "because",
+            "unless",
+            "until",
+            "so that"
+          ],
+          "answer_index": 2,
+          "explanation": "没停'直到'到达平地 → until。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "Because",
+            "Unless",
+            "Than",
+            "Although"
+          ],
+          "answer_index": 3,
+          "explanation": "难却不放弃,转折 → Although。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "so",
+            "such",
+            "as",
+            "than"
+          ],
+          "answer_index": 0,
+          "explanation": "so + 形容词 breathtaking → so…that。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "unless",
+            "so that",
+            "though",
+            "than"
+          ],
+          "answer_index": 1,
+          "explanation": "目的'为了给家人看' → so that。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Although",
+            "Because",
+            "Until",
+            "Than"
+          ],
+          "answer_index": 2,
+          "explanation": "'直到'你站过……(否则难以想象)→ Until。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "noises",
+            "machines",
+            "journeys"
+          ],
+          "answer_index": 3,
+          "explanation": "the best journeys 最好的旅程。"
+        }
+      ]
+    }
+  ]
+}

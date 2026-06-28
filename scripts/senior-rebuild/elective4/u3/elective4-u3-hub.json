@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The manned submersible reached a depth of seven kilometres.", "opts": ["载人潜水器下潜到了七千米深。", "潜水器只能浮在海面上。", "潜水器从未下过海。", "潜水器只下潜了七米。"], "answer": 0 },
+    { "audio": "Zheng He led a huge fleet across the sea to trade and make friends.", "opts": ["郑和率领庞大船队跨海贸易并结交朋友。", "郑和从未离开过中国。", "郑和带船队去攻打邻国。", "郑和只在河里航行。"], "answer": 0 },
+    { "audio": "Plastic pollution has even been found in our tap water.", "opts": ["塑料污染甚至已在自来水中被发现。", "塑料污染对海洋毫无影响。", "我们的自来水非常干净。", "塑料只存在于沙滩上。"], "answer": 0 },
+    { "audio": "Researchers track the whales to plot their migration path.", "opts": ["研究人员追踪鲸以绘制其迁徙路线。", "研究人员从不研究鲸。", "鲸从来不会迁徙。", "研究人员捕杀鲸取肉。"], "answer": 0 },
+    { "audio": "We have explored less than five percent of the world's oceans.", "opts": ["我们对世界海洋的探索还不到百分之五。", "我们已经探索了整个海洋。", "海洋根本无法被探索。", "我们只探索了陆地。"], "answer": 0 },
+    { "audio": "The sea is home to life, not human beings' possessions.", "opts": ["大海是生命的家园,而非人类的财产。", "大海完全属于人类。", "海里没有任何生命。", "人类可以随意耗尽大海。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "载人的、需人操纵的,用哪个词?", "opts": ["manned", "modern", "married", "manual"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "海的、海产的、海生的,用哪个词?", "opts": ["marine", "machine", "mineral", "mountain"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "潜水器、可潜船,用哪个词?", "opts": ["submersible", "directory", "tournament", "merchant"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "迁徙、迁移,用哪个词?", "opts": ["migration", "mixture", "mercy", "minute"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ after a dragon, the submersible carried scientists into the deep sea.", "opts": ["Named", "Naming", "Name", "To name"], "answer": 0, "point": "过去分词作状语", "dim": "grammar" },
+    { "q": "We must explore the oceans ____ cover most of our planet.", "opts": ["which", "what", "where", "whose"], "answer": 0, "point": "定语从句缺主语用which", "dim": "grammar" },
+    { "q": "It was courage and passion ____ made his dream come true.", "opts": ["that", "which", "who", "what"], "answer": 0, "point": "强调句It was…that", "dim": "grammar" },
+    { "q": "Only then ____ the campers understand why protecting the sea matters.", "opts": ["did", "do", "was", "had"], "answer": 0, "point": "Only+状语句首部分倒装", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["科学号被称为海上移动实验室。", "科学号只是一艘普通渔船。", "科学号从不出海。", "科学号是一艘军舰。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Kexue is called a moving laboratory on the sea." },
+    { "q": "听句子选意思:", "opts": ["每头鲸的鳍略有不同,帮助我们辨认它们。", "所有鲸看起来一模一样。", "鲸没有鳍。", "我们无法分辨任何一头鲸。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Each whale has slightly different fins, which help us tell them apart." }
+  ],
+  "reading": {
+    "passage": "Deep-sea exploration is hard and dangerous, yet it teaches us a great deal. By sending submersibles far below the surface, scientists log new creatures and collect rare samples. The more we learn about the ocean, the better we can protect this fragile world.",
+    "passageCn": "深海探测既艰难又危险,却让我们收获颇丰。通过把潜水器送往深海,科学家记录新物种、采集珍稀样本。我们对海洋了解得越多,就越能保护这个脆弱的世界。",
+    "questions": [
+      { "q": "What do scientists do with submersibles?", "opts": ["Log new creatures and collect rare samples.", "Sell fish at the market.", "Stop all sea research.", "Stay only on the surface."], "answer": 0 },
+      { "q": "What is the main message of the passage?", "opts": ["Learning more about the sea helps us protect it.", "The sea is not worth studying.", "Exploration is always useless.", "The ocean can never be harmed."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short news report (about 60 words) about a sea exploration achievement: who did it, what they found, and why exploring the ocean matters.",
+    "promptCn": "用约60词写一篇短新闻报道:一项海洋探索成就——谁做的、发现了什么,以及我们为什么要探索海洋。",
+    "sampleWords": ["submersible", "manned", "marine", "voyage", "explore", "log", "resource", "fragile", "achievement", "protect"]
+  },
+  "dialogues": [
+    {
+      "title": "At the Whale Watching Camp",
+      "lines": [
+        { "role": "A", "text": "What did your group do at the camp today?", "cn": "你们小组今天在营地做了什么?" },
+        { "role": "B", "text": "First we followed a group of whales and took photos of their fins.", "cn": "我们先跟踪了一群鲸,并拍下了它们的鳍。" },
+        { "role": "A", "text": "Why do you photograph the fins?", "cn": "为什么要拍它们的鳍呢?" },
+        { "role": "B", "text": "Because different marks help us tell the whales apart on future trips.", "cn": "因为不同的标记能帮我们日后辨认这些鲸。" }
+      ]
+    },
+    {
+      "title": "Talking About the Deep Sea",
+      "lines": [
+        { "role": "A", "text": "Is it true we have explored so little of the ocean?", "cn": "我们对海洋探索得真的那么少吗?" },
+        { "role": "B", "text": "Yes, less than five percent, even though it covers most of the earth.", "cn": "是的,还不到百分之五,尽管它覆盖了地球的大部分。" },
+        { "role": "A", "text": "Then why don't we explore more of it?", "cn": "那我们为什么不多探索一些呢?" },
+        { "role": "B", "text": "The deep sea is dark, cold and under huge pressure, so it is very hard to reach.", "cn": "深海又黑又冷,压力巨大,所以很难到达。" }
+      ]
+    }
+  ]
+}

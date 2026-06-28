@@ -1,0 +1,493 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Environmental Protection",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修三 Unit 3 同主题听力(校园环保社/全球变暖独白/上学方式对话/塞罕坝独白/课堂讨论对话/节能小贴士独白)。用词限本单元/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Joining the Green Club",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Hi, Mark, I heard you joined the school Green Club. What do you do there?"
+        },
+        {
+          "speaker": "B",
+          "text": "We do lots of things, Lucy. Last week we sorted rubbish for recycling."
+        },
+        {
+          "speaker": "A",
+          "text": "That sounds useful. Is it hard work?"
+        },
+        {
+          "speaker": "B",
+          "text": "Not really. We just put paper, glass and metal into different bins."
+        },
+        {
+          "speaker": "A",
+          "text": "Nice. What are you doing next?"
+        },
+        {
+          "speaker": "B",
+          "text": "This Saturday we'll plant young trees on the hill behind the school."
+        },
+        {
+          "speaker": "A",
+          "text": "Can I come too? I'd love to help the environment."
+        },
+        {
+          "speaker": "B",
+          "text": "Of course! The more hands we have, the more trees we can plant."
+        }
+      ],
+      "translation_cn": "Lucy 听说 Mark 加入了学校环保社,问他们做些什么;Mark 说上周他们把垃圾分类回收,把纸、玻璃、金属放进不同的桶;这周六要在学校后面的山上种小树;Lucy 也想去帮忙保护环境;Mark 欢迎她。",
+      "questions": [
+        {
+          "stem": "What club did Mark join?",
+          "options": [
+            "The school Green Club.",
+            "The music club.",
+            "The football club.",
+            "The art club."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the club do last week?",
+          "options": [
+            "They planted trees.",
+            "They sorted rubbish for recycling.",
+            "They cleaned the river.",
+            "They watched a film."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the club sort the rubbish?",
+          "options": [
+            "They put paper, glass and metal into different bins.",
+            "They burn all of it.",
+            "They throw it into the river.",
+            "They sell it to shops."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will the club do this Saturday?",
+          "options": [
+            "Hold a party.",
+            "Plant young trees on the hill.",
+            "Watch a match.",
+            "Take a long holiday."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Lucy want to join them?",
+          "options": [
+            "She wants to skip class.",
+            "She needs money.",
+            "She would love to help the environment.",
+            "She dislikes the club."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 Why the Earth Is Warming",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our planet is slowly getting warmer, and this change worries many scientists.",
+        "The main cause is the burning of fossil fuels such as coal and oil.",
+        "Burning them releases carbon dioxide, a gas that traps heat around the earth.",
+        "As the air warms up, the ice at the poles begins to melt and the sea rises.",
+        "To slow this trend, we should use clean energy and cut our carbon emissions."
+      ],
+      "translation_cn": "地球正在缓慢变暖,这让许多科学家担忧;主要原因是燃烧煤、石油等化石燃料;燃烧会排放二氧化碳,这种气体锁住地球周围的热量;空气变暖后,两极冰开始融化,海平面上升;要减缓这一趋势,我们应使用清洁能源并减少碳排放。",
+      "questions": [
+        {
+          "stem": "What is happening to our planet?",
+          "options": [
+            "It is getting much colder.",
+            "It is staying exactly the same.",
+            "It is shrinking in size.",
+            "It is slowly getting warmer."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the main cause of this change?",
+          "options": [
+            "Burning fossil fuels like coal and oil.",
+            "Planting too many trees.",
+            "Using too much clean energy.",
+            "Heavy rain in winter."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does carbon dioxide do around the earth?",
+          "options": [
+            "It cools the air down.",
+            "It traps heat.",
+            "It cleans the sky.",
+            "It makes more ice."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happens as the air warms up?",
+          "options": [
+            "The sea level falls.",
+            "The poles get colder.",
+            "Polar ice melts and the sea rises.",
+            "Nothing changes at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker suggest we do?",
+          "options": [
+            "Burn more coal.",
+            "Drive cars more often.",
+            "Cut down more forests.",
+            "Use clean energy and cut carbon emissions."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 How Do You Get to School?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Anna, how do you usually get to school in the morning?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ride my bike, Sam. It gives off no carbon dioxide at all."
+        },
+        {
+          "speaker": "A",
+          "text": "That's great. My dad still drives me every day."
+        },
+        {
+          "speaker": "B",
+          "text": "Why not walk? Your home isn't very far from here."
+        },
+        {
+          "speaker": "A",
+          "text": "You're right. A car for such a short trip wastes a lot of fuel."
+        },
+        {
+          "speaker": "B",
+          "text": "Exactly. Walking or cycling keeps the air cleaner and keeps you fit."
+        },
+        {
+          "speaker": "A",
+          "text": "I'll talk to my dad tonight. Maybe I'll start walking next week."
+        },
+        {
+          "speaker": "B",
+          "text": "Good idea! Small changes like that really add up."
+        }
+      ],
+      "translation_cn": "Sam 问 Anna 平时怎么上学;Anna 说骑自行车,完全不排放二氧化碳;Sam 的爸爸每天开车送他;Anna 建议他走路,因为家离学校不远;Sam 承认短途开车很浪费燃料;Anna 说走路或骑车既净化空气又锻炼身体;Sam 打算下周开始走路;Anna 说这种小改变积少成多。",
+      "questions": [
+        {
+          "stem": "How does Anna usually get to school?",
+          "options": [
+            "She rides her bike.",
+            "She takes a taxi.",
+            "Her dad drives her.",
+            "She takes the bus."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Anna's way good for the environment?",
+          "options": [
+            "It is the fastest way.",
+            "It gives off no carbon dioxide.",
+            "It costs the most money.",
+            "It needs a lot of fuel."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Anna suggest Sam do?",
+          "options": [
+            "Take a plane.",
+            "Drive a bigger car.",
+            "Walk to school.",
+            "Stay at home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is driving for a short trip a problem?",
+          "options": [
+            "It is too slow.",
+            "It is against the rules.",
+            "It is too quiet.",
+            "It wastes a lot of fuel."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Sam decide to do?",
+          "options": [
+            "Talk to his dad and maybe start walking.",
+            "Buy a new car.",
+            "Stop going to school.",
+            "Ride with Anna every day."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 The Forest That People Made",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Long ago, Saihanba in northern China was bare and dry land near a desert.",
+        "Sand often blew towards the cities, and the soil could not hold water.",
+        "From 1962, young workers were sent there to grow a forest from nothing.",
+        "Many early trees died, but the workers learned and never gave up.",
+        "After about sixty years, their effort turned the bare hills into a huge green forest."
+      ],
+      "translation_cn": "很久以前,中国北方的塞罕坝是靠近沙漠的一片光秃干旱之地;沙子常常吹向城市,土壤无法保水;从1962年起,年轻的工人被派去那里白手起家种林;早期许多树死了,但工人们不断学习、从不放弃;约六十年后,他们的努力把光秃的山岭变成了一片巨大的绿色森林。",
+      "questions": [
+        {
+          "stem": "What was Saihanba like long ago?",
+          "options": [
+            "A busy modern city.",
+            "Bare and dry land near a desert.",
+            "A deep blue lake.",
+            "A green forest already."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What problem did the sand cause?",
+          "options": [
+            "It made the forest grow faster.",
+            "It cooled the whole country.",
+            "It blew towards the cities.",
+            "It filled the rivers with fish."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why were the young workers sent there in 1962?",
+          "options": [
+            "To build a new city.",
+            "To dig for coal.",
+            "To open a factory.",
+            "To grow a forest from nothing."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the workers do when early trees died?",
+          "options": [
+            "They learned and never gave up.",
+            "They left the place at once.",
+            "They blamed each other.",
+            "They stopped all planting."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was the result of their effort?",
+          "options": [
+            "The land turned into a desert.",
+            "The bare hills became a huge green forest.",
+            "The trees all died in the end.",
+            "Nothing changed at all."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Talking about Smog in Class",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Mr Lee, why does our city sometimes have such heavy smog?"
+        },
+        {
+          "speaker": "B",
+          "text": "Good question, Tina. Smog forms when smoke from coal mixes with fog."
+        },
+        {
+          "speaker": "A",
+          "text": "So the smoke comes mostly from factories and cars?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, and from homes that still burn coal in winter."
+        },
+        {
+          "speaker": "A",
+          "text": "What can the city do to make the air cleaner?"
+        },
+        {
+          "speaker": "B",
+          "text": "It can restrict cars on busy days and move polluting factories away."
+        },
+        {
+          "speaker": "A",
+          "text": "And we can use cleaner energy, like solar and wind power."
+        },
+        {
+          "speaker": "B",
+          "text": "Exactly. If everyone helps, the smog will slowly disappear."
+        }
+      ],
+      "translation_cn": "Tina 问李老师为什么城市有时雾霾很重;李老师说雾霾是煤烟与雾混合形成的;烟主要来自工厂和汽车,还有冬天烧煤的家庭;要让空气更清洁,城市可在繁忙日子限行、迁走污染工厂;Tina 补充可以使用太阳能和风能等更清洁的能源;李老师说只要人人出力,雾霾会慢慢消失。",
+      "questions": [
+        {
+          "stem": "What is Tina asking Mr Lee about?",
+          "options": [
+            "How to win a football match.",
+            "Where to buy a bike.",
+            "Why the city sometimes has heavy smog.",
+            "When school will end."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does smog form, according to Mr Lee?",
+          "options": [
+            "From clean rain only.",
+            "From too many trees.",
+            "From cold winds alone.",
+            "When coal smoke mixes with fog."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where does the smoke mostly come from?",
+          "options": [
+            "From factories, cars and coal-burning homes.",
+            "From the sea.",
+            "From green forests.",
+            "From solar panels."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can the city do to clean the air?",
+          "options": [
+            "Build more coal factories.",
+            "Restrict cars and move polluting factories.",
+            "Add more cars to the roads.",
+            "Do nothing and wait."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What clean energy does Tina mention?",
+          "options": [
+            "Coal and oil.",
+            "Petrol and gas.",
+            "Solar and wind power.",
+            "Wood and paper."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Simple Ways to Save Energy",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Saving energy at home is easier than many people think.",
+        "When you leave a room, remember to turn off the light.",
+        "On a cold day, put on a warm sweater before you turn up the heat.",
+        "Do not leave the TV or computer on standby, and unplug them at night.",
+        "These small habits save money and help to protect our planet."
+      ],
+      "translation_cn": "在家节能比许多人想的要容易;离开房间时记得关灯;天冷时先穿暖毛衣再开暖气;不要让电视或电脑处于待机,晚上把它们拔掉电源;这些小习惯既省钱又有助于保护我们的星球。",
+      "questions": [
+        {
+          "stem": "What does the speaker say about saving energy at home?",
+          "options": [
+            "It is almost impossible.",
+            "It costs a lot of money.",
+            "It only teachers can do it.",
+            "It is easier than many people think."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you do when you leave a room?",
+          "options": [
+            "Turn off the light.",
+            "Open all the windows.",
+            "Turn up the heat.",
+            "Leave the TV on."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker suggest on a cold day?",
+          "options": [
+            "Open the door.",
+            "Put on a warm sweater before turning up the heat.",
+            "Run the air conditioner.",
+            "Drink cold water."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do with the TV and computer at night?",
+          "options": [
+            "Leave them on standby.",
+            "Turn the sound up.",
+            "Unplug them.",
+            "Move them outside."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do these small habits help to do?",
+          "options": [
+            "Waste more power.",
+            "Make the home dirtier.",
+            "Raise carbon emissions.",
+            "Save money and protect the planet."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

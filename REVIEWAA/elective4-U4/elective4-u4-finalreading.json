@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(分享/志愿主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mia first joined the charity, she only wanted to give away a few old books. But after spending a whole afternoon reading with the children, she realised that her time mattered far more than her gifts. From that day on, she went back every week, certain that even a small act of kindness could change someone's world.",
+    "questions": [
+      {
+        "q": "What did Mia want to do when she first joined the charity?",
+        "options": [
+          "Give away a few of her old books.",
+          "Open a new school for the children.",
+          "Collect money from her neighbours.",
+          "Become the leader of the charity."
+        ],
+        "answer": "A",
+        "explanation": "原文 'she only wanted to give away a few old books' 的转述;其余文中未提。"
+      },
+      {
+        "q": "What did Mia realise after the afternoon with the children?",
+        "options": [
+          "That giving books was a waste of time.",
+          "That her time mattered more than her gifts.",
+          "That she should stop visiting them.",
+          "That the children disliked reading."
+        ],
+        "answer": "B",
+        "explanation": "原文 'her time mattered far more than her gifts'(短文后半段,覆盖不同位置);其余与原文相反。"
+      }
+    ]
+  }
+}

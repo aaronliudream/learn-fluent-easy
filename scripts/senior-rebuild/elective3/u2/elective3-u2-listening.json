@@ -1,0 +1,475 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Healthy Lifestyle",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修三 Unit 2 同主题听力(看医生减重/习惯循环/手机用太多/健康饮食贴士/给同学建议/管理压力)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 A Visit to the Doctor",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Patient",
+          "text": "Hello, doctor. I want to lose weight, but I just can't seem to do it."
+        },
+        {
+          "speaker": "Doctor",
+          "text": "Let's start with your diet. First, it's necessary to examine what you eat every day."
+        },
+        {
+          "speaker": "Patient",
+          "text": "Well, I love fried chicken and sugary drinks."
+        },
+        {
+          "speaker": "Doctor",
+          "text": "I see. Cut out the fatty food and the sugary drinks, and eat more fruit and vegetables."
+        },
+        {
+          "speaker": "Patient",
+          "text": "That sounds hard. I also sit at my desk all day."
+        },
+        {
+          "speaker": "Doctor",
+          "text": "Then try to exercise regularly. Even a thirty-minute walk each day will help."
+        },
+        {
+          "speaker": "Patient",
+          "text": "All right. I'll change my diet and start walking."
+        },
+        {
+          "speaker": "Doctor",
+          "text": "Good. Remember, it takes time, so change slowly and don't give up."
+        }
+      ],
+      "translation_cn": "病人想减重却做不到;医生说先要检查每天吃什么;病人爱吃炸鸡和含糖饮料;医生让他戒掉油腻食物和含糖饮料、多吃果蔬;病人整天坐着;医生建议规律锻炼,每天散步30分钟;病人答应改饮食并开始散步;医生提醒要慢慢来、别放弃。",
+      "questions": [
+        {
+          "stem": "What does the patient want to do?",
+          "options": [
+            "Lose weight.",
+            "Gain weight.",
+            "Learn to cook.",
+            "Change jobs."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the doctor want to check first?",
+          "options": [
+            "His sleep.",
+            "What he eats every day.",
+            "His phone use.",
+            "His marks at school."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What food does the patient say he loves?",
+          "options": [
+            "Fried chicken and sugary drinks.",
+            "Fruit and vegetables.",
+            "Nuts and dried meat.",
+            "Rice and soup."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What exercise does the doctor suggest?",
+          "options": [
+            "Lifting heavy weights.",
+            "A thirty-minute walk each day.",
+            "Swimming for an hour.",
+            "Playing computer games."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the doctor say about changing?",
+          "options": [
+            "It must happen in one day.",
+            "It is impossible to do.",
+            "It takes time, so change slowly.",
+            "It needs a special pill."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 The Habit Cycle",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Modern psychology tells us that every habit follows a simple cycle. First there is a cue, a signal that makes you want to do something. Then there is a routine, the action you take after the cue. Finally there is a reward, the good feeling you get. Because the reward feels nice, you repeat the cycle again and again. To change a bad habit, keep the same cue but choose a more positive routine.",
+      "translation_cn": "现代心理学告诉我们,每个习惯都遵循一个简单的循环:先是提示(让你想做某事的信号),然后是常规(提示后采取的行动),最后是回报(你得到的好感觉)。因为回报让人舒服,你会反复重复这个循环。要改掉坏习惯,就保留同样的提示,但换一个更积极的常规。",
+      "questions": [
+        {
+          "stem": "What is the first part of the habit cycle?",
+          "options": [
+            "The reward.",
+            "The routine.",
+            "The result.",
+            "The cue."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the routine?",
+          "options": [
+            "The action you take after the cue.",
+            "The signal to start.",
+            "The good feeling you get.",
+            "The end of the habit."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do people repeat the cycle?",
+          "options": [
+            "Because the cue is loud.",
+            "Because the reward feels good.",
+            "Because the routine is boring.",
+            "Because they are forced to."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "According to the passage, where does the habit cycle come from?",
+          "options": [
+            "Old stories.",
+            "A magic pill.",
+            "Modern psychology.",
+            "A dentist."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How can you change a bad habit?",
+          "options": [
+            "Remove the cue forever.",
+            "Repeat the same routine more.",
+            "Give up the reward entirely.",
+            "Keep the cue but choose a better routine."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Too Much Phone Time",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lily",
+          "text": "You look tired again, Tom. Not enough sleep, right?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Yeah. I stayed up late on my phone watching videos again."
+        },
+        {
+          "speaker": "Lily",
+          "text": "I think the phone is the problem. It's affecting your schoolwork."
+        },
+        {
+          "speaker": "Tom",
+          "text": "I know. Whenever I feel bored, I just pick up my phone straight away."
+        },
+        {
+          "speaker": "Lily",
+          "text": "So boredom is your cue. Why don't you change the routine?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Have you got any ideas?"
+        },
+        {
+          "speaker": "Lily",
+          "text": "When you feel bored, take a short walk or read a few pages instead."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That's a good idea. I'll leave my phone in another room tonight."
+        }
+      ],
+      "translation_cn": "Lily 说 Tom 又累了、没睡够;Tom 又熬夜看视频;Lily 认为手机是问题、影响功课;Tom 一无聊就立刻拿手机;Lily 指出无聊是他的提示,建议换常规;Tom 问有什么主意;Lily 建议无聊时去散步或读几页书;Tom 觉得是好主意,决定今晚把手机放别的房间。",
+      "questions": [
+        {
+          "stem": "Why does Tom look tired?",
+          "options": [
+            "He stayed up late on his phone.",
+            "He exercised too much.",
+            "He got up very early to study.",
+            "He was ill with the flu."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Lily think is the problem?",
+          "options": [
+            "His diet.",
+            "The phone.",
+            "His friends.",
+            "His homework load."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Tom's cue for picking up the phone?",
+          "options": [
+            "Feeling hungry.",
+            "Feeling sleepy.",
+            "Feeling bored.",
+            "Feeling cold."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Lily suggest doing instead?",
+          "options": [
+            "Buying a new phone.",
+            "Watching more videos.",
+            "Sleeping all day.",
+            "Taking a walk or reading a few pages."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What will Tom do tonight?",
+          "options": [
+            "Leave his phone in another room.",
+            "Watch videos longer.",
+            "Skip his homework.",
+            "Stay up even later."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 Snacks from Home",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "After a dentist warned her about too much sugar, Mei changed the way she ate. She stopped buying sweets, biscuits and sugary drinks. Whenever she went out with friends, she brought snacks from home instead, such as fruit, nuts and dried meat. She also drank plain water rather than soft drinks. After a few weeks, her teeth felt better and she had more energy. She says that to eat well is now a simple part of her daily life.",
+      "translation_cn": "牙医警告美糖吃太多后,她改变了饮食方式:不再买糖果、饼干和含糖饮料;和朋友出门时改带家里的零食,如水果、坚果和肉干;还用白水代替软饮料。几周后,她的牙齿好转、精力更充沛。她说现在健康饮食已是她日常生活中简单的一部分。",
+      "questions": [
+        {
+          "stem": "Who warned Mei about sugar?",
+          "options": [
+            "A teacher.",
+            "A dentist.",
+            "Her friend.",
+            "A coach."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Mei stop buying?",
+          "options": [
+            "Fruit and nuts.",
+            "Water and tea.",
+            "Sweets, biscuits and sugary drinks.",
+            "Dried meat."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did she bring from home instead?",
+          "options": [
+            "Soft drinks.",
+            "Cakes and sweets.",
+            "Nothing at all.",
+            "Fruit, nuts and dried meat."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did she drink instead of soft drinks?",
+          "options": [
+            "Plain water.",
+            "Coffee.",
+            "Sugary juice.",
+            "Hot chocolate."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Mei feel about healthy eating now?",
+          "options": [
+            "It is too hard to keep up.",
+            "It is a simple part of her daily life.",
+            "It is boring and useless.",
+            "It made her health worse."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Advice on Breaking a Habit",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Sam",
+          "text": "I really need to stop drinking so much cola, but I just can't."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Don't worry. To change a habit slowly is easier than stopping all at once."
+        },
+        {
+          "speaker": "Sam",
+          "text": "So what should I do first?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Drink one less can each week, and replace it with water."
+        },
+        {
+          "speaker": "Sam",
+          "text": "That sounds possible. Anything else?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Give yourself a small reward when you reach a goal, like watching a comedy."
+        },
+        {
+          "speaker": "Sam",
+          "text": "Good idea. And if I fail one day?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Don't become pessimistic. Just start again the next day."
+        }
+      ],
+      "translation_cn": "Sam 想戒掉喝太多可乐却做不到;Anna 说慢慢改比一下子戒掉更容易;Sam 问先做什么;Anna 建议每周少喝一罐、用水代替;Sam 觉得可行,问还有别的吗;Anna 建议达成目标就给自己小奖励,比如看部喜剧;Sam 问万一某天失败了;Anna 说别悲观,第二天重新开始就好。",
+      "questions": [
+        {
+          "stem": "What habit does Sam want to break?",
+          "options": [
+            "Watching too much TV.",
+            "Sleeping too little.",
+            "Drinking too much cola.",
+            "Eating too much meat."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Anna say about changing a habit?",
+          "options": [
+            "It must be done all at once.",
+            "It is impossible to change.",
+            "Only a doctor can help.",
+            "Changing slowly is easier than stopping suddenly."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Anna's first piece of advice?",
+          "options": [
+            "Drink one less can each week and replace it with water.",
+            "Stop drinking water.",
+            "Drink even more cola.",
+            "Buy a bigger bottle."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What reward does Anna suggest?",
+          "options": [
+            "Eating sweets.",
+            "Watching a comedy.",
+            "Buying new cola.",
+            "Staying up late."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should Sam do if he fails one day?",
+          "options": [
+            "Give up completely.",
+            "Drink more cola than before.",
+            "Not become pessimistic and start again the next day.",
+            "Blame his friends."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Beating Stress",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "It is not easy to manage stress, but a few simple steps really help. For minor stress, wash your face with cold water or go for a short walk outside. For long-term stress, take up a hobby that you truly enjoy, such as bowling or watching a comedy. The key is to choose something that takes your mind off your worries. If you can focus on one pleasant activity for a while, you will feel much more refreshed afterwards.",
+      "translation_cn": "管理压力并不容易,但几个简单步骤真的有用:轻微压力时,用冷水洗脸或到外面短暂散步;长期压力时,培养一个你真正喜欢的爱好,比如打保龄球或看喜剧;关键是选一件能让你忘掉烦恼的事;如果能专注于一件愉快的活动一会儿,之后你会感觉精神好多了。",
+      "questions": [
+        {
+          "stem": "What does the passage suggest for minor stress?",
+          "options": [
+            "Taking strong medicine.",
+            "Sleeping for the whole day.",
+            "Eating lots of sweets.",
+            "A cold-water wash or a short walk."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is suggested for long-term stress?",
+          "options": [
+            "Taking up a hobby you enjoy.",
+            "Working even harder.",
+            "Avoiding all people.",
+            "Drinking more coffee."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What kind of activity should you choose?",
+          "options": [
+            "One that costs a lot of money.",
+            "One that takes your mind off your worries.",
+            "One that makes you more worried.",
+            "One that keeps you thinking about stress."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What examples of hobbies are given?",
+          "options": [
+            "Studying and cleaning.",
+            "Shopping and cooking.",
+            "Bowling and watching a comedy.",
+            "Sleeping and reading."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How will you feel after focusing on a pleasant activity?",
+          "options": [
+            "More tired than before.",
+            "Angry and bored.",
+            "Exactly the same.",
+            "Much more refreshed."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Science Fiction",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修四 Unit 1 同主题听力(挑科幻电影/采访科幻专家/机器人三定律/买票看科幻片/谈AI助手/给写故事的小贴士)。用词限本单元/常见词,答案唯一、可在 transcript 找依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Choosing a Sci-Fi Film",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: There's a science fiction film festival this weekend. Want to go, Sam?",
+        "Sam: Sounds great. What films are they showing?",
+        "Mia: On Saturday it's a story about robots that take over a city.",
+        "Sam: Hmm, that sounds a bit scary. What about Sunday?",
+        "Mia: Sunday is about a girl who builds a time machine and travels to the future.",
+        "Sam: I love time-travel stories. Let's go on Sunday, then.",
+        "Mia: Perfect. I'll book two tickets online tonight.",
+        "Sam: Thanks. Shall we meet at the cinema at two o'clock?"
+      ],
+      "translation_cn": "Mia 邀 Sam 周末去科幻电影节;周六放机器人占领城市的片子,Sam 觉得有点吓人;周日放一个女孩造时间机器去未来的故事;Sam 爱看时间旅行,决定周日去;Mia 今晚网上订两张票,约定两点在影院碰面。",
+      "questions": [
+        {
+          "stem": "What event are Mia and Sam talking about?",
+          "options": [
+            "A science fiction film festival.",
+            "A football match.",
+            "A music concert.",
+            "A school exam."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Saturday's film about?",
+          "options": [
+            "A girl and a time machine.",
+            "Robots taking over a city.",
+            "A trip to the sea.",
+            "A cooking show."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Sam choose the Sunday film?",
+          "options": [
+            "He loves time-travel stories.",
+            "It is free.",
+            "It is shorter.",
+            "His friends chose it."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will Mia get the tickets?",
+          "options": [
+            "She will buy them at the door.",
+            "She will book them online.",
+            "She will ask a friend.",
+            "She will not buy any."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When will they meet at the cinema?",
+          "options": [
+            "At ten o'clock.",
+            "At noon.",
+            "At two o'clock.",
+            "At midnight."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 What Is Science Fiction",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Science fiction is a kind of story about the future and about science.",
+        "It often describes robots, space travel, time machines, and life on other planets.",
+        "Long ago, robots existed only in such stories.",
+        "Today many of those imagined ideas are slowly becoming real.",
+        "Good science fiction makes us think about how technology may change our lives."
+      ],
+      "translation_cn": "科幻是一种关于未来和科学的故事;常描写机器人、太空旅行、时间机器和其他星球上的生活;很久以前,机器人只存在于这类故事中;如今许多想象中的点子正慢慢变成现实;好的科幻让我们思考科技会如何改变生活。",
+      "questions": [
+        {
+          "stem": "What is science fiction mainly about?",
+          "options": [
+            "Only old history.",
+            "Cooking and food.",
+            "Sports games.",
+            "The future and science."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which of these does science fiction often describe?",
+          "options": [
+            "Robots and space travel.",
+            "Farm animals only.",
+            "School timetables.",
+            "Weather reports."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where did robots exist long ago?",
+          "options": [
+            "In every home.",
+            "Only in such stories.",
+            "In real factories.",
+            "On every street."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is happening to many imagined ideas today?",
+          "options": [
+            "They are forgotten.",
+            "They are banned.",
+            "They are slowly becoming real.",
+            "They are sold abroad."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does good science fiction make us do?",
+          "options": [
+            "Stop using machines.",
+            "Forget the future.",
+            "Avoid all science.",
+            "Think about how technology may change life."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 An Interview with a Sci-Fi Expert",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Host: Welcome. You are an expert in science fiction. Do you have robots at home?",
+        "Expert: Yes, I have two. One helps me cook, and the other cleans the floor.",
+        "Host: Interesting! What jobs do you think robots will do in the future?",
+        "Expert: I believe they will work in teaching and nursing, helping people every day.",
+        "Host: That sounds useful. But could robots also become dangerous?",
+        "Expert: As they grow more intelligent, they may also become harder to control.",
+        "Host: So the line between humans and robots will get blurred?",
+        "Expert: Exactly. That is why clear rules and careful testing matter so much."
+      ],
+      "translation_cn": "主持人欢迎科幻专家,问他家里有没有机器人;专家有两个,一个帮做饭一个扫地;谈到未来机器人会从事教学和护理;主持人担心机器人也会变危险;专家说它们越聪明越难控制;人机界限会变模糊;因此明确规则和谨慎测试很重要。",
+      "questions": [
+        {
+          "stem": "How many robots does the expert have at home?",
+          "options": [
+            "Two.",
+            "Five.",
+            "None.",
+            "Ten."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does one of his robots do?",
+          "options": [
+            "It drives a car.",
+            "It helps him cook.",
+            "It writes books.",
+            "It plays music."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "In which jobs does the expert think robots will work?",
+          "options": [
+            "Only in factories.",
+            "Only in shops.",
+            "Teaching and nursing.",
+            "Nowhere at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why might robots become dangerous?",
+          "options": [
+            "They get cheaper.",
+            "They grow smaller.",
+            "They use less power.",
+            "They grow more intelligent and harder to control."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the expert say matters so much?",
+          "options": [
+            "Clear rules and careful testing.",
+            "Buying more robots.",
+            "Faster machines.",
+            "Cheaper tickets."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 The Three Laws of Robotics",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The famous writer Isaac Asimov created three laws to keep robots safe.",
+        "The first law says a robot must never harm a human being.",
+        "The second law says a robot must obey the orders given by people.",
+        "But it must not obey an order if that order breaks the first law.",
+        "The third law says a robot must protect itself, as long as this does not break the other laws."
+      ],
+      "translation_cn": "著名作家阿西莫夫制定了三条让机器人安全的定律;第一定律:机器人绝不能伤害人类;第二定律:机器人必须服从人的命令;但若命令违反第一定律则不可服从;第三定律:机器人必须保护自己,只要不违反前两条。",
+      "questions": [
+        {
+          "stem": "Who created the three laws of robotics?",
+          "options": [
+            "Liu Cixin.",
+            "Isaac Asimov.",
+            "Ken Liu.",
+            "H. G. Wells."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the first law say a robot must never do?",
+          "options": [
+            "Speak to humans.",
+            "Clean a floor.",
+            "Harm a human being.",
+            "Charge its battery."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the second law tell a robot to do?",
+          "options": [
+            "Ignore all people.",
+            "Run away from humans.",
+            "Sleep all day.",
+            "Obey the orders given by people."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When must a robot not obey an order?",
+          "options": [
+            "When the order breaks the first law.",
+            "When it is tired.",
+            "When it is busy.",
+            "When it is night."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the third law allow a robot to do?",
+          "options": [
+            "Harm anyone it likes.",
+            "Protect itself, if it breaks no other law.",
+            "Stop working forever.",
+            "Disobey every order."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Talking about an AI Helper",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: My grandfather just got a small AI helper. It's amazing!",
+        "Tom: Really? What can it do for him?",
+        "Lucy: It reminds him to take his medicine and reads the news aloud.",
+        "Tom: That's so helpful. Does it ever make mistakes?",
+        "Lucy: Sometimes it hears the wrong word, and we all laugh.",
+        "Tom: Ha! Is your grandfather worried about it at all?",
+        "Lucy: A little. He says a machine must always be kept safe and private.",
+        "Tom: That's a wise point. New technology should help us, not control us."
+      ],
+      "translation_cn": "Lucy 的爷爷有了个小型 AI 助手,很棒;它提醒爷爷吃药、朗读新闻;有时听错词逗大家笑;爷爷有点担心,说机器必须保证安全和隐私;Tom 赞同:新技术应帮助我们,而非控制我们。",
+      "questions": [
+        {
+          "stem": "Who got the AI helper?",
+          "options": [
+            "Tom's brother.",
+            "Lucy's teacher.",
+            "Lucy's grandfather.",
+            "Tom's mother."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one thing the AI helper does?",
+          "options": [
+            "It cooks dinner.",
+            "It drives a car.",
+            "It paints pictures.",
+            "It reminds him to take his medicine."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why do they sometimes laugh at the helper?",
+          "options": [
+            "It hears the wrong word.",
+            "It sings badly.",
+            "It falls over.",
+            "It runs away."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the grandfather a little worried about?",
+          "options": [
+            "The colour of the machine.",
+            "Keeping it safe and private.",
+            "The price of the machine.",
+            "The size of the machine."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do Lucy and Tom agree about technology?",
+          "options": [
+            "It is always useless.",
+            "It should replace all people.",
+            "It should help us, not control us.",
+            "It should never be used."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 Tips for Writing a Sci-Fi Story",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are some simple tips for writing your own science fiction story.",
+        "First, think of one big idea, such as a robot, an alien, or a time machine.",
+        "Next, imagine how your world looks and how your machine works.",
+        "Then use vivid words to help readers picture the strange new sights.",
+        "Finally, leave a surprising ending so that readers keep thinking about your story."
+      ],
+      "translation_cn": "给你写科幻故事几个小贴士:先想一个大点子,比如机器人、外星人或时间机器;再想象你的世界长什么样、机器如何运转;然后用生动的词让读者在脑中描绘奇异的新景象;最后留一个出人意料的结尾,让读者回味无穷。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to repair a robot.",
+            "How to buy a ticket.",
+            "A weather report.",
+            "Tips for writing a sci-fi story."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should a writer think of first?",
+          "options": [
+            "One big idea like a robot or time machine.",
+            "A long list of names.",
+            "The price of paper.",
+            "A song to sing."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why should a writer use vivid words?",
+          "options": [
+            "To make the story shorter.",
+            "To help readers picture the new sights.",
+            "To save time.",
+            "To hide the story."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of ending does the passage suggest?",
+          "options": [
+            "A boring ending.",
+            "No ending at all.",
+            "A surprising ending.",
+            "A copied ending."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will a surprising ending make readers do?",
+          "options": [
+            "Stop reading at once.",
+            "Forget the story.",
+            "Throw the book away.",
+            "Keep thinking about the story."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

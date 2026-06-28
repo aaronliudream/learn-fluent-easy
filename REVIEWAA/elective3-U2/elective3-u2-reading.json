@@ -1,0 +1,362 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Healthy Lifestyle",
+  "source": "人教版2019选择性必修三 Unit 2 同主题阅读(习惯循环/戒坏习惯/压力管理/健康饮食/坚持运动/手机成瘾)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "How Habits Are Formed",
+      "topic_cn": "说明·习惯循环",
+      "body": "As teenagers grow up, they become more independent and start making their own decisions. During this period, it can be easy for some of them to form bad habits. According to modern psychology, every habit follows a simple cycle with three parts. First comes the cue, an action, event or situation that acts as a signal to do something. Next comes the routine, the regular action you take in response to the cue. Last comes the reward, the good feeling you get from the routine. For example, when we feel unhappy, that feeling is the cue; we eat unhealthy snacks as the routine; and the pleasure we get is the reward. Because the reward feels good, we are much more likely to repeat the whole cycle, and soon the bad habit is firmly formed. The good news is that once we understand how this cycle works, we can change it. By keeping the same cue but choosing a more positive routine, we are able to turn a bad habit into a good one.",
+      "vocab_notes": [
+        {
+          "word": "cue",
+          "cn": "提示;信号"
+        },
+        {
+          "word": "routine",
+          "cn": "常规;惯常做法"
+        },
+        {
+          "word": "reward",
+          "cn": "回报;好处"
+        },
+        {
+          "word": "psychology",
+          "cn": "心理学"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is it easy for some teenagers to form bad habits?",
+          "options": [
+            "Because they grow more independent and make their own choices.",
+            "Because they are forced by their parents.",
+            "Because they have no free time at all.",
+            "Because they never feel unhappy."
+          ],
+          "answer_index": 0,
+          "explanation": "开头 'they become more independent and start making their own decisions' 的转述。"
+        },
+        {
+          "stem": "What is the correct order of the habit cycle?",
+          "options": [
+            "Reward, routine, then cue.",
+            "Cue, routine, then reward.",
+            "Routine, reward, then cue.",
+            "Reward, cue, then routine."
+          ],
+          "answer_index": 1,
+          "explanation": "原文依次讲 cue → routine → reward。"
+        },
+        {
+          "stem": "How can someone turn a bad habit into a good one?",
+          "options": [
+            "By keeping the cue but choosing a better routine.",
+            "By avoiding all cues forever.",
+            "By repeating the same routine more often.",
+            "By giving up the reward completely."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'keeping the same cue but choosing a more positive routine' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "There Is No Magic Pill",
+      "topic_cn": "议论·戒坏习惯靠坚持",
+      "body": "Many of us try to change a bad habit quickly. We promise ourselves that from tomorrow everything will be different. But when we are not successful straight away, we often become pessimistic and give up after only a few attempts. In fact, the most successful way to change is not suddenly, but slowly over a period of time. As the Chinese philosopher Laozi wrote, a journey of a thousand miles begins with a single step. One small step may seem to mean nothing, yet it is truly essential. To reach the goal of change, a person must show some discipline and repeatedly take many tiny steps in the right direction. For young people there is plenty of time, so there is no need to rush. However, you should also know the truth: there is no magic pill and no delete button that will remove a bad habit for you. You have to think carefully about your own habits and decide on the changes you want. In the end, the power to build a healthy and happy life lies in your own hands.",
+      "vocab_notes": [
+        {
+          "word": "pessimistic",
+          "cn": "悲观的"
+        },
+        {
+          "word": "discipline",
+          "cn": "自制力"
+        },
+        {
+          "word": "repeatedly",
+          "cn": "反复地"
+        },
+        {
+          "word": "essential",
+          "cn": "至关重要的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do many people give up changing a bad habit?",
+          "options": [
+            "Because they have no bad habits.",
+            "Because they grow discouraged when quick results do not appear.",
+            "Because they succeed too easily.",
+            "Because their friends stop them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'not successful straight away… become pessimistic and give up' 的转述。"
+        },
+        {
+          "stem": "What does the writer say is the best way to change?",
+          "options": [
+            "Suddenly, all in one day.",
+            "By taking a special pill.",
+            "Slowly, through many small steps over time.",
+            "By waiting until you are an adult."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'not suddenly, but slowly over a period of time… many tiny steps' 的转述。"
+        },
+        {
+          "stem": "What does the writer mean by saying there is no magic pill?",
+          "options": [
+            "You should buy more medicine.",
+            "Pills are bad for your health.",
+            "Doctors cannot help anyone.",
+            "No quick or easy tool can change a habit for you."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'no magic pill… you have to think… decide on the changes' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Managing Everyday Stress",
+      "topic_cn": "说明·压力管理",
+      "body": "It is not easy to manage stress successfully, and yet stress is something almost every student faces. When you are stressed, even a small problem can suddenly seem much worse than it really is. Serious stress can also lead to health issues such as dizziness, skin conditions and breathing problems, so it is best to find a solution as soon as you can. For minor stress, simple actions often work well. You might wash your face with cold water or go for a short walk outside to clear your mind. To fight long-term stress, it is a great idea to take up a new hobby that you truly enjoy. Ride a skateboard, go bowling or watch a comedy: whatever stimulates your mind and makes you feel happy. The key is to choose something that completely takes your mind off everything else. If you can concentrate fully on one pleasant activity for a while, you will almost certainly feel much more refreshed afterwards. So next time you feel worn out, remember to free yourself by finding something positive to focus on.",
+      "vocab_notes": [
+        {
+          "word": "stimulate",
+          "cn": "激发;刺激"
+        },
+        {
+          "word": "refresh",
+          "cn": "使恢复精力"
+        },
+        {
+          "word": "dizziness",
+          "cn": "头晕"
+        },
+        {
+          "word": "worn out",
+          "cn": "筋疲力尽的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What can serious stress lead to, according to the text?",
+          "options": [
+            "Health problems such as dizziness and breathing trouble.",
+            "More free time.",
+            "Better marks at school.",
+            "A stronger body."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'lead to health issues such as dizziness, skin conditions and breathing problems' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest for minor stress?",
+          "options": [
+            "Taking some pills.",
+            "Simple actions like a cold-water wash or a short walk.",
+            "Sleeping all day.",
+            "Ignoring it completely."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'wash your face with cold water or go for a short walk' 的转述。"
+        },
+        {
+          "stem": "Why does taking up a hobby help with long-term stress?",
+          "options": [
+            "It costs a lot of money.",
+            "It makes you feel more tired.",
+            "It lets your mind fully escape from your worries.",
+            "It keeps you thinking about the problem."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'completely takes your mind off everything else… feel much more refreshed' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Wang Lu Gives Up Sugar",
+      "topic_cn": "记叙·健康饮食改变",
+      "body": "Before attending a summer camp about health, Wang Lu hardly ever felt well, either in body or in mind. He often felt sleepy and dizzy, and he lacked passion for anything. Worst of all, he caught the flu easily and suffered from many toothaches. At the camp he heard a powerful line: change the world by changing yourself. This stimulated him. A dentist had once examined him and warned that too much sugar in his meals had damaged both his teeth and his health. So Wang Lu made up his mind to change two things: to eat nothing with added sugar and to exercise regularly. He stopped buying the sweets, biscuits and sugary drinks he used to have every day. Whenever he went out with friends, he brought snacks from home instead, such as fruit, nuts and dried meat. His exercise plan was simple: he went outside for at least thirty minutes daily to do something active. After a while the results were fantastic. He felt more dynamic and stronger than before, slept soundly at night, and no longer suffered from the flu or toothaches.",
+      "vocab_notes": [
+        {
+          "word": "dentist",
+          "cn": "牙医"
+        },
+        {
+          "word": "sugary",
+          "cn": "含糖的"
+        },
+        {
+          "word": "dynamic",
+          "cn": "充满活力的"
+        },
+        {
+          "word": "examine",
+          "cn": "检查"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Wang Lu feel before the camp?",
+          "options": [
+            "Happy and full of passion.",
+            "Healthy and strong.",
+            "Calm and well rested.",
+            "Unwell, sleepy and lacking energy."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'hardly ever felt well… sleepy and dizzy, and he lacked passion' 的转述。"
+        },
+        {
+          "stem": "What two changes did Wang Lu decide to make?",
+          "options": [
+            "To cut out added sugar completely and to work out regularly.",
+            "To sleep more and study less.",
+            "To take medicine and stay indoors.",
+            "To buy more sweets and biscuits."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'to eat nothing with added sugar and to exercise regularly' 的转述。"
+        },
+        {
+          "stem": "What were the results of his new lifestyle?",
+          "options": [
+            "He felt even more tired than before.",
+            "He grew stronger, slept well and stopped getting ill.",
+            "He started getting the flu more often.",
+            "He gave up after a week."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'more dynamic and stronger… slept soundly… no longer suffered from the flu' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Climbing Towards a Better Life",
+      "topic_cn": "记叙·用运动取代坏习惯",
+      "body": "When George started high school, he often felt stressed out, and he always relaxed by playing computer games. Soon he got so absorbed that he played day and night. Playing was fun at the time, but afterwards he felt even more worn out than before. After joining a summer camp about personal life choices, he realised it was very important to adjust his lifestyle, so he decided to take control. It was a big struggle not to join his friends online, because he was mad for those games. However, he understood that to succeed in quitting, he had to replace gaming with something else. He thought of rock climbing, bowling, watching comedies and playing basketball. In the end he chose climbing, and now he and his dad go rock climbing together every month. This new habit has enhanced the quality of his life by improving his health and increasing his happiness. He gets refreshed through climbing, spends more time with his father, and keeps meeting new friends. After six months, he feels far more energetic and believes he can truly change himself for the better.",
+      "vocab_notes": [
+        {
+          "word": "absorb",
+          "cn": "吸引(全部注意力)"
+        },
+        {
+          "word": "enhance",
+          "cn": "提高;增强"
+        },
+        {
+          "word": "worn out",
+          "cn": "筋疲力尽的"
+        },
+        {
+          "word": "monthly",
+          "cn": "每月一次的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did George usually relax when he felt stressed?",
+          "options": [
+            "By going for a walk.",
+            "By reading books.",
+            "By playing computer games for hours.",
+            "By calling his dad."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'relaxed by playing computer games… day and night' 的转述。"
+        },
+        {
+          "stem": "Why did George decide he had to replace gaming?",
+          "options": [
+            "Because his parents took away his phone.",
+            "Because games were too expensive.",
+            "Because his friends moved away.",
+            "Because simply stopping was not enough to quit successfully."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'to succeed in quitting, he had to replace gaming with something else' 的转述。"
+        },
+        {
+          "stem": "What has rock climbing done for George?",
+          "options": [
+            "It has improved his health and made him happier.",
+            "It has made him more tired and lonely.",
+            "It has had no effect on his life.",
+            "It has kept him away from his father."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'enhanced the quality of his life by improving his health and increasing his happiness' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Putting Down the Phone",
+      "topic_cn": "议论·手机成瘾与对策",
+      "body": "For many students today, using a phone too much has quietly become a bad habit. The cue often appears the moment you feel bored or stressed: almost without thinking, you pick up your phone. The routine of scrolling for video after video gives a small reward, a quick feeling of fun, so the cycle repeats again and again. The trouble is that hours can disappear this way, and you may end up feeling worn out rather than relaxed. Worse still, late-night screen time disturbs your sleep and leaves you tired and dizzy the next day. To break this habit, you do not need to throw your phone away. Instead, examine your own habit cycle and gently change the routine. When boredom acts as the cue, you might read a few pages of a book, take a short walk, or chat with a friend face to face. It takes a little discipline at first, but each small choice makes the next one easier. Step by step, you can take back control of your time and feel more refreshed and focused every day.",
+      "vocab_notes": [
+        {
+          "word": "disturb",
+          "cn": "搅乱;打扰"
+        },
+        {
+          "word": "examine",
+          "cn": "检视;检查"
+        },
+        {
+          "word": "discipline",
+          "cn": "自制力"
+        },
+        {
+          "word": "refresh",
+          "cn": "使恢复精力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What usually acts as the cue for picking up the phone?",
+          "options": [
+            "Finishing your homework.",
+            "Feeling bored or stressed.",
+            "Eating a healthy meal.",
+            "Going to sleep early."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the moment you feel bored or stressed… you pick up your phone' 的转述。"
+        },
+        {
+          "stem": "What problem does late-night phone use cause?",
+          "options": [
+            "It improves your sleep.",
+            "It makes you feel refreshed.",
+            "It damages your rest and makes you feel exhausted the following morning.",
+            "It has no effect at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'late-night screen time disturbs your sleep and leaves you tired and dizzy' 的转述。"
+        },
+        {
+          "stem": "What does the writer advise instead of throwing the phone away?",
+          "options": [
+            "Buying a newer phone.",
+            "Using the phone even more.",
+            "Never going outside again.",
+            "Examining the habit cycle and replacing the routine."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'examine your own habit cycle and gently change the routine' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "grade": 12,
+  "content": {
+    "title": "定语从句复习·关系词速查",
+    "intro": "定语从句修饰先行词。判断口诀:先看先行词指人还是指物,再看从句缺什么成分——缺主语/宾语用关系代词(who/whom/which/that),不缺主宾只缺状语用关系副词(where/when/why)或「介词+which」;表所属用 whose。非限制性(有逗号)绝不用 that。",
+    "table": {
+      "headers": ["关系词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人、作主语:the poet who wrote this sonnet"],
+        ["whom", "指人、作宾语(或介词后):the man whom she married / to whom"],
+        ["which", "指物;非限制性指物;指代整句:a poem which… / …, which made me cry"],
+        ["that", "指人/物、限从、缺主宾:the poem that I love(非限从绝不用)"],
+        ["whose", "表所属、后接名词:the poet whose poems we love"],
+        ["where/when/why", "缺状语:the place where / the year when / the reason why"],
+        ["介词+which/whom", "正式或介词提前:in which / by which / to whom"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺主语/宾语 → 关系代词(who/whom/which/that)", "mark": "the poem that I love(缺宾语→that)" },
+      { "rule": "从句不缺主宾、只缺状语 → 关系副词或介词+which", "mark": "the room where we met = in which we met" },
+      { "rule": "非限制性(逗号)指人用 who、指物用 which,绝不用 that", "mark": "Tagore, who… √ / Tagore, that… ×" },
+      { "rule": "which 可指代前面整个句子;as 引导非限从表「正如」可置句首", "mark": "…, which surprised us / As is known, …" },
+      { "rule": "介词后只能用 which / whom,不可用 that", "mark": "by which √ / by that ×" }
+    ],
+    "why": [
+      "关系代词在从句里充当主语或宾语,所以从句会缺一个主宾成分;关系副词(=介词+which)在从句里充当状语,从句主宾都不缺。先数从句缺什么,关系词就选好了。"
+    ],
+    "gaokaoPoints": [
+      "who/whom/which/that/whose 与 where/when/why 的判断(看从句缺主宾还是缺状语);语法填空与短文改错高频。",
+      "非限制性从句:指人 who、指物 which、绝不用 that;which 指代整句;as 引导(as is known/as we all know)。"
+    ],
+    "examVsReal": [
+      { "exam": "the house in which I live(考试/书面)", "real": "the house I live in", "note": "考试常用「介词+which」;口语里关系词常省略、把介词放句末。" },
+      { "exam": "the reason why he left(考试)", "real": "the reason he left", "note": "考试用 why;口语里 why 常被省略或用 that。" }
+    ]
+  }
+}

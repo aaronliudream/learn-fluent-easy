@@ -1,0 +1,387 @@
+[
+ {
+  "word": "abandon",
+  "ipa": "bndn",
+  "cn": "舍弃；抛弃；放弃",
+  "propn": false,
+  "raw": "abandon /bndn/ vt. 舍弃；抛弃；放弃"
+ },
+ {
+  "word": "aboard",
+  "ipa": "bd",
+  "cn": "上（船、飞机、公共汽车等）",
+  "propn": false,
+  "raw": "aboard /bd/ adv. & prep. 上（船、飞机、公共汽车等）"
+ },
+ {
+  "word": "adversity",
+  "ipa": "dvsti",
+  "cn": "困境；逆境",
+  "propn": false,
+  "raw": "adversity /dvsti/ n. 困境；逆境"
+ },
+ {
+  "word": "advertise",
+  "ipa": "dvtaz",
+  "cn": "公布；宣传；做广告",
+  "propn": false,
+  "raw": "advertise /dvtaz/ vt. & vi. 公布；宣传；做广告"
+ },
+ {
+  "word": "advertising",
+  "ipa": "dvtaIzIN",
+  "cn": "广告活动；广告业",
+  "propn": false,
+  "raw": "advertising /dvtaIzIN/ n. 广告活动；广告业"
+ },
+ {
+  "word": "assign",
+  "ipa": "san",
+  "cn": "分派；布置；分配",
+  "propn": false,
+  "raw": "assign /san/ vt. 分派；布置；分配"
+ },
+ {
+  "word": "banjo",
+  "ipa": "bnd",
+  "cn": "班卓琴（乐器）",
+  "propn": false,
+  "raw": "banjo /bnd/ n. 班卓琴（乐器）"
+ },
+ {
+  "word": "bark",
+  "ipa": "bk",
+  "cn": "狗）吠叫；吠叫声",
+  "propn": false,
+  "raw": "bark /bk/ vi. & n.  （狗）吠叫；吠叫声"
+ },
+ {
+  "word": "commitment",
+  "ipa": "kmtmnt",
+  "cn": "承诺；保证；奉献",
+  "propn": false,
+  "raw": "commitment /kmtmnt/ n. 承诺；保证；奉献"
+ },
+ {
+  "word": "Confucianism n. 孔子学说；儒家（学说）",
+  "ipa": "",
+  "cn": "孔子学说；儒家（学说）",
+  "propn": false,
+  "raw": "Confucianism n. 孔子学说；儒家（学说）"
+ },
+ {
+  "word": "corporate",
+  "ipa": "kprt",
+  "cn": "公司的；法人的；社团的",
+  "propn": false,
+  "raw": "corporate /kprt/ adj. 公司的；法人的；社团的"
+ },
+ {
+  "word": "cosy",
+  "ipa": "kzi",
+  "cn": "温馨的；舒适的",
+  "propn": false,
+  "raw": "cosy /kzi/ adj. 温馨的；舒适的"
+ },
+ {
+  "word": "crew",
+  "ipa": "kru",
+  "cn": "轮船、飞机等上面的）全体工作人员； 专业团队；一群人",
+  "propn": false,
+  "raw": "crew /kru/ n.  （轮船、飞机等上面的）全体工作人员； 专业团队；一群人"
+ },
+ {
+  "word": "cruel",
+  "ipa": "kru:l",
+  "cn": "残酷的；残忍的；冷酷的",
+  "propn": false,
+  "raw": "cruel /kru:l/ adj. 残酷的；残忍的；冷酷的"
+ },
+ {
+  "word": "crush",
+  "ipa": "kr",
+  "cn": "毁坏；压坏；压碎 n. 拥挤的人群",
+  "propn": false,
+  "raw": "crush /kr/ vt. 毁坏；压坏；压碎 n. 拥挤的人群"
+ },
+ {
+  "word": "cupboard",
+  "ipa": "kbd",
+  "cn": "橱柜；壁橱；衣柜",
+  "propn": false,
+  "raw": "cupboard /kbd/ n. 橱柜；壁橱；衣柜"
+ },
+ {
+  "word": "damp",
+  "ipa": "dmp",
+  "cn": "潮湿的；湿气重的",
+  "propn": false,
+  "raw": "damp /dmp/ adj. 潮湿的；湿气重的"
+ },
+ {
+  "word": "decent",
+  "ipa": "",
+  "cn": "相当不错的；正派的；得体的",
+  "propn": false,
+  "raw": "decent // adj. 相当不错的；正派的；得体的"
+ },
+ {
+  "word": "endurance",
+  "ipa": "IndjUrns",
+  "cn": "忍耐力；耐久力",
+  "propn": false,
+  "raw": "endurance /IndjUrns/ n. 忍耐力；耐久力"
+ },
+ {
+  "word": "enthusiastic",
+  "ipa": "",
+  "cn": "热情的；热心的",
+  "propn": false,
+  "raw": "enthusiastic // adj. 热情的；热心的"
+ },
+ {
+  "word": "envy",
+  "ipa": "envi",
+  "cn": "羡慕；妒忌",
+  "propn": false,
+  "raw": "envy /envi/ n. & vt. 羡慕；妒忌"
+ },
+ {
+  "word": "episode",
+  "ipa": "epsd",
+  "cn": "人生的）一段经历；（小说的）片段；插曲",
+  "propn": false,
+  "raw": "episode /epsd/ n.  （人生的）一段经历；（小说的）片段；插曲"
+ },
+ {
+  "word": "expedition",
+  "ipa": "",
+  "cn": "探险；远征；探险队",
+  "propn": false,
+  "raw": "expedition // n. 探险；远征；探险队"
+ },
+ {
+  "word": "fortunately",
+  "ipa": "fOtntli",
+  "cn": "幸运地",
+  "propn": false,
+  "raw": "fortunately /fOtntli/ adv. 幸运地"
+ },
+ {
+  "word": "unfortunately",
+  "ipa": "nftntli",
+  "cn": "不幸地； 遗憾地",
+  "propn": false,
+  "raw": "unfortunately /nftntli/ adv. 不幸地； 遗憾地"
+ },
+ {
+  "word": "furniture",
+  "ipa": "fnt(r)",
+  "cn": "家具",
+  "propn": false,
+  "raw": "furniture /fnt(r)/ n. 家具"
+ },
+ {
+  "word": "genuine",
+  "ipa": "denjun",
+  "cn": "真正的；真诚的；可信赖的",
+  "propn": false,
+  "raw": "genuine /denjun/ adj. 真正的；真诚的；可信赖的"
+ },
+ {
+  "word": "give off",
+  "ipa": "",
+  "cn": "放出（热、光、气味或气体）",
+  "propn": false,
+  "raw": "give off 放出（热、光、气味或气体）"
+ },
+ {
+  "word": "good",
+  "ipa": "bad-tempered  adj. 脾气好的",
+  "cn": "脾气好的/坏的",
+  "propn": false,
+  "raw": "good/bad-tempered  adj. 脾气好的/坏的"
+ },
+ {
+  "word": "guidance",
+  "ipa": "adns",
+  "cn": "指导；引导；导航",
+  "propn": false,
+  "raw": "guidance /adns/ n. 指导；引导；导航"
+ },
+ {
+  "word": "loyal",
+  "ipa": "ll",
+  "cn": "忠诚的；忠实的",
+  "propn": false,
+  "raw": "loyal /ll/ adj. 忠诚的；忠实的"
+ },
+ {
+  "word": "make fire",
+  "ipa": "",
+  "cn": "生火",
+  "propn": false,
+  "raw": "make fire 生火"
+ },
+ {
+  "word": "miserable",
+  "ipa": "mzrbl",
+  "cn": "痛苦的；令人难受的",
+  "propn": false,
+  "raw": "miserable /mzrbl/ adj. 痛苦的；令人难受的"
+ },
+ {
+  "word": "motive",
+  "ipa": "mtv",
+  "cn": "动机；原因；目的",
+  "propn": false,
+  "raw": "motive /mtv/ n. 动机；原因；目的"
+ },
+ {
+  "word": "motor",
+  "ipa": "mt(r)",
+  "cn": "发动机；马达 adj.有引擎的；机动车的",
+  "propn": false,
+  "raw": "motor /mt(r)/ n. 发动机；马达 adj.有引擎的；机动车的"
+ },
+ {
+  "word": "navigator",
+  "ipa": "nvet",
+  "cn": "领航员；（飞机、船舶等上的）航行者",
+  "propn": false,
+  "raw": "navigator /nvet/ n. 领航员；（飞机、船舶等上的）航行者"
+ },
+ {
+  "word": "navy",
+  "ipa": "",
+  "cn": "海军；海军部队",
+  "propn": false,
+  "raw": "navy // n. 海军；海军部队"
+ },
+ {
+  "word": "nephew",
+  "ipa": "nefju",
+  "cn": "侄子；外甥",
+  "propn": false,
+  "raw": "nephew /nefju/ n. 侄子；外甥"
+ },
+ {
+  "word": "perseverance",
+  "ipa": "psvrns",
+  "cn": "毅力；韧性；不屈不挠的精神",
+  "propn": false,
+  "raw": "perseverance /psvrns/ n. 毅力；韧性；不屈不挠的精神"
+ },
+ {
+  "word": "persevere",
+  "ipa": "psv(r)",
+  "cn": "坚持；孜孜以求",
+  "propn": false,
+  "raw": "persevere /psv(r)/ vi. 坚持；孜孜以求"
+ },
+ {
+  "word": "qualified",
+  "ipa": "",
+  "cn": "符合资格；具备……的知识 （或技能、学历等）",
+  "propn": false,
+  "raw": "qualified // adj. 符合资格；具备……的知识 （或技能、学历等）"
+ },
+ {
+  "word": "recreation",
+  "ipa": "rekrien",
+  "cn": "娱乐；消遣；游戏",
+  "propn": false,
+  "raw": "recreation /rekrien/ n. 娱乐；消遣；游戏"
+ },
+ {
+  "word": "resolve",
+  "ipa": "rzlv",
+  "cn": "决定；决心；解决（问题或困难） n. 决心；坚定的信念",
+  "propn": false,
+  "raw": "resolve /rzlv/ vi. & vt. 决定；决心；解决（问题或困难） n. 决心；坚定的信念"
+ },
+ {
+  "word": "resolution",
+  "ipa": "rezlun",
+  "cn": "决议；解决；坚定",
+  "propn": false,
+  "raw": "resolution /rezlun/ n. 决议；解决；坚定"
+ },
+ {
+  "word": "rough",
+  "ipa": "rf",
+  "cn": "汹涌的；粗糙的；粗略的",
+  "propn": false,
+  "raw": "rough /rf/ adj. 汹涌的；粗糙的；粗略的"
+ },
+ {
+  "word": "rugby",
+  "ipa": "rbi",
+  "cn": "橄榄球运动",
+  "propn": false,
+  "raw": "rugby /rbi/ n. 橄榄球运动"
+ },
+ {
+  "word": "selfish",
+  "ipa": "self",
+  "cn": "自私的",
+  "propn": false,
+  "raw": "selfish /self/ adj. 自私的"
+ },
+ {
+  "word": "sink",
+  "ipa": "sk",
+  "cn": "沉没；下沉；下降 vt. 使下沉；使沉没",
+  "propn": false,
+  "raw": "sink /sk/ vi.  （sank /sk/ or sunk /sk/, sunk） 沉没；下沉；下降 vt. 使下沉；使沉没"
+ },
+ {
+  "word": "steward",
+  "ipa": "stu",
+  "cn": "轮船、飞机或火车上的）乘务员；服务员",
+  "propn": false,
+  "raw": "steward /stu/ n.  （轮船、飞机或火车上的）乘务员；服务员"
+ },
+ {
+  "word": "stove",
+  "ipa": "stv",
+  "cn": "炉具；厨房灶具",
+  "propn": false,
+  "raw": "stove /stv/ n. 炉具；厨房灶具"
+ },
+ {
+  "word": "thorough",
+  "ipa": "r",
+  "cn": "深入的；彻底的；细致的",
+  "propn": false,
+  "raw": "thorough /r/ adj. 深入的；彻底的；细致的"
+ },
+ {
+  "word": "turn sb down",
+  "ipa": "",
+  "cn": "拒绝（某人）",
+  "propn": false,
+  "raw": "turn sb down 拒绝（某人）"
+ },
+ {
+  "word": "vigour",
+  "ipa": "v(r)",
+  "cn": "精力；力量；活力",
+  "propn": false,
+  "raw": "vigour (NAmE vigor) /v(r)/ n. 精力；力量；活力"
+ },
+ {
+  "word": "voyage",
+  "ipa": "vd",
+  "cn": "航海；航行",
+  "propn": false,
+  "raw": "voyage /vd/ n. & vi. 航海；航行"
+ },
+ {
+  "word": "wage",
+  "ipa": "",
+  "cn": "工资",
+  "propn": false,
+  "raw": "wage // n. 工资"
+ }
+]

@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grammar_title": "直接引语和间接引语(Direct Speech & Indirect Speech)",
+  "source": "人教版2019选择性必修三 Unit 3 Discovering Useful Structures:把直接引语变间接引语(陈述句/疑问句/祈使句)。铁律:时态后移、人称变换、指示词/时间状语呼应;疑问句用陈述语序。句子地道、环保主题、答案唯一。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "陈述句的间接引语(say/tell + that;时态后移、人称变换)",
+      "overview": "直接引语是陈述句时,用 that 引导(可省略),主句一般过去时则从句时态相应后移(do→did, is→was, will→would, have done→had done),人称随说话人/听话人变换。"
+    },
+    {
+      "code": "u3.02",
+      "point": "疑问句的间接引语(一般疑问→if/whether;特殊疑问→wh-词;一律陈述语序)",
+      "overview": "一般疑问句转述用 if/whether 引导;特殊疑问句保留 wh- 疑问词;两者都要变成「陈述语序」(主语在前、动词在后,不再倒装),并完成时态后移与人称变换。"
+    },
+    {
+      "code": "u3.03",
+      "point": "祈使句的间接引语(tell/ask/order/advise sb (not) to do)+ 时间/地点状语呼应",
+      "overview": "祈使句转述用 tell/ask/order/advise + sb + (not) to do;同时时间/地点指示词要呼应:now→then, today→that day, tomorrow→the next day, here→there, this→that。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "He said, \"I recycle paper every week.\" → He said that he ____ paper every week.",
+      "options": [
+        "recycled",
+        "recycle",
+        "recycles",
+        "will recycle"
+      ],
+      "answer_index": 0,
+      "explanation": "主句 said 过去时,从句一般现在 recycle 后移为一般过去 recycled;人称 I→he。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She said, \"The air is getting cleaner.\" → She said that the air ____ getting cleaner.",
+      "options": [
+        "is",
+        "was",
+        "were",
+        "be"
+      ],
+      "answer_index": 1,
+      "explanation": "现在进行 is getting 后移为过去进行 was getting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The expert said, \"Polar bears will die out.\" → The expert said that polar bears ____ die out.",
+      "options": [
+        "will",
+        "shall",
+        "would",
+        "are going to"
+      ],
+      "answer_index": 2,
+      "explanation": "will 后移为 would。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Tom said, \"I have planted ten trees.\" → Tom said that he ____ ten trees.",
+      "options": [
+        "has planted",
+        "planted",
+        "plants",
+        "had planted"
+      ],
+      "answer_index": 3,
+      "explanation": "现在完成 have planted 后移为过去完成 had planted。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She said, \"We can save a lot of water.\" → She said that they ____ save a lot of water.",
+      "options": [
+        "could",
+        "can",
+        "may",
+        "must"
+      ],
+      "answer_index": 0,
+      "explanation": "can 后移为 could;人称 we→they。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He told me, \"The factory released waste gas.\" → He told me that the factory ____ released waste gas.",
+      "options": [
+        "has",
+        "had",
+        "have",
+        "will have"
+      ],
+      "answer_index": 1,
+      "explanation": "一般过去 released 后移为过去完成 had released。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Lily said, \"I am cutting my carbon footprint.\" → Lily said that she ____ cutting her carbon footprint.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "be"
+      ],
+      "answer_index": 2,
+      "explanation": "现在进行 am cutting 后移为过去进行 was cutting;人称 I→she。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "They said, \"The river is badly polluted.\" → They said that the river ____ badly polluted.",
+      "options": [
+        "is",
+        "be",
+        "were",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "is 后移为 was;主语 the river 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He said, \"I don't waste electricity at home.\" → He said that he ____ waste electricity at home.",
+      "options": [
+        "didn't",
+        "doesn't",
+        "don't",
+        "won't"
+      ],
+      "answer_index": 0,
+      "explanation": "一般现在否定 don't 后移为一般过去 didn't。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She said, \"Smog has become a serious problem.\" → She said that smog ____ become a serious problem.",
+      "options": [
+        "has",
+        "had",
+        "have",
+        "will have"
+      ],
+      "answer_index": 1,
+      "explanation": "现在完成 has become 后移为过去完成 had become。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Ben said, \"We are going to plant more trees.\" → Ben said that they ____ going to plant more trees.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "be"
+      ],
+      "answer_index": 2,
+      "explanation": "be going to 中的 are 后移为 were;人称 we→they。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The girl said, \"I will turn off the lights.\" → The girl said that she ____ turn off the lights.",
+      "options": [
+        "will",
+        "shall",
+        "is going to",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "will 后移为 would;人称 I→she。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He said, \"People throw too much garbage away.\" → He said that people ____ too much garbage away.",
+      "options": [
+        "threw",
+        "throw",
+        "throws",
+        "have thrown"
+      ],
+      "answer_index": 0,
+      "explanation": "一般现在 throw 后移为一般过去 threw。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Mum said, \"The ice is melting fast.\" → Mum said that the ice ____ melting fast.",
+      "options": [
+        "is",
+        "was",
+        "were",
+        "be"
+      ],
+      "answer_index": 1,
+      "explanation": "is melting 后移为 was melting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She said, \"I have never used a plastic bag.\" → She said that she ____ never used a plastic bag.",
+      "options": [
+        "has",
+        "have",
+        "had",
+        "did"
+      ],
+      "answer_index": 2,
+      "explanation": "现在完成 have used 后移为过去完成 had used。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He said, \"Clean energy can sustain our future.\" → He said that clean energy ____ sustain their future.",
+      "options": [
+        "can",
+        "may",
+        "should",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "can 后移为 could。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The reporter said, \"The smog killed many people.\" → The reporter said that the smog ____ killed many people.",
+      "options": [
+        "had",
+        "has",
+        "have",
+        "will have"
+      ],
+      "answer_index": 0,
+      "explanation": "一般过去 killed 后移为过去完成 had killed。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Sara said, \"I am saving water at home.\" → Sara said that she ____ saving water at home.",
+      "options": [
+        "is",
+        "was",
+        "were",
+        "are"
+      ],
+      "answer_index": 1,
+      "explanation": "am saving 后移为 was saving;人称 I→she。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "They said, \"We don't burn coal any more.\" → They said that they ____ burn coal any more.",
+      "options": [
+        "don't",
+        "doesn't",
+        "didn't",
+        "won't"
+      ],
+      "answer_index": 2,
+      "explanation": "一般现在否定 don't 后移为一般过去 didn't。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He said, \"The trees will protect the soil.\" → He said that the trees ____ protect the soil.",
+      "options": [
+        "will",
+        "shall",
+        "are going to",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "will 后移为 would。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Do you save water at home?\" → She asked ____ I saved water at home.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "一般疑问句转述用 if/whether 引导,并变陈述语序。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"What can we do to help?\" → He asked what we ____ do to help.",
+      "options": [
+        "can",
+        "could",
+        "may",
+        "should"
+      ],
+      "answer_index": 1,
+      "explanation": "特殊疑问句保留 what,用陈述语序,can 后移为 could。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The reporter asked, \"Will polar bears die out?\" → The reporter asked ____ polar bears would die out.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "一般疑问句用 whether 引导;will 后移为 would。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Why is smog so harmful?\" → She asked why smog ____ so harmful.",
+      "options": [
+        "is",
+        "be",
+        "were",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "保留 why,陈述语序,is 后移为 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"How do you cut carbon emissions?\" → He asked how I ____ carbon emissions.",
+      "options": [
+        "cut",
+        "cuts",
+        "did cut",
+        "cutting"
+      ],
+      "answer_index": 0,
+      "explanation": "陈述语序去掉助动词 do,cut 后移仍为 cut(原形=过去式)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "They asked, \"Are the rivers getting cleaner?\" → They asked ____ the rivers were getting cleaner.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "一般疑问句用 whether 引导,变陈述语序。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Where does the smog come from?\" → She asked where the smog ____ from.",
+      "options": [
+        "come",
+        "comes",
+        "came",
+        "coming"
+      ],
+      "answer_index": 2,
+      "explanation": "陈述语序、去 does,comes 后移为 came。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"Can we still save the forest?\" → He asked ____ we could still save the forest.",
+      "options": [
+        "that",
+        "what",
+        "why",
+        "if"
+      ],
+      "answer_index": 3,
+      "explanation": "一般疑问句用 if 引导;can 后移为 could。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The teacher asked, \"What causes climate change?\" → The teacher asked what ____ climate change.",
+      "options": [
+        "caused",
+        "cause",
+        "causes",
+        "did cause"
+      ],
+      "answer_index": 0,
+      "explanation": "what 作主语,causes 后移为 caused。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Have you joined the clean-up?\" → She asked ____ I had joined the clean-up.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "一般疑问句用 whether 引导;have joined 后移为 had joined。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"When will the new policy start?\" → He asked when the new policy ____ start.",
+      "options": [
+        "will",
+        "shall",
+        "would",
+        "is going to"
+      ],
+      "answer_index": 2,
+      "explanation": "保留 when,陈述语序,will 后移为 would。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "They asked, \"Why did the factory close?\" → They asked why the factory ____ closed.",
+      "options": [
+        "has",
+        "have",
+        "did",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "保留 why、陈述语序;一般过去 did close 后移为 had closed。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Do the villagers recycle waste?\" → She asked if the villagers ____ waste.",
+      "options": [
+        "recycled",
+        "recycle",
+        "recycles",
+        "recycling"
+      ],
+      "answer_index": 0,
+      "explanation": "if 引导、陈述语序、去 do;recycle 后移为 recycled。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"How much water do we waste?\" → He asked how much water we ____.",
+      "options": [
+        "waste",
+        "wasted",
+        "wastes",
+        "wasting"
+      ],
+      "answer_index": 1,
+      "explanation": "陈述语序去 do;waste 后移为 wasted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The expert asked, \"Is nuclear power safe?\" → The expert asked ____ nuclear power was safe.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "一般疑问句用 whether 引导;is 后移为 was。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"What are you doing for the planet?\" → She asked what I ____ doing for the planet.",
+      "options": [
+        "am",
+        "is",
+        "were",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "陈述语序;am doing 后移为 was doing(I→第三人称由说话人决定,这里转述者用 was)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"Can the river be cleaned up?\" → He asked ____ the river could be cleaned up.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "一般疑问句用 whether 引导;can 后移为 could。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "They asked, \"How has the air improved?\" → They asked how the air ____ improved.",
+      "options": [
+        "has",
+        "had",
+        "have",
+        "did"
+      ],
+      "answer_index": 1,
+      "explanation": "保留 how;现在完成 has improved 后移为过去完成 had improved。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "She asked, \"Do we need stricter rules?\" → She asked if we ____ stricter rules.",
+      "options": [
+        "need",
+        "needs",
+        "needed",
+        "needing"
+      ],
+      "answer_index": 2,
+      "explanation": "if 引导、陈述语序、去 do;need 后移为 needed。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "He asked, \"Which energy is cleaner?\" → He asked which energy ____ cleaner.",
+      "options": [
+        "is",
+        "be",
+        "were",
+        "was"
+      ],
+      "answer_index": 3,
+      "explanation": "保留 which,陈述语序,is 后移为 was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Turn off the lights, please,\" she said. → She told us ____ off the lights.",
+      "options": [
+        "to turn",
+        "turn",
+        "turning",
+        "turned"
+      ],
+      "answer_index": 0,
+      "explanation": "祈使句转述用 tell sb to do。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Don't throw garbage into the river,\" he said. → He told the tourists ____ throw garbage into the river.",
+      "options": [
+        "to not",
+        "not to",
+        "don't",
+        "not"
+      ],
+      "answer_index": 1,
+      "explanation": "否定祈使句用 tell sb not to do。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Please save water,\" the teacher said. → The teacher asked us ____ water.",
+      "options": [
+        "save",
+        "saving",
+        "to save",
+        "saved"
+      ],
+      "answer_index": 2,
+      "explanation": "ask sb to do 转述请求型祈使句。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Let's work together to stop pollution,\" the expert said. → The expert advised us ____ together to stop pollution.",
+      "options": [
+        "work",
+        "working",
+        "worked",
+        "to work"
+      ],
+      "answer_index": 3,
+      "explanation": "advise sb to do 转述建议型祈使句。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Stop burning coal now,\" the officer said. → The officer ordered them to stop burning coal ____.",
+      "options": [
+        "then",
+        "now",
+        "today",
+        "here"
+      ],
+      "answer_index": 0,
+      "explanation": "时间状语呼应:now→then。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Plant more trees here,\" she said. → She told us to plant more trees ____.",
+      "options": [
+        "here",
+        "there",
+        "this",
+        "now"
+      ],
+      "answer_index": 1,
+      "explanation": "地点状语呼应:here→there。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Recycle this bottle,\" he said. → He told me to recycle ____ bottle.",
+      "options": [
+        "this",
+        "these",
+        "that",
+        "the next"
+      ],
+      "answer_index": 2,
+      "explanation": "指示词呼应:this→that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Submit your report tomorrow,\" the teacher said. → The teacher told us to submit our report ____.",
+      "options": [
+        "tomorrow",
+        "today",
+        "now",
+        "the next day"
+      ],
+      "answer_index": 3,
+      "explanation": "时间状语呼应:tomorrow→the next day。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Don't waste electricity,\" Mum said. → Mum told me ____ electricity.",
+      "options": [
+        "not to waste",
+        "not waste",
+        "don't waste",
+        "to not waste"
+      ],
+      "answer_index": 0,
+      "explanation": "否定祈使句用 tell sb not to do。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Use cloth bags instead of plastic,\" she said. → She advised us ____ cloth bags instead of plastic.",
+      "options": [
+        "use",
+        "to use",
+        "using",
+        "used"
+      ],
+      "answer_index": 1,
+      "explanation": "advise sb to do 转述建议。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Don't print documents unless necessary,\" Sally said. → Sally asked us ____ documents unless necessary.",
+      "options": [
+        "to not print",
+        "don't print",
+        "not to print",
+        "not print"
+      ],
+      "answer_index": 2,
+      "explanation": "否定祈使句用 ask sb not to do。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Take shorter showers today,\" he said. → He told them to take shorter showers ____.",
+      "options": [
+        "today",
+        "now",
+        "here",
+        "that day"
+      ],
+      "answer_index": 3,
+      "explanation": "时间状语呼应:today→that day。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Walk or ride a bike,\" Jack said. → Jack advised me ____ or ride a bike.",
+      "options": [
+        "to walk",
+        "walk",
+        "walking",
+        "walked"
+      ],
+      "answer_index": 0,
+      "explanation": "advise sb to do 转述建议。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Keep this room clean,\" she said. → She told us to keep ____ room clean.",
+      "options": [
+        "this",
+        "that",
+        "these",
+        "those"
+      ],
+      "answer_index": 1,
+      "explanation": "指示词呼应:this→that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Turn off the heater now,\" Dad said. → Dad ordered us to turn off the heater ____.",
+      "options": [
+        "now",
+        "here",
+        "then",
+        "today"
+      ],
+      "answer_index": 2,
+      "explanation": "时间状语呼应:now→then。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Don't drop litter here,\" the guard said. → The guard told us not to drop litter ____.",
+      "options": [
+        "here",
+        "this",
+        "now",
+        "there"
+      ],
+      "answer_index": 3,
+      "explanation": "地点状语呼应:here→there。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Please share books with others,\" Joe said. → Joe asked us ____ books with others.",
+      "options": [
+        "to share",
+        "share",
+        "sharing",
+        "shared"
+      ],
+      "answer_index": 0,
+      "explanation": "ask sb to do 转述请求。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Clean up the beach tomorrow,\" she said. → She told the volunteers to clean up the beach ____.",
+      "options": [
+        "tomorrow",
+        "the next day",
+        "today",
+        "now"
+      ],
+      "answer_index": 1,
+      "explanation": "时间状语呼应:tomorrow→the next day。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Don't use the car for short trips,\" he said. → He advised us ____ the car for short trips.",
+      "options": [
+        "not use",
+        "to not use",
+        "not to use",
+        "don't use"
+      ],
+      "answer_index": 2,
+      "explanation": "否定祈使句用 advise sb not to do。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Plant this tree carefully,\" the worker said. → The worker told the boy to plant ____ tree carefully.",
+      "options": [
+        "this",
+        "these",
+        "those",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "指示词呼应:this→that。"
+    }
+  ]
+}

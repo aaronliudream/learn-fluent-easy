@@ -1,0 +1,421 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "Launching Your Career",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修四 Unit 5 同主题听力(选专业对话/职业测试简述/面试对话/招聘广告简述/职业建议对话/坚持热爱简述)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Choosing a Major",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Olivia: Have you decided which major to choose, Liu Ming?",
+        "Liu Ming: I'm thinking about data science. I believe it will offer many jobs.",
+        "Olivia: That sounds smart. I'd really like to study robotics myself.",
+        "Liu Ming: Robotics? Why is that?",
+        "Olivia: I love building things, and I think it's the career of the future.",
+        "Liu Ming: But your parents worry a lot about which university you get into, right?",
+        "Olivia: Yes, they think a person's career might depend on it.",
+        "Liu Ming: Well, I think what you're good at matters more than the school's name."
+      ],
+      "translation_cn": "Olivia 问刘明选好专业没;刘明想学数据科学,认为工作机会多;Olivia 想学机器人学,因为爱动手做东西、觉得这是未来职业;刘明提到 Olivia 父母担心进哪所大学;刘明认为擅长什么比学校名气更重要。",
+      "questions": [
+        {
+          "stem": "Which major is Liu Ming thinking about?",
+          "options": [
+            "Data science.",
+            "Robotics.",
+            "Public health.",
+            "Geometry."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Liu Ming like that major?",
+          "options": [
+            "It is the easiest to study.",
+            "He believes it will offer many jobs.",
+            "His parents chose it for him.",
+            "It needs no exam."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which major would Olivia like to study?",
+          "options": [
+            "Robotics.",
+            "Data science.",
+            "Public health.",
+            "Finance."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do Olivia's parents worry about?",
+          "options": [
+            "Whether she likes the major.",
+            "Which university she gets into.",
+            "How much money she will earn.",
+            "Whether she has enough friends."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Liu Ming think matters most?",
+          "options": [
+            "The name of the school.",
+            "How rich your family is.",
+            "What you are good at.",
+            "How far the campus is."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 What a Career Test Does",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A career aptitude test can help you see which jobs may suit you.",
+        "You answer many questions about what you like and how you behave.",
+        "Your answers are turned into a code that shows your work personality.",
+        "The test then suggests careers based on that code and your experience.",
+        "But remember, the results are only meant for guidance, not for orders."
+      ],
+      "translation_cn": "职业能力测试能帮你看清哪些工作适合你;你回答许多关于喜好和行为的问题;答案被转成代表你职业性格的代码;测试再据此代码和你的经验推荐职业;但要记住,结果只是用于指导,不是命令。",
+      "questions": [
+        {
+          "stem": "What can a career aptitude test help you see?",
+          "options": [
+            "How much money you will earn.",
+            "Where to buy clothes.",
+            "Which city is the best.",
+            "Which jobs may suit you."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of questions do you answer in the test?",
+          "options": [
+            "Questions about what you like and how you behave.",
+            "Questions about world history.",
+            "Questions about other people's jobs.",
+            "Questions about the weather."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are your answers turned into?",
+          "options": [
+            "A long essay.",
+            "A code showing your work personality.",
+            "A list of prices.",
+            "A photograph."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the test use to suggest careers?",
+          "options": [
+            "Only your age.",
+            "Only your name.",
+            "Your code and your experience.",
+            "Your favourite colour."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you remember about the results?",
+          "options": [
+            "They must always be obeyed.",
+            "They never change.",
+            "They decide your whole life.",
+            "They are only meant for guidance."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Before the Interview",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Kelly: I have a job interview tomorrow, and I'm so nervous.",
+        "Mr Lee: Don't worry. Have you done any research about the company?",
+        "Kelly: Yes, I read everything on their website last night.",
+        "Mr Lee: Good. And remember to bring your CV and a cover letter.",
+        "Kelly: I've printed them out already. What about my clothes?",
+        "Mr Lee: Wear something smart, and try to stay calm when you answer.",
+        "Kelly: Should I arrive early?",
+        "Mr Lee: Yes, leave home in good time so you are never late."
+      ],
+      "translation_cn": "Kelly 明天有面试很紧张;李老师问她有没有调查公司;Kelly 说昨晚看了官网所有内容;李老师提醒带简历和求职信;Kelly 已打印好,问穿什么;李老师建议穿得体、回答时保持冷静;并建议提早出门、绝不迟到。",
+      "questions": [
+        {
+          "stem": "How does Kelly feel about the interview?",
+          "options": [
+            "Very nervous.",
+            "Completely bored.",
+            "Quite angry.",
+            "Very sleepy."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Kelly do to prepare?",
+          "options": [
+            "She bought a new phone.",
+            "She read everything on the company's website.",
+            "She cancelled the interview.",
+            "She asked a friend to go for her."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mr Lee tell her to bring?",
+          "options": [
+            "A camera and a tent.",
+            "Some food and water.",
+            "Her CV and a cover letter.",
+            "A map of the city."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice does Mr Lee give about answering questions?",
+          "options": [
+            "Speak as fast as possible.",
+            "Say as little as she can.",
+            "Refuse hard questions.",
+            "Stay calm."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why should Kelly leave home in good time?",
+          "options": [
+            "So she is never late.",
+            "So she can buy breakfast.",
+            "So she can meet friends.",
+            "So she can take photos."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 Camp Helpers Wanted",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our summer camp is looking for keen high school helpers next year.",
+        "Helpers will guide guests and join in many fun activities.",
+        "You should have a good level of English and strong teamwork skills.",
+        "A friendly attitude and good handwriting are also welcome.",
+        "If you are interested, please send your CV to our receptionist."
+      ],
+      "translation_cn": "我们的夏令营明年招募热心的高中帮手;帮手将引导客人并参与许多有趣活动;你应有良好的英语水平和很强的团队合作能力;友好的态度和工整的书写也很受欢迎;有兴趣请把简历发给我们的接待员。",
+      "questions": [
+        {
+          "stem": "Who is the summer camp looking for?",
+          "options": [
+            "Famous photographers.",
+            "Keen high school helpers.",
+            "University professors.",
+            "Foreign tourists only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will the helpers do?",
+          "options": [
+            "Only cook meals.",
+            "Drive the camp buses.",
+            "Guide guests and join fun activities.",
+            "Build the tents alone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What skill should helpers have?",
+          "options": [
+            "Excellent driving.",
+            "Professional cooking.",
+            "Advanced computer coding.",
+            "A good level of English and teamwork."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which extra quality is also welcome?",
+          "options": [
+            "Good handwriting.",
+            "A loud voice.",
+            "A fast bicycle.",
+            "An expensive camera."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How can interested students apply?",
+          "options": [
+            "By calling the camp at midnight.",
+            "By sending their CV to the receptionist.",
+            "By visiting the camp without notice.",
+            "By writing on the camp wall."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Advice on a Career Plan",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Susan: I really don't know how to start planning my career.",
+        "Mr Wang: First, think about what you want to do and what you enjoy.",
+        "Susan: I love helping people, so maybe public health?",
+        "Mr Wang: That's a great start. Now think about the skills you'll need.",
+        "Susan: I guess I should improve my communication and teamwork.",
+        "Mr Wang: Exactly. And don't forget to prepare a good CV.",
+        "Susan: Should I tailor it for each job?",
+        "Mr Wang: Yes. A CV that matches the job will impress employers more."
+      ],
+      "translation_cn": "Susan 不知如何开始规划职业;王老师建议先想想自己想做什么、喜欢什么;Susan 爱帮助别人,想到公共卫生;王老师说是好开端,要想需要的技能;Susan 想提升沟通和团队合作;王老师让她别忘准备好简历;Susan 问要不要为每份工作量身定做;王老师说要,匹配岗位的简历更能打动雇主。",
+      "questions": [
+        {
+          "stem": "What is Susan's problem at the start?",
+          "options": [
+            "She has lost her CV.",
+            "She failed her exam.",
+            "She doesn't know how to start planning her career.",
+            "She cannot find the office."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mr Wang say she should think about first?",
+          "options": [
+            "How much she will earn.",
+            "Which city is the warmest.",
+            "How many friends she has.",
+            "What she wants to do and enjoys."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which field is Susan interested in?",
+          "options": [
+            "Public health.",
+            "Robotics.",
+            "Finance.",
+            "Photography."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What skills does Susan want to improve?",
+          "options": [
+            "Cooking and cleaning.",
+            "Communication and teamwork.",
+            "Driving and swimming.",
+            "Singing and dancing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why should Susan tailor her CV for each job?",
+          "options": [
+            "It makes the CV much longer.",
+            "It saves printing paper.",
+            "A matching CV impresses employers more.",
+            "It hides her experience."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 Passion and Patience",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The best careers often grow from a deep love for the work.",
+        "When you are passionate, hard work feels much less tiring.",
+        "Think of a young photographer who waits for hours to take one photo.",
+        "His patience and passion finally won him an award for his talent.",
+        "So follow what you love, and never give up too soon."
+      ],
+      "translation_cn": "最好的职业往往源于对工作的深深热爱;当你充满热情,辛苦的工作就不那么累;想想那位为拍一张照片等上数小时的年轻摄影师;他的耐心和热情最终为他赢得了表彰才华的奖项;所以追随你所热爱的,别太早放弃。",
+      "questions": [
+        {
+          "stem": "Where do the best careers often grow from?",
+          "options": [
+            "A large amount of money.",
+            "A famous family name.",
+            "A lucky guess.",
+            "A deep love for the work."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens to hard work when you are passionate?",
+          "options": [
+            "It feels much less tiring.",
+            "It becomes impossible.",
+            "It stops completely.",
+            "It costs more money."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What example does the speaker give?",
+          "options": [
+            "A busy lawyer.",
+            "A young photographer who waits for hours.",
+            "A famous singer.",
+            "A tired driver."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the photographer finally win?",
+          "options": [
+            "A new camera.",
+            "A large house.",
+            "An award for his talent.",
+            "A free holiday."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the speaker's final advice?",
+          "options": [
+            "Choose the easiest job you can find.",
+            "Always work only for money.",
+            "Give up when work gets hard.",
+            "Follow what you love and never give up too soon."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(诗歌主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lucy first tried to write a poem, she felt sure that only clever experts could do it. Her teacher told her to start with one true feeling and a few simple words, so she wrote a short cinquain about her little brother. To her surprise, the class loved its gentle rhythm, and from that day she has written a new poem almost every week.",
+    "questions": [
+      {
+        "q": "What did Lucy believe before she tried writing a poem?",
+        "options": [
+          "That only clever experts were able to write poetry.",
+          "That writing poems was very easy for everyone.",
+          "That poems should never have any feeling.",
+          "That she would win a famous prize."
+        ],
+        "answer": "A",
+        "explanation": "原文 'she felt sure that only clever experts could do it' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What happened after Lucy read her cinquain to the class?",
+        "options": [
+          "The class laughed at her and she stopped.",
+          "Her teacher asked her to leave.",
+          "The class loved it, and she has kept writing poems since.",
+          "She never wrote another poem again."
+        ],
+        "answer": "C",
+        "explanation": "末句 'the class loved its gentle rhythm, and from that day she has written a new poem almost every week'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

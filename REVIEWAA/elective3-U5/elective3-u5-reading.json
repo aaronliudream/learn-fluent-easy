@@ -1,0 +1,332 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Poems",
+  "source": "人教版2019选择性必修三 Unit 5 同主题阅读(诗歌起源/俳句与五行诗/唐诗英译/勃朗宁伉俪/如何读懂诗/休斯与梦想)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Where Poetry Began",
+      "body": "Poetry probably had its origins in traditional folk music tens of thousands of years ago. In that distant age, there were no books or films, and writing had not yet been invented. So at night people would sit around the fire and sing songs to entertain themselves. These songs reflected the daily lives of ordinary people, such as hunting animals or sowing crops in the fields. Because nothing was written down, the songs were passed on by mouth, and over the years different variations developed. Each area slowly grew its own special rhythm. People also liked to tell stories of past heroes. As these stories were often quite long, they were given rhyme and rhythm so that they could be remembered more easily. In the beginning such songs and stories were very simple, but over time they became more complicated and more polished. They were no longer the work of people sitting around a fire, but of true poets who cared deeply about their art.",
+      "vocab_notes": [
+        {
+          "word": "folk",
+          "cn": "民间的"
+        },
+        {
+          "word": "variation",
+          "cn": "变体"
+        },
+        {
+          "word": "sow",
+          "cn": "播种"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, where did poetry most likely come from?",
+          "options": [
+            "From early folk songs sung long ago.",
+            "From printed books and films.",
+            "From written records of kings.",
+            "From schools that taught writing."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Poetry probably had its origins in traditional folk music' 的转述;其余与原文矛盾。"
+        },
+        {
+          "stem": "Why were rhyme and rhythm added to the long hero stories?",
+          "options": [
+            "To make them sound foreign.",
+            "To make them easier to remember.",
+            "To make them shorter.",
+            "To stop people singing them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'they were given rhyme and rhythm so that they could be remembered more easily' 的转述。"
+        },
+        {
+          "stem": "How did the songs change over a long time?",
+          "options": [
+            "They grew richer and more polished.",
+            "They disappeared completely.",
+            "They stayed exactly the same.",
+            "They were all written down at once."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'over time they became more complicated and more polished' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Short Forms of Poetry",
+      "body": "Not every poem has to be long. One simple form that amateurs can easily write is the cinquain, which is made up of five lines. With just a few words, a cinquain can give a strong picture or create a certain mood. Another short form is the haiku, a Japanese kind of poetry that consists of seventeen syllables. It has a format of three lines, containing five, seven and five syllables respectively. The haiku is not a traditional English form, yet it is very popular with English writers. Like the cinquain, it can paint a clear picture and create a special feeling using very few words. Many haiku describe a single moment in nature, such as a fallen blossom drifting back towards the branch, or a delicate butterfly resting in the sun. These tiny poems remind us that a powerful feeling does not always need many lines. Sometimes a handful of well-chosen words can say more than a whole page of writing.",
+      "vocab_notes": [
+        {
+          "word": "cinquain",
+          "cn": "五行诗"
+        },
+        {
+          "word": "haiku",
+          "cn": "俳句"
+        },
+        {
+          "word": "syllable",
+          "cn": "音节"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is true about a cinquain?",
+          "options": [
+            "It must always be very long.",
+            "It is built out of five lines.",
+            "It has seventeen syllables.",
+            "Only experts can write one."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the cinquain, which is made up of five lines' 的转述。"
+        },
+        {
+          "stem": "How are the syllables arranged in a haiku?",
+          "options": [
+            "Seven in every line.",
+            "In no fixed number at all.",
+            "Five, seven and five across three lines.",
+            "Fourteen lines of equal length."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'three lines, containing five, seven and five syllables respectively' 的转述。"
+        },
+        {
+          "stem": "What main point does the writer make about these short poems?",
+          "options": [
+            "They are too hard to understand.",
+            "They are only written in Japan.",
+            "They cannot describe nature.",
+            "Few words can still carry strong feeling."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a powerful feeling does not always need many lines… a handful of well-chosen words can say more' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Tang Poems in English",
+      "body": "English speakers also enjoy poems from China, and those from the Tang Dynasty are especially loved. A great deal of Tang poetry has been translated into English, so that readers all over the world can share its beauty. One well-known poem by Wang Jian tells of a faithful wife who waits for her husband on a mountain top. Day by day she stands there while the river flows on below and the wind and rain revolve around her. She never looks back, and at last she is turned into stone. The poem says that, should the traveller ever return, the stone would utter speech. In so few lines, the poet paints a picture of deep love and patient waiting. When such a poem is carried into another language, the translator must keep both its meaning and its music. That is not easy, yet a good English version allows new readers to feel the same quiet sorrow that Chinese readers have felt for over a thousand years.",
+      "vocab_notes": [
+        {
+          "word": "await",
+          "cn": "等候"
+        },
+        {
+          "word": "revolve",
+          "cn": "环绕旋转"
+        },
+        {
+          "word": "utter",
+          "cn": "出声说"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the wife in Wang Jian's poem do?",
+          "options": [
+            "She waits faithfully for her husband to come back.",
+            "She travels far away from home.",
+            "She forgets about her husband.",
+            "She breaks the stone on the hill."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a faithful wife who waits for her husband' 的转述。"
+        },
+        {
+          "stem": "What finally happens to the waiting wife?",
+          "options": [
+            "She returns to the city.",
+            "She becomes a stone on the mountain top.",
+            "She meets the traveller.",
+            "She sails down the river."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'at last she is turned into stone' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what must a translator keep?",
+          "options": [
+            "Only the length of the poem.",
+            "Only the name of the poet.",
+            "Both the meaning and the music of the poem.",
+            "Nothing of the original at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the translator must keep both its meaning and its music' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Browning Love Story",
+      "body": "If you study the history of English literature, you will soon meet Robert and Elizabeth Barrett Browning. They were one of the most romantic literary couples of the Victorian era. Elizabeth began to write poetry at about the age of six, and in 1844 her Poems brought her great success. The book also caught the eye of the poet Robert Browning, who fell in love with her verse and then with the writer herself. The two began to exchange letters, and this warm correspondence sowed the seeds of love between them. Elizabeth had been ill for years and rarely saw visitors, yet Robert found a way to meet her. Her father was a dominant and selfish man who refused to let his daughter go, so the couple married in secret and moved to Italy in 1846. There Elizabeth spent the rest of her life, and Robert had a great influence on her writing. The finest proof of this is the famous collection Sonnets from the Portuguese.",
+      "vocab_notes": [
+        {
+          "word": "literary",
+          "cn": "文学的"
+        },
+        {
+          "word": "correspondence",
+          "cn": "通信"
+        },
+        {
+          "word": "dominant",
+          "cn": "专横的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What first attracted Robert Browning to Elizabeth?",
+          "options": [
+            "Her wealth and large house.",
+            "Her father's social position.",
+            "Her plan to move to Italy.",
+            "Her poetry, which he greatly admired."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'fell in love with her verse and then with the writer herself' 的转述。"
+        },
+        {
+          "stem": "Why did the couple marry in secret?",
+          "options": [
+            "Because her father would not allow it.",
+            "Because they had no money at all.",
+            "Because Robert lived in Italy.",
+            "Because Elizabeth disliked weddings."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Her father was a dominant and selfish man who refused to let his daughter go' 的转述。"
+        },
+        {
+          "stem": "What does the writer give as proof of Robert's influence?",
+          "options": [
+            "A book of letters to her father.",
+            "His famous love poems known as Sonnets from the Portuguese.",
+            "A list of her early illnesses.",
+            "A diary kept in England."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'The finest proof of this is the famous collection Sonnets from the Portuguese' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How to Read a Poem",
+      "body": "Poems paint pictures with words through figures of speech and metaphors. So to understand a poem fully, you have to imagine in your mind the very picture that the poem is painting. Start by reading the poem slowly and looking for its main image. Ask yourself what feeling the poet is trying to share, and whether the mood is happy, sad or calm. The sounds, rhythm and rhymes of a poem also give it a kind of musical quality, so a poem should almost always be read aloud. When you read aloud, find the rhythm of the words and let your voice follow it. Begin to think about how the poem makes you feel, and read it with that emotion, pouring out your feelings. Do not worry if you meet a new word; often the picture and the sound will help you guess its meaning. Read the poem more than once, for each reading usually brings something new that you missed before.",
+      "vocab_notes": [
+        {
+          "word": "imagery",
+          "cn": "意象"
+        },
+        {
+          "word": "rhythm",
+          "cn": "节奏"
+        },
+        {
+          "word": "recite",
+          "cn": "吟诵"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say you must do to understand a poem fully?",
+          "options": [
+            "Count all the words on the page.",
+            "Translate it into another language first.",
+            "Picture the scene the poem describes in your mind.",
+            "Read only its title."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'imagine in your mind the very picture that the poem is painting' 的转述。"
+        },
+        {
+          "stem": "Why should a poem usually be read aloud?",
+          "options": [
+            "To make it shorter.",
+            "To hide its meaning.",
+            "Because reading silently is forbidden.",
+            "Because its sound and rhythm give it a musical quality."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'sounds, rhythm and rhymes… give it a kind of musical quality, so a poem should almost always be read aloud' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest doing when you meet a new word?",
+          "options": [
+            "Use the picture and sound to guess its meaning.",
+            "Stop reading at once.",
+            "Skip the whole poem.",
+            "Look only at the last line."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'often the picture and the sound will help you guess its meaning' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Langston Hughes and His Dream",
+      "body": "Langston Hughes was a famous African-American poet whose poems mainly tell the story of black people in America, including their joys and their pain. One of his most celebrated poems is called Dream Variation. It is about the dream of a world that is free of inequality and racial prejudice. In another short poem, simply named Dream, he tells readers to hold fast to their dreams. He warns that if dreams die, life becomes a broken-winged bird that cannot fly, and if dreams go, life turns into a barren field frozen with snow. Although the poem has only eight lines, its images stay in the mind for a long time. Hughes also helped to make free verse popular. A free verse poem does not follow any fixed rules; it has no regular metre or rhythm, so the poet has complete control over the creation. Through his simple but powerful words, Hughes gives his readers both comfort and hope.",
+      "vocab_notes": [
+        {
+          "word": "racial",
+          "cn": "种族的"
+        },
+        {
+          "word": "prejudice",
+          "cn": "偏见"
+        },
+        {
+          "word": "barren",
+          "cn": "贫瘠的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do most of Langston Hughes's poems describe?",
+          "options": [
+            "The history of ancient China.",
+            "The lives, joys and pain of black Americans.",
+            "The rules of Japanese haiku.",
+            "His travels around Europe."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'tell the story of black people in America, including their joys and their pain' 的转述。"
+        },
+        {
+          "stem": "What does the poem Dream tell readers to do?",
+          "options": [
+            "Forget their dreams quickly.",
+            "Stop writing poetry.",
+            "Hold tightly to their dreams.",
+            "Sleep more each night."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'he tells readers to hold fast to their dreams' 的转述。"
+        },
+        {
+          "stem": "What is special about free verse, according to the text?",
+          "options": [
+            "It must rhyme on every line.",
+            "It always has seventeen syllables.",
+            "It can only be written in Japan.",
+            "It follows no fixed rules of metre or rhythm."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'A free verse poem does not follow any fixed rules; it has no regular metre or rhythm' 的转述。"
+        }
+      ]
+    }
+  ]
+}

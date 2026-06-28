@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(科幻主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Ben switched on his new robot for the first time, it simply stood still and said nothing. He almost thought it was broken. Then, in a soft voice, the robot asked how it could help, and Ben smiled with relief.",
+    "questions": [
+      {
+        "q": "How did the robot behave at first?",
+        "options": [
+          "It stood without moving or speaking.",
+          "It ran out of the room.",
+          "It started to cook dinner.",
+          "It shouted loudly at Ben."
+        ],
+        "answer": "A",
+        "explanation": "原文 'stood still and said nothing' 的转述;其余选项与原文不符。"
+      },
+      {
+        "q": "How did Ben feel in the end?",
+        "options": [
+          "Angry that it was broken.",
+          "Relieved when the robot offered to help.",
+          "Bored and uninterested.",
+          "Frightened of the robot."
+        ],
+        "answer": "B",
+        "explanation": "末句 'Ben smiled with relief'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

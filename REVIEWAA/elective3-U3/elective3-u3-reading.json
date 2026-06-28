@@ -1,0 +1,338 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Environmental Protection",
+  "source": "人教版2019选择性必修三 Unit 3 同主题阅读(气候变化与北极熊/伦敦烟雾史/漓江治污/塞罕坝/绿色生活/可持续能源)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Climate Change and the Polar Bears",
+      "topic_cn": "说明·气候变化与北极熊",
+      "body": "Far in the north, the polar bears are in trouble. They depend on sea ice to hunt seals, which give them the fat they need to live through the long winter. But as the earth grows warmer, the ice begins to melt earlier each spring and forms later each autumn. With less ice, the bears must swim farther and farther to find food. Some grow weak, and a few even starve before the ice returns. Scientists say this worrying trend is caused by climate change. When we burn fossil fuels such as coal and oil, we release carbon dioxide into the air, and this gas traps heat around the planet. The warming does not only harm the bears; it also raises the level of the sea and changes the weather everywhere. The good news is that it is not too late. If people use clean energy and cut their carbon emissions, the ice may stop disappearing so fast. Saving the bears, in the end, means saving ourselves too.",
+      "vocab_notes": [
+        {
+          "word": "melt",
+          "cn": "融化"
+        },
+        {
+          "word": "starve",
+          "cn": "挨饿"
+        },
+        {
+          "word": "emission",
+          "cn": "排放(物)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is the sea ice so important to the polar bears?",
+          "options": [
+            "It allows them to hunt the seals they feed on.",
+            "It keeps their fur clean and white.",
+            "It is a good place for them to sleep.",
+            "It protects them from other bears."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'depend on sea ice to hunt seals, which give them the fat' 的转述。"
+        },
+        {
+          "stem": "According to the text, what causes the ice to melt?",
+          "options": [
+            "The bears swimming too much.",
+            "Heat trapped by gases from burning fossil fuels.",
+            "Too many seals in the water.",
+            "A natural change with no cause."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'burn fossil fuels… release carbon dioxide… traps heat' 的转述。"
+        },
+        {
+          "stem": "What hopeful message does the writer give at the end?",
+          "options": [
+            "Using clean energy may slow the loss of ice.",
+            "The bears can never be saved now.",
+            "Only scientists can fix the problem.",
+            "The weather will soon become normal by itself."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'If people use clean energy and cut their carbon emissions, the ice may stop disappearing' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Great Smog of London",
+      "topic_cn": "记叙·伦敦烟雾事件",
+      "body": "The word 'smog' originated in Britain, where it was formed by joining 'smoke' and 'fog'. In the middle of the last century, many British homes and factories burned huge amounts of coal. The dirty smoke mixed with the wet fog of winter, and thick smog often covered the cities. The worst event happened in London in 1952. For several days a grey cloud hung over the streets, and people could hardly see in front of them. The smog was so harmful that thousands of people became ill, and many of them lost their lives. After this disaster, the government understood that something had to change. New laws restricted the burning of coal in homes and forced factories to clean up the gases they released. Slowly the air grew clearer, and the killer smog never returned in the same way. The story of London is now a warning to other cities: when we pollute the air we breathe, we put our own health and lives in danger.",
+      "vocab_notes": [
+        {
+          "word": "smog",
+          "cn": "烟雾"
+        },
+        {
+          "word": "originate",
+          "cn": "起源"
+        },
+        {
+          "word": "restrict",
+          "cn": "限制"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How was the word 'smog' first made?",
+          "options": [
+            "By copying a French word.",
+            "By joining the words 'smoke' and 'fog'.",
+            "From the name of a city.",
+            "From a kind of coal."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'formed by joining \"smoke\" and \"fog\"' 的转述。"
+        },
+        {
+          "stem": "What made the smog so deadly in 1952?",
+          "options": [
+            "It blew away too quickly.",
+            "It only damaged buildings.",
+            "So many people fell ill that many died.",
+            "It happened far from any city."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'thousands of people became ill, and many of them lost their lives' 的转述。"
+        },
+        {
+          "stem": "What did the government do after the disaster?",
+          "options": [
+            "It did nothing at all.",
+            "It banned all factories forever.",
+            "It moved everyone out of London.",
+            "It limited coal burning and made factories clean their gases."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'restricted the burning of coal… forced factories to clean up the gases' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Bringing the Li River Back to Life",
+      "topic_cn": "说明·漓江治污",
+      "body": "The Li River in Guangxi is famous for its clear water and beautiful hills, and millions of visitors come to enjoy it every year. Sadly, this fame once brought serious problems. Crowds of tourists frequently threw garbage into the water, and the kitchens on tour boats poured used oil straight into the river. As more hotels and small enterprises opened along the banks, even more waste ended up in the water. Local officials were worried that the pollution was destroying the natural beauty, so they decided to act. A comprehensive plan was carried out. Workers built stations to treat waste water, and the collection of household rubbish was improved. Dozens of polluting factories were closed or moved away. Strict regulations controlled new building, and clear rules were made about where boats could go and how garbage should be handled. Officers also began regular inspections and would fine any company that broke the rules. Thanks to these efforts, the Li River is now heading towards a clean and sustainable future, and its famous scenery has been restored.",
+      "vocab_notes": [
+        {
+          "word": "enterprise",
+          "cn": "企业"
+        },
+        {
+          "word": "regulation",
+          "cn": "规章"
+        },
+        {
+          "word": "inspection",
+          "cn": "检查"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was one main cause of the river's pollution?",
+          "options": [
+            "Visitors and tour boats dropping waste into the water.",
+            "Heavy rain washing in mud.",
+            "Fish dying of old age.",
+            "Too few people visiting the area."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'tourists frequently threw garbage… kitchens on tour boats poured used oil' 的转述。"
+        },
+        {
+          "stem": "What did the officials do about the polluting factories?",
+          "options": [
+            "They gave them more money.",
+            "They closed or moved many of them.",
+            "They built more of them.",
+            "They ignored the problem."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Dozens of polluting factories were closed or moved away' 的转述。"
+        },
+        {
+          "stem": "How did officers make sure the new rules were obeyed?",
+          "options": [
+            "By asking tourists to leave.",
+            "By closing the whole river to boats.",
+            "By inspecting regularly and fining rule-breakers.",
+            "By doing nothing once the plan started."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'regular inspections and would fine any company that broke the rules' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Green Miracle of Saihanba",
+      "topic_cn": "记叙·塞罕坝绿色奇迹",
+      "body": "Saihanba lies in the north of China, near the edge of a great desert. Long ago it was a rich green land, but years of cutting trees left it bare and dry. Cold winds carried sand towards the capital, and the soil could no longer hold water. In 1962, a group of young workers were sent to this empty place with one task: to grow a forest where almost nothing would grow. Life there was very hard. The winters were bitter, food was simple, and many of their first trees died. Yet the workers did not give up. They learned from each failure, chose stronger young trees, and planted them year after year. Their children and grandchildren carried on the same work. After about sixty years, the bare hills had become the largest planted forest in the world. Today this huge sea of green cleans the air, holds back the sand, and keeps water in the ground. The story of Saihanba shows that with patience and team effort, people can restore even the most damaged land.",
+      "vocab_notes": [
+        {
+          "word": "restore",
+          "cn": "恢复;修复"
+        },
+        {
+          "word": "ecology",
+          "cn": "生态"
+        },
+        {
+          "word": "sustain",
+          "cn": "维持"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why had Saihanba become bare and dry?",
+          "options": [
+            "Because it had always been a desert.",
+            "Because of heavy rain every winter.",
+            "Because no one had ever lived near it.",
+            "Because too many trees had been cut down over the years."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'years of cutting trees left it bare and dry' 的转述。"
+        },
+        {
+          "stem": "How did the workers finally succeed in growing the forest?",
+          "options": [
+            "They kept learning from failure and planting for many years.",
+            "They gave up and tried somewhere else.",
+            "They waited for the trees to grow by themselves.",
+            "They moved the desert away."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'learned from each failure… planted them year after year' 的转述。"
+        },
+        {
+          "stem": "What does the writer say the Saihanba story proves?",
+          "options": [
+            "Forests can grow anywhere with no effort.",
+            "Patient teamwork can repair badly damaged land.",
+            "Deserts can never be changed at all.",
+            "Only machines can plant trees."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'with patience and team effort, people can restore even the most damaged land' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Small Habits, Big Difference",
+      "topic_cn": "说明·绿色生活习惯",
+      "body": "Protecting the planet does not always mean doing something huge. In fact, many small daily habits can lower your carbon footprint a great deal. Think about energy first. When you leave a room, turn off the light, and unplug the TV and computer instead of leaving them on standby. On a cold day, put on a warm sweater before you turn up the heat, and wash your clothes in cold water when you can. Think about transport too. For short trips, walk or ride a bike rather than asking your parents to drive you. Each ride you skip means less carbon dioxide in the air. Then there is waste. Carry a cloth bag when you go shopping so that you do not need plastic ones. Sort your rubbish so that paper, glass and metal can be recycled. None of these actions is difficult, yet together they save energy, save money, and keep the air cleaner. If everyone in a city formed just a few green habits, the whole world would feel the difference.",
+      "vocab_notes": [
+        {
+          "word": "footprint",
+          "cn": "(碳)足迹"
+        },
+        {
+          "word": "moderate",
+          "cn": "适度的"
+        },
+        {
+          "word": "sustainable",
+          "cn": "可持续的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the writer's main point about protecting the planet?",
+          "options": [
+            "Only big projects can help the planet.",
+            "Nothing ordinary people do really matters.",
+            "Many small everyday habits can make a real difference.",
+            "Only the government can save energy."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'many small daily habits can lower your carbon footprint a great deal' 的转述。"
+        },
+        {
+          "stem": "What does the text suggest doing for short trips?",
+          "options": [
+            "Always ask your parents to drive.",
+            "Stay at home and never go out.",
+            "Take a taxi to save time.",
+            "Travel on foot or by bicycle rather than by car."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'walk or ride a bike rather than asking your parents to drive you' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what would happen if everyone formed green habits?",
+          "options": [
+            "People everywhere would notice the improvement.",
+            "Energy bills would rise sharply.",
+            "Nothing would change at all.",
+            "Cities would become dirtier."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'the whole world would feel the difference' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Promise of Clean Energy",
+      "topic_cn": "说明·清洁能源",
+      "body": "For a long time, the world has run mainly on fossil fuels. Coal, oil and gas power our cars, homes and factories, but burning them fills the air with carbon dioxide and other harmful gases. As a result, the planet is getting warmer and the air in many cities is no longer safe to breathe. This is why so many countries are now turning to clean energy. The sun, the wind and moving water can all be used to make electricity without polluting the air. Sunlight falling on solar panels, for example, can light a school or heat a home. Wind farms on open land turn the power of the breeze into clean electricity. These sources will not run out, and they do not release smog or carbon dioxide. Of course, the change is not simple. Clean energy can cost more at first, and the weather is not always sunny or windy. Yet most experts agree that this is the path we must take. If we are willing to invest today, clean energy can sustain a healthy and habitable world for the children of tomorrow.",
+      "vocab_notes": [
+        {
+          "word": "release",
+          "cn": "排放"
+        },
+        {
+          "word": "habitable",
+          "cn": "适合居住的"
+        },
+        {
+          "word": "sustain",
+          "cn": "维持"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why are many countries turning to clean energy?",
+          "options": [
+            "Because fossil fuels have already run out.",
+            "Because burning fossil fuels warms the planet and dirties the air.",
+            "Because clean energy is always cheaper.",
+            "Because people dislike cars."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'burning them fills the air with carbon dioxide… planet is getting warmer' 的转述。"
+        },
+        {
+          "stem": "What is one advantage of the sun and the wind as energy sources?",
+          "options": [
+            "They are easy to store in bottles.",
+            "They work better than anything at night.",
+            "They never get used up and keep the air clean.",
+            "They are owned by only a few people."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'will not run out, and they do not release smog or carbon dioxide' 的转述。"
+        },
+        {
+          "stem": "What difficulty about clean energy does the writer admit?",
+          "options": [
+            "It makes the air dirtier.",
+            "It cannot make electricity at all.",
+            "No country wants to use it.",
+            "It is dearer to start with and relies on sunshine or wind."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'can cost more at first, and the weather is not always sunny or windy' 的转述。"
+        }
+      ]
+    }
+  ]
+}

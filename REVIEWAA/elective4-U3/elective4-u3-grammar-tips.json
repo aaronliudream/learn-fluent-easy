@@ -1,0 +1,38 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "长难句速查:从句连接词 · 非谓语 · 强调与倒装",
+    "intro": "长句看着吓人,其实先做三步就稳:① 找出主句的主谓宾(主干);② 圈出多余的动词——它一定是非谓语(doing/done/to do);③ 看连接词引导的是哪种从句(定语/状语/名词性)。拆完主干,空格该填什么自然就清楚了。",
+    "table": {
+      "headers": ["结构", "怎么判断 / 例句"],
+      "rows": [
+        ["定语从句", "看先行词+从句缺成分:缺主/宾→which/that/who;缺地点状语→where;缺时间→when;表所属→whose。The ship which can dive deep…"],
+        ["状语从句", "看逻辑:原因 because;让步 although;目的 so that;随着 as。Although whaling was banned, …"],
+        ["名词性从句", "看是否完整+意思:完整用 that;不确定用 whether;缺成分表'什么'用 what。We know what is happening to the sea."],
+        ["非谓语", "句中已有谓语:主动/进行 doing;被动/完成 done;目的/将来 to do。Named after a dragon, … / designed to … / making it possible to …"],
+        ["强调句", "It is/was + 被强调部分 + that…;去掉 It is…that 仍是完整句。It was courage that made his dream come true."],
+        ["倒装", "Only+状语 / 否定词(Not until, Rarely)置句首→助动词提前。Only then did they understand …"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "强调句去掉 It is…that 后剩下的仍是完整句;定语从句去掉关系词后从句缺成分", "mark": "It was in 2010 that…(强调时间,that 不可换 when 之外)" },
+      { "rule": "强调时间/地点也用 that,不用 when/where(强调句≠定语从句)", "mark": "It was here that I saw it. √ It was here where… ×" },
+      { "rule": "过去分词/现在分词作状语,逻辑主语必须等于主句主语", "mark": "Named after a dragon, the submersible…(被命名的是潜水器)" },
+      { "rule": "否定词(Not until / Rarely / Only+状语)置句首 → 部分倒装(助动词提前)", "mark": "Not until we act will they forgive us." }
+    ],
+    "why": [
+      "长句的难点从来不是'生词',而是'看不出谁是主句';一旦把多余的动词判成非谓语、把连接词归对从句类型,整句结构就立刻清晰,空格答案唯一。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:which/that/where/when/whose 的判断(看先行词+缺什么成分);so that / although / because 状语连词。",
+      "非谓语三选一(doing/done/to do)在长句里作定语、状语、宾补——看主被动与时间关系。",
+      "强调句 It is…that 与定语从句辨析;Only/否定词置句首的部分倒装是写作高分点。"
+    ],
+    "examVsReal": [
+      { "exam": "It was the writing of logs that allowed sailors to follow the route.（考试:强调句）", "real": "The ships' logs let later sailors follow the same route.", "note": "考试爱考强调句辨析;真实英语更常用普通句直接表达" },
+      { "exam": "Only then did they understand why it matters.（考试:倒装）", "real": "They only understood then why it mattered.", "note": "考试考 Only+状语的部分倒装;口语里很少真的把助动词提前" }
+    ]
+  }
+}

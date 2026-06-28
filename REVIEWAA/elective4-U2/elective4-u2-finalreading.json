@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(标志性景点主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "The small mountain village was once almost empty, with only a few old stone houses left standing. After its ancient bridge was repaired and a quiet path was built along the river, more and more travellers began to arrive. Today the village is a popular getaway, and the money from tourists has helped the local people fix their homes and open small cafes.",
+    "questions": [
+      {
+        "q": "What was the village like before the changes?",
+        "options": [
+          "It was crowded with tourists.",
+          "Hardly anyone lived there, and just a handful of stone houses remained.",
+          "It was a large modern city.",
+          "It had no buildings at all."
+        ],
+        "answer": "B",
+        "explanation": "原文 'once almost empty, with only a few old stone houses' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How have tourists affected the village?",
+        "options": [
+          "They have driven the people away.",
+          "They have caused the bridge to fall.",
+          "Income from visitors let residents repair houses and start small cafes.",
+          "They have made the village empty again."
+        ],
+        "answer": "C",
+        "explanation": "末句 'money from tourists has helped the local people fix their homes and open small cafes' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

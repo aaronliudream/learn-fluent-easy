@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "Launching Your Career",
+  "source": "人教版2019选择性必修四 Unit 5 同主题完形(梦想职业演讲/写简历/面试当天/职场技能/热爱与坚持/科学家的职业道路)。用词限本单元/初中/常见词,答案唯一,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Dream Career",
+      "text": "Everyone dreams of having a great career, but first we should (1)____ what a great career really means. When I think about this, many ideas (2)____ in my head, such as money, power or fame. Yet it would be (3)____ to care only about money. Please close your eyes and picture someone truly successful — perhaps an entrepreneur, a leader or a (4)____ who once inspired you. My own choice would be Marie Curie, who discovered (5)____ and gave her life to science. For me she is great not because she was famous, but because she made great (6)____ to humankind. Being a female scientist was rare in her time, but she still (7)____ herself to her work. So I have come to a (8)____: if you want a great career, you must commit yourself to something (9)____. I believe all great careers share this one (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "define",
+            "forget",
+            "waste",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "define 界定;给……下定义。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "appear",
+            "break",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "ideas appear 想法浮现。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "polite",
+            "calm",
+            "greedy",
+            "shy"
+          ],
+          "answer_index": 2,
+          "explanation": "greedy 贪心的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "machine",
+            "garden",
+            "teacher"
+          ],
+          "answer_index": 3,
+          "explanation": "a teacher 一位老师(同类于 entrepreneur/leader)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "radium",
+            "noise",
+            "weather",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "discovered radium 发现镭。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "mistakes",
+            "contributions",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 1,
+          "explanation": "make contributions 做出贡献。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "dedicated",
+            "dropped"
+          ],
+          "answer_index": 2,
+          "explanation": "dedicate oneself to 把自己奉献给。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "shop",
+            "river",
+            "city",
+            "conclusion"
+          ],
+          "answer_index": 3,
+          "explanation": "come to a conclusion 得出结论。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "meaningful",
+            "empty",
+            "boring",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "something meaningful 有意义的事。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "secret",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "share this secret 共有这个秘诀。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Writing My First CV",
+      "text": "Last week I sat down to write my very first (1)____ for a part-time job. My teacher told me that a good CV must be short and (2)____, so that busy employers can read it quickly. At the top I wrote my name and how to (3)____ me by phone and email. Then I listed my education and any work (4)____ I had, even the small jobs. I also added the (5)____ I am proud of, such as teamwork and good handwriting. My teacher reminded me to (6)____ the CV to match each job, rather than send the same one everywhere. Before sending it, I checked every line to make sure there were no (7)____. Finally I attached a short cover (8)____ to explain why I wanted the job. When I clicked 'send', I felt both nervous and (9)____. Writing a CV had taught me to think clearly about my own (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "song",
+            "meal",
+            "CV",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "my first CV 我的第一份简历。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wet",
+            "loud",
+            "empty",
+            "clear"
+          ],
+          "answer_index": 3,
+          "explanation": "short and clear 简短清晰。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "contact",
+            "throw",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "how to contact me 如何联系我。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "experience",
+            "noise",
+            "traffic"
+          ],
+          "answer_index": 1,
+          "explanation": "work experience 工作经验。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mistakes",
+            "prices",
+            "skills",
+            "noises"
+          ],
+          "answer_index": 2,
+          "explanation": "the skills 技能。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "drop",
+            "tailor"
+          ],
+          "answer_index": 3,
+          "explanation": "tailor the CV 量身调整简历。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "mistakes",
+            "songs",
+            "gardens",
+            "rivers"
+          ],
+          "answer_index": 0,
+          "explanation": "no mistakes 没有错误。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "letter",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "a cover letter 一封求职信。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wet",
+            "cold",
+            "proud",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "nervous and proud 既紧张又自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "strengths"
+          ],
+          "answer_index": 3,
+          "explanation": "my own strengths 自己的优势。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Day of My Interview",
+      "text": "On the morning of my job interview, I woke up early and put on smart (1)____. I had already done a lot of (2)____ about the company, so I knew what they did. To avoid being late, I left home in good (3)____ and arrived twenty minutes early. The (4)____ at the front desk smiled and asked me to wait for a moment. When my turn came, I tried to stay (5)____ and answer every question honestly. The interviewer asked me to (6)____ my best qualities and my past experience. I told her about being a team (7)____ and learning to decide on priorities. She seemed pleased and even (8)____ me to apply for a higher position next year. As I left, I felt that all my (9)____ had been worth it. That day taught me that good preparation can turn a scary moment into a real (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "clothes",
+            "songs",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "smart clothes 得体的衣服。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "research",
+            "noise",
+            "traffic"
+          ],
+          "answer_index": 1,
+          "explanation": "do research 做调查。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "weather",
+            "time",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "in good time 提早;留有余地。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "river",
+            "garden",
+            "machine",
+            "receptionist"
+          ],
+          "answer_index": 3,
+          "explanation": "the receptionist 接待员。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "calm",
+            "wet",
+            "cold",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "throw",
+            "describe",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "describe my qualities 描述我的品质。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "captain",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a team captain 队长。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "broke",
+            "encouraged"
+          ],
+          "answer_index": 3,
+          "explanation": "encouraged me to apply 鼓励我申请。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "effort",
+            "weather",
+            "noise",
+            "traffic"
+          ],
+          "answer_index": 0,
+          "explanation": "all my effort 我的努力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "chance",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a real chance 真正的机会。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Skills That Every Job Needs",
+      "text": "No matter which career you choose, some skills are always (1)____. The first is teamwork, because most jobs require you to (2)____ well with other people. The second is the ability to (3)____ on priorities, so that you finish the most important task first. Good communication is also (4)____: you must be able to explain your ideas clearly. Many employers say they (5)____ workers who are honest and reliable. It also helps to keep learning, since the world of work keeps (6)____. If you make a mistake, do not be afraid to (7)____ for help. A friendly, welcoming (8)____ can make a real difference in any team. Finally, you should be willing to take (9)____ for your own actions. When you build up these skills, you will be far better (10)____ for whatever career lies ahead of you.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "empty",
+            "wet",
+            "useful",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "always useful 总是有用的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "sell",
+            "throw",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "work well with others 与他人合作。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "decide",
+            "lose",
+            "hide",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "decide on priorities 决定优先事项。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "boring",
+            "important",
+            "empty",
+            "wet"
+          ],
+          "answer_index": 1,
+          "explanation": "also important 也很重要。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "forget",
+            "waste",
+            "value",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "value honest workers 看重诚实的员工。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleeping",
+            "stopping",
+            "falling",
+            "changing"
+          ],
+          "answer_index": 3,
+          "explanation": "keeps changing 不断变化。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ask",
+            "sell",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "ask for help 求助。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "attitude",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a welcoming attitude 友好的态度。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "weather",
+            "responsibility",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "take responsibility 承担责任。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "lost",
+            "broken",
+            "prepared"
+          ],
+          "answer_index": 3,
+          "explanation": "better prepared 准备得更好。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Following Your Passion",
+      "text": "People often say that the best careers begin with a real (1)____. When you love what you do, hard work no longer feels like a (2)____. Take the young photographer Mateusz as an (3)____. He spends hours waiting quietly in the grass, (4)____ for the perfect moment to take a photo. Most people would lose their (5)____ after such a long wait, but his passion keeps him going. In one session he may take hundreds of (6)____, hoping that just one will be special. His hard work has finally (7)____ off, and a museum once gave him an (8)____ for his talent. People wonder why someone so young can be so (9)____. The answer is simple: he truly loves his work and refuses to give (10)____. His story reminds us that passion can turn a hobby into a career.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "passion",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a real passion 真正的热爱。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "struggle",
+            "garden",
+            "river"
+          ],
+          "answer_index": 1,
+          "explanation": "feels like a struggle 像一种苦差。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "error",
+            "city",
+            "example",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "as an example 举例。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleeping",
+            "selling",
+            "losing",
+            "waiting"
+          ],
+          "answer_index": 3,
+          "explanation": "waiting for the moment 等待时机。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "patience",
+            "price",
+            "weather",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "lose their patience 失去耐心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "photographs",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "take photographs 拍照片。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "broke",
+            "paid",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "pay off 有了回报。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "error",
+            "noise",
+            "garden",
+            "award"
+          ],
+          "answer_index": 3,
+          "explanation": "an award 一个奖项。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "successful",
+            "empty",
+            "wet",
+            "cold"
+          ],
+          "answer_index": 0,
+          "explanation": "so successful 如此成功。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "in",
+            "up",
+            "off",
+            "out"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Scientist's Career Path",
+      "text": "Zhong Yang was a botanist who (1)____ his whole life to studying seeds. As a young man, he had to (2)____ between a comfortable job and a much harder dream. He chose the (3)____ road, because he believed his work could one day help the country. For years he travelled to remote and (4)____ areas where no other botanist had ever been. The journeys were dangerous, and the work demanded great (5)____. Yet he never thought about giving (6)____. He often said that a great career is not about money or (7)____, but about doing something useful for others. His students learned an important (8)____ from him: real success comes from passion and hard work. Today, many young scientists are (9)____ by his story. His life shows that a meaningful career can be (10)____ through patience, courage and love for one's work.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "lost",
+            "dedicated",
+            "dropped"
+          ],
+          "answer_index": 2,
+          "explanation": "dedicated his life to 把一生献给。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "throw",
+            "hide",
+            "choose"
+          ],
+          "answer_index": 3,
+          "explanation": "choose between 在……之间选择。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "harder",
+            "wet",
+            "empty",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "the harder road 更艰难的路。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "primitive",
+            "rich",
+            "warm"
+          ],
+          "answer_index": 1,
+          "explanation": "remote and primitive areas 偏远原始地区。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "courage",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "great courage 极大的勇气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fame",
+            "water",
+            "rain",
+            "snow"
+          ],
+          "answer_index": 0,
+          "explanation": "money or fame 金钱或名声。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "lesson",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "an important lesson 重要的一课。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "broken",
+            "inspired",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "inspired by his story 被他的故事激励。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "thrown",
+            "dropped",
+            "achieved"
+          ],
+          "answer_index": 3,
+          "explanation": "be achieved 被实现。"
+        }
+      ]
+    }
+  ]
+}

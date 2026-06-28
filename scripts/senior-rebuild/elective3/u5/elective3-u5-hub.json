@@ -1,0 +1,48 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "listeningQuestions": [
+    { "audio": "A haiku is a short poem of seventeen syllables in three lines.", "opts": ["俳句是一首十七个音节、三行的短诗。", "俳句是一首十四行的爱情诗。", "俳句是一首很长的叙事诗。", "俳句是一种民间舞蹈。"], "answer": 0 },
+    { "audio": "Poetry should always be read aloud to hear its music.", "opts": ["诗歌应当大声朗读以听到它的音乐。", "诗歌只能默读。", "诗歌不需要节奏。", "诗歌只能用来唱。"], "answer": 0 },
+    { "audio": "The poem 'Dream' tells us to hold fast to our dreams.", "opts": ["《梦想》告诉我们要紧紧抓住梦想。", "《梦想》让我们多睡觉。", "《梦想》讲述一场战争。", "《梦想》描写一座城市。"], "answer": 0 },
+    { "audio": "A cinquain is a simple poem made up of five lines.", "opts": ["五行诗是由五行组成的简单诗。", "五行诗有十七个音节。", "五行诗必须押韵十四次。", "五行诗只能写动物。"], "answer": 0 },
+    { "audio": "Many Tang poems have been translated into English.", "opts": ["许多唐诗已被译成英语。", "唐诗从不被翻译。", "唐诗只在日本流行。", "唐诗都很短。"], "answer": 0 },
+    { "audio": "The deadline for the poetry contest is the end of next week.", "opts": ["诗歌比赛的截止日期是下周末。", "诗歌比赛没有截止日期。", "比赛在今天上午结束。", "比赛只对老师开放。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "A poem of fourteen lines, often about love, is called a ____.", "opts": ["sonnet", "haiku", "deadline", "lawn"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The number of beats and stresses in a line of poetry is its ____.", "opts": ["rhythm", "prejudice", "shelf", "deadline"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "To say a poem from memory, out loud, is to ____ it.", "opts": ["recite", "polish", "sow", "tease"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Someone who writes poems just for pleasure, not as a job, is an ____.", "opts": ["amateur", "era", "imagery", "format"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The poet ____ wrote this sonnet lived in the Victorian era.", "opts": ["who", "which", "whose", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "1844 was the year ____ her Poems brought her great success.", "opts": ["when", "which", "where", "whose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Tagore, ____ poems Chinese readers love, wrote The Crescent Moon.", "opts": ["whose", "that", "which", "who"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She recited the poem beautifully, ____ won her the first prize.", "opts": ["which", "that", "what", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Listen: 'A haiku is made up of three lines.' How many lines does a haiku have?", "opts": ["Three.", "Five.", "Fourteen.", "Seventeen."], "answer": 0, "point": "听力", "dim": "listening", "audio": "A haiku is made up of three lines." },
+    { "q": "Listen: 'A good poem should be read slowly and with feeling.' How should you read a poem?", "opts": ["Slowly and with feeling.", "As fast as you can.", "In total silence.", "Without any feeling."], "answer": 0, "point": "听力", "dim": "listening", "audio": "A good poem should be read slowly and with feeling." }
+  ],
+  "reading": {
+    "passage": "A good poem paints a picture with very few words. When you read it aloud, its rhythm and rhymes sound like quiet music, and a single image can stay in your mind for a long time.",
+    "passageCn": "一首好诗用极少的文字描绘出画面。当你大声朗读时,它的节奏和押韵听起来像安静的音乐,而一个意象就能在你心中长久停留。",
+    "questions": [
+      { "q": "What does a good poem do with very few words?", "opts": ["It paints a picture.", "It tells a long story.", "It lists many names.", "It teaches grammar."], "answer": 0 },
+      { "q": "What sounds like quiet music when you read a poem aloud?", "opts": ["Its rhythm and rhymes.", "Its price.", "Its length.", "Its paper."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about your favourite poem: give its title and poet, describe its images or rhyme, and say why you love it. Try to use a relative clause.",
+    "promptCn": "写一写你最喜爱的诗:写出诗名和作者,描述它的意象或押韵,并说说你为何喜爱它。尽量用上一个定语从句。",
+    "sampleWords": ["poem", "poet", "sonnet", "rhyme", "rhythm", "image", "mood", "recite", "appreciate", "verse"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing a Poem to Recite",
+      "lines": [
+        { "role": "A", "text": "I have to recite a poem tomorrow. Which one should I choose?", "cn": "我明天要吟诵一首诗,该选哪一首呢?" },
+        { "role": "B", "text": "Try 'Dream'. It is short, and its lines rhyme nicely.", "cn": "试试《梦想》吧,它很短,诗行押韵很好听。" },
+        { "role": "A", "text": "Good idea. I'll read it slowly and with feeling.", "cn": "好主意。我会慢慢地、带着感情读。" },
+        { "role": "B", "text": "Perfect. That is when a poem really comes alive.", "cn": "太好了,那才是诗真正鲜活起来的时候。" }
+      ]
+    }
+  ]
+}

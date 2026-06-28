@@ -1,0 +1,39 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "被动语态复习·各时态/情态被动 速查",
+    "intro": "当主语是动作的承受者时,用被动语态:be + 过去分词(done)。be 的形式随时态变化;情态动词后用 be done;不及物动词没有被动。判断口诀:主语'被'怎么样→用被动;时态看语境;情态后 be done。",
+    "table": {
+      "headers": ["时态 / 类型", "被动结构 / 例句"],
+      "rows": [
+        ["一般现在", "am/is/are done:The work is done by robots."],
+        ["一般过去", "was/were done:The robot was built last year."],
+        ["一般将来", "will be done:A venue will be built next month."],
+        ["现在完成", "has/have been done:It has been tested many times."],
+        ["过去完成", "had been done:The house had been transformed before the party."],
+        ["现在进行", "is/are being done:A new robot is being built now."],
+        ["过去进行", "was/were being done:The surface was being changed."],
+        ["情态被动", "can/must/should/may + be done:The robot must be repaired."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "情态动词后接 be done(不是 be doing / be do)", "mark": "must be repaired √ / must repaired ×" },
+      { "rule": "不及物动词没有被动(happen/appear/disappear/rise/fall/exist)", "mark": "What happened? √ / What was happened? ×" },
+      { "rule": "施动者用 by 引出,无关紧要时可省略", "mark": "written by Liu Cixin" },
+      { "rule": "口语常用 get done 表被动,强调结果/意外", "mark": "The machine got flipped on its side." }
+    ],
+    "why": [
+      "被动语态把动作的'承受者'放到主语位置,用来强调动作的对象、或当施动者未知、不重要时;be 始终随时态和数变化,真正表达'被'的是过去分词 done。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:用括号动词的'正确被动形式'填空,先判断主语是否承受动作,再由语境定时态。",
+      "情态动词的被动(must/should/can + be done)与不及物动词不能用被动(happen/appear)是常见陷阱。"
+    ],
+    "examVsReal": [
+      { "exam": "The novel was written by Liu Cixin.(考试/书面)", "real": "Liu Cixin wrote the novel.", "note": "考试爱考被动+by;真实表达若施动者重要,主动更直接有力。" },
+      { "exam": "The window was broken.(考试)", "real": "The window got broken.", "note": "考试多用 be done;口语里 get done 更常见,强调意外结果。" }
+    ]
+  }
+}

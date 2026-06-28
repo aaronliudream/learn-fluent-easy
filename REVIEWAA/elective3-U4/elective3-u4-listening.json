@@ -1,0 +1,493 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Adversity and Courage",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修三 Unit 4 同主题听力(选拔救援队/勇气短文/采访登山者/坚持的力量短文/准备远征对话/给学习者的鼓励短文)。用词限本单元/初中/常见词,答案唯一可在transcript找依据,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Choosing the Rescue Team",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "We must choose two more sailors for the rescue boat. Who do you suggest?"
+        },
+        {
+          "speaker": "B",
+          "text": "I think we need Frank Worsley. He is an excellent navigator."
+        },
+        {
+          "speaker": "A",
+          "text": "A good navigator is the most important thing for such a journey."
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. Without him, we could easily lose our way on the rough sea."
+        },
+        {
+          "speaker": "A",
+          "text": "What about Tom Crean? He is strong, brave, and full of energy."
+        },
+        {
+          "speaker": "B",
+          "text": "Perfect. We will need his strength to row for days without rest."
+        },
+        {
+          "speaker": "A",
+          "text": "Then it is settled. Worsley to guide us, and Crean for his power."
+        },
+        {
+          "speaker": "B",
+          "text": "Let's tell the captain. The sooner we set off, the better."
+        }
+      ],
+      "translation_cn": "两人为救援船挑选另外两名水手:B 推荐沃斯利,因为他是出色的领航员;A 说领航员对这样的航行最重要;还选了汤姆·克林,因为他强壮勇敢、精力充沛,需要他的力气连日划船;两人决定告诉船长,越早出发越好。",
+      "questions": [
+        {
+          "stem": "What are the two speakers trying to do?",
+          "options": [
+            "Choose sailors for the rescue boat.",
+            "Repair the broken ship.",
+            "Cook dinner for the crew.",
+            "Find a place to camp."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they want Frank Worsley?",
+          "options": [
+            "He is the youngest sailor.",
+            "He is an excellent navigator.",
+            "He is the best cook.",
+            "He owns the boat."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is a navigator so important for the journey?",
+          "options": [
+            "So they will not lose their way on the rough sea.",
+            "To catch more penguins.",
+            "To keep everyone warm.",
+            "To carry the heaviest bags."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they choose Tom Crean?",
+          "options": [
+            "Because he is quiet and shy.",
+            "Because they need his strength to row for days.",
+            "Because he can read maps.",
+            "Because he is good at advertising."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do next?",
+          "options": [
+            "Wait for a week.",
+            "Look for more food.",
+            "Tell the captain and set off soon.",
+            "Go back to sleep."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 What Courage Really Means",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people believe that brave heroes never feel afraid.",
+        "In truth, courage is not the absence of fear.",
+        "It is the choice to act well even while you are afraid.",
+        "Real courage often shows itself in small, quiet actions.",
+        "Anyone can learn to be braver, one step at a time."
+      ],
+      "translation_cn": "许多人认为勇敢的英雄从不害怕;其实勇气并非没有恐惧,而是在害怕时仍选择做正确的事;真正的勇气常常体现在微小而安静的行动中;任何人都能一步一步学会更勇敢。",
+      "questions": [
+        {
+          "stem": "What do many people wrongly believe about heroes?",
+          "options": [
+            "That they are very rich.",
+            "That they live forever.",
+            "That they are always tall.",
+            "That they never feel afraid."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the passage, what is courage?",
+          "options": [
+            "Acting well even while afraid.",
+            "Never trying anything.",
+            "Avoiding all danger.",
+            "Feeling no emotion."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where does real courage often show itself?",
+          "options": [
+            "Only on television.",
+            "In small, quiet actions.",
+            "Only in famous battles.",
+            "Only among rich people."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the passage say about becoming braver?",
+          "options": [
+            "It is impossible.",
+            "Only heroes can do it.",
+            "Anyone can learn it step by step.",
+            "It happens by luck."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Heroes are born, not made.",
+            "Fear should always stop us.",
+            "Only the strong are brave.",
+            "Courage means acting despite fear."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Interview with a Climber",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "You climbed the mountain after losing your sight. Wasn't that frightening?"
+        },
+        {
+          "speaker": "B",
+          "text": "Of course it was. But I refused to let blindness end the life I loved."
+        },
+        {
+          "speaker": "A",
+          "text": "How did you find your way up without being able to see?"
+        },
+        {
+          "speaker": "B",
+          "text": "I felt every hold with my hands and listened to my friends' voices."
+        },
+        {
+          "speaker": "A",
+          "text": "That must have taken years of practice and patience."
+        },
+        {
+          "speaker": "B",
+          "text": "It did. I trained my body to trust touch and sound instead of sight."
+        },
+        {
+          "speaker": "A",
+          "text": "What would you say to young people who face hard problems?"
+        },
+        {
+          "speaker": "B",
+          "text": "The biggest mountains we climb are often the ones inside our minds."
+        }
+      ],
+      "translation_cn": "记者采访一位失明后仍登山的攀登者:他承认害怕,但拒绝让失明终结自己热爱的生活;他靠双手感觉每个抓握点、靠朋友的声音找路;这需要多年练习,让身体学会信任触觉和听觉;他对面对困难的年轻人说:我们攀登的最大的山,往往在自己心里。",
+      "questions": [
+        {
+          "stem": "What difficulty did the climber face?",
+          "options": [
+            "He had lost his sight.",
+            "He had broken his leg.",
+            "He had no money.",
+            "He could not swim."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did he find his way up the mountain?",
+          "options": [
+            "By using a map.",
+            "By feeling holds and listening to friends.",
+            "By following painted signs.",
+            "By waiting for daylight."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the years of training teach his body to do?",
+          "options": [
+            "To run faster than others.",
+            "To need no rest at all.",
+            "To trust touch and sound instead of sight.",
+            "To climb only small hills."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does he tell young people who face hard problems?",
+          "options": [
+            "To give up quickly.",
+            "To avoid all mountains.",
+            "To wait for help.",
+            "The biggest mountains are inside our minds."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did the climber feel about the climb?",
+          "options": [
+            "It was frightening, but he refused to give up.",
+            "It was easy and boring.",
+            "He felt no fear at all.",
+            "He regretted ever trying."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 The Power of One Small Step",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When a problem feels too big, it can stop us before we even begin.",
+        "The secret is to break it into small, simple steps.",
+        "Do not ask how to finish everything at once.",
+        "Just ask what you can do in the next hour.",
+        "Many small steps, taken with hope, can carry you a very long way."
+      ],
+      "translation_cn": "当问题显得太大时,它会在我们开始之前就让我们停步;秘诀是把它拆成小而简单的步骤;别问如何一次完成全部,只问下一个小时你能做什么;许多带着希望迈出的小步,能把你带到很远的地方。",
+      "questions": [
+        {
+          "stem": "What can a problem that feels too big do to us?",
+          "options": [
+            "Make us rich.",
+            "Stop us before we begin.",
+            "Solve itself quickly.",
+            "Make us sleep."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the secret the speaker gives?",
+          "options": [
+            "To ignore the problem.",
+            "To ask others to do it.",
+            "To break it into small steps.",
+            "To wait for next year."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should we NOT ask, according to the passage?",
+          "options": [
+            "What to eat tonight.",
+            "Where to sleep.",
+            "Who our friends are.",
+            "How to finish everything at once."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should we ask instead?",
+          "options": [
+            "What we can do in the next hour.",
+            "Why life is unfair.",
+            "When the holiday starts.",
+            "Who is to blame."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can many small steps do?",
+          "options": [
+            "Waste all your time.",
+            "Carry you a very long way.",
+            "Make problems bigger.",
+            "Stop you from trying."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Getting Ready for the Expedition",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "The expedition leaves next month. Have you been preparing for it?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I've been training every single day to build up my endurance."
+        },
+        {
+          "speaker": "A",
+          "text": "Good. The cold and the long marches will test all of us."
+        },
+        {
+          "speaker": "B",
+          "text": "I know. I've also been reading about how others survived such journeys."
+        },
+        {
+          "speaker": "A",
+          "text": "That's wise. Their stories can teach us how to handle real danger."
+        },
+        {
+          "speaker": "B",
+          "text": "What worries me most is the rough sea on the way there."
+        },
+        {
+          "speaker": "A",
+          "text": "Stay calm and trust the team. Together we can face anything."
+        },
+        {
+          "speaker": "B",
+          "text": "You're right. With good preparation and courage, we'll be fine."
+        }
+      ],
+      "translation_cn": "两人谈下个月出发的远征:B 说每天训练以增强耐力;A 说严寒和长途行军会考验大家;B 还读了别人如何在这种旅程中生存;A 说这些故事能教人应对真正的危险;B 最担心途中汹涌的海;A 让他保持冷静、信任团队;B 同意,有充分准备和勇气就没问题。",
+      "questions": [
+        {
+          "stem": "When does the expedition leave?",
+          "options": [
+            "Tomorrow.",
+            "Next year.",
+            "Next month.",
+            "This evening."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How has B been preparing?",
+          "options": [
+            "By sleeping all day.",
+            "By buying new furniture.",
+            "By doing nothing.",
+            "By training every day to build endurance."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why has B been reading about other journeys?",
+          "options": [
+            "To learn how others survived such trips.",
+            "To pass the time only.",
+            "Because there is nothing else to do.",
+            "To find a new ship."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What worries B the most?",
+          "options": [
+            "The price of food.",
+            "The rough sea on the way there.",
+            "The lack of friends.",
+            "The boring training."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What advice does A give B?",
+          "options": [
+            "Travel alone.",
+            "Cancel the trip.",
+            "Stay calm and trust the team.",
+            "Forget all preparation."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Word for Hard Times",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If you are going through a hard time, please remember that you are not alone.",
+        "Almost everyone meets adversity at some point in life.",
+        "Do not be afraid to ask a friend or teacher for help.",
+        "A worry that is shared with someone always feels lighter.",
+        "This difficult time is only one chapter in your long story."
+      ],
+      "translation_cn": "如果你正经历艰难时光,请记住你并不孤单;几乎每个人在人生某个阶段都会遭遇逆境;不要害怕向朋友或老师求助;与人分担的忧虑总会轻一些;这段艰难只是你漫长故事中的一个篇章。",
+      "questions": [
+        {
+          "stem": "What does the speaker want listeners in hard times to remember?",
+          "options": [
+            "That they should hide their feelings.",
+            "That nothing will ever change.",
+            "That they are weak.",
+            "That they are not alone."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "According to the passage, who meets adversity?",
+          "options": [
+            "Almost everyone at some point.",
+            "Only a few unlucky people.",
+            "Only the poor.",
+            "Only explorers."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say about asking for help?",
+          "options": [
+            "Never do it.",
+            "Do not be afraid to ask a friend or teacher.",
+            "Only ask family.",
+            "Help is useless."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is a shared worry better?",
+          "options": [
+            "It costs money.",
+            "It makes friends angry.",
+            "It always feels lighter.",
+            "It wastes time."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does the speaker describe this difficult time?",
+          "options": [
+            "As the end of everything.",
+            "As a permanent state.",
+            "As something to be ashamed of.",
+            "As only one chapter in a long story."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

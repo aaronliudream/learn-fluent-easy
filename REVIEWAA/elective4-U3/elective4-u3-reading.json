@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Sea Exploration",
+  "source": "人教版2019选择性必修四 Unit 3 同主题阅读(蛟龙号载人潜水器/郑和下西洋/为何探海/海洋污染与保护/鲸类研究营/科学号科考船)。词限本单元/高中常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Jiaolong: Into the Deep",
+      "topic_cn": "说明·载人潜水器蛟龙号",
+      "body": "Named after a dragon from ancient Chinese legend, the Jiaolong is a manned submersible that has carried scientists deep into the dark ocean. It is said to be able to reach a depth of about seven kilometres, far below where any diver could ever go. At such depths, the water is freezing cold and the pressure is strong enough to crush an ordinary ship, so the submersible must be built from very special materials. Inside the small capsule, three people can sit and work, using powerful lights and cameras to study the sea floor that human eyes have never seen. Each dive is carefully planned, because a tiny mistake far underwater could be deadly. Thanks to the Jiaolong, Chinese scientists have logged new sea creatures, collected rare minerals and extended our knowledge of life in the deep. Every successful dive reminds us how much of the ocean still waits to be explored.",
+      "vocab_notes": [
+        {
+          "word": "submersible",
+          "cn": "潜水器"
+        },
+        {
+          "word": "manned",
+          "cn": "载人的"
+        },
+        {
+          "word": "capsule",
+          "cn": "舱"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why must the Jiaolong be made from very special materials?",
+          "options": [
+            "Because the deep water is icy and the pressure could destroy a normal ship.",
+            "Because it has to float on the surface for years.",
+            "Because it is too heavy to lift onto a boat.",
+            "Because divers cannot fit inside it."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the water is freezing cold and the pressure is strong enough to crush an ordinary ship' 的转述。"
+        },
+        {
+          "stem": "What have scientists achieved with the help of the Jiaolong?",
+          "options": [
+            "They have stopped all deep-sea diving.",
+            "They have recorded new creatures and gathered rare minerals.",
+            "They have proved the deep sea is empty.",
+            "They have built a city on the sea floor."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'logged new sea creatures, collected rare minerals and extended our knowledge'(后段)的转述。"
+        },
+        {
+          "stem": "What does the last sentence suggest about the ocean?",
+          "options": [
+            "A great deal of it is still unexplored.",
+            "Most of it has already been fully mapped.",
+            "It is no longer worth studying.",
+            "It is too dangerous to enter at all."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'how much of the ocean still waits to be explored' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Zheng He and the Treasure Fleet",
+      "topic_cn": "记叙·郑和下西洋",
+      "body": "More than six hundred years ago, the explorer Zheng He led one of the largest fleets the world had ever seen. Starting in 1405, he made seven great voyages across the sea, reaching lands as far away as East Africa. His fleet carried hundreds of ships and tens of thousands of sailors, along with silk, tea and fine porcelain. Wherever the ships set sail, Zheng He came not to conquer but to trade and to make friends. Local merchants happily exchanged spices, jewels and strange animals for Chinese goods, and many rulers sent gifts back to the Chinese emperor in return. Unlike some later European voyages, Zheng He's journeys were peaceful, and they helped build bonds between China and distant nations. Today his name still stands for openness and friendship across the sea. Although the ancient routes he sailed have been travelled many times since, the spirit of reaching out to the wider world remains a proud part of China's maritime history.",
+      "vocab_notes": [
+        {
+          "word": "fleet",
+          "cn": "船队"
+        },
+        {
+          "word": "merchant",
+          "cn": "商人"
+        },
+        {
+          "word": "maritime",
+          "cn": "海运的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the main purpose of Zheng He's voyages?",
+          "options": [
+            "To conquer foreign lands by force.",
+            "To trade peacefully and make friends abroad.",
+            "To search for a lost treasure ship.",
+            "To draw maps of unknown islands."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'came not to conquer but to trade and to make friends' 的转述。"
+        },
+        {
+          "stem": "How did local rulers often respond to the fleet?",
+          "options": [
+            "They refused to meet the sailors.",
+            "They attacked the Chinese ships.",
+            "They often sent presents to China's emperor in return.",
+            "They kept all the silk for themselves."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'many rulers sent gifts back to the Chinese emperor in return'(中段)的转述。"
+        },
+        {
+          "stem": "What does Zheng He's name stand for today?",
+          "options": [
+            "Fear of the open sea.",
+            "The end of Chinese trade.",
+            "A failed and forgotten journey.",
+            "A spirit of openness and friendship."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'his name still stands for openness and friendship across the sea' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Explore the Sea?",
+      "topic_cn": "议论·为何探索海洋",
+      "body": "Human beings have explored less than five percent of the world's oceans, yet the sea covers most of our planet. To truly understand the earth, we must learn far more about these vast waters. Some opponents argue that sea exploration is a waste of money, but the benefits are hard to ignore. Research ships can help us face urgent problems such as climate change, because the ocean stores heat and shapes the weather everywhere. Studying the deep may also lead to new medicines, as well as fresh sources of food and energy for a growing population. Logging new species improves our understanding of life itself, and reaching the sea floor might even help scientists predict earthquakes before they strike. Of course, exploration brings real risks to the fragile sea, and these must be balanced against our economic needs. Yet as technology keeps improving, we will have more ways to keep that balance. The more we know about the ocean, the better we can protect it for the future.",
+      "vocab_notes": [
+        {
+          "word": "opponent",
+          "cn": "反对者"
+        },
+        {
+          "word": "resource",
+          "cn": "资源"
+        },
+        {
+          "word": "predict",
+          "cn": "预测"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say we should learn more about the ocean?",
+          "options": [
+            "Because most of the planet lies under water that is still little known.",
+            "Because it is easy and cheap to study.",
+            "Because no one lives near the sea.",
+            "Because the ocean has already been fully explored."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the sea covers most of our planet… explored less than five percent' 的转述。"
+        },
+        {
+          "stem": "How can sea research help with climate change?",
+          "options": [
+            "By stopping all ships from sailing.",
+            "Because it holds heat and helps shape weather everywhere.",
+            "By making the ocean smaller.",
+            "By removing all the water from the air."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the ocean stores heat and shapes the weather everywhere'(中段)的转述。"
+        },
+        {
+          "stem": "What is the writer's attitude towards the risks of exploration?",
+          "options": [
+            "The risks mean we should never explore the sea.",
+            "The risks do not exist at all.",
+            "The risks should be weighed against our needs, not ignored.",
+            "The risks matter more than anything else."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'these must be balanced against our economic needs' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Sea in Danger",
+      "topic_cn": "议论·海洋污染与保护",
+      "body": "When some people talk about exploring the sea more, they really mean exploiting it, and that has already caused many problems. More activity at sea often means more pollution. A single oil spill can release millions of gallons of oil, killing countless birds and fish along the coast. Plastic pollution is just as worrying; it harms marine creatures and has even been found in our tap water. Mining for resources damages the ocean floor, and overfishing leaves fewer and fewer fish each year. Whales and dolphins, among the most intelligent creatures in the sea, are sometimes hunted without mercy, even though whaling was banned long ago. The sea is home to life, not a possession that humans may use up however they please. It is enormous, but it is far more sensitive than we think. If we keep taking from it carelessly and give nothing back, future generations may never forgive us. Protecting the ocean is not a choice but a duty we all share.",
+      "vocab_notes": [
+        {
+          "word": "exploit",
+          "cn": "开发;剥削"
+        },
+        {
+          "word": "mercy",
+          "cn": "仁慈"
+        },
+        {
+          "word": "sensitive",
+          "cn": "脆弱的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer mean when many people talk of exploring the sea?",
+          "options": [
+            "They want to clean it up completely.",
+            "They want to leave it untouched.",
+            "They want to give it back to the fish.",
+            "They mainly want to use it for their own profit."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'they really mean exploiting it' 的转述。"
+        },
+        {
+          "stem": "Why is plastic pollution described as worrying?",
+          "options": [
+            "Because it harms sea life and has reached our drinking water.",
+            "Because it makes the sea look bright.",
+            "Because it helps birds build nests.",
+            "Because it disappears within a day."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'harms marine creatures and has even been found in our tap water' 的转述。"
+        },
+        {
+          "stem": "How does the writer describe our duty towards the sea?",
+          "options": [
+            "As something only scientists need to think about.",
+            "As a shared responsibility, not just a free choice.",
+            "As an old idea we can safely forget.",
+            "As far less important than making money."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'Protecting the ocean is not a choice but a duty we all share' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Whale Watching Camp",
+      "topic_cn": "记叙·鲸类研究营",
+      "body": "Last summer I joined a whale watching camp, and it was the best week of my life. We were not just there to enjoy the view; we became part of a real research team. First, we followed a group of whales in our boat, keeping a safe distance so as not to frighten them. Then we took photographs of their fins, because most whales have slightly different marks that help us tell them apart. Meanwhile, we noted exactly where each group was, so the scientists could track their movements and plot their long migration path south. After that, we gave the group a name and gave every whale a number, adding them all to a directory for future trips. Finally, we contacted other whale research groups around the world to share what we had learned. Listening to whales singing and watching them leap out of the cold blue water, I understood for the first time why studying these intelligent creatures truly matters. I came home tired but proud of the small part I had played.",
+      "vocab_notes": [
+        {
+          "word": "fin",
+          "cn": "鳍"
+        },
+        {
+          "word": "migration",
+          "cn": "迁徙"
+        },
+        {
+          "word": "directory",
+          "cn": "名录"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the campers photograph the whales' fins?",
+          "options": [
+            "Because the fins are the prettiest part.",
+            "Because the whales asked them to.",
+            "Because different marks on the fins help tell the whales apart.",
+            "Because the cameras only worked on fins."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'different marks that help us tell them apart' 的转述。"
+        },
+        {
+          "stem": "What was the last thing the team did?",
+          "options": [
+            "They went straight home to rest.",
+            "They released all the whales they had caught.",
+            "They gave each whale a colour.",
+            "They got in touch with other research groups to share findings."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Finally, we contacted other whale research groups… to share' 的转述。"
+        },
+        {
+          "stem": "How did the writer feel about the experience?",
+          "options": [
+            "Proud to have helped with real research.",
+            "Bored and eager to leave early.",
+            "Disappointed that nothing happened.",
+            "Sorry to have joined at all."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'tired but proud of the small part I had played' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Kexue: A Lab at Sea",
+      "topic_cn": "说明·科考船科学号",
+      "body": "Kexue, whose name means science in Chinese, is one of the country's most advanced research vessels. Often described as a moving laboratory on the sea, it is designed to carry out a wide range of difficult tasks far from land. On board are deep-sea robots, powerful computers and laboratories where scientists can study samples within hours of collecting them. One of its remote vehicles, called Faxian, can dive far below the surface to survey the sea floor and bring back tons of geological samples. With such tools in hand, researchers no longer have to wait for months to learn what lies in the deep ocean. Based on Kexue, China has taken the lead in building a world-class platform for marine research, putting the vessel in a league of its own. The ship has explored parts of the Western Pacific that few people had ever reached. As one scientist put it, every voyage of Kexue adds another page to our growing book of knowledge about the sea.",
+      "vocab_notes": [
+        {
+          "word": "vessel",
+          "cn": "船;舰"
+        },
+        {
+          "word": "league",
+          "cn": "等级;水平"
+        },
+        {
+          "word": "geological",
+          "cn": "地质的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Kexue called a moving laboratory on the sea?",
+          "options": [
+            "Because it can only stay in port.",
+            "Because scientists can study samples on board soon after collecting them.",
+            "Because it is shaped like a school.",
+            "Because it never actually sails anywhere."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'laboratories where scientists can study samples within hours of collecting them' 的转述。"
+        },
+        {
+          "stem": "What can the vehicle Faxian do?",
+          "options": [
+            "Fly over the ocean to take photos.",
+            "Carry passengers across the sea.",
+            "Go deep down to examine the ocean bottom and return with samples.",
+            "Clean plastic from the beaches."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'dive far below the surface to survey the sea floor and bring back… samples' 的转述。"
+        },
+        {
+          "stem": "What does the final sentence suggest about each voyage?",
+          "options": [
+            "It wastes both time and money.",
+            "It teaches us nothing new.",
+            "It marks the end of marine research.",
+            "It adds to our understanding of the sea."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'adds another page to our growing book of knowledge about the sea' 的转述。"
+        }
+      ]
+    }
+  ]
+}

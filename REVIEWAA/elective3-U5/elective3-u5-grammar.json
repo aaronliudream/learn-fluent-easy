@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "grammar_title": "定语从句复习(Review of Relative Clauses)",
+  "source": "人教版2019选择性必修三 Unit 5 Review of Relative Clauses:关系代词(who/whom/which/that/whose)·关系副词与介词+which(where/when/why)·限制性vs非限制性(which/who不用that·which指代整句·as引导)。句子地道、诗歌文学主题、答案唯一(选项均为关系词,只一个成立)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "关系代词 who/whom/which/that/whose",
+      "overview": "先行词指人用 who/whom、指物用 which/that;从句缺主语或宾语时用关系代词;whose 表所属(后接名词)。"
+    },
+    {
+      "code": "u5.02",
+      "point": "关系副词 where/when/why 与「介词+which/whom」",
+      "overview": "从句不缺主宾、只缺状语时:地点用 where、时间用 when、原因用 why;更正式或介词提前时用「介词+which/whom」(in which / on which / for which / to whom)。"
+    },
+    {
+      "code": "u5.03",
+      "point": "限制性 vs 非限制性 · which 指代整句 · as 引导",
+      "overview": "非限制性(有逗号)指人用 who、指物用 which,绝不用 that;which 可指代前面整个句子;as 引导非限制性从句表示「正如」(as is known)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "The poet ____ wrote this sonnet lived during the Victorian era.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 poet 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Tagore is the writer ____ won the Nobel Prize in Literature.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 writer 指人、从句缺主语 → who(whom 只作宾语)。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The haiku ____ describes a falling blossom is very famous.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 haiku 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "This is the nursery rhyme ____ my mother used to sing to me.",
+      "options": [
+        "who",
+        "whose",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 rhyme 指物、从句缺宾语(sing ___)→ that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Langston Hughes was a poet ____ poems tell the story of black people.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 poet,后接名词 poems 表所属 → whose。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The cinquain ____ you wrote in class paints a clear picture.",
+      "options": [
+        "who",
+        "that",
+        "whose",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 cinquain 指物、从句缺宾语(wrote ___)→ that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "She is the only student ____ has memorised sixty ancient poems.",
+      "options": [
+        "which",
+        "whose",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词被 only 修饰、指人作主语 → that(此时优先 that)。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Robert Browning was the man ____ Elizabeth finally married in secret.",
+      "options": [
+        "which",
+        "whose",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 man 指人、从句缺宾语(married ___)→ whom(亦可 who/that,此处只 whom 成立)。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "A sonnet is a poem ____ contains exactly fourteen lines.",
+      "options": [
+        "that",
+        "who",
+        "whose",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 poem 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The amateur ____ first read the poem aloud felt rather nervous.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 amateur 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "I still keep the old book ____ cover has almost fallen apart.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 book,后接名词 cover 表所属 → whose。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The butterfly ____ the haiku describes lands on a single branch.",
+      "options": [
+        "who",
+        "whose",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 butterfly 指物、从句缺宾语(describes ___)→ that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The Crescent Moon is the collection ____ made Tagore loved in China.",
+      "options": [
+        "that",
+        "who",
+        "whose",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 collection 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "He is a teacher ____ encourages every student to write a poem.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 teacher 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The poems ____ we recited this morning were full of vivid imagery.",
+      "options": [
+        "who",
+        "whose",
+        "that",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 poems 指物、从句缺宾语(recited ___)→ that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Elizabeth was a poet ____ verse won great success in 1844.",
+      "options": [
+        "who",
+        "which",
+        "why",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 poet,后接名词 verse 表所属 → whose。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The traveller ____ the lonely wife awaits never returns home.",
+      "options": [
+        "whom",
+        "which",
+        "whose",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 traveller 指人、从句缺宾语(awaits ___)→ whom。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "A limerick is a short poem ____ is usually silly and funny.",
+      "options": [
+        "who",
+        "that",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 poem 指物、从句缺主语 → that。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The children ____ love this rhyme often repeat it again and again.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "why"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 children 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "This is the very poem ____ first made me fall in love with verse.",
+      "options": [
+        "who",
+        "whose",
+        "when",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词被 very 修饰、指物作主语 → that(此时优先 that)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "That is the classroom ____ our poetry contest was held last week.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 classroom 表地点、从句完整(只缺地点状语)→ where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "1844 was the year ____ Elizabeth's Poems brought her great success.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 year 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Nobody knows the reason ____ the wind comes from somewhere far away.",
+      "options": [
+        "which",
+        "where",
+        "why",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Italy was the country ____ the Brownings spent the rest of their lives.",
+      "options": [
+        "which",
+        "when",
+        "whose",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 country 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I will never forget the day ____ I recited my first poem on stage.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 day 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The library is the place ____ I quietly read poetry every afternoon.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 place 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "That is the manner in ____ a good poem should be read aloud.",
+      "options": [
+        "where",
+        "that",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 提前,后只能用 which → in which。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Spring is the season ____ cherry blossoms inspire countless haiku.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 season 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "There must be a reason ____ this simple rhyme has lasted so long.",
+      "options": [
+        "why",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Sonnets from the Portuguese is the book to ____ she owed her fame.",
+      "options": [
+        "where",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 to 提前、先行词指物 → to which。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "This is the small room ____ the young poet wrote most of her verse.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 room 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "He is the poet to ____ this whole collection of poems is dedicated.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 to 提前、先行词指人 → to whom。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "That was the moment ____ the whole audience suddenly fell silent.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 moment 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Tell me the reason ____ free verse follows no regular rhythm at all.",
+      "options": [
+        "which",
+        "why",
+        "where",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The branch on ____ the fallen blossom rests is painted in the haiku.",
+      "options": [
+        "where",
+        "that",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 on 提前、先行词指物 → on which。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The hill ____ the faithful wife stands has turned her into stone.",
+      "options": [
+        "which",
+        "when",
+        "whose",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 hill 表地点、从句完整 → where。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Autumn is the time of year ____ we hold our school poetry festival.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 time of year 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Calligraphy is the art form by ____ the poet's mood is also revealed.",
+      "options": [
+        "where",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 by 提前、先行词指物 → by which。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "A free verse poem is one in ____ the poet has complete creative control.",
+      "options": [
+        "where",
+        "that",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 提前、先行词指物 → in which。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "I cannot explain the reason ____ this poem always moves me to tears.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 reason、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Bai Juyi, ____ lived in the mid-Tang Dynasty, is one of China's greatest poets.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性(逗号)、指人作主语 → who(非限制性绝不用 that)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The haiku, ____ was translated from Japanese, shows a delicate butterfly.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性(逗号)、指物 → which(绝不用 that)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The poem rhymes perfectly, ____ makes it very pleasing to read aloud.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性中 which 指代前面整个句子 → which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Tagore, ____ poems Chinese readers love, wrote The Crescent Moon.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、后接名词 poems 表所属 → whose。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "She finished the whole collection in a week, ____ surprised her teacher.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性中 which 指代前面整件事 → which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Robert Browning, ____ Elizabeth admired deeply, became her husband.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、指人作宾语 → whom(绝不用 that)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "____ is well known, blank verse has no rhyme but a natural rhythm.",
+      "options": [
+        "Which",
+        "That",
+        "As",
+        "What"
+      ],
+      "answer_index": 2,
+      "explanation": "as 引导非限制性从句,可置于句首表「正如」→ As is well known。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The Brownings moved to Italy, ____ is famous for its long literary history.",
+      "options": [
+        "that",
+        "where",
+        "what",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、指物(Italy)作主语 → which(此处不缺地点状语,故非 where)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Langston Hughes, ____ wrote 'Dream', spoke up for racial equality.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、指人作主语 → who。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "He recited the sonnet beautifully, ____ won him the first prize.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性中 which 指代前面整个句子 → which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The nursery rhyme, ____ rhythm is simple, is loved by little children.",
+      "options": [
+        "that",
+        "which",
+        "whose",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、后接名词 rhythm 表所属 → whose。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "____ often happens in haiku, a single image carries the whole feeling.",
+      "options": [
+        "Which",
+        "That",
+        "What",
+        "As"
+      ],
+      "answer_index": 3,
+      "explanation": "as 引导非限制性从句表「正如」,常置句首 → As often happens。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Elizabeth's father, ____ was a dominant man, refused to let her go.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、指人作主语 → who。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The poem ends with a question, ____ leaves the reader thinking deeply.",
+      "options": [
+        "that",
+        "which",
+        "what",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性中 which 指代前面整件事 → which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Swinburne, ____ poem 'A Match' is short, compares love to a rose.",
+      "options": [
+        "that",
+        "which",
+        "whose",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、后接名词 poem 表所属 → whose。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The two poets wrote each other many letters, ____ sowed the seeds of love.",
+      "options": [
+        "that",
+        "what",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性中 which 指代前面整件事 → which。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Wang Jian, ____ verse tells of a waiting wife, lived in the Tang Dynasty.",
+      "options": [
+        "whose",
+        "that",
+        "which",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、后接名词 verse 表所属 → whose。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "____ we all know, a good poem should be read aloud and with feeling.",
+      "options": [
+        "Which",
+        "As",
+        "That",
+        "What"
+      ],
+      "answer_index": 1,
+      "explanation": "as 引导非限制性从句表「正如」,常置句首 → As we all know。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "My favourite poet is Milne, ____ wrote the gentle poem 'Wind on the Hill'.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "whom"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、指人作主语 → who。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The class voted for her poem, ____ was clearly the best of them all.",
+      "options": [
+        "that",
+        "what",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、指物(her poem)作主语 → which。"
+    }
+  ]
+}

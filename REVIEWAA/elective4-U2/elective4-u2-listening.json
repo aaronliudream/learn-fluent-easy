@@ -1,0 +1,493 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Iconic Attractions",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修四 Unit 2 同主题听力(规划景点行程/新西兰简介/旅行社订票/标志性建筑短介/抱考拉规定/介绍家乡景点)。用词限本单元/高中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Planning a Trip",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "We only have one day in the city. Which attraction should we see first?"
+        },
+        {
+          "speaker": "Leo",
+          "text": "The old harbour bridge, I think. It was built almost a hundred years ago."
+        },
+        {
+          "speaker": "Mia",
+          "text": "That sounds great. Is it far from our hotel?"
+        },
+        {
+          "speaker": "Leo",
+          "text": "No, it's quite close. We can walk there in about twenty minutes."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Perfect. And after the bridge, where do you want to go?"
+        },
+        {
+          "speaker": "Leo",
+          "text": "Let's visit the museum located by the river. It used to be an old prison."
+        },
+        {
+          "speaker": "Mia",
+          "text": "An old prison? That will be really interesting!"
+        },
+        {
+          "speaker": "Leo",
+          "text": "Yes. Then in the evening we can watch the sunset from the lookout."
+        }
+      ],
+      "translation_cn": "Mia 和 Leo 只有一天时间逛城市;Leo 建议先看近百年历史的旧海港大桥,离酒店步行约20分钟;之后去河边那座由旧监狱改成的博物馆;傍晚再去瞭望台看日落。",
+      "questions": [
+        {
+          "stem": "Which attraction does Leo want to see first?",
+          "options": [
+            "The old harbour bridge.",
+            "The river museum.",
+            "The lookout.",
+            "A shopping centre."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long does it take to walk to the bridge?",
+          "options": [
+            "About one hour.",
+            "About twenty minutes.",
+            "About five minutes.",
+            "A whole day."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was the river museum in the past?",
+          "options": [
+            "An old prison.",
+            "A school.",
+            "A hotel.",
+            "A market."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will they do in the evening?",
+          "options": [
+            "Climb the bridge again.",
+            "Watch the sunset from the lookout.",
+            "Stay in the hotel.",
+            "Visit another city."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Mia feel about the museum plan?",
+          "options": [
+            "She thinks it is boring.",
+            "She does not want to go.",
+            "She finds it interesting.",
+            "She is afraid of it."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Amazing New Zealand",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "New Zealand is a country located far to the south of the equator.",
+        "It is famous for its green hills, clear lakes and geothermal parks.",
+        "In some areas, hot water shoots high into the air from the ground.",
+        "The country is also home to the kiwi, a small bird that cannot fly.",
+        "For nature lovers, New Zealand is one of the most beautiful getaways on Earth."
+      ],
+      "translation_cn": "新西兰位于赤道以南很远的地方;以绿色山丘、清澈湖泊和地热公园闻名;某些地方地下会喷出高高的热水;还是不会飞的小鸟几维鸟的家园;对热爱自然的人来说,新西兰是地球上最美的度假地之一。",
+      "questions": [
+        {
+          "stem": "Where is New Zealand located?",
+          "options": [
+            "Right on the North Pole.",
+            "In the middle of a desert.",
+            "Next to China.",
+            "Far to the south of the equator."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the country famous for?",
+          "options": [
+            "Its green hills, lakes and geothermal parks.",
+            "Its tall city buildings.",
+            "Its busy factories.",
+            "Its cold winters only."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens in some geothermal areas?",
+          "options": [
+            "Snow falls all year.",
+            "Hot water shoots into the air.",
+            "The ground turns to ice.",
+            "Strong winds blow sand."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is special about the kiwi bird?",
+          "options": [
+            "It is very large.",
+            "It lives in the sea.",
+            "It is small and cannot fly.",
+            "It can fly very high."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who would most enjoy New Zealand, according to the passage?",
+          "options": [
+            "People who hate the outdoors.",
+            "Only city workers.",
+            "People who dislike travel.",
+            "Nature lovers."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Booking a Tour",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Clerk",
+          "text": "Good morning. How can I help you today?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Hi, I'd like to book a tour to the famous stone castle on the hill."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Of course. The castle was built over six hundred years ago. It's very popular."
+        },
+        {
+          "speaker": "Tom",
+          "text": "How long does the tour last?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Each guided session is about two hours. Buses leave every morning at nine."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Great. Are tickets cheaper if I go during the week?"
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Yes. Prices are lower on weekdays, away from the peak season crowds."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Then I'll take a ticket for Tuesday morning, please."
+        }
+      ],
+      "translation_cn": "Tom 在旅行社想订去山上石头城堡的游览;职员说城堡有六百多年历史、很受欢迎;每场导览约两小时,巴士每天上午九点出发;工作日票价更便宜、避开旺季人群;Tom 订了周二上午的票。",
+      "questions": [
+        {
+          "stem": "Where does Tom want to go?",
+          "options": [
+            "A stone castle on a hill.",
+            "A beach resort.",
+            "A music hall.",
+            "A shopping mall."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How old is the castle?",
+          "options": [
+            "Less than ten years.",
+            "Over six hundred years.",
+            "Exactly one hundred years.",
+            "Built last year."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long does each guided session last?",
+          "options": [
+            "Five minutes.",
+            "All day.",
+            "About two hours.",
+            "Half a week."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When are tickets cheaper?",
+          "options": [
+            "Only at night.",
+            "Only on holidays.",
+            "During the peak season.",
+            "On weekdays."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which ticket does Tom finally choose?",
+          "options": [
+            "Tuesday morning.",
+            "Sunday evening.",
+            "Saturday afternoon.",
+            "Monday night."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 The Story of a Tower",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The famous iron tower was first planned as a temporary structure for a great fair.",
+        "When it was proposed, many people were strongly against it.",
+        "They feared it would spoil the beauty of the city skyline.",
+        "It was meant to be taken down after twenty years, but it stayed.",
+        "Today it is loved as a proud symbol of the whole country."
+      ],
+      "translation_cn": "这座著名铁塔起初只是为一场大型博览会规划的临时建筑;提议时许多人强烈反对,担心会破坏城市天际线之美;它本打算二十年后拆除,却保留了下来;如今它被视为整个国家骄傲的象征。",
+      "questions": [
+        {
+          "stem": "What was the tower first planned as?",
+          "options": [
+            "A permanent prison.",
+            "A temporary structure for a fair.",
+            "A school building.",
+            "A shopping centre."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did many people feel when it was proposed?",
+          "options": [
+            "They were very happy.",
+            "They did not care.",
+            "They were strongly against it.",
+            "They wanted it taller."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why were people worried about the tower?",
+          "options": [
+            "It cost too little.",
+            "It was too short.",
+            "It had no doors.",
+            "It might spoil the city skyline."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was supposed to happen after twenty years?",
+          "options": [
+            "It would be taken down.",
+            "It would be made larger.",
+            "It would be painted red.",
+            "It would be moved abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is the tower seen today?",
+          "options": [
+            "As an ugly mistake.",
+            "As a proud national symbol.",
+            "As a useless building.",
+            "As a forgotten ruin."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Holding a Koala",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "I really want to hold a koala while I'm here. Can I do that anywhere?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Not anywhere. In many places it is against the law to touch them."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Oh, why is that? They look so gentle."
+        },
+        {
+          "speaker": "Guide",
+          "text": "Koalas are sensitive, and too much contact can leave them stressed."
+        },
+        {
+          "speaker": "Anna",
+          "text": "So I can't hold one at all?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "You can, but only at certain licensed zoos run by animal experts."
+        },
+        {
+          "speaker": "Anna",
+          "text": "I see. And the koalas there are looked after carefully?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Yes. Each one is handled for only a short time and on a limited frequency."
+        }
+      ],
+      "translation_cn": "Anna 想抱考拉;导游说很多地方触摸考拉违法;因为考拉敏感,过多接触会让它们紧张;只有由动物专家经营的持证动物园才能抱;那里的考拉被精心照料,每只每次只被抱很短时间且次数有限。",
+      "questions": [
+        {
+          "stem": "What does Anna want to do?",
+          "options": [
+            "Feed a kangaroo.",
+            "Climb a tree.",
+            "Hold a koala.",
+            "Buy a koala."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is touching koalas often against the law?",
+          "options": [
+            "They are very expensive.",
+            "They bite people often.",
+            "They are too heavy.",
+            "Too much contact leaves them stressed."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where can Anna hold a koala?",
+          "options": [
+            "Only at certain licensed zoos.",
+            "Anywhere in the wild.",
+            "At her hotel.",
+            "On the bus."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How are the koalas at those zoos treated?",
+          "options": [
+            "They are never touched.",
+            "They are handled briefly and not too often.",
+            "They are kept outside all night.",
+            "They are handled all day long."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the guide's main message?",
+          "options": [
+            "Koalas are dangerous animals.",
+            "Anna should never see a koala.",
+            "Holding koalas must follow strict rules.",
+            "All zoos are the same."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Introduce Your City",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When you introduce an iconic attraction in your city, start with what makes it special.",
+        "You might say it is famous for its history, its food or its beautiful views.",
+        "Explain when it was built and why people love to visit it.",
+        "Use a few lively details so your listeners can picture the place.",
+        "End with a warm invitation, telling people why the visit is worth the effort."
+      ],
+      "translation_cn": "介绍家乡的标志性景点时,先讲它的独特之处;可以说它以历史、美食或美景闻名;说明它何时建成、人们为何爱去;用一些生动细节让听众想象那个地方;最后用热情的邀请收尾,告诉大家为什么值得一去。",
+      "questions": [
+        {
+          "stem": "How should you begin introducing an attraction?",
+          "options": [
+            "With your phone number.",
+            "With the price of a ticket.",
+            "With a long list of dates.",
+            "With what makes it special."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What might you say the place is famous for?",
+          "options": [
+            "Its history, food or views.",
+            "Its broken roads.",
+            "Its empty streets.",
+            "Its noisy traffic."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you explain about the attraction?",
+          "options": [
+            "How much you weigh.",
+            "When it was built and why people love it.",
+            "Where you bought your shoes.",
+            "What time you woke up."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why use lively details?",
+          "options": [
+            "To make the talk longer only.",
+            "To confuse the listeners.",
+            "So listeners can picture the place.",
+            "To hide the truth."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How should you end your introduction?",
+          "options": [
+            "By saying nothing at all.",
+            "By walking away quickly.",
+            "By listing your homework.",
+            "With a warm invitation."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

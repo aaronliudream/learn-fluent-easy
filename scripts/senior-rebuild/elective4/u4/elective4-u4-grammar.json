@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grammar_title": "短语复习(Review of Phrases):动词短语 · 介词搭配 · 固定搭配与习语",
+  "source": "人教版2019选择性必修四 Unit 4 Review useful structures(短语复习)。三类:动词短语/短语动词(选正确小品词)、介词搭配(选正确介词)、固定搭配与习语。句子地道、志愿/慈善/分享主题,答案唯一(干扰项为同动词错小品词或错介词)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "动词短语 / 短语动词(选正确的小品词:up/on/away/in/out/forward to 等)",
+      "overview": "take up / carry on / give away / look forward to / set up / come up with / take part in 等短语动词;空格处选构成该短语的正确小品词(adverb/particle),干扰项是同一动词配错误小品词。"
+    },
+    {
+      "code": "u4.02",
+      "point": "介词搭配(be devoted to / be grateful for / in need of / on behalf of 等)",
+      "overview": "形容词、名词、动词与固定介词的搭配;空格处只填一个正确介词,干扰项为同结构里错误的介词。"
+    },
+    {
+      "code": "u4.03",
+      "point": "固定搭配与习语(make a difference / lend a hand / can't help doing 等)",
+      "overview": "整体意义固定的搭配与习语;空格处填使该习语成立的唯一正确词,干扰项为意义相近但搭配不地道的词。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "After graduation, she decided to take ____ volunteer work in a poor village.",
+      "options": [
+        "up",
+        "off",
+        "in",
+        "over"
+      ],
+      "answer_index": 0,
+      "explanation": "take up sth = 开始从事;take up volunteer work 开始做志愿工作。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Even when funds were low, the charity carried ____ with its work in the bush.",
+      "options": [
+        "up",
+        "on",
+        "off",
+        "away"
+      ],
+      "answer_index": 1,
+      "explanation": "carry on = 继续(进行);其他小品词不与 carry 构成'继续'之意。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He gave ____ most of his old clothes to families in need.",
+      "options": [
+        "up",
+        "in",
+        "away",
+        "off"
+      ],
+      "answer_index": 2,
+      "explanation": "give away = 捐赠/赠送出去;give up 是放弃,不合句意。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The students look ____ to meeting the children at the hospital each year.",
+      "options": [
+        "back",
+        "down",
+        "after",
+        "forward"
+      ],
+      "answer_index": 3,
+      "explanation": "look forward to = 期待;固定搭配,后接动名词。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A group of young people set ____ a charity to help the Roma in Budapest.",
+      "options": [
+        "up",
+        "off",
+        "in",
+        "out"
+      ],
+      "answer_index": 0,
+      "explanation": "set up = 创办/建立(一个组织)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The volunteers came ____ with a clever plan to collect food for the poor.",
+      "options": [
+        "on",
+        "up",
+        "off",
+        "across"
+      ],
+      "answer_index": 1,
+      "explanation": "come up with = 想出(主意/计划)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Every year his whole school takes ____ in a project to help the elderly.",
+      "options": [
+        "place",
+        "care",
+        "part",
+        "turns"
+      ],
+      "answer_index": 2,
+      "explanation": "take part in = 参加;take part in a project 参加一个项目。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "When her mother left for Africa, she found it hard to put ____ with the loneliness.",
+      "options": [
+        "off",
+        "on",
+        "away",
+        "up"
+      ],
+      "answer_index": 3,
+      "explanation": "put up with = 忍受;其余小品词不构成'忍受'之意。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The team handed ____ warm blankets to people at the refugee centre.",
+      "options": [
+        "out",
+        "in",
+        "up",
+        "off"
+      ],
+      "answer_index": 0,
+      "explanation": "hand out = 分发;hand in 是上交,不合句意。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Please do not throw ____ the leftover food; we can share it with others.",
+      "options": [
+        "up",
+        "away",
+        "on",
+        "in"
+      ],
+      "answer_index": 1,
+      "explanation": "throw away = 扔掉;throw away the leftovers 扔掉剩饭。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The young doctor signed ____ for a one-year medical mission overseas.",
+      "options": [
+        "off",
+        "in",
+        "up",
+        "out"
+      ],
+      "answer_index": 2,
+      "explanation": "sign up = 报名参加;sign up for a mission 报名参加任务。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We need more hands to help ____ at the animal shelter on Sundays.",
+      "options": [
+        "in",
+        "up",
+        "off",
+        "out"
+      ],
+      "answer_index": 3,
+      "explanation": "help out = 帮忙;help out at a shelter 在收容所帮忙。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The charity is calling ____ young people to give some of their free time.",
+      "options": [
+        "on",
+        "off",
+        "up",
+        "in"
+      ],
+      "answer_index": 0,
+      "explanation": "call on sb to do = 号召/呼吁某人做某事。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "After hearing her mother's story, she came ____ to support the work fully.",
+      "options": [
+        "off",
+        "round",
+        "up",
+        "in"
+      ],
+      "answer_index": 1,
+      "explanation": "come round = (改变想法后)转而支持/被说服。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Volunteers must adapt ____ the simple conditions in the remote village.",
+      "options": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "answer_index": 2,
+      "explanation": "adapt to = 适应;adapt to the conditions 适应这些条件。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The school carried ____ a campaign to collect books for poor children.",
+      "options": [
+        "on",
+        "up",
+        "in",
+        "out"
+      ],
+      "answer_index": 3,
+      "explanation": "carry out = 实施/开展(活动/计划)。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She handed ____ her project report before joining the volunteer trip.",
+      "options": [
+        "in",
+        "out",
+        "up",
+        "off"
+      ],
+      "answer_index": 0,
+      "explanation": "hand in = 上交;此处指交报告,与 hand out(分发)相对。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The volunteers set ____ early in the morning to reach the mountain village.",
+      "options": [
+        "up",
+        "off",
+        "in",
+        "down"
+      ],
+      "answer_index": 1,
+      "explanation": "set off = 出发/动身;set off early 早早出发。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Don't give ____ even when the volunteer work feels really hard at first.",
+      "options": [
+        "away",
+        "off",
+        "up",
+        "in"
+      ],
+      "answer_index": 2,
+      "explanation": "give up = 放弃;此处指不要放弃,与 give away(捐出)区分。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The students take ____ donations of clothes and toys for the refugee centre.",
+      "options": [
+        "off",
+        "up",
+        "away",
+        "in"
+      ],
+      "answer_index": 3,
+      "explanation": "take in = 收下/接收;take in donations 接收捐赠物。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Her mother is devoted ____ helping people in distant African villages.",
+      "options": [
+        "to",
+        "for",
+        "with",
+        "on"
+      ],
+      "answer_index": 0,
+      "explanation": "be devoted to = 致力于/献身于;to 后接动名词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The poor families were grateful ____ every parcel the volunteers brought.",
+      "options": [
+        "to",
+        "for",
+        "of",
+        "with"
+      ],
+      "answer_index": 1,
+      "explanation": "be grateful for sth = 因某事而感激。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The hospital was badly in need ____ doctors who could speak the local language.",
+      "options": [
+        "for",
+        "to",
+        "of",
+        "with"
+      ],
+      "answer_index": 2,
+      "explanation": "in need of = 需要;固定搭配用 of。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "On ____ of the whole class, Tony thanked the children's hospital staff.",
+      "options": [
+        "side",
+        "part",
+        "place",
+        "behalf"
+      ],
+      "answer_index": 3,
+      "explanation": "on behalf of = 代表;固定名词搭配。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The volunteers expected nothing in ____ for their hard work.",
+      "options": [
+        "return",
+        "reply",
+        "exchange",
+        "answer"
+      ],
+      "answer_index": 0,
+      "explanation": "in return (for) = 作为回报;固定搭配。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Many people there live without things we are used ____ having every day.",
+      "options": [
+        "for",
+        "to",
+        "with",
+        "of"
+      ],
+      "answer_index": 1,
+      "explanation": "be used to (doing) = 习惯于;to 后接动名词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She was upset that her mother left without asking ____ her opinion.",
+      "options": [
+        "to",
+        "of",
+        "for",
+        "at"
+      ],
+      "answer_index": 2,
+      "explanation": "ask for sth = 请求/征求(意见)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The young doctors are proud ____ the work they do for the needy.",
+      "options": [
+        "for",
+        "with",
+        "to",
+        "of"
+      ],
+      "answer_index": 3,
+      "explanation": "be proud of = 为……感到自豪。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We should feel responsible ____ those who are less fortunate than us.",
+      "options": [
+        "for",
+        "to",
+        "of",
+        "with"
+      ],
+      "answer_index": 0,
+      "explanation": "be responsible for = 对……负责。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The medical team provided free treatment ____ patients in the rural villages.",
+      "options": [
+        "to",
+        "for",
+        "with",
+        "of"
+      ],
+      "answer_index": 1,
+      "explanation": "provide sth for sb = 为某人提供某物(provide medical treatment for patients)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The charity is committed ____ building a better world for everyone.",
+      "options": [
+        "for",
+        "with",
+        "to",
+        "on"
+      ],
+      "answer_index": 2,
+      "explanation": "be committed to (doing) = 致力于;to 后接动名词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "These young people are willing to care ____ strangers in need of help.",
+      "options": [
+        "to",
+        "of",
+        "with",
+        "for"
+      ],
+      "answer_index": 3,
+      "explanation": "care for sb = 关心/照顾某人。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Volunteers are often faced ____ very difficult living conditions abroad.",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "of"
+      ],
+      "answer_index": 0,
+      "explanation": "be faced with = 面临/面对;固定搭配用 with。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The local people benefit greatly ____ the new cardiac hospital.",
+      "options": [
+        "for",
+        "from",
+        "to",
+        "of"
+      ],
+      "answer_index": 1,
+      "explanation": "benefit from = 从……中受益。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Her team contributed ____ saving many lives with a new malaria treatment.",
+      "options": [
+        "for",
+        "with",
+        "to",
+        "of"
+      ],
+      "answer_index": 2,
+      "explanation": "contribute to (doing) = 有助于/为……作贡献;to 后接动名词。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "These volunteers are ready to share their skills ____ needy communities.",
+      "options": [
+        "for",
+        "to",
+        "of",
+        "with"
+      ],
+      "answer_index": 3,
+      "explanation": "share sth with sb = 与某人分享某物。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He finally became supportive ____ his mother's work in Tanzania.",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "with"
+      ],
+      "answer_index": 0,
+      "explanation": "be supportive of = 支持(某人/某事)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The programme depends ____ how well each volunteer performs.",
+      "options": [
+        "of",
+        "on",
+        "to",
+        "for"
+      ],
+      "answer_index": 1,
+      "explanation": "depend on = 取决于/依赖。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We must not take such everyday comforts ____ granted.",
+      "options": [
+        "as",
+        "to",
+        "for",
+        "of"
+      ],
+      "answer_index": 2,
+      "explanation": "take sth for granted = 视为理所当然;固定搭配用 for。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She is interested ____ joining the next volunteer trip to Ghana.",
+      "options": [
+        "on",
+        "for",
+        "to",
+        "in"
+      ],
+      "answer_index": 3,
+      "explanation": "be interested in (doing) = 对……感兴趣;in 后接动名词。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Even a small act of kindness can make a ____ to someone's life.",
+      "options": [
+        "difference",
+        "change",
+        "matter",
+        "sense"
+      ],
+      "answer_index": 0,
+      "explanation": "make a difference = 起作用/带来改变;固定习语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "When the team was short of helpers, several neighbours lent a ____.",
+      "options": [
+        "foot",
+        "hand",
+        "finger",
+        "head"
+      ],
+      "answer_index": 1,
+      "explanation": "lend a hand = 帮忙;固定习语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Instead of paying her back, she chose to pay it ____ to others in need.",
+      "options": [
+        "back",
+        "off",
+        "forward",
+        "out"
+      ],
+      "answer_index": 2,
+      "explanation": "pay it forward = 把善意传递给他人;固定说法。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Seeing the children so happy, she couldn't help ____ with joy.",
+      "options": [
+        "smile",
+        "to smile",
+        "smiled",
+        "smiling"
+      ],
+      "answer_index": 3,
+      "explanation": "can't help doing = 禁不住做某事;后接动名词。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It's no use ____ about the problem; we should go out and help.",
+      "options": [
+        "complaining",
+        "complain",
+        "to complain",
+        "complained"
+      ],
+      "answer_index": 0,
+      "explanation": "it's no use doing = 做……没有用;后接动名词。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The volunteers worked hard to make the world a ____ place to live in.",
+      "options": [
+        "best",
+        "better",
+        "well",
+        "good"
+      ],
+      "answer_index": 1,
+      "explanation": "make … a better place = 让……变得更好;比较级 better 修饰 place。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "She felt it was worth ____ a whole day with the village family.",
+      "options": [
+        "spend",
+        "to spend",
+        "spending",
+        "spent"
+      ],
+      "answer_index": 2,
+      "explanation": "be worth doing = 值得做;后接动名词。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The charity always tries to give those in ____ a helping hand.",
+      "options": [
+        "needs",
+        "needy",
+        "needed",
+        "need"
+      ],
+      "answer_index": 3,
+      "explanation": "those in need = 有需要的人;固定搭配用名词 need。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Many people went ____ medical treatment because it was too expensive.",
+      "options": [
+        "without",
+        "out",
+        "off",
+        "away"
+      ],
+      "answer_index": 0,
+      "explanation": "go without sth = 没有……也将就过/缺少;go without treatment 得不到治疗。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Helping others, she said, comes at the ____ of her list of proud things.",
+      "options": [
+        "high",
+        "top",
+        "front",
+        "head"
+      ],
+      "answer_index": 1,
+      "explanation": "at the top of the list = 在名单首位;固定搭配。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The volunteers gave their time and money, asking for nothing in ____.",
+      "options": [
+        "reward",
+        "repay",
+        "return",
+        "result"
+      ],
+      "answer_index": 2,
+      "explanation": "ask for nothing in return = 不求回报;固定习语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Thanks to the new hospital, fewer patients have to go ____ for surgery.",
+      "options": [
+        "aboard",
+        "around",
+        "above",
+        "abroad"
+      ],
+      "answer_index": 3,
+      "explanation": "go abroad = 出国;此处指出国做手术。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After the meal, the family talked softly and made us feel at ____.",
+      "options": [
+        "home",
+        "house",
+        "ease",
+        "rest"
+      ],
+      "answer_index": 0,
+      "explanation": "make sb feel at home = 让某人感到自在;固定习语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The young charity is breaking ____ in the way it helps poor communities.",
+      "options": [
+        "land",
+        "ground",
+        "earth",
+        "floor"
+      ],
+      "answer_index": 1,
+      "explanation": "break new ground = 开创新局面/有所突破;固定习语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "When her mother returned, the family was finally ____ together again.",
+      "options": [
+        "down",
+        "off",
+        "back",
+        "up"
+      ],
+      "answer_index": 2,
+      "explanation": "be back together = 重新团聚;back 表'回到原来状态'。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Volunteering, she realised, is a way of giving ____ to society.",
+      "options": [
+        "away",
+        "off",
+        "out",
+        "back"
+      ],
+      "answer_index": 3,
+      "explanation": "give back (to society) = 回馈(社会);固定搭配。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We are ready to build a community with a ____ future for mankind.",
+      "options": [
+        "shared",
+        "share",
+        "sharing",
+        "shares"
+      ],
+      "answer_index": 0,
+      "explanation": "a shared future = 共同的未来;过去分词作定语。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "No matter how small your effort is, it counts ____ a great deal.",
+      "options": [
+        "on",
+        "for",
+        "to",
+        "in"
+      ],
+      "answer_index": 1,
+      "explanation": "count for a great deal = 很有价值/很重要;固定搭配用 for。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The volunteers were determined to make the ____ of their short stay.",
+      "options": [
+        "best",
+        "more",
+        "most",
+        "much"
+      ],
+      "answer_index": 2,
+      "explanation": "make the most of = 充分利用;固定习语用 most。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Helping the disabled gave her a deep ____ of purpose in life.",
+      "options": [
+        "feeling",
+        "idea",
+        "mind",
+        "sense"
+      ],
+      "answer_index": 3,
+      "explanation": "a sense of purpose = 使命感/目标感;固定搭配用 sense。"
+    }
+  ]
+}

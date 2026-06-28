@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Write a letter encouraging a friend who is facing adversity(给身处逆境的朋友写一封鼓励信)",
+  "title_en": "A Letter of Encouragement",
+  "genre": "书信 / 记叙·议论(encourage a friend facing difficulty by sharing a story of overcoming adversity)",
+  "source": "人教版2019选择性必修三 Unit 4 Reading for Writing / Project:以沙克尔顿等克服逆境的故事为背景,给遇到困难的朋友写一封鼓励信(记叙+鼓励)。",
+  "prompt_cn": "假设你叫李华,你的好友 Tom 因一次考试失利而情绪低落,甚至想放弃。请用英语给他写一封约100词的信,内容包括:① 表达理解和安慰;② 用一个克服逆境的小故事(如沙克尔顿带领船员绝境求生)鼓励他;③ 给出一两条具体建议并表达信心。注意书信格式,语句围绕中心、连贯地道。",
+  "prompt_en": "Suppose you are Li Hua. Your good friend Tom feels low after failing an important exam and even wants to give up. Write a letter (about 100 words) to encourage him, including: 1) understanding and comfort; 2) a short story of overcoming adversity (e.g. how Shackleton led his crew to survive) to encourage him; 3) one or two pieces of practical advice and your confidence in him.",
+  "points": [
+    "表达理解与安慰(I'm sorry to hear … / Please don't lose heart)",
+    "用克服逆境的故事鼓励(Think of Shackleton, who …)",
+    "给出具体建议(Take one small step each day / Talk to someone you trust)",
+    "表达信心、书信格式完整(I'm sure you'll get through this. Yours, Li Hua)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Tom,\n\nI was sorry to hear that you failed the exam and feel like giving up. Please don't lose heart—one setback does not decide your whole future.\n\nThink of Ernest Shackleton. When his ship was crushed by ice, he and his crew were trapped for months in the freezing Antarctic. Yet they never gave up. By taking one small step at a time and supporting one another, every single man came home alive.\n\nYou can do the same. Study a little each day, and talk to someone you trust when you feel low. This hard time is only one chapter in your story.\n\nI'm sure you'll get through it. Stay strong!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的 Tom:\n\n听说你考试没考好、想要放弃,我很难过。请别灰心——一次挫折决定不了你的整个未来。\n\n想想欧内斯特·沙克尔顿。当他的船被冰压碎时,他和船员被困在冰天雪地的南极好几个月。可他们从未放弃。靠着一步一步来、互相扶持,每一个人都活着回了家。\n\n你也能做到。每天学一点点,情绪低落时找一个你信任的人聊聊。这段艰难只是你故事中的一个篇章。\n\n我相信你能挺过去。坚强些!\n\n你的朋友\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:理解安慰 / 克服逆境的故事 / 具体建议与信心" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式完整、围绕鼓励主线展开、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、现在完成进行时等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼 + 安慰 Dear Tom, I was sorry to hear …",
+      "故事 Think of Shackleton, who … never gave up.",
+      "建议 Study a little each day, and talk to someone you trust.",
+      "信心 + 落款 I'm sure you'll get through it. Yours, Li Hua"
+    ],
+    "key_expressions": [
+      "Please don't lose heart—one setback does not decide your whole future.",
+      "They never gave up; by taking one small step at a time, every man came home alive.",
+      "Study a little each day, and talk to someone you trust when you feel low.",
+      "This hard time is only one chapter in your story."
+    ],
+    "useful_words": ["adversity", "courage", "perseverance", "give up", "lose heart", "setback", "survive", "support", "step by step", "get through"]
+  },
+  "high_sentences": [
+    "Please don't lose heart—one setback does not decide your whole future.",
+    "When his ship was crushed by ice, Shackleton and his crew never gave up.",
+    "By taking one small step at a time and supporting one another, every single man came home alive.",
+    "This hard time is only one chapter in your story."
+  ],
+  "error_pairs": [
+    { "wrong": "I am sorry to hear that you failed in the exam.", "correct": "I am sorry to hear that you failed the exam.", "note": "fail the exam 直接跟宾语,不加 in。" },
+    { "wrong": "They have been never give up.", "correct": "They never gave up.", "note": "讲过去完成的事用一般过去时;'never give up' 动词须用过去式 gave。" },
+    { "wrong": "I am sure you will get through with it.", "correct": "I am sure you will get through it.", "note": "get through sth = 度过/熬过,直接跟宾语,不加 with。" }
+  ],
+  "paragraph_template": "【鼓励信结构】\n称呼:Dear Tom,\n第1段 安慰:I was sorry to hear … Please don't lose heart.\n第2段 故事:Think of Shackleton, who … never gave up … came home alive.\n第3段 建议+信心:Study a little each day … I'm sure you'll get through it.\n落款:Yours, Li Hua"
+}

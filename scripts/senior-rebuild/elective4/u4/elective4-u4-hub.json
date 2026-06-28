@@ -1,0 +1,49 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "She took up volunteer work right after she left school.", "opts": ["她一离开学校就开始做志愿工作。", "她卖掉了自己的学校。", "她拒绝了所有工作。", "她从不帮助别人。"], "answer": 0 },
+    { "audio": "The young people set up a small charity to help the poor.", "opts": ["年轻人关闭了一家公司。", "年轻人创办了一个小慈善机构来帮助穷人。", "年轻人搬去了别的城市。", "年轻人只想赚钱。"], "answer": 1 },
+    { "audio": "Even a small act of kindness can make a real difference.", "opts": ["善举毫无用处。", "只有富人才能帮忙。", "哪怕一个小小的善举也能带来真正的改变。", "帮助别人很危险。"], "answer": 2 },
+    { "audio": "We are grateful for everything the volunteers brought us.", "opts": ["我们扔掉了所有礼物。", "志愿者什么都没带来。", "我们不需要任何帮助。", "我们感激志愿者带来的一切。"], "answer": 3 },
+    { "audio": "Please don't throw away the leftover food; let's share it.", "opts": ["请不要扔掉剩饭,我们来分享它。", "请把食物全部卖掉。", "请把食物藏起来。", "请不要再做饭了。"], "answer": 0 },
+    { "audio": "On behalf of the whole class, I want to thank our visitors.", "opts": ["我想和访客吵架。", "我代表全班感谢我们的访客。", "访客都已经离开了。", "全班都不喜欢访客。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "After graduation she decided to ____ volunteer work in a poor village.", "opts": ["take up", "give up", "throw up", "look up"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The family had almost nothing, yet they ____ everything with us.", "opts": ["sold", "shared", "hid", "lost"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "We should not take such everyday comforts for ____.", "opts": ["sale", "rent", "granted", "free"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "When the team was short of helpers, several neighbours lent a ____.", "opts": ["foot", "head", "finger", "hand"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Her mother is devoted ____ helping people in distant villages.", "opts": ["to", "for", "with", "of"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The poor families were grateful ____ every parcel they received.", "opts": ["to", "for", "of", "with"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Seeing the children so happy, she couldn't help ____ with joy.", "opts": ["smile", "to smile", "smiling", "smiled"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The volunteers came ____ with a clever plan to collect food.", "opts": ["across", "on", "off", "up"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["他们参加了一个帮助老人的项目。", "他们买了一辆新车。", "他们关闭了医院。", "他们去了海边。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "They took part in a project to help the elderly." },
+    { "q": "听句子选中文:", "opts": ["志愿者从不分发任何东西。", "志愿者把暖衣分发给有需要的家庭。", "志愿者只为自己工作。", "志愿者拒绝了帮助。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The volunteers handed out warm clothes to families in need." }
+  ],
+  "reading": {
+    "passage": "Tony's whole school joins a volunteer project every year. This year they decided to visit the children's hospital, bringing books and gifts and spending time with the sick children. Tony said that giving their time often means even more than giving things.",
+    "passageCn": "Tony 的全校每年都参加一个志愿项目。今年他们决定去儿童医院,带去书和礼物,陪生病的孩子度过时光。Tony 说,付出时间往往比捐物更有意义。",
+    "questions": [
+      { "q": "How often does Tony's school join a volunteer project?", "opts": ["Every year.", "Only once ever.", "Every day.", "Never."], "answer": 0 },
+      { "q": "What did they decide to do this year?", "opts": ["Build a new school.", "Sell books for money.", "Visit the children's hospital.", "Stay at home."], "answer": 2 },
+      { "q": "What does Tony think matters even more than giving things?", "opts": ["Giving money.", "Giving their time.", "Giving advice.", "Giving nothing."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a time you helped others or shared something. Say what you did and what the experience taught you. Try to use at least one phrase from this unit, such as take part in, lend a hand or make a difference.",
+    "promptCn": "用3-4句话写一次你帮助他人或与人分享的经历:你做了什么,这次经历让你明白了什么。至少用一个本单元短语(如 take part in / lend a hand / make a difference)。",
+    "sampleWords": ["volunteer", "share", "take part in", "lend a hand", "make a difference", "grateful", "donate", "kindness", "experience", "help"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing a Volunteer Project",
+      "lines": [
+        { "role": "A", "text": "Our class wants to take part in a volunteer project. What should we do?", "cn": "我们班想参加一个志愿项目,我们该做什么?" },
+        { "role": "B", "text": "Why don't we visit the children's hospital and lend a hand there?", "cn": "我们何不去儿童医院帮忙呢?" },
+        { "role": "A", "text": "Great idea. We could bring books and spend time reading with them.", "cn": "好主意。我们可以带些书,陪他们一起读。" },
+        { "role": "B", "text": "Yes! Even a small act of kindness can make a real difference.", "cn": "对!哪怕一个小小的善举也能带来真正的改变。" }
+      ]
+    }
+  ]
+}

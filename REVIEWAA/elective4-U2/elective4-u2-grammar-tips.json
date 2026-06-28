@@ -1,0 +1,38 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "过去分词(done)用法速查",
+    "intro": "过去分词 = 被动 + 完成。判断口诀:看逻辑主语是不是动作的承受者——是,就用 done(被动);自己主动发出动作才用 doing。过去分词可作定语、状语、宾语补足语和表语。",
+    "table": {
+      "headers": ["功能", "用法 / 例句 / 等价"],
+      "rows": [
+        ["作定语(前置)", "a ruined castle 一座荒废的城堡(= a castle that is ruined)"],
+        ["作定语(后置)", "a bridge built in 1920 = a bridge which was built in 1920"],
+        ["作状语", "Built of stone, the tower has lasted centuries.(= As it was built…)"],
+        ["作状语(句首被动)", "Seen from the air, the site looks stunning.(= When it is seen…)"],
+        ["作宾语补足语", "have/get sth done;see/find/keep sth done:keep the doors locked"],
+        ["作表语", "the gate remained closed 大门一直关着(处于被动/完成状态)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "逻辑主语是承受者 → done(被动);主动发出动作 → doing", "mark": "the bridge built(桥被建)vs the workers building(工人在建)" },
+      { "rule": "作状语时,过去分词的逻辑主语必须是句子主语,且主语承受该动作", "mark": "Located in the south, the town…(town 被定位)" },
+      { "rule": "have sth done:让/使某事被做(常含'请人做'或'遭遇')", "mark": "had the bridge repaired 把桥修好了" },
+      { "rule": "see/find/keep/want + sth + done:宾语是动作承受者", "mark": "found the gate blocked 发现门被堵住" }
+    ],
+    "why": [
+      "过去分词本身带有'被动'和'完成'两层含义,相当于把一个被动的定语从句或状语从句压缩成一个词;只要被修饰的名词/句子主语是动作的承受者,就用 done,而不是主动的 doing。"
+    ],
+    "gaokaoPoints": [
+      "句首独立结构:Built/Located/Seen/Given… 后接逗号,主语承受动作时用过去分词,语法填空与读后续写高频。",
+      "done 与 doing 的对照:看名词/主语是被动(done)还是主动进行(doing)是判断核心。",
+      "have/get sth done、see/find/keep sth done 的宾补结构是写作与单选常考点。"
+    ],
+    "examVsReal": [
+      { "exam": "Built in 1920, the bridge is still in use.（考试/书面正式）", "real": "The bridge was built in 1920 and it's still used.", "note": "考试爱用过去分词独立结构凝练;口语常拆成两个简单句" },
+      { "exam": "He had his photo taken in front of the statue.（考试强调被动宾补）", "real": "He got a photo of himself by the statue.", "note": "考试用 have sth done;日常口语换更随意的说法" }
+    ]
+  }
+}

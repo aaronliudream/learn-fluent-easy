@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Environmental Protection",
+  "source": "人教版2019选择性必修三 Unit 3 同主题完形(绿色日记/小镇回收/碳排放图表/植树日/家庭节水/烟雾访谈)。用词限本单元/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Green Week",
+      "text": "This week our class started a project to live in a greener (1)____. Each of us promised to do small things to protect the (2)____. On Monday I turned off every (3)____ before leaving the room, and I unplugged the computer instead of leaving it on standby. On Tuesday I carried a cloth bag to the shop so that I did not need a (4)____ one. On Wednesday I rode my (5)____ to school instead of asking my dad to drive me, which gave off less carbon dioxide. On Thursday I learned to (6)____ our rubbish into paper, glass and metal so that it could be reused. On Friday I took a shorter shower to (7)____ water. By the end of the week, I felt (8)____ of these new habits. None of them was (9)____, yet together they really helped to cut my carbon (10)____. I plan to keep them up for the rest of the year.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "way",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "in a greener way 以更环保的方式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "market",
+            "environment",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "protect the environment 保护环境。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "song",
+            "price",
+            "light",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "turn off every light 关掉每盏灯。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "clean",
+            "warm",
+            "loud",
+            "plastic"
+          ],
+          "answer_index": 3,
+          "explanation": "a plastic bag 塑料袋,与 cloth bag 相对。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "bike",
+            "boat",
+            "plane",
+            "train"
+          ],
+          "answer_index": 0,
+          "explanation": "rode my bike 骑自行车。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "sort",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "sort rubbish 把垃圾分类。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "waste",
+            "sell",
+            "save",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "save water 节约用水。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "tired",
+            "bored",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "feel proud of 为……感到自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "difficult",
+            "cheap",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "none was difficult 没有一件是困难的。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "footprint",
+            "weather",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "carbon footprint 碳足迹。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Town That Recycles",
+      "text": "Greenfield used to be a town with a serious (1)____ problem. Rubbish was left in the streets, and dirty water was poured into the river. The local (2)____ decided that something had to be done. First, they made strict (3)____ about how waste should be handled. Bins of three colours were placed on every street so that people could (4)____ paper, glass and metal. Trucks came to (5)____ the rubbish twice a week and took it to a clean station. Factories that broke the rules had to pay a heavy (6)____. The government also began regular (7)____ to make sure the rules were followed. Slowly the air and water grew much (8)____. Today Greenfield is a clean and (9)____ town, and other places come to learn from it. The mayor often says that everyone, from children to old people, helped to (10)____ the beauty of their home.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "music",
+            "holiday",
+            "pollution",
+            "price"
+          ],
+          "answer_index": 2,
+          "explanation": "a pollution problem 污染问题。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "weather",
+            "noise",
+            "garden",
+            "government"
+          ],
+          "answer_index": 3,
+          "explanation": "the local government 当地政府。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "regulations",
+            "songs",
+            "prices",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "strict regulations 严格的规章。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "recycle",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "recycle 回收利用。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "buy",
+            "collect",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "collect the rubbish 收集垃圾。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "gift",
+            "meal",
+            "fine"
+          ],
+          "answer_index": 3,
+          "explanation": "pay a heavy fine 缴纳重罚款。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "inspections",
+            "holidays",
+            "parties",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "regular inspections 定期检查。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "worse",
+            "cleaner",
+            "dirtier",
+            "louder"
+          ],
+          "answer_index": 1,
+          "explanation": "much cleaner 干净得多。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noisy",
+            "dirty",
+            "healthy",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "a clean and healthy town 干净健康的小镇。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "waste",
+            "sell",
+            "lose",
+            "restore"
+          ],
+          "answer_index": 3,
+          "explanation": "restore the beauty 恢复美景。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Reading the Carbon Graph",
+      "text": "In science class our teacher showed us a (1)____ about carbon dioxide in the air. The line on it went up year after year, which was a worrying (2)____. She explained that most of this gas comes from burning (3)____ fuels such as coal and oil. When we drive cars or run factories, we (4)____ carbon dioxide into the sky. This gas traps (5)____ around the earth, so the planet slowly gets (6)____. As a result, the ice at the poles begins to (7)____, and the level of the sea rises. The teacher said that this is now a (8)____ problem that affects every country. But she also gave us (9)____. If people use clean energy and cut their carbon (10)____, the line on the graph can start to fall again. We left the class knowing that our daily choices really matter.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "graph",
+            "song",
+            "price",
+            "meal"
+          ],
+          "answer_index": 0,
+          "explanation": "a graph 图表。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "trend",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a worrying trend 令人担忧的趋势。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "clean",
+            "wet",
+            "fossil",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "fossil fuels 化石燃料。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "save",
+            "hide",
+            "sell",
+            "release"
+          ],
+          "answer_index": 3,
+          "explanation": "release carbon dioxide 排放二氧化碳。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "heat",
+            "rain",
+            "snow",
+            "wind"
+          ],
+          "answer_index": 0,
+          "explanation": "traps heat 锁住热量。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cooler",
+            "warmer",
+            "smaller",
+            "quieter"
+          ],
+          "answer_index": 1,
+          "explanation": "gets warmer 变得更暖。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "grow",
+            "melt",
+            "stop"
+          ],
+          "answer_index": 2,
+          "explanation": "ice begins to melt 冰开始融化。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "funny",
+            "happy",
+            "worldwide"
+          ],
+          "answer_index": 3,
+          "explanation": "a worldwide problem 全球性问题。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hope",
+            "noise",
+            "money",
+            "rubbish"
+          ],
+          "answer_index": 0,
+          "explanation": "gave us hope 给了我们希望。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "emissions",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "carbon emissions 碳排放。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Tree-Planting Day",
+      "text": "Last Saturday our whole school joined a tree-planting (1)____ on a bare hillside. The land there was dry and (2)____, because too many trees had been cut down in the past. Our teacher told us that young trees would help to hold the (3)____ and keep water in the ground. Each group was given a few small trees to (4)____. At first the work was (5)____, and my hands soon hurt from digging. But nobody wanted to give (6)____. We dug holes, placed the trees in carefully, and gave each one plenty of (7)____. By noon the empty hill was dotted with rows of green. Our teacher said that in many years these trees would grow into a small (8)____ that cleaned the air. She reminded us that protecting (9)____ is the duty of everyone. As we walked home, tired but happy, I felt proud that we had done something to (10)____ the land.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "event",
+            "meal"
+          ],
+          "answer_index": 2,
+          "explanation": "a tree-planting event 植树活动。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wet",
+            "loud",
+            "rich",
+            "bare"
+          ],
+          "answer_index": 3,
+          "explanation": "dry and bare 干燥而光秃。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "soil",
+            "price",
+            "noise",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "hold the soil 固定土壤。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "plant",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "plant trees 种树。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "easy",
+            "cheap",
+            "hard",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "the work was hard 工作很辛苦。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "off",
+            "in",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "water",
+            "money",
+            "smog",
+            "rubbish"
+          ],
+          "answer_index": 0,
+          "explanation": "give each one water 给每棵浇水。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "market",
+            "forest",
+            "shop",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "a small forest 一片小森林。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "money",
+            "noise",
+            "nature",
+            "rubbish"
+          ],
+          "answer_index": 2,
+          "explanation": "protecting nature 保护自然。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "waste",
+            "sell",
+            "lose",
+            "restore"
+          ],
+          "answer_index": 3,
+          "explanation": "restore the land 修复土地。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Saving Water at Home",
+      "text": "My grandmother grew up in a village where clean water was hard to (1)____, so she taught me never to (2)____ a single drop. At home we follow several simple (3)____ to save water every day. We always turn off the tap while we (4)____ our teeth, instead of letting it run. When we wash vegetables, we keep the used water to (5)____ the plants in the garden. We also take shorter (6)____ rather than long ones, which saves both water and (7)____. My father even fixed the old tap that used to (8)____ slowly all night. Grandmother says that water is too (9)____ to throw away, and that careful use today will help our whole town in the future. Thanks to her, saving water has become a natural (10)____ for our family, and we feel good about doing our part for the environment.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "find",
+            "sell",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "hard to find 难以找到。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "save",
+            "waste",
+            "drink",
+            "boil"
+          ],
+          "answer_index": 1,
+          "explanation": "never waste a drop 不浪费一滴。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prices",
+            "songs",
+            "habits",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "simple habits 简单的习惯。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "sell",
+            "lose",
+            "brush"
+          ],
+          "answer_index": 3,
+          "explanation": "brush our teeth 刷牙。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "water",
+            "sell",
+            "burn",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "water the plants 浇灌植物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "meals",
+            "showers",
+            "songs",
+            "prices"
+          ],
+          "answer_index": 1,
+          "explanation": "take shorter showers 洗更短的澡。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "noise",
+            "rubbish",
+            "energy",
+            "smog"
+          ],
+          "answer_index": 2,
+          "explanation": "saves water and energy 既省水又省能。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sing",
+            "grow",
+            "fly",
+            "drip"
+          ],
+          "answer_index": 3,
+          "explanation": "the tap used to drip 水龙头滴水。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "precious",
+            "cheap",
+            "loud",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "too precious to throw away 太宝贵而不能浪费。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "habit",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "a natural habit 自然而然的习惯。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "An Interview about Smog",
+      "text": "Last week a radio host (1)____ an expert about the smog that sometimes covers big cities. The expert explained that smog is a kind of dirty (2)____ formed when smoke mixes with fog. He said it becomes worse when too many people (3)____ coal and too many cars are on the road. Breathing such air is very (4)____ to health, especially for children and old people. The host asked what cities could (5)____ to solve the problem. The expert answered that they must (6)____ the number of cars on busy days and move polluting factories away. He also advised everyone to use cleaner (7)____ such as solar and wind power. When asked whether the air could really get (8)____, he smiled and said yes. He pointed to London, where strong (9)____ once cleared away a deadly smog. With the right action, he believed, any city could enjoy a clean and (10)____ future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "ate",
+            "interviewed",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "interviewed an expert 采访专家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "price",
+            "meal",
+            "air"
+          ],
+          "answer_index": 3,
+          "explanation": "dirty air 污浊的空气。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "burn",
+            "save",
+            "wash",
+            "buy"
+          ],
+          "answer_index": 0,
+          "explanation": "burn coal 烧煤。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "useful",
+            "harmful",
+            "kind",
+            "polite"
+          ],
+          "answer_index": 1,
+          "explanation": "harmful to health 有害健康。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "eat",
+            "sell",
+            "do",
+            "sing"
+          ],
+          "answer_index": 2,
+          "explanation": "what cities could do 城市能做什么。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "grow",
+            "waste",
+            "sell",
+            "restrict"
+          ],
+          "answer_index": 3,
+          "explanation": "restrict the number of cars 限制车辆数量。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "energy",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "cleaner energy 更清洁的能源。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "worse",
+            "cleaner",
+            "dirtier",
+            "louder"
+          ],
+          "answer_index": 1,
+          "explanation": "get cleaner 变得更干净。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "songs",
+            "noises",
+            "laws",
+            "meals"
+          ],
+          "answer_index": 2,
+          "explanation": "strong laws 强有力的法律。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dirty",
+            "noisy",
+            "empty",
+            "healthy"
+          ],
+          "answer_index": 3,
+          "explanation": "a clean and healthy future 清洁健康的未来。"
+        }
+      ]
+    }
+  ]
+}

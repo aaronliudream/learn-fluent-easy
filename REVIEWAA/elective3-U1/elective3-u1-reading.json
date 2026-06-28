@@ -1,0 +1,320 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Art",
+  "source": "人教版2019选择性必修三 Unit 1 同主题阅读(西方绘画风格/印象派莫奈/中国水墨画/博物馆中国艺术展/唐代雕塑与佛教/著名画家)。词限本单元/初高中常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "How Photography Changed Painting",
+      "body": "For a long time, the main job of Western painters was to record what people and the world looked like. They tried to paint things as precisely as a mirror. Then, in the middle of the 19th century, photography was invented. Suddenly a camera could capture a face or a street far more exactly than any brush. After that, paintings were no longer needed simply to preserve how things looked. So painters had to find a new way of looking at their art. From this fresh thinking, Impressionism emerged in France. Instead of copying every detail, Impressionist painters tried to catch light, colour, and movement, and the feeling a scene gave them at a single moment. In other words, the camera did not kill painting. It set painters free to do something a machine could never do, which was to share their own way of seeing the world.",
+      "vocab_notes": [
+        {
+          "word": "photography",
+          "cn": "摄影术"
+        },
+        {
+          "word": "precisely",
+          "cn": "精确地"
+        },
+        {
+          "word": "emerge",
+          "cn": "兴起;出现"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the main job of Western painters before photography?",
+          "options": [
+            "To make a faithful record of how things looked.",
+            "To invent new cameras.",
+            "To paint only their own feelings.",
+            "To copy Chinese ink paintings."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the main job… was to record what people and the world looked like' 的转述。"
+        },
+        {
+          "stem": "How did the camera affect painters, according to the text?",
+          "options": [
+            "It made them stop painting forever.",
+            "It freed them to paint in a new way.",
+            "It forced them to copy more details.",
+            "It was useless to them."
+          ],
+          "answer_index": 1,
+          "explanation": "末段 'It set painters free to do something a machine could never do' 的转述。"
+        },
+        {
+          "stem": "What did Impressionist painters mainly try to capture?",
+          "options": [
+            "Light, colour and a moment's feeling.",
+            "Every tiny detail of a face.",
+            "The exact price of a scene.",
+            "Old religious stories."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'tried to catch light, colour, and movement, and the feeling a scene gave them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Monet and the Garden at Giverny",
+      "body": "Claude Monet was one of the most influential Impressionist painters. The new movement even took its name from his work called Impression, Sunrise. In that painting, his aim was not to make a precise record of the harbour, but to convey the subjective impression the scene gave him at dawn. Later in life, Monet moved with his large family to a village called Giverny. There he purchased a house and some land, and built a beautiful garden with a pond, water lilies, and an arched bridge. During his days at Giverny, Monet painted his own garden again and again. Two things appeared in his work throughout this period: bright colours, and the reflections of light in the water. He was so fond of his lilies that he returned to them for almost thirty years. Through these quiet garden scenes, Monet showed the world how much beauty can be found in one small, familiar place.",
+      "vocab_notes": [
+        {
+          "word": "influential",
+          "cn": "有影响力的"
+        },
+        {
+          "word": "subjective",
+          "cn": "主观的"
+        },
+        {
+          "word": "purchase",
+          "cn": "购买"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where did the name of Impressionism come from?",
+          "options": [
+            "The village of Giverny.",
+            "A painting by Monet.",
+            "A French newspaper.",
+            "A type of camera."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the new movement even took its name from his work called Impression, Sunrise' 的转述。"
+        },
+        {
+          "stem": "What did Monet do after moving to Giverny?",
+          "options": [
+            "He gave up painting.",
+            "He only painted the sea.",
+            "He created a garden and painted it many times.",
+            "He sold all his lilies."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'built a beautiful garden… painted his own garden again and again' 的转述。"
+        },
+        {
+          "stem": "What two things often appeared in his Giverny paintings?",
+          "options": [
+            "Trains and stations.",
+            "Black-and-white photographs.",
+            "Snow and high mountains.",
+            "Bright colours and reflections in water."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'bright colours, and the reflections of light in the water' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Beauty of Chinese Ink Wash",
+      "body": "Chinese ink wash painting is a very old and special art form. Unlike many Western paintings, which are full of strong colours, ink wash uses mainly water and black ink on paper. By controlling how wet or dry the brush is, a painter can create soft greys as well as deep blacks. With just a few lines, a skilled artist can suggest a whole mountain, a river, or a bird in flight. The aim is not to copy nature exactly, but to capture its spirit and leave room for the viewer's imagination. Often a large part of the paper is simply left empty, and that empty space is as important as the ink itself. This tradition later gave birth to ink wash animation films, in which the gentle paintings seem to move and breathe. To many people, these films are among the most beautiful examples of how ancient Chinese art can find new life in a modern form.",
+      "vocab_notes": [
+        {
+          "word": "ink",
+          "cn": "墨"
+        },
+        {
+          "word": "animation",
+          "cn": "动画"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How is ink wash painting different from many Western paintings?",
+          "options": [
+            "It mainly uses water and black ink instead of strong colours.",
+            "It can only be done by foreigners.",
+            "It uses no brush at all.",
+            "It always copies nature exactly."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'ink wash uses mainly water and black ink… full of strong colours' 的转述。"
+        },
+        {
+          "stem": "Why is the empty space important in ink wash painting?",
+          "options": [
+            "It saves expensive ink.",
+            "It matters as much as the painted parts.",
+            "It hides the artist's mistakes.",
+            "It has no real meaning."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'that empty space is as important as the ink itself' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about ink wash animation films?",
+          "options": [
+            "They are boring and old-fashioned.",
+            "They have replaced all Western films.",
+            "They give an ancient art a new life.",
+            "They use only Western music."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'how ancient Chinese art can find new life in a modern form' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Visit to the Museum of Fine Art",
+      "body": "Last Sunday our art club visited a new show at the Museum of Fine Art. Its title was Chinese Art Through the Ages, and it covered more than three thousand years. As soon as we entered, we saw bronze bowls and ceramic vases shining under soft lights. The highlight was an old painting by Tang Yin, a master who was born during the Ming Dynasty. He had once tried to enter the civil service but failed, so he turned to painting instead, and in time he gained recognition as one of China's greatest artists. His snowy mountain scene looked as fresh as the day it was made, though it was over five hundred years old. We also saw many Tang Dynasty sculptures, most of them of Buddhist origin, brought to China along the Silk Road. By the end of the visit, we all agreed that the show had carried us back through the long, rich story of Chinese art.",
+      "vocab_notes": [
+        {
+          "word": "ceramic",
+          "cn": "陶瓷的"
+        },
+        {
+          "word": "recognition",
+          "cn": "认可;赞誉"
+        },
+        {
+          "word": "sculpture",
+          "cn": "雕塑"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the visitors see first when they entered the show?",
+          "options": [
+            "A modern oil painting.",
+            "A short film about France.",
+            "An empty white room.",
+            "Shining bronze and ceramic objects."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'we saw bronze bowls and ceramic vases shining under soft lights' 的转述(改写非照抄)。"
+        },
+        {
+          "stem": "Why did Tang Yin turn to painting?",
+          "options": [
+            "He had not managed to join the civil service.",
+            "He disliked all officials.",
+            "He was told to by an emperor.",
+            "He wanted to become rich quickly."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'tried to enter the civil service but failed, so he turned to painting' 的转述。"
+        },
+        {
+          "stem": "Where did most of the Tang Dynasty sculptures come from in spirit?",
+          "options": [
+            "From Western Europe.",
+            "From Buddhist art along the Silk Road.",
+            "From modern factories.",
+            "From the museum's own workshop."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'most of them of Buddhist origin, brought to China along the Silk Road' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Comes After Impressionism",
+      "body": "After Impressionism, a group of subsequent artists began to ask a new question: what should we do next? They felt that simply showing light and colour was no longer enough. Some, like Picasso, tried to break objects into shapes and put them together again in a strange new way. Others gave their paintings a realistic but dream-like quality, so that a scene looked both true and impossible at the same time. Still others turned away from the real world completely and painted only shapes and colours that stood for nothing at all. What linked these very different artists was one bold idea. Their aim was no longer to show reality, but instead to ask the big question, 'What is art?' Because of them, modern art became a place for experiment, where almost any idea could be tried. Today, when we stand puzzled in front of a strange modern painting, we are really being invited to think about that same question for ourselves.",
+      "vocab_notes": [
+        {
+          "word": "subsequent",
+          "cn": "随后的"
+        },
+        {
+          "word": "realistic",
+          "cn": "逼真的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What question did artists after Impressionism begin to ask?",
+          "options": [
+            "What art should do and be next.",
+            "How to copy photographs better.",
+            "Where to buy cheaper paint.",
+            "When to stop painting forever."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'what should we do next?' 与 'ask the big question, What is art?' 的转述。"
+        },
+        {
+          "stem": "How did some artists like Picasso change painting?",
+          "options": [
+            "They copied nature even more closely.",
+            "They used only black ink.",
+            "They stopped using any colour.",
+            "They broke objects into shapes and rebuilt them."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'break objects into shapes and put them together again in a strange new way' 的转述。"
+        },
+        {
+          "stem": "What did these different modern artists have in common?",
+          "options": [
+            "They shared one bold idea about questioning art.",
+            "They all painted the same garden.",
+            "They all hated colour.",
+            "They all lived in China."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'What linked these very different artists was one bold idea' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Renoir: Painter of Warmth",
+      "body": "While many Impressionists loved to paint nature or daily street life, Renoir chose people as his favourite subject. He was born in France in the 1840s and became known for the warmth that fills his pictures. The photographs of his time were cold and black-and-white, but Renoir's paintings are full of soft light, shadow, colour, and life. When he painted a friend or a child, he did not stop at the outer image of the face. Instead, he tried to show the inner warmth and humanity of the person behind it. People in his work often seem to be smiling gently, as if caught in a happy moment that will never end. Renoir once said that there was already enough that was sad in the world, so a painting should be a thing of joy and beauty. Even today, standing before his canvases, viewers feel as if they have stepped into a kinder, sunnier world.",
+      "vocab_notes": [
+        {
+          "word": "humanity",
+          "cn": "人性"
+        },
+        {
+          "word": "outer",
+          "cn": "外部的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Renoir most like to paint?",
+          "options": [
+            "Trains.",
+            "People.",
+            "Empty rooms.",
+            "High mountains."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Renoir chose people as his favourite subject' 的转述。"
+        },
+        {
+          "stem": "How are Renoir's paintings different from the photos of his time?",
+          "options": [
+            "They are smaller in size.",
+            "They use no people at all.",
+            "They are warm and full of light and colour.",
+            "They were made by a machine."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'photographs… were cold and black-and-white, but Renoir's paintings are full of soft light… and life' 的转述。"
+        },
+        {
+          "stem": "What did Renoir believe a painting should be?",
+          "options": [
+            "A copy of a photograph.",
+            "A record of sad events.",
+            "A list of prices.",
+            "Something joyful and beautiful."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a painting should be a thing of joy and beauty' 的转述(改写非照抄)。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Sea Exploration",
+  "source": "人教版2019选择性必修四 Unit 3 同主题完形(少年独自环球航行/世界海洋日/深海工作者/海豹传说/北极科考/海上丝路合作)。用词限本单元/高中常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Youngest Sailor",
+      "text": "In 2008, a sixteen-year-old boy set (1)____ on an amazing journey: to sail alone around the whole world. As a child, he had read a (2)____ about another young sailor and dreamed of doing the same. Using his own money, he bought a boat and (3)____ off. The voyage was a (4)____ of danger and boredom. He had to fight through heavy storms and get by on very little (5)____. To pass the time, he read many books and (6)____ his family every evening using a small laptop. After thirteen long months, he returned home with a new world (7)____ as the youngest person ever to sail around the world alone. His adventure received wide media (8)____ everywhere. At his press conference, he said that passion and (9)____ had made his dream come true. In his opinion, there is so much that people can (10)____ if they simply go for it.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sail",
+            "fire",
+            "table",
+            "music"
+          ],
+          "answer_index": 0,
+          "explanation": "set sail 起航。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "tale",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a tale 一个故事。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "put",
+            "took",
+            "set",
+            "made"
+          ],
+          "answer_index": 2,
+          "explanation": "set off 出发。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "ticket",
+            "machine",
+            "mixture"
+          ],
+          "answer_index": 3,
+          "explanation": "a mixture of 混合体。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "money",
+            "noise",
+            "paper"
+          ],
+          "answer_index": 0,
+          "explanation": "little sleep 几乎不睡。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ate",
+            "emailed",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "emailed his family 给家人发邮件。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weather",
+            "garden",
+            "record",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "a world record 世界纪录。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "garden",
+            "machine",
+            "ticket",
+            "coverage"
+          ],
+          "answer_index": 3,
+          "explanation": "media coverage 媒体报道。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "courage",
+            "money",
+            "weather",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "passion and courage 激情与勇气。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "achieve",
+            "forget",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "achieve 取得。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "World Oceans Day",
+      "text": "World Oceans Day takes (1)____ on the eighth of June every year. It is now celebrated in over a hundred (2)____, with hundreds of special events held across the globe. The day is (3)____ in many ways, including new campaigns and special programmes, all working to (4)____ ocean conservation and education. Young people are an important (5)____ of the project, because the future of the sea belongs to them. The day gives them a platform (6)____ they can share ideas and express their concerns. Each year there is a different (7)____ for the events, such as 'Our oceans, our future'. Schools often ask students to clean a (8)____, watch a film about marine life, or listen to talks by sea (9)____. Through such activities, more and more people come to (10)____ how precious and how fragile the ocean really is.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "noise",
+            "money",
+            "place",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "take place 举行。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "gardens",
+            "prices",
+            "countries"
+          ],
+          "answer_index": 3,
+          "explanation": "over a hundred countries 一百多个国家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "marked",
+            "sold",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 0,
+          "explanation": "be marked 以……方式纪念。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "advance",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "advance conservation 推动保护。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "part",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "an important part 重要部分。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "which",
+            "when",
+            "why",
+            "where"
+          ],
+          "answer_index": 3,
+          "explanation": "a platform where 地点关系副词。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "theme",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a theme 主题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "machine",
+            "beach",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "clean a beach 清理海滩。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "drivers",
+            "farmers",
+            "scientists",
+            "singers"
+          ],
+          "answer_index": 2,
+          "explanation": "sea scientists 海洋科学家。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "waste",
+            "realise"
+          ],
+          "answer_index": 3,
+          "explanation": "realise 意识到。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Working in the Deep",
+      "text": "Few jobs are as exciting or as difficult as exploring the deep sea. The ocean floor is so dark and so cold that humans cannot go there without a special (1)____. Engineers must (2)____ machines that can stand huge pressure far below the surface. A manned (3)____ may carry only two or three people, so every member of the team must be calm and well (4)____. Before each dive, the crew (5)____ every detail of the journey, because a tiny mistake underwater could be (6)____. Once at the bottom, they use powerful lights and cameras to (7)____ creatures that no human eye has ever seen. They also collect rare (8)____ from the sea floor to bring back for study. Their work has greatly (9)____ our knowledge of marine life. Though the deep sea remains a dangerous place, these brave workers believe it is a (10)____ well worth the risk.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "song",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "special machine 特殊机器。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lose",
+            "build",
+            "sell",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "build machines 建造机器。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "garden",
+            "market",
+            "submersible",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "manned submersible 载人潜水器。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "trained"
+          ],
+          "answer_index": 3,
+          "explanation": "well trained 训练有素。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "plans",
+            "sells",
+            "loses",
+            "forgets"
+          ],
+          "answer_index": 0,
+          "explanation": "plans every detail 规划每个细节。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "funny",
+            "deadly",
+            "cheap",
+            "easy"
+          ],
+          "answer_index": 1,
+          "explanation": "could be deadly 可能致命。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "study",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "study creatures 研究生物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "songs",
+            "tickets",
+            "prices",
+            "minerals"
+          ],
+          "answer_index": 3,
+          "explanation": "rare minerals 稀有矿物。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "extended",
+            "lost",
+            "wasted",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "extended our knowledge 拓展知识。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "profession",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a profession 一种职业。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Boy from the Sea",
+      "text": "An old story tells of an old couple who lived by the sea. One day they heard a baby (1)____ near the water, and when they hurried over, they found a baby seal instead. They took it home, fed it, and (2)____ it as their own son. Gradually the seal grew up (3)____ just like a human boy. The couple loved him deeply and allowed him to go (4)____ except near the sea, for they were (5)____ of losing him. The boy loved his parents so much that he (6)____ never to swim. One day the father went fishing, (7)____ the weather suddenly changed. As the ship rolled in the wild waves, the mother watched the horrible (8)____ helplessly. All of a sudden, the son jumped into the stormy sea (9)____ his father. Swimming as fast as lightning, he pushed the old man safely back to the (10)____, but the couple never saw their brave son again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "buy",
+            "cry",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "heard a baby cry 听到婴儿哭。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "lost",
+            "ate",
+            "raised"
+          ],
+          "answer_index": 3,
+          "explanation": "raised it 把它养大。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "looking",
+            "to look",
+            "looked",
+            "looks"
+          ],
+          "answer_index": 0,
+          "explanation": "现在分词作伴随状语 looking。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "nowhere",
+            "anywhere",
+            "never",
+            "always"
+          ],
+          "answer_index": 1,
+          "explanation": "go anywhere 去任何地方。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "proud",
+            "fond",
+            "afraid",
+            "sure"
+          ],
+          "answer_index": 2,
+          "explanation": "afraid of losing 害怕失去。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "refused",
+            "forgot",
+            "failed",
+            "promised"
+          ],
+          "answer_index": 3,
+          "explanation": "promised never to swim 承诺绝不游泳。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "when",
+            "which",
+            "where",
+            "why"
+          ],
+          "answer_index": 0,
+          "explanation": "..., when 突然(并列时间)→ when。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "scene",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "the horrible scene 可怕的景象。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "save",
+            "saving",
+            "to save",
+            "saved"
+          ],
+          "answer_index": 2,
+          "explanation": "to save 表目的的不定式。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "garden",
+            "ticket",
+            "shore"
+          ],
+          "answer_index": 3,
+          "explanation": "back to the shore 回到岸边。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Studying the Arctic",
+      "text": "In recent years, China has joined other nations on several (1)____ to explore the far north. From a scientific point of (2)____, there is an urgent need to study the Arctic in order to understand climate (3)____ and its effects. Because of warming, there is less ice now, (4)____ means ships can travel further north than before. Scientists worry that if we (5)____ more fossil fuels, the ice will melt even faster, and this negative (6)____ will continue. On these expeditions, researchers (7)____ the temperature of the water, the thickness of the ice and the movements of (8)____ animals such as seals and whales. The data they collect helps the whole world (9)____ how quickly our planet is changing. Studying the Arctic is hard and dangerous work, but most scientists agree that it is absolutely (10)____ for our shared future.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "expeditions",
+            "machines",
+            "gardens",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "join expeditions 参加考察。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "view",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "point of view 观点。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "garden",
+            "change",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "climate change 气候变化。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "what",
+            "who",
+            "where",
+            "which"
+          ],
+          "answer_index": 3,
+          "explanation": "非限制性定语从句指代整句、作主语 → which。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "burn",
+            "sell",
+            "lose",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "burn fossil fuels 燃烧化石燃料。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "cycle",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "negative cycle 恶性循环。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "measure",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "measure 测量。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "city",
+            "school",
+            "office",
+            "sea"
+          ],
+          "answer_index": 3,
+          "explanation": "sea animals 海洋动物。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "understand",
+            "forget",
+            "lose",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "understand 理解。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "useless",
+            "necessary",
+            "boring",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "absolutely necessary 绝对必要。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Friends Across the Sea",
+      "text": "China has long wished to (1)____ out across the sea and build friendly bonds with the rest of the world. One modern plan aims to encourage cooperation and (2)____ along the historic Silk Road areas. Trade has grown greatly in recent years and is likely to (3)____ to grow in years to come. China has (4)____ billions in systems and services along these routes, (5)____ will help develop the whole area for future trade and cultural (6)____. China has also joined its friends across the sea on other important (7)____, such as studying the Arctic together. Hundreds of years ago, (8)____ like Zheng He sailed these waters to trade in silk and spices. Today, with the latest technology in (9)____, the need to trade and the desire to (10)____ relationships still drive China far out across the sea.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "reach",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "reach out 伸出(友谊之手)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "garden",
+            "ticket",
+            "trade"
+          ],
+          "answer_index": 3,
+          "explanation": "cooperation and trade 合作与贸易。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "continue",
+            "stop",
+            "refuse",
+            "fail"
+          ],
+          "answer_index": 0,
+          "explanation": "continue to grow 继续增长。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "invested",
+            "sold",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "invested billions 投入数十亿。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "what",
+            "who",
+            "which",
+            "where"
+          ],
+          "answer_index": 2,
+          "explanation": "非限制性定语从句指物、作主语 → which。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "exchange"
+          ],
+          "answer_index": 3,
+          "explanation": "cultural exchange 文化交流。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "projects",
+            "songs",
+            "tickets",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "important projects 重要项目。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "singers",
+            "explorers",
+            "drivers",
+            "farmers"
+          ],
+          "answer_index": 1,
+          "explanation": "explorers like Zheng He 像郑和这样的探险家。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "hand",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "in hand 在手头。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "lose",
+            "waste",
+            "enhance"
+          ],
+          "answer_index": 3,
+          "explanation": "enhance relationships 增进关系。"
+        }
+      ]
+    }
+  ]
+}

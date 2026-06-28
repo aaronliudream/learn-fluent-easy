@@ -1,0 +1,332 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "topic": "Adversity and Courage",
+  "source": "人教版2019选择性必修三 Unit 4 同主题阅读(沙克尔顿弃船/象岛求生/穿越南乔治亚岛/Aron Ralston/盲人登山者/坚持的科学)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Order to Abandon Ship",
+      "body": "In 1915, the ship Endurance became trapped in the thick ice of the Antarctic. For months its crew waited, hoping the ice would melt and set them free. Instead, the pressure grew, until the wooden hull began to break apart. Captain Shackleton knew there was no more time to lose. He gave the order to abandon the ship before it sank, and the men dragged their boats, food, and tents out onto the frozen sea. They had been preparing for this terrible moment for weeks, yet leaving the warm ship still felt like losing a home. As the Endurance slipped beneath the ice, no one spoke. Shackleton, however, stayed calm. He told the crew that their goal was no longer the South Pole but simply getting everyone home alive. His steady voice gave the frightened men a strange new courage, and they began the long march across the ice with their leader at the front.",
+      "vocab_notes": [
+        {
+          "word": "abandon",
+          "cn": "弃(船);放弃"
+        },
+        {
+          "word": "crew",
+          "cn": "全体船员"
+        },
+        {
+          "word": "hull",
+          "cn": "船身;船体"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Shackleton order the men to leave the ship?",
+          "options": [
+            "Because the ice was crushing the hull and the ship would sink.",
+            "Because they had reached the South Pole.",
+            "Because the weather had become warm.",
+            "Because the men no longer wanted to explore."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'the pressure grew… break apart… before it sank' 概括转述。"
+        },
+        {
+          "stem": "How did the men feel about leaving the Endurance?",
+          "options": [
+            "Excited and relieved.",
+            "Although expected, parting with the ship felt like leaving their home.",
+            "Bored and uninterested.",
+            "Eager to reach the South Pole."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'leaving the warm ship still felt like losing a home' 的转述。"
+        },
+        {
+          "stem": "What new goal did Shackleton give the crew?",
+          "options": [
+            "To bring everyone home alive.",
+            "To find more ice.",
+            "To build a new ship at once.",
+            "To continue south as planned."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'getting everyone home alive' 概括,非照抄连续子串。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Four Months on Elephant Island",
+      "body": "After their leader sailed away to look for help, the remaining men were left on a cold and rocky shore called Elephant Island. The place had no trees and no fresh water. To survive, they melted sea ice for drinking water and burned animal fat for fire, since there was no wood or oil. Food was a constant worry, for they could find no fruit or vegetables, only the meat of the sea creatures they managed to catch. The cook did his best to make the meals less boring, but it was hard. What truly kept the group alive, however, was not food but spirit. They celebrated birthdays and festivals, sang songs in the evenings, and shared every small piece of good news. Their discipline and team spirit helped them face their fears in a positive way. For four long months the twenty-two men waited in the freezing cold, never quite losing hope that their leader would return for them.",
+      "vocab_notes": [
+        {
+          "word": "survive",
+          "cn": "幸存;活下来"
+        },
+        {
+          "word": "discipline",
+          "cn": "纪律;自律"
+        },
+        {
+          "word": "spirit",
+          "cn": "精神;斗志"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the men get water on the island?",
+          "options": [
+            "They melted sea ice to drink.",
+            "They carried it from the ship.",
+            "It rained every day.",
+            "They found a fresh spring."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'melted sea ice for drinking water' 的转述。"
+        },
+        {
+          "stem": "According to the passage, what kept the group alive most of all?",
+          "options": [
+            "A large store of fruit.",
+            "The help of passing ships.",
+            "Their team spirit and discipline.",
+            "The warm island weather."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'kept the group alive… was not food but spirit… discipline and team spirit' 概括。"
+        },
+        {
+          "stem": "How long did the men wait on Elephant Island?",
+          "options": [
+            "A few days.",
+            "About two weeks.",
+            "Almost a year.",
+            "Four months."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'For four long months… waited' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Crossing the Mountains of South Georgia",
+      "body": "Shackleton's small boat finally reached South Georgia Island, but the journey was not over. The whaling station, where they could ask for help, lay on the far side of the island, beyond a wall of unmapped mountains and glaciers. No one had ever crossed them before. With almost no climbing gear and very little food, Shackleton and two companions set off on foot. For thirty-six hours they climbed up icy slopes and slid down dangerous snow fields, not daring to stop and rest in case they froze. At one point, trapped on a steep ridge as night fell, they chose to slide together down an unknown slope into the darkness rather than wait and die of cold. By luck and courage, they survived. When the three exhausted men finally walked into the station, the workers hardly recognised them, for they looked like wild old men. Yet their perseverance had saved every member of the crew left behind.",
+      "vocab_notes": [
+        {
+          "word": "glacier",
+          "cn": "冰川"
+        },
+        {
+          "word": "ridge",
+          "cn": "山脊"
+        },
+        {
+          "word": "perseverance",
+          "cn": "毅力;不屈不挠"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Shackleton have to cross the mountains?",
+          "options": [
+            "The whaling station with help was on the other side of the island.",
+            "He wanted to enjoy the view.",
+            "He was looking for a new ship.",
+            "He had lost his way completely."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'whaling station, where they could ask for help, lay on the far side' 概括。"
+        },
+        {
+          "stem": "What did the three men do when trapped on the ridge at night?",
+          "options": [
+            "They waited quietly until morning.",
+            "They slid down an unknown slope rather than freeze.",
+            "They built a warm shelter.",
+            "They turned back the way they came."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'chose to slide together down an unknown slope… rather than wait and die of cold' 的转述。"
+        },
+        {
+          "stem": "Why did the station workers hardly recognise the men?",
+          "options": [
+            "The men were wearing fine new clothes.",
+            "It was too dark to see anyone.",
+            "Their ordeal had left them looking wild and aged.",
+            "The men spoke a different language."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'looked like wild old men' 概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Trapped Under a Rock",
+      "body": "Adversity does not only strike at sea. In 2003, a young American climber named Aron Ralston went hiking alone in a narrow desert canyon. As he climbed down, a huge rock shifted and trapped his right arm against the canyon wall. He was completely alone, and no one knew exactly where he was. For more than five days he stood there, slowly running out of water and food. He had been calling for help for hours, but no answer ever came. At last, Ralston understood that no rescue was coming. With astonishing courage, he made the hardest decision of his life: he cut off his own trapped arm to free himself. Then, weak and bleeding, he climbed out of the canyon and walked until he met other hikers who could save him. His story spread around the world. People were amazed not only by what he did to survive, but by the calm and determined spirit that carried him through.",
+      "vocab_notes": [
+        {
+          "word": "canyon",
+          "cn": "峡谷"
+        },
+        {
+          "word": "trapped",
+          "cn": "被困住的"
+        },
+        {
+          "word": "determined",
+          "cn": "坚定的;有决心的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened to Aron Ralston in the canyon?",
+          "options": [
+            "His arm was trapped by a heavy rock.",
+            "He got lost in a sandstorm.",
+            "He met a wild animal.",
+            "He fell into a river."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'a huge rock shifted and trapped his right arm' 概括转述。"
+        },
+        {
+          "stem": "Why did no one come to help him?",
+          "options": [
+            "He was alone and nobody knew where he was.",
+            "He had a radio but it was broken.",
+            "His friends ignored his calls.",
+            "Rescue teams refused to search."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'completely alone, and no one knew exactly where he was' 的转述。"
+        },
+        {
+          "stem": "What amazed people most about Ralston's story?",
+          "options": [
+            "The beauty of the canyon.",
+            "His calm, determined spirit in surviving.",
+            "The number of days he slept.",
+            "The price of his climbing gear."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'the calm and determined spirit that carried him through' 概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Climbing in the Dark",
+      "body": "When Erik Weihenmayer was a teenager, he lost his sight completely. Many people thought his active life was over, but Erik refused to give up the things he loved. Step by step, he learned to live in a world he could no longer see. He began rock climbing, feeling the shape of every hold with his fingers and listening to the voices of friends who guided him from above. Year after year he climbed harder and higher mountains, training his body and mind to trust touch and sound instead of sight. In 2001 he reached the top of the world's highest mountain, becoming the first blind person ever to do so. Reaching the summit, he said, was not really about proving anything to others. It was about showing that adversity need not decide what a person can become. Today Erik travels the world, telling young people that the biggest mountains we face are often the ones inside our own minds.",
+      "vocab_notes": [
+        {
+          "word": "sight",
+          "cn": "视力;视觉"
+        },
+        {
+          "word": "summit",
+          "cn": "顶峰;山顶"
+        },
+        {
+          "word": "hold",
+          "cn": "(攀岩的)抓握点"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What difficulty did Erik face as a teenager?",
+          "options": [
+            "He broke both of his legs.",
+            "He could no longer hear.",
+            "He became completely blind.",
+            "He had to move to a new country."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'lost his sight completely' 的转述。"
+        },
+        {
+          "stem": "How did Erik manage to climb without seeing?",
+          "options": [
+            "He used a special camera.",
+            "He climbed only very small hills.",
+            "He waited until his sight returned.",
+            "He relied on touch and on friends' voices."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'feeling the shape of every hold… listening to the voices of friends' 概括。"
+        },
+        {
+          "stem": "What message does Erik share with young people?",
+          "options": [
+            "The hardest mountains are often inside our minds.",
+            "Only strong bodies matter.",
+            "Blindness makes climbing impossible.",
+            "Everyone should climb the highest peak."
+          ],
+          "answer_index": 0,
+          "explanation": "由 'the biggest mountains we face are often the ones inside our own minds' 概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Why Some People Never Give Up",
+      "body": "Why do some people keep going through terrible hardship, while others give up? Scientists who study courage have found that it is not simply a matter of being born brave. Much of it depends on attitude and habit. People who keep going tend to focus on the next small step rather than on the huge problem as a whole. Instead of asking, 'How will I survive a whole month?', they ask, 'How do I get through the next hour?' This way of thinking turns a frightening challenge into something they can actually handle. Such people also tend to believe that their own actions make a difference, so they keep trying instead of waiting helplessly. Just as importantly, they look after one another. In groups facing danger, those who support their companions usually do better than those who think only of themselves. Courage, the researchers say, is less a gift and more a skill—one that anyone can slowly build through practice and hope.",
+      "vocab_notes": [
+        {
+          "word": "attitude",
+          "cn": "态度"
+        },
+        {
+          "word": "handle",
+          "cn": "应对;处理"
+        },
+        {
+          "word": "companion",
+          "cn": "同伴"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to scientists, what does courage mostly depend on?",
+          "options": [
+            "Being born brave.",
+            "A person's attitude and habits.",
+            "Great physical strength alone.",
+            "Pure luck."
+          ],
+          "answer_index": 1,
+          "explanation": "由 'not simply… born brave… depends on attitude and habit' 概括。"
+        },
+        {
+          "stem": "How do people who never give up tend to think?",
+          "options": [
+            "They imagine the worst possible ending.",
+            "They wait for others to act first.",
+            "They concentrate on the very next step rather than the entire problem.",
+            "They ignore the danger completely."
+          ],
+          "answer_index": 2,
+          "explanation": "由 'focus on the next small step rather than on the huge problem' 概括。"
+        },
+        {
+          "stem": "What helps groups do better in danger?",
+          "options": [
+            "Thinking only of oneself.",
+            "Travelling separately.",
+            "Avoiding all risk.",
+            "Supporting one another."
+          ],
+          "answer_index": 3,
+          "explanation": "由 'those who support their companions usually do better' 概括。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "I would like to apply for the position of camp helper.", "opts": ["我想申请营地帮手这个职位。", "我已经辞去了营地的工作。", "我想参观一下这个夏令营。", "我不确定要不要去面试。"], "answer": 0 },
+    { "audio": "My goal is to land a job that I am truly passionate about.", "opts": ["我的目标是找到一份我真正热爱的工作。", "我的目标是尽快赚很多钱。", "我打算先休息一年再说。", "我还没想好要学什么专业。"], "answer": 0 },
+    { "audio": "Please send your CV and a cover letter to the receptionist.", "opts": ["请把你的简历和求职信发给接待员。", "请把你的照片寄到我家。", "请明天早上准时来面试。", "请告诉我你的电话号码。"], "answer": 0 },
+    { "audio": "A career aptitude test can help you see which jobs may suit you.", "opts": ["职业测试能帮你看清哪些工作适合你。", "职业测试要花很多钱。", "职业测试只对大学生开放。", "职业测试决定你的全部人生。"], "answer": 0 },
+    { "audio": "She advised us to make a clear career plan as early as possible.", "opts": ["她建议我们尽早制定清晰的职业规划。", "她叫我们不要做任何计划。", "她说计划没有任何用处。", "她让我们先去找份兼职。"], "answer": 0 },
+    { "audio": "The CV should be tailored to match the careers in your plan.", "opts": ["简历应量身调整以匹配你规划中的职业。", "简历越长越好。", "简历可以随便复制别人的。", "简历写好后就不用再改。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "面试官、雇主会向你索要的、展示技能与经历的文件是 ____。", "opts": ["CV", "desert", "wool", "wrist"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"committee; the camp ____ is hiring helpers\" 中表示\"委员会\"的词是?", "opts": ["council", "purse", "collar", "drawer"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"中级水平\"的英语是 at an ____ level。", "opts": ["intermediate", "greedy", "graphic", "ancient"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "\"决定优先事项\"是 decide on ____。", "opts": ["priorities", "deserts", "collars", "purses"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "She decided ____ a career test before choosing a major.", "opts": ["to take", "taking", "taken", "take"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The teacher advised us ____ a clear career plan early.", "opts": ["to make", "making", "made", "make"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "These skills still need ____ before he is ready for the job.", "opts": ["to be learned", "to learn", "learning", "learned"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She was too nervous ____ clearly in her first interview.", "opts": ["to speak", "speaking", "spoken", "speak"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["数据科学会提供很多工作机会。", "数据科学已经过时了。", "数据科学很容易学。", "数据科学没有前途。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "I'm thinking about data science because I believe it will offer many jobs." },
+    { "q": "听句子选意思:", "opts": ["记住,测试结果只用于指导。", "记住,测试结果必须服从。", "记住,测试结果永不改变。", "记住,测试结果决定一切。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Remember, the results are only meant for guidance." }
+  ],
+  "reading": {
+    "passage": "Anna had no idea which job to choose, so she tried a career aptitude test. The test turned her answers into a code and suggested several creative careers. A year later, she was happily training as a designer.",
+    "passageCn": "安娜不知道该选什么工作,于是做了一次职业能力测试。测试把她的答案变成一个代码,并推荐了几种创意类职业。一年后,她正快乐地接受设计师培训。",
+    "questions": [
+      { "q": "Why did Anna try the test?", "opts": ["She didn't know which job to choose.", "She wanted to win a prize.", "Her boss told her to.", "She had already chosen a job."], "answer": 0 },
+      { "q": "What was Anna doing a year later?", "opts": ["Training as a designer.", "Still looking for any job.", "Giving up her plan.", "Teaching the test."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short application letter for a summer camp helper job. Say the position you want, your skills and experience, and your wish to hear back.",
+    "promptCn": "写一封简短的夏令营帮手求职信:说明你想申请的职位、你的技能与经验,以及期待回复的愿望。",
+    "sampleWords": ["apply", "position", "CV", "intermediate", "experience", "priority", "team player", "keen", "welcome", "look forward to"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing a Major",
+      "lines": [
+        { "role": "A", "text": "Have you decided which major to choose?", "cn": "你决定好选什么专业了吗?" },
+        { "role": "B", "text": "I'm thinking about data science. It will offer many jobs.", "cn": "我在考虑数据科学,它会有很多工作机会。" },
+        { "role": "A", "text": "That sounds smart. I'd really like to study robotics.", "cn": "听起来很明智。我很想学机器人学。" },
+        { "role": "B", "text": "Then choose what you're good at, not just a famous school.", "cn": "那就选你擅长的,而不只是名校。" }
+      ]
+    },
+    {
+      "title": "Before the Interview",
+      "lines": [
+        { "role": "A", "text": "I have a job interview tomorrow, and I'm so nervous.", "cn": "我明天有个面试,好紧张。" },
+        { "role": "B", "text": "Have you done any research about the company?", "cn": "你调查过这家公司吗?" },
+        { "role": "A", "text": "Yes, and I've printed my CV and cover letter.", "cn": "调查过了,简历和求职信也打印好了。" },
+        { "role": "B", "text": "Great. Stay calm and leave home in good time.", "cn": "很好。保持冷静,提早出门。" }
+      ]
+    }
+  ]
+}

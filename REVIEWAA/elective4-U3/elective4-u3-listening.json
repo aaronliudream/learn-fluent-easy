@@ -1,0 +1,493 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Sea Exploration",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修四 Unit 3 同主题听力(选海洋夏令营/鲸类知识短文/参观科考船对话/海洋污染短文/规划潜水探险对话/世界海洋日短文)。长短交替(3长3短),用词限本单元/高中常见词,答案唯一且 transcript 可查证,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Choosing a Sea Camp",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "Have you decided which sea camp to join this summer, Tom?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I'm thinking about the whale watching camp. We'd help a real research team."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "That sounds exciting. What would you actually do there?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "We'd follow whales in a boat and take photos of their fins to tell them apart."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "I'd rather try the diving camp, where you learn to use underwater cameras."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Why diving? Isn't it a bit dangerous for beginners?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Maybe, but I really want to see coral reefs with my own eyes."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Fair enough. Let's each choose our own camp and share our stories afterwards."
+        }
+      ],
+      "translation_cn": "Lucy 问 Tom 选了哪个海洋夏令营;Tom 想去观鲸营,能协助真正的研究团队,跟踪鲸并拍鳍照辨认;Lucy 更想去潜水营学用水下摄像机,因为想亲眼看珊瑚礁;两人决定各选各的,之后分享见闻。",
+      "questions": [
+        {
+          "stem": "Which camp is Tom thinking of joining?",
+          "options": [
+            "The whale watching camp.",
+            "The diving camp.",
+            "The sailing camp.",
+            "The fishing camp."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What would Tom do at his camp?",
+          "options": [
+            "Clean the beaches all day.",
+            "Follow whales and photograph their fins.",
+            "Drive a research ship.",
+            "Catch fish for dinner."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Lucy prefer the diving camp?",
+          "options": [
+            "She wants to see coral reefs herself.",
+            "It is much cheaper.",
+            "It is closer to home.",
+            "Her teacher chose it for her."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Tom's worry about diving?",
+          "options": [
+            "It takes too long.",
+            "It may be dangerous for beginners.",
+            "There are no cameras.",
+            "It is boring for beginners."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they finally decide to do?",
+          "options": [
+            "Join the same camp together.",
+            "Stay at home all summer.",
+            "Each choose a camp and share stories later.",
+            "Give up both camps."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 All About Whales",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Whales are among the largest and most intelligent creatures in the sea.",
+        "Scientists divide the main types of whales by the way they feed.",
+        "Whales use sounds both to talk to one another and to find their way.",
+        "Each whale has slightly different fins, which help researchers tell them apart.",
+        "By studying whales, we learn a great deal about the health of the ocean."
+      ],
+      "translation_cn": "鲸是海里最大、最聪明的生物之一;科学家按进食方式划分鲸的主要类型;鲸用声音彼此交流并辨别方向;每头鲸的鳍略有不同,帮助研究者辨认;通过研究鲸,我们能了解海洋的健康状况。",
+      "questions": [
+        {
+          "stem": "How are the main types of whales divided?",
+          "options": [
+            "By their colour.",
+            "By their age.",
+            "By where they sleep.",
+            "By the way they feed."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do whales use sounds for?",
+          "options": [
+            "To communicate and to find their way.",
+            "Only to scare ships away.",
+            "Only to sleep better.",
+            "To break the ice."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What helps researchers tell whales apart?",
+          "options": [
+            "Their names.",
+            "Their slightly different fins.",
+            "Their numbers painted on them.",
+            "Their songs alone."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the passage say about whales' intelligence?",
+          "options": [
+            "They are among the most foolish animals.",
+            "They cannot learn anything.",
+            "They are among the most intelligent sea creatures.",
+            "They are no smarter than fish."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why is studying whales useful?",
+          "options": [
+            "It helps us catch more of them.",
+            "It makes the sea smaller.",
+            "It has no real purpose.",
+            "It teaches us about the health of the ocean."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 A Visit to the Research Ship",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Guide",
+          "text": "Welcome aboard Kexue, one of China's most advanced research vessels."
+        },
+        {
+          "speaker": "Student",
+          "text": "It's huge! People call it a moving laboratory on the sea, don't they?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "That's right. We can study samples within hours of bringing them up."
+        },
+        {
+          "speaker": "Student",
+          "text": "How deep can your robots go?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Our vehicle Faxian can dive far below the surface to survey the sea floor."
+        },
+        {
+          "speaker": "Student",
+          "text": "And it brings samples back to the ship?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Yes, tons of geological samples that our scientists then examine here."
+        },
+        {
+          "speaker": "Student",
+          "text": "No wonder Kexue is in a league of its own. Thank you for the tour!"
+        }
+      ],
+      "translation_cn": "讲解员欢迎学生登上“科学号”科考船;学生说它被称作海上移动实验室;讲解员说采样后几小时内就能研究;深潜器“发现号”能下潜到海底进行勘测并带回大量地质样本供船上科学家研究;学生感叹科学号独领风骚并致谢。",
+      "questions": [
+        {
+          "stem": "What is Kexue often called?",
+          "options": [
+            "A moving laboratory on the sea.",
+            "A floating hotel.",
+            "A fishing boat.",
+            "A war ship."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How soon can the team study the samples?",
+          "options": [
+            "After several years.",
+            "Within hours of bringing them up.",
+            "Never on the ship.",
+            "Only back on land."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the vehicle Faxian do?",
+          "options": [
+            "It flies above the ship.",
+            "It cleans the deck.",
+            "It dives deep to survey the sea floor.",
+            "It carries the students home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Faxian bring back?",
+          "options": [
+            "Fresh fish for lunch.",
+            "Photos of the sky.",
+            "Empty boxes.",
+            "Tons of geological samples."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does the student feel about Kexue at the end?",
+          "options": [
+            "It is unusual and impressive.",
+            "It is too small to matter.",
+            "It is just an ordinary boat.",
+            "It is not worth visiting."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 The Trouble with Plastic",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Plastic pollution has become one of the biggest dangers to our oceans.",
+        "Tiny pieces of plastic harm fish, birds and other marine creatures.",
+        "Shockingly, plastic has even been found in the tap water we drink.",
+        "Some experts say we should tax plastic bottles so that people use fewer.",
+        "Every small action, from using less plastic to cleaning a beach, can help."
+      ],
+      "translation_cn": "塑料污染已成为海洋最大的危险之一;细小的塑料碎片伤害鱼、鸟和其他海洋生物;令人震惊的是,塑料甚至已在我们喝的自来水中被发现;一些专家说应对塑料瓶征税,以便人们少用;从少用塑料到清理海滩,每个小行动都有帮助。",
+      "questions": [
+        {
+          "stem": "What is described as one of the biggest dangers to the oceans?",
+          "options": [
+            "Loud noise.",
+            "Plastic pollution.",
+            "Cold weather.",
+            "Too many ships."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where has plastic shockingly been found?",
+          "options": [
+            "In the sun.",
+            "In the moon.",
+            "In our tap water.",
+            "In the desert sand."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do some experts suggest doing?",
+          "options": [
+            "Drinking less water.",
+            "Catching more fish.",
+            "Banning all beaches.",
+            "Taxing plastic bottles."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What harms fish, birds and other creatures?",
+          "options": [
+            "Tiny pieces of plastic.",
+            "Fresh rain.",
+            "Soft music.",
+            "Warm sunshine."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the speaker say about small actions?",
+          "options": [
+            "Small actions are useless.",
+            "Each small action can help.",
+            "Only governments can help.",
+            "Nothing can be done."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Planning a Dive",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Captain",
+          "text": "Tomorrow's dive will take us to a depth of about three hundred metres."
+        },
+        {
+          "speaker": "Diver",
+          "text": "That's deep. Will we use the manned submersible?"
+        },
+        {
+          "speaker": "Captain",
+          "text": "Yes, but only two of us can go inside the small capsule."
+        },
+        {
+          "speaker": "Diver",
+          "text": "What's our main task down there?"
+        },
+        {
+          "speaker": "Captain",
+          "text": "We'll film the coral and collect a few samples from the sea floor."
+        },
+        {
+          "speaker": "Diver",
+          "text": "Should I worry about the cold and the pressure?"
+        },
+        {
+          "speaker": "Captain",
+          "text": "The capsule keeps us safe, but follow every step of the plan exactly."
+        },
+        {
+          "speaker": "Diver",
+          "text": "Understood. I'll check all the cameras and lights tonight."
+        }
+      ],
+      "translation_cn": "船长说明天下潜约三百米深;潜水员问是否用载人潜水器;船长说会用,但小舱只能进两人;主要任务是拍珊瑚并从海底采几份样本;潜水员问要不要担心寒冷和压力;船长说舱内安全,但要严格按计划每一步执行;潜水员表示今晚检查所有摄像机和灯。",
+      "questions": [
+        {
+          "stem": "How deep will tomorrow's dive go?",
+          "options": [
+            "About three metres.",
+            "About thirty kilometres.",
+            "About three hundred metres.",
+            "Just below the surface."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How many people can go inside the capsule?",
+          "options": [
+            "The whole crew.",
+            "Exactly ten.",
+            "Nobody at all.",
+            "Only two."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is the main task during the dive?",
+          "options": [
+            "To film coral and collect samples.",
+            "To catch large fish.",
+            "To race another submersible.",
+            "To clean the ship's deck."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the captain tell the diver to do about safety?",
+          "options": [
+            "Ignore the plan and improvise.",
+            "Follow every step of the plan exactly.",
+            "Stay on the ship instead.",
+            "Swim outside the capsule."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will the diver do tonight?",
+          "options": [
+            "Go straight to sleep.",
+            "Cancel the whole dive.",
+            "Check all the cameras and lights.",
+            "Repaint the submersible."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Why We Explore the Sea",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "People have explored less than five percent of the world's oceans.",
+        "Yet the sea covers most of our planet and shapes our climate.",
+        "Exploring it may lead to new medicines, food and sources of energy.",
+        "It can also help scientists predict events such as earthquakes.",
+        "The more we understand the sea, the better we can protect it."
+      ],
+      "translation_cn": "人类对世界海洋的探索还不到百分之五;然而海洋覆盖了地球大部分并影响着气候;探索海洋也许会带来新药、新食物和新能源;还能帮助科学家预测地震等事件;我们越了解海洋,就越能保护它。",
+      "questions": [
+        {
+          "stem": "How much of the oceans have people explored?",
+          "options": [
+            "Almost all of it.",
+            "Exactly half of it.",
+            "None of it at all.",
+            "Less than five percent."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the sea do to our planet?",
+          "options": [
+            "It covers most of it and shapes the climate.",
+            "It makes the land disappear.",
+            "It has no effect on us.",
+            "It stops the weather completely."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What might exploring the sea lead to?",
+          "options": [
+            "Less food for everyone.",
+            "New medicines, food and energy.",
+            "The end of all medicine.",
+            "Fewer scientists."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What event can sea research help predict?",
+          "options": [
+            "Birthday parties.",
+            "Football matches.",
+            "Earthquakes.",
+            "School exams."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "We should never study the sea.",
+            "The sea is not important.",
+            "Exploration is a waste of time.",
+            "Understanding the sea helps us protect it."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

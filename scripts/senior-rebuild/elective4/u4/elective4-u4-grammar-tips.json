@@ -1,0 +1,35 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "grade": 12,
+  "content": {
+    "title": "短语复习速查:动词短语 · 介词搭配 · 固定习语",
+    "intro": "短语是英语的'血肉'。三大类要分清:① 动词短语/短语动词(动词+小品词,意义常引申,如 give away ≠ give);② 介词搭配(形容词/名词/动词后跟固定介词,如 be devoted to);③ 固定搭配与习语(整体意义固定,如 make a difference)。判断口诀:记搭配、辨小品词、抠介词。",
+    "table": {
+      "headers": ["类别", "例子 / 含义"],
+      "rows": [
+        ["动词短语", "take up 开始从事 · carry on 继续 · give away 捐出 · set up 创办 · come up with 想出"],
+        ["短语动词(可分)", "hand out 分发 · hand in 上交 · give up 放弃 · throw away 扔掉"],
+        ["介词搭配", "be devoted to 致力于 · be grateful for 感激 · in need of 需要 · on behalf of 代表"],
+        ["固定习语", "make a difference 起作用 · lend a hand 帮忙 · take … for granted 视为理所当然 · in return 作为回报"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "同一动词配不同小品词,意义大不同:give up(放弃)/ give away(捐出)/ give back(回馈)", "mark": "看句意选小品词" },
+      { "rule": "be devoted/committed/used to 中的 to 是介词,后接动名词(doing),不是动词原形", "mark": "be devoted to helping √" },
+      { "rule": "固定习语整体记忆,不可随意换词:make a difference(不可 make a different)", "mark": "difference 是名词" },
+      { "rule": "can't help doing / it's no use doing / be worth doing 后一律用动名词", "mark": "couldn't help smiling √" }
+    ],
+    "why": [
+      "短语动词里的小品词(up/away/out…)往往改变甚至颠覆动词本义,所以必须整体记搭配;介词搭配和习语同理——错一个小词,意思就变或不地道。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频考'选正确小品词'与'选正确介词';读写中能否地道用短语直接影响语言分。",
+      "易混对子:hand out vs hand in;give up vs give away;be grateful for(事)vs be grateful to(人);in need of vs in need。"
+    ],
+    "examVsReal": [
+      { "exam": "make a difference to sb's life(考试规范搭配)", "real": "really make a difference / make a real difference", "note": "口语里常加 really 或形容词,但核心搭配不变" },
+      { "exam": "on behalf of the whole class（正式书面）", "real": "for the whole class / speaking for everyone", "note": "口语常用更简单的 for…;on behalf of 多见于正式致辞" }
+    ]
+  }
+}

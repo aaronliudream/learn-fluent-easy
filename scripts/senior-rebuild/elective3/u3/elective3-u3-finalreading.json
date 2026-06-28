@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(环保主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lin moved to a town covered in smog, she could hardly see the hills nearby and often felt unwell. Instead of complaining, she joined a green group that planted trees and asked neighbours to burn less coal. A few years later, the air was clear again, and Lin felt proud that her small actions had helped her whole community breathe more easily.",
+    "questions": [
+      {
+        "q": "What did Lin do instead of complaining about the smog?",
+        "options": [
+          "She took part in tree planting and urged neighbours to use less coal.",
+          "She moved away from the town at once.",
+          "She kept all her windows tightly closed.",
+          "She did nothing and waited for help."
+        ],
+        "answer": "A",
+        "explanation": "原文 'joined a green group that planted trees and asked neighbours to burn less coal' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Lin feel a few years later?",
+        "options": [
+          "Sad that nothing had changed.",
+          "Proud that her actions helped her community breathe more easily.",
+          "Sorry that she had ever helped.",
+          "Worried that the smog was getting worse."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt proud that her small actions had helped her whole community breathe more easily'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

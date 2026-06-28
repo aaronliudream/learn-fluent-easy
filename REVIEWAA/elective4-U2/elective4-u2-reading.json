@@ -1,0 +1,338 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Iconic Attractions",
+  "source": "人教版2019选择性必修四 Unit 2 同主题阅读(自由女神像/长城/悉尼歌剧院/埃菲尔铁塔/都江堰/迪吉里杜管)。词限本单元/高中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Statue of Liberty",
+      "topic_cn": "说明·自由女神像",
+      "body": "The Statue of Liberty is one of the most iconic attractions in the United States. Located on a small island in New York Harbour, it was given to the American people by France as a gift of friendship. The grand statue, made of metal sheets over an iron frame, was finished in 1886. It shows a woman holding a torch high in one hand, and it has become a worldwide symbol of freedom and liberty. For millions of people arriving by ship long ago, the statue was the first thing they saw, and it gave them hope of a new life. Today, visitors can take a boat to the island and climb the steps inside the statue to enjoy the view over the harbour. The site is preserved with great care, so that people from all over the world can still admire this famous symbol.",
+      "vocab_notes": [
+        {
+          "word": "liberty",
+          "cn": "自由"
+        },
+        {
+          "word": "located",
+          "cn": "位于"
+        },
+        {
+          "word": "iconic",
+          "cn": "标志性的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where does the Statue of Liberty stand?",
+          "options": [
+            "On a small island near New York City.",
+            "In the centre of Paris.",
+            "On top of a high mountain.",
+            "Inside a large museum."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Located on a small island in New York Harbour' 的转述。"
+        },
+        {
+          "stem": "Why was the statue important to people arriving by ship?",
+          "options": [
+            "It told them the weather.",
+            "Seeing it first filled the newcomers with hope for a fresh start.",
+            "It sold them food and water.",
+            "It was a place to stay overnight."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the first thing they saw… gave them hope of a new life' 的转述。"
+        },
+        {
+          "stem": "What can visitors do at the site today?",
+          "options": [
+            "Climb the steps and look out over the harbour.",
+            "Buy the statue.",
+            "Live inside the torch.",
+            "Move the statue to another country."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'climb the steps inside the statue to enjoy the view over the harbour' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Great Wall of China",
+      "topic_cn": "说明·长城",
+      "body": "The Great Wall is perhaps the most famous attraction in China. Built over many hundreds of years, it stretches for thousands of kilometres across mountains, deserts and green valleys. The wall was not made all at once. Different parts were constructed by different states, and later they were joined together to form one long line of defence. Made of stone, brick and earth, the wall protected the people from violent attacks from the north. Along the top there were watchtowers, where soldiers could light fires to warn others of danger. Today, the Great Wall no longer keeps anyone out, but it draws visitors from every corner of the world. Many people say that climbing even a short section is hard work, yet the view from the top is well worth the effort. Recognised as a world heritage site, the wall reminds us of the skill and patience of those who built it long ago.",
+      "vocab_notes": [
+        {
+          "word": "violent",
+          "cn": "猛烈的"
+        },
+        {
+          "word": "construct",
+          "cn": "建造"
+        },
+        {
+          "word": "heritage",
+          "cn": "遗产"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How was the Great Wall created?",
+          "options": [
+            "It was finished in a single year.",
+            "Different parts were built and later joined into one line.",
+            "It was carved from one huge rock.",
+            "It grew naturally over time."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Different parts were constructed… joined together to form one long line' 的转述。"
+        },
+        {
+          "stem": "What were the watchtowers used for?",
+          "options": [
+            "Selling food to travellers.",
+            "Storing water for farms.",
+            "Lighting fires to warn people of danger.",
+            "Holding sports events."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'soldiers could light fires to warn others of danger' 的转述。"
+        },
+        {
+          "stem": "What does the wall remind people of today?",
+          "options": [
+            "The wealth of modern cities.",
+            "The best time to grow crops.",
+            "The number of tourists each year.",
+            "How skilful and patient the people who built it were."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'reminds us of the skill and patience of those who built it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Sydney Opera House",
+      "topic_cn": "说明·悉尼歌剧院",
+      "body": "Few buildings in the world are as easy to recognise as the Sydney Opera House. Located by the water in one of Australia's busiest harbours, it has a roof shaped like white sails or shells, which seem to catch the wind. The grand building was designed by an architect from Denmark, and its construction was far from straightforward. The work took many more years than planned, and it cost much more money than expected. Some people doubted it would ever be finished. When it finally opened in 1973, however, it quickly became an iconic symbol not just of the city but of the whole country. Inside, there are concert halls where music is performed almost every night. Outside, visitors love to take photos with the white roof behind them. Today the Opera House is one of the most photographed attractions on Earth, and it shows how a bold idea can change the face of a city forever.",
+      "vocab_notes": [
+        {
+          "word": "straightforward",
+          "cn": "简单的"
+        },
+        {
+          "word": "construction",
+          "cn": "建造"
+        },
+        {
+          "word": "grand",
+          "cn": "宏大的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is special about the roof of the Opera House?",
+          "options": [
+            "Its white curves look like sails catching the wind.",
+            "It is painted bright red.",
+            "It can be moved by hand.",
+            "It is made entirely of glass."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a roof shaped like white sails or shells' 的转述。"
+        },
+        {
+          "stem": "What does the text say about building the Opera House?",
+          "options": [
+            "It was quick and cheap.",
+            "It took longer and cost more than expected.",
+            "It needed no money at all.",
+            "It was built in one weekend."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'took many more years than planned… cost much more money than expected' 的转述。"
+        },
+        {
+          "stem": "What lesson does the writer draw from the Opera House?",
+          "options": [
+            "Old buildings are always better.",
+            "Music halls should be small.",
+            "One daring plan can reshape a whole city for good.",
+            "Tourists should stay away from it."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'a bold idea can change the face of a city forever' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Eiffel Tower",
+      "topic_cn": "说明·埃菲尔铁塔",
+      "body": "The Eiffel Tower is the most famous landmark in France and one of the most visited monuments in the world. But it was not always so loved. When it was first proposed in the 1880s, many people were strongly against it. They claimed that such a tall iron structure would destroy the beauty of the city's skyline. The chief engineer replied that the tower was needed to show the great efforts of the French people and the progress of modern science. In the end, the tower was built in time for a great fair held in the city. Planned at first as a temporary structure, it was meant to be taken down after twenty years. However, it proved far too useful as a tall tower for sending radio signals, so it was allowed to stay. Little by little, people came to love it, and today the tower stands as a proud symbol of the whole country.",
+      "vocab_notes": [
+        {
+          "word": "monument",
+          "cn": "纪念碑;历史遗迹"
+        },
+        {
+          "word": "temporary",
+          "cn": "暂时的"
+        },
+        {
+          "word": "propose",
+          "cn": "提议"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did many people feel about the tower at first?",
+          "options": [
+            "They loved it immediately.",
+            "They did not notice it.",
+            "They wanted it to be taller.",
+            "They strongly disliked the idea."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'many people were strongly against it' 的转述。"
+        },
+        {
+          "stem": "Why was the tower not taken down after twenty years?",
+          "options": [
+            "It was useful for sending radio signals.",
+            "There was no money to remove it.",
+            "It had already fallen down.",
+            "No one remembered it was there."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'too useful as a tall tower for sending radio signals' 的转述。"
+        },
+        {
+          "stem": "How do people feel about the tower today?",
+          "options": [
+            "They still want it removed.",
+            "They are proud of it as a national symbol.",
+            "They think it is too short.",
+            "They have forgotten about it."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'stands as a proud symbol of the whole country' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Dujiangyan: An Ancient Wonder",
+      "topic_cn": "说明·都江堰",
+      "body": "Dujiangyan is a remarkable example of ancient engineering, and it is still in use today after more than two thousand years. Long ago, the people who lived along the banks of the Min River suffered from yearly floods. A wise governor studied the problem with great care and led a team to solve it. They built a long wall in the river to send part of the water in a different direction. Then they cut a channel through a nearby mountain so that the extra water could flow away safely. After the system was finished, the terrible floods stopped. What is more, the redirected water was used to water the fields, and the region became one of the richest farming areas in the country. If you visit today, you will see an unusual stone construction that looks like a fish's mouth. Recognised as a heritage site, Dujiangyan has protected farms and prevented floods for over twenty centuries.",
+      "vocab_notes": [
+        {
+          "word": "construction",
+          "cn": "建筑物;建造"
+        },
+        {
+          "word": "heritage",
+          "cn": "遗产"
+        },
+        {
+          "word": "channel",
+          "cn": "水道;渠"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What problem did the local people face long ago?",
+          "options": [
+            "Too little rain for their crops.",
+            "Attacks from wild animals.",
+            "Floods from the river every year.",
+            "A shortage of stone."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'suffered from yearly floods' 的转述。"
+        },
+        {
+          "stem": "How did the team deal with the extra water?",
+          "options": [
+            "They stored it in huge tanks.",
+            "They sold it to other towns.",
+            "They left the water where it was.",
+            "They dug a passage in the hillside to let the extra water escape."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'cut a channel through a nearby mountain so that the extra water could flow away' 的转述。"
+        },
+        {
+          "stem": "What extra benefit did the system bring?",
+          "options": [
+            "It helped the region become rich farmland.",
+            "It created a new mountain.",
+            "It stopped all the rain.",
+            "It made the river disappear."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the redirected water was used to water the fields… one of the richest farming areas' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Sound of the Didgeridoo",
+      "topic_cn": "说明·迪吉里杜管",
+      "body": "When travellers think of Australia, they often picture beaches and koalas, but one of its most special treasures is a musical instrument called the didgeridoo. It is made from a tree branch which is hollow inside. To play it, a person puts his mouth on one end and blows while making his lips vibrate. Unlike a horn, the didgeridoo has no finger holes at all. To change the pitch, the player must change the shape of his mouth. A skilled player can make sound for a very long time without stopping to breathe. He does this by breathing in through his nose while breathing out through his mouth at the same time. The instrument has been used by the native people of Australia for thousands of years, and its deep, rolling sound is closely connected with their love of the natural world. For many visitors, hearing the didgeridoo played live is an unforgettable part of their trip.",
+      "vocab_notes": [
+        {
+          "word": "hollow",
+          "cn": "中空的"
+        },
+        {
+          "word": "vibrate",
+          "cn": "振动"
+        },
+        {
+          "word": "pitch",
+          "cn": "音高"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the didgeridoo made from?",
+          "options": [
+            "A piece of metal.",
+            "A hollow tree branch.",
+            "A large shell.",
+            "A block of stone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'made from a tree branch which is hollow inside' 的转述。"
+        },
+        {
+          "stem": "How does a player change the pitch of the sound?",
+          "options": [
+            "By pressing finger holes.",
+            "By turning a key on the side.",
+            "By altering how his mouth is shaped.",
+            "By blowing harder only."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'change the pitch, the player must change the shape of his mouth' 的转述。"
+        },
+        {
+          "stem": "What is the instrument's sound closely linked with?",
+          "options": [
+            "The wealth of big cities.",
+            "Modern pop music.",
+            "The taste of local food.",
+            "The native people's love of nature."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'closely connected with their love of the natural world' 的转述。"
+        }
+      ]
+    }
+  ]
+}

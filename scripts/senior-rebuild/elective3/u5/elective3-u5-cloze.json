@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Poems",
+  "source": "人教版2019选择性必修三 Unit 5 同主题完形(我写第一首诗/俳句课/诗歌朗诵会/读懂一首诗/诗歌比赛/民谣到诗)。用词限 U5/初中/常见词,答案唯一,4选项同词性,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Poem",
+      "text": "Last term our teacher asked each of us to (1)____ a short poem of our own. At first I thought it would be (2)____, because I was only an amateur and had never tried before. She told me to start with a (3)____ that mattered to me, and then to make a list of the words I wanted to (4)____. I chose my little brother, who is always (5)____ me and laughing. Slowly the lines came together, and I felt a quiet (6)____ of joy. When I read the poem (7)____, I could hear that two of the lines (8)____ nicely. My teacher said the (9)____ of the words sounded just like a song. That was the day (10)____ I first fell in love with writing poetry.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "write",
+            "eat",
+            "sell",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "write a poem 写诗;其余动词不搭。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "delicious",
+            "difficult",
+            "tasty",
+            "sunny"
+          ],
+          "answer_index": 1,
+          "explanation": "thought it would be difficult 觉得会很难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "ticket",
+            "theme",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "start with a theme 从主题开始。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "drop",
+            "lose",
+            "hide",
+            "use"
+          ],
+          "answer_index": 3,
+          "explanation": "words I wanted to use 想用的词。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "teasing",
+            "selling",
+            "buying",
+            "cooking"
+          ],
+          "answer_index": 0,
+          "explanation": "always teasing me 总是逗弄我。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "feeling",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "a feeling of joy 一种喜悦之情。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "alone",
+            "asleep",
+            "aloud",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "read the poem aloud 大声朗读。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "broke",
+            "ate",
+            "left",
+            "rhymed"
+          ],
+          "answer_index": 3,
+          "explanation": "the lines rhymed 诗行押韵。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rhythm",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the rhythm of the words 词语的节奏。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "where",
+            "when",
+            "why",
+            "whose"
+          ],
+          "answer_index": 1,
+          "explanation": "the day when 时间先行词、从句完整 → when。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Lesson on the Haiku",
+      "text": "Today our English class learned about a Japanese (1)____ called the haiku. Our teacher explained that it has just seventeen (2)____, set out in three short lines. The three lines hold five, seven and five sounds (3)____. Although it is very (4)____, a haiku can still paint a clear picture in the reader's mind. She showed us one (5)____ about a fallen blossom drifting back towards its branch, and another about a (6)____ butterfly resting in the sun. With so (7)____ words, the poet still creates a special (8)____. We then tried to (9)____ our own haiku about the rain outside the window. It was harder than it looked, but by the end of the lesson everyone had (10)____ a tiny poem of their own.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "machine",
+            "form",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a Japanese form 一种日本诗体;同为名词。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "tickets",
+            "machines",
+            "syllables"
+          ],
+          "answer_index": 3,
+          "explanation": "seventeen syllables 十七个音节。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "respectively",
+            "loudly",
+            "slowly",
+            "angrily"
+          ],
+          "answer_index": 0,
+          "explanation": "five, seven and five respectively 依次为。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "tall",
+            "short",
+            "heavy",
+            "wide"
+          ],
+          "answer_index": 1,
+          "explanation": "very short 很短。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "song",
+            "price",
+            "haiku",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "showed us one haiku 给我们看一首俳句。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "heavy",
+            "loud",
+            "angry",
+            "delicate"
+          ],
+          "answer_index": 3,
+          "explanation": "a delicate butterfly 一只脆弱的蝴蝶。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "few",
+            "many",
+            "loud",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "so few words 这么少的词。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "mood",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "a special mood 一种特别的情绪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "write",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "write our own haiku 写自己的俳句。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "bought",
+            "lost",
+            "sold",
+            "created"
+          ],
+          "answer_index": 3,
+          "explanation": "had created a tiny poem 创作了一首小诗。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Poetry Evening",
+      "text": "Every spring our school holds a poetry evening (1)____ students read their favourite poems aloud. This year I chose a poem (2)____ I had loved since I was a child. Before the show, I practised many times so that I could (3)____ every line clearly and with feeling. My hands were shaking, for I am only an (4)____, not a real poet. But my teacher smiled and told me to find the (5)____ of the words and let my voice follow it. When my turn came, I took a deep breath and began to (6)____. To my surprise, the room fell silent, (7)____ made me feel proud. People said the poem's gentle (8)____ moved them almost to tears. That evening I learned that a poem comes truly (9)____ only when it is read aloud. I will never forget the moment (10)____ the whole audience clapped for me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "where",
+            "which",
+            "who",
+            "whose"
+          ],
+          "answer_index": 0,
+          "explanation": "the evening where 地点(场合)、从句完整 → where。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "who",
+            "that",
+            "where",
+            "when"
+          ],
+          "answer_index": 1,
+          "explanation": "a poem that I had loved 指物缺宾语 → that。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "recite",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "recite every line 吟诵每一行。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "expert",
+            "engineer",
+            "doctor",
+            "amateur"
+          ],
+          "answer_index": 3,
+          "explanation": "only an amateur 只是个业余爱好者。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rhythm",
+            "price",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "the rhythm of the words 词语的节奏。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "read",
+            "cook",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "began to read 开始朗读。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "that",
+            "what",
+            "which",
+            "where"
+          ],
+          "answer_index": 2,
+          "explanation": "非限制性 which 指代前句 → which。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "mood"
+          ],
+          "answer_index": 3,
+          "explanation": "the poem's gentle mood 诗温柔的情绪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "alive",
+            "asleep",
+            "afraid",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "comes alive 鲜活起来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "where",
+            "when",
+            "why",
+            "whose"
+          ],
+          "answer_index": 1,
+          "explanation": "the moment when 时间先行词、从句完整 → when。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Reading a Poem Slowly",
+      "text": "Many readers give up on poetry because they read it too (1)____. A poem is not like a story; it asks you to slow down and (2)____ each picture it paints. First, look for the main (3)____ that the poet places in your mind. Next, ask yourself what (4)____ the poet wants to share, whether it is happy or sad. The sounds and rhymes give a poem a musical (5)____, so it is best to read it (6)____. If you meet a word you do not know, do not (7)____; the picture and the sound often help you guess its meaning. Read the same poem more than (8)____, for each time usually brings something new. Little by little you will begin to (9)____ how beautiful a few simple lines can be. Then poetry will no longer feel (10)____ to you at all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "slowly",
+            "softly",
+            "fast",
+            "kindly"
+          ],
+          "answer_index": 2,
+          "explanation": "read it too fast 读得太快。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "imagine"
+          ],
+          "answer_index": 3,
+          "explanation": "imagine each picture 想象每个画面。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "image",
+            "price",
+            "ticket",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the main image 主要意象。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "feeling",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "what feeling 什么感受。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "machine",
+            "garden",
+            "quality",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a musical quality 音乐般的特质。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "alone",
+            "asleep",
+            "afraid",
+            "aloud"
+          ],
+          "answer_index": 3,
+          "explanation": "read it aloud 大声朗读。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "worry",
+            "sing",
+            "sell",
+            "cook"
+          ],
+          "answer_index": 0,
+          "explanation": "do not worry 不要担心。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "never",
+            "once",
+            "nowhere",
+            "anyone"
+          ],
+          "answer_index": 1,
+          "explanation": "more than once 不止一次。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forget",
+            "lose",
+            "appreciate",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "appreciate how beautiful 欣赏其美。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "tasty",
+            "sunny",
+            "loud",
+            "strange"
+          ],
+          "answer_index": 3,
+          "explanation": "feel strange 感到陌生。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Entering the Poetry Contest",
+      "text": "Our teacher told us about a poetry (1)____ that the city was holding for young writers. The (2)____ for sending in our work was the end of the month, so we had to hurry. Nora said she still needed time to (3)____ her writing, because her first lines did not yet sound right. Pitt did not want to (4)____ at all, for he thought his poems were too simple. But the teacher said that even an (5)____ can win if the feeling is true. George planned to (6)____ a poem about his grandmother, (7)____ had taught him many old songs. He chose his words with care so that the lines would (8)____ and flow like music. On the last day, he read his poem (9)____ to the class, and everyone clapped. He did not win first prize, but he felt proud of the (10)____ he had created.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "contest",
+            "price",
+            "machine",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a poetry contest 诗歌比赛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "deadline",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "the deadline 截止日期。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "polish",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "polish her writing 润色作品。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "cook",
+            "drive",
+            "enter"
+          ],
+          "answer_index": 3,
+          "explanation": "did not want to enter 不想参赛。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "amateur",
+            "engineer",
+            "doctor",
+            "driver"
+          ],
+          "answer_index": 0,
+          "explanation": "even an amateur 即便业余爱好者。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "write",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "write a poem 写一首诗。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "which",
+            "where",
+            "who",
+            "when"
+          ],
+          "answer_index": 2,
+          "explanation": "非限制性、指人(grandmother)作主语 → who。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "break",
+            "sell",
+            "sleep",
+            "rhyme"
+          ],
+          "answer_index": 3,
+          "explanation": "the lines would rhyme 诗行押韵。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "aloud",
+            "alone",
+            "asleep",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "read his poem aloud 大声朗读。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "poem",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "the poem he had created 他创作的诗。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "From Songs to Poems",
+      "text": "Long ago, before books or films existed, people made up simple songs about their daily (1)____. They sang about hunting in the forest or (2)____ crops in the fields. Because nothing was written down, the songs were passed on by (3)____, and over the years many (4)____ of them grew up. Each region slowly formed its own special (5)____ and tune. People also liked to tell long stories about past heroes, (6)____ they gave rhyme so that the words were easier to (7)____. At first these songs were very simple, but in time they became more (8)____ and more polished. They were no longer the work of villagers around a (9)____, but of true poets who cared deeply about their (10)____. In this way, music slowly turned into the poetry we know today.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "machines",
+            "lives",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "daily lives 日常生活。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "buying",
+            "cooking",
+            "sowing"
+          ],
+          "answer_index": 3,
+          "explanation": "sowing crops 播种庄稼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "mouth",
+            "price",
+            "machine",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "passed on by mouth 口口相传。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "variations",
+            "machines",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "many variations 许多变体。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "machine",
+            "rhythm",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "its own special rhythm 自己的节奏。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "but",
+            "or",
+            "nor",
+            "so"
+          ],
+          "answer_index": 3,
+          "explanation": "so they gave rhyme 因此加上押韵(表结果)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "remember",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "easier to remember 更易记住。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "complicated",
+            "tasty",
+            "sunny"
+          ],
+          "answer_index": 1,
+          "explanation": "more complicated 更复杂。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "machine",
+            "fire",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "around a fire 围着火堆。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machine",
+            "garden",
+            "ticket",
+            "art"
+          ],
+          "answer_index": 3,
+          "explanation": "cared about their art 在意他们的艺术。"
+        }
+      ]
+    }
+  ]
+}

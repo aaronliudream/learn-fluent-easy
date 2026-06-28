@@ -1,0 +1,493 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Poems",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修三 Unit 5 同主题听力(诗歌比赛对话/什么是俳句/选哪首诗对话/读诗的建议/写诗步骤对话/诗歌之美短文)。kind 长短交替 long,short,long,short,long,short。用词限 U5/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 The Poetry Contest",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Teacher",
+          "text": "Our city is holding a poetry contest. Would any of you like to enter?"
+        },
+        {
+          "speaker": "Nora",
+          "text": "I'd love to, but when is the deadline?"
+        },
+        {
+          "speaker": "Teacher",
+          "text": "You must send in your poem by the end of next week."
+        },
+        {
+          "speaker": "Nora",
+          "text": "Then I still need a few days to polish my writing."
+        },
+        {
+          "speaker": "Pitt",
+          "text": "I don't think I'll enter. My poems are far too simple."
+        },
+        {
+          "speaker": "Teacher",
+          "text": "Don't worry, Pitt. Even an amateur can win if the feeling is true."
+        },
+        {
+          "speaker": "George",
+          "text": "I'm going to write a poem about my grandmother and the songs she taught me."
+        },
+        {
+          "speaker": "Teacher",
+          "text": "That's a wonderful idea. Give it your best shot!"
+        }
+      ],
+      "translation_cn": "老师说城里要办诗歌比赛,问谁想参加;诺拉想参加,问截止日期;老师说下周末前交诗;诺拉说还需几天润色;皮特觉得自己的诗太简单,不想参加;老师鼓励说即便业余爱好者只要感情真挚也能获奖;乔治打算写一首关于祖母和她教的歌的诗;老师称赞并鼓励他全力以赴。",
+      "questions": [
+        {
+          "stem": "What is the teacher inviting the students to do?",
+          "options": [
+            "Enter a poetry contest.",
+            "Clean the classroom.",
+            "Sing a folk song.",
+            "Buy new books."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When must the poems be sent in?",
+          "options": [
+            "By tomorrow morning.",
+            "By the end of next week.",
+            "By the last day of the year.",
+            "There is no deadline."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Nora need a few more days?",
+          "options": [
+            "To polish her writing.",
+            "To find a new pen.",
+            "To learn to read.",
+            "To travel abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why doesn't Pitt want to enter at first?",
+          "options": [
+            "He has no time.",
+            "He thinks his poems are too simple.",
+            "He dislikes the teacher.",
+            "He has lost his poem."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is George going to write about?",
+          "options": [
+            "A trip to the sea.",
+            "His school football team.",
+            "His grandmother and her songs.",
+            "A famous painter."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 What Is a Haiku",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A haiku is a short form of poetry that comes from Japan.",
+        "It is made up of just seventeen syllables in three lines.",
+        "The three lines hold five, seven and five syllables respectively.",
+        "With so few words, a haiku can still paint a clear picture.",
+        "Many haiku describe a single quiet moment in nature."
+      ],
+      "translation_cn": "俳句是源自日本的一种短诗;仅由三行十七个音节组成;三行依次为五、七、五个音节;尽管词很少,俳句仍能描绘清晰的画面;许多俳句描写自然中安静的一瞬。",
+      "questions": [
+        {
+          "stem": "Where does the haiku come from?",
+          "options": [
+            "China.",
+            "England.",
+            "India.",
+            "Japan."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How many syllables does a haiku have?",
+          "options": [
+            "Seventeen.",
+            "Fourteen.",
+            "Five.",
+            "Seventy."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How are the syllables arranged?",
+          "options": [
+            "Seven in every line.",
+            "Five, seven and five.",
+            "Three in each line.",
+            "All on one line."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can a haiku do with very few words?",
+          "options": [
+            "Tell a long story.",
+            "List many names.",
+            "Paint a clear picture.",
+            "Repeat one word."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do many haiku describe?",
+          "options": [
+            "A busy city street.",
+            "A long war.",
+            "A football match.",
+            "A quiet moment in nature."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Choosing a Poem",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "I have to read a poem aloud tomorrow, but I can't decide which one."
+        },
+        {
+          "speaker": "Leo",
+          "text": "What about 'Dream' by Langston Hughes? It's very short."
+        },
+        {
+          "speaker": "Mia",
+          "text": "I like that one. It tells us to hold fast to our dreams."
+        },
+        {
+          "speaker": "Leo",
+          "text": "And its lines rhyme, so it sounds lovely when you read it aloud."
+        },
+        {
+          "speaker": "Mia",
+          "text": "True. But maybe I should choose a Tang poem instead."
+        },
+        {
+          "speaker": "Leo",
+          "text": "A Tang poem is beautiful too, but it may be harder to recite."
+        },
+        {
+          "speaker": "Mia",
+          "text": "You're right. I'll go with 'Dream'. It feels closer to my heart."
+        },
+        {
+          "speaker": "Leo",
+          "text": "Good choice. Just read it slowly and with feeling."
+        }
+      ],
+      "translation_cn": "米娅明天要朗诵一首诗却拿不定主意;利奥建议读休斯的《梦想》,很短;米娅喜欢,说它教人坚守梦想;利奥说它押韵,朗读起来好听;米娅又想读唐诗;利奥说唐诗也美,但可能更难吟诵;米娅决定选《梦想》,觉得更贴近内心;利奥让她慢慢地、带着感情读。",
+      "questions": [
+        {
+          "stem": "What does Mia need to do tomorrow?",
+          "options": [
+            "Read a poem aloud.",
+            "Write a song.",
+            "Paint a picture.",
+            "Give a speech about sports."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which poem does Leo first suggest?",
+          "options": [
+            "A Japanese haiku.",
+            "'Dream' by Langston Hughes.",
+            "A long sonnet.",
+            "A nursery rhyme."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the poem 'Dream' tell people to do?",
+          "options": [
+            "Sleep more.",
+            "Forget the past.",
+            "Hold fast to their dreams.",
+            "Travel far away."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why might a Tang poem be harder for Mia?",
+          "options": [
+            "It is too cheerful.",
+            "It has no meaning.",
+            "It is far too short.",
+            "It may be harder to recite."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which poem does Mia finally choose?",
+          "options": [
+            "'Dream'.",
+            "A Tang poem.",
+            "A haiku.",
+            "A limerick."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 How to Read a Poem Aloud",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Poetry should always be read aloud, for that is when you hear its music.",
+        "When you read aloud, start slowly and find the rhythm of the words.",
+        "Think about how the poem makes you feel before you begin.",
+        "Then read it with that emotion, pouring out your feelings.",
+        "Read it more than once, because each reading brings something new."
+      ],
+      "translation_cn": "诗歌应当大声朗读,因为那时你能听到它的音乐;朗读时要慢慢开始,找到词语的节奏;开始前想想这首诗带给你的感受;然后带着那份情感朗读,倾诉你的感情;多读几遍,因为每一遍都会带来新的东西。",
+      "questions": [
+        {
+          "stem": "Why should poetry be read aloud?",
+          "options": [
+            "To finish it faster.",
+            "To hear its music.",
+            "To make it shorter.",
+            "To hide its meaning."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How should you start when reading aloud?",
+          "options": [
+            "As fast as possible.",
+            "By shouting loudly.",
+            "Slowly, finding the rhythm.",
+            "By skipping lines."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you think about before you begin?",
+          "options": [
+            "The price of the book.",
+            "The time of day.",
+            "The colour of the page.",
+            "How the poem makes you feel."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How should you read the poem?",
+          "options": [
+            "With emotion, pouring out your feelings.",
+            "Without any feeling.",
+            "In total silence.",
+            "Word by word backwards."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why read a poem more than once?",
+          "options": [
+            "To waste time.",
+            "Each reading brings something new.",
+            "Because it is required by law.",
+            "To forget it sooner."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Writing Our Own Poem",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tom",
+          "text": "I want to write my own poem, but I don't know how to start."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Begin with a theme. Ask what message you want to give the reader."
+        },
+        {
+          "speaker": "Tom",
+          "text": "All right. I think I'll write about the wind on the hill."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Good. Now make a list of words that match that theme."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Like 'fly', 'kite', 'string' and 'sky'. Some of them even rhyme."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Perfect. Then check how well your words paint a picture in your head."
+        },
+        {
+          "speaker": "Tom",
+          "text": "And after that I read it aloud to hear how it sounds, right?"
+        },
+        {
+          "speaker": "Ann",
+          "text": "Exactly. Finally, give it a title, and your poem is ready."
+        }
+      ],
+      "translation_cn": "汤姆想写自己的诗却不知如何开始;安建议从主题入手,先想清楚要传达什么信息;汤姆决定写山上的风;安让他列出与主题相关的词;汤姆想到 fly、kite、string、sky,有些还押韵;安让他检查这些词能否在脑海中描绘画面;汤姆问之后是不是要朗读听听效果;安说没错,最后取个标题,诗就完成了。",
+      "questions": [
+        {
+          "stem": "What does Tom want to do?",
+          "options": [
+            "Buy a kite.",
+            "Sing a song.",
+            "Write his own poem.",
+            "Read a story."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Ann say he should begin with?",
+          "options": [
+            "A long title.",
+            "A list of names.",
+            "A drawing.",
+            "A theme and a message."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What theme does Tom choose?",
+          "options": [
+            "The wind on the hill.",
+            "The deep sea.",
+            "A busy city.",
+            "A football game."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ann tell him to do after listing words?",
+          "options": [
+            "Throw the list away.",
+            "Check how well the words paint a picture.",
+            "Translate it into Japanese.",
+            "Count the letters."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the last step Ann mentions?",
+          "options": [
+            "Sell the poem.",
+            "Hide the poem.",
+            "Give the poem a title.",
+            "Forget the poem."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 The Beauty of Poems",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Poems paint pictures with words, using images and comparisons.",
+        "Their sounds, rhythm and rhymes give them a musical quality.",
+        "A short poem can carry a deep feeling in only a few lines.",
+        "Some poems make us happy, while others fill us with quiet sorrow.",
+        "Whatever the feeling, a good poem stays in the mind for a long time."
+      ],
+      "translation_cn": "诗歌用文字描绘画面,运用意象和比喻;它们的声音、节奏和押韵赋予其音乐般的特质;一首短诗只用寥寥数行便能承载深沉的情感;有的诗让我们快乐,有的让我们充满淡淡的忧伤;无论是何种情感,一首好诗都会长久地留在心间。",
+      "questions": [
+        {
+          "stem": "How do poems paint pictures?",
+          "options": [
+            "With paint and brushes.",
+            "With photographs.",
+            "With numbers only.",
+            "With words, images and comparisons."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What gives poems a musical quality?",
+          "options": [
+            "Their sounds, rhythm and rhymes.",
+            "Their price.",
+            "Their length alone.",
+            "Their paper."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can a short poem carry?",
+          "options": [
+            "Nothing at all.",
+            "A deep feeling in a few lines.",
+            "Only a list of facts.",
+            "A whole history book."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What feeling do some poems fill us with?",
+          "options": [
+            "Hunger.",
+            "Boredom.",
+            "Quiet sorrow.",
+            "Anger only."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does a good poem do, whatever the feeling?",
+          "options": [
+            "Disappears at once.",
+            "Costs a lot of money.",
+            "Makes no sense.",
+            "Stays in the mind for a long time."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

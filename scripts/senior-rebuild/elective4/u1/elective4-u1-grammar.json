@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "grammar_title": "被动语态复习(Review of the Passive Voice)",
+  "source": "人教版2019选择性必修四 Unit 1 Discovering Useful Structures:被动语态复习(各时态被动 / 情态动词的被动 / 主动↔被动转换·by短语·不及物动词无被动·get done)。句子科幻主题且地道,被动形式为唯一正确项,干扰=主动/错时态被动。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "各时态的被动语态(is/was/will be/has been/had been/is being done)",
+      "overview": "主语是动作的承受者时用被动;be 的形式由时态决定:一般现在 am/is/are done、一般过去 was/were done、一般将来 will be done、现在完成 has/have been done、过去完成 had been done、现在进行 is/are being done、过去进行 was/were being done。"
+    },
+    {
+      "code": "u1.02",
+      "point": "情态动词的被动语态(can/must/should/may/might + be done)",
+      "overview": "情态动词后接 be done 构成被动:can be done、must be done、should be done、may/might be done、have to be done;否定与情态动词连用(cannot be done / must not be done)。"
+    },
+    {
+      "code": "u1.03",
+      "point": "主动↔被动转换 · by 短语 · 不及物动词无被动 · get done",
+      "overview": "及物动词才有被动;施动者用 by 引出;happen/appear/disappear/rise/fall/exist 等不及物动词没有被动;口语中常用 get done 表被动并强调结果或意外。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "Robots first ____ in science fiction novels many years ago.",
+      "options": [
+        "appeared",
+        "were appeared",
+        "are appeared",
+        "had appeared"
+      ],
+      "answer_index": 0,
+      "explanation": "appear 是不及物动词,无被动;主语是动作发出者,用主动一般过去 appeared。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Right now a new humanoid robot ____ in the laboratory next door.",
+      "options": [
+        "is built",
+        "is being built",
+        "builds",
+        "was built"
+      ],
+      "answer_index": 1,
+      "explanation": "现在此刻正在进行、主语是被造的对象 → 现在进行被动 is being built。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The whole surface of the earth ____ before the Time Traveller's eyes.",
+      "options": [
+        "was changing",
+        "changed",
+        "was being changed",
+        "is changed"
+      ],
+      "answer_index": 2,
+      "explanation": "过去某时正在发生、地表是被改变的对象 → 过去进行被动 was being changed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By the time he stopped the machine, the laboratory ____ completely.",
+      "options": [
+        "had rebuilt",
+        "was rebuilding",
+        "rebuilds",
+        "had been rebuilt"
+      ],
+      "answer_index": 3,
+      "explanation": "在过去某动作之前已完成、实验室是被重建的对象 → 过去完成被动 had been rebuilt。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Sophia, the AI robot, ____ many times by reporters around the world.",
+      "options": [
+        "has been interviewed",
+        "has interviewed",
+        "interviews",
+        "is interviewing"
+      ],
+      "answer_index": 0,
+      "explanation": "对现在有影响且主语是被采访者 → 现在完成被动 has been interviewed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The first Time Machine ____ at ten o'clock that very morning.",
+      "options": [
+        "started",
+        "was started",
+        "has started",
+        "is started"
+      ],
+      "answer_index": 1,
+      "explanation": "过去明确时间、机器是被启动的对象 → 一般过去被动 was started。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Robot soldiers ____ already ____ out in real war.",
+      "options": [
+        "have, tested",
+        "are, testing",
+        "have, been tested",
+        "had, tested"
+      ],
+      "answer_index": 2,
+      "explanation": "test out 及物、主语是被测试对象、对现在有影响 → 现在完成被动 have been tested。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "These days many household tasks ____ by smart machines.",
+      "options": [
+        "are doing",
+        "do",
+        "have done",
+        "are done"
+      ],
+      "answer_index": 3,
+      "explanation": "一般现在的习惯性事实、任务是被完成的对象 → 一般现在被动 are done。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A 3,000-seat venue ____ for the robot science fair next month.",
+      "options": [
+        "will be built",
+        "will build",
+        "is building",
+        "builds"
+      ],
+      "answer_index": 0,
+      "explanation": "将来、场馆是被建造的对象 → 一般将来被动 will be built。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "When I entered the room, I found the salesman's salary ____ at the meeting.",
+      "options": [
+        "was discussing",
+        "was being discussed",
+        "discussed",
+        "has been discussed"
+      ],
+      "answer_index": 1,
+      "explanation": "进入房间那一刻正在进行、薪水是被讨论的对象 → 过去进行被动 was being discussed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The Three-Body Problem ____ into English by Ken Liu in 2014.",
+      "options": [
+        "translated",
+        "has translated",
+        "was translated",
+        "is translating"
+      ],
+      "answer_index": 2,
+      "explanation": "过去明确施动者、小说是被翻译的对象 → 一般过去被动 was translated。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "At present, dangerous tasks ____ to robots rather than to people.",
+      "options": [
+        "are giving",
+        "give",
+        "were given",
+        "are given"
+      ],
+      "answer_index": 3,
+      "explanation": "一般现在的普遍做法、任务是被交付的对象 → 一般现在被动 are given。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Many strange things ____ before his eyes as the machine sped up.",
+      "options": [
+        "were being flashed",
+        "were flashing",
+        "flashed",
+        "are flashed"
+      ],
+      "answer_index": 0,
+      "explanation": "过去那段时间正在进行、事物是被闪现的对象 → 过去进行被动 were being flashed。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "So far, the AI device ____ no serious mistake in its calculations.",
+      "options": [
+        "has been made",
+        "has made",
+        "is made",
+        "was made"
+      ],
+      "answer_index": 1,
+      "explanation": "device 是动作发出者(犯错的主体)、对现在有影响 → 现在完成主动 has made;非被动。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Night came as if a lamp ____ by an unseen hand.",
+      "options": [
+        "was turning out",
+        "turned out",
+        "was being turned out",
+        "is turned out"
+      ],
+      "answer_index": 2,
+      "explanation": "过去那一刻正在发生、灯是被熄灭的对象 → 过去进行被动 was being turned out。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Citizenship ____ to Sophia by a country for the first time in history.",
+      "options": [
+        "gave",
+        "has given",
+        "is giving",
+        "was given"
+      ],
+      "answer_index": 3,
+      "explanation": "过去发生、公民身份是被授予的对象 → 一般过去被动 was given。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Each year more science fiction films ____ by studios all over the world.",
+      "options": [
+        "are produced",
+        "are producing",
+        "produce",
+        "had produced"
+      ],
+      "answer_index": 0,
+      "explanation": "一般现在的反复事实、影片是被制作的对象 → 一般现在被动 are produced。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He felt as if he ____ fast along a winding road through time.",
+      "options": [
+        "was driving",
+        "was being driven",
+        "drove",
+        "is driven"
+      ],
+      "answer_index": 1,
+      "explanation": "过去那一刻正在进行、他是被驱赶/带动的对象 → 过去进行被动 was being driven。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "By next year, smart robots ____ into thousands of ordinary homes.",
+      "options": [
+        "will introduce",
+        "are introducing",
+        "will have been introduced",
+        "introduced"
+      ],
+      "answer_index": 2,
+      "explanation": "到将来某时点之前完成、机器人是被引入的对象 → 将来完成被动 will have been introduced。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Before the party began, the whole house ____ by Tony.",
+      "options": [
+        "had transformed",
+        "was transforming",
+        "transforms",
+        "had been transformed"
+      ],
+      "answer_index": 3,
+      "explanation": "在过去动作之前已完成、房子是被改造的对象 → 过去完成被动 had been transformed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "A robot may not injure a human being, and a human ____ from harm.",
+      "options": [
+        "must be protected",
+        "must protect",
+        "must protecting",
+        "must be protect"
+      ],
+      "answer_index": 0,
+      "explanation": "情态动词 must 后接 be done;human 是被保护的对象 → must be protected。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Batteries ____ in checked luggage, as they might explode due to overheating.",
+      "options": [
+        "cannot carry",
+        "cannot be carried",
+        "cannot carrying",
+        "cannot be carry"
+      ],
+      "answer_index": 1,
+      "explanation": "情态动词 can 否定后接 be done;电池是被携带的对象 → cannot be carried。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mobile phones ____ during the robotics conference.",
+      "options": [
+        "must switch off",
+        "must be switch off",
+        "must be switched off",
+        "must switching off"
+      ],
+      "answer_index": 2,
+      "explanation": "情态动词 must + be done;手机是被关闭的对象 → must be switched off。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The damaged robot ____ before it is sent back to work.",
+      "options": [
+        "must repair",
+        "must be repair",
+        "must repairing",
+        "must be repaired"
+      ],
+      "answer_index": 3,
+      "explanation": "情态动词 must + be done;robot 是被修理的对象 → must be repaired。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Such a serious safety problem ____ at once by the engineers.",
+      "options": [
+        "should be dealt with",
+        "should deal with",
+        "should be deal with",
+        "should dealing with"
+      ],
+      "answer_index": 0,
+      "explanation": "情态动词 should + be done;deal with 为动词短语,被动保留 with → should be dealt with。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The three laws of robotics ____ by every machine without exception.",
+      "options": [
+        "must obey",
+        "must be obeyed",
+        "must be obey",
+        "must obeying"
+      ],
+      "answer_index": 1,
+      "explanation": "情态动词 must + be done;laws 是被遵守的对象 → must be obeyed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Any order given by a human ____ unless it conflicts with the First Law.",
+      "options": [
+        "should follow",
+        "should be follow",
+        "should be followed",
+        "should following"
+      ],
+      "answer_index": 2,
+      "explanation": "情态动词 should + be done;order 是被遵循的对象 → should be followed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Two hundred grammes of flour ____ to the cake mix by the kitchen robot.",
+      "options": [
+        "should add",
+        "should be add",
+        "should adding",
+        "should be added"
+      ],
+      "answer_index": 3,
+      "explanation": "情态动词 should + be done;flour 是被加入的对象 → should be added。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "These dangerous experiments ____ only inside a sealed laboratory.",
+      "options": [
+        "can be done",
+        "can do",
+        "can be do",
+        "can doing"
+      ],
+      "answer_index": 0,
+      "explanation": "情态动词 can + be done;experiments 是被做的对象 → can be done。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "It is hoped that such powerful AI ____ for good rather than for war.",
+      "options": [
+        "will use",
+        "will be used",
+        "will be use",
+        "will using"
+      ],
+      "answer_index": 1,
+      "explanation": "will + be done 构成将来被动;AI 是被使用的对象 → will be used。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "More care ____ when robots are allowed to drive on busy roads.",
+      "options": [
+        "must take",
+        "must be take",
+        "must be taken",
+        "must taking"
+      ],
+      "answer_index": 2,
+      "explanation": "情态动词 must + be done;care 是被采取的对象 → must be taken。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The space project ____ if the company runs out of money.",
+      "options": [
+        "may suspend",
+        "may be suspend",
+        "may suspending",
+        "may be suspended"
+      ],
+      "answer_index": 3,
+      "explanation": "情态动词 may + be done;project 是被暂停的对象 → may be suspended。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Personal data collected by the device ____ to strangers.",
+      "options": [
+        "must not be sold",
+        "must not sell",
+        "must not be sell",
+        "must not selling"
+      ],
+      "answer_index": 0,
+      "explanation": "情态动词 must 否定 + be done;data 是被出售的对象 → must not be sold。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "An AI conference of this size ____ months in advance.",
+      "options": [
+        "has to plan",
+        "has to be planned",
+        "has to be plan",
+        "has to planning"
+      ],
+      "answer_index": 1,
+      "explanation": "have to 后接 be done;conference 是被筹划的对象 → has to be planned。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "If a robot breaks the law, who ____ responsible for the harm?",
+      "options": [
+        "should hold",
+        "should be hold",
+        "should be held",
+        "should holding"
+      ],
+      "answer_index": 2,
+      "explanation": "情态动词 should + be done;hold sb responsible 的被动 → should be held。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The new software ____ before the robot leaves the factory.",
+      "options": [
+        "must test out",
+        "must be test out",
+        "must testing out",
+        "must be tested out"
+      ],
+      "answer_index": 3,
+      "explanation": "情态动词 must + be done;software 是被测试的对象 → must be tested out。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Such a wild idea about time travel ____ too quickly.",
+      "options": [
+        "should not be dismissed",
+        "should not dismiss",
+        "should not be dismiss",
+        "should not dismissing"
+      ],
+      "answer_index": 0,
+      "explanation": "情态动词 should 否定 + be done;idea 是被否定的对象 → should not be dismissed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Carry-on luggage of this weight ____ on board by airline rules.",
+      "options": [
+        "cannot allow",
+        "cannot be allowed",
+        "cannot be allow",
+        "cannot allowing"
+      ],
+      "answer_index": 1,
+      "explanation": "情态动词 can 否定 + be done;luggage 是被允许的对象 → cannot be allowed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "All members of the panel ____ smartly at the science fair.",
+      "options": [
+        "should dress up",
+        "should be dress",
+        "should be dressed",
+        "should dressing"
+      ],
+      "answer_index": 2,
+      "explanation": "be dressed 表'穿着'的被动状态;members 由 should + be done 引导 → should be dressed。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "A clear warning ____ before any robot is switched on for the first time.",
+      "options": [
+        "should give",
+        "should be give",
+        "should giving",
+        "should be given"
+      ],
+      "answer_index": 3,
+      "explanation": "情态动词 should + be done;warning 是被给出的对象 → should be given。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "After the great earthquake, no one knows exactly what ____ to the lab.",
+      "options": [
+        "happened",
+        "was happened",
+        "is happened",
+        "had been happened"
+      ],
+      "answer_index": 0,
+      "explanation": "happen 是不及物动词,没有被动 → 用主动 happened。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The strange machine ____ suddenly and was never seen again.",
+      "options": [
+        "was disappeared",
+        "disappeared",
+        "is disappeared",
+        "had been disappeared"
+      ],
+      "answer_index": 1,
+      "explanation": "disappear 不及物,无被动 → 主动 disappeared。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "With a sudden jolt, the Time Machine ____ on its side.",
+      "options": [
+        "got flipping",
+        "flips itself over by",
+        "got flipped",
+        "was flip"
+      ],
+      "answer_index": 2,
+      "explanation": "口语中 get done 表被动并强调意外结果;机器是被翻倒的对象 → got flipped。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The book first attracted attention when it ____ by Chinese-American author Ken Liu.",
+      "options": [
+        "translated",
+        "was translating",
+        "translates",
+        "was translated"
+      ],
+      "answer_index": 3,
+      "explanation": "by 引出施动者、小说是承受者 → 被动 was translated。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Many serious accidents ____ before the safety rules were finally written.",
+      "options": [
+        "had happened",
+        "had been happened",
+        "were happened",
+        "are happened"
+      ],
+      "answer_index": 0,
+      "explanation": "happen 不及物无被动,过去完成用主动 → had happened。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Although the robot looked human, the audience ____ by its smooth, fixed face.",
+      "options": [
+        "fooled",
+        "was fooled",
+        "was fooling",
+        "fools"
+      ],
+      "answer_index": 1,
+      "explanation": "观众是被骗的对象 → 被动 was fooled(主动 fooled 主语应是施动者)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "A strange light ____ in the sky just before the machine vanished.",
+      "options": [
+        "was appeared",
+        "is appeared",
+        "appeared",
+        "had been appeared"
+      ],
+      "answer_index": 2,
+      "explanation": "appear 不及物,无被动 → 主动 appeared。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We turned the active sentence \"Scientists built the robot\" into \"The robot ____ by scientists.\"",
+      "options": [
+        "built",
+        "was building",
+        "builds",
+        "was built"
+      ],
+      "answer_index": 3,
+      "explanation": "主动变被动:宾语 robot 作主语、动词变 was built、施动者用 by → was built。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The careless driver was lucky that his self-driving car ____ in the crash.",
+      "options": [
+        "did not get damaged",
+        "did not damage",
+        "was not damaging",
+        "does not damage"
+      ],
+      "answer_index": 0,
+      "explanation": "get done 表被动、强调意外;car 是承受者的否定形式 → did not get damaged。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Over many years, a deep division slowly ____ between humans and machines.",
+      "options": [
+        "was risen",
+        "rose",
+        "is risen",
+        "had been risen"
+      ],
+      "answer_index": 1,
+      "explanation": "rise 不及物,无被动 → 主动过去 rose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"People will soon forget these old robots\" becomes \"These old robots ____ soon.\"",
+      "options": [
+        "will forget",
+        "will be forget",
+        "will be forgotten",
+        "forgets"
+      ],
+      "answer_index": 2,
+      "explanation": "主动变将来被动:宾语作主语、will be done → will be forgotten。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The young engineer ____ when his very first robot suddenly came to life.",
+      "options": [
+        "stunned",
+        "was stunning",
+        "stuns",
+        "was stunned"
+      ],
+      "answer_index": 3,
+      "explanation": "engineer 是被震惊的对象 → 被动 was stunned(stunning 用于使人震惊的事物)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Nothing strange ____ during the whole test, so the team felt relieved.",
+      "options": [
+        "happened",
+        "was happened",
+        "is happened",
+        "had been happened"
+      ],
+      "answer_index": 0,
+      "explanation": "happen 不及物,无被动 → 主动 happened。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "In the rush, the fragile sensor ____ and had to be replaced.",
+      "options": [
+        "got breaking",
+        "got broken",
+        "was break",
+        "breaks itself"
+      ],
+      "answer_index": 1,
+      "explanation": "get done 表被动、强调意外结果;sensor 是承受者 → got broken。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The old laws of robotics ____ by Isaac Asimov in the 1940s.",
+      "options": [
+        "created",
+        "were creating",
+        "were created",
+        "create"
+      ],
+      "answer_index": 2,
+      "explanation": "by 引出施动者、laws 是被创造的对象 → 被动 were created。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Once switched on, the AI assistant ____ and began to answer every question.",
+      "options": [
+        "was woken up by itself and",
+        "is woken",
+        "had been woken",
+        "woke up"
+      ],
+      "answer_index": 3,
+      "explanation": "wake up 在此为不及物(自己醒来),用主动 → woke up。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We rewrote \"Someone is repairing the robot\" as \"The robot ____ now.\"",
+      "options": [
+        "is being repaired",
+        "is repairing",
+        "repairs",
+        "was repaired"
+      ],
+      "answer_index": 0,
+      "explanation": "主动现在进行变被动:is being done → is being repaired。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Such a powerful AI did not simply ____; it was carefully designed over years.",
+      "options": [
+        "be existed",
+        "exist",
+        "get existed",
+        "was existed"
+      ],
+      "answer_index": 1,
+      "explanation": "exist 不及物,无被动 → 主动原形 exist。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "During the storm the antenna ____ off the roof and stopped working.",
+      "options": [
+        "got knocking",
+        "was knock",
+        "got knocked",
+        "knocks itself"
+      ],
+      "answer_index": 2,
+      "explanation": "get done 表被动、强调意外;antenna 是承受者 → got knocked。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "\"Liu Cixin wrote the novel\" can be rewritten as \"The novel ____ by Liu Cixin.\"",
+      "options": [
+        "wrote",
+        "was writing",
+        "writes",
+        "was written"
+      ],
+      "answer_index": 3,
+      "explanation": "主动变一般过去被动:was done + by 施动者 → was written。"
+    }
+  ]
+}

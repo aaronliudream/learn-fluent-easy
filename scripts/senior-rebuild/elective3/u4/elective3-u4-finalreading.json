@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(逆境与勇气主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "After breaking his leg on the mountain, Daniel could not walk for months and felt like a failure. Instead of giving up, he set himself one tiny goal every single day, from standing for a minute to taking a single step. A year later he was hiking again, prouder of his slow, stubborn recovery than of any climb he had ever finished.",
+    "questions": [
+      {
+        "q": "What did Daniel do instead of giving up?",
+        "options": [
+          "He gave himself a small new target daily.",
+          "He stopped trying to walk again.",
+          "He blamed the mountain for his injury.",
+          "He never left his home again."
+        ],
+        "answer": "A",
+        "explanation": "由 'set himself one tiny goal every single day' 概括;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Daniel feel a year later?",
+        "options": [
+          "Ashamed that he had ever climbed.",
+          "Prouder of his recovery than of any past climb.",
+          "Bored with hiking.",
+          "Sorry that he had set goals."
+        ],
+        "answer": "B",
+        "explanation": "末句 'prouder of his slow, stubborn recovery than of any climb' 的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

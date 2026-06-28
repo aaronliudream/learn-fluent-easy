@@ -1,0 +1,35 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "grade": 12,
+  "content": {
+    "title": "直接引语 → 间接引语 速查",
+    "intro": "把别人说的话转述出来,就是把直接引语变间接引语。三步走:① 选对引导词;② 时态后移;③ 人称、指示词和时间/地点状语呼应。主句若是一般过去时(said/asked/told),从句时态一般要后移。",
+    "table": {
+      "headers": ["句类", "引导词 / 结构", "例(直接 → 间接)"],
+      "rows": [
+        ["陈述句", "say/tell (sb) + that(可省)", "He said, \"I recycle.\" → He said (that) he recycled."],
+        ["一般疑问句", "ask + if/whether + 陈述语序", "She asked, \"Do you save water?\" → She asked if I saved water."],
+        ["特殊疑问句", "ask + wh-词 + 陈述语序", "He asked, \"What can we do?\" → He asked what we could do."],
+        ["祈使句", "tell/ask/order/advise sb (not) to do", "\"Don't litter,\" he said. → He told us not to litter."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "时态后移:do→did, is→was, will→would, can→could, have done→had done", "mark": "is recycling → was recycling" },
+      { "rule": "疑问句一律变陈述语序:主语在前、去掉助动词 do/does/did 的倒装", "mark": "Do you …? → if I … / Where does it …? → where it …" },
+      { "rule": "指示词与时间/地点状语呼应", "mark": "now→then, today→that day, tomorrow→the next day, this→that, here→there" },
+      { "rule": "人称随说话人/听话人变换", "mark": "I→he/she, you→I/we, we→they" }
+    ],
+    "why": [
+      "转述是站在「现在、别处」复述「当时、别处」说的话,所以时间参照点变了——时态要后退一步,指示词和时间/地点词也要相应改变,听话人才不会误会是此时此地的事。"
+    ],
+    "gaokaoPoints": [
+      "语法填空/短文改错高频:疑问句转述忘记改陈述语序(仍写成 if you do)、时态没后移(said … is)是最常见失分点。",
+      "祈使句转述要用动词不定式:tell/ask/order/advise sb (not) to do,否定式 not 放 to 前。"
+    ],
+    "examVsReal": [
+      { "exam": "She asked whether I saved water.（考试/书面)", "real": "She asked if I save water.", "note": "考试严格要求 whether/if + 时态后移;口语里若情况仍为真,时态有时不后移" },
+      { "exam": "He said that he recycled paper.（考试)", "real": "He said he recycles paper.", "note": "考试 said 后从句后移为 recycled;口语陈述仍然成立的习惯时常保留现在时" }
+    ]
+  }
+}

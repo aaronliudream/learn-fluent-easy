@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(职业生涯主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Daniel finished high school, he had no idea what career would suit him, so he tried a free aptitude test online. The results encouraged him to consider creative work, and a year later he was happily training as a graphic designer. He often tells his friends that a few honest answers helped him find a path he had never even imagined.",
+    "questions": [
+      {
+        "q": "Why did Daniel try the aptitude test?",
+        "options": [
+          "He was unsure which career would suit him.",
+          "His teacher ordered him to take it.",
+          "He wanted to win a prize.",
+          "He had already chosen a job."
+        ],
+        "answer": "A",
+        "explanation": "原文 'he had no idea what career would suit him, so he tried a free aptitude test' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What was Daniel doing a year later?",
+        "options": [
+          "Still looking for any job.",
+          "Training to become a graphic designer.",
+          "Giving up on a career entirely.",
+          "Teaching the test to others."
+        ],
+        "answer": "B",
+        "explanation": "末段 'a year later he was happily training as a graphic designer'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

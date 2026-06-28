@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The Statue of Liberty is a famous symbol of freedom.", "opts": ["自由女神像是著名的自由象征。", "长城是中国最长的城墙。", "埃菲尔铁塔位于伦敦。", "这座桥建于去年。"], "answer": 0 },
+    { "audio": "The bridge was built almost a hundred years ago.", "opts": ["这座桥几乎在一百年前建成。", "这座桥明年才会动工。", "这座桥昨天被拆掉了。", "这座桥从未建成。"], "answer": 0 },
+    { "audio": "Located by the sea, the old castle attracts many tourists.", "opts": ["坐落在海边,这座古堡吸引许多游客。", "古堡建在沙漠中央。", "古堡里没有游客。", "古堡刚刚关闭。"], "answer": 0 },
+    { "audio": "Visitors can see these animals in their natural domain.", "opts": ["游客可以在动物的自然领地里看到它们。", "动物都被关进了笼子。", "游客不能进入公园。", "这些动物已经消失了。"], "answer": 0 },
+    { "audio": "Recognised as a heritage site, the old city welcomes more visitors.", "opts": ["被认定为遗产地,这座古城迎来更多游客。", "古城因太旧而被拆除。", "没有人愿意去那座古城。", "古城禁止拍照。"], "answer": 0 },
+    { "audio": "It is well worth visiting because of its long history.", "opts": ["因悠久的历史,它很值得一游。", "它太危险,不能参观。", "它没有任何历史。", "它只在冬天开放。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "“标志性景点”用英语怎么说?", "opts": ["an iconic attraction", "a busy market", "a quiet street", "a small shop"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“纪念碑;历史遗迹”对应的英文单词是?", "opts": ["monument", "machine", "moment", "minute"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“位于;坐落于”对应的英文单词是?", "opts": ["located", "lonely", "lovely", "likely"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "“自由”对应的英文单词是?", "opts": ["freedom", "freezer", "friend", "frame"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The bridge ____ in 1920 is still an iconic sight today.", "opts": ["built", "building", "to build", "build"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ of stone, the tower has lasted for many centuries.", "opts": ["Built", "Building", "To build", "Build"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "At night the staff keep the museum's doors ____ for safety.", "opts": ["locked", "locking", "to lock", "lock"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ from the air, the heritage site looks truly stunning.", "opts": ["Seen", "Seeing", "To see", "See"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选择正确的中文意思。", "opts": ["这座体育场能容纳八万人。", "这座体育场只有几个座位。", "这座体育场是新建的医院。", "这座体育场已经被拆除。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The stadium has a capacity of eighty thousand people." },
+    { "q": "听句子选择正确的中文意思。", "opts": ["每场导览大约持续两个小时。", "这场导览只要五分钟。", "导览全程免费。", "今天没有任何导览。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Each guided session lasts about two hours." }
+  ],
+  "reading": {
+    "passage": "The Sydney Opera House sits by the water, with a roof shaped like white sails. Built after many delays, it opened in 1973 and quickly became a symbol of the whole country. Today it is one of the most photographed attractions in the world.",
+    "passageCn": "悉尼歌剧院坐落在水边,屋顶形如白色风帆。它历经多次延误后建成,于1973年开放,很快成为整个国家的象征。如今它是世界上被拍照最多的景点之一。",
+    "questions": [
+      { "q": "What is the roof of the Opera House shaped like?", "opts": ["White sails.", "A round ball.", "A tall tree.", "A flat box."], "answer": 0 },
+      { "q": "When did the Opera House open?", "opts": ["In 1973.", "In 1886.", "Last year.", "In 1920."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Introduce one iconic attraction in your city. Say where it is, when it was built, and why it is worth visiting.",
+    "promptCn": "介绍你所在城市的一处标志性景点:说明它在哪里、何时建成、以及为什么值得一游。",
+    "sampleWords": ["iconic", "attraction", "located", "built", "heritage", "monument", "visitor", "famous", "grand", "view"]
+  },
+  "dialogues": [
+    {
+      "title": "Planning a City Day",
+      "lines": [
+        { "role": "A", "text": "Which attraction should we visit first?", "cn": "我们该先去哪个景点?" },
+        { "role": "B", "text": "The old harbour bridge. It was built almost a hundred years ago.", "cn": "旧海港大桥吧,它几乎在一百年前建成。" },
+        { "role": "A", "text": "Is it far from here?", "cn": "离这儿远吗?" },
+        { "role": "B", "text": "No, we can walk there in twenty minutes.", "cn": "不远,我们步行二十分钟就到。" }
+      ]
+    },
+    {
+      "title": "Holding a Koala",
+      "lines": [
+        { "role": "A", "text": "Can I hold a koala anywhere?", "cn": "我能在任何地方抱考拉吗?" },
+        { "role": "B", "text": "No, only at certain licensed zoos.", "cn": "不行,只能在特定的持证动物园。" },
+        { "role": "A", "text": "Why is that?", "cn": "为什么呢?" },
+        { "role": "B", "text": "Too much contact leaves them stressed.", "cn": "过多接触会让它们紧张。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Sharing",
+  "source": "人教版2019选择性必修四 Unit 4 同主题完形(志愿者收包裹/许媛在加纳/演讲谈中国援助/为志愿项目出主意/分享经济平台/感恩反思)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Parcel from Home",
+      "text": "I have been teaching in this faraway village for about a month now, and today something wonderful happened: I got a (1)____ from home! It took two weeks to arrive and was a little (2)____, but inside there were sweets and a jar of (3)____. It is always so nice to get (4)____ when you live this far away. Life here is simple. There is no (5)____, so in the evenings I work by candlelight. The students wear no cotton (6)____ and have only pencils and paper. At first I felt very (7)____, far from my family and friends. But slowly I have learned to (8)____ to the quiet life. The boys' bright smiles make a real (9)____ to my days. Tonight, eating my sweets, I feel grateful to be (10)____ my life with these kind people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "parcel",
+            "river",
+            "noise",
+            "fence"
+          ],
+          "answer_index": 0,
+          "explanation": "a parcel from home 家里寄来的包裹。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "fresh",
+            "damaged",
+            "empty",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "a little damaged 有点损坏(原文称包裹略受损)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "coal",
+            "stone",
+            "jam",
+            "smoke"
+          ],
+          "answer_index": 2,
+          "explanation": "a jar of jam 一罐果酱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "rain",
+            "dust",
+            "fire",
+            "mail"
+          ],
+          "answer_index": 3,
+          "explanation": "get mail 收到信件。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "electricity",
+            "weather",
+            "language",
+            "weekend"
+          ],
+          "answer_index": 0,
+          "explanation": "no electricity 没有电。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "songs",
+            "uniforms",
+            "prices",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "cotton uniforms 棉布校服。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "proud",
+            "rich",
+            "lonely",
+            "lazy"
+          ],
+          "answer_index": 2,
+          "explanation": "feel lonely 感到孤独。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "refuse",
+            "shout",
+            "drop",
+            "adapt"
+          ],
+          "answer_index": 3,
+          "explanation": "adapt to 适应。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "difference",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "make a difference 起作用/带来改变。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "selling",
+            "sharing",
+            "hiding",
+            "losing"
+          ],
+          "answer_index": 1,
+          "explanation": "sharing my life with 与……分享生活。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Xu Yuan in Ghana",
+      "text": "Xu Yuan is a Chinese (1)____ working in Ghana. She says the living conditions there are not as (2)____ as people imagine. Once she even had to (3)____ holes in her roof to keep the rain out. \"I don't really (4)____ about my own comfort,\" she explained. \"The only hard thing has been the (5)____ of hot water.\" She wishes she had brought a (6)____ to boil water, because some of her medicine works better with it. Still, any small discomfort is (7)____ it, she believes, when she thinks of the people she helps. Xu enjoys being pushed out of her (8)____ zone and seeing the world. After she (9)____ from her job, she hopes to continue to help the (10)____. \"Everyone deserves the chance to be happy,\" she said.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machine",
+            "garden",
+            "volunteer",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a Chinese volunteer 一名中国志愿者。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "sweet",
+            "tall",
+            "bad"
+          ],
+          "answer_index": 3,
+          "explanation": "not as bad as 不像想象的那么糟。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "plug",
+            "sell",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "plug holes 堵住洞。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sing",
+            "care",
+            "drive",
+            "cook"
+          ],
+          "answer_index": 1,
+          "explanation": "care about 在意/关心。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "lack",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "the lack of hot water 缺乏热水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "garden",
+            "letter",
+            "kettle"
+          ],
+          "answer_index": 3,
+          "explanation": "a kettle to boil water 烧水的水壶。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "worth",
+            "over",
+            "above",
+            "under"
+          ],
+          "answer_index": 0,
+          "explanation": "be worth it 值得。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "danger",
+            "comfort",
+            "market",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "comfort zone 舒适区。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "buys",
+            "drops",
+            "resigns",
+            "sells"
+          ],
+          "answer_index": 2,
+          "explanation": "resign from a job 辞职。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "richest",
+            "youngest",
+            "tallest",
+            "disabled"
+          ],
+          "answer_index": 3,
+          "explanation": "help the disabled 帮助残障人士。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Speech about China's Aid",
+      "text": "Lately, many of us have seen Chinese people on TV (1)____ other countries to develop. We see workers building roads, ports and railways in faraway (2)____. Some people ask whether this is really (3)____ it, when China still has areas in (4)____ of development. For one student, the question was personal. Her mother, a doctor, has been working as a (5)____ in Tanzania. At first the student was (6)____ that her mother had left. But when she learned about the work, she began to (7)____ a different tune. Her mother helped to build a hospital, so patients no longer had to go (8)____ for surgery. It has made a big (9)____ to many lives. Today the student is proud and (10)____ of her mother's choice, and she hopes to become a volunteer herself one day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "helping",
+            "leaving",
+            "selling",
+            "hiding"
+          ],
+          "answer_index": 0,
+          "explanation": "helping other countries 帮助别国。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "places",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 1,
+          "explanation": "faraway places 遥远的地方。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "wide",
+            "deep",
+            "worth",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "worth it 值得。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "song",
+            "rain",
+            "need"
+          ],
+          "answer_index": 3,
+          "explanation": "in need of 需要。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "volunteer",
+            "garden",
+            "ticket",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "as a volunteer 作为志愿者。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "proud",
+            "upset",
+            "happy",
+            "calm"
+          ],
+          "answer_index": 1,
+          "explanation": "upset 难过(原文起初不开心)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "sing",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "sing a different tune 改变看法。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "away",
+            "around",
+            "above",
+            "abroad"
+          ],
+          "answer_index": 3,
+          "explanation": "go abroad 出国(做手术)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "difference",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "make a difference 带来改变。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "supportive",
+            "tired",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "supportive of 支持。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Planning a Volunteer Project",
+      "text": "At today's meeting, the students wanted to (1)____ on a volunteer project for this year. \"May I (2)____ that we visit the children's hospital?\" Tony said. \"We could spend (3)____ with the sick children and bring them small gifts.\" Another student thought they should (4)____ money for poor families instead. \"Wouldn't it be better if we did (5)____?\" she asked. \"We can both raise money and (6)____ a hand at the hospital.\" Everyone liked this idea, because it would (7)____ a real difference to more people. They also agreed to (8)____ up a small team to plan the activities. \"Let's not just talk about it,\" Tony said. \"Let's (9)____ it!\" In the end, the class voted, and helping at the children's hospital came at the (10)____ of the list.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "drive",
+            "decide",
+            "cook"
+          ],
+          "answer_index": 2,
+          "explanation": "decide on 决定(选定)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "suggest"
+          ],
+          "answer_index": 3,
+          "explanation": "May I suggest that …? 我可以建议……吗?"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "time",
+            "price",
+            "noise",
+            "rain"
+          ],
+          "answer_index": 0,
+          "explanation": "spend time with 与……共度时光。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lose",
+            "raise",
+            "drop",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "raise money 筹钱。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "less",
+            "worse",
+            "both",
+            "nothing"
+          ],
+          "answer_index": 2,
+          "explanation": "did both 两件事都做。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "drop",
+            "throw",
+            "lend"
+          ],
+          "answer_index": 3,
+          "explanation": "lend a hand 帮忙。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "make",
+            "lose",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "make a difference 带来改变。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "give",
+            "set",
+            "throw",
+            "fall"
+          ],
+          "answer_index": 1,
+          "explanation": "set up a team 组建团队。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "do",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "let's do it 我们去做吧。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "bottom",
+            "side",
+            "back",
+            "top"
+          ],
+          "answer_index": 3,
+          "explanation": "at the top of the list 在首位。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A New Way of Sharing",
+      "text": "These days, sharing does not always mean (1)____ things away forever. Online (2)____ now let people share what they no longer use. If you have books, tools or toys (3)____ around your house, you can offer them to someone who is in (4)____ of them. In (5)____, you might borrow something you need from a neighbour. This idea is good for everyone and (6)____ for the planet too, because fewer things are (7)____ away. Some young people have even (8)____ up small groups to share food that would otherwise be wasted. Leftover bread and fruit are collected and (9)____ out to those who need them. In this way, a simple act of sharing can (10)____ a real difference to a whole community.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "giving",
+            "buying",
+            "hiding",
+            "eating"
+          ],
+          "answer_index": 0,
+          "explanation": "give things away 把东西送出去。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "gardens",
+            "platforms",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 1,
+          "explanation": "online platforms 在线平台。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "selling",
+            "crying",
+            "sitting",
+            "running"
+          ],
+          "answer_index": 2,
+          "explanation": "sitting around 闲置着。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "song",
+            "rain",
+            "need"
+          ],
+          "answer_index": 3,
+          "explanation": "in need of 需要。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "return",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "in return 作为回报。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "bad",
+            "good",
+            "loud",
+            "sad"
+          ],
+          "answer_index": 1,
+          "explanation": "good for the planet 对地球有益。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sung",
+            "drawn",
+            "thrown",
+            "grown"
+          ],
+          "answer_index": 2,
+          "explanation": "thrown away 被扔掉。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "given",
+            "fallen",
+            "thrown",
+            "set"
+          ],
+          "answer_index": 3,
+          "explanation": "set up groups 组建小组。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "handed",
+            "sold",
+            "lost",
+            "hidden"
+          ],
+          "answer_index": 0,
+          "explanation": "handed out 分发出去。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "make",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "make a difference 带来改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning to Be Grateful",
+      "text": "Before I joined the volunteer trip, I (1)____ so many things for granted. Clean water, warm food and a soft bed all felt (2)____ to me. But living for a week in a simple (3)____ with no electricity changed the way I (4)____ my own life. The family I stayed with had almost nothing, yet they were happy to (5)____ everything they had with me. After every meal we sat round the (6)____ and talked softly. Their kindness taught me to be (7)____ for what I have. Now I never (8)____ leftover food without thinking of them. When I came home, I decided to (9)____ a hand to others whenever I can. Helping people, I have learned, can (10)____ a difference not only to them, but also to me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "lost",
+            "took",
+            "drew"
+          ],
+          "answer_index": 2,
+          "explanation": "took … for granted 把……视为理所当然。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "empty",
+            "rich",
+            "normal"
+          ],
+          "answer_index": 3,
+          "explanation": "felt normal 感觉很平常。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hut",
+            "shop",
+            "city",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "a simple hut 简陋的小屋。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "saw",
+            "lost",
+            "drew"
+          ],
+          "answer_index": 1,
+          "explanation": "the way I saw my life 我看待生活的方式。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "hide",
+            "share",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "share … with me 与我分享。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "price",
+            "garden",
+            "fire"
+          ],
+          "answer_index": 3,
+          "explanation": "sat round the fire 围坐在火边。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "grateful",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "be grateful for 对……感激。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "buy",
+            "waste",
+            "grow",
+            "draw"
+          ],
+          "answer_index": 1,
+          "explanation": "waste leftover food 浪费剩饭。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "lose",
+            "lend",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "lend a hand 帮忙。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "sell",
+            "hide",
+            "make"
+          ],
+          "answer_index": 3,
+          "explanation": "make a difference 带来改变。"
+        }
+      ]
+    }
+  ]
+}

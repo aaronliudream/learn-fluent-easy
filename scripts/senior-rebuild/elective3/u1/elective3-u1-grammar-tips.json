@@ -1,0 +1,35 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grade": 12,
+  "content": {
+    "title": "不定式作表语(The Infinitive as the Predicative)速查",
+    "intro": "当主语是 advice/dream/aim/plan/job/wish/question/problem 等抽象名词时,系动词 be 后常用动词不定式(to do)或'疑问词+不定式'作表语,说明主语的具体内容。判断口诀:主语是抽象名词 + be + 要做的事 → to do。",
+    "table": {
+      "headers": ["类型", "结构 / 例句"],
+      "rows": [
+        ["be + to do", "My advice is to start early. / Her dream is to become an artist."],
+        ["疑问词 + to do", "The question is what to paint. / The problem is how to begin."],
+        ["be to do(计划/职责/将来)", "The plan is to hold an exhibition. / The task is to repair it."],
+        ["doing(动名词表语·对照)", "His hobby is painting.(说明'是什么活动',非计划/职责)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语为 advice/dream/aim/wish/plan 等抽象名词 → be 后多用 to do 作表语", "mark": "My wish is to raise him well." },
+      { "rule": "内容是'做什么/怎么做/是否做'的问题 → 用'疑问词(what/how/where/whether)+ to do'", "mark": "The problem is how to begin." },
+      { "rule": "plan/task/duty/aim 表'计划·职责·将来' → to do;hobby/interest/job 指'日常活动' → doing", "mark": "plan is to hold √ / hobby is painting √" },
+      { "rule": "不定式表语 ≠ 动名词表语:看主语含义,不是随意互换", "mark": "aim is to win / pleasure is walking" }
+    ],
+    "why": [
+      "不定式带有'将要/目的'的意味,所以 advice/dream/plan/aim 等'要去实现的内容'用 to do;动名词强调'正在/经常进行的活动本身',所以 hobby/interest 等用 doing。"
+    ],
+    "gaokaoPoints": [
+      "be 后填非谓语:主语是 aim/plan/wish 等抽象名词时选 to do,而非 doing/done/do;语法填空与改错高频。",
+      "'疑问词 + to do'作表语:The question is what/how/where/whether to do …,注意疑问词后直接接不定式。"
+    ],
+    "examVsReal": [
+      { "exam": "My advice is to start early.(考试/书面)", "real": "I'd say: start early.", "note": "考试用不定式作表语点明主旨;口语常直接用祈使句或省略" },
+      { "exam": "The plan is to hold an exhibition.(考试)", "real": "We're going to hold an exhibition.", "note": "考试爱用'主语+be+to do'表语句式;口语更常用 be going to" }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Write about a Volunteer / Charity Experience(写一次志愿或公益经历)",
+  "title_en": "A Day I Spent Helping Others",
+  "genre": "记叙文 / 应用文(describe a volunteer or charity activity + what you learned)",
+  "source": "人教版2019选择性必修四 Unit 4 主题写作:write about a volunteering or sharing experience(记叙一次志愿/公益活动并谈感受)。",
+  "prompt_cn": "假设你叫李华,上个周末你和同学参加了一次志愿活动(如去敬老院/儿童医院/动物收容所,或为贫困地区捐书捐衣)。请用英语写一篇约100词的短文,内容包括:① 你们做了什么活动;② 活动中印象最深的一件事;③ 这次经历让你明白了什么(如分享/感恩/帮助他人)。注意:用上本单元的短语(如 take part in / lend a hand / make a difference)。",
+  "prompt_en": "Suppose you are Li Hua. Last weekend you and your classmates took part in a volunteer activity (e.g. visiting a care home, a children's hospital or an animal shelter, or donating books and clothes to a poor area). Write a passage of about 100 words including: 1) what you did; 2) the one thing that impressed you most; 3) what the experience taught you (e.g. about sharing, gratitude or helping others). Try to use phrases from this unit such as take part in, lend a hand and make a difference.",
+  "points": [
+    "说明做了什么活动(Last weekend we took part in …)",
+    "印象最深的一件事(What impressed me most was …)",
+    "谈收获/感悟(This experience taught me that …)",
+    "用上本单元短语:take part in / lend a hand / make a difference"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last weekend, my classmates and I took part in a volunteer activity at a local children's hospital. We brought books and small gifts, and spent the whole morning reading stories and playing games with the sick children. At first some of them were shy, but soon their faces lit up with bright smiles. What impressed me most was a little boy who thanked us again and again, although we had only lent a small hand. That moment made me realise how much even a simple act of sharing can mean to others. This experience taught me that helping people can truly make a difference — not only to them, but also to me.",
+  "model_translation": "上个周末,我和同学们在本地一家儿童医院参加了一次志愿活动。我们带去了书和小礼物,整个上午都在给生病的孩子读故事、做游戏。起初有些孩子很害羞,但很快他们脸上绽放出灿烂的笑容。最让我印象深刻的是一个小男孩,他一次又一次地感谢我们,尽管我们只是出了点微薄之力。那一刻让我意识到,哪怕一个简单的分享之举,对别人也意义重大。这次经历让我明白:帮助他人真的能带来改变——不仅对他们,也对我自己。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:做了什么活动 / 印象最深的一件事 / 收获感悟" },
+      { "dimension": "结构", "max": 4, "criteria": "按'活动—细节—感悟'展开、过渡自然、详略得当、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "本单元短语运用得当(take part in / lend a hand / make a difference)、句型词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "活动 Last weekend, we took part in …",
+      "细节 What impressed me most was …",
+      "短语 we had only lent a small hand",
+      "感悟 This experience taught me that helping people can make a difference."
+    ],
+    "key_expressions": [
+      "Last weekend, my classmates and I took part in a volunteer activity.",
+      "What impressed me most was a little boy who thanked us again and again.",
+      "Even a simple act of sharing can mean a lot to others.",
+      "Helping people can truly make a difference."
+    ],
+    "useful_words": ["volunteer", "take part in", "lend a hand", "make a difference", "share", "donate", "grateful", "impress", "experience", "kindness"]
+  },
+  "high_sentences": [
+    "Last weekend, my classmates and I took part in a volunteer activity at a local children's hospital.",
+    "What impressed me most was a little boy who thanked us again and again.",
+    "Even a simple act of sharing can mean a lot to others.",
+    "This experience taught me that helping people can truly make a difference."
+  ],
+  "error_pairs": [
+    { "wrong": "We took part in a volunteer activity in last weekend.", "correct": "We took part in a volunteer activity last weekend.", "note": "last weekend 前不加介词 in。" },
+    { "wrong": "What impressed me most were a little boy.", "correct": "What impressed me most was a little boy.", "note": "what 引导的主语从句视为单数,谓语用 was。" },
+    { "wrong": "It can make a different to others.", "correct": "It can make a difference to others.", "note": "固定搭配是 make a difference(名词),不是 different(形容词)。" }
+  ],
+  "paragraph_template": "【志愿/公益经历结构】\n第1句 活动:Last weekend, we took part in …\n第2-3句 经过+细节:We … . What impressed me most was …\n第4句 感悟:This experience taught me that helping people can make a difference."
+}

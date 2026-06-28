@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U3",
+  "topic": "Write a Report on an Environmental Issue(就一个环境问题写一篇报道)",
+  "title_en": "A Report on an Environmental Issue",
+  "genre": "报道 / 说明文(describe an environmental problem + actions taken + your suggestion)",
+  "source": "人教版2019选择性必修三 Unit 3 Reading for Writing:write a report on an environmental issue(描述身边的环境问题 + 已采取的措施 + 你的建议/呼吁)。",
+  "prompt_cn": "假设你叫李华,你们学校的英文报正在征集一篇关于环境问题的报道。请用英语写一篇约100词的报道,内容包括:① 清楚说明你身边的一个环境问题(如水污染/空气污染/垃圾)及其原因;② 介绍已经采取的一两项措施;③ 提出你的建议或呼吁。注意:报道客观、条理清楚,可适当使用间接引语转述他人的话。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English newspaper is collecting reports on environmental issues. Write a report (about 100 words) including: 1) a clear description of one environmental problem near you and its causes (e.g. water pollution, air pollution, rubbish); 2) one or two measures that have already been taken; 3) your own suggestion or call to action.",
+  "points": [
+    "说明问题及原因(One serious problem in our town is … This is mainly caused by …)",
+    "已采取的措施(To deal with it, the local government has … New rules require people to …)",
+    "提出建议/呼吁(I believe we should … Together we can …)",
+    "客观条理、可用间接引语转述(An expert said that …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Water pollution is a serious problem in our town. In the past, factories along the river released waste water, and many people frequently threw garbage into it, so the water became dirty and the fish began to disappear. To deal with this, the local government has taken action. Several polluting factories were closed or moved away, and strict rules now control how waste should be handled. Officers also carry out regular inspections and fine those who break the rules. An expert told us that the water was getting cleaner year by year. I believe we should all do our part by saving water and never dropping litter. Together we can restore the beauty of our river.",
+  "model_translation": "水污染是我们镇上一个严重的问题。过去,沿河的工厂排放废水,许多人还经常往河里扔垃圾,于是水变脏了,鱼也开始消失。为了解决这个问题,当地政府采取了行动。几家污染工厂被关闭或迁走,如今有严格的规定控制废物处理方式。官员们还定期检查,并对违规者处以罚款。一位专家告诉我们,河水正逐年变得更清。我认为我们都应尽自己的一份力,节约用水、绝不乱扔垃圾。携起手来,我们就能恢复这条河的美丽。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:问题与原因 / 已采取的措施 / 建议或呼吁" },
+      { "dimension": "结构", "max": 4, "criteria": "报道条理清楚、段落连贯、客观陈述、衔接自然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、被动语态/间接引语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "提出问题 … is a serious problem in our town.",
+      "说明原因 This is mainly caused by …",
+      "已有措施 To deal with it, the local government has …",
+      "建议呼吁 I believe we should … Together we can …"
+    ],
+    "key_expressions": [
+      "Water pollution is a serious problem in our town.",
+      "Several polluting factories were closed or moved away.",
+      "Officers carry out regular inspections and fine those who break the rules.",
+      "Together we can restore the beauty of our river."
+    ],
+    "useful_words": ["pollution", "release", "garbage", "regulation", "inspection", "restore", "restrict", "sustainable", "emission", "protect"]
+  },
+  "high_sentences": [
+    "Water pollution is a serious problem in our town.",
+    "Several polluting factories were closed or moved away, and strict rules now control how waste should be handled.",
+    "An expert told us that the water was getting cleaner year by year.",
+    "Together we can restore the beauty of our river."
+  ],
+  "error_pairs": [
+    { "wrong": "The factory release waste water.", "correct": "The factory releases waste water.", "note": "主语第三人称单数,动词加 s。" },
+    { "wrong": "Many garbage was thrown into the river.", "correct": "A lot of garbage was thrown into the river.", "note": "garbage 不可数,不用 many,用 a lot of / much。" },
+    { "wrong": "The expert said the water is getting cleaner.", "correct": "The expert said the water was getting cleaner.", "note": "间接引语时态后移:is→was。" }
+  ],
+  "paragraph_template": "【环境报道结构】\n第1-2句 提出问题与原因:… is a serious problem in our town. This is mainly caused by …\n第3-5句 已采取的措施:To deal with it, the local government has … New rules require …\n第6句 建议呼吁:I believe we should … Together we can …"
+}

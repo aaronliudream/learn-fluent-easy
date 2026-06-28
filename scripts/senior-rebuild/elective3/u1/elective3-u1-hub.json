@@ -1,0 +1,49 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Impressionism emerged in France in the late 19th century.", "opts": ["印象主义于19世纪晚期在法国兴起。", "印象主义起源于中国的唐代。", "印象主义是一种雕塑风格。", "印象主义从未流行过。"], "answer": 0 },
+    { "audio": "Monet's aim was to convey the light and movement in the scene.", "opts": ["莫奈只画黑白照片。", "莫奈的目标是表现场景中的光与动感。", "莫奈讨厌画花园。", "莫奈从不画水。"], "answer": 1 },
+    { "audio": "Chinese ink wash painting uses mainly water and black ink.", "opts": ["中国画只用鲜艳的油彩。", "中国画从不用毛笔。", "中国水墨画主要用水和黑墨。", "中国画都是机器画的。"], "answer": 2 },
+    { "audio": "The museum's goal is to display three thousand years of Chinese art.", "opts": ["博物馆要卖掉所有画作。", "博物馆只展出外国艺术。", "博物馆已经永久关闭。", "博物馆的目标是展示三千年的中国艺术。"], "answer": 3 },
+    { "audio": "My advice is to copy a work you truly love first.", "opts": ["我的建议是先临摹一幅你真正喜爱的作品。", "我的建议是永远不要画画。", "我的建议是买昂贵的颜料。", "我的建议是只看不练。"], "answer": 0 },
+    { "audio": "Their aim was no longer to show reality, but to ask what art is.", "opts": ["他们只想精确复制照片。", "他们的目标不再是表现现实,而是追问艺术是什么。", "他们放弃了所有色彩。", "他们只画同一个花园。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Impressionism ____ in France in the late 19th century.", "opts": ["emerged", "closed", "ate", "sold"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Monet's aim was to ____ the light and feeling of a scene.", "opts": ["sell", "convey", "hide", "break"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Unlike a flat painting, a sculpture exists in three ____.", "opts": ["prices", "noises", "dimensions", "songs"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Contemporary art by young painters is also ____ of your attention.", "opts": ["afraid", "sorry", "tired", "worthy"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "My advice is ____ a famous artist's work first.", "opts": ["to copy", "copying", "copied", "copy"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The question is ____ next on the blank canvas.", "opts": ["what painting", "what to paint", "what painted", "what paint"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The museum's plan is ____ a special exhibition next spring.", "opts": ["holding", "held", "to hold", "hold"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "His favourite hobby is ____ the water lilies every morning.", "opts": ["to paint", "to have painted", "painted", "painting"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["唐寅曾是一位伟大的画家。", "唐寅卖掉了博物馆。", "唐寅从不画雪。", "唐寅是一位医生。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Tang Yin gained recognition as one of China's greatest painters." },
+    { "q": "听句子选中文:", "opts": ["雕塑只能从正面看。", "每一帧都是手绘,使画面仿佛会动。", "动画片从不需要画家。", "水墨画没有空白。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Each frame is hand-painted, so the pictures seem to move." }
+  ],
+  "reading": {
+    "passage": "After photography was invented, paintings were no longer needed simply to record how things looked. So painters had to find a new way of seeing. From this fresh thinking, Impressionism emerged, and artists began to paint light and feeling instead of every detail.",
+    "passageCn": "摄影术发明之后,绘画不再仅仅用于记录事物的样貌。于是画家们必须找到新的观看方式。正是从这种新思维中,印象主义兴起了,艺术家们开始画光与感觉,而非每一个细节。",
+    "questions": [
+      { "q": "Why were paintings no longer needed just to record how things looked?", "opts": ["Because photography had been invented.", "Because painters became lazy.", "Because colours ran out.", "Because museums closed."], "answer": 0 },
+      { "q": "What did painters have to find?", "opts": ["A cheaper kind of paint.", "A new way of seeing.", "A faster camera.", "A bigger room."], "answer": 1 },
+      { "q": "What did Impressionist artists begin to paint?", "opts": ["Only black-and-white scenes.", "Exact copies of photographs.", "Light and feeling rather than every detail.", "Religious stories only."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences to introduce your favourite painting, artist, or art style. Say which period or style it belongs to and why you like it. Try to use the infinitive as the predicative (e.g. The aim of this style is to … / My wish is to …).",
+    "promptCn": "用3-4句话介绍你最喜爱的一幅画、一位艺术家或一种艺术风格:它属于哪个时期或风格,你为什么喜欢它。试着用不定式作表语(如 The aim of this style is to … / My wish is to …)。",
+    "sampleWords": ["painting", "style", "Impressionism", "emerge", "convey", "colour", "feature", "subjective", "fond", "to capture"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about a Favourite Painting",
+      "lines": [
+        { "role": "A", "text": "Which painting do you like most in the museum?", "cn": "博物馆里你最喜欢哪幅画?" },
+        { "role": "B", "text": "Monet's Impression, Sunrise. The aim of that style is to catch light and feeling.", "cn": "莫奈的《印象·日出》。那种风格的目标是捕捉光与感觉。" },
+        { "role": "A", "text": "I see. So it doesn't try to copy every detail?", "cn": "原来如此。所以它并不想复制每个细节?" },
+        { "role": "B", "text": "Exactly. My own wish is to learn to paint the way I truly feel.", "cn": "正是。我自己的愿望是学会按我真正的感受去画。" }
+      ]
+    }
+  ]
+}

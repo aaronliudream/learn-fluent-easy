@@ -1,0 +1,32 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(健康生活主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Leo used to skip breakfast every day to save a little time, and by mid-morning he often felt dizzy and weak. After a talk with the school nurse, he made up his mind to eat a simple, healthy breakfast each morning. Within two weeks he had more energy in class and stopped feeling tired, and he was proud that one tiny change had made such a big difference.",
+    "questions": [
+      {
+        "q": "Why did Leo often feel dizzy before?",
+        "options": [
+          "Because he went without breakfast to save time.",
+          "Because he ate too much in the morning.",
+          "Because he exercised too hard.",
+          "Because he slept all morning."
+        ],
+        "answer": "A",
+        "explanation": "原文 'skip breakfast every day to save a little time… felt dizzy and weak' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Leo feel after the change?",
+        "options": [
+          "Still tired and weak.",
+          "Proud that a small change had helped a lot.",
+          "Sorry that he had started eating breakfast.",
+          "Bored with his new routine."
+        ],
+        "answer": "B",
+        "explanation": "末句 'proud that one tiny change had made such a big difference'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

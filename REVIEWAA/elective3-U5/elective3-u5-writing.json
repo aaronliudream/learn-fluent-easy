@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U5",
+  "topic": "Write about a Favourite Poem(赏析一首你喜爱的诗)",
+  "title_en": "My Favourite Poem",
+  "genre": "诗歌赏析 / 记叙(introduce a favourite poem or poet + appreciate it)",
+  "source": "人教版2019选择性必修三 Unit 5 Using Language:choose one poem and write a short essay about it(介绍你喜爱的一首诗 + 赏析其主题、意象、押韵与你的感受)。",
+  "prompt_cn": "请用英语写一篇约100词的短文,介绍并赏析你最喜爱的一首诗(可选 Dream / Wind on the Hill / 一首唐诗等)。内容包括:① 这首诗的名字、作者和大意;② 它的意象、押韵或节奏给你的感受;③ 你从中获得的启发,以及你为何喜爱它。注意尽量用上定语从句。",
+  "prompt_en": "Write a short essay (about 100 words) introducing and appreciating your favourite poem (e.g. 'Dream', 'Wind on the Hill', or a Tang poem). Include: 1) the title, the poet and what the poem is about; 2) the images, rhyme or rhythm and how they make you feel; 3) the message it gives you and why you love it. Try to use relative clauses.",
+  "points": [
+    "介绍诗名、作者与大意(The poem … , which was written by … , is about …)",
+    "赏析意象/押韵/节奏与感受(When I read it aloud, I can hear that … rhyme; I can picture …)",
+    "诗给你的启发与你喜爱的原因(The poet wants us to … , which is why I love this poem)",
+    "尽量使用定语从句、句句围绕这首诗"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "My favourite poem is 'Dream', which was written by Langston Hughes. Although it has only eight short lines, it carries a deep feeling. The poem tells us to hold fast to our dreams, because a life without dreams is like a broken-winged bird that cannot fly. When I read it aloud, I can hear that 'die' and 'fly' rhyme, and the gentle rhythm sounds like quiet music. In my mind I can see a bird and a barren field frozen with snow. The poet, who spoke up for hope, wants us never to give up. That is the very reason why I love this poem.",
+  "model_translation": "我最喜爱的诗是《梦想》,它由兰斯顿·休斯所写。虽然只有短短八行,却承载着深沉的情感。这首诗告诉我们要紧紧抓住梦想,因为没有梦想的生活就像一只折翼无法飞翔的鸟。当我大声朗读时,能听到 die 和 fly 押韵,温柔的节奏听起来像安静的音乐。在脑海中,我能看见一只鸟和一片被白雪覆盖的贫瘠田野。这位为希望发声的诗人,希望我们永不放弃。这正是我喜爱这首诗的原因。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:诗名作者大意 / 意象押韵节奏与感受 / 启发与喜爱原因" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一首诗展开、层次清楚、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、定语从句运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点诗 My favourite poem is … , which was written by …",
+      "大意 The poem tells us / is about …",
+      "赏析 When I read it aloud, I can hear that … rhyme; I can picture …",
+      "升华 The poet wants us to … , which is why I love this poem."
+    ],
+    "key_expressions": [
+      "My favourite poem is 'Dream', which was written by Langston Hughes.",
+      "The poem tells us to hold fast to our dreams.",
+      "When I read it aloud, I can hear that 'die' and 'fly' rhyme.",
+      "That is the very reason why I love this poem."
+    ],
+    "useful_words": ["poem", "poet", "verse", "rhyme", "rhythm", "image", "mood", "recite", "appreciate", "feeling"]
+  },
+  "high_sentences": [
+    "My favourite poem is 'Dream', which was written by Langston Hughes.",
+    "Although it has only eight short lines, it carries a deep feeling.",
+    "When I read it aloud, I can hear that 'die' and 'fly' rhyme.",
+    "The poet, who spoke up for hope, wants us never to give up."
+  ],
+  "error_pairs": [
+    { "wrong": "The poem who I love most is 'Dream'.", "correct": "The poem that I love most is 'Dream'.", "note": "先行词 poem 指物,应用 that/which,不用 who。" },
+    { "wrong": "It tells us holding fast to our dreams.", "correct": "It tells us to hold fast to our dreams.", "note": "tell sb to do sth 用不定式。" },
+    { "wrong": "The reason which I love it is its rhythm.", "correct": "The reason why I love it is its rhythm.", "note": "先行词 reason、从句缺原因状语,用 why(或 that/for which)。" }
+  ],
+  "paragraph_template": "【诗歌赏析结构】\n第1-2句 点诗:My favourite poem is … , which was written by … It is about …\n第3-4句 赏析:When I read it aloud, I can hear that … rhyme; in my mind I can see …\n第5句 升华:The poet wants us to … , which is the reason why I love this poem."
+}

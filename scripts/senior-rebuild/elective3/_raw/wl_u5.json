@@ -1,0 +1,422 @@
+[
+ {
+  "word": "amateur",
+  "ipa": "",
+  "cn": "业余爱好者 adj. 业余的；业余爱好的",
+  "propn": false,
+  "raw": "amateur // n. 业余爱好者 adj. 业余的；业余爱好的"
+ },
+ {
+  "word": "await",
+  "ipa": "",
+  "cn": "等候；期待；将发生在",
+  "propn": false,
+  "raw": "await // vt. 等候；期待；将发生在"
+ },
+ {
+  "word": "barren",
+  "ipa": "",
+  "cn": "贫瘠的；不结果实的",
+  "propn": false,
+  "raw": "barren // adj. 贫瘠的；不结果实的"
+ },
+ {
+  "word": "cherry",
+  "ipa": "tSeri",
+  "cn": "樱桃；樱桃树；樱桃色 adj. 樱桃色的；鲜红色的",
+  "propn": false,
+  "raw": "cherry /tSeri/ n. 樱桃；樱桃树；樱桃色 adj. 樱桃色的；鲜红色的"
+ },
+ {
+  "word": "cherry blossom",
+  "ipa": "",
+  "cn": "樱花",
+  "propn": false,
+  "raw": "cherry blossom 樱花"
+ },
+ {
+  "word": "cinquain",
+  "ipa": "sken",
+  "cn": "五行诗",
+  "propn": false,
+  "raw": "cinquain /sken/ n. 五行诗"
+ },
+ {
+  "word": "civilian",
+  "ipa": "svlin",
+  "cn": "平民；老百姓",
+  "propn": false,
+  "raw": "civilian /svlin/ n. 平民；老百姓"
+ },
+ {
+  "word": "clover",
+  "ipa": "klv(r)",
+  "cn": "三叶草",
+  "propn": false,
+  "raw": "clover/klv(r)/ n. 三叶草"
+ },
+ {
+  "word": "complicated",
+  "ipa": "",
+  "cn": "复杂的；难懂的",
+  "propn": false,
+  "raw": "complicated // adj. 复杂的；难懂的"
+ },
+ {
+  "word": "comprehension",
+  "ipa": "kmprhenn",
+  "cn": "理解力；领悟力；理解练习",
+  "propn": false,
+  "raw": "comprehension /kmprhenn/ n. 理解力；领悟力；理解练习"
+ },
+ {
+  "word": "contest",
+  "ipa": "kntest",
+  "cn": "比赛；竞赛；竞争 /kntest/ vt. 争取赢得（比赛、选举等）； 争辩",
+  "propn": false,
+  "raw": "contest /kntest/ n. 比赛；竞赛；竞争 /kntest/ vt. 争取赢得（比赛、选举等）； 争辩"
+ },
+ {
+  "word": "core",
+  "ipa": "k",
+  "cn": "核心；精髓；（水果的）核儿",
+  "propn": false,
+  "raw": "core /k/ n. 核心；精髓；（水果的）核儿"
+ },
+ {
+  "word": "correspond",
+  "ipa": "krspnd",
+  "cn": "相一致；符合；相当于；通信",
+  "propn": false,
+  "raw": "correspond /krspnd/ vi. 相一致；符合；相当于；通信"
+ },
+ {
+  "word": "correspondence",
+  "ipa": "krspndns",
+  "cn": "来往信件；通信联系",
+  "propn": false,
+  "raw": "correspondence /krspndns/ n. 来往信件；通信联系"
+ },
+ {
+  "word": "dawn",
+  "ipa": "dn",
+  "cn": "黎明；开端；萌芽",
+  "propn": false,
+  "raw": "dawn /dn/ n. 黎明；开端；萌芽"
+ },
+ {
+  "word": "deadline",
+  "ipa": "dedlan",
+  "cn": "最后期限；截止日期",
+  "propn": false,
+  "raw": "deadline /dedlan/ n. 最后期限；截止日期"
+ },
+ {
+  "word": "delicate",
+  "ipa": "delkt",
+  "cn": "精美的；精致的；脆弱的",
+  "propn": false,
+  "raw": "delicate /delkt/ adj. 精美的；精致的；脆弱的"
+ },
+ {
+  "word": "dewdrop",
+  "ipa": "djudrp",
+  "cn": "露珠；水珠",
+  "propn": false,
+  "raw": "dewdrop /djudrp/ n. 露珠；水珠"
+ },
+ {
+  "word": "diamond",
+  "ipa": "damnd",
+  "cn": "钻石；金刚石；菱形",
+  "propn": false,
+  "raw": "diamond /damnd/ n. 钻石；金刚石；菱形"
+ },
+ {
+  "word": "dominant",
+  "ipa": "dmnnt",
+  "cn": "首要的；占支配地位的；显著的",
+  "propn": false,
+  "raw": "dominant /dmnnt/ adj. 首要的；占支配地位的；显著的"
+ },
+ {
+  "word": "drama",
+  "ipa": "drm",
+  "cn": "戏；剧；戏剧艺术",
+  "propn": false,
+  "raw": "drama /drm/ n. 戏；剧；戏剧艺术"
+ },
+ {
+  "word": "era",
+  "ipa": "r",
+  "cn": "时代；年代；纪元",
+  "propn": false,
+  "raw": "era /r/ n. 时代；年代；纪元"
+ },
+ {
+  "word": "folk",
+  "ipa": "fk",
+  "cn": "民间的；民俗的；普通百姓的",
+  "propn": false,
+  "raw": "folk /fk/ adj. 民间的；民俗的；普通百姓的"
+ },
+ {
+  "word": "format",
+  "ipa": "",
+  "cn": "格式；总体安排；（出版物的）版式 vt. 格式化",
+  "propn": false,
+  "raw": "format // n. 格式；总体安排；（出版物的）版式 vt. 格式化"
+ },
+ {
+  "word": "grief",
+  "ipa": "",
+  "cn": "悲伤；悲痛；伤心事",
+  "propn": false,
+  "raw": "grief // n. 悲伤；悲痛；伤心事"
+ },
+ {
+  "word": "haiku",
+  "ipa": "haku",
+  "cn": "俳句",
+  "propn": false,
+  "raw": "haiku /haku/ n. 俳句"
+ },
+ {
+  "word": "imagery",
+  "ipa": "",
+  "cn": "形象的描述；意象；像",
+  "propn": false,
+  "raw": "imagery // n. 形象的描述；意象；像"
+ },
+ {
+  "word": "innocence",
+  "ipa": "nsns",
+  "cn": "天真；单纯；无罪",
+  "propn": false,
+  "raw": "innocence /nsns/ n. 天真；单纯；无罪"
+ },
+ {
+  "word": "innocent",
+  "ipa": "nsnt",
+  "cn": "天真无邪的；无辜的；无恶意的",
+  "propn": false,
+  "raw": "innocent /nsnt/ adj. 天真无邪的；无辜的；无恶意的"
+ },
+ {
+  "word": "lawn",
+  "ipa": "ln",
+  "cn": "草坪，草地",
+  "propn": false,
+  "raw": "lawn /ln/ n. 草坪，草地"
+ },
+ {
+  "word": "literary",
+  "ipa": "ltrri",
+  "cn": "文学的；爱好文学的；有文学作品特征的",
+  "propn": false,
+  "raw": "literary /ltrri/ adj. 文学的；爱好文学的；有文学作品特征的"
+ },
+ {
+  "word": "mockingbird",
+  "ipa": "mkbd",
+  "cn": "嘲鸫（美洲鸣禽，能模仿别种鸟的鸣叫）",
+  "propn": false,
+  "raw": "mockingbird /mkbd/ n. 嘲鸫（美洲鸣禽，能模仿别种鸟的鸣叫）"
+ },
+ {
+  "word": "mood",
+  "ipa": "mud",
+  "cn": "情绪；心情；语气",
+  "propn": false,
+  "raw": "mood /mud/ n. 情绪；心情；语气"
+ },
+ {
+  "word": "nursery",
+  "ipa": "nsri",
+  "cn": "幼儿教育的 n. 托儿所；保育室",
+  "propn": false,
+  "raw": "nursery/nsri/ adj. 幼儿教育的 n. 托儿所；保育室"
+ },
+ {
+  "word": "nursery rhyme",
+  "ipa": "",
+  "cn": "童谣；儿歌",
+  "propn": false,
+  "raw": "nursery rhyme 童谣；儿歌"
+ },
+ {
+  "word": "polish",
+  "ipa": "pl",
+  "cn": "修改；润色；抛光 n. 上光剂；抛光；擦亮",
+  "propn": false,
+  "raw": "polish /pl/ vt. 修改；润色；抛光 n. 上光剂；抛光；擦亮"
+ },
+ {
+  "word": "prejudice",
+  "ipa": "",
+  "cn": "偏见；成见 vt. 使怀有（或形成）偏见",
+  "propn": false,
+  "raw": "prejudice // n. 偏见；成见 vt. 使怀有（或形成）偏见"
+ },
+ {
+  "word": "prose",
+  "ipa": "prUz",
+  "cn": "散文",
+  "propn": false,
+  "raw": "prose /prUz/ n. 散文"
+ },
+ {
+  "word": "racial",
+  "ipa": "",
+  "cn": "种族的；人种的",
+  "propn": false,
+  "raw": "racial // adj. 种族的；人种的"
+ },
+ {
+  "word": "recite",
+  "ipa": "rsat",
+  "cn": "背诵； 吟诵；列举",
+  "propn": false,
+  "raw": "recite /rsat/ vt. 背诵； 吟诵；列举"
+ },
+ {
+  "word": "respective",
+  "ipa": "rspektv",
+  "cn": "分别的；各自的",
+  "propn": false,
+  "raw": "respective /rspektv/ adj. 分别的；各自的"
+ },
+ {
+  "word": "respectively",
+  "ipa": "rspektvli",
+  "cn": "分别；各自；依次为",
+  "propn": false,
+  "raw": "respectively /rspektvli/ adv. 分别；各自；依次为"
+ },
+ {
+  "word": "revolve",
+  "ipa": "",
+  "cn": "旋转；环绕；转动",
+  "propn": false,
+  "raw": "revolve // vi. 旋转；环绕；转动"
+ },
+ {
+  "word": "rhyme",
+  "ipa": "ram",
+  "cn": "押韵词；押韵的短诗 vi. & vt.  （使）押韵",
+  "propn": false,
+  "raw": "rhyme /ram/ n. 押韵词；押韵的短诗 vi. & vt.  （使）押韵"
+ },
+ {
+  "word": "rhythm",
+  "ipa": "rm",
+  "cn": "节奏；韵律；规律",
+  "propn": false,
+  "raw": "rhythm /rm/ n. 节奏；韵律；规律"
+ },
+ {
+  "word": "seed",
+  "ipa": "sid",
+  "cn": "种子；起源；萌芽",
+  "propn": false,
+  "raw": "seed /sid/ n. 种子；起源；萌芽"
+ },
+ {
+  "word": "shelf",
+  "ipa": "elf",
+  "cn": "架子；搁板",
+  "propn": false,
+  "raw": "shelf /elf/ n.  （pl. shelves //）架子；搁板"
+ },
+ {
+  "word": "sonnet",
+  "ipa": "",
+  "cn": "十四行诗",
+  "propn": false,
+  "raw": "sonnet // n. 十四行诗"
+ },
+ {
+  "word": "sorrow",
+  "ipa": "sr",
+  "cn": "悲伤；悲痛；伤心事 vi. 感到悲伤",
+  "propn": false,
+  "raw": "sorrow /sr/ n. 悲伤；悲痛；伤心事 vi. 感到悲伤"
+ },
+ {
+  "word": "sow",
+  "ipa": "s",
+  "cn": "播种；种",
+  "propn": false,
+  "raw": "sow /s/ vt. & vi.  （sowed, sown // or sowed） 播种；种"
+ },
+ {
+  "word": "string",
+  "ipa": "r",
+  "cn": "细绳；线；一串 vt.  （strung /r/, strung）悬挂；系 adj. 弦乐器的；线织的",
+  "propn": false,
+  "raw": "string /r/ n. 细绳；线；一串 vt.  （strung /r/, strung）悬挂；系 adj. 弦乐器的；线织的"
+ },
+ {
+  "word": "syllable",
+  "ipa": "slbl",
+  "cn": "音节",
+  "propn": false,
+  "raw": "syllable /slbl/ n. 音节"
+ },
+ {
+  "word": "sympathy",
+  "ipa": "smpi",
+  "cn": "同情；赞同",
+  "propn": false,
+  "raw": "sympathy /smpi/ n. 同情；赞同"
+ },
+ {
+  "word": "sympathetic",
+  "ipa": "smpetk",
+  "cn": "同情的；有同情心的；赞同的",
+  "propn": false,
+  "raw": "sympathetic /smpetk/ adj. 同情的；有同情心的；赞同的"
+ },
+ {
+  "word": "tease",
+  "ipa": "tiz",
+  "cn": "取笑（某人）；揶揄；逗弄",
+  "propn": false,
+  "raw": "tease /tiz/ vi. & vt. 取笑（某人）；揶揄；逗弄"
+ },
+ {
+  "word": "utter",
+  "ipa": "",
+  "cn": "出声；说；讲 adj. 完全的；十足的；彻底的",
+  "propn": false,
+  "raw": "utter // vt. 出声；说；讲 adj. 完全的；十足的；彻底的"
+ },
+ {
+  "word": "variation",
+  "ipa": "",
+  "cn": "变化；变体；变奏曲",
+  "propn": false,
+  "raw": "variation // n. 变化；变体；变奏曲"
+ },
+ {
+  "word": "verse",
+  "ipa": " vs",
+  "cn": "诗；韵文；诗节",
+  "propn": false,
+  "raw": "verse / vs/ n. 诗；韵文；诗节"
+ },
+ {
+  "word": "version",
+  "ipa": "vn",
+  "cn": "版本；（从不同角度的）说法",
+  "propn": false,
+  "raw": "version /vn/ n. 版本；（从不同角度的）说法"
+ },
+ {
+  "word": "wherever",
+  "ipa": "",
+  "cn": "在任何地方；在所有……的情况下 adv.  （用于问句）究竟在（到）哪里",
+  "propn": false,
+  "raw": "wherever // conj. 在任何地方；在所有……的情况下 adv.  （用于问句）究竟在（到）哪里"
+ }
+]

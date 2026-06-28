@@ -1,0 +1,443 @@
+[
+ {
+  "word": "animation",
+  "ipa": "nmen",
+  "cn": "电脑、录像）动画制作；动画片",
+  "propn": false,
+  "raw": "animation /nmen/ n.  （电脑、录像）动画制作；动画片"
+ },
+ {
+  "word": "arch",
+  "ipa": "",
+  "cn": "呈弧形横跨；（使）成弓形 n. 拱；拱形结构；拱门",
+  "propn": false,
+  "raw": "arch // vt. & vi. 呈弧形横跨；（使）成弓形 n. 拱；拱形结构；拱门"
+ },
+ {
+  "word": "arched",
+  "ipa": "",
+  "cn": "拱形的；弓形的",
+  "propn": false,
+  "raw": "arched // adj. 拱形的；弓形的"
+ },
+ {
+  "word": "artistic",
+  "ipa": "tstk",
+  "cn": "艺术的；艺术家的",
+  "propn": false,
+  "raw": "artistic /tstk/ adj. 艺术的；艺术家的"
+ },
+ {
+  "word": "ceramic",
+  "ipa": "srmk",
+  "cn": "陶瓷制品；制陶艺术",
+  "propn": false,
+  "raw": "ceramic /srmk/ n. 陶瓷制品；制陶艺术"
+ },
+ {
+  "word": "Christianity",
+  "ipa": "krstinti",
+  "cn": "基督教",
+  "propn": false,
+  "raw": "Christianity /krstinti/ n. 基督教"
+ },
+ {
+  "word": "civil",
+  "ipa": "svl",
+  "cn": "国民的；民用的；民事的",
+  "propn": false,
+  "raw": "civil /svl/ adj. 国民的；民用的；民事的"
+ },
+ {
+  "word": "client",
+  "ipa": "klant",
+  "cn": "委托人；当事人；客户",
+  "propn": false,
+  "raw": "client /klant/ n. 委托人；当事人；客户"
+ },
+ {
+  "word": "contemporary",
+  "ipa": "kntemprri",
+  "cn": "当代的；现代的；属同时期的 n. 同代人；同辈人",
+  "propn": false,
+  "raw": "contemporary /kntemprri/ adj. 当代的；现代的；属同时期的 n. 同代人；同辈人"
+ },
+ {
+  "word": "convey",
+  "ipa": "knve",
+  "cn": "表达；传递（思想、感情等）；传送",
+  "propn": false,
+  "raw": "convey /knve/ vt. 表达；传递（思想、感情等）；传送"
+ },
+ {
+  "word": "criticise",
+  "ipa": "krtsaz",
+  "cn": "批评；指责；评价",
+  "propn": false,
+  "raw": "criticise (NAmE -ize) /krtsaz/ vi. & vt. 批评；指责；评价"
+ },
+ {
+  "word": "criticism",
+  "ipa": "",
+  "cn": "批评；指责；评论",
+  "propn": false,
+  "raw": "criticism // n. 批评；指责；评论"
+ },
+ {
+  "word": "Cubism",
+  "ipa": "kjubzm",
+  "cn": "立体主义；立体派",
+  "propn": false,
+  "raw": "Cubism /kjubzm/ n. 立体主义；立体派"
+ },
+ {
+  "word": "decline",
+  "ipa": "dklan",
+  "cn": "数量、价格、质量等的）减少；下降；衰落 vi. & vt. 减少；下降；衰落；谢绝",
+  "propn": false,
+  "raw": "decline /dklan/ n.  （数量、价格、质量等的）减少；下降；衰落 vi. & vt. 减少；下降；衰落；谢绝"
+ },
+ {
+  "word": "dimension",
+  "ipa": "damenn",
+  "cn": "维；规模；范围",
+  "propn": false,
+  "raw": "dimension /damenn/ n. 维；规模；范围"
+ },
+ {
+  "word": "two-dimensional",
+  "ipa": "damennl",
+  "cn": "二维的",
+  "propn": false,
+  "raw": "two-dimensional /damennl/ adj. 二维的"
+ },
+ {
+  "word": "emerge",
+  "ipa": "md",
+  "cn": "出现；浮现；暴露",
+  "propn": false,
+  "raw": "emerge /md/ vi. & vt. 出现；浮现；暴露"
+ },
+ {
+  "word": "entry",
+  "ipa": "entri",
+  "cn": "加入；进入；参与",
+  "propn": false,
+  "raw": "entry /entri/ n. 加入；进入；参与"
+ },
+ {
+  "word": "exhibition",
+  "ipa": "eksbn",
+  "cn": "展览；（技能、感情或行为的）表演",
+  "propn": false,
+  "raw": "exhibition /eksbn/ n. 展览；（技能、感情或行为的）表演"
+ },
+ {
+  "word": "expansion",
+  "ipa": "kspnn",
+  "cn": "扩张；扩展；扩大",
+  "propn": false,
+  "raw": "expansion /kspnn/ n. 扩张；扩展；扩大"
+ },
+ {
+  "word": "fine art",
+  "ipa": "",
+  "cn": "美术（尤其绘画和雕塑）",
+  "propn": false,
+  "raw": "fine art (also fine arts) 美术（尤其绘画和雕塑）"
+ },
+ {
+  "word": "fond",
+  "ipa": "fnd",
+  "cn": "喜爱",
+  "propn": false,
+  "raw": "fond /fnd/ adj. 喜爱"
+ },
+ {
+  "word": "be fond of",
+  "ipa": "",
+  "cn": "喜爱；喜欢",
+  "propn": false,
+  "raw": "be fond of 喜爱；喜欢"
+ },
+ {
+  "word": "frame",
+  "ipa": "frem",
+  "cn": "画面；框架 vt. 给……镶框；陷害",
+  "propn": false,
+  "raw": "frame /frem/ n. 画面；框架 vt. 给……镶框；陷害"
+ },
+ {
+  "word": "guarantee",
+  "ipa": ":",
+  "cn": "保证；确保；肯定……必然发生 n. 保证；保修单；担保物",
+  "propn": false,
+  "raw": "guarantee /:/ vt. 保证；确保；肯定……必然发生 n. 保证；保修单；担保物"
+ },
+ {
+  "word": "humanistic",
+  "ipa": "hjumnstk",
+  "cn": "人文主义的",
+  "propn": false,
+  "raw": "humanistic /hjumnstk/ adj. 人文主义的"
+ },
+ {
+  "word": "humanity",
+  "ipa": "",
+  "cn": "人性；人道；（统称）人类",
+  "propn": false,
+  "raw": "humanity // n. 人性；人道；（统称）人类"
+ },
+ {
+  "word": "humble",
+  "ipa": "hmbl",
+  "cn": "谦逊的；虚心的；卑微的",
+  "propn": false,
+  "raw": "humble /hmbl/ adj. 谦逊的；虚心的；卑微的"
+ },
+ {
+  "word": "Impressionism",
+  "ipa": "mprenzm",
+  "cn": "印象主义；印象派（绘画风格）",
+  "propn": false,
+  "raw": "Impressionism /mprenzm/ n. 印象主义；印象派（绘画风格）"
+ },
+ {
+  "word": "in particular",
+  "ipa": "",
+  "cn": "尤其；特别",
+  "propn": false,
+  "raw": "in particular 尤其；特别"
+ },
+ {
+  "word": "influential",
+  "ipa": "nfluenl",
+  "cn": "有很大影响力的；有支配力的",
+  "propn": false,
+  "raw": "influential /nfluenl/ adj. 有很大影响力的；有支配力的"
+ },
+ {
+  "word": "ink",
+  "ipa": "k",
+  "cn": "墨水；墨汁；油墨",
+  "propn": false,
+  "raw": "ink /k/ n. 墨水；墨汁；油墨"
+ },
+ {
+  "word": "investment",
+  "ipa": "nvestmnt",
+  "cn": "投资额；投资；（时间、精力的）投入",
+  "propn": false,
+  "raw": "investment /nvestmnt/ n. 投资额；投资；（时间、精力的）投入"
+ },
+ {
+  "word": "memorial",
+  "ipa": "mmril",
+  "cn": "纪念碑（或像等）；纪念物；纪念品 adj. 纪念的；悼念的",
+  "propn": false,
+  "raw": "memorial /mmril/ n. 纪念碑（或像等）；纪念物；纪念品 adj. 纪念的；悼念的"
+ },
+ {
+  "word": "mythology",
+  "ipa": "mldi",
+  "cn": "神话；虚幻的想法",
+  "propn": false,
+  "raw": "mythology /mldi/ n. 神话；虚幻的想法"
+ },
+ {
+  "word": "noble",
+  "ipa": "nbl",
+  "cn": "贵族成员；出身高贵的人 adj. 崇高的；宏伟的；高贵的",
+  "propn": false,
+  "raw": "noble /nbl/ n. 贵族成员；出身高贵的人 adj. 崇高的；宏伟的；高贵的"
+ },
+ {
+  "word": "outer",
+  "ipa": "at(r)",
+  "cn": "外表的；外边的；外围的",
+  "propn": false,
+  "raw": "outer /at(r)/ adj. 外表的；外边的；外围的"
+ },
+ {
+  "word": "permanent",
+  "ipa": "pmnnt",
+  "cn": "永久的；永恒的；长久的",
+  "propn": false,
+  "raw": "permanent /pmnnt/ adj. 永久的；永恒的；长久的"
+ },
+ {
+  "word": "photography",
+  "ipa": "ftrfi",
+  "cn": "照相术；摄影",
+  "propn": false,
+  "raw": "photography /ftrfi/ n. 照相术；摄影"
+ },
+ {
+  "word": "pond",
+  "ipa": "pnd",
+  "cn": "池塘；水池",
+  "propn": false,
+  "raw": "pond /pnd/ n. 池塘；水池"
+ },
+ {
+  "word": "precise",
+  "ipa": "prsas",
+  "cn": "准确的；精确的",
+  "propn": false,
+  "raw": "precise /prsas/ adj. 准确的；精确的"
+ },
+ {
+  "word": "precisely",
+  "ipa": "prsasli",
+  "cn": "准确地；精确地；的确如此",
+  "propn": false,
+  "raw": "precisely /prsasli/ adv. 准确地；精确地；的确如此"
+ },
+ {
+  "word": "primitive",
+  "ipa": "prmtv",
+  "cn": "发展水平低的；原始的；远古的 n. 文艺复兴前的艺术家（或作品）",
+  "propn": false,
+  "raw": "primitive /prmtv/ adj. 发展水平低的；原始的；远古的 n. 文艺复兴前的艺术家（或作品）"
+ },
+ {
+  "word": "purchase",
+  "ipa": "pts",
+  "cn": "购买；采购 n. 购买；购买的东西",
+  "propn": false,
+  "raw": "purchase /pts/ vt. 购买；采购 n. 购买；购买的东西"
+ },
+ {
+  "word": "rank",
+  "ipa": "rk",
+  "cn": "地位；级别；行列 vt. & vi. 把……分等级；使排成行",
+  "propn": false,
+  "raw": "rank /rk/ n. 地位；级别；行列 vt. & vi. 把……分等级；使排成行"
+ },
+ {
+  "word": "realistic",
+  "ipa": "lstk",
+  "cn": "现实的；逼真的",
+  "propn": false,
+  "raw": "realistic /lstk/ adj. 现实的；逼真的"
+ },
+ {
+  "word": "realism",
+  "ipa": "lzm",
+  "cn": "逼真；现实主义；务实作风",
+  "propn": false,
+  "raw": "realism /lzm/ n. 逼真；现实主义；务实作风"
+ },
+ {
+  "word": "realist",
+  "ipa": "rlst",
+  "cn": "现实主义艺术家（或作家等）；现实主义者",
+  "propn": false,
+  "raw": "realist /rlst/ n. 现实主义艺术家（或作家等）；现实主义者"
+ },
+ {
+  "word": "recognition",
+  "ipa": "reknn",
+  "cn": "承认；认出；赞誉",
+  "propn": false,
+  "raw": "recognition /reknn/ n. 承认；认出；赞誉"
+ },
+ {
+  "word": "representative",
+  "ipa": "reprzenttv",
+  "cn": "典型的；有代表性的 n. 代表",
+  "propn": false,
+  "raw": "representative /reprzenttv/ adj. 典型的；有代表性的 n. 代表"
+ },
+ {
+  "word": "reputation",
+  "ipa": "repjuten",
+  "cn": "名誉；名声",
+  "propn": false,
+  "raw": "reputation /repjuten/ n. 名誉；名声"
+ },
+ {
+  "word": "sculpture",
+  "ipa": "sklpt(r)",
+  "cn": "雕像；雕刻品；雕刻术",
+  "propn": false,
+  "raw": "sculpture /sklpt(r)/ n. 雕像；雕刻品；雕刻术"
+ },
+ {
+  "word": "sculptor",
+  "ipa": "",
+  "cn": "雕刻家；雕塑家",
+  "propn": false,
+  "raw": "sculptor // n. 雕刻家；雕塑家"
+ },
+ {
+  "word": "set apart from",
+  "ipa": "",
+  "cn": "使与众不同；使突出；使优于……",
+  "propn": false,
+  "raw": "set apart from 使与众不同；使突出；使优于……"
+ },
+ {
+  "word": "subjective",
+  "ipa": "sbdektv",
+  "cn": "主观的",
+  "propn": false,
+  "raw": "subjective /sbdektv/ adj. 主观的"
+ },
+ {
+  "word": "subsequent",
+  "ipa": "sbskwnt",
+  "cn": "随后的；后来的；之后的",
+  "propn": false,
+  "raw": "subsequent /sbskwnt/ adj. 随后的；后来的；之后的"
+ },
+ {
+  "word": "sunrise",
+  "ipa": "snraIz",
+  "cn": "日出",
+  "propn": false,
+  "raw": "sunrise /snraIz/ n. 日出"
+ },
+ {
+  "word": "symphony",
+  "ipa": "smfni",
+  "cn": "交响乐；交响曲",
+  "propn": false,
+  "raw": "symphony /smfni/ n. 交响乐；交响曲"
+ },
+ {
+  "word": "vase",
+  "ipa": "vz; NAmE  ",
+  "cn": "花瓶；装饰瓶",
+  "propn": false,
+  "raw": "vase /vz; NAmE  / n. 花瓶；装饰瓶"
+ },
+ {
+  "word": "visual",
+  "ipa": "vul",
+  "cn": "视觉的；视力的",
+  "propn": false,
+  "raw": "visual /vul/ adj. 视觉的；视力的"
+ },
+ {
+  "word": "water lily",
+  "ipa": "",
+  "cn": "睡莲",
+  "propn": false,
+  "raw": "water lily // 睡莲"
+ },
+ {
+  "word": "worthy",
+  "ipa": "wi",
+  "cn": "值得……的；有价值的",
+  "propn": false,
+  "raw": "worthy /wi/ adj. 值得……的；有价值的"
+ },
+ {
+  "word": "be worthy of",
+  "ipa": "",
+  "cn": "值得",
+  "propn": false,
+  "raw": "be worthy of 值得"
+ }
+]

@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "grammar_title": "过去分词复习(Review of Past Participles:作定语 / 作状语 / 作宾补与表语)",
+  "source": "人教版2019选择性必修四 Unit 2 Review useful structures:过去分词(done)的用法复习。过去分词=被动/完成,逻辑主语是动作承受者;干扰项 doing(主动/进行)/to do/do。句子标志性景点·建筑奇迹·旅游主题,地道、答案唯一。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "过去分词作定语(被动/完成,前置或后置 = 定语从句)",
+      "overview": "过去分词作定语,表被动或已完成,逻辑主语是动作承受者:前置如 a ruined castle;后置如 a bridge built in 1920(= which was built)。被修饰名词是动作的承受者用 done;若名词主动发出动作则用 doing。"
+    },
+    {
+      "code": "u2.02",
+      "point": "过去分词作状语(被动/完成,句首或句中)",
+      "overview": "过去分词作状语,其逻辑主语是句子主语,且主语承受该动作(被动)时用 done:Built of stone, the tower has lasted centuries. / Seen from the air, the site looks stunning. 若主语主动发出动作则用 doing。"
+    },
+    {
+      "code": "u2.03",
+      "point": "过去分词作宾语补足语 / 表语(与 doing 对照)",
+      "overview": "have/get sth done(让某事被做完)、see/find/keep sth done(宾语承受动作);作表语如 the gate remained closed(处于被动/完成状态)。宾语或主语主动进行动作时才用 doing。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "We visited a ruined castle ____ on a hill above the old town.",
+      "options": [
+        "located",
+        "locating",
+        "to locate",
+        "locate"
+      ],
+      "explanation": "castle 是被'坐落'的承受者,表状态/被动,后置定语用过去分词 located(= which is located)。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.01",
+      "stem": "The bridge ____ in 1920 is still one of the city's most iconic sights.",
+      "options": [
+        "building",
+        "built",
+        "to build",
+        "build"
+      ],
+      "explanation": "bridge 是被'建造'的对象,表被动+完成,后置定语用 built(= which was built)。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.01",
+      "stem": "Tourists love the old streets ____ with grey stone hundreds of years ago.",
+      "options": [
+        "paving",
+        "to pave",
+        "paved",
+        "pave"
+      ],
+      "explanation": "streets 被'铺',被动+完成,后置定语用 paved。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.01",
+      "stem": "Inside the museum you can see ancient symbols ____ onto animal bones.",
+      "options": [
+        "carving",
+        "to carve",
+        "carve",
+        "carved"
+      ],
+      "explanation": "symbols 是被'刻'的对象,被动用 carved。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.01",
+      "stem": "The didgeridoo is made from a tree branch ____ out by nature.",
+      "options": [
+        "hollowed",
+        "hollowing",
+        "to hollow",
+        "hollow"
+      ],
+      "explanation": "branch 被'掏空',被动+完成,后置定语用 hollowed。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.01",
+      "stem": "It is a quiet seaside town ____ far from the busy capital.",
+      "options": [
+        "situating",
+        "situated",
+        "to situate",
+        "situate"
+      ],
+      "explanation": "town 被'坐落',表状态,后置定语用 situated。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.01",
+      "stem": "The stadium ____ the \"Bird's Nest\" can hold eighty thousand people.",
+      "options": [
+        "calling",
+        "to call",
+        "called",
+        "call"
+      ],
+      "explanation": "stadium 被'称为',被动用 called(= which is called)。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.01",
+      "stem": "We took photos of the famous gate ____ of white marble.",
+      "options": [
+        "making",
+        "to make",
+        "make",
+        "made"
+      ],
+      "explanation": "gate 由大理石'制成',被动用 made(of)。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.01",
+      "stem": "The temple has a long history ____ back to the Tang Dynasty.",
+      "options": [
+        "dating",
+        "dated",
+        "to date",
+        "date"
+      ],
+      "explanation": "history 主动'追溯',date back 是主动含义,用现在分词 dating;这里强调'本身向前回溯'的主动延伸,故 dating 才地道。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.01",
+      "stem": "Visitors admired the grand palace ____ by thousands of workers long ago.",
+      "options": [
+        "building",
+        "built",
+        "to build",
+        "build"
+      ],
+      "explanation": "palace 被'建造',被动+完成,后置定语用 built。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.01",
+      "stem": "The old prison, now ____ into a museum, draws many curious tourists.",
+      "options": [
+        "turning",
+        "to turn",
+        "turned",
+        "turn"
+      ],
+      "explanation": "prison 被'改造成',被动用 turned。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.01",
+      "stem": "The channel ____ through the mountain still controls the river today.",
+      "options": [
+        "cutting",
+        "to cut",
+        "cuts",
+        "cut"
+      ],
+      "explanation": "channel 被'开凿',被动+完成,后置定语用过去分词 cut(cut 的过去分词同形)。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.01",
+      "stem": "On the wall are the names of the engineers ____ in the tower's construction.",
+      "options": [
+        "involved",
+        "helping",
+        "to help",
+        "help"
+      ],
+      "explanation": "engineers'被卷入/参与'用过去分词 involved 作后置定语(those involved in)。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.01",
+      "stem": "The market sold goods ____ from many countries along the Silk Road.",
+      "options": [
+        "bringing",
+        "brought",
+        "to bring",
+        "bring"
+      ],
+      "explanation": "goods 被'带来',被动+完成,后置定语用 brought。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.01",
+      "stem": "We walked along a path ____ with bright flowers on both sides.",
+      "options": [
+        "lining",
+        "to line",
+        "lined",
+        "line"
+      ],
+      "explanation": "path 被花'镶边/排满',被动用 lined(be lined with)。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.01",
+      "stem": "The koalas ____ for each session must be in a good state for human contact.",
+      "options": [
+        "selecting",
+        "to select",
+        "select",
+        "selected"
+      ],
+      "explanation": "koalas 被'挑选',被动用 selected(= which are selected)。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.01",
+      "stem": "There is a giant fish-shaped construction ____ to control the water flow.",
+      "options": [
+        "designed",
+        "designing",
+        "to design",
+        "design"
+      ],
+      "explanation": "construction 被'设计',被动用 designed。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.01",
+      "stem": "The honey ____ in this remote valley is famous all over the world.",
+      "options": [
+        "producing",
+        "produced",
+        "to produce",
+        "produce"
+      ],
+      "explanation": "honey 被'生产',被动+完成,后置定语用 produced。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.01",
+      "stem": "It is a UNESCO heritage site ____ for over two thousand years.",
+      "options": [
+        "preserving",
+        "to preserve",
+        "preserved",
+        "preserve"
+      ],
+      "explanation": "site 被'保护/保存',被动用 preserved。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.01",
+      "stem": "Tourists enjoy the clear blue water ____ by long sandy beaches.",
+      "options": [
+        "surrounding",
+        "to surround",
+        "surround",
+        "surrounded"
+      ],
+      "explanation": "water 被沙滩'环绕',被动用 surrounded(= which is surrounded)。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ of stone, the ancient tower has lasted for many centuries.",
+      "options": [
+        "Built",
+        "Building",
+        "To build",
+        "Build"
+      ],
+      "explanation": "句子主语 tower 是被'建造'的对象(被动),状语用过去分词 Built(= As it was built)。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ from the air, the heritage site looks truly stunning.",
+      "options": [
+        "Seeing",
+        "Seen",
+        "To see",
+        "See"
+      ],
+      "explanation": "主语 site 被'看',被动,状语用 Seen(= When it is seen)。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ to the south of the equator, the country enjoys warm weather all year.",
+      "options": [
+        "Locating",
+        "To locate",
+        "Located",
+        "Locate"
+      ],
+      "explanation": "主语 country 被'定位/坐落',状语用 Located(= As it is located)。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by Chinese culture, many cities now have Chinatowns that attract tourists.",
+      "options": [
+        "Influencing",
+        "To influence",
+        "Influence",
+        "Influenced"
+      ],
+      "explanation": "主语 cities 被'影响',被动,状语用 Influenced。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ as the home of golf, Scotland is a perfect place for a relaxing holiday.",
+      "options": [
+        "Known",
+        "Knowing",
+        "To know",
+        "Know"
+      ],
+      "explanation": "主语 Scotland 被'知晓/誉为',被动,状语用 Known(be known as)。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by the first European settlers, the Sunday roast is now typical Australian food.",
+      "options": [
+        "Introducing",
+        "Introduced",
+        "To introduce",
+        "Introduce"
+      ],
+      "explanation": "主语 roast 被'引入',被动,状语用 Introduced。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ originally as a temporary structure, the tower was nearly taken down.",
+      "options": [
+        "Planning",
+        "To plan",
+        "Planned",
+        "Plan"
+      ],
+      "explanation": "主语 tower 被'规划',被动,状语用 Planned。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ around 256 BCE, Dujiangyan is still in use as an irrigation system today.",
+      "options": [
+        "Constructing",
+        "To construct",
+        "Construct",
+        "Constructed"
+      ],
+      "explanation": "主语 Dujiangyan 被'建造',被动+完成,状语用 Constructed。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ from this lookout, the whole bay seems to glow in the morning light.",
+      "options": [
+        "Viewed",
+        "Viewing",
+        "To view",
+        "View"
+      ],
+      "explanation": "主语 bay 被'看/观赏',被动,状语用 Viewed。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by tall mountains on three sides, the old town is hard to reach.",
+      "options": [
+        "Surrounding",
+        "Surrounded",
+        "To surround",
+        "Surround"
+      ],
+      "explanation": "主语 town 被山'环绕',被动,状语用 Surrounded。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ deep in the rainforest, the waterfall is a hidden getaway for hikers.",
+      "options": [
+        "Hiding",
+        "To hide",
+        "Hidden",
+        "Hide"
+      ],
+      "explanation": "主语 waterfall 被'隐藏',被动,状语用 Hidden。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ with bright lights at night, the bridge becomes the city's main attraction.",
+      "options": [
+        "Lighting",
+        "To light",
+        "Light",
+        "Lit"
+      ],
+      "explanation": "主语 bridge 被灯光'点亮',被动,状语用 Lit。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ as a world heritage site, the old city now welcomes more visitors than ever.",
+      "options": [
+        "Recognised",
+        "Recognising",
+        "To recognise",
+        "Recognise"
+      ],
+      "explanation": "主语 city 被'认定',被动,状语用 Recognised。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ for hundreds of years, these old walls still stand strong today.",
+      "options": [
+        "Standing",
+        "Used",
+        "To use",
+        "Use"
+      ],
+      "explanation": "主语 walls 被'使用',被动,状语用 Used(注意'standing'主动但语义不搭后续 still stand);最贴切是 Used。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ of white marble, the grand gate shines under the bright sun.",
+      "options": [
+        "Making",
+        "To make",
+        "Made",
+        "Make"
+      ],
+      "explanation": "主语 gate 由大理石'制成',被动,状语用 Made(be made of)。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ to protect the wild animals, the park has set up strong fences.",
+      "options": [
+        "Designing",
+        "To design",
+        "Design",
+        "Designed"
+      ],
+      "explanation": "主语 park 被'设计/建立'以保护动物,被动,状语用 Designed。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ by immigrants from many lands, the city offers food from all over the world.",
+      "options": [
+        "Shaped",
+        "Shaping",
+        "To shape",
+        "Shape"
+      ],
+      "explanation": "主语 city 被移民'塑造',被动,状语用 Shaped。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ in the heart of the desert, the small town feels far from everywhere.",
+      "options": [
+        "Setting",
+        "Set",
+        "To set",
+        "Sets"
+      ],
+      "explanation": "主语 town 被'置于/坐落',被动,状语用 Set。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ along the coast for miles, the road gives drivers an amazing ocean view.",
+      "options": [
+        "Building",
+        "To build",
+        "Built",
+        "Build"
+      ],
+      "explanation": "主语 road 被'修建',被动,状语用 Built。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ carefully over many years, the gardens have become a famous attraction.",
+      "options": [
+        "Planting",
+        "To plant",
+        "Plant",
+        "Planted"
+      ],
+      "explanation": "主语 gardens 被'栽种/打理',被动,状语用 Planted。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.03",
+      "stem": "After the storm, the workers found the temple gate ____ by a fallen tree.",
+      "options": [
+        "blocked",
+        "blocking",
+        "to block",
+        "block"
+      ],
+      "explanation": "see/find sth done:gate 被树'堵住',宾补用过去分词 blocked。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.03",
+      "stem": "At night the staff keep the old museum's heavy doors ____ for safety.",
+      "options": [
+        "locking",
+        "locked",
+        "to lock",
+        "lock"
+      ],
+      "explanation": "keep sth done:doors 被'锁上',宾补用 locked。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.03",
+      "stem": "The city wants to have the ancient bridge ____ before the festival begins.",
+      "options": [
+        "repairing",
+        "to repair",
+        "repaired",
+        "repair"
+      ],
+      "explanation": "have sth done:bridge 被'修好',宾补用 repaired。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.03",
+      "stem": "When we reached the top, we saw the whole valley ____ in golden light.",
+      "options": [
+        "bathing",
+        "to bathe",
+        "bathe",
+        "bathed"
+      ],
+      "explanation": "see sth done:valley 被光'沐浴',宾补用 bathed。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.03",
+      "stem": "Tourists usually want their photos ____ in front of the famous statue.",
+      "options": [
+        "taken",
+        "taking",
+        "to take",
+        "take"
+      ],
+      "explanation": "want sth done:photos 被'拍',宾补用 taken。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.03",
+      "stem": "Be careful with the old steps; the entrance often remains ____ after heavy rain.",
+      "options": [
+        "flooding",
+        "flooded",
+        "to flood",
+        "flood"
+      ],
+      "explanation": "remain + 表语:entrance 处于被'淹'的状态,用过去分词 flooded。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.03",
+      "stem": "The guide had the gates of the palace ____ so visitors could enter.",
+      "options": [
+        "opening",
+        "to open",
+        "opened",
+        "open"
+      ],
+      "explanation": "have sth done:gates 被'打开',宾补用 opened。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.03",
+      "stem": "After many years, the once-grand fort now lies ____ and forgotten.",
+      "options": [
+        "ruining",
+        "to ruin",
+        "ruin",
+        "ruined"
+      ],
+      "explanation": "lie + 表语:fort 处于被'毁'的状态,用 ruined。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.03",
+      "stem": "The koalas are handled only briefly, and visitors find them ____ from too much contact.",
+      "options": [
+        "stressed",
+        "stressing",
+        "to stress",
+        "stress"
+      ],
+      "explanation": "find sth done:koalas 被'弄得紧张',宾补用过去分词 stressed。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.03",
+      "stem": "The town keeps its old market square ____ exactly as it was a century ago.",
+      "options": [
+        "preserving",
+        "preserved",
+        "to preserve",
+        "preserve"
+      ],
+      "explanation": "keep sth done:square 被'保存',宾补用 preserved。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.03",
+      "stem": "Before the tour, the manager wants the path ____ of any rubbish.",
+      "options": [
+        "clearing",
+        "to clear",
+        "cleared",
+        "clear"
+      ],
+      "explanation": "want sth done:path 被'清理',宾补用 cleared。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.03",
+      "stem": "When the lights went out, the whole hall suddenly became ____ in darkness.",
+      "options": [
+        "covering",
+        "to cover",
+        "cover",
+        "covered"
+      ],
+      "explanation": "become + 表语:hall 被黑暗'笼罩',用过去分词 covered。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.03",
+      "stem": "The festival organisers had hundreds of lanterns ____ along the river bank.",
+      "options": [
+        "hung",
+        "hanging",
+        "to hang",
+        "hang"
+      ],
+      "explanation": "have sth done:lanterns 被'挂起',宾补用过去分词 hung。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.03",
+      "stem": "After the long winter, the mountain gate stays ____ until spring arrives.",
+      "options": [
+        "closing",
+        "closed",
+        "to close",
+        "close"
+      ],
+      "explanation": "stay + 表语:gate 处于被'关闭'的状态,用 closed。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.03",
+      "stem": "Visitors should get their tickets ____ at the booth before entering the site.",
+      "options": [
+        "checking",
+        "to check",
+        "checked",
+        "check"
+      ],
+      "explanation": "get sth done:tickets 被'查验',宾补用 checked。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.03",
+      "stem": "From the boat we watched the cliffs slowly ____ by the evening mist.",
+      "options": [
+        "hiding",
+        "to hide",
+        "hide",
+        "hidden"
+      ],
+      "explanation": "watch sth done:cliffs 被雾'遮住',宾补用 hidden。",
+      "answer_index": 3
+    },
+    {
+      "code": "u2.03",
+      "stem": "The city had its old harbour walls ____ to keep the heritage area safe.",
+      "options": [
+        "strengthened",
+        "strengthening",
+        "to strengthen",
+        "strengthen"
+      ],
+      "explanation": "have sth done:walls 被'加固',宾补用 strengthened。",
+      "answer_index": 0
+    },
+    {
+      "code": "u2.03",
+      "stem": "During the festival, the ancient temple remained ____ to the public all night.",
+      "options": [
+        "opening",
+        "opened",
+        "to open",
+        "open"
+      ],
+      "explanation": "remain + 表语:此处表'(由人)被开放',用过去分词 opened 表被动状态。",
+      "answer_index": 1
+    },
+    {
+      "code": "u2.03",
+      "stem": "We found the famous fountain ____ off because of repairs that week.",
+      "options": [
+        "switching",
+        "to switch",
+        "switched",
+        "switch"
+      ],
+      "explanation": "find sth done:fountain 被'关掉',宾补用 switched(switch off)。",
+      "answer_index": 2
+    },
+    {
+      "code": "u2.03",
+      "stem": "The guide wants every visitor ____ about the rules before the tour starts.",
+      "options": [
+        "telling",
+        "to tell",
+        "tell",
+        "told"
+      ],
+      "explanation": "want sb done(被告知):visitor 被'告知',宾补用过去分词 told。",
+      "answer_index": 3
+    }
+  ]
+}

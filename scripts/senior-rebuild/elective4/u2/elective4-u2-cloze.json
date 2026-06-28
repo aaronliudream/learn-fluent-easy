@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Iconic Attractions",
+  "source": "人教版2019选择性必修四 Unit 2 同主题完形(泰国海岛游/澳大利亚初印象/大巴扎集市/参观鸟巢/红海滩游记/介绍家乡景点)。用词限本单元/高中/常见词,答案唯一,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Holiday in Thailand",
+      "text": "Thailand is a premier holiday (1)____, attracting tourists from all over the world. A major (2)____ of the country is its amazing selection of islands, each with long sandy beaches and clear blue (3)____. Visitors to the beaches can enjoy many activities, including swimming and (4)____ under the water to see colourful fish. Finding the islands is quite (5)____, and there are boats every hour. Be careful, however, not to go during the peak (6)____, unless you want to share the sand with huge crowds. Many tourists also enjoy visiting the north to see the beautiful elephants, a proud (7)____ of the country. Sadly, these animals are in danger, but special parks have been (8)____ up to protect them. Visitors can see these amazing creatures in their natural (9)____, and they can even (10)____ an elephant to help keep it safe and healthy.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "destination",
+            "machine",
+            "mistake",
+            "habit"
+          ],
+          "answer_index": 0,
+          "explanation": "holiday destination 度假目的地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mistake",
+            "attraction",
+            "problem",
+            "danger"
+          ],
+          "answer_index": 1,
+          "explanation": "a major attraction 主要吸引人之处。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sound",
+            "noise",
+            "water",
+            "smoke"
+          ],
+          "answer_index": 2,
+          "explanation": "clear blue water 清澈的蓝色海水。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleeping",
+            "cooking",
+            "shopping",
+            "diving"
+          ],
+          "answer_index": 3,
+          "explanation": "diving under the water 潜水。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "straightforward",
+            "dangerous",
+            "expensive",
+            "boring"
+          ],
+          "answer_index": 0,
+          "explanation": "quite straightforward 相当简单。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machine",
+            "season",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "peak season 旺季/高峰季节。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "symbol",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "a proud symbol 骄傲的象征。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "pulled",
+            "sold",
+            "thrown",
+            "set"
+          ],
+          "answer_index": 3,
+          "explanation": "set up 建立。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "domain",
+            "machine",
+            "market",
+            "office"
+          ],
+          "answer_index": 0,
+          "explanation": "natural domain 自然领地。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "sponsor",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "sponsor an elephant 赞助一头大象。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "First Impressions of Australia",
+      "text": "Last summer I (1)____ to Australia to visit a friend. Before the trip, I had already done some (2)____ on the country. (3)____ to the south of the equator, it is often called \"down under\". I had read about iconic (4)____ such as the Sydney Opera House, and about cute animals like koalas and kangaroos. After I (5)____, my first impressions were all about food! Australian cooking has been (6)____ by many cultures. The Sunday roast, for example, was first (7)____ by British settlers and is now seen as typical Australian food. Asian cooking, on the other hand, brought in new (8)____ and fresh herbs. After staying for a (9)____, my biggest impression was the rich mix of peoples and cultures that (10)____ up the nation. I will never forget how warm and friendly everyone was.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "slept",
+            "refused",
+            "travelled",
+            "failed"
+          ],
+          "answer_index": 2,
+          "explanation": "travelled to Australia 去澳大利亚旅行。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "damage",
+            "noise",
+            "harm",
+            "research"
+          ],
+          "answer_index": 3,
+          "explanation": "do some research 做些调查。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "Located",
+            "Selling",
+            "Breaking",
+            "Losing"
+          ],
+          "answer_index": 0,
+          "explanation": "Located to the south 位于……以南。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mistakes",
+            "attractions",
+            "errors",
+            "noises"
+          ],
+          "answer_index": 1,
+          "explanation": "iconic attractions 标志性景点。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "left",
+            "failed",
+            "arrived",
+            "slept"
+          ],
+          "answer_index": 2,
+          "explanation": "After I arrived 我到达后。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "broken",
+            "sold",
+            "lost",
+            "influenced"
+          ],
+          "answer_index": 3,
+          "explanation": "been influenced by 受……影响。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "introduced",
+            "thrown",
+            "sold",
+            "hidden"
+          ],
+          "answer_index": 0,
+          "explanation": "introduced by settlers 由移民引入。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "prices",
+            "tastes",
+            "noises",
+            "errors"
+          ],
+          "answer_index": 1,
+          "explanation": "new tastes 新口味。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "second",
+            "metre",
+            "while",
+            "coin"
+          ],
+          "answer_index": 2,
+          "explanation": "for a while 一段时间。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "make"
+          ],
+          "answer_index": 3,
+          "explanation": "make up the nation 组成这个国家。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Grand Bazaar",
+      "text": "The Grand Bazaar in Istanbul has a long history (1)____ back to 1455. The market that was first built was quite (2)____ compared to today's huge bazaar. It was (3)____ as part of a larger political plan to improve the city's economy. At first, the bazaar sold mostly cloth, but it soon (4)____ into selling books, jewellery, furniture and food. By the 17th century, two markets nearby had (5)____ together to form one giant market that became an important part of the Silk Road, (6)____ Europe to Asia. Today, the Grand Bazaar is extremely (7)____, mixing the country's glorious trade (8)____ with modern tourism. (9)____ by its own past, the market is still growing, with many new shops opening (10)____. Visitors love wandering through its narrow streets, where there is always something interesting to find.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "dating",
+            "selling",
+            "losing",
+            "hiding"
+          ],
+          "answer_index": 0,
+          "explanation": "dating back to 追溯到。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "small",
+            "rich",
+            "wet"
+          ],
+          "answer_index": 1,
+          "explanation": "quite small 相当小。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lost",
+            "sold",
+            "built",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "was built as part of 作为……的一部分建造。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "fell",
+            "slept",
+            "failed",
+            "expanded"
+          ],
+          "answer_index": 3,
+          "explanation": "expanded into 扩展到。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "joined",
+            "broken",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "joined together 联合在一起。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "losing",
+            "linking",
+            "selling",
+            "hiding"
+          ],
+          "answer_index": 1,
+          "explanation": "linking Europe to Asia 连接欧亚。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "empty",
+            "silent",
+            "iconic",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "extremely iconic 极具标志性。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "history"
+          ],
+          "answer_index": 3,
+          "explanation": "trade history 贸易历史。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Inspired",
+            "Selling",
+            "Breaking",
+            "Losing"
+          ],
+          "answer_index": 0,
+          "explanation": "Inspired by its past 受其历史启发(过去分词状语)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "never",
+            "nearby",
+            "alone",
+            "instead"
+          ],
+          "answer_index": 1,
+          "explanation": "opening nearby 在附近开张。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Visit to the Bird's Nest",
+      "text": "Last week my family (1)____ the iconic Beijing National Stadium, also known as the \"Bird's Nest\". From far away, the building really does look like a giant (2)____ made of steel. Our guide told us that the stadium has a (3)____ of eighty thousand people. (4)____ to host great sporting events, it was finished just before the 2008 Games. The steel bars that form its outer wall were carefully (5)____ to give the building its famous shape. Inside, the seats rise high above the field, and from the top row the players below look very (6)____. We were lucky to join a guided (7)____ that lasted about an hour. Our guide explained how the stadium was (8)____ by thousands of workers over several years. Standing in the middle of the field, I felt very (9)____ to be part of such a famous (10)____. It was a day I will never forget.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "lost",
+            "sold",
+            "visited",
+            "failed"
+          ],
+          "answer_index": 2,
+          "explanation": "visited the stadium 参观体育场。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "nest"
+          ],
+          "answer_index": 3,
+          "explanation": "a giant nest 一个巨大的鸟巢。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "capacity",
+            "mistake",
+            "noise",
+            "danger"
+          ],
+          "answer_index": 0,
+          "explanation": "a capacity of 容量为。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "Selling",
+            "Designed",
+            "Breaking",
+            "Losing"
+          ],
+          "answer_index": 1,
+          "explanation": "Designed to host 为举办……而设计(过去分词状语)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lost",
+            "sold",
+            "shaped",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "carefully shaped 被精心塑形。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "wet",
+            "rich",
+            "small"
+          ],
+          "answer_index": 3,
+          "explanation": "look very small 看起来很小。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "session",
+            "price",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "a guided session 一场导览。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "built",
+            "sold",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "was built by workers 由工人建造。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "bored",
+            "afraid",
+            "proud",
+            "angry"
+          ],
+          "answer_index": 2,
+          "explanation": "felt very proud 感到非常自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "error",
+            "danger",
+            "attraction"
+          ],
+          "answer_index": 3,
+          "explanation": "such a famous attraction 如此著名的景点。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Red Beach",
+      "text": "Far in the north of China lies a strange and beautiful (1)____ called the Red Beach. It is not made of sand, but of a special plant that turns bright red in autumn. (2)____ near the mouth of a wide river, the area looks like a sea of fire when the sun goes down. The site is carefully (3)____, so that the rare plants are not harmed by visitors. Wooden paths have been (4)____ above the wet ground, and people are asked to stay on them at all times. Many kinds of birds build their (5)____ here, and some travel thousands of kilometres to (6)____ their eggs in this safe place. (7)____ from a high lookout, the whole beach seems to glow. The best (8)____ to visit is early autumn, when the colour is at its (9)____. For nature lovers, the Red Beach is a quiet (10)____ from the noise of city life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "attraction",
+            "mistake",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "a beautiful attraction 美丽的景点。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "Selling",
+            "Located",
+            "Breaking",
+            "Losing"
+          ],
+          "answer_index": 1,
+          "explanation": "Located near 位于……附近。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "lost",
+            "sold",
+            "protected",
+            "thrown"
+          ],
+          "answer_index": 2,
+          "explanation": "carefully protected 被精心保护。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lost",
+            "sold",
+            "thrown",
+            "built"
+          ],
+          "answer_index": 3,
+          "explanation": "have been built 被建造。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "nests",
+            "prices",
+            "noises",
+            "errors"
+          ],
+          "answer_index": 0,
+          "explanation": "build their nests 筑巢。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "hatch",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "hatch their eggs 孵蛋。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Selling",
+            "Breaking",
+            "Seen",
+            "Losing"
+          ],
+          "answer_index": 2,
+          "explanation": "Seen from a lookout 从瞭望台看(过去分词状语)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "time"
+          ],
+          "answer_index": 3,
+          "explanation": "the best time 最佳时间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "best",
+            "worst",
+            "lowest",
+            "smallest"
+          ],
+          "answer_index": 0,
+          "explanation": "at its best 处于最佳状态。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "getaway",
+            "noise",
+            "danger"
+          ],
+          "answer_index": 1,
+          "explanation": "a quiet getaway 安静的度假去处。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Introducing My Hometown",
+      "text": "I would love to (1)____ visitors to the iconic attractions of my hometown. The first place I always (2)____ is the old stone bridge in the centre of the city. (3)____ over four hundred years ago, it still carries people across the river every day. (4)____ of grey stone, it has lasted through wars and floods. Next, I take guests to a grand temple (5)____ on a quiet hill above the town. (6)____ as a heritage site, it draws many tourists each year. Finally, we walk to the night market, where local food is cooked with fresh (7)____ and sold at low prices. People can (8)____ many different dishes there. Whenever friends come to stay, I am (9)____ that they are entitled to see the very best of my city. For me, sharing these places is the perfect way to (10)____ my pride in where I come from.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "introduce",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "introduce visitors to 把游客引荐给。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lose",
+            "throw",
+            "sell",
+            "recommend"
+          ],
+          "answer_index": 3,
+          "explanation": "I always recommend 我总是推荐。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "Built",
+            "Selling",
+            "Losing",
+            "Breaking"
+          ],
+          "answer_index": 0,
+          "explanation": "Built over four hundred years ago 建于四百多年前(过去分词状语)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "Selling",
+            "Made",
+            "Losing",
+            "Breaking"
+          ],
+          "answer_index": 1,
+          "explanation": "Made of grey stone 由灰石制成(过去分词状语)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "losing",
+            "selling",
+            "located",
+            "breaking"
+          ],
+          "answer_index": 2,
+          "explanation": "a temple located on a hill 坐落在山上的庙(过去分词作定语)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "Selling",
+            "Losing",
+            "Breaking",
+            "Recognised"
+          ],
+          "answer_index": 3,
+          "explanation": "Recognised as a heritage site 被认定为遗产地(过去分词状语)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "herbs",
+            "prices",
+            "noises",
+            "errors"
+          ],
+          "answer_index": 0,
+          "explanation": "fresh herbs 新鲜香草。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "taste",
+            "throw",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "taste many dishes 品尝多种菜肴。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "bored",
+            "angry",
+            "proud",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "I am proud that 我自豪……。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "hide",
+            "waste",
+            "show"
+          ],
+          "answer_index": 3,
+          "explanation": "show my pride 展现我的自豪。"
+        }
+      ]
+    }
+  ]
+}

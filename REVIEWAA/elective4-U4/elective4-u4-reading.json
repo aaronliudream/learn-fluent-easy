@@ -1,0 +1,320 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Sharing",
+  "source": "人教版2019选择性必修四 Unit 4 同主题阅读(丛林志愿教师/村庄分享与剩饭文化/中国海外援助/People's Shoes买一捐一/布达佩斯Most慈善/感恩与理所当然)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Teaching in the Bush",
+      "body": "Jo has been a volunteer teacher in a bush school for about a month. The classrooms there are made of bamboo, with clay floors and roofs of grass. Every morning she walks to school down a dusty track covered in weeds, and the boys greet her with a cheerful chorus of \"good morning\". Unlike students back home, these boys do not wear cotton uniforms, and many of them walk for up to two hours just to reach the school. There is no electricity, no running water and not even any textbooks, let alone laptops or tablets. All the students have are pencils, rubbers and paper. Jo has had to become far more imaginative in her teaching, and she has learned not to be too rigid about the rules. At times she wonders whether she is really making any difference to these boys' lives. Yet the boys clearly value the chance to learn, and that keeps her going.",
+      "vocab_notes": [
+        {
+          "word": "bush",
+          "cn": "丛林;偏远的乡野"
+        },
+        {
+          "word": "rigid",
+          "cn": "死板的"
+        },
+        {
+          "word": "dusty",
+          "cn": "布满灰尘的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is Jo's job in the village?",
+          "options": [
+            "She works there as a volunteer teacher.",
+            "She sells uniforms to the boys.",
+            "She builds bamboo classrooms.",
+            "She repairs the school's electricity."
+          ],
+          "answer_index": 0,
+          "explanation": "首句说明 Jo 是丛林学校的志愿教师,其余选项文中未提或相反。"
+        },
+        {
+          "stem": "What do the students lack at the school?",
+          "options": [
+            "Friendly teachers.",
+            "Basic things such as electricity and textbooks.",
+            "A daily walk to school.",
+            "Pencils and paper."
+          ],
+          "answer_index": 1,
+          "explanation": "文中说没有电、没有自来水、没有课本,概括为缺基本设施;最后一项相反(他们有铅笔和纸)。"
+        },
+        {
+          "stem": "Why does Jo keep going despite her doubts?",
+          "options": [
+            "Because the boys really treasure their chance of getting an education.",
+            "Because the pay is very high.",
+            "Because the school has modern devices.",
+            "Because the walk to school is short."
+          ],
+          "answer_index": 0,
+          "explanation": "末句说男孩们珍视学习机会,这让她坚持下去。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Day with a Village Family",
+      "body": "Last weekend Jo visited a remote village, the home of one of her students, Tombe. After walking for over two hours across a mountain and down a shaded path, she reached a low bamboo hut with no windows. Inside it was dark, and the only possessions she could see were a broom, a few saucers, a kettle and a couple of jars. Tombe's father heated some stones on a fire and used them to steam sweet potatoes, ripe corn and greens, which smelled delicious. The whole family sat round the fire and ate together. Later Jo noticed a can being heated and then thrown out of the doorway. Tombe explained that drying out the leftover food in this way was part of their beliefs. Though the family had almost nothing, they shared everything they could with their guests. When Jo left the next morning after many warm handshakes, she felt that spending a day with them had been a real privilege.",
+      "vocab_notes": [
+        {
+          "word": "hut",
+          "cn": "简陋的小屋"
+        },
+        {
+          "word": "leftover",
+          "cn": "剩饭剩菜"
+        },
+        {
+          "word": "privilege",
+          "cn": "荣幸"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Tombe's family home like?",
+          "options": [
+            "A large modern house full of furniture.",
+            "A simple dark hut with very few possessions.",
+            "A school building made of stone.",
+            "A shop selling food to visitors."
+          ],
+          "answer_index": 1,
+          "explanation": "文中描述是没有窗户、内部昏暗、几乎没有家当的小竹棚,概括为简陋小屋。"
+        },
+        {
+          "stem": "How did the family treat their guest?",
+          "options": [
+            "They asked her to leave at once.",
+            "They charged her for the meal.",
+            "They shared what little they had with her.",
+            "They ignored her during dinner."
+          ],
+          "answer_index": 2,
+          "explanation": "文中说一家人几乎一无所有却尽力分享,概括为'分享所有'。"
+        },
+        {
+          "stem": "How did Jo feel about the visit?",
+          "options": [
+            "She felt bored and uncomfortable.",
+            "She felt sorry that she had gone.",
+            "She felt angry about the simple food.",
+            "She felt it had been a true privilege."
+          ],
+          "answer_index": 3,
+          "explanation": "末句说她觉得这是一种真正的荣幸。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Helping Others Far Away Is Worth It",
+      "body": "Bingbing's mother is a medical doctor who has spent two years as a volunteer in Tanzania, a country with many health problems. At first Bingbing was upset, because her mother had always cooked for her and was her best friend, and she had left without even asking for Bingbing's opinion. But as Bingbing learned more about the work, she began to sing a different tune. In Tanzania, many people live without things that Bingbing's family take for granted, such as electricity, running water and good hospitals. Her mother helped to build a heart hospital, so that patients no longer had to go abroad for costly surgery. She also travelled to rural villages to treat the sick, help those with disabilities and train local doctors. Some may ask whether such work is worth it. Bingbing now firmly believes it is, both for the lives it saves and because it shows that Chinese people care about a shared future for all of mankind.",
+      "vocab_notes": [
+        {
+          "word": "tune",
+          "cn": "(sing a different tune)改变看法"
+        },
+        {
+          "word": "disability",
+          "cn": "残疾"
+        },
+        {
+          "word": "shared",
+          "cn": "共同的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Bingbing upset at first?",
+          "options": [
+            "Her mother had left without asking how she felt.",
+            "Her mother had stopped being a doctor.",
+            "She had to move to Tanzania too.",
+            "Her mother had never cooked for her."
+          ],
+          "answer_index": 0,
+          "explanation": "文中说母亲没征求她的意见就离开了,所以她不高兴;最后一项与原文相反。"
+        },
+        {
+          "stem": "What did Bingbing's mother do in Tanzania?",
+          "options": [
+            "She opened a private business.",
+            "She helped build a hospital and treated the sick.",
+            "She studied at a local school.",
+            "She trained as a heart patient."
+          ],
+          "answer_index": 1,
+          "explanation": "文中说她帮助建心脏医院并到乡村治病、培训医生,概括为'建医院、治病'。"
+        },
+        {
+          "stem": "What does Bingbing think about her mother's work now?",
+          "options": [
+            "She thinks it is a waste of time.",
+            "She wishes her mother would stop.",
+            "She firmly believes it is worth doing.",
+            "She is no longer interested in it."
+          ],
+          "answer_index": 2,
+          "explanation": "末句说她现在坚信这项工作是值得的。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "One Pair for One Pair",
+      "body": "People's Shoes is a company that wants to create a better world through sharing. Its idea is simple but powerful: for every pair of shoes a customer buys, the company donates a pair to someone who is in need. In this way, ordinary shoppers can help others without spending any extra money. But the company does more than give away shoes. It also provides surgery and medical treatment to people with eye problems, and it brings clean water systems to communities where the drinking water is unsafe. Today People's Shoes works in about seventy countries around the world. The message behind it is that doing good and doing business do not have to be separate things. By choosing where to spend their money, customers can quietly make a difference to the lives of strangers far away. The company hopes that more businesses will follow this example and put kindness at the heart of what they do.",
+      "vocab_notes": [
+        {
+          "word": "donate",
+          "cn": "捐赠"
+        },
+        {
+          "word": "in need",
+          "cn": "有需要的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does People's Shoes help people in need?",
+          "options": [
+            "It sells shoes at a very high price.",
+            "It only helps people in one country.",
+            "It collects old shoes from the rich.",
+            "It gives one pair of shoes for each pair sold."
+          ],
+          "answer_index": 3,
+          "explanation": "文中说每卖出一双就捐一双,概括为'每售一双捐一双'。"
+        },
+        {
+          "stem": "Besides shoes, what else does the company offer?",
+          "options": [
+            "Eye treatment and clean water systems.",
+            "Free holidays for shoppers.",
+            "New cars for poor families.",
+            "Jobs in its head office."
+          ],
+          "answer_index": 0,
+          "explanation": "文中提到为眼疾患者提供手术治疗,并带来干净的供水系统。"
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Shoes should always be expensive.",
+            "Helping people and running a company can work together.",
+            "Charity work is only for rich people.",
+            "Companies should never give anything away."
+          ],
+          "answer_index": 1,
+          "explanation": "文中说做好事与做生意不必分开,这是文章主旨。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Charity Run by Young People",
+      "body": "Most is a small charity that is run entirely by young people in Budapest, the capital of Hungary. One group it tries to help is the Roma, an ethnic group in Europe that is often poor and treated unfairly. The members of Most feel that they should not only enjoy the comfortable lives they have in the city, but also share what they have with people elsewhere in the country. They believe it is a kind of duty to help those who have less than they do. The young volunteers visit poorer communities, bring donations and spend time with families who need support. They also plan to help at a refugee centre in a neighbouring country. For these young people, helping others is not a burden but something that gives their own lives more meaning. They hope that their example will encourage other youngsters to look beyond themselves and do something good for the wider world.",
+      "vocab_notes": [
+        {
+          "word": "charity",
+          "cn": "慈善机构"
+        },
+        {
+          "word": "donation",
+          "cn": "捐赠物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Who runs the charity called Most?",
+          "options": [
+            "The government of Hungary.",
+            "A group of rich businessmen.",
+            "Young people in Budapest.",
+            "Teachers from a refugee centre."
+          ],
+          "answer_index": 2,
+          "explanation": "首句说 Most 完全由布达佩斯的年轻人运营。"
+        },
+        {
+          "stem": "Why do the members want to help others?",
+          "options": [
+            "Because they are paid a lot of money.",
+            "Because the city forces them to.",
+            "Because they want to become famous.",
+            "Because they feel it is a duty to share with those who have less."
+          ],
+          "answer_index": 3,
+          "explanation": "文中说他们觉得帮助比自己拥有更少的人是一种责任。"
+        },
+        {
+          "stem": "How does helping others affect these young people?",
+          "options": [
+            "It makes their own lives feel more meaningful.",
+            "It makes their lives very boring.",
+            "It costs them all their free time for nothing.",
+            "It makes them want to leave the country."
+          ],
+          "answer_index": 0,
+          "explanation": "文中说帮助别人不是负担,而是让他们的生活更有意义。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Things We Take for Granted",
+      "body": "When we turn on a tap and clean water flows out, most of us never stop to think about it. We flick a switch and the lights come on; we open a fridge full of food whenever we feel hungry. These small comforts feel so normal that we take them completely for granted. Yet in many parts of the world, people live without running water, electricity or enough to eat. Spending time with such families often changes the way visitors see their own lives. They begin to notice how much they have, and how little they once valued it. This is one of the quiet gifts of volunteering: it teaches us gratitude. People who have shared a meal in a simple hut often say that the experience made them more thankful and more willing to help others. Learning to be grateful for what we have is the first step towards being generous with it.",
+      "vocab_notes": [
+        {
+          "word": "take for granted",
+          "cn": "视为理所当然"
+        },
+        {
+          "word": "gratitude",
+          "cn": "感恩"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What everyday comforts does the writer mention?",
+          "options": [
+            "Cars, planes and trains.",
+            "Clean water, electricity and food.",
+            "Phones, games and films.",
+            "Schools, books and pens."
+          ],
+          "answer_index": 1,
+          "explanation": "文中举例自来水、电和食物等日常便利。"
+        },
+        {
+          "stem": "What does spending time with poor families often do to visitors?",
+          "options": [
+            "It makes them feel proud and selfish.",
+            "It makes them forget their own lives.",
+            "It changes the way they see their own lives.",
+            "It makes them dislike helping others."
+          ],
+          "answer_index": 2,
+          "explanation": "文中说与这样的家庭相处往往改变访客看待自己生活的方式。"
+        },
+        {
+          "stem": "According to the writer, what is the first step towards being generous?",
+          "options": [
+            "Buying more expensive things.",
+            "Travelling to many countries.",
+            "Keeping everything for ourselves.",
+            "First learning to feel thankful for all that we already own."
+          ],
+          "answer_index": 3,
+          "explanation": "末句说学会对所拥有的心怀感恩是慷慨的第一步。"
+        }
+      ]
+    }
+  ]
+}

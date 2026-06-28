@@ -1,0 +1,359 @@
+[
+ {
+  "word": "absorb",
+  "ipa": "bsb",
+  "cn": "吸引全部注意力；吸收",
+  "propn": false,
+  "raw": "absorb /bsb/ vt. 吸引全部注意力；吸收"
+ },
+ {
+  "word": "abuse",
+  "ipa": "bjus",
+  "cn": "滥用；虐待；辱骂 /bjuz/ vt. 滥用；虐待；辱骂",
+  "propn": false,
+  "raw": "abuse /bjus/ n. 滥用；虐待；辱骂 /bjuz/ vt. 滥用；虐待；辱骂"
+ },
+ {
+  "word": "alcohol",
+  "ipa": "lkhl",
+  "cn": "酒；酒精",
+  "propn": false,
+  "raw": "alcohol /lkhl/ n. 酒；酒精"
+ },
+ {
+  "word": "cigarette",
+  "ipa": "sret",
+  "cn": "香烟；卷烟",
+  "propn": false,
+  "raw": "cigarette /sret/ n. 香烟；卷烟"
+ },
+ {
+  "word": "comedy",
+  "ipa": "kmdi",
+  "cn": "喜剧；喜剧片；滑稽节目",
+  "propn": false,
+  "raw": "comedy /kmdi/ n. 喜剧；喜剧片；滑稽节目"
+ },
+ {
+  "word": "compose",
+  "ipa": "kmpz",
+  "cn": "组成；作曲；撰写",
+  "propn": false,
+  "raw": "compose /kmpz/ vt. & vi. 组成；作曲；撰写"
+ },
+ {
+  "word": "be composed of",
+  "ipa": "",
+  "cn": "由……组成（或构成）的",
+  "propn": false,
+  "raw": "be composed of 由……组成（或构成）的"
+ },
+ {
+  "word": "consultant",
+  "ipa": "knsltnt",
+  "cn": "顾问；高级顾问医师",
+  "propn": false,
+  "raw": "consultant /knsltnt/ n. 顾问；高级顾问医师"
+ },
+ {
+  "word": "cue",
+  "ipa": "kju",
+  "cn": "提示；暗示；信号 vt. 给（某人）暗示（或提示）",
+  "propn": false,
+  "raw": "cue /kju/ n. 提示；暗示；信号 vt. 给（某人）暗示（或提示）"
+ },
+ {
+  "word": "decide on",
+  "ipa": "",
+  "cn": "决定；选定",
+  "propn": false,
+  "raw": "decide on 决定；选定"
+ },
+ {
+  "word": "delete",
+  "ipa": "dlit",
+  "cn": "删去；删除",
+  "propn": false,
+  "raw": "delete /dlit/ v. 删去；删除"
+ },
+ {
+  "word": "dentist",
+  "ipa": "dentst ",
+  "cn": "牙科医生",
+  "propn": false,
+  "raw": "dentist /dentst / n. 牙科医生"
+ },
+ {
+  "word": "discipline",
+  "ipa": "dspln",
+  "cn": "自制力；纪律；学科 vt. 自我控制；管教；处罚",
+  "propn": false,
+  "raw": "discipline /dspln/ n. 自制力；纪律；学科 vt. 自我控制；管教；处罚"
+ },
+ {
+  "word": "disturb",
+  "ipa": "dstb",
+  "cn": "打扰；搅乱；使烦恼",
+  "propn": false,
+  "raw": "disturb /dstb/ vt. 打扰；搅乱；使烦恼"
+ },
+ {
+  "word": "dizzy",
+  "ipa": "dzi",
+  "cn": "头晕目眩的",
+  "propn": false,
+  "raw": "dizzy /dzi/ adj. 头晕目眩的"
+ },
+ {
+  "word": "dominate",
+  "ipa": "dmnet",
+  "cn": "支配；控制；占有优势",
+  "propn": false,
+  "raw": "dominate /dmnet/ vt. & vi. 支配；控制；占有优势"
+ },
+ {
+  "word": "drug",
+  "ipa": "dr",
+  "cn": "毒品；药物",
+  "propn": false,
+  "raw": "drug /dr/ n. 毒品；药物"
+ },
+ {
+  "word": "dynamic",
+  "ipa": "danmk",
+  "cn": "充满活力的；精力充沛的；动态的",
+  "propn": false,
+  "raw": "dynamic /danmk/ adj. 充满活力的；精力充沛的；动态的"
+ },
+ {
+  "word": "enhance",
+  "ipa": "nhns; NAmE -hns",
+  "cn": "提高；增强；增进",
+  "propn": false,
+  "raw": "enhance /nhns; NAmE -hns/ vt. 提高；增强；增进"
+ },
+ {
+  "word": "escalator",
+  "ipa": "esklet(r)",
+  "cn": "自动扶梯；滚梯",
+  "propn": false,
+  "raw": "escalator /esklet(r)/ n. 自动扶梯；滚梯"
+ },
+ {
+  "word": "examine",
+  "ipa": "zmn",
+  "cn": "仔细）检查；审查；测验",
+  "propn": false,
+  "raw": "examine /zmn/ vt.  （仔细）检查；审查；测验"
+ },
+ {
+  "word": "facilitate",
+  "ipa": "fsltet",
+  "cn": "促进；促使；使便利",
+  "propn": false,
+  "raw": "facilitate /fsltet/ vt. 促进；促使；使便利"
+ },
+ {
+  "word": "flu",
+  "ipa": "flu",
+  "cn": "流感",
+  "propn": false,
+  "raw": "flu /flu/ n. 流感"
+ },
+ {
+  "word": "in response to",
+  "ipa": "",
+  "cn": "回答；答复",
+  "propn": false,
+  "raw": "in response to 回答；答复"
+ },
+ {
+  "word": "liberation",
+  "ipa": "lbren",
+  "cn": "解放；摆脱",
+  "propn": false,
+  "raw": "liberation /lbren/ n. 解放；摆脱"
+ },
+ {
+  "word": "make up one’s mind 下定决心",
+  "ipa": "",
+  "cn": "下定决心",
+  "propn": false,
+  "raw": "make up one’s mind 下定决心"
+ },
+ {
+  "word": "monthly",
+  "ipa": "mnli",
+  "cn": "每月；每月一次的 n. 月刊",
+  "propn": false,
+  "raw": "monthly /mnli/ adv. & adj. 每月；每月一次的 n. 月刊"
+ },
+ {
+  "word": "negative",
+  "ipa": "netv",
+  "cn": "消极的；有害的；否定的",
+  "propn": false,
+  "raw": "negative /netv/ adj. 消极的；有害的；否定的"
+ },
+ {
+  "word": "nut",
+  "ipa": "nt",
+  "cn": "坚果",
+  "propn": false,
+  "raw": "nut /nt/ n. 坚果"
+ },
+ {
+  "word": "pessimistic",
+  "ipa": "pesmstk",
+  "cn": "悲观的；悲观主义的",
+  "propn": false,
+  "raw": "pessimistic /pesmstk/ adj. 悲观的；悲观主义的"
+ },
+ {
+  "word": "physical",
+  "ipa": "fzkl",
+  "cn": "身体的；客观存在的；物理学的",
+  "propn": false,
+  "raw": "physical /fzkl/ adj. 身体的；客观存在的；物理学的"
+ },
+ {
+  "word": "pill",
+  "ipa": "pl",
+  "cn": "药丸；药片",
+  "propn": false,
+  "raw": "pill /pl/ n. 药丸；药片"
+ },
+ {
+  "word": "psychology",
+  "ipa": "sakldi",
+  "cn": "心理学；心理；心理影响",
+  "propn": false,
+  "raw": "psychology /sakldi/ n. 心理学；心理；心理影响"
+ },
+ {
+  "word": "refresh",
+  "ipa": "rfre",
+  "cn": "使恢复精力；使凉爽；刷新",
+  "propn": false,
+  "raw": "refresh /rfre/ vt. 使恢复精力；使凉爽；刷新"
+ },
+ {
+  "word": "rely",
+  "ipa": "rla",
+  "cn": "依赖；依靠；信赖",
+  "propn": false,
+  "raw": "rely /rla/ vi. 依赖；依靠；信赖"
+ },
+ {
+  "word": "rely on",
+  "ipa": "",
+  "cn": "依赖；依靠；信赖",
+  "propn": false,
+  "raw": "rely on 依赖；依靠；信赖"
+ },
+ {
+  "word": "repeatedly",
+  "ipa": "rpitdli",
+  "cn": "重复地",
+  "propn": false,
+  "raw": "repeatedly /rpitdli/ adv. 重复地"
+ },
+ {
+  "word": "reward",
+  "ipa": "rwd",
+  "cn": "回报；奖励；报酬 vt. 奖励；奖赏；给以报酬",
+  "propn": false,
+  "raw": "reward /rwd/ n. 回报；奖励；报酬 vt. 奖励；奖赏；给以报酬"
+ },
+ {
+  "word": "shave",
+  "ipa": "ev",
+  "cn": "剃（须发）；刮脸",
+  "propn": false,
+  "raw": "shave /ev/ vi., vt. & n. 剃（须发）；刮脸"
+ },
+ {
+  "word": "shave off",
+  "ipa": "",
+  "cn": "剃掉；刮去",
+  "propn": false,
+  "raw": "shave off 剃掉；刮去"
+ },
+ {
+  "word": "skateboard",
+  "ipa": "sketbd",
+  "cn": "滑板 vi. 滑滑板",
+  "propn": false,
+  "raw": "skateboard /sketbd/ n. 滑板 vi. 滑滑板"
+ },
+ {
+  "word": "skip",
+  "ipa": "skp",
+  "cn": "跳过；不参加；悄悄溜走 vi. 蹦蹦跳跳地走；跳绳 n. 蹦跳",
+  "propn": false,
+  "raw": "skip /skp/ vt. 跳过；不参加；悄悄溜走 vi. 蹦蹦跳跳地走；跳绳 n. 蹦跳"
+ },
+ {
+  "word": "specialist",
+  "ipa": "spelst",
+  "cn": "专科医生；专家",
+  "propn": false,
+  "raw": "specialist /spelst/ n. 专科医生；专家"
+ },
+ {
+  "word": "stimulate",
+  "ipa": "stmjulet",
+  "cn": "激发；促进；刺激",
+  "propn": false,
+  "raw": "stimulate /stmjulet/ vt. 激发；促进；刺激"
+ },
+ {
+  "word": "straight away",
+  "ipa": "",
+  "cn": "立即；马上",
+  "propn": false,
+  "raw": "straight away 立即；马上"
+ },
+ {
+  "word": "stressed out",
+  "ipa": "",
+  "cn": "焦虑不安；心力交瘁",
+  "propn": false,
+  "raw": "stressed out 焦虑不安；心力交瘁"
+ },
+ {
+  "word": "sugary",
+  "ipa": "ri",
+  "cn": "含糖的；甜的",
+  "propn": false,
+  "raw": "sugary /ri/ adj. 含糖的；甜的"
+ },
+ {
+  "word": "surgeon",
+  "ipa": "sdn",
+  "cn": "外科医生",
+  "propn": false,
+  "raw": "surgeon /sdn/ n. 外科医生"
+ },
+ {
+  "word": "surgery",
+  "ipa": "sdri",
+  "cn": "外科手术；外科学",
+  "propn": false,
+  "raw": "surgery /sdri/ n. 外科手术；外科学"
+ },
+ {
+  "word": "tobacco",
+  "ipa": "tbk",
+  "cn": "烟草；烟叶",
+  "propn": false,
+  "raw": "tobacco /tbk/ n. 烟草；烟叶"
+ },
+ {
+  "word": "worn out",
+  "ipa": "",
+  "cn": "筋疲力尽的；疲惫的",
+  "propn": false,
+  "raw": "worn out 筋疲力尽的；疲惫的"
+ }
+]

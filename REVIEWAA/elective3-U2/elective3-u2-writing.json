@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Advice on a Healthy Lifestyle / How to Quit a Bad Habit(给同学的健康生活建议信)",
+  "title_en": "A Letter of Advice on Quitting a Bad Habit",
+  "genre": "建议信 / 说明文(describe a bad habit + give advice on how to change it)",
+  "source": "人教版2019选择性必修三 Unit 2 Reading for Writing:write a letter giving advice on a healthy lifestyle / how to quit a bad habit(描述一个不健康习惯 + 给出可行的改变方法 + 鼓励)。",
+  "prompt_cn": "假设你叫李华,你的英国朋友 Chris 在信中说自己沉迷手机、常常熬夜,身体越来越差,向你求助。请用英语写一封约100词的回信,内容包括:① 表示理解并简要分析这个坏习惯的危害;② 用「习惯循环」给出一两条切实可行的改变方法;③ 鼓励他相信小步骤、坚持下去。注意用上本单元的不定式作主语句型(如 To exercise regularly keeps us fit. / It is important to … / It takes willpower to …)。",
+  "prompt_en": "Suppose you are Li Hua. Your British friend Chris has written to say that he is addicted to his phone, often stays up late and feels less and less healthy. Write a reply (about 100 words) including: 1) understanding and a brief note on why the habit is harmful; 2) one or two practical ways to change, using the idea of the habit cycle; 3) some encouragement to keep going step by step. Try to use the infinitive-as-subject patterns from this unit.",
+  "points": [
+    "理解并点出危害(I know how you feel … Using a phone too much can harm your sleep and health.)",
+    "用习惯循环给方法(To break this habit, keep the cue but change the routine …)",
+    "用本单元不定式句型(To exercise regularly keeps us fit. / It takes willpower to …)",
+    "鼓励坚持小步骤(Don't give up — small steps over time really work.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Chris,\n\nThanks for your letter. I know exactly how you feel, because using a phone too much was once my problem too. Staying up late on the screen harms your sleep and leaves you tired all day, so it is wise to change this habit slowly.\n\nHere is what helped me. Try to understand your habit cycle: boredom is the cue, and scrolling is the routine. To break this habit, keep the cue but choose a better routine, such as a short walk or a good book. To exercise regularly also keeps us fit and refreshed.\n\nIt takes willpower, but don't give up. Small steps over time really work!\n\nYours,\nLi Hua",
+  "model_translation": "亲爱的 Chris:\n\n谢谢你的来信。我完全理解你的感受,因为手机用太多也曾经是我的问题。深夜盯着屏幕会损害睡眠,让你一整天都很累,所以慢慢改掉这个习惯是明智的。\n\n下面是对我有用的办法。试着弄懂你的习惯循环:无聊是提示,刷手机是常规。要戒掉这个习惯,就保留提示但换一个更好的常规,比如出去短暂散步或读一本好书。规律地锻炼也能让我们保持健康、精神焕发。\n\n这需要意志力,但别放弃。日积月累的小步骤真的有用!\n\n你的,\n李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:理解+危害 / 习惯循环方法 / 鼓励坚持" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式完整、围绕一个坏习惯展开、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "正确运用不定式作主语句型(To do … / It is … to do / It takes … to do),词汇准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼+理解 Dear Chris, … I know how you feel …",
+      "危害 Staying up late on the screen harms your sleep …",
+      "方法(习惯循环) To break this habit, keep the cue but choose a better routine …",
+      "鼓励+落款 It takes willpower, but don't give up. Yours, Li Hua"
+    ],
+    "key_expressions": [
+      "Using a phone too much can harm your sleep and health.",
+      "To break this habit, keep the cue but choose a better routine.",
+      "To exercise regularly keeps us fit and refreshed.",
+      "It takes willpower, but small steps over time really work."
+    ],
+    "useful_words": ["habit", "cue", "routine", "reward", "willpower", "discipline", "refreshed", "exercise", "replace", "give up"]
+  },
+  "high_sentences": [
+    "To exercise regularly keeps us fit and refreshed.",
+    "It is wise to change this bad habit slowly, one small step at a time.",
+    "To break this habit, keep the cue but choose a better routine.",
+    "It takes willpower, but don't give up — small steps over time really work."
+  ],
+  "error_pairs": [
+    { "wrong": "Exercise regularly keep us fit.", "correct": "To exercise regularly keeps us fit.", "note": "不定式作主语,谓语用单数 keeps;且作主语用 To exercise。" },
+    { "wrong": "It is important eat a balanced diet.", "correct": "It is important to eat a balanced diet.", "note": "it 作形式主语,真正主语用不定式 to eat,不可漏 to。" },
+    { "wrong": "It takes willpower quitting smoking.", "correct": "It takes willpower to quit smoking.", "note": "It takes + n. + to do 句式,真正主语用不定式 to quit。" }
+  ],
+  "paragraph_template": "【健康建议信结构】\n称呼:Dear Chris,\n第1段 理解+危害:I know how you feel … Using a phone too much harms your sleep and health.\n第2段 方法(习惯循环):Understand your habit cycle … To break this habit, keep the cue but choose a better routine … To exercise regularly keeps us fit.\n第3段 鼓励+落款:It takes willpower, but don't give up. Yours, Li Hua"
+}

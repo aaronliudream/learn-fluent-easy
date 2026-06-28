@@ -1,0 +1,710 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Science Fiction",
+  "source": "人教版2019选择性必修四 Unit 1 同主题完形(我的机器人助手/设计一个AI装置/参观机器人科学展/写科幻故事/智能厨房/太空殖民的梦)。用词限本单元/常见词,答案唯一、选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Robot Helper",
+      "text": "Last year my family bought a small robot helper named Max. At first I did not (1)____ it much, because I thought it would be useless. But Max soon proved how (2)____ it was. Every morning it would (3)____ my schoolbag and remind me of the day's lessons. When my grandmother forgot her glasses, Max would quietly (4)____ them for her. It could even (5)____ how long my homework might take. Of course, Max was not perfect. Sometimes it gave (6)____ answers that made us laugh. My father said that any machine like this (7)____ be tested carefully before we fully trust it. Still, I have grown to (8)____ Max as a real member of the family. It has changed the (9)____ of our daily life, giving us more free time. I now believe that helpful robots are not just (10)____ in stories; they are already here.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "trust",
+            "eat",
+            "sell",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "did not trust it 不太信任它。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "useful",
+            "loud",
+            "lazy"
+          ],
+          "answer_index": 1,
+          "explanation": "how useful it was 多有用。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "fetch",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "fetch my schoolbag 取来书包。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "break",
+            "drop",
+            "throw",
+            "find"
+          ],
+          "answer_index": 3,
+          "explanation": "find them for her 帮她找到。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "calculate",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "calculate how long 计算需要多久。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "correct",
+            "ridiculous",
+            "polite",
+            "useful"
+          ],
+          "answer_index": 1,
+          "explanation": "ridiculous answers 荒谬的回答(下文 made us laugh)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "can",
+            "may",
+            "should",
+            "will"
+          ],
+          "answer_index": 2,
+          "explanation": "should be tested 应被测试。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "sell",
+            "lose",
+            "regard"
+          ],
+          "answer_index": 3,
+          "explanation": "regard Max as 把 Max 视为。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "pace",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "the pace of our daily life 生活节奏。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "machines",
+            "found",
+            "prices",
+            "gardens"
+          ],
+          "answer_index": 1,
+          "explanation": "found in stories 出现在故事里。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Designing an AI Device",
+      "text": "For our science class, we had to (1)____ our own AI device and present it to the others. My group chose to build a small flying helper called Sky. We first decided what Sky should (2)____ look like and what jobs it could do. Then we made a list of its main (3)____, such as carrying light objects and taking photos from the air. One of the hardest parts was making sure Sky would always (4)____ the orders given by its user. We knew that, like any machine, it must never (5)____ a person. After many tries, the device was finally (6)____ ready for the science fair. On the day of the fair, the hall was (7)____ with curious students. When Sky rose into the air and (8)____ a small box to a desk, everyone was (9)____. Our teacher said it was a (10)____ idea, full of imagination.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "design",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "design our own AI device 设计装置。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "never",
+            "hardly",
+            "rarely",
+            "exactly"
+          ],
+          "answer_index": 3,
+          "explanation": "exactly look like 究竟长什么样。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "abilities",
+            "prices",
+            "noises",
+            "mistakes"
+          ],
+          "answer_index": 0,
+          "explanation": "its main abilities 主要功能。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "break",
+            "obey",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "obey the orders 服从命令。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "help",
+            "please",
+            "harm",
+            "thank"
+          ],
+          "answer_index": 2,
+          "explanation": "never harm a person 绝不伤人(呼应第一定律)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "badly",
+            "rudely",
+            "slowly",
+            "ready"
+          ],
+          "answer_index": 3,
+          "explanation": "finally ready 终于准备就绪。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "crowded",
+            "empty",
+            "quiet",
+            "dark"
+          ],
+          "answer_index": 0,
+          "explanation": "crowded with students 挤满学生。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "carried",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "carried a small box 运送箱子。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "bored",
+            "amazed",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "everyone was amazed 都很惊叹。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "useless",
+            "silly",
+            "wonderful"
+          ],
+          "answer_index": 3,
+          "explanation": "a wonderful idea 一个绝妙的主意。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Visit to the Robot Fair",
+      "text": "Last weekend our class went to a big robot (1)____ held in the city centre. The venue was huge, and thousands of visitors (2)____ in to see the latest machines. The first robot we met could (3)____ a chess game better than any human player. Another one was able to (4)____ how the weather would change over the next week. I was most (5)____ by a caring robot designed to help old people at home. It could (6)____ a glass of water, read the news aloud, and even tell simple jokes. A guide explained that such helpful machines must always (7)____ safe before they are sold to families. By the end of the visit, my view of robots had completely (8)____. I no longer saw them as something (9)____ and frightening. Instead, I felt excited about a future in which clever machines and people work (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fair",
+            "shop",
+            "garden",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "a robot fair 机器人展会。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "poured",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "poured in 涌入。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eat",
+            "buy",
+            "win",
+            "sleep"
+          ],
+          "answer_index": 2,
+          "explanation": "win a chess game 赢得棋局。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "waste",
+            "lose",
+            "predict"
+          ],
+          "answer_index": 3,
+          "explanation": "predict the weather 预测天气。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "impressed",
+            "bored",
+            "angry",
+            "tired"
+          ],
+          "answer_index": 0,
+          "explanation": "most impressed 印象最深。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "fetch",
+            "break",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "fetch a glass of water 取来一杯水。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "look",
+            "feel",
+            "be proved",
+            "smell"
+          ],
+          "answer_index": 2,
+          "explanation": "be proved safe 被证明安全(must + be done)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "stopped",
+            "failed",
+            "changed"
+          ],
+          "answer_index": 3,
+          "explanation": "had changed 改变了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "dangerous",
+            "lovely",
+            "cheap",
+            "tasty"
+          ],
+          "answer_index": 0,
+          "explanation": "something dangerous 危险的东西。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "alone",
+            "together",
+            "apart",
+            "wrongly"
+          ],
+          "answer_index": 1,
+          "explanation": "work together 一起工作。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Writing My Own Sci-Fi Story",
+      "text": "Our teacher asked each of us to write a short science (1)____ story for the class magazine. I decided to write about a girl who builds a time (2)____ in her bedroom. At first I found it hard to (3)____ what time travel would feel like. So I closed my eyes and tried to (4)____ the strange sights in my mind. In my story, the moment the girl pushed the (5)____, the walls of her room seemed to fall away. Days and nights passed (6)____ and faster, until she arrived in a far future city. There she met a friendly robot that could (7)____ her language. Writing the story (8)____ me hours, but I enjoyed every minute. My classmates said the ending was (9)____, because no one could guess it. Now I understand why so many people love science fiction: it lets your imagination travel (10)____ any limit.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "fiction",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "science fiction story 科幻故事。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shop",
+            "market",
+            "river",
+            "machine"
+          ],
+          "answer_index": 3,
+          "explanation": "a time machine 时间机器。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "imagine",
+            "sell",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "imagine what it would feel like 想象那感觉。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "picture",
+            "waste",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "picture the sights 在脑中描绘景象。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "lever",
+            "meal"
+          ],
+          "answer_index": 2,
+          "explanation": "pushed the lever 推动操纵杆。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "slower",
+            "quieter",
+            "softer",
+            "faster"
+          ],
+          "answer_index": 3,
+          "explanation": "passed faster and faster 越来越快。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "speak",
+            "sell",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "speak her language 会说她的语言。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "took",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "took me hours 花了我几个小时。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "boring",
+            "useless",
+            "surprising",
+            "ugly"
+          ],
+          "answer_index": 2,
+          "explanation": "the ending was surprising 结局出人意料。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "inside",
+            "below",
+            "near",
+            "beyond"
+          ],
+          "answer_index": 3,
+          "explanation": "travel beyond any limit 超越一切界限。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Smart Kitchen",
+      "text": "My uncle has turned his kitchen into a fully smart (1)____. As soon as he walks in, the lights come on by (2)____. A small cooking robot can (3)____ exactly how much flour and sugar a cake needs. It will then (4)____ the ingredients together without any help. If something starts to burn, an alarm is (5)____ at once, and the heat is turned down. My uncle says the robot must (6)____ be cleaned after each meal, just like ordinary tools. The best part is that boring kitchen (7)____ is now done by the machine, so my uncle has more time to relax. Of course, he still (8)____ to cook special dishes himself, because he enjoys it. He believes that good technology should help people, not (9)____ them. Thanks to his smart kitchen, family dinners have become easier and far more (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "room",
+            "river",
+            "garden",
+            "street"
+          ],
+          "answer_index": 0,
+          "explanation": "a smart room 智能房间(厨房)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mistake",
+            "itself",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "by itself 自动地(灯自己亮)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "forget",
+            "waste",
+            "measure",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "measure how much 量取多少。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "lose",
+            "break",
+            "mix"
+          ],
+          "answer_index": 3,
+          "explanation": "mix the ingredients 把原料混合。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sounded",
+            "eaten",
+            "sold",
+            "drawn"
+          ],
+          "answer_index": 0,
+          "explanation": "an alarm is sounded 警报响起。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "never",
+            "regularly",
+            "hardly",
+            "rarely"
+          ],
+          "answer_index": 1,
+          "explanation": "must regularly be cleaned 须定期清洁。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "song",
+            "price",
+            "work",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "kitchen work 厨房杂活。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "refuses",
+            "fails",
+            "forgets",
+            "likes"
+          ],
+          "answer_index": 3,
+          "explanation": "still likes to cook 仍喜欢亲手做。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "replace",
+            "help",
+            "thank",
+            "please"
+          ],
+          "answer_index": 0,
+          "explanation": "not replace them 而非取代他们。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "enjoyable",
+            "useless",
+            "dangerous"
+          ],
+          "answer_index": 1,
+          "explanation": "more enjoyable 更愉快。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Dreaming of Space",
+      "text": "Ever since I was a child, I have (1)____ of travelling to a distant planet. In my favourite science fiction books, brave people (2)____ huge spaceships across the stars to build new homes. They face many (3)____, such as strange weather and unknown dangers. Yet they never give (4)____, because their dream is too important. Sometimes their ships are (5)____ by storms of dust, but the crew always finds a way to repair them. On these far worlds, intelligent robots often (6)____ the heaviest work, so that humans can stay safe. I know that such journeys may not (7)____ in my lifetime. Still, real scientists are already (8)____ ways to live on the Moon and Mars. Reading these stories makes me want to study hard and join them one day. They remind me that today's (9)____ dream can become tomorrow's (10)____ truth.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sold",
+            "lost",
+            "dreamed",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "dreamed of 梦想着。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "buy",
+            "sleep",
+            "fly"
+          ],
+          "answer_index": 3,
+          "explanation": "fly spaceships 驾驶飞船。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "difficulties",
+            "prices",
+            "songs",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "many difficulties 许多困难。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "up",
+            "off",
+            "out"
+          ],
+          "answer_index": 1,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "fed",
+            "hit",
+            "paid"
+          ],
+          "answer_index": 2,
+          "explanation": "are hit by storms 被风暴袭击(被动)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "waste",
+            "lose",
+            "do"
+          ],
+          "answer_index": 3,
+          "explanation": "do the heaviest work 干最重的活。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "happen",
+            "sell",
+            "break",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "may not happen 也许不会发生(happen 不及物)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "exploring",
+            "losing",
+            "breaking"
+          ],
+          "answer_index": 1,
+          "explanation": "exploring ways 探索方法。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "cheap",
+            "tasty",
+            "wild",
+            "loud"
+          ],
+          "answer_index": 2,
+          "explanation": "a wild dream 大胆的梦想。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "false",
+            "empty",
+            "quiet",
+            "real"
+          ],
+          "answer_index": 3,
+          "explanation": "real truth 真实的现实。"
+        }
+      ]
+    }
+  ]
+}

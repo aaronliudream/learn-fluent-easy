@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Write a Sci-Fi Story about a Robot You Invent(写一篇关于你发明的机器人的科幻短篇)",
+  "title_en": "My Robot Friend",
+  "genre": "记叙 / 科幻短篇(narrative · invent and describe a robot or AI device)",
+  "source": "人教版2019选择性必修四 Unit 1 Reading for Writing / Project:write a sci-fi short story about a robot or AI device you create(发明并描述一个机器人/AI 装置,讲一个小故事)。",
+  "prompt_cn": "假设你是李华,学校科幻社团征集'我发明的机器人'短篇故事。请用英语写一篇约100词的科幻短篇,内容包括:① 介绍你发明的机器人或AI装置(名字、样子、能做什么);② 讲一件它帮助了人的小事;③ 结尾点出你对人与机器人未来相处的看法。注意:适当使用被动语态(如 The robot was built… / It can be controlled…),情节连贯、想象合理。",
+  "prompt_en": "Suppose you are Li Hua. Your school sci-fi club is collecting short stories called 'A Robot I Invented'. Write a sci-fi short story (about 100 words) including: 1) an introduction to the robot or AI device you invent (its name, looks and abilities); 2) a small event in which it helps someone; 3) an ending that shows your view of how humans and robots may live together in the future. Use the passive voice where it fits naturally.",
+  "points": [
+    "介绍机器人(name / looks / what it can do)",
+    "讲一件帮助人的小事(a small helpful event)",
+    "结尾点出人机未来观点(your view of the future)",
+    "适当使用被动语态、情节连贯、想象合理"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last winter I invented a small robot and named it Leo. Leo is round and silver, with two soft hands and a friendly voice. It can fetch things, read the news aloud and even calculate how long my homework will take. One snowy morning, my grandmother slipped near the door. Before I could move, Leo had already reached her and helped her up. Later it was praised by my whole family. Of course, Leo must be tested carefully so that it is always safe. I believe that robots like Leo should be welcomed as gentle helpers. If clear rules are followed, humans and machines can surely live happily together.",
+  "model_translation": "去年冬天我发明了一个小机器人,给它取名 Leo。Leo 圆圆的、银色的,有两只柔软的手和友善的嗓音。它能取东西、朗读新闻,甚至能算出我写作业要多久。一个下雪的早晨,奶奶在门口滑倒了。我还没来得及动,Leo 就已经走到她身边把她扶了起来。后来它受到了全家人的称赞。当然,Leo 必须经过仔细测试,这样才能始终安全。我相信像 Leo 这样的机器人应当被当作温柔的帮手来欢迎。只要遵守明确的规则,人类和机器一定能幸福地共处。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍机器人 / 帮助人的小事 / 未来观点" },
+      { "dimension": "结构", "max": 4, "criteria": "故事有头有尾、情节连贯、段落清楚、想象合理" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、被动语态等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍 I invented a robot and named it …",
+      "样子能力 It is … and it can …",
+      "事件 One … morning, … Before I could move, it had already …",
+      "观点 I believe that robots should be welcomed … humans and machines can live together."
+    ],
+    "key_expressions": [
+      "Last winter I invented a small robot and named it Leo.",
+      "It can fetch things, read the news aloud and calculate how long my homework will take.",
+      "Leo must be tested carefully so that it is always safe.",
+      "If clear rules are followed, humans and machines can surely live happily together."
+    ],
+    "useful_words": ["invent", "robot", "fetch", "calculate", "intelligent", "obey", "tested", "safe", "welcomed", "future"]
+  },
+  "high_sentences": [
+    "Last winter I invented a small robot and named it Leo.",
+    "Before I could move, Leo had already reached her and helped her up.",
+    "Leo must be tested carefully so that it is always safe.",
+    "If clear rules are followed, humans and machines can surely live happily together."
+  ],
+  "error_pairs": [
+    { "wrong": "The robot was build last year.", "correct": "The robot was built last year.", "note": "被动语态用过去分词 built,不是原形 build。" },
+    { "wrong": "It can fetched things for us.", "correct": "It can fetch things for us.", "note": "情态动词 can 后接动词原形 fetch。" },
+    { "wrong": "The robot must tested before use.", "correct": "The robot must be tested before use.", "note": "情态动词的被动:must + be + done。" }
+  ],
+  "paragraph_template": "【科幻短篇结构】\n第1句 介绍:I invented a robot and named it …\n第2句 样子能力:It is … and it can …\n第3-4句 事件:One … morning, … Before I could move, it had already …\n第5句 观点:I believe robots should be welcomed; humans and machines can live together."
+}

@@ -1,0 +1,49 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Robots first appeared in science fiction novels long ago.", "opts": ["机器人很久以前最早出现在科幻小说里。", "机器人从来没出现过。", "机器人只在工厂里。", "机器人讨厌人类。"], "answer": 0 },
+    { "audio": "The damaged robot must be repaired before it works again.", "opts": ["机器人永远不会坏。", "受损的机器人必须先修好才能再工作。", "机器人不需要修理。", "机器人自己会消失。"], "answer": 1 },
+    { "audio": "A robot may not, through inaction, allow a human to come to harm.", "opts": ["机器人可以随意伤人。", "机器人喜欢危险。", "机器人不得因不作为而让人受到伤害。", "机器人从不帮忙。"], "answer": 2 },
+    { "audio": "As robots become more intelligent, they may also become more dangerous.", "opts": ["机器人越来越笨。", "机器人毫无变化。", "机器人越来越便宜。", "机器人越聪明,也可能越危险。"], "answer": 3 },
+    { "audio": "The Three-Body Problem was translated into English by Ken Liu.", "opts": ["《三体》由刘宇昆译成了英文。", "《三体》从未被翻译。", "《三体》是一部电影。", "《三体》讲的是足球。"], "answer": 0 },
+    { "audio": "In sci-fi stories, robots often become superior and take over.", "opts": ["机器人总是很弱小。", "在科幻故事里,机器人常常变得更强大并取而代之。", "机器人从不出现在故事中。", "机器人只会做饭。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The AI dog, ordered by its master, ____ the book from the shelf.", "opts": ["fetched", "ate", "sold", "lost"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A robot must never ____ a human being, even through inaction.", "opts": ["please", "harm", "thank", "help"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "As machines grow more ____, some people worry they may take over.", "opts": ["empty", "lazy", "intelligent", "quiet"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "A human's face changes often, ____ the robot's never changes.", "opts": ["because", "so", "if", "whereas"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Right now a new humanoid robot ____ in the laboratory.", "opts": ["is being built", "builds", "is built", "build"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Mobile phones ____ during the robotics conference.", "opts": ["must switch off", "must be switched off", "must be switch off", "must switching off"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Nobody knows exactly what ____ to the lab after the quake.", "opts": ["was happened", "is happened", "happened", "had been happened"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "\"Liu Cixin wrote the novel\" becomes \"The novel ____ by Liu Cixin.\"", "opts": ["wrote", "was writing", "writes", "was written"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["这台时间机器侧翻了过去。", "这台机器从不工作。", "这台机器被卖掉了。", "这台机器去了海边。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "With a sudden jolt, the Time Machine was flipped on its side." },
+    { "q": "听句子选中文:", "opts": ["机器人拒绝服从命令。", "机器人必须服从人类给出的命令。", "机器人讨厌人类。", "机器人坏掉了。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "A robot must obey the orders given to it by human beings." }
+  ],
+  "reading": {
+    "passage": "In an old sci-fi story, a robot called Tony is left to keep a woman company while her husband is away. Its face never changes, yet it learns to be kind and gentle. By the end, the reader is left wondering whether a person could ever truly love a machine.",
+    "passageCn": "在一个老科幻故事里,一个叫托尼的机器人被留下来陪伴一位丈夫外出的女士。它的脸从不改变,却学会了温柔体贴。到故事结尾,读者不禁思考:人究竟能否真正爱上一台机器。",
+    "questions": [
+      { "q": "Why is the robot Tony left with the woman?", "opts": ["To keep her company while her husband is away.", "To clean the whole city.", "To fight in a war.", "To sell her house."], "answer": 0 },
+      { "q": "What is special about Tony's face?", "opts": ["It changes every minute.", "It never changes.", "It is made of glass.", "It glows in the dark."], "answer": 1 },
+      { "q": "What question does the story leave the reader with?", "opts": ["How fast a robot can run.", "Where to buy a robot.", "Whether a person could truly love a machine.", "How much a robot costs."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a robot or AI device you would like to invent. Say what it looks like and what it can do, and use at least one passive sentence (e.g. It can be controlled by ... / It must be tested ...).",
+    "promptCn": "用3-4句话介绍你想发明的一个机器人或AI装置:它长什么样、能做什么,并至少用一个被动句(如 It can be controlled by … / It must be tested …)。",
+    "sampleWords": ["invent", "robot", "device", "fetch", "intelligent", "obey", "tested", "safe", "controlled", "future"]
+  },
+  "dialogues": [
+    {
+      "title": "Designing a Robot Together",
+      "lines": [
+        { "role": "A", "text": "If you could invent a robot, what would it do?", "cn": "如果你能发明一个机器人,它会做什么?" },
+        { "role": "B", "text": "It would fetch things for old people and read the news aloud.", "cn": "它会替老人取东西,还会朗读新闻。" },
+        { "role": "A", "text": "That sounds kind. But could it ever be dangerous?", "cn": "听起来很贴心。可它会不会有危险?" },
+        { "role": "B", "text": "Not if it must always be tested and follow clear rules.", "cn": "只要它必须始终经过测试并遵守明确规则,就不会。" }
+      ]
+    }
+  ]
+}

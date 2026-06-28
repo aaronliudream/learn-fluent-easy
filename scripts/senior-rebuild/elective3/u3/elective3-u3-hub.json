@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Burning fossil fuels releases carbon dioxide into the air.", "opts": ["燃烧化石燃料会向空气中排放二氧化碳。", "化石燃料能净化空气。", "二氧化碳对地球无害。", "工厂从不排放气体。"], "answer": 0 },
+    { "audio": "Planting trees helps to protect the local ecology.", "opts": ["砍树有助于保护生态。", "植树有助于保护当地的生态。", "树木会污染河流。", "树木使空气变脏。"], "answer": 1 },
+    { "audio": "The villagers could no longer tolerate the dirty air.", "opts": ["村民们很喜欢污浊的空气。", "村里的空气一直很干净。", "村民们再也无法忍受污浊的空气。", "村民们离开了村子。"], "answer": 2 },
+    { "audio": "Strict regulations stopped the factories from polluting.", "opts": ["工厂可以随意排污。", "没有任何规定管理工厂。", "工厂搬到了别的国家。", "严格的规章阻止了工厂污染。"], "answer": 3 },
+    { "audio": "Riding a bike helps to lower your carbon footprint.", "opts": ["骑自行车有助于降低你的碳足迹。", "开车比骑车更环保。", "骑车会增加污染。", "碳足迹与出行方式无关。"], "answer": 0 },
+    { "audio": "Clean energy can sustain a healthy and habitable world.", "opts": ["清洁能源会污染世界。", "清洁能源能维持一个健康宜居的世界。", "清洁能源很快就会用完。", "清洁能源对未来没有帮助。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "We must cut carbon ____ to slow down climate change.（排放)", "opts": ["emissions", "holidays", "stories", "gardens"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Strict ____ controlled new building along the river.（规章制度)", "opts": ["songs", "regulations", "prices", "tickets"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Urgent steps were taken to ____ the river's beauty.（恢复;修复)", "opts": ["waste", "sell", "restore", "lose"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Clean energy helps us build a ____ future.（可持续的)", "opts": ["dirty", "noisy", "empty", "sustainable"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "He said, \"I recycle paper.\" → He said that he ____ paper.", "opts": ["recycled", "recycle", "recycles", "will recycle"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "She asked, \"Do you save water?\" → She asked ____ I saved water.", "opts": ["that", "if", "what", "do"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "He asked, \"What can we do?\" → He asked what we ____ do.", "opts": ["can", "will", "could", "may"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "\"Don't throw garbage here,\" he said. → He told us ____ throw garbage there.", "opts": ["to not", "don't", "not", "not to"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["工厂排放有害环境的废气。", "工厂从不排放废气。", "工厂帮助净化空气。", "工厂只在夜里工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Factories release waste gases that harm the environment." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["浓重的烟雾让城市变美。", "随着地球变暖,冰雪开始融化。", "天气越来越冷。", "海平面正在下降。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "As the earth gets warmer, the ice begins to melt." }
+  ],
+  "reading": {
+    "passage": "Our town once had a dirty river full of rubbish. After the government closed the polluting factories and asked people to stop dropping litter, the water slowly became clean again. Today fish have returned, and everyone feels proud of the change.",
+    "passageCn": "我们镇上曾有一条满是垃圾的脏河。政府关闭了污染工厂,并要求人们不再乱扔垃圾后,水渐渐又变干净了。如今鱼儿回来了,大家都为这一变化感到自豪。",
+    "questions": [
+      { "q": "What made the river clean again?", "opts": ["Closing polluting factories and stopping litter.", "Adding more rubbish to it.", "Building new factories nearby.", "Letting people throw litter freely."], "answer": 0 },
+      { "q": "How do people feel about the change?", "opts": ["Angry and sad.", "Proud of it.", "Bored with it.", "Worried about it."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short report about an environmental problem near you. Say what the problem is, what has been done about it, and what you suggest.",
+    "promptCn": "写一篇关于身边环境问题的简短报道:问题是什么、已经采取了哪些措施、你的建议(试着用间接引语转述他人的话,如 An expert said that …)。",
+    "sampleWords": ["pollution", "emission", "garbage", "regulation", "inspection", "restore", "restrict", "sustainable", "protect", "release"]
+  },
+  "dialogues": [
+    {
+      "title": "What Can We Do for the Planet?",
+      "lines": [
+        { "role": "A", "text": "What do you do to help the environment?", "cn": "你做些什么来保护环境?" },
+        { "role": "B", "text": "I ride my bike and always sort my rubbish for recycling.", "cn": "我骑自行车,还总把垃圾分类回收。" },
+        { "role": "A", "text": "That's great. Does it really make a difference?", "cn": "很棒。这真的有用吗?" },
+        { "role": "B", "text": "Yes. Small habits like these lower our carbon footprint.", "cn": "有用。这些小习惯能降低我们的碳足迹。" }
+      ]
+    },
+    {
+      "title": "Reporting What the Expert Said",
+      "lines": [
+        { "role": "A", "text": "What did the air pollution expert say on the radio?", "cn": "广播里那位空气污染专家说了什么?" },
+        { "role": "B", "text": "He said that the smog was getting better year by year.", "cn": "他说雾霾正逐年好转。" },
+        { "role": "A", "text": "Did he ask people to do anything?", "cn": "他有没有要求人们做些什么?" },
+        { "role": "B", "text": "Yes, he advised us to use cleaner energy and burn less coal.", "cn": "有,他建议我们使用更清洁的能源、少烧煤。" }
+      ]
+    }
+  ]
+}

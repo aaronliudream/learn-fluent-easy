@@ -1,0 +1,39 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "grade": 12,
+  "content": {
+    "title": "不定式(to do)速查",
+    "intro": "不定式 to do 既可作目的状语、后置定语,也可作主语、宾语、表语和宾语补足语。判断口诀:看动词搭配和句法位置——该用不定式时,doing / done / 原形都不对;被动意义用 to be done,先于谓语用 to have done。",
+    "table": {
+      "headers": ["用法", "结构 / 例句"],
+      "rows": [
+        ["目的状语", "(In order/So as) to do:I am writing to apply for the job."],
+        ["后置定语", "n. + to do:the best way to prepare;the first thing to do"],
+        ["主/宾/表语", "want/decide/hope to do;My goal is to land a job."],
+        ["宾语补足语", "ask/advise/encourage sb to do:She advised us to make a plan."],
+        ["疑问词+to do", "how/what/where/whether + to do:I don't know how to start."],
+        ["被动不定式", "to be done:The CV needs to be tailored."],
+        ["完成不定式", "to have done:He seems to have read a lot about careers."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "want/decide/hope/plan/wish/aim/choose 等只接不定式作宾语", "mark": "decide to take √ / decide taking ×" },
+      { "rule": "ask/advise/encourage/tell/expect/require sb + to do 作宾补", "mark": "advised us to make √ / advised us making ×" },
+      { "rule": "主语承受动作时用被动不定式 to be done", "mark": "Skills need to be learned √" },
+      { "rule": "too + adj. + to do(太……以致不能);adj. + enough + to do(足够……能……)", "mark": "too nervous to speak;confident enough to present" }
+    ],
+    "why": [
+      "不定式表示'目的、将来或一次性的动作',这正是求职、规划职业时最常表达的意思(为了得到工作而准备、决定去做某事);所以这些语境里要用 to do,而不是表'正在/经常'的 doing 或表'被动完成'的 done。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:用所给动词的正确非谓语形式,常考 to do 与 doing / done 的区分(看搭配与逻辑主语)。",
+      "主动 vs 被动:to do 还是 to be done,看逻辑主语是动作的执行者还是承受者。",
+      "疑问词+to do 作宾语;in order to / so as to 表目的的同义替换。"
+    ],
+    "examVsReal": [
+      { "exam": "I am writing to apply for the position.(考试/书面)", "real": "I'm writing about the helper job.", "note": "考试求职信偏好 to apply 表目的;真实邮件常更口语、直接点题" },
+      { "exam": "The CV needs to be tailored.(考试,被动不定式)", "real": "You should tailor your CV.", "note": "考试爱考被动不定式;口语里直接用主动句更自然" }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Introduce a Painting, an Artist or an Art Style(介绍一幅画/一位艺术家/一种艺术风格)",
+  "title_en": "An Artwork I Love",
+  "genre": "说明文 / 介绍(introduce and describe a work of art, an artist, or a style)",
+  "source": "人教版2019选择性必修三 Unit 1 Reading for Writing 取向:写一篇介绍性短文,向读者介绍一幅画/一位艺术家/一种艺术风格,说明其背景、特点与你欣赏的理由。",
+  "prompt_cn": "假设你叫李华,学校英语角要办一期'我最爱的艺术'专栏。请用英语写一篇约100词的短文,介绍你最喜爱的一幅画、一位艺术家或一种艺术风格,内容包括:① 它/他是谁、属于哪个时期或风格;② 这件作品(或风格)的主要特点;③ 你为什么喜欢它。注意:用不定式作表语点明主旨(如 The aim of this style is to … / My favourite hobby is …),行文连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your school English corner is running a column called 'The Art I Love'. Write a short passage (about 100 words) to introduce your favourite painting, artist, or art style, including: 1) who or what it is, and which period or style it belongs to; 2) the main features of the work or style; 3) why you like it. Try to use the infinitive as the predicative (e.g. The aim of this style is to …).",
+  "points": [
+    "点明对象与时期/风格(This painting / artist / style belongs to …)",
+    "描述主要特点(Its main feature is … / The aim of this style is to …)",
+    "说明喜欢的理由(What I love most about it is …)",
+    "用不定式作表语、行文连贯、词汇地道"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "My favourite work of art is Monet's painting Impression, Sunrise. It belongs to Impressionism, a style that emerged in France in the late 19th century. The aim of this style is to capture light, colour, and a single moment's feeling, rather than to make a precise record of a scene. In the painting, a few soft brushstrokes turn the harbour at dawn into something warm and alive. What I love most about it is the way it shows the world as the painter truly felt it. Every time I look at it, my own wish is to see ordinary things with fresh eyes.",
+  "model_translation": "我最喜爱的艺术作品是莫奈的《印象·日出》。它属于印象派——一种19世纪晚期在法国兴起的风格。这种风格的目标是捕捉光、色彩和某个瞬间的感觉,而不是精确记录一处场景。画中,几笔柔和的笔触把黎明的港口变得温暖而鲜活。我最喜欢它的地方,是它呈现出画家真正感受到的世界。每次看到它,我自己的愿望就是用全新的眼光去看寻常的事物。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:对象与时期/风格 / 主要特点 / 喜欢的理由" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一件作品(或风格)展开、句句相关、逻辑连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、不定式作表语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 My favourite work of art is …",
+      "归类 It belongs to … , a style that …",
+      "特点 The aim of this style is to … / Its main feature is …",
+      "理由 What I love most about it is …"
+    ],
+    "key_expressions": [
+      "My favourite work of art is Monet's painting Impression, Sunrise.",
+      "It belongs to Impressionism, a style that emerged in France.",
+      "The aim of this style is to capture light, colour, and a single moment's feeling.",
+      "What I love most about it is the way it shows the world."
+    ],
+    "useful_words": ["painting", "style", "Impressionism", "emerge", "convey", "light", "colour", "feature", "subjective", "fond"]
+  },
+  "high_sentences": [
+    "It belongs to Impressionism, a style that emerged in France in the late 19th century.",
+    "The aim of this style is to capture light, colour, and a single moment's feeling.",
+    "A few soft brushstrokes turn the harbour at dawn into something warm and alive.",
+    "What I love most about it is the way it shows the world as the painter truly felt it."
+  ],
+  "error_pairs": [
+    { "wrong": "The aim of this style is capture light.", "correct": "The aim of this style is to capture light.", "note": "主语 aim 是抽象名词,be 后用不定式作表语,需 to。" },
+    { "wrong": "It belong to Impressionism.", "correct": "It belongs to Impressionism.", "note": "主语第三人称单数,动词加 s。" },
+    { "wrong": "My wish is seeing things with fresh eyes.", "correct": "My wish is to see things with fresh eyes.", "note": "wish 后作表语表'要做的事',用不定式而非动名词。" }
+  ],
+  "paragraph_template": "【介绍艺术作品结构】\n第1句 点题:My favourite work of art is …\n第2句 归类:It belongs to … , a style that …\n第3-4句 特点:The aim of this style is to … In the work, …\n第5句 理由:What I love most about it is …"
+}

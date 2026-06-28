@@ -1,0 +1,481 @@
+{
+  "volume": "elective4",
+  "unit": "U4",
+  "topic": "Sharing",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修四 Unit 4 同主题听力(动物收容所广告对话/志愿带来的成长短文/讨论捐什么对话/分享经济短文/给海外志愿者打电话对话/一封感谢信短文)。用词限本单元/初中/常见词,答案唯一,与读写/完形关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 The Animal Shelter Ad",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Jessie",
+          "text": "Susan, did you see the animal shelter advertisement? It would be great for our volunteer project."
+        },
+        {
+          "speaker": "Susan",
+          "text": "Yes, I did. I'd love to help out in a shelter. Think of all those cute little animals!"
+        },
+        {
+          "speaker": "Jessie",
+          "text": "Exactly. But maybe it's too good to be true. What if we have to clean the smelly cages?"
+        },
+        {
+          "speaker": "Susan",
+          "text": "I'd hate that. Can we ask for gloves?"
+        },
+        {
+          "speaker": "Jessie",
+          "text": "Of course. How about you clean the outside of the cages, and I'll clean the inside?"
+        },
+        {
+          "speaker": "Susan",
+          "text": "Thanks, Jessie, you're a true friend. By the way, when do they need us?"
+        },
+        {
+          "speaker": "Jessie",
+          "text": "On Sunday mornings, not Saturdays. So let's not just talk about it — let's do it!"
+        }
+      ],
+      "translation_cn": "Jessie 提到动物收容所的广告,觉得适合做志愿项目;Susan 愿意去帮忙,喜欢小动物;两人担心要清理脏笼子,决定要手套、并分工(一人擦外、一人擦里);时间是周日上午;两人决定行动起来。",
+      "questions": [
+        {
+          "stem": "What volunteer project are the girls talking about?",
+          "options": [
+            "Helping out at an animal shelter.",
+            "Teaching at a village school.",
+            "Building a new house.",
+            "Selling cute toys."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are they worried about having to do?",
+          "options": [
+            "Pay a lot of money.",
+            "Clean the smelly cages.",
+            "Walk a long way.",
+            "Cook for the animals."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Jessie suggest asking for?",
+          "options": [
+            "Gloves.",
+            "More money.",
+            "A day off.",
+            "A bigger room."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do they decide to divide the work?",
+          "options": [
+            "Susan does everything alone.",
+            "One cleans outside, the other inside.",
+            "They will not clean at all.",
+            "Jessie does it all herself."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When does the shelter need them?",
+          "options": [
+            "On Saturday afternoons.",
+            "Every evening.",
+            "On Sunday mornings.",
+            "Only on holidays."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 What Volunteering Teaches Us",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many young people think that volunteering is only about giving to others.",
+        "But those who do it often say that they gain just as much in return.",
+        "Helping people who have less teaches us to be grateful for what we have.",
+        "It also gives our own lives a deeper sense of purpose.",
+        "In the end, when we share with others, we help ourselves to grow as well."
+      ],
+      "translation_cn": "许多年轻人以为志愿服务只是付出;但参与者常说自己得到的同样多;帮助拥有更少的人,教会我们对所拥有的心怀感恩;它也让我们的生活更有目标感;最终,当我们与人分享时,我们自己也在成长。",
+      "questions": [
+        {
+          "stem": "What do many young people think volunteering is about?",
+          "options": [
+            "Making a lot of money.",
+            "Becoming famous.",
+            "Travelling for fun.",
+            "Only giving to others."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do volunteers often say they gain?",
+          "options": [
+            "Just as much in return.",
+            "Nothing at all.",
+            "Only tiredness.",
+            "A higher salary."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does helping those with less teach us?",
+          "options": [
+            "To waste more.",
+            "To be grateful for what we have.",
+            "To stop sharing.",
+            "To ignore others."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What else does volunteering give our lives?",
+          "options": [
+            "More free money.",
+            "A longer holiday.",
+            "A deeper sense of purpose.",
+            "An easier job."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens when we share with others?",
+          "options": [
+            "We always lose something.",
+            "We become unhappy.",
+            "We have less to do.",
+            "We help ourselves to grow too."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Deciding What to Donate",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Liu",
+          "text": "Our class wants to donate something to the poor children in the countryside. What do you think we should give?"
+        },
+        {
+          "speaker": "Mei",
+          "text": "I think books would be best. Many of them have nothing to read at home."
+        },
+        {
+          "speaker": "Liu",
+          "text": "That's a good idea. But some people want to give money instead."
+        },
+        {
+          "speaker": "Mei",
+          "text": "Money is useful too, but it is hard to be sure how it is spent."
+        },
+        {
+          "speaker": "Liu",
+          "text": "True. Maybe we could give both books and some warm clothes."
+        },
+        {
+          "speaker": "Mei",
+          "text": "Perfect. And we could spend a day there, reading with the children."
+        },
+        {
+          "speaker": "Liu",
+          "text": "Yes! Giving our time may matter even more than giving things."
+        }
+      ],
+      "translation_cn": "刘和梅讨论给乡村贫困儿童捐什么;梅认为捐书最好,因为很多孩子家里没书读;有人想捐钱,但梅说钱难以确定用途;两人决定既捐书也捐保暖衣物;还打算去那里陪孩子读书;刘说付出时间也许比捐物更重要。",
+      "questions": [
+        {
+          "stem": "What does Mei think is the best thing to donate?",
+          "options": [
+            "Books.",
+            "Money.",
+            "Toys.",
+            "Food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Mei unsure about giving money?",
+          "options": [
+            "It is too heavy.",
+            "It is hard to be sure how it is spent.",
+            "Children do not like it.",
+            "It is against the rules."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they finally decide to give?",
+          "options": [
+            "Only money.",
+            "Nothing at all.",
+            "Both books and warm clothes.",
+            "Just one old book."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What else do they plan to do at the village?",
+          "options": [
+            "Sell some toys.",
+            "Build a new school.",
+            "Take photos only.",
+            "Read with the children."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Liu say may matter even more than giving things?",
+          "options": [
+            "Giving their time.",
+            "Giving more money.",
+            "Giving advice.",
+            "Giving nothing."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Sharing Instead of Wasting",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Every day, a huge amount of good food is thrown away in our cities.",
+        "Some young people have decided to do something about this waste.",
+        "They collect food that shops can no longer sell and hand it out to families in need.",
+        "In this simple way, food that would be wasted is shared with hungry people.",
+        "Sharing what we have, they say, is much better than throwing it away."
+      ],
+      "translation_cn": "城市里每天都有大量好食物被扔掉;一些年轻人决定为此做点事;他们收集商店卖不出去的食物,分发给有需要的家庭;通过这种简单的方式,本会被浪费的食物被分享给饥饿的人;他们说,分享所有比扔掉好得多。",
+      "questions": [
+        {
+          "stem": "What problem does the passage describe?",
+          "options": [
+            "Too few shops in the city.",
+            "Good food being thrown away.",
+            "Children with no school.",
+            "Rivers full of rubbish."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who decided to act on this problem?",
+          "options": [
+            "The city's shop owners.",
+            "A group of doctors.",
+            "Some young people.",
+            "Foreign visitors."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do they do with the food they collect?",
+          "options": [
+            "They sell it again.",
+            "They keep it for themselves.",
+            "They throw it into the sea.",
+            "They hand it out to families in need."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens to food that would be wasted?",
+          "options": [
+            "It is shared with hungry people.",
+            "It is burned.",
+            "It is hidden away.",
+            "It is left to rot."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do these young people believe?",
+          "options": [
+            "Wasting food saves time.",
+            "Sharing is better than throwing food away.",
+            "Shops should sell more food.",
+            "Food should never be given away."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 A Call to a Volunteer Abroad",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mum",
+          "text": "Hi, dear. How is your volunteer teaching going so far?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "It's hard, Mum. There's no electricity here, and the children have only pencils and paper."
+        },
+        {
+          "speaker": "Mum",
+          "text": "That sounds tough. Are you managing all right?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I am, slowly. I've had to be more imaginative and less rigid about the rules."
+        },
+        {
+          "speaker": "Mum",
+          "text": "I'm proud of you. Do you feel you are making a difference?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "At first I wasn't sure. But the children love to learn, and that keeps me going."
+        },
+        {
+          "speaker": "Mum",
+          "text": "Then it's worth it. By the way, your parcel of sweets is on its way!"
+        }
+      ],
+      "translation_cn": "妈妈打电话问 Tom 海外支教的情况;Tom 说很辛苦,没有电,孩子们只有铅笔和纸;他在慢慢适应,变得更有创意、不那么死板;妈妈为他自豪,问他是否觉得有意义;Tom 起初不确定,但孩子们爱学习让他坚持下去;妈妈说那就值得,并告诉他寄的糖果包裹在路上了。",
+      "questions": [
+        {
+          "stem": "Where is Tom and what is he doing?",
+          "options": [
+            "Studying at a city university.",
+            "Working in a shop.",
+            "Teaching as a volunteer far from home.",
+            "Travelling on holiday."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one difficulty Tom mentions?",
+          "options": [
+            "There are too many teachers.",
+            "The children have too many books.",
+            "The school is too modern.",
+            "There is no electricity."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How has Tom had to change his teaching?",
+          "options": [
+            "By being more imaginative and less rigid.",
+            "By using more machines.",
+            "By being stricter with rules.",
+            "By giving up quickly."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What keeps Tom going?",
+          "options": [
+            "The high pay.",
+            "The children's love of learning.",
+            "The easy work.",
+            "The modern classrooms."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does his mum say is on its way?",
+          "options": [
+            "A new teacher.",
+            "A laptop.",
+            "A parcel of sweets.",
+            "A car."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Thank-You Message",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "On behalf of all the children here, I would like to thank our visitors.",
+        "You came a long way to spend time with us and to lend a hand.",
+        "The books and warm clothes you brought will help us through the winter.",
+        "But more than the gifts, we are grateful for your kindness and your smiles.",
+        "We hope that one day we, too, can pay it forward and help someone else."
+      ],
+      "translation_cn": "代表这里所有的孩子,我要感谢来访的客人;你们远道而来陪伴我们、伸出援手;你们带来的书和暖衣将帮我们度过冬天;但比起礼物,我们更感激你们的善意和笑容;我们希望有一天自己也能把善意传递下去,去帮助别人。",
+      "questions": [
+        {
+          "stem": "Who is the speaker thanking?",
+          "options": [
+            "The local shopkeepers.",
+            "The school teachers only.",
+            "The children's parents.",
+            "The visitors who came to help."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the visitors come to do?",
+          "options": [
+            "To spend time and lend a hand.",
+            "To sell some books.",
+            "To take photos for a paper.",
+            "To open a new shop."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What will the books and clothes help with?",
+          "options": [
+            "Making the school bigger.",
+            "Getting through the winter.",
+            "Selling at the market.",
+            "Painting the classroom."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What are the children most grateful for?",
+          "options": [
+            "The amount of money.",
+            "The size of the gifts.",
+            "The visitors' kindness and smiles.",
+            "The new building."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do the children hope to do one day?",
+          "options": [
+            "Forget the visitors.",
+            "Keep everything for themselves.",
+            "Stop going to school.",
+            "Pay it forward and help someone else."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

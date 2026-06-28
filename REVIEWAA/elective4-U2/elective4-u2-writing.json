@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U2",
+  "topic": "Introduce an Iconic Attraction in Your City(介绍家乡的一处标志性景点)",
+  "title_en": "An Iconic Attraction in My City",
+  "genre": "说明文 / 旅游介绍(introduce an iconic attraction + explain why it is worth visiting)",
+  "source": "人教版2019选择性必修四 Unit 2 Project:Introduce an iconic attraction in your city or town(说明文/旅游介绍,运用过去分词等结构)。",
+  "prompt_cn": "假设你叫李华,你校英文网站正在征集“我家乡的标志性景点”短文。请用英语写一篇约100词的短文,介绍你所在城市/家乡的一处标志性景点,内容包括:① 景点名称与位置;② 它的历史或特色(何时建成、为何有名);③ 游客可以在那里体验什么;④ 为什么它值得一游。注意:适当使用过去分词作定语/状语(如 built in…, located in…, known as…)。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English website is collecting short pieces titled \"An Iconic Attraction in My Hometown\". Write a passage of about 100 words to introduce one iconic attraction in your city or town, including: 1) its name and location; 2) its history or special features (when it was built and why it is famous); 3) what visitors can experience there; 4) why it is worth visiting. Try to use past participles as attributes or adverbials (e.g. built in…, located in…, known as…).",
+  "points": [
+    "景点名称与位置(… is located in / by …)",
+    "历史或特色(Built in …, it is known as / famous for …)",
+    "游客体验(Visitors can see / enjoy / walk along …)",
+    "推荐理由(It is well worth visiting because …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "One of the most iconic attractions in my city is the Old Stone Bridge, located in the very centre of the town. Built more than four hundred years ago, it still carries people across the wide river every day. Made of grey stone, it has lasted through floods and wars, and it is now recognised as a protected heritage site. Visitors can walk slowly along the bridge, take photos of the water below, and enjoy the lovely view at sunset. Nearby, a busy night market offers local food cooked with fresh herbs. The bridge is well worth visiting, for it tells the proud story of our city.",
+  "model_translation": "我家乡最具标志性的景点之一是位于市中心的“老石桥”。它建于四百多年前,至今仍每天承载人们过宽阔的河流。它由灰石筑成,历经洪水与战乱而屹立,如今被认定为受保护的遗产地。游客可以沿桥慢行,拍下桥下的流水,欣赏日落时的美景。桥旁还有热闹的夜市,用新鲜香草烹制当地美食。这座桥很值得一游,因为它讲述着我们城市自豪的故事。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:名称位置 / 历史特色 / 游客体验 / 推荐理由" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一处景点展开、条理清楚、过渡自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、过去分词作定语/状语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "名称位置 … is located in / by …",
+      "历史特色 Built in …, it is known as / famous for …",
+      "游客体验 Visitors can … and enjoy …",
+      "推荐理由 It is well worth visiting because …"
+    ],
+    "key_expressions": [
+      "One of the most iconic attractions in my city is …",
+      "Built more than four hundred years ago, it still …",
+      "Recognised as a protected heritage site, …",
+      "It is well worth visiting, for it tells the proud story of our city."
+    ],
+    "useful_words": ["iconic", "attraction", "located", "built", "heritage", "monument", "visitor", "famous", "grand", "view"]
+  },
+  "high_sentences": [
+    "Located in the very centre of the town, the Old Stone Bridge is one of our most iconic attractions.",
+    "Built more than four hundred years ago, it still carries people across the river every day.",
+    "Made of grey stone, it has lasted through floods and wars.",
+    "It is well worth visiting, for it tells the proud story of our city."
+  ],
+  "error_pairs": [
+    { "wrong": "The bridge built in 1600 still stand today.", "correct": "The bridge built in 1600 still stands today.", "note": "主语 the bridge 第三人称单数,谓语动词加 s;built 是过去分词作定语,不是谓语。" },
+    { "wrong": "Located in the centre, it famous for its history.", "correct": "Located in the centre, it is famous for its history.", "note": "be famous for 需要系动词 is;Located 是过去分词作状语。" },
+    { "wrong": "Make of stone, the gate has lasted centuries.", "correct": "Made of stone, the gate has lasted centuries.", "note": "主语 gate 被'制成',状语用过去分词 Made,不用动词原形。" }
+  ],
+  "paragraph_template": "【家乡景点介绍结构】\n第1句 名称+位置:… is located in / by …\n第2-3句 历史+特色:Built in …, it is known as / famous for …\n第4-5句 游客体验:Visitors can … and enjoy …\n第6句 推荐理由:It is well worth visiting because / for …"
+}

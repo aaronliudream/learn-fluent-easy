@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "topic": "Healthy Lifestyle",
+  "source": "人教版2019选择性必修三 Unit 2 同主题完形(早睡早起/戒咖啡因/学会做饭/笑与健康/坚持跑步/规律作息)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Going to Bed Earlier",
+      "text": "Last term I had a really bad (1)____: I stayed up late every night watching short videos on my phone. As a result, I often felt (2)____ in class and could not concentrate. My teacher told me that getting enough sleep is the (3)____ to staying healthy. So I decided to (4)____ this habit step by step. First, I worked out my own habit cycle. The (5)____ was feeling bored at night, and my routine was to pick up my phone. To (6)____ a positive change, I put my phone in another room before bed and read a book instead. It was not easy at first, and it took some (7)____ to keep going. But slowly my new routine started to feel (8)____. Now I sleep soundly and wake up feeling (9)____. I no longer feel dizzy in the morning, and my marks have improved too. This small change has truly (10)____ the quality of my daily life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "habit",
+            "price",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a bad habit 坏习惯。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "proud",
+            "sleepy",
+            "rich",
+            "polite"
+          ],
+          "answer_index": 1,
+          "explanation": "felt sleepy 感到困倦。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "key",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "the key to 关键。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "build",
+            "form",
+            "keep",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "change this habit 改掉这个习惯。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "cue",
+            "reward",
+            "routine",
+            "result"
+          ],
+          "answer_index": 0,
+          "explanation": "the cue 提示/信号。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "stop",
+            "facilitate",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "facilitate a change 促成改变。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "money",
+            "water",
+            "discipline",
+            "sugar"
+          ],
+          "answer_index": 2,
+          "explanation": "some discipline 一些自制力。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "strange",
+            "painful",
+            "boring",
+            "natural"
+          ],
+          "answer_index": 3,
+          "explanation": "feel natural 感觉自然。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "refreshed",
+            "tired",
+            "worried",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "feeling refreshed 精神饱满。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lowered",
+            "enhanced",
+            "ruined",
+            "ignored"
+          ],
+          "answer_index": 1,
+          "explanation": "enhanced the quality 提升了质量。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Cutting Down on Coffee",
+      "text": "My sister used to (1)____ on coffee to get through every busy day. She drank five or six cups, and by evening she felt (2)____ out and could not sleep. A doctor warned her that too much caffeine was not (3)____ for her health. So she made up her (4)____ to cut down slowly. She knew that to stop suddenly would only make her (5)____, so she removed one cup each week. Whenever she felt the (6)____ to grab a coffee, she chose to drink water or take a short (7)____ outside instead. This new routine gave her a small (8)____: she felt calmer and more relaxed. After a month, she was down to one cup a day and slept much (9)____ at night. She told me that the hardest part was simply the first week. Now she feels far more (10)____ and full of energy, and she is proud of the change she has made.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "carry",
+            "look",
+            "rely",
+            "wait"
+          ],
+          "answer_index": 2,
+          "explanation": "rely on 依赖。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "proud",
+            "rich",
+            "calm",
+            "worn"
+          ],
+          "answer_index": 3,
+          "explanation": "worn out 筋疲力尽。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "good",
+            "loud",
+            "late",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "not good for health 对健康不好。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "hand",
+            "mind",
+            "foot",
+            "head"
+          ],
+          "answer_index": 1,
+          "explanation": "make up one's mind 下定决心。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "happy",
+            "polite",
+            "pessimistic",
+            "quiet"
+          ],
+          "answer_index": 2,
+          "explanation": "make her pessimistic 让她悲观。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "shop",
+            "cue"
+          ],
+          "answer_index": 3,
+          "explanation": "the cue 信号/冲动。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "walk",
+            "sleep",
+            "meal",
+            "exam"
+          ],
+          "answer_index": 0,
+          "explanation": "take a short walk 散步。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "reward",
+            "noise",
+            "error"
+          ],
+          "answer_index": 1,
+          "explanation": "a small reward 小回报。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "worse",
+            "louder",
+            "better",
+            "later"
+          ],
+          "answer_index": 2,
+          "explanation": "slept much better 睡得好多了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "tired",
+            "bored",
+            "afraid",
+            "dynamic"
+          ],
+          "answer_index": 3,
+          "explanation": "more dynamic 更有活力。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Learning to Cook Healthy Meals",
+      "text": "When I first lived away from home, I ate junk food every day because it was (1)____ and quick. Soon I started to feel (2)____ and caught the flu easily. I realised that to eat a (3)____ diet was something I had to learn. So I decided to (4)____ how to cook simple, healthy meals. At first my dishes tasted (5)____, and I almost wanted to give up. But I kept (6)____ a few new recipes each week. Slowly my cooking improved, and I began to (7)____ how good fresh food could taste. I replaced sugary drinks with water and added more vegetables and (8)____ to my plate. The (9)____ were clear: I had more energy, slept better, and rarely got sick. Cooking for myself also saved a lot of (10)____. Now I am sure that a few small choices in the kitchen can really change the way you feel every day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "cheap",
+            "loud",
+            "polite",
+            "ancient"
+          ],
+          "answer_index": 0,
+          "explanation": "cheap 便宜的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "proud",
+            "weak",
+            "rich",
+            "calm"
+          ],
+          "answer_index": 1,
+          "explanation": "feel weak 感到虚弱。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "noisy",
+            "lazy",
+            "balanced",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "a balanced diet 均衡饮食。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "waste",
+            "hide",
+            "learn"
+          ],
+          "answer_index": 3,
+          "explanation": "learn how to cook 学会做饭。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "terrible",
+            "lovely",
+            "sweet",
+            "fresh"
+          ],
+          "answer_index": 0,
+          "explanation": "tasted terrible 味道糟糕。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "selling",
+            "trying",
+            "losing",
+            "breaking"
+          ],
+          "answer_index": 1,
+          "explanation": "kept trying 不断尝试。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "forget",
+            "doubt",
+            "appreciate",
+            "waste"
+          ],
+          "answer_index": 2,
+          "explanation": "appreciate 欣赏/体会到。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sweets",
+            "sugar",
+            "salt",
+            "nuts"
+          ],
+          "answer_index": 3,
+          "explanation": "vegetables and nuts 蔬菜和坚果。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "results",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "the results 结果。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "trouble",
+            "money",
+            "sleep",
+            "stress"
+          ],
+          "answer_index": 1,
+          "explanation": "saved a lot of money 省了很多钱。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Laughter Is Good Medicine",
+      "text": "Many people do not know that laughter can be a natural (1)____ for our health. When we laugh, our body relaxes and our mind feels (2)____. Research shows that a few minutes of real laughter can (3)____ the blood vessels and ease pain, just as gentle exercise does. Laughter is also said to be (4)____, which means that when one person laughs, others nearby often start to laugh too. After a stressful day, watching a (5)____ with friends is a simple way to feel better. It (6)____ your mind and helps you forget your worries for a while. Of course, laughter alone cannot (7)____ every problem, but it certainly helps. Doctors agree that people who laugh often tend to feel more (8)____ and stay healthier. So the next time you feel worn out or (9)____, try to find something funny. A good laugh costs nothing, yet it can truly (10)____ the quality of your day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "machine",
+            "medicine",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "natural medicine 天然良药。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "angry",
+            "rich",
+            "late",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "feel calm 感到平静。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "open",
+            "close",
+            "break",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "open the blood vessels 舒张血管。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "contagious",
+            "quiet",
+            "lazy"
+          ],
+          "answer_index": 1,
+          "explanation": "contagious 有感染力的(会传染笑声)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "machine",
+            "comedy",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "watch a comedy 看喜剧。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loses",
+            "breaks",
+            "sells",
+            "refreshes"
+          ],
+          "answer_index": 3,
+          "explanation": "refreshes your mind 让头脑恢复。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "solve",
+            "enjoy",
+            "buy",
+            "open"
+          ],
+          "answer_index": 0,
+          "explanation": "solve every problem 解决每个问题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "positive",
+            "afraid",
+            "tired"
+          ],
+          "answer_index": 1,
+          "explanation": "feel more positive 更积极。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "polite",
+            "ancient",
+            "stressed",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "worn out or stressed 疲惫或有压力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "ruin",
+            "lower",
+            "waste",
+            "enhance"
+          ],
+          "answer_index": 3,
+          "explanation": "enhance the quality 提升质量。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "My First Month of Running",
+      "text": "I used to spend my free time sitting and (1)____ snacks in front of the screen. After a check-up, the doctor said I needed to (2)____ regularly, or my health would get worse. So I made up my mind to (3)____ a running habit. The first week was a real (4)____, and my legs ached every morning. There were days when I felt (5)____ and wanted to quit. But I reminded myself that change happens (6)____, one small step at a time. Instead of running far, I just ran for ten minutes and slowly added more. To keep myself going, I gave myself a small (7)____ after each run, such as a nice bath. Little by little, running became part of my (8)____ life. Now I feel far more (9)____ than before, and I sleep soundly every night. The biggest lesson I learned is that you do not need a magic (10)____ to change your life; you just need patience and a single small step.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "eating",
+            "selling",
+            "hiding",
+            "throwing"
+          ],
+          "answer_index": 0,
+          "explanation": "eating snacks 吃零食。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleep",
+            "exercise",
+            "shout",
+            "travel"
+          ],
+          "answer_index": 1,
+          "explanation": "exercise regularly 规律锻炼。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "break",
+            "lose",
+            "form",
+            "stop"
+          ],
+          "answer_index": 2,
+          "explanation": "form a habit 养成习惯。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "joke",
+            "game",
+            "struggle"
+          ],
+          "answer_index": 3,
+          "explanation": "a real struggle 真正的艰难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pessimistic",
+            "proud",
+            "polite",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "felt pessimistic 感到悲观。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "suddenly",
+            "slowly",
+            "loudly",
+            "never"
+          ],
+          "answer_index": 1,
+          "explanation": "happens slowly 慢慢发生。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "reward",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "a small reward 小奖励。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "lazy",
+            "boring",
+            "daily"
+          ],
+          "answer_index": 3,
+          "explanation": "daily life 日常生活。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "energetic",
+            "tired",
+            "bored",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "more energetic 更有精力。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "shop",
+            "pill",
+            "city",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a magic pill 神奇药丸。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Balanced Daily Routine",
+      "text": "A healthy lifestyle is really about finding the right (1)____ and making good choices. Our life is composed of many parts, such as study, family, friends and rest. If one part comes to (2)____ everything else, the others are ignored and we lose our balance. That is why it is important to (3)____ your daily activities carefully. Your health depends on what you (4)____ to do each day. Neither too much nor too (5)____ of anything is good for you. For example, studying all night may seem hard-working, but it will leave you (6)____ and unable to focus. A wiser plan is to (7)____ small, healthy changes step by step. Sleep early, eat well, and make time to (8)____ your body every day. Try to replace a (9)____ routine, like endless scrolling, with something more positive. Over time, these little choices add up, and your whole lifestyle becomes (10)____. Remember, you do not have to change everything at once.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "balance",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "the right balance 恰当的平衡。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "open",
+            "break",
+            "dominate"
+          ],
+          "answer_index": 3,
+          "explanation": "dominate everything 支配一切。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "examine",
+            "forget",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "examine your activities 检视你的活动。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "choose",
+            "hide",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "what you choose to do 你选择做的事。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loud",
+            "rich",
+            "little",
+            "polite"
+          ],
+          "answer_index": 2,
+          "explanation": "too little 太少。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "proud",
+            "calm",
+            "happy",
+            "worn"
+          ],
+          "answer_index": 3,
+          "explanation": "worn out 筋疲力尽。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "make",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "make small changes 做小改变。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "move",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "move your body 活动身体。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happy",
+            "polite",
+            "negative",
+            "ancient"
+          ],
+          "answer_index": 2,
+          "explanation": "a negative routine 消极的常规。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "worse",
+            "louder",
+            "emptier",
+            "healthier"
+          ],
+          "answer_index": 3,
+          "explanation": "becomes healthier 变得更健康。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grade": 12,
+  "content": {
+    "title": "不定式作主语(The Infinitive as the Subject)速查",
+    "intro": "不定式 to do 可以作句子的主语。直接作主语时谓语用单数;当主语较长时,常用 it 作形式主语放句首,把真正的主语(to do)后置。判断口诀:句首要的是「主语」且是「做某事」→ 用 to do,谓语跟单数。",
+    "table": {
+      "headers": ["句型", "结构 / 例句"],
+      "rows": [
+        ["不定式直接作主语", "To do sth + 单数谓语:To exercise regularly keeps us fit."],
+        ["it 作形式主语", "It is + adj. + to do:It is important to eat a balanced diet."],
+        ["It takes/costs/requires", "It takes/costs/requires (sb) + 时间/精力/钱 + to do:It takes courage to change."],
+        ["It is + 名词 + to do", "It is a good idea to relax. / It is a pity to give up."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "不定式直接作主语时,谓语动词永远用单数", "mark": "To give up smoking takes(不是 take)willpower." },
+      { "rule": "主语太长时用 it 作形式主语,真正主语 to do 后置,it 本身无意义", "mark": "It is hard to break a bad habit.(= To break a bad habit is hard.)" },
+      { "rule": "It takes/costs/requires + (sb) + 时间/精力/钱 + to do 是固定句式", "mark": "It took the surgeon three hours to finish the surgery." },
+      { "rule": "句首作主语只能用 to do 或 doing,不能用过去分词或动词原形/单三形式", "mark": "To eat √ / Eaten × / Eat × / Eats ×" }
+    ],
+    "why": [
+      "不定式 to do 表示一个具体、有时偏将来或一次性的动作,放句首就充当主语;由于它在语义上是单个动作单元,所以谓语跟单数。主语过长会让句子头重脚轻,于是把 it 放前面当形式主语,真正的 to do 放后面,读起来更顺。"
+    ],
+    "gaokaoPoints": [
+      "不定式作主语 vs it 形式主语:句首是否需要后置——长主语用 it … to do 是高考语法填空与写作高频。",
+      "谓语单复数:不定式作主语谓语用单数(keeps/is/takes),常设错项考动词形式。",
+      "It takes/costs/requires sb time/money to do 固定句式,真正主语恒为 to do。"
+    ],
+    "examVsReal": [
+      { "exam": "To eat a balanced diet is important.（书面/考试,不定式直接作主语)", "real": "It's important to eat a balanced diet.", "note": "口语和真实英语里更常用 it 作形式主语,把长主语后置;考试两种都对,但写作避免头重脚轻。" },
+      { "exam": "To change a habit takes time.（考试常用不定式主语)", "real": "Changing a habit takes time.", "note": "真实英语里谈泛指、习惯性动作时常用动名词作主语;本单元考点聚焦不定式作主语。" }
+    ]
+  }
+}

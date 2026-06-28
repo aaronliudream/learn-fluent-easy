@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "Write a Job Application Letter(写一封求职信)",
+  "title_en": "A Job Application Letter for a Summer Camp Helper",
+  "genre": "应用文 / 求职信(apply for a job + show why you are a good match)",
+  "source": "人教版2019选择性必修四 Unit 5 Reading for Writing:write an application letter for a job you like(说明申请的职位 + 展示你的技能/经验/性格如何与岗位匹配 + 表达期待)。",
+  "prompt_cn": "假设你叫李华,你看到蛙与狐夏令营(the Frog & Fox Summer Camp)招募高中帮手。请用英语写一封约100词的求职信,内容包括:① 说明你申请的职位;② 介绍你与岗位相关的技能、经验和性格;③ 说明你能为营地带来什么,并表达期待回复。注意:格式得体,用不定式表达目的和愿望(to apply / to help / I am keen to ...)。",
+  "prompt_en": "Suppose you are Li Hua. You have seen that the Frog & Fox Summer Camp is looking for high school helpers. Write an application letter (about 100 words) including: 1) the position you are applying for; 2) your relevant skills, experience and personality; 3) what you can bring to the camp, and your wish to hear back. Use infinitives to express purpose and intention (to apply / to help / I am keen to ...).",
+  "points": [
+    "说明申请的职位(I would like to apply for the position of ...)",
+    "技能与经验(My English is at an intermediate level; I have experience in ...)",
+    "性格与能为岗位带来什么(I am a team player; I am keen to ...)",
+    "礼貌结尾、表达期待(I look forward to hearing from you.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Sir or Madam, I would like to apply for the position of camp helper. I believe I would be a valuable addition to your team. My English is at an intermediate level, and I have travelled to several English-speaking countries. I once volunteered at a local pet shop, so I have experience working with animals. As captain of my school table tennis team for two years, I have learned how to lead others and decide on priorities. I am a friendly team player, and I am keen to give your visitors a warm welcome. I look forward to hearing from you soon. Yours faithfully, Li Hua",
+  "model_translation": "尊敬的先生/女士:我想申请营地帮手这一职位,相信自己会成为贵团队的得力一员。我的英语为中级水平,并去过几个英语国家。我曾在当地一家宠物店做志愿者,因此有与动物打交道的经验。作为校乒乓球队队长两年,我学会了带领他人、确定优先事项。我友好、善于合作,热切希望给访客一个温暖的欢迎。期待尽快得到您的回复。此致,李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:申请职位 / 技能经验性格 / 能带来什么并表达期待" },
+      { "dimension": "结构", "max": 4, "criteria": "求职信格式得体(称呼+正文+礼貌结尾)、段落清晰、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、不定式(to do / to be done)运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "申请职位 I would like to apply for the position of ...",
+      "技能经验 My English is ... ; I have experience in ...",
+      "性格与贡献 I am a team player, and I am keen to ...",
+      "礼貌结尾 I look forward to hearing from you. Yours faithfully, ..."
+    ],
+    "key_expressions": [
+      "I would like to apply for the position of camp helper.",
+      "I have experience working with animals.",
+      "I have learned how to lead others and decide on priorities.",
+      "I am keen to give your visitors a warm welcome."
+    ],
+    "useful_words": ["apply", "position", "CV", "intermediate", "experience", "priority", "team player", "keen", "welcome", "look forward to"]
+  },
+  "high_sentences": [
+    "I would like to apply for the position of camp helper.",
+    "I have experience working with animals, since I once volunteered at a local pet shop.",
+    "As captain of my school team, I have learned how to lead others and decide on priorities.",
+    "I am keen to give your visitors a warm welcome they will always remember."
+  ],
+  "error_pairs": [
+    { "wrong": "I would like apply for the position.", "correct": "I would like to apply for the position.", "note": "would like 后接不定式 to do。" },
+    { "wrong": "I have experience to work with animals.", "correct": "I have experience working with animals.", "note": "experience (in) doing sth,用动名词,不用不定式。" },
+    { "wrong": "I am keen give them a warm welcome.", "correct": "I am keen to give them a warm welcome.", "note": "be keen to do sth,固定搭配接不定式。" }
+  ],
+  "paragraph_template": "【求职信结构】\n称呼:Dear Sir or Madam,\n第1句 申请职位:I would like to apply for the position of ...\n第2-4句 技能/经验/性格:My English is ... ; I have experience in ... ; I am a team player ...\n第5句 贡献与期待:I am keen to ... I look forward to hearing from you.\n落款:Yours faithfully, Li Hua"
+}

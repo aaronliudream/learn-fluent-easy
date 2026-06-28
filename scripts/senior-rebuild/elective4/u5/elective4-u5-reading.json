@@ -1,0 +1,336 @@
+{
+  "volume": "elective4",
+  "unit": "U5",
+  "topic": "Launching Your Career",
+  "source": "人教版2019选择性必修四 Unit 5 同主题阅读(职业性格测试/选大学专业/招聘广告/求职信与简历/职业规划/年轻摄影师)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "What a Career Aptitude Test Can Do",
+      "body": "Many high school students have no clear idea about which job would suit them. One useful tool is a career aptitude test. During the test, you answer many questions about what you like and how you behave. Your answers are used to make a code that shows your overall work personality. This code is then used to generate a list of careers that might be right for you. The suggestions are also based on your education and experience, but you can look at higher-level careers as well, which is very useful for students. You could check the basic jobs to see what work you might enjoy now, and then look at more advanced ones so you know what to aim for in the future. However, it is important to remember that the results are only meant for guidance. The real secret to a good career is finding something that you are truly passionate about. So try a test online and start thinking about your future today.",
+      "vocab_notes": [
+        {
+          "word": "aptitude",
+          "cn": "天资;能力倾向"
+        },
+        {
+          "word": "code",
+          "cn": "代码"
+        },
+        {
+          "word": "generate",
+          "cn": "生成;产生"
+        },
+        {
+          "word": "guidance",
+          "cn": "指导;引导"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does the test produce a list of career suggestions?",
+          "options": [
+            "By turning your answers into a personality code first.",
+            "By copying jobs from your school report.",
+            "By asking your parents what to choose.",
+            "By picking jobs at random for everyone."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'answers are used to make a code… used to generate a list of careers' 的转述。"
+        },
+        {
+          "stem": "Why is looking at higher-level careers useful for students?",
+          "options": [
+            "It lets them avoid all difficult jobs.",
+            "It shows them future goals worth working towards.",
+            "It removes the need to study at school.",
+            "It guarantees them a high salary."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'look at more advanced ones so you know what to aim for in the future' 的转述。"
+        },
+        {
+          "stem": "What does the writer say is the real secret to a good career?",
+          "options": [
+            "Picking a job you genuinely love.",
+            "Earning as much money as possible.",
+            "Following the test results exactly.",
+            "Picking whatever job is easiest."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'finding something that you are truly passionate about' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Choosing a University Major",
+      "body": "Liu Ming, Susan and Olivia are all thinking hard about which university major to choose. Liu Ming is interested in cybersecurity and data science, because he believes these fields will offer many jobs in the coming years. Susan says she was told that public health is a growing area, and she likes the idea of helping large numbers of people stay well. Olivia hopes to study robotics, but her parents worry that a person's career might depend too much on which university they get into. The three students also learn that different countries ask for different things. In China, you usually need a good grade and must pass the entrance exam. In the UK, a strong grade is the key. In the USA, students are often asked to write an essay as well. Each of them realises that choosing a major is not only about what they like, but also about what they are good at and what the future may need.",
+      "vocab_notes": [
+        {
+          "word": "major",
+          "cn": "专业"
+        },
+        {
+          "word": "cybersecurity",
+          "cn": "网络安全"
+        },
+        {
+          "word": "entrance exam",
+          "cn": "入学考试"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Liu Ming interested in cybersecurity and data science?",
+          "options": [
+            "Because his parents chose them for him.",
+            "Because he thinks they will offer many future jobs.",
+            "Because they are the easiest majors.",
+            "Because his school forced him to."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'these fields will offer many jobs in the coming years' 的转述。"
+        },
+        {
+          "stem": "What did Susan say she had been told?",
+          "options": [
+            "That robotics is too difficult.",
+            "That she should not go to university.",
+            "That the field of public health is expanding.",
+            "That all majors are the same."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'she was told that public health is a growing area' 的转述。"
+        },
+        {
+          "stem": "How is getting into university different in the USA, according to the text?",
+          "options": [
+            "Students never take any exam.",
+            "Only grades from China are accepted.",
+            "No good grades are needed at all.",
+            "An essay is usually required of applicants there."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'In the USA, students are often asked to write an essay as well' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Summer Camp Helpers Wanted",
+      "body": "Are you active and outgoing? Are you passionate about Chinese culture? Would you like to meet young people from other countries? The Frog and Fox Summer Camp is looking for keen high school students to join our team as camp helpers next year. Our camp sits in a beautiful area near a quiet canal, where you will sleep in tents under the stars. You will help us attend to hundreds of students from all over the world, and you may supervise or join in many tasks. These include keeping the parking area clean, guiding new guests to reception, and helping with fun activities such as barbecues, calligraphy and knitting with wool. Successful helpers will ideally have a good level of English, strong teamwork skills, a passion for culture, some experience with animals and a friendly, welcoming attitude. Good handwriting is a plus, too. If this sounds like you, send your CV and a cover letter to our receptionist. We look forward to building a warm and lively team together.",
+      "vocab_notes": [
+        {
+          "word": "supervise",
+          "cn": "监督;协助管理"
+        },
+        {
+          "word": "attend to",
+          "cn": "照料;接待"
+        },
+        {
+          "word": "cover letter",
+          "cn": "求职信"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Where is the summer camp located?",
+          "options": [
+            "In a beautiful area beside a quiet canal.",
+            "In a busy city centre.",
+            "On a small island far from land.",
+            "Inside a large shopping mall."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a beautiful area near a quiet canal' 的转述。"
+        },
+        {
+          "stem": "Which of these is one of the helper's possible tasks?",
+          "options": [
+            "Driving the camp's buses.",
+            "Guiding new guests to the reception area.",
+            "Cooking all the meals alone.",
+            "Teaching maths and geometry classes."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'guiding new guests to reception' 的转述。"
+        },
+        {
+          "stem": "What does the advertisement say a successful helper should ideally have?",
+          "options": [
+            "A university degree in science.",
+            "Several years of paid work experience.",
+            "A friendly attitude and good teamwork skills.",
+            "The ability to speak five languages."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'strong teamwork skills… a friendly, welcoming attitude' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Kelly's Application Letter",
+      "body": "Dear Sir or Madam, I would like to apply for the position of camp helper, and I believe I would be a valuable addition to your team. My English is at an intermediate level, and I have travelled to several English-speaking countries. I have also helped to organise a three-day city tour for visiting exchange students, where I managed the finances and kept the receipts. I have experience working with animals, since I once volunteered at a local pet shop and changed flea collars there. At a local library, I helped to organise the children's section. As captain of my school table tennis team for two years, I have learned how to lead others and decide on priorities. With my proficiency in Chinese calligraphy, I could even run short classes for your visitors. The chance to welcome exchange students is very exciting, and I am keen to give them a warm welcome they will always remember. I look forward to hearing from you as soon as possible. Yours faithfully, Kelly Xu.",
+      "vocab_notes": [
+        {
+          "word": "intermediate",
+          "cn": "中级的"
+        },
+        {
+          "word": "proficiency",
+          "cn": "熟练;精通"
+        },
+        {
+          "word": "priority",
+          "cn": "优先事项"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does Kelly say about her level of English?",
+          "options": [
+            "It is at a beginner level only.",
+            "She cannot speak English at all.",
+            "It is her first language.",
+            "She has reached a middle, intermediate standard."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'My English is at an intermediate level' 的转述。"
+        },
+        {
+          "stem": "How did Kelly gain experience with animals?",
+          "options": [
+            "Through unpaid work she once did at a pet shop.",
+            "By keeping pets at a zoo.",
+            "By studying biology at university.",
+            "By raising sheep on a farm."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'volunteered at a local pet shop and changed flea collars' 的转述。"
+        },
+        {
+          "stem": "What did being team captain teach Kelly?",
+          "options": [
+            "How to cook for a large group.",
+            "The ability to guide a team and set priorities.",
+            "How to design a website.",
+            "How to repair a tent."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'learned how to lead others and decide on priorities' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Making a Career Plan",
+      "body": "A good career plan makes you think carefully about your future. It asks you to focus on what you want to do and how you are going to achieve it. A plan should also make you consider which careers interest you most, and what skills and training you will need to succeed in them. Along with the plan, you should prepare a CV, which is essential for showing your future employers your skills and experiences. Of course, the CV should be tailored to match the careers in your plan, so that you are well prepared to take every opportunity that comes your way. To get useful ideas, you can look for websites that focus on career advice, or talk to someone older who can guide you. These are things you should start thinking about right now, because they will help to protect your future. With a clear plan and a strong CV, you will feel far more confident when the right chance finally appears.",
+      "vocab_notes": [
+        {
+          "word": "tailor",
+          "cn": "使适合;量身定做"
+        },
+        {
+          "word": "essential",
+          "cn": "必不可少的"
+        },
+        {
+          "word": "opportunity",
+          "cn": "机会"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does a good career plan ask you to focus on?",
+          "options": [
+            "Only the salary of each job.",
+            "Which friends you will work with.",
+            "Your aims and the means of reaching them.",
+            "How to avoid all hard work."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'focus on what you want to do and how you are going to achieve it' 的转述。"
+        },
+        {
+          "stem": "Why is a CV described as essential?",
+          "options": [
+            "It replaces the need for any plan.",
+            "It guarantees you the first job you want.",
+            "It saves you from writing a cover letter.",
+            "It presents your abilities and background to a boss."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'essential for showing your future employers your skills and experiences' 的转述。"
+        },
+        {
+          "stem": "Why should a CV be tailored to your plan?",
+          "options": [
+            "So you are ready to take every opportunity.",
+            "So it can be much shorter.",
+            "So you can copy it from a friend.",
+            "So it never needs changing again."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'tailored to match the careers… well prepared to take every opportunity' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Teenager's Passion for His Work",
+      "body": "Photography has become an easier hobby today, as technology keeps improving. Yet it still takes a great deal of patience and hard work to become a truly successful photographer. Mateusz is a young man who loves wildlife photography. To take his amazing pictures, he hides quietly in long grass or in a tent so that the birds cannot see him. He waits there for hours, dressed in well-disguised clothing, until the perfect moment arrives. In a single session, he may take hundreds of photographs, hoping that just one will be special. His patience has paid off: a museum once recognised his talent with an award for a young wildlife photographer. People often wonder how someone so young can be so successful. The answer seems to be his deep passion, his enthusiasm and his willingness to keep trying. His story shows that, with real love for your work, you can bring even a teenage hobby to an international audience and turn it into the start of a career.",
+      "vocab_notes": [
+        {
+          "word": "wildlife",
+          "cn": "野生动植物"
+        },
+        {
+          "word": "well-disguised",
+          "cn": "伪装良好的"
+        },
+        {
+          "word": "enthusiasm",
+          "cn": "热情"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does Mateusz hide in long grass or a tent?",
+          "options": [
+            "Because he is afraid of the sun.",
+            "To keep the birds from spotting him.",
+            "To keep his camera dry.",
+            "Because he is hiding from people."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'hides quietly in long grass or in a tent so that the birds cannot see him' 的转述。"
+        },
+        {
+          "stem": "How did a museum show that it valued his work?",
+          "options": [
+            "By buying all his cameras.",
+            "By offering him a job as a teacher.",
+            "By honouring his talent with a young photographer's prize.",
+            "By printing his photos in a textbook."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a museum… recognised his talent with an award' 的转述。"
+        },
+        {
+          "stem": "According to the text, what mainly explains his success?",
+          "options": [
+            "His expensive equipment.",
+            "His good luck in the field.",
+            "The help of many assistants.",
+            "His deep passion and willingness to keep trying."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'his deep passion, his enthusiasm and his willingness to keep trying' 的转述。"
+        }
+      ]
+    }
+  ]
+}

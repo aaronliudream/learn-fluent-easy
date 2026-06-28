@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U2",
+  "grammar_title": "不定式作主语(The Infinitive as the Subject)",
+  "source": "人教版2019选择性必修三 Unit 2 Discovering Useful Structures:不定式作主语(直接作主语谓语用单数 / it 作形式主语真正主语后置 / It takes/costs/requires…to do · It is + n. + to do)。句子地道、健康生活主题、答案唯一(只有不定式能作主语,doing/done/that 从句均不成立)。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "不定式直接作主语,谓语用单数",
+      "overview": "To do sth 直接放句首作主语时,谓语动词用单数(is/keeps/takes…)。如 To exercise regularly keeps us fit. 干扰项 doing/done 等不能与后面的单数谓语自然搭配,过去分词/原形更不能作主语。"
+    },
+    {
+      "code": "u2.02",
+      "point": "it 作形式主语,不定式真正主语后置",
+      "overview": "当不定式作主语较长时,常用 it 作形式主语放句首,把真正的主语(to do)后置:It is + adj. + to do。如 It is important to eat a balanced diet."
+    },
+    {
+      "code": "u2.03",
+      "point": "It takes/costs/requires…to do · It is + n. + to do",
+      "overview": "固定句式:It takes/costs/requires (sb) + 时间/精力/钱 + to do;It is + 名词(a good idea / a pity…) + to do。真正主语都是后置的不定式。如 It takes courage to change."
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "____ regularly keeps us fit and full of energy.",
+      "options": [
+        "To exercise",
+        "Exercised",
+        "Exercise",
+        "Exercises"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语、后接单数谓语 keeps,用不定式 To exercise;过去分词/原形/单数动词都不能作主语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ up smoking takes a great deal of willpower.",
+      "options": [
+        "Given",
+        "To give",
+        "Gives",
+        "Give"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语、谓语 takes 为单数,用不定式 To give up;其余形式不能作主语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a balanced diet is the key to staying healthy.",
+      "options": [
+        "Eaten",
+        "Eats",
+        "To eat",
+        "Eat"
+      ],
+      "answer_index": 2,
+      "explanation": "句首作主语、谓语 is 单数,用 To eat;过去分词/动词形式不能作主语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a bad habit early is much easier than changing it later.",
+      "options": [
+        "Recognised",
+        "Recognises",
+        "Recognise",
+        "To recognise"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语、谓语 is,用不定式 To recognise。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ breakfast every morning often makes teenagers feel dizzy.",
+      "options": [
+        "To skip",
+        "Skipped",
+        "Skips",
+        "Skip"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语、谓语 makes 单数,用 To skip。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ enough sleep helps your body and mind recover.",
+      "options": [
+        "Got",
+        "To get",
+        "Gets",
+        "Get"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语、谓语 helps 单数,用不定式 To get。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ stress in a healthy way takes time and practice.",
+      "options": [
+        "Managed",
+        "Manages",
+        "To manage",
+        "Manage"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语、谓语 takes,用 To manage。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a negative routine with a positive one really works.",
+      "options": [
+        "Replaced",
+        "Replaces",
+        "Replace",
+        "To replace"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语、谓语 works,用不定式 To replace。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ the stairs instead of the escalator burns more calories.",
+      "options": [
+        "To take",
+        "Taken",
+        "Takes",
+        "Take"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语、谓语 burns 单数,用 To take。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ your bad habit cycle is the first step to changing it.",
+      "options": [
+        "Examined",
+        "To examine",
+        "Examines",
+        "Examine"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语、谓语 is 单数,用不定式 To examine。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ to a fitness consultant for advice often saves a lot of trouble.",
+      "options": [
+        "Turned",
+        "Turns",
+        "To turn",
+        "Turn"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语、谓语 saves 单数,用 To turn。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ too much sugar damages both your teeth and your health.",
+      "options": [
+        "Eaten",
+        "Eats",
+        "Eat",
+        "To eat"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语、谓语 damages 单数,用不定式 To eat。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ passive cigarette smoke protects your lungs from harm.",
+      "options": [
+        "To avoid",
+        "Avoided",
+        "Avoids",
+        "Avoid"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语、谓语 protects 单数,用 To avoid。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a few warm-ups before exercise prevents many injuries.",
+      "options": [
+        "Done",
+        "To do",
+        "Does",
+        "Do"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语、谓语 prevents 单数,用不定式 To do。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ small changes every day makes your lifestyle healthier.",
+      "options": [
+        "Made",
+        "Makes",
+        "To make",
+        "Make"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语、谓语 makes 单数,用 To make。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ junk food too often leads to serious health problems.",
+      "options": [
+        "Eaten",
+        "Eats",
+        "Eat",
+        "To eat"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语、谓语 leads 单数,用不定式 To eat。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ your mind off everything else helps you relax completely.",
+      "options": [
+        "To take",
+        "Taken",
+        "Takes",
+        "Take"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语、谓语 helps 单数,用 To take。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a new healthy hobby keeps your mind active and happy.",
+      "options": [
+        "Picked",
+        "To pick",
+        "Picks",
+        "Pick"
+      ],
+      "answer_index": 1,
+      "explanation": "作主语、谓语 keeps 单数,用不定式 To pick up。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a step-by-step plan works better than changing everything at once.",
+      "options": [
+        "Followed",
+        "Follows",
+        "To follow",
+        "Follow"
+      ],
+      "answer_index": 2,
+      "explanation": "作主语、谓语 works 单数,用 To follow。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ the neighbours with loud music late at night is rather rude.",
+      "options": [
+        "Disturbed",
+        "Disturbs",
+        "Disturb",
+        "To disturb"
+      ],
+      "answer_index": 3,
+      "explanation": "作主语、谓语 is 单数,用不定式 To disturb。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is important ____ a balanced diet if you want to stay healthy.",
+      "options": [
+        "to eat",
+        "eating",
+        "eaten",
+        "that eat"
+      ],
+      "answer_index": 0,
+      "explanation": "it 作形式主语,真正主语后置用不定式 to eat;动名词不与 it 形式主语搭配,that 从句结构不成立。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is hard ____ a bad habit that has lasted for years.",
+      "options": [
+        "breaking",
+        "to break",
+        "broken",
+        "that break"
+      ],
+      "answer_index": 1,
+      "explanation": "it 为形式主语,真正主语用 to break。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is necessary ____ what you eat before you go on a diet.",
+      "options": [
+        "checking",
+        "checked",
+        "to check",
+        "that check"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语 → to check 作真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is useful ____ to a doctor for advice on your health.",
+      "options": [
+        "turning",
+        "turned",
+        "that turn",
+        "to turn"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语 → to turn 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is essential ____ harmful habits from controlling your life.",
+      "options": [
+        "to stop",
+        "stopping",
+        "stopped",
+        "that stop"
+      ],
+      "answer_index": 0,
+      "explanation": "it 形式主语 → to stop 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is wise ____ junk food with fruit and nuts.",
+      "options": [
+        "replacing",
+        "to replace",
+        "replaced",
+        "that replace"
+      ],
+      "answer_index": 1,
+      "explanation": "it 形式主语 → to replace 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is dangerous ____ drugs of any kind, even just once.",
+      "options": [
+        "taking",
+        "taken",
+        "to take",
+        "that take"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语 → to take 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is healthy ____ at least thirty minutes every day.",
+      "options": [
+        "exercising",
+        "exercised",
+        "that exercise",
+        "to exercise"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语 → to exercise 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is not easy ____ a bad habit quickly, so be patient.",
+      "options": [
+        "to change",
+        "changing",
+        "changed",
+        "that change"
+      ],
+      "answer_index": 0,
+      "explanation": "it 形式主语 → to change 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is harmful ____ breakfast just to save a little time.",
+      "options": [
+        "skipping",
+        "to skip",
+        "skipped",
+        "that skip"
+      ],
+      "answer_index": 1,
+      "explanation": "it 形式主语 → to skip 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is helpful ____ a comedy when you feel stressed out.",
+      "options": [
+        "watching",
+        "watched",
+        "to watch",
+        "that watch"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语 → to watch 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is sensible ____ enough water throughout the day.",
+      "options": [
+        "drinking",
+        "drunk",
+        "that drink",
+        "to drink"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语 → to drink 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is wrong ____ your neighbours with noise so late at night.",
+      "options": [
+        "to disturb",
+        "disturbing",
+        "disturbed",
+        "that disturb"
+      ],
+      "answer_index": 0,
+      "explanation": "it 形式主语 → to disturb 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is silly ____ that one magic pill will cure every bad habit.",
+      "options": [
+        "thinking",
+        "to think",
+        "thought",
+        "that think"
+      ],
+      "answer_index": 1,
+      "explanation": "it 形式主语 → to think 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is smart ____ the stairs instead of riding the escalator.",
+      "options": [
+        "taking",
+        "taken",
+        "to take",
+        "that take"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语 → to take 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is foolish ____ that sugary drinks are good for your teeth.",
+      "options": [
+        "believing",
+        "believed",
+        "that believe",
+        "to believe"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语 → to believe 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is important ____ some discipline when you try to change.",
+      "options": [
+        "to show",
+        "showing",
+        "shown",
+        "that show"
+      ],
+      "answer_index": 0,
+      "explanation": "it 形式主语 → to show 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is best ____ a solution to stress as soon as possible.",
+      "options": [
+        "finding",
+        "to find",
+        "found",
+        "that find"
+      ],
+      "answer_index": 1,
+      "explanation": "it 形式主语 → to find 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is normal ____ pessimistic after failing the first time.",
+      "options": [
+        "feeling",
+        "felt",
+        "to feel",
+        "that feel"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语 → to feel 真正主语。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "It is possible ____ yourself for the better, one small step at a time.",
+      "options": [
+        "changing",
+        "changed",
+        "that change",
+        "to change"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语 → to change 真正主语。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes a lot of courage ____ a habit you have had for years.",
+      "options": [
+        "to change",
+        "changing",
+        "changed",
+        "that change"
+      ],
+      "answer_index": 0,
+      "explanation": "It takes + n. + to do;真正主语用不定式 to change。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It took the surgeon three hours ____ my mother's lung surgery.",
+      "options": [
+        "finishing",
+        "to finish",
+        "finished",
+        "that finish"
+      ],
+      "answer_index": 1,
+      "explanation": "It took sb + 时间 + to do,用 to finish。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a good idea ____ up a new hobby to fight long-term stress.",
+      "options": [
+        "taking",
+        "taken",
+        "to take",
+        "that take"
+      ],
+      "answer_index": 2,
+      "explanation": "It is + n.(a good idea) + to do,用 to take。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It requires real discipline ____ small changes every single day.",
+      "options": [
+        "making",
+        "made",
+        "that make",
+        "to make"
+      ],
+      "answer_index": 3,
+      "explanation": "It requires + n. + to do,用 to make。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes willpower ____ smoking once and for all.",
+      "options": [
+        "to quit",
+        "quitting",
+        "quit",
+        "that quit"
+      ],
+      "answer_index": 0,
+      "explanation": "It takes + n. + to do,用 to quit。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It costs nothing ____ for a short walk when you feel stressed.",
+      "options": [
+        "going",
+        "to go",
+        "gone",
+        "that go"
+      ],
+      "answer_index": 1,
+      "explanation": "It costs + n. + to do,用 to go。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a pity ____ such an unhealthy lifestyle at your age.",
+      "options": [
+        "leading",
+        "led",
+        "to lead",
+        "that lead"
+      ],
+      "answer_index": 2,
+      "explanation": "It is + n.(a pity) + to do,用 to lead。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes patience ____ a bad habit over a period of time.",
+      "options": [
+        "breaking",
+        "broken",
+        "that break",
+        "to break"
+      ],
+      "answer_index": 3,
+      "explanation": "It takes + n. + to do,用 to break。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a wise choice ____ sugary drinks with plain water.",
+      "options": [
+        "to replace",
+        "replacing",
+        "replaced",
+        "that replace"
+      ],
+      "answer_index": 0,
+      "explanation": "It is + n.(a wise choice) + to do,用 to replace。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It requires effort ____ your habit cycle and then adapt it.",
+      "options": [
+        "examining",
+        "to examine",
+        "examined",
+        "that examine"
+      ],
+      "answer_index": 1,
+      "explanation": "It requires + n. + to do,用 to examine。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes only a minute ____ the stairs instead of the escalator.",
+      "options": [
+        "climbing",
+        "climbed",
+        "to climb",
+        "that climb"
+      ],
+      "answer_index": 2,
+      "explanation": "It takes + 时间 + to do,用 to climb。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a relief ____ free from the stress of exams at last.",
+      "options": [
+        "feeling",
+        "felt",
+        "that feel",
+        "to feel"
+      ],
+      "answer_index": 3,
+      "explanation": "It is + n.(a relief) + to do,用 to feel。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes courage ____ no to junk food when everyone is eating it.",
+      "options": [
+        "to say",
+        "saying",
+        "said",
+        "that say"
+      ],
+      "answer_index": 0,
+      "explanation": "It takes + n. + to do,用 to say。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It costs a lot of money ____ surgery, so it is better to stay healthy.",
+      "options": [
+        "having",
+        "to have",
+        "had",
+        "that have"
+      ],
+      "answer_index": 1,
+      "explanation": "It costs + n. + to do,用 to have。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a good habit ____ regularly and sleep early every night.",
+      "options": [
+        "exercising",
+        "exercised",
+        "to exercise",
+        "that exercise"
+      ],
+      "answer_index": 2,
+      "explanation": "It is + n.(a good habit) + to do,用 to exercise。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It requires time ____ a new healthy routine until it feels natural.",
+      "options": [
+        "forming",
+        "formed",
+        "that form",
+        "to form"
+      ],
+      "answer_index": 3,
+      "explanation": "It requires + n. + to do,用 to form。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It takes self-control ____ away from your phone before bed.",
+      "options": [
+        "to stay",
+        "staying",
+        "stayed",
+        "that stay"
+      ],
+      "answer_index": 0,
+      "explanation": "It takes + n. + to do,用 to stay。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a smart move ____ snacks from home instead of buying sweets.",
+      "options": [
+        "bringing",
+        "to bring",
+        "brought",
+        "that bring"
+      ],
+      "answer_index": 1,
+      "explanation": "It is + n.(a smart move) + to do,用 to bring。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It costs you nothing ____ a comedy and have a good laugh.",
+      "options": [
+        "watching",
+        "watched",
+        "to watch",
+        "that watch"
+      ],
+      "answer_index": 2,
+      "explanation": "It costs + n. + to do,用 to watch。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "It is a real pleasure ____ healthy and full of energy again.",
+      "options": [
+        "being",
+        "been",
+        "that be",
+        "to be"
+      ],
+      "answer_index": 3,
+      "explanation": "It is + n.(a real pleasure) + to do,用 to be。"
+    }
+  ]
+}

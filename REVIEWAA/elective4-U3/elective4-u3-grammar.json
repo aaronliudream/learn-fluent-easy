@@ -1,0 +1,745 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "grammar_title": "长句中的语法复习(Review of Long / Complex Sentences):从句连接词 · 非谓语 · 并列/强调/倒装",
+  "source": "人教版2019选择性必修四 Unit 3 Review useful structures(长难句):先拆主干再判从句/非谓语/特殊结构。句子均为海洋探索主题的自然长句,每句一空,答案唯一(其余选项语法或逻辑上不成立)。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "长句中的从句连接词(定语/状语/名词性从句:which/where/when/that/because/although/so that 等)",
+      "overview": "在复合长句里先找主句,再看空格引导的从句:看先行词与从句缺失成分(主/宾/状)选关系词;看逻辑关系(原因/让步/目的)选状语连词;看名词性从句是否完整选 that/whether/what 等。"
+    },
+    {
+      "code": "u3.02",
+      "point": "长句中的非谓语动词(doing / done / to do 作定语/状语/宾补)",
+      "overview": "句中已有谓语,空格处的动词只能用非谓语:与逻辑主语主动/进行→doing;被动/完成→done;表目的/将来/在 too…/be said 等结构→to do。"
+    },
+    {
+      "code": "u3.03",
+      "point": "长句中的并列、强调与倒装(not only…but also;it is…that 强调;Only…倒装;neither/so 倒装)",
+      "overview": "并列连词连接对等成分;强调句 it is/was…that 去掉后仍是完整句;Only+状语 / 否定词置于句首引起部分倒装(助动词提前);so/neither + 倒装表'也(不)'。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "The Jiaolong, ____ can dive seven kilometres deep, has helped Chinese scientists study the dark ocean floor.",
+      "options": [
+        "which",
+        "what",
+        "where",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性定语从句先行词 the Jiaolong 指物、从句缺主语 → which。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We must explore the oceans ____ cover most of our planet if we want to truly understand the earth.",
+      "options": [
+        "what",
+        "which",
+        "where",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 oceans 指物、从句缺主语(cover 的主语)→ which/that,此处给 which。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "In recent years China has joined several expeditions to the Arctic, ____ scientists study how the climate is changing.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 the Arctic 表地点、从句不缺主宾(只缺地点状语)→ where。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I will never forget the moment ____ the manned submersible finally touched the deepest part of the sea.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 moment 表时间、从句完整(只缺时间状语)→ when。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Although the ancient sea routes of Zheng He have been travelled many times, there are still places ____ no modern ship has reached.",
+      "options": [
+        "that",
+        "when",
+        "why",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 places、从句缺宾语(reached 的宾语)→ that(或 which),此处给 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Scientists keep logging new species, ____ greatly improves our understanding of life in the deep sea.",
+      "options": [
+        "what",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性定语从句指代整个前一句、作从句主语 → which。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the ice is melting faster now, ships can look for more fossil fuels further north in the Arctic.",
+      "options": [
+        "Although",
+        "Unless",
+        "Because",
+        "Whether"
+      ],
+      "answer_index": 2,
+      "explanation": "前后是因果关系(冰融化得快→船能往北找燃料)→ Because。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ whaling was banned in 1982, some countries are still hunting these intelligent creatures without mercy.",
+      "options": [
+        "Because",
+        "So that",
+        "If",
+        "Although"
+      ],
+      "answer_index": 3,
+      "explanation": "前后让步转折(虽被禁,仍有人捕猎)→ Although。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "We need to understand exactly ____ is happening to our oceans so that we can take real action in time.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语从句缺主语、表'什么'→ what。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Researchers took photos of each whale's fins ____ they could identify the animals on future trips.",
+      "options": [
+        "as if",
+        "so that",
+        "even if",
+        "now that"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的(为了日后能辨认)→ so that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The research vessel Kexue, ____ home port is in Qingdao, can carry out a wide range of marine tasks.",
+      "options": [
+        "which",
+        "that",
+        "whose",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "定语从句表所属(船的母港)→ whose。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "This is the very database ____ the researchers store the photos and locations of every group of whales.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 database 视作抽象地点、从句完整 → where(= in which)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "It still remains to be seen ____ the tiny capsule can really work under such crushing pressure.",
+      "options": [
+        "whether",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "主语从句表'是否'、句意不确定 → whether。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Hundreds of years ago, merchants set sail across the sea ____ they could trade silk and tea for precious spices.",
+      "options": [
+        "as though",
+        "so that",
+        "even if",
+        "in case"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的(为了换香料)→ so that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The Deepwater Horizon disaster, ____ spilled millions of gallons of oil, killed countless sea birds and fish.",
+      "options": [
+        "what",
+        "where",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性定语从句指物、缺主语 → which。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "1405 was the year ____ Zheng He first led his huge fleet out onto the open sea.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 year 表时间、从句完整 → when。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "No one yet knows ____ lies in the deepest parts of the ocean, because we have explored less than five percent of it.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语从句缺主语、表'什么'→ what。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "The sea is home to life, not a possession ____ human beings may use up however they like.",
+      "options": [
+        "what",
+        "that",
+        "when",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 possession、从句缺宾语(use up 的宾语)→ that(或 which)。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ technology improves, we may have more options for keeping a balance between protection and exploitation.",
+      "options": [
+        "Although",
+        "Unless",
+        "As",
+        "Whether"
+      ],
+      "answer_index": 2,
+      "explanation": "表'随着'(技术进步,选择变多)→ As。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "Opponents may be worried, but sea exploration matters so much ____ it can help us face climate change.",
+      "options": [
+        "which",
+        "what",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "so + adj./adv. + that 结果状语从句 → that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ after a mythical dragon, the manned submersible Jiaolong carried Chinese scientists into the deep sea.",
+      "options": [
+        "Named",
+        "Naming",
+        "To name",
+        "Name"
+      ],
+      "answer_index": 0,
+      "explanation": "submersible 与 name 是被动关系(被命名)、作状语 → 过去分词 Named。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The research ship Kexue is designed ____ a wide range of difficult tasks far out at sea.",
+      "options": [
+        "conducting",
+        "to conduct",
+        "conducted",
+        "conduct"
+      ],
+      "answer_index": 1,
+      "explanation": "be designed to do 表用途/目的 → 不定式 to conduct。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "New technology makes it possible ____ the deepest spots of the ocean that no diver could ever reach.",
+      "options": [
+        "explored",
+        "exploring",
+        "to explore",
+        "explore"
+      ],
+      "answer_index": 2,
+      "explanation": "make it possible to do,it 为形式宾语 → to explore。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The ship struggled on through the storm, ____ wildly with each huge wave that hit its side.",
+      "options": [
+        "roll",
+        "rolled",
+        "to roll",
+        "rolling"
+      ],
+      "answer_index": 3,
+      "explanation": "ship 与 roll 主动、表伴随 → 现在分词 rolling 作状语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Plastic pollution, ____ in our tap water in recent years, has become a serious danger to marine life.",
+      "options": [
+        "found",
+        "finding",
+        "to find",
+        "find"
+      ],
+      "answer_index": 0,
+      "explanation": "pollution 与 find 被动 → 过去分词 found 作后置定语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Young people came to the camp ____ more about whales and other amazing sea creatures.",
+      "options": [
+        "learn",
+        "to learn",
+        "learned",
+        "learning"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的状语 → 不定式 to learn。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The deep ocean is too dark and too cold ____ without special equipment and powerful lights.",
+      "options": [
+        "exploring",
+        "explored",
+        "to explore",
+        "explore"
+      ],
+      "answer_index": 2,
+      "explanation": "too…to do 结构 → to explore。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Standing on the deck, the campers watched the whales ____ slowly out of the cold blue water.",
+      "options": [
+        "leaped",
+        "to leap",
+        "leap to",
+        "leaping"
+      ],
+      "answer_index": 3,
+      "explanation": "watch sb doing 表正在进行 → 现在分词 leaping 作宾补。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The Jiaolong submersible is said ____ able to reach a depth of seven kilometres below the surface.",
+      "options": [
+        "to be",
+        "being",
+        "be",
+        "been"
+      ],
+      "answer_index": 0,
+      "explanation": "be said to do/be 表传闻 → to be。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "China has invested billions in systems and services along these routes, ____ the whole area develop for future trade.",
+      "options": [
+        "help",
+        "helping",
+        "helped",
+        "to helping"
+      ],
+      "answer_index": 1,
+      "explanation": "与前句主动、表结果伴随 → 现在分词 helping。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the most advanced research vessel in the country, Kexue draws the attention of scientists worldwide.",
+      "options": [
+        "Regard as",
+        "Regarding",
+        "Regarded as",
+        "To regard"
+      ],
+      "answer_index": 2,
+      "explanation": "vessel 与 regard 被动(被视为)→ 过去分词 Regarded as 作状语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "There is an urgent need ____ the Arctic in order to understand climate change and its effects.",
+      "options": [
+        "studying",
+        "studied",
+        "study",
+        "to study"
+      ],
+      "answer_index": 3,
+      "explanation": "need 后接不定式作定语 → to study。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "We saw a database ____ to store the photos and locations of every whale the team had followed.",
+      "options": [
+        "built",
+        "build",
+        "building",
+        "to building"
+      ],
+      "answer_index": 0,
+      "explanation": "database 与 build 被动 → 过去分词 built 作后置定语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The young sailor read books all day on the boat, ____ his family every evening using a small laptop.",
+      "options": [
+        "email",
+        "emailing",
+        "emailed",
+        "to email"
+      ],
+      "answer_index": 1,
+      "explanation": "与主句主动、表伴随 → 现在分词 emailing。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Accessing the deep ocean may also help scientists ____ events such as earthquakes long before they happen.",
+      "options": [
+        "predicting",
+        "predicted",
+        "predict",
+        "to predicting"
+      ],
+      "answer_index": 2,
+      "explanation": "help (sb) (to) do,空后接原形 → predict。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ for two years, the old sea routes were finally reopened to merchant ships from many nations.",
+      "options": [
+        "Closing",
+        "To close",
+        "Close",
+        "Closed"
+      ],
+      "answer_index": 3,
+      "explanation": "routes 与 close 被动、表完成 → 过去分词 Closed 作状语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The camp gives students a real chance ____ whale songs and watch these huge animals at close range.",
+      "options": [
+        "to hear",
+        "hearing",
+        "heard",
+        "hear"
+      ],
+      "answer_index": 0,
+      "explanation": "chance to do 不定式作定语 → to hear。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "With the latest technology in hand, China keeps reaching out across the sea, ____ stronger bonds with the world.",
+      "options": [
+        "build",
+        "building",
+        "built",
+        "to building"
+      ],
+      "answer_index": 1,
+      "explanation": "与主句主动、表伴随结果 → 现在分词 building。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "It is not rare ____ the most unique flowers and plants dancing in the fast-moving water of the deep.",
+      "options": [
+        "seeing",
+        "seen",
+        "to see",
+        "see"
+      ],
+      "answer_index": 2,
+      "explanation": "It is + adj. + to do,it 为形式主语 → to see。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "The mother of the Sea King, ____ proud to be born into the royal family, takes care of his six daughters.",
+      "options": [
+        "feels",
+        "felt",
+        "to feel",
+        "feeling"
+      ],
+      "answer_index": 3,
+      "explanation": "与逻辑主语主动、表状态 → 现在分词 feeling 作状语。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Sea exploration not only helps us find new medicines ____ also leads us to new sources of food and energy.",
+      "options": [
+        "but",
+        "and",
+        "or",
+        "so"
+      ],
+      "answer_index": 0,
+      "explanation": "not only … but also 固定并列结构 → but。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was the writing of the ships' logs ____ allowed later sailors to follow the very same routes safely.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "who"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句 It was … that 强调主语 the writing → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Only after the storm finally passed ____ the exhausted sailor able to see the distant shore.",
+      "options": [
+        "be",
+        "is",
+        "was",
+        "being"
+      ],
+      "answer_index": 2,
+      "explanation": "Only + 状语置句首引起部分倒装,主句用 was the sailor able → was。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We can explore the sea to learn from it, ____ we can exploit it carelessly until nothing is left.",
+      "options": [
+        "and",
+        "but",
+        "for",
+        "or"
+      ],
+      "answer_index": 3,
+      "explanation": "两种相反选择(学习它 / 或耗尽它)→ or。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The ocean is huge, ____ it is far more sensitive than most people are willing to believe.",
+      "options": [
+        "yet",
+        "or",
+        "so",
+        "nor"
+      ],
+      "answer_index": 0,
+      "explanation": "前后转折(很大,然而脆弱)→ yet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is climate change ____ this melting Arctic ice is warning us about so clearly and so urgently.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句 It is … that 强调宾语 climate change → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Not until we protect the deep sea today ____ future generations forgive us for our choices.",
+      "options": [
+        "would",
+        "do",
+        "will",
+        "are"
+      ],
+      "answer_index": 2,
+      "explanation": "Not until 置句首引起部分倒装,主句将来时 → will。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Mining damages the ocean floor, and ____ does overfishing harm the balance of marine life.",
+      "options": [
+        "neither",
+        "nor",
+        "either",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "前句肯定、后句'也'(同样有害)→ so + 倒装。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Scientists must study the deep sea, ____ they cannot manage the planet's resources wisely.",
+      "options": [
+        "or",
+        "and",
+        "so",
+        "for"
+      ],
+      "answer_index": 0,
+      "explanation": "'否则'(不研究就无法管好资源)→ or。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was in 2010 ____ the Deepwater Horizon spilled over two hundred million gallons of oil into the sea.",
+      "options": [
+        "when",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句 It was … that 强调时间状语 in 2010 → that(非 when)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The sailor did not give up his dream, ____ did the heavy storms ever break his quiet courage.",
+      "options": [
+        "so",
+        "either",
+        "nor",
+        "and"
+      ],
+      "answer_index": 2,
+      "explanation": "前句否定、后句'也不'→ nor + 倒装。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Sea exploration brings real risks, ____ these should be carefully balanced against our economic needs.",
+      "options": [
+        "or",
+        "nor",
+        "for",
+        "but"
+      ],
+      "answer_index": 3,
+      "explanation": "前后转折(有风险,但应权衡)→ but。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Rarely ____ the public realise just how little of the vast deep ocean we have actually explored.",
+      "options": [
+        "does",
+        "do",
+        "is",
+        "has"
+      ],
+      "answer_index": 0,
+      "explanation": "否定副词 Rarely 置句首引起部分倒装,主语 the public 视作单数 → does。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is the writing system of ships' charts ____ has guided fleets safely across the open sea for centuries.",
+      "options": [
+        "who",
+        "that",
+        "which",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "强调句 It is … that 强调主语 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "The deep sea may hide not only valuable minerals ____ also new sources of clean energy for the future.",
+      "options": [
+        "and",
+        "or",
+        "but",
+        "so"
+      ],
+      "answer_index": 2,
+      "explanation": "not only … but also → but。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Whales are hunted for their meat, ____ are dolphins killed for so-called scientific research.",
+      "options": [
+        "either",
+        "and so",
+        "as",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "前句肯定、'海豚也(被捕)'→ so + 倒装(so are dolphins killed)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Only then ____ the campers fully understand why protecting sea creatures truly matters.",
+      "options": [
+        "did",
+        "do",
+        "had",
+        "were"
+      ],
+      "answer_index": 0,
+      "explanation": "Only then 置句首引起部分倒装,过去语境 → did。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "We may imagine there is nothing under the sea but sand, ____ the deep is in fact full of life.",
+      "options": [
+        "and",
+        "yet",
+        "so",
+        "or"
+      ],
+      "answer_index": 1,
+      "explanation": "前后转折(以为只有沙,然而满是生命)→ yet。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It was courage and passion ____ made the young sailor's dream of crossing the ocean come true.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "what"
+      ],
+      "answer_index": 2,
+      "explanation": "强调句 It was … that 强调主语 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Sailing alone around the world is a mixture of danger and boredom, ____ few people are brave enough to try it.",
+      "options": [
+        "or",
+        "nor",
+        "yet",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "因果(因此很少人敢尝试)→ so。"
+    }
+  ]
+}

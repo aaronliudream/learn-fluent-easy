@@ -1,0 +1,710 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "topic": "Art",
+  "source": "人教版2019选择性必修三 Unit 1 同主题完形(我的第一次画展/学水墨画/参观博物馆的一天/收藏家的建议/做一名小雕塑家/谈一幅名画)。用词限本单元/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Art Show",
+      "text": "Last month our class held a small art (1)____ in the school hall. For weeks, my biggest (2)____ had been how to begin my own painting. My teacher told me that the best way to start was simply (3)____ what I loved. So I chose to paint the old (4)____ bridge over the river near my home. At first my lines were shaky, and I almost wanted to give (5)____. But step by step, I learned to (6)____ the soft light on the water. When visitors looked at my work, some of them gently (7)____ it, and their honest words helped me a lot. By the end of the day, I felt very (8)____ of what I had made. That show taught me that art is not about being perfect; it is about (9)____ how you see the world. Now my plan is to keep (10)____ every single day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "exhibition",
+            "machine",
+            "market",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "art exhibition 艺术展。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "problem",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "my biggest problem 最大的难题。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "to sell",
+            "to throw",
+            "to paint",
+            "to lose"
+          ],
+          "answer_index": 2,
+          "explanation": "to paint what I loved 画我喜爱的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "broken",
+            "silent",
+            "arched"
+          ],
+          "answer_index": 3,
+          "explanation": "arched bridge 拱桥。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "up",
+            "in",
+            "off",
+            "out"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "convey",
+            "hide",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "convey the soft light 表现柔和的光。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "ate",
+            "sold",
+            "criticised",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "criticised it 评论它。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "angry",
+            "bored",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "proud of 为……自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sharing",
+            "selling",
+            "hiding",
+            "wasting"
+          ],
+          "answer_index": 0,
+          "explanation": "sharing how you see 分享你的看法。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleeping",
+            "painting",
+            "shopping",
+            "running"
+          ],
+          "answer_index": 1,
+          "explanation": "keep painting 坚持画画。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Learning Ink Wash Painting",
+      "text": "My grandfather is the person who first showed me Chinese (1)____ wash painting. He told me it is an old art (2)____ done with water and black ink. At first my brush felt strange in my (3)____, and every line came out wrong. Grandpa said that the secret was to (4)____ how wet or dry the brush should be. He also reminded me to leave part of the paper (5)____, because empty space is part of the picture. Little by little, I learned to (6)____ a mountain with only a few simple lines. Now this gentle art is the (7)____ I enjoy most after school. It makes me feel calm and (8)____ me to a long tradition. Whenever I pick up my brush, I feel (9)____ to be part of such an ancient art. My grandfather smiles and says that one day I may even paint better (10)____ him.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "milk",
+            "oil",
+            "ink",
+            "soup"
+          ],
+          "answer_index": 2,
+          "explanation": "ink wash painting 水墨画。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "shop",
+            "noise",
+            "form"
+          ],
+          "answer_index": 3,
+          "explanation": "art form 艺术形式。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hand",
+            "box",
+            "car",
+            "bag"
+          ],
+          "answer_index": 0,
+          "explanation": "in my hand 在手里。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "control",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "control how wet 控制干湿。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wet",
+            "loud",
+            "empty",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "leave part empty 留白。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eat",
+            "buy",
+            "drop",
+            "suggest"
+          ],
+          "answer_index": 3,
+          "explanation": "suggest a mountain 暗示出一座山。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hobby",
+            "price",
+            "city",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the hobby I enjoy 爱好。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "connects",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 1,
+          "explanation": "connects me to 把我和……相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "afraid",
+            "sorry",
+            "proud",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "proud to be part 自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "under",
+            "after",
+            "behind",
+            "than"
+          ],
+          "answer_index": 3,
+          "explanation": "better than 比……更好。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Day at the Museum",
+      "text": "On Saturday my friend and I spent a whole day at the city (1)____ of fine art. There was so much to see that our first (2)____ was simply where to start. We decided to (3)____ with the ancient room. Inside, beautiful ceramic (4)____ stood quietly behind the glass, each one hundreds of years old. A guide explained that some of them were once owned by an (5)____. In the next room, we found a snowy mountain painting that looked as (6)____ as the day it was made. Later we saw many stone (7)____ of the Tang Dynasty, most of them with a peaceful smile on their faces. I was (8)____ by how skilful the old artists were. By the time the museum (9)____, my head was full of pictures and stories. On the way home, I told my friend that the visit had (10)____ us back through thousands of years of art.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "museum",
+            "garden",
+            "factory",
+            "station"
+          ],
+          "answer_index": 0,
+          "explanation": "museum of fine art 美术博物馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "question",
+            "song",
+            "meal"
+          ],
+          "answer_index": 1,
+          "explanation": "first question 第一个问题。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "cry",
+            "begin",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "begin with 从……开始。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "coins",
+            "songs",
+            "trains",
+            "vases"
+          ],
+          "answer_index": 3,
+          "explanation": "ceramic vases 陶瓷花瓶。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "emperor",
+            "error",
+            "engine",
+            "evening"
+          ],
+          "answer_index": 0,
+          "explanation": "owned by an emperor 皇帝拥有。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "fresh",
+            "empty",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "as fresh as 像……一样新。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "prices",
+            "noises",
+            "sculptures",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "stone sculptures 石雕。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "angry",
+            "afraid",
+            "amazed"
+          ],
+          "answer_index": 3,
+          "explanation": "amazed by 被……惊到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "closed",
+            "ate",
+            "sold",
+            "ran"
+          ],
+          "answer_index": 0,
+          "explanation": "the museum closed 闭馆。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "thrown",
+            "carried",
+            "broken",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "carried us back 带我们回到。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Advice from an Art Collector",
+      "text": "My uncle has collected paintings for many years, and he often gives me useful (1)____. The first rule, he says, is to (2)____ only what you truly love, not what others think is popular. No one can (3)____ that a young artist will become famous, so you should never buy a work just for the (4)____ you hope to make. He also tells me to look at a lot of (5)____ art by living painters, because some of it is also (6)____ of attention. Before buying, he always asks himself one simple (7)____: does this picture move me? If the answer is no, he walks (8)____. Over the years, his small collection has slowly (9)____ a fine reputation. Yet for him, the real (10)____ of collecting art is not money, but the joy each painting brings him every single day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "noise",
+            "price",
+            "advice",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "useful advice 有用的建议。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "hide",
+            "purchase"
+          ],
+          "answer_index": 3,
+          "explanation": "purchase only what you love 只买所爱。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "guarantee",
+            "break",
+            "leave",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "guarantee that 保证。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "money",
+            "song",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "the money you make 你赚的钱。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "broken",
+            "silent",
+            "contemporary",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "contemporary art 当代艺术。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "sorry",
+            "tired",
+            "worthy"
+          ],
+          "answer_index": 3,
+          "explanation": "worthy of attention 值得关注。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "question",
+            "price",
+            "song",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "one simple question 一个简单问题。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "up",
+            "away",
+            "in",
+            "off"
+          ],
+          "answer_index": 1,
+          "explanation": "walk away 走开。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "earned",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "earned a reputation 赢得名声。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "value"
+          ],
+          "answer_index": 3,
+          "explanation": "the real value 真正的价值。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Becoming a Young Sculptor",
+      "text": "Ever since I was small, my dream has been to become a (1)____ one day. I love to take a piece of soft clay and slowly (2)____ it into the shape of an animal. Unlike a flat painting, a sculpture exists in three (3)____, so you can walk around it and see it from every (4)____. My teacher says the hardest part is learning when to (5)____ adding clay and leave the work alone. At first I was not (6)____ with the results, and many of my early pieces broke. But I refused to give up, because every mistake (7)____ me something new. Little by little, my small clay figures began to look more (8)____, almost as if they could move. Last week, one of them won a prize at the school (9)____. That moment gave me the (10)____ to keep working towards my dream of becoming a real artist.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sculptor",
+            "driver",
+            "doctor",
+            "farmer"
+          ],
+          "answer_index": 0,
+          "explanation": "become a sculptor 成为雕塑家。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "shape",
+            "eat",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "shape it 把它塑形。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "minutes",
+            "metres",
+            "dimensions",
+            "colours"
+          ],
+          "answer_index": 2,
+          "explanation": "three dimensions 三维。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "song",
+            "noise",
+            "side"
+          ],
+          "answer_index": 3,
+          "explanation": "from every side 从各个角度。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "stop",
+            "begin",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "when to stop 何时停下。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "happy",
+            "sorry",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "be happy with 对……满意(打散后位置变)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "lost",
+            "taught",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "taught me something 教会我。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "silent",
+            "cheap",
+            "realistic"
+          ],
+          "answer_index": 3,
+          "explanation": "look realistic 看起来逼真。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "exhibition",
+            "market",
+            "station",
+            "factory"
+          ],
+          "answer_index": 0,
+          "explanation": "school exhibition 学校展览。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "courage",
+            "price",
+            "error"
+          ],
+          "answer_index": 1,
+          "explanation": "gave me the courage 给了我勇气。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Talking about a Famous Painting",
+      "text": "In class today we talked about one of the most famous Chinese (1)____ in the world. It shows the busy life along a river during an old (2)____. The teacher asked us to look (3)____ at the tiny figures: boats, shops, bridges, and crowds of ordinary people. She said the great (4)____ of the work is that it lets us see how people really lived long ago. One student asked how the artist could paint so many people so (5)____. The teacher explained that he must have watched the streets for years and remembered every (6)____. Although the painting is hundreds of years (7)____, the people in it still seem alive. By looking closely, we can almost (8)____ the noise of the market. The teacher told us that this is why the work is (9)____ as a treasure. For me, it was a chance to (10)____ how powerful a single painting can be.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "machines",
+            "songs",
+            "paintings",
+            "markets"
+          ],
+          "answer_index": 2,
+          "explanation": "Chinese paintings 中国画。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "engine",
+            "festival"
+          ],
+          "answer_index": 3,
+          "explanation": "an old festival 古老的节日。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "closely",
+            "away",
+            "down",
+            "loudly"
+          ],
+          "answer_index": 0,
+          "explanation": "look closely 仔细看。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "value",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "the great value 巨大的价值。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loudly",
+            "sadly",
+            "precisely",
+            "quietly"
+          ],
+          "answer_index": 2,
+          "explanation": "paint precisely 精确地画。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "song",
+            "machine",
+            "detail"
+          ],
+          "answer_index": 3,
+          "explanation": "every detail 每个细节(打散后位置变)。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "old",
+            "wide",
+            "cheap",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "hundreds of years old 数百年之久。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "hear",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "almost hear 几乎能听见。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "regarded",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "regarded as a treasure 被视为珍宝。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "waste",
+            "hide",
+            "realise"
+          ],
+          "answer_index": 3,
+          "explanation": "realise how powerful 意识到多有力量。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "topic": "Write a News Report about a Sea Exploration Achievement(写一篇海洋探索成就的新闻报道)",
+  "title_en": "A Breakthrough Beneath the Waves",
+  "genre": "新闻报道 / 议论(report a sea-exploration achievement + why we explore the ocean)",
+  "source": "人教版2019选择性必修四 Unit 3 Reading for Writing:write a news report about a sea exploration achievement, and briefly argue why exploring the ocean matters。",
+  "prompt_cn": "假设你是校英文报记者李华。某科研团队的载人潜水器近日成功完成一次深海下潜。请用英语写一篇约120词的新闻报道,内容包括:① 报道这一海洋探索成就(何时/何地/谁/取得了什么);② 简述这次下潜的意义(发现新物种、采集样本等);③ 简要说明我们为什么要探索海洋。注意:导语点明核心事实,行文用一般过去时为主、长句拆分清楚。",
+  "prompt_en": "Suppose you are Li Hua, a reporter for your school's English newspaper. A research team's manned submersible has just completed a successful deep-sea dive. Write a news report (about 120 words) including: 1) the achievement (when / where / who / what was done); 2) why the dive matters (new species, samples, etc.); 3) a brief reason why exploring the ocean is important.",
+  "points": [
+    "导语报道成就(A research team announced that … / … successfully reached …)",
+    "细节:下潜深度、载人潜水器、采集了什么(reached a depth of … / collected … / logged new species)",
+    "意义与背景(The dive extends our knowledge of marine life …)",
+    "为何探海(We must explore the oceans, which cover most of our planet, to … )"
+  ],
+  "word_count": "120 词左右",
+  "model_essay": "A Breakthrough Beneath the Waves\n\nLast week, a Chinese research team announced that its manned submersible, named after a dragon, had successfully reached a depth of about seven kilometres in the Pacific Ocean. Three scientists spent hours in the small capsule, using powerful lights and cameras to study the dark sea floor that human eyes had never seen.\n\nDuring the dive, the team logged several new sea creatures and collected rare minerals, achievements that greatly extend our knowledge of marine life. \"Every voyage adds another page to our book of knowledge about the sea,\" one scientist said.\n\nWhy does such work matter? Because the ocean covers most of our planet, exploring it may bring new medicines and help us protect a fragile world for future generations.",
+  "model_translation": "《破浪深潜》\n\n上周,一支中国科研团队宣布,其以神龙命名的载人潜水器在太平洋成功下潜到约七千米深处。三名科学家在狭小的舱内工作了数小时,借助强光与摄像机研究人类从未见过的黑暗海底。\n\n下潜过程中,团队记录了数种新的海洋生物,并采集了稀有矿物,这些成就极大地拓展了我们对海洋生命的认识。一位科学家说:“每一次航行都为我们的海洋知识之书增添新的一页。”\n\n这样的工作为何重要?因为海洋覆盖了地球的大部分,探索它也许会带来新药,并帮助我们为子孙后代保护这个脆弱的世界。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:报道成就(时间/地点/人物/事件)/ 下潜意义 / 为何探海" },
+      { "dimension": "结构", "max": 4, "criteria": "新闻体例清晰(标题+导语+细节+背景)、句句围绕核心、长句拆分得当、连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "时态以一般过去时为主、定语从句/非谓语等长句结构运用准确、词汇地道、语法基本无误" }
+    ],
+    "required_structure": [
+      "导语 A research team announced that … had successfully reached …",
+      "细节 During the dive, the team logged … and collected …",
+      "引语 \"…,\" one scientist said.",
+      "为何探海 Because the ocean covers most of our planet, exploring it may …"
+    ],
+    "key_expressions": [
+      "a manned submersible, named after a dragon, reached a depth of about seven kilometres",
+      "the team logged several new sea creatures and collected rare minerals",
+      "achievements that greatly extend our knowledge of marine life",
+      "Because the ocean covers most of our planet, exploring it may bring new medicines."
+    ],
+    "useful_words": ["submersible", "manned", "voyage", "marine", "explore", "extend", "log", "resource", "fragile", "achievement"]
+  },
+  "high_sentences": [
+    "A Chinese research team announced that its manned submersible had successfully reached a depth of about seven kilometres.",
+    "Using powerful lights and cameras, the scientists studied the dark sea floor that human eyes had never seen.",
+    "During the dive, the team logged several new sea creatures and collected rare minerals.",
+    "Because the ocean covers most of our planet, exploring it may bring new medicines and help us protect a fragile world."
+  ],
+  "error_pairs": [
+    { "wrong": "The submersible reached at a depth of seven kilometres.", "correct": "The submersible reached a depth of seven kilometres.", "note": "reach 是及物动词,后面直接跟宾语,不加 at。" },
+    { "wrong": "The team logged new creatures which extend our knowledge.", "correct": "The team logged new creatures, which extended our knowledge.", "note": "非限制性定语从句前加逗号;且与主句时态一致用过去式 extended。" },
+    { "wrong": "Named after a dragon, the team built the submersible.", "correct": "Named after a dragon, the submersible carried the team into the deep.", "note": "过去分词作状语的逻辑主语须与主句主语一致(被命名的是潜水器,不是团队)。" }
+  ],
+  "paragraph_template": "【海洋探索新闻报道结构】\n标题:A Breakthrough Beneath the Waves\n第1段 导语:A research team announced that … had successfully reached … (时间/地点/谁/做了什么)\n第2段 细节+意义:During the dive, the team logged … and collected …, which extended … 加一句引语 \"…,\" one scientist said.\n第3段 为何探海:Because the ocean covers most of our planet, exploring it may … and help us protect …"
+}

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The crew had to abandon the ship before the ice crushed it.", "opts": ["船员不得不在冰压碎船之前弃船。", "船员把船开回了港口。", "船员修好了破损的船。", "船员在船上睡着了。"], "answer": 0 },
+    { "audio": "Shackleton crossed the mountains to find help at the whaling station.", "opts": ["沙克尔顿去山里打猎。", "沙克尔顿翻越群山去捕鲸站求助。", "沙克尔顿留在海滩上等待。", "沙克尔顿放弃了救援。"], "answer": 1 },
+    { "audio": "Courage is not the absence of fear but acting well in spite of it.", "opts": ["勇气就是毫无恐惧。", "勇气是逃避危险。", "勇气不是没有恐惧,而是不顾恐惧仍做好事。", "勇气只属于英雄。"], "answer": 2 },
+    { "audio": "When a problem feels too big, break it into small steps.", "opts": ["问题太大就放弃它。", "问题太大就交给别人。", "问题太大就等明年再说。", "当问题显得太大时,把它拆成小步骤。"], "answer": 3 },
+    { "audio": "I have been training every day to build up my endurance.", "opts": ["我每天训练来增强耐力。", "我从不锻炼身体。", "我昨天才开始训练。", "我已经停止训练了。"], "answer": 0 },
+    { "audio": "If you are going through a hard time, remember you are not alone.", "opts": ["艰难时你应该独自承受。", "如果你正经历艰难,请记住你并不孤单。", "艰难时没人能帮你。", "艰难的日子永远不会结束。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "He showed great _____ by refusing to give up in the freezing Antarctic.", "opts": ["perseverance", "furniture", "advertising", "recreation"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The captain gave the order to _____ ship before it sank.", "opts": ["advertise", "abandon", "envy", "assign"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "They sailed for days on _____ seas before they reached the island.", "opts": ["cosy", "decent", "rough", "loyal"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Their _____ concern for others kept the whole group together.", "opts": ["selfish", "cruel", "miserable", "genuine"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "I _____ for this climb for months, and I finally feel ready.", "opts": ["have been training", "trained", "am training", "had trained"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "You look exhausted—_____ you been working out in the cold?", "opts": ["did", "have", "are", "were"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "It _____ all morning, so the whole camp is wet through.", "opts": ["rained", "is raining", "has been raining", "rains"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Quiet, please—the navigator _____ the map at this very moment.", "opts": ["has read", "has been reading", "read", "is reading"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "Listen and choose the correct meaning.", "opts": ["他们靠燃烧动物脂肪来生火。", "他们在岛上找到了许多树木。", "他们乘船回了家。", "他们放弃了求生。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "They burned animal fat to make fire on the island." },
+    { "q": "Listen and choose the correct meaning.", "opts": ["最大的山在别人心里。", "我们攀登的最大的山,往往在自己心里。", "登山从来都很容易。", "盲人不能登山。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "The biggest mountains we climb are often the ones inside our minds." }
+  ],
+  "reading": {
+    "passage": "When the ship Endurance was crushed by ice, Shackleton and his crew were trapped in the Antarctic for months. By staying calm, taking one step at a time, and helping one another, every single man finally came home alive.",
+    "passageCn": "当'坚忍号'被冰压碎时,沙克尔顿和他的船员被困在南极好几个月。靠着保持冷静、一步一步来、互相帮助,最终每一个人都活着回了家。",
+    "questions": [
+      { "q": "What happened to the ship Endurance?", "opts": ["It was crushed by ice.", "It reached the South Pole.", "It sailed safely home.", "It was never built."], "answer": 0 },
+      { "q": "How did all the men finally survive?", "opts": ["By giving up quickly.", "By staying calm and helping one another.", "By travelling alone.", "By waiting and doing nothing."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a few sentences to encourage a friend who is going through a hard time. Mention one way to overcome adversity.",
+    "promptCn": "写几句话鼓励一位正经历困难的朋友,并提到一种克服逆境的方法。",
+    "sampleWords": ["adversity", "courage", "perseverance", "give up", "lose heart", "step by step", "support", "survive", "get through", "stay strong"]
+  },
+  "dialogues": [
+    {
+      "title": "Choosing the Rescue Team",
+      "lines": [
+        { "role": "A", "text": "We must choose two more sailors for the rescue boat.", "cn": "我们得为救援船再挑两名水手。" },
+        { "role": "B", "text": "I think we need Worsley. He is an excellent navigator.", "cn": "我觉得需要沃斯利,他是出色的领航员。" },
+        { "role": "A", "text": "And Crean, for his strength to row for days.", "cn": "还有克林,要靠他的力气连日划船。" },
+        { "role": "B", "text": "Agreed. Let's tell the captain and set off soon.", "cn": "同意。我们去告诉船长,尽快出发。" }
+      ]
+    },
+    {
+      "title": "Getting Ready for the Expedition",
+      "lines": [
+        { "role": "A", "text": "The expedition leaves next month. Have you been preparing?", "cn": "远征下个月出发,你一直在准备吗?" },
+        { "role": "B", "text": "Yes, I've been training every day to build up my endurance.", "cn": "是的,我每天训练来增强耐力。" },
+        { "role": "A", "text": "Good. The cold and long marches will test us all.", "cn": "很好。严寒和长途行军会考验我们所有人。" },
+        { "role": "B", "text": "With good preparation and courage, we'll be fine.", "cn": "有充分准备和勇气,我们会没事的。" }
+      ]
+    }
+  ]
+}

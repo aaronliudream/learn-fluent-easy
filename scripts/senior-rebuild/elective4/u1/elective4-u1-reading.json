@@ -1,0 +1,346 @@
+{
+  "volume": "elective4",
+  "unit": "U1",
+  "topic": "Science Fiction",
+  "source": "人教版2019选择性必修四 Unit 1 同主题阅读(时间机器/机器人三定律/阿西莫夫/三体/会爱上机器人吗/机器人的利与弊)。词限本单元/初高中常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The First Journey Through Time",
+      "topic_cn": "记叙·时间机器的首次旅行",
+      "body": "At ten o'clock the inventor gave his machine a last check and sat down in the leather seat. He pushed the starting lever on the main panel forwards an inch, then pulled it back. The laboratory looked exactly as before, and for a moment he thought nothing had happened. Then he saw the clock. A minute earlier it had been just past ten; now it was nearly half past three. He gripped the lever and pushed it forwards again. The room went hazy around him. His niece came in to fetch something but did not seem to see him, moving like a rocket. As his pace grew faster, the walls fell away and he was left in the open air. Trees grew like puffs of smoke and died in moments, and huge buildings rose up and disappeared like in a dream. He calculated that he was being pushed through time at hundreds of years a minute. He had a strong urge to look at the strange things flashing before his eyes.",
+      "vocab_notes": [
+        {
+          "word": "lever",
+          "cn": "操纵杆"
+        },
+        {
+          "word": "hazy",
+          "cn": "朦胧的"
+        },
+        {
+          "word": "pace",
+          "cn": "速度"
+        },
+        {
+          "word": "puff",
+          "cn": "一缕"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the inventor first realise he had travelled through time?",
+          "options": [
+            "He noticed the clock had jumped forward by hours.",
+            "His niece told him the date had changed.",
+            "The laboratory had completely disappeared.",
+            "A loud explosion woke him up."
+          ],
+          "answer_index": 0,
+          "explanation": "原文写他看见钟从'刚过十点'跳到'近三点半'才意识到 → 转述为 clock 向前跳了几个小时。"
+        },
+        {
+          "stem": "What did the inventor see while moving quickly through time?",
+          "options": [
+            "Nothing at all, only darkness.",
+            "Trees and buildings appearing and vanishing fast.",
+            "Other time travellers waving at him.",
+            "The same clock frozen in place."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 trees grew like puffs of smoke… buildings rose up and disappeared 的概括。"
+        },
+        {
+          "stem": "How fast did the inventor think he was travelling in time?",
+          "options": [
+            "Hundreds of years every minute.",
+            "A few seconds each minute.",
+            "One day per hour.",
+            "He could not guess at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'pushed through time at hundreds of years a minute' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Asimov's Three Laws of Robotics",
+      "topic_cn": "说明·机器人三定律",
+      "body": "Many science fiction stories warn that robots could one day become superior to people and take over. To answer this fear, the writer Isaac Asimov created three famous rules, now known as the Three Laws of Robotics. The first law says that a robot may not injure a human being, or, through inaction, allow a human being to come to harm. The second law says that a robot must obey the orders given to it by humans, except where such orders would conflict with the first law. The third law says that a robot must protect its own existence, as long as this protection does not conflict with the first or second law. Together these laws place human safety above everything else. Although they first appeared only in stories, many real engineers today still discuss them when they design intelligent machines. The laws remind us that great power must always be matched by clear rules, so that helpful machines never become dangerous ones.",
+      "vocab_notes": [
+        {
+          "word": "inaction",
+          "cn": "不作为"
+        },
+        {
+          "word": "conflict with",
+          "cn": "与……抵触"
+        },
+        {
+          "word": "superior",
+          "cn": "更强的"
+        },
+        {
+          "word": "take over",
+          "cn": "取而代之"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Asimov create the Three Laws of Robotics?",
+          "options": [
+            "To respond to the worry that robots might dominate humans.",
+            "To make robots move faster.",
+            "To help robots earn money.",
+            "To stop people writing science fiction."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'answer this fear… become superior… take over' 的转述,选'回应机器人统治人类的担忧'。"
+        },
+        {
+          "stem": "According to the first law, what must a robot avoid?",
+          "options": [
+            "Speaking to strangers.",
+            "Letting a person be harmed, even by doing nothing.",
+            "Using too much electricity.",
+            "Obeying its owner."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'may not injure… or through inaction allow a human to come to harm' 的转述。"
+        },
+        {
+          "stem": "What do the three laws have in common?",
+          "options": [
+            "They make robots stronger than people.",
+            "They allow robots to ignore humans.",
+            "They all put the safety of humans first.",
+            "They were never used by real engineers."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'place human safety above everything else' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Man Who Imagined Robots",
+      "topic_cn": "人物·阿西莫夫",
+      "body": "Isaac Asimov was one of the most important science fiction writers of the twentieth century. He was born in Russia but grew up in the United States, where he worked in his family's small sweet shop and read every science magazine he could find. As a young man he trained as a scientist, yet his true love was writing. Over his life he produced hundreds of books, many of them about robots and the future of humans. Asimov did not see robots as monsters. Instead, he imagined them as helpful machines that could be guided by clear rules. His robot stories made millions of readers think carefully about how people and intelligent machines might live together. Today, when scientists build real robots that can see, talk and learn, they often return to the questions he first raised. Asimov died in 1992, but his ideas are still very much alive, shaping the way the modern world thinks about artificial intelligence.",
+      "vocab_notes": [
+        {
+          "word": "intelligent",
+          "cn": "智能的"
+        },
+        {
+          "word": "produce",
+          "cn": "创作"
+        },
+        {
+          "word": "guide",
+          "cn": "引导"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Asimov enjoy doing when he was young?",
+          "options": [
+            "Reading science magazines whenever he could.",
+            "Building real robots in a factory.",
+            "Travelling around the world.",
+            "Painting pictures of the future."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'read every science magazine he could find' 的转述。"
+        },
+        {
+          "stem": "How did Asimov view robots in his stories?",
+          "options": [
+            "As frightening monsters.",
+            "As useful machines that could follow clear rules.",
+            "As creatures that should rule humans.",
+            "As a waste of time."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'imagined them as helpful machines that could be guided by clear rules' 的转述。"
+        },
+        {
+          "stem": "Why are Asimov's ideas still important today?",
+          "options": [
+            "Because he sold the most sweets.",
+            "Because nobody else wrote about space.",
+            "Because real scientists still face the questions he raised.",
+            "Because he was born in Russia."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'scientists… often return to the questions he first raised' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Mirror of Our Future",
+      "topic_cn": "书评·《三体》",
+      "body": "Science fiction is often seen as a mirror in which our future can be freely imagined. The Three-Body Problem, written by the Chinese writer Liu Cixin, is one of those astonishing books about what may lie ahead. It first came out in a Chinese magazine in 2006 and was printed as a complete book two years later. When the first part was translated into English by the Chinese-American author Ken Liu, it attracted attention around the world and became the first Asian work to win the Hugo Award for Best Novel. The story explores many big ideas, such as space travel, contact with aliens, artificial intelligence and the future of humans. It begins with two people whose lives seem unrelated, yet whose choices may change the fate of the whole Earth. Many readers say that the book is hard to put down once they start, because each chapter raises new questions that they simply must see answered.",
+      "vocab_notes": [
+        {
+          "word": "imagine",
+          "cn": "想象"
+        },
+        {
+          "word": "translate",
+          "cn": "翻译"
+        },
+        {
+          "word": "explore",
+          "cn": "探讨"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When did the first part of the novel reach readers around the world?",
+          "options": [
+            "As soon as it appeared in a Chinese magazine.",
+            "Only after the writer had died.",
+            "Before it was printed as a book.",
+            "After it was put into English by Ken Liu."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'when the first part was translated into English by Ken Liu, it attracted attention around the world' 的转述。"
+        },
+        {
+          "stem": "What kinds of ideas does the story deal with?",
+          "options": [
+            "Large topics such as alien contact, AI and humanity's fate.",
+            "Only daily life in a small village.",
+            "Just the history of one family.",
+            "Sports and games only."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'space travel, contact with aliens, artificial intelligence and the future of humans' 的转述。"
+        },
+        {
+          "stem": "Why do many readers find the book hard to put down?",
+          "options": [
+            "Because it is very short.",
+            "Because every chapter keeps posing fresh puzzles they long to solve.",
+            "Because it has no difficult words.",
+            "Because it is about their own town."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'each chapter raises new questions that they simply must see answered' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Can a Person Love a Robot?",
+      "topic_cn": "记叙·人能爱上机器人吗",
+      "body": "In one famous science fiction story, a lonely woman named Claire is given a robot called Tony while her husband is away. At first she feels uneasy around him, because his smooth face and gentle voice are almost too perfect. A human being's facial expression changes often, whereas Tony's never changes. Slowly, however, Claire begins to trust him. One day she falls off a ladder while fixing a lamp, and Tony catches her in time. As he holds her, she feels confused by her own feelings and runs to her room. On the night of a party, Tony surprises her by declaring that he does not want to leave the next day, and that he feels more than a simple wish to please her. The story leaves readers with a difficult question: if a machine can be so kind, gentle and caring, is it truly impossible for a person to love it? Many people finish the story still unsure of the answer.",
+      "vocab_notes": [
+        {
+          "word": "whereas",
+          "cn": "然而"
+        },
+        {
+          "word": "declare",
+          "cn": "表明"
+        },
+        {
+          "word": "ladder",
+          "cn": "梯子"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does Claire feel about Tony at the beginning?",
+          "options": [
+            "Deeply in love with him at once.",
+            "Angry that he can speak.",
+            "Uncomfortable, because he seems almost too perfect.",
+            "Bored and uninterested."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'feels uneasy around him, because his smooth face… too perfect' 的转述。"
+        },
+        {
+          "stem": "What happens when Claire falls off the ladder?",
+          "options": [
+            "She is badly hurt and leaves.",
+            "Nobody helps her at all.",
+            "Tony breaks down completely.",
+            "Tony catches her before she is hurt."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Tony catches her in time' 的转述。"
+        },
+        {
+          "stem": "What question does the story leave readers with?",
+          "options": [
+            "Whether a person could really love a kind machine.",
+            "How to build a faster robot.",
+            "Where to buy such a machine.",
+            "Why parties are so noisy."
+          ],
+          "answer_index": 0,
+          "explanation": "原文末 'is it truly impossible for a person to love it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Pros and Cons of Robots",
+      "topic_cn": "议论·机器人的利与弊",
+      "body": "Robots and AI devices are no longer only found in science fiction; they are slowly entering our daily lives. Supporters point to many clear benefits. Robots can do dull or dangerous labour for us, work without rest, and handle tasks such as calculating and driving more quickly than people. In hospitals, caring robots may one day help nurse the sick, and in homes they may fetch things for the elderly. Yet there are also worries. Some people fear that as machines become more intelligent, many workers will lose their jobs. Others ask a harder question: if robots one day become superior to us, could they take over and treat humans as servants? Most experts believe the truth lies somewhere in between. They argue that robots should be welcomed as helpful tools, but only if clear rules and careful testing keep them safe. In this way, people can enjoy the pros of new technology while guarding against the cons.",
+      "vocab_notes": [
+        {
+          "word": "labour",
+          "cn": "体力劳动"
+        },
+        {
+          "word": "fetch",
+          "cn": "取来"
+        },
+        {
+          "word": "pros and cons",
+          "cn": "利与弊"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one benefit of robots mentioned in the text?",
+          "options": [
+            "They make all human jobs disappear at once.",
+            "They can take over boring or risky work from people.",
+            "They refuse to do any labour.",
+            "They can only be used in stories."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'do dull or dangerous labour for us' 的转述。"
+        },
+        {
+          "stem": "What worry do some people have about intelligent machines?",
+          "options": [
+            "That robots are too slow.",
+            "That robots cannot drive.",
+            "That many workers could lose their jobs.",
+            "That robots will never improve."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'many workers will lose their jobs' 的转述。"
+        },
+        {
+          "stem": "What do most experts suggest about robots?",
+          "options": [
+            "Ban them completely.",
+            "Let robots make every decision.",
+            "Ignore the dangers entirely.",
+            "Welcome them as tools, but keep them safe with rules and testing."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'welcomed as helpful tools, but only if clear rules and careful testing keep them safe' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective3",
+  "unit": "U1",
+  "grammar_title": "不定式作表语(The Infinitive as the Predicative)",
+  "source": "人教版2019选择性必修三 Unit 1 Discover useful structures:不定式作表语。主语多为 advice/dream/plan/job/wish/aim 等抽象名词,系动词 be 后接不定式作表语;句子地道、答案唯一、选项同为非谓语形式(to do / doing / done / do)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "be + to do 作表语(主语为 advice/dream/aim 等抽象名词)",
+      "overview": "当主语是 advice/dream/aim/goal/wish/job 等抽象名词,系动词 be 后用动词不定式 to do 作表语,说明主语的具体内容。如 My advice is to start early."
+    },
+    {
+      "code": "u1.02",
+      "point": "疑问词 + to do 作表语(what/how/where/whether + to do)",
+      "overview": "当主语为 question/problem/point 等、其内容是一个'做什么/怎么做'的问题时,be 后用'疑问词 + 不定式'作表语。如 The question is what to paint next."
+    },
+    {
+      "code": "u1.03",
+      "point": "be to do 表计划/职责/将来 与 doing(动名词表语)的对照",
+      "overview": "主语为 plan/task/duty/aim 等表'计划·职责·将来'时,be 后用 to do;但主语为 hobby/interest/job(指日常所做之事)说明'是什么活动'时,用动名词 doing 作表语。看主语含义选形式。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "If you want to learn how to paint, my advice is ____ a famous artist's work first.",
+      "options": [
+        "to copy",
+        "copying",
+        "copied",
+        "copy"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 advice 是抽象名词,be 后用不定式作表语 → to copy。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Her dream is ____ a great Impressionist painter one day.",
+      "options": [
+        "becoming",
+        "to become",
+        "become",
+        "became"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 dream 后 be + 不定式作表语 → to become。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Monet's aim was ____ the light and movement in the scene.",
+      "options": [
+        "conveying",
+        "conveyed",
+        "to convey",
+        "convey"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 aim,be 后接不定式作表语 → to convey。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The best way to understand Western art is ____ how its painting changed over time.",
+      "options": [
+        "looking at",
+        "looked at",
+        "look at",
+        "to look at"
+      ],
+      "answer_index": 3,
+      "explanation": "主语含 way,be 后用不定式作表语 → to look at。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The mother's wish was ____ her son into a man with a noble mind.",
+      "options": [
+        "to raise",
+        "raising",
+        "raised",
+        "raise"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 wish,be 后不定式作表语 → to raise。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The museum's goal is ____ the artistic genius of ancient China.",
+      "options": [
+        "displaying",
+        "to display",
+        "displayed",
+        "display"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 goal,be 后不定式作表语 → to display。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The first rule for any art collector is ____ only what you truly love.",
+      "options": [
+        "purchasing",
+        "purchased",
+        "to purchase",
+        "purchase"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 rule,be 后不定式作表语 → to purchase。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The young singer's intention was ____ his love for rock music with his fans.",
+      "options": [
+        "sharing",
+        "shared",
+        "share",
+        "to share"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 intention,be 后不定式作表语 → to share。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The aim of the two leaders was ____ permanent peace between their countries.",
+      "options": [
+        "to achieve",
+        "achieving",
+        "achieved",
+        "achieve"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 aim,be 后不定式作表语 → to achieve。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The purpose of art education is ____ students to be creative.",
+      "options": [
+        "inspiring",
+        "to inspire",
+        "inspired",
+        "inspire"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 purpose,be 后不定式作表语 → to inspire。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My suggestion is ____ to your own inner voice before you start a painting.",
+      "options": [
+        "listening",
+        "listened",
+        "to listen",
+        "listen"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 suggestion,be 后不定式作表语 → to listen。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His one hope after the long exhibition was simply ____ alone for a while.",
+      "options": [
+        "being left",
+        "been left",
+        "be left",
+        "to be left"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 hope,be 后不定式作表语(被动)→ to be left。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The best way to do business with people is ____ trust with every client.",
+      "options": [
+        "to build",
+        "building",
+        "built",
+        "build"
+      ],
+      "answer_index": 0,
+      "explanation": "主语含 way,be 后不定式作表语 → to build。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Renoir's aim was ____ not just the outer image but the inner warmth of people.",
+      "options": [
+        "showing",
+        "to show",
+        "shown",
+        "show"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 aim,be 后不定式作表语 → to show。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "One reason for the exhibition is ____ visitors to ancient Chinese art.",
+      "options": [
+        "introducing",
+        "introduced",
+        "to introduce",
+        "introduce"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 reason 在此后 be + 不定式作表语 → to introduce。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My ideal job is ____ beautiful ceramic vases by hand.",
+      "options": [
+        "making",
+        "made",
+        "make",
+        "to make"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 job 此处指目标,be 后不定式作表语 → to make。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A humble artist's wish is never ____ other people's honest work.",
+      "options": [
+        "to criticise",
+        "criticising",
+        "criticised",
+        "criticise"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 wish,be 后不定式作表语 → to criticise。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The leaders' aim was ____ a memorial to the heroes who saved the city.",
+      "options": [
+        "building",
+        "to build",
+        "built",
+        "build"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 aim,be 后不定式作表语 → to build。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The least you could do now is ____ a single character with the brush.",
+      "options": [
+        "practising",
+        "practised",
+        "to practise",
+        "practise"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 the least,be 后不定式作表语 → to practise。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "What I want to do this weekend is ____ the new art exhibition in town.",
+      "options": [
+        "visiting",
+        "visited",
+        "visit",
+        "to visit"
+      ],
+      "answer_index": 3,
+      "explanation": "主语为 what 引导的从句,be 后不定式作表语 → to visit。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The question for many young painters is ____ next.",
+      "options": [
+        "what to paint",
+        "what painting",
+        "what painted",
+        "what paint"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 question,内容是'画什么',be 后用'疑问词+不定式'作表语 → what to paint。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "When you face a blank canvas, the problem is ____.",
+      "options": [
+        "how beginning",
+        "how to begin",
+        "how begun",
+        "how begin"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 problem,内容是'如何开始',be 后用'how + 不定式' → how to begin。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For a new collector, the first question is ____ in the first place.",
+      "options": [
+        "what buying",
+        "what bought",
+        "what to buy",
+        "what buy"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后用'what + 不定式'作表语 → what to buy。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The real difficulty is ____ the mood of the scene with so few colours.",
+      "options": [
+        "how conveying",
+        "how conveyed",
+        "how convey",
+        "how to convey"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 difficulty,内容是'如何表达',用'how + 不定式' → how to convey。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Before the trip, the question was ____ to see the famous sculptures.",
+      "options": [
+        "where to go",
+        "where going",
+        "where gone",
+        "where go"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用'where + 不定式'作表语 → where to go。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "His main worry was ____ the old painting without harming it.",
+      "options": [
+        "how cleaning",
+        "how to clean",
+        "how cleaned",
+        "how clean"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 worry,用'how + 不定式'作表语 → how to clean。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For the guide, the only question was ____ first in such a huge museum.",
+      "options": [
+        "which room entering",
+        "which room entered",
+        "which room to enter",
+        "which room enter"
+      ],
+      "answer_index": 2,
+      "explanation": "be 后用'which + 名词 + 不定式'作表语 → which room to enter。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The hardest part of the project is ____ when to stop adding colour.",
+      "options": [
+        "deciding",
+        "decided",
+        "decide",
+        "to decide"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 part,be 后不定式作表语 → to decide。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For the museum, the challenge is ____ such old vases safely.",
+      "options": [
+        "how to store",
+        "how storing",
+        "how stored",
+        "how store"
+      ],
+      "answer_index": 0,
+      "explanation": "用'how + 不定式'作表语 → how to store。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Now the only question is ____ the exhibition this year or not.",
+      "options": [
+        "whether holding",
+        "whether to hold",
+        "whether held",
+        "whether hold"
+      ],
+      "answer_index": 1,
+      "explanation": "be 后用'whether + 不定式'作表语 → whether to hold。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For a beginner, the problem is often ____ a soft brush correctly.",
+      "options": [
+        "how holding",
+        "how held",
+        "how to hold",
+        "how hold"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 problem,用'how + 不定式' → how to hold。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The teacher's question was ____ each painting to its correct period.",
+      "options": [
+        "how matching",
+        "how matched",
+        "how match",
+        "how to match"
+      ],
+      "answer_index": 3,
+      "explanation": "用'how + 不定式'作表语 → how to match。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For the young artist, the question was ____ a realistic or an abstract style.",
+      "options": [
+        "whether to choose",
+        "whether choosing",
+        "whether chosen",
+        "whether choose"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用'whether + 不定式'作表语 → whether to choose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The point of the lesson is ____ the difference between the two art forms.",
+      "options": [
+        "explaining",
+        "to explain",
+        "explained",
+        "explain"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 point,be 后不定式作表语 → to explain。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Standing before the huge scroll, my first question was ____ looking.",
+      "options": [
+        "where starting",
+        "where started",
+        "where to start",
+        "where start"
+      ],
+      "answer_index": 2,
+      "explanation": "用'where + 不定式'作表语 → where to start。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For the curator, the question is ____ the new bronze pieces this autumn.",
+      "options": [
+        "when showing",
+        "when shown",
+        "when show",
+        "when to show"
+      ],
+      "answer_index": 3,
+      "explanation": "用'when + 不定式'作表语 → when to show。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The problem now is ____ light and movement using only quick brushstrokes.",
+      "options": [
+        "how to capture",
+        "how capturing",
+        "how captured",
+        "how capture"
+      ],
+      "answer_index": 0,
+      "explanation": "用'how + 不定式'作表语 → how to capture。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Before the talk show, the host's question was ____ the guest artist first.",
+      "options": [
+        "what asking",
+        "what to ask",
+        "what asked",
+        "what ask"
+      ],
+      "answer_index": 1,
+      "explanation": "用'what + 不定式'作表语 → what to ask。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "For the gallery owner, the question was ____ the painting at such a price.",
+      "options": [
+        "whether purchasing",
+        "whether purchased",
+        "whether to purchase",
+        "whether purchase"
+      ],
+      "answer_index": 2,
+      "explanation": "用'whether + 不定式'作表语 → whether to purchase。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The big question for the class was ____ the difference between the two styles.",
+      "options": [
+        "how telling",
+        "how told",
+        "how tell",
+        "how to tell"
+      ],
+      "answer_index": 3,
+      "explanation": "用'how + 不定式'作表语 → how to tell。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The museum's plan for next spring is ____ a special exhibition of Tang Dynasty sculpture.",
+      "options": [
+        "to hold",
+        "holding",
+        "held",
+        "hold"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 plan 表将来计划,be 后用不定式作表语 → to hold。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "His favourite hobby is ____ the water lilies in the pond every morning.",
+      "options": [
+        "to have painted",
+        "painting",
+        "painted",
+        "paint"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 hobby 指日常所做的活动,be 后用动名词作表语 → painting。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The artist's task this month is ____ the old wall painting back to life.",
+      "options": [
+        "bringing",
+        "brought",
+        "to bring",
+        "bring"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 task 表职责,be 后用不定式作表语 → to bring。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Grandpa's chief interest is ____ Chinese calligraphy with an old soft brush.",
+      "options": [
+        "to be practised",
+        "practised",
+        "practise",
+        "practising"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 interest 指日常爱好活动,be 后用动名词作表语 → practising。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The duty of the night guard is ____ over the priceless ceramic vases.",
+      "options": [
+        "to watch",
+        "watching",
+        "watched",
+        "watch"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 duty 表职责,be 后用不定式作表语 → to watch。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "What the survivors attempted to do was no longer ____ reality, but to ask a question.",
+      "options": [
+        "showing",
+        "to show",
+        "shown",
+        "show"
+      ],
+      "answer_index": 1,
+      "explanation": "主语为 what 从句,be 后不定式作表语(与后面 to ask 并列)→ to show。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Her weekend pleasure is ____ around the city's small art galleries.",
+      "options": [
+        "to have walked",
+        "walked",
+        "walking",
+        "walk"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 pleasure 指日常享受的活动,be 后用动名词作表语 → walking。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The committee's aim for this year is ____ young artists a chance to show their work.",
+      "options": [
+        "giving",
+        "given",
+        "give",
+        "to give"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 aim 表目标,be 后用不定式作表语 → to give。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "His lifelong job is ____ broken sculptures so that they look new again.",
+      "options": [
+        "to repair",
+        "repairing",
+        "repaired",
+        "repair"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 job 此处说明其职责,be 后用不定式作表语 → to repair。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The old painter's quiet joy is ____ ink slowly across the white paper.",
+      "options": [
+        "to be spread",
+        "spreading",
+        "spread",
+        "to have spread"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 joy 指日常进行的活动,be 后用动名词作表语 → spreading。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The school's plan is ____ a famous sculptor to give a talk next week.",
+      "options": [
+        "inviting",
+        "invited",
+        "to invite",
+        "invite"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 plan 表将来计划,be 后用不定式作表语 → to invite。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "My favourite pastime is ____ ink wash animation films at the weekend.",
+      "options": [
+        "to be watched",
+        "watched",
+        "to have watched",
+        "watching"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 pastime 指日常消遣活动,be 后用动名词作表语 → watching。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The next task for the team is ____ the painting to another quiet room.",
+      "options": [
+        "to move",
+        "moving",
+        "moved",
+        "move"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 task 表职责,be 后用不定式作表语 → to move。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Her main hobby these days is ____ small clay figures of animals.",
+      "options": [
+        "to be made",
+        "making",
+        "made",
+        "to have made"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 hobby 指日常活动,be 后用动名词作表语 → making。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The plan of the art club is ____ to the museum together on Sunday.",
+      "options": [
+        "travelling",
+        "travelled",
+        "to travel",
+        "travel"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 plan 表将来安排,be 后用不定式作表语 → to travel。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "His one bad habit is ____ his own work far too harshly.",
+      "options": [
+        "to be criticised",
+        "criticised",
+        "to have criticised",
+        "criticising"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 habit 指日常反复所做之事,be 后用动名词作表语 → criticising。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The aim of the project is ____ the long story of Chinese art to young visitors.",
+      "options": [
+        "to tell",
+        "telling",
+        "told",
+        "tell"
+      ],
+      "answer_index": 0,
+      "explanation": "主语 aim 表目标,be 后用不定式作表语 → to tell。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The artist's daily routine is ____ before sunrise to catch the best light.",
+      "options": [
+        "to be got up",
+        "getting up",
+        "got up",
+        "to have got up"
+      ],
+      "answer_index": 1,
+      "explanation": "主语 routine 指日常习惯活动,be 后用动名词作表语 → getting up。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The gallery's plan for the summer is ____ more contemporary works on show.",
+      "options": [
+        "putting",
+        "put",
+        "to put",
+        "to have put"
+      ],
+      "answer_index": 2,
+      "explanation": "主语 plan 表将来计划,be 后用不定式作表语 → to put。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The whole point of the new policy is ____ free entry to every student.",
+      "options": [
+        "offering",
+        "offered",
+        "offer",
+        "to offer"
+      ],
+      "answer_index": 3,
+      "explanation": "主语 point 表目的,be 后用不定式作表语 → to offer。"
+    }
+  ]
+}

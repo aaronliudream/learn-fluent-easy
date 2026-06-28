@@ -1,0 +1,32 @@
+{
+  "volume": "elective4",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(海洋探索主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When the young diver first saw the deep-sea floor through the submersible's window, she could hardly believe her eyes. Strange creatures glowed in the dark water, and tiny new fish swam past that no scientist had ever recorded before. She quietly logged each one, knowing that her careful notes would help protect this fragile world for years to come.",
+    "questions": [
+      {
+        "q": "How did the diver feel when she first saw the sea floor?",
+        "options": [
+          "Amazed by what she saw.",
+          "Bored and sleepy.",
+          "Angry at the darkness.",
+          "Sure she had seen it all before."
+        ],
+        "answer": "A",
+        "explanation": "首句 'could hardly believe her eyes' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "Why did the diver carefully record what she saw?",
+        "options": [
+          "To sell the creatures for money.",
+          "Because her notes would help protect the fragile sea.",
+          "Because she wanted to forget the trip.",
+          "To prove the deep sea is empty."
+        ],
+        "answer": "B",
+        "explanation": "末句 'her careful notes would help protect this fragile world'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

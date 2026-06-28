@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(多元文化主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Maria first moved to a new city, she felt lost among so many different cultures. Instead of staying home, she tasted new food, learned a few local words, and made friends from many countries. A year later, the rich mix of people no longer worried her; it had become the thing she loved most about her new home.",
+    "questions": [
+      {
+        "q": "What did Maria do instead of staying home?",
+        "options": [
+          "She explored the food, picked up the language, and got to know people.",
+          "She returned to her old city at once.",
+          "She refused to leave her room.",
+          "She avoided everyone around her."
+        ],
+        "answer": "A",
+        "explanation": "原文 'tasted new food, learned a few local words, and made friends' 的转述;其余与原文相反。"
+      },
+      {
+        "q": "How did Maria feel about the city a year later?",
+        "options": [
+          "Still lost and worried.",
+          "She loved its mix of cultures most of all.",
+          "Sorry that she had moved there.",
+          "Bored by everyone around her."
+        ],
+        "answer": "B",
+        "explanation": "末句 'it had become the thing she loved most' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

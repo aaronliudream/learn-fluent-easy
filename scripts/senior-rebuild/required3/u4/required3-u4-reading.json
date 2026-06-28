@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Space Exploration",
+  "source": "人教版2019必修三 Unit 4 同主题阅读(太空探索史/失重生活/中国航天/月球火星/为何探索太空/太空科技益处)。词限本单元/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Reaching for the Stars",
+      "topic_cn": "说明·太空探索的起步",
+      "body": "Looking up at the stars, people have always wanted to learn more about space. Before the middle of the last century, most people felt that travelling into space was an impossible dream. However, some scientists were determined to make that dream come true. After many experiments, they finally built rockets that were powerful enough to escape Earth's gravity. On 4 October 1957, the satellite Sputnik 1 was launched and went around our planet for the very first time. Less than four years later, on 12 April 1961, Yuri Gagarin became the first person in the whole world to go into space. These early steps were small, but each one pushed the door to the universe a little wider open. They showed everyone that the sky above us was no longer a wall, but a road waiting to be explored by brave and clever people.",
+      "vocab_notes": [
+        {
+          "word": "satellite",
+          "cn": "卫星"
+        },
+        {
+          "word": "gravity",
+          "cn": "重力"
+        },
+        {
+          "word": "launch",
+          "cn": "发射"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did most people feel about space travel before the mid-20th century?",
+          "options": [
+            "They thought it could never be done.",
+            "They were sure it was already easy.",
+            "They had no interest in the stars.",
+            "They believed it was cheap and safe."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'travelling into space was an impossible dream' 的转述。"
+        },
+        {
+          "stem": "What did the rockets finally allow scientists to do?",
+          "options": [
+            "Stop all their experiments.",
+            "Break free from Earth's pull.",
+            "Land directly on the sun.",
+            "Avoid using any satellites."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'powerful enough to escape Earth's gravity' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about the early steps in space?",
+          "options": [
+            "Each one opened the way to the universe wider.",
+            "They were a waste of money.",
+            "They were quickly forgotten.",
+            "They proved space could not be reached."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'each one pushed the door to the universe a little wider open' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Day in the Life of an Astronaut",
+      "topic_cn": "记叙·宇航员的太空生活",
+      "body": "Life on a space station is very different from life at home. Because there is almost no gravity, everything floats, so astronauts must stick their tools and even their food to the wall. When it is time to eat, they often warm their meals and hold the packets carefully, or the food will drift away. Keeping clean is not easy either; instead of a normal shower, they use a little water and a wet towel to wash. To stay healthy, they exercise every single day, since their muscles and bones grow weak without gravity to work against. At bedtime, they climb into sleeping bags that are tied to the wall, so they will not float around in the dark. During their free time, many astronauts simply look out of the window. Watching the blue Earth turn quietly below them is, they say, the most beautiful sight of all.",
+      "vocab_notes": [
+        {
+          "word": "float",
+          "cn": "漂浮"
+        },
+        {
+          "word": "muscle",
+          "cn": "肌肉"
+        },
+        {
+          "word": "gravity",
+          "cn": "重力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why must astronauts stick their tools to the wall?",
+          "options": [
+            "Because the tools are very heavy.",
+            "Because there is little gravity and things float.",
+            "Because the walls are too cold.",
+            "Because the station has no shelves."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'almost no gravity, everything floats' 的转述。"
+        },
+        {
+          "stem": "How do astronauts keep clean in space?",
+          "options": [
+            "They take a long hot shower.",
+            "They swim in a small pool.",
+            "They wash with a damp cloth and very little water.",
+            "They do not wash at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a little water and a wet towel to wash' 的转述。"
+        },
+        {
+          "stem": "Why do astronauts exercise every day?",
+          "options": [
+            "They have nothing else to do.",
+            "The captain forces them to.",
+            "Exercise helps them eat less.",
+            "Their muscles and bones become weak in space."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'muscles and bones grow weak without gravity' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "China's Journey to the Stars",
+      "topic_cn": "说明·中国航天的进步",
+      "body": "China's space programme began later than those of Russia and the United States, yet it has made great progress in a short time. In 2003, Yang Liwei orbited Earth in the Shenzhou 5 spacecraft, and China became the third country able to send people into space on its own. Soon afterwards, Shenzhou 6 and 7 carried more astronauts, and one of them completed the first Chinese spacewalk. China then sent a small rover called Jade Rabbit to study the surface of the moon. Later, the Tiangong 2 space lab was launched, and Tianzhou 1 was sent up to dock with it. This step showed the world that China was steadily building towards a space station of its own. More recently, China sent Chang'e 4 to the far side of the moon, a place no country had reached before, to make new measurements and discoveries. Step by step, China keeps moving deeper into space.",
+      "vocab_notes": [
+        {
+          "word": "orbit",
+          "cn": "环绕运行"
+        },
+        {
+          "word": "dock",
+          "cn": "对接"
+        },
+        {
+          "word": "independently",
+          "cn": "独立地"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did China achieve in 2003?",
+          "options": [
+            "It became the third nation able to launch humans skyward on its own.",
+            "It built the first space station.",
+            "It landed the first person on the moon.",
+            "It launched its very first satellite."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the third country able to send people into space on its own' 的转述。"
+        },
+        {
+          "stem": "What was special about the Chang'e 4 mission?",
+          "options": [
+            "It carried the first Chinese astronaut.",
+            "It explored the moon's far hemisphere, which no nation had visited.",
+            "It returned soil from the sun.",
+            "It docked with a foreign space lab."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the far side of the moon, a place no country had reached before' 的转述。"
+        },
+        {
+          "stem": "What does the docking of Tianzhou 1 show?",
+          "options": [
+            "China had given up space travel.",
+            "China only copied other countries.",
+            "China was working towards its own space station.",
+            "China stopped after Shenzhou 7."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'steadily building towards a space station of its own' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Hard Road to Mars",
+      "topic_cn": "说明·飞往火星的难题",
+      "body": "Sending people to Mars sounds exciting, but it is far from easy. The first problem is distance. Using the technology we have today, a return trip to the red planet would take more than two years. During such a long journey, the crew would need enough food, water and oxygen, and storing all of these is a serious challenge. There is also the danger of weightlessness, which slowly makes human muscles and bones weaker the longer people stay in space. On top of that, Mars is a cold and lonely world with thin air, so any small mistake could be fatal. Even so, scientists refuse to give up. They are testing new ways to grow crops in space and to recycle water, hoping these ideas will one day make the trip possible. Many believe that, sooner or later, the first human footprints will appear in the red dust of Mars.",
+      "vocab_notes": [
+        {
+          "word": "oxygen",
+          "cn": "氧气"
+        },
+        {
+          "word": "fatal",
+          "cn": "致命的"
+        },
+        {
+          "word": "recycle",
+          "cn": "回收利用"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say a trip to Mars is difficult?",
+          "options": [
+            "Because Mars is too hot to land on.",
+            "Because rockets cannot leave Earth.",
+            "Because no one wants to go.",
+            "Because the long distance makes the journey take over two years."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a return trip … would take more than two years' 的转述。"
+        },
+        {
+          "stem": "What problem does long-term weightlessness cause?",
+          "options": [
+            "It slowly weakens human muscles and bones.",
+            "It makes the spacecraft heavier.",
+            "It speeds up the journey.",
+            "It uses up all the fuel."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'makes human muscles and bones weaker' 的转述。"
+        },
+        {
+          "stem": "How are scientists responding to these difficulties?",
+          "options": [
+            "They have cancelled all Mars plans.",
+            "They are testing ways to grow food and recycle water.",
+            "They are sending only robots forever.",
+            "They are ignoring the problems."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'testing new ways to grow crops … recycle water' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Why Bother with Space?",
+      "topic_cn": "议论·为何探索太空",
+      "body": "Some people argue that exploring space is a waste of time and money. They say we should feed the world's poor and solve problems like pollution before spending billions on distant planets. Yet others believe this is a shallow view that misses how much space work helps us here on Earth. Take the satellites that now circle our planet. Many of them record information about land and weather, and this data is sent to scientists who then advise farmers how to grow more food. Space research has also improved everyday technology. Better heart monitors, stronger materials and even smartphone cameras all grew out of tools first made for space. Finally, photographs of Earth from far away made people realise that our resources are limited and must be shared with care. In this way, looking outwards into space has, surprisingly, taught us to look more wisely at our own home.",
+      "vocab_notes": [
+        {
+          "word": "shallow",
+          "cn": "肤浅的"
+        },
+        {
+          "word": "monitor",
+          "cn": "监测仪"
+        },
+        {
+          "word": "resource",
+          "cn": "资源"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do people against space exploration believe?",
+          "options": [
+            "Space travel is perfectly safe.",
+            "Farmers do not need any help.",
+            "Money should first go to problems on Earth.",
+            "Satellites are useless toys."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'feed the world's poor and solve problems … before spending billions' 的转述。"
+        },
+        {
+          "stem": "How do weather satellites help farmers?",
+          "options": [
+            "They water the fields directly.",
+            "They replace all farm workers.",
+            "They sell crops for higher prices.",
+            "They send data that helps scientists advise farmers."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'this data is sent to scientists who then advise farmers' 的转述。"
+        },
+        {
+          "stem": "What did photographs of Earth from space make people realise?",
+          "options": [
+            "That what the planet offers us is finite and needs careful sharing.",
+            "That Earth is very large.",
+            "That space is empty.",
+            "That farming is unnecessary."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'resources are limited and must be shared with care' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Becoming an Astronaut",
+      "topic_cn": "说明·如何成为宇航员",
+      "body": "Becoming an astronaut is one of the hardest jobs in the world to win. First of all, you must be intelligent enough to earn a related college degree, often in science or engineering. After that comes years of flying experience; in China, for example, candidates once needed about a thousand hours in the air as pilots. Health matters too, for an astronaut must be strong, calm and free of serious illness. Yang Liwei was chosen from among many fighter pilots, and only a small number passed every test. Once selected, the work has only begun. Future astronauts learn how to use complex space equipment, and they also do a great deal of mental and physical training so as to stay calm under pressure. The selection procedure is long and tiring, and most people who apply are turned away. Yet for those who succeed, the chance to see Earth from space makes every hard day worth it.",
+      "vocab_notes": [
+        {
+          "word": "intelligent",
+          "cn": "聪明的"
+        },
+        {
+          "word": "procedure",
+          "cn": "程序"
+        },
+        {
+          "word": "mental",
+          "cn": "心理的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the first requirement mentioned for becoming an astronaut?",
+          "options": [
+            "Owning an aeroplane.",
+            "Being clever enough to get a related college degree.",
+            "Living near a space centre.",
+            "Speaking many languages."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'intelligent enough to earn a related college degree' 的转述。"
+        },
+        {
+          "stem": "Why must astronauts do mental and physical training?",
+          "options": [
+            "To make them taller.",
+            "To save the agency money.",
+            "To help them stay calm under pressure.",
+            "To replace flying experience."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'mental and physical training so as to stay calm under pressure' 的转述。"
+        },
+        {
+          "stem": "What does the passage say about most people who apply?",
+          "options": [
+            "They are all accepted.",
+            "They never finish college.",
+            "They become pilots instead.",
+            "Most of them are turned away."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'most people who apply are turned away' 的转述。"
+        }
+      ]
+    }
+  ]
+}

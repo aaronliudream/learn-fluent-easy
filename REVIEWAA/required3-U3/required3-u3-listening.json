@@ -1,0 +1,493 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Diverse Cultures",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修三 Unit 3 同主题听力(美式食物广播采访/原住民简史/约去唐人街的对话/民族村寨乐器简介/潮汕饮食偏好的对话/作为大熔炉的城市简述)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 The Origins of American Food",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Host",
+          "text": "Welcome back. Today we ask: does America have any food of its own?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "Well, most American food actually comes from other cultures and is then mixed into something new."
+        },
+        {
+          "speaker": "Host",
+          "text": "Can you give us an example?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "Take nachos. They are just corn chips covered in cheese, first made by a cook for some hungry visitors."
+        },
+        {
+          "speaker": "Host",
+          "text": "And what about gumbo?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "Gumbo is a spicy stew invented in New Orleans. It mixes several cooking styles in one pot."
+        },
+        {
+          "speaker": "Host",
+          "text": "So American food is really a mix of the whole world."
+        },
+        {
+          "speaker": "Guest",
+          "text": "Exactly. That spirit of mixing is what makes it special."
+        }
+      ],
+      "translation_cn": "主持人问美国是否有自己的食物;嘉宾说大多源自别的文化,再融合出新东西;以墨西哥玉米片为例,是裹奶酪的玉米片,由厨师为饥饿的客人首创;秋葵汤是新奥尔良发明的辣味炖菜,一锅融合多种烹饪;主持人总结美式食物是全世界的融合,嘉宾说正是这种融合精神让它特别。",
+      "questions": [
+        {
+          "stem": "What does the guest say about most American food?",
+          "options": [
+            "It comes from other cultures and is mixed into something new.",
+            "It was all invented in America alone.",
+            "It never changes over time.",
+            "It comes only from France."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are nachos, according to the guest?",
+          "options": [
+            "A sweet cake.",
+            "Corn chips covered in cheese.",
+            "A bowl of rice.",
+            "A cold drink."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where was gumbo invented?",
+          "options": [
+            "In New Orleans.",
+            "In China.",
+            "In Mexico.",
+            "In nobody's kitchen."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is gumbo described?",
+          "options": [
+            "A cold sweet soup.",
+            "A spicy stew that mixes several styles.",
+            "A simple drink.",
+            "A plain bread."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What makes American food special, the guest says?",
+          "options": [
+            "Its very high price.",
+            "Its single origin.",
+            "Its spirit of mixing cultures.",
+            "Its lack of taste."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 The First People of California",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "No one knows exactly when the first people arrived in what we now call California.",
+        "It is likely that they moved there many thousands of years ago.",
+        "After the arrival of the Europeans, the native people suffered greatly.",
+        "Many died from new diseases, while others were forced to leave their land.",
+        "Even so, some survived, and their culture is still part of the state today."
+      ],
+      "translation_cn": "没人确切知道最早的人何时到达今天的加利福尼亚;很可能是数千年前迁来的;欧洲人到来后,原住民遭受了巨大苦难;许多人死于新的疾病,另一些被迫离开家园;尽管如此,仍有人幸存下来,他们的文化至今仍是这个州的一部分。",
+      "questions": [
+        {
+          "stem": "What is unknown about the first people of California?",
+          "options": [
+            "Whether they ate fish.",
+            "What colour their houses were.",
+            "How tall they were.",
+            "The exact time when they arrived."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "When did they probably move there?",
+          "options": [
+            "Many thousands of years ago.",
+            "Last year.",
+            "A few months ago.",
+            "Only after the Europeans came."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happened after the Europeans arrived?",
+          "options": [
+            "Everyone became rich.",
+            "The native people suffered greatly.",
+            "Nothing changed.",
+            "The Europeans left at once."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did many native people die?",
+          "options": [
+            "Because of the cold weather only.",
+            "Because they refused to eat.",
+            "Because of new diseases.",
+            "Because they moved to Europe."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage say about their culture today?",
+          "options": [
+            "It has completely disappeared.",
+            "It was never important.",
+            "It moved to another country.",
+            "It is still part of the state."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Planning a Visit to Chinatown",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "Are you free this afternoon? I'd love to show you Chinatown."
+        },
+        {
+          "speaker": "Tom",
+          "text": "I'd love to. I've never been there before."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Great. We can enter through the old Dragon Gate first."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Was it really built with materials from China?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Yes, the materials were donated from China many years ago."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Amazing. Can we taste some traditional food too?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Of course. There's food to suit every taste, and the tea shops are wonderful."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Then let's go. I can't wait!"
+        }
+      ],
+      "translation_cn": "米娅问汤姆下午是否有空,想带他逛唐人街;汤姆乐意,说从没去过;米娅说先从龙门进去;汤姆问龙门是否真是用中国的材料建的;米娅说材料多年前由中国捐赠;汤姆想尝尝传统食物;米娅说有适合各种口味的食物,茶馆也很棒;汤姆迫不及待要去。",
+      "questions": [
+        {
+          "stem": "What does Mia offer to do?",
+          "options": [
+            "Show Tom around Chinatown.",
+            "Cook dinner at home.",
+            "Take a train to Mexico.",
+            "Sell Tom a hotel."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Has Tom been to Chinatown before?",
+          "options": [
+            "Yes, many times.",
+            "No, never before.",
+            "Only last week.",
+            "He lives there."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How was the Dragon Gate built?",
+          "options": [
+            "With cheap plastic.",
+            "By the visitors themselves.",
+            "With materials donated from China.",
+            "With no materials at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mia say about the food there?",
+          "options": [
+            "It is always too spicy.",
+            "There is none left.",
+            "It is only for tourists.",
+            "There is food to suit every taste."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Tom feel at the end?",
+          "options": [
+            "He can't wait to go.",
+            "He is too tired to go.",
+            "He no longer wants to go.",
+            "He has changed his mind."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 An Ancient Instrument",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In many ethnic minority villages, people still play an old instrument called the lusheng.",
+        "This instrument has a history of more than a thousand years.",
+        "It is even mentioned in the oldest collection of Chinese poetry.",
+        "At festivals, villagers play it while others dance in their best clothing.",
+        "Listening to it, visitors feel they have stepped into a different and beautiful world."
+      ],
+      "translation_cn": "在许多少数民族村寨,人们仍演奏一种叫芦笙的古老乐器;它有一千多年的历史;甚至在最古老的中国诗歌总集中也被提到;节日里,村民演奏它,其他人则穿着最好的服装起舞;听着它,游客觉得仿佛走进了一个不同而美丽的世界。",
+      "questions": [
+        {
+          "stem": "Where do people still play the lusheng?",
+          "options": [
+            "In big office buildings.",
+            "In ethnic minority villages.",
+            "On the ocean.",
+            "In foreign countries only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How old is this instrument?",
+          "options": [
+            "Only a few years old.",
+            "About one hundred years.",
+            "More than a thousand years.",
+            "Nobody plays it now."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where is the instrument mentioned?",
+          "options": [
+            "In a modern comic book.",
+            "On a food menu.",
+            "In a science report.",
+            "In the oldest collection of Chinese poetry."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do villagers do at festivals?",
+          "options": [
+            "Play it while others dance in fine clothing.",
+            "Sell it to tourists.",
+            "Hide it away.",
+            "Break it on purpose."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do visitors feel when they listen?",
+          "options": [
+            "Bored and tired.",
+            "As if they had entered a different, beautiful world.",
+            "Angry and afraid.",
+            "Hungry for food."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Different Tastes in Food",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ann",
+          "text": "There's a potluck dinner this weekend. What dish will you bring?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "I'm thinking of a spicy stew from my hometown."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Spicy? I'm not sure I can eat very hot food."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Don't worry, I'll make a mild one for you."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Thank you. I'll bring some dumplings, then."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Perfect. So the table will have food from two cultures."
+        },
+        {
+          "speaker": "Ann",
+          "text": "Exactly. That's the best part of sharing a meal."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I agree. See you on Saturday!"
+        }
+      ],
+      "translation_cn": "安说周末有聚餐,问本带什么菜;本想带家乡的辣味炖菜;安说自己吃不了太辣;本说会给她做一份温和不辣的;安道谢,说那她带饺子;本说桌上就有来自两种文化的食物了;安说这正是分享一餐最棒的地方;两人约好周六见。",
+      "questions": [
+        {
+          "stem": "What event are Ann and Ben talking about?",
+          "options": [
+            "A football match.",
+            "A long camping trip.",
+            "A potluck dinner this weekend.",
+            "A music exam."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What dish does Ben plan to bring?",
+          "options": [
+            "A sweet cake.",
+            "A cold salad.",
+            "A bowl of plain rice.",
+            "A spicy stew from his hometown."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why is Ann unsure about the dish?",
+          "options": [
+            "She may not be able to eat very hot food.",
+            "It costs too much.",
+            "It is too far away.",
+            "It takes too long to cook."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say he will do for Ann?",
+          "options": [
+            "Cancel the dinner.",
+            "Make a mild one for her.",
+            "Buy her a gift.",
+            "Bring no food at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Ann like best about sharing a meal?",
+          "options": [
+            "Eating alone.",
+            "Saving money.",
+            "Having food from two cultures on the table.",
+            "Cooking nothing herself."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 A City of Many Languages",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Some neighbourhoods are so diverse that almost half of the people were born in another country.",
+        "Walk down one street and you may hear many different languages being spoken.",
+        "People of different backgrounds live side by side, sharing the same shops and streets.",
+        "Some worry that life there is hard, but many residents feel quite at home.",
+        "For them, the rich mix of cultures is a gift to be treasured, not a problem."
+      ],
+      "translation_cn": "有些社区非常多元,近一半的人出生在别的国家;走在一条街上,你可能听到许多种不同的语言;不同背景的人比邻而居,共享同样的商店和街道;有人担心那里生活艰难,但许多居民觉得很自在;对他们来说,丰富的文化融合是一份值得珍惜的礼物,而非难题。",
+      "questions": [
+        {
+          "stem": "How diverse are these neighbourhoods?",
+          "options": [
+            "Everyone was born in the same town.",
+            "No one lives there.",
+            "Only one language is spoken.",
+            "Almost half the people were born in another country."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What might you hear walking down one street?",
+          "options": [
+            "Many different languages.",
+            "Total silence.",
+            "Only one song.",
+            "Nothing but cars."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do people of different backgrounds live?",
+          "options": [
+            "Far apart from one another.",
+            "Side by side, sharing the same streets.",
+            "In separate countries.",
+            "Without any shops."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How do many residents feel about living there?",
+          "options": [
+            "Lost and unwelcome.",
+            "Eager to leave at once.",
+            "Quite at home.",
+            "Sorry that they came."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How do they see the mix of cultures?",
+          "options": [
+            "As a serious problem.",
+            "As something useless.",
+            "As a reason to move away.",
+            "As a gift to be treasured."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

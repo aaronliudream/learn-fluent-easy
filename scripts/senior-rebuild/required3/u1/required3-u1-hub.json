@@ -1,0 +1,48 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Families gather to admire the shining moon and enjoy mooncakes.", "opts": ["家人聚在一起赏明月、品月饼。", "孩子们在街上放鞭炮。", "人们卖掉了所有的灯笼。", "他们去博物馆看展览。"], "answer": 0 },
+    { "audio": "These floating lanterns on the river are truly amazing.", "opts": ["河上的灯笼坏掉了。", "河上漂浮的这些灯笼真是令人惊叹。", "河水淹没了村庄。", "他们买了一艘新船。"], "answer": 1 },
+    { "audio": "Lighting firecrackers is a typical Spring Festival custom.", "opts": ["春节没有任何习俗。", "人们在春节安静地待在家里。", "放鞭炮是春节的一个典型习俗。", "鞭炮在夏天才会被点燃。"], "answer": 2 },
+    { "audio": "People decorate churches and town halls with flowers and fruit.", "opts": ["人们拆掉了教堂。", "他们把水果全卖了。", "市政厅在节日里关闭。", "人们用鲜花和水果装饰教堂和市政厅。"], "answer": 3 },
+    { "audio": "Some old customs may slowly fade away over time.", "opts": ["一些旧习俗可能随时间渐渐消失。", "所有习俗都永远不变。", "新习俗都被禁止了。", "习俗被卖到了国外。"], "answer": 0 },
+    { "audio": "Festivals reflect people's wishes and attitudes towards life.", "opts": ["节日毫无意义。", "节日反映了人们的愿望和对生活的态度。", "节日只与金钱有关。", "节日让人忘记家人。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "On New Year's Eve, children get lucky money in red ____.", "opts": ["envelopes", "machines", "prices", "noises"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Customs play a ____ role in almost every festival.", "opts": ["broken", "significant", "empty", "silent"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "People light firecrackers to drive away the ____ spirits.", "opts": ["happy", "kind", "evil", "quiet"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "The harvest festival is held after the ____ have been gathered in.", "opts": ["songs", "prices", "noises", "crops"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The dragon dance at the festival was really ____.", "opts": ["exciting", "excited", "to excite", "excite"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We watched the ____ moon rise slowly over the village.", "opts": ["risen", "rising", "to rise", "rise"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The families ____ the Lunar New Year enjoyed mooncakes together.", "opts": ["celebrated", "to celebrate", "celebrating", "celebrate"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Look at the lanterns ____ slowly down the river.", "opts": ["floated", "to float", "float", "floating"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["每个节日都有自己独特的魅力。", "所有节日都一模一样。", "节日很快就会消失。", "没有人喜欢节日。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Every festival has its own customs and unique charm." },
+    { "q": "听句子选中文:", "opts": ["人们应该忘记传统。", "穿上传统服装的舞者沿街游行。", "街道在节日里关闭了。", "他们取消了游行。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Dancers in traditional costumes marched along the streets." }
+  ],
+  "reading": {
+    "passage": "Festivals are celebrated all over the world for many different reasons. No matter how different they seem, almost all of them share the same spirit: bringing people together to enjoy joy, gratitude and love.",
+    "passageCn": "全世界出于各种不同的原因庆祝节日。无论它们看起来多么不同,几乎所有节日都有同样的精神:把人们聚在一起,分享喜悦、感激与爱。",
+    "questions": [
+      { "q": "Why are festivals celebrated, according to the passage?", "opts": ["For many different reasons.", "For only one reason.", "Just to make money.", "To keep people apart."], "answer": 0 },
+      { "q": "What do almost all festivals share?", "opts": ["The same date.", "Exactly the same food.", "A spirit of bringing people together.", "A focus on shopping."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a festival you like. Say when and with whom you celebrate it, one activity you enjoy, and how you feel. Use at least one -ing form as an attribute or predicative.",
+    "promptCn": "用3-4句话介绍一个你喜欢的节日:何时、和谁一起庆祝,你喜欢的一项活动,以及你的感受。至少用一个现在分词(V-ing)作定语或表语。",
+    "sampleWords": ["festival", "celebrate", "gather", "lantern", "exciting", "amazing", "joyful", "admire", "tradition", "grateful"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about a Festival",
+      "lines": [
+        { "role": "A", "text": "Did you enjoy the festival this year?", "cn": "你今年享受这个节日了吗?" },
+        { "role": "B", "text": "Oh yes! The dragon dances were so exciting, and the lanterns were amazing.", "cn": "当然!舞龙太精彩了,灯笼也美极了。" },
+        { "role": "A", "text": "What did you like best about it?", "cn": "你最喜欢它的什么?" },
+        { "role": "B", "text": "Sitting with my family, admiring the shining moon and sharing mooncakes.", "cn": "和家人坐在一起,赏明月、分月饼。" }
+      ]
+    }
+  ]
+}

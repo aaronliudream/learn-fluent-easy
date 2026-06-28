@@ -1,0 +1,493 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Space Exploration",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修三 Unit 4 同主题听力(采访宇航员/太空一天/采访杨利伟/火星视频/太空营提问/给未来宇航员的建议)。用词限本单元/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Meeting a Real Astronaut",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Max",
+          "text": "Captain Brown, thank you for coming. What did you usually wear inside the station?"
+        },
+        {
+          "speaker": "Brown",
+          "text": "Most of the time I just wore a simple T-shirt and shorts. It is quite warm inside."
+        },
+        {
+          "speaker": "Max",
+          "text": "Really? And how did you prepare your food up there?"
+        },
+        {
+          "speaker": "Brown",
+          "text": "We kept our meals in small bags and warmed them in a special microwave."
+        },
+        {
+          "speaker": "Max",
+          "text": "That sounds tricky. How did you keep yourself clean without a shower?"
+        },
+        {
+          "speaker": "Brown",
+          "text": "We used a little water and a wet towel. A real shower is impossible without gravity."
+        },
+        {
+          "speaker": "Max",
+          "text": "I see. What did you look forward to most while you were up there?"
+        },
+        {
+          "speaker": "Brown",
+          "text": "Honestly, I missed my family. I could not wait to see them again."
+        }
+      ],
+      "translation_cn": "Max 采访 Brown 船长:站内通常穿简单的T恤和短裤,因为里面相当暖和;食物装在小袋里用特制微波炉加热;用少量水和湿毛巾保持清洁,失重下无法淋浴;他在太空最盼望的是再见到家人。",
+      "questions": [
+        {
+          "stem": "What did Captain Brown usually wear inside the station?",
+          "options": [
+            "A simple T-shirt and shorts.",
+            "A heavy spacesuit.",
+            "A thick winter coat.",
+            "Nothing at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did he prepare his food?",
+          "options": [
+            "He cooked it on a fire.",
+            "He warmed bags of food in a microwave.",
+            "He ate everything cold.",
+            "He bought it from a shop."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did he keep himself clean?",
+          "options": [
+            "He used a little water and a wet towel.",
+            "He took a long hot shower.",
+            "He swam in a pool.",
+            "He did not wash."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is a real shower impossible in the station?",
+          "options": [
+            "There is no water at all.",
+            "There is almost no gravity.",
+            "It is too cold.",
+            "The crew has no time."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Captain Brown look forward to most?",
+          "options": [
+            "Eating fresh fruit.",
+            "Watching films.",
+            "Seeing his family again.",
+            "Returning to work."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 A Day in Space",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "On a space station, every day begins by tying yourself out of the sleeping bag.",
+        "Because there is little gravity, the crew must stick their tools to the wall.",
+        "They warm their meals in bags and drink water through a tube.",
+        "Every astronaut exercises for about two hours so as to stay strong.",
+        "In their free time, many simply enjoy watching Earth turn below them."
+      ],
+      "translation_cn": "在空间站,每天从把自己从睡袋里解开开始;由于重力很小,机组要把工具固定在墙上;他们用袋子加热饭菜、用管子喝水;每位宇航员锻炼约两小时以保持强壮;闲暇时许多人只是欣赏脚下转动的地球。",
+      "questions": [
+        {
+          "stem": "How does an astronaut's day begin?",
+          "options": [
+            "By cooking a big breakfast.",
+            "By going for a run outside.",
+            "By calling home.",
+            "By tying out of the sleeping bag."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why must the crew stick their tools to the wall?",
+          "options": [
+            "There is little gravity.",
+            "The tools are too heavy.",
+            "The walls are sticky.",
+            "The captain orders it."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do they drink water?",
+          "options": [
+            "From an open cup.",
+            "Through a tube.",
+            "From a bottle they throw.",
+            "They do not drink water."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do astronauts exercise about two hours a day?",
+          "options": [
+            "Because they are bored.",
+            "To use up the food.",
+            "To stay strong in space.",
+            "To clean the station."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do many astronauts enjoy in their free time?",
+          "options": [
+            "Sleeping all day.",
+            "Playing loud music.",
+            "Cooking new meals.",
+            "Watching Earth turn below them."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Interviewing China's First Astronaut",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Host",
+          "text": "Mr Yang, when did you first dream of going into space?"
+        },
+        {
+          "speaker": "Yang",
+          "text": "To be honest, I never thought I would become an astronaut when I was young."
+        },
+        {
+          "speaker": "Host",
+          "text": "Really? So how were you chosen for the programme?"
+        },
+        {
+          "speaker": "Yang",
+          "text": "I trained as a fighter pilot for years, and then I was selected with a few others."
+        },
+        {
+          "speaker": "Host",
+          "text": "What kind of training did you have to do?"
+        },
+        {
+          "speaker": "Yang",
+          "text": "We had to learn to use space equipment and do a lot of mental and physical training."
+        },
+        {
+          "speaker": "Host",
+          "text": "And how did you feel during the flight in 2003?"
+        },
+        {
+          "speaker": "Yang",
+          "text": "I felt calm and proud to orbit Earth for my country."
+        }
+      ],
+      "translation_cn": "主持人采访杨利伟:他坦言年轻时从没想过会成为宇航员;先做了多年战斗机飞行员,后与少数人一同入选;训练包括学习使用太空设备和大量的心理与身体训练;2003年飞行时他感到平静而自豪,为祖国绕地球飞行。",
+      "questions": [
+        {
+          "stem": "Did Yang Liwei always expect to become an astronaut?",
+          "options": [
+            "No, he never thought he would when young.",
+            "Yes, since he was a small child.",
+            "Yes, his parents promised him.",
+            "No, he wanted to be a doctor."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was Yang's job before joining the space programme?",
+          "options": [
+            "A teacher.",
+            "A fighter pilot.",
+            "A farmer.",
+            "A doctor."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What training did he have to do?",
+          "options": [
+            "Only reading books.",
+            "Only flying planes.",
+            "Mental and physical training with space equipment.",
+            "No training at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When did Yang orbit Earth?",
+          "options": [
+            "In 1957.",
+            "In 1969.",
+            "In 1977.",
+            "In 2003."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did Yang feel during the flight?",
+          "options": [
+            "Calm and proud.",
+            "Bored and tired.",
+            "Angry and afraid.",
+            "Sad and lonely."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 The Journey to Mars",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many scientists dream of one day sending people to Mars.",
+        "Using the technology we have now, the trip there and back would take over two years.",
+        "The crew would need to carry enough food, water and oxygen for the whole journey.",
+        "Mars is a cold world with very thin air, so any small mistake could be fatal.",
+        "Even so, scientists are determined to keep trying until humans walk on the red planet."
+      ],
+      "translation_cn": "许多科学家梦想有朝一日把人送上火星;以现有技术,往返这趟旅程要花两年多;机组需要带上整段旅程所需的足够食物、水和氧气;火星寒冷、空气稀薄,任何小错误都可能致命;尽管如此,科学家决心一直努力,直到人类踏上这颗红色星球。",
+      "questions": [
+        {
+          "stem": "What do many scientists dream of?",
+          "options": [
+            "Stopping all space travel.",
+            "Sending people to Mars one day.",
+            "Living on the sun.",
+            "Building a city under the sea."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long would a return trip to Mars take with today's technology?",
+          "options": [
+            "A few hours.",
+            "About one week.",
+            "Over two years.",
+            "Ten years."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What must the crew carry for the journey?",
+          "options": [
+            "Only some books.",
+            "Just spare clothes.",
+            "Nothing special.",
+            "Enough food, water and oxygen."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why could a small mistake be fatal on Mars?",
+          "options": [
+            "Mars is cold with very thin air.",
+            "Mars is too crowded.",
+            "Mars is too bright.",
+            "Mars is too noisy."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the attitude of scientists?",
+          "options": [
+            "They have given up.",
+            "They are determined to keep trying.",
+            "They think it is useless.",
+            "They are afraid to start."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 At the Space Camp",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "I'm so excited! We're going to meet a real astronaut at the space camp."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Me too. I have so many questions to ask him."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Such as? What are you most curious about?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I'd love to know how astronauts sleep without floating around."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Good question. I'm most curious about what they eat up there."
+        },
+        {
+          "speaker": "Tom",
+          "text": "And I wonder what they do all day when there is no gravity."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Let's write our questions down so we don't forget them."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Great idea. This is going to be the best day of the whole year."
+        }
+      ],
+      "translation_cn": "Anna 和 Tom 兴奋地要在太空营见到真正的宇航员;Tom 有很多问题想问,最想知道宇航员如何在不漂浮的情况下睡觉;Anna 最好奇他们在太空吃什么;Tom 还想知道失重时他们整天做什么;两人决定把问题写下来以免忘记,觉得这将是全年最棒的一天。",
+      "questions": [
+        {
+          "stem": "Where are Anna and Tom going?",
+          "options": [
+            "To a football match.",
+            "To the cinema.",
+            "To a space camp to meet an astronaut.",
+            "To a farm."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Tom most curious about?",
+          "options": [
+            "How rockets are built.",
+            "How much money astronauts earn.",
+            "How old the captain is.",
+            "How astronauts sleep without floating."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Anna most curious about?",
+          "options": [
+            "What astronauts eat in space.",
+            "What clothes they wear.",
+            "How they fly the rocket.",
+            "How tall they are."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom wonder about life with no gravity?",
+          "options": [
+            "How they pay for food.",
+            "What astronauts do all day.",
+            "Where they buy tickets.",
+            "Why the camp is far."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do they decide to write their questions down?",
+          "options": [
+            "Because the teacher told them to.",
+            "To sell them later.",
+            "So they will not forget them.",
+            "Because they have no time."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 Advice for Future Astronauts",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "If you want to become an astronaut one day, here is some simple advice.",
+        "First, study science and maths hard, because you will need a related degree.",
+        "Second, keep your body strong and healthy by exercising every day.",
+        "Third, learn to stay calm, since astronauts must think clearly under pressure.",
+        "Most of all, never give up on your dream, no matter how hard the road may seem."
+      ],
+      "translation_cn": "如果你想有朝一日成为宇航员,这里有些简单建议:第一,努力学习理科和数学,因为你需要相关学位;第二,每天锻炼,保持身体强健;第三,学会保持冷静,因为宇航员必须在压力下清晰思考;最重要的是,无论道路多艰难,都别放弃梦想。",
+      "questions": [
+        {
+          "stem": "Who is this advice for?",
+          "options": [
+            "Only schoolteachers.",
+            "Only doctors.",
+            "People who dislike space.",
+            "People who want to become astronauts."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What subjects should you study hard?",
+          "options": [
+            "Science and maths.",
+            "Only art and music.",
+            "Only history.",
+            "No subjects at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How should you keep your body healthy?",
+          "options": [
+            "By eating very little.",
+            "By exercising every day.",
+            "By sleeping all day.",
+            "By staying indoors."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why must astronauts learn to stay calm?",
+          "options": [
+            "To save money.",
+            "To look brave.",
+            "They must think clearly under pressure.",
+            "To make friends."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the most important piece of advice?",
+          "options": [
+            "Buy a telescope.",
+            "Travel a lot.",
+            "Forget about science.",
+            "Never give up on your dream."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

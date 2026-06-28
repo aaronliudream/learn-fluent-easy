@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(太空探索主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Sam was a boy, he kept a small model rocket on his desk and promised himself he would build a real one. He studied physics for years so as to understand how spacecraft escape Earth's pull. Today he helps design satellites, proud that a childhood dream led him to a job among the stars.",
+    "questions": [
+      {
+        "q": "Why did Sam study physics for so many years?",
+        "options": [
+          "To learn how spacecraft break free from Earth's gravity.",
+          "To become a famous singer.",
+          "To buy a bigger model rocket.",
+          "To forget his childhood dream."
+        ],
+        "answer": "A",
+        "explanation": "原文 'so as to understand how spacecraft escape Earth's pull' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How does Sam feel about his work today?",
+        "options": [
+          "Bored and tired of space.",
+          "Proud that his early dream led to this job.",
+          "Sorry that he ever started.",
+          "Worried that he chose the wrong career."
+        ],
+        "answer": "B",
+        "explanation": "末句 'proud that a childhood dream led him to a job among the stars'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

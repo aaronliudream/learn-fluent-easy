@@ -1,0 +1,362 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Festivals and Celebrations",
+  "source": "人教版2019必修三 Unit 1 同主题阅读(节日的意义/丰收节/春节/里约狂欢节/番茄节/那达慕)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Why Do We Celebrate Festivals?",
+      "topic_cn": "说明·节日的起源与意义",
+      "body": "Festivals are celebrated all around the world, and they have a wide range of origins. Some come from the seasons of the year, some from religion, and others from famous figures or important events. Every festival has its own customs and unique charm. Yet no matter how different they may seem, the spirit of sharing joy, gratitude, love or peace is common to almost all of them. Festivals are an important part of society because they reflect people's wishes, beliefs and attitudes towards life. They are happy occasions that allow us to relax, spend time with our families and forget about work for a little while. Studying festivals also helps us understand where we came from and who we are. In fact, if you look closely at the festivals of different cultures, you may be surprised to discover how much people everywhere actually have in common.",
+      "vocab_notes": [
+        {
+          "word": "origin",
+          "cn": "起源"
+        },
+        {
+          "word": "charm",
+          "cn": "魅力"
+        },
+        {
+          "word": "gratitude",
+          "cn": "感激"
+        },
+        {
+          "word": "reflect",
+          "cn": "反映"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, where do festivals come from?",
+          "options": [
+            "From a wide variety of sources such as seasons and religion.",
+            "Only from religious beliefs.",
+            "Only from the change of the seasons.",
+            "From modern shopping habits."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a wide range of origins... seasons... religion... famous figures or important events' 的概括转述。"
+        },
+        {
+          "stem": "What do almost all festivals share, according to the writer?",
+          "options": [
+            "The same date every year.",
+            "A spirit of sharing positive feelings like joy and gratitude.",
+            "Exactly the same customs.",
+            "A focus on making money."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the spirit of sharing joy, gratitude, love or peace is common' 的转述。"
+        },
+        {
+          "stem": "What may surprise people who study festivals carefully?",
+          "options": [
+            "That different cultures share a great deal in common.",
+            "That festivals are dying out.",
+            "That no two cultures are alike.",
+            "That festivals have no real meaning."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'how much people everywhere actually have in common' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Harvest Festivals Around the World",
+      "topic_cn": "说明·世界各地的丰收节",
+      "body": "Of all the traditional festivals, the harvest festival can be found in almost every culture. This important agricultural festival takes place after all the crops have been gathered in. People celebrate to show that they are grateful for the year's supply of food. In ancient Egypt, the harvest festival was held during the springtime, which was the Egyptian harvest season. It featured a colourful parade and a great feast with music, dancing and sports. Today, in some European countries, people decorate their churches and town halls with flowers and fruit, and then get together to celebrate over a shared meal. In China, the Mid-Autumn Festival has a similar spirit. On that night, families gather to admire the bright round moon and enjoy delicious mooncakes. Although the customs differ from place to place, the idea behind every harvest festival is the same: to give thanks for nature's gifts and to share happiness with the people we love.",
+      "vocab_notes": [
+        {
+          "word": "harvest",
+          "cn": "收获"
+        },
+        {
+          "word": "crop",
+          "cn": "庄稼"
+        },
+        {
+          "word": "decorate",
+          "cn": "装饰"
+        },
+        {
+          "word": "feast",
+          "cn": "盛宴"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When does a harvest festival usually take place?",
+          "options": [
+            "Before the seeds are planted.",
+            "Once the crops have all been collected.",
+            "In the middle of winter.",
+            "Only during a wedding."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'takes place after all the crops have been gathered in' 的转述。"
+        },
+        {
+          "stem": "How did ancient Egyptians mark their harvest festival?",
+          "options": [
+            "By lighting firecrackers in winter.",
+            "By staying quietly at home.",
+            "With a parade and a large feast in spring.",
+            "By guessing riddles at a lantern fair."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'held during the springtime... featured a colourful parade and a great feast' 的转述。"
+        },
+        {
+          "stem": "What does the writer say is the same about every harvest festival?",
+          "options": [
+            "The exact food that is eaten.",
+            "The country where it is held.",
+            "The date on which it falls.",
+            "The aim of giving thanks and sharing happiness."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'to give thanks for nature's gifts and to share happiness' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Spring Festival at Home",
+      "topic_cn": "记叙·一家人的春节",
+      "body": "For my family, the most important festival of the year is the Spring Festival. The celebration really begins on the eve of the Lunar New Year, when every family member, no matter how far away, tries to come home. My grandmother spends the whole day cooking, and the kitchen fills with tempting smells. In the evening we sit around one big table and share a special dinner. After the meal, my parents and relatives give the children lucky money in bright red envelopes, which always makes us cheer. In the past, people would light firecrackers to drive away evil spirits and welcome the new year, and the noise lasted all night long. Nowadays, many cities no longer allow firecrackers in order to avoid air pollution, so instead we watch shows on television and chat together. To be honest, the food and the fireworks matter less to me than the simple joy of having everyone in one room again.",
+      "vocab_notes": [
+        {
+          "word": "eve",
+          "cn": "前夕"
+        },
+        {
+          "word": "envelope",
+          "cn": "信封"
+        },
+        {
+          "word": "evil",
+          "cn": "邪恶的"
+        },
+        {
+          "word": "pollution",
+          "cn": "污染"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When does the family's Spring Festival celebration begin?",
+          "options": [
+            "On the night before the Lunar New Year.",
+            "A whole month after the new year.",
+            "Only on the morning of New Year's Day.",
+            "During the summer holidays."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'begins on the eve of the Lunar New Year' 的转述。"
+        },
+        {
+          "stem": "Why do many cities now ban firecrackers?",
+          "options": [
+            "Because they are too expensive.",
+            "To reduce air pollution.",
+            "Because no one likes them.",
+            "Because the law forgot about them."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'no longer allow firecrackers in order to avoid air pollution' 的转述。"
+        },
+        {
+          "stem": "What matters most to the writer about the festival?",
+          "options": [
+            "The amount of lucky money.",
+            "The loud sound of firecrackers.",
+            "Being together with the whole family.",
+            "The shows shown on television."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'the simple joy of having everyone in one room again' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Rio Carnival",
+      "topic_cn": "说明·里约狂欢节",
+      "body": "The Rio Carnival in Brazil is one of the biggest and most colourful celebrations on Earth. Every year, just before the quiet season in the Christian calendar, the city of Rio fills with music, dancing and laughter. People dress up in bright carnival costumes and march along the streets, while samba dancers move to the beat in front of huge cheering crowds. The most famous part of the carnival is the samba parade, in which different groups compete to give the most amazing performance. Months of hard work go into the costumes and the dances, so for the dancers this single night is the result of a whole year's effort. Visitors come from all over the world to enjoy the relaxing yet exciting atmosphere. For many of them, walking among the dancing crowds and feeling the energy of the music is an experience they will never forget. The carnival shows how a festival can bring strangers together to share pure joy.",
+      "vocab_notes": [
+        {
+          "word": "carnival",
+          "cn": "狂欢节"
+        },
+        {
+          "word": "costume",
+          "cn": "服装"
+        },
+        {
+          "word": "samba",
+          "cn": "桑巴舞"
+        },
+        {
+          "word": "march",
+          "cn": "行进"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the most famous part of the Rio Carnival?",
+          "options": [
+            "A quiet church service.",
+            "A firework display over the river.",
+            "A harvest feast in a town hall.",
+            "The samba parade where groups compete."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'The most famous part... is the samba parade, in which different groups compete' 的转述。"
+        },
+        {
+          "stem": "Why is a single carnival night so important to the dancers?",
+          "options": [
+            "Because it represents a whole year of preparation.",
+            "Because it is the cheapest night of the year.",
+            "Because no one is watching them.",
+            "Because they can finally rest at home."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the result of a whole year's effort' 的转述。"
+        },
+        {
+          "stem": "What does the carnival show, according to the writer?",
+          "options": [
+            "That festivals are a waste of time.",
+            "That a festival can unite strangers in shared joy.",
+            "That only locals can take part.",
+            "That dancing is dangerous."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'bring strangers together to share pure joy' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "La Tomatina: The Tomato Fight",
+      "topic_cn": "说明·西班牙番茄节",
+      "body": "La Tomatina is one of the strangest food festivals in the world. It takes place in the small Spanish town of Buñol every August. You might expect a food festival to be about eating, but this one is different, because nobody actually eats the tomatoes. Instead, the people throw them at one another! On the day of the festival, trucks full of soft tomatoes arrive in the town square, and at a given signal the great fight begins. The number of people taking part can reach up to twenty thousand, and the battle lasts for a whole exciting hour. When the signal sounds again, everyone stops at once. The most surprising thing is how clean the town looks afterwards. This is because the juice from the tomatoes is slightly acidic, which actually helps to clean the streets and walls. So although the fight looks messy, the town ends up cleaner than before, and everyone goes home tired but laughing.",
+      "vocab_notes": [
+        {
+          "word": "signal",
+          "cn": "信号"
+        },
+        {
+          "word": "battle",
+          "cn": "战斗"
+        },
+        {
+          "word": "acidic",
+          "cn": "酸性的"
+        },
+        {
+          "word": "messy",
+          "cn": "凌乱的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is unusual about this food festival?",
+          "options": [
+            "Only children may join in.",
+            "It is held in the middle of winter.",
+            "People throw the food instead of eating it.",
+            "No food is brought to the town at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'nobody actually eats the tomatoes... they throw them at one another' 的转述。"
+        },
+        {
+          "stem": "How long does the tomato fight last?",
+          "options": [
+            "A whole day.",
+            "Just a few seconds.",
+            "Three days and nights.",
+            "Around sixty minutes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'lasts for a whole exciting hour' 的转述。"
+        },
+        {
+          "stem": "Why is the town so clean after the fight?",
+          "options": [
+            "Because the tomato juice helps clean the surfaces.",
+            "Because the tomatoes are washed first.",
+            "Because few people take part.",
+            "Because it always rains afterwards."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the juice... helps to clean the streets and walls' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "My Naadam Experience",
+      "topic_cn": "记叙·那达慕节体验",
+      "body": "Last summer I experienced the Naadam Festival in Inner Mongolia for the first time. The word \"Naadam\" means \"games\", and the festival is built around three events: horse racing, wrestling and archery. On the first morning, my friend Burin and I set off early. Everywhere I looked, I saw people wearing fancy Mongolian robes; some were feeding their horses while others chatted or took photographs. After the opening ceremony, the wrestling began. Mongolian wrestling has no rounds and no weight classes, and a wrestler loses the moment any part of his body above the knee touches the ground. Before each match, the competitors danced onto the field, waving their arms like eagles, and I was deeply moved by their strength and grace. I enjoyed the archery too, but the horse races were my favourite. I was surprised to learn that the young riders were boys and girls, chosen because lighter riders let the horses run faster. Celebrating Naadam with a local friend was an unforgettable experience.",
+      "vocab_notes": [
+        {
+          "word": "wrestle",
+          "cn": "摔跤"
+        },
+        {
+          "word": "grace",
+          "cn": "优雅"
+        },
+        {
+          "word": "archery",
+          "cn": "射箭"
+        },
+        {
+          "word": "set off",
+          "cn": "出发"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Which three events make up the Naadam Festival?",
+          "options": [
+            "Singing, dancing and cooking.",
+            "Racing on horses, wrestling and shooting with bows.",
+            "Football, swimming and running.",
+            "Guessing riddles, eating and shopping."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'three events: horse racing, wrestling and archery' 的转述。"
+        },
+        {
+          "stem": "When does a Mongolian wrestler lose a match?",
+          "options": [
+            "When the round time runs out.",
+            "When he weighs too much.",
+            "As soon as he touches the ground with any part above his knee.",
+            "When he stops singing."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'loses the moment any part of his body above the knee touches the ground' 的转述。"
+        },
+        {
+          "stem": "Why are the horse riders usually children?",
+          "options": [
+            "Because adults are not allowed.",
+            "Because children own the horses.",
+            "Because there are no adults in the area.",
+            "Because lighter riders help the horses run faster."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'chosen because lighter riders let the horses run faster' 的转述。"
+        }
+      ]
+    }
+  ]
+}

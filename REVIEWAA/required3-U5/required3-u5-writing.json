@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "A Sensible Attitude to Money(理性的金钱观:如何管理零花钱)",
+  "title_en": "How to Manage Your Pocket Money Wisely",
+  "genre": "议论文 / 建议信(argue for a sensible attitude to money + give advice on managing pocket money)",
+  "source": "人教版2019必修三 Unit 5 主题写作:议论/建议——养成理性的金钱观,合理管理零花钱(分配/储蓄/慈善/不以财取人)。",
+  "prompt_cn": "假设你叫李华,校刊正在征集关于「如何聪明地管理零花钱」的稿件。请用英语写一篇约100词的短文,内容包括:① 用一句话表明你对金钱的看法(金钱是好仆人,不应成为主人);② 给出两三条管理零花钱的具体建议(如分配/储蓄/捐赠);③ 总结理性用钱的意义。注意:观点鲜明、条理清楚、恰当使用情态动词(should/ought to/must 等)。",
+  "prompt_en": "Suppose you are Li Hua. Your school magazine is collecting articles on \"How to manage your pocket money wisely\". Write a short passage (about 100 words) including: 1) one sentence stating your view of money (money is a good servant, not a master); 2) two or three pieces of practical advice on managing pocket money (e.g. dividing it, saving, giving to charity); 3) a short conclusion on why a sensible attitude to money matters. Use modal verbs (should / ought to / must) properly.",
+  "points": [
+    "亮明观点(Money is a good servant but a bad master, so we should …)",
+    "建议1 分配/储蓄(We ought to divide our pocket money and save part of it)",
+    "建议2 慈善/不乱花(We should give a little to those in need and must not waste it)",
+    "总结意义(A sensible attitude to money helps us …)恰当用情态动词"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "As an old saying goes, money is a good servant but a bad master. I believe that we should control our money, and never let it control us. So how can teenagers manage their pocket money wisely? First, we ought to divide it into three parts: one to spend on real needs, one to save for the future, and one to give to those in need. Second, we must not waste money on things we do not really want. We had better wait a day before buying anything new. A sensible attitude to money helps us learn patience and care for others, and it will serve us well for the rest of our lives.",
+  "model_translation": "正如一句老话所说,金钱是好仆人却是坏主人。我认为我们应当掌控金钱,而绝不能让它掌控我们。那么青少年该如何聪明地管理零花钱呢?首先,我们应当把它分成三部分:一部分用于真正的需要,一部分为将来储蓄,一部分捐给有需要的人。其次,我们绝不能把钱浪费在并非真正想要的东西上;买新东西前最好先等上一天。理性的金钱观能帮我们学会耐心、懂得关心他人,并将让我们受益终生。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:亮明金钱观 / 两三条管理建议 / 总结意义" },
+      { "dimension": "结构", "max": 4, "criteria": "观点—建议—结论层次清楚、过渡自然(First / Second / In short)、句句相关" },
+      { "dimension": "语言", "max": 5, "criteria": "情态动词(should/ought to/must)运用得当、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "亮明观点 Money is a good servant but a bad master, so we should …",
+      "建议1 First, we ought to divide it into three parts …",
+      "建议2 Second, we must not waste money … We had better …",
+      "总结 A sensible attitude to money helps us … and will serve us well."
+    ],
+    "key_expressions": [
+      "Money is a good servant but a bad master.",
+      "We ought to divide our pocket money into three parts.",
+      "We must not waste money on things we do not really need.",
+      "A sensible attitude to money will serve us well for the rest of our lives."
+    ],
+    "useful_words": ["pocket money", "servant", "master", "divide", "save", "charity", "waste", "sensible", "patience", "control"]
+  },
+  "high_sentences": [
+    "As an old saying goes, money is a good servant but a bad master.",
+    "We ought to divide it into three parts: one to spend, one to save, and one to give.",
+    "We must not waste money on things we do not really want.",
+    "A sensible attitude to money helps us learn patience and care for others."
+  ],
+  "error_pairs": [
+    { "wrong": "We should to save part of it.", "correct": "We should save part of it.", "note": "情态动词 should 后直接跟动词原形,不加 to。" },
+    { "wrong": "We must not to waste money.", "correct": "We must not waste money.", "note": "must not 后接动词原形,不加 to。" },
+    { "wrong": "Money are a good servant.", "correct": "Money is a good servant.", "note": "money 是不可数名词,谓语用单数 is。" }
+  ],
+  "paragraph_template": "【理财议论/建议结构】\n第1句 亮明观点:As an old saying goes, money is a good servant but a bad master, so we should …\n第2-4句 建议:First, we ought to divide it … Second, we must not waste … We had better …\n第5句 总结:A sensible attitude to money helps us … and will serve us well for life."
+}

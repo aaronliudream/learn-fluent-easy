@@ -1,0 +1,401 @@
+[
+ {
+  "word": "cheese",
+  "ipa": "tSi:z",
+  "cn": "干酪；奶酪",
+  "propn": false,
+  "raw": "cheese /tSi:z/ n. 干酪；奶酪"
+ },
+ {
+  "word": "china",
+  "ipa": "tSaIn@",
+  "cn": "瓷；瓷器",
+  "propn": false,
+  "raw": "china /tSaIn@/ n. 瓷；瓷器"
+ },
+ {
+  "word": "chip",
+  "ipa": "tSIp",
+  "cn": "英）炸土豆条；（美）炸薯片；芯片；碎片",
+  "propn": false,
+  "raw": "chip /tSIp/ n. （英）炸土豆条；（美）炸薯片；芯片；碎片"
+ },
+ {
+  "word": "claim",
+  "ipa": "kleIm",
+  "cn": "夺取（生命）；宣称；断言",
+  "propn": false,
+  "raw": "claim /kleIm/ vt. & n. 夺取（生命）；宣称；断言"
+ },
+ {
+  "word": "climate",
+  "ipa": "klaIm@t",
+  "cn": "气候",
+  "propn": false,
+  "raw": "climate /klaIm@t/ n. 气候"
+ },
+ {
+  "word": "clothing",
+  "ipa": "",
+  "cn": "衣服；服装",
+  "propn": false,
+  "raw": "clothing // n. 衣服；服装"
+ },
+ {
+  "word": "collection",
+  "ipa": "k@lekn",
+  "cn": "作品集；收集物；收藏品",
+  "propn": false,
+  "raw": "collection /k@lekn/ n. 作品集；收集物；收藏品"
+ },
+ {
+  "word": "comic",
+  "ipa": "",
+  "cn": "连环画杂志；漫画杂志；喜剧演员 adj. 滑稽的；使人发笑的",
+  "propn": false,
+  "raw": "comic // n. 连环画杂志；漫画杂志；喜剧演员 adj. 滑稽的；使人发笑的"
+ },
+ {
+  "word": "construction",
+  "ipa": "",
+  "cn": "建筑；建造；建造物；（句子、短语等的）结构",
+  "propn": false,
+  "raw": "construction // n. 建筑；建造；建造物；（句子、短语等的）结构"
+ },
+ {
+  "word": "contain",
+  "ipa": "k@nteIn",
+  "cn": "包含；含有；容纳",
+  "propn": false,
+  "raw": "contain /k@nteIn/ vt. 包含；含有；容纳"
+ },
+ {
+  "word": "definitely",
+  "ipa": "defIn@tli",
+  "cn": "肯定；确实",
+  "propn": false,
+  "raw": "definitely /defIn@tli/ adv. 肯定；确实"
+ },
+ {
+  "word": "diagram",
+  "ipa": "daI@gr{m",
+  "cn": "简图；图解；图表；示意图",
+  "propn": false,
+  "raw": "diagram /daI@gr{m/ n. 简图；图解；图表；示意图"
+ },
+ {
+  "word": "districtdstrkt n. 地区；区域",
+  "ipa": "",
+  "cn": "地区；区域",
+  "propn": false,
+  "raw": "districtdstrkt n. 地区；区域"
+ },
+ {
+  "word": "diverse",
+  "ipa": "s",
+  "cn": "不同的；多种多样的",
+  "propn": false,
+  "raw": "diverse /s/ adj. 不同的；多种多样的"
+ },
+ {
+  "word": "diversity  n. 差异（性）；不同（点）；多样性",
+  "ipa": "",
+  "cn": "差异（性）；不同（点）；多样性",
+  "propn": false,
+  "raw": "diversity  n. 差异（性）；不同（点）；多样性"
+ },
+ {
+  "word": "downtown",
+  "ipa": "%daUntaUn",
+  "cn": "在市中心；往市中心",
+  "propn": false,
+  "raw": "downtown /%daUntaUn/ adv. 在市中心；往市中心"
+ },
+ {
+  "word": "earn",
+  "ipa": "n",
+  "cn": "挣得；赚得；赢得；博得",
+  "propn": false,
+  "raw": "earn /n/ vt. & vi. 挣得；赚得；赢得；博得"
+ },
+ {
+  "word": "earn a living",
+  "ipa": "",
+  "cn": "谋生",
+  "propn": false,
+  "raw": "earn a living 谋生"
+ },
+ {
+  "word": "escape",
+  "ipa": "IskeIp",
+  "cn": "逃走；逃脱；避开 n. 逃跑；逃脱；解脱",
+  "propn": false,
+  "raw": "escape /IskeIp/ vi. & vt. 逃走；逃脱；避开 n. 逃跑；逃脱；解脱"
+ },
+ {
+  "word": "ethnic",
+  "ipa": "eTnIk",
+  "cn": "具有民族特色的；异国风味的；民族的；种族的",
+  "propn": false,
+  "raw": "ethnic /eTnIk/ adj. 具有民族特色的；异国风味的；民族的；种族的"
+ },
+ {
+  "word": "financial",
+  "ipa": "faIn{nSl",
+  "cn": "财政的；财务的；金融的",
+  "propn": false,
+  "raw": "financial /faIn{nSl/ adj. 财政的；财务的；金融的"
+ },
+ {
+  "word": "fold",
+  "ipa": "f@Uld",
+  "cn": "包；裹；折叠 vt. & vi.（可）折小；（可）叠平",
+  "propn": false,
+  "raw": "fold /f@Uld/ vt. 包；裹；折叠 vt. & vi.（可）折小；（可）叠平"
+ },
+ {
+  "word": "fortune",
+  "ipa": "fO:tSu:n; NAmE fO:rtS@n",
+  "cn": "机会；运气",
+  "propn": false,
+  "raw": "fortune /fO:tSu:n; NAmE fO:rtS@n/ n. 机会；运气"
+ },
+ {
+  "word": "fortune cookie",
+  "ipa": "",
+  "cn": "幸运曲奇",
+  "propn": false,
+  "raw": "fortune cookie 幸运曲奇"
+ },
+ {
+  "word": "graffiti",
+  "ipa": "",
+  "cn": "涂鸦；胡写乱画",
+  "propn": false,
+  "raw": "graffiti // n.［pl.］涂鸦；胡写乱画"
+ },
+ {
+  "word": "gumbo",
+  "ipa": "gVmb@U",
+  "cn": "秋葵汤（用秋葵荚做的浓鸡汤或海鲜汤）",
+  "propn": false,
+  "raw": "gumbo /gVmb@U/ n. 秋葵汤（用秋葵荚做的浓鸡汤或海鲜汤）"
+ },
+ {
+  "word": "head to（朝……）前进；（向……）去",
+  "ipa": "",
+  "cn": "朝……）前进；（向……）去",
+  "propn": false,
+  "raw": "head to（朝……）前进；（向……）去"
+ },
+ {
+  "word": "herbal",
+  "ipa": "",
+  "cn": "药草的；香草的",
+  "propn": false,
+  "raw": "herbal // adj. 药草的；香草的"
+ },
+ {
+  "word": "historical",
+  "ipa": "hIstQrIkl",
+  "cn": "有关）历史的",
+  "propn": false,
+  "raw": "historical /hIstQrIkl/ adj.（有关）历史的"
+ },
+ {
+  "word": "immigrant",
+  "ipa": "ImIgr@nt",
+  "cn": "外来）移民；外侨",
+  "propn": false,
+  "raw": "immigrant /ImIgr@nt/ n.（外来）移民；外侨"
+ },
+ {
+  "word": "item",
+  "ipa": "aItm",
+  "cn": "项目；一件商品（或物品）； 一条（新闻）",
+  "propn": false,
+  "raw": "item /aItm/ n. 项目；一件商品（或物品）； 一条（新闻）"
+ },
+ {
+  "word": "jeans",
+  "ipa": "dZi:nz",
+  "cn": "牛仔裤",
+  "propn": false,
+  "raw": "jeans /dZi:nz/ n. 牛仔裤"
+ },
+ {
+  "word": "journal",
+  "ipa": "dZ3:nl",
+  "cn": "日志；日记；报纸；刊物",
+  "propn": false,
+  "raw": "journal /dZ3:nl/ n. 日志；日记；报纸；刊物"
+ },
+ {
+  "word": "material",
+  "ipa": "m@tI@ri@l",
+  "cn": "材料；布料；素材 adj. 物质的；实际的",
+  "propn": false,
+  "raw": "material /m@tI@ri@l/ n. 材料；布料；素材 adj. 物质的；实际的"
+ },
+ {
+  "word": "mild",
+  "ipa": "",
+  "cn": "温和的；和善的；轻微的",
+  "propn": false,
+  "raw": "mild // adj. 温和的；和善的；轻微的"
+ },
+ {
+  "word": "minority",
+  "ipa": "",
+  "cn": "少数民族；少数派；少数人",
+  "propn": false,
+  "raw": "minority // n. 少数民族；少数派；少数人"
+ },
+ {
+  "word": "mission n. 传教（区）；任务；使命",
+  "ipa": "",
+  "cn": "传教（区）；任务；使命",
+  "propn": false,
+  "raw": "mission n. 传教（区）；任务；使命"
+ },
+ {
+  "word": "mushroom",
+  "ipa": "mrm",
+  "cn": "蘑菇；蕈",
+  "propn": false,
+  "raw": "mushroom /mrm/ n. 蘑菇；蕈"
+ },
+ {
+  "word": "nachos",
+  "ipa": "n{tS@Uz",
+  "cn": "墨西哥玉米片",
+  "propn": false,
+  "raw": "nachos /n{tS@Uz/ n.［pl.］墨西哥玉米片"
+ },
+ {
+  "word": "neat",
+  "ipa": "ni:t",
+  "cn": "极好的；整洁的；整齐的",
+  "propn": false,
+  "raw": "neat /ni:t/ adj. 极好的；整洁的；整齐的"
+ },
+ {
+  "word": "occur",
+  "ipa": "@k3:(r)",
+  "cn": "发生；出现",
+  "propn": false,
+  "raw": "occur /@k3:(r)/ vi. 发生；出现"
+ },
+ {
+  "word": "percentage",
+  "ipa": "p@sentIdZ",
+  "cn": "百分率；百分比",
+  "propn": false,
+  "raw": "percentage /p@sentIdZ/ n. 百分率；百分比"
+ },
+ {
+  "word": "poetry",
+  "ipa": "p@U@tri",
+  "cn": "诗集；诗歌；诗作",
+  "propn": false,
+  "raw": "poetry /p@U@tri/ n. 诗集；诗歌；诗作"
+ },
+ {
+  "word": "poison",
+  "ipa": "pOIzn",
+  "cn": "毒物；毒药；毒素 vt. 毒死；毒害",
+  "propn": false,
+  "raw": "poison /pOIzn/ n. 毒物；毒药；毒素 vt. 毒死；毒害"
+ },
+ {
+  "word": "poisonous",
+  "ipa": "",
+  "cn": "引起中毒的；有毒的；分泌毒素的",
+  "propn": false,
+  "raw": "poisonous // adj. 引起中毒的；有毒的；分泌毒素的"
+ },
+ {
+  "word": "seek",
+  "ipa": "si:k",
+  "cn": "寻找；寻求",
+  "propn": false,
+  "raw": "seek /si:k/ vt. & vi. （sought /sO:t/, sought） 寻找；寻求"
+ },
+ {
+  "word": "seek one’s fortune 寻找成功致富之路；闯世界",
+  "ipa": "",
+  "cn": "寻找成功致富之路；闯世界",
+  "propn": false,
+  "raw": "seek one’s fortune 寻找成功致富之路；闯世界"
+ },
+ {
+  "word": "select",
+  "ipa": "sIlekt",
+  "cn": "选择；挑选；选拔",
+  "propn": false,
+  "raw": "select /sIlekt/ vt. 选择；挑选；选拔"
+ },
+ {
+  "word": "series",
+  "ipa": "sI@ri:z",
+  "cn": "一系列；连续；接连",
+  "propn": false,
+  "raw": "series /sI@ri:z/ n. 一系列；连续；接连"
+ },
+ {
+  "word": "series of",
+  "ipa": "",
+  "cn": "一系列或一连串（事件）",
+  "propn": false,
+  "raw": "series of 一系列或一连串（事件）"
+ },
+ {
+  "word": "settle",
+  "ipa": "setl",
+  "cn": "解决（分歧）；确定；安排好 vi. 和解；定居",
+  "propn": false,
+  "raw": "settle /setl/ vt. 解决（分歧）；确定；安排好 vi. 和解；定居"
+ },
+ {
+  "word": "souvenir",
+  "ipa": "",
+  "cn": "纪念物；纪念品",
+  "propn": false,
+  "raw": "souvenir // n. 纪念物；纪念品"
+ },
+ {
+  "word": "spicy",
+  "ipa": "spaIsi",
+  "cn": "加有香料的；辛辣的",
+  "propn": false,
+  "raw": "spicy /spaIsi/ adj. 加有香料的；辛辣的"
+ },
+ {
+  "word": "suit",
+  "ipa": "su:t; BrE also sju:t",
+  "cn": "西服；套装 vt. 适合；满足……需要；相配；合身",
+  "propn": false,
+  "raw": "suit /su:t; BrE also sju:t/ n. 西服；套装 vt. 适合；满足……需要；相配；合身"
+ },
+ {
+  "word": "super",
+  "ipa": "su:p@(r); BrE also sju:p@(r)",
+  "cn": "顶好的；超级的",
+  "propn": false,
+  "raw": "super /su:p@(r); BrE also sju:p@(r)/ adj. 顶好的；超级的"
+ },
+ {
+  "word": "tai chi",
+  "ipa": "%ta ti",
+  "cn": "太极拳",
+  "propn": false,
+  "raw": "tai chi /%ta ti/ (also t’ai chi)  太极拳"
+ },
+ {
+  "word": "to name but a few",
+  "ipa": "",
+  "cn": "仅举几例",
+  "propn": false,
+  "raw": "to name but a few 仅举几例"
+ }
+]

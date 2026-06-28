@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Write a Story Praising a Moral Act(写一篇记叙文/表扬信,赞扬一次善举或一位有美德的人)",
+  "title_en": "An Act of Kindness I Will Never Forget",
+  "genre": "记叙文 / 表扬信(narrate a moral act and praise the person of virtue)",
+  "source": "人教版2019必修三 Unit 2 Reading for Writing 主题延伸:write a story or a letter praising a moral act or a person of virtue(记叙一次善举,赞扬其美德,用现在分词作状语)。",
+  "prompt_cn": "假设你叫李华。上周你亲眼见到(或亲身经历了)一次令你感动的善举。请用英语写一篇约100词的记叙短文(或写给校报的表扬信),内容包括:① 事情发生的时间、地点和背景;② 这个人做了什么(按顺序讲清经过);③ 这件事为什么让你感动,以及它体现了怎样的美德。注意:恰当使用现在分词(V-ing)作状语,如 Seeing the old man fall, …。",
+  "prompt_en": "Suppose you are Li Hua. Last week you saw (or experienced) a moral act that moved you. Write a short story (about 100 words), or a letter of praise to the school newspaper, including: 1) when, where and the background of the event; 2) what the person did, told step by step; 3) why it moved you and what virtue it showed. Try to use the present participle (V-ing) as an adverbial, e.g. 'Seeing the old man fall, …'.",
+  "points": [
+    "交代时间地点背景(Last Friday, on my way home, …)",
+    "按顺序讲清经过(First … Then … Finally …)",
+    "点明感动之处与体现的美德(What moved me most was … / It showed great kindness)",
+    "恰当使用现在分词作状语(Seeing …, / Hearing …, / smiling happily)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Last Friday, on my way home, I saw something I will never forget. An old man suddenly tripped over a stone and fell to the ground, dropping his bags. Most people just walked past. But a young girl, seeing the old man fall, ran over at once. Kneeling beside him, she gently helped him up and picked up his things. Then she walked him to a bench, smiling warmly all the way. When the old man tried to thank her with money, she refused, asking him only to help someone else one day. What moved me most was her quiet kindness. Her small act showed me that true virtue lies in caring for strangers.",
+  "model_translation": "上周五,在回家的路上,我看到了一件我永远不会忘记的事。一位老人突然被一块石头绊倒,摔在地上,东西也撒了一地。大多数人只是走过。但一个年轻女孩看到老人摔倒,立刻跑了过去。她跪在他身旁,轻轻扶他起来,捡起他的东西。然后她一路微笑着把他送到长椅上。当老人想给她钱表示感谢时,她拒绝了,只请他将来去帮助别人。最打动我的是她那份默默的善良。她小小的举动让我明白,真正的美德在于关心陌生人。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:背景 / 经过(分步) / 感动之处与美德" },
+      { "dimension": "结构", "max": 4, "criteria": "记叙顺序清楚、时间线连贯、首尾呼应、过渡自然" },
+      { "dimension": "语言", "max": 5, "criteria": "现在分词作状语运用得当、时态正确、词汇句型准确多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "背景 Last Friday, on my way home, …",
+      "起因 An old man tripped over a stone and fell, dropping his bags.",
+      "经过 Seeing the old man fall, a girl ran over. Kneeling beside him, she helped him up.",
+      "感动与美德 What moved me most was her quiet kindness. Her act showed true virtue."
+    ],
+    "key_expressions": [
+      "Seeing the old man fall, a young girl ran over at once.",
+      "Kneeling beside him, she gently helped him up.",
+      "She walked him to a bench, smiling warmly all the way.",
+      "What moved me most was her quiet kindness."
+    ],
+    "useful_words": ["kindness", "virtue", "trip over", "fall", "help up", "moved", "refuse", "stranger", "moral", "smile"]
+  },
+  "high_sentences": [
+    "Seeing the old man fall, a young girl ran over at once.",
+    "Kneeling beside him, she gently helped him up and picked up his things.",
+    "She walked him to a bench, smiling warmly all the way.",
+    "What moved me most was her quiet kindness, which showed true virtue."
+  ],
+  "error_pairs": [
+    { "wrong": "See the old man fall, the girl ran over.", "correct": "Seeing the old man fall, the girl ran over.", "note": "现在分词作状语要用 V-ing 形式,逻辑主语 = 主句主语 girl。" },
+    { "wrong": "She sat there and smiled, helping him to feel calm.", "correct": "She sat there, smiling, which helped him to feel calm.", "note": "伴随动作用现在分词 smiling 作状语更地道。" },
+    { "wrong": "What moved me most were her quiet kindness.", "correct": "What moved me most was her quiet kindness.", "note": "what 引导的主语从句作单数,谓语用 was。" }
+  ],
+  "paragraph_template": "【赞扬善举记叙文结构】\n第1句 背景:Last Friday, on my way home, I saw something I will never forget.\n第2句 起因:An old man tripped over a stone and fell, dropping his bags.\n第3-5句 经过:Seeing the old man fall, a girl ran over. Kneeling beside him, she helped him up. Then she walked him to a bench, smiling warmly.\n第6-7句 感动与美德:What moved me most was her quiet kindness. Her small act showed true virtue."
+}

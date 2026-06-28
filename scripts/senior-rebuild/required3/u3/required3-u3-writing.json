@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Introduce a Place with a Diverse Culture(介绍一个文化多元的地方)",
+  "title_en": "A Place of Diverse Cultures",
+  "genre": "说明文 / 介绍(introduce a culturally diverse place: location, history, people, food, attractions)",
+  "source": "人教版2019必修三 Unit 3 Reading for Writing:describe a place with a distinctive cultural identity(介绍一个有独特文化身份的城市/地区,含位置、历史、人口与民族、美食、名胜)。",
+  "prompt_cn": "假设你是李华,一位外国笔友想了解一个文化多元的地方。请用英语写一篇约100词的介绍文,内容包括:① 这个地方在哪里、有怎样的历史;② 这里住着哪些不同的人/民族,有什么特色美食;③ 有哪些值得一看的名胜或活动,并说明为什么文化多元是它的魅力所在。注意:信息具体、条理清楚、有恰当的开头和结尾。",
+  "prompt_en": "Suppose you are Li Hua. A foreign pen-friend wants to learn about a culturally diverse place. Write an introduction (about 100 words) including: 1) where the place is and a little of its history; 2) the different people or ethnic groups who live there and a special food; 3) some attractions or activities worth seeing, and why its diversity makes it special. Be specific, well-organised, with a clear beginning and conclusion.",
+  "points": [
+    "位置与历史(… is located in … / has a long history of …)",
+    "人口与民族 + 特色美食(People here come from … / is home to … ethnic groups / famous for …)",
+    "名胜与活动(Famous sites include … / Visitors can …)",
+    "总结魅力(Its cultural diversity makes it a wonderful place to visit.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Chinatown in San Francisco is one of the most diverse places I know. Located near downtown, it has a long history, for Chinese immigrants settled here during the gold rush and railroad period. Today most residents are still ethnic Chinese, and visitors can enjoy traditional food to suit every taste, from spicy dishes to herbal tea. Famous sites include the old Dragon Gate, built with materials donated from China, where people practise tai chi in the square. The climate is mild all year round, so it is always a good time to visit. Its rich mix of cultures makes Chinatown a truly special place.",
+  "model_translation": "旧金山的唐人街是我所知最多元的地方之一。它靠近市中心,历史悠久,因为华人移民在淘金热和修铁路时期就在此定居。如今大多数居民仍是华裔,游客能享用适合各种口味的传统美食,从辣味菜肴到草药茶。著名景点包括用中国捐赠的材料建造的龙门,人们在广场上打太极。这里气候全年温和,所以随时都适合游览。丰富的文化融合,使唐人街成为一个真正特别的地方。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:位置与历史 / 人口民族与美食 / 名胜活动与魅力总结" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕'一个地方'分层介绍、信息具体、有开头结尾、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、能用省略/被动等结构、语法基本无误" }
+    ],
+    "required_structure": [
+      "位置与历史 … is located near … / has a long history",
+      "人口民族 Most residents are … / is home to …",
+      "美食与名胜 Visitors can enjoy … / Famous sites include …",
+      "总结 Its rich mix of cultures makes it a special place."
+    ],
+    "key_expressions": [
+      "Chinatown is located near downtown and has a long history.",
+      "Chinese immigrants settled here during the gold rush.",
+      "Visitors can enjoy traditional food to suit every taste.",
+      "Its rich mix of cultures makes it a truly special place."
+    ],
+    "useful_words": ["diverse", "culture", "immigrant", "settle", "ethnic", "historical", "souvenir", "climate", "suit", "attraction"]
+  },
+  "high_sentences": [
+    "Chinatown is one of the most diverse places I know.",
+    "Chinese immigrants settled here during the gold rush and railroad period.",
+    "Visitors can enjoy traditional food to suit every taste.",
+    "Its rich mix of cultures makes Chinatown a truly special place."
+  ],
+  "error_pairs": [
+    { "wrong": "It is located in near downtown.", "correct": "It is located near downtown.", "note": "be located near 已含'位于',不再加 in。" },
+    { "wrong": "The people here is from many countries.", "correct": "The people here are from many countries.", "note": "people 作复数,谓语用 are。" },
+    { "wrong": "When in here, you can enjoy the food.", "correct": "When here, you can enjoy the food.", "note": "状语从句省略后用 When here,不加多余的 in。" }
+  ],
+  "paragraph_template": "【文化多元地方介绍结构】\n第1句 总起:… is one of the most diverse places …\n第2句 位置与历史:Located near …, it has a long history, for …\n第3-4句 人口民族与美食:Most residents are … Visitors can enjoy …\n第5句 名胜:Famous sites include …\n第6句 总结魅力:Its rich mix of cultures makes it a special place."
+}

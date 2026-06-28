@@ -1,0 +1,485 @@
+[
+ {
+  "word": "carry on",
+  "ipa": "",
+  "cn": "继续做，坚持干",
+  "propn": false,
+  "raw": "carry on  继续做，坚持干"
+ },
+ {
+  "word": "closing",
+  "ipa": "kl@UzIN",
+  "cn": "结尾的；结束的 n. 停业；关闭；倒闭",
+  "propn": false,
+  "raw": "closing /kl@UzIN/ adj. 结尾的；结束的 n. 停业；关闭；倒闭"
+ },
+ {
+  "word": "in closing",
+  "ipa": "",
+  "cn": "最后",
+  "propn": false,
+  "raw": "in closing 最后"
+ },
+ {
+  "word": "cm",
+  "ipa": "sentImi:t@(r)",
+  "cn": "厘米",
+  "propn": false,
+  "raw": "cm abbr. (centimetre /sentImi:t@(r)/ or centimeter) 厘米"
+ },
+ {
+  "word": "current",
+  "ipa": "kVr@nt",
+  "cn": "当前的；现在的 n. 水流；电流；思潮",
+  "propn": false,
+  "raw": "current /kVr@nt/ adj. 当前的；现在的 n. 水流；电流；思潮"
+ },
+ {
+  "word": "data",
+  "ipa": "deIt@",
+  "cn": "资料；数据",
+  "propn": false,
+  "raw": "data /deIt@/ n.［pl.］资料；数据"
+ },
+ {
+  "word": "desire",
+  "ipa": "dIzaI@(r)",
+  "cn": "渴望；欲望 vt. 渴望；期望",
+  "propn": false,
+  "raw": "desire /dIzaI@(r)/ n. 渴望；欲望 vt. 渴望；期望"
+ },
+ {
+  "word": "determine",
+  "ipa": "dIt3:mIn",
+  "cn": "查明；确定；决定",
+  "propn": false,
+  "raw": "determine /dIt3:mIn/ vt. 查明；确定；决定"
+ },
+ {
+  "word": "determined",
+  "ipa": "dIt3:mInd",
+  "cn": "有决心的；意志坚定的",
+  "propn": false,
+  "raw": "determined /dIt3:mInd/ adj. 有决心的；意志坚定的"
+ },
+ {
+  "word": "disappointed",
+  "ipa": "%dIs@pOIntId",
+  "cn": "失望的；沮丧的",
+  "propn": false,
+  "raw": "disappointed /%dIs@pOIntId/ adj. 失望的；沮丧的"
+ },
+ {
+  "word": "dock",
+  "ipa": "dQk",
+  "cn": "两架航天器）对接；（使）……进港 n. 码头；船坞",
+  "propn": false,
+  "raw": "dock /dQk/ vi. & vt. （两架航天器）对接；（使）……进港 n. 码头；船坞"
+ },
+ {
+  "word": "facility",
+  "ipa": "f@sIl@ti",
+  "cn": "设施；设备",
+  "propn": false,
+  "raw": "facility /f@sIl@ti/ n. 设施；设备"
+ },
+ {
+  "word": "fatal",
+  "ipa": "feItl",
+  "cn": "致命的；灾难性的",
+  "propn": false,
+  "raw": "fatal /feItl/ adj. 致命的；灾难性的"
+ },
+ {
+  "word": "figure out",
+  "ipa": "",
+  "cn": "弄懂；弄清楚；弄明白",
+  "propn": false,
+  "raw": "figure out 弄懂；弄清楚；弄明白"
+ },
+ {
+  "word": "float flt vi. 浮动；漂流；漂浮 vt. 使浮动；使漂流",
+  "ipa": "",
+  "cn": "浮动；漂流；漂浮 vt. 使浮动；使漂流",
+  "propn": false,
+  "raw": "float flt vi. 浮动；漂流；漂浮 vt. 使浮动；使漂流"
+ },
+ {
+  "word": "foam",
+  "ipa": "",
+  "cn": "泡沫橡胶；泡沫",
+  "propn": false,
+  "raw": "foam // n. 泡沫橡胶；泡沫"
+ },
+ {
+  "word": "frontier",
+  "ipa": "frVntI@(r)",
+  "cn": "边境；国界；边远地区",
+  "propn": false,
+  "raw": "frontier /frVntI@(r)/ n. 边境；国界；边远地区"
+ },
+ {
+  "word": "giant",
+  "ipa": "dZaI@nt",
+  "cn": "巨大的；伟大的 n.  巨人；巨兽；伟人",
+  "propn": false,
+  "raw": "giant /dZaI@nt/ adj. 巨大的；伟大的 n.  巨人；巨兽；伟人"
+ },
+ {
+  "word": "globe",
+  "ipa": "gl@b",
+  "cn": "地球；世界；地球仪",
+  "propn": false,
+  "raw": "globe /gl@b/ n. 地球；世界；地球仪"
+ },
+ {
+  "word": "gravity",
+  "ipa": "gr{v@ti",
+  "cn": "重力；引力",
+  "propn": false,
+  "raw": "gravity /gr{v@ti/ n. 重力；引力"
+ },
+ {
+  "word": "high-end",
+  "ipa": "",
+  "cn": "高端的",
+  "propn": false,
+  "raw": "high-end adj. 高端的"
+ },
+ {
+  "word": "in the hope of doing sth",
+  "ipa": "",
+  "cn": "抱着……的希望",
+  "propn": false,
+  "raw": "in the hope of doing sth 抱着……的希望"
+ },
+ {
+  "word": "independent",
+  "ipa": "%IndIpend@nt",
+  "cn": "独立的；自立的",
+  "propn": false,
+  "raw": "independent /%IndIpend@nt/ adj. 独立的；自立的"
+ },
+ {
+  "word": "independently",
+  "ipa": "%IndIpend@ntli",
+  "cn": "独立地；自立地",
+  "propn": false,
+  "raw": "independently /%IndIpend@ntli/ adv. 独立地；自立地"
+ },
+ {
+  "word": "intelligent",
+  "ipa": "IntelIdZ@nt",
+  "cn": "有智慧的；聪明的；有智力的",
+  "propn": false,
+  "raw": "intelligent /IntelIdZ@nt/ adj. 有智慧的；聪明的；有智力的"
+ },
+ {
+  "word": "jade",
+  "ipa": "ded",
+  "cn": "玉；翡翠；玉器",
+  "propn": false,
+  "raw": "jade /ded/ n. 玉；翡翠；玉器"
+ },
+ {
+  "word": "keen",
+  "ipa": "ki:n",
+  "cn": "热衷的；渴望的",
+  "propn": false,
+  "raw": "keen /ki:n/ adj. 热衷的；渴望的"
+ },
+ {
+  "word": "lack",
+  "ipa": "",
+  "cn": "缺乏；短缺  vt. 没有；缺乏",
+  "propn": false,
+  "raw": "lack // n. 缺乏；短缺  vt. 没有；缺乏"
+ },
+ {
+  "word": "launch",
+  "ipa": "lO:ntS",
+  "cn": "发射；发起；上市",
+  "propn": false,
+  "raw": "launch /lO:ntS/ vt. & n. 发射；发起；上市"
+ },
+ {
+  "word": "leap",
+  "ipa": "li:p",
+  "cn": "跳跃；剧增；剧变 (leapt, leapt /lept/ or leaped, leaped) vi. & vt. 跳过；跃过",
+  "propn": false,
+  "raw": "leap /li:p/ n. 跳跃；剧增；剧变 (leapt, leapt /lept/ or leaped, leaped) vi. & vt. 跳过；跃过"
+ },
+ {
+  "word": "limited",
+  "ipa": "lImItId",
+  "cn": "有限的",
+  "propn": false,
+  "raw": "limited /lImItId/ adj. 有限的"
+ },
+ {
+  "word": "mankind",
+  "ipa": "%m{nkaInd",
+  "cn": "人类",
+  "propn": false,
+  "raw": "mankind /%m{nkaInd/ n. 人类"
+ },
+ {
+  "word": "mental",
+  "ipa": "mentl",
+  "cn": "精神的；思想的",
+  "propn": false,
+  "raw": "mental /mentl/ adj. 精神的；思想的"
+ },
+ {
+  "word": "microwave",
+  "ipa": "maIkr@weIv",
+  "cn": "微波炉",
+  "propn": false,
+  "raw": "microwave /maIkr@weIv/ n.（also microwave oven）微波炉"
+ },
+ {
+  "word": "monitor",
+  "ipa": "mQnIt@(r)",
+  "cn": "监视器；监测仪 vt. 监视；监测；监控",
+  "propn": false,
+  "raw": "monitor /mQnIt@(r)/ n. 监视器；监测仪 vt. 监视；监测；监控"
+ },
+ {
+  "word": "muscle",
+  "ipa": "mVsl",
+  "cn": "肌肉；实力；影响力",
+  "propn": false,
+  "raw": "muscle /mVsl/ n. 肌肉；实力；影响力"
+ },
+ {
+  "word": "mystery",
+  "ipa": "mIstri",
+  "cn": "神秘事物；谜",
+  "propn": false,
+  "raw": "mystery /mIstri/ n. 神秘事物；谜"
+ },
+ {
+  "word": "on board",
+  "ipa": "",
+  "cn": "在宇宙飞船上；在船上；在飞机上",
+  "propn": false,
+  "raw": "on board 在宇宙飞船上；在船上；在飞机上"
+ },
+ {
+  "word": "ongoing  adj. 持续存在的；仍在进行的；不断发展的",
+  "ipa": "",
+  "cn": "持续存在的；仍在进行的；不断发展的",
+  "propn": false,
+  "raw": "ongoing  adj. 持续存在的；仍在进行的；不断发展的"
+ },
+ {
+  "word": "orbit",
+  "ipa": "O:bIt",
+  "cn": "环绕地球、太阳等运行的）轨道；势力范围 vt. & vi.  沿轨道运行；环绕……运行",
+  "propn": false,
+  "raw": "orbit /O:bIt/ n. （环绕地球、太阳等运行的）轨道；势力范围 vt. & vi.  沿轨道运行；环绕……运行"
+ },
+ {
+  "word": "otherwise",
+  "ipa": "VD@waIz",
+  "cn": "否则；要不然",
+  "propn": false,
+  "raw": "otherwise /VD@waIz/ adv. 否则；要不然"
+ },
+ {
+  "word": "oxygen",
+  "ipa": "QksIdZ@n",
+  "cn": "氧；氧气",
+  "propn": false,
+  "raw": "oxygen /QksIdZ@n/ n. 氧；氧气"
+ },
+ {
+  "word": "pattern",
+  "ipa": "p{tn",
+  "cn": "模式；图案；模范",
+  "propn": false,
+  "raw": "pattern /p{tn/ n. 模式；图案；模范"
+ },
+ {
+  "word": "Appendices pillow",
+  "ipa": "pIl@U",
+  "cn": "枕头",
+  "propn": false,
+  "raw": "Appendices pillow /pIl@U/ n. 枕头"
+ },
+ {
+  "word": "procedure",
+  "ipa": "pr@si:dZ@(r)",
+  "cn": "程序；步骤；手续",
+  "propn": false,
+  "raw": "procedure /pr@si:dZ@(r)/ n. 程序；步骤；手续"
+ },
+ {
+  "word": "provide for sb",
+  "ipa": "",
+  "cn": "提供生活所需",
+  "propn": false,
+  "raw": "provide for sb 提供生活所需"
+ },
+ {
+  "word": "recycle",
+  "ipa": "%",
+  "cn": "回收利用；再利用",
+  "propn": false,
+  "raw": "recycle /%/ vt. 回收利用；再利用"
+ },
+ {
+  "word": "regular",
+  "ipa": "regj@l@(r)",
+  "cn": "定期的；经常的；正常的",
+  "propn": false,
+  "raw": "regular /regj@l@(r)/ adj. 定期的；经常的；正常的"
+ },
+ {
+  "word": "regularly",
+  "ipa": "regj@l@li",
+  "cn": "经常；定期地",
+  "propn": false,
+  "raw": "regularly /regj@l@li/ adv. 经常；定期地"
+ },
+ {
+  "word": "resource",
+  "ipa": "rIsO:s",
+  "cn": "资源；财力；物力",
+  "propn": false,
+  "raw": "resource /rIsO:s/ n. 资源；财力；物力"
+ },
+ {
+  "word": "result in",
+  "ipa": "",
+  "cn": "导致；造成",
+  "propn": false,
+  "raw": "result in 导致；造成"
+ },
+ {
+  "word": "rocket",
+  "ipa": "rQkIt",
+  "cn": "火箭；火箭弹",
+  "propn": false,
+  "raw": "rocket /rQkIt/ n. 火箭；火箭弹"
+ },
+ {
+  "word": "run out",
+  "ipa": "",
+  "cn": "用完；耗尽",
+  "propn": false,
+  "raw": "run out 用完；耗尽"
+ },
+ {
+  "word": "satellite",
+  "ipa": "s{t@laIt",
+  "cn": "人造卫星；卫星",
+  "propn": false,
+  "raw": "satellite /s{t@laIt/ n. 人造卫星；卫星"
+ },
+ {
+  "word": "shallow",
+  "ipa": "S{l@U",
+  "cn": "肤浅的；浅的",
+  "propn": false,
+  "raw": "shallow /S{l@U/ adj. 肤浅的；浅的"
+ },
+ {
+  "word": "signal",
+  "ipa": "sIgn@l",
+  "cn": "标志着；标明；发信号 n. 信号；标志",
+  "propn": false,
+  "raw": "signal /sIgn@l/ vt. & vi. 标志着；标明；发信号 n. 信号；标志"
+ },
+ {
+  "word": "smartphone",
+  "ipa": "sm:tf@Un",
+  "cn": "智能手机",
+  "propn": false,
+  "raw": "smartphone /sm:tf@Un/ n. 智能手机"
+ },
+ {
+  "word": "so as to",
+  "ipa": "",
+  "cn": "为了；以便",
+  "propn": false,
+  "raw": "so as to (do sth) 为了；以便"
+ },
+ {
+  "word": "soap",
+  "ipa": "s@Up",
+  "cn": "肥皂",
+  "propn": false,
+  "raw": "soap /s@Up/ n. 肥皂"
+ },
+ {
+  "word": "solar  adj. 太阳的；太阳能的",
+  "ipa": "",
+  "cn": "太阳的；太阳能的",
+  "propn": false,
+  "raw": "solar  adj. 太阳的；太阳能的"
+ },
+ {
+  "word": "solar system",
+  "ipa": "",
+  "cn": "太阳系；类太阳系",
+  "propn": false,
+  "raw": "solar system 太阳系；类太阳系"
+ },
+ {
+  "word": "spacecraft",
+  "ipa": "speskr:ft",
+  "cn": "航天器；宇宙飞船",
+  "propn": false,
+  "raw": "spacecraft /speskr:ft/ n. 航天器；宇宙飞船"
+ },
+ {
+  "word": "spacewalk",
+  "ipa": "speIswO:k",
+  "cn": "太空行走；太空行走的时间",
+  "propn": false,
+  "raw": "spacewalk /speIswO:k/ n. 太空行走；太空行走的时间"
+ },
+ {
+  "word": "sufficient",
+  "ipa": "s@fISnt",
+  "cn": "足够的；充足的",
+  "propn": false,
+  "raw": "sufficient /s@fISnt/ adj. 足够的；充足的"
+ },
+ {
+  "word": "tissue",
+  "ipa": "；sj",
+  "cn": "纸巾；（人、动植物细胞的） 组织",
+  "propn": false,
+  "raw": "tissue /；sj/ n. 纸巾；（人、动植物细胞的） 组织"
+ },
+ {
+  "word": "towel",
+  "ipa": "taU@l",
+  "cn": "毛巾；抹布",
+  "propn": false,
+  "raw": "towel /taU@l/ n. 毛巾；抹布"
+ },
+ {
+  "word": "transmit",
+  "ipa": "tr{nsmIt",
+  "cn": "传输；发送",
+  "propn": false,
+  "raw": "transmit /tr{nsmIt/ vt. & vi. 传输；发送"
+ },
+ {
+  "word": "universe",
+  "ipa": "ju:nIv3:s",
+  "cn": "宇宙；天地万物",
+  "propn": false,
+  "raw": "universe /ju:nIv3:s/ n. 宇宙；天地万物"
+ },
+ {
+  "word": "vehicle",
+  "ipa": "vi:@kl",
+  "cn": "交通工具；车辆",
+  "propn": false,
+  "raw": "vehicle /vi:@kl/ n. 交通工具；车辆"
+ }
+]

@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Describe a Festival You Like(介绍一个你喜欢的节日)",
+  "title_en": "My Favourite Festival",
+  "genre": "说明文 / 记叙文(introduce and describe a festival you like and have experienced)",
+  "source": "人教版2019必修三 Unit 1 Reading for Writing:write about a festival or a celebration you have experienced(介绍/描写一个你喜欢的节日:时间地点同伴+活动+感受,正确使用 -ing 形作定语/表语)。",
+  "prompt_cn": "假设你叫李华,某英文网站正在征集'我最喜欢的节日'短文。请用英语写一篇约100词的文章,内容包括:① 节日名称,以及你和谁、在何时何地庆祝;② 你们参加的主要活动;③ 你对这个节日的感受。注意:恰当使用现在分词(V-ing)作定语或表语(如 exciting dragon dances / families celebrating the festival)。",
+  "prompt_en": "Suppose you are Li Hua. An English website is collecting short articles on \"My Favourite Festival\". Write a passage of about 100 words including: 1) the name of the festival, and when, where and with whom you celebrate it; 2) the main activities you take part in; 3) how you feel about the festival. Try to use the -ing form (V-ing) correctly as an attribute or a predicative.",
+  "points": [
+    "点明节日与庆祝的时间/地点/同伴(I celebrate … with … every …)",
+    "描述主要活动(We … / Families celebrating … enjoy …)",
+    "表达对节日的感受(For me, it is always exciting / amazing …)",
+    "恰当使用 V-ing 作定语/表语(exciting dances / shining lanterns / the moon is amazing)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "My favourite festival is the Mid-Autumn Festival. Every autumn, I celebrate it with my whole family at my grandmother's house. On that special night, the round moon shining in the sky is truly amazing. After a big dinner, we sit in the yard, admiring the bright moon and enjoying sweet mooncakes together. The younger children, running around with small lanterns, fill the air with laughter. My grandmother always tells us touching old stories about the moon. For me, the festival is not really about the food; it is the warm feeling of having everyone together that I find most exciting. I look forward to it every year.",
+  "model_translation": "我最喜欢的节日是中秋节。每年秋天,我都和全家人在奶奶家一起庆祝。在那个特别的夜晚,挂在天空中那轮明亮的圆月真是令人惊叹。吃完一顿丰盛的晚饭后,我们坐在院子里,一起赏月、品尝香甜的月饼。提着小灯笼到处跑的小孩们,让空气里满是欢笑。奶奶总会给我们讲那些感人的关于月亮的古老故事。对我来说,这个节日真正打动我的并不是食物,而是全家人团聚时那种温暖、令人激动的感觉。我每年都盼着它。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:节日与时间地点同伴 / 主要活动 / 个人感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个节日展开、句句相关、过渡自然、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "词汇句型准确多样、现在分词作定语/表语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 My favourite festival is …",
+      "时间/同伴 Every …, I celebrate it with … at …",
+      "活动 We … , admiring … and enjoying …",
+      "感受 For me, the festival is … exciting/amazing because …"
+    ],
+    "key_expressions": [
+      "My favourite festival is the Mid-Autumn Festival.",
+      "The round moon shining in the sky is truly amazing.",
+      "We sit in the yard, admiring the bright moon and enjoying mooncakes.",
+      "It is the warm feeling of being together that I find most exciting."
+    ],
+    "useful_words": ["festival", "celebrate", "gather", "lantern", "exciting", "amazing", "joyful", "tradition", "admire", "grateful"]
+  },
+  "high_sentences": [
+    "The round moon shining in the sky is truly amazing.",
+    "The younger children, running around with small lanterns, fill the air with laughter.",
+    "We sit in the yard, admiring the bright moon and enjoying sweet mooncakes together.",
+    "It is the warm feeling of having everyone together that I find most exciting."
+  ],
+  "error_pairs": [
+    { "wrong": "The dragon dances were very excited.", "correct": "The dragon dances were very exciting.", "note": "事物用 -ing(exciting),人才用 -ed(excited)。" },
+    { "wrong": "The children playing was very happy.", "correct": "The children playing were very happy.", "note": "主语 children 复数,谓语用 were;playing 是后置定语。" },
+    { "wrong": "I saw many people wore costumes.", "correct": "I saw many people wearing costumes.", "note": "后置定语表主动/进行用 V-ing,不用过去式动词。" }
+  ],
+  "paragraph_template": "【介绍节日结构】\n第1句 点题:My favourite festival is …\n第2句 时间/地点/同伴:Every …, I celebrate it with … at …\n第3-4句 活动(用 V-ing 作定语/表语):The … shining/dancing … is amazing; we … , admiring … and enjoying …\n第5句 感受:For me, it is the … feeling of being together that I find most exciting."
+}

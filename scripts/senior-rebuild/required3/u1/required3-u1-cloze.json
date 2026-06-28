@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "topic": "Festivals and Celebrations",
+  "source": "人教版2019必修三 Unit 1 同主题完形(中秋/元宵/感恩节/圣诞节/成人节/节日商业化)。用词限本单元/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "The Mid-Autumn Festival",
+      "text": "The Mid-Autumn Festival is one of the most loved (1)____ in China. It falls in autumn, when the moon is at its roundest and brightest. On this night, families (2)____ together to admire the shining moon. A round moon is thought to (3)____ a happy and complete family, so people who live far away try hard to come home. The (4)____ food of this festival is the mooncake, a small round cake with sweet filling inside. Sharing mooncakes is a way of showing love and (5)____ to one another. Long ago, people also told (6)____ stories about a goddess who lives on the moon. Today, some families enjoy (7)____ riddles or lighting small lanterns as well. Although the customs may change over (8)____, the meaning of the festival stays the same. It is a (9)____ occasion that reminds everyone how important family is. To many Chinese people, no other night feels quite so (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "festivals",
+            "machines",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "loved festivals 受喜爱的节日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "break",
+            "gather",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "gather together 聚在一起。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "destroy",
+            "lose",
+            "represent",
+            "waste"
+          ],
+          "answer_index": 2,
+          "explanation": "represent 象征。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "angry",
+            "broken",
+            "typical"
+          ],
+          "answer_index": 3,
+          "explanation": "typical food 典型食物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "gratitude",
+            "anger",
+            "fear",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "love and gratitude 爱与感激。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "silent",
+            "ancient",
+            "modern",
+            "foreign"
+          ],
+          "answer_index": 1,
+          "explanation": "ancient stories 古老的故事。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "selling",
+            "throwing",
+            "guessing",
+            "losing"
+          ],
+          "answer_index": 2,
+          "explanation": "guessing riddles 猜谜。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "money",
+            "books",
+            "shoes",
+            "time"
+          ],
+          "answer_index": 3,
+          "explanation": "change over time 随时间改变。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "joyful",
+            "boring",
+            "useless",
+            "terrible"
+          ],
+          "answer_index": 0,
+          "explanation": "joyful occasion 欢乐的日子。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "special",
+            "noisy",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "special 特别的。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Lantern Festival",
+      "text": "The Lantern Festival marks the (1)____ day of the Chinese New Year celebrations. As night falls, towns and parks are (2)____ with thousands of colourful lanterns. Families walk slowly through the streets, (3)____ the beautiful lights and feeling the warm holiday spirit. One of the most popular activities is (4)____ riddles, which are often written on the lanterns themselves. If you can give the right (5)____, you may win a small prize. Another (6)____ of the festival is eating tangyuan, sweet balls of sticky rice that (7)____ family reunion. In some towns, people perform a fire dragon dance, and the (8)____ dragon lights up the whole square. Many ancient poets wrote about this festival, describing the (9)____ scenes and the happy crowds. Even today, the Lantern Festival keeps its (10)____ charm and brings people closer together.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "empty",
+            "cheap",
+            "last",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "the last day 最后一天。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "broken",
+            "emptied",
+            "closed",
+            "decorated"
+          ],
+          "answer_index": 3,
+          "explanation": "decorated with lanterns 用灯笼装饰。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "admiring",
+            "selling",
+            "hiding",
+            "losing"
+          ],
+          "answer_index": 0,
+          "explanation": "admiring the lights 欣赏灯光。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "selling",
+            "guessing",
+            "throwing",
+            "burning"
+          ],
+          "answer_index": 1,
+          "explanation": "guessing riddles 猜谜。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "answer",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "the right answer 正确答案。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "mistake",
+            "price",
+            "problem",
+            "feature"
+          ],
+          "answer_index": 3,
+          "explanation": "a feature of 一个特色。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "represent",
+            "destroy",
+            "forget",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "represent reunion 象征团圆。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleeping",
+            "dancing",
+            "broken",
+            "frozen"
+          ],
+          "answer_index": 1,
+          "explanation": "dancing dragon 舞动的龙,现在分词作定语。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "boring",
+            "empty",
+            "joyful",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "joyful scenes 欢乐的场面。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "false",
+            "cheap",
+            "broken",
+            "unique"
+          ],
+          "answer_index": 3,
+          "explanation": "unique charm 独特魅力。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Thanksgiving Dinner",
+      "text": "Thanksgiving is a warm autumn (1)____ celebrated mainly in North America. It began long ago as a way for people to give thanks for a good (2)____ of food. On this day, families travel from near and far to (3)____ around one table. The (4)____ dish is a large roast turkey, served with mashed potatoes, pumpkin pie and other treats. Before the meal, many families take turns saying what they are (5)____ for. After dinner, some people watch sports games on television, while others simply (6)____ and talk for hours. To be (7)____, the food is wonderful, but the best part is being with the people you (8)____. The holiday reminds us to slow down and feel (9)____ for what we have. In a busy world, such (10)____ moments are truly precious.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "festival",
+            "machine",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "autumn festival 秋季节日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "harvest",
+            "noise",
+            "mistake"
+          ],
+          "answer_index": 1,
+          "explanation": "a good harvest 好收成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "break",
+            "hide",
+            "gather",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "gather around 围坐。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "broken",
+            "silent",
+            "main"
+          ],
+          "answer_index": 3,
+          "explanation": "the main dish 主菜。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "grateful",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "grateful for 感激。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "laugh",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "laugh and talk 欢笑交谈。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "late",
+            "rich",
+            "frank",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "to be frank 坦白说。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "forget",
+            "lose",
+            "love"
+          ],
+          "answer_index": 3,
+          "explanation": "the people you love 你爱的人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "grateful",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "feel grateful 感到感激。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "quiet",
+            "noisy",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "quiet moments 安静的时刻。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Christmas to Remember",
+      "text": "For me, the most (1)____ festival of the year is Christmas. A few weeks before, families (2)____ their homes with bright lights and a tall green tree. I can never take my eyes off the (3)____ lights on the trees everywhere. On Christmas Eve, people often (4)____ carols outside, wishing one another a merry Christmas. Children hang up their socks and wait for (5)____ to arrive while they sleep. In the morning, everyone opens the gifts (6)____ under the tree, and the room fills with happy cries. Later, the whole family shares a big meal, with a roast turkey at its (7)____. The day is full of (8)____ faces and kind words. To me, Christmas is not really about the (9)____ but about the warm feeling of being together. It is a (10)____ that I look forward to all year long.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "empty",
+            "boring",
+            "special",
+            "useless"
+          ],
+          "answer_index": 2,
+          "explanation": "the most special festival 最特别的节日。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "destroy",
+            "sell",
+            "lose",
+            "decorate"
+          ],
+          "answer_index": 3,
+          "explanation": "decorate their homes 装饰家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shining",
+            "broken",
+            "frozen",
+            "sleeping"
+          ],
+          "answer_index": 0,
+          "explanation": "shining lights 闪亮的灯,现在分词作定语。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "sing",
+            "sell",
+            "burn"
+          ],
+          "answer_index": 1,
+          "explanation": "sing carols 唱颂歌。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "prices",
+            "noises",
+            "presents",
+            "errors"
+          ],
+          "answer_index": 2,
+          "explanation": "wait for presents 等礼物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "thrown",
+            "lost",
+            "left"
+          ],
+          "answer_index": 3,
+          "explanation": "gifts left under the tree 放在树下的礼物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "centre",
+            "price",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "at its centre 在其中心。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "smiling",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "smiling faces 微笑的脸,现在分词作定语。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prices",
+            "noises",
+            "gifts",
+            "errors"
+          ],
+          "answer_index": 2,
+          "explanation": "about the gifts 关于礼物。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "price",
+            "problem",
+            "holiday"
+          ],
+          "answer_index": 3,
+          "explanation": "a holiday 一个节日。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Coming-of-Age Day",
+      "text": "In some countries, young people celebrate a special (1)____ when they become adults. On Coming-of-Age Day, those who have just turned twenty (2)____ traditional costumes and attend a public ceremony. It is an (3)____ and proud moment for the young people and their families. During the ceremony, the new adults receive (4)____ from older members of the community. Speakers remind them that being an adult means taking on more (5)____ for themselves and for society. After the (6)____ part is over, friends gather to take photographs and celebrate (7)____. To many young people, this day (8)____ the start of a new chapter in life. It is a (9)____ that helps them understand who they are becoming. Even years later, they often remember that special (10)____ with a warm smile.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "occasion",
+            "machine",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a special occasion 特别的日子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "throw",
+            "wear",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "wear costumes 穿服装。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "empty",
+            "boring",
+            "exciting",
+            "silent"
+          ],
+          "answer_index": 2,
+          "explanation": "exciting moment 令人激动的时刻。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mistakes",
+            "noises",
+            "prices",
+            "congratulations"
+          ],
+          "answer_index": 3,
+          "explanation": "receive congratulations 接受祝贺。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "responsibility",
+            "weather",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "more responsibility 更多责任。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "broken",
+            "formal",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 1,
+          "explanation": "the formal part 正式的部分。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sadly",
+            "angrily",
+            "happily",
+            "quietly"
+          ],
+          "answer_index": 2,
+          "explanation": "celebrate happily 高兴地庆祝。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "destroys",
+            "wastes",
+            "loses",
+            "marks"
+          ],
+          "answer_index": 3,
+          "explanation": "marks the start 标志着开始。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "custom",
+            "price",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "a custom 一种习俗。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "day",
+            "noise",
+            "error"
+          ],
+          "answer_index": 1,
+          "explanation": "that special day 那个特别的日子。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Festivals and Shopping",
+      "text": "In recent years, many festivals have become more and more (1)____. Businesses take advantage of the holidays to sell all kinds of (2)____. Online shopping websites and social media apps make it much (3)____ for people to spend money on gifts for their loved ones. Some people worry that festivals are losing their true (4)____, and that customs may slowly (5)____ away. They believe a festival should be about feelings, not (6)____. Others argue that spending more is actually (7)____ for the economy and brings happiness to many people. Both sides make (8)____ points. Perhaps the wisest choice is to enjoy the gifts while remembering what really (9)____: the time we spend with the people we care about. In the end, no festival is truly (10)____ without that warm human spirit.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "empty",
+            "silent",
+            "commercial",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "more commercial 更商业化。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noises",
+            "prices",
+            "mistakes",
+            "products"
+          ],
+          "answer_index": 3,
+          "explanation": "sell products 卖商品。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "easier",
+            "worse",
+            "harder",
+            "slower"
+          ],
+          "answer_index": 0,
+          "explanation": "much easier 更容易。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "meaning",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "true meaning 真正的意义。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "grow",
+            "build",
+            "fade",
+            "rise"
+          ],
+          "answer_index": 2,
+          "explanation": "fade away 逐渐消失。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "love",
+            "joy",
+            "peace",
+            "money"
+          ],
+          "answer_index": 3,
+          "explanation": "not money 而不是金钱。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "good",
+            "bad",
+            "empty",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "good for the economy 对经济有益。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "fair",
+            "silent",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "fair points 合理的观点。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "breaks",
+            "loses",
+            "matters",
+            "sells"
+          ],
+          "answer_index": 2,
+          "explanation": "what really matters 真正重要的。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broken",
+            "empty",
+            "silent",
+            "complete"
+          ],
+          "answer_index": 3,
+          "explanation": "truly complete 真正完整。"
+        }
+      ]
+    }
+  ]
+}

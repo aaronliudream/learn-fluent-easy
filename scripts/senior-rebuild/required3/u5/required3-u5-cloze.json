@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "The Value of Money",
+  "source": "人教版2019必修三 Unit 5 同主题完形(在饭店用钞票/旅行丢钱怎么办/第一次理财/慈善义卖/省钱小窍门/学会感恩)。用词限 U5/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Dinner with a Strange Note",
+      "text": "Henry walked into a small restaurant, feeling very (1)____ because he had not eaten all day. A waiter showed him to a table, though the owner clearly thought such a poor-looking man could not (2)____ a proper meal. Henry ordered a large dinner and ate it slowly. When the bill came, he quietly handed over his huge bank (3)____. The waiter's eyes grew wide, and he hurried to fetch the (4)____. \"Could this really be the famous note from the (5)____?\" the owner wondered aloud. At once their cold (6)____ changed into warm smiles. They said Henry could come back (7)____ he liked and order whatever he wished. To them, just having such a rich (8)____ in the room was a great honour. Henry was (9)____ at how quickly people's behaviour could change. He realised that the same dinner had been served with a frown one minute and a smile the (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hungry",
+            "tired",
+            "angry",
+            "proud"
+          ],
+          "answer_index": 0,
+          "explanation": "had not eaten all day → very hungry 很饿。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "afford",
+            "cook",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "afford a meal 买得起一顿饭。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "card",
+            "book",
+            "note",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "bank note 钞票。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "waiter",
+            "menu",
+            "key",
+            "owner"
+          ],
+          "answer_index": 3,
+          "explanation": "去叫来 the owner 老板。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "papers",
+            "fields",
+            "shops",
+            "trees"
+          ],
+          "answer_index": 0,
+          "explanation": "the famous note from the papers 报纸上的钞票。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "manner",
+            "music",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "cold manner 冷淡的态度。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "because",
+            "until",
+            "whenever",
+            "although"
+          ],
+          "answer_index": 2,
+          "explanation": "come back whenever he liked 想来就来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "enemy",
+            "child",
+            "animal",
+            "guest"
+          ],
+          "answer_index": 3,
+          "explanation": "such a rich guest 这样一位富客。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "surprised",
+            "bored",
+            "asleep",
+            "absent"
+          ],
+          "answer_index": 0,
+          "explanation": "be surprised at 对……感到惊讶。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "year",
+            "next",
+            "week",
+            "month"
+          ],
+          "answer_index": 1,
+          "explanation": "with a smile the next (minute) 下一分钟就笑脸相迎。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "What to Do If You Lose Your Money Abroad",
+      "text": "Imagine you are travelling in a foreign country when you suddenly find that your money is (1)____. This situation is frightening, but you should try to stay (2)____. First, go to your nearest (3)____, where the staff can help you to some (4)____. They may not give you cash, but they can offer useful advice. Second, you (5)____ to check with local charities, which sometimes (6)____ help to travellers in need. Whatever you do, you must not let fear (7)____ you to do something foolish. Some people might (8)____ that stealing food would solve the problem, but getting caught could ruin your whole (9)____. Most importantly, always keep a little cash hidden in a safe place (10)____ such an emergency happens. A calm traveller who plans ahead will get through almost any trouble.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ready",
+            "free",
+            "gone",
+            "new"
+          ],
+          "answer_index": 2,
+          "explanation": "your money is gone 钱不见了。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "rich",
+            "loud",
+            "busy",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "consulate",
+            "garden",
+            "market",
+            "stadium"
+          ],
+          "answer_index": 0,
+          "explanation": "go to the consulate 去领事馆。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "extent",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "to some extent 在一定程度上。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "must",
+            "need",
+            "ought",
+            "dare"
+          ],
+          "answer_index": 2,
+          "explanation": "you ought to check 你应当核实。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "break",
+            "offer"
+          ],
+          "answer_index": 3,
+          "explanation": "offer help 提供帮助。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cause",
+            "thank",
+            "teach",
+            "feed"
+          ],
+          "answer_index": 0,
+          "explanation": "let fear cause you 让恐惧使你……。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "forget",
+            "think",
+            "refuse",
+            "promise"
+          ],
+          "answer_index": 1,
+          "explanation": "might think that 也许会以为。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "shop",
+            "boat",
+            "life",
+            "coat"
+          ],
+          "answer_index": 2,
+          "explanation": "ruin your whole life 毁掉你的一生。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "unless",
+            "so that",
+            "even if",
+            "in case"
+          ],
+          "answer_index": 3,
+          "explanation": "in case such an emergency happens 以防发生这种紧急情况。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "My First Time Managing Money",
+      "text": "When I turned twelve, my parents began to give me a small amount of pocket money every (1)____. At first I spent it all at once on snacks and toys, and by the next day my pockets were (2)____ again. My mother gently told me that money was a good (3)____ but a bad master, and that I (4)____ learn to control it. So I made a simple (5)____: I divided my money into three parts. One part I could (6)____ on small treats, one part I would (7)____ for something bigger, and one part I gave to children in (8)____. It was not easy to wait, and it taught me real (9)____. A few months later, I had saved enough to buy the bicycle I had always wanted. That day I felt proud, because I had earned it through my own (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "week",
+            "year",
+            "century",
+            "second"
+          ],
+          "answer_index": 0,
+          "explanation": "every week 每周。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "full",
+            "empty",
+            "heavy",
+            "wet"
+          ],
+          "answer_index": 1,
+          "explanation": "pockets were empty again 口袋又空了。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "servant",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a good servant 好仆人(呼应名言)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dare not",
+            "used to",
+            "would rather",
+            "ought to"
+          ],
+          "answer_index": 3,
+          "explanation": "ought to learn 应当学会。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "plan",
+            "mistake",
+            "noise",
+            "joke"
+          ],
+          "answer_index": 0,
+          "explanation": "made a simple plan 做了个简单的计划。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lose",
+            "spend",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "spend on small treats 花在小零食上。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "throw",
+            "break",
+            "save",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "save for something bigger 为更大的东西攒钱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "games",
+            "songs",
+            "shops",
+            "need"
+          ],
+          "answer_index": 3,
+          "explanation": "children in need 有需要的孩子。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "patience",
+            "fear",
+            "anger",
+            "luck"
+          ],
+          "answer_index": 0,
+          "explanation": "taught me real patience 教会我真正的耐心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mistake",
+            "effort",
+            "weather",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "through my own effort 靠自己的努力。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The School Charity Sale",
+      "text": "Last month our class held a charity (1)____ to raise money for a sick classmate. Everyone brought old books, toys and clothes that were still in good (2)____. We set up tables in the playground and put a clear (3)____ on each item. At first I was nervous and (4)____ to call out to passers-by, but soon I grew braver. Many parents were (5)____ to pay a little more than we asked, just to support a good (6)____. By the end of the day, we had raised far more money than we had ever (7)____. None of us kept a single cent for (8)____; every coin went to help our classmate's family. The best part was not the money itself, but the warm feeling of doing something (9)____ together. I learned that even a small (10)____ of kindness can make a real difference to someone in trouble.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "test",
+            "race",
+            "sale",
+            "trip"
+          ],
+          "answer_index": 2,
+          "explanation": "a charity sale 慈善义卖。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "manner",
+            "weather",
+            "condition"
+          ],
+          "answer_index": 3,
+          "explanation": "in good condition 状况良好。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "song",
+            "noise",
+            "joke"
+          ],
+          "answer_index": 0,
+          "explanation": "put a clear price 标个清楚的价格。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "promised",
+            "hesitated",
+            "refused",
+            "managed"
+          ],
+          "answer_index": 1,
+          "explanation": "hesitated to call out 迟疑着不敢叫卖。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "afraid",
+            "sorry",
+            "willing",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "were willing to pay 愿意多付。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "shop",
+            "cause"
+          ],
+          "answer_index": 3,
+          "explanation": "support a good cause 支持公益事业。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "hoped",
+            "lost",
+            "sold",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "more than we had hoped 比我们期望的还多。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "himself",
+            "ourselves",
+            "themselves",
+            "herself"
+          ],
+          "answer_index": 1,
+          "explanation": "kept… for ourselves 给自己留。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wrong",
+            "useless",
+            "good",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "doing something good 做好事。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "shop",
+            "act"
+          ],
+          "answer_index": 3,
+          "explanation": "a small act of kindness 一个小小的善举。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Smart Ways to Save Money",
+      "text": "Saving money is a skill that anyone can (1)____ with a little practice. The first step is to know exactly where your money (2)____ each week. Many people are surprised to find how much they waste on things they do not really (3)____. A useful habit is to wait a day before buying anything that is not (4)____; often the wish to buy it simply goes away. You should also try to (5)____ a small sum regularly, even if it is only a few coins. Over time, these coins (6)____ into a useful amount. When you shop, compare (7)____ before you decide, and never let a clever advertisement (8)____ you into buying what you do not need. Saving does not mean you can never (9)____ yourself; it means spending on what truly matters. Step by step, these simple habits will give you greater (10)____ over your own money.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "learn",
+            "lose",
+            "sell",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "a skill anyone can learn 人人都能学会。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sleeps",
+            "goes",
+            "sings",
+            "drives"
+          ],
+          "answer_index": 1,
+          "explanation": "where your money goes 钱花到哪去了。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hide",
+            "throw",
+            "need",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "do not really need 并不真的需要。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "empty",
+            "wrong",
+            "loud",
+            "necessary"
+          ],
+          "answer_index": 3,
+          "explanation": "not necessary 并非必需。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "save",
+            "waste",
+            "lose",
+            "spend"
+          ],
+          "answer_index": 0,
+          "explanation": "save a small sum 存一小笔。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "break",
+            "grow",
+            "fall",
+            "stop"
+          ],
+          "answer_index": 1,
+          "explanation": "these coins grow into 这些硬币会增长为。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "songs",
+            "noises",
+            "prices",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "compare prices 比较价格。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "thank",
+            "teach",
+            "feed",
+            "fool"
+          ],
+          "answer_index": 3,
+          "explanation": "let an advertisement fool you 让广告骗了你。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "enjoy",
+            "lose",
+            "sell",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "enjoy yourself 享受生活。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "control",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "greater control over your money 对钱更有掌控力。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Learning to Be Thankful",
+      "text": "My grandfather grew up very (1)____, and his family often had little to eat. Yet whenever he tells me about those days, he never (2)____. Instead, he says that being poor taught him to value every small (3)____ in life. He learned to fix his own shoes, to share what he had, and to be (4)____ for even a warm meal. \"Money,\" he often says, \"can buy many things, but it cannot buy a happy (5)____.\" Today our family is more comfortable, but he still hates to (6)____ anything. He keeps a little notebook in which he writes down the things he is thankful (7)____ each day. At first I thought this was a strange (8)____, but slowly I began to understand. Counting your blessings, he says, makes you feel (9)____ no matter how much you own. Because of him, I have learned that true wealth is not about how much you have, but how (10)____ you feel for what you have.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rich",
+            "tall",
+            "poor",
+            "busy"
+          ],
+          "answer_index": 2,
+          "explanation": "grew up very poor 家境贫寒。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "smiles",
+            "sleeps",
+            "sings",
+            "complains"
+          ],
+          "answer_index": 3,
+          "explanation": "never complains 从不抱怨。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "gift",
+            "price",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 0,
+          "explanation": "every small gift in life 生活中每件小小的恩赐。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "thankful",
+            "sorry",
+            "afraid"
+          ],
+          "answer_index": 1,
+          "explanation": "be thankful for 心怀感激。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "shop",
+            "boat",
+            "heart",
+            "coat"
+          ],
+          "answer_index": 2,
+          "explanation": "a happy heart 一颗快乐的心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "save",
+            "keep",
+            "share",
+            "waste"
+          ],
+          "answer_index": 3,
+          "explanation": "hates to waste anything 讨厌浪费。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "for",
+            "at",
+            "to",
+            "by"
+          ],
+          "answer_index": 0,
+          "explanation": "thankful for 对……感激。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "habit",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "a strange habit 一个奇怪的习惯。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "poor",
+            "angry",
+            "rich",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "makes you feel rich 让你感到富有。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sorry",
+            "afraid",
+            "bored",
+            "thankful"
+          ],
+          "answer_index": 3,
+          "explanation": "how thankful you feel 你有多感恩。"
+        }
+      ]
+    }
+  ]
+}

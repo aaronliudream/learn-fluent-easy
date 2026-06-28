@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(节日主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On her first Spring Festival in China, Emma felt a little lost among the noise and the bright red decorations. Her host family welcomed her warmly, taught her to make dumplings, and gave her lucky money in a red envelope. By the end of the night, watching the smiling faces around the table, she finally understood why this festival means so much to so many people.",
+    "questions": [
+      {
+        "q": "How did Emma feel at the start of the festival?",
+        "options": [
+          "Slightly confused by all the noise and red decorations.",
+          "Completely bored and sleepy.",
+          "Angry with her host family.",
+          "Sure that she already knew everything."
+        ],
+        "answer": "A",
+        "explanation": "原文 'felt a little lost among the noise and the bright red decorations' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What helped Emma understand the festival by the end of the night?",
+        "options": [
+          "Reading a long history book alone.",
+          "Seeing the happy people gathered around the table.",
+          "Leaving the dinner early.",
+          "Counting her lucky money."
+        ],
+        "answer": "B",
+        "explanation": "末句 'watching the smiling faces around the table, she finally understood' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

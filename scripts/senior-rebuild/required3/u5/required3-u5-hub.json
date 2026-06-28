@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "Money is a good servant and a bad master.", "opts": ["金钱是好仆人,也是坏主人。", "金钱是最重要的东西。", "金钱买得到快乐。", "金钱毫无用处。"], "answer": 0 },
+    { "audio": "You shouldn't judge people by the clothes they wear.", "opts": ["你不应以衣着来评判别人。", "你应该多买几件新衣服。", "穿好衣服的人更值得信任。", "衣服决定一个人的价值。"], "answer": 0 },
+    { "audio": "She found the lost money and returned it, expecting nothing in return.", "opts": ["她捡到丢失的钱并归还,不求任何回报。", "她捡到钱后自己留下了。", "她把钱借给了朋友。", "她从未捡到过钱。"], "answer": 0 },
+    { "audio": "We ought to save part of our pocket money every week.", "opts": ["我们应当每周把一部分零花钱存起来。", "我们应当一拿到钱就花光。", "存钱是没有意义的。", "零花钱必须全部上交。"], "answer": 0 },
+    { "audio": "He had to take out a large loan to pay for his daughter's care.", "opts": ["他不得不贷一大笔款来支付女儿的治疗费。", "他把钱都捐给了慈善机构。", "他从银行取走了所有积蓄。", "他拒绝了任何帮助。"], "answer": 0 },
+    { "audio": "A wise person keeps money useful, but never the most important thing.", "opts": ["明智的人让金钱有用,却绝不让它成为最重要的东西。", "明智的人把金钱看得高于一切。", "明智的人从不使用金钱。", "明智的人喜欢把钱藏起来。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "She had spent all her savings and taken out a large ____.", "opts": ["loan", "garden", "musical", "frown"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "We should not ____ people by their external appearance.", "opts": ["judge", "sail", "hug", "spot"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The first clerk spoke to Henry in a rude ____.", "opts": ["manner", "loan", "scene", "stair"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Henry had no money and ____ to stay in the city.", "opts": ["nowhere", "narrator", "opera", "patience"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "He has worked hard for years, so he ____ be completely poor.", "opts": ["can't", "must", "should", "would"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The light is still on, so someone ____ still be in the office.", "opts": ["must", "can't", "need", "would"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It's getting late, so you ____ to be on your way home now.", "opts": ["ought", "can", "will", "dare"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "When she was young, my grandmother ____ sit by the window for hours.", "opts": ["would", "can", "must", "should"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["说实话,我现在身无分文。", "说实话,我很有钱。", "我不想告诉你真相。", "我把钱借给了你。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "To be honest, I have no money at all right now." },
+    { "q": "听录音,选出正确的中文意思。", "opts": ["买东西前先等一天,问问自己是否真的需要它。", "看到喜欢的就立刻买下来。", "买东西越多越好。", "从不为将来存钱。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Before you buy something, wait one day and ask if you really need it." }
+  ],
+  "reading": {
+    "passage": "When Henry showed the great bank note in the tailor's shop, the rude clerks suddenly became polite. They brought out their finest suits and said he could pay whenever he liked. The story shows how quickly people change once they think a stranger is rich.",
+    "passageCn": "当亨利在裁缝店里掏出那张巨额钞票时,原本粗鲁的店员们一下子变得彬彬有礼。他们拿出最好的西装,说他什么时候付款都行。这个故事说明,一旦人们认为陌生人很有钱,态度就会变得多么快。",
+    "questions": [
+      { "q": "Why did the clerks suddenly become polite?", "opts": ["They thought Henry was rich after seeing the note.", "Henry shouted at them angrily.", "Henry was their old friend.", "The shop was about to close."], "answer": 0 },
+      { "q": "What does the story mainly show?", "opts": ["How fast people change once they think someone is rich.", "How to make a good suit.", "Why notes are printed on paper.", "How tailors earn their money."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about how you manage your pocket money and your attitude to money.",
+    "promptCn": "用3-4句话写一写你如何管理自己的零花钱,以及你对金钱的看法。",
+    "sampleWords": ["pocket money", "servant", "save", "divide", "charity", "waste", "sensible", "patience", "spend", "control"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about Pocket Money",
+      "lines": [
+        { "role": "A", "text": "What do you usually do with your pocket money?", "cn": "你通常怎么花零花钱?" },
+        { "role": "B", "text": "I divide it into three parts: one to spend, one to save, and one to give away.", "cn": "我把它分成三份:一份花、一份存、一份捐出去。" },
+        { "role": "A", "text": "That's wise. I always spend mine too quickly.", "cn": "真明智。我总是花得太快了。" },
+        { "role": "B", "text": "You should try saving a little each week. Money is a good servant, not a master!", "cn": "你应该试着每周存一点。金钱是好仆人,可不是主人!" }
+      ]
+    }
+  ]
+}

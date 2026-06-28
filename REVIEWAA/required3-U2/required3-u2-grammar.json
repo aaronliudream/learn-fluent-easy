@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grammar_title": "现在分词(V-ing)作状语",
+  "source": "人教版2019必修三 Unit 2 Discovering Useful Structures:现在分词(V-ing)作状语(时间/原因·伴随/结果·see/hear/watch/find + sb + doing 作宾补,并与 done 被动对照)。句子地道、逻辑主语与主句一致;正确项为主动的现在分词,干扰项为 to do / done / having done。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "V-ing 作时间/原因状语(= When/Because + 主语…)",
+      "overview": "现在分词放句首或句中,表示与主句同时或在先的动作/原因,逻辑主语 = 主句主语,且该主语主动发出动作时用 V-ing(Hearing the news, he rushed out.)。"
+    },
+    {
+      "code": "u2.02",
+      "point": "V-ing 作伴随/结果状语",
+      "overview": "现在分词表示与主句谓语同时发生的伴随动作,或自然而然产生的结果,常置于句末(She sat there, smiling. / The flood hit the town, leaving thousands homeless.),逻辑主语仍是主句主语。"
+    },
+    {
+      "code": "u2.03",
+      "point": "see/hear/watch/find + sb + doing(宾补,主动进行) vs done(被动)",
+      "overview": "感官动词及 find 后接现在分词作宾补,强调宾语正在主动进行动作(I saw her whispering.);若宾语是动作的承受者则用过去分词 done(I saw the work done.)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "____ the news that her mother had died, the little girl burst into tears.",
+      "options": [
+        "Hearing",
+        "To hear",
+        "Heard",
+        "Having heard"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 girl 主动'听到'、与哭泣几乎同时 → 现在分词 Hearing 作时间状语。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ of all the people still in need of help, Dr Lin opened a private clinic.",
+      "options": [
+        "To think",
+        "Thinking",
+        "Thought",
+        "Be thinking"
+      ],
+      "answer_index": 1,
+      "explanation": "Dr Lin 主动'想到',表原因 → Thinking。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ that his wife had been injured, Mr Johnson hurried to the hospital.",
+      "options": [
+        "To hear",
+        "Heard",
+        "Hearing",
+        "Hear"
+      ],
+      "answer_index": 2,
+      "explanation": "Mr Johnson 主动听说、表原因 → 现在分词 Hearing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ the high tuition fees, her brother thought she should not study so much.",
+      "options": [
+        "To think of",
+        "Thought of",
+        "Think of",
+        "Thinking of"
+      ],
+      "answer_index": 3,
+      "explanation": "brother 主动'想到'学费、表原因 → Thinking of。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ higher import and export costs, the company is looking for ways to survive.",
+      "options": [
+        "Facing",
+        "To face",
+        "Faced",
+        "Face"
+      ],
+      "answer_index": 0,
+      "explanation": "the company 主动'面对'成本、表原因 → 现在分词 Facing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ from the North Pole, the traveller wrote a book about his experience.",
+      "options": [
+        "To return",
+        "Returning",
+        "Returned",
+        "Return"
+      ],
+      "answer_index": 1,
+      "explanation": "traveller 主动'返回'、表时间(回来之后)→ Returning。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ the gold coins, the girl was greatly surprised but did not keep them.",
+      "options": [
+        "To see",
+        "Seen",
+        "Seeing",
+        "See"
+      ],
+      "answer_index": 2,
+      "explanation": "girl 主动'看见'、表时间 → Seeing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ that many people were dying in the war, Dr Bethune left for China.",
+      "options": [
+        "To hear",
+        "Heard",
+        "Hear",
+        "Hearing"
+      ],
+      "answer_index": 3,
+      "explanation": "Bethune 主动'听说'、表原因 → Hearing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ that nothing good came from complaints, the king decided to teach a lesson.",
+      "options": [
+        "Believing",
+        "To believe",
+        "Believed",
+        "Believe"
+      ],
+      "answer_index": 0,
+      "explanation": "the king 主动'认为'、表原因 → Believing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ deeply by her mother's death, Lin Qiaozhi later chose to study medicine.",
+      "options": [
+        "Affecting",
+        "Affected",
+        "To affect",
+        "Affect"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 Lin '被'母亲去世所影响,是动作承受者 → 过去分词 Affected(本题对照被动用法)。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a stone in the road, the girl knew it was dangerous to others after dark.",
+      "options": [
+        "To notice",
+        "Noticed",
+        "Noticing",
+        "Notice"
+      ],
+      "answer_index": 2,
+      "explanation": "girl 主动'注意到'、表时间 → Noticing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ to give up her dream, she told her brother she would rather stay single to study.",
+      "options": [
+        "To refuse",
+        "Refused",
+        "Refuse",
+        "Refusing"
+      ],
+      "answer_index": 3,
+      "explanation": "she 主动'拒绝'、表原因 → Refusing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ how kind the lady had been, the waitress decided to pass the kindness on.",
+      "options": [
+        "Remembering",
+        "To remember",
+        "Remembered",
+        "Remember"
+      ],
+      "answer_index": 0,
+      "explanation": "waitress 主动'记得'、表原因 → Remembering。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ his savings to a kindergarten, the old doctor felt at peace.",
+      "options": [
+        "To leave",
+        "Leaving",
+        "Left",
+        "Leave"
+      ],
+      "answer_index": 1,
+      "explanation": "the doctor 主动'留下'积蓄、表时间/伴随原因 → Leaving。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ low fees from poor patients, the kind doctor was loved by the whole town.",
+      "options": [
+        "To charge",
+        "Charged",
+        "Charging",
+        "Charge"
+      ],
+      "answer_index": 2,
+      "explanation": "the doctor 主动'收取'、表原因 → Charging。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ that the department had been closed, she set up a clinic of her own.",
+      "options": [
+        "To know",
+        "Known",
+        "Know",
+        "Knowing"
+      ],
+      "answer_index": 3,
+      "explanation": "she 主动'知道'、表原因 → Knowing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ the same dilemma as the girl, many students could not decide what to do.",
+      "options": [
+        "Facing",
+        "To face",
+        "Faced",
+        "Face"
+      ],
+      "answer_index": 0,
+      "explanation": "students 主动'面临'、表时间/原因 → Facing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ on a donkey to faraway villages, she brought medical care to the poor.",
+      "options": [
+        "To ride",
+        "Riding",
+        "Ridden",
+        "Ride"
+      ],
+      "answer_index": 1,
+      "explanation": "she 主动'骑'驴、表时间 → Riding。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ how hard it was to help others, he still chose to volunteer every weekend.",
+      "options": [
+        "To understand",
+        "Understood",
+        "Understanding",
+        "Understand"
+      ],
+      "answer_index": 2,
+      "explanation": "he 主动'明白'、表原因(让步)→ Understanding。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "____ a kind note under the change, the lady quietly left the café.",
+      "options": [
+        "To leave",
+        "Left",
+        "Leave",
+        "Leaving"
+      ],
+      "answer_index": 3,
+      "explanation": "the lady 主动'留下'纸条、表时间 → Leaving。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The child lay on her mother's lap, ____ sweetly to herself.",
+      "options": [
+        "smiling",
+        "to smile",
+        "smiled",
+        "smile"
+      ],
+      "answer_index": 0,
+      "explanation": "句末伴随状语,child 主动'微笑'与 lay 同时 → 现在分词 smiling。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She sat in the waiting room for over an hour, ____ about him.",
+      "options": [
+        "to worry",
+        "worrying",
+        "worried",
+        "worry"
+      ],
+      "answer_index": 1,
+      "explanation": "句末伴随状语,she 主动'担心'与 sat 同时 → worrying。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The milkman crashed into the stone, ____ the milk everywhere.",
+      "options": [
+        "to spill",
+        "spilt",
+        "spilling",
+        "spill"
+      ],
+      "answer_index": 2,
+      "explanation": "结果状语,自然导致牛奶洒出 → 现在分词 spilling。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The flood hit the small town, ____ thousands of families homeless.",
+      "options": [
+        "to leave",
+        "left",
+        "leave",
+        "leaving"
+      ],
+      "answer_index": 3,
+      "explanation": "结果状语,洪水自然'使……无家可归'→ leaving。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He walked out of the café, ____ a note and the change for the waitress.",
+      "options": [
+        "leaving",
+        "to leave",
+        "left",
+        "leave"
+      ],
+      "answer_index": 0,
+      "explanation": "伴随状语,he 主动'留下'与 walked 同时 → leaving。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Dr Lin worked day and night, ____ over 50,000 babies in her lifetime.",
+      "options": [
+        "to deliver",
+        "delivering",
+        "delivered",
+        "deliver"
+      ],
+      "answer_index": 1,
+      "explanation": "结果/伴随状语,主动'接生' → delivering。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The girl pushed the stone with all her might, finally ____ in moving it aside.",
+      "options": [
+        "to succeed",
+        "succeeded",
+        "succeeding",
+        "succeed"
+      ],
+      "answer_index": 2,
+      "explanation": "结果状语,自然导致'成功' → succeeding。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She picked herself up and limped away, ____ quietly all the way home.",
+      "options": [
+        "to cry",
+        "cried",
+        "cry",
+        "crying"
+      ],
+      "answer_index": 3,
+      "explanation": "伴随状语,she 主动'哭'与 limped 同时 → crying。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The kind lady drove off, ____ the young waitress full of hope.",
+      "options": [
+        "leaving",
+        "to leave",
+        "left",
+        "leave"
+      ],
+      "answer_index": 0,
+      "explanation": "结果状语 → leaving。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He stood in front of the class, completely ____ the speech he had prepared.",
+      "options": [
+        "to forget",
+        "forgetting",
+        "forgotten",
+        "forget"
+      ],
+      "answer_index": 1,
+      "explanation": "伴随状语,he 主动'忘记'与 stood 同时 → forgetting。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Dr Bethune travelled from village to village, ____ doctors and nurses on the way.",
+      "options": [
+        "to train",
+        "trained",
+        "training",
+        "train"
+      ],
+      "answer_index": 2,
+      "explanation": "伴随状语,主动'培训' → training。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The old man sat by the fire, ____ stories of kindness to the children.",
+      "options": [
+        "to tell",
+        "told",
+        "tell",
+        "telling"
+      ],
+      "answer_index": 3,
+      "explanation": "伴随状语,主动'讲'与 sat 同时 → telling。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The good news spread quickly through the town, ____ everyone hope again.",
+      "options": [
+        "giving",
+        "to give",
+        "given",
+        "give"
+      ],
+      "answer_index": 0,
+      "explanation": "结果状语 → giving。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "She bit her lip and walked away in silence, ____ to show her tears.",
+      "options": [
+        "to refuse",
+        "refusing",
+        "refused",
+        "refuse"
+      ],
+      "answer_index": 1,
+      "explanation": "伴随状语,主动'拒绝' → refusing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The doctor reduced the costs again and again, often ____ nothing from the poor.",
+      "options": [
+        "to charge",
+        "charged",
+        "charging",
+        "charge"
+      ],
+      "answer_index": 2,
+      "explanation": "伴随状语,主动'收取' → charging。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The young farmer's daughter rolled the stone aside, ____ the road safe for all.",
+      "options": [
+        "to make",
+        "made",
+        "make",
+        "making"
+      ],
+      "answer_index": 3,
+      "explanation": "结果状语,自然'使道路安全' → making。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The whole village watched in silence, slowly ____ the meaning of her act.",
+      "options": [
+        "understanding",
+        "to understand",
+        "understood",
+        "understand"
+      ],
+      "answer_index": 0,
+      "explanation": "伴随状语,主动'明白' → understanding。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "He helped to organise hospitals, ____ people how to give first aid.",
+      "options": [
+        "to show",
+        "showing",
+        "shown",
+        "show"
+      ],
+      "answer_index": 1,
+      "explanation": "伴随状语,主动'示范' → showing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The chain of kindness went on and on, ____ from one stranger to the next.",
+      "options": [
+        "to pass",
+        "passed",
+        "passing",
+        "pass"
+      ],
+      "answer_index": 2,
+      "explanation": "伴随状语,主动'传递' → passing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The kind act warmed the whole town, ____ a small fire of hope in every heart.",
+      "options": [
+        "to light",
+        "lit",
+        "light",
+        "lighting"
+      ],
+      "answer_index": 3,
+      "explanation": "结果状语 → lighting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I saw her ____ something into his ear, obviously not wanting to be heard.",
+      "options": [
+        "whispering",
+        "whispered",
+        "to whisper",
+        "whisper to"
+      ],
+      "answer_index": 0,
+      "explanation": "see sb doing:宾语 her 主动'低语'、强调正在进行 → whispering。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The new People's Republic of China saw Dr Lin ____ a key role in medicine.",
+      "options": [
+        "played",
+        "playing",
+        "to play",
+        "play with"
+      ],
+      "answer_index": 1,
+      "explanation": "see sb doing:Dr Lin 主动'发挥'作用 → playing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He suddenly woke up when he heard someone ____ at his door.",
+      "options": [
+        "knocked",
+        "to knock",
+        "knocking",
+        "knock on by"
+      ],
+      "answer_index": 2,
+      "explanation": "hear sb doing:someone 主动'敲门'、进行中 → knocking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Seeing the tennis star ____ the court, the girl quickly picked up her camera.",
+      "options": [
+        "left",
+        "to leave",
+        "leave for",
+        "leaving"
+      ],
+      "answer_index": 3,
+      "explanation": "see sb doing:the star 主动'离开'球场 → leaving。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "John watched the woman ____ to the air, thinking she might be unwell.",
+      "options": [
+        "talking",
+        "talked",
+        "to talk",
+        "talk by"
+      ],
+      "answer_index": 0,
+      "explanation": "watch sb doing:the woman 主动'说话'、进行中 → talking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The king watched all day but found nobody ____ to move the stone.",
+      "options": [
+        "tried",
+        "trying",
+        "to be tried",
+        "be tried"
+      ],
+      "answer_index": 1,
+      "explanation": "find sb doing:nobody 主动'尝试'、进行中 → trying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At times Dr Lin was even seen ____ a donkey to faraway villages.",
+      "options": [
+        "ridden",
+        "rode",
+        "riding",
+        "to riding"
+      ],
+      "answer_index": 2,
+      "explanation": "be seen doing(被动后保留 doing):Dr Lin 主动'骑'驴 → riding。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "We watched the milk ____ all over the street after the cart crashed.",
+      "options": [
+        "spilt",
+        "to spill",
+        "spill over by",
+        "spilling"
+      ],
+      "answer_index": 3,
+      "explanation": "watch sth doing:milk 主动'流淌'、进行中 → spilling。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "They were very proud to see their son ____ the university scholarship.",
+      "options": [
+        "awarded",
+        "awarding",
+        "to award",
+        "award"
+      ],
+      "answer_index": 0,
+      "explanation": "see sb done:son 是'被授予'奖学金的承受者 → 过去分词 awarded(对照被动)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She heard the children ____ happily in the next room and smiled.",
+      "options": [
+        "laughed",
+        "laughing",
+        "to laugh",
+        "laugh at by"
+      ],
+      "answer_index": 1,
+      "explanation": "hear sb doing:children 主动'笑'、进行中 → laughing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The crowd watched the young girl ____ the heavy stone with all her might.",
+      "options": [
+        "pushed",
+        "to push",
+        "pushing",
+        "push by"
+      ],
+      "answer_index": 2,
+      "explanation": "watch sb doing:girl 主动'推'、进行中 → pushing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I found my little brother ____ over an old fable, deeply moved by the story.",
+      "options": [
+        "cried",
+        "to cry",
+        "cry by",
+        "crying"
+      ],
+      "answer_index": 3,
+      "explanation": "find sb doing:brother 主动'哭'、进行中 → crying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The manager was pleased to find the job already ____ when he arrived.",
+      "options": [
+        "done",
+        "doing",
+        "to do",
+        "do"
+      ],
+      "answer_index": 0,
+      "explanation": "find sth done:the job 是'被完成'的承受者 → 过去分词 done(对照被动)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The nurse saw tears ____ down the patient's face and gently held her hand.",
+      "options": [
+        "run",
+        "running",
+        "to run",
+        "ran"
+      ],
+      "answer_index": 1,
+      "explanation": "see sth doing:tears 主动'流淌'、进行中 → running。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "He heard his name ____ across the hall just as he was about to leave.",
+      "options": [
+        "calling",
+        "to call",
+        "called",
+        "call"
+      ],
+      "answer_index": 2,
+      "explanation": "hear sth done:his name 是'被叫'的承受者 → 过去分词 called(对照被动)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "We could see the kind doctor ____ patients late into the night.",
+      "options": [
+        "tended",
+        "to tend",
+        "tend by",
+        "tending"
+      ],
+      "answer_index": 3,
+      "explanation": "see sb doing:doctor 主动'照料'、进行中 → tending。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "She watched the lady ____ the change behind for the tired waitress.",
+      "options": [
+        "leaving",
+        "left",
+        "to leave",
+        "leave by"
+      ],
+      "answer_index": 0,
+      "explanation": "watch sb doing:lady 主动'留下'、进行中 → leaving。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The teacher found the whole class ____ in tears at the end of the sad story.",
+      "options": [
+        "sat",
+        "sitting",
+        "to sit",
+        "sit by"
+      ],
+      "answer_index": 1,
+      "explanation": "find sb doing:class 主动'坐着'、状态进行中 → sitting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "The villagers saw the road ____ at last, thanks to one girl's kindness.",
+      "options": [
+        "clearing",
+        "to clear",
+        "cleared",
+        "clear"
+      ],
+      "answer_index": 2,
+      "explanation": "see sth done:the road 是'被清理'的承受者 → 过去分词 cleared(对照被动)。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "I often hear people ____ about small problems but doing nothing to fix them.",
+      "options": [
+        "complained",
+        "to complain",
+        "complain by",
+        "complaining"
+      ],
+      "answer_index": 3,
+      "explanation": "hear sb doing:people 主动'抱怨'、进行中 → complaining。"
+    }
+  ]
+}

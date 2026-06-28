@@ -1,0 +1,41 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "情态动词 + would 表过去将来 速查",
+    "intro": "情态动词后接动词原形,本身不随人称变化。三大功能要分清:① 推测可能性(must/can't/may/might/could);② 义务建议必要(should/ought to/must/have to/had better/need);③ 能力请求意愿 + would 表过去将来/过去习惯。推测强弱看证据。",
+    "table": {
+      "headers": ["情态动词", "功能 / 用法 / 例句"],
+      "rows": [
+        ["must", "强肯定推测「一定」(证据充分):He must be rich. ｜ 强义务「必须」:You must wear formal clothes."],
+        ["can't", "否定推测「不可能」:It can't be true.(注意:推测的否定不用 mustn't)"],
+        ["may / might / could", "弱推测「也许、可能」(证据不足):He may be at the consulate."],
+        ["should / ought to", "建议、应当(语气较弱):You should save part of it. / You ought to go now."],
+        ["had better", "针对当下的具体劝告「最好」:You'd better see a doctor. (否定 had better not)"],
+        ["can / could", "能力「能」:He could read it. ｜ 客气请求:Could you help me?"],
+        ["will / would", "意愿;would 更客气;would 转述「过去将来」:He said he would help. ｜ would 表过去习惯:She would sit for hours."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "推测的否定用 can't(不可能),不是 mustn't(mustn't = 禁止)", "mark": "It can't be him. √ / It mustn't be him. ×（推测）" },
+      { "rule": "must(必须)的否定是 needn't / don't have to(不必),mustn't 是「禁止」", "mark": "You needn't pay now（不必）≠ You mustn't（禁止)" },
+      { "rule": "would 转述过去的将来:主句过去时,从句的将来用 would", "mark": "He said he would come.（= will → would)" },
+      { "rule": "would / used to 表过去习惯;但 would 只接动作,不接状态", "mark": "She would sit for hours.√ / She would be tall.×（状态用 used to)" },
+      { "rule": "情态动词后一律跟动词原形,不加 to(ought to / had better 除外的固定形式)", "mark": "should go √ / should to go ×" }
+    ],
+    "why": [
+      "情态动词表达的是说话人的「态度」——有多大把握(推测)、有多强的要求(义务)、有没有能力或意愿。把握越大用 must,把握越小用 may/might;要求越硬用 must,越软用 should。would 则把现在的 will「往过去推一格」,用来转述过去说的将来。"
+    ],
+    "gaokaoPoints": [
+      "推测三档:must（强）/ may·might·could（弱）/ can't（否定),语境给的证据决定选哪一个,语法填空与单选高频。",
+      "must not(禁止)vs needn't / don't have to(不必)的区别是常考陷阱。",
+      "would 表「过去的将来」与「过去反复习惯」,在记叙文和转述句中频繁出现。"
+    ],
+    "examVsReal": [
+      { "exam": "He must be very tired.（考试:强推测）", "real": "He's gotta be exhausted.", "note": "考试用 must 作推测;口语里 've got to / gotta 也常表「一定是」" },
+      { "exam": "You ought to save some money.（考试:建议）", "real": "You really should put a bit aside.", "note": "ought to 与 should 意思相近,口语里 should 更常用,ought to 偏正式" },
+      { "exam": "She would sit there for hours.（考试:过去习惯）", "real": "She used to sit there for ages.", "note": "would 和 used to 都表过去习惯;用 would 须有时间背景,used to 可单独使用" }
+    ]
+  }
+}

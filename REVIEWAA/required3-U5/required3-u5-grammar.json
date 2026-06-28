@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "grammar_title": "情态动词(modal verbs)+ would 表过去将来",
+  "source": "人教版2019必修三 Unit 5 Discovering Useful Structures:情态动词表推测/义务/能力请求意愿 + would 表过去将来或过去习惯(取自 The Million Pound Bank Note)。句子地道、语境让唯一一个情态动词成立(强弱推测看证据)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "表推测可能性(must / can't / may / might / could)",
+      "overview": "对现在或一般情况作推测:证据充分的肯定推测用 must(\"一定\");证据不足的可能推测用 may/might/could(\"也许\");否定推测(\"不可能\")用 can't。强弱看语境给的证据。"
+    },
+    {
+      "code": "u5.02",
+      "point": "表义务/建议/必要(should / ought to / must / have to / had better / need)",
+      "overview": "表应该/最好/必须做某事:建议或本分用 should/ought to;强烈必要或规定用 must/have to;给当下具体劝告用 had better;表必要用 need。"
+    },
+    {
+      "code": "u5.03",
+      "point": "表能力/请求/意愿 + would 表过去将来或过去习惯(can/could/will/would)",
+      "overview": "表能力用 can/could;客气请求用 could/would;表意愿用 will/would;转述\"过去的将来\"(He said he would…)及\"过去反复习惯\"(she would sit for hours)用 would。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "\"Henry has his own boat and once worked for a mining company, so he ____ be completely poor — yet he is.\"",
+      "options": [
+        "can't",
+        "must",
+        "should",
+        "would"
+      ],
+      "answer_index": 0,
+      "explanation": "前提给出他有船有工作,推断\"不可能完全是穷光蛋\"——否定推测用 can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The owner stared at the note. 'This ____ be the million-pound note I read about in the papers last week!'\"",
+      "options": [
+        "can't",
+        "must",
+        "need",
+        "ought"
+      ],
+      "answer_index": 1,
+      "explanation": "有报纸为证、惊讶认出,强肯定推测\"一定是\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Nobody answered the door, so the brothers ____ be out for the afternoon.\"",
+      "options": [
+        "can't",
+        "would",
+        "might",
+        "had better"
+      ],
+      "answer_index": 2,
+      "explanation": "只凭没人应门,证据不足的可能推测\"也许出门了\"——might。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"He is wearing a worn coat and has no small change, so he ____ be a very rich man,\" thought the clerk.",
+      "options": [
+        "must",
+        "should",
+        "need",
+        "can't"
+      ],
+      "answer_index": 3,
+      "explanation": "破外套、没零钱,推断\"不可能是富翁\"——否定推测 can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The light is still on upstairs, so someone ____ still be working in the office.\"",
+      "options": [
+        "must",
+        "can't",
+        "need",
+        "would"
+      ],
+      "answer_index": 0,
+      "explanation": "灯还亮着是有力证据,\"一定还有人在\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I'm not sure where Henry went after the party; he ____ have gone back to his hotel.\"",
+      "options": [
+        "can't",
+        "may",
+        "should",
+        "ought to"
+      ],
+      "answer_index": 1,
+      "explanation": "\"不确定\"表明证据不足,弱推测\"也许回酒店了\"——may。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"She returned every cent and refused a reward, so she ____ be a truly honest person.\"",
+      "options": [
+        "can't",
+        "had better",
+        "must",
+        "would"
+      ],
+      "answer_index": 2,
+      "explanation": "拒赏还钱是充分证据,\"一定是诚实的人\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The bag was empty when she opened it, so the money ____ be inside it now.\"",
+      "options": [
+        "must",
+        "need",
+        "should",
+        "can't"
+      ],
+      "answer_index": 3,
+      "explanation": "袋子是空的,推断\"钱不可能在里面\"——can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The owner isn't certain, but the strange customer ____ be that famous American everyone is talking about.\"",
+      "options": [
+        "could",
+        "can't",
+        "must",
+        "ought to"
+      ],
+      "answer_index": 0,
+      "explanation": "\"不确定\"提示弱推测\"可能是\"——could。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"He hasn't eaten since this morning, so he ____ be very hungry by now.\"",
+      "options": [
+        "can't",
+        "must",
+        "need",
+        "would"
+      ],
+      "answer_index": 1,
+      "explanation": "一整天没吃,\"现在一定很饿\"——强推测 must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Perhaps the brothers were joking, or perhaps not; the whole thing ____ still be some kind of trick.\"",
+      "options": [
+        "must",
+        "can't",
+        "might",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "\"perhaps\"显示不确定,弱推测\"也许仍是个把戏\"——might。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"A poor sailor ____ possibly own a million-pound note,\" the waiter thought when he first saw Henry.",
+      "options": [
+        "must",
+        "should",
+        "would",
+        "can't"
+      ],
+      "answer_index": 3,
+      "explanation": "侍者认为穷水手\"不可能拥有百万钞票\"——否定推测 can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"His face turned pale and his hands shook, so the news ____ have shocked him deeply.\"",
+      "options": [
+        "must",
+        "can't",
+        "need",
+        "ought to"
+      ],
+      "answer_index": 0,
+      "explanation": "脸白手抖是有力证据,\"消息一定深深震惊了他\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I'm not sure, but Lily ____ become a famous actress one day if she keeps trying.\"",
+      "options": [
+        "can't",
+        "may",
+        "must",
+        "had better"
+      ],
+      "answer_index": 1,
+      "explanation": "\"不确定\"表明只是可能性,\"也许有一天会成名\"——may。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"There is mud all over his shoes, so he ____ have walked here through the fields.\"",
+      "options": [
+        "can't",
+        "need",
+        "must",
+        "would"
+      ],
+      "answer_index": 2,
+      "explanation": "满鞋是泥的实证,\"一定是穿过田野走来的\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The shop was locked and dark all day, so they ____ have been open this morning.\"",
+      "options": [
+        "must",
+        "should",
+        "may",
+        "can't"
+      ],
+      "answer_index": 3,
+      "explanation": "整天锁着又黑,\"今早不可能开过门\"——can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"Who knows? The mysterious gift ____ turn out to be a fortune or just an old joke.\"",
+      "options": [
+        "might",
+        "must",
+        "can't",
+        "ought to"
+      ],
+      "answer_index": 0,
+      "explanation": "\"谁知道呢\"显示不确定,弱推测\"也许会是\"——might。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"She earns a small wage and lives simply, so she ____ be the wealthy widow you imagine.\"",
+      "options": [
+        "must",
+        "can't",
+        "need",
+        "would"
+      ],
+      "answer_index": 1,
+      "explanation": "工资微薄、生活简朴,\"不可能是想象中的富婆\"——can't。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"The lights, the music and the laughter show the party ____ be in full swing.\"",
+      "options": [
+        "can't",
+        "should",
+        "must",
+        "may"
+      ],
+      "answer_index": 2,
+      "explanation": "灯光、音乐、笑声都是证据,\"派对一定正热闹\"——must。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"I have no idea where he is; he ____ be at the consulate, but I really can't say.\"",
+      "options": [
+        "must",
+        "can't",
+        "had better",
+        "may"
+      ],
+      "answer_index": 3,
+      "explanation": "\"完全不知道\"显示证据不足,弱推测\"也许在领事馆\"——may。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"The saying means we ____ not judge the value of something just by its external appearance.\"",
+      "options": [
+        "should",
+        "can",
+        "would",
+        "dare"
+      ],
+      "answer_index": 0,
+      "explanation": "讲道理给建议\"我们不应当只凭外表评判\"——should。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is getting late and Henry is tired, so he ____ to be on his way home now.\"",
+      "options": [
+        "can",
+        "ought",
+        "will",
+        "would"
+      ],
+      "answer_index": 1,
+      "explanation": "本分/恰当之事用 ought to;\"他该上路了\"——ought (to)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"You ____ not open the letter until two o'clock — that is the one strict rule.\"",
+      "options": [
+        "can",
+        "would",
+        "must",
+        "dare"
+      ],
+      "answer_index": 2,
+      "explanation": "强制性规定\"两点前千万不可拆\"——must not。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Visitors ____ show their passports at the consulate before entering; it is required by law.\"",
+      "options": [
+        "should",
+        "would",
+        "could",
+        "have to"
+      ],
+      "answer_index": 3,
+      "explanation": "\"法律要求\"是客观必须,用 have to;\"必须出示护照\"。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It's already dark and the streets are unsafe, so you ____ better take a taxi home tonight.\"",
+      "options": [
+        "had",
+        "would",
+        "could",
+        "should"
+      ],
+      "answer_index": 0,
+      "explanation": "对当下情况的具体劝告\"今晚最好打车\"——had better。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"If you find lost money, you ____ try your best to return it to its owner.\"",
+      "options": [
+        "can",
+        "should",
+        "would",
+        "dare"
+      ],
+      "answer_index": 1,
+      "explanation": "道义上的应当\"应该尽力归还\"——should。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"To enter the upper-class party, every guest ____ wear formal evening clothes; no exceptions.\"",
+      "options": [
+        "can",
+        "would",
+        "must",
+        "might"
+      ],
+      "answer_index": 2,
+      "explanation": "\"无一例外\"表强制规定,\"必须穿正装\"——must。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no rush; you ____ to think it over carefully before settling in London.\"",
+      "options": [
+        "can",
+        "will",
+        "dare",
+        "ought"
+      ],
+      "answer_index": 3,
+      "explanation": "给建议\"你应当好好考虑\"——ought (to)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"The bank says customers ____ repay the loan within one year; it is a firm condition.\"",
+      "options": [
+        "must",
+        "should",
+        "would",
+        "could"
+      ],
+      "answer_index": 0,
+      "explanation": "\"firm condition\"是硬性规定,\"必须一年内还清\"——must。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Your coat is so worn; I think you ____ better buy a new one before the meeting.\"",
+      "options": [
+        "would",
+        "had",
+        "can",
+        "ought"
+      ],
+      "answer_index": 1,
+      "explanation": "针对眼前情况的劝告\"最好先买件新的\"——had better。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"We ____ treat everyone we meet for the first time kindly, no matter how they look.\"",
+      "options": [
+        "can",
+        "would",
+        "should",
+        "dare"
+      ],
+      "answer_index": 2,
+      "explanation": "讲道理的建议\"我们应当善待每个初识的人\"——should。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Because he is on duty tonight, the guard ____ stay at the gate until midnight.\"",
+      "options": [
+        "should",
+        "would",
+        "could",
+        "has to"
+      ],
+      "answer_index": 3,
+      "explanation": "因值班这一客观职责而必须,\"不得不待到午夜\"——has to。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"You don't ____ to pay right now; you can settle the bill at the end of the month.\"",
+      "options": [
+        "need",
+        "must",
+        "would",
+        "dare"
+      ],
+      "answer_index": 0,
+      "explanation": "表\"没有必要\"用 need;\"你不必现在付款\"——needn't (don't need to)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"A play ____ to include all its key elements, or the audience will be confused.\"",
+      "options": [
+        "can",
+        "ought",
+        "will",
+        "would"
+      ],
+      "answer_index": 1,
+      "explanation": "说明应有之义\"一部剧应当包含全部要素\"——ought (to)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"Before the dress rehearsal, the actors ____ remember all their lines; that is the rule.\"",
+      "options": [
+        "should",
+        "would",
+        "must",
+        "could"
+      ],
+      "answer_index": 2,
+      "explanation": "\"that is the rule\"表硬性要求,\"必须记住台词\"——must。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"You look pale and feverish; you ____ better see a doctor right away.\"",
+      "options": [
+        "would",
+        "can",
+        "dare",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "对当下身体状况的紧急劝告\"最好马上看医生\"——had better。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"When we help someone in need, we ____ not always expect something in return.\"",
+      "options": [
+        "should",
+        "can",
+        "would",
+        "dare"
+      ],
+      "answer_index": 0,
+      "explanation": "道理上的应当\"不该总想着回报\"——should not。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"All passengers ____ fasten their seat belts during take-off; the airline insists on it.\"",
+      "options": [
+        "should",
+        "must",
+        "would",
+        "could"
+      ],
+      "answer_index": 1,
+      "explanation": "航空公司硬性规定,\"必须系好安全带\"——must。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"You ____ to save a little money each month so that you are ready for emergencies.\"",
+      "options": [
+        "can",
+        "will",
+        "ought",
+        "dare"
+      ],
+      "answer_index": 2,
+      "explanation": "理财建议\"你应当每月存一点\"——ought (to)。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"The storm is coming fast; we ____ better head home before the rain starts.\"",
+      "options": [
+        "would",
+        "can",
+        "ought",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "对眼前情况的劝告\"最好在下雨前回家\"——had better。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Henry told the clerk that without small change he ____ not pay him until the end of the month.\"",
+      "options": [
+        "would",
+        "can",
+        "must",
+        "dare"
+      ],
+      "answer_index": 0,
+      "explanation": "转述\"过去的将来\":主句过去时,从句表将来用 would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"When she was young, my grandmother ____ sit by the window for hours, telling us old stories.\"",
+      "options": [
+        "can",
+        "would",
+        "must",
+        "should"
+      ],
+      "answer_index": 1,
+      "explanation": "表过去反复发生的习惯\"过去常常一坐就是几小时\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Excuse me, ____ you please step inside for a moment?\" the brother asked the young man politely.",
+      "options": [
+        "must",
+        "should",
+        "would",
+        "need"
+      ],
+      "answer_index": 2,
+      "explanation": "客气的请求\"您能进来一下吗\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"After years of practice, Henry ____ read the difficult contract without any help at all.\"",
+      "options": [
+        "would",
+        "must",
+        "dare",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "表过去具备的能力\"能够读懂\"——could。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The brothers promised that they ____ explain everything to Henry at exactly two o'clock.\"",
+      "options": [
+        "would",
+        "can",
+        "must",
+        "ought"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去的将来\"会解释\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ you mind opening the window? It is rather warm in here,\" Portia said with a smile.",
+      "options": [
+        "Must",
+        "Would",
+        "Should",
+        "Need"
+      ],
+      "answer_index": 1,
+      "explanation": "Would you mind…? 是客气请求的固定问法。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"As a boy, Henry ____ spend whole afternoons sailing his little boat along the coast.\"",
+      "options": [
+        "can",
+        "must",
+        "would",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "表过去习惯\"小时候常常\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Henry was so weak from hunger that he ____ hardly walk another step.\"",
+      "options": [
+        "would",
+        "must",
+        "dare",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "表过去的能力(否定语境)\"几乎走不动\"——could hardly。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Jim isn't here; he said earlier that he ____ be on duty at the library this afternoon.\"",
+      "options": [
+        "would",
+        "can",
+        "must",
+        "ought"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去说的将来安排\"会值班\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ you do me a favour and pass the letter to Mr Adams?\" the servant was asked.",
+      "options": [
+        "Must",
+        "Could",
+        "Should",
+        "Need"
+      ],
+      "answer_index": 1,
+      "explanation": "礼貌请求\"能帮我个忙吗\"——Could you…?。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"In those days the old tailor ____ work late into the night, sewing by candlelight.\"",
+      "options": [
+        "can",
+        "must",
+        "would",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "表过去反复的习惯\"那时常常工作到深夜\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"By the age of six, the boy ____ already write his own name in neat letters.\"",
+      "options": [
+        "would",
+        "must",
+        "dare",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "表过去已具备的能力\"已经会写\"——could。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The ambassador said that Miss Langham ____ be glad to keep Henry company at the party.\"",
+      "options": [
+        "would",
+        "can",
+        "must",
+        "ought"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去的将来\"会很乐意\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"It is rather noisy here. ____ we move to a quieter corner to talk?\" he asked kindly.",
+      "options": [
+        "Must",
+        "Could",
+        "Should",
+        "Need"
+      ],
+      "answer_index": 1,
+      "explanation": "客气建议性请求\"我们能换个安静的角落吗\"——Could we…?。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Whenever he had a free evening, Henry ____ wander through the old streets of London.\"",
+      "options": [
+        "can",
+        "must",
+        "would",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "表过去反复习惯\"每当……他就常常\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The room was so dark that Henry ____ not see the brothers' faces clearly.\"",
+      "options": [
+        "would",
+        "must",
+        "dare",
+        "could"
+      ],
+      "answer_index": 3,
+      "explanation": "表过去的能力(否定)\"看不清\"——could not。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"He assured the owner that he ____ come back for the other suits later that week.\"",
+      "options": [
+        "would",
+        "can",
+        "must",
+        "ought"
+      ],
+      "answer_index": 0,
+      "explanation": "转述过去的将来承诺\"会回来取\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ you be so kind as to show Mr Adams out?\" the brother said to the servant.",
+      "options": [
+        "Must",
+        "Would",
+        "Should",
+        "Need"
+      ],
+      "answer_index": 1,
+      "explanation": "Would you be so kind as to…? 是极客气的请求。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Before he lost his money, Henry ____ swim across the bay every single morning.\"",
+      "options": [
+        "can",
+        "must",
+        "would",
+        "should"
+      ],
+      "answer_index": 2,
+      "explanation": "表过去反复的习惯\"过去每天早上都游\"——would。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Henry felt sure that, with the letter in his pocket, his luck ____ soon change for the better.\"",
+      "options": [
+        "can",
+        "must",
+        "dare",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "转述过去时刻的将来感受\"运气很快会好转\"——would。"
+    }
+  ]
+}

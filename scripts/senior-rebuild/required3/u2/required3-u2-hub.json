@@ -1,0 +1,48 @@
+{
+  "listeningQuestions": [
+    { "audio": "Hearing the news, the doctor rushed to the hospital at once.", "opts": ["听到这个消息,医生立刻赶往医院。", "医生在医院里听音乐。", "医生拒绝去医院。", "医生在医院睡着了。"], "answer": 0 },
+    { "audio": "She sat by the bed, smiling gently at the sick child.", "opts": ["她对着孩子大喊。", "她坐在床边,温柔地对生病的孩子微笑。", "她把孩子送进了医院。", "她离开了病房。"], "answer": 1 },
+    { "audio": "Seeing the old man fall, the girl ran over to help him up.", "opts": ["女孩没有理会老人。", "女孩把老人推倒了。", "看到老人摔倒,女孩跑过去扶他起来。", "女孩在路边唱歌。"], "answer": 2 },
+    { "audio": "Thinking of the poor patients, the kind doctor charged very low fees.", "opts": ["医生向穷人收很高的费用。", "医生赶走了穷人。", "医生不愿看病。", "想到贫穷的病人,善良的医生只收很低的费用。"], "answer": 3 },
+    { "audio": "I saw her whispering something kind into the old woman's ear.", "opts": ["我看见她在老妇人耳边低声说着善意的话。", "她对老妇人大声叫嚷。", "她不理睬那位老妇人。", "她把老妇人叫醒了。"], "answer": 0 },
+    { "audio": "Passing the kindness on, the waitress smiled at her next guest.", "opts": ["女服务员对客人发脾气。", "把善意传递下去,女服务员对下一位客人微笑。", "女服务员收了很多小费。", "女服务员关上了门。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Honesty and courage are admired in every culture; they are true ____.", "opts": ["virtues", "prices", "machines", "noises"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "She faced a moral ____, where every choice was equally hard to make.", "opts": ["dilemma", "garden", "market", "holiday"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The kind doctor opened a private ____ to treat poor patients for low fees.", "opts": ["clinic", "factory", "station", "library"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "To a person, nothing is more ____ than their own life.", "opts": ["precious", "cheap", "loud", "empty"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ that his wife had been injured, Mr Johnson hurried to the hospital.", "opts": ["Hearing", "To hear", "Heard", "Hear"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The child lay on her mother's lap, ____ sweetly to herself.", "opts": ["smiling", "to smile", "smiled", "smile"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I saw her ____ something into his ear, clearly not wanting to be heard.", "opts": ["whispering", "whispered", "to whisper", "whisper by"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The flood hit the small town, ____ thousands of families homeless.", "opts": ["leaving", "to leave", "left", "leave"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出与你听到的句子意思相符的一项。", "opts": ["想到仍需帮助的人们,林大夫开了一家私人诊所。", "林大夫关掉了诊所。", "林大夫拒绝看病。", "林大夫去国外定居了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Thinking of all the people still in need of help, Dr Lin opened a private clinic." },
+    { "q": "听录音,选出与你听到的句子意思相符的一项。", "opts": ["女孩用尽全力把石头推到了路边。", "女孩在石头上睡着了。", "女孩绕过了石头。", "女孩把石头卖掉了。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The girl pushed the stone aside with all her might." }
+  ],
+  "reading": {
+    "passage": "A virtue is rarely a grand act done once. As one poet wrote, the best part of a good person's life is made up of small, nameless acts of kindness that nobody even remembers. Helping a stranger, telling the truth, or simply being thankful can slowly make a whole society kinder.",
+    "passageCn": "美德很少是只做一次的壮举。正如一位诗人所写,一个好人一生中最美好的部分,是由那些微小、无名、甚至无人记得的善举构成的。帮助陌生人、讲真话,或仅仅心怀感恩,都能慢慢让整个社会变得更友善。",
+    "questions": [
+      { "q": "According to the poet, what makes up the best part of a good person's life?", "opts": ["Small unremembered acts of kindness.", "A few famous achievements.", "The money they give away.", "The honours they win."], "answer": 0 },
+      { "q": "What can slowly make a whole society kinder?", "opts": ["Everyday acts like helping strangers and being thankful.", "Becoming rich and famous.", "Winning competitions.", "Avoiding other people."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short story (about 60 words) praising a moral act you saw, using at least one present participle (V-ing) as an adverbial, such as 'Seeing the old man fall, …'.",
+    "promptCn": "写一段约60词的小故事,赞扬你见到的一次善举,至少用一个现在分词(V-ing)作状语,例如 'Seeing the old man fall, …'。",
+    "sampleWords": ["kindness", "virtue", "fall", "help up", "moved", "stranger", "refuse", "moral", "smile", "seeing"]
+  },
+  "dialogues": [
+    {
+      "title": "A Kind Act on the Bus",
+      "lines": [
+        { "role": "A", "text": "You look happy today. What happened?", "cn": "你今天看起来很开心,发生什么事了?" },
+        { "role": "B", "text": "On the bus this morning, I saw a boy give his seat to an old man.", "cn": "今早在公交车上,我看到一个男孩把座位让给了一位老人。" },
+        { "role": "A", "text": "That's kind. Did the old man say anything?", "cn": "真善良。老人说什么了吗?" },
+        { "role": "B", "text": "Yes. Smiling warmly, he thanked the boy and called him a real gentleman.", "cn": "说了。老人温暖地微笑着,感谢男孩,称他是真正的绅士。" },
+        { "role": "A", "text": "Small acts like that really make the world kinder.", "cn": "正是这样的小举动让世界变得更友善。" },
+        { "role": "B", "text": "Exactly. Seeing it made me want to be kinder too.", "cn": "没错。看到这一幕,我也想变得更善良。" }
+      ]
+    }
+  ]
+}

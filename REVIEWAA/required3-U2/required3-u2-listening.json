@@ -1,0 +1,421 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Morals and Virtues",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修三 Unit 2 同主题听力(谈道德困境/善意的力量短文/帮助晕倒同学的对话/付出善意的广播/讨论敬佩的美德/感恩短文)。用词限 U2/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 A Moral Dilemma",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Jane: Luke, listen to this story I read in a magazine. It's about a moral dilemma.",
+        "Luke: A moral dilemma? You mean a choice where every answer is hard?",
+        "Jane: Exactly. A girl was taking an important exam when the student beside her suddenly fainted.",
+        "Luke: Oh no. So did she keep writing, or did she stop to help?",
+        "Jane: She stopped at once and called for help, even though it cost her the exam.",
+        "Luke: That was brave. I'm not sure everyone would do the same.",
+        "Jane: I really admire her. She put a person's life above her own success.",
+        "Luke: You're right. Later that girl became a famous doctor, didn't she?"
+      ],
+      "translation_cn": "Jane 给 Luke 讲杂志上一个道德困境的故事:一个女孩考试时旁边的同学突然晕倒;她立刻停下呼救,即使因此考砸;Jane 很敬佩她把生命置于个人成功之上;Luke 说那女孩后来成了著名医生。",
+      "questions": [
+        {
+          "stem": "What kind of story is Jane telling?",
+          "options": [
+            "A story about a moral dilemma.",
+            "A funny holiday story.",
+            "A story about a sports game.",
+            "A story about shopping."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happened during the exam?",
+          "options": [
+            "The girl forgot her pen.",
+            "The student next to her fainted.",
+            "The teacher left the room.",
+            "The lights went out."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the girl decide to do?",
+          "options": [
+            "She stopped to call for help.",
+            "She kept writing and ignored it.",
+            "She left the exam room angrily.",
+            "She copied her neighbour's answers."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Jane feel about the girl?",
+          "options": [
+            "She thinks the girl was foolish.",
+            "She admires what the girl did.",
+            "She does not care about the story.",
+            "She feels sorry for the teacher."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the girl become later in life?",
+          "options": [
+            "A music teacher.",
+            "A shop owner.",
+            "A famous doctor.",
+            "A magazine writer."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 The Power of Kindness",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A small act of kindness can be more powerful than we think.",
+        "When you help a stranger, you may never see them again.",
+        "But that person often passes the kindness on to someone else.",
+        "In this way, one kind act can travel far and touch many lives.",
+        "So never believe that being kind is a waste of time."
+      ],
+      "translation_cn": "一个小小的善举可能比我们想象的更有力量;当你帮助一个陌生人,也许再也见不到他;但那个人往往会把善意传给别人;这样,一个善举能传得很远、温暖许多人;所以永远别觉得善良是浪费时间。",
+      "questions": [
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Strangers are dangerous.",
+            "Helping others wastes time.",
+            "Money is more useful than kindness.",
+            "A small act of kindness can be very powerful."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What may happen when you help a stranger?",
+          "options": [
+            "You may never see them again.",
+            "You become rich at once.",
+            "They always pay you back in cash.",
+            "They become your enemy."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the helped person often do?",
+          "options": [
+            "They forget about it quickly.",
+            "They pass the kindness on to someone else.",
+            "They complain to others.",
+            "They ask for more help."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How far can one kind act travel?",
+          "options": [
+            "Only to one person.",
+            "Nowhere at all.",
+            "Far enough to touch many lives.",
+            "Just back to you."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should we never believe, according to the speaker?",
+          "options": [
+            "That strangers exist.",
+            "That help is needed.",
+            "That kindness is powerful.",
+            "That being kind is a waste of time."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Helping a Classmate",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Tom: You look worried, Mary. What's wrong?",
+        "Mary: This morning our classmate Anna fainted in the playground.",
+        "Tom: Fainted? That's frightening. Was anyone with her?",
+        "Mary: Yes. I saw her falling, so I ran over and held her head.",
+        "Tom: Quick thinking. Did you know what to do?",
+        "Mary: A little. We learned first aid last term, so I called the school nurse at once.",
+        "Tom: You did the right thing. Is Anna all right now?",
+        "Mary: The nurse says she just needs rest. I'm so glad I didn't just stand there."
+      ],
+      "translation_cn": "Tom 看出 Mary 心事重重;Mary 说早上同学 Anna 在操场晕倒;Mary 看见她倒下,跑过去扶住她的头;因为上学期学过急救,她立刻叫来校医;Anna 只需休息,Mary 庆幸自己没有袖手旁观。",
+      "questions": [
+        {
+          "stem": "Why is Mary worried?",
+          "options": [
+            "Her classmate Anna fainted.",
+            "She lost her homework.",
+            "She failed an exam.",
+            "She missed the bus."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Mary do when she saw Anna falling?",
+          "options": [
+            "She walked away quietly.",
+            "She ran over and held Anna's head.",
+            "She called her parents.",
+            "She took a photo."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did Mary know what to do?",
+          "options": [
+            "She read it online that morning.",
+            "Her mother is a doctor.",
+            "She had learned first aid last term.",
+            "She guessed."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who did Mary call for help?",
+          "options": [
+            "The police.",
+            "Her best friend.",
+            "Anna's parents.",
+            "The school nurse."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Mary feel about her action?",
+          "options": [
+            "Glad she did not just stand there.",
+            "Sorry she got involved.",
+            "Angry at Anna.",
+            "Bored by the whole thing."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 Paying It Forward",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Welcome to our radio show about everyday heroes.",
+        "Today we talk about an idea called paying it forward.",
+        "It means that when someone helps you, you help another person in return.",
+        "You do not pay the kindness back; you pass it on.",
+        "We hope our listeners will try to pay it forward this week."
+      ],
+      "translation_cn": "欢迎收听关于日常英雄的广播节目;今天我们谈一个叫'付出善意'的理念;意思是当有人帮助你时,你转而去帮助另一个人;你不是把善意还回去,而是传下去;希望听众们本周都试着把善意传递下去。",
+      "questions": [
+        {
+          "stem": "What is the radio show about?",
+          "options": [
+            "Famous singers.",
+            "Everyday heroes.",
+            "Cooking lessons.",
+            "Sports news."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What idea does the show talk about today?",
+          "options": [
+            "Saving money.",
+            "Learning to drive.",
+            "Paying it forward.",
+            "Buying gifts."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does 'paying it forward' mean?",
+          "options": [
+            "Paying back twice as much.",
+            "Keeping the help to yourself.",
+            "Asking for money.",
+            "Helping another person in return."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How do you treat the kindness you receive?",
+          "options": [
+            "You pass it on to someone else.",
+            "You forget it.",
+            "You sell it.",
+            "You pay it straight back."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the host hope listeners will do?",
+          "options": [
+            "Call the show every day.",
+            "Try to pay it forward this week.",
+            "Stop listening to the radio.",
+            "Buy the host a gift."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Virtues We Admire",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lily: Our teacher asked us to name the virtue we admire most. Which did you choose, Sam?",
+        "Sam: I chose honesty. I think telling the truth is the hardest and most important virtue.",
+        "Lily: That's a good one. I picked courage, like the courage to help when others just watch.",
+        "Sam: Courage matters too. Why do you admire it so much?",
+        "Lily: Because doing the right thing is often scary, and brave people do it anyway.",
+        "Sam: True. My grandfather always says that small brave acts shape who we are.",
+        "Lily: I agree. Maybe honesty and courage really go together.",
+        "Sam: They do. An honest person needs courage to speak the truth."
+      ],
+      "translation_cn": "Lily 问 Sam 最敬佩哪种美德;Sam 选诚实,认为说真话最难也最重要;Lily 选勇气,比如在别人旁观时挺身相助的勇气;她说做对的事常令人害怕,而勇敢的人依然去做;Sam 的祖父说微小的勇敢之举塑造了我们;两人认为诚实与勇气其实相辅相成。",
+      "questions": [
+        {
+          "stem": "What did the teacher ask the students to do?",
+          "options": [
+            "Write a song about school.",
+            "Draw a picture of a hero.",
+            "Name the virtue they admire most.",
+            "List their favourite foods."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which virtue did Sam choose?",
+          "options": [
+            "Courage.",
+            "Patience.",
+            "Generosity.",
+            "Honesty."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which virtue did Lily choose?",
+          "options": [
+            "Courage.",
+            "Honesty.",
+            "Thankfulness.",
+            "Kindness."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Lily admire that virtue?",
+          "options": [
+            "Because it is easy to have.",
+            "Because brave people do right even when it is scary.",
+            "Because it makes people rich.",
+            "Because it wins prizes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do Sam and Lily finally agree on?",
+          "options": [
+            "Virtues do not matter.",
+            "Honesty is useless.",
+            "Honesty and courage go together.",
+            "Only one virtue counts."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Counting Your Blessings",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Thankfulness is one of the simplest yet greatest virtues.",
+        "When you feel grateful, you stop comparing yourself with others.",
+        "An old saying tells of a man who had no shoes and complained.",
+        "Then he met someone who had no feet, and learned to be thankful.",
+        "Count your blessings each day, and you will always feel rich enough."
+      ],
+      "translation_cn": "感恩是最简单却最伟大的美德之一;当你心怀感激,就不再与他人攀比;一句古谚讲一个没有鞋而抱怨的人;后来他遇到一个没有脚的人,学会了感恩;每天数算所拥有的福气,你就会永远觉得足够富有。",
+      "questions": [
+        {
+          "stem": "How does the speaker describe thankfulness?",
+          "options": [
+            "As a useless old habit.",
+            "As a virtue only for the rich.",
+            "As something hard to feel.",
+            "As one of the simplest yet greatest virtues."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do you stop doing when you feel grateful?",
+          "options": [
+            "Comparing yourself with others.",
+            "Helping others.",
+            "Working hard.",
+            "Telling the truth."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did the man in the saying complain about?",
+          "options": [
+            "He had no money.",
+            "He had no shoes.",
+            "He had no friends.",
+            "He had no food."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What changed the man's mind?",
+          "options": [
+            "He bought new shoes.",
+            "He won a prize.",
+            "He met someone who had no feet.",
+            "He moved to a new town."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice does the passage give?",
+          "options": [
+            "Buy more things.",
+            "Compare yourself with the rich.",
+            "Complain when unhappy.",
+            "Count your blessings each day."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

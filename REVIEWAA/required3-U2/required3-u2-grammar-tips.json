@@ -1,0 +1,36 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "现在分词(V-ing)作状语速查",
+    "intro": "现在分词作状语表示与主句相关的动作,可表时间、原因、伴随或结果。判断口诀:逻辑主语 = 主句主语、且主语主动发出动作时用 V-ing(主动/进行);若主语是动作的承受者则用过去分词 done(被动)。",
+    "table": {
+      "headers": ["用法", "例句 / 等价说明"],
+      "rows": [
+        ["时间/原因状语", "Hearing the news, he rushed out. = When/Because he heard …(主语主动听到)"],
+        ["伴随状语", "She sat there, smiling happily.(与谓语同时发生的动作)"],
+        ["结果状语", "The flood hit the town, leaving thousands homeless.(自然产生的结果)"],
+        ["see/hear/watch/find + sb + doing", "I saw her whispering.(宾语主动进行) ↔ I saw the work done.(被动)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "现在分词的逻辑主语必须 = 主句主语,且主语主动发出动作 → 用 V-ing", "mark": "Thinking of the poor, Dr Lin opened a clinic.(Dr Lin 主动 think)" },
+      { "rule": "若主语是动作的承受者(被动),用过去分词 done,不用 V-ing", "mark": "Hurt by the rejection, she walked away.(she 被 hurt)" },
+      { "rule": "感官动词 see/hear/watch + sb + doing 强调动作正在进行;+ sb + done 表被动", "mark": "see her playing(主动) / see her son awarded(被动)" },
+      { "rule": "现在分词作状语 ≠ 不定式;不定式 to do 多表'将要/目的',分词表同时/在先", "mark": "Hearing …(已听到) ≠ To hear …(为了听)" }
+    ],
+    "why": [
+      "现在分词带有主动、进行的意味,逻辑主语与主句一致时,用它能把两个动作自然地连在一句话里;一旦主语变成动作的承受者,就要换成表被动的过去分词 done。"
+    ],
+    "gaokaoPoints": [
+      "V-ing 作状语 vs 过去分词 done 的主动/被动判断(看逻辑主语是施动还是受动);语法填空、短文改错高频。",
+      "现在分词与不定式、并列谓语动词的区分:Doing …, he … / He did A, doing B(伴随)。",
+      "感官动词 + sb + doing / done 的宾补形式,是写作和单选的常考点。"
+    ],
+    "examVsReal": [
+      { "exam": "Hearing the news, he rushed out.（考试/书面）", "real": "When he heard the news, he rushed out.", "note": "考试爱考分词;口语里用 when/because 引导的状语从句更直白" },
+      { "exam": "The flood hit the town, leaving thousands homeless.（考试）", "real": "The flood hit the town, and it left thousands homeless.", "note": "考试用分词表结果;口语常用 and 把两句并列" }
+    ]
+  }
+}

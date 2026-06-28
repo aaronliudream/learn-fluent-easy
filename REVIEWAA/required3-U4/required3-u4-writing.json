@@ -1,0 +1,52 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Write an argumentative essay about the value of space exploration(写一篇关于太空探索价值的议论文)",
+  "title_en": "Is Space Exploration Worth the Cost?",
+  "genre": "议论文 / 说明文(argue why we explore space + give reasons)",
+  "source": "人教版2019必修三 Unit 4 Reading for Writing:present an argument about the value of space exploration(为太空探索的价值表明观点并给出理由)。",
+  "prompt_cn": "假设你叫李华,学校英语报正在征稿,主题是'太空探索值得吗?'。请用英语写一篇约100词的议论文,内容包括:① 提出你的观点(太空探索值得/不值得);② 给出两到三条理由(如卫星帮助农业、推动科技、寻找新家园);③ 在结尾重申你的观点。注意:用不定式表目的(to do / in order to / so as to)等结构。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English newspaper is collecting articles on the topic 'Is space exploration worth it?'. Write an argumentative essay (about 100 words) that: 1) states your opinion (space exploration is / is not worth it); 2) gives two or three reasons (e.g. satellites help farming, space research drives technology, the search for a new home); 3) restates your opinion at the end. Try to use to-infinitives of purpose (to do / in order to / so as to).",
+  "points": [
+    "提出观点(In my opinion, exploring space is well worth it.)",
+    "理由一·卫星与农业(Satellites collect data so as to help farmers grow more food.)",
+    "理由二·科技进步(Space research drives technology to improve daily life.)",
+    "结尾重申观点(For these reasons, I firmly believe space exploration is worthwhile.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Countries around the globe spend billions on space missions, and some people think this is a waste. In my opinion, however, exploring space is well worth it. Firstly, satellites circle the Earth to collect data on weather and land, which helps farmers grow more food. Secondly, space research drives technology forward; many useful products, from heart monitors to smartphone cameras, were first made for space. Finally, scientists explore other planets so as to find a possible new home, because our resources are limited. For these reasons, I firmly believe that space exploration is not a waste, but a wise investment in our future.",
+  "model_translation": "全球各国在太空任务上投入数十亿,有些人认为这是浪费。然而在我看来,探索太空非常值得。首先,卫星绕地球运行以收集天气和陆地的数据,帮助农民种出更多粮食。其次,太空研究推动科技进步;从心脏监测仪到智能手机摄像头,许多有用的产品最初都是为太空研制的。最后,科学家探索其他星球,是为了寻找一个可能的新家园,因为我们的资源是有限的。基于这些理由,我坚信太空探索不是浪费,而是对我们未来的明智投资。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:亮明观点 / 两三条理由 / 结尾重申观点" },
+      { "dimension": "结构", "max": 4, "criteria": "总—分—总清晰、Firstly/Secondly/Finally 衔接、首尾呼应" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、不定式表目的等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "亮明观点 In my opinion, exploring space is well worth it.",
+      "理由1 Satellites collect data … which helps farmers grow more food.",
+      "理由2 Space research drives technology to improve daily life.",
+      "理由3 + 结尾 Scientists explore other planets so as to find a new home. For these reasons, I firmly believe …"
+    ],
+    "key_expressions": [
+      "In my opinion, exploring space is well worth it.",
+      "Satellites circle the Earth to collect data on weather and land.",
+      "Many useful products were first made for space.",
+      "Scientists explore other planets so as to find a possible new home."
+    ],
+    "useful_words": ["explore", "satellite", "data", "technology", "resource", "launch", "universe", "spacecraft", "benefit", "worthwhile"]
+  },
+  "high_sentences": [
+    "In my opinion, exploring space is well worth it.",
+    "Satellites circle the Earth to collect data so as to help farmers grow more food.",
+    "Many useful products, from heart monitors to smartphone cameras, were first made for space.",
+    "Scientists explore other planets to find a possible new home, because our resources are limited."
+  ],
+  "error_pairs": [
+    { "wrong": "We explore space for find a new home.", "correct": "We explore space to find a new home.", "note": "表目的用不定式 to do,不用 for + do。" },
+    { "wrong": "Satellites are sent up for collecting data.", "correct": "Satellites are sent up to collect data.", "note": "表目的更自然用 to do;for doing 表用途、口气不同。" },
+    { "wrong": "It is worth to explore space.", "correct": "It is worth exploring space.", "note": "be worth + doing 是固定结构,不接 to do。" }
+  ],
+  "paragraph_template": "【太空探索议论文结构】\n开头:摆现象 + 亮明观点 In my opinion, exploring space is well worth it.\n主体:Firstly … 卫星帮农业;Secondly … 推动科技;Finally … 寻找新家园(用 to do / so as to 表目的)\n结尾:For these reasons, I firmly believe space exploration is worthwhile."
+}

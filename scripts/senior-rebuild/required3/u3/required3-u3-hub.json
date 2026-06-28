@@ -1,0 +1,48 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "listeningQuestions": [
+    { "audio": "San Francisco is a city with many diverse cultures.", "opts": ["旧金山是一座拥有多元文化的城市。", "旧金山是一座很小的城市。", "旧金山没有什么文化。", "旧金山只有一种文化。"], "answer": 0 },
+    { "audio": "Many Chinese immigrants settled in Chinatown.", "opts": ["许多华人移民在唐人街定居。", "许多游客离开了唐人街。", "唐人街里没有华人。", "华人都搬出了唐人街。"], "answer": 0 },
+    { "audio": "Guizhou is home to many ethnic minority groups.", "opts": ["贵州是许多少数民族群体的家园。", "贵州没有少数民族。", "贵州只有一个民族。", "贵州的人都搬走了。"], "answer": 0 },
+    { "audio": "The climate here is mild all year round.", "opts": ["这里气候全年温和。", "这里全年都很冷。", "这里夏天非常热。", "这里气候变化很大。"], "answer": 0 },
+    { "audio": "Nachos are corn chips covered in cheese.", "opts": ["墨西哥玉米片是裹着奶酪的玉米片。", "玉米片里没有奶酪。", "奶酪盖在米饭上。", "玉米片是甜的。"], "answer": 0 },
+    { "audio": "Visitors can buy souvenirs in the old shops.", "opts": ["游客可以在老店里买纪念品。", "老店里什么都没有。", "游客不能进入老店。", "纪念品都卖光了。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "Yunnan is home to many ____ minority groups.", "opts": ["ethnic", "financial", "spicy", "mild"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Some immigrants opened shops to ____ a living.", "opts": ["earn", "escape", "claim", "fold"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "I ____ a Cantonese restaurant for dinner.", "opts": ["selected", "occurred", "contained", "folded"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "He wanted to buy some hand-made ____ as gifts.", "opts": ["souvenirs", "climates", "diagrams", "percentages"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "—Will you join the village tour? —I'd love ____.", "opts": ["to", "to it", "join", "to joining"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "When ____ in Rome, do as the Romans do.", "opts": ["in", "you are be", "being are", "are in"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "—Have you heard of the Monkey King? —Yes, I ____.", "opts": ["have", "do", "did", "am"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Justin loves the villages, and ____ does Linlin.", "opts": ["so", "as", "also", "either"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["美式食物常融合多种文化做出新东西。", "美国没有自己的食物。", "美式食物从不改变。", "美式食物只来自法国。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "American food often mixes many cultures to make something new." },
+    { "q": "听句子选中文:", "opts": ["这件乐器有一千多年的历史。", "这件乐器是上周做的。", "这件乐器很便宜。", "没有人会演奏它。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "This instrument has a history of more than a thousand years." }
+  ],
+  "reading": {
+    "passage": "Chinatown in San Francisco is the oldest in America. Each year it welcomes more visitors than even the famous bridge. People come for the food, the shops, and a real taste of Chinese culture.",
+    "passageCn": "旧金山的唐人街是美国最古老的。它每年接待的游客比那座著名的大桥还多。人们为美食、店铺和地道的中国文化而来。",
+    "questions": [
+      { "q": "What is special about this Chinatown?", "opts": ["It is the oldest in America.", "It is the newest in America.", "It has no visitors.", "It sells no food."], "answer": 0 },
+      { "q": "Why do people come to Chinatown?", "opts": ["For the food, shops, and Chinese culture.", "To see the bridge only.", "To leave at once.", "Because nothing is there."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short introduction (3–4 sentences) to a culturally diverse place you know.",
+    "promptCn": "写一段简短介绍(3-4句),介绍一个你知道的文化多元的地方。",
+    "sampleWords": ["diverse", "culture", "immigrant", "ethnic", "settle", "souvenir", "climate", "suit", "historical", "attraction"]
+  },
+  "dialogues": [
+    {
+      "title": "Recommending a Place to Visit",
+      "lines": [
+        { "role": "A", "text": "I'm going to Guizhou next month. Any places you'd recommend?", "cn": "我下个月要去贵州,你有什么推荐的地方吗?" },
+        { "role": "B", "text": "Definitely the ethnic minority villages. The culture there is so diverse.", "cn": "一定要去少数民族村寨,那里的文化非常多元。" },
+        { "role": "A", "text": "That sounds great. What can I see there?", "cn": "听起来很棒。我在那儿能看到什么?" },
+        { "role": "B", "text": "Traditional dances, old houses, and people playing the lusheng.", "cn": "传统舞蹈、古老的房子,还有人演奏芦笙。" }
+      ]
+    }
+  ]
+}

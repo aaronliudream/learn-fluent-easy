@@ -1,0 +1,37 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "不定式 to do 三大用法速查(目的状语 / 后置定语 / 宾语·宾补·主语)",
+    "intro": "不定式 to do 既能表'为了……'(目的),又能放在名词后表'要做的'(定语),还能作宾语、宾补和主语。口诀:表目的用 to do;名词后修饰用 to do;跟在 want/ask/It is… 后看搭配。",
+    "table": {
+      "headers": ["用法", "标志 / 例句"],
+      "rows": [
+        ["目的状语", "to do = in order to do = so as to do:They make vehicles to carry people into space."],
+        ["后置定语", "名词 + to do:the first person to go into space;a lot of work to do;something to eat"],
+        ["作宾语", "want/decide/hope/need + to do:He hoped to become an astronaut."],
+        ["作宾补", "ask/tell/allow/want sb to do:The captain told us to fasten our seatbelts."],
+        ["作主语", "It is + adj. + to do:It is dangerous to get out of orbit."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "表目的:to do / in order to do / so as to do 三者可互换;否定用 not to do / so as not to do", "mark": "so as not to float around √" },
+      { "rule": "the first/second/last/only + 名词 + 后,几乎必用不定式", "mark": "the first person to get married in space" },
+      { "rule": "avoid / enjoy / keep / suggest / mean(意味着)/ be busy / look forward to 后接 doing,不接 to do", "mark": "avoid floating √ / avoid to float ×" },
+      { "rule": "It is + adj. + to do 中 It 是形式主语,真主语是后面的 to do", "mark": "It is hard to send people to Mars." }
+    ],
+    "why": [
+      "不定式 to do 自带'未来、要去做'的意味,所以最适合表示'目的'和'名词后将要做的动作';而 doing 强调正在进行或一般状态,搭配由前面的动词决定。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给动词原形,判断填 to do(目的/定语)还是 doing(avoid/enjoy/keep 等后)。",
+      "to do 与 doing 对照题:看前面的谓语动词搭配(want to do vs avoid doing)。",
+      "in order to / so as to 表目的,so as to 一般不放句首。"
+    ],
+    "examVsReal": [
+      { "exam": "He stayed up late in order to finish the report.（考试/书面）", "real": "He stayed up late to finish the report.", "note": "口语里常直接用 to do,in order to 偏正式" },
+      { "exam": "She was the first person to arrive.（考试）", "real": "She was the first to arrive / the first one there.", "note": "口语可省略名词,意思一样" }
+    ]
+  }
+}

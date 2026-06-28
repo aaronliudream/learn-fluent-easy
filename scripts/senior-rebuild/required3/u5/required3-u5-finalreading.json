@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(金钱观/理财主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Ben used to spend every coin of his pocket money the moment he got it, and by the next day he had nothing left. After his teacher explained how to save a little each week, he began to put part of his money aside. Three months later, he had saved enough to buy the bicycle he had always wanted, and he felt proud of his own patience.",
+    "questions": [
+      {
+        "q": "What did Ben do with his pocket money at first?",
+        "options": [
+          "He spent it all at once and soon had nothing.",
+          "He gave it to his teacher to keep.",
+          "He saved every coin in a bank.",
+          "He lent it to his classmates."
+        ],
+        "answer": "A",
+        "explanation": "原文 'spend every coin… the moment he got it, and by the next day he had nothing left' 的转述。"
+      },
+      {
+        "q": "How did Ben feel after three months of saving?",
+        "options": [
+          "Sorry that he had started saving.",
+          "Proud that his patience had paid off.",
+          "Bored with his new bicycle.",
+          "Angry at his teacher's advice."
+        ],
+        "answer": "B",
+        "explanation": "末句 'felt proud of his own patience'(短文后半段,覆盖不同位置);其余与原文相反或未提。"
+      }
+    ]
+  }
+}

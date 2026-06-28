@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grammar_title": "省略(Ellipsis):不定式的省略 · 状语从句的省略 · 对话/并列句中重复成分的省略",
+  "source": "人教版2019必修三 Unit 3 Discovering Useful Structures:Understand the use of ellipsis in English。每题留一处 ____,只有一个选项能地道地还原/补全省略结构,干扰项为错连词、错动词形式或多余成分。句子地道、答案唯一。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "不定式的省略(保留 to,省略后面的动词原形)",
+      "overview": "当不定式所表达的动作在上文已出现时,常只保留 to,省略其后的动词(及宾语):—Will you join us? —I'd love to. / You can go if you want to. / I didn't mean to. 若动词为 be/完成体 have,则保留 to be / to have。"
+    },
+    {
+      "code": "u3.02",
+      "point": "状语从句的省略(连词 + V-ing / V-ed / adj,省略“主语 + be”)",
+      "overview": "当状语从句的主语与主句主语一致(或为 it)且谓语含 be 时,可省略“主语 + be”,只留连词 + 现在分词/过去分词/形容词/介词短语:When (you are) in Rome, do as the Romans do. / If (it is) necessary, call me. / Though (he was) tired, he kept working."
+    },
+    {
+      "code": "u3.03",
+      "point": "对话/并列句中重复成分的省略(省主语、助动词、重复谓语等)",
+      "overview": "为避免重复,对话答语或并列句中常省去与上文相同的成分,只保留新信息或助动词/be/情态动词:—Where are you going? —(I'm going) To the library. / He can swim, and so can I. / She likes tea, but I don't (like tea)."
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "—Will you come to the ethnic festival with us? —I'd love ____.",
+      "options": [
+        "to",
+        "to come it",
+        "come",
+        "to coming"
+      ],
+      "answer_index": 0,
+      "explanation": "上文已有 come,不定式只保留 to,省略后面的动词。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "You can visit Chinatown today if you really want ____.",
+      "options": [
+        "to do it",
+        "to",
+        "want",
+        "to wanting"
+      ],
+      "answer_index": 1,
+      "explanation": "want 后接不定式,动作上文已提,只保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—I'm sorry I stepped on your foot. —Don't worry, you didn't mean ____.",
+      "options": [
+        "to it",
+        "mean",
+        "to",
+        "to meaning"
+      ],
+      "answer_index": 2,
+      "explanation": "mean to do,动作已知,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She didn't buy the souvenir, though she had hoped ____.",
+      "options": [
+        "buy",
+        "to buying",
+        "to it",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "hope to do,buy 已出现,保留 to 省略动词。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Why didn't you taste the gumbo? —I wanted ____, but it was all gone.",
+      "options": [
+        "to",
+        "taste",
+        "to tasting",
+        "to taste it it"
+      ],
+      "answer_index": 0,
+      "explanation": "want to do,taste 上文已现,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He doesn't practise tai chi every day, but he used ____.",
+      "options": [
+        "use",
+        "to",
+        "to doing",
+        "to it"
+      ],
+      "answer_index": 1,
+      "explanation": "used to do 表过去习惯,动词省略只保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Could you show me the Dragon Gate? —I'd be glad ____.",
+      "options": [
+        "show",
+        "to showing",
+        "to",
+        "to show it it"
+      ],
+      "answer_index": 2,
+      "explanation": "be glad to do,动作已知,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I haven't tried the spicy stew yet, but I'm going ____ tonight.",
+      "options": [
+        "try",
+        "to trying",
+        "to it",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "be going to do,try 已提,留 to 省略动词。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Have you booked the trip to Guizhou? —Not yet, but I plan ____ tomorrow.",
+      "options": [
+        "to",
+        "book",
+        "to booking",
+        "to it"
+      ],
+      "answer_index": 0,
+      "explanation": "plan to do,book 上文已现,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "You needn't taste every dish unless you'd like ____.",
+      "options": [
+        "taste",
+        "to",
+        "to tasting",
+        "like"
+      ],
+      "answer_index": 1,
+      "explanation": "would like to do,taste 已知,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Will Justin join the village tour? —He'd really like ____.",
+      "options": [
+        "join",
+        "to joining",
+        "to",
+        "to join it it"
+      ],
+      "answer_index": 2,
+      "explanation": "would like to do,join 已现,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I didn't write the travel journal myself, though I ought ____.",
+      "options": [
+        "write",
+        "to writing",
+        "to it",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "ought to do,write 已知,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Did you climb to the waterfall cave? —I tried ____, but it was too steep.",
+      "options": [
+        "to",
+        "climb",
+        "to climbing",
+        "climb it"
+      ],
+      "answer_index": 0,
+      "explanation": "try to do,climb 上文已现,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—You should taste the fortune cookie. —I'm just about ____.",
+      "options": [
+        "taste",
+        "to",
+        "to tasting",
+        "to it"
+      ],
+      "answer_index": 1,
+      "explanation": "be about to do,taste 已知,保留 to 省略动词。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "She wanted to buy the herbal medicine but wasn't allowed ____.",
+      "options": [
+        "buy",
+        "to buying",
+        "to",
+        "to buy it it"
+      ],
+      "answer_index": 2,
+      "explanation": "be allowed to do,buy 已现,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Will you record his story for the journal? —Sure, I'm happy ____.",
+      "options": [
+        "record",
+        "to recording",
+        "to it",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "be happy to do,record 已知,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "He hasn't moved to the Mission District yet, but he hopes ____ soon.",
+      "options": [
+        "to",
+        "move",
+        "to moving",
+        "to it"
+      ],
+      "answer_index": 0,
+      "explanation": "hope to do,move 上文已现,留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Are you going to learn the lusheng? —Yes, I really intend ____.",
+      "options": [
+        "learn",
+        "to",
+        "to learning",
+        "to learn it it"
+      ],
+      "answer_index": 1,
+      "explanation": "intend to do,learn 已现,保留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "I didn't explore the whole museum, although I'd planned ____.",
+      "options": [
+        "explore",
+        "to exploring",
+        "to",
+        "to it"
+      ],
+      "answer_index": 2,
+      "explanation": "plan to do,explore 已知,只留 to。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "—Could you carry these souvenirs for me? —Of course, I'd be glad ____.",
+      "options": [
+        "carry",
+        "to carrying",
+        "carry them",
+        "to"
+      ],
+      "answer_index": 3,
+      "explanation": "be glad to do,carry 已现,保留 to。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When ____ in Rome, do as the Romans do.",
+      "options": [
+        "in",
+        "you are be",
+        "being are",
+        "are in"
+      ],
+      "answer_index": 0,
+      "explanation": "状语从句省略“主语 + be”,只留连词加介词短语:When (you are) in Rome。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "If ____ necessary, please call your guide for help.",
+      "options": [
+        "it necessary is",
+        "necessary",
+        "necessarily",
+        "being necessary it"
+      ],
+      "answer_index": 1,
+      "explanation": "If (it is) necessary,省略“it is”,只留形容词 necessary。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Though ____ tired, the travellers kept walking through Chinatown.",
+      "options": [
+        "they tired",
+        "tiring them",
+        "tired",
+        "being tired they"
+      ],
+      "answer_index": 2,
+      "explanation": "Though (they were) tired,省略“主语 + be”,留过去分词 tired。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While ____ in Guizhou, Justin met many friendly local people.",
+      "options": [
+        "he travelling",
+        "travelled he",
+        "he travel",
+        "travelling"
+      ],
+      "answer_index": 3,
+      "explanation": "While (he was) travelling,省略“he was”,留现在分词 travelling。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When ____ from the hill, the Golden Gate Bridge looks amazing.",
+      "options": [
+        "seen",
+        "it seen",
+        "seeing it",
+        "see it"
+      ],
+      "answer_index": 0,
+      "explanation": "When (it is) seen,被动省略留过去分词 seen。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Unless ____ to do so, visitors should not touch the old china plates.",
+      "options": [
+        "they asking",
+        "asked",
+        "ask them",
+        "asking they"
+      ],
+      "answer_index": 1,
+      "explanation": "Unless (they are) asked,被动省略留过去分词 asked。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Once ____ with cheese, the corn chips become tasty nachos.",
+      "options": [
+        "they covering",
+        "covering them",
+        "covered",
+        "cover them"
+      ],
+      "answer_index": 2,
+      "explanation": "Once (they are) covered,被动省略留过去分词 covered。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "If ____ for advice, ask a local about the best ethnic restaurants.",
+      "options": [
+        "it possibly",
+        "being possible it",
+        "it possible is",
+        "possible"
+      ],
+      "answer_index": 3,
+      "explanation": "If (it is) possible,省略“it is”,留形容词 possible。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Although ____ as a poor area, the Mission District is now a centre for art.",
+      "options": [
+        "known",
+        "it knowing",
+        "knowing it",
+        "know it"
+      ],
+      "answer_index": 0,
+      "explanation": "Although (it is) known,被动省略留过去分词 known。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When ____ a foreign city, try to learn a little of its local culture.",
+      "options": [
+        "you visiting",
+        "visiting",
+        "visit you",
+        "you visit it"
+      ],
+      "answer_index": 1,
+      "explanation": "When (you are) visiting,省略“you are”,留现在分词 visiting。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Whenever ____ in doubt about a word, just ask politely.",
+      "options": [
+        "you in are",
+        "being in you",
+        "in",
+        "are in you"
+      ],
+      "answer_index": 2,
+      "explanation": "Whenever (you are) in doubt,省略“you are”,留介词短语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While ____ at street art, Li Lan spent a few happy hours in the district.",
+      "options": [
+        "she looking",
+        "look she",
+        "she look",
+        "looking"
+      ],
+      "answer_index": 3,
+      "explanation": "While (she was) looking,省略“she was”,留现在分词 looking。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "If ____, the hand-made silver accessories make wonderful souvenirs.",
+      "options": [
+        "wanted",
+        "they wanting",
+        "wanting them",
+        "want them"
+      ],
+      "answer_index": 0,
+      "explanation": "If (they are) wanted,被动省略留过去分词 wanted。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Though ____ small, the village shows a rich ethnic minority culture.",
+      "options": [
+        "it small",
+        "small",
+        "being small it",
+        "small it is"
+      ],
+      "answer_index": 1,
+      "explanation": "Though (it is) small,省略“it is”,留形容词 small。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When ____ for the first time, the lusheng music sounds quite unusual.",
+      "options": [
+        "it hearing",
+        "hearing it",
+        "heard",
+        "hear it"
+      ],
+      "answer_index": 2,
+      "explanation": "When (it is) heard,被动省略留过去分词 heard。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While ____ his trip, Justin took many photos of the waterfall.",
+      "options": [
+        "he enjoying",
+        "enjoy he",
+        "he enjoy",
+        "enjoying"
+      ],
+      "answer_index": 3,
+      "explanation": "While (he was) enjoying,省略“he was”,留现在分词 enjoying。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "If ____ carefully, the diverse culture of China is easy to appreciate.",
+      "options": [
+        "studied",
+        "it studying",
+        "studying it",
+        "study it"
+      ],
+      "answer_index": 0,
+      "explanation": "If (it is) studied,被动省略留过去分词 studied。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "Although ____ from China, the gate's materials were used to build it locally.",
+      "options": [
+        "they donating",
+        "donated",
+        "donating them",
+        "donate them"
+      ],
+      "answer_index": 1,
+      "explanation": "Although (they were) donated,被动省略留过去分词 donated。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "When ____ about Chinatown, most visitors first mention its food.",
+      "options": [
+        "they asking",
+        "asking them",
+        "asked",
+        "ask them"
+      ],
+      "answer_index": 2,
+      "explanation": "When (they are) asked,被动省略留过去分词 asked。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "While ____ at the potluck dinner, we shared dishes from many cultures.",
+      "options": [
+        "we eating",
+        "eat we",
+        "we eat",
+        "eating"
+      ],
+      "answer_index": 3,
+      "explanation": "While (we were) eating,省略“we were”,留现在分词 eating。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Where are you heading this evening? —____ Chinatown.",
+      "options": [
+        "To",
+        "I",
+        "Going",
+        "Am"
+      ],
+      "answer_index": 0,
+      "explanation": "答语省略“I'm heading to”,只留新信息,介词 To 起头。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Justin loves the ethnic villages, and ____ does Linlin.",
+      "options": [
+        "as",
+        "so",
+        "also",
+        "either"
+      ],
+      "answer_index": 1,
+      "explanation": "“so + 助动词 + 主语”表示后者也如此:so does Linlin。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—I just love these nachos! —____ do I.",
+      "options": [
+        "Either",
+        "Also",
+        "So",
+        "Neither"
+      ],
+      "answer_index": 2,
+      "explanation": "肯定附和用“So do I”,省去重复的谓语 love them。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She has visited Chinatown, but I ____.",
+      "options": [
+        "don't",
+        "didn't",
+        "amn't",
+        "haven't"
+      ],
+      "answer_index": 3,
+      "explanation": "省略重复谓语,只留助动词:but I haven't (visited it)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Have you ever heard of Journey to the West? —Yes, I ____.",
+      "options": [
+        "have",
+        "do",
+        "did",
+        "am"
+      ],
+      "answer_index": 0,
+      "explanation": "用助动词代替整个谓语:Yes, I have (heard of it)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Who wants to try the fortune cookie? —____ do!",
+      "options": [
+        "Me am",
+        "I",
+        "Mine",
+        "I'm"
+      ],
+      "answer_index": 1,
+      "explanation": "答语省略重复谓语,只留主语加助动词:I do!"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—What a real mix of cultures here! —____ it is!",
+      "options": [
+        "As",
+        "Such",
+        "So",
+        "Very"
+      ],
+      "answer_index": 2,
+      "explanation": "附和上句用“So it is”,省略 a real mix of cultures。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Linlin can speak the local dialect, and ____ can her brother.",
+      "options": [
+        "as",
+        "also",
+        "neither",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "“so + can + 主语”表后者也能:so can her brother。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Did you enjoy the waterfall? —Yes, I ____, very much.",
+      "options": [
+        "did",
+        "do",
+        "have",
+        "was"
+      ],
+      "answer_index": 0,
+      "explanation": "用助动词 did 代替 enjoyed it,省略重复谓语。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "He didn't taste the spicy stew, and ____ did I.",
+      "options": [
+        "so",
+        "neither",
+        "also",
+        "too"
+      ],
+      "answer_index": 1,
+      "explanation": "否定附和用“neither + did + 主语”:neither did I。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Are you going to the jazz bar tonight? —Yes, I ____.",
+      "options": [
+        "do",
+        "will go to",
+        "am",
+        "go"
+      ],
+      "answer_index": 2,
+      "explanation": "用 be 动词代替整个谓语:Yes, I am (going)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Would you recommend the museum? —I certainly ____.",
+      "options": [
+        "do",
+        "am",
+        "did",
+        "would"
+      ],
+      "answer_index": 3,
+      "explanation": "用情态动词 would 代替 recommend it,省略重复谓语。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Some wild mushrooms are poisonous, and some ____ not.",
+      "options": [
+        "are",
+        "do",
+        "have",
+        "were"
+      ],
+      "answer_index": 0,
+      "explanation": "并列句省略 poisonous,只留 be 动词:some are not。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Can you wait a moment? —____ wait.",
+      "options": [
+        "Don't can",
+        "Can't",
+        "No can",
+        "Not can"
+      ],
+      "answer_index": 1,
+      "explanation": "口语省略主语 I,只留助动词:Can't wait!(= I can't wait)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "She likes Cantonese food, but her friend ____.",
+      "options": [
+        "don't",
+        "isn't",
+        "doesn't",
+        "didn't"
+      ],
+      "answer_index": 2,
+      "explanation": "省略重复谓语 like it,只留助动词:but her friend doesn't。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Is the climate mild here? —Yes, it ____.",
+      "options": [
+        "does",
+        "has",
+        "did",
+        "is"
+      ],
+      "answer_index": 3,
+      "explanation": "用 be 动词代替整个谓语:Yes, it is (mild)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "I have been to Yunnan, but my sister ____.",
+      "options": [
+        "hasn't",
+        "doesn't",
+        "isn't",
+        "didn't"
+      ],
+      "answer_index": 0,
+      "explanation": "完成时省略重复谓语,只留助动词:but my sister hasn't。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—So it's the food of many cultures, all in one dish? —____.",
+      "options": [
+        "Exact",
+        "Exactly",
+        "So exact",
+        "Very exact"
+      ],
+      "answer_index": 1,
+      "explanation": "答语用一个词 Exactly 代替整句,省略重复内容。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "—Will the villagers perform a dance? —I hope ____.",
+      "options": [
+        "it",
+        "that",
+        "so",
+        "this"
+      ],
+      "answer_index": 2,
+      "explanation": "hope so 用 so 代替前面整句,省略重复内容。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "Justin took lots of photos, and ____ did his friends.",
+      "options": [
+        "as",
+        "also",
+        "neither",
+        "so"
+      ],
+      "answer_index": 3,
+      "explanation": "“so + did + 主语”表后者也如此:so did his friends。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(道德与美德主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Ben missed the bus, an old woman shared her umbrella and walked him to the next stop in the rain. He never learned her name, but he promised himself to do the same for a stranger one day. Months later, seeing a lost child crying in a busy street, he remembered that kindness and stopped at once to help.",
+    "questions": [
+      {
+        "q": "What did the old woman do for Ben?",
+        "options": [
+          "She let him under her umbrella and saw him safely along the way.",
+          "She gave him money for a new bus ticket.",
+          "She drove him all the way home.",
+          "She called his parents for him."
+        ],
+        "answer": "A",
+        "explanation": "原文老妇人分享雨伞并送他到下一站的转述;其余选项文中未提。"
+      },
+      {
+        "q": "Why did Ben stop to help the lost child?",
+        "options": [
+          "Because the child asked him for money.",
+          "Because the kindness he once received inspired him.",
+          "Because the child was his own brother.",
+          "Because a teacher told him to."
+        ],
+        "answer": "B",
+        "explanation": "末句他记起当年那份善意而出手相助的转述(覆盖短文后半段)。"
+      }
+    ]
+  }
+}

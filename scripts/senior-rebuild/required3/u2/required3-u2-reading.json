@@ -1,0 +1,332 @@
+{
+  "volume": "required3",
+  "unit": "U2",
+  "topic": "Morals and Virtues",
+  "source": "人教版2019必修三 Unit 2 同主题阅读(林巧稚的选择/林巧稚晚年/白求恩/路上的石头寓言/爱的链条/道德困境与美德)。词限 U2/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Life of Hard Choices",
+      "body": "Dr Lin Qiaozhi once said that nothing is more precious to a person than their life. These words give us a look into the heart of an amazing woman. As a young girl, she was deeply affected by her mother's early death. At the age of eighteen, instead of following the path of marriage like most girls, she chose to study medicine. Her brother complained about the high cost, asking why a girl should learn so much when her real goal was to find a good husband. She answered that she would rather stay single and study all her life. Eight years later she graduated from medical college with the highest prize given to students. She at once became the first woman ever hired as a resident physician in her department. Within only six months she was named a chief resident, a position that usually took four years. Every choice she made put helping others above an easy, comfortable life.",
+      "vocab_notes": [
+        {
+          "word": "precious",
+          "cn": "宝贵的"
+        },
+        {
+          "word": "physician",
+          "cn": "内科医生"
+        },
+        {
+          "word": "majority",
+          "cn": "大多数"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Lin Qiaozhi's brother complain when she chose medicine?",
+          "options": [
+            "He believed a girl's main aim ought to be marriage.",
+            "He wanted her to become a teacher instead.",
+            "He thought medicine was dangerous for women.",
+            "He hoped she would study abroad."
+          ],
+          "answer_index": 0,
+          "explanation": "原文哥哥抱怨女孩学那么多没用、目标应是嫁个好丈夫的转述。"
+        },
+        {
+          "stem": "How did Lin respond to her brother's complaint?",
+          "options": [
+            "She agreed to give up her studies.",
+            "She said she would rather remain single and keep studying.",
+            "She asked her family for more money.",
+            "She decided to marry first and study later."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'rather stay single to study all my life' 的转述。"
+        },
+        {
+          "stem": "What does the writer want to show by describing her early career?",
+          "options": [
+            "That serving others always mattered more to her than comfort.",
+            "That she was unlucky in her work.",
+            "That she cared more about money than patients.",
+            "That she regretted not getting married."
+          ],
+          "answer_index": 0,
+          "explanation": "末句概括:每个选择都把助人置于舒适生活之上。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Mother of Ten Thousand Babies",
+      "body": "When the new China was founded, Dr Lin played a key role in medicine. In 1954 she was elected to the National People's Congress, and over the next several decades she held many important positions. Yet her heart was always elsewhere. She was far more interested in caring for patients, in publishing research on the health of women and children, and in training young doctors. She reminded her staff that their department cared for two lives at once, and that doctors should treat patients as their own sisters. Though she never married, she became known as the mother of ten thousand babies, for she had helped to deliver more than fifty thousand children. She kept working right up to the day she died in 1983. Having no children of her own, she gave her savings to a kindergarten and to a fund for new doctors. Even as she lay dying, her last thoughts were not for herself but for others.",
+      "vocab_notes": [
+        {
+          "word": "elect",
+          "cn": "选举"
+        },
+        {
+          "word": "publish",
+          "cn": "发表"
+        },
+        {
+          "word": "saving",
+          "cn": "积蓄"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Dr Lin most interested in, even while holding high positions?",
+          "options": [
+            "Becoming famous across the country.",
+            "Caring for patients and training young doctors.",
+            "Earning a higher income each year.",
+            "Travelling abroad to study."
+          ],
+          "answer_index": 1,
+          "explanation": "原文她更在意照料病人、发表研究、培养医生的转述。"
+        },
+        {
+          "stem": "Why was she called 'the mother of ten thousand babies'?",
+          "options": [
+            "Because she had ten thousand children of her own.",
+            "Because she ran a famous kindergarten.",
+            "Because she helped bring over fifty thousand babies into the world.",
+            "Because she wrote books for mothers."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'delivered over 50,000 babies' 的转述。"
+        },
+        {
+          "stem": "What does her final wish tell us about her character?",
+          "options": [
+            "She was afraid of dying alone.",
+            "She regretted her career choices.",
+            "She wanted to be remembered as rich.",
+            "She was thinking of others rather than herself."
+          ],
+          "answer_index": 3,
+          "explanation": "末句概括:临终所想皆为他人。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Dr Bethune in China",
+      "body": "Henry Norman Bethune was a Canadian doctor with a creative mind and a strong wish to help people. Even as a small boy, he grew interested in medicine and decided to become a doctor. After finishing medical college, he worked in England, the United States and Canada, where he redesigned more than ten medical tools to make them more useful. In 1938, having learnt that many people were dying in the war, he left his home and travelled to China. The situation was difficult, but he did whatever he could for the Chinese people. He helped to set up hospitals, taught local doctors and nurses, and showed ordinary people how to give first aid. Sadly, he passed away the following year and was buried in Shijiazhuang. After his death, an article was written in his memory, praising him as a hero whose unselfish spirit would always be remembered in China.",
+      "vocab_notes": [
+        {
+          "word": "first aid",
+          "cn": "急救"
+        },
+        {
+          "word": "pass away",
+          "cn": "去世"
+        },
+        {
+          "word": "publish",
+          "cn": "发表"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Bethune do with medical tools before coming to China?",
+          "options": [
+            "He improved more than ten of them.",
+            "He sold them to hospitals abroad.",
+            "He refused to use any of them.",
+            "He invented machines for factories."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'redesigned over 10 medical instruments' 的转述。"
+        },
+        {
+          "stem": "Why did Bethune decide to travel to China?",
+          "options": [
+            "He wanted a long holiday there.",
+            "He learnt that war was killing many people.",
+            "He was sent by his government.",
+            "He wished to study Chinese medicine."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'heard that many people were dying in the war' 的转述。"
+        },
+        {
+          "stem": "How is Bethune remembered in China?",
+          "options": [
+            "As a rich businessman.",
+            "As a doctor who cared only about money.",
+            "As a hero with an unselfish spirit.",
+            "As an unlucky traveller."
+          ],
+          "answer_index": 2,
+          "explanation": "末句把他赞为应被铭记的英雄,概括其无私精神。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Stone in the Road",
+      "body": "Long ago a king worried that his people only complained and waited for others to solve their problems. Early one morning he disguised himself and went to a village. He placed a large stone in the middle of the main street and hid some gold coins beneath it. Then he hid behind a tree to watch. A milkman crashed into the stone and shouted angrily before going away. A group of women came by, and one tripped over it and limped off in tears, yet none of them moved it. All day people complained, but nobody tried to clear the road. At last a tired farmer's daughter came along. Seeing that the stone was a danger to others after dark, she pushed it aside with all her might. To her surprise she found the gold beneath it. When the king stepped out, she offered to find the owner, not knowing the gift was now hers.",
+      "vocab_notes": [
+        {
+          "word": "disguise",
+          "cn": "假扮"
+        },
+        {
+          "word": "trip over",
+          "cn": "被绊倒"
+        },
+        {
+          "word": "limp",
+          "cn": "一瘸一拐地走"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the king put a stone in the road?",
+          "options": [
+            "To block traffic for a festival.",
+            "To make people angry at one another.",
+            "To hide the gold from thieves forever.",
+            "To test whether anyone would take responsibility."
+          ],
+          "answer_index": 3,
+          "explanation": "全文寓意:国王想检验是否有人愿担起责任搬开石头。"
+        },
+        {
+          "stem": "How did most of the villagers react to the stone?",
+          "options": [
+            "They complained but left it where it was.",
+            "They quickly moved it aside.",
+            "They reported it to the king.",
+            "They took the gold and ran away."
+          ],
+          "answer_index": 0,
+          "explanation": "原文众人只抱怨、无人去搬的转述。"
+        },
+        {
+          "stem": "What was special about the young girl's response?",
+          "options": [
+            "She was the only one who saw the stone.",
+            "She thought of others' safety and acted.",
+            "She wanted the gold from the start.",
+            "She was ordered by the king to move it."
+          ],
+          "answer_index": 1,
+          "explanation": "原文她想到石头夜里危险、主动搬开的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Chain of Love",
+      "body": "There is a famous song about a chain of kindness that passes from one stranger to another. It begins with a man who stops to help a lady whose car has broken down on a lonely road. When the grateful lady tries to pay him, he refuses the money and asks her only to help someone else in the same way. A little later the lady stops at a small café, where she notices that the tired waitress is going to have a baby soon. After her meal, the lady pays the bill and quietly leaves behind some extra money and a note. The note asks the waitress to keep the chain of kindness going. The story has a warm ending: the waitress goes home to her husband, cheered by the stranger's care. In the last line we learn that her husband was the very man who first started the chain of love.",
+      "vocab_notes": [
+        {
+          "word": "respond",
+          "cn": "回应"
+        },
+        {
+          "word": "waitress",
+          "cn": "女服务员"
+        },
+        {
+          "word": "pregnant",
+          "cn": "怀孕的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the man ask the lady to do instead of paying him?",
+          "options": [
+            "To tell others about his shop.",
+            "To send him a thank-you letter.",
+            "To pass on the kindness to someone else.",
+            "To pay double the next time."
+          ],
+          "answer_index": 2,
+          "explanation": "原文他不收钱、只让她帮助别人的转述。"
+        },
+        {
+          "stem": "Why did the lady leave extra money for the waitress?",
+          "options": [
+            "She had eaten too much food.",
+            "She wanted to buy something later.",
+            "She had paid the wrong bill.",
+            "She noticed the waitress was tired and expecting a baby."
+          ],
+          "answer_index": 3,
+          "explanation": "原文她注意到女服务员疲惫又怀孕的转述。"
+        },
+        {
+          "stem": "What is surprising about the ending of the story?",
+          "options": [
+            "The waitress's husband had started the whole chain.",
+            "The lady never paid for her meal.",
+            "The man had been rich all along.",
+            "The waitress did not have a baby."
+          ],
+          "answer_index": 0,
+          "explanation": "末句揭示:她丈夫正是最先发起善意链条的人。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Virtues We Cherish",
+      "body": "Every culture admires certain virtues. Honesty, courage, generosity and thankfulness are praised by people all over the world, no matter where they live. A virtue is not a grand act done only once. As one poet wrote, the best part of a good person's life is made up of small, nameless acts of kindness that nobody remembers. Sometimes living by our values means facing a moral dilemma, where every choice is hard. Should you tell the truth even when it costs you a friend? Should you help a stranger when you are tired and busy? There are no easy answers, but the people we most admire are those who choose what is right rather than what is easy. Thankfulness, too, shapes how we see the world. When we are grateful for what we have, we tend to give more to others. In this way, small virtues practised every day can slowly make a whole society kinder.",
+      "vocab_notes": [
+        {
+          "word": "virtue",
+          "cn": "美德"
+        },
+        {
+          "word": "dilemma",
+          "cn": "困境"
+        },
+        {
+          "word": "tend",
+          "cn": "倾向于"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the poet, what makes up the best part of a good person's life?",
+          "options": [
+            "A few famous and grand achievements.",
+            "Small unremembered acts of kindness.",
+            "The money they give to charity.",
+            "The honours they receive."
+          ],
+          "answer_index": 1,
+          "explanation": "原文诗句关于无名小善的转述。"
+        },
+        {
+          "stem": "What does a moral dilemma usually involve?",
+          "options": [
+            "An easy choice between right and wrong.",
+            "A problem only doctors can solve.",
+            "A situation where every choice is difficult.",
+            "A test set by the government."
+          ],
+          "answer_index": 2,
+          "explanation": "原文道德困境=每个选择都很难的转述。"
+        },
+        {
+          "stem": "What does the writer say about thankfulness?",
+          "options": [
+            "It is the hardest virtue to learn.",
+            "It matters only to rich people.",
+            "It has nothing to do with kindness.",
+            "It makes people give more to others."
+          ],
+          "answer_index": 3,
+          "explanation": "原文感恩使人更愿付出的转述。"
+        }
+      ]
+    }
+  ]
+}

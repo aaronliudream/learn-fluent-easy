@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Diverse Cultures",
+  "source": "人教版2019必修三 Unit 3 同主题完形(李兰的旅行日志/唐人街的一天/淘金潮的工人/学做墨西哥-中国面/贾斯汀的村寨之行/潮汕家庭的纪念品店)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Li Lan's First Day Back",
+      "text": "Today was my first day back in the city after a long camping (1)____. I have to admit that it definitely feels good to be here again. My hotel is near (2)____, in one of the oldest parts of town. Many of the people living here came from Mexico, and the area is now a centre for art and (3)____. I walked around for hours, looking at the colourful street (4)____ on the walls. It was quite modern and lively. Afterwards, I ate some delicious Mexican-Chinese noodles from a food (5)____. What a real (6)____ of cultures! In the evening I went to Chinatown, where there were so many good restaurants to (7)____ from. I (8)____ a small one that served its food on beautiful (9)____ plates. The food was wonderful. That is more than enough for one day, but I am already looking forward to (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "trip",
+            "price",
+            "noise",
+            "rule"
+          ],
+          "answer_index": 0,
+          "explanation": "camping trip 露营之旅。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "downhill",
+            "downtown",
+            "outside",
+            "afraid"
+          ],
+          "answer_index": 1,
+          "explanation": "near downtown 靠近市中心。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fear",
+            "fire",
+            "food",
+            "fog"
+          ],
+          "answer_index": 2,
+          "explanation": "a centre for art and food 艺术与美食中心。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "exam",
+            "rule",
+            "price",
+            "art"
+          ],
+          "answer_index": 3,
+          "explanation": "street art 街头艺术。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "truck",
+            "chair",
+            "table",
+            "shelf"
+          ],
+          "answer_index": 0,
+          "explanation": "food truck 餐车。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loss",
+            "mix",
+            "rest",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "a real mix of cultures 真正的文化融合。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "escape",
+            "sleep",
+            "choose",
+            "fall"
+          ],
+          "answer_index": 2,
+          "explanation": "choose from 从中选择。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "broke",
+            "dropped",
+            "selected"
+          ],
+          "answer_index": 3,
+          "explanation": "selected a small one 挑了一家小餐馆。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "china",
+            "paper",
+            "glass",
+            "metal"
+          ],
+          "answer_index": 0,
+          "explanation": "china plates 瓷盘。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "never",
+            "tomorrow",
+            "nothing",
+            "nobody"
+          ],
+          "answer_index": 1,
+          "explanation": "looking forward to tomorrow 期待明天。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Workers of the Gold Rush",
+      "text": "In 1848, gold was found near the bay, and the news quickly (1)____ around the world. Soon hundreds of thousands of people came to (2)____ their fortune. Among them were many Chinese workers, who arrived during this busy (3)____. Life was hard, and to (4)____ a living they took any job they could find. Some opened small (5)____ in the area that later became Chinatown. Others helped to build the long (6)____ that joined the west of the country to the east. The work was tiring and the pay was (7)____, but they kept going year after year. When they left their home country, they (8)____ a little piece of home in their hearts. In (9)____, they built a new home in a faraway land. Their hard work became an important (10)____ of the country's history.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fell",
+            "slept",
+            "spread",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "the news spread 消息传开。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "lose",
+            "drop",
+            "hide",
+            "seek"
+          ],
+          "answer_index": 3,
+          "explanation": "seek their fortune 寻找致富之路。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "period",
+            "price",
+            "noise",
+            "rule"
+          ],
+          "answer_index": 0,
+          "explanation": "this busy period 这段繁忙时期。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "earn",
+            "waste",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "earn a living 谋生。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "seas",
+            "stars",
+            "shops",
+            "hills"
+          ],
+          "answer_index": 2,
+          "explanation": "small shops 小店铺。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "river",
+            "garden",
+            "railway"
+          ],
+          "answer_index": 3,
+          "explanation": "the long railway 那条长铁路。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "low",
+            "tall",
+            "wide",
+            "loud"
+          ],
+          "answer_index": 0,
+          "explanation": "the pay was low 报酬很低。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "carried",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "carried a little piece of home 心里带着一点家乡。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "time",
+            "fear"
+          ],
+          "answer_index": 2,
+          "explanation": "in time 最终。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "rest",
+            "part"
+          ],
+          "answer_index": 3,
+          "explanation": "an important part of history 历史的重要部分。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Learning to Make Fusion Noodles",
+      "text": "Last summer I learned to cook a dish that (1)____ two cultures in one bowl. My uncle runs a small food truck, and he kindly agreed to (2)____ me. First he showed me how to (3)____ the right vegetables, all fresh and (4)____. Then he added a (5)____ sauce that made the dish hot and full of flavour. \"The secret,\" he said, \"is not being (6)____ to mix ideas from different places.\" His noodles bring together Mexican and Chinese (7)____, and people love them. While I was (8)____ him work, I understood that good food, like good culture, is often a happy (9)____ of many things. By the end of the day, I could make the dish on my own, and I felt very (10)____ of what I had learned.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "mixes",
+            "breaks",
+            "loses",
+            "sells"
+          ],
+          "answer_index": 0,
+          "explanation": "mixes two cultures 融合两种文化。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "forget",
+            "teach",
+            "lose",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "teach me 教我。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "throw",
+            "drop",
+            "select",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "select the right vegetables 挑选合适的蔬菜。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "afraid",
+            "asleep",
+            "clean"
+          ],
+          "answer_index": 3,
+          "explanation": "fresh and clean 新鲜又干净。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "spicy",
+            "quiet",
+            "empty",
+            "silent"
+          ],
+          "answer_index": 0,
+          "explanation": "a spicy sauce 辛辣的酱汁。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "happy",
+            "afraid",
+            "glad",
+            "proud"
+          ],
+          "answer_index": 1,
+          "explanation": "not being afraid to mix 不怕融合。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "weather",
+            "machine",
+            "cooking",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "Mexican and Chinese cooking 墨中两种烹饪。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "losing",
+            "hiding",
+            "watching"
+          ],
+          "answer_index": 3,
+          "explanation": "while I was watching him 当我看着他时。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "mix",
+            "loss",
+            "noise",
+            "fear"
+          ],
+          "answer_index": 0,
+          "explanation": "a happy mix of many things 多种事物的愉快融合。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sorry",
+            "proud",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "proud of what I had learned 为所学感到自豪。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Justin's Trip to the Villages",
+      "text": "Justin was super (1)____ about his trip to Guizhou, a province known for its cultural (2)____. On the first day, he watched local people (3)____ an old instrument that has a history of over a thousand (4)____. He was surprised to learn that it is even (5)____ in the oldest collection of Chinese poetry. Justin wanted to buy some hand-made silver (6)____ as gifts. A villager told him the price would (7)____ on how much real silver each piece held. The next day, they planned to (8)____ a pretty village beside a clear river. There they hoped to see traditional (9)____ and old wooden houses. By the end of the trip, Justin felt that Chinese culture was far more (10)____ than he had ever imagined.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "afraid",
+            "bored",
+            "excited",
+            "sorry"
+          ],
+          "answer_index": 2,
+          "explanation": "super excited 超级兴奋。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "weather",
+            "noise",
+            "diversity"
+          ],
+          "answer_index": 3,
+          "explanation": "cultural diversity 文化多样性。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "play",
+            "sell",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "play an old instrument 演奏一件古老乐器。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "metres",
+            "years",
+            "seconds",
+            "prices"
+          ],
+          "answer_index": 1,
+          "explanation": "over a thousand years 一千多年。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "lost",
+            "sold",
+            "mentioned",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "mentioned in the collection 在诗集中被提及。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machines",
+            "gardens",
+            "rivers",
+            "accessories"
+          ],
+          "answer_index": 3,
+          "explanation": "silver accessories 银饰品。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "depend",
+            "leave",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "depend on 取决于。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lose",
+            "visit",
+            "drop",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "visit a pretty village 参观一座美丽的村寨。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prices",
+            "noises",
+            "dances",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "traditional dances 传统舞蹈。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "boring",
+            "silent",
+            "diverse"
+          ],
+          "answer_index": 3,
+          "explanation": "far more diverse 多样得多。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "A Souvenir Shop in Chinatown",
+      "text": "My grandmother runs a small (1)____ shop in Chinatown, and I help her after school. The store offers all kinds of goods, from clothing to (2)____ medicine. Many tourists come in just to (3)____ around and enjoy the sights and smells of China. My grandmother always keeps the shelves (4)____ and tidy. \"A neat shop,\" she says, \"makes visitors feel (5)____.\" She knows the story behind every (6)____ on the shelves, and she loves to share it. Some customers want to (7)____ a gift for a friend far away. Others simply enjoy learning about Chinese culture (8)____ hand. The (9)____ here is mild all year round, so the street is always busy. Working in the shop has taught me that even a small place can hold a (10)____ history.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "souvenir",
+            "machine",
+            "garden",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "souvenir shop 纪念品店。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "herbal",
+            "empty",
+            "afraid"
+          ],
+          "answer_index": 1,
+          "explanation": "herbal medicine 草药。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "fall",
+            "look",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "look around 四处看看。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "angry",
+            "afraid",
+            "asleep",
+            "neat"
+          ],
+          "answer_index": 3,
+          "explanation": "keeps the shelves neat 把货架收拾整齐。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "welcome",
+            "sorry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "feel welcome 感到受欢迎。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "item",
+            "price",
+            "rule"
+          ],
+          "answer_index": 1,
+          "explanation": "every item on the shelves 货架上的每件商品。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "throw",
+            "select",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "select a gift 挑选礼物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "last",
+            "next",
+            "least",
+            "first"
+          ],
+          "answer_index": 3,
+          "explanation": "first hand 亲身地。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "climate",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the climate is mild 气候温和。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "short",
+            "long",
+            "wide",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "a long history 悠久的历史。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Welcome to Chinatown",
+      "text": "The Chinatown here is the biggest in the country, and also the (1)____. It is a very popular place that (2)____ more visitors each year than even the famous bridge. The (3)____ is mild all year round, so it is always a good time to visit. Long ago, Chinese (4)____ settled in this area during the railroad period. What began as a place to live slowly turned into a (5)____ for Chinese culture. Most of the people here are still ethnic Chinese, and this lets visitors (6)____ a real taste of China. The old gate was built using (7)____ donated from China. The stores offer a wide range of souvenirs, goods, and (8)____. All kinds of Chinese herbal medicine can be (9)____ here too. But what many people treasure most is the food, with traditional dishes that (10)____ everyone's taste.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "loudest",
+            "coldest",
+            "oldest",
+            "saddest"
+          ],
+          "answer_index": 2,
+          "explanation": "the oldest 最古老的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loses",
+            "breaks",
+            "sells",
+            "receives"
+          ],
+          "answer_index": 3,
+          "explanation": "receives more visitors 接待更多游客。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "climate",
+            "noise",
+            "price",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "the climate is mild 气候温和。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "machines",
+            "immigrants",
+            "gardens",
+            "rivers"
+          ],
+          "answer_index": 1,
+          "explanation": "Chinese immigrants 华人移民。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loss",
+            "noise",
+            "centre",
+            "fear"
+          ],
+          "answer_index": 2,
+          "explanation": "a centre for culture 文化中心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lose",
+            "throw",
+            "drop",
+            "experience"
+          ],
+          "answer_index": 3,
+          "explanation": "experience a real taste 体验真正的味道。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "materials",
+            "machines",
+            "gardens",
+            "rivers"
+          ],
+          "answer_index": 0,
+          "explanation": "built using materials 用材料建造。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "clothing",
+            "weather",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "souvenirs, goods, and clothing 纪念品、商品和服装。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lost",
+            "sold",
+            "found",
+            "broken"
+          ],
+          "answer_index": 2,
+          "explanation": "can be found 能被找到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "break",
+            "drop",
+            "suit"
+          ],
+          "answer_index": 3,
+          "explanation": "dishes that suit everyone's taste 适合各种口味的菜。"
+        }
+      ]
+    }
+  ]
+}

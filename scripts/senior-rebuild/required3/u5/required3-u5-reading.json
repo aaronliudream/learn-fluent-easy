@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "The Value of Money",
+  "source": "人教版2019必修三 Unit 5 同主题阅读(《百万英镑》剧情/金钱观/储蓄理财/零花钱/慈善/以貌取人)。用词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Bet on a Bank Note",
+      "topic_cn": "记叙·两兄弟的打赌",
+      "body": "Two rich brothers, Roderick and Oliver, had been arguing for days. Oliver believed that, with a single million-pound bank note, a man could live well in London for a whole month, even if he never actually spent it. His brother Roderick doubted this very much. To settle the argument, they decided to make a bet and find someone to test their idea. One day they saw a poor young man walking past their house. It was Henry Adams, an American who had been carried out to sea by a strong wind and brought to England by accident. He had no money and nowhere to stay. The brothers invited him in and gave him an envelope, telling him not to open it until two o'clock. Henry did not want their charity; he only wanted an honest job. Still, he took the letter and promised to wait. Inside lay the famous note that would change everything about how people treated him.",
+      "vocab_notes": [
+        {
+          "word": "bet",
+          "cn": "打赌"
+        },
+        {
+          "word": "charity",
+          "cn": "施舍;慈善"
+        },
+        {
+          "word": "envelope",
+          "cn": "信封"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the two brothers decide to make a bet?",
+          "options": [
+            "To settle a long argument about what money could do.",
+            "To find a job for a poor American.",
+            "To sell their house in London.",
+            "To win money from each other's bank."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'To settle the argument, they decided to make a bet' 的转述。"
+        },
+        {
+          "stem": "How did Henry come to be in England?",
+          "options": [
+            "He sailed there on purpose to find work.",
+            "A storm carried him out to sea and a ship brought him over.",
+            "The brothers invited him from America.",
+            "He came to study at a London school."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'carried out to sea by a strong wind and brought to England by accident' 的转述。"
+        },
+        {
+          "stem": "What was Henry's attitude towards the brothers' gift?",
+          "options": [
+            "He disliked charity and wanted an honest job instead.",
+            "He happily asked for more money.",
+            "He demanded a reward at once.",
+            "He refused to take the letter at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'did not want their charity; he only wanted an honest job' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Suit That Changed Everything",
+      "topic_cn": "记叙·裁缝店里的转变",
+      "body": "Wearing a worn coat and holding the great bank note, Henry stepped into a tailor's shop. At first the clerks treated him rudely, sending him downstairs to look at the cheapest ready-made suits. One clerk frowned and said the bright suit was all they had in his size. When Henry offered to pay later because he had no small change, the clerk clearly thought he was just a poor man making excuses. Then Henry handed over the note. The owner unfolded it slowly, hardly able to believe his eyes. Suddenly everything changed. The same people who had looked down on him now smiled, brought out their finest clothes, and said he could pay whenever he liked. They no longer cared that he had no address. The story shows how quickly people's manners can change once they believe a stranger is rich. It quietly warns readers not to judge others by their clothes, and reminds us that respect should not depend on the size of a person's wallet.",
+      "vocab_notes": [
+        {
+          "word": "clerk",
+          "cn": "店员"
+        },
+        {
+          "word": "frown",
+          "cn": "皱眉"
+        },
+        {
+          "word": "manner",
+          "cn": "举止;态度"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the clerks treat Henry when he first entered?",
+          "options": [
+            "They welcomed him warmly and offered the best suits.",
+            "They treated him rudely and showed him only the cheapest clothes.",
+            "They gave him the suit for free.",
+            "They asked him to leave at once."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'treated him rudely, sending him downstairs to look at the cheapest' 的转述。"
+        },
+        {
+          "stem": "What made the shop people suddenly change their manner?",
+          "options": [
+            "Henry gave them his home address.",
+            "Henry sang a song for them.",
+            "Henry showed them the huge bank note.",
+            "Henry told them about his boat."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Then Henry handed over the note… Suddenly everything changed' 的转述。"
+        },
+        {
+          "stem": "What lesson does the passage quietly teach?",
+          "options": [
+            "Always pay for clothes in cash.",
+            "Rich people deserve better service.",
+            "Tailors are usually dishonest.",
+            "How much money a person has should not decide our respect."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'respect should not depend on the size of a person's wallet' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Honest Cleaner",
+      "topic_cn": "记叙·拾金不昧的清洁工",
+      "body": "Chen Liyan was a cleaner at a busy railway station. One morning she found a small bag holding ten thousand yuan that a traveller had dropped. Although she badly needed money herself, she did not hesitate. She handed the bag to the police so that its owner, Wang Zheng, could get it back. Wang was so moved that he offered her five thousand yuan as a reward, but Chen refused to take a single cent. Later, a neighbour told Wang that Chen had spent all her savings and taken out a large loan to pay for her sick daughter's care. Wang felt he had to do something in return. He built a website to raise funds for the girl, and many kind strangers gave money. Chen's story spread far and wide. It reminds us that being honest can bring help we never expect, and that a good deed often returns to the person who does it.",
+      "vocab_notes": [
+        {
+          "word": "hesitate",
+          "cn": "犹豫"
+        },
+        {
+          "word": "loan",
+          "cn": "贷款"
+        },
+        {
+          "word": "in return",
+          "cn": "作为回报"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Chen Liyan do after finding the bag of money?",
+          "options": [
+            "She gave it to the police to return to its owner.",
+            "She kept it for her daughter's care.",
+            "She spent it on her own savings.",
+            "She left it at the station."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'handed the bag to the police so that its owner… could get it back' 的转述。"
+        },
+        {
+          "stem": "Why did Wang Zheng build a fundraising website?",
+          "options": [
+            "Because he wanted to become famous online.",
+            "Because Chen had refused his reward and badly needed help.",
+            "Because the police told him to.",
+            "Because he had lost his own money again."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'felt he had to do something in return. He built a website to raise funds' 的转述。"
+        },
+        {
+          "stem": "What is the main message of the story?",
+          "options": [
+            "Cleaners earn very little money.",
+            "Money should always be kept in a bank.",
+            "A good deed often brings unexpected help in return.",
+            "Railway stations are dangerous places."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'a good deed often returns to the person who does it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Pocket Money and Choices",
+      "topic_cn": "说明·零花钱与选择",
+      "body": "For many teenagers, pocket money is the first real money they control. How they use it says a lot about the kind of adults they may become. Some spend every coin the moment they get it, buying snacks, games or small toys that are quickly forgotten. Others choose to save part of it each week, slowly watching their savings grow. A wise habit is to divide pocket money into three simple parts: one part to spend on small wishes, one part to save for something bigger, and one part to give to those in need. Learning to wait for what you want is not easy, but it teaches patience and self-control. Parents can help by letting children make their own choices, even if those choices sometimes lead to mistakes. After all, a mistake with a few coins today can prevent a far bigger mistake with real money in the future. In this way, pocket money becomes a small but valuable lesson in handling money wisely.",
+      "vocab_notes": [
+        {
+          "word": "pocket money",
+          "cn": "零花钱"
+        },
+        {
+          "word": "patience",
+          "cn": "耐心"
+        },
+        {
+          "word": "divide",
+          "cn": "划分"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the way teenagers use pocket money suggest?",
+          "options": [
+            "How rich their parents are.",
+            "Which school they attend.",
+            "How many friends they have.",
+            "What sort of grown-ups they are likely to become."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'says a lot about the kind of adults they may become' 的转述。"
+        },
+        {
+          "stem": "What 'three parts' habit does the writer suggest?",
+          "options": [
+            "Spending, saving and giving to others in need.",
+            "Spending, lending and borrowing.",
+            "Buying, selling and hiding.",
+            "Eating, playing and sleeping."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'one part to spend… one part to save… one part to give' 的转述。"
+        },
+        {
+          "stem": "Why does the writer say parents should allow small mistakes?",
+          "options": [
+            "Because mistakes make children spend more.",
+            "Because a small mistake now can prevent a bigger one later.",
+            "Because parents enjoy watching mistakes.",
+            "Because children never learn from being told."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a mistake with a few coins today can prevent a far bigger mistake… in the future' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Good Servant, a Bad Master",
+      "topic_cn": "议论·金钱观",
+      "body": "Long ago, the thinker Francis Bacon said that money is a good servant and a bad master. These few words hold a deep truth about how we should live with money. As a servant, money works for us. It buys food, books and medicine, pays for school, and lets us help the people we love. Used in this way, money brings comfort and opens doors. But money can also become a master. When people care only about getting more, they may lose their friends, their health and their honesty along the way. They work day and night, yet never feel they have enough. The danger is not money itself, but the place we give it in our hearts. A wise person keeps money in its proper place: useful, but never the most important thing. Happiness, kindness and time with family cannot be bought at any price. If we remember this, money will serve us well and never rule our lives.",
+      "vocab_notes": [
+        {
+          "word": "servant",
+          "cn": "仆人"
+        },
+        {
+          "word": "master",
+          "cn": "主人"
+        },
+        {
+          "word": "honesty",
+          "cn": "诚实"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does it mean that money is a 'good servant'?",
+          "options": [
+            "Money should be kept secret from others.",
+            "Money is the most important thing in life.",
+            "Money works for us and helps meet our real needs.",
+            "Money must always be saved, never spent."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'As a servant, money works for us. It buys food… lets us help' 的转述。"
+        },
+        {
+          "stem": "What happens when money becomes a 'master'?",
+          "options": [
+            "People grow healthier and happier.",
+            "People stop using money at all.",
+            "People give all their money away.",
+            "People may lose friends, health and honesty chasing more."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'they may lose their friends, their health and their honesty' 的转述。"
+        },
+        {
+          "stem": "According to the writer, where is the real danger?",
+          "options": [
+            "In the place we give money in our hearts.",
+            "In earning a high salary.",
+            "In saving money for the future.",
+            "In spending money on family."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'The danger is not money itself, but the place we give it in our hearts' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Saving for a Rainy Day",
+      "topic_cn": "说明·储蓄的智慧",
+      "body": "There is an old saying that we should save for a rainy day. It means that we ought to keep some money aside for hard times that we cannot see coming. Life is full of surprises. A person may suddenly fall ill, lose a job, or face a costly repair. Those who have saved a little each month can meet such troubles calmly, while those who have spent everything may have to take out a loan and worry for months. Saving does not require a large income; it requires a steady habit. Even putting away a small sum regularly will, over time, grow into a useful sum. The hardest part is starting, because spending always feels easier than saving. Yet the freedom that savings bring is worth the effort. With money set aside, you can make choices out of hope rather than fear. In short, a wise saver buys not just goods, but peace of mind for the days ahead.",
+      "vocab_notes": [
+        {
+          "word": "save",
+          "cn": "储蓄;存钱"
+        },
+        {
+          "word": "income",
+          "cn": "收入"
+        },
+        {
+          "word": "loan",
+          "cn": "贷款"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does 'save for a rainy day' really mean?",
+          "options": [
+            "Only buy umbrellas before it rains.",
+            "Keep some money for unexpected hard times.",
+            "Spend all your money quickly.",
+            "Borrow money from the bank often."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'keep some money aside for hard times that we cannot see coming' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what does saving mainly require?",
+          "options": [
+            "A very large income.",
+            "A new bank account each year.",
+            "A steady habit rather than a big income.",
+            "Help from rich friends."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Saving does not require a large income; it requires a steady habit' 的转述。"
+        },
+        {
+          "stem": "What 'peace of mind' do savings bring, according to the text?",
+          "options": [
+            "The chance to spend more on snacks.",
+            "A way to avoid all work.",
+            "A reason to take out larger loans.",
+            "The freedom to make decisions led by hope, not fear."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'you can make choices out of hope rather than fear' 的转述。"
+        }
+      ]
+    }
+  ]
+}

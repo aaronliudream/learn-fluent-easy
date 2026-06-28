@@ -1,0 +1,745 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "grammar_title": "不定式(to do):作目的状语 / 作后置定语 / 作宾语·宾补·主语(与 doing 对照)",
+  "source": "人教版2019必修三 Unit 4 Discovering Useful Structures:不定式 to do 的用法。句子地道、围绕太空探索主题、to 不定式为唯一正确填法,干扰项为 doing / for doing / done / do(bare)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "不定式作目的状语(to do / in order to do / so as to do)",
+      "overview": "表示动作的目的,用 to do(也可 in order to / so as to + do)。回答 why、强调'为了……',不可用 doing/done。"
+    },
+    {
+      "code": "u4.02",
+      "point": "不定式作后置定语(the first person to do / something to eat)",
+      "overview": "不定式放在名词后修饰它,表示'要做、将做'的动作,如 the first person to do、a lot of work to do、the best way to do、something to eat。"
+    },
+    {
+      "code": "u4.03",
+      "point": "不定式作宾语/宾补/主语(want/decide to do · ask sb to do · It is … to do),与 doing 对照",
+      "overview": "want/decide/hope/need 等后接 to do;ask/tell/allow/want sb to do 作宾补;It is … to do 作真主语。由动词搭配决定用 to do 还是 doing。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "Scientists make special vehicles ____ brave people into space.",
+      "options": [
+        "to carry",
+        "carrying",
+        "carried",
+        "carry"
+      ],
+      "answer_index": 0,
+      "explanation": "表目的'为了运送'→ 不定式 to carry。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "An astronaut needs to be calm ____ in space safely.",
+      "options": [
+        "working",
+        "to work",
+        "worked",
+        "work"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的'为了在太空工作'→ to work。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Astronauts collect dirty water so as ____ it for later use.",
+      "options": [
+        "recycling",
+        "recycled",
+        "to recycle",
+        "recycle"
+      ],
+      "answer_index": 2,
+      "explanation": "so as to do 表目的 → to recycle。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "They stuck everything down in order ____ things floating off.",
+      "options": [
+        "stopping",
+        "stopped",
+        "stop",
+        "to stop"
+      ],
+      "answer_index": 3,
+      "explanation": "in order to do 表目的 → to stop。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Voyager 1 was launched ____ deep space far from Earth.",
+      "options": [
+        "to study",
+        "studying",
+        "studied",
+        "study"
+      ],
+      "answer_index": 0,
+      "explanation": "表目的'为了研究'→ to study。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He trained for years ____ a fighter pilot before joining the programme.",
+      "options": [
+        "becoming",
+        "to become",
+        "become",
+        "becomes"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的'为了成为'→ to become。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "China sent Chang'e 4 to the moon so as ____ the far side.",
+      "options": [
+        "explored",
+        "exploring",
+        "to explore",
+        "explore"
+      ],
+      "answer_index": 2,
+      "explanation": "so as to do 表目的 → to explore。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Astronauts exercise every day in order ____ healthy in space.",
+      "options": [
+        "staying",
+        "stayed",
+        "stay",
+        "to stay"
+      ],
+      "answer_index": 3,
+      "explanation": "in order to do 表目的 → to stay。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Tianzhou 1 was sent up ____ with the space lab.",
+      "options": [
+        "to dock",
+        "docking",
+        "docked",
+        "dock"
+      ],
+      "answer_index": 0,
+      "explanation": "表目的'为了对接'→ to dock。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Scientists are growing crops in space ____ astronauts enough food.",
+      "options": [
+        "giving",
+        "to give",
+        "given",
+        "give"
+      ],
+      "answer_index": 1,
+      "explanation": "表目的'为了给'→ to give。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We must save resources so as ____ them from running out.",
+      "options": [
+        "prevented",
+        "preventing",
+        "to prevent",
+        "prevent"
+      ],
+      "answer_index": 2,
+      "explanation": "so as to do 表目的 → to prevent。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He stayed up late ____ the report on the space mission.",
+      "options": [
+        "finishing",
+        "finished",
+        "finish",
+        "to finish"
+      ],
+      "answer_index": 3,
+      "explanation": "表目的'为了完成'→ to finish。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Satellites were placed in orbit ____ weather patterns on Earth.",
+      "options": [
+        "to record",
+        "recording",
+        "recorded",
+        "record"
+      ],
+      "answer_index": 0,
+      "explanation": "表目的'为了记录'→ to record。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Engineers checked the rocket carefully in order ____ any accidents.",
+      "options": [
+        "avoiding",
+        "to avoid",
+        "avoided",
+        "avoid"
+      ],
+      "answer_index": 1,
+      "explanation": "in order to do 表目的 → to avoid。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The crew moved slowly during the spacewalk so as ____ their bodies under control.",
+      "options": [
+        "kept",
+        "keeping",
+        "to keep",
+        "keep"
+      ],
+      "answer_index": 2,
+      "explanation": "so as to do 表目的 → to keep。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Many countries spend billions ____ the secrets of the universe.",
+      "options": [
+        "finding",
+        "found",
+        "find",
+        "to find"
+      ],
+      "answer_index": 3,
+      "explanation": "表目的'为了找出'→ to find。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She studied physics hard ____ a place in the space programme.",
+      "options": [
+        "to win",
+        "winning",
+        "won",
+        "win"
+      ],
+      "answer_index": 0,
+      "explanation": "表目的'为了赢得'→ to win。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The team built a new lab in order ____ life in space for longer.",
+      "options": [
+        "supporting",
+        "to support",
+        "supported",
+        "support"
+      ],
+      "answer_index": 1,
+      "explanation": "in order to do 表目的 → to support。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Astronauts attach themselves to the wall so as ____ around while they sleep.",
+      "options": [
+        "not floating",
+        "floated",
+        "not to float",
+        "float"
+      ],
+      "answer_index": 2,
+      "explanation": "so as not to do 表目的(否定)→ not to float。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "They sent a rover to Mars ____ measurements of the surface.",
+      "options": [
+        "making",
+        "made",
+        "make",
+        "to make"
+      ],
+      "answer_index": 3,
+      "explanation": "表目的'为了进行(测量)'→ to make。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Yuri Gagarin was the first person in the world ____ into space.",
+      "options": [
+        "to go",
+        "going",
+        "gone",
+        "go"
+      ],
+      "answer_index": 0,
+      "explanation": "the first person to do 后置定语 → to go。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Yuri Malenchenko became the first person ____ married in space.",
+      "options": [
+        "getting",
+        "to get",
+        "got",
+        "get"
+      ],
+      "answer_index": 1,
+      "explanation": "the first person to do 后置定语 → to get。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Astronauts always have a lot of work ____ on the station.",
+      "options": [
+        "did",
+        "doing",
+        "to do",
+        "do"
+      ],
+      "answer_index": 2,
+      "explanation": "名词 work 后接不定式作定语 → to do。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Building rockets is the best way ____ Earth's gravity.",
+      "options": [
+        "escaping",
+        "escaped",
+        "escape",
+        "to escape"
+      ],
+      "answer_index": 3,
+      "explanation": "the best way to do 后置定语 → to escape。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Neil Armstrong was the first man ____ on the moon.",
+      "options": [
+        "to step",
+        "stepping",
+        "stepped",
+        "step"
+      ],
+      "answer_index": 0,
+      "explanation": "the first man to do 后置定语 → to step。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "In space, astronauts need something ____ to keep up their energy.",
+      "options": [
+        "ate",
+        "to eat",
+        "eaten",
+        "eat"
+      ],
+      "answer_index": 1,
+      "explanation": "something to eat 后置定语 → to eat。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "China was the third country ____ humans into space on its own.",
+      "options": [
+        "sending",
+        "sent",
+        "to send",
+        "send"
+      ],
+      "answer_index": 2,
+      "explanation": "the third country to do 后置定语 → to send。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "There is still much ____ about the far side of the moon.",
+      "options": [
+        "learning",
+        "learned",
+        "learn",
+        "to learn"
+      ],
+      "answer_index": 3,
+      "explanation": "much (名词) 后接不定式作定语 → to learn。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Laika was the first living thing ____ into orbit around Earth.",
+      "options": [
+        "to go",
+        "going",
+        "gone",
+        "go"
+      ],
+      "answer_index": 0,
+      "explanation": "the first … thing to do 后置定语 → to go。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Sleeping bags are the safest way ____ floating around at night.",
+      "options": [
+        "avoiding",
+        "to avoid",
+        "avoided",
+        "avoid"
+      ],
+      "answer_index": 1,
+      "explanation": "the safest way to do 后置定语 → to avoid。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Captain Brown had little free time ____ during his stay in space.",
+      "options": [
+        "enjoyed",
+        "enjoying",
+        "to enjoy",
+        "enjoy"
+      ],
+      "answer_index": 2,
+      "explanation": "time 后接不定式作定语 → to enjoy。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Yang Liwei was the first Chinese astronaut ____ Earth in a spacecraft.",
+      "options": [
+        "orbiting",
+        "orbited",
+        "orbit",
+        "to orbit"
+      ],
+      "answer_index": 3,
+      "explanation": "the first … astronaut to do 后置定语 → to orbit。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "They were looking for a good place ____ the new space station.",
+      "options": [
+        "to build",
+        "building",
+        "built",
+        "build"
+      ],
+      "answer_index": 0,
+      "explanation": "place to do 后置定语 → to build。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "On the long journey there is never enough water ____.",
+      "options": [
+        "drinking",
+        "to drink",
+        "drunk",
+        "drink"
+      ],
+      "answer_index": 1,
+      "explanation": "water to drink 后置定语 → to drink。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Shenzhou 7 carried the first Chinese astronaut ____ a spacewalk.",
+      "options": [
+        "taking",
+        "taken",
+        "to take",
+        "take"
+      ],
+      "answer_index": 2,
+      "explanation": "the first … to do 后置定语 → to take。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Mars may be the next planet ____ by human beings.",
+      "options": [
+        "exploring",
+        "explore",
+        "exploring it",
+        "to explore"
+      ],
+      "answer_index": 3,
+      "explanation": "the next planet to explore 后置定语(被动含义由语境承担)→ to explore。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "There were many requirements ____ before he could join the programme.",
+      "options": [
+        "to meet",
+        "meeting",
+        "met",
+        "meet"
+      ],
+      "answer_index": 0,
+      "explanation": "requirements to meet 后置定语 → to meet。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Voyager 1 was the first spacecraft ____ deep space so far away.",
+      "options": [
+        "reaching",
+        "to reach",
+        "reached",
+        "reach"
+      ],
+      "answer_index": 1,
+      "explanation": "the first spacecraft to do 后置定语 → to reach。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Living on Mars may become the only choice ____ for humans one day.",
+      "options": [
+        "leaving",
+        "left",
+        "to leave",
+        "leave"
+      ],
+      "answer_index": 2,
+      "explanation": "the only choice (left) to do 后置定语 → to leave。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She felt proud to be the first member of her family ____ a scientist.",
+      "options": [
+        "becoming",
+        "became",
+        "become",
+        "to become"
+      ],
+      "answer_index": 3,
+      "explanation": "the first member to do 后置定语 → to become。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Some scientists were determined ____ humans realise their dream.",
+      "options": [
+        "to help",
+        "helping",
+        "helped",
+        "help"
+      ],
+      "answer_index": 0,
+      "explanation": "be determined to do → to help。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Captain Brown looked forward ____ his family after the mission. (avoid 'forward to')",
+      "options": [
+        "to see",
+        "to seeing",
+        "seen",
+        "see"
+      ],
+      "answer_index": 1,
+      "explanation": "look forward to + doing(to 是介词)→ to seeing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is dangerous ____ out of orbit and back to Earth's surface.",
+      "options": [
+        "getting",
+        "got",
+        "to get",
+        "get"
+      ],
+      "answer_index": 2,
+      "explanation": "It is + adj. + to do 真主语 → to get。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The captain told the new crew member ____ his seatbelt at once.",
+      "options": [
+        "fastening",
+        "fastened",
+        "fasten",
+        "to fasten"
+      ],
+      "answer_index": 3,
+      "explanation": "tell sb to do 作宾补 → to fasten。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Mr Yang always hoped ____ an astronaut one day.",
+      "options": [
+        "to become",
+        "becoming",
+        "become",
+        "becomes"
+      ],
+      "answer_index": 0,
+      "explanation": "hope to do → to become。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Astronauts can't avoid ____ around when there is no gravity.",
+      "options": [
+        "to float",
+        "floating",
+        "floated",
+        "float"
+      ],
+      "answer_index": 1,
+      "explanation": "avoid + doing(不接 to do)→ floating。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Mission Control wants every astronaut ____ the safety rules carefully.",
+      "options": [
+        "following",
+        "followed",
+        "to follow",
+        "follow"
+      ],
+      "answer_index": 2,
+      "explanation": "want sb to do 作宾补 → to follow。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The team kept ____ until the spacecraft finally docked.",
+      "options": [
+        "to try",
+        "tried",
+        "try",
+        "trying"
+      ],
+      "answer_index": 3,
+      "explanation": "keep + doing(不接 to do)→ trying。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The space agency decided ____ a rover to the far side of the moon.",
+      "options": [
+        "to send",
+        "sending",
+        "sent",
+        "send"
+      ],
+      "answer_index": 0,
+      "explanation": "decide to do → to send。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Living in space for months means ____ your muscles every day.",
+      "options": [
+        "to exercise",
+        "exercising",
+        "exercised",
+        "exercise"
+      ],
+      "answer_index": 1,
+      "explanation": "mean doing 意味着做某事 → exercising。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The rules do not allow anyone ____ the station without a spacesuit.",
+      "options": [
+        "leaving",
+        "left",
+        "to leave",
+        "leave"
+      ],
+      "answer_index": 2,
+      "explanation": "allow sb to do 作宾补 → to leave。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After the long mission, he enjoyed ____ at the blue Earth below.",
+      "options": [
+        "to look",
+        "looked",
+        "look",
+        "looking"
+      ],
+      "answer_index": 3,
+      "explanation": "enjoy + doing(不接 to do)→ looking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is not easy ____ people to planets beyond the solar system.",
+      "options": [
+        "to send",
+        "sending",
+        "sent",
+        "send"
+      ],
+      "answer_index": 0,
+      "explanation": "It is + adj. + to do 真主语 → to send。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The doctor suggested ____ regularly to keep the muscles strong.",
+      "options": [
+        "to exercise",
+        "exercising",
+        "exercised",
+        "exercise"
+      ],
+      "answer_index": 1,
+      "explanation": "suggest + doing(不接 to do)→ exercising。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The captain asked the crew ____ enough food for the long journey.",
+      "options": [
+        "storing",
+        "stored",
+        "to store",
+        "store"
+      ],
+      "answer_index": 2,
+      "explanation": "ask sb to do 作宾补 → to store。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "We can't risk ____ all our oxygen so early in the mission.",
+      "options": [
+        "to lose",
+        "lost",
+        "lose",
+        "losing"
+      ],
+      "answer_index": 3,
+      "explanation": "risk + doing(不接 to do)→ losing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The crew needs ____ the data back to Earth as soon as possible.",
+      "options": [
+        "to transmit",
+        "transmitting",
+        "transmitted",
+        "transmit"
+      ],
+      "answer_index": 0,
+      "explanation": "need to do → to transmit。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Scientists are busy ____ a way to travel faster through space.",
+      "options": [
+        "to find",
+        "finding",
+        "found",
+        "find"
+      ],
+      "answer_index": 1,
+      "explanation": "be busy + doing 忙于做 → finding。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Houston warned the astronauts not ____ their oxygen too quickly.",
+      "options": [
+        "using",
+        "used",
+        "to use",
+        "use"
+      ],
+      "answer_index": 2,
+      "explanation": "warn sb not to do 作宾补(否定)→ not to use。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "It is important ____ astronauts both mentally and physically.",
+      "options": [
+        "preparing",
+        "prepared",
+        "prepare",
+        "to prepare"
+      ],
+      "answer_index": 3,
+      "explanation": "It is + adj. + to do 真主语 → to prepare。"
+    }
+  ]
+}

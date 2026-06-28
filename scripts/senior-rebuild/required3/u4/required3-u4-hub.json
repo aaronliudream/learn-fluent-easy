@@ -1,0 +1,49 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "Yuri Gagarin was the first person to go into space.", "opts": ["尤里·加加林是第一个进入太空的人。", "他从未离开过地球。", "他是第一个登上月球的人。", "他是一名天气科学家。"], "answer": 0 },
+    { "audio": "Because there is little gravity, everything in the station floats.", "opts": ["空间站里非常拥挤。", "由于重力很小,站内一切都会漂浮。", "站内的东西都很重。", "宇航员从不移动物品。"], "answer": 1 },
+    { "audio": "Astronauts exercise every day so as to keep their muscles strong.", "opts": ["宇航员从不锻炼。", "锻炼会让他们变弱。", "宇航员每天锻炼以保持肌肉强健。", "他们只在地球上锻炼。"], "answer": 2 },
+    { "audio": "China sent Chang'e 4 to explore the far side of the moon.", "opts": ["中国放弃了月球计划。", "嫦娥四号停在了地球。", "嫦娥四号去了太阳。", "中国派嫦娥四号去探索月球背面。"], "answer": 3 },
+    { "audio": "Satellites collect data so as to help farmers grow more food.", "opts": ["卫星收集数据以帮助农民种出更多粮食。", "卫星只用来打电话。", "卫星会毁坏庄稼。", "农民不需要任何帮助。"], "answer": 0 },
+    { "audio": "Scientists are determined to send people to Mars one day.", "opts": ["科学家已经放弃了火星。", "科学家决心有朝一日把人送上火星。", "没有人想去火星。", "火星离地球很近很安全。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "The spacecraft will ____ Earth for several days before landing.", "opts": ["orbit", "forget", "sell", "lose"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "A weather ____ records data about the wind and the rain.", "opts": ["garden", "satellite", "market", "river"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Because there is little ____ in space, astronauts float around.", "opts": ["price", "noise", "gravity", "music"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Pictures of Earth made people see that our ____ are limited.", "opts": ["songs", "prices", "noises", "resources"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Scientists make vehicles ____ brave people into space.", "opts": ["to carry", "carrying", "carried", "carry"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Astronauts collect dirty water so as ____ it for later use.", "opts": ["recycling", "to recycle", "recycled", "recycle"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "Neil Armstrong was the first man ____ on the moon.", "opts": ["stepping", "stepped", "to step", "step"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The captain told the crew ____ their seatbelts at once.", "opts": ["fastening", "fastened", "fasten", "to fasten"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["杨利伟2003年绕地球飞行。", "他从未飞过。", "他是一名农民。", "他造了一座桥。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Yang Liwei orbited Earth in the Shenzhou 5 spacecraft in 2003." },
+    { "q": "听句子选中文:", "opts": ["地球的资源是无限的。", "用现有技术,去火星往返要两年多。", "去火星只要一小时。", "没有人想探索火星。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Using current technology, a trip to Mars and back would take over two years." }
+  ],
+  "reading": {
+    "passage": "Space is sometimes called the final frontier. For thousands of years people only looked up at the stars and wondered, but today rockets and satellites let us study the universe more closely than ever before. Each new mission, however small, brings us a little nearer to its secrets.",
+    "passageCn": "太空有时被称为最后的边疆。几千年来人们只能仰望星空、心生好奇,而如今火箭和卫星让我们比以往任何时候都更近距离地研究宇宙。每一次新的任务,无论多小,都让我们离它的秘密更近一点。",
+    "questions": [
+      { "q": "What is space sometimes called?", "opts": ["The final frontier.", "A waste of money.", "An empty box.", "A small village."], "answer": 0 },
+      { "q": "How do we study the universe today?", "opts": ["By only looking up with our eyes.", "We cannot study it at all.", "With rockets and satellites.", "By staying on the ground."], "answer": 2 },
+      { "q": "What does each new mission do?", "opts": ["It wastes everyone's time.", "It brings us closer to space's secrets.", "It ends all space travel.", "It hides the stars."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences saying whether you think space exploration is worth the cost, and give one reason. Try to use a to-infinitive of purpose (such as 'to find' or 'so as to help').",
+    "promptCn": "用3-4句话说说你认为太空探索是否值得,并给出一条理由。试着用表目的的不定式(如 to find 或 so as to help)。",
+    "sampleWords": ["explore", "universe", "satellite", "rocket", "gravity", "data", "resource", "worthwhile", "benefit", "future"]
+  },
+  "dialogues": [
+    {
+      "title": "Dreaming of Space",
+      "lines": [
+        { "role": "A", "text": "If you could travel into space, would you go?", "cn": "如果你能去太空旅行,你会去吗?" },
+        { "role": "B", "text": "Of course! I'd love to see the blue Earth turning below me.", "cn": "当然!我很想看到脚下转动的蓝色地球。" },
+        { "role": "A", "text": "But you'd have to train for years to become an astronaut.", "cn": "可你得训练好多年才能成为宇航员。" },
+        { "role": "B", "text": "I know, yet the chance to explore the universe would be worth it.", "cn": "我知道,但能探索宇宙的机会会让这一切都值得。" }
+      ]
+    }
+  ]
+}

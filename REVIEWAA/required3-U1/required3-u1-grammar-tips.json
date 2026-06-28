@@ -1,0 +1,35 @@
+{
+  "volume": "required3",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "现在分词(V-ing)作表语和定语 速查",
+    "intro": "现在分词(V-ing)表示主动、正在进行的动作或性质。作表语描述事物给人的感受(物用 -ing,人用 -ed);作前置/后置定语,相当于一个主动的形容词或定语从句(who/which is doing)。",
+    "table": {
+      "headers": ["用法", "位置 / 例句 / 等价"],
+      "rows": [
+        ["作表语", "be + V-ing:The film is amazing.(物的性质;人则用 -ed:I am amazed.)"],
+        ["前置定语", "V-ing + 名词:exciting news / the rising sun / running water(主动·进行)"],
+        ["后置定语", "名词 + V-ing 短语:the man standing there = who is standing there"],
+        ["V-ing vs -ed", "物用 -ing(exciting),人用 -ed(excited);The news is exciting / I am excited."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "描述事物'令人……'的性质或感受 → 用 V-ing", "mark": "These lanterns are amazing.(amazing 修饰物)" },
+      { "rule": "描述人'感到……' → 用 -ed", "mark": "I was amazed by the lanterns.(amazed 修饰人)" },
+      { "rule": "后置定语 = 主动的定语从句(who/which is doing),被修饰名词是动作发出者", "mark": "families celebrating the festival = who are celebrating it" },
+      { "rule": "短语作后置定语;单个分词常前置", "mark": "the shining moon(前置) / the moon shining brightly(短语后置)" }
+    ],
+    "why": [
+      "现在分词来自动词,保留'主动·进行'的意义:作定语时,名词是动作的发出者(the running water = water that is running);作表语时,说明主语本身具有'使人……'的性质,所以物用 -ing、人用 -ed。"
+    ],
+    "gaokaoPoints": [
+      "-ing 与 -ed 的辨析(物 vs 人:exciting/excited、boring/bored、moving/moved)是语法填空与单选高频考点。",
+      "现在分词作后置定语 vs 过去分词作后置定语:主动/进行用 V-ing(the man standing),被动/完成用 V-ed(the gifts left under the tree)。"
+    ],
+    "examVsReal": [
+      { "exam": "The story is touching.(考试)", "real": "口语里也常说 The story is so touching / really moving", "note": "考试重点是分清 -ing(物)与 -ed(人),口语用法一致但更随意" },
+      { "exam": "the families celebrating the festival(后置定语·书面)", "real": "the families who are celebrating the festival", "note": "考试爱用分词压缩从句,口语里两种都自然" }
+    ]
+  }
+}

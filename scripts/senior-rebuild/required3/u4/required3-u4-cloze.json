@@ -1,0 +1,710 @@
+{
+  "volume": "required3",
+  "unit": "U4",
+  "topic": "Space Exploration",
+  "source": "人教版2019必修三 Unit 4 同主题完形(第一次太空行走/失重早餐/卫星帮农民/太空垃圾/月球车/儿时的太空梦)。用词限本单元/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Spacewalk",
+      "text": "I will never forget my first spacewalk. Before I left the spacecraft, I had to put on a heavy (1)____ to protect me from the cold. My captain reminded me to (2)____ myself to the station with a strong rope, or I would float away into the dark. When the door opened, I moved very (3)____ so as to keep my body under control. Outside, there was no air to (4)____, so the suit gave me oxygen. The Earth turned quietly below me, and I felt both (5)____ and a little afraid. My job was to (6)____ a broken part of the station. Working without gravity was not (7)____, because my tools kept trying to drift away from my hands. After two hours, I was (8)____ but happy. As I climbed back inside, I (9)____ that this was a dream I had had since I was a child. That spacewalk was the proudest (10)____ of my whole life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "spacesuit",
+            "machine",
+            "ticket",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "穿 spacesuit 太空服。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "tie",
+            "throw",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "tie myself to 把自己系到。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "loudly",
+            "cheaply",
+            "slowly",
+            "angrily"
+          ],
+          "answer_index": 2,
+          "explanation": "move slowly 缓慢移动。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "buy",
+            "draw",
+            "breathe"
+          ],
+          "answer_index": 3,
+          "explanation": "no air to breathe 没有空气可呼吸。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "excited",
+            "bored",
+            "asleep",
+            "hungry"
+          ],
+          "answer_index": 0,
+          "explanation": "felt excited 感到兴奋。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "lose",
+            "repair",
+            "forget",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "repair a broken part 修理坏掉的部件。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "heavy",
+            "loud",
+            "easy",
+            "wet"
+          ],
+          "answer_index": 2,
+          "explanation": "not easy 不容易。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rich",
+            "early",
+            "late",
+            "tired"
+          ],
+          "answer_index": 3,
+          "explanation": "tired but happy 累但开心。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "realised",
+            "lost",
+            "sold",
+            "feared"
+          ],
+          "answer_index": 0,
+          "explanation": "realised that 意识到。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "moment",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the proudest moment 最自豪的时刻。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Breakfast Without Gravity",
+      "text": "Eating breakfast in space is stranger than you might (1)____. Because there is almost no gravity, the food does not stay on the plate but tries to (2)____ into the air. So astronauts keep their meals in small bags and warm them in a special (3)____. They must hold the bag (4)____, or tiny pieces of food will drift around the room. Drinking is also tricky, since water forms little balls that float away if you are not (5)____. There are no open cups; instead, astronauts drink through a tube. Even the salt and pepper come as a (6)____ so that they will not fly everywhere. After eating, the crew clean up very carefully, because a single crumb left behind could (7)____ a machine if it floats into the wrong place. It may sound like hard work, but the astronauts soon get (8)____ to it. Many of them say that, after a few weeks, this odd way of eating begins to feel almost (9)____. And nothing on Earth, they add, beats the (10)____ of the planet you can watch through the window while you eat.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "lose",
+            "think",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "than you might think 你能想到的。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sink",
+            "fall",
+            "land",
+            "float"
+          ],
+          "answer_index": 3,
+          "explanation": "float into the air 漂到空中。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "microwave",
+            "garden",
+            "market",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "warm in a microwave 用微波炉加热。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loudly",
+            "tightly",
+            "cheaply",
+            "angrily"
+          ],
+          "answer_index": 1,
+          "explanation": "hold tightly 紧紧抓住。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rich",
+            "late",
+            "careful",
+            "asleep"
+          ],
+          "answer_index": 2,
+          "explanation": "not careful 不小心。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "song",
+            "price",
+            "liquid"
+          ],
+          "answer_index": 3,
+          "explanation": "come as a liquid 做成液体形式。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "damage",
+            "clean",
+            "feed",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "damage a machine 损坏机器。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "used",
+            "afraid",
+            "sorry"
+          ],
+          "answer_index": 1,
+          "explanation": "get used to 习惯。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "broken",
+            "empty",
+            "normal",
+            "wet"
+          ],
+          "answer_index": 2,
+          "explanation": "feel normal 感觉正常。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "view"
+          ],
+          "answer_index": 3,
+          "explanation": "the view of the planet 行星的景色。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Eyes in the Sky",
+      "text": "High above our heads, thousands of satellites quietly (1)____ around the Earth. Many people think they are useful only for phones, but they do far (2)____ than that. Some satellites watch the weather and (3)____ pictures of storms long before they reach land. This early warning gives families enough (4)____ to move to safety. Other satellites study the land and send (5)____ about soil and rain back to scientists. After careful study, the scientists can (6)____ farmers when and where to plant their crops. In this way, tools first built for space now help us grow (7)____ food for a growing world. Satellites also carry signals for television and the internet, (8)____ people across the whole globe in seconds. It is amazing to think that machines so far away can change daily life so (9)____. The next time you check the weather on your phone, remember that an eye in the sky is quietly (10)____ over you.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "move",
+            "sink",
+            "fall",
+            "stop"
+          ],
+          "answer_index": 0,
+          "explanation": "move around the Earth 绕地球运行。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "less",
+            "more",
+            "worse",
+            "fewer"
+          ],
+          "answer_index": 1,
+          "explanation": "do far more 做得多得多。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "eat",
+            "sell",
+            "send",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "send pictures 发送图像。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "noise",
+            "salt",
+            "time"
+          ],
+          "answer_index": 3,
+          "explanation": "enough time 足够时间。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "data",
+            "songs",
+            "prices",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "send data 发送数据。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "advise",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "advise farmers 建议农民。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "less",
+            "worse",
+            "more",
+            "fewer"
+          ],
+          "answer_index": 2,
+          "explanation": "grow more food 种更多粮食。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "losing",
+            "breaking",
+            "selling",
+            "connecting"
+          ],
+          "answer_index": 3,
+          "explanation": "connecting people 把人们连接起来。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "greatly",
+            "rarely",
+            "hardly",
+            "never"
+          ],
+          "answer_index": 0,
+          "explanation": "change life greatly 极大地改变生活。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleeping",
+            "watching",
+            "sitting",
+            "crying"
+          ],
+          "answer_index": 1,
+          "explanation": "watching over you 守护着你。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Problem of Space Junk",
+      "text": "Every time a rocket is launched, it can leave small pieces of metal behind in space. Over the years, these pieces have (1)____ into a huge cloud of rubbish that we call space junk. Although each piece may be (2)____, it travels so fast that it can (3)____ a working satellite to pieces. Scientists must carefully (4)____ where all this junk is, so that new spacecraft can avoid it. If they fail, a single (5)____ could destroy years of work in a moment. The problem keeps growing as more and more countries (6)____ rockets into orbit. Some teams are now (7)____ clever machines that could one day catch the junk and pull it down to burn up safely. Cleaning up space will not be (8)____, but it is important for the future. After all, we do not want the road to the stars to become (9)____ with our own rubbish. Keeping space (10)____ is a job for the whole world to share.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fallen",
+            "sunk",
+            "grown",
+            "landed"
+          ],
+          "answer_index": 2,
+          "explanation": "grown into 发展成。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "wet",
+            "warm",
+            "small"
+          ],
+          "answer_index": 3,
+          "explanation": "may be small 可能很小。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "break",
+            "feed",
+            "clean",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "break a satellite to pieces 把卫星撞碎。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "track",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "track where the junk is 追踪垃圾位置。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "song",
+            "price",
+            "crash",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a single crash 一次撞击。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eat",
+            "sell",
+            "drop",
+            "send"
+          ],
+          "answer_index": 3,
+          "explanation": "send rockets 发射火箭。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "designing",
+            "losing",
+            "breaking",
+            "selling"
+          ],
+          "answer_index": 0,
+          "explanation": "designing machines 设计机器。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "wet",
+            "easy",
+            "loud",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "not be easy 不容易。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "clean",
+            "empty",
+            "blocked",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "blocked with rubbish 被垃圾堵塞。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dark",
+            "loud",
+            "heavy",
+            "clean"
+          ],
+          "answer_index": 3,
+          "explanation": "keep space clean 保持太空清洁。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Sending a Rover to the Moon",
+      "text": "When a country wants to study the moon, it often sends a small robot car called a (1)____. This clever machine can travel across the surface where no human has yet (2)____ a foot. Before it leaves Earth, engineers test it again and again so as to make (3)____ it will work far away. After a long journey, the rover lands gently and slowly (4)____ to explore. Its cameras take pictures, while other tools (5)____ the rocks and soil. All this information is then (6)____ back to scientists waiting on Earth. Because the moon is so far, the signals take time to (7)____, and the team must be patient. Sometimes the rover finds something nobody (8)____, and everyone in the control room cheers. A good rover can keep working for (9)____, long after people expected it to stop. Step by step, these brave little machines help us learn the (10)____ of a world we cannot yet visit ourselves.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rover",
+            "garden",
+            "market",
+            "river"
+          ],
+          "answer_index": 0,
+          "explanation": "a rover 月球车。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "set",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "set a foot 踏足。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "noise",
+            "price",
+            "sure",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "make sure 确保。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleeps",
+            "stops",
+            "ends",
+            "begins"
+          ],
+          "answer_index": 3,
+          "explanation": "begins to explore 开始探索。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "study",
+            "sell",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "study the rocks 研究岩石。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "eaten",
+            "sent",
+            "sold",
+            "thrown"
+          ],
+          "answer_index": 1,
+          "explanation": "sent back 传回。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "eat",
+            "arrive",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "signals take time to arrive 信号需要时间到达。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "sold",
+            "broke",
+            "expected"
+          ],
+          "answer_index": 3,
+          "explanation": "nobody expected 没人预料到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "years",
+            "minutes",
+            "seconds",
+            "metres"
+          ],
+          "answer_index": 0,
+          "explanation": "for years 持续多年。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "secrets",
+            "noise",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "learn the secrets 了解秘密。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Childhood Dream",
+      "text": "When I was young, I often lay on the grass at night and looked up at the (1)____. I would point to the stars and tell my mother that one day I would (2)____ into space. She smiled and said that if I worked hard, my dream might come (3)____. So I studied science with all my (4)____, even when the lessons were difficult. At school, I read every book about rockets and planets that I could (5)____. My friends thought space was boring, but to me it was the most (6)____ subject of all. Years later, I joined a space programme and began the long, hard (7)____ of training to become an astronaut. There were many days when I felt (8)____ and wanted to give up, yet I always remembered that little child on the grass. Now, when I look down at Earth through the window, I feel deeply (9)____. Dreams, I have learned, are worth all the (10)____ it takes to reach them.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "floor",
+            "wall",
+            "sky",
+            "table"
+          ],
+          "answer_index": 2,
+          "explanation": "looked up at the sky 仰望天空。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sink",
+            "fall",
+            "sell",
+            "travel"
+          ],
+          "answer_index": 3,
+          "explanation": "travel into space 进入太空。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "true",
+            "off",
+            "down",
+            "back"
+          ],
+          "answer_index": 0,
+          "explanation": "come true 成真。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "heart",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "with all my heart 全心全意。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "lose",
+            "find",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "books I could find 能找到的书。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "useless",
+            "ugly",
+            "exciting"
+          ],
+          "answer_index": 3,
+          "explanation": "the most exciting subject 最激动人心的学科。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "road",
+            "holiday",
+            "game",
+            "joke"
+          ],
+          "answer_index": 0,
+          "explanation": "the long hard road 漫长艰难的路。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "rich",
+            "tired",
+            "early",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "felt tired 感到疲惫。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "angry",
+            "afraid",
+            "proud",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "feel proud 感到自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "effort"
+          ],
+          "answer_index": 3,
+          "explanation": "worth all the effort 值得所有努力。"
+        }
+      ]
+    }
+  ]
+}

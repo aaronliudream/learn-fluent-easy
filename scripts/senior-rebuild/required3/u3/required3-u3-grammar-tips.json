@@ -1,0 +1,35 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "省略(Ellipsis)速查",
+    "intro": "省略就是为避免重复、让表达更简洁,而省去上下文中可以推知的成分。判断口诀:省什么都要能'还原',还原后句子完整、意思不变。本单元三类:不定式后省动词、状语从句省'主语+be'、对话/并列句省重复成分。",
+    "table": {
+      "headers": ["类型", "怎么省 / 例句"],
+      "rows": [
+        ["不定式省略", "保留 to,省后面动词:—Will you join? —I'd love to. / want to / didn't mean to"],
+        ["状语从句省略", "连词 + V-ing/V-ed/adj,省'主语+be':When in Rome … / If necessary … / Though tired …"],
+        ["对话答语省略", "只留新信息或助动词:—Where? —To the library. / Yes, I have. / Can't wait!"],
+        ["并列句省略", "省重复谓语,用 so/neither 或助动词:He can swim, and so can I. / I have, but she hasn't."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "不定式后若动词为 be 或完成体 have,需保留 to be / to have", "mark": "—Are you a member? —I'd like to be." },
+      { "rule": "状语从句省略的前提:从句主语 = 主句主语(或为 it)且谓语含 be", "mark": "When (you are) young vs ×When I young, you …" },
+      { "rule": "so + 助动词 + 主语 = 前者肯定后者也如此;neither/nor + 助动词 + 主语 = 否定也如此", "mark": "so do I / neither do I" },
+      { "rule": "So it is(附和)≠ So is it(后者也如此),语序不同意思不同", "mark": "—It's cold. —So it is.(的确)" }
+    ],
+    "why": [
+      "省略的本质是'上下文已给出信息,不必再说一遍'。能省的成分都能根据上文唯一还原;一旦还原不出或意思变了,就不能省。"
+    ],
+    "gaokaoPoints": [
+      "状语从句的省略(when/while/if/though + 分词/形容词)是语法填空与短文改错高频考点;看清主句主语是否一致、动作主动(V-ing)还是被动(V-ed)。",
+      "不定式的省略(保留 to)、so/neither 倒装附和句,在完成句子与对话补全中常考。"
+    ],
+    "examVsReal": [
+      { "exam": "If (it is) necessary, call me.(书面省略,正式)", "real": "Call me if you need to.", "note": "考试爱考'连词+adj/分词'的省略;口语里常换成更直白的说法。" },
+      { "exam": "—Will you come? —I'd love to.(标准省略)", "real": "—Coming? —Love to!", "note": "考试保留 to;真实口语连主语和 to 都可能再省。" }
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "volume": "required3",
+  "unit": "U3",
+  "topic": "Diverse Cultures",
+  "source": "人教版2019必修三 Unit 3 同主题阅读(旧金山与唐人街/移民与淘金热/密遜区街头艺术/贵州民族村寨/美式融合食物/作为大熔炉的纽约皇后区)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A City of Many Cultures",
+      "topic_cn": "说明·旧金山的多元文化",
+      "body": "San Francisco is one of the most exciting cities in the world, partly because so many different cultures meet there. The city was able to rebuild itself after the terrible earthquake that occurred in 1906, and today it is full of beautiful old buildings sitting on top of big hills. From these hills, visitors can enjoy great views of the ocean and the famous Golden Gate Bridge. What makes the city special, however, is its people. Over the years, immigrants from Mexico, China, and many other countries have settled here, each group bringing its own food, music, and traditions. In one street you might smell Mexican cooking, while in the next you hear Cantonese being spoken. Because of this mix, the city has become a true home of cultural diversity. People who grow up here learn from a young age that there are many different ways of living, eating, and seeing the world.",
+      "vocab_notes": [
+        {
+          "word": "diversity",
+          "cn": "多样性"
+        },
+        {
+          "word": "immigrant",
+          "cn": "移民"
+        },
+        {
+          "word": "occur",
+          "cn": "发生"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is San Francisco described as exciting?",
+          "options": [
+            "Because cultures from many places come together there.",
+            "Because it has no tall hills.",
+            "Because no one ever moved there.",
+            "Because it has only one kind of food."
+          ],
+          "answer_index": 0,
+          "explanation": "首段 'so many different cultures meet there' 的转述。"
+        },
+        {
+          "stem": "What can visitors do from the city's hills?",
+          "options": [
+            "Swim in the river.",
+            "See the ocean and the Golden Gate Bridge.",
+            "Watch a football match.",
+            "Visit a poison museum."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'great views of the ocean and the famous Golden Gate Bridge' 的转述。"
+        },
+        {
+          "stem": "According to the text, what makes the city truly special?",
+          "options": [
+            "Its mix of people from many cultures.",
+            "Its tall new offices.",
+            "Its cheap hotels.",
+            "Its cold weather."
+          ],
+          "answer_index": 0,
+          "explanation": "末段强调 'its people' 与 'cultural diversity',为概括转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Coming to a New Home",
+      "topic_cn": "记叙·移民与淘金热",
+      "body": "In 1848, gold was discovered near San Francisco, and the news spread quickly across the world. Soon over three hundred thousand people came from many countries, all hoping to seek their fortune. Among them were many Chinese, who arrived during this busy period. Life was not easy for these newcomers. To earn a living, some opened small shops and restaurants in the area that later became Chinatown. Others found jobs on farms, joined the gold rush, or helped to build the great railway that joined California to the eastern part of the country. The work was hard and the pay was low, but they kept going, year after year. When these immigrants left their home countries, they carried a little piece of home in their hearts. In time, they built a new home in a faraway land, and their children grew up proud of two cultures at once. Their story is part of how the country was built by people from all over the world.",
+      "vocab_notes": [
+        {
+          "word": "seek",
+          "cn": "寻求"
+        },
+        {
+          "word": "fortune",
+          "cn": "运气;财富"
+        },
+        {
+          "word": "earn",
+          "cn": "挣得"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What brought so many people to San Francisco in 1848?",
+          "options": [
+            "A new school.",
+            "The discovery of gold nearby.",
+            "A music festival.",
+            "A warm climate."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'gold was discovered… all hoping to seek their fortune' 的转述。"
+        },
+        {
+          "stem": "How did some Chinese immigrants earn a living?",
+          "options": [
+            "By leaving the country at once.",
+            "By refusing to work.",
+            "By opening shops and restaurants.",
+            "By selling poison."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'opened small shops and restaurants' 的转述。"
+        },
+        {
+          "stem": "What does the writer say the immigrants finally did?",
+          "options": [
+            "They forgot their old culture completely.",
+            "They returned home with the gold.",
+            "They stopped the railway from being built.",
+            "They created a fresh home in a distant land."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'built a new home in a faraway land' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Street Art in the Mission District",
+      "topic_cn": "说明·密遜区的街头艺术",
+      "body": "The Mission District is one of the oldest parts of San Francisco, and it has changed a great deal over the years. Many of the people living there came from Mexico or Central America. Long ago it was a poor area of town, but today it is a lively centre for art, music, and food. One of the most interesting things to see there is the street art. An art movement known as the Mission School began in this very district. It is influenced by both graffiti art and comic art, and its bright colours seem to jump off the walls. A visitor can walk around for hours, looking at painting after painting that tells a story about the people who live nearby. Afterwards, the same visitor might buy noodles from a food truck that mixes Mexican and Chinese cooking. In a single afternoon, you can see how different cultures meet, mix, and make something new and exciting. That is the real spirit of the district.",
+      "vocab_notes": [
+        {
+          "word": "graffiti",
+          "cn": "涂鸦"
+        },
+        {
+          "word": "comic",
+          "cn": "漫画"
+        },
+        {
+          "word": "downtown",
+          "cn": "市中心"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the Mission District like long ago?",
+          "options": [
+            "A poor, run-down part of the city.",
+            "A rich shopping street.",
+            "An empty desert.",
+            "A famous museum."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'it was a poor area of town' 的转述。"
+        },
+        {
+          "stem": "What influenced the Mission School art movement?",
+          "options": [
+            "Old Chinese poetry only.",
+            "Both street graffiti and the style of comics.",
+            "Photographs of the bridge.",
+            "Maps of California."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'influenced by both graffiti art and comic art' 的转述。"
+        },
+        {
+          "stem": "What does the writer say you can learn there in one afternoon?",
+          "options": [
+            "How to drive a food truck.",
+            "How to paint comics.",
+            "How different cultures meet and create something new.",
+            "How to escape the cold winter."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'cultures meet, mix, and make something new' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Villages in Guizhou",
+      "topic_cn": "记叙·贵州的民族村寨",
+      "body": "Guizhou Province is famous for its cultural diversity, and it is home to many ethnic minority groups. When Justin travelled there, he was amazed by how different it felt from the big cities he knew. In one village, he watched local people play an old instrument called the lusheng. He was told that this instrument has a history of more than a thousand years, and it is even mentioned in the oldest collection of Chinese poetry. Justin also wanted to buy some hand-made silver accessories as souvenirs. A friendly villager explained that the price would depend on the percentage of real silver inside each piece. Later, the new friends planned to visit a pretty village built beside a clear river, where they hoped to see traditional dances and beautiful old houses. By the end of his trip, Justin understood that Chinese culture was far more diverse than he had ever imagined. He returned home with photos, gifts, and many new stories to share.",
+      "vocab_notes": [
+        {
+          "word": "minority",
+          "cn": "少数民族"
+        },
+        {
+          "word": "souvenir",
+          "cn": "纪念品"
+        },
+        {
+          "word": "percentage",
+          "cn": "百分比"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is Guizhou Province famous for?",
+          "options": [
+            "Its tall office buildings.",
+            "Its cold sea.",
+            "Its lack of villages.",
+            "Its cultural diversity and ethnic groups."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'famous for its cultural diversity… many ethnic minority groups' 的转述。"
+        },
+        {
+          "stem": "What decided the price of the silver accessories?",
+          "options": [
+            "How much real silver each piece held.",
+            "The colour of the box.",
+            "The day of the week.",
+            "How heavy the buyer was."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the price would depend on the percentage of real silver' 的转述。"
+        },
+        {
+          "stem": "What did Justin understand by the end of his trip?",
+          "options": [
+            "That villages are all the same.",
+            "That China holds much greater cultural variety than he expected.",
+            "That he disliked travelling.",
+            "That the lusheng was easy to play."
+          ],
+          "answer_index": 1,
+          "explanation": "末段 'far more diverse than he had ever imagined' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Food from Everywhere",
+      "topic_cn": "说明·美式融合食物",
+      "body": "Some people think that America has no food of its own, but this is not really true. American cooking often takes ideas from many different cultures and mixes them to make something completely new. The hamburger, for example, brings together cooking ideas from more than one country. Nachos are simply corn chips covered in warm cheese; they were first made by a clever cook for a group of hungry visitors. Inside a fortune cookie you will find a small piece of paper with a lucky message on it, though such cookies are far more common in America than in China itself. Gumbo is a spicy stew that was invented in New Orleans long ago. It mixes cooking styles from several places, all in a single pot. What these foods share is the spirit of mixing. Just like the people of the country, American food is the result of many cultures meeting and sharing. Each dish tells a small story about the people who first made it.",
+      "vocab_notes": [
+        {
+          "word": "spicy",
+          "cn": "辛辣的"
+        },
+        {
+          "word": "cheese",
+          "cn": "奶酪"
+        },
+        {
+          "word": "chip",
+          "cn": "薯片;玉米片"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say about American cooking?",
+          "options": [
+            "It never changes at all.",
+            "It comes from only one country.",
+            "It mixes ideas from many cultures to make new dishes.",
+            "It is always poisonous."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'takes ideas from many different cultures and mixes them' 的转述。"
+        },
+        {
+          "stem": "What will you find inside a fortune cookie?",
+          "options": [
+            "A piece of cheese.",
+            "A silver coin.",
+            "A spicy stew.",
+            "A tiny slip printed with a lucky saying."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'a small piece of paper with a lucky message' 的转述。"
+        },
+        {
+          "stem": "What do these different foods have in common?",
+          "options": [
+            "They all share the spirit of mixing cultures.",
+            "They are all sweet.",
+            "They were all made in China.",
+            "They are all very expensive."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'the spirit of mixing… many cultures meeting and sharing' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The World's Biggest Melting Pot",
+      "topic_cn": "说明·纽约皇后区·大熔炉",
+      "body": "Queens is a neighbourhood in the city of New York, and many people say it is one of the most diverse places in the whole world. Almost half of the people living there were born in another country. Because so many cultures share the same streets, Queens is often called a melting pot, a place where people of different backgrounds live together side by side. Walk down a single road and you may hear dozens of different languages being spoken. One study even tried to measure diversity by working out how likely it was that two people chosen at random would come from different backgrounds. In Queens, the answer was very high indeed. Some people worry that life there might be hard for a newcomer, but many residents say the opposite is true: living among so many cultures makes them feel at home and helps them understand the wider world. For them, the rich mix of people is not a problem but a gift to be treasured.",
+      "vocab_notes": [
+        {
+          "word": "diverse",
+          "cn": "多种多样的"
+        },
+        {
+          "word": "settle",
+          "cn": "定居"
+        },
+        {
+          "word": "percentage",
+          "cn": "百分比"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why is Queens called a melting pot?",
+          "options": [
+            "Because it is very hot there.",
+            "Because people of many backgrounds live together there.",
+            "Because no one lives there.",
+            "Because it has only one language."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'people of different backgrounds live together side by side' 的转述。"
+        },
+        {
+          "stem": "What did one study try to measure?",
+          "options": [
+            "The number of cars in the city.",
+            "The price of houses.",
+            "The chance that two random people came from different backgrounds.",
+            "The weather over a year."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'measure diversity by working out how likely…' 的转述。"
+        },
+        {
+          "stem": "How do many residents feel about the mix of cultures?",
+          "options": [
+            "They find it boring.",
+            "They wish everyone were the same.",
+            "They want to leave at once.",
+            "They view it as a precious blessing worth cherishing."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'not a problem but a gift to be treasured' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+[
+ {
+  "word": "clerk",
+  "ipa": "kl:k; NAmE kl3:rk",
+  "cn": "职员；文书；店员",
+  "propn": false,
+  "raw": "clerk /kl:k; NAmE kl3:rk/ n. 职员；文书；店员"
+ },
+ {
+  "word": "consulate",
+  "ipa": "kQnsj@l@t; NAmE k:ns@l@t",
+  "cn": "领事馆",
+  "propn": false,
+  "raw": "consulate /kQnsj@l@t; NAmE k:ns@l@t/ n. 领事馆"
+ },
+ {
+  "word": "dare",
+  "ipa": "de@(r)",
+  "cn": "胆敢；敢于",
+  "propn": false,
+  "raw": "dare /de@(r)/ vi. & modal v. 胆敢；敢于"
+ },
+ {
+  "word": "dinosaur",
+  "ipa": "daIn@sO:(r)",
+  "cn": "恐龙",
+  "propn": false,
+  "raw": "dinosaur /daIn@sO:(r)/ n. 恐龙"
+ },
+ {
+  "word": "downstairs",
+  "ipa": "%daUnste@z",
+  "cn": "顺楼梯而下；在楼下；往楼下",
+  "propn": false,
+  "raw": "downstairs /%daUnste@z/ adv. 顺楼梯而下；在楼下；往楼下"
+ },
+ {
+  "word": "duty",
+  "ipa": "dju:ti; NAmE du:ti",
+  "cn": "责任；义务；职责；值班",
+  "propn": false,
+  "raw": "duty /dju:ti; NAmE du:ti/ n. 责任；义务；职责；值班"
+ },
+ {
+  "word": "on duty",
+  "ipa": "",
+  "cn": "值班；值勤",
+  "propn": false,
+  "raw": "on duty 值班；值勤"
+ },
+ {
+  "word": "element",
+  "ipa": "elIm@nt",
+  "cn": "要素；基本部分",
+  "propn": false,
+  "raw": "element /elIm@nt/ n. 要素；基本部分"
+ },
+ {
+  "word": "eventually",
+  "ipa": "IventSu@li",
+  "cn": "最后；终于",
+  "propn": false,
+  "raw": "eventually /IventSu@li/ adv. 最后；终于"
+ },
+ {
+  "word": "extent",
+  "ipa": "Ikstent",
+  "cn": "程度；限度；大小；范围",
+  "propn": false,
+  "raw": "extent /Ikstent/ n. 程度；限度；大小；范围"
+ },
+ {
+  "word": "to … extent 到……程度；在……程度上",
+  "ipa": "",
+  "cn": "到……程度；在……程度上",
+  "propn": false,
+  "raw": "to … extent 到……程度；在……程度上"
+ },
+ {
+  "word": "external",
+  "ipa": "Ikst3:nl",
+  "cn": "外部的；外面的；外界的；外来的",
+  "propn": false,
+  "raw": "external /Ikst3:nl/ adj. 外部的；外面的；外界的；外来的"
+ },
+ {
+  "word": "frown",
+  "ipa": "fraUn",
+  "cn": "皱眉",
+  "propn": false,
+  "raw": "frown /fraUn/ n. & vi. 皱眉"
+ },
+ {
+  "word": "Appendices hesitate",
+  "ipa": "hezIteIt",
+  "cn": "犹豫；迟疑；顾虑",
+  "propn": false,
+  "raw": "Appendices hesitate /hezIteIt/ vi. 犹豫；迟疑；顾虑"
+ },
+ {
+  "word": "hug",
+  "ipa": "hVg",
+  "cn": "拥抱；抱紧",
+  "propn": false,
+  "raw": "hug /hVg/ vt. & vi. 拥抱；抱紧"
+ },
+ {
+  "word": "ignore",
+  "ipa": "IgnO:(r)",
+  "cn": "忽视；对……不予理会",
+  "propn": false,
+  "raw": "ignore /IgnO:(r)/ vt. 忽视；对……不予理会"
+ },
+ {
+  "word": "in case",
+  "ipa": "",
+  "cn": "以防；以防万一",
+  "propn": false,
+  "raw": "in case 以防；以防万一"
+ },
+ {
+  "word": "in return",
+  "ipa": "",
+  "cn": "作为回报；作为回应",
+  "propn": false,
+  "raw": "in return 作为回报；作为回应"
+ },
+ {
+  "word": "in that case",
+  "ipa": "",
+  "cn": "既然那样；假使那样的话",
+  "propn": false,
+  "raw": "in that case 既然那样；假使那样的话"
+ },
+ {
+  "word": "indeed",
+  "ipa": "Indi:d",
+  "cn": "其实；实际上；当然；确实",
+  "propn": false,
+  "raw": "indeed /Indi:d/ adv. 其实；实际上；当然；确实"
+ },
+ {
+  "word": "indicate",
+  "ipa": "IndIkeIt",
+  "cn": "表明；显示 vt. 象征；暗示",
+  "propn": false,
+  "raw": "indicate /IndIkeIt/ vt. & vi. 表明；显示 vt. 象征；暗示"
+ },
+ {
+  "word": "intention",
+  "ipa": "IntenSn",
+  "cn": "打算；计划；意图；目的",
+  "propn": false,
+  "raw": "intention /IntenSn/ n. 打算；计划；意图；目的"
+ },
+ {
+  "word": "judge",
+  "ipa": "dZVdZ",
+  "cn": "评价；评判；判断 n. 法官；审判员；裁判员",
+  "propn": false,
+  "raw": "judge /dZVdZ/ vt. & vi. 评价；评判；判断 n. 法官；审判员；裁判员"
+ },
+ {
+  "word": "loan",
+  "ipa": "l@Un",
+  "cn": "贷款；借款",
+  "propn": false,
+  "raw": "loan /l@Un/ n. 贷款；借款"
+ },
+ {
+  "word": "take out a loan",
+  "ipa": "",
+  "cn": "取得贷款",
+  "propn": false,
+  "raw": "take out a loan 取得贷款"
+ },
+ {
+  "word": "maintain",
+  "ipa": "meInteIn",
+  "cn": "维持；保持；维修；保养",
+  "propn": false,
+  "raw": "maintain /meInteIn/ vt. 维持；保持；维修；保养"
+ },
+ {
+  "word": "manner",
+  "ipa": "m{n@(r)",
+  "cn": "举止；行为方式；方法；［pl.］礼貌；礼仪",
+  "propn": false,
+  "raw": "manner /m{n@(r)/ n. 举止；行为方式；方法；［pl.］礼貌；礼仪"
+ },
+ {
+  "word": "in a … manner 以一种……的方式；带着一副……的样子",
+  "ipa": "",
+  "cn": "以一种……的方式；带着一副……的样子",
+  "propn": false,
+  "raw": "in a … manner 以一种……的方式；带着一副……的样子"
+ },
+ {
+  "word": "mining",
+  "ipa": "maInIN",
+  "cn": "采矿；采矿业",
+  "propn": false,
+  "raw": "mining /maInIN/ n. 采矿；采矿业"
+ },
+ {
+  "word": "musical  n. 音乐剧",
+  "ipa": "",
+  "cn": "音乐剧",
+  "propn": false,
+  "raw": "musical  n. 音乐剧"
+ },
+ {
+  "word": "narration",
+  "ipa": "n@reISn",
+  "cn": "叙述；讲述；解说",
+  "propn": false,
+  "raw": "narration /n@reISn/ n. 叙述；讲述；解说"
+ },
+ {
+  "word": "narrator",
+  "ipa": "n@reIt@(r)",
+  "cn": "书、戏剧或电影中的）叙述者；讲述者； （电视节目中的）幕后解说员",
+  "propn": false,
+  "raw": "narrator /n@reIt@(r)/ n.（书、戏剧或电影中的）叙述者；讲述者； （电视节目中的）幕后解说员"
+ },
+ {
+  "word": "normal",
+  "ipa": "nO:ml",
+  "cn": "典型的；正常的；一般的；精神正常的 n. 常态；通常标准；一般水平",
+  "propn": false,
+  "raw": "normal /nO:ml/ adj. 典型的；正常的；一般的；精神正常的 n. 常态；通常标准；一般水平"
+ },
+ {
+  "word": "nowhere",
+  "ipa": "n@Uwe@(r)",
+  "cn": "无处；哪里都不",
+  "propn": false,
+  "raw": "nowhere /n@Uwe@(r)/ adv. 无处；哪里都不"
+ },
+ {
+  "word": "obligation",
+  "ipa": "%QblIgeISn",
+  "cn": "义务；职责；责任",
+  "propn": false,
+  "raw": "obligation /%QblIgeISn/ n. 义务；职责；责任"
+ },
+ {
+  "word": "odd",
+  "ipa": "Qd",
+  "cn": "奇怪的；怪异的；反常的",
+  "propn": false,
+  "raw": "odd /Qd/ adj. 奇怪的；怪异的；反常的"
+ },
+ {
+  "word": "opera",
+  "ipa": "Qpr@",
+  "cn": "歌剧",
+  "propn": false,
+  "raw": "opera /Qpr@/ n. 歌剧"
+ },
+ {
+  "word": "option",
+  "ipa": "QpSn",
+  "cn": "可选择的事物；选择；选择权",
+  "propn": false,
+  "raw": "option /QpSn/ n. 可选择的事物；选择；选择权"
+ },
+ {
+  "word": "ought",
+  "ipa": "O:t",
+  "cn": "应该；应当",
+  "propn": false,
+  "raw": "ought /O:t/ to 应该；应当"
+ },
+ {
+  "word": "patience",
+  "ipa": "peISns",
+  "cn": "耐心；忍耐力；毅力",
+  "propn": false,
+  "raw": "patience /peISns/ n. 耐心；忍耐力；毅力"
+ },
+ {
+  "word": "permit",
+  "ipa": "p@mIt",
+  "cn": "允许；准许 vt. & vi. 允许；使有可能",
+  "propn": false,
+  "raw": "permit /p@mIt/ vt. 允许；准许 vt. & vi. 允许；使有可能"
+ },
+ {
+  "word": "permission",
+  "ipa": "p@mISn",
+  "cn": "准许；许可；批准；许可证",
+  "propn": false,
+  "raw": "permission /p@mISn/ n. 准许；许可；批准；许可证"
+ },
+ {
+  "word": "plastic",
+  "ipa": "k",
+  "cn": "塑料 adj. 塑料制的；塑料的",
+  "propn": false,
+  "raw": "plastic /k/ n. 塑料 adj. 塑料制的；塑料的"
+ },
+ {
+  "word": "plot",
+  "ipa": "plQt",
+  "cn": "故事情节；布局；阴谋",
+  "propn": false,
+  "raw": "plot /plQt/ n. 故事情节；布局；阴谋"
+ },
+ {
+  "word": "postpone",
+  "ipa": "p@sp@Un",
+  "cn": "延迟；延期；延缓",
+  "propn": false,
+  "raw": "postpone /p@sp@Un/ vt. 延迟；延期；延缓"
+ },
+ {
+  "word": "pursue vt. 追求；致力于",
+  "ipa": "",
+  "cn": "追求；致力于",
+  "propn": false,
+  "raw": "pursue vt. 追求；致力于"
+ },
+ {
+  "word": "sail",
+  "ipa": "seIl",
+  "cn": "船）航行；（人）乘船航行",
+  "propn": false,
+  "raw": "sail /seIl/ vi. & vt.（船）航行；（人）乘船航行"
+ },
+ {
+  "word": "saying",
+  "ipa": "seIIN",
+  "cn": "谚语；格言；警句",
+  "propn": false,
+  "raw": "saying /seIIN/ n. 谚语；格言；警句"
+ },
+ {
+  "word": "scene",
+  "ipa": "si:n",
+  "cn": "戏剧或歌剧的）场；现场；场面",
+  "propn": false,
+  "raw": "scene /si:n/ n.（戏剧或歌剧的）场；现场；场面"
+ },
+ {
+  "word": "sequence  vt. 按顺序排列 n. 顺序；一系列",
+  "ipa": "",
+  "cn": "按顺序排列 n. 顺序；一系列",
+  "propn": false,
+  "raw": "sequence  vt. 按顺序排列 n. 顺序；一系列"
+ },
+ {
+  "word": "servant",
+  "ipa": "s3:v@nt",
+  "cn": "仆人；用人",
+  "propn": false,
+  "raw": "servant /s3:v@nt/ n. 仆人；用人"
+ },
+ {
+  "word": "sort",
+  "ipa": "sO:t",
+  "cn": "种类；类别；品种",
+  "propn": false,
+  "raw": "sort /sO:t/ n. 种类；类别；品种"
+ },
+ {
+  "word": "spot",
+  "ipa": "spQt",
+  "cn": "看见；注意到；发现 n. 地点；处所；斑点；污迹",
+  "propn": false,
+  "raw": "spot /spQt/ vt. 看见；注意到；发现 n. 地点；处所；斑点；污迹"
+ },
+ {
+  "word": "stair",
+  "ipa": "ste@(r)",
+  "cn": "楼梯；梯级",
+  "propn": false,
+  "raw": "stair /ste@(r)/ n. 楼梯；梯级"
+ },
+ {
+  "word": "tailor",
+  "ipa": "teIl@(r)",
+  "cn": "男装）裁缝 vt. 专门制作；定做",
+  "propn": false,
+  "raw": "tailor /teIl@(r)/ n.（男装）裁缝 vt. 专门制作；定做"
+ },
+ {
+  "word": "to be honest",
+  "ipa": "",
+  "cn": "说实话；坦率地说",
+  "propn": false,
+  "raw": "to be honest 说实话；坦率地说"
+ },
+ {
+  "word": "Appendices upper",
+  "ipa": "Vp@(r)",
+  "cn": "上面的；上层的；靠上部的",
+  "propn": false,
+  "raw": "Appendices upper /Vp@(r)/ adj. 上面的；上层的；靠上部的"
+ },
+ {
+  "word": "the upper class",
+  "ipa": "",
+  "cn": "上流社会；上等阶层",
+  "propn": false,
+  "raw": "the upper class 上流社会；上等阶层"
+ },
+ {
+  "word": "upper-class",
+  "ipa": "",
+  "cn": "上流社会的；上等阶层的",
+  "propn": false,
+  "raw": "upper-class adj. 上流社会的；上等阶层的"
+ },
+ {
+  "word": "willing",
+  "ipa": "wl",
+  "cn": "愿意；乐意",
+  "propn": false,
+  "raw": "willing /wl/ adj. 愿意；乐意"
+ },
+ {
+  "word": "be willing to do sth",
+  "ipa": "",
+  "cn": "愿意或乐意做某事",
+  "propn": false,
+  "raw": "be willing to do sth 愿意或乐意做某事"
+ }
+]

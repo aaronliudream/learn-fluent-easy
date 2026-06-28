@@ -1,0 +1,475 @@
+{
+  "volume": "required3",
+  "unit": "U5",
+  "topic": "The Value of Money",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019必修三 Unit 5 同主题听力(借钱给朋友/Francis Bacon 名言/在银行办储蓄/捐钱给慈善/计划周末/请教省钱)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Lending a Friend Money",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tom",
+          "text": "Anna, could you lend me twenty pounds until next week?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Of course. But why do you need it so suddenly?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I want to buy a ticket for the new musical with my sister."
+        },
+        {
+          "speaker": "Anna",
+          "text": "That sounds lovely. You can pay me back whenever you like."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Thank you. I'll give it back as soon as I get my pocket money."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Don't worry about it. That's what friends are for."
+        },
+        {
+          "speaker": "Tom",
+          "text": "You're really kind. I'll remember this and help you in return one day."
+        },
+        {
+          "speaker": "Anna",
+          "text": "I know you will. Now go and enjoy the show!"
+        }
+      ],
+      "translation_cn": "汤姆向安娜借20英镑买音乐剧的票,想和姐姐一起去看;安娜爽快答应,说什么时候还都行;汤姆说一拿到零花钱就还,并表示日后定会回报;安娜说朋友就该这样。",
+      "questions": [
+        {
+          "stem": "How much money does Tom want to borrow?",
+          "options": [
+            "Twenty pounds.",
+            "Ten pounds.",
+            "Fifty pounds.",
+            "Two pounds."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Tom want to buy?",
+          "options": [
+            "A new coat.",
+            "A ticket for a musical.",
+            "A book for school.",
+            "Some food."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When does Tom plan to pay Anna back?",
+          "options": [
+            "As soon as he gets his pocket money.",
+            "Never.",
+            "Tomorrow morning.",
+            "In ten years."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna say about paying her back?",
+          "options": [
+            "He must pay her today.",
+            "He can pay her back whenever he likes.",
+            "He should pay her double.",
+            "He cannot borrow from her."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom feel about Anna's help?",
+          "options": [
+            "He is angry with her.",
+            "He thinks she is unfair.",
+            "He is grateful and wants to help her in return.",
+            "He no longer needs the money."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 A Good Servant, a Bad Master",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "A famous thinker once said that money is a good servant but a bad master. As a servant, money does useful work for us. It pays for food, books and medicine, and lets us help the people we love. But when people care only about getting more and more, money becomes a master that rules their lives. The real danger is not money itself, but the place we give it in our hearts. A wise person keeps money useful, but never lets it become the most important thing of all.",
+      "translation_cn": "一位著名思想家说过,金钱是好仆人却是坏主人。作为仆人,金钱为我们做有用的事——付食物、书籍、药品的钱,让我们帮助所爱的人;但当人们只在乎不断索取更多时,金钱就成了主宰生活的主人。真正的危险不在金钱本身,而在于我们把它放在心中的位置;明智的人让金钱有用,却绝不让它成为最重要的东西。",
+      "questions": [
+        {
+          "stem": "What did the famous thinker say about money?",
+          "options": [
+            "It is the most important thing in life.",
+            "It can buy happiness.",
+            "It should never be used.",
+            "It is a good servant but a bad master."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does money do as a 'servant'?",
+          "options": [
+            "It does useful work, like paying for food and medicine.",
+            "It rules people's lives.",
+            "It makes people lose their friends.",
+            "It hides in the bank."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When does money become a 'master'?",
+          "options": [
+            "When people save a little each month.",
+            "When people care only about getting more and more.",
+            "When people give it away.",
+            "When people spend it on family."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Where is the real danger, according to the passage?",
+          "options": [
+            "In earning a salary.",
+            "In buying medicine.",
+            "In the place we give money in our hearts.",
+            "In helping the people we love."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does a wise person do with money?",
+          "options": [
+            "Makes it the centre of life.",
+            "Refuses to use it at all.",
+            "Spends it as fast as possible.",
+            "Keeps it useful but never the most important thing."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Opening a Savings Account",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Clerk",
+          "text": "Good morning. How can I help you today?"
+        },
+        {
+          "speaker": "Girl",
+          "text": "I'd like to open a savings account, please. I want to start saving my pocket money."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "That's a wise idea. How much would you like to put in to start?"
+        },
+        {
+          "speaker": "Girl",
+          "text": "Just ten pounds for now. I plan to add a little every month."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Perfect. Saving a small sum regularly is the best habit of all."
+        },
+        {
+          "speaker": "Girl",
+          "text": "My grandfather always says I should save for a rainy day."
+        },
+        {
+          "speaker": "Clerk",
+          "text": "He gives excellent advice. Here is your new account book."
+        },
+        {
+          "speaker": "Girl",
+          "text": "Thank you. I feel quite grown-up now!"
+        }
+      ],
+      "translation_cn": "女孩到银行想开一个储蓄账户,打算把零花钱存起来;职员说这很明智,问她先存多少;女孩说先存10英镑,以后每月再加一点;职员说定期存小钱是最好的习惯;女孩说爷爷常叮嘱她未雨绸缪;职员夸建议很好并递上账户本。",
+      "questions": [
+        {
+          "stem": "What does the girl want to do at the bank?",
+          "options": [
+            "Open a savings account.",
+            "Take out a large loan.",
+            "Buy a musical ticket.",
+            "Close her account."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How much will she put in to start?",
+          "options": [
+            "One hundred pounds.",
+            "Ten pounds.",
+            "Fifty pounds.",
+            "Nothing at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the clerk call the best habit of all?",
+          "options": [
+            "Spending money quickly.",
+            "Borrowing from friends.",
+            "Saving a small sum regularly.",
+            "Keeping cash at home."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What advice does the girl's grandfather give?",
+          "options": [
+            "Spend everything at once.",
+            "Never use a bank.",
+            "Lend money to strangers.",
+            "Save for a rainy day."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does the girl feel at the end?",
+          "options": [
+            "Quite grown-up.",
+            "Very sad.",
+            "Bored and tired.",
+            "Angry with the clerk."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 Giving to Charity",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Many people choose to give part of their money to charity. They do not expect anything in return; they simply want to help those in need. Even a small gift can make a real difference. Some donate to help sick children, others to build schools or feed the hungry. Giving teaches us that money is not only for ourselves. In fact, people who share often feel happier than those who keep everything. As an old saying goes, kindness is the one gift that grows when you give it away.",
+      "translation_cn": "许多人选择把一部分钱捐给慈善机构。他们不求任何回报,只想帮助有需要的人;哪怕一份小小的捐赠也能带来真正的改变。有人捐助患病的孩子,有人捐建学校或救济饥民。给予让我们懂得,钱不只是为了自己;事实上,乐于分享的人往往比独享一切的人更快乐。正如一句老话所说,善良是唯一一种越给越多的礼物。",
+      "questions": [
+        {
+          "stem": "Why do people give money to charity?",
+          "options": [
+            "They expect a large reward.",
+            "They simply want to help those in need.",
+            "They are forced to by the bank.",
+            "They want to become famous."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can even a small gift do?",
+          "options": [
+            "Ruin a person's life.",
+            "Cost nothing at all.",
+            "Make a real difference.",
+            "Cause a lot of trouble."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does giving teach us, according to the passage?",
+          "options": [
+            "Money should be kept secret.",
+            "Charity is a waste of money.",
+            "Only rich people can give.",
+            "Money is not only for ourselves."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How do people who share often feel?",
+          "options": [
+            "Happier than those who keep everything.",
+            "Angrier than before.",
+            "Poorer and sadder.",
+            "Bored with their lives."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the old saying compare kindness to?",
+          "options": [
+            "A coin that is quickly lost.",
+            "A gift that grows when you give it away.",
+            "A bill that must be paid.",
+            "A note printed on paper."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Planning the Weekend Spending",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "We've got twenty pounds for the weekend. How should we spend it?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Let's not waste it all on snacks like last time."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Good point. Maybe we should save half and spend the other half."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "I agree. Ten pounds for the cinema, and ten pounds saved."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That sounds sensible. What film do you want to watch?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "There's a new one about a poor man who suddenly becomes rich."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Perfect. And we can bring our own drinks to save even more."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Now that's smart thinking. Let's go!"
+        }
+      ],
+      "translation_cn": "本和露西周末有20英镑,讨论怎么花;露西提议别像上次全花在零食上;本建议存一半花一半;两人决定10英镑看电影、10英镑存起来;露西想看一部关于穷人突然变富的新片;本提议自带饮料更省钱;露西夸他想得周到。",
+      "questions": [
+        {
+          "stem": "How much money do Ben and Lucy have for the weekend?",
+          "options": [
+            "Ten pounds.",
+            "Fifty pounds.",
+            "Twenty pounds.",
+            "Five pounds."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What mistake does Lucy not want to repeat?",
+          "options": [
+            "Saving too much money.",
+            "Going to the cinema.",
+            "Bringing their own drinks.",
+            "Wasting it all on snacks like last time."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they finally decide to do with the money?",
+          "options": [
+            "Save half and spend half.",
+            "Spend it all on snacks.",
+            "Give it all to charity.",
+            "Keep all of it in the bank."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the new film about?",
+          "options": [
+            "A rich man who loses everything.",
+            "A poor man who suddenly becomes rich.",
+            "A teacher and her students.",
+            "A long sea voyage."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How will they save even more money at the cinema?",
+          "options": [
+            "By buying expensive seats.",
+            "By going twice in one day.",
+            "By bringing their own drinks.",
+            "By inviting more friends."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 A Tip for Spending Wisely",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Here is a simple tip for anyone who wants to spend money wisely. Before you buy something, wait one whole day and ask yourself if you really need it. Very often, the strong wish to buy it will quietly go away. This little habit can save you a surprising amount of money over a year. Remember, every coin you do not waste today is a coin you can use for something important tomorrow. Spending wisely is not about being mean; it is about giving your money to the things that truly matter.",
+      "translation_cn": "给想理性花钱的人一个小贴士:买东西前先等一整天,问问自己是否真的需要它;很多时候,那股强烈的购买欲会悄悄消退。这个小习惯一年下来能省下出人意料的一笔钱。记住,你今天没浪费的每一枚硬币,都是明天可用于重要之事的硬币。理性消费不是吝啬,而是把钱花在真正要紧的事情上。",
+      "questions": [
+        {
+          "stem": "What should you do before buying something?",
+          "options": [
+            "Buy two of it at once.",
+            "Borrow money to buy it.",
+            "Throw away the old one.",
+            "Wait one whole day and ask if you really need it."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What often happens after you wait?",
+          "options": [
+            "The strong wish to buy it goes away.",
+            "The price goes up.",
+            "You forget your own name.",
+            "The shop closes forever."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What can this little habit do over a year?",
+          "options": [
+            "Cost you a lot of money.",
+            "Save you a surprising amount of money.",
+            "Make you spend more.",
+            "Ruin your savings."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is every coin you do not waste today?",
+          "options": [
+            "A coin you must give away.",
+            "A coin that is now worthless.",
+            "A coin you can use for something important tomorrow.",
+            "A coin you should hide forever."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is spending wisely really about, according to the passage?",
+          "options": [
+            "Being mean to everyone.",
+            "Never buying anything at all.",
+            "Showing off how rich you are.",
+            "Giving your money to things that truly matter."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

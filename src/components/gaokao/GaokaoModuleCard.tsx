@@ -18,6 +18,8 @@ type Props = {
   compact?: boolean;
   /** 文字居中(分组大卡用)。 */
   centered?: boolean;
+  /** 整理中:不可点(渲染为暗淡的非链接卡)。 */
+  disabled?: boolean;
 };
 
 export function GaokaoModuleCard({
@@ -31,22 +33,23 @@ export function GaokaoModuleCard({
   badge,
   compact = false,
   centered = false,
+  disabled = false,
 }: Props) {
   const artwork = GAOKAO_ARTWORK[icon];
   const pct = Math.max(0, Math.min(100, progress));
 
-  return (
-    <Link
-      to={to}
-      className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl",
-        compact ? "min-h-[168px]" : "min-h-[224px]",
-        "shadow-lg transition-all duration-500 ease-out",
-        "hover:-translate-y-1 hover:scale-[1.02] hover:shadow-2xl",
-        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-        className,
-      )}
-    >
+  const rootClass = cn(
+    "group relative flex flex-col overflow-hidden rounded-2xl",
+    compact ? "min-h-[168px]" : "min-h-[224px]",
+    "shadow-lg transition-all duration-500 ease-out",
+    disabled
+      ? "cursor-not-allowed opacity-60 grayscale"
+      : "hover:-translate-y-1 hover:scale-[1.02] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+    className,
+  );
+
+  const Inner = (
+    <>
       <div className="absolute inset-0">
         <img
           src={artwork.image}
@@ -114,6 +117,12 @@ export function GaokaoModuleCard({
           )}
         </div>
       </div>
-    </Link>
+    </>
+  );
+
+  return disabled ? (
+    <div className={rootClass} aria-disabled>{Inner}</div>
+  ) : (
+    <Link to={to} className={rootClass}>{Inner}</Link>
   );
 }

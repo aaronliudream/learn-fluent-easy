@@ -15,6 +15,21 @@ export type Publisher = "pep" | "fltrp" | "sufe";
 export const DEFAULT_PUBLISHER: Publisher = "pep";
 export const SENIOR_PUBLISHERS: Publisher[] = ["pep", "fltrp", "sufe"];
 
+/** 出版社选择页元数据(封面/文案各异,渲染逻辑同一套)。顺序 = 选择页卡片顺序。
+ *  hasExam:是否含「高考真题」专项(仅人教有;且真题还要再过 email 白名单)。 */
+export const PUBLISHER_META: Record<Publisher, { name: string; sub: string; emoji: string; tagline: string; hasExam: boolean }> = {
+  pep: { name: "人教版", sub: "人民教育出版社", emoji: "📕", tagline: "课本同步 7 册 · 6 大专项 · 高考真题", hasExam: true },
+  sufe: { name: "上外版", sub: "上海外语教育出版社", emoji: "📘", tagline: "课本同步 · 5 大专项(内容陆续上线)", hasExam: false },
+  fltrp: { name: "外研社版", sub: "外语教学与研究出版社", emoji: "📗", tagline: "课本同步 · 5 大专项(内容陆续上线)", hasExam: false },
+};
+export const PUBLISHER_ORDER: Publisher[] = ["pep", "sufe", "fltrp"];
+
+/** 给路径带上 publisher 参数。pep(默认)→ 不加(保持干净 URL + 老书签零回归);其它 → 追加。 */
+export function withPublisher(path: string, publisher: Publisher): string {
+  if (publisher === DEFAULT_PUBLISHER) return path;
+  return path + (path.includes("?") ? "&" : "?") + "publisher=" + publisher;
+}
+
 /** 从 URL ?publisher= 取(Phase 3 选择页用);非法/缺省 → 'pep'。 */
 export function readPublisherParam(sp?: URLSearchParams | null): Publisher {
   const v = sp?.get("publisher");

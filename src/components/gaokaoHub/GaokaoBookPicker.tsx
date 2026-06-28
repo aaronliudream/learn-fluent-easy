@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, Lock } from "lucide-react";
 import { T } from "@/i18n/T";
+import { withPublisher, DEFAULT_PUBLISHER, type Publisher } from "@/lib/gaokaoHub/publisher";
 
 /** 高中 7 册(必修一~选必四)。volume = junior_* 表里的 volume 值。 */
 export const GAOKAO_BOOKS: { volume: string; cn: string; emoji: string }[] = [
@@ -25,6 +26,7 @@ export default function GaokaoBookPicker({
   available,
   backTo = "/gaokao",
   subtitle,
+  publisher = DEFAULT_PUBLISHER,
 }: {
   boardTitle: string;
   boardEmoji: string;
@@ -32,10 +34,12 @@ export default function GaokaoBookPicker({
   available: Set<string>;
   backTo?: string;
   subtitle?: string;
+  publisher?: Publisher;
 }) {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-5">
-      <BackLink to={backTo} />
+      {/* 返回高中专区 → 该社内容层(/gaokao?publisher=…),不弹回选择页 */}
+      <BackLink to={backTo === "/gaokao" ? `/gaokao?publisher=${publisher}` : withPublisher(backTo, publisher)} />
       <header className="rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 p-5 dark:from-indigo-950/30 dark:to-violet-950/20">
         <h1 className="text-2xl font-extrabold tracking-tight">
           <span className="mr-2">{boardEmoji}</span>{boardTitle}
@@ -63,7 +67,7 @@ export default function GaokaoBookPicker({
           return (
             <Link
               key={b.volume}
-              to={`${basePath}?book=${b.volume}`}
+              to={withPublisher(`${basePath}?book=${b.volume}`, publisher)}
               className="group flex flex-col items-start gap-1 rounded-2xl border-2 border-indigo-200 bg-white p-4 shadow-sm transition hover:border-indigo-400 hover:shadow-md dark:border-indigo-900/50 dark:bg-card"
             >
               <span className="text-2xl">{b.emoji}</span>

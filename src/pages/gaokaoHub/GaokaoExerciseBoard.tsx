@@ -81,7 +81,7 @@ export default function GaokaoExerciseBoard({
     return (
       <GaokaoBookPicker
         boardTitle={boardTitle} boardEmoji={boardEmoji} basePath={basePath}
-        available={available} subtitle="按课本分册 · 真实单元篇目 · 与课本同步进度互通"
+        available={available} publisher={pub} subtitle="按课本分册 · 真实单元篇目 · 与课本同步进度互通"
       />
     );
   }

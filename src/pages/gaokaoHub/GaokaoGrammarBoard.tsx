@@ -96,6 +96,7 @@ export default function GaokaoGrammarBoard() {
         boardEmoji="📐"
         basePath="/gaokao/grammar"
         available={available}
+        publisher={pub}
         subtitle="按课本分册 · 真题题库 · 与课本同步进度互通"
       />
     );

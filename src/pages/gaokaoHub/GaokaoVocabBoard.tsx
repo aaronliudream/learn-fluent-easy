@@ -130,7 +130,7 @@ export default function GaokaoVocabBoard() {
   // ── 选册 ──
   if (!book) {
     return <GaokaoBookPicker boardTitle="词汇专项" boardEmoji="📒" basePath="/gaokao/vocab"
-      available={available} subtitle="按课本分册 · 5步通关 · 5个游戏 · 艾宾浩斯复习 · 与课本同步互通" />;
+      available={available} publisher={pub} subtitle="按课本分册 · 5步通关 · 5个游戏 · 艾宾浩斯复习 · 与课本同步互通" />;
   }
   if (loading) return <CenterSpin />;
 

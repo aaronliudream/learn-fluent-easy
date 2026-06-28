@@ -73,7 +73,7 @@ export default function GaokaoWritingBoard() {
     return (
       <GaokaoBookPicker
         boardTitle="写作专项" boardEmoji="✍️" basePath="/gaokao/writing"
-        available={available} subtitle="按课本分册 · 真实单元写作题 · 题干/要点/范文"
+        available={available} publisher={pub} subtitle="按课本分册 · 真实单元写作题 · 题干/要点/范文"
       />
     );
   }

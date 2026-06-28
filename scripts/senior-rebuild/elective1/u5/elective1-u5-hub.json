@@ -1,0 +1,47 @@
+{
+  "listeningQuestions": [
+    { "audio": "Growing rice feeds millions of people around the world.", "opts": ["种植水稻养活着全世界数百万人。", "卖大米能让人变富。", "水稻只在城市里生长。", "大米是世界上最贵的食物。"], "answer": 0 },
+    { "audio": "Yuan Longping developed the first hybrid rice for farming.", "opts": ["袁隆平发明了第一台农用机器。", "袁隆平培育出第一种可用于耕作的杂交水稻。", "袁隆平种了第一片小麦田。", "袁隆平开了第一家米店。"], "answer": 1 },
+    { "audio": "Organic farming means growing crops without chemicals.", "opts": ["有机农业用最多的化学品。", "有机农业只在盐碱地里进行。", "有机农业指不用化学品种庄稼。", "有机农业不需要土壤。"], "answer": 2 },
+    { "audio": "Healthy crops need rich and clean soil.", "opts": ["健康的庄稼需要很多杀虫剂。", "健康的庄稼不需要水。", "健康的庄稼长得很慢。", "健康的庄稼需要肥沃洁净的土壤。"], "answer": 3 },
+    { "audio": "Changing crops every year keeps the soil rich in minerals.", "opts": ["每年更换作物能让土壤富含矿物质。", "每年更换作物会毁掉土地。", "每年只种同一种作物最好。", "更换作物会让庄稼变小。"], "answer": 0 },
+    { "audio": "His dream was to keep all people away from hunger.", "opts": ["他的梦想是变成最富有的人。", "他的梦想是让所有人远离饥饿。", "他的梦想是离开农村。", "他的梦想是不再种水稻。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "杂交水稻产量高于常规作物,这里'产量'用哪个词?", "opts": ["yield", "noise", "price", "weather"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "不用化学品、靠自然方式种庄稼的农业叫什么?", "opts": ["chemical farming", "urban traffic", "organic farming", "city building"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "'解决粮食危机'中'解决(难题)'用哪个动词?", "opts": ["waste", "tackle", "forget", "lose"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "'授粉、传粉'对应的英文是?", "opts": ["pollinate", "destroy", "borrow", "whisper"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ rice feeds millions of people.（句首主语)", "opts": ["Growing", "To grow", "Grows", "Grown"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "It is no use ____ over a poor harvest.", "opts": ["to cry", "crying", "cries", "cried"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "There is no point ____ chemicals if they ruin the soil.", "opts": ["to use", "uses", "using", "used"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Yuan's ____ the first hybrid rice changed farming forever.", "opts": ["develop", "develops", "to develop", "developing"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["他把一生献给了中国的农民。", "他卖掉了所有的田地。", "他离开了农村。", "他从不下地干活。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He devoted his whole life to the farmers of China." },
+    { "q": "听句子选中文:", "opts": ["化学品很快就会消失。", "这些化学品会在土壤里残留很长时间。", "化学品对土地无害。", "化学品让庄稼味道更好。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "These chemicals can stay in the soil for a long time." }
+  ],
+  "reading": {
+    "passage": "Yuan Longping was called the father of hybrid rice. Although he became famous and wealthy, he still thought of himself as a simple farmer who loved the land. His only wish was to grow enough food so that no one would go hungry.",
+    "passageCn": "袁隆平被称为杂交水稻之父。尽管他出了名也变得富有,但他仍把自己看作一个热爱土地的普通农民。他唯一的愿望就是种出足够的粮食,让没有人挨饿。",
+    "questions": [
+      { "q": "What was Yuan Longping known as?", "opts": ["The father of hybrid rice.", "A famous singer.", "A city builder.", "A football player."], "answer": 0 },
+      { "q": "How did Yuan see himself?", "opts": ["As a rich businessman.", "As a simple farmer who loved the land.", "As a city worker.", "As a foreign scientist."], "answer": 1 },
+      { "q": "What was Yuan's only wish?", "opts": ["To leave the countryside.", "To become the richest man.", "To grow enough food so no one would go hungry.", "To stop farming forever."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, say whether you support organic farming or chemical farming, and give one reason with a detail.",
+    "promptCn": "用约60词说明你支持有机农业还是化学农业,并给出一条理由和一个细节。",
+    "sampleWords": ["organic", "chemical", "pesticide", "soil", "crop", "yield", "nutrition", "harvest", "safe", "environment"]
+  },
+  "dialogues": [
+    {
+      "title": "At the Farmers' Market",
+      "lines": [
+        { "role": "A", "text": "Why are these vegetables more expensive?", "cn": "这些蔬菜为什么更贵?" },
+        { "role": "B", "text": "Because they are organic, grown without any chemicals.", "cn": "因为它们是有机的,种植时不用任何化学品。" },
+        { "role": "A", "text": "Are they really better for us?", "cn": "它们对我们真的更好吗?" },
+        { "role": "B", "text": "Yes. They keep the soil clean and often have more flavour.", "cn": "是的。它们能保持土壤洁净,而且味道往往更好。" }
+      ]
+    }
+  ]
+}

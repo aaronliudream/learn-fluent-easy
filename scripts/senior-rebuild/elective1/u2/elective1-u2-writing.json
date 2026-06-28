@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "A Letter to My Future Self(给未来自己的一封信:预测未来生活)",
+  "title_en": "A Letter to My Future Self",
+  "genre": "书信 / 说明(predict your future life + a personal letter)",
+  "source": "人教版2019选择性必修一 Unit 2 Project:write a letter to yourself from the future。预测未来生活/未来职业,含科技带来的利弊与对未来的态度。",
+  "prompt_cn": "假设你叫李华。请用英语给未来的自己写一封约100词的信,预测你未来的生活,内容包括:① 科技将如何改变你的日常生活或工作(如智能家居/无人驾驶/AI);② 这些变化可能带来的一个好处和一个坏处;③ 你对未来的态度。注意:恰当使用将来进行时(will be doing)。",
+  "prompt_en": "Suppose you are Li Hua. Write a letter (about 100 words) to your future self, predicting your future life. Include: 1) how technology will change your daily life or work (e.g. smart homes, driverless cars, AI); 2) one advantage and one disadvantage these changes may bring; 3) your attitude towards the future. Use the future progressive (will be doing) where it fits naturally.",
+  "points": [
+    "预测未来生活(This time in 2050, you will be living in …)",
+    "一个好处 + 一个坏处(One good point is … ; the bad point is …)",
+    "对未来的态度(I look on the positive side and welcome change)",
+    "恰当使用将来进行时 will be doing"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear Future Me, I am writing to imagine what your life will be like. By 2050, you will be living in a smart home that locks the doors, saves energy and cooks dinner all by itself. Every morning, a driverless car will be taking you to work while you read or rest. The good point is that technology will give you more free time and keep you secure. The bad point is that machines may sometimes go wrong, and that can be a scary prospect. Even so, I hope you will not resist these changes but welcome them. Look on the positive side! Best wishes, Li Hua",
+  "model_translation": "致未来的我:我写信来想象你将来的生活。到2050年,你会住在一座智能家居里,它能自己锁门、省电,还能做晚饭。每天早上,无人驾驶汽车会载你去上班,你则可以看书或休息。好处是科技会给你更多空闲时间,并保障你的安全。坏处是机器有时会出故障,那会是个令人担忧的前景。即便如此,我希望你不要抵制这些变化,而是欢迎它们。看光明的一面吧!此致,李华",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:预测未来生活/工作 + 一好一坏 + 对未来态度" },
+      { "dimension": "结构", "max": 4, "criteria": "书信格式齐全、围绕'未来'展开、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、将来进行时 will be doing 运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "预测 By 2050, you will be living in …",
+      "好处 The good point is that …",
+      "坏处 The bad point is that …",
+      "态度 I hope you will welcome change / look on the positive side."
+    ],
+    "key_expressions": [
+      "By 2050, you will be living in a smart home.",
+      "A driverless car will be taking you to work.",
+      "Technology will give you more free time and keep you secure.",
+      "I hope you will welcome these changes rather than resist them."
+    ],
+    "useful_words": ["predict", "future", "smart home", "driverless", "secure", "prospect", "advantage", "disadvantage", "welcome", "resist"]
+  },
+  "high_sentences": [
+    "By 2050, you will be living in a smart home that cooks dinner all by itself.",
+    "Every morning, a driverless car will be taking you to work.",
+    "Technology will give you more free time and keep you secure.",
+    "I hope you will welcome these changes rather than resist them."
+  ],
+  "error_pairs": [
+    { "wrong": "This time next year you will living in a smart home.", "correct": "This time next year you will be living in a smart home.", "note": "将来进行时是 will be + doing,不能少 be。" },
+    { "wrong": "A driverless car will taking you to work.", "correct": "A driverless car will be taking you to work.", "note": "will 后接动词原形 be,再加 -ing。" },
+    { "wrong": "I hope you will welcome these changes than resist them.", "correct": "I hope you will welcome these changes rather than resist them.", "note": "'宁愿……而不……'用 rather than。" }
+  ],
+  "paragraph_template": "【给未来自己的信结构】\n称呼:Dear Future Me,\n第1句 预测生活:By 2050, you will be living in …\n第2句 预测工作:A driverless car will be taking you to work …\n第3-4句 一好一坏:The good point is … The bad point is …\n第5句 态度:I hope you will welcome change rather than resist it.\n落款:Best wishes, Li Hua"
+}

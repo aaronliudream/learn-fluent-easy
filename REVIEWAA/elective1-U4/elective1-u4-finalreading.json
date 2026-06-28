@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(肢体语言主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On his first day in Japan, Mark waved at an older man and looked straight into his eyes for a long time. The man seemed uneasy, so a friend quietly explained that lowering the eyes can show respect there. After that, Mark watched the local people and copied their gestures, and soon he felt much more at home.",
+    "questions": [
+      {
+        "q": "Why did the older man seem uneasy?",
+        "options": [
+          "Mark spoke too loudly to him.",
+          "Mark held long, direct eye contact with him.",
+          "Mark refused to greet him.",
+          "Mark could not find his house."
+        ],
+        "answer": "B",
+        "explanation": "原文 'looked straight into his eyes for a long time' + 朋友解释当地低目示敬,故直视让对方不安;其余未提或相反。"
+      },
+      {
+        "q": "What did Mark do after the friend's explanation?",
+        "options": [
+          "He observed the locals and followed their gestures.",
+          "He decided to leave Japan at once.",
+          "He kept staring at everyone he met.",
+          "He stopped talking to anyone."
+        ],
+        "answer": "A",
+        "explanation": "末句 'watched the local people and copied their gestures'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

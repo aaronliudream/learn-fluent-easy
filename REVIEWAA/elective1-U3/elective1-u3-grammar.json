@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grammar_title": "主语从句(Subject Clauses):that 引导 · 连接代词/副词引导 · it 作形式主语",
+  "source": "人教版2019选择性必修一 Unit 3 主语从句。铁律:that 不充当成分(从句不缺主宾)→ that;从句缺主语/宾语 → what/who;if 不引导主语从句(用 whether);wh- 词在从句中充当成分。句子围绕公园/自然主题,答案唯一。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "that 引导主语从句(that 只起连接、不充当成分)",
+      "overview": "从句结构完整、不缺主语或宾语,只需要一个不充当成分的连接词时,用 that。如 That he survived the storm is a miracle."
+    },
+    {
+      "code": "u3.02",
+      "point": "连接代词/副词引导主语从句(wh- 词在从句中充当成分)",
+      "overview": "从句缺主语/宾语用 what/who;表'是否'用 whether(不用 if);表原因/方式用 why/how。该词在从句里充当成分。"
+    },
+    {
+      "code": "u3.03",
+      "point": "it 作形式主语,真正的从句主语后置",
+      "overview": "用 it 作形式主语、把从句移到句末:陈述事实 that;'谁'用 who;'是否'用 whether(句首 it 时不用 if)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "____ Sarek became a national park in 1909 is well known to visitors.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'Sarek became a national park in 1909' 结构完整、不缺主宾,只需连接词 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the Sami still follow their reindeer each spring surprises many tourists.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整(主谓宾齐全)→ 用不充当成分的 that;if 不引导主语从句。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ no roads cross the park makes it hard to reach.",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句 'no roads cross the park' 完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the ice melted thousands of years ago is shown by the glaciers left behind.",
+      "options": [
+        "What",
+        "Whether",
+        "Why",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、陈述事实 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ all new building is banned inside the park protects its natural state.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'all new building is banned…' 完整 → that;if 不能引导主语从句。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the writer felt blessed in such a wild place is clear from the passage.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、陈述事实 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the park covers a vast area means animals have plenty of space.",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "Why"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → 连接词 that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ Disneyland can be found in several parts of the world is true.",
+      "options": [
+        "What",
+        "Whether",
+        "If",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that;不可用 if。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the Sami used reindeer for food, tools and clothes is part of their history.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ a ban on hunting helped the tigers recover has been proved by the numbers.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 1,
+      "explanation": "从句 'a ban on hunting helped…' 完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the wetland produces clean water and oxygen is widely recognised.",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "If"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that;if 不引导主语从句。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the sun never sets there in summer makes the days feel endless.",
+      "options": [
+        "What",
+        "Whether",
+        "How",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the new park is four times larger than the old one pleased the scientists.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "Why"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ visitors must carry all their own food makes the hike harder.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整 → that;不用 if。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the park connects with Russia's reserves gives the animals more room.",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the Sami are allowed to keep their traditional life is stated in the rules.",
+      "options": [
+        "What",
+        "Whether",
+        "Why",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ Dollywood celebrates southeastern culture is clear to every visitor.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that;不可用 if。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ trees grow right in the shallows makes the wetland special.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the candy is made the same way as 150 years ago is a rare experience.",
+      "options": [
+        "What",
+        "Whether",
+        "That",
+        "Why"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "____ the park stays natural and beautiful is what everyone hopes for.",
+      "options": [
+        "What",
+        "Whether",
+        "If",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that;if 不引导主语从句。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ matters most in a national park is the protection of nature.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺主语(__ matters most)→ what 充当主语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ we visit Sarek or not depends on the weather and our supplies.",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "表'是否'、主语从句句首 → whether(不用 if)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ designed the wetland park kept human impact to a minimum.",
+      "options": [
+        "That",
+        "What",
+        "Whoever",
+        "Whether"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺主语、指人'无论谁'→ whoever。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the Sami left the mountains is easy to understand once you know the cold.",
+      "options": [
+        "That",
+        "What",
+        "If",
+        "Why"
+      ],
+      "answer_index": 3,
+      "explanation": "表原因、从句缺原因状语 → why。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the park attracts so many tourists is its breathtaking beauty.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺主语(__ attracts…)→ what 作主语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the reindeer survive the long winter amazes scientists every year.",
+      "options": [
+        "That",
+        "How",
+        "What",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "表方式'如何'、从句不缺主宾 → how。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the rangers find first will be marked on the map.",
+      "options": [
+        "That",
+        "Whether",
+        "Whatever",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺宾语(find __)、'无论什么'→ whatever。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the old park was too small worried the local scientists.",
+      "options": [
+        "What",
+        "Whether",
+        "If",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、陈述事实 → that(此处对照:from句不缺成分则用 that)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the tigers go to hunt covers a very large area of forest.",
+      "options": [
+        "Where",
+        "That",
+        "What",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "表地点、从句缺地点状语 → where。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ we should develop a place like Sarek is still under discussion.",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "表'是否'、句首主语从句 → whether,不用 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the Sami eat for breakfast often includes dried reindeer meat.",
+      "options": [
+        "That",
+        "Whether",
+        "What",
+        "How"
+      ],
+      "answer_index": 2,
+      "explanation": "从句缺宾语(eat __)→ what 作宾语。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ first set up the reserve cared deeply about the rare animals.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "Whoever"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺主语、指人 → whoever。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the writer chose to camp alone shows his love of the wild.",
+      "options": [
+        "Why",
+        "What",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "表原因、从句不缺主宾 → why。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ makes Dollywood unique is its traditional southeastern culture.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "How"
+      ],
+      "answer_index": 1,
+      "explanation": "从句缺主语(__ makes…)→ what。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the park will open the new trail this year has not been decided.",
+      "options": [
+        "That",
+        "What",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 2,
+      "explanation": "表'是否'、句首主语从句 → whether,不用 if。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the ice once covered these mountains can still be seen in the glaciers.",
+      "options": [
+        "What",
+        "Whether",
+        "How",
+        "That"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、陈述事实 → that。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the designers were most worried about was the impact on wildlife.",
+      "options": [
+        "What",
+        "That",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 0,
+      "explanation": "从句缺宾语(worried about __)→ what。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the tigers' numbers rose after 2015 is something the rules explain.",
+      "options": [
+        "What",
+        "Why",
+        "Whether",
+        "If"
+      ],
+      "answer_index": 1,
+      "explanation": "表原因、从句不缺主宾 → why。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ the wetland keeps so many birds and fish lies in its clean water.",
+      "options": [
+        "What",
+        "Whether",
+        "Why",
+        "If"
+      ],
+      "answer_index": 2,
+      "explanation": "表原因、从句完整 → why。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "____ you can do at the ocean park ranges from rides to dolphin shows.",
+      "options": [
+        "That",
+        "Whether",
+        "How",
+        "What"
+      ],
+      "answer_index": 3,
+      "explanation": "从句缺宾语(can do __)→ what。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is important ____ we protect parks for future generations.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "it 作形式主语、真正主语为完整从句、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It doesn't matter ____ wins the design competition for the new park.",
+      "options": [
+        "that",
+        "who",
+        "whether",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is still unknown ____ the new trail will open this summer.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "it 作形式主语、表'是否'→ whether(此处不用 if)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is a miracle ____ the rare tigers have come back at all.",
+      "options": [
+        "what",
+        "whether",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is not clear ____ banned the first hunting in the area.",
+      "options": [
+        "who",
+        "that",
+        "whether",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It remains a question ____ such a wild place should be developed.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "表'是否'、it 形式主语 → whether,不用 if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is amazing ____ the sun never sets there during the summer months.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is up to the rangers ____ marks the new route on the park map.",
+      "options": [
+        "that",
+        "whether",
+        "if",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is doubtful ____ many more roads should be built near the reserve.",
+      "options": [
+        "whether",
+        "that",
+        "what",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "表'是否'、it 形式主语 → whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is true ____ the Sami have lived in this territory for centuries.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "how"
+      ],
+      "answer_index": 1,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is unclear ____ named the park after the nearby mountain.",
+      "options": [
+        "that",
+        "whether",
+        "who",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is uncertain ____ the wetland can stay clean as the city grows.",
+      "options": [
+        "that",
+        "what",
+        "if",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "表'是否'、it 形式主语 → whether,不用 if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is well known ____ the park bans all new development inside its boundaries.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "who"
+      ],
+      "answer_index": 0,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It does not matter ____ first discovered the hidden valley.",
+      "options": [
+        "that",
+        "who",
+        "whether",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is still being discussed ____ tourists should be allowed to camp here.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "if"
+      ],
+      "answer_index": 2,
+      "explanation": "表'是否'、it 形式主语 → whether。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is clear ____ the writer thinks the hard hiking is worth it.",
+      "options": [
+        "what",
+        "whether",
+        "how",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is hard to say ____ designed the underwater corridor at the park.",
+      "options": [
+        "who",
+        "that",
+        "whether",
+        "if"
+      ],
+      "answer_index": 0,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is not yet decided ____ the park will host the fountain show again.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "if"
+      ],
+      "answer_index": 1,
+      "explanation": "表'是否'、it 形式主语 → whether,不用 if。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is wonderful ____ children can ride and learn about nature at the park.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "who"
+      ],
+      "answer_index": 2,
+      "explanation": "it 形式主语、陈述事实 → that。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "It is anyone's guess ____ will win the prize at the park's photo contest.",
+      "options": [
+        "that",
+        "whether",
+        "if",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "真正主语从句缺主语、指人 → who。"
+    }
+  ]
+}

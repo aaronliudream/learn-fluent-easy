@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "The fountain is on the north side of the park.", "opts": ["喷泉在公园的北侧。", "喷泉在公园的南门外。", "喷泉就在大门口。", "喷泉在湖的中央。"], "answer": 0 },
+    { "audio": "Follow the main path along the river until you see a bridge.", "opts": ["沿着河边主路一直走,直到看到一座桥。", "走出公园再过马路。", "穿过商店一直往北走。", "在停车场右转上山。"], "answer": 0 },
+    { "audio": "All new building is banned within the park boundaries.", "opts": ["公园边界内禁止新建任何建筑。", "公园里正在修很多新楼。", "公园边界已经取消了。", "公园外面禁止种树。"], "answer": 0 },
+    { "audio": "Every spring a few Sami still follow their reindeer into the valleys.", "opts": ["每年春天仍有少数萨米人跟着驯鹿走进山谷。", "萨米人冬天才进山打猎。", "驯鹿如今全都消失了。", "萨米人再也不养驯鹿了。"], "answer": 0 },
+    { "audio": "You can rent a pedal boat right next to the fountain.", "opts": ["你可以在喷泉旁边租一条脚踏船。", "喷泉旁边不能划船。", "脚踏船只能在湖对岸租。", "划船需要先买门票。"], "answer": 0 },
+    { "audio": "Because it cleans water and makes oxygen, people call it the green lungs.", "opts": ["因为它净化水、产生氧气,人们叫它绿肺。", "因为它很大,人们叫它绿色海洋。", "因为树是绿的,人们叫它绿园。", "因为空气脏,人们不去那里。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "公园里禁止狩猎,'禁止'用哪个词?", "opts": ["prohibit", "welcome", "enjoy", "follow"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "辽阔的、巨大的,用哪个词?", "opts": ["vast", "tiny", "narrow", "short"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "偏远的、遥远的,用哪个词?", "opts": ["remote", "busy", "central", "crowded"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "值得做的、有益的,用哪个词?", "opts": ["rewarding", "boring", "useless", "empty"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ matters most in a national park is the protection of nature.", "opts": ["What", "That", "Whether", "If"], "answer": 0, "point": "主语从句·what 作主语", "dim": "grammar" },
+    { "q": "It is important ____ we protect parks for the future.", "opts": ["that", "what", "whether", "how"], "answer": 0, "point": "主语从句·it 形式主语", "dim": "grammar" },
+    { "q": "____ we should develop a place like Sarek is still under discussion.", "opts": ["Whether", "That", "If", "What"], "answer": 0, "point": "主语从句·whether 非 if", "dim": "grammar" },
+    { "q": "____ the Sami still follow their reindeer surprises many tourists.", "opts": ["That", "What", "Whether", "If"], "answer": 0, "point": "主语从句·that 引导", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["请沿主路走到桥那里。", "请在大门口等我。", "公园已经关门了。", "湖里不能划船。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Please follow the main path to the bridge." },
+    { "q": "听句子选意思:", "opts": ["这座新公园几乎是旧公园的四倍大。", "新公园比旧公园小一半。", "旧公园被拆掉了。", "两座公园一样大。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The new park is nearly four times larger than the old one." }
+  ],
+  "reading": {
+    "passage": "A national park is not a playground; it is a safe home for nature and for people who accept nature on its own terms. In such a place, hunting and new building are usually banned so that rare animals and plants can live in peace.",
+    "passageCn": "国家公园不是游乐场,而是大自然以及那些愿意按自然法则与之相处的人的安全家园。在这样的地方,狩猎和新建筑通常被禁止,好让珍稀的动植物得以安然生活。",
+    "questions": [
+      { "q": "What is a national park described as?", "opts": ["A safe home for nature and people.", "A busy playground for games.", "A place to build new houses.", "A market for selling animals."], "answer": 0 },
+      { "q": "Why are hunting and new building usually banned?", "opts": ["So rare animals and plants can live in peace.", "So more cars can come in.", "So tickets can cost more.", "So shops can open earlier."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Introduce or recommend a park you like in about 60 words: its name and location, two things to see or do there, and why you recommend it.",
+    "promptCn": "用约60词介绍或推荐一座你喜欢的公园:名称与地点、两项看点或活动,以及推荐理由。",
+    "sampleWords": ["recommend", "wetland", "vast", "boat tour", "attraction", "visitor", "natural", "protect", "fountain", "beautiful"]
+  },
+  "dialogues": [
+    {
+      "title": "Asking the Way to the Fountain",
+      "lines": [
+        { "role": "A", "text": "Excuse me, do you know where the fountain is?", "cn": "打扰一下,你知道喷泉在哪里吗?" },
+        { "role": "B", "text": "Yes, it's on the north side, about two hundred metres away.", "cn": "知道,在北侧,大约两百米远。" },
+        { "role": "A", "text": "How do I get there?", "cn": "我怎么过去呢?" },
+        { "role": "B", "text": "Follow the path along the river, and you'll see it behind a small bridge.", "cn": "沿着河边的小路走,你会在一座小桥后面看到它。" }
+      ]
+    },
+    {
+      "title": "Planning a Park Visit",
+      "lines": [
+        { "role": "A", "text": "Let's go to the wetland park this weekend.", "cn": "这周末我们去湿地公园吧。" },
+        { "role": "B", "text": "Great! We can take a boat tour and watch the birds.", "cn": "太好了!我们可以坐船游览,还能观鸟。" },
+        { "role": "A", "text": "And the trees and flowers there are so beautiful.", "cn": "而且那里的树木和花朵都很美。" },
+        { "role": "B", "text": "It really is the green lungs of our city.", "cn": "它真不愧是我们城市的绿肺。" }
+      ]
+    }
+  ]
+}

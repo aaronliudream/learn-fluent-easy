@@ -1,0 +1,332 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Body Language",
+  "source": "人教版2019选择性必修一 Unit 4 同主题阅读(肢体语言的作用/OK手势的跨文化差异/眼神接触/微笑的力量/课堂肢体语言/力量姿势)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Listening to How Bodies Talk",
+      "body": "We use both words and body language to express our thoughts in our interactions with other people. We can learn a lot about what people are thinking by watching their body language. Words are important, but the way people stand, hold their arms and move their hands can also give us information about their feelings. Just like spoken language, body language varies from culture to culture. The crucial thing is using body language in a way that is appropriate to the culture you are in. A gesture that is friendly in one country may be rude in another. Because of this, a clever traveller pays attention not only to what people say, but also to how they stand, move and look. In other words, learning to read bodies is just as useful as learning new words, and sometimes it tells us even more than speech does.",
+      "vocab_notes": [
+        {
+          "word": "interaction",
+          "cn": "交流"
+        },
+        {
+          "word": "vary",
+          "cn": "变化"
+        },
+        {
+          "word": "appropriate",
+          "cn": "合适的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the passage say body language can tell us?",
+          "options": [
+            "Information about people's feelings.",
+            "The exact words people will say.",
+            "How rich a person is.",
+            "Where a person was born."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'give us information about their feelings' 的转述。"
+        },
+        {
+          "stem": "Why must travellers be careful with gestures?",
+          "options": [
+            "Gestures are always the same everywhere.",
+            "A gesture may be friendly in one place but rude in another.",
+            "Gestures have no meaning at all.",
+            "Only words can be misunderstood."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'A gesture that is friendly in one country may be rude in another' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main point at the end?",
+          "options": [
+            "Reading bodies can be as useful as learning words.",
+            "Speech is always clearer than gestures.",
+            "Words are the only thing that matters.",
+            "Body language should be ignored."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'learning to read bodies is just as useful as learning new words' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "One Gesture, Many Meanings",
+      "body": "The simple gesture for \"OK\" shows how the same sign can carry very different meanings around the world. In English-speaking countries, joining the thumb and first finger into a circle usually means that everything is fine. Yet someone who employs this gesture in Japan might think it stands for money. In France, a person who sees an identical sign may read it as the number zero, meaning \"worthless\". In Brazil and Germany, by contrast, the gesture is considered rude, so visitors are advised to avoid making it there. Even the movements for \"yes\" and \"no\" are not fixed. In most countries, nodding means \"yes\" and shaking the head means \"no\"; but in Bulgaria and parts of Albania, these have the opposite meaning. Because of such differences, a gesture that seems perfectly polite at home can cause real confusion abroad. The safest rule is to watch local people and follow what they do.",
+      "vocab_notes": [
+        {
+          "word": "employ",
+          "cn": "使用"
+        },
+        {
+          "word": "identical",
+          "cn": "相同的"
+        },
+        {
+          "word": "by contrast",
+          "cn": "相比之下"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What might the \"OK\" gesture mean to someone in Japan?",
+          "options": [
+            "That everything is fine.",
+            "Money.",
+            "The number zero.",
+            "Something rude."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'might think it stands for money'(日本)的转述。"
+        },
+        {
+          "stem": "Why should visitors avoid the gesture in Brazil and Germany?",
+          "options": [
+            "It means money there.",
+            "It means zero there.",
+            "It is seen as rude there.",
+            "It has no meaning there."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'considered rude, so visitors are advised to avoid' 的转述。"
+        },
+        {
+          "stem": "What is special about \"yes\" and \"no\" in Bulgaria and parts of Albania?",
+          "options": [
+            "Nobody uses nodding there.",
+            "Only words are used there.",
+            "Nodding is forbidden there.",
+            "The head movements carry the reverse meaning."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'these have the opposite meaning' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Power of Eye Contact",
+      "body": "Where we look, and for how long, sends a strong silent message. In many Western countries, making eye contact is a way to display interest and honesty. A speaker who never meets your eyes may be thought shy or even untrustworthy. However, the rules are not the same everywhere. In some Middle Eastern countries, men and women are not socially permitted to look directly at each other for long. In Japan, lowering the eyes when talking to an older person can demonstrate respect rather than weakness. Time matters too: a friendly glance can become a hard stare if it lasts too long, and a long stare may be read as a threat. Because eye contact is understood so differently, the same look can be polite in one place and rude in another. Travellers who take a moment to learn the local habits can avoid many awkward misunderstandings.",
+      "vocab_notes": [
+        {
+          "word": "display",
+          "cn": "显示"
+        },
+        {
+          "word": "demonstrate",
+          "cn": "表达"
+        },
+        {
+          "word": "stare",
+          "cn": "凝视"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "In many Western countries, what does eye contact often show?",
+          "options": [
+            "Interest and honesty.",
+            "Anger and fear.",
+            "Shyness only.",
+            "A lack of respect."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a way to display interest and honesty' 的转述。"
+        },
+        {
+          "stem": "Why might a Japanese person lower their eyes with an elder?",
+          "options": [
+            "To show they are bored.",
+            "To show respect.",
+            "Because they cannot see.",
+            "To start an argument."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'lowering the eyes… can demonstrate respect' 的转述。"
+        },
+        {
+          "stem": "What can happen if eye contact lasts too long?",
+          "options": [
+            "It becomes a sign of honesty.",
+            "It always shows friendship.",
+            "It can seem threatening to the other person.",
+            "It means nothing at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a long stare may be read as a threat' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Why a Smile Matters",
+      "body": "Of all the messages our bodies send, perhaps none is as powerful as the smile. A smile can help us get through difficult moments and find friends in a world of strangers. We can use it to apologise, to greet someone, to ask for help, or simply to start a conversation. Best of all, a smile often breaks down barriers that words cannot. Yet not every smile is honest. A fake smile may be worn to hide anger, fear or worry, and it can be hard to tell apart from a real one. Scientists say that a true smile usually reaches the eyes, making them shine, while a polite, fake smile uses only the mouth. Some experts even suggest smiling at yourself in the mirror to feel happier and stronger. So the next time you feel down or lonely, remember that there is little better than seeing the warm, honest smile of a good friend.",
+      "vocab_notes": [
+        {
+          "word": "break down",
+          "cn": "打破"
+        },
+        {
+          "word": "fake",
+          "cn": "假的"
+        },
+        {
+          "word": "barrier",
+          "cn": "障碍"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, what can a smile do that words sometimes cannot?",
+          "options": [
+            "Make people forget everything.",
+            "Replace all spoken language.",
+            "Cause serious arguments.",
+            "Break down barriers between people."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'breaks down barriers that words cannot' 的转述。"
+        },
+        {
+          "stem": "Why might someone wear a fake smile?",
+          "options": [
+            "To hide feelings such as anger or worry.",
+            "To learn a new language.",
+            "To show they are very tired.",
+            "To copy a friend exactly."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'worn to hide anger, fear or worry' 的转述。"
+        },
+        {
+          "stem": "How can you often tell a true smile from a fake one?",
+          "options": [
+            "A true smile is always silent.",
+            "A true smile reaches the eyes and makes them shine.",
+            "A fake smile uses the whole face.",
+            "A fake smile lasts much longer."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a true smile usually reaches the eyes… while a polite, fake smile uses only the mouth' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How a Teacher Reads a Class",
+      "body": "In a classroom of more than forty students, a teacher cannot have a long talk with each person every day. So how does a teacher know what is going on in young minds? The answer is body language. It is easy to see when students are interested: they look up, lean slightly forward and make eye contact. People have a tendency to lean towards whatever interests them. If a student keeps looking down at his watch, it implies he is bored and counting the minutes. Two friends leaning their heads together are probably writing notes to each other. Trouble is harder to perceive. Students who are angry or anxious may cross their arms in front of their chests, as if guarding their bodies. Those who are sad often wear a frown or hide their faces in their hands. By watching these quiet signs, a caring teacher knows when to make a joke, when to slow down, and when to talk to a student alone.",
+      "vocab_notes": [
+        {
+          "word": "tendency",
+          "cn": "倾向"
+        },
+        {
+          "word": "imply",
+          "cn": "暗示"
+        },
+        {
+          "word": "perceive",
+          "cn": "察觉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does a teacher know students are interested?",
+          "options": [
+            "They hide their faces in their hands.",
+            "They cross their arms tightly.",
+            "They sit up, lean towards the teacher and meet her eyes.",
+            "They keep staring at their watches."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'they look up, lean slightly forward and make eye contact' 的转述。"
+        },
+        {
+          "stem": "What may crossed arms in front of the chest suggest?",
+          "options": [
+            "The student is very interested.",
+            "The student is writing notes.",
+            "The student is leaving soon.",
+            "The student feels angry or anxious."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'angry or anxious may cross their arms… as if guarding their bodies' 的转述。"
+        },
+        {
+          "stem": "Why does the teacher watch these quiet signs?",
+          "options": [
+            "To judge when to add humour, ease off or speak with a student privately.",
+            "To punish bored students.",
+            "To end the class early.",
+            "To choose the best-dressed student."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'knows when to make a joke, when to slow down, and when to talk to a student alone' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Can a Pose Change How You Feel?",
+      "body": "We all know that our feelings shape our bodies. When we feel proud and powerful, we usually straighten up to make ourselves bigger; when we feel powerless, we tend to slump and make ourselves smaller. But scientists have asked a surprising question: can our bodies also change our minds? In several experiments, people were asked to hold a strong, open pose for a couple of minutes before a stressful task. Afterwards, many of them reported feeling more confident and less afraid. It seems that standing tall, with the head up and shoulders back, can actually help push away feelings of shyness. For this reason, some scientists suggest trying \"power posing\" before an exam or a speech. The idea is simple but useful: if you act powerful with your body, your mind may slowly begin to believe it. So body language is not only a window into our feelings, but also a tool we can use to shape them.",
+      "vocab_notes": [
+        {
+          "word": "slump",
+          "cn": "垂头弯腰"
+        },
+        {
+          "word": "pose",
+          "cn": "姿势"
+        },
+        {
+          "word": "confident",
+          "cn": "自信的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do people usually do when they feel powerless?",
+          "options": [
+            "Straighten up to look bigger.",
+            "Slump and make themselves smaller.",
+            "Smile at the mirror.",
+            "Cross the room quickly."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'feel powerless, we tend to slump and make ourselves smaller' 的转述。"
+        },
+        {
+          "stem": "What did many people report after holding a strong pose?",
+          "options": [
+            "They felt more tired.",
+            "They felt nothing different.",
+            "They became more sure of themselves and less fearful.",
+            "They forgot the task."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'feeling more confident and less afraid' 的转述。"
+        },
+        {
+          "stem": "What is the main idea of \"power posing\"?",
+          "options": [
+            "Sitting quietly is always best.",
+            "Feelings can never change behaviour.",
+            "Body language has no real use.",
+            "Acting powerful with the body may help the mind feel powerful."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'if you act powerful with your body, your mind may slowly begin to believe it' 的转述。"
+        }
+      ]
+    }
+  ]
+}

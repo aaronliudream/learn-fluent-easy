@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Body Language",
+  "source": "人教版2019选择性必修一 Unit 4 同主题完形(学读面部表情/在国外误用手势/用动作买牛肉/害羞学生的身体/各地问候方式/微笑实验)。用词限 U4/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Read Faces",
+      "text": "When I was young, I thought we only communicated with (1)____. Then a teacher taught me that our faces and hands send messages too. She showed us how a (2)____ frown can mean a person is unhappy, even if they say they are fine. At first I found it hard to (3)____ a real smile from a fake one. But slowly I began to (4)____ small signs that I had missed before. I learned that people often (5)____ their true feelings without meaning to. A friend who keeps looking at the door may be (6)____, while one who leans towards you is usually (7)____. Reading these quiet signs has changed the way I (8)____ with others. Now, before I speak, I take a moment to (9)____ what a person's body is telling me. This new skill has made me a much better (10)____ to my friends.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "words",
+            "prices",
+            "songs",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "communicate with words 用言语交流。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "slight",
+            "rich",
+            "wet"
+          ],
+          "answer_index": 1,
+          "explanation": "a slight frown 轻微的皱眉。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "distinguish",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "distinguish A from B 区分。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "hide",
+            "drop",
+            "notice"
+          ],
+          "answer_index": 3,
+          "explanation": "notice small signs 注意到细小信号。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "reveal",
+            "count",
+            "sell",
+            "wash"
+          ],
+          "answer_index": 0,
+          "explanation": "reveal feelings 流露感受。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "happy",
+            "bored",
+            "proud",
+            "polite"
+          ],
+          "answer_index": 1,
+          "explanation": "看门=想离开,故 bored 无聊。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "asleep",
+            "angry",
+            "interested",
+            "absent"
+          ],
+          "answer_index": 2,
+          "explanation": "leans towards you → interested 感兴趣。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "argue",
+            "fight",
+            "sleep",
+            "interact"
+          ],
+          "answer_index": 3,
+          "explanation": "interact with others 与人交往。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "perceive",
+            "waste",
+            "lose",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "perceive what the body is telling 察觉身体的信息。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "stranger",
+            "friend",
+            "enemy",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "a better friend 更好的朋友。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Gesture That Went Wrong",
+      "text": "On my first trip abroad, a small hand (1)____ taught me a big lesson. After a nice meal, I made the \"OK\" sign to the cook to show that the food was (2)____. To my surprise, he suddenly looked (3)____ and turned away. My local friend later explained that in that country the sign was very (4)____. \"The same gesture can (5)____ from place to place,\" she said. \"You should always (6)____ making it until you know the local habits.\" I felt (7)____ for upsetting the cook, so the next day I went back to (8)____ what I really meant. This time I simply smiled and gave a thumbs-up, and he smiled (9)____. From that day on, I have been careful to (10)____ what each gesture means before I use it in a new country.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "gesture",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a hand gesture 手势。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "wrong",
+            "empty",
+            "cold",
+            "great"
+          ],
+          "answer_index": 3,
+          "explanation": "food was great 食物很棒。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "angry",
+            "happy",
+            "calm",
+            "sleepy"
+          ],
+          "answer_index": 0,
+          "explanation": "turned away → angry 生气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "polite",
+            "rude",
+            "cheap",
+            "useful"
+          ],
+          "answer_index": 1,
+          "explanation": "the sign was rude 这手势无礼。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "sleep",
+            "differ",
+            "weep"
+          ],
+          "answer_index": 2,
+          "explanation": "differ from place to place 因地而异。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "enjoy",
+            "finish",
+            "practise",
+            "avoid"
+          ],
+          "answer_index": 3,
+          "explanation": "avoid making it 避免做这手势。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sorry",
+            "proud",
+            "rich",
+            "brave"
+          ],
+          "answer_index": 0,
+          "explanation": "feel sorry 感到抱歉。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hide",
+            "clarify",
+            "forget",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "clarify what I meant 澄清我的意思。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "down",
+            "away",
+            "back",
+            "off"
+          ],
+          "answer_index": 2,
+          "explanation": "smiled back 回以微笑。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "drop",
+            "break",
+            "learn"
+          ],
+          "answer_index": 3,
+          "explanation": "learn what each gesture means 弄清含义。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Buying Beef Without Words",
+      "text": "My grandmother once told me a funny story about (1)____ in America. She did not speak much English, so shopping was a real (2)____ for her. One day she went to buy some beef, but there were so many kinds of (3)____ that she did not know which to choose. She could not (4)____ the words to a clerk, so she had an idea. She put both hands up like horns and said, \"Moo! Moo!\" The clerk laughed, but he understood her at once and (5)____ her to the beef. Grandmother got exactly what she (6)____ without saying a single English word. This little (7)____ showed her that acting can help people (8)____ even across a language gap. \"When words fail,\" she often says, \"your body can still (9)____ the message.\" Now I am never (10)____ to use my hands when I travel somewhere new.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "living",
+            "selling",
+            "sleeping",
+            "weeping"
+          ],
+          "answer_index": 0,
+          "explanation": "living in America 在美国生活(动名词作介词宾语)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "struggle",
+            "game",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a real struggle 一种艰难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "prices",
+            "noises",
+            "meat",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "kinds of meat 各种肉。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "throw",
+            "sell",
+            "lose",
+            "explain"
+          ],
+          "answer_index": 3,
+          "explanation": "explain the words 说清意思。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "led",
+            "sold",
+            "hid",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "led her to the beef 把她领到牛肉处。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "dropped",
+            "wanted",
+            "feared",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "what she wanted 她想要的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "incident",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "this little incident 这件小事。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "argue",
+            "fail",
+            "sleep",
+            "communicate"
+          ],
+          "answer_index": 3,
+          "explanation": "help people communicate 帮人交流。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "carry",
+            "lose",
+            "hide",
+            "waste"
+          ],
+          "answer_index": 0,
+          "explanation": "carry the message 传递信息。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "glad",
+            "afraid",
+            "proud",
+            "sure"
+          ],
+          "answer_index": 1,
+          "explanation": "never afraid to use 从不害怕用手势。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Body of a Shy Student",
+      "text": "Lin was one of the shyest students in our (1)____. While others raised their hands, he often kept his head (2)____ and his eyes on the desk. When the teacher asked a question, he would (3)____ his arms tightly, as if guarding himself. At first, the teacher thought Lin was simply (4)____ in the lesson. But she watched his body language more carefully and began to (5)____ that he was actually afraid of being (6)____ on. Instead of forcing him to speak, she gave him time and spoke to him (7)____ after class. Slowly, Lin started to (8)____ up his posture and even made a little eye contact. By the end of term, he could (9)____ a short answer in front of everyone without panicking. His changing body told the whole story: a frightened boy had (10)____ into a more confident young man.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "class",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "in our class 在班上。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "up",
+            "rich",
+            "wet",
+            "lowered"
+          ],
+          "answer_index": 3,
+          "explanation": "head lowered 低着头。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "cross",
+            "sell",
+            "drop",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "cross his arms 交叉双臂。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "interested",
+            "uninterested",
+            "proud",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "低头看桌→ uninterested 不感兴趣(后文转折)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "forget",
+            "perceive",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "perceive that 察觉到。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "washed",
+            "lost",
+            "called"
+          ],
+          "answer_index": 3,
+          "explanation": "be called on 被点名。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "gently",
+            "loudly",
+            "angrily",
+            "rudely"
+          ],
+          "answer_index": 0,
+          "explanation": "spoke to him gently 温和地对他说。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "break",
+            "straighten",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "straighten up his posture 挺直身姿。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hide",
+            "drop",
+            "give",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "give a short answer 给出简短回答。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "fallen",
+            "broken",
+            "lost",
+            "grown"
+          ],
+          "answer_index": 3,
+          "explanation": "grown into 成长为。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Greetings Around the World",
+      "text": "People all over the world say hello, but they do it in many different (1)____. In France and Russia, friends often kiss each other on the (2)____ when they meet. In Japan, by (3)____, people usually bow from the waist as a sign of (4)____. In many Western countries, a firm handshake is the most common way to (5)____ someone. Some cultures (6)____ a gentle nod of the head, while others give a warm hug. None of these is right or (7)____; they are simply different habits. A traveller who learns the local greeting can quickly (8)____ down the wall between strangers. Using the wrong one, on the other hand, may cause a small (9)____. So before you visit a new country, it is wise to find out how the people there like to be (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "ways",
+            "prices",
+            "songs",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "in different ways 用不同方式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "foot",
+            "cheek",
+            "wall",
+            "road"
+          ],
+          "answer_index": 1,
+          "explanation": "kiss on the cheek 吻脸颊。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "contrast",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "by contrast 相比之下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "anger",
+            "fear",
+            "noise",
+            "respect"
+          ],
+          "answer_index": 3,
+          "explanation": "a sign of respect 尊重的标志。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "greet",
+            "sell",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "greet someone 问候某人。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fear",
+            "favour",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "favour a nod 偏爱点头。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "deep",
+            "wide",
+            "wrong",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "right or wrong 对或错。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "drop",
+            "throw",
+            "break"
+          ],
+          "answer_index": 3,
+          "explanation": "break down the wall 打破隔阂。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "misunderstanding",
+            "song",
+            "price",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a small misunderstanding 小误会。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "greeted",
+            "lost",
+            "hidden"
+          ],
+          "answer_index": 1,
+          "explanation": "like to be greeted 喜欢被问候。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Test About Smiling",
+      "text": "Our science teacher once gave us a simple (1)____ about smiling. She asked half the class to hold a wide smile for two minutes, while the other half kept their faces (2)____. Then we all did a short, difficult task. Afterwards, the students who had been (3)____ said they felt calmer and more (4)____ than the others. \"Your body can change how your mind (5)____,\" the teacher explained. \"If you act happy, you may slowly begin to (6)____ happier.\" She added that a true smile (7)____ down barriers and makes other people trust you. Of course, a (8)____ smile, used only to hide worry, does not have the same power. The lesson (9)____ a strong message on all of us: a real smile is not just polite, it is a useful (10)____ that can lift both your own mood and the mood of those around you.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "song",
+            "test",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a simple test 一个简单测试。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "rich",
+            "wet",
+            "still"
+          ],
+          "answer_index": 3,
+          "explanation": "kept their faces still 面部不动。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "smiling",
+            "selling",
+            "sleeping",
+            "weeping"
+          ],
+          "answer_index": 0,
+          "explanation": "had been smiling 一直微笑(动名词)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "afraid",
+            "confident",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "more confident 更自信。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sells",
+            "breaks",
+            "feels",
+            "loses"
+          ],
+          "answer_index": 2,
+          "explanation": "how your mind feels 心情如何。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "lose",
+            "drop",
+            "feel"
+          ],
+          "answer_index": 3,
+          "explanation": "feel happier 感觉更快乐。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "breaks",
+            "sells",
+            "hides",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "breaks down barriers 打破隔阂。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "real",
+            "fake",
+            "loud",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "a fake smile 假笑。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "left",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "left a message 留下信息。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "tool"
+          ],
+          "answer_index": 3,
+          "explanation": "a useful tool 有用的工具。"
+        }
+      ]
+    }
+  ]
+}

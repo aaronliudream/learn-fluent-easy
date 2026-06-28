@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "动名词(-ing)作宾语和表语 速查",
+    "intro": "动名词(动词 + ing)兼具动词和名词的性质,可作宾语(动词宾语 / 介词宾语)和表语。判断口诀:某些动词与所有介词后,跟动作要用动名词(doing),不用不定式(to do)或原形。",
+    "table": {
+      "headers": ["功能", "用法 / 例句"],
+      "rows": [
+        ["作动词宾语", "enjoy/finish/mind/avoid/keep/practise/suggest/consider/imagine/can't help + doing:She enjoys learning body language."],
+        ["作介词宾语", "介词(at/in/of/for/about/on/to)+ doing:be good at reading faces;look forward to learning"],
+        ["作表语", "be + doing,说明主语内容:My job is teaching. / Seeing is believing."],
+        ["对比 to do", "want/hope/decide/plan/would like + to do(这些动词后用不定式,不用动名词)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "look forward to / be(get) used to / instead of 里的 to 是介词,后接动名词", "mark": "look forward to seeing(× to see)" },
+      { "rule": "enjoy/finish/mind/avoid/keep/practise/suggest/consider/can't help 后只接动名词", "mark": "avoid making the gesture(× to make)" },
+      { "rule": "动名词作表语 ≈ 主语内容的等价说明,主表常可互换", "mark": "My job is teaching = Teaching is my job" },
+      { "rule": "区分:be doing 作表语(说明主语) vs be doing 作进行时(强调动作正在进行)", "mark": "His hobby is fishing(表语)/ He is fishing now(进行时)" }
+    ],
+    "why": [
+      "介词是\"接名词性成分\"的词,而动名词正是动词的名词形式,所以介词后、以及部分及物动词后,要把动作变成 doing 才能作宾语;作表语时,动名词同样以名词身份说明主语\"是什么/做什么\"。"
+    ],
+    "gaokaoPoints": [
+      "高频考点:enjoy/avoid/mind/finish/suggest/consider/practise/keep/can't help + doing 的固定搭配。",
+      "易错点:look forward to / be used to / instead of / devote…to 里的 to 是介词,后接 doing,不是动词原形;语法填空与改错高频。"
+    ],
+    "examVsReal": [
+      { "exam": "I look forward to hearing from you.（考试/书面）", "real": "Can't wait to hear from you!", "note": "考试用 look forward to + doing;口语常换成 can't wait to do" },
+      { "exam": "My job is teaching English.（表语,考试标准）", "real": "I teach English.", "note": "考试爱考动名词作表语;口语里直接用动词更自然" }
+    ]
+  }
+}

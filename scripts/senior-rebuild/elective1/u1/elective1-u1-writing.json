@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "Introduce a Person of Achievement(介绍一位你敬佩的杰出人物)",
+  "title_en": "A Person I Admire",
+  "genre": "人物介绍 / 记叙文(short biography: appearance & personality + an impressive story + why he/she is great + how you feel)",
+  "source": "人教版2019选择性必修一 Unit 1 Reading for Writing:write an introduction about someone you admire(介绍一位你敬佩的杰出人物,含外貌性格、动人故事、为何伟大、你的感受)。",
+  "prompt_cn": "请用英语写一篇约100词的短文,介绍一位你敬佩的杰出人物(可以是科学家、医生等名人,也可以是身边的普通人)。内容包括:① 此人是谁、为何敬佩;② 描写其外貌或性格;③ 讲一个能体现其伟大的小故事/事迹;④ 总结你对此人的感受。注意适当使用非限制性定语从句。",
+  "prompt_en": "Write a short introduction (about 100 words) about a person of achievement you admire. The person can be a famous scientist or doctor, or an ordinary person around you. Include: 1) who the person is and why you admire him/her; 2) a description of the person's appearance or personality; 3) an impressive story or deed that shows the person's greatness; 4) how you feel about this person. Try to use non-restrictive relative clauses.",
+  "points": [
+    "点明人物及敬佩原因(The person I admire most is …, who …)",
+    "描写外貌/性格(a kind and patient person / brave and honest)",
+    "讲一个体现伟大的故事/事迹(For example, …)",
+    "总结你的感受(To me, … is truly great because …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "The person I admire most is Tu Youyou, who discovered a new medicine for malaria. She is a committed and patient scientist, and she never gives up easily. For example, her team read more than two thousand old medical texts and failed over a hundred and ninety times before they finally succeeded. When she won the Nobel Prize, which is one of the highest honours in the world, she gave the credit to her whole team and her country. To me, Tu Youyou is truly great, not because she is famous, but because she works hard and cares about other people. She has taught me to be brave and never to give up.",
+  "model_translation": "我最敬佩的人是屠呦呦,她发现了一种治疗疟疾的新药。她是一位尽心尽力、富有耐心的科学家,从不轻易放弃。比如,她的团队读了两千多部古代医书,失败了190多次才最终成功。当她获得诺贝尔奖——世界上最高的荣誉之一时,她把功劳归于整个团队和祖国。对我来说,屠呦呦真正伟大,不是因为她出名,而是因为她努力工作、关心他人。她教会我要勇敢、永不放弃。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "四要素齐全:人物及敬佩原因 / 外貌或性格 / 体现伟大的故事 / 你的感受" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个人物展开、层次清楚(总—分—总)、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、恰当使用非限制性定语从句(…, who/which…)、语法基本无误" }
+    ],
+    "required_structure": [
+      "点明人物 The person I admire most is …, who …",
+      "外貌/性格 He/She is a … person.",
+      "事迹 For example, …",
+      "感受 To me, … is truly great because …"
+    ],
+    "key_expressions": [
+      "The person I admire most is Tu Youyou, who discovered a new medicine.",
+      "She is a committed and patient scientist who never gives up.",
+      "She won the Nobel Prize, which is one of the highest honours in the world.",
+      "To me, she is truly great, not because she is famous, but because she cares about others."
+    ],
+    "useful_words": ["admire", "achievement", "committed", "patient", "courage", "honour", "contribution", "give up", "succeed", "great"]
+  },
+  "high_sentences": [
+    "The person I admire most is Tu Youyou, who discovered a new medicine for malaria.",
+    "She is a committed and patient scientist who never gives up.",
+    "When she won the Nobel Prize, which is one of the highest honours in the world, she gave the credit to her team.",
+    "To me, she is truly great, not because she is famous, but because she cares about other people."
+  ],
+  "error_pairs": [
+    { "wrong": "Tu Youyou, that discovered the medicine, won the prize.", "correct": "Tu Youyou, who discovered the medicine, won the prize.", "note": "非限制性定语从句指人用 who,不能用 that。" },
+    { "wrong": "She is a scientist, which never gives up.", "correct": "She is a scientist who never gives up.", "note": "先行词指人用 who,不能用 which。" },
+    { "wrong": "She make great contributions to her country.", "correct": "She makes great contributions to her country.", "note": "主语第三人称单数,动词加 s。" }
+  ],
+  "paragraph_template": "【人物介绍结构】\n第1句 点明人物及敬佩原因:The person I admire most is …, who …\n第2句 外貌/性格:He/She is a … person.\n第3-4句 事迹(用非限制性从句):For example, … , which …\n第5句 感受:To me, … is truly great because …"
+}

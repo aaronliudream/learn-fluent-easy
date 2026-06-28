@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "grammar_title": "动名词(-ing 形式)作宾语和表语",
+  "source": "人教版2019选择性必修一 Unit 4 Discovering Useful Structures:动名词作动词宾语 / 介词宾语 / 表语。句子围绕肢体语言主题、地道,只有 -ing 动名词形式因动词或介词的固定搭配而唯一成立(干扰项 to do / done / 原形均不合)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "动名词作动词宾语(enjoy/finish/mind/avoid/keep/practise/suggest/consider/imagine/can't help + doing)",
+      "overview": "某些动词后只能接动名词作宾语:enjoy, finish, mind, avoid, keep, practise, suggest, consider, imagine, can't help, give up, miss 等 + doing;不接不定式或原形。"
+    },
+    {
+      "code": "u4.02",
+      "point": "动名词作介词宾语(be good at / look forward to / be used to / be interested in / instead of / thank sb for + doing)",
+      "overview": "介词后接动名词作其宾语:at/to/in/of/for/about/on 等介词(含 look forward to, be/get used to, instead of, thank sb for)+ doing。"
+    },
+    {
+      "code": "u4.03",
+      "point": "动名词作表语(My job is teaching. / Seeing is believing.)",
+      "overview": "系动词 be 后用动名词作表语,说明主语的内容/性质(My job is teaching.);区别于不定式作表语和现在分词作定语/状语。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "She enjoys ____ about body language in different cultures.",
+      "options": [
+        "learning",
+        "to learn",
+        "learn",
+        "learned"
+      ],
+      "answer_index": 0,
+      "explanation": "enjoy 后只接动名词作宾语 → learning。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "You should avoid ____ this \"OK\" gesture in Brazil, as it is not polite.",
+      "options": [
+        "to make",
+        "making",
+        "make",
+        "made"
+      ],
+      "answer_index": 1,
+      "explanation": "avoid 后接动名词 → making。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "When she felt embarrassed, she could not help ____ her face in her hands.",
+      "options": [
+        "to hide",
+        "hide",
+        "hiding",
+        "hidden"
+      ],
+      "answer_index": 2,
+      "explanation": "can't help 后接动名词 → hiding。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Experts suggest ____ at yourself in the mirror to feel happier.",
+      "options": [
+        "to smile",
+        "smile",
+        "smiled",
+        "smiling"
+      ],
+      "answer_index": 3,
+      "explanation": "suggest 后接动名词 → smiling。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The shy student kept ____ eye contact with the teacher.",
+      "options": [
+        "avoiding",
+        "to avoid",
+        "avoid",
+        "avoided"
+      ],
+      "answer_index": 0,
+      "explanation": "keep 后接动名词 → avoiding。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Would you mind ____ your hand circles over your stomach to show \"I'm full\"?",
+      "options": [
+        "to move",
+        "moving",
+        "move",
+        "moved"
+      ],
+      "answer_index": 1,
+      "explanation": "mind 后接动名词 → moving。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Actors practise ____ feelings with only their faces and hands.",
+      "options": [
+        "to show",
+        "show",
+        "showing",
+        "shown"
+      ],
+      "answer_index": 2,
+      "explanation": "practise 后接动名词 → showing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Have you finished ____ the table about gestures on page 39?",
+      "options": [
+        "to fill",
+        "fill",
+        "filled",
+        "filling"
+      ],
+      "answer_index": 3,
+      "explanation": "finish 后接动名词 → filling。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Please imagine ____ someone too long; it can feel like a threat.",
+      "options": [
+        "staring at",
+        "to stare at",
+        "stare at",
+        "stared at"
+      ],
+      "answer_index": 0,
+      "explanation": "imagine 后接动名词 → staring at。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The teacher considered ____ class activities to suit shy students.",
+      "options": [
+        "to change",
+        "changing",
+        "change",
+        "changed"
+      ],
+      "answer_index": 1,
+      "explanation": "consider 后接动名词 → changing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Some students enjoy ____ out of the window while daydreaming.",
+      "options": [
+        "to stare",
+        "stare",
+        "staring",
+        "stared"
+      ],
+      "answer_index": 2,
+      "explanation": "enjoy 后接动名词 → staring。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He never gives up ____ to read people's faces correctly.",
+      "options": [
+        "to try",
+        "try",
+        "tried",
+        "trying"
+      ],
+      "answer_index": 3,
+      "explanation": "give up 后接动名词 → trying。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Avoid ____ your arms in front of your chest if you want to look open.",
+      "options": [
+        "crossing",
+        "to cross",
+        "cross",
+        "crossed"
+      ],
+      "answer_index": 0,
+      "explanation": "avoid 后接动名词 → crossing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "When we feel proud, we can't help ____ ourselves to look bigger.",
+      "options": [
+        "to straighten",
+        "straightening",
+        "straighten",
+        "straightened"
+      ],
+      "answer_index": 1,
+      "explanation": "can't help 后接动名词 → straightening。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She kept ____ slightly forward to show she was interested.",
+      "options": [
+        "to lean",
+        "lean",
+        "leaning",
+        "leaned"
+      ],
+      "answer_index": 2,
+      "explanation": "keep 后接动名词 → leaning。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "I really miss ____ my friends nod and smile when we talk.",
+      "options": [
+        "to see",
+        "see",
+        "seen",
+        "seeing"
+      ],
+      "answer_index": 3,
+      "explanation": "miss 后接动名词 → seeing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Would you mind ____ down a little when you greet the elder?",
+      "options": [
+        "bowing",
+        "to bow",
+        "bow",
+        "bowed"
+      ],
+      "answer_index": 0,
+      "explanation": "mind 后接动名词 → bowing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The teacher suggested ____ distracted students that they pay attention.",
+      "options": [
+        "to remind",
+        "reminding",
+        "remind",
+        "reminded"
+      ],
+      "answer_index": 1,
+      "explanation": "suggest 后接动名词 → reminding。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He practised ____ his face calm so others could not read his feelings.",
+      "options": [
+        "to keep",
+        "keep",
+        "keeping",
+        "kept"
+      ],
+      "answer_index": 2,
+      "explanation": "practise 后接动名词 → keeping。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Powerful people often consider ____ a confident pose before a speech.",
+      "options": [
+        "to hold",
+        "hold",
+        "held",
+        "holding"
+      ],
+      "answer_index": 3,
+      "explanation": "consider 后接动名词 → holding。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She is good at ____ what people feel from their faces.",
+      "options": [
+        "reading",
+        "to read",
+        "read",
+        "readen"
+      ],
+      "answer_index": 0,
+      "explanation": "be good at 后接动名词作介词宾语 → reading。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We look forward to ____ how body language differs around the world.",
+      "options": [
+        "to learn",
+        "learning",
+        "learn",
+        "learned"
+      ],
+      "answer_index": 1,
+      "explanation": "look forward to 中 to 是介词,后接动名词 → learning。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "In Japan, you can show respect instead of ____ straight into an elder's eyes.",
+      "options": [
+        "to look",
+        "look",
+        "looking",
+        "looked"
+      ],
+      "answer_index": 2,
+      "explanation": "instead of 后接动名词 → looking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Many international students are interested in ____ Chinese gestures.",
+      "options": [
+        "to understand",
+        "understand",
+        "understood",
+        "understanding"
+      ],
+      "answer_index": 3,
+      "explanation": "be interested in 后接动名词 → understanding。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "After years abroad, he is used to ____ hands when he meets someone.",
+      "options": [
+        "shaking",
+        "to shake",
+        "shake",
+        "shaken"
+      ],
+      "answer_index": 0,
+      "explanation": "be used to(习惯于)中 to 是介词,后接动名词 → shaking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Thank you for ____ me how to read a fake smile.",
+      "options": [
+        "to teach",
+        "teaching",
+        "teach",
+        "taught"
+      ],
+      "answer_index": 1,
+      "explanation": "thank sb for 后接动名词 → teaching。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "A smile is a simple way of ____ down barriers between strangers.",
+      "options": [
+        "to break",
+        "break",
+        "breaking",
+        "broken"
+      ],
+      "answer_index": 2,
+      "explanation": "way of 后接动名词 → breaking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She apologised by ____ her head and lowering her eyes.",
+      "options": [
+        "to bow",
+        "bow",
+        "bowed",
+        "bowing"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 by 后接动名词 → bowing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He kept silent for a while before ____ his real feelings.",
+      "options": [
+        "revealing",
+        "to reveal",
+        "reveal",
+        "revealed"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 before 后接动名词 → revealing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We learn about feelings by ____ at people's gestures and faces.",
+      "options": [
+        "to look",
+        "looking",
+        "look",
+        "looked"
+      ],
+      "answer_index": 1,
+      "explanation": "介词 by 后接动名词 → looking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "They are good at ____ a real smile from a fake one.",
+      "options": [
+        "to distinguish",
+        "distinguish",
+        "distinguishing",
+        "distinguished"
+      ],
+      "answer_index": 2,
+      "explanation": "be good at 后接动名词 → distinguishing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She is interested in ____ how Chinese people use body language.",
+      "options": [
+        "to learn",
+        "learn",
+        "learned",
+        "learning"
+      ],
+      "answer_index": 3,
+      "explanation": "be interested in 后接动名词 → learning。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Instead of ____, the worried student crossed his arms tightly.",
+      "options": [
+        "relaxing",
+        "to relax",
+        "relax",
+        "relaxed"
+      ],
+      "answer_index": 0,
+      "explanation": "instead of 后接动名词 → relaxing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Our teacher is used to ____ when we are interested or bored.",
+      "options": [
+        "to notice",
+        "noticing",
+        "notice",
+        "noticed"
+      ],
+      "answer_index": 1,
+      "explanation": "be used to(习惯于)后接动名词 → noticing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He got through the difficult talk by ____ at himself in the mirror first.",
+      "options": [
+        "to smile",
+        "smile",
+        "smiling",
+        "smiled"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 by 后接动名词 → smiling。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "We look forward to ____ the art of non-verbal humour in the film.",
+      "options": [
+        "to appreciate",
+        "appreciate",
+        "appreciated",
+        "appreciating"
+      ],
+      "answer_index": 3,
+      "explanation": "look forward to 后接动名词 → appreciating。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Thank you for ____ me the difference between these two gestures.",
+      "options": [
+        "showing",
+        "to show",
+        "show",
+        "shown"
+      ],
+      "answer_index": 0,
+      "explanation": "thank sb for 后接动名词 → showing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "She is good at ____ what each pose is telling us.",
+      "options": [
+        "to interpret",
+        "interpreting",
+        "interpret",
+        "interpreted"
+      ],
+      "answer_index": 1,
+      "explanation": "be good at 后接动名词 → interpreting。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "He showed respect by ____ his head when talking to the old man.",
+      "options": [
+        "to lower",
+        "lower",
+        "lowering",
+        "lowered"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 by 后接动名词 → lowering。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "Instead of ____, she chose to nod and let her body do the talking.",
+      "options": [
+        "to speak",
+        "speak",
+        "spoken",
+        "speaking"
+      ],
+      "answer_index": 3,
+      "explanation": "instead of 后接动名词 → speaking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The crucial thing is ____ body language in a way that suits the culture.",
+      "options": [
+        "using",
+        "to using",
+        "use",
+        "used"
+      ],
+      "answer_index": 0,
+      "explanation": "be 后用动名词作表语,说明主语 the thing 的内容 → using。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "His job is ____ sign language to deaf children.",
+      "options": [
+        "to teaching",
+        "teaching",
+        "teach",
+        "taught"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作表语,说明 his job 是什么 → teaching。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Seeing is ____; we trust what a person's face shows us.",
+      "options": [
+        "to believe",
+        "believe",
+        "believing",
+        "believed"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作表语(Seeing is believing 谚语)→ believing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "One good way of saying \"I'm full\" is ____ your hand over your stomach.",
+      "options": [
+        "to moving",
+        "move",
+        "moved",
+        "moving"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词作表语,说明 the way 是什么 → moving。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The main thing is ____ distracted students that they need to focus.",
+      "options": [
+        "reminding",
+        "to reminding",
+        "remind",
+        "reminded"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词作表语 → reminding。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "My duty as a teacher is ____ every student to learn well.",
+      "options": [
+        "to helping",
+        "helping",
+        "help",
+        "helped"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作表语,说明 my duty 的内容 → helping。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The theme of his presentation is ____ down barriers between groups.",
+      "options": [
+        "to breaking",
+        "break",
+        "breaking",
+        "broken"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作表语 → breaking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Her favourite activity in class is ____ out of the window.",
+      "options": [
+        "to staring",
+        "stare",
+        "stared",
+        "staring"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词作表语,说明 activity 的内容 → staring。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "What a smile can do is ____ us through difficult situations.",
+      "options": [
+        "helping",
+        "to helping",
+        "help",
+        "helped"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词作表语 → helping。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The best example of useful body language is ____ at others.",
+      "options": [
+        "to smiling",
+        "smiling",
+        "smile",
+        "smiled"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作表语 → smiling。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "A teacher's real skill is ____ when a student is troubled.",
+      "options": [
+        "to perceiving",
+        "perceive",
+        "perceiving",
+        "perceived"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作表语,说明 skill 的内容 → perceiving。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "One sign of being proud is ____ up to make yourself look bigger.",
+      "options": [
+        "to straightening",
+        "straighten",
+        "straightened",
+        "straightening"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词作表语 → straightening。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The hardest part of the job is ____ when students are really troubled.",
+      "options": [
+        "distinguishing",
+        "to distinguishing",
+        "distinguish",
+        "distinguished"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词作表语 → distinguishing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "What worried students often do is ____ their arms in front of them.",
+      "options": [
+        "to crossing",
+        "crossing",
+        "cross",
+        "crossed"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作表语 → crossing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "A polite greeting in Japan is ____ from the waist.",
+      "options": [
+        "to bowing",
+        "bow",
+        "bowing",
+        "bowed"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作表语 → bowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "His habit when bored is ____ his chin on his hand.",
+      "options": [
+        "to resting",
+        "rest",
+        "rested",
+        "resting"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词作表语 → resting。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The first step in reading people is ____ at their faces carefully.",
+      "options": [
+        "looking",
+        "to looking",
+        "look",
+        "looked"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词作表语 → looking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "A common way to say \"sleep\" is ____ your hands by your head.",
+      "options": [
+        "to placing",
+        "placing",
+        "place",
+        "placed"
+      ],
+      "answer_index": 1,
+      "explanation": "动名词作表语 → placing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Her real talent is ____ a fake smile in a single second.",
+      "options": [
+        "to spotting",
+        "spot",
+        "spotting",
+        "spotted"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词作表语 → spotting。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The point of the lesson is ____ feelings without using any words.",
+      "options": [
+        "to expressing",
+        "express",
+        "expressed",
+        "expressing"
+      ],
+      "answer_index": 3,
+      "explanation": "动名词作表语 → expressing。"
+    }
+  ]
+}

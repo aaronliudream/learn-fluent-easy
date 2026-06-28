@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Looking into the Future",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修一 Unit 2 同主题听力(智能家居对话/未来预测短文/无人车讨论/AI职业短文/语音厨房对话/RoboBee短文)。用词限本单元/初中/常见词,答案唯一可在transcript找到,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Talking About a Smart Home",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "My family just moved into a smart home, and I love it."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Really? What can it do that an ordinary house cannot?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Well, it locks the door for us when we forget and leave."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That sounds useful. Does it save energy too?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Yes. When everyone goes out, it switches off the lights by itself."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Amazing. How does it know when you are at home?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "It uses sensors to tell when we come in or go out."
+        },
+        {
+          "speaker": "Tom",
+          "text": "I'd love to live in a house like that one day."
+        }
+      ],
+      "translation_cn": "露西一家刚搬进智能家居,很喜欢;汤姆问它有何特别之处;露西说他们忘锁门时它会替他们锁门;还能省电——大家外出时自动关灯;它靠传感器判断有没有人在家;汤姆也想住进这样的房子。",
+      "questions": [
+        {
+          "stem": "What does Lucy's family do recently?",
+          "options": [
+            "They moved into a smart home.",
+            "They bought a new car.",
+            "They built a garden.",
+            "They went on holiday."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the home do when they forget to lock the door?",
+          "options": [
+            "It calls the police.",
+            "It locks the door for them.",
+            "It opens all the windows.",
+            "It rings loudly all night."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the home save energy?",
+          "options": [
+            "It switches off the lights when everyone goes out.",
+            "It turns off the heating only.",
+            "It asks the family to leave.",
+            "It keeps the lights on all day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does the home know when someone is in?",
+          "options": [
+            "It phones each person.",
+            "It uses sensors.",
+            "It checks the clock.",
+            "It asks the neighbours."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom feel about the smart home?",
+          "options": [
+            "He thinks it is useless.",
+            "He is afraid of it.",
+            "He would love to live in one.",
+            "He dislikes the idea."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Predictions About the Future",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Good evening. Tonight, two experts share their predictions about the future.",
+        "Dr Han believes that this time next year, more people will be travelling in driverless cars.",
+        "She also forecasts that robots will do much of our housework.",
+        "Vincent Black predicts that tiny robots will be helping doctors inside the body.",
+        "Both experts agree that we should welcome these changes rather than resist them."
+      ],
+      "translation_cn": "晚上好。今晚两位专家分享对未来的预测。韩博士认为明年此时会有更多人乘坐无人驾驶汽车;她还预测机器人将承担大量家务;文森特·布莱克预测微型机器人会在人体内协助医生;两位专家都认为我们应欢迎而非抵制这些变化。",
+      "questions": [
+        {
+          "stem": "What is the topic of tonight's programme?",
+          "options": [
+            "A new cooking show.",
+            "The history of cars.",
+            "A music concert.",
+            "Experts' predictions about the future."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Dr Han predict about driverless cars?",
+          "options": [
+            "More people will be travelling in them.",
+            "They will disappear next year.",
+            "They will become more expensive.",
+            "Nobody will use them."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What else does Dr Han forecast?",
+          "options": [
+            "Robots will only play music.",
+            "Robots will do much of our housework.",
+            "People will stop working.",
+            "Houses will become smaller."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Vincent Black predict?",
+          "options": [
+            "Doctors will stop working.",
+            "Tiny robots will fly in the sky.",
+            "Tiny robots will help doctors inside the body.",
+            "Robots will replace all teachers."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do both experts agree on?",
+          "options": [
+            "We should fear the future.",
+            "We should stop all new technology.",
+            "We should never use robots.",
+            "We should welcome these changes."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Should We Trust Driverless Cars?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "Did you read about the driverless car accident this morning?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "I did. Some people now want to oppose these cars completely."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I understand their worry, but I'm not sure that is fair."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Why not? A passenger was hurt while the car was in driverless mode."
+        },
+        {
+          "speaker": "Ben",
+          "text": "True, but most accidents today are caused by tired human drivers."
+        },
+        {
+          "speaker": "Anna",
+          "text": "So you think the cars could actually be safer?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Yes, if we test them carefully instead of just rejecting them."
+        },
+        {
+          "speaker": "Anna",
+          "text": "That makes sense. We should not stop new technology out of fear."
+        }
+      ],
+      "translation_cn": "本问安娜有没有看今早无人车事故的报道;安娜说有些人想彻底反对这种车;本理解他们的担忧但觉得不公平;安娜说有乘客在无人驾驶模式下受伤;本说如今多数事故是疲劳的人类司机造成的;安娜问那这种车会不会其实更安全;本说只要谨慎测试而非一味拒绝就可能更安全;安娜赞同,不该因恐惧而停止新技术。",
+      "questions": [
+        {
+          "stem": "What did Ben and Anna read about?",
+          "options": [
+            "A driverless car accident.",
+            "A new music app.",
+            "A football match.",
+            "A weather warning."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do some people now want to do?",
+          "options": [
+            "Buy more such cars.",
+            "Oppose driverless cars completely.",
+            "Drive faster than before.",
+            "Build more roads."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "According to Ben, what causes most accidents today?",
+          "options": [
+            "Bad weather.",
+            "Broken roads.",
+            "Tired human drivers.",
+            "Slow machines."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Ben suggest doing with the technology?",
+          "options": [
+            "Rejecting it at once.",
+            "Ignoring it completely.",
+            "Selling it abroad.",
+            "Testing it carefully."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do they finally agree on?",
+          "options": [
+            "We should not stop new technology out of fear.",
+            "Driverless cars are perfect.",
+            "Nobody should drive again.",
+            "Fear is always right."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 New Jobs for a New Age",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people worry that smart machines will take away their jobs.",
+        "It is true that artificial intelligence will do some routine work for us.",
+        "However, new technology usually creates more careers than it removes.",
+        "In the future, we will be needing people to design and repair these machines.",
+        "The best plan is not to fear the change, but to prepare for it."
+      ],
+      "translation_cn": "许多人担心智能机器会抢走工作;的确,人工智能会替我们做一些常规工作;然而,新技术通常创造的职业多于它取代的;未来我们会需要人来设计和维修这些机器;最好的办法不是惧怕变化,而是为之做准备。",
+      "questions": [
+        {
+          "stem": "What do many people worry about?",
+          "options": [
+            "Machines will be too slow.",
+            "Machines will take away their jobs.",
+            "Machines will be too expensive.",
+            "Machines will never work."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of work will AI do for us?",
+          "options": [
+            "Only dangerous work.",
+            "All creative work.",
+            "Some routine work.",
+            "No work at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does new technology usually do to careers?",
+          "options": [
+            "It removes every career.",
+            "It changes nothing.",
+            "It makes work impossible.",
+            "It creates more than it removes."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of people will be needed in the future?",
+          "options": [
+            "People to design and repair the machines.",
+            "People who avoid machines.",
+            "People who sleep all day.",
+            "People who fear robots."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the best plan, according to the passage?",
+          "options": [
+            "To stop all machines.",
+            "To prepare for the change, not fear it.",
+            "To hide from technology.",
+            "To give up working."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 A Kitchen That Obeys Your Voice",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Grace",
+          "text": "Come and see my uncle's new kitchen. It understands voice commands!"
+        },
+        {
+          "speaker": "Leo",
+          "text": "Voice commands? So you just tell it what to do?"
+        },
+        {
+          "speaker": "Grace",
+          "text": "Exactly. He says 'lights on', and the kitchen obeys at once."
+        },
+        {
+          "speaker": "Leo",
+          "text": "That's clever. Can it cook for him as well?"
+        },
+        {
+          "speaker": "Grace",
+          "text": "It can warm the oven and tell him the moment the food is ready."
+        },
+        {
+          "speaker": "Leo",
+          "text": "What if something goes wrong, like a water leak?"
+        },
+        {
+          "speaker": "Grace",
+          "text": "Then it detects the problem and sends a warning to his phone."
+        },
+        {
+          "speaker": "Leo",
+          "text": "Wow. This used to sound like a fantasy, but now it's real."
+        }
+      ],
+      "translation_cn": "格雷丝带利奥看她叔叔会听语音指令的新厨房;利奥问是不是直接吩咐它做事;格雷丝说叔叔一说'开灯',厨房立刻照做;还能预热烤箱,并在食物做好时立刻告知;利奥问万一漏水怎么办;格雷丝说它会察觉问题并向叔叔手机发警告;利奥感叹这从前像幻想,如今成真了。",
+      "questions": [
+        {
+          "stem": "What is special about the uncle's kitchen?",
+          "options": [
+            "It is very small.",
+            "It has no lights.",
+            "It understands voice commands.",
+            "It cannot be cleaned."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens when the uncle says 'lights on'?",
+          "options": [
+            "Nothing happens.",
+            "The lights turn off.",
+            "An alarm rings.",
+            "The kitchen obeys at once."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does the kitchen help with cooking?",
+          "options": [
+            "It warms the oven and says when food is ready.",
+            "It does nothing useful.",
+            "It only plays music.",
+            "It hides the food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the kitchen do if there is a water leak?",
+          "options": [
+            "It ignores the problem.",
+            "It detects it and warns the uncle's phone.",
+            "It floods the room.",
+            "It calls a plumber by name."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Leo feel about the kitchen?",
+          "options": [
+            "It is boring and useless.",
+            "It is too dangerous.",
+            "It used to sound like a fantasy but is now real.",
+            "It is impossible to believe."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 The Flight of the RoboBee",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Today we look at a tiny flying robot called the RoboBee.",
+        "It is being developed by a team of scientists at a famous university.",
+        "Like real bees, many RoboBees can work together as one group.",
+        "In the future, they may be helping with farming or finding people after a disaster.",
+        "The team believes that learning from nature is the key to building such machines."
+      ],
+      "translation_cn": "今天我们来看一种叫 RoboBee 的微型飞行机器人;它由一所著名大学的科学家团队研制;像真正的蜜蜂一样,许多 RoboBee 能作为一个群体协同工作;未来它们也许能帮助农业,或在灾难后寻找被困者;团队相信,向大自然学习是制造这类机器的关键。",
+      "questions": [
+        {
+          "stem": "What is the RoboBee?",
+          "options": [
+            "A real bee.",
+            "A large farm machine.",
+            "A kind of phone.",
+            "A tiny flying robot."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Who is developing the RoboBee?",
+          "options": [
+            "A team of scientists at a university.",
+            "A group of farmers.",
+            "A car company.",
+            "A single child."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How do many RoboBees work?",
+          "options": [
+            "Each one works far away alone.",
+            "They work together as one group.",
+            "They never move at all.",
+            "They fight against each other."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What might RoboBees do in the future?",
+          "options": [
+            "Replace all teachers.",
+            "Only sit in a museum.",
+            "Help with farming or find people after a disaster.",
+            "Drive cars on the road."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the team believe is the key to building such machines?",
+          "options": [
+            "Using more metal.",
+            "Making them very large.",
+            "Keeping them secret.",
+            "Learning from nature."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

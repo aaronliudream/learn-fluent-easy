@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Fascinating Parks",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修一 Unit 3 同主题听力(在公园问路/萨雷克公园简介/计划去主题公园/湿地公园短文/问喷泉表演的路/逛公园小贴士)。long/short 交替(3长3短)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Finding the Way in the Park",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Jake",
+          "text": "Excuse me, do you happen to know where the fountain is?"
+        },
+        {
+          "speaker": "Linlin",
+          "text": "Yes. It's on the north side of the park, about two hundred metres from here."
+        },
+        {
+          "speaker": "Jake",
+          "text": "Great. How do I get there?"
+        },
+        {
+          "speaker": "Linlin",
+          "text": "Follow the main path along the river until you see a small bridge."
+        },
+        {
+          "speaker": "Jake",
+          "text": "And then?"
+        },
+        {
+          "speaker": "Linlin",
+          "text": "When you see the bridge, you are close to the fountain. It's just behind it."
+        },
+        {
+          "speaker": "Jake",
+          "text": "Is the boat lake far from there?"
+        },
+        {
+          "speaker": "Linlin",
+          "text": "No, it's nearby. You can rent a pedal boat right next to the fountain."
+        }
+      ],
+      "translation_cn": "Jake 问喷泉在哪;玲玲说在公园北侧、离这约两百米;让他沿河边主路走到一座小桥;看到桥就快到喷泉了,喷泉在桥后面;划船的湖就在附近,喷泉旁边可以租脚踏船。",
+      "questions": [
+        {
+          "stem": "Where is the fountain?",
+          "options": [
+            "On the north side of the park.",
+            "Right at the main gate.",
+            "Outside the park.",
+            "On the south side of the lake."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How far is the fountain from where they stand?",
+          "options": [
+            "About two kilometres.",
+            "About two hundred metres.",
+            "About twenty metres.",
+            "Just next to them."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should Jake follow to get there?",
+          "options": [
+            "The main path along the river.",
+            "The road outside the park.",
+            "A line of tall trees.",
+            "A row of shops."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How will Jake know he is close to the fountain?",
+          "options": [
+            "He will hear loud music.",
+            "He will see a small bridge.",
+            "He will reach the car park.",
+            "He will smell food."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can Jake do near the fountain?",
+          "options": [
+            "Catch a bus home.",
+            "Buy a park map.",
+            "Rent a pedal boat.",
+            "Watch a film."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 A Park with No Roads",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In the far north of Sweden lies a vast park with no roads and no towns.",
+        "Long ago, sheets of ice covered its mountains, leaving behind many glaciers.",
+        "The Sami people made this remote land their home and lived by following reindeer.",
+        "In 1909 the area became a national park to keep it in its natural state.",
+        "Today no one but the Sami may live inside its boundaries."
+      ],
+      "translation_cn": "瑞典最北部有一座没有道路和城镇的辽阔公园;很久以前冰雪覆盖群山,留下许多冰川;萨米人以这片偏远土地为家,靠跟随驯鹿生活;1909年此地成为国家公园以保持其自然状态;如今除萨米人外无人可在其边界内居住。",
+      "questions": [
+        {
+          "stem": "Where is this park?",
+          "options": [
+            "In southern China.",
+            "Near a large city.",
+            "On a small island.",
+            "In the far north of Sweden."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the ice leave behind when it melted?",
+          "options": [
+            "Many glaciers.",
+            "Wide roads.",
+            "Tall buildings.",
+            "Deep lakes only."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did the Sami people live?",
+          "options": [
+            "By fishing in the sea.",
+            "By following reindeer.",
+            "By trading in towns.",
+            "By farming the valleys."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why did the area become a national park in 1909?",
+          "options": [
+            "To build more roads.",
+            "To open it to factories.",
+            "To keep it in its natural state.",
+            "To bring in more tourists."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who may live inside the park today?",
+          "options": [
+            "Anyone who pays.",
+            "Many large companies.",
+            "No people at all.",
+            "Only the Sami people."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 Planning a Trip to the Theme Park",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Yuhui",
+          "text": "Let's plan our day at the theme park tomorrow."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Good idea. I really want to try the roller coaster first."
+        },
+        {
+          "speaker": "Yuhui",
+          "text": "Sure, but the morning queues are long. Let's do the water rides first."
+        },
+        {
+          "speaker": "Ben",
+          "text": "All right. And I'd love to see the dolphin show too."
+        },
+        {
+          "speaker": "Yuhui",
+          "text": "The show starts at two o'clock, so let's have lunch before that."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Where can we eat? I'm not sure the restaurants are open early."
+        },
+        {
+          "speaker": "Yuhui",
+          "text": "Don't worry. There are plenty of restaurants near the lake."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Perfect. Then we'll watch the fireworks display at night before we leave."
+        }
+      ],
+      "translation_cn": "宇辉和 Ben 计划明天去主题公园;Ben 想先玩过山车;宇辉说早上排队长,先玩水上项目;Ben 还想看海豚表演;表演两点开始,先吃午饭;Ben 担心餐厅没开;宇辉说湖边有很多餐厅;最后晚上看烟花再离开。",
+      "questions": [
+        {
+          "stem": "What does Ben want to try first?",
+          "options": [
+            "The roller coaster.",
+            "The dolphin show.",
+            "The water rides.",
+            "The fireworks."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Yuhui suggest the water rides first?",
+          "options": [
+            "They are cheaper in the morning.",
+            "The roller coaster queues are long.",
+            "The water rides close early.",
+            "Ben is afraid of heights."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When does the dolphin show start?",
+          "options": [
+            "At noon.",
+            "At one o'clock.",
+            "At two o'clock.",
+            "At night."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Where can they have lunch?",
+          "options": [
+            "Outside the park.",
+            "On the roller coaster.",
+            "At home.",
+            "At restaurants near the lake."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What will they do before leaving at night?",
+          "options": [
+            "Watch the fireworks display.",
+            "Ride the roller coaster again.",
+            "Take a boat tour.",
+            "Visit the candy shop."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 The Green Lungs of the City",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our city's wetland park is a green, watery world full of life.",
+        "Trees and bushes grow along the banks, and birds nest among them.",
+        "When it was planned, the designers tried hard to limit the impact of people.",
+        "All the new buildings were made in a traditional way to fit into nature.",
+        "Because it cleans water and makes oxygen, people call it the green lungs of the city."
+      ],
+      "translation_cn": "我们城市的湿地公园是一个充满生命、绿意盎然的水世界;岸边长着树木和灌木,鸟儿在其中筑巢;规划时设计者尽力减少人为影响;所有新建筑都以传统方式建造以融入自然;因为它净化水、产生氧气,人们称它为城市的绿肺。",
+      "questions": [
+        {
+          "stem": "What kind of place is the wetland park?",
+          "options": [
+            "A busy shopping centre.",
+            "A green, watery world full of life.",
+            "A dry desert area.",
+            "A quiet library."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What grows along the banks?",
+          "options": [
+            "Tall office towers.",
+            "Wide stone roads.",
+            "Trees and bushes.",
+            "Rows of shops."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did the designers try hard to do?",
+          "options": [
+            "Build as many shops as possible.",
+            "Bring in more cars.",
+            "Cut down all the trees.",
+            "Limit the impact of people."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How were the new buildings made?",
+          "options": [
+            "In a traditional way to fit into nature.",
+            "In a very modern style.",
+            "Out of glass only.",
+            "As tall as possible."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is it called the 'green lungs' of the city?",
+          "options": [
+            "Because it is shaped like lungs.",
+            "Because it cleans water and makes oxygen.",
+            "Because only green things are sold there.",
+            "Because it is always crowded."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Asking for Directions",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tourist",
+          "text": "Pardon me, how do I get to the underwater corridor?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Go straight ahead until you come to the big aquarium."
+        },
+        {
+          "speaker": "Tourist",
+          "text": "Is it far from here?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "No, it's about a hundred metres on your left."
+        },
+        {
+          "speaker": "Tourist",
+          "text": "Can I see the polar bears on the way?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Yes. When you pass the dolphin pool, the polar bears are just beyond it."
+        },
+        {
+          "speaker": "Tourist",
+          "text": "Thank you. And where are the restaurants?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "They're on the east side, so you can eat while watching the fish swim by."
+        }
+      ],
+      "translation_cn": "游客问怎么去水下走廊;向导让他一直往前走到大水族馆;离这约一百米、在左边;路上能看到北极熊;经过海豚池后,北极熊就在那后面;餐厅在东侧,可以边吃边看鱼游过。",
+      "questions": [
+        {
+          "stem": "Where does the tourist want to go?",
+          "options": [
+            "The car park.",
+            "The roller coaster.",
+            "The underwater corridor.",
+            "The bus stop."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How far is it from where they stand?",
+          "options": [
+            "About a kilometre.",
+            "Just one step.",
+            "Across the city.",
+            "About a hundred metres."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can the tourist see on the way?",
+          "options": [
+            "The polar bears.",
+            "A steam engine.",
+            "A fireworks show.",
+            "A candy shop."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Where are the polar bears?",
+          "options": [
+            "At the main gate.",
+            "Just beyond the dolphin pool.",
+            "Inside the corridor.",
+            "Next to the fountain."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why are the restaurants a good place to eat?",
+          "options": [
+            "They are the cheapest in town.",
+            "They open very late.",
+            "You can eat while watching the fish.",
+            "They are next to the car park."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Tips for Visiting a Park",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are a few simple tips for visiting a national park.",
+        "First, follow the marked routes and do not wander off on your own.",
+        "Second, remember that hunting and picking flowers are usually prohibited.",
+        "Third, carry your own water and food, since shops may be far away.",
+        "If everyone protects the park, its rare animals and plants can live in peace."
+      ],
+      "translation_cn": "这里有几条逛国家公园的简单贴士:第一,沿标好的路线走,别自己乱跑;第二,记住狩猎和采花通常是被禁止的;第三,自带水和食物,因为商店可能很远;如果人人都保护公园,园里珍稀的动植物就能安然生活。",
+      "questions": [
+        {
+          "stem": "What are these tips for?",
+          "options": [
+            "Cooking at home.",
+            "Driving a car.",
+            "Buying clothes.",
+            "Visiting a national park."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the first tip say?",
+          "options": [
+            "Follow the marked routes.",
+            "Climb the highest mountain.",
+            "Swim across the river.",
+            "Feed the wild animals."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is usually prohibited in the park?",
+          "options": [
+            "Taking photos.",
+            "Hunting and picking flowers.",
+            "Walking on paths.",
+            "Talking quietly."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why should visitors carry their own food and water?",
+          "options": [
+            "Because the park sells nothing fresh.",
+            "Because the food is unhealthy.",
+            "Because shops may be far away.",
+            "Because animals will steal it."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What happens if everyone protects the park?",
+          "options": [
+            "More roads will be built.",
+            "The park will be closed.",
+            "Fewer people will visit.",
+            "Its rare animals and plants can live in peace."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

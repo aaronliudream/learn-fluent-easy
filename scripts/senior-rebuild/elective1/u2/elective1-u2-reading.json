@@ -1,0 +1,338 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Looking into the Future",
+  "source": "人教版2019选择性必修一 Unit 2 同主题阅读(智能家居/无人驾驶/AI与职业/未来城市/纳米机器人健康/科技利弊)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Smart Homes to Make Life Easier",
+      "topic_cn": "说明·智能家居",
+      "body": "Have you ever forgotten to lock the door of your house, or to switch off the TV before leaving? These small things happen to all of us, and they often waste energy and sometimes cause real trouble. In the not-too-distant future, however, we will be living in smart homes that take care of such problems for us. A smart home builds computers into the structure of the building itself, so it can lock the door when we are away and switch off devices when we forget. Using integrated sensors, the home can tell the moment you leave each morning, and then go into an energy-saving mode all by itself. It will also learn your daily routine and preferences, so the lights, music and even dinner will be ready the instant you walk in. All of this keeps us secure, saves us energy, and makes life far more comfortable than it is today.",
+      "vocab_notes": [
+        {
+          "word": "secure",
+          "cn": "安全的"
+        },
+        {
+          "word": "routine",
+          "cn": "日常生活"
+        },
+        {
+          "word": "sensor",
+          "cn": "传感器"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What problem does the writer mention at the beginning?",
+          "options": [
+            "People sometimes forget to lock doors or turn off devices.",
+            "Smart homes are too expensive for ordinary families.",
+            "Computers in houses break down very often.",
+            "People do not know how to use new technology."
+          ],
+          "answer_index": 0,
+          "explanation": "开头举'忘锁门、忘关电视'为例,选项是其概括转述。"
+        },
+        {
+          "stem": "How does a smart home know when you have gone out?",
+          "options": [
+            "It calls your phone to check on you.",
+            "It uses built-in sensors to notice you leaving.",
+            "It asks a neighbour to watch the door.",
+            "It waits until the evening to find out."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'using integrated sensors, the home can tell the moment you leave' 的转述。"
+        },
+        {
+          "stem": "According to the text, what are the benefits of a smart home?",
+          "options": [
+            "It keeps us safe, saves energy and adds comfort.",
+            "It makes houses look more beautiful.",
+            "It helps people get more exercise.",
+            "It teaches children how to cook dinner."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'keeps us secure, saves us energy, and makes life far more comfortable' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Should We Fight Driverless Cars?",
+      "topic_cn": "议论·无人驾驶利弊",
+      "body": "One morning I read a shocking headline about a passenger who died when a car crashed in driverless mode. In the report, several people argued that the public should oppose the idea of developing such cars, saying that some advances in technology are unnecessary and even dangerous. The car company apologised for the accident, but the families of the deceased felt that an apology was not enough. The company still claimed that most people would be travelling in driverless cars before long. On the one hand, fewer human mistakes might mean fewer accidents, since a tired or careless driver is often the real cause of a crash. On the other hand, no machine is perfect, and people worry about who is to blame when something goes wrong. Hence, the debate is not really about whether the cars are clever enough; it is about how much we are willing to trust them with our lives. Personally, I believe we should test such technology carefully rather than simply reject it.",
+      "vocab_notes": [
+        {
+          "word": "oppose",
+          "cn": "反对"
+        },
+        {
+          "word": "deceased",
+          "cn": "亡故的"
+        },
+        {
+          "word": "hence",
+          "cn": "因此"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did some people in the report want to stop driverless cars?",
+          "options": [
+            "They thought the cars were too slow.",
+            "They believed such advances could be needless and unsafe.",
+            "They could not afford to buy one.",
+            "They preferred riding bicycles instead."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'some advances in technology are unnecessary and even dangerous' 的转述。"
+        },
+        {
+          "stem": "What is one possible advantage of driverless cars mentioned in the text?",
+          "options": [
+            "They never need any repair.",
+            "They are completely free to use.",
+            "They could reduce accidents caused by human error.",
+            "They can fly over busy cities."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'fewer human mistakes might mean fewer accidents' 的转述。"
+        },
+        {
+          "stem": "What is the writer's own opinion at the end?",
+          "options": [
+            "Driverless cars should be banned at once.",
+            "The cars are already perfect.",
+            "Nobody should drive any car ever again.",
+            "We should test the technology with care, not reject it."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'test such technology carefully rather than simply reject it' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "New Jobs in an Age of AI",
+      "topic_cn": "说明·人工智能与职业",
+      "body": "Whenever people hear that machines are getting smarter, many of them start to worry about their jobs. It is true that artificial intelligence will take over some routine work, such as checking numbers or sorting parcels. Yet history shows that new technology usually creates more careers than it removes. When cars replaced horses, for example, whole new occupations appeared, from car designers to road builders. The same thing is likely to happen again. In the coming years we will be needing people who can design, repair and teach these clever machines, as well as people who do the warm, human jobs that no robot can copy, such as caring for the old or comforting the sick. The real lesson is not to fear the change, but to prepare for it. Students today should learn how to work together with smart machines instead of competing against them. Those who do so will find that the future of work is full of fresh chances rather than empty fears.",
+      "vocab_notes": [
+        {
+          "word": "routine",
+          "cn": "常规的"
+        },
+        {
+          "word": "occupation",
+          "cn": "职业"
+        },
+        {
+          "word": "career",
+          "cn": "职业"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What kind of work will AI most likely take over?",
+          "options": [
+            "Simple, repeated tasks like checking numbers.",
+            "Caring for old or sick people.",
+            "Designing brand-new machines.",
+            "Comforting people who feel sad."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'take over some routine work, such as checking numbers or sorting parcels' 的转述。"
+        },
+        {
+          "stem": "What does the example of cars replacing horses show?",
+          "options": [
+            "New technology destroys all old jobs.",
+            "New technology can open up fresh occupations.",
+            "People should never accept change.",
+            "Horses were better than cars."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'whole new occupations appeared, from car designers to road builders' 的转述。"
+        },
+        {
+          "stem": "What advice does the writer give to students?",
+          "options": [
+            "Avoid all jobs that use machines.",
+            "Stop studying science and maths.",
+            "Team up with clever machines instead of fighting them.",
+            "Compete against robots as hard as possible."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'learn how to work together with smart machines instead of competing against them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A Walk Through the Future City",
+      "topic_cn": "记叙·未来城市一日",
+      "body": "Imagine waking up one morning in the city of 2050. The curtains open by themselves as the sun rises, and a soft voice tells you the weather forecast for the day. You step outside, and a driverless bus stops quietly to pick you up, choosing the fastest route through streets with no traffic jams. Sensors in the road send information to a central computer, which controls the lights so that cars and buses keep moving smoothly. Tall buildings are covered with plants that clean the air and keep the city cool. At lunchtime you visit a small shop where a friendly robot prepares your meal, while drones carry parcels above your head. None of this feels strange to the people who live here, because the technology has grown up slowly around them. In this sense, the city of tomorrow is simply the city of today with many small, clever improvements added one step at a time.",
+      "vocab_notes": [
+        {
+          "word": "forecast",
+          "cn": "预报"
+        },
+        {
+          "word": "remote",
+          "cn": "远程的"
+        },
+        {
+          "word": "structure",
+          "cn": "结构"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does the driverless bus choose its way through the city?",
+          "options": [
+            "It follows the same fixed route every day.",
+            "It waits for a human driver to decide.",
+            "It always takes the longest road.",
+            "It picks the quickest path with no traffic jams."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'choosing the fastest route through streets with no traffic jams' 的转述。"
+        },
+        {
+          "stem": "Why are the tall buildings covered with plants?",
+          "options": [
+            "To clean the air and cool the city.",
+            "To make them look taller.",
+            "To hide the windows from the sun.",
+            "To grow food for the robots."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'plants that clean the air and keep the city cool' 的转述。"
+        },
+        {
+          "stem": "Why does none of this feel strange to the people there?",
+          "options": [
+            "They were all born in another country.",
+            "The technology appeared gradually as they grew up.",
+            "They never leave their homes.",
+            "They do not notice the technology at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the technology has grown up slowly around them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Tiny Robots, Big Hopes",
+      "topic_cn": "说明·纳米机器人与健康",
+      "body": "Some of the most exciting future technology is also the smallest. Scientists are now developing nanobots, robots so tiny that thousands of them could fit on the head of a pin. One day, doctors may send these little machines into the human body to do jobs that are too delicate for ordinary tools. A nanobot could travel through the blood, detect a problem early, and even carry medicine straight to a sick part of the body. Because the robot works only where it is needed, it could potentially cause far less harm than today's treatments. Tiny robots might also help repair damage that doctors cannot reach now, giving fresh hope to many patients. Of course, this technology is still being tested, and there are many questions to answer about safety. Nevertheless, researchers believe that within our lifetimes these clever machines will be playing an important part in keeping people healthy, working quietly inside us where no one can see them.",
+      "vocab_notes": [
+        {
+          "word": "detect",
+          "cn": "察觉"
+        },
+        {
+          "word": "potentially",
+          "cn": "可能地"
+        },
+        {
+          "word": "nevertheless",
+          "cn": "尽管如此"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What are nanobots, according to the passage?",
+          "options": [
+            "Large machines used in factories.",
+            "A new kind of mobile phone.",
+            "Extremely small robots, thousands of which fit on a pin head.",
+            "Robots that drive cars on the road."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'robots so tiny that thousands of them could fit on the head of a pin' 的转述。"
+        },
+        {
+          "stem": "Why might nanobots cause less harm than today's treatments?",
+          "options": [
+            "Because they are made of cheap metal.",
+            "Because they work for a very short time.",
+            "Because they are controlled by patients themselves.",
+            "Because they only act where they are actually needed."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the robot works only where it is needed, it could … cause far less harm' 的转述。"
+        },
+        {
+          "stem": "What does the writer say about the safety of this technology?",
+          "options": [
+            "There are still safety questions to answer.",
+            "It is already perfectly safe.",
+            "It will never be safe enough.",
+            "Safety does not matter at all."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'there are many questions to answer about safety' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Living Without New Technology",
+      "topic_cn": "说明·拒绝新科技的人群",
+      "body": "Not everyone welcomes new technology, and some people choose to live without it on purpose. The best known of these are the Amish, a group living in rural America. They do not own cars, watch TV, or use the Internet, and they have farmed the land in much the same way since the eighteenth century. They place a strong emphasis on hard work, family and community, and they believe this matters far more than chasing luxuries or following the lives of the rich and famous. Some people argue that the quality of their life is actually better, because they live close to nature instead of in large, polluted cities. Their example reminds us of an important point: more technology does not always mean a happier life. Even those of us who love new machines can learn something from such communities. The real question for the future is not how much technology we can build, but how wisely we choose to use the technology we already have.",
+      "vocab_notes": [
+        {
+          "word": "rural",
+          "cn": "乡村的"
+        },
+        {
+          "word": "emphasis",
+          "cn": "重视"
+        },
+        {
+          "word": "luxury",
+          "cn": "奢华"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How do the Amish live, according to the text?",
+          "options": [
+            "They use the newest cars and computers.",
+            "They farm the land much as they did long ago.",
+            "They move from city to city every year.",
+            "They spend most of their time watching TV."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'they have farmed the land in much the same way since the eighteenth century' 的转述。"
+        },
+        {
+          "stem": "What do the Amish value most?",
+          "options": [
+            "Expensive luxuries and fame.",
+            "The fastest new machines.",
+            "Working hard and staying close to family.",
+            "Travelling around the world."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a strong emphasis on hard work, family and community' 的转述。"
+        },
+        {
+          "stem": "What is the main lesson the writer draws from their example?",
+          "options": [
+            "Everyone should give up technology completely.",
+            "City life is always worse than country life.",
+            "We must build as much technology as possible.",
+            "Having more machines will not always bring greater happiness."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'more technology does not always mean a happier life' 的转述。"
+        }
+      ]
+    }
+  ]
+}

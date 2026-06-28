@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "grammar_title": "将来进行时(The Future Progressive: will be doing)",
+  "source": "人教版2019选择性必修一 Unit 2 Discover useful structures:将来进行时(will be doing)。句子地道、含明确将来时间标志,使将来进行时唯一成立;干扰项 will do / is doing / will have done / has done 同时间家族,只有将来进行时合适。",
+  "points": [
+    {
+      "code": "u2.01",
+      "point": "表将来某一时刻正在进行(this time tomorrow / at 8 pm tonight)",
+      "overview": "带明确将来时间点(this time next year / at 9 am tomorrow)时,表示届时正在进行的动作,用 will be doing。"
+    },
+    {
+      "code": "u2.02",
+      "point": "表预计必将发生 / 委婉询问(I'll be seeing him soon / Will you be using it?)",
+      "overview": "表示按计划或自然趋势必将发生的将来动作,或委婉地询问对方安排,用 will be doing。"
+    },
+    {
+      "code": "u2.03",
+      "point": "与一般将来时 will do / 现在进行时 is doing 对照,凸显'将来进行'",
+      "overview": "在同一将来时间框架下,与表'单纯将来'的 will do、'眼下正进行'的 is doing 等对比,题干的将来时间状语决定只能用 will be doing。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u2.01",
+      "stem": "This time tomorrow, I ____ on a plane to the future technology fair.",
+      "options": [
+        "will be flying",
+        "will fly",
+        "am flying",
+        "have flown"
+      ],
+      "answer_index": 0,
+      "explanation": "this time tomorrow 指明将来某一时刻正在进行 → will be flying。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 8 pm tonight, the family ____ dinner cooked by their new robot.",
+      "options": [
+        "will have",
+        "will be having",
+        "is having",
+        "has had"
+      ],
+      "answer_index": 1,
+      "explanation": "at 8 pm tonight 为将来时间点,届时动作进行中 → will be having。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "This time next year, she ____ artificial intelligence at a top university.",
+      "options": [
+        "will study",
+        "is studying",
+        "will be studying",
+        "has studied"
+      ],
+      "answer_index": 2,
+      "explanation": "this time next year 指将来某刻正在进行 → will be studying。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 9 am next Monday, the engineers ____ the new driverless car.",
+      "options": [
+        "will test",
+        "are testing",
+        "have tested",
+        "will be testing"
+      ],
+      "answer_index": 3,
+      "explanation": "at 9 am next Monday 为将来时间点 → will be testing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When you arrive tomorrow, the smart home ____ everything ready for you.",
+      "options": [
+        "will be getting",
+        "will get",
+        "is getting",
+        "has got"
+      ],
+      "answer_index": 0,
+      "explanation": "when you arrive tomorrow 指明将来某刻动作进行中 → will be getting。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At midnight tonight, the sensors ____ the temperature of every room.",
+      "options": [
+        "will check",
+        "will be checking",
+        "are checking",
+        "have checked"
+      ],
+      "answer_index": 1,
+      "explanation": "at midnight tonight 为将来时间点 → will be checking。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "This time next week, we ____ in a fully automatic house.",
+      "options": [
+        "will live",
+        "are living",
+        "will be living",
+        "have lived"
+      ],
+      "answer_index": 2,
+      "explanation": "this time next week 指将来某刻进行中 → will be living。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 7 am tomorrow, the robot ____ breakfast while you are still asleep.",
+      "options": [
+        "will prepare",
+        "is preparing",
+        "has prepared",
+        "will be preparing"
+      ],
+      "answer_index": 3,
+      "explanation": "at 7 am tomorrow 为将来时间点、强调进行 → will be preparing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By this time tomorrow, the scientists ____ their predictions on the radio.",
+      "options": [
+        "will be sharing",
+        "will share",
+        "are sharing",
+        "have shared"
+      ],
+      "answer_index": 0,
+      "explanation": "by this time tomorrow 指将来某刻动作进行中 → will be sharing。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 3 pm next Friday, the students ____ about the future of technology.",
+      "options": [
+        "will talk",
+        "will be talking",
+        "are talking",
+        "have talked"
+      ],
+      "answer_index": 1,
+      "explanation": "at 3 pm next Friday 为将来时间点 → will be talking。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "This time tomorrow morning, the smart bed ____ how well you slept.",
+      "options": [
+        "will record",
+        "is recording",
+        "will be recording",
+        "has recorded"
+      ],
+      "answer_index": 2,
+      "explanation": "this time tomorrow morning 指将来某刻进行中 → will be recording。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When the show opens next month, robots ____ tea to the visitors.",
+      "options": [
+        "will serve",
+        "are serving",
+        "have served",
+        "will be serving"
+      ],
+      "answer_index": 3,
+      "explanation": "when the show opens next month 指明将来某刻动作进行中 → will be serving。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At noon tomorrow, the home system ____ the lights to save energy.",
+      "options": [
+        "will be switching",
+        "will switch",
+        "is switching",
+        "has switched"
+      ],
+      "answer_index": 0,
+      "explanation": "at noon tomorrow 为将来时间点 → will be switching。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "This time next year, more people ____ in driverless cars to work.",
+      "options": [
+        "will travel",
+        "will be travelling",
+        "are travelling",
+        "have travelled"
+      ],
+      "answer_index": 1,
+      "explanation": "this time next year 指将来某刻进行中 → will be travelling。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 10 am tomorrow, the doctor ____ a patient with the help of nanobots.",
+      "options": [
+        "will treat",
+        "is treating",
+        "will be treating",
+        "has treated"
+      ],
+      "answer_index": 2,
+      "explanation": "at 10 am tomorrow 为将来时间点、强调进行 → will be treating。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "This time on Sunday, the family ____ a film chosen by their AI assistant.",
+      "options": [
+        "will watch",
+        "are watching",
+        "have watched",
+        "will be watching"
+      ],
+      "answer_index": 3,
+      "explanation": "this time on Sunday 指将来某刻进行中 → will be watching。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At 6 pm tomorrow, the toilet ____ track of grandpa's health as usual.",
+      "options": [
+        "will be keeping",
+        "will keep",
+        "is keeping",
+        "has kept"
+      ],
+      "answer_index": 0,
+      "explanation": "at 6 pm tomorrow 为将来时间点 → will be keeping。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "When we land in Beijing next week, our smart house ____ the door for us.",
+      "options": [
+        "will lock",
+        "will be locking",
+        "is locking",
+        "has locked"
+      ],
+      "answer_index": 1,
+      "explanation": "when we land next week 指将来某刻动作进行中 → will be locking。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "At this moment next month, the team ____ on their new RoboBee project.",
+      "options": [
+        "will work",
+        "are working",
+        "will be working",
+        "have worked"
+      ],
+      "answer_index": 2,
+      "explanation": "at this moment next month 指将来某刻进行中 → will be working。"
+    },
+    {
+      "code": "u2.01",
+      "stem": "By 9 o'clock tomorrow, the sensors ____ data from every smart device.",
+      "options": [
+        "will collect",
+        "are collecting",
+        "have collected",
+        "will be collecting"
+      ],
+      "answer_index": 3,
+      "explanation": "by 9 o'clock tomorrow 指将来某刻动作进行中 → will be collecting。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Don't worry about the time — I ____ you at the airport tomorrow anyway.",
+      "options": [
+        "will be meeting",
+        "will meet",
+        "am meeting",
+        "have met"
+      ],
+      "answer_index": 0,
+      "explanation": "表预计必将发生的将来安排,语气委婉 → will be meeting。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ you ____ the computer tonight, or may I borrow it for my essay?",
+      "options": [
+        "Will / use",
+        "Will / be using",
+        "Are / using",
+        "Have / used"
+      ],
+      "answer_index": 1,
+      "explanation": "委婉询问对方今晚的安排 → Will you be using …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I ____ him soon, so I'll pass on your message about the project.",
+      "options": [
+        "will see",
+        "am seeing",
+        "will be seeing",
+        "have seen"
+      ],
+      "answer_index": 2,
+      "explanation": "表预计必将发生的将来动作,语气自然 → will be seeing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ you ____ the car this weekend? If not, I'd like to test the new mode.",
+      "options": [
+        "Will / use",
+        "Are / using",
+        "Have / used",
+        "Will / be using"
+      ],
+      "answer_index": 3,
+      "explanation": "委婉询问对方周末的安排 → Will you be using …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The company says most people ____ in driverless cars one day soon.",
+      "options": [
+        "will be travelling",
+        "will travel",
+        "are travelling",
+        "have travelled"
+      ],
+      "answer_index": 0,
+      "explanation": "表预计必将发生的将来趋势 → will be travelling。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Just leave it to me — I ____ past the shop later, so I'll buy the sensor.",
+      "options": [
+        "will go",
+        "will be going",
+        "am going",
+        "have gone"
+      ],
+      "answer_index": 1,
+      "explanation": "表预计顺道必将发生的将来动作 → will be going。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ you ____ the meeting room after lunch? We need it for a robot demo.",
+      "options": [
+        "Will / need",
+        "Are / needing",
+        "Will / be needing",
+        "Have / needed"
+      ],
+      "answer_index": 2,
+      "explanation": "委婉询问对方午饭后的安排 → Will you be needing …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I ____ Dr Han at the fair next week, so I'll ask about her predictions.",
+      "options": [
+        "will visit",
+        "am visiting",
+        "have visited",
+        "will be visiting"
+      ],
+      "answer_index": 3,
+      "explanation": "表预计必将发生的将来安排 → will be visiting。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Don't call at nine — the family ____ their evening health check then.",
+      "options": [
+        "will be doing",
+        "will do",
+        "are doing",
+        "have done"
+      ],
+      "answer_index": 0,
+      "explanation": "表预计届时必将进行的日常 → will be doing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ you ____ your headset later? I'd like to try the virtual reality tour.",
+      "options": [
+        "Will / wear",
+        "Will / be wearing",
+        "Are / wearing",
+        "Have / worn"
+      ],
+      "answer_index": 1,
+      "explanation": "委婉询问对方稍后的安排 → Will you be wearing …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Relax — the smart home ____ care of the lights, so you needn't return.",
+      "options": [
+        "will take",
+        "is taking",
+        "will be taking",
+        "has taken"
+      ],
+      "answer_index": 2,
+      "explanation": "表预计必将发生、语气安抚的将来动作 → will be taking。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I ____ the new app all next week, so I can show you how it works.",
+      "options": [
+        "will test",
+        "am testing",
+        "have tested",
+        "will be testing"
+      ],
+      "answer_index": 3,
+      "explanation": "表预计必将持续进行的将来安排 → will be testing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the robots ____ at the fair, or are they only on display this year?",
+      "options": [
+        "Will / be working",
+        "Will / work",
+        "Are / working",
+        "Have / worked"
+      ],
+      "answer_index": 0,
+      "explanation": "委婉询问将来的安排 → Will the robots be working …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "By the look of it, we ____ AI in almost every job before long.",
+      "options": [
+        "will use",
+        "will be using",
+        "are using",
+        "have used"
+      ],
+      "answer_index": 1,
+      "explanation": "表预计必将发生的将来趋势 → will be using。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Leave the parcel with me — I ____ the neighbour this evening anyway.",
+      "options": [
+        "will see",
+        "am seeing",
+        "will be seeing",
+        "have seen"
+      ],
+      "answer_index": 2,
+      "explanation": "表预计顺便必将发生的将来动作 → will be seeing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ you ____ the printer this afternoon? I need to print my report.",
+      "options": [
+        "Will / use",
+        "Are / using",
+        "Have / used",
+        "Will / be using"
+      ],
+      "answer_index": 3,
+      "explanation": "委婉询问对方下午的安排 → Will you be using …?"
+    },
+    {
+      "code": "u2.02",
+      "stem": "The forecast says we ____ many small robots working together by 2030.",
+      "options": [
+        "will be seeing",
+        "will see",
+        "are seeing",
+        "have seen"
+      ],
+      "answer_index": 0,
+      "explanation": "表预计必将发生的将来情景 → will be seeing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "Don't hurry — the sensors ____ the data while we have our coffee.",
+      "options": [
+        "will collect",
+        "will be collecting",
+        "are collecting",
+        "have collected"
+      ],
+      "answer_index": 1,
+      "explanation": "表预计届时必将进行的将来动作 → will be collecting。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "I ____ past your office tomorrow, so I can drop off the smart watch.",
+      "options": [
+        "will pass",
+        "am passing",
+        "will be passing",
+        "have passed"
+      ],
+      "answer_index": 2,
+      "explanation": "表预计顺道必将发生的将来动作 → will be passing。"
+    },
+    {
+      "code": "u2.02",
+      "stem": "____ the lab ____ visitors next month, or is it closed for the upgrade?",
+      "options": [
+        "Will / welcome",
+        "Is / welcoming",
+        "Has / welcomed",
+        "Will / be welcoming"
+      ],
+      "answer_index": 3,
+      "explanation": "委婉询问将来的安排 → Will the lab be welcoming …?"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Compare these: tomorrow he ____ a robot, but right now he just dreams of it.",
+      "options": [
+        "will be building",
+        "will build",
+        "is building",
+        "has built"
+      ],
+      "answer_index": 0,
+      "explanation": "tomorrow 强调将来某刻进行中,对照'眼下'的现在进行 → will be building。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At this time tomorrow we ____ the show, while today we are only planning it.",
+      "options": [
+        "will watch",
+        "will be watching",
+        "are watching",
+        "have watched"
+      ],
+      "answer_index": 1,
+      "explanation": "at this time tomorrow 凸显将来进行,区别于今天的 are planning → will be watching。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "Next Monday at noon the team ____ the new car; they don't test it today.",
+      "options": [
+        "will test",
+        "is testing",
+        "will be testing",
+        "has tested"
+      ],
+      "answer_index": 2,
+      "explanation": "next Monday at noon 为将来时间点,凸显将来进行 → will be testing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "This time next week she ____ in Beijing; she is still in Melbourne now.",
+      "options": [
+        "will work",
+        "is working",
+        "has worked",
+        "will be working"
+      ],
+      "answer_index": 3,
+      "explanation": "this time next week 强调将来某刻进行,对照'现在'的 is working → will be working。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "When you wake up tomorrow, the home ____ your coffee, not making it now.",
+      "options": [
+        "will be making",
+        "will make",
+        "is making",
+        "has made"
+      ],
+      "answer_index": 0,
+      "explanation": "when you wake up tomorrow 指将来某刻进行中,区别于现在 → will be making。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At 8 tomorrow the sensors ____ the air; right now they are switched off.",
+      "options": [
+        "will check",
+        "will be checking",
+        "are checking",
+        "have checked"
+      ],
+      "answer_index": 1,
+      "explanation": "at 8 tomorrow 为将来时间点,凸显将来进行 → will be checking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "This time next year robots ____ our streets, though few do so today.",
+      "options": [
+        "will clean",
+        "are cleaning",
+        "will be cleaning",
+        "have cleaned"
+      ],
+      "answer_index": 2,
+      "explanation": "this time next year 强调将来某刻进行,对照今天 → will be cleaning。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At 9 pm tomorrow the bed ____ his sleep, not watching it at the moment.",
+      "options": [
+        "will track",
+        "is tracking",
+        "has tracked",
+        "will be tracking"
+      ],
+      "answer_index": 3,
+      "explanation": "at 9 pm tomorrow 为将来时间点,凸显将来进行 → will be tracking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "When the fair starts next week, AI designers ____ their latest ideas.",
+      "options": [
+        "will be showing",
+        "will show",
+        "are showing",
+        "have shown"
+      ],
+      "answer_index": 0,
+      "explanation": "when the fair starts next week 指将来某刻进行中 → will be showing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By this time tomorrow the city ____ traffic by computer, unlike today.",
+      "options": [
+        "will control",
+        "will be controlling",
+        "is controlling",
+        "has controlled"
+      ],
+      "answer_index": 1,
+      "explanation": "by this time tomorrow 强调将来某刻进行,对照今天 → will be controlling。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At 7 tomorrow evening she ____ her report, while now she just reads notes.",
+      "options": [
+        "will write",
+        "is writing",
+        "will be writing",
+        "has written"
+      ],
+      "answer_index": 2,
+      "explanation": "at 7 tomorrow evening 为将来时间点,凸显将来进行 → will be writing。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "This time next month the nanobots ____ inside patients to fight illness.",
+      "options": [
+        "will work",
+        "are working",
+        "have worked",
+        "will be working"
+      ],
+      "answer_index": 3,
+      "explanation": "this time next month 强调将来某刻进行 → will be working。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "When classes begin next term, students ____ AI to study, not paper books.",
+      "options": [
+        "will be using",
+        "will use",
+        "are using",
+        "have used"
+      ],
+      "answer_index": 0,
+      "explanation": "when classes begin next term 指将来某刻进行中 → will be using。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At noon tomorrow the kitchen ____ lunch by itself; it doesn't do so now.",
+      "options": [
+        "will cook",
+        "will be cooking",
+        "is cooking",
+        "has cooked"
+      ],
+      "answer_index": 1,
+      "explanation": "at noon tomorrow 为将来时间点,凸显将来进行 → will be cooking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "This time on Friday they ____ to the moon base; today they only train.",
+      "options": [
+        "will fly",
+        "are flying",
+        "will be flying",
+        "have flown"
+      ],
+      "answer_index": 2,
+      "explanation": "this time on Friday 强调将来某刻进行,对照今天 → will be flying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At 10 tomorrow the smart home ____ the wiring; it isn't doing that now.",
+      "options": [
+        "will check",
+        "is checking",
+        "has checked",
+        "will be checking"
+      ],
+      "answer_index": 3,
+      "explanation": "at 10 tomorrow 为将来时间点,凸显将来进行 → will be checking。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "When we meet next week, the company ____ its newest robot to the public.",
+      "options": [
+        "will be presenting",
+        "will present",
+        "is presenting",
+        "has presented"
+      ],
+      "answer_index": 0,
+      "explanation": "when we meet next week 指将来某刻进行中 → will be presenting。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "By 8 tomorrow morning the system ____ energy, while now it wastes some.",
+      "options": [
+        "will save",
+        "will be saving",
+        "is saving",
+        "has saved"
+      ],
+      "answer_index": 1,
+      "explanation": "by 8 tomorrow morning 强调将来某刻进行,对照现在 → will be saving。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "At this hour next week the doctors ____ the data; today they collect it.",
+      "options": [
+        "will study",
+        "are studying",
+        "will be studying",
+        "have studied"
+      ],
+      "answer_index": 2,
+      "explanation": "at this hour next week 为将来时间点,凸显将来进行 → will be studying。"
+    },
+    {
+      "code": "u2.03",
+      "stem": "When the upgrade ends tomorrow, the cars ____ themselves on the roads.",
+      "options": [
+        "will drive",
+        "are driving",
+        "have driven",
+        "will be driving"
+      ],
+      "answer_index": 3,
+      "explanation": "when the upgrade ends tomorrow 指将来某刻进行中 → will be driving。"
+    }
+  ]
+}

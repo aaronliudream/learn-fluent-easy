@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "topic": "Looking into the Future",
+  "source": "人教版2019选择性必修一 Unit 2 同主题完形(我的智能闹钟/学校的机器人助手/语音控制的厨房/未来的医生/雨夜的智能伞/给未来自己的信)。用词限本单元/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My Smart Alarm Clock",
+      "text": "Last week my parents bought a smart alarm clock, and it has completely changed my morning (1)____. Instead of ringing loudly, it slowly turns up the light, so I wake up feeling (2)____ rather than shocked. While I am still in bed, it quietly tells me the weather (3)____ for the day. If the roads are busy, it will (4)____ me to leave home a little earlier. The clock has learned my (5)____, so it knows that I like soft music in the morning. It is also connected to the kitchen, and it can (6)____ on the coffee machine before I get up. At first I thought such a clock was just a silly (7)____, but now I find it really (8)____. It saves me time and helps me feel (9)____ during the day. Thanks to this little machine, I am never (10)____ for school any more.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "routine",
+            "garden",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "morning routine 早晨的日常。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "angry",
+            "calm",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 1,
+          "explanation": "wake up feeling calm 醒来感到平静。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "song",
+            "forecast",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "weather forecast 天气预报。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "warn"
+          ],
+          "answer_index": 3,
+          "explanation": "warn me to leave earlier 提醒我早点出门。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "preferences",
+            "mistakes",
+            "buildings",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "learned my preferences 了解我的偏好。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "break",
+            "switch",
+            "throw",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "switch on the coffee machine 打开咖啡机。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "garden",
+            "fantasy",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a silly fantasy 愚蠢的幻想。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "wrong",
+            "late",
+            "useful"
+          ],
+          "answer_index": 3,
+          "explanation": "really useful 真的有用。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "secure",
+            "hungry",
+            "tired",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "feel secure 感到安心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "rich",
+            "late",
+            "busy",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "never late for school 上学再没迟到。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Robot Helper at School",
+      "text": "This year our school got its first robot (1)____, and the students love it. The robot can move around the library and help us (2)____ the books we need. If you ask a question, it will give you a quick and (3)____ answer in a friendly voice. It uses small (4)____ to know where people are, so it never bumps into anyone. Some teachers worried that the robot would (5)____ their jobs, but that did not happen. Instead, it does the boring (6)____ work, such as putting books back, so the teachers have more time to (7)____ us. At first a few students wanted to (8)____ the idea, but soon they changed their minds. Now the robot is the most popular (9)____ at school. In the future, we will probably be (10)____ together with such machines every day.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "helper",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "a robot helper 机器人助手。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eat",
+            "throw",
+            "sell",
+            "find"
+          ],
+          "answer_index": 3,
+          "explanation": "help us find the books 帮我们找书。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "relevant",
+            "empty",
+            "rude",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "a relevant answer 切题的回答。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "sensors",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "small sensors 小型传感器。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sing",
+            "open",
+            "take",
+            "wash"
+          ],
+          "answer_index": 2,
+          "explanation": "take their jobs 抢走他们的工作。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "happy",
+            "rich",
+            "polite",
+            "routine"
+          ],
+          "answer_index": 3,
+          "explanation": "the boring routine work 无聊的日常工作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "help",
+            "forget",
+            "lose",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "more time to help us 更多时间帮我们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "enjoy",
+            "resist",
+            "welcome",
+            "trust"
+          ],
+          "answer_index": 1,
+          "explanation": "resist the idea 抵制这个想法。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "market",
+            "helper",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "the most popular helper 最受欢迎的助手。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "losing",
+            "selling",
+            "hiding",
+            "working"
+          ],
+          "answer_index": 3,
+          "explanation": "be working together with such machines 和这些机器一起工作。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Kitchen That Listens",
+      "text": "My uncle's new kitchen can understand (1)____ commands, which still amazes me. When he wants the lights on, he just (2)____ aloud what he wants, and the kitchen will (3)____. He can ask it to warm the oven or play music while he cooks. The kitchen uses clever (4)____ to know when the food is ready, so nothing ever gets burned. If a water pipe starts to (5)____, the system will (6)____ the problem at once and send a (7)____ to his phone. My uncle says this technology is no longer a (8)____; it is part of everyday life. He believes that in the near future, most homes will be (9)____ such smart systems. For now, I just enjoy watching the kitchen do its work all by (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "voice",
+            "price",
+            "garden",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "voice commands 语音指令。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "eats",
+            "says",
+            "throws",
+            "sells"
+          ],
+          "answer_index": 1,
+          "explanation": "says aloud what he wants 把想做的事说出来。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sleep",
+            "cry",
+            "obey",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "the kitchen will obey 厨房会照做。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "songs",
+            "noises",
+            "sensors"
+          ],
+          "answer_index": 3,
+          "explanation": "clever sensors 灵敏的传感器。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "leak",
+            "sing",
+            "smile",
+            "dance"
+          ],
+          "answer_index": 0,
+          "explanation": "starts to leak 开始漏水。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "detect",
+            "forget",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "detect the problem 察觉问题。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "song",
+            "warning",
+            "game"
+          ],
+          "answer_index": 2,
+          "explanation": "send a warning 发出警告。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "shop",
+            "city",
+            "fantasy"
+          ],
+          "answer_index": 3,
+          "explanation": "no longer a fantasy 不再是幻想。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "using",
+            "losing",
+            "selling",
+            "hiding"
+          ],
+          "answer_index": 0,
+          "explanation": "be using such smart systems 使用这样的智能系统。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "someone",
+            "itself",
+            "nobody",
+            "anyone"
+          ],
+          "answer_index": 1,
+          "explanation": "all by itself 全靠自己。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Doctor of the Future",
+      "text": "In the future, going to see a doctor may be very (1)____ from today. You might not even leave your home. Instead, a small machine on your wrist will keep (2)____ track of your health all day long. If it (3)____ that something is wrong, it will (4)____ you a message at once. A doctor far away can then look at your information through a (5)____ link and decide what to do. For a serious or (6)____ illness, tiny robots might even be sent into your body to carry (7)____ to exactly the right place. Such treatment could (8)____ save many lives. Of course, this kind of care is still being (9)____, and we must make sure it is safe. (10)____, many doctors believe it will soon become a normal part of medicine.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "happy",
+            "rich",
+            "different",
+            "polite"
+          ],
+          "answer_index": 2,
+          "explanation": "very different from today 与今天大不相同。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "song",
+            "ticket",
+            "constant"
+          ],
+          "answer_index": 3,
+          "explanation": "keep constant track 持续追踪。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "detects",
+            "sells",
+            "eats",
+            "throws"
+          ],
+          "answer_index": 0,
+          "explanation": "if it detects something wrong 如果它察觉异常。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "lose",
+            "send",
+            "forget",
+            "sell"
+          ],
+          "answer_index": 1,
+          "explanation": "send you a message 给你发消息。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "happy",
+            "rich",
+            "remote",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "a remote link 远程连接。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "empty",
+            "polite",
+            "quiet",
+            "critical"
+          ],
+          "answer_index": 3,
+          "explanation": "a critical illness 重病。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "medicine",
+            "noise",
+            "price",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "carry medicine 携带药物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "never",
+            "potentially",
+            "hardly",
+            "seldom"
+          ],
+          "answer_index": 1,
+          "explanation": "potentially save many lives 可能挽救许多生命。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "tested",
+            "eaten"
+          ],
+          "answer_index": 2,
+          "explanation": "still being tested 仍在测试中。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Because",
+            "Although",
+            "Unless",
+            "Nevertheless"
+          ],
+          "answer_index": 3,
+          "explanation": "Nevertheless 尽管如此(句首副词)。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Smart Umbrella",
+      "text": "One rainy evening, my smart umbrella saved my day. Before I left the office, it checked the weather (1)____ and told me a storm was coming. As I walked outside, small (2)____ in the handle felt the wind and held the umbrella (3)____ against it, so it never turned inside out. When the rain grew heavy, a soft light came on the (4)____ I needed it, helping me see the dark path. The umbrella was also connected to my phone, so it could (5)____ me if I was about to leave it behind on the bus. My friends thought a clever umbrella was just a (6)____ at first, but they soon wanted one too. It is amazing how a (7)____ object can become so useful. In the near future, we will probably be (8)____ many such smart things every day. They make life safer, more (9)____, and a little more fun. For me, the rainy walk home was no longer a (10)____ at all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "forecast",
+            "garden",
+            "price",
+            "shop"
+          ],
+          "answer_index": 0,
+          "explanation": "weather forecast 天气预报。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "sensors",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "small sensors 小型传感器。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "empty",
+            "late",
+            "secure",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "held it secure 把它牢牢撑稳。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "instant"
+          ],
+          "answer_index": 3,
+          "explanation": "the instant I needed it 我一需要它就……。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "warn",
+            "forget",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "warn me 提醒我。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "fantasy",
+            "city",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "just a fantasy 不过是幻想。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "angry",
+            "simple",
+            "rude"
+          ],
+          "answer_index": 2,
+          "explanation": "a simple object 一个简单的物件。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "losing",
+            "selling",
+            "hiding",
+            "using"
+          ],
+          "answer_index": 3,
+          "explanation": "be using many such smart things 使用许多这样的智能物品。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "comfortable",
+            "empty",
+            "wrong",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "more comfortable 更舒适。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "holiday",
+            "trouble",
+            "song",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "no longer a trouble 不再是麻烦。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Letter to My Future Self",
+      "text": "Dear future me, I am writing this letter to (1)____ what your life might be like. By the time you read it, you will probably be (2)____ in a smart home that cooks and cleans by itself. I (3)____ that cars will drive themselves, so you will never need a (4)____ licence. Maybe you will have a job that does not even (5)____ today, working side by side with clever machines. I hope you have not learned to (6)____ change, but have chosen to welcome it instead. Remember that more technology does not always bring more (7)____; what matters is how wisely you use it. Keep a strong (8)____ on family and friends, just as we do now. I am a little (9)____ about the future, but mostly I feel excited. (10)____, I believe the years ahead will be full of fresh chances. Good luck — I am sure you will do well!",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "predict",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "predict what your life might be like 预测你的生活。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "losing",
+            "hiding",
+            "living"
+          ],
+          "answer_index": 3,
+          "explanation": "be living in a smart home 住在智能家居里。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "forecast",
+            "forget",
+            "refuse",
+            "deny"
+          ],
+          "answer_index": 0,
+          "explanation": "I forecast that 我预测。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "song",
+            "driver's",
+            "price",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a driver's licence 驾照。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "cry",
+            "exist",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "a job that does not exist today 今天还不存在的工作。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "enjoy",
+            "welcome",
+            "trust",
+            "resist"
+          ],
+          "answer_index": 3,
+          "explanation": "learned to resist change 学会抵制改变。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "happiness",
+            "noise",
+            "price",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "more happiness 更多幸福。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "emphasis",
+            "garden",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "keep a strong emphasis on 重视。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "rich",
+            "late",
+            "worried",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "a little worried 有点担心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "Because",
+            "Although",
+            "Unless",
+            "Nevertheless"
+          ],
+          "answer_index": 3,
+          "explanation": "Nevertheless 尽管如此(句首副词)。"
+        }
+      ]
+    }
+  ]
+}

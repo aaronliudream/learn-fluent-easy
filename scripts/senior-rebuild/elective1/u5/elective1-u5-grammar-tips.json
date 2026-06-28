@@ -1,0 +1,37 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "动名词(-ing form)作主语 速查",
+    "intro": "把一个动作'名词化'放到句首当主语,就用动名词(doing)。动名词作主语时看作单数,谓语用 is/was/feeds 等单数形式。常与 it 形式主语、no use/no point 等固定句式搭配。",
+    "table": {
+      "headers": ["用法", "例句 / 说明"],
+      "rows": [
+        ["动名词直接作主语", "Growing rice feeds millions.(谓语用单数 feeds)"],
+        ["it 作形式主语", "It is no use crying over spilt milk.(真正主语是 crying)"],
+        ["no point / waste of time", "There is no point (in) waiting. / It's a waste of time complaining."],
+        ["复合结构作主语", "Tom's / His coming made us happy.(所有格 + doing)"],
+        ["动名词 vs 不定式", "动名词主语=泛指/一般;不定式主语=具体/将来(常用 it 形式)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动名词作主语 → 谓语永远用单数", "mark": "Reading widens our minds.（widens 单数）" },
+      { "rule": "It is no use / no good doing … 只能跟动名词,不能跟不定式", "mark": "It is no use crying √ / to cry ×" },
+      { "rule": "There is no point (in) doing …;a waste of time doing …", "mark": "no point waiting √" },
+      { "rule": "动名词前可加名词所有格/形容词性物主代词作逻辑主语", "mark": "his coming / Tom's leaving" }
+    ],
+    "why": [
+      "动名词兼具'动词'(有动作含义、可带宾语)和'名词'(可作主语)的双重身份,所以能稳稳地占住句首主语的位置;而 does/done 没有名词性,不能作主语。"
+    ],
+    "gaokaoPoints": [
+      "句首主语位的填空:动名词 vs 动词原形/第三人称单数/过去分词——只有动名词能作主语,谓语用单数。",
+      "固定句式 It is no use/no good doing、There is no point (in) doing、a waste of time doing——高频考动名词。",
+      "动名词主语(泛指、一般)与不定式主语(具体、将来,常用 it 形式主语)的选用对照。"
+    ],
+    "examVsReal": [
+      { "exam": "Smoking is bad for your health.（考试/正式)", "real": "Smoking? Bad for you.", "note": "考试用完整动名词主语句;口语里常省略谓语、用碎句" },
+      { "exam": "It is no use crying over spilt milk.（书面谚语)", "real": "No point crying about it.", "note": "口语里 It is 常省略,直接 No point doing" }
+    ]
+  }
+}

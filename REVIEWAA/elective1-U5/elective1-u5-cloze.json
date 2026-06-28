@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Working the Land",
+  "source": "人教版2019选择性必修一 Unit 5 同主题完形(随爷爷学种地/一粒米的故事/我爱土壤/有机市场的小误会/提高收成/杂交水稻改变村庄)。用词限 U5/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Work the Land",
+      "text": "Last summer I stayed with my grandfather and learned how to (1)____ the land. At first I thought farming was easy, but I was (2)____. Every morning we went out to the fields before the sun was high. Grandpa taught me that good crops need rich, clean (3)____. He never used strong chemicals, because he said they could (4)____ the land and our health. Instead, he used animal waste as natural (5)____. He also told me to (6)____ the kind of crop in each field every year, so that the ground stayed rich in minerals. It was hard work, and my back often (7)____. But slowly I began to (8)____ how much care farming needs. By the end of the summer, I felt (9)____ of the vegetables we had grown together. Now I understand why Grandpa says that every (10)____ of rice is the result of hard work.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "work",
+            "sell",
+            "eat",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "work the land 耕作土地。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "happy",
+            "wrong",
+            "late",
+            "rich"
+          ],
+          "answer_index": 1,
+          "explanation": "I was wrong 我错了。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "noise",
+            "price",
+            "soil",
+            "music"
+          ],
+          "answer_index": 2,
+          "explanation": "rich, clean soil 肥沃洁净的土壤。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "clean",
+            "build",
+            "help",
+            "harm"
+          ],
+          "answer_index": 3,
+          "explanation": "harm the land 损害土地。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "fertiliser",
+            "machine",
+            "weather",
+            "money"
+          ],
+          "answer_index": 0,
+          "explanation": "natural fertiliser 天然肥料。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "change",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "change the crop 更换作物。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sang",
+            "smiled",
+            "hurt",
+            "slept"
+          ],
+          "answer_index": 2,
+          "explanation": "my back often hurt 我的背常常疼。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "waste",
+            "forget",
+            "ignore",
+            "appreciate"
+          ],
+          "answer_index": 3,
+          "explanation": "appreciate 体会到。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "proud",
+            "afraid",
+            "bored",
+            "angry"
+          ],
+          "answer_index": 0,
+          "explanation": "felt proud of 为……自豪。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "grain",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "every grain of rice 每一粒米。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Story of One Grain",
+      "text": "Have you ever thought about where the rice on your (1)____ comes from? Each grain begins as a tiny seed in the (2)____. The farmer plants it in spring and then waits for many (3)____ of hard work. The young plants need sunlight, clean water and rich (4)____ to grow well. Insects and disease can (5)____ a whole field, so the farmer must watch the crop with great care. When autumn comes, the rice turns golden and is ready to (6)____. The farmer collects every (7)____ by hand or by machine, and not a single one should be (8)____. Thanks to scientists like Yuan Longping, today's rice can give a much higher (9)____ than the rice of the past. So the next time you eat, remember that a simple bowl of rice carries the (10)____ effort of many people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "shoe",
+            "phone",
+            "plate",
+            "book"
+          ],
+          "answer_index": 2,
+          "explanation": "rice on your plate 盘中的米饭。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sky",
+            "shop",
+            "city",
+            "soil"
+          ],
+          "answer_index": 3,
+          "explanation": "a seed in the soil 土里的种子。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "months",
+            "coins",
+            "songs",
+            "games"
+          ],
+          "answer_index": 0,
+          "explanation": "many months of hard work 数月的辛劳。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "noise",
+            "soil",
+            "music",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "rich soil 肥沃的土壤。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "build",
+            "clean",
+            "destroy",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "destroy a whole field 毁掉整片田。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "leave",
+            "lose",
+            "harvest"
+          ],
+          "answer_index": 3,
+          "explanation": "ready to harvest 可以收割。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "grain",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "collects every grain 收下每一粒。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "grown",
+            "wasted",
+            "kept",
+            "saved"
+          ],
+          "answer_index": 1,
+          "explanation": "should be wasted 不该浪费。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "price",
+            "yield",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "a higher yield 更高的产量。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "free",
+            "lucky",
+            "hard"
+          ],
+          "answer_index": 3,
+          "explanation": "the hard effort 辛勤的努力。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Why I Love the Soil",
+      "text": "My family is the one (1)____ has farmed this land for three generations. My grandfather often says that the soil is (2)____ to everything we eat. When I was small, I did not (3)____ why he spent so much time in the fields. To me, farming looked dirty and (4)____. But one spring he let me plant a few seeds, and I watched them grow day by (5)____. Slowly I came to (6)____ the magic of the land. I learned that healthy soil is full of (7)____ that plants need to grow strong. I also learned that using too many chemicals can (8)____ the very ground we depend on. Now, working in the fields no longer feels (9)____ to me; it feels like a gift. Whenever I hold a handful of dark, rich earth, I feel (10)____ to be part of such an old and honest way of life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "who",
+            "where",
+            "when",
+            "why"
+          ],
+          "answer_index": 0,
+          "explanation": "the one who 指人作主语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "empty",
+            "essential",
+            "salty",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "essential to 对……极其重要。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "lose",
+            "understand",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "did not understand 不明白。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "clean",
+            "easy",
+            "bright",
+            "boring"
+          ],
+          "answer_index": 3,
+          "explanation": "dirty and boring 又脏又无聊。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "day",
+            "price",
+            "noise",
+            "city"
+          ],
+          "answer_index": 0,
+          "explanation": "day by day 一天天地。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "waste",
+            "see",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "came to see 渐渐看懂。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "noise",
+            "prices",
+            "minerals",
+            "games"
+          ],
+          "answer_index": 2,
+          "explanation": "full of minerals 富含矿物质。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "help",
+            "clean",
+            "build",
+            "harm"
+          ],
+          "answer_index": 3,
+          "explanation": "harm the ground 损害土地。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hard",
+            "free",
+            "rich",
+            "late"
+          ],
+          "answer_index": 0,
+          "explanation": "no longer feels hard 不再觉得辛苦。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "proud",
+            "sorry",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "feel proud 感到自豪。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Mix-up at the Market",
+      "text": "Last week my friend Tom and I went to a (1)____ to buy some vegetables. Tom picked up some bright, shiny tomatoes, but I told him to (2)____. \"These look beautiful,\" I said, \"but they were grown with a lot of (3)____.\" Tom was surprised. He thought beautiful vegetables were always the (4)____ ones. I explained that crops grown too (5)____ are often full of water but poor in nutrition. They may look good, yet they often have less (6)____ as well. Then I led him to a small corner that sold (7)____ vegetables, grown without any chemicals. \"These are not as shiny,\" I said, \"but they are (8)____ in minerals and much safer to eat.\" Tom decided to (9)____ a few and try them at home. That evening he sent me a message: the tomatoes were the most (10)____ ones he had ever tasted!",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stadium",
+            "library",
+            "market",
+            "station"
+          ],
+          "answer_index": 2,
+          "explanation": "go to a market 去市场。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "run",
+            "sleep",
+            "leave",
+            "wait"
+          ],
+          "answer_index": 3,
+          "explanation": "told him to wait 让他等一下。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "chemicals",
+            "songs",
+            "prices",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "grown with chemicals 用化学品种的。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "worst",
+            "best",
+            "cheapest",
+            "smallest"
+          ],
+          "answer_index": 1,
+          "explanation": "the best ones 最好的。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slowly",
+            "late",
+            "fast",
+            "high"
+          ],
+          "answer_index": 2,
+          "explanation": "grown too fast 长得太快。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "money",
+            "noise",
+            "flavour"
+          ],
+          "answer_index": 3,
+          "explanation": "less flavour 味道更淡。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "organic",
+            "foreign",
+            "broken",
+            "frozen"
+          ],
+          "answer_index": 0,
+          "explanation": "organic vegetables 有机蔬菜。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "poor",
+            "rich",
+            "weak",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "rich in minerals 富含矿物质。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hide",
+            "drop",
+            "buy",
+            "sell"
+          ],
+          "answer_index": 2,
+          "explanation": "buy a few 买几个。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "ugly",
+            "empty",
+            "nutritious"
+          ],
+          "answer_index": 3,
+          "explanation": "the most nutritious 最有营养的(此处指美味营养)。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Bringing in a Better Harvest",
+      "text": "When Mr Li took over the family farm, the (1)____ were small and the soil was poor. He knew he could not just hope for a better (2)____; he had to change the way he farmed. First, he stopped using so many chemical (3)____, which had been killing both harmful and helpful insects. Then he started to (4)____ the kind of crop in each field every year. One year he grew wheat, and the next he grew (5)____, which put important minerals back into the (6)____. He also chose new hybrid seeds that could (7)____ a much higher yield. The first season was hard, and many neighbours did not (8)____ that his plan would work. But by autumn his fields were full of healthy crops. His success slowly (9)____ other farmers in the village to try the same methods. Today the whole area produces far more (10)____ than it did before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "fields",
+            "shops",
+            "rivers",
+            "roads"
+          ],
+          "answer_index": 0,
+          "explanation": "the fields were small 田地很小。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "harvest",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "a better harvest 更好的收成。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "songs",
+            "tickets",
+            "pesticides",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "chemical pesticides 化学杀虫剂。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "forget",
+            "lose",
+            "sell",
+            "change"
+          ],
+          "answer_index": 3,
+          "explanation": "change the kind of crop 更换作物种类。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "beans",
+            "stones",
+            "lamps",
+            "coins"
+          ],
+          "answer_index": 0,
+          "explanation": "grew beans 种豆子(豆类还田增肥)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sky",
+            "soil",
+            "shop",
+            "city"
+          ],
+          "answer_index": 1,
+          "explanation": "back into the soil 回到土壤里。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "break",
+            "give",
+            "hide"
+          ],
+          "answer_index": 2,
+          "explanation": "give a higher yield 带来更高产量。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "lose",
+            "forget",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "did not believe 不相信。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "encouraged",
+            "stopped",
+            "frightened",
+            "blamed"
+          ],
+          "answer_index": 0,
+          "explanation": "encouraged others 鼓励了别人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "food",
+            "rubbish",
+            "smoke"
+          ],
+          "answer_index": 1,
+          "explanation": "produces far more food 产出更多粮食。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "How Hybrid Rice Changed a Village",
+      "text": "My grandmother still remembers the years (1)____ our village often went hungry. The fields were the same size as today, but the (2)____ was very low. Sometimes there was a serious (3)____ of food, and people worried all winter. Then, in the 1970s, scientists developed a new kind of (4)____ rice. It could give a much higher yield than the (5)____ crops the village had grown for centuries. At first the farmers were not (6)____ that the new seeds would work, but they decided to (7)____ them anyway. To everyone's surprise, the harvest that autumn was the biggest the village had ever (8)____. Year after year, the new rice helped families (9)____ their output and finally escape hunger. My grandmother says that one good idea, turned into (10)____, can change the life of a whole village.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "where",
+            "why",
+            "when",
+            "which"
+          ],
+          "answer_index": 2,
+          "explanation": "the years when 时间先行词用 when。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "price",
+            "weather",
+            "yield"
+          ],
+          "answer_index": 3,
+          "explanation": "the yield was low 产量很低。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shortage",
+            "song",
+            "game",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a serious shortage 严重短缺。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "frozen",
+            "hybrid",
+            "broken",
+            "foreign"
+          ],
+          "answer_index": 1,
+          "explanation": "hybrid rice 杂交水稻。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "salty",
+            "urban",
+            "conventional",
+            "organic"
+          ],
+          "answer_index": 2,
+          "explanation": "conventional crops 常规作物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "afraid",
+            "sorry",
+            "angry",
+            "convinced"
+          ],
+          "answer_index": 3,
+          "explanation": "not convinced 没被说服。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "try",
+            "lose",
+            "hide",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "try them 试用它们。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "lost",
+            "seen",
+            "sold",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "the biggest harvest the village had ever seen 见过的最大丰收。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "waste",
+            "lose",
+            "expand",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "expand their output 扩大产量。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "noise",
+            "trouble",
+            "danger",
+            "reality"
+          ],
+          "answer_index": 3,
+          "explanation": "turned into reality 变成现实。"
+        }
+      ]
+    }
+  ]
+}

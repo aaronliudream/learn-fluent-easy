@@ -3369,88 +3369,298 @@
             "book": "elective1",
             "title": "People of Achievement",
             "cn": "杰出人物",
-            "emoji": "🏆",
-            "available": false,
+            "emoji": "🏅",
+            "available": true,
             "vocabulary": [
               {
-                "en": "PUTONG",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "achievement",
+                "cn": "成就",
+                "emoji": "📦"
               },
               {
-                "en": "GAOZHONG",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "physiology",
+                "cn": "生理学",
+                "emoji": "📦"
               },
               {
-                "en": "JIAOKESHU",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "crucial",
+                "cn": "至关重要的",
+                "emoji": "🔤"
               },
               {
-                "en": "YINGYU",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "malaria",
+                "cn": "疟疾",
+                "emoji": "📦"
               },
               {
-                "en": "Iinndddd",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "vital",
+                "cn": "必不可少的",
+                "emoji": "🔤"
               },
               {
-                "en": "ENGLISH",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "committed",
+                "cn": "尽心尽力的",
+                "emoji": "🔤"
               },
               {
-                "en": "Artificial",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "objective",
+                "cn": "目标",
+                "emoji": "🔤"
               },
               {
-                "en": "Intelligence",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "botanical",
+                "cn": "植物学的",
+                "emoji": "🔤"
               },
               {
-                "en": "FUTURE",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "evaluate",
+                "cn": "评价",
+                "emoji": "🏃"
               },
               {
-                "en": "Cloning",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "distinct",
+                "cn": "清晰的",
+                "emoji": "🔤"
               },
               {
-                "en": "Leading",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "extract",
+                "cn": "提取物",
+                "emoji": "🏃"
               },
               {
-                "en": "Reading",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "boil",
+                "cn": "(使)沸腾",
+                "emoji": "🏃"
+              },
+              {
+                "en": "liquid",
+                "cn": "液体",
+                "emoji": "🔤"
+              },
+              {
+                "en": "obtain",
+                "cn": "(尤指经努力)获得",
+                "emoji": "🏃"
+              },
+              {
+                "en": "substance",
+                "cn": "物质",
+                "emoji": "📦"
+              },
+              {
+                "en": "insist",
+                "cn": "坚持",
+                "emoji": "🏃"
+              },
+              {
+                "en": "defeat",
+                "cn": "击败",
+                "emoji": "🏃"
+              },
+              {
+                "en": "property",
+                "cn": "性质",
+                "emoji": "📦"
+              },
+              {
+                "en": "gradually",
+                "cn": "逐渐地",
+                "emoji": "🏃"
+              },
+              {
+                "en": "genius",
+                "cn": "天才",
+                "emoji": "📦"
+              },
+              {
+                "en": "gentle",
+                "cn": "温柔的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "numerous",
+                "cn": "众多的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "theory",
+                "cn": "理论",
+                "emoji": "📦"
+              },
+              {
+                "en": "formula",
+                "cn": "公式",
+                "emoji": "📦"
+              },
+              {
+                "en": "passion",
+                "cn": "酷爱",
+                "emoji": "📦"
+              },
+              {
+                "en": "doctorate",
+                "cn": "博士学位",
+                "emoji": "📦"
+              },
+              {
+                "en": "extraordinary",
+                "cn": "不一般的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "circumstance",
+                "cn": "条件",
+                "emoji": "📦"
+              },
+              {
+                "en": "consequence",
+                "cn": "结果",
+                "emoji": "📦"
+              },
+              {
+                "en": "flee",
+                "cn": "迅速离开",
+                "emoji": "🏃"
+              },
+              {
+                "en": "institution",
+                "cn": "社会公共机构",
+                "emoji": "📦"
+              },
+              {
+                "en": "remarkable",
+                "cn": "非凡的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "encounter",
+                "cn": "偶然碰到",
+                "emoji": "🏃"
+              },
+              {
+                "en": "mourn",
+                "cn": "哀悼",
+                "emoji": "🏃"
+              },
+              {
+                "en": "novelist",
+                "cn": "小说家",
+                "emoji": "📦"
+              },
+              {
+                "en": "novel",
+                "cn": "(长篇)小说",
+                "emoji": "📦"
+              },
+              {
+                "en": "found",
+                "cn": "创建",
+                "emoji": "🏃"
+              },
+              {
+                "en": "professor",
+                "cn": "教授",
+                "emoji": "📦"
+              },
+              {
+                "en": "scientific",
+                "cn": "科学(上)的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "conclusion",
+                "cn": "结论",
+                "emoji": "📦"
+              },
+              {
+                "en": "infer",
+                "cn": "推断",
+                "emoji": "🏃"
+              },
+              {
+                "en": "draft",
+                "cn": "草稿",
+                "emoji": "🏃"
+              },
+              {
+                "en": "device",
+                "cn": "方法",
+                "emoji": "📦"
+              },
+              {
+                "en": "patent",
+                "cn": "专利",
+                "emoji": "🔤"
+              },
+              {
+                "en": "gain",
+                "cn": "获得",
+                "emoji": "🏃"
+              },
+              {
+                "en": "courage",
+                "cn": "勇气",
+                "emoji": "📦"
+              },
+              {
+                "en": "honour",
+                "cn": "荣誉",
+                "emoji": "🏃"
+              },
+              {
+                "en": "contribution",
+                "cn": "贡献",
+                "emoji": "📦"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Who Do You Admire?",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss People of Achievement.",
-                    "cn": "我们来讨论People of Achievement。"
+                    "text": "Who is the person you admire most?",
+                    "cn": "你最敬佩的人是谁?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned PUTONG today.",
-                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                    "text": "Tu Youyou, who discovered a new medicine for malaria.",
+                    "cn": "屠呦呦,她发现了一种治疗疟疾的新药。"
                   },
                   {
                     "role": "A",
-                    "text": "And GAOZHONG is important too.",
-                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                    "text": "Why do you admire her so much?",
+                    "cn": "你为什么这么敬佩她?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Because she never gave up, even after many failures.",
+                    "cn": "因为即使屡次失败,她也从不放弃。"
+                  }
+                ]
+              },
+              {
+                "title": "What Makes a Person Great",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "What do you think makes a person great?",
+                    "cn": "你觉得是什么让一个人伟大?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Not fame or money, but caring about others.",
+                    "cn": "不是名利,而是关心他人。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "I agree. Courage matters too.",
+                    "cn": "我同意。勇气也很重要。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and never giving up when things are hard.",
+                    "cn": "对,还有遇到困难时永不放弃。"
                   }
                 ]
               }
@@ -3459,7 +3669,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "48个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -3497,6 +3707,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3521,8 +3739,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "非谓语动词",
-            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarTitle": "非限制性定语从句",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
@@ -3574,225 +3792,264 @@
               }
             ],
             "reading": {
-              "passage": "Find descriptive words 2 Which is more important for making a great discovery, talent or effort? Pay attention to the descriptive words in a passage. These will help you form a better impression 2 Scan the text and find descriptive words about of the subject described in the passage. TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize for Physiology or Medicine has been awarded to Tu Youyou (co-winner), whose research led to the discovery of artemisinin, a crucial new treatment for malaria. Artemisinin has saved hundreds of thousands of lives, and has led to improved health for millions of people. Over 200 million people around the world get malaria each year, and about 600,000 die from it. Artemisinin has become a vital part of the treatment for malaria, and is thought to save 100,000 lives a year in Africa alone. Tu Youyou, a committed and patient scientist, was born in Ningbo, China, on 30 December 1930, and graduated from Peking University Medical School in 1955.",
-              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "passage": "Tu Youyou was a patient scientist who never gave up. After failing more than a hundred and ninety times, her team finally found a new medicine for malaria. When she won the Nobel Prize, she shared the honour with her whole team.",
+              "passageCn": "屠呦呦是一位有耐心、从不放弃的科学家。在失败190多次后,她的团队终于找到了一种治疗疟疾的新药。当她获得诺贝尔奖时,她把荣誉与整个团队分享。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Find descriptive words 2 Which is more important f...\"",
+                  "q": "What kind of scientist was Tu Youyou?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "Find descriptive words 2 Which is more important for making a great di",
-                    "Unrelated."
+                    "Patient and never giving up.",
+                    "Lazy and careless.",
+                    "Famous but unkind.",
+                    "Rich but quiet."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"Pay attention to the descriptive words in a passag...\"",
+                  "q": "What did she do when she won the prize?",
                   "opts": [
-                    "Pay attention to the descriptive words in a passage.",
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "Not stated."
+                    "She kept the honour for herself.",
+                    "She shared the honour with her team.",
+                    "She refused the prize.",
+                    "She stopped working."
                   ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"These will help you form a better impression 2 Sca...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "Not stated.",
-                    "These will help you form a better impression 2 Scan the text and find ",
-                    "Opposite meaning."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This ...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Not stated.",
-                    "TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize f"
-                  ],
-                  "answer": 3,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
-              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write about a person of achievement you admire. Say who the person is, why he or she is great, and how you feel.",
+              "promptCn": "写一位你敬佩的杰出人物:此人是谁、为何伟大、你的感受(试着用非限制性定语从句 …, who/which…)。",
+              "sampleWords": [
+                "admire",
+                "achievement",
+                "committed",
+                "courage",
+                "honour",
+                "contribution",
+                "succeed",
+                "give up",
+                "great",
+                "patient"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「PUTONG」的意思是？",
+                "q": "His research played a ____ role in treating malaria.（至关重要的)",
                 "opts": [
-                  "选项1",
-                  "选项2",
-                  "选择性必修第一册 课文词汇",
-                  "选项3"
+                  "crucial",
+                  "boring",
+                  "empty",
+                  "quiet"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「GAOZHONG」的意思是？",
+                "q": "She would not ____ defeat after many failures.（认输:acknowledge/accept defeat)",
                 "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
+                  "enjoy",
+                  "accept",
+                  "buy",
+                  "open"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「JIAOKESHU」的意思是？",
+                "q": "He made numerous ____ to modern physics.（贡献)",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
+                  "prices",
+                  "noises",
+                  "contributions",
+                  "gardens"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "As a young man, Lu Xun decided to ____ medical school.（退出)",
+                "opts": [
+                  "sell",
+                  "sleep",
+                  "shout",
+                  "quit"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「YINGYU」的意思是？",
+                "q": "Tu Youyou, ____ discovered artemisinin, won the Nobel Prize.",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "who",
+                  "which",
+                  "whose",
+                  "that"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Iinndddd」的意思是？",
+                "q": "The book, ____ was published in 2015, tells Einstein's story.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
+                  "who",
+                  "which",
+                  "where",
+                  "that"
+                ],
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "She failed more than 190 times, ____ would have stopped most people.",
+                "opts": [
+                  "who",
+                  "whom",
+                  "which",
+                  "that"
+                ],
+                "answer": 2,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Einstein, ____ hair often stood on end, looked a little odd.",
+                "opts": [
+                  "who",
+                  "which",
+                  "where",
+                  "whose"
                 ],
                 "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「ENGLISH」的意思是？",
+                "q": "听录音选出正确的中文意思。",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "她照料了受伤的士兵。",
+                  "她卖掉了医院。",
+                  "她忘记了士兵。",
+                  "她从不工作。"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "听力",
+                "dim": "listening",
+                "audio": "She cared for the wounded soldiers."
               },
               {
-                "q": "「Artificial」的意思是？",
+                "q": "听录音选出正确的中文意思。",
                 "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Intelligence」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项3",
-                  "选项2",
-                  "选项1"
+                  "他获得了物理学博士学位。",
+                  "他从未上过大学。",
+                  "他讨厌物理。",
+                  "他是一名画家。"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「杰出人物」相关词是？",
-                "opts": [
-                  "Leading",
-                  "Artificial",
-                  "ENGLISH",
-                  "PUTONG"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "听力",
+                "dim": "listening",
+                "audio": "He earned a doctorate in physics."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Tu Youyou discovered a new medicine for malaria.",
                 "opts": [
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Pay attention to the descriptive words in a passage.",
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "屠呦呦发现了一种治疗疟疾的新药。",
+                  "屠呦呦是一位老师。",
+                  "屠呦呦放弃了她的研究。",
+                  "屠呦呦写了一本小说。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Einstein was not only a genius but also a kind man.",
                 "opts": [
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Pay attention to the descriptive words in a passage.",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "爱因斯坦只是个普通人。",
+                  "爱因斯坦不仅是天才,也是个善良的人。",
+                  "爱因斯坦从不帮助别人。",
+                  "爱因斯坦是一名医生。"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Florence Nightingale founded modern nursing.",
+                "opts": [
+                  "南丁格尔是一名科学家。",
+                  "南丁格尔害怕生病的人。",
+                  "南丁格尔创立了现代护理学。",
+                  "南丁格尔住在中国。"
                 ],
                 "answer": 2
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Zhong Nanshan stayed calm and told people the truth.",
                 "opts": [
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp",
-                  "Pay attention to the descriptive words in a passage.",
-                  "These will help you form a better impression 2 Scan the text and find de"
+                  "钟南山躲了起来。",
+                  "钟南山离开了国家。",
+                  "钟南山什么也没说。",
+                  "钟南山保持冷静并告诉人们真相。"
                 ],
                 "answer": 3
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "She never gave up after failing many times.",
                 "opts": [
-                  "Pay attention to the descriptive words in a passage.",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "她屡次失败后从不放弃。",
+                  "她第一次失败就放弃了。",
+                  "她从来没有失败过。",
+                  "她不喜欢工作。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "We should become a person of value, not just a person of success.",
                 "opts": [
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Over 200 million people around the world get malaria each year, and abou",
-                  "Pay attention to the descriptive words in a passage."
+                  "我们应该只追求金钱。",
+                  "我们应该做有价值的人,而非只追求成功。",
+                  "我们应该出名。",
+                  "我们应该多休息。"
                 ],
-                "answer": 2
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "Wu Mengchao was a Chinese doctor who kept performing difficult operations even when he was over ninety years old. He believed that as long as his hands were steady, he should keep helping his patients. Many young doctors looked up to him, not only for his great skill but also for his deep love of his work.",
+              "questions": [
+                {
+                  "q": "What was unusual about Wu Mengchao as a doctor?",
+                  "options": [
+                    "He stopped working when he was young.",
+                    "He still did hard operations in his nineties.",
+                    "He never treated any patients.",
+                    "He only taught and never operated."
+                  ],
+                  "answer": "B",
+                  "explanation": "原文 'kept performing difficult operations even when he was over ninety years old' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "Why did young doctors look up to him?",
+                  "options": [
+                    "Because he was very rich.",
+                    "Because he was famous on television.",
+                    "Because of his great ability and his strong passion for his job.",
+                    "Because he gave them money."
+                  ],
+                  "answer": "C",
+                  "explanation": "末句 'not only for his great skill but also for his deep love of his work'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "e1u1.01",
+              "e1u1.02",
+              "e1u1.03"
             ]
           },
           {
@@ -3803,87 +4060,297 @@
             "title": "Looking into the Future",
             "cn": "展望未来",
             "emoji": "🔮",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Discovery",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "predict",
+                "cn": "预测",
+                "emoji": "🏃"
               },
               {
-                "en": "Talent",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "prediction",
+                "cn": "预测",
+                "emoji": "📦"
               },
               {
-                "en": "Effort",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "forecast",
+                "cn": "预测",
+                "emoji": "🏃"
               },
               {
-                "en": "Attention",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "prospect",
+                "cn": "可能性",
+                "emoji": "📦"
               },
               {
-                "en": "Passage",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "potential",
+                "cn": "可能的",
+                "emoji": "🔤"
               },
               {
-                "en": "Form",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "potentially",
+                "cn": "潜在地",
+                "emoji": "🏃"
               },
               {
-                "en": "Better",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "innovation",
+                "cn": "创新",
+                "emoji": "📦"
               },
               {
-                "en": "Impression",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "integrate",
+                "cn": "(使)合并",
+                "emoji": "🏃"
               },
               {
-                "en": "Scan",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "integrated",
+                "cn": "各部分密切协调的",
+                "emoji": "🔤"
               },
               {
-                "en": "Text",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "efficient",
+                "cn": "效率高的",
+                "emoji": "🔤"
               },
               {
-                "en": "Subject",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "constant",
+                "cn": "不断的",
+                "emoji": "🔤"
               },
               {
-                "en": "Described",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "critical",
+                "cn": "严重的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "detect",
+                "cn": "发现",
+                "emoji": "🏃"
+              },
+              {
+                "en": "sensor",
+                "cn": "传感器",
+                "emoji": "📦"
+              },
+              {
+                "en": "switch",
+                "cn": "开关",
+                "emoji": "🏃"
+              },
+              {
+                "en": "secure",
+                "cn": "安全的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "security",
+                "cn": "保护措施",
+                "emoji": "📦"
+              },
+              {
+                "en": "remote",
+                "cn": "远程的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "routine",
+                "cn": "常规",
+                "emoji": "🔤"
+              },
+              {
+                "en": "preference",
+                "cn": "爱好",
+                "emoji": "📦"
+              },
+              {
+                "en": "obey",
+                "cn": "服从",
+                "emoji": "🏃"
+              },
+              {
+                "en": "command",
+                "cn": "指令",
+                "emoji": "🏃"
+              },
+              {
+                "en": "leak",
+                "cn": "漏",
+                "emoji": "🏃"
+              },
+              {
+                "en": "wire",
+                "cn": "电线",
+                "emoji": "🏃"
+              },
+              {
+                "en": "wiring",
+                "cn": "电线线路",
+                "emoji": "📦"
+              },
+              {
+                "en": "warning",
+                "cn": "警告",
+                "emoji": "📦"
+              },
+              {
+                "en": "fantasy",
+                "cn": "幻想",
+                "emoji": "📦"
+              },
+              {
+                "en": "luxury",
+                "cn": "奢华",
+                "emoji": "📦"
+              },
+              {
+                "en": "career",
+                "cn": "职业",
+                "emoji": "📦"
+              },
+              {
+                "en": "occupation",
+                "cn": "职业",
+                "emoji": "📦"
+              },
+              {
+                "en": "oppose",
+                "cn": "反对",
+                "emoji": "🏃"
+              },
+              {
+                "en": "resist",
+                "cn": "抵制",
+                "emoji": "🏃"
+              },
+              {
+                "en": "resistance",
+                "cn": "抵制",
+                "emoji": "📦"
+              },
+              {
+                "en": "cease",
+                "cn": "(使)停止",
+                "emoji": "🏃"
+              },
+              {
+                "en": "deceased",
+                "cn": "已死的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "rural",
+                "cn": "乡村的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "emphasis",
+                "cn": "强调",
+                "emoji": "📦"
+              },
+              {
+                "en": "relevant",
+                "cn": "有关的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "distant",
+                "cn": "遥远的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "instant",
+                "cn": "瞬间",
+                "emoji": "🔤"
+              },
+              {
+                "en": "mode",
+                "cn": "模式",
+                "emoji": "📦"
+              },
+              {
+                "en": "structure",
+                "cn": "结构",
+                "emoji": "🏃"
+              },
+              {
+                "en": "combine",
+                "cn": "(使)结合",
+                "emoji": "🏃"
+              },
+              {
+                "en": "hence",
+                "cn": "因此",
+                "emoji": "🏃"
+              },
+              {
+                "en": "nevertheless",
+                "cn": "尽管如此",
+                "emoji": "🏃"
+              },
+              {
+                "en": "essay",
+                "cn": "文章",
+                "emoji": "📦"
+              },
+              {
+                "en": "advance",
+                "cn": "进步",
+                "emoji": "🏃"
+              },
+              {
+                "en": "automatic",
+                "cn": "自动的",
+                "emoji": "🔤"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Talking About Smart Homes",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Looking into the Future.",
-                    "cn": "我们来讨论Looking into the Future。"
+                    "text": "My family just moved into a smart home.",
+                    "cn": "我家刚搬进一座智能家居。"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Discovery today.",
-                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                    "text": "Really? What can it do that an ordinary house cannot?",
+                    "cn": "真的吗?它有什么普通房子做不到的?"
                   },
                   {
                     "role": "A",
-                    "text": "And Talent is important too.",
-                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                    "text": "It locks the door for us when we forget, and saves energy too.",
+                    "cn": "我们忘锁门时它会替我们锁,还能省电。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Amazing! This time next year, I will be living in one as well.",
+                    "cn": "太棒了!明年此时,我也要住进一座这样的房子。"
+                  }
+                ]
+              },
+              {
+                "title": "Predictions About the Future",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "What do you predict the world will be like in 2050?",
+                    "cn": "你预测2050年的世界会是什么样?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "I think driverless cars will be taking us everywhere.",
+                    "cn": "我想无人驾驶汽车会载我们去各处。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "One challenge will be deciding who is to blame in an accident.",
+                    "cn": "一个难题会是出事故时如何判定责任。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "True, but I'd rather welcome the change than resist it.",
+                    "cn": "没错,但我宁愿欢迎这种变化,而不是抵制它。"
                   }
                 ]
               }
@@ -3892,7 +4359,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "48个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -3930,6 +4397,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -3954,8 +4429,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "跨文化交际句型",
-            "grammarCode": "pep-e1-u2-bridging-cultures",
+            "grammarTitle": "将来进行时(will be doing)",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "He ______ born in Guangzhou, China. 6 I was asked to explain the project with the help of a flow chart.\n\n（跨文化交际句型 · 教材原句）",
@@ -4007,225 +4482,264 @@
               }
             ],
             "reading": {
-              "passage": "The types of phrases used in a passage help identify 2 What do you think a \"smart\" house can do its purpose. For example, the phrase in my opinion that other houses cannot? tells us that the passage is likely meant to persuade. And a text that uses imperatives is likely meant to instruct. A passage's content helps identify its 2 Skim the text and answer these audience. For example, a passage that gives tips questions. on looking after pets would have pet owners as its audience. 1 What is the purpose of the text? 2 Who is the intended audience of this text? SMART HOMES TO MAKE LIFE EASIER Have you ever forgotten to lock the door you leave home each morning, and then of your house? Or, have you ever forgotten go into an energy-efficient mode all by to switch off the TV or computer? You will no longer have to think kinds of things happen to us all the time, about turning switches on and off yourself. waste resources, and can sometimes Your home will also learn your",
-              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "passage": "In the not-too-distant future, your home will know your daily routine. The instant you walk in, the lights will come on, your favourite music will start, and dinner will be ready for you. Such a home keeps you secure and saves you energy at the same time.",
+              "passageCn": "在不太遥远的将来,你的家会了解你的日常作息。你一进门,灯就会亮起,你最喜欢的音乐会响起,晚饭也已为你准备好。这样的家同时保障你的安全并为你节省能源。",
               "questions": [
                 {
-                  "q": "According to the passage: \"The types of phrases used in a passage help identi...\"",
+                  "q": "What happens the instant you walk into this future home?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "The types of phrases used in a passage help identify 2 What do you thi",
-                    "Not stated."
+                    "The lights come on and music starts.",
+                    "All the doors lock you out.",
+                    "The home goes completely dark.",
+                    "You have to cook dinner yourself."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"For example, the phrase in my opinion that other h...\"",
+                  "q": "What two things does such a home do at the same time?",
                   "opts": [
-                    "Unrelated.",
-                    "Not stated.",
-                    "For example, the phrase in my opinion that other houses cannot?",
-                    "Opposite meaning."
+                    "It wastes energy and makes noise.",
+                    "It keeps you secure and saves energy.",
+                    "It calls your friends and orders food.",
+                    "It cleans the streets and the garden."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"tells us that the passage is likely meant to persu...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "tells us that the passage is likely meant to persuade.",
-                    "Unrelated.",
-                    "Not stated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"And a text that uses imperatives is likely meant t...\"",
-                  "opts": [
-                    "And a text that uses imperatives is likely meant to instruct.",
-                    "Not stated.",
-                    "Unrelated.",
-                    "Opposite meaning."
-                  ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"SMART HOMES TO MAKE LIFE EASIER\" (PEP 选择性必修第一册).",
-              "promptCn": "根据人教版《选择性必修第一册》课文《SMART HOMES TO MAKE LIFE EASIER》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write a short letter (about 60 words) to your future self, predicting how technology will change your daily life. Use 'will be doing' at least once.",
+              "promptCn": "给未来的自己写一封约60词的短信,预测科技将如何改变你的日常生活。至少用一次将来进行时(will be doing)。",
+              "sampleWords": [
+                "predict",
+                "future",
+                "smart home",
+                "driverless",
+                "robot",
+                "secure",
+                "energy",
+                "will be living",
+                "welcome",
+                "change"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Discovery」的意思是？",
+                "q": "Smart homes use integrated ____ to tell when you leave home each morning.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Talent」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选择性必修第一册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Effort」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "sensors",
+                  "gardens",
+                  "tickets",
+                  "prices"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Attention」的意思是？",
+                "q": "If a water pipe starts to leak, the home will ____ the problem at once.",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "detect",
+                  "sell",
+                  "forget",
+                  "throw"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Passage」的意思是？",
+                "q": "Some people ____ the idea of developing driverless cars, calling them dangerous.",
                 "opts": [
-                  "选项2",
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3"
+                  "oppose",
+                  "enjoy",
+                  "welcome",
+                  "trust"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Change can be scary; ____, I always look on the positive side.",
+                "opts": [
+                  "nevertheless",
+                  "because",
+                  "although",
+                  "unless"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "This time tomorrow, I ____ on a plane to the technology fair.",
+                "opts": [
+                  "will be flying",
+                  "will fly",
+                  "am flying",
+                  "have flown"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "At 8 pm tonight, the family ____ dinner cooked by their robot.",
+                "opts": [
+                  "will be having",
+                  "will have",
+                  "is having",
+                  "has had"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ you ____ the computer tonight, or may I use it for my essay?",
+                "opts": [
+                  "Will / be using",
+                  "Will / use",
+                  "Are / using",
+                  "Have / used"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "This time next week she ____ in Beijing; she is still in Melbourne now.",
+                "opts": [
+                  "will be working",
+                  "will work",
+                  "is working",
+                  "has worked"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "未来我们将用先进技术自动控制家中几乎一切。",
+                  "我们昨天修好了所有的开关。",
+                  "这座房子从不需要任何电。",
+                  "我们正在花园里种花。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "In the future, we will be using advanced technology for automatic control of just about everything in our home."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "机器人决定不再工作了。",
+                  "明年此时,更多人将乘坐无人驾驶汽车出行。",
+                  "汽车都被停在了车库里。",
+                  "人们更喜欢步行去上班。"
                 ],
                 "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Form」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Better」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3",
-                  "选项1"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Impression」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「展望未来」相关词是？",
-                "opts": [
-                  "Scan",
-                  "Discovery",
-                  "Effort",
-                  "school"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "听力",
+                "dim": "listening",
+                "audio": "This time next year, more people will be travelling in driverless cars to work."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "In the future, we will be living in smart homes that lock the door for us.",
                 "opts": [
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                  "未来我们将住在能替我们锁门的智能家居里。",
+                  "未来我们将自己动手修理房门。",
+                  "过去人们住在没有门锁的房子里。",
+                  "我们现在正在建造一座新房子。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "This time tomorrow, the family will be having dinner cooked by a robot.",
                 "opts": [
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
-                "opts": [
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "For example, the phrase in my opinion that other houses cannot? tells us",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct."
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
-                "opts": [
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                  "这家人昨天吃了一顿大餐。",
+                  "明天这个时候,这家人将吃着机器人做的晚饭。",
+                  "这家人正在学习如何做饭。",
+                  "机器人拒绝为这家人做饭。"
                 ],
                 "answer": 1
               },
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "Scientists predict that driverless cars will be common one day soon.",
                 "opts": [
-                  "For example, the phrase in my opinion that other houses cannot? tells us",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "For example, a passage that gives tips questions. on looking after pets "
+                  "科学家说无人驾驶汽车永远不会出现。",
+                  "司机们都很喜欢开自己的车。",
+                  "科学家预测无人驾驶汽车不久将会很普遍。",
+                  "这些汽车今天就已遍布全城。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "If a water pipe leaks, the smart home will detect it and warn you at once.",
+                "opts": [
+                  "如果停电,房子会自己关灯。",
+                  "如果有人敲门,房子会自动开门。",
+                  "如果天气变冷,房子会升温。",
+                  "如果水管漏水,智能家居会立刻察觉并提醒你。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "Tiny robots may one day help doctors by working inside the human body.",
+                "opts": [
+                  "微型机器人也许有一天能在人体内协助医生。",
+                  "大型机器只能在工厂里使用。",
+                  "医生们决定不再使用任何机器。",
+                  "机器人正在医院外面排队。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I will always look on the positive side of change and accept it rather than resist it.",
+                "opts": [
+                  "我总是害怕任何变化并加以拒绝。",
+                  "我会一直看变化积极的一面,选择接受而非抵制。",
+                  "我从不关心未来会发生什么。",
+                  "我打算停止使用一切新技术。"
+                ],
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "When Mia first heard that her future home would do the housework by itself, she found the idea a little frightening. Yet after living there for a month, she could not imagine going back, because the house quietly saved her time and kept her safe. She now tells her friends that the smartest thing about new technology is the way it gives people more hours to spend with the ones they love.",
+              "questions": [
+                {
+                  "q": "How did Mia feel about the smart home at first?",
+                  "options": [
+                    "She found the idea rather frightening.",
+                    "She was sure she would love it.",
+                    "She thought it was boring.",
+                    "She wanted to sell it at once."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'she found the idea a little frightening' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "What does Mia now tell her friends?",
+                  "options": [
+                    "That technology is a waste of money.",
+                    "That the best thing is the extra time it gives for loved ones.",
+                    "That she misses her old house.",
+                    "That robots should do all the work for everyone."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'gives people more hours to spend with the ones they love'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "e1u2.01",
+              "e1u2.02",
+              "e1u2.03"
             ]
           },
           {
@@ -4236,87 +4750,287 @@
             "title": "Fascinating Parks",
             "cn": "迷人的公园",
             "emoji": "🏞️",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Treatment",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "boundary",
+                "cn": "边界",
+                "emoji": "📦"
               },
               {
-                "en": "Thought",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "bush",
+                "cn": "灌木",
+                "emoji": "📦"
               },
               {
-                "en": "Save",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "vast",
+                "cn": "辽阔的",
+                "emoji": "🔤"
               },
               {
-                "en": "Africa",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "valley",
+                "cn": "山谷",
+                "emoji": "📦"
               },
               {
-                "en": "Alone",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "edge",
+                "cn": "边缘",
+                "emoji": "📦"
               },
               {
-                "en": "Youyou",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "remote",
+                "cn": "偏远的",
+                "emoji": "🔤"
               },
               {
-                "en": "Committed",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "glacier",
+                "cn": "冰川",
+                "emoji": "📦"
               },
               {
-                "en": "Patient",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "reindeer",
+                "cn": "驯鹿",
+                "emoji": "📦"
               },
               {
-                "en": "Scientist",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "territory",
+                "cn": "领土",
+                "emoji": "📦"
               },
               {
-                "en": "Born",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "visible",
+                "cn": "看得见的",
+                "emoji": "🔤"
               },
               {
-                "en": "Ningbo",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "cottage",
+                "cn": "小屋",
+                "emoji": "📦"
               },
               {
-                "en": "China",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "stretch",
+                "cn": "延伸",
+                "emoji": "🏃"
+              },
+              {
+                "en": "rare",
+                "cn": "稀少的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "wander",
+                "cn": "漫步",
+                "emoji": "🏃"
+              },
+              {
+                "en": "route",
+                "cn": "路线",
+                "emoji": "📦"
+              },
+              {
+                "en": "corridor",
+                "cn": "走廊",
+                "emoji": "📦"
+              },
+              {
+                "en": "fountain",
+                "cn": "喷泉",
+                "emoji": "📦"
+              },
+              {
+                "en": "pedal",
+                "cn": "踏板",
+                "emoji": "📦"
+              },
+              {
+                "en": "enormous",
+                "cn": "巨大的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "swing",
+                "cn": "(使)摆动",
+                "emoji": "🏃"
+              },
+              {
+                "en": "incredible",
+                "cn": "难以置信的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "splendid",
+                "cn": "壮丽的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "superb",
+                "cn": "极佳的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "entertainment",
+                "cn": "娱乐",
+                "emoji": "📦"
+              },
+              {
+                "en": "theme",
+                "cn": "主题",
+                "emoji": "📦"
+              },
+              {
+                "en": "display",
+                "cn": "展览",
+                "emoji": "📦"
+              },
+              {
+                "en": "iron",
+                "cn": "铁",
+                "emoji": "📦"
+              },
+              {
+                "en": "steam",
+                "cn": "蒸汽",
+                "emoji": "📦"
+              },
+              {
+                "en": "leopard",
+                "cn": "豹",
+                "emoji": "📦"
+              },
+              {
+                "en": "polar",
+                "cn": "极地的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "lung",
+                "cn": "肺",
+                "emoji": "📦"
+              },
+              {
+                "en": "prohibit",
+                "cn": "(尤指以法令)禁止",
+                "emoji": "🏃"
+              },
+              {
+                "en": "prohibition",
+                "cn": "禁止",
+                "emoji": "📦"
+              },
+              {
+                "en": "fashion",
+                "cn": "方式",
+                "emoji": "📦"
+              },
+              {
+                "en": "label",
+                "cn": "贴标签",
+                "emoji": "🏃"
+              },
+              {
+                "en": "journalist",
+                "cn": "新闻记者",
+                "emoji": "📦"
+              },
+              {
+                "en": "column",
+                "cn": "(报刊的)专栏",
+                "emoji": "📦"
+              },
+              {
+                "en": "sneeze",
+                "cn": "打喷嚏",
+                "emoji": "🏃"
+              },
+              {
+                "en": "sour",
+                "cn": "酸的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "cream",
+                "cn": "奶油",
+                "emoji": "📦"
+              },
+              {
+                "en": "teapot",
+                "cn": "茶壶",
+                "emoji": "📦"
+              },
+              {
+                "en": "cloth",
+                "cn": "布",
+                "emoji": "📦"
+              },
+              {
+                "en": "bless",
+                "cn": "祝福",
+                "emoji": "🏃"
+              },
+              {
+                "en": "rewarding",
+                "cn": "值得做的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "pirate",
+                "cn": "海盗",
+                "emoji": "📦"
+              },
+              {
+                "en": "buffet",
+                "cn": "自助餐",
+                "emoji": "📦"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Asking the Way to the Fountain",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Fascinating Parks.",
-                    "cn": "我们来讨论Fascinating Parks。"
+                    "text": "Excuse me, do you know where the fountain is?",
+                    "cn": "打扰一下,你知道喷泉在哪里吗?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Treatment today.",
-                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                    "text": "Yes, it's on the north side, about two hundred metres away.",
+                    "cn": "知道,在北侧,大约两百米远。"
                   },
                   {
                     "role": "A",
-                    "text": "And Thought is important too.",
-                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                    "text": "How do I get there?",
+                    "cn": "我怎么过去呢?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Follow the path along the river, and you'll see it behind a small bridge.",
+                    "cn": "沿着河边的小路走,你会在一座小桥后面看到它。"
+                  }
+                ]
+              },
+              {
+                "title": "Planning a Park Visit",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's go to the wetland park this weekend.",
+                    "cn": "这周末我们去湿地公园吧。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Great! We can take a boat tour and watch the birds.",
+                    "cn": "太好了!我们可以坐船游览,还能观鸟。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And the trees and flowers there are so beautiful.",
+                    "cn": "而且那里的树木和花朵都很美。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "It really is the green lungs of our city.",
+                    "cn": "它真不愧是我们城市的绿肺。"
                   }
                 ]
               }
@@ -4325,7 +5039,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "46个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -4363,6 +5077,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -4387,8 +5109,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "科技主题语法",
-            "grammarCode": "pep-e1-u3-science",
+            "grammarTitle": "主语从句(Subject Clauses)",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "______ Dr Wang Wang Le Anna Smith Alexander Fleming Zhong Nanshan Florence Nightingale Wu Mengchao Tu Youyou Dr Wang 3 Listen again and answer the questions below.\n\n（科技主题语法 · 教材原句）",
@@ -4440,225 +5162,264 @@
               }
             ],
             "reading": {
-              "passage": "A Land of Mountains and Ice Man at Peace with Nature the structure and the key\n\nA Land of Adventure A Summer Where the Sun Never Sleeps\n\nI wake up to the sound of the wind buffeting the cloth of my tent. Even though the sun is brightly\n\nshining, telling whether it is morning or night is impossible. Iʼm above the Arctic Circle, where in summer\n\nthe sun never sets. Checking my watch, I see that it is 7:30 a.m. I leave my tent and walk over to the\n\nmountain edge. Spreading out before me, branches of the Rapa River flow through the valley below. I'm\n\nin the remote far north of Sweden in Sarek National Park, a place with no roads or towns.",
-              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "passage": "A national park is not a playground; it is a safe home for nature and for people who accept nature on its own terms. In such a place, hunting and new building are usually banned so that rare animals and plants can live in peace.",
+              "passageCn": "国家公园不是游乐场,而是大自然以及那些愿意按自然法则与之相处的人的安全家园。在这样的地方,狩猎和新建筑通常被禁止,好让珍稀的动植物得以安然生活。",
               "questions": [
                 {
-                  "q": "According to the passage: \"A Land of Mountains and Ice Man at Peace with Natu...\"",
+                  "q": "What is a national park described as?",
                   "opts": [
-                    "Unrelated.",
-                    "A Land of Mountains and Ice Man at Peace with Nature the structure and",
-                    "Opposite meaning.",
-                    "Not stated."
+                    "A safe home for nature and people.",
+                    "A busy playground for games.",
+                    "A place to build new houses.",
+                    "A market for selling animals."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"Even though the sun is brightly\n\nshining, telling ...\"",
+                  "q": "Why are hunting and new building usually banned?",
                   "opts": [
-                    "Unrelated.",
-                    "Even though the sun is brightly\n\nshining, telling whether it is mornin",
-                    "Opposite meaning.",
-                    "Not stated."
+                    "So rare animals and plants can live in peace.",
+                    "So more cars can come in.",
+                    "So tickets can cost more.",
+                    "So shops can open earlier."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"Iʼm above the Arctic Circle, where in summer\n\nthe ...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Iʼm above the Arctic Circle, where in summer\n\nthe sun never sets.",
-                    "Not stated."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"Checking my watch, I see that it is 7:30 a.m....\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Unrelated.",
-                    "Checking my watch, I see that it is 7:30 a.m.",
-                    "Not stated."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
-              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Introduce or recommend a park you like in about 60 words: its name and location, two things to see or do there, and why you recommend it.",
+              "promptCn": "用约60词介绍或推荐一座你喜欢的公园:名称与地点、两项看点或活动,以及推荐理由。",
+              "sampleWords": [
+                "recommend",
+                "wetland",
+                "vast",
+                "boat tour",
+                "attraction",
+                "visitor",
+                "natural",
+                "protect",
+                "fountain",
+                "beautiful"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Treatment」的意思是？",
+                "q": "公园里禁止狩猎,'禁止'用哪个词?",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "prohibit",
+                  "welcome",
+                  "enjoy",
+                  "follow"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Thought」的意思是？",
+                "q": "辽阔的、巨大的,用哪个词?",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3",
-                  "选项1"
+                  "vast",
+                  "tiny",
+                  "narrow",
+                  "short"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Save」的意思是？",
+                "q": "偏远的、遥远的,用哪个词?",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "remote",
+                  "busy",
+                  "central",
+                  "crowded"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Africa」的意思是？",
+                "q": "值得做的、有益的,用哪个词?",
                 "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Alone」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选择性必修第一册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Youyou」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Committed」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选项3",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Patient」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项1",
-                  "选项3"
+                  "rewarding",
+                  "boring",
+                  "useless",
+                  "empty"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「迷人的公园」相关词是？",
+                "q": "____ matters most in a national park is the protection of nature.",
                 "opts": [
-                  "school",
-                  "Born",
-                  "teacher",
-                  "Treatment"
+                  "What",
+                  "That",
+                  "Whether",
+                  "If"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "主语从句·what 作主语",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is important ____ we protect parks for the future.",
+                "opts": [
+                  "that",
+                  "what",
+                  "whether",
+                  "how"
+                ],
+                "answer": 0,
+                "point": "主语从句·it 形式主语",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ we should develop a place like Sarek is still under discussion.",
+                "opts": [
+                  "Whether",
+                  "That",
+                  "If",
+                  "What"
+                ],
+                "answer": 0,
+                "point": "主语从句·whether 非 if",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ the Sami still follow their reindeer surprises many tourists.",
+                "opts": [
+                  "That",
+                  "What",
+                  "Whether",
+                  "If"
+                ],
+                "answer": 0,
+                "point": "主语从句·that 引导",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选意思:",
+                "opts": [
+                  "请沿主路走到桥那里。",
+                  "请在大门口等我。",
+                  "公园已经关门了。",
+                  "湖里不能划船。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Please follow the main path to the bridge."
+              },
+              {
+                "q": "听句子选意思:",
+                "opts": [
+                  "这座新公园几乎是旧公园的四倍大。",
+                  "新公园比旧公园小一半。",
+                  "旧公园被拆掉了。",
+                  "两座公园一样大。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "The new park is nearly four times larger than the old one."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "audio": "The fountain is on the north side of the park.",
                 "opts": [
-                  "Checking my watch, I see that it is 7:30 a.m.",
-                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
-                  "I leave my tent and walk over to the mountain edge.",
-                  "Even though the sun is brightly shining, telling whether it is morning o"
+                  "喷泉在公园的北侧。",
+                  "喷泉在公园的南门外。",
+                  "喷泉就在大门口。",
+                  "喷泉在湖的中央。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "audio": "Follow the main path along the river until you see a bridge.",
                 "opts": [
-                  "Even though the sun is brightly shining, telling whether it is morning o",
-                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
-                  "Checking my watch, I see that it is 7:30 a.m.",
-                  "I leave my tent and walk over to the mountain edge."
+                  "沿着河边主路一直走,直到看到一座桥。",
+                  "走出公园再过马路。",
+                  "穿过商店一直往北走。",
+                  "在停车场右转上山。"
                 ],
-                "answer": 1
+                "answer": 0
               },
               {
-                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "audio": "All new building is banned within the park boundaries.",
                 "opts": [
-                  "I leave my tent and walk over to the mountain edge.",
-                  "Checking my watch, I see that it is 7:30 a.m.",
-                  "Even though the sun is brightly shining, telling whether it is morning o",
-                  "Iʼm above the Arctic Circle, where in summer the sun never sets."
+                  "公园边界内禁止新建任何建筑。",
+                  "公园里正在修很多新楼。",
+                  "公园边界已经取消了。",
+                  "公园外面禁止种树。"
                 ],
-                "answer": 1
+                "answer": 0
               },
               {
-                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "audio": "Every spring a few Sami still follow their reindeer into the valleys.",
                 "opts": [
-                  "Checking my watch, I see that it is 7:30 a.m.",
-                  "Even though the sun is brightly shining, telling whether it is morning o",
-                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
-                  "I leave my tent and walk over to the mountain edge."
+                  "每年春天仍有少数萨米人跟着驯鹿走进山谷。",
+                  "萨米人冬天才进山打猎。",
+                  "驯鹿如今全都消失了。",
+                  "萨米人再也不养驯鹿了。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "audio": "You can rent a pedal boat right next to the fountain.",
                 "opts": [
-                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
-                  "Spreading out before me, branches of the Rapa River flow through the val",
-                  "Checking my watch, I see that it is 7:30 a.m.",
-                  "Even though the sun is brightly shining, telling whether it is morning o"
+                  "你可以在喷泉旁边租一条脚踏船。",
+                  "喷泉旁边不能划船。",
+                  "脚踏船只能在湖对岸租。",
+                  "划船需要先买门票。"
                 ],
-                "answer": 1
+                "answer": 0
+              },
+              {
+                "audio": "Because it cleans water and makes oxygen, people call it the green lungs.",
+                "opts": [
+                  "因为它净化水、产生氧气,人们叫它绿肺。",
+                  "因为它很大,人们叫它绿色海洋。",
+                  "因为树是绿的,人们叫它绿园。",
+                  "因为空气脏,人们不去那里。"
+                ],
+                "answer": 0
               }
+            ],
+            "finalReading": {
+              "passage": "When Mia first hiked into the remote park, the heavy bag and the long, pathless climb almost made her want to turn back. Instead of giving up, she rested often and kept moving slowly towards the valley on the far side. By evening she reached a quiet camp under a wide sky, and she felt proud that her hard effort had brought her to such a beautiful, wild place.",
+              "questions": [
+                {
+                  "q": "What did Mia do instead of turning back?",
+                  "options": [
+                    "She took frequent breaks and pressed on towards her goal.",
+                    "She left the park and went home at once.",
+                    "She threw away her heavy bag.",
+                    "She waited for a car to pick her up."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'she rested often and kept moving slowly towards the valley' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Mia feel by the evening?",
+                  "options": [
+                    "Sorry that she had ever started.",
+                    "Proud that her effort had taken her there.",
+                    "Bored by the quiet camp.",
+                    "Afraid of the wide sky."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'she felt proud that her hard effort had brought her to such a beautiful, wild place'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "e1u3.01",
+              "e1u3.02",
+              "e1u3.03"
             ]
           },
           {
@@ -4668,88 +5429,283 @@
             "book": "elective1",
             "title": "Body Language",
             "cn": "肢体语言",
-            "emoji": "🤝",
-            "available": false,
+            "emoji": "🙆",
+            "available": true,
             "vocabulary": [
               {
-                "en": "Objective",
-                "cn": "选择性必修第一册 课文词汇",
+                "en": "body language",
+                "cn": "肢体语言",
+                "emoji": "📦"
+              },
+              {
+                "en": "gesture",
+                "cn": "手势",
+                "emoji": "📦"
+              },
+              {
+                "en": "nonverbal",
+                "cn": "不涉及言语的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "interaction",
+                "cn": "交流",
+                "emoji": "📦"
+              },
+              {
+                "en": "interpret",
+                "cn": "把……理解(解释)为",
+                "emoji": "🏃"
+              },
+              {
+                "en": "demonstrate",
+                "cn": "表现",
+                "emoji": "🏃"
+              },
+              {
+                "en": "demonstration",
+                "cn": "示范",
+                "emoji": "📦"
+              },
+              {
+                "en": "differ",
+                "cn": "相异",
+                "emoji": "🏃"
+              },
+              {
+                "en": "distinguish",
+                "cn": "区分",
+                "emoji": "🏃"
+              },
+              {
+                "en": "distract",
+                "cn": "分散(注意力)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "perceive",
+                "cn": "察觉",
+                "emoji": "🏃"
+              },
+              {
+                "en": "reveal",
+                "cn": "揭示",
+                "emoji": "🏃"
+              },
+              {
+                "en": "imply",
+                "cn": "意味着",
+                "emoji": "🏃"
+              },
+              {
+                "en": "infer",
+                "cn": "推断",
+                "emoji": "🏃"
+              },
+              {
+                "en": "inference",
+                "cn": "推断的结果",
+                "emoji": "📦"
+              },
+              {
+                "en": "stare",
+                "cn": "盯着看",
+                "emoji": "🏃"
+              },
+              {
+                "en": "bow",
+                "cn": "鞠躬",
+                "emoji": "🏃"
+              },
+              {
+                "en": "bend",
+                "cn": "(使)弯曲",
+                "emoji": "🏃"
+              },
+              {
+                "en": "slump",
+                "cn": "垂头弯腰地走(或坐等)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "pose",
+                "cn": "姿势",
+                "emoji": "📦"
+              },
+              {
+                "en": "react",
+                "cn": "(对……)起反应",
+                "emoji": "🏃"
+              },
+              {
+                "en": "embarrassed",
+                "cn": "难堪的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "fake",
+                "cn": "假装的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "reliable",
+                "cn": "可靠的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "identical",
+                "cn": "相同的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "internal",
+                "cn": "内部的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "slight",
+                "cn": "轻微的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "slightly",
+                "cn": "略微",
+                "emoji": "🏃"
+              },
+              {
+                "en": "merely",
+                "cn": "只是",
+                "emoji": "🏃"
+              },
+              {
+                "en": "ultimately",
+                "cn": "最终",
+                "emoji": "🏃"
+              },
+              {
+                "en": "vary",
+                "cn": "(根据情况)变化",
+                "emoji": "🏃"
+              },
+              {
+                "en": "tendency",
+                "cn": "趋势",
+                "emoji": "📦"
+              },
+              {
+                "en": "tone",
+                "cn": "语气",
+                "emoji": "📦"
+              },
+              {
+                "en": "component",
+                "cn": "组成部分",
+                "emoji": "📦"
+              },
+              {
+                "en": "occupy",
+                "cn": "占据",
+                "emoji": "🏃"
+              },
+              {
+                "en": "clarify",
+                "cn": "使更清晰易懂",
+                "emoji": "🏃"
+              },
+              {
+                "en": "inquire",
+                "cn": "询问",
+                "emoji": "🏃"
+              },
+              {
+                "en": "intervene",
+                "cn": "干预",
+                "emoji": "🏃"
+              },
+              {
+                "en": "employ",
+                "cn": "使用",
+                "emoji": "🏃"
+              },
+              {
+                "en": "favour",
+                "cn": "较喜欢",
+                "emoji": "🏃"
+              },
+              {
+                "en": "witness",
+                "cn": "当场看到",
+                "emoji": "🏃"
+              },
+              {
+                "en": "cheek",
+                "cn": "面颊",
+                "emoji": "📦"
+              },
+              {
+                "en": "chest",
+                "cn": "胸部",
+                "emoji": "📦"
+              },
+              {
+                "en": "chin",
+                "cn": "下巴",
+                "emoji": "📦"
+              },
+              {
+                "en": "waist",
+                "cn": "腰",
+                "emoji": "📦"
+              },
+              {
+                "en": "weep",
+                "cn": "哭泣",
+                "emoji": "🏃"
+              },
+              {
+                "en": "educator",
+                "cn": "教师",
+                "emoji": "📦"
+              },
+              {
+                "en": "in other words",
+                "cn": "换句话说",
                 "emoji": "📘"
               },
               {
-                "en": "Discovering",
-                "cn": "选择性必修第一册 课文词汇",
+                "en": "by contrast",
+                "cn": "相比之下",
                 "emoji": "📘"
               },
               {
-                "en": "Among",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "First",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Researchers",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Chosen",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Beginning",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Went",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Hainan",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Common",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Study",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
-              },
-              {
-                "en": "Patients",
-                "cn": "选择性必修第一册 课文词汇",
+                "en": "break down",
+                "cn": "消除",
                 "emoji": "📘"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "Reading a Friend's Face",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Body Language.",
-                    "cn": "我们来讨论Body Language。"
+                    "text": "You're frowning. Is everything OK?",
+                    "cn": "你在皱眉,一切还好吗?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Objective today.",
-                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                    "text": "How did you know? I didn't say anything.",
+                    "cn": "你怎么知道的?我什么都没说。"
                   },
                   {
                     "role": "A",
-                    "text": "And Discovering is important too.",
-                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                    "text": "Your body language told me. Your shoulders are slumped too.",
+                    "cn": "你的肢体语言告诉了我,你的肩膀也垮着。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "You're right. Thanks for noticing — talking about it does help.",
+                    "cn": "你说得对。谢谢你注意到——说出来确实有帮助。"
                   }
                 ]
               }
@@ -4758,7 +5714,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "50个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -4796,6 +5752,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -4820,8 +5784,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "非谓语动词",
-            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarTitle": "动名词(-ing)作宾语和表语",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
@@ -4873,225 +5837,274 @@
               }
             ],
             "reading": {
-              "passage": "Find descriptive words 2 Which is more important for making a great discovery, talent or effort? Pay attention to the descriptive words in a passage. These will help you form a better impression 2 Scan the text and find descriptive words about of the subject described in the passage. TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize for Physiology or Medicine has been awarded to Tu Youyou (co-winner), whose research led to the discovery of artemisinin, a crucial new treatment for malaria. Artemisinin has saved hundreds of thousands of lives, and has led to improved health for millions of people. Over 200 million people around the world get malaria each year, and about 600,000 die from it. Artemisinin has become a vital part of the treatment for malaria, and is thought to save 100,000 lives a year in Africa alone. Tu Youyou, a committed and patient scientist, was born in Ningbo, China, on 30 December 1930, and graduated from Peking University Medical School in 1955.",
-              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "passage": "When Lucy moved to a new country, she could not speak the language at all. Instead of staying silent, she used simple gestures to greet people, ask for help and say thank you. A few months later, she had made many friends, proving that a smile and a kind gesture can speak louder than words.",
+              "passageCn": "露西搬到一个新国家时,完全不会说当地语言。她没有保持沉默,而是用简单的手势来问候、求助和道谢。几个月后,她交了许多朋友,这证明微笑和友善的手势胜过千言万语。",
               "questions": [
                 {
-                  "q": "According to the passage: \"Find descriptive words 2 Which is more important f...\"",
+                  "q": "What did Lucy use to communicate at first?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "Find descriptive words 2 Which is more important for making a great di",
-                    "Unrelated."
+                    "Simple gestures.",
+                    "Long letters.",
+                    "A loud voice.",
+                    "A dictionary only."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"Pay attention to the descriptive words in a passag...\"",
+                  "q": "What did Lucy do instead of staying silent?",
                   "opts": [
-                    "Not stated.",
-                    "Pay attention to the descriptive words in a passage.",
-                    "Opposite meaning.",
-                    "Unrelated."
+                    "She left the country.",
+                    "She used gestures to greet and ask for help.",
+                    "She stopped meeting people.",
+                    "She only spoke her own language."
                   ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 },
                 {
-                  "q": "According to the passage: \"These will help you form a better impression 2 Sca...\"",
+                  "q": "What does Lucy's story prove?",
                   "opts": [
-                    "These will help you form a better impression 2 Scan the text and find ",
-                    "Unrelated.",
-                    "Not stated.",
-                    "Opposite meaning."
+                    "Language is useless.",
+                    "Friends are hard to make.",
+                    "A smile and a kind gesture can speak louder than words.",
+                    "Gestures always cause trouble."
                   ],
-                  "answer": 0,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This ...\"",
-                  "opts": [
-                    "Unrelated.",
-                    "TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize f",
-                    "Opposite meaning.",
-                    "Not stated."
-                  ],
-                  "answer": 1,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 2
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"SMART HOMES TO MAKE LIFE EASIER\" (PEP 选择性必修第一册).",
-              "promptCn": "根据人教版《选择性必修第一册》课文《SMART HOMES TO MAKE LIFE EASIER》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "Write 3-4 sentences about a gesture you often use. Say what it means and how people might understand it differently. Use at least one -ing form (gerund).",
+              "promptCn": "用3-4句话介绍一个你常用的手势:它表示什么、别人可能怎样理解。至少用一个动名词(-ing)。",
+              "sampleWords": [
+                "gesture",
+                "body language",
+                "mean",
+                "smile",
+                "nod",
+                "wave",
+                "polite",
+                "culture",
+                "interpret",
+                "communicate"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Objective」的意思是？",
+                "q": "A wave of the hand is a common ____ for saying goodbye.",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项2",
-                  "选项3"
+                  "gesture",
+                  "price",
+                  "noise",
+                  "garden"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Discovering」的意思是？",
+                "q": "It is hard to ____ a real smile from a fake one.",
                 "opts": [
-                  "选项3",
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Among」的意思是？",
-                "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3",
-                  "选项1"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「First」的意思是？",
-                "opts": [
-                  "选项2",
-                  "选择性必修第一册 课文词汇",
-                  "选项3",
-                  "选项1"
+                  "sell",
+                  "distinguish",
+                  "drop",
+                  "lose"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「Researchers」的意思是？",
+                "q": "Your face often ____ your true feelings before you speak.",
                 "opts": [
-                  "选择性必修第一册 课文词汇",
-                  "选项1",
-                  "选项3",
-                  "选项2"
+                  "hides",
+                  "sells",
+                  "reveals",
+                  "breaks"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "A loud phone can easily ____ students from the lesson.",
+                "opts": [
+                  "sell",
+                  "wash",
+                  "lose",
+                  "distract"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "She enjoys ____ about body language in different cultures.",
+                "opts": [
+                  "learning",
+                  "to learn",
+                  "learn",
+                  "learned"
                 ],
                 "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Chosen」的意思是？",
+                "q": "We look forward to ____ how gestures differ around the world.",
                 "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
+                  "learn",
+                  "learning",
+                  "to learn",
+                  "learned"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
               },
               {
-                "q": "「Beginning」的意思是？",
+                "q": "You should avoid ____ this gesture in Brazil, as it is not polite.",
                 "opts": [
-                  "选项2",
-                  "选项3",
-                  "选择性必修第一册 课文词汇",
-                  "选项1"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Went」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选项3",
-                  "选项2",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「肢体语言」相关词是？",
-                "opts": [
-                  "First",
-                  "Common",
-                  "Objective",
-                  "Researchers"
+                  "to make",
+                  "make",
+                  "making",
+                  "made"
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "The crucial thing is ____ body language in a way that suits the culture.",
+                "opts": [
+                  "to using",
+                  "use",
+                  "used",
+                  "using"
+                ],
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "同一手势在不同国家可能含义不同。",
+                  "所有手势含义都一样。",
+                  "手势没有任何含义。",
+                  "只有微笑算作手势。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "The same gesture can mean different things in different countries."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "盯着别人看太久没有问题。",
+                  "盯着别人看太久可能被当作威胁。",
+                  "盯着别人看表示友好。",
+                  "盯着别人看是一种问候。"
+                ],
+                "answer": 1,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Staring at someone too long can be interpreted as a threat."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Body language varies from culture to culture.",
                 "opts": [
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Pay attention to the descriptive words in a passage.",
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "肢体语言因文化而异。",
+                  "肢体语言全世界都一样。",
+                  "肢体语言毫无意义。",
+                  "肢体语言只属于演员。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Making eye contact can show interest and honesty.",
                 "opts": [
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Pay attention to the descriptive words in a passage.",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "盯着别人是一种威胁。",
+                  "眼神接触能表现兴趣和真诚。",
+                  "眼神接触总是无礼的。",
+                  "眼神接触表示害怕。"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "A warm smile can break down barriers between strangers.",
+                "opts": [
+                  "微笑会带来麻烦。",
+                  "微笑只是礼貌而已。",
+                  "温暖的微笑能打破陌生人之间的隔阂。",
+                  "微笑让人更紧张。"
                 ],
                 "answer": 2
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "In Japan, lowering your eyes can demonstrate respect.",
                 "opts": [
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp",
-                  "Pay attention to the descriptive words in a passage.",
-                  "These will help you form a better impression 2 Scan the text and find de"
+                  "在日本要一直直视长辈。",
+                  "在日本不能微笑。",
+                  "在日本握手最重要。",
+                  "在日本低目可以表达尊重。"
                 ],
                 "answer": 3
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "Worried students often cross their arms in front of their chests.",
                 "opts": [
-                  "Pay attention to the descriptive words in a passage.",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                  "焦虑的学生常把双臂抱在胸前。",
+                  "焦虑的学生总是大声说话。",
+                  "焦虑的学生喜欢举手。",
+                  "焦虑的学生会跳起来。"
                 ],
-                "answer": 3
+                "answer": 0
               },
               {
-                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "audio": "When in doubt, watch how the local people behave.",
                 "opts": [
-                  "These will help you form a better impression 2 Scan the text and find de",
-                  "Find descriptive words 2 Which is more important for making a great disc",
-                  "Over 200 million people around the world get malaria each year, and abou",
-                  "Pay attention to the descriptive words in a passage."
+                  "拿不准时就大声发问。",
+                  "拿不准时观察当地人怎么做。",
+                  "拿不准时立刻离开。",
+                  "拿不准时随便比手势。"
                 ],
-                "answer": 2
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "On his first day in Japan, Mark waved at an older man and looked straight into his eyes for a long time. The man seemed uneasy, so a friend quietly explained that lowering the eyes can show respect there. After that, Mark watched the local people and copied their gestures, and soon he felt much more at home.",
+              "questions": [
+                {
+                  "q": "Why did the older man seem uneasy?",
+                  "options": [
+                    "Mark spoke too loudly to him.",
+                    "Mark held long, direct eye contact with him.",
+                    "Mark refused to greet him.",
+                    "Mark could not find his house."
+                  ],
+                  "answer": "B",
+                  "explanation": "原文 'looked straight into his eyes for a long time' + 朋友解释当地低目示敬,故直视让对方不安;其余未提或相反。"
+                },
+                {
+                  "q": "What did Mark do after the friend's explanation?",
+                  "options": [
+                    "He observed the locals and followed their gestures.",
+                    "He decided to leave Japan at once.",
+                    "He kept staring at everyone he met.",
+                    "He stopped talking to anyone."
+                  ],
+                  "answer": "A",
+                  "explanation": "末句 'watched the local people and copied their gestures'(短文后半段,覆盖不同位置)的转述。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "e1u4.01",
+              "e1u4.02",
+              "e1u4.03"
             ]
           },
           {
@@ -5102,87 +6115,262 @@
             "title": "Working the Land",
             "cn": "耕耘土地",
             "emoji": "🌾",
-            "available": false,
+            "available": true,
             "vocabulary": [
               {
-                "en": "Tested",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "hybrid",
+                "cn": "杂交植(动)物",
+                "emoji": "📦"
               },
               {
-                "en": "Distinct",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "yield",
+                "cn": "产量",
+                "emoji": "🏃"
               },
               {
-                "en": "Showed",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "grain",
+                "cn": "谷物",
+                "emoji": "📦"
               },
               {
-                "en": "Promise",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "soil",
+                "cn": "泥土",
+                "emoji": "📦"
               },
               {
-                "en": "Fight",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "crop",
+                "cn": "庄稼",
+                "emoji": "📦"
               },
               {
-                "en": "Against",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "output",
+                "cn": "产量",
+                "emoji": "📦"
               },
               {
-                "en": "Fourth",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "boost",
+                "cn": "使增长",
+                "emoji": "🏃"
               },
               {
-                "en": "Century",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "expand",
+                "cn": "扩大",
+                "emoji": "🏃"
               },
               {
-                "en": "Suggested",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "tackle",
+                "cn": "解决(难题)",
+                "emoji": "🏃"
               },
               {
-                "en": "Using",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "crisis",
+                "cn": "危机",
+                "emoji": "📦"
               },
               {
-                "en": "Extract",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "shortage",
+                "cn": "不足",
+                "emoji": "📦"
               },
               {
-                "en": "Sweet",
-                "cn": "选择性必修第一册 课文词汇",
-                "emoji": "📘"
+                "en": "overcome",
+                "cn": "克服",
+                "emoji": "🏃"
+              },
+              {
+                "en": "intense",
+                "cn": "强烈的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "devote",
+                "cn": "把……献(给)",
+                "emoji": "🏃"
+              },
+              {
+                "en": "convince",
+                "cn": "使相信",
+                "emoji": "🏃"
+              },
+              {
+                "en": "estimate",
+                "cn": "估计",
+                "emoji": "🏃"
+              },
+              {
+                "en": "generate",
+                "cn": "产生",
+                "emoji": "🏃"
+              },
+              {
+                "en": "domestic",
+                "cn": "本国的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "consumption",
+                "cn": "消耗",
+                "emoji": "📦"
+              },
+              {
+                "en": "conventional",
+                "cn": "传统的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "characteristic",
+                "cn": "特征",
+                "emoji": "🔤"
+              },
+              {
+                "en": "pollinate",
+                "cn": "授粉",
+                "emoji": "🏃"
+              },
+              {
+                "en": "root",
+                "cn": "根",
+                "emoji": "📦"
+              },
+              {
+                "en": "wheat",
+                "cn": "小麦",
+                "emoji": "📦"
+              },
+              {
+                "en": "organic",
+                "cn": "有机的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "chemical",
+                "cn": "化学制品",
+                "emoji": "🔤"
+              },
+              {
+                "en": "pesticide",
+                "cn": "杀虫剂",
+                "emoji": "📦"
+              },
+              {
+                "en": "fertiliser",
+                "cn": "肥料",
+                "emoji": "📦"
+              },
+              {
+                "en": "nutrition",
+                "cn": "营养",
+                "emoji": "📦"
+              },
+              {
+                "en": "nutritious",
+                "cn": "有营养的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "mineral",
+                "cn": "矿物",
+                "emoji": "📦"
+              },
+              {
+                "en": "essential",
+                "cn": "完全必要的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "flavour",
+                "cn": "味道",
+                "emoji": "📦"
+              },
+              {
+                "en": "salty",
+                "cn": "含盐的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "digest",
+                "cn": "消化",
+                "emoji": "🏃"
+              },
+              {
+                "en": "poverty",
+                "cn": "贫穷",
+                "emoji": "📦"
+              },
+              {
+                "en": "reality",
+                "cn": "现实",
+                "emoji": "📦"
+              },
+              {
+                "en": "vision",
+                "cn": "想象",
+                "emoji": "📦"
+              },
+              {
+                "en": "envision",
+                "cn": "展望",
+                "emoji": "🏃"
+              },
+              {
+                "en": "leisure",
+                "cn": "闲暇",
+                "emoji": "📦"
+              },
+              {
+                "en": "urban",
+                "cn": "城市的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "widespread",
+                "cn": "分布广的",
+                "emoji": "🔤"
+              },
+              {
+                "en": "depth",
+                "cn": "深(度)",
+                "emoji": "📦"
+              },
+              {
+                "en": "strain",
+                "cn": "(动、植物的)系",
+                "emoji": "📦"
+              },
+              {
+                "en": "entirely",
+                "cn": "完全地",
+                "emoji": "🏃"
+              },
+              {
+                "en": "instance",
+                "cn": "例子",
+                "emoji": "📦"
               }
             ],
             "dialogues": [
               {
-                "title": "Reading and Thinking",
+                "title": "At the Farmers' Market",
                 "lines": [
                   {
                     "role": "A",
-                    "text": "Let's discuss Working the Land.",
-                    "cn": "我们来讨论Working the Land。"
+                    "text": "Why are these vegetables more expensive?",
+                    "cn": "这些蔬菜为什么更贵?"
                   },
                   {
                     "role": "B",
-                    "text": "Sure. I learned Tested today.",
-                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                    "text": "Because they are organic, grown without any chemicals.",
+                    "cn": "因为它们是有机的,种植时不用任何化学品。"
                   },
                   {
                     "role": "A",
-                    "text": "And Distinct is important too.",
-                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                    "text": "Are they really better for us?",
+                    "cn": "它们对我们真的更好吗?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes. They keep the soil clean and often have more flavour.",
+                    "cn": "是的。它们能保持土壤洁净,而且味道往往更好。"
                   }
                 ]
               }
@@ -5191,7 +6379,7 @@
               {
                 "id": "s1",
                 "title": "核心词汇",
-                "subtitle": "12个教材词汇",
+                "subtitle": "46个教材词汇",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "8分钟"
@@ -5229,6 +6417,14 @@
                 "time": "8分钟"
               },
               {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "✍️",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
                 "id": "s6",
                 "title": "听力短文",
                 "subtitle": "听音答题",
@@ -5253,8 +6449,8 @@
                 "time": "12分钟"
               }
             ],
-            "grammarTitle": "非谓语动词",
-            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarTitle": "动名词(-ing)作主语",
+            "grammarCode": null,
             "grammarQuiz": [
               {
                 "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
@@ -5306,225 +6502,274 @@
               }
             ],
             "reading": {
-              "passage": "The types of phrases used in a passage help identify 2 What do you think a \"smart\" house can do its purpose. For example, the phrase in my opinion that other houses cannot? tells us that the passage is likely meant to persuade. And a text that uses imperatives is likely meant to instruct. A passage's content helps identify its 2 Skim the text and answer these audience. For example, a passage that gives tips questions. on looking after pets would have pet owners as its audience. 1 What is the purpose of the text? 2 Who is the intended audience of this text? SMART HOMES TO MAKE LIFE EASIER Have you ever forgotten to lock the door you leave home each morning, and then of your house? Or, have you ever forgotten go into an energy-efficient mode all by to switch off the TV or computer? You will no longer have to think kinds of things happen to us all the time, about turning switches on and off yourself. waste resources, and can sometimes Your home will also learn your",
-              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "passage": "Yuan Longping was called the father of hybrid rice. Although he became famous and wealthy, he still thought of himself as a simple farmer who loved the land. His only wish was to grow enough food so that no one would go hungry.",
+              "passageCn": "袁隆平被称为杂交水稻之父。尽管他出了名也变得富有,但他仍把自己看作一个热爱土地的普通农民。他唯一的愿望就是种出足够的粮食,让没有人挨饿。",
               "questions": [
                 {
-                  "q": "According to the passage: \"The types of phrases used in a passage help identi...\"",
+                  "q": "What was Yuan Longping known as?",
                   "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "The types of phrases used in a passage help identify 2 What do you thi",
-                    "Unrelated."
+                    "The father of hybrid rice.",
+                    "A famous singer.",
+                    "A city builder.",
+                    "A football player."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 0
                 },
                 {
-                  "q": "According to the passage: \"For example, the phrase in my opinion that other h...\"",
+                  "q": "How did Yuan see himself?",
                   "opts": [
-                    "Unrelated.",
-                    "Opposite meaning.",
-                    "For example, the phrase in my opinion that other houses cannot?",
-                    "Not stated."
+                    "As a rich businessman.",
+                    "As a simple farmer who loved the land.",
+                    "As a city worker.",
+                    "As a foreign scientist."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 1
                 },
                 {
-                  "q": "According to the passage: \"tells us that the passage is likely meant to persu...\"",
+                  "q": "What was Yuan's only wish?",
                   "opts": [
-                    "Not stated.",
-                    "Opposite meaning.",
-                    "tells us that the passage is likely meant to persuade.",
-                    "Unrelated."
+                    "To leave the countryside.",
+                    "To become the richest man.",
+                    "To grow enough food so no one would go hungry.",
+                    "To stop farming forever."
                   ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
-                },
-                {
-                  "q": "According to the passage: \"And a text that uses imperatives is likely meant t...\"",
-                  "opts": [
-                    "Opposite meaning.",
-                    "Not stated.",
-                    "And a text that uses imperatives is likely meant to instruct.",
-                    "Unrelated."
-                  ],
-                  "answer": 2,
-                  "point": "阅读细节",
-                  "dim": "reading"
+                  "answer": 2
                 }
               ]
             },
             "writing": {
-              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
-              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
-              "sampleWords": []
+              "prompt": "In about 60 words, say whether you support organic farming or chemical farming, and give one reason with a detail.",
+              "promptCn": "用约60词说明你支持有机农业还是化学农业,并给出一条理由和一个细节。",
+              "sampleWords": [
+                "organic",
+                "chemical",
+                "pesticide",
+                "soil",
+                "crop",
+                "yield",
+                "nutrition",
+                "harvest",
+                "safe",
+                "environment"
+              ]
             },
             "quizQuestions": [
               {
-                "q": "「Tested」的意思是？",
+                "q": "杂交水稻产量高于常规作物,这里'产量'用哪个词?",
                 "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Distinct」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Showed」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项3",
-                  "选项2"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Promise」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Fight」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项1",
-                  "选项2",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Against」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Fourth」的意思是？",
-                "opts": [
-                  "选项3",
-                  "选项2",
-                  "选项1",
-                  "选择性必修第一册 课文词汇"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Century」的意思是？",
-                "opts": [
-                  "选项1",
-                  "选择性必修第一册 课文词汇",
-                  "选项2",
-                  "选项3"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「耕耘土地」相关词是？",
-                "opts": [
-                  "Tested",
-                  "Century",
-                  "Promise",
-                  "Fight"
+                  "yield",
+                  "noise",
+                  "price",
+                  "weather"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
+              },
+              {
+                "q": "不用化学品、靠自然方式种庄稼的农业叫什么?",
+                "opts": [
+                  "chemical farming",
+                  "urban traffic",
+                  "organic farming",
+                  "city building"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "'解决粮食危机'中'解决(难题)'用哪个动词?",
+                "opts": [
+                  "waste",
+                  "tackle",
+                  "forget",
+                  "lose"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "'授粉、传粉'对应的英文是?",
+                "opts": [
+                  "pollinate",
+                  "destroy",
+                  "borrow",
+                  "whisper"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "____ rice feeds millions of people.（句首主语)",
+                "opts": [
+                  "Growing",
+                  "To grow",
+                  "Grows",
+                  "Grown"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is no use ____ over a poor harvest.",
+                "opts": [
+                  "to cry",
+                  "crying",
+                  "cries",
+                  "cried"
+                ],
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "There is no point ____ chemicals if they ruin the soil.",
+                "opts": [
+                  "to use",
+                  "uses",
+                  "using",
+                  "used"
+                ],
+                "answer": 2,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Yuan's ____ the first hybrid rice changed farming forever.",
+                "opts": [
+                  "develop",
+                  "develops",
+                  "to develop",
+                  "developing"
+                ],
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "他把一生献给了中国的农民。",
+                  "他卖掉了所有的田地。",
+                  "他离开了农村。",
+                  "他从不下地干活。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "He devoted his whole life to the farmers of China."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "化学品很快就会消失。",
+                  "这些化学品会在土壤里残留很长时间。",
+                  "化学品对土地无害。",
+                  "化学品让庄稼味道更好。"
+                ],
+                "answer": 1,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "These chemicals can stay in the soil for a long time."
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "Growing rice feeds millions of people around the world.",
                 "opts": [
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                  "种植水稻养活着全世界数百万人。",
+                  "卖大米能让人变富。",
+                  "水稻只在城市里生长。",
+                  "大米是世界上最贵的食物。"
                 ],
                 "answer": 0
               },
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "Yuan Longping developed the first hybrid rice for farming.",
                 "opts": [
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
-                "opts": [
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "For example, the phrase in my opinion that other houses cannot? tells us",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct."
-                ],
-                "answer": 3
-              },
-              {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
-                "opts": [
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "A passage's content helps identify its 2 Skim the text and answer these ",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                  "袁隆平发明了第一台农用机器。",
+                  "袁隆平培育出第一种可用于耕作的杂交水稻。",
+                  "袁隆平种了第一片小麦田。",
+                  "袁隆平开了第一家米店。"
                 ],
                 "answer": 1
               },
               {
-                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "audio": "Organic farming means growing crops without chemicals.",
                 "opts": [
-                  "For example, the phrase in my opinion that other houses cannot? tells us",
-                  "The types of phrases used in a passage help identify 2 What do you think",
-                  "And a text that uses imperatives is likely meant to instruct.",
-                  "For example, a passage that gives tips questions. on looking after pets "
+                  "有机农业用最多的化学品。",
+                  "有机农业只在盐碱地里进行。",
+                  "有机农业指不用化学品种庄稼。",
+                  "有机农业不需要土壤。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Healthy crops need rich and clean soil.",
+                "opts": [
+                  "健康的庄稼需要很多杀虫剂。",
+                  "健康的庄稼不需要水。",
+                  "健康的庄稼长得很慢。",
+                  "健康的庄稼需要肥沃洁净的土壤。"
                 ],
                 "answer": 3
+              },
+              {
+                "audio": "Changing crops every year keeps the soil rich in minerals.",
+                "opts": [
+                  "每年更换作物能让土壤富含矿物质。",
+                  "每年更换作物会毁掉土地。",
+                  "每年只种同一种作物最好。",
+                  "更换作物会让庄稼变小。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "His dream was to keep all people away from hunger.",
+                "opts": [
+                  "他的梦想是变成最富有的人。",
+                  "他的梦想是让所有人远离饥饿。",
+                  "他的梦想是离开农村。",
+                  "他的梦想是不再种水稻。"
+                ],
+                "answer": 1
               }
+            ],
+            "finalReading": {
+              "passage": "When Mei first moved to the village, she knew nothing about farming and felt useless in the fields. Instead of giving up, she watched the older farmers closely and learned a little more each day. A year later, she could grow her own vegetables and even taught new helpers, proud of how far her patient effort had carried her.",
+              "questions": [
+                {
+                  "q": "What did Mei do instead of giving up?",
+                  "options": [
+                    "She watched experienced farmers and learned a little every day.",
+                    "She left the village at once.",
+                    "She refused to enter the fields again.",
+                    "She bought all her food from a shop."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'watched the older farmers closely and learned a little more each day' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Mei feel a year later?",
+                  "options": [
+                    "Useless and discouraged.",
+                    "Proud of what her patient effort had achieved.",
+                    "Sorry that she had ever started.",
+                    "Bored with growing vegetables."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'proud of how far her patient effort had carried her'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            },
+            "grammarCodes": [
+              "e1u5.01",
+              "e1u5.02",
+              "e1u5.03"
             ]
           }
         ]

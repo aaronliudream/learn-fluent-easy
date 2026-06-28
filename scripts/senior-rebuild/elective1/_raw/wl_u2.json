@@ -1,0 +1,450 @@
+[
+ {
+  "word": "cancer",
+  "ipa": "kns(r)",
+  "cn": "癌；癌症；毒瘤",
+  "propn": false,
+  "raw": "cancer /kns(r)/ n. 癌；癌症；毒瘤"
+ },
+ {
+  "word": "career",
+  "ipa": "kr(r)",
+  "cn": "职业；事业",
+  "propn": false,
+  "raw": "career /kr(r)/ n. 职业；事业"
+ },
+ {
+  "word": "catch fire",
+  "ipa": "",
+  "cn": "着火",
+  "propn": false,
+  "raw": "catch fire 着火"
+ },
+ {
+  "word": "cease",
+  "ipa": "sis",
+  "cn": "使）停止；终止",
+  "propn": false,
+  "raw": "cease /sis/ vi. & vt.  （使）停止；终止"
+ },
+ {
+  "word": "clone",
+  "ipa": "kln",
+  "cn": "克隆；以无性繁殖技术复制 n. 克隆动物（或植物）",
+  "propn": false,
+  "raw": "clone /kln/ vt. 克隆；以无性繁殖技术复制 n. 克隆动物（或植物）"
+ },
+ {
+  "word": "combine",
+  "ipa": "kban",
+  "cn": "使）结合；混合",
+  "propn": false,
+  "raw": "combine /kban/ vt. & vi.  （使）结合；混合"
+ },
+ {
+  "word": "command",
+  "ipa": "kmnd",
+  "cn": "指令；命令；控制 vt. 命令；控制",
+  "propn": false,
+  "raw": "command /kmnd/ n. 指令；命令；控制 vt. 命令；控制"
+ },
+ {
+  "word": "constant",
+  "ipa": "knstnt",
+  "cn": "不断的；重复的；不变的 n. 常数；常量",
+  "propn": false,
+  "raw": "constant /knstnt/ adj. 不断的；重复的；不变的 n. 常数；常量"
+ },
+ {
+  "word": "crime",
+  "ipa": "kram",
+  "cn": "犯罪活动；不法行为",
+  "propn": false,
+  "raw": "crime /kram/ n. 犯罪活动；不法行为"
+ },
+ {
+  "word": "critical",
+  "ipa": "krtkl",
+  "cn": "严重的；关键的；批判性的",
+  "propn": false,
+  "raw": "critical /krtkl/ adj. 严重的；关键的；批判性的"
+ },
+ {
+  "word": "deceased",
+  "ipa": "dsist",
+  "cn": "已死的；亡故的",
+  "propn": false,
+  "raw": "deceased /dsist/ adj.  已死的；亡故的"
+ },
+ {
+  "word": "detect",
+  "ipa": "dtekt",
+  "cn": "发现；查明",
+  "propn": false,
+  "raw": "detect /dtekt/ vt. 发现；查明"
+ },
+ {
+  "word": "distant",
+  "ipa": "dstnt",
+  "cn": "遥远的；远处的；疏远的；心不在焉的",
+  "propn": false,
+  "raw": "distant /dstnt/ adj. 遥远的；远处的；疏远的；心不在焉的"
+ },
+ {
+  "word": "early on",
+  "ipa": "",
+  "cn": "在初期；早先",
+  "propn": false,
+  "raw": "early on 在初期；早先"
+ },
+ {
+  "word": "efficient",
+  "ipa": "fnt",
+  "cn": "效率高的；有功效的",
+  "propn": false,
+  "raw": "efficient /fnt/ adj. 效率高的；有功效的"
+ },
+ {
+  "word": "electrical",
+  "ipa": "lektrkl",
+  "cn": "电的；用电的",
+  "propn": false,
+  "raw": "electrical /lektrkl/ adj. 电的；用电的"
+ },
+ {
+  "word": "emphasis",
+  "ipa": "emfss",
+  "cn": "强调；重视；重要性",
+  "propn": false,
+  "raw": "emphasis /emfss/ n. 强调；重视；重要性"
+ },
+ {
+  "word": "essay",
+  "ipa": "ese",
+  "cn": "文章",
+  "propn": false,
+  "raw": "essay /ese/ n. 文章"
+ },
+ {
+  "word": "fantasy",
+  "ipa": "fntsi",
+  "cn": "幻想；想象",
+  "propn": false,
+  "raw": "fantasy /fntsi/ n. 幻想；想象"
+ },
+ {
+  "word": "forecast",
+  "ipa": "fkst",
+  "cn": "预测；预报",
+  "propn": false,
+  "raw": "forecast /fkst/ vt. & n. 预测；预报"
+ },
+ {
+  "word": "hence",
+  "ipa": "hens",
+  "cn": "因此；由此",
+  "propn": false,
+  "raw": "hence /hens/ adv. 因此；由此"
+ },
+ {
+  "word": "in this sense",
+  "ipa": "",
+  "cn": "从这种（某种）意义上来讲",
+  "propn": false,
+  "raw": "in this sense (in … sense) 从这种（某种）意义上来讲"
+ },
+ {
+  "word": "innovation",
+  "ipa": "nven",
+  "cn": "创新；创造",
+  "propn": false,
+  "raw": "innovation /nven/ n. 创新；创造"
+ },
+ {
+  "word": "instant",
+  "ipa": "nstnt",
+  "cn": "瞬间；片刻 adj. 立即的；速食的；速溶的",
+  "propn": false,
+  "raw": "instant /nstnt/ n. 瞬间；片刻 adj. 立即的；速食的；速溶的"
+ },
+ {
+  "word": "integrate",
+  "ipa": "ntgret",
+  "cn": "使）合并；成为一体",
+  "propn": false,
+  "raw": "integrate /ntgret/ vi. & vt. （使）合并；成为一体"
+ },
+ {
+  "word": "integrated",
+  "ipa": "ntgretd",
+  "cn": "各部分密切协调的；综合的",
+  "propn": false,
+  "raw": "integrated /ntgretd/ adj. 各部分密切协调的；综合的"
+ },
+ {
+  "word": "keep in touch",
+  "ipa": "",
+  "cn": "与……）保持联系； 了解（某课题或领域的情况）",
+  "propn": false,
+  "raw": "keep in touch (with …)  （与……）保持联系； 了解（某课题或领域的情况）"
+ },
+ {
+  "word": "knob",
+  "ipa": "nb",
+  "cn": "旋钮；球形把手",
+  "propn": false,
+  "raw": "knob /nb/ n. 旋钮；球形把手"
+ },
+ {
+  "word": "leak",
+  "ipa": "lik",
+  "cn": "漏；渗漏；透露 n. 漏洞；裂缝；透露",
+  "propn": false,
+  "raw": "leak /lik/ vi. & vt. 漏；渗漏；透露 n. 漏洞；裂缝；透露"
+ },
+ {
+  "word": "librarian",
+  "ipa": "labrerin",
+  "cn": "图书管理员； 图书馆馆长",
+  "propn": false,
+  "raw": "librarian /labrerin/ n. 图书管理员； 图书馆馆长"
+ },
+ {
+  "word": "luxury",
+  "ipa": "lkri",
+  "cn": "奢华",
+  "propn": false,
+  "raw": "luxury /lkri/ n. 奢华"
+ },
+ {
+  "word": "mode",
+  "ipa": "md",
+  "cn": "模式；方式；风格",
+  "propn": false,
+  "raw": "mode /md/ n. 模式；方式；风格"
+ },
+ {
+  "word": "nanobot",
+  "ipa": "nnbt",
+  "cn": "纳米机器人",
+  "propn": false,
+  "raw": "nanobot /nnbt/ n. 纳米机器人"
+ },
+ {
+  "word": "nevertheless",
+  "ipa": "nevles",
+  "cn": "尽管如此；不过；然而",
+  "propn": false,
+  "raw": "nevertheless /nevles/ adv. 尽管如此；不过；然而"
+ },
+ {
+  "word": "obey",
+  "ipa": "be",
+  "cn": "服从；遵守",
+  "propn": false,
+  "raw": "obey /be/ vi. & vt. 服从；遵守"
+ },
+ {
+  "word": "occupation",
+  "ipa": "kjupen",
+  "cn": "职业；占领",
+  "propn": false,
+  "raw": "occupation /kjupen/ n. 职业；占领"
+ },
+ {
+  "word": "oppose",
+  "ipa": "pz",
+  "cn": "反对；抵制；阻挠",
+  "propn": false,
+  "raw": "oppose /pz/ vt. 反对；抵制；阻挠"
+ },
+ {
+  "word": "paragraph",
+  "ipa": "prgrf",
+  "cn": "段；段落",
+  "propn": false,
+  "raw": "paragraph /prgrf/ n. 段；段落"
+ },
+ {
+  "word": "persuade",
+  "ipa": "pswed",
+  "cn": "劝说；说服",
+  "propn": false,
+  "raw": "persuade /pswed/ vt. 劝说；说服"
+ },
+ {
+  "word": "phrase",
+  "ipa": "frez",
+  "cn": "短语；词组",
+  "propn": false,
+  "raw": "phrase /frez/ n. 短语；词组"
+ },
+ {
+  "word": "potential",
+  "ipa": "ptenl",
+  "cn": "可能的；潜在的 n. 潜力；可能性",
+  "propn": false,
+  "raw": "potential /ptenl/ adj. 可能的；潜在的 n. 潜力；可能性"
+ },
+ {
+  "word": "potentially",
+  "ipa": "ptenli",
+  "cn": "潜在地；可能地",
+  "propn": false,
+  "raw": "potentially /ptenli/ adv.  潜在地；可能地"
+ },
+ {
+  "word": "predict",
+  "ipa": "prdkt",
+  "cn": "预测；预言；预料",
+  "propn": false,
+  "raw": "predict /prdkt/ vt. 预测；预言；预料"
+ },
+ {
+  "word": "prediction",
+  "ipa": "prdkn",
+  "cn": "预测；预言",
+  "propn": false,
+  "raw": "prediction /prdkn/ n. 预测；预言"
+ },
+ {
+  "word": "preference",
+  "ipa": "prefrns",
+  "cn": "爱好；偏爱",
+  "propn": false,
+  "raw": "preference /prefrns/ n. 爱好；偏爱"
+ },
+ {
+  "word": "prospect",
+  "ipa": "prspekt ",
+  "cn": "可能性；前景",
+  "propn": false,
+  "raw": "prospect /prspekt / n. 可能性；前景"
+ },
+ {
+  "word": "relevant",
+  "ipa": "relvnt",
+  "cn": "有关的；有意义的",
+  "propn": false,
+  "raw": "relevant /relvnt/ adj. 有关的；有意义的"
+ },
+ {
+  "word": "remote",
+  "ipa": "rmt",
+  "cn": "远程的；偏远的",
+  "propn": false,
+  "raw": "remote /rmt/ adj. 远程的；偏远的"
+ },
+ {
+  "word": "remote control",
+  "ipa": "",
+  "cn": "遥控器；遥控",
+  "propn": false,
+  "raw": "remote control 遥控器；遥控"
+ },
+ {
+  "word": "resist",
+  "ipa": "rzst",
+  "cn": "抵制；反抗；抵挡",
+  "propn": false,
+  "raw": "resist /rzst/ vi. & vt. 抵制；反抗；抵挡"
+ },
+ {
+  "word": "resistance",
+  "ipa": "rzstns",
+  "cn": "抵制；反对；抗拒",
+  "propn": false,
+  "raw": "resistance /rzstns/ n. 抵制；反对；抗拒"
+ },
+ {
+  "word": "routine",
+  "ipa": "rutin",
+  "cn": "常规；正常顺序 adj. 常规的；日常的",
+  "propn": false,
+  "raw": "routine /rutin/ n. 常规；正常顺序 adj. 常规的；日常的"
+ },
+ {
+  "word": "daily routine",
+  "ipa": "",
+  "cn": "日常生活",
+  "propn": false,
+  "raw": "daily routine 日常生活"
+ },
+ {
+  "word": "rural",
+  "ipa": "rrl",
+  "cn": "乡村的；农村的",
+  "propn": false,
+  "raw": "rural /rrl/ adj. 乡村的；农村的"
+ },
+ {
+  "word": "secure",
+  "ipa": "skj(r)",
+  "cn": "安全的；安心的；可靠的；牢固的 vt. 获得；拴牢；保护",
+  "propn": false,
+  "raw": "secure /skj(r)/ adj. 安全的；安心的；可靠的；牢固的 vt. 获得；拴牢；保护"
+ },
+ {
+  "word": "security",
+  "ipa": "skjrti",
+  "cn": "保护措施；安全工作",
+  "propn": false,
+  "raw": "security /skjrti/ n. 保护措施；安全工作"
+ },
+ {
+  "word": "sensor",
+  "ipa": "sens(r)",
+  "cn": "传感器；敏感元件",
+  "propn": false,
+  "raw": "sensor /sens(r)/ n. 传感器；敏感元件"
+ },
+ {
+  "word": "signpost",
+  "ipa": "sanpst",
+  "cn": "路标",
+  "propn": false,
+  "raw": "signpost /sanpst/ n. 路标"
+ },
+ {
+  "word": "structure",
+  "ipa": "strkt(r)",
+  "cn": "结构；体系 vt. 系统安排；精心组织",
+  "propn": false,
+  "raw": "structure /strkt(r)/ n. 结构；体系 vt. 系统安排；精心组织"
+ },
+ {
+  "word": "switch",
+  "ipa": "swt",
+  "cn": "转换；交换 vi. & vt. （使）改变；转变 n. 开关；转换器；改变",
+  "propn": false,
+  "raw": "switch /swt/ vt. 转换；交换 vi. & vt. （使）改变；转变 n. 开关；转换器；改变"
+ },
+ {
+  "word": "switch off",
+  "ipa": "on 关 ",
+  "cn": "关 / 开（电灯、机器等）",
+  "propn": false,
+  "raw": "switch off/on 关 / 开（电灯、机器等）"
+ },
+ {
+  "word": "warning",
+  "ipa": "wn",
+  "cn": "警告；警示；先兆",
+  "propn": false,
+  "raw": "warning /wn/ n. 警告；警示；先兆"
+ },
+ {
+  "word": "wire",
+  "ipa": "wa(r)",
+  "cn": "电线；金属丝（或线） vt. 接通电源；将……连接到",
+  "propn": false,
+  "raw": "wire /wa(r)/ n. 电线；金属丝（或线） vt. 接通电源；将……连接到"
+ },
+ {
+  "word": "wiring",
+  "ipa": "war",
+  "cn": "电线线路；线路系统",
+  "propn": false,
+  "raw": "wiring /war/ n. 电线线路；线路系统"
+ }
+]

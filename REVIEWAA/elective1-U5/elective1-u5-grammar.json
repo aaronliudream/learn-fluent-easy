@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "grammar_title": "动名词(-ing form / gerund)作主语",
+  "source": "人教版2019选择性必修一 Unit 5 Discovering Useful Structures:动名词作主语(谓语用单数 / it 作形式主语句式 / 动名词复合结构作主语)。句子地道、围绕农业·袁隆平·杂交水稻·有机农业·粮食安全;主语位/固定句式使动名词唯一成立。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "动名词作主语,谓语用单数",
+      "overview": "句首主语位用动名词(-ing),把动作'名词化';作主语时视为单数,谓语用 is/was/feeds/widens 等单数形式。to do 可作主语但更正式且常用 it 形式;does/done 不能作主语。"
+    },
+    {
+      "code": "u5.02",
+      "point": "it 作形式主语 + 动名词(常见固定句式)",
+      "overview": "it 作形式主语、动名词作真正主语后置:It is no use/no good doing…;There is no point (in) doing…;It is a waste of time doing… 等;此处只能用动名词。"
+    },
+    {
+      "code": "u5.03",
+      "point": "动名词复合结构作主语 / 动名词主语 vs 不定式主语",
+      "overview": "动名词前可带逻辑主语(名词所有格/Tom's/his)构成复合结构作主语;并对照'动名词主语(已发生·一般)vs 不定式主语(具体·将来)'的选用。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "\"____ rice feeds millions of people around the world.\"",
+      "options": [
+        "Growing",
+        "To grow",
+        "Grows",
+        "Grown"
+      ],
+      "answer_index": 0,
+      "explanation": "句首主语位、动作名词化作主语 → 动名词 Growing;does/done 不能作主语,to grow 在此不如动名词自然。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ the land was something Yuan Longping did all his life.\"",
+      "options": [
+        "Work",
+        "Working",
+        "Worked",
+        "To working"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位用动名词 Working;'to working' 不成形式。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ yields in existing fields was the real solution.\"",
+      "options": [
+        "Boost",
+        "Boosts",
+        "Boosting",
+        "Boosted"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词 Boosting 作主语,谓语用单数 was。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ hybrid rice took years of intense effort.\"",
+      "options": [
+        "Develop",
+        "Develops",
+        "Developed",
+        "Developing"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位动作名词化 → 动名词 Developing;谓语 took 用单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ enough food for everyone is a huge challenge.\"",
+      "options": [
+        "Producing",
+        "Produce",
+        "Produces",
+        "Produced"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词 Producing 作主语,谓语用单数 is。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ chemical pesticides can harm the soil and our health.\"",
+      "options": [
+        "Use",
+        "Using",
+        "Uses",
+        "Used"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位用动名词 Using;does/done 类形式不能作主语。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ crops every year keeps the soil rich in minerals.\"",
+      "options": [
+        "Change",
+        "Changes",
+        "Changing",
+        "Changed"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词 Changing 作主语,谓语用单数 keeps。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ animal waste as fertiliser makes the soil healthier.\"",
+      "options": [
+        "Use",
+        "Uses",
+        "Used",
+        "Using"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位 → 动名词 Using;谓语 makes 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ rice as tall as sorghum was once only a dream.\"",
+      "options": [
+        "Imagining",
+        "Imagine",
+        "Imagines",
+        "Imagined"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词 Imagining 作主语,谓语用单数 was。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ the soil clean and rich is the goal of organic farming.\"",
+      "options": [
+        "Keep",
+        "Keeping",
+        "Keeps",
+        "Kept"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位 → 动名词 Keeping;谓语 is 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ a higher yield was what every farmer hoped for.\"",
+      "options": [
+        "Attain",
+        "Attains",
+        "Attaining",
+        "Attained"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词 Attaining 作主语,谓语 was 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ world hunger requires both science and hard work.\"",
+      "options": [
+        "Tackle",
+        "Tackles",
+        "Tackled",
+        "Tackling"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位 → 动名词 Tackling;谓语 requires 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ in the fields gave Yuan a deep love for the land.\"",
+      "options": [
+        "Farming",
+        "Farm",
+        "Farms",
+        "Farmed"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词 Farming 作主语,谓语用单数 gave。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ different crops helps put minerals back into the ground.\"",
+      "options": [
+        "Plant",
+        "Planting",
+        "Plants",
+        "Planted"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位 → 动名词 Planting;谓语 helps 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ research has helped feed not just China but many other countries.\"",
+      "options": [
+        "Conduct",
+        "Conducts",
+        "Conducting",
+        "Conducted"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词 Conducting 作主语,谓语 has helped。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ healthy food while protecting the land is far from easy.\"",
+      "options": [
+        "Grow",
+        "Grows",
+        "Grown",
+        "Growing"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位 → 动名词 Growing;谓语 is 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ poverty in the countryside was always close to his heart.\"",
+      "options": [
+        "Fighting",
+        "Fight",
+        "Fights",
+        "Fought"
+      ],
+      "answer_index": 0,
+      "explanation": "动名词 Fighting 作主语,谓语 was 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ rich soil is more important than using strong chemicals.\"",
+      "options": [
+        "Build",
+        "Building",
+        "Builds",
+        "Built"
+      ],
+      "answer_index": 1,
+      "explanation": "主语位 → 动名词 Building;谓语 is 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ from the land taught him more than any book could.\"",
+      "options": [
+        "Learn",
+        "Learns",
+        "Learning",
+        "Learned"
+      ],
+      "answer_index": 2,
+      "explanation": "动名词 Learning 作主语,谓语 taught 单数。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "\"____ on salty land was made possible by seawater rice.\"",
+      "options": [
+        "Farm",
+        "Farms",
+        "Farmed",
+        "Farming"
+      ],
+      "answer_index": 3,
+      "explanation": "主语位 → 动名词 Farming;谓语 was 单数。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no use ____ over a poor harvest; just try again next year.\"",
+      "options": [
+        "crying",
+        "to cry",
+        "cries",
+        "cried"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing 固定句式,真正主语用动名词 crying。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no good ____ about the weather; farmers must adapt.\"",
+      "options": [
+        "to complain",
+        "complaining",
+        "complains",
+        "complained"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good doing 固定句式,用动名词 complaining。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no point ____ chemicals if they ruin the soil.\"",
+      "options": [
+        "to use",
+        "uses",
+        "using",
+        "used"
+      ],
+      "answer_index": 2,
+      "explanation": "There is no point (in) doing,用动名词 using。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is a waste of time ____ crops that no one will buy.\"",
+      "options": [
+        "grow",
+        "grows",
+        "grown",
+        "growing"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time doing,用动名词 growing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no use ____ that the food problem will solve itself.\"",
+      "options": [
+        "hoping",
+        "to hope",
+        "hopes",
+        "hoped"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing,用动名词 hoping。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no good ____ the same field every year without a break.\"",
+      "options": [
+        "to farm",
+        "farming",
+        "farms",
+        "farmed"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good doing,用动名词 farming。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no point ____ a hybrid that cannot survive in the fields.\"",
+      "options": [
+        "to create",
+        "creates",
+        "creating",
+        "created"
+      ],
+      "answer_index": 2,
+      "explanation": "There is no point (in) doing,用动名词 creating。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is a waste of time ____ for larger fields instead of better seeds.\"",
+      "options": [
+        "wish",
+        "wishes",
+        "wished",
+        "wishing"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time doing,用动名词 wishing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no use ____ the truth that the soil is becoming poorer.\"",
+      "options": [
+        "hiding",
+        "to hide",
+        "hides",
+        "hid"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing,用动名词 hiding。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no good ____ pesticides everywhere without thinking of the cost.\"",
+      "options": [
+        "to spread",
+        "spreading",
+        "spreads",
+        "spread"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good doing,用动名词 spreading。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no point ____ that organic food costs more without a reason.\"",
+      "options": [
+        "to argue",
+        "argues",
+        "arguing",
+        "argued"
+      ],
+      "answer_index": 2,
+      "explanation": "There is no point (in) doing,用动名词 arguing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is a waste of time ____ about hunger but doing nothing at all.\"",
+      "options": [
+        "talk",
+        "talks",
+        "talked",
+        "talking"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time doing,用动名词 talking。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no use ____ that one good harvest will feed a nation forever.\"",
+      "options": [
+        "thinking",
+        "to think",
+        "thinks",
+        "thought"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing,用动名词 thinking。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no good ____ to retire when the work is only half done.\"",
+      "options": [
+        "to rush",
+        "rushing",
+        "rushes",
+        "rushed"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good doing,用动名词 rushing。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no point ____ the same crop until the land is worn out.\"",
+      "options": [
+        "to repeat",
+        "repeats",
+        "repeating",
+        "repeated"
+      ],
+      "answer_index": 2,
+      "explanation": "There is no point (in) doing,用动名词 repeating。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is a waste of time ____ for an easy answer to world hunger.\"",
+      "options": [
+        "search",
+        "searches",
+        "searched",
+        "searching"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time doing,用动名词 searching。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no use ____ the harvest if the seeds were poor to begin with.\"",
+      "options": [
+        "blaming",
+        "to blame",
+        "blames",
+        "blamed"
+      ],
+      "answer_index": 0,
+      "explanation": "It is no use doing,用动名词 blaming。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is no good ____ the danger of using too many chemicals.\"",
+      "options": [
+        "to ignore",
+        "ignoring",
+        "ignores",
+        "ignored"
+      ],
+      "answer_index": 1,
+      "explanation": "It is no good doing,用动名词 ignoring。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"There is no point ____ a field that gets no water and no care.\"",
+      "options": [
+        "to keep",
+        "keeps",
+        "keeping",
+        "kept"
+      ],
+      "answer_index": 2,
+      "explanation": "There is no point (in) doing,用动名词 keeping。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "\"It is a waste of time ____ harmful insects with the wrong methods.\"",
+      "options": [
+        "fight",
+        "fights",
+        "fought",
+        "fighting"
+      ],
+      "answer_index": 3,
+      "explanation": "It is a waste of time doing,用动名词 fighting。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Yuan's ____ the first hybrid rice changed farming in China forever.\"",
+      "options": [
+        "developing",
+        "to develop",
+        "develops",
+        "develop"
+      ],
+      "answer_index": 0,
+      "explanation": "名词所有格 Yuan's + 动名词 developing 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"His ____ his life to the farmers won the respect of millions.\"",
+      "options": [
+        "to devote",
+        "devoting",
+        "devotes",
+        "devoted"
+      ],
+      "answer_index": 1,
+      "explanation": "his + 动名词 devoting 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Tom's ____ to organic methods surprised his whole village.\"",
+      "options": [
+        "to switch",
+        "switches",
+        "switching",
+        "switched"
+      ],
+      "answer_index": 2,
+      "explanation": "Tom's + 动名词 switching 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The scientist's ____ seawater rice gave hope to many regions.\"",
+      "options": [
+        "create",
+        "creates",
+        "to create",
+        "creating"
+      ],
+      "answer_index": 3,
+      "explanation": "所有格 + 动名词 creating 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Grandpa's ____ chemical fertilisers is the reason he farms organically.\"",
+      "options": [
+        "avoiding",
+        "to avoid",
+        "avoids",
+        "avoid"
+      ],
+      "answer_index": 0,
+      "explanation": "Grandpa's + 动名词 avoiding 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The farmers' ____ new strains led to far better harvests.\"",
+      "options": [
+        "to plant",
+        "planting",
+        "plants",
+        "planted"
+      ],
+      "answer_index": 1,
+      "explanation": "所有格 + 动名词 planting 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Her ____ the soil every season keeps the land healthy.\"",
+      "options": [
+        "to test",
+        "tests",
+        "testing",
+        "tested"
+      ],
+      "answer_index": 2,
+      "explanation": "her + 动名词 testing 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"My uncle's ____ to the countryside let him grow his own food.\"",
+      "options": [
+        "move",
+        "moves",
+        "to move",
+        "moving"
+      ],
+      "answer_index": 3,
+      "explanation": "所有格 + 动名词 moving 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ rice every day reminds us how precious each grain is. (强调一般、已成习惯的事)\"",
+      "options": [
+        "Eating",
+        "To eat",
+        "Eats",
+        "Eaten"
+      ],
+      "answer_index": 0,
+      "explanation": "表示一般性、习惯性的事实作主语,用动名词 Eating(而非具体一次的不定式)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ enough food for a growing world is the dream of every farmer. (泛指一般情况)\"",
+      "options": [
+        "To grow only",
+        "Growing",
+        "Grows",
+        "Grown"
+      ],
+      "answer_index": 1,
+      "explanation": "泛指一般情况作主语,用动名词 Growing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ the soil with care brings a better harvest in the long run. (强调长期的、习惯性做法)\"",
+      "options": [
+        "Treat",
+        "Treats",
+        "Treating",
+        "Treated"
+      ],
+      "answer_index": 2,
+      "explanation": "强调长期、习惯性做法作主语,用动名词 Treating。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ from spilt milk helps no one; farmers look to the next season. (谚语:固定用动名词)\"",
+      "options": [
+        "Cry",
+        "Cries",
+        "Cried",
+        "Crying"
+      ],
+      "answer_index": 3,
+      "explanation": "谚语 Crying over spilt milk;动名词作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"His ____ never to give up inspired a new generation of scientists.\"",
+      "options": [
+        "choosing",
+        "to choose",
+        "chooses",
+        "choose"
+      ],
+      "answer_index": 0,
+      "explanation": "his + 动名词 choosing 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The village's ____ to natural fertiliser slowly made its fields richer.\"",
+      "options": [
+        "to turn",
+        "turning",
+        "turns",
+        "turned"
+      ],
+      "answer_index": 1,
+      "explanation": "所有格 + 动名词 turning 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ different crops in turn protects the land year after year. (强调反复、一般的做法)\"",
+      "options": [
+        "Grow",
+        "Grows",
+        "Growing",
+        "Grown"
+      ],
+      "answer_index": 2,
+      "explanation": "强调反复、一般做法作主语,用动名词 Growing。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Mary's ____ organic vegetables made her shop popular in town.\"",
+      "options": [
+        "sell",
+        "sells",
+        "to sell",
+        "selling"
+      ],
+      "answer_index": 3,
+      "explanation": "Mary's + 动名词 selling 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ the land was, for Yuan, the same as serving the people. (泛指一般性的事)\"",
+      "options": [
+        "Serving",
+        "To serve",
+        "Serves",
+        "Served"
+      ],
+      "answer_index": 0,
+      "explanation": "泛指一般性的事作主语,用动名词 Serving。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"The team's ____ the experiment in the south saved another year of work.\"",
+      "options": [
+        "to run",
+        "running",
+        "runs",
+        "ran"
+      ],
+      "answer_index": 1,
+      "explanation": "所有格 + 动名词 running 构成复合结构作主语。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"____ good seeds matters more than owning larger fields. (泛指一般情况)\"",
+      "options": [
+        "Choose",
+        "Chooses",
+        "Choosing",
+        "Chosen"
+      ],
+      "answer_index": 2,
+      "explanation": "泛指一般情况作主语,用动名词 Choosing;谓语 matters 单数。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "\"Their ____ the soil free of chemicals kept their crops safe to eat.\"",
+      "options": [
+        "keep",
+        "keeps",
+        "to keep",
+        "keeping"
+      ],
+      "answer_index": 3,
+      "explanation": "their + 动名词 keeping 构成复合结构作主语。"
+    }
+  ]
+}

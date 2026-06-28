@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "People of Achievement",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修一 Unit 1 同主题听力(谁是你最敬佩的人/伟大的意义/采访青蒿素故事/钟南山广播/请教写人物介绍/一段伟人名言)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Who Do You Admire?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lily",
+          "text": "Tom, our teacher asked us to talk about a person we admire. Who will you choose?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I'd like to talk about Tu Youyou. She discovered a new medicine for malaria."
+        },
+        {
+          "speaker": "Lily",
+          "text": "Oh, the scientist who won the Nobel Prize? Why do you admire her?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Because she never gave up. Her team failed many times before they succeeded."
+        },
+        {
+          "speaker": "Lily",
+          "text": "That's true. I think I'll choose Florence Nightingale."
+        },
+        {
+          "speaker": "Tom",
+          "text": "The nurse? Why her?"
+        },
+        {
+          "speaker": "Lily",
+          "text": "She cared for wounded soldiers and founded modern nursing. She was very brave."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Great choice. Both of them helped a lot of people."
+        }
+      ],
+      "translation_cn": "老师让谈一位敬佩的人。Tom 选屠呦呦,因为她发现治疟疾的新药、屡败屡战从不放弃;Lily 选南丁格尔,因为她照料伤兵、创立现代护理、很勇敢。两人都帮助了许多人。",
+      "questions": [
+        {
+          "stem": "Who does Tom choose to talk about?",
+          "options": [
+            "Tu Youyou.",
+            "Florence Nightingale.",
+            "Einstein.",
+            "Lu Xun."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tom admire her?",
+          "options": [
+            "She was very rich.",
+            "She never gave up after failing.",
+            "She was famous in films.",
+            "She lived very long."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who does Lily choose?",
+          "options": [
+            "Florence Nightingale.",
+            "Tu Youyou.",
+            "Zhong Nanshan.",
+            "Einstein."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did Lily's person do?",
+          "options": [
+            "She discovered a new medicine.",
+            "She cared for soldiers and founded nursing.",
+            "She wrote famous novels.",
+            "She built bridges."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do Tom and Lily agree about the two people?",
+          "options": [
+            "Both were scientists.",
+            "Both lived in England.",
+            "Both helped many people.",
+            "Both won the Nobel Prize."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 The Meaning of Greatness",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When we hear the word great, we often think of famous people.",
+        "But Einstein once said we should become a person of value, not just a person of success.",
+        "This means that helping others matters more than fame or money.",
+        "A kind teacher or a brave doctor can be great in a quiet way.",
+        "Greatness, then, is really about caring and never giving up."
+      ],
+      "translation_cn": "听到'伟大'我们常想到名人;但爱因斯坦说要做有价值的人,而非只追求成功;这意味着帮助别人比名利更重要;善良的老师、勇敢的医生也能以平凡的方式伟大;伟大其实关乎关爱和永不放弃。",
+      "questions": [
+        {
+          "stem": "What do people often think of when they hear 'great'?",
+          "options": [
+            "Money only.",
+            "Animals.",
+            "Cars.",
+            "Famous people."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Einstein say we should become?",
+          "options": [
+            "A person of value, not just success.",
+            "The richest person.",
+            "A famous actor.",
+            "A quiet person."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What matters more than fame or money?",
+          "options": [
+            "Winning prizes.",
+            "Helping others.",
+            "Travelling far.",
+            "Being noticed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Who can be great in a quiet way?",
+          "options": [
+            "Only scientists.",
+            "Only leaders.",
+            "A kind teacher or a brave doctor.",
+            "Only writers."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is greatness really about?",
+          "options": [
+            "Being rich.",
+            "Being on television.",
+            "Living a long life.",
+            "Caring and never giving up."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 An Interview About the Discovery",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Host",
+          "text": "Professor, can you tell us how the new medicine for malaria was found?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "Of course. The team read more than two thousand old Chinese medical texts."
+        },
+        {
+          "speaker": "Host",
+          "text": "Two thousand? That sounds like a huge amount of work."
+        },
+        {
+          "speaker": "Guest",
+          "text": "It was. They also tested hundreds of plants, but at first nothing worked."
+        },
+        {
+          "speaker": "Host",
+          "text": "So what was the key to success?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "They drew out the extract at a lower temperature, and then it finally worked."
+        },
+        {
+          "speaker": "Host",
+          "text": "Amazing. How many times did they fail before that?"
+        },
+        {
+          "speaker": "Guest",
+          "text": "More than a hundred and ninety times. They never gave up."
+        }
+      ],
+      "translation_cn": "主持人请教授讲新疟疾药如何被发现。团队读了两千多部中医古籍、测试数百种植物,起初都无效;关键是在较低温度提取提取物才成功;在此之前失败了190多次,但从不放弃。",
+      "questions": [
+        {
+          "stem": "How many old texts did the team read?",
+          "options": [
+            "More than two thousand.",
+            "Only ten.",
+            "About fifty.",
+            "None at all."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happened when they first tested the plants?",
+          "options": [
+            "Everything worked at once.",
+            "Nothing worked at first.",
+            "They stopped the project.",
+            "They lost the texts."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was the key to success?",
+          "options": [
+            "Reading more books.",
+            "Boiling at high heat.",
+            "Drawing out the extract at a lower temperature.",
+            "Using more plants."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How many times did they fail?",
+          "options": [
+            "Twice.",
+            "Ten times.",
+            "Fifty times.",
+            "More than 190 times."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the guest say about the team's spirit?",
+          "options": [
+            "They never gave up.",
+            "They gave up quickly.",
+            "They worked alone.",
+            "They were not patient."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 A Trusted Doctor",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Zhong Nanshan is a doctor whom many Chinese people deeply trust.",
+        "During a dangerous outbreak, he stayed calm and told the public the truth.",
+        "He insisted on treating the most serious patients himself.",
+        "Years later, even in his eighties, he stepped forward to help again.",
+        "His courage and honesty make him a model of a great person."
+      ],
+      "translation_cn": "钟南山是许多中国人深深信任的医生;危险爆发期间他保持冷静、说出真相;坚持亲自救治最重的病人;多年后年逾八旬仍挺身相助;他的勇气与诚实使他成为伟人的典范。",
+      "questions": [
+        {
+          "stem": "How do many people in China feel about Zhong Nanshan?",
+          "options": [
+            "They are afraid of him.",
+            "They deeply trust him.",
+            "They have never heard of him.",
+            "They dislike him."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did he do during the dangerous outbreak?",
+          "options": [
+            "He hid at home.",
+            "He left the country.",
+            "He stayed calm and told the truth.",
+            "He stopped working."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which patients did he insist on treating?",
+          "options": [
+            "The easiest ones.",
+            "Only children.",
+            "None at all.",
+            "The most serious ones."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did he do years later in his eighties?",
+          "options": [
+            "He stepped forward to help again.",
+            "He retired completely.",
+            "He refused to help.",
+            "He moved abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What makes him a model of a great person?",
+          "options": [
+            "His wealth.",
+            "His courage and honesty.",
+            "His fame on TV.",
+            "His long holidays."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 How to Write About a Hero",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "I have to write an introduction about someone I admire, but I don't know how to start."
+        },
+        {
+          "speaker": "Ben",
+          "text": "First, choose a person and say why he or she is great."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Okay. Then what should I write about?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Tell an impressive story from the person's life. Stories make readers care."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Should I describe what the person looks like too?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Yes, a little. Describe the appearance and the personality."
+        },
+        {
+          "speaker": "Anna",
+          "text": "And how should I end it?"
+        },
+        {
+          "speaker": "Ben",
+          "text": "Sum up how you feel about the person. That makes a strong ending."
+        }
+      ],
+      "translation_cn": "Anna 要写敬佩之人的介绍却不知如何开头。Ben 建议:先选人并说明为何伟大;再讲一个动人的生平故事;适当描写外貌和性格;最后总结自己对此人的感受作为有力结尾。",
+      "questions": [
+        {
+          "stem": "What is Anna's problem?",
+          "options": [
+            "She has no paper.",
+            "She can't read.",
+            "She doesn't know how to start writing.",
+            "She lost her pen."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Ben say to do first?",
+          "options": [
+            "Draw a picture.",
+            "Copy a book.",
+            "Write the ending.",
+            "Choose a person and say why they are great."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Ben suggest telling a story?",
+          "options": [
+            "Because stories make readers care.",
+            "To make it longer.",
+            "To use big words.",
+            "To fill the page."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Ben say about describing the person?",
+          "options": [
+            "Never describe them.",
+            "Describe the appearance and personality.",
+            "Only describe their clothes.",
+            "Describe only the face."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How should Anna end the introduction?",
+          "options": [
+            "By stopping suddenly.",
+            "By asking a question.",
+            "By summing up how she feels.",
+            "By repeating the title."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Famous Saying",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a famous saying from Albert Einstein.",
+        "He said we should try not to become a person of success, but a person of value.",
+        "In other words, do not work only for fame or money.",
+        "Instead, do something good and useful for other people.",
+        "If we live this way, our lives will truly have meaning."
+      ],
+      "translation_cn": "这是爱因斯坦的一句名言:不要只想成为成功的人,而要做有价值的人;换句话说,别只为名利而努力;要为他人做一些有益的事;若这样生活,我们的人生才真正有意义。",
+      "questions": [
+        {
+          "stem": "Whose saying is this?",
+          "options": [
+            "Tu Youyou's.",
+            "Lu Xun's.",
+            "Florence Nightingale's.",
+            "Albert Einstein's."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What kind of person should we try to become?",
+          "options": [
+            "A person of value.",
+            "The richest person.",
+            "A famous singer.",
+            "A quiet person."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should we NOT work only for?",
+          "options": [
+            "Friends.",
+            "Fame or money.",
+            "Health.",
+            "Family."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should we do instead?",
+          "options": [
+            "Rest all day.",
+            "Travel far.",
+            "Do something good for others.",
+            "Buy more things."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will happen if we live this way?",
+          "options": [
+            "We will become poor.",
+            "We will be forgotten.",
+            "Nothing will change.",
+            "Our lives will truly have meaning."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

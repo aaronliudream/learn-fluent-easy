@@ -1,0 +1,36 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "主语从句(Subject Clauses)速查",
+    "intro": "主语从句就是用一个句子来作整句的主语。判断口诀:从句完整、不缺主宾 → that;从句缺主语/宾语 → what / who;表'是否' → whether(句首不用 if);怕句子头重脚轻,就用 it 作形式主语,把从句挪到句末。",
+    "table": {
+      "headers": ["引导词", "用法 / 例句"],
+      "rows": [
+        ["that", "从句完整、只起连接、不充当成分:That he came late is true."],
+        ["what / who", "从句缺主语或宾语,该词在从句里充当成分:What matters is safety."],
+        ["whether", "表'是否',句首主语从句只能用 whether:Whether we go depends on the weather."],
+        ["why / how / where", "表原因/方式/地点,从句缺该状语:Why he left is unknown."],
+        ["it 作形式主语", "It is important that we protect parks.（真正主语 that 从句后置)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "that 在主语从句中不充当成分,只起连接,且句首一般不能省略", "mark": "That she won surprised us.（that 不能省)" },
+      { "rule": "句首主语从句表'是否'用 whether,绝不用 if", "mark": "Whether it rains matters. √ / If it rains matters. ×" },
+      { "rule": "what / who 在从句里充当主语或宾语,不可换成 that", "mark": "What he said(said 缺宾语)→ what,不能用 that" },
+      { "rule": "it 作形式主语,真正的从句移到句末,it 后多接 that / whether / who", "mark": "It is unknown whether he will come." }
+    ],
+    "why": [
+      "主语从句很长时,句子会'头重脚轻',所以常用 it 占住主语位置、把真正的从句放到后面,读起来更顺。引导词选 that 还是 what/who,关键看从句本身缺不缺主语或宾语。"
+    ],
+    "gaokaoPoints": [
+      "that 与 what 的区分(从句缺不缺成分);whether 与 if 的区分(主语从句句首只用 whether);语法填空高频。",
+      "it 作形式主语句型:It is + 形容词/名词 + that 从句;以及 It doesn't matter who/whether…。"
+    ],
+    "examVsReal": [
+      { "exam": "That he passed the test made us happy.（考试/书面)", "real": "We were happy (that) he passed the test.", "note": "口语里常把长主语从句换成 it 句型或直接换说法,少用句首 that 从句" },
+      { "exam": "Whether they will come is still unknown.（考试)", "real": "We don't know if they'll come.", "note": "考试句首用 whether;口语在宾语位置常用 if,更口语化" }
+    ]
+  }
+}

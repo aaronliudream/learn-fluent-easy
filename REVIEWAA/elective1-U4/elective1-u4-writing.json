@@ -1,0 +1,51 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Write about Body Language across Cultures(写一篇关于跨文化肢体语言的短文)",
+  "genre": "说明文 / 议论(explain how body language varies across cultures + give advice)",
+  "source": "人教版2019选择性必修一 Unit 4 Reading for Writing:写一篇关于肢体语言/跨文化手势/如何更好沟通的说明短文(描述差异 + 给出建议)。",
+  "prompt_cn": "假设你叫李华,你的英国笔友 Chris 下个月将第一次来中国。请用英语写一篇约80词的短文,内容包括:① 说明肢体语言因文化而异(举一两个例子,如手势/眼神/问候);② 给 Chris 一两条在中国得体使用肢体语言的建议;③ 表达欢迎他来的心情。注意:句子围绕中心、地道连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your British pen-friend Chris will visit China for the first time next month. Write a short passage (about 80 words) including: 1) explain that body language varies from culture to culture, with one or two examples (gestures, eye contact, greetings); 2) one or two pieces of advice for using body language politely in China; 3) say that you welcome his visit.",
+  "points": [
+    "说明肢体语言因文化而异(Body language varies from culture to culture)",
+    "举例(For example, the same gesture may mean … / eye contact …)",
+    "给出得体建议(My advice is … / You'd better avoid …)",
+    "表达欢迎(I look forward to seeing you in China!)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Chris, I'm so glad you're coming to China next month! One thing worth knowing is that body language varies from culture to culture. For example, a gesture that is friendly at home may mean something different here, and staring at someone too long can be read as rude. My advice is simple: watch how local people behave, keep your eye contact polite, and a warm smile is always welcome. Don't worry about small mistakes — we'll all understand. I really look forward to seeing you and showing you around!",
+  "model_translation": "亲爱的 Chris,很高兴你下个月要来中国!有一点值得了解:肢体语言因文化而异。比如,在你家乡友好的手势在这里也许含义不同,盯着别人看太久也可能被当作无礼。我的建议很简单:观察当地人怎么做,眼神接触要得体,温暖的微笑永远受欢迎。别担心小失误——我们都会理解。我真的很期待见到你,带你四处看看!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:说明文化差异 / 得体建议 / 表达欢迎" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕肢体语言展开、句句相关、行文连贯、衔接自然" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、动名词等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 Body language varies from culture to culture.",
+      "举例 For example, the same gesture may mean something different here.",
+      "建议 My advice is to watch local people and keep eye contact polite.",
+      "欢迎 I look forward to seeing you in China!"
+    ],
+    "key_expressions": [
+      "Body language varies from culture to culture.",
+      "A gesture that is friendly at home may be rude here.",
+      "Watch how local people behave and keep your eye contact polite.",
+      "A warm smile is always welcome."
+    ],
+    "useful_words": ["body language", "gesture", "culture", "vary", "eye contact", "polite", "rude", "smile", "advice", "welcome"]
+  },
+  "high_sentences": [
+    "Body language varies from culture to culture.",
+    "A gesture that is friendly at home may mean something quite different here.",
+    "Watch how local people behave, and keep your eye contact polite.",
+    "A warm smile is always welcome almost everywhere."
+  ],
+  "error_pairs": [
+    { "wrong": "I look forward to see you.", "correct": "I look forward to seeing you.", "note": "look forward to 中 to 是介词,后接动名词。" },
+    { "wrong": "The gesture mean different things.", "correct": "The gesture means different things.", "note": "主语第三人称单数,动词加 s。" },
+    { "wrong": "Avoid to stare at people.", "correct": "Avoid staring at people.", "note": "avoid 后接动名词,不接不定式。" }
+  ],
+  "paragraph_template": "【跨文化肢体语言短文结构】\n第1句 点题:Body language varies from culture to culture.\n第2-3句 举例:For example, the same gesture / eye contact may …\n第4-5句 建议:My advice is to … and keep your eye contact polite.\n第6句 欢迎:I look forward to seeing you in China!"
+}

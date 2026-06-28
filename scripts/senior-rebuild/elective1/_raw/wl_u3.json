@@ -1,0 +1,373 @@
+[
+ {
+  "word": "bless",
+  "ipa": "bles",
+  "cn": "祝福",
+  "propn": false,
+  "raw": "bless /bles/ vt. 祝福"
+ },
+ {
+  "word": "boundary",
+  "ipa": "bandri",
+  "cn": "边界；界限；分界线",
+  "propn": false,
+  "raw": "boundary /bandri/ n. 边界；界限；分界线"
+ },
+ {
+  "word": "buffet",
+  "ipa": "bft",
+  "cn": "连续猛击；打来打去 /bfe bfe/ n. 自助餐",
+  "propn": false,
+  "raw": "buffet /bft/ vt. 连续猛击；打来打去 /bfe bfe/ n. 自助餐"
+ },
+ {
+  "word": "bush",
+  "ipa": "b",
+  "cn": "灌木",
+  "propn": false,
+  "raw": "bush /b/ n. 灌木"
+ },
+ {
+  "word": "cloth",
+  "ipa": "kl",
+  "cn": "一块）布；织物；布料",
+  "propn": false,
+  "raw": "cloth /kl/ n.  （一块）布；织物；布料"
+ },
+ {
+  "word": "column",
+  "ipa": "klm",
+  "cn": "书、报纸印刷页上的）栏； 专栏；柱（形物）",
+  "propn": false,
+  "raw": "column /klm/ n. （书、报纸印刷页上的）栏； 专栏；柱（形物）"
+ },
+ {
+  "word": "corridor",
+  "ipa": "krd(r)",
+  "cn": "狭长地带；走廊；过道；通道",
+  "propn": false,
+  "raw": "corridor /krd(r)/ n. 狭长地带；走廊；过道；通道"
+ },
+ {
+  "word": "cottage",
+  "ipa": "ktd",
+  "cn": "小屋；（尤指）村舍；小别墅",
+  "propn": false,
+  "raw": "cottage /ktd/ n. 小屋；（尤指）村舍；小别墅"
+ },
+ {
+  "word": "cream",
+  "ipa": "krim",
+  "cn": "奶油；乳脂；护肤霜 adj. 奶油色的；淡黄色的",
+  "propn": false,
+  "raw": "cream /krim/ n. 奶油；乳脂；护肤霜 adj. 奶油色的；淡黄色的"
+ },
+ {
+  "word": "Appendices cycle",
+  "ipa": "sakl",
+  "cn": "自行车；摩托车；循环 vi. 骑自行车",
+  "propn": false,
+  "raw": "Appendices cycle /sakl/ n. 自行车；摩托车；循环 vi. 骑自行车"
+ },
+ {
+  "word": "display",
+  "ipa": "dsple",
+  "cn": "展览；陈列；展览品 vt. 显示；陈列",
+  "propn": false,
+  "raw": "display /dsple/ n. 展览；陈列；展览品 vt. 显示；陈列"
+ },
+ {
+  "word": "edge",
+  "ipa": "ed",
+  "cn": "边；边缘；边线；刀刃 vt. & vi.  （使）徐徐移动；给……加边",
+  "propn": false,
+  "raw": "edge /ed/ n. 边；边缘；边线；刀刃 vt. & vi.  （使）徐徐移动；给……加边"
+ },
+ {
+  "word": "enormous",
+  "ipa": "nms",
+  "cn": "巨大的；极大的",
+  "propn": false,
+  "raw": "enormous  /nms/ adj. 巨大的；极大的"
+ },
+ {
+  "word": "entertainment",
+  "ipa": "enttenmnt",
+  "cn": "娱乐；招待；娱乐活动；文娱节目",
+  "propn": false,
+  "raw": "entertainment /enttenmnt/ n. 娱乐；招待；娱乐活动；文娱节目"
+ },
+ {
+  "word": "fashion",
+  "ipa": "fn",
+  "cn": "时尚；时兴；流行款式",
+  "propn": false,
+  "raw": "fashion /fn/ n. 时尚；时兴；流行款式"
+ },
+ {
+  "word": "fountain",
+  "ipa": "fantn",
+  "cn": "喷泉；人工喷泉；喷水池",
+  "propn": false,
+  "raw": "fountain  /fantn/ n. 喷泉；人工喷泉；喷水池"
+ },
+ {
+  "word": "glacier",
+  "ipa": "lsi(r); lsi(r); NAmE ler",
+  "cn": "冰川",
+  "propn": false,
+  "raw": "glacier /lsi(r); lsi(r); NAmE ler/ n. 冰川"
+ },
+ {
+  "word": "incredible",
+  "ipa": "nkredbl",
+  "cn": "极好的；极大的； 难以置信的",
+  "propn": false,
+  "raw": "incredible /nkredbl/ adj. 极好的；极大的； 难以置信的"
+ },
+ {
+  "word": "iron",
+  "ipa": "an",
+  "cn": "铁；铁器；铸铁；熨斗 vt. & vi. （用熨斗）熨；烫平",
+  "propn": false,
+  "raw": "iron /an/ n. 铁；铁器；铸铁；熨斗 vt. & vi. （用熨斗）熨；烫平"
+ },
+ {
+  "word": "journalist",
+  "ipa": "dnlst",
+  "cn": "新闻记者；新闻工作者",
+  "propn": false,
+  "raw": "journalist /dnlst/ n. 新闻记者；新闻工作者"
+ },
+ {
+  "word": "label",
+  "ipa": "lebl",
+  "cn": "用标签标明；贴标签 n. 标签；标记",
+  "propn": false,
+  "raw": "label /lebl/ vt. 用标签标明；贴标签 n. 标签；标记"
+ },
+ {
+  "word": "leopard",
+  "ipa": "lepd",
+  "cn": "豹",
+  "propn": false,
+  "raw": "leopard /lepd/ n. 豹"
+ },
+ {
+  "word": "Appendices live off",
+  "ipa": "",
+  "cn": "依靠……生活；以吃……为生",
+  "propn": false,
+  "raw": "Appendices live off  依靠……生活；以吃……为生"
+ },
+ {
+  "word": "lung",
+  "ipa": "l",
+  "cn": "肺",
+  "propn": false,
+  "raw": "lung /l/ n. 肺"
+ },
+ {
+  "word": "on the move",
+  "ipa": "",
+  "cn": "在行进中；在移动中",
+  "propn": false,
+  "raw": "on the move 在行进中；在移动中"
+ },
+ {
+  "word": "pedal",
+  "ipa": "pedl",
+  "cn": "自行车等的）脚镫子；踏板 vt. & vi. 骑自行车；踩踏板",
+  "propn": false,
+  "raw": "pedal /pedl/ n. （自行车等的）脚镫子；踏板 vt. & vi. 骑自行车；踩踏板"
+ },
+ {
+  "word": "pirate",
+  "ipa": "part",
+  "cn": "海盗；盗版者 vt. 盗印；窃用",
+  "propn": false,
+  "raw": "pirate /part/ n. 海盗；盗版者 vt. 盗印；窃用"
+ },
+ {
+  "word": "polar",
+  "ipa": "pl(r)",
+  "cn": "近）极地的； 南极（或北极）的；磁极的",
+  "propn": false,
+  "raw": "polar /pl(r)/ adj. （近）极地的； 南极（或北极）的；磁极的"
+ },
+ {
+  "word": "prohibit",
+  "ipa": "prhbt",
+  "cn": "尤指以法令）禁止；阻止",
+  "propn": false,
+  "raw": "prohibit /prhbt/ vt.  （尤指以法令）禁止；阻止"
+ },
+ {
+  "word": "prohibition",
+  "ipa": "prbn",
+  "cn": "禁止；阻止；禁令",
+  "propn": false,
+  "raw": "prohibition /prbn/ n. 禁止；阻止；禁令"
+ },
+ {
+  "word": "rare",
+  "ipa": "re(r)",
+  "cn": "稀少的；珍贵的；（肉）半熟的",
+  "propn": false,
+  "raw": "rare /re(r)/ adj. 稀少的；珍贵的；（肉）半熟的"
+ },
+ {
+  "word": "reindeer",
+  "ipa": "rend(r)",
+  "cn": "驯鹿",
+  "propn": false,
+  "raw": "reindeer /rend(r)/ n. 驯鹿"
+ },
+ {
+  "word": "rewarding",
+  "ipa": "rwd",
+  "cn": "值得做的；有益的",
+  "propn": false,
+  "raw": "rewarding /rwd/ adj.  值得做的；有益的"
+ },
+ {
+  "word": "roller coaster",
+  "ipa": "rlkst(r)",
+  "cn": "过山车",
+  "propn": false,
+  "raw": "roller coaster /rlkst(r)/ 过山车"
+ },
+ {
+  "word": "route",
+  "ipa": "rut",
+  "cn": "路线；路途；途径",
+  "propn": false,
+  "raw": "route /rut/ n. 路线；路途；途径"
+ },
+ {
+  "word": "set out",
+  "ipa": "",
+  "cn": "出发；启程；（怀着目标）开始工作",
+  "propn": false,
+  "raw": "set out 出发；启程；（怀着目标）开始工作"
+ },
+ {
+  "word": "sneeze",
+  "ipa": "sniz",
+  "cn": "打喷嚏 n. 喷嚏；喷嚏声",
+  "propn": false,
+  "raw": "sneeze /sniz/ vi. 打喷嚏 n. 喷嚏；喷嚏声"
+ },
+ {
+  "word": "sour",
+  "ipa": "sa(r)",
+  "cn": "酸的；有酸味的",
+  "propn": false,
+  "raw": "sour /sa(r)/ adj. 酸的；有酸味的"
+ },
+ {
+  "word": "splendid",
+  "ipa": "splendd",
+  "cn": "壮丽的；雄伟的；极佳的；非常好的",
+  "propn": false,
+  "raw": "splendid /splendd/ adj. 壮丽的；雄伟的；极佳的；非常好的"
+ },
+ {
+  "word": "steam",
+  "ipa": "stim",
+  "cn": "蒸汽；水蒸气；蒸汽动力 vi. 蒸发；散发蒸汽；冒水汽",
+  "propn": false,
+  "raw": "steam /stim/ n. 蒸汽；水蒸气；蒸汽动力 vi. 蒸发；散发蒸汽；冒水汽"
+ },
+ {
+  "word": "stretch",
+  "ipa": "stret",
+  "cn": "延伸；延续 vi. & vt. 伸展；舒展",
+  "propn": false,
+  "raw": "stretch /stret/ vi. 延伸；延续 vi. & vt. 伸展；舒展"
+ },
+ {
+  "word": "superb",
+  "ipa": "supb; sjupb",
+  "cn": "极佳的；卓越的",
+  "propn": false,
+  "raw": "superb /supb; sjupb/ adj. 极佳的；卓越的"
+ },
+ {
+  "word": "swing",
+  "ipa": "sw",
+  "cn": "使）摆动；摇摆；转弯；（使）突然转向",
+  "propn": false,
+  "raw": "swing /sw/ vt. & vi. （swung, swung） （使）摆动；摇摆；转弯；（使）突然转向"
+ },
+ {
+  "word": "teapot",
+  "ipa": "tipt",
+  "cn": "茶壶",
+  "propn": false,
+  "raw": "teapot /tipt/ n. 茶壶"
+ },
+ {
+  "word": "Appendices territory",
+  "ipa": "tertri tertri",
+  "cn": "领土；版图；领域；地盘",
+  "propn": false,
+  "raw": "Appendices territory /tertri tertri/ n.  领土；版图；领域；地盘"
+ },
+ {
+  "word": "theme",
+  "ipa": "im",
+  "cn": "有特定主题的 n. 主题；主题思想",
+  "propn": false,
+  "raw": "theme /im/ adj. 有特定主题的 n. 主题；主题思想"
+ },
+ {
+  "word": "theme park",
+  "ipa": "",
+  "cn": "主题公园；主题乐园",
+  "propn": false,
+  "raw": "theme park 主题公园；主题乐园"
+ },
+ {
+  "word": "up to",
+  "ipa": "",
+  "cn": "达到（某数量、程度等）；直到；不多于； （体力或智力上）能胜任",
+  "propn": false,
+  "raw": "up to 达到（某数量、程度等）；直到；不多于； （体力或智力上）能胜任"
+ },
+ {
+  "word": "upside down",
+  "ipa": "",
+  "cn": "颠倒；倒转；翻转",
+  "propn": false,
+  "raw": "upside down 颠倒；倒转；翻转"
+ },
+ {
+  "word": "valley",
+  "ipa": "vli",
+  "cn": "谷；山谷；溪谷",
+  "propn": false,
+  "raw": "valley /vli/ n. 谷；山谷；溪谷"
+ },
+ {
+  "word": "vast",
+  "ipa": "vst",
+  "cn": "辽阔的；巨大的；庞大的",
+  "propn": false,
+  "raw": "vast /vst/ adj. 辽阔的；巨大的；庞大的"
+ },
+ {
+  "word": "visible",
+  "ipa": "vzbl",
+  "cn": "看得见的；可见的",
+  "propn": false,
+  "raw": "visible /vzbl/ adj. 看得见的；可见的"
+ },
+ {
+  "word": "wander",
+  "ipa": "wnd(r)",
+  "cn": "游荡；闲逛；流浪 vt. & vi. 闲逛；漫游 vi. 走失；离散；走神",
+  "propn": false,
+  "raw": "wander  /wnd(r)/ n. 游荡；闲逛；流浪 vt. & vi. 闲逛；漫游 vi. 走失；离散；走神"
+ }
+]

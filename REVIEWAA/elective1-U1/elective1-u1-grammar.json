@@ -1,0 +1,745 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grammar_title": "非限制性定语从句(Non-restrictive relative clauses)",
+  "source": "人教版2019选择性必修一 Unit 1 Discover useful structures:非限制性定语从句(逗号隔开,补充信息)。铁律:非限制性里 that 永远错;指人 who/whom,指物/整句 which;whose/where/when 各司其职;介词+which/whom。句子地道、答案唯一。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "who/whom(指人)、which(指物)引导非限制性定语从句",
+      "overview": "逗号隔开的非限制性定语从句中,先行词指人作主语用 who、作宾语用 whom,先行词指物用 which;关系代词 that 不能用于非限制性定语从句(常作干扰项)。"
+    },
+    {
+      "code": "u1.02",
+      "point": "whose / where / when 引导非限制性定语从句",
+      "overview": "whose 表所属(指人或物),where 跟在地点先行词后作地点状语,when 跟在时间先行词后作时间状语;都用逗号隔开补充信息。"
+    },
+    {
+      "code": "u1.03",
+      "point": "介词+which/whom · which 指代整个主句",
+      "overview": "some of which / all of whom / most of whom / in which case 等‘量词/介词 + which/whom’结构;以及 which 指代前面整个主句(…, which surprised us all)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "Tu Youyou, ____ discovered artemisinin, won the Nobel Prize.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 Tu Youyou 指人作主语 → who(that 不能用于非限制性)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The book, ____ was published in 2015, tells Einstein's life story.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 book 指物作主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Einstein, ____ was Jewish, had to flee Germany in 1933.",
+      "options": [
+        "which",
+        "whom",
+        "who",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 Einstein 指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Artemisinin, ____ saved many lives, is now a standard treatment.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词 artemisinin 指物作主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Zhong Nanshan, ____ we all admire, managed the SARS outbreak.",
+      "options": [
+        "whom",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 Zhong Nanshan 指人作 admire 的宾语 → whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Florence Nightingale, ____ founded modern nursing, is still respected today.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The medicine, ____ was called artemisinin, soon cured many patients.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 medicine 指物作主语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Wu Mengchao, ____ performed operations into his 90s, was a great doctor.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The Nobel Prize, ____ she received in 2015, is a great honour.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 prize 指物作 received 的宾语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Alexander Fleming, ____ discovered penicillin, changed medicine forever.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Her team examined 2,000 old texts, ____ took them many years.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、指前述事情(examining texts)→ which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Lu Xun, ____ many people regard as a great writer, was born in 1881.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词指人作 regard 的宾语 → whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The patients, most of them recovered, were grateful to her, ____ pleased the whole team.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、which 指代前面的整件事 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Cao Xueqin, ____ wrote The Dream of the Red Mansions, suffered great poverty.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The general theory of relativity, ____ Einstein created, is famous worldwide.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 theory 指物作 created 的宾语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Helen Keller, ____ teacher opened a new world to her, wrote her autobiography at 22.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、表所属(Keller 的老师)→ whose。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Mei Lanfang, ____ took Beijing Opera to the USA, became known worldwide.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词指人作主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The four papers, ____ he published in 1905, made him world-famous.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 papers 指物作 published 的宾语 → which。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Tu's colleagues, ____ she worked with for years, shared in the honour.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词指人作 worked with 的宾语 → whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Sweet wormwood, ____ grows in many places, holds an important secret.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词指物作主语 → which。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Tu Youyou went to Hainan, ____ malaria was more common, to study patients.",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 Hainan 是地点、从句完整 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Einstein moved to Princeton, ____ he worked as a researcher for years.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 Princeton 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "It happened in 1933, ____ Hitler came to power in Germany.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 1933 是时间、从句完整 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Einstein, ____ hair often stood on end, looked a little odd to the public.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、表所属(爱因斯坦的头发)→ whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She returned to Beijing in 1969, ____ she became the head of the project.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 1969 是时间 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The team worked in Beijing, ____ they finally succeeded in 1971.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 Beijing 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Tu Youyou, ____ research led to artemisinin, was born in Ningbo.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、表所属(她的研究)→ whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Einstein studied in Switzerland, ____ he entered university in 1896.",
+      "options": [
+        "which",
+        "when",
+        "that",
+        "where"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词 Switzerland 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He won the prize in 1922, ____ his explanation of the photoelectric effect was honoured.",
+      "options": [
+        "when",
+        "which",
+        "where",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 1922 是时间 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Lu Xun went to Japan, ____ he first studied medicine.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 Japan 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Mei Lanfang, ____ skill was admired worldwide, helped spread Beijing Opera.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、表所属(梅兰芳的技艺)→ whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She graduated in 1955, ____ she began to work at a medical academy.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词 1955 是时间 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Einstein took a job at the patent office, ____ he kept studying physics.",
+      "options": [
+        "where",
+        "which",
+        "when",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 office 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Helen Keller, ____ early life was dark and silent, learned to communicate.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、表所属(凯勒的早年生活)→ whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The story is set in Shaoxing, ____ Lu Xun was born in 1881.",
+      "options": [
+        "which",
+        "when",
+        "where",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 Shaoxing 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "He passed away in 1955, ____ the whole world mourned his loss.",
+      "options": [
+        "which",
+        "where",
+        "that",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、先行词 1955 是时间 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Steve Jobs, ____ products changed the world, was driven to succeed.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、表所属(乔布斯的产品)→ whose。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "She moved her work to a lab in Beijing, ____ the final tests were carried out.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "非限制性、先行词 lab 是地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "It all began in 1967, ____ the government formed a team of scientists.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "非限制性、先行词 1967 是时间 → when。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Sun Yat-sen, ____ ideas brought people together, is called the founder of modern China.",
+      "options": [
+        "who",
+        "which",
+        "that",
+        "whose"
+      ],
+      "answer_index": 3,
+      "explanation": "非限制性、表所属(孙中山的思想)→ whose。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She examined 280,000 plants, some of ____ showed promise against malaria.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "‘some of + which’指物的非限制性 → which(介词/量词后不用 that)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The medicine was tested on patients, most of ____ recovered quickly.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 patients 指人、‘most of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Einstein published four papers, all of ____ became famous in science.",
+      "options": [
+        "whom",
+        "that",
+        "which",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 papers 指物、‘all of + which’ → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She failed more than 190 times, ____ would have stopped most people.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整个主句(失败190多次这件事)→ which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He met many scientists, several of ____ later won the Nobel Prize.",
+      "options": [
+        "whom",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 scientists 指人、‘several of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The team tested 380 treatments, none of ____ fully cured the disease at first.",
+      "options": [
+        "whom",
+        "which",
+        "that",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 treatments 指物、‘none of + which’ → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Tu Youyou shared the honour with her team, ____ moved the whole country.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代前面整个主句(她与团队分享荣誉)→ which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He had many friends, both of ____ remembered his kindness for years.",
+      "options": [
+        "which",
+        "that",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 friends 指人、‘both of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She read hundreds of texts, in ____ she finally found the key sentence.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "when"
+      ],
+      "answer_index": 0,
+      "explanation": "‘介词 in + which’指物 → which(介词后不用 that)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Einstein forgot his friends' birthdays, ____ amused everyone around him.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "which 指代前面整个主句(他忘记生日这件事)→ which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The project had several stages, the last of ____ proved the hardest.",
+      "options": [
+        "whom",
+        "that",
+        "which",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 stages 指物、‘the last of + which’ → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She thanked the researchers, many of ____ had worked with her for years.",
+      "options": [
+        "which",
+        "that",
+        "when",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 researchers 指人、‘many of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He was awarded the Nobel Prize, ____ is one of the highest honours of all.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "that"
+      ],
+      "answer_index": 0,
+      "explanation": "非限制性、先行词 Nobel Prize 指物作主语 → which(此处也可视为单一先行词)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She tried two methods, neither of ____ worked at the start.",
+      "options": [
+        "whom",
+        "which",
+        "that",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 methods 指物、‘neither of + which’ → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He gave talks to many students, some of ____ became scientists themselves.",
+      "options": [
+        "which",
+        "that",
+        "whom",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 students 指人、‘some of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The medicine finally worked, ____ proved the value of traditional medicine.",
+      "options": [
+        "who",
+        "whom",
+        "that",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "which 指代前面整个主句(药终于有效这件事)→ which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He wrote four papers, the most famous of ____ explained relativity.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 papers 指物、‘the most famous of + which’ → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She trained young doctors, all of ____ admired her greatly.",
+      "options": [
+        "which",
+        "whom",
+        "that",
+        "when"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 doctors 指人、‘all of + whom’ → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He had to flee his country, ____ saddened him deeply for the rest of his life.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "that"
+      ],
+      "answer_index": 2,
+      "explanation": "which 指代前面整个主句(他被迫逃离这件事)→ which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Tu's team studied 2,000 texts, from ____ they drew the crucial idea.",
+      "options": [
+        "whom",
+        "that",
+        "where",
+        "which"
+      ],
+      "answer_index": 3,
+      "explanation": "‘介词 from + which’指物 → which(介词后不用 that)。"
+    }
+  ]
+}

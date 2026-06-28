@@ -1,0 +1,35 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "grade": 10,
+  "content": {
+    "title": "将来进行时 will be doing 速查",
+    "intro": "将来进行时 = will be + 现在分词(doing),表示'将来某一时刻正在进行的动作'。判断口诀:句中有明确的将来时间点(this time tomorrow / at 9 am next Monday)、强调'届时正在进行',就用 will be doing。",
+    "table": {
+      "headers": ["用法", "说明 / 例句"],
+      "rows": [
+        ["表将来某刻正在进行", "This time next year, I will be studying abroad.(明年此时正在留学)"],
+        ["表预计必将发生", "Most people will be travelling in driverless cars one day.(必将成趋势)"],
+        ["委婉询问安排", "Will you be using the computer tonight?(比 Will you use… 更客气)"],
+        ["与 will do 对照", "will do = 单纯将来动作;will be doing = 届时正在进行"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "结构固定:will be + V-ing,三部分缺一不可", "mark": "will be having √ / will having ×" },
+      { "rule": "靠将来时间状语判断:this time tomorrow / at 8 pm tonight / when you arrive tomorrow", "mark": "有将来时间点+强调进行 → will be doing" },
+      { "rule": "委婉询问对方计划时常用,语气比 will do 更礼貌", "mark": "Will you be needing it? 你会要用它吗?" },
+      { "rule": "与现在进行时 is doing 区别:is doing 说'此刻',will be doing 说'将来某刻'", "mark": "now is doing / tomorrow will be doing" }
+    ],
+    "why": [
+      "将来进行时把镜头对准'将来的某一时刻',强调那一刻动作正在进行(而非动作的开始或结束),所以一定要配一个明确的将来时间点;只说将来要做某事而不强调'正在进行'时,用一般将来时 will do 即可。"
+    ],
+    "gaokaoPoints": [
+      "语法填空 / 完成句子高频:给将来时间状语 + 动词原形,填 will be doing。",
+      "辨析 will do(单纯将来)、is doing(现在/计划)、will be doing(将来进行)、will have done(将来完成)的区别。"
+    ],
+    "examVsReal": [
+      { "exam": "Will you be using the car tonight?(考试/书面更委婉)", "real": "Are you using the car tonight?", "note": "口语里现在进行时也常表将来计划,更随意" },
+      { "exam": "This time tomorrow I will be flying to Beijing.(考试强调将来进行)", "real": "Tomorrow I'm flying to Beijing.", "note": "口语常用现在进行时表已定计划,省去 will be" }
+    ]
+  }
+}

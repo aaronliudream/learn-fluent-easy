@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Write an Introduction to a Park(写一篇公园介绍)",
+  "title_en": "An Introduction to a Park",
+  "genre": "说明文 / 介绍(introduce or recommend a park: location, attractions, activities, and why it is worth visiting)",
+  "source": "人教版2019选择性必修一 Unit 3 Reading for Writing:write an introduction to a park(介绍/推荐一座公园:地点、看点、活动、推荐理由)。",
+  "prompt_cn": "假设你叫李华,学校英语公众号正在征集'我最喜欢的公园'介绍。请用英语写一篇约80词的短文,介绍或推荐一座你喜欢的公园(可以是国家公园、湿地公园或主题公园),内容包括:① 公园的名称和地点;② 园里有什么看点或可以做的活动(至少两点);③ 你推荐它的理由。注意:用说明文语气,信息清楚、句子地道。",
+  "prompt_en": "Suppose you are Li Hua. Your school's English page is collecting introductions to 'My Favourite Park'. Write a short passage (about 80 words) to introduce or recommend a park you like (a national park, a wetland park, or a theme park), including: 1) its name and location; 2) at least two attractions or activities there; 3) why you recommend it.",
+  "points": [
+    "公园名称与地点(… is a … park in …)",
+    "看点 / 活动(至少两点)(There you can … / It is famous for …)",
+    "推荐理由(I recommend it because … / If you … , don't miss it.)",
+    "说明文语气、信息清楚、句子地道"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "If you love nature, I strongly recommend Xixi Wetland Park in the west of Hangzhou. It is the first national wetland park in China and covers a vast area of water, trees and colourful flowers. There you can take a boat tour along the quiet paths, watch all kinds of birds, and learn about the customs of the old villages. Because it cleans the water and produces fresh air, people call it the green lungs of the city. It is a peaceful and beautiful place, so don't miss it when you visit Hangzhou!",
+  "model_translation": "如果你热爱大自然,我强烈推荐杭州西部的西溪湿地公园。它是中国第一座国家湿地公园,有大片的水域、树木和五彩的花朵。在那里你可以沿着安静的小路乘船游览,观赏各种鸟类,了解古村落的风俗。因为它能净化水、产生新鲜空气,人们称它为城市的绿肺。这是一个宁静而美丽的地方,所以你到杭州时千万别错过!",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:名称与地点 / 至少两项看点或活动 / 推荐理由" },
+      { "dimension": "结构", "max": 4, "criteria": "说明文层次清楚、信息有序、句句相关、开头点题、结尾推荐" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、主语从句等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题/推荐 If you love nature, I strongly recommend …",
+      "名称与地点 It is a … park in …",
+      "看点/活动 There you can … , … , and …",
+      "推荐理由 + 结尾 Because … , so don't miss it!"
+    ],
+    "key_expressions": [
+      "I strongly recommend Xixi Wetland Park in the west of Hangzhou.",
+      "There you can take a boat tour, watch birds, and learn about the old villages.",
+      "It is the first national wetland park in China.",
+      "Don't miss it when you visit the city!"
+    ],
+    "useful_words": ["recommend", "wetland", "vast", "boat tour", "attraction", "visitor", "natural", "protect", "beautiful", "fountain"]
+  },
+  "high_sentences": [
+    "If you love nature, I strongly recommend Xixi Wetland Park in the west of Hangzhou.",
+    "There you can take a boat tour, watch all kinds of birds, and learn about the old villages.",
+    "Because it cleans the water and produces fresh air, people call it the green lungs of the city.",
+    "It is a peaceful and beautiful place, so don't miss it when you visit Hangzhou!"
+  ],
+  "error_pairs": [
+    { "wrong": "It is famous of its beautiful lake.", "correct": "It is famous for its beautiful lake.", "note": "be famous for sth 因某事出名,介词用 for。" },
+    { "wrong": "There you can saw many birds.", "correct": "There you can see many birds.", "note": "情态动词 can 后用动词原形 see。" },
+    { "wrong": "What makes the park special are its clean water.", "correct": "What makes the park special is its clean water.", "note": "what 引导的主语从句作主语,谓语用单数 is。" }
+  ],
+  "paragraph_template": "【公园介绍结构】\n第1句 点题/推荐:If you love …, I strongly recommend …\n第2句 名称与地点:It is a … park in …\n第3句 看点/活动:There you can … , … , and …\n第4句 推荐理由+结尾:Because … , so don't miss it!"
+}

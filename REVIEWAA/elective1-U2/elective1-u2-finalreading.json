@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(展望未来主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Mia first heard that her future home would do the housework by itself, she found the idea a little frightening. Yet after living there for a month, she could not imagine going back, because the house quietly saved her time and kept her safe. She now tells her friends that the smartest thing about new technology is the way it gives people more hours to spend with the ones they love.",
+    "questions": [
+      {
+        "q": "How did Mia feel about the smart home at first?",
+        "options": [
+          "She found the idea rather frightening.",
+          "She was sure she would love it.",
+          "She thought it was boring.",
+          "She wanted to sell it at once."
+        ],
+        "answer": "A",
+        "explanation": "原文 'she found the idea a little frightening' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What does Mia now tell her friends?",
+        "options": [
+          "That technology is a waste of money.",
+          "That the best thing is the extra time it gives for loved ones.",
+          "That she misses her old house.",
+          "That robots should do all the work for everyone."
+        ],
+        "answer": "B",
+        "explanation": "末句 'gives people more hours to spend with the ones they love'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

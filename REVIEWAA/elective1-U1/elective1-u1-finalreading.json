@@ -1,0 +1,32 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(杰出人物主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "Wu Mengchao was a Chinese doctor who kept performing difficult operations even when he was over ninety years old. He believed that as long as his hands were steady, he should keep helping his patients. Many young doctors looked up to him, not only for his great skill but also for his deep love of his work.",
+    "questions": [
+      {
+        "q": "What was unusual about Wu Mengchao as a doctor?",
+        "options": [
+          "He stopped working when he was young.",
+          "He still did hard operations in his nineties.",
+          "He never treated any patients.",
+          "He only taught and never operated."
+        ],
+        "answer": "B",
+        "explanation": "原文 'kept performing difficult operations even when he was over ninety years old' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "Why did young doctors look up to him?",
+        "options": [
+          "Because he was very rich.",
+          "Because he was famous on television.",
+          "Because of his great ability and his strong passion for his job.",
+          "Because he gave them money."
+        ],
+        "answer": "C",
+        "explanation": "末句 'not only for his great skill but also for his deep love of his work'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

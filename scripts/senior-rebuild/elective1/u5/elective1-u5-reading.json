@@ -1,0 +1,338 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Working the Land",
+  "source": "人教版2019选择性必修一 Unit 5 同主题阅读(袁隆平/杂交水稻原理/海水稻晚年愿景/化学农业的问题/有机农业方法/城市农场与粮食安全·贾思勰)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Farmer at Heart",
+      "topic_cn": "人物·袁隆平的农民之心",
+      "body": "Yuan Longping, known as the father of hybrid rice, was one of China's most famous scientists. Yet he always considered himself a farmer, because he worked the land every day in his research. His parents had wanted him to study science or medicine, but what worried him most was that farmers often had poor harvests and a serious shortage of food. To deal with this problem, he chose to study agriculture instead. After he became wealthy, he could have retired to a comfortable, easy life. He did not. Deep down, he was still a man of the soil who cared little for fame or money. Instead, he made large donations to support more farming research. Even in his later years, he was young at heart and full of vision, and everyone was always excited to hear what he would dream up next. His simple wish was to keep all people away from hunger.",
+      "vocab_notes": [
+        {
+          "word": "hybrid",
+          "cn": "杂交的;杂交品种"
+        },
+        {
+          "word": "shortage",
+          "cn": "短缺"
+        },
+        {
+          "word": "leisure",
+          "cn": "闲暇"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Yuan Longping think of himself as a farmer?",
+          "options": [
+            "Because he worked on the land throughout his research.",
+            "Because his parents owned a large farm.",
+            "Because he disliked all kinds of science.",
+            "Because he had never been to school."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'he worked the land every day in his research' 的转述。"
+        },
+        {
+          "stem": "What made Yuan choose to study agriculture?",
+          "options": [
+            "His wish to become rich and famous.",
+            "His worry about farmers' poor harvests and food shortage.",
+            "His love of medicine and chemistry.",
+            "His parents' firm orders."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'what worried him most was that farmers often had poor harvests…' 的转述。"
+        },
+        {
+          "stem": "What did Yuan do after he became wealthy?",
+          "options": [
+            "He gave money to support farming research.",
+            "He stopped all his work at once.",
+            "He moved away from China.",
+            "He bought a huge, comfortable house."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'made large donations to support more farming research' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Science of Hybrid Rice",
+      "topic_cn": "科学·杂交水稻的原理",
+      "body": "After graduating in the 1950s, Yuan Longping worked as a researcher. He soon realised that larger fields were not the answer to hunger. Instead, farmers needed to boost yields in the fields they already had. But how could this be done? Yuan was convinced that the answer lay in hybrid rice. A hybrid is a cross between two or more varieties of a species. One key characteristic of hybrids is that they usually give a higher yield than conventional crops. However, rice is a self-pollinating plant, so many scientists believed a hybrid of rice simply could not be made. Through years of intense effort, Yuan overcame these enormous technical difficulties. In the 1970s he developed the first hybrid rice that could be used in real farming. This breakthrough enabled farmers to expand their output greatly, and it would later help to feed not just China but many other countries that depend on rice.",
+      "vocab_notes": [
+        {
+          "word": "yield",
+          "cn": "产量"
+        },
+        {
+          "word": "conventional",
+          "cn": "常规的"
+        },
+        {
+          "word": "pollinate",
+          "cn": "授粉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Yuan realise about ending hunger?",
+          "options": [
+            "That bigger fields were the simplest answer.",
+            "That raising the yield mattered more than field size.",
+            "That farmers should grow fewer crops.",
+            "That hybrid rice could never be useful."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'larger fields were not the answer… needed to boost yields' 的转述。"
+        },
+        {
+          "stem": "Why did many scientists doubt a rice hybrid was possible?",
+          "options": [
+            "Because rice has no varieties at all.",
+            "Because rice grows only in salty land.",
+            "Because rice pollinates itself naturally.",
+            "Because rice gives a very low price."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'rice is a self-pollinating plant, so many scientists believed a hybrid… could not be made' 的转述。"
+        },
+        {
+          "stem": "What did Yuan's first usable hybrid rice allow farmers to do?",
+          "options": [
+            "Stop growing rice completely.",
+            "Sell their fields for more money.",
+            "Move to other countries to farm.",
+            "Greatly increase how much they produced."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'enabled farmers to expand their output greatly' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Dreams as Big as a Broom",
+      "topic_cn": "愿景·海水稻与晚年梦想",
+      "body": "What impressed people most about Yuan Longping was his lifelong ability to turn dreams into reality. Long ago, he envisioned rice plants as tall as sorghum, with each ear as big as a broom and each grain as huge as a peanut. To many, this sounded like a fairy tale, yet he kept working until he produced rice that could feed more people both at home and abroad. His later vision was even bolder. He dreamed of growing rice on salty land, where ordinary crops cannot survive. After much research, his idea of seawater rice also became a reality. It potentially opened up nearly one million square kilometres of salty land in China for rice production. This meant that fields once thought to be useless might one day help feed the country. Right to the end of his life, Yuan stayed young at heart, and people always wondered what amazing goal he would set himself next.",
+      "vocab_notes": [
+        {
+          "word": "envision",
+          "cn": "展望;想象"
+        },
+        {
+          "word": "salty",
+          "cn": "含盐的"
+        },
+        {
+          "word": "reality",
+          "cn": "现实"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Yuan imagine about his future rice plants?",
+          "options": [
+            "That they would grow sorghum-high and carry enormous grains.",
+            "That they would never need any water.",
+            "That they would grow without any soil.",
+            "That they would be smaller than usual."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'rice plants as tall as sorghum… each grain as huge as a peanut' 的转述。"
+        },
+        {
+          "stem": "What was special about Yuan's seawater rice?",
+          "options": [
+            "It could only be grown indoors.",
+            "It could grow on salty land where normal crops fail.",
+            "It needed far more chemicals than other rice.",
+            "It produced no grain at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'growing rice on salty land, where ordinary crops cannot survive' 的转述。"
+        },
+        {
+          "stem": "Why does the writer mention 'one million square kilometres'?",
+          "options": [
+            "To show how small Yuan's fields were.",
+            "To explain how cheap rice had become.",
+            "To show how much salty land might now grow rice.",
+            "To prove that seawater rice failed."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'opened up nearly one million square kilometres of salty land… for rice production' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The Cost of Chemical Farming",
+      "topic_cn": "议论·化学农业的代价",
+      "body": "Chemical pesticides and artificial fertilisers have been in widespread use since the middle of the last century. When they first appeared, many farmers welcomed them as a great way to fight crop disease and raise production. Over time, however, some scientists found that long-term use can harm both the land and people's health. Pesticides, for example, kill not only harmful insects but helpful ones too. Worse still, these chemicals can stay in the soil and underground water for a long time. They then affect the crops, and in turn the animals and people who digest them. Some worry that such chemicals may make them ill or even cause serious disease. As for chemical fertilisers, crops grown with them often grow too fast to build up real nutrition. They may look beautiful on the outside, but inside there is usually more water than essential minerals, and they often have less flavour as well. For these reasons, more people now question whether chemical farming is worth its hidden cost.",
+      "vocab_notes": [
+        {
+          "word": "pesticide",
+          "cn": "杀虫剂"
+        },
+        {
+          "word": "fertiliser",
+          "cn": "肥料"
+        },
+        {
+          "word": "nutrition",
+          "cn": "营养"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did farmers first welcome chemical pesticides and fertilisers?",
+          "options": [
+            "They thought the chemicals were free.",
+            "They wanted to harm helpful insects.",
+            "They hoped to make their crops taste worse.",
+            "They saw them as a way to fight disease and raise output."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'welcomed them as a great way to fight crop disease and raise production' 的转述。"
+        },
+        {
+          "stem": "What is one danger of pesticides mentioned in the text?",
+          "options": [
+            "They linger for years in both the ground and underground water.",
+            "They make the soil too rich.",
+            "They help every kind of insect grow.",
+            "They make crops grow more slowly."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'can stay in the soil and underground water for a long time' 的转述。"
+        },
+        {
+          "stem": "What problem do crops grown with chemical fertilisers often have?",
+          "options": [
+            "They are far too small to sell.",
+            "They contain more water than minerals and taste blander.",
+            "They cannot be grown in soil at all.",
+            "They have far too many minerals inside."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'more water than essential minerals, and they often have less flavour' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "How Organic Farmers Keep Soil Rich",
+      "topic_cn": "说明·有机农业的方法",
+      "body": "Some farmers have turned away from chemicals and chosen organic farming instead. Organic farming is simply farming without using man-made chemicals. These farmers work hard to keep their soil rich and free of disease through natural means. Many of them use animal waste as fertiliser, which makes the soil richer in minerals and keeps the air, water and crops clean. They also use clever methods to build healthy ground. One method is to change the kind of crop grown in a field each year. For instance, they may grow corn or wheat one year and then beans the next, because different crops put different minerals back into the earth. Organic farmers also plant diverse crops that use different depths of soil. Peanuts, for example, grow near the surface, while many vegetables send down deep roots. The goal of all these methods is to grow good, safe food while avoiding damage to the environment and to people's health.",
+      "vocab_notes": [
+        {
+          "word": "organic",
+          "cn": "有机的"
+        },
+        {
+          "word": "mineral",
+          "cn": "矿物质"
+        },
+        {
+          "word": "depth",
+          "cn": "深度"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is organic farming, according to the passage?",
+          "options": [
+            "Farming that uses the strongest chemicals.",
+            "Farming that grows only one kind of crop.",
+            "Farming carried out without man-made chemicals.",
+            "Farming that needs no soil at all."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'farming without using man-made chemicals' 的转述。"
+        },
+        {
+          "stem": "Why do organic farmers change the crop in a field each year?",
+          "options": [
+            "Because they enjoy moving their fields around.",
+            "Because one crop is illegal to grow twice.",
+            "Because beans cannot grow beside corn.",
+            "Because different crops return different minerals to the soil."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'different crops put different minerals back into the earth' 的转述。"
+        },
+        {
+          "stem": "What is the main goal of these organic methods?",
+          "options": [
+            "To grow safe food without harming people or the environment.",
+            "To make crops look beautiful but taste poor.",
+            "To sell chemicals to other farmers.",
+            "To use up the soil as fast as possible."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'grow good, safe food while avoiding damage to the environment and to people's health' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Farming Under the City",
+      "topic_cn": "现实·城市农场与粮食安全",
+      "body": "Feeding a growing world is not easy, and people keep looking for new ideas. In London, an old underground shelter has been turned into an urban farm. Built during the Second World War, it could once protect thousands of people from bombs. After the war it was left empty for about seventy years. Then some businessmen decided to make use of it to grow fresh green vegetables for local shops and restaurants. Because there is no natural light deep below the ground, the tunnels are lit with pink lamps. The vegetables grow in special liquids instead of ordinary soil. Supporters say this kind of farming could help in two ways: it could meet the rising demand for food in crowded cities, and it could also help people deal with changes in the climate. Of course, organic farming alone is nowhere near able to feed everyone, so scientists agree there is still a long way to go before a perfect solution is found.",
+      "vocab_notes": [
+        {
+          "word": "urban",
+          "cn": "城市的"
+        },
+        {
+          "word": "tunnel",
+          "cn": "隧道"
+        },
+        {
+          "word": "consumption",
+          "cn": "消费;需求"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the London shelter first built for?",
+          "options": [
+            "To grow vegetables underground.",
+            "To keep thousands of people safe from bombs.",
+            "To store farm machines.",
+            "To be a busy shopping centre."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'could once protect thousands of people from bombs' 的转述。"
+        },
+        {
+          "stem": "Why are pink lamps used in the tunnels?",
+          "options": [
+            "Because the farmers like the colour pink.",
+            "Because the lamps are very cheap.",
+            "Because sunlight cannot reach so far beneath the ground.",
+            "Because the vegetables grow in real soil."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'no natural light deep below the ground, the tunnels are lit with pink lamps' 的转述。"
+        },
+        {
+          "stem": "What do supporters say about this kind of urban farming?",
+          "options": [
+            "It can feed the whole world by itself.",
+            "It works only in very sunny places.",
+            "It is cheaper than every other method.",
+            "It could meet city food needs and help with climate change."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'meet the rising demand for food… deal with changes in the climate' 的转述;'feed everyone by itself' 与原文相反。"
+        }
+      ]
+    }
+  ]
+}

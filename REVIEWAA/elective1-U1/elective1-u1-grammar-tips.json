@@ -1,0 +1,38 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "非限制性定语从句·who / which / whose / where / when 速查",
+    "intro": "非限制性定语从句用逗号和主句隔开,只对先行词补充说明,去掉后主句仍成立。判断口诀:指人 who/whom、指物 which、表所属 whose、地点 where、时间 when;非限制性里 that 永远不能用。",
+    "table": {
+      "headers": ["关系词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人作主语:Tu Youyou, who discovered artemisinin, won the prize."],
+        ["whom", "指人作宾语:Zhong Nanshan, whom we all admire, is brave."],
+        ["which", "指物作主/宾,或指代整个主句:The book, which came out in 2015, …;She failed 190 times, which surprised us all."],
+        ["whose", "表所属(人或物):Einstein, whose hair stood on end, looked odd."],
+        ["where / when", "地点 / 时间:Hainan, where malaria was common, …;1933, when Hitler came to power, …"],
+        ["介词+which/whom", "some of which / most of whom / in which case"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "非限制性定语从句里绝对不能用 that(最常见干扰项)", "mark": ", who √ / , that ×" },
+      { "rule": "which 可指代前面整个主句,意为‘这件事’", "mark": "She failed many times, which surprised us." },
+      { "rule": "‘量词/介词 + which/whom’:指物用 which、指人用 whom", "mark": "some of which / most of whom" },
+      { "rule": "whose = ‘…的’,后接名词,指人指物都行", "mark": "the scientist whose research led to…" }
+    ],
+    "why": [
+      "非限制性从句给的是‘补充信息’,语气上像插一句话,所以前后用逗号;正因为它独立、可去掉,英语习惯不用 that,而用 who/which/whose/where/when。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:看先行词指人/指物 + 从句缺什么成分,选 who/whom/which/whose/where/when。",
+      "易错点:非限制性里误用 that;指人误用 which;which 指代整句时别误判为指某个名词。",
+      "‘介词/量词 + which/whom’结构(some of which / all of whom)是中高考常考点。"
+    ],
+    "examVsReal": [
+      { "exam": "Tu Youyou, who discovered artemisinin, won the prize.（考试/书面)", "real": "Tu Youyou discovered artemisinin, and she won the prize.", "note": "考试爱用非限制性从句;口语里常拆成两个简单句、用 and 连接" },
+      { "exam": "She failed many times, which surprised us all.（考试)", "real": "She failed many times — and that surprised us all.", "note": "考试用 which 指代整句;口语常用 and that 或破折号" }
+    ]
+  }
+}

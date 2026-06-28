@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "People of Achievement",
+  "source": "人教版2019选择性必修一 Unit 1 同主题完形(青蒿素团队精神/爱因斯坦逃离德国/南丁格尔的灯/钟南山的勇气/鲁迅弃医从文/伟大的意义)。用词限本单元/初中/常见词,答案唯一,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Discovery for the World",
+      "text": "When Tu Youyou won the Nobel Prize, she did not (1)____ all the honour for herself. She said that the discovery of artemisinin was a team (2)____, and that the success belonged to her country too. For many years her team had (3)____ thousands of plants, looking for one that could fight malaria. At first, nothing seemed to (4)____, and the project nearly came to a stop. But Tu Youyou refused to (5)____ defeat. She read the ancient texts again and finally found the (6)____ to the problem. By drawing out the (7)____ at a lower temperature, she got a substance that really (8)____. After more than a hundred and ninety (9)____, the team at last succeeded. Their hard work has since (10)____ countless lives around the world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "take",
+            "lose",
+            "drop",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "take the honour 把荣誉据为己有。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "effort",
+            "noise",
+            "season"
+          ],
+          "answer_index": 1,
+          "explanation": "a team effort 团队的努力。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "eaten",
+            "tested",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "tested thousands of plants 测试植物。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "sell",
+            "cry",
+            "work"
+          ],
+          "answer_index": 3,
+          "explanation": "nothing seemed to work 似乎都不起作用。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "accept",
+            "enjoy",
+            "buy",
+            "open"
+          ],
+          "answer_index": 0,
+          "explanation": "accept defeat 认输。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "noise",
+            "answer",
+            "price",
+            "weather"
+          ],
+          "answer_index": 1,
+          "explanation": "the answer to the problem 问题的答案。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "garden",
+            "machine",
+            "extract",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "draw out the extract 提取提取物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "failed",
+            "stopped",
+            "ended",
+            "worked"
+          ],
+          "answer_index": 3,
+          "explanation": "a substance that worked 有效的物质。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "failures",
+            "holidays",
+            "songs",
+            "prices"
+          ],
+          "answer_index": 0,
+          "explanation": "190 failures 失败。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wasted",
+            "saved",
+            "sold",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "saved countless lives 拯救生命。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Einstein Leaves Germany",
+      "text": "By the early 1930s, Albert Einstein was already (1)____ all over the world. But in 1933 his (2)____ suddenly changed, because Hitler had come to power. Einstein, who was Jewish, (3)____ the doors of universities closed to him. As a (4)____, he had to flee his home country. After (5)____ some time in Europe, he finally took up a (6)____ as a researcher in the United States. There he (7)____ to make great discoveries in physics. People in his new town soon (8)____ to love the kind and funny scientist with the wild white hair. Although he was a (9)____, he often forgot small things, like his friends' birthdays. Yet everyone who knew him (10)____ his warm heart.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hungry",
+            "quiet",
+            "famous",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "famous all over the world 闻名世界。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "weather",
+            "circumstances"
+          ],
+          "answer_index": 3,
+          "explanation": "circumstances changed 情况改变。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "found",
+            "sold",
+            "ate",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "found the doors closed 发现门关上了。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "holiday",
+            "consequence",
+            "game",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "as a consequence 结果。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "selling",
+            "losing",
+            "spending",
+            "eating"
+          ],
+          "answer_index": 2,
+          "explanation": "spending some time 度过一些时间。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "garden",
+            "position"
+          ],
+          "answer_index": 3,
+          "explanation": "take up a position 担任职位。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "continued",
+            "stopped",
+            "failed",
+            "refused"
+          ],
+          "answer_index": 0,
+          "explanation": "continued to make discoveries 继续做出发现。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "stopped",
+            "began",
+            "failed",
+            "refused"
+          ],
+          "answer_index": 1,
+          "explanation": "began to love 开始喜爱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "genius",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "although he was a genius 虽然是天才。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hid",
+            "sold",
+            "lost",
+            "remembered"
+          ],
+          "answer_index": 3,
+          "explanation": "remembered his warm heart 记得他温暖的心。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Lady with the Lamp",
+      "text": "Florence Nightingale grew up in a rich family, but she felt a strong (1)____ to help sick people. At that time, nursing was not (2)____ a good job for a lady, yet she (3)____ on training as a nurse. During a war she went to (4)____ for wounded soldiers in dirty hospitals. She cleaned the rooms, let in fresh (5)____, and made sure the men had warm beds. Soon far (6)____ soldiers died than before. At night she walked among the beds with a small (7)____ in her hand, so the men began to call her 'the Lady with the Lamp'. After the war she (8)____ a school to train nurses, and her ideas (9)____ hospitals all over the world. Today she is still (10)____ as the founder of modern nursing.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "wish",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a strong wish to help 强烈的愿望。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "seen as",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "seen as a good job 被视为好工作。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "insisted",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "insisted on training 坚持受训。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "sleep",
+            "shout",
+            "care"
+          ],
+          "answer_index": 3,
+          "explanation": "care for soldiers 照料士兵。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "air",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "fresh air 新鲜空气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "fewer",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 1,
+          "explanation": "far fewer soldiers died 死的士兵少得多。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "lamp",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "a small lamp 一盏小灯。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "ate",
+            "founded"
+          ],
+          "answer_index": 3,
+          "explanation": "founded a school 创办学校。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "changed",
+            "sold",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 0,
+          "explanation": "changed hospitals 改变了医院。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "remembered",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "remembered as the founder 被铭记为创立者。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Doctor's Courage",
+      "text": "Zhong Nanshan is a doctor (1)____ many people in China trust deeply. He became well known during a dangerous (2)____, when a strange illness was spreading quickly. While others were (3)____, he stayed calm and told the public the (4)____ about the disease. He even (5)____ that the most serious patients be sent to his own hospital, although this put him in (6)____. His honesty and courage helped to (7)____ the outbreak. Years later, when another illness (8)____, the same trusted doctor stepped forward again, even though he was already in his (9)____. To many people, he is a fine (10)____ of what a great person should be.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "which",
+            "where",
+            "whom",
+            "when"
+          ],
+          "answer_index": 2,
+          "explanation": "the doctor whom people trust 指人作宾语。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "game",
+            "garden",
+            "outbreak"
+          ],
+          "answer_index": 3,
+          "explanation": "a dangerous outbreak 危险的爆发。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "frightened",
+            "sold",
+            "happy",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "others were frightened 别人害怕。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "truth",
+            "noise",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "the truth about the disease 关于疾病的真相。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "insisted",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "insisted that… 坚持要求。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "garden",
+            "song",
+            "danger"
+          ],
+          "answer_index": 3,
+          "explanation": "put him in danger 使他处于危险。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "control",
+            "sell",
+            "sleep",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "control the outbreak 控制爆发。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "appeared",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 1,
+          "explanation": "another illness appeared 又一种疾病出现。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "garden",
+            "eighties",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "in his eighties 八十多岁。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "example"
+          ],
+          "answer_index": 3,
+          "explanation": "a fine example 一个好榜样。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Lu Xun Changes His Path",
+      "text": "Lu Xun, who is (1)____ as one of China's greatest writers, was born in 1881. As a young man he went to Japan to study (2)____, hoping to save people's lives. One day he saw a (3)____ that changed his mind. In it, a group of Chinese men did not seem to (4)____ about the suffering of their own people. From this, Lu Xun (5)____ that the real problem in China was not in people's bodies but in their (6)____. So he decided to (7)____ medical school and become a writer instead. He believed that powerful (8)____ could wake people up. His first famous short (9)____, A Madman's Diary, soon got published. Through his pen, he tried to make his country (10)____ and stronger.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "regarded",
+            "sold",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 0,
+          "explanation": "regarded as one of the greatest 被视为最伟大之一。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "medicine",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "study medicine 学医。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "photo",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "saw a photo 看到一张照片。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "sleep",
+            "shout",
+            "care"
+          ],
+          "answer_index": 3,
+          "explanation": "care about the suffering 关心苦难。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "concluded",
+            "sold",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 0,
+          "explanation": "concluded that… 得出结论。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "minds",
+            "garden",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "in their minds 在他们心里/精神上。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "sleep",
+            "quit",
+            "shout"
+          ],
+          "answer_index": 2,
+          "explanation": "quit medical school 退出医学院。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "ate",
+            "writing"
+          ],
+          "answer_index": 3,
+          "explanation": "powerful writing 有力的文字。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "story",
+            "sold",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 0,
+          "explanation": "a short story 短篇小说。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "better",
+            "lost",
+            "eaten"
+          ],
+          "answer_index": 1,
+          "explanation": "make his country better 使国家更好。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "What Makes a Person Great",
+      "text": "What does it really (1)____ to be a great person? Many of us think first of famous (2)____, writers or leaders. But true greatness may have little to do with (3)____. Einstein once said we should try to become a person of (4)____ rather than just a person of success. In other (5)____, what matters is not how much you gain, but how much (6)____ you do for others. A great person does not need to (7)____ the whole world. A teacher who gives up free time to help a (8)____ student can be great in a quiet way. So can a parent who (9)____ hard for a family. Greatness, in the end, is more about caring, courage and never (10)____ up.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "sleep",
+            "mean",
+            "shout"
+          ],
+          "answer_index": 2,
+          "explanation": "what does it mean 意味着什么。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "noises",
+            "gardens",
+            "scientists"
+          ],
+          "answer_index": 3,
+          "explanation": "famous scientists 著名科学家。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "fame",
+            "sold",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 0,
+          "explanation": "little to do with fame 与名声无关。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "value",
+            "noise",
+            "market"
+          ],
+          "answer_index": 1,
+          "explanation": "a person of value 有价值的人。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "words",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "in other words 换句话说。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "garden",
+            "market",
+            "good"
+          ],
+          "answer_index": 3,
+          "explanation": "how much good you do 做多少好事。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "change",
+            "sell",
+            "sleep",
+            "shout"
+          ],
+          "answer_index": 0,
+          "explanation": "change the whole world 改变世界。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "struggling",
+            "lost",
+            "ate"
+          ],
+          "answer_index": 1,
+          "explanation": "a struggling student 学习吃力的学生。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "works",
+            "ate"
+          ],
+          "answer_index": 2,
+          "explanation": "works hard 努力工作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sold",
+            "lost",
+            "eaten",
+            "giving"
+          ],
+          "answer_index": 3,
+          "explanation": "never giving up 永不放弃。"
+        }
+      ]
+    }
+  ]
+}

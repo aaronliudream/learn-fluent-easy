@@ -1,0 +1,710 @@
+{
+  "volume": "elective1",
+  "unit": "U3",
+  "topic": "Fascinating Parks",
+  "source": "人教版2019选择性必修一 Unit 3 同主题完形(一次野外露营/参观湿地公园/保护区的规则/游乐园的一天/设计理想公园/乡村音乐主题园)。用词限本单元/初中/常见词,答案唯一、选项同词性,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Night in the Wild",
+      "text": "Last summer I camped alone in a (1)____ park far from any town. On the first morning, the wind hit the (2)____ of my tent and woke me up. When I looked out, the sun was already shining, but it was hard to tell (3)____ it was day or night. I walked to the (4)____ of the mountain and watched a river flow through the (5)____ below. Because there were no roads, getting there had been quite (6)____. My bag was heavy, since I had to (7)____ all my own food. The hike was full of sweat and hard work, yet I felt truly (8)____ to be in such a wild place. That evening I ate some sweet and (9)____ berries I found near my tent. Being there, alone under a wide sky, was the most (10)____ trip of my life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "remote",
+            "busy",
+            "noisy",
+            "modern"
+          ],
+          "answer_index": 0,
+          "explanation": "remote park 偏远的公园。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "cloth",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the cloth of my tent 帐篷的布。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "because",
+            "although",
+            "whether",
+            "unless"
+          ],
+          "answer_index": 2,
+          "explanation": "tell whether 分辨是否。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "answer",
+            "edge"
+          ],
+          "answer_index": 3,
+          "explanation": "the edge of the mountain 山的边缘。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "valley",
+            "city",
+            "shop",
+            "office"
+          ],
+          "answer_index": 0,
+          "explanation": "the valley below 下方的山谷。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "cheap",
+            "difficult",
+            "loud",
+            "sweet"
+          ],
+          "answer_index": 1,
+          "explanation": "quite difficult 相当困难。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "hide",
+            "carry",
+            "throw"
+          ],
+          "answer_index": 2,
+          "explanation": "carry all my food 携带所有食物。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "angry",
+            "bored",
+            "afraid",
+            "blessed"
+          ],
+          "answer_index": 3,
+          "explanation": "feel blessed 感到有幸。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sour",
+            "loud",
+            "tall",
+            "rich"
+          ],
+          "answer_index": 0,
+          "explanation": "sweet and sour berries 又甜又酸的浆果。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "rewarding",
+            "cheap",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "rewarding trip 值得的旅程。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Visit to the Wetland Park",
+      "text": "On Sunday my family visited a famous wetland park near our city. The park is huge, covering about ten square (1)____. As soon as we arrived, we took a boat (2)____ along the quiet water. Tall trees and green (3)____ grew on both sides, and colourful flowers were everywhere. Our guide said that the designers had tried hard to (4)____ the impact of people on the land. All the new buildings were made in a traditional (5)____ so that they would fit into nature. Many birds and fish make their (6)____ here, hidden among the reeds. Because the wetland (7)____ the water clean and produces fresh air, people call it the green (8)____ of the city. We (9)____ along the paths for hours, taking photos of everything we saw. It was a (10)____ day, and I learned a lot about how a park can protect nature.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hours",
+            "minutes",
+            "kilometres",
+            "seconds"
+          ],
+          "answer_index": 2,
+          "explanation": "square kilometres 平方公里。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "price",
+            "rule",
+            "tour"
+          ],
+          "answer_index": 3,
+          "explanation": "a boat tour 乘船游览。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bushes",
+            "prices",
+            "noises",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "trees and bushes 树木和灌木。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "limit",
+            "raise",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "limit the impact 限制影响。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "fashion",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "in a traditional fashion 以传统方式。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "home"
+          ],
+          "answer_index": 3,
+          "explanation": "make their home 安家。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "keeps",
+            "sells",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "keeps the water clean 保持水清洁。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "lungs",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "the green lungs 绿肺。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "slept",
+            "shouted",
+            "wandered",
+            "drove"
+          ],
+          "answer_index": 2,
+          "explanation": "wandered along the paths 沿小路漫步。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "useless",
+            "empty",
+            "wonderful"
+          ],
+          "answer_index": 3,
+          "explanation": "a wonderful day 美好的一天。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Rules of the Wildlife Reserve",
+      "text": "A wildlife reserve is set up to (1)____ the rare animals that live inside it. To keep the land in its natural (2)____, the reserve has several strict rules. First, all hunting is (3)____, so that the animals can live and grow in peace. Second, no new buildings may go up within the park's (4)____. Third, visitors must follow the marked (5)____ and never wander off into the wild on their own. These rules may seem hard, but they work. Years ago, only a few wild tigers were left in this (6)____. After a (7)____ on development was put in place, their numbers slowly began to (8)____. Now the reserve is home to many tigers and (9)____. Large cats like these need (10)____ spaces to hunt for food, and a big, well-protected park gives them exactly that.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "protect",
+            "sell",
+            "harm",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "protect the animals 保护动物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "state",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "natural state 自然状态。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "begun",
+            "banned",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "hunting is banned 狩猎被禁止。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "songs",
+            "prices",
+            "noises",
+            "boundaries"
+          ],
+          "answer_index": 3,
+          "explanation": "within the boundaries 在边界内。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "routes",
+            "prices",
+            "noises",
+            "errors"
+          ],
+          "answer_index": 0,
+          "explanation": "marked routes 标好的路线。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "region",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "in this region 在这一地区。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "song",
+            "price",
+            "ban",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "a ban on development 发展禁令。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "fall",
+            "drop",
+            "stop",
+            "rise"
+          ],
+          "answer_index": 3,
+          "explanation": "began to rise 开始回升。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "leopards",
+            "prices",
+            "machines",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "tigers and leopards 虎和豹。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cheap",
+            "wide",
+            "loud",
+            "sour"
+          ],
+          "answer_index": 1,
+          "explanation": "wide spaces 广阔的空间。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Day at the Theme Park",
+      "text": "My cousin and I spent a whole day at a famous (1)____ park last weekend. There were rides for almost every (2)____ and taste, so we never got bored. First we tried an (3)____ swinging ship that lifted us high into the air. Then we got turned upside (4)____ on a fast roller coaster, screaming the whole way. As we (5)____ around the park, we saw a parade of cartoon characters walking down the (6)____. In the afternoon we joined a water fight against (7)____ and got completely wet. When we grew hungry, we found a restaurant with tasty (8)____ for every appetite. At night, a (9)____ display of fireworks lit up the sky above us. It was an (10)____ day full of fun, and we both agreed we would come back again soon.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "theme",
+            "rule"
+          ],
+          "answer_index": 2,
+          "explanation": "theme park 主题公园。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "shop",
+            "age"
+          ],
+          "answer_index": 3,
+          "explanation": "every age and taste 各个年龄和口味。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "enormous",
+            "empty",
+            "quiet",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "an enormous swinging ship 巨大的摇摆船。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "down",
+            "off",
+            "up"
+          ],
+          "answer_index": 1,
+          "explanation": "upside down 颠倒。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slept",
+            "drove",
+            "wandered",
+            "cried"
+          ],
+          "answer_index": 2,
+          "explanation": "wandered around 四处漫步。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "error",
+            "street"
+          ],
+          "answer_index": 3,
+          "explanation": "down the street 沿街道。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "pirates",
+            "songs",
+            "prices",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "fight against pirates 对抗海盗。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "food",
+            "price",
+            "error"
+          ],
+          "answer_index": 1,
+          "explanation": "tasty food 美味的食物。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "boring",
+            "quiet",
+            "splendid",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "a splendid display 壮丽的表演。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "boring",
+            "useless",
+            "exciting"
+          ],
+          "answer_index": 3,
+          "explanation": "an exciting day 激动人心的一天。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Designing My Ideal Park",
+      "text": "In art class our teacher asked us to (1)____ an ideal park of our own. I started by drawing a (2)____ of the whole park, marking where everything would be. Near the gate I placed a beautiful (3)____ that would shoot water high into the air. Visitors could rent a (4)____ boat and row across a quiet lake. For families with children, there would be gentle rides and a place to look at (5)____. To protect nature, I decided that no new building could go up outside the marked (6)____, and that hunting would be strictly (7)____. Trees and bushes would grow everywhere, making the air fresh and (8)____. I also planned a long underwater (9)____ where people could walk and watch the fish swim past. When I finished, my teacher said my park was (10)____ and full of clever ideas.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "design",
+            "sell",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "design a park 设计一座公园。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "map",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "a map 一张地图。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "fountain",
+            "error"
+          ],
+          "answer_index": 2,
+          "explanation": "a beautiful fountain 美丽的喷泉。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "song",
+            "price",
+            "noise",
+            "pedal"
+          ],
+          "answer_index": 3,
+          "explanation": "a pedal boat 脚踏船。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "flowers",
+            "prices",
+            "noises",
+            "errors"
+          ],
+          "answer_index": 0,
+          "explanation": "look at flowers 观赏花朵。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "boundaries",
+            "noises",
+            "songs"
+          ],
+          "answer_index": 1,
+          "explanation": "the marked boundaries 标好的边界。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "begun",
+            "prohibited",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "hunting prohibited 禁止狩猎。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "loud",
+            "sour",
+            "rich",
+            "clean"
+          ],
+          "answer_index": 3,
+          "explanation": "fresh and clean 清新洁净。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "corridor",
+            "price",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "an underwater corridor 水下走廊。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "incredible",
+            "useless",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "incredible 令人惊叹。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "A Park That Celebrates Culture",
+      "text": "Deep in the green mountains of the south stands a special theme park that (1)____ the region's old culture. Famous country music groups (2)____ on performances there all year round, both indoors and out. People travel from far away to watch skilled workers make wood, glass and (3)____ objects in the old-fashioned way. Visiting the candy shop and tasting sweets made the same way as a hundred and fifty years ago is a truly (4)____ experience. Riding the only (5)____ engine still working in the area is a special treat, as it carries you slowly through the hills. For those who love rides, the park has a (6)____ old wooden roller coaster, famous for its long track. As you (7)____ from one corner to another, you feel as if you have stepped back in (8)____. Every show and ride helps you (9)____ the history of this place. Come here to have fun while learning about a (10)____ way of life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sells",
+            "hides",
+            "celebrates",
+            "forgets"
+          ],
+          "answer_index": 2,
+          "explanation": "celebrates the culture 颂扬文化。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "take",
+            "give",
+            "make",
+            "put"
+          ],
+          "answer_index": 3,
+          "explanation": "put on performances 举办表演。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "iron",
+            "price",
+            "noise",
+            "error"
+          ],
+          "answer_index": 0,
+          "explanation": "iron objects 铁器。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "rare",
+            "sour",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "a rare experience 难得的经历。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "steam",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "steam engine 蒸汽机车。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "boring",
+            "useless",
+            "cheap",
+            "superb"
+          ],
+          "answer_index": 3,
+          "explanation": "a superb roller coaster 极佳的过山车。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "wander",
+            "sleep",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "wander from corner to corner 四处漫步。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "time",
+            "noise",
+            "shop"
+          ],
+          "answer_index": 1,
+          "explanation": "step back in time 时光倒流。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forget",
+            "waste",
+            "understand",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "understand the history 了解历史。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "boring",
+            "useless",
+            "empty",
+            "traditional"
+          ],
+          "answer_index": 3,
+          "explanation": "a traditional way of life 传统的生活方式。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Write an Argumentative Essay on Organic Farming(就有机农业写一篇议论文)",
+  "title_en": "Why I Support Organic Farming",
+  "genre": "议论文 / argumentative essay(state your opinion + give reasons with details)",
+  "source": "人教版2019选择性必修一 Unit 5 Reading for Writing:write an argumentative essay giving your opinion on chemical or organic farming(亮明观点 + 三个理由 + 每个理由配细节 + 结论)。",
+  "prompt_cn": "假设你叫李华,你们班正就'化学农业 vs 有机农业'展开讨论。请用英语写一篇约100词的议论文,内容包括:① 明确表态你支持哪一种农业(化学/有机);② 给出两到三条理由,每条理由配一个细节;③ 写一句总结。注意:观点鲜明、条理清楚、句句围绕主题。",
+  "prompt_en": "Suppose you are Li Hua. Your class is discussing 'chemical farming versus organic farming'. Write an argumentative essay (about 100 words) including: 1) a clear statement of which kind of farming you support; 2) two or three reasons, each with a supporting detail; 3) a short conclusion. Make your opinion clear and keep every sentence on topic.",
+  "points": [
+    "亮明观点(In my opinion, organic farming is preferable to chemical farming.)",
+    "理由+细节1(First, organic food is safer, because no chemicals stay in the soil or the food.)",
+    "理由+细节2(Second, organic methods protect the land, for example by changing crops every year.)",
+    "总结(All in all, organic farming is better for our health and our environment.)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Recently our class has been discussing chemical farming and organic farming. In my opinion, organic farming is preferable to chemical farming. First, organic food is safer for our health. Growing crops without pesticides means that no harmful chemicals stay in the soil or in the food we eat. Second, organic methods protect the land. For instance, organic farmers change the kind of crop in each field every year, which keeps the soil rich in minerals. Of course, organic farming cannot yet feed the whole world by itself. Even so, I believe that growing food in this natural way is better for both our health and our environment.",
+  "model_translation": "最近我们班一直在讨论化学农业和有机农业。在我看来,有机农业比化学农业更可取。首先,有机食品对我们的健康更安全。不用杀虫剂种庄稼,意味着没有有害化学品残留在土壤里或我们吃的食物中。其次,有机方法能保护土地。例如,有机农民每年更换每块地里的作物种类,这能让土壤保持富含矿物质。当然,有机农业目前还无法独自养活全世界。即便如此,我仍相信用这种自然的方式种粮食,对我们的健康和环境都更有益。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "观点明确 / 两到三条理由 / 每条配细节 / 有总结" },
+      { "dimension": "结构", "max": 4, "criteria": "总—分—总清晰、用 First/Second 等连接、句句围绕主题、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、动名词作主语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "亮明观点 In my opinion, organic farming is preferable to …",
+      "理由1+细节 First, … because / Growing … means that …",
+      "理由2+细节 Second, … For instance, …",
+      "总结 All in all / Even so, I believe that …"
+    ],
+    "key_expressions": [
+      "In my opinion, organic farming is preferable to chemical farming.",
+      "Growing crops without pesticides means that no harmful chemicals stay in the soil.",
+      "Organic farmers change the kind of crop in each field every year.",
+      "Growing food in this natural way is better for our health and our environment."
+    ],
+    "useful_words": ["organic", "chemical", "pesticide", "fertiliser", "soil", "crop", "yield", "nutrition", "environment", "harvest"]
+  },
+  "high_sentences": [
+    "In my opinion, organic farming is preferable to chemical farming.",
+    "Growing crops without pesticides means that no harmful chemicals stay in the soil or in the food we eat.",
+    "Organic farmers change the kind of crop in each field every year, which keeps the soil rich in minerals.",
+    "Growing food in this natural way is better for both our health and our environment."
+  ],
+  "error_pairs": [
+    { "wrong": "Grow crops without chemicals are safer.", "correct": "Growing crops without chemicals is safer.", "note": "动名词作主语,谓语用单数 is;不能用动词原形 Grow。" },
+    { "wrong": "It is no use to use too many pesticides.", "correct": "It is no use using too many pesticides.", "note": "It is no use doing 固定句式,用动名词。" },
+    { "wrong": "Organic farming protect the land.", "correct": "Organic farming protects the land.", "note": "主语第三人称单数,谓语动词加 s。" }
+  ],
+  "paragraph_template": "【农业议论文结构】\n第1句 引出话题 + 亮明观点:In my opinion, organic farming is preferable to chemical farming.\n第2-3句 理由1+细节:First, … because / Growing … means that …\n第4-5句 理由2+细节:Second, … For instance, …\n第6句 让步+总结:Of course, … Even so, I believe that …"
+}

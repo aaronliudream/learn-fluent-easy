@@ -1,0 +1,49 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "Body language varies from culture to culture.", "opts": ["肢体语言因文化而异。", "肢体语言全世界都一样。", "肢体语言毫无意义。", "肢体语言只属于演员。"], "answer": 0 },
+    { "audio": "Making eye contact can show interest and honesty.", "opts": ["盯着别人是一种威胁。", "眼神接触能表现兴趣和真诚。", "眼神接触总是无礼的。", "眼神接触表示害怕。"], "answer": 1 },
+    { "audio": "A warm smile can break down barriers between strangers.", "opts": ["微笑会带来麻烦。", "微笑只是礼貌而已。", "温暖的微笑能打破陌生人之间的隔阂。", "微笑让人更紧张。"], "answer": 2 },
+    { "audio": "In Japan, lowering your eyes can demonstrate respect.", "opts": ["在日本要一直直视长辈。", "在日本不能微笑。", "在日本握手最重要。", "在日本低目可以表达尊重。"], "answer": 3 },
+    { "audio": "Worried students often cross their arms in front of their chests.", "opts": ["焦虑的学生常把双臂抱在胸前。", "焦虑的学生总是大声说话。", "焦虑的学生喜欢举手。", "焦虑的学生会跳起来。"], "answer": 0 },
+    { "audio": "When in doubt, watch how the local people behave.", "opts": ["拿不准时就大声发问。", "拿不准时观察当地人怎么做。", "拿不准时立刻离开。", "拿不准时随便比手势。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "A wave of the hand is a common ____ for saying goodbye.", "opts": ["gesture", "price", "noise", "garden"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "It is hard to ____ a real smile from a fake one.", "opts": ["sell", "distinguish", "drop", "lose"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Your face often ____ your true feelings before you speak.", "opts": ["hides", "sells", "reveals", "breaks"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "A loud phone can easily ____ students from the lesson.", "opts": ["sell", "wash", "lose", "distract"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "She enjoys ____ about body language in different cultures.", "opts": ["learning", "to learn", "learn", "learned"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "We look forward to ____ how gestures differ around the world.", "opts": ["learn", "learning", "to learn", "learned"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "You should avoid ____ this gesture in Brazil, as it is not polite.", "opts": ["to make", "make", "making", "made"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The crucial thing is ____ body language in a way that suits the culture.", "opts": ["to using", "use", "used", "using"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["同一手势在不同国家可能含义不同。", "所有手势含义都一样。", "手势没有任何含义。", "只有微笑算作手势。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The same gesture can mean different things in different countries." },
+    { "q": "听句子选中文:", "opts": ["盯着别人看太久没有问题。", "盯着别人看太久可能被当作威胁。", "盯着别人看表示友好。", "盯着别人看是一种问候。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Staring at someone too long can be interpreted as a threat." }
+  ],
+  "reading": {
+    "passage": "When Lucy moved to a new country, she could not speak the language at all. Instead of staying silent, she used simple gestures to greet people, ask for help and say thank you. A few months later, she had made many friends, proving that a smile and a kind gesture can speak louder than words.",
+    "passageCn": "露西搬到一个新国家时,完全不会说当地语言。她没有保持沉默,而是用简单的手势来问候、求助和道谢。几个月后,她交了许多朋友,这证明微笑和友善的手势胜过千言万语。",
+    "questions": [
+      { "q": "What did Lucy use to communicate at first?", "opts": ["Simple gestures.", "Long letters.", "A loud voice.", "A dictionary only."], "answer": 0 },
+      { "q": "What did Lucy do instead of staying silent?", "opts": ["She left the country.", "She used gestures to greet and ask for help.", "She stopped meeting people.", "She only spoke her own language."], "answer": 1 },
+      { "q": "What does Lucy's story prove?", "opts": ["Language is useless.", "Friends are hard to make.", "A smile and a kind gesture can speak louder than words.", "Gestures always cause trouble."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a gesture you often use. Say what it means and how people might understand it differently. Use at least one -ing form (gerund).",
+    "promptCn": "用3-4句话介绍一个你常用的手势:它表示什么、别人可能怎样理解。至少用一个动名词(-ing)。",
+    "sampleWords": ["gesture", "body language", "mean", "smile", "nod", "wave", "polite", "culture", "interpret", "communicate"]
+  },
+  "dialogues": [
+    {
+      "title": "Reading a Friend's Face",
+      "lines": [
+        { "role": "A", "text": "You're frowning. Is everything OK?", "cn": "你在皱眉,一切还好吗?" },
+        { "role": "B", "text": "How did you know? I didn't say anything.", "cn": "你怎么知道的?我什么都没说。" },
+        { "role": "A", "text": "Your body language told me. Your shoulders are slumped too.", "cn": "你的肢体语言告诉了我,你的肩膀也垮着。" },
+        { "role": "B", "text": "You're right. Thanks for noticing — talking about it does help.", "cn": "你说得对。谢谢你注意到——说出来确实有帮助。" }
+      ]
+    }
+  ]
+}

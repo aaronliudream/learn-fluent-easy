@@ -1,0 +1,415 @@
+[
+ {
+  "word": "bend",
+  "ipa": "bend",
+  "cn": "使）弯曲； 倾斜；偏向",
+  "propn": false,
+  "raw": "bend /bend/ vt. & vi. （bent, bent）（使）弯曲； 倾斜；偏向"
+ },
+ {
+  "word": "bother",
+  "ipa": "b(r)",
+  "cn": "费心；麻烦；因……操心 n. 麻烦；不便",
+  "propn": false,
+  "raw": "bother /b(r)/ vi. & vt. 费心；麻烦；因……操心 n. 麻烦；不便"
+ },
+ {
+  "word": "bow",
+  "ipa": "ba",
+  "cn": "鞠躬；点头 vt. 低（头） /b/ n. 弓；蝴蝶结",
+  "propn": false,
+  "raw": "bow /ba/ vi. 鞠躬；点头 vt. 低（头） /b/ n. 弓；蝴蝶结"
+ },
+ {
+  "word": "break down",
+  "ipa": "",
+  "cn": "消除；分解；打破",
+  "propn": false,
+  "raw": "break down 消除；分解；打破"
+ },
+ {
+  "word": "by comparison",
+  "ipa": "",
+  "cn": "与……）相比较",
+  "propn": false,
+  "raw": "by comparison （与……）相比较"
+ },
+ {
+  "word": "by contrast",
+  "ipa": "",
+  "cn": "相比之下",
+  "propn": false,
+  "raw": "by contrast 相比之下"
+ },
+ {
+  "word": "call on",
+  "ipa": "",
+  "cn": "短暂地）访问；要求（某人讲话等）； 正式邀请",
+  "propn": false,
+  "raw": "call on （短暂地）访问；要求（某人讲话等）； 正式邀请"
+ },
+ {
+  "word": "ceiling",
+  "ipa": "sil",
+  "cn": "天花板；上限",
+  "propn": false,
+  "raw": "ceiling /sil/ n. 天花板；上限"
+ },
+ {
+  "word": "cheek",
+  "ipa": "tik",
+  "cn": "面颊；脸颊",
+  "propn": false,
+  "raw": "cheek /tik/ n. 面颊；脸颊"
+ },
+ {
+  "word": "chest",
+  "ipa": "test",
+  "cn": "胸部；胸膛",
+  "propn": false,
+  "raw": "chest /test/ n. 胸部；胸膛"
+ },
+ {
+  "word": "chin",
+  "ipa": "tn",
+  "cn": "下巴",
+  "propn": false,
+  "raw": "chin /tn/ n. 下巴"
+ },
+ {
+  "word": "clarify",
+  "ipa": "klrfa",
+  "cn": "使更清晰易懂；阐明；澄清",
+  "propn": false,
+  "raw": "clarify /klrfa/ vt. 使更清晰易懂；阐明；澄清"
+ },
+ {
+  "word": "component",
+  "ipa": "kmpnnt",
+  "cn": "组成部分；零件",
+  "propn": false,
+  "raw": "component /kmpnnt/ n. 组成部分；零件"
+ },
+ {
+  "word": "conflict",
+  "ipa": "knflkt",
+  "cn": "矛盾；冲突 /knflkt/ vi. 冲突；抵触",
+  "propn": false,
+  "raw": "conflict /knflkt/ n. 矛盾；冲突 /knflkt/ vi. 冲突；抵触"
+ },
+ {
+  "word": "demonstrate",
+  "ipa": "demnstret",
+  "cn": "表现；表达；说明；证明",
+  "propn": false,
+  "raw": "demonstrate /demnstret/ vt. 表现；表达；说明；证明"
+ },
+ {
+  "word": "differ",
+  "ipa": "df(r)",
+  "cn": "相异；不同于",
+  "propn": false,
+  "raw": "differ /df(r)/ vi. 相异；不同于"
+ },
+ {
+  "word": "distinguish",
+  "ipa": "dstgw",
+  "cn": "区分；辨别",
+  "propn": false,
+  "raw": "distinguish /dstgw/ vi. & vt. 区分；辨别"
+ },
+ {
+  "word": "distract",
+  "ipa": "dstrkt",
+  "cn": "分散（注意力）；使分心",
+  "propn": false,
+  "raw": "distract /dstrkt/ vt. 分散（注意力）；使分心"
+ },
+ {
+  "word": "educator",
+  "ipa": "eduket(r)",
+  "cn": "教师；教育工作者；教育家",
+  "propn": false,
+  "raw": "educator /eduket(r)/ n. 教师；教育工作者；教育家"
+ },
+ {
+  "word": "embarrassed",
+  "ipa": "mbrst",
+  "cn": "难堪的；尴尬的",
+  "propn": false,
+  "raw": "embarrassed /mbrst/ adj. 难堪的；尴尬的"
+ },
+ {
+  "word": "employ",
+  "ipa": "mpl",
+  "cn": "使用；应用；雇用",
+  "propn": false,
+  "raw": "employ /mpl/ vt. 使用；应用；雇用"
+ },
+ {
+  "word": "fake",
+  "ipa": "fek",
+  "cn": "假装的；假的；冒充的",
+  "propn": false,
+  "raw": "fake /fek/ adj. 假装的；假的；冒充的"
+ },
+ {
+  "word": "favour",
+  "ipa": "fev(r)",
+  "cn": "较喜欢；选择；有利于 n. 帮助；恩惠；赞同",
+  "propn": false,
+  "raw": "favour /fev(r)/ vt. 较喜欢；选择；有利于 n. 帮助；恩惠；赞同"
+ },
+ {
+  "word": "gesture",
+  "ipa": "dest(r)",
+  "cn": "手势；姿势；姿态",
+  "propn": false,
+  "raw": "gesture /dest(r)/ n. 手势；姿势；姿态"
+ },
+ {
+  "word": "identical",
+  "ipa": "adentkl",
+  "cn": "相同的",
+  "propn": false,
+  "raw": "identical /adentkl/ adj. 相同的"
+ },
+ {
+  "word": "imply",
+  "ipa": "mpl",
+  "cn": "意味着；暗示",
+  "propn": false,
+  "raw": "imply /mpl/ vt. 意味着；暗示"
+ },
+ {
+  "word": "in other words",
+  "ipa": "",
+  "cn": "换句话说；也就是说",
+  "propn": false,
+  "raw": "in other words 换句话说；也就是说"
+ },
+ {
+  "word": "incident",
+  "ipa": "nsdnt",
+  "cn": "发生的事情；严重事件； 冲突",
+  "propn": false,
+  "raw": "incident /nsdnt/ n. 发生的事情；严重事件； 冲突"
+ },
+ {
+  "word": "inference",
+  "ipa": "nfrns",
+  "cn": "推断的结果；结论；推论",
+  "propn": false,
+  "raw": "inference /nfrns/ n. 推断的结果；结论；推论"
+ },
+ {
+  "word": "make inferences",
+  "ipa": "",
+  "cn": "推理；推断",
+  "propn": false,
+  "raw": "make inferences 推理；推断"
+ },
+ {
+  "word": "inquire",
+  "ipa": "nkwa(r)",
+  "cn": "询问；打听",
+  "propn": false,
+  "raw": "inquire /nkwa(r)/ (= enquire) vi. & vt. 询问；打听"
+ },
+ {
+  "word": "interaction",
+  "ipa": "ntrkn",
+  "cn": "交流；相互影响",
+  "propn": false,
+  "raw": "interaction /ntrkn/ n. 交流；相互影响"
+ },
+ {
+  "word": "internal",
+  "ipa": "ntnl",
+  "cn": "内部的；里面的",
+  "propn": false,
+  "raw": "internal /ntnl/ adj. 内部的；里面的"
+ },
+ {
+  "word": "interpret",
+  "ipa": "ntprt",
+  "cn": "把……理解（解释）为 vi. & vt. 口译",
+  "propn": false,
+  "raw": "interpret /ntprt/ vt. 把……理解（解释）为 vi. & vt. 口译"
+ },
+ {
+  "word": "intervene",
+  "ipa": "ntvin",
+  "cn": "干预；介入",
+  "propn": false,
+  "raw": "intervene /ntvin/ vi. 干预；介入"
+ },
+ {
+  "word": "lower",
+  "ipa": "l(r)",
+  "cn": "把……放低；降低；减少 adj. 下面的；下方的；较小的",
+  "propn": false,
+  "raw": "lower /l(r)/ vt. 把……放低；降低；减少 adj. 下面的；下方的；较小的"
+ },
+ {
+  "word": "merely",
+  "ipa": "mli",
+  "cn": "只是；仅仅；只不过",
+  "propn": false,
+  "raw": "merely /mli/ adv. 只是；仅仅；只不过"
+ },
+ {
+  "word": "nonverbal",
+  "ipa": "nnvbl",
+  "cn": "不涉及言语的；非言语的",
+  "propn": false,
+  "raw": "nonverbal /nnvbl/ adj. 不涉及言语的；非言语的"
+ },
+ {
+  "word": "occupy",
+  "ipa": "kjupa",
+  "cn": "占据；占用",
+  "propn": false,
+  "raw": "occupy /kjupa/ vt. 占据；占用"
+ },
+ {
+  "word": "perceive",
+  "ipa": "psiv",
+  "cn": "察觉；看待；理解",
+  "propn": false,
+  "raw": "perceive /psiv/ vt. 察觉；看待；理解"
+ },
+ {
+  "word": "pose",
+  "ipa": "pz",
+  "cn": "故作姿态；（为画像、拍照等摆的）姿势 vi. 摆好姿势 vt. 造成（威胁、问题等）",
+  "propn": false,
+  "raw": "pose /pz/ n. 故作姿态；（为画像、拍照等摆的）姿势 vi. 摆好姿势 vt. 造成（威胁、问题等）"
+ },
+ {
+  "word": "react",
+  "ipa": "rkt",
+  "cn": "对……）起反应；回应； （对食物等）有不良反应",
+  "propn": false,
+  "raw": "react /rkt/ vi. （对……）起反应；回应； （对食物等）有不良反应"
+ },
+ {
+  "word": "reliable",
+  "ipa": "rlabl",
+  "cn": "可靠的；可信赖的",
+  "propn": false,
+  "raw": "reliable /rlabl/ adj. 可靠的；可信赖的"
+ },
+ {
+  "word": "reveal",
+  "ipa": "rvil",
+  "cn": "揭示；显示；露出",
+  "propn": false,
+  "raw": "reveal /rvil/ vt. 揭示；显示；露出"
+ },
+ {
+  "word": "slight",
+  "ipa": "slat",
+  "cn": "轻微的；略微的；细小的",
+  "propn": false,
+  "raw": "slight /slat/ adj. 轻微的；略微的；细小的"
+ },
+ {
+  "word": "slightly",
+  "ipa": "slatli",
+  "cn": "略微；稍微",
+  "propn": false,
+  "raw": "slightly /slatli/ adv.  略微；稍微"
+ },
+ {
+  "word": "slump",
+  "ipa": "slmp",
+  "cn": "垂头弯腰地走（或坐等）",
+  "propn": false,
+  "raw": "slump /slmp/ vi. 垂头弯腰地走（或坐等）"
+ },
+ {
+  "word": "stare",
+  "ipa": "ste(r)",
+  "cn": "盯着看；凝视 n. 凝视",
+  "propn": false,
+  "raw": "stare /ste(r)/ vi. 盯着看；凝视 n. 凝视"
+ },
+ {
+  "word": "straighten up",
+  "ipa": "",
+  "cn": "直起来；整理；收拾整齐",
+  "propn": false,
+  "raw": "straighten up 直起来；整理；收拾整齐"
+ },
+ {
+  "word": "tendency",
+  "ipa": "tendnsi",
+  "cn": "趋势；倾向",
+  "propn": false,
+  "raw": "tendency /tendnsi/ n. 趋势；倾向"
+ },
+ {
+  "word": "tick",
+  "ipa": "tk",
+  "cn": "给（试卷、问题等）打钩号 vi.  （钟表）发出嘀嗒声 n. 钩号",
+  "propn": false,
+  "raw": "tick /tk/ vt. 给（试卷、问题等）打钩号 vi.  （钟表）发出嘀嗒声 n. 钩号"
+ },
+ {
+  "word": "tone",
+  "ipa": "tn",
+  "cn": "语气；腔调；口吻",
+  "propn": false,
+  "raw": "tone /tn/ n. 语气；腔调；口吻"
+ },
+ {
+  "word": "trial",
+  "ipa": "tral",
+  "cn": "审讯；审判；试验；试用",
+  "propn": false,
+  "raw": "trial /tral/ n. & v. 审讯；审判；试验；试用"
+ },
+ {
+  "word": "twin",
+  "ipa": "twn",
+  "cn": "双胞胎之一的；孪生之一的 n. 孪生之一；双胞胎之一",
+  "propn": false,
+  "raw": "twin /twn/ adj. 双胞胎之一的；孪生之一的 n. 孪生之一；双胞胎之一"
+ },
+ {
+  "word": "ultimately",
+  "ipa": "ltmtli",
+  "cn": "最终；最后",
+  "propn": false,
+  "raw": "ultimately /ltmtli/ adv. 最终；最后"
+ },
+ {
+  "word": "vary",
+  "ipa": "veri",
+  "cn": "根据情况）变化；改变",
+  "propn": false,
+  "raw": "vary /veri/ vi.  （根据情况）变化；改变"
+ },
+ {
+  "word": "waist",
+  "ipa": "west",
+  "cn": "腰；腰部",
+  "propn": false,
+  "raw": "waist /west/ n. 腰；腰部"
+ },
+ {
+  "word": "weep",
+  "ipa": "wip",
+  "cn": "哭泣；流泪",
+  "propn": false,
+  "raw": "weep /wip/ vi. & vt. 哭泣；流泪"
+ },
+ {
+  "word": "witness",
+  "ipa": "wtns",
+  "cn": "当场看到；目击；见证 n. 目击者；证人",
+  "propn": false,
+  "raw": "witness /wtns/ vt. 当场看到；目击；见证 n. 目击者；证人"
+ }
+]

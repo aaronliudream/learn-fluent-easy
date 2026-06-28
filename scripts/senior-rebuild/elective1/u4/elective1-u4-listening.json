@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U4",
+  "topic": "Body Language",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修一 Unit 4 同主题听力(各国手势差异/微笑的力量/学无声表演/课堂肢体语言/请求澄清/给旅行者的贴士)。用词限 U4/初中/常见词,答案唯一可在 transcript 找到依据,与读/完形关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Gestures Around the World",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "Tom, I made the \"OK\" sign to a waiter in France and he looked upset. Why?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Ah, in France that sign can mean zero, or \"worthless\". It's easy to get wrong."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Really? At home it just means everything is fine."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Yes, but the same gesture differs from country to country."
+        },
+        {
+          "speaker": "Mia",
+          "text": "So what should I do when I travel?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Watch the local people and avoid making gestures you're not sure about."
+        },
+        {
+          "speaker": "Mia",
+          "text": "That's good advice. I'll be more careful next time."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Don't worry. Everyone makes mistakes like this when learning about a new culture."
+        }
+      ],
+      "translation_cn": "Mia 在法国对服务员比\"OK\"手势,对方不高兴;Tom 解释在法国那手势可能表示零或\"没价值\";同一手势因国家而异;Tom 建议旅行时观察当地人、不确定的手势就别比;Mia 表示以后会更小心。",
+      "questions": [
+        {
+          "stem": "What did the \"OK\" sign seem to mean in France?",
+          "options": [
+            "Zero, or \"worthless\".",
+            "That everything is fine.",
+            "A number ten.",
+            "A polite hello."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did the waiter look upset?",
+          "options": [
+            "Mia spoke too loudly.",
+            "He understood the rude meaning of the sign.",
+            "He could not find the table.",
+            "Mia did not pay the bill."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom say about the same gesture?",
+          "options": [
+            "It differs from country to country.",
+            "It means the same everywhere.",
+            "It has no meaning at all.",
+            "It is always rude."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What advice does Tom give for travelling?",
+          "options": [
+            "Never use any gestures.",
+            "Watch local people and avoid unsure gestures.",
+            "Make every gesture loudly.",
+            "Speak only English."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Tom make Mia feel better?",
+          "options": [
+            "He tells her to go home.",
+            "He laughs at her.",
+            "He says everyone makes such mistakes when learning a culture.",
+            "He says France is a bad place."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 The Power of a Smile",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A smile may be the most powerful piece of body language we have.",
+        "It can help us get through difficult moments and find friends among strangers.",
+        "We use a smile to greet people, to apologise, or to ask for help.",
+        "A warm smile can even break down barriers that words cannot.",
+        "So if you feel down, try smiling, and you may slowly feel better."
+      ],
+      "translation_cn": "微笑也许是我们最有力的肢体语言;它能帮我们度过难关、在陌生人中找到朋友;我们用微笑问候、道歉或求助;温暖的微笑甚至能打破言语打不破的隔阂;心情低落时不妨微笑,你会慢慢好起来。",
+      "questions": [
+        {
+          "stem": "What does the speaker call a smile?",
+          "options": [
+            "A useless habit.",
+            "A foreign word.",
+            "A kind of food.",
+            "The most powerful piece of body language."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What can a smile help us do in hard moments?",
+          "options": [
+            "Get through difficult moments and find friends.",
+            "Forget our names.",
+            "Win every game.",
+            "Speak a new language."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which use of a smile is mentioned?",
+          "options": [
+            "To start a fight.",
+            "To greet, apologise or ask for help.",
+            "To hide money.",
+            "To end all friendships."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can a warm smile break down?",
+          "options": [
+            "A strong wall of stone.",
+            "All spoken words.",
+            "Barriers that words cannot.",
+            "The price of things."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker suggest doing when you feel down?",
+          "options": [
+            "Stop talking to everyone.",
+            "Stay alone all day.",
+            "Never leave your room.",
+            "Try smiling, and you may feel better."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Learning Silent Acting",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "How are your acting classes going? I heard you act without speaking."
+        },
+        {
+          "speaker": "Sara",
+          "text": "They're hard! We have to show feelings using only our faces and hands."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That does sound difficult. Can people guess what you mean?"
+        },
+        {
+          "speaker": "Sara",
+          "text": "Sometimes. Last week I tried to show \"I'm tired\", but they thought I was sad."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Well, tired and sad can look quite similar."
+        },
+        {
+          "speaker": "Sara",
+          "text": "True. I'm still not very confident about my silent acting."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Don't give up. It's good you tried — it takes practice."
+        },
+        {
+          "speaker": "Sara",
+          "text": "Thanks. I'll keep practising and watch real people more closely."
+        }
+      ],
+      "translation_cn": "Ben 问 Sara 无声表演课怎么样;Sara 说很难,只能用脸和手表达感受;上周想演\"我累了\",观众却以为是\"难过\";Ben 说累和难过看起来确实相似;Sara 对自己的无声表演还不太自信;Ben 鼓励她别放弃、要多练;Sara 决定继续练习并多观察真人。",
+      "questions": [
+        {
+          "stem": "What is special about Sara's acting classes?",
+          "options": [
+            "They act without speaking.",
+            "They only sing songs.",
+            "They write long essays.",
+            "They use lots of words."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Sara use to show feelings?",
+          "options": [
+            "A microphone.",
+            "Only her face and hands.",
+            "A long speech.",
+            "A music player."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What happened when Sara tried to show \"I'm tired\"?",
+          "options": [
+            "Everyone guessed it at once.",
+            "Nobody watched her.",
+            "People thought she was sad.",
+            "She forgot the scene."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does Sara feel about her silent acting?",
+          "options": [
+            "Very proud and sure.",
+            "Bored and angry.",
+            "Too excited to act.",
+            "Not very confident."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ben tell Sara at the end?",
+          "options": [
+            "It's good she tried; it takes practice.",
+            "She should stop the classes.",
+            "Acting is a waste of time.",
+            "She will never improve."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 Reading a Classroom",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "As a teacher, I learn a lot just by watching my students' bodies.",
+        "When students lean forward and look up, I know they are interested.",
+        "When a student keeps looking at the clock, he is probably bored.",
+        "Students who cross their arms tightly may feel worried or afraid.",
+        "Their quiet body language tells me when to slow down or offer help."
+      ],
+      "translation_cn": "作为老师,我只看学生的身体就能了解很多;学生前倾抬头时,我知道他们感兴趣;学生总看钟,多半是无聊了;紧紧交叉双臂的学生可能感到担忧或害怕;这些安静的肢体语言告诉我何时该放慢节奏或提供帮助。",
+      "questions": [
+        {
+          "stem": "How does the teacher learn about students?",
+          "options": [
+            "By reading their letters.",
+            "By watching their body language.",
+            "By asking their parents.",
+            "By looking at their bags."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What shows that students are interested?",
+          "options": [
+            "They fall asleep.",
+            "They leave the room.",
+            "They lean forward and look up.",
+            "They cover their faces."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does looking at the clock probably mean?",
+          "options": [
+            "The student is very proud.",
+            "The student is excited.",
+            "The student is hungry.",
+            "The student is bored."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What may tightly crossed arms suggest?",
+          "options": [
+            "Worry or fear.",
+            "Great happiness.",
+            "Strong interest.",
+            "A wish to sing."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the quiet body language help the teacher decide?",
+          "options": [
+            "Which student is richest.",
+            "When to slow down or offer help.",
+            "What to eat for lunch.",
+            "How to end the school."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Asking for Clarification",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "You looked at your watch during my talk. What did you mean by that?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Oh, sorry! I didn't mean to be rude. I was just checking the time."
+        },
+        {
+          "speaker": "Anna",
+          "text": "I see. I thought it meant you were bored."
+        },
+        {
+          "speaker": "Jack",
+          "text": "In other words, my body sent the wrong message?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Exactly. Body language can be easy to misread."
+        },
+        {
+          "speaker": "Jack",
+          "text": "So next time I should explain, or just put my watch away."
+        },
+        {
+          "speaker": "Anna",
+          "text": "That would help. Asking \"what do you mean?\" can clear things up too."
+        },
+        {
+          "speaker": "Jack",
+          "text": "Good idea. It's better to ask than to guess wrongly."
+        }
+      ],
+      "translation_cn": "Anna 问 Jack 演讲时看表是什么意思;Jack 道歉,说只是看时间、无意失礼;Anna 以为那表示无聊;Jack 说也就是他的身体传错了信息;Anna 说肢体语言容易被误读;Jack 决定下次解释或收起手表;Anna 说直接问\"你什么意思\"也能澄清;Jack 同意,问比猜错好。",
+      "questions": [
+        {
+          "stem": "What did Jack do during Anna's talk?",
+          "options": [
+            "He fell asleep.",
+            "He left the room.",
+            "He looked at his watch.",
+            "He sang a song."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why did Jack really look at his watch?",
+          "options": [
+            "He was very bored.",
+            "He wanted to leave.",
+            "He was angry with Anna.",
+            "He was just checking the time."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did Anna first think his action meant?",
+          "options": [
+            "He was bored.",
+            "He was excited.",
+            "He was hungry.",
+            "He was proud."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna say about body language?",
+          "options": [
+            "It is always clear.",
+            "It can be easy to misread.",
+            "It needs no attention.",
+            "It means nothing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they agree is a good way to clear things up?",
+          "options": [
+            "Saying nothing at all.",
+            "Guessing the meaning quickly.",
+            "Asking what the other person means.",
+            "Leaving without a word."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 Tips for Travellers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here are a few simple tips about body language for travellers.",
+        "Remember that a friendly gesture at home may be rude in another country.",
+        "Before you use a gesture, watch how the local people behave.",
+        "Keep your eye contact polite, not too long and not too short.",
+        "When in doubt, a warm smile is welcome almost everywhere."
+      ],
+      "translation_cn": "给旅行者几条关于肢体语言的小贴士:记住在本国友好的手势在别国可能无礼;用手势前先观察当地人怎么做;眼神接触要适度,别太久也别太短;拿不准时,温暖的微笑几乎处处受欢迎。",
+      "questions": [
+        {
+          "stem": "Who are these tips for?",
+          "options": [
+            "Only teachers.",
+            "Only children.",
+            "Only actors.",
+            "Travellers."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you remember about a friendly gesture?",
+          "options": [
+            "It may be rude in another country.",
+            "It is rude everywhere.",
+            "It always means money.",
+            "It has no meaning abroad."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you do before using a gesture?",
+          "options": [
+            "Make it as big as possible.",
+            "Watch how local people behave.",
+            "Use it many times quickly.",
+            "Ask everyone to copy you."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the speaker say about eye contact?",
+          "options": [
+            "Make it as long as you can.",
+            "Avoid it completely.",
+            "Keep it polite, not too long or short.",
+            "Stare hard at everyone."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is welcome almost everywhere when in doubt?",
+          "options": [
+            "A loud shout.",
+            "A long stare.",
+            "A rude sign.",
+            "A warm smile."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

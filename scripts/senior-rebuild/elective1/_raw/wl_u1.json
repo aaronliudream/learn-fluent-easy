@@ -1,0 +1,443 @@
+[
+ {
+  "word": "boil",
+  "ipa": "bl",
+  "cn": "使）沸腾；煮开；烧开 n. 沸腾；沸点",
+  "propn": false,
+  "raw": "boil /bl/ vt. & vi. （使）沸腾；煮开；烧开 n. 沸腾；沸点"
+ },
+ {
+  "word": "botanical",
+  "ipa": "btnkl",
+  "cn": "植物学的",
+  "propn": false,
+  "raw": "botanical /btnkl/ adj.  植物学的"
+ },
+ {
+  "word": "chart",
+  "ipa": "tt",
+  "cn": "图表 vt. 记录；制订计划",
+  "propn": false,
+  "raw": "chart /tt/ n. 图表 vt. 记录；制订计划"
+ },
+ {
+  "word": "flow chart",
+  "ipa": "",
+  "cn": "流程图",
+  "propn": false,
+  "raw": "flow chart 流程图"
+ },
+ {
+  "word": "circumstance",
+  "ipa": "skmstns",
+  "cn": "条件；环境；状况",
+  "propn": false,
+  "raw": "circumstance /skmstns/ n. [usually pl.]条件；环境；状况"
+ },
+ {
+  "word": "come to power",
+  "ipa": "",
+  "cn": "开始）掌权；上台",
+  "propn": false,
+  "raw": "come to power （开始）掌权；上台"
+ },
+ {
+  "word": "commit",
+  "ipa": "kmt",
+  "cn": "承诺；保证 vi.  忠于；全心全意投入（工作、活动等）",
+  "propn": false,
+  "raw": "commit /kmt/ vt. 承诺；保证 vi.  忠于；全心全意投入（工作、活动等）"
+ },
+ {
+  "word": "commit oneself to",
+  "ipa": "doing sth",
+  "cn": "承诺；保证（做某事、遵守协议或安排等）",
+  "propn": false,
+  "raw": "commit oneself to (sth/doing sth/do sth) 承诺；保证（做某事、遵守协议或安排等）"
+ },
+ {
+  "word": "committed",
+  "ipa": "kmtd",
+  "cn": "尽心尽力的；坚定的；坚信的",
+  "propn": false,
+  "raw": "committed /kmtd/ adj. 尽心尽力的；坚定的；坚信的"
+ },
+ {
+  "word": "conclusion",
+  "ipa": "knkln",
+  "cn": "结论；推论",
+  "propn": false,
+  "raw": "conclusion /knkln/ n. 结论；推论"
+ },
+ {
+  "word": "consequence",
+  "ipa": "knskwns",
+  "cn": "结果；后果",
+  "propn": false,
+  "raw": "consequence /knskwns/ n. 结果；后果"
+ },
+ {
+  "word": "crucial",
+  "ipa": "krul",
+  "cn": "至关重要的；关键性的",
+  "propn": false,
+  "raw": "crucial /krul/ adj. 至关重要的；关键性的"
+ },
+ {
+  "word": "defeat",
+  "ipa": "dfit",
+  "cn": "击败；战胜 n. 失败；挫败",
+  "propn": false,
+  "raw": "defeat /dfit/ vt. 击败；战胜 n. 失败；挫败"
+ },
+ {
+  "word": "device",
+  "ipa": "dvas",
+  "cn": "方法；技巧；装置；仪器",
+  "propn": false,
+  "raw": "device /dvas/ n. 方法；技巧；装置；仪器"
+ },
+ {
+  "word": "distinct",
+  "ipa": "dstkt",
+  "cn": "清晰的；清楚的；有区别的",
+  "propn": false,
+  "raw": "distinct /dstkt/ adj. 清晰的；清楚的；有区别的"
+ },
+ {
+  "word": "doctorate",
+  "ipa": "dktrt",
+  "cn": "博士学位",
+  "propn": false,
+  "raw": "doctorate /dktrt/ n. 博士学位"
+ },
+ {
+  "word": "draft",
+  "ipa": "drft",
+  "cn": "草稿；草案 vt. 起草；草拟",
+  "propn": false,
+  "raw": "draft /drft/ n. 草稿；草案 vt. 起草；草拟"
+ },
+ {
+  "word": "encounter",
+  "ipa": "nkant(r)",
+  "cn": "偶然碰到；遇到 n. 邂逅；遭遇",
+  "propn": false,
+  "raw": "encounter /nkant(r)/ vt. 偶然碰到；遇到 n. 邂逅；遭遇"
+ },
+ {
+  "word": "evaluate",
+  "ipa": "vljuet",
+  "cn": "评价；评估",
+  "propn": false,
+  "raw": "evaluate /vljuet/ vt.  评价；评估"
+ },
+ {
+  "word": "extract",
+  "ipa": "ekstrkt",
+  "cn": "提取物；摘录 /kstrkt/ vt. 提取；提炼；摘录； （用力）拔出",
+  "propn": false,
+  "raw": "extract /ekstrkt/ n. 提取物；摘录 /kstrkt/ vt. 提取；提炼；摘录； （用力）拔出"
+ },
+ {
+  "word": "extraordinary",
+  "ipa": "kstrdnri; NAmE kstrdneri",
+  "cn": "不一般的；非凡的；意想不到的",
+  "propn": false,
+  "raw": "extraordinary /kstrdnri; NAmE kstrdneri/ adj. 不一般的；非凡的；意想不到的"
+ },
+ {
+  "word": "flee",
+  "ipa": "fli",
+  "cn": "迅速离开；逃跑",
+  "propn": false,
+  "raw": "flee /fli/ vi. & vt. （fled, fled） 迅速离开；逃跑"
+ },
+ {
+  "word": "flow",
+  "ipa": "fl",
+  "cn": "流；流动；流畅；供应 vi. 流；流动",
+  "propn": false,
+  "raw": "flow /fl/ n. 流；流动；流畅；供应 vi. 流；流动"
+ },
+ {
+  "word": "formula",
+  "ipa": "fmjl",
+  "cn": "公式；方程式；配方",
+  "propn": false,
+  "raw": "formula /fmjl/ n. 公式；方程式；配方"
+ },
+ {
+  "word": "found",
+  "ipa": "fand",
+  "cn": "创建；建立；把……建立在",
+  "propn": false,
+  "raw": "found /fand/ vt. 创建；建立；把……建立在"
+ },
+ {
+  "word": "genius",
+  "ipa": "dinis",
+  "cn": "天才；天资；天赋",
+  "propn": false,
+  "raw": "genius /dinis/ n. （pl. geniuses） 天才；天资；天赋"
+ },
+ {
+  "word": "gentle",
+  "ipa": "dentl",
+  "cn": "温柔的；文静的",
+  "propn": false,
+  "raw": "gentle /dentl/ adj. 温柔的；文静的"
+ },
+ {
+  "word": "gradually",
+  "ipa": "rduli",
+  "cn": "逐渐地；逐步地",
+  "propn": false,
+  "raw": "gradually /rduli/ adv. 逐渐地；逐步地"
+ },
+ {
+  "word": "infer",
+  "ipa": "nf(r)",
+  "cn": "推断；推定",
+  "propn": false,
+  "raw": "infer /nf(r)/ vt. 推断；推定"
+ },
+ {
+  "word": "insist",
+  "ipa": "nsst",
+  "cn": "坚持；坚决要求",
+  "propn": false,
+  "raw": "insist /nsst/ vi. & vt. 坚持；坚决要求"
+ },
+ {
+  "word": "insist on",
+  "ipa": "",
+  "cn": "坚决要求",
+  "propn": false,
+  "raw": "insist on  坚决要求"
+ },
+ {
+  "word": "institute",
+  "ipa": "nsttjut",
+  "cn": "教育、专业等）机构； 机构建筑",
+  "propn": false,
+  "raw": "institute /nsttjut/ n. （教育、专业等）机构； 机构建筑"
+ },
+ {
+  "word": "institution",
+  "ipa": "nsttjun",
+  "cn": "社会公共机构； 制度；习俗",
+  "propn": false,
+  "raw": "institution /nsttjun/ n. 社会公共机构； 制度；习俗"
+ },
+ {
+  "word": "liquid",
+  "ipa": "lkwd",
+  "cn": "液体 adj. 液体的；液态的",
+  "propn": false,
+  "raw": "liquid /lkwd/  n. 液体 adj. 液体的；液态的"
+ },
+ {
+  "word": "malaria",
+  "ipa": "mleri",
+  "cn": "疟疾",
+  "propn": false,
+  "raw": "malaria /mleri/ n. 疟疾"
+ },
+ {
+  "word": "mostly",
+  "ipa": "mstli",
+  "cn": "主要地；一般地",
+  "propn": false,
+  "raw": "mostly /mstli/ adv. 主要地；一般地"
+ },
+ {
+  "word": "mourn",
+  "ipa": "mn",
+  "cn": "哀悼；忧伤",
+  "propn": false,
+  "raw": "mourn /mn/ vt. &. vi. 哀悼；忧伤"
+ },
+ {
+  "word": "moustache",
+  "ipa": "mst; NAmE mst",
+  "cn": "上唇的胡子；髭",
+  "propn": false,
+  "raw": "moustache (especially US mustache) /mst; NAmE mst/ n. 上唇的胡子；髭"
+ },
+ {
+  "word": "novel",
+  "ipa": "nvl",
+  "cn": "长篇）小说",
+  "propn": false,
+  "raw": "novel /nvl/ n. （长篇）小说"
+ },
+ {
+  "word": "novelist",
+  "ipa": "nvlst",
+  "cn": "小说家",
+  "propn": false,
+  "raw": "novelist /nvlst/ n.  小说家"
+ },
+ {
+  "word": "numerous",
+  "ipa": "njumrs",
+  "cn": "众多的；许多的",
+  "propn": false,
+  "raw": "numerous /njumrs/ adj. 众多的；许多的"
+ },
+ {
+  "word": "objective",
+  "ipa": "bdektv",
+  "cn": "目标；目的 adj.  客观的",
+  "propn": false,
+  "raw": "objective /bdektv/ n.  目标；目的 adj.  客观的"
+ },
+ {
+  "word": "obtain",
+  "ipa": "bten",
+  "cn": "尤指经努力）获得；赢得 vi. （规章、习俗等）存在；流行",
+  "propn": false,
+  "raw": "obtain /bten/ vt. （尤指经努力）获得；赢得 vi. （规章、习俗等）存在；流行"
+ },
+ {
+  "word": "passion",
+  "ipa": "pn",
+  "cn": "酷爱；激情",
+  "propn": false,
+  "raw": "passion /pn/ n. 酷爱；激情"
+ },
+ {
+  "word": "patent",
+  "ipa": "petnt; ptnt",
+  "cn": "专利；专利证书；获得专利 adj. 有专利的；受专利保护的",
+  "propn": false,
+  "raw": "patent /petnt; ptnt/ n. 专利；专利证书；获得专利 adj. 有专利的；受专利保护的"
+ },
+ {
+  "word": "peculiarity",
+  "ipa": "pkjulirti",
+  "cn": "个性；特点； 怪异的性质",
+  "propn": false,
+  "raw": "peculiarity /pkjulirti/ n. 个性；特点； 怪异的性质"
+ },
+ {
+  "word": "penicillin",
+  "ipa": "pensln",
+  "cn": "青霉素；盘尼西林",
+  "propn": false,
+  "raw": "penicillin /pensln/ n. 青霉素；盘尼西林"
+ },
+ {
+  "word": "photoelectric",
+  "ipa": "ftlektrk",
+  "cn": "光电的",
+  "propn": false,
+  "raw": "photoelectric /ftlektrk/ adj.  光电的"
+ },
+ {
+  "word": "physiology",
+  "ipa": "fzildi",
+  "cn": "生理学；生理机能",
+  "propn": false,
+  "raw": "physiology /fzildi/ n. 生理学；生理机能"
+ },
+ {
+  "word": "politician",
+  "ipa": "pltn",
+  "cn": "从政者；政治家；政客",
+  "propn": false,
+  "raw": "politician /pltn/ n. 从政者；政治家；政客"
+ },
+ {
+  "word": "professor",
+  "ipa": "prfes(r)",
+  "cn": "教授",
+  "propn": false,
+  "raw": "professor /prfes(r)/ n. 教授"
+ },
+ {
+  "word": "property",
+  "ipa": "prpti",
+  "cn": "性质；特征；财产",
+  "propn": false,
+  "raw": "property /prpti/ n. 性质；特征；财产"
+ },
+ {
+  "word": "relativity",
+  "ipa": "reltvti",
+  "cn": "相对论；相对性",
+  "propn": false,
+  "raw": "relativity /reltvti/ n. 相对论；相对性"
+ },
+ {
+  "word": "remarkable",
+  "ipa": "rmkbl",
+  "cn": "非凡的；显著的",
+  "propn": false,
+  "raw": "remarkable /rmkbl/ adj. 非凡的；显著的"
+ },
+ {
+  "word": "scientific",
+  "ipa": "santfk",
+  "cn": "科学（上）的；关于科学的",
+  "propn": false,
+  "raw": "scientific /santfk/ adj. 科学（上）的；关于科学的"
+ },
+ {
+  "word": "substance",
+  "ipa": "sbstns",
+  "cn": "物质；物品；事实根据",
+  "propn": false,
+  "raw": "substance /sbstns/ n. 物质；物品；事实根据"
+ },
+ {
+  "word": "sum",
+  "ipa": "sm",
+  "cn": "总结；概括 n. 金额；款项；总数；总和",
+  "propn": false,
+  "raw": "sum /sm/ vi. 总结；概括 n. 金额；款项；总数；总和"
+ },
+ {
+  "word": "sum up",
+  "ipa": "",
+  "cn": "总结；概括",
+  "propn": false,
+  "raw": "sum up 总结；概括"
+ },
+ {
+  "word": "take up a position",
+  "ipa": "",
+  "cn": "担任；任职",
+  "propn": false,
+  "raw": "take up a position 担任；任职"
+ },
+ {
+  "word": "theory",
+  "ipa": "ri",
+  "cn": "理论；学说",
+  "propn": false,
+  "raw": "theory /ri/ n. 理论；学说"
+ },
+ {
+  "word": "vital",
+  "ipa": "vatl",
+  "cn": "必不可少的；极其重要的；充满生机的",
+  "propn": false,
+  "raw": "vital /vatl/ adj. 必不可少的；极其重要的；充满生机的"
+ },
+ {
+  "word": "wear and tear",
+  "ipa": "",
+  "cn": "正常使用造成的）磨损；损耗",
+  "propn": false,
+  "raw": "wear and tear （正常使用造成的）磨损；损耗"
+ },
+ {
+  "word": "wormwood",
+  "ipa": "wmwd",
+  "cn": "蒿；洋艾",
+  "propn": false,
+  "raw": "wormwood /wmwd/ n. 蒿；洋艾"
+ }
+]

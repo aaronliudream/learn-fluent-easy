@@ -1,0 +1,338 @@
+{
+  "volume": "elective1",
+  "unit": "U1",
+  "topic": "People of Achievement",
+  "source": "人教版2019选择性必修一 Unit 1 同主题阅读(屠呦呦/青蒿素发现/爱因斯坦/南丁格尔/钟南山/什么是伟大)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Tu Youyou and the Nobel Prize",
+      "topic_cn": "新闻·屠呦呦获诺奖",
+      "body": "In October 2015, the Nobel Prize for Physiology or Medicine was awarded to Tu Youyou, whose research led to the discovery of artemisinin. Artemisinin is a crucial new treatment for malaria, a disease that gives over two hundred million people a fever every year and kills hundreds of thousands of them. The medicine has saved many lives and is thought to save about a hundred thousand people in Africa alone each year. Tu Youyou was a committed and patient scientist who never gave up. When she heard the news of the prize, she did not take all the honour for herself. Instead, she said that the success belonged to her whole team and to the people of her country. She added that the discovery proved the great value of traditional Chinese medicine, and that it was an honour for China's scientific research to be known around the world.",
+      "vocab_notes": [
+        {
+          "word": "artemisinin",
+          "cn": "青蒿素"
+        },
+        {
+          "word": "malaria",
+          "cn": "疟疾"
+        },
+        {
+          "word": "committed",
+          "cn": "尽心尽力的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Tu Youyou's research lead to?",
+          "options": [
+            "A new medicine that treats malaria.",
+            "A new way to grow plants.",
+            "A new kind of fever.",
+            "A new prize for science."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'whose research led to the discovery of artemisinin… a crucial new treatment for malaria' 的转述。"
+        },
+        {
+          "stem": "How did Tu Youyou react when she won the prize?",
+          "options": [
+            "She kept all the honour for herself.",
+            "She gave the credit to her team and country.",
+            "She refused to accept the prize.",
+            "She said it was just luck."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the success belonged to her whole team and to the people of her country' 的转述。"
+        },
+        {
+          "stem": "What did the discovery prove, according to Tu Youyou?",
+          "options": [
+            "That traditional Chinese medicine has great value.",
+            "That foreign medicine is useless.",
+            "That she worked alone.",
+            "That malaria can never be cured."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'proved the great value of traditional Chinese medicine' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Long Road to Artemisinin",
+      "topic_cn": "记叙·青蒿素发现历程",
+      "body": "Finding artemisinin was not easy. In 1969 Tu Youyou became the head of a project and decided to look for answers in ancient Chinese medical books. Her team read more than two thousand old texts and tested hundreds of plants for their medical value. One old text suggested using sweet wormwood to treat a fever, so they boiled the leaves and used the liquid on patients. To their disappointment, it did not work. Tu Youyou would not accept defeat. She studied the texts again, and by chance found a sentence that suggested a different way to treat the plant. She realised that boiling the wormwood at a high temperature had destroyed its useful properties. So she drew out the extract at a lower temperature, and at last found a substance that worked. After failing more than a hundred and ninety times, the team finally succeeded in 1971. They even tested the new medicine on themselves to make sure it was safe.",
+      "vocab_notes": [
+        {
+          "word": "wormwood",
+          "cn": "青蒿;艾草"
+        },
+        {
+          "word": "extract",
+          "cn": "提取物"
+        },
+        {
+          "word": "substance",
+          "cn": "物质"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the team's first attempt with wormwood fail?",
+          "options": [
+            "They used the wrong plant.",
+            "High heat had ruined the plant's useful qualities.",
+            "They forgot to test it.",
+            "The patients refused the medicine."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'boiling the wormwood at a high temperature had destroyed its useful properties' 的转述。"
+        },
+        {
+          "stem": "What change finally made the medicine work?",
+          "options": [
+            "Boiling it for much longer.",
+            "Using a completely different plant.",
+            "Taking out the extract with less heat.",
+            "Adding more leaves."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'drew out the extract at a lower temperature, and at last found a substance that worked' 的转述。"
+        },
+        {
+          "stem": "What does the passage tell us about Tu Youyou's character?",
+          "options": [
+            "She gave up after the first failure.",
+            "She cared only about fame.",
+            "She worked without any team.",
+            "She refused to give up and kept trying."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'would not accept defeat… failing more than a hundred and ninety times' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Einstein, the Gentle Genius",
+      "topic_cn": "人物·爱因斯坦",
+      "body": "Albert Einstein is often called one of the smartest people who ever lived. He gave the world the general theory of relativity and the famous formula E=mc2. Yet he was not only a genius; he was also a kind and gentle man loved by many. Born in Germany in 1879, he failed part of a university entrance exam as a teenager, even though his scores in maths and physics were excellent. After more study, he passed and later earned a doctorate in physics. In 1905 he published four amazing papers, and the world soon saw him as a new Isaac Newton. To ordinary people, he looked a little odd, with thick hair that often stood on end. He sometimes forgot small things, such as his friends' birthdays. He once helped a little girl with her homework when she knocked on his door. Despite his strange habits, he was warmly loved by his friends and neighbours.",
+      "vocab_notes": [
+        {
+          "word": "relativity",
+          "cn": "相对论"
+        },
+        {
+          "word": "genius",
+          "cn": "天才"
+        },
+        {
+          "word": "doctorate",
+          "cn": "博士学位"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is Einstein best known for in science?",
+          "options": [
+            "His theory of relativity and famous formula.",
+            "His work as a teacher of maths.",
+            "His paintings and music.",
+            "His skill at sports."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the general theory of relativity and the famous formula E=mc2' 的转述。"
+        },
+        {
+          "stem": "What happened when Einstein first took the university exam?",
+          "options": [
+            "He passed it easily.",
+            "He failed part of it despite strong science scores.",
+            "He refused to take it.",
+            "He came first in every subject."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'failed part of a university entrance exam… even though his scores in maths and physics were excellent' 的转述。"
+        },
+        {
+          "stem": "How did people who knew Einstein feel about him?",
+          "options": [
+            "They were afraid of him.",
+            "They thought he was unfriendly.",
+            "They loved him despite his odd habits.",
+            "They never spoke to him."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'Despite his strange habits, he was warmly loved by his friends and neighbours' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Florence Nightingale, the Lady with the Lamp",
+      "topic_cn": "人物·南丁格尔",
+      "body": "Florence Nightingale is remembered as the woman who founded modern nursing. She was born into a rich family, and at that time most people thought nursing was not a proper job for a lady. But Florence felt a strong wish to help the sick, and she decided to train as a nurse against her family's wishes. During a war, she went to care for wounded soldiers in dirty and crowded hospitals. She cleaned the wards, brought in fresh air, and made sure the men had good food and warm beds. Far fewer soldiers died once she had improved these conditions. At night she walked among the beds with a small lamp in her hand, checking on the men, so the soldiers began to call her 'the Lady with the Lamp'. After the war, she opened a school to train nurses, and her ideas changed the way hospitals were run all over the world.",
+      "vocab_notes": [
+        {
+          "word": "found",
+          "cn": "创立"
+        },
+        {
+          "word": "nursing",
+          "cn": "护理"
+        },
+        {
+          "word": "ward",
+          "cn": "病房"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was Florence Nightingale's choice unusual for her time?",
+          "options": [
+            "She was too poor to study.",
+            "Women were not allowed to read.",
+            "There were no hospitals at all.",
+            "Nursing was not seen as a suitable job for a lady."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'most people thought nursing was not a proper job for a lady' 的转述。"
+        },
+        {
+          "stem": "What was the result of the changes she made in the hospitals?",
+          "options": [
+            "Many fewer soldiers lost their lives.",
+            "More soldiers became ill.",
+            "The hospitals were closed.",
+            "The soldiers were sent home."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Far fewer soldiers died once she had improved these conditions' 的转述。"
+        },
+        {
+          "stem": "What did Florence do after the war?",
+          "options": [
+            "She stopped working in medicine.",
+            "She set up a place where young nurses could be trained.",
+            "She joined the army.",
+            "She moved to another country to rest."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'she opened a school to train nurses' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Zhong Nanshan and the Fight Against Disease",
+      "topic_cn": "人物·钟南山",
+      "body": "Zhong Nanshan is a doctor whom many Chinese people deeply respect. He became famous during the SARS outbreak, when a strange and dangerous illness was spreading fast. While many people were frightened, Zhong Nanshan stayed calm and told the public the truth about the disease. He insisted that doctors should treat the most serious patients in his own hospital, even though this put him in danger. His honesty and courage helped the country get the outbreak under control. Years later, when another illness appeared, the same trusted doctor stepped forward again, although he was already in his eighties. He travelled to where the disease was worst and gave clear advice that helped to keep people safe. To many, he is a model of what a great person should be: brave in the face of danger, honest with the public, and always ready to put others before himself.",
+      "vocab_notes": [
+        {
+          "word": "outbreak",
+          "cn": "(疾病)爆发"
+        },
+        {
+          "word": "insist",
+          "cn": "坚持"
+        },
+        {
+          "word": "courage",
+          "cn": "勇气"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Zhong Nanshan behave during the SARS outbreak?",
+          "options": [
+            "He hid from the public.",
+            "He left the country.",
+            "He stayed calm and told people the truth.",
+            "He refused to treat any patients."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'stayed calm and told the public the truth about the disease' 的转述。"
+        },
+        {
+          "stem": "What did he do when another illness appeared years later?",
+          "options": [
+            "He decided he was too old to help.",
+            "He told others to handle it alone.",
+            "He stopped being a doctor.",
+            "He stepped forward again despite his age."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the same trusted doctor stepped forward again, although he was already in his eighties' 的转述。"
+        },
+        {
+          "stem": "Why do many people see him as a great person?",
+          "options": [
+            "Because he is brave, honest and puts others first.",
+            "Because he became very rich.",
+            "Because he avoided all danger.",
+            "Because he never worked hard."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'brave in the face of danger, honest with the public, and always ready to put others before himself' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "What Does Greatness Really Mean?",
+      "topic_cn": "议论·伟大的意义",
+      "body": "When we hear the word 'great', we often think of famous scientists, writers or leaders. But what does greatness really mean? Some people believe that being great is about winning prizes or becoming rich and well known. Others say that true greatness has little to do with fame. Einstein once said that we should try to become not a person of success, but rather a person of value. In other words, what matters most is not how much you gain for yourself, but how much good you do for others. A great person does not need to change the whole world. A teacher who gives up free time to help a struggling student, a doctor who stays calm in danger, or a parent who works hard for a family can all be great in their own quiet way. Greatness, then, is less about being noticed and more about caring, courage and never giving up.",
+      "vocab_notes": [
+        {
+          "word": "greatness",
+          "cn": "伟大"
+        },
+        {
+          "word": "value",
+          "cn": "价值"
+        },
+        {
+          "word": "struggle",
+          "cn": "挣扎;艰难地做"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do some people wrongly think greatness means, according to the text?",
+          "options": [
+            "Helping others quietly.",
+            "Winning prizes and becoming rich and famous.",
+            "Working hard for a family.",
+            "Showing courage in danger."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'being great is about winning prizes or becoming rich and well known' 的转述(作者否定的观点)。"
+        },
+        {
+          "stem": "What did Einstein advise people to become?",
+          "options": [
+            "The richest person in the world.",
+            "A person who avoids all hard work.",
+            "A person of value rather than just success.",
+            "Someone who is always noticed."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'become not a person of success, but rather a person of value' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main point about greatness?",
+          "options": [
+            "Only famous people can be great.",
+            "Greatness always means changing the world.",
+            "Greatness depends only on money.",
+            "Greatness is about caring, courage and not giving up."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'less about being noticed and more about caring, courage and never giving up' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "volume": "elective1",
+  "unit": "U5",
+  "topic": "Working the Land",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修一 Unit 5 同主题听力(选学农业/世界饥饿问题FAO/有机还是化学农业/袁隆平的故事/帮爷爷农活/世界粮食日)。用词限 U5/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U5 听力·对话 Choosing to Study Agriculture",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "What do you want to study at university, Tom?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "I've decided to study agriculture."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Agriculture? That's not a common choice. Why?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "My grandparents are farmers, and I grew up in the fields."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "So you really love working the land."
+        },
+        {
+          "speaker": "Tom",
+          "text": "I do. And I want to help farmers grow more food."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Like Yuan Longping, the father of hybrid rice?"
+        },
+        {
+          "speaker": "Tom",
+          "text": "Exactly. He is the reason I want to do this."
+        }
+      ],
+      "translation_cn": "Lucy 问 Tom 想上大学读什么;Tom 决定学农业;因为祖父母是农民,他在田里长大,真心热爱耕作;他想帮农民种出更多粮食;像杂交水稻之父袁隆平那样,袁隆平正是他立志学农的原因。",
+      "questions": [
+        {
+          "stem": "What does Tom want to study?",
+          "options": [
+            "Agriculture.",
+            "Medicine.",
+            "Music.",
+            "History."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Tom interested in this subject?",
+          "options": [
+            "His friends told him to.",
+            "He grew up in the fields with farming grandparents.",
+            "He wants to leave the countryside.",
+            "He thinks it is the easiest subject."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Tom hope to do in the future?",
+          "options": [
+            "Help farmers grow more food.",
+            "Stop all farming.",
+            "Sell his family's land.",
+            "Move far away from farms."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who does Tom mention as his model?",
+          "options": [
+            "A famous singer.",
+            "Yuan Longping.",
+            "A football player.",
+            "His school teacher."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does Lucy feel about Tom's choice at first?",
+          "options": [
+            "She thinks it is boring.",
+            "She thinks it is wrong.",
+            "She thinks it is an unusual choice.",
+            "She is angry about it."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U5 听力·短文 The Problem of World Hunger",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "World hunger is still a serious problem today.",
+        "About one in ten people on the planet does not get enough food.",
+        "Wars can heavily affect how food is grown and moved.",
+        "Many poor families simply cannot afford to eat well.",
+        "Helping farmers grow more food is one important way to fight hunger."
+      ],
+      "translation_cn": "如今世界饥饿仍是严重问题;地球上约十分之一的人吃不饱;战争会严重影响粮食的种植和运输;许多贫困家庭根本吃不起好的食物;帮助农民种出更多粮食是抗击饥饿的重要途径之一。",
+      "questions": [
+        {
+          "stem": "What does the speaker say about world hunger?",
+          "options": [
+            "It has completely ended.",
+            "It only happens in cities.",
+            "It is no longer studied.",
+            "It is still a serious problem today."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "About how many people do not get enough food?",
+          "options": [
+            "About one in ten people.",
+            "None at all.",
+            "Everyone on the planet.",
+            "Only farmers."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How can wars affect food, according to the passage?",
+          "options": [
+            "They make food cheaper.",
+            "They affect how food is grown and moved.",
+            "They have no effect on food.",
+            "They only help farmers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why can't many poor families eat well?",
+          "options": [
+            "They dislike all food.",
+            "They grow too much food.",
+            "They cannot afford good food.",
+            "They live far from cities."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one important way to fight hunger?",
+          "options": [
+            "Stop all farming.",
+            "Close all the markets.",
+            "Move everyone to the city.",
+            "Help farmers grow more food."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U5 听力·对话 Organic or Chemical?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Anna",
+          "text": "These apples are cheaper, but I'm buying the organic ones."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Why? The cheaper ones look just as good."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Organic food is grown without chemical pesticides."
+        },
+        {
+          "speaker": "Ben",
+          "text": "Does that really make a difference?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yes. Chemicals can stay in the soil and even in the food."
+        },
+        {
+          "speaker": "Ben",
+          "text": "I see. So organic food may be safer for us."
+        },
+        {
+          "speaker": "Anna",
+          "text": "That's right. It often has more flavour too."
+        },
+        {
+          "speaker": "Ben",
+          "text": "All right, I'll try the organic ones this time."
+        }
+      ],
+      "translation_cn": "Anna 宁愿买稍贵的有机苹果;Ben 不解,觉得便宜的看着一样好;Anna 解释有机食品不用化学杀虫剂;化学品会残留在土壤甚至食物中;有机食品对人更安全,味道往往也更好;Ben 决定这次也试试有机的。",
+      "questions": [
+        {
+          "stem": "Which apples does Anna decide to buy?",
+          "options": [
+            "The organic ones.",
+            "The cheapest ones.",
+            "No apples at all.",
+            "The biggest ones."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is organic food grown?",
+          "options": [
+            "With many chemicals.",
+            "Without chemical pesticides.",
+            "Only in salty land.",
+            "Without any soil."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Anna think chemicals are a problem?",
+          "options": [
+            "They make food cheaper.",
+            "They help every insect.",
+            "They can stay in the soil and food.",
+            "They have no effect at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Anna say about the flavour of organic food?",
+          "options": [
+            "It tastes worse.",
+            "It has no taste.",
+            "It tastes the same.",
+            "It often has more flavour."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Ben decide at the end?",
+          "options": [
+            "To try the organic apples this time.",
+            "To buy no fruit.",
+            "To grow his own apples.",
+            "To buy the cheapest ones."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U5 听力·短文 A Man of the Soil",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Yuan Longping spent his whole life working the land.",
+        "He developed the first hybrid rice that farmers could really use.",
+        "His new rice gave a much higher yield than older crops.",
+        "Even after he grew rich, he still lived like a simple farmer.",
+        "His dream was to keep all people away from hunger."
+      ],
+      "translation_cn": "袁隆平一生都在耕耘土地;他培育出第一种农民真正能用的杂交水稻;新稻的产量远高于旧作物;即使富有了,他仍像普通农民一样生活;他的梦想是让所有人远离饥饿。",
+      "questions": [
+        {
+          "stem": "What did Yuan Longping spend his whole life doing?",
+          "options": [
+            "Travelling the world.",
+            "Working the land.",
+            "Selling chemicals.",
+            "Teaching music."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did Yuan develop?",
+          "options": [
+            "A new kind of car.",
+            "A chemical pesticide.",
+            "The first usable hybrid rice.",
+            "A city farm."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did his new rice compare with older crops?",
+          "options": [
+            "It gave less food.",
+            "It was exactly the same.",
+            "It could not be eaten.",
+            "It gave a much higher yield."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How did Yuan live after he grew rich?",
+          "options": [
+            "He still lived like a simple farmer.",
+            "He moved to another country.",
+            "He stopped all his work.",
+            "He became very lazy."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What was Yuan's dream?",
+          "options": [
+            "To become the richest man.",
+            "To keep all people away from hunger.",
+            "To stop growing rice.",
+            "To leave the countryside."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U5 听力·对话 Helping on the Farm",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Grandpa",
+          "text": "Could you help me in the fields this weekend, Kate?"
+        },
+        {
+          "speaker": "Kate",
+          "text": "Of course, Grandpa. What do you need me to do?"
+        },
+        {
+          "speaker": "Grandpa",
+          "text": "We need to change the crop in the east field."
+        },
+        {
+          "speaker": "Kate",
+          "text": "Why do we change it every year?"
+        },
+        {
+          "speaker": "Grandpa",
+          "text": "Different crops put different minerals back into the soil."
+        },
+        {
+          "speaker": "Kate",
+          "text": "So that keeps the land rich and healthy."
+        },
+        {
+          "speaker": "Grandpa",
+          "text": "Exactly. Last year we grew wheat, so this year we'll grow beans."
+        },
+        {
+          "speaker": "Kate",
+          "text": "I understand now. Farming takes real care."
+        }
+      ],
+      "translation_cn": "爷爷请 Kate 周末到田里帮忙;Kate 答应,问要做什么;爷爷说要给东边那块地换种作物;Kate 问为什么每年都换;因为不同作物把不同矿物质还回土壤,使土地保持肥沃健康;去年种小麦,今年种豆子;Kate 明白了:务农需要真正的用心。",
+      "questions": [
+        {
+          "stem": "What does Grandpa ask Kate to do?",
+          "options": [
+            "Cook dinner for him.",
+            "Clean the house.",
+            "Help him in the fields.",
+            "Sell the farm."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What job needs doing in the east field?",
+          "options": [
+            "Building a new house.",
+            "Cutting down trees.",
+            "Selling the soil.",
+            "Changing the crop."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why does Grandpa change the crop every year?",
+          "options": [
+            "Because different crops return different minerals to the soil.",
+            "Because he is bored.",
+            "Because the field is too small.",
+            "Because beans are cheap."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did they grow last year, and what now?",
+          "options": [
+            "Rice last year, corn now.",
+            "Wheat last year, beans now.",
+            "Beans last year, wheat now.",
+            "Corn last year, rice now."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Kate learn from the talk?",
+          "options": [
+            "Farming is very easy.",
+            "Farming needs many chemicals.",
+            "Farming takes real care.",
+            "Farming is a waste of time."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U5 听力·短文 World Food Day",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "World Food Day is held every year in October.",
+        "It is celebrated in more than one hundred and fifty countries.",
+        "The day reminds people of the problems of hunger and poverty.",
+        "Schools often hold activities to teach students about food.",
+        "Its message is simple: no one in the world should go hungry."
+      ],
+      "translation_cn": "世界粮食日每年十月举行;在一百五十多个国家庆祝;这一天提醒人们关注饥饿与贫困问题;学校常举办活动让学生了解粮食;它的信息很简单:世界上不该有人挨饿。",
+      "questions": [
+        {
+          "stem": "When is World Food Day held?",
+          "options": [
+            "Every week.",
+            "Only once in history.",
+            "Every day.",
+            "Every year in October."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "In how many countries is it celebrated?",
+          "options": [
+            "In more than one hundred and fifty countries.",
+            "In just one country.",
+            "In no countries.",
+            "Only in schools."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the day remind people of?",
+          "options": [
+            "The price of cars.",
+            "The problems of hunger and poverty.",
+            "The latest films.",
+            "The weather in summer."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do schools often do on this day?",
+          "options": [
+            "Close for a holiday.",
+            "Sell food to visitors.",
+            "Hold activities to teach students about food.",
+            "Forget about the day."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the message of World Food Day?",
+          "options": [
+            "Food should be very expensive.",
+            "Only farmers matter.",
+            "Hunger cannot be solved.",
+            "No one should go hungry."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

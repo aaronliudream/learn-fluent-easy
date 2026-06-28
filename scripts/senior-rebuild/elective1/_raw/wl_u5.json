@@ -1,0 +1,415 @@
+[
+ {
+  "word": "bomb",
+  "ipa": "bm",
+  "cn": "炸弹 vt. 轰炸；对……投炸弹",
+  "propn": false,
+  "raw": "bomb /bm/ n. 炸弹 vt. 轰炸；对……投炸弹"
+ },
+ {
+  "word": "boost",
+  "ipa": "bust",
+  "cn": "使增长；使兴旺 n. 增长；提高；激励",
+  "propn": false,
+  "raw": "boost /bust/ vt. 使增长；使兴旺 n. 增长；提高；激励"
+ },
+ {
+  "word": "broom",
+  "ipa": "brum",
+  "cn": "扫把；扫帚；金雀花",
+  "propn": false,
+  "raw": "broom /brum/ n. 扫把；扫帚；金雀花"
+ },
+ {
+  "word": "celebrity",
+  "ipa": "slebrti",
+  "cn": "名望；名誉；名人；名流",
+  "propn": false,
+  "raw": "celebrity /slebrti/ n. 名望；名誉；名人；名流"
+ },
+ {
+  "word": "characteristic",
+  "ipa": "krktrstk",
+  "cn": "特征；特点；品质 adj. 典型的；独特的",
+  "propn": false,
+  "raw": "characteristic /krktrstk/ n. 特征；特点；品质 adj. 典型的；独特的"
+ },
+ {
+  "word": "chemical",
+  "ipa": "kemkl",
+  "cn": "与化学有关的；化学的 n. 化学制品；化学品",
+  "propn": false,
+  "raw": "chemical /kemkl/ adj. 与化学有关的；化学的 n. 化学制品；化学品"
+ },
+ {
+  "word": "comprise",
+  "ipa": "kmpraz",
+  "cn": "包括；包含；由……组成",
+  "propn": false,
+  "raw": "comprise /kmpraz/ vt. 包括；包含；由……组成"
+ },
+ {
+  "word": "be comprised of",
+  "ipa": "",
+  "cn": "包括；包含； 由……组成（或构成）",
+  "propn": false,
+  "raw": "be comprised of 包括；包含； 由……组成（或构成）"
+ },
+ {
+  "word": "consumption",
+  "ipa": "knsmpn",
+  "cn": "消耗；消耗量；消费",
+  "propn": false,
+  "raw": "consumption /knsmpn/ n. 消耗；消耗量；消费"
+ },
+ {
+  "word": "conventional",
+  "ipa": "knvennl",
+  "cn": "传统的；习惯的",
+  "propn": false,
+  "raw": "conventional /knvennl/ adj. 传统的；习惯的"
+ },
+ {
+  "word": "convince",
+  "ipa": "knvns",
+  "cn": "使相信；使确信；说服",
+  "propn": false,
+  "raw": "convince /knvns/ vt. 使相信；使确信；说服"
+ },
+ {
+  "word": "crisis",
+  "ipa": "krass",
+  "cn": "危机；危急关头",
+  "propn": false,
+  "raw": "crisis /krass/ n. （pl. crises /-siz/）危机；危急关头"
+ },
+ {
+  "word": "deep down",
+  "ipa": "",
+  "cn": "在内心深处；本质上；实际上",
+  "propn": false,
+  "raw": "deep down 在内心深处；本质上；实际上"
+ },
+ {
+  "word": "depth",
+  "ipa": "dep",
+  "cn": "向下（或向里）的距离；深（度）",
+  "propn": false,
+  "raw": "depth /dep/ n. 向下（或向里）的距离；深（度）"
+ },
+ {
+  "word": "devote",
+  "ipa": "dvt",
+  "cn": "把……献（给）；把……专用于；专心于",
+  "propn": false,
+  "raw": "devote /dvt/ vt. 把……献（给）；把……专用于；专心于"
+ },
+ {
+  "word": "devote ... to",
+  "ipa": "",
+  "cn": "把……用于；献身；致力；专心",
+  "propn": false,
+  "raw": "devote ... to 把……用于；献身；致力；专心"
+ },
+ {
+  "word": "digest",
+  "ipa": "dadest",
+  "cn": "消化 vt. 领会；领悟 /dadest/ n. 摘要；文摘",
+  "propn": false,
+  "raw": "digest /dadest/ vt. & vi. 消化 vt. 领会；领悟 /dadest/ n. 摘要；文摘"
+ },
+ {
+  "word": "domestic",
+  "ipa": "dmestk",
+  "cn": "本国的；国内的；家用的；家庭的",
+  "propn": false,
+  "raw": "domestic /dmestk/ adj. 本国的；国内的；家用的；家庭的"
+ },
+ {
+  "word": "entirely",
+  "ipa": "ntali",
+  "cn": "全部地；完整地；完全地",
+  "propn": false,
+  "raw": "entirely /ntali/ adv. 全部地；完整地；完全地"
+ },
+ {
+  "word": "envision",
+  "ipa": "nvn",
+  "cn": "展望；想象",
+  "propn": false,
+  "raw": "envision /nvn/ vt. 展望；想象"
+ },
+ {
+  "word": "essential",
+  "ipa": "senl",
+  "cn": "完全必要的；极其重要的",
+  "propn": false,
+  "raw": "essential /senl/ adj. 完全必要的；极其重要的"
+ },
+ {
+  "word": "estimate",
+  "ipa": "estmt",
+  "cn": "估计；估价； 估算 n.  估计；估算",
+  "propn": false,
+  "raw": "estimate /estmt/ vt. 估计；估价； 估算 n.  估计；估算"
+ },
+ {
+  "word": "expand",
+  "ipa": "kspnd",
+  "cn": "扩大；增加 vt. 扩展；发展（业务）",
+  "propn": false,
+  "raw": "expand /kspnd/ vt. & vi. 扩大；增加 vt. 扩展；发展（业务）"
+ },
+ {
+  "word": "extension",
+  "ipa": "kstenn",
+  "cn": "扩建部分；扩大；电话分机",
+  "propn": false,
+  "raw": "extension /kstenn/ n. 扩建部分；扩大；电话分机"
+ },
+ {
+  "word": "fertiliser（NAmE -izer）",
+  "ipa": "ftlaz(r)",
+  "cn": "肥料",
+  "propn": false,
+  "raw": "fertiliser（NAmE -izer） /ftlaz(r)/ n. 肥料"
+ },
+ {
+  "word": "flavour（NAmE -vor）",
+  "ipa": "flev",
+  "cn": "味道； 特点；特色",
+  "propn": false,
+  "raw": "flavour（NAmE -vor） /flev/ n. 味道； 特点；特色"
+ },
+ {
+  "word": "generate",
+  "ipa": "denret",
+  "cn": "产生；引起",
+  "propn": false,
+  "raw": "generate /denret/ vt. 产生；引起"
+ },
+ {
+  "word": "grain",
+  "ipa": "ren",
+  "cn": "谷物；谷粒；颗粒",
+  "propn": false,
+  "raw": "grain /ren/ n. 谷物；谷粒；颗粒"
+ },
+ {
+  "word": "grocery",
+  "ipa": "rsri",
+  "cn": "食品杂货店；[pl.] 食品杂货",
+  "propn": false,
+  "raw": "grocery /rsri/ n. 食品杂货店；[pl.] 食品杂货"
+ },
+ {
+  "word": "hybrid",
+  "ipa": "habrd",
+  "cn": "杂交植（动）物；合成物； 混合动力车",
+  "propn": false,
+  "raw": "hybrid /habrd/ n. 杂交植（动）物；合成物； 混合动力车"
+ },
+ {
+  "word": "in turn",
+  "ipa": "",
+  "cn": "相应地； 转而；依次；轮流",
+  "propn": false,
+  "raw": "in turn 相应地； 转而；依次；轮流"
+ },
+ {
+  "word": "instance",
+  "ipa": "nstns",
+  "cn": "例子；实例；事例",
+  "propn": false,
+  "raw": "instance /nstns/ n. 例子；实例；事例"
+ },
+ {
+  "word": "for instance",
+  "ipa": "",
+  "cn": "例如；比如",
+  "propn": false,
+  "raw": "for instance 例如；比如"
+ },
+ {
+  "word": "intense",
+  "ipa": "ntens",
+  "cn": "热切的；十分强烈的；激烈的",
+  "propn": false,
+  "raw": "intense /ntens/ adj. 热切的；十分强烈的；激烈的"
+ },
+ {
+  "word": "leisure",
+  "ipa": "le(r)",
+  "cn": "闲暇；休闲；空闲",
+  "propn": false,
+  "raw": "leisure /le(r)/ n. 闲暇；休闲；空闲"
+ },
+ {
+  "word": "mineral",
+  "ipa": "mnrl",
+  "cn": "矿物；矿物质",
+  "propn": false,
+  "raw": "mineral  /mnrl/ n. 矿物；矿物质"
+ },
+ {
+  "word": "nutrition",
+  "ipa": "njutrn",
+  "cn": "营养；滋养",
+  "propn": false,
+  "raw": "nutrition /njutrn/ n. 营养；滋养"
+ },
+ {
+  "word": "nutritional",
+  "ipa": "njutrnl",
+  "cn": "营养（物）的",
+  "propn": false,
+  "raw": "nutritional /njutrnl/ adj. 营养（物）的"
+ },
+ {
+  "word": "nutritious",
+  "ipa": "njutrs",
+  "cn": "有营养的；营养丰富的",
+  "propn": false,
+  "raw": "nutritious /njutrs/ adj. 有营养的；营养丰富的"
+ },
+ {
+  "word": "organic",
+  "ipa": "nk",
+  "cn": "有机的；不使用化肥的； 有机物的",
+  "propn": false,
+  "raw": "organic /nk/ adj. 有机的；不使用化肥的； 有机物的"
+ },
+ {
+  "word": "output",
+  "ipa": "atpt",
+  "cn": "产量；输出；输出量 vt. （output, output）输出",
+  "propn": false,
+  "raw": "output /atpt/ n. 产量；输出；输出量 vt. （output, output）输出"
+ },
+ {
+  "word": "overcome",
+  "ipa": "vkm",
+  "cn": "克服；解决；战胜",
+  "propn": false,
+  "raw": "overcome /vkm/ vt. （overcame, overcome） 克服；解决；战胜"
+ },
+ {
+  "word": "pesticide",
+  "ipa": "pestsad",
+  "cn": "杀虫剂；除害药物",
+  "propn": false,
+  "raw": "pesticide /pestsad/ n. 杀虫剂；除害药物"
+ },
+ {
+  "word": "pollinate",
+  "ipa": "plnet",
+  "cn": "授粉；传粉",
+  "propn": false,
+  "raw": "pollinate /plnet/ vt. 授粉；传粉"
+ },
+ {
+  "word": "poverty",
+  "ipa": "pvti",
+  "cn": "贫穷；贫困",
+  "propn": false,
+  "raw": "poverty /pvti/ n. 贫穷；贫困"
+ },
+ {
+  "word": "reality",
+  "ipa": "rilti",
+  "cn": "现实；实际情况；事实",
+  "propn": false,
+  "raw": "reality /rilti/ n. 现实；实际情况；事实"
+ },
+ {
+  "word": "root",
+  "ipa": "rut",
+  "cn": "根；根茎； 根部；根源",
+  "propn": false,
+  "raw": "root /rut/ n. 根；根茎； 根部；根源"
+ },
+ {
+  "word": "salty",
+  "ipa": "slti",
+  "cn": "含盐的；咸的",
+  "propn": false,
+  "raw": "salty /slti/ adj. 含盐的；咸的"
+ },
+ {
+  "word": "shortage",
+  "ipa": "td",
+  "cn": "不足；缺少；短缺",
+  "propn": false,
+  "raw": "shortage /td/ n. 不足；缺少；短缺"
+ },
+ {
+  "word": "soil",
+  "ipa": "sl",
+  "cn": "泥土；土壤；国土；领土",
+  "propn": false,
+  "raw": "soil /sl/ n. 泥土；土壤；国土；领土"
+ },
+ {
+  "word": "sorghum",
+  "ipa": "sm",
+  "cn": "高粱；高粱米",
+  "propn": false,
+  "raw": "sorghum /sm/ n. 高粱；高粱米"
+ },
+ {
+  "word": "strain",
+  "ipa": "stren",
+  "cn": "动、植物的）系；品种；拉伤；压力",
+  "propn": false,
+  "raw": "strain /stren/ n.  （动、植物的）系；品种；拉伤；压力"
+ },
+ {
+  "word": "tackle",
+  "ipa": "tkl",
+  "cn": "解决（难题）；应付（局面）； 处理",
+  "propn": false,
+  "raw": "tackle /tkl/ vt. 解决（难题）；应付（局面）； 处理"
+ },
+ {
+  "word": "tunnel",
+  "ipa": "tnl",
+  "cn": "地下通道；地道；隧道",
+  "propn": false,
+  "raw": "tunnel /tnl/ n. 地下通道；地道；隧道"
+ },
+ {
+  "word": "urban",
+  "ipa": "bn",
+  "cn": "城市的；都市的；城镇的",
+  "propn": false,
+  "raw": "urban /bn/ adj. 城市的；都市的；城镇的"
+ },
+ {
+  "word": "vision",
+  "ipa": "vn",
+  "cn": "想象； 视力；视野；影像",
+  "propn": false,
+  "raw": "vision /vn/ n. 想象； 视力；视野；影像"
+ },
+ {
+  "word": "wheat",
+  "ipa": "wit",
+  "cn": "小麦；小麦籽",
+  "propn": false,
+  "raw": "wheat /wit/ n. 小麦；小麦籽"
+ },
+ {
+  "word": "widespread",
+  "ipa": "wadspred",
+  "cn": "分布广的；普遍的；广泛的",
+  "propn": false,
+  "raw": "widespread /wadspred/ adj. 分布广的；普遍的；广泛的"
+ },
+ {
+  "word": "yield",
+  "ipa": "jild",
+  "cn": "产量；产出 vt. 出产（作物）；产生（收益、效益等） vi. 屈服；让步",
+  "propn": false,
+  "raw": "yield /jild/ n. 产量；产出 vt. 出产（作物）；产生（收益、效益等） vi. 屈服；让步"
+ }
+]

@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "In the future, we will be living in smart homes that lock the door for us.", "opts": ["未来我们将住在能替我们锁门的智能家居里。", "未来我们将自己动手修理房门。", "过去人们住在没有门锁的房子里。", "我们现在正在建造一座新房子。"], "answer": 0 },
+    { "audio": "This time tomorrow, the family will be having dinner cooked by a robot.", "opts": ["这家人昨天吃了一顿大餐。", "明天这个时候,这家人将吃着机器人做的晚饭。", "这家人正在学习如何做饭。", "机器人拒绝为这家人做饭。"], "answer": 1 },
+    { "audio": "Scientists predict that driverless cars will be common one day soon.", "opts": ["科学家说无人驾驶汽车永远不会出现。", "司机们都很喜欢开自己的车。", "科学家预测无人驾驶汽车不久将会很普遍。", "这些汽车今天就已遍布全城。"], "answer": 2 },
+    { "audio": "If a water pipe leaks, the smart home will detect it and warn you at once.", "opts": ["如果停电,房子会自己关灯。", "如果有人敲门,房子会自动开门。", "如果天气变冷,房子会升温。", "如果水管漏水,智能家居会立刻察觉并提醒你。"], "answer": 3 },
+    { "audio": "Tiny robots may one day help doctors by working inside the human body.", "opts": ["微型机器人也许有一天能在人体内协助医生。", "大型机器只能在工厂里使用。", "医生们决定不再使用任何机器。", "机器人正在医院外面排队。"], "answer": 0 },
+    { "audio": "I will always look on the positive side of change and accept it rather than resist it.", "opts": ["我总是害怕任何变化并加以拒绝。", "我会一直看变化积极的一面,选择接受而非抵制。", "我从不关心未来会发生什么。", "我打算停止使用一切新技术。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Smart homes use integrated ____ to tell when you leave home each morning.", "opts": ["sensors", "gardens", "tickets", "prices"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "If a water pipe starts to leak, the home will ____ the problem at once.", "opts": ["detect", "sell", "forget", "throw"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Some people ____ the idea of developing driverless cars, calling them dangerous.", "opts": ["oppose", "enjoy", "welcome", "trust"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Change can be scary; ____, I always look on the positive side.", "opts": ["nevertheless", "because", "although", "unless"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "This time tomorrow, I ____ on a plane to the technology fair.", "opts": ["will be flying", "will fly", "am flying", "have flown"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "At 8 pm tonight, the family ____ dinner cooked by their robot.", "opts": ["will be having", "will have", "is having", "has had"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ you ____ the computer tonight, or may I use it for my essay?", "opts": ["Will / be using", "Will / use", "Are / using", "Have / used"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "This time next week she ____ in Beijing; she is still in Melbourne now.", "opts": ["will be working", "will work", "is working", "has worked"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["未来我们将用先进技术自动控制家中几乎一切。", "我们昨天修好了所有的开关。", "这座房子从不需要任何电。", "我们正在花园里种花。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "In the future, we will be using advanced technology for automatic control of just about everything in our home." },
+    { "q": "听句子选中文:", "opts": ["机器人决定不再工作了。", "明年此时,更多人将乘坐无人驾驶汽车出行。", "汽车都被停在了车库里。", "人们更喜欢步行去上班。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "This time next year, more people will be travelling in driverless cars to work." }
+  ],
+  "reading": {
+    "passage": "In the not-too-distant future, your home will know your daily routine. The instant you walk in, the lights will come on, your favourite music will start, and dinner will be ready for you. Such a home keeps you secure and saves you energy at the same time.",
+    "passageCn": "在不太遥远的将来,你的家会了解你的日常作息。你一进门,灯就会亮起,你最喜欢的音乐会响起,晚饭也已为你准备好。这样的家同时保障你的安全并为你节省能源。",
+    "questions": [
+      { "q": "What happens the instant you walk into this future home?", "opts": ["The lights come on and music starts.", "All the doors lock you out.", "The home goes completely dark.", "You have to cook dinner yourself."], "answer": 0 },
+      { "q": "What two things does such a home do at the same time?", "opts": ["It wastes energy and makes noise.", "It keeps you secure and saves energy.", "It calls your friends and orders food.", "It cleans the streets and the garden."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short letter (about 60 words) to your future self, predicting how technology will change your daily life. Use 'will be doing' at least once.",
+    "promptCn": "给未来的自己写一封约60词的短信,预测科技将如何改变你的日常生活。至少用一次将来进行时(will be doing)。",
+    "sampleWords": ["predict", "future", "smart home", "driverless", "robot", "secure", "energy", "will be living", "welcome", "change"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About Smart Homes",
+      "lines": [
+        { "role": "A", "text": "My family just moved into a smart home.", "cn": "我家刚搬进一座智能家居。" },
+        { "role": "B", "text": "Really? What can it do that an ordinary house cannot?", "cn": "真的吗?它有什么普通房子做不到的?" },
+        { "role": "A", "text": "It locks the door for us when we forget, and saves energy too.", "cn": "我们忘锁门时它会替我们锁,还能省电。" },
+        { "role": "B", "text": "Amazing! This time next year, I will be living in one as well.", "cn": "太棒了!明年此时,我也要住进一座这样的房子。" }
+      ]
+    },
+    {
+      "title": "Predictions About the Future",
+      "lines": [
+        { "role": "A", "text": "What do you predict the world will be like in 2050?", "cn": "你预测2050年的世界会是什么样?" },
+        { "role": "B", "text": "I think driverless cars will be taking us everywhere.", "cn": "我想无人驾驶汽车会载我们去各处。" },
+        { "role": "A", "text": "One challenge will be deciding who is to blame in an accident.", "cn": "一个难题会是出事故时如何判定责任。" },
+        { "role": "B", "text": "True, but I'd rather welcome the change than resist it.", "cn": "没错,但我宁愿欢迎这种变化,而不是抵制它。" }
+      ]
+    }
+  ]
+}

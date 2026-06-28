@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Tu Youyou discovered a new medicine for malaria.", "opts": ["屠呦呦发现了一种治疗疟疾的新药。", "屠呦呦是一位老师。", "屠呦呦放弃了她的研究。", "屠呦呦写了一本小说。"], "answer": 0 },
+    { "audio": "Einstein was not only a genius but also a kind man.", "opts": ["爱因斯坦只是个普通人。", "爱因斯坦不仅是天才,也是个善良的人。", "爱因斯坦从不帮助别人。", "爱因斯坦是一名医生。"], "answer": 1 },
+    { "audio": "Florence Nightingale founded modern nursing.", "opts": ["南丁格尔是一名科学家。", "南丁格尔害怕生病的人。", "南丁格尔创立了现代护理学。", "南丁格尔住在中国。"], "answer": 2 },
+    { "audio": "Zhong Nanshan stayed calm and told people the truth.", "opts": ["钟南山躲了起来。", "钟南山离开了国家。", "钟南山什么也没说。", "钟南山保持冷静并告诉人们真相。"], "answer": 3 },
+    { "audio": "She never gave up after failing many times.", "opts": ["她屡次失败后从不放弃。", "她第一次失败就放弃了。", "她从来没有失败过。", "她不喜欢工作。"], "answer": 0 },
+    { "audio": "We should become a person of value, not just a person of success.", "opts": ["我们应该只追求金钱。", "我们应该做有价值的人,而非只追求成功。", "我们应该出名。", "我们应该多休息。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "His research played a ____ role in treating malaria.（至关重要的)", "opts": ["crucial", "boring", "empty", "quiet"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "She would not ____ defeat after many failures.（认输:acknowledge/accept defeat)", "opts": ["enjoy", "accept", "buy", "open"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "He made numerous ____ to modern physics.（贡献)", "opts": ["prices", "noises", "contributions", "gardens"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "As a young man, Lu Xun decided to ____ medical school.（退出)", "opts": ["sell", "sleep", "shout", "quit"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Tu Youyou, ____ discovered artemisinin, won the Nobel Prize.", "opts": ["who", "which", "whose", "that"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The book, ____ was published in 2015, tells Einstein's story.", "opts": ["who", "which", "where", "that"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "She failed more than 190 times, ____ would have stopped most people.", "opts": ["who", "whom", "which", "that"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "Einstein, ____ hair often stood on end, looked a little odd.", "opts": ["who", "which", "where", "whose"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["她照料了受伤的士兵。", "她卖掉了医院。", "她忘记了士兵。", "她从不工作。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "She cared for the wounded soldiers." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他获得了物理学博士学位。", "他从未上过大学。", "他讨厌物理。", "他是一名画家。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He earned a doctorate in physics." }
+  ],
+  "reading": {
+    "passage": "Tu Youyou was a patient scientist who never gave up. After failing more than a hundred and ninety times, her team finally found a new medicine for malaria. When she won the Nobel Prize, she shared the honour with her whole team.",
+    "passageCn": "屠呦呦是一位有耐心、从不放弃的科学家。在失败190多次后,她的团队终于找到了一种治疗疟疾的新药。当她获得诺贝尔奖时,她把荣誉与整个团队分享。",
+    "questions": [
+      { "q": "What kind of scientist was Tu Youyou?", "opts": ["Patient and never giving up.", "Lazy and careless.", "Famous but unkind.", "Rich but quiet."], "answer": 0 },
+      { "q": "What did she do when she won the prize?", "opts": ["She kept the honour for herself.", "She shared the honour with her team.", "She refused the prize.", "She stopped working."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about a person of achievement you admire. Say who the person is, why he or she is great, and how you feel.",
+    "promptCn": "写一位你敬佩的杰出人物:此人是谁、为何伟大、你的感受(试着用非限制性定语从句 …, who/which…)。",
+    "sampleWords": ["admire", "achievement", "committed", "courage", "honour", "contribution", "succeed", "give up", "great", "patient"]
+  },
+  "dialogues": [
+    {
+      "title": "Who Do You Admire?",
+      "lines": [
+        { "role": "A", "text": "Who is the person you admire most?", "cn": "你最敬佩的人是谁?" },
+        { "role": "B", "text": "Tu Youyou, who discovered a new medicine for malaria.", "cn": "屠呦呦,她发现了一种治疗疟疾的新药。" },
+        { "role": "A", "text": "Why do you admire her so much?", "cn": "你为什么这么敬佩她?" },
+        { "role": "B", "text": "Because she never gave up, even after many failures.", "cn": "因为即使屡次失败,她也从不放弃。" }
+      ]
+    },
+    {
+      "title": "What Makes a Person Great",
+      "lines": [
+        { "role": "A", "text": "What do you think makes a person great?", "cn": "你觉得是什么让一个人伟大?" },
+        { "role": "B", "text": "Not fame or money, but caring about others.", "cn": "不是名利,而是关心他人。" },
+        { "role": "A", "text": "I agree. Courage matters too.", "cn": "我同意。勇气也很重要。" },
+        { "role": "B", "text": "Yes, and never giving up when things are hard.", "cn": "对,还有遇到困难时永不放弃。" }
+      ]
+    }
+  ]
+}

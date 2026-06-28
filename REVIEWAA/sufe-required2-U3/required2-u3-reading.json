@@ -1,0 +1,362 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Food",
+  "source": "上外版必修第二册 Unit 3 同主题阅读(法国国王饼/中餐就餐礼仪/食物与文化身份/世界就餐工具/中国年节食物/慰藉食物记忆)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The Kings' Cake",
+      "topic_cn": "说明·法国国王饼传统",
+      "body": "In the days after the New Year, the French celebrate with a special cake called the galette des rois, or the kings' cake. It comes with its own set of fun traditions that have lasted for hundreds of years. A small toy or charm is hidden inside the cake before it is baked. Before the cake is sliced, all the children at the table hide so that they cannot see who will get each piece. Whoever finds the charm in their slice becomes king or queen for the day and wears a golden paper crown. The cake is sweet and tastes best when it is warm, straight out of the oven. People in different countries make it in many shapes and styles, but the hope is always the same: to be the lucky one who finds the little prize. For a foreign student, watching a family share this cake is a warm and surprising window into French culture.",
+      "vocab_notes": [
+        {
+          "word": "celebrate",
+          "cn": "庆祝"
+        },
+        {
+          "word": "tradition",
+          "cn": "传统"
+        },
+        {
+          "word": "charm",
+          "cn": "小饰物"
+        },
+        {
+          "word": "slice",
+          "cn": "(把……)切片;一片"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is hidden inside the kings' cake?",
+          "options": [
+            "A tiny charm or little toy.",
+            "A piece of fruit.",
+            "A golden coin.",
+            "A short letter."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'A small toy or charm is hidden inside the cake' 的转述。"
+        },
+        {
+          "stem": "Why do the children hide before the cake is cut?",
+          "options": [
+            "Because they are afraid of the cake.",
+            "So they cannot see who gets each piece.",
+            "To find the kitchen.",
+            "Because the room is too hot."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'hide so that they cannot see who will get each piece' 的转述。"
+        },
+        {
+          "stem": "What happens to the person who finds the charm?",
+          "options": [
+            "They get to be the day's king or queen.",
+            "They must bake the next cake.",
+            "They leave the table.",
+            "They pay for the meal."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'becomes king or queen for the day' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Lesson at a Chinese Table",
+      "topic_cn": "记叙·中餐就餐礼仪误会",
+      "body": "When I lived with a Chinese host family in Shanghai, my first dinner taught me a lesson about table manners. In the middle of the table were several dishes of cooked food and a small bowl of rice for each person. My host mother took charge and kept placing food into my bowl. I had been taught at home that finishing your plate shows the host how much you enjoyed the meal, so I happily ate everything. But every time my bowl was empty, she filled it again. It seemed a little odd to me, and soon I was very full. Later I learned the reason. In China, finishing your bowl is a quiet signal to the host that you would like more food. Leaving a little food behind is a polite way to show that you are satisfied. After that, I understood why my honest, hungry effort had surprised everyone. A small custom like this can cause real culture shock, but it also opens your eyes.",
+      "vocab_notes": [
+        {
+          "word": "host",
+          "cn": "(接待客人的)主人"
+        },
+        {
+          "word": "cooked",
+          "cn": "煮熟的"
+        },
+        {
+          "word": "custom",
+          "cn": "习俗"
+        },
+        {
+          "word": "signal",
+          "cn": "信号"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the host mother keep doing during the meal?",
+          "options": [
+            "Taking food away from the writer.",
+            "Refilling the writer's bowl whenever it was empty.",
+            "Asking the writer to leave the table.",
+            "Cooking a brand-new dish."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'every time my bowl was empty, she filled it again' 的转述。"
+        },
+        {
+          "stem": "In China, what does finishing your bowl tell the host?",
+          "options": [
+            "That you dislike the meal.",
+            "That you want to leave soon.",
+            "That you would welcome a second helping.",
+            "That the food is too cold."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'finishing your bowl is a quiet signal… you would like more food' 的转述。"
+        },
+        {
+          "stem": "How is it polite to show you have had enough?",
+          "options": [
+            "By eating everything quickly.",
+            "By asking for a second bowl.",
+            "By standing up at once.",
+            "By leaving a little food in the bowl."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Leaving a little food behind is a polite way to show that you are satisfied' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Food and Who We Are",
+      "topic_cn": "议论·食物与文化身份",
+      "body": "There is a deeper connection between food and culture than many people think. On an individual level, we grow up eating the food of our own culture, and we slowly learn to see it as part of who we are. Certain dishes carry special memories from childhood. When I was sick as a child, my mother used to cook soup for me, and now its smell brings back that warm feeling at once. On a larger level, food is an expression of cultural identity. Traditional cooking is passed down through families by keeping precious recipes alive. People who move to a new country often cook the food of their home as a way of staying close to their roots and dealing with homesickness. Each community's special cuisine reflects its history, values and way of life. As the world grows more connected, it becomes easier to taste dishes from far away. We should value our own food traditions while also opening our minds to others.",
+      "vocab_notes": [
+        {
+          "word": "identity",
+          "cn": "身份;特征"
+        },
+        {
+          "word": "recipe",
+          "cn": "食谱"
+        },
+        {
+          "word": "cuisine",
+          "cn": "菜系;风味"
+        },
+        {
+          "word": "roots",
+          "cn": "根源"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say food can carry on an individual level?",
+          "options": [
+            "Special memories from childhood.",
+            "The price of each meal.",
+            "The weather of the day.",
+            "A list of famous chefs."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Certain dishes carry special memories from childhood' 的转述。"
+        },
+        {
+          "stem": "Why do many people cook their home food after moving away?",
+          "options": [
+            "Because foreign food is not allowed.",
+            "To keep a link with home and feel less homesick.",
+            "To forget their own culture.",
+            "Because they cannot cook anything else."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a way of staying close to their roots and dealing with homesickness' 的转述。"
+        },
+        {
+          "stem": "What does the writer suggest we do as the world becomes more connected?",
+          "options": [
+            "Stop eating traditional food.",
+            "Only eat food from far away.",
+            "Value our own traditions and stay open to others.",
+            "Keep every recipe a secret."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'value our own food traditions while also opening our minds to others' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Three Ways to Eat",
+      "topic_cn": "说明·世界三种进食工具",
+      "body": "Around the world, there are three main ways that people eat their food: with a knife and fork, with chopsticks, or with their fingers. Most people in Europe, Australia and North America eat with a knife and fork. Chopsticks are widely used across East Asia, in countries such as China, Japan and Korea. Eating with the fingers is actually the most widespread method of all. It is common in India, Sri Lanka, Indonesia, the Middle East and much of Africa. In fact, fewer people in the world use forks than use either chopsticks or their hands. None of these ways is better than the others; each one fits the food and the customs of its region. A traveller should never think a different method is strange or wrong. Learning to hold chopsticks, or to eat politely with your right hand, is part of understanding another culture. When you respect the way people eat, you also show respect for who they are.",
+      "vocab_notes": [
+        {
+          "word": "chopsticks",
+          "cn": "筷子"
+        },
+        {
+          "word": "widespread",
+          "cn": "普遍的"
+        },
+        {
+          "word": "method",
+          "cn": "方法"
+        },
+        {
+          "word": "region",
+          "cn": "地区"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Which eating method is the most widespread in the world?",
+          "options": [
+            "Eating with a knife and fork.",
+            "Eating with chopsticks.",
+            "Eating with a spoon only.",
+            "Eating with the fingers."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Eating with the fingers is actually the most widespread method of all' 的转述。"
+        },
+        {
+          "stem": "Where are chopsticks said to be widely used?",
+          "options": [
+            "Across East Asia.",
+            "Throughout most of Africa.",
+            "In Europe and Australia.",
+            "Only in the Middle East."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'Chopsticks are widely used across East Asia' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main point about these different methods?",
+          "options": [
+            "Forks are clearly the best choice.",
+            "None is better; each fits its region's customs.",
+            "Using fingers should be avoided.",
+            "Every country should eat the same way."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'None of these ways is better than the others; each one fits the food and the customs of its region' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Food for the New Year",
+      "topic_cn": "说明·中国年节食物寓意",
+      "body": "In China, the Spring Festival is deeply connected to the country's ancient farming culture. The dinner on New Year's Eve is a feast of traditional foods that are believed to bring good luck for the coming year. Each region has its own typical dishes. Near the sea, families might enjoy prawns, fish salad and dried oysters. In the south, sweet rice cakes are popular, while in the north people love dumplings and steamed buns made of wheat. Many of these foods carry a hidden meaning. Long noodles, for example, stand for a long life, so you should never cut them while eating. Fish is often served because its name sounds like the word for having more than enough. A round cake can stand for a family staying together. Through these dishes, families share not only a delicious meal but also their hopes for the year ahead. Food, in this way, becomes a language of good wishes that everyone at the table understands.",
+      "vocab_notes": [
+        {
+          "word": "feast",
+          "cn": "盛宴"
+        },
+        {
+          "word": "region",
+          "cn": "地区"
+        },
+        {
+          "word": "dumpling",
+          "cn": "饺子"
+        },
+        {
+          "word": "stand for",
+          "cn": "代表;象征"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why are the New Year's Eve foods chosen?",
+          "options": [
+            "They are the cheapest foods to buy.",
+            "They are easy to cook quickly.",
+            "People think they bring good fortune for the new year.",
+            "They can be kept for many months."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'traditional foods that are believed to bring good luck for the coming year' 的转述。"
+        },
+        {
+          "stem": "Why should you not cut long noodles while eating them?",
+          "options": [
+            "Because they taste better whole.",
+            "Because cutting them is difficult.",
+            "Because they are too hot.",
+            "Because they are a symbol of long life."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Long noodles… stand for a long life, so you should never cut them' 的转述。"
+        },
+        {
+          "stem": "According to the passage, what does the food really share with the family?",
+          "options": [
+            "Their wishes for the months to come.",
+            "Information about farming tools.",
+            "The cost of the whole meal.",
+            "A list of southern cities."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'share… their hopes for the year ahead' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "The Soup I Remember",
+      "topic_cn": "记叙·慰藉食物的记忆",
+      "body": "Some foods stay with us long after the meal is over. For me, that food is a simple bowl of chicken soup. When I was a small child and too weak to get out of bed, my mother would cook this soup and carry it to my room. I still remember the gentle steam rising from the bowl and the warm smell that filled the air. Even though I was sick, that soup made me feel safe and loved. Years later, the taste has become a part of me. Whenever I feel tired or stressed after a long day at school, I make the same soup using my mother's recipe. The smell brings the old feeling straight back, as if she were standing beside me again. This kind of dish is often called comfort food. It does more than fill the stomach; it carries memory, family and love in every spoonful. A bowl of soup, I have learned, can be far more than just food.",
+      "vocab_notes": [
+        {
+          "word": "steam",
+          "cn": "蒸汽"
+        },
+        {
+          "word": "stressed",
+          "cn": "焦虑的;心力交瘁的"
+        },
+        {
+          "word": "recipe",
+          "cn": "食谱"
+        },
+        {
+          "word": "comfort food",
+          "cn": "慰藉食物"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When did the writer's mother make the soup in the past?",
+          "options": [
+            "Only on New Year's Eve.",
+            "When the writer was a sick child unable to leave bed.",
+            "Whenever guests visited.",
+            "After every school exam."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'too weak to get out of bed, my mother would cook this soup' 的转述。"
+        },
+        {
+          "stem": "What does the writer do now when feeling tired or stressed?",
+          "options": [
+            "Buy soup from a shop.",
+            "Avoid eating anything.",
+            "Make the same soup from the mother's recipe.",
+            "Call the mother to come over."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'I make the same soup using my mother's recipe' 的转述。"
+        },
+        {
+          "stem": "Why does the writer call the soup more than just food?",
+          "options": [
+            "Because it is very expensive.",
+            "Because it takes a long time to cook.",
+            "Because it is a rare dish.",
+            "Because it holds memories, warmth and family love."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'it carries memory, family and love in every spoonful' 的转述。"
+        }
+      ]
+    }
+  ]
+}

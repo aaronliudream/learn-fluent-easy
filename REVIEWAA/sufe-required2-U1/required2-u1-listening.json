@@ -1,0 +1,475 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Nature",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第二册 Unit 1 同主题听力(周末计划去爬山/一则关于蜜蜂的短文/讨论是否该养鸟/海洋平衡短文/参观自然保护区对话/给自然爱好者的小贴士)。long/short 交替,答案 transcript 可查,与读/写关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 A Plan to Go Hiking",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Lucy",
+          "text": "Tom, are you free this Saturday? I'm planning to go hiking in the hills."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That sounds great. I really need some time in nature after a busy week."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Me too. They say there are many rare birds in that forest."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Wonderful. Should we bring a camera to take some photos?"
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Yes, but let's be quiet so we don't frighten the animals."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Good idea. And we must take all our rubbish home with us."
+        },
+        {
+          "speaker": "Lucy",
+          "text": "Of course. We should leave the woods as clean as we find them."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Agreed. Let's meet at the bus stop at eight in the morning."
+        }
+      ],
+      "translation_cn": "Lucy 邀 Tom 周六去山里爬山;两人都想在忙碌一周后亲近自然;那片森林里据说有许多稀有鸟类;他们决定带相机拍照,但要保持安静以免惊扰动物;还要把垃圾带回家、让森林和来时一样干净;约定早上八点在公交站见面。",
+      "questions": [
+        {
+          "stem": "What does Lucy plan to do on Saturday?",
+          "options": [
+            "Go hiking in the hills.",
+            "Visit a city museum.",
+            "Stay at home and rest.",
+            "Go shopping with Tom."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tom want to join her?",
+          "options": [
+            "He wants to buy a new camera.",
+            "He needs some time in nature.",
+            "He has never seen the hills.",
+            "He wants to meet new people."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the forest have, according to Lucy?",
+          "options": [
+            "Many rare birds.",
+            "A large car park.",
+            "A famous restaurant.",
+            "A small shopping centre."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they decide to stay quiet?",
+          "options": [
+            "So they can hear the radio.",
+            "So they do not frighten the animals.",
+            "So they do not get lost.",
+            "So they can talk on the phone."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What will they do with their rubbish?",
+          "options": [
+            "Leave it under a tree.",
+            "Burn it in the forest.",
+            "Take it all home with them.",
+            "Throw it into the river."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 Why Bees Matter",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Bees are small, but they play a huge part in nature. As they fly from flower to flower, they help plants to make seeds and fruit. Without bees, many plants could not grow, and the animals that eat those plants would lose their food. In this way, these tiny insects help to keep the balance of nature. Sadly, bees are now in danger because of pollution and the loss of wild flowers. We can help them by growing more flowers and by keeping our gardens free of harmful chemicals. Protecting bees means protecting a healthy world for us all.",
+      "translation_cn": "蜜蜂虽小,却在自然中作用巨大。它们在花丛间飞舞,帮助植物结出种子和果实。没有蜜蜂,许多植物无法生长,以这些植物为食的动物也会失去食物。就这样,这些小昆虫维系着自然的平衡。可惜由于污染和野花减少,蜜蜂如今处境危险。我们可以多种花、不在花园里使用有害化学品来帮助它们。保护蜜蜂就是为大家保护一个健康的世界。",
+      "questions": [
+        {
+          "stem": "How do bees help plants?",
+          "options": [
+            "By eating harmful insects.",
+            "By bringing them water.",
+            "By keeping them warm.",
+            "By helping them make seeds and fruit."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What would happen to some animals without bees?",
+          "options": [
+            "They would lose their food.",
+            "They would grow much bigger.",
+            "They would move to the city.",
+            "They would stop sleeping."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do bees help to keep, according to the passage?",
+          "options": [
+            "The price of fruit.",
+            "The balance of nature.",
+            "The speed of the wind.",
+            "The colour of flowers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why are bees now in danger?",
+          "options": [
+            "Because they fly too far.",
+            "Because gardens are too large.",
+            "Because of pollution and the loss of wild flowers.",
+            "Because people grow too many flowers."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one way we can help bees?",
+          "options": [
+            "Keep them inside small cages.",
+            "Move them to colder places.",
+            "Feed them only sugar.",
+            "Grow more flowers in our gardens."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 Should We Keep a Wild Bird?",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Ben",
+          "text": "Look, Mum, I found this little bird in the park. Can we keep it at home?"
+        },
+        {
+          "speaker": "Mum",
+          "text": "It's lovely, Ben, but I'm not sure a wild bird should live in a cage."
+        },
+        {
+          "speaker": "Ben",
+          "text": "But it might be safer with us. Outside, bigger animals could hunt it."
+        },
+        {
+          "speaker": "Mum",
+          "text": "I understand, yet a wild bird belongs in its natural home, where it can fly freely."
+        },
+        {
+          "speaker": "Ben",
+          "text": "So what should we do? It looks a little weak."
+        },
+        {
+          "speaker": "Mum",
+          "text": "Let's care for it until it is strong, and then set it free."
+        },
+        {
+          "speaker": "Ben",
+          "text": "That sounds fair. I don't want it to be unhappy in a small cage."
+        },
+        {
+          "speaker": "Mum",
+          "text": "Good boy. Helping an animal back to nature is the kindest thing we can do."
+        }
+      ],
+      "translation_cn": "Ben 在公园里捡到一只小鸟,想带回家养;妈妈觉得野鸟不该关在笼子里;Ben 说在外面会被大动物猎食,跟着他们更安全;妈妈理解,但认为野鸟属于能自由飞翔的自然家园;两人决定先把鸟养到强壮,再放它回归自然;Ben 也不想鸟在小笼子里不快乐;妈妈说帮助动物回归自然是最善良的事。",
+      "questions": [
+        {
+          "stem": "What does Ben want to do at first?",
+          "options": [
+            "Keep the wild bird at home.",
+            "Sell the bird to a friend.",
+            "Leave the bird in the park.",
+            "Give the bird to a zoo."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is Mum unsure about the idea?",
+          "options": [
+            "The bird is too noisy.",
+            "A wild bird should not live in a cage.",
+            "They have no room at home.",
+            "The bird costs too much to feed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What reason does Ben give for keeping it?",
+          "options": [
+            "It would be cheaper than buying one.",
+            "It can sing very beautifully.",
+            "It might be safer from bigger animals.",
+            "It is a very rare kind of bird."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What do they finally decide to do?",
+          "options": [
+            "Keep it in a cage for ever.",
+            "Take it to the city zoo.",
+            "Give it to a neighbour.",
+            "Care for it, then set it free."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Mum say is the kindest thing to do?",
+          "options": [
+            "Help the animal back to nature.",
+            "Teach the bird to talk.",
+            "Keep the bird as a pet.",
+            "Take photos of the bird."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 Everything in the Sea Is Linked",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Life in the ocean is closely linked together. Small fish eat tiny sea plants, and bigger fish eat the small fish. Even the largest animals depend on this long chain of life. When people take too many fish from the sea, the whole chain can be broken. Other animals then lose their food and may fall in number too. This shows that the balance of the ocean is easy to harm but hard to repair. By fishing carefully and keeping the water clean, we can help to protect every living thing in the sea, from the smallest plant to the greatest whale.",
+      "translation_cn": "海洋中的生命紧密相连。小鱼吃微小的海洋植物,大鱼吃小鱼,就连最大的动物也依赖这条漫长的生命链。当人们从海里捕捞过多的鱼,整条链条就可能断裂。其他动物随之失去食物,数量也可能下降。这说明海洋的平衡容易被破坏却难以修复。通过谨慎捕鱼、保持水质清洁,我们就能保护海里从最小的植物到最大的鲸鱼的每一个生命。",
+      "questions": [
+        {
+          "stem": "What do the small fish in the sea eat?",
+          "options": [
+            "Bigger fish.",
+            "Tiny sea plants.",
+            "Large whales.",
+            "Sea birds."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can break the chain of life in the sea?",
+          "options": [
+            "Too much rain.",
+            "Plants growing too fast.",
+            "People taking too many fish.",
+            "Whales swimming too far."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the passage say about the balance of the ocean?",
+          "options": [
+            "It can never be harmed.",
+            "It repairs itself quickly.",
+            "It does not matter to people.",
+            "It is easy to harm but hard to repair."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens to other animals when the chain is broken?",
+          "options": [
+            "They lose their food and may fall in number.",
+            "They grow much larger.",
+            "They learn to eat plants.",
+            "They move onto the land."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is one way to protect sea life, according to the passage?",
+          "options": [
+            "Catch as many fish as possible.",
+            "Fish carefully and keep the water clean.",
+            "Build walls across the sea.",
+            "Move all the fish into one place."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 A Visit to the Nature Reserve",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Guide",
+          "text": "Welcome to our nature reserve. Here we protect many rare plants and animals."
+        },
+        {
+          "speaker": "Anna",
+          "text": "It's beautiful here. Why was this reserve set up?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Years ago, this forest was almost destroyed, and many species nearly disappeared."
+        },
+        {
+          "speaker": "Anna",
+          "text": "That's sad. So what did people do to save it?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "We stopped the hunting, cleaned the rivers, and planted thousands of young trees."
+        },
+        {
+          "speaker": "Anna",
+          "text": "And did the animals come back?"
+        },
+        {
+          "speaker": "Guide",
+          "text": "Yes, slowly. Restoring nature takes many years, but the balance is returning."
+        },
+        {
+          "speaker": "Anna",
+          "text": "What a wonderful job. I'd love to help with conservation one day."
+        }
+      ],
+      "translation_cn": "向导欢迎大家来到自然保护区,这里保护着许多稀有动植物;Anna 觉得很美,问保护区为何设立;向导说多年前这片森林几乎被毁,许多物种濒临消失;Anna 问人们如何拯救;向导说他们禁止狩猎、清理河流、种下成千上万棵小树;动物慢慢回来了;恢复自然需要很多年,但平衡正在回归;Anna 希望将来也能参与环境保护。",
+      "questions": [
+        {
+          "stem": "What does the reserve mainly do?",
+          "options": [
+            "Sell food to visitors.",
+            "Train animals for shows.",
+            "Protect rare plants and animals.",
+            "Build new roads in the forest."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why was the reserve set up?",
+          "options": [
+            "To make money from tourists.",
+            "Because the city needed more space.",
+            "To keep animals in cages.",
+            "Because the forest was almost destroyed."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did people do to save the forest?",
+          "options": [
+            "They stopped hunting and cleaned the rivers.",
+            "They cut down the old trees.",
+            "They moved all animals to a zoo.",
+            "They built houses in the woods."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does the guide say about restoring nature?",
+          "options": [
+            "It is quick and easy.",
+            "It takes many years.",
+            "It can never really work.",
+            "It needs no help from people."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Anna hope to do one day?",
+          "options": [
+            "Open her own zoo.",
+            "Cut down the forest.",
+            "Help with conservation.",
+            "Sell rare animals."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Tip for Nature Lovers",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": "Here is a simple tip for anyone who loves nature. The next time you feel tired or worried, try spending a little time outdoors. Walk in a park, sit by a river, or just watch the clouds in the sky. Studies show that time in nature can lift our mood and have a positive effect on our minds. You do not need to travel far; even a small green space near your home can help. While you are there, look closely and be aware of the beauty around you. A few quiet minutes with nature today can leave you feeling calmer and happier.",
+      "translation_cn": "给所有热爱自然的人一个简单建议:下次当你感到疲惫或烦恼时,试着到户外待一会儿。在公园散步、坐在河边,或只是看看天上的云。研究表明,亲近自然能提升我们的心情,对头脑有积极的影响。你不必走远,哪怕是家附近一小片绿地也能帮上忙。在那里,仔细观察、留意身边的美。今天与自然共度几分钟安静时光,就能让你感到更平静、更快乐。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only park workers.",
+            "Only scientists.",
+            "Only children.",
+            "Anyone who loves nature."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker suggest doing when you feel worried?",
+          "options": [
+            "Spend a little time outdoors.",
+            "Stay inside all day.",
+            "Buy something new.",
+            "Sleep the whole afternoon."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do studies show about time in nature?",
+          "options": [
+            "It makes people sleepy.",
+            "It can lift our mood.",
+            "It costs a lot of money.",
+            "It makes the days shorter."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Do you need to travel far, according to the passage?",
+          "options": [
+            "Yes, you must go to the mountains.",
+            "Yes, you must visit the sea.",
+            "No, even a small green space can help.",
+            "Yes, you must leave the city."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can a few quiet minutes with nature do?",
+          "options": [
+            "Make you feel more tired.",
+            "Cost you a lot of time.",
+            "Make you forget your friends.",
+            "Leave you feeling calmer and happier."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

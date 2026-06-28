@@ -1,0 +1,51 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Write a \"Letter to a Sport\"(给一项运动写一封信)",
+  "genre": "记叙 / 抒情(recall your experiences with a sport in chronological order)",
+  "source": "上外版必修第二册 Unit 4 Moving Forward:write a \"letter to a sport\",按时间顺序回顾你与某项运动的经历与感受。",
+  "prompt_cn": "请仿照乔丹《写给篮球的公开情书》,给一项你喜欢(或曾经讨厌)的运动写一封约80词的信。内容包括:① 你第一次接触这项运动的情形;② 中间经历的一个困难或转折;③ 现在你对它的感受。要求按时间顺序展开,语言真挚。",
+  "prompt_en": "Following Michael Jordan's \"Open Love Letter to Basketball\", write a letter (about 80 words) to a sport you love (or once disliked). Include: 1) how you first met the sport; 2) one difficulty or turning point along the way; 3) how you feel about it now. Write in chronological order with honest feeling.",
+  "points": [
+    "开头点明对象与初遇(Dear Football, I still remember the day …)",
+    "中段写一个困难/转折(At first … but then …)",
+    "结尾写现在的感受(Now you are more than just a game to me.)",
+    "按时间顺序、用第二人称'you'称呼这项运动"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "Dear Football, I still remember the day we first met. I was eight, and a kind PE teacher took me onto the field. At first you felt strange to me; I kept missing the ball, and I almost wanted to give up. But slowly, training hard every week, I began to fall in love with you. You taught me to stay calm under pressure and to trust my teammates. Now you are far more than just a game; you are my dearest friend. I will always love you.",
+  "model_translation": "亲爱的足球:我仍记得我们初遇的那天。那年我八岁,一位和蔼的体育老师把我带到了球场上。起初你让我觉得陌生,我老是踢不到球,几乎想要放弃。但慢慢地,每周刻苦训练,我开始爱上了你。你教会我在压力下保持镇静、信任队友。如今你远不只是一项游戏,你是我最亲密的朋友。我会永远爱你。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:初遇 / 困难或转折 / 现在的感受" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间顺序展开、用第二人称称呼运动、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing/-ed 状语等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "称呼与初遇 Dear …, I still remember the day …",
+      "困难/转折 At first … but slowly …",
+      "成长 Training hard every week, I began to …",
+      "现在感受 Now you are more than just a game; you are …"
+    ],
+    "key_expressions": [
+      "I still remember the day we first met.",
+      "At first you felt strange to me, and I almost wanted to give up.",
+      "Training hard every week, I began to fall in love with you.",
+      "Now you are far more than just a game."
+    ],
+    "useful_words": ["remember", "field", "train", "calm", "teammate", "competitor", "victory", "encourage", "challenge", "love"]
+  },
+  "high_sentences": [
+    "I still remember the day we first met.",
+    "Training hard every week, I began to fall in love with you.",
+    "You taught me to stay calm under pressure and to trust my teammates.",
+    "Now you are far more than just a game; you are my dearest friend."
+  ],
+  "error_pairs": [
+    { "wrong": "Train hard every week, I began to love you.", "correct": "Training hard every week, I began to love you.", "note": "逻辑主语 I 主动 train,作状语用 -ing 形式 Training。" },
+    { "wrong": "Encouraging by my coach, I never gave up.", "correct": "Encouraged by my coach, I never gave up.", "note": "I 被教练鼓励,被动 → -ed 形式 Encouraged。" },
+    { "wrong": "I almost wanted to gave up.", "correct": "I almost wanted to give up.", "note": "want to 后接动词原形 give。" }
+  ],
+  "paragraph_template": "【给运动的信结构】\n称呼+初遇:Dear …, I still remember the day we first met …\n困难/转折:At first … but slowly, training hard, I …\n现在感受:Now you are far more than just a game; you are …"
+}

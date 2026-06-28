@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "grammar_title": "-ing/-ed 形式1(作定语 attributives)",
+  "source": "上外版必修第二册 Unit 3 Grammar in Use:-ing/-ed forms used as attributives。-ing 作定语表主动/正在进行,-ed 作定语表被动/已完成;辨析看修饰词与名词的主被动关系。句子地道、答案唯一、零术语、食物主题。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "-ing 作定语(主动/正在进行)",
+      "overview": "当被修饰的名词是动作的发出者、或动作正在进行时,用 -ing 形式作定语:a boiling pot(=a pot that is boiling)、the cooking method、a crying child。"
+    },
+    {
+      "code": "u3.02",
+      "point": "-ed 作定语(被动/已完成)",
+      "overview": "当被修饰的名词是动作的承受者、或动作已经完成时,用 -ed 形式作定语:fried rice(=rice that has been fried)、a frozen meal、cooked food、a hidden toy。"
+    },
+    {
+      "code": "u3.03",
+      "point": "-ing vs -ed 辨析 + 复合形容词",
+      "overview": "根据名词与动词的主被动关系选 -ing 还是 -ed:a man eating fish(人主动吃→-ing)vs fish eaten by a man(鱼被吃→-ed);情感类 -ing 修饰物、-ed 修饰人(a boring meal / a bored guest)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "\"Be careful — that ____ pot of soup is very hot.\"",
+      "options": [
+        "boiling",
+        "boiled",
+        "boil",
+        "to boil"
+      ],
+      "answer_index": 0,
+      "explanation": "锅里的汤正在沸腾,主动/正在进行 → boiling。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My grandmother taught me a simple ____ method for noodles.\"",
+      "options": [
+        "cooked",
+        "cooking",
+        "cook",
+        "cooks"
+      ],
+      "answer_index": 1,
+      "explanation": "表用途的方法(动名词作定语),the cooking method → cooking。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ smell of fresh bread filled the whole kitchen.\"",
+      "options": [
+        "invited",
+        "invite",
+        "inviting",
+        "invites"
+      ],
+      "answer_index": 2,
+      "explanation": "香味主动'诱人'→ inviting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"A ____ child at the next table wanted some of the cake.\"",
+      "options": [
+        "cried",
+        "cry",
+        "cries",
+        "crying"
+      ],
+      "answer_index": 3,
+      "explanation": "孩子主动在哭,正在进行 → crying。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"We sat around the table watching the ____ steam rise from the dumplings.\"",
+      "options": [
+        "rising",
+        "risen",
+        "rise",
+        "rose"
+      ],
+      "answer_index": 0,
+      "explanation": "蒸汽主动上升,正在进行 → rising。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ water in the pot was ready for the noodles.\"",
+      "options": [
+        "boiled",
+        "boiling",
+        "boil",
+        "boils"
+      ],
+      "answer_index": 1,
+      "explanation": "水正在沸腾 → boiling water。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"There is a ____ room next to the kitchen where the family eats.\"",
+      "options": [
+        "dined",
+        "dine",
+        "dining",
+        "dines"
+      ],
+      "answer_index": 2,
+      "explanation": "用于吃饭的房间(动名词作定语),the dining room → dining。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ guests at the party could not wait to taste the cake.\"",
+      "options": [
+        "waited",
+        "wait",
+        "waits",
+        "waiting"
+      ],
+      "answer_index": 3,
+      "explanation": "客人主动在等待 → waiting guests。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"A sweet, ____ cake sat in the centre of the festive table.\"",
+      "options": [
+        "tempting",
+        "tempted",
+        "tempt",
+        "tempts"
+      ],
+      "answer_index": 0,
+      "explanation": "蛋糕主动'诱人'→ tempting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ fire under the wok made the oil hiss loudly.\"",
+      "options": [
+        "burned",
+        "burning",
+        "burn",
+        "burns"
+      ],
+      "answer_index": 1,
+      "explanation": "火主动在燃烧,正在进行 → burning fire。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My host mother used a special ____ board to cut the vegetables.\"",
+      "options": [
+        "cut",
+        "cuts",
+        "cutting",
+        "to cut"
+      ],
+      "answer_index": 2,
+      "explanation": "用于切的板(动名词作定语),a cutting board → cutting。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ aroma of the spices made everyone hungry.\"",
+      "options": [
+        "pleased",
+        "please",
+        "pleases",
+        "pleasing"
+      ],
+      "answer_index": 3,
+      "explanation": "香气主动令人愉悦 → pleasing。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"We watched the ____ butchers slicing meat at the busy market.\"",
+      "options": [
+        "working",
+        "worked",
+        "work",
+        "works"
+      ],
+      "answer_index": 0,
+      "explanation": "屠夫主动在干活,正在进行 → working butchers。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"A ____ kettle on the stove told us the tea was almost ready.\"",
+      "options": [
+        "whistled",
+        "whistling",
+        "whistle",
+        "whistles"
+      ],
+      "answer_index": 1,
+      "explanation": "水壶主动在'鸣响',正在进行 → whistling kettle。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ children hid under the table before the cake was sliced.\"",
+      "options": [
+        "laughed",
+        "laugh",
+        "laughing",
+        "laughs"
+      ],
+      "answer_index": 2,
+      "explanation": "孩子们主动在笑 → laughing children。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"He bought a new ____ pan to fry the morning eggs.\"",
+      "options": [
+        "fried",
+        "fry",
+        "fries",
+        "frying"
+      ],
+      "answer_index": 3,
+      "explanation": "用来煎的锅(动名词作定语),a frying pan → frying。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ crowd at the food market grew larger by noon.\"",
+      "options": [
+        "growing",
+        "grown",
+        "grow",
+        "grows"
+      ],
+      "answer_index": 0,
+      "explanation": "人群主动在增多,正在进行 → growing crowd。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"A ____ pot of rice porridge bubbled gently on the stove.\"",
+      "options": [
+        "steamed",
+        "steaming",
+        "steam",
+        "steams"
+      ],
+      "answer_index": 1,
+      "explanation": "锅正在冒热气,正在进行 → steaming pot。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The ____ number of food stalls made the old street very lively.\"",
+      "options": [
+        "increased",
+        "increase",
+        "increasing",
+        "increases"
+      ],
+      "answer_index": 2,
+      "explanation": "数量主动在增长,正在进行 → increasing number。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"I love the ____ sound of vegetables hitting the hot oil.\"",
+      "options": [
+        "sizzled",
+        "sizzle",
+        "sizzles",
+        "sizzling"
+      ],
+      "answer_index": 3,
+      "explanation": "声音主动'滋滋作响',正在进行 → sizzling sound。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"For dinner we had ____ rice with eggs and spring onions.\"",
+      "options": [
+        "fried",
+        "frying",
+        "fry",
+        "fries"
+      ],
+      "answer_index": 0,
+      "explanation": "米被炒过,被动/已完成 → fried rice。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"On busy nights my host family often eats a ____ meal from the freezer.\"",
+      "options": [
+        "freezing",
+        "frozen",
+        "freeze",
+        "freezes"
+      ],
+      "answer_index": 1,
+      "explanation": "饭被冷冻过,被动/已完成 → a frozen meal。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Leaving some ____ food in your bowl is acceptable in China.\"",
+      "options": [
+        "cooking",
+        "cook",
+        "cooked",
+        "cooks"
+      ],
+      "answer_index": 2,
+      "explanation": "食物被做熟,被动/已完成 → cooked food。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"There was a small toy ____ inside the kings' cake.\"",
+      "options": [
+        "hiding",
+        "hide",
+        "hides",
+        "hidden"
+      ],
+      "answer_index": 3,
+      "explanation": "玩具被藏起来,被动 → a toy hidden inside(=which is hidden)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"In the north, ____ dumplings are a favourite New Year food.\"",
+      "options": [
+        "boiled",
+        "boiling",
+        "boil",
+        "boils"
+      ],
+      "answer_index": 0,
+      "explanation": "饺子被煮过,被动/已完成 → boiled dumplings。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Near the sea, people enjoy ____ fish that is kept for the winter.\"",
+      "options": [
+        "preserving",
+        "preserved",
+        "preserve",
+        "preserves"
+      ],
+      "answer_index": 1,
+      "explanation": "鱼被腌制保存,被动/已完成 → preserved fish。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The cake is best served warm, straight from the ____ oven.\"",
+      "options": [
+        "heating",
+        "heat",
+        "heated",
+        "heats"
+      ],
+      "answer_index": 2,
+      "explanation": "烤箱被加热,被动/已完成 → a heated oven。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"My mother placed a bowl of ____ soup beside my bed.\"",
+      "options": [
+        "homemaking",
+        "homemake",
+        "homemakes",
+        "homemade"
+      ],
+      "answer_index": 3,
+      "explanation": "汤是在家做成的,被动/已完成的复合形容词 → homemade soup。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We started the meal with several ____ vegetables served cold.\"",
+      "options": [
+        "pickled",
+        "pickling",
+        "pickle",
+        "pickles"
+      ],
+      "answer_index": 0,
+      "explanation": "蔬菜被腌过,被动/已完成 → pickled vegetables。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The market sold ____ meat that had been dried in the sun.\"",
+      "options": [
+        "drying",
+        "dried",
+        "dry",
+        "dries"
+      ],
+      "answer_index": 1,
+      "explanation": "肉被晒干,被动/已完成 → dried meat。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"A ____ crown of golden paper sat on top of the cake.\"",
+      "options": [
+        "folding",
+        "fold",
+        "folded",
+        "folds"
+      ],
+      "answer_index": 2,
+      "explanation": "纸冠被折成,被动/已完成 → a folded crown。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The chef offered us some freshly ____ bread with the soup.\"",
+      "options": [
+        "baking",
+        "bake",
+        "bakes",
+        "baked"
+      ],
+      "answer_index": 3,
+      "explanation": "面包被烤,被动/已完成 → freshly baked bread。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"In British cooking there is a pudding ____ mostly with bread and butter.\"",
+      "options": [
+        "made",
+        "making",
+        "make",
+        "makes"
+      ],
+      "answer_index": 0,
+      "explanation": "布丁被做出来,被动 → a pudding made with(=which is made)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The host put a plate of thinly ____ beef in front of me.\"",
+      "options": [
+        "slicing",
+        "sliced",
+        "slice",
+        "slices"
+      ],
+      "answer_index": 1,
+      "explanation": "牛肉被切片,被动/已完成 → thinly sliced beef。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"They served a bowl of long noodles ____ in a clear broth.\"",
+      "options": [
+        "cooking",
+        "cook",
+        "cooked",
+        "cooks"
+      ],
+      "answer_index": 2,
+      "explanation": "面条被煮在汤里,被动 → noodles cooked in(=which are cooked)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The supermarket had a whole shelf of ____ fruit in cans.\"",
+      "options": [
+        "canning",
+        "can",
+        "cans",
+        "canned"
+      ],
+      "answer_index": 3,
+      "explanation": "水果被装罐,被动/已完成 → canned fruit。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We were each given a cup of freshly ____ coffee after the meal.\"",
+      "options": [
+        "brewed",
+        "brewing",
+        "brew",
+        "brews"
+      ],
+      "answer_index": 0,
+      "explanation": "咖啡被冲泡,被动/已完成 → freshly brewed coffee。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The recipe used ____ ginger instead of fresh ginger root.\"",
+      "options": [
+        "grinding",
+        "ground",
+        "grind",
+        "grinds"
+      ],
+      "answer_index": 1,
+      "explanation": "姜被磨成粉,被动/已完成 → ground ginger。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Each guest received a slice of cake with a ____ charm inside.\"",
+      "options": [
+        "burying",
+        "bury",
+        "buried",
+        "buries"
+      ],
+      "answer_index": 2,
+      "explanation": "小饰物被埋在里面,被动 → a buried charm(=which is buried)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"On the table were small bowls of ____ rice for each member.\"",
+      "options": [
+        "steaming",
+        "steam",
+        "steams",
+        "steamed"
+      ],
+      "answer_index": 3,
+      "explanation": "强调'被蒸好'的米饭,被动/已完成 → steamed rice。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The waiter ____ the dishes spoke very good English.\"",
+      "options": [
+        "serving",
+        "served",
+        "serve",
+        "serves"
+      ],
+      "answer_index": 0,
+      "explanation": "服务员主动上菜 → the waiter serving the dishes(=who served)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The dishes ____ by the waiter looked colourful and fresh.\"",
+      "options": [
+        "serving",
+        "served",
+        "serve",
+        "serves"
+      ],
+      "answer_index": 1,
+      "explanation": "菜被服务员端上,被动 → the dishes served by the waiter。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The man ____ fish at the corner table was my host father.\"",
+      "options": [
+        "eaten",
+        "eat",
+        "eating",
+        "eats"
+      ],
+      "answer_index": 2,
+      "explanation": "人主动吃鱼 → the man eating fish(=who is eating)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The fish ____ by the man was a fresh sea sardine.\"",
+      "options": [
+        "eating",
+        "eat",
+        "eats",
+        "eaten"
+      ],
+      "answer_index": 3,
+      "explanation": "鱼被人吃,被动 → the fish eaten by the man。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The cook ____ the soup added a little salt and pepper.\"",
+      "options": [
+        "making",
+        "made",
+        "make",
+        "makes"
+      ],
+      "answer_index": 0,
+      "explanation": "厨师主动做汤 → the cook making the soup(=who made)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The soup ____ by the cook tasted rich and warm.\"",
+      "options": [
+        "making",
+        "made",
+        "make",
+        "makes"
+      ],
+      "answer_index": 1,
+      "explanation": "汤被厨师做,被动 → the soup made by the cook。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"It was such a ____ meal that nobody spoke for a long time.\"",
+      "options": [
+        "satisfied",
+        "satisfy",
+        "satisfying",
+        "satisfies"
+      ],
+      "answer_index": 2,
+      "explanation": "饭'令人满足',-ing 修饰物 → a satisfying meal。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The ____ guests thanked the host for such a wonderful dinner.\"",
+      "options": [
+        "satisfying",
+        "satisfy",
+        "satisfies",
+        "satisfied"
+      ],
+      "answer_index": 3,
+      "explanation": "客人'感到满足',-ed 修饰人 → the satisfied guests。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The students ____ Chinese food for the first time looked curious.\"",
+      "options": [
+        "trying",
+        "tried",
+        "try",
+        "tries"
+      ],
+      "answer_index": 0,
+      "explanation": "学生主动尝试 → the students trying Chinese food(=who were trying)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The dish ____ at the new restaurant was a regional speciality.\"",
+      "options": [
+        "recommending",
+        "recommended",
+        "recommend",
+        "recommends"
+      ],
+      "answer_index": 1,
+      "explanation": "菜被推荐,被动 → the dish recommended(=which was recommended)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The woman ____ behind the stall was selling rice cakes.\"",
+      "options": [
+        "stood",
+        "stand",
+        "standing",
+        "stands"
+      ],
+      "answer_index": 2,
+      "explanation": "女人主动站着 → the woman standing behind(=who was standing)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The bread ____ by my host brother was still warm.\"",
+      "options": [
+        "buying",
+        "buy",
+        "buys",
+        "bought"
+      ],
+      "answer_index": 3,
+      "explanation": "面包被买来,被动 → the bread bought by(=which was bought)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"After the long lunch, the ____ tourists rested in the shade.\"",
+      "options": [
+        "tired",
+        "tiring",
+        "tire",
+        "tires"
+      ],
+      "answer_index": 0,
+      "explanation": "游客'感到累',-ed 修饰人 → the tired tourists。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"It had been a ____ day of visiting market after market.\"",
+      "options": [
+        "tired",
+        "tiring",
+        "tire",
+        "tires"
+      ],
+      "answer_index": 1,
+      "explanation": "一天'令人疲惫',-ing 修饰物 → a tiring day。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The chef ____ the cake decorated it with a paper crown.\"",
+      "options": [
+        "baked",
+        "bake",
+        "baking",
+        "bakes"
+      ],
+      "answer_index": 2,
+      "explanation": "厨师主动烤蛋糕 → the chef baking the cake(=who baked)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The cake ____ in that small bakery was famous all over town.\"",
+      "options": [
+        "baking",
+        "bake",
+        "bakes",
+        "baked"
+      ],
+      "answer_index": 3,
+      "explanation": "蛋糕被烤,被动 → the cake baked in(=which was baked)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Everyone found the local cooking show quite ____.\"",
+      "options": [
+        "interesting",
+        "interested",
+        "interest",
+        "interests"
+      ],
+      "answer_index": 0,
+      "explanation": "节目'有趣',-ing 修饰物 → quite interesting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The ____ visitors asked the chef many questions about the recipe.\"",
+      "options": [
+        "interesting",
+        "interested",
+        "interest",
+        "interests"
+      ],
+      "answer_index": 1,
+      "explanation": "客人'感兴趣',-ed 修饰人 → the interested visitors。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The family ____ around the table shared stories about food.\"",
+      "options": [
+        "sat",
+        "sit",
+        "sitting",
+        "sits"
+      ],
+      "answer_index": 2,
+      "explanation": "一家人主动围坐 → the family sitting around(=who were sitting)。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The traditions ____ down for centuries still shape family meals.\"",
+      "options": [
+        "passing",
+        "pass",
+        "passes",
+        "passed"
+      ],
+      "answer_index": 3,
+      "explanation": "传统被世代相传,被动 → traditions passed down(=which were passed)。"
+    }
+  ]
+}

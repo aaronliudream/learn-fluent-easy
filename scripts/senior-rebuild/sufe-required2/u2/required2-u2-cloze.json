@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Animals",
+  "source": "上外版必修第二册 Unit 2 同主题完形(领养小狗/海洋世界一日/拯救大熊猫/训练导盲犬/校园观鸟/动物迁徙)。用词限本单元/初中/常见词,答案唯一,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Adopting a Little Dog",
+      "text": "Last month my family decided to (1)____ a homeless dog from a local rescue centre. The workers there told us that the little dog had been (2)____ from a cold street, where he was close to (3)____. At first he was shy and afraid, and he would (4)____ in a corner whenever we came near. We were patient and gave him a warm bed and a healthy (5)____ of good food every day. Slowly his (6)____ came back, and he began to wag his tail. Now he is a happy, (7)____ dog who follows me everywhere. He has taught me that every animal (8)____ kindness and a second chance. (9)____, caring for him has made our whole family closer. I will (10)____ keep loving and protecting him.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "rescue",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "rescue a dog 救助一只狗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "saved",
+            "lost",
+            "bought"
+          ],
+          "answer_index": 1,
+          "explanation": "had been saved 被救起。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "noise",
+            "death",
+            "music"
+          ],
+          "answer_index": 2,
+          "explanation": "close to death 濒临死亡。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "dance",
+            "sing",
+            "shout",
+            "hide"
+          ],
+          "answer_index": 3,
+          "explanation": "hide in a corner 躲在角落。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "serving",
+            "ticket",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a serving of food 一份食物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "strength",
+            "weather",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "strength came back 体力恢复。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "angry",
+            "afraid",
+            "affectionate",
+            "bored"
+          ],
+          "answer_index": 2,
+          "explanation": "affectionate dog 亲昵的狗。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "breaks",
+            "loses",
+            "deserves"
+          ],
+          "answer_index": 3,
+          "explanation": "deserves kindness 值得善待。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "Moreover",
+            "However",
+            "Instead",
+            "Otherwise"
+          ],
+          "answer_index": 0,
+          "explanation": "Moreover 此外(添加)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hardly",
+            "definitely",
+            "rarely",
+            "never"
+          ],
+          "answer_index": 1,
+          "explanation": "definitely keep loving 一定继续爱它。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Day at the Ocean World",
+      "text": "On Sunday our class visited a large (1)____ by the sea. It is home to a wide (2)____ of sea animals, from tiny fish to friendly seals. The animals are kept in clean, well-maintained (3)____ that are filled with fresh sea water. A guide explained that the staff (4)____ on the health and welfare of every creature. Tropical fish, she said, are (5)____ kept in warmer water, much like the (6)____ they come from in the wild. We watched a keeper feed a seal a (7)____ of fresh fish, and it clapped its flippers happily. The visit was both fun and (8)____, because we learned so much about ocean life. (9)____, every zoo or aquarium has a slightly different (10)____ to caring for animals, but this one clearly loved its sea friends.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "library",
+            "factory",
+            "aquarium",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "aquarium 水族馆。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "variety"
+          ],
+          "answer_index": 3,
+          "explanation": "a wide variety of 各种各样的。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "tanks",
+            "books",
+            "boxes",
+            "cars"
+          ],
+          "answer_index": 0,
+          "explanation": "kept in tanks 养在水槽里。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "focus",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "focus on 专注于。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "rarely",
+            "hardly",
+            "typically",
+            "seldom"
+          ],
+          "answer_index": 2,
+          "explanation": "typically kept 通常被养。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "market",
+            "habitat"
+          ],
+          "answer_index": 3,
+          "explanation": "the habitat 栖息地。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "slice",
+            "song",
+            "price",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a slice of fish 一片鱼。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "boring",
+            "educational",
+            "useless",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "educational 有教育意义的。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "However",
+            "Instead",
+            "Overall",
+            "Otherwise"
+          ],
+          "answer_index": 2,
+          "explanation": "Overall 总体上。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "approach"
+          ],
+          "answer_index": 3,
+          "explanation": "approach to caring 照料的方式。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Saving the Giant Panda",
+      "text": "The giant panda was once close to (1)____, and many people feared it might disappear forever. One big (2)____ to the panda was the loss of the bamboo forests (3)____ it lives. To protect this lovely animal, the country set up special parks and started a clear (4)____ for conservation. Scientists studied the panda's daily (5)____ and made sure there was plenty of fresh bamboo to eat. They also (6)____ healthy young pandas back into the wild, where they could live freely. (7)____, the number of wild pandas has slowly gone up. This success shows that careful (8)____ projects really can work. There are still many reasons (9)____ we must keep protecting the panda, but the (10)____ news is finally hopeful.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "extinction",
+            "music",
+            "money",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "close to extinction 濒临灭绝。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "threat",
+            "price",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "a threat to 威胁。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "which",
+            "when",
+            "where",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "the forests where it lives 地点先行词用 where。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "strategy"
+          ],
+          "answer_index": 3,
+          "explanation": "a strategy for conservation 保护策略。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "diet",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "daily diet 日常饮食。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "released",
+            "lost",
+            "bought"
+          ],
+          "answer_index": 1,
+          "explanation": "released back 放归。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "However",
+            "Instead",
+            "Gradually",
+            "Otherwise"
+          ],
+          "answer_index": 2,
+          "explanation": "Gradually 渐渐地。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "buying",
+            "losing",
+            "conservation"
+          ],
+          "answer_index": 3,
+          "explanation": "conservation projects 保护项目。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "why",
+            "when",
+            "where",
+            "which"
+          ],
+          "answer_index": 0,
+          "explanation": "reasons why 原因。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wrong",
+            "overall",
+            "empty",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "the overall news 总体的消息。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Training a Guide Dog",
+      "text": "Training a guide dog takes patience and a gentle (1)____. It (2)____ with one small, simple lesson, and the trainer never uses fear. When the young dog does what it is asked, it gets a kind word and a tasty (3)____. These good things are known as positive rewards. Step by (4)____, the lessons become a little harder. The dog learns to lead a blind owner safely (5)____ busy streets and down stairs. There may be (6)____ along the way, but the trainer stays calm and patient. (7)____ months of careful work, the dog can finally be (8)____ to a person who needs it. A good guide dog is more than a helper; it becomes a loyal (9)____. The (10)____ why so many people love these dogs is easy to understand.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "approach",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a gentle approach 温和的方式。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sells",
+            "loses",
+            "breaks",
+            "begins"
+          ],
+          "answer_index": 3,
+          "explanation": "begins with 始于。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "treat",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a tasty treat 美味奖励。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "step",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "step by step 一步步。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "behind",
+            "below",
+            "across",
+            "under"
+          ],
+          "answer_index": 2,
+          "explanation": "across busy streets 穿过繁忙街道。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "songs",
+            "prices",
+            "tickets",
+            "problems"
+          ],
+          "answer_index": 3,
+          "explanation": "problems along the way 沿途困难。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "After",
+            "Before",
+            "Without",
+            "Against"
+          ],
+          "answer_index": 0,
+          "explanation": "After months 经过数月之后。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "given",
+            "thrown",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "given to a person 交给某人。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "friend",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "a loyal friend 忠诚的朋友。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "the reason why 原因。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Bird Watching on Campus",
+      "text": "Our school started a bird-watching club, and it has quickly become my favourite (1)____. Early in the morning is the time (2)____ the birds are most active and easy to see. We sit quietly near the garden, (3)____ is full of trees and flowers. Through our small telescopes we watch a wide (4)____ of birds come and go. Our teacher says that spring is the (5)____ when many birds fly back to build their nests. We keep a notebook (6)____ we write down what each bird looks like and what it eats. (7)____, we even spotted a rare visitor that does not (8)____ live in our city. Bird watching has taught me to be calm and (9)____. (10)____, I have come to love and respect these small, free creatures.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "hobby",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "favourite hobby 最爱的爱好。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "where",
+            "when",
+            "why",
+            "which"
+          ],
+          "answer_index": 1,
+          "explanation": "the time when 时间先行词用 when。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "who",
+            "when",
+            "which",
+            "why"
+          ],
+          "answer_index": 2,
+          "explanation": "the garden, which is full 指物作主语用 which。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "variety"
+          ],
+          "answer_index": 3,
+          "explanation": "a wide variety of 各种各样的。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "season",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "the season when 季节。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "who",
+            "where",
+            "when",
+            "why"
+          ],
+          "answer_index": 1,
+          "explanation": "a notebook where we write 地点(抽象)用 where。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "However",
+            "Instead",
+            "Once",
+            "Otherwise"
+          ],
+          "answer_index": 2,
+          "explanation": "Once 有一次。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "hardly",
+            "rarely",
+            "seldom",
+            "usually"
+          ],
+          "answer_index": 3,
+          "explanation": "does not usually live 通常不住。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "patient",
+            "angry",
+            "afraid",
+            "bored"
+          ],
+          "answer_index": 0,
+          "explanation": "be patient 有耐心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "However",
+            "Overall",
+            "Instead",
+            "Otherwise"
+          ],
+          "answer_index": 1,
+          "explanation": "Overall 总体上。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Wonder of Migration",
+      "text": "Every year millions of animals travel huge distances in a journey we call (1)____. It is one of the most amazing (2)____ in the natural world. Some birds fly thousands of miles to reach warmer lands (3)____ food is easier to find. They leave in autumn, the (4)____ when the cold weather begins, and return again in spring. Scientists are still trying to understand exactly how the animals find their (5)____ across the sea and sky. One (6)____ why migration matters is that it keeps whole groups of animals alive. (7)____, if the animals could not move, many of them would not (8)____ the harsh winter. Sadly, illegal (9)____ and the loss of safe habitats now make these journeys more dangerous. We must (10)____ protect the wild places these travellers depend on.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "migration",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "migration 迁徙。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "tickets",
+            "noises",
+            "phenomena"
+          ],
+          "answer_index": 3,
+          "explanation": "phenomena 现象(复数)。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "where",
+            "who",
+            "when",
+            "why"
+          ],
+          "answer_index": 0,
+          "explanation": "lands where food is found 地点先行词用 where。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "season",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "the season when 季节。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "noise",
+            "way",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "find their way 找到路。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "one reason why 一个原因。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Indeed",
+            "However",
+            "Instead",
+            "Otherwise"
+          ],
+          "answer_index": 0,
+          "explanation": "Indeed 的确。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "survive",
+            "break",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "survive the winter 熬过冬天。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "hunting",
+            "ticket"
+          ],
+          "answer_index": 2,
+          "explanation": "illegal hunting 非法狩猎。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "hardly",
+            "rarely",
+            "seldom",
+            "definitely"
+          ],
+          "answer_index": 3,
+          "explanation": "definitely protect 一定保护。"
+        }
+      ]
+    }
+  ]
+}

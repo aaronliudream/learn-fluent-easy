@@ -1,0 +1,332 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Sports",
+  "source": "上外版必修第二册 Unit 4 同主题阅读(乔丹的篮球之爱/点球决战/武术运动员的梦想/团队精神/坚持训练/为什么人们爱运动)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "A Boy Who Fell in Love with Basketball",
+      "body": "When Michael Jordan was young, he was not always the best player on the court. At first he barely remembered the name of the game. Then, little by little, he began to study it. He lifted weights, did pull-ups and worked on his passing, dribbling and shooting again and again. His coach noticed that the boy was starting to fall in love with the sport. Coach Smith taught him not only how to play, but also how to listen to the game, how to respect it and how to appreciate it. One night, in the final seconds of an important championship game, Jordan took a famous shot that gave his team the win. For him, basketball became far more than just a ball, a court or a pair of sneakers. It was his dearest friend, his toughest competitor and his passport around the world. Even after his playing days were over, he said their relationship would never end.",
+      "vocab_notes": [
+        {
+          "word": "competitor",
+          "cn": "对手;竞争者"
+        },
+        {
+          "word": "title",
+          "cn": "冠军"
+        },
+        {
+          "word": "appreciate",
+          "cn": "欣赏"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was Jordan like as a player at first?",
+          "options": [
+            "He was not yet the best and hardly knew the game.",
+            "He was already the greatest in the world.",
+            "He never touched a basketball.",
+            "He hated every kind of sport."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'not always the best' 与 'barely remembered the name' 的转述。"
+        },
+        {
+          "stem": "What did Coach Smith teach Jordan besides playing?",
+          "options": [
+            "How to sell tickets.",
+            "To respect and appreciate the game.",
+            "How to coach other teams.",
+            "To give up when tired."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'how to respect it and how to appreciate it' 的概括。"
+        },
+        {
+          "stem": "What did basketball finally mean to Jordan?",
+          "options": [
+            "Far more than a ball — a lifelong relationship.",
+            "Only a way to make money.",
+            "Just a simple childhood game.",
+            "Something he soon forgot."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'more than just a ball… relationship will never end' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Last Penalty",
+      "body": "The friendly match between Jess's team and the German side had ended in a draw, so the game would be decided by penalties. Jess hoped the match might be settled before her turn came, because her legs were shaking with nerves. One by one the players stepped up. The Germans scored, then Jules scored; the Germans scored again, then Mel scored. When Hannah rolled the ball smoothly into the corner of the net, everything came down to the last German kicker and to Jess. A loud roar around the stadium told Jess that the German player had scored, so she had to take her turn. With heavy steps she walked over and placed the ball on the spot. Behind her she could hear her teammates yelling encouragement. She took a deep breath, made a huge effort and ran towards the ball. But even as she hit it, she knew it was wrong. The ball struck the crossbar and bounced away into the crowd. Her team had lost, and she felt completely gutted.",
+      "vocab_notes": [
+        {
+          "word": "draw",
+          "cn": "平局"
+        },
+        {
+          "word": "spot",
+          "cn": "(点球)点;位置"
+        },
+        {
+          "word": "bounce",
+          "cn": "弹起"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why was the game decided by penalties?",
+          "options": [
+            "Because the referee was angry.",
+            "Because the match had ended level.",
+            "Because one team left early.",
+            "Because it started to rain."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'ended in a draw, so… decided by penalties' 的转述。"
+        },
+        {
+          "stem": "How did Jess feel before taking her kick?",
+          "options": [
+            "Relaxed and certain of success.",
+            "Bored and uninterested.",
+            "Nervous, with her legs shaking.",
+            "Angry at her teammates."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'legs were shaking with nerves' 的概括。"
+        },
+        {
+          "stem": "What happened to Jess's penalty?",
+          "options": [
+            "It rolled into the corner.",
+            "The keeper caught it easily.",
+            "It won the game for her team.",
+            "It hit the crossbar and went out."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'struck the crossbar and bounced away' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Leo's Wushu Dream",
+      "body": "Leo is a young wushu athlete who competes for the Finnish team. Wushu, also known as kung fu, is a Chinese sport. In competitive wushu, athletes perform a set of movements while judges give them points. Leo first got into the sport by watching Chinese kung fu films and admiring stars like Bruce Lee. He has been training for several years and has already won medals at different international championships. Now he wants to go as far as he can, taking part in the European and World Championships and one day, he hopes, the Olympic Games, if wushu is ever added to them. Still, Leo has to be realistic. The top competitors from China and a few other countries are full-time professionals who train for many hours every day. To reach that level, wushu in Finland would also need much more funding. Even so, Leo keeps practising hard, encouraged by his love for the sport.",
+      "vocab_notes": [
+        {
+          "word": "judge",
+          "cn": "裁判员"
+        },
+        {
+          "word": "realistic",
+          "cn": "现实的"
+        },
+        {
+          "word": "professional",
+          "cn": "职业运动员"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How are points given in competitive wushu?",
+          "options": [
+            "By judges who watch the athletes' movements.",
+            "By the size of the crowd.",
+            "By the fastest runner only.",
+            "By the team with most fans."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'judges give them points' 的转述。"
+        },
+        {
+          "stem": "How did Leo first become interested in wushu?",
+          "options": [
+            "A friend forced him to join.",
+            "He watched kung fu films and admired stars.",
+            "He read about it in a textbook.",
+            "His school made it a subject."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'watching Chinese kung fu films and admiring stars' 的转述。"
+        },
+        {
+          "stem": "Why does Leo say he must be realistic?",
+          "options": [
+            "Because he dislikes the sport now.",
+            "Because he has won no medals at all.",
+            "Because top rivals are full-time pros and funding is short.",
+            "Because wushu is too easy for him."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'professionals who train many hours… need much more funding' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Why Team Sport Matters",
+      "body": "Many people think that winning a match is all about one star player, but in team sports the truth is different. A single goal is often the result of many small actions. One player wins the ball, another passes it forward, and a third runs into space to score. If just one of them forgets the team and tries to do everything alone, the move usually breaks down. Good teams also support each other when things go wrong. When a player misses an easy chance, teammates do not shout at him; instead they encourage him to keep his head up and try again. Trust like this is built slowly through hours of training together. That is why a coach spends so much time helping players learn to read one another. In the end, a team that plays as one will often beat a group of talented players who think only about themselves. Sport, in this way, teaches a lesson that reaches far beyond the field.",
+      "vocab_notes": [
+        {
+          "word": "pass",
+          "cn": "传球"
+        },
+        {
+          "word": "encourage",
+          "cn": "鼓励"
+        },
+        {
+          "word": "support",
+          "cn": "支持"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the text, how is a goal usually scored in team sport?",
+          "options": [
+            "By one star doing everything alone.",
+            "Purely by luck.",
+            "Without any passing at all.",
+            "Through several players working together."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'the result of many small actions' 的转述。"
+        },
+        {
+          "stem": "What do good teammates do when a player makes a mistake?",
+          "options": [
+            "They encourage him to try again.",
+            "They leave the field.",
+            "They shout angrily at him.",
+            "They stop the match."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'they encourage him to keep his head up' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main point?",
+          "options": [
+            "Talent alone always wins.",
+            "Teamwork often beats selfish talent.",
+            "Coaches are not needed.",
+            "Winning does not matter at all."
+          ],
+          "answer_index": 1,
+          "explanation": "末段 'a team that plays as one will often beat… selfish' 的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Hours Behind the Title",
+      "body": "When fans watch a champion lift the title, they see only a few wonderful minutes. What they do not see are the years of quiet, hard work behind that moment. Most top athletes train when it is still dark outside and most people are asleep. They repeat the same simple movements thousands of times until the body remembers them without thinking. They follow a careful plan for food, rest and exercise, and they keep going even when they feel exhausted or are slowed down by small injuries. Just as important is the mind. A good athlete learns to stay calm under pressure and to forget a mistake quickly so that it does not affect the next play. None of this looks exciting, and almost no one watches it happen. Yet it is exactly this hidden effort, repeated day after day, that turns an ordinary player into a champion. The title is only the small, bright tip of a very long story.",
+      "vocab_notes": [
+        {
+          "word": "exhausted",
+          "cn": "筋疲力尽的"
+        },
+        {
+          "word": "calm",
+          "cn": "镇静的"
+        },
+        {
+          "word": "effort",
+          "cn": "努力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do fans usually fail to see, according to the text?",
+          "options": [
+            "The final score of the match.",
+            "The colour of the team shirts.",
+            "The years of hard work behind a win.",
+            "The name of the stadium."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'years of quiet, hard work behind that moment' 的转述。"
+        },
+        {
+          "stem": "Besides the body, what else must a top athlete train?",
+          "options": [
+            "Only the voice.",
+            "Nothing else at all.",
+            "Only their luck.",
+            "The mind, so as to keep cool when nervous."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Just as important is the mind… stay calm under pressure' 的转述(改写避免照抄)。"
+        },
+        {
+          "stem": "What does the writer mean by 'the small, bright tip of a very long story'?",
+          "options": [
+            "The visible victory rests on long hidden effort.",
+            "The title is the most important thing.",
+            "Winning takes no effort.",
+            "Stories should be kept short."
+          ],
+          "answer_index": 0,
+          "explanation": "末句以 'hidden effort… turns an ordinary player into a champion' 作铺垫的概括。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Why We Love to Play",
+      "body": "Why do so many people give up their free time to chase a ball around a field? Different players would give different answers. For some, the main pull is the feeling of complete engagement, those moments when time seems to disappear and nothing exists except the game. For others, sport is mostly about friendship: the shared jokes in the changing room and the people you hang out with after every match. Many enjoy the challenge of slowly getting better and beating their own past record. There is also the simple joy of moving, of running fast and feeling strong and alive. Of course, sport has its hard side too. There is the stress before a big game, the pain of an injury, and the disappointment of losing after weeks of effort. Yet most players agree that the good far outweighs the bad. They keep coming back, week after week, because for them a life with sport is simply richer than a life without it.",
+      "vocab_notes": [
+        {
+          "word": "hang out",
+          "cn": "(常)一起消磨时间"
+        },
+        {
+          "word": "challenge",
+          "cn": "挑战"
+        },
+        {
+          "word": "stress",
+          "cn": "压力"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one reason the writer gives for loving sport?",
+          "options": [
+            "The chance to earn lots of money.",
+            "The feeling of being fully engaged in the game.",
+            "Getting out of all school work.",
+            "Never having to train."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'feeling of complete engagement' 的转述。"
+        },
+        {
+          "stem": "Why do some players value sport, according to the text?",
+          "options": [
+            "Because it has no difficulties.",
+            "Because they dislike moving.",
+            "Because of the friendships it builds.",
+            "Because it is always easy to win."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'sport is mostly about friendship' 的转述。"
+        },
+        {
+          "stem": "What does the writer admit about sport?",
+          "options": [
+            "It brings only joy.",
+            "It costs nothing at all.",
+            "No one ever loses.",
+            "It also has stress, injury and disappointment."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'sport has its hard side too… stress… injury… disappointment' 的转述。"
+        }
+      ]
+    }
+  ]
+}

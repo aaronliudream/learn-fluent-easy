@@ -1,0 +1,711 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Nature",
+  "source": "上外版必修第二册 Unit 1 同主题完形(一次林中徒步/阳台上的小花园/海边的拾贝/拯救受伤的鸟/雪后的早晨/班级植树)。用词限本单元/初中/常见词,答案唯一,选项同词性,与阅读/听力关不撞文章。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Walk in the Woods",
+      "text": "Last Sunday my grandfather took me for a long (1)____ in the woods near our village. The morning air was fresh, and tiny (2)____ buzzed quietly among the wild flowers. Grandpa told me to walk slowly and to (3)____ everything around me. He pointed at a (4)____ bird high in a tree and said it was seldom seen these days. He explained that every plant and animal in the forest is (5)____ to the others, like links in a chain. If we (6)____ even one part, he warned, the whole balance could be harmed. I began to feel how (7)____ this living world really was. By the time we walked home, my (8)____ had completely changed; I felt calm and full of (9)____. That quiet walk taught me to (10)____ the beauty of nature far more than before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "walk",
+            "song",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a long walk 一次长途漫步。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "insects",
+            "letters",
+            "prices"
+          ],
+          "answer_index": 1,
+          "explanation": "tiny insects 小昆虫。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sell",
+            "throw",
+            "notice",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "notice everything 留意周围一切。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "cheap",
+            "round",
+            "rare"
+          ],
+          "answer_index": 3,
+          "explanation": "a rare bird 一只稀有的鸟。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "connected",
+            "sold",
+            "lost",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "connected to the others 与其他相连。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "enjoy",
+            "destroy",
+            "buy",
+            "draw"
+          ],
+          "answer_index": 1,
+          "explanation": "destroy one part 破坏一部分。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cheap",
+            "loud",
+            "delicate",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "how delicate 多么脆弱。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "machine",
+            "ticket",
+            "mood"
+          ],
+          "answer_index": 3,
+          "explanation": "my mood changed 我的心情变了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "hope",
+            "anger",
+            "fear",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "full of hope 充满希望。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "appreciate",
+            "sell",
+            "waste"
+          ],
+          "answer_index": 1,
+          "explanation": "appreciate the beauty 欣赏美。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "My Little Balcony Garden",
+      "text": "When my family moved to the city, I missed the green fields of my (1)____ village. So I decided to grow a small garden on our (2)____. At first the work was harder than I had (3)____. The young plants were so (4)____ that a strong wind could break them. I had to learn how much water and sunlight each one (5)____. Slowly, green leaves began to (6)____, and one morning I found that a flower had opened. Bees and other small (7)____ soon came to visit, and the balcony felt alive. Caring for these plants taught me how (8)____ nature really is, even in a busy city. Now, whenever I feel tired or sad, I sit by my garden and my (9)____ lifts at once. A few green plants have brought a piece of (10)____ right into my home.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "loud",
+            "cheap",
+            "native",
+            "frozen"
+          ],
+          "answer_index": 2,
+          "explanation": "native village 故乡的村庄。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "balcony"
+          ],
+          "answer_index": 3,
+          "explanation": "on our balcony 在阳台上。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "expected",
+            "sold",
+            "lost",
+            "thrown"
+          ],
+          "answer_index": 0,
+          "explanation": "harder than I had expected 比预想的难。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "delicate",
+            "cheap",
+            "round"
+          ],
+          "answer_index": 1,
+          "explanation": "so delicate 如此脆弱。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "needed",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "each one needed 各自需要。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "appear"
+          ],
+          "answer_index": 3,
+          "explanation": "leaves began to appear 叶子开始出现。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "insects",
+            "prices",
+            "machines",
+            "letters"
+          ],
+          "answer_index": 0,
+          "explanation": "small insects 小昆虫。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "loud",
+            "essential",
+            "cheap",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "how essential 多么重要。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "mood",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "my mood lifts 心情好起来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "noise",
+            "traffic",
+            "nature"
+          ],
+          "answer_index": 3,
+          "explanation": "a piece of nature 一片自然。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Shells on the Beach",
+      "text": "On a warm summer day, my cousin and I went to (1)____ shells along the quiet beach. The waves were gentle, and the soft light at (2)____ turned the whole sky pink and gold. As we walked, we tried not to (3)____ the small crabs that lived in the wet sand. My cousin, who studies the sea, told me that the beach is a kind of (4)____ where many tiny creatures live together. He said that even rubbish left by people can (5)____ these little animals. So we picked up the plastic bags that other visitors had (6)____ behind. It felt good to leave the beach cleaner than we (7)____ it. By keeping the shore clean, he explained, we help to (8)____ the home of all these creatures. That afternoon I learned that even a (9)____ action can make a real difference. Protecting nature, I now believe, is everybody's (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "collect",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "collect shells 捡贝壳。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "noise",
+            "sunset",
+            "price",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "light at sunset 日落时分的光。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "buy",
+            "sell",
+            "harm",
+            "draw"
+          ],
+          "answer_index": 2,
+          "explanation": "not to harm 不去伤害。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "habitat"
+          ],
+          "answer_index": 3,
+          "explanation": "a kind of habitat 一种栖息地。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "damage",
+            "sell",
+            "enjoy",
+            "draw"
+          ],
+          "answer_index": 0,
+          "explanation": "damage these little animals 伤害这些小动物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "left",
+            "bought",
+            "drawn"
+          ],
+          "answer_index": 1,
+          "explanation": "left behind 留下。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "drew",
+            "found",
+            "threw"
+          ],
+          "answer_index": 2,
+          "explanation": "cleaner than we found it 比我们发现时更干净。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "break",
+            "sell",
+            "lose",
+            "preserve"
+          ],
+          "answer_index": 3,
+          "explanation": "preserve the home 保护家园。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "small",
+            "loud",
+            "cheap",
+            "frozen"
+          ],
+          "answer_index": 0,
+          "explanation": "a small action 一个小举动。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "duty",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "everybody's duty 每个人的责任。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "The Bird with a Hurt Wing",
+      "text": "One cold morning I found a small bird lying on the (1)____ ground beneath a tree. One of its wings had been (2)____, and it could not fly. I felt deep (3)____ for the poor creature, so I gently carried it home. My mother helped me to (4)____ a warm box where it could rest. We were (5)____ that it might be too weak to live, but we did our best. Day by day the bird grew stronger, and we were careful not to (6)____ it from its quiet corner too often. We knew that a wild bird should never spend its life in a (7)____. After two weeks, the wing had healed, and the bird could (8)____ its wings again. On a bright afternoon we carried it outside and let it go. Watching it fly back to (9)____ filled me with joy. Caring for that bird taught me to (10)____ every living thing around me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "loud",
+            "cheap",
+            "frozen",
+            "round"
+          ],
+          "answer_index": 2,
+          "explanation": "the frozen ground 冻硬的地面。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "bought",
+            "drawn",
+            "damaged"
+          ],
+          "answer_index": 3,
+          "explanation": "had been damaged 受了伤。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "concern",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "deep concern 深切的担忧。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "design",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "design a warm box 弄一个暖和的盒子。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loud",
+            "cheap",
+            "afraid",
+            "round"
+          ],
+          "answer_index": 2,
+          "explanation": "were afraid 担心害怕。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sell",
+            "buy",
+            "draw",
+            "remove"
+          ],
+          "answer_index": 3,
+          "explanation": "remove it 把它挪走。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "cage",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "in a cage 在笼子里。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "spread",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 1,
+          "explanation": "spread its wings 展开翅膀。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "noise",
+            "money",
+            "nature",
+            "traffic"
+          ],
+          "answer_index": 2,
+          "explanation": "back to nature 回归自然。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "sell",
+            "waste",
+            "value"
+          ],
+          "answer_index": 3,
+          "explanation": "value every living thing 珍视万物。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Morning After Snow",
+      "text": "When I woke up and looked out of the window, the snow had (1)____ our whole street into a white wonderland. Everything (2)____ looked so different and beautiful. The familiar trees in the (3)____ now wore soft white coats, and the world was wonderfully (4)____. I quickly got dressed and ran outside to (5)____ the fresh, clean air. As I walked, I became more (6)____ of small wonders I usually missed: ice on a leaf, footprints of a bird, light shining on the snow. Such a quiet scene had a deeply (7)____ effect on my mind, and I felt calm and happy. Nature, I thought, can (8)____ an ordinary place into something magical overnight. I took out my phone to take a few (9)____ of the view, but no picture could really hold its beauty. That morning reminded me to (10)____ such simple gifts of the natural world.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "transformed",
+            "sold",
+            "lost",
+            "bought"
+          ],
+          "answer_index": 0,
+          "explanation": "transformed ... into 把……变成。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "familiar",
+            "machine",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "everything familiar 一切熟悉的事物;此处 familiar 修饰 everything。",
+          "_note": "adj"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "landscape",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "trees in the landscape 风景中的树。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "loud",
+            "cheap",
+            "round",
+            "quiet"
+          ],
+          "answer_index": 3,
+          "explanation": "wonderfully quiet 出奇地安静。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "enjoy",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "enjoy the fresh air 享受清新的空气。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "aware",
+            "cheap",
+            "round"
+          ],
+          "answer_index": 1,
+          "explanation": "more aware of 更留意。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "loud",
+            "cheap",
+            "positive",
+            "round"
+          ],
+          "answer_index": 2,
+          "explanation": "a positive effect 积极的影响。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "transform"
+          ],
+          "answer_index": 3,
+          "explanation": "transform a place 改变一个地方。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "photos",
+            "prices",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "take a few photos 拍几张照片。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "waste",
+            "treasure",
+            "sell",
+            "forget"
+          ],
+          "answer_index": 1,
+          "explanation": "treasure such gifts 珍惜这些礼物。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Our Class Plants Trees",
+      "text": "Every spring our class spends one day planting young trees on a bare (1)____ outside the town. Years ago this place was a green forest, but people had (2)____ most of the trees for wood. Without them, the soil grew poor and many animals lost their (3)____. Our teacher told us that planting trees is one way to (4)____ damaged nature. Each of us dug a hole and placed a (5)____ tree inside it with great care. The work was tiring, but we felt (6)____ to be helping the earth. Our teacher said that in many years these trees would grow tall and bring back a healthy (7)____ for birds and insects. She reminded us that nature cannot be (8)____ and that real change takes time. Even so, every small tree we planted was a (9)____ of hope. I now understand that protecting the natural world is the (10)____ of us all.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "hillside",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a bare hillside 光秃秃的山坡。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "bought",
+            "drawn",
+            "cut"
+          ],
+          "answer_index": 3,
+          "explanation": "cut most of the trees 砍掉大部分树。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "homes",
+            "prices",
+            "noises",
+            "machines"
+          ],
+          "answer_index": 0,
+          "explanation": "lost their homes 失去家园。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "restore",
+            "lose",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "restore damaged nature 修复受损的自然。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "loud",
+            "cheap",
+            "young",
+            "frozen"
+          ],
+          "answer_index": 2,
+          "explanation": "a young tree 一棵小树。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "cheap",
+            "round",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "felt proud 感到自豪。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "habitat",
+            "price",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "a healthy habitat 健康的栖息地。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "rushed",
+            "bought",
+            "drawn"
+          ],
+          "answer_index": 1,
+          "explanation": "cannot be rushed 不能急于求成。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "noise",
+            "sign",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "a sign of hope 希望的象征。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "duty"
+          ],
+          "answer_index": 3,
+          "explanation": "the duty of us all 我们所有人的责任。"
+        }
+      ]
+    }
+  ]
+}

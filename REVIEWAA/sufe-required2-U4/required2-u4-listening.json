@@ -1,0 +1,421 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Sports",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第二册 Unit 4 同主题听力(选哪项运动/运动的好处/赛前对话/坚持训练/球迷看球/给新手的小贴士)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Which Sport to Try",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Mia: The school sports club is looking for new members. Which sport will you try, Tom?",
+        "Tom: I think I'll try football. I love the feeling of running and passing with a team.",
+        "Mia: Football is great. Don't you get nervous before a big match?",
+        "Tom: A little, but the coach always gives us a pep talk to calm us down.",
+        "Mia: I'd rather join the wushu group myself.",
+        "Tom: Wushu? Why is that?",
+        "Mia: I started watching kung fu films as a child, and I've admired the athletes ever since.",
+        "Tom: That's a great reason. Let's both sign up today!"
+      ],
+      "translation_cn": "Mia 问 Tom 想加入哪项运动;Tom 想踢足球,喜欢和队友奔跑、传球的感觉;赛前会有点紧张,但教练会做赛前动员让大家镇定;Mia 想加入武术组,因为小时候看功夫电影、一直仰慕武术运动员;两人决定当天就报名。",
+      "questions": [
+        {
+          "stem": "Which sport does Tom want to try?",
+          "options": [
+            "Football.",
+            "Wushu.",
+            "Tennis.",
+            "Swimming."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Tom like that sport?",
+          "options": [
+            "It needs no training.",
+            "He loves running and passing with a team.",
+            "It is played alone.",
+            "It costs no money."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What helps Tom calm down before a big match?",
+          "options": [
+            "The coach's pep talk.",
+            "A long sleep.",
+            "A cup of tea.",
+            "Loud music."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which group does Mia want to join?",
+          "options": [
+            "The football team.",
+            "The wushu group.",
+            "The running club.",
+            "The swimming team."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why is Mia interested in that sport?",
+          "options": [
+            "Her teacher forced her to.",
+            "It is the easiest sport.",
+            "She has admired the athletes since watching kung fu films.",
+            "She wants to avoid football."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 Why Sport Is Good for Us",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Doing sport is good for both the body and the mind.",
+        "Regular exercise makes the body stronger and helps people sleep better.",
+        "Sport also teaches us how to stay calm under pressure.",
+        "When we play in a team, we learn to trust and support one another.",
+        "Most importantly, sport can turn a hard day into a happy one."
+      ],
+      "translation_cn": "运动对身心都有益;经常锻炼让身体更强壮、睡得更好;运动还教我们在压力下保持镇静;团队运动让我们学会信任、互相支持;最重要的是,运动能把糟糕的一天变成快乐的一天。",
+      "questions": [
+        {
+          "stem": "What is sport good for?",
+          "options": [
+            "Only the body.",
+            "Only the mind.",
+            "Neither of them.",
+            "Both the body and the mind."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does regular exercise help people do?",
+          "options": [
+            "Sleep better and grow stronger.",
+            "Sleep less.",
+            "Feel weaker.",
+            "Eat less food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does sport teach us about pressure?",
+          "options": [
+            "To run away from it.",
+            "To stay calm under it.",
+            "To shout loudly.",
+            "To give up at once."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do we learn by playing in a team?",
+          "options": [
+            "To play alone.",
+            "To win at any cost.",
+            "To trust and support one another.",
+            "To ignore others."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "According to the passage, what can sport do to a hard day?",
+          "options": [
+            "Make it longer.",
+            "Make it worse.",
+            "Have no effect at all.",
+            "Turn it into a happy one."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Before the Penalties",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Coach Joe: The match ended in a draw, so we go to penalties. Stay calm, everyone.",
+        "Jess: I'm so nervous, Joe. My legs are still shaking.",
+        "Coach Joe: Take a few deep breaths. You've trained hard for this all season.",
+        "Jess: What if I miss? I don't want to let the team down.",
+        "Coach Joe: Just look at the goal, pick your spot, and trust your foot.",
+        "Jess: All right. Who goes first?",
+        "Coach Joe: Jules goes first, then Mel, then you. The fans are right behind you.",
+        "Jess: Thanks, Joe. I'll do my best."
+      ],
+      "translation_cn": "比赛打平进入点球;教练 Joe 让大家保持镇定;Jess 很紧张,腿还在抖;Joe 让她深呼吸,说她整个赛季都刻苦训练;Jess 怕罚丢让球队失望;Joe 让她看着球门、选好角度、相信自己的脚;主罚顺序是 Jules、Mel、然后 Jess;球迷都在身后支持她。",
+      "questions": [
+        {
+          "stem": "Why does the team go to penalties?",
+          "options": [
+            "The match ended in a draw.",
+            "The coach was angry.",
+            "It started to rain.",
+            "A player was injured."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Jess feel before the penalties?",
+          "options": [
+            "Calm and confident.",
+            "Very nervous, with shaking legs.",
+            "Bored and sleepy.",
+            "Angry at the coach."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Joe tell Jess to do to calm down?",
+          "options": [
+            "Run faster.",
+            "Shout at the crowd.",
+            "Take a few deep breaths.",
+            "Leave the field."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Jess afraid of?",
+          "options": [
+            "Winning the game.",
+            "Running too fast.",
+            "The loud crowd.",
+            "Letting the team down."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "In what order will the players shoot?",
+          "options": [
+            "Jules, Mel, then Jess.",
+            "Jess first, then Jules.",
+            "Mel, Jess, then Jules.",
+            "Only Joe will shoot."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 The Hours Behind a Champion",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When we watch a champion win a title, we see only a few bright minutes.",
+        "Behind that moment lie years of quiet, hard work.",
+        "Most top athletes train early in the morning while others are still asleep.",
+        "They repeat the same movements thousands of times until the body remembers them.",
+        "It is this hidden effort that turns an ordinary player into a champion."
+      ],
+      "translation_cn": "当我们看到冠军夺冠时,只看到了几分钟的高光;那一刻背后是多年默默的苦练;大多数顶尖运动员在别人还睡着的清晨就开始训练;他们把同样的动作重复成千上万次,直到身体记住;正是这种看不见的努力,让普通球员变成冠军。",
+      "questions": [
+        {
+          "stem": "What do people usually see when a champion wins?",
+          "options": [
+            "All the years of training.",
+            "Only a few bright minutes.",
+            "The athlete's whole life.",
+            "Nothing at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What lies behind that winning moment?",
+          "options": [
+            "Pure luck.",
+            "A single easy day.",
+            "Years of quiet, hard work.",
+            "Other people's help only."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When do most top athletes train?",
+          "options": [
+            "Late at night only.",
+            "Never in the morning.",
+            "Only on match days.",
+            "Early, while others are asleep."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Why do they repeat the same movements so many times?",
+          "options": [
+            "Until the body remembers them.",
+            "To waste time.",
+            "To make the crowd happy.",
+            "Because the coach is bored."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What turns an ordinary player into a champion?",
+          "options": [
+            "Good luck alone.",
+            "Hidden, repeated effort.",
+            "A new pair of shoes.",
+            "Watching others play."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 A Fan at the Match",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Liam: This is my first time watching live football. The stadium is huge!",
+        "Sara: I know. Wait until our team scores. The whole crowd roars together.",
+        "Liam: Why do you always wear the team's colours to the match?",
+        "Sara: To support the players. They say our voices help them fight harder.",
+        "Liam: Look, our striker is about to shoot!",
+        "Sara: Go on, go on... Yes! It's in the net!",
+        "Liam: Wow, everyone is screaming. I've never felt anything like this.",
+        "Sara: That's why I love coming. Watching at home is just not the same."
+      ],
+      "translation_cn": "Liam 第一次现场看球,觉得球场很大;Sara 说进球时全场会一起轰鸣;Liam 问她为何总穿队服来;Sara 说是为支持球员,据说球迷的呐喊能让他们更拼;前锋准备射门,球进了网;全场尖叫,Liam 从未有过这种感受;Sara 说这就是她爱来现场的原因,在家看完全不一样。",
+      "questions": [
+        {
+          "stem": "What is special about today for Liam?",
+          "options": [
+            "He is playing in the match.",
+            "He is the coach.",
+            "It is his first live football match.",
+            "He sells the tickets."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why does Sara wear the team's colours?",
+          "options": [
+            "Because it is cold.",
+            "Because she lost a bet.",
+            "To hide from the crowd.",
+            "To support the players."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Sara say the fans' voices can do?",
+          "options": [
+            "Help the players fight harder.",
+            "Stop the match.",
+            "Make the players tired.",
+            "Change the rules."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens when the striker shoots?",
+          "options": [
+            "The ball misses.",
+            "The ball goes into the net.",
+            "The keeper catches it.",
+            "The referee stops play."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does Sara love coming to the stadium?",
+          "options": [
+            "The tickets are free.",
+            "There is no noise.",
+            "Watching at home is just not the same.",
+            "She dislikes football."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Tip for New Players",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who is new to a sport.",
+        "Do not be afraid to make mistakes when you are learning.",
+        "Every player, even a champion, missed many shots at the start.",
+        "If you fall, get up, take a deep breath, and try again.",
+        "Step by step, hard practice will turn today's beginner into tomorrow's star."
+      ],
+      "translation_cn": "给运动新手一个小贴士:学习时别怕犯错;每个球员,哪怕是冠军,起步时也投失过许多球;如果摔倒了,就站起来、深吸一口气、再试一次;一步一步,刻苦练习会把今天的新手变成明天的明星。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only coaches.",
+            "Only champions.",
+            "Only referees.",
+            "Anyone new to a sport."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say about mistakes?",
+          "options": [
+            "Do not be afraid of them when learning.",
+            "Avoid the sport completely.",
+            "Mistakes are useless.",
+            "Never play again."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What did even champions do at the start?",
+          "options": [
+            "Win every game.",
+            "Miss many shots.",
+            "Never touch a ball.",
+            "Quit at once."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do if you fall?",
+          "options": [
+            "Stop playing forever.",
+            "Blame your team.",
+            "Get up, breathe, and try again.",
+            "Sit and wait."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What will hard practice do, step by step?",
+          "options": [
+            "Make sport boring.",
+            "Waste your time.",
+            "Make you give up.",
+            "Turn a beginner into a star."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

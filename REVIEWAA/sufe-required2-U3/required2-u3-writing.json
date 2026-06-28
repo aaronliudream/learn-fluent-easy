@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Giving Advice about Dining in China(给外国学生写一篇关于在中国就餐的短文)",
+  "title_en": "Dining in China: My Advice to Foreign Students",
+  "genre": "说明文 / 建议短文(introduce a food or dining custom + cross-cultural comparison + explanation)",
+  "source": "上外版必修第二册 Unit 3 Moving Forward:为留学生手册 Section 2《Foods and Dining Customs》写一篇 90 词以内的文章——介绍一项中国饮食/就餐习俗、举可能造成文化冲击的例子、做跨文化比较并解释原因。",
+  "prompt_cn": "假设你是李华,你校学生会正在为来访的外国学生编写《在中国如何应对文化冲击》手册的《饮食与就餐习俗》栏目。请用英语写一篇约90词的短文,内容包括:① 简要介绍一项中国的食物或就餐习俗(如:共享菜肴、用筷子、不吃光碗里的饭);② 举一个可能让外国人感到文化冲击的例子;③ 做跨文化比较并简单解释原因。注意:用 -ing/-ed 作定语的表达,行文连贯。",
+  "prompt_en": "Suppose you are Li Hua. Your Students' Union is preparing a brochure to help visiting foreign students deal with culture shock in China. Write a short article (about 90 words) for the 'Foods and Dining Customs' section, including: 1) a brief introduction to one Chinese food or dining custom (e.g. sharing dishes, using chopsticks, not finishing your bowl); 2) one example that might cause culture shock; 3) a cross-cultural comparison with a simple explanation.",
+  "points": [
+    "介绍一项习俗(In China, it is common to … / One typical custom is …)",
+    "举可能造成文化冲击的例子(This may surprise visitors who …)",
+    "跨文化比较 + 解释(In many Western countries …, while in China …, because …)",
+    "用 -ing/-ed 作定语(shared dishes / steaming bowls of rice),行文连贯"
+  ],
+  "word_count": "90 词左右",
+  "model_essay": "In China, people usually share the dishes placed in the middle of the table, while each person has a small bowl of steamed rice. This may surprise foreign students who are used to having their own separate plate. Another custom is that you need not finish every grain in your bowl. In many Western countries, cleaning your plate shows respect, but in China leaving a little food means you are pleasantly full. Understanding these differences will help you relax and enjoy every shared, home-cooked meal with your Chinese friends.",
+  "model_translation": "在中国,人们通常共享摆在桌子中间的菜肴,而每个人面前有一小碗蒸米饭。这可能会让习惯各自一份盘子的外国学生感到意外。另一个习俗是:你不必吃光碗里的每一粒米。在许多西方国家,吃光盘子表示尊重,但在中国留一点食物意味着你已愉快地吃饱了。理解这些差异会帮助你放松下来,和中国朋友一起享受每一顿共享的、家常的饭菜。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:介绍习俗 / 文化冲击例子 / 跨文化比较与解释" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一项习俗展开、句句相关、对比清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing/-ed 作定语运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "介绍习俗 In China, people usually …",
+      "文化冲击 This may surprise visitors who …",
+      "比较 In many Western countries …, but in China …",
+      "解释/收尾 Understanding these differences will help you …"
+    ],
+    "key_expressions": [
+      "In China, people usually share the dishes placed in the middle of the table.",
+      "Each person has a small bowl of steamed rice.",
+      "Leaving a little food means you are pleasantly full.",
+      "Understanding these differences will help you enjoy every shared meal."
+    ],
+    "useful_words": ["share", "dish", "custom", "chopsticks", "steamed", "host", "polite", "satisfied", "compare", "culture"]
+  },
+  "high_sentences": [
+    "In China, people usually share the dishes placed in the middle of the table.",
+    "This may surprise foreign students who are used to having their own separate plate.",
+    "In many Western countries, cleaning your plate shows respect, but in China leaving a little food means you are pleasantly full.",
+    "Understanding these differences will help you enjoy every shared, home-cooked meal."
+  ],
+  "error_pairs": [
+    { "wrong": "the dishes placing in the middle", "correct": "the dishes placed in the middle", "note": "菜被摆放,被动 → 过去分词 placed 作定语。" },
+    { "wrong": "a bowl of steaming rice for eat", "correct": "a bowl of steamed rice", "note": "米被蒸熟(被动/已完成)→ steamed;强调正在冒气才用 steaming。" },
+    { "wrong": "leaving a little food mean you are full", "correct": "leaving a little food means you are full", "note": "动名词短语作主语视为单数,谓语用 means。" }
+  ],
+  "paragraph_template": "【在中国就餐建议短文结构】\n第1句 介绍习俗:In China, people usually …\n第2句 文化冲击:This may surprise visitors who …\n第3句 跨文化比较:In many Western countries …, but in China …\n第4句 解释/收尾:Understanding these differences will help you …"
+}

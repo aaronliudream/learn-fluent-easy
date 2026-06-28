@@ -1,0 +1,48 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Many rare plants are now close to extinction.", "opts": ["许多稀有植物如今濒临灭绝。", "许多城市的人口正在增长。", "许多孩子喜欢去公园玩。", "许多商店今天都关门了。"], "answer": 0 },
+    { "audio": "We must protect nature for future generations.", "opts": ["我们应该多读一些好书。", "我们必须为子孙后代保护自然。", "我们打算周末去爬山。", "我们需要更努力地学习。"], "answer": 0 },
+    { "audio": "The balance of nature is delicate and easy to break.", "opts": ["这本书又长又难懂。", "天气一整天都很晴朗。", "自然的平衡很脆弱,容易被打破。", "这条河里有很多鱼。"], "answer": 0 },
+    { "audio": "Time in nature has a positive effect on our minds.", "opts": ["亲近自然对我们的心灵有积极影响。", "城市里的交通非常拥挤。", "他每天都录下自己的声音。", "这些花原产于这个地区。"], "answer": 0 },
+    { "audio": "It is cruel to keep wild animals in small cages.", "opts": ["把野生动物关在小笼子里很残忍。", "这座动物园离市中心很远。", "孩子们正在公园里植树。", "蜜蜂帮助植物结出果实。"], "answer": 0 },
+    { "audio": "Even a badly damaged river can be restored with care.", "opts": ["即使严重受损的河流也能被精心修复。", "她最大的困难是听力。", "森林里住着许多稀有的鸟。", "我们应该把垃圾带回家。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "The protection of the natural environment is called ____.", "opts": ["conservation", "location", "establishment", "generation"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Animals in a zoo must ____ to a climate that is not their own.", "opts": ["adjust", "destroy", "exhibit", "argue"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Clean water is ____ for every living thing.", "opts": ["essential", "cruel", "romantic", "frozen"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Pollution is a serious ____ to wild plants and animals.", "opts": ["threat", "balance", "mood", "cage"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "The young man ____ explained the mystery had grown up near the gardens.", "opts": ["who", "which", "whose", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The old tree ____ stood in the middle of the gardens was cut down.", "opts": ["which", "who", "whom", "whose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The king offered a reward to anyone ____ solution would be effective.", "opts": ["whose", "who", "which", "where"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "These were the bones on ____ ancient symbols had been carved.", "opts": ["which", "that", "whom", "whose"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["保护蜜蜂就是保护一个健康的世界。", "他想学一门外语。", "这幅画挂在大厅里。", "他们约定八点见面。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Protecting bees means protecting a healthy world for us all." },
+    { "q": "听句子选中文:", "opts": ["恢复自然需要很多年。", "她每天听英语广播。", "这只鸟的翅膀受伤了。", "动物园展出来自各地的动物。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Restoring nature takes many years." }
+  ],
+  "reading": {
+    "passage": "Every spring our class plants young trees on a bare hillside that people once cut for wood. The work is tiring, but we feel proud to be helping the earth. Our teacher says nature cannot be rushed, yet every small tree is a sign of hope.",
+    "passageCn": "每年春天,我们班都会在一片曾被人砍光取材的光秃山坡上种小树。劳动很累,但能为地球出力让我们感到自豪。老师说自然不能急于求成,但每一棵小树都是希望的象征。",
+    "questions": [
+      { "q": "What had people once done to the hillside?", "opts": ["Cut its trees for wood.", "Built houses on it.", "Turned it into a lake.", "Covered it with stones."], "answer": 0 },
+      { "q": "How do the students feel about the work?", "opts": ["Proud to be helping the earth.", "Angry and bored.", "Afraid of the trees.", "Sorry they started."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write about 80 words describing a scene in nature you like, in spatial order (from near to far). End with how it makes you feel.",
+    "promptCn": "用约80词按空间顺序(由近及远)描写一处你喜欢的自然景色,结尾写出它给你的感受。",
+    "sampleWords": ["stream", "grassland", "in front of", "on the left", "in the distance", "bank", "sunset", "glow", "landscape", "peaceful"]
+  },
+  "dialogues": [
+    {
+      "title": "A Plan to Go Hiking",
+      "lines": [
+        { "role": "A", "text": "Are you free this Saturday? I'm planning to go hiking in the hills.", "cn": "这周六你有空吗?我打算去山里爬山。" },
+        { "role": "B", "text": "That sounds great. I really need some time in nature.", "cn": "听起来太好了。我真的需要一些亲近自然的时间。" },
+        { "role": "A", "text": "Let's be quiet so we don't frighten the animals.", "cn": "我们小声点,免得惊扰了动物。" },
+        { "role": "B", "text": "Good idea. And we must take all our rubbish home.", "cn": "好主意。还有,我们得把垃圾全带回家。" }
+      ]
+    }
+  ]
+}

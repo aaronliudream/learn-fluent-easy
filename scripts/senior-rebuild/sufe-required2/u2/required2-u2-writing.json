@@ -1,0 +1,52 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Feeding Homeless Cats: Helping or Hurting?(校园喂流浪猫:帮助还是伤害?)",
+  "title_en": "An Opinion Paragraph on Feeding Homeless Cats",
+  "genre": "议论 / 观点段落(express your opinion with cohesive devices)",
+  "source": "上外版必修第二册 Unit 2 Moving Forward:write an opinion paragraph on feeding homeless cats on campus(70-90 words,使用衔接手段)。",
+  "prompt_cn": "近来有些流浪猫常在你们校园出没。请用英语写一篇约80词的观点段落,内容包括:① 清楚表明你的观点(支持还是反对在校园喂流浪猫);② 给出一到两条理由或事实;③ 提出一个更妥当的做法(如联系动物救助中心)。注意:用 moreover、however、as a result 等衔接词把句子连起来,代词指代清楚。",
+  "prompt_en": "Some homeless cats often appear on your campus. Write an opinion paragraph (about 80 words) including: 1) a clear statement of your opinion (for or against feeding homeless cats on campus); 2) one or two reasons or facts; 3) a better way to deal with the problem (e.g. contacting an animal rescue centre). Use cohesive devices such as moreover, however and as a result, and make your pronouns clear.",
+  "points": [
+    "清楚表明观点(In my opinion … / I believe …)",
+    "给出理由或事实(One reason is … / Moreover …)",
+    "提出更妥当的做法(A better way is to … / Instead, we could …)",
+    "用衔接词连句、代词指代清楚"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "In my opinion, simply feeding homeless cats on campus is not the best way to help them. It is true that the thin cats look hungry, and walking past them feels cruel. However, if students feed the cats every day, more and more of them may gather, and the campus could become crowded and dirty. As a result, both the cats and the students might suffer. A better way is to contact a local animal rescue centre. The workers there can check the cats' health and find them safe homes. In this way, we are truly kind to the animals.",
+  "model_translation": "在我看来,只是单纯在校园里喂流浪猫并不是帮助它们的最好办法。诚然,那些瘦弱的猫看起来很饿,从它们身边走过会让人觉得残忍。然而,如果学生们每天都喂猫,会有越来越多的猫聚过来,校园可能变得拥挤又脏乱。结果,猫和学生都可能受影响。更好的办法是联系本地的动物救助中心。那里的工作人员可以检查猫的健康,并为它们找到安全的家。这样,我们才是真正善待动物。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:明确观点 / 理由或事实 / 更妥当的做法" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一个观点展开、衔接词使用恰当、代词指代清楚、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、定语从句/衔接词运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "表明观点 In my opinion, feeding homeless cats … is not the best way.",
+      "让步 It is true that …",
+      "转折理由 However, if students feed them every day, …",
+      "提出做法 A better way is to contact a rescue centre."
+    ],
+    "key_expressions": [
+      "In my opinion, feeding homeless cats on campus is not the best way to help them.",
+      "However, more and more cats may gather, and the campus could become crowded and dirty.",
+      "A better way is to contact a local animal rescue centre.",
+      "In this way, we are truly kind to the animals."
+    ],
+    "useful_words": ["homeless", "feed", "campus", "moreover", "however", "rescue", "centre", "crowded", "welfare", "kind"]
+  },
+  "high_sentences": [
+    "In my opinion, simply feeding homeless cats on campus is not the best way to help them.",
+    "However, if students feed the cats every day, more and more of them may gather.",
+    "A better way is to contact a local animal rescue centre that can find them safe homes.",
+    "In this way, we are truly kind to the animals."
+  ],
+  "error_pairs": [
+    { "wrong": "More and more cats may gathers.", "correct": "More and more cats may gather.", "note": "情态动词 may 后用动词原形,不加 s。" },
+    { "wrong": "It is a centre where can check the cats.", "correct": "It is a centre where the workers can check the cats.", "note": "where 引导的从句不缺主语,需补出主语 the workers。" },
+    { "wrong": "The reason why is the campus get dirty.", "correct": "The reason why we worry is that the campus gets dirty.", "note": "reason why 后的从句要完整(主谓齐全),表语用 that 从句。" }
+  ],
+  "paragraph_template": "【喂流浪猫观点段结构】\n第1句 观点:In my opinion, … is not the best way / is a good thing.\n第2句 让步:It is true that …\n第3-4句 理由:However, if … , more cats may gather … As a result, …\n第5-6句 做法:A better way is to contact a rescue centre … In this way, …"
+}

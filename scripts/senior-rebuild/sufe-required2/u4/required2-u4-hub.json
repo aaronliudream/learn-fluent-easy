@@ -1,0 +1,49 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "Millions of fans watched the final match on television.", "opts": ["数百万球迷在电视上观看了那场决赛。", "球场上一个观众也没有。", "比赛被取消了。", "决赛在早上举行。"], "answer": 0 },
+    { "audio": "Encouraged by the coach, the players kept fighting to the end.", "opts": ["球员们提前离开了球场。", "在教练的鼓励下,球员们坚持拼到最后。", "教练对球员很生气。", "球员们都坐下休息了。"], "answer": 1 },
+    { "audio": "The match ended in a draw, so they went to penalties.", "opts": ["主队大比分获胜。", "客队提前认输。", "比赛打成平局,于是进入点球。", "比赛因下雨停止。"], "answer": 2 },
+    { "audio": "Having trained hard all winter, the team was ready for the season.", "opts": ["球队解散了。", "球队换了新教练。", "球队从不训练。", "整个冬天刻苦训练后,球队为赛季做好了准备。"], "answer": 3 },
+    { "audio": "She took a deep breath before stepping up to take the penalty.", "opts": ["主罚点球前,她深吸了一口气。", "她拒绝主罚点球。", "她在场边睡着了。", "她把球踢出了场外。"], "answer": 0 },
+    { "audio": "Thousands of spectators came to support their home team.", "opts": ["看台上空无一人。", "成千上万的观众前来支持主队。", "观众都在为客队加油。", "比赛没有观众观看。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Winning the title was the ultimate ____ of every player on the team.", "opts": ["dream", "price", "noise", "machine"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "When the final whistle blew, the players felt great ____.", "opts": ["price", "relief", "noise", "machine"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The ball hit the crossbar and ____ away into the crowd.", "opts": ["sold", "ate", "bounced", "slept"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "He scored the winning ____ in the last minute of the game.", "opts": ["price", "noise", "song", "goal"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "____ fast down the wing, he passed the ball into the net.", "opts": ["Running", "Run", "To run", "Ran"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "____ by the cheering fans, the players kept fighting to the end.", "opts": ["Encourage", "Encouraged", "Encouraging", "To encourage"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ deep breaths, the player tried to calm herself down.", "opts": ["Taken", "To take", "Taking", "Take"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "____ from the high stand, the green pitch looked perfect.", "opts": ["Seeing", "See", "To see", "Seen"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["他在最后一分钟攻入了制胜进球。", "他错失了一个点球。", "他坐在替补席上。", "他卖掉了门票。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He scored the winning goal in the last minute of the game." },
+    { "q": "听句子选中文:", "opts": ["体育场里空无一人。", "体育场里一声巨大的轰鸣告诉她进球了。", "比赛被取消了。", "她离开了体育场。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "A loud roar around the stadium told her that the goal had gone in." }
+  ],
+  "reading": {
+    "passage": "In team sports, a single goal is often the result of many small actions: one player wins the ball, another passes it, and a third runs into space to score. Good teammates also support each other when things go wrong, encouraging a player who misses instead of shouting at him. That is why a team playing as one can beat a group of talented players who think only about themselves.",
+    "passageCn": "在团队运动中,一个进球往往是许多小动作的结果:一名球员抢到球,另一名传球,第三名插入空当射门。优秀的队友在出问题时也会互相支持,鼓励失误的球员而不是责骂他。这就是为什么一支齐心协力的球队能击败一群只想着自己的天才球员。",
+    "questions": [
+      { "q": "How is a goal often scored in team sport?", "opts": ["Through several players working together.", "By one player doing everything alone.", "Purely by luck.", "Without any passing."], "answer": 0 },
+      { "q": "What do good teammates do when someone misses?", "opts": ["They leave the field.", "They shout at him.", "They encourage him.", "They stop the game."], "answer": 2 },
+      { "q": "What is the main point?", "opts": ["Talent alone always wins.", "Teamwork can beat selfish talent.", "Coaches are not needed.", "Winning does not matter."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a sport you love. Use chronological order and at least one -ing or -ed adverbial (such as 'Training hard, I ...' or 'Encouraged by my coach, I ...').",
+    "promptCn": "用3-4句话写一项你喜爱的运动:按时间顺序展开,并至少用一个 -ing 或 -ed 作状语(如 'Training hard, I …' 或 'Encouraged by my coach, I …')。",
+    "sampleWords": ["remember", "field", "train", "calm", "teammate", "goal", "victory", "encourage", "challenge", "love"]
+  },
+  "dialogues": [
+    {
+      "title": "After the Big Match",
+      "lines": [
+        { "role": "A", "text": "What a game! I almost screamed when we scored in the last minute.", "cn": "多精彩的比赛!最后一分钟进球时我差点叫出来。" },
+        { "role": "B", "text": "Me too. Encouraged by the crowd, the players never gave up.", "cn": "我也是。在观众的鼓励下,球员们从未放弃。" },
+        { "role": "A", "text": "The goalkeeper was amazing. He must have trained really hard.", "cn": "门将太棒了,他一定训练得非常刻苦。" },
+        { "role": "B", "text": "Definitely. Let's come back next week and support them again.", "cn": "当然。我们下周再来,继续支持他们吧。" }
+      ]
+    }
+  ]
+}

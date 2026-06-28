@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grammar_title": "定语从句1(who/whom/that/which/whose)",
+  "source": "上外版必修第二册 Unit 1 Grammar in Use:限制性定语从句(who/whom/that/which/whose)。句子地道、自然/动物主题、答案唯一(选项排除其他成立项),零术语应用题。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "who / whom(指人)",
+      "overview": "先行词指人:从句缺主语用 who;从句缺宾语用 whom(口语/非正式也可 who),不可用 which。"
+    },
+    {
+      "code": "u1.02",
+      "point": "which / that(指物)",
+      "overview": "先行词指物(限制性定语从句):缺主语或宾语用 which 或 that,不可用 who/whose。"
+    },
+    {
+      "code": "u1.03",
+      "point": "whose(所属)· 介词 + which / whom",
+      "overview": "表所属关系(……的)用 whose + 名词,指人指物皆可;关系词作介词宾语提前时,指物用「介词+which」、指人用「介词+whom」,介词后不可用 that。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "The young man ____ explained the mystery had grown up near the king's gardens.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 man 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "It was a wise nobleman ____ first noticed that the gardens were empty.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 nobleman 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "People ____ love nature often feel calm when they walk in a forest.",
+      "options": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 people 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Scientists ____ study wild animals warn us about the loss of species.",
+      "options": [
+        "which",
+        "whose",
+        "where",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 scientists 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The farmer ____ planted the old tree saved the beauty of the gardens.",
+      "options": [
+        "who",
+        "which",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 farmer 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Children ____ spend time outdoors learn to care about nature.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 children 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The expert ____ the reporter spoke to studies the balance of nature.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 expert 指人、从句缺宾语(spoke to ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The guide ____ we met at the zoo knows every animal by name.",
+      "options": [
+        "which",
+        "whose",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 guide 指人、从句缺宾语(met ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The advisers ____ the king sent for could not solve the problem.",
+      "options": [
+        "whom",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 advisers 指人、从句缺宾语(sent for ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The volunteers ____ work at the park help to protect rare birds.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 volunteers 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "He is the only person ____ truly understands how the forest lives.",
+      "options": [
+        "which",
+        "where",
+        "who",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 person 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The poet ____ many readers admire wrote about the beauty of spring.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 poet 指人、从句缺宾语(admire ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The neighbours ____ care for the woods often plant new trees there.",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 neighbours 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "A gardener ____ loves plants will treat every flower with care.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 gardener 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The friends ____ I invited to the lake enjoyed watching the wild ducks.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "where"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 friends 指人、从句缺宾语(invited ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The students ____ the teacher praised had cleaned up the river bank.",
+      "options": [
+        "which",
+        "whose",
+        "where",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 students 指人、从句缺宾语(praised ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The king listened to the man ____ everyone else had laughed at.",
+      "options": [
+        "whom",
+        "which",
+        "whose",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 man 指人、从句缺宾语(laughed at ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The workers ____ built the new park left a space for the trees.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 workers 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The travellers ____ we guided through the woods saw a family of deer.",
+      "options": [
+        "which",
+        "where",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 travellers 指人、从句缺宾语(guided ___)→ whom。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Anyone ____ destroys a forest may harm the balance of nature.",
+      "options": [
+        "which",
+        "where",
+        "whose",
+        "who"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 anyone 指人、从句缺主语 → who。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The old tree ____ stood in the middle of the gardens was cut down.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 tree 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The plants ____ grow here are native to this part of the world.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 plants 指物、从句缺主语 → that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The garden ____ the king destroyed could not be restored quickly.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 garden 指物、从句缺宾语(destroyed ___)→ which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The river ____ flows past our town is home to many fish.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 river 指物、从句缺主语 → that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "These are the moths ____ keep the whole garden alive and colourful.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 moths 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The book ____ I read described how nature keeps its balance.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 book 指物、从句缺宾语(read ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The forests ____ once covered this area have now been destroyed.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 forests 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The flowers ____ the children picked soon withered in the sun.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 flowers 指物、从句缺宾语(picked ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The lake ____ lies beyond the hills freezes hard every winter.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 lake 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The painting ____ shows a snowy landscape hangs in the hall.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 painting 指物、从句缺主语 → that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The seeds ____ the wind carried away grew into tall trees.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 seeds 指物、从句缺宾语(carried ___)→ which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The rare bird ____ we saw at dawn has almost disappeared.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 bird 指物(动物)、从句缺宾语(saw ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The fountains ____ replaced the old tree looked beautiful at first.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 fountains 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The story ____ the young man told changed the way the king thought.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 story 指物、从句缺宾语(told ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The mountains ____ surround the valley keep it warm in spring.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 mountains 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The food ____ the animals could not find in the zoo was easy to get in the wild.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 food 指物、从句缺宾语(find ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The clouds ____ gathered above the sea soon turned the sky grey.",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 0,
+      "explanation": "先行词 clouds 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The habitat ____ the new park created saved several rare species.",
+      "options": [
+        "who",
+        "that",
+        "whom",
+        "whose"
+      ],
+      "answer_index": 1,
+      "explanation": "先行词 habitat 指物、从句缺宾语(created ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The wild grass ____ covers the field turns golden in autumn.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "先行词 grass 指物、从句缺主语 → which(也可 that)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The photos ____ she took of the sunset filled the whole album.",
+      "options": [
+        "who",
+        "whom",
+        "whose",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "先行词 photos 指物、从句缺宾语(took ___)→ that(也可 which)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The king offered a reward to anyone ____ solution would be effective.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(……的 solution)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We protect animals ____ homes have been destroyed by pollution.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "whom"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(动物的 homes)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "These were the bones on ____ ancient symbols had been carved.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 on 后指物 → which(不可用 that)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He is the scientist to ____ the rare plant was first sent.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 to 后指人 → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The girl ____ photo of the forest won the prize loves nature.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(女孩的 photo)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "I visited a village ____ people still live close to nature.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(村庄的 people)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Nature is the means by ____ the seasons renew the earth.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 by 后指物 → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She is the expert with ____ we discussed the loss of species.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 with 后指人 → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It was a tree ____ branches reached high above the garden wall.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(树的 branches)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We met a farmer ____ land had once been a barren hillside.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(农夫的 land)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This is the river in ____ many kinds of fish make their home.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 in 后指物 → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He is the writer for ____ the beauty of nature was a favourite subject.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 for 后指人 → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "They saved a bird ____ wing had been hurt by a sharp branch.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(鸟的 wing)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We studied a plant ____ leaves change colour with the climate.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(植物的 leaves)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "That is the hill on ____ a clump of wild flowers grows each spring.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 on 后指物 → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "He is the guide from ____ I learned how the forest keeps its balance.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 from 后指人 → whom。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The king destroyed a tree ____ roots had quietly fed the whole garden.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "whom"
+      ],
+      "answer_index": 0,
+      "explanation": "表所属(树的 roots)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "We helped a family ____ garden had been ruined by the storm.",
+      "options": [
+        "who",
+        "whose",
+        "which",
+        "that"
+      ],
+      "answer_index": 1,
+      "explanation": "表所属(一家人的 garden)→ whose + 名词。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "This is the lake beside ____ the old palace once stood.",
+      "options": [
+        "that",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 beside 后指物 → which。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "She is the teacher to ____ the children showed their nature drawings.",
+      "options": [
+        "which",
+        "that",
+        "who",
+        "whom"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 to 后指人 → whom。"
+    }
+  ]
+}

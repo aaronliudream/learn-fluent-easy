@@ -1,0 +1,745 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grammar_title": "-ing/-ed 形式2(作状语 adverbials)",
+  "source": "上外版必修第二册 Unit 4 Grammar in Use:-ing/-ed 形式作状语(表时间/原因/结果/伴随)。主动且逻辑主语主动发出动作用 -ing;逻辑主语承受动作(被动/状态)用 -ed;分词逻辑主语须与主句主语一致。句子地道、答案唯一。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "-ing 作状语(主动:表时间/原因/结果/伴随)",
+      "overview": "当分词的逻辑主语(=主句主语)主动发出该动作时,用 -ing 形式作状语,表示时间、原因、结果或伴随。如 Running fast, he won;Having trained hard, she won the title。"
+    },
+    {
+      "code": "u4.02",
+      "point": "-ed 作状语(被动/状态)",
+      "overview": "当分词的逻辑主语(=主句主语)承受该动作、或处于被动状态时,用 -ed 形式作状语。如 Encouraged by the fans, he played on;Seen from the stand, the players looked tiny。"
+    },
+    {
+      "code": "u4.03",
+      "point": "分词逻辑主语一致 + -ing 还是 -ed 的主被动辨析",
+      "overview": "分词的逻辑主语必须就是主句主语;再看主语与该动作是主动还是被动:主语主动做→ -ing,主语被动受→ -ed。与连词/独立结构辨析一并考查。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "____ fast down the wing, he passed the ball into the net.",
+      "options": [
+        "Running",
+        "Run",
+        "To run",
+        "Ran"
+      ],
+      "answer_index": 0,
+      "explanation": "he 主动 run,-ing 作伴随/时间状语 → Running。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ hard all winter, the team was ready for the new season.",
+      "options": [
+        "To train",
+        "Having trained",
+        "Trained",
+        "Train"
+      ],
+      "answer_index": 1,
+      "explanation": "the team 主动完成训练且先于主句 → 完成式主动 Having trained。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "She ran towards the ball, ____ to score the winning goal.",
+      "options": [
+        "hope",
+        "hoped",
+        "hoping",
+        "to hope"
+      ],
+      "answer_index": 2,
+      "explanation": "she 主动 hope,-ing 作伴随状语 → hoping。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ deep breaths, the player tried to calm herself down.",
+      "options": [
+        "Taken",
+        "To take",
+        "Take",
+        "Taking"
+      ],
+      "answer_index": 3,
+      "explanation": "the player 主动 take breaths → Taking。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ that he was the last to shoot, Joe stepped up bravely.",
+      "options": [
+        "Knowing",
+        "Know",
+        "Known",
+        "To know"
+      ],
+      "answer_index": 0,
+      "explanation": "Joe 主动 know,表原因 → Knowing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The crowd jumped up, ____ with joy as the ball hit the net.",
+      "options": [
+        "screamed",
+        "screaming",
+        "to scream",
+        "scream"
+      ],
+      "answer_index": 1,
+      "explanation": "the crowd 主动 scream,伴随状语 → screaming。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ harder than anyone else, she finally won the title.",
+      "options": [
+        "Train",
+        "Trained",
+        "Training",
+        "To train"
+      ],
+      "answer_index": 2,
+      "explanation": "she 主动 train,表原因 → Training。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He left the field early, ____ that he had missed the penalty.",
+      "options": [
+        "regret",
+        "regretted",
+        "to regret",
+        "regretting"
+      ],
+      "answer_index": 3,
+      "explanation": "he 主动 regret,伴随状语 → regretting。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ up at the goal, the striker decided where to shoot.",
+      "options": [
+        "Looking",
+        "Looked",
+        "Look",
+        "To look"
+      ],
+      "answer_index": 0,
+      "explanation": "the striker 主动 look up → Looking。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ for the home team all night, the fans went home happy.",
+      "options": [
+        "Cheer",
+        "Cheering",
+        "Cheered",
+        "To cheer"
+      ],
+      "answer_index": 1,
+      "explanation": "the fans 主动 cheer,表时间/原因 → Cheering。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The goalkeeper dived to the left, ____ the ball with one hand.",
+      "options": [
+        "stopped",
+        "to stop",
+        "stopping",
+        "stop"
+      ],
+      "answer_index": 2,
+      "explanation": "the goalkeeper 主动 stop the ball,结果状语 → stopping。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the ball forward, Jules ran on to it and scored.",
+      "options": [
+        "Hit",
+        "To hit",
+        "Been hitting",
+        "Hitting"
+      ],
+      "answer_index": 3,
+      "explanation": "Jules(主语)主动 hit,表时间/伴随 → Hitting。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ all his energy, the boxer could hardly raise his arms.",
+      "options": [
+        "Using up",
+        "Used up",
+        "Use up",
+        "To use up"
+      ],
+      "answer_index": 0,
+      "explanation": "the boxer 主动 use up energy,表原因 → Using up。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The team trained every day, ____ to reach the final.",
+      "options": [
+        "hope",
+        "hoping",
+        "hoped",
+        "to hoping"
+      ],
+      "answer_index": 1,
+      "explanation": "the team 主动 hope,伴随状语 → hoping。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the whistle, the referee ended the first half.",
+      "options": [
+        "Blown",
+        "Blow",
+        "Blowing",
+        "To blowing"
+      ],
+      "answer_index": 2,
+      "explanation": "the referee 主动 blow the whistle,表时间 → Blowing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the goal, she turned and ran to hug her teammates.",
+      "options": [
+        "Score",
+        "Scored",
+        "To score",
+        "Having scored"
+      ],
+      "answer_index": 3,
+      "explanation": "she 主动完成 score 且先于主句 → Having scored。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "He jumped on Jules, ____ loudly with the rest of the team.",
+      "options": [
+        "celebrating",
+        "celebrated",
+        "to celebrate",
+        "celebrate"
+      ],
+      "answer_index": 0,
+      "explanation": "he 主动 celebrate,伴随状语 → celebrating。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ that the score was level, both coaches stayed calm.",
+      "options": [
+        "See",
+        "Seeing",
+        "Seen",
+        "To see"
+      ],
+      "answer_index": 1,
+      "explanation": "both coaches 主动 see,表原因 → Seeing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The young athlete kept practising, ____ to play for his country.",
+      "options": [
+        "dreamed",
+        "dream",
+        "dreaming",
+        "to dreaming"
+      ],
+      "answer_index": 2,
+      "explanation": "the athlete 主动 dream,伴随状语 → dreaming。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "____ the crossbar, the ball bounced away into the crowd.",
+      "options": [
+        "Hit",
+        "Been hit",
+        "To hit",
+        "Hitting"
+      ],
+      "answer_index": 3,
+      "explanation": "the ball 主动 hit the crossbar(球撞到横梁是主动动作)→ Hitting。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by the cheering fans, the players kept fighting to the end.",
+      "options": [
+        "Encouraged",
+        "Encourage",
+        "Encouraging",
+        "To encourage"
+      ],
+      "answer_index": 0,
+      "explanation": "players 被 fans 鼓舞,被动 → Encouraged。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from the top of the stand, the players looked very small.",
+      "options": [
+        "Seeing",
+        "Seen",
+        "See",
+        "To see"
+      ],
+      "answer_index": 1,
+      "explanation": "the players 被看,被动 → Seen。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ in the final minute, the home team lost the match.",
+      "options": [
+        "Beating",
+        "Beat",
+        "Beaten",
+        "To beat"
+      ],
+      "answer_index": 2,
+      "explanation": "the team 被打败,被动 → Beaten。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The boxer played on, ____ by the noise of the crowd.",
+      "options": [
+        "exciting",
+        "excite",
+        "to excite",
+        "excited"
+      ],
+      "answer_index": 3,
+      "explanation": "the boxer 被人群的喧闹激起(感受被动)→ excited。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ to take the last penalty, Jess walked slowly to the spot.",
+      "options": [
+        "Chosen",
+        "Choosing",
+        "Choose",
+        "To choose"
+      ],
+      "answer_index": 0,
+      "explanation": "Jess 被选中,被动 → Chosen。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by years of hard training, she finally won the title.",
+      "options": [
+        "Prepare",
+        "Prepared",
+        "Preparing",
+        "To prepare"
+      ],
+      "answer_index": 1,
+      "explanation": "she 被多年训练所造就/准备,被动 → Prepared。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The injured player left the pitch, ____ by two teammates.",
+      "options": [
+        "helping",
+        "help",
+        "helped",
+        "to help"
+      ],
+      "answer_index": 2,
+      "explanation": "the player 被队友扶,被动 → helped。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ in bright team colours, the fans filled the whole stand.",
+      "options": [
+        "Dress",
+        "Dressing",
+        "To dress",
+        "Dressed"
+      ],
+      "answer_index": 3,
+      "explanation": "the fans 处于'穿着'状态,被动/状态 → Dressed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ off the team, the boy made up his mind to train harder.",
+      "options": [
+        "Left",
+        "Leaving",
+        "Leave",
+        "To leave"
+      ],
+      "answer_index": 0,
+      "explanation": "the boy 被排除在队伍之外,被动 → Left。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The goal was given, ____ by the referee after a quick check.",
+      "options": [
+        "allow",
+        "allowed",
+        "allowing",
+        "to allow"
+      ],
+      "answer_index": 1,
+      "explanation": "the goal 被判有效,被动 → allowed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by his coach's words, he stepped up with new confidence.",
+      "options": [
+        "Inspiring",
+        "Inspire",
+        "Inspired",
+        "To inspire"
+      ],
+      "answer_index": 2,
+      "explanation": "he 被教练的话所激励,被动 → Inspired。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ for the wushu team, Leo flew to Europe for the games.",
+      "options": [
+        "Selecting",
+        "Select",
+        "To select",
+        "Selected"
+      ],
+      "answer_index": 3,
+      "explanation": "Leo 被选入队,被动 → Selected。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The ball, ____ hard by the striker, flew straight into the net.",
+      "options": [
+        "hit",
+        "hitting",
+        "to hit",
+        "hits"
+      ],
+      "answer_index": 0,
+      "explanation": "the ball 被前锋大力踢,被动 → hit。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by the loud roar, the young player nearly lost his focus.",
+      "options": [
+        "Shock",
+        "Shocked",
+        "Shocking",
+        "To shock"
+      ],
+      "answer_index": 1,
+      "explanation": "the player 被吼声震惊,被动 → Shocked。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ in the museum, the old medals tell the story of past wins.",
+      "options": [
+        "Keeping",
+        "Keep",
+        "Kept",
+        "To keep"
+      ],
+      "answer_index": 2,
+      "explanation": "the medals 被保存,被动 → Kept。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The team played their best, ____ by thousands of home fans.",
+      "options": [
+        "supporting",
+        "support",
+        "to support",
+        "supported"
+      ],
+      "answer_index": 3,
+      "explanation": "the team 被主场球迷支持,被动 → supported。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ to play in the rain, the children still enjoyed the game.",
+      "options": [
+        "Forced",
+        "Forcing",
+        "Force",
+        "To force"
+      ],
+      "answer_index": 0,
+      "explanation": "the children 被迫在雨中踢球,被动 → Forced。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ as the best player of the match, she thanked her teammates.",
+      "options": [
+        "Naming",
+        "Named",
+        "Name",
+        "To name"
+      ],
+      "answer_index": 1,
+      "explanation": "she 被评为最佳球员,被动 → Named。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "The trophy, ____ in gold, shone brightly under the stadium lights.",
+      "options": [
+        "covering",
+        "cover",
+        "covered",
+        "to cover"
+      ],
+      "answer_index": 2,
+      "explanation": "the trophy 被镀金覆盖,被动/状态 → covered。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by the referee's whistle, the players stopped at once.",
+      "options": [
+        "Stopping",
+        "Stop",
+        "To stop",
+        "Stopped"
+      ],
+      "answer_index": 3,
+      "explanation": "the players 被哨声叫停,被动 → Stopped。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ towards the goal, the striker took a powerful shot.",
+      "options": [
+        "Running",
+        "Run",
+        "Run to",
+        "To running"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 the striker 主动 run → -ing,Running。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the fans, the tired players found new energy.",
+      "options": [
+        "Cheering",
+        "Cheered",
+        "Cheer",
+        "To cheer"
+      ],
+      "answer_index": 1,
+      "explanation": "the players 被球迷欢呼鼓舞,被动 → Cheered。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the ball forward, Jess headed for the penalty area.",
+      "options": [
+        "Hit",
+        "Been hit",
+        "Hitting",
+        "To hit"
+      ],
+      "answer_index": 2,
+      "explanation": "Jess 主动 hit the ball → Hitting。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ from the high stand, the green pitch looked perfect.",
+      "options": [
+        "Seeing",
+        "See",
+        "To see",
+        "Seen"
+      ],
+      "answer_index": 3,
+      "explanation": "the pitch 被(从看台)看,被动 → Seen。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the whistle, the referee called full-time.",
+      "options": [
+        "Blowing",
+        "Blown",
+        "Blow",
+        "To blow"
+      ],
+      "answer_index": 0,
+      "explanation": "the referee 主动 blow → Blowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by a teammate, the injured player limped off the field.",
+      "options": [
+        "Helping",
+        "Helped",
+        "Help",
+        "To help"
+      ],
+      "answer_index": 1,
+      "explanation": "the player 被队友扶,被动 → Helped。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ deeply, she tried to calm herself before the shot.",
+      "options": [
+        "Breathed",
+        "Breathe",
+        "Breathing",
+        "To breathed"
+      ],
+      "answer_index": 2,
+      "explanation": "she 主动 breathe → Breathing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ as the best athlete, Leo felt both proud and shy.",
+      "options": [
+        "Choosing",
+        "Choose",
+        "To choose",
+        "Chosen"
+      ],
+      "answer_index": 3,
+      "explanation": "Leo 被选为最佳,被动 → Chosen。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ that the score was level, Joe gave the team a pep talk.",
+      "options": [
+        "Knowing",
+        "Known",
+        "Know",
+        "To know"
+      ],
+      "answer_index": 0,
+      "explanation": "Joe 主动 know → Knowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ off the varsity team, the boy worked harder than ever.",
+      "options": [
+        "Leaving",
+        "Left",
+        "Leave",
+        "To leave"
+      ],
+      "answer_index": 1,
+      "explanation": "the boy 被排除在队外,被动 → Left。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "The fans went wild, ____ loudly when the goal went in.",
+      "options": [
+        "screamed",
+        "to scream",
+        "screaming",
+        "been screaming"
+      ],
+      "answer_index": 2,
+      "explanation": "the fans 主动 scream,伴随 → screaming。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by his coach, the young player never gave up his dream.",
+      "options": [
+        "Encouraging",
+        "Encourage",
+        "To encourage",
+        "Encouraged"
+      ],
+      "answer_index": 3,
+      "explanation": "the player 被教练鼓励,被动 → Encouraged。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the ball into the corner, she rolled it past the keeper.",
+      "options": [
+        "Guiding",
+        "Guided",
+        "Guide",
+        "To guide"
+      ],
+      "answer_index": 0,
+      "explanation": "she 主动 guide the ball → Guiding。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ in team colours, the spectators sang all through the match.",
+      "options": [
+        "Dressing",
+        "Dressed",
+        "Dress",
+        "To dress"
+      ],
+      "answer_index": 1,
+      "explanation": "spectators 处于'穿着'状态,被动/状态 → Dressed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ hard all season, the team felt ready for the final.",
+      "options": [
+        "Having been trained",
+        "Trained",
+        "Having trained",
+        "To train"
+      ],
+      "answer_index": 2,
+      "explanation": "the team 主动完成训练 → 主动完成式 Having trained。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ by the loud roar, the new player almost missed his kick.",
+      "options": [
+        "Surprising",
+        "Surprise",
+        "To surprise",
+        "Surprised"
+      ],
+      "answer_index": 3,
+      "explanation": "the player 被吼声惊到,被动 → Surprised。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "He placed the ball on the spot, ____ up at the goal.",
+      "options": [
+        "looking",
+        "looked",
+        "to look",
+        "been looking"
+      ],
+      "answer_index": 0,
+      "explanation": "he 主动 look up,伴随 → looking。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ to take the final penalty, Jess walked over with heavy steps.",
+      "options": [
+        "Asking",
+        "Asked",
+        "Ask",
+        "To ask"
+      ],
+      "answer_index": 1,
+      "explanation": "Jess 被要求/被叫上去,被动 → Asked。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ the ball away, the goalkeeper saved the team once more.",
+      "options": [
+        "Punched",
+        "Punch",
+        "Punching",
+        "To punch"
+      ],
+      "answer_index": 2,
+      "explanation": "the goalkeeper 主动 punch the ball → Punching。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "____ in gold letters, the team's name shone on the trophy.",
+      "options": [
+        "Writing",
+        "Write",
+        "To write",
+        "Written"
+      ],
+      "answer_index": 3,
+      "explanation": "the name 被写,被动 → Written。"
+    }
+  ]
+}

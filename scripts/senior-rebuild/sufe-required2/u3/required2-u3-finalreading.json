@@ -1,0 +1,32 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(食物/饮食文化主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Ben joined his Chinese classmates for lunch, he was surprised to see everyone sharing the dishes in the middle of the table. At first he felt unsure, but his friends kindly showed him how to take a little from each plate with his own chopsticks. By the end of the meal, he felt relaxed and grateful, and he realised that sharing food was also a warm way of sharing friendship.",
+    "questions": [
+      {
+        "q": "What surprised Ben at lunch?",
+        "options": [
+          "Everyone took food from shared plates at the centre.",
+          "There was no food at all.",
+          "Each person ate in a different room.",
+          "The classmates spoke only English."
+        ],
+        "answer": "A",
+        "explanation": "原文 'everyone sharing the dishes in the middle of the table' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Ben feel by the end of the meal?",
+        "options": [
+          "Relaxed and grateful.",
+          "Angry and tired.",
+          "Bored and lonely.",
+          "Hungry and upset."
+        ],
+        "answer": "B",
+        "explanation": "末句 'he felt relaxed and grateful'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,493 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Food",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "上外版必修第二册 Unit 3 同主题听力(点中餐/世界就餐习俗/餐桌礼仪问答/食物与记忆短文/订外卖对话/营养均衡短文)。用词限本单元/初中/常见词,答案唯一,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Ordering at a Chinese Restaurant",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Waiter",
+          "text": "Good evening. Would you like to order now?"
+        },
+        {
+          "speaker": "Emma",
+          "text": "Yes, please. It's my first time eating real Chinese food."
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Then let me suggest a few dishes. Do you like spicy food?"
+        },
+        {
+          "speaker": "Emma",
+          "text": "A little, but not too hot. I get scared of very spicy dishes."
+        },
+        {
+          "speaker": "Waiter",
+          "text": "How about steamed fish and some fried rice with eggs?"
+        },
+        {
+          "speaker": "Emma",
+          "text": "That sounds lovely. Should I order rice for everyone?"
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Yes. In China we usually share the dishes and each have our own bowl of rice."
+        },
+        {
+          "speaker": "Emma",
+          "text": "I see. So everyone takes a little from each plate. What a nice custom!"
+        }
+      ],
+      "translation_cn": "Emma 第一次吃正宗中餐,请服务员推荐;服务员问她吃不吃辣,她说只能吃一点;服务员推荐清蒸鱼和蛋炒饭;并解释中餐通常是大家共享菜肴、各自一碗米饭。",
+      "questions": [
+        {
+          "stem": "Why does Emma ask the waiter for suggestions?",
+          "options": [
+            "It is her first time eating real Chinese food.",
+            "She has no money.",
+            "She cannot read the menu at all.",
+            "She is in a hurry to leave."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How does Emma feel about spicy food?",
+          "options": [
+            "She loves the hottest dishes.",
+            "She can eat only a little, not too hot.",
+            "She refuses all Chinese food.",
+            "She has never heard of it."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What two dishes does the waiter suggest?",
+          "options": [
+            "Steamed fish and fried rice with eggs.",
+            "Cold soup and sweet cake.",
+            "Spicy noodles and ice cream.",
+            "Bread and butter pudding."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How are the dishes usually eaten in China, according to the waiter?",
+          "options": [
+            "Each person orders one separate dish.",
+            "Everyone shares the dishes with their own bowl of rice.",
+            "People eat in complete silence.",
+            "Only the host eats first."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Emma's reaction to the custom?",
+          "options": [
+            "She finds it rude.",
+            "She wants to leave at once.",
+            "She thinks it is a nice custom.",
+            "She refuses to share."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 Dining Customs Around the World",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Every country has its own dining customs that may surprise a visitor.",
+        "In some places, it is rude to turn a fish over on the plate, because people believe it brings bad luck.",
+        "In China and Japan, you should never stand your chopsticks straight up in a bowl of rice.",
+        "In parts of the Middle East, people use only their right hand to touch food.",
+        "Learning these small rules before you travel shows respect for the local culture."
+      ],
+      "translation_cn": "每个国家都有自己的就餐习俗,常令游客吃惊;有的地方认为把鱼翻面会带来坏运气;在中国和日本,不要把筷子直插在米饭里;中东部分地区只用右手碰食物;出行前了解这些小规矩是对当地文化的尊重。",
+      "questions": [
+        {
+          "stem": "In some places, why should you not turn a fish over?",
+          "options": [
+            "It makes the fish too cold.",
+            "The waiter has to clean it.",
+            "It costs extra money.",
+            "People believe it brings bad luck."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should you never do with chopsticks in China and Japan?",
+          "options": [
+            "Stand them straight up in a bowl of rice.",
+            "Use them to eat rice.",
+            "Hold them in your right hand.",
+            "Wash them before eating."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "In parts of the Middle East, which hand is used to touch food?",
+          "options": [
+            "Only the left hand.",
+            "Only the right hand.",
+            "Both hands together.",
+            "Neither hand at all."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Travelling abroad is dangerous.",
+            "All countries eat the same way.",
+            "Learning local rules shows respect for the culture.",
+            "Dining customs never change."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Who might be surprised by these customs?",
+          "options": [
+            "Only local children.",
+            "Only restaurant owners.",
+            "Nobody at all.",
+            "A visitor from another country."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 A Question About Table Manners",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tom",
+          "text": "I'm visiting a Chinese friend's home tomorrow. Any advice on table manners?"
+        },
+        {
+          "speaker": "Lin",
+          "text": "Sure. When you sit down, wait for the host to start the meal first."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Got it. And should I finish everything in my bowl?"
+        },
+        {
+          "speaker": "Lin",
+          "text": "Actually, if you finish it all, the host may think you want more food."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Really? At home I was taught to clean my plate to be polite."
+        },
+        {
+          "speaker": "Lin",
+          "text": "Here it's the opposite. Leaving a little shows you are full and satisfied."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That's so different! Anything else I should know?"
+        },
+        {
+          "speaker": "Lin",
+          "text": "Just relax and enjoy. They'll be happy that you try their food with an open mind."
+        }
+      ],
+      "translation_cn": "Tom 明天去中国朋友家做客,向 Lin 请教餐桌礼仪;Lin 说要等主人先动筷;吃光碗里的饭主人会以为你还想要;在中国留一点反而表示吃饱了、满意了;最后建议他放松享受、以开放心态尝试。",
+      "questions": [
+        {
+          "stem": "Why does Tom ask Lin for advice?",
+          "options": [
+            "He is visiting a Chinese friend's home.",
+            "He is opening a restaurant.",
+            "He is writing a cookbook.",
+            "He cannot find the address."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Lin say to do when you sit down?",
+          "options": [
+            "Begin eating immediately.",
+            "Wait for the host to start the meal first.",
+            "Leave the table quickly.",
+            "Ask for the bill."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What might the host think if Tom finishes everything?",
+          "options": [
+            "That Tom is angry.",
+            "That Tom is leaving.",
+            "That Tom wants more food.",
+            "That Tom dislikes the meal."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does leaving a little food show in China?",
+          "options": [
+            "That the food is bad.",
+            "That you are still hungry.",
+            "That you want to pay.",
+            "That you are full and satisfied."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Lin's final piece of advice?",
+          "options": [
+            "Relax and try the food with an open mind.",
+            "Eat as fast as possible.",
+            "Bring your own food.",
+            "Refuse anything new."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 Food and Childhood Memories",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many of us connect our favourite foods with happy memories from childhood.",
+        "A single smell or taste can bring back a whole afternoon at our grandmother's table.",
+        "When we feel tired or sad as adults, we often look for these comfort foods.",
+        "They remind us of family, of home and of being cared for.",
+        "In this way, a simple dish can carry far more meaning than just a meal."
+      ],
+      "translation_cn": "我们许多人把最爱的食物与童年的快乐记忆相连;一种气味或味道就能唤回在奶奶餐桌旁的整个下午;长大后疲惫或难过时,我们常会寻找这些慰藉食物;它们让我们想起家人、家和被照顾的感觉;这样,一道简单的菜承载的意义远不止一顿饭。",
+      "questions": [
+        {
+          "stem": "What do many people connect their favourite foods with?",
+          "options": [
+            "The price of restaurants.",
+            "Happy memories from childhood.",
+            "Famous chefs on television.",
+            "Long journeys abroad."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What can a single smell or taste bring back?",
+          "options": [
+            "A list of new recipes.",
+            "The cost of the meal.",
+            "A whole afternoon at grandmother's table.",
+            "A map of the city."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "When do adults often look for comfort foods?",
+          "options": [
+            "Only on their birthdays.",
+            "When they are very rich.",
+            "Only during exams.",
+            "When they feel tired or sad."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do these foods remind people of?",
+          "options": [
+            "Family, home and being cared for.",
+            "Their school timetable.",
+            "The weather outside.",
+            "The latest news."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the main idea of the passage?",
+          "options": [
+            "Cooking is a waste of time.",
+            "A simple dish can carry deep meaning.",
+            "Comfort food is unhealthy.",
+            "Memories have nothing to do with food."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Ordering Takeaway Food",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Mia",
+          "text": "I'm too tired to cook tonight. Shall we order some takeaway?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Good idea. What do you feel like eating?"
+        },
+        {
+          "speaker": "Mia",
+          "text": "Maybe something warm. How about noodle soup?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Sounds great. I'll get boiled dumplings too, with a little vinegar."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Perfect. Can you ask them to make mine less salty?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "Sure. The shop near us has fresh, homemade noodles."
+        },
+        {
+          "speaker": "Mia",
+          "text": "Lovely. How long will it take to arrive?"
+        },
+        {
+          "speaker": "Jack",
+          "text": "About thirty minutes. Let's set the table while we wait."
+        }
+      ],
+      "translation_cn": "Mia 太累不想做饭,提议点外卖;Jack 同意,问她想吃什么;Mia 想吃热乎的面汤;Jack 还想点水煮饺子配点醋;Mia 请他让自己的少放盐;附近店有新鲜手工面;大约三十分钟送到,两人先摆好餐桌。",
+      "questions": [
+        {
+          "stem": "Why does Mia want to order takeaway?",
+          "options": [
+            "The kitchen is broken.",
+            "She has no food at all.",
+            "She is too tired to cook.",
+            "She is having a party."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What warm dish does Mia choose?",
+          "options": [
+            "Cold salad.",
+            "Sweet cake.",
+            "Fried eggs.",
+            "Noodle soup."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Jack want to order in addition?",
+          "options": [
+            "Boiled dumplings with vinegar.",
+            "A pot of coffee.",
+            "Some ice cream.",
+            "A loaf of bread."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Mia ask them to do with her food?",
+          "options": [
+            "Make it much hotter.",
+            "Make it less salty.",
+            "Add more sugar.",
+            "Cut it into pieces."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How long will the food take to arrive?",
+          "options": [
+            "About three hours.",
+            "About five minutes.",
+            "About thirty minutes.",
+            "The whole evening."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Eating a Balanced Meal",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "A good meal should be both nutritious and appealing to the eye.",
+        "Chinese cooks often try to balance many flavours in one meal.",
+        "They mix salty, spicy, sour, sweet and bitter tastes in a careful way.",
+        "A colourful plate of vegetables, meat and rice gives the body what it needs.",
+        "Eating a variety of fresh foods is one simple secret of staying healthy."
+      ],
+      "translation_cn": "一顿好饭应既有营养又赏心悦目;中国厨师常努力在一餐中平衡多种味道;把咸、辣、酸、甜、苦仔细调和;一盘色彩丰富的蔬菜、肉和米饭能给身体所需;吃多样的新鲜食物是保持健康的一个简单秘诀。",
+      "questions": [
+        {
+          "stem": "What should a good meal be, according to the passage?",
+          "options": [
+            "Only very cheap.",
+            "Only very spicy.",
+            "Cooked very quickly.",
+            "Both nutritious and appealing to the eye."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do Chinese cooks often try to balance?",
+          "options": [
+            "Many flavours in one meal.",
+            "The price of each dish.",
+            "The size of the table.",
+            "The number of guests."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Which five tastes are mentioned?",
+          "options": [
+            "Hot, cold, warm, fresh and old.",
+            "Salty, spicy, sour, sweet and bitter.",
+            "Red, green, blue, white and black.",
+            "Big, small, long, short and round."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What gives the body what it needs?",
+          "options": [
+            "A bowl of plain water.",
+            "A single piece of cake.",
+            "A colourful plate of vegetables, meat and rice.",
+            "A cup of black coffee."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is one simple secret of staying healthy?",
+          "options": [
+            "Eating only one kind of food.",
+            "Skipping every meal.",
+            "Eating very late at night.",
+            "Eating a variety of fresh foods."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

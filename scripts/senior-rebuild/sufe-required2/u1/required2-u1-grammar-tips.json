@@ -1,0 +1,36 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "限制性定语从句·关系代词 who / whom / that / which / whose 速查",
+    "intro": "关系代词在从句里替代先行词并充当主语、宾语或表所属。判断口诀:看先行词「指人还是指物」+ 从句「缺什么成分」。指人缺主语用 who、缺宾语用 whom;指物用 which/that;表「……的」用 whose;关系词跟在介词后,指物用 which、指人用 whom。",
+    "table": {
+      "headers": ["关系代词", "用法 / 例句"],
+      "rows": [
+        ["who", "指人作主语:the man who explained the mystery"],
+        ["whom", "指人作宾语(尤介词后):the expert whom we spoke to / to whom we spoke"],
+        ["which", "指物作主/宾语:the tree which stood there;the book which I read"],
+        ["that", "指人或物作主/宾语(限制性):the plants that grow here"],
+        ["whose", "表所属(……的)+ 名词,指人指物皆可:anyone whose solution works;a tree whose roots fed the garden"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "从句缺宾语时,关系代词可省略", "mark": "the book (that/which) I read" },
+      { "rule": "介词提到关系词前时,指物只能用 which、指人只能用 whom,不可用 that", "mark": "the bones on which symbols were carved √ / on that ×" },
+      { "rule": "whose 后面直接跟名词,表示「……的」", "mark": "a bird whose wing was hurt" },
+      { "rule": "先行词为 all/anyone/everything 等,或带 the only/最高级时,多用 that", "mark": "the only thing that he disliked" }
+    ],
+    "why": [
+      "关系代词既要替代先行词,又要在从句里充当成分;所以判断时先问『先行词指人还是指物』,再看『从句缺主语、缺宾语还是表所属』,二者一对照,关系词就定了。"
+    ],
+    "gaokaoPoints": [
+      "who/whom/which/that/whose 的选用(看指人指物 + 从句缺什么成分);语法填空与单句改错高频。",
+      "介词 + which / 介词 + whom 的提前结构:介词后绝不能用 that 或 who。"
+    ],
+    "examVsReal": [
+      { "exam": "the expert to whom we spoke（考试/正式）", "real": "the expert we spoke to", "note": "考试爱考 to whom 提前;口语里常省略关系词、把介词留在句末" },
+      { "exam": "the tree which stood there（考试）", "real": "the tree that stood there / the tree standing there", "note": "口语里 which 常换成 that 或直接用现在分词,更简洁" }
+    ]
+  }
+}

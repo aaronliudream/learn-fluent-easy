@@ -1,0 +1,35 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "-ing / -ed 形式作状语·主被动速查",
+    "intro": "分词作状语表时间/原因/结果/伴随。判断口诀:逻辑主语(=主句主语)主动发出动作→ -ing;承受动作或处于被动状态→ -ed。Running fast, he won.(主动)/ Encouraged by fans, he played on.(被动)",
+    "table": {
+      "headers": ["形式", "用法 / 例句"],
+      "rows": [
+        ["-ing(主动)", "主语主动做:Hearing the whistle, the players stopped.(听到=主动)"],
+        ["-ed(被动)", "主语被…:Beaten in the final, the team felt sad.(被打败)"],
+        ["Having + done(主动完成)", "动作先于主句且主动:Having trained hard, she won the title."],
+        ["逻辑主语一致", "分词的逻辑主语必须就是主句主语:Running fast, HE won.(不是 the ball)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "主语主动发出动作 → 用 -ing", "mark": "Running towards the goal, he shot.(他主动跑)" },
+      { "rule": "主语承受动作 / 被动 → 用 -ed", "mark": "Encouraged by the coach, he played on.(他被鼓励)" },
+      { "rule": "分词逻辑主语 = 主句主语,否则就是错句(垂悬分词)", "mark": "Seen from the stand, the players looked tiny.(被看的是 players)" },
+      { "rule": "动作先于主句且主动 → 用 Having done", "mark": "Having scored, she ran to her teammates." }
+    ],
+    "why": [
+      "-ing 表'主动/正在',-ed 表'被动/已完成受动'。先找出分词的逻辑主语(几乎总是主句主语),再问:这个主语是'做'这个动作,还是'被'这个动作?做→-ing,被→-ed。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给出动词原形,据主语主被动填 -ing 或 -ed。",
+      "辨析重点:主语与分词动作的主被动关系;垂悬分词(逻辑主语不一致)是常见错误。"
+    ],
+    "examVsReal": [
+      { "exam": "Encouraged by his coach, he kept going.(书面/考试)", "real": "His coach encouraged him, so he kept going.", "note": "考试爱考分词状语;口语里常直接用并列句或 because 从句,更直白" },
+      { "exam": "Running fast, he reached the line first.(考试)", "real": "He ran fast and reached the line first.", "note": "考试用 -ing 状语;日常口语更常用并列动词" }
+    ]
+  }
+}

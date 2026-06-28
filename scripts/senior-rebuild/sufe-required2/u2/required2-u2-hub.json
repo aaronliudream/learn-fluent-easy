@@ -1,0 +1,46 @@
+{
+  "listeningQuestions": [
+    { "audio": "Many wild animals are now endangered because of illegal hunting.", "opts": ["许多野生动物因非法狩猎而濒临灭绝。", "许多动物因为太冷而生病。", "许多动物在动物园里很开心。", "许多人喜欢去野外打猎。"], "answer": 0 },
+    { "audio": "Good zoos focus on the health and welfare of their animals.", "opts": ["好的动物园只在乎赚钱。", "好的动物园专注于动物的健康与福利。", "好的动物园从不喂动物。", "好的动物园只养一种动物。"], "answer": 1 },
+    { "audio": "The old man fed the penguin a daily diet of fish to get its strength up.", "opts": ["老人把企鹅放回了大海。", "老人卖掉了那只企鹅。", "老人每天喂企鹅鱼,好让它恢复体力。", "老人忘了照顾企鹅。"], "answer": 2 },
+    { "audio": "Some bears go into a deep sleep called hibernation in winter.", "opts": ["有些熊整个冬天都醒着。", "有些熊冬天会去更暖的地方。", "有些熊冬天不吃东西就死了。", "有些熊冬天会进入一种叫冬眠的深睡。"], "answer": 3 },
+    { "audio": "Training a guide dog needs a lot of patience and a gentle approach.", "opts": ["训练导盲犬需要很多耐心和温和的方式。", "训练导盲犬靠大声吓唬。", "训练导盲犬只要一天就够了。", "训练导盲犬不需要任何耐心。"], "answer": 0 },
+    { "audio": "If you find a hurt wild animal, call a rescue centre rather than touch it.", "opts": ["如果发现受伤的野生动物,把它带回家。", "如果发现受伤的野生动物,打给救助中心而不要触碰它。", "如果发现受伤的野生动物,直接忽略它。", "如果发现受伤的野生动物,马上抱起它。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Because of illegal hunting, some animals may become ____ and disappear forever.", "opts": ["extinct", "polite", "modern", "cheap"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Zoos take part in many ____ projects to protect rare animals.", "opts": ["shopping", "conservation", "cooking", "racing"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The old man tried to ____ the penguin back into the sea, but it would not leave.", "opts": ["sell", "draw", "release", "paint"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "A trip to a good zoo can be both fun and ____.", "opts": ["boring", "useless", "empty", "educational"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "This is the island ____ the old man set the penguin free.", "opts": ["where", "which", "when", "who"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Spring is the season ____ many birds fly back to build their nests.", "opts": ["which", "when", "where", "that"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "There are many reasons ____ we should protect endangered animals.", "opts": ["that", "which", "why", "where"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "That is the small boat in ____ he carried the penguin to the island.", "opts": ["that", "when", "where", "which"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音,选出与句意相符的一项。", "opts": ["不同文化对同一种动物的看法可能不同。", "所有国家都把狗当作家人。", "在印度,牛被当作肉的来源。", "所有动物的睡眠时间都一样。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "People in different cultures may see the same animal in very different ways." },
+    { "q": "听录音,选出与句意相符的一项。", "opts": ["每个生命都不值得尊重。", "每个生命都值得善待和尊重。", "只有宠物值得照顾。", "野生动物不需要帮助。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Every creature deserves kindness and respect." }
+  ],
+  "reading": {
+    "passage": "Salty was a guide dog who calmly led his blind owner down seventy flights of stairs to safety. For their courage, both the dog and the owner later received special awards.",
+    "passageCn": "萨尔蒂是一只导盲犬,它沉着地带着失明的主人沿七十层楼梯走到安全地带。因为这份勇气,这只狗和主人后来都获得了特别的奖励。",
+    "questions": [
+      { "q": "What did Salty do for his owner?", "opts": ["Led him safely down the stairs.", "Ran away alone.", "Hid under a table.", "Barked but did not move."], "answer": 0 },
+      { "q": "Why did the dog and owner receive awards?", "opts": ["For winning a race.", "For their courage.", "For being the loudest.", "For sleeping the longest."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short opinion paragraph (about 80 words) on whether students should feed homeless cats on campus. State your view, give a reason, and suggest a better way such as contacting a rescue centre.",
+    "promptCn": "就'学生是否该在校园喂流浪猫'写一段约80词的观点段落:表明你的观点,给出一条理由,并提出一个更妥当的做法(如联系救助中心)。",
+    "sampleWords": ["homeless", "feed", "campus", "however", "moreover", "rescue", "centre", "welfare", "crowded", "kind"]
+  },
+  "dialogues": [
+    {
+      "title": "A Trip to the Zoo",
+      "lines": [
+        { "role": "A", "text": "Did you enjoy our trip to the zoo today?", "cn": "你喜欢今天的动物园之行吗?" },
+        { "role": "B", "text": "I did, but some cages looked quite small, and that made me a little sad.", "cn": "喜欢,不过有些笼子看起来挺小的,这让我有点难过。" },
+        { "role": "A", "text": "I know, but this zoo really focuses on the animals' welfare and joins many conservation projects.", "cn": "我懂,但这家动物园很重视动物福利,还参与许多保护项目。" },
+        { "role": "B", "text": "Then I'm glad we came. Overall, a good zoo can be a caring place.", "cn": "那我很高兴我们来了。总体来说,好的动物园是个有爱的地方。" }
+      ]
+    }
+  ]
+}

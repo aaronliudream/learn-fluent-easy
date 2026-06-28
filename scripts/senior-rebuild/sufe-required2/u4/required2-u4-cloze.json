@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U4",
+  "topic": "Sports",
+  "source": "上外版必修第二册 Unit 4 同主题完形(我的第一场比赛/守门员的一天/跑步的乐趣/篮球训练/赛前紧张/支持主队)。用词限本单元/初中/常见词,答案唯一,与阅读关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First Match",
+      "text": "I will never forget my first football (1)____. My legs were shaking as I ran onto the green (2)____. The home (3)____ was huge, and I could hear thousands of fans cheering. In the first half, our team played well, but neither side could (4)____ a goal. During the break, the (5)____ gave us a short pep talk and told us to stay (6)____. In the second half, a teammate (7)____ the ball forward to me. I took a deep (8)____, ran towards the goal and kicked the ball hard. It flew straight into the (9)____! The whole team began to (10)____ with joy. That day I learned that sport is not only about winning, but also about playing together.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "match",
+            "song",
+            "price",
+            "machine"
+          ],
+          "answer_index": 0,
+          "explanation": "football match 足球比赛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "shop",
+            "pitch",
+            "menu",
+            "book"
+          ],
+          "answer_index": 1,
+          "explanation": "the green pitch 绿茵场。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "garden",
+            "kitchen",
+            "stadium",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "the home stadium 主场体育场。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "eat",
+            "buy",
+            "score"
+          ],
+          "answer_index": 3,
+          "explanation": "score a goal 进球。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "coach",
+            "driver",
+            "waiter",
+            "doctor"
+          ],
+          "answer_index": 0,
+          "explanation": "the coach 教练。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "angry",
+            "calm",
+            "hungry",
+            "late"
+          ],
+          "answer_index": 1,
+          "explanation": "stay calm 保持镇静。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "ate",
+            "passed",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "passed the ball 把球传过来。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "breath"
+          ],
+          "answer_index": 3,
+          "explanation": "take a deep breath 深吸一口气。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "net",
+            "wall",
+            "river",
+            "tree"
+          ],
+          "answer_index": 0,
+          "explanation": "into the net 进入球网。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "cry",
+            "scream",
+            "sleep",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "scream with joy 欢呼尖叫。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Goalkeeper's Day",
+      "text": "Being a (1)____ is one of the hardest jobs on a football team. While other players run and attack, the keeper must (2)____ the goal alone. During a match, he often stands and waits, watching the (3)____ move around the field. Then, in a single second, he must dive to (4)____ a fast shot. One small mistake can let the other team (5)____, so he can never lose his (6)____. After the game, the keeper is often (7)____, even though he has run less than the others. People sometimes forget how much (8)____ it takes to do this job well. A great keeper trains every (9)____, practising the same movements again and again. When he makes a wonderful save, the whole (10)____ jumps up and cheers his name.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "teacher",
+            "farmer",
+            "goalkeeper",
+            "singer"
+          ],
+          "answer_index": 2,
+          "explanation": "a goalkeeper 守门员。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "draw",
+            "open",
+            "defend"
+          ],
+          "answer_index": 3,
+          "explanation": "defend the goal 防守球门。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "ball",
+            "prices",
+            "songs",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "the ball move 球的移动。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "stop",
+            "buy",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "stop a shot 扑住射门。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sleep",
+            "cry",
+            "score",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "let the other team score 让对方得分。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "money",
+            "ticket",
+            "hat",
+            "focus"
+          ],
+          "answer_index": 3,
+          "explanation": "lose his focus 失去专注。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "exhausted",
+            "happy only",
+            "rich",
+            "free"
+          ],
+          "answer_index": 0,
+          "explanation": "exhausted 筋疲力尽的。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "effort",
+            "noise",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "how much effort 多少努力。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "year",
+            "century",
+            "day",
+            "never"
+          ],
+          "answer_index": 2,
+          "explanation": "every day 每天。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "garden",
+            "kitchen",
+            "shop",
+            "crowd"
+          ],
+          "answer_index": 3,
+          "explanation": "the crowd jumps up 观众跳起来。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Joy of Running",
+      "text": "I started (1)____ three years ago, and now I cannot imagine life without it. At first it was a real (2)____, and after only a few minutes I was out of (3)____. But slowly my body grew (4)____, and the runs became easier. Now, early every morning, I put on my shoes and head out before the city wakes up. As I run, my (5)____ clears and my worries seem to disappear. Running is also a cheap sport: you do not need a big (6)____ or special equipment, only an open road. Sometimes I (7)____ a small goal, such as beating my own time, and that keeps me going. When I finally reach home, tired but happy, I feel (8)____ of myself. Running has taught me that you do not need to (9)____ anyone else; the only person you really compete with is the one you were (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "running",
+            "selling",
+            "sleeping",
+            "crying"
+          ],
+          "answer_index": 0,
+          "explanation": "started running 开始跑步。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "holiday",
+            "struggle",
+            "joke",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a real struggle 一种艰难。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "money",
+            "time",
+            "breath",
+            "luck"
+          ],
+          "answer_index": 2,
+          "explanation": "out of breath 上气不接下气。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weaker",
+            "smaller",
+            "shorter",
+            "stronger"
+          ],
+          "answer_index": 3,
+          "explanation": "grew stronger 变得更强壮。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "mind",
+            "price",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "my mind clears 头脑变清醒。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "song",
+            "stadium",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "a big stadium 大型场馆。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lose",
+            "sell",
+            "set",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "set a small goal 定个小目标。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "afraid",
+            "sorry",
+            "bored",
+            "proud"
+          ],
+          "answer_index": 3,
+          "explanation": "feel proud 感到自豪。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "beat",
+            "help",
+            "thank",
+            "meet"
+          ],
+          "answer_index": 0,
+          "explanation": "beat anyone else 击败别人。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "selling",
+            "yesterday",
+            "buying",
+            "eating"
+          ],
+          "answer_index": 1,
+          "explanation": "the one you were yesterday 昨天的自己。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Learning to Shoot",
+      "text": "When I joined the school basketball team, my biggest (1)____ was shooting. I could run and pass, but my shots almost never (2)____ in. My coach told me not to give (3)____, and to practise a little every day. So each afternoon I stayed behind to (4)____ on my shooting. I learned to (5)____ my knees, look up at the basket, and let the ball (6)____ softly off my fingers. Slowly my hands began to (7)____ the right movement without thinking. After a few months, I made my first winning shot, and my teammates (8)____ with joy. That day I (9)____ that real skill comes only from hours of quiet practice. Now, whenever a younger player feels like quitting, I (10)____ him to keep trying, just as my coach once did for me.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "song",
+            "price",
+            "problem",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "my biggest problem 最大难题。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "slept",
+            "sold",
+            "ate",
+            "went"
+          ],
+          "answer_index": 3,
+          "explanation": "went in 投进。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "up",
+            "in",
+            "off",
+            "out"
+          ],
+          "answer_index": 0,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "work",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 1,
+          "explanation": "work on my shooting 改进投篮。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "throw",
+            "bend",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "bend my knees 弯曲膝盖。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "cry",
+            "leave",
+            "roll"
+          ],
+          "answer_index": 3,
+          "explanation": "roll off my fingers 从指尖滚出。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "remember",
+            "sell",
+            "lose",
+            "throw"
+          ],
+          "answer_index": 0,
+          "explanation": "remember the movement 记住动作。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "slept",
+            "screamed",
+            "cried",
+            "left"
+          ],
+          "answer_index": 1,
+          "explanation": "screamed with joy 欢呼。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "forgot",
+            "sold",
+            "learned",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "I learned 我明白了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "leave",
+            "forget",
+            "encourage"
+          ],
+          "answer_index": 3,
+          "explanation": "encourage him 鼓励他。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Before the Big Game",
+      "text": "The night before an important (1)____, almost every athlete feels (2)____. Even great players say their hearts beat fast and their hands feel cold. The (3)____ of letting the team down can be hard to bear. But there are ways to (4)____ yourself down. Many players take slow, deep (5)____ and picture the match going well in their (6)____. A good coach also gives a short pep talk to (7)____ the team. He reminds them of all the hours they have (8)____ together and tells them to trust each other. Once the (9)____ blows the whistle and the game begins, most of the fear disappears. The players stop worrying and simply (10)____ on the ball. In the end, learning to deal with pressure is just as important as any other skill in sport.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "match",
+            "song",
+            "price",
+            "shop"
+          ],
+          "answer_index": 0,
+          "explanation": "an important match 重要比赛。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "bored",
+            "nervous",
+            "hungry",
+            "free"
+          ],
+          "answer_index": 1,
+          "explanation": "feel nervous 感到紧张。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "price",
+            "noise",
+            "fear",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the fear of 害怕……。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "lose",
+            "hide",
+            "calm"
+          ],
+          "answer_index": 3,
+          "explanation": "calm yourself down 让自己平静。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "breaths",
+            "prices",
+            "songs",
+            "noises"
+          ],
+          "answer_index": 0,
+          "explanation": "deep breaths 深呼吸。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "pockets",
+            "minds",
+            "shoes",
+            "bags"
+          ],
+          "answer_index": 1,
+          "explanation": "in their minds 在脑海中。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "leave",
+            "encourage",
+            "forget"
+          ],
+          "answer_index": 2,
+          "explanation": "encourage the team 鼓励球队。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "lost",
+            "left",
+            "trained"
+          ],
+          "answer_index": 3,
+          "explanation": "hours they have trained 一起训练的时间。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "referee",
+            "driver",
+            "waiter",
+            "farmer"
+          ],
+          "answer_index": 0,
+          "explanation": "the referee blows the whistle 裁判吹哨。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sleep",
+            "focus",
+            "cry",
+            "leave"
+          ],
+          "answer_index": 1,
+          "explanation": "focus on the ball 专注于球。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Cheering for the Home Team",
+      "text": "On match day, our small town comes alive. Thousands of (1)____ wear the team's colours and walk towards the (2)____. Inside, the noise is incredible: people sing, shout and wave flags to (3)____ the home team. When our side scores, a huge (4)____ goes up around the ground, and strangers hug each other like old friends. Even when we are (5)____, the fans do not stop cheering; they believe their voices can help the players (6)____ harder. After the final (7)____, win or lose, everyone walks home together, still talking about the best (8)____ of the day. Watching live sport is very different from watching it on a screen at home. You can feel the (9)____ all around you, and for ninety minutes nothing else seems to matter. That shared feeling is one big (10)____ why so many people love going to the match.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "songs",
+            "fans",
+            "machines"
+          ],
+          "answer_index": 2,
+          "explanation": "thousands of fans 数千球迷。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "kitchen",
+            "market",
+            "garden",
+            "stadium"
+          ],
+          "answer_index": 3,
+          "explanation": "towards the stadium 走向体育场。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "support",
+            "sell",
+            "leave",
+            "forget"
+          ],
+          "answer_index": 0,
+          "explanation": "support the home team 支持主队。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "roar",
+            "song",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "a huge roar 巨大的轰鸣。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "selling",
+            "sleeping",
+            "losing",
+            "eating"
+          ],
+          "answer_index": 2,
+          "explanation": "even when we are losing 即便落后。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sleep",
+            "cry",
+            "leave",
+            "fight"
+          ],
+          "answer_index": 3,
+          "explanation": "fight harder 更努力拼搏。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "whistle",
+            "price",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "the final whistle 终场哨。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sleep",
+            "moments",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "the best moments 最美好的时刻。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "machine",
+            "energy",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "feel the energy 感受到那股气氛。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "shop",
+            "reason"
+          ],
+          "answer_index": 3,
+          "explanation": "one big reason why 一个重要原因。"
+        }
+      ]
+    }
+  ]
+}

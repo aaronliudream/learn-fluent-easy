@@ -1,0 +1,362 @@
+{
+  "volume": "required2",
+  "unit": "U2",
+  "topic": "Animals",
+  "source": "上外版必修第二册 Unit 2 同主题阅读(动物园利弊/企鹅与老人/动物英雄/动物如何睡眠/不同文化看动物/喂流浪猫)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Zoos: Cruel or Caring?",
+      "topic_cn": "议论·动物园到底是残忍还是关爱",
+      "body": "Some people believe that zoos are cruel. They argue that animals have to live in small spaces and can no longer hunt for their own food. An animal kept behind glass leads a very different life from one in the wild. However, for human visitors a trip to the zoo can be an educational experience. When students learn about endangered species and can see them up close, they are more likely to support projects that save these animals from extinction. Zoos are also involved in many conservation projects, and the money from visitors provides important funding for this work. Because of threats such as illegal hunting, there are many species that would disappear if they were not kept safely. Moreover, many zoos attempt to copy an animal's natural home, using a range of materials to build a space that feels like the wild. Overall, although every zoo is slightly different, a good zoo can be both caring and useful.",
+      "vocab_notes": [
+        {
+          "word": "cruel",
+          "cn": "残忍的"
+        },
+        {
+          "word": "endangered",
+          "cn": "濒危的"
+        },
+        {
+          "word": "conservation",
+          "cn": "保护"
+        },
+        {
+          "word": "funding",
+          "cn": "资金"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do some people think zoos are cruel?",
+          "options": [
+            "They are kept in small areas and can no longer catch their own food.",
+            "Animals are given too much food.",
+            "Animals are released too quickly.",
+            "Animals are never shown to visitors."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'animals have to live in small spaces and can no longer hunt' 的转述。"
+        },
+        {
+          "stem": "How can a visit to the zoo help endangered animals?",
+          "options": [
+            "It makes the animals stronger overnight.",
+            "Visitors are more willing to support projects that protect them.",
+            "It sends the animals straight back to the wild.",
+            "It ends all illegal hunting at once."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'more likely to support projects… save these animals from extinction' 的转述。"
+        },
+        {
+          "stem": "What is the writer's overall attitude towards good zoos?",
+          "options": [
+            "A well-run zoo can be caring as well as useful.",
+            "They are completely useless.",
+            "They should all be closed.",
+            "They only care about making money."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'a good zoo can be both caring and useful' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Friends Reunited",
+      "topic_cn": "记叙·企鹅丁丁与退休老人的友谊",
+      "body": "In 2011, a retired bricklayer named Joao found a small penguin lying close to death on his local beach in Brazil. He gently cleaned the oil off the bird's feathers and fed him a daily diet of fish to get his strength up. He named the penguin Dindim. A week later, Joao tried to release Dindim back into the sea, but the bird simply would not leave. He even took Dindim by boat to a nearby island, yet later that day the penguin was back in his backyard. In the end Dindim stayed for eleven months before he disappeared. To everyone's surprise, he returned the next summer, and he has kept coming back every year since. It is believed that Dindim prefers visiting the elderly man to migrating with other penguins. Joao says he loves the penguin like his own child, and he is sure that Dindim loves him too. Who said there was no good news left in the world?",
+      "vocab_notes": [
+        {
+          "word": "retire",
+          "cn": "退休"
+        },
+        {
+          "word": "diet",
+          "cn": "饮食"
+        },
+        {
+          "word": "release",
+          "cn": "放走"
+        },
+        {
+          "word": "elderly",
+          "cn": "年长的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did Joao do soon after finding the weak penguin?",
+          "options": [
+            "He sold it at the market.",
+            "He cleaned its feathers and fed it fish.",
+            "He left it on the rocks.",
+            "He sent it to a city zoo."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'cleaned the oil off the bird's feathers and fed him a daily diet of fish' 的转述。"
+        },
+        {
+          "stem": "What happened when Joao tried to set Dindim free?",
+          "options": [
+            "The penguin flew far away at once.",
+            "The penguin attacked the boat.",
+            "The penguin refused to leave and came back.",
+            "The penguin was never seen again."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'would not leave… was back in his backyard' 的转述。"
+        },
+        {
+          "stem": "Why does Dindim keep returning, according to the text?",
+          "options": [
+            "He cannot swim any more.",
+            "He is looking for other penguins.",
+            "He is afraid of the sea.",
+            "He seems to prefer the old man to migrating."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'prefers visiting the elderly man rather than migrate' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Animal Heroes",
+      "topic_cn": "记叙·动物英雄萨尔蒂与一只猫",
+      "body": "Animals can be heroes too. On 11 September 2001, a guide dog named Salty was at work in one of the towers of the World Trade Centre. As the building began to fall apart around them, Salty calmly led his blind owner and a friend down seventy flights of stairs to safety. Later, both the dog and his owner received special awards for their courage. In another story, a cat saved her owner's life at home. One night the house slowly began to fill up with a dangerous gas that has no smell. The cat sensed that something was wrong. She started meowing loudly and scratching at objects until her sleepy owner finally woke up and escaped. These two stories remind us that the bond between people and animals can run very deep. When we treat animals with kindness, they often return our care in ways we never expect, and sometimes they even save our lives.",
+      "vocab_notes": [
+        {
+          "word": "hero",
+          "cn": "英雄"
+        },
+        {
+          "word": "guide dog",
+          "cn": "导盲犬"
+        },
+        {
+          "word": "award",
+          "cn": "奖励"
+        },
+        {
+          "word": "bond",
+          "cn": "纽带"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the dog Salty do during the disaster?",
+          "options": [
+            "He guided his blind owner safely down the stairs.",
+            "He ran away from the building alone.",
+            "He hid under a desk.",
+            "He barked but did not move."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'led his blind owner… down seventy flights of stairs to safety' 的转述。"
+        },
+        {
+          "stem": "How did the cat help her owner?",
+          "options": [
+            "She opened the front door.",
+            "She made noise and woke the owner up.",
+            "She called for a doctor.",
+            "She put out a fire."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'meowing loudly and scratching… finally woke up' 的转述。"
+        },
+        {
+          "stem": "What lesson do the two stories teach us?",
+          "options": [
+            "Animals are always dangerous.",
+            "Only dogs can be heroes.",
+            "Kindness to animals is often returned.",
+            "Pets should never live at home."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'when we treat animals with kindness, they often return our care' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "How Animals Sleep",
+      "topic_cn": "说明·动物的睡眠与冬眠",
+      "body": "Do animals sleep the way humans do? Not exactly. We humans usually need around eight hours of sleep each night to keep our brains working well, but animals are very different. Bats, for example, may sleep about twenty hours a day, while giraffes sleep less than two. Keeping the brain healthy is one reason animals rest, but it is not the only one. Some animals, such as bears and turtles, go into a very deep sleep called hibernation. They do this in order to survive seasons when food is hard to find. Before hibernation begins, these animals eat heavily during the months when food is plentiful and build up a thick store of fat. Then they fall asleep and live off that fat through the long cold season, when the weather is freezing and food is limited. Each kind of animal has its own sleeping pattern, shaped over a long time by the place where it lives and the food it can find.",
+      "vocab_notes": [
+        {
+          "word": "hibernation",
+          "cn": "冬眠"
+        },
+        {
+          "word": "survive",
+          "cn": "存活"
+        },
+        {
+          "word": "plentiful",
+          "cn": "充足的"
+        },
+        {
+          "word": "pattern",
+          "cn": "模式"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does the sleep of bats and giraffes differ?",
+          "options": [
+            "Giraffes sleep about twenty hours a day.",
+            "Both sleep exactly eight hours.",
+            "Neither of them sleeps at all.",
+            "Bats sleep far more hours than giraffes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Bats… sleep about twenty hours… giraffes sleep less than two' 的转述。"
+        },
+        {
+          "stem": "Why do bears and turtles go into hibernation?",
+          "options": [
+            "To get through seasons with little food.",
+            "To grow new fur.",
+            "To travel to warmer places.",
+            "To stay awake all winter."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'survive seasons when food is hard to find' 的转述。"
+        },
+        {
+          "stem": "What do animals do just before hibernation?",
+          "options": [
+            "They stop eating completely.",
+            "They eat a lot and store fat.",
+            "They look for new homes.",
+            "They wake up earlier than usual."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'eat heavily… build up a thick store of fat' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Animals Across Cultures",
+      "topic_cn": "说明·不同文化对动物的看法",
+      "body": "People in different parts of the world do not always see the same animal in the same way. In countries like the United States and Britain, dogs are usually loved as faithful members of the family. They live inside the home, sleep near their owners and join in family life. Yet in some other places, dogs may be viewed quite differently, and people there might treat them as dirty or even as a danger. Cows offer another clear example. In India, the cow is greatly respected and honoured, and many people would never harm one. In several other countries, however, the very same animal is mainly seen as a source of meat. These differences are not really about right or wrong. They grow out of long history, religion and local custom. Understanding why a culture views an animal in a certain way can help us avoid misunderstanding and show more respect when we travel or make friends from other lands.",
+      "vocab_notes": [
+        {
+          "word": "faithful",
+          "cn": "忠诚的"
+        },
+        {
+          "word": "respect",
+          "cn": "尊重"
+        },
+        {
+          "word": "custom",
+          "cn": "风俗"
+        },
+        {
+          "word": "source",
+          "cn": "来源"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How are dogs usually seen in the US and Britain?",
+          "options": [
+            "As dirty and dangerous.",
+            "Only as working animals outside.",
+            "As loved members of the family.",
+            "As a common source of meat."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'loved as faithful members of the family' 的转述。"
+        },
+        {
+          "stem": "What does the example of cows in India show?",
+          "options": [
+            "Cows are eaten everywhere equally.",
+            "Cows are disliked in India.",
+            "All cultures treat cows the same way.",
+            "The same animal can be honoured in one culture and used for meat in another."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'In India… respected and honoured… elsewhere… a source of meat' 的转述。"
+        },
+        {
+          "stem": "Why does the writer think these differences are worth understanding?",
+          "options": [
+            "To avoid misunderstanding and show respect.",
+            "To prove one culture is better.",
+            "To stop people keeping pets.",
+            "To make everyone treat animals the same."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'help us avoid misunderstanding and show more respect' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Feeding Homeless Cats: Helping or Hurting?",
+      "topic_cn": "议论·校园喂流浪猫的利弊",
+      "body": "Recently some homeless cats have begun hanging around our school campus, and students cannot agree on what to do. Sally feels sorry for the thin little cats and wants to bring them food every afternoon. She believes that feeding them is a simple act of kindness, and that it is cruel to walk past a hungry animal and do nothing. Jenny, however, is worried. She loves animals too, but she thinks that regular feeding may bring problems. If the cats learn that there is always food on campus, more and more of them may gather there, and the school could become crowded and dirty. A better answer, some students suggest, might be to contact a local animal rescue centre. Workers there could check the cats' health, find them safe homes and stop the group from growing too fast. In this way the cats are cared for, but the campus does not turn into an unplanned shelter. The real question is how to be kind in a way that truly helps.",
+      "vocab_notes": [
+        {
+          "word": "homeless",
+          "cn": "无家可归的"
+        },
+        {
+          "word": "campus",
+          "cn": "校园"
+        },
+        {
+          "word": "rescue",
+          "cn": "救助"
+        },
+        {
+          "word": "shelter",
+          "cn": "收容所"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does Sally want to feed the homeless cats?",
+          "options": [
+            "She wants to keep them as pets at home.",
+            "She thinks it is kind and cannot ignore a hungry animal.",
+            "She is paid to look after them.",
+            "She dislikes the school campus."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a simple act of kindness… cruel to walk past a hungry animal' 的转述。"
+        },
+        {
+          "stem": "What is Jenny worried might happen?",
+          "options": [
+            "The cats will run away forever.",
+            "The cats will stop eating.",
+            "More cats may gather and the campus may get crowded and dirty.",
+            "Students will forget to study."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'more and more of them may gather… crowded and dirty' 的转述。"
+        },
+        {
+          "stem": "What solution do some students suggest?",
+          "options": [
+            "Ignore the cats completely.",
+            "Take all the cats home.",
+            "Build a new zoo on campus.",
+            "Contact a rescue centre to check and rehome the cats."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'contact a local animal rescue centre… find them safe homes' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "-ing / -ed 形式作定语速查",
+    "intro": "-ing 和 -ed 形式都能放在名词前后作定语,相当于一个定语从句。判断口诀:名词是动作的发出者、或动作正在进行 → -ing(主动);名词是动作的承受者、或动作已完成 → -ed(被动/完成)。",
+    "table": {
+      "headers": ["形式", "含义 / 例子 / 等价"],
+      "rows": [
+        ["-ing(主动·进行)", "boiling water = water that is boiling 正在沸腾的水"],
+        ["-ed(被动·完成)", "fried rice = rice that has been fried 被炒过的饭"],
+        ["-ed(被动)", "a toy hidden inside = a toy which is hidden 被藏的玩具"],
+        ["-ing(动名词作定语)", "a dining room = a room for dining 用来吃饭的房间"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "名词主动发出动作 / 动作正在进行 → 用 -ing", "mark": "a crying child(孩子主动在哭)" },
+      { "rule": "名词被动承受动作 / 动作已完成 → 用 -ed", "mark": "cooked food(食物被做熟)" },
+      { "rule": "a man eating fish(人吃→-ing) vs fish eaten by a man(鱼被吃→-ed)", "mark": "看名词与动词的主被动关系" },
+      { "rule": "情感类:-ing 修饰物(令人……),-ed 修饰人(感到……)", "mark": "a boring meal / a bored guest" }
+    ],
+    "why": [
+      "-ing/-ed 作定语其实是一个被压缩的定语从句:water that is boiling → boiling water;rice that has been fried → fried rice。所以只要还原成从句、判断主动还是被动,就知道该用哪个形式。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给出动词原形,要求填 -ing 还是 -ed,看名词与动词是主动还是被动关系。",
+      "短语作后置定语:a man carrying a suitcase / a toy hidden inside the cake,放在名词后,相当于定语从句。",
+      "情感动词分词区分(interesting/interested、boring/bored)是易错点。"
+    ],
+    "examVsReal": [
+      { "exam": "the dishes served by the waiter（考试/书面)", "real": "the dishes the waiter served", "note": "考试爱考过去分词作后置定语;口语里常直接用定语从句、甚至省略关系词" },
+      { "exam": "a man eating fish / fish eaten by a man（考试对比)", "real": "the guy eating fish over there", "note": "真实口语里 -ing 后置定语很自然;-ed 被动定语在书面/正式语体里更常见" }
+    ]
+  }
+}

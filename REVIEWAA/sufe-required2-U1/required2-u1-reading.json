@@ -1,0 +1,332 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Nature",
+  "source": "上外版必修第二册 Unit 1 同主题阅读(自然的花园/食物链与平衡/自然之美与心情/动物园之辩/物种保护/修复受损自然)。词限本单元/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "The King and His Empty Gardens",
+      "body": "There once lived a king who had a palace with beautiful gardens. In those gardens lived thousands of creatures of many different kinds. The only thing the king disliked was an old, dry tree standing in the middle. So he had it cut down and put fountains in its place. Some time later, a wise visitor told him that the gardens looked empty, for not a single animal could be seen. The king was shocked to find this was true. He offered a reward to anyone with a solution, but no one could explain the mystery. Years later, a young man arrived. He said the gardens had died because the tree was gone. Every spring, moths had come out of that tree. The moths fed the birds, the birds fed bigger animals, and so all the life in the gardens had been linked together. By removing one old tree, the king had broken the whole chain.",
+      "vocab_notes": [
+        {
+          "word": "creature",
+          "cn": "生物"
+        },
+        {
+          "word": "fountain",
+          "cn": "喷泉"
+        },
+        {
+          "word": "moth",
+          "cn": "蛾"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the king have the old tree cut down?",
+          "options": [
+            "It was the one thing he did not like in the gardens.",
+            "It was blocking the main gate.",
+            "A visitor had told him to remove it.",
+            "Its branches had fallen on the palace."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'The only thing the king disliked was an old, dry tree' 的转述。"
+        },
+        {
+          "stem": "What surprising change did the wise visitor point out?",
+          "options": [
+            "The fountains had stopped working.",
+            "No animals could be seen in the gardens any more.",
+            "The palace had become too small.",
+            "The flowers had grown too tall."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the gardens looked empty, for not a single animal could be seen' 的转述。"
+        },
+        {
+          "stem": "According to the young man, what had really caused the problem?",
+          "options": [
+            "Removing the tree had broken the chain of life.",
+            "The king had planted too many fountains.",
+            "The weather had suddenly turned cold.",
+            "The animals had been frightened by visitors."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 '由 moths→birds→bigger animals 串起整座花园,砍掉一棵树就断了整条链' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "How Nature Stays in Balance",
+      "body": "An environment works best when many different species live in it together. Here is one example from the sea. Green sea turtles love to eat sea grass, but they cannot stay in one spot for too long, because sharks in the area hunt them. Without the sharks, the turtles would eat all the best sea grass, and that grass is the home for many smaller animals. If just one species in this chain disappeared, the others connected to it might be in danger too. So losing a single kind of animal or plant can quietly harm many others. There are possibly billions of species of plants, animals and other living things in the world, but people have only recorded about two million of them. Many of these known and unknown species face an uncertain future. We can help keep the whole system healthy by working to protect every part of it, large or small.",
+      "vocab_notes": [
+        {
+          "word": "sea grass",
+          "cn": "海草"
+        },
+        {
+          "word": "shark",
+          "cn": "鲨鱼"
+        },
+        {
+          "word": "chain",
+          "cn": "链条"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why can't the green sea turtles stay in one place for long?",
+          "options": [
+            "The sea grass there tastes bad.",
+            "Sharks in that area hunt them.",
+            "The water is too cold for them.",
+            "They need to lay eggs on land."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'sharks in the area hunt them' 的转述。"
+        },
+        {
+          "stem": "What does the example mainly show about nature?",
+          "options": [
+            "Sharks are the most important animals in the sea.",
+            "Sea grass grows faster than any other plant.",
+            "The loss of one species may put many others in danger.",
+            "Turtles eat more than any other sea animal."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '失去一个物种会悄悄伤害许多其他物种' 的概括。"
+        },
+        {
+          "stem": "How many species have people actually recorded so far?",
+          "options": [
+            "About one billion.",
+            "Almost all of them.",
+            "Fewer than a thousand.",
+            "About two million."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'recorded about two million of them' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Nature and Our Feelings",
+      "body": "Nature does more than fill the world with beauty; it also gently shapes the way we feel. On a bright, sunny morning we often feel cheerful inside, while a grey and rainy sky can leave us feeling low. A starry night with soft moonlight can make us feel calm and even romantic. Because of this, nature can quietly change our plans and our moods without our noticing. There is also beauty everywhere if we slow down to look for it. Nature can set the sky on fire at sunset, or turn a familiar field into a white wonderland after a night of snow. When we see a small flower pushing up through the frozen ground in spring, fresh hope rises in us. The writer believes that learning to be more aware of these changes has a positive effect on our lives. It teaches us to look at things in a kinder way and to feel better about ourselves.",
+      "vocab_notes": [
+        {
+          "word": "moonlight",
+          "cn": "月光"
+        },
+        {
+          "word": "wonderland",
+          "cn": "仙境"
+        },
+        {
+          "word": "sunset",
+          "cn": "日落"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say nature can do besides making the world beautiful?",
+          "options": [
+            "It can shape the way we feel.",
+            "It can make us richer.",
+            "It can stop the seasons from changing.",
+            "It can teach us to paint."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'it also gently shapes the way we feel' 的转述。"
+        },
+        {
+          "stem": "How do we often feel on a grey, rainy day?",
+          "options": [
+            "Cheerful and excited.",
+            "Low in spirits.",
+            "Calm and romantic.",
+            "Full of fresh hope."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a grey and rainy sky can leave us feeling low' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what is the effect of becoming more aware of nature?",
+          "options": [
+            "It makes us forget our problems for ever.",
+            "It removes all bad weather.",
+            "It improves the way we view the world and ourselves.",
+            "It makes the days longer."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'learning to be more aware… has a positive effect on our lives' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Zoos: Cruel or Caring?",
+      "body": "Last weekend I visited a zoo with a friend, and we soon began to debate whether zoos are a good thing. Animal welfare is a growing concern today, and many people argue that zoos are cruel. They say it is wrong to remove animals from their natural habitats and keep them in cages. An animal in a zoo lives a very different life from one in the wild; for example, it never has to hunt for food. Some animals also become unhappy because there is not enough space, and they must adjust to a climate that is not their own. For human visitors, however, a trip to the zoo can be a real chance to learn. Children who may never travel far can still see animals from all over the world. Good modern zoos also help to protect rare species and even bring some back from the edge of extinction. So the question is not simple, and people will go on discussing it for a long time.",
+      "vocab_notes": [
+        {
+          "word": "welfare",
+          "cn": "福利"
+        },
+        {
+          "word": "habitat",
+          "cn": "栖息地"
+        },
+        {
+          "word": "extinction",
+          "cn": "灭绝"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do people who dislike zoos mainly argue?",
+          "options": [
+            "Zoos are too expensive to visit.",
+            "Zoos are usually too far from cities.",
+            "Animals in zoos eat the wrong food.",
+            "It is cruel to keep animals away from their natural homes."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 '把动物从栖息地带走、关进笼子是残忍的' 的转述。"
+        },
+        {
+          "stem": "What does the writer say is one good point of zoos for visitors?",
+          "options": [
+            "They give people, especially children, a chance to learn.",
+            "They are always free of charge.",
+            "They let people take the animals home.",
+            "They are open all night."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a trip to the zoo can be a real chance to learn' 的转述。"
+        },
+        {
+          "stem": "What is the writer's overall view of the question?",
+          "options": [
+            "Zoos should all be closed at once.",
+            "There is no easy answer, and people keep arguing about it.",
+            "Zoos are clearly better than the wild.",
+            "Only children should be allowed in zoos."
+          ],
+          "answer_index": 1,
+          "explanation": "末句 'the question is not simple… discussing it for a long time' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Saving Species from Extinction",
+      "body": "Around the world, many rare animals and plants are close to extinction. Some are hunted for money, while others lose their homes when forests are cut down or rivers are polluted. Once a species is gone, it can never come back, and the loss often hurts other living things that depend on it. This is why conservation has become so important. Conservation means protecting the natural world so that wild plants and animals can survive. Workers may guard a forest, clean a river, or design a safe park where rare animals can live and breed. Sometimes a few of the last animals of a kind are cared for carefully until their numbers slowly rise again. Scientists also study how each species fits into the balance of nature, because saving one kind of animal often means protecting its whole habitat. By acting in time, people can give threatened species a real chance to survive into the future.",
+      "vocab_notes": [
+        {
+          "word": "pollute",
+          "cn": "污染"
+        },
+        {
+          "word": "breed",
+          "cn": "繁殖"
+        },
+        {
+          "word": "survive",
+          "cn": "幸存"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is one reason given for animals becoming close to extinction?",
+          "options": [
+            "They grow too quickly in number.",
+            "They move to colder countries.",
+            "They are hunted or lose their homes.",
+            "They stop eating natural food."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '被猎杀,或森林被砍、河流被污染而失去家园' 的转述。"
+        },
+        {
+          "stem": "What does conservation mean, according to the passage?",
+          "options": [
+            "Building more zoos in every city.",
+            "Moving all wild animals into parks.",
+            "Stopping people from visiting forests.",
+            "Protecting nature so wild species can survive."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'protecting the natural world so that wild plants and animals can survive' 的转述。"
+        },
+        {
+          "stem": "Why does saving one species often mean protecting its habitat?",
+          "options": [
+            "Every kind of animal has its own place in nature's balance.",
+            "Habitats are cheaper to build than parks.",
+            "Animals dislike living near people.",
+            "Habitats are easy to move from place to place."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'each species fits into the balance of nature' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Bringing a Creek Back to Life",
+      "body": "Not all damage to nature lasts for ever; sometimes people can bring a place back to life. Suzhou Creek in Shanghai is a good example. In the past it was a busy, healthy waterway, full of fish and shrimp. By the 1980s, however, heavy pollution had made the water dark and dirty, and almost all the fish and shrimp had disappeared. The smell was so bad that people living nearby kept their windows closed. Then the city decided to act. Between 1993 and 2008, three large projects were carried out to clean the creek and stop dirty water from flowing in. Slowly the water became clearer, and the living things began to return. Today fish and shrimp can once again be found in the creek, and the people who live along its banks enjoy a much better quality of life. The story shows that with time, money and care, even a badly damaged river can be restored.",
+      "vocab_notes": [
+        {
+          "word": "creek",
+          "cn": "小河"
+        },
+        {
+          "word": "shrimp",
+          "cn": "虾"
+        },
+        {
+          "word": "waterway",
+          "cn": "水道"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What had happened to Suzhou Creek by the 1980s?",
+          "options": [
+            "It had become wider than before.",
+            "Pollution had killed off almost all its fish and shrimp.",
+            "It had completely dried up.",
+            "It had been turned into a park."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'heavy pollution had made the water dark… almost all the fish and shrimp had disappeared' 的转述。"
+        },
+        {
+          "stem": "What did the city do to deal with the problem?",
+          "options": [
+            "It moved all the residents away.",
+            "It filled in the creek with earth.",
+            "It carried out three large clean-up projects.",
+            "It built a wall around the water."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'three large projects were carried out to clean the creek' 的转述。"
+        },
+        {
+          "stem": "What main lesson does the story of the creek teach?",
+          "options": [
+            "Rivers should never be used by people.",
+            "Pollution can never really be cleaned up.",
+            "Fish and shrimp always come back on their own.",
+            "With time and care, even a heavily polluted river can recover."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'even a badly damaged river can be restored' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "volume": "required2",
+  "unit": "U1",
+  "topic": "Describe a scene in nature in spatial order(按空间顺序描写一处自然景色)",
+  "title_en": "A View of Nature",
+  "genre": "描写文 / 写景(describe a landscape painting or photo in spatial order)",
+  "source": "上外版必修第二册 Unit 1 Moving Forward:Writing in spatial order——按空间顺序(从左到右/从近到远)描写一幅风景画或一处自然景色。",
+  "prompt_cn": "请选择一幅你喜欢的风景画或一张自然照片,用英语写一段约80词的短文,按空间顺序(如从左到右、从近到远)描写其中的景色。要求:① 抓住最重要的细节;② 用表示方位的词语让画面有条理(in front of / on the left / in the distance 等);③ 结尾写出这处景色给你的整体感受。",
+  "prompt_en": "Choose a landscape painting or a nature photo you like. Write a paragraph of about 80 words describing the scene in spatial order (e.g. from near to far, or from left to right). You should: 1) include the most important details; 2) use prepositions of place to organise the picture (in front of / on the left / in the distance); 3) end with the overall feeling the scene gives you.",
+  "points": [
+    "选定观察角度并抓住主要细节(A stream / trees / mountains …)",
+    "用方位词组织画面(in front of us / on the left / in the distance)",
+    "按空间顺序由近及远(或从左到右)展开",
+    "结尾点出整体感受(All these present a peaceful view of nature.)"
+  ],
+  "word_count": "80 词左右",
+  "model_essay": "In front of us, a clear stream flows gently from the left to the far right through a green grassland. At our feet, wild flowers grow brightly on the bank. On the other side, tall trees stand strong and quiet. Further in the distance, a small palace rises against the hills, and the sun is setting beside it, casting a soft golden glow on the clouds above. All these details combine to present a peaceful and beautiful view of nature at dusk. Looking at it, I feel calm and full of hope.",
+  "model_translation": "在我们眼前,一条清澈的小溪从左边缓缓流向远处的右方,穿过一片绿色的草地。在我们脚边,野花在岸边明艳地盛开。河的另一边,高大的树木静静而挺拔。再往远处,一座小宫殿映衬着群山,夕阳正落在它旁边,为上方的云彩洒下柔和的金光。所有这些细节组合在一起,呈现出黄昏时分大自然宁静而美丽的景象。望着它,我感到平静,满怀希望。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "细节齐全:主要景物 + 方位组织 + 整体感受三要素到位" },
+      { "dimension": "结构", "max": 4, "criteria": "按统一的空间顺序(由近及远/从左到右)展开,行文连贯、画面清晰" },
+      { "dimension": "语言", "max": 5, "criteria": "方位词组与写景词汇准确多样,定语从句等句型运用得当,语法基本无误" }
+    ],
+    "required_structure": [
+      "起笔定位 In front of us, …",
+      "近景 At our feet, …",
+      "中景 On the other side, …",
+      "远景 Further in the distance, …",
+      "收束感受 All these present a peaceful view of nature."
+    ],
+    "key_expressions": [
+      "In front of us, a clear stream flows from the left to the far right.",
+      "At our feet, wild flowers grow brightly on the bank.",
+      "Further in the distance, a small palace rises against the hills.",
+      "All these details present a peaceful view of nature at dusk."
+    ],
+    "useful_words": ["stream", "grassland", "in front of", "on the left", "in the distance", "bank", "sunset", "glow", "landscape", "peaceful"]
+  },
+  "high_sentences": [
+    "In front of us, a clear stream flows gently from the left to the far right.",
+    "Further in the distance, a small palace rises against the hills.",
+    "The sun is setting beside it, casting a soft golden glow on the clouds above.",
+    "All these details combine to present a peaceful view of nature at dusk."
+  ],
+  "error_pairs": [
+    { "wrong": "The trees stands on the left.", "correct": "The trees stand on the left.", "note": "主语 trees 为复数,动词不加 s。" },
+    { "wrong": "A stream which flows past the field it is clear.", "correct": "A stream which flows past the field is clear.", "note": "定语从句后不再重复主语 it。" },
+    { "wrong": "In the distance, a palace stand against the hills.", "correct": "In the distance, a palace stands against the hills.", "note": "主语 a palace 第三人称单数,动词加 s。" }
+  ],
+  "paragraph_template": "【按空间顺序写景结构】\n第1句 定位起笔:In front of us, …\n第2句 近景:At our feet, …\n第3句 中景:On the other side, …\n第4句 远景:Further in the distance, …\n第5句 收束感受:All these present a peaceful view of nature."
+}

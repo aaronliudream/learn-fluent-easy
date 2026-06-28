@@ -1,0 +1,710 @@
+{
+  "volume": "required2",
+  "unit": "U3",
+  "topic": "Food",
+  "source": "上外版必修第二册 Unit 3 同主题完形(法式晚宴/印度香料/英式甜点/意大利咖啡习俗/中国饺子/移民与食物)。用词限本单元/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "My First French Dinner Party",
+      "text": "On my first weekend abroad, I went to a dinner party with my host family to (1)____ the New Year. It was exactly what I had imagined a French dinner would be, with many (2)____, a variety of cheeses and fresh bread. At the end of the meal, the host suddenly told everyone to get under the (3)____. I was confused until I learned about a special (4)____ called the kings' cake. A small toy was (5)____ inside it, and the children hid so they could not see who would get the lucky (6)____. From time to time during my stay, little differences like this took me by (7)____. I felt a kind of culture (8)____, the strange feeling you get in a new country. Luckily, I had learned useful (9)____ to help me deal with these ups and downs. Looking back, I am glad I kept an open (10)____ and tried to understand.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "celebrate",
+            "forget",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "celebrate the New Year 庆祝新年。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "prices",
+            "courses",
+            "machines",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "many courses 好几道菜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "garden",
+            "river",
+            "table",
+            "shop"
+          ],
+          "answer_index": 2,
+          "explanation": "get under the table 钻到桌子底下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "weather",
+            "noise",
+            "price",
+            "tradition"
+          ],
+          "answer_index": 3,
+          "explanation": "a special tradition 一项特别的传统。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "hidden",
+            "sold",
+            "thrown",
+            "eaten"
+          ],
+          "answer_index": 0,
+          "explanation": "a toy hidden inside 被藏在里面的玩具。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "ticket",
+            "slice",
+            "song",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "the lucky slice 幸运的那一块。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "bus",
+            "river",
+            "surprise",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "take sb by surprise 让某人吃惊。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "shock"
+          ],
+          "answer_index": 3,
+          "explanation": "culture shock 文化冲击。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "strategies",
+            "machines",
+            "gardens",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "useful strategies 实用的策略。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "door",
+            "mind",
+            "window",
+            "box"
+          ],
+          "answer_index": 1,
+          "explanation": "keep an open mind 保持开放的心态。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "The Taste of India",
+      "text": "Indian cooking is famous all over the world for its rich (1)____. Cooks there use lots of spices, (2)____ ginger, chilli pepper and black pepper, to give each dish a strong taste. When you walk past an Indian kitchen, the (3)____ smell of these spices fills the air at once. Many dishes are quite (4)____, so people who are not used to chillies should be careful. In much of India, people eat with their (5)____ instead of with a knife and fork. This is not a strange habit; it is simply a different (6)____ of eating that fits the local food. Each region has its own (7)____ dishes, passed down through families for many years. Some visitors find Indian food a little (8)____ at first, but most soon learn to love it. If you ever travel there, keep an open mind and (9)____ as many new dishes as you can. You may (10)____ a whole new world of flavour.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "prices",
+            "machines",
+            "flavours",
+            "noises"
+          ],
+          "answer_index": 2,
+          "explanation": "rich flavours 丰富的味道。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "losing",
+            "hiding",
+            "including"
+          ],
+          "answer_index": 3,
+          "explanation": "including ginger 包括姜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "strong",
+            "silent",
+            "empty",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "the strong smell 浓烈的气味。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sweet",
+            "spicy",
+            "cold",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "quite spicy 相当辣。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "books",
+            "wheels",
+            "fingers",
+            "wings"
+          ],
+          "answer_index": 2,
+          "explanation": "eat with their fingers 用手吃。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "song",
+            "game",
+            "way"
+          ],
+          "answer_index": 3,
+          "explanation": "a different way of eating 不同的进食方式。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "typical",
+            "empty",
+            "silent",
+            "broken"
+          ],
+          "answer_index": 0,
+          "explanation": "its own typical dishes 自己典型的菜肴。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "cheap",
+            "strange",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "a little strange 有点陌生。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sell",
+            "drop",
+            "try",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "try as many new dishes 尽量多尝。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "sell",
+            "lose",
+            "discover"
+          ],
+          "answer_index": 3,
+          "explanation": "discover a whole new world 发现全新世界。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "A Sweet British Habit",
+      "text": "The British are well known for their (1)____ for sweet food. They love biscuits, chocolates and all kinds of (2)____. One famous example is Bread and Butter Pudding, a dessert (3)____ mostly with bread and butter. It may sound (4)____ to people from other countries, but it is actually delicious. Another sweet British (5)____ is afternoon tea, when people enjoy small cakes with a hot cup of (6)____. Many of these treats are (7)____ down through families, and each home has its own slightly different (8)____. For a foreign visitor, joining a British family for tea can be a lovely way to (9)____ part of the culture. The next time someone offers you a warm slice of pudding, do not (10)____ it — you might find a new favourite.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "love",
+            "fear",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a love for sweet food 对甜食的喜爱。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stones",
+            "sweets",
+            "wheels",
+            "boxes"
+          ],
+          "answer_index": 1,
+          "explanation": "all kinds of sweets 各种糖果。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "making",
+            "make",
+            "made",
+            "makes"
+          ],
+          "answer_index": 2,
+          "explanation": "a dessert made with 用……做的甜点(过去分词作定语)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "empty",
+            "silent",
+            "strange"
+          ],
+          "answer_index": 3,
+          "explanation": "sound strange 听起来奇怪。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "custom",
+            "machine",
+            "price",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a British custom 一种英国习俗。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "oil",
+            "tea",
+            "stone",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "a cup of tea 一杯茶。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "thrown",
+            "passed",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "passed down through families 代代相传。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "noise",
+            "ticket",
+            "recipe"
+          ],
+          "answer_index": 3,
+          "explanation": "its own recipe 自己的食谱。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "enjoy",
+            "lose",
+            "break",
+            "sell"
+          ],
+          "answer_index": 0,
+          "explanation": "enjoy part of the culture 体味文化的一部分。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "buy",
+            "refuse",
+            "cook",
+            "carry"
+          ],
+          "answer_index": 1,
+          "explanation": "do not refuse it 别拒绝。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Coffee, Italian Style",
+      "text": "When I studied in Italy, I quickly learned that coffee comes with its own (1)____. In the morning, Italians enjoy a milky cappuccino, but they almost never (2)____ one after lunch. To them, a milky coffee in the afternoon seems (3)____, like having breakfast at night. If you order a cappuccino after a big meal, the waiter may give you a (4)____ look. At first this small rule (5)____ me by surprise, and I felt a little embarrassed. But my Italian friends kindly (6)____ the custom to me. They told me that, after lunch, locals usually (7)____ a small, strong espresso instead. Once I understood the (8)____ behind the habit, it made perfect sense. Now, whenever I travel, I try to learn the local food (9)____ before I order. A few minutes of asking can save you from many funny (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stones",
+            "wheels",
+            "rules",
+            "boxes"
+          ],
+          "answer_index": 2,
+          "explanation": "its own rules 自己的规矩。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sell",
+            "throw",
+            "lose",
+            "order"
+          ],
+          "answer_index": 3,
+          "explanation": "never order one 从不点。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "odd",
+            "cheap",
+            "silent",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "seems odd 显得奇怪。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "surprising",
+            "surprised",
+            "surprise",
+            "surprises"
+          ],
+          "answer_index": 1,
+          "explanation": "a surprised look 惊讶的表情(-ed 修饰表情/人的反应)。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sold",
+            "lost",
+            "took",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "take me by surprise 让我吃惊。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "lost",
+            "broke",
+            "explained"
+          ],
+          "answer_index": 3,
+          "explanation": "explained the custom 解释这一习俗。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "drink",
+            "sell",
+            "throw",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "drink a small espresso 喝一杯浓缩咖啡。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "reason",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "the reason behind 背后的原因。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prices",
+            "machines",
+            "customs",
+            "tickets"
+          ],
+          "answer_index": 2,
+          "explanation": "local food customs 当地饮食习俗。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "songs",
+            "prices",
+            "wheels",
+            "mistakes"
+          ],
+          "answer_index": 3,
+          "explanation": "funny mistakes 有趣的错误。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Making Dumplings Together",
+      "text": "One of my best memories of China is the night my host family taught me to make (1)____. We sat around the kitchen table while my host mother (2)____ a large bowl of meat and vegetables. She showed me how to put a little of the (3)____ into the middle of each thin wrapper and fold it closed. My first ones looked ugly, but everyone (4)____ kindly and helped me try again. Then we dropped them into a big pot of (5)____ water on the stove. While we waited, my host father (6)____ that in the north, dumplings are a favourite food for the New Year. He said their shape is (7)____ to stand for good luck and wealth. When the dumplings were finally (8)____, we ate them hot with a little vinegar. That simple meal was more (9)____ to me than any restaurant dinner. Making food together, I learned, is one of the best ways to (10)____ a new culture.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "dumplings",
+            "prices",
+            "machines",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "make dumplings 包饺子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "prepared",
+            "lost",
+            "threw"
+          ],
+          "answer_index": 1,
+          "explanation": "prepared a bowl of 准备好一大碗。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "filled",
+            "fill",
+            "filling",
+            "fills"
+          ],
+          "answer_index": 2,
+          "explanation": "the filling 馅料(动名词作名词)。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sold",
+            "lost",
+            "broke",
+            "laughed"
+          ],
+          "answer_index": 3,
+          "explanation": "everyone laughed kindly 大家善意地笑。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "boiling",
+            "boiled",
+            "boil",
+            "boils"
+          ],
+          "answer_index": 0,
+          "explanation": "boiling water 沸水(-ing 表正在沸腾)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "sold",
+            "explained",
+            "lost",
+            "broke"
+          ],
+          "answer_index": 1,
+          "explanation": "explained that 解释说。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "believing",
+            "believe",
+            "believed",
+            "believes"
+          ],
+          "answer_index": 2,
+          "explanation": "is believed to 被认为(被动)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "silent",
+            "cheap",
+            "ready"
+          ],
+          "answer_index": 3,
+          "explanation": "were ready 做好了。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "special",
+            "empty",
+            "silent",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "more special 更特别。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lose",
+            "understand",
+            "sell",
+            "break"
+          ],
+          "answer_index": 1,
+          "explanation": "understand a new culture 理解新文化。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Food That Travels with You",
+      "text": "When people move to a new country, they often bring their (1)____ food with them. Cooking a familiar dish can be a powerful way of (2)____ with homesickness. The smell of a (3)____ family recipe can make a small flat feel like home again. Over time, these dishes also become a (4)____ to the new society. Neighbours grow curious, (5)____ the new food, and slowly a community shares its (6)____. This is one reason why big cities now offer such a rich (7)____ of cuisines from around the world. As travel becomes easier and the world more (8)____, it is simpler than ever to (9)____ dishes from far-away places. We should value our own traditions, but we should also become more (10)____ about other cultures by trying their food.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "empty",
+            "silent",
+            "traditional",
+            "cheap"
+          ],
+          "answer_index": 2,
+          "explanation": "traditional food 传统食物。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "selling",
+            "losing",
+            "throwing",
+            "coping"
+          ],
+          "answer_index": 3,
+          "explanation": "coping with homesickness 应对思乡。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "precious",
+            "empty",
+            "silent",
+            "cheap"
+          ],
+          "answer_index": 0,
+          "explanation": "a precious family recipe 珍贵的家庭食谱。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "price",
+            "bridge",
+            "noise",
+            "wheel"
+          ],
+          "answer_index": 1,
+          "explanation": "a bridge to the new society 通往新社会的桥梁。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sell",
+            "lose",
+            "try",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "try the new food 尝试新食物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "wheel",
+            "culture"
+          ],
+          "answer_index": 3,
+          "explanation": "shares its culture 分享其文化。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "variety",
+            "price",
+            "noise",
+            "wheel"
+          ],
+          "answer_index": 0,
+          "explanation": "a rich variety 丰富多样。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "connected",
+            "silent",
+            "cheap"
+          ],
+          "answer_index": 1,
+          "explanation": "more connected 更紧密相连。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "lose",
+            "sell",
+            "access",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "access dishes 接触到菜肴。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "empty",
+            "silent",
+            "cheap",
+            "informed"
+          ],
+          "answer_index": 3,
+          "explanation": "more informed about 更了解。"
+        }
+      ]
+    }
+  ]
+}

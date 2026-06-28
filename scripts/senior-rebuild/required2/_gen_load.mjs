@@ -1,7 +1,9 @@
 // 生成必修二某单元灌库 SQL(junior_* 表)。用法: node _gen_load.mjs --unit u1
 // 输出 -> SQLAA/required2-<unit>-load.sql + scripts/。自带 count + 分布校验。幂等。
 import { readFileSync, writeFileSync } from 'node:fs';
-import { VOL, GRADE, META } from './_meta.mjs';
+import { VOL, GRADE, META, CODE_PREFIX } from './_meta.mjs';
+const PFX = CODE_PREFIX || '';
+const px = c => PFX + c;
 const U = process.argv[process.argv.indexOf('--unit') + 1];
 const m = META[U]; if (!m) throw new Error('未知 unit ' + U);
 const UNIT = m.unit;
@@ -34,11 +36,11 @@ sql += `DELETE FROM public.junior_grammar_points WHERE volume='${VOL}' AND unit=
 const circ = ['①', '②', '③'];
 grammar.points.forEach((p, i) => {
   sql += `INSERT INTO public.junior_grammar_points (code, title, cefr, grade, summary, sort_order, volume, unit, category_id, examples, content_depth) VALUES (`
-    + `'${esc(p.code)}', '${esc(circ[i] + p.point)}', 'A2', ${GRADE}, '${esc('必修二 ' + UNIT + ' — ' + p.overview)}', ${i + 1}, '${VOL}', '${UNIT}', (SELECT id FROM public.junior_grammar_categories WHERE code='senior' LIMIT 1), '[]'::jsonb, 0);\n`;
+    + `'${esc(px(p.code))}', '${esc(circ[i] + p.point)}', 'A2', ${GRADE}, '${esc('必修二 ' + UNIT + ' — ' + p.overview)}', ${i + 1}, '${VOL}', '${UNIT}', (SELECT id FROM public.junior_grammar_categories WHERE code='senior' LIMIT 1), '[]'::jsonb, 0);\n`;
 });
 grammar.questions.forEach((q, i) => {
   sql += `INSERT INTO public.junior_grammar_questions (point_id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, difficulty, sort_order, question_type) VALUES (`
-    + `(SELECT id FROM public.junior_grammar_points WHERE volume='${VOL}' AND unit='${UNIT}' AND code='${esc(q.code)}'), `
+    + `(SELECT id FROM public.junior_grammar_points WHERE volume='${VOL}' AND unit='${UNIT}' AND code='${esc(px(q.code))}'), `
     + `'${esc(q.stem)}', '${esc(q.options[0])}', '${esc(q.options[1])}', '${esc(q.options[2])}', '${esc(q.options[3])}', '${LET[q.answer_index]}', '${esc(q.explanation)}', 2, ${(i % 20) + 1}, 'mcq');\n`;
 });
 

@@ -1,5 +1,7 @@
 // 必修二 单元元数据(供 balance / gen-load / patch-year1 共用)。db id 槽 u1..u5 干净起(无 WU)。
 export const VOL = 'required2', GRADE = 10;
+// 语法点 code 全局唯一约束(junior_grammar_points_code_key):每册加前缀防跨册撞码(required1 U2-U5 已占用 u2.01..u5.03)。
+export const CODE_PREFIX = 'r2';
 export const META = {
   u1: {
     unit: 'U1', semIdx: 0, title: 'Cultural Heritage', cn: '文化遗产', emoji: '🏛️',

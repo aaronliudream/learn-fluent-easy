@@ -1,6 +1,7 @@
 // 接 hub: 把某单元写进 year1.json 的 gk_required2.units[semIdx]。用法: node _patch_year1.mjs --unit u1
 import { readFileSync, writeFileSync } from 'node:fs';
-import { VOL, META } from './_meta.mjs';
+import { VOL, META, CODE_PREFIX } from './_meta.mjs';
+const PFX = CODE_PREFIX || '';
 const U = process.argv[process.argv.indexOf('--unit') + 1];
 const m = META[U]; if (!m) throw new Error('未知 unit ' + U);
 const DIR = `scripts/senior-rebuild/required2/${U}`;
@@ -33,7 +34,7 @@ if (!st.some(s => s.type === 'cloze')) {
 }
 u.grammarTitle = m.grammarTitle;
 u.grammarCode = null;
-u.grammarCodes = m.grammarCodes;
+u.grammarCodes = m.grammarCodes.map(c => PFX + c);
 u.available = true;
 
 writeFileSync(Y, JSON.stringify(y, null, 2) + '\n');

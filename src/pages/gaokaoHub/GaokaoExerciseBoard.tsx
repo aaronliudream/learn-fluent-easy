@@ -7,6 +7,7 @@ import { loadMastery, type MasteryRow } from "@/lib/masteryProgress";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
 import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
+import { availableVolumes } from "@/lib/gaokaoHub/availability";
 
 const SENIOR_VOLUMES = GAOKAO_BOOKS.map((b) => b.volume);
 const UNIT_ORDER = ["WU", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8"];
@@ -42,9 +43,9 @@ export default function GaokaoExerciseBoard({
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase.from(table).select("volume").eq("publisher", pub).in("volume", SENIOR_VOLUMES);
+      const avail = await availableVolumes(table, SENIOR_VOLUMES, pub);
       if (cancelled) return;
-      setAvailable(new Set(((data ?? []) as { volume: string }[]).map((r) => r.volume)));
+      setAvailable(avail);
     })();
     return () => { cancelled = true; };
   }, [table, pub]);

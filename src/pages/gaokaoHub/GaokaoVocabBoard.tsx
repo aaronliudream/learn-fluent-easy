@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import GaokaoBookPicker, { GAOKAO_BOOKS } from "@/components/gaokaoHub/GaokaoBookPicker";
 import { readPublisherParam } from "@/lib/gaokaoHub/publisher";
+import { availableVolumes } from "@/lib/gaokaoHub/availability";
 import VocabGameLauncher from "@/components/vocab/VocabGameLauncher";
 import VocabMasteryOverview from "@/components/vocab/VocabMasteryOverview";
 import GuidedSession from "@/components/vocab/GuidedSession";
@@ -46,8 +47,8 @@ export default function GaokaoVocabBoard() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase.from("junior_vocab").select("volume").eq("publisher", pub).in("volume", SENIOR_VOLUMES);
-      if (!cancelled) setAvailable(new Set(((data ?? []) as { volume: string }[]).map((r) => r.volume)));
+      const avail = await availableVolumes("junior_vocab", SENIOR_VOLUMES, pub); // 逐册存在性,避开 1000 行截断
+      if (!cancelled) setAvailable(avail);
     })();
     return () => { cancelled = true; };
   }, [pub]);

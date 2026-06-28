@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "note": "单元通关专属迷你阅读(急救主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Lily saw her neighbour fall and stop moving, she did not panic. She quickly called an ambulance and stayed on the line while the operator told her how to help. By the time the paramedics arrived, the old man had begun to breathe steadily again, and Lily felt proud that her calm action had made a difference.",
+    "questions": [
+      {
+        "q": "How did Lily react when her neighbour fell?",
+        "options": [
+          "She stayed calm and called an ambulance.",
+          "She ran away in fear.",
+          "She did nothing and waited.",
+          "She carried him to hospital alone."
+        ],
+        "answer": "A",
+        "explanation": "原文 'she did not panic. She quickly called an ambulance' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Lily feel after the paramedics arrived?",
+        "options": [
+          "Sorry that she had helped.",
+          "Bored and tired.",
+          "Glad that staying calm had truly mattered.",
+          "Afraid of the old man."
+        ],
+        "answer": "C",
+        "explanation": "末句 'Lily felt proud that her calm action had made a difference'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

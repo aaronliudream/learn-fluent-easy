@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Xie Lei chose to live with a host family abroad.", "opts": ["谢蕾选择在国外与寄宿家庭一起生活。", "谢蕾住在学校宿舍里。", "谢蕾决定不出国了。", "谢蕾搬回了中国。"], "answer": 0 },
+    { "audio": "Getting involved in activities helps you overcome culture shock.", "opts": ["待在房间里最能克服文化冲击。", "参与活动有助于你克服文化冲击。", "文化冲击是无法克服的。", "活动会让人更孤独。"], "answer": 1 },
+    { "audio": "Chinese students abroad can act as cultural envoys.", "opts": ["留学只是为了赚钱。", "外国学生从不了解中国。", "在国外的中国学生可以充当文化使者。", "文化使者只能是老师。"], "answer": 2 },
+    { "audio": "She suffered from homesickness in her first weeks.", "opts": ["她一到就感到很自在。", "她从不想家。", "她讨厌新朋友。", "最初几周她饱受思乡之苦。"], "answer": 3 },
+    { "audio": "Studying abroad can bring great pressure and high expenses.", "opts": ["出国留学会带来很大压力和高昂费用。", "出国留学完全免费。", "出国留学没有任何困难。", "出国留学只为度假。"], "answer": 0 },
+    { "audio": "Her tutor wanted to know what she herself thought.", "opts": ["导师只想听别人的话。", "导师想知道她自己的想法。", "导师不许她写文章。", "导师从不帮助她。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "At first, Xie Lei had to ____ to a whole new life abroad.（适应)", "opts": ["adapt", "deny", "sell", "shout"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Cooperating with others gives us more ____ into our own culture.（洞察)", "opts": ["price", "insight", "noise", "garden"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "Getting ____ in social activities helps overcome culture shock.（参与:get ___ in)", "opts": ["sold", "lost", "involved", "tired"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "She is acting as a cultural ____ between China and the UK.（信使)", "opts": ["price", "garden", "machine", "messenger"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "Her tutor said ____ she must acknowledge other people's ideas.", "opts": ["that", "what", "which", "whether"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "I don't know ____ the exchange student will arrive on time.", "opts": ["that", "whether", "what", "which"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ surprised Xie Lei was that she soon spoke up in class.", "opts": ["That", "Whether", "What", "Which"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "We must face the fact ____ adapting to a new culture is never easy.", "opts": ["which", "what", "how", "that"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听录音选出正确的中文意思。", "opts": ["谢蕾正充当中英之间的文化桥梁。", "谢蕾放弃了学业。", "谢蕾讨厌英国文化。", "谢蕾从不交朋友。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Xie Lei is building a bridge between China and the UK." },
+    { "q": "听录音选出正确的中文意思。", "opts": ["他靠手机就能在外面付款。", "他从不用手机。", "他害怕中国食物。", "他不喜欢交朋友。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He can pay for everything outside with just his phone." }
+  ],
+  "reading": {
+    "passage": "Halfway through her exchange year, Xie Lei feels much more at home in Britain. What once seemed strange now appears quite normal. By sharing her own traditions and joining social activities, she has become a bridge between two cultures.",
+    "passageCn": "交换年过半,谢蕾在英国感到自在多了。曾经陌生的事物如今显得十分平常。通过分享自己的传统、参与社交活动,她已成为连接两种文化的桥梁。",
+    "questions": [
+      { "q": "How does Xie Lei feel now in Britain?", "opts": ["Much more at home than before.", "Still completely lost.", "Eager to leave at once.", "Bored with everything."], "answer": 0 },
+      { "q": "How has Xie Lei become a bridge between cultures?", "opts": ["By staying alone in her room.", "By sharing traditions and joining activities.", "By refusing to learn English.", "By avoiding local people."], "answer": 1 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write a short welcome message to exchange students coming to your school. Introduce one thing about your school and one part of Chinese culture you'd like to share.",
+    "promptCn": "给来你校的交换生写一段欢迎短文:介绍你学校的一个特色,以及你想分享的一项中国文化(试着用名词性从句,如 What I want to share is…)。",
+    "sampleWords": ["welcome", "school", "motto", "club", "calligraphy", "culture", "share", "adapt", "friend", "festival"]
+  },
+  "dialogues": [
+    {
+      "title": "Welcoming an Exchange Student",
+      "lines": [
+        { "role": "A", "text": "Welcome to our school! How do you feel so far?", "cn": "欢迎来到我们学校!到目前为止感觉怎么样?" },
+        { "role": "B", "text": "A little nervous, and I don't know what I should do first.", "cn": "有点紧张,我也不知道该先做什么。" },
+        { "role": "A", "text": "Don't worry. What I'd suggest is joining a club to make friends.", "cn": "别担心。我建议你加入一个社团来交朋友。" },
+        { "role": "B", "text": "That sounds great. Thank you for helping me adapt.", "cn": "听起来很好。谢谢你帮我适应。" }
+      ]
+    },
+    {
+      "title": "Sharing Cultures",
+      "lines": [
+        { "role": "A", "text": "What part of Chinese culture would you like to learn?", "cn": "你想了解中国文化的哪一部分?" },
+        { "role": "B", "text": "Calligraphy. I love the idea that each character has a story.", "cn": "书法。我喜欢“每个汉字都有一个故事”这个想法。" },
+        { "role": "A", "text": "Then I'll teach you, and you can show me an Australian custom.", "cn": "那我来教你,你也可以给我介绍一个澳大利亚的习俗。" },
+        { "role": "B", "text": "Deal! Sharing like this is how we build a bridge.", "cn": "成交!像这样分享就是我们架起桥梁的方式。" }
+      ]
+    }
+  ]
+}

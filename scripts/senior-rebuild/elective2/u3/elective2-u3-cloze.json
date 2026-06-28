@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Food and Culture",
+  "source": "人教版2019选择性必修二 Unit 3 同主题完形(学做饺子/餐厅点菜/健康饮食改变/世界食材/慢食实验/设计餐厅)。用词限 U3/初中/常见词,答案唯一,与阅读听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Learning to Make Dumplings",
+      "text": "Last winter my grandma decided to teach me how to (1)____ dumplings. First she mixed flour and water into a soft (2)____, kneading it until it was smooth. Then she showed me how to (3)____ the green onions into tiny pieces and mix them with the meat. At first my dumplings looked ugly, and I almost wanted to give (4)____. But Grandma said that cooking, like writing, needs (5)____, so I should be patient. Little by little, my hands learned the (6)____, and the dumplings began to look much better. When they were boiled, we ate them dipped in (7)____, which made them even more delicious. Grandma told me that (8)____ dumplings together has always been a family affair in the north of China. Now, whenever I (9)____ a dumpling, I think of that warm afternoon in her kitchen. Cooking, I have learned, is also a way of passing on (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "make",
+            "throw",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "make dumplings 包饺子。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "dough",
+            "noise",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "soft dough 软面团。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "paint",
+            "drive",
+            "slice",
+            "drop"
+          ],
+          "answer_index": 2,
+          "explanation": "slice the onions 把葱切碎/切片。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "up"
+          ],
+          "answer_index": 3,
+          "explanation": "give up 放弃。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "patience",
+            "money",
+            "anger",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "needs patience 需要耐心(与后文 be patient 呼应)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "weather",
+            "trick",
+            "price",
+            "size"
+          ],
+          "answer_index": 1,
+          "explanation": "learned the trick 学会了诀窍。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sugar",
+            "oil",
+            "vinegar",
+            "water"
+          ],
+          "answer_index": 2,
+          "explanation": "dipped in vinegar 蘸醋。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "breaking",
+            "hiding",
+            "making"
+          ],
+          "answer_index": 3,
+          "explanation": "making dumplings 包饺子(动名词作主语)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "eat",
+            "lose",
+            "sell",
+            "drop"
+          ],
+          "answer_index": 0,
+          "explanation": "whenever I eat 每当我吃。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "culture",
+            "noise",
+            "rubbish"
+          ],
+          "answer_index": 1,
+          "explanation": "passing on culture 传承文化。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Ordering at a Hunan Restaurant",
+      "text": "When the foreign guest sat down, the waiter politely asked, \"Are you ready to (1)____, sir?\" The guest was not sure what to choose, so he asked the waiter to (2)____ something special. \"This restaurant has the best steamed fish head (3)____ with chillies,\" the waiter said with a smile. The guest loved (4)____ food, so the dish sounded perfect for him. He also ordered some hand-torn (5)____ and a bowl of mushroom soup. While he waited, he watched the busy (6)____ cooking over the fire in the open kitchen. Soon the table was (7)____ with colourful dishes, and the smell of garlic filled the air. The fish was hot and spicy, with an (8)____ flavour he had never tasted before. \"How would you like to (9)____?\" the waiter asked at the end of the meal. \"By mobile phone,\" the guest answered, already planning to (10)____ to this restaurant again.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sleep",
+            "leave",
+            "order",
+            "drive"
+          ],
+          "answer_index": 2,
+          "explanation": "ready to order 准备点菜。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "forget",
+            "lose",
+            "hide",
+            "recommend"
+          ],
+          "answer_index": 3,
+          "explanation": "recommend something 推荐点东西。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "covered",
+            "sold",
+            "thrown",
+            "left"
+          ],
+          "answer_index": 0,
+          "explanation": "covered with chillies 盖满辣椒。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "quiet",
+            "spicy",
+            "empty",
+            "broken"
+          ],
+          "answer_index": 1,
+          "explanation": "spicy food 辣的食物。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "money",
+            "weather",
+            "cabbage",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "hand-torn cabbage 手撕包菜。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "driver",
+            "doctor",
+            "farmer",
+            "chef"
+          ],
+          "answer_index": 3,
+          "explanation": "the busy chef 忙碌的厨师。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "covered",
+            "sold",
+            "broken",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "the table was covered with dishes 桌上摆满了菜。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "empty",
+            "exceptional",
+            "ugly",
+            "boring"
+          ],
+          "answer_index": 1,
+          "explanation": "an exceptional flavour 特别的风味。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sleep",
+            "cry",
+            "pay",
+            "leave"
+          ],
+          "answer_index": 2,
+          "explanation": "How would you like to pay? 您想怎么付款?"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "sell",
+            "break",
+            "hide",
+            "return"
+          ],
+          "answer_index": 3,
+          "explanation": "return to this restaurant 再来这家餐厅。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Changing My Eating Habits",
+      "text": "A year ago, my diet was full of junk food and sweet (1)____. I drank soda every day and rarely touched any (2)____ or vegetables. Then a doctor told me that too much sugar was bad for my (3)____, and I decided to make a change. First, I cut (4)____ on desserts and stopped buying sweet drinks. Next, I started to (5)____ more fresh food, which is full of vitamins and fibre. I also learned to eat more (6)____, chewing each bite carefully instead of rushing. My mother said that (7)____ is the key, so I tried not to eat too much or too little. Slowly, I felt more (8)____ and full of energy. Now I keep (9)____ meal times, eating three times a day at the same hours. Looking back, I am proud of the small (10)____ that changed my whole life.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "drinks",
+            "stones",
+            "cars",
+            "books"
+          ],
+          "answer_index": 0,
+          "explanation": "sweet drinks 甜饮料。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "fruit",
+            "noise",
+            "paper"
+          ],
+          "answer_index": 1,
+          "explanation": "fruit or vegetables 水果或蔬菜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "hair",
+            "shoes",
+            "health",
+            "phone"
+          ],
+          "answer_index": 2,
+          "explanation": "bad for my health 对健康有害。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "in",
+            "off",
+            "out",
+            "down"
+          ],
+          "answer_index": 3,
+          "explanation": "cut down on 减少。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "consume",
+            "throw",
+            "sell",
+            "break"
+          ],
+          "answer_index": 0,
+          "explanation": "consume fresh food 吃新鲜食物。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loudly",
+            "slowly",
+            "angrily",
+            "sadly"
+          ],
+          "answer_index": 1,
+          "explanation": "eat slowly 慢慢吃。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "money",
+            "noise",
+            "moderation",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "moderation is the key 适度是关键。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tired",
+            "afraid",
+            "bored",
+            "healthy"
+          ],
+          "answer_index": 3,
+          "explanation": "felt more healthy 感觉更健康。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "consistent",
+            "broken",
+            "empty",
+            "lost"
+          ],
+          "answer_index": 0,
+          "explanation": "consistent meal times 规律的进餐时间。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "change",
+            "noise",
+            "machine"
+          ],
+          "answer_index": 1,
+          "explanation": "the small change 这个小小的改变。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "Foods from Far Away",
+      "text": "Travelling around the world is a wonderful way to taste new (1)____. In Italy, Greece, and Spain, people cook with olives, figs, and other fresh (2)____ that have shaped their food for many centuries. A traditional Western dinner may (3)____ of soup, a main course, and a sweet dessert. In some countries, brave eaters even enjoy dishes that other people find quite (4)____. Recently, a few diners have begun to try insects, which are surprisingly high in (5)____ and cheaper than beef. To one person a food may seem perfectly normal, (6)____ to another the same dish feels shocking. What we think of as strange really (7)____ on where we grew up. By keeping an open (8)____, a traveller can discover that the world's kitchens are full of (9)____. Almost every food, however unusual, makes perfect (10)____ to someone somewhere on the planet.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "stones",
+            "cars",
+            "flavours",
+            "rules"
+          ],
+          "answer_index": 2,
+          "explanation": "new flavours 新的风味。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "machines",
+            "tickets",
+            "noises",
+            "ingredients"
+          ],
+          "answer_index": 3,
+          "explanation": "fresh ingredients 新鲜食材。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "consist",
+            "sell",
+            "break",
+            "lose"
+          ],
+          "answer_index": 0,
+          "explanation": "consist of 由……组成。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "cheap",
+            "strange",
+            "happy",
+            "quiet"
+          ],
+          "answer_index": 1,
+          "explanation": "find strange 觉得奇怪。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "noise",
+            "price",
+            "protein",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "high in protein 富含蛋白质。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "because",
+            "so",
+            "if",
+            "yet"
+          ],
+          "answer_index": 3,
+          "explanation": "yet 表转折,'然而'。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "depends",
+            "sells",
+            "breaks",
+            "loses"
+          ],
+          "answer_index": 0,
+          "explanation": "depends on 取决于。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "door",
+            "mind",
+            "shop",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "an open mind 开放的心态。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "prices",
+            "noises",
+            "surprises",
+            "mistakes"
+          ],
+          "answer_index": 2,
+          "explanation": "full of surprises 充满惊喜。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "money",
+            "noise",
+            "trouble",
+            "sense"
+          ],
+          "answer_index": 3,
+          "explanation": "make sense 说得通;有道理。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "The Slow-Eating Test",
+      "text": "Our science teacher gave us an interesting (1)____ to try at home. We had to eat one meal as slowly as we could and write down how we (2)____. She explained that it takes about twenty minutes for your brain to tell your body that you are (3)____. People who (4)____ too quickly often eat far more than they need. That evening, I sat down and ate my rice very (5)____, putting down my chopsticks between bites. To my surprise, I felt full after only a (6)____ amount of food. Eating slowly also let me really (7)____ each flavour, something I had never noticed before. The next day in class, almost everyone (8)____ the same result. Our teacher smiled and said that there is no magic (9)____ to healthy eating, only good habits built day by day. Since then, I have tried hard to keep (10)____ meal times and to enjoy every bite.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "test",
+            "stone",
+            "car",
+            "rule"
+          ],
+          "answer_index": 0,
+          "explanation": "an interesting test 一个有趣的实验。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "paid",
+            "felt",
+            "sold",
+            "drove"
+          ],
+          "answer_index": 1,
+          "explanation": "how we felt 我们的感受。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "empty",
+            "angry",
+            "full",
+            "late"
+          ],
+          "answer_index": 2,
+          "explanation": "you are full 你饱了。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sleep",
+            "leave",
+            "cry",
+            "chew"
+          ],
+          "answer_index": 3,
+          "explanation": "chew too quickly 嚼得太快。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slowly",
+            "loudly",
+            "angrily",
+            "sadly"
+          ],
+          "answer_index": 0,
+          "explanation": "ate very slowly 吃得很慢。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "loud",
+            "modest",
+            "broken",
+            "empty"
+          ],
+          "answer_index": 1,
+          "explanation": "a modest amount 适量。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sell",
+            "lose",
+            "enjoy",
+            "break"
+          ],
+          "answer_index": 2,
+          "explanation": "enjoy each flavour 享受每一种味道。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "broke",
+            "lost",
+            "reported"
+          ],
+          "answer_index": 3,
+          "explanation": "reported the same result 报告了同样的结果。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "trick",
+            "price",
+            "noise",
+            "stone"
+          ],
+          "answer_index": 0,
+          "explanation": "no magic trick 没有神奇诀窍。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "broken",
+            "consistent",
+            "empty",
+            "lost"
+          ],
+          "answer_index": 1,
+          "explanation": "consistent meal times 规律的进餐时间。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "Designing Our Own Restaurant",
+      "text": "For our class project, my group had to (1)____ a new restaurant for our city. First we decided what kind of (2)____ we would serve, and we chose light, fresh Cantonese dishes. Next we made a (3)____ in both Chinese and English, so foreign guests could read it easily. We wanted every dish to use fresh (4)____ rather than processed food. One member, who loved cooking, agreed to act as the (5)____ in charge of the kitchen. Another designed the dining (6)____ with soft lights and quiet music. We kept our prices low, so that the meals would not cost too (7)____. We also added a few (8)____ choices, like tofu and bean dishes, for guests who eat no meat. When we (9)____ our plan to the class, everyone seemed to like our friendly little restaurant. Our teacher said the most important thing was that we had worked together as a (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "throw",
+            "sell",
+            "design",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "design a restaurant 设计一家餐厅。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "money",
+            "noise",
+            "weather",
+            "cuisine"
+          ],
+          "answer_index": 3,
+          "explanation": "what kind of cuisine 什么风味的菜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "menu",
+            "stone",
+            "river",
+            "wheel"
+          ],
+          "answer_index": 0,
+          "explanation": "made a menu 做了一份菜单。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "stones",
+            "ingredients",
+            "cars",
+            "papers"
+          ],
+          "answer_index": 1,
+          "explanation": "fresh ingredients 新鲜食材。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "driver",
+            "doctor",
+            "chef",
+            "pilot"
+          ],
+          "answer_index": 2,
+          "explanation": "the chef 厨师。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "machine",
+            "ticket",
+            "noise",
+            "area"
+          ],
+          "answer_index": 3,
+          "explanation": "the dining area 用餐区。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "much",
+            "loud",
+            "angry",
+            "empty"
+          ],
+          "answer_index": 0,
+          "explanation": "cost too much 花费太多。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "broken",
+            "vegetarian",
+            "empty",
+            "noisy"
+          ],
+          "answer_index": 1,
+          "explanation": "vegetarian choices 素食选择。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sold",
+            "lost",
+            "presented",
+            "broke"
+          ],
+          "answer_index": 2,
+          "explanation": "presented our plan 展示我们的方案。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "noise",
+            "machine",
+            "team"
+          ],
+          "answer_index": 3,
+          "explanation": "worked together as a team 作为一个团队合作。"
+        }
+      ]
+    }
+  ]
+}

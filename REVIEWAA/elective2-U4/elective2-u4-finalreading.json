@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "note": "单元通关专属迷你阅读(火车之旅/辽阔大地主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "On the last morning of their long rail trip, Daiyu and Liu Qian woke to find the train speeding alongside the sea. After four days of forests, prairie, and snowy peaks, they could hardly believe how far they had come. Tired but happy, they agreed that the slow journey across such a vast land had been worth every single mile.",
+    "questions": [
+      {
+        "q": "What did the girls see when they woke on the last morning?",
+        "options": [
+          "The train was running beside the sea.",
+          "The train had broken down in the mountains.",
+          "They were still crossing the prairie.",
+          "Heavy snow covered the windows."
+        ],
+        "answer": "A",
+        "explanation": "原文 'woke to find the train speeding alongside the sea' 的转述;其余与原文不符。"
+      },
+      {
+        "q": "How did the two girls feel about the journey?",
+        "options": [
+          "They wished they had taken a plane.",
+          "They thought it had been a waste of time.",
+          "They felt the long trip was worth every mile.",
+          "They were too bored to remember it."
+        ],
+        "answer": "C",
+        "explanation": "末句 'the slow journey … had been worth every single mile' 的转述(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

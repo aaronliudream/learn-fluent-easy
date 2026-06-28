@@ -1,0 +1,35 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grade": 10,
+  "content": {
+    "title": "过去分词 vs 现在分词(done vs doing)速查",
+    "intro": "核心一句话:现在分词(doing)= 主动 / 进行;过去分词(done)= 被动 / 完成。判断时只看分词与它的逻辑主语(被修饰名词 / 句子主语 / 宾语)是'发出动作'还是'承受动作'。",
+    "table": {
+      "headers": ["位置", "doing(主动/进行)", "done(被动/完成)"],
+      "rows": [
+        ["作定语", "the train heading west(火车主动行驶)", "the road covered with snow(路被雪覆盖)"],
+        ["作状语", "Seeing the view, she smiled(她主动看)", "Seen from the hill, the lake looks blue(湖被看)"],
+        ["作宾补", "I saw him crossing the street(他主动过街)", "I had my ticket checked(票被检查)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "不及物动词没有被动,'已完成'用过去分词作定语", "mark": "fallen leaves 落叶 / the risen sun 升起的太阳" },
+      { "rule": "fall/rise/flow 等是主动进行时用 -ing", "mark": "falling leaves 正在落的叶 / rising mist 升起的雾" },
+      { "rule": "have / get + sth + done = '让某事被做'(被动完成)", "mark": "have my photos printed 把照片冲印好" },
+      { "rule": "see/hear/find/watch + sb + doing(在做)/ done(被做完)", "mark": "saw him crossing / found the window broken" }
+    ],
+    "why": [
+      "分词没有自己的主语,它的逻辑主语就是被修饰的名词或句子主语;主语'发出'动作就主动(doing),主语'承受'动作就被动(done)——所以一切判断都归到主动还是被动这一条。"
+    ],
+    "gaokaoPoints": [
+      "语法填空高频:给出动词原形,要你按主动/被动填 -ing 或 -ed(如 ___ from the hill, the lake … → Seen)。",
+      "区分 fallen/falling、covered/covering:看动作是'已完成/被动'还是'正在进行/主动'。",
+      "have sth done 与 see sb doing/done 的宾补辨析。"
+    ],
+    "examVsReal": [
+      { "exam": "Seen from the plane, the city looked small.(考试/书面)", "real": "When you see it from the plane, the city looks small.", "note": "考试爱考分词作状语;口语里常直接用从句说清楚。" },
+      { "exam": "I had my ticket checked.(考试 have sth done)", "real": "Someone checked my ticket. / They checked my ticket.", "note": "考试用 have sth done 强调'被做';口语常直接用主动句。" }
+    ]
+  }
+}

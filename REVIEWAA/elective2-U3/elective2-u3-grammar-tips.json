@@ -1,0 +1,37 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grade": 10,
+  "content": {
+    "title": "-ing 形式复习·动名词与现在分词 速查",
+    "intro": "-ing 形式有两副面孔:动名词(像名词,作主语/宾语/表语)和现在分词(像形容词/副词,作定语/状语/补足语)。判断口诀:能换成 'the act of doing' 多是动名词;描述'正在/主动'修饰名词或句子多是现在分词。",
+    "table": {
+      "headers": ["用法", "在句中作什么 / 例句"],
+      "rows": [
+        ["动名词作主语", "Cooking is an art.(谓语用单数 is)"],
+        ["动名词作宾语", "I enjoy tasting new dishes. / good at cooking(介词后)"],
+        ["动名词作表语", "Her hobby is baking."],
+        ["现在分词作定语", "the boiling water(= 正在沸腾的水,主动/进行)"],
+        ["现在分词作状语", "Tasting the dish, he nodded.(伴随/时间/原因)"],
+        ["-ing 作宾补", "I saw him cooking. / keep sb waiting(正在进行)"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "动名词作主语,谓语动词用单数", "mark": "Eating slowly helps you.(helps 而非 help)" },
+      { "rule": "现在分词(doing)表主动/进行,过去分词(done)表被动/完成", "mark": "the boiling water(水自己在沸) vs the dish covered with chillies(菜被覆盖)" },
+      { "rule": "感官动词 see/hear/watch/feel/find + sb + doing 表'正在做'", "mark": "I saw him cooking." },
+      { "rule": "remember/forget/stop/try + to do(将要做) vs + doing(做过/正做)含义不同", "mark": "stop to rest(停下去休息) / stop adding salt(不再加盐)" }
+    ],
+    "why": [
+      "动名词把动作'名词化',所以能占主语、宾语、表语的位置;现在分词把动作变成'修饰语',所以能像形容词修饰名词、像副词修饰整句——同一个 -ing,角色不同,功能就不同。"
+    ],
+    "gaokaoPoints": [
+      "现在分词 vs 过去分词作定语/状语:看修饰对象是'主动/进行'还是'被动/完成'(boiling water √ / boiled eggs √)。",
+      "感官动词 + sb + doing 与 remember/stop/try 后 to do 与 doing 的意义区别,是语法填空与单选高频考点。"
+    ],
+    "examVsReal": [
+      { "exam": "Tasting the soup, he smiled.（考试/书面)", "real": "He tasted the soup and smiled.", "note": "考试爱用现在分词作状语;口语里常直接用两个并列动词" },
+      { "exam": "I saw him cooking.（强调正在进行)", "real": "I saw him cook the whole meal.（强调看完全过程)", "note": "doing 看到一部分/正在进行;do 看到从头到尾,两者都对,意义略不同" }
+    ]
+  }
+}

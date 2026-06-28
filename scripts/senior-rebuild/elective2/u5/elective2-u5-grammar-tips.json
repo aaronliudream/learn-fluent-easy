@@ -1,0 +1,36 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "grade": 10,
+  "content": {
+    "title": "过去完成时及其被动语态(had done / had been done)速查",
+    "intro": "过去完成时表示「过去的过去」:在某个过去时间点之前已经完成或已持续的动作。构成 had + 过去分词(主动 had done;被动 had been done)。判断口诀:两个过去动作,先发生的那个用过去完成。",
+    "table": {
+      "headers": ["形式", "用法 / 例句"],
+      "rows": [
+        ["had done(主动)", "过去某点前已完成:When the doctor arrived, the man had stopped breathing."],
+        ["had been done(被动)", "主语承受动作:The wound had been cleaned before she bandaged it."],
+        ["对照一般过去", "先发生→had done;后发生→did:By the time help came, he had given first aid."],
+        ["倒装强调", "No sooner had…than… / Hardly had…when…:刚一……就……"]
+      ]
+    },
+    "specialRules": [
+      { "rule": "两个过去动作,先发生的用过去完成,后发生的用一般过去", "mark": "She had cleaned the wound before she covered it." },
+      { "rule": "被动语态:had + been + 过去分词", "mark": "The victim had already been taken to hospital." },
+      { "rule": "常见时间标志:by + 过去时间 / by the time / before / after / already", "mark": "By 2010, she had worked there for ten years." },
+      { "rule": "No sooner / Hardly 置于句首要部分倒装", "mark": "No sooner had he swallowed it than he began to choke." }
+    ],
+    "why": [
+      "过去完成时是为了把两个过去动作分出先后:用 had done 把更早的动作'推'到更远的过去,听者一下就知道哪件事先发生。被动时主语不是动作的执行者,就把 had done 变成 had been done。"
+    ],
+    "gaokaoPoints": [
+      "by the time / before / after 引导的句子里时态前后呼应(过去完成 vs 一般过去),语法填空与改错高频。",
+      "No sooner had…than… 和 Hardly had…when… 的倒装与连词搭配(than 配 No sooner,when 配 Hardly),不可混用。",
+      "被动判断:看主语是否承受动作,是则用 had been done。"
+    ],
+    "examVsReal": [
+      { "exam": "When I arrived, he had already left.（考试严格区分先后）", "real": "When I arrived, he already left.（口语有时也用一般过去）", "note": "考试看到'过去的过去'必须用过去完成;日常口语里如先后很清楚,母语者偶尔用一般过去" },
+      { "exam": "No sooner had she sat down than the phone rang.（书面/考试倒装）", "real": "She had just sat down when the phone rang.（口语更常这样说）", "note": "倒装结构正式、考试爱考;口语里人们更爱用 just…when 表达同样意思" }
+    ]
+  }
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "grammar_title": "过去完成时及其被动语态(had done / had been done)",
+  "source": "人教版2019选择性必修二 Unit 5 Discovering Useful Structures:过去完成时(主动 had done)、过去完成被动(had been done)、过去完成与一般过去的时态对照(by the time / before / after / no sooner…than / hardly…when)。句子地道、急救/事件先后主题、答案唯一(时间关系决定时态)。",
+  "points": [
+    {
+      "code": "u5.01",
+      "point": "过去完成时(主动)表「过去的过去」",
+      "overview": "两个过去动作中,先发生的那个用过去完成时 had done;常与 when / by + 过去时间 / before / already / by the time 连用,表示在某个过去时间点之前已完成或已持续。"
+    },
+    {
+      "code": "u5.02",
+      "point": "过去完成时被动 had been done",
+      "overview": "当「过去的过去」里的动作是被动(主语承受动作)时,用 had been done。例如:伤口在护士包扎前已被清洗 → The wound had been cleaned。"
+    },
+    {
+      "code": "u5.03",
+      "point": "过去完成 vs 一般过去的时态对照",
+      "overview": "by the time / before / after / no sooner…than / hardly…when 等连接两个过去动作:先发生的用过去完成,后发生的用一般过去;倒装结构 No sooner had…than / Hardly had…when 固定搭配。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u5.01",
+      "stem": "When the doctor arrived, the man ____ breathing.",
+      "options": [
+        "had already stopped",
+        "stops",
+        "has stopped",
+        "was stopped"
+      ],
+      "answer_index": 0,
+      "explanation": "'医生到达'是过去,'停止呼吸'发生在更早 → 过去的过去用 had stopped。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By 2010, the nurse ____ in that hospital for ten years.",
+      "options": [
+        "worked",
+        "had worked",
+        "has worked",
+        "works"
+      ],
+      "answer_index": 1,
+      "explanation": "by + 过去时间,表示到那个过去时间点已持续 → had worked。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time the ambulance came, the boy ____ first aid to his grandfather.",
+      "options": [
+        "gives",
+        "has given",
+        "had given",
+        "was given"
+      ],
+      "answer_index": 2,
+      "explanation": "'救护车来'是过去,'已给急救'更早 → had given。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "She ____ the burn under cool water before the swelling got worse.",
+      "options": [
+        "puts",
+        "has put",
+        "was put",
+        "had put"
+      ],
+      "answer_index": 3,
+      "explanation": "before 引导另一过去动作,'放在水下'更早 → had put。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When we reached the table, the diner ____ already on the floor.",
+      "options": [
+        "had already fallen",
+        "falls",
+        "has fallen",
+        "is fallen"
+      ],
+      "answer_index": 0,
+      "explanation": "'我们到达'是过去,'倒下'更早且 already → had fallen。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Chen reacted fast because he ____ how to give first aid at school.",
+      "options": [
+        "learns",
+        "had learned",
+        "has learned",
+        "was learned"
+      ],
+      "answer_index": 1,
+      "explanation": "'反应快'是过去,'学过急救'在更早 → had learned。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the paramedics came, the friends ____ him several times on the back.",
+      "options": [
+        "slap",
+        "have slapped",
+        "had slapped",
+        "were slapped"
+      ],
+      "answer_index": 2,
+      "explanation": "before + 过去,'拍背'更早 → had slapped。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time help arrived, the elderly woman ____ for almost an hour.",
+      "options": [
+        "waits",
+        "has waited",
+        "was waited",
+        "had waited"
+      ],
+      "answer_index": 3,
+      "explanation": "by the time + 过去,表示已持续 → had waited。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "The victim ____ a lot of blood before anyone noticed the wound.",
+      "options": [
+        "had lost",
+        "loses",
+        "has lost",
+        "was lost"
+      ],
+      "answer_index": 0,
+      "explanation": "before 引导后发生的过去动作,'失血'更早 → had lost。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When the operator answered, the boy ____ his grandfather on his back.",
+      "options": [
+        "lays",
+        "had already laid",
+        "has laid",
+        "is laid"
+      ],
+      "answer_index": 1,
+      "explanation": "'接线员接听'是过去,'已让爷爷躺下'更早 → had laid。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "She realised that she ____ the medicine at home by mistake.",
+      "options": [
+        "leaves",
+        "has left",
+        "had left",
+        "was left"
+      ],
+      "answer_index": 2,
+      "explanation": "'意识到'是过去,'把药落下'发生在更早 → had left。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time the doctor checked him, the patient ____ to breathe again.",
+      "options": [
+        "begins",
+        "has begun",
+        "is begun",
+        "had begun"
+      ],
+      "answer_index": 3,
+      "explanation": "by the time + 过去,'重新呼吸'更早 → had begun。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When I got to the kitchen, my brother ____ his hand on the hot pan.",
+      "options": [
+        "had already burned",
+        "burns",
+        "has burned",
+        "was burned"
+      ],
+      "answer_index": 0,
+      "explanation": "'我到厨房'是过去,'烫到手'更早 → had burned。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Mrs Taylor ____ her phone to call for help before she fell over.",
+      "options": [
+        "sets",
+        "had set",
+        "has set",
+        "was set"
+      ],
+      "answer_index": 1,
+      "explanation": "before + 过去,'设置好手机'更早 → had set。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "He told us that he ____ a first-aid course the year before.",
+      "options": [
+        "takes",
+        "has taken",
+        "had taken",
+        "was taken"
+      ],
+      "answer_index": 2,
+      "explanation": "'告诉'是过去,'上过课'在更早的一年 → had taken。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By the time the lifeguard reached him, the swimmer ____ under the water.",
+      "options": [
+        "goes",
+        "has gone",
+        "is gone",
+        "had gone"
+      ],
+      "answer_index": 3,
+      "explanation": "by the time + 过去,'沉入水下'更早 → had gone。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "When the nurse came back, the child ____ the whole glass of water.",
+      "options": [
+        "had already swallowed",
+        "swallows",
+        "has swallowed",
+        "is swallowed"
+      ],
+      "answer_index": 0,
+      "explanation": "'护士回来'是过去,'喝完水'更早 → had swallowed。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "She felt better because the doctors ____ her the right treatment.",
+      "options": [
+        "give",
+        "had given",
+        "have given",
+        "were given"
+      ],
+      "answer_index": 1,
+      "explanation": "'感觉好转'是过去,'给治疗'在更早 → had given。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "Before the ambulance left, the team ____ all of his vital signs.",
+      "options": [
+        "check",
+        "have checked",
+        "had checked",
+        "was checked"
+      ],
+      "answer_index": 2,
+      "explanation": "before + 过去,'检查体征'更早 → had checked。"
+    },
+    {
+      "code": "u5.01",
+      "stem": "By midnight, the pain in her swollen ankle ____ a little.",
+      "options": [
+        "eases",
+        "has eased",
+        "was eased",
+        "had eased"
+      ],
+      "answer_index": 3,
+      "explanation": "by + 过去时间,表示到那时已减轻 → had eased。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "The wound ____ before the nurse bandaged it.",
+      "options": [
+        "had been cleaned",
+        "cleaned",
+        "has been cleaned",
+        "was cleaning"
+      ],
+      "answer_index": 0,
+      "explanation": "伤口是被清洗(被动),且在包扎前已完成 → had been cleaned。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When we got there, the victim ____ to hospital already.",
+      "options": [
+        "took",
+        "had already been taken",
+        "has been taken",
+        "was taking"
+      ],
+      "answer_index": 1,
+      "explanation": "受害者被送(被动),在我们到达前已完成 → had been taken。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time the fire stopped, the burnt area ____ with a loose cloth.",
+      "options": [
+        "covered",
+        "has been covered",
+        "had been covered",
+        "was covering"
+      ],
+      "answer_index": 2,
+      "explanation": "烧伤处被盖住(被动),火停前已完成 → had been covered。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She found that her phone ____ to call an emergency number at one touch.",
+      "options": [
+        "sets up",
+        "has been set up",
+        "was setting up",
+        "had been set up"
+      ],
+      "answer_index": 3,
+      "explanation": "手机被预先设置(被动),'发现'之前已完成 → had been set up。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Before the doctor came, the obstruction ____ out of the man's throat.",
+      "options": [
+        "had already been forced",
+        "forced",
+        "has been forced",
+        "was forcing"
+      ],
+      "answer_index": 0,
+      "explanation": "阻塞物被推出(被动),医生来前已完成 → had been forced。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When the team arrived, an IV needle ____ into the patient's arm.",
+      "options": [
+        "put",
+        "had already been put",
+        "has been put",
+        "was putting"
+      ],
+      "answer_index": 1,
+      "explanation": "注射针被插入(被动),急救队到达前已完成 → had been put。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time she woke up, her cut ____ and bandaged.",
+      "options": [
+        "cleaned",
+        "has been cleaned",
+        "had been cleaned",
+        "was cleaning"
+      ],
+      "answer_index": 2,
+      "explanation": "伤口被清洗(被动),她醒前已完成 → had been cleaned。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "He realised that the medicine ____ on the table by his mother.",
+      "options": [
+        "leaves",
+        "has been left",
+        "was leaving",
+        "had been left"
+      ],
+      "answer_index": 3,
+      "explanation": "药被留下(被动),'意识到'之前已完成 → had been left。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When the ambulance arrived, the victim ____ on his back by his friends.",
+      "options": [
+        "had already been laid",
+        "lay",
+        "has been laid",
+        "was laying"
+      ],
+      "answer_index": 0,
+      "explanation": "受害者被放平(被动),救护车到达前已完成 → had been laid。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Before the lesson ended, the steps of CPR ____ to the whole class.",
+      "options": [
+        "taught",
+        "had been taught",
+        "has been taught",
+        "was teaching"
+      ],
+      "answer_index": 1,
+      "explanation": "步骤被教(被动),课结束前已完成 → had been taught。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She was glad that the burn ____ under cool water in good time.",
+      "options": [
+        "places",
+        "has been placed",
+        "had been placed",
+        "was placing"
+      ],
+      "answer_index": 2,
+      "explanation": "烧伤处被放在水下(被动),'高兴'之前已完成 → had been placed。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time the doctors left, the patient ____ that he was fine.",
+      "options": [
+        "tells",
+        "has been told",
+        "was telling",
+        "had been told"
+      ],
+      "answer_index": 3,
+      "explanation": "病人被告知(被动),医生离开前已完成 → had been told。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When the rescue team came, the swimmer ____ out of the water already.",
+      "options": [
+        "had already been pulled",
+        "pulled",
+        "has been pulled",
+        "was pulling"
+      ],
+      "answer_index": 0,
+      "explanation": "游泳者被拉上岸(被动),救援队到达前已完成 → had been pulled。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Before the manager checked, the first-aid kit ____ near the door.",
+      "options": [
+        "placed",
+        "had been placed",
+        "has been placed",
+        "was placing"
+      ],
+      "answer_index": 1,
+      "explanation": "急救箱被放置(被动),检查前已完成 → had been placed。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She found that the loose clothes ____ off with scissors before she woke.",
+      "options": [
+        "take",
+        "has been taken",
+        "had been taken",
+        "was taking"
+      ],
+      "answer_index": 2,
+      "explanation": "衣服被剪掉(被动),她醒前已完成 → had been taken。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time we reached the ward, his vital signs ____ twice.",
+      "options": [
+        "check",
+        "have been checked",
+        "were checking",
+        "had been checked"
+      ],
+      "answer_index": 3,
+      "explanation": "体征被检查(被动),到达病房前已完成 → had been checked。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "When the boy hung up, an ambulance ____ to his home already.",
+      "options": [
+        "had already been sent",
+        "sent",
+        "has been sent",
+        "was sending"
+      ],
+      "answer_index": 0,
+      "explanation": "救护车被派出(被动),挂电话前已完成 → had been sent。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "Before the family arrived, the wound ____ with a clean cloth.",
+      "options": [
+        "wraps",
+        "had been wrapped",
+        "has been wrapped",
+        "was wrapping"
+      ],
+      "answer_index": 1,
+      "explanation": "伤口被包扎(被动),家人到达前已完成 → had been wrapped。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "She was sure the oxygen ____ to the patient before the trip to hospital.",
+      "options": [
+        "gives",
+        "has been given",
+        "had been given",
+        "was giving"
+      ],
+      "answer_index": 2,
+      "explanation": "氧气被给予(被动),去医院前已完成 → had been given。"
+    },
+    {
+      "code": "u5.02",
+      "stem": "By the time the news spread, thousands of lives ____ by the new method.",
+      "options": [
+        "save",
+        "have been saved",
+        "were saving",
+        "had been saved"
+      ],
+      "answer_index": 3,
+      "explanation": "生命被挽救(被动),消息传开前已完成 → had been saved。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "By the time the operator answered, the old man ____ to breathe.",
+      "options": [
+        "had stopped",
+        "stopped",
+        "stops",
+        "has stopped"
+      ],
+      "answer_index": 0,
+      "explanation": "by the time + 过去,先发生的'停止呼吸'用过去完成 → had stopped。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "The ambulance ____ as soon as the boy finished the call.",
+      "options": [
+        "had arrived",
+        "arrived",
+        "arrives",
+        "has arrived"
+      ],
+      "answer_index": 1,
+      "explanation": "as soon as 连接的两个动作几乎同时,'到达'用一般过去 → arrived。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ the steak than he began to choke.",
+      "options": [
+        "he had swallowed",
+        "he swallowed",
+        "had he swallowed",
+        "did he swallow"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner 置于句首要倒装,且先发生用过去完成 → had he swallowed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly had Chen sat down ____ he heard someone scream.",
+      "options": [
+        "than",
+        "after",
+        "while",
+        "when"
+      ],
+      "answer_index": 3,
+      "explanation": "Hardly…when 是固定搭配,意为'刚……就……'。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "After she ____ the burn under cool water, she covered it with a cloth.",
+      "options": [
+        "had placed",
+        "places",
+        "place",
+        "has placed"
+      ],
+      "answer_index": 0,
+      "explanation": "after 引导先发生的动作,用过去完成 → had placed。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "When the doctors finally came, they ____ that he was already fine.",
+      "options": [
+        "had found",
+        "found",
+        "find",
+        "have found"
+      ],
+      "answer_index": 1,
+      "explanation": "主句'发现'在过去这一刻发生,用一般过去 → found。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner had the team given him oxygen ____ his colour came back.",
+      "options": [
+        "when",
+        "after",
+        "than",
+        "while"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner…than 固定搭配,意为'一……就……'。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Before the nurse arrived, the friends ____ everything they could.",
+      "options": [
+        "tried",
+        "try",
+        "have tried",
+        "had tried"
+      ],
+      "answer_index": 3,
+      "explanation": "before 引导后发生的'到达',先发生的'尝试'用过去完成 → had tried。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly ____ the floor when she heard the front door open.",
+      "options": [
+        "had she reached",
+        "she had reached",
+        "she reached",
+        "did she reach"
+      ],
+      "answer_index": 0,
+      "explanation": "Hardly 置于句首要倒装,且先发生用过去完成 → had she reached。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "After he ____ the Heimlich manoeuvre, the food was forced out.",
+      "options": [
+        "does",
+        "had done",
+        "do",
+        "has done"
+      ],
+      "answer_index": 1,
+      "explanation": "after 引导先发生的动作,用过去完成 → had done。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "By the time we got the leaflet, the first-aid class ____ already.",
+      "options": [
+        "finished",
+        "finishes",
+        "had finished",
+        "has finished"
+      ],
+      "answer_index": 2,
+      "explanation": "by the time + 过去 + already,先发生的'结束'用过去完成 → had finished。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "She ____ the emergency number the moment she saw him collapse.",
+      "options": [
+        "had dialled",
+        "dials",
+        "has dialled",
+        "dialled"
+      ],
+      "answer_index": 3,
+      "explanation": "the moment 连接的动作几乎同时,'拨号'用一般过去 → dialled。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner had the bleeding stopped ____ the patient opened his eyes.",
+      "options": [
+        "than",
+        "when",
+        "after",
+        "while"
+      ],
+      "answer_index": 0,
+      "explanation": "No sooner…than 固定搭配。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "After the wound ____ cleaned, the nurse put a bandage on it.",
+      "options": [
+        "is",
+        "had been",
+        "be",
+        "has been"
+      ],
+      "answer_index": 1,
+      "explanation": "after 引导先发生的被动动作,用过去完成被动 had been (cleaned)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Hardly had he made a fist ____ he began the chest pushes.",
+      "options": [
+        "than",
+        "after",
+        "when",
+        "while"
+      ],
+      "answer_index": 2,
+      "explanation": "Hardly…when 固定搭配。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "When the lights came back on, the boy ____ already given first aid.",
+      "options": [
+        "did",
+        "does",
+        "has",
+        "had"
+      ],
+      "answer_index": 3,
+      "explanation": "'灯亮'是过去,'已做急救'更早 → had (already given)。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "Before the manoeuvre ____ invented, many choking victims had died.",
+      "options": [
+        "was",
+        "had been",
+        "is",
+        "has been"
+      ],
+      "answer_index": 0,
+      "explanation": "before 引导后发生(被发明)的动作,用一般过去被动 was invented;主句'已死亡'才用过去完成。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "After the victim ____ to hospital, his family felt much calmer.",
+      "options": [
+        "is taken",
+        "had been taken",
+        "be taken",
+        "has been taken"
+      ],
+      "answer_index": 1,
+      "explanation": "after 引导先发生的被动动作,用过去完成被动 had been taken。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "No sooner ____ he stood up than he felt the pain in his ankle.",
+      "options": [
+        "did",
+        "after",
+        "had",
+        "when"
+      ],
+      "answer_index": 2,
+      "explanation": "No sooner 句首倒装,先发生用过去完成 → had he stood。"
+    },
+    {
+      "code": "u5.03",
+      "stem": "By the time the radio programme ended, she ____ all the first-aid steps.",
+      "options": [
+        "noted",
+        "notes",
+        "has noted",
+        "had noted"
+      ],
+      "answer_index": 3,
+      "explanation": "by the time + 过去,先发生的'记下步骤'用过去完成 → had noted。"
+    }
+  ]
+}

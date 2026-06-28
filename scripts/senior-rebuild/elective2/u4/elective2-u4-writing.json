@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Write a Travel Diary about a Rail Journey(写一篇横穿大地的火车旅行日记)",
+  "title_en": "A Day on the Train Across Canada",
+  "genre": "记叙文 / 游记(travel diary describing one day of a long rail journey)",
+  "source": "人教版2019选择性必修二 Unit 4 Reading for Writing:write about a rail journey across a vast land(用游记/日记记叙旅途见闻,运用方位与衔接词描述空间与顺序)。",
+  "prompt_cn": "假设你叫李华,正与同伴一起坐火车横穿一片辽阔的大地。请用英语写一篇约100词的旅行日记,内容包括:① 你今天到了哪里、看到了什么风景(用方位词描述);② 旅途中印象最深的一件事或遇到的一个人;③ 你此刻的感受。注意:用恰当的衔接词(first, then, later, eventually 等)让行文连贯,适当使用过去分词/现在分词作状语。",
+  "prompt_en": "Suppose you are Li Hua. You are travelling by train across a vast land with a friend. Write a travel diary of about 100 words including: 1) where you reached today and the scenery you saw (use words of position and direction); 2) the most memorable thing or person you met along the way; 3) how you feel right now. Use discourse markers (first, then, later, eventually) to make your writing coherent.",
+  "points": [
+    "到达地点与风景(Today we reached … / Heading east, we passed …)",
+    "印象最深的事/人(The highlight of the day was … / On the train we met …)",
+    "此刻的感受(Tired but happy, I felt …)",
+    "用衔接词连贯 + 分词作状语(Seeing …, I … / Seen from …, the … looked …)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Day three of our great rail journey. This morning, heading east, the train thundered on across the wide prairie, where golden wheat fields stretched as far as the eye could see. Later we climbed into the Rockies, and snowy peaks rose on every side. Seen from the train, the mountains looked almost unreal. The highlight of the day was meeting Anna, a friendly local who taught us Canadian idioms and pointed out a blue lake that freezes over in winter. Eventually night came, and I pulled back the curtain to watch the stars. Tired but happy, I feel lucky to be crossing such a vast and beautiful land.",
+  "model_translation": "我们伟大火车旅程的第三天。今天上午,火车向东轰隆隆地驶过辽阔的草原,金色的麦田一望无际。后来我们驶入落基山,雪峰在四周耸起。从火车上望去,那些山几乎不像真的。今天最精彩的部分是遇见安娜——一位友善的当地人,她教我们加拿大习语,还指给我们看一个冬天会结冰的蓝色湖泊。最后夜幕降临,我拉开窗帘看星星。虽然疲惫却很快乐,我觉得自己很幸运,能横穿这样一片辽阔而美丽的大地。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:地点与风景 / 印象最深的事或人 / 此刻感受" },
+      { "dimension": "结构", "max": 4, "criteria": "按时间或行程顺序展开、衔接词使用得当、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "方位词与分词作状语运用准确、句型词汇多样、语法基本无误" }
+    ],
+    "required_structure": [
+      "点明日期/地点 Day three … Today we reached …",
+      "描述风景(用方位)Heading east, … / snowy peaks rose on every side",
+      "印象最深 The highlight of the day was …",
+      "结尾感受 Tired but happy, I feel …"
+    ],
+    "key_expressions": [
+      "Heading east, the train thundered on across the wide prairie.",
+      "Seen from the train, the mountains looked almost unreal.",
+      "The highlight of the day was meeting a friendly local.",
+      "Tired but happy, I feel lucky to be crossing such a vast land."
+    ],
+    "useful_words": ["journey", "prairie", "peak", "scenery", "highlight", "eventually", "alongside", "freeze", "spectacular", "harbour"]
+  },
+  "high_sentences": [
+    "Heading east, the train thundered on across the wide prairie.",
+    "Seen from the train, the snowy mountains looked almost unreal.",
+    "The highlight of the day was meeting Anna, a friendly local passenger.",
+    "Tired but happy, I feel lucky to be crossing such a vast and beautiful land."
+  ],
+  "error_pairs": [
+    { "wrong": "Seeing from the train, the lake looked blue.", "correct": "Seen from the train, the lake looked blue.", "note": "lake 是被'看'的承受者,作状语用过去分词 Seen(被动)。" },
+    { "wrong": "The train thundered on cross the prairie.", "correct": "The train thundered on across the prairie.", "note": "'横穿'用介词 across,不用动词 cross。" },
+    { "wrong": "Tired but happily, I went to sleep.", "correct": "Tired but happy, I went to sleep.", "note": "并列作主语补足成分,这里用形容词 happy 与 tired 对应。" }
+  ],
+  "paragraph_template": "【火车旅行日记结构】\n第1句 点明日期/到达地点:Day three … Today we reached …\n第2-3句 风景(用方位+分词):Heading east, … Seen from the train, …\n第4句 印象最深的事/人:The highlight of the day was …\n第5句 结尾感受:Tired but happy, I feel …"
+}

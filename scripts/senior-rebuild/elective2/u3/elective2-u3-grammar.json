@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "grammar_title": "-ing 形式复习:动名词与现在分词(Review of the -ing form)",
+  "source": "人教版2019选择性必修二 Unit 3 Discovering Useful Structures:-ing 形式的复习(动名词作主语/宾语/表语;现在分词作定语/状语;-ing 作宾语补足语及与不定式对照)。句子地道、食物主题、-ing 形式唯一成立。",
+  "points": [
+    {
+      "code": "u3.01",
+      "point": "动名词作主语 / 宾语 / 表语",
+      "overview": "动名词(doing)可作主语(Cooking is an art,作主语时谓语用单数)、作动词或介词的宾语(enjoy tasting / good at cooking)、作表语(Her hobby is baking)。"
+    },
+    {
+      "code": "u3.02",
+      "point": "现在分词作定语 / 状语",
+      "overview": "现在分词(doing)表主动或正在进行:作定语修饰名词(the boiling water = 正在沸腾的水)、作状语表伴随/时间/原因(Smiling, she served the soup. / Tasting the dish, he nodded.)。"
+    },
+    {
+      "code": "u3.03",
+      "point": "-ing 作宾语补足语,及与不定式对照",
+      "overview": "感官动词(see/hear/watch/find)及 keep/leave + sb + doing 表'正在进行';并区分 stop/remember/try 等后接 to do(将要做)与 doing(做某事/做过)的不同含义。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u3.01",
+      "stem": "\"____ Chinese dishes at home is a great way to relax after school.\"",
+      "options": [
+        "Cooking",
+        "Cook",
+        "To cook",
+        "Cooked"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语应用动名词 Cooking,谓语 is 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My grandma enjoys ____ dumplings with the whole family on holidays.\"",
+      "options": [
+        "make",
+        "making",
+        "to make",
+        "made"
+      ],
+      "answer_index": 1,
+      "explanation": "enjoy 后接动名词 making。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Her favourite hobby is ____ desserts for her friends at weekends.\"",
+      "options": [
+        "bake",
+        "to bake",
+        "baking",
+        "baked"
+      ],
+      "answer_index": 2,
+      "explanation": "表语位置用动名词 baking 说明 hobby 的内容。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ spicy food too often may not be good for your stomach.\"",
+      "options": [
+        "Eat",
+        "To be eaten",
+        "Eaten",
+        "Eating"
+      ],
+      "answer_index": 3,
+      "explanation": "句首作主语用动名词 Eating。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The chef is good at ____ noodles into very thin, even strands.\"",
+      "options": [
+        "pulling",
+        "pull",
+        "to pull",
+        "pulled"
+      ],
+      "answer_index": 0,
+      "explanation": "be good at 后接动名词 pulling。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"I really love ____ new dishes whenever I travel to a new city.\"",
+      "options": [
+        "taste",
+        "tasting",
+        "to be tasted",
+        "tasted"
+      ],
+      "answer_index": 1,
+      "explanation": "love 后用动名词 tasting,表示一贯爱好。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ vegetables slowly helps your body take in more of the vitamins.\"",
+      "options": [
+        "Chew",
+        "To be chewing",
+        "Chewing",
+        "Chewed"
+      ],
+      "answer_index": 2,
+      "explanation": "句首主语用动名词 Chewing,谓语 helps 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"One good way of staying healthy is ____ down on sweet drinks.\"",
+      "options": [
+        "cut",
+        "to be cut",
+        "cuts",
+        "cutting"
+      ],
+      "answer_index": 3,
+      "explanation": "表语位置用动名词 cutting 与主语 way 对应。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"He kept his weight down by ____ a modest amount of food each meal.\"",
+      "options": [
+        "eating",
+        "eat",
+        "to eat",
+        "eaten"
+      ],
+      "answer_index": 0,
+      "explanation": "介词 by 后接动名词 eating。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ different categories of fresh food keeps our diet balanced.\"",
+      "options": [
+        "Consume",
+        "Consuming",
+        "To be consumed",
+        "Consumed"
+      ],
+      "answer_index": 1,
+      "explanation": "句首作主语用动名词 Consuming,谓语 keeps 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"My brother is afraid of ____ too many calories from junk food.\"",
+      "options": [
+        "take in",
+        "to take in",
+        "taking in",
+        "taken in"
+      ],
+      "answer_index": 2,
+      "explanation": "介词 of 后接动名词 taking in。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"What she likes most about cooking is ____ the fresh ingredients herself.\"",
+      "options": [
+        "choose",
+        "to be chosen",
+        "chose",
+        "choosing"
+      ],
+      "answer_index": 3,
+      "explanation": "表语位置用动名词 choosing,与主语对应。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ a balanced diet matters more than counting every single calorie.\"",
+      "options": [
+        "Keeping",
+        "Keep",
+        "To be kept",
+        "Kept"
+      ],
+      "answer_index": 0,
+      "explanation": "句首作主语用动名词 Keeping,谓语 matters 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The whole family insisted on ____ the dumplings together on New Year's Eve.\"",
+      "options": [
+        "wrap",
+        "wrapping",
+        "to wrap",
+        "wrapped"
+      ],
+      "answer_index": 1,
+      "explanation": "insist on 后接动名词 wrapping。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Her dream is ____ a small restaurant that serves authentic Sichuan food.\"",
+      "options": [
+        "open",
+        "to be opened",
+        "opening",
+        "opened"
+      ],
+      "answer_index": 2,
+      "explanation": "表语位置用动名词 opening 说明 dream 的内容。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ slowly allows your brain to tell your body when you are full.\"",
+      "options": [
+        "Eat",
+        "To be eaten",
+        "Eaten",
+        "Eating"
+      ],
+      "answer_index": 3,
+      "explanation": "句首作主语用动名词 Eating,谓语 allows 单数。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"Many vegetarians are fond of ____ beans and tofu instead of meat.\"",
+      "options": [
+        "eating",
+        "eat",
+        "to eat",
+        "eaten"
+      ],
+      "answer_index": 0,
+      "explanation": "be fond of 后接动名词 eating。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"____ healthy habits when young can protect you for the rest of your life.\"",
+      "options": [
+        "Form",
+        "Forming",
+        "To be formed",
+        "Formed"
+      ],
+      "answer_index": 1,
+      "explanation": "句首作主语用动名词 Forming,谓语 can 对应。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"The secret of his soup is ____ the bones for several hours over low heat.\"",
+      "options": [
+        "boil",
+        "to be boiled",
+        "boiling",
+        "boiled"
+      ],
+      "answer_index": 2,
+      "explanation": "表语位置用动名词 boiling 说明 secret 的内容。"
+    },
+    {
+      "code": "u3.01",
+      "stem": "\"She thanked the chef for ____ her how to make the famous red braised pork.\"",
+      "options": [
+        "teach",
+        "to teach",
+        "taught",
+        "teaching"
+      ],
+      "answer_index": 3,
+      "explanation": "介词 for 后接动名词 teaching。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Be careful with the ____ water; it can burn your hand at once.\"",
+      "options": [
+        "boiling",
+        "boiled",
+        "to boil",
+        "boil"
+      ],
+      "answer_index": 0,
+      "explanation": "现在分词 boiling 作定语,表'正在沸腾的'(主动/进行)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____, the waiter brought us a pot of hot soup and a warm smile.\"",
+      "options": [
+        "Smiled",
+        "Smiling",
+        "To smile",
+        "Smile"
+      ],
+      "answer_index": 1,
+      "explanation": "现在分词 Smiling 作伴随状语,表主动同时进行。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ the strange new dish carefully, he finally nodded with delight.\"",
+      "options": [
+        "Tasted",
+        "To be tasted",
+        "Tasting",
+        "Taste"
+      ],
+      "answer_index": 2,
+      "explanation": "现在分词 Tasting 作状语,与主语 he 主动关系。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The girl ____ at the next table is enjoying a bowl of beef noodles.\"",
+      "options": [
+        "sat",
+        "to sit",
+        "sit",
+        "sitting"
+      ],
+      "answer_index": 3,
+      "explanation": "现在分词 sitting 作定语,表'正坐着的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"We could smell the bread ____ in the oven as we walked past the shop.\"",
+      "options": [
+        "baking",
+        "baked",
+        "to bake",
+        "bake"
+      ],
+      "answer_index": 0,
+      "explanation": "现在分词 baking 作定语,表'正在烤的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ that the soup was too salty, the chef quickly added more water.\"",
+      "options": [
+        "Realised",
+        "Realising",
+        "To realise",
+        "Realise"
+      ],
+      "answer_index": 1,
+      "explanation": "现在分词 Realising 作原因状语,与主语主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"There is a long line of people ____ for the famous dumplings outside.\"",
+      "options": [
+        "waited",
+        "to be waited",
+        "waiting",
+        "wait"
+      ],
+      "answer_index": 2,
+      "explanation": "现在分词 waiting 作定语,表'正在等候的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ in a bamboo steamer, the dim sum looked small and elegant.\"",
+      "options": [
+        "Sat",
+        "To sit",
+        "Sit",
+        "Sitting"
+      ],
+      "answer_index": 3,
+      "explanation": "现在分词 Sitting 作状语,与主语 dim sum 主动关系。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The chef stood by the fire, ____ the lamb kebab until it turned golden.\"",
+      "options": [
+        "roasting",
+        "roasted",
+        "to roast",
+        "roast"
+      ],
+      "answer_index": 0,
+      "explanation": "现在分词 roasting 作伴随状语,表主动进行。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"Look at the steam ____ from the bowl of freshly cooked rice!\"",
+      "options": [
+        "risen",
+        "rising",
+        "to rise",
+        "rise"
+      ],
+      "answer_index": 1,
+      "explanation": "现在分词 rising 作定语,表'正在升起的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ hungry and tired, we were glad to find a small noodle shop.\"",
+      "options": [
+        "Felt",
+        "To feel",
+        "Feeling",
+        "Feel"
+      ],
+      "answer_index": 2,
+      "explanation": "现在分词 Feeling 作状语,与主语 we 主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The waiter showed us a menu ____ both Chinese and English names.\"",
+      "options": [
+        "listed",
+        "to list",
+        "list",
+        "listing"
+      ],
+      "answer_index": 3,
+      "explanation": "现在分词 listing 作定语,表'列出……的'(主动)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ the recipe step by step, she made the dish on her first try.\"",
+      "options": [
+        "Following",
+        "Followed",
+        "To follow",
+        "Follow"
+      ],
+      "answer_index": 0,
+      "explanation": "现在分词 Following 作状语,与主语主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The customers ____ at the round table ordered three Hunan dishes.\"",
+      "options": [
+        "sat",
+        "sitting",
+        "to sit",
+        "sit"
+      ],
+      "answer_index": 1,
+      "explanation": "现在分词 sitting 作定语,表'正坐着的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ the spicy fish head, the foreign guest asked for the recipe at once.\"",
+      "options": [
+        "Loved",
+        "To love",
+        "Loving",
+        "Love"
+      ],
+      "answer_index": 2,
+      "explanation": "现在分词 Loving 作原因状语,与主语主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"A pot of soup ____ slowly on the stove filled the kitchen with a nice smell.\"",
+      "options": [
+        "cooked",
+        "to cook",
+        "cook",
+        "cooking"
+      ],
+      "answer_index": 3,
+      "explanation": "现在分词 cooking 作定语,表'正在炖煮的'。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ at the busy cafeteria, the students chose their lunch quickly.\"",
+      "options": [
+        "Arriving",
+        "Arrived",
+        "To arrive",
+        "Arrive"
+      ],
+      "answer_index": 0,
+      "explanation": "现在分词 Arriving 作时间状语,与主语主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"He pointed at the chef ____ the dough high into the air.\"",
+      "options": [
+        "tossed",
+        "tossing",
+        "to toss",
+        "toss"
+      ],
+      "answer_index": 1,
+      "explanation": "现在分词 tossing 作定语,表'正在抛甩的'(主动)。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"____ that family meant so much there, I joined them in making dumplings.\"",
+      "options": [
+        "Known",
+        "To know",
+        "Knowing",
+        "Know"
+      ],
+      "answer_index": 2,
+      "explanation": "现在分词 Knowing 作原因状语,与主语主动。"
+    },
+    {
+      "code": "u3.02",
+      "stem": "\"The dish ____ with hot red peppers became the most popular one.\"",
+      "options": [
+        "covering",
+        "to cover",
+        "cover",
+        "covered"
+      ],
+      "answer_index": 3,
+      "explanation": "菜'被'辣椒覆盖,主语与 cover 是被动关系,用过去分词 covered;此处考查 -ing 与 -ed 的对照,过去分词表被动。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"From the door I saw the chef ____ a huge pot of soup over the fire.\"",
+      "options": [
+        "stirring",
+        "stir",
+        "to stir",
+        "stirred"
+      ],
+      "answer_index": 0,
+      "explanation": "see sb doing 表'看到正在做',强调动作进行,用 stirring。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I'm sorry to keep you ____ — the dumplings will be ready in a minute.\"",
+      "options": [
+        "wait",
+        "waiting",
+        "to wait",
+        "waited"
+      ],
+      "answer_index": 1,
+      "explanation": "keep sb doing 表让某人一直处于某状态,用 waiting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"We could hear the oil ____ in the wok before the vegetables went in.\"",
+      "options": [
+        "hiss",
+        "to hiss",
+        "hissing",
+        "hissed"
+      ],
+      "answer_index": 2,
+      "explanation": "hear sth doing 表'听到正在……',用 hissing。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"She left the soup ____ on low heat while she sliced the green onions.\"",
+      "options": [
+        "simmer",
+        "to simmer",
+        "simmered",
+        "simmering"
+      ],
+      "answer_index": 3,
+      "explanation": "leave sth doing 表让某物持续某动作,用 simmering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"When I walked in, I found my mother ____ the dough for tomorrow's buns.\"",
+      "options": [
+        "kneading",
+        "knead",
+        "to knead",
+        "kneaded"
+      ],
+      "answer_index": 0,
+      "explanation": "find sb doing 表'发现某人正在做',用 kneading。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"We watched the noodle master ____ one piece of dough into many strands.\"",
+      "options": [
+        "pull",
+        "pulling",
+        "to pull",
+        "pulled"
+      ],
+      "answer_index": 1,
+      "explanation": "watch sb doing 强调动作的进行过程,用 pulling。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"On a winter day, nothing beats sitting by the fire and ____ hot soup.\"",
+      "options": [
+        "drink",
+        "to drink",
+        "drinking",
+        "drunk"
+      ],
+      "answer_index": 2,
+      "explanation": "与前面 sitting 并列,介词结构后用动名词 drinking。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Remember ____ the rice before you start, or there will be nothing to cook.\"",
+      "options": [
+        "washing",
+        "washed",
+        "wash",
+        "to wash"
+      ],
+      "answer_index": 3,
+      "explanation": "remember to do 表'记得去做(还没做)';洗米在做菜前,用 to wash。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I still remember ____ that wonderful Sichuan meal for the very first time.\"",
+      "options": [
+        "tasting",
+        "to taste",
+        "taste",
+        "tasted"
+      ],
+      "answer_index": 0,
+      "explanation": "remember doing 表'记得做过(已发生)';第一次品尝已是过去,用 tasting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"After two hours of cooking, the tired chef stopped ____ a short rest.\"",
+      "options": [
+        "taking",
+        "to take",
+        "took",
+        "take"
+      ],
+      "answer_index": 1,
+      "explanation": "stop to do 表'停下来去做另一件事';停下做菜去休息,用 to take。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"If the soup is too salty, you should stop ____ so much salt next time.\"",
+      "options": [
+        "to add",
+        "add",
+        "adding",
+        "added"
+      ],
+      "answer_index": 2,
+      "explanation": "stop doing 表'停止正在做的事';不再放盐,用 adding。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The recipe looked hard, but he tried ____ the dish exactly as it said.\"",
+      "options": [
+        "making",
+        "made",
+        "make",
+        "to make"
+      ],
+      "answer_index": 3,
+      "explanation": "try to do 表'努力尝试去做';他努力照食谱做,用 to make。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The soup tasted flat, so she tried ____ a little vinegar to it.\"",
+      "options": [
+        "adding",
+        "to add",
+        "add",
+        "added"
+      ],
+      "answer_index": 0,
+      "explanation": "try doing 表'试着用某法看效果';试着加点醋,用 adding。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I noticed several customers ____ photos of the elegant dim sum.\"",
+      "options": [
+        "take",
+        "taking",
+        "to take",
+        "taken"
+      ],
+      "answer_index": 1,
+      "explanation": "notice sb doing 表'注意到正在做',用 taking。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The smell of garlic kept the whole family ____ around the kitchen.\"",
+      "options": [
+        "gather",
+        "to gather",
+        "gathering",
+        "gathered"
+      ],
+      "answer_index": 2,
+      "explanation": "keep sb doing 表让某人持续某动作,用 gathering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"She felt her mouth ____ the moment she smelled the spicy fish head.\"",
+      "options": [
+        "water",
+        "to water",
+        "watered",
+        "watering"
+      ],
+      "answer_index": 3,
+      "explanation": "feel sth doing 表'感到正在……',用 watering。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"Please don't forget ____ the gas after the soup is ready.\"",
+      "options": [
+        "to turn off",
+        "turning off",
+        "turned off",
+        "turn off"
+      ],
+      "answer_index": 0,
+      "explanation": "forget to do 表'忘记去做(尚未做)';关火尚未做,用 to turn off。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"I'll never forget ____ dumplings with my grandma when I was a child.\"",
+      "options": [
+        "to make",
+        "making",
+        "made",
+        "make"
+      ],
+      "answer_index": 1,
+      "explanation": "forget doing 表'忘记做过的事';童年包饺子已发生,用 making。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"We observed the local people ____ their bread over an open fire.\"",
+      "options": [
+        "roast",
+        "to roast",
+        "roasting",
+        "roasted"
+      ],
+      "answer_index": 2,
+      "explanation": "observe sb doing 表'观察到正在做',用 roasting。"
+    },
+    {
+      "code": "u3.03",
+      "stem": "\"The waiter caught a child ____ to reach the dishes on the high shelf.\"",
+      "options": [
+        "try",
+        "to try",
+        "tried",
+        "trying"
+      ],
+      "answer_index": 3,
+      "explanation": "catch sb doing 表'撞见某人正在做',用 trying。"
+    }
+  ]
+}

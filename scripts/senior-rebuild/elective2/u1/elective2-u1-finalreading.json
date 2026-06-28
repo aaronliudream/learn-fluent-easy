@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "note": "单元通关专属迷你阅读(科学与科学家主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When young Ben could not explain why his plant grew faster near the window, he did not simply accept it. He moved the plant around, wrote down what he saw each day, and asked his teacher for help. A month later, he proudly told the class that sunlight was the answer he had been looking for.",
+    "questions": [
+      {
+        "q": "What did Ben do when he could not explain his plant's growth?",
+        "options": [
+          "He moved the plant, recorded what he saw, and asked for help.",
+          "He gave up and threw the plant away.",
+          "He stopped thinking about it at once.",
+          "He told everyone it was magic."
+        ],
+        "answer": "A",
+        "explanation": "原文 'moved the plant around, wrote down what he saw each day, and asked his teacher for help' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What did Ben finally discover?",
+        "options": [
+          "That the window was broken.",
+          "That sunlight made his plant grow faster.",
+          "That plants do not need light.",
+          "That his teacher was wrong."
+        ],
+        "answer": "B",
+        "explanation": "末句 'sunlight was the answer he had been looking for'(短文后半段,覆盖不同位置)的转述。"
+      }
+    ]
+  }
+}

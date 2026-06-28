@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "grammar_title": "过去分词与 -ing 形式的对比(done vs doing):作定语 / 作状语 / 作宾语补足语",
+  "source": "人教版2019选择性必修二 Unit 4 Discover useful structures:过去分词与现在分词的对比。铁律:现在分词(doing)= 主动 / 进行;过去分词(done)= 被动 / 完成。逻辑主语是动作发出者→doing;是承受者→done。句子地道、火车之旅/旅行主题,答案唯一(选项含两种分词形式 + to do,只有一项成立)。",
+  "points": [
+    {
+      "code": "u4.01",
+      "point": "作定语:doing(主动/进行) vs done(被动/完成)",
+      "overview": "分词作定语修饰名词:被修饰词是动作的发出者(主动)或动作正在进行 → 用现在分词 doing(the train heading west / falling leaves);被修饰词是动作的承受者(被动)或动作已完成 → 用过去分词 done(the road covered with snow / fallen leaves)。"
+    },
+    {
+      "code": "u4.02",
+      "point": "作状语:doing(主动) vs done(被动)",
+      "overview": "分词作状语,逻辑主语就是句子主语:主语主动发出动作 → 用现在分词 doing(Seeing the view, she smiled);主语承受动作(被动)→ 用过去分词 done(Seen from the hill, the lake looks blue)。"
+    },
+    {
+      "code": "u4.03",
+      "point": "作宾语补足语:see/hear/find + sb/sth + doing(主动进行) vs done(被动完成)",
+      "overview": "感官/使役动词后的宾语补足语:宾语主动做某事、动作在进行 → 用现在分词 doing(I saw him crossing the street);宾语承受动作、动作被动完成 → 用过去分词 done(I had my ticket checked / found the window broken)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u4.01",
+      "stem": "From the window we watched the train ____ west across the open prairie.",
+      "options": [
+        "heading",
+        "headed",
+        "to head",
+        "head"
+      ],
+      "answer_index": 0,
+      "explanation": "train 主动'朝西行驶'、动作进行中 → 现在分词 heading。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The road ____ with deep snow was hard for the bus to climb.",
+      "options": [
+        "covering",
+        "covered",
+        "to cover",
+        "covers"
+      ],
+      "answer_index": 1,
+      "explanation": "road 被雪覆盖、是承受者(被动)→ 过去分词 covered。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The maple leaves ____ to the ground turned the path bright red.",
+      "options": [
+        "falling",
+        "to fall",
+        "fallen",
+        "fall"
+      ],
+      "answer_index": 2,
+      "explanation": "leaves 已经落地、动作完成(fall 是不及物动词,完成用过去分词)→ fallen。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We saw a bunch of farms ____ a very large area beside the railway.",
+      "options": [
+        "covered",
+        "to cover",
+        "cover",
+        "covering"
+      ],
+      "answer_index": 3,
+      "explanation": "farms 主动'覆盖/占据'一片地、动作进行 → 现在分词 covering。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The signs ____ in French puzzled the two girls at the Montreal station.",
+      "options": [
+        "written",
+        "writing",
+        "to write",
+        "write"
+      ],
+      "answer_index": 0,
+      "explanation": "signs 被写成法语、是承受者(被动)→ 过去分词 written。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The river ____ quietly alongside the railway looked silver in the moonlight.",
+      "options": [
+        "flowed",
+        "flowing",
+        "to flow",
+        "flows"
+      ],
+      "answer_index": 1,
+      "explanation": "river 主动'流淌'、动作进行 → 现在分词 flowing。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "An old garden ____ from a quarry has now become a famous destination.",
+      "options": [
+        "transforming",
+        "to transform",
+        "transformed",
+        "transform"
+      ],
+      "answer_index": 2,
+      "explanation": "garden 由采石场被改造、是承受者(被动/完成)→ 过去分词 transformed。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Mist ____ from the falls slowly drifted across the lake at dawn.",
+      "options": [
+        "risen",
+        "to rise",
+        "rise",
+        "rising"
+      ],
+      "answer_index": 3,
+      "explanation": "mist 主动'升起'、动作进行 → 现在分词 rising。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The cobblestone streets ____ with old brick buildings gave the town a European feel.",
+      "options": [
+        "lined",
+        "lining",
+        "to line",
+        "line"
+      ],
+      "answer_index": 0,
+      "explanation": "streets 两旁'被'老砖楼排列、是承受者(被动)→ 过去分词 lined。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The hills ____ gently towards the lake were red, gold, and orange.",
+      "options": [
+        "rolled",
+        "rolling",
+        "to roll",
+        "roll"
+      ],
+      "answer_index": 1,
+      "explanation": "hills 主动'起伏延伸'、动作进行 → 现在分词 rolling。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "We finally reached a city ____ on the southern border of Ontario.",
+      "options": [
+        "locating",
+        "to locate",
+        "located",
+        "locate"
+      ],
+      "answer_index": 2,
+      "explanation": "city '位于'某处,locate 此处是被动/完成 → 过去分词 located。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The passengers ____ out of the windows pointed at the distant snowy peaks.",
+      "options": [
+        "looked",
+        "to look",
+        "look",
+        "looking"
+      ],
+      "answer_index": 3,
+      "explanation": "passengers 主动'向外看'、动作进行 → 现在分词 looking。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The wheat fields ____ by golden light stretched as far as the eye could see.",
+      "options": [
+        "lit",
+        "lighting",
+        "to light",
+        "light"
+      ],
+      "answer_index": 0,
+      "explanation": "fields 被金光照亮、是承受者(被动)→ 过去分词 lit。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "A train ____ along the St Lawrence River sped towards the east coast.",
+      "options": [
+        "sped",
+        "speeding",
+        "to speed",
+        "speed"
+      ],
+      "answer_index": 1,
+      "explanation": "train 主动'飞驰'、动作进行 → 现在分词 speeding。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The tickets ____ at the gate were quickly returned to the travellers.",
+      "options": [
+        "checking",
+        "to check",
+        "checked",
+        "check"
+      ],
+      "answer_index": 2,
+      "explanation": "tickets 被检查、是承受者(被动)→ 过去分词 checked。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The advertisements ____ on the walls were all printed in two languages.",
+      "options": [
+        "hung",
+        "to hang",
+        "hang",
+        "hanging"
+      ],
+      "answer_index": 3,
+      "explanation": "advertisements '挂在'墙上、是承受者(被动/完成,hang 此处被动)→ 过去分词 hung。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The young photographer ____ beside the river offered to show them the old town.",
+      "options": [
+        "sitting",
+        "to sit",
+        "sat",
+        "sit"
+      ],
+      "answer_index": 0,
+      "explanation": "photographer 主动'坐着'、状态进行 → 现在分词 sitting。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The lovely shops ____ along St Paul Street sold local crafts and antiques.",
+      "options": [
+        "lined",
+        "lining",
+        "to line",
+        "line"
+      ],
+      "answer_index": 1,
+      "explanation": "shops '排列'在街旁,此处强调被动排布、是承受者 → 过去分词 lined。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "Frost ____ on the cold ground confirmed that autumn had arrived in Canada.",
+      "options": [
+        "formed",
+        "to form",
+        "forming",
+        "form"
+      ],
+      "answer_index": 2,
+      "explanation": "frost 主动'形成/出现'、动作进行 → 现在分词 forming。"
+    },
+    {
+      "code": "u4.01",
+      "stem": "The harbour ____ by tall mountains was one of the highlights of Vancouver.",
+      "options": [
+        "surrounding",
+        "to surround",
+        "surround",
+        "surrounded"
+      ],
+      "answer_index": 3,
+      "explanation": "harbour 被群山环绕、是承受者(被动)→ 过去分词 surrounded。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the autumn colours from the top of the hill, I was completely amazed.",
+      "options": [
+        "Seeing",
+        "Seen",
+        "To be seen",
+        "See"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 I 主动'看见'→ 现在分词 Seeing(主动)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from the top of the mountain, the lake looked deep blue.",
+      "options": [
+        "Seeing",
+        "Seen",
+        "To see",
+        "See"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 lake 被'看',是承受者(被动)→ 过去分词 Seen。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ eastwards, you will soon pass the snowy Canadian Rockies.",
+      "options": [
+        "Headed",
+        "To head",
+        "Heading",
+        "Head"
+      ],
+      "answer_index": 2,
+      "explanation": "逻辑主语 you 主动'朝东行进'→ 现在分词 Heading(主动)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by its new manager, the small airline finally began to make a profit.",
+      "options": [
+        "Leading",
+        "To lead",
+        "Lead",
+        "Led"
+      ],
+      "answer_index": 3,
+      "explanation": "逻辑主语 airline 被新经理领导,是承受者(被动)→ 过去分词 Led。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ what the trip meant to him, the old man said it was unforgettable.",
+      "options": [
+        "Asked",
+        "Asking",
+        "To ask",
+        "Ask"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 the old man 被问,是承受者(被动)→ 过去分词 Asked。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ along the broad river, the train rocked us gently to sleep.",
+      "options": [
+        "Sped",
+        "Speeding",
+        "To speed",
+        "Speed"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 the train 主动'飞驰'→ 现在分词 Speeding。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from a quarry long ago, the gardens now attract thousands of visitors.",
+      "options": [
+        "Transforming",
+        "To transform",
+        "Transformed",
+        "Transform"
+      ],
+      "answer_index": 2,
+      "explanation": "逻辑主语 the gardens 被改造,是承受者(被动/完成)→ 过去分词 Transformed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the same long rail journey before, the girls knew what to expect.",
+      "options": [
+        "Taken",
+        "To take",
+        "Take",
+        "Having taken"
+      ],
+      "answer_index": 3,
+      "explanation": "逻辑主语 the girls 主动'(曾)乘坐'、动作在前完成 → 现在分词完成式 Having taken(主动)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ in French, the signs at the station confused the two travellers.",
+      "options": [
+        "Written",
+        "Writing",
+        "To write",
+        "Write"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 the signs 被写成法语,是承受者(被动)→ 过去分词 Written。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ out of the window, the girls watched the prairie roll past.",
+      "options": [
+        "Looked",
+        "Looking",
+        "To look",
+        "Look"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 the girls 主动'向外看'→ 现在分词 Looking。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by the spectacular falls, the visitors stood in complete silence.",
+      "options": [
+        "Amazing",
+        "To amaze",
+        "Amazed",
+        "Amaze"
+      ],
+      "answer_index": 2,
+      "explanation": "逻辑主语 the visitors 被'震撼',是感受的承受者(被动)→ 过去分词 Amazed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ the wide stretch of the lake, Liu Qian reached for her camera.",
+      "options": [
+        "Noticed",
+        "To notice",
+        "Notice",
+        "Noticing"
+      ],
+      "answer_index": 3,
+      "explanation": "逻辑主语 Liu Qian 主动'注意到'→ 现在分词 Noticing。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ with deep snow, the mountain road remained closed all winter.",
+      "options": [
+        "Blocked",
+        "Blocking",
+        "To block",
+        "Block"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 the road 被雪封住,是承受者(被动)→ 过去分词 Blocked。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ for a coffee, Anna pointed out the famous sights along the way.",
+      "options": [
+        "Stopped",
+        "Stopping",
+        "To stop",
+        "Stop"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 Anna 主动'停下来'→ 现在分词 Stopping。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ at the harbour, the tired travellers were warmly welcomed by Lin Fei.",
+      "options": [
+        "Arriving",
+        "To arrive",
+        "Arrived",
+        "Arrive"
+      ],
+      "answer_index": 2,
+      "explanation": "arrive 是不及物动词,作状语表'已到达、动作完成'用过去分词 → Arrived。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ from the CN Tower, the whole city of Toronto looked tiny.",
+      "options": [
+        "Viewing",
+        "To view",
+        "View",
+        "Viewed"
+      ],
+      "answer_index": 3,
+      "explanation": "逻辑主语 the city 被'看/俯瞰',是承受者(被动)→ 过去分词 Viewed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ down the curtain, Daiyu saw the bright lights of Winnipeg.",
+      "options": [
+        "Pulling",
+        "Pulled",
+        "To pull",
+        "Pull"
+      ],
+      "answer_index": 0,
+      "explanation": "逻辑主语 Daiyu 主动'拉下窗帘'→ 现在分词 Pulling。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ in two languages, the menu surprised the visitors from China.",
+      "options": [
+        "Printing",
+        "Printed",
+        "To print",
+        "Print"
+      ],
+      "answer_index": 1,
+      "explanation": "逻辑主语 the menu 被印成两种语言,是承受者(被动)→ 过去分词 Printed。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ a few hours to spare, the cousins went on a quick tour of the city.",
+      "options": [
+        "Had",
+        "To have",
+        "Having",
+        "Have"
+      ],
+      "answer_index": 2,
+      "explanation": "逻辑主语 the cousins 主动'拥有'几小时空闲 → 现在分词 Having(主动)。"
+    },
+    {
+      "code": "u4.02",
+      "stem": "____ by the railway's history, the photographer began to tell us many stories.",
+      "options": [
+        "Fascinating",
+        "To fascinate",
+        "Fascinate",
+        "Fascinated"
+      ],
+      "answer_index": 3,
+      "explanation": "逻辑主语 the photographer 被铁路历史迷住,是感受承受者(被动)→ 过去分词 Fascinated。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the platform we saw an old man ____ the railway track slowly.",
+      "options": [
+        "crossing",
+        "crossed",
+        "to crossing",
+        "crosses"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 an old man 主动'穿过'、动作进行 → 现在分词 crossing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the gate Liu Qian had her ticket ____ by a friendly officer.",
+      "options": [
+        "checking",
+        "checked",
+        "to check",
+        "check"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 her ticket 被检查、被动完成 → 过去分词 checked(have sth done)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Through the window we watched the prairie ____ slowly past the train.",
+      "options": [
+        "rolled",
+        "to roll",
+        "rolling",
+        "rolls"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 the prairie 主动'缓缓掠过'、动作进行 → 现在分词 rolling。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "When we woke up, we found the ground ____ with a thin layer of frost.",
+      "options": [
+        "covering",
+        "to cover",
+        "cover",
+        "covered"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 the ground 被霜覆盖、被动完成 → 过去分词 covered。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "On the lake we could hear the wild geese ____ as they flew south.",
+      "options": [
+        "calling",
+        "called",
+        "to call",
+        "calls"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 the wild geese 主动'鸣叫'、动作进行 → 现在分词 calling。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Back at the hotel, Daiyu found her bag already ____ by the staff.",
+      "options": [
+        "packing",
+        "packed",
+        "to pack",
+        "pack"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 her bag 被打包好、被动完成 → 过去分词 packed。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the tower they watched a few old-fashioned cars ____ by below.",
+      "options": [
+        "rolled",
+        "to roll",
+        "rolling",
+        "roll"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 cars 主动'驶过'、动作进行 → 现在分词 rolling。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "When she returned, Liu Qian found the curtain ____ back by the wind.",
+      "options": [
+        "pulling",
+        "to pull",
+        "pull",
+        "pulled"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 the curtain 被风拉开、被动完成 → 过去分词 pulled。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Standing by the falls, we could feel the cold mist ____ against our faces.",
+      "options": [
+        "blowing",
+        "blown",
+        "to blow",
+        "blows"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 the cold mist 主动'吹拂'、动作进行 → 现在分词 blowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the museum the girls saw many old maps ____ carefully on the walls.",
+      "options": [
+        "hanging",
+        "hung",
+        "to hang",
+        "hang"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 maps 被挂在墙上、被动完成 → 过去分词 hung。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From our seats we noticed snow ____ silently outside the train window.",
+      "options": [
+        "fallen",
+        "to fall",
+        "falling",
+        "falls"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 snow 主动'飘落'、动作进行 → 现在分词 falling。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "After the storm, the travellers found a few trees ____ across the track.",
+      "options": [
+        "blowing",
+        "to blow",
+        "blow",
+        "blown"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 a few trees 被风刮倒在轨道上、被动完成 → 过去分词 blown。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "On the platform we saw a porter ____ heavy suitcases onto the train.",
+      "options": [
+        "loading",
+        "loaded",
+        "to load",
+        "loads"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 a porter 主动'搬运'、动作进行 → 现在分词 loading。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the station the girls heard their train number ____ over the speakers.",
+      "options": [
+        "announcing",
+        "announced",
+        "to announce",
+        "announce"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 their train number 被广播、被动完成 → 过去分词 announced。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the bridge we watched the broad river ____ towards the distant sea.",
+      "options": [
+        "flowed",
+        "to flow",
+        "flowing",
+        "flows"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 the river 主动'流向'大海、动作进行 → 现在分词 flowing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Before leaving, Daiyu had her photos ____ at a small shop downtown.",
+      "options": [
+        "printing",
+        "to print",
+        "print",
+        "printed"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 her photos 被冲印、被动完成 → 过去分词 printed(have sth done)。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "Up in the Rockies we saw a herd of mountain goats ____ along the cliffs.",
+      "options": [
+        "climbing",
+        "climbed",
+        "to climb",
+        "climbs"
+      ],
+      "answer_index": 0,
+      "explanation": "宾语 goats 主动'攀爬'、动作进行 → 现在分词 climbing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "When the lake freezes over, you often see it ____ with skaters all day.",
+      "options": [
+        "filling",
+        "filled",
+        "to fill",
+        "fill"
+      ],
+      "answer_index": 1,
+      "explanation": "宾语 it(the lake)被滑冰者挤满、被动状态 → 过去分词 filled。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "From the train window the girls watched the autumn leaves ____ in the wind.",
+      "options": [
+        "danced",
+        "to dance",
+        "dancing",
+        "dances"
+      ],
+      "answer_index": 2,
+      "explanation": "宾语 the autumn leaves 主动'飞舞'、动作进行 → 现在分词 dancing。"
+    },
+    {
+      "code": "u4.03",
+      "stem": "At the border the officer had all the bags ____ before the train moved on.",
+      "options": [
+        "searching",
+        "to search",
+        "search",
+        "searched"
+      ],
+      "answer_index": 3,
+      "explanation": "宾语 all the bags 被检查、被动完成 → 过去分词 searched。"
+    }
+  ]
+}

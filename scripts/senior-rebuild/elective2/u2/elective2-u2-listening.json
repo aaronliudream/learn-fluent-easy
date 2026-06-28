@@ -1,0 +1,493 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Bridging Cultures",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修二 Unit 2 同主题听力(报名交换项目/世界留学趋势/孔子学院采访/弱读小贴士/请教文化适应/做文化使者)。用词限本单元/初高常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U2 听力·对话 Signing Up for the Exchange",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Tom",
+          "text": "Hi, Mei. I heard you signed up for the exchange programme to the UK."
+        },
+        {
+          "speaker": "Mei",
+          "text": "Yes! I want to learn about global business and improve my English."
+        },
+        {
+          "speaker": "Tom",
+          "text": "That's great. But aren't you worried about the cost?"
+        },
+        {
+          "speaker": "Mei",
+          "text": "A little. Tuition and living expenses are high, so I made a careful budget."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Smart. Will you live in a dormitory or with a host family?"
+        },
+        {
+          "speaker": "Mei",
+          "text": "A host family. They can help me adapt and comfort me when I miss home."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Good idea. What's your biggest goal for the year?"
+        },
+        {
+          "speaker": "Mei",
+          "text": "To set up my own business in China one day. This is the first step."
+        }
+      ],
+      "translation_cn": "Tom 听说梅报名了去英国的交换项目;梅想学全球商业并提高英语;Tom 担心费用;梅说学费生活费高,所以做了仔细的预算;她选住寄宿家庭,能帮她适应、想家时给安慰;她最大的目标是将来在中国创业,这是第一步。",
+      "questions": [
+        {
+          "stem": "Why did Mei sign up for the exchange programme?",
+          "options": [
+            "To learn about global business and improve her English.",
+            "To avoid studying at home.",
+            "To stop learning English.",
+            "To travel for fun only."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is Tom worried about?",
+          "options": [
+            "The weather in the UK.",
+            "The cost of studying abroad.",
+            "Mei's English level.",
+            "The food on the plane."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How did Mei deal with the high expenses?",
+          "options": [
+            "She made a careful budget.",
+            "She borrowed money from Tom.",
+            "She gave up the programme.",
+            "She ignored the problem."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does Mei choose a host family?",
+          "options": [
+            "Because it is free.",
+            "Because they can help her adapt and comfort her.",
+            "Because the school requires it.",
+            "Because dormitories are full."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What is Mei's biggest goal for the year?",
+          "options": [
+            "To stay in the UK forever.",
+            "To become a tour guide.",
+            "To start her own business in China one day.",
+            "To learn French as well."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U2 听力·短文 Studying Abroad Today",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "In recent years, more and more young people choose to study abroad.",
+        "They hope to gain a global perspective and improve their general competence.",
+        "However, studying overseas can also bring tremendous pressure.",
+        "Some students suffer from culture shock in unfamiliar surroundings.",
+        "With careful planning, though, the experience can change them for the better."
+      ],
+      "translation_cn": "近年来,越来越多的年轻人选择出国留学;他们希望获得全球视野、提升综合能力;然而出国也会带来巨大压力;一些学生在陌生环境中遭遇文化冲击;不过若计划周全,这段经历能让他们变得更好。",
+      "questions": [
+        {
+          "stem": "What is happening with young people and studying abroad?",
+          "options": [
+            "Fewer of them want to study at all.",
+            "None of them go overseas now.",
+            "They only study at home.",
+            "More and more of them choose to study abroad."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What do these students hope to gain?",
+          "options": [
+            "A global perspective and better competence.",
+            "A free holiday.",
+            "An easier life with no work.",
+            "More money from their schools."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What problem can studying overseas bring?",
+          "options": [
+            "No homework at all.",
+            "Tremendous pressure.",
+            "Too much free time.",
+            "Better weather."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do some students suffer from in new surroundings?",
+          "options": [
+            "A bad memory.",
+            "A loss of money.",
+            "Culture shock.",
+            "A fear of flying."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can make the experience change them for the better?",
+          "options": [
+            "Avoiding all locals.",
+            "Staying in their rooms.",
+            "Refusing to learn the language.",
+            "Careful planning."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U2 听力·对话 Interview at the Confucius Institute",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Host",
+          "text": "Welcome, Aisha. Thanks for joining us today."
+        },
+        {
+          "speaker": "Aisha",
+          "text": "Thank you. It's a pleasure to be here."
+        },
+        {
+          "speaker": "Host",
+          "text": "What made you feel close to your teacher, Ms Hu?"
+        },
+        {
+          "speaker": "Aisha",
+          "text": "She often invited us to her home for meals, so I felt like family."
+        },
+        {
+          "speaker": "Host",
+          "text": "Lovely. Why did you decide to become a teacher yourself?"
+        },
+        {
+          "speaker": "Aisha",
+          "text": "I wanted to share that same warmth with new learners of Chinese."
+        },
+        {
+          "speaker": "Host",
+          "text": "And why do your students see Chinese as useful?"
+        },
+        {
+          "speaker": "Aisha",
+          "text": "Because more jobs now need people who can connect China with the world."
+        }
+      ],
+      "translation_cn": "主持人欢迎 Aisha 并感谢她到来;Aisha 表示很高兴;主持人问是什么让她与胡老师亲近;Aisha 说老师常请他们到家里吃饭,让她有家的感觉;她想把同样的温暖分享给新的中文学习者;她的学生认为中文有用,因为越来越多的工作需要能连接中国与世界的人。",
+      "questions": [
+        {
+          "stem": "What made Aisha feel like part of Ms Hu's family?",
+          "options": [
+            "The invitations to home-cooked meals.",
+            "The high marks she earned.",
+            "The free books she got.",
+            "The large classroom."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why did Aisha become a teacher?",
+          "options": [
+            "To earn a high salary.",
+            "To share the same warmth with new learners.",
+            "To leave her country.",
+            "To stop teaching Chinese."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why do her students think Chinese is useful?",
+          "options": [
+            "Because it has no grammar.",
+            "Because it is easy to write.",
+            "Because more jobs need people who connect China with the world.",
+            "Because it replaces English."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How does the host begin the interview?",
+          "options": [
+            "By asking about the weather.",
+            "By telling a long story.",
+            "By saying goodbye.",
+            "By welcoming Aisha and thanking her."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How does Aisha describe her feeling at Ms Hu's home?",
+          "options": [
+            "She felt like family.",
+            "She felt bored.",
+            "She felt afraid.",
+            "She felt unwelcome."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U2 听力·短文 A Tip on Weak Forms",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a useful tip for learners who find fast English hard to follow.",
+        "English is a stress-based language, so some words are not stressed.",
+        "Small words like pronouns and prepositions often use a weak form.",
+        "For example, in 'Are you ready?', 'are' and 'you' sound very light.",
+        "If you learn the weak forms, you will understand native speakers more easily."
+      ],
+      "translation_cn": "给觉得快速英语难懂的学习者一个有用的小贴士:英语是重音语言,有些词不重读;代词、介词等小词常用弱读形式;例如在“Are you ready?”中,are 和 you 读得很轻;学会弱读形式,你就能更容易听懂母语者。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only teachers of Chinese.",
+            "Learners who find fast English hard to follow.",
+            "Only native speakers.",
+            "People who never listen to English."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What kind of language is English, according to the passage?",
+          "options": [
+            "A picture-based language.",
+            "A language with no rules.",
+            "A stress-based language.",
+            "A silent language."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Which words often use a weak form?",
+          "options": [
+            "Long and rare words.",
+            "Names of people.",
+            "Numbers only.",
+            "Small words like pronouns and prepositions."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What happens to 'are' and 'you' in 'Are you ready?'",
+          "options": [
+            "They sound very light.",
+            "They are shouted loudly.",
+            "They are spelled differently.",
+            "They are left out."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is the benefit of learning weak forms?",
+          "options": [
+            "You can stop studying English.",
+            "You understand native speakers more easily.",
+            "You will speak like a robot.",
+            "You will forget grammar."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U2 听力·对话 Advice on Fitting In",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "Liu",
+          "text": "I've been here a month, but I still feel like an outsider. Any advice?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "That's normal at first. The best cure is to get involved in activities."
+        },
+        {
+          "speaker": "Liu",
+          "text": "Really? I usually just stay in my room and study."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Try joining a club or a sports team. You'll soon make new friends."
+        },
+        {
+          "speaker": "Liu",
+          "text": "But my English isn't perfect. I'm afraid of making mistakes."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Don't worry about mistakes. Every one is a chance to learn."
+        },
+        {
+          "speaker": "Liu",
+          "text": "That makes sense. I'll be braver and speak up more."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Exactly. Step out of your comfort zone, and you'll feel at home soon."
+        }
+      ],
+      "translation_cn": "刘来这里一个月仍觉得自己像局外人,向 Anna 求建议;Anna 说一开始很正常,最好的办法是参与活动;刘平时只待在房间里学习;Anna 建议加入社团或球队,很快会交到新朋友;刘担心英语不完美、怕犯错;Anna 说别担心犯错,每个错误都是学习的机会;刘决定更勇敢、多开口;Anna 鼓励他走出舒适区,很快就会有家的感觉。",
+      "questions": [
+        {
+          "stem": "How does Liu feel after a month abroad?",
+          "options": [
+            "Completely at home.",
+            "Eager to leave at once.",
+            "Like an outsider.",
+            "Proud of his English."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is Anna's best piece of advice?",
+          "options": [
+            "To study alone all day.",
+            "To avoid all classmates.",
+            "To return home quickly.",
+            "To get involved in activities."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Liu usually do in his free time?",
+          "options": [
+            "He stays in his room and studies.",
+            "He travels around the city.",
+            "He calls his family.",
+            "He joins many clubs."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Anna say about making mistakes?",
+          "options": [
+            "They should never happen.",
+            "Every one is a chance to learn.",
+            "They mean he should quit.",
+            "They make him look foolish."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Liu decide to do?",
+          "options": [
+            "To stop studying English.",
+            "To stay in his room longer.",
+            "To be braver and speak up more.",
+            "To go home immediately."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U2 听力·短文 Becoming a Cultural Envoy",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "When you study in another country, you do more than attend classes.",
+        "You become a kind of cultural envoy for your homeland.",
+        "By sharing your food, music and stories, you help others understand it.",
+        "At the same time, you learn to see the world from new angles.",
+        "In this way, each student helps to build a bridge between nations."
+      ],
+      "translation_cn": "当你在另一个国家学习时,你做的不只是上课;你成了祖国的一种文化使者;通过分享你的食物、音乐和故事,你帮助别人理解它;与此同时,你学会从新的角度看世界;这样,每个学生都在为各国之间架起一座桥梁。",
+      "questions": [
+        {
+          "stem": "What do you do besides attending classes when studying abroad?",
+          "options": [
+            "You forget your own country.",
+            "You stop meeting people.",
+            "You only take exams.",
+            "You become a cultural envoy for your homeland."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How do you help others understand your homeland?",
+          "options": [
+            "By sharing your food, music and stories.",
+            "By keeping everything secret.",
+            "By staying silent.",
+            "By copying their culture."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do you learn to do at the same time?",
+          "options": [
+            "To dislike other cultures.",
+            "To see the world from new angles.",
+            "To stop studying.",
+            "To travel less."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does each student help to build, according to the passage?",
+          "options": [
+            "A bigger house.",
+            "A faster train.",
+            "A bridge between nations.",
+            "A larger school."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is the main message of the passage?",
+          "options": [
+            "Studying abroad is a waste of time.",
+            "Students should never share their culture.",
+            "Only teachers can be cultural envoys.",
+            "Studying abroad can make you a bridge between cultures."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

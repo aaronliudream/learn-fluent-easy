@@ -1,0 +1,348 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "First Aid",
+  "source": "人教版2019选择性必修二 Unit 5 同主题阅读(皮肤与烧伤分度/烧伤急救步骤/海姆立克法救人故事/独居老人急救/溺水救援/急救包准备)。词限 U5/初中/常见词,答案转述非照抄,4选项唯一,与听写关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Your Skin and Burns",
+      "body": "Your skin is the largest organ of your body, and it does much more than you might think. It keeps water inside, holds your body heat, and gives you protection from many dangerous things in the world around you. Because the skin is so important, a burn can be a very serious injury. Burns are sorted into three types by how deep they go. A first-degree burn is the least serious; it touches only the top layer of skin, which turns dry and red. A second-degree burn reaches deeper, and the skin becomes red, swollen and very painful. A third-degree burn is the most serious of all. It can damage every layer of skin and sometimes the nerves underneath, so there may be little or no pain. Knowing these differences helps you decide how much first aid a burn needs and whether to take the victim to hospital.",
+      "vocab_notes": [
+        {
+          "word": "organ",
+          "cn": "器官"
+        },
+        {
+          "word": "layer",
+          "cn": "层"
+        },
+        {
+          "word": "swollen",
+          "cn": "肿胀的"
+        },
+        {
+          "word": "nerve",
+          "cn": "神经"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer say a burn can be a serious injury?",
+          "options": [
+            "Because the skin does so many important jobs for the body.",
+            "Because the skin grows back very quickly.",
+            "Because skin has no feeling at all.",
+            "Because the skin is the smallest organ."
+          ],
+          "answer_index": 0,
+          "explanation": "原文先说皮肤的多种重要作用,再说'Because the skin is so important, a burn can be a very serious injury' 的转述。"
+        },
+        {
+          "stem": "What is true about a first-degree burn?",
+          "options": [
+            "It damages the nerves under the skin.",
+            "Only the skin's top layer is affected.",
+            "It is the deepest kind of burn.",
+            "It causes no change in the skin's colour."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'touches only the top layer of skin, which turns dry and red' 的转述。"
+        },
+        {
+          "stem": "Why might a third-degree burn cause little pain?",
+          "options": [
+            "Because the nerves under the skin may be damaged.",
+            "Because it is not a real burn.",
+            "Because the skin turns red and swollen.",
+            "Because cool water has been used."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'can damage… the nerves underneath, so there may be little or no pain' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "First Aid for Burns",
+      "body": "If someone gets burnt, acting quickly and correctly can make a big difference. The first and most important step is to place the burn under cool running water, especially within the first ten minutes. The cool water stops the burning process and reduces the pain and swelling. After that, dry the area gently with a clean cloth. If there are clothes near the burn, you can cut them away with scissors, but never pull them off when the fabric is sticking to the skin. Next, cover the burn loosely with a clean cloth to keep it safe. Many people think that putting oil or butter on a burn helps, but this is bad advice. Oil keeps the heat inside the wound and may cause infection. If the burn is on the face, make sure the victim can still breathe. For a second-degree or third-degree burn, there is an urgent need to get the victim to hospital at once.",
+      "vocab_notes": [
+        {
+          "word": "swelling",
+          "cn": "肿胀"
+        },
+        {
+          "word": "fabric",
+          "cn": "布料"
+        },
+        {
+          "word": "loosely",
+          "cn": "宽松地"
+        },
+        {
+          "word": "urgent",
+          "cn": "紧急的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What is the most important first step for a burn?",
+          "options": [
+            "Putting oil on it straight away.",
+            "Cooling it under running water as soon as possible.",
+            "Pulling off all the clothes near it.",
+            "Taking the victim straight to hospital."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'The first and most important step is to place the burn under cool running water' 的转述。"
+        },
+        {
+          "stem": "When should you NOT pull clothes off a burn?",
+          "options": [
+            "When the burn is on the face.",
+            "When the water is too cold.",
+            "When the fabric is stuck to the skin.",
+            "When the cloth is clean."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'never pull them off when the fabric is sticking to the skin' 的转述。"
+        },
+        {
+          "stem": "Why is putting oil on a burn a bad idea?",
+          "options": [
+            "It costs too much money.",
+            "It washes the burn too fast.",
+            "It makes the skin too cold.",
+            "It traps heat in the wound and may lead to infection."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'Oil keeps the heat inside the wound and may cause infection' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Dinner Saved a Life",
+      "body": "Chen Wei, a high school student in Beijing, was having dinner when he heard someone screaming at another table. A man called Zhang Tao was choking on a piece of steak. He was holding his throat, his face turning red, while his desperate friends slapped him on the back. Chen wasted no time. He had learned how to give first aid at school, so he stayed calm and ran over at once. Standing behind Zhang, he wrapped his arms around the man's waist, made a fist, and pushed up into his stomach with a quick motion. After a few tries, the food was forced out, and Zhang could breathe again. Ten minutes later, an ambulance arrived, and the doctors checked Zhang and found that he was fine. Later, Chen said simply, \"How could I justify sitting there and doing nothing? We all have a responsibility to look after one another's welfare.\"",
+      "vocab_notes": [
+        {
+          "word": "choke",
+          "cn": "噎住"
+        },
+        {
+          "word": "desperate",
+          "cn": "焦急绝望的"
+        },
+        {
+          "word": "justify",
+          "cn": "为……辩护"
+        },
+        {
+          "word": "welfare",
+          "cn": "安康;福祉"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How was Chen Wei able to act so quickly and calmly?",
+          "options": [
+            "He had learned first aid at school.",
+            "He was a trained doctor.",
+            "He was a friend of Zhang Tao.",
+            "He had eaten the same steak before."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'He had learned how to give first aid at school, so he stayed calm' 的转述。"
+        },
+        {
+          "stem": "What did Chen do to help Zhang Tao?",
+          "options": [
+            "He slapped Zhang's face.",
+            "He pushed up into Zhang's stomach from behind.",
+            "He gave Zhang some water to drink.",
+            "He waited for the ambulance to come."
+          ],
+          "answer_index": 1,
+          "explanation": "原文描述海姆立克法 'wrapped his arms… made a fist, and pushed up into his stomach' 的转述。"
+        },
+        {
+          "stem": "What does Chen's final comment show about him?",
+          "options": [
+            "He wants to become a famous doctor.",
+            "He thinks first aid is too difficult.",
+            "He believes we should care for one another.",
+            "He was angry at Zhang's friends."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'we all have a responsibility to look after one another's welfare' 体现他的责任感。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Mrs Taylor's Lucky Day",
+      "body": "Mrs Taylor was an elderly woman who lived alone. One day, while she was cleaning the windows in her living room, she suddenly could not feel the right side of her body. As she tried to walk to her sofa, she fell over onto the carpet. She found that she could not get up, and she was having trouble breathing. Luckily, she had her mobile phone with her, and she was able to reach it with her left hand. Her phone had already been set up to call an emergency number at the push of a button, so it was easy to call for help. When Mrs Taylor could not speak, the operator knew at once that something was wrong and sent an ambulance. The team soon found her, gave her oxygen without delay, put in an IV needle, and checked her vital signs. Because she was treated so quickly, her health was in no great danger, though she had to stay in the hospital ward for a week.",
+      "vocab_notes": [
+        {
+          "word": "elderly",
+          "cn": "上了年纪的"
+        },
+        {
+          "word": "delay",
+          "cn": "耽搁"
+        },
+        {
+          "word": "ward",
+          "cn": "病房"
+        },
+        {
+          "word": "operator",
+          "cn": "接线员"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What happened to Mrs Taylor while she was cleaning the windows?",
+          "options": [
+            "She broke a window with her hand.",
+            "She fainted from the heat.",
+            "She dropped her phone outside.",
+            "She lost feeling on one side of her body."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'she suddenly could not feel the right side of her body' 的转述。"
+        },
+        {
+          "stem": "How was she able to call for help so easily?",
+          "options": [
+            "One touch on her phone would dial the emergency number she had saved.",
+            "A neighbour heard her shouting.",
+            "She walked to the phone on the wall.",
+            "The operator called her first."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'phone had already been set up to call an emergency number at the push of a button' 的转述。"
+        },
+        {
+          "stem": "Why was Mrs Taylor's life not in great danger?",
+          "options": [
+            "Because she was not really hurt.",
+            "Because she received treatment very quickly.",
+            "Because she stayed at home alone.",
+            "Because she could still speak clearly."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Because she was treated so quickly, her health was in no great danger' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Rescuing a Drowning Swimmer",
+      "body": "Helping someone who is drowning takes both speed and care. The first thing to do is to get the person out of the water safely, and then call for an ambulance straight away. Once the victim is on the ground, lay him on his back and check whether he is breathing. If he is not breathing, you may need to perform rescue breathing. Lift up his chin, cover his mouth with yours, and gently blow air in. After that, push down on the centre of his chest, about twice a second. Keep going, breathing for him and pushing on his chest, until he starts to breathe by himself or until help arrives. Never give up too soon, because every minute counts. New kinds of rescue are appearing too. In Brazil, some lifeguards now use small flying machines called paramotors to reach swimmers in danger and drop them something to hold on to before the lifeguards can swim out.",
+      "vocab_notes": [
+        {
+          "word": "drown",
+          "cn": "溺水"
+        },
+        {
+          "word": "chin",
+          "cn": "下巴"
+        },
+        {
+          "word": "rescue",
+          "cn": "救援"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What should you do first for a drowning person?",
+          "options": [
+            "Push down on the chest.",
+            "Blow air into the mouth.",
+            "Bring the victim safely to land, then phone for an ambulance.",
+            "Wait for the lifeguards to come."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'The first thing to do is to get the person out of the water safely, and then call for an ambulance' 的转述。"
+        },
+        {
+          "stem": "What does the writer mean by saying 'every minute counts'?",
+          "options": [
+            "You should count the minutes out loud.",
+            "Rescue always takes many minutes.",
+            "You should only try for one minute.",
+            "Acting fast is very important for the victim."
+          ],
+          "answer_index": 3,
+          "explanation": "'every minute counts' 强调时间宝贵、要快速行动,故 A。"
+        },
+        {
+          "stem": "How do some lifeguards in Brazil reach swimmers in danger?",
+          "options": [
+            "They use flying machines called paramotors.",
+            "They send out boats only.",
+            "They wait on the beach for help.",
+            "They throw ropes from a tower."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'use small flying machines called paramotors to reach swimmers' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Be Ready: Make a First-Aid Kit",
+      "body": "Emergencies often happen when we least expect them, so it is wise to be ready before they do. One simple way to prepare is to keep a first-aid kit at home and in the car. A good kit does not have to be expensive; most of the items can be bought cheaply at a pharmacy. It should hold things you can use to clean and cover a wound, something to ease pain, and a clean cloth to wrap around a sprained ankle. It is also a good idea to put a small information sheet inside the box. The sheet should list the emergency phone numbers, the items in the kit, and a short note on how and when to use each one. Store the kit somewhere that is easy to find, so that anyone in the family can reach it in a hurry. Being prepared will not stop accidents from happening, but it can help you stay calm and act fast when they do.",
+      "vocab_notes": [
+        {
+          "word": "kit",
+          "cn": "成套用品;工具箱"
+        },
+        {
+          "word": "ease",
+          "cn": "减轻"
+        },
+        {
+          "word": "wrap",
+          "cn": "包裹"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why does the writer suggest keeping a first-aid kit?",
+          "options": [
+            "Because kits are very cheap to sell.",
+            "Because emergencies can happen at any time.",
+            "Because the law says everyone must own one.",
+            "Because it looks nice in the home."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Emergencies often happen when we least expect them, so it is wise to be ready' 的转述。"
+        },
+        {
+          "stem": "What should the information sheet inside the kit include?",
+          "options": [
+            "The price of each item.",
+            "A list of family birthdays.",
+            "Emergency numbers, the items, and how to use them.",
+            "A map of the nearest hospital."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'list the emergency phone numbers, the items in the kit, and a short note on how and when to use each one' 的转述。"
+        },
+        {
+          "stem": "According to the writer, what can being prepared do?",
+          "options": [
+            "Stop all accidents from ever happening.",
+            "Make the family richer over time.",
+            "Replace the need for a hospital.",
+            "It lets you keep calm and respond quickly when trouble comes."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'it can help you stay calm and act fast when they do' 的转述;另一项'阻止一切事故'被原文否定。"
+        }
+      ]
+    }
+  ]
+}

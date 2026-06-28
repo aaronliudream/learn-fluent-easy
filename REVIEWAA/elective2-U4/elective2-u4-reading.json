@@ -1,0 +1,378 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Journey Across a Vast Land",
+  "source": "人教版2019选择性必修二 Unit 4 同主题阅读(横穿加拿大火车之旅/落基山风光/大草原/多伦多/蒙特利尔/铁路与旅行方式)。词限 U4/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Across the Great Canadian Prairie",
+      "topic_cn": "记叙·横穿大草原",
+      "body": "From Edmonton, the train headed southeast across the great Canadian Prairie. At school, Daiyu and Liu Qian had learnt that Canada's population is only a little over thirty-seven million. Even so, they did not anticipate seeing such an open country, and were truly amazed. They went through two wheat-growing provinces, where a bunch of farms covered a very large area. After another day on the train, they were finally back in an urban area, the city of Winnipeg. From there they travelled through the night and woke up in Ontario, a land of forests and lakes. The train thundered on through the rolling hills, while the bushes and maple trees outside their windows shone red, gold, and orange. There was frost on the ground, confirming that autumn had arrived. The girls realised that this vast and empty land was nothing like the crowded country many foreigners imagine China to be.",
+      "vocab_notes": [
+        {
+          "word": "prairie",
+          "cn": "大草原"
+        },
+        {
+          "word": "anticipate",
+          "cn": "预料"
+        },
+        {
+          "word": "urban",
+          "cn": "城市的"
+        },
+        {
+          "word": "frost",
+          "cn": "霜"
+        },
+        {
+          "word": "thunder",
+          "cn": "轰隆隆地行进"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did the girls feel about the Canadian Prairie?",
+          "options": [
+            "They were amazed by how open and empty it was.",
+            "They thought it looked exactly like home.",
+            "They found it crowded and noisy.",
+            "They were bored and wanted to leave."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'did not anticipate seeing such an open country, and were truly amazed' 的转述。"
+        },
+        {
+          "stem": "What told the girls that autumn had come?",
+          "options": [
+            "The wheat had just been planted.",
+            "The trees had turned colour and frost lay on the ground.",
+            "The lakes had completely frozen over.",
+            "The farms were empty of people."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 maple trees 变红金橙 + 'frost on the ground, confirming that autumn had arrived' 的概括转述。"
+        },
+        {
+          "stem": "What did the journey help the girls understand about China?",
+          "options": [
+            "That China, too, has wide and empty spaces, unlike what some foreigners think.",
+            "That China has no large cities.",
+            "That China and Canada share the same weather.",
+            "That China is also far smaller than Canada."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'this vast and empty land was nothing like the crowded country many foreigners imagine China to be' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "Through the Canadian Rockies",
+      "topic_cn": "说明·落基山风光",
+      "body": "Of all the sights along the railway, the Canadian Rockies left the deepest impression on the two travellers. As the train climbed higher, snow-covered peaks rose on every side, and the air grew thin and cold. Far below, a green river flowed quietly through the valley, and from time to time the girls spotted mountain goats moving along the steep cliffs. Near a small mountain town, the train passed Lake Louise, whose water was a strange, milky blue. Anna, a local passenger, told them that in winter the lake freezes over completely, and people skate and play on the thick ice. Heading west of here, the railway runs down to the coast at Vancouver, a city with a fine harbour and mountains looking out over the streets. Seen from the train, the Rockies seemed almost unreal, like a painting that kept changing shape. The girls agreed that this part of the trip was the true highlight of their journey across Canada.",
+      "vocab_notes": [
+        {
+          "word": "peak",
+          "cn": "山峰"
+        },
+        {
+          "word": "goat",
+          "cn": "山羊"
+        },
+        {
+          "word": "freeze over",
+          "cn": "结冰"
+        },
+        {
+          "word": "harbour",
+          "cn": "港口"
+        },
+        {
+          "word": "highlight",
+          "cn": "最精彩的部分"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the girls see as the train climbed into the Rockies?",
+          "options": [
+            "Wide wheat fields and busy farms.",
+            "Snowy peaks, a valley river, and goats on the cliffs.",
+            "Tall glass skyscrapers everywhere.",
+            "A flat land with no hills at all."
+          ],
+          "answer_index": 1,
+          "explanation": "原文描述 snow-covered peaks、green river、mountain goats 的概括转述。"
+        },
+        {
+          "stem": "According to Anna, what happens at Lake Louise in winter?",
+          "options": [
+            "The water turns warm enough to swim in.",
+            "The lake dries up completely.",
+            "The frozen lake becomes a place to skate and play.",
+            "Boats sail across it all day."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'in winter the lake freezes over completely, and people skate and play on the thick ice' 的转述。"
+        },
+        {
+          "stem": "How did the girls feel about this part of the trip?",
+          "options": [
+            "They thought it was dull compared with the cities.",
+            "They wished they had flown instead.",
+            "They were frightened and stayed in their seats.",
+            "They felt it was the best part of the whole journey."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'this part of the trip was the true highlight of their journey' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "A Few Hours in Toronto",
+      "topic_cn": "记叙·多伦多见闻",
+      "body": "After their long ride from the west, Daiyu and her cousin reached Toronto, the largest and wealthiest city in Canada. They had only a few hours before they had to proceed to Montreal, so they decided to make the most of the time. First they went up the famous tower and looked across the shores of Lake Ontario. Standing high above the streets, they were astonished to see misty clouds rising in the distance from the great falls on the south side of the lake. Down below, hundreds of skyscrapers of glass and steel shone in the afternoon sun, while a few old-fashioned cars rolled slowly by. As they walked north from the harbour, Daiyu suddenly remembered that an old schoolmate of her mother's lived in the city. She phoned the woman, and around dusk the three of them shared dinner in a busy Chinatown. Over the meal, their host explained that Chinese people had been settling there for more than a hundred years, which was why such wonderful food from all over China could be found in the city.",
+      "vocab_notes": [
+        {
+          "word": "wealthy",
+          "cn": "富裕的"
+        },
+        {
+          "word": "proceed",
+          "cn": "继续前往"
+        },
+        {
+          "word": "shore",
+          "cn": "湖岸"
+        },
+        {
+          "word": "skyscraper",
+          "cn": "摩天大楼"
+        },
+        {
+          "word": "dusk",
+          "cn": "黄昏"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the girls have to use their time carefully in Toronto?",
+          "options": [
+            "They soon had to travel on to Montreal.",
+            "The city was about to close for the night.",
+            "They had lost their train tickets.",
+            "It was raining too hard to go out."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'only a few hours before they had to proceed to Montreal' 的转述。"
+        },
+        {
+          "stem": "What surprised the girls when they looked out from the tower?",
+          "options": [
+            "Snow falling over the wheat fields.",
+            "Misty clouds rising from the falls in the distance.",
+            "A train speeding along the river.",
+            "A harbour full of fishing boats."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'astonished to see misty clouds rising in the distance from the great falls' 的转述。"
+        },
+        {
+          "stem": "Why could such good Chinese food be found in the city?",
+          "options": [
+            "Because the city was close to China.",
+            "Because the food was flown in every day.",
+            "Because Chinese people had lived there for over a century.",
+            "Because no other food was sold there."
+          ],
+          "answer_index": 2,
+          "explanation": "末句 'Chinese people had been settling there for more than a hundred years' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "The French City of Montreal",
+      "topic_cn": "记叙·蒙特利尔的法语风情",
+      "body": "The train left Toronto late at night and reached Montreal early the next morning. The moment the girls stepped onto the platform, they noticed something different: all around them, people were speaking French. The signs and advertisements were in French too, and even those who spoke English did so with a soft accent. \"We don't leave until this evening,\" Liu Qian said, \"so let's go and see the old town by the water.\" They spent a pleasant afternoon wandering through lovely shops and watching artists practise their craft along an old street. As they sat in a restaurant alongside the broad St Lawrence River, a young photographer named Jean-Philippe joined them. When he heard that they had only one day in the city, he shook his head and said they really owed it to themselves to stay longer. Montreal, he explained, had its own special culture, where most people spoke both English and French, and where good coffee, music, and food were part of everyday life.",
+      "vocab_notes": [
+        {
+          "word": "accent",
+          "cn": "口音"
+        },
+        {
+          "word": "advertisement",
+          "cn": "广告"
+        },
+        {
+          "word": "alongside",
+          "cn": "在……旁边"
+        },
+        {
+          "word": "craft",
+          "cn": "手艺"
+        },
+        {
+          "word": "owe",
+          "cn": "应该(欠……情)"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did the girls first notice in Montreal?",
+          "options": [
+            "That the city was completely empty.",
+            "That it was much colder than Toronto.",
+            "That there were no shops at all.",
+            "That everyone around them was speaking French."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'all around them, people were speaking French' 的转述。"
+        },
+        {
+          "stem": "How did the girls spend their afternoon?",
+          "options": [
+            "They visited shops and watched artists at work near the river.",
+            "They rested at the station the whole time.",
+            "They climbed a tall tower.",
+            "They went skating on a frozen lake."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'wandering through lovely shops and watching artists practise their craft' 的转述。"
+        },
+        {
+          "stem": "What was Jean-Philippe's advice to the girls?",
+          "options": [
+            "To leave the city as soon as possible.",
+            "To stay in Montreal longer than one day.",
+            "To learn French before travelling.",
+            "To take a plane to their next stop."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'they really owed it to themselves to stay longer' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "Why Travel by Rail?",
+      "topic_cn": "议论·为什么坐火车旅行",
+      "body": "Some people ask why anyone would spend four days on a train when a plane can cross Canada in only a few hours. For travellers like Daiyu and Liu Qian, however, the slow journey is exactly the point. On a plane you see little more than clouds, but from a train window the whole land slides past: wheat fields, rolling hills, misty lakes, and snowy peaks. A rail trip also gives you time to think, to read, and to talk with the people sitting around you. It was on the train that the girls met Anna, a friendly local who taught them Canadian idioms and described the scenery along the way. By car you must keep your eyes on the road, but on a train you are free to watch the world go by. Of course, the train is slower, and a long ride can feel tiring. Even so, many travellers believe that a journey across a vast land should be enjoyed mile by mile, not rushed through high above the clouds.",
+      "vocab_notes": [
+        {
+          "word": "idiom",
+          "cn": "习语"
+        },
+        {
+          "word": "scenery",
+          "cn": "风景"
+        },
+        {
+          "word": "peak",
+          "cn": "山峰"
+        },
+        {
+          "word": "misty",
+          "cn": "多雾的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do travellers like the girls choose the train over the plane?",
+          "options": [
+            "Because the train is always cheaper.",
+            "Because planes do not fly across Canada.",
+            "Because the slow ride lets them enjoy the whole land along the way.",
+            "Because they are afraid of flying."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the slow journey is exactly the point' + 看遍 land 的转述。"
+        },
+        {
+          "stem": "What is one advantage of the train over the car, according to the text?",
+          "options": [
+            "The train never gets tiring.",
+            "The train is faster than a car.",
+            "Cars cannot cross rivers.",
+            "On a train you can watch the scenery instead of watching the road."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'By car you must keep your eyes on the road, but on a train you are free to watch the world go by' 的转述。"
+        },
+        {
+          "stem": "What does the writer admit is a weakness of rail travel?",
+          "options": [
+            "A long ride can be slow and tiring.",
+            "You cannot meet anyone on a train.",
+            "You see nothing but clouds.",
+            "Trains never reach big cities."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the train is slower, and a long ride can feel tiring' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Building the Railway Across Canada",
+      "topic_cn": "说明·横贯铁路的历史",
+      "body": "The railway that carried Daiyu and Liu Qian across Canada was not always there. More than a hundred years ago, the country's eastern and western parts were separated by thousands of kilometres of forest, prairie, and high mountains. Leaders dreamed of joining them with a single line of steel, but the work proved hard and dangerous. Builders had to drill through solid rock, cross freezing rivers, and lay track over endless empty plains. Many workers came from far away, and a great number of them were Chinese. They worked through burning summers and freezing winters, and sadly many lost their lives in the mountains. When the line was at last finished, it tied the distant cities together and allowed people and goods to move from coast to coast. Today, travellers can sit in a warm carriage and watch the spectacular scenery roll by, but they should remember the countless hands that once cut this path through such a vast and difficult land.",
+      "vocab_notes": [
+        {
+          "word": "steel",
+          "cn": "钢铁"
+        },
+        {
+          "word": "drill",
+          "cn": "钻(孔)"
+        },
+        {
+          "word": "freezing",
+          "cn": "极冷的"
+        },
+        {
+          "word": "spectacular",
+          "cn": "壮观的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What separated the eastern and western parts of Canada long ago?",
+          "options": [
+            "A single line of steel.",
+            "Vast distances of woodland, open plains, and tall mountains.",
+            "A large frozen lake.",
+            "A wall built by the workers."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'separated by thousands of kilometres of forest, prairie, and high mountains' 的转述。"
+        },
+        {
+          "stem": "What does the text say about the workers who built the railway?",
+          "options": [
+            "They all came from nearby towns.",
+            "They finished the work in a single summer.",
+            "Many travelled from distant places, and quite a few were Chinese.",
+            "They never faced any danger."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Many workers came from far away, and a great number of them were Chinese' 的转述。"
+        },
+        {
+          "stem": "What does the writer want today's travellers to remember?",
+          "options": [
+            "That the train is faster than a plane.",
+            "That the railway was easy to build.",
+            "That the scenery is not worth seeing.",
+            "The many people whose hard work created the railway."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'they should remember the countless hands that once cut this path' 的转述。"
+        }
+      ]
+    }
+  ]
+}

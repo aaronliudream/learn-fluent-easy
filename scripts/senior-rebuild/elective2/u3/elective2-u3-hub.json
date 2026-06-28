@@ -1,0 +1,55 @@
+{
+  "listeningQuestions": [
+    { "audio": "Chinese cuisine changes greatly from place to place.", "opts": ["中国菜肴各地差异很大。", "中国各地的菜完全一样。", "中国只有一种菜系。", "中国菜从不变化。"], "answer": 0 },
+    { "audio": "We usually eat boiled dumplings dipped in vinegar.", "opts": ["我们通常蘸醋吃水煮饺子。", "我们从不吃饺子。", "我们把饺子蘸糖吃。", "我们只吃烤饺子。"], "answer": 0 },
+    { "audio": "A balanced diet in moderation is the key to good health.", "opts": ["适度均衡的饮食是健康的关键。", "多吃甜点最有益健康。", "只吃一种食物最健康。", "饮食和健康没有关系。"], "answer": 0 },
+    { "audio": "Eating slowly helps your body digest the food better.", "opts": ["慢慢吃有助于身体更好地消化食物。", "吃得越快越健康。", "吃饭时不能咀嚼。", "慢慢吃会让人变胖。"], "answer": 0 },
+    { "audio": "Through food, Chinese people show friendship and kindness.", "opts": ["中国人通过食物表达友谊与善意。", "中国人很少用食物待客。", "食物只是用来填饱肚子。", "中国人从不请客吃饭。"], "answer": 0 },
+    { "audio": "The chef began filling our table with the best food.", "opts": ["厨师开始把最好的菜摆满我们的餐桌。", "厨师拒绝给我们上菜。", "我们自己点了所有的菜。", "桌上一道菜也没有。"], "answer": 0 }
+  ],
+  "quizQuestions": [
+    { "q": "菜肴、风味、烹饪,用哪个词?", "opts": ["cuisine", "machine", "weather", "ticket"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "(尤指烹饪)材料、成分,用哪个词?", "opts": ["ingredient", "passenger", "engine", "garden"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "适度、合理、节制,用哪个词?", "opts": ["moderation", "machine", "distance", "silence"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "厨师、主厨,用哪个词?", "opts": ["chef", "driver", "doctor", "farmer"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "____ Chinese dishes at home is a great way to relax.", "opts": ["Cooking", "Cook", "To be cooked", "Cooked"], "answer": 0, "point": "动名词作主语", "dim": "grammar" },
+    { "q": "Be careful with the ____ water; it can burn your hand.", "opts": ["boiling", "boiled", "to boil", "boil"], "answer": 0, "point": "现在分词作定语", "dim": "grammar" },
+    { "q": "From the door I saw the chef ____ a huge pot of soup.", "opts": ["stirring", "stir to", "to be stirred", "stirs"], "answer": 0, "point": "感官动词+sb+doing", "dim": "grammar" },
+    { "q": "I still remember ____ that wonderful meal for the first time.", "opts": ["tasting", "to taste", "taste", "to be tasted"], "answer": 0, "point": "remember doing(做过)", "dim": "grammar" },
+    { "q": "听句子选意思:", "opts": ["请问您准备好点菜了吗?", "请问账单是多少?", "厨房已经关了。", "这家店只卖甜点。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "Are you ready to order, madam?" },
+    { "q": "听句子选意思:", "opts": ["在中国北方,包饺子一直是全家人的事。", "饺子只能由厨师来做。", "北方人从不吃饺子。", "做饺子要一个人安静完成。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "In the north of China, making dumplings has always been a family affair." }
+  ],
+  "reading": {
+    "passage": "In China, a meal is rarely just about food. When guests arrive, the host fills the table with dish after dish to show friendship and kindness. Sharing good food is one of the warmest ways to welcome a visitor.",
+    "passageCn": "在中国,一顿饭很少只是为了吃。客人来时,主人会把一道道菜摆满餐桌,以表达友谊与善意。分享美食是欢迎来客最温暖的方式之一。",
+    "questions": [
+      { "q": "What is a Chinese meal rarely only about?", "opts": ["Just the food itself.", "Saving money.", "Eating in a hurry.", "Counting calories."], "answer": 0 },
+      { "q": "Why does the host fill the table with dishes?", "opts": ["To show friendship and kindness.", "To sell the food.", "To keep guests waiting.", "To show off money."], "answer": 0 }
+    ]
+  },
+  "writing": {
+    "prompt": "Introduce a Chinese dish you like in about 60 words: its name and main ingredients, how it tastes, and the food culture behind it.",
+    "promptCn": "用约60词介绍一道你喜欢的中国菜:名称与主要食材、味道,以及它背后的饮食文化。",
+    "sampleWords": ["dumpling", "ingredient", "vinegar", "flavour", "cuisine", "boil", "slice", "family affair", "culture", "share"]
+  },
+  "dialogues": [
+    {
+      "title": "Ordering Food Together",
+      "lines": [
+        { "role": "A", "text": "I really love spicy food. What dish would you recommend?", "cn": "我很喜欢吃辣的。你会推荐哪道菜?" },
+        { "role": "B", "text": "You should try the steamed fish head covered with chillies.", "cn": "你应该试试剁椒鱼头。" },
+        { "role": "A", "text": "That sounds great. What else is good here?", "cn": "听起来很棒。这里还有什么好吃的?" },
+        { "role": "B", "text": "The red braised pork is the most famous dish in this restaurant.", "cn": "红烧肉是这家餐厅最有名的菜。" }
+      ]
+    },
+    {
+      "title": "Talking About Healthy Eating",
+      "lines": [
+        { "role": "A", "text": "How do you manage to stay so fit and full of energy?", "cn": "你是怎么保持这么健康、这么有活力的?" },
+        { "role": "B", "text": "I've cut down on sweet drinks and eat more fresh vegetables.", "cn": "我减少了甜饮料,多吃新鲜蔬菜。" },
+        { "role": "A", "text": "Does eating slowly really help?", "cn": "慢慢吃真的有用吗?" },
+        { "role": "B", "text": "Yes. It gives my brain time to know I'm full, so I never eat too much.", "cn": "有用。它让大脑有时间知道我饱了,所以我从不会吃太多。" }
+      ]
+    }
+  ]
+}

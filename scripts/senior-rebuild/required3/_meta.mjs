@@ -2,8 +2,8 @@
 export const VOL = 'required3', GRADE = 10;
 export const CODE_PREFIX = 'r3';
 export const SEM = 'gk_required3';
-// hub 骨架所在的 year 文件(原设计:required3 与 elective1 同放 year2)。接 hub 写这里,不写 year1(防重复)。
-export const YEARFILE = 'year2';
+// hub 骨架所在的 year 文件。required3=junior grade10=year1(与 required1/2 同册同 grade,语法板块 VOL_GRADE[required3]=10→year1 才找得到单元 id)。
+export const YEARFILE = 'year1';
 export const META = {
   u1: {
     unit: 'U1', semIdx: 0, title: 'Festivals and Celebrations', cn: '节日与庆典', emoji: '🎉',

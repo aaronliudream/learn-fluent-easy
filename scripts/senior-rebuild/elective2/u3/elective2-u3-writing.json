@@ -1,0 +1,51 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Introduce a Chinese Dish and Its Culture(介绍一道中国菜及其文化)",
+  "genre": "说明文 / 介绍(introduce a dish + the food culture behind it)",
+  "source": "人教版2019选择性必修二 Unit 3 Reading for Writing / Project:介绍一道中国菜或中国饮食文化,可用于向外国朋友介绍或设计餐厅菜单的说明文。",
+  "prompt_cn": "假设你叫李华,一位外国朋友想了解中国的饮食文化。请用英语写一篇约100词的说明文,介绍一道你喜欢的中国菜,内容包括:① 这道菜的名称、主要食材和大致做法;② 它的味道或特色;③ 这道菜背后体现的中国饮食文化(如家人团聚、待客之道、地方特色等)。注意:用词地道、围绕中心、条理清楚。",
+  "prompt_en": "Suppose you are Li Hua. A foreign friend wants to learn about Chinese food culture. Write a passage of about 100 words to introduce a Chinese dish you like, including: 1) its name, main ingredients, and how it is made; 2) its taste or special feature; 3) the Chinese food culture behind it (e.g. family reunion, welcoming guests, or local character).",
+  "points": [
+    "介绍菜名与食材(One of my favourite dishes is … It is made with …)",
+    "说明做法与味道(It is cooked by … and tastes …)",
+    "点出背后的文化(More than a dish, it shows … / It brings the family together.)",
+    "用词地道、围绕中心、条理清楚"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "One of my favourite Chinese dishes is boiled dumplings. They are made by wrapping a filling of minced pork and sliced green onions inside a thin piece of dough, and then boiling them in hot water. We usually eat them dipped in vinegar, which gives them a fresh, slightly sour taste. To me, however, dumplings are more than just food. In the north of China, making dumplings has always been a family affair, with everyone from the youngest child to the oldest grandparent joining in. Through this simple dish, you can really feel the warmth, the friendship, and the love of family that lie at the heart of Chinese food culture.",
+  "model_translation": "我最喜欢的一道中国菜是水煮饺子。把猪肉末和切好的大葱做成馅,包进薄薄的面皮里,再放进热水里煮。我们通常蘸醋吃,味道清爽、略带酸味。但对我来说,饺子不仅仅是食物。在中国北方,包饺子一直是全家人的事,从最小的孩子到最年长的祖父母都会一起动手。通过这道简单的菜,你能真切感受到温暖、友谊和家庭之爱——这正是中国饮食文化的核心。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:菜名与食材做法 / 味道特色 / 背后的饮食文化" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕一道菜展开、由具体到文化、句句相关、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、-ing 形式等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题 One of my favourite Chinese dishes is …",
+      "做法 They are made by … and boiling them …",
+      "味道 We usually eat them … which gives them a … taste.",
+      "文化 More than just food, … shows the warmth and love of family."
+    ],
+    "key_expressions": [
+      "One of my favourite Chinese dishes is boiled dumplings.",
+      "They are made by wrapping a filling inside a thin piece of dough.",
+      "We usually eat them dipped in vinegar.",
+      "Making dumplings has always been a family affair."
+    ],
+    "useful_words": ["dumpling", "ingredient", "dough", "vinegar", "flavour", "cuisine", "family affair", "boil", "slice", "culture"]
+  },
+  "high_sentences": [
+    "One of my favourite Chinese dishes is boiled dumplings.",
+    "They are made by wrapping minced pork and green onions inside a thin piece of dough.",
+    "We usually eat them dipped in vinegar, which gives them a fresh, slightly sour taste.",
+    "Through this simple dish, you can feel the warmth and love that lie at the heart of Chinese food culture."
+  ],
+  "error_pairs": [
+    { "wrong": "Cooking dumplings are fun.", "correct": "Cooking dumplings is fun.", "note": "动名词作主语,谓语用单数 is。" },
+    { "wrong": "The dish is made by boil it in water.", "correct": "The dish is made by boiling it in water.", "note": "介词 by 后接动名词 boiling。" },
+    { "wrong": "We eat them with dip in vinegar.", "correct": "We eat them dipped in vinegar.", "note": "过去分词 dipped 作状语,表被动/状态。" }
+  ],
+  "paragraph_template": "【介绍一道中国菜结构】\n第1句 点题:One of my favourite Chinese dishes is …\n第2-3句 做法+味道:They are made by … We usually eat them … which tastes …\n第4-5句 文化:More than just food, this dish shows … (家人团聚/待客/地方特色)"
+}

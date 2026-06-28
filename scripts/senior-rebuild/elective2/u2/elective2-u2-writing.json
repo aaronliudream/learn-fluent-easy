@@ -1,0 +1,52 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Introduce Your School and Culture to Visiting Students(向来访学生介绍你的学校与文化)",
+  "title_en": "Welcome to Our School",
+  "genre": "应用文 / 介绍信(welcome message + introduce school and local culture to exchange students)",
+  "source": "人教版2019选择性必修二 Unit 2 Project & Using Language:向来校交流的外国学生介绍你的学校与文化(欢迎 + 学校特色 + 文化分享 + 祝愿)。",
+  "prompt_cn": "假设你叫李华,一批来自澳大利亚的交换生即将到你校学习一年。请用英语写一篇约100词的欢迎短文,内容包括:① 热情欢迎并简单介绍你的学校(校训/社团/特色活动任选);② 分享一两个本地或中国文化的亮点(如书法、美食、节日);③ 表示愿意帮助他们适应、做他们的朋友。注意:用上名词性从句、连接词,行文连贯。",
+  "prompt_en": "Suppose you are Li Hua. A group of exchange students from Australia will come to study at your school for a year. Write a welcome message (about 100 words) including: 1) a warm welcome and a brief introduction to your school (motto, clubs or special events); 2) one or two highlights of local or Chinese culture you would like to share (e.g. calligraphy, food, festivals); 3) your wish to help them adapt and be their friend.",
+  "points": [
+    "热情欢迎并介绍学校(校训/社团/特色活动)",
+    "分享一两个中国/本地文化亮点(书法/美食/节日)",
+    "表示愿意帮助他们适应、做朋友",
+    "用上名词性从句与连接词,句句围绕中心、连贯"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Dear friends, on behalf of our school, I am happy that you have chosen to study with us for a year. Welcome! Our school motto is \"The best preparation for tomorrow is doing your best today.\" We have many clubs and exciting events, such as our Sports Meet and Art Festival, so I am sure you will soon feel at home. What I would love to share most is our culture. You can try writing your name in Chinese calligraphy and tasting dishes like tomatoes and eggs. If you ever feel lost or homesick, please tell me. I will gladly help you adapt and be your friend.",
+  "model_translation": "亲爱的朋友们,我代表学校,很高兴你们选择来我们这里学习一年。欢迎你们!我们的校训是“为明天做的最好准备,就是今天全力以赴”。我们有许多社团和精彩活动,比如运动会和艺术节,相信你们很快就会有家的感觉。我最想分享的是我们的文化。你们可以试着用书法写自己的名字,品尝番茄炒蛋这样的菜肴。如果你们感到迷茫或想家,请告诉我。我会很乐意帮你们适应,并做你们的朋友。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:欢迎并介绍学校 / 分享文化亮点 / 愿意帮助做朋友" },
+      { "dimension": "结构", "max": 4, "criteria": "欢迎—介绍—文化—祝愿层次清晰、连接自然、代词指代清楚" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、名词性从句等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "欢迎 On behalf of our school, welcome!",
+      "介绍学校 Our school motto is … We have many clubs and events such as …",
+      "分享文化 What I would love to share most is …",
+      "愿意帮助 If you ever feel lost, I will gladly help you adapt and be your friend."
+    ],
+    "key_expressions": [
+      "On behalf of our school, I am happy that you have chosen to study with us.",
+      "Our school motto is \"The best preparation for tomorrow is doing your best today.\"",
+      "What I would love to share most is our culture.",
+      "I will gladly help you adapt and be your friend."
+    ],
+    "useful_words": ["welcome", "motto", "club", "festival", "calligraphy", "culture", "adapt", "homesick", "share", "friend"]
+  },
+  "high_sentences": [
+    "On behalf of our school, I am happy that you have chosen to study with us for a year.",
+    "What I would love to share most is our culture.",
+    "I am sure you will soon feel at home.",
+    "If you ever feel lost or homesick, please tell me."
+  ],
+  "error_pairs": [
+    { "wrong": "Welcome to our school study.", "correct": "Welcome to study at our school.", "note": "welcome to do sth 用动词原形,不用名词堆叠。" },
+    { "wrong": "What I want to share is about our culture.", "correct": "What I want to share is our culture.", "note": "主语从句 What… 已含成分,表语后不再加 about。" },
+    { "wrong": "I will help you to adapt the new life.", "correct": "I will help you adapt to the new life.", "note": "adapt 后接 to;help sb do 用原形。" }
+  ],
+  "paragraph_template": "【欢迎介绍信结构】\n第1句 欢迎:On behalf of our school, welcome!\n第2-3句 介绍学校:Our school motto is … We have many clubs and events such as …\n第4-5句 分享文化:What I would love to share most is … You can try …\n第6句 祝愿/帮助:If you ever feel lost, I will gladly help you adapt and be your friend."
+}

@@ -1,0 +1,49 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "listeningQuestions": [
+    { "audio": "The train headed east across the great Canadian prairie.", "opts": ["火车向东驶过辽阔的加拿大大草原。", "火车在城市里慢慢停下。", "火车爬上了高高的雪山。", "火车沿着海岸向南行驶。"], "answer": 0 },
+    { "audio": "In winter the lake freezes over, and people skate on the thick ice.", "opts": ["冬天湖水变暖,可以游泳。", "冬天湖面结冰,人们在厚冰上滑冰。", "冬天湖水完全干涸。", "冬天没有人去那座湖。"], "answer": 1 },
+    { "audio": "Seen from the top of the hill, the autumn forest looked like a painting.", "opts": ["从山顶望去,秋天的森林一片灰暗。", "从山顶望去,森林正在燃烧。", "从山顶望去,秋天的森林像一幅画。", "从山顶望去,什么也看不见。"], "answer": 2 },
+    { "audio": "In Montreal the signs and advertisements were all written in French.", "opts": ["在蒙特利尔人们只说英语。", "在蒙特利尔没有任何标识。", "在蒙特利尔标识都是中文。", "在蒙特利尔标识和广告都是用法语写的。"], "answer": 3 },
+    { "audio": "The slow journey across the vast land became a memory for life.", "opts": ["这段横穿辽阔大地的慢旅程成了一生的记忆。", "这段旅程让人很快忘记。", "这段旅程只是浪费时间。", "这段旅程很快就结束了。"], "answer": 0 },
+    { "audio": "More than a hundred years ago, many of the railway workers came from China.", "opts": ["铁路是机器自己修好的。", "一百多年前,许多铁路工人来自中国。", "铁路工人都来自附近的小镇。", "铁路是一个夏天就建成的。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "From the train we watched a bunch of farms ____ a very large area.", "opts": ["covering", "to cover", "cover", "covered"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The road ____ with deep snow was closed all winter.", "opts": ["covering", "covered", "to cover", "cover"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "____ from the hill, the lake looked deep blue in the morning light.", "opts": ["Seeing", "To see", "Seen", "See"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "At the gate Liu Qian had her ticket ____ by a friendly officer.", "opts": ["checking", "to check", "check", "checked"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "The train sped across the great Canadian ____, where wheat grew for miles.", "opts": ["prairie", "harbour", "mall", "accent"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Snow still covered the high ____ of the Canadian Rockies.", "opts": ["malls", "peaks", "shores", "drills"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "The beauty of the lake took the visitors' ____ away.", "opts": ["accent", "frost", "breath", "steel"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "Seeing the great falls, they were truly ____ by the rising mist.", "opts": ["bored", "wealthy", "urban", "amazed"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "听句子选中文:", "opts": ["他们坐了四天的火车才横穿这个国家。", "他们坐飞机几小时就到了。", "他们开车迷了路。", "他们根本没有出发。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "It took them four days by train to cross the whole country." },
+    { "q": "听句子选中文:", "opts": ["蒙特利尔的人只说英语。", "在蒙特利尔,大多数人既说英语又说法语。", "蒙特利尔没有人会说英语。", "蒙特利尔的人都说中文。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "In Montreal, most people speak both English and French." }
+  ],
+  "reading": {
+    "passage": "When Daiyu's train finally reached the east coast, she had crossed the whole country by rail. Heading east, she had passed the great prairie, the snowy Rockies, and the busy city of Toronto. Tired but happy, she felt that the slow journey had been worth every single mile.",
+    "passageCn": "当戴玉的火车终于抵达东海岸时,她已经坐火车横穿了整个国家。一路向东,她经过了辽阔的草原、雪山落基山和繁忙的多伦多。虽然疲惫却很快乐,她觉得这段慢旅程值得每一英里。",
+    "questions": [
+      { "q": "How did Daiyu cross the country?", "opts": ["By rail.", "By plane.", "By car.", "By boat."], "answer": 0 },
+      { "q": "Which of these did Daiyu pass on the way?", "opts": ["A desert and a sea.", "The prairie, the Rockies, and Toronto.", "Only one small town.", "Nothing but cities."], "answer": 1 },
+      { "q": "How did Daiyu feel about the journey?", "opts": ["She thought it was a waste of time.", "She wished she had flown.", "She felt it was worth every mile.", "She was too bored to remember it."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a journey you have taken or would like to take across a vast land. Describe the scenery and use at least one past participle or -ing form as an adverbial (e.g. Seen from …, / Heading east, …).",
+    "promptCn": "用3-4句话写一段你曾经或想要进行的横穿辽阔大地的旅程:描述沿途风景,至少用一个过去分词或现在分词作状语(如 Seen from …, / Heading east, …)。",
+    "sampleWords": ["journey", "prairie", "peak", "scenery", "heading", "seen", "spectacular", "eventually", "alongside", "highlight"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking About the View",
+      "lines": [
+        { "role": "A", "text": "Wow, look at those snowy peaks heading west!", "cn": "哇,看西边那些雪山!" },
+        { "role": "B", "text": "Seen from the train, they look almost unreal, don't they?", "cn": "从火车上望去,它们几乎不像真的,对吧?" },
+        { "role": "A", "text": "They do. And there's a lake covered with ice down there.", "cn": "是啊。下面还有一个结着冰的湖。" },
+        { "role": "B", "text": "Anna says people skate on it in winter. This trip really takes my breath away.", "cn": "安娜说冬天人们在上面滑冰。这趟旅行真让我惊叹。" }
+      ]
+    }
+  ]
+}

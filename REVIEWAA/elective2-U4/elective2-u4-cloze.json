@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Journey Across a Vast Land",
+  "source": "人教版2019选择性必修二 Unit 4 同主题完形(火车上的早晨/草原小镇/落基山的清晨/初到蒙特利尔/旅行日记/铁路工人后代)。用词限 U4/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Morning on the Train",
+      "text": "On the third morning, Daiyu woke early and quietly pulled back the (1)____ beside her seat. Outside, a thin white (2)____ lay on the fields, and the rising sun turned the sky pink. The train (3)____ gently on through the rolling hills, rocking the sleepy passengers from side to side. Far away she could see a low (4)____ of blue mountains. A friendly local woman sitting (5)____ her smiled and said good morning. \"This is the best (6)____ of the whole trip,\" the woman whispered, \"when the land is still and quiet.\" Daiyu nodded and took a deep (7)____ of the cool morning air. She felt lucky to be (8)____ across such a vast country by rail. By the time the others (9)____ up, the train was already passing a small town. Daiyu reached for her camera, eager to (10)____ the beauty of the scene.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "curtain",
+            "harbour",
+            "accent",
+            "quarry"
+          ],
+          "answer_index": 0,
+          "explanation": "pull back the curtain 拉开窗帘。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mall",
+            "frost",
+            "steel",
+            "goat"
+          ],
+          "answer_index": 1,
+          "explanation": "white frost 白霜。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "froze",
+            "owed",
+            "thundered",
+            "drilled"
+          ],
+          "answer_index": 2,
+          "explanation": "thundered on 轰隆隆地前行。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "bunch",
+            "shore",
+            "peak",
+            "row"
+          ],
+          "answer_index": 3,
+          "explanation": "a low row of mountains 一排低矮的山。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "alongside",
+            "despite",
+            "across",
+            "between"
+          ],
+          "answer_index": 0,
+          "explanation": "sitting alongside her 坐在她旁边。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "accent",
+            "highlight",
+            "duration",
+            "idiom"
+          ],
+          "answer_index": 1,
+          "explanation": "the best highlight/part 最精彩的部分。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "mall",
+            "peak",
+            "breath",
+            "craft"
+          ],
+          "answer_index": 2,
+          "explanation": "take a deep breath 深吸一口气。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "selling",
+            "buying",
+            "hiding",
+            "travelling"
+          ],
+          "answer_index": 3,
+          "explanation": "travelling across 横穿旅行。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "woke",
+            "froze",
+            "sold",
+            "drilled"
+          ],
+          "answer_index": 0,
+          "explanation": "woke up 醒来。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "capture",
+            "waste",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "capture the beauty 捕捉美景。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Town on the Prairie",
+      "text": "When the train stopped at a small (1)____ town, Liu Qian got off to stretch her legs. The land here was (2)____ flat, stretching to the horizon in every direction. A (3)____ of farms spread out beyond the station, their wheat already golden. The cold air smelt of (4)____ and dry grass. An old farmer, (5)____ for the next train, told her that winters here were (6)____ cold, with temperatures far below zero. \"In summer, though,\" he added, \"the days are long and (7)____.\" Liu Qian was (8)____ to learn that such a quiet place could feel so alive. Before she climbed back on board, the farmer gave her a small loaf of bread and a cup of hot (9)____. She thanked him warmly, (10)____ that even a short stop could leave a lasting memory.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "urban",
+            "antique",
+            "prairie",
+            "misty"
+          ],
+          "answer_index": 2,
+          "explanation": "a prairie town 草原小镇。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "hardly",
+            "rarely",
+            "never",
+            "literally"
+          ],
+          "answer_index": 3,
+          "explanation": "literally flat 简直平坦。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "bunch",
+            "shore",
+            "peak",
+            "drill"
+          ],
+          "answer_index": 0,
+          "explanation": "a bunch of farms 一片农场。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "steel",
+            "frost",
+            "toast",
+            "mall"
+          ],
+          "answer_index": 1,
+          "explanation": "smelt of frost 闻起来有霜冻的气息。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "selling",
+            "freezing",
+            "waiting",
+            "drilling"
+          ],
+          "answer_index": 2,
+          "explanation": "waiting for the train 等火车。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "pleasant",
+            "wealthy",
+            "coherent",
+            "freezing"
+          ],
+          "answer_index": 3,
+          "explanation": "freezing cold 极冷的。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "pleasant",
+            "frozen",
+            "broken",
+            "urban"
+          ],
+          "answer_index": 0,
+          "explanation": "long and pleasant 漫长而宜人。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "bored",
+            "amazed",
+            "afraid",
+            "angry"
+          ],
+          "answer_index": 1,
+          "explanation": "amazed 惊讶的。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "steel",
+            "frost",
+            "coffee",
+            "peak"
+          ],
+          "answer_index": 2,
+          "explanation": "a cup of hot coffee 一杯热咖啡。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forgetting",
+            "losing",
+            "hiding",
+            "realising"
+          ],
+          "answer_index": 3,
+          "explanation": "realising 意识到。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Dawn in the Rockies",
+      "text": "The train began to climb, and soon snowy (1)____ rose on both sides of the track. Daiyu had never seen such (2)____ scenery in her life. A green river flowed far below, and a few wild mountain (3)____ moved carefully along the steep cliffs. As the sun rose, (4)____ clouds drifted slowly between the peaks. \"(5)____ from down in the valley,\" Anna said, \"these mountains look even taller.\" The air was so cold that (6)____ formed on the inside of the windows. Daiyu wiped the glass and (7)____ out at a small blue lake. Anna explained that in winter the lake (8)____ over, and people skate on the thick ice. \"You really (9)____ it to yourself to come back in winter,\" she added with a smile. Daiyu promised that one day she would (10)____ to this beautiful place.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "peaks",
+            "malls",
+            "shores",
+            "drills"
+          ],
+          "answer_index": 0,
+          "explanation": "snowy peaks 雪峰。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "urban",
+            "spectacular",
+            "freezing",
+            "wealthy"
+          ],
+          "answer_index": 1,
+          "explanation": "spectacular scenery 壮观的景色。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "malls",
+            "accents",
+            "goats",
+            "crafts"
+          ],
+          "answer_index": 2,
+          "explanation": "mountain goats 山羊。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "frozen",
+            "broken",
+            "wealthy",
+            "misty"
+          ],
+          "answer_index": 3,
+          "explanation": "misty clouds 薄雾般的云。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "Seen",
+            "Seeing",
+            "To see",
+            "Sees"
+          ],
+          "answer_index": 0,
+          "explanation": "Seen from the valley 从山谷望去(被动,主语 mountains 被看)。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "steel",
+            "frost",
+            "toast",
+            "mall"
+          ],
+          "answer_index": 1,
+          "explanation": "frost formed 结霜。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "froze",
+            "looked",
+            "drilled"
+          ],
+          "answer_index": 2,
+          "explanation": "looked out 向外看。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sells",
+            "drills",
+            "owes",
+            "freezes"
+          ],
+          "answer_index": 3,
+          "explanation": "freezes over 结冰。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "owe",
+            "sell",
+            "freeze",
+            "drill"
+          ],
+          "answer_index": 0,
+          "explanation": "owe it to yourself 你应该(给自己)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "forget",
+            "return",
+            "lose",
+            "drop"
+          ],
+          "answer_index": 1,
+          "explanation": "return to this place 重返此地。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "First Hours in Montreal",
+      "text": "The two cousins arrived in Montreal early in the morning, tired but (1)____. As they walked through the station, they were surprised to hear everyone speaking French. Even the (2)____ on the walls were printed in French. Some people spoke English with a soft (3)____. \"(4)____ to what we expected, this feels like a European town,\" Liu Qian said. They decided to (5)____ to the old part of the city, which lay close to the water. There they wandered through lovely shops full of (6)____ furniture and local crafts. By (7)____, the streets had filled with the warm smell of coffee and fresh bread. A young (8)____ named Jean-Philippe stopped to chat and offered to show them around. He told them that Montreal had its own (9)____ culture, where two languages lived side by side. The cousins agreed that one day here was far too (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "angry",
+            "asleep",
+            "happy",
+            "sorry"
+          ],
+          "answer_index": 2,
+          "explanation": "tired but happy 累但开心。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "peaks",
+            "goats",
+            "drills",
+            "advertisements"
+          ],
+          "answer_index": 3,
+          "explanation": "advertisements on the walls 墙上的广告。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "accent",
+            "mall",
+            "frost",
+            "shore"
+          ],
+          "answer_index": 0,
+          "explanation": "with an accent 带着口音。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "Owing",
+            "Contrary",
+            "Heading",
+            "Speaking"
+          ],
+          "answer_index": 1,
+          "explanation": "Contrary to what we expected 与预期相反。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "freeze",
+            "sell",
+            "proceed",
+            "drill"
+          ],
+          "answer_index": 2,
+          "explanation": "proceed to the old part 前往老城区。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "frozen",
+            "urban",
+            "misty",
+            "antique"
+          ],
+          "answer_index": 3,
+          "explanation": "antique furniture 古董家具。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "dusk",
+            "steel",
+            "toast",
+            "peak"
+          ],
+          "answer_index": 0,
+          "explanation": "by dusk 到黄昏时。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "harbour",
+            "photographer",
+            "mall",
+            "quarry"
+          ],
+          "answer_index": 1,
+          "explanation": "a young photographer 一位年轻摄影师。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "frozen",
+            "broken",
+            "unique",
+            "wealthy"
+          ],
+          "answer_index": 2,
+          "explanation": "its own unique culture 独特的文化。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "long",
+            "loud",
+            "cold",
+            "short"
+          ],
+          "answer_index": 3,
+          "explanation": "far too short 太短了。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Liu Qian's Travel Diary",
+      "text": "Day five. We are now (1)____ east towards the coast, and the train has not stopped rocking all night. I am writing this (2)____ beside the broad river, which shines silver under the moon. So much has happened that it is hard to keep my notes (3)____. We crossed the great (4)____, climbed through the Rockies, and spent a few (5)____ hours in busy Toronto. In Montreal we met a kind (6)____ who told us we (7)____ it to ourselves to come back. The (8)____ of the whole trip, for me, was the morning the lake appeared outside our window. Tonight I feel (9)____ but happy. Tomorrow we reach the sea, and our long (10)____ across this vast land will finally come to an end.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "heading",
+            "selling",
+            "freezing",
+            "drilling"
+          ],
+          "answer_index": 0,
+          "explanation": "heading east 向东行进。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "mall",
+            "diary",
+            "frost",
+            "steel"
+          ],
+          "answer_index": 1,
+          "explanation": "writing this diary 写日记。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "frozen",
+            "broken",
+            "coherent",
+            "urban"
+          ],
+          "answer_index": 2,
+          "explanation": "keep my notes coherent 让笔记有条理。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mall",
+            "drill",
+            "accent",
+            "prairie"
+          ],
+          "answer_index": 3,
+          "explanation": "the great prairie 大草原。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "pleasant",
+            "frozen",
+            "broken",
+            "wealthy"
+          ],
+          "answer_index": 0,
+          "explanation": "a few pleasant hours 愉快的几小时。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "mall",
+            "photographer",
+            "drill",
+            "quarry"
+          ],
+          "answer_index": 1,
+          "explanation": "a kind photographer 一位友善的摄影师。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "froze",
+            "owed",
+            "drilled"
+          ],
+          "answer_index": 2,
+          "explanation": "owed it to ourselves 我们应该(给自己)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "accent",
+            "frost",
+            "steel",
+            "highlight"
+          ],
+          "answer_index": 3,
+          "explanation": "the highlight of the trip 旅程的亮点。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "tired",
+            "angry",
+            "afraid",
+            "sorry"
+          ],
+          "answer_index": 0,
+          "explanation": "tired but happy 累但开心。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "mall",
+            "journey",
+            "drill",
+            "shore"
+          ],
+          "answer_index": 1,
+          "explanation": "our long journey 漫长的旅程。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "My Great-Grandfather's Railway",
+      "text": "My family has always loved trains, and now I know (1)____. More than a hundred years ago, my great-grandfather helped to build the railway across this country. The work was hard and (2)____. The builders had to (3)____ through solid rock and lay (4)____ track over endless plains. Many of the workers, like him, had travelled (5)____ from China to find a new life. They worked through (6)____ winters when frost covered everything. (7)____ from today, their courage is difficult to imagine. When the line was finally (8)____, it tied the distant cities together at last. Now, (9)____ in a warm carriage, I watch the same spectacular land roll by. I feel proud of the countless hands that (10)____ this path through such a vast and difficult country.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "where",
+            "when",
+            "why",
+            "whose"
+          ],
+          "answer_index": 2,
+          "explanation": "know why 知道原因。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "pleasant",
+            "wealthy",
+            "urban",
+            "dangerous"
+          ],
+          "answer_index": 3,
+          "explanation": "hard and dangerous 艰苦而危险。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "drill",
+            "sell",
+            "freeze",
+            "owe"
+          ],
+          "answer_index": 0,
+          "explanation": "drill through rock 钻穿岩石。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "mall",
+            "steel",
+            "frost",
+            "shore"
+          ],
+          "answer_index": 1,
+          "explanation": "steel track 钢轨。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "near",
+            "down",
+            "far",
+            "off"
+          ],
+          "answer_index": 2,
+          "explanation": "travelled far 远道而来。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "pleasant",
+            "wealthy",
+            "coherent",
+            "freezing"
+          ],
+          "answer_index": 3,
+          "explanation": "freezing winters 严寒的冬天。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "Seen",
+            "Seeing",
+            "To see",
+            "Sees"
+          ],
+          "answer_index": 0,
+          "explanation": "Seen from today 从今天看(被动,主语 courage 被看)。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "finished",
+            "lost",
+            "frozen"
+          ],
+          "answer_index": 1,
+          "explanation": "finally finished 终于建成。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "sat",
+            "to sit",
+            "sitting",
+            "sits"
+          ],
+          "answer_index": 2,
+          "explanation": "sitting in a carriage 坐在车厢里(现在分词作状语,主动)。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "wasted",
+            "forgot",
+            "lost",
+            "cut"
+          ],
+          "answer_index": 3,
+          "explanation": "cut this path 开辟出这条路。"
+        }
+      ]
+    }
+  ]
+}

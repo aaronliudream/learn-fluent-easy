@@ -1,0 +1,49 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "listeningQuestions": [
+    { "audio": "Snow discovered that dirty water caused cholera.", "opts": ["斯诺发现脏水引起了霍乱。", "斯诺造了一座新水坝。", "斯诺关闭了所有医院。", "斯诺去了很远的地方。"], "answer": 0 },
+    { "audio": "A real scientist always shares the results with others.", "opts": ["科学家从不做实验。", "真正的科学家总会与他人分享成果。", "科学家只在家里工作。", "科学家不喜欢提问。"], "answer": 1 },
+    { "audio": "When the data look contradictory, we simply test again.", "opts": ["数据总是完全一致。", "我们从不重复实验。", "当数据看似矛盾时,我们就再做一次。", "我们立刻放弃研究。"], "answer": 2 },
+    { "audio": "Hawking was brave enough to admit his own faults.", "opts": ["霍金从不犯错。", "霍金害怕改变。", "霍金很有钱。", "霍金勇于承认自己的过错。"], "answer": 3 },
+    { "audio": "Every great discovery began as a single curious question.", "opts": ["每个伟大的发现都始于一个好奇的问题。", "发现都是靠运气得来的。", "科学家从不提问。", "好奇心毫无用处。"], "answer": 0 },
+    { "audio": "Qian served his country with great effort and devotion.", "opts": ["钱学森离开了祖国。", "钱学森满怀热忱地报效祖国。", "钱学森只研究铁路。", "钱学森不愿回国。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "Scientists need ____ proof before they accept a new idea.", "opts": ["solid", "empty", "loud", "lazy"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "Snow showed a clear ____ between dirty water and disease.", "opts": ["song", "link", "price", "noise"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "People who drank ____ water were less likely to get cholera.", "opts": ["dirty", "loud", "pure", "empty"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "His work led to a ____ decrease in the threat of cholera.", "opts": ["quiet", "sleepy", "tiny", "substantial"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "The truth was ____ the water had been infected by waste.", "opts": ["that", "what", "whether", "how"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "Science is simply ____ you can do with curiosity.", "opts": ["that", "what", "whether", "because"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "The question is ____ we can reduce the cost of the vaccine.", "opts": ["that", "what", "how", "because"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "The problem was ____ the team had enough time to test it.", "opts": ["that", "because", "as if", "whether"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["他从不停止提问。", "他造了一辆车。", "他卖掉了房子。", "他去了海边。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "He never stopped asking questions." },
+    { "q": "听句子选中文:", "opts": ["望远镜没有用。", "天文学家用望远镜证明了他的理论。", "他们关闭了实验室。", "没有人相信他。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "Astronomers with telescopes proved his theory." }
+  ],
+  "reading": {
+    "passage": "Most doctors once thought cholera came from bad air. John Snow was not so sure. He marked every death on a map, saw they were close to one water pump, and proved that the dirty water was to blame. With nothing but a map and careful thinking, he changed the way diseases are studied.",
+    "passageCn": "大多数医生曾以为霍乱来自坏空气。约翰·斯诺并不确定。他把每个死亡地点标在地图上,发现它们都靠近同一个水泵,从而证明了脏水才是元凶。仅凭一张地图和缜密的思考,他改变了人们研究疾病的方式。",
+    "questions": [
+      { "q": "What did most doctors once think caused cholera?", "opts": ["Bad air.", "Dirty water.", "Too much food.", "Cold weather."], "answer": 0 },
+      { "q": "How did Snow find the real cause?", "opts": ["He guessed by luck.", "He marked the deaths on a map.", "He asked a fortune-teller.", "He read an old book."], "answer": 1 },
+      { "q": "What did Snow mainly use to solve the problem?", "opts": ["A new medicine.", "A powerful machine.", "A map and careful thinking.", "A large team of doctors."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "Write 3-4 sentences about a scientist you admire. Say what he or she discovered and which quality of the scientific spirit you like most. Use at least one predicative clause (e.g. The truth is that ... / The reason is that ...).",
+    "promptCn": "用3-4句话介绍一位你敬佩的科学家:他/她发现了什么,你最欣赏其哪种科学精神品质。至少用一个表语从句(如 The truth is that ... / The reason is that ...)。",
+    "sampleWords": ["scientist", "discovery", "evidence", "curious", "brave", "honest", "spirit", "proof", "that", "whether"]
+  },
+  "dialogues": [
+    {
+      "title": "Talking about a Science Project",
+      "lines": [
+        { "role": "A", "text": "What are you working on for the science club?", "cn": "你在科学社团做什么项目?" },
+        { "role": "B", "text": "I'm studying how clean water can stop disease. The truth is that dirty water makes people ill.", "cn": "我在研究干净的水如何阻止疾病。事实是,脏水会让人生病。" },
+        { "role": "A", "text": "That sounds important. How will you test your idea?", "cn": "听起来很重要。你打算怎样检验你的想法?" },
+        { "role": "B", "text": "I'll collect evidence and repeat the test, because one result is never enough.", "cn": "我会收集证据并重复实验,因为一个结果远远不够。" }
+      ]
+    }
+  ]
+}

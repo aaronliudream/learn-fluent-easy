@@ -1,0 +1,362 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "topic": "Bridging Cultures",
+  "source": "人教版2019选择性必修二 Unit 2 同主题阅读(留学适应/文化交流/讲好中国故事/孔子学院/留学利弊/做文化使者)。词限本单元/初高常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "Xie Lei's First Months Abroad",
+      "topic_cn": "记叙·留学生活的适应",
+      "body": "Six months ago, Xie Lei said goodbye to her family and boarded a plane for London. It was the first time she had left China, and she felt both excited and nervous. At first, she had to adapt to a whole new life. She learned how to use public transport and how to ask strangers for help when she got lost, even though people there spoke fast and used words she did not know. Instead of living in campus accommodation, she chose a host family, who comforted her whenever she missed home. Another challenge was the academic work. Her tutor wanted to know what she herself thought, not just what other people had said. This confused her at first, because she believed she knew less than others. Step by step, however, Xie Lei grew more confident and began to feel at home in a country that had once seemed so strange.",
+      "vocab_notes": [
+        {
+          "word": "adapt",
+          "cn": "适应"
+        },
+        {
+          "word": "accommodation",
+          "cn": "住宿"
+        },
+        {
+          "word": "comfort",
+          "cn": "安慰"
+        },
+        {
+          "word": "tutor",
+          "cn": "导师"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How did Xie Lei feel as she left China for London?",
+          "options": [
+            "Both eager and worried.",
+            "Completely calm and bored.",
+            "Angry at her family.",
+            "Sure she would fail."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'felt both excited and nervous' 的转述,非照抄。"
+        },
+        {
+          "stem": "Why did Xie Lei choose a host family instead of campus housing?",
+          "options": [
+            "Because it was cheaper than a dormitory.",
+            "Because they could comfort her when she missed home.",
+            "Because the school forced her to.",
+            "Because she wanted to live alone."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'a host family, who comforted her whenever she missed home' 的转述。"
+        },
+        {
+          "stem": "What confused Xie Lei about her academic work at first?",
+          "options": [
+            "Her tutor valued her own thinking, not just others' words.",
+            "Her tutor refused to help her at all.",
+            "She had no books to read.",
+            "She was not allowed to write essays."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 tutor 'wanted to know what she herself thought' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "A Bridge Between Two Cultures",
+      "topic_cn": "记叙·做文化使者",
+      "body": "Now halfway through her exchange year, Xie Lei feels much more at home in Britain. What once seemed strange now appears quite normal to her. \"Engaging in British culture has really helped,\" she says. As well as studying hard, she has taken part in many social activities. She has noticed that British people are fascinated by Chinese culture and eager to learn more about it, so she is keen to share her own traditions with them. Each evening she and her host family take turns to cook, and they especially love her stir-fried tomatoes and eggs. When Laura, the daughter of the family, said she always felt hungry at the smell of the dish, Xie Lei happily taught her how to make it too. In small moments like these, Xie Lei is doing more than studying business. She is acting as a cultural messenger, quietly building a bridge between China and the wider world.",
+      "vocab_notes": [
+        {
+          "word": "engage",
+          "cn": "参与;融入"
+        },
+        {
+          "word": "fascinated",
+          "cn": "着迷的"
+        },
+        {
+          "word": "messenger",
+          "cn": "信使"
+        },
+        {
+          "word": "bridge",
+          "cn": "桥梁"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "How does Xie Lei feel about Britain now, halfway through her year?",
+          "options": [
+            "Still completely lost.",
+            "Far more comfortable than before.",
+            "Eager to return home at once.",
+            "Bored with British life."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'feels much more at home' 的转述。"
+        },
+        {
+          "stem": "Why is Xie Lei keen to share Chinese traditions?",
+          "options": [
+            "Because her tutor ordered her to.",
+            "Because she dislikes British food.",
+            "Because British people are curious about Chinese culture.",
+            "Because she wants to earn money."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'fascinated by Chinese culture and eager to learn more' 的转述。"
+        },
+        {
+          "stem": "What does the writer mean by calling Xie Lei a 'cultural messenger'?",
+          "options": [
+            "She delivers letters between countries.",
+            "She teaches business at a university.",
+            "She works for a post office.",
+            "She helps connect China and the world through everyday exchange."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'building a bridge between China and the wider world' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Why Studying Abroad Can Be Hard",
+      "topic_cn": "议论·留学的挑战",
+      "body": "In recent years there has been a dramatic increase in the number of young people studying abroad. Although it can bring great benefits, the difficulties should not be ignored. To begin with, many families face heavy economic pressure, because tuition fees and living expenses overseas are often far higher than at home. For some, the cost is simply too great. Besides money, there is the pressure of daily life. Students must learn to live in an unfamiliar place with limited language skills, and some suffer from culture shock when they try to behave correctly in new surroundings. Those who are not mature enough may struggle on their own and even become depressed. Different ways of teaching and learning can also come as a shock. None of this means that studying abroad is a bad choice. It simply means that students and their families should think carefully about these many factors before they make such an important decision.",
+      "vocab_notes": [
+        {
+          "word": "expense",
+          "cn": "费用"
+        },
+        {
+          "word": "culture shock",
+          "cn": "文化冲击"
+        },
+        {
+          "word": "mature",
+          "cn": "成熟的"
+        },
+        {
+          "word": "depressed",
+          "cn": "沮丧的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What has happened to the number of young people studying abroad?",
+          "options": [
+            "It has risen sharply.",
+            "It has stayed exactly the same.",
+            "It has dropped to almost zero.",
+            "It can no longer be counted."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a dramatic increase in the number' 的转述。"
+        },
+        {
+          "stem": "Why is money a problem for some families?",
+          "options": [
+            "Because foreign schools give no lessons.",
+            "Because fees and living costs abroad are often much higher.",
+            "Because students refuse to study.",
+            "Because banks are closed overseas."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'tuition fees and living expenses overseas are often far higher' 的转述。"
+        },
+        {
+          "stem": "What is the writer's overall attitude towards studying abroad?",
+          "options": [
+            "It is always a terrible mistake.",
+            "It should be banned completely.",
+            "Families should weigh the factors carefully before deciding.",
+            "Everyone must do it no matter what."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'think carefully about these many factors' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Personal Growth Through Studying Abroad",
+      "topic_cn": "议论·留学的益处",
+      "body": "Is studying abroad a good idea? There are certainly difficulties, but many parents believe the advantages are much greater. The first advantage is personal growth. Far from home, young people must deal with all kinds of problems by themselves, and so they quickly become more independent. They also gain a global perspective and improve their general competence. A second advantage is the chance for cultural exchange. Chinese students abroad can be seen as cultural envoys who promote friendship between nations, while international students bring their own colourful cultures to China. Cooperating with people from diverse backgrounds helps everyone view the world from different angles and gives deeper insight into their own culture. Finally, studying abroad offers a great chance to serve one's country. With a global outlook and strong language skills, young people who study overseas can return with the abilities China needs, and these in turn will open up better career opportunities for them.",
+      "vocab_notes": [
+        {
+          "word": "perspective",
+          "cn": "视角"
+        },
+        {
+          "word": "envoy",
+          "cn": "使者"
+        },
+        {
+          "word": "cooperate",
+          "cn": "合作"
+        },
+        {
+          "word": "insight",
+          "cn": "洞察"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the writer, why does studying abroad lead to personal growth?",
+          "options": [
+            "Students never have to do anything alone.",
+            "Schools abroad have easier exams.",
+            "Parents do all the work for them.",
+            "Students must solve their own problems and become independent."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'deal with all kinds of problems by themselves… become more independent' 的转述。"
+        },
+        {
+          "stem": "What does cooperating with people from diverse backgrounds do?",
+          "options": [
+            "It lets them look at the world from fresh viewpoints.",
+            "It makes students forget their own culture.",
+            "It only wastes their time.",
+            "It stops cultural exchange."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'view the world from different angles and gives deeper insight' 的转述。"
+        },
+        {
+          "stem": "How can students who study abroad serve their country?",
+          "options": [
+            "By staying overseas forever.",
+            "By coming home with the global vision and abilities their country needs.",
+            "By avoiding all language learning.",
+            "By refusing any career."
+          ],
+          "answer_index": 1,
+          "explanation": "末段 'return with the abilities China needs' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "A Teacher at the Confucius Institute",
+      "topic_cn": "记叙·孔子学院与中文学习",
+      "body": "Aisha first met Chinese culture at a Confucius Institute in her own country. Her teacher, Ms Hu, often invited students to her home for festivals and home-cooked meals. The warm welcome made Aisha feel like part of the family, and that feeling stayed with her for years. She loved learning Chinese characters and the stories hidden inside them, and slowly she began to grasp the tones that had once seemed impossible. After graduation, Aisha decided to become a teacher herself, hoping to share the same warmth with new learners. Today she tells her students that knowing Chinese is good for their future, because more and more jobs need people who can connect China with the rest of the world. \"Learning a language,\" she says, \"is really learning a culture.\" For Aisha, the institute did far more than teach grammar. It opened a door to friendship and to a future she had never imagined.",
+      "vocab_notes": [
+        {
+          "word": "grasp",
+          "cn": "掌握"
+        },
+        {
+          "word": "tone",
+          "cn": "声调"
+        },
+        {
+          "word": "connect",
+          "cn": "连接"
+        },
+        {
+          "word": "institute",
+          "cn": "学院"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What made Aisha feel like part of Ms Hu's family?",
+          "options": [
+            "The high marks she received.",
+            "The free textbooks she got.",
+            "The warm invitations to festivals and home meals.",
+            "The size of the classroom."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'invited students to her home… made Aisha feel like part of the family' 的转述。"
+        },
+        {
+          "stem": "Why did Aisha decide to become a teacher?",
+          "options": [
+            "To earn a large salary.",
+            "To leave her own country.",
+            "To stop learning Chinese.",
+            "To pass on that same kindness to those just starting Chinese."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'hoping to share the same warmth with new learners' 的转述。"
+        },
+        {
+          "stem": "Why does Aisha think learning Chinese helps her students' future?",
+          "options": [
+            "Because a growing number of careers value people who link China with other nations.",
+            "Because Chinese is easy to pronounce.",
+            "Because it requires no effort at all.",
+            "Because it replaces all other subjects."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'more and more jobs need people who can connect China with the rest of the world' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Telling China's Story Well",
+      "topic_cn": "议论·讲好中国故事",
+      "body": "When Leon, an exchange student from Germany, arrived in China, he expected to study hard but did not expect to fall in love with the country. What impressed him first was the food, and he could hardly believe how many kinds of Chinese dishes there are. He was also amazed that people could eat almost anything with chopsticks. Beyond food, he discovered China's colourful culture, from calligraphy and music to ancient poems. He was surprised, too, by the convenience of cashless payment, going out each day with nothing but his phone. Yet the biggest reason he loves China is the people. He has made warm friends whom he will remember long after his departure. Stories like Leon's show why telling China's story well matters so much. When young people from other countries share what they have truly seen and felt, the world begins to understand China not through rumours, but through real and friendly human experience.",
+      "vocab_notes": [
+        {
+          "word": "calligraphy",
+          "cn": "书法"
+        },
+        {
+          "word": "convenience",
+          "cn": "便利"
+        },
+        {
+          "word": "departure",
+          "cn": "离开"
+        },
+        {
+          "word": "rumour",
+          "cn": "谣言"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What impressed Leon first about China?",
+          "options": [
+            "The cold winter weather.",
+            "The many kinds of Chinese food.",
+            "The high price of phones.",
+            "The empty streets."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'What impressed him first was the food' 的转述。"
+        },
+        {
+          "stem": "What does Leon say is the biggest reason he loves China?",
+          "options": [
+            "The cashless payment system.",
+            "The calligraphy classes.",
+            "The friendly people he has met.",
+            "The cheap transport."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'the biggest reason he loves China is the people' 的转述。"
+        },
+        {
+          "stem": "Why does the writer think stories like Leon's matter?",
+          "options": [
+            "They prove German food is the best.",
+            "They show that China should stay closed.",
+            "They encourage students to stop travelling.",
+            "They help the world understand China through real experience, not rumours."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'understand China not through rumours, but through real… experience' 的转述。"
+        }
+      ]
+    }
+  ]
+}

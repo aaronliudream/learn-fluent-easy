@@ -1,0 +1,47 @@
+{
+  "listeningQuestions": [
+    { "audio": "Place a burn under cool running water for about ten minutes.", "opts": ["把烧伤处放在凉的流动水下冲约十分钟。", "把烧伤处放在阳光下晒十分钟。", "在烧伤处抹上一层黄油。", "烧伤后立刻用力揉搓皮肤。"], "answer": 0 },
+    { "audio": "Never put oil on a burn, because it keeps the heat in.", "opts": ["烧伤后一定要马上抹油。", "绝不要在烧伤处抹油,因为它会把热留住。", "抹油能让烧伤更快好转。", "油能立刻带走伤口的热量。"], "answer": 1 },
+    { "audio": "If a person is choking, stand behind them and push up into the stomach.", "opts": ["有人噎住时,应让他自己慢慢吞咽。", "有人噎住时,只需给他喝水。", "若有人噎住,站到他身后向上推压腹部。", "有人噎住时,应使劲拍他的头。"], "answer": 2 },
+    { "audio": "Stay calm and call an ambulance when someone collapses.", "opts": ["有人昏倒时应先离开现场。", "有人昏倒时要大声尖叫很久。", "有人昏倒时把他抬起来摇晃。", "有人昏倒时要保持冷静并叫救护车。"], "answer": 3 },
+    { "audio": "A first-degree burn touches only the top layer of the skin.", "opts": ["一度烧伤只伤及皮肤的最上层。", "一度烧伤是最严重的一种。", "一度烧伤会损坏神经。", "一度烧伤必须立刻手术。"], "answer": 0 },
+    { "audio": "Keep the first-aid kit somewhere that is easy to find.", "opts": ["急救箱应锁起来,不让人找到。", "把急救箱放在容易找到的地方。", "急救箱里只放钱和钥匙。", "急救箱越贵越好。"], "answer": 1 }
+  ],
+  "quizQuestions": [
+    { "q": "'紧急的、急迫的'对应哪个词?", "opts": ["urgent", "loose", "minor", "elderly"], "answer": 0, "point": "词汇", "dim": "vocab" },
+    { "q": "海姆立克法中'握成拳头'用哪个词?make a ____", "opts": ["nerve", "fist", "ward", "ray"], "answer": 1, "point": "词汇", "dim": "vocab" },
+    { "q": "'(突然)倒下、昏倒'用哪个动词?", "opts": ["swallow", "wrap", "collapse", "delay"], "answer": 2, "point": "词汇", "dim": "vocab" },
+    { "q": "'减轻疼痛'中'减轻'用哪个动词?____ the pain", "opts": ["raise", "sell", "lose", "ease"], "answer": 3, "point": "词汇", "dim": "vocab" },
+    { "q": "When the doctor arrived, the man ____ breathing.", "opts": ["had already stopped", "stops", "has stopped", "is stopping"], "answer": 0, "point": "语法", "dim": "grammar" },
+    { "q": "The wound ____ before the nurse bandaged it.", "opts": ["cleaned", "had been cleaned", "has cleaned", "was cleaning"], "answer": 1, "point": "语法", "dim": "grammar" },
+    { "q": "By the time help came, the boy ____ first aid to his grandfather.", "opts": ["gives", "has given", "had given", "is giving"], "answer": 2, "point": "语法", "dim": "grammar" },
+    { "q": "No sooner had he swallowed it ____ he began to choke.", "opts": ["when", "after", "while", "than"], "answer": 3, "point": "语法", "dim": "grammar" },
+    { "q": "听句子选中文:", "opts": ["伤者已经被送往医院了。", "伤者还在等救护车。", "伤者拒绝去医院。", "伤者自己走回了家。"], "answer": 0, "point": "听力", "dim": "listening", "audio": "The victim had already been taken to hospital." },
+    { "q": "听句子选中文:", "opts": ["他从不学习急救。", "急救时要保持冷静,别惊慌。", "急救应该交给别人去做。", "急救只在医院里有用。"], "answer": 1, "point": "听力", "dim": "listening", "audio": "When you give first aid, stay calm and do not panic." }
+  ],
+  "reading": {
+    "passage": "Tom was eating quickly when a piece of meat got stuck in his throat and he could not breathe. Luckily, his friend Sam had learned the Heimlich manoeuvre at school. Sam stood behind him, pushed up into his stomach, and the food was soon forced out.",
+    "passageCn": "Tom 吃得太快,一块肉卡在喉咙里,无法呼吸。幸好他的朋友 Sam 在学校学过海姆立克急救法。Sam 站到他身后向上推压腹部,食物很快就被推了出来。",
+    "questions": [
+      { "q": "What happened to Tom?", "opts": ["A piece of meat got stuck in his throat.", "He burnt his hand on a pan.", "He sprained his ankle.", "He fell into the water."], "answer": 0 },
+      { "q": "How was Sam able to help?", "opts": ["He was a trained doctor.", "He had learned the Heimlich manoeuvre at school.", "He gave Tom some water.", "He called Tom's family."], "answer": 1 },
+      { "q": "What did Sam do to save Tom?", "opts": ["He slapped Tom's face.", "He laid Tom on the floor.", "He stood behind Tom and pushed up into his stomach.", "He waited for an ambulance."], "answer": 2 }
+    ]
+  },
+  "writing": {
+    "prompt": "In about 60 words, explain the first three steps you would take to give first aid for a burn.",
+    "promptCn": "用约60词说明你处理烧伤时会先做的三个急救步骤。",
+    "sampleWords": ["burn", "cool", "water", "dry", "cover", "cloth", "loosely", "oil", "hospital", "urgent"]
+  },
+  "dialogues": [
+    {
+      "title": "Calling for Help",
+      "lines": [
+        { "role": "A", "text": "My friend has burnt her arm badly. What should I do?", "cn": "我朋友的胳膊被严重烫伤了,我该怎么办?" },
+        { "role": "B", "text": "Stay calm. Put her arm under cool running water first.", "cn": "保持冷静。先把她的胳膊放在凉的流动水下冲。" },
+        { "role": "A", "text": "Should I put anything on it?", "cn": "我要在上面抹点什么吗?" },
+        { "role": "B", "text": "No, don't use oil. Just cover it loosely and take her to hospital if it's serious.", "cn": "不,别用油。只要宽松地盖住,如果严重就送她去医院。" }
+      ]
+    }
+  ]
+}

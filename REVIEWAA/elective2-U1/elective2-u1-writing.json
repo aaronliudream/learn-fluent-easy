@@ -1,0 +1,51 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Write about a Scientist and the Scientific Spirit(写一位科学家与科学精神)",
+  "genre": "说明文 / 人物(introduce a scientist + the qualities of the scientific spirit)",
+  "source": "人教版2019选择性必修二 Unit 1 Reading for Writing:write an essay about the scientific spirit(介绍一位伟大科学家,并说明使其成功的科学精神品质)。",
+  "prompt_cn": "请用英语写一篇约100词的短文,介绍一位你敬佩的科学家(如约翰·斯诺、钱学森或史蒂芬·霍金),内容包括:① 他/她是谁、做出了什么贡献;② 用一两个事例说明使他/她成功的科学精神品质(如好奇、诚实、勇敢、坚持);③ 这位科学家给你的启发。注意用恰当的连接词,行文连贯。",
+  "prompt_en": "Write an essay (about 100 words) about a scientist you admire (e.g. John Snow, Qian Xuesen or Stephen Hawking). Include: 1) who the person was and what he/she achieved; 2) one or two examples of the qualities of the scientific spirit (such as curiosity, honesty, courage or determination) that made him/her succeed; 3) what the scientist inspires in you. Use suitable linking words to make your writing flow.",
+  "points": [
+    "介绍人物与贡献(... was a great scientist who ... / made an important discovery ...)",
+    "用事例说明科学精神品质(For example, ... / This shows that he was ...)",
+    "谈对你的启发(His story tells me that ... / I have learned that ...)",
+    "用连接词连贯(Besides, Furthermore, Above all)"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "John Snow was a great scientist who first showed how cholera spreads. During a deadly outbreak, he marked every death on a map and discovered that the disease came from one infected water pump. Instead of trusting old ideas, he followed the evidence, which shows his honesty and curiosity. Furthermore, he was brave enough to remove the pump handle, and soon the new cases fell. Above all, he never stopped asking questions. His story tells me that the scientific spirit is not only about being clever, but about staying curious, honest and determined. I hope to face my own problems in the same careful way.",
+  "model_translation": "约翰·斯诺是一位伟大的科学家,他最早揭示了霍乱的传播方式。在一次致命的疫情中,他把每一个死亡地点标在地图上,发现疾病来自一个被污染的水泵。他没有盲信旧观念,而是跟随证据,这显示了他的诚实与好奇。此外,他勇敢地卸下了水泵的把手,很快新增病例就下降了。最重要的是,他从不停止提问。他的故事告诉我,科学精神不只是聪明,更是保持好奇、诚实和坚持。我希望以同样审慎的方式面对自己的问题。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "三要素齐全:人物与贡献 / 科学精神品质事例 / 对你的启发" },
+      { "dimension": "结构", "max": 4, "criteria": "围绕'科学精神'展开、事例支撑观点、连接词得当、行文连贯" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、表语从句等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "点题人物 ... was a great scientist who ...",
+      "贡献事例 During ... , he discovered that ...",
+      "品质说明 This shows his ... / He was brave enough to ...",
+      "启发收束 His story tells me that the scientific spirit is ..."
+    ],
+    "key_expressions": [
+      "John Snow was a great scientist who first showed how cholera spreads.",
+      "Instead of trusting old ideas, he followed the evidence.",
+      "Above all, he never stopped asking questions.",
+      "The scientific spirit is not only about being clever, but about staying curious and honest."
+    ],
+    "useful_words": ["scientist", "discovery", "evidence", "curious", "honest", "brave", "determined", "spirit", "proof", "question"]
+  },
+  "high_sentences": [
+    "John Snow was a great scientist who first showed how cholera spreads.",
+    "Instead of trusting old ideas, he followed the evidence, which shows his honesty.",
+    "He was brave enough to remove the pump handle, and soon the new cases fell.",
+    "The scientific spirit is not only about being clever, but about staying curious and determined."
+  ],
+  "error_pairs": [
+    { "wrong": "The truth is he was right.", "correct": "The truth is that he was right.", "note": "表语从句用 that 引导,书面语中不宜省略。" },
+    { "wrong": "The question is that we can solve it.", "correct": "The question is how we can solve it.", "note": "从句不缺主宾、表'以何种方式',用 how 而非 that。" },
+    { "wrong": "The problem is if we have enough time.", "correct": "The problem is whether we have enough time.", "note": "表语从句表'是否'用 whether,不用 if。" }
+  ],
+  "paragraph_template": "【科学家与科学精神 结构】\n第1句 点题:... was a great scientist who ...\n第2-3句 贡献+事例:During ... , he discovered that ... This shows his ...\n第4句 启发:His story tells me that the scientific spirit is ..."
+}

@@ -1,0 +1,745 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grammar_title": "表语从句(Predicative Clauses):主语 + 系动词(be/seem/look/sound/remain) + ____ 从句",
+  "source": "人教版2019选择性必修二 Unit 1 Discover useful structures:表语从句。三类引导词:① that(不充当成分);② 连接代词/副词 what/where/why/how/who(在从句中充当成分或表疑问);③ whether/because/as if/as though。句子地道,答案唯一(看从句缺什么成分 + 句意,排除其他成立项)。铁律:that 不充当成分;what 充当主语/宾语;if 不引导表语从句(用 whether)。",
+  "points": [
+    {
+      "code": "u1.01",
+      "point": "that 引导表语从句(从句完整、不缺成分)",
+      "overview": "主语 + be/seem 等 + that 从句;that 只起连接作用、在从句中不充当任何成分,从句结构完整。常见主语:the truth/fact/problem/reason/idea/suggestion 等。"
+    },
+    {
+      "code": "u1.02",
+      "point": "连接代词/副词 what/where/why/how/who 引导表语从句",
+      "overview": "从句缺成分或表疑问时用连接词:缺主语/宾语用 what/who;问地点用 where、问原因用 why、问方式/程度用 how。这些词在从句中充当成分或状语。"
+    },
+    {
+      "code": "u1.03",
+      "point": "whether / because / as if / as though 引导表语从句",
+      "overview": "表'是否'用 whether(不用 if);'……的原因是因为……'用 because;'看上去/听起来好像'用 as if / as though(与 look/seem/sound 搭配)。"
+    }
+  ],
+  "questions": [
+    {
+      "code": "u1.01",
+      "stem": "The truth was ____ the water from the pump had been infected by waste.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'the water had been infected' 结构完整、不缺成分,只起连接作用 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The fact is ____ cholera still kills many people around the world today.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "why"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整不缺成分 → that;what 须充当成分,whether 表是否,均不合。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Snow's finding was ____ dirty water carried the disease from house to house.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "My suggestion is ____ we collect more data before drawing any conclusion.",
+      "options": [
+        "what",
+        "whether",
+        "where",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "suggestion 后表语从句用 that,从句完整且谓语用虚拟(we collect)→ that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "One problem was ____ the team could not agree on a single theory.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The reason for his success is ____ he never stopped asking questions.",
+      "options": [
+        "why",
+        "that",
+        "whether",
+        "what"
+      ],
+      "answer_index": 1,
+      "explanation": "主语已是 the reason,表语从句说明内容、从句完整 → that(不再用 why)。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The good news is ____ the number of cholera cases has dropped sharply.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His belief was ____ every child starts out as a scientist.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The point is ____ Snow used maps and statistics instead of a microscope.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The idea behind the experiment is ____ a fluid can act like a solid.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "What surprised us was ____ Snow did not use any common medical tools.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "表语从句 'Snow did not use ...' 完整 → that;主语处的 what 已用。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The trouble was ____ no institute in China then offered rocket science.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "His reply was simply ____ Chinese people could make missiles too.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The conclusion was ____ the pump in Broad Street had spread the disease.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "One of his strengths was ____ he was willing to admit his own faults.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The result was ____ water companies began to sell clean water.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "What worried the team was ____ the early experiments all failed.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 0,
+      "explanation": "表语从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "Our hope is ____ a safe vaccine will be ready within a few years.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The first sign was ____ many deaths happened near the same pump.",
+      "options": [
+        "what",
+        "whether",
+        "that",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.01",
+      "stem": "The amazing thing about him was ____ art gave him ideas for his science.",
+      "options": [
+        "what",
+        "whether",
+        "why",
+        "that"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整 → that。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "That was exactly ____ happened at the initial stage of the research.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 '___ happened' 缺主语 → 用 what(充当主语);that 不充当成分。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Science is simply ____ you can do with curiosity and evidence.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "从句 'you can do ___' 缺宾语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "What John Snow showed to the world was ____ cholera could be overcome.",
+      "options": [
+        "that",
+        "what",
+        "how",
+        "because"
+      ],
+      "answer_index": 2,
+      "explanation": "表语从句 'cholera could be overcome ___' 表'以何种方式被攻克' → how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The question now is ____ we can reduce the cost without losing the effect.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "从句不缺主宾、问'用什么方式降低成本' → how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The real issue was ____ they should carry out the research in the first place.",
+      "options": [
+        "why",
+        "that",
+        "what",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "从句不缺主宾、问'为何要做这项研究' → why。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "A laboratory is ____ scientists test their ideas with careful experiments.",
+      "options": [
+        "that",
+        "where",
+        "what",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、说明'在何处' → where(表地点)。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "That is ____ matters most to a true scientist: curiosity and creativity.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "从句 '___ matters most' 缺主语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The key issue is ____ they communicate their results to the public.",
+      "options": [
+        "that",
+        "what",
+        "because",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "从句不缺主宾、问方式 → how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The puzzle was ____ the disease kept returning to the very same street.",
+      "options": [
+        "why",
+        "that",
+        "what",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整、问原因 → why。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "This museum is ____ visitors can see their own shadows in rainbow colours.",
+      "options": [
+        "that",
+        "where",
+        "what",
+        "because"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、表地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "Curiosity is ____ turns an ordinary child into a future scientist.",
+      "options": [
+        "that",
+        "whether",
+        "what",
+        "how"
+      ],
+      "answer_index": 2,
+      "explanation": "从句 '___ turns ...' 缺主语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The mystery was ____ some people drank the water and yet survived.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "why"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、问原因 → why。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "A good question is often ____ a scientist begins a brand-new study.",
+      "options": [
+        "how",
+        "that",
+        "what",
+        "because"
+      ],
+      "answer_index": 0,
+      "explanation": "从句完整、问方式 → how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "His strongest quality was ____ made him so creative: a love of art.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "where"
+      ],
+      "answer_index": 1,
+      "explanation": "从句 '___ made him so creative' 缺主语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The lab is ____ the team spent every evening checking their results.",
+      "options": [
+        "that",
+        "what",
+        "where",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、表地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The hard part was ____ they could persuade one another to share data.",
+      "options": [
+        "that",
+        "what",
+        "because",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "从句不缺主宾、问方式 → how。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "That is ____ the early scientists could not explain about the universe.",
+      "options": [
+        "what",
+        "that",
+        "whether",
+        "why"
+      ],
+      "answer_index": 0,
+      "explanation": "从句 'could not explain ___' 缺宾语 → what。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The reason behind the dispute was ____ each side wanted a different theory.",
+      "options": [
+        "that",
+        "why",
+        "what",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "从句完整、问原因 → why。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The classroom is ____ I first learned to look at the world like a scientist.",
+      "options": [
+        "that",
+        "what",
+        "where",
+        "because"
+      ],
+      "answer_index": 2,
+      "explanation": "从句完整、表地点 → where。"
+    },
+    {
+      "code": "u1.02",
+      "stem": "The final challenge is ____ they analyse the data to answer the questions.",
+      "options": [
+        "that",
+        "what",
+        "whether",
+        "how"
+      ],
+      "answer_index": 3,
+      "explanation": "从句完整、问方式 → how。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The problem was ____ the team had enough time to test every theory.",
+      "options": [
+        "whether",
+        "that",
+        "because",
+        "as if"
+      ],
+      "answer_index": 0,
+      "explanation": "句意'是否有足够时间',表'是否'用 whether(不用 if 引导表语从句)。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It looked ____ all the theories were useful, but only one really was.",
+      "options": [
+        "that",
+        "as if",
+        "because",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "系动词 look + '好像' → as if / as though。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The only reason he switched majors was ____ China badly needed an air force.",
+      "options": [
+        "that",
+        "whether",
+        "because",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "'原因是因为……',表语从句用 because 说明原因。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The doubt in his mind was ____ the new medicine would really be safe.",
+      "options": [
+        "that",
+        "because",
+        "as though",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "句意'是否安全',表'是否' → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It seemed ____ the disease followed the water rather than the air.",
+      "options": [
+        "as if",
+        "that",
+        "because",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "seem + '好像' → as if / as though。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The reason cholera spread so fast was ____ the water had been infected.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "'……如此快的原因是因为……' → because。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The first question was ____ the team should target the host or the virus.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as though"
+      ],
+      "answer_index": 2,
+      "explanation": "句意'是否……或……',二选一用 whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The sky looked ____ it would rain before the field experiment ended.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 3,
+      "explanation": "look + '好像' → as if。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The reason he is remembered is ____ he served his country with devotion.",
+      "options": [
+        "because",
+        "that",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 0,
+      "explanation": "强调'原因是因为……' → because。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "Our worry was ____ the experiment could be repeated by other scientists.",
+      "options": [
+        "that",
+        "whether",
+        "because",
+        "as though"
+      ],
+      "answer_index": 1,
+      "explanation": "句意'是否能被重复',表'是否' → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It sounded ____ the two theories simply could not both be true.",
+      "options": [
+        "that",
+        "because",
+        "as if",
+        "whether"
+      ],
+      "answer_index": 2,
+      "explanation": "sound + '好像' → as if / as though。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The reason the handle was removed was ____ the pump kept spreading cholera.",
+      "options": [
+        "that",
+        "whether",
+        "as if",
+        "because"
+      ],
+      "answer_index": 3,
+      "explanation": "'……被卸下的原因是因为……' → because。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "What we discussed was ____ the data really supported our first idea.",
+      "options": [
+        "whether",
+        "that",
+        "because",
+        "as though"
+      ],
+      "answer_index": 0,
+      "explanation": "句意'是否真的支持',表'是否' → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "For a moment it felt ____ the whole project was about to fail completely.",
+      "options": [
+        "that",
+        "as if",
+        "because",
+        "whether"
+      ],
+      "answer_index": 1,
+      "explanation": "feel + '好像' → as if / as though。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The reason maps mattered so much was ____ they revealed a clear pattern.",
+      "options": [
+        "that",
+        "whether",
+        "because",
+        "as if"
+      ],
+      "answer_index": 2,
+      "explanation": "强调'……重要的原因是因为……' → because。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The real concern was ____ a cheaper vaccine would still work well enough.",
+      "options": [
+        "that",
+        "because",
+        "as though",
+        "whether"
+      ],
+      "answer_index": 3,
+      "explanation": "句意'是否仍然有效',表'是否' → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "It seemed ____ Hawking could see truths that others were afraid to imagine.",
+      "options": [
+        "as if",
+        "that",
+        "because",
+        "whether"
+      ],
+      "answer_index": 0,
+      "explanation": "seem + '好像' → as if / as though。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The reason he kept calm was ____ he trusted his solid, careful work.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 1,
+      "explanation": "'……保持冷静的原因是因为……' → because。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "The question we left unanswered was ____ the side effects could be avoided.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as though"
+      ],
+      "answer_index": 2,
+      "explanation": "句意'是否能避免',表'是否' → whether。"
+    },
+    {
+      "code": "u1.03",
+      "stem": "At first it looked ____ targeting a protein would never beat the virus.",
+      "options": [
+        "that",
+        "because",
+        "whether",
+        "as if"
+      ],
+      "answer_index": 3,
+      "explanation": "look + '好像' → as if / as though。"
+    }
+  ]
+}

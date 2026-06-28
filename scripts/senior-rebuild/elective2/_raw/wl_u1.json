@@ -1,0 +1,499 @@
+[
+ {
+  "word": "above all",
+  "ipa": "",
+  "cn": "最重要的是；尤其是",
+  "propn": false,
+  "raw": "above all 最重要的是；尤其是"
+ },
+ {
+  "word": "abstract",
+  "ipa": "bstrkt",
+  "cn": "抽象的；理论上的 n. （文献等的）摘要",
+  "propn": false,
+  "raw": "abstract /bstrkt/ adj. 抽象的；理论上的 n. （文献等的）摘要"
+ },
+ {
+  "word": "aerospace",
+  "ipa": "erspes",
+  "cn": "航空航天工业",
+  "propn": false,
+  "raw": "aerospace /erspes/ n. 航空航天工业"
+ },
+ {
+  "word": "assistant",
+  "ipa": "sstnt",
+  "cn": "助理；助手",
+  "propn": false,
+  "raw": "assistant /sstnt/ n. 助理；助手"
+ },
+ {
+  "word": "Appendices break out",
+  "ipa": "",
+  "cn": "战争、打斗等不愉快的事情）突然开始；爆发",
+  "propn": false,
+  "raw": "Appendices break out （战争、打斗等不愉快的事情）突然开始；爆发"
+ },
+ {
+  "word": "brilliant",
+  "ipa": "brlint",
+  "cn": "聪颖的；绝妙的；明亮的",
+  "propn": false,
+  "raw": "brilliant /brlint/ adj. 聪颖的；绝妙的；明亮的"
+ },
+ {
+  "word": "cast",
+  "ipa": "kst",
+  "cn": "投射； 向……投以（视线、笑容等）；投掷",
+  "propn": false,
+  "raw": "cast /kst/ vt.  （cast, cast）投射； 向……投以（视线、笑容等）；投掷"
+ },
+ {
+  "word": "cell",
+  "ipa": "sel",
+  "cn": "细胞；小房间；单间牢房",
+  "propn": false,
+  "raw": "cell /sel/ n. 细胞；小房间；单间牢房"
+ },
+ {
+  "word": "cholera",
+  "ipa": "klr",
+  "cn": "霍乱",
+  "propn": false,
+  "raw": "cholera /klr/ n. 霍乱"
+ },
+ {
+  "word": "come down",
+  "ipa": "",
+  "cn": "患（病）；染上（小病）",
+  "propn": false,
+  "raw": "come down 患（病）；染上（小病）"
+ },
+ {
+  "word": "concept",
+  "ipa": "knsept",
+  "cn": "概念；观念",
+  "propn": false,
+  "raw": "concept /knsept/ n. 概念；观念"
+ },
+ {
+  "word": "concrete",
+  "ipa": "kkrit",
+  "cn": "混凝土 adj. 混凝土制的；确实的；具体的",
+  "propn": false,
+  "raw": "concrete /kkrit/ n. 混凝土 adj. 混凝土制的；确实的；具体的"
+ },
+ {
+  "word": "contradictory",
+  "ipa": "kntrdktri",
+  "cn": "相互矛盾的；对立的；不一致的",
+  "propn": false,
+  "raw": "contradictory /kntrdktri/ adj. 相互矛盾的；对立的；不一致的"
+ },
+ {
+  "word": "decrease",
+  "ipa": "dikris",
+  "cn": "减少；降低；减少量 /dkris/ vt. & vi.（使大小、数量等） 减少；减小；降低",
+  "propn": false,
+  "raw": "decrease /dikris/ n. 减少；降低；减少量 /dkris/ vt. & vi.（使大小、数量等） 减少；减小；降低"
+ },
+ {
+  "word": "defend",
+  "ipa": "dfend",
+  "cn": "保卫；防守；辩解",
+  "propn": false,
+  "raw": "defend /dfend/ vt. 保卫；防守；辩解"
+ },
+ {
+  "word": "dehydration",
+  "ipa": "dihadren",
+  "cn": "脱水",
+  "propn": false,
+  "raw": "dehydration /dihadren/ n. 脱水"
+ },
+ {
+  "word": "diarrhoea",
+  "ipa": "dar",
+  "cn": "腹泻",
+  "propn": false,
+  "raw": "diarrhoea /dar/ n. 腹泻"
+ },
+ {
+  "word": "epidemiology",
+  "ipa": "epdimildi",
+  "cn": "流行病学",
+  "propn": false,
+  "raw": "epidemiology /epdimildi/ n. 流行病学"
+ },
+ {
+  "word": "fault",
+  "ipa": "flt",
+  "cn": "弱点；过错",
+  "propn": false,
+  "raw": "fault /flt/ n. 弱点；过错"
+ },
+ {
+  "word": "finding",
+  "ipa": "fand",
+  "cn": "发现；调查结果；（法律）判决",
+  "propn": false,
+  "raw": "finding /fand/ n. 发现；调查结果；（法律）判决"
+ },
+ {
+  "word": "framework",
+  "ipa": "",
+  "cn": "框架；结构",
+  "propn": false,
+  "raw": "framework // n. 框架；结构"
+ },
+ {
+  "word": "theoretical framework",
+  "ipa": "",
+  "cn": "理论框架",
+  "propn": false,
+  "raw": "theoretical framework 理论框架"
+ },
+ {
+  "word": "frustrated",
+  "ipa": "frstretd",
+  "cn": "懊恼的；沮丧的；失意的",
+  "propn": false,
+  "raw": "frustrated /frstretd/ adj. 懊恼的；沮丧的；失意的"
+ },
+ {
+  "word": "furthermore",
+  "ipa": "(r)",
+  "cn": "此外；再者",
+  "propn": false,
+  "raw": "furthermore /(r)/ adv. 此外；再者"
+ },
+ {
+  "word": "germ",
+  "ipa": "dm",
+  "cn": "微生物；细菌；病菌",
+  "propn": false,
+  "raw": "germ /dm/ n. 微生物；细菌；病菌"
+ },
+ {
+  "word": "gifted",
+  "ipa": "ftd",
+  "cn": "有天赋的；有天才的；天资聪慧的",
+  "propn": false,
+  "raw": "gifted /ftd/ adj. 有天赋的；有天才的；天资聪慧的"
+ },
+ {
+  "word": "handle",
+  "ipa": "hndl",
+  "cn": "把手；拉手；柄 vt. 处理；搬动；操纵（车辆、动物、工具等）",
+  "propn": false,
+  "raw": "handle /hndl/ n. 把手；拉手；柄 vt. 处理；搬动；操纵（车辆、动物、工具等）"
+ },
+ {
+  "word": "household",
+  "ipa": "hashld",
+  "cn": "一家人；家庭；同住一所（套）房子的人",
+  "propn": false,
+  "raw": "household /hashld/ n. 一家人；家庭；同住一所（套）房子的人"
+ },
+ {
+  "word": "in charge of",
+  "ipa": "",
+  "cn": "主管；掌管",
+  "propn": false,
+  "raw": "in charge of 主管；掌管"
+ },
+ {
+  "word": "infect",
+  "ipa": "nfekt",
+  "cn": "使感染；传染",
+  "propn": false,
+  "raw": "infect /nfekt/ vt. 使感染；传染"
+ },
+ {
+  "word": "infection",
+  "ipa": "nfekn",
+  "cn": "感染；传染",
+  "propn": false,
+  "raw": "infection /nfekn/ n. 感染；传染"
+ },
+ {
+  "word": "initial",
+  "ipa": "nl",
+  "cn": "最初的；开始的；第一的",
+  "propn": false,
+  "raw": "initial /nl/ adj. 最初的；开始的；第一的"
+ },
+ {
+  "word": "intervention",
+  "ipa": "ntvenn",
+  "cn": "介入；出面；干涉",
+  "propn": false,
+  "raw": "intervention /ntvenn/ n. 介入；出面；干涉"
+ },
+ {
+  "word": "jet",
+  "ipa": "",
+  "cn": "喷气式飞机",
+  "propn": false,
+  "raw": "jet // n. 喷气式飞机"
+ },
+ {
+  "word": "leadership",
+  "ipa": "lidp",
+  "cn": "领导；领导地位；领导才能",
+  "propn": false,
+  "raw": "leadership /lidp/ n. 领导；领导地位；领导才能"
+ },
+ {
+  "word": "link",
+  "ipa": "lk",
+  "cn": "联系；纽带 vt. 把……连接起来；相关联",
+  "propn": false,
+  "raw": "link /lk/ n. 联系；纽带 vt. 把……连接起来；相关联"
+ },
+ {
+  "word": "mechanic",
+  "ipa": "",
+  "cn": "机械师；机械修理工",
+  "propn": false,
+  "raw": "mechanic // n. 机械师；机械修理工"
+ },
+ {
+  "word": "mechanical",
+  "ipa": "mknkl",
+  "cn": "机械的；发动机的；机器的",
+  "propn": false,
+  "raw": "mechanical /mknkl/ adj. 机械的；发动机的；机器的"
+ },
+ {
+  "word": "microscope",
+  "ipa": "makrskp",
+  "cn": "显微镜",
+  "propn": false,
+  "raw": "microscope /makrskp/ n. 显微镜"
+ },
+ {
+  "word": "missile",
+  "ipa": "msal",
+  "cn": "导弹",
+  "propn": false,
+  "raw": "missile /msal/ n. 导弹"
+ },
+ {
+  "word": "multiple",
+  "ipa": "mltpl",
+  "cn": "数量多的；多种多样的",
+  "propn": false,
+  "raw": "multiple /mltpl/ adj. 数量多的；多种多样的"
+ },
+ {
+  "word": "once and for all",
+  "ipa": "",
+  "cn": "最终地；彻底地",
+  "propn": false,
+  "raw": "once and for all 最终地；彻底地"
+ },
+ {
+  "word": "outstanding",
+  "ipa": "atstnd",
+  "cn": "优秀的；杰出的；明显的",
+  "propn": false,
+  "raw": "outstanding /atstnd/ adj. 优秀的；杰出的；明显的"
+ },
+ {
+  "word": "patriotic",
+  "ipa": "petritk",
+  "cn": "爱国的",
+  "propn": false,
+  "raw": "patriotic /petritk/ adj. 爱国的"
+ },
+ {
+  "word": "plasma",
+  "ipa": "plzm",
+  "cn": "血浆",
+  "propn": false,
+  "raw": "plasma /plzm/ n. 血浆"
+ },
+ {
+  "word": "pour",
+  "ipa": "p(r)",
+  "cn": "倒出；倾泻；斟（饮料）",
+  "propn": false,
+  "raw": "pour /p(r)/ vt. 倒出；倾泻；斟（饮料）"
+ },
+ {
+  "word": "proof",
+  "ipa": "pruf",
+  "cn": "证据；证明；检验",
+  "propn": false,
+  "raw": "proof /pruf/ n. 证据；证明；检验"
+ },
+ {
+  "word": "protein",
+  "ipa": "prtin",
+  "cn": "蛋白质",
+  "propn": false,
+  "raw": "protein /prtin/ n. 蛋白质"
+ },
+ {
+  "word": "Appendices pump",
+  "ipa": "pmp",
+  "cn": "泵；抽水机；打气筒",
+  "propn": false,
+  "raw": "Appendices pump /pmp/ n. 泵；抽水机；打气筒"
+ },
+ {
+  "word": "water pump",
+  "ipa": "",
+  "cn": "水泵",
+  "propn": false,
+  "raw": "water pump 水泵"
+ },
+ {
+  "word": "pure",
+  "ipa": "pj(r)",
+  "cn": "干净的；纯的；纯粹的",
+  "propn": false,
+  "raw": "pure /pj(r)/ adj. 干净的；纯的；纯粹的"
+ },
+ {
+  "word": "rainbow",
+  "ipa": "renb",
+  "cn": "彩虹",
+  "propn": false,
+  "raw": "rainbow /renb/ n. 彩虹"
+ },
+ {
+  "word": "raw",
+  "ipa": "r",
+  "cn": "未煮的；生的；未经处理的；原始的",
+  "propn": false,
+  "raw": "raw /r/ adj. 未煮的；生的；未经处理的；原始的"
+ },
+ {
+  "word": "severe",
+  "ipa": "sv(r)",
+  "cn": "极为恶劣的；十分严重的；严厉的",
+  "propn": false,
+  "raw": "severe /sv(r)/ adj. 极为恶劣的；十分严重的；严厉的"
+ },
+ {
+  "word": "shadow",
+  "ipa": "d",
+  "cn": "阴影；影子；背光处",
+  "propn": false,
+  "raw": "shadow /d/ n. 阴影；影子；背光处"
+ },
+ {
+  "word": "shift",
+  "ipa": "ft",
+  "cn": "改变；转换；轮班 vi. & vt. 转移；挪动；转向",
+  "propn": false,
+  "raw": "shift /ft/ n. 改变；转换；轮班 vi. & vt. 转移；挪动；转向"
+ },
+ {
+  "word": "solid",
+  "ipa": "sld",
+  "cn": "可靠的；固体的；坚实的 n. 固体",
+  "propn": false,
+  "raw": "solid /sld/ adj. 可靠的；固体的；坚实的 n. 固体"
+ },
+ {
+  "word": "statistic",
+  "ipa": "sttstk",
+  "cn": "统计数字；统计资料；统计学",
+  "propn": false,
+  "raw": "statistic /sttstk/ n. ［pl.］ 统计数字；统计资料；统计学"
+ },
+ {
+  "word": "steady",
+  "ipa": "stedi",
+  "cn": "稳定的；平稳的；稳步的",
+  "propn": false,
+  "raw": "steady /stedi/ adj. 稳定的；平稳的；稳步的"
+ },
+ {
+  "word": "subscribe",
+  "ipa": "sbskrab",
+  "cn": "认购（股份）；定期订购；定期交纳（会费）",
+  "propn": false,
+  "raw": "subscribe /sbskrab/ vi. 认购（股份）；定期订购；定期交纳（会费）"
+ },
+ {
+  "word": "subscribe to",
+  "ipa": "",
+  "cn": "同意；赞同",
+  "propn": false,
+  "raw": "subscribe to 同意；赞同"
+ },
+ {
+  "word": "substantial",
+  "ipa": "sbstnl",
+  "cn": "大量的；价值巨大的；重大的",
+  "propn": false,
+  "raw": "substantial /sbstnl/ adj. 大量的；价值巨大的；重大的"
+ },
+ {
+  "word": "suspect",
+  "ipa": "sspekt",
+  "cn": "怀疑；疑有；不信任 /sspekt/ n. 犯罪嫌疑人；可疑对象",
+  "propn": false,
+  "raw": "suspect /sspekt/ vt. & vi. 怀疑；疑有；不信任 /sspekt/ n. 犯罪嫌疑人；可疑对象"
+ },
+ {
+  "word": "telescope",
+  "ipa": "telskp",
+  "cn": "望远镜",
+  "propn": false,
+  "raw": "telescope /telskp/ n. 望远镜"
+ },
+ {
+  "word": "thanks to",
+  "ipa": "",
+  "cn": "幸亏；由于",
+  "propn": false,
+  "raw": "thanks to 幸亏；由于"
+ },
+ {
+  "word": "thinking",
+  "ipa": "",
+  "cn": "思想；思维；见解",
+  "propn": false,
+  "raw": "thinking // n. 思想；思维；见解"
+ },
+ {
+  "word": "trace",
+  "ipa": "tres",
+  "cn": "追溯；追踪；查出 n. 痕迹；遗迹；踪迹",
+  "propn": false,
+  "raw": "trace /tres/ vt. 追溯；追踪；查出 n. 痕迹；遗迹；踪迹"
+ },
+ {
+  "word": "transform",
+  "ipa": "trnsfm",
+  "cn": "使改观；使改变形态 vi. 改变；转变",
+  "propn": false,
+  "raw": "transform /trnsfm/ vt. 使改观；使改变形态 vi. 改变；转变"
+ },
+ {
+  "word": "vaccine",
+  "ipa": "vksin",
+  "cn": "疫苗",
+  "propn": false,
+  "raw": "vaccine /vksin/ n. 疫苗"
+ },
+ {
+  "word": "virus",
+  "ipa": "s",
+  "cn": "病毒",
+  "propn": false,
+  "raw": "virus /s/ n. 病毒"
+ },
+ {
+  "word": "vivid",
+  "ipa": "vvd",
+  "cn": "生动的；鲜明的；丰富的",
+  "propn": false,
+  "raw": "vivid /vvd/ adj. 生动的；鲜明的；丰富的"
+ }
+]

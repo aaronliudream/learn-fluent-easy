@@ -1,0 +1,362 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Food and Culture",
+  "source": "人教版2019选择性必修二 Unit 3 同主题阅读(中国饮食文化/八大菜系/食物与健康/世界美食/饮食习惯/食物里的人情)。词限 U3/初中/常见词,答案转述非照抄,4选项唯一,与完形听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "You Are What You Eat",
+      "topic_cn": "说明·饮食与文化",
+      "body": "A French writer once said, \"Tell me what you eat, and I will tell you what you are.\" Many people today link this saying to healthy eating, but the writer was really talking about our character and culture. In many ways this seems to be true. The food that local people choose to eat tells us what grows in their region, what kind of lives they lead, and what they like or do not like. For example, those who love bold, simple flavours may also be bold in life. People who are not afraid to try strange new dishes may be open to new ideas as well. Of course, we cannot say that everyone who likes spicy food has a hot temper. Still, one thing seems clear: culture and cuisine go hand in hand. If you never experience the food of a place, you can never really know its people. Tasting a country's dishes is a quiet way of meeting its culture face to face.",
+      "vocab_notes": [
+        {
+          "word": "cuisine",
+          "cn": "菜肴;烹饪"
+        },
+        {
+          "word": "flavour",
+          "cn": "风味;味道"
+        },
+        {
+          "word": "temper",
+          "cn": "脾气"
+        },
+        {
+          "word": "bold",
+          "cn": "大胆的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What was the French writer mainly talking about?",
+          "options": [
+            "A person's character and culture.",
+            "How to lose weight quickly.",
+            "The price of food in France.",
+            "The danger of eating too much."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'really talking about our character and culture' 的转述。"
+        },
+        {
+          "stem": "According to the text, what can a region's food tell us?",
+          "options": [
+            "The exact age of the cooks.",
+            "What grows there and how people live.",
+            "How many people live there.",
+            "Which language the people speak."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'what grows in their region, what kind of lives they lead' 的概括。"
+        },
+        {
+          "stem": "What does the writer conclude about culture and cuisine?",
+          "options": [
+            "They are closely connected.",
+            "They have nothing to do with each other.",
+            "Cuisine is more important than culture.",
+            "Only spicy food shows real culture."
+          ],
+          "answer_index": 0,
+          "explanation": "末段 'culture and cuisine go hand in hand' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "The Eight Great Cuisines",
+      "topic_cn": "说明·八大菜系",
+      "body": "China is a huge country, and its food changes greatly from place to place. People often speak of the eight great cuisines, each with its own character. In the southwest, Sichuan cooking is famous for bold and spicy flavours, made special by the Sichuan peppercorn that leaves a tingling feeling on the tongue. Cantonese food from the south is lighter and fresher, and its elegant dim sum is served in small bamboo steamers. In the east, Shandong dishes are often boiled or steamed, and a favourite is dumplings eaten with vinegar. Each region cooks with what it can grow nearby, so the food reflects the land itself. People who live near the sea use plenty of fish, while those on the open grasslands roast meat over a fire. Wherever you travel, however, one thing stays the same: through food, Chinese people everywhere show friendship and kindness to guests. A shared meal is rarely just about eating.",
+      "vocab_notes": [
+        {
+          "word": "cuisine",
+          "cn": "菜系"
+        },
+        {
+          "word": "peppercorn",
+          "cn": "胡椒粒;花椒"
+        },
+        {
+          "word": "dim sum",
+          "cn": "点心"
+        },
+        {
+          "word": "vinegar",
+          "cn": "醋"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What makes Sichuan cooking special, according to the text?",
+          "options": [
+            "Its very sweet desserts.",
+            "Its tingling, spicy peppercorn flavour.",
+            "Its use of fresh fish only.",
+            "Its lack of any seasoning."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'bold and spicy flavours, made special by the Sichuan peppercorn that leaves a tingling feeling' 的转述。"
+        },
+        {
+          "stem": "Why does food differ so much across China?",
+          "options": [
+            "Because only the south has good cooks.",
+            "Because people copy foreign recipes.",
+            "Because every area uses whatever it can grow locally.",
+            "Because the weather is the same everywhere."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'each region cooks with what it can grow nearby' 的转述。"
+        },
+        {
+          "stem": "What stays the same wherever you travel in China?",
+          "options": [
+            "The same single dish is served.",
+            "All food is boiled the same way.",
+            "Everyone eats only dumplings.",
+            "Food is used to show friendship and kindness."
+          ],
+          "answer_index": 3,
+          "explanation": "末段 'through food, Chinese people everywhere show friendship and kindness' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "Is Sugar the Real Enemy?",
+      "topic_cn": "说明·食物与健康",
+      "body": "For years, scientists warned us that fatty food was the big enemy of good health. Today, however, more and more evidence points to a different villain: sugar. Heart disease is one of the leading killers in many countries, and studies show that people who get a quarter of their daily calories from sugar are far more likely to suffer from it. This stays true no matter how healthy the rest of their diet may be. Much of this extra sugar hides in sweet drinks; in fact, a single can of soda may hold more sugar than a person should have in a whole day. So if you want to stay well, the advice is simple. Cut down on desserts, and cut out sweet drinks altogether. Fill your plate instead with fresh fruit and vegetables, which are full of vitamins and fibre. As with everything in life, moderation is the key. The healthiest diet is a balanced one, with not too much or too little of any single thing.",
+      "vocab_notes": [
+        {
+          "word": "calorie",
+          "cn": "卡路里"
+        },
+        {
+          "word": "dessert",
+          "cn": "甜点"
+        },
+        {
+          "word": "fibre",
+          "cn": "纤维"
+        },
+        {
+          "word": "moderation",
+          "cn": "适度"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does recent evidence suggest is a major enemy of health?",
+          "options": [
+            "Sugar.",
+            "Fresh vegetables.",
+            "Drinking water.",
+            "Eating slowly."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a different villain: sugar' 的转述。"
+        },
+        {
+          "stem": "Where does much of the extra sugar come from?",
+          "options": [
+            "From fresh fruit.",
+            "From sweet drinks.",
+            "From plain rice.",
+            "From green vegetables."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'Much of this extra sugar hides in sweet drinks' 的转述。"
+        },
+        {
+          "stem": "What is the writer's main advice for a healthy diet?",
+          "options": [
+            "Eat as much fatty food as you like.",
+            "Drink one can of soda every meal.",
+            "Keep everything balanced and in moderation.",
+            "Never eat any fruit at all."
+          ],
+          "answer_index": 2,
+          "explanation": "末段 'moderation is the key… a balanced one' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "Flavours from Around the World",
+      "topic_cn": "说明·世界美食",
+      "body": "Every country has dishes that tell its own story. Around the Mediterranean Sea, the people of Italy, Greece, and Spain cook with olives, figs, and fresh ingredients that have shaped their food for centuries. A traditional Western dinner may consist of an appetiser, a main course, soup, and a sweet dessert at the end. In Scotland, brave eaters enjoy a dish made from sheep parts, while in many parts of Asia people happily eat foods that visitors might find strange. Recently, some people have even begun to try insects, which are high in protein and far cheaper than beef. To one person a food may seem normal, yet to another the very same dish feels shocking. What counts as 'strange' really depends on where you grew up and what you are used to. By keeping an open mind and a willing tongue, a traveller can discover that the world's kitchens hold endless surprises, and that almost every food makes sense to someone, somewhere.",
+      "vocab_notes": [
+        {
+          "word": "olive",
+          "cn": "橄榄"
+        },
+        {
+          "word": "ingredient",
+          "cn": "食材"
+        },
+        {
+          "word": "consist",
+          "cn": "组成"
+        },
+        {
+          "word": "dessert",
+          "cn": "甜点"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What do Mediterranean countries cook with, according to the text?",
+          "options": [
+            "Only meat and milk.",
+            "Mainly sweet drinks.",
+            "Nothing but insects.",
+            "Olives, figs, and other fresh ingredients."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'cook with olives, figs, and fresh ingredients' 的转述。"
+        },
+        {
+          "stem": "Why have some people started eating insects?",
+          "options": [
+            "Because they are rich in protein and cost less than beef.",
+            "Because they taste like dessert.",
+            "Because there is no other food.",
+            "Because doctors forbid all meat."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'high in protein and far cheaper than beef' 的转述。"
+        },
+        {
+          "stem": "What decides whether a food seems 'strange'?",
+          "options": [
+            "The exact price of the dish.",
+            "Your background and the foods you are familiar with.",
+            "How large the plate is.",
+            "Whether it is served hot or cold."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'depends on where you grew up and what you are used to' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "The Secret of Eating Slowly",
+      "topic_cn": "说明·饮食习惯",
+      "body": "Have you ever finished a big meal and still felt hungry a few minutes later? Scientists have an interesting answer. It takes about twenty minutes from the time you start eating for your brain to tell your body that you are full. This means that people who chew their food too quickly often end up eating far more than they need, because the signal simply has not arrived yet. Eating slowly, on the other hand, gives your body the time to send that message, and it also helps you digest your food better and enjoy it more. Studies show another helpful habit: keeping consistent meal times, for example having three meals a day at roughly the same hours. It is also wiser to eat a modest amount each time than to eat a huge meal and then almost nothing at the next. In the end, healthy eating is less about one clever trick and more about a calm, steady attitude towards every meal.",
+      "vocab_notes": [
+        {
+          "word": "chew",
+          "cn": "咀嚼"
+        },
+        {
+          "word": "consistent",
+          "cn": "一致的;连续的"
+        },
+        {
+          "word": "modest",
+          "cn": "些许的;适度的"
+        },
+        {
+          "word": "trick",
+          "cn": "诀窍"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why do fast eaters often eat too much?",
+          "options": [
+            "Because their food is too sweet.",
+            "Because they never feel hungry.",
+            "Because the 'full' signal has not reached the brain yet.",
+            "Because they dislike the food."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 '…the signal simply has not arrived yet' 的转述。"
+        },
+        {
+          "stem": "What is one benefit of eating slowly mentioned in the text?",
+          "options": [
+            "It makes food cost less.",
+            "It removes all sugar from food.",
+            "It lets you skip meals.",
+            "It helps you digest and enjoy your food."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'helps you digest your food better and enjoy it more' 的转述。"
+        },
+        {
+          "stem": "What does the writer say healthy eating mainly depends on?",
+          "options": [
+            "A calm, steady attitude toward meals.",
+            "One single clever trick.",
+            "Eating one huge meal a day.",
+            "Counting every grain of rice."
+          ],
+          "answer_index": 0,
+          "explanation": "末句 'less about one clever trick and more about a calm, steady attitude' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "A Meal Full of Kindness",
+      "topic_cn": "记叙·食物里的人情",
+      "body": "When my family first arrived in Beijing, we were tired, hungry, and could not speak a word of Chinese. A friend had told us about a small Sichuan restaurant, and at last we found it down a narrow street. We had no idea how to read the menu or order, so we simply sat there feeling lost. Seeing this, the chef smiled and made the choice for us. He began filling our table with the best food we had ever tasted, dish after warm dish. For the first time we met the famous Sichuan peppercorn, which left a strange, exciting tingle on our tongues. Later we moved to Shandong, where my favourite meal became boiled dumplings dipped in vinegar. There I learned that making dumplings is a family affair, with everyone from the youngest child to the oldest grandparent joining in. The food was wonderful, but what stayed with me longest was something else: the warmth and friendship that were offered to a group of complete strangers.",
+      "vocab_notes": [
+        {
+          "word": "chef",
+          "cn": "厨师"
+        },
+        {
+          "word": "peppercorn",
+          "cn": "花椒"
+        },
+        {
+          "word": "vinegar",
+          "cn": "醋"
+        },
+        {
+          "word": "affair",
+          "cn": "事情"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did the chef choose the dishes for the family?",
+          "options": [
+            "Because the family had no money.",
+            "Because they could not understand the menu well enough to order.",
+            "Because the restaurant had only one dish.",
+            "Because the friend told him to."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'no idea how to read the menu or order… the chef… made the choice for us' 的转述。"
+        },
+        {
+          "stem": "What did the writer learn about making dumplings in Shandong?",
+          "options": [
+            "It is something only chefs can do.",
+            "It must be done in silence.",
+            "It is a family activity everyone joins in.",
+            "It takes only one person a minute."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'a family affair, with everyone… joining in' 的转述。"
+        },
+        {
+          "stem": "What stayed with the writer the longest?",
+          "options": [
+            "The high price of the meal.",
+            "The name of the street.",
+            "The colour of the menu.",
+            "The warmth and friendship shown to strangers."
+          ],
+          "answer_index": 3,
+          "explanation": "末句 'the warmth and friendship that were offered to… strangers' 的转述。"
+        }
+      ]
+    }
+  ]
+}

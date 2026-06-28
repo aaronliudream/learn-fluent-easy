@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "note": "单元通关专属迷你阅读(食物与文化主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Tom first visited a Chinese friend's home, he was surprised to see the whole family making dumplings together around one table. At first he only watched, but soon everyone handed him some dough and taught him to wrap his own. By the end of the evening, his dumplings looked far from perfect, yet he had never felt more welcome.",
+    "questions": [
+      {
+        "q": "What surprised Tom when he first arrived?",
+        "options": [
+          "The whole family was making dumplings together.",
+          "There was no food at all.",
+          "Everyone was eating in silence.",
+          "The family was watching television."
+        ],
+        "answer": "A",
+        "explanation": "原文 'the whole family making dumplings together around one table' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "How did Tom feel by the end of the evening?",
+        "options": [
+          "Bored and tired.",
+          "Sorry that he had come.",
+          "More welcome than ever, despite his imperfect dumplings.",
+          "Angry that no one helped him."
+        ],
+        "answer": "C",
+        "explanation": "末句 'his dumplings looked far from perfect, yet he had never felt more welcome'(短文后半段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

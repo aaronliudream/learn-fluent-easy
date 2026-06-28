@@ -37,12 +37,12 @@ for (const w of words) {
 
 let sql = '-- 选择性必修一 情景闯关题(context_questions, grade=10),由本地 vocab 真实例句挖空生成。Aaron 跑。\n';
 sql += '-- ContextQuiz 高中按 grade=10 + volume 读;写 volume/unit 防串库。幂等(只删本册)。\nBEGIN;\n';
-sql += "DELETE FROM public.context_questions WHERE grade=10 AND volume='elective1';\n";
+sql += "DELETE FROM public.context_questions WHERE volume='elective1';\n";
 for (const r of rows) {
-  sql += `INSERT INTO public.context_questions (grade, volume, unit, word, sentence, options, answer) VALUES (10, 'elective1', '${esc(r.unit)}', '${esc(r.word)}', '${esc(r.sentence)}', '${esc(JSON.stringify(r.options))}'::jsonb, '${esc(r.answer)}');\n`;
+  sql += `INSERT INTO public.context_questions (grade, volume, unit, word, sentence, options, answer) VALUES (11, 'elective1', '${esc(r.unit)}', '${esc(r.word)}', '${esc(r.sentence)}', '${esc(JSON.stringify(r.options))}'::jsonb, '${esc(r.answer)}');\n`;
 }
-sql += "\nCOMMIT;\nSELECT unit, count(*) FROM public.context_questions WHERE grade=10 AND volume='elective1' GROUP BY unit ORDER BY unit;\n";
-sql += "SELECT count(*) AS context_q_elective1 FROM public.context_questions WHERE grade=10 AND volume='elective1';\n";
+sql += "\nCOMMIT;\nSELECT unit, count(*) FROM public.context_questions WHERE volume='elective1' GROUP BY unit ORDER BY unit;\n";
+sql += "SELECT count(*) AS context_q_elective1 FROM public.context_questions WHERE volume='elective1';\n";
 writeFileSync('SQLAA/elective1-context-questions-load.sql', sql);
 console.log('生成情景题:', rows.length, '| 跳过:', skip, '| -> SQLAA/elective1-context-questions-load.sql');
 let bad = 0;

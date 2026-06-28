@@ -1,0 +1,54 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "Write a Safety Guide: First-Aid Steps for an Emergency(写一份急救步骤说明)",
+  "title_en": "How to Give First Aid for a Burn",
+  "genre": "说明文 / 应用文(explain the steps of first aid for an emergency)",
+  "source": "人教版2019选择性必修二 Unit 5:写一份急救/安全指南,清楚地按顺序说明某个紧急情况下的急救步骤(说明文/应用文)。",
+  "prompt_cn": "假设你是学校急救社团的成员,社团要制作一本《校园急救手册》。请用英语写一段约100词的说明文,说明烧伤(或烫伤)的急救步骤。内容包括:① 先做什么、为什么(用凉水冲);② 接下来的两三个步骤(擦干、宽松包扎等);③ 一条不该做的事(如抹油);④ 什么情况下要立即送医院。注意:用 first / next / then / finally 等顺序词,使过去完成时/被动语态等在合适处自然出现。",
+  "prompt_en": "Suppose you are a member of your school's first-aid club, which is making a Campus First-Aid Manual. Write a guide of about 100 words explaining the steps of first aid for a burn. Include: 1) what to do first and why (cool running water); 2) the next two or three steps (dry it, cover it loosely, etc.); 3) one thing you should NOT do (e.g. put oil on it); 4) when to take the victim to hospital at once. Use ordering words such as first, next, then and finally.",
+  "points": [
+    "第一步与原因(First, place the burn under cool running water… because it stops the burning process）",
+    "中间步骤(Next, dry the area gently. / Then cover it loosely with a clean cloth.）",
+    "一条禁忌(Never put oil on a burn, as it keeps the heat in.）",
+    "送医时机 + 顺序词连贯(Finally, if the burn is serious, take the victim to hospital at once.）"
+  ],
+  "word_count": "100 词左右",
+  "model_essay": "Knowing how to treat a burn can make a big difference in an emergency. First, place the burnt area under cool running water for about ten minutes, because this stops the burning process and reduces the pain. Next, dry the area gently with a clean cloth. Then cover the burn loosely with another clean cloth to keep it safe. Never put oil or butter on a burn, as this keeps the heat in the wound and may cause infection. If clothes are stuck to the skin, do not pull them off. Finally, if the burn is a serious one, take the victim to hospital at once.",
+  "model_translation": "懂得如何处理烧伤,在紧急情况下能产生很大不同。首先,把烧伤处放在凉的流动水下冲约十分钟,因为这能停止灼烧过程并减轻疼痛。接着,用干净的布轻轻把该处擦干。然后用另一块干净的布宽松地盖住烧伤处,以保证安全。绝不要在烧伤处抹油或黄油,因为这会把热量留在伤口里,可能引起感染。如果衣物粘在皮肤上,不要把它扯下来。最后,如果烧伤严重,要立刻把伤者送往医院。",
+  "scoring": {
+    "total": 15,
+    "rubric": [
+      { "dimension": "内容要点", "max": 6, "criteria": "步骤齐全:凉水降温 / 擦干 / 宽松包扎 / 一条禁忌 / 送医时机" },
+      { "dimension": "结构", "max": 4, "criteria": "按顺序展开、first/next/then/finally 连贯、每句围绕一个步骤" },
+      { "dimension": "语言", "max": 5, "criteria": "句型词汇准确多样、过去完成/被动等运用得当、语法基本无误" }
+    ],
+    "required_structure": [
+      "开头点题 Knowing how to treat a burn can make a big difference.",
+      "第一步 First, place the burn under cool running water… because…",
+      "中间步骤 Next, dry the area… Then cover it loosely…",
+      "禁忌 Never put oil on a burn, as it keeps the heat in.",
+      "送医 Finally, if the burn is serious, take the victim to hospital at once."
+    ],
+    "key_expressions": [
+      "place the burn under cool running water",
+      "dry the area gently with a clean cloth",
+      "cover the burn loosely with a clean cloth",
+      "Never put oil on a burn, as it keeps the heat in.",
+      "take the victim to hospital at once"
+    ],
+    "useful_words": ["burn", "wound", "cool running water", "swelling", "loosely", "fabric", "infection", "urgent", "victim", "ambulance"]
+  },
+  "high_sentences": [
+    "First, place the burnt area under cool running water, because this stops the burning process.",
+    "Then cover the burn loosely with a clean cloth to keep it safe.",
+    "Never put oil or butter on a burn, as this keeps the heat in the wound.",
+    "Finally, if the burn is a serious one, take the victim to hospital at once."
+  ],
+  "error_pairs": [
+    { "wrong": "Put the burn under water can stop the pain.", "correct": "Putting the burn under water can stop the pain.", "note": "句首作主语用动名词 Putting,不用动词原形。" },
+    { "wrong": "When I arrived, the nurse already cleaned the wound.", "correct": "When I arrived, the nurse had already cleaned the wound.", "note": "'我到达'前已发生,过去的过去用过去完成时 had cleaned。" },
+    { "wrong": "The wound was clean before she covered it.", "correct": "The wound had been cleaned before she covered it.", "note": "伤口被清洗(被动)且在更早,用过去完成被动 had been cleaned。" }
+  ],
+  "paragraph_template": "【急救步骤说明文结构】\n开头 点题:Knowing how to treat a burn can make a big difference.\n第一步 First, place the burn under cool running water… because…\n中间 Next, dry the area… Then cover it loosely…\n禁忌 Never put oil on a burn, as it keeps the heat in.\n收尾 Finally, if the burn is serious, take the victim to hospital at once."
+}

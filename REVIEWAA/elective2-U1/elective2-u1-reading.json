@@ -1,0 +1,350 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Science and Scientists",
+  "source": "人教版2019选择性必修二 Unit 1 同主题阅读(约翰·斯诺攻克霍乱/科学方法/钱学森/史蒂芬·霍金/科学探究精神/科学家的好奇心)。词限 U1/初中/常见词,答案转述非照抄,4选项唯一,与完形/听力关不撞。",
+  "passages": [
+    {
+      "code": "rd1",
+      "title": "John Snow and Cholera",
+      "topic_cn": "说明·约翰·斯诺攻克霍乱",
+      "body": "In the past, many people in London died from cholera, but no one knew how it spread. Most doctors believed that the disease was caused by bad air or by germs floating around the city. John Snow was not so sure. During the outbreak of 1854, he marked on a map every place where people had died. He soon saw that most of the deaths were close to a single water pump in Broad Street. Snow began to suspect that the water, not the air, was carrying the disease. He learned that the pump water had been infected by waste. To test his idea, he had the handle of the pump removed so that no one could use it. After that, the number of new cases quickly fell. Snow had no microscope and used no medicine. His most powerful tools were a map, careful thinking and clear evidence. Because of this work, he is now seen as the father of modern epidemiology.",
+      "vocab_notes": [
+        {
+          "word": "cholera",
+          "cn": "霍乱"
+        },
+        {
+          "word": "pump",
+          "cn": "水泵"
+        },
+        {
+          "word": "infect",
+          "cn": "使感染;污染"
+        },
+        {
+          "word": "handle",
+          "cn": "把手"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What did most doctors believe caused cholera?",
+          "options": [
+            "Bad air or germs in the city.",
+            "Dirty water from one pump.",
+            "Too much medicine.",
+            "A lack of fresh food."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'caused by bad air or by germs' 的转述。"
+        },
+        {
+          "stem": "Why did Snow have the pump handle removed?",
+          "options": [
+            "To repair the broken pump.",
+            "To stop people from using the infected water.",
+            "To sell the water elsewhere.",
+            "To take it to a museum."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'so that no one could use it' 的转述,目的是停用受污染的水。"
+        },
+        {
+          "stem": "What does the passage say about Snow's tools?",
+          "options": [
+            "He depended on maps, thinking and evidence.",
+            "He relied mainly on a microscope.",
+            "He used strong new medicines.",
+            "He copied other doctors' methods."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a map, careful thinking and clear evidence' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd2",
+      "title": "How Scientists Work",
+      "topic_cn": "说明·科学方法与探究步骤",
+      "body": "What exactly do scientists do all day? Many people imagine them only mixing colourful liquids in a lab, but the real work begins with a question. A scientist notices something strange in the world and asks why it happens. Next comes a guess, or hypothesis, about the possible answer. The scientist then looks for evidence to test that guess. This may mean taking careful measurements, collecting data, or running the same experiment again and again. The numbers are studied, and conclusions are slowly drawn from what the data show. One result, however, is never enough. Other scientists must be able to repeat the study and reach the same conclusion before the finding is trusted. Finally, the results are shared so that everyone can benefit. This step matters just as much as the others, because science grows only when ideas are passed on. In this way, asking questions and testing answers turn ordinary curiosity into real knowledge about the world.",
+      "vocab_notes": [
+        {
+          "word": "finding",
+          "cn": "发现;调查结果"
+        },
+        {
+          "word": "proof",
+          "cn": "证据;证明"
+        },
+        {
+          "word": "concrete",
+          "cn": "具体的;确实的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "According to the passage, where does real scientific work begin?",
+          "options": [
+            "With mixing colourful liquids.",
+            "With a question about the world.",
+            "With sharing the results.",
+            "With reading other studies."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the real work begins with a question' 的转述。"
+        },
+        {
+          "stem": "Why is one result not enough in science?",
+          "options": [
+            "Because experiments are too expensive.",
+            "Because scientists dislike numbers.",
+            "Because the finding must be repeated by others before it is trusted.",
+            "Because data cannot be measured."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'Other scientists must be able to repeat the study … before the finding is trusted' 的转述。"
+        },
+        {
+          "stem": "Why does the writer say sharing results matters?",
+          "options": [
+            "It saves time in the lab.",
+            "It makes experiments shorter.",
+            "It replaces the need for evidence.",
+            "Because progress depends on passing ideas to other people."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'science grows only when ideas are passed on' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd3",
+      "title": "The Father of China's Aerospace",
+      "topic_cn": "人物·钱学森",
+      "body": "Few scientists have shaped China's space science as much as Qian Xuesen. Born in Shanghai in 1911, he first studied railway mechanical engineering. After war broke out in 1932, he chose to switch his major to aviation, for he believed that a strong air force was needed to protect the country. In 1935 he travelled to the United States for further study and became a pioneer in jet and rocket technology. Yet his heart remained with his homeland. After overcoming many difficulties, he returned to China in 1955 and was put in charge of its rocket and missile programme. At that time the country was poor and had no experts in this field, but Qian refused to be discouraged. When asked whether Chinese people could really build missiles, he replied firmly, 'Why not?' Under his leadership China developed its own rockets and, in 1970, launched its first satellite. People honoured him because he served his country with great effort and devotion.",
+      "vocab_notes": [
+        {
+          "word": "mechanical",
+          "cn": "机械的"
+        },
+        {
+          "word": "missile",
+          "cn": "导弹"
+        },
+        {
+          "word": "patriotic",
+          "cn": "爱国的"
+        },
+        {
+          "word": "leadership",
+          "cn": "领导才能"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "Why did Qian switch his major to aviation?",
+          "options": [
+            "He felt China must build a powerful air force for its defence.",
+            "He disliked railway engineering.",
+            "His teachers told him to.",
+            "He wanted to travel abroad."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'a strong air force was needed to protect the country' 的转述。"
+        },
+        {
+          "stem": "What was China's situation when Qian took charge of the programme?",
+          "options": [
+            "It already had many rocket experts.",
+            "It was poor and lacked experts in the field.",
+            "It had finished building its rockets.",
+            "It was the world leader in space."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'the country was poor and had no experts in this field' 的转述。"
+        },
+        {
+          "stem": "Why did people honour Qian?",
+          "options": [
+            "Because he became rich abroad.",
+            "Because he avoided all hardship.",
+            "Because he devoted his whole effort to serving the nation.",
+            "Because he never left the United States."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'served his country with great effort and devotion' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd4",
+      "title": "A World of Pure Thought",
+      "topic_cn": "人物·史蒂芬·霍金",
+      "body": "Stephen Hawking was one of the most gifted scientists in physics. Most people picture him in a wheelchair, unable to move and using a computer to speak. Yet he first became famous while he was still healthy enough to walk. As a young student in 1964, he listened to a lecture by a well-known professor who supported the steady state theory of the universe. During the questions afterwards, Hawking stood up and pointed out a mistake in the professor's maths. When the maths was corrected, it showed that the big bang theory, not the steady state theory, was right. Soon astronomers with telescopes proved Hawking's own work as well. So what made him a genius? Besides being brilliant, he was brave enough to say and dream what others feared to. Furthermore, he was very determined, which helped him in science and even more in his long fight against his disease. Above all, he was always willing to admit his faults.",
+      "vocab_notes": [
+        {
+          "word": "gifted",
+          "cn": "有天赋的"
+        },
+        {
+          "word": "steady",
+          "cn": "稳定的"
+        },
+        {
+          "word": "telescope",
+          "cn": "望远镜"
+        },
+        {
+          "word": "fault",
+          "cn": "过错;缺点"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "When did Hawking first become famous?",
+          "options": [
+            "After he lost the use of his muscles.",
+            "Only near the end of his life.",
+            "Before he entered university.",
+            "While he was still able to walk."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'while he was still healthy enough to walk' 的转述。"
+        },
+        {
+          "stem": "What did the corrected maths finally show?",
+          "options": [
+            "That the universe really began with a big bang.",
+            "That the professor had been right.",
+            "That neither theory worked.",
+            "That telescopes were useless."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'the big bang theory, not the steady state theory, was right' 的转述。"
+        },
+        {
+          "stem": "Which quality does the writer praise most at the end?",
+          "options": [
+            "His wealth.",
+            "His willingness to admit his faults.",
+            "His good luck.",
+            "His fear of new ideas."
+          ],
+          "answer_index": 1,
+          "explanation": "原文末句 'Above all, he was always willing to admit his faults' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd5",
+      "title": "What Is the Scientific Spirit?",
+      "topic_cn": "说明·科学探究精神",
+      "body": "Being clever is not enough to make a great scientist. Cleverness can solve problems that are already known, but the scientific spirit pushes a person to ask what no one has asked before. People with this spirit are curious; they keep wondering why the world works as it does. They are also honest, ready to follow the evidence even when it goes against their own ideas. When the data are contradictory, they do not hide the problem but look for a better answer. Such people are brave, willing to share a strange idea that others may laugh at. They are patient, too, repeating an experiment many times until the result is solid. Most of all, they are humble enough to admit a mistake and start again. These qualities matter far more than any single discovery, for they are what keep science moving forward. A great scientist, in the end, is someone who never stops asking, testing and learning.",
+      "vocab_notes": [
+        {
+          "word": "contradictory",
+          "cn": "相互矛盾的"
+        },
+        {
+          "word": "solid",
+          "cn": "可靠的;扎实的"
+        },
+        {
+          "word": "vivid",
+          "cn": "生动的"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What does the writer say cleverness alone cannot do?",
+          "options": [
+            "Solve any known problem.",
+            "Help with simple maths.",
+            "Push a person to ask brand-new questions.",
+            "Make a person curious about food."
+          ],
+          "answer_index": 2,
+          "explanation": "原文对比 'Cleverness can solve … but the scientific spirit pushes a person to ask what no one has asked before' 的转述。"
+        },
+        {
+          "stem": "How do scientists with this spirit treat contradictory data?",
+          "options": [
+            "They throw the data away.",
+            "They stop the research at once.",
+            "They blame other people.",
+            "They search for a better answer instead of hiding the problem."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'they do not hide the problem but look for a better answer' 的转述。"
+        },
+        {
+          "stem": "According to the passage, why do these qualities matter so much?",
+          "options": [
+            "They are the very things that drive science onward.",
+            "They make scientists rich.",
+            "They make experiments shorter.",
+            "They replace the need for evidence."
+          ],
+          "answer_index": 0,
+          "explanation": "原文 'they are what keep science moving forward' 的转述。"
+        }
+      ]
+    },
+    {
+      "code": "rd6",
+      "title": "Curiosity and Creativity",
+      "topic_cn": "说明·科学家的好奇心与创造力",
+      "body": "Why do some people become great scientists while others, just as clever, do not? Part of the answer seems to lie in two simple qualities: curiosity and creativity. Curious people are never quite satisfied with the usual explanation. They keep asking why, and that question often leads them to a door no one has opened before. Creativity then lets them imagine answers that sound strange at first. A famous scientist once said that every child starts out as a scientist, full of a sense of wonder. Sadly, many of us lose that wonder as we grow up and learn to accept things as they are. Great scientists, however, hold on to it. They are willing to look foolish and to try ideas that others think are crazy. Interestingly, their love of music, art or drawing often feeds this imagination. By keeping a child's curiosity and an artist's creativity, they manage to see the world in fresh and surprising ways.",
+      "vocab_notes": [
+        {
+          "word": "abstract",
+          "cn": "抽象的"
+        },
+        {
+          "word": "concept",
+          "cn": "概念"
+        },
+        {
+          "word": "transform",
+          "cn": "改变"
+        }
+      ],
+      "questions": [
+        {
+          "stem": "What two qualities does the writer focus on?",
+          "options": [
+            "Wealth and luck.",
+            "Curiosity and creativity.",
+            "Speed and strength.",
+            "Memory and patience."
+          ],
+          "answer_index": 1,
+          "explanation": "原文 'two simple qualities: curiosity and creativity' 的转述。"
+        },
+        {
+          "stem": "What did the famous scientist say about children?",
+          "options": [
+            "They never ask questions.",
+            "Only a few children are clever.",
+            "Each young child begins life as a wonder-filled scientist.",
+            "Children should not study science."
+          ],
+          "answer_index": 2,
+          "explanation": "原文 'every child starts out as a scientist, full of a sense of wonder' 的转述。"
+        },
+        {
+          "stem": "How does a love of art help these scientists?",
+          "options": [
+            "It makes them give up science.",
+            "It earns them more money.",
+            "It replaces their need to ask questions.",
+            "It feeds their imagination."
+          ],
+          "answer_index": 3,
+          "explanation": "原文 'their love of music, art or drawing often feeds this imagination' 的转述。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "volume": "elective2",
+  "unit": "U3",
+  "topic": "Food and Culture",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修二 Unit 3 同主题听力(餐厅点菜/中国八大菜系/食物里的友谊/健康饮食小贴士/请教做菜/慢食的好处)。用词限 U3/初中/常见词,答案唯一,与读写关不撞。long/short 交替。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U3 听力·对话 Ordering at a Restaurant",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Are you ready to order, madam? What would you like today?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm not sure. What would you recommend?"
+        },
+        {
+          "speaker": "A",
+          "text": "Right now our red braised pork is the most popular dish."
+        },
+        {
+          "speaker": "B",
+          "text": "That sounds good. But I don't eat much meat. Anything lighter?"
+        },
+        {
+          "speaker": "A",
+          "text": "Then you might like the hand-torn cabbage and the mushroom soup."
+        },
+        {
+          "speaker": "B",
+          "text": "Perfect. I'll have both of those, please."
+        },
+        {
+          "speaker": "A",
+          "text": "Of course. Would you like a sweet dessert at the end?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, thank you. I'm trying to cut down on sugar."
+        }
+      ],
+      "translation_cn": "服务员问女士点什么并推荐红烧肉;顾客不太吃肉,想要清淡些;服务员推荐手撕包菜和菌菇汤;顾客都要;问是否要甜点;顾客说在控糖,谢绝。",
+      "questions": [
+        {
+          "stem": "What does the waiter first recommend?",
+          "options": [
+            "Red braised pork.",
+            "Mushroom soup.",
+            "A sweet dessert.",
+            "Hand-torn cabbage."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does the customer want something else?",
+          "options": [
+            "She has no money.",
+            "She does not eat much meat.",
+            "She dislikes the waiter.",
+            "She is in a hurry."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Which two dishes does the customer finally choose?",
+          "options": [
+            "Hand-torn cabbage and mushroom soup.",
+            "Pork and fish.",
+            "Soup and dessert.",
+            "Rice and noodles."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why does the customer refuse the dessert?",
+          "options": [
+            "It is too expensive.",
+            "She is trying to cut down on sugar.",
+            "She is already full.",
+            "She dislikes the colour."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How would you describe the customer's choice of food?",
+          "options": [
+            "She wants only spicy food.",
+            "She orders everything on the menu.",
+            "She prefers lighter dishes.",
+            "She eats no vegetables."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U3 听力·短文 The Eight Great Cuisines",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "China is a large country, and its food changes greatly from place to place.",
+        "People often speak of the eight great cuisines, each with its own character.",
+        "Sichuan food in the southwest is famous for its bold and spicy flavours.",
+        "Cantonese food in the south is lighter, and its dim sum is loved by many.",
+        "Wherever you go, food is used to show friendship and kindness to guests."
+      ],
+      "translation_cn": "中国地域辽阔,各地饮食差异很大;人们常说八大菜系,各有特色;西南的川菜以浓烈麻辣著称;南方的粤菜较清淡,点心广受喜爱;无论到哪里,食物都用来向客人表达友谊与善意。",
+      "questions": [
+        {
+          "stem": "How many great cuisines are mentioned?",
+          "options": [
+            "Three.",
+            "Six.",
+            "Ten.",
+            "Eight."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What is Sichuan food famous for?",
+          "options": [
+            "Bold and spicy flavours.",
+            "Very sweet desserts.",
+            "Cold drinks.",
+            "Plain boiled rice."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How is Cantonese food described?",
+          "options": [
+            "Heavy and very salty.",
+            "Lighter, with popular dim sum.",
+            "Always roasted over fire.",
+            "Made only of meat."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why does food differ across China?",
+          "options": [
+            "Because cooks copy each other.",
+            "Because the weather never changes.",
+            "Because the country is large and places differ.",
+            "Because there is only one cuisine."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What is food used to show, according to the passage?",
+          "options": [
+            "Wealth only.",
+            "Anger at guests.",
+            "How fast people eat.",
+            "Friendship and kindness to guests."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U3 听力·对话 A Warm Welcome in Beijing",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "How was your first meal after you arrived in Beijing?"
+        },
+        {
+          "speaker": "B",
+          "text": "It was unforgettable. We were tired and couldn't read the menu at all."
+        },
+        {
+          "speaker": "A",
+          "text": "So how did you manage to order?"
+        },
+        {
+          "speaker": "B",
+          "text": "We didn't. The chef just smiled and chose the dishes for us."
+        },
+        {
+          "speaker": "A",
+          "text": "That was very kind of him. What did you taste?"
+        },
+        {
+          "speaker": "B",
+          "text": "For the first time, I tried the Sichuan peppercorn. It tingled on my tongue."
+        },
+        {
+          "speaker": "A",
+          "text": "Did you enjoy the meal?"
+        },
+        {
+          "speaker": "B",
+          "text": "I did. But what I remember most is the friendship he offered us."
+        }
+      ],
+      "translation_cn": "A 问 B 到北京后第一顿饭如何;B 说难忘,当时很累又看不懂菜单;A 问怎么点菜;B 说没点,厨师微笑着替他们选菜;A 说他真好心;B 第一次尝到四川花椒,舌尖发麻;最难忘的是厨师给予的友谊。",
+      "questions": [
+        {
+          "stem": "What problem did the speaker have at first?",
+          "options": [
+            "He could not read the menu.",
+            "He had lost his money.",
+            "He disliked the city.",
+            "He was not hungry."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Who chose the dishes for them?",
+          "options": [
+            "A passing tourist.",
+            "The chef.",
+            "A taxi driver.",
+            "Their teacher."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the speaker taste for the first time?",
+          "options": [
+            "Sweet dessert.",
+            "Cold soup.",
+            "The Sichuan peppercorn.",
+            "Roasted lamb."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How did the peppercorn feel on his tongue?",
+          "options": [
+            "Cold and wet.",
+            "Soft and sweet.",
+            "Dry and hard.",
+            "It tingled."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker remember most?",
+          "options": [
+            "The friendship the chef offered.",
+            "The price of the meal.",
+            "The name of the street.",
+            "The size of the table."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U3 听力·短文 A Tip for Healthy Eating",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone who wants to eat in a healthier way.",
+        "Try to cut down on sweet drinks and desserts, which are full of sugar.",
+        "Fill your plate instead with fresh fruit and vegetables.",
+        "It is also a good idea to eat slowly and chew your food well.",
+        "Remember, a balanced diet in moderation is the real key to good health."
+      ],
+      "translation_cn": "给想吃得更健康的人一个小贴士:尽量少喝含糖的甜饮料、少吃甜点;多用新鲜水果和蔬菜装盘;吃慢点、嚼细些也是个好主意;记住,适度均衡的饮食才是健康的真正关键。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only chefs.",
+            "Anyone who wants to eat in a healthier way.",
+            "Only children.",
+            "Only doctors."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you cut down on?",
+          "options": [
+            "Fresh vegetables.",
+            "Drinking water.",
+            "Sweet drinks and desserts.",
+            "Eating slowly."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What should you put on your plate instead?",
+          "options": [
+            "More candy.",
+            "More sweet drinks.",
+            "Nothing at all.",
+            "Fresh fruit and vegetables."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say about eating?",
+          "options": [
+            "Eat slowly and chew well.",
+            "Eat as fast as you can.",
+            "Never chew your food.",
+            "Skip every meal."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is described as the real key to good health?",
+          "options": [
+            "Eating only one food.",
+            "A balanced diet in moderation.",
+            "Drinking lots of soda.",
+            "Eating a huge meal once a day."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U3 听力·对话 Asking the Chef for Advice",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        {
+          "speaker": "A",
+          "text": "Chef, my soup never tastes as good as yours. What am I doing wrong?"
+        },
+        {
+          "speaker": "B",
+          "text": "Tell me, do you boil the bones for long enough?"
+        },
+        {
+          "speaker": "A",
+          "text": "Maybe not. I usually cook it for only twenty minutes."
+        },
+        {
+          "speaker": "B",
+          "text": "That's the problem. Good soup needs slow cooking over low heat."
+        },
+        {
+          "speaker": "A",
+          "text": "I see. Anything else I should try?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. Add just a little vinegar at the end. It brings out the flavour."
+        },
+        {
+          "speaker": "A",
+          "text": "Thank you so much. I'll try both tricks tonight."
+        },
+        {
+          "speaker": "B",
+          "text": "Good luck. Remember, patience is the real secret of cooking."
+        }
+      ],
+      "translation_cn": "A 向厨师请教:汤总不如他的好喝,哪里出错;厨师问骨头炖得够不够久;A 只煮二十分钟;厨师说要小火慢炖;A 还要注意什么;厨师建议最后加一点醋提味;A 道谢说今晚都试;厨师说耐心才是做菜真正的秘诀。",
+      "questions": [
+        {
+          "stem": "What is the speaker's problem?",
+          "options": [
+            "He has no pot.",
+            "He dislikes soup.",
+            "His soup is not as tasty as the chef's.",
+            "He has no money."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the chef say about cooking the bones?",
+          "options": [
+            "Cook them for one minute.",
+            "Never use bones.",
+            "Boil them very fast.",
+            "They need slow cooking over low heat."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should the speaker add at the end?",
+          "options": [
+            "A little vinegar.",
+            "A lot of sugar.",
+            "Some cold water.",
+            "Plenty of oil."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why add that at the end?",
+          "options": [
+            "To make it colder.",
+            "To bring out the flavour.",
+            "To make it cheaper.",
+            "To make it look bigger."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the chef call the real secret of cooking?",
+          "options": [
+            "Speed.",
+            "Money.",
+            "Patience.",
+            "Luck."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U3 听力·短文 Why Eating Slowly Helps",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Have you ever wondered why eating slowly is good for you?",
+        "It takes about twenty minutes for your brain to know that you are full.",
+        "People who eat too quickly often end up eating more than they need.",
+        "Eating slowly also helps your body digest the food better.",
+        "So next time, put down your chopsticks and enjoy every single bite."
+      ],
+      "translation_cn": "你想过为什么吃得慢对身体好吗?大脑大约要二十分钟才知道你饱了;吃得太快的人往往吃得超过所需;慢慢吃还能帮助身体更好地消化;所以下次放下筷子,好好享受每一口。",
+      "questions": [
+        {
+          "stem": "What is the passage mainly about?",
+          "options": [
+            "How to cook fish.",
+            "Where to buy vegetables.",
+            "How to open a restaurant.",
+            "Why eating slowly is good for you."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "How long does the brain take to know you are full?",
+          "options": [
+            "About twenty minutes.",
+            "About one minute.",
+            "About two hours.",
+            "A whole day."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens to people who eat too quickly?",
+          "options": [
+            "They never feel hungry.",
+            "They often eat more than they need.",
+            "They lose all their food.",
+            "They cannot taste anything."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What else does eating slowly help with?",
+          "options": [
+            "Making food colder.",
+            "Saving more money.",
+            "Helping the body digest better.",
+            "Cooking faster."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does the speaker suggest doing next time?",
+          "options": [
+            "Eat as fast as possible.",
+            "Skip the meal.",
+            "Drink more soda.",
+            "Put down your chopsticks and enjoy every bite."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

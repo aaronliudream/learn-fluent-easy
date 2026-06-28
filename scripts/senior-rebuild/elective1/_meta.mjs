@@ -1,6 +1,6 @@
 // 选择性必修一 单元元数据。db id 槽 u1..u5。语法 code 加 e1 前缀防跨册撞全局唯一约束。
 // hub 骨架在 year2.json 的 gk_elective1(与 required3 同放 year2)。
-export const VOL = 'elective1', GRADE = 10;
+export const VOL = 'elective1', GRADE = 11;  // elective1=junior grade11(year2);hub useUnitVocab按grade过滤,必须与juniorHub grade一致
 export const CODE_PREFIX = 'e1';
 export const SEM = 'gk_elective1';
 export const YEARFILE = 'year2';

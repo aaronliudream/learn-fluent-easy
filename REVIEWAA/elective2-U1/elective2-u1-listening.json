@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Science and Scientists",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。",
+  "source": "人教版2019选择性必修二 Unit 1 同主题听力(科学社团选课/科学方法简介/实验室对话/霍金小传/请教做研究/科学家精神贴士)。用词限 U1/初中/常见词,答案唯一,与读写关不撞。long/short 交替(3长3短)。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U1 听力·对话 Joining the Science Club",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Lucy: Hi Tom, are you going to join the science club this year?",
+        "Tom: Yes, I really want to. I love asking questions about how things work.",
+        "Lucy: Me too. What kind of project do you hope to do?",
+        "Tom: I'd like to study how clean water can stop disease.",
+        "Lucy: That sounds useful. I want to build a small telescope and look at the stars.",
+        "Tom: Wow, that's a great idea. We could even share what we learn with the class.",
+        "Lucy: Exactly. The teacher says a real scientist always shares the results.",
+        "Tom: Then let's sign up right now before the club is full!"
+      ],
+      "translation_cn": "露西问汤姆今年是否要参加科学社团;汤姆很想参加,喜欢追问事物如何运作;他想研究干净的水如何阻止疾病;露西想做一架小望远镜看星星;两人打算把所学分享给全班,因为真正的科学家总会分享成果;于是决定趁名额没满赶紧报名。",
+      "questions": [
+        {
+          "stem": "What does Tom love doing?",
+          "options": [
+            "Asking questions about how things work.",
+            "Playing computer games all day.",
+            "Selling old books.",
+            "Sleeping during class."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What project does Tom hope to do?",
+          "options": [
+            "Build a fast car.",
+            "Study how clean water can stop disease.",
+            "Paint the classroom.",
+            "Write a song."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Lucy want to build?",
+          "options": [
+            "A small telescope.",
+            "A new computer.",
+            "A water pump.",
+            "A toy boat."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why do they want to share what they learn?",
+          "options": [
+            "To win money.",
+            "Because a real scientist always shares the results.",
+            "To skip homework.",
+            "To make the teacher angry."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they decide to do at the end?",
+          "options": [
+            "Go home early.",
+            "Stop studying science.",
+            "Sign up before the club is full.",
+            "Wait until next year."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U1 听力·短文 What Scientists Really Do",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Many people think scientists only mix liquids in a lab.",
+        "In fact, their work always begins with a question about the world.",
+        "They make a guess and then look for evidence to test it.",
+        "They take careful measurements and study the numbers.",
+        "Finally, they share their results so that everyone can benefit."
+      ],
+      "translation_cn": "许多人以为科学家只是在实验室里调配液体;其实他们的工作总是始于一个关于世界的问题;他们先做出猜想,再寻找证据去检验;他们仔细测量并研究数据;最后把成果分享出去,让所有人都能受益。",
+      "questions": [
+        {
+          "stem": "What do many people wrongly think scientists do?",
+          "options": [
+            "Travel around the world.",
+            "Build houses.",
+            "Teach music.",
+            "Only mix liquids in a lab."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Where does a scientist's work always begin?",
+          "options": [
+            "With a question about the world.",
+            "With a holiday.",
+            "With a finished answer.",
+            "With a new computer."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What do scientists look for after making a guess?",
+          "options": [
+            "More money.",
+            "Evidence to test it.",
+            "A quiet room.",
+            "A faster car."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do they do with the numbers?",
+          "options": [
+            "Throw them away.",
+            "Hide them.",
+            "Study them carefully.",
+            "Sell them."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "Why do scientists share their results?",
+          "options": [
+            "To keep them secret.",
+            "To make people afraid.",
+            "To waste time.",
+            "So that everyone can benefit."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U1 听力·对话 In the Laboratory",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "David: Maria, our first two results don't match at all. I feel frustrated.",
+        "Maria: Don't worry. When data look contradictory, we simply test again.",
+        "David: But we've already run the experiment three times.",
+        "Maria: Then let's calm down and check every measurement slowly.",
+        "David: You're right. Maybe one of the numbers was written down wrong.",
+        "Maria: Exactly. A real scientist has to be patient and careful.",
+        "David: I see. So one strange result is not the end of the world.",
+        "Maria: No. It's just a sign that we need to do some solid work."
+      ],
+      "translation_cn": "戴维说前两次结果完全不一致,感到沮丧;玛利亚说数据看似矛盾时,就再做一次;戴维说已经做了三次;玛利亚建议冷静下来逐项核对测量;戴维意识到可能有个数字记错了;玛利亚说真正的科学家必须耐心而细致;戴维明白一个奇怪的结果不是世界末日;玛利亚说那只是提醒他们要踏实工作。",
+      "questions": [
+        {
+          "stem": "Why does David feel frustrated?",
+          "options": [
+            "The first two results don't match.",
+            "He lost his notebook.",
+            "The lab is too cold.",
+            "He is hungry."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What does Maria suggest doing when data look contradictory?",
+          "options": [
+            "Give up the project.",
+            "Test again.",
+            "Change the question.",
+            "Leave the lab."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How many times have they run the experiment?",
+          "options": [
+            "Once.",
+            "Twice.",
+            "Three times.",
+            "Ten times."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What might explain the strange result?",
+          "options": [
+            "The machine is new.",
+            "Maria was absent.",
+            "The room was dark.",
+            "One number was written down wrong."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Maria say a real scientist must be?",
+          "options": [
+            "Patient and careful.",
+            "Loud and fast.",
+            "Rich and famous.",
+            "Quiet and shy."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U1 听力·短文 The Story of Stephen Hawking",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Stephen Hawking was a gifted scientist who studied the universe.",
+        "He became famous while he was still a young student.",
+        "At a lecture, he stood up and found a mistake in the maths.",
+        "When the maths was corrected, the big bang theory was proven right.",
+        "Above all, he was brave and willing to admit his own faults."
+      ],
+      "translation_cn": "史蒂芬·霍金是一位研究宇宙的天才科学家;他在还是年轻学生时就出了名;在一场讲座上,他起身指出了数学计算中的一个错误;数学被改正后,大爆炸理论被证明是正确的;最重要的是,他勇敢且愿意承认自己的过错。",
+      "questions": [
+        {
+          "stem": "What did Hawking study?",
+          "options": [
+            "The ocean.",
+            "The universe.",
+            "Old languages.",
+            "Music."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "When did he become famous?",
+          "options": [
+            "After he stopped working.",
+            "Only when he was very old.",
+            "While he was still a young student.",
+            "Before he went to school."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What did he do at the lecture?",
+          "options": [
+            "He fell asleep.",
+            "He left early.",
+            "He sang a song.",
+            "He found a mistake in the maths."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What was proven right after the maths was corrected?",
+          "options": [
+            "The big bang theory.",
+            "The steady state theory.",
+            "Nothing at all.",
+            "An old idea."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What quality does the passage praise most?",
+          "options": [
+            "He was very rich.",
+            "He was willing to admit his faults.",
+            "He was very lucky.",
+            "He never made mistakes."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U1 听力·对话 Advice on Doing Research",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Anna: I want to start a small research project, but I don't know how to begin.",
+        "Mr Lee: Start with a clear question that you really want to answer.",
+        "Anna: All right. What should I do after that?",
+        "Mr Lee: Make a guess, and then collect evidence to test it.",
+        "Anna: How do I know if my result is trustworthy?",
+        "Mr Lee: Repeat the test, and ask a friend to repeat it too.",
+        "Anna: That makes sense. So one result is never enough.",
+        "Mr Lee: Right. And remember to share what you find with others."
+      ],
+      "translation_cn": "安娜想做一个小研究项目却不知如何开始;李老师建议先提出一个真正想回答的清晰问题;然后做出猜想并收集证据去检验;安娜问如何判断结果是否可信;李老师说要重复实验,并请同学也重复一次;安娜明白一个结果远远不够;李老师叮嘱她要把发现分享给别人。",
+      "questions": [
+        {
+          "stem": "What is Anna's problem?",
+          "options": [
+            "She has no friends.",
+            "She is afraid of the dark.",
+            "She doesn't know how to begin her project.",
+            "She lost her books."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Mr Lee say to start with?",
+          "options": [
+            "A long holiday.",
+            "A finished report.",
+            "A new computer.",
+            "A clear question she wants to answer."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What should Anna do after making a guess?",
+          "options": [
+            "Collect evidence to test it.",
+            "Forget about it.",
+            "Sell the idea.",
+            "Wait a year."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How can Anna check if her result is trustworthy?",
+          "options": [
+            "Change the question.",
+            "Repeat it and ask a friend to repeat it too.",
+            "Stop the test.",
+            "Only trust herself."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Mr Lee remind her to do at the end?",
+          "options": [
+            "Keep it secret.",
+            "Throw away her data.",
+            "Share what she finds with others.",
+            "Give up the project."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U1 听力·短文 A Tip for Young Scientists",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for any young person who loves science.",
+        "Never be afraid to ask a question, even a strange one.",
+        "Every great discovery once began as a single curious question.",
+        "If your first idea is wrong, try again with fresh eyes.",
+        "A curious mind today can change the world tomorrow."
+      ],
+      "translation_cn": "给每一个热爱科学的年轻人一个小贴士:永远不要害怕提问,哪怕是个奇怪的问题;每一项伟大的发现都曾始于一个好奇的问题;如果第一个想法错了,就换个角度重新尝试;今天一颗好奇的心,明天能改变世界。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only old professors.",
+            "Only teachers.",
+            "Only doctors.",
+            "Any young person who loves science."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say about asking questions?",
+          "options": [
+            "Never be afraid to ask, even a strange one.",
+            "Never ask anything.",
+            "Only ask easy ones.",
+            "Ask only your teacher."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How did every great discovery once begin?",
+          "options": [
+            "With a lot of money.",
+            "As a single curious question.",
+            "With a finished answer.",
+            "By accident only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What should you do if your first idea is wrong?",
+          "options": [
+            "Stop forever.",
+            "Blame others.",
+            "Try again with fresh eyes.",
+            "Hide the mistake."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can a curious mind do tomorrow?",
+          "options": [
+            "Waste time.",
+            "Make people angry.",
+            "Lose its way.",
+            "Change the world."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

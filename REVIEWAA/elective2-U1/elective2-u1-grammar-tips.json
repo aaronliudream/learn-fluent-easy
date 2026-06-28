@@ -1,0 +1,36 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "grade": 10,
+  "content": {
+    "title": "表语从句(Predicative Clauses)速查",
+    "intro": "结构:主语 + 系动词(be / seem / look / sound / remain) + 表语从句。判断口诀:从句完整不缺成分→that;缺主语/宾语→what/who;表疑问(何处/何因/如何)→where/why/how;表'是否'→whether;说原因→because;'好像'→as if / as though。",
+    "table": {
+      "headers": ["引导词", "用法 / 例句"],
+      "rows": [
+        ["that", "从句完整、不充当成分:The truth is that he was right."],
+        ["what / who", "从句缺主语或宾语:That is what matters. / 充当主宾"],
+        ["where / why / how", "从句问地点/原因/方式:The question is how we can solve it."],
+        ["whether", "表'是否'(不用 if):The problem is whether we have time."],
+        ["because / as if", "说原因 because;'好像' as if:It looks as if it will rain."]
+      ]
+    },
+    "specialRules": [
+      { "rule": "that 在从句中不充当任何成分,从句结构完整", "mark": "The fact is that cholera still exists.(完整→that)" },
+      { "rule": "what 充当主语或宾语;缺成分才用 what,不可用 that", "mark": "Science is what you can do.(do 缺宾语→what)" },
+      { "rule": "表'是否'用 whether,if 不引导表语从句", "mark": "The question is whether √ / if ×" },
+      { "rule": "look / seem / sound + as if / as though 表'好像'", "mark": "It seemed as if all the theories were useful." }
+    ],
+    "why": [
+      "表语从句放在系动词后,补充说明主语的内容。先看从句是否缺主语/宾语:缺→用 what/who;不缺再看句意:陈述事实→that,问地点/原因/方式→where/why/how,问是否→whether,说原因→because,表'好像'→as if。"
+    ],
+    "gaokaoPoints": [
+      "that 与 what 的区分(看从句是否缺成分);whether 与 if(表语从句只用 whether)是语法填空与改错高频点。",
+      "the reason is that ...(不再用 why);the question/problem is how/whether ... 为固定高频搭配。"
+    ],
+    "examVsReal": [
+      { "exam": "The truth is that he was right.(考试/书面)", "real": "The truth is, he was right.", "note": "考试书面语保留 that;口语中常省略 that 或用逗号停顿" },
+      { "exam": "It looks as if it will rain.(考试)", "real": "It looks like it's gonna rain.", "note": "考试用 as if + 从句;口语里常用 like 代替 as if" }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U5",
+  "topic": "First Aid",
+  "source": "人教版2019选择性必修二 Unit 5 同主题完形(我学会急救/给烫伤降温/一通救命电话/化学烧伤处理/扭伤脚踝/海姆立克法步骤)。用词限 U5/初中/常见词,答案唯一,与阅读关不撞文章。答案位稍后打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "Why I Took a First-Aid Course",
+      "text": "Last summer I joined a first-aid (1)____ at the Red Cross. At first I thought it would be (2)____, but the lessons turned out to be very useful. We learned how to stay (3)____ instead of panicking when someone is hurt. Our teacher said that the most important thing is to act fast but never (4)____. We practised cleaning a (5)____ and covering it with a clean cloth. We also learned what to do when a person is (6)____ on food and cannot breathe. By the end of the course, I felt (7)____ that I could help in a real emergency. A few weeks later, my little brother (8)____ his ankle while playing, and I knew exactly what to do. I helped him sit down and then called my mum for (9)____. That day I understood why everyone should learn these simple (10)____.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "course",
+            "noise",
+            "price",
+            "season"
+          ],
+          "answer_index": 0,
+          "explanation": "a first-aid course 急救课程。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "useful",
+            "boring",
+            "happy",
+            "loud"
+          ],
+          "answer_index": 1,
+          "explanation": "but 表转折,与 useful 相对,前面以为'无聊'→ boring。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "angry",
+            "afraid",
+            "calm",
+            "tired"
+          ],
+          "answer_index": 2,
+          "explanation": "stay calm 保持冷静。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "smile",
+            "sleep",
+            "leave",
+            "panic"
+          ],
+          "answer_index": 3,
+          "explanation": "never panic 永远别惊慌。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "wound",
+            "price",
+            "song",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "cleaning a wound 清洗伤口。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "singing",
+            "choking",
+            "reading",
+            "shopping"
+          ],
+          "answer_index": 1,
+          "explanation": "choking on food 被食物噎住。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sorry",
+            "bored",
+            "confident",
+            "afraid"
+          ],
+          "answer_index": 2,
+          "explanation": "felt confident 感到自信。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sold",
+            "ate",
+            "lost",
+            "sprained"
+          ],
+          "answer_index": 3,
+          "explanation": "sprained his ankle 扭伤脚踝。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "help",
+            "money",
+            "fun",
+            "food"
+          ],
+          "answer_index": 0,
+          "explanation": "call for help 求助。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "prices",
+            "skills",
+            "songs",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "simple skills 简单技能。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "Cooling a Small Burn",
+      "text": "One evening, my sister touched a hot pan and burnt her (1)____. She screamed in pain, but I remembered the right (2)____ to take. First, I led her to the sink and put the burn under cool running (3)____. I kept it there for about ten (4)____, which stopped the heat and (5)____ the pain. Then I gently (6)____ the area with a clean cloth. I did not put any oil on it, because oil keeps the heat (7)____ and can cause infection. After that, I covered the burn (8)____ with a clean cloth so that it stayed safe. My sister soon felt much (9)____. The burn was only a small one, so we did not need to go to (10)____, but I was glad I knew what to do.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "shoe",
+            "book",
+            "hand",
+            "wall"
+          ],
+          "answer_index": 2,
+          "explanation": "burnt her hand 烫伤了手。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "songs",
+            "games",
+            "steps"
+          ],
+          "answer_index": 3,
+          "explanation": "the right steps 正确的步骤。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "water",
+            "sand",
+            "fire",
+            "smoke"
+          ],
+          "answer_index": 0,
+          "explanation": "cool running water 凉的流动水。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "metres",
+            "minutes",
+            "years",
+            "books"
+          ],
+          "answer_index": 1,
+          "explanation": "ten minutes 十分钟。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "raised",
+            "sold",
+            "reduced",
+            "lost"
+          ],
+          "answer_index": 2,
+          "explanation": "reduced the pain 减轻疼痛。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "threw",
+            "ate",
+            "sold",
+            "dried"
+          ],
+          "answer_index": 3,
+          "explanation": "dried the area 把该处擦干。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "inside",
+            "away",
+            "out",
+            "off"
+          ],
+          "answer_index": 0,
+          "explanation": "keeps the heat inside 把热量留在里面。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "tightly",
+            "loosely",
+            "quickly",
+            "angrily"
+          ],
+          "answer_index": 1,
+          "explanation": "covered… loosely 宽松地盖住(烧伤忌包太紧)。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "worse",
+            "louder",
+            "better",
+            "richer"
+          ],
+          "answer_index": 2,
+          "explanation": "felt much better 感觉好多了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "school",
+            "market",
+            "library",
+            "hospital"
+          ],
+          "answer_index": 3,
+          "explanation": "go to hospital 去医院。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "The Call That Saved Grandpa",
+      "text": "One night, a boy was at home with his (1)____ when the old man suddenly fell to the floor and stopped moving. The boy did not (2)____. He quickly picked up the phone and called the emergency (3)____. A calm operator answered and asked him to (4)____ a few simple questions. She told him to lay his grandfather on his (5)____ and check whether he was breathing. Following her clear (6)____, the boy pressed down on the centre of his grandfather's (7)____, twice a second. The operator kept talking to him so that he would not feel (8)____. A few minutes later, an (9)____ arrived, and the paramedics took over. Thanks to the boy's quick action and the operator's help, his grandfather's (10)____ was saved.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "grandfather",
+            "teacher",
+            "doctor",
+            "driver"
+          ],
+          "answer_index": 0,
+          "explanation": "with his grandfather 和爷爷在一起(下文 old man / grandfather)。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "smile",
+            "panic",
+            "sleep",
+            "sing"
+          ],
+          "answer_index": 1,
+          "explanation": "did not panic 没有惊慌。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "shop",
+            "garden",
+            "number",
+            "market"
+          ],
+          "answer_index": 2,
+          "explanation": "emergency number 急救电话号码。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "sell",
+            "lose",
+            "throw",
+            "answer"
+          ],
+          "answer_index": 3,
+          "explanation": "answer a few questions 回答几个问题。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "back",
+            "shop",
+            "price",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "lay him on his back 让他仰卧。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "prices",
+            "instructions",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "clear instructions 清楚的指示。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "garden",
+            "market",
+            "chest",
+            "wall"
+          ],
+          "answer_index": 2,
+          "explanation": "centre of his chest 胸部中央。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "happy",
+            "rich",
+            "tall",
+            "afraid"
+          ],
+          "answer_index": 3,
+          "explanation": "would not feel afraid 不会害怕。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ambulance",
+            "umbrella",
+            "elephant",
+            "envelope"
+          ],
+          "answer_index": 0,
+          "explanation": "an ambulance arrived 救护车到了。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "life",
+            "song",
+            "game"
+          ],
+          "answer_index": 1,
+          "explanation": "his life was saved 性命被救。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "First Aid for a Chemical Burn",
+      "text": "A chemical burn happens when your skin or eyes come into contact with an (1)____ or other dangerous chemicals. Such burns can be very (2)____ and need urgent attention. If the chemical is (3)____, it can even harm your internal (4)____. So first aid must be given (5)____. Begin by washing the burnt area with plenty of cool (6)____ to remove the chemical. Be careful not to let it (7)____ to other parts of the skin. After washing, (8)____ the area loosely with a clean cloth. Do not rub the skin, as this may make the (9)____ worse. Most importantly, send the person to (10)____ right away if he or she is badly burnt, because only a doctor can treat a serious chemical burn safely.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "apple",
+            "answer",
+            "acid",
+            "engine"
+          ],
+          "answer_index": 2,
+          "explanation": "an acid 酸。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "funny",
+            "cheap",
+            "quiet",
+            "dangerous"
+          ],
+          "answer_index": 3,
+          "explanation": "very dangerous 非常危险。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "swallowed",
+            "sung",
+            "sold",
+            "painted"
+          ],
+          "answer_index": 0,
+          "explanation": "if the chemical is swallowed 如果被吞下。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "gardens",
+            "organs",
+            "markets",
+            "machines"
+          ],
+          "answer_index": 1,
+          "explanation": "internal organs 内脏器官。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "slowly",
+            "never",
+            "immediately",
+            "secretly"
+          ],
+          "answer_index": 2,
+          "explanation": "given immediately 立即进行。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "fire",
+            "sand",
+            "smoke",
+            "water"
+          ],
+          "answer_index": 3,
+          "explanation": "cool water 凉水。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "spread",
+            "sleep",
+            "smile",
+            "sing"
+          ],
+          "answer_index": 0,
+          "explanation": "let it spread 让它扩散。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "wrap",
+            "eat",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "wrap the area 包住该处。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "price",
+            "song",
+            "burn",
+            "noise"
+          ],
+          "answer_index": 2,
+          "explanation": "make the burn worse 使烧伤更糟。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "school",
+            "market",
+            "park",
+            "hospital"
+          ],
+          "answer_index": 3,
+          "explanation": "send… to hospital 送往医院。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "When Nancy Hurt Her Ankle",
+      "text": "Nancy decided to ride her bike home one (1)____ evening because she did not want to risk having it stolen. The streets near her office were bright, but after she turned onto a side (2)____, she found herself in the dark. She slowed (3)____ and tried to see ahead, but it was impossible. Then, without (4)____, her bike hit a rock, and she fell to the (5)____. When she tried to get up, she discovered that her (6)____ was hurt and badly (7)____. She could not stand or walk, and the pain was (8)____. Luckily, she had her mobile phone with her and was able to call an (9)____. They soon arrived and took her to hospital. It was several months before her ankle (10)____, and after that Nancy was much more careful at night.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "foggy",
+            "happy",
+            "cheap",
+            "polite"
+          ],
+          "answer_index": 0,
+          "explanation": "a foggy evening 有雾的夜晚。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "road",
+            "price",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "a side road 一条小路。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "up",
+            "off",
+            "down",
+            "in"
+          ],
+          "answer_index": 2,
+          "explanation": "slowed down 慢下来。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "money",
+            "music",
+            "school",
+            "warning"
+          ],
+          "answer_index": 3,
+          "explanation": "without warning 毫无预兆。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "ground",
+            "price",
+            "song",
+            "market"
+          ],
+          "answer_index": 0,
+          "explanation": "fell to the ground 摔到地上。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "book",
+            "ankle",
+            "shop",
+            "ticket"
+          ],
+          "answer_index": 1,
+          "explanation": "her ankle was hurt 脚踝受伤。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sold",
+            "sung",
+            "swollen",
+            "painted"
+          ],
+          "answer_index": 2,
+          "explanation": "badly swollen 严重肿胀。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "funny",
+            "cheap",
+            "quiet",
+            "terrible"
+          ],
+          "answer_index": 3,
+          "explanation": "the pain was terrible 疼痛难忍。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "ambulance",
+            "umbrella",
+            "elephant",
+            "envelope"
+          ],
+          "answer_index": 0,
+          "explanation": "call an ambulance 叫救护车。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "disappeared",
+            "recovered",
+            "increased",
+            "escaped"
+          ],
+          "answer_index": 1,
+          "explanation": "before her ankle recovered 脚踝痊愈之前。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "How the Heimlich Manoeuvre Works",
+      "text": "When a person is (1)____ on food and cannot speak, every second matters. One quick and (2)____ way to help is the Heimlich manoeuvre. First, make (3)____ that the person is really choking, because a choking person cannot (4)____. Slapping the person on the (5)____ may force out the food. If this does not work, stand (6)____ the victim and wrap your arms around the waist. Make a (7)____ with one hand and place it on the upper part of the stomach. (8)____ your fist tightly with your other hand, then push up and into the stomach in one (9)____. Keep doing this until the food is forced (10)____. With a small child, however, you should not do this, as you may hurt the child; instead, lay the child face down and give firm slaps to the upper back.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "singing",
+            "reading",
+            "choking",
+            "shopping"
+          ],
+          "answer_index": 2,
+          "explanation": "choking on food 被食物噎住。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "funny",
+            "expensive",
+            "quiet",
+            "practical"
+          ],
+          "answer_index": 3,
+          "explanation": "quick and practical 快速而实用。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sure",
+            "money",
+            "noise",
+            "song"
+          ],
+          "answer_index": 0,
+          "explanation": "make sure 确保。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "eat",
+            "speak",
+            "sell",
+            "buy"
+          ],
+          "answer_index": 1,
+          "explanation": "cannot speak 说不出话。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "price",
+            "song",
+            "back",
+            "garden"
+          ],
+          "answer_index": 2,
+          "explanation": "slapping on the back 拍背。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "above",
+            "between",
+            "across",
+            "behind"
+          ],
+          "answer_index": 3,
+          "explanation": "stand behind 站在身后。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "fist",
+            "price",
+            "song",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "make a fist 握成拳头。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "Sell",
+            "Grab",
+            "Lose",
+            "Throw"
+          ],
+          "answer_index": 1,
+          "explanation": "Grab your fist 握住你的拳头。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "garden",
+            "market",
+            "motion",
+            "machine"
+          ],
+          "answer_index": 2,
+          "explanation": "in one motion 一个动作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "in",
+            "up",
+            "off",
+            "out"
+          ],
+          "answer_index": 3,
+          "explanation": "forced out 被推出来。"
+        }
+      ]
+    }
+  ]
+}

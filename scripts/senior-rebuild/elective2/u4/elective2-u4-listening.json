@@ -1,0 +1,421 @@
+{
+  "volume": "elective2",
+  "unit": "U4",
+  "topic": "Journey Across a Vast Land",
+  "tts_voice": "nova",
+  "tts_note": "口音与全平台听力统一(pregenerate=nova 0.85);hub 关内 hubSpeak 走 el:lily。speaker 仅角色标注。kind=long 对话/short 独白交替(long,short,long,short,long,short)。",
+  "source": "人教版2019选择性必修二 Unit 4 同主题听力(订火车票/世界最长铁路之一/湖上滑冰对话/草原小镇独白/问路与方位对话/旅行收尾贴士)。用词限 U4/初中/常见词,答案唯一,依据可在 transcript 找到,与读/完形关不撞。",
+  "exercises": [
+    {
+      "code": "ls1",
+      "title": "U4 听力·对话 Booking a Train Ticket",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Clerk: Good morning. Where would you like to travel to?",
+        "Daiyu: We'd like two tickets from Vancouver to Toronto, please.",
+        "Clerk: That's a long trip. The whole journey takes about four days.",
+        "Daiyu: Four days? We didn't expect it to be so long.",
+        "Clerk: Yes, the train crosses the mountains and the great prairie on the way.",
+        "Daiyu: That sounds wonderful. Do the seats turn into beds at night?",
+        "Clerk: They do. You can sleep while the train keeps moving.",
+        "Daiyu: Perfect. We'll take the two tickets, then. Thank you!"
+      ],
+      "translation_cn": "戴玉想订两张从温哥华到多伦多的火车票;职员说全程约四天,会翻越山脉、穿过大草原;戴玉没料到这么久;座位夜里能变成床,可以边睡边赶路;戴玉决定就买这两张票。",
+      "questions": [
+        {
+          "stem": "Where do the girls want to travel?",
+          "options": [
+            "From Vancouver to Toronto.",
+            "From Toronto to Montreal.",
+            "From Edmonton to Winnipeg.",
+            "From Halifax to Vancouver."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "How long does the whole journey take?",
+          "options": [
+            "About four hours.",
+            "About four days.",
+            "About one week.",
+            "About two days."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does the train cross on the way?",
+          "options": [
+            "The mountains and the great prairie.",
+            "Only one large city.",
+            "A wide sea.",
+            "A desert."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What happens to the seats at night?",
+          "options": [
+            "They are removed.",
+            "They turn into beds.",
+            "They stay the same.",
+            "They are sold to others."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What does Daiyu decide in the end?",
+          "options": [
+            "To take a plane instead.",
+            "To wait until next week.",
+            "To buy the two tickets.",
+            "To travel by car."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls2",
+      "title": "U4 听力·短文 One of the World's Longest Railways",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "The railway across Canada is one of the longest in the world.",
+        "It links the west coast with the cities of the far east.",
+        "More than a hundred years ago, the line did not exist.",
+        "Builders had to cut a path through forests, plains, and high mountains.",
+        "Today travellers can watch the spectacular land roll past their windows."
+      ],
+      "translation_cn": "横贯加拿大的铁路是世界上最长的铁路之一;它把西海岸和遥远东部的城市连在一起;一百多年前这条线还不存在;建设者必须在森林、平原和高山中开出一条路;如今旅客可以看着壮丽的大地从车窗外掠过。",
+      "questions": [
+        {
+          "stem": "What is special about this railway?",
+          "options": [
+            "It is the shortest in Canada.",
+            "It only runs in winter.",
+            "It carries no passengers.",
+            "It is one of the world's longest."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the railway link together?",
+          "options": [
+            "The west coast and the far-eastern cities.",
+            "Two small villages.",
+            "Only mountain towns.",
+            "Two airports."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "When did the line not yet exist?",
+          "options": [
+            "Last year.",
+            "More than a hundred years ago.",
+            "Ten years ago.",
+            "It has always existed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What did the builders have to cut a path through?",
+          "options": [
+            "Only a single forest.",
+            "A wide ocean.",
+            "Forests, plains, and high mountains.",
+            "City streets."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What can travellers do today?",
+          "options": [
+            "Build the railway themselves.",
+            "Drive cars on the track.",
+            "See nothing but clouds.",
+            "Watch the spectacular land roll past."
+          ],
+          "answer_index": 3
+        }
+      ]
+    },
+    {
+      "code": "ls3",
+      "title": "U4 听力·对话 Skating on a Frozen Lake",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Liu Qian: That lake looks so blue. Is it always like that?",
+        "Anna: In summer, yes. But in winter it freezes over completely.",
+        "Liu Qian: Really? Doesn't it become dangerous then?",
+        "Anna: Not at all. The ice grows very thick, so people skate on it.",
+        "Liu Qian: That sounds amazing. What else do they do there?",
+        "Anna: They play games on the ice and even drink hot coffee by the shore.",
+        "Liu Qian: I wish we could see it in winter.",
+        "Anna: You really should come back. The frozen lake takes your breath away."
+      ],
+      "translation_cn": "刘倩问那湖是否一直这么蓝;安娜说夏天是,冬天会完全结冰;刘倩担心危险;安娜说冰很厚,人们在上面滑冰、玩游戏,还在岸边喝热咖啡;刘倩希望冬天能来看;安娜说一定要再来,结冰的湖美得令人惊叹。",
+      "questions": [
+        {
+          "stem": "What is the lake like in winter?",
+          "options": [
+            "It freezes over completely.",
+            "It dries up.",
+            "It stays warm.",
+            "It turns green."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "Why is the frozen lake not dangerous?",
+          "options": [
+            "Because it is very small.",
+            "Because the ice grows very thick.",
+            "Because no one goes near it.",
+            "Because it never truly freezes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What do people do on the ice besides skating?",
+          "options": [
+            "They go swimming.",
+            "They sail boats.",
+            "They play games and drink hot coffee.",
+            "They build houses."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does Liu Qian wish?",
+          "options": [
+            "That summer would last longer.",
+            "That the lake were larger.",
+            "That the ice were thinner.",
+            "That she could see the lake in winter."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does Anna say about the frozen lake?",
+          "options": [
+            "It takes your breath away.",
+            "It is boring in winter.",
+            "It is too cold to visit.",
+            "It looks the same all year."
+          ],
+          "answer_index": 0
+        }
+      ]
+    },
+    {
+      "code": "ls4",
+      "title": "U4 听力·短文 A Small Town on the Prairie",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Our train stopped for a short while at a small prairie town.",
+        "The land all around was as flat as the eye could see.",
+        "Golden wheat fields stretched far into the distance.",
+        "An old farmer told us that the winters here are freezing cold.",
+        "Yet in summer, he said, the days are long and pleasant."
+      ],
+      "translation_cn": "火车在一个草原小镇短暂停留;四周的土地一望无际地平坦;金色的麦田延伸到远方;一位老农告诉我们这里冬天极冷;但他说夏天白昼漫长而宜人。",
+      "questions": [
+        {
+          "stem": "Where did the train stop for a short while?",
+          "options": [
+            "At a busy harbour.",
+            "At a small prairie town.",
+            "On a high mountain.",
+            "In a large city."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "What was the land around like?",
+          "options": [
+            "Full of tall hills.",
+            "Covered with forests.",
+            "As flat as the eye could see.",
+            "Wet and muddy."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What stretched into the distance?",
+          "options": [
+            "Rows of skyscrapers.",
+            "A wide blue lake.",
+            "Snowy mountains.",
+            "Golden wheat fields."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What did the farmer say about the winters?",
+          "options": [
+            "They are freezing cold.",
+            "They are mild and warm.",
+            "They are short.",
+            "They never come."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What are the summer days like?",
+          "options": [
+            "Short and dark.",
+            "Long and pleasant.",
+            "Hot and crowded.",
+            "Cold and windy."
+          ],
+          "answer_index": 1
+        }
+      ]
+    },
+    {
+      "code": "ls5",
+      "title": "U4 听力·对话 Asking the Way in the City",
+      "type": "dialogue",
+      "kind": "long",
+      "speaker": "uk_female",
+      "transcript": [
+        "Daiyu: Excuse me, how far is the old town from here?",
+        "Local: It's about two kilometres south of the station, close to the water.",
+        "Daiyu: Can we walk there, or should we take a bus?",
+        "Local: You can easily walk. Just head south along this street.",
+        "Daiyu: Is there anything worth seeing on the way?",
+        "Local: Yes, there are lovely shops and an old market on your left.",
+        "Daiyu: Thank you so much. You've been very kind.",
+        "Local: No trouble at all. Enjoy the rest of your trip!"
+      ],
+      "translation_cn": "戴玉问老城离这里多远;当地人说在车站以南约两公里、靠近水边;问能否步行;当地人说很容易,沿这条街向南走即可;路上左边有可爱的商店和一个老市场;戴玉道谢,当地人祝她旅途愉快。",
+      "questions": [
+        {
+          "stem": "Where is the old town?",
+          "options": [
+            "Right next to the station.",
+            "Far to the north of the city.",
+            "About two kilometres south of the station.",
+            "On top of a hill."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "How can Daiyu get to the old town?",
+          "options": [
+            "Only by taxi.",
+            "By train.",
+            "By boat.",
+            "She can easily walk there."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "Which way should she go?",
+          "options": [
+            "South along the street.",
+            "North along the river.",
+            "East to the harbour.",
+            "West to the mountains."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What is worth seeing on the way?",
+          "options": [
+            "A tall tower.",
+            "Lovely shops and an old market.",
+            "A frozen lake.",
+            "A wheat farm."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "How does the local person respond to Daiyu's thanks?",
+          "options": [
+            "He asks for money.",
+            "He walks away quickly.",
+            "He says it was no trouble and wishes her a good trip.",
+            "He says he is too busy."
+          ],
+          "answer_index": 2
+        }
+      ]
+    },
+    {
+      "code": "ls6",
+      "title": "U4 听力·短文 A Tip for the Long Journey",
+      "type": "passage",
+      "kind": "short",
+      "speaker": "uk_female",
+      "transcript": [
+        "Here is a simple tip for anyone taking a long rail journey.",
+        "Do not spend the whole time staring at your phone.",
+        "Look out of the window and watch the land change around you.",
+        "Talk to the people sitting near you and learn about their home.",
+        "A slow journey enjoyed mile by mile becomes a memory for life."
+      ],
+      "translation_cn": "给坐长途火车的人一个简单贴士:别一路盯着手机;望向窗外,看身边大地的变化;和邻座的人聊天,了解他们的家乡;一段慢慢享受、一英里一英里走过的旅程,会成为一生的记忆。",
+      "questions": [
+        {
+          "stem": "Who is this tip for?",
+          "options": [
+            "Only train drivers.",
+            "Only photographers.",
+            "Only children.",
+            "Anyone taking a long rail journey."
+          ],
+          "answer_index": 3
+        },
+        {
+          "stem": "What does the speaker say you should not do?",
+          "options": [
+            "Spend the whole time staring at your phone.",
+            "Talk to other people.",
+            "Look out of the window.",
+            "Enjoy the journey."
+          ],
+          "answer_index": 0
+        },
+        {
+          "stem": "What should you watch through the window?",
+          "options": [
+            "The inside of the train.",
+            "The land changing around you.",
+            "Your own reflection.",
+            "Other phones."
+          ],
+          "answer_index": 1
+        },
+        {
+          "stem": "Why should you talk to people near you?",
+          "options": [
+            "To sell them something.",
+            "To pass them your phone.",
+            "To learn about their home.",
+            "To ask for money."
+          ],
+          "answer_index": 2
+        },
+        {
+          "stem": "What does a slow journey become?",
+          "options": [
+            "A waste of time.",
+            "A reason to fly next time.",
+            "A boring afternoon.",
+            "A memory for life."
+          ],
+          "answer_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "volume": "elective2",
+  "unit": "U2",
+  "note": "单元通关专属迷你阅读(沟通文化主题,独立短文,不在阅读关出现)。短文2-3句+2题,答案转述非照抄,2题覆盖不同位置。",
+  "finalReading": {
+    "passage": "When Karim first came to China, he could barely use chopsticks and often felt like an outsider. Instead of giving up, he joined a cooking club and asked his classmates to teach him their favourite dishes. A year later, he could host a small dinner for his friends, and he felt proud that a little courage had turned strangers into a second family.",
+    "questions": [
+      {
+        "q": "How did Karim feel when he first arrived in China?",
+        "options": [
+          "Like an outsider who could hardly use chopsticks.",
+          "Completely at home from the very first day.",
+          "Eager to leave the country at once.",
+          "Sure that he already knew everything."
+        ],
+        "answer": "A",
+        "explanation": "原文 'could barely use chopsticks and often felt like an outsider' 的转述;其余与原文相反或未提。"
+      },
+      {
+        "q": "What helped Karim change his situation?",
+        "options": [
+          "He stayed alone and avoided everyone.",
+          "He joined a club and asked classmates to teach him.",
+          "He moved back to his own country.",
+          "He stopped eating Chinese food."
+        ],
+        "answer": "B",
+        "explanation": "原文 'joined a cooking club and asked his classmates to teach him'(短文中段,覆盖不同位置)。"
+      }
+    ]
+  }
+}

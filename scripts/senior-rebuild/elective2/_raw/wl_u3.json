@@ -1,0 +1,436 @@
+[
+ {
+  "word": "association",
+  "ipa": "sien",
+  "cn": "协会；关联",
+  "propn": false,
+  "raw": "association /sien/ n. 协会；关联"
+ },
+ {
+  "word": "bun",
+  "ipa": "",
+  "cn": "圆面包；小圆甜饼",
+  "propn": false,
+  "raw": "bun // n. 圆面包；小圆甜饼"
+ },
+ {
+  "word": "cabbage",
+  "ipa": "kbd",
+  "cn": "甘蓝；卷心菜；洋白菜",
+  "propn": false,
+  "raw": "cabbage /kbd/ n. 甘蓝；卷心菜；洋白菜"
+ },
+ {
+  "word": "cafeteria",
+  "ipa": "kftri",
+  "cn": "自助餐厅；自助食堂",
+  "propn": false,
+  "raw": "cafeteria /kftri/ n. 自助餐厅；自助食堂"
+ },
+ {
+  "word": "calorie",
+  "ipa": "klri",
+  "cn": "卡路里（热量单位）",
+  "propn": false,
+  "raw": "calorie /klri/ n. 卡路里（热量单位）"
+ },
+ {
+  "word": "canteen",
+  "ipa": "kntin",
+  "cn": "食堂；餐厅",
+  "propn": false,
+  "raw": "canteen /kntin/ n. 食堂；餐厅"
+ },
+ {
+  "word": "category",
+  "ipa": "ktri",
+  "cn": "类别；种类",
+  "propn": false,
+  "raw": "category /ktri/ n. 类别；种类"
+ },
+ {
+  "word": "chef",
+  "ipa": "ef",
+  "cn": "厨师；主厨",
+  "propn": false,
+  "raw": "chef /ef/ n. 厨师；主厨"
+ },
+ {
+  "word": "chew",
+  "ipa": "tu",
+  "cn": "咀嚼；嚼碎 n. 咀嚼",
+  "propn": false,
+  "raw": "chew /tu/ vi. & vt. 咀嚼；嚼碎 n. 咀嚼"
+ },
+ {
+  "word": "chilli",
+  "ipa": "",
+  "cn": "辣椒",
+  "propn": false,
+  "raw": "chilli // n. （NAmE=chili） （pl. -es） 辣椒"
+ },
+ {
+  "word": "consist",
+  "ipa": "knsst",
+  "cn": "",
+  "propn": false,
+  "raw": "consist /knsst/ vi."
+ },
+ {
+  "word": "consist of",
+  "ipa": "",
+  "cn": "由……组成（或构成）",
+  "propn": false,
+  "raw": "consist of 由……组成（或构成）"
+ },
+ {
+  "word": "consistent",
+  "ipa": "knsstnt",
+  "cn": "一致的；连续的",
+  "propn": false,
+  "raw": "consistent /knsstnt/ adj. 一致的；连续的"
+ },
+ {
+  "word": "consume",
+  "ipa": "knsjum",
+  "cn": "吃；喝；饮；消耗",
+  "propn": false,
+  "raw": "consume /knsjum/ vt. 吃；喝；饮；消耗"
+ },
+ {
+  "word": "cuisine",
+  "ipa": "kwzin",
+  "cn": "菜肴；风味；烹饪",
+  "propn": false,
+  "raw": "cuisine /kwzin/ n. 菜肴；风味；烹饪"
+ },
+ {
+  "word": "dairy",
+  "ipa": "",
+  "cn": "奶制的；乳品（业）的 n. 乳制品；乳品店；牛奶厂",
+  "propn": false,
+  "raw": "dairy // adj. 奶制的；乳品（业）的 n. 乳制品；乳品店；牛奶厂"
+ },
+ {
+  "word": "dessert",
+  "ipa": "dzt",
+  "cn": "饭后）甜点",
+  "propn": false,
+  "raw": "dessert /dzt/ n.（饭后）甜点"
+ },
+ {
+  "word": "dim sum",
+  "ipa": "dm sm",
+  "cn": "点心（中国食品）",
+  "propn": false,
+  "raw": "dim sum /dm sm/ n. 点心（中国食品）"
+ },
+ {
+  "word": "dough",
+  "ipa": "d",
+  "cn": "生面团",
+  "propn": false,
+  "raw": "dough /d/ n. 生面团"
+ },
+ {
+  "word": "elegant",
+  "ipa": "elnt",
+  "cn": "精美的；讲究的；文雅的",
+  "propn": false,
+  "raw": "elegant /elnt/ adj. 精美的；讲究的；文雅的"
+ },
+ {
+  "word": "exceptional",
+  "ipa": "ksepnl",
+  "cn": "特别的；罕见的",
+  "propn": false,
+  "raw": "exceptional /ksepnl/ adj. 特别的；罕见的"
+ },
+ {
+  "word": "fibre",
+  "ipa": "fab(r)",
+  "cn": "纤维；纤维制品",
+  "propn": false,
+  "raw": "fibre （especially US fiber）  /fab(r)/ n. 纤维；纤维制品"
+ },
+ {
+  "word": "fig",
+  "ipa": "",
+  "cn": "无花果",
+  "propn": false,
+  "raw": "fig // n. 无花果"
+ },
+ {
+  "word": "fundamental",
+  "ipa": "fndmentl",
+  "cn": "根本的；基础的；基本的 n. 基本规律；根本法则",
+  "propn": false,
+  "raw": "fundamental /fndmentl/ adj. 根本的；基础的；基本的 n. 基本规律；根本法则"
+ },
+ {
+  "word": "garlic",
+  "ipa": "lk",
+  "cn": "蒜",
+  "propn": false,
+  "raw": "garlic /lk/ n. 蒜"
+ },
+ {
+  "word": "Appendices haggis",
+  "ipa": "hs",
+  "cn": "苏格兰）羊杂碎肚",
+  "propn": false,
+  "raw": "Appendices haggis /hs/ n.（苏格兰）羊杂碎肚"
+ },
+ {
+  "word": "ham",
+  "ipa": "",
+  "cn": "火腿",
+  "propn": false,
+  "raw": "ham // n. 火腿"
+ },
+ {
+  "word": "ideal",
+  "ipa": "adil",
+  "cn": "完美的；理想的；想象的 n. 理想；完美的人（或事物）",
+  "propn": false,
+  "raw": "ideal /adil/ adj. 完美的；理想的；想象的 n. 理想；完美的人（或事物）"
+ },
+ {
+  "word": "ingredient",
+  "ipa": "nridint",
+  "cn": "尤指烹饪）材料；成分",
+  "propn": false,
+  "raw": "ingredient /nridint/ n.（尤指烹饪）材料；成分"
+ },
+ {
+  "word": "junk",
+  "ipa": "dk",
+  "cn": "无用的东西",
+  "propn": false,
+  "raw": "junk /dk/ n. 无用的东西"
+ },
+ {
+  "word": "junk food",
+  "ipa": "",
+  "cn": "垃圾食品",
+  "propn": false,
+  "raw": "junk food (=junk) 垃圾食品"
+ },
+ {
+  "word": "lamb",
+  "ipa": "lm",
+  "cn": "羊羔肉；羔羊",
+  "propn": false,
+  "raw": "lamb /lm/ n. 羊羔肉；羔羊"
+ },
+ {
+  "word": "lamb kebab",
+  "ipa": "kbb",
+  "cn": "烤羊肉串",
+  "propn": false,
+  "raw": "lamb kebab /kbb/ 烤羊肉串"
+ },
+ {
+  "word": "madam",
+  "ipa": "mdm",
+  "cn": "夫人；女士",
+  "propn": false,
+  "raw": "madam /mdm/ n. 夫人；女士"
+ },
+ {
+  "word": "minimum",
+  "ipa": "mnmm",
+  "cn": "最小值；最少量 adj. 最低（限度）的；最小的",
+  "propn": false,
+  "raw": "minimum /mnmm/ n. 最小值；最少量 adj. 最低（限度）的；最小的"
+ },
+ {
+  "word": "moderation",
+  "ipa": "mdren",
+  "cn": "适度；合理",
+  "propn": false,
+  "raw": "moderation /mdren/ n. 适度；合理"
+ },
+ {
+  "word": "modest",
+  "ipa": "mdst",
+  "cn": "些许的；谦虚的；朴素的",
+  "propn": false,
+  "raw": "modest /mdst/ adj. 些许的；谦虚的；朴素的"
+ },
+ {
+  "word": "olive",
+  "ipa": "",
+  "cn": "油橄榄；橄榄树",
+  "propn": false,
+  "raw": "olive // n. 油橄榄；橄榄树"
+ },
+ {
+  "word": "onion",
+  "ipa": "njn",
+  "cn": "洋葱；葱头",
+  "propn": false,
+  "raw": "onion /njn/ n. 洋葱；葱头"
+ },
+ {
+  "word": "overall",
+  "ipa": "vrl",
+  "cn": "总体上；大致上 adj. 全面的；综合的",
+  "propn": false,
+  "raw": "overall /vrl/ adv. 总体上；大致上 adj. 全面的；综合的"
+ },
+ {
+  "word": "pearl",
+  "ipa": "pl",
+  "cn": "珍珠",
+  "propn": false,
+  "raw": "pearl /pl/ n. 珍珠"
+ },
+ {
+  "word": "pepper",
+  "ipa": "pep(r)",
+  "cn": "甜椒；灯笼椒；胡椒粉",
+  "propn": false,
+  "raw": "pepper /pep(r)/ n. 甜椒；灯笼椒；胡椒粉"
+ },
+ {
+  "word": "peppercorn",
+  "ipa": "pepkn",
+  "cn": "胡椒粒",
+  "propn": false,
+  "raw": "peppercorn /pepkn/ n. 胡椒粒"
+ },
+ {
+  "word": "pork",
+  "ipa": "pk",
+  "cn": "猪肉",
+  "propn": false,
+  "raw": "pork /pk/ n. 猪肉"
+ },
+ {
+  "word": "red braised",
+  "ipa": "brez",
+  "cn": "红烧肉",
+  "propn": false,
+  "raw": "red braised /brez/ pork 红烧肉"
+ },
+ {
+  "word": "prior",
+  "ipa": "pra(r)",
+  "cn": "先前的；优先的",
+  "propn": false,
+  "raw": "prior /pra(r)/ adj. 先前的；优先的"
+ },
+ {
+  "word": "prior to",
+  "ipa": "",
+  "cn": "在……之前的",
+  "propn": false,
+  "raw": "prior to 在……之前的"
+ },
+ {
+  "word": "quantity",
+  "ipa": "kwntti",
+  "cn": "数量；数额",
+  "propn": false,
+  "raw": "quantity /kwntti/ n. 数量；数额"
+ },
+ {
+  "word": "recipe",
+  "ipa": "respi",
+  "cn": "烹饪法；食谱",
+  "propn": false,
+  "raw": "recipe /respi/ n. 烹饪法；食谱"
+ },
+ {
+  "word": "regardless",
+  "ipa": "rdls",
+  "cn": "不顾；不加理会",
+  "propn": false,
+  "raw": "regardless /rdls/ adv. 不顾；不加理会"
+ },
+ {
+  "word": "regardless of",
+  "ipa": "",
+  "cn": "不管；不顾",
+  "propn": false,
+  "raw": "regardless of 不管；不顾"
+ },
+ {
+  "word": "sausage",
+  "ipa": "ssd",
+  "cn": "香肠；腊肠",
+  "propn": false,
+  "raw": "sausage /ssd/ n. 香肠；腊肠"
+ },
+ {
+  "word": "slice",
+  "ipa": "slas",
+  "cn": "切下的食物）薄片 vt. 把……切成薄片",
+  "propn": false,
+  "raw": "slice /slas/ n.（切下的食物）薄片 vt. 把……切成薄片"
+ },
+ {
+  "word": "slice ... off",
+  "ipa": "",
+  "cn": "切下",
+  "propn": false,
+  "raw": "slice ... off 切下"
+ },
+ {
+  "word": "somewhat",
+  "ipa": "smwt",
+  "cn": "有点；稍微",
+  "propn": false,
+  "raw": "somewhat /smwt/ adv. 有点；稍微"
+ },
+ {
+  "word": "stable",
+  "ipa": "stebl",
+  "cn": "稳定的；稳重的",
+  "propn": false,
+  "raw": "stable /stebl/ adj. 稳定的；稳重的"
+ },
+ {
+  "word": "stuffvt. 填满；把……塞进 n. 东西；物品",
+  "ipa": "",
+  "cn": "填满；把……塞进 n. 东西；物品",
+  "propn": false,
+  "raw": "stuffvt. 填满；把……塞进 n. 东西；物品"
+ },
+ {
+  "word": "temper",
+  "ipa": "",
+  "cn": "脾气；火气",
+  "propn": false,
+  "raw": "temper // n. 脾气；火气"
+ },
+ {
+  "word": "trick",
+  "ipa": "",
+  "cn": "诀窍；计谋；把戏",
+  "propn": false,
+  "raw": "trick // n. 诀窍；计谋；把戏"
+ },
+ {
+  "word": "vegetarian",
+  "ipa": "vedterin",
+  "cn": "素食者",
+  "propn": false,
+  "raw": "vegetarian /vedterin/ n. 素食者"
+ },
+ {
+  "word": "vinegar",
+  "ipa": "vn(r)",
+  "cn": "醋",
+  "propn": false,
+  "raw": "vinegar /vn(r)/ n. 醋"
+ },
+ {
+  "word": "vitamin",
+  "ipa": "vtmn; NAmE vat-",
+  "cn": "维生素",
+  "propn": false,
+  "raw": "vitamin /vtmn; NAmE vat-/ n. 维生素"
+ }
+]

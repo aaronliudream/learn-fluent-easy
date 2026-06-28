@@ -1,0 +1,710 @@
+{
+  "volume": "elective2",
+  "unit": "U1",
+  "topic": "Science and Scientists",
+  "source": "人教版2019选择性必修二 Unit 1 同主题完形(非牛顿流体实验/一位年轻研究者的一天/干净的水救人/参观科学博物馆/疟疾疫苗团队/提问的学习策略)。用词限 U1/初中/常见词,答案唯一,4选项同词性,与阅读/听力关不撞文章。答案位由 _balance 打散。",
+  "passages": [
+    {
+      "code": "cz1",
+      "title": "A Strange Fluid",
+      "text": "In class today, our teacher showed us a very (1)____ experiment. She mixed equal parts of water and cornflour in a bowl. The mixture looked like a normal (2)____ that you could pour from one hand to another. But then she pressed it hard with her finger, and it suddenly became as (3)____ as concrete. As soon as she stopped pressing, it turned soft again. We could not (4)____ our eyes. The teacher explained that this odd fluid can (5)____ from a liquid into a solid when pressure is put on it. She asked us to (6)____ why this happens, just as a real scientist would. None of us knew the (7)____ at first, so we began to make guesses. This little (8)____ showed us that something can act as two things at the same time. More importantly, it taught us to ask (9)____ about the world around us. That, our teacher said, is the (10)____ of every great discovery.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "strange",
+            "boring",
+            "dirty",
+            "quiet"
+          ],
+          "answer_index": 0,
+          "explanation": "a strange experiment 奇怪的实验。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "stone",
+            "liquid",
+            "book",
+            "song"
+          ],
+          "answer_index": 1,
+          "explanation": "a normal liquid 普通液体,可倒。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "soft",
+            "warm",
+            "hard",
+            "wet"
+          ],
+          "answer_index": 2,
+          "explanation": "as hard as concrete 像混凝土一样硬。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "close",
+            "open",
+            "wash",
+            "believe"
+          ],
+          "answer_index": 3,
+          "explanation": "could not believe our eyes 不敢相信眼睛。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "change",
+            "hide",
+            "fall",
+            "wait"
+          ],
+          "answer_index": 0,
+          "explanation": "change from a liquid into a solid 由液变固。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "forget",
+            "ask",
+            "sell",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "ask why 追问为什么。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "price",
+            "noise",
+            "answer",
+            "weather"
+          ],
+          "answer_index": 2,
+          "explanation": "know the answer 知道答案。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "holiday",
+            "market",
+            "garden",
+            "experiment"
+          ],
+          "answer_index": 3,
+          "explanation": "this little experiment 这个小实验。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "questions",
+            "prices",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 0,
+          "explanation": "ask questions 提问。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "start",
+            "noise",
+            "shadow"
+          ],
+          "answer_index": 1,
+          "explanation": "the start of every discovery 每个发现的起点。"
+        }
+      ]
+    },
+    {
+      "code": "cz2",
+      "title": "A Day in the Lab",
+      "text": "My sister works as a young researcher, and last week she let me (1)____ a whole day in her lab. I had imagined scientists doing exciting things, but most of the day was quiet and (2)____. First she wrote down a clear (3)____ that she wanted to answer. Then she carefully took many (4)____ and wrote every number in a notebook. When two of her results seemed (5)____, she did not get angry; she simply ran the test (6)____. 'A good scientist must be (7)____,' she told me with a smile. By the afternoon she had enough (8)____ to draw a careful conclusion. She reminded me that one result alone is never (9)____, because others must be able to repeat it. Watching her work all day, I finally understood that real science is built on patience and (10)____ thinking rather than on lucky guesses.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "sell",
+            "throw",
+            "spend",
+            "lose"
+          ],
+          "answer_index": 2,
+          "explanation": "spend a whole day 度过一整天。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "loud",
+            "funny",
+            "rich",
+            "careful"
+          ],
+          "answer_index": 3,
+          "explanation": "quiet and careful 安静而细致。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "question",
+            "price",
+            "noise",
+            "garden"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear question 一个清晰的问题。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "songs",
+            "measurements",
+            "prices",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "take measurements 进行测量。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "happy",
+            "late",
+            "contradictory",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "seemed contradictory 看起来相互矛盾。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "never",
+            "alone",
+            "abroad",
+            "again"
+          ],
+          "answer_index": 3,
+          "explanation": "run the test again 重新做实验。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "patient",
+            "angry",
+            "lazy",
+            "afraid"
+          ],
+          "answer_index": 0,
+          "explanation": "must be patient 必须有耐心。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "noise",
+            "data",
+            "weather",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "enough data 足够的数据。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "wrong",
+            "empty",
+            "enough",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "never enough 永远不够。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "lucky",
+            "loud",
+            "rich",
+            "careful"
+          ],
+          "answer_index": 3,
+          "explanation": "careful thinking 缜密的思考。"
+        }
+      ]
+    },
+    {
+      "code": "cz3",
+      "title": "Clean Water Saves Lives",
+      "text": "Long ago, many cities had no safe water, and dangerous diseases spread (1)____. People did not understand that the (2)____ they drank could make them ill. Some companies sold water taken straight from the river, even though it was (3)____ by waste. Those who drank it were far more (4)____ to fall ill than those who boiled their water first. Over time, scientists showed a clear (5)____ between dirty water and disease. Thanks to their (6)____, water companies slowly began to sell (7)____ water that was safe to drink. As a result, the (8)____ of many illnesses fell sharply year after year. Even today, however, the work is not (9)____, for some places still lack clean water. By keeping our water (10)____, we protect the health of whole towns and cities.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "quickly",
+            "slowly",
+            "quietly",
+            "kindly"
+          ],
+          "answer_index": 0,
+          "explanation": "spread quickly 迅速传播。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "song",
+            "water",
+            "noise",
+            "price"
+          ],
+          "answer_index": 1,
+          "explanation": "the water they drank 他们喝的水。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "sold",
+            "lost",
+            "infected",
+            "hidden"
+          ],
+          "answer_index": 2,
+          "explanation": "infected by waste 被废物污染。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "famous",
+            "afraid",
+            "polite",
+            "likely"
+          ],
+          "answer_index": 3,
+          "explanation": "more likely to fall ill 更可能生病。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "link",
+            "price",
+            "song",
+            "noise"
+          ],
+          "answer_index": 0,
+          "explanation": "a clear link 明确的联系。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "holiday",
+            "work",
+            "market",
+            "garden"
+          ],
+          "answer_index": 1,
+          "explanation": "thanks to their work 多亏他们的努力。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "noisy",
+            "dirty",
+            "pure",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "pure water 干净的水。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "price",
+            "weather",
+            "garden",
+            "number"
+          ],
+          "answer_index": 3,
+          "explanation": "the number of illnesses 疾病的数量。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "finished",
+            "begun",
+            "lost",
+            "sold"
+          ],
+          "answer_index": 0,
+          "explanation": "the work is not finished 工作尚未完成。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "dirty",
+            "clean",
+            "loud",
+            "warm"
+          ],
+          "answer_index": 1,
+          "explanation": "keep our water clean 保持水的洁净。"
+        }
+      ]
+    },
+    {
+      "code": "cz4",
+      "title": "A Visit to the Science Museum",
+      "text": "Last weekend my class visited a science museum, and it was the best (1)____ of the term. The first thing we saw was a giant dish that (2)____ your voice back so you could talk to a friend far (3)____. Next, we stepped in front of a bright light that cast our (4)____ on the wall in the colours of the rainbow. My favourite room was full of (5)____ that you could play with your feet, but instead of music they made the (6)____ of animals. One machine even let us look through a (7)____ at tiny living cells. Everywhere we went, a guide encouraged us to (8)____ questions about what we saw. By the end of the day, I had learned that science can be both useful and (9)____. I left the museum feeling more (10)____ about the world than ever before.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "price",
+            "noise",
+            "trip",
+            "song"
+          ],
+          "answer_index": 2,
+          "explanation": "the best trip 最棒的一次出游。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "sold",
+            "lost",
+            "hid",
+            "sent"
+          ],
+          "answer_index": 3,
+          "explanation": "sent your voice back 把声音送回。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "away",
+            "below",
+            "above",
+            "inside"
+          ],
+          "answer_index": 0,
+          "explanation": "far away 在远处。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "prices",
+            "shadows",
+            "songs",
+            "tickets"
+          ],
+          "answer_index": 1,
+          "explanation": "cast our shadows 投下影子。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "books",
+            "coins",
+            "keys",
+            "plates"
+          ],
+          "answer_index": 2,
+          "explanation": "keys you could play with your feet 用脚踩的琴键。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "weather",
+            "garden",
+            "sounds"
+          ],
+          "answer_index": 3,
+          "explanation": "the sounds of animals 动物的声音。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "microscope",
+            "window",
+            "door",
+            "wall"
+          ],
+          "answer_index": 0,
+          "explanation": "look through a microscope 透过显微镜看。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "ask",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "ask questions 提问。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "boring",
+            "sad",
+            "fun",
+            "empty"
+          ],
+          "answer_index": 2,
+          "explanation": "useful and fun 既有用又有趣。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "angry",
+            "tired",
+            "curious"
+          ],
+          "answer_index": 3,
+          "explanation": "more curious 更加好奇。"
+        }
+      ]
+    },
+    {
+      "code": "cz5",
+      "title": "Working on a Vaccine",
+      "text": "A team of scientists once spent years trying to (1)____ a new vaccine for malaria. At the (2)____ stage, nothing seemed to work, and the members often felt (3)____. Their early experiments gave (4)____ results that did not agree with one another. Some believed they should target the disease in one way, while others were (5)____ that a different method was better. The real problem was (6)____ they could agree on a single theory to follow. After many failures, they decided to calm down and do some (7)____ work step by step. Slowly, the data began to (8)____ in the same direction. The team learned that science needs not only clever ideas but also (9)____ and teamwork. In the end, their careful effort brought them much closer to a (10)____ that could protect millions of people.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "develop",
+            "sell",
+            "lose",
+            "hide"
+          ],
+          "answer_index": 0,
+          "explanation": "develop a vaccine 研发疫苗。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "last",
+            "initial",
+            "empty",
+            "free"
+          ],
+          "answer_index": 1,
+          "explanation": "the initial stage 最初阶段。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "happy",
+            "rich",
+            "frustrated",
+            "polite"
+          ],
+          "answer_index": 2,
+          "explanation": "felt frustrated 感到沮丧。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "songs",
+            "prices",
+            "tickets",
+            "contradictory"
+          ],
+          "answer_index": 3,
+          "explanation": "contradictory results 相互矛盾的结果。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "sure",
+            "late",
+            "empty",
+            "free"
+          ],
+          "answer_index": 0,
+          "explanation": "were sure 确信。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "because",
+            "whether",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "the problem was whether 问题在于是否。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "lazy",
+            "loud",
+            "solid",
+            "rich"
+          ],
+          "answer_index": 2,
+          "explanation": "solid work 扎实的工作。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "hide",
+            "lose",
+            "point"
+          ],
+          "answer_index": 3,
+          "explanation": "point in the same direction 指向同一方向。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "patience",
+            "money",
+            "noise",
+            "luck"
+          ],
+          "answer_index": 0,
+          "explanation": "patience and teamwork 耐心与团队合作。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "price",
+            "vaccine",
+            "garden",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "a vaccine 一种疫苗。"
+        }
+      ]
+    },
+    {
+      "code": "cz6",
+      "title": "The Power of Asking Questions",
+      "text": "One of the best ways to understand a science text is to keep (1)____ questions while you read. Good readers do not just take in the words; they wonder (2)____ the writer makes each point. When my teacher gave us a difficult (3)____ about scientists, she told us to stop after every paragraph and ask ourselves a (4)____. This simple habit helped the ideas become much (5)____ in our minds. We asked what the writer meant, (6)____ the experiment worked, and why the result mattered. Slowly, the hard text began to make (7)____. The same skill, our teacher said, is what real scientists (8)____ every day, since their work always starts with a question. By the end of the lesson, we all agreed that asking questions had made the reading far less (9)____. It also made us feel more (10)____ in our own ability to learn.",
+      "questions": [
+        {
+          "blank": 1,
+          "options": [
+            "selling",
+            "hiding",
+            "asking",
+            "losing"
+          ],
+          "answer_index": 2,
+          "explanation": "keep asking questions 不断提问。"
+        },
+        {
+          "blank": 2,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "why"
+          ],
+          "answer_index": 3,
+          "explanation": "wonder why 想知道为什么。"
+        },
+        {
+          "blank": 3,
+          "options": [
+            "text",
+            "garden",
+            "market",
+            "ticket"
+          ],
+          "answer_index": 0,
+          "explanation": "a difficult text 一篇难读的文章。"
+        },
+        {
+          "blank": 4,
+          "options": [
+            "song",
+            "question",
+            "price",
+            "noise"
+          ],
+          "answer_index": 1,
+          "explanation": "ask ourselves a question 问自己一个问题。"
+        },
+        {
+          "blank": 5,
+          "options": [
+            "louder",
+            "richer",
+            "clearer",
+            "wetter"
+          ],
+          "answer_index": 2,
+          "explanation": "much clearer 清晰得多。"
+        },
+        {
+          "blank": 6,
+          "options": [
+            "price",
+            "noise",
+            "song",
+            "how"
+          ],
+          "answer_index": 3,
+          "explanation": "how the experiment worked 实验如何运作。"
+        },
+        {
+          "blank": 7,
+          "options": [
+            "sense",
+            "money",
+            "noise",
+            "weather"
+          ],
+          "answer_index": 0,
+          "explanation": "make sense 变得讲得通。"
+        },
+        {
+          "blank": 8,
+          "options": [
+            "sell",
+            "do",
+            "hide",
+            "lose"
+          ],
+          "answer_index": 1,
+          "explanation": "what scientists do 科学家所做的事。"
+        },
+        {
+          "blank": 9,
+          "options": [
+            "happy",
+            "rich",
+            "scary",
+            "free"
+          ],
+          "answer_index": 2,
+          "explanation": "far less scary 没那么可怕。"
+        },
+        {
+          "blank": 10,
+          "options": [
+            "afraid",
+            "angry",
+            "tired",
+            "confident"
+          ],
+          "answer_index": 3,
+          "explanation": "more confident 更自信。"
+        }
+      ]
+    }
+  ]
+}

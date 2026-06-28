@@ -1,8 +1,10 @@
 import type { GaokaoHubGrade, GradeCourseDef, UnitDef } from "./types";
+import { DEFAULT_PUBLISHER, type Publisher } from "./publisher";
 
 import year1 from "@/data/gaokaoHub/year1.json";
 import year2 from "@/data/gaokaoHub/year2.json";
 import year3 from "@/data/gaokaoHub/year3.json";
+import sufeCourses from "@/data/gaokaoHub/sufe-courses.json";
 
 const COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
   1: (year1 as { year1: GradeCourseDef }).year1,
@@ -10,25 +12,46 @@ const COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
   3: (year3 as { year3: GradeCourseDef }).year3,
 };
 
-export function getGradeCourse(grade: GaokaoHubGrade): GradeCourseDef {
-  return COURSES[grade];
+// 上外(sufe)课本同步结构(只含已灌库的 required1/required2;9关全 DB 驱动)。
+const SUFE_COURSES = sufeCourses as unknown as Record<GaokaoHubGrade, GradeCourseDef>;
+// 外研社(fltrp)暂无内容 → 空结构(不泄漏人教单元;books 页已按 DB count 门控为整理中)。
+const EMPTY_COURSES: Record<GaokaoHubGrade, GradeCourseDef> = {
+  1: { name: "高一", semesters: {} },
+  2: { name: "高二", semesters: {} },
+  3: { name: "高三", semesters: {} },
+};
+
+/** 按 publisher 选课本结构源。pep(默认)→ 人教 year*.json(零回归);sufe → 上外;fltrp → 空。 */
+function coursesFor(publisher: Publisher = DEFAULT_PUBLISHER): Record<GaokaoHubGrade, GradeCourseDef> {
+  if (publisher === "sufe") return SUFE_COURSES;
+  if (publisher === "fltrp") return EMPTY_COURSES;
+  return COURSES;
 }
 
-export function semesterIdsForGrade(grade: GaokaoHubGrade): string[] {
-  return Object.keys(COURSES[grade].semesters);
+export function getGradeCourse(grade: GaokaoHubGrade, publisher: Publisher = DEFAULT_PUBLISHER): GradeCourseDef {
+  return coursesFor(publisher)[grade];
 }
 
-export function findSemester(semesterId: string): (import("./types").SemesterDef & { id: string }) | null {
+export function semesterIdsForGrade(grade: GaokaoHubGrade, publisher: Publisher = DEFAULT_PUBLISHER): string[] {
+  return Object.keys(coursesFor(publisher)[grade].semesters);
+}
+
+export function findSemester(
+  semesterId: string,
+  publisher: Publisher = DEFAULT_PUBLISHER,
+): (import("./types").SemesterDef & { id: string }) | null {
+  const courses = coursesFor(publisher);
   for (const grade of [1, 2, 3] as GaokaoHubGrade[]) {
-    const sem = COURSES[grade].semesters[semesterId];
+    const sem = courses[grade].semesters[semesterId];
     if (sem) return { ...sem, id: semesterId };
   }
   return null;
 }
 
-export function findUnit(unitId: string): UnitDef | null {
+export function findUnit(unitId: string, publisher: Publisher = DEFAULT_PUBLISHER): UnitDef | null {
+  const courses = coursesFor(publisher);
   for (const grade of [1, 2, 3] as GaokaoHubGrade[]) {
-    for (const sem of Object.values(COURSES[grade].semesters)) {
+    for (const sem of Object.values(courses[grade].semesters)) {
       const u = sem.units.find((x) => x.id === unitId);
       if (u) return u;
     }
@@ -36,18 +59,19 @@ export function findUnit(unitId: string): UnitDef | null {
   return null;
 }
 
-export function gradeForUnit(unitId: string): GaokaoHubGrade | null {
+export function gradeForUnit(unitId: string, publisher: Publisher = DEFAULT_PUBLISHER): GaokaoHubGrade | null {
+  const courses = coursesFor(publisher);
   for (const grade of [1, 2, 3] as GaokaoHubGrade[]) {
-    for (const sem of Object.values(COURSES[grade].semesters)) {
+    for (const sem of Object.values(courses[grade].semesters)) {
       if (sem.units.some((x) => x.id === unitId)) return grade;
     }
   }
   return null;
 }
 
-export function totalStagesForGrade(grade: GaokaoHubGrade): number {
+export function totalStagesForGrade(grade: GaokaoHubGrade, publisher: Publisher = DEFAULT_PUBLISHER): number {
   let n = 0;
-  for (const sem of Object.values(COURSES[grade].semesters)) {
+  for (const sem of Object.values(coursesFor(publisher)[grade].semesters)) {
     for (const u of sem.units) {
       if (u.available) n += u.stages.length;
     }
@@ -60,9 +84,9 @@ export function unitLabel(unit: { unitKey: string }): string {
   return unit.unitKey === "WU" ? "Welcome Unit" : `Unit ${unit.unitKey.replace(/^U/i, "")}`;
 }
 
-export function totalUnitsForGrade(grade: GaokaoHubGrade): number {
+export function totalUnitsForGrade(grade: GaokaoHubGrade, publisher: Publisher = DEFAULT_PUBLISHER): number {
   let n = 0;
-  for (const sem of Object.values(COURSES[grade].semesters)) {
+  for (const sem of Object.values(coursesFor(publisher)[grade].semesters)) {
     n += sem.units.filter((u) => u.available).length;
   }
   return n;

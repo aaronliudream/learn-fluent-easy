@@ -8,7 +8,7 @@ import { useUnitVocab } from "@/lib/juniorHub/useUnitVocab";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { loadUnitVocabProgress, pctOf, type UnitOverall } from "@/lib/juniorHub/unitOverallProgress";
 import { loadProgressForCodes } from "@/lib/juniorGrammarUnits";
-import { DEFAULT_PUBLISHER } from "@/lib/gaokaoHub/publisher";
+import { withPublisher, type Publisher } from "@/lib/gaokaoHub/publisher";
 import type { GrammarProgress } from "@/lib/juniorGrammarQuestionMastery";
 import type { UnitDef, UnitState } from "@/lib/gaokaoHub/types";
 
@@ -34,6 +34,7 @@ function StageRings({ done, mastered, total }: { done: number; mastered: number;
 function StageList({
   unit,
   grade,
+  publisher,
   us,
   base,
   semId,
@@ -42,13 +43,15 @@ function StageList({
 }: {
   unit: UnitDef;
   grade: number; // junior 口径 grade(=gaokao grade + 9)
+  publisher: Publisher;
   us: UnitState | null;
   base: string;
   semId: string;
   unitId: string;
   nav: NavigateFunction;
 }) {
-  const words = useUnitVocab(unit, grade);
+  const words = useUnitVocab(unit, grade, publisher);
+  const wp = (p: string) => withPublisher(p, publisher);
   const [vocabProg, setVocabProg] = useState<UnitOverall | null>(null);
   const [grammarProg, setGrammarProg] = useState<GrammarProgress | null>(null);
 
@@ -70,7 +73,7 @@ function StageList({
     (async () => {
       const codes = unit.grammarCodes ?? [];
       if (!codes.length) return;
-      const g = await loadProgressForCodes(codes, DEFAULT_PUBLISHER);
+      const g = await loadProgressForCodes(codes, publisher);
       if (!cancelled) setGrammarProg(g);
     })();
     return () => {
@@ -86,7 +89,7 @@ function StageList({
           <button
             key={stage.id}
             type="button"
-            onClick={() => nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
+            onClick={() => nav(wp(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`))}
             className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
               done ? "border-[#C9E0A8]" : "border-[#FF6B35]/40"
             }`}
@@ -119,9 +122,9 @@ function StageList({
 
 export default function GaokaoHubUnit() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
-  const { grade, state } = useGaokaoHub();
+  const { grade, publisher, state } = useGaokaoHub();
   const nav = useNavigate();
-  const unit = unitId ? findUnit(unitId) : null;
+  const unit = unitId ? findUnit(unitId, publisher) : null;
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
   const base = `/gaokao/hub/${grade}`;
@@ -133,7 +136,7 @@ export default function GaokaoHubUnit() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/semester/${semId}`)} className="text-xl">
+        <button type="button" onClick={() => nav(withPublisher(`${base}/semester/${semId}`, publisher))} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">
@@ -167,7 +170,7 @@ export default function GaokaoHubUnit() {
           </div>
         </div>
       </div>
-      <StageList unit={unit} grade={grade + 9} us={us} base={base} semId={semId} unitId={unitId} nav={nav} />
+      <StageList unit={unit} grade={grade + 9} publisher={publisher} us={us} base={base} semId={semId} unitId={unitId} nav={nav} />
     </>
   );
 }

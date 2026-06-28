@@ -1141,22 +1141,27 @@ function GrammarStage({
   grade,
   onFinish,
   basePath = "/junior",
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
   basePath?: string;
+  publisher?: string | null;
 }) {
   const pointId = useGrammarPointId(unit.grammarCode);
-  const pub = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(语法卡/进度不过滤,行为不变)
+  // 优先用上层传入的 publisher(已含 ?publisher=);未传则按 basePath 推(/gaokao→pep,/junior→null,行为不变)。
+  const pub = publisher !== undefined ? publisher : publisherForBasePath(basePath);
   // returnTo = 当前关 URL(高中=/gaokao/hub/...);子页带它返回 → 全程不掉初中。
-  const returnTo = encodeURIComponent(window.location.pathname);
-  const masteryPath = pointId ? `${basePath}/grammar/${pointId}/mastery?returnTo=${returnTo}` : null;
+  const returnTo = encodeURIComponent(window.location.pathname + window.location.search);
+  // 子页带上 publisher(非 pep 时),让综合测/真题测按出版社取题与算掌握度;pep/junior(null)不加,URL 干净零回归。
+  const pubQ = pub && pub !== "pep" ? `&publisher=${pub}` : "";
+  const masteryPath = pointId ? `${basePath}/grammar/${pointId}/mastery?returnTo=${returnTo}${pubQ}` : null;
   const kpPracticeId = useKnowledgePointId(unit.grammarKpCode);
 
   // 单知识点专项：配了 grammarKpCode 的单元只练该 kp(优先于综合测/单点闯关)。
   if (unit.grammarKpCode && kpPracticeId) {
-    const kpPath = `${basePath}/grammar/kp/${kpPracticeId}?returnTo=${returnTo}`;
+    const kpPath = `${basePath}/grammar/kp/${kpPracticeId}?returnTo=${returnTo}${pubQ}`;
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
         <GrammarTipsCard volume={unit.book} unit={unit.unitKey} publisher={pub} />
@@ -1180,7 +1185,7 @@ function GrammarStage({
 
   // 多语法点单元：走「综合测试」(合并抽题 + 按点算 Unit 掌握度)。
   if (unit.grammarCodes && unit.grammarCodes.length > 0) {
-    const testPath = `${basePath}/unit-grammar/${grade}/${unit.id}?returnTo=${returnTo}`;
+    const testPath = `${basePath}/unit-grammar/${grade}/${unit.id}?returnTo=${returnTo}${pubQ}`;
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm">
         <p className="mb-3 text-sm text-[#5C5751]">
@@ -1282,6 +1287,7 @@ function ReadingStage({
   onWrong,
   markComplete,
   basePath = "/junior",
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
@@ -1289,6 +1295,7 @@ function ReadingStage({
   onWrong: (q: QuizQuestion) => void;
   markComplete: () => void;
   basePath?: string;
+  publisher?: string | null;
 }) {
   // 有 DB 内容(已回填 volume/unit 的单元)→ 卡片列表(状态/词数/难度/成绩)+ 做过≥1篇标记本关通过;
   // 无 DB 内容(grade8/9/Starter)→ 回退原内联逻辑,行为不变。可复用:任何单元有对应 DB 阅读即此样式。
@@ -1299,7 +1306,7 @@ function ReadingStage({
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const pub = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(不过滤,行为不变)
+      const pub = publisher !== undefined ? publisher : publisherForBasePath(basePath);
       let rq = supabase
         .from("junior_reading")
         .select("id,title,word_count,difficulty")
@@ -1358,7 +1365,7 @@ function ReadingStage({
     const pct = total ? Math.round((tried / total) * 100) : 0;
     const rec =
       cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
-    const enc = encodeURIComponent(window.location.pathname);
+    const enc = encodeURIComponent(window.location.pathname + window.location.search);
     const diffColor = (d: number) =>
       d >= 3 ? "text-rose-500" : d === 2 ? "text-amber-500" : "text-emerald-500";
 
@@ -1479,12 +1486,14 @@ function ClozeStage({
   onFinish,
   markComplete,
   basePath = "/junior",
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
   onFinish: () => void;
   markComplete: () => void;
   basePath?: string;
+  publisher?: string | null;
 }) {
   const [dbRows, setDbRows] = useState<JrRow[] | null>(null);
   const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
@@ -1501,7 +1510,7 @@ function ClozeStage({
             .eq("grade", grade)
             .eq("volume", unit.book)
             .eq("unit", unit.unitKey);
-          const pub = publisherForBasePath(basePath);
+          const pub = publisher !== undefined ? publisher : publisherForBasePath(basePath);
           if (pub) cq = cq.eq("publisher", pub);
           return cq.order("sort_order", { ascending: true });
         })(),
@@ -1547,7 +1556,7 @@ function ClozeStage({
   const tried = cards.filter((c) => c.status !== "new").length;
   const pct = total ? Math.round((tried / total) * 100) : 0;
   const rec = cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
-  const enc = encodeURIComponent(window.location.pathname);
+  const enc = encodeURIComponent(window.location.pathname + window.location.search);
   const diffColor = (d: number) => (d >= 3 ? "text-rose-500" : d === 2 ? "text-amber-500" : "text-emerald-500");
 
   return (
@@ -1604,6 +1613,7 @@ function ListeningStage({
   onCorrect,
   onWrong,
   basePath = "/junior",
+  publisher,
 }: {
   unit: UnitDef;
   grade: number;
@@ -1613,6 +1623,7 @@ function ListeningStage({
   onCorrect: () => void;
   onWrong: (q: ListeningQuestion) => void;
   basePath?: string;
+  publisher?: string | null;
 }) {
   // 有 DB 内容(已回填 volume/unit)→ 卡片列表(状态/题数/最高分)+ 做过≥1条标记本关通过(镜像阅读);
   // 无 DB 内容(grade8/9/Starter,volume/unit 为 NULL)→ 回退原内联 ListenMcStage,行为不变。
@@ -1631,7 +1642,7 @@ function ListeningStage({
             .eq("grade", grade)
             .eq("volume", unit.book)
             .eq("unit", unit.unitKey);
-          const pub = publisherForBasePath(basePath);
+          const pub = publisher !== undefined ? publisher : publisherForBasePath(basePath);
           if (pub) lq = lq.eq("publisher", pub);
           return lq.order("difficulty", { ascending: true });
         })(),
@@ -1699,7 +1710,7 @@ function ListeningStage({
     const pct = total ? Math.round((tried / total) * 100) : 0;
     const rec =
       cards.find((c) => c.status === "progress") ?? cards.find((c) => c.status === "new") ?? null;
-    const enc = encodeURIComponent(window.location.pathname);
+    const enc = encodeURIComponent(window.location.pathname + window.location.search);
 
     return (
       <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-card">
@@ -2025,7 +2036,9 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   const { grade, state, setState, addMistake, completeStage } = useJuniorHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
-  const publisher = publisherForBasePath(basePath); // /gaokao→'pep';/junior→null(共用组件初中路径不过滤)
+  const [hubSearch] = useSearchParams();
+  // /gaokao→读 ?publisher=(默认 'pep');/junior→null(共用组件初中路径不过滤,字节级不变)。
+  const publisher = publisherForBasePath(basePath, hubSearch);
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
@@ -2056,7 +2069,6 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
   }, [completeStage, onComplete, stageIdx, unitId]);
 
   // 从专区 play 页做完后带 ?done=1 返回 → 标记本关通过(替代旧"标记本关通过"按钮)。ref 防重。
-  const [hubSearch] = useSearchParams();
   const doneHandledRef = useRef(false);
   useEffect(() => {
     if (hubSearch.get("done") === "1" && !doneHandledRef.current) {
@@ -2142,13 +2154,14 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
         // 例外:有 grammarCodes 的单元走 JuniorUnitGrammarTest 从 DB 按 point 抽题,不依赖 grammarQuiz,放行进 GrammarStage。
         if (unit.grammarQuiz.length === 0 && !(unit.grammarCodes && unit.grammarCodes.length > 0) && !unit.grammarKpCode)
           return <EmptyStageNotice onContinue={handleFinish} />;
-        return <GrammarStage unit={unit} grade={grade} basePath={basePath} onFinish={handleFinish} />;
+        return <GrammarStage unit={unit} grade={grade} basePath={basePath} publisher={publisher} onFinish={handleFinish} />;
       case "reading":
         return (
           <ReadingStage
             unit={unit}
             grade={grade}
             basePath={basePath}
+            publisher={publisher}
             markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
             onWrong={(q) =>
@@ -2170,6 +2183,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             unit={unit}
             grade={grade}
             basePath={basePath}
+            publisher={publisher}
             markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}
           />
@@ -2181,6 +2195,7 @@ export default function JuniorHubStagePlay({ unitId, stageIdx, onComplete, onBac
             unit={unit}
             grade={grade}
             basePath={basePath}
+            publisher={publisher}
             inlineQuestions={listenSentQuestions as ListeningQuestion[]}
             markComplete={() => completeStage(unitId, stageIdx)}
             onFinish={handleFinish}

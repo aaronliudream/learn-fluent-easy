@@ -10,19 +10,21 @@ import {
 import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/gaokaoHub/courseData";
 import { getUnitState } from "@/lib/gaokaoHub/storage";
 import { GaokaoAITestCard } from "@/components/gaokaoHub/AITestCard";
+import { withPublisher } from "@/lib/gaokaoHub/publisher";
 
 export default function GaokaoHubHome() {
-  const { grade, state } = useGaokaoHub();
+  const { grade, publisher, state } = useGaokaoHub();
   const nav = useNavigate();
-  const course = getGradeCourse(grade);
+  const wp = (p: string) => withPublisher(p, publisher);
+  const course = getGradeCourse(grade, publisher);
   const gradeP = getGradeProgress(state, grade);
-  const semIds = semesterIdsForGrade(grade);
+  const semIds = semesterIdsForGrade(grade, publisher);
   const v1Id = semIds[0];
   const v2Id = semIds[1];
   const semV1 = v1Id ? getSemesterProgress(state, v1Id) : { percent: 0 };
   const semV2 = v2Id ? getSemesterProgress(state, v2Id) : { percent: 0 };
 
-  const currentUnit = findUnit(state.currentUnit);
+  const currentUnit = findUnit(state.currentUnit, publisher);
   const us = currentUnit ? getUnitState(state, currentUnit.id) : null;
   const nextStageIdx = us?.completedStages.length ?? 0;
   const nextStage = currentUnit?.stages[nextStageIdx];
@@ -41,7 +43,7 @@ export default function GaokaoHubHome() {
               <div className="text-base font-semibold">{state.user.name}</div>
             </div>
           </div>
-          <Link to={`${base}/mistakes`} className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
+          <Link to={wp(`${base}/mistakes`)} className="relative grid size-9 place-items-center rounded-full bg-white/20 text-base">
             📝
             {state.mistakes.length > 0 && (
               <span className="absolute right-1 top-1 size-2.5 rounded-full border-2 border-[#FF6B35] bg-[#FFE062]" />
@@ -75,7 +77,7 @@ export default function GaokaoHubHome() {
             <button
               type="button"
               onClick={() =>
-                nav(`${base}/semester/${state.currentSemester}/unit/${currentUnit.id}/stage/${nextStageIdx}`)
+                nav(wp(`${base}/semester/${state.currentSemester}/unit/${currentUnit.id}/stage/${nextStageIdx}`))
               }
               className="w-full rounded-2xl bg-gradient-to-br from-[#378ADD] to-[#5DAEEE] p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5"
             >
@@ -101,7 +103,7 @@ export default function GaokaoHubHome() {
         <section className="mb-4">
           <div className="mb-2 flex items-center justify-between px-1">
             <div className="text-base font-semibold">📚 我的课程</div>
-            <Link to={`${base}/course`} className="text-sm font-medium text-[#FF6B35]">
+            <Link to={wp(`${base}/course`)} className="text-sm font-medium text-[#FF6B35]">
               查看全部 →
             </Link>
           </div>
@@ -114,7 +116,7 @@ export default function GaokaoHubHome() {
                 key={semId}
                 type="button"
                 disabled={locked}
-                onClick={() => !locked && nav(`${base}/semester/${semId}`)}
+                onClick={() => !locked && nav(wp(`${base}/semester/${semId}`))}
                 className={`mb-3 w-full rounded-2xl bg-white p-4 text-left shadow-sm ${locked ? "opacity-70" : "transition hover:-translate-y-0.5"}`}
               >
                 <div className="flex items-center gap-3">

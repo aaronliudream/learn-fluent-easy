@@ -1,0 +1,1862 @@
+{
+  "1": {
+    "name": "高一",
+    "semesters": {
+      "gk_required1": {
+        "name": "必修第一册",
+        "available": true,
+        "units": [
+          {
+            "id": "sufe_required1_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "required1",
+            "title": "School Life",
+            "cn": "学校生活",
+            "emoji": "🏫",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "时态(复习 + 过去将来时)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "时态(复习 + 过去将来时)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s1u1.01",
+              "s1u1.02",
+              "s1u1.03"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "prompt": "Write a short passage of about 100 words describing your ideal school life. Include: 1) the courses or way of learning you would like; 2) the school activities or clubs you want to take part in; 3) what kind of classmates and teacher-student relationship you hope for; 4) how this school life would make you feel. Use tenses correctly (present / future) and keep every sentence on topic.",
+              "promptCn": "上外版必修一 Unit 1 写作任务。请用英语写一篇约100词的短文,描述你理想的学校生活,内容包括:① 理想的课程或学习方式;② 你想参加的校园活动或社团;③ 你希望拥有怎样的同学与师生关系;④ 这样的学校生活会给你怎样的感受。注意:用时态正确(现在/将来),句子地道、围绕中心。",
+              "sampleWords": [
+                "ideal",
+                "creative",
+                "club",
+                "activity",
+                "classmate",
+                "sympathetic",
+                "relaxed",
+                "confident",
+                "chapter",
+                "forward"
+              ]
+            },
+            "quizQuestions": [],
+            "listeningQuestions": [],
+            "finalReading": {
+              "passage": "On her first morning at senior high, Mia felt so nervous that her hands shook while she looked for her classroom. A friendly senior student noticed her and kindly walked her to the right room. By the end of that day, Mia had already made two new friends and could not stop smiling on her way home.",
+              "questions": [
+                {
+                  "q": "How did Mia feel at the very start of her first morning?",
+                  "options": [
+                    "Anxious and unsure of where to go.",
+                    "Calm and full of confidence.",
+                    "Bored and uninterested.",
+                    "Angry at her new teachers."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文她紧张到手发抖、在找教室,转述其焦虑;其余与原文相反或未提。"
+                },
+                {
+                  "q": "What happened to Mia by the end of the day?",
+                  "options": [
+                    "She had made new friends and felt happy.",
+                    "She decided to leave the school.",
+                    "She lost her way home.",
+                    "She still knew nobody."
+                  ],
+                  "answer": "A",
+                  "explanation": "末句她已交到两个新朋友、回家一路微笑(短文后半段,覆盖不同位置),转述其结果。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required1_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "required1",
+            "title": "Language and Culture",
+            "cn": "语言与文化",
+            "emoji": "🗣️",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "基本句型(Basic Sentence Patterns)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "基本句型(Basic Sentence Patterns)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s1u2.01",
+              "s1u2.02",
+              "s1u2.03"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "prompt": "Suppose some students from your sister school abroad are visiting your school, and you are asked to give a short talk about \"Chinese words and their stories\". Write a short passage (about 80 words) to introduce one Chinese word (e.g. \"chi\"). Include: 1) a clear topic sentence (the word has many extended meanings); 2) two or three examples showing it goes beyond its literal meaning; 3) a brief note on the culture behind the word. Make sure every supporting sentence relates to the topic sentence and your pronouns are clear.",
+              "promptCn": "假设来自姐妹学校的外国学生正在参观你校,你被邀请做一个关于\"汉语词及其故事\"的小演讲。请用英语写一篇约80词的短文,介绍一个汉语词(如\"吃 chi\"),内容包括:① 一个清楚的主题句(这个词有很多引申含义);② 两三个例子说明它超出字面意思;③ 简述这个词背后的文化。注意:所有支撑句都要围绕主题句,代词指代清楚。",
+              "sampleWords": [
+                "word",
+                "meaning",
+                "literal",
+                "extended",
+                "culture",
+                "example",
+                "jealous",
+                "education",
+                "express",
+                "behind"
+              ]
+            },
+            "quizQuestions": [],
+            "listeningQuestions": [],
+            "finalReading": {
+              "passage": "When Mark first lived in Spain, he was puzzled that people said \"in a minute\" but often kept him waiting for an hour. Instead of getting angry, he slowly learned that the words were not meant to be taken literally. A year later, he no longer panicked about small delays, and he felt much more relaxed about time than he had ever been at home.",
+              "questions": [
+                {
+                  "q": "Why was Mark puzzled at first?",
+                  "options": [
+                    "Locals promised something soon, yet made him wait far longer.",
+                    "He could not find any food in Spain.",
+                    "Nobody in Spain could speak English.",
+                    "He had lost his way in the city."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'said \"in a minute\" but often kept him waiting for an hour' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Mark feel about time a year later?",
+                  "options": [
+                    "Angrier than before.",
+                    "Much more relaxed about small delays.",
+                    "Sorry that he had moved there.",
+                    "Too worried to leave home."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'no longer panicked… felt much more relaxed about time'(短文后半段,覆盖不同位置)的转述。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required1_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "required1",
+            "title": "Travel",
+            "cn": "旅行",
+            "emoji": "✈️",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "状语从句复习(Adverbial Clauses)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "状语从句复习(Adverbial Clauses)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s1u3.01",
+              "s1u3.02",
+              "s1u3.03"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "prompt": "Suppose your Canadian friend Chris is planning a trip to China this December. Write an email (about 80 words) to recommend a city and make a three-day travel plan for him, including: 1) the city you recommend and why (history, scenery or food); 2) a rough plan for the three days (attractions, food, shopping, etc.); 3) one line of encouragement or good wishes. Try to use some adverbial clauses to link your ideas.",
+              "promptCn": "假设你的加拿大朋友 Chris 计划今年十二月来中国旅行。请给他写一封约80词的电子邮件,为他推荐一座城市并拟一份三天的旅行计划,内容包括:① 推荐的城市及推荐理由(历史/风景/美食);② 三天的大致安排(景点、美食、购物等);③ 一句鼓励或祝愿。注意:适当使用状语从句使行文连贯。",
+              "sampleWords": [
+                "recommend",
+                "attraction",
+                "scenery",
+                "explore",
+                "depart",
+                "journey",
+                "destination",
+                "souvenir",
+                "historic",
+                "unless"
+              ]
+            },
+            "quizQuestions": [],
+            "listeningQuestions": [],
+            "finalReading": {
+              "passage": "Last winter Liam joined a student exchange and spent two weeks in a small town in the south. At first he felt shy because he knew no one there, but his host family was so kind that he soon felt at home. By the end of the trip, he had made new friends and learned far more about real life than any book had taught him.",
+              "questions": [
+                {
+                  "q": "Why did Liam feel shy at the beginning?",
+                  "options": [
+                    "He did not know anyone in the town yet.",
+                    "He had lost all his money.",
+                    "He could not find the host family.",
+                    "He disliked the cold winter."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'he felt shy because he knew no one there' 的转述;其余与原文不符。"
+                },
+                {
+                  "q": "What did Liam gain by the end of the trip?",
+                  "options": [
+                    "A free plane ticket home.",
+                    "New friends and real-life knowledge.",
+                    "A job in the small town.",
+                    "A large suitcase of souvenirs."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'made new friends and learned far more about real life'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required1_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "required1",
+            "title": "Customs and Traditions",
+            "cn": "习俗与传统",
+            "emoji": "🎎",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "被动语态复习(+ 现在进行被动 + 现在完成被动)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "被动语态复习(+ 现在进行被动 + 现在完成被动)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s1u4.01",
+              "s1u4.02",
+              "s1u4.03"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "prompt": "Your school is holding a coming-of-age ceremony, and a group of American high-school students are coming to visit. Write a paragraph of about 80 words to introduce one Chinese coming-of-age ceremony (such as the ancient hair-pinning or capping ceremony) to them. Include: 1) when and for whom it is held; 2) the main activities; 3) its meaning. Begin with a topic sentence, keep all supporting sentences on one idea, and finish with a concluding sentence.",
+              "promptCn": "你校正在举办成人礼,一群来自美国高中的学生前来参观。请你用英语写一段约80词的介绍,向美国学生介绍一种中国的成人礼(如古代的笄礼或冠礼),内容包括:① 它在什么时候、为谁举行;② 主要的庆祝活动或环节;③ 它的意义。注意:用一个主题句开头,支撑句围绕中心,用一个结尾句收束,保持段落统一。",
+              "sampleWords": [
+                "custom",
+                "tradition",
+                "ceremony",
+                "perform",
+                "mark",
+                "occasion",
+                "responsibility",
+                "respect",
+                "adulthood",
+                "meaningful"
+              ]
+            },
+            "quizQuestions": [],
+            "listeningQuestions": [],
+            "finalReading": {
+              "passage": "On a small island in the South Pacific, young boys come of age by jumping from a tall wooden tower with a vine tied to their ankles. Before the very first jump, the boy's mother holds an object that stands for his childhood, and after he lands the object is thrown away. In this brave way, the boys show that they are ready to leave childhood behind and become men.",
+              "questions": [
+                {
+                  "q": "How do the boys on the island come of age?",
+                  "options": [
+                    "By leaping off a high tower while a vine holds their ankles.",
+                    "By writing a long letter to their parents.",
+                    "By staying quietly at home for a year.",
+                    "By giving away all of their toys."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'jumping from a tall wooden tower with a vine tied to their ankles' 的转述;其余与原文不符。"
+                },
+                {
+                  "q": "What does throwing the object away stand for?",
+                  "options": [
+                    "That the family has become rich.",
+                    "That the boy is leaving childhood behind.",
+                    "That the jump has been cancelled.",
+                    "That the mother wants a new gift."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'show that they are ready to leave childhood behind' 的转述(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "gk_required2": {
+        "name": "必修第二册",
+        "available": true,
+        "units": [
+          {
+            "id": "sufe_required2_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "required2",
+            "title": "Nature",
+            "cn": "自然",
+            "emoji": "🌿",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [
+              {
+                "title": "A Plan to Go Hiking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Are you free this Saturday? I'm planning to go hiking in the hills.",
+                    "cn": "这周六你有空吗?我打算去山里爬山。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "That sounds great. I really need some time in nature.",
+                    "cn": "听起来太好了。我真的需要一些亲近自然的时间。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Let's be quiet so we don't frighten the animals.",
+                    "cn": "我们小声点,免得惊扰了动物。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Good idea. And we must take all our rubbish home.",
+                    "cn": "好主意。还有,我们得把垃圾全带回家。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "定语从句1(who/whom/that/which/whose)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "定语从句1(who/whom/that/which/whose)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s2u1.01",
+              "s2u1.02",
+              "s2u1.03"
+            ],
+            "grammarQuiz": [],
+            "reading": {
+              "passage": "Every spring our class plants young trees on a bare hillside that people once cut for wood. The work is tiring, but we feel proud to be helping the earth. Our teacher says nature cannot be rushed, yet every small tree is a sign of hope.",
+              "passageCn": "每年春天,我们班都会在一片曾被人砍光取材的光秃山坡上种小树。劳动很累,但能为地球出力让我们感到自豪。老师说自然不能急于求成,但每一棵小树都是希望的象征。",
+              "questions": [
+                {
+                  "q": "What had people once done to the hillside?",
+                  "opts": [
+                    "Cut its trees for wood.",
+                    "Built houses on it.",
+                    "Turned it into a lake.",
+                    "Covered it with stones."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "How do the students feel about the work?",
+                  "opts": [
+                    "Proud to be helping the earth.",
+                    "Angry and bored.",
+                    "Afraid of the trees.",
+                    "Sorry they started."
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write about 80 words describing a scene in nature you like, in spatial order (from near to far). End with how it makes you feel.",
+              "promptCn": "用约80词按空间顺序(由近及远)描写一处你喜欢的自然景色,结尾写出它给你的感受。",
+              "sampleWords": [
+                "stream",
+                "grassland",
+                "in front of",
+                "on the left",
+                "in the distance",
+                "bank",
+                "sunset",
+                "glow",
+                "landscape",
+                "peaceful"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "The protection of the natural environment is called ____.",
+                "opts": [
+                  "conservation",
+                  "location",
+                  "establishment",
+                  "generation"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Animals in a zoo must ____ to a climate that is not their own.",
+                "opts": [
+                  "adjust",
+                  "destroy",
+                  "exhibit",
+                  "argue"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Clean water is ____ for every living thing.",
+                "opts": [
+                  "essential",
+                  "cruel",
+                  "romantic",
+                  "frozen"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Pollution is a serious ____ to wild plants and animals.",
+                "opts": [
+                  "threat",
+                  "balance",
+                  "mood",
+                  "cage"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "The young man ____ explained the mystery had grown up near the gardens.",
+                "opts": [
+                  "who",
+                  "which",
+                  "whose",
+                  "where"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "The old tree ____ stood in the middle of the gardens was cut down.",
+                "opts": [
+                  "which",
+                  "who",
+                  "whom",
+                  "whose"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "The king offered a reward to anyone ____ solution would be effective.",
+                "opts": [
+                  "whose",
+                  "who",
+                  "which",
+                  "where"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "These were the bones on ____ ancient symbols had been carved.",
+                "opts": [
+                  "which",
+                  "that",
+                  "whom",
+                  "whose"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "保护蜜蜂就是保护一个健康的世界。",
+                  "他想学一门外语。",
+                  "这幅画挂在大厅里。",
+                  "他们约定八点见面。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Protecting bees means protecting a healthy world for us all."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "恢复自然需要很多年。",
+                  "她每天听英语广播。",
+                  "这只鸟的翅膀受伤了。",
+                  "动物园展出来自各地的动物。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Restoring nature takes many years."
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Many rare plants are now close to extinction.",
+                "opts": [
+                  "许多稀有植物如今濒临灭绝。",
+                  "许多城市的人口正在增长。",
+                  "许多孩子喜欢去公园玩。",
+                  "许多商店今天都关门了。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "We must protect nature for future generations.",
+                "opts": [
+                  "我们应该多读一些好书。",
+                  "我们必须为子孙后代保护自然。",
+                  "我们打算周末去爬山。",
+                  "我们需要更努力地学习。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The balance of nature is delicate and easy to break.",
+                "opts": [
+                  "这本书又长又难懂。",
+                  "天气一整天都很晴朗。",
+                  "自然的平衡很脆弱,容易被打破。",
+                  "这条河里有很多鱼。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Time in nature has a positive effect on our minds.",
+                "opts": [
+                  "亲近自然对我们的心灵有积极影响。",
+                  "城市里的交通非常拥挤。",
+                  "他每天都录下自己的声音。",
+                  "这些花原产于这个地区。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "It is cruel to keep wild animals in small cages.",
+                "opts": [
+                  "把野生动物关在小笼子里很残忍。",
+                  "这座动物园离市中心很远。",
+                  "孩子们正在公园里植树。",
+                  "蜜蜂帮助植物结出果实。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Even a badly damaged river can be restored with care.",
+                "opts": [
+                  "即使严重受损的河流也能被精心修复。",
+                  "她最大的困难是听力。",
+                  "森林里住着许多稀有的鸟。",
+                  "我们应该把垃圾带回家。"
+                ],
+                "answer": 0
+              }
+            ],
+            "finalReading": {
+              "passage": "In a small valley, an old farmer let one corner of his field grow wild. Soon insects, birds and rare flowers returned to that little patch, and the whole farm seemed more alive. He often smiled and said that giving nature a small space had brought the balance of life back to his land.",
+              "questions": [
+                {
+                  "q": "What did the farmer do with one corner of his field?",
+                  "options": [
+                    "He let it grow wild instead of using it.",
+                    "He covered it with stones.",
+                    "He sold it to a neighbour.",
+                    "He built a small house on it."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'let one corner of his field grow wild' 的转述;其余与原文不符或未提。"
+                },
+                {
+                  "q": "What did the farmer believe this had done for his land?",
+                  "options": [
+                    "It had made his land smaller.",
+                    "It had restored the natural balance to his farm.",
+                    "It had driven the birds away.",
+                    "It had ruined his crops."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'giving nature a small space had brought the balance of life back' 的转述(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required2_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "required2",
+            "title": "Animals",
+            "cn": "动物",
+            "emoji": "🐾",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [
+              {
+                "title": "A Trip to the Zoo",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Did you enjoy our trip to the zoo today?",
+                    "cn": "你喜欢今天的动物园之行吗?"
+                  },
+                  {
+                    "role": "B",
+                    "text": "I did, but some cages looked quite small, and that made me a little sad.",
+                    "cn": "喜欢,不过有些笼子看起来挺小的,这让我有点难过。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "I know, but this zoo really focuses on the animals' welfare and joins many conservation projects.",
+                    "cn": "我懂,但这家动物园很重视动物福利,还参与许多保护项目。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Then I'm glad we came. Overall, a good zoo can be a caring place.",
+                    "cn": "那我很高兴我们来了。总体来说,好的动物园是个有爱的地方。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "定语从句2(when/where/why · 介词+which)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "定语从句2(when/where/why · 介词+which)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s2u2.01",
+              "s2u2.02",
+              "s2u2.03"
+            ],
+            "grammarQuiz": [],
+            "reading": {
+              "passage": "Salty was a guide dog who calmly led his blind owner down seventy flights of stairs to safety. For their courage, both the dog and the owner later received special awards.",
+              "passageCn": "萨尔蒂是一只导盲犬,它沉着地带着失明的主人沿七十层楼梯走到安全地带。因为这份勇气,这只狗和主人后来都获得了特别的奖励。",
+              "questions": [
+                {
+                  "q": "What did Salty do for his owner?",
+                  "opts": [
+                    "Led him safely down the stairs.",
+                    "Ran away alone.",
+                    "Hid under a table.",
+                    "Barked but did not move."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Why did the dog and owner receive awards?",
+                  "opts": [
+                    "For winning a race.",
+                    "For their courage.",
+                    "For being the loudest.",
+                    "For sleeping the longest."
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write a short opinion paragraph (about 80 words) on whether students should feed homeless cats on campus. State your view, give a reason, and suggest a better way such as contacting a rescue centre.",
+              "promptCn": "就'学生是否该在校园喂流浪猫'写一段约80词的观点段落:表明你的观点,给出一条理由,并提出一个更妥当的做法(如联系救助中心)。",
+              "sampleWords": [
+                "homeless",
+                "feed",
+                "campus",
+                "however",
+                "moreover",
+                "rescue",
+                "centre",
+                "welfare",
+                "crowded",
+                "kind"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "Because of illegal hunting, some animals may become ____ and disappear forever.",
+                "opts": [
+                  "extinct",
+                  "polite",
+                  "modern",
+                  "cheap"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Zoos take part in many ____ projects to protect rare animals.",
+                "opts": [
+                  "shopping",
+                  "conservation",
+                  "cooking",
+                  "racing"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "The old man tried to ____ the penguin back into the sea, but it would not leave.",
+                "opts": [
+                  "sell",
+                  "draw",
+                  "release",
+                  "paint"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "A trip to a good zoo can be both fun and ____.",
+                "opts": [
+                  "boring",
+                  "useless",
+                  "empty",
+                  "educational"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "This is the island ____ the old man set the penguin free.",
+                "opts": [
+                  "where",
+                  "which",
+                  "when",
+                  "who"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Spring is the season ____ many birds fly back to build their nests.",
+                "opts": [
+                  "which",
+                  "when",
+                  "where",
+                  "that"
+                ],
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "There are many reasons ____ we should protect endangered animals.",
+                "opts": [
+                  "that",
+                  "which",
+                  "why",
+                  "where"
+                ],
+                "answer": 2,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "That is the small boat in ____ he carried the penguin to the island.",
+                "opts": [
+                  "that",
+                  "when",
+                  "where",
+                  "which"
+                ],
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听录音,选出与句意相符的一项。",
+                "opts": [
+                  "不同文化对同一种动物的看法可能不同。",
+                  "所有国家都把狗当作家人。",
+                  "在印度,牛被当作肉的来源。",
+                  "所有动物的睡眠时间都一样。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "People in different cultures may see the same animal in very different ways."
+              },
+              {
+                "q": "听录音,选出与句意相符的一项。",
+                "opts": [
+                  "每个生命都不值得尊重。",
+                  "每个生命都值得善待和尊重。",
+                  "只有宠物值得照顾。",
+                  "野生动物不需要帮助。"
+                ],
+                "answer": 1,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "Every creature deserves kindness and respect."
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Many wild animals are now endangered because of illegal hunting.",
+                "opts": [
+                  "许多野生动物因非法狩猎而濒临灭绝。",
+                  "许多动物因为太冷而生病。",
+                  "许多动物在动物园里很开心。",
+                  "许多人喜欢去野外打猎。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Good zoos focus on the health and welfare of their animals.",
+                "opts": [
+                  "好的动物园只在乎赚钱。",
+                  "好的动物园专注于动物的健康与福利。",
+                  "好的动物园从不喂动物。",
+                  "好的动物园只养一种动物。"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "The old man fed the penguin a daily diet of fish to get its strength up.",
+                "opts": [
+                  "老人把企鹅放回了大海。",
+                  "老人卖掉了那只企鹅。",
+                  "老人每天喂企鹅鱼,好让它恢复体力。",
+                  "老人忘了照顾企鹅。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Some bears go into a deep sleep called hibernation in winter.",
+                "opts": [
+                  "有些熊整个冬天都醒着。",
+                  "有些熊冬天会去更暖的地方。",
+                  "有些熊冬天不吃东西就死了。",
+                  "有些熊冬天会进入一种叫冬眠的深睡。"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Training a guide dog needs a lot of patience and a gentle approach.",
+                "opts": [
+                  "训练导盲犬需要很多耐心和温和的方式。",
+                  "训练导盲犬靠大声吓唬。",
+                  "训练导盲犬只要一天就够了。",
+                  "训练导盲犬不需要任何耐心。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "If you find a hurt wild animal, call a rescue centre rather than touch it.",
+                "opts": [
+                  "如果发现受伤的野生动物,把它带回家。",
+                  "如果发现受伤的野生动物,打给救助中心而不要触碰它。",
+                  "如果发现受伤的野生动物,直接忽略它。",
+                  "如果发现受伤的野生动物,马上抱起它。"
+                ],
+                "answer": 1
+              }
+            ],
+            "finalReading": {
+              "passage": "A young elephant once fell into a deep mud pit and could not climb out on its own. Workers from a nearby rescue centre spent the whole afternoon gently digging away the mud and pulling it free. By evening the tired but healthy elephant walked back to its herd, and the rescuers felt proud that their patient effort had saved a life.",
+              "questions": [
+                {
+                  "q": "Why could the young elephant not get out of the pit?",
+                  "options": [
+                    "It had sunk deep into the mud and was unable to get out by itself.",
+                    "It was too lazy to move.",
+                    "It was tied to a tree.",
+                    "It was asleep in the pit."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'fell into a deep mud pit and could not climb out on its own' 的转述;其余与原文不符。"
+                },
+                {
+                  "q": "How did the rescuers feel by the end of the day?",
+                  "options": [
+                    "Angry that they had wasted time.",
+                    "Proud that their patient work had rescued the young animal.",
+                    "Sorry they had started the rescue.",
+                    "Bored with the whole task."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'felt proud that their patient effort had saved a life'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required2_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "required2",
+            "title": "Food",
+            "cn": "食物",
+            "emoji": "🍽️",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "-ing/-ed 形式1(作定语 attributives)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "-ing/-ed 形式1(作定语 attributives)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s2u3.01",
+              "s2u3.02",
+              "s2u3.03"
+            ],
+            "grammarQuiz": [],
+            "reading": null,
+            "writing": {
+              "prompt": "Suppose you are Li Hua. Your Students' Union is preparing a brochure to help visiting foreign students deal with culture shock in China. Write a short article (about 90 words) for the 'Foods and Dining Customs' section, including: 1) a brief introduction to one Chinese food or dining custom (e.g. sharing dishes, using chopsticks, not finishing your bowl); 2) one example that might cause culture shock; 3) a cross-cultural comparison with a simple explanation.",
+              "promptCn": "假设你是李华,你校学生会正在为来访的外国学生编写《在中国如何应对文化冲击》手册的《饮食与就餐习俗》栏目。请用英语写一篇约90词的短文,内容包括:① 简要介绍一项中国的食物或就餐习俗(如:共享菜肴、用筷子、不吃光碗里的饭);② 举一个可能让外国人感到文化冲击的例子;③ 做跨文化比较并简单解释原因。注意:用 -ing/-ed 作定语的表达,行文连贯。",
+              "sampleWords": [
+                "share",
+                "dish",
+                "custom",
+                "chopsticks",
+                "steamed",
+                "host",
+                "polite",
+                "satisfied",
+                "compare",
+                "culture"
+              ]
+            },
+            "quizQuestions": [],
+            "listeningQuestions": [],
+            "finalReading": {
+              "passage": "When Ben joined his Chinese classmates for lunch, he was surprised to see everyone sharing the dishes in the middle of the table. At first he felt unsure, but his friends kindly showed him how to take a little from each plate with his own chopsticks. By the end of the meal, he felt relaxed and grateful, and he realised that sharing food was also a warm way of sharing friendship.",
+              "questions": [
+                {
+                  "q": "What surprised Ben at lunch?",
+                  "options": [
+                    "Everyone took food from shared plates at the centre.",
+                    "There was no food at all.",
+                    "Each person ate in a different room.",
+                    "The classmates spoke only English."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'everyone sharing the dishes in the middle of the table' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Ben feel by the end of the meal?",
+                  "options": [
+                    "Relaxed and grateful.",
+                    "Angry and tired.",
+                    "Bored and lonely.",
+                    "Hungry and upset."
+                  ],
+                  "answer": "B",
+                  "explanation": "末句 'he felt relaxed and grateful'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sufe_required2_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "required2",
+            "title": "Sports",
+            "cn": "运动",
+            "emoji": "⚽",
+            "available": true,
+            "vocabulary": [],
+            "dialogues": [
+              {
+                "title": "After the Big Match",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "What a game! I almost screamed when we scored in the last minute.",
+                    "cn": "多精彩的比赛!最后一分钟进球时我差点叫出来。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Me too. Encouraged by the crowd, the players never gave up.",
+                    "cn": "我也是。在观众的鼓励下,球员们从未放弃。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "The goalkeeper was amazing. He must have trained really hard.",
+                    "cn": "门将太棒了,他一定训练得非常刻苦。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Definitely. Let's come back next week and support them again.",
+                    "cn": "当然。我们下周再来,继续支持他们吧。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "教材核心词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "-ing/-ed 形式2(作状语 adverbials)",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5c",
+                "title": "完形填空",
+                "subtitle": "语境填词",
+                "icon": "📝",
+                "type": "cloze",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "-ing/-ed 形式2(作状语 adverbials)",
+            "grammarCode": null,
+            "grammarCodes": [
+              "s2u4.01",
+              "s2u4.02",
+              "s2u4.03"
+            ],
+            "grammarQuiz": [],
+            "reading": {
+              "passage": "In team sports, a single goal is often the result of many small actions: one player wins the ball, another passes it, and a third runs into space to score. Good teammates also support each other when things go wrong, encouraging a player who misses instead of shouting at him. That is why a team playing as one can beat a group of talented players who think only about themselves.",
+              "passageCn": "在团队运动中,一个进球往往是许多小动作的结果:一名球员抢到球,另一名传球,第三名插入空当射门。优秀的队友在出问题时也会互相支持,鼓励失误的球员而不是责骂他。这就是为什么一支齐心协力的球队能击败一群只想着自己的天才球员。",
+              "questions": [
+                {
+                  "q": "How is a goal often scored in team sport?",
+                  "opts": [
+                    "Through several players working together.",
+                    "By one player doing everything alone.",
+                    "Purely by luck.",
+                    "Without any passing."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What do good teammates do when someone misses?",
+                  "opts": [
+                    "They leave the field.",
+                    "They shout at him.",
+                    "They encourage him.",
+                    "They stop the game."
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "What is the main point?",
+                  "opts": [
+                    "Talent alone always wins.",
+                    "Teamwork can beat selfish talent.",
+                    "Coaches are not needed.",
+                    "Winning does not matter."
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 3-4 sentences about a sport you love. Use chronological order and at least one -ing or -ed adverbial (such as 'Training hard, I ...' or 'Encouraged by my coach, I ...').",
+              "promptCn": "用3-4句话写一项你喜爱的运动:按时间顺序展开,并至少用一个 -ing 或 -ed 作状语(如 'Training hard, I …' 或 'Encouraged by my coach, I …')。",
+              "sampleWords": [
+                "remember",
+                "field",
+                "train",
+                "calm",
+                "teammate",
+                "goal",
+                "victory",
+                "encourage",
+                "challenge",
+                "love"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "Winning the title was the ultimate ____ of every player on the team.",
+                "opts": [
+                  "dream",
+                  "price",
+                  "noise",
+                  "machine"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "When the final whistle blew, the players felt great ____.",
+                "opts": [
+                  "price",
+                  "relief",
+                  "noise",
+                  "machine"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "The ball hit the crossbar and ____ away into the crowd.",
+                "opts": [
+                  "sold",
+                  "ate",
+                  "bounced",
+                  "slept"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "He scored the winning ____ in the last minute of the game.",
+                "opts": [
+                  "price",
+                  "noise",
+                  "song",
+                  "goal"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "____ fast down the wing, he passed the ball into the net.",
+                "opts": [
+                  "Running",
+                  "Run",
+                  "To run",
+                  "Ran"
+                ],
+                "answer": 0,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ by the cheering fans, the players kept fighting to the end.",
+                "opts": [
+                  "Encourage",
+                  "Encouraged",
+                  "Encouraging",
+                  "To encourage"
+                ],
+                "answer": 1,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ deep breaths, the player tried to calm herself down.",
+                "opts": [
+                  "Taken",
+                  "To take",
+                  "Taking",
+                  "Take"
+                ],
+                "answer": 2,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "____ from the high stand, the green pitch looked perfect.",
+                "opts": [
+                  "Seeing",
+                  "See",
+                  "To see",
+                  "Seen"
+                ],
+                "answer": 3,
+                "point": "语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "他在最后一分钟攻入了制胜进球。",
+                  "他错失了一个点球。",
+                  "他坐在替补席上。",
+                  "他卖掉了门票。"
+                ],
+                "answer": 0,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "He scored the winning goal in the last minute of the game."
+              },
+              {
+                "q": "听句子选中文:",
+                "opts": [
+                  "体育场里空无一人。",
+                  "体育场里一声巨大的轰鸣告诉她进球了。",
+                  "比赛被取消了。",
+                  "她离开了体育场。"
+                ],
+                "answer": 1,
+                "point": "听力",
+                "dim": "listening",
+                "audio": "A loud roar around the stadium told her that the goal had gone in."
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Millions of fans watched the final match on television.",
+                "opts": [
+                  "数百万球迷在电视上观看了那场决赛。",
+                  "球场上一个观众也没有。",
+                  "比赛被取消了。",
+                  "决赛在早上举行。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Encouraged by the coach, the players kept fighting to the end.",
+                "opts": [
+                  "球员们提前离开了球场。",
+                  "在教练的鼓励下,球员们坚持拼到最后。",
+                  "教练对球员很生气。",
+                  "球员们都坐下休息了。"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "The match ended in a draw, so they went to penalties.",
+                "opts": [
+                  "主队大比分获胜。",
+                  "客队提前认输。",
+                  "比赛打成平局,于是进入点球。",
+                  "比赛因下雨停止。"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Having trained hard all winter, the team was ready for the season.",
+                "opts": [
+                  "球队解散了。",
+                  "球队换了新教练。",
+                  "球队从不训练。",
+                  "整个冬天刻苦训练后,球队为赛季做好了准备。"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "She took a deep breath before stepping up to take the penalty.",
+                "opts": [
+                  "主罚点球前,她深吸了一口气。",
+                  "她拒绝主罚点球。",
+                  "她在场边睡着了。",
+                  "她把球踢出了场外。"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Thousands of spectators came to support their home team.",
+                "opts": [
+                  "看台上空无一人。",
+                  "成千上万的观众前来支持主队。",
+                  "观众都在为客队加油。",
+                  "比赛没有观众观看。"
+                ],
+                "answer": 1
+              }
+            ],
+            "finalReading": {
+              "passage": "Hana had always been the slowest runner in her class, and other children often laughed at her. Instead of giving up, she got up early every morning to train, encouraged by her older brother. A year later, she surprised everyone by winning the school race, proud of how far her quiet effort had taken her.",
+              "questions": [
+                {
+                  "q": "What did Hana do instead of giving up?",
+                  "options": [
+                    "She trained early every morning with her brother's support.",
+                    "She stopped running completely.",
+                    "She laughed at the other children.",
+                    "She changed to a different school."
+                  ],
+                  "answer": "A",
+                  "explanation": "原文 'got up early every morning to train, encouraged by her older brother' 的转述;其余与原文相反或未提。"
+                },
+                {
+                  "q": "How did Hana feel a year later?",
+                  "options": [
+                    "Slow and discouraged.",
+                    "Sorry that she had started.",
+                    "Proud of what her effort had achieved.",
+                    "Bored with running."
+                  ],
+                  "answer": "C",
+                  "explanation": "末句 'proud of how far her quiet effort had taken her'(短文后半段,覆盖不同位置)。"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "2": {
+    "name": "高二",
+    "semesters": {}
+  },
+  "3": {
+    "name": "高三",
+    "semesters": {}
+  }
+}

@@ -4,9 +4,9 @@ import { getGradeProgress, getTotalStars } from "@/lib/gaokaoHub/progress";
 import { getGradeCourse } from "@/lib/gaokaoHub/courseData";
 
 export default function GaokaoHubProfile() {
-  const { grade, state } = useGaokaoHub();
+  const { grade, publisher, state } = useGaokaoHub();
   const base = `/gaokao/hub/${grade}`;
-  const course = getGradeCourse(grade);
+  const course = getGradeCourse(grade, publisher);
   const gp = getGradeProgress(state, grade);
   const last = state.aiTestHistory[state.aiTestHistory.length - 1];
 

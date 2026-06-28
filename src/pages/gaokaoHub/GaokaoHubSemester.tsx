@@ -3,15 +3,17 @@ import { useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { findSemester, getGradeCourse, unitLabel } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/gaokaoHub/progress";
 import { savePersist } from "@/lib/gaokaoHub/storage";
+import { withPublisher } from "@/lib/gaokaoHub/publisher";
 
 export default function GaokaoHubSemester() {
   const { semId } = useParams<{ semId: string }>();
-  const { grade, state, setState } = useGaokaoHub();
+  const { grade, publisher, state, setState } = useGaokaoHub();
   const nav = useNavigate();
-  const sem = semId ? findSemester(semId) : null;
-  const course = getGradeCourse(grade);
+  const sem = semId ? findSemester(semId, publisher) : null;
+  const course = getGradeCourse(grade, publisher);
   const sp = semId ? getSemesterProgress(state, semId) : null;
   const base = `/gaokao/hub/${grade}`;
+  const wp = (p: string) => withPublisher(p, publisher);
 
   if (!sem || !semId) {
     return <div className="p-6 text-center">课程未找到</div>;
@@ -20,7 +22,7 @@ export default function GaokaoHubSemester() {
   return (
     <>
       <div className="flex items-center gap-3 border-b border-[#EEEAE0] bg-white px-4 py-3">
-        <button type="button" onClick={() => nav(`${base}/course`)} className="text-xl">
+        <button type="button" onClick={() => nav(wp(`${base}/course`))} className="text-xl">
           ←
         </button>
         <div className="text-lg font-bold">
@@ -69,7 +71,7 @@ export default function GaokaoHubSemester() {
                   savePersist(grade, next);
                   return next;
                 });
-                nav(`${base}/semester/${semId}/unit/${unit.id}`);
+                nav(wp(`${base}/semester/${semId}/unit/${unit.id}`));
               }}
               className={`w-full rounded-2xl border-2 bg-white p-4 text-left shadow-sm ${
                 isCurrent ? "border-[#FF6B35]" : "border-transparent"

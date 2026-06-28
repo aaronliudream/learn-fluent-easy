@@ -8,7 +8,7 @@ import { DimensionBars } from "@/components/juniorHub/DimensionBars";
 import { savePersist } from "@/lib/gaokaoHub/storage";
 
 export default function GaokaoHubAITest() {
-  const { grade, state, setState, addMistake } = useGaokaoHub();
+  const { grade, publisher, state, setState, addMistake } = useGaokaoHub();
   const nav = useNavigate();
   const base = `/gaokao/hub/${grade}`;
 
@@ -18,7 +18,7 @@ export default function GaokaoHubAITest() {
     Object.keys(state.units).forEach((unitId) => {
       const us = state.units[unitId];
       if (us.completedStages.length > 0) {
-        const unit = findUnit(unitId);
+        const unit = findUnit(unitId, publisher);
         if (unit) learnedQs.push(...unit.quizQuestions.map((q) => ({ ...q, unitTitle: unit.title })));
       }
     });

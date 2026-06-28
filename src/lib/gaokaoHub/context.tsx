@@ -9,10 +9,12 @@ import {
 import { findUnit } from "./courseData";
 import { getUnitProgress, shouldTriggerUnitAITest } from "./progress";
 import { getUnitState, loadPersist, savePersist } from "./storage";
+import { DEFAULT_PUBLISHER, type Publisher } from "./publisher";
 import type { GaokaoHubGrade, GaokaoHubPersist, Mistake } from "./types";
 
 type Ctx = {
   grade: GaokaoHubGrade;
+  publisher: Publisher;
   state: GaokaoHubPersist;
   setState: React.Dispatch<React.SetStateAction<GaokaoHubPersist>>;
   persist: () => void;
@@ -22,7 +24,15 @@ type Ctx = {
 
 const GaokaoHubContext = createContext<Ctx | null>(null);
 
-export function GaokaoHubProvider({ grade, children }: { grade: GaokaoHubGrade; children: ReactNode }) {
+export function GaokaoHubProvider({
+  grade,
+  publisher = DEFAULT_PUBLISHER,
+  children,
+}: {
+  grade: GaokaoHubGrade;
+  publisher?: Publisher;
+  children: ReactNode;
+}) {
   const [state, setState] = useState<GaokaoHubPersist>(() => loadPersist(grade));
 
   const persist = useCallback(() => {
@@ -32,7 +42,7 @@ export function GaokaoHubProvider({ grade, children }: { grade: GaokaoHubGrade; 
   const addMistake = useCallback(
     (m: Omit<Mistake, "id" | "date">) => {
       setState((prev) => {
-        const unit = findUnit(m.unitId ?? prev.currentUnit);
+        const unit = findUnit(m.unitId ?? prev.currentUnit, publisher);
         const next: GaokaoHubPersist = {
           ...prev,
           mistakes: [
@@ -57,7 +67,7 @@ export function GaokaoHubProvider({ grade, children }: { grade: GaokaoHubGrade; 
     (unitId: string, stageIdx: number) => {
       let needAi = false;
       setState((prev) => {
-        const unit = findUnit(unitId);
+        const unit = findUnit(unitId, publisher);
         if (!unit) return prev;
         const us = getUnitState(prev, unitId);
         const completed = [...us.completedStages];

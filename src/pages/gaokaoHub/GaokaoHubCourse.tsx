@@ -2,13 +2,14 @@
 import { useGaokaoHub } from "@/lib/gaokaoHub/context";
 import { getGradeCourse, semesterIdsForGrade } from "@/lib/gaokaoHub/courseData";
 import { getSemesterProgress } from "@/lib/gaokaoHub/progress";
+import { withPublisher } from "@/lib/gaokaoHub/publisher";
 
 export default function GaokaoHubCourse() {
-  const { grade, state } = useGaokaoHub();
+  const { grade, publisher, state } = useGaokaoHub();
   const nav = useNavigate();
-  const course = getGradeCourse(grade);
+  const course = getGradeCourse(grade, publisher);
   const base = `/gaokao/hub/${grade}`;
-  const semIds = semesterIdsForGrade(grade);
+  const semIds = semesterIdsForGrade(grade, publisher);
 
   return (
     <>
@@ -28,7 +29,7 @@ export default function GaokaoHubCourse() {
               key={semId}
               type="button"
               disabled={locked}
-              onClick={() => !locked && nav(`${base}/semester/${semId}`)}
+              onClick={() => !locked && nav(withPublisher(`${base}/semester/${semId}`, publisher))}
               className={`mb-3 w-full rounded-2xl bg-white p-4 text-left shadow-sm ${locked ? "opacity-70" : ""}`}
             >
               <div className="flex items-center gap-3">

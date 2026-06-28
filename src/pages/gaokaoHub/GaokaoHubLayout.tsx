@@ -1,13 +1,15 @@
-﻿import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+﻿import { Link, Outlet, useLocation, useParams, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { GaokaoHubProvider } from "@/lib/gaokaoHub/context";
 import "@/lib/juniorHub/styles";
 import { resolveGaokaoHubGrade } from "@/lib/gaokaoHub/resolveGrade";
+import { readPublisherParam, withPublisher, DEFAULT_PUBLISHER, type Publisher } from "@/lib/gaokaoHub/publisher";
 import type { GaokaoHubGrade } from "@/lib/gaokaoHub/types";
 
-function BottomNav({ grade }: { grade: GaokaoHubGrade }) {
+function BottomNav({ grade, publisher }: { grade: GaokaoHubGrade; publisher: Publisher }) {
   const loc = useLocation();
   const base = `/gaokao/hub/${grade}`;
+  const wp = (p: string) => withPublisher(p, publisher);
   const tab = (active: boolean) =>
     `flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-semibold ${active ? "text-indigo-600" : "text-[#888780]"}`;
 
@@ -19,19 +21,19 @@ function BottomNav({ grade }: { grade: GaokaoHubGrade }) {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#EEEAE0] bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-lg">
-        <Link to={base} className={tab(isHome)}>
+        <Link to={wp(base)} className={tab(isHome)}>
           <span className="text-xl">🏠</span>
           <span>首页</span>
         </Link>
-        <Link to={`${base}/course`} className={tab(isCourse)}>
+        <Link to={wp(`${base}/course`)} className={tab(isCourse)}>
           <span className="text-xl">📚</span>
           <span>学习</span>
         </Link>
-        <Link to={`${base}/mistakes`} className={tab(isMistakes)}>
+        <Link to={wp(`${base}/mistakes`)} className={tab(isMistakes)}>
           <span className="text-xl">📝</span>
           <span>错题本</span>
         </Link>
-        <Link to={`${base}/profile`} className={tab(isProfile)}>
+        <Link to={wp(`${base}/profile`)} className={tab(isProfile)}>
           <span className="text-xl">👤</span>
           <span>我的</span>
         </Link>
@@ -43,17 +45,22 @@ function BottomNav({ grade }: { grade: GaokaoHubGrade }) {
 export default function GaokaoHubLayout() {
   const { grade: g } = useParams<{ grade: string }>();
   const grade = resolveGaokaoHubGrade(g);
+  const [sp] = useSearchParams();
+  const publisher = readPublisherParam(sp);
 
   return (
-    <GaokaoHubProvider grade={grade}>
+    <GaokaoHubProvider grade={grade} publisher={publisher}>
       <div className="primary-hub-root mx-auto max-w-lg pb-20">
         <div className="border-b border-[#EEEAE0] bg-white px-4 py-2">
-          <BackLink to="/gaokao" className="text-sm text-muted-foreground">
+          <BackLink
+            to={publisher === DEFAULT_PUBLISHER ? "/gaokao" : `/gaokao?publisher=${publisher}`}
+            className="text-sm text-muted-foreground"
+          >
             ← 返回高中专区
           </BackLink>
         </div>
         <Outlet />
-        <BottomNav grade={grade} />
+        <BottomNav grade={grade} publisher={publisher} />
       </div>
     </GaokaoHubProvider>
   );
